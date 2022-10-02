@@ -1,0 +1,171 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Frederik Schwarzer <schwarzer@kde.org>, 2016.
+# Burkhard Lück <lueck@hube-lueck.de>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-04 00:44+0000\n"
+"PO-Revision-Date: 2017-12-04 15:12+0100\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gnupgwksurlhandler.cpp:85
+#, kde-format
+msgid "Display key details"
+msgstr "Schüsseldetails anzeigen"
+
+#: gnupgwksurlhandler.cpp:87
+#, kde-format
+msgid "Publish the key"
+msgstr "Den Schlüssel veröffentlichen"
+
+#: pgpkeyformatter.cpp:43
+#, kde-format
+msgid "No valid key data in file."
+msgstr "Die Datei enthält keinen gültigen Schlüssel."
+
+#: pgpkeyurlhandler.cpp:46
+#, kde-format
+msgid "Import the key"
+msgstr "Den Schlüssel importieren"
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "An error occurred while importing the key."
+msgstr "Beim Importieren des Schlüssels ist ein Fehler aufgetreten."
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "Import error"
+msgstr "Fehler beim Import"
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "The key has been successfully imported."
+msgstr "Der Schlüssel ist erfolgreich importiert worden."
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "Import finished"
+msgstr "Import abgeschlossen"
+
+#: templates/gnupgwksmessagepart.html:26
+msgid "Register your OpenPGP key with your email provider. "
+msgstr "Registrieren Sie Ihren OpenPGP-Schlüssel bei Ihrem E-Mail-Anbieter."
+
+#: templates/gnupgwksmessagepart.html:28
+msgid ""
+"When you register your key with your email provider other people will then "
+"be able to retrieve the key and send you encrypted emails and verify "
+"authenticity of emails you send them."
+msgstr ""
+"Wenn Sie Ihren Schlüssel bei Ihrem E-Mail-Anbieter registrieren, können "
+"andere Personen dann den Schlüssel abzurufen und Ihnen verschlüsselte E-"
+"Mails zu senden und die Authentizität der von Ihnen versendeten E-Mails "
+"überprüfen."
+
+#: templates/gnupgwksmessagepart.html:31
+msgid "An error occurred while publishing the key. Please try again later."
+msgstr ""
+"Beim Veröffentlichen des Schlüssels ist ein Fehler aufgetreten. Bitte "
+"versuchen Sie es später noch einmal."
+
+#: templates/gnupgwksmessagepart.html:33
+msgid "Register the key"
+msgstr "Den Schlüssel registrieren"
+
+#: templates/gnupgwksmessagepart.html:35
+msgid ""
+"The email will be automatically deleted once you confirm the registration."
+msgstr ""
+"Die E-Mail wird automatisch gelöscht, sobald Sie die Registrierung "
+"bestätigen."
+
+#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+msgid "Show key details"
+msgstr "Schlüsseldetails anzeigen"
+
+#: templates/gnupgwksmessagepart.html:42
+msgid ""
+"This is an automatically generated email. The purpose of this email is to "
+"register your OpenPGP key with your email provider."
+msgstr ""
+"Dies ist eine automatisch generierte E-Mail, um Ihren OpenPGP-Schlüssel bei "
+"Ihrem E-Mail-Anbieter zu registrieren."
+
+#: templates/gnupgwksmessagepart.html:45
+msgid ""
+"Your OpenPGP key will be published on your email provider's key server. "
+"Other users will be able to retrieve the key and send you encrypted emails "
+"and verify authenticity of emails you send them."
+msgstr ""
+"Ihr OpenPGP-Schlüssel wird auf dem Schlüssel-Server Ihres E-Mail-Anbieters "
+"veröffentlicht. Andere Benutzer können den Schlüssel abrufen und Ihnen "
+"verschlüsselte E-Mails senden. und die Authentizität der von Ihnen "
+"versendeten E-Mails überprüfen."
+
+#: templates/pgpkeymessagepart.html:14
+msgid "OpenPGP Key"
+msgstr "OpenPGP-Schlüssel"
+
+#: templates/pgpkeymessagepart.html:18
+msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
+msgstr ""
+"Dies ist ein OpenPGP-Schlüssel, der zum Signieren oder Verschlüsseln von E-"
+"Mails verwendet werden kann."
+
+#: templates/pgpkeymessagepart.html:23
+msgid "Loading key details..."
+msgstr "Schlüsseldetails werden geladen ..."
+
+#: templates/pgpkeymessagepart.html:28
+msgid "Owner:"
+msgstr "Eigentümer:"
+
+#: templates/pgpkeymessagepart.html:32
+msgid "Created:"
+msgstr "Erstellt:"
+
+#: templates/pgpkeymessagepart.html:37
+msgid "Fingerprint:"
+msgstr "Fingerabdruck:"
+
+#: templates/pgpkeymessagepart.html:42
+msgid ""
+"This key is unknown, it could not be found in your local keyring. You may "
+"want to import this key."
+msgstr ""
+"Dieser Schlüssel ist nicht bekannt, er wurde in Ihrem lokalen Schlüsselring "
+"nicht gefunden. Sie sollten diesen Schlüssel importieren."
+
+#: templates/pgpkeymessagepart.html:45
+#, kde-format
+msgid "Error while loading key: %1"
+msgstr "Fehler beim Laden des Schlüssels: %1"
+
+#: templates/pgpkeymessagepart.html:47
+msgid "Hide key details"
+msgstr "Schlüsseldetails ausblenden"
+
+#: templates/pgpkeymessagepart.html:49
+msgid "Open in Kleopatra"
+msgstr "In Kleopatra öffnen"
+
+#: templates/pgpkeymessagepart.html:52
+msgid "Show key details ..."
+msgstr "Schlüsseldetails anzeigen ..."
+
+#: templates/pgpkeymessagepart.html:54
+msgid "Import key"
+msgstr "Schlüssel importieren"
+
+#~ msgid "Unknown identity"
+#~ msgstr "Unbekannte Identität"

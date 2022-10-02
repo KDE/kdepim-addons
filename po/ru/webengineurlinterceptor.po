@@ -1,0 +1,2370 @@
+# Zhitomirsky Sergey <szh@7ka.mipt.ru>, 2000.
+# Gregory Mokhin <mok@kde.ru>, 2001,2003-2005.
+# Andrey Cherepanov <sibskull@mail.ru>, 2001-2006.
+# Albert R. Valiev <darkstar@altlinux.ru>, 2002.
+# Leonid Kanter <leon@asplinux.ru>, 2002-2004.
+# Nick Shaforostoff <shafff@ukr.net>, 2004-2007, 2009.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2014, 2015, 2016.
+# Julia Dronova <juliette.tux@gmail.com>, 2012.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+# Мария Шикунова <translation-team@basealt.ru>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2022-02-21 17:06+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.1\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: adblock/adblockinterceptorinterface.cpp:49
+#, kde-format
+msgid "Open Blockable Items..."
+msgstr "Показать блокируемые элементы..."
+
+#: adblock/adblockinterceptorinterface.cpp:53
+#, kde-format
+msgid "Block Image"
+msgstr "Заблокировать изображение"
+
+#: adblock/lib/adblocksubscription.cpp:141
+#, kde-format
+msgid "Cannot load subscription!"
+msgstr "Не удаётся загрузить подписку!"
+
+#: adblock/lib/adblocksubscription.cpp:257
+#, kde-format
+msgid "Custom Rules"
+msgstr "Другие правила"
+
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
+#, kde-format
+msgid "Enabled ad block"
+msgstr "Включена блокировка рекламы"
+
+#. i18n: ectx: label, entry (HideAdsEnabled), group (General)
+#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
+#, kde-format
+msgid "Hide advertisement enabled"
+msgstr "Сокрытие фильтруемых рекламных элементов"
+
+# BUGME: this is not proper English --aspotashev
+#. i18n: ectx: label, entry (AdBlockUpdateInterval), group (General)
+#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:16
+#, kde-format
+msgid "Update interval list of adblock"
+msgstr "Периодичность обновлений списка фильтров для блокировки рекламы"
+
+#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add subscription"
+msgstr "Добавление подписки"
+
+#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:32
+#, kde-format
+msgid "Select List:"
+msgstr "Выберите список фильтров:"
+
+#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:41
+#, kde-format
+msgid "Show List"
+msgstr "Показать список"
+
+#: adblock/lib/widgets/adblockblockableitemsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Blockable Items"
+msgstr "Блокируемые элементы"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:35
+#, kde-format
+msgid "No blockable element found."
+msgstr "Не найдено элементов, которые можно было бы заблокировать."
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
+#, kde-format
+msgid "Filter"
+msgstr "Фильтр"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
+#, kde-format
+msgid "Address"
+msgstr "Адрес"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
+#, kde-format
+msgid "Type"
+msgstr "Тип"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:46
+#, kde-format
+msgid "Search..."
+msgstr "Поиск..."
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:103
+#, kde-format
+msgid "Copy URL"
+msgstr "Копировать URL"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:106
+#, kde-format
+msgid "Copy filter"
+msgstr "Копировать фильтр"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:108
+#, kde-format
+msgid "Block item..."
+msgstr "Заблокировать элемент..."
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:110
+#, kde-format
+msgid "Open"
+msgstr "Открыть"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:113
+#, kde-format
+msgid "Remove filter"
+msgstr "Удалить фильтр"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:185
+#, kde-format
+msgid "Image"
+msgstr "Изображение"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:188
+#, kde-format
+msgid "Script"
+msgstr "Сценарий"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:191
+#, kde-format
+msgid "Stylesheet"
+msgstr "Таблица стилей"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:194
+#, kde-format
+msgid "Font"
+msgstr "Шрифт"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:197
+#, kde-format
+msgid "Frame"
+msgstr "Фрейм"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:200
+#, kde-format
+msgid "XML Request"
+msgstr "Запрос AJAX (XMLHttpRequest)"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:203
+#, kde-format
+msgid "Object"
+msgstr "Объект"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:206
+#, kde-format
+msgid "Audio/Video"
+msgstr "Аудио/видео"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:209
+#, kde-format
+msgid "Popup window"
+msgstr "Всплывающее окно"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:213
+#, kde-format
+msgid "Unknown"
+msgstr "Неизвестно"
+
+# BUGME: add ellipsis --aspotashev
+#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:22
+#, kde-format
+msgctxt "@title:window"
+msgid "Create Filter"
+msgstr "Создать фильтр"
+
+#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:46
+#, kde-format
+msgid "Use default"
+msgstr "Использовать параметр по умолчанию"
+
+#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:47
+#, kde-format
+msgid "Yes"
+msgstr "Да"
+
+# BUGME: Not -> No --aspotashev
+#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:48
+#, kde-format
+msgid "Not"
+msgstr "Нет"
+
+# BUGME: change to "No subscriptions added." --aspotashev
+#: adblock/lib/widgets/adblocklistwidget.cpp:52
+#, kde-format
+msgid "No subscription added"
+msgstr "Не добавлено ни одной подписки"
+
+#: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure AdBlock Plugin"
+msgstr "Настроить модуль AdBlock"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:53
+#, kde-format
+msgid ""
+"<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+"\"filterhelp\">more information</a>):"
+msgstr ""
+"<qt>Выражение для фильтра (например, <tt>http://www.example.com/ad/*</tt>, "
+"<a href=\"filterhelp\">подробные сведения</a>):"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:69
+#, kde-format
+msgid " day"
+msgid_plural " days"
+msgstr[0] " день"
+msgstr[1] " дня"
+msgstr[2] " дней"
+msgstr[3] " день"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:142
+#, kde-format
+msgid ""
+"<qt><p>Enter an expression to filter. Filters can be defined as either:"
+"<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
+"the wildcards <tt>*?[]</tt> may be used</li><li>a full regular expression by "
+"surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</tt></"
+"li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist "
+"(allow) any matching URL, which takes priority over any blacklist (blocking) "
+"filter.<br><a href='%1'>%2</a></qt>"
+msgstr ""
+"<qt><p>Введите выражение, определяющее фильтр. В нём можно использовать:"
+"<ul><li>шаблоны в стиле командной строки Unix, например, <tt>http://www."
+"example.com/ads*</tt>; можно использовать специальные символы <tt>*?[]</tt></"
+"li><li>регулярные выражения, записывая их между символы косой черты «<tt>/</"
+"tt>», например, <tt>/\\/(ad|banner)\\./</tt></li></ul><p>В начале строки "
+"фильтра можно написать «<tt>@@</tt>», что будет означать отмену блокирования "
+"соответствующих адресов. Отмена блокирования имеет приоритет перед "
+"блокирующими фильтрами.<br><a href='%1'>%2</a></qt>"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:150
+#, kde-format
+msgid "More information"
+msgstr "Дополнительная информация"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:194
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] "Удалить данные правила?"
+msgstr[1] "Удалить данные правила?"
+msgstr[2] "Удалить данные правила?"
+msgstr[3] "Удалить данное правило?"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:195
+#, kde-format
+msgid "Remove"
+msgstr "Удалить"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:336
+#, kde-format
+msgid "Do you want to delete list \"%1\"?"
+msgstr "Удалить список фильтров рекламы «%1»?"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:337
+#, kde-format
+msgid "Delete current list"
+msgstr "Удаление подписки"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:382
+#: adblock/lib/widgets/adblocksettingwidget.cpp:424
+#, kde-format
+msgid "All Files (*)"
+msgstr "Все файлы (*)"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:383
+#, kde-format
+msgid "Import Filters"
+msgstr "Импорт фильтров"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:434
+#, kde-format
+msgid "Export Filters"
+msgstr "Экспорт фильтров"
+
+#: adblock/lib/widgets/adblockshowlistdialog.cpp:38
+#, kde-format
+msgctxt "@title:window"
+msgid "Show adblock list"
+msgstr "Просмотр списка блокировки рекламы"
+
+#: adblock/lib/widgets/adblockshowlistdialog.cpp:45
+#, kde-format
+msgid "Delete List"
+msgstr "Удалить список"
+
+#: adblock/lib/widgets/adblockshowlistdialog.cpp:62
+#, kde-format
+msgid "Download..."
+msgstr "Загрузка..."
+
+#: adblock/lib/widgets/adblockshowlistdialog.cpp:135
+#, kde-format
+msgid "An error occurred while downloading the list: \"%1\""
+msgstr "Ошибка при загрузке списка: «%1»"
+
+# BUGME: please change Filters -> Filter --aspotashev
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:31
+#, kde-format
+msgid "Filters:"
+msgstr "Фильтр:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:49
+#, kde-format
+msgid "&Blocking filter"
+msgstr "&Блокирующий фильтр"
+
+#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:56
+#, kde-format
+msgid "Exception Filter"
+msgstr "Фильтр исключения"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:65
+#, kde-format
+msgid "Pattern"
+msgstr "Шаблон"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:73
+#, kde-format
+msgid "custom"
+msgstr "Шаблон:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:88
+#, kde-format
+msgid "Accept pattern only"
+msgstr "Допускать совпадение шаблона"
+
+#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
+#, kde-format
+msgid "At the beginning of the address"
+msgstr "Только с началом адреса"
+
+#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
+#, kde-format
+msgid "At the end of address"
+msgstr "Только с концом адреса"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
+#, kde-format
+msgid "Options"
+msgstr "Параметры"
+
+# https://adblockplus.org/ru/filters --aspotashev
+# BUGME: part -> party? --aspotashev
+#. i18n: ectx: property (text), widget (QCheckBox, firstPartOnly)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
+#, kde-format
+msgid "First-part only"
+msgstr "Не применять к элементам из сторонних источников"
+
+# https://adblockplus.org/ru/filters --aspotashev
+#. i18n: ectx: property (text), widget (QCheckBox, matchCase)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
+#, kde-format
+msgid "Match case"
+msgstr "С учётом регистра"
+
+# https://adblockplus.org/ru/filters --aspotashev
+#. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
+#, kde-format
+msgid "Restrict to domain"
+msgstr "Ограничить доменом:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
+#, kde-format
+msgid "Apply to:"
+msgstr "Применять к элементами:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:160
+#, kde-format
+msgid "Collapse blocked:"
+msgstr "Скрывать заблокированные элементы:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
+#: adblock/lib/widgets/ui/settings_adblock.ui:29
+#, kde-format
+msgid "&Enable Ad Block"
+msgstr "&Включить блокировку рекламы"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
+#: adblock/lib/widgets/ui/settings_adblock.ui:36
+#, kde-format
+msgid "&Hide filtered elements"
+msgstr "&Скрывать фильтруемые элементы"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: adblock/lib/widgets/ui/settings_adblock.ui:50
+#, kde-format
+msgid "Automatic Filters"
+msgstr "Автоматические фильтры"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFilters)
+#: adblock/lib/widgets/ui/settings_adblock.ui:56
+#, kde-format
+msgid "Add Filters subscriptions..."
+msgstr "Добавить подписку на фильтры..."
+
+#. i18n: ectx: property (text), widget (QPushButton, removeSubscription)
+#: adblock/lib/widgets/ui/settings_adblock.ui:76
+#, kde-format
+msgid "Remove subscription"
+msgstr "Удалить подписку"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: adblock/lib/widgets/ui/settings_adblock.ui:98
+#, kde-format
+msgid "Update enabled automatic filters every:"
+msgstr "Проверять обновления включённых фильтров каждые:"
+
+#. i18n: ectx: property (text), widget (QPushButton, showList)
+#: adblock/lib/widgets/ui/settings_adblock.ui:136
+#, kde-format
+msgid "Show List..."
+msgstr "Показать список..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: adblock/lib/widgets/ui/settings_adblock.ui:144
+#, kde-format
+msgid "Manual Filters"
+msgstr "Другие фильтры"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
+#: adblock/lib/widgets/ui/settings_adblock.ui:155
+#, kde-format
+msgid "Add filter expression"
+msgstr "Добавить фильтрующее выражение"
+
+#. i18n: ectx: property (text), widget (QToolButton, insertButton)
+#: adblock/lib/widgets/ui/settings_adblock.ui:158
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#. i18n: ectx: property (text), widget (QPushButton, importFilters)
+#: adblock/lib/widgets/ui/settings_adblock.ui:200
+#, kde-format
+msgid "Import Filters..."
+msgstr "Импорт фильтров..."
+
+#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
+#: adblock/lib/widgets/ui/settings_adblock.ui:207
+#, kde-format
+msgid "Export filters..."
+msgstr "Экспорт фильтров..."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: adblock/lib/widgets/ui/settings_adblock.ui:216
+#, kde-format
+msgid "Search:"
+msgstr "Поиск:"
+
+#. i18n: ectx: property (text), widget (QPushButton, editFilter)
+#: adblock/lib/widgets/ui/settings_adblock.ui:228
+#, kde-format
+msgid "Edit"
+msgstr "Изменить"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
+#: adblock/lib/widgets/ui/settings_adblock.ui:235
+#, kde-format
+msgid "Remove filter expression"
+msgstr "Удалить фильтрующее выражение"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: adblock/lib/widgets/ui/settings_adblock.ui:238
+#, kde-format
+msgid "Remove Filter"
+msgstr "Удалить фильтр"
+
+#, fuzzy
+#~ msgid "AdBlock"
+#~ msgstr "&Включить блокировку рекламы"
+
+#~ msgid "Copy url"
+#~ msgstr "Копировать адрес URL"
+
+#~ msgid "Download new ad-block list was failed."
+#~ msgstr "Не удалось загрузить новый список блокировки рекламы."
+
+#~ msgid "Download new ad-block list was done."
+#~ msgstr "Новый список блокировки рекламы успешно загружен."
+
+#~ msgid "Close"
+#~ msgstr "Закрыть"
+
+#~ msgctxt "Find text"
+#~ msgid "F&ind:"
+#~ msgstr "&Искать:"
+
+#~ msgid "Text to search for"
+#~ msgstr "Текст для поиска"
+
+#~ msgctxt "Find and go to the next search match"
+#~ msgid "Next"
+#~ msgstr "Следующее"
+
+#~ msgid "Jump to next match"
+#~ msgstr "Перейти к следующему вхождению"
+
+#~ msgctxt "Find and go to the previous search match"
+#~ msgid "Previous"
+#~ msgstr "Предыдущее"
+
+#~ msgid "Jump to previous match"
+#~ msgstr "Перейти к предыдущему вхождению"
+
+#~ msgid "Modify search behavior"
+#~ msgstr "Изменить параметры поиска"
+
+#~ msgid "Case sensitive"
+#~ msgstr "С учётом регистра"
+
+#~ msgid "Phrase not found"
+#~ msgstr "Не найдено"
+
+#~ msgid "Highlight all matches"
+#~ msgstr "Подсветить все совпадения"
+
+#~ msgid "Grantlee theme \"%1\" is not valid."
+#~ msgstr "Тема Grantlee «%1» не годится."
+
+#~ msgid "Subject:"
+#~ msgstr "Тема:"
+
+#~ msgid "To:"
+#~ msgstr "Кому:"
+
+#~ msgid "Reply to:"
+#~ msgstr "Адрес для ответа:"
+
+#~ msgid "CC:"
+#~ msgstr "Копия:"
+
+#~ msgid "BCC:"
+#~ msgstr "Скрытая копия:"
+
+#~ msgid "From:"
+#~ msgstr "От:"
+
+#~ msgid "Spam Status:"
+#~ msgstr "Признак спама:"
+
+#~ msgid "Date:"
+#~ msgstr "Дата:"
+
+#~ msgid "resent from"
+#~ msgstr "переслано от"
+
+#~ msgid "receiver was"
+#~ msgid_plural "receivers were"
+#~ msgstr[0] "получателями были"
+#~ msgstr[1] "получателями были"
+#~ msgstr[2] "получателями были"
+#~ msgstr[3] "получателем был"
+
+#~ msgid "Printing mode"
+#~ msgstr "Режим печати"
+
+#~ msgid "[vcard]"
+#~ msgstr "[vcard]"
+
+#~ msgctxt "Unknown date"
+#~ msgid "Unknown"
+#~ msgstr "Неизвестно"
+
+#~ msgid "No Subject"
+#~ msgstr "Нет темы"
+
+#~ msgid ""
+#~ "%1% probability of being spam with confidence %3%.\n"
+#~ "\n"
+#~ "Full report:\n"
+#~ "Probability=%2\n"
+#~ "Confidence=%4"
+#~ msgstr ""
+#~ "Вероятность спама: %1%, доверие: %3%. \n"
+#~ "\n"
+#~ "Полный отчёт:\n"
+#~ "Вероятность: %2\n"
+#~ "Доверие: %4"
+
+#~ msgid ""
+#~ "%1% probability of being spam.\n"
+#~ "\n"
+#~ "Full report:\n"
+#~ "Probability=%2"
+#~ msgstr ""
+#~ "Вероятность спама: %1%\n"
+#~ "\n"
+#~ "Полный отчёт:\n"
+#~ "Вероятность: %2"
+
+#~ msgid "No Spam agent"
+#~ msgstr "Нет агента спама"
+
+#~ msgid "Spam filter score not a number"
+#~ msgstr "Оценка спам-защиты — не число"
+
+#~ msgid "Threshold not a valid number"
+#~ msgstr "Пороговое значение — не число"
+
+#~ msgid "Spam filter score could not be extracted from header"
+#~ msgstr "Извлечь оценку спам-защиты из заголовка не удалось"
+
+#~ msgid "Threshold could not be extracted from header"
+#~ msgstr "Извлечь пороговое значение из заголовка не удалось"
+
+#~ msgid "Error evaluating spam score"
+#~ msgstr "Ошибка вычисления оценки спама"
+
+#~ msgid ""
+#~ "%1.\n"
+#~ "\n"
+#~ "Full report:\n"
+#~ "%2"
+#~ msgstr ""
+#~ "%1.\n"
+#~ "\n"
+#~ "Полный отчёт:\n"
+#~ "%2"
+
+#~ msgid "Move to Trash"
+#~ msgstr "Удалить в корзину"
+
+#, fuzzy
+#~ msgid "Reply"
+#~ msgstr "Адрес для ответа:"
+
+#, fuzzy
+#~ msgid "Reply to All"
+#~ msgstr "Адрес для ответа: "
+
+#, fuzzy
+#~ msgid "New Message"
+#~ msgstr "Сохранить письма"
+
+#~ msgctxt "View->"
+#~ msgid "&Headers"
+#~ msgstr "&Заголовок"
+
+#~ msgid "Choose display style of message headers"
+#~ msgstr "Выберите формат отображения заголовка"
+
+#~ msgid "Date: "
+#~ msgstr "Дата: "
+
+#~ msgid "From: "
+#~ msgstr "Отправитель: "
+
+#~ msgid "[vCard]"
+#~ msgstr "[vCard]"
+
+#~ msgctxt "To-field of the mailheader."
+#~ msgid "To: "
+#~ msgstr "Получатель: "
+
+#~ msgid "CC: "
+#~ msgstr "Копия: "
+
+#~ msgid "BCC: "
+#~ msgstr "Скрытая копия: "
+
+#~ msgid "Reply to: "
+#~ msgstr "Адрес для ответа: "
+
+#~ msgid ""
+#~ "Modifying an attachment might invalidate any digital signature on this "
+#~ "message."
+#~ msgstr ""
+#~ "Редактирование вложения может сделать цифровую подпись этого письма "
+#~ "недействительной."
+
+#~ msgid "Edit Attachment"
+#~ msgstr "Редактировать вложение"
+
+#~ msgid "Details:"
+#~ msgstr "Подробности:"
+
+#~ msgid ""
+#~ "This email contains a link which reads as '%1' in the text, but actually "
+#~ "points to '%2'. This is often the case in scam emails to mislead the "
+#~ "recipient"
+#~ msgstr ""
+#~ "Письмо содержит ссылку, которая выглядит в тексте как «%1», но на самом "
+#~ "деле указывает на «%2». Таким приёмом часто пользуются злоумышленники, "
+#~ "чтобы ввести получателя в заблуждение."
+
+#~ msgid ""
+#~ "This email contains a link which points to a numerical IP address (%1) "
+#~ "instead of a typical textual website address. This is often the case in "
+#~ "scam emails."
+#~ msgstr ""
+#~ "Письмо содержит ссылку на числовой IP-адрес (%1), а не на обычный адрес "
+#~ "сайта. Это часто встречается во вредных письмах."
+
+#~ msgid ""
+#~ "This email contains a link which points to a hexadecimal IP address (%1) "
+#~ "instead of a typical textual website address. This is often the case in "
+#~ "scam emails."
+#~ msgstr ""
+#~ "Письмо содержит ссылку на шестнадцатеричный IP-адрес (%1), а не на "
+#~ "обычный адрес сайта. Это часто встречается во вредных письмах."
+
+#~ msgid "This email contains a link (%1) which has a redirection"
+#~ msgstr "Письмо содержит ссылку (%1) с перенаправлением"
+
+#~ msgid ""
+#~ "This email contains a link (%1) which contains multiple http://. This is "
+#~ "often the case in scam emails."
+#~ msgstr ""
+#~ "Письмо содержит ссылку (%1) с несколькими префиксами http://. Это часто "
+#~ "встречается во вредных письмах."
+
+#~ msgid ""
+#~ "This email contains a shorturl (%1). It can redirect to another server."
+#~ msgstr ""
+#~ "Письмо содержит короткую ссылку (%1). Она может перенаправлять на другой "
+#~ "сайт."
+
+#~ msgid ""
+#~ "Message contains form element. This is often the case in scam emails."
+#~ msgstr ""
+#~ "Сообщение содержит в себе форму. Это часто встречается во вредных письмах."
+
+#~ msgid "Details"
+#~ msgstr "Подробности"
+
+#~ msgid "This message may be a scam. <a href=\"scamdetails\">(Details...)</a>"
+#~ msgstr ""
+#~ "Это сообщение может быть вредоносным. <a href=\"scamdetails"
+#~ "\">(Подробнее...)</a>"
+
+#~ msgid "I confirm it's not a scam"
+#~ msgstr "Я считаю, что в нём нет вреда"
+
+#~ msgid "Add email to whitelist"
+#~ msgstr "Добавить письмо в белый список"
+
+#~ msgid "Disable scam detection for all messages"
+#~ msgstr "Отключить обнаружение вредоносных сообщений"
+
+#~ msgid "No network connection detected, we cannot expand url."
+#~ msgstr ""
+#~ "Не удалось раскрыть укороченную ссылку из-за отсутствия подключения к "
+#~ "сети."
+
+#~ msgid "Short url '%1' redirects to '%2'."
+#~ msgstr "Короткая ссылка «%1» перенаправляет на «%2»."
+
+#~ msgid "Only print selected text in viewer"
+#~ msgstr "Печатать только текст, выделенный при просмотре"
+
+#~ msgid ""
+#~ "Respect expand/collapse quote mark which is defined in settings during "
+#~ "printing."
+#~ msgstr ""
+#~ "При печати учитывать параметры сворачивания/разворачивания блоков "
+#~ "цитирования"
+
+#~ msgid ""
+#~ "Specifies whether the background color and images are also drawn when the "
+#~ "page is printed."
+#~ msgstr ""
+#~ "Определяет, будут ли также выводиться при печати страницы фоновые "
+#~ "изображения и заливка цветом."
+
+#~ msgid "When we render html do not use font size inferior to minimum size."
+#~ msgstr "При отображении html ограничить минимальный размер шрифта заданным."
+
+#~ msgid "Specifies the font to use for the message body"
+#~ msgstr "Шрифт, используемый для текста письма"
+
+#~ msgid "Specifies the font to use for printing"
+#~ msgstr "Шрифт, используемый при печати"
+
+#~ msgid "Show HTML status bar"
+#~ msgstr "Строка состояния для HTML"
+
+#~ msgid "Show spam status in fancy headers"
+#~ msgstr "Показывать признак спама в «изящном» заголовки"
+
+#~ msgid "Replace smileys by emoticons"
+#~ msgstr "Показывать графические смайлики"
+
+#~ msgid ""
+#~ "Enable this if you want smileys like :-) appearing in the message text to "
+#~ "be replaced by emoticons (small pictures)."
+#~ msgstr ""
+#~ "Включите этот параметр, чтобы смайлики типа :-) в тексте писем заменялись "
+#~ "графическими значками."
+
+#~ msgid "Show expand/collapse quote marks"
+#~ msgstr "Показывать значки для сворачивания/развёртывания блоков цитирования"
+
+#~ msgid ""
+#~ "Enable this option to show different levels of quoted text. Disable to "
+#~ "hide the levels of quoted text."
+#~ msgstr ""
+#~ "Включите этот параметр, чтобы видеть разные уровни цитируемого текста. "
+#~ "При отключении этого параметра уровни цитируемого текста скрываются."
+
+#~ msgid "Automatic collapse level:"
+#~ msgstr "Уровень автоматического сворачивания:"
+
+#~ msgid "Reduce font size for quoted text"
+#~ msgstr "Уменьшить размер шрифта для цитируемого текста"
+
+#~ msgid "Enable this option to show quoted text with a smaller font."
+#~ msgstr ""
+#~ "Включите этот параметр, чтобы цитируемый текст выводился меньшим шрифтом"
+
+#~ msgid "Show user agent in fancy headers"
+#~ msgstr ""
+#~ "Показывать название почтовой программы отправителя в «изящном» заголовке"
+
+#~ msgid ""
+#~ "Enable this option to get the User-Agent and X-Mailer header lines "
+#~ "displayed when using fancy headers."
+#~ msgstr ""
+#~ "Включите этот параметр, чтобы в «изящном» заголовке показывались поля "
+#~ "User-Agent и X-Mailer отправителя"
+
+#~ msgid "Allow to edit attachments of existing mails."
+#~ msgstr "Разрешить изменений вложений в существующих письмах."
+
+#~ msgid "Always decrypt messages when viewing or ask before decrypting"
+#~ msgstr "Всегда расшифровывать письмо при просмотре или спрашивать об этом"
+
+#~ msgid "Message Structure Viewer"
+#~ msgstr "Область структуры письма"
+
+#~ msgid "Show never"
+#~ msgstr "Никогда"
+
+#~ msgid "Show always"
+#~ msgstr "Всегда"
+
+#~ msgid "What style of headers should be displayed"
+#~ msgstr "Стиль отображения заголовков"
+
+#~ msgid "How much of headers should be displayed"
+#~ msgstr "Количество отображаемых заголовков"
+
+#~ msgid "Prefer HTML to plain text"
+#~ msgstr "Предпочитать HTML простому тексту"
+
+#~ msgid "Allow messages to load external references from the Internet"
+#~ msgstr "Разрешить загрузку из Интернета внешних ресурсов писем"
+
+#~ msgid "Zoom only text"
+#~ msgstr "Только масштабировать текст"
+
+#~ msgid "How attachments are shown"
+#~ msgstr "Режим отображения вложений"
+
+#~ msgid "Specifies whether to reuse the quote color, beyond the 3rd level"
+#~ msgstr ""
+#~ "Указывает, следует ли повторно использовать цвет цитаты дальше третьего "
+#~ "уровня"
+
+#~ msgid "Activate Access Key"
+#~ msgstr "Включить клавиши быстрого доступа"
+
+#~ msgid ""
+#~ "KMail can analyze messages for suspected email scams by looking for "
+#~ "common techniques used to deceive you"
+#~ msgstr ""
+#~ "KMail может анализировать сообщения на предмет зловредного содержимого, "
+#~ "выявляя приёмы, которыми пользуются злоумышленники"
+
+#~ msgid "List of emails in scam white list"
+#~ msgstr "Белый список адресов подозрительной почты"
+
+#~ msgid "Do not send MDNs in response to encrypted messages"
+#~ msgstr ""
+#~ "Не посылать уведомления о доставке, запрашиваемые зашифрованными письмами"
+
+#~ msgid ""
+#~ "Specifies the default policy to use, for the Message Disposition "
+#~ "Notifications (for internal use only)"
+#~ msgstr ""
+#~ "Указывает используемую по умолчанию политику для уведомлений о действиях "
+#~ "с сообщениями (только для внутреннего использования)"
+
+#~ msgid ""
+#~ "Specifies the default quoting action to take, when replying to a message "
+#~ "(for internal use only)"
+#~ msgstr ""
+#~ "Определяет способ цитирования по умолчанию при ответе на письмо (только "
+#~ "для внутреннего использования)"
+
+#~ msgid "Mangle From:/To: headers in replies to replies"
+#~ msgstr "Переписывать заголовки From:/To: в ответах на ответы"
+
+#~ msgid ""
+#~ "Microsoft Outlook has a number of shortcomings in its implementation of "
+#~ "the iCalendar standard; this option works around one of them. If you have "
+#~ "problems with Outlook users not being able to get your replies, try "
+#~ "setting this option."
+#~ msgstr ""
+#~ "Microsoft Outlook содержит ряд недоработок, в частности, в реализации "
+#~ "стандарта iCalendar. Этот параметр исправляет одну из них. Включите его, "
+#~ "чтобы пользователи Outlook могли получать ваши ответы."
+
+#~ msgid "Send groupware invitations in the mail body"
+#~ msgstr "Отправлять групповые приглашения в теле письма"
+
+#~ msgid ""
+#~ "Microsoft Outlook has a number of shortcomings in its implementation of "
+#~ "the iCalendar standard; this option works around one of them. If you have "
+#~ "problems with Outlook users not being able to get your invitations, try "
+#~ "setting this option."
+#~ msgstr ""
+#~ "Microsoft Outlook содержит ряд недоработок, в частности, в реализации "
+#~ "стандарта iCalendar. Этот параметр исправляет одну из них. Включите его, "
+#~ "чтобы пользователи Outlook могли получать ваши приглашения."
+
+#~ msgid "Exchange-compatible invitation naming"
+#~ msgstr "Совместимость с Exchange по именованию приглашений"
+
+#~ msgid ""
+#~ "Microsoft Outlook, when used in combination with a Microsoft Exchange "
+#~ "server, has a problem understanding standards-compliant groupware email. "
+#~ "Turn this option on to send groupware invitations in a way that Microsoft "
+#~ "Exchange understands."
+#~ msgstr ""
+#~ "В Microsoft Outlook при работе с сервером Microsoft Exchange есть "
+#~ "проблемы с пониманием стандартов электронной почты других систем "
+#~ "совместной работы. Включите этот параметр для отправки приглашений в "
+#~ "виде, понятном Microsoft Exchange."
+
+#~ msgid "Outlook compatible invitation reply comments"
+#~ msgstr "Совместимость с Outlook по формированию ответов на приглашения"
+
+#~ msgid ""
+#~ "When replying to invitations, send the reply comment in way that "
+#~ "Microsoft Outlook understands."
+#~ msgstr ""
+#~ "При ответе на приглашение отправлять комментарий в виде, понятном для "
+#~ "Microsoft Outlook.."
+
+#~ msgid "Show invitation update differences in the Outlook style"
+#~ msgstr "При обновлении приглашений показывать различия в стиле Outlook"
+
+#~ msgid ""
+#~ "When viewing invitation updates, show the differences in the Microsoft "
+#~ "Outlook style."
+#~ msgstr ""
+#~ "При просмотре обновлений в приглашениях показывать различия в стиле "
+#~ "Microsoft Outlook."
+
+#~ msgid "Automatic invitation sending"
+#~ msgstr "Автоматическое отправление приглашений"
+
+#~ msgid ""
+#~ "When this is checked, you will not see the mail composer window. Instead, "
+#~ "all invitation mails are sent automatically. If you want to see the mail "
+#~ "before sending it, you can uncheck this option. However, be aware that "
+#~ "the text in the composer window is in iCalendar syntax, and you should "
+#~ "not try modifying it by hand."
+#~ msgstr ""
+#~ "Если этот параметр включён, при отправке приглашения на встречу не будет "
+#~ "показано окно создания письма. Чтобы изменить письмо перед его отправкой, "
+#~ "отключите этот параметр, однако имейте в виду, что в теле письма с "
+#~ "приглашением будет находиться текст в формате iCalendar, который довольно "
+#~ "сложно изменить вручную."
+
+#~ msgid "Delete invitation emails after the reply to them has been sent"
+#~ msgstr "Удалять письма с приглашениями после отправки ответа на них"
+
+#~ msgid ""
+#~ "When this is checked, received invitation emails that have been replied "
+#~ "to will be moved to the Trash folder, once the reply has been "
+#~ "successfully sent."
+#~ msgstr ""
+#~ "Если этот флажок установлен, при успешной отправке ответа на приглашение "
+#~ "само письмо с приглашением удаляется в корзину."
+
+#~ msgid "Use Fi&xed Font"
+#~ msgstr "&Фиксированный шрифт"
+
+#~ msgid "The most recent selected folder using for Todo."
+#~ msgstr "Последняя использовавшаяся папка для задач."
+
+#~ msgid "The most recent selected folder using for Event."
+#~ msgstr "Последняя использовавшаяся папка для событий."
+
+#~ msgid "The most recent selected folder using for Notes."
+#~ msgstr "Последняя использовавшаяся папка для заметок."
+
+#~ msgid "Groupware Compatibility && Legacy Options"
+#~ msgstr "Совместимость с приложениями совместной работы"
+
+#~ msgid ""
+#~ "Turn this option on in order to make Outlook(tm) understand your answers "
+#~ "to invitation replies"
+#~ msgstr ""
+#~ "Включите этот режим, чтобы Outlook(tm) понимал ответы на приглашения"
+
+#~ msgid "&Mangle From:/To: headers in replies to invitations"
+#~ msgstr ""
+#~ "&Искажать заголовки отправителя и получателя в ответах на приглашения "
+#~ "(для Outlook)"
+
+#~ msgid ""
+#~ "Turn this option on in order to make Outlook(tm) understand your answers "
+#~ "to invitations"
+#~ msgstr ""
+#~ "Включите этот режим, чтобы Outlook(TM) понимал ответы на приглашения"
+
+#~ msgid "Send &invitations in the mail body"
+#~ msgstr "Отправлять &приглашения в теле письма"
+
+#~ msgid ""
+#~ "Microsoft Outlook, when used in combination with a Microsoft Exchange "
+#~ "server,\n"
+#~ "has a problem understanding standards-compliant groupware email.\n"
+#~ "Turn this option on to send groupware invitations in a way that Microsoft "
+#~ "Exchange understands."
+#~ msgstr ""
+#~ "В Microsoft Outlook при работе с сервером Microsoft Exchange возникают "
+#~ "проблемы с пониманием стандартов электронной почты других систем "
+#~ "совместной работы. Включите этот параметр для отправки приглашений в "
+#~ "виде, понятном Microsoft Exchange."
+
+#~ msgid "Exchange-compatible invitation &naming"
+#~ msgstr "Совместимость с Exchange по и&менованию приглашений"
+
+#~ msgid ""
+#~ "Send invitation reply comments in a way that Microsoft Outlook(tm) "
+#~ "understands."
+#~ msgstr ""
+#~ "Отправлять комментарии к ответу на приглашение в виде, понятном для "
+#~ "Microsoft Outlook."
+
+#~ msgid ""
+#~ "Display invitation update differences in the Microsoft Outlook(tm) style."
+#~ msgstr ""
+#~ "Отображать различия обновленных приглашений в стиле Microsoft Outlook(tm)."
+
+#~ msgid ""
+#~ "When this is on, the user will not see the mail composer window. "
+#~ "Invitation mails are sent automatically."
+#~ msgstr ""
+#~ "При включении этого параметра приглашения будут отправляться "
+#~ "автоматически, вы не увидите окна составления письма."
+
+#~ msgid "&Automatic invitation sending"
+#~ msgstr "&Автоматическая отправка приглашений"
+
+#~ msgid "Print only selected text"
+#~ msgstr "Печатать только выделенный текст"
+
+#~ msgid "Respect &expand/collapse quote marks settings"
+#~ msgstr "Учитывать параметры с&ворачивания блоков цитирования"
+
+#~ msgid "Print background color and images"
+#~ msgstr "Печатать фоновый цвет и изображения"
+
+#~ msgid "Viewer settings"
+#~ msgstr "Настройки просмотра"
+
+#, fuzzy
+#~ msgid "O&verride character encoding:"
+#~ msgstr "&Принудительная кодировка:"
+
+#~ msgid "Enable access key"
+#~ msgstr "Включить клавиши быстрого доступа"
+
+#~ msgid "Show &HTML status bar"
+#~ msgstr "&Строка состояния для HTML"
+
+#~ msgid "Replace smileys &by emoticons"
+#~ msgstr "Показывать &графические смайлики"
+
+#~ msgid "Reduce font size for &quoted text"
+#~ msgstr "У&меньшить размер шрифта для цитируемого текста"
+
+#~ msgid "Show &expand/collapse quote marks"
+#~ msgstr "Значки для п&оказа и скрытия блоков цитирования"
+
+#, fuzzy
+#~ msgid "Automatic collapse &level:"
+#~ msgstr "Уровень автоматического сворачивания:"
+
+#~ msgid "Show spam status &in fancy headers"
+#~ msgstr "Показать признак &спама в «изящном» заголовке"
+
+#, fuzzy
+#~ msgid "&Minimum font size:"
+#~ msgstr "Минимальный размер шрифта:"
+
+#~ msgid ""
+#~ "A file named \"%1\" already exists. Are you sure you want to overwrite it?"
+#~ msgstr "Файл с именем «%1» уже существует. Заменить его?"
+
+#~ msgid "Overwrite File?"
+#~ msgstr "Заменить файл?"
+
+#~ msgid "Save Attachments To"
+#~ msgstr "Сохранить вложение в"
+
+#~ msgctxt "filename for an unnamed attachment"
+#~ msgid "attachment.1"
+#~ msgstr "вложение.1"
+
+#~ msgid "Save Attachment"
+#~ msgstr "Сохранить вложение"
+
+#~ msgctxt "filename for the %1-th unnamed attachment"
+#~ msgid "attachment.%1"
+#~ msgstr "вложение.%1"
+
+#~ msgid ""
+#~ "The part %1 of the message is encrypted. Do you want to keep the "
+#~ "encryption when saving?"
+#~ msgstr "Часть %1 письма зашифрована. Оставить письмо зашифрованным?"
+
+#~ msgid "KMail Question"
+#~ msgstr "Вопрос KMail"
+
+#~ msgid "Keep Encryption"
+#~ msgstr "Оставить зашифрованным"
+
+#~ msgid "Do Not Keep"
+#~ msgstr "Не оставлять"
+
+#~ msgid ""
+#~ "The part %1 of the message is signed. Do you want to keep the signature "
+#~ "when saving?"
+#~ msgstr "Часть %1 письма подписана. Оставить письмо подписанным?"
+
+#~ msgid "Keep Signature"
+#~ msgstr "Оставить подписанным"
+
+#~ msgctxt "1 = file name, 2 = error string"
+#~ msgid "<qt>Could not write to the file<br><filename>%1</filename><br><br>%2"
+#~ msgstr "<qt>Не удалось записать в файл<br><filename>%1</filename><br><br>%2"
+
+#~ msgid "Error saving attachment"
+#~ msgstr "Ошибка сохранения вложения"
+
+#~ msgid "Found no attachments to save."
+#~ msgstr "Не найдены вложения для сохранения."
+
+#~ msgid "message"
+#~ msgstr "письмо"
+
+# BUGME: please capitalize names --aspotashev
+#~ msgid "email messages (*.mbox);;all files (*)"
+#~ msgstr "Электронные письма (*.mbox);;Все файлы (*)"
+
+#~ msgid "Save Message"
+#~ msgid_plural "Save Messages"
+#~ msgstr[0] "Сохранить письма"
+#~ msgstr[1] "Сохранить письма"
+#~ msgstr[2] "Сохранить письма"
+#~ msgstr[3] "Сохранить письмо"
+
+#~ msgid "File %1 could not be loaded."
+#~ msgstr "Не удалось загрузить файл «%1»."
+
+#~ msgid "Error loading message"
+#~ msgstr "Ошибка при загрузке письма"
+
+#~ msgid "File %1 could not be created."
+#~ msgstr "Не удалось создать файл «%1»."
+
+#~ msgid "Error saving message"
+#~ msgstr "Ошибка при сохранении письма"
+
+#~ msgid "We cannot save message."
+#~ msgstr "Сохранить письмо не удалось."
+
+#~ msgid "Open &with %1"
+#~ msgstr "&Открыть в программе %1"
+
+#~ msgctxt "@item:inmenu Open With, %1 is application name"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Edit with:"
+#~ msgstr "Редактировать в:"
+
+#~ msgid ""
+#~ "KMail is unable to detect when the chosen editor is closed. To avoid data "
+#~ "loss, editing the attachment will be aborted."
+#~ msgstr ""
+#~ "Невозможно определить, что внешний редактор закрыт. Для предотвращения "
+#~ "потери данных редактирование вложения будет прервано."
+
+#~ msgid "Unable to edit attachment"
+#~ msgstr "Невозможно отредактировать вложение"
+
+#~ msgid "body part"
+#~ msgstr "текст письма"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "Size"
+#~ msgstr "Размер"
+
+#~ msgid "Unnamed plugin"
+#~ msgstr "Безымянный модуль"
+
+#~ msgid "No description available"
+#~ msgstr "Описание отсутствует"
+
+#, fuzzy
+#~ msgid "Move To Trash"
+#~ msgstr "Удалить в корзину"
+
+#, fuzzy
+#~ msgid "Reply To All"
+#~ msgstr "Адрес для ответа: "
+
+#, fuzzy
+#~ msgid "Print Message"
+#~ msgstr "Расшифровать письмо"
+
+#, fuzzy
+#~ msgid "Print Preview Message"
+#~ msgstr "Сохранить письма"
+
+#~ msgid "Turn on HTML rendering for this message."
+#~ msgstr "Включить показ HTML этого письма."
+
+#~ msgid "Load external references from the Internet for this message."
+#~ msgstr "Позволить загружать внешние ссылки из сети."
+
+#~ msgid "Work online."
+#~ msgstr "Работа в сети."
+
+# Тут не совсем ясно, что имеется в виду, но пока перевод такой.
+#~ msgid "Make account online."
+#~ msgstr "Придать учётной записи сетевой статус"
+
+#~ msgid "Decrypt message."
+#~ msgstr "Расшифровать письмо."
+
+#~ msgid "Show signature details."
+#~ msgstr "Показать сведения о подписи."
+
+#~ msgid "Hide signature details."
+#~ msgstr "Скрыть сведения о подписи."
+
+#~ msgid "Show attachment list."
+#~ msgstr "Показать список вложений."
+
+#~ msgid "Hide attachment list."
+#~ msgstr "Скрыть список вложений."
+
+#~ msgid "Show full \"To\" list"
+#~ msgstr "Показать полный список получателей"
+
+#~ msgid "Hide full \"To\" list"
+#~ msgstr "Скрыть полный список получателей"
+
+#~ msgid "Show full \"Cc\" list"
+#~ msgstr "Показать полный список копий"
+
+#~ msgid "Hide full \"Cc\" list"
+#~ msgstr "Скрыть полный список копий"
+
+#~ msgid "Expand all quoted text."
+#~ msgstr "Показать весь цитируемый текст."
+
+#~ msgid "Collapse quoted text."
+#~ msgstr "Скрыть весь цитируемый текст."
+
+#~ msgid "Could not start certificate manager. Please check your installation."
+#~ msgstr ""
+#~ "Невозможно запустить менеджер сертификатов. Проверьте правильность "
+#~ "установки программы."
+
+#~ msgid "KMail Error"
+#~ msgstr "Ошибка KMail"
+
+#~ msgid "Show certificate 0x%1"
+#~ msgstr "Показать сертификат 0x%1"
+
+#~ msgid "&Open in Address Book"
+#~ msgstr "&Открыть в адресной книге"
+
+#~ msgid "&Copy Email Address"
+#~ msgstr "Копировать &адрес электронной почты"
+
+#~ msgid "Address copied to clipboard."
+#~ msgstr "Адрес скопирован в буфер обмена."
+
+#~ msgid "Lookup the contact in KAddressbook"
+#~ msgstr "Поиск контакта в KAddressbook"
+
+#~ msgid "Attachment: %1"
+#~ msgstr "Вложение: %1"
+
+#~ msgid "Encapsulated Message (Subject: %1)"
+#~ msgstr "Инкапсулированное письмо (Тема: %1)"
+
+#~ msgid "Encapsulated Message"
+#~ msgstr "Инкапсулированное письмо"
+
+#~ msgid "Unnamed attachment"
+#~ msgstr "Безымянное вложение"
+
+#~ msgid "Show GnuPG Audit Log for this operation"
+#~ msgstr "Показать журнал аудита GnuPG для этой операции"
+
+#~ msgid "Opening URL..."
+#~ msgstr "Открытие ссылки..."
+
+#~ msgctxt "@info"
+#~ msgid "Do you really want to execute <filename>%1</filename>?"
+#~ msgstr "Выполнить программу <filename>%1</filename>?"
+
+#~ msgid "Execute"
+#~ msgstr "Выполнить"
+
+#~ msgid "Loading message..."
+#~ msgstr "Загрузка письма..."
+
+#~ msgid ""
+#~ "Deleting an attachment from an encrypted or old-style mailman message is "
+#~ "not supported."
+#~ msgstr ""
+#~ "Удаление вложения из зашифрованного письма или письма из почтового агента "
+#~ "старого стиля не поддерживается."
+
+#~ msgid "Delete Attachment"
+#~ msgstr "Удалить вложение"
+
+#~ msgid ""
+#~ "Deleting an attachment might invalidate any digital signature on this "
+#~ "message."
+#~ msgstr ""
+#~ "Удаление вложения может сделать цифровую подпись этого письма "
+#~ "недействительной."
+
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With"
+#~ msgstr "&Открыть в..."
+
+#~ msgctxt "@action:inmenu Open With"
+#~ msgid "&Other..."
+#~ msgstr "&Другое..."
+
+#~ msgctxt "@title:menu"
+#~ msgid "&Open With..."
+#~ msgstr "&Открыть в..."
+
+#~ msgctxt "to open"
+#~ msgid "Open"
+#~ msgstr "Открыть"
+
+#~ msgctxt "to view something"
+#~ msgid "View"
+#~ msgstr "Просмотреть"
+
+#~ msgid "Scroll To"
+#~ msgstr "Прокрутить к"
+
+#~ msgid "Save As..."
+#~ msgstr "Сохранить как..."
+
+#~ msgid "Properties"
+#~ msgstr "Свойства"
+
+#~ msgid "KMail"
+#~ msgstr "KMail"
+
+#~ msgid "The KDE Mail Client"
+#~ msgstr "Почтовый клиент от KDE"
+
+#~ msgid "View Attachment: %1"
+#~ msgstr "Просмотр вложения: %1"
+
+#~ msgctxt "View->"
+#~ msgid "&Attachments"
+#~ msgstr "&Вложения"
+
+#~ msgid "Choose display style of attachments"
+#~ msgstr "Выберите стиль показа вложений"
+
+#~ msgctxt "View->attachments->"
+#~ msgid "&As Icons"
+#~ msgstr "В виде &значков"
+
+#~ msgid "Show all attachments as icons. Click to see them."
+#~ msgstr ""
+#~ "Показывать вложения в виде значков, которые нужно нажать для просмотра"
+
+#~ msgctxt "View->attachments->"
+#~ msgid "&Smart"
+#~ msgstr "&Интеллектуально"
+
+#~ msgid "Show attachments as suggested by sender."
+#~ msgstr "Показывать вложения в том виде, как это предполагалось отправителем"
+
+#~ msgctxt "View->attachments->"
+#~ msgid "&Inline"
+#~ msgstr "&В тексте"
+
+#~ msgid "Show all attachments inline (if possible)"
+#~ msgstr "Показывать содержимое вложений в тексте письма (если это возможно)"
+
+#~ msgctxt "View->attachments->"
+#~ msgid "&Hide"
+#~ msgstr "&Не показывать"
+
+#~ msgid "Do not show attachments in the message viewer"
+#~ msgstr "Не показывать вложения в письме"
+
+#~ msgctxt "View->attachments->"
+#~ msgid "In Header Only"
+#~ msgstr "Только в заголовках"
+
+#~ msgid "Show Attachments only in the header of the mail"
+#~ msgstr "Показывать вложения только в заголовках письма"
+
+#~ msgid "&Set Encoding"
+#~ msgstr "&Установить кодировку"
+
+#~ msgid "Auto"
+#~ msgstr "Авто"
+
+#~ msgid "Select All Text"
+#~ msgstr "Выделить весь текст"
+
+#~ msgid "Copy Link Address"
+#~ msgstr "Скопировать адрес ссылки"
+
+#~ msgid "Open URL"
+#~ msgstr "Открыть"
+
+#~ msgid "Show Message Structure"
+#~ msgstr "Показать структуру письма"
+
+# простой текст/исходный текст? --aspotashev
+#~ msgid "&View Source"
+#~ msgstr "Просмотр &исходного текста письма..."
+
+#~ msgid "&Save message..."
+#~ msgstr "&Сохранить сообщение..."
+
+#~ msgid "&Save Display Format"
+#~ msgstr "С&охранить формат отображения"
+
+#~ msgid "&Reset Display Format"
+#~ msgstr "С&бросить формат отображения"
+
+#~ msgid "Scroll Message Up"
+#~ msgstr "Прокрутить письмо вверх"
+
+#~ msgid "Scroll Message Down"
+#~ msgstr "Прокрутить письмо вниз"
+
+#~ msgid "Scroll Message Up (More)"
+#~ msgstr "Прокрутить письмо вверх (с переходом)"
+
+#~ msgid "Scroll Message Down (More)"
+#~ msgstr "Прокрутить письмо вниз (с переходом)"
+
+#~ msgid "Toggle HTML Display Mode"
+#~ msgstr "Переключить в режим отображения HTML"
+
+#~ msgid "Toggle display mode between HTML and plain text"
+#~ msgstr "Переключить между HTML и текстовым режимами отображения"
+
+#~ msgid "Load external references"
+#~ msgstr "Загрузка внешних ресурсов"
+
+#~ msgid "Speak Text"
+#~ msgstr "Зачитать текст"
+
+#~ msgid "Copy Image Location"
+#~ msgstr "Выбор местоположения картинки"
+
+#~ msgid "&Find in Message..."
+#~ msgstr "&Найти в сообщении..."
+
+#~ msgid "Save &As..."
+#~ msgstr "Сохранить &как..."
+
+#~ msgid "Open With..."
+#~ msgstr "Открыть в..."
+
+#~ msgid "Save All Attachments..."
+#~ msgstr "Сохранить все вложения..."
+
+#~ msgid "Copy Email Address"
+#~ msgstr "Копировать адрес электронной почты"
+
+#~ msgid "Message as Plain Text"
+#~ msgstr "Письмо в виде обычного текста"
+
+#~ msgid "Attachments:"
+#~ msgstr "Вложения:"
+
+#~ msgid "URL copied to clipboard."
+#~ msgstr "Ссылка скопирована в буфер обмена."
+
+#~ msgid "Hide full address list"
+#~ msgstr "Скрыть полный список адресов"
+
+#~ msgid "Show full address list"
+#~ msgstr "Показать полный список адресов"
+
+#~ msgid "Message loading failed: %1."
+#~ msgstr "Не удалось загрузить письмо: %1."
+
+#~ msgid "Message not found."
+#~ msgstr "Письмо не найдено."
+
+#~ msgid "Blocked by ad filter"
+#~ msgstr "Заблокировано фильтром рекламы"
+
+#~ msgid ""
+#~ "Open attachment '%1'?\n"
+#~ "Note that opening an attachment may compromise your system's security."
+#~ msgstr ""
+#~ "Открыть вложение «%1»?\n"
+#~ "Имейте в виду, что это представляет угрозу для безопасности вашей системы."
+
+#~ msgid "Open Attachment?"
+#~ msgstr "Открыть вложение?"
+
+#~ msgid "&Open with '%1'"
+#~ msgstr "&Открыть в программе «%1»"
+
+#~ msgid "&Open With..."
+#~ msgstr "&Открыть в..."
+
+#~ msgid "Do not ask again"
+#~ msgstr "Не задавать больше этот вопрос"
+
+#~ msgctxt ""
+#~ "'HTML Message' with html linebreaks between each letter and in bold text."
+#~ msgid ""
+#~ "<qt><b><br />H<br />T<br />M<br />L<br /> <br />M<br />e<br />s<br /"
+#~ ">s<br />a<br />g<br />e</b></qt>"
+#~ msgstr ""
+#~ "<qt><b><br />П<br />и<br />с<br />ь<br />м<br />о<br /><br />H<br />T<br /"
+#~ ">M<br />L</b></qt>"
+
+#~ msgctxt "'No HTML Message' with html linebreaks between each letter."
+#~ msgid ""
+#~ "<qt><br />N<br />o<br /> <br />H<br />T<br />M<br />L<br /> <br />M<br /"
+#~ ">e<br />s<br />s<br />a<br />g<br />e</qt>"
+#~ msgstr ""
+#~ "<qt><br />Б<br />е<br />з<br /><br />H<br />T<br />M<br />L<br /> </qt>"
+
+#~ msgctxt "'Plain Message' with html linebreaks between each letter."
+#~ msgid ""
+#~ "<qt><br />P<br />l<br />a<br />i<br />n<br /> <br />M<br />e<br />s<br /"
+#~ ">s<br />a<br />g<br />e<br /></qt>"
+#~ msgstr ""
+#~ "<qt><br />П<br />р<br />о<br />с<br />т<br />о<br />й<br /><br />т<br /"
+#~ ">е<br />к<br />с<br />т<br /> </qt>"
+
+#~ msgid "Click to toggle between HTML and plain text."
+#~ msgstr "Щёлкните, чтобы переключить режим отображения HTML/текст."
+
+#~ msgid ""
+#~ "<qt>Invitations are normally sent as attachments to a mail. This switch "
+#~ "changes the invitation mails to be sent in the text of the mail instead; "
+#~ "this is necessary to send invitations and replies to Microsoft Outlook."
+#~ "<br />But, when you do this, you no longer get descriptive text that mail "
+#~ "programs can read; so, to people who have email programs that do not "
+#~ "understand the invitations, the resulting messages look very odd.<br /"
+#~ ">People that have email programs that do understand invitations will "
+#~ "still be able to work with this.</qt>"
+#~ msgstr ""
+#~ "<qt>Приглашения обычно отправляются в формате почтовых вложений. При "
+#~ "включении этой опции приглашения и ответы на них будут отправляться "
+#~ "непосредственно в тексте письма, чтобы Microsoft Outlook был способен их "
+#~ "воспринимать.<br />Учтите, что при этом пропадает описание, которое "
+#~ "способны читать почтовые программы, и адресаты, почтовые программы "
+#~ "которых не смогут прочитать эти приглашения, будут удивлены странным "
+#~ "видом писем.<br />Адресаты с почтовыми программами, способными прочитать "
+#~ "такие письма, смогут работать с ними.</qt>"
+
+#~ msgctxt "Unchanged mail message"
+#~ msgid "Raw Source"
+#~ msgstr "Необработанный источник"
+
+#~ msgid ""
+#~ "Raw, unmodified mail as it is stored on the filesystem or on the server"
+#~ msgstr ""
+#~ "Необработанные и неизменённые письма, такие, как это, хранятся в файловой "
+#~ "системе или на сервере"
+
+#~ msgctxt "Mail message as shown, in HTML format"
+#~ msgid "HTML Source"
+#~ msgstr "Исходный код HTML"
+
+#~ msgid "HTML code for displaying the message to the user"
+#~ msgstr "HTML код для отображения письма пользователю"
+
+#~ msgid "Open folder where attachment was saved"
+#~ msgstr "Открыть папку с сохранённым вложением"
+
+#~ msgid "vCard Viewer"
+#~ msgstr "Просмотр vCard"
+
+#~ msgid "&Import"
+#~ msgstr "&Импорт"
+
+#~ msgid "&Next Card"
+#~ msgstr "Следующая &карточка"
+
+#~ msgid "&Previous Card"
+#~ msgstr "Предыдущая к&арточка"
+
+#~ msgid "Zoom Text Only"
+#~ msgstr "Масштабировать только текст"
+
+#~ msgid "&Zoom In"
+#~ msgstr "У&величить масштаб"
+
+#~ msgid "Zoom &Out"
+#~ msgstr "У&меньшить масштаб"
+
+#~ msgid "Reset"
+#~ msgstr "Сбросить масштаб"
+
+#~ msgid "Zoom"
+#~ msgstr "Масштаб"
+
+#~ msgid "Encapsulated message"
+#~ msgstr "Встроенное письмо"
+
+#~ msgid "End of encapsulated message"
+#~ msgstr "Конец встроенного письма"
+
+#~ msgid "Please wait while the message is being decrypted..."
+#~ msgstr "Дождитесь окончания расшифровки письма..."
+
+#~ msgid "Encrypted message"
+#~ msgstr "Зашифрованное письмо"
+
+#~ msgid "Encrypted message (decryption not possible)"
+#~ msgstr "Письмо зашифровано (расшифровка невозможна)"
+
+#~ msgid "Reason: %1"
+#~ msgstr "Причина: %1"
+
+#~ msgid "End of encrypted message"
+#~ msgstr "Конец зашифрованного письма"
+
+#~ msgid "Error: Signature not verified"
+#~ msgstr "Ошибка: подпись не проверена"
+
+#~ msgid "Good signature"
+#~ msgstr "Верная подпись"
+
+#~ msgid "<b>Bad</b> signature"
+#~ msgstr "<b>Неверная</b> подпись."
+
+#~ msgid "No public key to verify the signature"
+#~ msgstr "Отсутствует открытый ключ для проверки подписи."
+
+#~ msgid "No signature found"
+#~ msgstr "Подпись не найдена"
+
+#~ msgid "Error verifying the signature"
+#~ msgstr "Ошибка при проверке подписи"
+
+#~ msgid "Different results for signatures"
+#~ msgstr "Разные результаты для подписей"
+
+#~ msgid "No status information available."
+#~ msgstr "Отсутствует информация о состоянии."
+
+#~ msgid "Good signature."
+#~ msgstr "Верная подпись."
+
+#~ msgid "One key has expired."
+#~ msgstr "Один ключ просрочен."
+
+#~ msgid "The signature has expired."
+#~ msgstr "Подпись просрочена."
+
+#~ msgid "Unable to verify: key missing."
+#~ msgstr "Ошибка при проверке: отсутствует ключ."
+
+#~ msgid "CRL not available."
+#~ msgstr "CRL недоступен."
+
+#~ msgid "Available CRL is too old."
+#~ msgstr "Существующий CRL устарел."
+
+#~ msgid "A policy was not met."
+#~ msgstr "Правило не подходит."
+
+#~ msgid "A system error occurred."
+#~ msgstr "Произошла системная ошибка."
+
+#~ msgid "One key has been revoked."
+#~ msgstr "Один из ключей был отозван."
+
+#~ msgid "<b>Bad</b> signature."
+#~ msgstr "<b>Неверная</b> подпись."
+
+#~ msgid "Invalid signature."
+#~ msgstr "Неверная подпись."
+
+#~ msgid "Not enough information to check signature validity."
+#~ msgstr "Недостаточно информации для проверки подписи."
+
+#~ msgid "Signature is valid."
+#~ msgstr "Подпись верна."
+
+#~ msgid "Signed by <a href=\"mailto:%1\">%2</a>."
+#~ msgstr "Подпись: <a href=\"mailto:%1\">%2</a>."
+
+#~ msgid "Unknown signature state"
+#~ msgstr "Неизвестный статус подписи"
+
+#~ msgid "Show Details"
+#~ msgstr "Показать подробности"
+
+#~ msgid "No Audit Log available"
+#~ msgstr "Отсутствует журнал аудита"
+
+#~ msgid "Error Retrieving Audit Log: %1"
+#~ msgstr "Ошибка получения содержимого журнала аудита: %1"
+
+#~ msgctxt "The Audit Log is a detailed error log from the gnupg backend"
+#~ msgid "Show Audit Log"
+#~ msgstr "Журнал аудита"
+
+#~ msgid "Hide Details"
+#~ msgstr "Скрыть подробности"
+
+#~ msgid "Please wait while the signature is being verified..."
+#~ msgstr "Дождитесь окончания проверки подписи письма..."
+
+#~ msgid "certificate"
+#~ msgstr "сертификат"
+
+#~ msgctxt "Start of warning message."
+#~ msgid "Warning:"
+#~ msgstr "Предупреждение:"
+
+#~ msgid "Sender's mail address is not stored in the %1 used for signing."
+#~ msgstr ""
+#~ "Адрес отправителя не указан в сертификате %1, использованном для подписи."
+
+#~ msgid "sender: "
+#~ msgstr "отправитель: "
+
+#~ msgid "stored: "
+#~ msgstr "в сертификате: "
+
+#~ msgid ""
+#~ "No mail address is stored in the %1 used for signing, so we cannot "
+#~ "compare it to the sender's address %2."
+#~ msgstr ""
+#~ "Не указан адрес в %1, используемом для подписи, сравнение с адресом "
+#~ "отправителя %2 невозможно."
+
+#~ msgid "Not enough information to check signature. %1"
+#~ msgstr "Недостаточно информации для проверки подписи. %1"
+
+#~ msgid "Message was signed with unknown key."
+#~ msgstr "Письмо подписано неизвестным ключом."
+
+#~ msgid "Message was signed by %1."
+#~ msgstr "Письмо подписано %1."
+
+#~ msgid "Message was signed with key %1."
+#~ msgstr "Письмо подписано ключом %1."
+
+#~ msgid "Message was signed on %1 with key %2."
+#~ msgstr "Письмо подписано %1 ключом %2."
+
+#~ msgid "Message was signed by %3 on %1 with key %2"
+#~ msgstr "Письмо подписано %3 %1 ключом %2."
+
+#~ msgid "Message was signed by %2 with key %1."
+#~ msgstr "Письмо подписано %2 ключом %1."
+
+#~ msgid "Status: "
+#~ msgstr "Статус: "
+
+#~ msgid "Message was signed on %1 with unknown key %2."
+#~ msgstr "Письмо подписано %1 неизвестным ключом %2."
+
+#~ msgid "Message was signed with unknown key %1."
+#~ msgstr "Письмо подписано неизвестным ключом %1."
+
+#~ msgid "The validity of the signature cannot be verified."
+#~ msgstr "Невозможно установить подлинность подписи."
+
+#~ msgid "Message was signed by %2 (Key ID: %1)."
+#~ msgstr "Письмо подписал(а) %2 (ID ключа: %1)."
+
+#~ msgid "The signature is valid, but the key's validity is unknown."
+#~ msgstr "Подпись верна, но достоверность ключа неизвестна."
+
+#~ msgid "The signature is valid and the key is marginally trusted."
+#~ msgstr "Подпись верна, но ключ не полностью проверен."
+
+#~ msgid "The signature is valid and the key is fully trusted."
+#~ msgstr "Подпись верна, и ключ полностью проверен."
+
+#~ msgid "The signature is valid and the key is ultimately trusted."
+#~ msgstr "Подпись верна, и ключ окончательно проверен."
+
+#~ msgid "The signature is valid, but the key is untrusted."
+#~ msgstr "Подпись верна, но ключ не проверен."
+
+#~ msgid "Warning: The signature is bad."
+#~ msgstr "Предупреждение: ошибка в подписи."
+
+#~ msgid "End of signed message"
+#~ msgstr "Конец подписанного письма"
+
+#~ msgid ""
+#~ "<b>Note:</b> This HTML message may contain external references to images "
+#~ "etc. For security/privacy reasons external references are not loaded. If "
+#~ "you trust the sender of this message then you can load the external "
+#~ "references for this message <a href=\"kmail:loadExternal\">by clicking "
+#~ "here</a>."
+#~ msgstr ""
+#~ "<b>Примечание.</b> Письмо в формате HTML может содержать ссылки на "
+#~ "внешние ресурсы (изображения и т.д.). По соображениям безопасности "
+#~ "загрузка внешних ссылок будет отключена.<br />Чтобы включить загрузку "
+#~ "внешних ссылок для отправителя этого письма, нажмите <a href=\"kmail:"
+#~ "loadExternal\">здесь</a>."
+
+#~ msgid ""
+#~ "<b>Note:</b> This is an HTML message. For security reasons, only the raw "
+#~ "HTML code is shown. If you trust the sender of this message then you can "
+#~ "activate formatted HTML display for this message <a href=\"kmail:showHTML"
+#~ "\">by clicking here</a>."
+#~ msgstr ""
+#~ "<b>Примечание.</b> Это письмо в формате HTML. По соображениям "
+#~ "безопасности код письма отображается в текстовом виде. Чтобы включить "
+#~ "показ показ HTML для отправителя этого письма нажмите <a href=\"kmail:"
+#~ "showHTML\">здесь</a>."
+
+#~ msgid "Wrong Crypto Plug-In."
+#~ msgstr "Неверный модуль криптографии."
+
+#~ msgid "This message is encrypted."
+#~ msgstr "Это письмо зашифровано."
+
+#~ msgid "Decrypt Message"
+#~ msgstr "Расшифровать письмо"
+
+#~ msgid "The crypto engine returned no cleartext data."
+#~ msgstr "Программа шифрования не возвратила тестовых данных."
+
+#~ msgctxt "Status of message unknown."
+#~ msgid "(unknown)"
+#~ msgstr "(неизвестный)"
+
+#~ msgid "Sorry, certificate could not be imported.<br />Reason: %1"
+#~ msgstr "Не удалось импортировать сертификат.<br />Причина: %1"
+
+#~ msgid "Sorry, no certificates were found in this message."
+#~ msgstr "Извините, для этого письма не найдено ни одного сертификата."
+
+#~ msgid "Certificate import status:"
+#~ msgstr "Состояние импорта сертификатов:"
+
+#~ msgid "1 new certificate was imported."
+#~ msgid_plural "%1 new certificates were imported."
+#~ msgstr[0] "%1 сертификат импортирован."
+#~ msgstr[1] "%1 сертификата импортированы."
+#~ msgstr[2] "%1 сертификатов импортированы."
+#~ msgstr[3] "%1 сертификат импортирован."
+
+#~ msgid "1 certificate was unchanged."
+#~ msgid_plural "%1 certificates were unchanged."
+#~ msgstr[0] "%1 сертификат не был изменён."
+#~ msgstr[1] "%1 сертификата не были изменены."
+#~ msgstr[2] "%1 сертификатов не были изменены."
+#~ msgstr[3] "%1 сертификат не был изменён."
+
+#~ msgid "1 new secret key was imported."
+#~ msgid_plural "%1 new secret keys were imported."
+#~ msgstr[0] "%1 закрытый ключ импортирован."
+#~ msgstr[1] "%1 закрытых ключа импортированы."
+#~ msgstr[2] "%1 закрытых ключей импортированы."
+#~ msgstr[3] "%1 закрытый ключ импортирован."
+
+#~ msgid "1 secret key was unchanged."
+#~ msgid_plural "%1 secret keys were unchanged."
+#~ msgstr[0] "%1 закрытый ключ не был изменён."
+#~ msgstr[1] "%1 закрытых ключа не были изменены."
+#~ msgstr[2] "%1 закрытых ключей не были изменены."
+#~ msgstr[3] "%1 закрытый ключ не был изменён."
+
+#~ msgid "Sorry, no details on certificate import available."
+#~ msgstr "Подробности о процессе импорта сертификатов не доступны."
+
+#~ msgid "Certificate import details:"
+#~ msgstr "Подробности импорта сертификатов:"
+
+#~ msgctxt "Certificate import failed."
+#~ msgid "Failed: %1 (%2)"
+#~ msgstr "Ошибка: %1 (%2)"
+
+#~ msgid "New or changed: %1 (secret key available)"
+#~ msgstr "Новый или изменённый: %1 (закрытый ключ доступен)"
+
+#~ msgid "New or changed: %1"
+#~ msgstr "Новый или изменённый: %1"
+
+#~ msgid "Could not decrypt the data."
+#~ msgstr "Невозможно расшифровать данные."
+
+#~ msgid "Crypto plug-in \"%1\" could not decrypt the data."
+#~ msgstr "Модуль шифрования %1 не может расшифровать эти данные."
+
+#~ msgid "Error: %1"
+#~ msgstr "Ошибка: %1"
+
+#~ msgid "Crypto plug-in \"%1\" is not initialized."
+#~ msgstr "Модуль шифрования %1 не запущен."
+
+#~ msgid "Crypto plug-in \"%1\" cannot decrypt messages."
+#~ msgstr "Модуль шифрования «%1» не может расшифровать письма."
+
+#~ msgid "No appropriate crypto plug-in was found."
+#~ msgstr "Не найдено соответствующего модуля криптографии."
+
+#~ msgctxt "display name for an unnamed attachment"
+#~ msgid "Unnamed"
+#~ msgstr "файл"
+
+#~ msgid "Crypto plug-in \"%1\" cannot verify signatures."
+#~ msgstr "Модуль шифрования «%1» не может проверить подписи."
+
+#~ msgctxt "%1 is either 'OpenPGP' or 'S/MIME'"
+#~ msgid "No %1 plug-in was found."
+#~ msgstr "Не найден модуль поддержки %1."
+
+#~ msgid ""
+#~ "The message is signed, but the validity of the signature cannot be "
+#~ "verified.<br />Reason: %1"
+#~ msgstr "Не удаётся установить подлинность подписи.<br />Причина: %1"
+
+#~ msgid "Expand Short URL"
+#~ msgstr "Раскрыть укороченную ссылку"
+
+#~ msgctxt "View->headers->"
+#~ msgid "&All Headers"
+#~ msgstr "&Все поля"
+
+#~ msgid "Show all message headers"
+#~ msgstr "Показать все поля заголовка письма"
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Brief Headers"
+#~ msgstr "&Краткий"
+
+#~ msgid "Show brief list of message headers"
+#~ msgstr "Показать краткий заголовок"
+
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Show custom headers"
+#~ msgstr "Показать настраиваемый заголовок"
+
+#~ msgid "To: "
+#~ msgstr "Получатель: "
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Enterprise Headers"
+#~ msgstr "&Корпоративный"
+
+#~ msgid "Show the list of headers in Enterprise style"
+#~ msgstr "Показать заголовок в корпоративном формате"
+
+#~ msgid "(resent from %1)"
+#~ msgstr "(переслал %1)"
+
+#~ msgid "(receiver was %1)"
+#~ msgstr "(получателем был %1)"
+
+#~ msgctxt "To-field of the mail header."
+#~ msgid "To: "
+#~ msgstr "Получатель: "
+
+#~ msgid "User-Agent: "
+#~ msgstr "Почтовый клиент: "
+
+#~ msgid "X-Mailer: "
+#~ msgstr "X-Mailer: "
+
+#~ msgid "Bugzilla: "
+#~ msgstr "Bugzilla: "
+
+# "Получатель уведомления о доставке" -- слишком длинно. --aspotashev
+#~ msgid "MDN To: "
+#~ msgstr "Получатель подтверждения:"
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Fancy Headers"
+#~ msgstr "&Изящный"
+
+#~ msgid "Show the list of headers in a fancy format"
+#~ msgstr "Показать заголовок в «изящном» формате"
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Long Headers"
+#~ msgstr "&Подробный"
+
+#~ msgid "Show long list of message headers"
+#~ msgstr "Показать подробный заголовок"
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Standard Headers"
+#~ msgstr "&Стандартный"
+
+#~ msgid "Show standard list of message headers"
+#~ msgstr "Показать стандартный заголовок"
+
+#~ msgid "Headers:"
+#~ msgstr "Поля заголовка:"
+
+#~ msgid "Configure Custom Headers..."
+#~ msgstr "Настроить..."
+
+#~ msgid ""
+#~ "Show HTML colored quote (It can take some time on specific html email)"
+#~ msgstr "Выделять цитирование цветом с помощью HTML (может замедлить работу)"
+
+#~ msgid "Au&tomatic collapse level:"
+#~ msgstr "&Автоматически скрывать уровни цитирования после:"
+
+#~ msgid "Event:"
+#~ msgstr "Событие:"
+
+# BUGME: please remove full stop from the tooltip text --aspotashev
+#~ msgid "Calendar where the new event will be stored."
+#~ msgstr "Календарь, в который следует добавить новое событие."
+
+# BUGME: widgets/noteedit.cpp:80 should probably talk about notes, not events. --aspotashev
+#~ msgid "Calendar where the new event will be stored"
+#~ msgstr "Календарь, в который следует добавить новое событие"
+
+#~ msgid "Start:"
+#~ msgstr "Начало:"
+
+#~ msgid "Select start time for event."
+#~ msgstr "Укажите время начала события."
+
+#~ msgid "End:"
+#~ msgstr "Завершение:"
+
+#~ msgid "Select end time for event."
+#~ msgstr "Укажите время завершения события."
+
+#~ msgid "&Save"
+#~ msgstr "&Сохранить"
+
+#~ msgid "Create new event and close this widget."
+#~ msgstr "Создать новое событие и закрыть эту панель."
+
+#~ msgid "Open &editor..."
+#~ msgstr "Открыть &редактор..."
+
+#~ msgid "Open event editor, where more details can be changed."
+#~ msgstr "Открыть редактор события, чтобы установить другие его параметры."
+
+#~ msgid "Close the widget for creating new events."
+#~ msgstr "Закрыть панель создания нового события."
+
+#~ msgid "Create Event..."
+#~ msgstr "Создать событие..."
+
+#~ msgid "Create Event"
+#~ msgstr "Создать событие"
+
+#~ msgid "Allows you to create a calendar Event"
+#~ msgstr "Добавить в календарь событие для этого письма."
+
+# Note like in KNotes. --aspotashev
+#~ msgid "Note:"
+#~ msgstr "Заметка:"
+
+#~ msgid "Create new note and close this widget."
+#~ msgstr "Создать новую заметку и закрыть эту панель."
+
+#~ msgid "Close the widget for creating new notes."
+#~ msgstr "Закрыть панель создания новой заметки."
+
+# BUGME: add ellipsis --aspotashev
+#~ msgctxt "edit a note on this message"
+#~ msgid "Edit Note"
+#~ msgstr "Изменить заметку..."
+
+#~ msgid "Allows you to create a note from this message"
+#~ msgstr "Создать заметку для этого письма"
+
+#~ msgid ""
+#~ "This option starts an editor to create a note. Then you can edit the note "
+#~ "to your liking before saving it."
+#~ msgstr ""
+#~ "Открыть окно создания новой заметки для данного письма. Перед сохранением "
+#~ "заметку можно отредактировать."
+
+#~ msgid "Todo:"
+#~ msgstr "Задача:"
+
+#~ msgid "Todo list where the new task will be stored."
+#~ msgstr "Список задач, в который следует добавить новую задачу."
+
+#~ msgid "Todo list where the new task will be stored"
+#~ msgstr "Список задач, в который следует добавить новую задачу"
+
+#~ msgid "Create new todo and close this widget."
+#~ msgstr "Создать новую задачу и закрыть эту панель."
+
+#~ msgid "Open todo editor, where more details can be changed."
+#~ msgstr "Открыть редактор задачи, чтобы установить другие её параметры."
+
+#~ msgid "Close the widget for creating new todos."
+#~ msgstr "Закрыть панель создания новой задачи."
+
+#~ msgid "Reply to \"%1\""
+#~ msgstr "Ответить на «%1»"
+
+#~ msgctxt ""
+#~ "%1 is summary of the todo, %2 is name of the folder in which it is stored"
+#~ msgid "New todo '%1' was added to task list '%2'"
+#~ msgstr "Новая задача «%1» добавлена в список задач «%2»"
+
+# BUGME: please add ellipsis --aspotashev
+#~ msgid "Create Todo"
+#~ msgstr "Создать задачу..."
+
+#~ msgid "Create To-do"
+#~ msgstr "Создать задачу"
+
+#~ msgid "Allows you to create a calendar to-do or reminder from this message"
+#~ msgstr "Добавить в календарь задачу или напоминание для этого письма"
+
+#~ msgid ""
+#~ "This option starts the KOrganizer to-do editor with initial values taken "
+#~ "from the currently selected message. Then you can edit the to-do to your "
+#~ "liking before saving it to your calendar."
+#~ msgstr ""
+#~ "Открыть окно создания новой задачи для данного письма. Перед сохранением "
+#~ "задачу можно отредактировать."
+
+#~ msgid "Translate..."
+#~ msgstr "Перевести..."
+
+#~ msgid "Only show the headers listed below"
+#~ msgstr "Показывать только следующие заголовки"
+
+#~ msgid "Show all but hide the headers listed below"
+#~ msgstr "Показывать все заголовки, кроме следующих"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Добавить..."
+
+#~ msgid "&Modify..."
+#~ msgstr "&Изменить..."
+
+#~ msgid "Header:"
+#~ msgstr "Заголовок:"
+
+#~ msgid ""
+#~ "Chiasmus backend does not offer the \"x-obtain-keys\" function. Please "
+#~ "report this bug."
+#~ msgstr ""
+#~ "Библиотека Chiasmus не содержит функции «x-obtain-keys». Сообщите об этой "
+#~ "ошибке разработчикам."
+
+#~ msgid "Chiasmus Backend Error"
+#~ msgstr "Ошибка модуля Chiasmus"
+
+#~ msgid ""
+#~ "Unexpected return value from Chiasmus backend: The \"x-obtain-keys\" "
+#~ "function did not return a string list. Please report this bug."
+#~ msgstr ""
+#~ "Функция «x-obtain-keys» библиотеки Chiasmus не вернула список строк. "
+#~ "Сообщите об этой ошибке разработчикам."
+
+#~ msgid ""
+#~ "No keys have been found. Please check that a valid key path has been set "
+#~ "in the Chiasmus configuration."
+#~ msgstr ""
+#~ "Ключи не найдены. Укажите правильный путь к ключам в параметрах настройки "
+#~ "Chiasmus."
+
+#~ msgid "Chiasmus Decryption Key Selection"
+#~ msgstr "Выбор ключа расшифровывания Chiasmus"
+
+#~ msgid ""
+#~ "Chiasmus backend does not offer the \"x-decrypt\" function. Please report "
+#~ "this bug."
+#~ msgstr ""
+#~ "Библиотека Chiasmus не содержит функции «x-decrypt». Сообщите об этой "
+#~ "ошибке разработчикам."
+
+#~ msgid ""
+#~ "The \"x-decrypt\" function does not accept the expected parameters. "
+#~ "Please report this bug."
+#~ msgstr ""
+#~ "Параметры вызова функции «x-decrypt» не соответствуют ожидаемым. Сообщите "
+#~ "об этой ошибке разработчикам."
+
+#~ msgid "Chiasmus Decryption Error"
+#~ msgstr "Ошибка расшифровки Chiasmus"
+
+#~ msgid ""
+#~ "Unexpected return value from Chiasmus backend: The \"x-decrypt\" function "
+#~ "did not return a byte array. Please report this bug."
+#~ msgstr ""
+#~ "Функция «x-decrypt» библиотеки Chiasmus не вернула массив байтов. "
+#~ "Сообщите об этой ошибке разработчикам."
+
+#~ msgid "Please select the Chiasmus key file to use:"
+#~ msgstr "Выберите ключ Chiasmus:"
+
+#~ msgid "Additional arguments for chiasmus:"
+#~ msgstr "Дополнительные параметры запуска chiasmus:"
+
+#~ msgid "Decrypt With Chiasmus..."
+#~ msgstr "Расшифровать в Chiasmus..."
+
+#, fuzzy
+#~ msgid "Use Default Image"
+#~ msgstr "Использовать параметр по умолчанию"
+
+#, fuzzy
+#~ msgctxt "add space before image"
+#~ msgid " image"
+#~ msgid_plural " images"
+#~ msgstr[0] "Изображение"
+#~ msgstr[1] "Изображение"
+#~ msgstr[2] "Изображение"
+#~ msgstr[3] "Изображение"
+
+#, fuzzy
+#~ msgid "Configure..."
+#~ msgstr "Настроить..."
+
+#~ msgid "Toggle Caret Browsing"
+#~ msgstr "Переключить активный курсор"
+
+#~ msgid "Caret Browsing will be activated. Switch off with F7 shortcut."
+#~ msgstr ""
+#~ "Включается режим активного курсора в окне просмотра. Выключить его можно "
+#~ "клавишей F7."
+
+#~ msgid "Activate Caret Browsing"
+#~ msgstr "Включение активного курсора"
+
+#~ msgid "Allow to delete attachments of existing mails."
+#~ msgstr "Разрешать удаление вложений из существующих писем."
+
+#~ msgid "Message Structure Viewer Placement"
+#~ msgstr "Расположение области структуры письма"
+
+#~ msgid "Above the message pane"
+#~ msgstr "Над письмом"
+
+#~ msgid "Below the message pane"
+#~ msgstr "Под письмом"
+
+#~ msgid "Number of addresses to show before collapsing"
+#~ msgstr "Число адресов, после которого адреса сворачиваются"
+
+#~ msgid "Fallback character e&ncoding:"
+#~ msgstr "Использовать, если кодировка не &указана:"
+
+#~ msgid ""
+#~ "When encountering a Toltec scheduling message, display a custom "
+#~ "replacement text for it."
+#~ msgstr ""
+#~ "При получении сообщения планирования Toltec показывать заменяющий текст."
+
+#~ msgid ""
+#~ "The text that will be displayed as a replacement when encountering Toltec "
+#~ "scheduling messages."
+#~ msgstr ""
+#~ "Этот текст будет отображаться вместо текста сообщения планирования Toltec."
+
+#~ msgid ""
+#~ "This message is a <i>Toltec</i> Groupware object, it can only be viewed "
+#~ "with Microsoft Outlook in combination with the Toltec connector."
+#~ msgstr ""
+#~ "Это письмо является групповым объектом <i>Toltec</i>, его можно "
+#~ "просмотреть с помощью Microsoft Outlook с Toltec connector."
+
+#~ msgid "Show Raw Message"
+#~ msgstr "Показать необработанное письмо"
+
+#~ msgid "sent: "
+#~ msgstr "отправлено: "
+
+#~ msgid "Starting Jovie Text-to-Speech Service Failed"
+#~ msgstr "Не удалось запустить службу Jovie Text-to-Speech"
+
+#~ msgid "Encrypted data not shown"
+#~ msgstr "Не расшифрованные данные не будут показаны"
+
+#~ msgid ""
+#~ "Beginning of message reached.\n"
+#~ "Phrase '%1' could not be found."
+#~ msgstr ""
+#~ "Достигнуто начало письма.\n"
+#~ "Фраза «%1» не найдена."
+
+#~ msgid ""
+#~ "End of message reached.\n"
+#~ "Phrase '%1' could not be found."
+#~ msgstr ""
+#~ "Достигнут конец письма.\n"
+#~ "Фраза «%1» не найдена."
+
+#~ msgid "The message could not be decrypted."
+#~ msgstr "Письмо не может быть расшифровано"

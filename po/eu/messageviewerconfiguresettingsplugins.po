@@ -1,0 +1,396 @@
+# Translation for messageviewerconfiguresettingsplugins.po to Euskara/Basque (eu).
+# Copyright (C) 2022 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"PO-Revision-Date: 2022-09-17 09:18+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.08.0\n"
+
+#: dkim-verify/dkimadvancedwidget.cpp:21
+#, kde-format
+msgid "Still verify the signature, if a domain is only testing DKIM"
+msgstr "Sinadura egiaztatu, baita domeinu bat DKIM probatzen ari bada ere"
+
+#: dkim-verify/dkimadvancedwidget.cpp:22
+#, kde-format
+msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgstr ""
+"Erabili azterketa sintaktiko lasaia \"Autentifikazio-emaitza\"ren goiburua "
+"irakurtzean"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Nothing"
+msgstr "Ezer ez"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Warning"
+msgstr "Abisua"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Error"
+msgstr "Errorea"
+
+#: dkim-verify/dkimadvancedwidget.cpp:36
+#, kde-format
+msgid "Treat RSA-SHA1 sign algorithm as:"
+msgstr "Tratatu sinatzeko RSA-SHA1 algoritmoa honela:"
+
+#: dkim-verify/dkimadvancedwidget.cpp:40
+#, kde-format
+msgid "Treat small Key as:"
+msgstr "Tratatu gako txikiak honela:"
+
+#: dkim-verify/dkimadvancedwidget.cpp:42
+#, kde-format
+msgid "Configure"
+msgstr "Konfiguratu"
+
+#: dkim-verify/dkimadvancedwidget.cpp:45
+#, kde-format
+msgid "Authentication Server verified:"
+msgstr "Autentifikazio zerbitzaria egiaztatu da:"
+
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Authentication Verified Server"
+msgstr "Konfiguratu autentifikazio egiaztatutako zerbitzaria"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
+#, kde-format
+msgid "New Server:"
+msgstr "Zerbitzari berria:"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
+#, kde-format
+msgid "New Server"
+msgstr "Zerbitzari berria"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
+#, kde-format
+msgid "Modify Server"
+msgstr "Aldatu zerbitzaria"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
+#, kde-format
+msgid "Server:"
+msgstr "Zerbitzaria:"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
+#, kde-format
+msgid "Do you want to delete selected server(s) name?"
+msgstr "Hautatutako zerbitzari(ar)en izena ezabatu nahi duzu?"
+
+#: dkim-verify/dkimconfiguredialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure DKIM"
+msgstr "Konfiguratu DKIM"
+
+#: dkim-verify/dkimconfiguretab.cpp:38
+#: foldersettings/folderconfiguresettingspagewidget.cpp:36
+#, kde-format
+msgid "General"
+msgstr "Orokorra"
+
+#: dkim-verify/dkimconfiguretab.cpp:40
+#, kde-format
+msgid "Record Keys"
+msgstr "Erregistratu gakoak"
+
+#: dkim-verify/dkimconfiguretab.cpp:42
+#, kde-format
+msgid "Policy"
+msgstr "Gidalerroa"
+
+#: dkim-verify/dkimconfiguretab.cpp:44
+#, kde-format
+msgid "Advanced"
+msgstr "Aurreratua"
+
+#: dkim-verify/dkimgeneralwidget.cpp:19
+#, kde-format
+msgid "Enable DKIM Support"
+msgstr "Gaitu DKIMen euskarria"
+
+#: dkim-verify/dkimgeneralwidget.cpp:20
+#, kde-format
+msgid "Save DKIM Result"
+msgstr "Gorde DKIMen emaitza"
+
+#: dkim-verify/dkimgeneralwidget.cpp:22
+#, kde-format
+msgid "Replace DKIM result by Authentication-Result header value"
+msgstr "Ordeztu DKIM emaitza autentifikazio-emaitzaren goiburuko balioagatik"
+
+#: dkim-verify/dkimgeneralwidget.cpp:38
+#, kde-format
+msgid "Save Record Key:"
+msgstr "Gorde erregistratutako gakoa:"
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save"
+msgstr "Gorde"
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save and Compare"
+msgstr "Gorde eta konparatu"
+
+#: dkim-verify/dkimpolicywidget.cpp:21
+#, kde-format
+msgid "Check if e-mail should be signed"
+msgstr "Egiaztatu e-posta sinatu behar den"
+
+#: dkim-verify/dkimpolicywidget.cpp:22
+#, kde-format
+msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgstr "Erabili DMARC e-posta bat sinatu behar den heuristikoki erabakitzeko"
+
+#: dkim-verify/dkimpolicywidget.cpp:23
+#, kde-format
+msgid "Use default rule"
+msgstr "Erabili arau lehenetsia"
+
+#: dkim-verify/dkimpolicywidget.cpp:24
+#, kde-format
+msgid "Autogenerate rule"
+msgstr "Araua automatikoki sortu"
+
+#: dkim-verify/dkimpolicywidget.cpp:25
+#, kde-format
+msgid "Read Authentication-Results header"
+msgstr "Irakurri autentifikazio-emaitzen goiburua"
+
+#: dkim-verify/dkimpolicywidget.cpp:26
+#, kde-format
+msgid "Autogenerate when Sender in SDID"
+msgstr "Automatikoki sortu igorlea SDIDen dagoenean"
+
+#: dkim-verify/dkimpolicywidget.cpp:27
+#, kde-format
+msgid "Show Rules"
+msgstr "Erakutsi arauak"
+
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Expiry Account Trash Folder"
+msgstr "Konfiguratu kontuko zakarrontzi-karpetaren iraungitzea"
+
+#: foldersettings/folderconfiguresettingsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Folder Settings"
+msgstr "Konfiguratu karpeta ezarpenak"
+
+#: foldersettings/folderconfiguresettingspagebase.cpp:17
+#, kde-format
+msgid "Modify"
+msgstr "Aldatu"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:40
+#, kde-format
+msgid "View"
+msgstr "Ikuspegia"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:44
+#, kde-format
+msgid "Expiry"
+msgstr "Iraungitzea"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:48
+#, kde-format
+msgid "Template"
+msgstr "Txantiloia"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:57
+#, kde-format
+msgid ""
+"It will override all settings for each selected folder. Do you want to "
+"continue?"
+msgstr ""
+"Hautatutako karpeten ezarpen guztiak gainidatziko ditu. Jarraitu nahi duzu?"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#, kde-format
+msgid "Save Folder Settings"
+msgstr "Gorde karpeta ezarpenak"
+
+#: foldersettings/folderconfiguretreewidget.cpp:52
+#, kde-format
+msgid "Select"
+msgstr "Hautatu"
+
+#: foldersettings/folderconfiguretreewidget.cpp:60
+#, kde-format
+msgid "Unselect"
+msgstr "Desautatu"
+
+#: gravatar/gravatarconfiguresettingsplugindialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr "Konfiguratu Gravatar"
+
+#: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
+#, kde-format
+msgid "Enable Gravatar Support"
+msgstr "Gaitu Gravatar-en euskarria"
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Create"
+msgstr "Sortu"
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit"
+msgstr "Editatu"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:27
+#, kde-format
+msgid "Server Name:"
+msgstr "Zerbitzariaren izena:"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:31
+#, kde-format
+msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgstr ""
+"<qt><a href=\"whatsthis1\">Argumentuen formatuari buruzko informazioa...</"
+"a></qt>"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
+#, kde-format
+msgid ""
+"<qt><p><strong>These expressions may be used for the arguments:</strong></"
+"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+msgstr ""
+"<qt><p><strong>Adierazpen horiek argumentu gisa erabil daitezke:</strong></"
+"p><ul><li>%u - komandoak erabilitako URLa</li></ul></strong></p></qt>"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:48
+#, kde-format
+msgid "Command line:"
+msgstr "Komando-lerroa:"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:58
+#, kde-format
+msgid "Executable:"
+msgstr "Exekutagarria:"
+
+#: openurlwith/openurlwithconfiguredialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Open Url With Plugin"
+msgstr "Konfiguratu «Ireki URL honekin» plugina"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:55
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Rule..."
+msgstr "Gehitu araua..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:56
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Rule"
+msgstr "Kendu Araua"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:57
+#, kde-format
+msgctxt "@action:button"
+msgid "Modify Rule..."
+msgstr "Aldatu araua..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Rule already exists."
+msgstr "Araua lehendik ere badago"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Duplicate Rule"
+msgstr "Bikoiztu araua"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:191
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] "Arau hau kendu nahi duzu?"
+msgstr[1] "Arau hauek kendu nahi dituzu?"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:192
+#, kde-format
+msgctxt "@title"
+msgid "Remove Rule"
+msgstr "Kendu araua"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:208
+#, kde-format
+msgid "Add Rule..."
+msgstr "Gehitu araua..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:210
+#, kde-format
+msgid "Edit Rule..."
+msgstr "Editatu araua..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:215
+#, kde-format
+msgid "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] "Kendu Araua"
+msgstr[1] "Kendu arauak"
+
+#: scamsettings/scamconfiguresettingsdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Scam Settings"
+msgstr "Konfiguratu Iruzurretarako ezarpenak"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Domain"
+msgstr "Domeinua"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Check"
+msgstr "Egiaztatu"
+
+#: scamsettings/scamconfigureutils.cpp:15
+#, kde-format
+msgid "Disable All Check"
+msgstr "Ezgaitu egiaztapen guztiak"
+
+#: scamsettings/scamconfigureutils.cpp:17
+#, kde-format
+msgid "Redirect Url"
+msgstr "Birbideratu URLa"
+
+#: scamsettings/scamconfigureutils.cpp:19
+#, kde-format
+msgid "Has Ip"
+msgstr "IPa du"

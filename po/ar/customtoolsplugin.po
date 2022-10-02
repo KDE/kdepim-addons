@@ -1,0 +1,83 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, ٢٠١٦, 2018.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2022-08-23 22:22+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "المترجم"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "الم&ترجم"
+
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "اضبط المترجم"
+
+#~ msgid "Configure engine"
+#~ msgstr "اضبط المحرّك"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "اختر خادوم تقصير العناوين:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "الخطأ الّذي بلّغ عنه الخادوم:\n"
+#~ "'%1'"
+
+#~ msgid "Close"
+#~ msgstr "أغلق"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "يولّد العنوان المختصر..."
+
+#~ msgid "Configure..."
+#~ msgstr "اضبط..."
+
+#~ msgid "Convert"
+#~ msgstr "حوّل"
+
+#~ msgid "Original URL:"
+#~ msgstr "العنوان الأصليّ:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "انسخ إلى الحافظة"
+
+#~ msgid "Short URL:"
+#~ msgstr "العنوان المختصر:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "افتح العنوان المختصر"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr "لم يُكتشف أيّ اتّصال بالشّبكة، لا يمكن تقصير العنوان."
+
+#~ msgid "No network"
+#~ msgstr "لا شبكة"
+
+#, fuzzy
+#~| msgid "An error occurs: \"%1\""
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "حدث خطأ: \"%1\""

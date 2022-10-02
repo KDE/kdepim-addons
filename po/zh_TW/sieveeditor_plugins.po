@@ -1,0 +1,124 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin Weng <franklin@goodhorse.idv.tw>, 2017.
+# pan93412 <pan93412@gmail.com>, 2018, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2019-01-19 19:39+0800\n"
+"Last-Translator: pan93412 <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 18.12.1\n"
+
+#: emaillineedit/emaillineedit.cpp:34
+#, kde-format
+msgid "Click on button for selecting contacts..."
+msgstr "點擊按鈕以選取聯絡人…"
+
+#: emaillineedit/emaillineedit.cpp:38
+#, kde-format
+msgid "..."
+msgstr "…"
+
+#: emaillineedit/emaillineedit.cpp:40
+#, kde-format
+msgid "Select Emails"
+msgstr "選擇 Email"
+
+#: emaillineedit/emaillineedit.cpp:88
+#, fuzzy, kde-format
+#| msgid "Select Emails"
+msgctxt "@title:window"
+msgid "Select Emails"
+msgstr "選擇 Email"
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgid "Create Folder"
+msgstr "建立資料夾"
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#, kde-format
+msgid "Error during creating folder: %1"
+msgstr "建立資料夾時發生錯誤：%1"
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:25
+#, kde-format
+msgid "Create Folder..."
+msgstr "建立資料夾…"
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:27
+#, fuzzy, kde-format
+#| msgid "Select IMAP folder"
+msgctxt "@title:window"
+msgid "Select IMAP folder"
+msgstr "選擇 IMAP 資料夾"
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:37
+#, kde-format
+msgid "Unable to load folder list"
+msgstr "無法載入資料夾清單"
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:40
+#, kde-format
+msgid "Loading in progress..."
+msgstr "正在載入…"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#, kde-format
+msgid "Search..."
+msgstr "搜尋..."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#, kde-format
+msgid "Refresh IMAP Folder List"
+msgstr "重新整理 IMAP 資料夾列表"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#, kde-format
+msgid "Folder Name:"
+msgstr "資料夾名稱："
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#, kde-format
+msgid "Slashes are not allowed in folder names."
+msgstr "Slash 不允許在資料夾名稱裡面。"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgid "Empty folder name is not supported."
+msgstr "不支援空資料夾名稱。"
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgid "Error during loading folders: %1"
+msgstr "載入資料夾時發生錯誤：%1"
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgid "Load Folders"
+msgstr "載入資料夾"
+
+#: imapfoldercompletion/selectimapwidget.cpp:31
+#, kde-format
+msgid "Select IMAP folder"
+msgstr "選擇 IMAP 資料夾"
+
+#: imapfoldercompletion/selectimapwidget.cpp:58
+#, kde-format
+msgid "Click on button for selecting folder..."
+msgstr "點擊按鈕以選取資料夾…"
+
+#~ msgid "Create Regular Expression"
+#~ msgstr "建立正則表達式"

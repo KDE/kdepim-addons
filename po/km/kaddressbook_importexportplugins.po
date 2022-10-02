@@ -1,0 +1,1671 @@
+# translation of kaddressbook.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2009, 2010.
+# Sophea <sophea@khmeros.info>, 2012.
+# sutha <sutha@khmeros.info>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaddressbook\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2012-12-26 08:41+0700\n"
+"Last-Translator: sutha <sutha@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: WordForge 0.8 RC1\n"
+"X-Language: km-KH\n"
+
+#: csv/csvimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Export CSV file..."
+msgstr "នាំចេញ​ឯកសារ CSV..."
+
+#: csv/csvimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Export contacts to a file in comma separated value format."
+msgstr "នាំចេញ​ទំនាក់ទំនង​​ទៅកាន់​ឯកសារ​ជា​ទ្រង់ទ្រាយ​តម្លៃ​ដែល​បំបែក​ដោយ​សញ្ញា(,) ។"
+
+#: csv/csvimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Import CSV file..."
+msgstr "នាំចូល​ឯកសារ CSV..."
+
+#: csv/csvimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Import contacts from a file in comma separated value format."
+msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ​ក្នុងទ្រង់ទ្រាយ​តម្លៃ​ដែល​បំបែក​ដោយ​សញ្ញា​(,) ។"
+
+#: csv/csvimportexportplugininterface.cpp:152
+#: gmx/gmximportexportplugininterface.cpp:80
+#: ldif/ldifimportexportplugininterface.cpp:130
+#: vcards/vcardimportexportplugininterface.cpp:370
+#, kde-format
+msgid "Which contact do you want to export?"
+msgstr "តើ​ទំនាក់ទំនង​ណាមួយ​ដែល​អ្នក​ចង់​នាំចេញ ?"
+
+#: csv/csvimportexportplugininterface.cpp:162
+#: gmx/gmximportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:140
+#: vcards/vcardimportexportplugininterface.cpp:382
+#, kde-format
+msgid "You have not selected any contacts to export."
+msgstr "អ្នក​មិនបាន​ជ្រើស​ទំនាក់ទំនង​ដើម្បីនាំចេញ​ទេ ។"
+
+#: csv/csvimportexportplugininterface.cpp:191
+#: gmx/gmximportexportplugininterface.cpp:124
+#: ldif/ldifimportexportplugininterface.cpp:161
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>មិនអាច​បើក​ឯកសារ <b>%1</b></qt> បាន​ទេ"
+
+#: csv/csvimportexportplugininterface.cpp:203
+#: gmx/gmximportexportplugininterface.cpp:139
+#: ldif/ldifimportexportplugininterface.cpp:191
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>មិន​អាច​បើក​ឯកសារ <b>%1</b>បាន​ទេ ។</qt>"
+
+#: csv/import/csvimportdialog.cpp:168
+#, kde-format
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "ប្រអប់នាំចូល CSV"
+
+#: csv/import/csvimportdialog.cpp:223
+#, kde-format
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "នាំចូល​ទំនាក់ទំនង"
+
+#: csv/import/csvimportdialog.cpp:294
+#, kde-format
+msgctxt "@label"
+msgid "File to import:"
+msgstr "ឯកសារ​ត្រូវ​នាំចូល ៖"
+
+#: csv/import/csvimportdialog.cpp:302
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "ជ្រើស​ឯកសារ csv ដើម្បី​នាំចូល"
+
+#: csv/import/csvimportdialog.cpp:304
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr ""
+"ចុច​ប៊ូតុង​នេះ​ដើម្បី​ចាប់ផ្ដើម​កម្មវិធី​ជ្រើសរើស​ឯកសារ ដែល​អនុញ្ញាត​ឲ្យ​អ្នក​ជ្រើស​ឯកសារ csv ដើម្បី​នាំចូល ។"
+
+#: csv/import/csvimportdialog.cpp:311
+#, kde-format
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "ឧបករណ៍​កំណត់ព្រំដែន"
+
+#: csv/import/csvimportdialog.cpp:321
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "សញ្ញា(,)"
+
+#: csv/import/csvimportdialog.cpp:322
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​សញ្ញា​ក្បៀស (,)"
+
+#: csv/import/csvimportdialog.cpp:323
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr "ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​ឯកសារ csv របស់​អ្នក​ប្រើ​សញ្ញា​ក្បៀស (,) ជា​សញ្ញា​បំបែក​វាល ។"
+
+#: csv/import/csvimportdialog.cpp:328
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "សញ្ញា(;)"
+
+#: csv/import/csvimportdialog.cpp:329
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​សញ្ញា​ចំណុច​ក្បៀស (;)"
+
+#: csv/import/csvimportdialog.cpp:330
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr "ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​ឯកសារ csv របស់​អ្នក​ប្រើ​សញ្ញា​ចំណុច​ក្បៀស (;) ជា​សញ្ញា​បំបែក​វាល ។"
+
+#: csv/import/csvimportdialog.cpp:334
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr "រាងជា​តារាង"
+
+#: csv/import/csvimportdialog.cpp:335
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​តួអក្សរ​ថេប"
+
+#: csv/import/csvimportdialog.cpp:336
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr "ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​ឯកសារ csv របស់​អ្នក​ប្រើ​តួអក្សរ​ថេប ជា​សញ្ញា​បំបែក​វាល ។"
+
+#: csv/import/csvimportdialog.cpp:340
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "ចន្លោះ"
+
+#: csv/import/csvimportdialog.cpp:341
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​តួអក្សរ​ដកឃ្លា"
+
+#: csv/import/csvimportdialog.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr "ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​ឯកសារ csv របស់​អ្នក​ប្រើ​តួអក្សរ​ដកឃ្លា ជា​សញ្ញា​បំបែក​វាល ។"
+
+#: csv/import/csvimportdialog.cpp:346
+#, fuzzy, kde-format
+#| msgctxt "@option:radio Custum field separator"
+#| msgid "Other"
+msgctxt "@option:radio Custom field separator"
+msgid "Other"
+msgstr "ផ្សេងៗ"
+
+#: csv/import/csvimportdialog.cpp:347
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​តួអក្សរ​ផ្ទាល់ខ្លួន"
+
+#: csv/import/csvimportdialog.cpp:349
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr ""
+"ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​នៅ​ក្នុង​ឯកសារ csv របស់​អ្នក​​ប្រើ​តួអក្សរ​ផ្សេងទៀត​ជា​សញ្ញា​កំណត់​ព្រំដែន​វាល​សម្រាប់​"
+"ទិន្នន័យ ។"
+
+#: csv/import/csvimportdialog.cpp:355
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "កំណត់​តួអក្សរ​សញ្ញា​កំណត់​ព្រំដែន​ផ្ទាល់ខ្លួន"
+
+#: csv/import/csvimportdialog.cpp:357
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+"បញ្ចូល​តួអក្សរ​ផ្ទាល់ខ្លួន​ដែល​ត្រូវ​ប្រើ​ជា​តួអក្សរ​សញ្ញា​កំណត់​ព្រំដែន​ ។ ប្រសិនបើ​អ្នក​បញ្ចូល​ច្រើន​ជាង​មួយ​តួអក្សរ "
+"មានតែ​តួអក្សរ​ដំបូង​ប៉ុណ្ណោះ​ដែល​នឹង​ត្រូវ​បាន​ប្រើ ហើយ​តួអក្សរ​ដែល​នៅសល់​នឹង​ត្រូវ​បាន​មិន​អើពើ ។"
+
+#: csv/import/csvimportdialog.cpp:363
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "សម្រង់​អត្ថបទ ៖"
+
+#: csv/import/csvimportdialog.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "ជ្រើស​តួអក្សរ​សម្រង់"
+
+#: csv/import/csvimportdialog.cpp:371
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+"ជ្រើស​តួអក្សរ​ដែល​ឯកសារ csv របស់​អ្នក​ប្រើ​ដើម្បី \"ដកស្រង់\" សញ្ញា​កំណត់​ព្រំដែន​វាល ប្រសិនបើ​តួអក្សរ​នោះ​"
+"ត្រូវ​បាន​ប្រើ​នៅ​ក្នុង​អត្ថបទ ។ ឧទាហរណ៍ ប្រសិនបើ​សញ្ញា​ក្បៀស (,) ជា​សញ្ញា​កំណត់​ព្រំដែន​វាល នោះ​សញ្ញា​ក្បៀស​"
+"ដែល​ប្រើ​នៅ​ក្នុង​អត្ថបទ​នឹង​ត្រូវ​បាន \"ដកស្រង់\" ដោយ​តួអក្សរ​ដែល​បាន​បញ្ជាក់​នៅ​ទីនេះ ។"
+
+#: csv/import/csvimportdialog.cpp:376
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Qoute character option"
+#| msgid "\""
+msgctxt "@item:inlistbox Quote character option"
+msgid "\""
+msgstr "\""
+
+#: csv/import/csvimportdialog.cpp:377
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr "'"
+
+#: csv/import/csvimportdialog.cpp:378
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "គ្មាន"
+
+#: csv/import/csvimportdialog.cpp:382
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "ទ្រង់ទ្រាយ​កាលបរិច្ឆេទ ៖"
+
+#: csv/import/csvimportdialog.cpp:390
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+"<para><list><item>y ៖ ឆ្នាំ​មាន​ ២ ​តួលេខ</item><item>Y ៖ ឆ្នាំ​មាន​ ៤ ​តួលេខ</"
+"item><item>m ៖ ខែ​មាន​១ ឬ​ ២ តួលេខ</item><item>M ៖ ខែ​មាន​ ២ តួលេខ</item><item>d ៖ "
+"ថ្ងៃ​មាន​ ១ ឬ​ ២ តួលេខ</item><item>D ៖ ថ្ងៃ​មាន​ ២ តួលេខ</item><item>H ៖ ម៉ោង​មាន​ ២ "
+"តួលេខ</item><item>I ៖ នាទី​មាន ២ តួលេខ</item><item>S ៖ វិនាទី​មាន ២ តួលេខ</item></"
+"list></para>"
+
+#: csv/import/csvimportdialog.cpp:401
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+"<para>បញ្ជាក់​ទ្រង់ទ្រាយ​ដែល​ត្រូវ​ប្រើ​សម្រាប់​កាលបរិច្ឆេទ​នៅ​ក្នុង​ឯកសារ csv របស់​អ្នក ។ ប្រើ​លំដាប់​"
+"ខាងក្រោម​ដើម្បី​ជួយ​អ្នក​កំណត់​ទ្រង់ទ្រាយ ៖</para><para><list><item>y ៖ ឆ្នាំ​ដែល​មាន ២ តួលេខ</"
+"item><item>Y ៖ ឆ្នាំ​ដែល​មាន ៤ តួលេខ</item><item>m ៖ ខែ​ដែល​មាន ១ ឬ ២ តួលេខ</"
+"item><item>M ៖ ខែ​ដែល​មាន ២ តួលេខ</item><item>d ៖ ថ្ងៃ​ដែល​មាន ១ ឬ ២ តួលេខ</"
+"item><item>D ៖ ថ្ងៃ​ដែល​មាន ២ តួលេខ</item><item>H ៖ ម៉ោង​ដែល​មាន ២ តួលេខ</"
+"item><item>I ៖ នាទី​ដែល​មាន ២ តួលេខ</item><item>S ៖ វិនាទី​ដែល​មាន ២ តួលេខ</item></"
+"list></para><para>ឧទាហរណ៍ ៖ \"Y-M-D\" ត្រូវគ្នា​ជាមួយ​ទម្រង់ \"២០១២-០១-០៤\"</para>"
+
+#: csv/import/csvimportdialog.cpp:417
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "កូឌិក​អត្ថបទ ៖"
+
+#: csv/import/csvimportdialog.cpp:423
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "ជ្រើស​អត្ថបទ​កូដិក"
+
+#: csv/import/csvimportdialog.cpp:424
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr "ជ្រើស​ការ​អ៊ិនកូដ​តួអក្សរ​សម្រាប់​ទិន្នន័យ​នៅ​ក្នុង​ឯកសារ csv របស់​អ្នក ។"
+
+#: csv/import/csvimportdialog.cpp:428
+#, kde-format
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr "រំលង​ជួរដេកទីមួយ​របស់ឯកសារ"
+
+#: csv/import/csvimportdialog.cpp:430
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr "ពេល​នាំចូល​រំលង​ជួរដេក​ទី​មួយ​របស់​ឯកសារ csv"
+
+#: csv/import/csvimportdialog.cpp:432
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+"ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​ឲ្យ​កម្មវិធី​នាំចូល​រំលង​ជួរដេក​ទី​មួយ​នៃ​ឯកសារ csv របស់​អ្នក ។ ជាទូទៅ​ជួរ​ទី​មួយ​របស់​"
+"ឯកសារ csv គឺជា​ជួរ​មតិយោបល់​ដែល​ពណ៌នា​ពី​លំដាប់​វាល​ទិន្នន័យ​នៅ​ក្នុង​ឯកសារ ។"
+
+#: csv/import/csvimportdialog.cpp:448
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "អនុវត្ត​ពុម្ព..."
+
+#: csv/import/csvimportdialog.cpp:449
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "រក្សាទុក​ពុម្ព..."
+
+#: csv/import/csvimportdialog.cpp:470
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "មូលដ្ឋាន (%1)"
+
+#: csv/import/csvimportdialog.cpp:471
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "ឡាតាំង ១"
+
+#: csv/import/csvimportdialog.cpp:472
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "យូនីកូដ"
+
+#: csv/import/csvimportdialog.cpp:473
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "យូនីកូដ Microsoft"
+
+#: csv/import/csvimportdialog.cpp:574
+#, kde-format
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr "អ្នក​ត្រូវ​តែ​ផ្ដល់​យ៉ាងហោចណាស់​មួយ​ជួរឈរ ។"
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "មិនទាន់​មាន​ពុម្ព​នៅ​ឡើយ​ទេ ។"
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "មិនមាន​ពុម្ព​នោះ​ទេ"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "ឈ្មោះ​ពុម្ព"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "សូម​បញ្ចូល​ឈ្មោះ​សម្រាប់ពុម្ព ៖"
+
+#: csv/import/csvimportdialog.cpp:699
+#, kde-format
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "មិនអាច​បើក​ឯកសារ​បញ្ចូលបាន​ទេ ។"
+
+#: csv/import/qcsvreader.cpp:92
+#, kde-format
+msgid "Device is not open"
+msgstr ""
+
+#: csv/import/templateselectiondialog.cpp:182
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr "តើ​អ្នក​ពិត​ជា​ចង់​លុប​ពុម្ព '%1' មែន​ឬ ?"
+
+#: csv/import/templateselectiondialog.cpp:203
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "ការ​ជ្រើស​ពុម្ព"
+
+#: csv/import/templateselectiondialog.cpp:206
+#, kde-format
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr "សូម​ជ្រើស​ពុម្ព ដែល​ផ្គូផ្គង​នឹងឯកសារ CSV ៖"
+
+#: gmx/gmximportexportplugininterface.cpp:25
+#, kde-format
+msgid "GMX address book file (*.gmxa)"
+msgstr "ឯកសារ​សៀវភៅ​អាសយដ្ឋាន GMX (*.gmxa)"
+
+#: gmx/gmximportexportplugininterface.cpp:40
+#, kde-format
+msgid "Import GMX file..."
+msgstr "នាំចូល​ឯកសារ GMX..."
+
+#: gmx/gmximportexportplugininterface.cpp:41
+#, kde-format
+msgid "Import contacts from a GMX address book file."
+msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ​សៀវភៅ​អាសយដ្ឋាន GMX ។"
+
+#: gmx/gmximportexportplugininterface.cpp:46
+#, kde-format
+msgid "Export GMX file..."
+msgstr "នាំចេញ​ឯកសារ GMX..."
+
+#: gmx/gmximportexportplugininterface.cpp:47
+#, kde-format
+msgid "Export contacts to a GMX address book file."
+msgstr "នាំចេញ​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​សៀវភៅ​អាសយដ្ឋាន GMX ។"
+
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:80
+#: windows-contacts/importwindowcontact.cpp:26
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt>មិនអាច​បើក <b>%1</b> ដើម្បី​អាន​បានទេ ។</qt>"
+
+#: gmx/gmximportexportplugininterface.cpp:455
+#, kde-format
+msgid "%1 is not a GMX address book file."
+msgstr "%1 មិនមែន​ជា​ឯកសារ​សៀវភៅ​អាសយដ្ឋាន​របស់ GMX ។"
+
+#: ldap/ldapimportexportplugininterface.cpp:25
+#, fuzzy, kde-format
+#| msgid "Import from LDAP server..."
+msgid "Import From LDAP server..."
+msgstr "នាំចូល​ពី​ម៉ាស៊ីន​បម្រើ LDAP..."
+
+#: ldap/ldapimportexportplugininterface.cpp:26
+#, kde-format
+msgid "Import contacts from an LDAP server."
+msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ម៉ាស៊ីនបម្រើ LDAP ។"
+
+#: ldif/ldifimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Import LDIF file..."
+msgstr "នាំចូល​ឯកសារ LDIF..."
+
+#: ldif/ldifimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Import contacts from an LDIF file."
+msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ LDIF ។"
+
+#: ldif/ldifimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Export LDIF file..."
+msgstr "នាំចេញ​ឯកសារ LDIF..."
+
+#: ldif/ldifimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Export contacts to an LDIF file."
+msgstr "នាំចេញ​ទំនាក់ទំនង​ទៅ​កាន់​ឯកសារ LDIF ។"
+
+#: ldif/ldifimportexportplugininterface.cpp:110
+#, kde-format
+msgid "LDif Files"
+msgstr ""
+
+#: ldif/ldifimportexportplugininterface.cpp:151
+#, kde-format
+msgid "LDif Files (*.ldif)"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:22
+#, kde-format
+msgctxt "@title:group"
+msgid "Fields to be exported"
+msgstr "ឯកសារ​ដែល​ត្រូវ​នាំចេញ ៖"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Private fields"
+msgstr "វាល​ឯកជន"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export private fields"
+msgstr "នាំចេញ​វាល​ឯកជន"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:32
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's private fields to the "
+"vCard output file."
+msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​វាល​ឯកជន​របស់​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Business fields"
+msgstr "វាល​ពាណិជ្ជកម្ម"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export business fields"
+msgstr "នាំចេញ​វាល​ពាណិជ្ជកម្ម"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's business fields to the "
+"vCard output file."
+msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​វាល​ជំនួញ​របស់​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:43
+#, kde-format
+msgctxt "@option:check"
+msgid "Other fields"
+msgstr "វាល​ផ្សេងៗ"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export other fields"
+msgstr "នាំចេញ​វាល​ផ្សេងៗ"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:46
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's other fields to the vCard "
+"output file."
+msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​វាល​ផ្សេងទៀត​របស់​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:50
+#, kde-format
+msgctxt "@option:check"
+msgid "Encryption keys"
+msgstr "ការ​អ៊ីនគ្រីប​សោ"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export encryption keys"
+msgstr "នាំចេញ​ការ​អ៊ិនគ្រីប​សោ"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:53
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's encryption keys to the "
+"vCard output file."
+msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​កូនសោ​ការ​អ៊ិនគ្រីប​របស់​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:57
+#, kde-format
+msgctxt "@option:check"
+msgid "Pictures"
+msgstr "រូបភាព"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:58
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export pictures"
+msgstr "នាំចេញ​រូបភាព"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:60
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's picture to the vCard "
+"output file."
+msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​រូបភាព​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:64
+#, kde-format
+msgctxt "@title:group"
+msgid "Export options"
+msgstr "ជម្រើស​នាំចេញ"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:70
+#, kde-format
+msgctxt "@option:check"
+msgid "Display name as full name"
+msgstr "បង្ហាញ​ឈ្មោះ​ជា​ឈ្មោះ​ពេញ"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export display name as full name"
+msgstr "នាំចេញ​ឈ្មោះ​បង្ហាញ​ជា​ឈ្មោះ​ពេញ"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:73
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's display name in the "
+"vCard's full name field.  This may be required to get the name shown "
+"correctly in GMail or Android."
+msgstr ""
+"ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​ឈ្មោះ​បង្ហាញ​របស់​ទំនាក់ទំនង​ទៅកាន់​វាល​ឈ្មោះ​ពេញ​របស់ vCard ។ វា​អាច​"
+"ទាមទារ​ឲ្យ​ប្រើឈ្មោះ​ដែល​បាន​បង្ហាញ​ត្រឹមត្រូវ​នៅ​ក្នុង GMail ឬ Android ។"
+
+#: vcards/engine/vcardviewerdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Import vCard"
+msgstr "នាំចូល vCard"
+
+#: vcards/engine/vcardviewerdialog.cpp:51
+#, kde-format
+msgctxt "@info"
+msgid "Do you want to import this contact into your address book?"
+msgstr "តើ​អ្នក​ចង់​នាំចូល​ទំនាក់ទំនង​នេះ​ទៅ​ក្នុង​សៀវភៅ​អាសយដ្ឋាន​របស់​អ្នក​ដែរ​ឬទេ ?"
+
+#: vcards/engine/vcardviewerdialog.cpp:61
+#, kde-format
+msgctxt "@action:button"
+msgid "Import All..."
+msgstr "នាំចូល​ទាំងអស់..."
+
+#: vcards/vcardimportexportplugininterface.cpp:44
+#, kde-format
+msgid "Import vCard..."
+msgstr "នាំចូល vCard..."
+
+#: vcards/vcardimportexportplugininterface.cpp:45
+#, kde-format
+msgid "Import contacts from a vCard file."
+msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ vCard ។"
+
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, fuzzy, kde-format
+#| msgid "Export contacts to a vCard 3.0 file."
+msgid "Export contacts to a vCard 4.0 file."
+msgstr "នាំចេញ​ទំនាក់ទំនង​ទៅ​កាន់ឯកសារ vCard 3.0 ។"
+
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, fuzzy, kde-format
+#| msgid "Export vCard 3.0..."
+msgid "Export vCard 4.0..."
+msgstr "នាំចេញ vCard 3.0..."
+
+#: vcards/vcardimportexportplugininterface.cpp:58
+#, kde-format
+msgid "Export vCard 3.0..."
+msgstr "នាំចេញ vCard 3.0..."
+
+#: vcards/vcardimportexportplugininterface.cpp:59
+#, kde-format
+msgid "Export contacts to a vCard 3.0 file."
+msgstr "នាំចេញ​ទំនាក់ទំនង​ទៅ​កាន់ឯកសារ vCard 3.0 ។"
+
+#: vcards/vcardimportexportplugininterface.cpp:64
+#, kde-format
+msgid "Export vCard 2.1..."
+msgstr "នាំចេញ vCard 2.1..."
+
+#: vcards/vcardimportexportplugininterface.cpp:65
+#, kde-format
+msgid "Export contacts to a vCard 2.1 file."
+msgstr "នាំចេញ​ទំនាក់ទំនង​ទៅ​កាន់​ឯកសារ vCard 2.1 ។"
+
+#: vcards/vcardimportexportplugininterface.cpp:113
+#, kde-format
+msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Select vCard to Import"
+msgstr "ជ្រើស vCard ដែល​ត្រូវ​នាំចូល"
+
+#: vcards/vcardimportexportplugininterface.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "vCard Import Failed"
+msgstr "បាន​បរាជ័យ​ក្នុង​ការ​នាំចូល vCard"
+
+#: vcards/vcardimportexportplugininterface.cpp:134
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Unable to access vCard:</para><para>%1</para>"
+msgstr "<para>មិនអាច​ចូលដំណើរការ vCard ៖</para><para>%1</para> បាន​ទេ"
+
+#: vcards/vcardimportexportplugininterface.cpp:436
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have selected a list of contacts, shall they be exported to several "
+"files?"
+msgstr "អ្នក​បាន​ជ្រើស​បញ្ជី​ទំនាក់ទំនង តើ​ពួក​វា​គួរ​ត្រូវ​បាន​នាំចេញ​ទៅ​កាន់​ឯកសារ​ជា​ច្រើន​ដែរ​ឬទេ ?"
+
+#: vcards/vcardimportexportplugininterface.cpp:439
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to One File"
+msgstr "នាំចេញ​ទៅកាន់​ឯកសារ​មួយ"
+
+#: vcards/vcardimportexportplugininterface.cpp:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to Several Files"
+msgstr "នាំចេញ​ទៅ​កាន់​ឯកសារ​ជា​ច្រើន"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#, fuzzy, kde-format
+#| msgid "Import CSV file..."
+msgid "Import Windows Contact file..."
+msgstr "នាំចូល​ឯកសារ CSV..."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#, fuzzy, kde-format
+#| msgid "Import contacts from an LDIF file."
+msgid "Import contacts from windows contact file."
+msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ LDIF ។"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#, kde-format
+msgid "Windows Contact file (*.contact)"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Select Address Book"
+#~ msgctxt "@title:window"
+#~ msgid "Select Address Book"
+#~ msgstr "ជ្រើស​​សៀវភៅ​អាសយដ្ឋាន"
+
+#~ msgid "Select the address book the imported contact(s) shall be saved in:"
+#~ msgstr "ជ្រើស​សៀវភៅ​អាសយដ្ឋាន​ ដែល​ត្រូវ​រក្សាទុក​ទំនាក់ទំនង​ដែល​បាន​ជ្រើស ៖"
+
+#, fuzzy
+#~| msgid "Import Contacts"
+#~ msgctxt "@title:window"
+#~ msgid "Import Contacts"
+#~ msgstr "នាំចូល​ទំនាក់ទំនង"
+
+#~ msgid "Importing one contact to %2"
+#~ msgid_plural "Importing %1 contacts to %2"
+#~ msgstr[0] "នាំចូល​ទំនាក់ទំនង %1 ទៅ​កាន់ %2"
+
+#~ msgctxt "@info"
+#~ msgid "No contacts were imported, due to errors with the vCards."
+#~ msgstr "គ្មាន​ទំនាក់ទំនង​ត្រូវ​បាន​នាំចូល​ទេ ដោយ​សារ​តែ​មាន​កំហុស​ជា​មួយ vCards ។"
+
+#~ msgctxt "@info"
+#~ msgid "The vCard does not contain any contacts."
+#~ msgstr "vCard មិន​មាន​ទំនាក់ទំនង​ណាមួយ​ទេ ។"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ខឹម សុខែម, អេង វណ្ណៈ, អោក ពិសិដ្ឋ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "khoemsokhem@khmeros.info,evannak@khmeros.info,piseth_dv@khmeros.info"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact..."
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact."
+#~ msgstr "អ្នក​នឹង​បាន​ឃើញ​ប្រអប់​មួយ​ដែល​អាច​កំណត់​រចនាសម្ព័ន្ធ​ផ្លូវកាត់​របស់​កម្មវិធី​ពេញលេញ ។"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact Group..."
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact "
+#~ "group."
+#~ msgstr "អ្នក​នឹង​បាន​ឃើញ​ប្រអប់​មួយ​ដែល​អាច​កំណត់​រចនាសម្ព័ន្ធ​ផ្លូវកាត់​របស់​កម្មវិធី​ពេញលេញ ។"
+
+#~ msgid "KAddressBook"
+#~ msgstr "KAddressBook"
+
+#~ msgid "The KDE Address Book Application"
+#~ msgstr "កម្មវិធី​សៀវភៅ​អាសយដ្ឋាន​របស់ KDE"
+
+#, fuzzy
+#~| msgid "Copyright © 2007–2012 KAddressBook authors"
+#~ msgid "Copyright © 2007–2016 KAddressBook authors"
+#~ msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៧–២០១២ ដោយ​អ្នកនិពន្ធ​របស់ KAddressBook"
+
+#~ msgid "Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgid "Current maintainer"
+#~ msgstr "អ្នកថែទាំ​បច្ចុប្បន្ន"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
+
+#, fuzzy
+#~| msgid "Current maintainer"
+#~ msgid "Previous maintainer"
+#~ msgstr "អ្នកថែទាំ​បច្ចុប្បន្ន"
+
+#, fuzzy
+#~| msgctxt "@item:inlistbox Quote character option"
+#~| msgid "None"
+#~ msgid "(None)"
+#~ msgstr "គ្មាន"
+
+#, fuzzy
+#~| msgid "Laurent Montel"
+#~ msgid "(c), 2016 Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgctxt "@item Undefined import field type"
+#~ msgid "Undefined"
+#~ msgstr "មិនបាន​កំណត់"
+
+#, fuzzy
+#~| msgid "Anniversary"
+#~ msgctxt "The wedding anniversary of a contact"
+#~ msgid "Anniversary"
+#~ msgstr "បុណ្យខួប"
+
+#~ msgctxt "Preferred email address"
+#~ msgid "EMail (preferred)"
+#~ msgstr "EMail (ពេញ​ចិត្ត)"
+
+#~ msgctxt "Second email address"
+#~ msgid "EMail (2)"
+#~ msgstr "អ៊ីមែល (២)"
+
+#~ msgctxt "Third email address"
+#~ msgid "EMail (3)"
+#~ msgstr "អ៊ីមែល (៣)"
+
+#~ msgctxt "Fourth email address"
+#~ msgid "EMail (4)"
+#~ msgstr "អ៊ីមែល (៤)"
+
+#~ msgid "Blog Feed"
+#~ msgstr "មតិព័ត៌មាន​កំណត់​ហេតុ​បណ្ដាញ"
+
+#~ msgid "Profession"
+#~ msgstr "វិជ្ជាជីវៈ"
+
+#~ msgid "Office"
+#~ msgstr "ការិយាល័យ"
+
+#~ msgid "Manager"
+#~ msgstr "អ្នក​គ្រប់គ្រង"
+
+#~ msgid "Assistant"
+#~ msgstr "អ្នក​ជំនួយ​ការ"
+
+#~ msgid "Spouse"
+#~ msgstr "ប្រពន្ធ"
+
+#~ msgid "Select Contacts"
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts"
+#~ msgstr "ទំនាក់ទំនង​ទាំងអស់"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from all your address books"
+#~ msgstr "ទំនាក់ទំនង​ទាំងអស់​ពី​សៀវភៅ​អាសយដ្ឋាន​ទាំងអស់​របស់​អ្នក"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option you want to select all your contacts from all your "
+#~ "address books."
+#~ msgstr "ធីក​ជម្រើស​នេះ​ប្រសិនបើ​អ្នក​ចង់​ជ្រើស​ទំនាក់ទំនង​ទាំងអស់​របស់​អ្នក​ពី​សៀវភៅ​អាសយដ្ឋាន​របស់​អ្នក ។"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Selected contacts"
+#~ msgstr "ទំនាក់ទំនង​ដែល​បាន​ជ្រើស"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Only the contacts currently selected"
+#~ msgstr "តែ​ទំនាក់ទំនង​ដែល​បាន​ជ្រើស​បច្ចុប្បន្ន​ប៉ុណ្ណោះ"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want only the contacts you have already "
+#~ "selected in the graphical interface."
+#~ msgstr "ធីក​ជម្រើស​នេះ​ប្រសិនបើ​អ្នក​ចង់បាន​តែ​ទំនាក់ទំនង​ដែល​អ្នក​បាន​ជ្រើស​នៅ​ក្នុង​ចំណុចប្រទាក់​ក្រាហ្វិក ។"
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts from:"
+#~ msgstr "ទំនាក់ទំនង​ទាំងអស់​ពី ៖"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from a chosen address book"
+#~ msgstr "ទំនាក់ទំនង​ទាំងអស់​ពី​សៀវភៅ​អាសយដ្ឋាន​ដែល​បាន​ជ្រើស"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want to select all the contacts from only one "
+#~ "of your address books.  Once this option is clicked you will be provided "
+#~ "a drop down box listing all those address books and permitted to select "
+#~ "the one you want."
+#~ msgstr ""
+#~ "ធីក​ជម្រើស​នេះ​ប្រសិនបើ​អ្នក​ចង់​ជ្រើស​ទំនាក់ទំនង​ទាំងអស់​ចេញពី​សៀវភៅ​អាសយដ្ឋាន​មួយ​ប៉ុណ្ណោះ​ក្នុង​ចំណោម​សៀវភៅ​"
+#~ "អាសយដ្ឋាន​ជាច្រើន​របស់​អ្នក ។ នៅ​ពេល​បាន​ធីក​ជម្រើស​នេះ អ្នក​នឹង​បានឃើញ​ប្រអប់​ទម្លាក់​ចុះ​មួយ​ដែល​មាន​"
+#~ "រាយ​សៀវភៅ​អាសយដ្ឋាន​ទាំងនោះ ហើយ​អនុញ្ញាត​ឲ្យ​អ្នក​ជ្រើស​មួយ​​ដែល​អ្នក​ចង់បាន ។"
+
+#~ msgctxt "@option:check"
+#~ msgid "Include Subfolders"
+#~ msgstr "រួម​ទាំង​ថត​រង"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select all subfolders including the top-level folder"
+#~ msgstr "ជ្រើស​ថត​រង​ទាំងអស់​រួម​ទាំង​ថត​មេ"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Check this box if you want to select all contacts from this folder, "
+#~ "including all subfolders.  If you only want the contacts from the top-"
+#~ "level folder then leave this box unchecked."
+#~ msgstr ""
+#~ "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​ជ្រើស​ទំនាក់ទំនង​ទាំងអស់​ពី​ថត​នេះ រួម​ទាំង​ថត​រង ។ ប្រសិនបើ​អ្នក​ចង់បាន​តែ​"
+#~ "ទំនាក់ទំនង​ពី​ថត​មេ​ទេ កុំ​ធីក​ប្រអប់​នេះ​អី ។"
+
+#~ msgctxt "@action:button Previous contact"
+#~ msgid "Previous"
+#~ msgstr "មុន"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the previous contact in the list"
+#~ msgstr "ផ្លាស់ទី​ទៅកាន់​ទំនាក់ទំនង​មុន​នៅ​ក្នុង​បញ្ជី"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the previous contact in the list."
+#~ msgstr "ចុច​ប៊ូតុង​នេះ​ដើម្បី​ផ្លាស់ទី​​ទៅកាន់​ទំនាក់ទំនង​មុន​នៅ​ក្នុង​បញ្ជី ។"
+
+#~ msgctxt "@action:button Next contact"
+#~ msgid "Next"
+#~ msgstr "បន្ទាប់"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the next contact in the list"
+#~ msgstr "ផ្លាស់ទី​ទៅកាន់​ទំនាក់ទំនង​បន្ទាប់​នៅ​ក្នុង​បញ្ជី"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the next contact in the list."
+#~ msgstr "ចុច​ប៊ូតុង​នេះ​ដើម្បី​ផ្លាស់ទី​​ទៅកាន់​ទំនាក់ទំនង​បន្ទាប់​នៅ​ក្នុង​បញ្ជី ។"
+
+#~ msgctxt "@info:status"
+#~ msgid "%1 out of %2"
+#~ msgstr "%1 នៃ %2"
+
+#, fuzzy
+#~| msgid "Import CSV file..."
+#~ msgid "Import the given file"
+#~ msgstr "នាំចូល​ឯកសារ CSV..."
+
+#~ msgid "&Configure KAddressBook..."
+#~ msgstr "កំណត់​រចនាសម្ព័ន្ធ KAddressBook..."
+
+#~ msgid "&File"
+#~ msgstr "ឯកសារ"
+
+#~ msgid "&New"
+#~ msgstr "ថ្មី"
+
+#~ msgid "&Import"
+#~ msgstr "នាំចូល"
+
+#~ msgid "&Export"
+#~ msgstr "នាំចេញ"
+
+#~ msgid "&Edit"
+#~ msgstr "កែសម្រួល"
+
+#~ msgid "&View"
+#~ msgstr "មើល"
+
+#~ msgid "&Settings"
+#~ msgstr "ការកំណត់"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "របារ​ឧបករណ៍​មេ"
+
+#, fuzzy
+#~| msgctxt "@label Search contacts in list"
+#~| msgid "Search"
+#~ msgctxt "@label Search contacts in list"
+#~ msgid "Search...<%1>"
+#~ msgstr "ស្វែងរក"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Print the complete address book or a selected number of contacts."
+#~ msgstr "បោះពុម្ព​សៀវភៅ​អាសយដ្ឋាន​ទាំងមូល ឬ​ចំនួន​ទំនាក់ទំនង​ដែលបានជ្រើស ។"
+
+#~ msgid "Quick search"
+#~ msgstr "ស្វែងរក​រហ័ស"
+
+#~ msgid "Select All"
+#~ msgstr "ជ្រើស​ទាំងអស់"
+
+#~ msgid "Select all contacts in the current address book view."
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង​ទាំងអស់​នៅ​ក្នុង​ទិដ្ឋភាព​សៀវភៅ​អាសយដ្ឋាន​បច្ចុប្បន្ន ។"
+
+#~ msgid "Show QR Codes"
+#~ msgstr "បង្ហាញ​កូដ QR"
+
+#~ msgid "Show QR Codes in the contact."
+#~ msgstr "បង្ហាញ​កូដ QR នៅ​ក្នុង​ទំនាក់ទំនង ។"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Simple (one column)"
+#~ msgstr "សាមញ្ញ (មួយ​ជួរឈរ)"
+
+#~ msgid "Show a simple mode of the address book view."
+#~ msgstr "បង្ហាញ​របៀប​ធម្មតា​របស់​ទិដ្ឋភាព​សៀវភៅ​អាសយដ្ឋាន ។"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Two Columns"
+#~ msgstr "ពីរ​ជួរឈរ"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Three Columns"
+#~ msgstr "បី​ជួរឈរ"
+
+#~ msgid "Address Book"
+#~ msgstr "សៀវភៅ​អាសយដ្ឋានស"
+
+#~ msgid "Print Contacts"
+#~ msgstr "បោះពុម្ព​ទំនាក់ទំនង"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can configure the "
+#~ "application-wide shortcuts."
+#~ msgstr "អ្នក​នឹង​បាន​ឃើញ​ប្រអប់​មួយ​ដែល​អាច​កំណត់​រចនាសម្ព័ន្ធ​ផ្លូវកាត់​របស់​កម្មវិធី​ពេញលេញ ។"
+
+#~ msgid "Full Name"
+#~ msgstr "ឈ្មោះ​ពេញ"
+
+#~ msgid "Family Name"
+#~ msgstr "នាម​ត្រកូល"
+
+#~ msgid "Given Name"
+#~ msgstr "នាម​ខ្លួន"
+
+#~ msgid "Home Address"
+#~ msgstr "អាសយដ្ឋាន​ផ្ទះ"
+
+#~ msgid "Business Address"
+#~ msgstr "អាសយដ្ឋាន​កន្លែង​ធ្វើកាត"
+
+#~ msgid "Phone Numbers"
+#~ msgstr "លេខ​ទូរស័ព្ទ"
+
+#~ msgid "Preferred EMail"
+#~ msgstr "អ៊ីមែល​ដែល​ពេញចិត្ត"
+
+#~ msgid "All EMails"
+#~ msgstr "អ៊ីមែល​ទាំងអស់"
+
+#~ msgid "Compact Style"
+#~ msgstr "រចនាប័ទ្ម​បង្រួម"
+
+#~ msgid "Setting up document"
+#~ msgstr "រៀបចំ​ឯកសារ"
+
+#~ msgid "Printing"
+#~ msgstr "បោះពុម្ព"
+
+#~ msgctxt "Finished printing"
+#~ msgid "Done"
+#~ msgstr "ធ្វើ​រួច"
+
+#~ msgid "Compact Printing Style"
+#~ msgstr "បង្រួម​រចនាប័ទ្ម​បោះពុម្ព"
+
+#~ msgid "Appearance"
+#~ msgstr "រូបរាង"
+
+#~ msgid "Fields"
+#~ msgstr "វាល"
+
+#~ msgid ""
+#~ "Print the home address, with home phone number and mobile phone number"
+#~ msgstr "បោះពុម្ព​អាសយដ្ឋាន​ផ្ទះ លេខទូរស័ព្ទ​ផ្ទះ និង​លេខ​ទូរស័ព្ទ​ចល័ត"
+
+#~ msgid "with home address"
+#~ msgstr "ជាមួយ​អាសយដ្ឋាន​ផ្ទះ"
+
+#~ msgid "print the business address, with business phone number"
+#~ msgstr "បោះពុម្ព​អាសយដ្ឋាន​ជំនួញ និង​លេខ​ទូរស័ព្ទ​ជំនួញ"
+
+#~ msgid "with business address"
+#~ msgstr "ជាមួយ​អាសយដ្ឋាន​ជំនួញ"
+
+#~ msgid "Print the birthday"
+#~ msgstr "បោះពុម្ព​ថ្ងៃកំណើត"
+
+#~ msgid "with birthday"
+#~ msgstr "ជាមួយ​ថ្ងៃកំណើត"
+
+#~ msgid "Print the e-mail and e-mail2 fields"
+#~ msgstr "បោះពុម្ព​វាល​អ៊ីមែល និង​អ៊ីមែល ២"
+
+#~ msgid "with e-mail"
+#~ msgstr "ដែល​មាន​អ៊ីមែល"
+
+#~ msgid "the first color, if alternating color is checked"
+#~ msgstr "ពណ៌​ទី​មួយ ប្រសិនបើ​បាន​ធីក​ការ​ឆ្លាស់​ពណ៌"
+
+#~ msgid "first color"
+#~ msgstr "ពណ៌​ទី​មួយ"
+
+#~ msgid "the second color, if alternating color is checked"
+#~ msgstr "ពណ៌​ទី​ពីរ ប្រសិនបើ​បាន​ធីក​ការ​ឆ្លាស់​ពណ៌"
+
+#~ msgid "second color"
+#~ msgstr "ពណ៌​ទី​ពីរ"
+
+#~ msgid "Change the background color of every row"
+#~ msgstr "ប្ដូរ​ពណ៌​ផ្ទៃខាងក្រោយ​របស់​ជួរដេក​ទាំងអស់"
+
+#~ msgid "Alternating the background color"
+#~ msgstr "ឆ្លាស់​ពណ៌​ផ្ទៃខាងក្រោយ"
+
+#~ msgid "Organization:"
+#~ msgstr "អង្គភាព ៖"
+
+#~ msgid "Email address:"
+#~ msgstr "អាសយដ្ឋាន​អ៊ីមែល ៖"
+
+#~ msgid "Email addresses:"
+#~ msgstr "អាសយដ្ឋាន​អ៊ីមែល ៖"
+
+#~ msgid "Telephone:"
+#~ msgstr "ទូរស័ព្ទ ៖"
+
+#~ msgid "Telephones:"
+#~ msgstr "ទូរស័ព្ទ ៖"
+
+#~ msgid "Web page:"
+#~ msgstr "ទំព័រ​បណ្ដាញ ៖"
+
+#~ msgid "Domestic Address"
+#~ msgstr "អាសយដ្ឋាន​ក្នុង​ស្រុក"
+
+#~ msgid "International Address"
+#~ msgstr "អាសយដ្ឋាន​អន្តរជាតិ"
+
+#~ msgid "Postal Address"
+#~ msgstr "អាសយដ្ឋាន​ប្រៃសនីយ៍"
+
+#~ msgid "Parcel Address"
+#~ msgstr "អាសយដ្ឋាន​កញ្ចប់​ប្រៃសនីយ៍"
+
+#~ msgid "Work Address"
+#~ msgstr "អាសយដ្ឋាន​កន្លែង​ធ្វើការ"
+
+#~ msgid "Preferred Address"
+#~ msgstr "អាសយដ្ឋាន​ដែល​ពេញចិត្ត"
+
+#~ msgid "Notes:"
+#~ msgstr "ចំណាំ ៖"
+
+#~ msgid "Detailed Print Style - Appearance"
+#~ msgstr "រចនាប័ទ្ម​បោះពុម្ព​លម្អិត - រូបរាង"
+
+#~ msgid "Setting up colors"
+#~ msgstr "រៀបចំ​ពណ៌"
+
+#~ msgid "Detailed Style"
+#~ msgstr "រចនាប័ទ្ម​លម្អិត"
+
+#~ msgid "Appearance Page"
+#~ msgstr "ទំព័រ​រូបរាង"
+
+#~ msgid "Contact Headers"
+#~ msgstr "បឋមកថា​ទំនាក់ទំនង"
+
+#~ msgid "Select the headline text background color"
+#~ msgstr "ពណ៌​ផ្ទៃខាងក្រោយ​របស់​ចំណង​ជើង​អត្ថបទ"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline background color."
+#~ msgstr ""
+#~ "ចុច​ប៊ូតុង​នេះ​ដើម្បី​ចាប់ផ្ដើម​កម្មវិធី​ជ្រើស​ពណ៌​ដែល​អនុញ្ញាត​ឲ្យ​អ្នក​កំណត់​ពណ៌​ផ្ទៃ​ខាងក្រោយ​របស់ចំណងជើង ។"
+
+#~ msgid "Headline background color:"
+#~ msgstr "ពណ៌​ផ្ទៃខាងក្រោយ​របស់​ចំណង​ជើង ៖"
+
+#~ msgid "Headline text color:"
+#~ msgstr "ពណ៌​អត្ថបទ​ចំណង​ជើង ៖"
+
+#~ msgid "Select the headline text color"
+#~ msgstr "ជ្រើស​ពណ៌​អត្ថបទ​ចំណងជើង ៖"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline text."
+#~ msgstr "ចុច​ប៊ូតុង​នេះ​ដើម្បី​ចាប់ផ្ដើម​កម្មវិធី​ជ្រើស​ពណ៌​ដែល​អនុញ្ញាត​ឲ្យ​អ្នក​កំណត់​ពណ៌​សម្រាប់​ចំណងជើង​អត្ថបទ ។"
+
+#~ msgid "Mike's Printing Style"
+#~ msgstr "រចនាប័ទ្ម​បោះពុម្ព​របស់ Mike"
+
+#~ msgid "Which contacts do you want to print?"
+#~ msgstr "តើ​ទំនាក់ទំនង​ណាមួយ​ដែល​អ្នក​ចង់​បោះពុម្ព ?"
+
+#~ msgid "Choose Contacts to Print"
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង​ត្រូវ​បោះពុម្ព"
+
+#~ msgid "Choose Printing Style"
+#~ msgstr "ជ្រើស​រចនាប័ទ្ម​បោះពុម្ព"
+
+#~ msgid "Print Progress"
+#~ msgstr "ការ​បោះពុម្ព​កំពុងដំណើរការ"
+
+#~ msgid "Printing: Progress"
+#~ msgstr "ការ​បោះពុម្ព ៖ ដំណើរការ"
+
+#~ msgid "Progress"
+#~ msgstr "ដំណើរការ"
+
+#~ msgid "Print Contact's Information"
+#~ msgstr "បោះពុម្ព​ព័ត៌មាន​​ទំនាក់ទំនង"
+
+#~ msgid "Print contact phone numbers"
+#~ msgstr "បោះពុម្ព​លេខ​ទូរស័ព្ទ​របស់​ទំនាក់ទំនង"
+
+#~ msgid "Check this box if you want contact phone numbers to be printed."
+#~ msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​បោះពុម្ព​លេខ​ទូរស័ព្ទ​របស់​ទំនាក់ទំនង ។"
+
+#~ msgid "Phone numbers"
+#~ msgstr "លេខ​ទូរស័ព្ទ"
+
+#~ msgid "Print contact email addresses"
+#~ msgstr "បោះពុម្ព​អាសយដ្ឋាន​អ៊ីមែល​របស់​ទំនាក់ទំនង"
+
+#~ msgid "Check this box if you want contact email addresses to be printed."
+#~ msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​បោះពុម្ព​អាសយដ្ឋាន​អ៊ីមែល​របស់​ទំនាក់ទំនង ។"
+
+#~ msgid "Email addresses"
+#~ msgstr "អាសយដ្ឋាន​អ៊ីមែល"
+
+#~ msgid "Print contact street addresses"
+#~ msgstr "បោះពុម្ព​អាសយដ្ឋាន​ផ្លូវ​របស់​ទំនាក់ទំនង"
+
+#~ msgid "Check this box if you want contact street addresses to be printed."
+#~ msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​បោះពុម្ព​អាសយដ្ឋាន​ផ្លូវ​របស់​ទំនាក់ទំនង ។"
+
+#~ msgid "Postal addresses"
+#~ msgstr "អាសយដ្ឋាន​ប្រៃសណីយ៍​"
+
+#~ msgid "Print contact organizations"
+#~ msgstr "បោះពុម្ព​អង្គភាព​របស់​ទំនាក់ទំនង"
+
+#~ msgid "Check this box if you want contact organizations to be printed."
+#~ msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​បោះពុម្ព​អង្គភាព​របស់​ទំនាក់ទំនង ។"
+
+#~ msgid "Organization"
+#~ msgstr "អង្គភាព"
+
+#~ msgid "Print contact birthdays"
+#~ msgstr "បោះពុម្ព​ថ្ងៃ​កំណើត​របស់​ទំនាក់ទំនង"
+
+#~ msgid "Check this box if you want contact birthdays to be printed."
+#~ msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​បោះពុម្ព​ថ្ងៃ​កំណើត​របស់​ទំនាក់ទំនង ។"
+
+#~ msgid "Birthday"
+#~ msgstr "ថ្ងៃ​កំណើត"
+
+#~ msgid "Print contact notes"
+#~ msgstr "បោះពុម្ព​ចំណាំ​របស់​ទំនាក់ទំនង"
+
+#~ msgid "Check this box if you want contact notes to be printed."
+#~ msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​បោះពុម្ព​កំណត់ចំណាំ​របស់​ទំនាក់ទំនង ។"
+
+#~ msgid "Note"
+#~ msgstr "ចំណាំ"
+
+#~ msgid "Ring Binder Printing Style - Appearance"
+#~ msgstr "រចនាប័ទ្ម​បោះពុម្ព​រាង​ជា​រង្វង់ - រូបរាង"
+
+#~ msgid "Setting up fields"
+#~ msgstr "រៀបចំ​វាល"
+
+#~ msgid "Printout for Ring Binders"
+#~ msgstr "សន្លឹក​បោះពុម្ព​សម្រាប់​រាង​ជា​រង្វង់"
+
+#~ msgctxt "@item:inlistbox Ascending sort order"
+#~ msgid "Ascending"
+#~ msgstr "ឡើង"
+
+#~ msgctxt "@item:inlistbox Descending sort order"
+#~ msgid "Descending"
+#~ msgstr "ចុះ"
+
+#~ msgctxt "@label"
+#~ msgid "(No preview available.)"
+#~ msgstr "(មិន​មាន​ការ​មើល​ជាមុន​ទេ)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Choose Printing Style"
+#~ msgstr "ជ្រើស​រចនាប័ទ្ម​បោះពុម្ព"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "What should the print look like?\n"
+#~ "KAddressBook has several printing styles, designed for different "
+#~ "purposes.\n"
+#~ "Choose the style that suits your needs below."
+#~ msgstr ""
+#~ "តើ​ការ​បោះពុម្ព​គួរ​តែ​មាន​រូបរាង​យ៉ាង​ម៉េច ?\n"
+#~ "KAddressBook មាន​រចនាប័ទ្ម​បោះពុម្ព​ជា​ច្រើន ដែល​បាន​រចនា​ឡើង​សម្រាប់​គោលបំណង​ផ្សេងៗគ្នា ។\n"
+#~ "ជ្រើស​រចនាប័ទ្ម​ដែល​សម​នឹង​តម្រូវការ​របស់​អ្នក​ដូច​ខាង​ក្រោម ។"
+
+#~ msgctxt "@title:group"
+#~ msgid "Sorting"
+#~ msgstr "តម្រៀប"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Criterion:"
+#~ msgstr "លក្ខណៈ​វិនិច្ឆ័យ ៖"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the primary sort field"
+#~ msgstr "ជ្រើស​វាល​តម្រៀប​ចម្បង"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "From this list you can select the field on which your contacts are sorted "
+#~ "in the print output.  Use the sorting order option to determine if the "
+#~ "sort will be in ascending or descending order."
+#~ msgstr ""
+#~ "ពី​បញ្ជី​នេះ​អ្នក​អាច​ជ្រើស​វាល​ទំនាក់ទំនង​របស់​អ្នក​ដែល​បាន​តម្រៀប​នៅ​ក្នុង​លទ្ធផល​បោះពុម្ព ។ ប្រើ​ជម្រើស​"
+#~ "លំដាប់​តម្រៀប​ដើម្បី​កំណត់​ថា​តើ​ត្រូវ​តម្រៀប​ក្នុង​លំដាប់​កើន ឬ​លំដាប់​ចុះ ។"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Order:"
+#~ msgstr "លំដាប់ ៖"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the sorting order"
+#~ msgstr "ជ្រើស​លំដាប់​តម្រៀប"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose if you want to sort your contacts in ascending or descending "
+#~ "order. Use the sorting criterion option to specify on which contact field "
+#~ "the sorting will be performed."
+#~ msgstr ""
+#~ "ជ្រើស​ថា​តើ​អ្នក​ចង់​តម្រៀប​ទំនាក់ទំនង​របស់​អ្នក​តាម​លំដាប់​កើន ឬ​ចុះ ។ ប្រើ​ជម្រើស​លក្ខខណ្ឌ​តម្រៀប​ដើម្បី​"
+#~ "បញ្ជាក់​នៅ​លើ​វាល​ទំនាក់ទំនង​ណាមួយ​ដែល​ត្រូវ​អនុវត្ត​ការ​តម្រៀប ។"
+
+#~ msgctxt "@title:group"
+#~ msgid "Print Style"
+#~ msgstr "រចនាប័ទ្ម​បោះពុម្ព"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the print style"
+#~ msgstr "ជ្រើស​រចនាប័ទ្ម​បោះពុម្ព"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose your desired printing style. See the preview image to help you "
+#~ "decide."
+#~ msgstr "ជ្រើស​រចនាប័ទ្ម​បោះពុម្ព​ដែល​អ្នក​ចង់​បាន ។ មើល​រូបភាព​ជាមុន​ដើម្បី​ជួយ​ក្នុង​ការ​សម្រេចចិត្ត ។"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Search contacts in list"
+#~ msgstr "ស្វែងរក​ទំនាក់ទំនង​នៅ​ក្នុង​បញ្ជី"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Start typing a search string in this box and the list of contacts "
+#~ "matching that string will be displayed.  This is a quick way of searching "
+#~ "for contacts of interest."
+#~ msgstr ""
+#~ "ចាប់ផ្ដើម​វាយ​ឃ្លា​ស្វែងរក​នៅ​ក្នុង​ប្រអប់​នេះ បន្ទាប់មក​បញ្ជី​ទំនាក់ទំនង​ដែល​ផ្គូផ្គង​ជាមួយ​ឃ្លា​នោះ​នឹង​"
+#~ "បង្ហាញ ។ នេះ​ជា​វិធីសាស្ត្រ​ស្វែងរក​រហ័ស​សម្រាប់​ទំនាក់ទំនង​ដែល​ចាប់អារម្មណ៍ ។"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sync Contacts"
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgid "Email address:"
+#~ msgid "Email address"
+#~ msgstr "អាសយដ្ឋាន​អ៊ីមែល ៖"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image"
+#~ msgstr "រក្សាទុក​ពុម្ព..."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image URL"
+#~ msgstr "រក្សាទុក​ពុម្ព..."
+
+#, fuzzy
+#~| msgid "Emails"
+#~ msgid "Email:"
+#~ msgstr "អ៊ីមែល"
+
+#, fuzzy
+#~| msgctxt "@label Search contacts in list"
+#~| msgid "Search"
+#~ msgid "Search"
+#~ msgstr "ស្វែងរក"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "No email found for this contact."
+#~ msgstr "អ្នក​មិនបាន​ជ្រើស​ទំនាក់ទំនង​ដើម្បីនាំចេញ​ទេ ។"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Only the contacts currently selected"
+#~ msgid "A contact group was selected."
+#~ msgstr "តែ​ទំនាក់ទំនង​ដែល​បាន​ជ្រើស​បច្ចុប្បន្ន​ប៉ុណ្ណោះ"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "You have not selected any contacts."
+#~ msgstr "អ្នក​មិនបាន​ជ្រើស​ទំនាក់ទំនង​ដើម្បីនាំចេញ​ទេ ។"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "No emails found in selected contacts."
+#~ msgstr "អ្នក​មិនបាន​ជ្រើស​ទំនាក់ទំនង​ដើម្បីនាំចេញ​ទេ ។"
+
+#, fuzzy
+#~| msgid "Import vCard..."
+#~ msgid "Send vCards..."
+#~ msgstr "នាំចូល vCard..."
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Merge Contacts..."
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Search Duplicate Contacts..."
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Select Contacts to merge"
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Select contacts that you really want to merge:"
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid "Print the complete address book or a selected number of contacts."
+#~ msgid "Select the addressbook in which to store merged contacts:"
+#~ msgstr "បោះពុម្ព​សៀវភៅ​អាសយដ្ឋាន​ទាំងមូល ឬ​ចំនួន​ទំនាក់ទំនង​ដែលបានជ្រើស ។"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Duplicate contact %1"
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgid "Print Contacts"
+#~ msgid "Contacts"
+#~ msgstr "បោះពុម្ព​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgid "Select Address Book"
+#~ msgid "Select AddressBook:"
+#~ msgstr "ជ្រើស​​សៀវភៅ​អាសយដ្ឋាន"
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "You must assign at least one column."
+#~ msgid "You must select at least two elements."
+#~ msgstr "អ្នក​ត្រូវ​តែ​ផ្ដល់​យ៉ាងហោចណាស់​មួយ​ជួរឈរ ។"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "No duplicated contact found."
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Only the contacts currently selected"
+#~ msgid "No contacts selected."
+#~ msgstr "តែ​ទំនាក់ទំនង​ដែល​បាន​ជ្រើស​បច្ចុប្បន្ន​ប៉ុណ្ណោះ"
+
+#, fuzzy
+#~| msgid "Print Contact's Information"
+#~ msgid "Missing Selected Information"
+#~ msgstr "បោះពុម្ព​ព័ត៌មាន​​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgctxt "@item Undefined import field type"
+#~| msgid "Undefined"
+#~ msgid "(Undefined)"
+#~ msgstr "មិនបាន​កំណត់"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>When trying to read the vCard, there was an error opening the file "
+#~ "<filename>%1</filename>:</para><para>%2</para>"
+#~ msgstr ""
+#~ "<para>នៅពេល​ព្យាយាម​អាន​ vCard មាន​កំហុស​មួយ​ក្នុងកា​របើក​ឯកសារ<filename>%1</filename> ៖"
+#~ "</para><para>%2</para>"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Merged Contact"
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgctxt "@label"
+#~| msgid "Importing contacts"
+#~ msgid "Error while merging contacts."
+#~ msgstr "នាំចូល​ទំនាក់ទំនង"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Merge contact"
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select vCard Fields"
+#~ msgstr "ជ្រើស​វាល vCard"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Potential Duplicate Contacts"
+#~ msgstr "ជ្រើស​ទំនាក់ទំនង"
+
+#~ msgid "Kontact integration"
+#~ msgstr "ការ​រួម​បញ្ចូល​របស់ Kontact"
+
+#, fuzzy
+#~| msgid "Compact Printing Style"
+#~ msgid "Grantlee Printing Style"
+#~ msgstr "បង្រួម​រចនាប័ទ្ម​បោះពុម្ព"
+
+#~ msgid "Website"
+#~ msgstr "តំបន់​បណ្ដាញ"
+
+#~ msgid "Department"
+#~ msgstr "នាយកដ្ឋាន"
+
+#~ msgid "Manager's Name"
+#~ msgstr "ឈ្មោះ​របស់​អ្នក​គ្រប់គ្រង"
+
+#~ msgid "Assistant's Name"
+#~ msgstr "ឈ្មោះ​របស់​អ្នក​ជំនួយ"
+
+#~ msgid "Partner's Name"
+#~ msgstr "ឈ្មោះ​ដៃគូ"
+
+#~ msgid "IM Address"
+#~ msgstr "អាសយដ្ឋាន IM"
+
+#~ msgctxt "Boolean value"
+#~ msgid "yes"
+#~ msgstr "បាទ/ចាស"
+
+#~ msgctxt "Boolean value"
+#~ msgid "no"
+#~ msgstr "ទេ"
+
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "តើ​អ្នក​ចង់​សរសេរ​ជាន់​លើ​ឯកសារ \"%1\" ដែរឬទេ"
+
+#~ msgctxt "@info"
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "តើ​អ្នក​ចង់​សរសេរ​ជាន់​លើ​ឯកសារ \"%1\" ដែរ​ឬទេ"
+
+#~ msgid "Show Simple View"
+#~ msgstr "បង្ហាញ​ទិដ្ឋភាព​ធម្មតា"
+
+#~ msgid "Click on the color button to change the header's text color."
+#~ msgstr "ចុច​លើ​ប៊ូតុង​ពណ៌ ដើម្បី​ផ្លាស់ប្ដូរ​ពណ៌​អត្ថបទ​​បឋមកថា ។"
+
+#~ msgid "Select the fields which shall be exported in the vCard."
+#~ msgstr "ជ្រើស​វាល ដែល​នឹង​ត្រូវ​បាន​នាំចេញ​ទៅ​កាន់ vCard ។"

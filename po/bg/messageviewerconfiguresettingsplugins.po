@@ -1,0 +1,396 @@
+# Bulgarian translations for kdepim-addons package.
+# Copyright (C) 2022 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# Automatically generated, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"PO-Revision-Date: 2022-07-21 11:52+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: dkim-verify/dkimadvancedwidget.cpp:21
+#, kde-format
+msgid "Still verify the signature, if a domain is only testing DKIM"
+msgstr "Проверка на подписа, дори и ако домейна само тества DKIM"
+
+#: dkim-verify/dkimadvancedwidget.cpp:22
+#, kde-format
+msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgstr ""
+"Използване на облекчено анализиране при четене на заглавната част на "
+"резултата за удостоверяване"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Nothing"
+msgstr "Нищо"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Warning"
+msgstr "Предупреждение"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Error"
+msgstr "Грешка"
+
+#: dkim-verify/dkimadvancedwidget.cpp:36
+#, kde-format
+msgid "Treat RSA-SHA1 sign algorithm as:"
+msgstr "Обработване на алгоритми за подпис RSA-SHA1 като:"
+
+#: dkim-verify/dkimadvancedwidget.cpp:40
+#, kde-format
+msgid "Treat small Key as:"
+msgstr "Обработване на малки ключове като:"
+
+#: dkim-verify/dkimadvancedwidget.cpp:42
+#, kde-format
+msgid "Configure"
+msgstr "Настройки"
+
+#: dkim-verify/dkimadvancedwidget.cpp:45
+#, kde-format
+msgid "Authentication Server verified:"
+msgstr "Потвърдени от сървъра за удостоверения:"
+
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Authentication Verified Server"
+msgstr "Конфигуриране на сървър за потвърдени удостоверения"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
+#, kde-format
+msgid "New Server:"
+msgstr "Нов сървър:"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
+#, kde-format
+msgid "New Server"
+msgstr "Нов сървър"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
+#, kde-format
+msgid "Modify Server"
+msgstr "Промяна на сървър"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
+#, kde-format
+msgid "Server:"
+msgstr "Сървър:"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
+#, kde-format
+msgid "Do you want to delete selected server(s) name?"
+msgstr "Искате ли да изтриете избраните имена на сървъри?"
+
+#: dkim-verify/dkimconfiguredialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure DKIM"
+msgstr "Конфигуриране на DKIM"
+
+#: dkim-verify/dkimconfiguretab.cpp:38
+#: foldersettings/folderconfiguresettingspagewidget.cpp:36
+#, kde-format
+msgid "General"
+msgstr "Основни"
+
+#: dkim-verify/dkimconfiguretab.cpp:40
+#, kde-format
+msgid "Record Keys"
+msgstr "Ключове на записи"
+
+#: dkim-verify/dkimconfiguretab.cpp:42
+#, kde-format
+msgid "Policy"
+msgstr "Правило"
+
+#: dkim-verify/dkimconfiguretab.cpp:44
+#, kde-format
+msgid "Advanced"
+msgstr "Разширени"
+
+#: dkim-verify/dkimgeneralwidget.cpp:19
+#, kde-format
+msgid "Enable DKIM Support"
+msgstr "Активиране поддръжка на DKIM"
+
+#: dkim-verify/dkimgeneralwidget.cpp:20
+#, kde-format
+msgid "Save DKIM Result"
+msgstr "Запис на резултата на DKIM"
+
+#: dkim-verify/dkimgeneralwidget.cpp:22
+#, kde-format
+msgid "Replace DKIM result by Authentication-Result header value"
+msgstr ""
+"Заместване на резултатите на DKIM със заглавната част  на резултата за "
+"удостоверяване"
+
+#: dkim-verify/dkimgeneralwidget.cpp:38
+#, kde-format
+msgid "Save Record Key:"
+msgstr "Запазване на ключ на запис:"
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save"
+msgstr "Запазване"
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save and Compare"
+msgstr "Запазване и сравняване"
+
+#: dkim-verify/dkimpolicywidget.cpp:21
+#, kde-format
+msgid "Check if e-mail should be signed"
+msgstr "Проверка дали имейлът трябва да бъде подписан"
+
+#: dkim-verify/dkimpolicywidget.cpp:22
+#, kde-format
+msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgstr "Използване на DMARC за проверка дали имейлът трябва да бъде подписан"
+
+#: dkim-verify/dkimpolicywidget.cpp:23
+#, kde-format
+msgid "Use default rule"
+msgstr "Използване на правило по подразбиране"
+
+#: dkim-verify/dkimpolicywidget.cpp:24
+#, kde-format
+msgid "Autogenerate rule"
+msgstr "Автоматично генериране на правило"
+
+#: dkim-verify/dkimpolicywidget.cpp:25
+#, kde-format
+msgid "Read Authentication-Results header"
+msgstr "Прочитане на заглавната част на резултата за удостоверяване"
+
+#: dkim-verify/dkimpolicywidget.cpp:26
+#, kde-format
+msgid "Autogenerate when Sender in SDID"
+msgstr "Автоматично генериране, когато подателят е в SDID"
+
+#: dkim-verify/dkimpolicywidget.cpp:27
+#, kde-format
+msgid "Show Rules"
+msgstr "Показване на правилата"
+
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Expiry Account Trash Folder"
+msgstr "Конфигуриране на кошче за изтекли акаунти"
+
+#: foldersettings/folderconfiguresettingsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Folder Settings"
+msgstr "Конфигуриране на настройки на директория"
+
+#: foldersettings/folderconfiguresettingspagebase.cpp:17
+#, kde-format
+msgid "Modify"
+msgstr "Промяна"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:40
+#, kde-format
+msgid "View"
+msgstr "Преглед"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:44
+#, kde-format
+msgid "Expiry"
+msgstr "Бракуване"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:48
+#, kde-format
+msgid "Template"
+msgstr "Шаблон"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:57
+#, kde-format
+msgid ""
+"It will override all settings for each selected folder. Do you want to "
+"continue?"
+msgstr ""
+"Това ще замени всички настройки за всяка избрана папка. Искате ли да да "
+"продължите?"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#, kde-format
+msgid "Save Folder Settings"
+msgstr "Запазване на настройките на папката"
+
+#: foldersettings/folderconfiguretreewidget.cpp:52
+#, kde-format
+msgid "Select"
+msgstr "Избиране"
+
+#: foldersettings/folderconfiguretreewidget.cpp:60
+#, kde-format
+msgid "Unselect"
+msgstr "Размаркиране"
+
+#: gravatar/gravatarconfiguresettingsplugindialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr "Конфигуриране на Gravatar"
+
+#: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
+#, kde-format
+msgid "Enable Gravatar Support"
+msgstr "Включване на поддръжка на Gravatar"
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Create"
+msgstr "Създаване"
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit"
+msgstr "Редактиране"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:27
+#, kde-format
+msgid "Server Name:"
+msgstr "Име на сървъра:"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:31
+#, kde-format
+msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">Информация за форматен аргумент...</a></qt>"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
+#, kde-format
+msgid ""
+"<qt><p><strong>These expressions may be used for the arguments:</strong></"
+"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+msgstr ""
+"<qt><p><strong>Тези изрази могат да се използват като аргументи:</strong></"
+"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:48
+#, kde-format
+msgid "Command line:"
+msgstr "Команден ред:"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:58
+#, kde-format
+msgid "Executable:"
+msgstr "Изпълним файл:"
+
+#: openurlwith/openurlwithconfiguredialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Open Url With Plugin"
+msgstr "Конфигуриране на Отваряне на Url с приставка"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:55
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Rule..."
+msgstr "Добавяне на правило..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:56
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Rule"
+msgstr "Премахване на правило"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:57
+#, kde-format
+msgctxt "@action:button"
+msgid "Modify Rule..."
+msgstr "Промяна на правило..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Rule already exists."
+msgstr "Правилото вече съществува."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Duplicate Rule"
+msgstr "Дублиране на правило"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:191
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] "Искате ли да премахнете това правило?"
+msgstr[1] "Искате ли да премахнете тези правила?"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:192
+#, kde-format
+msgctxt "@title"
+msgid "Remove Rule"
+msgstr "Премахване на правило"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:208
+#, kde-format
+msgid "Add Rule..."
+msgstr "Добавяне на правило..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:210
+#, kde-format
+msgid "Edit Rule..."
+msgstr "Редактиране на правило..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:215
+#, kde-format
+msgid "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] "Премахване на правило"
+msgstr[1] "Премахване на правило"
+
+#: scamsettings/scamconfiguresettingsdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Scam Settings"
+msgstr "Конфигуриране на настройки за измами"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Domain"
+msgstr "Домейн"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Check"
+msgstr "Проверка"
+
+#: scamsettings/scamconfigureutils.cpp:15
+#, kde-format
+msgid "Disable All Check"
+msgstr "Деактивиране на всички проверки"
+
+#: scamsettings/scamconfigureutils.cpp:17
+#, kde-format
+msgid "Redirect Url"
+msgstr "Пренасочване на Url"
+
+#: scamsettings/scamconfigureutils.cpp:19
+#, kde-format
+msgid "Has Ip"
+msgstr "Има Ip"

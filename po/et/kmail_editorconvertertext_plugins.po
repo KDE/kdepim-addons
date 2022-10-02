@@ -1,0 +1,165 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2019-12-18 19:26+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.08.1\n"
+
+#: markdown/markdownlib/markdownconfiguredialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Markdown Plugin"
+msgstr "Markdowni plugina seadistamine"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:19
+#, kde-format
+msgid "Enable embedded LaTeX"
+msgstr "Põimitud LaTeXi lubamine"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:20
+#, kde-format
+msgid "Enable PHP Markdown Extra definition lists"
+msgstr "PHP Markdowni lisadefinitsioonide loendite lubamine"
+
+#: markdown/markdownlib/markdownconverter.cpp:68
+#, kde-format
+msgid "Failed to compile the Markdown document."
+msgstr "Markdowni dokumendi kompileerimine nurjus"
+
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Image"
+msgstr "Pildi lisamine"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:19
+#, kde-format
+msgid "Keep original size"
+msgstr "Algsuurus säilitatakse"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#, kde-format
+msgid "Width:"
+msgstr "Laius:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
+#, kde-format
+msgid "Height:"
+msgstr "Kõrgus:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:39
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
+#, kde-format
+msgid "Title:"
+msgstr "Nimi:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#, kde-format
+msgid "Image Link:"
+msgstr "Pildi link:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#, kde-format
+msgid "Alternate text:"
+msgstr "Alternatiivne tekst:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
+#, kde-format
+msgid " px"
+msgstr " px"
+
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Link"
+msgstr "Lingi lisamine"
+
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:30
+#, kde-format
+msgid "Link:"
+msgstr "Link:"
+
+#: markdown/markdownlib/markdownpreviewdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Markdown Rendering Preview"
+msgstr "Markdowni renderdamise eelvaatlus"
+
+#: markdown/markdownlib/markdownpreviewwidget.cpp:75
+#, kde-format
+msgid "Converter Error"
+msgstr "Teisendaja tõrge"
+
+#: markdown/plugin/markdowninterface.cpp:36
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr "HTMLi genereerimine Markdowni keele põhjal."
+
+#: markdown/plugin/markdowninterface.cpp:53
+#, kde-format
+msgid "Markdown"
+msgstr "Markdown"
+
+#: markdown/plugin/markdowninterface.cpp:55
+#, kde-format
+msgid "Markdown Action"
+msgstr "Markdowni toiming"
+
+#: markdown/plugin/markdowninterface.cpp:60
+#, kde-format
+msgid "Add Title"
+msgstr "Nime lisamine"
+
+#: markdown/plugin/markdowninterface.cpp:63
+#, kde-format
+msgid "Level %1"
+msgstr "Tase %1"
+
+#: markdown/plugin/markdowninterface.cpp:67
+#, kde-format
+msgid "Horizontal Rule"
+msgstr "Rõhtne joonlaud"
+
+#: markdown/plugin/markdowninterface.cpp:69
+#, kde-format
+msgid "Change Selected Text as Bold"
+msgstr "Muuda valitud tekst rasvaseks"
+
+#: markdown/plugin/markdowninterface.cpp:71
+#, kde-format
+msgid "Change Selected Text as Italic"
+msgstr "Muuda valitud tekst kaldkirjaks"
+
+#: markdown/plugin/markdowninterface.cpp:73
+#, kde-format
+msgid "Change Selected Text as Code"
+msgstr "Muuda valitud tekst koodiks"
+
+#: markdown/plugin/markdowninterface.cpp:75
+#, kde-format
+msgid "Change Selected Text as Block Quote"
+msgstr "Muuda valitud tekst tsitaadiplokiks"
+
+#: markdown/plugin/markdowninterface.cpp:78
+#, kde-format
+msgid "Add Link"
+msgstr "Lingi lisamine"
+
+#: markdown/plugin/markdowninterface.cpp:79
+#, kde-format
+msgid "Add Image"
+msgstr "Pildi lisamine"

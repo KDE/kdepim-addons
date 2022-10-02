@@ -1,0 +1,170 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2017.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019.
+# Мария Шикунова <translation-team@basealt.ru>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-04 00:44+0000\n"
+"PO-Revision-Date: 2022-02-21 10:49+0300\n"
+"Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.08.3\n"
+
+#: gnupgwksurlhandler.cpp:85
+#, kde-format
+msgid "Display key details"
+msgstr "Показать подробности ключа"
+
+#: gnupgwksurlhandler.cpp:87
+#, kde-format
+msgid "Publish the key"
+msgstr "Опубликовать ключ"
+
+#: pgpkeyformatter.cpp:43
+#, kde-format
+msgid "No valid key data in file."
+msgstr "В файле нет подходящих данных ключа."
+
+#: pgpkeyurlhandler.cpp:46
+#, kde-format
+msgid "Import the key"
+msgstr "Импорт ключа"
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "An error occurred while importing the key."
+msgstr "Ошибка импорта ключа."
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "Import error"
+msgstr "Ошибка импорта"
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "The key has been successfully imported."
+msgstr "Ключ успешно импортирован."
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "Import finished"
+msgstr "Импорт завершён"
+
+#: templates/gnupgwksmessagepart.html:26
+msgid "Register your OpenPGP key with your email provider. "
+msgstr ""
+"Зарегистрировать этот ключ OpenPGP у поставщика услуги электронной почты."
+
+#: templates/gnupgwksmessagepart.html:28
+msgid ""
+"When you register your key with your email provider other people will then "
+"be able to retrieve the key and send you encrypted emails and verify "
+"authenticity of emails you send them."
+msgstr ""
+"После регистрации пользователем ключа у своего поставщика услуг электронной "
+"почты другие люди смогут получить этот ключ и отправлять пользователю "
+"зашифрованные электронные письма, а также проверять подлинность отправляемых "
+"пользователем писем."
+
+#: templates/gnupgwksmessagepart.html:31
+msgid "An error occurred while publishing the key. Please try again later."
+msgstr "Ошибка публикации ключа. Попробуйте позже."
+
+#: templates/gnupgwksmessagepart.html:33
+msgid "Register the key"
+msgstr "Зарегистрировать ключ"
+
+#: templates/gnupgwksmessagepart.html:35
+msgid ""
+"The email will be automatically deleted once you confirm the registration."
+msgstr ""
+"Эта электронная почта будет автоматически удалена после подтверждения "
+"регистрации."
+
+#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+msgid "Show key details"
+msgstr "Показать подробные сведения о ключе"
+
+#: templates/gnupgwksmessagepart.html:42
+msgid ""
+"This is an automatically generated email. The purpose of this email is to "
+"register your OpenPGP key with your email provider."
+msgstr ""
+"Это электронное письмо было создано автоматически для регистрации вашего "
+"ключа OpenPGP у провайдера, предоставившего вам этот адрес электронной почты."
+
+#: templates/gnupgwksmessagepart.html:45
+msgid ""
+"Your OpenPGP key will be published on your email provider's key server. "
+"Other users will be able to retrieve the key and send you encrypted emails "
+"and verify authenticity of emails you send them."
+msgstr ""
+"Ключ пользователя OpenPGP будет опубликован на сервере его поставщика услуг "
+"электронной почты. Другие пользователи смогут получитть этот ключ и "
+"отправлять польщователю зашифрованные электронные письма, а также проверять "
+"подлинность отправляемых пользователем писем."
+
+#: templates/pgpkeymessagepart.html:14
+msgid "OpenPGP Key"
+msgstr "Ключ OpenPGP"
+
+#: templates/pgpkeymessagepart.html:18
+msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
+msgstr ""
+"Это ключ OpenPGP, он может использоваться для подписания и шифрования "
+"электронной почты."
+
+#: templates/pgpkeymessagepart.html:23
+msgid "Loading key details..."
+msgstr "Загружаются подробные сведения о ключе..."
+
+#: templates/pgpkeymessagepart.html:28
+msgid "Owner:"
+msgstr "Владелец:"
+
+#: templates/pgpkeymessagepart.html:32
+msgid "Created:"
+msgstr "Создан:"
+
+#: templates/pgpkeymessagepart.html:37
+msgid "Fingerprint:"
+msgstr "Отпечаток:"
+
+#: templates/pgpkeymessagepart.html:42
+msgid ""
+"This key is unknown, it could not be found in your local keyring. You may "
+"want to import this key."
+msgstr ""
+"Это неизвестный ключ, он не найден в локальном контейнере ключей. Возможно, "
+"требуется импортировать этот ключ."
+
+#: templates/pgpkeymessagepart.html:45
+#, kde-format
+msgid "Error while loading key: %1"
+msgstr "Ошибка загрузки ключа: %1"
+
+#: templates/pgpkeymessagepart.html:47
+msgid "Hide key details"
+msgstr "Скрыть подробные сведения о ключе"
+
+#: templates/pgpkeymessagepart.html:49
+msgid "Open in Kleopatra"
+msgstr "Открыть в Kleopatra"
+
+#: templates/pgpkeymessagepart.html:52
+msgid "Show key details ..."
+msgstr "Показать подробные сведения о ключе..."
+
+#: templates/pgpkeymessagepart.html:54
+msgid "Import key"
+msgstr "Импортировать ключ"

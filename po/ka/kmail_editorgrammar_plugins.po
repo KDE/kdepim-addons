@@ -1,0 +1,374 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2022-09-19 06:28+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: grammalecte/plugin/grammalecteinterface.cpp:77
+#, kde-format
+msgid "&Check Grammar (Grammalecte)"
+msgstr "&გრამატიკის შემოწმება (Grammalecte)"
+
+#: grammalecte/plugin/grammalecteplugin.cpp:37
+#, kde-format
+msgid "Grammalecte Plugin"
+msgstr "დამატება Grammalecte"
+
+#: grammalecte/src/grammalecteconfigdialog.cpp:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Grammalecte"
+msgstr "Grammalecte-ის მორგება"
+
+#: grammalecte/src/grammalecteconfigwidget.cpp:34
+#, kde-format
+msgid "General"
+msgstr "ზოგადი"
+
+#: grammalecte/src/grammalecteconfigwidget.cpp:35
+#, kde-format
+msgid "Grammar Settings"
+msgstr "გრამატიკის მორგება"
+
+#: grammalecte/src/grammalecteconfigwidget.cpp:60
+#, kde-format
+msgid ""
+"Impossible to get options. Please verify that you have grammalected "
+"installed."
+msgstr ""
+"პარამეტრების მიღების პრობლემა. დარწმუნდით, რომ grammalected დაყენებულია."
+
+#: grammalecte/src/grammalecteconfigwidget.cpp:61
+#, kde-format
+msgid "Error during Extracting Options"
+msgstr "შეცდომა პარამეტრების გამოტანისას"
+
+#: grammalecte/src/grammalecteconfigwidget.cpp:110
+#, kde-format
+msgid "Press Button for Reloading Settings"
+msgstr "პარამეტრების თავიდან ჩასატვირთად დააწექით ღლაკს"
+
+#: grammalecte/src/grammalecteconfigwidget.cpp:117
+#, kde-format
+msgid "Reload Settings"
+msgstr "პარამეტრების თავიდან ჩატვირთვა"
+
+#: grammalecte/src/grammalecteconfigwidget.cpp:134
+#, kde-format
+msgid "Python Path:"
+msgstr "პითონის ბილიკი:"
+
+#: grammalecte/src/grammalecteconfigwidget.cpp:138
+#, kde-format
+msgid "Add full 'grammalecte-cli.py' path"
+msgstr "სრული ბილიკი ფაილამდე 'grammalecte-cli.py'"
+
+#: grammalecte/src/grammalecteconfigwidget.cpp:139
+#, kde-format
+msgid "Grammalecte Path:"
+msgstr "Grammalecte-ის ბილიკი:"
+
+#: grammalecte/src/grammalecteresultwidget.cpp:54
+#, kde-format
+msgid "Python path is missing."
+msgstr "პითონის ბილიკი მითითებული არაა."
+
+#: grammalecte/src/grammalecteresultwidget.cpp:58
+#, kde-format
+msgid "Grammalecte path not found."
+msgstr "Grammalecte-ის ბილიკი ვერ ვიპოვე."
+
+#: grammalecte/src/grammalecteresultwidget.cpp:65
+#, kde-format
+msgid "Grammalecte program file not found."
+msgstr "Grammalecte-ის გამშვები ფაილი ვერ ვიპოვე."
+
+#: grammalecte/src/grammalecteresultwidget.cpp:69
+#, kde-format
+msgid "Grammalecte cli file not found."
+msgstr "Grammalecte-ის CLI გამშვები ფაილები ვერ ვიპოვე."
+
+#: grammalecte/src/grammalecteresultwidget.cpp:73
+#, kde-format
+msgid "Grammalecte error"
+msgstr "Grammalecte -ის შეცდომა"
+
+#: grammarcommon/grammarresulttextedit.cpp:40
+#, kde-format
+msgid "Any text to check."
+msgstr "შესამოწმებელი ტექსტი."
+
+#: grammarcommon/grammarresulttextedit.cpp:94
+#, kde-format
+msgid "Replacement"
+msgstr "შემცვლელი"
+
+#: grammarcommon/grammarresulttextedit.cpp:103
+#, kde-format
+msgid "Online Grammar Information"
+msgstr "გრამატიკის ონლაინ ინფორმაცია"
+
+#: grammarcommon/grammarresulttextedit.cpp:116
+#, kde-format
+msgid "Check Again"
+msgstr "თავიდან შემოწმება"
+
+#: grammarcommon/grammarresulttextedit.cpp:119
+#, kde-format
+msgid "Configure..."
+msgstr "მორგება..."
+
+#: grammarcommon/grammarresultutil.cpp:48
+#, kde-format
+msgid "See on: %1"
+msgstr "იხილეთ: %1"
+
+#: grammarcommon/grammarresultwidget.cpp:32
+#, kde-format
+msgid "Close"
+msgstr "დახურვა"
+
+#: languagetool/plugin/languagetoolinterface.cpp:81
+#, kde-format
+msgid "&Check Grammar (LanguageTool)"
+msgstr "&გრამატიკის შემოწმება (LanguageTool)"
+
+#: languagetool/plugin/languagetoolinterface.cpp:95
+#, kde-format
+msgid ""
+"You do not use local instance.\n"
+"Your text will send on a external web site (https://languagetool.org/).\n"
+"Do you want to continue?"
+msgstr ""
+"თქვენ ლოკალურად გაშვებულ ასლს არ იყენებთ.\n"
+"თქვენი ტექსტი გარე ვებგვერდზე აიტვირთება (https://languagetool.org/).\n"
+"გნებავთ გააგრძელოთ?"
+
+#: languagetool/plugin/languagetoolinterface.cpp:96
+#, kde-format
+msgid "Check Grammar with LanguageTool"
+msgstr "გრამატიკის LanguageTool-ით შემოწმება"
+
+#: languagetool/plugin/languagetoolplugin.cpp:36
+#, kde-format
+msgid "LanguageTool Plugin"
+msgstr "დამატება LanguageTool"
+
+#: languagetool/src/languagetoolcombobox.cpp:31
+#, kde-format
+msgid "English"
+msgstr "ქართული"
+
+#: languagetool/src/languagetoolcombobox.cpp:32
+#, kde-format
+msgid "Asturian"
+msgstr "ასთურიანული"
+
+#: languagetool/src/languagetoolcombobox.cpp:33
+#, kde-format
+msgid "Belarusian"
+msgstr "ბელორუსული"
+
+#: languagetool/src/languagetoolcombobox.cpp:34
+#, kde-format
+msgid "Breton"
+msgstr "ბრეტონული"
+
+#: languagetool/src/languagetoolcombobox.cpp:35
+#, kde-format
+msgid "Catalan"
+msgstr "კატალანური"
+
+#: languagetool/src/languagetoolcombobox.cpp:36
+#, kde-format
+msgid "Chinese"
+msgstr "ჩინური"
+
+#: languagetool/src/languagetoolcombobox.cpp:37
+#, kde-format
+msgid "Danish"
+msgstr "დანიური"
+
+#: languagetool/src/languagetoolcombobox.cpp:38
+#, kde-format
+msgid "Dutch"
+msgstr "ჰოლანდიური"
+
+#: languagetool/src/languagetoolcombobox.cpp:39
+#, kde-format
+msgid "English (Australian)"
+msgstr "ავსტრალიური ინგლისური"
+
+#: languagetool/src/languagetoolcombobox.cpp:40
+#, kde-format
+msgid "English (Canadian)"
+msgstr "კანადური ინგლისური"
+
+#: languagetool/src/languagetoolcombobox.cpp:41
+#, kde-format
+msgid "Esperanto"
+msgstr "ესპერანტო"
+
+#: languagetool/src/languagetoolcombobox.cpp:42
+#, kde-format
+msgid "French"
+msgstr "ფრანგული"
+
+#: languagetool/src/languagetoolcombobox.cpp:43
+#, kde-format
+msgid "Galician"
+msgstr "გალური"
+
+#: languagetool/src/languagetoolcombobox.cpp:44
+#, kde-format
+msgid "German"
+msgstr "გერმანული"
+
+#: languagetool/src/languagetoolcombobox.cpp:45
+#, kde-format
+msgid "Greek"
+msgstr "ბერძნული"
+
+#: languagetool/src/languagetoolcombobox.cpp:46
+#, kde-format
+msgid "Italian"
+msgstr "იტალიური"
+
+#: languagetool/src/languagetoolcombobox.cpp:47
+#, kde-format
+msgid "Japanese"
+msgstr "იაპონური"
+
+#: languagetool/src/languagetoolcombobox.cpp:48
+#, kde-format
+msgid "Khmer"
+msgstr "კხმერული"
+
+#: languagetool/src/languagetoolcombobox.cpp:49
+#, kde-format
+msgid "Persian"
+msgstr "სპარსული"
+
+#: languagetool/src/languagetoolcombobox.cpp:50
+#, kde-format
+msgid "Polish"
+msgstr "პოლონური"
+
+#: languagetool/src/languagetoolcombobox.cpp:51
+#, kde-format
+msgid "Portuguese"
+msgstr "პორტუგალიური"
+
+#: languagetool/src/languagetoolcombobox.cpp:52
+#, kde-format
+msgid "Romanian"
+msgstr "რუმინული"
+
+#: languagetool/src/languagetoolcombobox.cpp:53
+#, kde-format
+msgid "Russian"
+msgstr "რუსული"
+
+#: languagetool/src/languagetoolcombobox.cpp:54
+#, kde-format
+msgid "Slovak"
+msgstr "სლოვაკური"
+
+#: languagetool/src/languagetoolcombobox.cpp:55
+#, kde-format
+msgid "Slovenian"
+msgstr "სლოვენური"
+
+#: languagetool/src/languagetoolcombobox.cpp:56
+#, kde-format
+msgid "Spanish"
+msgstr "ესპანური"
+
+#: languagetool/src/languagetoolcombobox.cpp:57
+#, kde-format
+msgid "Swedish"
+msgstr "შვედური"
+
+#: languagetool/src/languagetoolcombobox.cpp:58
+#, kde-format
+msgid "Tagalog"
+msgstr "ტაგალოგური"
+
+#: languagetool/src/languagetoolcombobox.cpp:59
+#, kde-format
+msgid "Tamil"
+msgstr "თამილური"
+
+#: languagetool/src/languagetoolcombobox.cpp:60
+#, kde-format
+msgid "Ukrainian"
+msgstr "უკრაინული"
+
+#: languagetool/src/languagetoolconfigdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure LanguageTool"
+msgstr "LanguageTool-ის მორგება"
+
+#: languagetool/src/languagetoolconfigwidget.cpp:24
+#, kde-format
+msgid "Use Local Instance"
+msgstr "ლოკალური გაშვებული ასლის გამოყენება"
+
+#: languagetool/src/languagetoolconfigwidget.cpp:26
+#, kde-format
+msgid "Instance Path:"
+msgstr "გაშვებული ასლის ბილიკი:"
+
+#: languagetool/src/languagetoolconfigwidget.cpp:54
+#, kde-format
+msgid "Language:"
+msgstr "ენა:"
+
+#: languagetool/src/languagetoolconfigwidget.cpp:66
+#, kde-format
+msgid "Refresh"
+msgstr "განახლება"
+
+#: languagetool/src/languagetoolresultwidget.cpp:60
+#, kde-format
+msgid "An error was reported: %1"
+msgstr "შეცდომა: %1"
+
+#: languagetool/src/languagetoolresultwidget.cpp:60
+#, kde-format
+msgid "Failed to check grammar."
+msgstr "გრამატიკის შემოწმების შეცდომა."
+
+#: languagetool/src/languagetoolresultwidget.cpp:76
+#, kde-format
+msgid "Check"
+msgstr "შემოწმება"
+
+#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#, kde-format
+msgid ""
+"An error occurred attempting to load the list of available languages:\n"
+"%1"
+msgstr ""
+"შეცდომა ხელმისაწვდომი ენების გადმოწერის მცდელობისას:\n"
+"%1"
+
+#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#, kde-format
+msgid "List of Languages"
+msgstr "ენების სია"

@@ -1,0 +1,1394 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+# Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2017-10-08 16:50+0300\n"
+"Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Машинный перевод"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "Машинный &перевод"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Машинный перевод"
+
+#~ msgid "Configure engine"
+#~ msgstr "Настройка службы сокращения ссылок"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Служба сокращения ссылок:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Сервер сообщил об ошибке:\n"
+#~ "«%1»"
+
+#~ msgid "Close"
+#~ msgstr "Закрыть"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Идёт создание короткой ссылки..."
+
+#~ msgid "Configure..."
+#~ msgstr "Настроить..."
+
+#~ msgid "Convert"
+#~ msgstr "Преобразовать"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Вставить короткую ссылку"
+
+#~ msgid "Original URL:"
+#~ msgstr "Исходная ссылка:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Копировать в буфер обмена"
+
+#~ msgid "Short URL:"
+#~ msgstr "Короткая ссылка:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Открыть короткую ссылку"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr ""
+#~ "Не удалось создать короткую ссылку из-за отсутствия подключения к сети."
+
+#~ msgid "No network"
+#~ msgstr "Нет подключения к сети"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Произошла ошибка: «%1»"
+
+#~ msgid "Short URL"
+#~ msgstr "Короткие ссылки"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Создание коротких ссылок"
+
+#~ msgid "&User identifier:"
+#~ msgstr "&Идентификатор пользователя:"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "The User Identifier is the login of the user on the IMAP server. This can "
+#~ "be a simple user name or the full email address of the user; the login "
+#~ "for your own account on the server will tell you which one it is."
+#~ msgstr ""
+#~ "Идентификатор пользователя — это учётное имя пользователя на сервере "
+#~ "IMAP. Это может быть просто имя пользователя или его полный почтовый "
+#~ "адрес; определить его можно по вашему регистрационному имени на этом "
+#~ "сервере."
+
+#~ msgctxt "select an email address"
+#~ msgid "Se&lect..."
+#~ msgstr "Вы&брать..."
+
+#~ msgid "Permissions"
+#~ msgstr "Права доступа"
+
+#~ msgid ""
+#~ "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#~ msgstr ""
+#~ "<b>Примечание: </b>Для переименования требуется иметь право на запись в "
+#~ "родительский каталог."
+
+#~ msgid "Folder cannot be administrated."
+#~ msgstr "Управление правами на эту папку невозможно."
+
+#~ msgid "Add Entry..."
+#~ msgstr "Добавить запись..."
+
+#~ msgid "Edit Entry..."
+#~ msgstr "Изменить запись..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Удалить запись"
+
+#~ msgid "Add ACL"
+#~ msgstr "Добавление прав"
+
+#~ msgid "Edit ACL"
+#~ msgstr "Удаление прав"
+
+#~ msgid ""
+#~ "Do you really want to remove your own permissions for this folder? You "
+#~ "will not be able to access it afterwards."
+#~ msgstr ""
+#~ "Удалить ваше собственное право доступа к этой папке? После этого вы не "
+#~ "сможете к ней обратиться."
+
+#~ msgid "Remove"
+#~ msgstr "Удалить"
+
+#~ msgid "Do you really want to remove these permissions for this folder?"
+#~ msgstr "Удалить эти права доступа к этой папке?"
+
+#~ msgctxt "Permissions"
+#~ msgid "None"
+#~ msgstr "Нет"
+
+#~ msgctxt "Permissions"
+#~ msgid "Read"
+#~ msgstr "Чтение"
+
+#~ msgctxt "Permissions"
+#~ msgid "Append"
+#~ msgstr "Добавление"
+
+#~ msgctxt "Permissions"
+#~ msgid "Write"
+#~ msgstr "Запись"
+
+#~ msgctxt "Permissions"
+#~ msgid "All"
+#~ msgstr "Все"
+
+#~ msgid "Custom Permissions (%1)"
+#~ msgstr "Нестандартные права (%1)"
+
+#~ msgid "Access Control"
+#~ msgstr "Управление доступом"
+
+#~ msgid "LibreOffice Autocorrection"
+#~ msgstr "Параметры автоисправления LibreOffice..."
+
+#~ msgid "KMail/Calligra Autocorrection"
+#~ msgstr "Параметры автоисправления KMail/Calligra..."
+
+#~ msgid "\"Replace\" string is the same as \"Find\" string."
+#~ msgstr "Заменяющий текст совпадает с исходной строкой."
+
+#~ msgid "Add Autocorrection Entry"
+#~ msgstr "Добавление правила автоисправления"
+
+#~ msgid "&Modify"
+#~ msgstr "&Изменить"
+
+#~ msgid "&Add"
+#~ msgstr "&Добавить"
+
+#~ msgid "Import LibreOffice Autocorrection"
+#~ msgstr "Импорт параметров автоисправления LibreOffice"
+
+#~ msgid "LibreOffice Autocorrection File (*.data)"
+#~ msgstr "Файлы параметров автоисправления LibreOffice (*.data)"
+
+#~ msgid "Import KMail Autocorrection"
+#~ msgstr "Импорт параметров автоисправления KMail"
+
+#~ msgid "KMail Autocorrection File (*.xml)"
+#~ msgstr "Файлы параметров автоисправления KMail (*.xml)"
+
+#~ msgid ""
+#~ "Language was changed, do you want to save config for previous language?"
+#~ msgstr "Выбран другой язык, сохранить конфигурацию для предыдущего языка?"
+
+#~ msgid "Save config"
+#~ msgstr "Сохранение конфигурации"
+
+#~ msgid "Export Autocorrection File"
+#~ msgstr "Экспорт параметров автоисправления"
+
+#~ msgid "Archive cannot be opened in read mode."
+#~ msgstr "Не удалось открыть архив для чтения."
+
+#~ msgid "Import LibreOffice Autocorrection File"
+#~ msgstr "Импорт параметров автоисправления LibreOffice"
+
+#~ msgid "Enable autocorrection"
+#~ msgstr "Включить автоматическое исправление текста"
+
+#~ msgid "Replacement and exception for language:"
+#~ msgstr "Правила замены и исключения для языка:"
+
+#~ msgid "Si&mple Autocorrection"
+#~ msgstr "Пр&остое автоисправление"
+
+#~ msgid ""
+#~ "Detect when a new sentence is started and always ensure that the first "
+#~ "character is an uppercase character"
+#~ msgstr ""
+#~ "Искать начала новых предложений и всегда делать заглавной первую букву "
+#~ "предложения"
+
+#~ msgid ""
+#~ "Convert &first letter of a sentence automatically to uppercase\n"
+#~ "(e.g. \"my house. in this town\" to \"my house. In this town\")"
+#~ msgstr ""
+#~ "Переводить первую букву первого слова предложения в &верхний регистр\n"
+#~ "(«конец. это Проверка» - «конец. Это Проверка»)"
+
+#~ msgid ""
+#~ "All words are checked for the common mistake of holding the shift key "
+#~ "down a bit too long. If some words must have two uppercase characters, "
+#~ "then those exceptions should be added in the 'Exceptions' tab."
+#~ msgstr ""
+#~ "Проверять все слова на часто встречающуюся ошибку ввода нескольких "
+#~ "заглавных букв при нажатой клавише Shift. Если некоторые слова начинаются "
+#~ "с нескольких заглавных букв (например, КГБ), то нужно добавить их в "
+#~ "список исключений на вкладке «Исключения»."
+
+#~ msgid ""
+#~ "Convert &two uppercase characters to one uppercase and one lowercase "
+#~ "character\n"
+#~ " (e.g. PErfect to Perfect)"
+#~ msgstr ""
+#~ "Исправлять ввод &двух букв подряд в верхнем регистре\n"
+#~ "(например, «ПРивет» в «Привет»)"
+
+#~ msgid ""
+#~ "Make sure that more than one space cannot be typed, as this is a common "
+#~ "mistake which is quite hard to find in formatted text."
+#~ msgstr ""
+#~ "Исправляет достаточно частую проблему работы с текстом, импортируемым из "
+#~ "текстового файла с форматированием, когда для выравнивания текста по "
+#~ "ширине указывается несколько пробелов."
+
+#~ msgid "&Suppress double spaces"
+#~ msgstr "Удалять &двойные пробелы"
+
+#~ msgid "Most standard fraction notations will be converted when available"
+#~ msgstr "Часто употребляемые дроби будут преобразованы в символы дробей"
+
+#~ msgid "Re&place 1/2... with ½..."
+#~ msgstr "За&менять 1/2... на ½..."
+
+#~ msgid "Capitalize name of days"
+#~ msgstr "Начинать дни недели с заглавной буквы"
+
+#~ msgid ""
+#~ "Detect when a URL (Uniform Resource Locator) is typed and provide "
+#~ "formatting that matches the way an Internet browser would show a URL."
+#~ msgstr ""
+#~ "Определяет, что введённая строка является интернет-адресом (URL), и "
+#~ "форматирует её так, как эту ссылку показал бы браузер."
+
+#~ msgid "Autoformat &URLs (HTML mode)"
+#~ msgstr ""
+#~ "Автоформатирование &интернет-адресов (для писем с форматированием HTML)"
+
+#~ msgid ""
+#~ "When you use _underline_ or *bold*, the text between the underscores or "
+#~ "asterisks will be converted to underlined or bold text."
+#~ msgstr ""
+#~ "Когда вы используете для выделения _подчёркнутого_ или *полужирного* "
+#~ "текста определённые символы, эти символы будут убраны, а текст "
+#~ "отформатирован надлежащим образом."
+
+#~ msgid ""
+#~ "Automatically do &bold, strikeout and underline formatting (HTML mode)"
+#~ msgstr ""
+#~ "Форматировать полу&жирным и подчёркиванием (для писем с форматированием "
+#~ "HTML)"
+
+# (BUGME: please add to ctxt) Works only for English language, see AutoCorrection::superscriptAppendix() in kdepim/pimcommon/autocorrection/autocorrection.cpp . --aspotashev
+#~ msgid "Replace 1st... with 1^st... (HTML mode)"
+#~ msgstr "Заменять «1st» на «1^st» (для писем с форматированием HTML)"
+
+#~ msgid "Custom &Quotes"
+#~ msgstr "Ка&вычки"
+
+#~ msgid "Replace &single quotes with typographical quotes"
+#~ msgstr "Заменять &одинарные кавычки на типографские"
+
+#~ msgid "Replace &double quotes with typographical quotes"
+#~ msgstr "Заменять &двойные кавычки на типографские"
+
+#~ msgid "Default"
+#~ msgstr "По умолчанию"
+
+#~ msgid ""
+#~ "Add non breaking space before specific punctuation marks in French text"
+#~ msgstr ""
+#~ "Вставлять неразрывный пробел перед некоторыми знаками пунктуации по "
+#~ "французском языке"
+
+#~ msgid "Ad&vanced Autocorrection"
+#~ msgstr "До&полнительно"
+
+#~ msgid "&Enable word replacement"
+#~ msgstr "&Включить замену слов"
+
+#~ msgid "&Find"
+#~ msgstr "&Искать:"
+
+#~ msgid "Re&place"
+#~ msgstr "За&менять на:"
+
+#~ msgid "Find"
+#~ msgstr "Исходный текст"
+
+#~ msgid "Replace"
+#~ msgstr "Заменяющий текст"
+
+#~ msgid "E&xceptions"
+#~ msgstr "Ис&ключения"
+
+#~ msgid "Do not treat as the end of a sentence:"
+#~ msgstr "Не принимать за конец предложения:"
+
+#~ msgid "R&emove"
+#~ msgstr "&Удалить"
+
+#~ msgid "Accept two uppercase letters in:"
+#~ msgstr "Позволять написание двух заглавных букв в начале слов:"
+
+# BUGME: please add accelerator so that it's fixed on some letter. --aspotashev
+#~ msgid "Add"
+#~ msgstr "Доб&авить"
+
+#~ msgid "Export..."
+#~ msgstr "Экспорт..."
+
+#~ msgid "Import..."
+#~ msgstr "Импорт..."
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "Создаётся короткая ссылка..."
+
+#~ msgid "Short url:"
+#~ msgstr "Короткая ссылка:"
+
+# BUGME: ctxt: placeholder for search box --aspotashev
+#~ msgid "Search..."
+#~ msgstr "Поиск..."
+
+# BUGME: are you sure you are talking about "folders" (like mail folders in KMail) or this should be called "collections" (any Akonadi collection: mail folder, birthdays, Korganizer events + todos + etc, other stuff)? --aspotashev
+#~ msgid "Select Multiple Folders"
+#~ msgstr "Выбор нескольких папок"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "Подключение к серверу IMAP не настроено. Установите параметры сервера в "
+#~ "свойствах учётной записи IMAP прежде чем настраивать подписку на стороне "
+#~ "сервера."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Не удалось выполнить аутентификацию. Настройте учётную запись IMAP прежде "
+#~ "чем настраивать подписку на стороне сервера."
+
+#~ msgid "Share On..."
+#~ msgstr "Поделиться в..."
+
+#~ msgctxt "@action:inmenu Share On..."
+#~ msgid "%1"
+#~ msgstr "%1"
+
+# Продолжение "Поделиться в..." --aspotashev
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+# Продолжение "Поделиться в..." --aspotashev
+#~ msgid "Twitter"
+#~ msgstr "Твиттере"
+
+# Продолжение "Поделиться в..." --aspotashev
+#~ msgid "Google Plus"
+#~ msgstr "Google+"
+
+# Продолжение "Поделиться в..." --aspotashev
+#~ msgid "Mail"
+#~ msgstr "Электронном письме"
+
+# Продолжение "Поделиться в..." --aspotashev
+#~ msgid "LinkedIn"
+#~ msgstr "LinkedIn"
+
+# Продолжение "Поделиться в..." --aspotashev
+#~ msgid "Evernote"
+#~ msgstr "Evernote"
+
+# Продолжение "Поделиться в..." --aspotashev
+#~ msgid "Pocket"
+#~ msgstr "Pocket"
+
+# Продолжение "Поделиться в..." --aspotashev
+#~ msgid "LiveJournal"
+#~ msgstr "Живом Журнале"
+
+#~ msgid "Authorize"
+#~ msgstr "Вход"
+
+#~ msgid "Username:"
+#~ msgstr "Имя пользователя:"
+
+#~ msgid "Password:"
+#~ msgstr "Пароль:"
+
+#~ msgid "Authorization canceled."
+#~ msgstr "Аутентификация отменена."
+
+#~ msgid "Unknown Error \"%1\""
+#~ msgstr "Неизвестная ошибка «%1»"
+
+#~ msgid "Box"
+#~ msgstr "Box"
+
+#~ msgid ""
+#~ "Box.com is a file hosting that offers cloud storage, file "
+#~ "synchronization, and client software."
+#~ msgstr ""
+#~ "Box.com — интернет-служба хранения файлов, позволяющая синхронизировать "
+#~ "их содержимое с файлами на компьютере."
+
+#~ msgid "Folder"
+#~ msgstr "Папка"
+
+#~ msgid "File"
+#~ msgstr "Файл"
+
+#~ msgid "New name"
+#~ msgstr "Выбор другого имени"
+
+#~ msgid "Some characters are not allowed."
+#~ msgstr "Использование некоторых символов запрещено."
+
+#~ msgid "New name:"
+#~ msgstr "Новое имя:"
+
+#~ msgid "Some characters (%1) are not allowed."
+#~ msgstr "Использование некоторых символов (%1) запрещено."
+
+#~ msgid "Configure"
+#~ msgstr "Настройка"
+
+# BUGME: storageservice/dialog/storageservicedeletedialog.cpp:82 needs @title:window --aspotashev
+#~ msgid "Delete"
+#~ msgstr "Удалить"
+
+#~ msgid "Delete File"
+#~ msgstr "Удалить файл"
+
+#~ msgid "Delete Folder"
+#~ msgstr "Удалить папку"
+
+#~ msgid "Delete Files"
+#~ msgstr "Удаление файлов"
+
+#~ msgid "Delete Folders"
+#~ msgstr "Удаление папок"
+
+#~ msgid "Select file/folder to delete:"
+#~ msgstr "Выберите файл или папку для удаления:"
+
+# BUGME: storageservice/dialog/storageservicedownloaddialog.cpp:67 needs @title:window --aspotashev
+#~ msgid "Download File"
+#~ msgstr "Загрузить файл"
+
+#~ msgid "Download"
+#~ msgstr "Загрузить"
+
+#~ msgid "Select file to download:"
+#~ msgstr "Выберите файл для загрузки:"
+
+#~ msgid ""
+#~ "A download is still in progress. Do you want to cancel it and close "
+#~ "dialog?"
+#~ msgstr ""
+#~ "Загрузка из хранилища до сих пор продолжается. Отменить её и закрыть "
+#~ "диалоговое окно?"
+
+#~ msgid "Download in progress"
+#~ msgstr "Выполняется загрузка"
+
+#~ msgid "File was correctly downloaded."
+#~ msgstr "Файл успешно загружен из хранилища."
+
+#~ msgctxt "@title:window"
+#~ msgid "Download file"
+#~ msgstr "Загрузка файла"
+
+#~ msgid "Error during download file."
+#~ msgstr "Не удалось загрузить файл."
+
+#~ msgid "Filename already exists. Do you want to overwrite it?"
+#~ msgstr ""
+#~ "Файл с таким именем уже существует.\n"
+#~ "Заменить его?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Overwrite file"
+#~ msgstr "Замена существующего файла"
+
+#~ msgctxt "@title:window"
+#~ msgid "Properties"
+#~ msgstr "Свойства"
+
+#~ msgid "Dropbox access is not authorized. Error message: %1"
+#~ msgstr "Не удалось получить доступ к Dropbox. Сообщение об ошибке: %1"
+
+#~ msgid "Dropbox"
+#~ msgstr "Dropbox"
+
+#~ msgid ""
+#~ "Dropbox is a file hosting service operated by Dropbox, Inc. that offers "
+#~ "cloud storage, file synchronization, and client software."
+#~ msgstr ""
+#~ "Dropbox — интернет-служба хранения файлов от одноимённой компании, "
+#~ "позволяющая синхронизировать их содержимое с файлами на компьютере."
+
+# BUGME: is this a local folder? --aspotashev
+#~ msgid "Storage path:"
+#~ msgstr "Синхронизируемая папка:"
+
+#~ msgid "GoogleDrive"
+#~ msgstr "Google Диск"
+
+#~ msgid ""
+#~ "Googledrive is a file hosting that offers cloud storage, file "
+#~ "synchronization, and client software."
+#~ msgstr ""
+#~ "Google Диск — интернет-служба хранения файлов от компании Google, "
+#~ "позволяющая синхронизировать их содержимое с файлами на компьютере."
+
+#~ msgid "Hubic"
+#~ msgstr "hubiC"
+
+#~ msgid ""
+#~ "Hubic is a file hosting service operated by Ovh, Inc. that offers cloud "
+#~ "storage, file synchronization, and client software."
+#~ msgstr ""
+#~ "hubiC — интернет-служба хранения файлов от компании OVH, позволяющая "
+#~ "синхронизировать их содержимое с файлами на компьютере."
+
+#~ msgid "Request Token returns an error: %1"
+#~ msgstr "При попытке получения ключа запроса произошла ошибка: %1"
+
+#~ msgid "Access Token returns an error: %1"
+#~ msgstr "При попытке получения ключа доступа произошла ошибка: %1"
+
+#~ msgid "Upload File returns an error: %1"
+#~ msgstr "При загрузке файла в хранилище произошла ошибка: %1"
+
+#~ msgid "Create Folder returns an error: %1"
+#~ msgstr "При создании папки произошла ошибка: %1"
+
+#~ msgid "Get account info returns an error: %1"
+#~ msgstr "При получении сведений об учётной записи произошла ошибка: %1"
+
+#~ msgid "List folder returns an error: %1"
+#~ msgstr "При попытке получения содержимого папки произошла ошибка: %1"
+
+#~ msgid "Share Link returns an error: %1"
+#~ msgstr ""
+#~ "При попытке получения ссылки для доступа к файлу или папке произошла "
+#~ "ошибка: %1"
+
+#~ msgid "Create Service Folder returns an error: %1"
+#~ msgstr "При попытке создания папки в сетевом хранилище произошла ошибка: %1"
+
+#~ msgid "Download file returns an error: %1"
+#~ msgstr "При получении файла из хранилища произошла ошибка: %1"
+
+#~ msgid "Delete File returns an error: %1"
+#~ msgstr "При удалении файла из хранилища произошла ошибка: %1"
+
+#~ msgid "Delete Folder returns an error: %1"
+#~ msgstr "При удалении папки из хранилища произошла ошибка: %1"
+
+#~ msgid "Rename Folder returns an error: %1"
+#~ msgstr "При переименовании папки произошла ошибка: %1"
+
+#~ msgid "Rename File returns an error: %1"
+#~ msgstr "При переименовании файла произошла ошибка: %1"
+
+#~ msgid "Move File returns an error: %1"
+#~ msgstr "При перемещении файла произошла ошибка: %1"
+
+#~ msgid "Move Folder returns an error: %1"
+#~ msgstr "При перемещении папки произошла ошибка: %1"
+
+#~ msgid "Copy File returns an error: %1"
+#~ msgstr "При копировании файла произошла ошибка: %1"
+
+#~ msgid "Copy Folder returns an error: %1"
+#~ msgstr "При копировании папки произошла ошибка: %1"
+
+#~ msgid "Add Service"
+#~ msgstr "Добавление хранилища"
+
+#~ msgid "All services were added."
+#~ msgstr "Сетевые хранилища всех доступных типов уже были добавлены."
+
+#~ msgid "Add..."
+#~ msgstr "Добавить..."
+
+#~ msgid "Modify..."
+#~ msgstr "Изменить..."
+
+#~ msgid "Authenticate"
+#~ msgstr "Выполнить вход"
+
+#~ msgid "Unable to get account information."
+#~ msgstr "Не удалось получить информацию об учётной записи."
+
+# Объём дискового пространства на сервере, выделенного под учётную запись. --aspotashev
+#~ msgid "Account size:"
+#~ msgstr "Размер учётной записи:"
+
+# BUGME: please add to Russian glossary --aspotashev
+#~ msgid "Quota:"
+#~ msgstr "Ограничение:"
+
+# BUGME: please check meaning of this and add to glossary --aspotashev
+#~ msgid "Shared:"
+#~ msgstr "Занято:"
+
+#~| msgid "Do you want to delete selected template?"
+#~ msgid "Do you want to delete this service '%1'?"
+#~ msgstr "Удалить хранилище «%1»?"
+
+#~| msgid "Delete template"
+#~ msgid "Delete Service"
+#~ msgstr "Удаление хранилища"
+
+#~ msgid "Authentication Failed"
+#~ msgstr "Ошибка аутентификации"
+
+#~ msgid "Name: %1"
+#~ msgstr "Название: %1"
+
+#~ msgid "Account size: %1"
+#~ msgstr "Размер учётной записи: %1"
+
+#~ msgid "Quota: %1"
+#~ msgstr "Ограничение: %1"
+
+# BUGME: please check meaning of this and add to glossary --aspotashev
+#~ msgid "Shared: %1"
+#~ msgstr "Занято: %1"
+
+#~ msgid "Storage service"
+#~ msgstr "Сетевые хранилища файлов"
+
+#~ msgid "No Storage service configured"
+#~ msgstr "Не настроено ни одного сетевого хранилища файлов"
+
+#~ msgid "Delete Folder..."
+#~ msgstr "Удалить папку..."
+
+#~ msgid "Download File..."
+#~ msgstr "Получить файл..."
+
+#~ msgid "Upload File..."
+#~ msgstr "Добавить файл в хранилище..."
+
+#~ msgid "Share File..."
+#~ msgstr "Поделиться файлом..."
+
+#~ msgid "Delete File..."
+#~ msgstr "Удалить файл..."
+
+#~ msgid "Account Info..."
+#~ msgstr "Сведения об учётной записи..."
+
+#~ msgid "There is still an upload in progress."
+#~ msgstr "Загрузка в хранилище до сих пор продолжается."
+
+#~ msgid "File to upload"
+#~ msgstr "Выбор файла для загрузки в хранилище"
+
+#~ msgid "Type:"
+#~ msgstr "Тип:"
+
+#~ msgctxt "Name of file or folder"
+#~ msgid "Name:"
+#~ msgstr "Имя:"
+
+#~ msgid "Last Modified:"
+#~ msgstr "Дата изменения:"
+
+#~ msgid "Created:"
+#~ msgstr "Дата создания:"
+
+#~ msgid "Size:"
+#~ msgstr "Размер:"
+
+#~ msgid "WebDav"
+#~ msgstr "WebDAV"
+
+#~ msgid "WebDav Settings"
+#~ msgstr "Настройка WebDAV"
+
+#~ msgid "Service Location (e.g. https://dav.example.com/)"
+#~ msgstr "Адрес службы (например https://dav.example.com/)"
+
+#~ msgid "Public location (Optional)"
+#~ msgstr "Адрес для публичного доступа (необязательно)"
+
+# BUGME: please change to "folder" --aspotashev
+#~ msgid "Directory"
+#~ msgstr "Папка"
+
+#~ msgid "Webdav"
+#~ msgstr "WebDAV"
+
+#~ msgid ""
+#~ "The WebDAV service allows access to any Web application that uses the "
+#~ "WebDAV protocol, such as ownCloud, Kolab, and others."
+#~ msgstr ""
+#~ "Служба WebDAV обеспечивает доступ к любому веб-приложению, использующему "
+#~ "протокол WebDAV, например к Яндекс.Диску, ownCloud, Kolab и другим."
+
+#~ msgid "Default Download Folder:"
+#~ msgstr "Папка для загружаемых файлов по умолчанию:"
+
+# BUGME: please change to "%1 of %2" --aspotashev
+#~ msgid "%1 on %2"
+#~ msgstr "%1 из %2"
+
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "Size"
+#~ msgstr "Размер"
+
+#~ msgid "Created"
+#~ msgstr "Дата создания"
+
+#~ msgid "Last Modified"
+#~ msgstr "Дата изменения"
+
+#~ msgid "Up"
+#~ msgstr "Перейти в родительскую папку"
+
+#~ msgid "Properties"
+#~ msgstr "Свойства"
+
+#~ msgid "YouSendIt"
+#~ msgstr "YouSendIt"
+
+#~ msgid "Email:"
+#~ msgstr "Адрес эл. почты:"
+
+#~ msgid ""
+#~ "Authentication failed. Server returns this error:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Не удалось получить доступ к YouSendIt. Сообщение об ошибке:\n"
+#~ "%1"
+
+#~ msgid ""
+#~ "YouSendIt is a file hosting that offers cloud storage, file "
+#~ "synchronization, and client software."
+#~ msgstr ""
+#~ "YouSendIt — интернет-служба хранения файлов, позволяющая синхронизировать "
+#~ "их содержимое с файлами на компьютере."
+
+#~ msgid "writable:"
+#~ msgstr "Разрешена запись:"
+
+#~ msgid "Yes"
+#~ msgstr "да"
+
+#~ msgid "No"
+#~ msgstr "нет"
+
+#~ msgid "Default template"
+#~ msgstr "Шаблон по умолчанию"
+
+#~ msgid "Template"
+#~ msgstr "Шаблон"
+
+#~ msgid "Name:"
+#~ msgstr "Название:"
+
+#~ msgid "Do you want to delete selected template?"
+#~ msgstr "Вы хотите удалить выбранный шаблон?"
+
+#~ msgid "Delete template"
+#~ msgstr "Удаление шаблона"
+
+#~ msgid "Insert template"
+#~ msgstr "Вставить шаблон"
+
+#~ msgid "Show..."
+#~ msgstr "Показать..."
+
+#~ msgid "Duplicate"
+#~ msgstr "Создать копию"
+
+#~ msgid "Download new Templates..."
+#~ msgstr "Получить новые шаблоны..."
+
+#~ msgid "'%1' is not a template file"
+#~ msgstr "«%1» не является файлом шаблона."
+
+#~ msgid "Load Template"
+#~ msgstr "Загрузка шаблона"
+
+#~ msgid "You used same language for from and to language."
+#~ msgstr "Вы выбрали в качестве исходного и целевого языка один язык."
+
+# BUGME: needs @title:window --aspotashev
+#~| msgid "Translate"
+#~ msgid "Translator Debug"
+#~ msgstr "Отладка системы машинного перевода"
+
+#~ msgid "Save As..."
+#~ msgstr "Сохранить как..."
+
+#~ msgid "All Files (*)"
+#~ msgstr "Все файлы (*)"
+
+#~ msgid "Detect language"
+#~ msgstr "Определить язык"
+
+#~ msgid "English"
+#~ msgstr "Английский"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "Китайский (упрощённое письмо)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "Китайский (традиционное письмо)"
+
+#~ msgid "Dutch"
+#~ msgstr "Голландский"
+
+#~ msgid "French"
+#~ msgstr "Французский"
+
+#~ msgid "German"
+#~ msgstr "Немецкий"
+
+#~ msgid "Greek"
+#~ msgstr "Греческий"
+
+#~ msgid "Italian"
+#~ msgstr "Итальянский"
+
+#~ msgid "Japanese"
+#~ msgstr "Японский"
+
+#~ msgid "Korean"
+#~ msgstr "Корейский"
+
+#~ msgid "Portuguese"
+#~ msgstr "Португальский"
+
+#~ msgid "Russian"
+#~ msgstr "Русский"
+
+#~ msgid "Spanish"
+#~ msgstr "Испанский"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Африканский"
+
+#~ msgid "Albanian"
+#~ msgstr "Албанский"
+
+#~ msgid "Arabic"
+#~ msgstr "Арабский"
+
+#~ msgid "Armenian"
+#~ msgstr "Армянский"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Азербайджанский"
+
+#~ msgid "Basque"
+#~ msgstr "Баскский"
+
+#~ msgid "Belarusian"
+#~ msgstr "Белорусский"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Болгарский"
+
+#~ msgid "Catalan"
+#~ msgstr "Каталонский"
+
+#~ msgid "Croatian"
+#~ msgstr "Хорватский"
+
+#~ msgid "Czech"
+#~ msgstr "Чешский"
+
+#~ msgid "Danish"
+#~ msgstr "Датский"
+
+#~ msgid "Estonian"
+#~ msgstr "Эстонский"
+
+#~ msgid "Filipino"
+#~ msgstr "Филиппинский"
+
+#~ msgid "Finnish"
+#~ msgstr "Финский"
+
+#~ msgid "Galician"
+#~ msgstr "Галисийский"
+
+#~ msgid "Georgian"
+#~ msgstr "Грузинский"
+
+#~ msgid "Haitian Creole"
+#~ msgstr "Гаитянский креольский"
+
+#~ msgid "Hebrew"
+#~ msgstr "Иврит"
+
+#~ msgid "Hindi"
+#~ msgstr "Хинди"
+
+#~ msgid "Hungarian"
+#~ msgstr "Венгерский"
+
+#~ msgid "Icelandic"
+#~ msgstr "Исландский"
+
+#~ msgid "Indonesian"
+#~ msgstr "Индонезийский"
+
+#~ msgid "Irish"
+#~ msgstr "Ирландский"
+
+#~ msgid "Latvian"
+#~ msgstr "Латышский"
+
+#~ msgid "Lithuanian"
+#~ msgstr "Литовский"
+
+#~ msgid "Macedonian"
+#~ msgstr "Македонский"
+
+#~ msgid "Malay"
+#~ msgstr "Малайский"
+
+#~ msgid "Maltese"
+#~ msgstr "Мальтийский"
+
+#~ msgid "Norwegian"
+#~ msgstr "Норвежский"
+
+#~ msgid "Persian"
+#~ msgstr "Фарси"
+
+#~ msgid "Polish"
+#~ msgstr "Польский"
+
+#~ msgid "Romanian"
+#~ msgstr "Румынский"
+
+#~ msgid "Serbian"
+#~ msgstr "Сербский"
+
+#~ msgid "Slovak"
+#~ msgstr "Словацкий"
+
+#~ msgid "Slovenian"
+#~ msgstr "Словенский"
+
+#~ msgid "Swahili"
+#~ msgstr "Суахили"
+
+#~ msgid "Swedish"
+#~ msgstr "Шведский"
+
+#~ msgid "Thai"
+#~ msgstr "Таи"
+
+#~ msgid "Turkish"
+#~ msgstr "Турецкий"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Украинский"
+
+#~ msgid "Urdu"
+#~ msgstr "Урду"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Вьетнамский"
+
+#~ msgid "Welsh"
+#~ msgstr "Валлийский"
+
+#~ msgid "Yiddish"
+#~ msgstr "Идиш"
+
+#~ msgid "Problem when connecting to the translator web site."
+#~ msgstr "Ошибка подключения к сайту перевода."
+
+#~ msgctxt "Translate from language"
+#~ msgid "From:"
+#~ msgstr "С языка:"
+
+#~ msgctxt "Translate to language"
+#~ msgid "To:"
+#~ msgstr "На язык:"
+
+#~ msgctxt ""
+#~ "Invert language choices so that from becomes to and to becomes from"
+#~ msgid "Invert"
+#~ msgstr "Наоборот"
+
+#~ msgid "Clear"
+#~ msgstr "Очистить"
+
+#~ msgid "Translate"
+#~ msgstr "Перевести"
+
+#~ msgid "Debug"
+#~ msgstr "Отладка"
+
+#~ msgid "Drag text that you want to translate."
+#~ msgstr "Перетащите сюда текст, который нужно перевести."
+
+#~ msgid "No network connection detected, we cannot translate text."
+#~ msgstr "Не удалось перевести текст из-за отсутствия подключения к сети."
+
+#~ msgid "Translate error"
+#~ msgstr "Ошибка перевода"
+
+#~ msgid "Resource type '%1' is not available."
+#~ msgstr "Тип источника данных «%1» недоступен."
+
+#~ msgid "Resource '%1' is already set up."
+#~ msgstr "Источник данных «%1» уже создан."
+
+#~ msgid "Creating resource instance for '%1'..."
+#~ msgstr "Создание экземпляра источника данных для «%1»..."
+
+#~ msgid "Configuring resource instance..."
+#~ msgstr "Настройка экземпляра источника данных..."
+
+#~ msgid "Unable to configure resource instance."
+#~ msgstr "Не удалось создать экземпляр источника данных."
+
+#~ msgid "Could not convert value of setting '%1' to required type %2."
+#~ msgstr ""
+#~ "Не удалось преобразовать значение параметра «%1» в необходимый тип %2."
+
+#~ msgid "Could not set setting '%1': %2"
+#~ msgstr "Не удалось установить параметр «%1»: %2"
+
+#~ msgid "Resource setup completed."
+#~ msgstr "Создание источника данных завершено."
+
+#~ msgid "Failed to create resource instance: %1"
+#~ msgstr "Не удалось создать экземпляр источника данных: %1"
+
+#~ msgid ""
+#~ "Could not write the file %1:\n"
+#~ "\"%2\" is the detailed error description."
+#~ msgstr ""
+#~ "Не удалось записать файл %1:\n"
+#~ "Подробное описание ошибки: «%2»."
+
+#~ msgid "Save File Error"
+#~ msgstr "Ошибка записи в файл"
+
+#~ msgid ""
+#~ "Could not read the file %1:\n"
+#~ "\"%2\" is the detailed error description."
+#~ msgstr ""
+#~ "Не удалось прочитать файл %1:\n"
+#~ "Подробное описание ошибки: «%2»."
+
+#~ msgid "Load File Error"
+#~ msgstr "Ошибка чтения из файла"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Note"
+#~ msgstr "Редактирование примечания"
+
+#~ msgctxt "@action:button"
+#~ msgid "Delete Note"
+#~ msgstr "Удалить примечание"
+
+#~ msgctxt "@title:window"
+#~ msgid "Add Note"
+#~ msgstr "Добавление примечания"
+
+#~ msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgstr "Введите текст, который будет храниться как примечание к письму:"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Note type:"
+#~ msgstr "Тип примечания:"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Private note"
+#~ msgstr "Конфиденциальное"
+
+# BUGME: please check meaning of this and add to glossary --aspotashev
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Shared note"
+#~ msgstr "Общее"
+
+#~ msgid "Do you really want to delete this note?"
+#~ msgstr "Удалить это примечание?"
+
+# BUGME: please remove question mark --aspotashev
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note?"
+#~ msgstr "Удаление примечания"
+
+#~ msgctxt "@action:button"
+#~ msgid "Delete"
+#~ msgstr "Удалить"
+
+#~ msgid ""
+#~ "<qt><p>This setting has been fixed by your administrator.</p><p>If you "
+#~ "think this is an error, please contact him.</p></qt>"
+#~ msgstr ""
+#~ "<qt><p>Этот параметр зафиксирован вашим системным администратором.</"
+#~ "p><p>Обратитесь к нему, если считаете что это ошибка.</p></qt>"
+
+#~ msgid "Change Case"
+#~ msgstr "Сменить регистр текста"
+
+#~ msgid "Uppercase"
+#~ msgstr "Все прописные"
+
+#~ msgid "Sentence case"
+#~ msgstr "Как в обычном тексте"
+
+#~ msgid "Lowercase"
+#~ msgstr "Все строчные"
+
+#~ msgid "Reverse Case"
+#~ msgstr "Инвертировать регистр побуквенно"
+
+#~ msgid "Clear History"
+#~ msgstr "Очистить историю"
+
+#~ msgid "File Already Exists"
+#~ msgstr "Файл уже существует"
+
+#~ msgid ""
+#~ "A file named <filename>%1</filename> already exists. Do you want to "
+#~ "overwrite it?"
+#~ msgstr "Файл с именем <filename>%1</filename> уже существует. Заменить его?"
+
+#~ msgid "Suggest New &Name"
+#~ msgstr "Дать другое &имя"
+
+#~ msgid "&Overwrite"
+#~ msgstr "&Заменить"
+
+#~ msgid "&Ignore"
+#~ msgstr "&Игнорировать"
+
+#~ msgid "&Rename"
+#~ msgstr "&Переименовать"
+
+#~ msgid "Appl&y to All"
+#~ msgstr "Применить ко &всем"
+
+#~ msgid "This filename \"%1\" already exists."
+#~ msgstr "Файл с именем «%1» уже существует."
+
+#~ msgid "File already exists"
+#~ msgstr "Файл уже существует"
+
+#~ msgid "New entry:"
+#~ msgstr "Новая запись:"
+
+#~ msgid "&Add..."
+#~ msgstr "&Добавить..."
+
+#~ msgid "&Modify..."
+#~ msgstr "&Изменить..."
+
+#~ msgid "&Remove"
+#~ msgstr "&Удалить"
+
+#~ msgid "New Value"
+#~ msgstr "Новое значение"
+
+#~ msgid "Change Value"
+#~ msgstr "Изменить значение"
+
+#~ msgid "Authentication Canceled."
+#~ msgstr "Аутентификация отменена."
+
+#~ msgid ""
+#~ "End of message reached.\n"
+#~ "Phrase '%1' could not be found."
+#~ msgstr ""
+#~ "Достигнут конец письма.\n"
+#~ "Фраза «%1» не найдена."
+
+#~ msgid "Replace All"
+#~ msgstr "Заменить все"
+
+#~ msgctxt "Find text"
+#~ msgid "F&ind:"
+#~ msgstr "&Искать:"
+
+#~ msgid "Text to search for"
+#~ msgstr "Текст для поиска"
+
+#~ msgctxt "Find and go to the next search match"
+#~ msgid "Next"
+#~ msgstr "Следующее"
+
+#~ msgid "Jump to next match"
+#~ msgstr "Перейти к следующему вхождению"
+
+#~ msgctxt "Find and go to the previous search match"
+#~ msgid "Previous"
+#~ msgstr "Предыдущее"
+
+#~ msgid "Jump to previous match"
+#~ msgstr "Перейти к предыдущему вхождению"
+
+#~ msgid "Options"
+#~ msgstr "Параметры"
+
+#~ msgid "Modify search behavior"
+#~ msgstr "Изменить параметры поиска"
+
+#~ msgid "Case sensitive"
+#~ msgstr "С учётом регистра"
+
+#~ msgid "Whole word"
+#~ msgstr "Только полные слова"
+
+#~ msgid "Go to Line:"
+#~ msgstr "Перейти на строку:"
+
+#~ msgid "Go"
+#~ msgstr "Перейти"
+
+#~ msgid "Replace..."
+#~ msgstr "Заменить..."
+
+#~ msgid "Speak Text"
+#~ msgstr "Зачитать текст"
+
+#~ msgid "Nothing to spell check."
+#~ msgstr "Нет текста для проверки правописания."
+
+#, fuzzy
+#~| msgid "Configure engine"
+#~ msgid "Configure Text-To-Speech"
+#~ msgstr "Настройка службы сокращения ссылок"
+
+#~ msgid "Volume:"
+#~ msgstr "Громкость:"
+
+#~ msgid "Language:"
+#~ msgstr "Язык:"
+
+#~ msgid "Text Files (*.txt);;All Files (*)"
+#~ msgstr "Текстовые файлы (*.txt);;Все файлы (*)"
+
+#, fuzzy
+#~| msgid "Configure..."
+#~ msgid "Configure Web Shortcuts..."
+#~ msgstr "Настроить..."
+
+#, fuzzy
+#~| msgid "Search..."
+#~ msgid "&Search"
+#~ msgstr "Search..."
+
+#~ msgid "Google"
+#~ msgstr "Google"
+
+#~ msgid "Tinyurl"
+#~ msgstr "Tinyurl"
+
+#~ msgid "Migre.Me"
+#~ msgstr "Migre.Me"
+
+#~ msgid "TriopAB"
+#~ msgstr "TriopAB"
+
+#~ msgid "Ur1Ca"
+#~ msgstr "Ur1Ca"
+
+#~ msgid "IsGd"
+#~ msgstr "IsGd"
+
+#~ msgid "Do you want to remove account '%1'?"
+#~ msgstr "Удалить учётную запись «%1»?"
+
+#~ msgid "Remove account?"
+#~ msgstr "Удаление учётной записи"
+
+#~ msgid "Incoming accounts (add at least one):"
+#~ msgstr "Входящие (добавьте по крайней мере одну запись):"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Добавить..."
+
+#~ msgid "Restart"
+#~ msgstr "Перезапустить"
+
+#~ msgid "Open Address Book"
+#~ msgstr "Открыть адресную книгу"
+
+#~ msgid ""
+#~ "Beginning of message reached.\n"
+#~ "Phrase '%1' could not be found."
+#~ msgstr ""
+#~ "Достигнуто начало письма.\n"
+#~ "Фраза «%1» не найдена."
+
+#~ msgid "Starting Jovie Text-to-Speech Service Failed"
+#~ msgstr "Не удалось запустить службу синтеза речи Jovie"
+
+#~ msgid "No suggestions for %1"
+#~ msgstr "Нет вариантов для %1"
+
+#, fuzzy
+#~| msgid "&Ignore"
+#~ msgid "Ignore"
+#~ msgstr "&Игнорировать"
+
+#~ msgid "Add to Dictionary"
+#~ msgstr "Добавить в словарь"
+
+#, fuzzy
+#~| msgid "&Modify..."
+#~ msgid "Modify"
+#~ msgstr "&Изменить..."
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgid "name:"
+#~ msgstr "Название:"
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgid "name: %1"
+#~ msgstr "Название:"

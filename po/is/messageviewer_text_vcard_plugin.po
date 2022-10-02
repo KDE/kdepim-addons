@@ -1,0 +1,120 @@
+# translation of kmail_text_vcard_plugin.po to icelandic
+# Íslensk þýðing kmail_text_vcard_plugin
+# Copyright (C) 2004, 2005, 2009 Free Software Foundation, Inc.
+#
+# Richard Allen <ra@ra.is>, 2004.
+# Þröstur Svanbergsson <throstur@bylur.net>, 2004.
+# Arnar Leosson <leosson@frisurf.no>, 2005.
+# Sveinn í Felli <sveinki@nett.is>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail_text_vcard_plugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"PO-Revision-Date: 2009-06-13 16:19+0000\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"Language-Team: icelandic <kde-isl@molar.is>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#: text_vcard.cpp:87
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "Attached business card"
+msgid_plural "Attached business cards"
+msgstr[0] "Viðhengd nafnspjöld"
+msgstr[1] "Viðhengd nafnspjöld"
+
+#: text_vcard.cpp:129
+#, kde-format
+msgid "[Add this contact to the address book]"
+msgstr "[Bæta þessum aðila við vistfangaskrána]"
+
+#: text_vcard.cpp:135
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "[Update this contact in the address book]"
+msgstr "[Bæta þessum aðila við vistfangaskrána]"
+
+#: text_vcard.cpp:140
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "[This contact is already in addressbook]"
+msgstr "[Bæta þessum aðila við vistfangaskrána]"
+
+#: text_vcard.cpp:222
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "View Business Card"
+msgstr "Viðhengd nafnspjöld"
+
+#: text_vcard.cpp:223
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "Save Business Card As..."
+msgstr "Viðhengd nafnspjöld"
+
+#: text_vcard.cpp:240
+#, kde-format
+msgid "Add this contact to the address book."
+msgstr "Bæta þessum aðila við vistfangaskrána."
+
+#: text_vcard.cpp:240
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "Update this contact to the address book."
+msgstr "[Bæta þessum aðila við vistfangaskrána]"
+
+#: text_vcard.cpp:242
+#, fuzzy, kde-format
+#| msgid "Add this contact to the address book."
+msgid "Add \"%1\" to the address book."
+msgstr "Bæta þessum aðila við vistfangaskrána."
+
+#: text_vcard.cpp:242
+#, fuzzy, kde-format
+#| msgid "Add this contact to the address book."
+msgid "Update \"%1\" to the address book."
+msgstr "Bæta þessum aðila við vistfangaskrána."
+
+#: text_vcard.cpp:266
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "Save Business Card"
+msgstr "Viðhengd nafnspjöld"
+
+#: updatecontactjob.cpp:37
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "The vCard's primary email address is not in addressbook."
+msgstr "[Bæta þessum aðila við vistfangaskrána]"
+
+#: updatecontactjob.cpp:43
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "There are two or more contacts with same email stored in addressbook."
+msgstr "[Bæta þessum aðila við vistfangaskrána]"
+
+#: updatecontactjob.cpp:65
+#, kde-format
+msgid ""
+"The vCard was updated in your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+
+#: updatecontactjob.cpp:76
+#, kde-format
+msgid "Email not specified"
+msgstr ""
+
+#~ msgid "Add"
+#~ msgstr "Bæta við"
+
+#~ msgid "Remove"
+#~ msgstr "Fjarlægja"

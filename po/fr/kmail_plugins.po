@@ -1,0 +1,457 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Vincent Pinon <vpinon@kde.org>, 2016, 2017.
+# Simon Depiets <sdepiets@gmail.com>, 2019.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:46+0000\n"
+"PO-Revision-Date: 2022-08-11 21:15+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Akonadi Database Tool"
+msgstr "Outil pour base de données Akonadi"
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
+#, kde-format
+msgid "&Akonadi Vacuum..."
+msgstr "Vidage de &Akonadi..."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:29
+#, kde-format
+msgid "Do you want to vacuum akonadi database?"
+msgstr "Voulez-vous effectuer un vidage de la base de données Akonadi ?"
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:29
+#, kde-format
+msgid "Akonadi Vacuum"
+msgstr "Vidage de Akonadi"
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:39
+#, kde-format
+msgid "&Akonadi Fsck..."
+msgstr "Vérification « fsck » d'&Akonadi..."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:42
+#, kde-format
+msgid "Do you want to fsck akonadi database?"
+msgstr ""
+"Voulez-vous lancer une vérification « fsck » pour la base de données "
+"Akonadi ?"
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:42
+#, kde-format
+msgid "Akonadi Fsck"
+msgstr "Vérification « fsck » d'Akonadi"
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:63
+#, kde-format
+msgctxt "@title:window"
+msgid "Akonadi Fsck"
+msgstr "Vérification « fsck » d'Akonadi"
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:66
+#, kde-format
+msgctxt "@title:window"
+msgid "Akonadi Vacuum"
+msgstr "Vidage de Akonadi"
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:80
+#, kde-format
+msgid "Finished."
+msgstr "Terminé."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:82
+#, kde-format
+msgid "Start..."
+msgstr "Démarrer..."
+
+#: antispamplugin/antispamplugininterface.cpp:22
+#, kde-format
+msgid "&Anti-Spam Wizard..."
+msgstr "&Assistant anti indésirables…"
+
+#: antivirusplugin/antivirusplugininterface.cpp:22
+#, kde-format
+msgid "&Anti-Virus Wizard..."
+msgstr "&Assistant anti virus…"
+
+#: common/antispamwizard.cpp:89
+#, kde-format
+msgid "Anti-Spam Wizard"
+msgstr "Assistant anti indésirables"
+
+#: common/antispamwizard.cpp:89
+#, kde-format
+msgid "Anti-Virus Wizard"
+msgstr "Assistant anti virus"
+
+#: common/antispamwizard.cpp:91
+#, kde-format
+msgid "Welcome to the KMail Anti-Spam Wizard"
+msgstr "Bienvenue dans l'assistant anti indésirables de KMail"
+
+#: common/antispamwizard.cpp:91
+#, kde-format
+msgid "Welcome to the KMail Anti-Virus Wizard"
+msgstr "Bienvenue dans l'assistant anti virus de KMail"
+
+#: common/antispamwizard.cpp:96
+#, kde-format
+msgid "Options to fine-tune the handling of spam messages"
+msgstr "Options pour ajuster précisément la gestion des messages indésirables"
+
+#: common/antispamwizard.cpp:100
+#, kde-format
+msgid "Summary of changes to be made by this wizard"
+msgstr "Résumé des changements qui seront faits par cet assistant"
+
+#: common/antispamwizard.cpp:103
+#, kde-format
+msgid "Options to fine-tune the handling of virus messages"
+msgstr ""
+"Options pour ajuster précisément la gestion des messages contenant des virus"
+
+#: common/antispamwizard.cpp:170
+#, kde-format
+msgid "Virus handling"
+msgstr "Gestion des virus"
+
+#: common/antispamwizard.cpp:249 common/antispamwizard.cpp:251
+#: common/antispamwizard.cpp:554
+#, kde-format
+msgid "Spam Handling"
+msgstr "Gestion des indésirables"
+
+#: common/antispamwizard.cpp:285 common/antispamwizard.cpp:287
+#: common/antispamwizard.cpp:569
+#, kde-format
+msgid "Semi spam (unsure) handling"
+msgstr "Gestion des semi-indésirables (incertain)"
+
+#: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
+#: common/antispamwizard.cpp:576
+#, kde-format
+msgid "Classify as Spam"
+msgstr "Classer comme indésirable"
+
+#: common/antispamwizard.cpp:352
+#, kde-format
+msgid "Spam"
+msgstr "Indésirable"
+
+#: common/antispamwizard.cpp:380 common/antispamwizard.cpp:382
+#: common/antispamwizard.cpp:577
+#, kde-format
+msgid "Classify as NOT Spam"
+msgstr "Classer comme NON indésirable"
+
+#: common/antispamwizard.cpp:391
+#, kde-format
+msgid "Ham"
+msgstr "Courriel normal"
+
+#: common/antispamwizard.cpp:457
+#, kde-format
+msgid "Scanning for %1..."
+msgstr "Analyse de %1…"
+
+#: common/antispamwizard.cpp:501
+#, kde-format
+msgid "Scanning for anti-spam tools finished."
+msgstr "Analyse des outils anti indésirables terminée."
+
+#: common/antispamwizard.cpp:501
+#, kde-format
+msgid "Scanning for anti-virus tools finished."
+msgstr "Analyse des outils anti virus terminée."
+
+#: common/antispamwizard.cpp:503
+#, kde-format
+msgid ""
+"<p>Sorry, no spam detection tools have been found. Install your spam "
+"detection software and re-run this wizard.</p>"
+msgstr ""
+"<p>Désolé, impossible de trouver un outil de détection des indésirables. "
+"Veuillez installer votre logiciel de détection des indésirables et relancer "
+"cet assistant.</p>"
+
+#: common/antispamwizard.cpp:506
+#, kde-format
+msgid "Scanning complete. No anti-virus tools found."
+msgstr "Analyse terminée, Impossible de trouver un outil anti virus."
+
+#: common/antispamwizard.cpp:528
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are marked as read.<br />Spam messages are "
+"moved into the folder named <i>%1</i>.</p>"
+msgstr ""
+"<p>Les messages classés comme indésirables sont marqués comme lus.<br />Les "
+"messages indésirables sont déplacés dans le dossier nommé <i>%1</i>.</p>"
+
+#: common/antispamwizard.cpp:533
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are marked as read.<br />Spam messages are "
+"not moved into a certain folder.</p>"
+msgstr ""
+"<p>Les messages classés comme indésirables sont marqués comme lus<br />Les "
+"messages indésirables ne sont pas déplacés dans un quelconque dossier.</p>"
+
+#: common/antispamwizard.cpp:539
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are not marked as read.<br />Spam messages "
+"are moved into the folder named <i>%1</i>.</p>"
+msgstr ""
+"<p>Les messages classés comme indésirables ne sont pas marqués comme lus."
+"<br />Les messages indésirables sont déplacés dans le dossier nommé <i>%1</"
+"i>.</p>"
+
+#: common/antispamwizard.cpp:544
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are not marked as read.<br />Spam messages "
+"are not moved into a certain folder.</p>"
+msgstr ""
+"<p>Les messages classés comme indésirables ne sont pas marqués comme lus<br /"
+">Les messages indésirables ne sont pas déplacés dans un quelconque dossier.</"
+"p>"
+
+#: common/antispamwizard.cpp:571
+#, kde-format
+msgid ""
+"<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
+"</p>"
+msgstr ""
+"<p>Le dossier pour les messages classés comme incertains (probablement "
+"indésirable) est <i>%1</i>.</p>"
+
+#: common/antispamwizard.cpp:581
+#, kde-format
+msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
+msgstr "<p>L'assistant va créer les filtres suivants :<ul>%1</ul></p>"
+
+#: common/antispamwizard.cpp:584
+#, kde-format
+msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
+msgstr "<p>L'assistant va remplacer les filtres suivants :<ul>%1</ul></p>"
+
+#: common/antispamwizard.cpp:981
+#, kde-format
+msgid ""
+"The wizard will search for any tools to do spam detection\n"
+"and setup KMail to work with them."
+msgstr ""
+"L'assistant va rechercher tous les outils de détection des indésirables\n"
+"et configurer KMail pour fonctionner avec ceux-ci."
+
+#: common/antispamwizard.cpp:983
+#, kde-format
+msgid ""
+"<p>Here you can get some assistance in setting up KMail's filter rules to "
+"use some commonly-known anti-virus tools.</p><p>The wizard can detect those "
+"tools on your computer as well as create filter rules to classify messages "
+"using these tools and to separate messages containing viruses. The wizard "
+"will not take any existing filter rules into consideration: it will always "
+"append the new rules.</p><p><b>Warning:</b> As KMail appears to be frozen "
+"during the scan of the messages for viruses, you may encounter problems with "
+"the responsiveness of KMail because anti-virus tool operations are usually "
+"time consuming; please consider deleting the filter rules created by the "
+"wizard to get back to the former behavior.</p>"
+msgstr ""
+"<p>Ici vous pouvez obtenir de l'aide pour configurer les règles de filtrage "
+"de KMail pour utiliser quelques outils anti virus courants.</"
+"p><p>L'assistant peut détecter ces outils sur votre ordinateur, et créer les "
+"règles de filtrage pour classer les messages en utilisant ces outils, et "
+"pour séparer les messages contenant des virus. L'assistant ne prendra pas en "
+"compte une quelconque règle de filtrage existante : il ajoutera toujours de "
+"nouvelles règles à la fin.</p><p><b>Avertissement :</b> comme KMail semble "
+"bloqué pendant la recherche de virus dans les messages, vous pouvez "
+"rencontrer des problèmes de réactivité de KMail à cause des opérations de "
+"l'outil anti virus qui prennent souvent du temps ; vous pouvez supprimer les "
+"règles de filtrage créées par l'assistant pour revenir au comportement "
+"précédent.</p>"
+
+#: common/antispamwizard.cpp:1033
+#, kde-format
+msgid ""
+"<p>Please select the tools to be used for the detection and go to the next "
+"page.</p>"
+msgstr ""
+"<p>Veuillez sélectionner l'outil à utiliser pour la détection et continuer à "
+"la page suivante.</p>"
+
+#: common/antispamwizard.cpp:1057
+#, kde-format
+msgid "&Mark detected spam messages as read"
+msgstr "&Marquer comme « Lu » les messages détectés comme indésirables"
+
+#: common/antispamwizard.cpp:1058
+#, kde-format
+msgid "Mark messages which have been classified as spam as read."
+msgstr ""
+"Marque comme « Lu » les messages qui ont été classés comme indésirables."
+
+#: common/antispamwizard.cpp:1061
+#, kde-format
+msgid "Move &known spam to:"
+msgstr "Déplacer les indésirables &déterminés vers :"
+
+#: common/antispamwizard.cpp:1063
+#, kde-format
+msgid ""
+"The default folder for spam messages is the trash folder, but you may change "
+"that in the folder view below."
+msgstr ""
+"Le dossier par défaut pour les indésirables est la corbeille, mais vous "
+"pouvez changer cela dans la vue de dossier ci-dessous."
+
+#: common/antispamwizard.cpp:1076
+#, kde-format
+msgid "Move &probable spam to:"
+msgstr "Déplacer les indésirables &probables vers :"
+
+#: common/antispamwizard.cpp:1078
+#, kde-format
+msgid ""
+"The default folder is the inbox folder, but you may change that in the "
+"folder view below.<p>Not all tools support a classification as unsure. If "
+"you have not selected a capable tool, you cannot select a folder as well.</p>"
+msgstr ""
+"Le dossier par défaut est la boîte de réception, mais vous pouvez changer "
+"cela dans la vue de dossier ci-dessous. <p>Les outils ne prennent pas tous "
+"en charge la classification comme incertain. Si vous n'avez pas sélectionné "
+"un outil avec cette capacité, vous ne pouvez pas choisir de dossier.</p>"
+
+#: common/antispamwizard.cpp:1188
+#, kde-format
+msgid "Check messages using the anti-virus tools"
+msgstr "Vérifier les messages en utilisant les outils anti virus"
+
+#: common/antispamwizard.cpp:1190
+#, kde-format
+msgid ""
+"Let the anti-virus tools check your messages. The wizard will create "
+"appropriate filters. The messages are usually marked by the tools so that "
+"following filters can react on this and, for example, move virus messages to "
+"a special folder."
+msgstr ""
+"Laisser l'outil anti virus vérifier vos messages. Cet assistant va créer les "
+"filtres approprié. Les messages sont habituellement marqués par l'outil, "
+"afin que les filtres ensuite puissent réagir, par exemple en déplaçant les "
+"messages infectés dans un dossier spécial."
+
+#: common/antispamwizard.cpp:1196
+#, kde-format
+msgid "Move detected viral messages to the selected folder"
+msgstr ""
+"Déplacer les messages détectés comme infectés vers le dossier sélectionné"
+
+#: common/antispamwizard.cpp:1198
+#, kde-format
+msgid ""
+"A filter to detect messages classified as virus-infected and to move those "
+"messages into a predefined folder is created. The default folder is the "
+"trash folder, but you may change that in the folder view."
+msgstr ""
+"Un filtre pour détecter les messages classés comme infectés et déplacer ces "
+"messages dans un dossier prédéfini a été créé. Le dossier par défaut est la "
+"corbeille, mais vous pouvez changer cela dans la vue de dossier."
+
+#: common/antispamwizard.cpp:1204
+#, kde-format
+msgid "Additionally, mark detected viral messages as read"
+msgstr "De plus, marquer comme « Lu » les messages détectés comme infectés"
+
+#: common/antispamwizard.cpp:1207
+#, kde-format
+msgid ""
+"Mark messages which have been classified as virus-infected as read, as well "
+"as moving them to the selected folder."
+msgstr ""
+"Marque comme « Lu » les messages qui ont été classés comme infectés, ainsi "
+"que les déplacer dans le dossier sélectionné."
+
+#: mailmergeplugin/mailmergedialog.cpp:19
+#, kde-format
+msgid "Preview"
+msgstr "Aperçu"
+
+#: mailmergeplugin/mailmergedialog.cpp:22
+#, kde-format
+msgctxt "@title:window"
+msgid "Mail Merge"
+msgstr "Fusion du courriel"
+
+#: mailmergeplugin/widgets/csvwidget.cpp:24
+#, kde-format
+msgid "Path:"
+msgstr "Emplacement :"
+
+#: mailmergeplugin/widgets/mailmergepreviewdialog.cpp:16
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:19
+#, kde-format
+msgctxt "@title:window"
+msgid "Attachment"
+msgstr "Pièce jointe"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:36
+#, kde-format
+msgid "Source:"
+msgstr "Source :"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:41
+#, kde-format
+msgid "Address Book"
+msgstr "Carnet d'adresses"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:42
+#, kde-format
+msgid "CSV"
+msgstr "CSV"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:58
+#, kde-format
+msgid "Attachment:"
+msgstr "Pièce jointe :"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:63
+#, kde-format
+msgid "A&dd..."
+msgstr "&Ajouter…"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:63
+#, kde-format
+msgid "Re&move"
+msgstr "Su&pprimer"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:63
+#, kde-format
+msgid "Mod&ify..."
+msgstr "Mod&ifier…"
+
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
+#, kde-format
+msgid "Select attachment:"
+msgstr "Sélectionner une pièce jointe :"
+
+#~ msgid "&Log Activities..."
+#~ msgstr "&Journaliser les activités…"

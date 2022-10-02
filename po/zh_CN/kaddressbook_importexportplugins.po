@@ -1,0 +1,772 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2022-09-20 01:55\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/kdepim-addons/"
+"kaddressbook_importexportplugins.pot\n"
+"X-Crowdin-File-ID: 3786\n"
+
+#: csv/csvimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Export CSV file..."
+msgstr "导出 CSV 文件..."
+
+#: csv/csvimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Export contacts to a file in comma separated value format."
+msgstr "导出联系人为以逗号分隔各条目的文件(CSV)。"
+
+#: csv/csvimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Import CSV file..."
+msgstr "导入 CSV 文件..."
+
+#: csv/csvimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Import contacts from a file in comma separated value format."
+msgstr "从以逗号分隔各条目的文件中导入联系人。"
+
+#: csv/csvimportexportplugininterface.cpp:152
+#: gmx/gmximportexportplugininterface.cpp:80
+#: ldif/ldifimportexportplugininterface.cpp:130
+#: vcards/vcardimportexportplugininterface.cpp:370
+#, kde-format
+msgid "Which contact do you want to export?"
+msgstr "您想要导出哪一位联系人？"
+
+#: csv/csvimportexportplugininterface.cpp:162
+#: gmx/gmximportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:140
+#: vcards/vcardimportexportplugininterface.cpp:382
+#, kde-format
+msgid "You have not selected any contacts to export."
+msgstr "您还没有选择任何要导出的联系人。"
+
+#: csv/csvimportexportplugininterface.cpp:191
+#: gmx/gmximportexportplugininterface.cpp:124
+#: ldif/ldifimportexportplugininterface.cpp:161
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>无法打开文件 <b>%1</b></qt>"
+
+#: csv/csvimportexportplugininterface.cpp:203
+#: gmx/gmximportexportplugininterface.cpp:139
+#: ldif/ldifimportexportplugininterface.cpp:191
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>无法打开文件 <b>%1</b>。</qt>"
+
+#: csv/import/csvimportdialog.cpp:168
+#, kde-format
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "CSV 导入对话框"
+
+#: csv/import/csvimportdialog.cpp:223
+#, kde-format
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "导入联系人"
+
+#: csv/import/csvimportdialog.cpp:294
+#, kde-format
+msgctxt "@label"
+msgid "File to import:"
+msgstr "要导入的文件"
+
+#: csv/import/csvimportdialog.cpp:302
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "选择要导入的 csv 文件"
+
+#: csv/import/csvimportdialog.cpp:304
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr "点击此按钮以启动选择器来选择要导入的 CSV 文件。"
+
+#: csv/import/csvimportdialog.cpp:311
+#, kde-format
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "分隔符"
+
+#: csv/import/csvimportdialog.cpp:321
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "逗号"
+
+#: csv/import/csvimportdialog.cpp:322
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr "设置分隔符为逗号"
+
+#: csv/import/csvimportdialog.cpp:323
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr "如果您的 CSV 文件使用逗号作为分隔符，请选择此项。"
+
+#: csv/import/csvimportdialog.cpp:328
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "分号"
+
+#: csv/import/csvimportdialog.cpp:329
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr "设置分隔符为分号"
+
+#: csv/import/csvimportdialog.cpp:330
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr "如果您的 CSV 文件使用分号作为分隔符，请选择此项。"
+
+#: csv/import/csvimportdialog.cpp:334
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr "制表符"
+
+#: csv/import/csvimportdialog.cpp:335
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr "设置分隔符为制表符"
+
+#: csv/import/csvimportdialog.cpp:336
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr "如果您的 CSV 文件使用制表符作为分隔符，请选择此项。"
+
+#: csv/import/csvimportdialog.cpp:340
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "空格"
+
+#: csv/import/csvimportdialog.cpp:341
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "设置分隔符为空格"
+
+#: csv/import/csvimportdialog.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr "如果您的 CSV 文件使用空格作为分隔符，请选择此项。"
+
+#: csv/import/csvimportdialog.cpp:346
+#, kde-format
+msgctxt "@option:radio Custom field separator"
+msgid "Other"
+msgstr "其他"
+
+#: csv/import/csvimportdialog.cpp:347
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr "设置分隔符为自定义符号"
+
+#: csv/import/csvimportdialog.cpp:349
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr "如果您的 CSV 文件使用其他符号作为分隔符，请选择此项。"
+
+#: csv/import/csvimportdialog.cpp:355
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "设置自定义分隔符"
+
+#: csv/import/csvimportdialog.cpp:357
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+"输入您的自定义符号作为分隔符。如果您输入多余1个符号，将仅使用第一个，之后的将"
+"被忽略。"
+
+#: csv/import/csvimportdialog.cpp:363
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "文本引用符号："
+
+#: csv/import/csvimportdialog.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "选择引用字符"
+
+#: csv/import/csvimportdialog.cpp:371
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+"选择“引用”您 CSV 文件数据中分割符的符号。举例说明，如果使用逗号作为分隔符，则"
+"在数据中出现的所有逗号都将被此处指定的符号“引用”起来。"
+
+#: csv/import/csvimportdialog.cpp:376
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "\""
+msgstr "\""
+
+#: csv/import/csvimportdialog.cpp:377
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr "'"
+
+#: csv/import/csvimportdialog.cpp:378
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "无"
+
+#: csv/import/csvimportdialog.cpp:382
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "日期格式："
+
+#: csv/import/csvimportdialog.cpp:390
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+"<para><list><item>y：两个数位表示的年份</item><item>Y：四个数位表示的年份</"
+"item><item>m：一个或两个数位表示的月份</item><item>M：两个数位表示的月份</"
+"item><item>d：一个或两个数位表示的天数</item><item>D：两个数位表示的天数</"
+"item><item>H：两个数位表示的小时</item><item>I：两个数位表示的分钟</"
+"item><item>S：两个数位表示的秒</item></list></para>"
+
+#: csv/import/csvimportdialog.cpp:401
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+"<para>指定在 csv 数据中日期的格式。可以使用下列符号帮助定义格式：</"
+"para><para><list><item>y：两个数位表示的年份</item><item>Y：四个数位表示的年"
+"份</item><item>m：一个或两个数位表示的月份</item><item>M：两个数位表示的月份"
+"</item><item>d：一个或两个数位表示的天数</item><item>D：两个数位表示的天数</"
+"item><item>H：两个数位表示的小时</item><item>I：两个数位表示的分钟</"
+"item><item>S：两个数位表示的秒</item></list></para><para>例如：“Y-M-D”对应的"
+"日期为“2012-01-04”</para>"
+
+#: csv/import/csvimportdialog.cpp:417
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "文字编码："
+
+#: csv/import/csvimportdialog.cpp:423
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "选择文字编码"
+
+#: csv/import/csvimportdialog.cpp:424
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr "选择您的 CSV 文件的字符编码"
+
+#: csv/import/csvimportdialog.cpp:428
+#, kde-format
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr "跳过文件的首行"
+
+#: csv/import/csvimportdialog.cpp:430
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr "导入时跳过 csv 文件的首行"
+
+#: csv/import/csvimportdialog.cpp:432
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+"如果您希望跳过导入 CSV 文件的第一行，请选择此项。在许多案例中，CSV 文件的首行"
+"是一行用于描述文件包含数据的顺序的注释文字。"
+
+#: csv/import/csvimportdialog.cpp:448
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "应用模板..."
+
+#: csv/import/csvimportdialog.cpp:449
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "保存模板..."
+
+#: csv/import/csvimportdialog.cpp:470
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "本地编码(%1)"
+
+#: csv/import/csvimportdialog.cpp:471
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "Latin1"
+
+#: csv/import/csvimportdialog.cpp:472
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "Unicode"
+
+#: csv/import/csvimportdialog.cpp:473
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "Microsoft Unicode"
+
+#: csv/import/csvimportdialog.cpp:574
+#, kde-format
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr "您至少需要分配一列。"
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "尚无可用模板。"
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "没有可用的模板"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "模板名称"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "请为此模板输入一个名称："
+
+#: csv/import/csvimportdialog.cpp:699
+#, kde-format
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "无法打开输入文件。"
+
+#: csv/import/qcsvreader.cpp:92
+#, kde-format
+msgid "Device is not open"
+msgstr "设备未打开"
+
+#: csv/import/templateselectiondialog.cpp:182
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr "您真的想要删除模板“%1”吗？"
+
+#: csv/import/templateselectiondialog.cpp:203
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "模板选择"
+
+#: csv/import/templateselectiondialog.cpp:206
+#, kde-format
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr "请选择适合此 CSV 文件的模板："
+
+#: gmx/gmximportexportplugininterface.cpp:25
+#, kde-format
+msgid "GMX address book file (*.gmxa)"
+msgstr "GMX 地址簿文件(*.gmxa)"
+
+#: gmx/gmximportexportplugininterface.cpp:40
+#, kde-format
+msgid "Import GMX file..."
+msgstr "导入 GMX 文件..."
+
+#: gmx/gmximportexportplugininterface.cpp:41
+#, kde-format
+msgid "Import contacts from a GMX address book file."
+msgstr "从 GMX 地址簿文件导入联系人。"
+
+#: gmx/gmximportexportplugininterface.cpp:46
+#, kde-format
+msgid "Export GMX file..."
+msgstr "导出 GMX 文件..."
+
+#: gmx/gmximportexportplugininterface.cpp:47
+#, kde-format
+msgid "Export contacts to a GMX address book file."
+msgstr "导出联系人为 GMX 地址簿文件。"
+
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:80
+#: windows-contacts/importwindowcontact.cpp:26
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt>无法以读模式打开 <b>%1</b>。</qt>"
+
+#: gmx/gmximportexportplugininterface.cpp:455
+#, kde-format
+msgid "%1 is not a GMX address book file."
+msgstr "%1 不是一个 GMX 地址簿文件。"
+
+#: ldap/ldapimportexportplugininterface.cpp:25
+#, kde-format
+msgid "Import From LDAP server..."
+msgstr "从 LDAP 服务器导入..."
+
+#: ldap/ldapimportexportplugininterface.cpp:26
+#, kde-format
+msgid "Import contacts from an LDAP server."
+msgstr "从 LDAP 服务器导入联系人。"
+
+#: ldif/ldifimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Import LDIF file..."
+msgstr "导入 LDIF 文件..."
+
+#: ldif/ldifimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Import contacts from an LDIF file."
+msgstr "从 LDIF 文件导入联系人。"
+
+#: ldif/ldifimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Export LDIF file..."
+msgstr "导出 LDIF 文件..."
+
+#: ldif/ldifimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Export contacts to an LDIF file."
+msgstr "导出联系人为 LDIF 文件。"
+
+#: ldif/ldifimportexportplugininterface.cpp:110
+#, kde-format
+msgid "LDif Files"
+msgstr "LDif 文件"
+
+#: ldif/ldifimportexportplugininterface.cpp:151
+#, kde-format
+msgid "LDif Files (*.ldif)"
+msgstr "LDif 文件 (*.ldif)"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:22
+#, kde-format
+msgctxt "@title:group"
+msgid "Fields to be exported"
+msgstr "要导出的字段"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Private fields"
+msgstr "私有字段"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export private fields"
+msgstr "导出私有字段"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:32
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's private fields to the "
+"vCard output file."
+msgstr "如果您希望将联系人隐私数据导出到 vCard 文件，请选择此项。"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Business fields"
+msgstr "商务字段"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export business fields"
+msgstr "导出商务字段"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's business fields to the "
+"vCard output file."
+msgstr "如果您希望将联系人公司隐私数据导出到 vCard 文件，请选择此项。"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:43
+#, kde-format
+msgctxt "@option:check"
+msgid "Other fields"
+msgstr "其他字段"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export other fields"
+msgstr "导出其他字段"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:46
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's other fields to the vCard "
+"output file."
+msgstr "如果您希望将联系人其他数据导出到 vCard 文件，请选择此项。"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:50
+#, kde-format
+msgctxt "@option:check"
+msgid "Encryption keys"
+msgstr "加密密钥"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export encryption keys"
+msgstr "导出加密密钥"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:53
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's encryption keys to the "
+"vCard output file."
+msgstr "如果您希望将联系人加密密钥导出到 vCard 文件，请选择此项。"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:57
+#, kde-format
+msgctxt "@option:check"
+msgid "Pictures"
+msgstr "图片"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:58
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export pictures"
+msgstr "导出图片"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:60
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's picture to the vCard "
+"output file."
+msgstr "如果您希望导出联系人头像到 vCard 文件，请选择此项。"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:64
+#, kde-format
+msgctxt "@title:group"
+msgid "Export options"
+msgstr "导出选项"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:70
+#, kde-format
+msgctxt "@option:check"
+msgid "Display name as full name"
+msgstr "名称显示为全名"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export display name as full name"
+msgstr "将显示名称作为全名导出"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:73
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's display name in the "
+"vCard's full name field.  This may be required to get the name shown "
+"correctly in GMail or Android."
+msgstr ""
+"如果您希望将联系人显示姓名导出到 vCard 全名区域，请选择此项。GMail 或 "
+"Android 中可能需要此设置以正确显示姓名。"
+
+#: vcards/engine/vcardviewerdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Import vCard"
+msgstr "导入 vCard"
+
+#: vcards/engine/vcardviewerdialog.cpp:51
+#, kde-format
+msgctxt "@info"
+msgid "Do you want to import this contact into your address book?"
+msgstr "您真的想要将此联系人导入到您的地址簿中吗？"
+
+#: vcards/engine/vcardviewerdialog.cpp:61
+#, kde-format
+msgctxt "@action:button"
+msgid "Import All..."
+msgstr "导入全部..."
+
+#: vcards/vcardimportexportplugininterface.cpp:44
+#, kde-format
+msgid "Import vCard..."
+msgstr "导入 vCard..."
+
+#: vcards/vcardimportexportplugininterface.cpp:45
+#, kde-format
+msgid "Import contacts from a vCard file."
+msgstr "从 vCard 文件导入联系人。"
+
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, kde-format
+msgid "Export contacts to a vCard 4.0 file."
+msgstr "导出联系人为 vCard 4.0 文件。"
+
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, kde-format
+msgid "Export vCard 4.0..."
+msgstr "导出 vCard 4.0 文件..."
+
+#: vcards/vcardimportexportplugininterface.cpp:58
+#, kde-format
+msgid "Export vCard 3.0..."
+msgstr "导出 vCard 3.0 文件..."
+
+#: vcards/vcardimportexportplugininterface.cpp:59
+#, kde-format
+msgid "Export contacts to a vCard 3.0 file."
+msgstr "导出联系人为 vCard 3.0 文件。"
+
+#: vcards/vcardimportexportplugininterface.cpp:64
+#, kde-format
+msgid "Export vCard 2.1..."
+msgstr "导出 vCard 2.1 文件..."
+
+#: vcards/vcardimportexportplugininterface.cpp:65
+#, kde-format
+msgid "Export contacts to a vCard 2.1 file."
+msgstr "导出联系人为 vCard 2.1 文件。"
+
+#: vcards/vcardimportexportplugininterface.cpp:113
+#, kde-format
+msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
+msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;所有文件 (*)"
+
+#: vcards/vcardimportexportplugininterface.cpp:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Select vCard to Import"
+msgstr "选择要导入的 vCard 文件"
+
+#: vcards/vcardimportexportplugininterface.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "vCard Import Failed"
+msgstr "vCard 导入失败"
+
+#: vcards/vcardimportexportplugininterface.cpp:134
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Unable to access vCard:</para><para>%1</para>"
+msgstr "<para>无法访问 vCard 文件：</para><para>%1</para>"
+
+#: vcards/vcardimportexportplugininterface.cpp:436
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have selected a list of contacts, shall they be exported to several "
+"files?"
+msgstr "您已经选择了一个联系人列表，要将他们导出到若干文件中吗？"
+
+#: vcards/vcardimportexportplugininterface.cpp:439
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to One File"
+msgstr "导出到一个文件"
+
+#: vcards/vcardimportexportplugininterface.cpp:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to Several Files"
+msgstr "导出到若干文件"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#, kde-format
+msgid "Import Windows Contact file..."
+msgstr "导入 Windows Contact 文件..."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#, kde-format
+msgid "Import contacts from windows contact file."
+msgstr "从 Windows Contact 文件导入联系人。"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#, kde-format
+msgid "Windows Contact file (*.contact)"
+msgstr "Windows Contact 文件 (*.contact)"

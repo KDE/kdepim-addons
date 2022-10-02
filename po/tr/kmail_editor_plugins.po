@@ -1,0 +1,227 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Volkan Gezer <volkangezer@gmail.com>, 2017.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2022-04-05 12:39+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:23
+#, kde-format
+msgid "Autocorrect Text"
+msgstr "Metni Otomatik Düzelt"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:28
+#, kde-format
+msgid "Autocorrect Full Text"
+msgstr "Tüm Metni Otomatik Düzelt"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:32
+#, kde-format
+msgid "Autocorrect Selected Text"
+msgstr "Seçili Metni Otomatik Düzelt"
+
+#: insertemail/insertemailplugineditorinterface.cpp:23
+#, kde-format
+msgid "Insert Email..."
+msgstr "E-posta Ekle..."
+
+#: insertshorturl/insertshorturlconfigurewidget.cpp:29
+#, kde-format
+msgid "Select Short URL server:"
+msgstr "Kısa URL sunucusu seç:"
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:61
+#, kde-format
+msgid "Insert Short URL..."
+msgstr "Kısa URL Ekle..."
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:85
+#, kde-format
+msgid "No network connection detected, we cannot shorten URL."
+msgstr "Ağ bağlantısı algılanamadı, URL kısaltılamıyor."
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:92
+#, kde-format
+msgid "String doesn't seem to be a URL"
+msgstr "Dizi, bir URL gibi görünmüyor"
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:98
+#, kde-format
+msgid "An error occurred: \"%1\""
+msgstr "Bir hata oluştu: \"%1\""
+
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
+#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
+#, kde-format
+msgid ""
+"Error reported by server:\n"
+"'%1'"
+msgstr ""
+"Sunucu hata bildirdi:\n"
+"'%1'"
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:22
+#, kde-format
+msgid "Insert Special Character..."
+msgstr "Özel Karakter Ekle..."
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
+#, kde-format
+msgctxt "@title:window"
+msgid "Insert Special Character"
+msgstr "Özel Karakter Ekle"
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#, kde-format
+msgid "Insert"
+msgstr "Ekle"
+
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
+#, kde-format
+msgid "Insert Non Breaking Space"
+msgstr "Ayrılamaz Boşluk Ekle"
+
+#: quicktext/quicktextconfiguredialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure quick text"
+msgstr "Hızlı metni yapılandır"
+
+#: quicktext/quicktextconfiguredialog.cpp:38
+#, kde-format
+msgid "Import..."
+msgstr "İçe Aktar..."
+
+#: quicktext/quicktextconfiguredialog.cpp:41
+#, kde-format
+msgid "Export..."
+msgstr "Dışa Aktar..."
+
+#: quicktext/quicktextmanager.cpp:78
+#, kde-format
+msgid "Import QuickText"
+msgstr "Hızlı Metin İçe Aktar"
+
+#: quicktext/quicktextmanager.cpp:86
+#, kde-format
+msgid "Export QuickText"
+msgstr "Hızlı Metin Dışa Aktar"
+
+#: quicktext/quicktextplugineditorinterface.cpp:38
+#: quicktext/quicktextplugineditorinterface.cpp:44
+#, kde-format
+msgid "Variables"
+msgstr "Değişkenler"
+
+#: quicktext/quicktexttreewidget.cpp:37
+#, kde-format
+msgid "Add Snippet..."
+msgstr "Kırpma Ekle..."
+
+#: quicktext/quicktexttreewidget.cpp:39
+#, kde-format
+msgid "Edit Snippet..."
+msgstr "Kırpma Düzenle..."
+
+#: quicktext/quicktexttreewidget.cpp:41
+#, kde-format
+msgid "Remove Snippet"
+msgstr "Kırpma Kaldır"
+
+#: quicktext/quicktexttreewidget.cpp:44
+#, kde-format
+msgid "Add Group..."
+msgstr "Grup Ekle..."
+
+#: quicktext/quicktexttreewidget.cpp:46
+#, kde-format
+msgid "Rename Group..."
+msgstr "Grubu Yeniden Adlandır..."
+
+#: quicktext/quicktexttreewidget.cpp:48
+#, kde-format
+msgid "Remove Group"
+msgstr "Grubu Kaldır"
+
+#: quicktext/quicktexttreewidget.cpp:85
+#, kde-format
+msgid "Text Snippets"
+msgstr "Metin Kırpmaları"
+
+#: quicktext/quicktexttreewidget.cpp:142
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Do you really want to remove snippet \"%1\"?<nl/><warning>There is no way to "
+"undo the removal.</warning>"
+msgstr ""
+"\"%1\" kırpmasını gerçekten kaldırmak istediinize emin misiniz?<nl/"
+"><warning>Bu kaldırma geri alınamaz.</warning>"
+
+#: quicktext/quicktexttreewidget.cpp:167
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Do you really want to remove group \"%1\" along with all its snippets?<nl/"
+"><warning>There is no way to undo the removal.</warning>"
+msgstr ""
+"\"%1\" grubunu tüm kırpmalarla birlikte kaldırmak istediğinize emin misiniz?"
+"<nl/><warning>Bu kaldırma geri alınamaz.</warning>"
+
+#: quicktext/quicktexttreewidget.cpp:177
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to remove group \"%1\"?"
+msgstr "\"%1\" grubunu gerçekten kaldırmak istiyor musunuz?"
+
+#: quicktext/quicktextwidget.cpp:68
+#, kde-format
+msgid "QuickText was changed. Do you want to save it?"
+msgstr "Hızlı Metin değiştirildi. Kaydetmek istiyor musunuz?"
+
+#: quicktext/quicktextwidget.cpp:69
+#, kde-format
+msgid "Save"
+msgstr "Kaydet"
+
+#: quicktext/quicktextwidget.cpp:111
+#, kde-format
+msgid "General"
+msgstr "Genel"
+
+#: sharetext/sharetextplugineditorinterface.cpp:28
+#, kde-format
+msgid "Share Mail Text..."
+msgstr "E-posta Metni Paylaş..."
+
+#: zoomtext/zoomlabel.cpp:20
+#, kde-format
+msgid "Zoom: %1%"
+msgstr "Yakınlaştırma: %​%1"
+
+#: zoomtext/zoomtextplugineditorinterface.cpp:25
+#, kde-format
+msgid "Zoom..."
+msgstr "Yakınlaştır..."
+
+#~ msgid "Reset"
+#~ msgstr "Sıfırla"
+
+#~ msgid "&Zoom In"
+#~ msgstr "&Yakınlaştır"
+
+#~ msgid "Zoom &Out"
+#~ msgstr "&Uzaklaştır"

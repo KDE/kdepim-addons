@@ -1,0 +1,101 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2016-04-21 06:03+0100\n"
+"Last-Translator: Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail."
+"com>\n"
+"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Tradutor"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "&Tradutor"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Tradutor"
+
+#~ msgid "Configure engine"
+#~ msgstr "Configurar o motor"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Escoller un servidor de URL abreviado:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "O servidor informou dun erro:\n"
+#~ "«%1»"
+
+#~ msgid "Close"
+#~ msgstr "Pechar"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Xerando os URL abreviados…"
+
+#~ msgid "Configure..."
+#~ msgstr "Configurar…"
+
+#~ msgid "Convert"
+#~ msgstr "Converter"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Inserir un URL abreviado"
+
+#~ msgid "Original URL:"
+#~ msgstr "URL orixinal:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Copiar no portapapeis"
+
+#~ msgid "Short URL:"
+#~ msgstr "URL abreviado:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Abrir un URL abreviado"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr ""
+#~ "Non foi posíbel ningunha conexión de rede, polo que non se pode acurtar o "
+#~ "URL."
+
+#~ msgid "No network"
+#~ msgstr "Non hai rede"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Produciuse un erro: «%1»"
+
+#~ msgid "Short URL"
+#~ msgstr "URL abreviado"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Xerar un URL abreviado"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "Estase a xerar o URL curto..."
+
+#~ msgid "Short url:"
+#~ msgstr "URL curto:"
+
+#~| msgid "Short url:"
+#~ msgid "Short url"
+#~ msgstr "URL curto"

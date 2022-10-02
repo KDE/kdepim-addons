@@ -1,0 +1,439 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2016, 2017, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-10 00:46+0000\n"
+"PO-Revision-Date: 2022-07-13 14:07+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Akonadi Database Tool"
+msgstr "Akonadi 데이터베이스 도구"
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
+#, kde-format
+msgid "&Akonadi Vacuum..."
+msgstr "Akonadi 청소(&A)..."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:29
+#, kde-format
+msgid "Do you want to vacuum akonadi database?"
+msgstr ""
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:29
+#, fuzzy, kde-format
+#| msgid "&Akonadi Vacuum..."
+msgid "Akonadi Vacuum"
+msgstr "Akonadi 청소(&A)..."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:39
+#, kde-format
+msgid "&Akonadi Fsck..."
+msgstr "Akonadi 검사(&A)..."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:42
+#, kde-format
+msgid "Do you want to fsck akonadi database?"
+msgstr ""
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:42
+#, fuzzy, kde-format
+#| msgid "&Akonadi Fsck..."
+msgid "Akonadi Fsck"
+msgstr "Akonadi 검사(&A)..."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:63
+#, fuzzy, kde-format
+#| msgid "&Akonadi Fsck..."
+msgctxt "@title:window"
+msgid "Akonadi Fsck"
+msgstr "Akonadi 검사(&A)..."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Akonadi Vacuum..."
+msgctxt "@title:window"
+msgid "Akonadi Vacuum"
+msgstr "Akonadi 청소(&A)..."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:80
+#, kde-format
+msgid "Finished."
+msgstr "완료됨."
+
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:82
+#, kde-format
+msgid "Start..."
+msgstr "시작..."
+
+#: antispamplugin/antispamplugininterface.cpp:22
+#, kde-format
+msgid "&Anti-Spam Wizard..."
+msgstr "스팸 방지 마법사(&A)..."
+
+#: antivirusplugin/antivirusplugininterface.cpp:22
+#, kde-format
+msgid "&Anti-Virus Wizard..."
+msgstr "안티바이러스 마법사(&A)..."
+
+#: common/antispamwizard.cpp:89
+#, kde-format
+msgid "Anti-Spam Wizard"
+msgstr "스팸 방지 마법사"
+
+#: common/antispamwizard.cpp:89
+#, kde-format
+msgid "Anti-Virus Wizard"
+msgstr "안티바이러스 마법사"
+
+#: common/antispamwizard.cpp:91
+#, kde-format
+msgid "Welcome to the KMail Anti-Spam Wizard"
+msgstr "KMail 스팸 방지 마법사에 오신 것을 환영합니다"
+
+#: common/antispamwizard.cpp:91
+#, kde-format
+msgid "Welcome to the KMail Anti-Virus Wizard"
+msgstr "KMail 안티바이러스 마법사에 오신 것을 환영합니다"
+
+#: common/antispamwizard.cpp:96
+#, kde-format
+msgid "Options to fine-tune the handling of spam messages"
+msgstr "스팸 메시지를 처리하는 방법을 설정합니다"
+
+#: common/antispamwizard.cpp:100
+#, kde-format
+msgid "Summary of changes to be made by this wizard"
+msgstr "이 마법사가 변경할 사항"
+
+#: common/antispamwizard.cpp:103
+#, kde-format
+msgid "Options to fine-tune the handling of virus messages"
+msgstr "바이러스 메시지를 처리하는 방법을 설정합니다"
+
+#: common/antispamwizard.cpp:170
+#, kde-format
+msgid "Virus handling"
+msgstr "바이러스 처리"
+
+#: common/antispamwizard.cpp:249 common/antispamwizard.cpp:251
+#: common/antispamwizard.cpp:554
+#, kde-format
+msgid "Spam Handling"
+msgstr "스팸 처리"
+
+#: common/antispamwizard.cpp:285 common/antispamwizard.cpp:287
+#: common/antispamwizard.cpp:569
+#, kde-format
+msgid "Semi spam (unsure) handling"
+msgstr "불분명한 스팸 처리"
+
+#: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
+#: common/antispamwizard.cpp:576
+#, kde-format
+msgid "Classify as Spam"
+msgstr "스팸으로 처리"
+
+#: common/antispamwizard.cpp:352
+#, kde-format
+msgid "Spam"
+msgstr "스팸"
+
+#: common/antispamwizard.cpp:380 common/antispamwizard.cpp:382
+#: common/antispamwizard.cpp:577
+#, kde-format
+msgid "Classify as NOT Spam"
+msgstr "스팸이 아닌 것으로 처리"
+
+#: common/antispamwizard.cpp:391
+#, kde-format
+msgid "Ham"
+msgstr "햄"
+
+#: common/antispamwizard.cpp:457
+#, kde-format
+msgid "Scanning for %1..."
+msgstr "%1 검사 중..."
+
+#: common/antispamwizard.cpp:501
+#, kde-format
+msgid "Scanning for anti-spam tools finished."
+msgstr "스팸 방지 도구 검색이 끝났습니다."
+
+#: common/antispamwizard.cpp:501
+#, kde-format
+msgid "Scanning for anti-virus tools finished."
+msgstr "안티바이러스 도구 검색이 끝났습니다."
+
+#: common/antispamwizard.cpp:503
+#, kde-format
+msgid ""
+"<p>Sorry, no spam detection tools have been found. Install your spam "
+"detection software and re-run this wizard.</p>"
+msgstr ""
+"<p>스팸 감지 도구가 설치되어 있지 않습니다. 스팸 감지 도구를 설치한 다음 이 "
+"마법사를 다시 실행하십시오.</p>"
+
+#: common/antispamwizard.cpp:506
+#, kde-format
+msgid "Scanning complete. No anti-virus tools found."
+msgstr "검색이 끝났습니다. 안티바이러스 도구가 없습니다."
+
+#: common/antispamwizard.cpp:528
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are marked as read.<br />Spam messages are "
+"moved into the folder named <i>%1</i>.</p>"
+msgstr ""
+"<p>스팸으로 분류된 메시지는 읽은 것으로 표시됩니다.<br /> 스팸 메시지는 <i>"
+"%1</i> 폴더로 이동됩니다.</p>"
+
+#: common/antispamwizard.cpp:533
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are marked as read.<br />Spam messages are "
+"not moved into a certain folder.</p>"
+msgstr ""
+"<p>스팸으로 분류된 메시지는 읽은 것으로 표시됩니다.<br /> 스팸 메시지는 이동"
+"되지 않습니다.</p>"
+
+#: common/antispamwizard.cpp:539
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are not marked as read.<br />Spam messages "
+"are moved into the folder named <i>%1</i>.</p>"
+msgstr ""
+"<p>스팸으로 분류된 메시지는 읽은 것으로 표시됩니다.<br /> 스팸 메시지는 <i>"
+"%1</i> 폴더로 이동됩니다.</p>"
+
+#: common/antispamwizard.cpp:544
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are not marked as read.<br />Spam messages "
+"are not moved into a certain folder.</p>"
+msgstr ""
+"<p>스팸으로 분류된 메시지는 읽은 것으로 표시됩니다.<br /> 스팸 메시지는 이동"
+"되지 않습니다.</p>"
+
+#: common/antispamwizard.cpp:571
+#, kde-format
+msgid ""
+"<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
+"</p>"
+msgstr "<p>불분명한 스팸 메시지를 <i>%1</i> 폴더에 저장합니다.</p>"
+
+#: common/antispamwizard.cpp:581
+#, kde-format
+msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
+msgstr "<p>마법사에서 다음 폴더를 만듭니다:<ul>%1</ul></p>"
+
+#: common/antispamwizard.cpp:584
+#, kde-format
+msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
+msgstr "<p>마법사에서 다음 필터를 대체합니다:<ul>%1</ul></p>"
+
+#: common/antispamwizard.cpp:981
+#, kde-format
+msgid ""
+"The wizard will search for any tools to do spam detection\n"
+"and setup KMail to work with them."
+msgstr ""
+"이 마법사는 스팸 감지 도구를 검색하여\n"
+"KMail에서 사용할 수 있도록 합니다."
+
+#: common/antispamwizard.cpp:983
+#, kde-format
+msgid ""
+"<p>Here you can get some assistance in setting up KMail's filter rules to "
+"use some commonly-known anti-virus tools.</p><p>The wizard can detect those "
+"tools on your computer as well as create filter rules to classify messages "
+"using these tools and to separate messages containing viruses. The wizard "
+"will not take any existing filter rules into consideration: it will always "
+"append the new rules.</p><p><b>Warning:</b> As KMail appears to be frozen "
+"during the scan of the messages for viruses, you may encounter problems with "
+"the responsiveness of KMail because anti-virus tool operations are usually "
+"time consuming; please consider deleting the filter rules created by the "
+"wizard to get back to the former behavior.</p>"
+msgstr ""
+"<p>KMail의 필터 규칙을 설정하여 알려진 안티바이러스 도구를 사용할 수 있도록 "
+"할 수 있습니다.</p><p>이 마법사에서는 컴퓨터에 설치되어 있는 필터링 도구를 찾"
+"아서 메시지 필터링을 수행한 다음 바이러스가 있는 것으로 판단된 메시지를 분리"
+"할 수 있도록 설정합니다. 설정되어 있는 필터 규칙은 포함되지 않으며 항상 새로"
+"운 규칙을 생성합니다.</p><p><b>경고:</b> KMail이 메시지를 검사하는 중에는 응"
+"답이 없는 것처럼 보이며 대부분 안티바이러스 도구의 작업은 오랜 시간이 걸리기 "
+"때문에 이전에 비해서 응답이 느리게 보일 수도 있습니다. 이 때에는 마법사에서 "
+"생성한 필터 규칙을 삭제하면 이전과 같은 속도로 동작합니다.</p>"
+
+#: common/antispamwizard.cpp:1033
+#, kde-format
+msgid ""
+"<p>Please select the tools to be used for the detection and go to the next "
+"page.</p>"
+msgstr "<p>검사에 사용할 도구를 선택한 다음 다음 페이지로 진행하십시오.</p>"
+
+#: common/antispamwizard.cpp:1057
+#, kde-format
+msgid "&Mark detected spam messages as read"
+msgstr "감지한 스팸 메시지를 읽은 것으로 표시(&M)"
+
+#: common/antispamwizard.cpp:1058
+#, kde-format
+msgid "Mark messages which have been classified as spam as read."
+msgstr "스팸으로 분류된 메시지를 읽은 것으로 표시합니다."
+
+#: common/antispamwizard.cpp:1061
+#, kde-format
+msgid "Move &known spam to:"
+msgstr "알려진 스팸을 다음으로 이동(&K):"
+
+#: common/antispamwizard.cpp:1063
+#, kde-format
+msgid ""
+"The default folder for spam messages is the trash folder, but you may change "
+"that in the folder view below."
+msgstr ""
+"기본적으로 스팸 메시지는 휴지통 폴더로 이동되나, 아래 폴더 중에서 선택할 수"
+"도 있습니다."
+
+#: common/antispamwizard.cpp:1076
+#, kde-format
+msgid "Move &probable spam to:"
+msgstr "가능성 있는 스팸을 다음으로 이동(&P):"
+
+#: common/antispamwizard.cpp:1078
+#, kde-format
+msgid ""
+"The default folder is the inbox folder, but you may change that in the "
+"folder view below.<p>Not all tools support a classification as unsure. If "
+"you have not selected a capable tool, you cannot select a folder as well.</p>"
+msgstr ""
+"기본 폴더는 받은 편지함 폴더이나 아래 폴더 중에서 선택할 수도 있습니다.<p>모"
+"든 도구에서 가능성 있는 스팸으로 분류하는 것을 지원하지는 않습니다. 만약 가능"
+"성 있는 스팸으로 분류할 수 있는 도구가 없으면 이 옵션을 사용할 수 없습니다.</"
+"p>"
+
+#: common/antispamwizard.cpp:1188
+#, kde-format
+msgid "Check messages using the anti-virus tools"
+msgstr "안티바이러스 도구로 메시지 검사"
+
+#: common/antispamwizard.cpp:1190
+#, kde-format
+msgid ""
+"Let the anti-virus tools check your messages. The wizard will create "
+"appropriate filters. The messages are usually marked by the tools so that "
+"following filters can react on this and, for example, move virus messages to "
+"a special folder."
+msgstr ""
+"안티바이러스 도구를 사용하여 메시지를 검사합니다. 이 마법사에서는 적합한 필터"
+"를 생성합니다. 외부 도구에서 메시지를 표시하며, 생성될 필터가 외부 도구의 표"
+"시에 반응하여 특정한 폴더로 메시지를 이동하는 등 작업을 수행합니다."
+
+#: common/antispamwizard.cpp:1196
+#, kde-format
+msgid "Move detected viral messages to the selected folder"
+msgstr "감지된 바이러스 메시지를 선택한 폴더로 이동"
+
+#: common/antispamwizard.cpp:1198
+#, kde-format
+msgid ""
+"A filter to detect messages classified as virus-infected and to move those "
+"messages into a predefined folder is created. The default folder is the "
+"trash folder, but you may change that in the folder view."
+msgstr ""
+"바이러스에 감염된 것으로 판별된 메시지를 감지하고 이 메시지를 미리 지정한 폴"
+"더로 이동하는 필터입니다. 기본적으로 휴지통 폴더로 메시지를 이동하나 폴더 보"
+"기에서 변경할 수 있습니다."
+
+#: common/antispamwizard.cpp:1204
+#, kde-format
+msgid "Additionally, mark detected viral messages as read"
+msgstr "추가적으로 바이러스 메시지를 읽은 것으로 표시"
+
+#: common/antispamwizard.cpp:1207
+#, kde-format
+msgid ""
+"Mark messages which have been classified as virus-infected as read, as well "
+"as moving them to the selected folder."
+msgstr ""
+"바이러스에 감염된 것으로 분류된 메시지를 읽은 것으로 표시하며 선택한 폴더로 "
+"이동시킵니다."
+
+#: mailmergeplugin/mailmergedialog.cpp:19
+#, kde-format
+msgid "Preview"
+msgstr "미리 보기"
+
+#: mailmergeplugin/mailmergedialog.cpp:22
+#, kde-format
+msgctxt "@title:window"
+msgid "Mail Merge"
+msgstr "메일 머지"
+
+#: mailmergeplugin/widgets/csvwidget.cpp:24
+#, kde-format
+msgid "Path:"
+msgstr "경로:"
+
+#: mailmergeplugin/widgets/mailmergepreviewdialog.cpp:16
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:19
+#, kde-format
+msgctxt "@title:window"
+msgid "Attachment"
+msgstr "첨부"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:36
+#, kde-format
+msgid "Source:"
+msgstr "원본:"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:41
+#, kde-format
+msgid "Address Book"
+msgstr "주소록"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:42
+#, kde-format
+msgid "CSV"
+msgstr "CSV"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:58
+#, kde-format
+msgid "Attachment:"
+msgstr "첨부:"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:63
+#, kde-format
+msgid "A&dd..."
+msgstr "추가(&D)..."
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:63
+#, kde-format
+msgid "Re&move"
+msgstr "삭제(&M)"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:63
+#, kde-format
+msgid "Mod&ify..."
+msgstr "수정(&I)..."
+
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
+#, kde-format
+msgid "Select attachment:"
+msgstr "첨부 선택:"
+
+#~ msgid "&Log Activities..."
+#~ msgstr "활동 기록(&L)..."

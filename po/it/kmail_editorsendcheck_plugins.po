@@ -1,0 +1,261 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the its source package.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2019, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2021-11-24 23:12+0100\n"
+"Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.08.0\n"
+
+#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Automatic Add Contacts\" Plugin"
+msgstr "Configura l'estensione per l'aggiunta automatica di contatti."
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:97
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr ""
+"Devi creare una rubrica prima di aggiungere un contatto. Vuoi creare una "
+"rubrica?"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:98
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "Nessuna rubrica disponibile"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Crea rubrica degli indirizzi"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Aggiungi rubrica indirizzi"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
+#, kde-format
+msgid "Automatic Add Contacts"
+msgstr "Aggiunta automatica dei contatti"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
+#, kde-format
+msgid "Select the addressbook in which to store contacts:"
+msgstr "Seleziona la rubrica dove memorizzare i contatti:"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:35
+#, kde-format
+msgid "Do you want to send the email as HTML?"
+msgstr "Vuoi inviare questo messaggio in formato HTML?"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:36
+#, kde-format
+msgid "Send email as plain text"
+msgstr "Invia messaggio come testo semplice"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Send As HTML"
+msgstr "Invia come HTML"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
+#, kde-format
+msgid "Update SMTP server"
+msgstr "Aggiorna server SMTP"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Check SMTP server"
+msgstr "Verifica server SMTP"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
+#, kde-format
+msgid ""
+"Do you want to send the email with a different SMTP than the one defined in "
+"the current identity?"
+msgstr ""
+"Vuoi inviare il messaggio di posta con un server SMTP diverso da quello "
+"definito nell'identità attuale?"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Check Before Send Mail\" Plugin"
+msgstr ""
+"Configura l'estensione per la verifica prima dell'invio di messaggi di posta"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
+#, kde-format
+msgid "Send as plain text"
+msgstr "Invia come testo semplice"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
+#, kde-format
+msgid "Use SMTP server defined in identity"
+msgstr "Usa il server SMTP definito nell'identità"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
+#, kde-format
+msgid "Check duplicated emails addresses"
+msgstr "Verifica indirizzi di posta duplicati"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
+#, kde-format
+msgid "Check send attachment"
+msgstr "Verifica invio allegato"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Duplicated emails"
+msgstr "Messaggi di posta duplicati"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
+#, kde-format
+msgid "These emails are duplicated. Do you want to send email?"
+msgstr "Questi messaggi sono duplicati. Vuoi inviare il messaggio?"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:52
+#, kde-format
+msgctxt "emails (number of emails)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Attachment"
+msgstr "Verifica allegato"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:26
+#, kde-format
+msgid "Do you want to send some attachment?"
+msgstr "Vuoi inviare un qualche allegato?"
+
+#: confirm-address/confirmaddressconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Confirm Email Address\" Plugin"
+msgstr "Configura l'estensione «Verifica dell'indirizzo di posta»"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:32
+#, kde-format
+msgid "Accepted Domain Name"
+msgstr "Nomi di dominio accettati"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:37
+#, kde-format
+msgid "Rejected Domain Name"
+msgstr "Nome di dominio rifiutati"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:45
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:64
+#, kde-format
+msgid "A&dd..."
+msgstr "A&ggiungi..."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:46
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:65
+#, kde-format
+msgid "Re&move"
+msgstr "Ri&muovi"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#, kde-format
+msgid "Mod&ify..."
+msgstr "Mod&ifica..."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressemailentrydialog.cpp:21
+#, kde-format
+msgid "Enter new domain name:"
+msgstr "Inserisci un nuovo nome di dominio..."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#, kde-format
+msgid "Do you want to remove this domain?"
+msgstr "Vuoi rimuovere questo dominio?"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:54
+#, kde-format
+msgid "Whitelist of Addresses"
+msgstr "Lista bianca degli indirizzi"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#, kde-format
+msgid "Enter new email address:"
+msgstr "Inserisci un nuovo indirizzo di posta:"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgstr "Vuoi rimuovere questo indirizzo di posta elettronica?"
+
+#: confirm-address/confirmaddressdialog.cpp:24
+#, kde-format
+msgid "Add Selected Emails to WhiteList"
+msgstr "Aggiungi i messaggi selezionati alla lista bianca"
+
+#: confirm-address/confirmaddressdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Addresses"
+msgstr "Conferma indirizzi"
+
+#: confirm-address/confirmaddressdialog.cpp:88
+#, kde-format
+msgid "All selected emails are added to white list"
+msgstr "Tutti i messaggi selezionati sono aggiunti alla lista bianca"
+
+#: confirm-address/confirmaddressdialog.cpp:88
+#, kde-format
+msgid "Emails added to white list"
+msgstr "Messaggi di posta aggiunti alla lista bianca"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Value"
+msgstr "Aggiungi valore"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Value"
+msgstr "Cambia valore"
+
+#: confirm-address/confirmaddresswidget.cpp:22
+#, kde-format
+msgid "Potentially invalid emails are displayed in red:"
+msgstr ""
+"Gli indirizzi di posta probabilmente non validi sono mostrati in rosso:"
+
+#~ msgid "Enable"
+#~ msgstr "Abilita"
+
+#~ msgid "Add Automatically Contacts"
+#~ msgstr "Aggiungi automaticamente i contatti"
+
+#~ msgid "Send Mail as PlainText"
+#~ msgstr "Invia messaggio come testo semplice"

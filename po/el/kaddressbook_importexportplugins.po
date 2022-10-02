@@ -1,0 +1,3086 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2009.
+# Giorgos Katsikatsos <giorgos.katsikatsos@gmail.com>, 2010.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012, 2013, 2014.
+# Stelios <sstavra@gmail.com>, 2012.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcontactmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2014-04-19 15:08+0200\n"
+"Last-Translator: Dimitrios Glentadakis <dglent@free.fr>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: csv/csvimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Export CSV file..."
+msgstr "Εξαγωγή αρχείου CSV..."
+
+#: csv/csvimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Export contacts to a file in comma separated value format."
+msgstr "Εξαγωγή επαφών σε ένα αρχείο τιμών διαχωρισμένων με κόμματα."
+
+#: csv/csvimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Import CSV file..."
+msgstr "Εισαγωγή αρχείου CSV..."
+
+#: csv/csvimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Import contacts from a file in comma separated value format."
+msgstr "Εισαγωγή από ένα αρχείο τιμών διαχωρισμένων με κόμματα."
+
+#: csv/csvimportexportplugininterface.cpp:152
+#: gmx/gmximportexportplugininterface.cpp:80
+#: ldif/ldifimportexportplugininterface.cpp:130
+#: vcards/vcardimportexportplugininterface.cpp:370
+#, kde-format
+msgid "Which contact do you want to export?"
+msgstr "Ποια επαφή θέλετε να εξάγετε;"
+
+#: csv/csvimportexportplugininterface.cpp:162
+#: gmx/gmximportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:140
+#: vcards/vcardimportexportplugininterface.cpp:382
+#, kde-format
+msgid "You have not selected any contacts to export."
+msgstr "Επιλέξτε τουλάχιστον μία επαφή προς εξαγωγή."
+
+#: csv/csvimportexportplugininterface.cpp:191
+#: gmx/gmximportexportplugininterface.cpp:124
+#: ldif/ldifimportexportplugininterface.cpp:161
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>Δεν ήταν δυνατό το άνοιγμα του αρχείου <b>%1</b></qt>"
+
+#: csv/csvimportexportplugininterface.cpp:203
+#: gmx/gmximportexportplugininterface.cpp:139
+#: ldif/ldifimportexportplugininterface.cpp:191
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>Δεν ήταν δυνατό το άνοιγμα του αρχείου <b>%1</b>.</qt>"
+
+#: csv/import/csvimportdialog.cpp:168
+#, kde-format
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "Διάλογος εισαγωγής CSV"
+
+#: csv/import/csvimportdialog.cpp:223
+#, kde-format
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "Εισαγωγή επαφών"
+
+#: csv/import/csvimportdialog.cpp:294
+#, kde-format
+msgctxt "@label"
+msgid "File to import:"
+msgstr "Αρχείο για εισαγωγή:"
+
+#: csv/import/csvimportdialog.cpp:302
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "Επιλέξτε ένα csv αρχείο για εισαγωγή"
+
+#: csv/import/csvimportdialog.cpp:304
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr ""
+"Με κλικ στο κουμπί αυτό εκτελείται ένας επιλογέας αρχείων που θα σας "
+"επιτρέψει να επιλέξετε ένα csv αρχείο για εισαγωγή."
+
+#: csv/import/csvimportdialog.cpp:311
+#, kde-format
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "Οριοθέτης"
+
+#: csv/import/csvimportdialog.cpp:321
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "Κόμμα"
+
+#: csv/import/csvimportdialog.cpp:322
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr "Καθορίστε το κόμμα για διαχωριστικό μεταξύ πεδίων"
+
+#: csv/import/csvimportdialog.cpp:323
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr ""
+"Ενεργοποιήστε αυτήν την επιλογή αν το csv αρχείο σας χρησιμοποιεί κόμμα για "
+"διαχωριστικό μεταξύ πεδίων."
+
+#: csv/import/csvimportdialog.cpp:328
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "Ερωτηματικό"
+
+#: csv/import/csvimportdialog.cpp:329
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr "Καθορίστε το ελληνικό ερωτηματικό για διαχωριστικό μεταξύ πεδίων"
+
+#: csv/import/csvimportdialog.cpp:330
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr ""
+"Ενεργοποιήστε αυτήν την επιλογή αν το csv αρχείο σας χρησιμοποιεί το "
+"ελληνικό ερωτηματικό για διαχωριστικό μεταξύ πεδίων."
+
+#: csv/import/csvimportdialog.cpp:334
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr "Στηλοθέτης"
+
+#: csv/import/csvimportdialog.cpp:335
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr "Καθορίστε το tab για διαχωριστικό μεταξύ πεδίων"
+
+#: csv/import/csvimportdialog.cpp:336
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr ""
+"Ενεργοποιήστε αυτήν την επιλογή αν το csv αρχείο σας χρησιμοποιεί το tab για "
+"διαχωριστικό μεταξύ πεδίων."
+
+#: csv/import/csvimportdialog.cpp:340
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "Κενό"
+
+#: csv/import/csvimportdialog.cpp:341
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "Καθορίστε τον κενό χαρακτήρα για διαχωριστικό μεταξύ πεδίων"
+
+#: csv/import/csvimportdialog.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr ""
+"Ενεργοποιήστε αυτήν την επιλογή αν το csv αρχείο σας χρησιμοποιεί τον κενό "
+"χαρακτήρα για διαχωριστικό μεταξύ πεδίων."
+
+#: csv/import/csvimportdialog.cpp:346
+#, fuzzy, kde-format
+#| msgctxt "@option:radio Custum field separator"
+#| msgid "Other"
+msgctxt "@option:radio Custom field separator"
+msgid "Other"
+msgstr "Άλλο"
+
+#: csv/import/csvimportdialog.cpp:347
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr "Καθορίστε έναν προσαρμοσμένο χαρακτήρα για διαχωριστικό μεταξύ πεδίων"
+
+#: csv/import/csvimportdialog.cpp:349
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr ""
+"Ενεργοποιήστε αυτήν την επιλογή αν πρόκειται να χρησιμοποιήσετε κάποιον άλλο "
+"χαρακτήρα για οριοθέτη μεταξύ πεδίων στα δεδομένα του csv αρχείου σας."
+
+#: csv/import/csvimportdialog.cpp:355
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "Καθορίστε τον προσαρμοσμένο χαρακτήρα οριοθέτη"
+
+#: csv/import/csvimportdialog.cpp:357
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+"Εισάγετε έναν προσαρμοσμένο χαρακτήρα για οριοθέτη. Αν δώσετε περισσότερους "
+"από 1 χαρακτήρες, μόνο ο πρώτος θα χρησιμοποιηθεί και οι υπόλοιποι θα "
+"αγνοηθούν."
+
+#: csv/import/csvimportdialog.cpp:363
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "Παράθεση κειμένου:"
+
+#: csv/import/csvimportdialog.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "Καθορίστε το χαρακτήρα παράθεσης"
+
+#: csv/import/csvimportdialog.cpp:371
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+"Επιλέξτε το χαρακτήρα που χρησιμοποιούν τα csv δεδομένα για να \"παραθέσουν"
+"\"το πεδίο οριοθέτη αν ο χαρακτήρας αυτός τυγχάνει να βρίσκεται μέσα στα "
+"δεδομένα. Για παράδειγμα, αν το κόμμα είναι το πεδίο οριοθέτης, τότε κάθε "
+"κόμμα που παρουσιάζεται στα δεδομένα θα \"παρατίθεται\" με τον χαρακτήρα που "
+"ορίζεται εδώ."
+
+#: csv/import/csvimportdialog.cpp:376
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Qoute character option"
+#| msgid "\""
+msgctxt "@item:inlistbox Quote character option"
+msgid "\""
+msgstr "\""
+
+#: csv/import/csvimportdialog.cpp:377
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr "'"
+
+#: csv/import/csvimportdialog.cpp:378
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "Κανένα"
+
+#: csv/import/csvimportdialog.cpp:382
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "Μορφή ημερομηνίας:"
+
+#: csv/import/csvimportdialog.cpp:390
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+"<para><list><item>y: έτος με 2 ψηφία</item><item>Y: έτος με 4 ψηφία</"
+"item><item> m: μήνας με 1 ή 2 ψηφία</item><item>M: μήνας με 2 ψηφία</"
+"item><item>d: ημέρα με 1 ή 2 ψηφία </item><item>D: ημέρα με 2 ψηφία</"
+"item><item>H: ώρα με 2 ψηφία</item><item>I: λεπτά με 2 ψηφία</item><item>S: "
+"δευτερόλεπτα με 2 ψηφία</item></list></para>"
+
+#: csv/import/csvimportdialog.cpp:401
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+"<para>Καθορίστε μια μορφή για τις ημερομηνίες που περιλαμβάνονται στα csv "
+"δεδομένα. Χρησιμοποιήστε τις παρακάτω ακολουθίες για να σας βοηθήσουν να "
+"ορίσετε τη μορφή</para><para><list><item>y: έτος με 2 ψηφία</item><item>Y: "
+"έτος με 4 ψηφία</item><item> m: μήνας με 1 ή 2 ψηφία</item><item>M: μήνας με "
+"2 ψηφία</item><item>d: ημέρα με 1 ή 2 ψηφία </item><item>D: ημέρα με 2 "
+"ψηφία</item><item>H: ώρα με 2 ψηφία</item><item>I: λεπτά με 2 ψηφία</"
+"item><item>S: δευτερόλεπτα με 2 ψηφία</item></list></para><para>Παράδειγμα: "
+"\"Y-M-D\" αντιστοιχεί σε ημερομηνία παρόμοια με \"2012-01-04\"</para>"
+
+#: csv/import/csvimportdialog.cpp:417
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "Κωδικοποίηση κειμένου:"
+
+#: csv/import/csvimportdialog.cpp:423
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "Επιλέξτε κωδικοποίηση κειμένου"
+
+#: csv/import/csvimportdialog.cpp:424
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr "Επιλέξτε την κωδικοποίηση χαρακτήρων των δεδομένων στο csv αρχείο σας."
+
+#: csv/import/csvimportdialog.cpp:428
+#, kde-format
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr "Παράλειψη πρώτης γραμμής του αρχείου"
+
+#: csv/import/csvimportdialog.cpp:430
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr "Παράλειψη πρώτης γραμμής του csv αρχείου κατά την εισαγωγή"
+
+#: csv/import/csvimportdialog.cpp:432
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+"Επιλέξτε το πλαίσιο αυτό αν θέλετε η εισαγωγή να αγνοήσει την πρώτη γραμμή "
+"των csv δεδομένων. Σε πολλές περιπτώσεις, η πρώτη γραμμή ενός csv αρχείου θα "
+"είναι μια γραμμή σχολίου η οποία περιγράφει τη σειρά των πεδίων των "
+"δεδομένων που περιέχει το αρχείο."
+
+#: csv/import/csvimportdialog.cpp:448
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "Εφαρμογή προτύπου..."
+
+#: csv/import/csvimportdialog.cpp:449
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "Αποθήκευση προτύπου..."
+
+#: csv/import/csvimportdialog.cpp:470
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "Τοπικό (%1)"
+
+#: csv/import/csvimportdialog.cpp:471
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "Latin1"
+
+#: csv/import/csvimportdialog.cpp:472
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "Unicode"
+
+#: csv/import/csvimportdialog.cpp:473
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "Microsoft Unicode"
+
+#: csv/import/csvimportdialog.cpp:574
+#, kde-format
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr "Πρέπει να αντιστοιχήσετε τουλάχιστον μία στήλη."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "Δεν υπάρχουν διαθέσιμα πρότυπα ακόμα."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "Δεν υπάρχουν διαθέσιμα πρότυπα"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "Όνομα προτύπου"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "Παρακαλώ εισάγετε ένα όνομα για το πρότυπο:"
+
+#: csv/import/csvimportdialog.cpp:699
+#, kde-format
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "Αδύνατο το άνοιγμα του αρχείου εισόδου."
+
+#: csv/import/qcsvreader.cpp:92
+#, kde-format
+msgid "Device is not open"
+msgstr "Η συσκευή δεν είναι ανοιχτή"
+
+#: csv/import/templateselectiondialog.cpp:182
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr "Επιθυμείτε πραγματικά τη διαγραφή του προτύπου « %1 »;"
+
+#: csv/import/templateselectiondialog.cpp:203
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "Επιλογή προτύπου"
+
+#: csv/import/templateselectiondialog.cpp:206
+#, kde-format
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr "Παρακαλώ επιλέξτε ένα πρότυπο που να ταιριάζει στο αρχείο CSV:"
+
+#: gmx/gmximportexportplugininterface.cpp:25
+#, kde-format
+msgid "GMX address book file (*.gmxa)"
+msgstr "Αρχείο βιβλίου διευθύνσεων GMX (*.gmxa)"
+
+#: gmx/gmximportexportplugininterface.cpp:40
+#, kde-format
+msgid "Import GMX file..."
+msgstr "Εισαγωγή αρχείου GMX..."
+
+#: gmx/gmximportexportplugininterface.cpp:41
+#, kde-format
+msgid "Import contacts from a GMX address book file."
+msgstr "Εισαγωγή επαφών από ένα GMX αρχείο βιβλίου διευθύνσεων."
+
+#: gmx/gmximportexportplugininterface.cpp:46
+#, kde-format
+msgid "Export GMX file..."
+msgstr "Εξαγωγή αρχείου GMX..."
+
+#: gmx/gmximportexportplugininterface.cpp:47
+#, kde-format
+msgid "Export contacts to a GMX address book file."
+msgstr "Εξαγωγή επαφών σε αρχείο βιβλίου διευθύνσεων GMX."
+
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:80
+#: windows-contacts/importwindowcontact.cpp:26
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt>Αδύνατο το άνοιγμα του <b>%1</b> για ανάγνωση.</qt>"
+
+#: gmx/gmximportexportplugininterface.cpp:455
+#, kde-format
+msgid "%1 is not a GMX address book file."
+msgstr "To %1 δεν είναι αρχείο GMX."
+
+#: ldap/ldapimportexportplugininterface.cpp:25
+#, kde-format
+msgid "Import From LDAP server..."
+msgstr "Εισαγωγή από εξυπηρετητή LDAP..."
+
+#: ldap/ldapimportexportplugininterface.cpp:26
+#, kde-format
+msgid "Import contacts from an LDAP server."
+msgstr "Εισαγωγή επαφών από έναν εξυπηρετητή LDAP."
+
+#: ldif/ldifimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Import LDIF file..."
+msgstr "Εισαγωγή αρχείου LDIF..."
+
+#: ldif/ldifimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Import contacts from an LDIF file."
+msgstr "Εισαγωγή επαφών από αρχείο LDIF."
+
+#: ldif/ldifimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Export LDIF file..."
+msgstr "Εξαγωγή αρχείου LDIF..."
+
+#: ldif/ldifimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Export contacts to an LDIF file."
+msgstr "Εξαγωγή επαφών σε ένα αρχείο LDIF."
+
+#: ldif/ldifimportexportplugininterface.cpp:110
+#, kde-format
+msgid "LDif Files"
+msgstr ""
+
+#: ldif/ldifimportexportplugininterface.cpp:151
+#, kde-format
+msgid "LDif Files (*.ldif)"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:22
+#, kde-format
+msgctxt "@title:group"
+msgid "Fields to be exported"
+msgstr "Πεδία για εξαγωγή"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Private fields"
+msgstr "Προσωπικά πεδία"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export private fields"
+msgstr "Προσωπικά πεδία"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:32
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's private fields to the "
+"vCard output file."
+msgstr ""
+"Επιλέξτε το πλαίσιο αυτό αν θέλετε να γίνει εξαγωγή των προσωπικών πεδίων "
+"της επαφής στο αρχείο εξόδου vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Business fields"
+msgstr "Επιχειρηματικά πεδία"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export business fields"
+msgstr "Εξαγωγή επιχειρηματικών πεδίων"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's business fields to the "
+"vCard output file."
+msgstr ""
+"Επιλέξτε το πλαίσιο αυτό αν θέλετε να γίνει εξαγωγή των επιχειρηματικών "
+"πεδίων της επαφής στο αρχείο εξόδου vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:43
+#, kde-format
+msgctxt "@option:check"
+msgid "Other fields"
+msgstr "Άλλα πεδία"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export other fields"
+msgstr "Εξαγωγή άλλων πεδίων"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:46
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's other fields to the vCard "
+"output file."
+msgstr ""
+"Επιλέξτε το πλαίσιο αυτό αν θέλετε να γίνει εξαγωγή των άλλων πεδίων της "
+"επαφής στο αρχείο εξόδου vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:50
+#, kde-format
+msgctxt "@option:check"
+msgid "Encryption keys"
+msgstr "Κλειδιά κρυπτογράφησης"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export encryption keys"
+msgstr "Εξαγωγή κλειδιών κρυπτογράφησης"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:53
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's encryption keys to the "
+"vCard output file."
+msgstr ""
+"Επιλέξτε το πλαίσιο αυτό αν θέλετε να γίνει εξαγωγή των κλειδιών "
+"κρυπτογράφησης της επαφής στο αρχείο εξόδου vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:57
+#, kde-format
+msgctxt "@option:check"
+msgid "Pictures"
+msgstr "Φωτογραφίες"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:58
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export pictures"
+msgstr "Εξαγωγή φωτογραφιών"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:60
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's picture to the vCard "
+"output file."
+msgstr ""
+"Επιλέξτε το πλαίσιο αυτό αν θέλετε να γίνει εξαγωγή της φωτογραφίας της "
+"επαφής στο αρχείο εξόδου vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:64
+#, kde-format
+msgctxt "@title:group"
+msgid "Export options"
+msgstr "Εξαγωγή επιλογών"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:70
+#, kde-format
+msgctxt "@option:check"
+msgid "Display name as full name"
+msgstr "Εμφάνιση πλήρους ονόματος"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export display name as full name"
+msgstr "Εξαγωγή πλήρους ονόματος"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:73
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's display name in the "
+"vCard's full name field.  This may be required to get the name shown "
+"correctly in GMail or Android."
+msgstr ""
+"Επιλέξτε το πλαίσιο αυτό αν θέλετε να γίνει εξαγωγή του ονόματος της επαφής "
+"πεδίο πλήρους ονόματος της vCard. Αυτό ίσως απαιτήσει τη σωστή παρουσίαση "
+"του ονόματος στο GMail ή στο Android."
+
+#: vcards/engine/vcardviewerdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Import vCard"
+msgstr "Εισαγωγή vCard"
+
+#: vcards/engine/vcardviewerdialog.cpp:51
+#, kde-format
+msgctxt "@info"
+msgid "Do you want to import this contact into your address book?"
+msgstr "Επιθυμείτε την εισαγωγή της επαφής αυτής στο βιβλίο διευθύνσεών σας;"
+
+#: vcards/engine/vcardviewerdialog.cpp:61
+#, kde-format
+msgctxt "@action:button"
+msgid "Import All..."
+msgstr "Εισαγωγή όλων..."
+
+#: vcards/vcardimportexportplugininterface.cpp:44
+#, kde-format
+msgid "Import vCard..."
+msgstr "Εισαγωγή vCard..."
+
+#: vcards/vcardimportexportplugininterface.cpp:45
+#, kde-format
+msgid "Import contacts from a vCard file."
+msgstr "Εισαγωγή επαφών από αρχείο vCard."
+
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, fuzzy, kde-format
+#| msgid "Export contacts to a vCard 3.0 file."
+msgid "Export contacts to a vCard 4.0 file."
+msgstr "Εξαγωγή επαφών σε ένα αρχείο vCard 3.0."
+
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, fuzzy, kde-format
+#| msgid "Export vCard 3.0..."
+msgid "Export vCard 4.0..."
+msgstr "Εξαγωγή vCard 3.0..."
+
+#: vcards/vcardimportexportplugininterface.cpp:58
+#, kde-format
+msgid "Export vCard 3.0..."
+msgstr "Εξαγωγή vCard 3.0..."
+
+#: vcards/vcardimportexportplugininterface.cpp:59
+#, kde-format
+msgid "Export contacts to a vCard 3.0 file."
+msgstr "Εξαγωγή επαφών σε ένα αρχείο vCard 3.0."
+
+#: vcards/vcardimportexportplugininterface.cpp:64
+#, kde-format
+msgid "Export vCard 2.1..."
+msgstr "Εξαγωγή vCard 2.1..."
+
+#: vcards/vcardimportexportplugininterface.cpp:65
+#, kde-format
+msgid "Export contacts to a vCard 2.1 file."
+msgstr "Εξαγωγή επαφών σε ένα αρχείο vCard 2.1."
+
+#: vcards/vcardimportexportplugininterface.cpp:113
+#, fuzzy, kde-format
+#| msgid ""
+#| "*.vcf|Vcard (*.vcf)\n"
+#| "*|all files (*)"
+msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
+msgstr ""
+"*.vcf|Vcard (*.vcf)\n"
+"*|όλα τα αρχεία (*)"
+
+#: vcards/vcardimportexportplugininterface.cpp:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Select vCard to Import"
+msgstr "Επιλογή vCard για εισαγωγή"
+
+#: vcards/vcardimportexportplugininterface.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "vCard Import Failed"
+msgstr "Η εισαγωγή vCard απέτυχε"
+
+#: vcards/vcardimportexportplugininterface.cpp:134
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Unable to access vCard:</para><para>%1</para>"
+msgstr "<para>Αδύνατη η πρόσβαση στη vCard:</para><para>%1</para>"
+
+#: vcards/vcardimportexportplugininterface.cpp:436
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have selected a list of contacts, shall they be exported to several "
+"files?"
+msgstr "Έχετε επιλέξει μια λίστα επαφών, να εξαχθούν σε πολλά αρχεία;"
+
+#: vcards/vcardimportexportplugininterface.cpp:439
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to One File"
+msgstr "Εξαγωγή σε ένα αρχείο"
+
+#: vcards/vcardimportexportplugininterface.cpp:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to Several Files"
+msgstr "Εξαγωγή σε πολλά αρχεία"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#, fuzzy, kde-format
+#| msgid "Import CSV file..."
+msgid "Import Windows Contact file..."
+msgstr "Εισαγωγή αρχείου CSV..."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#, fuzzy, kde-format
+#| msgid "Import contacts from an LDIF file."
+msgid "Import contacts from windows contact file."
+msgstr "Εισαγωγή επαφών από αρχείο LDIF."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#, kde-format
+msgid "Windows Contact file (*.contact)"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Select Address Book"
+#~ msgctxt "@title:window"
+#~ msgid "Select Address Book"
+#~ msgstr "Επιλογή βιβλίου διευθύνσεων"
+
+#~ msgid "Select the address book the imported contact(s) shall be saved in:"
+#~ msgstr ""
+#~ "Επιλέξτε το βιβλίο διευθύνσεων στο οποίο θα αποθηκευτούν οι επαφές που "
+#~ "εισάγετε:"
+
+#, fuzzy
+#~| msgid "Import Contacts"
+#~ msgctxt "@title:window"
+#~ msgid "Import Contacts"
+#~ msgstr "Εισαγωγή επαφών"
+
+#~ msgid "Importing one contact to %2"
+#~ msgid_plural "Importing %1 contacts to %2"
+#~ msgstr[0] "Εισαγωγή μιας επαφής στο %2"
+#~ msgstr[1] "Εισαγωγή %1 επαφών στο %2"
+
+#, fuzzy
+#~| msgid ""
+#~| "*.vcf|Vcard (*.vcf)\n"
+#~| "*|all files (*)"
+#~ msgid ""
+#~ "*.vcf|vCard (*.vcf)\n"
+#~ "*|all files (*)"
+#~ msgstr ""
+#~ "*.vcf|Vcard (*.vcf)\n"
+#~ "*|όλα τα αρχεία (*)"
+
+#~ msgctxt "@info"
+#~ msgid "No contacts were imported, due to errors with the vCards."
+#~ msgstr "Δεν εισήχθησαν επαφές εξαιτίας σφαλμάτων με τις vCards."
+
+#~ msgctxt "@info"
+#~ msgid "The vCard does not contain any contacts."
+#~ msgstr "Η vCard δεν περιέχει επαφές."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Τούσης Μανώλης, Γιώργος Κατσικάτσος"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "manolis@koppermind.homelinux.org, giorgos.katsikatsos@gmail.com"
+
+#, fuzzy
+#~| msgid "New Contact"
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact..."
+#~ msgstr "Νέα επαφή"
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact."
+#~ msgstr ""
+#~ "Θα σας παρουσιαστεί ένας διάλογος όπου θα μπορέσετε να διαμορφώσετε τις "
+#~ "συντομεύσεις πληκτρολογίου για την εφαρμογή αυτή."
+
+#, fuzzy
+#~| msgid "New Contact Group"
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact Group..."
+#~ msgstr "Νέα ομάδα επαφών"
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact "
+#~ "group."
+#~ msgstr ""
+#~ "Θα σας παρουσιαστεί ένας διάλογος όπου θα μπορέσετε να διαμορφώσετε τις "
+#~ "συντομεύσεις πληκτρολογίου για την εφαρμογή αυτή."
+
+#~ msgid "KAddressBook"
+#~ msgstr "KAddressBook"
+
+#~ msgid "The KDE Address Book Application"
+#~ msgstr "Το βιβλίο διευθύνσεων του KDE"
+
+#, fuzzy
+#~| msgid "Copyright © 2007–2014 KAddressBook authors"
+#~ msgid "Copyright © 2007–2016 KAddressBook authors"
+#~ msgstr "Πνευματικά Δικαιώματα © 2007–2014, οι συγγραφείς του KAddressBook"
+
+#~ msgid "Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgid "Current maintainer"
+#~ msgstr "Τρέχων συντηρητής"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
+
+#~ msgid "Previous maintainer"
+#~ msgstr "Προηγούμενος συντηρητής"
+
+#, fuzzy
+#~| msgctxt "@item:inlistbox Quote character option"
+#~| msgid "None"
+#~ msgid "(None)"
+#~ msgstr "Κανένα"
+
+#, fuzzy
+#~| msgid "Laurent Montel"
+#~ msgid "(c), 2016 Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgctxt "@item Undefined import field type"
+#~ msgid "Undefined"
+#~ msgstr "Μη ορισμένο"
+
+#~ msgctxt "The wedding anniversary of a contact"
+#~ msgid "Anniversary"
+#~ msgstr "Επέτειος"
+
+#~ msgctxt "Preferred email address"
+#~ msgid "EMail (preferred)"
+#~ msgstr "Ηλ. αλληλογραφία (προτιμώμενη)"
+
+#~ msgctxt "Second email address"
+#~ msgid "EMail (2)"
+#~ msgstr "Ηλ. αλληλογραφία (2)"
+
+#~ msgctxt "Third email address"
+#~ msgid "EMail (3)"
+#~ msgstr "Ηλ. αλληλογραφία (3)"
+
+#~ msgctxt "Fourth email address"
+#~ msgid "EMail (4)"
+#~ msgstr "Ηλ. αλληλογραφία (4)"
+
+#~ msgid "Blog Feed"
+#~ msgstr "Τροφοδοσία ιστολογίου"
+
+#~ msgid "Profession"
+#~ msgstr "Επάγγελμα"
+
+#~ msgid "Office"
+#~ msgstr "Γραφείο"
+
+#~ msgid "Manager"
+#~ msgstr "Υπεύθυνος"
+
+#~ msgid "Assistant"
+#~ msgstr "Βοηθός"
+
+#~ msgid "Spouse"
+#~ msgstr "Σύζυγος"
+
+#~ msgid "Select Contacts"
+#~ msgstr "Επιλογή επαφών"
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts"
+#~ msgstr "Όλες οι επαφές"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from all your address books"
+#~ msgstr "Όλες οι επαφές από όλα τα βιβλία διευθύνσεων"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option you want to select all your contacts from all your "
+#~ "address books."
+#~ msgstr ""
+#~ "Ενεργοποιήστε αυτήν την επιλογή αν θέλετε να επιλέξετε όλες τις επαφές "
+#~ "σας από όλα τα βιβλία σας με τις διευθύνσεις."
+
+#~ msgctxt "@option:radio"
+#~ msgid "Selected contacts"
+#~ msgstr "Επιλεγμένες επαφές"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Only the contacts currently selected"
+#~ msgstr "Μόνο οι επαφές που επελέγησαν τώρα"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want only the contacts you have already "
+#~ "selected in the graphical interface."
+#~ msgstr ""
+#~ "Ενεργοποιήστε αυτήν την επιλογή αν θέλετε μόνο τις επαφές τις οποίες "
+#~ "έχετε ήδη επιλέξει στο γραφικό περιβάλλον."
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts from:"
+#~ msgstr "Όλες οι επαφές από:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from a chosen address book"
+#~ msgstr "Όλες οι επαφές από ένα επιλεγμένο βιβλίο διευθύνσεων"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want to select all the contacts from only one "
+#~ "of your address books.  Once this option is clicked you will be provided "
+#~ "a drop down box listing all those address books and permitted to select "
+#~ "the one you want."
+#~ msgstr ""
+#~ "Ενεργοποιήστε την επιλογή αυτή αν θέλετε να επιλέξετε όλες τις επαφές από "
+#~ "ένα μόνο από τα βιβλία σας των διευθύνσεων. Μόλις γίνει κλικ στην επιλογή "
+#~ "αυτή θα παρουσιαστεί ένα πλαίσιο επιλογών με όλα τα βιβλία διευθύνσεων "
+#~ "και θα σας επιτρέψει να επιλέξετε εκείνο που θέλετε."
+
+#~ msgctxt "@option:check"
+#~ msgid "Include Subfolders"
+#~ msgstr "Συμπερίληψη υποφακέλων"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select all subfolders including the top-level folder"
+#~ msgstr "Επιλογή όλων των υποφακέλων μαζί και του φακέλου κορυφής"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Check this box if you want to select all contacts from this folder, "
+#~ "including all subfolders.  If you only want the contacts from the top-"
+#~ "level folder then leave this box unchecked."
+#~ msgstr ""
+#~ "Ενεργοποιήστε το πλαίσιο αυτό αν θέλετε να επιλέξετε όλες τις επαφές από "
+#~ "το φάκελο αυτό.  Αν θέλετε μόνο τις επαφές από το φάκελο κορυφής τότε μην "
+#~ "επιλέξετε το πλαίσιο αυτό."
+
+#~ msgctxt "@action:button Previous contact"
+#~ msgid "Previous"
+#~ msgstr "Προηγούμενη"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the previous contact in the list"
+#~ msgstr "Μετακίνηση στην προηγούμενη επαφή στη λίστα"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the previous contact in the list."
+#~ msgstr ""
+#~ "Πιέστε αυτό το κουμπί για να μετακινηθείτε στην προηγούμενη επαφή στη "
+#~ "λίστα."
+
+#~ msgctxt "@action:button Next contact"
+#~ msgid "Next"
+#~ msgstr "Επόμενη"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the next contact in the list"
+#~ msgstr "Μετακίνηση στην επόμενη επαφή στη λίστα"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the next contact in the list."
+#~ msgstr ""
+#~ "Πιέστε αυτό το κουμπί για να μετακινηθείτε στην επόμενη επαφή στη λίστα."
+
+#~ msgctxt "@info:status"
+#~ msgid "%1 out of %2"
+#~ msgstr "%1 από %2"
+
+#~ msgid "Import the given file"
+#~ msgstr "Εισαγωγή του δοσμένου αρχείου"
+
+#, fuzzy
+#~| msgid "files or urls. The user will be asked whether to import."
+#~ msgid "Files or URLs. The user will be asked whether to import."
+#~ msgstr "αρχεία ή url. Ο χρήστης θα ερωτηθεί αν θα εισαχθούν."
+
+#~ msgid "&Configure KAddressBook..."
+#~ msgstr "&Διαμόρφωση KAddressBook..."
+
+#~ msgid "&File"
+#~ msgstr "&Αρχείο"
+
+#~ msgid "&New"
+#~ msgstr "&Νέο"
+
+#~ msgid "&Import"
+#~ msgstr "&Εισαγωγή"
+
+#~ msgid "&Export"
+#~ msgstr "Ε&ξαγωγή"
+
+#~ msgid "&Edit"
+#~ msgstr "&Επεξεργασία"
+
+#, fuzzy
+#~| msgid "Location"
+#~ msgid "&Action"
+#~ msgstr "Τοποθεσία"
+
+#~ msgid "&View"
+#~ msgstr "&Προβολή"
+
+#~ msgid "&Settings"
+#~ msgstr "&Ρυθμίσεις"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Κύρια γραμμών εργαλείων"
+
+#~ msgctxt "@label Search contacts in list"
+#~ msgid "Search...<%1>"
+#~ msgstr "Αναζήτηση...<%1>"
+
+#~ msgid "&Themes"
+#~ msgstr "&Θέματα"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Print the complete address book or a selected number of contacts."
+#~ msgstr "Εκτύπωση ολόκληρου του βιβλίου διευθύνσεων ή επιλεγμένων επαφών."
+
+#~ msgid "Quick search"
+#~ msgstr "Γρήγορη αναζήτηση"
+
+#~ msgid "Select All"
+#~ msgstr "Επιλογή όλων"
+
+#~ msgid "Select all contacts in the current address book view."
+#~ msgstr "Επιλογή όλων των επαφών του παρόντος βιβλίου διευθύνσεων."
+
+#~ msgid "Show QR Codes"
+#~ msgstr "Εμφάνιση των κωδικών QR"
+
+#~ msgid "Show QR Codes in the contact."
+#~ msgstr "Εμφάνιση κωδικών QR στην επαφή."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Simple (one column)"
+#~ msgstr "Απλό (μία στήλη)"
+
+#~ msgid "Show a simple mode of the address book view."
+#~ msgstr "Εμφάνιση απλής προβολής του βιβλίου διευθύνσεων."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Two Columns"
+#~ msgstr "Δύο στήλες"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Three Columns"
+#~ msgstr "Τρεις στήλες"
+
+#~ msgid "Set Focus to Quick Search"
+#~ msgstr "Ορισμός εστίασης στη γρήγορη αναζήτηση"
+
+#~ msgid "Address Book"
+#~ msgstr "Βιβλίο διευθύνσεων"
+
+#~ msgid "Print Contacts"
+#~ msgstr "Εκτύπωση επαφών"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can configure the "
+#~ "application-wide shortcuts."
+#~ msgstr ""
+#~ "Θα σας παρουσιαστεί ένας διάλογος όπου θα μπορέσετε να διαμορφώσετε τις "
+#~ "συντομεύσεις πληκτρολογίου για την εφαρμογή αυτή."
+
+#~ msgid "Full Name"
+#~ msgstr "Πλήρες όνομα"
+
+#~ msgid "Family Name"
+#~ msgstr "Επώνυμο"
+
+#~ msgid "Given Name"
+#~ msgstr "Όνομα"
+
+#~ msgid "Home Address"
+#~ msgstr "Διεύθυνση οικίας"
+
+#~ msgid "Business Address"
+#~ msgstr "Διεύθυνση εργασίας"
+
+#~ msgid "Phone Numbers"
+#~ msgstr "Αριθμοί τηλεφώνου"
+
+#~ msgid "Preferred EMail"
+#~ msgstr "Προτιμώμενη ηλ. αλληλογραφία"
+
+#~ msgid "All EMails"
+#~ msgstr "Όλες οι διευθύνσεις ηλ. αλληλογραφίας"
+
+#~ msgid "Compact Style"
+#~ msgstr "Συμπαγές στιλ"
+
+#~ msgid "Setting up document"
+#~ msgstr "Ρύθμιση εγγράφου"
+
+#~ msgid "Printing"
+#~ msgstr "Εκτύπωση"
+
+#~ msgctxt "Finished printing"
+#~ msgid "Done"
+#~ msgstr "Έγινε"
+
+#~ msgid "Compact Printing Style"
+#~ msgstr "Συμπαγές στιλ εκτύπωσης"
+
+#~ msgid "Appearance"
+#~ msgstr "Εμφάνιση"
+
+#~ msgid "Fields"
+#~ msgstr "Πεδία"
+
+#~ msgid ""
+#~ "Print the home address, with home phone number and mobile phone number"
+#~ msgstr ""
+#~ "Εκτύπωση της διεύθυνσης κατοικίας, με αριθμό σταθερού και κινητού "
+#~ "τηλεφώνου"
+
+#~ msgid "with home address"
+#~ msgstr "με διεύθυνση κατοικίας"
+
+#~ msgid "print the business address, with business phone number"
+#~ msgstr "εκτύπωση της διεύθυνσης εργασίας, με αριθμό τηλεφώνου"
+
+#~ msgid "with business address"
+#~ msgstr "με διεύθυνση εργασίας"
+
+#~ msgid "Print the birthday"
+#~ msgstr "Εκτύπωση ημέρας γενεθλίων"
+
+#~ msgid "with birthday"
+#~ msgstr "με ημέρα γενεθλίων"
+
+#~ msgid "Print the e-mail and e-mail2 fields"
+#~ msgstr "Εκτύπωση των πεδίων e-mail και e-mail2"
+
+#~ msgid "with e-mail"
+#~ msgstr "με e-mail"
+
+#~ msgid "the first color, if alternating color is checked"
+#~ msgstr "το πρώτο χρώμα, αν επιλέχθηκε εναλλακτικό χρώμα"
+
+#~ msgid "first color"
+#~ msgstr "πρώτο χρώμα"
+
+#~ msgid "the second color, if alternating color is checked"
+#~ msgstr "το δεύτερο χρώμα, αν επιλέχθηκε εναλλακτικό χρώμα"
+
+#~ msgid "second color"
+#~ msgstr "δεύτερο χρώμα"
+
+#~ msgid "Change the background color of every row"
+#~ msgstr "Να αλλάξει το χρώμα του φόντου σε κάθε γραμμή"
+
+#~ msgid "Alternating the background color"
+#~ msgstr "Εναλλάσσει το χρώμα του φόντου"
+
+#~ msgid "Organization:"
+#~ msgstr "Οργανισμός:"
+
+#~ msgid "Email address:"
+#~ msgstr "Διεύθυνση ηλ. αλληλογραφίας:"
+
+#~ msgid "Email addresses:"
+#~ msgstr "Διευθύνσεις ηλ. αλληλογραφίας:"
+
+#~ msgid "Telephone:"
+#~ msgstr "Τηλέφωνο:"
+
+#~ msgid "Telephones:"
+#~ msgstr "Τηλέφωνα:"
+
+#~ msgid "Web page:"
+#~ msgstr "Ιστοσελίδα:"
+
+#~ msgid "Domestic Address"
+#~ msgstr "Διεύθυνση κατοικίας"
+
+#~ msgid "International Address"
+#~ msgstr "Διεύθυνση στο εξωτερικό"
+
+#~ msgid "Postal Address"
+#~ msgstr "Ταχυδρομική διεύθυνση"
+
+#~ msgid "Parcel Address"
+#~ msgstr "Διεύθυνση αποστολής δεμάτων"
+
+#~ msgid "Work Address"
+#~ msgstr "Διεύθυνση εργασίας"
+
+#~ msgid "Preferred Address"
+#~ msgstr "Προτιμώμενη διεύθυνση"
+
+#~ msgid "Notes:"
+#~ msgstr "Σημειώσεις:"
+
+#~ msgid "Detailed Print Style - Appearance"
+#~ msgstr "Λεπτομερές στιλ εκτύπωσης - Εμφάνιση"
+
+#~ msgid "Setting up colors"
+#~ msgstr "Ρύθμιση χρωμάτων"
+
+#~ msgid "Detailed Style"
+#~ msgstr "Λεπτομερές στυλ"
+
+#~ msgid "Appearance Page"
+#~ msgstr "Σελίδα εμφάνισης"
+
+#~ msgid "Contact Headers"
+#~ msgstr "Κεφαλίδες επαφής"
+
+#~ msgid "Select the headline text background color"
+#~ msgstr "Επιλογή χρώματος φόντου του κειμένου της επικεφαλίδας"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline background color."
+#~ msgstr ""
+#~ "Πατήστε αυτό το κουμπί για να ξεκινήσετε έναν επιλογέα χρώματος που θα "
+#~ "σας επιτρέψει να ορίσετε χρώμα το χρώμα του φόντου της επικεφαλίδας."
+
+#~ msgid "Headline background color:"
+#~ msgstr "Χρώμα φόντου επικεφαλίδας:"
+
+#~ msgid "Headline text color:"
+#~ msgstr "Χρώμα γραμματοσειράς επικεφαλίδας:"
+
+#~ msgid "Select the headline text color"
+#~ msgstr "Επιλογή χρώματος του κειμένου της επικεφαλίδας"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline text."
+#~ msgstr ""
+#~ "Πατήστε αυτό το κουμπί για να ξεκινήσετε έναν επιλογέα χρώματος που θα "
+#~ "σας επιτρέψει να ορίσετε χρώμα το χρώμα του κειμένου της επικεφαλίδας."
+
+#~ msgid "Mike's Printing Style"
+#~ msgstr "Στυλ εκτύπωσης « Mike »"
+
+#~ msgid "Which contacts do you want to print?"
+#~ msgstr "Ποιες επαφές επιθυμείτε να εξάγετε;"
+
+#~ msgid "Choose Contacts to Print"
+#~ msgstr "Επιλέξτε τις επαφές που επιθυμείτε να τυπώσετε"
+
+#~ msgid "Choose Printing Style"
+#~ msgstr "Επιλέξτε το στυλ εκτύπωσης"
+
+#~ msgid "Print Progress"
+#~ msgstr "Πρόοδος εκτύπωσης"
+
+#~ msgid "Printing: Progress"
+#~ msgstr "Εκτύπωση: Πρόοδος"
+
+#~ msgid "Progress"
+#~ msgstr "Πρόοδος"
+
+#~ msgid "Print Contact's Information"
+#~ msgstr "Εκτύπωση επαφών"
+
+#~ msgid "Print contact phone numbers"
+#~ msgstr "Εκτύπωση αριθμών τηλεφώνου των επαφών"
+
+#~ msgid "Check this box if you want contact phone numbers to be printed."
+#~ msgstr ""
+#~ "Επιλέξτε το πλαίσιο αυτό αν θέλετε οι αριθμοί τηλεφώνου των επαφών να "
+#~ "εκτυπώνονται."
+
+#~ msgid "Phone numbers"
+#~ msgstr "Αριθμοί τηλεφώνου"
+
+#~ msgid "Print contact email addresses"
+#~ msgstr "Εκτύπωση διευθύνσεων ηλ. αλληλογραφίας των επαφών"
+
+#~ msgid "Check this box if you want contact email addresses to be printed."
+#~ msgstr ""
+#~ "Επιλέξτε το πλαίσιο αυτό αν θέλετε οι διευθύνσεις ηλεκτρονικής "
+#~ "αλληλογραφίας των επαφών να εκτυπώνονται."
+
+#~ msgid "Email addresses"
+#~ msgstr "Διευθύνσεις ηλ. αλληλογραφίας"
+
+#~ msgid "Print contact street addresses"
+#~ msgstr "Εκτύπωση οδών ταχυδρομικών διευθύνσεων των επαφών"
+
+#~ msgid "Check this box if you want contact street addresses to be printed."
+#~ msgstr ""
+#~ "Επιλέξτε το πλαίσιο αυτό αν θέλετε οι οδοί στις ταχυδρομικές διευθύνσεις "
+#~ "των επαφών να εκτυπώνονται."
+
+#~ msgid "Postal addresses"
+#~ msgstr "Ταχυδρομικές διευθύνσεις"
+
+#~ msgid "Print contact organizations"
+#~ msgstr "Εκτύπωση οργανισμών των επαφών"
+
+#~ msgid "Check this box if you want contact organizations to be printed."
+#~ msgstr ""
+#~ "Επιλέξτε το πλαίσιο αυτό αν θέλετε οι οργανισμοί των επαφών να "
+#~ "εκτυπώνονται."
+
+#~ msgid "Organization"
+#~ msgstr "Οργανισμός"
+
+#~ msgid "Print contact birthdays"
+#~ msgstr "Εκτύπωση ημερών γενεθλίων των επαφών"
+
+#~ msgid "Check this box if you want contact birthdays to be printed."
+#~ msgstr ""
+#~ "Επιλέξτε το πλαίσιο αυτό αν θέλετε οι ημέρες γενεθλίων των επαφών να "
+#~ "εκτυπώνονται."
+
+#~ msgid "Birthday"
+#~ msgstr "Γενέθλια"
+
+#~ msgid "Print contact notes"
+#~ msgstr "Εκτύπωση σημειώσεων των επαφών"
+
+#~ msgid "Check this box if you want contact notes to be printed."
+#~ msgstr ""
+#~ "Επιλέξτε το πλαίσιο αυτό αν θέλετε οι σημειώσεις των επαφών να "
+#~ "εκτυπώνονται."
+
+#~ msgid "Note"
+#~ msgstr "Σημείωση"
+
+#~ msgid "Ring Binder Printing Style - Appearance"
+#~ msgstr "Εκτύπωση στιλ Ring Binder"
+
+#~ msgid "Setting up fields"
+#~ msgstr "Ρύθμιση πεδίων"
+
+#~ msgid "Printout for Ring Binders"
+#~ msgstr "Εκτύπωση κατάλληλη για ντοσιέ"
+
+#~ msgctxt "@item:inlistbox Ascending sort order"
+#~ msgid "Ascending"
+#~ msgstr "Αύξουσα"
+
+#~ msgctxt "@item:inlistbox Descending sort order"
+#~ msgid "Descending"
+#~ msgstr "Φθίνουσα"
+
+#~ msgctxt "@label"
+#~ msgid "(No preview available.)"
+#~ msgstr "(Δε διατίθεται προεπισκόπηση.)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Choose Printing Style"
+#~ msgstr "Επιλέξτε στιλ εκτύπωσης"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "What should the print look like?\n"
+#~ "KAddressBook has several printing styles, designed for different "
+#~ "purposes.\n"
+#~ "Choose the style that suits your needs below."
+#~ msgstr ""
+#~ "Πώς θα φαίνεται η εκτύπωση;\n"
+#~ "Το KAddressBook έχει διάφορα στιλ εκτύπωσης, σχεδιασμένα για "
+#~ "διαφορετικούς σκοπούς.\n"
+#~ "Επιλέξτε το στιλ εκτύπωσης που εσείς επιθυμείτε."
+
+#~ msgctxt "@title:group"
+#~ msgid "Sorting"
+#~ msgstr "Ταξινόμηση"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Criterion:"
+#~ msgstr "Κριτήριο:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the primary sort field"
+#~ msgstr "Επιλέξτε το πρωτεύον πεδίο ταξινόμησης"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "From this list you can select the field on which your contacts are sorted "
+#~ "in the print output.  Use the sorting order option to determine if the "
+#~ "sort will be in ascending or descending order."
+#~ msgstr ""
+#~ "Από αυτήν τη λίστα μπορείτε να επιλέξετε το πεδίο με βάση το οποίο οι "
+#~ "επαφές σας ταξινομούνται στην εκτύπωση.  Χρησιμοποιήστε την επιλογή της "
+#~ "σειράς ταξινόμησης για να αποφασίσετε αν η σειρά ταξινόμησης θα είναι "
+#~ "αύξουσα ή φθίνουσα."
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Order:"
+#~ msgstr "Σειρά:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the sorting order"
+#~ msgstr "Επιλέξτε τη σειρά ταξινόμησης"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose if you want to sort your contacts in ascending or descending "
+#~ "order. Use the sorting criterion option to specify on which contact field "
+#~ "the sorting will be performed."
+#~ msgstr ""
+#~ "Επιλέξτε αν θέλετε να ταξινομήσετε τις επαφές σας σε αύξουσα ή φθίνουσα "
+#~ "σειρά. Χρησιμοποιήστε το κριτήριο ταξινόμησης για να ορίσετε το πεδίο με "
+#~ "βάση το οποίο θα πραγματοποιηθεί η ταξινόμηση."
+
+#~ msgctxt "@title:group"
+#~ msgid "Print Style"
+#~ msgstr "Στιλ εκτύπωσης"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the print style"
+#~ msgstr "Επιλέξτε στιλ εκτύπωσης"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose your desired printing style. See the preview image to help you "
+#~ "decide."
+#~ msgstr ""
+#~ "Επιλέξτε το επιθυμητό στιλ εκτύπωσης. Δείτε την εικόνα προεπισκόπησης για "
+#~ "να σας βοηθήσει να αποφασίσετε."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Search contacts in list"
+#~ msgstr "Αναζήτηση επαφών στη λίστα"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Start typing a search string in this box and the list of contacts "
+#~ "matching that string will be displayed.  This is a quick way of searching "
+#~ "for contacts of interest."
+#~ msgstr ""
+#~ "Αρχίστε να πληκτρολογείτε μια συμβολοσειρά αναζήτησης στο πλαίσιο αυτό "
+#~ "και θα εμφανιστεί η λίστα με τις επαφές που ταιριάζουν με τη "
+#~ "συμβολοσειρά. Αυτός είναι ένας γρήγορος τρόπος αναζήτησης των επαφών που "
+#~ "σας ενδιαφέρουν."
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sync Contacts"
+#~ msgstr "Επιλογή επαφών"
+
+#, fuzzy
+#~| msgid "Cut Group"
+#~| msgid_plural "Cut %1 Groups"
+#~ msgid "Group"
+#~ msgstr "Αποκοπή ομάδας"
+
+#, fuzzy
+#~| msgid "Email address:"
+#~ msgid "Email address"
+#~ msgstr "Διεύθυνση ηλ. αλληλογραφίας:"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image"
+#~ msgstr "Αποθήκευση προτύπου..."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image URL"
+#~ msgstr "Αποθήκευση προτύπου..."
+
+#~ msgid "Email:"
+#~ msgstr "Email:"
+
+#, fuzzy
+#~| msgctxt "@action:button Start searching"
+#~| msgid "&Search"
+#~ msgid "Search"
+#~ msgstr "&Αναζήτηση"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "No email found for this contact."
+#~ msgstr "Επιλέξτε τουλάχιστον μία επαφή προς εξαγωγή."
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Only the contacts currently selected"
+#~ msgid "A contact group was selected."
+#~ msgstr "Μόνο οι επαφές που επελέγησαν τώρα"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "You have not selected any contacts."
+#~ msgstr "Επιλέξτε τουλάχιστον μία επαφή προς εξαγωγή."
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "No emails found in selected contacts."
+#~ msgstr "Επιλέξτε τουλάχιστον μία επαφή προς εξαγωγή."
+
+#, fuzzy
+#~| msgid "Import vCard..."
+#~ msgid "Send vCards..."
+#~ msgstr "Εισαγωγή vCard..."
+
+#~ msgid "Merge Contacts..."
+#~ msgstr "Συγχώνευση επαφών..."
+
+#~ msgid "Search Duplicate Contacts..."
+#~ msgstr "Συγχώνευση αντιγράφων επαφών..."
+
+#~ msgid "Select Contacts to merge"
+#~ msgstr "Επιλογή επαφών για συγχώνευση"
+
+#, fuzzy
+#~| msgid "Select contacts that you want really to merge:"
+#~ msgid "Select contacts that you really want to merge:"
+#~ msgstr "Επιλογή των επαφών που θέλετε πραγματικά να συγχωνεύσετε:"
+
+#, fuzzy
+#~| msgid "Select addressbook where to store merged contact:"
+#~ msgid "Select the addressbook in which to store merged contacts:"
+#~ msgstr ""
+#~ "Επιλογή βιβλίου διευθύνσεων για την αποθήκευση της συγχωνευμένης επαφής:"
+
+#~ msgid "merge"
+#~ msgstr "συγχώνευση"
+
+#, fuzzy
+#~| msgid "No duplicate contact found."
+#~ msgid "Duplicate contact %1"
+#~ msgstr "Δε βρέθηκε αντίγραφο επαφής."
+
+#, fuzzy
+#~| msgid "Contact"
+#~ msgid "Contacts"
+#~ msgstr "Επαφή"
+
+#, fuzzy
+#~| msgid "Select Address Book"
+#~ msgid "Select AddressBook:"
+#~ msgstr "Επιλογή βιβλίου διευθύνσεων"
+
+#, fuzzy
+#~| msgid "merge"
+#~ msgid "Merge"
+#~ msgstr "συγχώνευση"
+
+#~ msgid "You must select at least two elements."
+#~ msgstr "Πρέπει να διαλέξετε τουλάχιστον δυο στοιχεία."
+
+#, fuzzy
+#~| msgid "No duplicate contact found."
+#~ msgid "No duplicated contact found."
+#~ msgstr "Δε βρέθηκε αντίγραφο επαφής."
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Only the contacts currently selected"
+#~ msgid "No contacts selected."
+#~ msgstr "Μόνο οι επαφές που επελέγησαν τώρα"
+
+#, fuzzy
+#~| msgid "Custom"
+#~ msgid "Customize"
+#~ msgstr "Προσαρμοσμένο"
+
+#, fuzzy
+#~| msgid "Print Contact's Information"
+#~ msgid "Missing Selected Information"
+#~ msgstr "Εκτύπωση επαφών"
+
+#, fuzzy
+#~| msgctxt "@item Undefined import field type"
+#~| msgid "Undefined"
+#~ msgid "(Undefined)"
+#~ msgstr "Μη ορισμένο"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>When trying to read the vCard, there was an error opening the file "
+#~ "<filename>%1</filename>:</para><para>%2</para>"
+#~ msgstr ""
+#~ "<para>Κατά την προσπάθεια ανάγνωσης της vCard, υπήρξε ένα σφάλμα "
+#~ "ανοίγματος του αρχείου <filename>%1</filename>:</para><para>%2</para>"
+
+#~ msgid "Merged Contact"
+#~ msgstr "Συγχωνευμένη επαφή"
+
+#~ msgid "You selected %1 and some item has not the same name"
+#~ msgstr "Επιλέξατε το %1 και δεν υπάρχει κάποιο αντικείμενο με το ίδιο όνομα"
+
+#, fuzzy
+#~| msgid "Error during merge contacts."
+#~ msgid "Error while merging contacts."
+#~ msgstr "Σφάλμα κατά την συγχώνευση των επαφών."
+
+#~ msgid "Merge contact"
+#~ msgstr "Συγχώνευση επαφής"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select vCard Fields"
+#~ msgstr "Επιλογή πεδίων vCard"
+
+#~ msgid "Search potential duplicate contacts"
+#~ msgstr "Αναζήτηση πιθανών αντιγράφων επαφών"
+
+#~ msgid "Potential Duplicate Contacts"
+#~ msgstr "Πιθανά αντίγραφα επαφών"
+
+#~ msgid "You selected %1"
+#~ msgstr "Επιλέξατε το %1"
+
+#~ msgid "Kontact integration"
+#~ msgstr "Ενσωμάτωση του Kontact"
+
+#, fuzzy
+#~| msgid "Compact Printing Style"
+#~ msgid "Grantlee Printing Style"
+#~ msgstr "Συμπαγές στιλ εκτύπωσης"
+
+#~ msgid "Emails"
+#~ msgstr "Μηνύματα αλληλογραφίας"
+
+#~ msgid "Website"
+#~ msgstr "Ιστοχώρος"
+
+#~ msgid "Department"
+#~ msgstr "Τμήμα"
+
+#~ msgid "Manager's Name"
+#~ msgstr "Όνομα διευθυντή"
+
+#~ msgid "Assistant's Name"
+#~ msgstr "Όνομα βοηθού"
+
+#~ msgid "Partner's Name"
+#~ msgstr "Όνομα συντρόφου"
+
+#~ msgid "IM Address"
+#~ msgstr "Διεύθυνση IM"
+
+#~ msgctxt "Boolean value"
+#~ msgid "yes"
+#~ msgstr "ναι"
+
+#~ msgctxt "Boolean value"
+#~ msgid "no"
+#~ msgstr "όχι"
+
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "Επιθυμείτε την αντικατάσταση του αρχείου \"%1\""
+
+#~ msgctxt "@info"
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "Επιθυμείτε την αντικατάσταση του αρχείου \"%1\""
+
+#~ msgid "Show Simple View"
+#~ msgstr "Εμφάνιση απλής προβολής"
+
+#~ msgid "Click on the color button to change the header's text color."
+#~ msgstr ""
+#~ "Πατήστε το κουμπί αλλαγής χρώματος για να αλλάξετε το χρώμα "
+#~ "γραμματοσειρας της επικεφαλίδας."
+
+#~ msgid "Select the fields which shall be exported in the vCard."
+#~ msgstr "Επιλέξτε τα πεδία που θα εξαχθούν στη vCard."
+
+#~ msgid "Show Address Books View"
+#~ msgstr "Εμφάνιση προβολών του βιβλίου διευθύνσεων"
+
+#~ msgid "Toggle whether the address books view shall be visible."
+#~ msgstr "Εμφάνιση/απόκρυψη προβολής του βιβλίου διευθύνσεων."
+
+#~ msgid "Hide Address Books View"
+#~ msgstr "Απόκρυψη προβολής των βιβλίων διευθύνσεων"
+
+#~ msgid "Show Contacts View"
+#~ msgstr "Εμφάνιση προβολής επαφών"
+
+#~ msgid "Toggle whether the contacts view shall be visible."
+#~ msgstr "Εμφάνιση/απόκρυψη προβολής των επαφών."
+
+#~ msgid "Hide Contacts View"
+#~ msgstr "Απόκρυψη προβολής επαφών"
+
+#~ msgid "Show Details View"
+#~ msgstr "Εμφάνιση λεπτομερούς προβολής"
+
+#~ msgid "Toggle whether the details view shall be visible."
+#~ msgstr "Εμφάνιση/απόκρυψη λεπτομερούς προβολής των επαφών."
+
+#~ msgid "Hide Details View"
+#~ msgstr "Απόκρυψη λεπτομερούς προβολής"
+
+#~ msgid "Add Address Book Folder..."
+#~ msgstr "Προσθήκη φακέλου στο βιβλίο διευθύνσεων..."
+
+#~ msgid ""
+#~ "Add a new address book folder to the currently selected address book "
+#~ "folder."
+#~ msgstr ""
+#~ "Προσθήκη νέου φακέλου στον επιλεγμένο φάκελο του βιβλίου διευθύνσεων."
+
+#~ msgid "Copy Address Book Folder"
+#~ msgid_plural "Copy %1 Address Book Folders"
+#~ msgstr[0] "Αντιγραφή φακέλου του βιβλίου διευθύνσεων"
+#~ msgstr[1] "Αντιγραφή %1 φακέλων του βιβλίων διευθύνσεων"
+
+#~ msgid "Copy the selected address book folders to the clipboard."
+#~ msgstr ""
+#~ "Αντιγραφή των επιλεγμένων φακέλων του βιβλίου διευθύνσεων στο πρόχειρο."
+
+#~ msgid "Delete Address Book Folder"
+#~ msgstr "Διαγραφή φακέλου του βιβλίου διευθύνσεων"
+
+#~ msgid "Delete the selected address book folders from the address book."
+#~ msgstr "Διαγραφή των επιλεγμένων φακέλων από το βιβλίο διευθύνσεων."
+
+#, fuzzy
+#~| msgid "Cut Address Book Folder"
+#~| msgid_plural "Cut %1 Address Book Folders"
+#~ msgid "Update Address Book Folder"
+#~ msgstr "Αποκοπή φακέλου από το βιβλίου διευθύνσεων"
+
+#, fuzzy
+#~| msgid ""
+#~| "Open a dialog to edit the properties of the selected address book folder."
+#~ msgid "Update the content of the address book folder"
+#~ msgstr "Επεξεργασία ιδιοτήτων του επιλεγμένου φακέλου."
+
+#~ msgid "Cut Address Book Folder"
+#~ msgid_plural "Cut %1 Address Book Folders"
+#~ msgstr[0] "Αποκοπή φακέλου από το βιβλίου διευθύνσεων"
+#~ msgstr[1] "Αποκοπή %1 φακέλων από το βιβλίων διευθύνσεων"
+
+#~ msgid "Cut the selected address book folders from the address book."
+#~ msgstr "Αποκοπή των επιλεγμένων φακέλων από το βιβλίο διευθύνσεων."
+
+#~ msgid "Folder Properties..."
+#~ msgstr "Ιδιότητες φακέλου..."
+
+#~ msgid ""
+#~ "Open a dialog to edit the properties of the selected address book folder."
+#~ msgstr "Επεξεργασία ιδιοτήτων του επιλεγμένου φακέλου."
+
+#~ msgid "Copy Contact"
+#~ msgid_plural "Copy %1 Contacts"
+#~ msgstr[0] "Αντιγραφή επαφής"
+#~ msgstr[1] "Αντιγραφή %1 επαφών"
+
+#~ msgid "Delete Contact"
+#~ msgid_plural "Delete %1 Contacts"
+#~ msgstr[0] "Διαγραφή επαφής"
+#~ msgstr[1] "Διαγραφή %1 επαφών"
+
+#~ msgid "Delete the selected contacts from the address book."
+#~ msgstr "Διαγραφή των επιλεγμένων επαφών από το βιβλίο διευθύνσεων."
+
+#~ msgid "Cut Contact"
+#~ msgid_plural "Cut %1 Contacts"
+#~ msgstr[0] "Αποκοπή επαφής"
+#~ msgstr[1] "Αντιγραφή %1 επαφών"
+
+#~ msgid "Edit Contact..."
+#~ msgstr "Επεξεργασία επαφής..."
+
+#~ msgid "Copy Group"
+#~ msgid_plural "Copy %1 Groups"
+#~ msgstr[0] "Αντιγραφή ομάδας"
+#~ msgstr[1] "Αντιγραφή %1 ομάδων"
+
+#~ msgid "Delete Group"
+#~ msgid_plural "Delete %1 Groups"
+#~ msgstr[0] "Διαγραφή ομάδας"
+#~ msgstr[1] "Διαγραφή %1 ομάδων"
+
+#~ msgid "Edit Group..."
+#~ msgstr "Επεξεργασία ομάδας..."
+
+#~ msgid "Add Address Book"
+#~ msgstr "Προσθήκη βιβλίου διευθύνσεων"
+
+#~ msgid "Could not add address book: %1"
+#~ msgstr "Αδυναμία προσθήκης του βιβλίου διευθύνσεων: %1"
+
+#~ msgid "Adding Address Book failed"
+#~ msgstr "Αποτυχία προσθήκης του βιβλίου διευθύνσεων"
+
+#~ msgid "Do you really want to delete address book '%1'?"
+#~ msgstr "Επιθυμείτε πραγματικά τη διαγραφή του βιβλίου διευθύνσεων '%1';"
+
+#~ msgid "Delete Address Book?"
+#~ msgstr "Διαγραφή βιβλίου διευθύνσεων;"
+
+#~ msgid ""
+#~ "Create a new contact<p>You will be presented with a dialog where you can "
+#~ "add data about a person, including addresses and phone numbers.</p>"
+#~ msgstr ""
+#~ "Δημιουργία νέας επαφής<p>Θα σας παρουσιαστεί ένας διάλογος όπου θα "
+#~ "μπορέσετε να προσθέσετε όλα τα δεδομένα σχετικά με ένα άτομο, "
+#~ "συμπεριλαμβανομένων διευθύνσεων και αριθμών τηλεφώνου.</p>"
+
+#~ msgid "New &Group..."
+#~ msgstr "Νέα &ομάδα..."
+
+#~ msgid ""
+#~ "Create a new group<p>You will be presented with a dialog where you can "
+#~ "add a new group of contacts.</p>"
+#~ msgstr ""
+#~ "Δημιουργία νέας ομάδας<p>Θα σας παρουσιαστεί ένας διάλογος όπου θα "
+#~ "μπορέσετε να προσθέσετε μία νέα ομάδα επαφών.</p>"
+
+#~ msgid ""
+#~ "Edit the selected contact<p>You will be presented with a dialog where you "
+#~ "can edit the data stored about a person, including addresses and phone "
+#~ "numbers.</p>"
+#~ msgstr ""
+#~ "Επεξεργασία της επιλεγμένης επαφής<p>Θα σας παρουσιαστεί ένας διάλογος "
+#~ "όπου θα μπορέσετε να επεξεργαστείτε όλα τα δεδομένα σχετικά με ένα άτομο, "
+#~ "συμπεριλαμβανομένων διευθύνσεων και αριθμών τηλεφώνου.</p>"
+
+#~ msgid "Add &Address Book..."
+#~ msgstr "Προσθήκη βιβλίου διευθύνσεων..."
+
+#~ msgid ""
+#~ "Add a new address book<p>You will be presented with a dialog where you "
+#~ "can select the type of the address book that shall be added.</p>"
+#~ msgstr ""
+#~ "Προσθήκη ενός νέου βιβλίου διευθύνσεων<p>Θα σας παρουσιαστεί ένας "
+#~ "διάλογος όπου θα μπορέσετε να επιλέξετε το είδος του βιβλίου διευθύνσεων "
+#~ "που θα προσθέσετε.</p>"
+
+#~ msgid "&Delete Address Book"
+#~ msgstr "&Διαγραφή βιβλίου διευθύνσεων"
+
+#~ msgid ""
+#~ "Delete the selected address book<p>The currently selected address book "
+#~ "will be deleted, along with all the contacts and contact groups it "
+#~ "contains.</p>"
+#~ msgstr ""
+#~ "Διαγραφή του επιλεγμένου βιβλίου διευθύνσεων<p>Το επιλεγμένο βιβλίο "
+#~ "διευθύνσεων θα διαγραφεί μαζί με όλες τις επαφές και τις ομάδες που "
+#~ "περιέχει.</p>"
+
+#~ msgid "Address Book Properties..."
+#~ msgstr "Ιδιότητες του βιβλίου διευθύνσεων..."
+
+#~ msgid "Open a dialog to edit properties of the selected address book."
+#~ msgstr "Επεξεργασία ιδιοτήτων του επιλεγμένου βιβλίου διευθύνσεων. "
+
+#~ msgid "Add Host"
+#~ msgstr "Προσθήκη υπολογιστή"
+
+#~ msgctxt "@item LDAP search key"
+#~ msgid "Title"
+#~ msgstr "Τίτλος"
+
+#~ msgid "Home Number"
+#~ msgstr "Τηλέφωνο οικίας"
+
+#~ msgid "Work Number"
+#~ msgstr "Τηλέφωνο εργασίας"
+
+#~ msgid "Mobile Number"
+#~ msgstr "Κινητό τηλέφωνο"
+
+#~ msgid "Fax Number"
+#~ msgstr "Αριθμός φαξ"
+
+#~ msgid "Pager"
+#~ msgstr "Βομβητής"
+
+#~ msgid "Street"
+#~ msgstr "Οδός"
+
+#~ msgctxt "@item LDAP search key"
+#~ msgid "State"
+#~ msgstr "Πολιτεία"
+
+#~ msgid "Country"
+#~ msgstr "Χώρα"
+
+#~ msgid "City"
+#~ msgstr "Πόλη"
+
+#~ msgid "Zip Code"
+#~ msgstr "Ταχ. κώδικας"
+
+#~ msgid "Description"
+#~ msgstr "Περιγραφή"
+
+#~ msgid "User ID"
+#~ msgstr "ID χρήστη"
+
+#~ msgctxt "@title:column Column containing email addresses"
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgctxt ""
+#~ "@title:column Column containing the residential state of the address"
+#~ msgid "State"
+#~ msgstr "Πολιτεία"
+
+#~ msgctxt "@title:column Column containing title of the person"
+#~ msgid "Title"
+#~ msgstr "Τίτλος"
+
+#~ msgid "Import Contacts from LDAP"
+#~ msgstr "Εισαγωγή επαφών από έναν εξυπηρετητή LDAP"
+
+#~ msgid "Search for Addresses in Directory"
+#~ msgstr "Αναζήτηση διευθύνσεων στον κατάλογο"
+
+#~ msgid "Search for:"
+#~ msgstr "Αναζήτηση για:"
+
+#~ msgctxt "In LDAP attribute"
+#~ msgid "in"
+#~ msgstr "σε"
+
+#~ msgctxt "@item:inlistbox Name of the contact"
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#~ msgctxt "@item:inlistbox email address of the contact"
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Home Number"
+#~ msgstr "Τηλέφωνο οικίας"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Work Number"
+#~ msgstr "Τηλέφωνο εργασίας"
+
+#~ msgid "Stop"
+#~ msgstr "Διακοπή"
+
+#~ msgid "Recursive search"
+#~ msgstr "Αναδρομική αναζήτηση"
+
+#~ msgid "Contains"
+#~ msgstr "Περιέχει"
+
+#~ msgid "Starts With"
+#~ msgstr "Ξεκινά με"
+
+#~ msgid "Unselect All"
+#~ msgstr "Αποεπιλογή όλων"
+
+#~ msgctxt "Search attribute: Name of contact"
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#~ msgctxt "Search attribute: Email of the contact"
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "You must select a LDAP server before searching."
+#~ msgstr "Πρέπει να επιλέξετε έναν εξυπηρετητή LDAP πριν την αναζήτηση."
+
+#~ msgid "Select a distribution list to add the selected contacts to."
+#~ msgstr ""
+#~ "Επιλέξτε μία λίστα διανομής όπου θα προστεθούν οι επιλεγμένες επαφές."
+
+#~ msgctxt "arguments are host name, datetime"
+#~ msgid "Imported from LDAP directory %1 on %2"
+#~ msgstr "Έγινε εισαγωγή από τον κατάλογο LDAP %1 στο %2"
+
+#~ msgid "Configure the Address Book LDAP Settings"
+#~ msgstr "Ρύθμιση παραμέτρων του LDAP βιβλίου διευθύνσεων"
+
+#~ msgid "kcmldap"
+#~ msgstr "kcmldap"
+
+#~ msgid "LDAP Server Settings"
+#~ msgstr "Ρυθμίσεις εξυπηρετητή LDAP"
+
+#~ msgid "(c) 2009 Tobias Koenig"
+#~ msgstr "(c) 2009 Tobias Koenig"
+
+#~ msgid "Edit Host"
+#~ msgstr "Επεξεργασία υπολογιστή"
+
+#~ msgid "LDAP Servers"
+#~ msgstr "Εξυπηρετητές LDAP"
+
+#~ msgid "Check all servers that should be used:"
+#~ msgstr "Επιλέξτε όλους τους εξυπηρετητές που επιθυμείτε να χρησιμοποιήσετε:"
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Προσθήκη υπολογιστή..."
+
+#~ msgid "&Edit Host..."
+#~ msgstr "&Επεξεργασία υπολογιστή..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Αφαίρεση υπολογιστή"
+
+#~ msgid "(c) 2007-2009 The KDE PIM Team"
+#~ msgstr "(c) 2007-2009 Η Ομάδα PIM του KDE"
+
+#, fuzzy
+#~| msgid "Add Address Book"
+#~ msgctxt "@title:column, address books overview"
+#~ msgid "Address Books"
+#~ msgstr "Προσθήκη βιβλίου διευθύνσεων"
+
+#~ msgctxt "@title:column, name of a person"
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#, fuzzy
+#~| msgid "Homepage:"
+#~ msgctxt "@title:column, home address of a person"
+#~ msgid "Home"
+#~ msgstr "Προσωπική σελίδα:"
+
+#, fuzzy
+#~| msgid "Edit Phone Number"
+#~ msgctxt "@title:column, phone numbers of a person"
+#~ msgid "Phone Numbers"
+#~ msgstr "Επεξεργασία αριθμού τηλεφώνου"
+
+#, fuzzy
+#~| msgctxt "street/postal"
+#~| msgid "This is the preferred address"
+#~ msgctxt "@title:column, the preferred email addresses of a person"
+#~ msgid "Preferred EMail"
+#~ msgstr "Αυτή είναι η προτιμώμενη διεύθυνση"
+
+#, fuzzy
+#~| msgid "Email:"
+#~ msgctxt "@title:column, all email addresses of a person"
+#~ msgid "All EMails"
+#~ msgstr "Email:"
+
+#~ msgctxt "Name of toplevel contact collection"
+#~ msgid "All Contacts"
+#~ msgstr "Όλες οι επαφές"
+
+#, fuzzy
+#~| msgid "Email:"
+#~ msgctxt "@title:column, all email addresses of a person"
+#~ msgid "EMails"
+#~ msgstr "Email:"
+
+#~ msgid "Reload"
+#~ msgstr "Επαναφόρτωση"
+
+#, fuzzy
+#~| msgid "New Contact Group"
+#~ msgid "Letter Groups"
+#~ msgstr "Νέα ομάδα επαφών"
+
+#, fuzzy
+#~| msgid "&Settings"
+#~ msgid "Font Settings"
+#~ msgstr "&Ρυθμίσεις"
+
+#, fuzzy
+#~| msgid "KContactManager"
+#~ msgid "Contacts matching &filter"
+#~ msgstr "KContactManager"
+
+#, fuzzy
+#~| msgid "Do you want to import this contact into your address book?"
+#~ msgid "The following contact was imported into your address book:"
+#~ msgid_plural ""
+#~ "The following %1 contacts were imported into your address book:"
+#~ msgstr[0] ""
+#~ "Επιθυμείτε πραγματικά την εισαγωγή της επαφής στο βιβλίο διευθύνσεών σας;"
+#~ msgstr[1] ""
+#~ "Επιθυμείτε πραγματικά την εισαγωγή της επαφής στο βιβλίο διευθύνσεών σας;"
+
+#~ msgid "Take over changes"
+#~ msgstr "Ανάληψη τροποποιήσεων"
+
+#~ msgid "Ignore and Overwrite changes"
+#~ msgstr "Παράβλεψη και αντικατάσταση τροποποιήσεων"
+
+#~ msgid "Edit Contact"
+#~ msgstr "Επεξεργασία επαφής"
+
+#~ msgid "Add to:"
+#~ msgstr "Προσθήκη σε:"
+
+#~ msgid "This contact's sound cannot be found."
+#~ msgstr "Ο ήχος αυτής της επαφής δεν μπορεί να βρεθεί."
+
+#~ msgid "Click to play pronunciation"
+#~ msgstr "Κάντε κλικ για την αναπαραγωγή της προφοράς"
+
+#~ msgid "No pronunciation available"
+#~ msgstr "Μη διαθέσιμη προφορά"
+
+#~ msgid "Play"
+#~ msgstr "Αναπαραγωγή"
+
+#~ msgid "Change..."
+#~ msgstr "Τροποποίηση..."
+
+#~ msgid "Save..."
+#~ msgstr "Αποθήκευση..."
+
+#~ msgid "Remove"
+#~ msgstr "Αφαίρεση"
+
+#~ msgctxt "@item:inlistbox Category of contact info field"
+#~ msgid "Other..."
+#~ msgstr "Άλλο..."
+
+#~ msgid "Add"
+#~ msgstr "Προσθήκη"
+
+#~ msgid "Edit Phone Number"
+#~ msgstr "Επεξεργασία αριθμού τηλεφώνου"
+
+#~ msgid "This is the preferred phone number"
+#~ msgstr "Αυτός είναι ο προτιμώμενος αριθμός τηλεφώνου"
+
+#~ msgid "Edit Email Addresses"
+#~ msgstr "Επεξεργασία διευθύνσεων email"
+
+#~ msgid "Add..."
+#~ msgstr "Προσθήκη..."
+
+#~ msgid "Edit..."
+#~ msgstr "Επεξεργασία..."
+
+#~ msgid "Set Standard"
+#~ msgstr "Ορισμός τυπικής"
+
+#~ msgid "Add Email"
+#~ msgstr "Προσθήκη email"
+
+#~ msgid "New Email:"
+#~ msgstr "Νέο email:"
+
+#~ msgctxt "@label:textbox Inputfield for an email address"
+#~ msgid "Email:"
+#~ msgstr "Email:"
+
+#~ msgid ""
+#~ "<qt>Are you sure that you want to remove the email address <b>%1</b>?</qt>"
+#~ msgstr ""
+#~ "<qt>Επιθυμείτε σίγουρα την αφαίρεση της διεύθυνσης email <b>%1</b>;</qt>"
+
+#~ msgid "Confirm Remove"
+#~ msgstr "Επιβεβαίωση αφαίρεσης"
+
+#~ msgid "&Delete"
+#~ msgstr "&Διαγραφή"
+
+#~ msgid "This contact's image cannot be found."
+#~ msgstr "Δεν υπάρχει εικόνα για αυτή την επαφή."
+
+#~ msgid "Change photo..."
+#~ msgstr "Τροποποίηση φωτογραφίας..."
+
+#~ msgid "Save photo..."
+#~ msgstr "Αποθήκευση φωτογραφίας..."
+
+#~ msgid "Remove photo"
+#~ msgstr "Αφαίρεση φωτογραφίας"
+
+#~ msgid "Change logo..."
+#~ msgstr "Τροποποίηση λογότυπου..."
+
+#~ msgid "Save logo..."
+#~ msgstr "Αποθήκευση λογότυπου..."
+
+#~ msgid "Remove logo"
+#~ msgstr "Αφαίρεση λογότυπου"
+
+#~ msgctxt "street/postal"
+#~ msgid "New..."
+#~ msgstr "Νέο..."
+
+#~ msgctxt "street/postal"
+#~ msgid "Edit..."
+#~ msgstr "Επεξεργασία..."
+
+#~ msgctxt "street/postal"
+#~ msgid "Delete"
+#~ msgstr "Διαγραφή"
+
+#~ msgid "Do you really want to delete this address?"
+#~ msgstr "Επιθυμείτε πραγματικά τη διαγραφή αυτής της διεύθυνσης;"
+
+#~ msgctxt "street/postal"
+#~ msgid "Edit Address"
+#~ msgstr "Επεξεργασία διεύθυνσης"
+
+#~ msgctxt "<streetLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<postOfficeBoxLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<localityLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<regionLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<postalCodeLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgctxt "<countryLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "Edit Label..."
+#~ msgstr "Επεξεργασία ετικέτας..."
+
+#~ msgctxt "street/postal"
+#~ msgid "This is the preferred address"
+#~ msgstr "Αυτή είναι η προτιμώμενη διεύθυνση"
+
+#~ msgctxt "street/postal"
+#~ msgid "Edit Address Type"
+#~ msgstr "Επεξεργασία τύπου διεύθυνσης"
+
+#~ msgctxt "street/postal"
+#~ msgid "Address Types"
+#~ msgstr "Τύποι διεύθυνσης"
+
+#~ msgid "Reverse Name with Comma"
+#~ msgstr "Αντίστροφο όνομα με κόμμα"
+
+#~ msgid "Reverse Name"
+#~ msgstr "Αντίστροφο όνομα"
+
+#~ msgid "Organization Name"
+#~ msgstr "Όνομα οργανισμού"
+
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#~ msgid "Internet"
+#~ msgstr "Διαδίκτυο"
+
+#~ msgid "Phones"
+#~ msgstr "Τηλέφωνα"
+
+#~ msgid "Name:"
+#~ msgstr "Όνομα:"
+
+#~ msgid "Display:"
+#~ msgstr "Εμφάνιση:"
+
+#~ msgid "Nickname:"
+#~ msgstr "Ψευδώνυμο:"
+
+#~ msgid "Pronunciation:"
+#~ msgstr "Προφορά:"
+
+#~ msgid "Homepage:"
+#~ msgstr "Προσωπική σελίδα:"
+
+#~ msgid "Blog:"
+#~ msgstr "Ιστολόγιο:"
+
+#~ msgid "Messaging:"
+#~ msgstr "Μηνύματα:"
+
+#~ msgid "Coordinates"
+#~ msgstr "Συντεταγμένες"
+
+#~ msgid "Business"
+#~ msgstr "Επαγγελματικά"
+
+#~ msgid "General"
+#~ msgstr "Γενικά"
+
+#~ msgid "Groupware"
+#~ msgstr "Groupware"
+
+#~ msgid "Title:"
+#~ msgstr "Τίτλος:"
+
+#~ msgid "Department:"
+#~ msgstr "Τμήμα:"
+
+#~ msgid "Free/Busy:"
+#~ msgstr "Free/Busy:"
+
+#~ msgid "Personal"
+#~ msgstr "Προσωπικά"
+
+#~ msgid "Dates"
+#~ msgstr "Ημερομηνίες"
+
+#~ msgid "Birthdate:"
+#~ msgstr "Γενέθλια:"
+
+#~ msgid "Edit Contact Group"
+#~ msgstr "Επεξεργασία ομάδας επαφών"
+
+#~ msgid "KContactManager"
+#~ msgstr "KContactManager"
+
+#, fuzzy
+#~| msgid "Addresses"
+#~ msgid "Print Addresses"
+#~ msgstr "Διευθύνσεις"
+
+#~ msgid "Afghanistan"
+#~ msgstr "Αφγανιστάν"
+
+#~ msgid "Albania"
+#~ msgstr "Αλβανία"
+
+#~ msgid "Algeria"
+#~ msgstr "Αλγερία"
+
+#~ msgid "American Samoa"
+#~ msgstr "Αμερικανική Σαμόα"
+
+#~ msgid "Andorra"
+#~ msgstr "Ανδόρα"
+
+#~ msgid "Angola"
+#~ msgstr "Αγκόλα"
+
+#~ msgid "Anguilla"
+#~ msgstr "Ανγκουίλα"
+
+#~ msgid "Antarctica"
+#~ msgstr "Ανταρκτική"
+
+#~ msgid "Antigua and Barbuda"
+#~ msgstr "Αντίγκουα και Μπαρμπούντα"
+
+#~ msgid "Argentina"
+#~ msgstr "Αργεντινή"
+
+#~ msgid "Armenia"
+#~ msgstr "Αρμένια"
+
+#~ msgid "Aruba"
+#~ msgstr "Αρούμπα"
+
+#~ msgid "Ashmore and Cartier Islands"
+#~ msgstr "Νήσοι Άσμορ και Καρτιέ"
+
+#~ msgid "Australia"
+#~ msgstr "Αυστραλία"
+
+#~ msgid "Austria"
+#~ msgstr "Αυστρία"
+
+#~ msgid "Azerbaijan"
+#~ msgstr "Αζερμπαϊτζάν"
+
+#~ msgid "Bahamas"
+#~ msgstr "Μπαχάμες"
+
+#~ msgid "Bahrain"
+#~ msgstr "Μπαχρέιν"
+
+#~ msgid "Bangladesh"
+#~ msgstr "Μπαγκλαντές"
+
+#~ msgid "Barbados"
+#~ msgstr "Μπαρμπάντος"
+
+#~ msgid "Belarus"
+#~ msgstr "Λευκορωσία"
+
+#~ msgid "Belgium"
+#~ msgstr "Βέλγιο"
+
+#~ msgid "Belize"
+#~ msgstr "Μπελίσε"
+
+#~ msgid "Benin"
+#~ msgstr "Μπενίν"
+
+#~ msgid "Bermuda"
+#~ msgstr "Βερμούδες"
+
+#~ msgid "Bhutan"
+#~ msgstr "Μπουτάν"
+
+#~ msgid "Bolivia"
+#~ msgstr "Βολιβία"
+
+#~ msgid "Bosnia and Herzegovina"
+#~ msgstr "Βοσνία και Ερζεγοβίνη"
+
+#~ msgid "Botswana"
+#~ msgstr "Μποτσουάνα"
+
+#~ msgid "Brazil"
+#~ msgstr "Βραζιλία"
+
+#~ msgid "Brunei"
+#~ msgstr "Μπρουνέι"
+
+#~ msgid "Bulgaria"
+#~ msgstr "Βουλγαρία"
+
+#~ msgid "Burkina Faso"
+#~ msgstr "Μπουρκίνα Φάσο"
+
+#~ msgid "Burundi"
+#~ msgstr "Μπουρουντί"
+
+#~ msgid "Cambodia"
+#~ msgstr "Καμπότζη"
+
+#~ msgid "Cameroon"
+#~ msgstr "Καμερούν"
+
+#~ msgid "Canada"
+#~ msgstr "Καναδάς"
+
+#~ msgid "Cape Verde"
+#~ msgstr "Κάπε Βέρντε"
+
+#~ msgid "Cayman Islands"
+#~ msgstr "Νήσοι Κάυμαν"
+
+#~ msgid "Central African Republic"
+#~ msgstr "Κεντροαφρικανική Δημοκρατία"
+
+#~ msgid "Chad"
+#~ msgstr "Τσαντ"
+
+#~ msgid "Chile"
+#~ msgstr "Χιλή"
+
+#~ msgid "China"
+#~ msgstr "Κίνα"
+
+#~ msgid "Colombia"
+#~ msgstr "Κολομβία"
+
+#~ msgid "Comoros"
+#~ msgstr "Κομόρες"
+
+#~ msgid "Congo"
+#~ msgstr "Κονγκό"
+
+#~ msgid "Congo, Dem. Rep."
+#~ msgstr "Κονγκό, Δημοκρατία του"
+
+#~ msgid "Costa Rica"
+#~ msgstr "Κόστα Ρίκα"
+
+#~ msgid "Croatia"
+#~ msgstr "Κροατία"
+
+#~ msgid "Cuba"
+#~ msgstr "Κούβα"
+
+#~ msgid "Cyprus"
+#~ msgstr "Κύπρος"
+
+#~ msgid "Czech Republic"
+#~ msgstr "Δημοκρατία της Τσεχίας"
+
+#~ msgid "Denmark"
+#~ msgstr "Δανία"
+
+#~ msgid "Djibouti"
+#~ msgstr "Τζιμπουτί"
+
+#~ msgid "Dominica"
+#~ msgstr "Ντομίνικα"
+
+#~ msgid "Dominican Republic"
+#~ msgstr "Δομινικανή Δημοκρατία"
+
+#~ msgid "Ecuador"
+#~ msgstr "Ισημερινός"
+
+#~ msgid "Egypt"
+#~ msgstr "Αίγυπτος"
+
+#~ msgid "El Salvador"
+#~ msgstr "Ελ Σαλβαντόρ"
+
+#~ msgid "Equatorial Guinea"
+#~ msgstr "Ισημερινή Γουινέα"
+
+#~ msgid "Eritrea"
+#~ msgstr "Ερυθραία"
+
+#~ msgid "Estonia"
+#~ msgstr "Εσθονία"
+
+#~ msgid "England"
+#~ msgstr "Αγγλία"
+
+#~ msgid "Ethiopia"
+#~ msgstr "Αιθιοπία"
+
+#~ msgid "European Union"
+#~ msgstr "Ευρωπαϊκή Ένωση"
+
+#~ msgid "Faroe Islands"
+#~ msgstr "Νησιά Φερόες"
+
+#~ msgid "Fiji"
+#~ msgstr "Φίτζι"
+
+#~ msgid "Finland"
+#~ msgstr "Φινλανδία"
+
+#~ msgid "France"
+#~ msgstr "Γαλλία"
+
+#~ msgid "French Polynesia"
+#~ msgstr "Γαλλική Πολυνησία"
+
+#~ msgid "Gabon"
+#~ msgstr "Γκαμπόν"
+
+#~ msgid "Gambia"
+#~ msgstr "Γκάμπια"
+
+#~ msgid "Georgia"
+#~ msgstr "Γεωργία"
+
+#~ msgid "Germany"
+#~ msgstr "Γερμανία"
+
+#~ msgid "Ghana"
+#~ msgstr "Γκάνα"
+
+#~ msgid "Greece"
+#~ msgstr "Ελλάδα"
+
+#~ msgid "Greenland"
+#~ msgstr "Γροιλανδία"
+
+#~ msgid "Grenada"
+#~ msgstr "Γρενάδα"
+
+#~ msgid "Guam"
+#~ msgstr "Γκουάμ"
+
+#~ msgid "Guatemala"
+#~ msgstr "Γουατεμάλα"
+
+#~ msgid "Guinea"
+#~ msgstr "Γουινέα"
+
+#~ msgid "Guinea-Bissau"
+#~ msgstr "Γουϊνέα - Μπισάου"
+
+#~ msgid "Guyana"
+#~ msgstr "Γουιάνα"
+
+#~ msgid "Haiti"
+#~ msgstr "Αϊτή"
+
+#~ msgid "Honduras"
+#~ msgstr "Ονδούρα"
+
+#~ msgid "Hong Kong"
+#~ msgstr "Χονγκ Κονγκ"
+
+#~ msgid "Hungary"
+#~ msgstr "Ουγγαρία"
+
+#~ msgid "Iceland"
+#~ msgstr "Ισλανδία"
+
+#~ msgid "India"
+#~ msgstr "Ινδία"
+
+#~ msgid "Indonesia"
+#~ msgstr "Ινδονησία"
+
+#~ msgid "Iran"
+#~ msgstr "Ιράν"
+
+#~ msgid "Iraq"
+#~ msgstr "Ιράκ"
+
+#~ msgid "Ireland"
+#~ msgstr "Ιρλανδία"
+
+#~ msgid "Israel"
+#~ msgstr "Ισραήλ"
+
+#~ msgid "Italy"
+#~ msgstr "Ιταλία"
+
+#~ msgid "Ivory Coast"
+#~ msgstr "Ακτή Ελεφαντοστού"
+
+#~ msgid "Jamaica"
+#~ msgstr "Τζαμάικα"
+
+#~ msgid "Japan"
+#~ msgstr "Ιαπωνία"
+
+#~ msgid "Jordan"
+#~ msgstr "Ιορδανία"
+
+#~ msgid "Kazakhstan"
+#~ msgstr "Καζακστάν"
+
+#~ msgid "Kenya"
+#~ msgstr "Κένυα"
+
+#~ msgid "Kiribati"
+#~ msgstr "Κιριμπάτι"
+
+#~ msgid "Korea, North"
+#~ msgstr "Κορέα, Βόρεια"
+
+#~ msgid "Korea, South"
+#~ msgstr "Κορέα, Νότια"
+
+#~ msgid "Kuwait"
+#~ msgstr "Κουβέιτ"
+
+#~ msgid "Kyrgyzstan"
+#~ msgstr "Κιργιζστάν"
+
+#~ msgid "Laos"
+#~ msgstr "Λάος"
+
+#~ msgid "Latvia"
+#~ msgstr "Λεττονία"
+
+#~ msgid "Lebanon"
+#~ msgstr "Λίβανος"
+
+#~ msgid "Lesotho"
+#~ msgstr "Λεσότο"
+
+#~ msgid "Liberia"
+#~ msgstr "Λιβερία"
+
+#~ msgid "Libya"
+#~ msgstr "Λιβύη"
+
+#~ msgid "Liechtenstein"
+#~ msgstr "Λίχτενσταϊν"
+
+#~ msgid "Lithuania"
+#~ msgstr "Λιθουανία"
+
+#~ msgid "Luxembourg"
+#~ msgstr "Λουξεμβούργο"
+
+#~ msgid "Macau"
+#~ msgstr "Μακάο"
+
+#~ msgid "Madagascar"
+#~ msgstr "Μαδαγασκάρη"
+
+#~ msgid "Malawi"
+#~ msgstr "Μαλάουι"
+
+#~ msgid "Malaysia"
+#~ msgstr "Μαλαισία"
+
+#~ msgid "Maldives"
+#~ msgstr "Μαλδίβες"
+
+#~ msgid "Mali"
+#~ msgstr "Μαλί"
+
+#~ msgid "Malta"
+#~ msgstr "Μάλτα"
+
+#~ msgid "Marshall Islands"
+#~ msgstr "Νησιά Μάρσαλ"
+
+#~ msgid "Martinique"
+#~ msgstr "Μαρτινίκα"
+
+#~ msgid "Mauritania"
+#~ msgstr "Μαυριτανία"
+
+#~ msgid "Mauritius"
+#~ msgstr "Μαυρίτιος"
+
+#~ msgid "Mexico"
+#~ msgstr "Μεξικό"
+
+#~ msgid "Micronesia, Federated States Of"
+#~ msgstr "Μικρονησίας, Ομοσπονδία της"
+
+#~ msgid "Moldova"
+#~ msgstr "Μολδαβία"
+
+#~ msgid "Monaco"
+#~ msgstr "Μονακό"
+
+#~ msgid "Mongolia"
+#~ msgstr "Μογγολία"
+
+#~ msgid "Montserrat"
+#~ msgstr "Μοντσεράτ"
+
+#~ msgid "Morocco"
+#~ msgstr "Μαρόκο"
+
+#~ msgid "Mozambique"
+#~ msgstr "Μοζαμβίκη"
+
+#~ msgid "Namibia"
+#~ msgstr "Ναμίμπια"
+
+#~ msgid "Nauru"
+#~ msgstr "Ναουρού"
+
+#~ msgid "Nepal"
+#~ msgstr "Νεπάλ"
+
+#~ msgid "Netherlands"
+#~ msgstr "Ολλανδία"
+
+#~ msgid "Netherlands Antilles"
+#~ msgstr "Ολλανδικές Αντίλλες"
+
+#~ msgid "New Caledonia"
+#~ msgstr "Νέα Καληδονία"
+
+#~ msgid "New Zealand"
+#~ msgstr "Νέα Ζηλανδία"
+
+#~ msgid "Nicaragua"
+#~ msgstr "Νικαράγουα"
+
+#~ msgid "Niger"
+#~ msgstr "Νίγηρας"
+
+#~ msgid "Nigeria"
+#~ msgstr "Νιγηρία"
+
+#~ msgid "Niue"
+#~ msgstr "Νιούε"
+
+#~ msgid "North Korea"
+#~ msgstr "Βόρεια Κορέα"
+
+#~ msgid "Northern Ireland"
+#~ msgstr "Βόρεια Ιρλανδία"
+
+#~ msgid "Northern Mariana Islands"
+#~ msgstr "Νήσοι Βόρειες Μαριάνες"
+
+#~ msgid "Norway"
+#~ msgstr "Νορβηγία"
+
+#~ msgid "Oman"
+#~ msgstr "Ομάν"
+
+#~ msgid "Pakistan"
+#~ msgstr "Πακιστάν"
+
+#~ msgid "Palau"
+#~ msgstr "Παλάου"
+
+#~ msgid "Palestinian"
+#~ msgstr "Παλαιστίνη"
+
+#~ msgid "Panama"
+#~ msgstr "Παναμάς"
+
+#~ msgid "Papua New Guinea"
+#~ msgstr "Παπούα Νέα Γουινέα"
+
+#~ msgid "Paraguay"
+#~ msgstr "Παραγουάη"
+
+#~ msgid "Peru"
+#~ msgstr "Περού"
+
+#~ msgid "Philippines"
+#~ msgstr "Φιλιππίνες"
+
+#~ msgid "Poland"
+#~ msgstr "Πολωνία"
+
+#~ msgid "Portugal"
+#~ msgstr "Πορτογαλία"
+
+#~ msgid "Puerto Rico"
+#~ msgstr "Πουέρτο Ρίκο"
+
+#~ msgid "Qatar"
+#~ msgstr "Κατάρ"
+
+#~ msgid "Romania"
+#~ msgstr "Ρουμανία"
+
+#~ msgid "Russia"
+#~ msgstr "Ρωσία"
+
+#~ msgid "Rwanda"
+#~ msgstr "Ρουάντα"
+
+#~ msgid "St. Kitts and Nevis"
+#~ msgstr "Άγιος Χριστόφορος (Σαιντ Κιτς) και Νέβις"
+
+#~ msgid "St. Lucia"
+#~ msgstr "Σάντα Λουτσία"
+
+#~ msgid "St. Vincent and the Grenadines"
+#~ msgstr "Άγιος Βικέντιος και Γρεναδίνες"
+
+#~ msgid "San Marino"
+#~ msgstr "Άγιος Μαρίνος"
+
+#~ msgid "Sao Tome and Principe"
+#~ msgstr "Σάο Τομέ και Πρίνσιπε"
+
+#~ msgid "Saudi Arabia"
+#~ msgstr "Σαουδική Αραβία"
+
+#~ msgid "Senegal"
+#~ msgstr "Σενεγάλη"
+
+#~ msgid "Serbia & Montenegro"
+#~ msgstr "Σερβία & Μαυροβούνιο"
+
+#~ msgid "Seychelles"
+#~ msgstr "Σεϋχέλλες"
+
+#~ msgid "Sierra Leone"
+#~ msgstr "Σιέρα Λεόνε"
+
+#~ msgid "Singapore"
+#~ msgstr "Σινγκαπούρη"
+
+#~ msgid "Slovakia"
+#~ msgstr "Σλοβακία"
+
+#~ msgid "Slovenia"
+#~ msgstr "Σλοβενία"
+
+#~ msgid "Solomon Islands"
+#~ msgstr "Νήσοι Σολομώντος"
+
+#~ msgid "Somalia"
+#~ msgstr "Σομαλία"
+
+#~ msgid "South Africa"
+#~ msgstr "Νότια Αφρική"
+
+#~ msgid "South Korea"
+#~ msgstr "Νότια Κορέα"
+
+#~ msgid "Spain"
+#~ msgstr "Ισπανία"
+
+#~ msgid "Sri Lanka"
+#~ msgstr "Σρι Λάνκα"
+
+#~ msgid "Sudan"
+#~ msgstr "Σουδάν"
+
+#~ msgid "Suriname"
+#~ msgstr "Σουρινάμ"
+
+#~ msgid "Swaziland"
+#~ msgstr "Σουαζιλάνδη"
+
+#~ msgid "Sweden"
+#~ msgstr "Σουηδία"
+
+#~ msgid "Switzerland"
+#~ msgstr "Ελβετία"
+
+#~ msgid "Syria"
+#~ msgstr "Συρία"
+
+#~ msgid "Taiwan"
+#~ msgstr "Ταϊβάν"
+
+#~ msgid "Tajikistan"
+#~ msgstr "Τατζικιστάν"
+
+#~ msgid "Tanzania"
+#~ msgstr "Τανζανία"
+
+#~ msgid "Thailand"
+#~ msgstr "Ταΐλάνδη"
+
+#~ msgid "Tibet"
+#~ msgstr "Θιβέτ"
+
+#~ msgid "Togo"
+#~ msgstr "Τόγκο"
+
+#~ msgid "Tonga"
+#~ msgstr "Τόνγκα"
+
+#~ msgid "Trinidad and Tobago"
+#~ msgstr "Τρίνινταντ και Τομπάγκο"
+
+#~ msgid "Tunisia"
+#~ msgstr "Τυνησία"
+
+#~ msgid "Turkey"
+#~ msgstr "Τουρκία"
+
+#~ msgid "Turkmenistan"
+#~ msgstr "Τουρκμενιστάν"
+
+#~ msgid "Turks and Caicos Islands"
+#~ msgstr "Νήσοι Τερκς και Κάικος"
+
+#~ msgid "Tuvalu"
+#~ msgstr "Τουβάλου"
+
+#~ msgid "Uganda"
+#~ msgstr "Ουγκάντα"
+
+#~ msgid "Ukraine"
+#~ msgstr "Ουκρανία"
+
+#~ msgid "United Arab Emirates"
+#~ msgstr "Ενωμένα Αραβικά Εμιράτα"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Ηνωμένο Βασίλειο"
+
+#~ msgid "United States"
+#~ msgstr "Ηνωμένες Πολιτείες"
+
+#~ msgid "Uruguay"
+#~ msgstr "Ουρουγουάη"
+
+#~ msgid "Uzbekistan"
+#~ msgstr "Ουζμπεκιστάν"
+
+#~ msgid "Vanuatu"
+#~ msgstr "Βανουάτου"
+
+#~ msgid "Vatican City"
+#~ msgstr "Πόλη του Βατικανού"
+
+#~ msgid "Venezuela"
+#~ msgstr "Βενεζουέλα"
+
+#~ msgid "Vietnam"
+#~ msgstr "Βιετνάμ"
+
+#~ msgid "Western Samoa"
+#~ msgstr "Δυτική Σαμόα"
+
+#~ msgid "Yemen"
+#~ msgstr "Υεμένη"
+
+#~ msgid "Yugoslavia"
+#~ msgstr "Γιουγκοσλαβία"
+
+#~ msgid "Zaire"
+#~ msgstr "Ζαΐρ"
+
+#~ msgid "Zambia"
+#~ msgstr "Ζάμπια"
+
+#~ msgid "Zimbabwe"
+#~ msgstr "Ζιμπάμπουε"

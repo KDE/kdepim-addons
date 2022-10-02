@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: customtoolsplugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2016-04-09 11:37+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Tradutor"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "&Tradutor"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Tradutor"
+
+#~ msgid "Configure engine"
+#~ msgstr "Configurar o motor"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Seleccione o servidor de URL's curtos:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Erro devolvido pelo servidor:\n"
+#~ "'%1'"
+
+#~ msgid "Close"
+#~ msgstr "Fechar"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "A gerar um URL curto..."
+
+#~ msgid "Configure..."
+#~ msgstr "Configurar..."
+
+#~ msgid "Convert"
+#~ msgstr "Converter"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Inserir um URL Curto"
+
+#~ msgid "Original URL:"
+#~ msgstr "URL original:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Copiar para a área de transferência"
+
+#~ msgid "Short URL:"
+#~ msgstr "URL curto:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Abrir o URL Curto"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr ""
+#~ "Não foi detectada nenhuma ligação de rede, pelo que não é possível "
+#~ "reduzir o URL."
+
+#~ msgid "No network"
+#~ msgstr "Sem rede"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Ocorreu um erro: \"%1\""
+
+#~ msgid "Short URL"
+#~ msgstr "URL Curto"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Gerar um URL Curto"

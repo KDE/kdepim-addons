@@ -1,0 +1,101 @@
+# translation of kmail_text_vcard_plugin.po to Chinese Traditional
+#
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2009.
+# Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007.
+# Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2012, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail_text_vcard_plugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"PO-Revision-Date: 2015-06-09 17:42+0800\n"
+"Last-Translator: Franklin\n"
+"Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: text_vcard.cpp:87
+#, kde-format
+msgid "Attached business card"
+msgid_plural "Attached business cards"
+msgstr[0] "附加名片卡"
+
+#: text_vcard.cpp:129
+#, kde-format
+msgid "[Add this contact to the address book]"
+msgstr "【新增此聯絡人到通訊錄】"
+
+#: text_vcard.cpp:135
+#, fuzzy, kde-format
+#| msgid "[Update this contact to the address book]"
+msgid "[Update this contact in the address book]"
+msgstr "【更新此聯絡人到通訊錄】"
+
+#: text_vcard.cpp:140
+#, kde-format
+msgid "[This contact is already in addressbook]"
+msgstr "【此聯絡人已在通訊錄內】"
+
+#: text_vcard.cpp:222
+#, kde-format
+msgid "View Business Card"
+msgstr "檢視名片卡"
+
+#: text_vcard.cpp:223
+#, kde-format
+msgid "Save Business Card As..."
+msgstr "另存名片卡為..."
+
+#: text_vcard.cpp:240
+#, kde-format
+msgid "Add this contact to the address book."
+msgstr "新增此聯絡人到通訊錄"
+
+#: text_vcard.cpp:240
+#, kde-format
+msgid "Update this contact to the address book."
+msgstr "更新此聯絡人到通訊錄。"
+
+#: text_vcard.cpp:242
+#, kde-format
+msgid "Add \"%1\" to the address book."
+msgstr "新增 %1 到通訊錄。"
+
+#: text_vcard.cpp:242
+#, kde-format
+msgid "Update \"%1\" to the address book."
+msgstr "更新 \"%1\" 到通訊錄。"
+
+#: text_vcard.cpp:266
+#, kde-format
+msgid "Save Business Card"
+msgstr "儲存名片卡"
+
+#: updatecontactjob.cpp:37
+#, kde-format
+msgid "The vCard's primary email address is not in addressbook."
+msgstr "此 vCard 的主要電子郵件地址不在通訊錄內。"
+
+#: updatecontactjob.cpp:43
+#, kde-format
+msgid "There are two or more contacts with same email stored in addressbook."
+msgstr "通訊錄內儲存了兩筆以上相同電子郵件的聯絡人。"
+
+#: updatecontactjob.cpp:65
+#, fuzzy, kde-format
+#| msgid ""
+#| "The vCard was updated to your address book; you can add more information "
+#| "to this entry by opening the address book."
+msgid ""
+"The vCard was updated in your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr "vCard 已經在您的通訊錄中更新。您可以開啟通訊錄並新增其資訊。"
+
+#: updatecontactjob.cpp:76
+#, kde-format
+msgid "Email not specified"
+msgstr "未指定電子郵件地址"

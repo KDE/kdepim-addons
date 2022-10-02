@@ -1,0 +1,100 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2016-04-24 16:16+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Translator"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "&Translator"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Translator"
+
+#~ msgid "Configure engine"
+#~ msgstr "Configure engine"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Select Short URL server:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+
+#~ msgid "Close"
+#~ msgstr "Close"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Generating short URL..."
+
+#~ msgid "Configure..."
+#~ msgstr "Configure..."
+
+#~ msgid "Convert"
+#~ msgstr "Convert"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Insert Short URL"
+
+#~ msgid "Original URL:"
+#~ msgstr "Original URL:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Copy to clipboard"
+
+#~ msgid "Short URL:"
+#~ msgstr "Short URL:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Open Short URL"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr "No network connection detected, we cannot shorten URL."
+
+#~ msgid "No network"
+#~ msgstr "No network"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "An error occurred: \"%1\""
+
+#~ msgid "Short URL"
+#~ msgstr "Short URL"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Generate Shortened URL"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "In progress to generate short URL..."
+
+#~ msgid "Short url:"
+#~ msgstr "Short URL:"
+
+#, fuzzy
+#~| msgid "Short url:"
+#~ msgid "Short url"
+#~ msgstr "Short URL:"

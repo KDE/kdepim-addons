@@ -1,0 +1,51 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmailtransport_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"PO-Revision-Date: 2022-04-05 12:29+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+"X-POOTLE-MTIME: 1502202964.000000\n"
+
+#: sendmail/sendmailjob.cpp:44
+#, kde-format
+msgid "Failed to execute mailer program %1"
+msgstr "%1 e-posta gönderme uygulaması çalıştırılamadı"
+
+#: sendmail/sendmailjob.cpp:57
+#, kde-format
+msgid "Sendmail exited abnormally."
+msgstr "Sendmail uygulamasından normal olmayan şekilde çıkıldı."
+
+#: sendmail/sendmailjob.cpp:59
+#, kde-format
+msgid "Sendmail exited abnormally: %1"
+msgstr "Sendmail uygulamasından normal olmayan şekilde çıkıldı: %1"
+
+#: sendmail/sendmailtransportplugin.cpp:25
+#, kde-format
+msgctxt "@option sendmail transport"
+msgid "Sendmail"
+msgstr "Sendmail"
+
+#: sendmail/sendmailtransportplugin.cpp:27
+#, kde-format
+msgid "A local sendmail installation"
+msgstr "Yerel sendmail kurulumu"
+
+#: sendmail/sendmailtransportplugin.cpp:36
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure account"
+msgstr "Hesabı yapılandır"

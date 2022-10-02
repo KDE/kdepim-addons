@@ -1,0 +1,53 @@
+# Irish translation of cryptopageplugin
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the cryptopageplugin package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: cryptopageplugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-08 00:48+0000\n"
+"PO-Revision-Date: 2009-12-24 06:59-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: cryptopageplugin.cpp:40
+#, kde-format
+msgid "Allowed Protocols"
+msgstr "Prótacail atá ceadaithe"
+
+#: cryptopageplugin.cpp:55
+#, kde-format
+msgid "Preferred OpenPGP encryption key:"
+msgstr "Do rogha eochair criptithe OpenPGP:"
+
+#: cryptopageplugin.cpp:60
+#, kde-format
+msgid "Preferred S/MIME encryption certificate:"
+msgstr "Do rogha teastas criptithe S/MIME:"
+
+#: cryptopageplugin.cpp:65
+#, kde-format
+msgid "Message Preference"
+msgstr "Sainrogha Theachtaireachta"
+
+#: cryptopageplugin.cpp:74
+#, kde-format
+msgid "Sign:"
+msgstr "Sínigh:"
+
+#: cryptopageplugin.cpp:91
+#, kde-format
+msgid "Encrypt:"
+msgstr "Criptigh:"
+
+#: cryptopageplugin.cpp:109
+#, kde-format
+msgid "Crypto Settings"
+msgstr "Socruithe Criptithe"

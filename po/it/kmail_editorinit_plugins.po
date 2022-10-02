@@ -1,0 +1,40 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdepim-addons package.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2017, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-04-13 00:18+0000\n"
+"PO-Revision-Date: 2019-12-25 15:12+0100\n"
+"Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 19.08.1\n"
+
+#: externalcomposer/externalcomposerconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"External Composer\" Plugin"
+msgstr "Configura l'estensione «Compositore esterno»"
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:18
+#, kde-format
+msgid "Use external editor instead of composer"
+msgstr "Utilizza un editor esterno invece del compositore"
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:45
+#, kde-format
+msgid ""
+"<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
+"replaced with the window id.<br /><b>%l</b> will be replaced with the line "
+"number."
+msgstr ""
+"<b>%f</b> sarà sostituito con il nome del file da modificare.<br /> <b>%w</"
+"b> sarà sostituito con l'identificativo della finestra.<br /> <b>%l</b> sarà "
+"sostituito con il numero della riga."

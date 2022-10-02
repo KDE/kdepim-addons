@@ -1,0 +1,269 @@
+# Translation of kaddressbook_plugins.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaddressbook_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-04-08 03:35+0200\n"
+"PO-Revision-Date: 2016-05-17 01:39+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: checkgravatar/checkgravatarplugininterface.cpp:52
+#, kde-format
+msgid "Check Gravatar..."
+msgstr "Провери граватар..."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:76
+#: sendmail/sendmailplugininterface.cpp:75
+#, kde-format
+msgid "You have not selected any contacts."
+msgstr "Нисте изабрали ниједан контакт."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:84
+#, kde-format
+msgid "No email found for this contact."
+msgstr "Нема адреса е‑поште за овај контакт."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:123
+#, kde-format
+msgid "A contact group was selected."
+msgstr "Изабрана је група контаката."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:126
+#, kde-format
+msgid "Too many contacts selected."
+msgstr "Превише изабраних контаката."
+
+# >> @title:window
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "Check and update Gravatar"
+msgctxt "@title:window"
+msgid "Check and update Gravatar"
+msgstr "Провера и ажурирање граватара"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:42
+#, kde-format
+msgid "Save Image"
+msgstr "Сачувај слику"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:47
+#, kde-format
+msgid "Save Image URL"
+msgstr "Сачувај УРЛ слике"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:41
+#, kde-format
+msgid "Email:"
+msgstr "Е‑пошта:"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:50
+#, kde-format
+msgid "Search"
+msgstr "Тражи"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:125
+#, kde-format
+msgid "Search is impossible."
+msgstr "Претрага није могућа."
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:144
+#, kde-format
+msgid "No Gravatar Found."
+msgstr "Граватар није нађен."
+
+#: mergecontacts/mergecontactsplugininterface.cpp:41
+#, kde-format
+msgid "Merge Contacts..."
+msgstr "Стопи контакте..."
+
+# >> @title:window
+#: mergelib/manualmerge/mergecontactsdialog.cpp:42
+#, fuzzy, kde-format
+#| msgid "Select Contacts to merge"
+msgctxt "@title:window"
+msgid "Select Contacts to merge"
+msgstr "Избор контаката за стапање"
+
+#: mergelib/manualmerge/mergecontactwidget.cpp:56
+#, kde-format
+msgid "Select contacts that you really want to merge:"
+msgstr "Контакти које заиста желите да стопите:"
+
+#: mergelib/manualmerge/mergecontactwidget.cpp:79
+#, kde-format
+msgid "Select the addressbook in which to store merged contacts:"
+msgstr "Адресар за складиштење стопљених контаката:"
+
+#: mergelib/manualmerge/mergecontactwidget.cpp:94
+#, kde-format
+msgid "merge"
+msgstr "Стопи"
+
+#: mergelib/searchduplicate/mergecontactselectinformationtabwidget.cpp:50
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:93
+#, kde-format
+msgid "Duplicate contact %1"
+msgstr "Дупликат контакта %1"
+
+# >> @title:menu
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:30
+#, kde-format
+msgid "Contacts"
+msgstr "Контакти"
+
+# >> @title:window
+#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:42
+#, fuzzy, kde-format
+#| msgid "Search and Select Duplicate Contacts to merge"
+msgctxt "@title:window"
+msgid "Search and Select Duplicate Contacts to merge"
+msgstr "Тражење и избор дупликата контаката за стапање"
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:67
+#, kde-format
+msgid "Select AddressBook:"
+msgstr "Изаберите адресар:"
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:80
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:56
+#, kde-format
+msgid "Merge"
+msgstr "Стопи"
+
+#: mergelib/widgets/mergecontacterrorlabel.cpp:31
+#, kde-format
+msgid "You must select at least two elements."
+msgstr "Морате да изаберете бар два елемента."
+
+#: mergelib/widgets/mergecontacterrorlabel.cpp:34
+#, kde-format
+msgid "No duplicated contact found."
+msgstr "Није нађен ниједан дупликат контакта."
+
+#: mergelib/widgets/mergecontacterrorlabel.cpp:37
+#, kde-format
+msgid "No contacts selected."
+msgstr "Нема изабраних контаката."
+
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:33
+#, kde-format
+msgid ""
+"Some information can be lost. Do you want to continue, or customize what you "
+"want to merge?"
+msgstr ""
+"Неки подаци могу бити изгубљени. Желите ли да наставите, или да прилагодите "
+"шта треба стопити?"
+
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:35
+#, kde-format
+msgid "Customize"
+msgstr "Прилагоди"
+
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:40
+#, kde-format
+msgid "Automatic Merging"
+msgstr "Аутоматски стопи"
+
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:99
+#, kde-format
+msgid ""
+"Some information was not selected. You can lose this information. Do you "
+"want to continue merging?"
+msgstr ""
+"Неки подаци нису изабрани, и зато их можете изгубити. Желите ли да наставите "
+"са стапањем?"
+
+# >> @title:window
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:100
+#, kde-format
+msgid "Missing Selected Information"
+msgstr "Недостају изабрани подаци"
+
+# >> @item category of fields
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:78
+#, kde-format
+msgctxt "The wedding anniversary of a contact"
+msgid "Anniversary"
+msgstr "годишњица"
+
+# >> @item category of fields
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:87
+#, kde-format
+msgid "Blog Feed"
+msgstr "довод блога"
+
+# >> @item category of fields
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:96
+#, kde-format
+msgid "Profession"
+msgstr "струка"
+
+# >> @item category of fields
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:105
+#, kde-format
+msgid "Office"
+msgstr "канцеларија"
+
+# >> @item category of fields
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:108
+#, kde-format
+msgid "Manager"
+msgstr "менаџер"
+
+# >> @item category of fields
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:111
+#, kde-format
+msgid "Assistant"
+msgstr "асистент"
+
+# >> @item category of fields
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:120
+#, kde-format
+msgid "Spouse"
+msgstr "супружник"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:135
+#, kde-format
+msgid "(Undefined)"
+msgstr "(недефинисано)"
+
+#: searchduplicates/searchduplicatesplugininterface.cpp:41
+#, kde-format
+msgid "Search Duplicate Contacts..."
+msgstr "Потражи дупликате контаката..."
+
+#: sendmail/mailsenderjob.cpp:141
+#, kde-format
+msgid "No emails found in selected contacts."
+msgstr "Нема адреса е‑поште у изабраним контактима."
+
+#: sendmail/sendmailplugininterface.cpp:42
+#, kde-format
+msgid "Send an email..."
+msgstr "Пошаљи е‑пошту..."
+
+#: sendvcards/sendvcardsjob.cpp:104
+#, kde-format
+msgid "No vCard created."
+msgstr "В‑кард није направљен."
+
+#: sendvcards/sendvcardsjob.cpp:142
+#, kde-format
+msgid "Temporary file '%1' cannot be created"
+msgstr "Привремени фајл „%1“ не може да се направи."
+
+#: sendvcards/sendvcardsplugininterface.cpp:49
+#, kde-format
+msgid "Send vCards..."
+msgstr "Пошаљи в‑кардове..."

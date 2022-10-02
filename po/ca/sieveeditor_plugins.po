@@ -1,0 +1,124 @@
+# Translation of sieveeditor_plugins.po to Catalan
+# Copyright (C) 2016-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2016, 2017, 2018, 2019.
+# Josep M. Ferrer <txemaq@gmail.com>, 2017, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2022-07-08 15:43+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: emaillineedit/emaillineedit.cpp:34
+#, kde-format
+msgid "Click on button for selecting contacts..."
+msgstr "Feu clic al botó per a seleccionar els contactes..."
+
+#: emaillineedit/emaillineedit.cpp:38
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: emaillineedit/emaillineedit.cpp:40
+#, kde-format
+msgid "Select Emails"
+msgstr "Selecciona els correu electrònics"
+
+#: emaillineedit/emaillineedit.cpp:88
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Emails"
+msgstr "Selecció dels correus electrònics"
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgid "Create Folder"
+msgstr "Crea una carpeta"
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#, kde-format
+msgid "Error during creating folder: %1"
+msgstr "Error durant la creació de la carpeta: %1"
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:25
+#, kde-format
+msgid "Create Folder..."
+msgstr "Crea una carpeta..."
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Select IMAP folder"
+msgstr "Selecció de la carpeta IMAP"
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:37
+#, kde-format
+msgid "Unable to load folder list"
+msgstr "No s'ha pogut carregar la llista de carpetes"
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:40
+#, kde-format
+msgid "Loading in progress..."
+msgstr "La càrrega es troba en curs..."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#, kde-format
+msgid "Search..."
+msgstr "Cerca..."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#, kde-format
+msgid "Refresh IMAP Folder List"
+msgstr "Actualitza la llista de les carpetes IMAP"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#, kde-format
+msgid "Folder Name:"
+msgstr "Nom de la carpeta:"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#, kde-format
+msgid "Slashes are not allowed in folder names."
+msgstr "No es permeten barres en els noms de carpetes."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgid "Empty folder name is not supported."
+msgstr "No es permet un nom buit a la carpeta."
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgid "Error during loading folders: %1"
+msgstr "Error durant la càrrega de les carpetes: %1"
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgid "Load Folders"
+msgstr "Carrega les carpetes"
+
+#: imapfoldercompletion/selectimapwidget.cpp:31
+#, kde-format
+msgid "Select IMAP folder"
+msgstr "Selecció de la carpeta IMAP"
+
+#: imapfoldercompletion/selectimapwidget.cpp:58
+#, kde-format
+msgid "Click on button for selecting folder..."
+msgstr "Feu clic al botó per a seleccionar la carpeta..."
+
+#~ msgid "Create Regular Expression"
+#~ msgstr "Crea una expressió regular"

@@ -1,0 +1,296 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016.
+# Tommi Nieminen <translator@legisign.org>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2020-01-01 12:48+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 18.12.3\n"
+
+#: checkgravatar/checkgravatarplugininterface.cpp:37
+#, kde-format
+msgid "Check Gravatar..."
+msgstr "Tarkista Gravatar…"
+
+#: checkgravatar/checkgravatarplugininterface.cpp:61
+#: sendmail/sendmailplugininterface.cpp:59
+#, kde-format
+msgid "You have not selected any contacts."
+msgstr "Et ole valinnut yhtään yhteystietoa."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:69
+#, kde-format
+msgid "No email found for this contact."
+msgstr "Yhteystiedolta ei löytynyt yhtään sähköpostia."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:108
+#, kde-format
+msgid "A contact group was selected."
+msgstr "Yhteystietoryhmä valittu."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:111
+#, kde-format
+msgid "Too many contacts selected."
+msgstr "Liian monta yhteystietoa valittu."
+
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
+#, kde-format
+msgid "Save Image"
+msgstr "Tallenna kuva"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
+#, kde-format
+msgid "Save Image URL"
+msgstr "Tallenna kuvan osoite"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Check and update Gravatar"
+msgstr "Tarkista ja päivitä Gravatar"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
+#, kde-format
+msgid "Search"
+msgstr "Etsi"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
+#, kde-format
+msgid "Email:"
+msgstr "Sähköposti:"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:109
+#, kde-format
+msgid "Search is impossible."
+msgstr "Etsiminen on mahdotonta."
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:128
+#, kde-format
+msgid "No Gravatar Found."
+msgstr "Gravataria ei löydy."
+
+#: mergecontacts/mergecontactsplugininterface.cpp:25
+#, kde-format
+msgid "Merge Contacts..."
+msgstr "Yhdistä yhteystiedot…"
+
+#: mergelib/manualmerge/mergecontactsdialog.cpp:39
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Contacts to merge"
+msgstr "Valitse yhdistettävät yhteystiedot"
+
+#: mergelib/manualmerge/mergecontactwidget.cpp:32
+#, kde-format
+msgid "merge"
+msgstr "yhdistä"
+
+#: mergelib/manualmerge/mergecontactwidget.cpp:48
+#, kde-format
+msgid "Select contacts that you really want to merge:"
+msgstr "Valitse yhdistettävät yhteystiedot:"
+
+#: mergelib/manualmerge/mergecontactwidget.cpp:68
+#, kde-format
+msgid "Select the addressbook in which to store merged contacts:"
+msgstr "Valitse osoitekirja, jonne yhdistetyt yhteystiedot tallennetaan:"
+
+#: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
+#, kde-format
+msgid "Select All"
+msgstr ""
+
+#: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
+#, kde-format
+msgid "Deselect All"
+msgstr ""
+
+#: mergelib/searchduplicate/mergecontactselectinformationtabwidget.cpp:35
+#, kde-format
+msgid "Duplicate contact %1"
+msgstr "Monisteinen yhteystieto %1"
+
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:17
+#, kde-format
+msgid "Contacts"
+msgstr "Yhteystiedot"
+
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
+#, fuzzy, kde-format
+#| msgid "Duplicate contact %1"
+msgid "Duplicate contact \"%1\" (%2 times)"
+msgstr "Monisteinen yhteystieto %1"
+
+#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
+#, kde-format
+msgctxt "@title:window"
+msgid "Search and Select Duplicate Contacts to merge"
+msgstr "Etsi ja valitse yhdistettävät toistuvat yhteystiedot"
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
+#, fuzzy, kde-format
+#| msgid "Search is impossible."
+msgid "Search in result..."
+msgstr "Etsiminen on mahdotonta."
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
+#, kde-format
+msgid "Select AddressBook:"
+msgstr "Valitse osoitekirja:"
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
+#, kde-format
+msgid "Merge"
+msgstr "Yhdistä"
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
+#, kde-format
+msgid "Expand All"
+msgstr ""
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
+#, kde-format
+msgid "Collapse All"
+msgstr ""
+
+#: mergelib/widgets/mergecontacterrorlabel.cpp:18
+#, kde-format
+msgid "You must select at least two elements."
+msgstr "Vähintään kaksi yhteystietoa on valittava."
+
+#: mergelib/widgets/mergecontacterrorlabel.cpp:21
+#, kde-format
+msgid "No duplicated contact found."
+msgstr "Monisteisia yhteystietoja ei löytynyt."
+
+#: mergelib/widgets/mergecontacterrorlabel.cpp:24
+#, kde-format
+msgid "No contacts selected."
+msgstr "Ei valittuja yhteystietoja."
+
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:20
+#, kde-format
+msgid ""
+"Some information can be lost. Do you want to continue, or customize what you "
+"want to merge?"
+msgstr ""
+"Joitain tietoja saattaa hävitä. Haluatko jatkaa vai muokata yhdistettäviä "
+"tietoja?"
+
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
+#, kde-format
+msgid "Customize"
+msgstr "Mukauta"
+
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
+#, kde-format
+msgid "Automatic Merging"
+msgstr "Automaattinen yhdistäminen"
+
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
+#, kde-format
+msgid ""
+"Some information was not selected. You can lose this information. Do you "
+"want to continue merging?"
+msgstr ""
+"Joitain tietoja ei valittu. Voit menettää nämä tiedot. Haluatko jatkaa "
+"yhdistämistä?"
+
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
+#, kde-format
+msgid "Missing Selected Information"
+msgstr "Valitut tiedot puutteelliset"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:63
+#, kde-format
+msgctxt "The wedding anniversary of a contact"
+msgid "Anniversary"
+msgstr "Vuosipäivä"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:72
+#, kde-format
+msgid "Blog Feed"
+msgstr "Blogisyöte"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:81
+#, kde-format
+msgid "Profession"
+msgstr "Ammatti"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:90
+#, kde-format
+msgid "Office"
+msgstr "Toimisto"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:93
+#, kde-format
+msgid "Manager"
+msgstr "Johtaja"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:96
+#, kde-format
+msgid "Assistant"
+msgstr "Avustaja"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:105
+#, kde-format
+msgid "Spouse"
+msgstr "Puoliso"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:120
+#, kde-format
+msgid "(Undefined)"
+msgstr "(määrittämätön)"
+
+#: searchduplicates/searchduplicatesplugininterface.cpp:24
+#, kde-format
+msgid "Search Duplicate Contacts..."
+msgstr "Etsi monisteisia yhteystietoja…"
+
+#: sendmail/mailsenderjob.cpp:127
+#, kde-format
+msgid "No emails found in selected contacts."
+msgstr "Valituista yhteystiedoista ei löytynyt sähköpostiosoitteita."
+
+#: sendmail/sendmailplugininterface.cpp:26
+#, kde-format
+msgid "Send an email..."
+msgstr "Lähetä sähköposti…"
+
+#: sendvcards/sendvcardsjob.cpp:96
+#, kde-format
+msgid "No vCard created."
+msgstr "vCardia ei luotu."
+
+#: sendvcards/sendvcardsjob.cpp:134
+#, kde-format
+msgid "Temporary file '%1' cannot be created"
+msgstr "Väliaikaistiedostoa ”%1” ei voida luoda"
+
+#: sendvcards/sendvcardsplugininterface.cpp:34
+#, kde-format
+msgid "Send vCards..."
+msgstr "Lähetä vCardeja…"
+
+#~ msgid "Use Libravatar"
+#~ msgstr "Käytä Libravataria"
+
+#~ msgid "Fallback to Gravatar"
+#~ msgstr "Käytä Gravataria varalla"
+
+#~ msgid "Use HTTPS Protocol"
+#~ msgstr "Käytä HTTPS-yhteyskäytäntöä"

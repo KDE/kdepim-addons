@@ -1,0 +1,166 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2016, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-04 00:44+0000\n"
+"PO-Revision-Date: 2019-11-16 22:27+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.08.1\n"
+
+#: gnupgwksurlhandler.cpp:85
+#, kde-format
+msgid "Display key details"
+msgstr "Võtme üksikasjade kuvamine"
+
+#: gnupgwksurlhandler.cpp:87
+#, kde-format
+msgid "Publish the key"
+msgstr "Võtme avaldamine"
+
+#: pgpkeyformatter.cpp:43
+#, kde-format
+msgid "No valid key data in file."
+msgstr "Failis ei leidu kehtivaid võtmeandmeid."
+
+#: pgpkeyurlhandler.cpp:46
+#, kde-format
+msgid "Import the key"
+msgstr "Võtme import"
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "An error occurred while importing the key."
+msgstr "Võtme importimisel tekkis tõrge."
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "Import error"
+msgstr "Impordi tõrge"
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "The key has been successfully imported."
+msgstr "Võti imporditi edukalt."
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "Import finished"
+msgstr "Import on lõpetatud"
+
+#: templates/gnupgwksmessagepart.html:26
+msgid "Register your OpenPGP key with your email provider. "
+msgstr "Registreeri oma OpenPGP võti e-posti teenusepakkuja juures."
+
+#: templates/gnupgwksmessagepart.html:28
+msgid ""
+"When you register your key with your email provider other people will then "
+"be able to retrieve the key and send you encrypted emails and verify "
+"authenticity of emails you send them."
+msgstr ""
+"Kui registreerid oma võtme e-posti teenusepakkuja juures, saavad teised "
+"selle võtme hankida ning saata sulle krüptitud kirju ja kontrollida sinu "
+"saadetud kirjade ehtsust."
+
+#: templates/gnupgwksmessagepart.html:31
+msgid "An error occurred while publishing the key. Please try again later."
+msgstr "Võtme avaldamisel tekkis tõrge. Palun proovi hiljem uuesti."
+
+#: templates/gnupgwksmessagepart.html:33
+msgid "Register the key"
+msgstr "Registreeri võti"
+
+#: templates/gnupgwksmessagepart.html:35
+msgid ""
+"The email will be automatically deleted once you confirm the registration."
+msgstr ""
+"See kiri kustutatakse automaatselt, kui oled registreerimise kinnitanud."
+
+#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+msgid "Show key details"
+msgstr "Näita võtme üksikasju"
+
+#: templates/gnupgwksmessagepart.html:42
+msgid ""
+"This is an automatically generated email. The purpose of this email is to "
+"register your OpenPGP key with your email provider."
+msgstr ""
+"See on automaatselt genereeritud kiri. Selle kirja eesmärk on registreerida "
+"sinu OpenPGP võti e-posti teenusepakkuja juures."
+
+#: templates/gnupgwksmessagepart.html:45
+msgid ""
+"Your OpenPGP key will be published on your email provider's key server. "
+"Other users will be able to retrieve the key and send you encrypted emails "
+"and verify authenticity of emails you send them."
+msgstr ""
+"Sinu OpenPGP võti avaldatakse sinu e-posti teenusepakkuja võtmeserveris. "
+"Teised kasutajad saavad siis selle võtme hankida ning saata sulle krüptitud "
+"kirju ja kontrollida sinu saadetud kirjade ehtsust."
+
+#: templates/pgpkeymessagepart.html:14
+msgid "OpenPGP Key"
+msgstr "OpenPGP võti"
+
+#: templates/pgpkeymessagepart.html:18
+msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
+msgstr ""
+"See on OpenPGP võti, mida saab kasutada e-kirja allkirjastamiseks või "
+"krüptimiseks."
+
+#: templates/pgpkeymessagepart.html:23
+msgid "Loading key details..."
+msgstr "Võtme üksikasjade laadimine ..."
+
+#: templates/pgpkeymessagepart.html:28
+msgid "Owner:"
+msgstr "Omanik:"
+
+#: templates/pgpkeymessagepart.html:32
+msgid "Created:"
+msgstr "Loodud:"
+
+#: templates/pgpkeymessagepart.html:37
+msgid "Fingerprint:"
+msgstr "Sõrmejälg:"
+
+#: templates/pgpkeymessagepart.html:42
+msgid ""
+"This key is unknown, it could not be found in your local keyring. You may "
+"want to import this key."
+msgstr ""
+"See võti on tundmatu, seda ei ole sinu kohalikus võtmerõngas. Võib-olla "
+"tuleks võti kõigepealt importida."
+
+#: templates/pgpkeymessagepart.html:45
+#, kde-format
+msgid "Error while loading key: %1"
+msgstr "Tõrge võtme laadimisel: %1"
+
+#: templates/pgpkeymessagepart.html:47
+msgid "Hide key details"
+msgstr "Peida võtme üksikasjad"
+
+#: templates/pgpkeymessagepart.html:49
+msgid "Open in Kleopatra"
+msgstr "Ava Kleopatras"
+
+#: templates/pgpkeymessagepart.html:52
+msgid "Show key details ..."
+msgstr "Näita võtme üksikasju ..."
+
+#: templates/pgpkeymessagepart.html:54
+msgid "Import key"
+msgstr "Impordi võti"
+
+#~ msgid "Unknown identity"
+#~ msgstr "Tundmatu identiteet"

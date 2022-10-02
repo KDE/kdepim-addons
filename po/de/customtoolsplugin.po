@@ -1,0 +1,102 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Frederik Schwarzer <schwarzer@kde.org>, 2015, 2016.
+# Burkhard Lück <lueck@hube-lueck.de>, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2017-01-08 20:50+0100\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Übersetzung"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "Überse&tzung"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Übersetzung"
+
+#~ msgid "Configure engine"
+#~ msgstr "Treiber einrichten:"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Server für abgekürzte Adresse auswählen:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Fehlermeldung vom Server:\n"
+#~ "„%1“"
+
+#~ msgid "Close"
+#~ msgstr "Schließen"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Abgekürzte Adresse wird erstellt ..."
+
+#~ msgid "Configure..."
+#~ msgstr "Einrichten ..."
+
+#~ msgid "Convert"
+#~ msgstr "Umwandeln"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Abgekürzte Adresse einfügen"
+
+#~ msgid "Original URL:"
+#~ msgstr "Ursprüngliche Adresse:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "In die Zwischenablage kopieren"
+
+#~ msgid "Short URL:"
+#~ msgstr "Abgekürzte Adresse:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Abgekürzte Adresse öffnen"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr ""
+#~ "Es wurde keine Netzwerkverbindung erkannt, die Adresse kann nicht gekürzt "
+#~ "werden."
+
+#~ msgid "No network"
+#~ msgstr "Kein Netzwerk"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Es ist ein Fehler aufgetreten: „%1“"
+
+#~ msgid "Short URL"
+#~ msgstr "Abgekürzte Adresse"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Abgekürzte Adresse erstellen"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "Generieren der abgekürzten Adresse ist in Bearbeitung ..."
+
+#~ msgid "Short url:"
+#~ msgstr "Abgekürzte Adresse:"
+
+#, fuzzy
+#~| msgid "Short url:"
+#~ msgid "Short url"
+#~ msgstr "Abgekürzte Adresse:"

@@ -1,0 +1,111 @@
+# translation of kmail_text_vcard_plugin.po to Swedish
+# Copyright (C) 2004, 2007, 2009 Free Software Foundation, Inc.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2007, 2009, 2010, 2012, 2014, 2015, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail_text_vcard_plugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"PO-Revision-Date: 2020-06-06 10:31+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: text_vcard.cpp:87
+#, kde-format
+msgid "Attached business card"
+msgid_plural "Attached business cards"
+msgstr[0] "Bifogat visitkort"
+msgstr[1] "Bifogade visitkort"
+
+#: text_vcard.cpp:129
+#, kde-format
+msgid "[Add this contact to the address book]"
+msgstr "[Lägg till kontakten i adressboken]"
+
+#: text_vcard.cpp:135
+#, kde-format
+msgid "[Update this contact in the address book]"
+msgstr "[Uppdatera kontakten i adressboken]"
+
+#: text_vcard.cpp:140
+#, kde-format
+msgid "[This contact is already in addressbook]"
+msgstr "[Kontakten finns redan i adressboken]"
+
+#: text_vcard.cpp:222
+#, kde-format
+msgid "View Business Card"
+msgstr "Visa visitkort"
+
+#: text_vcard.cpp:223
+#, kde-format
+msgid "Save Business Card As..."
+msgstr "Spara visitkort som..."
+
+#: text_vcard.cpp:240
+#, kde-format
+msgid "Add this contact to the address book."
+msgstr "Lägg till kontakten i adressboken."
+
+#: text_vcard.cpp:240
+#, kde-format
+msgid "Update this contact to the address book."
+msgstr "Uppdatera kontakten i adressboken."
+
+#: text_vcard.cpp:242
+#, kde-format
+msgid "Add \"%1\" to the address book."
+msgstr "Lägg till \"%1\" i adressboken."
+
+#: text_vcard.cpp:242
+#, kde-format
+msgid "Update \"%1\" to the address book."
+msgstr "Uppdatera \"%1\" i adressboken."
+
+#: text_vcard.cpp:266
+#, kde-format
+msgid "Save Business Card"
+msgstr "Spara visitkort"
+
+#: updatecontactjob.cpp:37
+#, kde-format
+msgid "The vCard's primary email address is not in addressbook."
+msgstr ""
+"Den primära e-postadressen på detta visitkort finns inte i adressboken."
+
+#: updatecontactjob.cpp:43
+#, kde-format
+msgid "There are two or more contacts with same email stored in addressbook."
+msgstr ""
+"Det finns två eller flera kontakter med samma e-postadress lagrade i "
+"adressboken."
+
+#: updatecontactjob.cpp:65
+#, kde-format
+msgid ""
+"The vCard was updated in your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+"Detta visitkort uppdaterades i adressboken. Det går att lägga till mer "
+"information i posten genom att öppna adressboken."
+
+#: updatecontactjob.cpp:76
+#, kde-format
+msgid "Email not specified"
+msgstr "E-post ej angiven"
+
+#~ msgid "%1 already exists. Do you want to overwrite it?"
+#~ msgstr "%1 finns redan. Vill du skriva över det?"
+
+#~ msgid "Add"
+#~ msgstr "Lägg till"
+
+#~ msgid "Remove"
+#~ msgstr "Ta bort"

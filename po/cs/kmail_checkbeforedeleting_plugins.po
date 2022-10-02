@@ -1,0 +1,187 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# Vit Pelcak <vpelcak@suse.cz>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2021-08-26 12:51+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.08.0\n"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Rule"
+msgstr "Nastavit pravidlo"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
+#, kde-format
+msgid "Type:"
+msgstr "Typ:"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
+#, kde-format
+msgid "Contains:"
+msgstr "Obsahuje:"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:74
+#, kde-format
+msgid "Body"
+msgstr "Tělo"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:75
+#, kde-format
+msgid "Subject"
+msgstr "Předmět"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:76
+#, kde-format
+msgid "To"
+msgstr "Komu"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:77
+#, kde-format
+msgid "Cc"
+msgstr "Kopie"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:78
+#, kde-format
+msgid "Bcc"
+msgstr "Skrytá kopie"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:170
+#, kde-format
+msgid "Unread"
+msgstr "Nepřečteno"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:179
+#, kde-format
+msgid "Important"
+msgstr "Důležité"
+
+#: confirmbeforedeleting/confirmbeforedeletingdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Before Deleting Mail"
+msgstr "Nastavit před smazáním e-mailu"
+
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
+#, kde-format
+msgid "Confirm Before Deleting"
+msgstr "Potvrzovat před smazáním"
+
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
+#, kde-format
+msgid "Configure"
+msgstr "Nastavit"
+
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:66
+#, kde-format
+msgid ""
+"Do you want to delete this email?\n"
+"%1"
+msgstr ""
+"Přejete si smazat tento e-mail?\n"
+"%1"
+
+#: confirmbeforedeleting/confirmbeforedeletingmessageboxdialog.cpp:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Delete Mail"
+msgstr "Potvrdit odstranění e-mailu"
+
+#: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
+#, kde-format
+msgid "Apply to All"
+msgstr "Použít na všechny"
+
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
+#, kde-format
+msgid "The message with subject '%2' contains '%1'"
+msgstr "Zpráva s předmětem '%2' obsahuje '%1'"
+
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:208
+#, kde-format
+msgid "The message with subject '%1' is %2"
+msgstr ""
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Rule..."
+msgstr ""
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Rule"
+msgstr ""
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
+#, kde-format
+msgctxt "@action:button"
+msgid "Modify Rule..."
+msgstr ""
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
+#, kde-format
+msgid "Type"
+msgstr "Typ"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
+#, kde-format
+msgid "Pattern"
+msgstr "Vzorek"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
+#, kde-format
+msgid "Add Rule..."
+msgstr "Přidat pravidlo..."
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
+#, kde-format
+msgid "Edit Rule..."
+msgstr "Upravit pravidlo..."
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
+#, kde-format
+msgid "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] "Odstranit pravidlo"
+msgstr[1] "Odstranit pravidla"
+msgstr[2] "Odstranit pravidla"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] "Chcete odstranit toto pravidlo?"
+msgstr[1] "Chcete odstranit tato pravidla?"
+msgstr[2] "Chcete odstranit tato pravidla?"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
+#, kde-format
+msgctxt "@title"
+msgid "Remove Rule"
+msgstr "Odstranit pravidlo"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
+#, kde-format
+msgid "Same rule already exists."
+msgstr "Stejné pravidlo již existuje."
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
+#, kde-format
+msgid "Create Rule"
+msgstr "Vytvořit pravidlo"

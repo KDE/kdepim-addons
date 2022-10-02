@@ -1,0 +1,246 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2016, 2017, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2021-11-14 19:25+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Automatic Add Contacts\" Plugin"
+msgstr "\"자동으로 연락처 추가\" 플러그인 설정"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:97
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr "연락처를 추가하려면 주소록을 만들어야 합니다. 주소록을 만드시겠습니까?"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:98
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "주소록을 사용할 수 없음"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "주소록 만들기"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "주소록 추가"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
+#, kde-format
+msgid "Automatic Add Contacts"
+msgstr "자동으로 연락처 추가"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
+#, kde-format
+msgid "Select the addressbook in which to store contacts:"
+msgstr "연락처를 저장할 주소록 선택:"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:35
+#, kde-format
+msgid "Do you want to send the email as HTML?"
+msgstr "HTML로 이메일을 보내시겠습니까?"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:36
+#, kde-format
+msgid "Send email as plain text"
+msgstr "일반 텍스트로 이메일 보내기"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Send As HTML"
+msgstr "HTML로 보내기"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
+#, kde-format
+msgid "Update SMTP server"
+msgstr "SMTP 서버 업데이트"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Check SMTP server"
+msgstr "SMTP 서버 확인"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
+#, kde-format
+msgid ""
+"Do you want to send the email with a different SMTP than the one defined in "
+"the current identity?"
+msgstr "현재 프로필에 지정한 것과 다른 SMTP 서버로 이메일을 보내시겠습니까?"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Check Before Send Mail\" Plugin"
+msgstr "\"메일 보내기 전에 확인\" 플러그인 설정"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
+#, kde-format
+msgid "Send as plain text"
+msgstr "일반 텍스트로 보내기"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
+#, kde-format
+msgid "Use SMTP server defined in identity"
+msgstr "프로필에 지정한 SMTP 서버로 보내기"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
+#, kde-format
+msgid "Check duplicated emails addresses"
+msgstr "중복된 이메일 주소 확인"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
+#, kde-format
+msgid "Check send attachment"
+msgstr "첨부 파일 전송 여부 확인"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Duplicated emails"
+msgstr "중복된 이메일"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
+#, kde-format
+msgid "These emails are duplicated. Do you want to send email?"
+msgstr "다음 이메일이 중복됩니다. 메일을 보내시겠습니까?"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:52
+#, kde-format
+msgctxt "emails (number of emails)"
+msgid "%1 (%2)"
+msgstr "%1(%2)"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Attachment"
+msgstr "첨부 파일 포함 여부 확인"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:26
+#, kde-format
+msgid "Do you want to send some attachment?"
+msgstr "첨부 파일을 보내시겠습니까?"
+
+#: confirm-address/confirmaddressconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Confirm Email Address\" Plugin"
+msgstr "\"이메일 주소 확인\" 플러그인 설정"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:32
+#, kde-format
+msgid "Accepted Domain Name"
+msgstr "허용된 도메인 이름"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:37
+#, kde-format
+msgid "Rejected Domain Name"
+msgstr "거부된 도메인 이름"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:45
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:64
+#, kde-format
+msgid "A&dd..."
+msgstr "추가(&D)..."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:46
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:65
+#, kde-format
+msgid "Re&move"
+msgstr "삭제(&M)"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#, kde-format
+msgid "Mod&ify..."
+msgstr "수정(&I)..."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressemailentrydialog.cpp:21
+#, kde-format
+msgid "Enter new domain name:"
+msgstr "새 도메인 이름 입력:"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#, kde-format
+msgid "Do you want to remove this domain?"
+msgstr "이 도메인을 삭제하시겠습니까?"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:54
+#, kde-format
+msgid "Whitelist of Addresses"
+msgstr "주소 허용 목록"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#, kde-format
+msgid "Enter new email address:"
+msgstr "새 이메일 주소 입력:"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgstr "이 이메일 주소를 삭제하시겠습니까?"
+
+#: confirm-address/confirmaddressdialog.cpp:24
+#, kde-format
+msgid "Add Selected Emails to WhiteList"
+msgstr "선택한 이메일을 허용 목록에 추가"
+
+#: confirm-address/confirmaddressdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Addresses"
+msgstr "주소 확인"
+
+#: confirm-address/confirmaddressdialog.cpp:88
+#, kde-format
+msgid "All selected emails are added to white list"
+msgstr "선택한 모든 이메일을 허용 목록에 추가함"
+
+#: confirm-address/confirmaddressdialog.cpp:88
+#, kde-format
+msgid "Emails added to white list"
+msgstr "이메일을 허용 목록에 추가함"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Value"
+msgstr "값 추가"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Value"
+msgstr "값 변경"
+
+#: confirm-address/confirmaddresswidget.cpp:22
+#, kde-format
+msgid "Potentially invalid emails are displayed in red:"
+msgstr "잘못되었을 수도 있는 이메일은 빨간색으로 표시됨:"

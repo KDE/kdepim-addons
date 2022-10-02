@@ -1,0 +1,124 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2017, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2020-08-20 12:56+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: emaillineedit/emaillineedit.cpp:34
+#, kde-format
+msgid "Click on button for selecting contacts..."
+msgstr "Kliknite na gumb za izbiro stikov..."
+
+#: emaillineedit/emaillineedit.cpp:38
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: emaillineedit/emaillineedit.cpp:40
+#, kde-format
+msgid "Select Emails"
+msgstr "Izberi poštna sporočila"
+
+#: emaillineedit/emaillineedit.cpp:88
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Emails"
+msgstr "Izberi e-pošte"
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgid "Create Folder"
+msgstr "Ustvari mapo"
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#, kde-format
+msgid "Error during creating folder: %1"
+msgstr "Napaka med ustvarjanjem mape: %1"
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:25
+#, kde-format
+msgid "Create Folder..."
+msgstr "Ustvari mapo..."
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Select IMAP folder"
+msgstr "Izberi mapo IMAP"
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:37
+#, kde-format
+msgid "Unable to load folder list"
+msgstr "Ni mogoče naložiti seznama map"
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:40
+#, kde-format
+msgid "Loading in progress..."
+msgstr "Nalaganje v teku..."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#, kde-format
+msgid "Search..."
+msgstr "Poišči..."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#, kde-format
+msgid "Refresh IMAP Folder List"
+msgstr "Osveži seznam map IMAP"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#, kde-format
+msgid "Folder Name:"
+msgstr "Ime mape:"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#, kde-format
+msgid "Slashes are not allowed in folder names."
+msgstr "V imenih map niso dovoljene poševnice."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgid "Empty folder name is not supported."
+msgstr "Prazno ime mape ni podprto."
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgid "Error during loading folders: %1"
+msgstr "Napaka med nalaganjem map: %1"
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgid "Load Folders"
+msgstr "Naloži mape"
+
+#: imapfoldercompletion/selectimapwidget.cpp:31
+#, kde-format
+msgid "Select IMAP folder"
+msgstr "Izberi mapo IMAP"
+
+#: imapfoldercompletion/selectimapwidget.cpp:58
+#, kde-format
+msgid "Click on button for selecting folder..."
+msgstr "Kliknite na gumb za izbiro mape..."
+
+#~ msgid "Create Regular Expression"
+#~ msgstr "Ustvari regularni izraz"

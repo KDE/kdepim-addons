@@ -1,0 +1,166 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2020-10-21 09:10+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: markdown/markdownlib/markdownconfiguredialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Markdown Plugin"
+msgstr "Nastavi vtičnik za Markdown"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:19
+#, kde-format
+msgid "Enable embedded LaTeX"
+msgstr "Omogoči vgrajeni LaTeX"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:20
+#, kde-format
+msgid "Enable PHP Markdown Extra definition lists"
+msgstr "Omogoči sezname za dodatne določitve PHP Markdown"
+
+#: markdown/markdownlib/markdownconverter.cpp:68
+#, kde-format
+msgid "Failed to compile the Markdown document."
+msgstr "Prevod dokumenta Markdown ni uspel."
+
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Image"
+msgstr "Dodaj sliko"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:19
+#, kde-format
+msgid "Keep original size"
+msgstr "Ohrani izvirno velikost"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#, kde-format
+msgid "Width:"
+msgstr "Širina:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
+#, kde-format
+msgid "Height:"
+msgstr "Višina:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:39
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
+#, kde-format
+msgid "Title:"
+msgstr "Naslov:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#, kde-format
+msgid "Image Link:"
+msgstr "Povezava na sliko:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#, kde-format
+msgid "Alternate text:"
+msgstr "Alternativno besedilo:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
+#, kde-format
+msgid " px"
+msgstr " px"
+
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Link"
+msgstr "Dodaj povezavo"
+
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:30
+#, kde-format
+msgid "Link:"
+msgstr "Povezava:"
+
+#: markdown/markdownlib/markdownpreviewdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Markdown Rendering Preview"
+msgstr "Predogled upodobitve Markdowna"
+
+#: markdown/markdownlib/markdownpreviewwidget.cpp:75
+#, kde-format
+msgid "Converter Error"
+msgstr "Napaka pretvornika"
+
+#: markdown/plugin/markdowninterface.cpp:36
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr "Ustvari HTML iz jezika Markdown."
+
+#: markdown/plugin/markdowninterface.cpp:53
+#, kde-format
+msgid "Markdown"
+msgstr "Markdown"
+
+#: markdown/plugin/markdowninterface.cpp:55
+#, kde-format
+msgid "Markdown Action"
+msgstr "Dejavnost Markdown"
+
+#: markdown/plugin/markdowninterface.cpp:60
+#, kde-format
+msgid "Add Title"
+msgstr "Dodaj naslov"
+
+#: markdown/plugin/markdowninterface.cpp:63
+#, kde-format
+msgid "Level %1"
+msgstr "Nivo %1"
+
+#: markdown/plugin/markdowninterface.cpp:67
+#, kde-format
+msgid "Horizontal Rule"
+msgstr "Vodoravno pravilo"
+
+#: markdown/plugin/markdowninterface.cpp:69
+#, kde-format
+msgid "Change Selected Text as Bold"
+msgstr "Spremeni izbrano besedilo v krepko"
+
+#: markdown/plugin/markdowninterface.cpp:71
+#, kde-format
+msgid "Change Selected Text as Italic"
+msgstr "Spremeni izbrano besedilo v poševno"
+
+#: markdown/plugin/markdowninterface.cpp:73
+#, kde-format
+msgid "Change Selected Text as Code"
+msgstr "Spremeni izbrano besedilo v kodo"
+
+#: markdown/plugin/markdowninterface.cpp:75
+#, kde-format
+msgid "Change Selected Text as Block Quote"
+msgstr "Spremeni izbrano besedilo v blok navedb"
+
+#: markdown/plugin/markdowninterface.cpp:78
+#, kde-format
+msgid "Add Link"
+msgstr "Dodaj povezavo"
+
+#: markdown/plugin/markdowninterface.cpp:79
+#, kde-format
+msgid "Add Image"
+msgstr "Dodaj sliko"

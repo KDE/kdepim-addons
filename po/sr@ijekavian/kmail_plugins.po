@@ -1,0 +1,385 @@
+# Translation of kmail_plugins.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-04-05 03:41+0200\n"
+"PO-Revision-Date: 2017-02-11 11:14+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: antispamplugin/antispamplugininterface.cpp:38
+#, kde-format
+msgid "&Anti-Spam Wizard..."
+msgstr "Чаробњак против &спама..."
+
+#: antivirusplugin/antivirusplugininterface.cpp:37
+#, kde-format
+msgid "&Anti-Virus Wizard..."
+msgstr "Чаробњак против &вируса..."
+
+#: common/antispamwizard.cpp:113
+#, kde-format
+msgid "Anti-Spam Wizard"
+msgstr "Чаробњак против спама"
+
+#: common/antispamwizard.cpp:114
+#, kde-format
+msgid "Anti-Virus Wizard"
+msgstr "Чаробњак против вируса"
+
+#: common/antispamwizard.cpp:118
+#, kde-format
+msgid "Welcome to the KMail Anti-Spam Wizard"
+msgstr "Добродошли у К‑поштин чаробњак против спама"
+
+#: common/antispamwizard.cpp:119
+#, kde-format
+msgid "Welcome to the KMail Anti-Virus Wizard"
+msgstr "Добродошли у К‑поштин чаробњак против вируса"
+
+#: common/antispamwizard.cpp:124
+#, kde-format
+msgid "Options to fine-tune the handling of spam messages"
+msgstr "Опције за фино подешавање руковања спам порукама"
+
+#: common/antispamwizard.cpp:128
+#, kde-format
+msgid "Summary of changes to be made by this wizard"
+msgstr "Сажетак измена које ће овај чаробњак направити"
+
+#: common/antispamwizard.cpp:131
+#, kde-format
+msgid "Options to fine-tune the handling of virus messages"
+msgstr "Опције за фино подешавање руковања порукама са вирусима"
+
+#: common/antispamwizard.cpp:204
+#, kde-format
+msgid "Virus handling"
+msgstr "Руковање вирусима"
+
+#: common/antispamwizard.cpp:291 common/antispamwizard.cpp:293
+#: common/antispamwizard.cpp:619
+#, kde-format
+msgid "Spam Handling"
+msgstr "Руковање спамом"
+
+#: common/antispamwizard.cpp:332 common/antispamwizard.cpp:334
+#: common/antispamwizard.cpp:635
+#, kde-format
+msgid "Semi spam (unsure) handling"
+msgstr "Руковање могућим спамом"
+
+#: common/antispamwizard.cpp:395 common/antispamwizard.cpp:397
+#: common/antispamwizard.cpp:643
+#, kde-format
+msgid "Classify as Spam"
+msgstr "Сврстај у спам"
+
+# >> @action:toolbar
+#: common/antispamwizard.cpp:407
+#, kde-format
+msgid "Spam"
+msgstr "Спам"
+
+# well-spelled: НЕспам
+#: common/antispamwizard.cpp:439 common/antispamwizard.cpp:441
+#: common/antispamwizard.cpp:645
+#, kde-format
+msgid "Classify as NOT Spam"
+msgstr "Сврстај у НЕспам"
+
+# >> @action:toolbar
+#: common/antispamwizard.cpp:451
+#, kde-format
+msgid "Ham"
+msgstr "Хам"
+
+#: common/antispamwizard.cpp:521
+#, kde-format
+msgid "Scanning for %1..."
+msgstr "Тражим %1..."
+
+#: common/antispamwizard.cpp:566
+#, kde-format
+msgid "Scanning for anti-spam tools finished."
+msgstr "Тражење противспам алатки је завршено."
+
+#: common/antispamwizard.cpp:567
+#, kde-format
+msgid "Scanning for anti-virus tools finished."
+msgstr "Тражење противвирусних алатки је завршено."
+
+#: common/antispamwizard.cpp:570
+#, kde-format
+msgid ""
+"<p>Sorry, no spam detection tools have been found. Install your spam "
+"detection software and re-run this wizard.</p>"
+msgstr ""
+"<p>Нису нађене алатке за откривање спама. Инсталирајте програме за откривање "
+"спама и поново покрените овај чаробњак.</p>"
+
+#: common/antispamwizard.cpp:573
+#, kde-format
+msgid "Scanning complete. No anti-virus tools found."
+msgstr "Претраживање завршено. Нису нађене противвирусне алатке."
+
+#: common/antispamwizard.cpp:594
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are marked as read.<br />Spam messages are "
+"moved into the folder named <i>%1</i>.</p>"
+msgstr ""
+"<p>Поруке сврстане у спам означене су као прочитане.<br />Спам поруке се "
+"премештају у фасциклу <i>%1</i>.</p>"
+
+#: common/antispamwizard.cpp:598
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are marked as read.<br />Spam messages are "
+"not moved into a certain folder.</p>"
+msgstr ""
+"<p>Поруке сврстане у спам означене су као прочитане.<br />Спам поруке се не "
+"премештају у одређену фасциклу.</p>"
+
+#: common/antispamwizard.cpp:603
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are not marked as read.<br />Spam messages "
+"are moved into the folder named <i>%1</i>.</p>"
+msgstr ""
+"<p>Поруке сврстане у спам нису означене као прочитане.<br />Спам поруке се "
+"премештају у фасциклу <i>%1</i>.</p>"
+
+#: common/antispamwizard.cpp:607
+#, kde-format
+msgid ""
+"<p>Messages classified as spam are not marked as read.<br />Spam messages "
+"are not moved into a certain folder.</p>"
+msgstr ""
+"<p>Поруке сврстане у спам нису означене као прочитане.<br />Спам поруке се "
+"не премештају у одређену фасциклу.</p>"
+
+#: common/antispamwizard.cpp:637
+#, kde-format
+msgid ""
+"<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
+"</p>"
+msgstr "<p>Фасцикла за поруке сврстане у могући спам је <i>%1</i>.</p>"
+
+#: common/antispamwizard.cpp:650
+#, kde-format
+msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
+msgstr "<p>Чаробњак ће направити следеће филтере:<ul>%1</ul></p>"
+
+#: common/antispamwizard.cpp:654
+#, kde-format
+msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
+msgstr "<p>Чаробњак ће заменити следеће филтере:<ul>%1</ul></p>"
+
+#: common/antispamwizard.cpp:1021
+#, kde-format
+msgid ""
+"The wizard will search for any tools to do spam detection\n"
+"and setup KMail to work with them."
+msgstr ""
+"<p>Чаробњак ће потражити неке алатке за откривање спама и подесити К‑пошту "
+"да ради са њима.</p>"
+
+#: common/antispamwizard.cpp:1025
+#, kde-format
+msgid ""
+"<p>Here you can get some assistance in setting up KMail's filter rules to "
+"use some commonly-known anti-virus tools.</p><p>The wizard can detect those "
+"tools on your computer as well as create filter rules to classify messages "
+"using these tools and to separate messages containing viruses. The wizard "
+"will not take any existing filter rules into consideration: it will always "
+"append the new rules.</p><p><b>Warning:</b> As KMail appears to be frozen "
+"during the scan of the messages for viruses, you may encounter problems with "
+"the responsiveness of KMail because anti-virus tool operations are usually "
+"time consuming; please consider deleting the filter rules created by the "
+"wizard to get back to the former behavior.</p>"
+msgstr ""
+"<p>Овде можете добити помоћ у постављању филтерских правила К‑поште која се "
+"ослањају на неке познатије противвирусне алатке.</p><p>Чаробњак може да "
+"открије те алатке на вашем рачунару, као и да помоћу њих направи филтерска "
+"правила за разврставање порука и одвајање оних које садрже вирусе. Чаробњак "
+"неће узети у обзир постојећа филтерска правила, само ће евентуално додати "
+"нова.</p><p><b>Упозорење:</b> Пошто К‑пошта делује блокирано током скенирања "
+"порука у потрази за вирусима, можете имати проблеме са одзивом К‑поште зато "
+"што операције противвирусних алатки обично дуго трају. Ако желите да вратите "
+"претходно понашање, можете обрисати филтерска правила која је чаробњак "
+"направио.</p>"
+
+#: common/antispamwizard.cpp:1076
+#, kde-format
+msgid ""
+"<p>Please select the tools to be used for the detection and go to the next "
+"page.</p>"
+msgstr ""
+"<p>Изаберите алатке који ће се користити за откривање спама и идите на "
+"следећу страницу.</p>"
+
+#: common/antispamwizard.cpp:1100
+#, kde-format
+msgid "&Mark detected spam messages as read"
+msgstr "&Означи препознате спам поруке као прочитане"
+
+#: common/antispamwizard.cpp:1102
+#, kde-format
+msgid "Mark messages which have been classified as spam as read."
+msgstr "Означава као прочитане поруке заведене као спам."
+
+#: common/antispamwizard.cpp:1105
+#, kde-format
+msgid "Move &known spam to:"
+msgstr "Премести &сигуран спам у:"
+
+#: common/antispamwizard.cpp:1107
+#, kde-format
+msgid ""
+"The default folder for spam messages is the trash folder, but you may change "
+"that in the folder view below."
+msgstr ""
+"Спам поруке се подразумевано шаљу у фасциклу смећа, али то можете изменити у "
+"приказу фасцикли испод."
+
+#: common/antispamwizard.cpp:1120
+#, kde-format
+msgid "Move &probable spam to:"
+msgstr "Премести &могући спам у:"
+
+#: common/antispamwizard.cpp:1122
+#, kde-format
+msgid ""
+"The default folder is the inbox folder, but you may change that in the "
+"folder view below.<p>Not all tools support a classification as unsure. If "
+"you have not selected a capable tool, you cannot select a folder as well.</p>"
+msgstr ""
+"<p>Подразумевана је пријемна фасцикла, али то можете изменити у приказу "
+"фасцикли испод.</p><p>Не подржавају све алатке сврставање у могући спам. Ако "
+"нисте изабрали алатку која то може, нећете моћи ни да изаберете фасциклу.</p>"
+
+#: common/antispamwizard.cpp:1237
+#, kde-format
+msgid "Check messages using the anti-virus tools"
+msgstr "Проверавај поруке противвирусним алаткама"
+
+#: common/antispamwizard.cpp:1239
+#, kde-format
+msgid ""
+"Let the anti-virus tools check your messages. The wizard will create "
+"appropriate filters. The messages are usually marked by the tools so that "
+"following filters can react on this and, for example, move virus messages to "
+"a special folder."
+msgstr ""
+"Пропуштајте своје поруке кроз противвирусне алатке. Чаробњак ће направити "
+"одговарајуће филтере. Алатке обично прво означе поруке тако да филтери могу "
+"да реагују на основу тога, тако што, на пример, преместе поруке са вирусима "
+"у посебну фасциклу."
+
+#: common/antispamwizard.cpp:1245
+#, kde-format
+msgid "Move detected viral messages to the selected folder"
+msgstr "Премести поруке препознате као заражене у изабрану фасциклу"
+
+#: common/antispamwizard.cpp:1247
+#, kde-format
+msgid ""
+"A filter to detect messages classified as virus-infected and to move those "
+"messages into a predefined folder is created. The default folder is the "
+"trash folder, but you may change that in the folder view."
+msgstr ""
+"Направљен је филтер за препознавање заражених порука и њихово премештање у "
+"предефинисану фасциклу. Подразумевана је фасцикла смећа, али то можете "
+"променити у приказу фасцикли."
+
+#: common/antispamwizard.cpp:1253
+#, kde-format
+msgid "Additionally, mark detected viral messages as read"
+msgstr "Додатно, означи прочитаним поруке препознате као заражене"
+
+#: common/antispamwizard.cpp:1256
+#, kde-format
+msgid ""
+"Mark messages which have been classified as virus-infected as read, as well "
+"as moving them to the selected folder."
+msgstr ""
+"Означава поруке препознате као заражене прочитаним и премешта их у изабрану "
+"фасциклу."
+
+#: logactivitiesplugin/logactivitiesplugininterface.cpp:37
+#, kde-format
+msgid "&Log Activities..."
+msgstr "&Бележи активности..."
+
+#: mailmergeplugin/mailmergedialog.cpp:32
+#, fuzzy, kde-format
+#| msgid "Mail Merge"
+msgctxt "@title:window"
+msgid "Mail Merge"
+msgstr "Стапање поште"
+
+#: mailmergeplugin/widgets/csvwidget.cpp:34
+#, kde-format
+msgid "Path:"
+msgstr "Путања:"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:43
+#, kde-format
+msgid "Source:"
+msgstr "Извор:"
+
+# >> @item:inlistbox Source:
+#: mailmergeplugin/widgets/mailmergewidget.cpp:48
+#, kde-format
+msgid "Address Book"
+msgstr "адресар"
+
+# >> @item:inlistbox Source:
+#: mailmergeplugin/widgets/mailmergewidget.cpp:49
+#, kde-format
+msgid "CSV"
+msgstr "ЦСВ"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:68
+#, kde-format
+msgid "Attachment:"
+msgstr "Прилог:"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:74
+#, kde-format
+msgid "A&dd..."
+msgstr "&Додај..."
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:74
+#, kde-format
+msgid "Re&move"
+msgstr "&Уклони"
+
+#: mailmergeplugin/widgets/mailmergewidget.cpp:75
+#, kde-format
+msgid "Mod&ify..."
+msgstr "&Измени..."
+
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "Attachment"
+msgctxt "@title:window"
+msgid "Attachment"
+msgstr "Прилог"
+
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:41
+#, kde-format
+msgid "Select attachment:"
+msgstr "Изаберите прилог:"

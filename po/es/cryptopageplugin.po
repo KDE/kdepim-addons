@@ -1,0 +1,54 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Javier Vinal <fjvinal@gmail.com>, 2009.
+# Javier Viñal <fjvinal@gmail.com>, 2010, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-08 00:48+0000\n"
+"PO-Revision-Date: 2013-11-25 14:04+0100\n"
+"Last-Translator: Javier Vinal <fjvinal@gmail.com>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: cryptopageplugin.cpp:40
+#, kde-format
+msgid "Allowed Protocols"
+msgstr "Protocolos permitidos"
+
+#: cryptopageplugin.cpp:55
+#, kde-format
+msgid "Preferred OpenPGP encryption key:"
+msgstr "Clave de cifrado preferida de OpenPGP:"
+
+#: cryptopageplugin.cpp:60
+#, kde-format
+msgid "Preferred S/MIME encryption certificate:"
+msgstr "Certificado de cifrado preferido S/MIME:"
+
+#: cryptopageplugin.cpp:65
+#, kde-format
+msgid "Message Preference"
+msgstr "Prioridad de mensaje"
+
+#: cryptopageplugin.cpp:74
+#, kde-format
+msgid "Sign:"
+msgstr "Firmar:"
+
+#: cryptopageplugin.cpp:91
+#, kde-format
+msgid "Encrypt:"
+msgstr "Cifrar:"
+
+#: cryptopageplugin.cpp:109
+#, kde-format
+msgid "Crypto Settings"
+msgstr "Preferencias de cifrado"

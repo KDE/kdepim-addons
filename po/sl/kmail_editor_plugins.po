@@ -1,0 +1,230 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2016, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2020-08-20 12:53+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:23
+#, kde-format
+msgid "Autocorrect Text"
+msgstr "Samodejno popravi besedilo"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:28
+#, kde-format
+msgid "Autocorrect Full Text"
+msgstr "Samodejno popravi celotno besedilo"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:32
+#, kde-format
+msgid "Autocorrect Selected Text"
+msgstr "Samodejno popravi izbrano besedilo"
+
+#: insertemail/insertemailplugineditorinterface.cpp:23
+#, kde-format
+msgid "Insert Email..."
+msgstr "Vstavi e-pošto ..."
+
+#: insertshorturl/insertshorturlconfigurewidget.cpp:29
+#, kde-format
+msgid "Select Short URL server:"
+msgstr "Izberite strežnik za krajšanje URL-jev:"
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:61
+#, kde-format
+msgid "Insert Short URL..."
+msgstr "Vstavi kratek URL ..."
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:85
+#, kde-format
+msgid "No network connection detected, we cannot shorten URL."
+msgstr ""
+"Zaznane ni bilo nobene omrežne povezave, naslova URL ni mogoče okrajšati."
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:92
+#, kde-format
+msgid "String doesn't seem to be a URL"
+msgstr "Ni videti, da bi bil niz naslov URL"
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:98
+#, kde-format
+msgid "An error occurred: \"%1\""
+msgstr "Prišlo je do napake: \"%1\""
+
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
+#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
+#, kde-format
+msgid ""
+"Error reported by server:\n"
+"'%1'"
+msgstr ""
+"Strežnik je poročal o napaki:\n"
+"'%1'"
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:22
+#, kde-format
+msgid "Insert Special Character..."
+msgstr "Vstavi poseben znak..."
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
+#, kde-format
+msgctxt "@title:window"
+msgid "Insert Special Character"
+msgstr "Vstavi poseben znak"
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#, kde-format
+msgid "Insert"
+msgstr "Vstavi"
+
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
+#, kde-format
+msgid "Insert Non Breaking Space"
+msgstr "Vstavi nelomljiv presledek"
+
+#: quicktext/quicktextconfiguredialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure quick text"
+msgstr "Nastavi hitro besedilo"
+
+#: quicktext/quicktextconfiguredialog.cpp:38
+#, kde-format
+msgid "Import..."
+msgstr "Uvozi..."
+
+#: quicktext/quicktextconfiguredialog.cpp:41
+#, kde-format
+msgid "Export..."
+msgstr "Izvozi..."
+
+#: quicktext/quicktextmanager.cpp:78
+#, kde-format
+msgid "Import QuickText"
+msgstr "Uvozi hitro besedilo"
+
+#: quicktext/quicktextmanager.cpp:86
+#, kde-format
+msgid "Export QuickText"
+msgstr "Izvozi hitro besedilo"
+
+#: quicktext/quicktextplugineditorinterface.cpp:38
+#: quicktext/quicktextplugineditorinterface.cpp:44
+#, kde-format
+msgid "Variables"
+msgstr "Spremenljivke"
+
+#: quicktext/quicktexttreewidget.cpp:37
+#, kde-format
+msgid "Add Snippet..."
+msgstr "Dodaj košček programske kode..."
+
+#: quicktext/quicktexttreewidget.cpp:39
+#, kde-format
+msgid "Edit Snippet..."
+msgstr "Uredi košček programske kode..."
+
+#: quicktext/quicktexttreewidget.cpp:41
+#, kde-format
+msgid "Remove Snippet"
+msgstr "Odstrani košček programske kode"
+
+#: quicktext/quicktexttreewidget.cpp:44
+#, kde-format
+msgid "Add Group..."
+msgstr "Dodaj skupino..."
+
+#: quicktext/quicktexttreewidget.cpp:46
+#, kde-format
+msgid "Rename Group..."
+msgstr "Preimenuj skupino..."
+
+#: quicktext/quicktexttreewidget.cpp:48
+#, kde-format
+msgid "Remove Group"
+msgstr "Odstrani skupino"
+
+#: quicktext/quicktexttreewidget.cpp:85
+#, kde-format
+msgid "Text Snippets"
+msgstr "Koščki besedil"
+
+#: quicktext/quicktexttreewidget.cpp:142
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Do you really want to remove snippet \"%1\"?<nl/><warning>There is no way to "
+"undo the removal.</warning>"
+msgstr ""
+"Ali zares želite odstraniti košček \"%1\"?<nl/><warning>Odstranjenega koščka "
+"ne bo mogoče več priklicati nazaj.</warning>"
+
+#: quicktext/quicktexttreewidget.cpp:167
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Do you really want to remove group \"%1\" along with all its snippets?<nl/"
+"><warning>There is no way to undo the removal.</warning>"
+msgstr ""
+"Ali zares želite odstraniti skupino \"%1\" z vsemi njenimi koščki?<nl/"
+"><warning>Odstranjenega ne bo mogoče več priklicati nazaj.</warning>"
+
+#: quicktext/quicktexttreewidget.cpp:177
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to remove group \"%1\"?"
+msgstr "Ali zares želite odstraniti skupino \"%1\"?"
+
+#: quicktext/quicktextwidget.cpp:68
+#, kde-format
+msgid "QuickText was changed. Do you want to save it?"
+msgstr "Hitro besedilo se je spremenilo. Ali ga želite shraniti?"
+
+#: quicktext/quicktextwidget.cpp:69
+#, kde-format
+msgid "Save"
+msgstr "Shrani"
+
+#: quicktext/quicktextwidget.cpp:111
+#, kde-format
+msgid "General"
+msgstr "Splošno"
+
+#: sharetext/sharetextplugineditorinterface.cpp:28
+#, kde-format
+msgid "Share Mail Text..."
+msgstr "Deli besedilo pošte..."
+
+#: zoomtext/zoomlabel.cpp:20
+#, kde-format
+msgid "Zoom: %1%"
+msgstr "Zoom: %1%"
+
+#: zoomtext/zoomtextplugineditorinterface.cpp:25
+#, kde-format
+msgid "Zoom..."
+msgstr "Zoom..."
+
+#~ msgid "Reset"
+#~ msgstr "Ponastavi"
+
+#~ msgid "&Zoom In"
+#~ msgstr "&Približaj"
+
+#~ msgid "Zoom &Out"
+#~ msgstr "&Oddalji"

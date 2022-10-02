@@ -1,0 +1,262 @@
+# Translation of kmail_editorsendcheck_plugins.po to Ukrainian
+# Copyright (C) 2016-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2016, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail_editorsendcheck_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2021-11-06 06:11+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Automatic Add Contacts\" Plugin"
+msgstr "Налаштовування додатка «Автоматичне додавання контактів»"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:97
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr ""
+"Перед додаванням запису контакту вам слід створити адресну книгу. Хочете "
+"створити її зараз?"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:98
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "Немає доступних адресних книг"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Створити адресну книгу"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Додавання адресної книги"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
+#, kde-format
+msgid "Automatic Add Contacts"
+msgstr "Автоматичне додавання контактів"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
+#, kde-format
+msgid "Select the addressbook in which to store contacts:"
+msgstr "Виберіть адресну книгу для зберігання записів контактів:"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:35
+#, kde-format
+msgid "Do you want to send the email as HTML?"
+msgstr "Хочете надіслати повідомлення у форматі HTML?"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:36
+#, kde-format
+msgid "Send email as plain text"
+msgstr "Надіслати повідомлення як звичайний текст"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Send As HTML"
+msgstr "Надіслати у форматі HTML"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
+#, kde-format
+msgid "Update SMTP server"
+msgstr "Оновити сервер SMTP"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Check SMTP server"
+msgstr "Перевірка сервера SMTP"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
+#, kde-format
+msgid ""
+"Do you want to send the email with a different SMTP than the one defined in "
+"the current identity?"
+msgstr ""
+"Хочете надіслати пошту у форматі за допомогою іншого сервера SMTP ніж той, "
+"який визначено у поточному профілі?"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Check Before Send Mail\" Plugin"
+msgstr "Налаштовування додатка «Перевірка перед надсиланням повідомлення»"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
+#, kde-format
+msgid "Send as plain text"
+msgstr "Надіслати як звичайний текст"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
+#, kde-format
+msgid "Use SMTP server defined in identity"
+msgstr "Використовувати сервер SMTP з профілю"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
+#, kde-format
+msgid "Check duplicated emails addresses"
+msgstr "Перевірити наявність дублікатів адрес"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
+#, kde-format
+msgid "Check send attachment"
+msgstr "Перевірити надіслане долучення"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Duplicated emails"
+msgstr "Дублювання адрес"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
+#, kde-format
+msgid "These emails are duplicated. Do you want to send email?"
+msgstr "Ці адреси дубльовано. Хочете надіслати повідомлення попри це?"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:52
+#, kde-format
+msgctxt "emails (number of emails)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Attachment"
+msgstr "Перевірка долучення"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:26
+#, kde-format
+msgid "Do you want to send some attachment?"
+msgstr "Хочете надіслати долучення до повідомлення?"
+
+#: confirm-address/confirmaddressconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Confirm Email Address\" Plugin"
+msgstr "Налаштовування додатка «Підтвердження адреси електронної пошти»"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:32
+#, kde-format
+msgid "Accepted Domain Name"
+msgstr "Назва прийнятного домену"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:37
+#, kde-format
+msgid "Rejected Domain Name"
+msgstr "Назва неприйнятного домену"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:45
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:64
+#, kde-format
+msgid "A&dd..."
+msgstr "&Додати…"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:46
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:65
+#, kde-format
+msgid "Re&move"
+msgstr "Ви&лучити"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#, kde-format
+msgid "Mod&ify..."
+msgstr "З&мінити…"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressemailentrydialog.cpp:21
+#, kde-format
+msgid "Enter new domain name:"
+msgstr "Введіть нову назву домену:"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#, kde-format
+msgid "Do you want to remove this domain?"
+msgstr "Хочете вилучити цей домен?"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:54
+#, kde-format
+msgid "Whitelist of Addresses"
+msgstr "«Білий» список адрес"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#, kde-format
+msgid "Enter new email address:"
+msgstr "Введіть нову адресу ел. пошти:"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgstr "Хочете вилучити цю адресу електронної пошти?"
+
+#: confirm-address/confirmaddressdialog.cpp:24
+#, kde-format
+msgid "Add Selected Emails to WhiteList"
+msgstr "Додати позначені адреси до «білого» списку"
+
+#: confirm-address/confirmaddressdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Addresses"
+msgstr "Підтвердження адрес"
+
+#: confirm-address/confirmaddressdialog.cpp:88
+#, kde-format
+msgid "All selected emails are added to white list"
+msgstr "Усі позначені адреси додано до «білого» списку"
+
+#: confirm-address/confirmaddressdialog.cpp:88
+#, kde-format
+msgid "Emails added to white list"
+msgstr "Адреси додано до «білого» списку"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Value"
+msgstr "Додавання значення"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Value"
+msgstr "Зміна значення"
+
+#: confirm-address/confirmaddresswidget.cpp:22
+#, kde-format
+msgid "Potentially invalid emails are displayed in red:"
+msgstr "Потенційні помилки у адресах позначено червоним:"
+
+#~ msgid "Enable"
+#~ msgstr "Увімкнути"
+
+#~ msgid "Add Automatically Contacts"
+#~ msgstr "Автоматичне додавання контактів"
+
+#~ msgid "Send Mail as PlainText"
+#~ msgstr "Надіслати пошту у форматі звичайного тексту"

@@ -1,0 +1,298 @@
+# Translation of kaddressbook_plugins.po to Brazilian Portuguese
+# Copyright (C) 2015-2016 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2015, 2016.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaddressbook_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2019-12-20 11:18-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.08.2\n"
+
+#: checkgravatar/checkgravatarplugininterface.cpp:37
+#, kde-format
+msgid "Check Gravatar..."
+msgstr "Verificar o Gravatar..."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:61
+#: sendmail/sendmailplugininterface.cpp:59
+#, kde-format
+msgid "You have not selected any contacts."
+msgstr "Você não selecionou nenhum contato."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:69
+#, kde-format
+msgid "No email found for this contact."
+msgstr "Nenhum e-mail encontrado para este contato."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:108
+#, kde-format
+msgid "A contact group was selected."
+msgstr "Um grupo de contatos foi selecionado."
+
+#: checkgravatar/checkgravatarplugininterface.cpp:111
+#, kde-format
+msgid "Too many contacts selected."
+msgstr "Muitos contatos selecionados."
+
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
+#, kde-format
+msgid "Save Image"
+msgstr "Salvar imagem"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
+#, kde-format
+msgid "Save Image URL"
+msgstr "Salvar URL da imagem"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Check and update Gravatar"
+msgstr "Verificar e atualizar o Gravatar"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
+#, kde-format
+msgid "Search"
+msgstr "Pesquisar"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
+#, kde-format
+msgid "Email:"
+msgstr "E-mail:"
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:109
+#, kde-format
+msgid "Search is impossible."
+msgstr "Não é possível pesquisar."
+
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:128
+#, kde-format
+msgid "No Gravatar Found."
+msgstr "Nenhum Gravatar encontrado."
+
+#: mergecontacts/mergecontactsplugininterface.cpp:25
+#, kde-format
+msgid "Merge Contacts..."
+msgstr "Mesclar contatos..."
+
+#: mergelib/manualmerge/mergecontactsdialog.cpp:39
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Contacts to merge"
+msgstr "Selecionar os contatos para mesclar"
+
+# Manter inicial em maiúsculo. Trata-se do nome de um botão. (Alvarenga)
+#: mergelib/manualmerge/mergecontactwidget.cpp:32
+#, kde-format
+msgid "merge"
+msgstr "Mesclar"
+
+#: mergelib/manualmerge/mergecontactwidget.cpp:48
+#, kde-format
+msgid "Select contacts that you really want to merge:"
+msgstr "Selecione os contatos que deseja mesclar:"
+
+#: mergelib/manualmerge/mergecontactwidget.cpp:68
+#, kde-format
+msgid "Select the addressbook in which to store merged contacts:"
+msgstr "Selecione o livro de endereços onde armazenar os contatos mesclados:"
+
+#: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
+#, kde-format
+msgid "Select All"
+msgstr ""
+
+#: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
+#, kde-format
+msgid "Deselect All"
+msgstr ""
+
+#: mergelib/searchduplicate/mergecontactselectinformationtabwidget.cpp:35
+#, kde-format
+msgid "Duplicate contact %1"
+msgstr "Contato duplicado %1"
+
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:17
+#, kde-format
+msgid "Contacts"
+msgstr "Contatos"
+
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
+#, fuzzy, kde-format
+#| msgid "Duplicate contact %1"
+msgid "Duplicate contact \"%1\" (%2 times)"
+msgstr "Contato duplicado %1"
+
+#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
+#, kde-format
+msgctxt "@title:window"
+msgid "Search and Select Duplicate Contacts to merge"
+msgstr "Procurar e selecionar os contatos duplicados a mesclar"
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
+#, fuzzy, kde-format
+#| msgid "Search is impossible."
+msgid "Search in result..."
+msgstr "Não é possível pesquisar."
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
+#, kde-format
+msgid "Select AddressBook:"
+msgstr "Selecionar livro de endereços:"
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
+#, kde-format
+msgid "Merge"
+msgstr "Mesclar"
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
+#, kde-format
+msgid "Expand All"
+msgstr ""
+
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
+#, kde-format
+msgid "Collapse All"
+msgstr ""
+
+#: mergelib/widgets/mergecontacterrorlabel.cpp:18
+#, kde-format
+msgid "You must select at least two elements."
+msgstr "Selecione pelo menos dois elementos."
+
+#: mergelib/widgets/mergecontacterrorlabel.cpp:21
+#, kde-format
+msgid "No duplicated contact found."
+msgstr "Não foi encontrado nenhum contato duplicado."
+
+#: mergelib/widgets/mergecontacterrorlabel.cpp:24
+#, kde-format
+msgid "No contacts selected."
+msgstr "Nenhum contato selecionado."
+
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:20
+#, kde-format
+msgid ""
+"Some information can be lost. Do you want to continue, or customize what you "
+"want to merge?"
+msgstr ""
+"Algumas informações podem ser perdidas. Deseja continuar ou personalizar os "
+"itens a mesclar?"
+
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
+#, kde-format
+msgid "Customize"
+msgstr "Personalizar"
+
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
+#, kde-format
+msgid "Automatic Merging"
+msgstr "Mesclagem automática"
+
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
+#, kde-format
+msgid ""
+"Some information was not selected. You can lose this information. Do you "
+"want to continue merging?"
+msgstr ""
+"Algumas informações não foram selecionadas e poderão ser perdidas. Deseja "
+"continuar a mesclagem?"
+
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
+#, kde-format
+msgid "Missing Selected Information"
+msgstr "Informações selecionadas faltando"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:63
+#, kde-format
+msgctxt "The wedding anniversary of a contact"
+msgid "Anniversary"
+msgstr "Aniversário de casamento"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:72
+#, kde-format
+msgid "Blog Feed"
+msgstr "Fonte do blog"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:81
+#, kde-format
+msgid "Profession"
+msgstr "Profissão"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:90
+#, kde-format
+msgid "Office"
+msgstr "Escritório"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:93
+#, kde-format
+msgid "Manager"
+msgstr "Gerenciador"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:96
+#, kde-format
+msgid "Assistant"
+msgstr "Assistente"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:105
+#, kde-format
+msgid "Spouse"
+msgstr "Cônjuge"
+
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:120
+#, kde-format
+msgid "(Undefined)"
+msgstr "(Não definido)"
+
+#: searchduplicates/searchduplicatesplugininterface.cpp:24
+#, kde-format
+msgid "Search Duplicate Contacts..."
+msgstr "Procurar contatos duplicados..."
+
+#: sendmail/mailsenderjob.cpp:127
+#, kde-format
+msgid "No emails found in selected contacts."
+msgstr "Nenhum e-mail encontrado nos contatos selecionados."
+
+#: sendmail/sendmailplugininterface.cpp:26
+#, kde-format
+msgid "Send an email..."
+msgstr "Enviar um e-mail..."
+
+#: sendvcards/sendvcardsjob.cpp:96
+#, kde-format
+msgid "No vCard created."
+msgstr "Nenhum vCard criado."
+
+#: sendvcards/sendvcardsjob.cpp:134
+#, kde-format
+msgid "Temporary file '%1' cannot be created"
+msgstr "O arquivo temporário '%1' não pode ser criado"
+
+#: sendvcards/sendvcardsplugininterface.cpp:34
+#, kde-format
+msgid "Send vCards..."
+msgstr "Enviar vCards..."
+
+#~ msgid "Use Libravatar"
+#~ msgstr "Usar o Libravatar"
+
+#~ msgid "Fallback to Gravatar"
+#~ msgstr "Alternativa ao Gravatar"
+
+#~ msgid "Use HTTPS Protocol"
+#~ msgstr "Usar o protocolo HTTPS"

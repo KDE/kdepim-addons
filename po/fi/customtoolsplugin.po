@@ -1,0 +1,100 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2016-05-01 00:15+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Käännösohjelma"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "&Käännösohjelma"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Käännösohjelma"
+
+#~ msgid "Configure engine"
+#~ msgstr "Tietomoottorin asetukset"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Valitse lyhytosoitepalvelin:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Palvelin ilmoitti virheestä:\n"
+#~ "%1"
+
+#~ msgid "Close"
+#~ msgstr "Sulje"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Luodaan lyhytosoitetta…"
+
+#~ msgid "Configure..."
+#~ msgstr "Asetukset…"
+
+#~ msgid "Convert"
+#~ msgstr "Muunna"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Lisää lyhytosoite"
+
+#~ msgid "Original URL:"
+#~ msgstr "Alkuperäinen osoite:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Kopioi leikepöydälle"
+
+#~ msgid "Short URL:"
+#~ msgstr "Lyhytosoite:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Avaa lyhytosoite"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr "Verkkoyhteyttä ei havaittu, osoitetta ei voi lyhentää."
+
+#~ msgid "No network"
+#~ msgstr "Ei verkkoyhteyttä"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Ilmeni virhe: ”%1”"
+
+#~ msgid "Short URL"
+#~ msgstr "Lyhytosoite"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Luo lyhytosoite"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "Lyhytosoitteen luominen on meneillään…"
+
+#~ msgid "Short url:"
+#~ msgstr "Lyhytosoite:"
+
+#, fuzzy
+#~| msgid "Short url:"
+#~ msgid "Short url"
+#~ msgstr "Lyhytosoite:"

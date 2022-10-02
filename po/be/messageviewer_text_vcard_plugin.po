@@ -1,0 +1,119 @@
+# translation of kmail_text_vcard_plugin.po to Belarusian
+# translation of kmail_text_vcard_plugin.po to
+#
+# Darafei Praliaskouski <katziara@tut.by>, 2006.
+# Darafei Praliaskouski <komzpa@licei2.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail_text_vcard_plugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"PO-Revision-Date: 2007-08-26 21:39+0300\n"
+"Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
+"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+
+#: text_vcard.cpp:87
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "Attached business card"
+msgid_plural "Attached business cards"
+msgstr[0] "Прычэпленая візітная картка"
+msgstr[1] "Прычэпленая візітная картка"
+msgstr[2] "Прычэпленая візітная картка"
+
+#: text_vcard.cpp:129
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the addressbook]"
+msgid "[Add this contact to the address book]"
+msgstr "[Дадаць гэты кантакт у адрасную кнігу]"
+
+#: text_vcard.cpp:135
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the addressbook]"
+msgid "[Update this contact in the address book]"
+msgstr "[Дадаць гэты кантакт у адрасную кнігу]"
+
+#: text_vcard.cpp:140
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the addressbook]"
+msgid "[This contact is already in addressbook]"
+msgstr "[Дадаць гэты кантакт у адрасную кнігу]"
+
+#: text_vcard.cpp:222
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "View Business Card"
+msgstr "Прычэпленая візітная картка"
+
+#: text_vcard.cpp:223
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "Save Business Card As..."
+msgstr "Прычэпленая візітная картка"
+
+#: text_vcard.cpp:240
+#, kde-format
+msgid "Add this contact to the address book."
+msgstr "Дадаць гэты кантакт у адрасную кнігу."
+
+#: text_vcard.cpp:240
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the addressbook]"
+msgid "Update this contact to the address book."
+msgstr "[Дадаць гэты кантакт у адрасную кнігу]"
+
+#: text_vcard.cpp:242
+#, fuzzy, kde-format
+#| msgid "Add this contact to the address book."
+msgid "Add \"%1\" to the address book."
+msgstr "Дадаць гэты кантакт у адрасную кнігу."
+
+#: text_vcard.cpp:242
+#, fuzzy, kde-format
+#| msgid "Add this contact to the address book."
+msgid "Update \"%1\" to the address book."
+msgstr "Дадаць гэты кантакт у адрасную кнігу."
+
+#: text_vcard.cpp:266
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "Save Business Card"
+msgstr "Прычэпленая візітная картка"
+
+#: updatecontactjob.cpp:37
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the addressbook]"
+msgid "The vCard's primary email address is not in addressbook."
+msgstr "[Дадаць гэты кантакт у адрасную кнігу]"
+
+#: updatecontactjob.cpp:43
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the addressbook]"
+msgid "There are two or more contacts with same email stored in addressbook."
+msgstr "[Дадаць гэты кантакт у адрасную кнігу]"
+
+#: updatecontactjob.cpp:65
+#, kde-format
+msgid ""
+"The vCard was updated in your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+
+#: updatecontactjob.cpp:76
+#, kde-format
+msgid "Email not specified"
+msgstr ""
+
+#~ msgid "Add"
+#~ msgstr "Дадаць"
+
+#~ msgid "Remove"
+#~ msgstr "Выдаліць"

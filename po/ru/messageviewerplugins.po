@@ -1,0 +1,364 @@
+# Zhitomirsky Sergey <szh@7ka.mipt.ru>, 2000.
+# Gregory Mokhin <mok@kde.ru>, 2001,2003-2005.
+# Andrey Cherepanov <sibskull@mail.ru>, 2001-2006.
+# Albert R. Valiev <darkstar@altlinux.ru>, 2002.
+# Leonid Kanter <leon@asplinux.ru>, 2002-2004.
+# Nick Shaforostoff <shafff@ukr.net>, 2004-2007, 2009.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2014, 2015, 2016, 2017.
+# Julia Dronova <juliette.tux@gmail.com>, 2012.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020.
+# Мария Шикунова <translation-team@basealt.ru>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"PO-Revision-Date: 2022-02-21 16:48+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.1\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
+#, kde-format
+msgid "Current URL is not a shortened URL."
+msgstr "Текущая ссылка не является сокращённой."
+
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
+#, kde-format
+msgid "Expand URL"
+msgstr "Раскрыть URL"
+
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
+#, kde-format
+msgid "Translate..."
+msgstr "Перевести..."
+
+#: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
+#: createtodoplugin/todoedit.cpp:42
+#, kde-format
+msgid "&Save"
+msgstr "&Сохранить"
+
+#: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
+#, kde-format
+msgid "Open &Editor..."
+msgstr "Открыть &редактор..."
+
+#: createeventplugin/eventedit.cpp:56
+#, kde-format
+msgid "Event:"
+msgstr "Событие:"
+
+# BUGME: please remove full stop from the tooltip text --aspotashev
+#: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
+#, kde-format
+msgid "Calendar where the new event will be stored."
+msgstr "Календарь, в который следует добавить новое событие."
+
+# BUGME: widgets/noteedit.cpp:80 should probably talk about notes, not events. --aspotashev
+#: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
+#, kde-format
+msgid "Calendar where the new event will be stored"
+msgstr "Календарь, в который следует добавить новое событие"
+
+#: createeventplugin/eventedit.cpp:89
+#, kde-format
+msgid "Start:"
+msgstr "Начало:"
+
+#: createeventplugin/eventedit.cpp:95
+#, kde-format
+msgid "Select start time for event."
+msgstr "Укажите время начала события."
+
+#: createeventplugin/eventedit.cpp:102
+#, kde-format
+msgid "End:"
+msgstr "Завершение:"
+
+#: createeventplugin/eventedit.cpp:107
+#, kde-format
+msgid "Select end time for event."
+msgstr "Укажите время завершения события."
+
+#: createeventplugin/eventedit.cpp:125
+#, kde-format
+msgid "Create new event and close this widget."
+msgstr "Создать новое событие и закрыть эту панель."
+
+#: createeventplugin/eventedit.cpp:131
+#, kde-format
+msgid "Open event editor, where more details can be changed."
+msgstr "Открыть редактор события, чтобы установить другие его параметры."
+
+#: createeventplugin/eventedit.cpp:142
+#, kde-format
+msgid "Close the widget for creating new events."
+msgstr "Закрыть панель создания нового события."
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:68
+#, kde-format
+msgid "Create Event..."
+msgstr "Создать событие..."
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:69
+#, kde-format
+msgid "Create Event"
+msgstr "Создать событие"
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:70
+#, kde-format
+msgid "Allows you to create a calendar Event"
+msgstr "Добавить в календарь событие для этого письма."
+
+# Note like in KNotes. --aspotashev
+#: createnoteplugin/noteedit.cpp:49
+#, kde-format
+msgid "Note:"
+msgstr "Заметка:"
+
+#: createnoteplugin/noteedit.cpp:90
+#, kde-format
+msgid "Create new note and close this widget."
+msgstr "Создать новую заметку и закрыть эту панель."
+
+#: createnoteplugin/noteedit.cpp:99
+#, kde-format
+msgid "Close the widget for creating new notes."
+msgstr "Закрыть панель создания новой заметки."
+
+# BUGME: add ellipsis --aspotashev
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:120
+#, kde-format
+msgctxt "edit a note on this message"
+msgid "Edit Note"
+msgstr "Изменить заметку..."
+
+# BUGME: add ellipsis --aspotashev
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:122
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:133
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:134
+#, kde-format
+msgctxt "create a new note out of this message"
+msgid "Create Note"
+msgstr "Создать заметку..."
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:135
+#, kde-format
+msgid "Allows you to create a note from this message"
+msgstr "Создать заметку для этого письма"
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:136
+#, kde-format
+msgid ""
+"This option starts an editor to create a note. Then you can edit the note to "
+"your liking before saving it."
+msgstr ""
+"Открыть окно создания новой заметки для данного письма. Перед сохранением "
+"заметку можно отредактировать."
+
+#: createtodoplugin/todoedit.cpp:61
+#, kde-format
+msgid "To-do:"
+msgstr "Задача:"
+
+#: createtodoplugin/todoedit.cpp:80
+#, kde-format
+msgid "Todo list where the new task will be stored."
+msgstr "Список задач, в который следует добавить новую задачу."
+
+#: createtodoplugin/todoedit.cpp:82
+#, kde-format
+msgid "Todo list where the new task will be stored"
+msgstr "Список задач, в который следует добавить новую задачу"
+
+#: createtodoplugin/todoedit.cpp:96
+#, kde-format
+msgid "Create new todo and close this widget."
+msgstr "Создать новую задачу и закрыть эту панель."
+
+#: createtodoplugin/todoedit.cpp:103
+#, kde-format
+msgid "Open todo editor, where more details can be changed."
+msgstr "Открыть редактор задачи, чтобы установить другие её параметры."
+
+#: createtodoplugin/todoedit.cpp:113
+#, kde-format
+msgid "Close the widget for creating new todos."
+msgstr "Закрыть панель создания новой задачи."
+
+#: createtodoplugin/todoedit.cpp:150
+#, kde-format
+msgid "Check I received a reply about \"%1\""
+msgstr "Проверить получение ответа на тему «%1»"
+
+#: createtodoplugin/todoedit.cpp:151
+#, kde-format
+msgid "Reply to \"%1\""
+msgstr "Ответить на «%1»"
+
+#: createtodoplugin/todoedit.cpp:240
+#, kde-format
+msgctxt ""
+"%1 is summary of the todo, %2 is name of the folder in which it is stored"
+msgid "New todo '%1' was added to task list '%2'"
+msgstr "Новая задача «%1» добавлена в список задач «%2»"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:68
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:69
+#, kde-format
+msgid "Create To-do"
+msgstr "Создать задачу"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:70
+#, kde-format
+msgid "Allows you to create a calendar to-do or reminder from this message"
+msgstr "Добавить в календарь задачу или напоминание для этого письма"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:72
+#, kde-format
+msgid ""
+"This option starts the KOrganizer to-do editor with initial values taken "
+"from the currently selected message. Then you can edit the to-do to your "
+"liking before saving it to your calendar."
+msgstr ""
+"Открыть окно создания новой задачи для данного письма. Перед сохранением "
+"задачу можно отредактировать."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"External Script\" Plugin"
+msgstr "Настройка модуля «Внешний сценарий»"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
+#, kde-format
+msgid "Add Script..."
+msgstr "Добавить сценарий..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
+#, kde-format
+msgid "Remove Script"
+msgstr "Удалить сценарий"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
+#, kde-format
+msgid "Modify Script..."
+msgstr "Изменить сценарий..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
+#, kde-format
+msgid "External Script:"
+msgstr "Внешний сценарий:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
+#, kde-format
+msgid "Do you want to remove this script \"%1\"?"
+msgstr "Удалить сценарий «%1»?"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
+#, kde-format
+msgid "Remove External Script"
+msgstr "Удаление внешнего сценария"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:20
+#, kde-format
+msgctxt "@title:window"
+msgid "Add or Modify External Script"
+msgstr "Добавление или изменение внешнего сценария"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:28
+#, kde-format
+msgid "Name:"
+msgstr "Название:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:32
+#, kde-format
+msgid "Description:"
+msgstr "Описание:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
+#, kde-format
+msgid "Add command arguments..."
+msgstr "Добавить аргументы команды..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
+#, kde-format
+msgid "Command Line:"
+msgstr "Командная строка:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
+#, kde-format
+msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">Сведения о формате аргумента...</a></qt>"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
+#, kde-format
+msgid ""
+"<qt><p><strong>These expressions may be used for the arguments:</strong></"
+"p><ul><li>%s - the subject of message</li><li>%from - the from email "
+"address</li><li>%cc - the list of cc email address</li><li>%bcc - the list "
+"of bcc email address</li><li>%body - the body of message</li><li>%inreplyto "
+"- the reply email address</li><li>%akonadiUrl - the akonadi url (as akonadi:?"
+"item=187020)</li></ul></strong></p></qt>"
+msgstr ""
+"<qt><p><strong>Вместо аргументов возможно использовать следующие выражения:</"
+"strong></p><ul><li>%s — тема письма</li><li>%from — электронный адрес "
+"отправителя</li><li>%cc — список электронных адресов для получения копии "
+"письма</li><li>%bcc — список электронных адресов для получения скрытой копии "
+"письма</li><li>%body — тело письма</li><li>%inreplyto — электронный адрес, "
+"на который отвечает создаваемое письмо</li><li>%akonadiUrl — ссылка akonadi "
+"(например, akonadi:?item=187020)</li></ul></strong></p></qt>"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
+#, kde-format
+msgid "Executable:"
+msgstr "Исполняемый файл:"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#, kde-format
+msgid "'%1' not found"
+msgstr "Не найден исполняемый файл «%1»."
+
+# BUGME: remove period from window title --aspotashev
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#, kde-format
+msgid "Executable not found."
+msgstr "Исполняемый файл не найден"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:85
+#, kde-format
+msgid "Impossible to start executable"
+msgstr "Не удалось запустить исполняемый файл."
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
+#, kde-format
+msgid "External Script"
+msgstr "Внешний сценарий"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:129
+#, kde-format
+msgid "Configure"
+msgstr "Настроить"
+
+#~ msgid "Todo:"
+#~ msgstr "Задача:"
+
+# BUGME: please add ellipsis --aspotashev
+#~ msgid "Create Todo"
+#~ msgstr "Создать задачу..."
+
+#~ msgid "Open &editor..."
+#~ msgstr "Открыть &редактор..."

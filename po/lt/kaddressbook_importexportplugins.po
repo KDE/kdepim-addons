@@ -1,0 +1,1532 @@
+# translation of kaddressbook.po to Lithuanian
+# Ričardas Čepas <rch@online.lt>, 2003.
+# Donatas Glodenis <dgvirtual@akl.lt>, 2004-2009.
+# Nerijus Kislauskas <nierka@splius.lt>, 2005.
+# Andrius Štikonas <andrius@stikonas.eu>, 2009.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2011.
+# Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>, 2011.
+# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2012, 2014.
+# Liudas Alisauskas <liudas@akmc.lt>, 2013, 2015.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaddressbook\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2015-12-29 21:39+0200\n"
+"Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
+"Language-Team: lt <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: csv/csvimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Export CSV file..."
+msgstr "Eksportuoti CSV failą..."
+
+#: csv/csvimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Export contacts to a file in comma separated value format."
+msgstr "Eksportuoti kontaktus į kableliais atskirtų reikšmių formato failą."
+
+#: csv/csvimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Import CSV file..."
+msgstr "Importuoti CSV failą..."
+
+#: csv/csvimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Import contacts from a file in comma separated value format."
+msgstr "Importuoti kontaktus iš kableliais atskirto formato failo."
+
+#: csv/csvimportexportplugininterface.cpp:152
+#: gmx/gmximportexportplugininterface.cpp:80
+#: ldif/ldifimportexportplugininterface.cpp:130
+#: vcards/vcardimportexportplugininterface.cpp:370
+#, kde-format
+msgid "Which contact do you want to export?"
+msgstr "Kuriuos kontaktus norite eksportuoti?"
+
+#: csv/csvimportexportplugininterface.cpp:162
+#: gmx/gmximportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:140
+#: vcards/vcardimportexportplugininterface.cpp:382
+#, kde-format
+msgid "You have not selected any contacts to export."
+msgstr "Neparinkote nei vieno kontakto eksportavimui."
+
+#: csv/csvimportexportplugininterface.cpp:191
+#: gmx/gmximportexportplugininterface.cpp:124
+#: ldif/ldifimportexportplugininterface.cpp:161
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>Nepavyksta atverti <b>%1</b> failo</qt>"
+
+#: csv/csvimportexportplugininterface.cpp:203
+#: gmx/gmximportexportplugininterface.cpp:139
+#: ldif/ldifimportexportplugininterface.cpp:191
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>Nepavyksta atverti <b>%1</b> failo.</qt>"
+
+#: csv/import/csvimportdialog.cpp:168
+#, kde-format
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "CSV importavimo dialogas"
+
+#: csv/import/csvimportdialog.cpp:223
+#, kde-format
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "Importuojami kontaktai"
+
+#: csv/import/csvimportdialog.cpp:294
+#, kde-format
+msgctxt "@label"
+msgid "File to import:"
+msgstr "Importuojamas failas:"
+
+#: csv/import/csvimportdialog.cpp:302
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "Pasirinkite importuojamą vCard"
+
+#: csv/import/csvimportdialog.cpp:304
+#, fuzzy, kde-format
+#| msgid ""
+#| "Click this button to start a color chooser that will allow you set to the "
+#| "color for the headline background color."
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr "Spauskite ant spalvos mygtuko, kad pakeistumėte antraštės fono spalvą."
+
+#: csv/import/csvimportdialog.cpp:311
+#, kde-format
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "Atskyriklis"
+
+#: csv/import/csvimportdialog.cpp:321
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "Kablelis"
+
+#: csv/import/csvimportdialog.cpp:322
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:323
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:328
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "Kabliataškis"
+
+#: csv/import/csvimportdialog.cpp:329
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:330
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:334
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr "Skirtukas"
+
+#: csv/import/csvimportdialog.cpp:335
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:336
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:340
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "Tarpas"
+
+#: csv/import/csvimportdialog.cpp:341
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Select the quote character"
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "Pažymėtus kontaktus"
+
+#: csv/import/csvimportdialog.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:346
+#, fuzzy, kde-format
+#| msgctxt "@option:radio Custum field separator"
+#| msgid "Other"
+msgctxt "@option:radio Custom field separator"
+msgid "Other"
+msgstr "Kitas"
+
+#: csv/import/csvimportdialog.cpp:347
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:349
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:355
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Select the quote character"
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "Pažymėtus kontaktus"
+
+#: csv/import/csvimportdialog.cpp:357
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:363
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "Teksto citata:"
+
+#: csv/import/csvimportdialog.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "Pažymėtus kontaktus"
+
+#: csv/import/csvimportdialog.cpp:371
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:376
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Qoute character option"
+#| msgid "\""
+msgctxt "@item:inlistbox Quote character option"
+msgid "\""
+msgstr "„"
+
+#: csv/import/csvimportdialog.cpp:377
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr "“"
+
+#: csv/import/csvimportdialog.cpp:378
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "Nėra"
+
+#: csv/import/csvimportdialog.cpp:382
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "Datos formatas:"
+
+#: csv/import/csvimportdialog.cpp:390
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+"<para><list><item>y: metai su 2 skaitmenimis</item><item>Y: metai su 4 "
+"skaitmenimis</item><item>m: mėnuo su 1 ar 2 skaitmenimis</item><item>M: "
+"mėnuo su 2 skaitmenimis</item><item>d: diena su 1 ar 2 skaitmenimis</"
+"item><item>D: diena su 2 skaitmenimis</item><item>H: valandos su 2 "
+"skaitmenimis</item><item>I: minutės su 2 skaitmenimis</item><item>S: "
+"sekundės su 2 skaitmenimis</item></list></para>"
+
+#: csv/import/csvimportdialog.cpp:401
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+"<para><list><item>y: metai su 2 skaitmenimis</item><item>Y: metai su 4 "
+"skaitmenimis</item><item>m: mėnuo su 1 ar 2 skaitmenimis</item><item>M: "
+"mėnuo su 2 skaitmenimis</item><item>d: diena su 1 ar 2 skaitmenimis</"
+"item><item>D: diena su 2 skaitmenimis</item><item>H: valandos su 2 "
+"skaitmenimis</item><item>I: minutės su 2 skaitmenimis</item><item>S: "
+"sekundės su 2 skaitmenimis</item></list></para>"
+
+#: csv/import/csvimportdialog.cpp:417
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "Teksto koduotė:"
+
+#: csv/import/csvimportdialog.cpp:423
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Select the sorting order"
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "Parinkite rikiavimo eilę"
+
+#: csv/import/csvimportdialog.cpp:424
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:428
+#, kde-format
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr "Praleisti pirmąją failo eilutę"
+
+#: csv/import/csvimportdialog.cpp:430
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr "Praleisti pirmąją failo eilutę"
+
+#: csv/import/csvimportdialog.cpp:432
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:448
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "Pritaikyti šabloną..."
+
+#: csv/import/csvimportdialog.cpp:449
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "Įrašyti šabloną..."
+
+#: csv/import/csvimportdialog.cpp:470
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "Vietinė (%1)"
+
+#: csv/import/csvimportdialog.cpp:471
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "Latin1"
+
+#: csv/import/csvimportdialog.cpp:472
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "Unikodas"
+
+#: csv/import/csvimportdialog.cpp:473
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "Microsoft Unikodas"
+
+#: csv/import/csvimportdialog.cpp:574
+#, kde-format
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr "Turi priskirti bent vieną stulpelį."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "Kol kas nėra nei vieno šablono."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "Nėra prieinamų šablonų"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "Šablono pavadinimas"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "Prašome įvesti šablono pavadinimą:"
+
+#: csv/import/csvimportdialog.cpp:699
+#, kde-format
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "Nepavyksta atverti įvesties failo."
+
+#: csv/import/qcsvreader.cpp:92
+#, kde-format
+msgid "Device is not open"
+msgstr ""
+
+#: csv/import/templateselectiondialog.cpp:182
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr "Ar tikrai norite pašalinti šabloną „%1“?"
+
+#: csv/import/templateselectiondialog.cpp:203
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "Šablono pasirinkimas"
+
+#: csv/import/templateselectiondialog.cpp:206
+#, kde-format
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr "Prašome pasirinkti šabloną, kuris atitinka CSV failą:"
+
+#: gmx/gmximportexportplugininterface.cpp:25
+#, kde-format
+msgid "GMX address book file (*.gmxa)"
+msgstr "GMX adresų knygelės failas (*.gmxa)"
+
+#: gmx/gmximportexportplugininterface.cpp:40
+#, kde-format
+msgid "Import GMX file..."
+msgstr "Importuoti GMX failą..."
+
+#: gmx/gmximportexportplugininterface.cpp:41
+#, kde-format
+msgid "Import contacts from a GMX address book file."
+msgstr "Importuoti kontaktus iš GMX adresų knygutės failo."
+
+#: gmx/gmximportexportplugininterface.cpp:46
+#, kde-format
+msgid "Export GMX file..."
+msgstr "Eksportuoti GMX failą..."
+
+#: gmx/gmximportexportplugininterface.cpp:47
+#, kde-format
+msgid "Export contacts to a GMX address book file."
+msgstr "Eksportuoti kontaktus į GMX adresų knygutės failą."
+
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:80
+#: windows-contacts/importwindowcontact.cpp:26
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt>Nepavyksta atverti <b>%1</b> failo skaitymui.</qt>"
+
+#: gmx/gmximportexportplugininterface.cpp:455
+#, kde-format
+msgid "%1 is not a GMX address book file."
+msgstr "%1 nėra GMX adresų knygelės failas."
+
+#: ldap/ldapimportexportplugininterface.cpp:25
+#, kde-format
+msgid "Import From LDAP server..."
+msgstr "Importuoti iš LDAP serverio..."
+
+#: ldap/ldapimportexportplugininterface.cpp:26
+#, kde-format
+msgid "Import contacts from an LDAP server."
+msgstr "Importuoti kontaktus iš LDAP serverio."
+
+#: ldif/ldifimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Import LDIF file..."
+msgstr "Importuoti LDIF failą..."
+
+#: ldif/ldifimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Import contacts from an LDIF file."
+msgstr "Importuoti kontaktus iš LDIF failo."
+
+#: ldif/ldifimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Export LDIF file..."
+msgstr "Eksportuoti LDIF failą..."
+
+#: ldif/ldifimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Export contacts to an LDIF file."
+msgstr "Eksportuoti kontaktus į LDIF failą."
+
+#: ldif/ldifimportexportplugininterface.cpp:110
+#, kde-format
+msgid "LDif Files"
+msgstr ""
+
+#: ldif/ldifimportexportplugininterface.cpp:151
+#, kde-format
+msgid "LDif Files (*.ldif)"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:22
+#, kde-format
+msgctxt "@title:group"
+msgid "Fields to be exported"
+msgstr "Eksportuotini laukai:"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Private fields"
+msgstr "Privatūs laukai"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export private fields"
+msgstr "Eksportuoti privačius laukus"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:32
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's private fields to the "
+"vCard output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Business fields"
+msgstr "Verslo laukai"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export business fields"
+msgstr "Eksportuoti verslo laukus"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's business fields to the "
+"vCard output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:43
+#, kde-format
+msgctxt "@option:check"
+msgid "Other fields"
+msgstr "Kiti laukai"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export other fields"
+msgstr "Eksportuoti kitus laukus"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:46
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's other fields to the vCard "
+"output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:50
+#, kde-format
+msgctxt "@option:check"
+msgid "Encryption keys"
+msgstr "Šifravimo raktai"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export encryption keys"
+msgstr "Eksportuoti šifravimo raktus"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:53
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's encryption keys to the "
+"vCard output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:57
+#, kde-format
+msgctxt "@option:check"
+msgid "Pictures"
+msgstr "Paveikslėliai"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:58
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export pictures"
+msgstr "Eksportuoti paveikslėlius"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:60
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's picture to the vCard "
+"output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:64
+#, kde-format
+msgctxt "@title:group"
+msgid "Export options"
+msgstr "Eksportuoti nustatymus"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:70
+#, kde-format
+msgctxt "@option:check"
+msgid "Display name as full name"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export display name as full name"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:73
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's display name in the "
+"vCard's full name field.  This may be required to get the name shown "
+"correctly in GMail or Android."
+msgstr ""
+
+#: vcards/engine/vcardviewerdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Import vCard"
+msgstr "Importuoti vCard"
+
+#: vcards/engine/vcardviewerdialog.cpp:51
+#, kde-format
+msgctxt "@info"
+msgid "Do you want to import this contact into your address book?"
+msgstr "Ar norite importuoti šį kontaktą į jūsų adresų knygelę?"
+
+#: vcards/engine/vcardviewerdialog.cpp:61
+#, kde-format
+msgctxt "@action:button"
+msgid "Import All..."
+msgstr "Importuoti viską..."
+
+#: vcards/vcardimportexportplugininterface.cpp:44
+#, kde-format
+msgid "Import vCard..."
+msgstr "Importuoti vCard..."
+
+#: vcards/vcardimportexportplugininterface.cpp:45
+#, kde-format
+msgid "Import contacts from a vCard file."
+msgstr "Importuoti kontaktus iš vCard failo."
+
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, kde-format
+msgid "Export contacts to a vCard 4.0 file."
+msgstr "Eksportuoti kontaktus į vCard 4.0 failą."
+
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, kde-format
+msgid "Export vCard 4.0..."
+msgstr "Eksportuoti vCard 4.0..."
+
+#: vcards/vcardimportexportplugininterface.cpp:58
+#, kde-format
+msgid "Export vCard 3.0..."
+msgstr "Eksportuoti vCard 3.0..."
+
+#: vcards/vcardimportexportplugininterface.cpp:59
+#, kde-format
+msgid "Export contacts to a vCard 3.0 file."
+msgstr "Eksportuoti kontaktus į vCard 3.0 failą."
+
+#: vcards/vcardimportexportplugininterface.cpp:64
+#, kde-format
+msgid "Export vCard 2.1..."
+msgstr "Eksportuoti vCard 2.1..."
+
+#: vcards/vcardimportexportplugininterface.cpp:65
+#, kde-format
+msgid "Export contacts to a vCard 2.1 file."
+msgstr "Eksportuoti kontaktus į vCard 2.1 failą."
+
+#: vcards/vcardimportexportplugininterface.cpp:113
+#, fuzzy, kde-format
+#| msgid ""
+#| "*.vcf|vCard (*.vcf)\n"
+#| "*|all files (*)"
+msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
+msgstr ""
+"*.vcf|vCard (*.vcf)\n"
+"*|visi failai (*)"
+
+#: vcards/vcardimportexportplugininterface.cpp:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Select vCard to Import"
+msgstr "Pasirinkite importuojamą vCard"
+
+#: vcards/vcardimportexportplugininterface.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "vCard Import Failed"
+msgstr "vCard importas nepavyko"
+
+#: vcards/vcardimportexportplugininterface.cpp:134
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Unable to access vCard:</para><para>%1</para>"
+msgstr "<para>Nepavyksta pasiekti vCard:</para><para>%1</para>"
+
+#: vcards/vcardimportexportplugininterface.cpp:436
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have selected a list of contacts, shall they be exported to several "
+"files?"
+msgstr "Pasirinkote kontaktų sąrašą, ar eksportuoti juos į atskirus failus?"
+
+#: vcards/vcardimportexportplugininterface.cpp:439
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to One File"
+msgstr "Eksportuoti į vieną failą"
+
+#: vcards/vcardimportexportplugininterface.cpp:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to Several Files"
+msgstr "Eksportuoti į kelius failus"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#, fuzzy, kde-format
+#| msgid "Import CSV file..."
+msgid "Import Windows Contact file..."
+msgstr "Importuoti CSV failą..."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#, fuzzy, kde-format
+#| msgid "Import contacts from an LDIF file."
+msgid "Import contacts from windows contact file."
+msgstr "Importuoti kontaktus iš LDIF failo."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#, kde-format
+msgid "Windows Contact file (*.contact)"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Select Address Book"
+#~ msgctxt "@title:window"
+#~ msgid "Select Address Book"
+#~ msgstr "Pasirinkite adresų knygelę"
+
+#~ msgid "Select the address book the imported contact(s) shall be saved in:"
+#~ msgstr ""
+#~ "Parinkite adresų knygelę, į kurią turėtų būti importuotas parinktas "
+#~ "kontaktas(-ai):"
+
+#, fuzzy
+#~| msgid "Import Contacts"
+#~ msgctxt "@title:window"
+#~ msgid "Import Contacts"
+#~ msgstr "Importuoti kontaktus"
+
+#~ msgid "Importing one contact to %2"
+#~ msgid_plural "Importing %1 contacts to %2"
+#~ msgstr[0] "Importuojamas vienas kontaktas į %2"
+#~ msgstr[1] "Importuojami %1 kontaktai į %2"
+#~ msgstr[2] "Importuojami %1 kontaktų į %2"
+#~ msgstr[3] "Importuojamas %1 kontaktas į %2"
+
+#~ msgid ""
+#~ "*.vcf|vCard (*.vcf)\n"
+#~ "*|all files (*)"
+#~ msgstr ""
+#~ "*.vcf|vCard (*.vcf)\n"
+#~ "*|visi failai (*)"
+
+#~ msgctxt "@info"
+#~ msgid "No contacts were imported, due to errors with the vCards."
+#~ msgstr "Dėl vCard klaidų kontaktai nebuvo importuoti."
+
+#~ msgctxt "@info"
+#~ msgid "The vCard does not contain any contacts."
+#~ msgstr "vCard neturi jokių kontaktų."
+
+#, fuzzy
+#~| msgid "Merge Contacts..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact..."
+#~ msgstr "Sulieti kontaktus..."
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact."
+#~ msgstr ""
+#~ "Iššoks dialogas, kuriame galėsi konfigūruoti programos klavišų "
+#~ "kombinacijas."
+
+#, fuzzy
+#~| msgid "Merge Contacts..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact Group..."
+#~ msgstr "Sulieti kontaktus..."
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact "
+#~ "group."
+#~ msgstr ""
+#~ "Iššoks dialogas, kuriame galėsi konfigūruoti programos klavišų "
+#~ "kombinacijas."
+
+#~ msgid "KAddressBook"
+#~ msgstr "KAddressBook"
+
+#~ msgid "The KDE Address Book Application"
+#~ msgstr "KDE Adresų knygelės programa"
+
+#, fuzzy
+#~| msgid "Copyright © 2007–2015 KAddressBook authors"
+#~ msgid "Copyright © 2007–2016 KAddressBook authors"
+#~ msgstr "Autorinės teisės © 2007–2015 KAddressBook autoriai"
+
+#~ msgid "Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgid "Current maintainer"
+#~ msgstr "Dabartinis prižiūrėtojas"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
+
+#~ msgid "Previous maintainer"
+#~ msgstr "Ankstesnis prižiūrėtojas"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset category filter"
+#~ msgstr "Atkurti kategorijų filtrą"
+
+#~ msgctxt "@action:button"
+#~ msgid "Clear category filter"
+#~ msgstr "Išvalyti kategorijų filtrą"
+
+#~ msgid "(Untagged)"
+#~ msgstr "(be žymių)"
+
+#~ msgid "(Groups)"
+#~ msgstr "(Grupės)"
+
+#~ msgid "(All)"
+#~ msgstr "(Visi)"
+
+#~ msgid "(None)"
+#~ msgstr "(Nieko)"
+
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgid "<qt>Category filter: %1"
+#~ msgstr "<qt>Kategorijos filtras: %1"
+
+#, fuzzy
+#~| msgid "Laurent Montel"
+#~ msgid "(c), 2016 Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgctxt "@item Undefined import field type"
+#~ msgid "Undefined"
+#~ msgstr "Neapibrėžtas"
+
+#~ msgctxt "The wedding anniversary of a contact"
+#~ msgid "Anniversary"
+#~ msgstr "Sukaktis"
+
+#~ msgctxt "Preferred email address"
+#~ msgid "EMail (preferred)"
+#~ msgstr "El. paštas (pageidautinas)"
+
+#~ msgctxt "Second email address"
+#~ msgid "EMail (2)"
+#~ msgstr "El. paštas (2)"
+
+#~ msgctxt "Third email address"
+#~ msgid "EMail (3)"
+#~ msgstr "El. paštas (3)"
+
+#~ msgctxt "Fourth email address"
+#~ msgid "EMail (4)"
+#~ msgstr "El. paštas (4)"
+
+#~ msgid "Blog Feed"
+#~ msgstr "Tinklaraščio kanalas"
+
+#~ msgid "Profession"
+#~ msgstr "Profesija"
+
+#~ msgid "Office"
+#~ msgstr "Biuras"
+
+#~ msgid "Manager"
+#~ msgstr "Vadovas"
+
+#~ msgid "Assistant"
+#~ msgstr "Padėjėjas"
+
+#~ msgid "Spouse"
+#~ msgstr "Sutuoktinis"
+
+#~ msgid "Select Contacts"
+#~ msgstr "Pasirinkite kontaktus"
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts"
+#~ msgstr "Visi kontaktai"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from all your address books"
+#~ msgstr "Visi kontaktai iš visų Jūsų adresų knygelių"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Selected contacts"
+#~ msgstr "Pažymėtus kontaktus"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Only the contacts currently selected"
+#~ msgstr "Tik dabar pažymėtus kontaktus"
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts from:"
+#~ msgstr "Visi kontaktai iš:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from a chosen address book"
+#~ msgstr "Visi kontaktai iš pasirinktų adresų knygelių"
+
+#~ msgctxt "@option:check"
+#~ msgid "Include Subfolders"
+#~ msgstr "Įtraukti poaplankius"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select all subfolders including the top-level folder"
+#~ msgstr "Pažymėti visus sub aplankus įskaitant aukščiausio lygmens aplanką"
+
+#~ msgctxt "@action:button Previous contact"
+#~ msgid "Previous"
+#~ msgstr "Ankstesnis"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the previous contact in the list"
+#~ msgstr "Perkelti į ankstesnį kontaktą sąraše"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the previous contact in the list."
+#~ msgstr "Spauskite šį mygtuką, kad perkelti į ankstesnį kontaktą sąraše."
+
+#~ msgctxt "@action:button Next contact"
+#~ msgid "Next"
+#~ msgstr "Kitas"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the next contact in the list"
+#~ msgstr "Perkelti į tolesnį kontaktą sąraše"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the next contact in the list."
+#~ msgstr "Spauskite šį mygtuką, kad perkelti į tolesnį kontaktą sąraše."
+
+#~ msgctxt "@info:status"
+#~ msgid "%1 out of %2"
+#~ msgstr "%1 iš %2"
+
+#~ msgid "Import the given file"
+#~ msgstr "Importuoti nurodytą failą"
+
+#~ msgid "&Configure KAddressBook..."
+#~ msgstr "KAddressBook"
+
+#~ msgid "&File"
+#~ msgstr "&Failas"
+
+#~ msgid "&New"
+#~ msgstr "&Naujas"
+
+#~ msgid "&Import"
+#~ msgstr "&Importuoti"
+
+#~ msgid "&Export"
+#~ msgstr "&Eksportuoti"
+
+#~ msgid "&Edit"
+#~ msgstr "&Keisti"
+
+#~ msgid "&Action"
+#~ msgstr "Veiksm&as"
+
+#~ msgid "&View"
+#~ msgstr "&Rodymas"
+
+#~ msgid "&Settings"
+#~ msgstr "&Nuostatos"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Pagrindinė įrankinė"
+
+#~ msgctxt "@label Search contacts in list"
+#~ msgid "Search...<%1>"
+#~ msgstr "Ieškoti...<%1>"
+
+#~ msgid "&Themes"
+#~ msgstr "&Apipavidalinimai"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Print the complete address book or a selected number of contacts."
+#~ msgstr "Spausdinti visą adresų knygelę arba pasirinktą adresų skaičių."
+
+#~ msgid "Quick search"
+#~ msgstr "Greita paieška"
+
+#~ msgid "Select All"
+#~ msgstr "Pažymėti visus"
+
+#~ msgid "Select all contacts in the current address book view."
+#~ msgstr "Pažymėti visus kontaktus dabartinėje adresų knygelės peržiūroje."
+
+#~ msgid "Show QR Codes"
+#~ msgstr "Rodyti QR kodus"
+
+#~ msgid "Show QR Codes in the contact."
+#~ msgstr "Rodyti QR kodus kontakte."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Simple (one column)"
+#~ msgstr "Paprastas (vienas stulpelis)"
+
+#~ msgid "Show a simple mode of the address book view."
+#~ msgstr "Rodyti paprastą adresų knygelės rodinio režimo peržiūrą."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Two Columns"
+#~ msgstr "Du stulpeliai"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Three Columns"
+#~ msgstr "Trys stulpeliai"
+
+#~ msgid "Set Focus to Quick Search"
+#~ msgstr "Nustatyti fokusavimą greitai paieškai"
+
+#~ msgid "Address Book"
+#~ msgstr "Adresų knygelė"
+
+#~ msgid "Print Contacts"
+#~ msgstr "Spausdinti kontaktus"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can configure the "
+#~ "application-wide shortcuts."
+#~ msgstr ""
+#~ "Iššoks dialogas, kuriame galėsi konfigūruoti programos klavišų "
+#~ "kombinacijas."
+
+#~ msgid "Full Name"
+#~ msgstr "Pilnas vardas"
+
+#~ msgid "Family Name"
+#~ msgstr "Pavardė"
+
+#~ msgid "Given Name"
+#~ msgstr "Duotas vardas"
+
+#~ msgid "Home Address"
+#~ msgstr "Namų adresas"
+
+#~ msgid "Business Address"
+#~ msgstr "Verslo adresas"
+
+#~ msgid "Phone Numbers"
+#~ msgstr "Telefonų numeriai"
+
+#~ msgid "Preferred EMail"
+#~ msgstr "Pageidautinas el. paštas"
+
+#~ msgid "All EMails"
+#~ msgstr "Visi laiškai"
+
+#~ msgid "Compact Style"
+#~ msgstr "Kompaktiškas stilius"
+
+#~ msgid "Setting up document"
+#~ msgstr "Nustatomas dokumentas"
+
+#~ msgid "Printing"
+#~ msgstr "Spausdinu"
+
+#~ msgctxt "Finished printing"
+#~ msgid "Done"
+#~ msgstr "Atlikta"
+
+#~ msgid "Compact Printing Style"
+#~ msgstr "Pasirink spausdinimo stilių"
+
+#~ msgid "Appearance"
+#~ msgstr "Išvaizda"
+
+#~ msgid "Fields"
+#~ msgstr "Laukai"
+
+#~ msgid ""
+#~ "Print the home address, with home phone number and mobile phone number"
+#~ msgstr ""
+#~ "Spausdinti namų adresą, su namų telefono numeriu ir mobiliuoju telefono "
+#~ "numeriu"
+
+#~ msgid "with home address"
+#~ msgstr "Namų adresas"
+
+#~ msgid "print the business address, with business phone number"
+#~ msgstr "spausdinti verslo adresą, su verslo telefono numeriu"
+
+#~ msgid "with business address"
+#~ msgstr "Verslo adresas"
+
+#~ msgid "Print the birthday"
+#~ msgstr "Spausdinti kontaktus"
+
+#~ msgid "with birthday"
+#~ msgstr "Gimimo diena"
+
+#~ msgid "with e-mail"
+#~ msgstr "su el. paštu"
+
+#~ msgid "the first color, if alternating color is checked"
+#~ msgstr "pirma spalva, jei alternatyvi spalva pasirinkta"
+
+#~ msgid "first color"
+#~ msgstr "pirma spalva"
+
+#~ msgid "second color"
+#~ msgstr "antra spalva"
+
+#~ msgid "Change the background color of every row"
+#~ msgstr "Antraštės fono spalva:"
+
+#~ msgid "Alternating the background color"
+#~ msgstr "Antraštės fono spalva:"
+
+#~ msgid "Organization:"
+#~ msgstr "Organizacija:"
+
+#~ msgid "Email address:"
+#~ msgstr "El. pašto adresas:"
+
+#~ msgid "Email addresses:"
+#~ msgstr "El. pašto adresai:"
+
+#~ msgid "Telephone:"
+#~ msgstr "Telefonas:"
+
+#~ msgid "Telephones:"
+#~ msgstr "Telefonai:"
+
+#~ msgid "Web page:"
+#~ msgstr "Žiniatinklio puslapis:"
+
+#~ msgid "Domestic Address"
+#~ msgstr "Adresas šalies viduje"
+
+#~ msgid "International Address"
+#~ msgstr "Tarptautinis adresas"
+
+#~ msgid "Postal Address"
+#~ msgstr "Pašto adresas"
+
+#~ msgid "Parcel Address"
+#~ msgstr "Adresas siuntiniams"
+
+#~ msgid "Work Address"
+#~ msgstr "Darbo adresas"
+
+#~ msgid "Preferred Address"
+#~ msgstr "Pageidautinas adresas"
+
+#~ msgid "Notes:"
+#~ msgstr "Pastabos:"
+
+#~ msgid "Detailed Print Style - Appearance"
+#~ msgstr "Detalaus spausdinimo stilius – Išvaizda"
+
+#~ msgid "Setting up colors"
+#~ msgstr "Nustatomos spalvos"
+
+#~ msgid "Detailed Style"
+#~ msgstr "Detalus stilius"
+
+#~ msgid "Appearance Page"
+#~ msgstr "Išvaizdos puslapis"
+
+#~ msgid "Contact Headers"
+#~ msgstr "Kontaktų antraštės"
+
+#~ msgid "Select the headline text background color"
+#~ msgstr "Antraštės fono spalva:"
+
+#~ msgid "Headline background color:"
+#~ msgstr "Antraštės fono spalva:"
+
+#~ msgid "Headline text color:"
+#~ msgstr "Antraštės teksto spalva:"
+
+#~ msgid "Select the headline text color"
+#~ msgstr "Antraštės teksto spalva:"
+
+#~ msgid "Mike's Printing Style"
+#~ msgstr "Mike'o spausdinimo stilius"
+
+#~ msgid "Which contacts do you want to print?"
+#~ msgstr "Kuriuos kontaktus norite spausdinti?"
+
+#~ msgid "Choose Contacts to Print"
+#~ msgstr "Pasirink kontaktus spausdinimui"
+
+#~ msgid "Choose Printing Style"
+#~ msgstr "Pasirink spausdinimo stilių"
+
+#~ msgid "Print Progress"
+#~ msgstr "Spausdinimo eiga"
+
+#~ msgid "Printing: Progress"
+#~ msgstr "Spausdinimas: Eiga"
+
+#~ msgid "Progress"
+#~ msgstr "Eiga"
+
+#~ msgid "Print Contact's Information"
+#~ msgstr "Spausdinti kontakto informaciją"
+
+#~ msgid "Print contact phone numbers"
+#~ msgstr "Telefono numeriai"
+
+#~ msgid "Phone numbers"
+#~ msgstr "Telefono numeriai"
+
+#~ msgid "Print contact email addresses"
+#~ msgstr "Pašto adresai"
+
+#~ msgid "Email addresses"
+#~ msgstr "El. pašto adresai"
+
+#~ msgid "Print contact street addresses"
+#~ msgstr "Pašto adresai"
+
+#~ msgid "Postal addresses"
+#~ msgstr "Pašto adresai"
+
+#~ msgid "Print contact organizations"
+#~ msgstr "Spausdinti kontakto informaciją"
+
+#~ msgid "Organization"
+#~ msgstr "Organizacija"
+
+#~ msgid "Print contact birthdays"
+#~ msgstr "Spausdinti kontaktus"
+
+#~ msgid "Birthday"
+#~ msgstr "Gimimo diena"
+
+#~ msgid "Print contact notes"
+#~ msgstr "Spausdinti kontaktus"
+
+#~ msgid "Note"
+#~ msgstr "Pastaba"
+
+#~ msgid "Ring Binder Printing Style - Appearance"
+#~ msgstr "Detalaus spausdinimo stilius – Išvaizda"
+
+#~ msgid "Setting up fields"
+#~ msgstr "Nustatomi laukai"
+
+#~ msgid "Printout for Ring Binders"
+#~ msgstr "Spausdinys detalaus spausdinimo"
+
+#~ msgctxt "@item:inlistbox Ascending sort order"
+#~ msgid "Ascending"
+#~ msgstr "Didėjančiai"
+
+#~ msgctxt "@item:inlistbox Descending sort order"
+#~ msgid "Descending"
+#~ msgstr "Mažėjančiai"
+
+#~ msgctxt "@label"
+#~ msgid "(No preview available.)"
+#~ msgstr "(Peržiūros nėra.)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Choose Printing Style"
+#~ msgstr "Pasirink spausdinimo stilių"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "What should the print look like?\n"
+#~ "KAddressBook has several printing styles, designed for different "
+#~ "purposes.\n"
+#~ "Choose the style that suits your needs below."
+#~ msgstr ""
+#~ "Kaip turėtų atrodyti spausdinimas?\n"
+#~ "Adresų knygelė turi keletą skirtingų spausdinimo stilių.\n"
+#~ "Pasirinkite labiausiai jums tinkantį stilių."
+
+#~ msgctxt "@title:group"
+#~ msgid "Sorting"
+#~ msgstr "Rikiavimas"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Criterion:"
+#~ msgstr "Kriterijus:"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Order:"
+#~ msgstr "Tvarka:"
+
+#~ msgctxt "@title:group"
+#~ msgid "Print Style"
+#~ msgstr "Spausdinimo stilius"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Search contacts in list"
+#~ msgstr "Pažymėtus kontaktus"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sync Contacts"
+#~ msgstr "Pasirinkite kontaktus"
+
+#, fuzzy
+#~| msgid "(Groups)"
+#~ msgid "Group"
+#~ msgstr "(Grupės)"
+
+#, fuzzy
+#~| msgid "Email address:"
+#~ msgid "Email address"
+#~ msgstr "El. pašto adresas:"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image"
+#~ msgstr "Įrašyti šabloną..."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image URL"
+#~ msgstr "Įrašyti šabloną..."
+
+#, fuzzy
+#~| msgid "Email address:"
+#~ msgid "Email:"
+#~ msgstr "El. pašto adresas:"
+
+#, fuzzy
+#~| msgctxt "@label Search contacts in list"
+#~| msgid "Search...<%1>"
+#~ msgid "Search"
+#~ msgstr "Ieškoti...<%1>"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts."
+#~ msgid "No email found for this contact."
+#~ msgstr "Neparinkote nei vieno kontakto."
+
+#, fuzzy
+#~| msgid "No contacts selected."
+#~ msgid "A contact group was selected."
+#~ msgstr "Nepažymėtas joks kontaktas."
+
+#~ msgid "Send an email..."
+#~ msgstr "Siųsti laišką..."
+
+#~ msgid "You have not selected any contacts."
+#~ msgstr "Neparinkote nei vieno kontakto."
+
+#, fuzzy
+#~| msgid "You have not selected any contacts."
+#~ msgid "No emails found in selected contacts."
+#~ msgstr "Neparinkote nei vieno kontakto."
+
+#, fuzzy
+#~| msgid "Import vCard..."
+#~ msgid "Send vCards..."
+#~ msgstr "Importuoti vCard..."
+
+#~ msgid "Merge Contacts..."
+#~ msgstr "Sulieti kontaktus..."
+
+#~ msgid "Search Duplicate Contacts..."
+#~ msgstr "Ieškoti dubliuotų kontaktų..."
+
+#~ msgid "Select Contacts to merge"
+#~ msgstr "Pasirinkite kontaktus suliejimui"
+
+#, fuzzy
+#~| msgid "Select contacts that you really want to merge:"
+#~ msgid "Select contacts that you really want to merge:"
+#~ msgstr "Pasirinkite kontaktus, kuriuos tikrai norite sulieti:"
+
+#~ msgid "Select the addressbook in which to store merged contacts:"
+#~ msgstr ""
+#~ "Pasirinkite adresų knygą, kurioje norite saugoti sulietus kontaktus:"
+
+#~ msgid "merge"
+#~ msgstr "sulieti"
+
+#, fuzzy
+#~| msgid "No duplicated contact found."
+#~ msgid "Duplicate contact %1"
+#~ msgstr "Nerasta dublikatų kontaktų."
+
+#, fuzzy
+#~| msgid "Print Contacts"
+#~ msgid "Contacts"
+#~ msgstr "Spausdinti kontaktus"
+
+#, fuzzy
+#~| msgid "Select Address Book"
+#~ msgid "Select AddressBook:"
+#~ msgstr "Pasirinkite adresų knygelę"
+
+#, fuzzy
+#~| msgid "merge"
+#~ msgid "Merge"
+#~ msgstr "sulieti"
+
+#~ msgid "You must select at least two elements."
+#~ msgstr "Turite nurodyti bent du elementus."
+
+#, fuzzy
+#~| msgid "No duplicated contact found."
+#~ msgid "No duplicated contact found."
+#~ msgstr "Nerasta dublikatų kontaktų."
+
+#~ msgid "No contacts selected."
+#~ msgstr "Nepažymėtas joks kontaktas."
+
+#, fuzzy
+#~| msgid "Print Contact's Information"
+#~ msgid "Missing Selected Information"
+#~ msgstr "Spausdinti kontakto informaciją"
+
+#, fuzzy
+#~| msgctxt "@item Undefined import field type"
+#~| msgid "Undefined"
+#~ msgid "(Undefined)"
+#~ msgstr "Neapibrėžtas"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>When trying to read the vCard, there was an error opening the file "
+#~ "<filename>%1</filename>:</para><para>%2</para>"
+#~ msgstr ""
+#~ "<para>Bandant perskaityti vCard įvyko klaida atveriant failą <filename>"
+#~ "%1</filename>:</para><para>%2</para>"
+
+#~ msgid "Merged Contact"
+#~ msgstr "Sulietas kontaktas"
+
+#~ msgid "Error while merging contacts."
+#~ msgstr "Klaida suliejant kontaktus."
+
+#~ msgid "Merge contact"
+#~ msgstr "Sulieti kontaktus"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select vCard Fields"
+#~ msgstr "Pažymėti vCard laukus"

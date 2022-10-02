@@ -1,0 +1,122 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2016, 2017, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2020-12-27 09:53+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: emaillineedit/emaillineedit.cpp:34
+#, kde-format
+msgid "Click on button for selecting contacts..."
+msgstr "Kliknij na przycisku, aby wybrać kontakty..."
+
+#: emaillineedit/emaillineedit.cpp:38
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: emaillineedit/emaillineedit.cpp:40
+#, kde-format
+msgid "Select Emails"
+msgstr "Wybierz pocztę"
+
+#: emaillineedit/emaillineedit.cpp:88
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Emails"
+msgstr "Wybierz pocztę"
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgid "Create Folder"
+msgstr "Utwórz katalog"
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#, kde-format
+msgid "Error during creating folder: %1"
+msgstr "Błąd przy tworzeniu katalogu: %1"
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:25
+#, kde-format
+msgid "Create Folder..."
+msgstr "Utwórz katalog..."
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Select IMAP folder"
+msgstr "Wybierz katalog IMAP"
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:37
+#, kde-format
+msgid "Unable to load folder list"
+msgstr "Nie można wczytać listy katalogów"
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:40
+#, kde-format
+msgid "Loading in progress..."
+msgstr "Wczytywanie w trakcie..."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#, kde-format
+msgid "Search..."
+msgstr "Wyszukaj..."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#, kde-format
+msgid "Refresh IMAP Folder List"
+msgstr "Odśwież listę katalogów IMAP"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#, kde-format
+msgid "Folder Name:"
+msgstr "Nazwa katalogu:"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#, kde-format
+msgid "Slashes are not allowed in folder names."
+msgstr "Ukośniki są niedozwolone w nazwach katalogów."
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgid "Empty folder name is not supported."
+msgstr "Puste nazwy katalogów nie są obsługiwane."
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgid "Error during loading folders: %1"
+msgstr "Błąd przy wczytywaniu katalogów: %1"
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgid "Load Folders"
+msgstr "Wczytaj katalogi"
+
+#: imapfoldercompletion/selectimapwidget.cpp:31
+#, kde-format
+msgid "Select IMAP folder"
+msgstr "Wybierz katalog IMAP"
+
+#: imapfoldercompletion/selectimapwidget.cpp:58
+#, kde-format
+msgid "Click on button for selecting folder..."
+msgstr "Kliknij na przycisku do wybrania katalogu..."
+
+#~ msgid "Create Regular Expression"
+#~ msgstr "Utwórz wyrażenie regularne"

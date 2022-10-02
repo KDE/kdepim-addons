@@ -1,0 +1,52 @@
+# Translation of cryptopageplugin into Japanese.
+# Yukiko Bando <ybando@k6.dion.ne.jp>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: cryptopageplugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-08 00:48+0000\n"
+"PO-Revision-Date: 2010-01-24 01:02+0900\n"
+"Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: cryptopageplugin.cpp:40
+#, kde-format
+msgid "Allowed Protocols"
+msgstr "許可するプロトコル"
+
+#: cryptopageplugin.cpp:55
+#, kde-format
+msgid "Preferred OpenPGP encryption key:"
+msgstr "優先する OpenPGP 暗号化鍵:"
+
+#: cryptopageplugin.cpp:60
+#, kde-format
+msgid "Preferred S/MIME encryption certificate:"
+msgstr "優先する S/MIME 暗号化用証明書:"
+
+#: cryptopageplugin.cpp:65
+#, kde-format
+msgid "Message Preference"
+msgstr "メッセージの設定"
+
+#: cryptopageplugin.cpp:74
+#, kde-format
+msgid "Sign:"
+msgstr "署名:"
+
+#: cryptopageplugin.cpp:91
+#, kde-format
+msgid "Encrypt:"
+msgstr "暗号化:"
+
+#: cryptopageplugin.cpp:109
+#, kde-format
+msgid "Crypto Settings"
+msgstr "暗号化の設定"

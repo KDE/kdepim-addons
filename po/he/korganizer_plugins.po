@@ -1,0 +1,795 @@
+# translation of korganizer.po to
+# KDE Hebrew Localization Project
+#
+# In addition to the copyright owners of the program
+# which this translation accompanies, this translation is
+# Copyright (C) 2000-2003 Meni Livne <livne@kde.org>
+#
+# This translation is subject to the same Open Source
+# license as the program which it accompanies.
+#
+# Diego Iastrubni <elcuco@kdemail.net>, 2004, 2005.
+# Diego Iastrubni <elcuco@kde.org>, 2006, 2009.
+# Chen Levy <contrib@chenlevy.com>, 2006.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: korganizer_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2017-05-16 06:41-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: <kde-l10n-he@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:34
+#, kde-format
+msgid "Search &Directory Service"
+msgstr ""
+
+#: plugins/datenums/configdialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "Configure Day Numbers"
+msgctxt "@title:window"
+msgid "Configure Day Numbers"
+msgstr "הגדרות מספרי הימים"
+
+#: plugins/datenums/configdialog.cpp:43
+#, kde-format
+msgid "Show Date Number"
+msgstr "הצג את מספר התאריך"
+
+#: plugins/datenums/configdialog.cpp:47
+#, kde-format
+msgid "Show day number"
+msgstr "הצג את מספר היום"
+
+#: plugins/datenums/configdialog.cpp:50
+#, kde-format
+msgid "Show days to end of year"
+msgstr "הצג מספר ימים לסוף השנה"
+
+#: plugins/datenums/configdialog.cpp:53
+#, kde-format
+msgid "Show both"
+msgstr "הצג את שניהם"
+
+#: plugins/datenums/datenums.cpp:36
+#, kde-format
+msgid "This plugin shows information on a day's position in the year."
+msgstr ""
+
+#: plugins/datenums/datenums.cpp:54
+#, fuzzy, kde-format
+msgid "1 day before the end of the year"
+msgid_plural "%1 days before the end of the year"
+msgstr[0] "%1 לפני הסיום"
+msgstr[1] "%1 לפני הסיום"
+
+#: plugins/datenums/datenums.cpp:59
+#, kde-format
+msgctxt "dayOfYear / daysTillEndOfYear"
+msgid "%1 / %2"
+msgstr "%1 / %2"
+
+#: plugins/datenums/datenums.cpp:60
+#, fuzzy, kde-format
+msgid "1 day since the beginning of the year,\n"
+msgid_plural "%1 days since the beginning of the year,\n"
+msgstr[0] "הצג מספר ימים לסוף השנה"
+msgstr[1] "הצג מספר ימים לסוף השנה"
+
+#: plugins/datenums/datenums.cpp:61
+#, fuzzy, kde-format
+msgid "1 day until the end of the year"
+msgid_plural "%1 days until the end of the year"
+msgstr[0] "הצג מספר ימים לסוף השנה"
+msgstr[1] "הצג מספר ימים לסוף השנה"
+
+#: plugins/datenums/datenums.cpp:102
+#, fuzzy, kde-format
+msgctxt "Week weekOfYear"
+msgid "Week %1"
+msgstr "שבוע"
+
+#: plugins/datenums/datenums.cpp:103 plugins/datenums/datenums.cpp:113
+#: plugins/datenums/datenums.cpp:118
+#, fuzzy, kde-format
+msgid "1 week since the beginning of the year"
+msgid_plural "%1 weeks since the beginning of the year"
+msgstr[0] "הצג מספר ימים לסוף השנה"
+msgstr[1] "הצג מספר ימים לסוף השנה"
+
+#: plugins/datenums/datenums.cpp:106
+#, fuzzy, kde-format
+msgctxt "weekOfYear (year)"
+msgid "%1 (%2)"
+msgstr "%1 %2"
+
+#: plugins/datenums/datenums.cpp:107
+#, fuzzy, kde-format
+msgctxt "Week weekOfYear (year)"
+msgid "Week %1 (%2)"
+msgstr "%1 %2"
+
+#: plugins/datenums/datenums.cpp:122
+#, kde-format
+msgid "1 week remaining"
+msgid_plural "%1 weeks remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/datenums/datenums.cpp:123
+#, fuzzy, kde-format
+msgid "1 week until the end of the year"
+msgid_plural "%1 weeks until the end of the year"
+msgstr[0] "הצג מספר ימים לסוף השנה"
+msgstr[1] "הצג מספר ימים לסוף השנה"
+
+#: plugins/datenums/datenums.cpp:124
+#, fuzzy, kde-format
+msgctxt "weekOfYear / weeksTillEndOfYear"
+msgid "%1 / %2"
+msgstr "%1 / %2"
+
+#: plugins/datenums/datenums.cpp:140
+#, fuzzy, kde-format
+msgctxt ""
+"n weeks since the beginning of the year\n"
+"n weeks until the end of the year"
+msgid ""
+"%1\n"
+"%2"
+msgstr "%1 - %2"
+
+#: plugins/hebrew/configdialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "Configure Holidays"
+msgctxt "@title:window"
+msgid "Configure Holidays"
+msgstr "הגדרות חגים"
+
+#: plugins/hebrew/configdialog.cpp:42
+#, kde-format
+msgid "Use Israeli holidays"
+msgstr "השתמש בחגים ישראליים"
+
+#: plugins/hebrew/configdialog.cpp:46
+#, kde-format
+msgid "Show weekly parsha"
+msgstr "הצג פרשת השבוע"
+
+#: plugins/hebrew/configdialog.cpp:50
+#, kde-format
+msgid "Show day of Omer"
+msgstr "הצג ימי העומר"
+
+#: plugins/hebrew/configdialog.cpp:54
+#, kde-format
+msgid "Show Chol HaMoed"
+msgstr "הצג חול המועד"
+
+#: plugins/hebrew/hebrew.cpp:60
+#, kde-format
+msgctxt ""
+"Change the next two strings if emphasis is done differently in your language."
+msgid ""
+"<qt><p align=\"center\"><i>\n"
+"%1\n"
+"</i></p></qt>"
+msgstr ""
+
+#: plugins/hebrew/hebrew.cpp:67
+#, kde-format
+msgid "This plugin provides the date in the Jewish calendar."
+msgstr "תוסף זה מאפשר תמיכה בלוח השנה העברי."
+
+#: plugins/hebrew/holiday.cpp:75
+#, fuzzy, kde-format
+msgctxt ""
+"These are Jewish holidays and mostly do not have translations. They may have "
+"different spellings in your language; otherwise, just translate the sound to "
+"your characters."
+msgid "Sh. HaHodesh"
+msgstr "שבת החודש"
+
+#: plugins/hebrew/holiday.cpp:83
+#, kde-format
+msgid "Erev Pesach"
+msgstr "ערב פסח"
+
+#: plugins/hebrew/holiday.cpp:94
+#, kde-format
+msgid "Sh. HaGadol"
+msgstr "שבת הגדול"
+
+#: plugins/hebrew/holiday.cpp:102
+#, kde-format
+msgid "Pesach"
+msgstr "פסח"
+
+#: plugins/hebrew/holiday.cpp:113 plugins/hebrew/holiday.cpp:307
+#, kde-format
+msgid "Chol Hamoed"
+msgstr "חול המועד"
+
+#: plugins/hebrew/holiday.cpp:124 plugins/hebrew/holiday.cpp:129
+#: plugins/hebrew/holiday.cpp:138
+#, kde-format
+msgid "Yom HaShoah"
+msgstr "יום השואה"
+
+#: plugins/hebrew/holiday.cpp:164 plugins/hebrew/holiday.cpp:171
+#: plugins/hebrew/holiday.cpp:182
+#, kde-format
+msgid "Yom HaAtzmaut"
+msgstr "יום העצמאות"
+
+#: plugins/hebrew/holiday.cpp:166 plugins/hebrew/holiday.cpp:180
+#, kde-format
+msgid "Yom HaZikaron"
+msgstr "יום הזיכרון"
+
+#: plugins/hebrew/holiday.cpp:190
+#, kde-format
+msgid "Yom Yerushalayim"
+msgstr "יום ירושלים"
+
+#: plugins/hebrew/holiday.cpp:194
+#, kde-format
+msgid "Lag BaOmer"
+msgstr "ל\"ג בעומר"
+
+#: plugins/hebrew/holiday.cpp:220
+#, kde-format
+msgid "Erev Shavuot"
+msgstr "ערב שבועות"
+
+#: plugins/hebrew/holiday.cpp:225
+#, kde-format
+msgid "Shavuot"
+msgstr "שבועות"
+
+#: plugins/hebrew/holiday.cpp:234
+#, kde-format
+msgid "Tzom Tammuz"
+msgstr "צום תמוז"
+
+#: plugins/hebrew/holiday.cpp:242
+#, kde-format
+msgid "Sh. Hazon"
+msgstr "שבת החזון"
+
+#: plugins/hebrew/holiday.cpp:244
+#, kde-format
+msgid "Sh. Nahamu"
+msgstr "שבת נחמו"
+
+#: plugins/hebrew/holiday.cpp:248
+#, kde-format
+msgid "Tisha B'Av"
+msgstr "ט' באב"
+
+#: plugins/hebrew/holiday.cpp:254
+#, kde-format
+msgid "S'lichot"
+msgstr "סליחות"
+
+#: plugins/hebrew/holiday.cpp:256
+#, kde-format
+msgid "Erev R.H."
+msgstr "ערב ראש השנה"
+
+#: plugins/hebrew/holiday.cpp:264
+#, kde-format
+msgid "Rosh Hashana"
+msgstr "ראש השנה"
+
+#: plugins/hebrew/holiday.cpp:268 plugins/hebrew/holiday.cpp:283
+#, kde-format
+msgid "Sh. Shuvah"
+msgstr "שבת שובה"
+
+#: plugins/hebrew/holiday.cpp:270 plugins/hebrew/holiday.cpp:275
+#, kde-format
+msgid "Tzom Gedalia"
+msgstr "צום גדליה"
+
+#: plugins/hebrew/holiday.cpp:287
+#, kde-format
+msgid "Erev Y.K."
+msgstr "ערב יום כיפור"
+
+#: plugins/hebrew/holiday.cpp:290
+#, kde-format
+msgid "Yom Kippur"
+msgstr "יום כיפור"
+
+#: plugins/hebrew/holiday.cpp:293
+#, kde-format
+msgid "Erev Sukkot"
+msgstr "ערב סוכות"
+
+#: plugins/hebrew/holiday.cpp:298
+#, kde-format
+msgid "Sukkot"
+msgstr "סוכות"
+
+#: plugins/hebrew/holiday.cpp:311
+#, kde-format
+msgid "Hoshana Rabah"
+msgstr "הושענא רבא"
+
+#: plugins/hebrew/holiday.cpp:314
+#, kde-format
+msgid "Shmini Atzeret"
+msgstr "שמיני עצרת"
+
+#: plugins/hebrew/holiday.cpp:318
+#, kde-format
+msgid "Simchat Torah"
+msgstr "שמחת תורה"
+
+#: plugins/hebrew/holiday.cpp:329
+#, kde-format
+msgid "Erev Hanukah"
+msgstr "ערב חמוכה"
+
+#: plugins/hebrew/holiday.cpp:331 plugins/hebrew/holiday.cpp:339
+#, kde-format
+msgid "Hanukah"
+msgstr "חנוכה"
+
+#: plugins/hebrew/holiday.cpp:342
+#, kde-format
+msgid "Tzom Tevet"
+msgstr "צום טבת"
+
+#: plugins/hebrew/holiday.cpp:352 plugins/hebrew/holiday.cpp:361
+#: plugins/hebrew/holiday.cpp:366 plugins/hebrew/holiday.cpp:372
+#, kde-format
+msgid "Sh. Shirah"
+msgstr "שבת שירה"
+
+#: plugins/hebrew/holiday.cpp:368
+#, kde-format
+msgid "Tu B'Shvat"
+msgstr "ט\"ו באב"
+
+#: plugins/hebrew/holiday.cpp:383 plugins/hebrew/holiday.cpp:395
+#: plugins/hebrew/holiday.cpp:403
+#, kde-format
+msgid "Sh. Shekalim"
+msgstr "שבת שקלים"
+
+#: plugins/hebrew/holiday.cpp:392
+#, kde-format
+msgid "Purim Katan"
+msgstr "פורים קטן"
+
+#: plugins/hebrew/holiday.cpp:411 plugins/hebrew/holiday.cpp:431
+#, kde-format
+msgid "Ta'anit Ester"
+msgstr "תענית אסתר"
+
+#: plugins/hebrew/holiday.cpp:420 plugins/hebrew/holiday.cpp:425
+#, kde-format
+msgid "Sh. Zachor"
+msgstr "שבת זכור"
+
+#: plugins/hebrew/holiday.cpp:427
+#, kde-format
+msgid "Erev Purim"
+msgstr "ערב פורים"
+
+#: plugins/hebrew/holiday.cpp:435
+#, kde-format
+msgid "Purim"
+msgstr "פורים"
+
+#: plugins/hebrew/holiday.cpp:439 plugins/hebrew/holiday.cpp:444
+#, kde-format
+msgid "Shushan Purim"
+msgstr "שושן פורים"
+
+#: plugins/hebrew/holiday.cpp:455
+#, kde-format
+msgid "Sh. Parah"
+msgstr "שבת פרה"
+
+#: plugins/hebrew/holiday.cpp:465
+#, kde-format
+msgid "Sh. HaHodesh"
+msgstr "שבת החודש"
+
+#: plugins/hebrew/holiday.cpp:481
+#, kde-format
+msgid " Omer"
+msgstr "עומר"
+
+#: plugins/hebrew/parsha.cpp:28
+#, kde-format
+msgctxt ""
+"These are weekly readings and do not have translations. They may have "
+"different spellings in your language; otherwise, just translate the sound to "
+"your characters"
+msgid "Bereshit"
+msgstr "בראשית"
+
+#: plugins/hebrew/parsha.cpp:29
+#, kde-format
+msgid "Noach"
+msgstr "נח"
+
+#: plugins/hebrew/parsha.cpp:29
+#, kde-format
+msgid "Lech L'cha"
+msgstr "לך לך"
+
+#: plugins/hebrew/parsha.cpp:29
+#, kde-format
+msgid "Vayera"
+msgstr "וירא"
+
+#: plugins/hebrew/parsha.cpp:29
+#, kde-format
+msgid "Chaye Sarah"
+msgstr "חיי שרה"
+
+#: plugins/hebrew/parsha.cpp:29
+#, kde-format
+msgid "Toldot"
+msgstr "תולדות"
+
+#: plugins/hebrew/parsha.cpp:29
+#, kde-format
+msgid "Vayetze"
+msgstr "ויצא"
+
+#: plugins/hebrew/parsha.cpp:29
+#, kde-format
+msgid "Vayishlach"
+msgstr "וישלח"
+
+#: plugins/hebrew/parsha.cpp:30
+#, kde-format
+msgid "Vayeshev"
+msgstr "וישב"
+
+#: plugins/hebrew/parsha.cpp:30
+#, kde-format
+msgid "Miketz"
+msgstr "מקץ"
+
+#: plugins/hebrew/parsha.cpp:30
+#, kde-format
+msgid "Vayigash"
+msgstr "ויגש"
+
+#: plugins/hebrew/parsha.cpp:30
+#, kde-format
+msgid "Vayechi"
+msgstr "ויחי"
+
+#: plugins/hebrew/parsha.cpp:30
+#, kde-format
+msgid "Shemot"
+msgstr "שמות"
+
+#: plugins/hebrew/parsha.cpp:30
+#, kde-format
+msgid "Vaera"
+msgstr "וירא"
+
+#: plugins/hebrew/parsha.cpp:30
+#, kde-format
+msgid "Bo"
+msgstr "בא"
+
+#: plugins/hebrew/parsha.cpp:31
+#, kde-format
+msgid "Beshalach"
+msgstr "בשלח"
+
+#: plugins/hebrew/parsha.cpp:31
+#, kde-format
+msgid "Yitro"
+msgstr "יתרו"
+
+#: plugins/hebrew/parsha.cpp:31
+#, kde-format
+msgid "Mishpatim"
+msgstr "משפטים"
+
+#: plugins/hebrew/parsha.cpp:31
+#, kde-format
+msgid "Terumah"
+msgstr "תרומה"
+
+#: plugins/hebrew/parsha.cpp:31
+#, kde-format
+msgid "Tetzaveh"
+msgstr "תצווה"
+
+#: plugins/hebrew/parsha.cpp:31
+#, kde-format
+msgid "Ki Tisa"
+msgstr "כי תישא"
+
+#: plugins/hebrew/parsha.cpp:31
+#, kde-format
+msgid "Vayakhel"
+msgstr "ויקהל"
+
+#: plugins/hebrew/parsha.cpp:32
+#, kde-format
+msgid "Pekudei"
+msgstr "פקודי"
+
+#: plugins/hebrew/parsha.cpp:32
+#, kde-format
+msgid "Vayikra"
+msgstr "ויקרא"
+
+#: plugins/hebrew/parsha.cpp:32
+#, kde-format
+msgid "Tzav"
+msgstr "צו"
+
+#: plugins/hebrew/parsha.cpp:32
+#, kde-format
+msgid "Shemini"
+msgstr "שמיני"
+
+#: plugins/hebrew/parsha.cpp:32
+#, kde-format
+msgid "Tazria"
+msgstr "תזריע"
+
+#: plugins/hebrew/parsha.cpp:32
+#, kde-format
+msgid "Metzora"
+msgstr "מצורע"
+
+#: plugins/hebrew/parsha.cpp:32
+#, kde-format
+msgid "Acharei Mot"
+msgstr "אחרי מות"
+
+#: plugins/hebrew/parsha.cpp:33
+#, kde-format
+msgid "Kedoshim"
+msgstr "קדושים"
+
+#: plugins/hebrew/parsha.cpp:33
+#, kde-format
+msgid "Emor"
+msgstr "אמור"
+
+#: plugins/hebrew/parsha.cpp:33
+#, kde-format
+msgid "Behar"
+msgstr "בהר"
+
+#: plugins/hebrew/parsha.cpp:33
+#, kde-format
+msgid "Bechukotai"
+msgstr "בחוקותי"
+
+#: plugins/hebrew/parsha.cpp:33
+#, kde-format
+msgid "Bemidbar"
+msgstr "במדבר"
+
+#: plugins/hebrew/parsha.cpp:33
+#, kde-format
+msgid "Naso"
+msgstr "נשא"
+
+#: plugins/hebrew/parsha.cpp:33
+#, kde-format
+msgid "Behaalotcha"
+msgstr "בהעלותך"
+
+#: plugins/hebrew/parsha.cpp:34
+#, kde-format
+msgid "Shelach"
+msgstr "שלח"
+
+#: plugins/hebrew/parsha.cpp:34
+#, kde-format
+msgid "Korach"
+msgstr "קורח"
+
+#: plugins/hebrew/parsha.cpp:34
+#, kde-format
+msgid "Chukat"
+msgstr "חוקת"
+
+#: plugins/hebrew/parsha.cpp:34
+#, kde-format
+msgid "Balak"
+msgstr "בלק"
+
+#: plugins/hebrew/parsha.cpp:34
+#, kde-format
+msgid "Pinchas"
+msgstr "פנחס"
+
+#: plugins/hebrew/parsha.cpp:34
+#, kde-format
+msgid "Matot"
+msgstr "מטות"
+
+#: plugins/hebrew/parsha.cpp:34
+#, kde-format
+msgid "Masei"
+msgstr "מסעי"
+
+#: plugins/hebrew/parsha.cpp:35
+#, kde-format
+msgid "Devarim"
+msgstr "דברים"
+
+#: plugins/hebrew/parsha.cpp:35
+#, kde-format
+msgid "Vaetchanan"
+msgstr "ואתחנן"
+
+#: plugins/hebrew/parsha.cpp:35
+#, kde-format
+msgid "Ekev"
+msgstr "עקב"
+
+#: plugins/hebrew/parsha.cpp:35
+#, kde-format
+msgid "Reeh"
+msgstr "ראה"
+
+#: plugins/hebrew/parsha.cpp:35
+#, kde-format
+msgid "Shoftim"
+msgstr "שופטים"
+
+#: plugins/hebrew/parsha.cpp:35
+#, kde-format
+msgid "Ki Tetze"
+msgstr "כי תצא"
+
+#: plugins/hebrew/parsha.cpp:35
+#, kde-format
+msgid "Ki Tavo"
+msgstr "כי תבוא"
+
+#: plugins/hebrew/parsha.cpp:36
+#, kde-format
+msgid "Nitzavim"
+msgstr "ניצבים"
+
+#: plugins/hebrew/parsha.cpp:36
+#, kde-format
+msgid "Vayelech"
+msgstr "וילך"
+
+#: plugins/hebrew/parsha.cpp:36
+#, kde-format
+msgid "Haazinu"
+msgstr "האזינו"
+
+#: plugins/lunarphases/lunarphases.cpp:61
+#, kde-format
+msgid ""
+"This plugin displays the day's lunar phase (New, First, Last, Full). "
+"Currently, the phase is computed for noon at UTC; therefore, you should "
+"expect variations by 1 day in either direction."
+msgstr ""
+
+#: plugins/picoftheday/configdialog.cpp:28
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Configure Picture of the Day"
+msgstr "הגדרות &תאריך ושעה..."
+
+#: plugins/picoftheday/configdialog.cpp:42
+#, kde-format
+msgid "Thumbnail Aspect Ratio Mode"
+msgstr ""
+
+#: plugins/picoftheday/configdialog.cpp:46
+#, kde-format
+msgid "Ignore aspect ratio"
+msgstr ""
+
+#: plugins/picoftheday/configdialog.cpp:48
+#, kde-format
+msgid ""
+"The thumbnail will be scaled freely. The aspect ratio will not be preserved."
+msgstr ""
+
+#: plugins/picoftheday/configdialog.cpp:52
+#, kde-format
+msgid "Keep aspect ratio"
+msgstr ""
+
+#: plugins/picoftheday/configdialog.cpp:54
+#, kde-format
+msgid ""
+"The thumbnail will be scaled to a rectangle as large as possible inside a "
+"given rectangle, preserving the aspect ratio."
+msgstr ""
+
+#: plugins/picoftheday/configdialog.cpp:59
+#, kde-format
+msgid "Keep aspect ratio by expanding"
+msgstr ""
+
+#: plugins/picoftheday/configdialog.cpp:61
+#, kde-format
+msgid ""
+"The thumbnail will be scaled to a rectangle as small as possible outside a "
+"given rectangle, preserving the aspect ratio."
+msgstr ""
+
+#: plugins/picoftheday/element.cpp:209
+#, kde-format
+msgid "Wikipedia POTD: %1"
+msgstr ""
+
+#: plugins/picoftheday/element.cpp:326
+#, fuzzy, kde-format
+msgid "Picture Page"
+msgstr "מחק %1"
+
+#: plugins/picoftheday/element.cpp:326
+#, fuzzy, kde-format
+msgid "Loading..."
+msgstr "עבור &קדימה"
+
+#: plugins/picoftheday/element.cpp:332
+#, fuzzy, kde-format
+msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgstr "תוסף זה מאפשר תמיכה בלוח השנה העברי."
+
+#: plugins/picoftheday/picoftheday.cpp:48
+#, fuzzy, kde-format
+msgid "<qt>This plugin provides the Wikipedia <i>Picture of the Day</i>.</qt>"
+msgstr "תוסף זה מאפשר תמיכה בלוח השנה העברי."
+
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:29
+#, fuzzy, kde-format
+msgid "This plugin provides links to Wikipedia's 'This Day in History' pages."
+msgstr "תוסף זה מספק מספרים לימים ולשבועות."
+
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:37
+#, kde-format
+msgid "This day in history"
+msgstr ""
+
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:39
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:53
+#, kde-format
+msgctxt "Localized Wikipedia website"
+msgid "https://en.wikipedia.org/wiki/"
+msgstr ""
+
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:40
+#, kde-format
+msgctxt "Qt date format used by the localized Wikipedia"
+msgid "MMMM_d"
+msgstr ""
+
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:51
+#, kde-format
+msgid "This month in history"
+msgstr ""
+
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:54
+#, kde-format
+msgctxt "Qt date format used by the localized Wikipedia"
+msgid "MMMM_yyyy"
+msgstr ""

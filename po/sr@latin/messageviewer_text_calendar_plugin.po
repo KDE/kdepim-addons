@@ -1,0 +1,508 @@
+# Translation of messageviewer_text_calendar_plugin.po into Serbian.
+# Nikola Kotur <kotnik@ns-linux.org>, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2011, 2012, 2015, 2017.
+# Slobodan Simic <slsimic@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: messageviewer_text_calendar_plugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-15 02:17+0200\n"
+"PO-Revision-Date: 2017-09-28 18:00+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Kate\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+"X-Associated-UI-Catalogs: kwidgetsaddons5_qt\n"
+
+# >> @title:window
+#: attendeeselector.cpp:35
+#, fuzzy, kde-format
+#| msgid "Select Attendees"
+msgctxt "@title:window"
+msgid "Select Attendees"
+msgstr "Izbor prisutnih"
+
+#: attendeeselector.cpp:54
+#, kde-format
+msgid "Click to add a new attendee"
+msgstr "Kliknite da dodate novog prisutnog"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: attendeeselector.ui:24
+#, kde-format
+msgid "Add"
+msgstr "Dodaj"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: attendeeselector.ui:37
+#, kde-format
+msgid "Remove"
+msgstr "Ukloni"
+
+# >> @title:window
+#: delegateselector.cpp:36
+#, fuzzy, kde-format
+#| msgid "Select delegate"
+msgctxt "@title:window"
+msgid "Select delegate"
+msgstr "Izbor predstavnika"
+
+#: delegateselector.cpp:39
+#, kde-format
+msgid "Delegate:"
+msgstr "Predstavnik:"
+
+#: delegateselector.cpp:48
+#, kde-format
+msgid "Keep me informed about status changes of this incidence."
+msgstr "Obaveštavaj me o promeni stanja ovog slučaja."
+
+#: reactiontoinvitationdialog.cpp:37
+#, kde-format
+msgid "Comment:"
+msgstr "Komentar:"
+
+#: text_calendar.cpp:385
+#, kde-format
+msgid "No attachment named \"%1\" found in the invitation."
+msgstr "Prilog po imenu „%1“ nije nađen u pozivnici."
+
+#: text_calendar.cpp:401
+#, kde-format
+msgid ""
+"The invitation attachment \"%1\" is a web link that is inaccessible from "
+"this computer. Please ask the event organizer to resend the invitation with "
+"this attachment stored inline instead of a link."
+msgstr ""
+"Prilog pozivnice „%1“ je veb veza koja je nedostupna sa ovog računara. "
+"Tražite organizatoru događaja da pošalje pozivnicu sa prilogom smeštenim "
+"unutar poruke."
+
+#: text_calendar.cpp:455
+#, kde-format
+msgid ""
+"<qt>None of your identities match the receiver of this message,<br/>please "
+"choose which of the following addresses is yours,<br/> if any, or select one "
+"of your identities to use in the reply:</qt>"
+msgstr ""
+"<qt><p>Nijedan od vaših identiteta ne odgovara primaocu ove poruke.</"
+"p><p>Izaberite koja je od sledećih adresa vaša (ako je ijedna) ili izaberite "
+"jedan od svojih identiteta kojim ćete odgovoriti:</p></qt>"
+
+#: text_calendar.cpp:461
+#, kde-format
+msgid ""
+"<qt>Several of your identities match the receiver of this message,<br/"
+">please choose which of the following addresses is yours:</qt>"
+msgstr ""
+"<qt><p>Nekoliko vaših identiteta odgovara primaocu ove poruke.</"
+"p><p>Izaberite koja je od sledećih adresa vaša:</p></qt>"
+
+# >> @title:window
+#: text_calendar.cpp:477
+#, kde-format
+msgid "Select Address"
+msgstr "Izbor adrese"
+
+#: text_calendar.cpp:531
+#, kde-format
+msgid "Answer: "
+msgstr "Odgovor: "
+
+#: text_calendar.cpp:534
+#, kde-format
+msgctxt "Not able to attend."
+msgid "Declined: %1"
+msgstr "Odbijena: %1 "
+
+#: text_calendar.cpp:537
+#, kde-format
+msgctxt "Unsure if it is possible to attend."
+msgid "Tentative: %1"
+msgstr "Uslovna: %1"
+
+#: text_calendar.cpp:540
+#, kde-format
+msgctxt "Accepted the invitation."
+msgid "Accepted: %1"
+msgstr "Prihvaćena: %1"
+
+#: text_calendar.cpp:561 text_calendar.cpp:580
+#, kde-format
+msgid "Invitation answer attached."
+msgstr "Odgovor na pozivnicu priložen."
+
+#: text_calendar.cpp:684
+#, kde-format
+msgid "Incidence with no summary"
+msgstr "Slučaj bez sažetka"
+
+#: text_calendar.cpp:689
+#, kde-format
+msgid "Answer: %1"
+msgstr "Odgovor: %1"
+
+#: text_calendar.cpp:692
+#, kde-format
+msgid "Delegated: %1"
+msgstr "Predstavnik: %1"
+
+#: text_calendar.cpp:695
+#, kde-format
+msgid "Forwarded: %1"
+msgstr "Prosleđena: %1"
+
+#: text_calendar.cpp:698
+#, kde-format
+msgid "Declined Counter Proposal: %1"
+msgstr "Odbijen protivpredlog: %1"
+
+# >! Contexts.
+# >> %1 is an event name
+#: text_calendar.cpp:753 text_calendar.cpp:759
+#, kde-format
+msgid "\"%1\" occurred already."
+msgstr "„%1“ se već odigrao."
+
+# >! Contexts.
+# >> %1 is an event name
+# >> %1 is a todo name
+#: text_calendar.cpp:755 text_calendar.cpp:773
+#, kde-format
+msgid "\"%1\" is currently in-progress."
+msgstr "„%1“ je trenutno u toku."
+
+# >> %1 is an event name
+#: text_calendar.cpp:761
+#, kde-format
+msgid "\"%1\", happening all day today, is currently in-progress."
+msgstr "„%1“, koji se odigrava celog dana, trenutno je u toku."
+
+# >! Contexts.
+# >> %1 is a todo name
+#: text_calendar.cpp:771 text_calendar.cpp:783
+#, kde-format
+msgid "\"%1\" is past due."
+msgstr "„%1“ je preko roka."
+
+# >> %1 is a todo name
+#: text_calendar.cpp:777
+#, kde-format
+msgid "\"%1\" has already started."
+msgstr "„%1“ je već počela."
+
+# >! Contexts.
+# >> %1 is a todo name
+#: text_calendar.cpp:786
+#, kde-format
+msgid "\"%1\", happening all-day today, is currently in-progress."
+msgstr "„%1“, koja se odigrava celog dana, trenutno je u toku."
+
+# >! Contexts.
+# >> %1 is a todo name
+#: text_calendar.cpp:791
+#, kde-format
+msgid "\"%1\", happening all day, has already started."
+msgstr "„%1“, koja se odigrava celog dana, već je počela."
+
+#: text_calendar.cpp:801
+#, kde-format
+msgid "Do you still want to accept the task?"
+msgstr "Želite li i dalje da prihvatite zadatak?"
+
+#: text_calendar.cpp:803
+#, kde-format
+msgid "Do you still want to accept the invitation?"
+msgstr "Želite li i dalje da prihvatite pozivnicu?"
+
+#: text_calendar.cpp:808
+#, kde-format
+msgid "Do you still want to send conditional acceptance of the invitation?"
+msgstr "Želite li i dalje da pošaljete uslovno prihvatanje pozivnice?"
+
+#: text_calendar.cpp:810
+#, kde-format
+msgid "Do you still want to send conditional acceptance of the task?"
+msgstr "Želite li i dalje da pošaljete uslovno prihvatanje zadatka?"
+
+#: text_calendar.cpp:813
+#, kde-format
+msgid "Do you still want to accept the counter proposal?"
+msgstr "Želite li i dalje da prihvatite protivpredlog?"
+
+#: text_calendar.cpp:815
+#, kde-format
+msgid "Do you still want to send a counter proposal?"
+msgstr "Želite li i dalje da pošaljete protivpredlog?"
+
+#: text_calendar.cpp:817
+#, kde-format
+msgid "Do you still want to send a decline response?"
+msgstr "Želite li i dalje da pošaljete odbijanje?"
+
+#: text_calendar.cpp:819
+#, kde-format
+msgid "Do you still want to decline the counter proposal?"
+msgstr "Želite li i dalje da odbijete protivpredlog?"
+
+#: text_calendar.cpp:821
+#, kde-format
+msgid "Do you still want to record this response in your calendar?"
+msgstr "Želite li i dalje da zabeležite ovaj odgovor u svoj kalendar?"
+
+#: text_calendar.cpp:824
+#, kde-format
+msgid "Do you still want to delegate this task?"
+msgstr "Želite li i dalje da delegirate ovaj zadatak?"
+
+#: text_calendar.cpp:826
+#, kde-format
+msgid "Do you still want to delegate this invitation?"
+msgstr "Želite li i dalje da delegirate ovu pozivnicu?"
+
+#: text_calendar.cpp:830
+#, kde-format
+msgid "Do you still want to forward this task?"
+msgstr "Želite li i dalje da prosledite ovaj zadatak?"
+
+#: text_calendar.cpp:832
+#, kde-format
+msgid "Do you still want to forward this invitation?"
+msgstr "Želite li i dalje da prosledite ovu pozivnicu?"
+
+#: text_calendar.cpp:836
+#, kde-format
+msgid "Do you still want to cancel this task?"
+msgstr "Želite li i dalje da otkažete ovaj zadatak?"
+
+#: text_calendar.cpp:838
+#, kde-format
+msgid "Do you still want to cancel this invitation?"
+msgstr "Želite li i dalje da otkažete ovu pozivnicu?"
+
+#: text_calendar.cpp:841
+#, kde-format
+msgid "Do you still want to check your calendar?"
+msgstr "Želite li i dalje da proverite svoj kalendar?"
+
+#: text_calendar.cpp:844
+#, kde-format
+msgid "Do you still want to record this task in your calendar?"
+msgstr "Želite li i dalje da zabeležite ovaj zadatak u svoj kalendar?"
+
+#: text_calendar.cpp:846
+#, kde-format
+msgid "Do you still want to record this invitation in your calendar?"
+msgstr "Želite li i dalje da zabeležite ovu pozivnicu u svoj kalendar?"
+
+#: text_calendar.cpp:850
+#, kde-format
+msgid "Do you really want to cancel this task?"
+msgstr "Želite li zaista da otkažete ovaj zadatak?"
+
+#: text_calendar.cpp:852
+#, kde-format
+msgid "Do you really want to cancel this invitation?"
+msgstr "Želite li zaista da otkažete ovu pozivnicu?"
+
+#: text_calendar.cpp:857
+#, kde-format
+msgid "%1?"
+msgstr "%1?"
+
+#: text_calendar.cpp:862
+#, kde-format
+msgid ""
+"%1\n"
+"%2"
+msgstr ""
+"%1\n"
+"%2"
+
+#: text_calendar.cpp:888
+#, fuzzy, kde-format
+#| msgid "Reaction to Invitation"
+msgctxt "@title:window"
+msgid "Reaction to Invitation"
+msgstr "Reagovanje na pozivnicu"
+
+#: text_calendar.cpp:901 text_calendar.cpp:1150
+#, kde-format
+msgid "You forgot to add proposal. Please add it. Thanks"
+msgstr "Zaboravili ste da dodate predlog, dodajte ga."
+
+#: text_calendar.cpp:934
+#, kde-format
+msgid "Delegation to organizer is not possible."
+msgstr "Ne može se delegirati organizatoru."
+
+# >> @title:window
+#: text_calendar.cpp:1068
+#, kde-format
+msgid "Save Invitation Attachment"
+msgstr "Upisivanje priloga pozivnice"
+
+# >> @title:window
+#: text_calendar.cpp:1137
+#, fuzzy, kde-format
+#| msgid "Decline Counter Proposal"
+msgctxt "@title:window"
+msgid "Decline Counter Proposal"
+msgstr "Odbijanje protivpredloga"
+
+#: text_calendar.cpp:1183
+#, kde-format
+msgid ""
+"You have no writable calendar folders for invitations, so storing or saving "
+"a response will not be possible.\n"
+"Please create at least 1 writable events calendar and re-sync."
+msgstr ""
+"Nemate nijednu upisivu kalendarsku fasciklu za pozivnice, zbog čega "
+"upisivanje i skladištenje odgovora neće biti moguće.\n"
+"Napravite bar jedan upisivi kalendar za događaje i sinhronizujte ga."
+
+#: text_calendar.cpp:1203
+#, kde-format
+msgid ""
+"The calendar invitation stored in this email message is broken in some way. "
+"Unable to continue."
+msgstr ""
+"Kalendarska pozivnica skladištena u ovoj poruci e‑pošte nekako je iskvarena. "
+"Ne mogu da nastavim."
+
+#: text_calendar.cpp:1260
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The organizer is not expecting a reply to this invitation but you can send "
+"them an email message if you desire.\n"
+"\n"
+"Would you like to send the organizer a message regarding this invitation?\n"
+"Press the [Cancel] button to cancel the recording operation."
+msgstr ""
+"Organizator ne očekuje odgovor na ovu pozivnicu ali mu možete poslati poruku "
+"e‑poštom ako želite.\n"
+"\n"
+"Želite li da pošaljete organizatoru poruku u vezi sa ovom pozivnicom?\n"
+"Pritisnite dugme <i>Odustani</i> da odustanete od postupka upisa."
+
+# rewrite-msgid: /Email/Message/
+#: text_calendar.cpp:1264
+#, kde-format
+msgctxt "@title:window"
+msgid "Send Email to Organizer"
+msgstr "Slanje poruke organizatoru"
+
+#: text_calendar.cpp:1265
+#, kde-format
+msgid "Do Not Send"
+msgstr "Ne šalji"
+
+# rewrite-msgid: /EMail/Message/
+#: text_calendar.cpp:1266
+#, kde-format
+msgid "Send EMail"
+msgstr "Pošalji poruku"
+
+#: text_calendar.cpp:1275
+#, kde-format
+msgid "Re: %1"
+msgstr "Odg: %1"
+
+#: text_calendar.cpp:1338
+#, kde-format
+msgid "Open Attachment"
+msgstr "Otvori prilog"
+
+#: text_calendar.cpp:1340
+#, kde-format
+msgid "Save Attachment As..."
+msgstr "Sačuvaj prilog kao..."
+
+#: text_calendar.cpp:1356
+#, kde-format
+msgid "Accept invitation"
+msgstr "Prihvati pozivnicu"
+
+#: text_calendar.cpp:1358
+#, kde-format
+msgid "Accept invitation conditionally"
+msgstr "Prihvati pozivnicu uslovno"
+
+#: text_calendar.cpp:1360
+#, kde-format
+msgid "Accept counter proposal"
+msgstr "Prihvati protivpredlog"
+
+#: text_calendar.cpp:1362
+#, kde-format
+msgid "Create a counter proposal..."
+msgstr "Napravi protivpredlog..."
+
+#: text_calendar.cpp:1364
+#, kde-format
+msgid "Throw mail away"
+msgstr "Baci poruku"
+
+#: text_calendar.cpp:1366
+#, kde-format
+msgid "Decline invitation"
+msgstr "Odbij pozivnicu"
+
+#: text_calendar.cpp:1368
+#, kde-format
+msgid "Postpone"
+msgstr "Odloži"
+
+#: text_calendar.cpp:1370
+#, kde-format
+msgid "Decline counter proposal"
+msgstr "Odbij protivpredlog"
+
+#: text_calendar.cpp:1372
+#, kde-format
+msgid "Check my calendar..."
+msgstr "Proveri moj kalendar..."
+
+#: text_calendar.cpp:1374
+#, kde-format
+msgid "Record response into my calendar"
+msgstr "Sačuvaj odgovor u mom kalendaru"
+
+#: text_calendar.cpp:1376
+#, kde-format
+msgid "Record invitation into my calendar"
+msgstr "Sačuvaj pozivnicu u mom kalendaru"
+
+#: text_calendar.cpp:1378
+#, kde-format
+msgid "Move this invitation to my trash folder"
+msgstr "Premesti ovu pozivnicu u smeće"
+
+#: text_calendar.cpp:1380
+#, kde-format
+msgid "Delegate invitation"
+msgstr "Pošalji pozivnicu"
+
+#: text_calendar.cpp:1382
+#, kde-format
+msgid "Forward invitation"
+msgstr "Prosledi pozivnicu"
+
+#: text_calendar.cpp:1384
+#, kde-format
+msgid "Remove invitation from my calendar"
+msgstr "Ukloni pozivnicu iz mog kalendara"
+
+#: text_calendar.cpp:1387
+#, kde-format
+msgid "Open attachment \"%1\""
+msgstr "Otvori prilog „%1“"

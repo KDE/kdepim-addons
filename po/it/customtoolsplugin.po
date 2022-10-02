@@ -1,0 +1,98 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2016-04-12 01:53+0100\n"
+"Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Traduttore"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "&Traduttore"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Traduttore"
+
+#~ msgid "Configure engine"
+#~ msgstr "Configura motore"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Seleziona un server che abbrevia l'URL:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Errore restituito dal server:\n"
+#~ "«%1»"
+
+#~ msgid "Close"
+#~ msgstr "Chiudi"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Generazione URL abbreviato in corso..."
+
+#~ msgid "Configure..."
+#~ msgstr "Configura..."
+
+#~ msgid "Convert"
+#~ msgstr "Converti"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Inserisci URL abbreviato"
+
+#~ msgid "Original URL:"
+#~ msgstr "URL originale:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Copia negli appunti"
+
+#~ msgid "Short URL:"
+#~ msgstr "URL abbreviato:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Apri URL abbreviato"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr "Nessuna connessione di rete rilevata, impossibile abbreviare l'URL."
+
+#~ msgid "No network"
+#~ msgstr "Rete non disponibile"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Si è verificato un errore: «%1»"
+
+#~ msgid "Short URL"
+#~ msgstr "URL abbreviato"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Genera URL abbreviato"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "Generazione URL abbreviato in corso..."
+
+#~ msgid "Short url:"
+#~ msgstr "URL abbreviato:"
+
+#~ msgid "Short url"
+#~ msgstr "URL abbreviato"

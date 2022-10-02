@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2022-09-20 01:55\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/kdepim-addons/"
+"kmail_editorconvertertext_plugins.pot\n"
+"X-Crowdin-File-ID: 6959\n"
+
+#: markdown/markdownlib/markdownconfiguredialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Markdown Plugin"
+msgstr "配置 Markdown 插件"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:19
+#, kde-format
+msgid "Enable embedded LaTeX"
+msgstr "启用嵌入的 LaTeX"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:20
+#, kde-format
+msgid "Enable PHP Markdown Extra definition lists"
+msgstr "启用 PHP Markdown 额外定义列表"
+
+#: markdown/markdownlib/markdownconverter.cpp:68
+#, kde-format
+msgid "Failed to compile the Markdown document."
+msgstr "编译 Markdown 文档失败。"
+
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Image"
+msgstr "添加图片"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:19
+#, kde-format
+msgid "Keep original size"
+msgstr "保持原始大小"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#, kde-format
+msgid "Width:"
+msgstr "宽度："
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
+#, kde-format
+msgid "Height:"
+msgstr "高度："
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:39
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
+#, kde-format
+msgid "Title:"
+msgstr "标题："
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#, kde-format
+msgid "Image Link:"
+msgstr "图像链接:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#, kde-format
+msgid "Alternate text:"
+msgstr "替代文本："
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
+#, kde-format
+msgid " px"
+msgstr " px"
+
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Link"
+msgstr "添加链接"
+
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:30
+#, kde-format
+msgid "Link:"
+msgstr "链接:"
+
+#: markdown/markdownlib/markdownpreviewdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Markdown Rendering Preview"
+msgstr "Markdown 渲染预览"
+
+#: markdown/markdownlib/markdownpreviewwidget.cpp:75
+#, kde-format
+msgid "Converter Error"
+msgstr "转换器出错"
+
+#: markdown/plugin/markdowninterface.cpp:36
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr "从 Markdown 语言生成 HTML"
+
+#: markdown/plugin/markdowninterface.cpp:53
+#, kde-format
+msgid "Markdown"
+msgstr "Markdown"
+
+#: markdown/plugin/markdowninterface.cpp:55
+#, kde-format
+msgid "Markdown Action"
+msgstr "Markdown 操作"
+
+#: markdown/plugin/markdowninterface.cpp:60
+#, kde-format
+msgid "Add Title"
+msgstr "添加标题"
+
+#: markdown/plugin/markdowninterface.cpp:63
+#, kde-format
+msgid "Level %1"
+msgstr "优先级 %1"
+
+#: markdown/plugin/markdowninterface.cpp:67
+#, kde-format
+msgid "Horizontal Rule"
+msgstr "水平标尺"
+
+#: markdown/plugin/markdowninterface.cpp:69
+#, kde-format
+msgid "Change Selected Text as Bold"
+msgstr "加粗选中文本"
+
+#: markdown/plugin/markdowninterface.cpp:71
+#, kde-format
+msgid "Change Selected Text as Italic"
+msgstr "更改选中文本为斜体"
+
+#: markdown/plugin/markdowninterface.cpp:73
+#, kde-format
+msgid "Change Selected Text as Code"
+msgstr "将所选文本转为代码格式"
+
+#: markdown/plugin/markdowninterface.cpp:75
+#, kde-format
+msgid "Change Selected Text as Block Quote"
+msgstr "将所选文本转为块引用"
+
+#: markdown/plugin/markdowninterface.cpp:78
+#, kde-format
+msgid "Add Link"
+msgstr "添加链接"
+
+#: markdown/plugin/markdowninterface.cpp:79
+#, kde-format
+msgid "Add Image"
+msgstr "添加图片"

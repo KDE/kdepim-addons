@@ -1,0 +1,396 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# Kheyyam <xxmn77@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"PO-Revision-Date: 2022-07-22 12:21+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#: dkim-verify/dkimadvancedwidget.cpp:21
+#, kde-format
+msgid "Still verify the signature, if a domain is only testing DKIM"
+msgstr "Əgər domen yalnız DKİM-i sınaqdan keçirirsə, hər halda imzanı yoxlayın"
+
+#: dkim-verify/dkimadvancedwidget.cpp:22
+#, kde-format
+msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgstr ""
+"\"Kimlik doğrulaması nəticəsi\" başlığı oxunan zaman uyğunlaşdırılmış e-"
+"poçtdan istifadə edin"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Nothing"
+msgstr "Heç nə"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Warning"
+msgstr "Xəbərdarlıq"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Error"
+msgstr "Xəta"
+
+#: dkim-verify/dkimadvancedwidget.cpp:36
+#, kde-format
+msgid "Treat RSA-SHA1 sign algorithm as:"
+msgstr "RSA-SHA1 işarə alqoritmini aşağıdakı kimi qəbul edin:"
+
+#: dkim-verify/dkimadvancedwidget.cpp:40
+#, kde-format
+msgid "Treat small Key as:"
+msgstr "Kiçik açarı belə qəbul edin:"
+
+#: dkim-verify/dkimadvancedwidget.cpp:42
+#, kde-format
+msgid "Configure"
+msgstr "Tənzimləyin"
+
+#: dkim-verify/dkimadvancedwidget.cpp:45
+#, kde-format
+msgid "Authentication Server verified:"
+msgstr "Etibarlı kimlik doğrulaması serveri:"
+
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Authentication Verified Server"
+msgstr "Etibarlı kimlik doğrulaması serverini tənzimləyin"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
+#, kde-format
+msgid "New Server:"
+msgstr "Yeni server:"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
+#, kde-format
+msgid "New Server"
+msgstr "Yeni server"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
+#, kde-format
+msgid "Modify Server"
+msgstr "Serveri dəyişin"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
+#, kde-format
+msgid "Server:"
+msgstr "Server:"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
+#, kde-format
+msgid "Do you want to delete selected server(s) name?"
+msgstr "Seçilmiş server ad(lar)ını silmək istəyirsiniz?"
+
+#: dkim-verify/dkimconfiguredialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure DKIM"
+msgstr "DKIM-i tənzimləyin"
+
+#: dkim-verify/dkimconfiguretab.cpp:38
+#: foldersettings/folderconfiguresettingspagewidget.cpp:36
+#, kde-format
+msgid "General"
+msgstr "Əsas"
+
+#: dkim-verify/dkimconfiguretab.cpp:40
+#, kde-format
+msgid "Record Keys"
+msgstr "Yazma açarı"
+
+#: dkim-verify/dkimconfiguretab.cpp:42
+#, kde-format
+msgid "Policy"
+msgstr "Qayda"
+
+#: dkim-verify/dkimconfiguretab.cpp:44
+#, kde-format
+msgid "Advanced"
+msgstr "Təkmilləşmiş"
+
+#: dkim-verify/dkimgeneralwidget.cpp:19
+#, kde-format
+msgid "Enable DKIM Support"
+msgstr "DKIM dəstəyini işə salın"
+
+#: dkim-verify/dkimgeneralwidget.cpp:20
+#, kde-format
+msgid "Save DKIM Result"
+msgstr "DKIM nəticəsini saxlayın"
+
+#: dkim-verify/dkimgeneralwidget.cpp:22
+#, kde-format
+msgid "Replace DKIM result by Authentication-Result header value"
+msgstr ""
+"DKIM nəticəsini Kimlik doğrulaması nəticəsi başçlığındakı dəyər ilə əvəz edin"
+
+#: dkim-verify/dkimgeneralwidget.cpp:38
+#, kde-format
+msgid "Save Record Key:"
+msgstr "Yazma aşarını saxlayın"
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save"
+msgstr "Saxlayın"
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save and Compare"
+msgstr "Saxlayın və müqayisı edin"
+
+#: dkim-verify/dkimpolicywidget.cpp:21
+#, kde-format
+msgid "Check if e-mail should be signed"
+msgstr "Məktubun imzalanmalı olub olmadığını yoxlayın"
+
+#: dkim-verify/dkimpolicywidget.cpp:22
+#, kde-format
+msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgstr ""
+"Məktubun imzalanmasının lazım olub olmadığını evristik olaraq müəyyən etmək "
+"üçün DMARC-dan istifadə edin"
+
+#: dkim-verify/dkimpolicywidget.cpp:23
+#, kde-format
+msgid "Use default rule"
+msgstr "Standart qayda istifadə edin"
+
+#: dkim-verify/dkimpolicywidget.cpp:24
+#, kde-format
+msgid "Autogenerate rule"
+msgstr "Qaydanın avtomatik yaradılması"
+
+#: dkim-verify/dkimpolicywidget.cpp:25
+#, kde-format
+msgid "Read Authentication-Results header"
+msgstr "Kimlik doğrulaması nəticələri başlığını oxuyun"
+
+#: dkim-verify/dkimpolicywidget.cpp:26
+#, kde-format
+msgid "Autogenerate when Sender in SDID"
+msgstr "Göndərən SDID-də olduqda avtomatik yaradılsın"
+
+#: dkim-verify/dkimpolicywidget.cpp:27
+#, kde-format
+msgid "Show Rules"
+msgstr "Qydalar göstərilsin"
+
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Expiry Account Trash Folder"
+msgstr "İstifadə müddəti hesabların qeydlər səbət qovluğunu tənzimləyin"
+
+#: foldersettings/folderconfiguresettingsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Folder Settings"
+msgstr "Qovluq ayarlarını tənzimləyin"
+
+#: foldersettings/folderconfiguresettingspagebase.cpp:17
+#, kde-format
+msgid "Modify"
+msgstr "Dəyşdirin"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:40
+#, kde-format
+msgid "View"
+msgstr "Baxış"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:44
+#, kde-format
+msgid "Expiry"
+msgstr "Bitmə müddəti"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:48
+#, kde-format
+msgid "Template"
+msgstr "Şablon"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:57
+#, kde-format
+msgid ""
+"It will override all settings for each selected folder. Do you want to "
+"continue?"
+msgstr ""
+"Hər seçilmiş qovluq üçün bütün parametrlər dəyişdiriləcəkdir. Davam etmək "
+"istəyirsiniz?"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#, kde-format
+msgid "Save Folder Settings"
+msgstr "Qovluq ayarlarını saxlayın"
+
+#: foldersettings/folderconfiguretreewidget.cpp:52
+#, kde-format
+msgid "Select"
+msgstr "Seçin"
+
+#: foldersettings/folderconfiguretreewidget.cpp:60
+#, kde-format
+msgid "Unselect"
+msgstr "Seçimi ləğv edin"
+
+#: gravatar/gravatarconfiguresettingsplugindialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr "Gravatar tənzimləməsi"
+
+#: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
+#, kde-format
+msgid "Enable Gravatar Support"
+msgstr "Gravatar dəstəyini işə salın"
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Create"
+msgstr "Yaradın"
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit"
+msgstr "Düzəliş edin"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:27
+#, kde-format
+msgid "Server Name:"
+msgstr "Serverin adı:"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:31
+#, kde-format
+msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgstr ""
+"<qt><a href=\"whatsthis1\">Arqument formatı haqqında məlumat...</a></qt>"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
+#, kde-format
+msgid ""
+"<qt><p><strong>These expressions may be used for the arguments:</strong></"
+"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+msgstr ""
+"<qt><p><strong>Arqument üçün bu ifadələri istifadə etmək olar:</strong></"
+"p><ul><li>əmr ilə istifadə olunan, %u - url</li></ul></strong></p></qt>"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:48
+#, kde-format
+msgid "Command line:"
+msgstr "Əmr sətri:"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:58
+#, kde-format
+msgid "Executable:"
+msgstr "İcar edilə bilən fayl:"
+
+#: openurlwith/openurlwithconfiguredialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Open Url With Plugin"
+msgstr "Qoşmanın köməyi ilə URL-un açılması ayarları"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:55
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Rule..."
+msgstr "Qayda əlavə edin..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:56
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Rule"
+msgstr "Qaydanı silin"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:57
+#, kde-format
+msgctxt "@action:button"
+msgid "Modify Rule..."
+msgstr "Qaydanı dəyişin..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Rule already exists."
+msgstr "Qayda artıq mövcuddur."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Duplicate Rule"
+msgstr "Qaydanın təkrarı"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:191
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] "Bu qaydanı silmək istəyirsiniz?"
+msgstr[1] "Bu qaydaları silmək istəyirsiniz?"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:192
+#, kde-format
+msgctxt "@title"
+msgid "Remove Rule"
+msgstr "Qaydanı silin"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:208
+#, kde-format
+msgid "Add Rule..."
+msgstr "Qayda əlavə edin..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:210
+#, kde-format
+msgid "Edit Rule..."
+msgstr "Qaydaya düzəliş edin..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:215
+#, kde-format
+msgid "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] "Qaydanı silin"
+msgstr[1] "Qaydaları silin"
+
+#: scamsettings/scamconfiguresettingsdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Scam Settings"
+msgstr "Zərərli məktub ayarlarını tənzimləyin"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Domain"
+msgstr "Domen"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Check"
+msgstr "Yoxlayın"
+
+#: scamsettings/scamconfigureutils.cpp:15
+#, kde-format
+msgid "Disable All Check"
+msgstr "Bütün yoxlamaları söndürün"
+
+#: scamsettings/scamconfigureutils.cpp:17
+#, kde-format
+msgid "Redirect Url"
+msgstr "Yönləndirmə üçün URL"
+
+#: scamsettings/scamconfigureutils.cpp:19
+#, kde-format
+msgid "Has Ip"
+msgstr "İP-yə malikdirs"

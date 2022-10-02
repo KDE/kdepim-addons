@@ -1,0 +1,158 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-04 00:44+0000\n"
+"PO-Revision-Date: 2018-01-31 23:05+0300\n"
+"Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: gnupgwksurlhandler.cpp:85
+#, kde-format
+msgid "Display key details"
+msgstr "اعرض تفاصيل المفتاح"
+
+#: gnupgwksurlhandler.cpp:87
+#, kde-format
+msgid "Publish the key"
+msgstr "انشر المفتاح"
+
+#: pgpkeyformatter.cpp:43
+#, kde-format
+msgid "No valid key data in file."
+msgstr "لم يُعثر على بيانات صالحة في الملفّ."
+
+#: pgpkeyurlhandler.cpp:46
+#, kde-format
+msgid "Import the key"
+msgstr "استورد المفتاح"
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "An error occurred while importing the key."
+msgstr "حدث خطأ أثناء استيراد المفتاح."
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "Import error"
+msgstr "خطأ استيراد"
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "The key has been successfully imported."
+msgstr "استوردتُ المفتاح بنجاح."
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "Import finished"
+msgstr "انتهى الاستيراد"
+
+#: templates/gnupgwksmessagepart.html:26
+msgid "Register your OpenPGP key with your email provider. "
+msgstr "سجّل مفتاح OpenPGP مع مزوّد بريدك. "
+
+#: templates/gnupgwksmessagepart.html:28
+msgid ""
+"When you register your key with your email provider other people will then "
+"be able to retrieve the key and send you encrypted emails and verify "
+"authenticity of emails you send them."
+msgstr ""
+"عندما تسجّل مفتاحك مع مزوّد بريدك سيمكن للآخرين تنزيل المفتاح وإرسال بريد معمًّى "
+"كما وتأكيد موثوقيّة رسائل البريد التي ترسلها لهم."
+
+#: templates/gnupgwksmessagepart.html:31
+msgid "An error occurred while publishing the key. Please try again later."
+msgstr "حدث خطأ أثناء نشر المفتاح. رجاءً أعِد المحاولة لاحقًا."
+
+#: templates/gnupgwksmessagepart.html:33
+msgid "Register the key"
+msgstr "سجّل المفتاح"
+
+#: templates/gnupgwksmessagepart.html:35
+msgid ""
+"The email will be automatically deleted once you confirm the registration."
+msgstr "ستُحذف رسالة البريد هذه آليًّا ما إن تؤكّد التّسجيل."
+
+#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+msgid "Show key details"
+msgstr "اعرض تفاصيل المفتاح"
+
+#: templates/gnupgwksmessagepart.html:42
+msgid ""
+"This is an automatically generated email. The purpose of this email is to "
+"register your OpenPGP key with your email provider."
+msgstr "هذا بريد مولّد آليًّا، الغرض منه تسجيل مفتاح OpenPGP مع مزوّد بريدك."
+
+#: templates/gnupgwksmessagepart.html:45
+msgid ""
+"Your OpenPGP key will be published on your email provider's key server. "
+"Other users will be able to retrieve the key and send you encrypted emails "
+"and verify authenticity of emails you send them."
+msgstr ""
+"سيُنشر مفتاح OpenPGP في خادوم مفاتيح مزوّد بريدك. سيمكن للمستخدمين الآخرين "
+"تنزيل المفتاح وإرسال بريد معمًّى كما وتأكيد موثوقيّة رسائل البريد التي ترسلها "
+"لهم."
+
+#: templates/pgpkeymessagepart.html:14
+msgid "OpenPGP Key"
+msgstr "مفتاح OpenPGP"
+
+#: templates/pgpkeymessagepart.html:18
+msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
+msgstr "هذا مفتاح OpenPGP يمكن استخدامه لتوقيع رسائل البريد أو تعميتها."
+
+#: templates/pgpkeymessagepart.html:23
+msgid "Loading key details..."
+msgstr "يحمّل تفاصيل المفتاح..."
+
+#: templates/pgpkeymessagepart.html:28
+msgid "Owner:"
+msgstr "المالك:"
+
+#: templates/pgpkeymessagepart.html:32
+msgid "Created:"
+msgstr "أُنشئ في:"
+
+#: templates/pgpkeymessagepart.html:37
+msgid "Fingerprint:"
+msgstr "البصمة:"
+
+#: templates/pgpkeymessagepart.html:42
+msgid ""
+"This key is unknown, it could not be found in your local keyring. You may "
+"want to import this key."
+msgstr ""
+"هذا المفتاح مجهول وتعذّر العثور عليه في حلقة المفاتيح المحليّة. قد ترغب "
+"باستيراد المفتاح."
+
+#: templates/pgpkeymessagepart.html:45
+#, kde-format
+msgid "Error while loading key: %1"
+msgstr "خطأ أثناء تحميل المفتاح: %1"
+
+#: templates/pgpkeymessagepart.html:47
+msgid "Hide key details"
+msgstr "أخفِ تفاصيل المفتاح"
+
+#: templates/pgpkeymessagepart.html:49
+msgid "Open in Kleopatra"
+msgstr "افتح في «كليوپترا»"
+
+#: templates/pgpkeymessagepart.html:52
+msgid "Show key details ..."
+msgstr "اعرض تفاصيل المفتاح..."
+
+#: templates/pgpkeymessagepart.html:54
+msgid "Import key"
+msgstr "استورد مفتاحًا"

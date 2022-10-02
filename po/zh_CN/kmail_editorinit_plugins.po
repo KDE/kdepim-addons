@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-04-13 00:18+0000\n"
+"PO-Revision-Date: 2022-09-20 01:55\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/kdepim-addons/kmail_editorinit_plugins."
+"pot\n"
+"X-Crowdin-File-ID: 3879\n"
+
+#: externalcomposer/externalcomposerconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"External Composer\" Plugin"
+msgstr "配置“外部编辑器”插件"
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:18
+#, kde-format
+msgid "Use external editor instead of composer"
+msgstr "使用外部编辑器编辑"
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:45
+#, kde-format
+msgid ""
+"<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
+"replaced with the window id.<br /><b>%l</b> will be replaced with the line "
+"number."
+msgstr ""
+"<b>%f</b> 将会被替换为要编辑的文件名。<br /><b>%w</b> 将会替换为窗口 id。"
+"<br /><b>%l</b> 将会替换为行号。"

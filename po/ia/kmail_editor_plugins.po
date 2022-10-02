@@ -1,0 +1,226 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# giovanni <g.sora@tiscali.it>, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2020-02-11 22:54+0100\n"
+"Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:23
+#, kde-format
+msgid "Autocorrect Text"
+msgstr "Autocorrige texto"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:28
+#, kde-format
+msgid "Autocorrect Full Text"
+msgstr "Autocorrige texto plen"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:32
+#, kde-format
+msgid "Autocorrect Selected Text"
+msgstr "Autocorrige texto seligite"
+
+#: insertemail/insertemailplugineditorinterface.cpp:23
+#, kde-format
+msgid "Insert Email..."
+msgstr "Inserta ePosta..."
+
+#: insertshorturl/insertshorturlconfigurewidget.cpp:29
+#, kde-format
+msgid "Select Short URL server:"
+msgstr "Selige servitor de URL breve:"
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:61
+#, kde-format
+msgid "Insert Short URL..."
+msgstr "Inserta Url breve..."
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:85
+#, kde-format
+msgid "No network connection detected, we cannot shorten URL."
+msgstr "Il non relevava alcun connexion de rete, nos non pote curtar URL."
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:92
+#, kde-format
+msgid "String doesn't seem to be a URL"
+msgstr "Catena non appare esser un URL."
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:98
+#, kde-format
+msgid "An error occurred: \"%1\""
+msgstr "Un error occurreva: \"%1\""
+
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
+#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
+#, kde-format
+msgid ""
+"Error reported by server:\n"
+"'%1'"
+msgstr ""
+"Error reportate per le servitor: \n"
+"'%1'"
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:22
+#, kde-format
+msgid "Insert Special Character..."
+msgstr "Inserta un character special..."
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
+#, kde-format
+msgctxt "@title:window"
+msgid "Insert Special Character"
+msgstr "Inserta Character special"
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#, kde-format
+msgid "Insert"
+msgstr "Inserta"
+
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
+#, kde-format
+msgid "Insert Non Breaking Space"
+msgstr "Inserta spatio non rumpente"
+
+#: quicktext/quicktextconfiguredialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure quick text"
+msgstr "Configura texto rapide"
+
+#: quicktext/quicktextconfiguredialog.cpp:38
+#, kde-format
+msgid "Import..."
+msgstr "Importa..."
+
+#: quicktext/quicktextconfiguredialog.cpp:41
+#, kde-format
+msgid "Export..."
+msgstr "Exporta..."
+
+#: quicktext/quicktextmanager.cpp:78
+#, kde-format
+msgid "Import QuickText"
+msgstr "Importa Texto rapide"
+
+#: quicktext/quicktextmanager.cpp:86
+#, kde-format
+msgid "Export QuickText"
+msgstr "Exporta Texto rapide"
+
+#: quicktext/quicktextplugineditorinterface.cpp:38
+#: quicktext/quicktextplugineditorinterface.cpp:44
+#, kde-format
+msgid "Variables"
+msgstr "Variabiles"
+
+#: quicktext/quicktexttreewidget.cpp:37
+#, kde-format
+msgid "Add Snippet..."
+msgstr "Adde fragmento..."
+
+#: quicktext/quicktexttreewidget.cpp:39
+#, kde-format
+msgid "Edit Snippet..."
+msgstr "Modifica fragmento..."
+
+#: quicktext/quicktexttreewidget.cpp:41
+#, kde-format
+msgid "Remove Snippet"
+msgstr "Remove Fragmento"
+
+#: quicktext/quicktexttreewidget.cpp:44
+#, kde-format
+msgid "Add Group..."
+msgstr "Adde Gruppo..."
+
+#: quicktext/quicktexttreewidget.cpp:46
+#, kde-format
+msgid "Rename Group..."
+msgstr "Renomina Gruppo ..."
+
+#: quicktext/quicktexttreewidget.cpp:48
+#, kde-format
+msgid "Remove Group"
+msgstr "Remove gruppo"
+
+#: quicktext/quicktexttreewidget.cpp:85
+#, kde-format
+msgid "Text Snippets"
+msgstr "Fragmentos de texto"
+
+#: quicktext/quicktexttreewidget.cpp:142
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Do you really want to remove snippet \"%1\"?<nl/><warning>There is no way to "
+"undo the removal.</warning>"
+msgstr ""
+"Tu realmente vole remover fragmento \"%1\"?<nl/><warning>Il non ha alcun "
+"modo de annullar le elimination.</warning>"
+
+#: quicktext/quicktexttreewidget.cpp:167
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Do you really want to remove group \"%1\" along with all its snippets?<nl/"
+"><warning>There is no way to undo the removal.</warning>"
+msgstr ""
+"Tu vermente vole remover gruppo \"%1\" con su fragmentos?<nl/> <warning>Il "
+"non ha alcun modo de annullar le elimination.</warning>"
+
+#: quicktext/quicktexttreewidget.cpp:177
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to remove group \"%1\"?"
+msgstr "Tu realmente vole remover gruppo \"%1\"?"
+
+#: quicktext/quicktextwidget.cpp:68
+#, kde-format
+msgid "QuickText was changed. Do you want to save it?"
+msgstr "QuickText (Texto Rapide) esseva cambiate. Tu vole salveguardar lo?"
+
+#: quicktext/quicktextwidget.cpp:69
+#, kde-format
+msgid "Save"
+msgstr "Salveguarda"
+
+#: quicktext/quicktextwidget.cpp:111
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: sharetext/sharetextplugineditorinterface.cpp:28
+#, kde-format
+msgid "Share Mail Text..."
+msgstr "Comparti texto de posta ..."
+
+#: zoomtext/zoomlabel.cpp:20
+#, kde-format
+msgid "Zoom: %1%"
+msgstr "Zoom: %1"
+
+#: zoomtext/zoomtextplugineditorinterface.cpp:25
+#, kde-format
+msgid "Zoom..."
+msgstr "Zoom..."
+
+#~ msgid "Reset"
+#~ msgstr "Reinitialisa"
+
+#~ msgid "&Zoom In"
+#~ msgstr "&Zoom In (aggrandir)"
+
+#~ msgid "Zoom &Out"
+#~ msgstr "Zoom&Out (diminue)"

@@ -1,0 +1,43 @@
+# Translation of kmail_editorinit_plugins.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail_editorinit_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-12-17 03:17+0100\n"
+"PO-Revision-Date: 2017-05-07 22:20+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+# >> @title:window
+#: externalcomposer/externalcomposerconfiguredialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "Configure \"External Composer\" Plugin"
+msgctxt "@title:window"
+msgid "Configure \"External Composer\" Plugin"
+msgstr "Подешавање прикључка за спољашњи састављач"
+
+# >> @option:check
+#: externalcomposer/externalcomposerconfigurewidget.cpp:36
+#, kde-format
+msgid "Use external editor instead of composer"
+msgstr "Спољашњи уређивач уместо састављача"
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:59
+#, kde-format
+msgid ""
+"<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
+"replaced with the window id.<br /><b>%l</b> will be replaced with the line "
+"number."
+msgstr ""
+"<b>%f</b> се мења именом фајла за уређивање.<br /><b>%w</b> се мења "
+"идентификатором прозора.<br /><b>%l</b> се мења бројем реда."

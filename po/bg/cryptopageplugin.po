@@ -1,0 +1,54 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Yasen Pramatarov <yasen@lindeas.com>, 2013.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-08 00:48+0000\n"
+"PO-Revision-Date: 2022-05-20 20:38+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <dict@ludost.net>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.0\n"
+
+#: cryptopageplugin.cpp:40
+#, kde-format
+msgid "Allowed Protocols"
+msgstr "Разрешени протоколи"
+
+#: cryptopageplugin.cpp:55
+#, kde-format
+msgid "Preferred OpenPGP encryption key:"
+msgstr "Предпочитан OpenPGP ключ за шифроване:"
+
+#: cryptopageplugin.cpp:60
+#, kde-format
+msgid "Preferred S/MIME encryption certificate:"
+msgstr "Предпочитано S/MIME удостоверение за шифроване:"
+
+#: cryptopageplugin.cpp:65
+#, kde-format
+msgid "Message Preference"
+msgstr "Настройки на съобщението"
+
+#: cryptopageplugin.cpp:74
+#, kde-format
+msgid "Sign:"
+msgstr "Подписване:"
+
+#: cryptopageplugin.cpp:91
+#, kde-format
+msgid "Encrypt:"
+msgstr "Шифроване:"
+
+#: cryptopageplugin.cpp:109
+#, kde-format
+msgid "Crypto Settings"
+msgstr "Настройки на шифроването"

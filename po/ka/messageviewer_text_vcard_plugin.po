@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"PO-Revision-Date: 2022-09-18 06:01+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: text_vcard.cpp:87
+#, kde-format
+msgid "Attached business card"
+msgid_plural "Attached business cards"
+msgstr[0] "მიმაგრებული საქმიანი ბარათი"
+msgstr[1] "მიმაგრებული საქმიანი ბარათები"
+
+#: text_vcard.cpp:129
+#, kde-format
+msgid "[Add this contact to the address book]"
+msgstr "[ამ კონტაქტის მისამართების წიგნაკში ჩამატება]"
+
+#: text_vcard.cpp:135
+#, kde-format
+msgid "[Update this contact in the address book]"
+msgstr "[მისამართების წიგნში ამ კონტაქტის განახლება]"
+
+#: text_vcard.cpp:140
+#, kde-format
+msgid "[This contact is already in addressbook]"
+msgstr "[ეს კონტაქტი მისამართების წიგნში უკვე არსებობს]"
+
+#: text_vcard.cpp:222
+#, kde-format
+msgid "View Business Card"
+msgstr "საქმიანი ბარათის ნახვა"
+
+#: text_vcard.cpp:223
+#, kde-format
+msgid "Save Business Card As..."
+msgstr "საქმიანი ბარათის შენახვა, როგორც..."
+
+#: text_vcard.cpp:240
+#, kde-format
+msgid "Add this contact to the address book."
+msgstr "ამ კონტაქტის მისამართების წიგნაკში ჩამატება."
+
+#: text_vcard.cpp:240
+#, kde-format
+msgid "Update this contact to the address book."
+msgstr "მისამართების წიგნში ამ კონტაქტის განახლება."
+
+#: text_vcard.cpp:242
+#, kde-format
+msgid "Add \"%1\" to the address book."
+msgstr "%1-ის მისამართების წიგნში ჩამატება."
+
+#: text_vcard.cpp:242
+#, kde-format
+msgid "Update \"%1\" to the address book."
+msgstr "%1-ის განახლება მისამართების წიგნში."
+
+#: text_vcard.cpp:266
+#, kde-format
+msgid "Save Business Card"
+msgstr "საქმიანი ბარათის შენახვა"
+
+#: updatecontactjob.cpp:37
+#, kde-format
+msgid "The vCard's primary email address is not in addressbook."
+msgstr "VCARD-ის ძირითადი ელფოსტა მისამართების წიგნში არაა."
+
+#: updatecontactjob.cpp:43
+#, kde-format
+msgid "There are two or more contacts with same email stored in addressbook."
+msgstr ""
+"მისამართების წიგნში ერთი და იგივე ელფოსტის მისამართის მქონეორი ან მეტი "
+"კონტაქტი არსებობს."
+
+#: updatecontactjob.cpp:65
+#, kde-format
+msgid ""
+"The vCard was updated in your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+"თქვენს მისამართების წიგნში vCard განახლდა. თუ გნებავთ, ამ ჩანაწერს "
+"ინფორმაცია კიდევ დაამატოთ, გახსენით ის."
+
+#: updatecontactjob.cpp:76
+#, kde-format
+msgid "Email not specified"
+msgstr "ელფოსტა მითითებული არაა"

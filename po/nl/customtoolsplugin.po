@@ -1,0 +1,98 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2015, 2016, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2022-08-23 15:58+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.08.0\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Vertaler"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "&Vertaler"
+
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Vertaler configureren"
+
+#~ msgid "Configure engine"
+#~ msgstr "Engine instellen"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Server voor ingekort URL-adres selecteren:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Door server gerapporteerde fout:\n"
+#~ "'%1'"
+
+#~ msgid "Close"
+#~ msgstr "Sluiten"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Korte URL-adres genereren..."
+
+#~ msgid "Configure..."
+#~ msgstr "Instellen..."
+
+#~ msgid "Convert"
+#~ msgstr "Converteren"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Ingekort URL-adres invoegen"
+
+#~ msgid "Original URL:"
+#~ msgstr "Oorspronkelijk URL-adres:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Naar klembord kopiëren"
+
+#~ msgid "Short URL:"
+#~ msgstr "Kort URL-adres:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Ingekort URL-adres openen"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr ""
+#~ "Geen netwerkverbinding gedetecteerd, een URL kan niet ingekort worden."
+
+#~ msgid "No network"
+#~ msgstr "Geen netwerk"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Er deed zich een fout voor: \"%1\""
+
+#~ msgid "Short URL"
+#~ msgstr "Kort URL-adres"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Ingekort URL-adres genereren"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "Bezig een korte URL te genereren..."
+
+#~ msgid "Short url:"
+#~ msgstr "Korte URL:"
+
+#~ msgid "Short url"
+#~ msgstr "Korte URL"

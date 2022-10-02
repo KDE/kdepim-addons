@@ -1,0 +1,227 @@
+# translation of kmail_editor_plugins.po to Slovak
+# Roman Paholík <wizzardsk@gmail.com>, 2016.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail_editor_plugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2019-11-05 19:51+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:23
+#, kde-format
+msgid "Autocorrect Text"
+msgstr "Automaticky opraviť text"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:28
+#, kde-format
+msgid "Autocorrect Full Text"
+msgstr "Automaticky opraviť plný text"
+
+#: autocorrection/autocorrectionplugineditorinterface.cpp:32
+#, kde-format
+msgid "Autocorrect Selected Text"
+msgstr "Automaticky opraviť vybraný text"
+
+#: insertemail/insertemailplugineditorinterface.cpp:23
+#, kde-format
+msgid "Insert Email..."
+msgstr "Vložiť Email..."
+
+#: insertshorturl/insertshorturlconfigurewidget.cpp:29
+#, kde-format
+msgid "Select Short URL server:"
+msgstr "Vybrať server pre krátke URL adresy:"
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:61
+#, kde-format
+msgid "Insert Short URL..."
+msgstr "Vložiť krátku URL..."
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:85
+#, kde-format
+msgid "No network connection detected, we cannot shorten URL."
+msgstr "Nepodarilo sa detekovať sieťové pripojenie, nie je možné skrátiť URL."
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:92
+#, kde-format
+msgid "String doesn't seem to be a URL"
+msgstr "Reťazec nevyzerá byť URL adresa"
+
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:98
+#, kde-format
+msgid "An error occurred: \"%1\""
+msgstr "Došlo k chybe: \"%1\""
+
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
+#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
+#, kde-format
+msgid ""
+"Error reported by server:\n"
+"'%1'"
+msgstr ""
+"Chyba hlásená serverom:\n"
+"'%1'"
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:22
+#, kde-format
+msgid "Insert Special Character..."
+msgstr "Vložiť špeciálny &znak..."
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
+#, fuzzy, kde-format
+#| msgid "Insert Special Character"
+msgctxt "@title:window"
+msgid "Insert Special Character"
+msgstr "Vložiť špeciálny znak"
+
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#, kde-format
+msgid "Insert"
+msgstr "Vložiť"
+
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
+#, kde-format
+msgid "Insert Non Breaking Space"
+msgstr "Vložiť nedeliteľnú medzeru"
+
+#: quicktext/quicktextconfiguredialog.cpp:27
+#, fuzzy, kde-format
+#| msgid "Configure quick text"
+msgctxt "@title:window"
+msgid "Configure quick text"
+msgstr "Nastaviť rýchly text"
+
+#: quicktext/quicktextconfiguredialog.cpp:38
+#, kde-format
+msgid "Import..."
+msgstr "Importovať..."
+
+#: quicktext/quicktextconfiguredialog.cpp:41
+#, kde-format
+msgid "Export..."
+msgstr "Exportovať..."
+
+#: quicktext/quicktextmanager.cpp:78
+#, kde-format
+msgid "Import QuickText"
+msgstr "Importovať Rýchly Text"
+
+#: quicktext/quicktextmanager.cpp:86
+#, kde-format
+msgid "Export QuickText"
+msgstr "Exportovať Rýchly Text"
+
+#: quicktext/quicktextplugineditorinterface.cpp:38
+#: quicktext/quicktextplugineditorinterface.cpp:44
+#, kde-format
+msgid "Variables"
+msgstr "Premenné"
+
+#: quicktext/quicktexttreewidget.cpp:37
+#, kde-format
+msgid "Add Snippet..."
+msgstr "Pridať úryvok..."
+
+#: quicktext/quicktexttreewidget.cpp:39
+#, kde-format
+msgid "Edit Snippet..."
+msgstr "Upraviť úryvok..."
+
+#: quicktext/quicktexttreewidget.cpp:41
+#, kde-format
+msgid "Remove Snippet"
+msgstr "Odstrániť úryvok"
+
+#: quicktext/quicktexttreewidget.cpp:44
+#, kde-format
+msgid "Add Group..."
+msgstr "Pridať skupinu..."
+
+#: quicktext/quicktexttreewidget.cpp:46
+#, kde-format
+msgid "Rename Group..."
+msgstr "Premenovať skupinu..."
+
+#: quicktext/quicktexttreewidget.cpp:48
+#, kde-format
+msgid "Remove Group"
+msgstr "Odstrániť skupinu"
+
+#: quicktext/quicktexttreewidget.cpp:85
+#, kde-format
+msgid "Text Snippets"
+msgstr "Textové útržky"
+
+#: quicktext/quicktexttreewidget.cpp:142
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Do you really want to remove snippet \"%1\"?<nl/><warning>There is no way to "
+"undo the removal.</warning>"
+msgstr ""
+"Naozaj chcete odstrániť úryvok \"%1\"? <nl/><warning>Táto akcia sa nedá "
+"vrátiť.</warning>"
+
+#: quicktext/quicktexttreewidget.cpp:167
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Do you really want to remove group \"%1\" along with all its snippets?<nl/"
+"><warning>There is no way to undo the removal.</warning>"
+msgstr ""
+"Naozaj chcete odstrániť skupinu \"%1\" spolu so všetkými jej úryvkami? <nl/"
+"><warning>Táto akcia sa nedá vrátiť.</warning>"
+
+#: quicktext/quicktexttreewidget.cpp:177
+#, kde-format
+msgctxt "@info"
+msgid "Do you really want to remove group \"%1\"?"
+msgstr "Naozaj chcete odstrániť skupinu \"%1\"?"
+
+#: quicktext/quicktextwidget.cpp:68
+#, kde-format
+msgid "QuickText was changed. Do you want to save it?"
+msgstr "Rýchly Text bol zmenený. Chcete ho uložiť?"
+
+#: quicktext/quicktextwidget.cpp:69
+#, kde-format
+msgid "Save"
+msgstr "Uložiť"
+
+#: quicktext/quicktextwidget.cpp:111
+#, kde-format
+msgid "General"
+msgstr "Všeobecné"
+
+#: sharetext/sharetextplugineditorinterface.cpp:28
+#, kde-format
+msgid "Share Mail Text..."
+msgstr "Zdieľať text správy"
+
+#: zoomtext/zoomlabel.cpp:20
+#, kde-format
+msgid "Zoom: %1%"
+msgstr "Priblíženie: %1%"
+
+#: zoomtext/zoomtextplugineditorinterface.cpp:25
+#, kde-format
+msgid "Zoom..."
+msgstr "Priblíženie..."
+
+#~ msgid "Reset"
+#~ msgstr "Vynulovať"
+
+#~ msgid "&Zoom In"
+#~ msgstr "Priblížiť"
+
+#~ msgid "Zoom &Out"
+#~ msgstr "Oddialiť"

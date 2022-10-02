@@ -1,0 +1,163 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-04 00:44+0000\n"
+"PO-Revision-Date: 2019-06-11 10:33-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.04.1\n"
+
+#: gnupgwksurlhandler.cpp:85
+#, kde-format
+msgid "Display key details"
+msgstr "Exibir detalhes da chave"
+
+#: gnupgwksurlhandler.cpp:87
+#, kde-format
+msgid "Publish the key"
+msgstr "Publicar a chave"
+
+#: pgpkeyformatter.cpp:43
+#, kde-format
+msgid "No valid key data in file."
+msgstr "Nenhum dado de chave válido no arquivo."
+
+#: pgpkeyurlhandler.cpp:46
+#, kde-format
+msgid "Import the key"
+msgstr "Importar a chave"
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "An error occurred while importing the key."
+msgstr "Ocorreu um erro ao importar a chave."
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "Import error"
+msgstr "Erro de importação"
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "The key has been successfully imported."
+msgstr "A chave foi importada com sucesso."
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "Import finished"
+msgstr "Importação concluída"
+
+#: templates/gnupgwksmessagepart.html:26
+msgid "Register your OpenPGP key with your email provider. "
+msgstr "Registre sua chave OpenPGP com seu provedor de e-mail."
+
+#: templates/gnupgwksmessagepart.html:28
+msgid ""
+"When you register your key with your email provider other people will then "
+"be able to retrieve the key and send you encrypted emails and verify "
+"authenticity of emails you send them."
+msgstr ""
+"Quando você registra sua chave no seu fornecedor de e-mail, outras pessoas "
+"poderão obter a chave e enviar a você e-mails criptografados e verificar a "
+"autenticidade dos e-mails que você enviar."
+
+#: templates/gnupgwksmessagepart.html:31
+msgid "An error occurred while publishing the key. Please try again later."
+msgstr "Ocorreu um erro ao publicar a chave. Tente novamente mais tarde."
+
+#: templates/gnupgwksmessagepart.html:33
+msgid "Register the key"
+msgstr "Registrar a chave"
+
+#: templates/gnupgwksmessagepart.html:35
+msgid ""
+"The email will be automatically deleted once you confirm the registration."
+msgstr ""
+"O e-mail será excluído automaticamente quando você confirmar o registro."
+
+#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+msgid "Show key details"
+msgstr "Exibir detalhes da chave"
+
+#: templates/gnupgwksmessagepart.html:42
+msgid ""
+"This is an automatically generated email. The purpose of this email is to "
+"register your OpenPGP key with your email provider."
+msgstr ""
+"Este é um e-mail gerado automaticamente. O propósito deste e-mail é "
+"registrar sua chave OpenPGP com seu provedor de e-mail."
+
+#: templates/gnupgwksmessagepart.html:45
+msgid ""
+"Your OpenPGP key will be published on your email provider's key server. "
+"Other users will be able to retrieve the key and send you encrypted emails "
+"and verify authenticity of emails you send them."
+msgstr ""
+"Sua chave OpenPGP será publicada no servidor de chaveiro do seu fornecedor "
+"de e-mail. Outros usuários poderão obter a chave e enviar a você e-mails "
+"criptografados e verificar a autenticidade dos e-mails que você enviar."
+
+#: templates/pgpkeymessagepart.html:14
+msgid "OpenPGP Key"
+msgstr "Chave OpenPGP"
+
+#: templates/pgpkeymessagepart.html:18
+msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
+msgstr ""
+"Esta é uma chave OpenPGP, que pode ser usada para assinar ou criptografar e-"
+"mails."
+
+#: templates/pgpkeymessagepart.html:23
+msgid "Loading key details..."
+msgstr "Carregando detalhes da chave..."
+
+#: templates/pgpkeymessagepart.html:28
+msgid "Owner:"
+msgstr "Proprietário:"
+
+#: templates/pgpkeymessagepart.html:32
+msgid "Created:"
+msgstr "Criado em:"
+
+#: templates/pgpkeymessagepart.html:37
+msgid "Fingerprint:"
+msgstr "Impressão digital:"
+
+#: templates/pgpkeymessagepart.html:42
+msgid ""
+"This key is unknown, it could not be found in your local keyring. You may "
+"want to import this key."
+msgstr ""
+"Esta chave é desconhecida, ela não pôde ser encontrada no seu chaveiro "
+"local. Você pode querer importar esta chave."
+
+#: templates/pgpkeymessagepart.html:45
+#, kde-format
+msgid "Error while loading key: %1"
+msgstr "Erro ao carregar a chave: %1"
+
+#: templates/pgpkeymessagepart.html:47
+msgid "Hide key details"
+msgstr "Ocultar detalhes da chave"
+
+#: templates/pgpkeymessagepart.html:49
+msgid "Open in Kleopatra"
+msgstr "Abrir no Kleopatra"
+
+#: templates/pgpkeymessagepart.html:52
+msgid "Show key details ..."
+msgstr "Exibir detalhes da chave..."
+
+#: templates/pgpkeymessagepart.html:54
+msgid "Import key"
+msgstr "Importar chave"

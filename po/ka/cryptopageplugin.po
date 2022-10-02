@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-08 00:48+0000\n"
+"PO-Revision-Date: 2022-08-21 07:27+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: cryptopageplugin.cpp:40
+#, kde-format
+msgid "Allowed Protocols"
+msgstr "ჩართული პროტოკოლები"
+
+#: cryptopageplugin.cpp:55
+#, kde-format
+msgid "Preferred OpenPGP encryption key:"
+msgstr "OpenPGP-ის სასურველი დაშიფვრის გასაღები:"
+
+#: cryptopageplugin.cpp:60
+#, kde-format
+msgid "Preferred S/MIME encryption certificate:"
+msgstr "S/MIME დაშიფვრის სასურველი სერტიფიკატი:"
+
+#: cryptopageplugin.cpp:65
+#, kde-format
+msgid "Message Preference"
+msgstr "შეტყობინების სასურველობა"
+
+#: cryptopageplugin.cpp:74
+#, kde-format
+msgid "Sign:"
+msgstr "შესვლა:"
+
+#: cryptopageplugin.cpp:91
+#, kde-format
+msgid "Encrypt:"
+msgstr "დაშიფვრა:"
+
+#: cryptopageplugin.cpp:109
+#, kde-format
+msgid "Crypto Settings"
+msgstr "დაშიფვრის პარამეტრები"

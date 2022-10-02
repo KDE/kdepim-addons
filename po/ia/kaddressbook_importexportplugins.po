@@ -1,0 +1,1755 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2013, 2014, 2021, 2022.
+# Giovanni Sora <g.sora@tioscali.it>, 2014, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2022-04-19 22:42+0200\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.03.90\n"
+
+#: csv/csvimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Export CSV file..."
+msgstr "Exporta  file CSV ..."
+
+#: csv/csvimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Export contacts to a file in comma separated value format."
+msgstr ""
+"Exporta contactos a un file in formato de valor separate per un virgula."
+
+#: csv/csvimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Import CSV file..."
+msgstr "Importa file CSV..."
+
+#: csv/csvimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Import contacts from a file in comma separated value format."
+msgstr ""
+"Importa contactos ex un file in formato de valor separate per un virgula."
+
+#: csv/csvimportexportplugininterface.cpp:152
+#: gmx/gmximportexportplugininterface.cpp:80
+#: ldif/ldifimportexportplugininterface.cpp:130
+#: vcards/vcardimportexportplugininterface.cpp:370
+#, kde-format
+msgid "Which contact do you want to export?"
+msgstr "Qual contacto tu vole exportar?"
+
+#: csv/csvimportexportplugininterface.cpp:162
+#: gmx/gmximportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:140
+#: vcards/vcardimportexportplugininterface.cpp:382
+#, kde-format
+msgid "You have not selected any contacts to export."
+msgstr "Tu non ha seligite ulle contactos de exportar."
+
+#: csv/csvimportexportplugininterface.cpp:191
+#: gmx/gmximportexportplugininterface.cpp:124
+#: ldif/ldifimportexportplugininterface.cpp:161
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>Il non pote aperir file <b>%1</b></qt>"
+
+#: csv/csvimportexportplugininterface.cpp:203
+#: gmx/gmximportexportplugininterface.cpp:139
+#: ldif/ldifimportexportplugininterface.cpp:191
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>Il non pote aperir file <b>%1</b>,</qt>"
+
+#: csv/import/csvimportdialog.cpp:168
+#, kde-format
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "Dialogo de Importar CSV"
+
+#: csv/import/csvimportdialog.cpp:223
+#, kde-format
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "Importar contactos"
+
+#: csv/import/csvimportdialog.cpp:294
+#, kde-format
+msgctxt "@label"
+msgid "File to import:"
+msgstr "File de importar:"
+
+#: csv/import/csvimportdialog.cpp:302
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "Selige un file csv de importar"
+
+#: csv/import/csvimportdialog.cpp:304
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr ""
+"Pulsa iste button pro initiar un selector de file que permittera te de "
+"seliger un file csv de importar."
+
+#: csv/import/csvimportdialog.cpp:311
+#, kde-format
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "Delimitator"
+
+#: csv/import/csvimportdialog.cpp:321
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "Virgula"
+
+#: csv/import/csvimportdialog.cpp:322
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr "Fixa le campo separator a un virgula"
+
+#: csv/import/csvimportdialog.cpp:323
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr "Selige iste option si tu file csv usa le virgula como campo separator."
+
+#: csv/import/csvimportdialog.cpp:328
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "Puncto e virgula"
+
+#: csv/import/csvimportdialog.cpp:329
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr "Fixa le campo separator a un puncto e virgula"
+
+#: csv/import/csvimportdialog.cpp:330
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr ""
+"Selige iste option si tu file csv usa le puncto e virgula como campo "
+"separator."
+
+#: csv/import/csvimportdialog.cpp:334
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr "Tabulator"
+
+#: csv/import/csvimportdialog.cpp:335
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr "Fixa le campo separator a un tab"
+
+#: csv/import/csvimportdialog.cpp:336
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr ""
+"Selige iste option si tu file csv usa le character de tab como campo "
+"separator."
+
+#: csv/import/csvimportdialog.cpp:340
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "Spatio"
+
+#: csv/import/csvimportdialog.cpp:341
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "Fixa le campo separator a un spatio"
+
+#: csv/import/csvimportdialog.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr ""
+"Selige iste option si tu file csv usa le character de spatio como campo "
+"separator."
+
+#: csv/import/csvimportdialog.cpp:346
+#, kde-format
+msgctxt "@option:radio Custom field separator"
+msgid "Other"
+msgstr "Altere"
+
+#: csv/import/csvimportdialog.cpp:347
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr "Fixa le campo separator a un character personalisate"
+
+#: csv/import/csvimportdialog.cpp:349
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr ""
+"Selige iste option si tu file csv usa altere character como campo "
+"delimitante de datos in tu file csv."
+
+#: csv/import/csvimportdialog.cpp:355
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "Fixa le character delimitante personalisate"
+
+#: csv/import/csvimportdialog.cpp:357
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+"Inserta un character personalisate de usar se como character delimitante. Si "
+"tu inserta plus que 1 character, solmente le prime essera usate e le altere "
+"characteres essera ignorate."
+
+#: csv/import/csvimportdialog.cpp:363
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "Citation de texto:"
+
+#: csv/import/csvimportdialog.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "Selige le character de quotation"
+
+#: csv/import/csvimportdialog.cpp:371
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+"Selige le character que tu datos csv usa pro \"citar\" le delimitator de "
+"campo si le character es in le datos. Pro exemplo, si le virgula es le "
+"delimitator de campo, alora cata virgula occurrente in le datos essera "
+"\"citate\" per le character specificate hic."
+
+#: csv/import/csvimportdialog.cpp:376
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "\""
+msgstr "\""
+
+#: csv/import/csvimportdialog.cpp:377
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr ","
+
+#: csv/import/csvimportdialog.cpp:378
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "Nulle"
+
+#: csv/import/csvimportdialog.cpp:382
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "Formato de data:"
+
+#: csv/import/csvimportdialog.cpp:390
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+"<para><list><item>a: anno con duo cifras</item><item>A: anno con quatro "
+"cifras</item><item>m : mense con 1 o 2 cifras</item><item>M: mense con 2 "
+"cifras</item><item>d: die con 1 o 2 cifras</item><item>D: die con 2 cifras</"
+"item><item>H: horas con 2 cifras</item><item>I: minutas con 2 cifras</"
+"item><item>S: secundas con 2 cifras</item></list></para> "
+
+#: csv/import/csvimportdialog.cpp:401
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+"<para>Specifica un formato de usar se pro datas includite in tu datos csv. "
+"Usa le sequente sequentias pro adjutar te definir le formato:</para> "
+"<para><list><item>a: anno con duo cifras</item><item>A: anno con 4 cifras</"
+"item><item>m : mense con 1 o 2 cifras</item><item>M: mense con 2 cifras</"
+"item><item>d: die con 1 o 2 cifras</item><item>D: die con 2 cifras</"
+"item><item>H: horas con 2 cifras</item><item>I: minutas con 2 cifras</"
+"item><item>S: secundas con 2 cifras</item></list></para> <para>Exemplo: \"A-"
+"M-D\" corresponde a un data como \"2012-01-04\"</para>"
+
+#: csv/import/csvimportdialog.cpp:417
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "Codec de texto:"
+
+#: csv/import/csvimportdialog.cpp:423
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "Selige le codec de texto"
+
+#: csv/import/csvimportdialog.cpp:424
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr "Selige le character codificante del datos in tu file csv."
+
+#: csv/import/csvimportdialog.cpp:428
+#, kde-format
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr "Salta prime rango o linea de file"
+
+#: csv/import/csvimportdialog.cpp:430
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr "Salta prime rango o linea de file csv quando on importa"
+
+#: csv/import/csvimportdialog.cpp:432
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+"Marca iste quadrato si tu vole que le importation salta le prime rango de "
+"datos de csv. In multe casos, le prime rango de un file csv essera un linea "
+"de commento describente le ordine del campos de datos includite in le file."
+
+#: csv/import/csvimportdialog.cpp:448
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "Applica patrono..."
+
+#: csv/import/csvimportdialog.cpp:449
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "Salveguarda patrono..."
+
+#: csv/import/csvimportdialog.cpp:470
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "Local (%1)"
+
+#: csv/import/csvimportdialog.cpp:471
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "Latin1"
+
+#: csv/import/csvimportdialog.cpp:472
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "Unicode"
+
+#: csv/import/csvimportdialog.cpp:473
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "Unicode de Microsoft"
+
+#: csv/import/csvimportdialog.cpp:574
+#, kde-format
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr "Tu debe assignar al minus un columna."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "On non ha ancora alcun patronos disponibile."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "Nulle patronos disponibile"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "Nomine de patrono"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "Per favor tu inserta un nomine pro le patrono:"
+
+#: csv/import/csvimportdialog.cpp:699
+#, kde-format
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "Il non pote aperir file de ingresso."
+
+#: csv/import/qcsvreader.cpp:92
+#, kde-format
+msgid "Device is not open"
+msgstr "Dispositivo non es aperite"
+
+#: csv/import/templateselectiondialog.cpp:182
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr "Tu vermente vole deler patrono '%1' ?"
+
+#: csv/import/templateselectiondialog.cpp:203
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "Selection de patrono"
+
+#: csv/import/templateselectiondialog.cpp:206
+#, kde-format
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr "Per favor tu selige un patrono, correspondente al file CSV:"
+
+#: gmx/gmximportexportplugininterface.cpp:25
+#, kde-format
+msgid "GMX address book file (*.gmxa)"
+msgstr "File de adressario GMX (*.gmxa)"
+
+#: gmx/gmximportexportplugininterface.cpp:40
+#, kde-format
+msgid "Import GMX file..."
+msgstr "Importa file GMX ..."
+
+#: gmx/gmximportexportplugininterface.cpp:41
+#, kde-format
+msgid "Import contacts from a GMX address book file."
+msgstr "Importa contactos ex un file de adressario GMX ."
+
+#: gmx/gmximportexportplugininterface.cpp:46
+#, kde-format
+msgid "Export GMX file..."
+msgstr "Exporta  file GMX ..."
+
+#: gmx/gmximportexportplugininterface.cpp:47
+#, kde-format
+msgid "Export contacts to a GMX address book file."
+msgstr "Exporta contactos a un file de adressario GMX ."
+
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:80
+#: windows-contacts/importwindowcontact.cpp:26
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt>Il non pote aperir <b>%1</b> pro lectura.</qt>"
+
+#: gmx/gmximportexportplugininterface.cpp:455
+#, kde-format
+msgid "%1 is not a GMX address book file."
+msgstr "%1 non es un file de adressario GMX."
+
+#: ldap/ldapimportexportplugininterface.cpp:25
+#, kde-format
+msgid "Import From LDAP server..."
+msgstr "Importa ex servitor LDAP..."
+
+#: ldap/ldapimportexportplugininterface.cpp:26
+#, kde-format
+msgid "Import contacts from an LDAP server."
+msgstr "Importa contactos ex un servitor LDAP."
+
+#: ldif/ldifimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Import LDIF file..."
+msgstr "Importa file LDIF..."
+
+#: ldif/ldifimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Import contacts from an LDIF file."
+msgstr "Importa contactos ex un file LDIF ."
+
+#: ldif/ldifimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Export LDIF file..."
+msgstr "Exporta file LDIF..."
+
+#: ldif/ldifimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Export contacts to an LDIF file."
+msgstr "Exporta contactos a un file LDIF."
+
+#: ldif/ldifimportexportplugininterface.cpp:110
+#, kde-format
+msgid "LDif Files"
+msgstr "Files LDif"
+
+#: ldif/ldifimportexportplugininterface.cpp:151
+#, kde-format
+msgid "LDif Files (*.ldif)"
+msgstr "Files LDif  (*.ldif)"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:22
+#, kde-format
+msgctxt "@title:group"
+msgid "Fields to be exported"
+msgstr "Campos de importar:"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Private fields"
+msgstr "Campos private"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export private fields"
+msgstr "Exporta campos private"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:32
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's private fields to the "
+"vCard output file."
+msgstr ""
+"Marca iste quadrato si tu vole exportar le campos private del contacto in le "
+"file de exito vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Business fields"
+msgstr "Campos de labor"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export business fields"
+msgstr "Exporta campos de labor"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's business fields to the "
+"vCard output file."
+msgstr ""
+"Marca iste quadrato si tu vole exportar le campos de travalio del contacto "
+"in le file de exito vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:43
+#, kde-format
+msgctxt "@option:check"
+msgid "Other fields"
+msgstr "Altere campos"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export other fields"
+msgstr "Exporta altere campos"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:46
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's other fields to the vCard "
+"output file."
+msgstr ""
+"Marca iste quadrato si tu vole exportar le campos altere  del contacto in le "
+"file de exito vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:50
+#, kde-format
+msgctxt "@option:check"
+msgid "Encryption keys"
+msgstr "Claves de encryption"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export encryption keys"
+msgstr "Exporta claves de encryption"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:53
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's encryption keys to the "
+"vCard output file."
+msgstr ""
+"Marca iste quadrato si tu vole exportar le claves de cryptation  del "
+"contacto in le file de exito vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:57
+#, kde-format
+msgctxt "@option:check"
+msgid "Pictures"
+msgstr "Photos"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:58
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export pictures"
+msgstr "Exporta Photos"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:60
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's picture to the vCard "
+"output file."
+msgstr ""
+"Marca iste quadrato si tu vole exportar le photo del contacto in le file de "
+"exito vCard."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:64
+#, kde-format
+msgctxt "@title:group"
+msgid "Export options"
+msgstr "Optiones de exportar"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:70
+#, kde-format
+msgctxt "@option:check"
+msgid "Display name as full name"
+msgstr "Monstra nomine como nomine integre"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export display name as full name"
+msgstr "Exporta nomine de monstrar como nomine integre"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:73
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's display name in the "
+"vCard's full name field.  This may be required to get the name shown "
+"correctly in GMail or Android."
+msgstr ""
+"Marca iste quadrato si tu vole exportar le nomine de monstrar del contacto "
+"in le campo de nomine integre de vCard. Isto poterea esser requirite pro "
+"haber que le nomine es monstrate correctemente in GMail o Android."
+
+#: vcards/engine/vcardviewerdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Import vCard"
+msgstr "Importa vCard"
+
+#: vcards/engine/vcardviewerdialog.cpp:51
+#, kde-format
+msgctxt "@info"
+msgid "Do you want to import this contact into your address book?"
+msgstr "Tu vole importar iste contacto in tu adressario?"
+
+#: vcards/engine/vcardviewerdialog.cpp:61
+#, kde-format
+msgctxt "@action:button"
+msgid "Import All..."
+msgstr "Importa omne..."
+
+#: vcards/vcardimportexportplugininterface.cpp:44
+#, kde-format
+msgid "Import vCard..."
+msgstr "Importa vCard..."
+
+#: vcards/vcardimportexportplugininterface.cpp:45
+#, kde-format
+msgid "Import contacts from a vCard file."
+msgstr "Importa contactos ex un file de vCard."
+
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, kde-format
+msgid "Export contacts to a vCard 4.0 file."
+msgstr "Exporta contactos a un file vCard 4.0."
+
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, kde-format
+msgid "Export vCard 4.0..."
+msgstr "Exporta vCard 4.0..."
+
+#: vcards/vcardimportexportplugininterface.cpp:58
+#, kde-format
+msgid "Export vCard 3.0..."
+msgstr "Exporta vCard 3.0"
+
+#: vcards/vcardimportexportplugininterface.cpp:59
+#, kde-format
+msgid "Export contacts to a vCard 3.0 file."
+msgstr "Exporta contactos a un file vCard 3.0"
+
+#: vcards/vcardimportexportplugininterface.cpp:64
+#, kde-format
+msgid "Export vCard 2.1..."
+msgstr "Exporta vCard 2.1..."
+
+#: vcards/vcardimportexportplugininterface.cpp:65
+#, kde-format
+msgid "Export contacts to a vCard 2.1 file."
+msgstr "Exporta contactos a un file vCard 2.1."
+
+#: vcards/vcardimportexportplugininterface.cpp:113
+#, kde-format
+msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
+msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;Omne files (*)"
+
+#: vcards/vcardimportexportplugininterface.cpp:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Select vCard to Import"
+msgstr "Selige vCard de importar"
+
+#: vcards/vcardimportexportplugininterface.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "vCard Import Failed"
+msgstr "Importation de vCard Falleva"
+
+#: vcards/vcardimportexportplugininterface.cpp:134
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Unable to access vCard:</para><para>%1</para>"
+msgstr "<para>Il non pote acceder a vCard:</para><para>%1</para>"
+
+#: vcards/vcardimportexportplugininterface.cpp:436
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have selected a list of contacts, shall they be exported to several "
+"files?"
+msgstr ""
+"Tu ha seligite un lista de contactos, illos essera exportate a multe files?"
+
+#: vcards/vcardimportexportplugininterface.cpp:439
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to One File"
+msgstr "Exporta a un file"
+
+#: vcards/vcardimportexportplugininterface.cpp:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to Several Files"
+msgstr "Exporta a multe files"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#, kde-format
+msgid "Import Windows Contact file..."
+msgstr "Importa file de Windows Contact"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#, kde-format
+msgid "Import contacts from windows contact file."
+msgstr "Importa contactos ex file Windows Contact."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#, kde-format
+msgid "Windows Contact file (*.contact)"
+msgstr "File de Windows Contact  (*.contact)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Address Book"
+#~ msgstr "Selige adressario"
+
+#~ msgid "Select the address book the imported contact(s) shall be saved in:"
+#~ msgstr "Selige le adressario ubi salveguardar le contacto(s) importate:"
+
+#~ msgctxt "@title:window"
+#~ msgid "Import Contacts"
+#~ msgstr "Importa contactos"
+
+#~ msgid "Importing one contact to %2"
+#~ msgid_plural "Importing %1 contacts to %2"
+#~ msgstr[0] "Importa un contacto a %2"
+#~ msgstr[1] "Importa %1 contactos a %2"
+
+#, fuzzy
+#~| msgid ""
+#~| "*.vcf|Vcard (*.vcf)\n"
+#~| "*|all files (*)"
+#~ msgid ""
+#~ "*.vcf|vCard (*.vcf)\n"
+#~ "*|all files (*)"
+#~ msgstr ""
+#~ "*cvf|Vcard(*.vcf)\n"
+#~ "*|omne files (*)"
+
+#~ msgctxt "@info"
+#~ msgid "No contacts were imported, due to errors with the vCards."
+#~ msgstr "Nulle contactos esseva importate, a causa de errores con vCards."
+
+#~ msgctxt "@info"
+#~ msgid "The vCard does not contain any contacts."
+#~ msgstr "Le vCard non contine alcun contactos."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
+
+#, fuzzy
+#~| msgid "Merge Contacts..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact..."
+#~ msgstr "Fusiona contactos..."
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact."
+#~ msgstr ""
+#~ "Tu essera presentate con un dialogo ubi tu pote configurar vias breve pro "
+#~ "omne le application."
+
+#, fuzzy
+#~| msgid "Merge Contacts..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact Group..."
+#~ msgstr "Fusiona contactos..."
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact "
+#~ "group."
+#~ msgstr ""
+#~ "Tu essera presentate con un dialogo ubi tu pote configurar vias breve pro "
+#~ "omne le application."
+
+#~ msgid "KAddressBook"
+#~ msgstr "KAddressBook"
+
+#~ msgid "The KDE Address Book Application"
+#~ msgstr "Le application de KDE pro Adressario"
+
+#, fuzzy
+#~| msgid "Copyright © 2007–2014 KAddressBook authors"
+#~ msgid "Copyright © 2007–2016 KAddressBook authors"
+#~ msgstr "Copyright © 2007–2013 Le Autores de KAddressBook"
+
+#~ msgid "Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgid "Current maintainer"
+#~ msgstr "Mantenitor currente"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
+
+#~ msgid "Previous maintainer"
+#~ msgstr "Previe mantenitor"
+
+#, fuzzy
+#~| msgid "GroupBox"
+#~ msgid "(Groups)"
+#~ msgstr "Quadro de gruppo"
+
+#, fuzzy
+#~| msgctxt "@item:inlistbox Quote character option"
+#~| msgid "None"
+#~ msgid "(None)"
+#~ msgstr "Nulle"
+
+#, fuzzy
+#~| msgid "Laurent Montel"
+#~ msgid "(c), 2016 Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgctxt "@item Undefined import field type"
+#~ msgid "Undefined"
+#~ msgstr "Non definite"
+
+#~ msgctxt "The wedding anniversary of a contact"
+#~ msgid "Anniversary"
+#~ msgstr "Anniversario"
+
+#~ msgctxt "Preferred email address"
+#~ msgid "EMail (preferred)"
+#~ msgstr "E-posta (preferite)"
+
+#~ msgctxt "Second email address"
+#~ msgid "EMail (2)"
+#~ msgstr "E-Posta: (2)"
+
+#~ msgctxt "Third email address"
+#~ msgid "EMail (3)"
+#~ msgstr "E-Posta: (3)"
+
+#~ msgctxt "Fourth email address"
+#~ msgid "EMail (4)"
+#~ msgstr "E-Posta: (4)"
+
+#~ msgid "Blog Feed"
+#~ msgstr "Syndication de Blog"
+
+#~ msgid "Profession"
+#~ msgstr "Profession"
+
+#~ msgid "Office"
+#~ msgstr "Officio"
+
+#~ msgid "Manager"
+#~ msgstr "Gerente"
+
+#~ msgid "Assistant"
+#~ msgstr "Assistente"
+
+#~ msgid "Spouse"
+#~ msgstr "Conjuge"
+
+#~ msgid "Select Contacts"
+#~ msgstr "Selige contactos"
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts"
+#~ msgstr "Omne contactos"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from all your address books"
+#~ msgstr "Omne contactos ex tote tu adressarios ."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option you want to select all your contacts from all your "
+#~ "address books."
+#~ msgstr ""
+#~ "Selige iste option si tu vole seliger omne tu contactos ex tote  tu "
+#~ "adressarios"
+
+#~ msgctxt "@option:radio"
+#~ msgid "Selected contacts"
+#~ msgstr "Contactos seligite"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Only the contacts currently selected"
+#~ msgstr "Solmente le contacto seligite currentemente"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want only the contacts you have already "
+#~ "selected in the graphical interface."
+#~ msgstr ""
+#~ "Selige iste option si tu vole in le interface graphic solmente le "
+#~ "contactos qui tu ja ha seligite."
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts from:"
+#~ msgstr "Omne contactos ex:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from a chosen address book"
+#~ msgstr "Omne contactos ex un adressario seligite"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want to select all the contacts from only one "
+#~ "of your address books.  Once this option is clicked you will be provided "
+#~ "a drop down box listing all those address books and permitted to select "
+#~ "the one you want."
+#~ msgstr ""
+#~ "Selige iste option si tu vole seliger omne contactos ex solmente un de tu "
+#~ "adressarios. Un vice que iste option es pressate tu habera un quadrato "
+#~ "disrolante listante tote ille adressarios e il permittera te de seliger "
+#~ "lo que tu vole."
+
+#~ msgctxt "@option:check"
+#~ msgid "Include Subfolders"
+#~ msgstr "Include sub dossieres"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select all subfolders including the top-level folder"
+#~ msgstr "Selige omne sub-dossieres includente le dossier al culmine"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Check this box if you want to select all contacts from this folder, "
+#~ "including all subfolders.  If you only want the contacts from the top-"
+#~ "level folder then leave this box unchecked."
+#~ msgstr ""
+#~ "Selige iste quadrato si tu vole selectionar tote contactos ex iste "
+#~ "dossier, includente omne sub-dossieres. Si tu vole solmente contactos ex "
+#~ "le dossier al culmine alora tu non debe marcar iste quadrato."
+
+#~ msgctxt "@action:button Previous contact"
+#~ msgid "Previous"
+#~ msgstr "Precedente"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the previous contact in the list"
+#~ msgstr "Move al previe contacto in le lista"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the previous contact in the list."
+#~ msgstr "Pressa iste button pro mover al previe contacto in le lista."
+
+#~ msgctxt "@action:button Next contact"
+#~ msgid "Next"
+#~ msgstr "Proxime"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the next contact in the list"
+#~ msgstr "Move al proxime contacto in le lista"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the next contact in the list."
+#~ msgstr "Pressa iste button pro mover al proxime contacto in le lista."
+
+#~ msgctxt "@info:status"
+#~ msgid "%1 out of %2"
+#~ msgstr "%1 de %2"
+
+#~ msgid "Import the given file"
+#~ msgstr "Importa le date file"
+
+#, fuzzy
+#~| msgid "files or urls. The user will be asked whether to import."
+#~ msgid "Files or URLs. The user will be asked whether to import."
+#~ msgstr "files o urls. Le usator essera demandate si importar."
+
+#~ msgid "&Configure KAddressBook..."
+#~ msgstr "&Configura KAddressBook"
+
+#~ msgid "&File"
+#~ msgstr "&File"
+
+#~ msgid "&New"
+#~ msgstr "&Nove"
+
+#~ msgid "&Import"
+#~ msgstr "&Importa"
+
+#~ msgid "&Export"
+#~ msgstr "&Exporta"
+
+#~ msgid "&Edit"
+#~ msgstr "&Edita"
+
+#~ msgid "&View"
+#~ msgstr "&Vista"
+
+#~ msgid "&Settings"
+#~ msgstr "Preferentia&s"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Barra de instrumento principal"
+
+#~ msgctxt "@label Search contacts in list"
+#~ msgid "Search...<%1>"
+#~ msgstr "Cerca...<%1>"
+
+#~ msgid "&Themes"
+#~ msgstr "&Themas"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Print the complete address book or a selected number of contacts."
+#~ msgstr "Imprime le complete adressario o un seligite numero de contactos."
+
+#~ msgid "Quick search"
+#~ msgstr "Recerca rapide"
+
+#~ msgid "Select All"
+#~ msgstr "Selectiona Omne"
+
+#~ msgid "Select all contacts in the current address book view."
+#~ msgstr "Selige omne contactos in le currente vista de adressario."
+
+#~ msgid "Show QR Codes"
+#~ msgstr "Monstra codices QR"
+
+#~ msgid "Show QR Codes in the contact."
+#~ msgstr "Monstra codices QR in le contacto."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Simple (one column)"
+#~ msgstr "Simple (un columna)"
+
+#~ msgid "Show a simple mode of the address book view."
+#~ msgstr "Monstra un modo simplice del vista de adressario."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Two Columns"
+#~ msgstr "Duo columnas"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Three Columns"
+#~ msgstr "Tres columnas"
+
+#~ msgid "Set Focus to Quick Search"
+#~ msgstr "Fixa foco a Cerca rapide"
+
+#~ msgid "Address Book"
+#~ msgstr "Adressario"
+
+#~ msgid "Print Contacts"
+#~ msgstr "Imprime contactos"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can configure the "
+#~ "application-wide shortcuts."
+#~ msgstr ""
+#~ "Tu essera presentate con un dialogo ubi tu pote configurar vias breve pro "
+#~ "omne le application."
+
+#~ msgid "Full Name"
+#~ msgstr "Nomine Complete"
+
+#~ msgid "Family Name"
+#~ msgstr "Nomine de Familia"
+
+#~ msgid "Given Name"
+#~ msgstr "Nomine date"
+
+#~ msgid "Home Address"
+#~ msgstr "Adresse de domo"
+
+#~ msgid "Business Address"
+#~ msgstr "Adresse de labor"
+
+#~ msgid "Phone Numbers"
+#~ msgstr "Numeros de telephono"
+
+#~ msgid "Preferred EMail"
+#~ msgstr "E-posta preferite"
+
+#~ msgid "All EMails"
+#~ msgstr "Omne e-postas"
+
+#~ msgid "Compact Style"
+#~ msgstr "Stilo compacte"
+
+#~ msgid "Setting up document"
+#~ msgstr "Configura documento"
+
+#~ msgid "Printing"
+#~ msgstr "Imprime"
+
+#~ msgctxt "Finished printing"
+#~ msgid "Done"
+#~ msgstr "Facite"
+
+#~ msgid "Compact Printing Style"
+#~ msgstr "Stilo de impression compacte"
+
+#~ msgid "Appearance"
+#~ msgstr "Apparentia"
+
+#~ msgid "Fields"
+#~ msgstr "Campos"
+
+#~ msgid ""
+#~ "Print the home address, with home phone number and mobile phone number"
+#~ msgstr ""
+#~ "Imprime adresse de domo, con numero de telephono e numero de telephono "
+#~ "mobile"
+
+#~ msgid "with home address"
+#~ msgstr "con adresse de domo"
+
+#~ msgid "print the business address, with business phone number"
+#~ msgstr "imprime adresse de labor, con numero de telephono de officio"
+
+#~ msgid "with business address"
+#~ msgstr "con adresse de labor"
+
+#~ msgid "Print the birthday"
+#~ msgstr "Imprime le anniversario de nativitate"
+
+#~ msgid "with birthday"
+#~ msgstr "con anniversario de nativitate"
+
+#~ msgid "Print the e-mail and e-mail2 fields"
+#~ msgstr "Imprime le campos de e-posta e e-posta2"
+
+#~ msgid "with e-mail"
+#~ msgstr "con e-posta"
+
+#~ msgid "the first color, if alternating color is checked"
+#~ msgstr "le prime color, si un color alternante es marcate"
+
+#~ msgid "first color"
+#~ msgstr "Prime Color"
+
+#~ msgid "the second color, if alternating color is checked"
+#~ msgstr "le secunde color, si un color alternante es marcate"
+
+#~ msgid "second color"
+#~ msgstr "Secunde color"
+
+#~ msgid "Change the background color of every row"
+#~ msgstr "Modifica le color de fundo de cata rango"
+
+#~ msgid "Alternating the background color"
+#~ msgstr "Alternante le color de fundo"
+
+#~ msgid "Organization:"
+#~ msgstr "Organization:"
+
+#~ msgid "Email address:"
+#~ msgstr "Adresse de E-Posta:"
+
+#~ msgid "Email addresses:"
+#~ msgstr "Adresses de E-Posta:"
+
+#~ msgid "Telephone:"
+#~ msgstr "Telephono:"
+
+#~ msgid "Telephones:"
+#~ msgstr "Telephonos:"
+
+#~ msgid "Web page:"
+#~ msgstr "Pagina Web:"
+
+#~ msgid "Domestic Address"
+#~ msgstr "Adresse domestic"
+
+#~ msgid "International Address"
+#~ msgstr "Adresse international"
+
+#~ msgid "Postal Address"
+#~ msgstr "Adresse postal"
+
+#~ msgid "Parcel Address"
+#~ msgstr "Adresse de parcella"
+
+#~ msgid "Work Address"
+#~ msgstr "Adresse de labor"
+
+#~ msgid "Preferred Address"
+#~ msgstr "Adresse preferite"
+
+#~ msgid "Notes:"
+#~ msgstr "Notas:"
+
+#~ msgid "Detailed Print Style - Appearance"
+#~ msgstr "Stilo de impression detaliate - Apparentia"
+
+#~ msgid "Setting up colors"
+#~ msgstr "Configura colores"
+
+#~ msgid "Detailed Style"
+#~ msgstr "Stilo detaliate"
+
+#~ msgid "Appearance Page"
+#~ msgstr "Pagina de apparentia"
+
+#~ msgid "Contact Headers"
+#~ msgstr "Titulos de contactos"
+
+#~ msgid "Select the headline text background color"
+#~ msgstr "Selige le color de fundo de titulo:"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline background color."
+#~ msgstr ""
+#~ "Pulsa sur le button pro initiar un programma pro seliger colorque "
+#~ "permittera te de fixar le color pro le color de fundo de titulo."
+
+#~ msgid "Headline background color:"
+#~ msgstr "Color de fundo de titulo:"
+
+#~ msgid "Headline text color:"
+#~ msgstr "Color de texto de titulo:"
+
+#~ msgid "Select the headline text color"
+#~ msgstr "Selectiona le color de texto de titulo:"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline text."
+#~ msgstr ""
+#~ "Pulsa iste button pro initiar un selector de color que permittera te de "
+#~ "fixare le color del texto de capite."
+
+#~ msgid "Mike's Printing Style"
+#~ msgstr "Stilo de impression de Mike"
+
+#~ msgid "Which contacts do you want to print?"
+#~ msgstr "Qual contactos tu vole imprimer?"
+
+#~ msgid "Choose Contacts to Print"
+#~ msgstr "Selige contactos de imprimer"
+
+#~ msgid "Choose Printing Style"
+#~ msgstr "Selige stilo de impression"
+
+#~ msgid "Print Progress"
+#~ msgstr "Progresso de impression"
+
+#~ msgid "Printing: Progress"
+#~ msgstr "Imprimer: progresso"
+
+#~ msgid "Progress"
+#~ msgstr "Progresso"
+
+#~ msgid "Print Contact's Information"
+#~ msgstr "imprime information de contacto"
+
+#~ msgid "Print contact phone numbers"
+#~ msgstr "Imprime numeros de telephono de contacto"
+
+#~ msgid "Check this box if you want contact phone numbers to be printed."
+#~ msgstr ""
+#~ "Marca iste quadrato si tu vole que le numeros de telephono de contacto "
+#~ "essera imprimite."
+
+#~ msgid "Phone numbers"
+#~ msgstr "Numeros de telephono"
+
+#~ msgid "Print contact email addresses"
+#~ msgstr "Imprime adresses postal de contacto"
+
+#~ msgid "Check this box if you want contact email addresses to be printed."
+#~ msgstr ""
+#~ "Marca iste quadrato si tu vole que le adresses de e-posta de contacto "
+#~ "essera imprimite."
+
+#~ msgid "Email addresses"
+#~ msgstr "Adresses de E-Posta"
+
+#~ msgid "Print contact street addresses"
+#~ msgstr "Imprime adresse de strata de contacto"
+
+#~ msgid "Check this box if you want contact street addresses to be printed."
+#~ msgstr ""
+#~ "Marca iste quadrato si tu vole que le adresses de strata de contacto "
+#~ "essera imprimite."
+
+#~ msgid "Postal addresses"
+#~ msgstr "Adresses postal"
+
+#~ msgid "Print contact organizations"
+#~ msgstr "imprime organisationes de contacto"
+
+#~ msgid "Check this box if you want contact organizations to be printed."
+#~ msgstr ""
+#~ "Marca iste quadrato si tu vole que le organisationes de contacto essera "
+#~ "imprimite."
+
+#~ msgid "Organization"
+#~ msgstr "Organization"
+
+#~ msgid "Print contact birthdays"
+#~ msgstr "Imprime anniversarios de nativitate de contacto"
+
+#~ msgid "Check this box if you want contact birthdays to be printed."
+#~ msgstr ""
+#~ "Marca iste quadrato si tu vole que le anniversario de nascite  de "
+#~ "contacto essera imprimite."
+
+#~ msgid "Birthday"
+#~ msgstr "Anniversario de nativitate"
+
+#~ msgid "Print contact notes"
+#~ msgstr "Imprime notas de contacto"
+
+#~ msgid "Check this box if you want contact notes to be printed."
+#~ msgstr ""
+#~ "Marca iste quadrato si tu vole que le notas  de contacto essera imprimite."
+
+#~ msgid "Note"
+#~ msgstr "Nota"
+
+#~ msgid "Ring Binder Printing Style - Appearance"
+#~ msgstr "Stilo de impression de ligatura a anello - Apparentia"
+
+#~ msgid "Setting up fields"
+#~ msgstr "Configura campos"
+
+#~ msgid "Printout for Ring Binders"
+#~ msgstr "Exito de impression pro ligaturas a anello"
+
+#~ msgctxt "@item:inlistbox Ascending sort order"
+#~ msgid "Ascending"
+#~ msgstr "Ascendente"
+
+#~ msgctxt "@item:inlistbox Descending sort order"
+#~ msgid "Descending"
+#~ msgstr "Descendente"
+
+#~ msgctxt "@label"
+#~ msgid "(No preview available.)"
+#~ msgstr "(Nulle vista preliminari disponibile.)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Choose Printing Style"
+#~ msgstr "Selige stilo de impression"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "What should the print look like?\n"
+#~ "KAddressBook has several printing styles, designed for different "
+#~ "purposes.\n"
+#~ "Choose the style that suits your needs below."
+#~ msgstr ""
+#~ "Como tu vole que tu impression sembla?\n"
+#~ "KAddressBook ha multe stilos de impression, designate pro differente "
+#~ "scopos.\n"
+#~ "Selige le stilo conveniente a tu necessitate a basso."
+
+#~ msgctxt "@title:group"
+#~ msgid "Sorting"
+#~ msgstr "Ordinar"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Criterion:"
+#~ msgstr "Criterio:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the primary sort field"
+#~ msgstr "Selectiona le campo principal per ordinar"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "From this list you can select the field on which your contacts are sorted "
+#~ "in the print output.  Use the sorting order option to determine if the "
+#~ "sort will be in ascending or descending order."
+#~ msgstr ""
+#~ "Ab iste lista tu pote selige le campo sur le qual tu contactos es "
+#~ "ordinate in le exito de imprimer. Usa le option de poner in ordine pro "
+#~ "determinar si le ordine essera ascendente o descendente."
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Order:"
+#~ msgstr "Ordine:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the sorting order"
+#~ msgstr "Selige le ordine de ordinar"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose if you want to sort your contacts in ascending or descending "
+#~ "order. Use the sorting criterion option to specify on which contact field "
+#~ "the sorting will be performed."
+#~ msgstr ""
+#~ "Selige si tu vole ordinar tu contactos de modo ascendente o descendente. "
+#~ "Usa le option de criterio de ordinar pro specificar super qual campo de "
+#~ "contacto on executara le operation de ordinar."
+
+#~ msgctxt "@title:group"
+#~ msgid "Print Style"
+#~ msgstr "Stilo de imprimer"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the print style"
+#~ msgstr "Selige le stilo de imprimer"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose your desired printing style. See the preview image to help you "
+#~ "decide."
+#~ msgstr ""
+#~ "Selige tu desirate stilo de imprimer. Vide le image preliminari pro "
+#~ "adjutar te decider."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Search contacts in list"
+#~ msgstr "Cerca contactos in lista"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Start typing a search string in this box and the list of contacts "
+#~ "matching that string will be displayed.  This is a quick way of searching "
+#~ "for contacts of interest."
+#~ msgstr ""
+#~ "initia typar un catena de cerca in iste quadrato e le lista de contactos "
+#~ "correspondente a ille catena essera monstrate. Isto es un modo rapide de "
+#~ "cercar contactos de interesse."
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sync Contacts"
+#~ msgstr "Selige contactos"
+
+#, fuzzy
+#~| msgid "GroupBox"
+#~ msgid "Group"
+#~ msgstr "Quadro de gruppo"
+
+#, fuzzy
+#~| msgid "Email address:"
+#~ msgid "Email address"
+#~ msgstr "Adresse de E-Posta:"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image"
+#~ msgstr "Salveguarda patrono..."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image URL"
+#~ msgstr "Salveguarda patrono..."
+
+#, fuzzy
+#~| msgid "Emails"
+#~ msgid "Email:"
+#~ msgstr "E-postas"
+
+#, fuzzy
+#~| msgctxt "@label Search contacts in list"
+#~| msgid "Search...<%1>"
+#~ msgid "Search"
+#~ msgstr "Cerca...<%1>"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "No email found for this contact."
+#~ msgstr "Tu non ha seligite ulle contactos de exportar."
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Only the contacts currently selected"
+#~ msgid "A contact group was selected."
+#~ msgstr "Solmente le contacto seligite currentemente"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "You have not selected any contacts."
+#~ msgstr "Tu non ha seligite ulle contactos de exportar."
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "No emails found in selected contacts."
+#~ msgstr "Tu non ha seligite ulle contactos de exportar."
+
+#, fuzzy
+#~| msgid "Import vCard..."
+#~ msgid "Send vCards..."
+#~ msgstr "Importa vCard..."
+
+#~ msgid "Merge Contacts..."
+#~ msgstr "Fusiona contactos..."
+
+#~ msgid "Search Duplicate Contacts..."
+#~ msgstr "Cerca contactos duplicate..."
+
+#~ msgid "Select Contacts to merge"
+#~ msgstr "Selige contactos de fusionar"
+
+#, fuzzy
+#~| msgid "Select Contacts to merge"
+#~ msgid "Select contacts that you really want to merge:"
+#~ msgstr "Selige contactos de fusionar"
+
+#, fuzzy
+#~| msgctxt "@info:whatsthis"
+#~| msgid "Print the complete address book or a selected number of contacts."
+#~ msgid "Select the addressbook in which to store merged contacts:"
+#~ msgstr "Imprime le complete adressario o un seligite numero de contactos."
+
+#, fuzzy
+#~| msgid "No duplicate contact found."
+#~ msgid "Duplicate contact %1"
+#~ msgstr "Necun contacto duplicate esseva trovate"
+
+#, fuzzy
+#~| msgid "Print Contacts"
+#~ msgid "Contacts"
+#~ msgstr "Imprime contactos"
+
+#, fuzzy
+#~| msgid "Select Address Book"
+#~ msgid "Select AddressBook:"
+#~ msgstr "Selige adressario"
+
+#~ msgid "You must select at least two elements."
+#~ msgstr "Tu debe seliger al minus duo elementos"
+
+#, fuzzy
+#~| msgid "No duplicate contact found."
+#~ msgid "No duplicated contact found."
+#~ msgstr "Necun contacto duplicate esseva trovate"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Only the contacts currently selected"
+#~ msgid "No contacts selected."
+#~ msgstr "Solmente le contacto seligite currentemente"
+
+#, fuzzy
+#~| msgid "Print Contact's Information"
+#~ msgid "Missing Selected Information"
+#~ msgstr "imprime information de contacto"
+
+#, fuzzy
+#~| msgctxt "@item Undefined import field type"
+#~| msgid "Undefined"
+#~ msgid "(Undefined)"
+#~ msgstr "Non definite"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>When trying to read the vCard, there was an error opening the file "
+#~ "<filename>%1</filename>:</para><para>%2</para>"
+#~ msgstr ""
+#~ "<para>Quando on cercava de leger le vCard, on habeva un error durante que "
+#~ "aperiva le file <filename>%1</filename>:</para><para>%2</para>"
+
+#, fuzzy
+#~| msgid "Merge Contacts..."
+#~ msgid "Merged Contact"
+#~ msgstr "Fusiona contactos..."
+
+#~ msgid "You selected %1 and some item has not the same name"
+#~ msgstr "Tu seligeva %1 e alcun elemento non ha le mesme nomine"
+
+#, fuzzy
+#~| msgctxt "@label"
+#~| msgid "Importing contacts"
+#~ msgid "Error while merging contacts."
+#~ msgstr "Importar contactos"
+
+#, fuzzy
+#~| msgid "Merge Contacts..."
+#~ msgid "Merge contact"
+#~ msgstr "Fusiona contactos..."
+
+#~ msgctxt "@title:window"
+#~ msgid "Select vCard Fields"
+#~ msgstr "Selige campos de vCard"
+
+#~ msgid "Search potential duplicate contacts"
+#~ msgstr "Cerca contactos potential duplicate"
+
+#~ msgid "Potential Duplicate Contacts"
+#~ msgstr "Contactos potential duplicate"
+
+#~ msgid "You selected %1"
+#~ msgstr "Tu seligeva %1"
+
+#~ msgid "Debug Nepomuk..."
+#~ msgstr "Cerca de error (debug) in Nepomuk..."
+
+#~ msgid "Nepomuk Debug"
+#~ msgstr "Debug de Nepomuk"
+
+#~ msgid "Search info with nepomukshow..."
+#~ msgstr "Cerca information con nepomukshow..."
+
+#~ msgid "Error on fetching item"
+#~ msgstr "Error durante que il cercava le elemento"
+
+#~ msgid "Search with nepomukshow"
+#~ msgstr "Cerca con nepomukshow"
+
+#~ msgid "Nepomuk id:"
+#~ msgstr "Id de Nepomuk:"
+
+#~ msgid "Kontact integration"
+#~ msgstr "Integration con Kontact"
+
+#~ msgid "Grantlee Printing Style"
+#~ msgstr "Stilo de impression Grantlee"
+
+#~ msgid "Website"
+#~ msgstr "Sito Web"
+
+#~ msgid "Department"
+#~ msgstr "Departimento"
+
+#~ msgid "Manager's Name"
+#~ msgstr "Nomine de Gerente"
+
+#~ msgid "Assistant's Name"
+#~ msgstr "Nomine de Assistente"
+
+#~ msgid "Partner's Name"
+#~ msgstr "Nomine de socio"
+
+#~ msgid "IM Address"
+#~ msgstr "Adresse IM"
+
+#~ msgctxt "Boolean value"
+#~ msgid "yes"
+#~ msgstr "si"
+
+#~ msgctxt "Boolean value"
+#~ msgid "no"
+#~ msgstr "no"
+
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "Tu vole super scriber file \"%1\""
+
+#~ msgctxt "@info"
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "Tu vole super scriber file \"%1\""
+
+#~ msgid "Show Simple View"
+#~ msgstr "Monstra vista simplice"
+
+#~ msgid "Click on the color button to change the header's text color."
+#~ msgstr ""
+#~ "Pulsa sur le button de color pro cambiar le color de texto de titulo."
+
+#~ msgid "Select the fields which shall be exported in the vCard."
+#~ msgstr "Selige le campos que essera exportate in le vCard."

@@ -1,0 +1,347 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2015, 2016, 2017, 2018, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"PO-Revision-Date: 2022-02-12 16:25+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.03.70\n"
+
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
+#, kde-format
+msgid "Current URL is not a shortened URL."
+msgstr "Bieżący adres URL nie jest skróconym."
+
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
+#, kde-format
+msgid "Expand URL"
+msgstr "Rozwiń adres URL"
+
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
+#, kde-format
+msgid "Translate..."
+msgstr "Przetłumacz..."
+
+#: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
+#: createtodoplugin/todoedit.cpp:42
+#, kde-format
+msgid "&Save"
+msgstr "Zapi&sz"
+
+#: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
+#, kde-format
+msgid "Open &Editor..."
+msgstr "Otwórz &edytor..."
+
+#: createeventplugin/eventedit.cpp:56
+#, kde-format
+msgid "Event:"
+msgstr "Wydarzenie:"
+
+#: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
+#, kde-format
+msgid "Calendar where the new event will be stored."
+msgstr "Kalendarz do przechowywania nowych wydarzeń."
+
+#: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
+#, kde-format
+msgid "Calendar where the new event will be stored"
+msgstr "Kalendarz do przechowywania nowych wydarzeń"
+
+#: createeventplugin/eventedit.cpp:89
+#, kde-format
+msgid "Start:"
+msgstr "Początek:"
+
+#: createeventplugin/eventedit.cpp:95
+#, kde-format
+msgid "Select start time for event."
+msgstr "Wybierz czas rozpoczęcia wydarzenia."
+
+#: createeventplugin/eventedit.cpp:102
+#, kde-format
+msgid "End:"
+msgstr "Koniec:"
+
+#: createeventplugin/eventedit.cpp:107
+#, kde-format
+msgid "Select end time for event."
+msgstr "Wybierz czas zakończenia wydarzenia."
+
+#: createeventplugin/eventedit.cpp:125
+#, kde-format
+msgid "Create new event and close this widget."
+msgstr "Utwórz nowe wydarzenie i zamknij ten element interfejsu."
+
+#: createeventplugin/eventedit.cpp:131
+#, kde-format
+msgid "Open event editor, where more details can be changed."
+msgstr "Otwórz edytor wydarzeń, w którym można zmienić więcej szczegółów."
+
+#: createeventplugin/eventedit.cpp:142
+#, kde-format
+msgid "Close the widget for creating new events."
+msgstr "Zamknij element interfejsu do tworzenia nowych wydarzeń."
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:68
+#, kde-format
+msgid "Create Event..."
+msgstr "Utwórz wydarzenie..."
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:69
+#, kde-format
+msgid "Create Event"
+msgstr "Utwórz wydarzenie"
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:70
+#, kde-format
+msgid "Allows you to create a calendar Event"
+msgstr "Umożliwia tworzenie wydarzeń w kalendarzu"
+
+#: createnoteplugin/noteedit.cpp:49
+#, kde-format
+msgid "Note:"
+msgstr "Notatka:"
+
+#: createnoteplugin/noteedit.cpp:90
+#, kde-format
+msgid "Create new note and close this widget."
+msgstr "Utwórz nową notatkę i zamknij ten element interfejsu."
+
+#: createnoteplugin/noteedit.cpp:99
+#, kde-format
+msgid "Close the widget for creating new notes."
+msgstr "Zamknij element interfejsu do tworzenia nowych notatek."
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:120
+#, kde-format
+msgctxt "edit a note on this message"
+msgid "Edit Note"
+msgstr "Edytuj notatkę"
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:122
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:133
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:134
+#, kde-format
+msgctxt "create a new note out of this message"
+msgid "Create Note"
+msgstr "Utwórz notatkę"
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:135
+#, kde-format
+msgid "Allows you to create a note from this message"
+msgstr "Umożliwia utworzenie notatki z tej wiadomości"
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:136
+#, kde-format
+msgid ""
+"This option starts an editor to create a note. Then you can edit the note to "
+"your liking before saving it."
+msgstr ""
+"Ta opcja otwiera edytor do tworzenia notatek. Notatkę można potem dowolnie "
+"zmienić przed jej zapisaniem."
+
+#: createtodoplugin/todoedit.cpp:61
+#, kde-format
+msgid "To-do:"
+msgstr "Zadanie:"
+
+#: createtodoplugin/todoedit.cpp:80
+#, kde-format
+msgid "Todo list where the new task will be stored."
+msgstr "Wykaz zadań do przechowywania nowych zadań."
+
+#: createtodoplugin/todoedit.cpp:82
+#, kde-format
+msgid "Todo list where the new task will be stored"
+msgstr "Wykaz zadań do przechowywania nowych zadań"
+
+#: createtodoplugin/todoedit.cpp:96
+#, kde-format
+msgid "Create new todo and close this widget."
+msgstr "Utwórz nowe zadanie i zamknij ten element interfejsu."
+
+#: createtodoplugin/todoedit.cpp:103
+#, kde-format
+msgid "Open todo editor, where more details can be changed."
+msgstr "Otwórz edytor zadań, w którym można zmienić więcej szczegółów."
+
+#: createtodoplugin/todoedit.cpp:113
+#, kde-format
+msgid "Close the widget for creating new todos."
+msgstr "Zamknij element interfejsu do tworzenia nowych zadań."
+
+#: createtodoplugin/todoedit.cpp:150
+#, kde-format
+msgid "Check I received a reply about \"%1\""
+msgstr "Sprawdź otrzymaną odpowiedź \"%1\""
+
+#: createtodoplugin/todoedit.cpp:151
+#, kde-format
+msgid "Reply to \"%1\""
+msgstr "Odpowiedz \"%1\""
+
+#: createtodoplugin/todoedit.cpp:240
+#, kde-format
+msgctxt ""
+"%1 is summary of the todo, %2 is name of the folder in which it is stored"
+msgid "New todo '%1' was added to task list '%2'"
+msgstr "Dodano nowe zadanie '%1' do wykazu zadań '%2'"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:68
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:69
+#, kde-format
+msgid "Create To-do"
+msgstr "Utwórz zadanie"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:70
+#, kde-format
+msgid "Allows you to create a calendar to-do or reminder from this message"
+msgstr ""
+"Umożliwia tworzenie zadań w kalendarzu bądź przypomnień na podstawie tej "
+"wiadomości"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:72
+#, kde-format
+msgid ""
+"This option starts the KOrganizer to-do editor with initial values taken "
+"from the currently selected message. Then you can edit the to-do to your "
+"liking before saving it to your calendar."
+msgstr ""
+"Ta opcja uruchamia edytor zadań KOrganizera z domyślnymi wartościami "
+"wziętymi z obecnej wiadomości. Zadanie można potem dowolnie zmienić przed "
+"zapisaniem w kalendarzu."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"External Script\" Plugin"
+msgstr "Ustawienia wtyczki \"Zewnętrzne skrypty\""
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
+#, kde-format
+msgid "Add Script..."
+msgstr "Dodaj skrypt..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
+#, kde-format
+msgid "Remove Script"
+msgstr "Usuń skrypt"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
+#, kde-format
+msgid "Modify Script..."
+msgstr "Zmień skrypt..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
+#, kde-format
+msgid "External Script:"
+msgstr "Zewnętrzny skrypt:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
+#, kde-format
+msgid "Do you want to remove this script \"%1\"?"
+msgstr "Czy chcesz usunąć skrypt %1?"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
+#, kde-format
+msgid "Remove External Script"
+msgstr "Usuń zewnętrzny skrypt"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:20
+#, kde-format
+msgctxt "@title:window"
+msgid "Add or Modify External Script"
+msgstr "Dodaj lub zmień zewnętrzny skrypt"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:28
+#, kde-format
+msgid "Name:"
+msgstr "Nazwa:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:32
+#, kde-format
+msgid "Description:"
+msgstr "Opis:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
+#, kde-format
+msgid "Add command arguments..."
+msgstr "Dodaj argumenty polecenia..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
+#, kde-format
+msgid "Command Line:"
+msgstr "Wiersz poleceń:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
+#, kde-format
+msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">Szczegóły formatu argumentu...</a></qt>"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
+#, kde-format
+msgid ""
+"<qt><p><strong>These expressions may be used for the arguments:</strong></"
+"p><ul><li>%s - the subject of message</li><li>%from - the from email "
+"address</li><li>%cc - the list of cc email address</li><li>%bcc - the list "
+"of bcc email address</li><li>%body - the body of message</li><li>%inreplyto "
+"- the reply email address</li><li>%akonadiUrl - the akonadi url (as akonadi:?"
+"item=187020)</li></ul></strong></p></qt>"
+msgstr ""
+"<qt><p><strong>Oto wyrażenia, których można używać dla argumentów:</strong></"
+"p><ul><li>%s - temat wiadomości</li><li>%from - adres pocztowy nadawcy</"
+"li><li>%cc - lista adresatów do-wiadomości</li><li>%bcc - lista ukrytych "
+"adresatów do-wiadomości</li><li>%body - treść wiadomości</li><li>%inreplyto "
+"- adres pocztowy do odpowiedzi</li><li>%akonadiUrl - adres url akonadi (jako "
+"akonadi:?item=187020)</li></ul></strong></p></qt>"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
+#, kde-format
+msgid "Executable:"
+msgstr "Plik wykonywalny:"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#, kde-format
+msgid "'%1' not found"
+msgstr "Nie znaleziono '%1'"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#, kde-format
+msgid "Executable not found."
+msgstr "Nie znaleziono pliku wykonywalnego."
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:85
+#, kde-format
+msgid "Impossible to start executable"
+msgstr "Nie można uruchomić pliku wykonywalnego"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
+#, kde-format
+msgid "External Script"
+msgstr "Zewnętrzny skrypt"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:129
+#, kde-format
+msgid "Configure"
+msgstr "Ustawienia"
+
+#~ msgid "Todo:"
+#~ msgstr "Zadanie:"
+
+#~ msgid "Create Todo"
+#~ msgstr "Utwórz zadanie"
+
+#~ msgid "Open &editor..."
+#~ msgstr "Otwórz &edytor..."

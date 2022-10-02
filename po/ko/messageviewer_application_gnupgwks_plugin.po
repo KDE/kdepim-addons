@@ -1,0 +1,161 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2016, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-04 00:44+0000\n"
+"PO-Revision-Date: 2017-12-03 22:23+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: gnupgwksurlhandler.cpp:85
+#, kde-format
+msgid "Display key details"
+msgstr "키 정보 표시"
+
+#: gnupgwksurlhandler.cpp:87
+#, kde-format
+msgid "Publish the key"
+msgstr "키 공개"
+
+#: pgpkeyformatter.cpp:43
+#, kde-format
+msgid "No valid key data in file."
+msgstr "파일에 올바른 키 데이터가 없습니다."
+
+#: pgpkeyurlhandler.cpp:46
+#, kde-format
+msgid "Import the key"
+msgstr "키 가져오기"
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "An error occurred while importing the key."
+msgstr "키를 가져오는 중 오류가 발생했습니다."
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "Import error"
+msgstr "가져오기 오류"
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "The key has been successfully imported."
+msgstr "키를 가져왔습니다."
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "Import finished"
+msgstr "가져오기 완료됨"
+
+#: templates/gnupgwksmessagepart.html:26
+msgid "Register your OpenPGP key with your email provider. "
+msgstr "내 OpenPGP 키를 이메일 서비스 사업자에 등록합니다."
+
+#: templates/gnupgwksmessagepart.html:28
+msgid ""
+"When you register your key with your email provider other people will then "
+"be able to retrieve the key and send you encrypted emails and verify "
+"authenticity of emails you send them."
+msgstr ""
+"이메일 서비스 사업자에 내 키를 등록하면, 다른 사람이 내 공개 키를 찾아서 암호"
+"화된 이메일을 보낼 수 있으며 다른 사람이 보낸 암호화 이메일의 무결성을 확인"
+"할 수 있습니다."
+
+#: templates/gnupgwksmessagepart.html:31
+msgid "An error occurred while publishing the key. Please try again later."
+msgstr "키를 공개하는 중 오류가 발생했습니다. 나중에 다시 시도하십시오."
+
+#: templates/gnupgwksmessagepart.html:33
+msgid "Register the key"
+msgstr "키 등록"
+
+#: templates/gnupgwksmessagepart.html:35
+msgid ""
+"The email will be automatically deleted once you confirm the registration."
+msgstr "등록을 확인하면 이메일을 자동으로 삭제합니다."
+
+#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+msgid "Show key details"
+msgstr "키 정보 표시"
+
+#: templates/gnupgwksmessagepart.html:42
+msgid ""
+"This is an automatically generated email. The purpose of this email is to "
+"register your OpenPGP key with your email provider."
+msgstr ""
+"이 이메일은 자동 생성된 이메일입니다. 이 이메일은 OpenPGP 키를 이메일 서비스 "
+"사업자에 등록하는 메일입니다."
+
+#: templates/gnupgwksmessagepart.html:45
+msgid ""
+"Your OpenPGP key will be published on your email provider's key server. "
+"Other users will be able to retrieve the key and send you encrypted emails "
+"and verify authenticity of emails you send them."
+msgstr ""
+"내 OpenPGP 키를 이메일 사업자의 키 서버에 공개합니다. 다른 사람이 내 공개 키"
+"를 찾아서 암호화된 이메일을 보낼 수 있으며 다른 사람이 보낸 암호화 이메일의 "
+"무결성을 확인할 수 있습니다."
+
+#: templates/pgpkeymessagepart.html:14
+msgid "OpenPGP Key"
+msgstr "OpenPGP 키"
+
+#: templates/pgpkeymessagepart.html:18
+msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
+msgstr "이 키는 이메일을 서명하거나 암호화할 수 있는 OpenPGP 키입니다."
+
+#: templates/pgpkeymessagepart.html:23
+msgid "Loading key details..."
+msgstr "키 정보 불러오는 중..."
+
+#: templates/pgpkeymessagepart.html:28
+msgid "Owner:"
+msgstr "소유자:"
+
+#: templates/pgpkeymessagepart.html:32
+msgid "Created:"
+msgstr "만든 날짜:"
+
+#: templates/pgpkeymessagepart.html:37
+msgid "Fingerprint:"
+msgstr "지문:"
+
+#: templates/pgpkeymessagepart.html:42
+msgid ""
+"This key is unknown, it could not be found in your local keyring. You may "
+"want to import this key."
+msgstr "로컬 키 목록에서 키를 찾을 수 없습니다. 이 키를 가져올 수도 있습니다."
+
+#: templates/pgpkeymessagepart.html:45
+#, kde-format
+msgid "Error while loading key: %1"
+msgstr "키를 불러오는 중 오류 발생: %1"
+
+#: templates/pgpkeymessagepart.html:47
+msgid "Hide key details"
+msgstr "키 정보 숨기기"
+
+#: templates/pgpkeymessagepart.html:49
+msgid "Open in Kleopatra"
+msgstr "Kleopatra에서 열기"
+
+#: templates/pgpkeymessagepart.html:52
+msgid "Show key details ..."
+msgstr "키 정보 표시..."
+
+#: templates/pgpkeymessagepart.html:54
+msgid "Import key"
+msgstr "키 가져오기..."
+
+#~ msgid "Unknown identity"
+#~ msgstr "알 수 없는 프로필"

@@ -1,0 +1,197 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2022-05-15 20:17+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.03.70\n"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Rule"
+msgstr "Ustawienia zasady"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
+#, kde-format
+msgid "Type:"
+msgstr "Rodzaj:"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
+#, kde-format
+msgid "Contains:"
+msgstr "Zawiera:"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:74
+#, kde-format
+msgid "Body"
+msgstr "Treść"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:75
+#, kde-format
+msgid "Subject"
+msgstr "Temat"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:76
+#, kde-format
+msgid "To"
+msgstr "Do"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:77
+#, kde-format
+msgid "Cc"
+msgstr "DW"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:78
+#, kde-format
+msgid "Bcc"
+msgstr "UDW"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:170
+#, kde-format
+msgid "Unread"
+msgstr "Nieprzeczytana"
+
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:179
+#, kde-format
+msgid "Important"
+msgstr "Ważna"
+
+#: confirmbeforedeleting/confirmbeforedeletingdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Before Deleting Mail"
+msgstr "Ustaw przed usuwaniem wiadomości"
+
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
+#, kde-format
+msgid "Confirm Before Deleting"
+msgstr "Potwierdź przed usunięciem"
+
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
+#, kde-format
+msgid "Configure"
+msgstr "Ustawienia"
+
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:66
+#, kde-format
+msgid ""
+"Do you want to delete this email?\n"
+"%1"
+msgstr "Czy usunąć tę wiadomość?%1"
+
+#: confirmbeforedeleting/confirmbeforedeletingmessageboxdialog.cpp:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Delete Mail"
+msgstr "Potwierdzenie usunięcia wiadomości"
+
+#: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
+#, kde-format
+msgid "Apply to All"
+msgstr "Zastosuj do wszystkich"
+
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
+#, kde-format
+msgid "The message with subject '%2' contains '%1'"
+msgstr "Wiadomość o temacie '%2' zawiera '%1'"
+
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:208
+#, kde-format
+msgid "The message with subject '%1' is %2"
+msgstr "Wiadomość o temacie '%1' jest %2"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Rule..."
+msgstr "Dodaj zasadę..."
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Rule"
+msgstr "Usuń zasadę"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
+#, kde-format
+msgctxt "@action:button"
+msgid "Modify Rule..."
+msgstr "Zmień zasadę..."
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
+#, kde-format
+msgid "Type"
+msgstr "Rodzaj"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
+#, kde-format
+msgid "Pattern"
+msgstr "Wzorzec"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
+#, kde-format
+msgid "Add Rule..."
+msgstr "Dodaj zasadę..."
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
+#, kde-format
+msgid "Edit Rule..."
+msgstr "Zmień zasadę..."
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
+#, kde-format
+msgid "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] "Usuń zasadę"
+msgstr[1] "Usuń zasady"
+msgstr[2] "Usuń zasadę"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] "Czy usunąć tę zasadę?"
+msgstr[1] "Czy chcesz usunąć te zasady?"
+msgstr[2] "Czy usunąć tę zasadę?"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
+#, kde-format
+msgctxt "@title"
+msgid "Remove Rule"
+msgstr "Usuń zasadę"
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
+#, kde-format
+msgid "Same rule already exists."
+msgstr "Taka zasada już istnieje."
+
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
+#, kde-format
+msgid "Create Rule"
+msgstr "Utwórz zasadę"
+
+#~ msgid "External Script"
+#~ msgstr "Zewnętrzny skrypt"
+
+#, fuzzy
+#~| msgid "Add Rule..."
+#~ msgid "Reuse..."
+#~ msgstr "Dodaj zasadę..."
+
+#~ msgid "Confirm Delete Mail"
+#~ msgstr "Potwierdź usunięcie wiadomości"

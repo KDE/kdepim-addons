@@ -1,0 +1,492 @@
+# Translation of webengineurlinterceptor.po to Brazilian Portuguese
+# Copyright (C) 2016-2018 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2016, 2018.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: webengineurlinterceptor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"PO-Revision-Date: 2019-12-20 11:14-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.08.2\n"
+
+#: adblock/adblockinterceptorinterface.cpp:49
+#, kde-format
+msgid "Open Blockable Items..."
+msgstr "Abrir os itens bloqueáveis..."
+
+#: adblock/adblockinterceptorinterface.cpp:53
+#, kde-format
+msgid "Block Image"
+msgstr "Bloquear imagem"
+
+#: adblock/lib/adblocksubscription.cpp:141
+#, kde-format
+msgid "Cannot load subscription!"
+msgstr "Não é possível carregar a subscrição!"
+
+#: adblock/lib/adblocksubscription.cpp:257
+#, kde-format
+msgid "Custom Rules"
+msgstr "Regras personalizadas"
+
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
+#, kde-format
+msgid "Enabled ad block"
+msgstr "Ativar o bloqueio de anúncios"
+
+#. i18n: ectx: label, entry (HideAdsEnabled), group (General)
+#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
+#, kde-format
+msgid "Hide advertisement enabled"
+msgstr "Remoção de publicidade ativada"
+
+#. i18n: ectx: label, entry (AdBlockUpdateInterval), group (General)
+#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:16
+#, kde-format
+msgid "Update interval list of adblock"
+msgstr "Atualizar a lista interna do AdBlock"
+
+#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add subscription"
+msgstr "Adicionar inscrição"
+
+#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:32
+#, kde-format
+msgid "Select List:"
+msgstr "Selecionar lista:"
+
+#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:41
+#, kde-format
+msgid "Show List"
+msgstr "Mostrar lista"
+
+#: adblock/lib/widgets/adblockblockableitemsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Blockable Items"
+msgstr "Itens bloqueáveis"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:35
+#, kde-format
+msgid "No blockable element found."
+msgstr "Não foi encontrado nenhum elemento em bloco."
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
+#, kde-format
+msgid "Filter"
+msgstr "Filtro"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
+#, kde-format
+msgid "Address"
+msgstr "Endereço"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
+#, kde-format
+msgid "Type"
+msgstr "Tipo"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:46
+#, kde-format
+msgid "Search..."
+msgstr "Pesquisar..."
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:103
+#, kde-format
+msgid "Copy URL"
+msgstr "Copiar URL"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:106
+#, kde-format
+msgid "Copy filter"
+msgstr "Copiar filtro"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:108
+#, kde-format
+msgid "Block item..."
+msgstr "Bloquear item..."
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:110
+#, kde-format
+msgid "Open"
+msgstr "Abrir"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:113
+#, kde-format
+msgid "Remove filter"
+msgstr "Remover filtro"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:185
+#, kde-format
+msgid "Image"
+msgstr "Imagem"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:188
+#, kde-format
+msgid "Script"
+msgstr "Script"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:191
+#, kde-format
+msgid "Stylesheet"
+msgstr "Folha de estilo"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:194
+#, kde-format
+msgid "Font"
+msgstr "Fonte"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:197
+#, kde-format
+msgid "Frame"
+msgstr "Quadro"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:200
+#, kde-format
+msgid "XML Request"
+msgstr "Requisição XML"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:203
+#, kde-format
+msgid "Object"
+msgstr "Objeto"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:206
+#, kde-format
+msgid "Audio/Video"
+msgstr "Áudio/Vídeo"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:209
+#, kde-format
+msgid "Popup window"
+msgstr "Janela de mensagem"
+
+#: adblock/lib/widgets/adblockblockableitemswidget.cpp:213
+#, kde-format
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:22
+#, kde-format
+msgctxt "@title:window"
+msgid "Create Filter"
+msgstr "Criar filtro"
+
+#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:46
+#, kde-format
+msgid "Use default"
+msgstr "Usar padrão"
+
+#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:47
+#, kde-format
+msgid "Yes"
+msgstr "Sim"
+
+#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:48
+#, kde-format
+msgid "Not"
+msgstr "Não"
+
+#: adblock/lib/widgets/adblocklistwidget.cpp:52
+#, kde-format
+msgid "No subscription added"
+msgstr "Nenhuma inscrição adicionada"
+
+#: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure AdBlock Plugin"
+msgstr "Configurar o plugin AdBlock"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:53
+#, kde-format
+msgid ""
+"<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+"\"filterhelp\">more information</a>):"
+msgstr ""
+"<qt>Expressão de filtragem (p.ex. <tt>http://www.exemplo.com/ad/*</tt>, <a "
+"href=\"filterhelp\">mais informações</a>):"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:69
+#, kde-format
+msgid " day"
+msgid_plural " days"
+msgstr[0] " dia"
+msgstr[1] " dias"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:142
+#, kde-format
+msgid ""
+"<qt><p>Enter an expression to filter. Filters can be defined as either:"
+"<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
+"the wildcards <tt>*?[]</tt> may be used</li><li>a full regular expression by "
+"surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</tt></"
+"li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist "
+"(allow) any matching URL, which takes priority over any blacklist (blocking) "
+"filter.<br><a href='%1'>%2</a></qt>"
+msgstr ""
+"<qt><p>Digite uma expressão para filtrar. Os filtros tanto poderão ser "
+"definidos como sendo:<ul><li>uma sequência com caracteres especiais, p.ex. "
+"<tt>http://www.exemplo.com/ads*</tt>, podendo usar os caracteres especiais "
+"<tt>*?[]</tt></li><li>uma expressão regular completa, rodeando o texto com "
+"'<tt>/</tt>', p.ex., <tt>/\\/(ad|banner)\\./</tt></li></ul><p>Todos os "
+"filtros poderão ser antecedidos de '<tt>@@</tt>' para permitir as URLs em "
+"questão, o que terá prioridade sobre qualquer filtro de bloqueio.<br><a "
+"href='%1'>%2</a></qt>"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:150
+#, kde-format
+msgid "More information"
+msgstr "Mais informações"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:194
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] "Deseja remover esta regra?"
+msgstr[1] "Deseja remover estas regras?"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:195
+#, kde-format
+msgid "Remove"
+msgstr "Remover"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:336
+#, kde-format
+msgid "Do you want to delete list \"%1\"?"
+msgstr "Deseja excluir a lista \"%1\"?"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:337
+#, kde-format
+msgid "Delete current list"
+msgstr "Excluir a lista atual"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:382
+#: adblock/lib/widgets/adblocksettingwidget.cpp:424
+#, kde-format
+msgid "All Files (*)"
+msgstr "Todos os arquivos (*)"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:383
+#, kde-format
+msgid "Import Filters"
+msgstr "Importar filtros"
+
+#: adblock/lib/widgets/adblocksettingwidget.cpp:434
+#, kde-format
+msgid "Export Filters"
+msgstr "Exportar filtros"
+
+#: adblock/lib/widgets/adblockshowlistdialog.cpp:38
+#, kde-format
+msgctxt "@title:window"
+msgid "Show adblock list"
+msgstr "Mostrar a lista do AdBlock"
+
+#: adblock/lib/widgets/adblockshowlistdialog.cpp:45
+#, kde-format
+msgid "Delete List"
+msgstr "Excluir lista"
+
+#: adblock/lib/widgets/adblockshowlistdialog.cpp:62
+#, kde-format
+msgid "Download..."
+msgstr "Baixar..."
+
+#: adblock/lib/widgets/adblockshowlistdialog.cpp:135
+#, kde-format
+msgid "An error occurred while downloading the list: \"%1\""
+msgstr "Ocorreu um erro ao baixar a lista: \"%1\""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:31
+#, kde-format
+msgid "Filters:"
+msgstr "Filtros:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:49
+#, kde-format
+msgid "&Blocking filter"
+msgstr "Filtro de &bloqueio"
+
+#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:56
+#, kde-format
+msgid "Exception Filter"
+msgstr "Filtro de exceção"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:65
+#, kde-format
+msgid "Pattern"
+msgstr "Padrão"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:73
+#, kde-format
+msgid "custom"
+msgstr "personalizado"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:88
+#, kde-format
+msgid "Accept pattern only"
+msgstr "Aceitar apenas o padrão"
+
+#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
+#, kde-format
+msgid "At the beginning of the address"
+msgstr "No início do endereço"
+
+#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
+#, kde-format
+msgid "At the end of address"
+msgstr "No fim do endereço"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
+#, kde-format
+msgid "Options"
+msgstr "Opções"
+
+#. i18n: ectx: property (text), widget (QCheckBox, firstPartOnly)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
+#, kde-format
+msgid "First-part only"
+msgstr "Apenas a primeira parte"
+
+#. i18n: ectx: property (text), widget (QCheckBox, matchCase)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
+#, kde-format
+msgid "Match case"
+msgstr "Diferenciar maiúsculas de minúsculas"
+
+#. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
+#, kde-format
+msgid "Restrict to domain"
+msgstr "Restringir ao domínio"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
+#, kde-format
+msgid "Apply to:"
+msgstr "Aplicar em:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
+#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:160
+#, kde-format
+msgid "Collapse blocked:"
+msgstr "Recolher os bloqueados:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
+#: adblock/lib/widgets/ui/settings_adblock.ui:29
+#, kde-format
+msgid "&Enable Ad Block"
+msgstr "&Habilitar o bloqueio de anúncios (Ad Block)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
+#: adblock/lib/widgets/ui/settings_adblock.ui:36
+#, kde-format
+msgid "&Hide filtered elements"
+msgstr "&Ocultar os elementos filtrados"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: adblock/lib/widgets/ui/settings_adblock.ui:50
+#, kde-format
+msgid "Automatic Filters"
+msgstr "Filtros automáticos"
+
+#. i18n: ectx: property (text), widget (QPushButton, addFilters)
+#: adblock/lib/widgets/ui/settings_adblock.ui:56
+#, kde-format
+msgid "Add Filters subscriptions..."
+msgstr "Adicionar inscrições aos filtros..."
+
+#. i18n: ectx: property (text), widget (QPushButton, removeSubscription)
+#: adblock/lib/widgets/ui/settings_adblock.ui:76
+#, kde-format
+msgid "Remove subscription"
+msgstr "Remover inscrição"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: adblock/lib/widgets/ui/settings_adblock.ui:98
+#, kde-format
+msgid "Update enabled automatic filters every:"
+msgstr "Atualizar os filtros automáticos ativos a cada:"
+
+#. i18n: ectx: property (text), widget (QPushButton, showList)
+#: adblock/lib/widgets/ui/settings_adblock.ui:136
+#, kde-format
+msgid "Show List..."
+msgstr "Mostrar lista..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: adblock/lib/widgets/ui/settings_adblock.ui:144
+#, kde-format
+msgid "Manual Filters"
+msgstr "Filtros manuais"
+
+#. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
+#: adblock/lib/widgets/ui/settings_adblock.ui:155
+#, kde-format
+msgid "Add filter expression"
+msgstr "Adicionar uma expressão de filtro"
+
+#. i18n: ectx: property (text), widget (QToolButton, insertButton)
+#: adblock/lib/widgets/ui/settings_adblock.ui:158
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#. i18n: ectx: property (text), widget (QPushButton, importFilters)
+#: adblock/lib/widgets/ui/settings_adblock.ui:200
+#, kde-format
+msgid "Import Filters..."
+msgstr "Importar filtros..."
+
+#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
+#: adblock/lib/widgets/ui/settings_adblock.ui:207
+#, kde-format
+msgid "Export filters..."
+msgstr "Exportar filtros..."
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: adblock/lib/widgets/ui/settings_adblock.ui:216
+#, kde-format
+msgid "Search:"
+msgstr "Pesquisar:"
+
+#. i18n: ectx: property (text), widget (QPushButton, editFilter)
+#: adblock/lib/widgets/ui/settings_adblock.ui:228
+#, kde-format
+msgid "Edit"
+msgstr "Editar"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
+#: adblock/lib/widgets/ui/settings_adblock.ui:235
+#, kde-format
+msgid "Remove filter expression"
+msgstr "Remover a expressão de filtro"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: adblock/lib/widgets/ui/settings_adblock.ui:238
+#, kde-format
+msgid "Remove Filter"
+msgstr "Remover filtro"

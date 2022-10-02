@@ -1,0 +1,1713 @@
+# translation of kaddressbook.po to Slovenian
+# Translation of kaddressbook.po to Slovenian
+# SLOVENIAN TRANSLATION OF KADDRESSBOOK.
+# Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+# $Id: kaddressbook_importexportplugins.po 1635006 2022-10-01 01:39:01Z scripty $
+# $Source$
+#
+# Roman Maurer <roman.maurer@amis.net>, 2002.
+# Gregor Rakar <gregor.rakar@kiss.si>, 2003, 2004, 2005.
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2011.
+# Jure Repinc <jlp@holodeck1.com>, 2006, 2008, 2012, 2013.
+# Andrej Mernik <andrejm@ubuntu.si>, 2015, 2016, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaddressbook\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2022-04-18 19:41+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Lokalize 21.12.2\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: csv/csvimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Export CSV file..."
+msgstr "Izvozi datoteko CSV..."
+
+#: csv/csvimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Export contacts to a file in comma separated value format."
+msgstr "Izvozi stike v datoteko z vrednostmi, ločenimi z vejico."
+
+#: csv/csvimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Import CSV file..."
+msgstr "Uvozi datoteko CSV ..."
+
+#: csv/csvimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Import contacts from a file in comma separated value format."
+msgstr "Uvozi stike iz datoteke z vrednostmi, ločenimi z vejico."
+
+#: csv/csvimportexportplugininterface.cpp:152
+#: gmx/gmximportexportplugininterface.cpp:80
+#: ldif/ldifimportexportplugininterface.cpp:130
+#: vcards/vcardimportexportplugininterface.cpp:370
+#, kde-format
+msgid "Which contact do you want to export?"
+msgstr "Kateri stik želite izvoziti?"
+
+#: csv/csvimportexportplugininterface.cpp:162
+#: gmx/gmximportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:140
+#: vcards/vcardimportexportplugininterface.cpp:382
+#, kde-format
+msgid "You have not selected any contacts to export."
+msgstr "Za izvoz niste izbrali nobenega stika."
+
+#: csv/csvimportexportplugininterface.cpp:191
+#: gmx/gmximportexportplugininterface.cpp:124
+#: ldif/ldifimportexportplugininterface.cpp:161
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>Datoteke <b>%1</b> ni mogoče odpreti.</qt>"
+
+#: csv/csvimportexportplugininterface.cpp:203
+#: gmx/gmximportexportplugininterface.cpp:139
+#: ldif/ldifimportexportplugininterface.cpp:191
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>Datoteke <b>%1</b> ni mogoče odpreti</qt>"
+
+#: csv/import/csvimportdialog.cpp:168
+#, kde-format
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "Pogovorno okno za uvoz CSV"
+
+#: csv/import/csvimportdialog.cpp:223
+#, kde-format
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "Uvažanje stikov"
+
+#: csv/import/csvimportdialog.cpp:294
+#, kde-format
+msgctxt "@label"
+msgid "File to import:"
+msgstr "Datoteka za uvoz:"
+
+#: csv/import/csvimportdialog.cpp:302
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "Izberite datoteko CSV, ki naj se uvozi"
+
+#: csv/import/csvimportdialog.cpp:304
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr ""
+"Kliknite ta gumb, da odprete izbiralnik datotek, ki vam bo omogočil izbrati "
+"datoteko CSV za uvoz."
+
+#: csv/import/csvimportdialog.cpp:311
+#, kde-format
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "Razmejilnik"
+
+#: csv/import/csvimportdialog.cpp:321
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "Vejica"
+
+#: csv/import/csvimportdialog.cpp:322
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr "Razmejilnik polj nastavi na vejico"
+
+#: csv/import/csvimportdialog.cpp:323
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr ""
+"Izberite to možnost, če datoteka CSV za razmejevanje polj uporablja vejico."
+
+#: csv/import/csvimportdialog.cpp:328
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "Podpičje"
+
+#: csv/import/csvimportdialog.cpp:329
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr "Razmejilnik polj nastavi na podpičje"
+
+#: csv/import/csvimportdialog.cpp:330
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr ""
+"Izberite to možnost, če datoteka CSV za razmejevanje polj uporablja podpičje."
+
+#: csv/import/csvimportdialog.cpp:334
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr "Tabulator"
+
+#: csv/import/csvimportdialog.cpp:335
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr "Razmejilnik polj nastavi na tabulator"
+
+#: csv/import/csvimportdialog.cpp:336
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr ""
+"Izberite to možnost, če datoteka CSV za razmejevanje polj uporablja "
+"tabulator."
+
+#: csv/import/csvimportdialog.cpp:340
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "Presledek"
+
+#: csv/import/csvimportdialog.cpp:341
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "Razmejilnik polj nastavi na presledek"
+
+#: csv/import/csvimportdialog.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr ""
+"Izberite to možnost, če datoteka CSV za razmejevanje polj uporablja "
+"presledek."
+
+#: csv/import/csvimportdialog.cpp:346
+#, kde-format
+msgctxt "@option:radio Custom field separator"
+msgid "Other"
+msgstr "Drugo"
+
+#: csv/import/csvimportdialog.cpp:347
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr "Razmejilnik polj nastavi na znak po meri"
+
+#: csv/import/csvimportdialog.cpp:349
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr ""
+"Izberite to možnost, če datoteka CSV za razmejevanje polj uporablja nek drug "
+"znak."
+
+#: csv/import/csvimportdialog.cpp:355
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "Nastavite razmejilni znak po meri"
+
+#: csv/import/csvimportdialog.cpp:357
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+"Vnesite znak po meri, ki bo uporabljen kot razmejilni znak. Če vnesete več "
+"kot en znak, bo uporabljen le prvi, ostali pa bodo prezrti."
+
+#: csv/import/csvimportdialog.cpp:363
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "Narekovaj besedila:"
+
+#: csv/import/csvimportdialog.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "Izberite znak narekovaja"
+
+#: csv/import/csvimportdialog.cpp:371
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+"Izberite znak, ki ga podatki CSV uporabljajo za obdajanje razmejilnika polj, "
+"če se razmejilni znak pojavi znotraj podatkov. Na primer, če je razmejilnik "
+"polj vejica, bo vsaka vejica, ki se pojavi znotraj podatkov, obdana s tu "
+"določenim znakom."
+
+#: csv/import/csvimportdialog.cpp:376
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "\""
+msgstr "\""
+
+#: csv/import/csvimportdialog.cpp:377
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr "'"
+
+#: csv/import/csvimportdialog.cpp:378
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "Brez"
+
+#: csv/import/csvimportdialog.cpp:382
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "Oblika datuma:"
+
+#: csv/import/csvimportdialog.cpp:390
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+"<para><list><item>y: leto z dvema števkama</item><item>Y: leto s štirimi "
+"števkami</item><item>m: mesec z eno ali dvema števkama</item><item>M: mesec "
+"z dvema števkama</item><item>d: dan z eno ali dvema števkama</item><item>D: "
+"dan z dvema števkama</item><item>H: ure z dvema števkama</item><item>l: "
+"minute z dvema števkama</item><item>S: sekunde z dvema števkama</item></"
+"list></para>"
+
+#: csv/import/csvimportdialog.cpp:401
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+"<para>Navedite obliko datumov, ki bo uporabljena v datoteki CSV. Za "
+"določitev oblike uporabite naslednje znake:</para><para><list><item>y: leto "
+"z dvema števkama</item><item>Y: leto s štirimi števkami</item><item>m: mesec "
+"z eno ali dvema števkama</item><item>M: mesec z dvema števkama</"
+"item><item>d: dan z eno ali dvema števkama</item><item>D: dan z dvema "
+"števkama</item><item>H: ure z dvema števkama</item><item>l: minute z dvema "
+"števkama</item><item>S: sekunde z dvema števkama</item></list></"
+"para><para>Primer: »Y-M-D« ustreza datum oblike »2012-04-22«.</para>"
+
+#: csv/import/csvimportdialog.cpp:417
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "Kodek za besedilo:"
+
+#: csv/import/csvimportdialog.cpp:423
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "Izberite kodek za besedilo"
+
+#: csv/import/csvimportdialog.cpp:424
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr "Izberite kodiranje znakov za podatke v datoteki CSV."
+
+#: csv/import/csvimportdialog.cpp:428
+#, kde-format
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr "Preskoči prvo vrstico datoteke"
+
+#: csv/import/csvimportdialog.cpp:430
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr "Pri uvozu preskoči prvo vrstico datoteke CSV"
+
+#: csv/import/csvimportdialog.cpp:432
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+"Označite to polje, če želite, da uvažanje preskoči prvo vrstico podatkov iz "
+"datoteke CSV. V mnogih primerih je prva vrstica datoteke CSV opomba in "
+"opisuje vrstni red podatkovnih polj v datoteki."
+
+#: csv/import/csvimportdialog.cpp:448
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "Uveljavi predlogo ..."
+
+#: csv/import/csvimportdialog.cpp:449
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "Shrani predlogo ..."
+
+#: csv/import/csvimportdialog.cpp:470
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "Krajevno (%1)"
+
+#: csv/import/csvimportdialog.cpp:471
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "Latinsko1"
+
+#: csv/import/csvimportdialog.cpp:472
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "Unicode"
+
+#: csv/import/csvimportdialog.cpp:473
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "Microsoft Unicode"
+
+#: csv/import/csvimportdialog.cpp:574
+#, kde-format
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr "Dodeliti morate vsaj en stolpec."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "Razpoložljive ni še nobene predloge."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "Ni razpoložljivih predlog"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "Ime predloge"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "Vnesite ime predloge:"
+
+#: csv/import/csvimportdialog.cpp:699
+#, kde-format
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "Ni mogoče odpreti vhodne datoteke."
+
+#: csv/import/qcsvreader.cpp:92
+#, kde-format
+msgid "Device is not open"
+msgstr "Naprava ni odprta"
+
+#: csv/import/templateselectiondialog.cpp:182
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr "Ali resnično želite izbrisati predlogo »%1«?"
+
+#: csv/import/templateselectiondialog.cpp:203
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "Izbor predloge"
+
+#: csv/import/templateselectiondialog.cpp:206
+#, kde-format
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr "Izberite predlogo, ki se ujema z datoteko CSV:"
+
+#: gmx/gmximportexportplugininterface.cpp:25
+#, kde-format
+msgid "GMX address book file (*.gmxa)"
+msgstr "Datoteka imenika GMX (*.gmxa)"
+
+#: gmx/gmximportexportplugininterface.cpp:40
+#, kde-format
+msgid "Import GMX file..."
+msgstr "Uvozi datoteko GMX ..."
+
+#: gmx/gmximportexportplugininterface.cpp:41
+#, kde-format
+msgid "Import contacts from a GMX address book file."
+msgstr "Uvozi stike iz datoteke imenika GMX."
+
+#: gmx/gmximportexportplugininterface.cpp:46
+#, kde-format
+msgid "Export GMX file..."
+msgstr "Izvozi v datoteko GMX ..."
+
+#: gmx/gmximportexportplugininterface.cpp:47
+#, kde-format
+msgid "Export contacts to a GMX address book file."
+msgstr "Izvozi stike v datoteko imenika GMX."
+
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:80
+#: windows-contacts/importwindowcontact.cpp:26
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt><b>%1</b> ni mogoče odpreti za branje.</qt>"
+
+#: gmx/gmximportexportplugininterface.cpp:455
+#, kde-format
+msgid "%1 is not a GMX address book file."
+msgstr "%1 ni datoteka imenika GMX."
+
+#: ldap/ldapimportexportplugininterface.cpp:25
+#, kde-format
+msgid "Import From LDAP server..."
+msgstr "Uvozi s strežnika LDAP..."
+
+#: ldap/ldapimportexportplugininterface.cpp:26
+#, kde-format
+msgid "Import contacts from an LDAP server."
+msgstr "Uvozi stike s strežnika LDAP."
+
+#: ldif/ldifimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Import LDIF file..."
+msgstr "Uvozi datoteko LDIF ..."
+
+#: ldif/ldifimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Import contacts from an LDIF file."
+msgstr "Uvozi stike iz datoteke LDIF."
+
+#: ldif/ldifimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Export LDIF file..."
+msgstr "Izvozi datoteko LDIF ..."
+
+#: ldif/ldifimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Export contacts to an LDIF file."
+msgstr "Izvozi stike v datoteko LDIF."
+
+#: ldif/ldifimportexportplugininterface.cpp:110
+#, kde-format
+msgid "LDif Files"
+msgstr "Datoteke LDif"
+
+#: ldif/ldifimportexportplugininterface.cpp:151
+#, kde-format
+msgid "LDif Files (*.ldif)"
+msgstr "Datoteke LDif (*.ldif)"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:22
+#, kde-format
+msgctxt "@title:group"
+msgid "Fields to be exported"
+msgstr "Polja za izvoz"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Private fields"
+msgstr "Zasebna polja"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export private fields"
+msgstr "Izvozi zasebna polja"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:32
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's private fields to the "
+"vCard output file."
+msgstr ""
+"Označite to polje, če želite v izhodno datoteko vCard izvoziti zasebna polja "
+"stikov."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Business fields"
+msgstr "Poslovna polja"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export business fields"
+msgstr "Izvozi poslovna polja"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's business fields to the "
+"vCard output file."
+msgstr ""
+"Označite to polje, če želite v izhodno datoteko vCard izvoziti poslovna "
+"polja stikov."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:43
+#, kde-format
+msgctxt "@option:check"
+msgid "Other fields"
+msgstr "Druga polja"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export other fields"
+msgstr "Izvozi druga polja"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:46
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's other fields to the vCard "
+"output file."
+msgstr ""
+"Označite to polje, če želite v izhodno datoteko vCard izvoziti druga polja "
+"stikov."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:50
+#, kde-format
+msgctxt "@option:check"
+msgid "Encryption keys"
+msgstr "Šifrirni ključi"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export encryption keys"
+msgstr "Izvozi šifrirne ključe"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:53
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's encryption keys to the "
+"vCard output file."
+msgstr ""
+"Označite to polje, če želite v izhodno datoteko vCard izvoziti šifrirne "
+"ključe stikov."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:57
+#, kde-format
+msgctxt "@option:check"
+msgid "Pictures"
+msgstr "Slike"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:58
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export pictures"
+msgstr "Izvozi slike"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:60
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's picture to the vCard "
+"output file."
+msgstr ""
+"Označite to polje, če želite v izhodno datoteko vCard izvoziti slike stikov."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:64
+#, kde-format
+msgctxt "@title:group"
+msgid "Export options"
+msgstr "Možnosti izvoza"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:70
+#, kde-format
+msgctxt "@option:check"
+msgid "Display name as full name"
+msgstr "Ime za prikaz kot polno ime"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export display name as full name"
+msgstr "Izvozi ime za prikaz kot polno ime"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:73
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's display name in the "
+"vCard's full name field.  This may be required to get the name shown "
+"correctly in GMail or Android."
+msgstr ""
+"Označite to polje, če želite v polje s polnim imenom izvoziti ime za prikaz. "
+"To je včasih potrebno za pravilen prikaz imena v GMailu in na Androidu."
+
+#: vcards/engine/vcardviewerdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Import vCard"
+msgstr "Uvozi vCard"
+
+#: vcards/engine/vcardviewerdialog.cpp:51
+#, kde-format
+msgctxt "@info"
+msgid "Do you want to import this contact into your address book?"
+msgstr "Ali želite uvoziti ta stik v vaš imenik?"
+
+#: vcards/engine/vcardviewerdialog.cpp:61
+#, kde-format
+msgctxt "@action:button"
+msgid "Import All..."
+msgstr "Uvozi vse ..."
+
+#: vcards/vcardimportexportplugininterface.cpp:44
+#, kde-format
+msgid "Import vCard..."
+msgstr "Uvozi vCard ..."
+
+#: vcards/vcardimportexportplugininterface.cpp:45
+#, kde-format
+msgid "Import contacts from a vCard file."
+msgstr "Uvozi stike iz datoteke vCard."
+
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, kde-format
+msgid "Export contacts to a vCard 4.0 file."
+msgstr "Izvozi stike v datoteko vCard 4.0."
+
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, kde-format
+msgid "Export vCard 4.0..."
+msgstr "Izvozi vCard 4.0 ..."
+
+#: vcards/vcardimportexportplugininterface.cpp:58
+#, kde-format
+msgid "Export vCard 3.0..."
+msgstr "Izvozi vCard 3.0 ..."
+
+#: vcards/vcardimportexportplugininterface.cpp:59
+#, kde-format
+msgid "Export contacts to a vCard 3.0 file."
+msgstr "Izvozi stike v datoteko vCard 3.0."
+
+#: vcards/vcardimportexportplugininterface.cpp:64
+#, kde-format
+msgid "Export vCard 2.1..."
+msgstr "Izvozi vCard 2.1 ..."
+
+#: vcards/vcardimportexportplugininterface.cpp:65
+#, kde-format
+msgid "Export contacts to a vCard 2.1 file."
+msgstr "Izvozi stike v datoteko vCard 2.1."
+
+#: vcards/vcardimportexportplugininterface.cpp:113
+#, kde-format
+msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
+msgstr "Datoteke vCard (*.vcf *.vcard *.vct *.gcrd);;Vse datoteke (*)"
+
+#: vcards/vcardimportexportplugininterface.cpp:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Select vCard to Import"
+msgstr "Izberite vCard, ki naj se uvozi"
+
+#: vcards/vcardimportexportplugininterface.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "vCard Import Failed"
+msgstr "Uvoz vCarda ni uspel"
+
+#: vcards/vcardimportexportplugininterface.cpp:134
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Unable to access vCard:</para><para>%1</para>"
+msgstr "<para>Ni mogoče dostopati do vCarda:</para><para>%1</para>"
+
+#: vcards/vcardimportexportplugininterface.cpp:436
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have selected a list of contacts, shall they be exported to several "
+"files?"
+msgstr "Izbrali ste seznam stikov. Ali naj bodo izvoženi v več datotek?"
+
+#: vcards/vcardimportexportplugininterface.cpp:439
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to One File"
+msgstr "Izvozi v eno datoteko"
+
+#: vcards/vcardimportexportplugininterface.cpp:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to Several Files"
+msgstr "Izvozi v več datotek"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#, kde-format
+msgid "Import Windows Contact file..."
+msgstr "Uvozi datoteko Windows Contact..."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#, kde-format
+msgid "Import contacts from windows contact file."
+msgstr "Uvozi stike iz datoteke Windows Contact."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#, kde-format
+msgid "Windows Contact file (*.contact)"
+msgstr "Datoteka Windows Contact (*.contact)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Address Book"
+#~ msgstr "Izberite imenik"
+
+#~ msgid "Select the address book the imported contact(s) shall be saved in:"
+#~ msgstr "Izberite imenik, v katerega bodo shranjeni uvoženi stiki:"
+
+#~ msgctxt "@title:window"
+#~ msgid "Import Contacts"
+#~ msgstr "Uvozi stike"
+
+#~ msgid "Importing one contact to %2"
+#~ msgid_plural "Importing %1 contacts to %2"
+#~ msgstr[0] "Uvažanje %1 stika v %2"
+#~ msgstr[1] "Uvažanje %1 stikov v %2"
+#~ msgstr[2] "Uvažanje %1 stikov v %2"
+#~ msgstr[3] "Uvažanje %1 stikov v %2"
+
+#~ msgid ""
+#~ "*.vcf|vCard (*.vcf)\n"
+#~ "*|all files (*)"
+#~ msgstr ""
+#~ "*.vcf|Vizitke vCard (*.vcf)\n"
+#~ "*|Vse datoteke (*)"
+
+#~ msgctxt "@info"
+#~ msgid "No contacts were imported, due to errors with the vCards."
+#~ msgstr "Zaradi napak v vCardih ni bil uvožen noben stik."
+
+#~ msgctxt "@info"
+#~ msgid "The vCard does not contain any contacts."
+#~ msgstr "vCard ne vsebuje nobenega stika."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Jure Repinc,Andrej Vernekar,Gregor Rakar,Martin Srebotnjak,Andrej Mernik"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "jlp@holodeck1.com,andrej.vernekar@moj.net,gregor.rakar@kiss.si,"
+#~ "miles@filmsi.net,andrejm@ubuntu.si"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact..."
+#~ msgstr "Nov stik …"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact."
+#~ msgstr ""
+#~ "Pojavilo se bo pogovorno okno, v katerem boste lahko ustvarili nov stik."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact Group..."
+#~ msgstr "Nova skupina stikov …"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact "
+#~ "group."
+#~ msgstr ""
+#~ "Pojavilo se bo pogovorno okno, v katerem boste lahko ustvarili novo "
+#~ "skupino stikov."
+
+#~ msgid "KAddressBook"
+#~ msgstr "KAddressBook"
+
+#~ msgid "The KDE Address Book Application"
+#~ msgstr "KDE-jev imenik"
+
+#~ msgid "Copyright © 2007–2016 KAddressBook authors"
+#~ msgstr "Avtorske pravice © 2007–2016 avtorji KAddressBook"
+
+#~ msgid "Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgid "Current maintainer"
+#~ msgstr "Trenutni vzdrževalec"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
+
+#~ msgid "Previous maintainer"
+#~ msgstr "Prejšnji vzdrževalec"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset category filter"
+#~ msgstr "Ponastavi filter kategorije"
+
+#~ msgctxt "@action:button"
+#~ msgid "Clear category filter"
+#~ msgstr "Počisti filter kategorije"
+
+#~ msgid "(Untagged)"
+#~ msgstr "(neoznačeni)"
+
+#~ msgid "(Groups)"
+#~ msgstr "(skupine)"
+
+#~ msgid "(All)"
+#~ msgstr "(vse)"
+
+#~ msgid "(None)"
+#~ msgstr "(brez)"
+
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgid "<qt>Category filter: %1"
+#~ msgstr "<qt>Filter kategorije: %1"
+
+#~ msgid "Configure Plugins"
+#~ msgstr "Nastavi vstavke"
+
+#~ msgid "(c), 2016 Laurent Montel"
+#~ msgstr "(c), 2016 Laurent Montel"
+
+#~ msgid "Tools Plugins"
+#~ msgstr "Vstavki orodij"
+
+#~ msgctxt "@item Undefined import field type"
+#~ msgid "Undefined"
+#~ msgstr "Nedoločeno"
+
+#~ msgctxt "The wedding anniversary of a contact"
+#~ msgid "Anniversary"
+#~ msgstr "Obletnica"
+
+#~ msgctxt "Preferred email address"
+#~ msgid "EMail (preferred)"
+#~ msgstr "E-naslov (prednostni)"
+
+#~ msgctxt "Second email address"
+#~ msgid "EMail (2)"
+#~ msgstr "E-naslov (2)"
+
+#~ msgctxt "Third email address"
+#~ msgid "EMail (3)"
+#~ msgstr "E-naslov (3)"
+
+#~ msgctxt "Fourth email address"
+#~ msgid "EMail (4)"
+#~ msgstr "E-naslov (4)"
+
+#~ msgid "Blog Feed"
+#~ msgstr "Vir bloga"
+
+#~ msgid "Profession"
+#~ msgstr "Poklic"
+
+#~ msgid "Office"
+#~ msgstr "Pisarna"
+
+#~ msgid "Manager"
+#~ msgstr "Upravljavec"
+
+#~ msgid "Assistant"
+#~ msgstr "Pomočnik"
+
+#~ msgid "Spouse"
+#~ msgstr "Partner"
+
+#~ msgid "Select Contacts"
+#~ msgstr "Izberite stike"
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts"
+#~ msgstr "Vsi stiki"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from all your address books"
+#~ msgstr "Vsi stiki iz vseh vaših imenikov"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option you want to select all your contacts from all your "
+#~ "address books."
+#~ msgstr ""
+#~ "Izberite to možnost, če želite izbrati vse vaše stike iz vseh vaših "
+#~ "imenikov."
+
+#~ msgctxt "@option:radio"
+#~ msgid "Selected contacts"
+#~ msgstr "Izbrani stiki"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Only the contacts currently selected"
+#~ msgstr "Samo trenutno izbrani stiki"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want only the contacts you have already "
+#~ "selected in the graphical interface."
+#~ msgstr "Izberite to možnost, če želite samo stike, ki ste jih že izbrali."
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts from:"
+#~ msgstr "Vsi stiki iz:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from a chosen address book"
+#~ msgstr "Vsi stiki iz izbranega imenika"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want to select all the contacts from only one "
+#~ "of your address books.  Once this option is clicked you will be provided "
+#~ "a drop down box listing all those address books and permitted to select "
+#~ "the one you want."
+#~ msgstr ""
+#~ "Izberite to možnost, če želite izbrati vse stike iz le enega izmed vaših "
+#~ "imenikov. Ko izberete to možnost, vam bo ponujen spustni seznam vseh "
+#~ "razpoložljivih imenikov, s katerega boste lahko izbrali želenega."
+
+#~ msgctxt "@option:check"
+#~ msgid "Include Subfolders"
+#~ msgstr "Vključi podmape"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select all subfolders including the top-level folder"
+#~ msgstr "Izberi vse podmape, vključno z vrhnjo mapo"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Check this box if you want to select all contacts from this folder, "
+#~ "including all subfolders.  If you only want the contacts from the top-"
+#~ "level folder then leave this box unchecked."
+#~ msgstr ""
+#~ "Označite to polje, če želite izbrati vse stike iz te mape, vključno z "
+#~ "vsemi podmapami. Če želite le stike iz vrhnje mape, pustite to možnost "
+#~ "onemogočeno."
+
+#~ msgctxt "@action:button Previous contact"
+#~ msgid "Previous"
+#~ msgstr "Predhodni"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the previous contact in the list"
+#~ msgstr "Premakni se na predhodni stik s seznama"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the previous contact in the list."
+#~ msgstr "Kliknite ta gumb, da se premaknete na predhodni stik s seznama."
+
+#~ msgctxt "@action:button Next contact"
+#~ msgid "Next"
+#~ msgstr "Naslednji"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the next contact in the list"
+#~ msgstr "Premakni se na naslednji stik s seznama"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the next contact in the list."
+#~ msgstr "Kliknite ta gumb, da se premaknete na naslednji stik s seznama."
+
+#~ msgctxt "@info:status"
+#~ msgid "%1 out of %2"
+#~ msgstr "%1 od %2"
+
+#~ msgid "Import the given file"
+#~ msgstr "Uvozi podano datoteko"
+
+#~ msgid "Files or URLs. The user will be asked whether to import."
+#~ msgstr "Datoteke ali URL-ji. Uvoz boste morali potrditi."
+
+#~ msgid "&Configure KAddressBook..."
+#~ msgstr "&Nastavi KAddressBook ..."
+
+#~ msgid "&File"
+#~ msgstr "&Datoteka"
+
+#~ msgid "&New"
+#~ msgstr "&Novo"
+
+#~ msgid "&Import"
+#~ msgstr "Uvoz&i"
+
+#~ msgid "&Export"
+#~ msgstr "I&zvozi"
+
+#~ msgid "&Edit"
+#~ msgstr "Ur&edi"
+
+#~ msgid "&Tools"
+#~ msgstr "O&rodja"
+
+#~ msgid "&Action"
+#~ msgstr "Dej&anje"
+
+#~ msgid "&View"
+#~ msgstr "&Pogled"
+
+#~ msgid "&Settings"
+#~ msgstr "Na&stavitve"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Glavna orodna vrstica"
+
+#~ msgctxt "@label Search contacts in list"
+#~ msgid "Search...<%1>"
+#~ msgstr "Poišči ...<%1>"
+
+#~ msgid "&Themes"
+#~ msgstr "&Teme"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Print the complete address book or a selected number of contacts."
+#~ msgstr "Natisnite celoten imenik ali izbrane stike."
+
+#~ msgid "Quick search"
+#~ msgstr "Hitro iskanje"
+
+#~ msgid "Category filter"
+#~ msgstr "Filter kategorije"
+
+#~ msgid "Select All"
+#~ msgstr "Izberi vse"
+
+#~ msgid "Select all contacts in the current address book view."
+#~ msgstr "Izberi vse stike iz trenutnega prikaza imenika."
+
+#~ msgid "Show QR Codes"
+#~ msgstr "Pokaži kode QR"
+
+#~ msgid "Show QR Codes in the contact."
+#~ msgstr "V stiku pokaže kode QR."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Simple (one column)"
+#~ msgstr "Preprost (en stolpec)"
+
+#~ msgid "Show a simple mode of the address book view."
+#~ msgstr "Pokaže preprost način prikaza imenika."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Two Columns"
+#~ msgstr "Dva stolpca"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Three Columns"
+#~ msgstr "Trije stolpci"
+
+#~ msgid "Set Focus to Quick Search"
+#~ msgstr "Postavi žarišče na hitro iskanje"
+
+#~ msgid "Serverside Subscription..."
+#~ msgstr "Naročnina na strani strežnika ..."
+
+#~ msgid "Address Book"
+#~ msgstr "Imenik"
+
+#~ msgid "Print Contacts"
+#~ msgstr "Natisni stike"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can configure the "
+#~ "application-wide shortcuts."
+#~ msgstr ""
+#~ "Pojavilo se bo pogovorno okno, v katerem boste lahko nastavili bližnjice "
+#~ "za celoten program."
+
+#~ msgid ""
+#~ "<qt>This will hide the menu bar completely. You can show it again by "
+#~ "typing %1.</qt>"
+#~ msgstr ""
+#~ "<qt>To bo povsem skrilo menijsko vrstico. Spet jo lahko prikažete s "
+#~ "pritiskom %1.</qt>"
+
+#~ msgid "Hide menu bar"
+#~ msgstr "Skrij menijsko vrstico"
+
+#~ msgid "Full Name"
+#~ msgstr "Polno ime"
+
+#~ msgid "Family Name"
+#~ msgstr "Priimek"
+
+#~ msgid "Given Name"
+#~ msgstr "Dano ime"
+
+#~ msgid "Home Address"
+#~ msgstr "Domači naslov"
+
+#~ msgid "Business Address"
+#~ msgstr "Poslovni naslov"
+
+#~ msgid "Phone Numbers"
+#~ msgstr "Telefonske številke"
+
+#~ msgid "Preferred EMail"
+#~ msgstr "Prednostni e-naslov"
+
+#~ msgid "All EMails"
+#~ msgstr "Vsi e-naslovi"
+
+#~ msgid "Compact Style"
+#~ msgstr "Strnjen slog"
+
+#~ msgid "Setting up document"
+#~ msgstr "Nastavljanje dokumenta"
+
+#~ msgid "Printing"
+#~ msgstr "Tiskanje"
+
+#~ msgctxt "Finished printing"
+#~ msgid "Done"
+#~ msgstr "Končano"
+
+#~ msgid "Compact Printing Style"
+#~ msgstr "Strnjen slog tiskanja"
+
+#~ msgid "Appearance"
+#~ msgstr "Videz"
+
+#~ msgid "Fields"
+#~ msgstr "Polja"
+
+#~ msgid ""
+#~ "Print the home address, with home phone number and mobile phone number"
+#~ msgstr "Natisni domači naslov z domačo in mobilno telefonsko številko"
+
+#~ msgid "with home address"
+#~ msgstr "z domačim naslovom"
+
+#~ msgid "print the business address, with business phone number"
+#~ msgstr "Natisni poslovni naslov s poslovno telefonsko številko"
+
+#~ msgid "with business address"
+#~ msgstr "s poslovnim naslovom"
+
+#~ msgid "Print the birthday"
+#~ msgstr "Natisni rojstni dan"
+
+#~ msgid "with birthday"
+#~ msgstr "z rojstnim dnem"
+
+#~ msgid "Print the e-mail and e-mail2 fields"
+#~ msgstr "Natisni polji e-naslov in e-naslov (2)"
+
+#~ msgid "with e-mail"
+#~ msgstr "z e-naslovom"
+
+#~ msgid "the first color, if alternating color is checked"
+#~ msgstr "Prva barva, če je omogočeno izmenjavanje barv"
+
+#~ msgid "first color"
+#~ msgstr "prva barva"
+
+#~ msgid "the second color, if alternating color is checked"
+#~ msgstr "Druga barva, če je omogočeno izmenjavanje barv"
+
+#~ msgid "second color"
+#~ msgstr "druga barva"
+
+#~ msgid "Change the background color of every row"
+#~ msgstr "Spremeni barvo ozadja vsake vrstice"
+
+#~ msgid "Alternating the background color"
+#~ msgstr "Izmenjevanje barve ozadja"
+
+#~ msgid "Organization:"
+#~ msgstr "Organizacija:"
+
+#~ msgid "Email address:"
+#~ msgstr "E-poštni naslov:"
+
+#~ msgid "Email addresses:"
+#~ msgstr "E-poštni naslovi:"
+
+#~ msgid "Telephone:"
+#~ msgstr "Telefon:"
+
+#~ msgid "Telephones:"
+#~ msgstr "Telefoni:"
+
+#~ msgid "Web page:"
+#~ msgstr "Spletna stran:"
+
+#~ msgid "Domestic Address"
+#~ msgstr "Domači naslov"
+
+#~ msgid "International Address"
+#~ msgstr "Mednarodni naslov"
+
+#~ msgid "Postal Address"
+#~ msgstr "Poštni naslov"
+
+#~ msgid "Parcel Address"
+#~ msgstr "Naslov za paketno dostavo"
+
+#~ msgid "Work Address"
+#~ msgstr "Službeni naslov"
+
+#~ msgid "Preferred Address"
+#~ msgstr "Prednostni naslov"
+
+#~ msgid "Notes:"
+#~ msgstr "Opombe:"
+
+#~ msgid "Detailed Print Style - Appearance"
+#~ msgstr "Podroben slog tiskanja – videz"
+
+#~ msgid "Setting up colors"
+#~ msgstr "Nastavljanje barv"
+
+#~ msgid "Detailed Style"
+#~ msgstr "Podroben slog"
+
+#~ msgid "Appearance Page"
+#~ msgstr "Stran videza"
+
+#~ msgid "Contact Headers"
+#~ msgstr "Glave stika"
+
+#~ msgid "Select the headline text background color"
+#~ msgstr "Izberite barvo ozadja naslovnega besedila"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline background color."
+#~ msgstr ""
+#~ "Kliknite ta gumb, da odprete izbiralnik barv, ki vam bo omogočil "
+#~ "nastaviti barvo ozadja naslova."
+
+#~ msgid "Headline background color:"
+#~ msgstr "Barva ozadja naslova:"
+
+#~ msgid "Headline text color:"
+#~ msgstr "Barva besedila naslova:"
+
+#~ msgid "Select the headline text color"
+#~ msgstr "Izberite barvo besedila naslova"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline text."
+#~ msgstr ""
+#~ "Kliknite ta gumb, da odprete izbiralnik barv, ki vam bo omogočil "
+#~ "nastaviti barvo besedila naslova."
+
+#~ msgid "Mike's Printing Style"
+#~ msgstr "Mikeov slog tiskanja"
+
+#~ msgid "Which contacts do you want to print?"
+#~ msgstr "Katere stike želite natisniti?"
+
+#~ msgid "Choose Contacts to Print"
+#~ msgstr "Izberite stike, ki naj se natisnejo"
+
+#~ msgid "Choose Printing Style"
+#~ msgstr "Izberite slog tiskanja"
+
+#~ msgid "Print Progress"
+#~ msgstr "Napredek tiskanja"
+
+#~ msgid "Printing: Progress"
+#~ msgstr "Tiskanje: napredek"
+
+#~ msgid "Progress"
+#~ msgstr "Napredek"
+
+#~ msgid "Print Contact's Information"
+#~ msgstr "Natisni podatke o stikih"
+
+#~ msgid "Print contact phone numbers"
+#~ msgstr "Natisni telefonske številke stikov"
+
+#~ msgid "Check this box if you want contact phone numbers to be printed."
+#~ msgstr "Označite to polje, če želite natisniti telefonske številke stikov."
+
+#~ msgid "Phone numbers"
+#~ msgstr "Telefonske številke"
+
+#~ msgid "Print contact email addresses"
+#~ msgstr "Natisni e-poštne naslove stikov"
+
+#~ msgid "Check this box if you want contact email addresses to be printed."
+#~ msgstr "Označite to polje, če želite natisniti e-poštne naslove stikov."
+
+#~ msgid "Email addresses"
+#~ msgstr "E-poštni naslovi"
+
+#~ msgid "Print contact street addresses"
+#~ msgstr "Natisni naslove stikov"
+
+#~ msgid "Check this box if you want contact street addresses to be printed."
+#~ msgstr "Označite to polje, če želite natisniti naslove stikov."
+
+#~ msgid "Postal addresses"
+#~ msgstr "Poštni naslovi"
+
+#~ msgid "Print contact organizations"
+#~ msgstr "Natisni organizacije stikov"
+
+#~ msgid "Check this box if you want contact organizations to be printed."
+#~ msgstr "Označite to polje, če želite natisniti organizacije stikov."
+
+#~ msgid "Organization"
+#~ msgstr "Organizacija"
+
+#~ msgid "Print contact birthdays"
+#~ msgstr "Natisni rojstne dneve stikov"
+
+#~ msgid "Check this box if you want contact birthdays to be printed."
+#~ msgstr "Označite to polje, če želite natisniti rojstne dneve stikov."
+
+#~ msgid "Birthday"
+#~ msgstr "Rojstni dan"
+
+#~ msgid "Print contact notes"
+#~ msgstr "Natisni opombe o stikih"
+
+#~ msgid "Check this box if you want contact notes to be printed."
+#~ msgstr "Označite to polje, če želite natisniti opombe o stikih."
+
+#~ msgid "Note"
+#~ msgstr "Opomba"
+
+#~ msgid "Ring Binder Printing Style - Appearance"
+#~ msgstr "Slog tiskanja Spiralna vezava – videz"
+
+#~ msgid "Setting up fields"
+#~ msgstr "Nastavljanje polj"
+
+#~ msgid "Printout for Ring Binders"
+#~ msgstr "Izpis za Spiralno vezavo"
+
+#~ msgctxt "@item:inlistbox Ascending sort order"
+#~ msgid "Ascending"
+#~ msgstr "Naraščajoče"
+
+#~ msgctxt "@item:inlistbox Descending sort order"
+#~ msgid "Descending"
+#~ msgstr "Padajoče"
+
+#~ msgctxt "@label"
+#~ msgid "(No preview available.)"
+#~ msgstr "(predogled ni na voljo)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Choose Printing Style"
+#~ msgstr "Izberite slog tiskanja"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "What should the print look like?\n"
+#~ "KAddressBook has several printing styles, designed for different "
+#~ "purposes.\n"
+#~ "Choose the style that suits your needs below."
+#~ msgstr ""
+#~ "Kako naj bo videti izpis?\n"
+#~ "KAddressBook ponuja več slogov tiskanja, zasnovanih za različne namene.\n"
+#~ "Spodaj izberite slog, ki ustreza vašim potrebam."
+
+#~ msgctxt "@title:group"
+#~ msgid "Sorting"
+#~ msgstr "Razvrščanje"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Criterion:"
+#~ msgstr "Pogoj:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the primary sort field"
+#~ msgstr "Izberite prvo polje za razvrščanje"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "From this list you can select the field on which your contacts are sorted "
+#~ "in the print output.  Use the sorting order option to determine if the "
+#~ "sort will be in ascending or descending order."
+#~ msgstr ""
+#~ "S tega seznama lahko izberete polje, po katerem bodo razvrščeni stiki na "
+#~ "izpisu tiskalnika. Za določitev smeri (naraščajoče ali padajoče) "
+#~ "uporabite možnost smeri razvrščanja."
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Order:"
+#~ msgstr "Smer:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the sorting order"
+#~ msgstr "Izberite smer razvrščanja"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose if you want to sort your contacts in ascending or descending "
+#~ "order. Use the sorting criterion option to specify on which contact field "
+#~ "the sorting will be performed."
+#~ msgstr ""
+#~ "Izberite, ali želite stike razvrstiti v naraščajoči ali padajoči smeri. "
+#~ "Za izbor polja, po katerem bodo razvrščeni stiki, uporabite možnost "
+#~ "pogoja razvrščanja."
+
+#~ msgctxt "@title:group"
+#~ msgid "Print Style"
+#~ msgstr "Slog tiskanja"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the print style"
+#~ msgstr "Izberite slog tiskanja"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose your desired printing style. See the preview image to help you "
+#~ "decide."
+#~ msgstr ""
+#~ "Izberite želeni slog tiskanja. V pomoč pri izbiri si oglejte predogled."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Search contacts in list"
+#~ msgstr "Poiščite stike v seznamu"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Start typing a search string in this box and the list of contacts "
+#~ "matching that string will be displayed.  This is a quick way of searching "
+#~ "for contacts of interest."
+#~ msgstr ""
+#~ "V to polje začnite vnašati iskalni niz in prikazan bo seznam stikov, ki "
+#~ "ustrezajo nizu. To je hiter način iskanja stikov, ki vas zanimajo."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sync Contacts"
+#~ msgstr "Uskladi stike"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Choose this option to synchronize your groupware contacts."
+#~ msgstr "Izberite to možnost, da uskladite stike za skupinsko delo."
+
+#~ msgid "Ungrouped"
+#~ msgstr "Brez skupine"
+
+#~ msgid "Group"
+#~ msgstr "Skupina"
+
+#~ msgid "Gravatarupdatedialog_Gui"
+#~ msgstr "Gravatarupdatedialog_Gui"
+
+#~ msgid "Test for Gravatar update dialog"
+#~ msgstr "Preizkus za pogovorno okno posodobitve Gravatarja"
+
+#~ msgid "Email address"
+#~ msgstr "E-poštni naslov"
+
+#~ msgid "Check and update Gravatar"
+#~ msgstr "Preveri in posodobi Gravatar"
+
+#~ msgid "Save Image"
+#~ msgstr "Shrani sliko"
+
+#~ msgid "Save Image URL"
+#~ msgstr "Shrani URL slike"
+
+#~ msgid "Email:"
+#~ msgstr "E-naslov:"
+
+#~ msgid "Use HTTPS Protocol"
+#~ msgstr "Uporabi protokol HTTPS"
+
+#~ msgid "Use Libravatar"
+#~ msgstr "Uporabi Libravatar"
+
+#~ msgid "Fallback to Gravatar"
+#~ msgstr "Zasilno uporabi Gravatar"
+
+#~ msgid "Search"
+#~ msgstr "Poišči"
+
+#~ msgid "Search is impossible."
+#~ msgstr "Iskanje ni mogoče."
+
+#~ msgid "No Gravatar Found."
+#~ msgstr "Ni najdenih Gravatar-jev."
+
+#~ msgid "Check Gravatar..."
+#~ msgstr "Preveri Gravatar …"
+
+#~ msgid "No email found for this contact."
+#~ msgstr "Za ta stik ni bilo najdenega e-naslova."
+
+#~ msgid "A contact group was selected."
+#~ msgstr "Izbrana je bila skupina stikov."
+
+#~ msgid "Send an email..."
+#~ msgstr "Pošlji e-sporočilo …"
+
+#~ msgid "You have not selected any contacts."
+#~ msgstr "Noben stik ni izbran."
+
+#~ msgid "No emails found in selected contacts."
+#~ msgstr "Med izbranimi stiki ni mogoče najti e-naslovov."
+
+#~ msgid "Send vCards..."
+#~ msgstr "Pošlji vCard ..."
+
+#~ msgid "No vCard created."
+#~ msgstr "Ni ustvarjenih vCard-ov."
+
+#~ msgid "Temporary file '%1' cannot be created"
+#~ msgstr "Začasne datoteke »%1« ni mogoče ustvariti."
+
+#~ msgid "Merge Contacts..."
+#~ msgstr "Združi stike …"
+
+#~ msgid "Search Duplicate Contacts..."
+#~ msgstr "Poišči podvojene stike …"
+
+#~ msgid "Select Contacts to merge"
+#~ msgstr "Izberite stike za združevanje"
+
+#~ msgid "Select contacts that you really want to merge:"
+#~ msgstr "Izberite stike, ki jih želite združiti:"
+
+#~ msgid "Select the addressbook in which to store merged contacts:"
+#~ msgstr "Izberite imenik, v katerega želite shraniti združene stike:"
+
+#~ msgid "merge"
+#~ msgstr "Združi"
+
+#~ msgid "Duplicate contact %1"
+#~ msgstr "Podvoji stik %1"
+
+#~ msgid "Contacts"
+#~ msgstr "Stiki"
+
+#~ msgid "Select AddressBook:"
+#~ msgstr "Izberite imenik:"
+
+#~ msgid "Merge"
+#~ msgstr "Združi"
+
+#~ msgid "You must select at least two elements."
+#~ msgstr "Izbrati morate vsaj dva predmeta."
+
+#~ msgid "No duplicated contact found."
+#~ msgstr "Ni bilo najdenih podvojenih stikov."
+
+#~ msgid "No contacts selected."
+#~ msgstr "Noben stik ni izbran."
+
+#~ msgid ""
+#~ "Some information can be lost. Do you want to continue, or customize what "
+#~ "you want to merge?"
+#~ msgstr ""
+#~ "Določeni podatki se lahko izgubijo. Ali želite nadaljevati z združevanjem "
+#~ "ali ga želite predhodno dodatno prilagoditi?"
+
+#~ msgid "Customize"
+#~ msgstr "Prilagodi"
+
+#~ msgid "Automatic Merging"
+#~ msgstr "Samodejno združevanje"
+
+#~ msgid ""
+#~ "Some information was not selected. You can lose this information. Do you "
+#~ "want to continue merging?"
+#~ msgstr ""
+#~ "Določeni podatki niso bili izbrani, kar pomeni, da se lahko izgubijo. Ali "
+#~ "želite nadaljevati z združevanjem?"
+
+#~ msgid "Missing Selected Information"
+#~ msgstr "Izbrani podatki manjkajo"
+
+#~ msgid "(Undefined)"
+#~ msgstr "(nedoločeno)"
+
+#~ msgid "LDIF file (%1)"
+#~ msgstr "Datoteka LDIF (%1)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>When trying to read the vCard, there was an error opening the file "
+#~ "<filename>%1</filename>:</para><para>%2</para>"
+#~ msgstr ""
+#~ "<para>Med poskusom branja vCarda je prišlo do napake pri odpiranju "
+#~ "datoteke <filename>%1</filename>:</para><para>%2</para>"
+
+#, fuzzy
+#~| msgid "&Merge Contacts"
+#~ msgid "Merged Contact"
+#~ msgstr "&Združi stike"
+
+#, fuzzy
+#~| msgctxt "@label"
+#~| msgid "Importing contacts"
+#~ msgid "Error while merging contacts."
+#~ msgstr "Uvažanje stikov"
+
+#, fuzzy
+#~| msgid "&Merge Contacts"
+#~ msgid "Merge contact"
+#~ msgstr "&Združi stike"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select vCard Fields"
+#~ msgstr "Izberite polja vCard"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Potential Duplicate Contacts"
+#~ msgstr "Izberite stike"

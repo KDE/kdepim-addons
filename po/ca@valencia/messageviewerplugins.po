@@ -1,0 +1,348 @@
+# Translation of messageviewerplugins.po to Catalan (Valencian)
+# Copyright (C) 1998-2022 This_file_is_part_of_KDE
+#
+# Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2004, 2005, 2006.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2002, 2003, 2004, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+# Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2009.
+# David Gil <al016950@yahoo.es>, 2005.
+# Josep M. Ferrer <txemaq@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2020, 2022.
+# Joan Maspons <joanmaspons@gmail.com>, 2009.
+# Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"PO-Revision-Date: 2022-02-03 11:04+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
+#, kde-format
+msgid "Current URL is not a shortened URL."
+msgstr "L'URL actual no és cap URL escurçat."
+
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
+#, kde-format
+msgid "Expand URL"
+msgstr "Expandix l'URL"
+
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
+#, kde-format
+msgid "Translate..."
+msgstr "Traduïx..."
+
+#: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
+#: createtodoplugin/todoedit.cpp:42
+#, kde-format
+msgid "&Save"
+msgstr "Guar&da"
+
+#: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
+#, kde-format
+msgid "Open &Editor..."
+msgstr "Obri l'&editor..."
+
+#: createeventplugin/eventedit.cpp:56
+#, kde-format
+msgid "Event:"
+msgstr "Esdeveniment:"
+
+#: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
+#, kde-format
+msgid "Calendar where the new event will be stored."
+msgstr "Calendari on s'emmagatzemarà l'esdeveniment nou."
+
+#: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
+#, kde-format
+msgid "Calendar where the new event will be stored"
+msgstr "Calendari on s'emmagatzemarà l'esdeveniment nou"
+
+#: createeventplugin/eventedit.cpp:89
+#, kde-format
+msgid "Start:"
+msgstr "Inici:"
+
+#: createeventplugin/eventedit.cpp:95
+#, kde-format
+msgid "Select start time for event."
+msgstr "Seleccioneu l'hora d'inici per a l'esdeveniment."
+
+#: createeventplugin/eventedit.cpp:102
+#, kde-format
+msgid "End:"
+msgstr "Final:"
+
+#: createeventplugin/eventedit.cpp:107
+#, kde-format
+msgid "Select end time for event."
+msgstr "Seleccioneu l'hora de finalització per a l'esdeveniment."
+
+#: createeventplugin/eventedit.cpp:125
+#, kde-format
+msgid "Create new event and close this widget."
+msgstr "Crea un esdeveniment nou i tanca este giny."
+
+#: createeventplugin/eventedit.cpp:131
+#, kde-format
+msgid "Open event editor, where more details can be changed."
+msgstr "Obri l'editor d'esdeveniments, on es poden canviar més detalls."
+
+#: createeventplugin/eventedit.cpp:142
+#, kde-format
+msgid "Close the widget for creating new events."
+msgstr "Tanca el giny per a crear esdeveniments nous."
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:68
+#, kde-format
+msgid "Create Event..."
+msgstr "Crea un esdeveniment..."
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:69
+#, kde-format
+msgid "Create Event"
+msgstr "Crea un esdeveniment"
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:70
+#, kde-format
+msgid "Allows you to create a calendar Event"
+msgstr "Permet crear un calendari d'esdeveniments"
+
+#: createnoteplugin/noteedit.cpp:49
+#, kde-format
+msgid "Note:"
+msgstr "Nota:"
+
+#: createnoteplugin/noteedit.cpp:90
+#, kde-format
+msgid "Create new note and close this widget."
+msgstr "Crea una nota nova i tanca este giny."
+
+#: createnoteplugin/noteedit.cpp:99
+#, kde-format
+msgid "Close the widget for creating new notes."
+msgstr "Tanca el giny per a crear notes noves."
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:120
+#, kde-format
+msgctxt "edit a note on this message"
+msgid "Edit Note"
+msgstr "Edita la nota"
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:122
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:133
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:134
+#, kde-format
+msgctxt "create a new note out of this message"
+msgid "Create Note"
+msgstr "Crea una nota"
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:135
+#, kde-format
+msgid "Allows you to create a note from this message"
+msgstr "Permet crear una nota a partir d'este missatge"
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:136
+#, kde-format
+msgid ""
+"This option starts an editor to create a note. Then you can edit the note to "
+"your liking before saving it."
+msgstr ""
+"Esta opció inicia un editor per a crear una nota. Després podreu editar-la "
+"al vostre gust abans de guardar-la."
+
+#: createtodoplugin/todoedit.cpp:61
+#, kde-format
+msgid "To-do:"
+msgstr "Tasca pendent:"
+
+#: createtodoplugin/todoedit.cpp:80
+#, kde-format
+msgid "Todo list where the new task will be stored."
+msgstr "La llista de tasques pendents on s'emmagatzemarà la tasca nova."
+
+#: createtodoplugin/todoedit.cpp:82
+#, kde-format
+msgid "Todo list where the new task will be stored"
+msgstr "La llista de tasques pendents on s'emmagatzemarà la tasca nova"
+
+#: createtodoplugin/todoedit.cpp:96
+#, kde-format
+msgid "Create new todo and close this widget."
+msgstr "Crea una tasca pendent nova i tanca este giny."
+
+#: createtodoplugin/todoedit.cpp:103
+#, kde-format
+msgid "Open todo editor, where more details can be changed."
+msgstr "Obri l'editor de tasques pendents, on es podran canviar més detalls."
+
+#: createtodoplugin/todoedit.cpp:113
+#, kde-format
+msgid "Close the widget for creating new todos."
+msgstr "Tanca el giny per a crear tasques pendents noves."
+
+#: createtodoplugin/todoedit.cpp:150
+#, kde-format
+msgid "Check I received a reply about \"%1\""
+msgstr "Comprova que he rebut una resposta sobre «%1»"
+
+#: createtodoplugin/todoedit.cpp:151
+#, kde-format
+msgid "Reply to \"%1\""
+msgstr "Respon a «%1»"
+
+#: createtodoplugin/todoedit.cpp:240
+#, kde-format
+msgctxt ""
+"%1 is summary of the todo, %2 is name of the folder in which it is stored"
+msgid "New todo '%1' was added to task list '%2'"
+msgstr "S'ha afegit la tasca pendent nova «%1» a la llista de tasques «%2»"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:68
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:69
+#, kde-format
+msgid "Create To-do"
+msgstr "Crea una tasca pendent"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:70
+#, kde-format
+msgid "Allows you to create a calendar to-do or reminder from this message"
+msgstr ""
+"Permet crear una tasca pendent o recordatori de calendari a partir d'este "
+"missatge"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:72
+#, kde-format
+msgid ""
+"This option starts the KOrganizer to-do editor with initial values taken "
+"from the currently selected message. Then you can edit the to-do to your "
+"liking before saving it to your calendar."
+msgstr ""
+"Esta opció inicia l'editor de tasques pendents de KOrganizer amb els valors "
+"inicials extrets del missatge seleccionat. Llavors podreu editar la tasca "
+"pendent al vostre gust abans de guardar-la al vostre calendari."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"External Script\" Plugin"
+msgstr "Configuració del connector «Script extern»"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
+#, kde-format
+msgid "Add Script..."
+msgstr "Afig un script..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
+#, kde-format
+msgid "Remove Script"
+msgstr "Elimina l'script"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
+#, kde-format
+msgid "Modify Script..."
+msgstr "Modifica l'script..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
+#, kde-format
+msgid "External Script:"
+msgstr "Script extern:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
+#, kde-format
+msgid "Do you want to remove this script \"%1\"?"
+msgstr "Voleu eliminar este script «%1»?"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
+#, kde-format
+msgid "Remove External Script"
+msgstr "Elimina l'script extern"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:20
+#, kde-format
+msgctxt "@title:window"
+msgid "Add or Modify External Script"
+msgstr "Afig o modifica l'script extern"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:28
+#, kde-format
+msgid "Name:"
+msgstr "Nom:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:32
+#, kde-format
+msgid "Description:"
+msgstr "Descripció:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
+#, kde-format
+msgid "Add command arguments..."
+msgstr "Afig arguments a la línia d'ordres..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
+#, kde-format
+msgid "Command Line:"
+msgstr "Línia d'ordres:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
+#, kde-format
+msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgstr ""
+"<qt><a href=\"whatsthis\">Informació sobre el format dels arguments...</a></"
+"qt>"
+
+# skip-rule: t-sp_in
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
+#, kde-format
+msgid ""
+"<qt><p><strong>These expressions may be used for the arguments:</strong></"
+"p><ul><li>%s - the subject of message</li><li>%from - the from email "
+"address</li><li>%cc - the list of cc email address</li><li>%bcc - the list "
+"of bcc email address</li><li>%body - the body of message</li><li>%inreplyto "
+"- the reply email address</li><li>%akonadiUrl - the akonadi url (as akonadi:?"
+"item=187020)</li></ul></strong></p></qt>"
+msgstr ""
+"<qt><p><strong>Per ala arguments es poden utilitzar estes expressions:</"
+"strong></p><ul><li>%s - l'assumpte del missatge</li><li>%from - l'adreça de "
+"correu electrònic del remitent</li><li>%cc - la llista d'adreces de correu "
+"electrònic CC</li><li>%bcc - la llista d'adreces de correu electrònic BCC</"
+"li><li>%body - el cos del missatge</li><li>%inreplyto - l'adreça de correu "
+"electrònic de resposta</li><li>%akonadiUrl - l'URL de l'akonadi (com "
+"akonadi:?item=187020)</li></ul></strong></p></qt>"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
+#, kde-format
+msgid "Executable:"
+msgstr "Executable:"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#, kde-format
+msgid "'%1' not found"
+msgstr "No s'ha trobat «%1»"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#, kde-format
+msgid "Executable not found."
+msgstr "No s'ha trobat l'executable."
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:85
+#, kde-format
+msgid "Impossible to start executable"
+msgstr "Impossible iniciar l'executable"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
+#, kde-format
+msgid "External Script"
+msgstr "Script extern"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:129
+#, kde-format
+msgid "Configure"
+msgstr "Configura"

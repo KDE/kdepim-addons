@@ -1,0 +1,157 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"PO-Revision-Date: 2022-09-20 01:55\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/kdepim-addons/"
+"messageviewer_semantic_plugin.pot\n"
+"X-Crowdin-File-ID: 6538\n"
+
+#: itineraryurlhandler.cpp:112 templates/itinerary.html:76
+#, kde-format
+msgid "Send to %1"
+msgstr "发送给 %1"
+
+#: itineraryurlhandler.cpp:126
+#, kde-format
+msgid "Show calendar at the time of this reservation."
+msgstr "显示此预约时间对应的日历"
+
+#: itineraryurlhandler.cpp:129
+#, kde-format
+msgid "Add reservation to your calendar."
+msgstr "将预约添加到您的日历中。"
+
+#: itineraryurlhandler.cpp:132
+#, kde-format
+msgid "Import reservation into KDE Itinerary."
+msgstr "将预约导入到 KDE 行程中。"
+
+#: itineraryurlhandler.cpp:135
+#, kde-format
+msgid "Send this reservation to a device using KDE Connect."
+msgstr "通过 KDE Connect 发送此预约。"
+
+#: itineraryurlhandler.cpp:206
+#, kde-format
+msgid "Boarding Pass"
+msgstr "登机牌"
+
+#: itineraryurlhandler.cpp:207
+#, kde-format
+msgid "Ticket"
+msgstr "票"
+
+#: templates/actions.html:4
+msgid "View"
+msgstr "查看"
+
+#: templates/actions.html:6
+msgid "Download"
+msgstr "下载"
+
+#: templates/actions.html:8
+msgid "Modify"
+msgstr "修改"
+
+#: templates/actions.html:10
+msgid "Cancel"
+msgstr "取消"
+
+#: templates/actions.html:12
+msgid "Check-In"
+msgstr "值机"
+
+#: templates/boatreservation.html:9 templates/busreservation.html:12
+#: templates/flightreservation.html:13 templates/trainreservation.html:12
+msgid "Reservation canceled."
+msgstr "预约已取消。"
+
+#: templates/busreservation.html:49 templates/busreservation.html:69
+#: templates/flightreservation.html:62 templates/flightreservation.html:79
+#: templates/trainreservation.html:62 templates/trainreservation.html:90
+#, kde-format
+msgid "Seat: %1"
+msgstr "座位：%1"
+
+#: templates/event.html:3 templates/foodestablishmentreservation.html:3
+#: templates/lodgingreservation.html:3
+msgid "Canceled:"
+msgstr "已取消："
+
+#: templates/flightreservation.html:50
+#, kde-format
+msgid "Gate: %1"
+msgstr "登机口：%1"
+
+#: templates/flightreservation.html:54
+#, kde-format
+msgid "Boarding: %1"
+msgstr "登机：%1"
+
+#: templates/flightreservation.html:58 templates/flightreservation.html:78
+#, kde-format
+msgid "Group: %1"
+msgstr "组：%1"
+
+#: templates/foodestablishmentreservation.html:9
+#, kde-format
+msgid "Number Of People: %1"
+msgstr "总人数：%1"
+
+#: templates/foodestablishmentreservation.html:12
+#: templates/taxireservation.html:2
+#, kde-format
+msgid "Reservation Number: %1"
+msgstr "预约号：%1"
+
+#: templates/foodestablishmentreservation.html:15
+#: templates/taxireservation.html:4
+#, kde-format
+msgid "Under Name: %1"
+msgstr "名下： %1"
+
+#: templates/itinerary.html:66
+msgid "Show Calendar"
+msgstr "显示日历"
+
+#: templates/itinerary.html:69
+msgid "Add to Calendar"
+msgstr "添加到日历"
+
+#: templates/itinerary.html:72
+msgid "Add to KDE Itinerary"
+msgstr "添加到 KDE 行程"
+
+#: templates/itinerary.html:78
+msgid "Send to Device..."
+msgstr "发送到设备..."
+
+#: templates/location.html:4
+msgid "Show location on map"
+msgstr "在地图上显示所在位置"
+
+#: templates/location.html:10
+msgid "Search address on map"
+msgstr "在地图中搜索地址"
+
+#: templates/trainreservation.html:54 templates/trainreservation.html:82
+#, kde-format
+msgid "Class: %1"
+msgstr "仓位：%1"
+
+#: templates/trainreservation.html:58 templates/trainreservation.html:86
+#, kde-format
+msgid "Coach: %1"
+msgstr "客车：%1"

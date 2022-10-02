@@ -1,0 +1,116 @@
+# translation of kmail_text_vcard_plugin.po to Punjabi
+# Copyright (C) 2004, 2007 Free Software Foundation, Inc.
+#
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004.
+# A S Alam <aalam@users.sf.net>, 2007, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kmail_text_vcard_plugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"PO-Revision-Date: 2010-02-01 21:46+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+
+#: text_vcard.cpp:87
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "Attached business card"
+msgid_plural "Attached business cards"
+msgstr[0] "ਵਪਾਰਿਕ ਕਾਰਡ ਨੱਥੀ ਕਰੋ"
+msgstr[1] "ਵਪਾਰਿਕ ਕਾਰਡ ਨੱਥੀ ਕਰੋ"
+
+#: text_vcard.cpp:129
+#, kde-format
+msgid "[Add this contact to the address book]"
+msgstr "[ਇਹ ਸੰਪਰਕ ਐਡਰੈੱਸ ਬੁੱਕ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ]"
+
+#: text_vcard.cpp:135
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "[Update this contact in the address book]"
+msgstr "[ਇਹ ਸੰਪਰਕ ਐਡਰੈੱਸ ਬੁੱਕ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ]"
+
+#: text_vcard.cpp:140
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "[This contact is already in addressbook]"
+msgstr "[ਇਹ ਸੰਪਰਕ ਐਡਰੈੱਸ ਬੁੱਕ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ]"
+
+#: text_vcard.cpp:222
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "View Business Card"
+msgstr "ਵਪਾਰਿਕ ਕਾਰਡ ਨੱਥੀ ਕਰੋ"
+
+#: text_vcard.cpp:223
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "Save Business Card As..."
+msgstr "ਵਪਾਰਿਕ ਕਾਰਡ ਨੱਥੀ ਕਰੋ"
+
+#: text_vcard.cpp:240
+#, kde-format
+msgid "Add this contact to the address book."
+msgstr "ਇਹ ਸੰਪਰਕ ਸਿਰਨਾਵਾਂ ਕਿਤਾਬ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ"
+
+#: text_vcard.cpp:240
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "Update this contact to the address book."
+msgstr "[ਇਹ ਸੰਪਰਕ ਐਡਰੈੱਸ ਬੁੱਕ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ]"
+
+#: text_vcard.cpp:242
+#, fuzzy, kde-format
+#| msgid "Add this contact to the address book."
+msgid "Add \"%1\" to the address book."
+msgstr "ਇਹ ਸੰਪਰਕ ਸਿਰਨਾਵਾਂ ਕਿਤਾਬ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ"
+
+#: text_vcard.cpp:242
+#, fuzzy, kde-format
+#| msgid "Add this contact to the address book."
+msgid "Update \"%1\" to the address book."
+msgstr "ਇਹ ਸੰਪਰਕ ਸਿਰਨਾਵਾਂ ਕਿਤਾਬ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ"
+
+#: text_vcard.cpp:266
+#, fuzzy, kde-format
+#| msgid "Attached business cards"
+msgid "Save Business Card"
+msgstr "ਵਪਾਰਿਕ ਕਾਰਡ ਨੱਥੀ ਕਰੋ"
+
+#: updatecontactjob.cpp:37
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "The vCard's primary email address is not in addressbook."
+msgstr "[ਇਹ ਸੰਪਰਕ ਐਡਰੈੱਸ ਬੁੱਕ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ]"
+
+#: updatecontactjob.cpp:43
+#, fuzzy, kde-format
+#| msgid "[Add this contact to the address book]"
+msgid "There are two or more contacts with same email stored in addressbook."
+msgstr "[ਇਹ ਸੰਪਰਕ ਐਡਰੈੱਸ ਬੁੱਕ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ]"
+
+#: updatecontactjob.cpp:65
+#, kde-format
+msgid ""
+"The vCard was updated in your address book; you can add more information to "
+"this entry by opening the address book."
+msgstr ""
+
+#: updatecontactjob.cpp:76
+#, kde-format
+msgid "Email not specified"
+msgstr ""
+
+#~ msgid "Add"
+#~ msgstr "ਸ਼ਾਮਲ"
+
+#~ msgid "Remove"
+#~ msgstr "ਹਟਾਓ"

@@ -1,0 +1,99 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2016-04-10 08:14+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Översättning"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "Översä&ttare"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Översättning"
+
+#~ msgid "Configure engine"
+#~ msgstr "Anpassa gränssnitt"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Välj server för kort webbadress:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Fel rapporterat av servern:\n"
+#~ "'%1'"
+
+#~ msgid "Close"
+#~ msgstr "Stäng"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Skapar avkortad webbadress..."
+
+#~ msgid "Configure..."
+#~ msgstr "Anpassa..."
+
+#~ msgid "Convert"
+#~ msgstr "Konvertera"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Infoga kort webbadress"
+
+#~ msgid "Original URL:"
+#~ msgstr "Ursprunglig webbadress:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Kopiera till klippbordet"
+
+#~ msgid "Short URL:"
+#~ msgstr "Kort webbadress:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Öppna kort webbadress"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr ""
+#~ "Ingen nätverksanslutning detekterad, webbadressen kan inte avkortas."
+
+#~ msgid "No network"
+#~ msgstr "Inget nätverk"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Ett fel uppstod: \"%1\""
+
+#~ msgid "Short URL"
+#~ msgstr "Kort webbadress"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Skapa avkortad webbadress"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "Skapa kort webbadress pågår..."
+
+#~ msgid "Short url:"
+#~ msgstr "Kort webbadress:"
+
+#~ msgid "Short url"
+#~ msgstr "Kort webbadress"

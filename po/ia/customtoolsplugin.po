@@ -1,0 +1,91 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# giovanni <g.sora@tiscali.it>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2017-02-05 23:34+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-it@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Traductor"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "&Traductor"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Traductor"
+
+#~ msgid "Configure engine"
+#~ msgstr "Configura  motor"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Selige servitor de URL breve:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Error reportate per le servitor: \n"
+#~ "'%1'"
+
+#~ msgid "Close"
+#~ msgstr "Claude"
+
+#, fuzzy
+#~ msgid "Configure..."
+#~ msgstr "Configura..."
+
+#~ msgid "Convert"
+#~ msgstr "Converte"
+
+#, fuzzy
+#~ msgid "Insert Short URL"
+#~ msgstr "Inserta Url breve"
+
+#, fuzzy
+#~ msgid "Original URL:"
+#~ msgstr "Url original:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Copia in area de transferentia"
+
+#, fuzzy
+#~ msgid "Short URL:"
+#~ msgstr "Url breve:"
+
+#, fuzzy
+#~ msgid "Open Short URL"
+#~ msgstr "Aperi Url breve"
+
+#, fuzzy
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr "Il non relevava alcun connexion de rete, nos non pote curtar url."
+
+#~ msgid "No network"
+#~ msgstr "Necun rete"
+
+#, fuzzy
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Un error occurreva: %1"
+
+#, fuzzy
+#~ msgid "Short URL"
+#~ msgstr "Url breve:"

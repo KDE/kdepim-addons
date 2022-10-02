@@ -1,0 +1,1600 @@
+# Korean messages for kaddressbook
+# Copyright (C) 2001, 2007 Free Software Foundation, Inc.
+# KIM HyoungSuk <mire@mizi.com>, 2001.
+# Shinjo Park <kde@peremen.name>, 2007, 2009, 2011, 2019, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kaddressbook\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2022-05-06 00:21+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: csv/csvimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Export CSV file..."
+msgstr "CSV 파일 내보내기..."
+
+#: csv/csvimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Export contacts to a file in comma separated value format."
+msgstr "연락처를 CSV 파일로 내보냅니다."
+
+#: csv/csvimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Import CSV file..."
+msgstr "CSV 파일 가져오기..."
+
+#: csv/csvimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Import contacts from a file in comma separated value format."
+msgstr "CSV 형식 파일에서 주소록을 가져옵니다."
+
+#: csv/csvimportexportplugininterface.cpp:152
+#: gmx/gmximportexportplugininterface.cpp:80
+#: ldif/ldifimportexportplugininterface.cpp:130
+#: vcards/vcardimportexportplugininterface.cpp:370
+#, kde-format
+msgid "Which contact do you want to export?"
+msgstr "어떤 연락처를 내보내시겠습니까?"
+
+#: csv/csvimportexportplugininterface.cpp:162
+#: gmx/gmximportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:140
+#: vcards/vcardimportexportplugininterface.cpp:382
+#, kde-format
+msgid "You have not selected any contacts to export."
+msgstr "내보낼 연락처를 선택하지 않았습니다."
+
+#: csv/csvimportexportplugininterface.cpp:191
+#: gmx/gmximportexportplugininterface.cpp:124
+#: ldif/ldifimportexportplugininterface.cpp:161
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>파일 <b>%1</b>을(를) 열 수 없습니다</qt>"
+
+#: csv/csvimportexportplugininterface.cpp:203
+#: gmx/gmximportexportplugininterface.cpp:139
+#: ldif/ldifimportexportplugininterface.cpp:191
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>파일 <b>%1</b>을(를) 열 수 없습니다.</qt>"
+
+#: csv/import/csvimportdialog.cpp:168
+#, kde-format
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "CSV 가져오기 대화 상자"
+
+#: csv/import/csvimportdialog.cpp:223
+#, kde-format
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "연락처 가져오기"
+
+#: csv/import/csvimportdialog.cpp:294
+#, kde-format
+msgctxt "@label"
+msgid "File to import:"
+msgstr "가져올 파일:"
+
+#: csv/import/csvimportdialog.cpp:302
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "가져올 CSV 파일 선택"
+
+#: csv/import/csvimportdialog.cpp:304
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr ""
+"이 단추를 클릭하면 가져올 CSV 파일을 선택할 수 있는 파일 선택 대화 상자를 엽"
+"니다."
+
+#: csv/import/csvimportdialog.cpp:311
+#, kde-format
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "구분자"
+
+#: csv/import/csvimportdialog.cpp:321
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "쉼표"
+
+#: csv/import/csvimportdialog.cpp:322
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr "필드 구분자를 쉼표로 설정"
+
+#: csv/import/csvimportdialog.cpp:323
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr "CSV 파일에서 쉼표를 필드 구분자로 사용한다면 이 옵션을 선택하십시오."
+
+#: csv/import/csvimportdialog.cpp:328
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "쌍반점"
+
+#: csv/import/csvimportdialog.cpp:329
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr "필드 구분자를 쌍반점으로 설정"
+
+#: csv/import/csvimportdialog.cpp:330
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr "CSV 파일에서 쌍반점을 필드 구분자로 사용한다면 이 옵션을 선택하십시오."
+
+#: csv/import/csvimportdialog.cpp:334
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr "탭 문자"
+
+#: csv/import/csvimportdialog.cpp:335
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr "필드 구분자를 탭 문자로 설정"
+
+#: csv/import/csvimportdialog.cpp:336
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr ""
+"CSV 파일에서 탭 문자를 필드 구분자로 사용한다면 이 옵션을 선택하십시오."
+
+#: csv/import/csvimportdialog.cpp:340
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "공백"
+
+#: csv/import/csvimportdialog.cpp:341
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "필드 구분자를 공백 문자로 설정"
+
+#: csv/import/csvimportdialog.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr ""
+"CSV 파일에서 공백 문자를 필드 구분자로 사용한다면 이 옵션을 선택하십시오."
+
+#: csv/import/csvimportdialog.cpp:346
+#, kde-format
+msgctxt "@option:radio Custom field separator"
+msgid "Other"
+msgstr "기타"
+
+#: csv/import/csvimportdialog.cpp:347
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr "필드 구분자를 사용자 정의 문자로 설정"
+
+#: csv/import/csvimportdialog.cpp:349
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr ""
+"CSV 파일에서 사용자 정의 문자를 필드 구분자로 사용한다면 이 옵션을 선택하십시"
+"오."
+
+#: csv/import/csvimportdialog.cpp:355
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "사용자 정의 구분자 선택"
+
+#: csv/import/csvimportdialog.cpp:357
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+"구분자로 사용할 사용자 정의 문자를 입력하십시오. 1글자 이상을 입력하면 첫 글"
+"자만 구분자로 취급합니다."
+
+#: csv/import/csvimportdialog.cpp:363
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "따옴표:"
+
+#: csv/import/csvimportdialog.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "따옴표 문자 선택"
+
+#: csv/import/csvimportdialog.cpp:371
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+"CSV 파일의 데이터에 필드 구분자가 들어 있을 경우 해당 필드를 둘러싸는 \"따옴"
+"표\" 문자를 선택하십시오. 예를 들어서 쉼표를 필드 구분자로 사용한다면 데이터"
+"에 쉼표가 들어 있는 경우에 여기에 지정한 \"따옴표\" 문자로 둘러쌉니다."
+
+#: csv/import/csvimportdialog.cpp:376
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "\""
+msgstr "\""
+
+#: csv/import/csvimportdialog.cpp:377
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr "'"
+
+#: csv/import/csvimportdialog.cpp:378
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "없음"
+
+#: csv/import/csvimportdialog.cpp:382
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "날짜 형식:"
+
+#: csv/import/csvimportdialog.cpp:390
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+"<para><list><item>y: 2자리 연도</item><item>Y: 4자리 연도</item> <item>m: 1자"
+"리나 2자리 달</item><item>M: 2자리 달</item> <item>d: 1자리나 2자리 날짜</"
+"item><item>D: 2자리 짜</item> <item>H: 2자리 시간</item><item>I: 2자리 분</"
+"item> <item>S: 2자리 초</item></list></para>"
+
+#: csv/import/csvimportdialog.cpp:401
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+"<para>CSV 데이터에 있는 날짜 형식을 선택하십시오. 다음 문자를 사용하여 형식"
+"을 지정할 수 있습니다:</para><para><list><item>y: 2자리 연도</item><item>Y: 4"
+"자리 연도</item> <item>m: 1자리나 2자리 달</item><item>M: 2자리 달</item> "
+"<item>d: 1자리나 2자리 날짜</item><item>D: 2자리 짜</item> <item>H: 2자리 시"
+"간</item><item>I: 2자리 분</item> <item>S: 2자리 초</item></list></"
+"para><para>예: \"Y-M-D\"를 지정하면 \"2012-01-04\"와 같은 날짜에 해당합니다."
+"</para>"
+
+#: csv/import/csvimportdialog.cpp:417
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "문자열 인코딩:"
+
+#: csv/import/csvimportdialog.cpp:423
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "문자열 인코딩 선택"
+
+#: csv/import/csvimportdialog.cpp:424
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr "CSV 파일의 문자 인코딩을 선택하십시오."
+
+#: csv/import/csvimportdialog.cpp:428
+#, kde-format
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr "파일의 첫 줄 건너뛰기"
+
+#: csv/import/csvimportdialog.cpp:430
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr "가져올 때 CSV 파일의 첫 줄 건너뛰기"
+
+#: csv/import/csvimportdialog.cpp:432
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+"이 옵션을 선택하면 CSV 데이터를 가져올 때 첫 줄을 건너뜁니다. 대개 CSV 파일"
+"의 첫 줄은 파일의 데이터 필드를 나타내는 주석 항목입니다."
+
+#: csv/import/csvimportdialog.cpp:448
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "템플릿 적용..."
+
+#: csv/import/csvimportdialog.cpp:449
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "템플릿 저장..."
+
+#: csv/import/csvimportdialog.cpp:470
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "지역(%1)"
+
+#: csv/import/csvimportdialog.cpp:471
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "Latin1"
+
+#: csv/import/csvimportdialog.cpp:472
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "유니코드"
+
+#: csv/import/csvimportdialog.cpp:473
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "마이크로소프트 유니코드"
+
+#: csv/import/csvimportdialog.cpp:574
+#, kde-format
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr "최소한 하나의 열을 지정해야 합니다."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "사용할 수 있는 템플릿이 없습니다."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "템플릿 없음"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "템플릿 이름"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "템플릿 이름을 입력하십시오:"
+
+#: csv/import/csvimportdialog.cpp:699
+#, kde-format
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "입력 파일을 열 수 없습니다."
+
+#: csv/import/qcsvreader.cpp:92
+#, kde-format
+msgid "Device is not open"
+msgstr "장치가 열리지 않았음"
+
+#: csv/import/templateselectiondialog.cpp:182
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr "템플릿 '%1'을(를) 삭제하시겠습니까?"
+
+#: csv/import/templateselectiondialog.cpp:203
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "템플릿 선택"
+
+#: csv/import/templateselectiondialog.cpp:206
+#, kde-format
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr "CSV 파일과 일치하는 템플릿을 선택하십시오:"
+
+#: gmx/gmximportexportplugininterface.cpp:25
+#, kde-format
+msgid "GMX address book file (*.gmxa)"
+msgstr "GMX 주소록 파일 (*.gmxa)"
+
+#: gmx/gmximportexportplugininterface.cpp:40
+#, kde-format
+msgid "Import GMX file..."
+msgstr "GMX 파일 가져오기..."
+
+#: gmx/gmximportexportplugininterface.cpp:41
+#, kde-format
+msgid "Import contacts from a GMX address book file."
+msgstr "GMX 주소록 파일에서 연락처를 가져옵니다."
+
+#: gmx/gmximportexportplugininterface.cpp:46
+#, kde-format
+msgid "Export GMX file..."
+msgstr "GMX 파일 내보내기..."
+
+#: gmx/gmximportexportplugininterface.cpp:47
+#, kde-format
+msgid "Export contacts to a GMX address book file."
+msgstr "연락처를 GMX 주소록 파일로 내보냅니다."
+
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:80
+#: windows-contacts/importwindowcontact.cpp:26
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt>파일 <b>%1</b>에서 읽으려고 열 수 없습니다.</qt>"
+
+#: gmx/gmximportexportplugininterface.cpp:455
+#, kde-format
+msgid "%1 is not a GMX address book file."
+msgstr "%1은(는) GMX 주소록 파일이 아닙니다."
+
+#: ldap/ldapimportexportplugininterface.cpp:25
+#, kde-format
+msgid "Import From LDAP server..."
+msgstr "LDAP 서버에서 가져오기..."
+
+#: ldap/ldapimportexportplugininterface.cpp:26
+#, kde-format
+msgid "Import contacts from an LDAP server."
+msgstr "LDAP 서버에서 연락처를 가져옵니다."
+
+#: ldif/ldifimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Import LDIF file..."
+msgstr "LDIF 파일 가져오기..."
+
+#: ldif/ldifimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Import contacts from an LDIF file."
+msgstr "LDIF 파일에서 연락처를 가져옵니다."
+
+#: ldif/ldifimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Export LDIF file..."
+msgstr "LDIF 파일 내보내기..."
+
+#: ldif/ldifimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Export contacts to an LDIF file."
+msgstr "연락처를 LDIF 파일로 내보냅니다."
+
+#: ldif/ldifimportexportplugininterface.cpp:110
+#, kde-format
+msgid "LDif Files"
+msgstr "LDif 파일"
+
+#: ldif/ldifimportexportplugininterface.cpp:151
+#, kde-format
+msgid "LDif Files (*.ldif)"
+msgstr "LDif 파일 (*.ldif)"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:22
+#, kde-format
+msgctxt "@title:group"
+msgid "Fields to be exported"
+msgstr "내보낼 필드"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Private fields"
+msgstr "개인 필드"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export private fields"
+msgstr "개인 필드 내보내기"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:32
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's private fields to the "
+"vCard output file."
+msgstr "이 옵션을 선택하면 vCard 출력 파일로 연락처 개인 필드를 내보냅니다."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Business fields"
+msgstr "직장 필드"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export business fields"
+msgstr "직장 필드 내보내기"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's business fields to the "
+"vCard output file."
+msgstr "이 옵션을 선택하면 vCard 출력 파일로 연락처 직장 필드를 내보냅니다."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:43
+#, kde-format
+msgctxt "@option:check"
+msgid "Other fields"
+msgstr "기타 필드"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export other fields"
+msgstr "기타 필드 내보내기"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:46
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's other fields to the vCard "
+"output file."
+msgstr "이 옵션을 선택하면 vCard 출력 파일로 연락처 기타 필드를 내보냅니다."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:50
+#, kde-format
+msgctxt "@option:check"
+msgid "Encryption keys"
+msgstr "암호화 키"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export encryption keys"
+msgstr "암호화 키 내보내기"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:53
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's encryption keys to the "
+"vCard output file."
+msgstr "이 옵션을 선택하면 vCard 출력 파일로 연락처의 암호화 키를 내보냅니다."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:57
+#, kde-format
+msgctxt "@option:check"
+msgid "Pictures"
+msgstr "그림"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:58
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export pictures"
+msgstr "그림 내보내기"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:60
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's picture to the vCard "
+"output file."
+msgstr "이 옵션을 선택하면 vCard 출력 파일로 연락처 그림을 내보냅니다."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:64
+#, kde-format
+msgctxt "@title:group"
+msgid "Export options"
+msgstr "내보내기 옵션"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:70
+#, kde-format
+msgctxt "@option:check"
+msgid "Display name as full name"
+msgstr "전체 이름으로 표시 이름 지정"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export display name as full name"
+msgstr "표시 이름을 연락처 전체 이름으로 내보내기"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:73
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's display name in the "
+"vCard's full name field.  This may be required to get the name shown "
+"correctly in GMail or Android."
+msgstr ""
+"이 옵션을 선택하면 vCard의 전체 이름 필드로 연락처의 표시 이름을 내보냅니다. "
+"GMail이나 Android 등에서 이름을 올바르게 표시하려면 선택해야 할 수도 있습니"
+"다."
+
+#: vcards/engine/vcardviewerdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Import vCard"
+msgstr "vCard 가져오기"
+
+#: vcards/engine/vcardviewerdialog.cpp:51
+#, kde-format
+msgctxt "@info"
+msgid "Do you want to import this contact into your address book?"
+msgstr "이 연락처를 주소록으로 가져오시겠습니까?"
+
+#: vcards/engine/vcardviewerdialog.cpp:61
+#, kde-format
+msgctxt "@action:button"
+msgid "Import All..."
+msgstr "모두 가져오기..."
+
+#: vcards/vcardimportexportplugininterface.cpp:44
+#, kde-format
+msgid "Import vCard..."
+msgstr "vCard 가져오기..."
+
+#: vcards/vcardimportexportplugininterface.cpp:45
+#, kde-format
+msgid "Import contacts from a vCard file."
+msgstr "vCard 파일에서 연락처를 가져옵니다."
+
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, kde-format
+msgid "Export contacts to a vCard 4.0 file."
+msgstr "연락처를 vCard 4.0 파일로 내보냅니다."
+
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, kde-format
+msgid "Export vCard 4.0..."
+msgstr "vCard 4.0 내보내기..."
+
+#: vcards/vcardimportexportplugininterface.cpp:58
+#, kde-format
+msgid "Export vCard 3.0..."
+msgstr "vCard 3.0 내보내기..."
+
+#: vcards/vcardimportexportplugininterface.cpp:59
+#, kde-format
+msgid "Export contacts to a vCard 3.0 file."
+msgstr "연락처를 vCard 3.0 파일로 내보냅니다."
+
+#: vcards/vcardimportexportplugininterface.cpp:64
+#, kde-format
+msgid "Export vCard 2.1..."
+msgstr "vCard 2.1 내보내기..."
+
+#: vcards/vcardimportexportplugininterface.cpp:65
+#, kde-format
+msgid "Export contacts to a vCard 2.1 file."
+msgstr "연락처를 vCard 2.1 파일로 내보냅니다."
+
+#: vcards/vcardimportexportplugininterface.cpp:113
+#, kde-format
+msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
+msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;모든 파일 (*)"
+
+#: vcards/vcardimportexportplugininterface.cpp:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Select vCard to Import"
+msgstr "가져올 vCard 선택"
+
+#: vcards/vcardimportexportplugininterface.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "vCard Import Failed"
+msgstr "vCard 가져오기 실패"
+
+#: vcards/vcardimportexportplugininterface.cpp:134
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Unable to access vCard:</para><para>%1</para>"
+msgstr "<para>vCard에 접근할 수 없음:</para><para>%1</para>"
+
+#: vcards/vcardimportexportplugininterface.cpp:436
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have selected a list of contacts, shall they be exported to several "
+"files?"
+msgstr "한 명 이상의 연락처를 선택하셨습니다. 여러 파일로 내보내시겠습니까?"
+
+#: vcards/vcardimportexportplugininterface.cpp:439
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to One File"
+msgstr "한 파일로 내보내기"
+
+#: vcards/vcardimportexportplugininterface.cpp:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to Several Files"
+msgstr "여러 파일로 내보내기"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#, kde-format
+msgid "Import Windows Contact file..."
+msgstr "Windows 연락처 파일 가져오기..."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#, kde-format
+msgid "Import contacts from windows contact file."
+msgstr "Windows 연락처 파일에서 연락처를 가져옵니다."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#, kde-format
+msgid "Windows Contact file (*.contact)"
+msgstr "Windows 연락처 파일 (*.contact)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Address Book"
+#~ msgstr "주소록 선택"
+
+#~ msgid "Select the address book the imported contact(s) shall be saved in:"
+#~ msgstr "가져온 연락처를 저장할 주소록을 선택하십시오:"
+
+#~ msgctxt "@title:window"
+#~ msgid "Import Contacts"
+#~ msgstr "연락처 가져오기"
+
+#~ msgid "Importing one contact to %2"
+#~ msgid_plural "Importing %1 contacts to %2"
+#~ msgstr[0] "연락처 %1명을 %2(으)로 가져오는 중"
+
+#, fuzzy
+#~| msgid "No contacts were imported, due to errors with the vCards."
+#~ msgctxt "@info"
+#~ msgid "No contacts were imported, due to errors with the vCards."
+#~ msgstr "vCard에 오류가 발생해서 어떠한 연락처도 가져오지 않았습니다."
+
+#, fuzzy
+#~| msgid "The vCard does not contain any contacts."
+#~ msgctxt "@info"
+#~ msgid "The vCard does not contain any contacts."
+#~ msgstr "이 vCard에는 연락처 정보가 없습니다."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Shinjo Park"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact..."
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact."
+#~ msgstr "프로그램 단축키를 설정할 수 있는 대화 상자가 표시됩니다."
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact Group..."
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact "
+#~ "group."
+#~ msgstr "프로그램 단축키를 설정할 수 있는 대화 상자가 표시됩니다."
+
+#~ msgid "KAddressBook"
+#~ msgstr "KAddressBook"
+
+#~ msgid "The KDE Address Book Application"
+#~ msgstr "KDE 주소록"
+
+#, fuzzy
+#~| msgid "Copyright © 2007–2010 KAddressBook authors"
+#~ msgid "Copyright © 2007–2016 KAddressBook authors"
+#~ msgstr "저작권자 © 2007–2010 KAddressBook 작성자"
+
+#~ msgid "Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgid "Current maintainer"
+#~ msgstr "현재 관리자"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
+
+#, fuzzy
+#~| msgid "Current maintainer"
+#~ msgid "Previous maintainer"
+#~ msgstr "현재 관리자"
+
+#, fuzzy
+#~| msgctxt "@item:inlistbox Quote character option"
+#~| msgid "None"
+#~ msgid "(None)"
+#~ msgstr "없음"
+
+#, fuzzy
+#~| msgid "Laurent Montel"
+#~ msgid "(c), 2016 Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgctxt "@item Undefined import field type"
+#~ msgid "Undefined"
+#~ msgstr "정의되지 않음"
+
+#, fuzzy
+#~| msgid "Anniversary"
+#~ msgctxt "The wedding anniversary of a contact"
+#~ msgid "Anniversary"
+#~ msgstr "기념일"
+
+#~ msgctxt "Preferred email address"
+#~ msgid "EMail (preferred)"
+#~ msgstr "이메일 (선호)"
+
+#~ msgctxt "Second email address"
+#~ msgid "EMail (2)"
+#~ msgstr "이메일 (2)"
+
+#~ msgctxt "Third email address"
+#~ msgid "EMail (3)"
+#~ msgstr "이메일 (3)"
+
+#~ msgctxt "Fourth email address"
+#~ msgid "EMail (4)"
+#~ msgstr "이메일 (4)"
+
+#~ msgid "Blog Feed"
+#~ msgstr "블로그 피드"
+
+#~ msgid "Profession"
+#~ msgstr "직업"
+
+#~ msgid "Office"
+#~ msgstr "사무실"
+
+#~ msgid "Manager"
+#~ msgstr "관리자"
+
+#~ msgid "Assistant"
+#~ msgstr "비서"
+
+#~ msgid "Spouse"
+#~ msgstr "배우자"
+
+#~ msgid "Select Contacts"
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid "All contacts"
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts"
+#~ msgstr "모든 연락처"
+
+#, fuzzy
+#~| msgid "Import contacts from a GMX address book file."
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from all your address books"
+#~ msgstr "GMX 주소록 파일에서 연락처를 가져옵니다."
+
+#, fuzzy
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option you want to select all your contacts from all your "
+#~ "address books."
+#~ msgstr "K주소록"
+
+#, fuzzy
+#~| msgid "Selected contacts"
+#~ msgctxt "@option:radio"
+#~ msgid "Selected contacts"
+#~ msgstr "선택한 연락처"
+
+#, fuzzy
+#~ msgctxt "@info:tooltip"
+#~ msgid "Only the contacts currently selected"
+#~ msgstr "새로운 연결(&N)"
+
+#, fuzzy
+#~| msgid "All contacts from:"
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts from:"
+#~ msgstr "다음의 모든 연락처:"
+
+#, fuzzy
+#~| msgid "Import contacts from a GMX address book file."
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from a chosen address book"
+#~ msgstr "GMX 주소록 파일에서 연락처를 가져옵니다."
+
+#, fuzzy
+#~| msgid "Include Subfolders"
+#~ msgctxt "@option:check"
+#~ msgid "Include Subfolders"
+#~ msgstr "하위 폴더 포함"
+
+#, fuzzy
+#~| msgctxt "Previous contact"
+#~| msgid "Previous"
+#~ msgctxt "@action:button Previous contact"
+#~ msgid "Previous"
+#~ msgstr "이전"
+
+#, fuzzy
+#~| msgctxt "Next contact"
+#~| msgid "Next"
+#~ msgctxt "@action:button Next contact"
+#~ msgid "Next"
+#~ msgstr "다음"
+
+#, fuzzy
+#~| msgid "%1 out of %2"
+#~ msgctxt "@info:status"
+#~ msgid "%1 out of %2"
+#~ msgstr "%2 중 %1"
+
+#, fuzzy
+#~| msgid "Import CSV file..."
+#~ msgid "Import the given file"
+#~ msgstr "CSV 파일 가져오기..."
+
+#, fuzzy
+#~| msgid "Import KDE 2 Addressbook..."
+#~ msgid "&Configure KAddressBook..."
+#~ msgstr "KDE 2 주소록 가져오기..."
+
+#~ msgid "&File"
+#~ msgstr "파일(&F)"
+
+#~ msgid "&New"
+#~ msgstr "새로 만들기(&N)"
+
+#~ msgid "&Import"
+#~ msgstr "가져오기(&I)"
+
+#~ msgid "&Export"
+#~ msgstr "내보내기(&E)"
+
+#~ msgid "&Edit"
+#~ msgstr "편집(&E)"
+
+#, fuzzy
+#~| msgid "Add View"
+#~ msgid "&View"
+#~ msgstr "보기 추가"
+
+#~ msgid "&Settings"
+#~ msgstr "설정(&S)"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "주 도구 모음"
+
+#, fuzzy
+#~| msgctxt "Search contacts in list"
+#~| msgid "Search"
+#~ msgctxt "@label Search contacts in list"
+#~ msgid "Search...<%1>"
+#~ msgstr "찾기"
+
+#, fuzzy
+#~| msgid "Print the complete address book or a selected number of contacts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Print the complete address book or a selected number of contacts."
+#~ msgstr "전체 주소록을 인쇄하거나 일부만 인쇄할 수 있습니다."
+
+#~ msgid "Quick search"
+#~ msgstr "빠른 찾기"
+
+#~ msgid "Select All"
+#~ msgstr "모두 선택"
+
+#~ msgid "Select all contacts in the current address book view."
+#~ msgstr "현재 주소록 보기의 모든 연락처를 선택합니다."
+
+#~ msgid "Show a simple mode of the address book view."
+#~ msgstr "주소록 보기의 간단한 모드를 사용합니다."
+
+#~ msgid "Address Book"
+#~ msgstr "주소록"
+
+#~ msgid "Print Contacts"
+#~ msgstr "연락처 인쇄"
+
+#, fuzzy
+#~| msgid ""
+#~| "You will be presented with a dialog where you can configure the "
+#~| "application-wide shortcuts."
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can configure the "
+#~ "application-wide shortcuts."
+#~ msgstr "프로그램 단축키를 설정할 수 있는 대화 상자가 표시됩니다."
+
+#~ msgid "Full Name"
+#~ msgstr "전체 이름"
+
+#~ msgid "Family Name"
+#~ msgstr "성"
+
+#~ msgid "Given Name"
+#~ msgstr "이름"
+
+#~ msgid "Home Address"
+#~ msgstr "집 주소"
+
+#~ msgid "Business Address"
+#~ msgstr "회사 주소"
+
+#~ msgid "Phone Numbers"
+#~ msgstr "전화 번호"
+
+#~ msgid "Preferred EMail"
+#~ msgstr "선호하는 이메일 주소"
+
+#~ msgid "All EMails"
+#~ msgstr "모든 이메일 주소"
+
+#, fuzzy
+#~| msgid "Company"
+#~ msgid "Compact Style"
+#~ msgstr "회사"
+
+#~ msgid "Setting up document"
+#~ msgstr "문서 설정"
+
+#~ msgid "Printing"
+#~ msgstr "인쇄 중"
+
+#~ msgctxt "Finished printing"
+#~ msgid "Done"
+#~ msgstr "완료"
+
+#, fuzzy
+#~| msgid "Choose Printing Style"
+#~ msgid "Compact Printing Style"
+#~ msgstr "인쇄 스타일 선택"
+
+#~ msgid "Appearance"
+#~ msgstr "모양"
+
+#, fuzzy
+#~ msgid "Fields"
+#~ msgstr "필드 고르기"
+
+#, fuzzy
+#~| msgid "Home Address"
+#~ msgid "with home address"
+#~ msgstr "집 주소"
+
+#, fuzzy
+#~| msgid "Business Address"
+#~ msgid "with business address"
+#~ msgstr "회사 주소"
+
+#, fuzzy
+#~| msgid "Print Contacts"
+#~ msgid "Print the birthday"
+#~ msgstr "연락처 인쇄"
+
+#, fuzzy
+#~| msgid "Birthday"
+#~ msgid "with birthday"
+#~ msgstr "생일"
+
+#, fuzzy
+#~| msgid "Edit Email"
+#~ msgid "with e-mail"
+#~ msgstr "이메일 편집"
+
+#, fuzzy
+#~ msgid "second color"
+#~ msgstr "생일 고르기"
+
+#, fuzzy
+#~| msgid "Headline background color:"
+#~ msgid "Change the background color of every row"
+#~ msgstr "머릿글 배경색:"
+
+#, fuzzy
+#~| msgid "Headline background color:"
+#~ msgid "Alternating the background color"
+#~ msgstr "머릿글 배경색:"
+
+#~ msgid "Organization:"
+#~ msgstr "조직:"
+
+#~ msgid "Email address:"
+#~ msgstr "이메일 주소:"
+
+#~ msgid "Email addresses:"
+#~ msgstr "이메일 주소:"
+
+#~ msgid "Telephone:"
+#~ msgstr "전화 번호:"
+
+#~ msgid "Telephones:"
+#~ msgstr "전화 번호:"
+
+#~ msgid "Web page:"
+#~ msgstr "홈 페이지:"
+
+#~ msgid "Domestic Address"
+#~ msgstr "국내 주소"
+
+#~ msgid "International Address"
+#~ msgstr "국제 주소"
+
+#~ msgid "Postal Address"
+#~ msgstr "우편 주소"
+
+#~ msgid "Parcel Address"
+#~ msgstr "소포 주소"
+
+#~ msgid "Work Address"
+#~ msgstr "회사 주소"
+
+#~ msgid "Preferred Address"
+#~ msgstr "선호하는 주소"
+
+#~ msgid "Notes:"
+#~ msgstr "메모:"
+
+#~ msgid "Detailed Print Style - Appearance"
+#~ msgstr "자세한 인쇄 스타일 - 모양"
+
+#~ msgid "Setting up colors"
+#~ msgstr "색 설정"
+
+#~ msgid "Detailed Style"
+#~ msgstr "자세한 스타일"
+
+#~ msgid "Appearance Page"
+#~ msgstr "모양 페이지"
+
+#~ msgid "Contact Headers"
+#~ msgstr "연락처 머릿글"
+
+#, fuzzy
+#~| msgid "Headline background color:"
+#~ msgid "Select the headline text background color"
+#~ msgstr "머릿글 배경색:"
+
+#~ msgid "Headline background color:"
+#~ msgstr "머릿글 배경색:"
+
+#~ msgid "Headline text color:"
+#~ msgstr "머릿글 글자색:"
+
+#, fuzzy
+#~| msgid "Headline text color:"
+#~ msgid "Select the headline text color"
+#~ msgstr "머릿글 글자색:"
+
+#~ msgid "Mike's Printing Style"
+#~ msgstr "Mike의 스타일"
+
+#~ msgid "Which contacts do you want to print?"
+#~ msgstr "어떤 연락처를 인쇄하시겠습니까?"
+
+#~ msgid "Choose Contacts to Print"
+#~ msgstr "인쇄할 연락처 선택"
+
+#~ msgid "Choose Printing Style"
+#~ msgstr "인쇄 스타일 선택"
+
+#~ msgid "Print Progress"
+#~ msgstr "인쇄 진행"
+
+#~ msgid "Printing: Progress"
+#~ msgstr "인쇄: 진행 중"
+
+#~ msgid "Progress"
+#~ msgstr "진행"
+
+#~ msgid "Print Contact's Information"
+#~ msgstr "연락처 정보 인쇄"
+
+#, fuzzy
+#~| msgid "Phone numbers"
+#~ msgid "Print contact phone numbers"
+#~ msgstr "전화 번호"
+
+#~ msgid "Phone numbers"
+#~ msgstr "전화 번호"
+
+#, fuzzy
+#~| msgid "Postal addresses"
+#~ msgid "Print contact email addresses"
+#~ msgstr "우편 주소"
+
+#~ msgid "Email addresses"
+#~ msgstr "이메일 주소"
+
+#, fuzzy
+#~ msgid "Print contact street addresses"
+#~ msgstr "주소"
+
+#~ msgid "Postal addresses"
+#~ msgstr "우편 주소"
+
+#, fuzzy
+#~| msgid "Print Contact's Information"
+#~ msgid "Print contact organizations"
+#~ msgstr "연락처 정보 인쇄"
+
+#~ msgid "Organization"
+#~ msgstr "조직"
+
+#, fuzzy
+#~| msgid "Print Contacts"
+#~ msgid "Print contact birthdays"
+#~ msgstr "연락처 인쇄"
+
+#~ msgid "Birthday"
+#~ msgstr "생일"
+
+#, fuzzy
+#~| msgid "Print Contacts"
+#~ msgid "Print contact notes"
+#~ msgstr "연락처 인쇄"
+
+#~ msgid "Note"
+#~ msgstr "메모"
+
+#~ msgid "Ring Binder Printing Style - Appearance"
+#~ msgstr "링 바인더 인쇄 스타일 - 모양"
+
+#~ msgid "Setting up fields"
+#~ msgstr "필드 설정"
+
+#~ msgid "Printout for Ring Binders"
+#~ msgstr "링 바인더용으로 인쇄"
+
+#, fuzzy
+#~| msgctxt "Ascending sort order"
+#~| msgid "Ascending"
+#~ msgctxt "@item:inlistbox Ascending sort order"
+#~ msgid "Ascending"
+#~ msgstr "오름차순"
+
+#, fuzzy
+#~| msgctxt "Descending sort order"
+#~| msgid "Descending"
+#~ msgctxt "@item:inlistbox Descending sort order"
+#~ msgid "Descending"
+#~ msgstr "내림차순"
+
+#, fuzzy
+#~| msgid "(No preview available.)"
+#~ msgctxt "@label"
+#~ msgid "(No preview available.)"
+#~ msgstr "(미리 볼 수 없습니다.)"
+
+#, fuzzy
+#~| msgid "Choose Printing Style"
+#~ msgctxt "@title:window"
+#~ msgid "Choose Printing Style"
+#~ msgstr "인쇄 스타일 선택"
+
+#, fuzzy
+#~| msgid ""
+#~| "What should the print look like?\n"
+#~| "KAddressBook has several printing styles, designed for different "
+#~| "purposes.\n"
+#~| "Choose the style that suits your needs below."
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "What should the print look like?\n"
+#~ "KAddressBook has several printing styles, designed for different "
+#~ "purposes.\n"
+#~ "Choose the style that suits your needs below."
+#~ msgstr ""
+#~ "어떤 스타일로 인쇄하시겠습니까?\n"
+#~ "여러 다른 목적으로 사용할 수 있는 스타일이 준비되어 있습니다.\n"
+#~ "필요한 스타일을 선택하십시오."
+
+#, fuzzy
+#~| msgid "Sorting"
+#~ msgctxt "@title:group"
+#~ msgid "Sorting"
+#~ msgstr "정렬"
+
+#, fuzzy
+#~| msgid "Criterion:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Criterion:"
+#~ msgstr "기준:"
+
+#, fuzzy
+#~| msgid "Select incremental search field"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the primary sort field"
+#~ msgstr "증분 검색 필드 선택"
+
+#, fuzzy
+#~| msgid "Order:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Order:"
+#~ msgstr "순서:"
+
+#, fuzzy
+#~| msgid "Print Style"
+#~ msgctxt "@title:group"
+#~ msgid "Print Style"
+#~ msgstr "출력 양식"
+
+#, fuzzy
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the print style"
+#~ msgstr "목록 들여오기(&I)..."
+
+#, fuzzy
+#~| msgid "Selected contacts"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Search contacts in list"
+#~ msgstr "선택한 연락처"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sync Contacts"
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid "Email address:"
+#~ msgid "Email address"
+#~ msgstr "이메일 주소:"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image"
+#~ msgstr "템플릿 저장..."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Save Template..."
+#~ msgid "Save Image URL"
+#~ msgstr "템플릿 저장..."
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgid "Email:"
+#~ msgstr "전자우편"
+
+#, fuzzy
+#~| msgctxt "Search contacts in list"
+#~| msgid "Search"
+#~ msgid "Search"
+#~ msgstr "찾기"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "No email found for this contact."
+#~ msgstr "내보낼 연락처를 선택하지 않았습니다."
+
+#, fuzzy
+#~ msgid "A contact group was selected."
+#~ msgstr "새로운 연결(&N)"
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "You have not selected any contacts."
+#~ msgstr "내보낼 연락처를 선택하지 않았습니다."
+
+#, fuzzy
+#~| msgid "You have not selected any contacts to export."
+#~ msgid "No emails found in selected contacts."
+#~ msgstr "내보낼 연락처를 선택하지 않았습니다."
+
+#, fuzzy
+#~| msgid "Import vCard..."
+#~ msgid "Send vCards..."
+#~ msgstr "vCard 가져오기..."
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Merge Contacts..."
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Search Duplicate Contacts..."
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Select Contacts to merge"
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Select contacts that you really want to merge:"
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid "Print the complete address book or a selected number of contacts."
+#~ msgid "Select the addressbook in which to store merged contacts:"
+#~ msgstr "전체 주소록을 인쇄하거나 일부만 인쇄할 수 있습니다."
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Duplicate contact %1"
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid "Print Contacts"
+#~ msgid "Contacts"
+#~ msgstr "연락처 인쇄"
+
+#, fuzzy
+#~| msgid "Select Address Book"
+#~ msgid "Select AddressBook:"
+#~ msgstr "주소록 선택(&S)"
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "You have to assign at least one column."
+#~ msgid "You must select at least two elements."
+#~ msgstr "최소한 하나의 열을 할당해야 합니다."
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "No duplicated contact found."
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~ msgid "No contacts selected."
+#~ msgstr "새로운 연결(&N)"
+
+#, fuzzy
+#~| msgid "Print Contact's Information"
+#~ msgid "Missing Selected Information"
+#~ msgstr "연락처 정보 인쇄"
+
+#, fuzzy
+#~| msgctxt "@item Undefined import field type"
+#~| msgid "Undefined"
+#~ msgid "(Undefined)"
+#~ msgstr "정의되지 않음"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>When trying to read the vCard, there was an error opening the file "
+#~ "<filename>%1</filename>:</para><para>%2</para>"
+#~ msgstr ""
+#~ "<para>vCard를 읽는 중 파일 <filename>%1</filename>을(를) 열 때 오류 발생:"
+#~ "</para><para>%2</para>"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Merged Contact"
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgctxt "@label"
+#~| msgid "Importing contacts"
+#~ msgid "Error while merging contacts."
+#~ msgstr "연락처 가져오기"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Merge contact"
+#~ msgstr "연락처 선택"
+
+#, fuzzy
+#~| msgid "Select vCard Fields"
+#~ msgctxt "@title:window"
+#~ msgid "Select vCard Fields"
+#~ msgstr "vCard 필드 선택"
+
+#, fuzzy
+#~| msgid "Select Contacts"
+#~ msgid "Potential Duplicate Contacts"
+#~ msgstr "연락처 선택"
+
+#~ msgid "Kontact integration"
+#~ msgstr "Kontact 통합"
+
+#, fuzzy
+#~| msgid "Choose Printing Style"
+#~ msgid "Grantlee Printing Style"
+#~ msgstr "인쇄 스타일 선택"
+
+#~ msgid "Department"
+#~ msgstr "부서"
+
+#~ msgid "Manager's Name"
+#~ msgstr "관리자 이름"
+
+#, fuzzy
+#~| msgid "Assistant's name:"
+#~ msgid "Assistant's Name"
+#~ msgstr "비서 이름:"
+
+#, fuzzy
+#~| msgid "Partner's Name"
+#~ msgid "Partner's Name"
+#~ msgstr "배우자 이름"
+
+#~ msgid "IM Address"
+#~ msgstr "메신저 주소"
+
+#~ msgctxt "Boolean value"
+#~ msgid "yes"
+#~ msgstr "예"
+
+#~ msgctxt "Boolean value"
+#~ msgid "no"
+#~ msgstr "아니오"
+
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "파일 \"%1\"을(를) 덮어쓰시겠습니까"
+
+#, fuzzy
+#~| msgid "Do you want to overwrite file \"%1\""
+#~ msgctxt "@info"
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "파일 \"%1\"을(를) 덮어쓰시겠습니까"

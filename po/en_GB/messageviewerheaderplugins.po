@@ -1,0 +1,176 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2015, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"PO-Revision-Date: 2019-12-29 15:42+0000\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.07.70\n"
+
+#: briefheaderstyleplugin/briefheaderstyle.cpp:67
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:126
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
+#, kde-format
+msgid "[vCard]"
+msgstr "[vCard]"
+
+#: briefheaderstyleplugin/briefheaderstyle.cpp:75
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:164
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
+#, kde-format
+msgid "CC: "
+msgstr "CC: "
+
+#: briefheaderstyleplugin/briefheaderstyle.cpp:82
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:179
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
+#, kde-format
+msgid "BCC: "
+msgstr "BCC: "
+
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:22
+#, kde-format
+msgctxt "View->headers->"
+msgid "&Brief Headers"
+msgstr "&Brief Headers"
+
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:25
+#, kde-format
+msgid "Show brief list of message headers"
+msgstr "Show brief list of message headers"
+
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:134
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:92
+#, kde-format
+msgid "From: "
+msgstr "From: "
+
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:149
+#, kde-format
+msgid "To: "
+msgstr "To: "
+
+#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:21
+#, kde-format
+msgctxt "View->headers->"
+msgid "&Enterprise Headers"
+msgstr "&Enterprise Headers"
+
+#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:24
+#, kde-format
+msgid "Show the list of headers in Enterprise style"
+msgstr "Show the list of headers in Enterprise style"
+
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
+#, kde-format
+msgid "(resent from %1)"
+msgstr "(resent from %1)"
+
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:112
+#, kde-format
+msgid "(receiver was %1)"
+msgstr "(receiver was %1)"
+
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:130
+#, kde-format
+msgctxt "To-field of the mail header."
+msgid "To: "
+msgstr "To: "
+
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:161
+#, kde-format
+msgid "Date: "
+msgstr "Date: "
+
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:183
+#, kde-format
+msgid "Bugzilla: "
+msgstr "Bugzilla: "
+
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:192
+#, kde-format
+msgid "MDN To: "
+msgstr "MDN To: "
+
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:200
+#, kde-format
+msgid "Spam Status:"
+msgstr "Spam Status:"
+
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:22
+#, kde-format
+msgctxt "View->headers->"
+msgid "&Fancy Headers"
+msgstr "&Fancy Headers"
+
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:25
+#, kde-format
+msgid "Show the list of headers in a fancy format"
+msgstr "Show the list of headers in a fancy format"
+
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:190
+#, kde-format
+msgid "Attachments:"
+msgstr "Attachments:"
+
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:22
+#, kde-format
+msgctxt "View->headers->"
+msgid "&Long Headers"
+msgstr "&Long Headers"
+
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:25
+#, kde-format
+msgid "Show long list of message headers"
+msgstr "Show long list of message headers"
+
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:22
+#, kde-format
+msgctxt "View->headers->"
+msgid "&Standard Headers"
+msgstr "&Standard Headers"
+
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:25
+#, kde-format
+msgid "Show standard list of message headers"
+msgstr "Show standard list of message headers"
+
+#~ msgctxt "View->headers->"
+#~ msgid "&All Headers"
+#~ msgstr "&All Headers"
+
+#~ msgid "Show all message headers"
+#~ msgstr "Show all message headers"
+
+#~ msgid "User-Agent: "
+#~ msgstr "User-Agent: "
+
+#~ msgid "X-Mailer: "
+#~ msgstr "X-Mailer: "
+
+#~ msgctxt "To-field of the mailheader."
+#~ msgid "To: "
+#~ msgstr "To: "
+
+#~ msgid "Reply to: "
+#~ msgstr "Reply to: "
+
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Custom Headers"
+#~ msgstr "&Custom Headers"
+
+#~ msgid "Show custom headers"
+#~ msgstr "Show custom headers"

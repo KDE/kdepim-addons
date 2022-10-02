@@ -1,0 +1,165 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2022-04-05 13:03+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: markdown/markdownlib/markdownconfiguredialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Markdown Plugin"
+msgstr "Markdown Eklentisini Yapılandır"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:19
+#, kde-format
+msgid "Enable embedded LaTeX"
+msgstr "Gömülü LaTeX'i etkinleştir"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:20
+#, kde-format
+msgid "Enable PHP Markdown Extra definition lists"
+msgstr "PHP Markdown Extra tanımlama listelerini etkinleştir"
+
+#: markdown/markdownlib/markdownconverter.cpp:68
+#, kde-format
+msgid "Failed to compile the Markdown document."
+msgstr "Markdown belgesi derlenemedi."
+
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Image"
+msgstr "Görsel Ekle"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:19
+#, kde-format
+msgid "Keep original size"
+msgstr "Özgün boyutu koru"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#, kde-format
+msgid "Width:"
+msgstr "Genişlilk:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
+#, kde-format
+msgid "Height:"
+msgstr "Yükseklik:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:39
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
+#, kde-format
+msgid "Title:"
+msgstr "Başlık:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#, kde-format
+msgid "Image Link:"
+msgstr "Görsel Bağlantısı:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#, kde-format
+msgid "Alternate text:"
+msgstr "Alternatif metin:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
+#, kde-format
+msgid " px"
+msgstr "pks"
+
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Link"
+msgstr "Bağlantı Ekle"
+
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:30
+#, kde-format
+msgid "Link:"
+msgstr "Bağlantı:"
+
+#: markdown/markdownlib/markdownpreviewdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Markdown Rendering Preview"
+msgstr "Markdown Oluşturma Önizlemesi"
+
+#: markdown/markdownlib/markdownpreviewwidget.cpp:75
+#, kde-format
+msgid "Converter Error"
+msgstr "Dönüştürücü Hatası"
+
+#: markdown/plugin/markdowninterface.cpp:36
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr "Markdown dilinden HTML oluştur."
+
+#: markdown/plugin/markdowninterface.cpp:53
+#, kde-format
+msgid "Markdown"
+msgstr "Markdown"
+
+#: markdown/plugin/markdowninterface.cpp:55
+#, kde-format
+msgid "Markdown Action"
+msgstr "Markdown Eylemi"
+
+#: markdown/plugin/markdowninterface.cpp:60
+#, kde-format
+msgid "Add Title"
+msgstr "Başlık Ekle"
+
+#: markdown/plugin/markdowninterface.cpp:63
+#, kde-format
+msgid "Level %1"
+msgstr "Düzey %1"
+
+#: markdown/plugin/markdowninterface.cpp:67
+#, kde-format
+msgid "Horizontal Rule"
+msgstr "Yatay Kural"
+
+#: markdown/plugin/markdowninterface.cpp:69
+#, kde-format
+msgid "Change Selected Text as Bold"
+msgstr "Seçili Metni Kalın Yap"
+
+#: markdown/plugin/markdowninterface.cpp:71
+#, kde-format
+msgid "Change Selected Text as Italic"
+msgstr "Seçili Metni Yatık Yap"
+
+#: markdown/plugin/markdowninterface.cpp:73
+#, kde-format
+msgid "Change Selected Text as Code"
+msgstr "Seçili Metni Kod Yap"
+
+#: markdown/plugin/markdowninterface.cpp:75
+#, kde-format
+msgid "Change Selected Text as Block Quote"
+msgstr "Seçili Metni Blok Alıntı Yap"
+
+#: markdown/plugin/markdowninterface.cpp:78
+#, kde-format
+msgid "Add Link"
+msgstr "Bağlantı Ekle"
+
+#: markdown/plugin/markdowninterface.cpp:79
+#, kde-format
+msgid "Add Image"
+msgstr "Görsel Ekle"

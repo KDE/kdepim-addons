@@ -1,0 +1,99 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2016-04-16 06:30+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Tłumacz"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "&Tłumacz"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Tłumacz"
+
+#~ msgid "Configure engine"
+#~ msgstr "Ustawienia silnika"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Wybierz krótki adres URL serwera:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Błąd zgłoszony przez serwer:\n"
+#~ "'%1'"
+
+#~ msgid "Close"
+#~ msgstr "Zamknij"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Tworzenie krótkiego adresu URL..."
+
+#~ msgid "Configure..."
+#~ msgstr "Ustawienia..."
+
+#~ msgid "Convert"
+#~ msgstr "Przekształć"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Wstaw krótki adres URL"
+
+#~ msgid "Original URL:"
+#~ msgstr "Pierwotny adres URL:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Skopiuj do schowka"
+
+#~ msgid "Short URL:"
+#~ msgstr "Krótki adres URL:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Otwórz krótki adres URL"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr "Nie wykryto połączenia z siecią, więc nie można skrócić adresu URL."
+
+#~ msgid "No network"
+#~ msgstr "Brak sieci"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Wystąpił błąd: \"%1\""
+
+#~ msgid "Short URL"
+#~ msgstr "Krótki adres URL:"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Utwórz skrócony adres URL"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "W trakcie generowania krótkiego adresu url..."
+
+#~ msgid "Short url:"
+#~ msgstr "Krótki adres url:"
+
+#~ msgid "Short url"
+#~ msgstr "Krótki adres url"

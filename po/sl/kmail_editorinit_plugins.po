@@ -1,0 +1,41 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2017.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-04-13 00:18+0000\n"
+"PO-Revision-Date: 2020-06-10 16:09+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Lokalize 19.12.2\n"
+
+#: externalcomposer/externalcomposerconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"External Composer\" Plugin"
+msgstr "Nastavi vstavek \"Zunanji urejevalnik\""
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:18
+#, kde-format
+msgid "Use external editor instead of composer"
+msgstr "Uporabi zunanji urejevalnik namesto sestavljalnika"
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:45
+#, kde-format
+msgid ""
+"<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
+"replaced with the window id.<br /><b>%l</b> will be replaced with the line "
+"number."
+msgstr ""
+"<b>%f</b> bo zamenjan z imenom datoteke, ki bo urejena.<br /><b>%w</b> bo "
+"zamenjan z ID-jem okna.<br /><b>%l</b> bo zamenjan s številko vrstice."

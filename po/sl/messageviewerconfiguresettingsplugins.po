@@ -1,0 +1,400 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+#
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
+# Martin Srebotnjak <miles@filmsi.net>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"PO-Revision-Date: 2022-08-24 07:24+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: dkim-verify/dkimadvancedwidget.cpp:21
+#, kde-format
+msgid "Still verify the signature, if a domain is only testing DKIM"
+msgstr "Še vedno preverjajte podpis, če neka domena samo preizkuša DKIM"
+
+#: dkim-verify/dkimadvancedwidget.cpp:22
+#, kde-format
+msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgstr ""
+"Pri branju glave »Authentication-Result« uporabite sproščeno razčlenjevanje"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Nothing"
+msgstr "Nič"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Warning"
+msgstr "Opozorilo"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Error"
+msgstr "Napaka"
+
+#: dkim-verify/dkimadvancedwidget.cpp:36
+#, kde-format
+msgid "Treat RSA-SHA1 sign algorithm as:"
+msgstr "Obravnavaj podpisovalni algoritem RSA-SHA1 kot:"
+
+#: dkim-verify/dkimadvancedwidget.cpp:40
+#, kde-format
+msgid "Treat small Key as:"
+msgstr "Obravnavaj majhen ključ kot:"
+
+#: dkim-verify/dkimadvancedwidget.cpp:42
+#, kde-format
+msgid "Configure"
+msgstr "Nastavi"
+
+#: dkim-verify/dkimadvancedwidget.cpp:45
+#, kde-format
+msgid "Authentication Server verified:"
+msgstr "Strežnik za preverjanje pristnosti preverjen:"
+
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Authentication Verified Server"
+msgstr "Nastavi preverjen strežnik za preverjanje pristnosti"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
+#, kde-format
+msgid "New Server:"
+msgstr "Novi strežnik:"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
+#, kde-format
+msgid "New Server"
+msgstr "Novi strežnik"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
+#, kde-format
+msgid "Modify Server"
+msgstr "Spremeni strežnik"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
+#, kde-format
+msgid "Server:"
+msgstr "Strežnik:"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
+#, kde-format
+msgid "Do you want to delete selected server(s) name?"
+msgstr "Ali želite izbrisati ime izbran(ega/ih) strežnik(a/kov)?"
+
+#: dkim-verify/dkimconfiguredialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure DKIM"
+msgstr "Nastavi DKIM"
+
+#: dkim-verify/dkimconfiguretab.cpp:38
+#: foldersettings/folderconfiguresettingspagewidget.cpp:36
+#, kde-format
+msgid "General"
+msgstr "Splošno"
+
+#: dkim-verify/dkimconfiguretab.cpp:40
+#, kde-format
+msgid "Record Keys"
+msgstr "Zabeleži ključe"
+
+#: dkim-verify/dkimconfiguretab.cpp:42
+#, kde-format
+msgid "Policy"
+msgstr "Politika"
+
+#: dkim-verify/dkimconfiguretab.cpp:44
+#, kde-format
+msgid "Advanced"
+msgstr "Napredno"
+
+#: dkim-verify/dkimgeneralwidget.cpp:19
+#, kde-format
+msgid "Enable DKIM Support"
+msgstr "Omogoči podporo DKIM"
+
+#: dkim-verify/dkimgeneralwidget.cpp:20
+#, kde-format
+msgid "Save DKIM Result"
+msgstr "Shrani rezultat DKIM"
+
+#: dkim-verify/dkimgeneralwidget.cpp:22
+#, kde-format
+msgid "Replace DKIM result by Authentication-Result header value"
+msgstr "Zamenjaj rezultat DKIN za vrednostjo glave Authentication-Result"
+
+#: dkim-verify/dkimgeneralwidget.cpp:38
+#, kde-format
+msgid "Save Record Key:"
+msgstr "Shrani ključ zapisa:"
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save"
+msgstr "Shrani"
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save and Compare"
+msgstr "Shrani in primerjaj"
+
+#: dkim-verify/dkimpolicywidget.cpp:21
+#, kde-format
+msgid "Check if e-mail should be signed"
+msgstr "Preveri, če bi morala biti e-pošta podpisana"
+
+#: dkim-verify/dkimpolicywidget.cpp:22
+#, kde-format
+msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgstr ""
+"Uporabite DMARC, da hevristično ugotovite, ali naj se bi bila e-pošta "
+"podpisana"
+
+#: dkim-verify/dkimpolicywidget.cpp:23
+#, kde-format
+msgid "Use default rule"
+msgstr "Uporabi privzeto pravilo"
+
+#: dkim-verify/dkimpolicywidget.cpp:24
+#, kde-format
+msgid "Autogenerate rule"
+msgstr "Samodejno kreiraj pravilo"
+
+#: dkim-verify/dkimpolicywidget.cpp:25
+#, kde-format
+msgid "Read Authentication-Results header"
+msgstr "Beri glavo rezultata overitve"
+
+#: dkim-verify/dkimpolicywidget.cpp:26
+#, kde-format
+msgid "Autogenerate when Sender in SDID"
+msgstr "Samodejno generiraj kadar je pošiljatelj v SDID"
+
+#: dkim-verify/dkimpolicywidget.cpp:27
+#, kde-format
+msgid "Show Rules"
+msgstr "Prikaži pravila"
+
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Expiry Account Trash Folder"
+msgstr "Nastavi potek mape smeti računa"
+
+#: foldersettings/folderconfiguresettingsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Folder Settings"
+msgstr "Nastavi mapo"
+
+#: foldersettings/folderconfiguresettingspagebase.cpp:17
+#, kde-format
+msgid "Modify"
+msgstr "Spremeni"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:40
+#, kde-format
+msgid "View"
+msgstr "Pogled"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:44
+#, kde-format
+msgid "Expiry"
+msgstr "Potek veljavnosti"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:48
+#, kde-format
+msgid "Template"
+msgstr "Predloga"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:57
+#, kde-format
+msgid ""
+"It will override all settings for each selected folder. Do you want to "
+"continue?"
+msgstr ""
+"To bo novo nastavilo vse nastavitve za vsako izbrano mapo. Ali želite "
+"nadaljevati?"
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#, kde-format
+msgid "Save Folder Settings"
+msgstr "Shrani nastavitve mape"
+
+#: foldersettings/folderconfiguretreewidget.cpp:52
+#, kde-format
+msgid "Select"
+msgstr "Izberi"
+
+#: foldersettings/folderconfiguretreewidget.cpp:60
+#, kde-format
+msgid "Unselect"
+msgstr "Odizberi"
+
+#: gravatar/gravatarconfiguresettingsplugindialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr "Nastavi Gravatar"
+
+#: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
+#, kde-format
+msgid "Enable Gravatar Support"
+msgstr "Omogoči podporo za Gravatar"
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Create"
+msgstr "Ustvari"
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit"
+msgstr "Uredi"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:27
+#, kde-format
+msgid "Server Name:"
+msgstr "Ime strežnika:"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:31
+#, kde-format
+msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">Informacija o formatu argumenta...</a></qt>"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
+#, kde-format
+msgid ""
+"<qt><p><strong>These expressions may be used for the arguments:</strong></"
+"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+msgstr ""
+"<qt><p><strong>Te izraze lahko uporabite za argumente:</strong></p><ul> <li>"
+"%u - url uporabljen v ukazu</li></ul></strong></p></qt>"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:48
+#, kde-format
+msgid "Command line:"
+msgstr "Ukazna vrstica:"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:58
+#, kde-format
+msgid "Executable:"
+msgstr "Izvajalni program:"
+
+#: openurlwith/openurlwithconfiguredialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Open Url With Plugin"
+msgstr "Nastavitve odpiranja spletnega naslova z vtičnikom"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:55
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Rule..."
+msgstr "Dodaj pravilo..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:56
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Rule"
+msgstr "Odstrani pravilo"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:57
+#, kde-format
+msgctxt "@action:button"
+msgid "Modify Rule..."
+msgstr "Spremeni pravilo..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Rule already exists."
+msgstr "Pravilo že obstaja."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Duplicate Rule"
+msgstr "Podvoji pravilo"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:191
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] "Ali želite odstraniti to pravilo?"
+msgstr[1] "Ali želite odstraniti ti pravili?"
+msgstr[2] "Ali želite odstraniti ta pravila?"
+msgstr[3] "Ali želite odstraniti ta pravila?"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:192
+#, kde-format
+msgctxt "@title"
+msgid "Remove Rule"
+msgstr "Odstrani pravilo"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:208
+#, kde-format
+msgid "Add Rule..."
+msgstr "Dodaj pravilo..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:210
+#, kde-format
+msgid "Edit Rule..."
+msgstr "Uredi pravilo..."
+
+#: openurlwith/openurlwithconfigurewidget.cpp:215
+#, kde-format
+msgid "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] "Odstrani pravilo"
+msgstr[1] "Odstrani pravili"
+msgstr[2] "Odstrani pravila"
+msgstr[3] "Odstrani pravila"
+
+#: scamsettings/scamconfiguresettingsdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Scam Settings"
+msgstr "Postavi nastavitve scam"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Domain"
+msgstr "Domena"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Check"
+msgstr "Preveri"
+
+#: scamsettings/scamconfigureutils.cpp:15
+#, kde-format
+msgid "Disable All Check"
+msgstr "Onemogoči vsa preverjanja"
+
+#: scamsettings/scamconfigureutils.cpp:17
+#, kde-format
+msgid "Redirect Url"
+msgstr "Preusmeri Url"
+
+#: scamsettings/scamconfigureutils.cpp:19
+#, kde-format
+msgid "Has Ip"
+msgstr "Ima Ip"

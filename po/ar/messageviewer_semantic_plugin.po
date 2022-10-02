@@ -1,0 +1,208 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"PO-Revision-Date: 2022-09-11 21:19+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: itineraryurlhandler.cpp:112 templates/itinerary.html:76
+#, kde-format
+msgid "Send to %1"
+msgstr "أرسل إلى %1"
+
+#: itineraryurlhandler.cpp:126
+#, kde-format
+msgid "Show calendar at the time of this reservation."
+msgstr "عرض التقويم في وقت هذا الحجز."
+
+#: itineraryurlhandler.cpp:129
+#, kde-format
+msgid "Add reservation to your calendar."
+msgstr "أضف الحجز إلى التّقويم لديك."
+
+#: itineraryurlhandler.cpp:132
+#, kde-format
+msgid "Import reservation into KDE Itinerary."
+msgstr "استورد الحجز إلى كدي Itinerary."
+
+#: itineraryurlhandler.cpp:135
+#, kde-format
+msgid "Send this reservation to a device using KDE Connect."
+msgstr "أرسل هذا الحجز إلى جهاز أخر باستعمال كدي المتصل."
+
+#: itineraryurlhandler.cpp:206
+#, kde-format
+msgid "Boarding Pass"
+msgstr "بطاقة صعود"
+
+#: itineraryurlhandler.cpp:207
+#, kde-format
+msgid "Ticket"
+msgstr "تذكرة"
+
+#: templates/actions.html:4
+msgid "View"
+msgstr "اعرض"
+
+#: templates/actions.html:6
+msgid "Download"
+msgstr "نزّل"
+
+#: templates/actions.html:8
+msgid "Modify"
+msgstr "عدّل"
+
+#: templates/actions.html:10
+msgid "Cancel"
+msgstr "ألغِ"
+
+#: templates/actions.html:12
+msgid "Check-In"
+msgstr "تسجيل الوصول"
+
+#: templates/boatreservation.html:9 templates/busreservation.html:12
+#: templates/flightreservation.html:13 templates/trainreservation.html:12
+msgid "Reservation canceled."
+msgstr "الحجز ملغي."
+
+#: templates/busreservation.html:49 templates/busreservation.html:69
+#: templates/flightreservation.html:62 templates/flightreservation.html:79
+#: templates/trainreservation.html:62 templates/trainreservation.html:90
+#, kde-format
+msgid "Seat: %1"
+msgstr "المقعد: %1"
+
+#: templates/event.html:3 templates/foodestablishmentreservation.html:3
+#: templates/lodgingreservation.html:3
+msgid "Canceled:"
+msgstr "مُلغاة:"
+
+#: templates/flightreservation.html:50
+#, kde-format
+msgid "Gate: %1"
+msgstr "البوّابة: %1"
+
+#: templates/flightreservation.html:54
+#, kde-format
+msgid "Boarding: %1"
+msgstr "الرّكوب: %1"
+
+#: templates/flightreservation.html:58 templates/flightreservation.html:78
+#, kde-format
+msgid "Group: %1"
+msgstr "المجموعة: %1"
+
+#: templates/foodestablishmentreservation.html:9
+#, kde-format
+msgid "Number Of People: %1"
+msgstr "عدد الأشخاص: %1"
+
+#: templates/foodestablishmentreservation.html:12
+#: templates/taxireservation.html:2
+#, kde-format
+msgid "Reservation Number: %1"
+msgstr "رقم الحجز: %1"
+
+#: templates/foodestablishmentreservation.html:15
+#: templates/taxireservation.html:4
+#, kde-format
+msgid "Under Name: %1"
+msgstr "تحت اسم: %1"
+
+#: templates/itinerary.html:66
+msgid "Show Calendar"
+msgstr "اعرض التّقويم"
+
+#: templates/itinerary.html:69
+msgid "Add to Calendar"
+msgstr "أضف إلى التّقويم"
+
+#: templates/itinerary.html:72
+msgid "Add to KDE Itinerary"
+msgstr "أضف إلى كدي Itinerary"
+
+#: templates/itinerary.html:78
+msgid "Send to Device..."
+msgstr "أرسِل إلى جهاز…..."
+
+#: templates/location.html:4
+msgid "Show location on map"
+msgstr "اعرض الموقع في الخريطة"
+
+#: templates/location.html:10
+msgid "Search address on map"
+msgstr "ابحث العنوان على الخريطة"
+
+#: templates/trainreservation.html:54 templates/trainreservation.html:82
+#, kde-format
+msgid "Class: %1"
+msgstr "الفئة: %1"
+
+#: templates/trainreservation.html:58 templates/trainreservation.html:86
+#, kde-format
+msgid "Coach: %1"
+msgstr "العربة: %1"
+
+#~ msgid "Show '%1' On Map"
+#~ msgstr "اعرض ’%1‘ على الخريطة"
+
+#~ msgid "Flight %1 from %2 to %3"
+#~ msgstr "رحلة %1 من %2 إلى %3"
+
+#~ msgid "Boarding for flight %1"
+#~ msgstr "ركوب رحلة %1"
+
+#~ msgid "Boarding for flight %1 at gate %2"
+#~ msgstr "ركوب رحلة %1 عند البوّابة %2"
+
+#~ msgid "Boarding time: %1"
+#~ msgstr "وقت الرّكوب: %1"
+
+#~ msgid "Departure gate: %1"
+#~ msgstr "وقت المغادرة: %1"
+
+#~ msgid "Boarding group: %1"
+#~ msgstr "مجموعة الرّكوب: %1"
+
+#~ msgid "Booking reference: %1"
+#~ msgstr "الحجز: %1"
+
+#~ msgid "Departure platform: %1"
+#~ msgstr "منصّة المغادرة: %1"
+
+#~ msgid "Arrival platform: %1"
+#~ msgstr "منصّة الوصول: %1"
+
+#~ msgid "Train %1 from %2 to %3"
+#~ msgstr "قطار %1  من %2 إلى %3"
+
+#, fuzzy
+#~| msgid "Train %1 from %2 to %3"
+#~ msgid "Bus %1 from %2 to %3"
+#~ msgstr "قطار %1  من %2 إلى %3"
+
+#~ msgid "%1, %2 %3, %4"
+#~ msgstr "‏%1، ‏%2 ‏%3، ‏%4"
+
+#~ msgid ""
+#~ "Check-in: %1\n"
+#~ "Check-out: %2\n"
+#~ "Booking reference: %3"
+#~ msgstr ""
+#~ "الدّخول: %1\n"
+#~ "المغادرة: %2\n"
+#~ "الحجز: %3"

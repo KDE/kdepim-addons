@@ -1,0 +1,91 @@
+# Vincent Pinon <vpinon@kde.org>, 2017.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: customtoolsplugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"PO-Revision-Date: 2017-06-14 08:57+0100\n"
+"Last-Translator: Vincent Pinon <vpinon@kde.org>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.3\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: translatorplugin/translatorplugin.cpp:34
+#, kde-format
+msgid "Translator"
+msgstr "Traducteur"
+
+#: translatorplugin/translatorview.cpp:52
+#, kde-format
+msgid "&Translator"
+msgstr "&Traducteur"
+
+#, fuzzy
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Traducteur"
+
+#~ msgid "Configure engine"
+#~ msgstr "Configurer le moteur"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Sélectionnez le serveur d'URL réduite :"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Erreur du serveur : \n"
+#~ "%1"
+
+#~ msgid "Close"
+#~ msgstr "Fermer"
+
+#~ msgid "Generating short URL..."
+#~ msgstr "Génération de l'URL réduite…"
+
+#~ msgid "Configure..."
+#~ msgstr "Configurer..."
+
+#~ msgid "Convert"
+#~ msgstr "Convertir"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Insérer l'URL réduite"
+
+#~ msgid "Original URL:"
+#~ msgstr "URL originale :"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Copier dans le presse-papier"
+
+#~ msgid "Short URL:"
+#~ msgstr "URL réduite :"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Ouvrir l'URL réduite"
+
+#~ msgid "No network connection detected, we cannot shorten URL."
+#~ msgstr ""
+#~ "Impossible de raccourcir l'URL car vous n'êtes pas connecté à Internet."
+
+#~ msgid "No network"
+#~ msgstr "Pas de réseau"
+
+#~ msgid "An error occurred: \"%1\""
+#~ msgstr "Une erreur est survenue : « %1 »"
+
+#~ msgid "Short URL"
+#~ msgstr "URL réduite"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Générer l'URL réduite"

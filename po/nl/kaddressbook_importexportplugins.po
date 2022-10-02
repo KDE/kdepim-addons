@@ -1,0 +1,2155 @@
+# translation of kaddressbook.po to Dutch
+# KTranslator Generated File
+# Nederlandse vertaling van abbrowser
+# Copyright (C) 2000-2002 KDE e.v.
+# Rinse de Vries <risne@kde.nl> 2000-2002
+# Proefgelezen door Chris Hooijer <cr.hooijer@hccnet.nl> op 24-02-2002
+# Niels Reedijk <n.reedijk@planet.nl>, 2000.
+# Rinse de Vries <rinse@kde.nl>, 2003, 2004.
+# Dirk Scheffer <d.scheffer@home.nl>, 2003.
+# Wilbert Berendsen <wbsoft@xs4all.nl>, 2003, 2004.
+# Bram Schoenmakers <bramschoenmakers@kde.nl>, 2004, 2005, 2006, 2007.
+# Tom Albers <toma@omat.nl>, 2004.
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2007, 2008, 2010.
+# Antoon Tolboom <atolboo@telfort.nl>, 2008.
+# Antoon Tolboom <atolboo@gmail.com>, 2008.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kaddressbook\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2022-04-16 11:28+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: csv/csvimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Export CSV file..."
+msgstr "CSV-bestand exporteren..."
+
+#: csv/csvimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Export contacts to a file in comma separated value format."
+msgstr ""
+"Contactpersonen exporteren naar een bestand met kommagescheiden waarden."
+
+#: csv/csvimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Import CSV file..."
+msgstr "CSV-bestand importeren..."
+
+#: csv/csvimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Import contacts from a file in comma separated value format."
+msgstr ""
+"Contactpersonen importeren uit een bestand met kommagescheiden waarden."
+
+#: csv/csvimportexportplugininterface.cpp:152
+#: gmx/gmximportexportplugininterface.cpp:80
+#: ldif/ldifimportexportplugininterface.cpp:130
+#: vcards/vcardimportexportplugininterface.cpp:370
+#, kde-format
+msgid "Which contact do you want to export?"
+msgstr "Welke contactpersonen wilt u exporteren?"
+
+#: csv/csvimportexportplugininterface.cpp:162
+#: gmx/gmximportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:140
+#: vcards/vcardimportexportplugininterface.cpp:382
+#, kde-format
+msgid "You have not selected any contacts to export."
+msgstr "U hebt geen te exporteren contactpersonen geselecteerd."
+
+#: csv/csvimportexportplugininterface.cpp:191
+#: gmx/gmximportexportplugininterface.cpp:124
+#: ldif/ldifimportexportplugininterface.cpp:161
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>Het bestand <b>%1</b> kon niet worden geopend.</qt>"
+
+#: csv/csvimportexportplugininterface.cpp:203
+#: gmx/gmximportexportplugininterface.cpp:139
+#: ldif/ldifimportexportplugininterface.cpp:191
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>Het bestand <b>%1</b> kon niet worden geopend.</qt>"
+
+#: csv/import/csvimportdialog.cpp:168
+#, kde-format
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "CSV-importdialoog"
+
+#: csv/import/csvimportdialog.cpp:223
+#, kde-format
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "Contactpersonen importeren"
+
+#: csv/import/csvimportdialog.cpp:294
+#, kde-format
+msgctxt "@label"
+msgid "File to import:"
+msgstr "Te importeren bestand:"
+
+#: csv/import/csvimportdialog.cpp:302
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "Te importeren CSV-bestand selecteren"
+
+#: csv/import/csvimportdialog.cpp:304
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr ""
+"Klik op deze knop om een bestandskiezer te starten die u in staat stelt om "
+"een CSV-bestand te importeren."
+
+#: csv/import/csvimportdialog.cpp:311
+#, kde-format
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "Scheidingsteken"
+
+#: csv/import/csvimportdialog.cpp:321
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "Komma"
+
+#: csv/import/csvimportdialog.cpp:322
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr "De veldscheiding op een komma instellen"
+
+#: csv/import/csvimportdialog.cpp:323
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr ""
+"Deze optie kiezen als uw CVS-bestand de komma als veldscheiding gebruikt."
+
+#: csv/import/csvimportdialog.cpp:328
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "Puntkomma"
+
+#: csv/import/csvimportdialog.cpp:329
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr "De veldscheiding op een puntkomma instellen"
+
+#: csv/import/csvimportdialog.cpp:330
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr ""
+"Deze optie kiezen als uw CVS-bestand de puntkomma als veldscheiding gebruikt."
+
+#: csv/import/csvimportdialog.cpp:334
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr "Tab-teken"
+
+#: csv/import/csvimportdialog.cpp:335
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr "De veldscheiding op een tab-teken instellen"
+
+#: csv/import/csvimportdialog.cpp:336
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr ""
+"Deze optie kiezen als uw CVS-bestand de tab als veldscheiding gebruikt."
+
+#: csv/import/csvimportdialog.cpp:340
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "Spatie"
+
+#: csv/import/csvimportdialog.cpp:341
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "De veldscheiding op een spatie instellen"
+
+#: csv/import/csvimportdialog.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr ""
+"Deze optie kiezen als uw CVS-bestand de spatie als veldscheiding gebruikt."
+
+#: csv/import/csvimportdialog.cpp:346
+#, kde-format
+msgctxt "@option:radio Custom field separator"
+msgid "Other"
+msgstr "Overige"
+
+#: csv/import/csvimportdialog.cpp:347
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr "De veldscheiding op een eigen teken instellen"
+
+#: csv/import/csvimportdialog.cpp:349
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr ""
+"Deze optie kiezen als uw CVS-bestand een ander teken als veldscheiding voor "
+"de gegevens gebruikt."
+
+#: csv/import/csvimportdialog.cpp:355
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "Stel het eigen teken voor de veldscheiding in"
+
+#: csv/import/csvimportdialog.cpp:357
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+"Voer een eigen teken in dat gebruikt moet worden als het scheidingsteken. "
+"Als u meer dan 1 teken invoert zal alleen het eerste teken worden gebruikt "
+"en de overige tekens zullen worden genegeerd."
+
+#: csv/import/csvimportdialog.cpp:363
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "Tekstaanhalingsteken:"
+
+#: csv/import/csvimportdialog.cpp:369
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "Selecteer het tekstaanhalingsteken"
+
+#: csv/import/csvimportdialog.cpp:371
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+"Kies het teken voor uw CSV-gegevens dat moet worden gebruikt om voor de "
+"veldscheider te zetten zodat dat teken in de gegevens van een veld kan "
+"worden gebruikt. Als bijvoorbeeld de komma de veldscheider is, dan moet elke "
+"komma in de gegevens voorafgegaan worden door het hier gespecificeerde teken."
+
+#: csv/import/csvimportdialog.cpp:376
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "\""
+msgstr "\""
+
+#: csv/import/csvimportdialog.cpp:377
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr "'"
+
+#: csv/import/csvimportdialog.cpp:378
+#, kde-format
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "Geen"
+
+#: csv/import/csvimportdialog.cpp:382
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "Datumopmaak:"
+
+#: csv/import/csvimportdialog.cpp:390
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+"<para><list><item>y: jaar met 2 cijfers</item> <item>Y: jaar met 4 cijfers</"
+"item> <item>m: maand met 1 of 2 cijfers</item> <item>M: maand met 2 cijfers</"
+"item> <item>d: dag met 1 of 2 cijfers</item> <item>D: dag met 2 cijfers</"
+"item> <item>H: uren met 2 cijfers</item><item>I: minuten met 2 cijfers</"
+"item><item>S: seconden met 2 cijfers</item></list></para>"
+
+#: csv/import/csvimportdialog.cpp:401
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+"<para>Specificeer een opmaak voor datums om in te voegen in uw CSV-gegevens. "
+"Gebruik de volgende reeksen om u te helpen bij het definiëren van de opmaak:"
+"</para><para><list><item>y: jaar met 2 cijfers</item> <item>Y: jaar met 4 "
+"cijfers</item> <item>m: maand met 1 of 2 cijfers</item> <item>M: maand met 2 "
+"cijfers</item> <item>d: dag met 1 of 2 cijfers</item> <item>D: dag met 2 "
+"cijfers</item> <item>H: uren met 2 cijfers</item><item>I: minuten met 2 "
+"cijfers</item><item>S: seconden met 2 cijfers</item></list></"
+"para><para>Voorbeeld: \"Y-M-D\" komt overeen met een datum zoals "
+"\"2012-01-04\"</para>"
+
+#: csv/import/csvimportdialog.cpp:417
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "Tekst-codec:"
+
+#: csv/import/csvimportdialog.cpp:423
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "De tekst-codec selecteren"
+
+#: csv/import/csvimportdialog.cpp:424
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr "De tekencodering van de gegevens in uw CVS-bestand kiezen."
+
+#: csv/import/csvimportdialog.cpp:428
+#, kde-format
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr "Eerste rij van het bestand overslaan"
+
+#: csv/import/csvimportdialog.cpp:430
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr "Eerste rij van het CVS-bestand overslaan bij importeren"
+
+#: csv/import/csvimportdialog.cpp:432
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+"Activeer dit vakje als u bij het importeren over de eerste rij van de CSV-"
+"gegevens wilt springen. In veel gevallen zal de eerste regel van een CSV-"
+"bestand een commentaarregel zijn die de volgorde van de gegevensvelden in "
+"het bestand beschrijft."
+
+#: csv/import/csvimportdialog.cpp:448
+#, kde-format
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "Sjabloon toepassen..."
+
+#: csv/import/csvimportdialog.cpp:449
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "Sjabloon opslaan..."
+
+#: csv/import/csvimportdialog.cpp:470
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "Lokaal (%1)"
+
+#: csv/import/csvimportdialog.cpp:471
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "Latin1"
+
+#: csv/import/csvimportdialog.cpp:472
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "Unicode"
+
+#: csv/import/csvimportdialog.cpp:473
+#, kde-format
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "Microsoft Unicode"
+
+#: csv/import/csvimportdialog.cpp:574
+#, kde-format
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr "U moet minstens één kolom toekennen."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "Er zijn nog geen sjablonen beschikbaar."
+
+#: csv/import/csvimportdialog.cpp:584
+#, kde-format
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "Geen sjablonen beschikbaar"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "Sjabloonnaam"
+
+#: csv/import/csvimportdialog.cpp:649
+#, kde-format
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "Voer een naam in voor het sjabloon:"
+
+#: csv/import/csvimportdialog.cpp:699
+#, kde-format
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "Het invoerbestand kan niet worden geopend."
+
+#: csv/import/qcsvreader.cpp:92
+#, kde-format
+msgid "Device is not open"
+msgstr "Apparaat is niet open"
+
+#: csv/import/templateselectiondialog.cpp:182
+#, kde-format
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr "Wilt u het sjabloon '%1' verwijderen?"
+
+#: csv/import/templateselectiondialog.cpp:203
+#, kde-format
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "Sjabloonselectie"
+
+#: csv/import/templateselectiondialog.cpp:206
+#, kde-format
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr "Selecteer een sjabloon dat overeenkomt met het CSV-bestand:"
+
+#: gmx/gmximportexportplugininterface.cpp:25
+#, kde-format
+msgid "GMX address book file (*.gmxa)"
+msgstr "GMX-adresboekbestand (*.gmxa)"
+
+#: gmx/gmximportexportplugininterface.cpp:40
+#, kde-format
+msgid "Import GMX file..."
+msgstr "GMX-bestand importeren..."
+
+#: gmx/gmximportexportplugininterface.cpp:41
+#, kde-format
+msgid "Import contacts from a GMX address book file."
+msgstr "Contactpersonen importeren uit een GMX-adresboekbestand."
+
+#: gmx/gmximportexportplugininterface.cpp:46
+#, kde-format
+msgid "Export GMX file..."
+msgstr "GMX-bestand exporteren..."
+
+#: gmx/gmximportexportplugininterface.cpp:47
+#, kde-format
+msgid "Export contacts to a GMX address book file."
+msgstr "Contactpersonen exporteren naar een GMX-adresboekbestand."
+
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:80
+#: windows-contacts/importwindowcontact.cpp:26
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt>Het bestand <b>%1</b> kon niet worden geopend.</qt>"
+
+#: gmx/gmximportexportplugininterface.cpp:455
+#, kde-format
+msgid "%1 is not a GMX address book file."
+msgstr "%1 is geen GMX-adresboekbestand."
+
+#: ldap/ldapimportexportplugininterface.cpp:25
+#, kde-format
+msgid "Import From LDAP server..."
+msgstr "Uit een LDAP-server importeren..."
+
+#: ldap/ldapimportexportplugininterface.cpp:26
+#, kde-format
+msgid "Import contacts from an LDAP server."
+msgstr "Contactpersonen importeren uit een LDAP-server."
+
+#: ldif/ldifimportexportplugininterface.cpp:36
+#, kde-format
+msgid "Import LDIF file..."
+msgstr "LDIF-bestand importeren..."
+
+#: ldif/ldifimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Import contacts from an LDIF file."
+msgstr "Contactpersonen importeren uit een LDIF-bestand."
+
+#: ldif/ldifimportexportplugininterface.cpp:42
+#, kde-format
+msgid "Export LDIF file..."
+msgstr "LDIF-bestand exporteren..."
+
+#: ldif/ldifimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Export contacts to an LDIF file."
+msgstr "Contactpersonen exporteren naar een LDIF-bestand."
+
+#: ldif/ldifimportexportplugininterface.cpp:110
+#, kde-format
+msgid "LDif Files"
+msgstr "LDif bestanden"
+
+#: ldif/ldifimportexportplugininterface.cpp:151
+#, kde-format
+msgid "LDif Files (*.ldif)"
+msgstr "LDif bestanden (*.ldif)"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:22
+#, kde-format
+msgctxt "@title:group"
+msgid "Fields to be exported"
+msgstr "Te exporteren velden"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Private fields"
+msgstr "Private velden"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export private fields"
+msgstr "Private velden exporteren"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:32
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's private fields to the "
+"vCard output file."
+msgstr ""
+"Activeer dit vakje als u de privé velden van de contactpersoon naar het "
+"vCards uitvoerbestand wilt exporteren."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Business fields"
+msgstr "Zakelijke velden"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export business fields"
+msgstr "Zakelijke velden exporteren"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's business fields to the "
+"vCard output file."
+msgstr ""
+"Activeer dit vakje als u de zakelijke velden van de contactpersoon naar het "
+"vCards uitvoerbestand wilt exporteren."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:43
+#, kde-format
+msgctxt "@option:check"
+msgid "Other fields"
+msgstr "Overige velden"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:44
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export other fields"
+msgstr "Overige velden exporteren"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:46
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's other fields to the vCard "
+"output file."
+msgstr ""
+"Activeer dit vakje als u de andere velden van de contactpersoon naar het "
+"vCards uitvoerbestand wilt exporteren."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:50
+#, kde-format
+msgctxt "@option:check"
+msgid "Encryption keys"
+msgstr "Sleutels voor versleuteling"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export encryption keys"
+msgstr "Sleutels voor versleuteling exporteren"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:53
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's encryption keys to the "
+"vCard output file."
+msgstr ""
+"Activeer dit vakje als u de encryptiesleutels van de contactpersoon naar het "
+"vCards uitvoerbestand wilt exporteren."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:57
+#, kde-format
+msgctxt "@option:check"
+msgid "Pictures"
+msgstr "Afbeeldingen"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:58
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export pictures"
+msgstr "Afbeeldingen exporteren"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:60
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's picture to the vCard "
+"output file."
+msgstr ""
+"Activeer dit vakje als u de afbeelding van de contactpersoon naar het vCards "
+"uitvoerbestand wilt exporteren."
+
+#: vcards/engine/vcardexportselectionwidget.cpp:64
+#, kde-format
+msgctxt "@title:group"
+msgid "Export options"
+msgstr "Opties exporteren"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:70
+#, kde-format
+msgctxt "@option:check"
+msgid "Display name as full name"
+msgstr "De weer te geven naam op volledige naam instellen"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export display name as full name"
+msgstr "De weer te geven naam als volledige naam exporteren"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:73
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's display name in the "
+"vCard's full name field.  This may be required to get the name shown "
+"correctly in GMail or Android."
+msgstr ""
+"Dit vakje activeren als u de weer te geven naam van de contactpersonen in "
+"het veld met de volledige naam van de vCard wilt exporteren.  Dit kan "
+"vereist zijn om de naam juist getoond te krijgen in GMail of Android."
+
+#: vcards/engine/vcardviewerdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Import vCard"
+msgstr "vCard importeren"
+
+#: vcards/engine/vcardviewerdialog.cpp:51
+#, kde-format
+msgctxt "@info"
+msgid "Do you want to import this contact into your address book?"
+msgstr "Wilt u deze contactpersoon in uw adresboek importeren?"
+
+#: vcards/engine/vcardviewerdialog.cpp:61
+#, kde-format
+msgctxt "@action:button"
+msgid "Import All..."
+msgstr "Alles importeren..."
+
+#: vcards/vcardimportexportplugininterface.cpp:44
+#, kde-format
+msgid "Import vCard..."
+msgstr "vCard importeren..."
+
+#: vcards/vcardimportexportplugininterface.cpp:45
+#, kde-format
+msgid "Import contacts from a vCard file."
+msgstr "Importeer contactpersonen uit een vCard-bestand."
+
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, kde-format
+msgid "Export contacts to a vCard 4.0 file."
+msgstr "Contactpersonen exporteren naar een vCard 4.0-bestand."
+
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, kde-format
+msgid "Export vCard 4.0..."
+msgstr "vCard 4.0 exporteren..."
+
+#: vcards/vcardimportexportplugininterface.cpp:58
+#, kde-format
+msgid "Export vCard 3.0..."
+msgstr "vCard 3.0 exporteren..."
+
+#: vcards/vcardimportexportplugininterface.cpp:59
+#, kde-format
+msgid "Export contacts to a vCard 3.0 file."
+msgstr "Contactpersonen exporteren naar een vCard 3.0-bestand."
+
+#: vcards/vcardimportexportplugininterface.cpp:64
+#, kde-format
+msgid "Export vCard 2.1..."
+msgstr "vCard 2.1 exporteren..."
+
+#: vcards/vcardimportexportplugininterface.cpp:65
+#, kde-format
+msgid "Export contacts to a vCard 2.1 file."
+msgstr "Contactpersonen exporteren naar een vCard 2.1-bestand."
+
+#: vcards/vcardimportexportplugininterface.cpp:113
+#, kde-format
+msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
+msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;Alle bestanden (*)"
+
+#: vcards/vcardimportexportplugininterface.cpp:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Select vCard to Import"
+msgstr "vCard om te importeren selecteren"
+
+#: vcards/vcardimportexportplugininterface.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "vCard Import Failed"
+msgstr "Importeren van vCard mislukt"
+
+#: vcards/vcardimportexportplugininterface.cpp:134
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Unable to access vCard:</para><para>%1</para>"
+msgstr "<para>Geen toegang tot vCard:</para><para>%1</para>"
+
+#: vcards/vcardimportexportplugininterface.cpp:436
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have selected a list of contacts, shall they be exported to several "
+"files?"
+msgstr ""
+"U hebt een lijst met contactpersonen geselecteerd. Wilt u ze exporteren naar "
+"verschillende bestanden?"
+
+#: vcards/vcardimportexportplugininterface.cpp:439
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to One File"
+msgstr "Exporteren naar één bestand"
+
+#: vcards/vcardimportexportplugininterface.cpp:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to Several Files"
+msgstr "Exporteren naar verschillende bestanden"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#, kde-format
+msgid "Import Windows Contact file..."
+msgstr "Bestand met contactpersonen uit Windows importeren..."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#, kde-format
+msgid "Import contacts from windows contact file."
+msgstr "Contactpersonen importeren uit een contactpersonenbestand uit windows."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#, kde-format
+msgid "Windows Contact file (*.contact)"
+msgstr "Contactpersonenbestand uit Windows (*.contact)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Address Book"
+#~ msgstr "Adresboek selecteren"
+
+#~ msgid "Select the address book the imported contact(s) shall be saved in:"
+#~ msgstr ""
+#~ "Het adresboek selecteren waarin de geïmporteerde contactperso(o)n(en) "
+#~ "opgeslagen moeten worden:"
+
+#~ msgctxt "@title:window"
+#~ msgid "Import Contacts"
+#~ msgstr "Contactpersonen importeren"
+
+#~ msgid "Importing one contact to %2"
+#~ msgid_plural "Importing %1 contacts to %2"
+#~ msgstr[0] "Een contactpersoon importeren naar %2"
+#~ msgstr[1] "%1 contactpersonen importeren naar %2"
+
+#~ msgid ""
+#~ "*.vcf|vCard (*.vcf)\n"
+#~ "*|all files (*)"
+#~ msgstr ""
+#~ "*.vcf|vCard (*.vcf)\n"
+#~ "*|alle bestanden (*)"
+
+#~ msgctxt "@info"
+#~ msgid "No contacts were imported, due to errors with the vCards."
+#~ msgstr ""
+#~ "Er werden geen contactpersonen geïmporteerd omdat er fouten in de vCards "
+#~ "zaten."
+
+#~ msgctxt "@info"
+#~ msgid "The vCard does not contain any contacts."
+#~ msgstr "De vCard bevat geen contactpersonen."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Niels Reedijk,Rinse de Vries,Chris Hooijer,Bram Schoenmakers,Freek de "
+#~ "Kruijf"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ",rinse@kde.nl,,bramschoenmakers@kde.nl,freekdekruijf@kde.nl"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact..."
+#~ msgstr "Nieuwe contactpersoon..."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact."
+#~ msgstr ""
+#~ "U krijgt een dialoog te zien waarin u een nieuwe contactpersoon kunt "
+#~ "aanmaken."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact Group..."
+#~ msgstr "Nieuwe contactgroep..."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can create a new contact "
+#~ "group."
+#~ msgstr ""
+#~ "U krijgt een dialoog te zien waarin u een nieuwe contactgroep kunt "
+#~ "aanmaken."
+
+#~ msgid "KAddressBook"
+#~ msgstr "KAddressBook"
+
+#~ msgid "The KDE Address Book Application"
+#~ msgstr "Het KDE adresboekprogramma"
+
+#~ msgid "Copyright © 2007–2016 KAddressBook authors"
+#~ msgstr "Copyright © 2007–2016 Auteurs van KAddressBook"
+
+#~ msgid "Laurent Montel"
+#~ msgstr "Laurent Montel"
+
+#~ msgid "Current maintainer"
+#~ msgstr "Huidige onderhouder"
+
+#~ msgid "Tobias Koenig"
+#~ msgstr "Tobias Koenig"
+
+#~ msgid "Previous maintainer"
+#~ msgstr "Vorige onderhouder"
+
+#~ msgctxt "@action:button"
+#~ msgid "Reset category filter"
+#~ msgstr "Categoriefilter resetten"
+
+#~ msgctxt "@action:button"
+#~ msgid "Clear category filter"
+#~ msgstr "Categoriefilter wissen"
+
+#~ msgid "(Untagged)"
+#~ msgstr "(Zonder tags)"
+
+#~ msgid "(Groups)"
+#~ msgstr "(Groepen)"
+
+#~ msgid "(All)"
+#~ msgstr "(Alles)"
+
+#~ msgid "(None)"
+#~ msgstr "(Geen)"
+
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgid "<qt>Category filter: %1"
+#~ msgstr "<qt>Categoriefilter: %1"
+
+#~ msgid "Configure Plugins"
+#~ msgstr "Plug-ins instellen"
+
+#~ msgid "(c), 2016 Laurent Montel"
+#~ msgstr "(c), 2016 Laurent Montel"
+
+#~ msgid "Tools Plugins"
+#~ msgstr "Plug-ins voor hulpmiddelen"
+
+#~ msgctxt "@item Undefined import field type"
+#~ msgid "Undefined"
+#~ msgstr "Ongedefinieerd"
+
+#~ msgctxt "The wedding anniversary of a contact"
+#~ msgid "Anniversary"
+#~ msgstr "Trouwdag"
+
+#~ msgctxt "Preferred email address"
+#~ msgid "EMail (preferred)"
+#~ msgstr "E-mailadres (voorkeur)"
+
+#~ msgctxt "Second email address"
+#~ msgid "EMail (2)"
+#~ msgstr "E-mailadres (2)"
+
+#~ msgctxt "Third email address"
+#~ msgid "EMail (3)"
+#~ msgstr "E-mailadres (3)"
+
+#~ msgctxt "Fourth email address"
+#~ msgid "EMail (4)"
+#~ msgstr "E-mailadres (4)"
+
+#~ msgid "Blog Feed"
+#~ msgstr "Blogfeed"
+
+#~ msgid "Profession"
+#~ msgstr "Beroep"
+
+#~ msgid "Office"
+#~ msgstr "Kantoor"
+
+#~ msgid "Manager"
+#~ msgstr "Manager"
+
+#~ msgid "Assistant"
+#~ msgstr "Assistent"
+
+#~ msgid "Spouse"
+#~ msgstr "Echtgeno(o)t(e)"
+
+#~ msgid "Select Contacts"
+#~ msgstr "Geselecteerde contactpersonen"
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts"
+#~ msgstr "Alle contactpersonen"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from all your address books"
+#~ msgstr "Alle contactpersonen uit al uw adresboeken."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option you want to select all your contacts from all your "
+#~ "address books."
+#~ msgstr ""
+#~ "Kies deze optie als u alle contactpersonen uit al uw adresboeken wilt "
+#~ "selecteren."
+
+#~ msgctxt "@option:radio"
+#~ msgid "Selected contacts"
+#~ msgstr "Geselecteerde contactpersonen"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Only the contacts currently selected"
+#~ msgstr "Alleen de nu geselecteerde contactpersonen"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want only the contacts you have already "
+#~ "selected in the graphical interface."
+#~ msgstr ""
+#~ "Deze optie selecteren als u alleen de contactpersonen wilt die u al hebt "
+#~ "geselecteerd in het grafische interface."
+
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts from:"
+#~ msgstr "Alle contactpersonen uit:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from a chosen address book"
+#~ msgstr "Alle contactpersonen uit een gekozen adresboek."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option if you want to select all the contacts from only one "
+#~ "of your address books.  Once this option is clicked you will be provided "
+#~ "a drop down box listing all those address books and permitted to select "
+#~ "the one you want."
+#~ msgstr ""
+#~ "Kies deze optie als u alle contactpersonen vanuit een enkel adresboek "
+#~ "wilt selecteren. Nadat deze optie is geactiveerd krijgt u een afrolvak "
+#~ "met een lijst van alle adresboeken en mag u die ene selecteren die u wilt."
+
+#~ msgctxt "@option:check"
+#~ msgid "Include Subfolders"
+#~ msgstr "Submappen invoegen"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select all subfolders including the top-level folder"
+#~ msgstr "Alle submappen selecteren inclusief de map op het topniveau"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Check this box if you want to select all contacts from this folder, "
+#~ "including all subfolders.  If you only want the contacts from the top-"
+#~ "level folder then leave this box unchecked."
+#~ msgstr ""
+#~ "Activeer dit vakje als u alle contactpersonen uit deze map, inclusief "
+#~ "alle submappen, wilt selecteren. Als u alleen de contactpersonen uit de "
+#~ "bovenste map wilt dan laat u dit vakje niet geactiveerd."
+
+#~ msgctxt "@action:button Previous contact"
+#~ msgid "Previous"
+#~ msgstr "Vorige"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the previous contact in the list"
+#~ msgstr "Ga naar de vorige contactpersonen in de lijst"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the previous contact in the list."
+#~ msgstr ""
+#~ "Druk op deze knop om naar de vorige contactpersonen in de lijst te gaan."
+
+#~ msgctxt "@action:button Next contact"
+#~ msgid "Next"
+#~ msgstr "Volgende"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move to the next contact in the list"
+#~ msgstr "Naar de volgende contactpersonen in de lijst gaan."
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Press this button to move to the next contact in the list."
+#~ msgstr ""
+#~ "Druk op deze knop om naar de volgende contactpersonen in de lijst te gaan."
+
+#~ msgctxt "@info:status"
+#~ msgid "%1 out of %2"
+#~ msgstr "%1 uit %2"
+
+#~ msgid "Import the given file"
+#~ msgstr "Het gegeven bestand importeren"
+
+#~ msgid "Files or URLs. The user will be asked whether to import."
+#~ msgstr ""
+#~ "Bestanden of URL's. De gebruiker zal gevraagd worden om het te importeren."
+
+#~ msgid "&Configure KAddressBook..."
+#~ msgstr "KAddressBook &instellen..."
+
+#~ msgid "&File"
+#~ msgstr "Be&stand"
+
+#~ msgid "&New"
+#~ msgstr "&Nieuw"
+
+#~ msgid "&Import"
+#~ msgstr "&Importeren"
+
+#~ msgid "&Export"
+#~ msgstr "&Exporteren"
+
+#~ msgid "&Edit"
+#~ msgstr "B&ewerken"
+
+#~ msgid "&Tools"
+#~ msgstr "H&ulpmiddelen"
+
+#~ msgid "&Action"
+#~ msgstr "&Actie"
+
+#~ msgid "&View"
+#~ msgstr "Beel&d"
+
+#~ msgid "&Settings"
+#~ msgstr "In&stellingen"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Hoofdwerkbalk"
+
+#~ msgctxt "@label Search contacts in list"
+#~ msgid "Search...<%1>"
+#~ msgstr "Zoeken naar...<%1>"
+
+#~ msgid "&Themes"
+#~ msgstr "&Thema's"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Print the complete address book or a selected number of contacts."
+#~ msgstr ""
+#~ "Druk het complete adresboek af of een geselecteerd aantal contactpersonen."
+
+#~ msgid "Quick search"
+#~ msgstr "Snelle zoekactie"
+
+#~ msgid "Category filter"
+#~ msgstr "Categoriefilter"
+
+#~ msgid "Select All"
+#~ msgstr "Alles selecteren"
+
+#~ msgid "Select all contacts in the current address book view."
+#~ msgstr ""
+#~ "Selecteert alle contactpersonen in de huidige weergave van het adresboek."
+
+#~ msgid "Show QR Codes"
+#~ msgstr "QR-codes tonen"
+
+#~ msgid "Show QR Codes in the contact."
+#~ msgstr "QR-codes in de contactpersoon tonen."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Simple (one column)"
+#~ msgstr "Eenvoudig (één kolom)"
+
+#~ msgid "Show a simple mode of the address book view."
+#~ msgstr "Toon een eenvoudige modus van de adresboekweergave."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Two Columns"
+#~ msgstr "Twee kolommen"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Three Columns"
+#~ msgstr "Drie kolommen"
+
+#~ msgid "Set Focus to Quick Search"
+#~ msgstr "Focus op snelzoeken"
+
+#~ msgid "Serverside Subscription..."
+#~ msgstr "Inschrijving aan de kant van de server..."
+
+#~ msgid "Address Book"
+#~ msgstr "Adresboek"
+
+#~ msgid "Print Contacts"
+#~ msgstr "Contactpersonen afdrukken"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "You will be presented with a dialog where you can configure the "
+#~ "application-wide shortcuts."
+#~ msgstr ""
+#~ "Er wordt een venster geopend waar u de sneltoetsen voor deze toepassing "
+#~ "kunt instellen."
+
+#~ msgid ""
+#~ "<qt>This will hide the menu bar completely. You can show it again by "
+#~ "typing %1.</qt>"
+#~ msgstr ""
+#~ "<qt>Hierdoor wordt de menubalk geheel verborgen. U kunt die weer "
+#~ "zichtbaar maken door %1 te typen.</qt>"
+
+#~ msgid "Hide menu bar"
+#~ msgstr "Menubalk verbergen"
+
+#~ msgid "Full Name"
+#~ msgstr "Volledige naam"
+
+#~ msgid "Family Name"
+#~ msgstr "Achternaam"
+
+#~ msgid "Given Name"
+#~ msgstr "Voornaam"
+
+#~ msgid "Home Address"
+#~ msgstr "Adres privé"
+
+#~ msgid "Business Address"
+#~ msgstr "Zakelijk adres"
+
+#~ msgid "Phone Numbers"
+#~ msgstr "Telefoonnummers"
+
+#~ msgid "Preferred EMail"
+#~ msgstr "Voorkeur-e-mailadres"
+
+#~ msgid "All EMails"
+#~ msgstr "Alle e-mails"
+
+#~ msgid "Compact Style"
+#~ msgstr "Compacte stijl"
+
+#~ msgid "Setting up document"
+#~ msgstr "Instellen van een document"
+
+#~ msgid "Printing"
+#~ msgstr "Afdrukken"
+
+#~ msgctxt "Finished printing"
+#~ msgid "Done"
+#~ msgstr "Gereed"
+
+#~ msgid "Compact Printing Style"
+#~ msgstr "Compacte afdrukstijl"
+
+#~ msgid "Appearance"
+#~ msgstr "Uiterlijk"
+
+#~ msgid "Fields"
+#~ msgstr "Velden"
+
+#~ msgid ""
+#~ "Print the home address, with home phone number and mobile phone number"
+#~ msgstr "Het thuisadres, met privé- en mobiele telefoonnummer afdrukken"
+
+#~ msgid "with home address"
+#~ msgstr "met thuisadres"
+
+#~ msgid "print the business address, with business phone number"
+#~ msgstr "zakelijk adres met zakelijk telefoonnummer afdrukken"
+
+#~ msgid "with business address"
+#~ msgstr "met zakelijk adres"
+
+#~ msgid "Print the birthday"
+#~ msgstr "De verjaardag afdrukken"
+
+#~ msgid "with birthday"
+#~ msgstr "met verjaardag"
+
+#~ msgid "Print the e-mail and e-mail2 fields"
+#~ msgstr "Het e-mailadres en e-mail2-velden afdrukken"
+
+#~ msgid "with e-mail"
+#~ msgstr "met e-mailadres"
+
+#~ msgid "the first color, if alternating color is checked"
+#~ msgstr "de eerste kleur, als de kleur laten wisselen is geactiveerd"
+
+#~ msgid "first color"
+#~ msgstr "eerste kleur"
+
+#~ msgid "the second color, if alternating color is checked"
+#~ msgstr "de tweede kleur, als de kleur laten wisselen is geactiveerd"
+
+#~ msgid "second color"
+#~ msgstr "tweede kleur"
+
+#~ msgid "Change the background color of every row"
+#~ msgstr "Achtergrondkleur van elke rij wijzigen"
+
+#~ msgid "Alternating the background color"
+#~ msgstr "Achtergrondkleur laten wisselen"
+
+#~ msgid "Organization:"
+#~ msgstr "Organisatie:"
+
+#~ msgid "Email address:"
+#~ msgstr "E-mailadres:"
+
+#~ msgid "Email addresses:"
+#~ msgstr "E-mailadressen:"
+
+#~ msgid "Telephone:"
+#~ msgstr "Telefoonnummer:"
+
+#~ msgid "Telephones:"
+#~ msgstr "Telefoonnummers:"
+
+#~ msgid "Web page:"
+#~ msgstr "Webpagina:"
+
+#~ msgid "Domestic Address"
+#~ msgstr "Adres privé"
+
+#~ msgid "International Address"
+#~ msgstr "Internationaal adres"
+
+#~ msgid "Postal Address"
+#~ msgstr "Postadres"
+
+#~ msgid "Parcel Address"
+#~ msgstr "Perceeladres"
+
+#~ msgid "Work Address"
+#~ msgstr "Adres werk"
+
+#~ msgid "Preferred Address"
+#~ msgstr "Voorkeuradres"
+
+#~ msgid "Notes:"
+#~ msgstr "Notities:"
+
+#~ msgid "Detailed Print Style - Appearance"
+#~ msgstr "Gedetailleerde afdrukstijl - uiterlijk"
+
+#~ msgid "Setting up colors"
+#~ msgstr "Instellen van kleuren"
+
+#~ msgid "Detailed Style"
+#~ msgstr "Gedetailleerde stijl"
+
+#~ msgid "Appearance Page"
+#~ msgstr "Uiterlijkpagina"
+
+#~ msgid "Contact Headers"
+#~ msgstr "Contactkopteksten"
+
+#~ msgid "Select the headline text background color"
+#~ msgstr "Achtergrondkleur voor kopteksten selecteren"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline background color."
+#~ msgstr ""
+#~ "Op deze knop klikken om de kleurenkiezer te starten om de "
+#~ "achtergrondkleur van de kop te wijzigen."
+
+#~ msgid "Headline background color:"
+#~ msgstr "Achtergrondkleur voor kopteksten:"
+
+#~ msgid "Headline text color:"
+#~ msgstr "Tekstkleur voor kopteksten:"
+
+#~ msgid "Select the headline text color"
+#~ msgstr "Tekstkleur voor kopteksten selecteren"
+
+#~ msgid ""
+#~ "Click this button to start a color chooser that will allow you set to the "
+#~ "color for the headline text."
+#~ msgstr ""
+#~ "Klik op deze knop om te bepalen welke kleur zal worden gebruikt voor de "
+#~ "tekst in de kop."
+
+#~ msgid "Mike's Printing Style"
+#~ msgstr "Mike's afdrukstijl"
+
+#~ msgid "Which contacts do you want to print?"
+#~ msgstr "Welke contactpersonen wilt u afdrukken?"
+
+#~ msgid "Choose Contacts to Print"
+#~ msgstr "Contactpersonen kiezen om af te drukken"
+
+#~ msgid "Choose Printing Style"
+#~ msgstr "Afdrukstijl kiezen"
+
+#~ msgid "Print Progress"
+#~ msgstr "Afdrukvoortgang"
+
+#~ msgid "Printing: Progress"
+#~ msgstr "Afdrukken: voortgang"
+
+#~ msgid "Progress"
+#~ msgstr "Voortgang"
+
+#~ msgid "Print Contact's Information"
+#~ msgstr "Informatie over contactpersonen afdrukken"
+
+#~ msgid "Print contact phone numbers"
+#~ msgstr "Telefoonnummers van contactpersonen afdrukken"
+
+#~ msgid "Check this box if you want contact phone numbers to be printed."
+#~ msgstr ""
+#~ "Dit vakje activeren als u de telefoonnummers van de contactpersonen wilt "
+#~ "afdrukken."
+
+#~ msgid "Phone numbers"
+#~ msgstr "Telefoonnummers"
+
+#~ msgid "Print contact email addresses"
+#~ msgstr "E-mailadressen van contactpersonen afdrukken"
+
+#~ msgid "Check this box if you want contact email addresses to be printed."
+#~ msgstr ""
+#~ "Dit vakje activeren als u de e-mailadressen van de contactpersonen wilt "
+#~ "afdrukken."
+
+#~ msgid "Email addresses"
+#~ msgstr "E-mailadressen"
+
+#~ msgid "Print contact street addresses"
+#~ msgstr "Postadressen van contactpersonen afdrukken"
+
+#~ msgid "Check this box if you want contact street addresses to be printed."
+#~ msgstr ""
+#~ "Dit vakje activeren als u de postadressen van de contactpersonen wilt "
+#~ "afdrukken."
+
+#~ msgid "Postal addresses"
+#~ msgstr "Postadres"
+
+#~ msgid "Print contact organizations"
+#~ msgstr "Organisaties van contactpersonen afdrukken"
+
+#~ msgid "Check this box if you want contact organizations to be printed."
+#~ msgstr ""
+#~ "Dit vakje activeren als u de organisaties van de contactpersonen wilt "
+#~ "afdrukken."
+
+#~ msgid "Organization"
+#~ msgstr "Organisatie"
+
+#~ msgid "Print contact birthdays"
+#~ msgstr "Verjaardagen van contactpersonen afdrukken"
+
+#~ msgid "Check this box if you want contact birthdays to be printed."
+#~ msgstr ""
+#~ "Dit vakje activeren als u de verjaardagen van de contactpersonen wilt "
+#~ "afdrukken."
+
+#~ msgid "Birthday"
+#~ msgstr "Verjaardag"
+
+#~ msgid "Print contact notes"
+#~ msgstr "Notities bij contactpersonen afdrukken"
+
+#~ msgid "Check this box if you want contact notes to be printed."
+#~ msgstr ""
+#~ "Dit vakje activeren als u de notities van de contactpersonen wilt "
+#~ "afdrukken."
+
+#~ msgid "Note"
+#~ msgstr "Notities"
+
+#~ msgid "Ring Binder Printing Style - Appearance"
+#~ msgstr "Ringband printstijl - uiterlijk"
+
+#~ msgid "Setting up fields"
+#~ msgstr "Instellen van velden"
+
+#~ msgid "Printout for Ring Binders"
+#~ msgstr "Afdruk voor ringbanden"
+
+#~ msgctxt "@item:inlistbox Ascending sort order"
+#~ msgid "Ascending"
+#~ msgstr "Oplopend"
+
+#~ msgctxt "@item:inlistbox Descending sort order"
+#~ msgid "Descending"
+#~ msgstr "Aflopend"
+
+#~ msgctxt "@label"
+#~ msgid "(No preview available.)"
+#~ msgstr "(Geen voorbeeld beschikbaar)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Choose Printing Style"
+#~ msgstr "Afdrukstijl kiezen"
+
+#~ msgctxt "@label:textbox"
+#~ msgid ""
+#~ "What should the print look like?\n"
+#~ "KAddressBook has several printing styles, designed for different "
+#~ "purposes.\n"
+#~ "Choose the style that suits your needs below."
+#~ msgstr ""
+#~ "Hoe zal de afdruk er uit zien?\n"
+#~ "KAddressBook kent diverse afdrukstijlen, ontworpen voor verschillende "
+#~ "doeleinden.\n"
+#~ "Kies hieronder de stijl die voldoet aan uw behoefte."
+
+#~ msgctxt "@title:group"
+#~ msgid "Sorting"
+#~ msgstr "Sorteren "
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Criterion:"
+#~ msgstr "Criterium:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the primary sort field"
+#~ msgstr "Het primaire sorteerveld selecteren"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "From this list you can select the field on which your contacts are sorted "
+#~ "in the print output.  Use the sorting order option to determine if the "
+#~ "sort will be in ascending or descending order."
+#~ msgstr ""
+#~ "Uit deze lijst kunt u het veld selecteren waarop uw contactpersonen "
+#~ "worden gesorteerd in afdrukuitvoer.  Gebruik de option voor de volgorde "
+#~ "van de sortering om te bepalen of de sortering oplopend of aflopend is."
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Order:"
+#~ msgstr "Volgorde:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the sorting order"
+#~ msgstr "De sorteervolgorde selecteren"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose if you want to sort your contacts in ascending or descending "
+#~ "order. Use the sorting criterion option to specify on which contact field "
+#~ "the sorting will be performed."
+#~ msgstr ""
+#~ "Maak de keuze of u uw contactpersonen in oplopende of aflopende volgorde "
+#~ "wilt sorteren. Gebruik de optie voor het sorteringscriterium om te "
+#~ "specificeren op welke veld van de contactpersoon de sortering zal worden "
+#~ "gedaan."
+
+#~ msgctxt "@title:group"
+#~ msgid "Print Style"
+#~ msgstr "Afdrukstijl"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the print style"
+#~ msgstr "Afdrukstijl selecteren"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose your desired printing style. See the preview image to help you "
+#~ "decide."
+#~ msgstr ""
+#~ "Kies de gewenste afdrukstijl. Zie de voorbeeldafbeelding om te helpen bij "
+#~ "het beslissen."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Search contacts in list"
+#~ msgstr "Contactpersonen zoeken in de lijst"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Start typing a search string in this box and the list of contacts "
+#~ "matching that string will be displayed.  This is a quick way of searching "
+#~ "for contacts of interest."
+#~ msgstr ""
+#~ "Begin met het typen van een zoektekenreeks in dit vak en de lijst met "
+#~ "contactpersonen overeenkomend met die tekenreeks zal worden getoond. Dit "
+#~ "is een snelle manier van zoeken naar contactpersonen waarin u bent "
+#~ "geïnteresseerd."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sync Contacts"
+#~ msgstr "Contactpersonen synchroniseren"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "Choose this option to synchronize your groupware contacts."
+#~ msgstr "Deze opties kiezen om uw groupware-contacten te synchroniseren."
+
+#~ msgid "Ungrouped"
+#~ msgstr "Niet gegroepeerd"
+
+#~ msgid "Group"
+#~ msgstr "Groep"
+
+#~ msgid "eric"
+#~ msgstr "eric"
+
+#~ msgid "Gravatarupdatedialog_Gui"
+#~ msgstr "Gravatarupdatedialog_Gui"
+
+#~ msgid "Test for Gravatar update dialog"
+#~ msgstr "Testen op dialoog voor bijwerken van Gravatar"
+
+#~ msgid "Email address"
+#~ msgstr "E-mailadres"
+
+#~ msgid "Check and update Gravatar"
+#~ msgstr "Gravatar controleren en bijwerken"
+
+#~ msgid "Save Image"
+#~ msgstr "Afbeelding opslaan..."
+
+#~ msgid "Save Image URL"
+#~ msgstr "URL van afbeelding opslaan"
+
+#~ msgid "Email:"
+#~ msgstr "E-mailadres:"
+
+#~ msgid "Use HTTPS Protocol"
+#~ msgstr "HTTPS-protocol gebruiken"
+
+#~ msgid "Use Libravatar"
+#~ msgstr "Libravatar gebruiken"
+
+#~ msgid "Fallback to Gravatar"
+#~ msgstr "Naar Gravatar terugvallen"
+
+#~ msgid "Search"
+#~ msgstr "Zoeken"
+
+#~ msgid "Search is impossible."
+#~ msgstr "Zoeken is niet mogelijk."
+
+#~ msgid "No Gravatar Found."
+#~ msgstr "Geen Gravatar gevonden."
+
+#~ msgid "Check Gravatar..."
+#~ msgstr "Gravatar controleren..."
+
+#~ msgid "No email found for this contact."
+#~ msgstr "Geen e-mailadres voor deze contactpersoon gevonden."
+
+#~ msgid "A contact group was selected."
+#~ msgstr "Geen contactgroep geselecteerd."
+
+#~ msgid "Send an email..."
+#~ msgstr "Een e-mail sturen..."
+
+#~ msgid "You have not selected any contacts."
+#~ msgstr "U hebt geen contactpersonen geselecteerd."
+
+#~ msgid "No emails found in selected contacts."
+#~ msgstr "Geen e-mailadressen gevonden in de geselecteerde contactpersonen."
+
+#~ msgid "Send vCards..."
+#~ msgstr "vCard verzenden..."
+
+#~ msgid "No vCard created."
+#~ msgstr "Geen vCard aangemaakt."
+
+#~ msgid "Temporary file '%1' cannot be created"
+#~ msgstr "Het tijdelijk bestand '%1 kan niet worden aangemaakt"
+
+#~ msgid "Merge Contacts..."
+#~ msgstr "Contactpersonen samenvoegen..."
+
+#~ msgid "Search Duplicate Contacts..."
+#~ msgstr "Naar dubbele contactpersonen zoeken..."
+
+#~ msgid "Select Contacts to merge"
+#~ msgstr "Samen te voegen contactpersonen selecteren"
+
+#~ msgid "Select contacts that you really want to merge:"
+#~ msgstr "Selecteer contactpersonen die u echt wilt samenvoegen:"
+
+#~ msgid "Select the addressbook in which to store merged contacts:"
+#~ msgstr ""
+#~ "Adresboek selecteren waarin de samengevoegde contactpersonen op te slaan:"
+
+#~ msgid "merge"
+#~ msgstr "samenvoegen"
+
+#~ msgid "Duplicate contact %1"
+#~ msgstr "Dubbele contactpersoon %1"
+
+#~ msgid "Contacts"
+#~ msgstr "Contactpersonen"
+
+#~ msgid "Select AddressBook:"
+#~ msgstr "Adresboek selecteren:"
+
+#~ msgid "Merge"
+#~ msgstr "Samenvoegen"
+
+#~ msgid "You must select at least two elements."
+#~ msgstr "U moet minstens twee elementen selecteren."
+
+#~ msgid "No duplicated contact found."
+#~ msgstr "Geen dubbele contactpersonen gevonden."
+
+#~ msgid "No contacts selected."
+#~ msgstr "Geen contactpersonen geselecteerd."
+
+#~ msgid ""
+#~ "Some information can be lost. Do you want to continue, or customize what "
+#~ "you want to merge?"
+#~ msgstr ""
+#~ "Er kan informatie zijn verloren. Wilt u doorgaan of aanpassen wat u wilt "
+#~ "samenvoegen?"
+
+#~ msgid "Customize"
+#~ msgstr "Aanpassen"
+
+#~ msgid "Automatic Merging"
+#~ msgstr "Automatisch samenvoegen"
+
+#~ msgid ""
+#~ "Some information was not selected. You can lose this information. Do you "
+#~ "want to continue merging?"
+#~ msgstr ""
+#~ "Een gedeelte van de informatie was niet geselecteerd. Deze informatie kan "
+#~ "verloren gaan. Wilt u doorgaan met samenvoegen?"
+
+#~ msgid "Missing Selected Information"
+#~ msgstr "Ontbrekende geselecteerde informatie"
+
+#~ msgid "(Undefined)"
+#~ msgstr "(Ongedefinieerd)"
+
+#~ msgid "LDIF file (%1)"
+#~ msgstr "LDIF-bestand (%1)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>When trying to read the vCard, there was an error opening the file "
+#~ "<filename>%1</filename>:</para><para>%2</para>"
+#~ msgstr ""
+#~ "<para>Het lezen van de vCard is mislukt door een fout bij het openen van "
+#~ "het bestand <filename>%1</filename>:</para><para>%2</para>"
+
+#~ msgid "Select Which Information to Use for new Contact"
+#~ msgstr ""
+#~ "Selecteer welke informatie te gebruiken voor de nieuwe contactpersoon"
+
+#~ msgid "Merged Contact"
+#~ msgstr "Samengevoegde contactpersoon"
+
+#~ msgid "You selected %1 and some item has not the same name"
+#~ msgstr "U hebt %1 geselecteerd en een item heeft niet dezelfde naam"
+
+#~ msgid "Error while merging contacts."
+#~ msgstr "Fout bij contactpersonen samenvoegen."
+
+#~ msgid "Merge contact"
+#~ msgstr "Contactpersoon samenvoegen"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select vCard Fields"
+#~ msgstr "vCard-velden selecteren"
+
+#~ msgid "Search potential duplicate contacts"
+#~ msgstr "Naar potentiële dubbele contactpersonen zoeken"
+
+#~ msgid "Potential Duplicate Contacts"
+#~ msgstr "Potentiële dubbele contactpersonen"
+
+#~ msgid "You selected %1"
+#~ msgstr "U hebt %1 geselecteerd"
+
+#~ msgid "Debug Nepomuk..."
+#~ msgstr "Nepomuk debuggen..."
+
+#~ msgid "Nepomuk Debug"
+#~ msgstr "Nepomuk debuggen"
+
+#~ msgid "Search info with nepomukshow..."
+#~ msgstr "Zoeken naar informatie met nepomukshow..."
+
+#~ msgid "Error on fetching item"
+#~ msgstr "Fout bij ophalen van item"
+
+#~ msgid "Search with nepomukshow"
+#~ msgstr "Zoeken met nepomukshow"
+
+#~ msgid "Nepomuk id:"
+#~ msgstr "Nepomuk-id:"
+
+#~ msgid "Kontact integration"
+#~ msgstr "Kontact-integratie"
+
+#~ msgid "Grantlee Printing Style"
+#~ msgstr "Grantlee afdrukstijl"
+
+#~ msgid "Emails"
+#~ msgstr "E-mailberichten"
+
+#~ msgid "Website"
+#~ msgstr "Website"
+
+#~ msgid "Department"
+#~ msgstr "Afdeling"
+
+#~ msgid "Manager's Name"
+#~ msgstr "Naam van beheerder"
+
+#~ msgid "Assistant's Name"
+#~ msgstr "Naam van assistent"
+
+#~ msgid "Partner's Name"
+#~ msgstr "Naam van partner"
+
+#~ msgid "IM Address"
+#~ msgstr "IM-adres"
+
+#~ msgctxt "Boolean value"
+#~ msgid "yes"
+#~ msgstr "ja"
+
+#~ msgctxt "Boolean value"
+#~ msgid "no"
+#~ msgstr "nee"
+
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "Wilt u bestand \"%1\" overschrijven"
+
+#~ msgctxt "@info"
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr "Wilt u bestand \"%1\" overschrijven"
+
+#~ msgid "Show Simple View"
+#~ msgstr "Eenvoudige weergave tonen"
+
+#~ msgid "Click on the color button to change the header's text color."
+#~ msgstr ""
+#~ "Op de kleurknop klikken om de kleur van de tekst in de header te wijzigen."
+
+#~ msgid "Select the fields which shall be exported in the vCard."
+#~ msgstr ""
+#~ "Selecteer de velden die geëxporteerd zullen worden naar het vCard-formaat."
+
+#~ msgid "Show Address Books View"
+#~ msgstr "Adresboekweergave tonen"
+
+#~ msgid "Toggle whether the address books view shall be visible."
+#~ msgstr "Schakelt de adresboekweergave in of uit."
+
+#~ msgid "Hide Address Books View"
+#~ msgstr "Adresboekweergave verbergen"
+
+#~ msgid "Show Contacts View"
+#~ msgstr "Contactpersonenweergave"
+
+#~ msgid "Toggle whether the contacts view shall be visible."
+#~ msgstr "Schakelt de contactpersonenweergave in of uit."
+
+#~ msgid "Hide Contacts View"
+#~ msgstr "Contactpersonenweergave verbergen"
+
+#~ msgid "Show Details View"
+#~ msgstr "Detailsweergave tonen"
+
+#~ msgid "Toggle whether the details view shall be visible."
+#~ msgstr "Schakelt de detailsweergave in of uit."
+
+#~ msgid "Hide Details View"
+#~ msgstr "Detailsweergave verbergen"
+
+#~ msgid "Add Address Book Folder..."
+#~ msgstr "Adresboekmap toevoegen..."
+
+#~ msgid ""
+#~ "Add a new address book folder to the currently selected address book "
+#~ "folder."
+#~ msgstr ""
+#~ "Voeg een nieuw adresboekmap toe aan de nu geselecteerde adresboekmap."
+
+#~ msgid "Copy Address Book Folder"
+#~ msgid_plural "Copy %1 Address Book Folders"
+#~ msgstr[0] "Adresboekmap kopiëren"
+#~ msgstr[1] "%1 adresboekmappen kopiëren"
+
+#~ msgid "Copy the selected address book folders to the clipboard."
+#~ msgstr "De geselecteerde adresboekmappen kopiëren naar het klembord."
+
+#~ msgid "Delete Address Book Folder"
+#~ msgstr "Adresboekmap verwijderen"
+
+#~ msgid "Delete the selected address book folders from the address book."
+#~ msgstr "De geselecteerde adresboekmappen verwijderen uit het adresboek."
+
+#~ msgid "Update Address Book Folder"
+#~ msgstr "Adresboekmap bijwerken"
+
+#~ msgid "Update the content of the address book folder"
+#~ msgstr "Inhoud van de adresboekmap bijwerken"
+
+#~ msgid "Cut Address Book Folder"
+#~ msgid_plural "Cut %1 Address Book Folders"
+#~ msgstr[0] "Adresboekmap knippen"
+#~ msgstr[1] "%1 adresboekmappen knippen"
+
+#~ msgid "Cut the selected address book folders from the address book."
+#~ msgstr "De geselecteerde adresboekmappen knippen uit het adresboek."
+
+#~ msgid "Folder Properties..."
+#~ msgstr "Mapeigenschappen..."
+
+#~ msgid ""
+#~ "Open a dialog to edit the properties of the selected address book folder."
+#~ msgstr ""
+#~ "Open een dialoog om de eigenschappen van de geselecteerde adresboekmap te "
+#~ "bewerken."
+
+#~ msgid "Copy Contact"
+#~ msgid_plural "Copy %1 Contacts"
+#~ msgstr[0] "Contactpersoon kopiëren"
+#~ msgstr[1] "%1 contactpersonen kopiëren"
+
+#~ msgid "Delete Contact"
+#~ msgid_plural "Delete %1 Contacts"
+#~ msgstr[0] "Contactpersoon verwijderen"
+#~ msgstr[1] "%1 contactpersonen verwijderen"
+
+#~ msgid "Delete the selected contacts from the address book."
+#~ msgstr "Verwijder de geselecteerde contactpersonen uit het adresboek."
+
+#~ msgid "Edit Contact..."
+#~ msgstr "Contactpersoon bewerken..."
+
+#~ msgid "Copy Group"
+#~ msgid_plural "Copy %1 Groups"
+#~ msgstr[0] "Groep kopiëren"
+#~ msgstr[1] "%1 groepen kopiëren"
+
+#~ msgid "Delete Group"
+#~ msgid_plural "Delete %1 Groups"
+#~ msgstr[0] "Groep verwijderen"
+#~ msgstr[1] "%1 groepen verwijderen"
+
+#~ msgid "Cut Group"
+#~ msgid_plural "Cut %1 Groups"
+#~ msgstr[0] "Groep knippen"
+#~ msgstr[1] "%1 groepen knippen"
+
+#~ msgid "Edit Group..."
+#~ msgstr "Groep bewerken..."
+
+#~ msgid "Add Address Book"
+#~ msgstr "Adresboek toevoegen"
+
+#~ msgid "Could not add address book: %1"
+#~ msgstr "Kon adresboek niet toevoegen: %1"
+
+#~ msgid "Adding Address Book failed"
+#~ msgstr "Adresboek toevoegen is mislukt"
+
+#~ msgid "Do you really want to delete address book '%1'?"
+#~ msgstr "Wilt u het adresboek '%1' verwijderen?"
+
+#~ msgid "Delete Address Book?"
+#~ msgstr "Adresboek verwijderen?"
+
+#~ msgid ""
+#~ "Create a new contact<p>You will be presented with a dialog where you can "
+#~ "add data about a person, including addresses and phone numbers.</p>"
+#~ msgstr ""
+#~ "Maak een nieuwe contactpersoon aan<p>Er wordt een venster geopend waar u "
+#~ "alle gegevens van een persoon kunt invoeren, zoals adressen en "
+#~ "telefoonnummers.</p>"
+
+#~ msgid ""
+#~ "Create a new group<p>You will be presented with a dialog where you can "
+#~ "add a new group of contacts.</p>"
+#~ msgstr ""
+#~ "Een nieuwe groep aanmaken<p>Er wordt een venster geopend waarin u een "
+#~ "nieuwe groep met contactpersonen kunt aanmaken.</p>"
+
+#~ msgid ""
+#~ "Edit the selected contact<p>You will be presented with a dialog where you "
+#~ "can edit the data stored about a person, including addresses and phone "
+#~ "numbers.</p>"
+#~ msgstr ""
+#~ "Bewerkt de geselecteerde contactpersoon<p>Er wordt een venster geopend "
+#~ "waarin u alle gegevens van een persoon kunt wijzigen, zoals adressen en "
+#~ "telefoonnummers.</p>"
+
+#~ msgid "Add &Address Book..."
+#~ msgstr "&Adresboek toevoegen..."
+
+#~ msgid ""
+#~ "Add a new address book<p>You will be presented with a dialog where you "
+#~ "can select the type of the address book that shall be added.</p>"
+#~ msgstr ""
+#~ "Een nieuw adresboek toevoegen<p>U krijgt een dialoogvenster waarin u het "
+#~ "type adresboek kunt selecteren dat zal worden toegevoegd.</p>"
+
+#~ msgid "&Delete Address Book"
+#~ msgstr "Adresboek verwij&deren"
+
+#~ msgid ""
+#~ "Delete the selected address book<p>The currently selected address book "
+#~ "will be deleted, along with all the contacts and contact groups it "
+#~ "contains.</p>"
+#~ msgstr ""
+#~ "Het geselecteerde adresboek verwijderen<p>Het nu geselecteerde adresboek "
+#~ "zal worden verwijderd, samen met alle contactpersonen en contactgroepen "
+#~ "die het bevat.</p>"
+
+#~ msgid "Address Book Properties..."
+#~ msgstr "Adresboekeigenschappen..."
+
+#~ msgid "Open a dialog to edit properties of the selected address book."
+#~ msgstr ""
+#~ "Een dialoogvenster openen om de eigenschappen van het geselecteerde "
+#~ "adresboek te bewerken."
+
+#~ msgid "Add Host"
+#~ msgstr "Host toevoegen"
+
+#~ msgctxt "@item LDAP search key"
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Home Number"
+#~ msgstr "Telefoon privé"
+
+#~ msgid "Work Number"
+#~ msgstr "Telefoon werk"
+
+#~ msgid "Mobile Number"
+#~ msgstr "Mobiele telefoon"
+
+#~ msgid "Fax Number"
+#~ msgstr "Fax"
+
+#~ msgid "Street"
+#~ msgstr "Straat"
+
+#~ msgctxt "@item LDAP search key"
+#~ msgid "State"
+#~ msgstr "Staat"
+
+#~ msgid "Country"
+#~ msgstr "Land"
+
+#~ msgid "City"
+#~ msgstr "Stad"
+
+#~ msgid "Zip Code"
+#~ msgstr "Postcode"
+
+#~ msgid "Description"
+#~ msgstr "Beschrijving"
+
+#~ msgid "User ID"
+#~ msgstr "Gebruikers-id"
+
+#~ msgctxt ""
+#~ "@title:column Column containing the residential state of the address"
+#~ msgid "State"
+#~ msgstr "Staat"
+
+#~ msgctxt "@title:column Column containing title of the person"
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Import Contacts from LDAP"
+#~ msgstr "Contactpersonen uit LDAP importeren"
+
+#~ msgid "Search for Addresses in Directory"
+#~ msgstr "Zoeken naar adressen in LDAP-directory"
+
+#~ msgid "Search for:"
+#~ msgstr "Zoeken naar:"
+
+#~ msgctxt "In LDAP attribute"
+#~ msgid "in"
+#~ msgstr "in"
+
+#~ msgctxt "@item:inlistbox Name of the contact"
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgctxt "@item:inlistbox email address of the contact"
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Home Number"
+#~ msgstr "Telefoon privé"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Work Number"
+#~ msgstr "Telefoon werk"
+
+#~ msgid "Stop"
+#~ msgstr "Stoppen"
+
+#~ msgctxt "@action:button Start searching"
+#~ msgid "&Search"
+#~ msgstr "&Zoeken"
+
+#~ msgid "Recursive search"
+#~ msgstr "Recursieve zoekactie"
+
+#~ msgid "Contains"
+#~ msgstr "Bevat"
+
+#~ msgid "Starts With"
+#~ msgstr "Begint met"
+
+#~ msgid "Unselect All"
+#~ msgstr "Alles deselecteren"
+
+#~ msgid "Import Selected"
+#~ msgstr "Geselecteerden importeren"
+
+#~ msgctxt "Search attribute: Name of contact"
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgctxt "Search attribute: Email of the contact"
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgid "You must select a LDAP server before searching."
+#~ msgstr "U moet een LDAP-server selecteren alvorens te gaan zoeken."
+
+#~ msgid "Select a distribution list to add the selected contacts to."
+#~ msgstr ""
+#~ "Kies een distributielijst om de geselecteerde contactpersonen toe te "
+#~ "voegen."
+
+#~ msgctxt "arguments are host name, datetime"
+#~ msgid "Imported from LDAP directory %1 on %2"
+#~ msgstr "Geïmporteerd van LDAP-map %1 op %2"
+
+#~ msgid "Configure the Address Book LDAP Settings"
+#~ msgstr "De LDAP-instellingen voor uw adresboek configureren"
+
+#~ msgid "kcmldap"
+#~ msgstr "kcmldap"
+
+#~ msgid "LDAP Server Settings"
+#~ msgstr "LDAP-serverinstellingen"
+
+#~ msgid "(c) 2009 Tobias Koenig"
+#~ msgstr "(c) 2009 Tobias Koenig"
+
+#~ msgid "Edit Host"
+#~ msgstr "Host bewerken"
+
+#~ msgid "LDAP Servers"
+#~ msgstr "LDAP-servers"
+
+#~ msgid "Check all servers that should be used:"
+#~ msgstr "Selecteer alle servers die zouden moeten worden gebruikt:"
+
+#~ msgid "&Add Host..."
+#~ msgstr "Host &toevoegen..."
+
+#~ msgid "&Edit Host..."
+#~ msgstr "Host b&ewerken..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "Host ve&rwijderen"
+
+#~ msgid "(c) 2007-2009 The KDE PIM Team"
+#~ msgstr "(c) 2007-2009, Het KDE PIM-team"

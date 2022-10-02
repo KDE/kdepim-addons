@@ -1,0 +1,3843 @@
+# KDE breton translation
+# Thierry Vignaud <tvignaud@mandriva.com>, 2004-2005
+msgid ""
+msgstr ""
+"Project-Id-Version: kaddressbook\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2005-03-04 00:29+0100\n"
+"Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
+"Language-Team: Breton <LL@li.org>\n"
+"Language: br\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: csv/csvimportexportplugininterface.cpp:36
+#, fuzzy, kde-format
+#| msgid "Export CSV List..."
+msgid "Export CSV file..."
+msgstr "Ezporzh ar roll CSV ..."
+
+#: csv/csvimportexportplugininterface.cpp:37
+#, kde-format
+msgid "Export contacts to a file in comma separated value format."
+msgstr ""
+
+#: csv/csvimportexportplugininterface.cpp:42
+#, fuzzy, kde-format
+#| msgid "Import CSV List..."
+msgid "Import CSV file..."
+msgstr "Enporzh ur roll CSV ..."
+
+#: csv/csvimportexportplugininterface.cpp:43
+#, kde-format
+msgid "Import contacts from a file in comma separated value format."
+msgstr ""
+
+#: csv/csvimportexportplugininterface.cpp:152
+#: gmx/gmximportexportplugininterface.cpp:80
+#: ldif/ldifimportexportplugininterface.cpp:130
+#: vcards/vcardimportexportplugininterface.cpp:370
+#, fuzzy, kde-format
+#| msgid "Which contacts do you want to print?"
+msgid "Which contact do you want to export?"
+msgstr "Peseurt darempredoù e fell deoc'h da voulañ ?"
+
+#: csv/csvimportexportplugininterface.cpp:162
+#: gmx/gmximportexportplugininterface.cpp:90
+#: ldif/ldifimportexportplugininterface.cpp:140
+#: vcards/vcardimportexportplugininterface.cpp:382
+#, fuzzy, kde-format
+#| msgid "Delete all selected contacts."
+msgid "You have not selected any contacts to export."
+msgstr "Dilemel an holl zarempredoù dibabet."
+
+#: csv/csvimportexportplugininterface.cpp:191
+#: gmx/gmximportexportplugininterface.cpp:124
+#: ldif/ldifimportexportplugininterface.cpp:161
+#, fuzzy, kde-format
+msgid "<qt>Unable to open file <b>%1</b></qt>"
+msgstr "<qt>N'hellan ket digeriñ ar restr <b>%1<b>.</qt>"
+
+#: csv/csvimportexportplugininterface.cpp:203
+#: gmx/gmximportexportplugininterface.cpp:139
+#: ldif/ldifimportexportplugininterface.cpp:191
+#, kde-format
+msgid "<qt>Unable to open file <b>%1</b>.</qt>"
+msgstr "<qt>N'hellan ket digeriñ ar restr <b>%1</b>.</qt>"
+
+#: csv/import/csvimportdialog.cpp:168
+#, fuzzy, kde-format
+#| msgid "vCard Import Failed"
+msgctxt "@title:window"
+msgid "CSV Import Dialog"
+msgstr "Ne m'eus ket enporzh ar vCard"
+
+#: csv/import/csvimportdialog.cpp:223
+#, fuzzy, kde-format
+#| msgid "Importing contacts"
+msgctxt "@label"
+msgid "Importing contacts"
+msgstr "Emaon oc'h enporzh ar zarempredoù"
+
+#: csv/import/csvimportdialog.cpp:294
+#, fuzzy, kde-format
+#| msgid "File to import:"
+msgctxt "@label"
+msgid "File to import:"
+msgstr "Restr da enporzh :"
+
+#: csv/import/csvimportdialog.cpp:302
+#, fuzzy, kde-format
+#| msgid "File to import:"
+msgctxt "@info:tooltip"
+msgid "Select a csv file to import"
+msgstr "Restr da enporzh :"
+
+#: csv/import/csvimportdialog.cpp:304
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Click this button to start a file chooser that will allow you to select a "
+"csv file to import."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:311
+#, fuzzy, kde-format
+#| msgid "Delete"
+msgctxt "@title:group"
+msgid "Delimiter"
+msgstr "Dilemel"
+
+#: csv/import/csvimportdialog.cpp:321
+#, fuzzy, kde-format
+#| msgid "Comma"
+msgctxt "@option:radio Field separator"
+msgid "Comma"
+msgstr "Virgulenn"
+
+#: csv/import/csvimportdialog.cpp:322
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a comma"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:323
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the comma as a field separator."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:328
+#, fuzzy, kde-format
+#| msgid "Semicolon"
+msgctxt "@option:radio Field separator"
+msgid "Semicolon"
+msgstr "Pik-virgulenn"
+
+#: csv/import/csvimportdialog.cpp:329
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a semicolon"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:330
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the semicolon as a field separator."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:334
+#, kde-format
+msgctxt "@option:radio Field separator"
+msgid "Tabulator"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:335
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a tab character"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:336
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the tab character as a field "
+"separator."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:340
+#, fuzzy, kde-format
+#| msgid "Space"
+msgctxt "@option:radio Field separator"
+msgid "Space"
+msgstr "Egor"
+
+#: csv/import/csvimportdialog.cpp:341
+#, fuzzy, kde-format
+#| msgid "Select the key type:"
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a space character"
+msgstr "Dibabit seurt an alc'hwez :"
+
+#: csv/import/csvimportdialog.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if your csv file uses the space character as a field "
+"separator."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:346
+#, fuzzy, kde-format
+#| msgid "Other"
+msgctxt "@option:radio Custom field separator"
+msgid "Other"
+msgstr "All"
+
+#: csv/import/csvimportdialog.cpp:347
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Set the field separator to a custom character"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:349
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Select this option if to use some other character as the field delimiter for "
+"the data in your csv file."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:355
+#, fuzzy, kde-format
+#| msgid "Select the key type:"
+msgctxt "@info:tooltip"
+msgid "Set the custom delimiter character"
+msgstr "Dibabit seurt an alc'hwez :"
+
+#: csv/import/csvimportdialog.cpp:357
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Enter a custom character to use as the delimiter character. If you enter "
+"more than 1 character, only the first will be used and the remaining "
+"characters will be ignored."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:363
+#, fuzzy, kde-format
+#| msgid "&Text font:"
+msgctxt "@label:listbox"
+msgid "Text quote:"
+msgstr "&Nodrezh ar skrid :"
+
+#: csv/import/csvimportdialog.cpp:369
+#, fuzzy, kde-format
+#| msgid "Select the key type:"
+msgctxt "@info:tooltip"
+msgid "Select the quote character"
+msgstr "Dibabit seurt an alc'hwez :"
+
+#: csv/import/csvimportdialog.cpp:371
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Choose the character that your csv data uses to \"quote\" the field "
+"delimiter if that character happens to occur within the data.  For example, "
+"if the comma is the field delimiter, then any comma occurring with the data "
+"will be \"quoted\" by the character specified here."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:376
+#, fuzzy, kde-format
+#| msgid "\""
+msgctxt "@item:inlistbox Quote character option"
+msgid "\""
+msgstr "\""
+
+#: csv/import/csvimportdialog.cpp:377
+#, fuzzy, kde-format
+#| msgid "'"
+msgctxt "@item:inlistbox Quote character option"
+msgid "'"
+msgstr "'"
+
+#: csv/import/csvimportdialog.cpp:378
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@item:inlistbox Quote character option"
+msgid "None"
+msgstr "Ebet"
+
+#: csv/import/csvimportdialog.cpp:382
+#, fuzzy, kde-format
+#| msgid "Date format:"
+msgctxt "@label:listbox"
+msgid "Date format:"
+msgstr "Furmad an deiziad :"
+
+#: csv/import/csvimportdialog.cpp:390
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"<para><list><item>y: year with 2 digits</item><item>Y: year with 4 digits</"
+"item><item>m: month with 1 or 2 digits</item><item>M: month with 2 digits</"
+"item><item>d: day with 1 or 2 digits</item><item>D: day with 2 digits</"
+"item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
+"item><item>S: seconds with 2 digits</item></list></para>"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:401
+#, kde-kuit-format
+msgctxt "@info:whatsthis"
+msgid ""
+"<para>Specify a format to use for dates included in your csv data. Use the "
+"following sequences to help you define the format:</"
+"para><para><list><item>y: year with 2 digits</item><item>Y: year with 4 "
+"digits</item><item>m: month with 1 or 2 digits</item><item>M: month with 2 "
+"digits</item><item>d: day with 1 or 2 digits</item><item>D: day with 2 "
+"digits</item><item>H: hours with 2 digits</item><item>I: minutes with 2 "
+"digits</item><item>S: seconds with 2 digits</item></list></"
+"para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
+"para>"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:417
+#, fuzzy, kde-format
+#| msgid "&Text font:"
+msgctxt "@label:listbox"
+msgid "Text codec:"
+msgstr "&Nodrezh ar skrid :"
+
+#: csv/import/csvimportdialog.cpp:423
+#, fuzzy, kde-format
+#| msgid "Select the key type:"
+msgctxt "@info:tooltip"
+msgid "Select the text codec"
+msgstr "Dibabit seurt an alc'hwez :"
+
+#: csv/import/csvimportdialog.cpp:424
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Choose the character encoding of the data in your csv file."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:428
+#, kde-format
+msgctxt "@option:check"
+msgid "Skip first row of file"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:430
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Skip first row of csv file when importing"
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:432
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want the import to skip over the first row of the csv "
+"data. In many cases, the first line of a csv file will be a comment line "
+"describing the order of the data fields included in the file."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:448
+#, fuzzy, kde-format
+#| msgid "Apply Template..."
+msgctxt "@action:button"
+msgid "Apply Template..."
+msgstr "Arloañ ar patrom ..."
+
+#: csv/import/csvimportdialog.cpp:449
+#, fuzzy, kde-format
+#| msgid "Save Template..."
+msgctxt "@action:button"
+msgid "Save Template..."
+msgstr "Enrollañ ar patrom ..."
+
+#: csv/import/csvimportdialog.cpp:470
+#, fuzzy, kde-format
+#| msgid "Local (%1)"
+msgctxt "@item:inlistbox Codec setting"
+msgid "Local (%1)"
+msgstr "Lec'hel (%1)"
+
+#: csv/import/csvimportdialog.cpp:471
+#, fuzzy, kde-format
+#| msgid "Latin1"
+msgctxt "@item:inlistbox Codec setting"
+msgid "Latin1"
+msgstr "Latin1"
+
+#: csv/import/csvimportdialog.cpp:472
+#, fuzzy, kde-format
+#| msgid "Unicode"
+msgctxt "@item:inlistbox Codec setting"
+msgid "Unicode"
+msgstr "Unicode"
+
+#: csv/import/csvimportdialog.cpp:473
+#, fuzzy, kde-format
+#| msgid "Microsoft Unicode"
+msgctxt "@item:inlistbox Codec setting"
+msgid "Microsoft Unicode"
+msgstr "Microsoft Unicode"
+
+#: csv/import/csvimportdialog.cpp:574
+#, kde-format
+msgctxt "@info:status"
+msgid "You must assign at least one column."
+msgstr ""
+
+#: csv/import/csvimportdialog.cpp:584
+#, fuzzy, kde-format
+#| msgid "(No preview available.)"
+msgctxt "@label"
+msgid "There are no templates available yet."
+msgstr "(N'eus rakwell ebet.)"
+
+#: csv/import/csvimportdialog.cpp:584
+#, fuzzy, kde-format
+#| msgid "(No preview available.)"
+msgctxt "@title:window"
+msgid "No templates available"
+msgstr "(N'eus rakwell ebet.)"
+
+#: csv/import/csvimportdialog.cpp:649
+#, fuzzy, kde-format
+#| msgid "Template Name"
+msgctxt "@title:window"
+msgid "Template Name"
+msgstr "Anv ar patrom"
+
+#: csv/import/csvimportdialog.cpp:649
+#, fuzzy, kde-format
+#| msgid "Please enter a name for the template:"
+msgctxt "@info"
+msgid "Please enter a name for the template:"
+msgstr "Roit un anv evit ar patrom :"
+
+#: csv/import/csvimportdialog.cpp:699
+#, fuzzy, kde-format
+#| msgid "Cannot open input file."
+msgctxt "@info:status"
+msgid "Cannot open input file."
+msgstr "N'hellan ket digeriñ ar restr enkas."
+
+#: csv/import/qcsvreader.cpp:92
+#, kde-format
+msgid "Device is not open"
+msgstr ""
+
+#: csv/import/templateselectiondialog.cpp:182
+#, fuzzy, kde-format
+#| msgid "<qt>Do you really want to remove the address book <b>%1</b>?</qt>"
+msgctxt "@label"
+msgid "Do you really want to delete template '%1'?"
+msgstr ""
+"<qt>Ha fellout a ra deoc'h da vat lemel ar c'harned chomlec'hioù <b>%1</b> ?"
+"</qt>"
+
+#: csv/import/templateselectiondialog.cpp:203
+#, fuzzy, kde-format
+#| msgid "Template Selection"
+msgctxt "@title:window"
+msgid "Template Selection"
+msgstr "Diuzadenn ar patrom"
+
+#: csv/import/templateselectiondialog.cpp:206
+#, kde-format
+msgctxt "@info"
+msgid "Please select a template, that matches the CSV file:"
+msgstr ""
+
+#: gmx/gmximportexportplugininterface.cpp:25
+#, fuzzy, kde-format
+#| msgid "%1 is not a GMX address book file."
+msgid "GMX address book file (*.gmxa)"
+msgstr "N'eo ket ur restr karned chomlec'hioù GMX %1."
+
+#: gmx/gmximportexportplugininterface.cpp:40
+#, fuzzy, kde-format
+#| msgid "Import All..."
+msgid "Import GMX file..."
+msgstr "Enporzh an holl re ..."
+
+#: gmx/gmximportexportplugininterface.cpp:41
+#, fuzzy, kde-format
+#| msgid "%1 is not a GMX address book file."
+msgid "Import contacts from a GMX address book file."
+msgstr "N'eo ket ur restr karned chomlec'hioù GMX %1."
+
+#: gmx/gmximportexportplugininterface.cpp:46
+#, fuzzy, kde-format
+#| msgid "Export GMX Address Book..."
+msgid "Export GMX file..."
+msgstr "Ezporzh ar c'harned chomlec'hioù GMX ..."
+
+#: gmx/gmximportexportplugininterface.cpp:47
+#, fuzzy, kde-format
+#| msgid "%1 is not a GMX address book file."
+msgid "Export contacts to a GMX address book file."
+msgstr "N'eo ket ur restr karned chomlec'hioù GMX %1."
+
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:80
+#: windows-contacts/importwindowcontact.cpp:26
+#, kde-format
+msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
+msgstr "<qt>N'hellan ket digeriñ ar restr <b>%1</b> evit lenn.</qt>"
+
+#: gmx/gmximportexportplugininterface.cpp:455
+#, kde-format
+msgid "%1 is not a GMX address book file."
+msgstr "N'eo ket ur restr karned chomlec'hioù GMX %1."
+
+#: ldap/ldapimportexportplugininterface.cpp:25
+#, fuzzy, kde-format
+#| msgid "Import Contacts?"
+msgid "Import From LDAP server..."
+msgstr "Enporzh an darempredoù ?"
+
+#: ldap/ldapimportexportplugininterface.cpp:26
+#, fuzzy, kde-format
+#| msgid "Import Contacts?"
+msgid "Import contacts from an LDAP server."
+msgstr "Enporzh an darempredoù ?"
+
+#: ldif/ldifimportexportplugininterface.cpp:36
+#, fuzzy, kde-format
+#| msgid "Import LDIF Addressbook..."
+msgid "Import LDIF file..."
+msgstr "Enporzh ar c'harned chomlec'hioù LDIF ..."
+
+#: ldif/ldifimportexportplugininterface.cpp:37
+#, fuzzy, kde-format
+#| msgid "Import Contacts?"
+msgid "Import contacts from an LDIF file."
+msgstr "Enporzh an darempredoù ?"
+
+#: ldif/ldifimportexportplugininterface.cpp:42
+#, fuzzy, kde-format
+#| msgid "Export LDIF Addressbook..."
+msgid "Export LDIF file..."
+msgstr "Ezporzh ar c'harned chomlec'hioù LDIF ..."
+
+#: ldif/ldifimportexportplugininterface.cpp:43
+#, fuzzy, kde-format
+#| msgid "Export LDIF Addressbook..."
+msgid "Export contacts to an LDIF file."
+msgstr "Ezporzh ar c'harned chomlec'hioù LDIF ..."
+
+#: ldif/ldifimportexportplugininterface.cpp:110
+#, kde-format
+msgid "LDif Files"
+msgstr ""
+
+#: ldif/ldifimportexportplugininterface.cpp:151
+#, kde-format
+msgid "LDif Files (*.ldif)"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:22
+#, fuzzy, kde-format
+#| msgid "File to import:"
+msgctxt "@title:group"
+msgid "Fields to be exported"
+msgstr "Restr da enporzh :"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:29
+#, fuzzy, kde-format
+#| msgid "Other fields"
+msgctxt "@option:check"
+msgid "Private fields"
+msgstr "Tachennoù all"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export private fields"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:32
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's private fields to the "
+"vCard output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:36
+#, fuzzy, kde-format
+#| msgid "Business"
+msgctxt "@option:check"
+msgid "Business fields"
+msgstr "Labour"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:37
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export business fields"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:39
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's business fields to the "
+"vCard output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:43
+#, fuzzy, kde-format
+#| msgid "Other fields"
+msgctxt "@option:check"
+msgid "Other fields"
+msgstr "Tachennoù all"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:44
+#, fuzzy, kde-format
+#| msgid "Other fields"
+msgctxt "@info:tooltip"
+msgid "Export other fields"
+msgstr "Tachennoù all"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:46
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's other fields to the vCard "
+"output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:50
+#, fuzzy, kde-format
+#| msgid "Encryption keys"
+msgctxt "@option:check"
+msgid "Encryption keys"
+msgstr "Alc'hwezioù enrinegadur"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:51
+#, fuzzy, kde-format
+#| msgid "Encryption keys"
+msgctxt "@info:tooltip"
+msgid "Export encryption keys"
+msgstr "Alc'hwezioù enrinegadur"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:53
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's encryption keys to the "
+"vCard output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:57
+#, fuzzy, kde-format
+#| msgid "Picture"
+msgctxt "@option:check"
+msgid "Pictures"
+msgstr "Skeudenn"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:58
+#, fuzzy, kde-format
+#| msgid "Picture"
+msgctxt "@info:tooltip"
+msgid "Export pictures"
+msgstr "Skeudenn"
+
+#: vcards/engine/vcardexportselectionwidget.cpp:60
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's picture to the vCard "
+"output file."
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:64
+#, kde-format
+msgctxt "@title:group"
+msgid "Export options"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:70
+#, kde-format
+msgctxt "@option:check"
+msgid "Display name as full name"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:71
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Export display name as full name"
+msgstr ""
+
+#: vcards/engine/vcardexportselectionwidget.cpp:73
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"Check this box if you want to export the contact's display name in the "
+"vCard's full name field.  This may be required to get the name shown "
+"correctly in GMail or Android."
+msgstr ""
+
+#: vcards/engine/vcardviewerdialog.cpp:28
+#, fuzzy, kde-format
+#| msgid "Importing contacts"
+msgctxt "@title:window"
+msgid "Import vCard"
+msgstr "Emaon oc'h enporzh ar zarempredoù"
+
+#: vcards/engine/vcardviewerdialog.cpp:51
+#, fuzzy, kde-format
+#| msgid "Do you want to import this contact in your address book?"
+msgctxt "@info"
+msgid "Do you want to import this contact into your address book?"
+msgstr ""
+"C'hoant ho peus da enporzhañ an darempred-mañ e-barzh ho c'harned "
+"chomlec'hioù ?"
+
+#: vcards/engine/vcardviewerdialog.cpp:61
+#, fuzzy, kde-format
+#| msgid "Import All..."
+msgctxt "@action:button"
+msgid "Import All..."
+msgstr "Enporzh an holl re ..."
+
+#: vcards/vcardimportexportplugininterface.cpp:44
+#, kde-format
+msgid "Import vCard..."
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:45
+#, fuzzy, kde-format
+#| msgid "Import Contacts?"
+msgid "Import contacts from a vCard file."
+msgstr "Enporzh an darempredoù ?"
+
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, fuzzy, kde-format
+#| msgid "Import Contacts?"
+msgid "Export contacts to a vCard 4.0 file."
+msgstr "Enporzh an darempredoù ?"
+
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, fuzzy, kde-format
+#| msgid "Export CSV List..."
+msgid "Export vCard 4.0..."
+msgstr "Ezporzh ar roll CSV ..."
+
+#: vcards/vcardimportexportplugininterface.cpp:58
+#, kde-format
+msgid "Export vCard 3.0..."
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:59
+#, kde-format
+msgid "Export contacts to a vCard 3.0 file."
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:64
+#, kde-format
+msgid "Export vCard 2.1..."
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:65
+#, kde-format
+msgid "Export contacts to a vCard 2.1 file."
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:113
+#, kde-format
+msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Select vCard to Import"
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:120
+#, fuzzy, kde-format
+#| msgid "vCard Import Failed"
+msgctxt "@title:window"
+msgid "vCard Import Failed"
+msgstr "Ne m'eus ket enporzh ar vCard"
+
+#: vcards/vcardimportexportplugininterface.cpp:134
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<para>Unable to access vCard:</para><para>%1</para>"
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:436
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have selected a list of contacts, shall they be exported to several "
+"files?"
+msgstr ""
+
+#: vcards/vcardimportexportplugininterface.cpp:439
+#, fuzzy, kde-format
+#| msgid "Export LDIF Addressbook..."
+msgctxt "@action:button"
+msgid "Export to One File"
+msgstr "Ezporzh ar c'harned chomlec'hioù LDIF ..."
+
+#: vcards/vcardimportexportplugininterface.cpp:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Export to Several Files"
+msgstr ""
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#, fuzzy, kde-format
+#| msgid "Import CSV List..."
+msgid "Import Windows Contact file..."
+msgstr "Enporzh ur roll CSV ..."
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#, fuzzy, kde-format
+#| msgid "Import Contacts?"
+msgid "Import contacts from windows contact file."
+msgstr "Enporzh an darempredoù ?"
+
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#, kde-format
+msgid "Windows Contact file (*.contact)"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Address Book"
+#~ msgctxt "@title:window"
+#~ msgid "Select Address Book"
+#~ msgstr "Karned chomlec'h"
+
+#, fuzzy
+#~| msgid "Importing contacts"
+#~ msgctxt "@title:window"
+#~ msgid "Import Contacts"
+#~ msgstr "Emaon oc'h enporzh ar zarempredoù"
+
+#, fuzzy
+#~| msgid "Importing contacts"
+#~ msgid "Importing one contact to %2"
+#~ msgid_plural "Importing %1 contacts to %2"
+#~ msgstr[0] "Emaon oc'h enporzh ar zarempredoù"
+#~ msgstr[1] ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Thierry Vignaud, Jañ-Mai Drapier"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "tvignaud@mandriva.com, jdrapier@club-internet.fr"
+
+#, fuzzy
+#~| msgid "New Contact"
+#~| msgid_plural "New %1 Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact..."
+#~ msgstr "%1 darempred nevez"
+
+#, fuzzy
+#~| msgid "New Contact"
+#~| msgid_plural "New %1 Contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "New Contact Group..."
+#~ msgstr "%1 darempred nevez"
+
+#~ msgid "KAddressBook"
+#~ msgstr "KAddressBook"
+
+#, fuzzy
+#~| msgid "The KDE Address Book"
+#~ msgid "The KDE Address Book Application"
+#~ msgstr "Ar c'harned chomlec'hioù KDE"
+
+#~ msgid "Current maintainer"
+#~ msgstr "Ratreer red"
+
+#, fuzzy
+#~| msgid "Current maintainer"
+#~ msgid "Previous maintainer"
+#~ msgstr "Ratreer red"
+
+#, fuzzy
+#~| msgid "None"
+#~ msgid "(None)"
+#~ msgstr "Ebet"
+
+#, fuzzy
+#~| msgid "Undefined"
+#~ msgctxt "@item Undefined import field type"
+#~ msgid "Undefined"
+#~ msgstr "Didermenet"
+
+#, fuzzy
+#~| msgid "Anniversary"
+#~ msgctxt "The wedding anniversary of a contact"
+#~ msgid "Anniversary"
+#~ msgstr "Deiz ha bloaz"
+
+#, fuzzy
+#~| msgid "Use Preferred"
+#~ msgctxt "Preferred email address"
+#~ msgid "EMail (preferred)"
+#~ msgstr "Implij an hini gwellañ karet"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "Second email address"
+#~ msgid "EMail (2)"
+#~ msgstr "Postel"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "Third email address"
+#~ msgid "EMail (3)"
+#~ msgstr "Postel"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "Fourth email address"
+#~ msgid "EMail (4)"
+#~ msgstr "Postel"
+
+#~ msgid "Profession"
+#~ msgstr "Labour"
+
+#~ msgid "Office"
+#~ msgstr "Burev"
+
+#, fuzzy
+#~| msgid "Myanmar"
+#~ msgid "Manager"
+#~ msgstr "Myanmar"
+
+#, fuzzy
+#~| msgid "Assistant's Name"
+#~ msgid "Assistant"
+#~ msgstr "Anv ar skoazeller"
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgid "Select Contacts"
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "&All contacts"
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts"
+#~ msgstr "&An holl zarempredoù"
+
+#, fuzzy
+#~| msgid "%1 is not a GMX address book file."
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from all your address books"
+#~ msgstr "N'eo ket ur restr karned chomlec'hioù GMX %1."
+
+#, fuzzy
+#~| msgid "Please select type of the new address book:"
+#~ msgctxt "@info:whatsthis"
+#~ msgid ""
+#~ "Choose this option you want to select all your contacts from all your "
+#~ "address books."
+#~ msgstr "Dibabit seurt ar c'harned chomlec'hioù nevez mar plij :"
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgctxt "@option:radio"
+#~ msgid "Selected contacts"
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "&All contacts"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Only the contacts currently selected"
+#~ msgstr "&An holl zarempredoù"
+
+#, fuzzy
+#~| msgid "&All contacts"
+#~ msgctxt "@option:radio"
+#~ msgid "All contacts from:"
+#~ msgstr "&An holl zarempredoù"
+
+#, fuzzy
+#~| msgid "%1 is not a GMX address book file."
+#~ msgctxt "@info:tooltip"
+#~ msgid "All contacts from a chosen address book"
+#~ msgstr "N'eo ket ur restr karned chomlec'hioù GMX %1."
+
+#, fuzzy
+#~| msgid "Text"
+#~ msgctxt "@action:button Next contact"
+#~ msgid "Next"
+#~ msgstr "Skrid"
+
+#, fuzzy
+#~| msgctxt "<nickname> on <server>"
+#~| msgid "%1 on %2"
+#~ msgctxt "@info:status"
+#~ msgid "%1 out of %2"
+#~ msgstr "%1 war %2"
+
+#, fuzzy
+#~| msgid "Import CSV List..."
+#~ msgid "Import the given file"
+#~ msgstr "Enporzh ur roll CSV ..."
+
+#, fuzzy
+#~| msgid "Import KDE 2 Addressbook..."
+#~ msgid "&Configure KAddressBook..."
+#~ msgstr "Enporzh ar c'harned chomlec'hioù KDE2 ..."
+
+#~ msgid "&File"
+#~ msgstr "&Restr"
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgid "&New"
+#~ msgstr "Nevez ..."
+
+#~ msgid "&Import"
+#~ msgstr "&Enporzh"
+
+#~ msgid "&Export"
+#~ msgstr "&Ezporzh"
+
+#~ msgid "&Edit"
+#~ msgstr "&Aozañ"
+
+#~ msgid "&Tools"
+#~ msgstr "&Ostilhoù"
+
+#, fuzzy
+#~| msgid "Latin1"
+#~ msgid "&Action"
+#~ msgstr "Latin1"
+
+#~ msgid "&View"
+#~ msgstr "&Gwel"
+
+#~ msgid "&Settings"
+#~ msgstr "&Kefluniadur"
+
+#~ msgid "Main Toolbar"
+#~ msgstr "Barrenn kentañ an ostilhoù"
+
+#, fuzzy
+#~| msgid "Search:"
+#~ msgctxt "@label Search contacts in list"
+#~ msgid "Search...<%1>"
+#~ msgstr "Klask :"
+
+#, fuzzy
+#~| msgid "Category"
+#~ msgid "Category filter"
+#~ msgstr "Rumm"
+
+#~ msgid "Select All"
+#~ msgstr "Dibabit an holl re"
+
+#, fuzzy
+#~| msgid "Do you want to import this contact in your address book?"
+#~ msgid "Select all contacts in the current address book view."
+#~ msgstr ""
+#~ "C'hoant ho peus da enporzhañ an darempred-mañ e-barzh ho c'harned "
+#~ "chomlec'hioù ?"
+
+#, fuzzy
+#~| msgid "Please select type of the new address book:"
+#~ msgid "Show a simple mode of the address book view."
+#~ msgstr "Dibabit seurt ar c'harned chomlec'hioù nevez mar plij :"
+
+#~ msgid "Address Book"
+#~ msgstr "Karned chomlec'h"
+
+#, fuzzy
+#~| msgid "Edit Contact"
+#~ msgid "Print Contacts"
+#~ msgstr "Aozañ an darempred"
+
+#~ msgid "Full Name"
+#~ msgstr "Anv leun"
+
+#, fuzzy
+#~| msgid "Family names:"
+#~ msgid "Family Name"
+#~ msgstr "Anvioù ar familh :"
+
+#, fuzzy
+#~| msgid "Given name:"
+#~ msgid "Given Name"
+#~ msgstr "Anv roet :"
+
+#~ msgid "Home Address"
+#~ msgstr "Chomlec'h ar gêr"
+
+#, fuzzy
+#~| msgid "Business"
+#~ msgid "Business Address"
+#~ msgstr "Labour"
+
+#, fuzzy
+#~| msgid "Phone numbers"
+#~ msgid "Phone Numbers"
+#~ msgstr "Niveroù pellgomz"
+
+#, fuzzy
+#~| msgid "Preferred address"
+#~ msgid "Preferred EMail"
+#~ msgstr "Chomlec'h gwellañ karet"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgid "All EMails"
+#~ msgstr "Postel"
+
+#, fuzzy
+#~| msgid "Company"
+#~ msgid "Compact Style"
+#~ msgstr "Embregerezh"
+
+#, fuzzy
+#~| msgid "Setting up fonts and colors"
+#~ msgid "Setting up document"
+#~ msgstr "Emaon o kefluniañ nodrezhoù ha livioù"
+
+#~ msgid "Printing"
+#~ msgstr "War voulañ"
+
+#, fuzzy
+#~| msgid "Done"
+#~ msgctxt "Finished printing"
+#~ msgid "Done"
+#~ msgstr "Graet"
+
+#, fuzzy
+#~| msgid "Choose Printing Style"
+#~ msgid "Compact Printing Style"
+#~ msgstr "Dibabit ar c'hiz moulañ"
+
+#~ msgid "Appearance"
+#~ msgstr "Neuziadur"
+
+#~ msgid "Fields"
+#~ msgstr "Tachennoù"
+
+#, fuzzy
+#~| msgid "Home Address"
+#~ msgid "with home address"
+#~ msgstr "Chomlec'h ar gêr"
+
+#, fuzzy
+#~| msgid "Business"
+#~ msgid "with business address"
+#~ msgstr "Labour"
+
+#, fuzzy
+#~| msgid "Edit Contact"
+#~ msgid "Print the birthday"
+#~ msgstr "Aozañ an darempred"
+
+#, fuzzy
+#~| msgid "Birthday"
+#~ msgid "with birthday"
+#~ msgstr "Deiz-ha-bloaz"
+
+#, fuzzy
+#~| msgid "Edit Email"
+#~ msgid "with e-mail"
+#~ msgstr "Aozañ ar postel"
+
+#, fuzzy
+#~| msgid "Background Color"
+#~ msgid "second color"
+#~ msgstr "Liv an Drekleur"
+
+#, fuzzy
+#~| msgid "Headline background color:"
+#~ msgid "Change the background color of every row"
+#~ msgstr "Liv drekleur ar reollin :"
+
+#, fuzzy
+#~| msgid "Headline background color:"
+#~ msgid "Alternating the background color"
+#~ msgstr "Liv drekleur ar reollin :"
+
+#, fuzzy
+#~| msgid "Organization"
+#~ msgid "Organization:"
+#~ msgstr "Aozadur"
+
+#~ msgid "Email address:"
+#~ msgstr "Chomlec'h postel :"
+
+#~ msgid "Email addresses:"
+#~ msgstr "Chomlec'hioù postel :"
+
+#~ msgid "Telephone:"
+#~ msgstr "Pellgomz :"
+
+#~ msgid "Telephones:"
+#~ msgstr "Pellgomzioù :"
+
+#~ msgid "Web page:"
+#~ msgstr "Pajenn gwiad :"
+
+#~ msgid "Domestic Address"
+#~ msgstr "Chomlec'h ar gêr"
+
+#~ msgid "International Address"
+#~ msgstr "Chomlec'h etrevroadel"
+
+#~ msgid "Postal Address"
+#~ msgstr "Chomlec'h post"
+
+#~ msgid "Work Address"
+#~ msgstr "Chomlec'h labour"
+
+#~ msgid "Preferred Address"
+#~ msgstr "Chomlec'h gwellañ karet"
+
+#, fuzzy
+#~| msgid "Note:"
+#~ msgid "Notes:"
+#~ msgstr "Notenn :"
+
+#, fuzzy
+#~| msgid "Setting up fonts and colors"
+#~ msgid "Setting up colors"
+#~ msgstr "Emaon o kefluniañ nodrezhoù ha livioù"
+
+#~ msgid "Detailed Style"
+#~ msgstr "Giz gant munudoù"
+
+#~ msgid "Appearance Page"
+#~ msgstr "Pajenn neuziadur"
+
+#~ msgid "Contact Headers"
+#~ msgstr "Reollinoù darempred"
+
+#, fuzzy
+#~| msgid "Headline background color:"
+#~ msgid "Select the headline text background color"
+#~ msgstr "Liv drekleur ar reollin :"
+
+#~ msgid "Headline background color:"
+#~ msgstr "Liv drekleur ar reollin :"
+
+#~ msgid "Headline text color:"
+#~ msgstr "Liv skrid ar reollin :"
+
+#, fuzzy
+#~| msgid "Headline text color:"
+#~ msgid "Select the headline text color"
+#~ msgstr "Liv skrid ar reollin :"
+
+#~ msgid "Which contacts do you want to print?"
+#~ msgstr "Peseurt darempredoù e fell deoc'h da voulañ ?"
+
+#~ msgid "Choose Contacts to Print"
+#~ msgstr "Dibabit un darempredoù da voulañ"
+
+#~ msgid "Choose Printing Style"
+#~ msgstr "Dibabit ar c'hiz moulañ"
+
+#~ msgid "Printing: Progress"
+#~ msgstr "Moulañ : Oc'h ober"
+
+#~ msgid "Progress"
+#~ msgstr "Araogenn"
+
+#, fuzzy
+#~| msgid "Phone numbers"
+#~ msgid "Print contact phone numbers"
+#~ msgstr "Niveroù pellgomz"
+
+#~ msgid "Phone numbers"
+#~ msgstr "Niveroù pellgomz"
+
+#, fuzzy
+#~| msgid "Postal Address"
+#~ msgid "Print contact email addresses"
+#~ msgstr "Chomlec'h post"
+
+#~ msgid "Email addresses"
+#~ msgstr "Chomlec'hioù postel"
+
+#, fuzzy
+#~| msgid "Street addresses"
+#~ msgid "Print contact street addresses"
+#~ msgstr "Chomlec'hù ar strad"
+
+#, fuzzy
+#~| msgid "Postal Address"
+#~ msgid "Postal addresses"
+#~ msgstr "Chomlec'h post"
+
+#, fuzzy
+#~| msgid "Edit Contact"
+#~ msgid "Print contact organizations"
+#~ msgstr "Aozañ an darempred"
+
+#~ msgid "Organization"
+#~ msgstr "Aozadur"
+
+#, fuzzy
+#~| msgid "Edit Contact"
+#~ msgid "Print contact birthdays"
+#~ msgstr "Aozañ an darempred"
+
+#~ msgid "Birthday"
+#~ msgstr "Deiz-ha-bloaz"
+
+#, fuzzy
+#~| msgid "Edit Contact"
+#~ msgid "Print contact notes"
+#~ msgstr "Aozañ an darempred"
+
+#, fuzzy
+#~| msgid "Note:"
+#~ msgid "Note"
+#~ msgstr "Notenn :"
+
+#, fuzzy
+#~| msgid "Setting up fonts and colors"
+#~ msgid "Setting up fields"
+#~ msgstr "Emaon o kefluniañ nodrezhoù ha livioù"
+
+#, fuzzy
+#~| msgid "(No preview available.)"
+#~ msgctxt "@label"
+#~ msgid "(No preview available.)"
+#~ msgstr "(N'eus rakwell ebet.)"
+
+#, fuzzy
+#~| msgid "Choose Printing Style"
+#~ msgctxt "@title:window"
+#~ msgid "Choose Printing Style"
+#~ msgstr "Dibabit ar c'hiz moulañ"
+
+#, fuzzy
+#~| msgid "Sorting"
+#~ msgctxt "@title:group"
+#~ msgid "Sorting"
+#~ msgstr "Emaon o rummañ"
+
+#, fuzzy
+#~| msgid "Organization"
+#~ msgctxt "@label:listbox"
+#~ msgid "Criterion:"
+#~ msgstr "Aozadur"
+
+#, fuzzy
+#~| msgid "Select the key type:"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the primary sort field"
+#~ msgstr "Dibabit seurt an alc'hwez :"
+
+#, fuzzy
+#~| msgid "Order:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Order:"
+#~ msgstr "Urzhiañ :"
+
+#, fuzzy
+#~| msgid "Print Style"
+#~ msgctxt "@title:group"
+#~ msgid "Print Style"
+#~ msgstr "Giz moulañ"
+
+#, fuzzy
+#~| msgid "Select the key type:"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Select the print style"
+#~ msgstr "Dibabit seurt an alc'hwez :"
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Search contacts in list"
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Sync Contacts"
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "Ungroup Letter"
+#~ msgid "Ungrouped"
+#~ msgstr "Distrollañ al lizhiri"
+
+#, fuzzy
+#~| msgid "Letter Groups"
+#~ msgid "Group"
+#~ msgstr "Strolladoù a lizher"
+
+#, fuzzy
+#~| msgid "Email address:"
+#~ msgid "Email address"
+#~ msgstr "Chomlec'h postel :"
+
+#, fuzzy
+#~| msgid "Save Template..."
+#~ msgid "Save Image"
+#~ msgstr "Enrollañ ar patrom ..."
+
+#, fuzzy
+#~| msgid "Save Template..."
+#~ msgid "Save Image URL"
+#~ msgstr "Enrollañ ar patrom ..."
+
+#, fuzzy
+#~| msgid "Email:"
+#~ msgid "Email:"
+#~ msgstr "Postel :"
+
+#, fuzzy
+#~| msgctxt "Instant messaging"
+#~| msgid "Protocol"
+#~ msgid "Use HTTPS Protocol"
+#~ msgstr "Komenad"
+
+#, fuzzy
+#~| msgid "&Search"
+#~ msgid "Search"
+#~ msgstr "&Klask"
+
+#, fuzzy
+#~| msgid "Send a mail to all selected contacts."
+#~ msgid "No email found for this contact."
+#~ msgstr "&Kas ur postel da bep darempred dibabet."
+
+#, fuzzy
+#~| msgid "&All contacts"
+#~ msgid "A contact group was selected."
+#~ msgstr "&An holl zarempredoù"
+
+#, fuzzy
+#~| msgid "Send &Contact..."
+#~ msgid "Send an email..."
+#~ msgstr "Kas an &darempred ..."
+
+#, fuzzy
+#~| msgid "Send a mail to all selected contacts."
+#~ msgid "No emails found in selected contacts."
+#~ msgstr "&Kas ur postel da bep darempred dibabet."
+
+#, fuzzy
+#~| msgid "Send &Contact..."
+#~ msgid "Send vCards..."
+#~ msgstr "Kas an &darempred ..."
+
+#, fuzzy
+#~| msgid "&New Contact..."
+#~ msgid "Merge Contacts..."
+#~ msgstr "&Darempred nevez ..."
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgid "Search Duplicate Contacts..."
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgid "Select Contacts to merge"
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgid "Select contacts that you really want to merge:"
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "Merge"
+#~ msgid "merge"
+#~ msgstr "Dastum"
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgid "Duplicate contact %1"
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "Contains"
+#~ msgid "Contacts"
+#~ msgstr "Ennañ"
+
+#, fuzzy
+#~| msgid "Address Book"
+#~ msgid "Select AddressBook:"
+#~ msgstr "Karned chomlec'h"
+
+#, fuzzy
+#~| msgid "Merge"
+#~ msgid "Merge"
+#~ msgstr "Dastum"
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgid "No duplicated contact found."
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "&All contacts"
+#~ msgid "No contacts selected."
+#~ msgstr "&An holl zarempredoù"
+
+#, fuzzy
+#~| msgid "Customer"
+#~ msgid "Customize"
+#~ msgstr "Kliant"
+
+#, fuzzy
+#~| msgid "Undefined"
+#~ msgid "(Undefined)"
+#~ msgstr "Didermenet"
+
+#, fuzzy
+#~| msgid "&New Contact..."
+#~ msgid "Merged Contact"
+#~ msgstr "&Darempred nevez ..."
+
+#, fuzzy
+#~| msgid "Importing contacts"
+#~ msgid "Error while merging contacts."
+#~ msgstr "Emaon oc'h enporzh ar zarempredoù"
+
+#, fuzzy
+#~| msgid "&New Contact..."
+#~ msgid "Merge contact"
+#~ msgstr "&Darempred nevez ..."
+
+#, fuzzy
+#~| msgid "&Selected fields:"
+#~ msgctxt "@title:window"
+#~ msgid "Select vCard Fields"
+#~ msgstr "&Tachennoù diuzet :"
+
+#, fuzzy
+#~| msgid "&Selected contacts"
+#~ msgid "Potential Duplicate Contacts"
+#~ msgstr "Darempredoù &dibabet"
+
+#, fuzzy
+#~| msgid "Add Selected"
+#~ msgid "You selected %1"
+#~ msgstr "Ouzhpennañ an hini dibabet"
+
+#, fuzzy
+#~| msgid "Contact Editor"
+#~ msgid "Kontact integration"
+#~ msgstr "Aozer an darempredoù"
+
+#, fuzzy
+#~| msgid "Choose Printing Style"
+#~ msgid "Grantlee Printing Style"
+#~ msgstr "Dibabit ar c'hiz moulañ"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgid "Emails"
+#~ msgstr "Postel"
+
+#~ msgid "Department"
+#~ msgstr "Kevrenn"
+
+#~ msgid "Manager's Name"
+#~ msgstr "Anv ar merour"
+
+#, fuzzy
+#~| msgid "Assistant's name:"
+#~ msgid "Assistant's Name"
+#~ msgstr "Anv ar skoazeller :"
+
+#, fuzzy
+#~| msgid "Partner's Name"
+#~ msgid "Partner's Name"
+#~ msgstr "Anv ar c'henc'hoarier"
+
+#~ msgid "IM Address"
+#~ msgstr "Chomlec'h IM"
+
+#, fuzzy
+#~| msgid "Types"
+#~ msgctxt "Boolean value"
+#~ msgid "yes"
+#~ msgstr "Rizhioù"
+
+#, fuzzy
+#~| msgid "<qt>Do you really want to remove the address book <b>%1</b>?</qt>"
+#~ msgctxt "@info"
+#~ msgid "Do you want to overwrite file \"%1\""
+#~ msgstr ""
+#~ "<qt>Ha fellout a ra deoc'h da vat lemel ar c'harned chomlec'hioù <b>%1</"
+#~ "b> ?</qt>"
+
+#, fuzzy
+#~| msgid "Address Books"
+#~ msgid "Show Address Books View"
+#~ msgstr "Karnedoù chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Edit Address Book Filter"
+#~ msgid "Hide Address Books View"
+#~ msgstr "Aozañ sil ar c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "New Contact"
+#~| msgid_plural "New %1 Contacts"
+#~ msgid "Show Contacts View"
+#~ msgstr "%1 darempred nevez"
+
+#, fuzzy
+#~| msgid "Edit Contact Name"
+#~ msgid "Hide Contacts View"
+#~ msgstr "Aozañ anv an darempred"
+
+#, fuzzy
+#~| msgid "Show Details"
+#~ msgid "Show Details View"
+#~ msgstr "Diskouez ar munudoù"
+
+#, fuzzy
+#~| msgid "Hide Details"
+#~ msgid "Hide Details View"
+#~ msgstr "Kuzhat ar munudoù"
+
+#, fuzzy
+#~| msgid "Add Address Book"
+#~ msgid "Add Address Book Folder..."
+#~ msgstr "Ouzhpennañ ur c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Edit Address Book Filter"
+#~ msgid "Copy Address Book Folder"
+#~ msgid_plural "Copy %1 Address Book Folders"
+#~ msgstr[0] "Aozañ sil ar c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Edit Address Book Filter"
+#~ msgid "Delete Address Book Folder"
+#~ msgstr "Aozañ sil ar c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Please select type of the new address book:"
+#~ msgid "Delete the selected address book folders from the address book."
+#~ msgstr "Dibabit seurt ar c'harned chomlec'hioù nevez mar plij :"
+
+#, fuzzy
+#~| msgid "Edit Address Book Filter"
+#~ msgid "Update Address Book Folder"
+#~ msgstr "Aozañ sil ar c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Please select type of the new address book:"
+#~ msgid "Update the content of the address book folder"
+#~ msgstr "Dibabit seurt ar c'harned chomlec'hioù nevez mar plij :"
+
+#, fuzzy
+#~| msgid "Edit Address Book Filter"
+#~ msgid "Cut Address Book Folder"
+#~ msgid_plural "Cut %1 Address Book Folders"
+#~ msgstr[0] "Aozañ sil ar c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Please select type of the new address book:"
+#~ msgid "Cut the selected address book folders from the address book."
+#~ msgstr "Dibabit seurt ar c'harned chomlec'hioù nevez mar plij :"
+
+#, fuzzy
+#~| msgid "St&ore Contact In..."
+#~ msgid "Copy Contact"
+#~ msgid_plural "Copy %1 Contacts"
+#~ msgstr[0] "En&rollañ an darempred e ..."
+
+#~ msgid "Delete Contact"
+#~ msgid_plural "Delete %1 Contacts"
+#~ msgstr[0] "Dilemel %1 darempred"
+
+#, fuzzy
+#~| msgid "Please select type of the new address book:"
+#~ msgid "Delete the selected contacts from the address book."
+#~ msgstr "Dibabit seurt ar c'harned chomlec'hioù nevez mar plij :"
+
+#, fuzzy
+#~| msgid "St&ore Contact In..."
+#~ msgid "Cut Contact"
+#~ msgid_plural "Cut %1 Contacts"
+#~ msgstr[0] "En&rollañ an darempred e ..."
+
+#, fuzzy
+#~| msgid "&Edit Contact..."
+#~ msgid "Edit Contact..."
+#~ msgstr "&Aozañ an darempred ..."
+
+#, fuzzy
+#~| msgid "Letter Groups"
+#~ msgid "Delete Group"
+#~ msgid_plural "Delete %1 Groups"
+#~ msgstr[0] "Strolladoù a lizher"
+
+#, fuzzy
+#~| msgid "Edit..."
+#~ msgid "Edit Group..."
+#~ msgstr "Aozañ ..."
+
+#~ msgid "Add Address Book"
+#~ msgstr "Ouzhpennañ ur c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Add Address Book"
+#~ msgid "Could not add address book: %1"
+#~ msgstr "Ouzhpennañ ur c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Add Address Book"
+#~ msgid "Adding Address Book failed"
+#~ msgstr "Ouzhpennañ ur c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "<qt>Do you really want to remove the address book <b>%1</b>?</qt>"
+#~ msgid "Do you really want to delete address book '%1'?"
+#~ msgstr ""
+#~ "<qt>Ha fellout a ra deoc'h da vat lemel ar c'harned chomlec'hioù <b>%1</"
+#~ "b> ?</qt>"
+
+#, fuzzy
+#~| msgid "Address Book"
+#~ msgid "Delete Address Book?"
+#~ msgstr "Karned chomlec'h"
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgid "New &Group..."
+#~ msgstr "Nevez ..."
+
+#, fuzzy
+#~| msgid "Add Address Book"
+#~ msgid "Add &Address Book..."
+#~ msgstr "Ouzhpennañ ur c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Address Book"
+#~ msgid "&Delete Address Book"
+#~ msgstr "Karned chomlec'h"
+
+#, fuzzy
+#~| msgid "Address Book Browser"
+#~ msgid "Address Book Properties..."
+#~ msgstr "Furcher ar c'harnedoù chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Add Contact"
+#~ msgid "Add Host"
+#~ msgstr "Ouzhpennañ un darempred"
+
+#, fuzzy
+#~| msgid "Title"
+#~ msgctxt "@item LDAP search key"
+#~ msgid "Title"
+#~ msgstr "Titl"
+
+#~ msgid "Home Number"
+#~ msgstr "Niverenn ar gêr"
+
+#~ msgid "Work Number"
+#~ msgstr "Niverenn al labour"
+
+#~ msgid "Fax Number"
+#~ msgstr "Niverenn faks"
+
+#~ msgid "Pager"
+#~ msgstr "Pajenner"
+
+#~ msgid "Street"
+#~ msgstr "Straed"
+
+#, fuzzy
+#~| msgid "State"
+#~ msgctxt "@item LDAP search key"
+#~ msgid "State"
+#~ msgstr "Rannvro"
+
+#~ msgid "Country"
+#~ msgstr "Bro"
+
+#~ msgid "City"
+#~ msgstr "Kêr"
+
+#~ msgid "Zip Code"
+#~ msgstr "Kod post"
+
+#~ msgid "Description"
+#~ msgstr "Deskrivadur"
+
+#~ msgid "User ID"
+#~ msgstr "ID an arveriad"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "@title:column Column containing email addresses"
+#~ msgid "Email"
+#~ msgstr "Postel"
+
+#, fuzzy
+#~| msgid "State"
+#~ msgctxt ""
+#~ "@title:column Column containing the residential state of the address"
+#~ msgid "State"
+#~ msgstr "Rannvro"
+
+#, fuzzy
+#~| msgid "Title"
+#~ msgctxt "@title:column Column containing title of the person"
+#~ msgid "Title"
+#~ msgstr "Titl"
+
+#, fuzzy
+#~| msgid "Import Contacts?"
+#~ msgid "Import Contacts from LDAP"
+#~ msgstr "Enporzh an darempredoù ?"
+
+#~ msgid "Search for:"
+#~ msgstr "Klask evit :"
+
+#~ msgctxt "In LDAP attribute"
+#~ msgid "in"
+#~ msgstr "e-barzh"
+
+#, fuzzy
+#~| msgid "Name"
+#~ msgctxt "@item:inlistbox Name of the contact"
+#~ msgid "Name"
+#~ msgstr "Anv"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "@item:inlistbox email address of the contact"
+#~ msgid "Email"
+#~ msgstr "Postel"
+
+#, fuzzy
+#~| msgid "Home Number"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Home Number"
+#~ msgstr "Niverenn ar gêr"
+
+#, fuzzy
+#~| msgid "Work Number"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Work Number"
+#~ msgstr "Niverenn al labour"
+
+#~ msgid "Stop"
+#~ msgstr "Paouez"
+
+#~ msgid "Contains"
+#~ msgstr "Ennañ"
+
+#~ msgid "Unselect All"
+#~ msgstr "Andibab an holl re"
+
+#, fuzzy
+#~| msgid "&Configure Address Book..."
+#~ msgid "Configure LDAP Servers..."
+#~ msgstr "&Kefluniañ ar c'harned chomlec'hioù ..."
+
+#, fuzzy
+#~| msgid "Name"
+#~ msgctxt "Search attribute: Name of contact"
+#~ msgid "Name"
+#~ msgstr "Anv"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "Search attribute: Email of the contact"
+#~ msgid "Email"
+#~ msgstr "Postel"
+
+#, fuzzy
+#~| msgid "Send a mail to all selected contacts."
+#~ msgid "Select a distribution list to add the selected contacts to."
+#~ msgstr "&Kas ur postel da bep darempred dibabet."
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "Select Distribution List"
+#~ msgstr "Roll ingaladur nevez"
+
+#, fuzzy
+#~| msgid "&Configure Address Book..."
+#~ msgid "Configure the Address Book LDAP Settings"
+#~ msgstr "&Kefluniañ ar c'harned chomlec'hioù ..."
+
+#, fuzzy
+#~| msgid "Edit Contact"
+#~ msgid "Edit Host"
+#~ msgstr "Aozañ an darempred"
+
+#, fuzzy
+#~| msgid "&Add..."
+#~ msgid "&Add Host..."
+#~ msgstr "&Ouzhpennañ ..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgid "&Edit Host..."
+#~ msgstr "&Aozañ ..."
+
+#, fuzzy
+#~| msgid "Remove List"
+#~ msgid "&Remove Host"
+#~ msgstr "Dilemel al listenn"
+
+#, fuzzy
+#~| msgid "(c) 1997-2005, The KDE PIM Team"
+#~ msgid "(c) 2007-2009 The KDE PIM Team"
+#~ msgstr "(c) 1997-2005, Skipailh KDE PIM"
+
+#, fuzzy
+#~| msgid "Address Books"
+#~ msgctxt "@title:column, address books overview"
+#~ msgid "Address Books"
+#~ msgstr "Karnedoù chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Name"
+#~ msgctxt "@title:column, name of a person"
+#~ msgid "Name"
+#~ msgstr "Anv"
+
+#, fuzzy
+#~| msgid "Phone numbers"
+#~ msgctxt "@title:column, phone numbers of a person"
+#~ msgid "Phone Numbers"
+#~ msgstr "Niveroù pellgomz"
+
+#, fuzzy
+#~| msgid "Preferred address"
+#~ msgctxt "@title:column, the preferred email addresses of a person"
+#~ msgid "Preferred EMail"
+#~ msgstr "Chomlec'h gwellañ karet"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "@title:column, all email addresses of a person"
+#~ msgid "All EMails"
+#~ msgstr "Postel"
+
+#, fuzzy
+#~| msgid "&All contacts"
+#~ msgctxt "Name of toplevel contact collection"
+#~ msgid "All Contacts"
+#~ msgstr "&An holl zarempredoù"
+
+#, fuzzy
+#~| msgid "Manager's Name"
+#~ msgid "Short Name"
+#~ msgstr "Anv ar merour"
+
+#, fuzzy
+#~| msgid "Iceland"
+#~ msgid "Reload"
+#~ msgstr "Bro ar Skorn"
+
+#, fuzzy
+#~| msgid "Miscellaneous"
+#~ msgctxt "@title:group Print settings"
+#~ msgid "Miscellaneous"
+#~ msgstr "A bep seurt"
+
+#~ msgid "Letter Groups"
+#~ msgstr "Strolladoù a lizher"
+
+#~ msgid "Group Letter"
+#~ msgstr "Strollañ al lizhiri"
+
+#~ msgid "Font Settings"
+#~ msgstr "Dibarzhoù an nodezhoù"
+
+#~ msgid "Use standard KDE fonts"
+#~ msgstr "Implijit nodrezhioù KDE standard"
+
+#~ msgid "Details font:"
+#~ msgstr "Nodrezh ar munudoù :"
+
+#~ msgid "Size:"
+#~ msgstr "Ment :"
+
+#~ msgid "Body font:"
+#~ msgstr "Nodrezh ar c'horf <:"
+
+#~ msgid "Fixed font:"
+#~ msgstr "Nodrezh ingal :"
+
+#~ msgid "Contact header font:"
+#~ msgstr "Nodrezh reollinoù an darempred :"
+
+#~ msgid "Headlines:"
+#~ msgstr "Reollinoù :"
+
+#~ msgid "Use colored contact headers"
+#~ msgstr "Implijit reollinoù darempred livek"
+
+#~ msgid "Preparing"
+#~ msgstr "Emaon o prientiñ"
+
+#~ msgid "Printed on %1 by KAddressBook (http://www.kde.org)"
+#~ msgstr "Moulet war %1 gant KAddressBook (http://www.kde.org)"
+
+#~ msgid "Choose Which Contacts to Print"
+#~ msgstr "Dibabit an darempredoù da voulañ"
+
+#~ msgid "Print the entire address book"
+#~ msgstr "Moulañ an holl garned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "Do you want to import this contact in your address book?"
+#~ msgid "The following contact was imported into your address book:"
+#~ msgid_plural ""
+#~ "The following %1 contacts were imported into your address book:"
+#~ msgstr[0] ""
+#~ "C'hoant ho peus da enporzhañ an darempred-mañ e-barzh ho c'harned "
+#~ "chomlec'hioù ?"
+
+#, fuzzy
+#~| msgid "%1 address book"
+#~ msgid "Select the address book"
+#~ msgstr "Karned chomlec'hioù %1"
+
+#~ msgid "Edit Contact"
+#~ msgstr "Aozañ an darempred"
+
+#, fuzzy
+#~| msgid "Add"
+#~ msgid "Add to:"
+#~ msgstr "Ouzhpennañ"
+
+#, fuzzy
+#~| msgid "(No preview available.)"
+#~ msgid "No pronunciation available"
+#~ msgstr "(N'eus rakwell ebet.)"
+
+#~ msgid "Play"
+#~ msgstr "Seniñ"
+
+#, fuzzy
+#~| msgid "Change Type..."
+#~ msgid "Change..."
+#~ msgstr "Kemmañ ar c'hiz ..."
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgid "Save..."
+#~ msgstr "Nevez ..."
+
+#~ msgid "Remove"
+#~ msgstr "Lemel"
+
+#, fuzzy
+#~| msgid "Other..."
+#~ msgctxt "@item:inlistbox Category of contact info field"
+#~ msgid "Other..."
+#~ msgstr "All ..."
+
+#~ msgid "Add"
+#~ msgstr "Ouzhpennañ"
+
+#~ msgid "Edit Phone Number"
+#~ msgstr "Aozañ an niverenn pellgomz"
+
+#~ msgid "Edit Email Addresses"
+#~ msgstr "Aozañ ar chomlec'hoù postel"
+
+#~ msgid "Add..."
+#~ msgstr "Ouzhpennañ ..."
+
+#~ msgid "Edit..."
+#~ msgstr "Aozañ ..."
+
+#~ msgid "Add Email"
+#~ msgstr "Ouzhpennañ ur chomlec'h postel"
+
+#~ msgid "New Email:"
+#~ msgstr "Postel nevez :"
+
+#, fuzzy
+#~| msgid "Email:"
+#~ msgctxt "@label:textbox Inputfield for an email address"
+#~ msgid "Email:"
+#~ msgstr "Postel :"
+
+#~ msgid ""
+#~ "<qt>Are you sure that you want to remove the email address <b>%1</b>?</qt>"
+#~ msgstr ""
+#~ "<qt>Ha sur oc'h bezañ mennet da zilemel ar chomlec'h postel <b>%1</b> ?</"
+#~ "qt>"
+
+#~ msgid "Confirm Remove"
+#~ msgstr "Kadarnaat al lemel"
+
+#~ msgid "&Delete"
+#~ msgstr "&Distruj"
+
+#, fuzzy
+#~| msgid "Change Type..."
+#~ msgid "Change photo..."
+#~ msgstr "Kemmañ ar c'hiz ..."
+
+#, fuzzy
+#~| msgid "Save Template..."
+#~ msgid "Save photo..."
+#~ msgstr "Enrollañ ar patrom ..."
+
+#, fuzzy
+#~| msgid "Remove List"
+#~ msgid "Remove photo"
+#~ msgstr "Dilemel al listenn"
+
+#, fuzzy
+#~| msgid "Change Email..."
+#~ msgid "Change logo..."
+#~ msgstr "Kemmañ ar chomlec'h postel ..."
+
+#, fuzzy
+#~| msgid "Save Template..."
+#~ msgid "Save logo..."
+#~ msgstr "Enrollañ ar patrom ..."
+
+#, fuzzy
+#~| msgid "Remove"
+#~ msgid "Remove logo"
+#~ msgstr "Lemel"
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "street/postal"
+#~ msgid "New..."
+#~ msgstr "Nevez ..."
+
+#, fuzzy
+#~| msgid "Edit..."
+#~ msgctxt "street/postal"
+#~ msgid "Edit..."
+#~ msgstr "Aozañ ..."
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgctxt "street/postal"
+#~ msgid "Delete"
+#~ msgstr "Dilemel"
+
+#, fuzzy
+#~| msgctxt "Instant messaging"
+#~| msgid "Do you really want to delete the selected address?"
+#~| msgid_plural "Do you really want to delete the %1 selected addresses?"
+#~ msgid "Do you really want to delete this address?"
+#~ msgstr "Ha fellout a ra deoc'h da vat lemel ar %1 chomlec'h dibabet ?"
+
+#~ msgctxt "street/postal"
+#~ msgid "Edit Address"
+#~ msgstr "Aozañ ar chomlec'h"
+
+#~ msgctxt "<streetLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgctxt "<postOfficeBoxLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgctxt "<localityLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgctxt "<regionLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgctxt "<postalCodeLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgctxt "<countryLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgid "Edit Label..."
+#~ msgstr "Aozañ ar skridennad ..."
+
+#~ msgctxt "street/postal"
+#~ msgid "Edit Address Type"
+#~ msgstr "Aozañ seurt ar chomlec'h"
+
+#~ msgctxt "street/postal"
+#~ msgid "Address Types"
+#~ msgstr "Rizhioù a chomlec'h"
+
+#, fuzzy
+#~| msgid "Simple Name"
+#~ msgid "Simple Name"
+#~ msgstr "Anv eeun"
+
+#, fuzzy
+#~| msgid "Manager's Name"
+#~ msgid "Reverse Name with Comma"
+#~ msgstr "Anv ar merour"
+
+#, fuzzy
+#~| msgid "Manager's Name"
+#~ msgid "Reverse Name"
+#~ msgstr "Anv ar merour"
+
+#, fuzzy
+#~| msgid "Organization"
+#~ msgid "Organization Name"
+#~ msgstr "Aozadur"
+
+#, fuzzy
+#~| msgid "Custom"
+#~ msgid "Custom"
+#~ msgstr "Diouzhoc'h"
+
+#, fuzzy
+#~| msgid "Name"
+#~ msgid "Name"
+#~ msgstr "Anv"
+
+#, fuzzy
+#~| msgid "Phone"
+#~ msgid "Phones"
+#~ msgstr "Pellgomz"
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgid "Name:"
+#~ msgstr "Anv :"
+
+#~ msgid "Nickname:"
+#~ msgstr "Lesanv :"
+
+#, fuzzy
+#~| msgid "Organization"
+#~ msgid "Pronunciation:"
+#~ msgstr "Aozadur"
+
+#, fuzzy
+#~| msgid "Web page:"
+#~ msgid "Homepage:"
+#~ msgstr "Pajenn gwiad :"
+
+#, fuzzy
+#~| msgid "Blog"
+#~ msgid "Blog:"
+#~ msgstr "Blog"
+
+#, fuzzy
+#~| msgid "&Margin:"
+#~ msgid "Messaging:"
+#~ msgstr "&Bevenn :"
+
+#, fuzzy
+#~| msgid "Addresses:"
+#~ msgid "Addresses"
+#~ msgstr "Chomlec'hioù :"
+
+#, fuzzy
+#~| msgid "Contains"
+#~ msgid "Coordinates"
+#~ msgstr "Ennañ"
+
+#, fuzzy
+#~| msgid "Business"
+#~ msgid "Business"
+#~ msgstr "Labour"
+
+#, fuzzy
+#~| msgid "General"
+#~ msgid "General"
+#~ msgstr "Pennañ"
+
+#~ msgid "Profession:"
+#~ msgstr "Labour :"
+
+#, fuzzy
+#~| msgid "Title:"
+#~ msgid "Title:"
+#~ msgstr "Titl :"
+
+#~ msgid "Department:"
+#~ msgstr "Kevrenn :"
+
+#~ msgid "Office:"
+#~ msgstr "Burev :"
+
+#~ msgid "Manager's name:"
+#~ msgstr "Anv ar merour :"
+
+#, fuzzy
+#~| msgid "Date"
+#~ msgid "Dates"
+#~ msgstr "Deiziad"
+
+#, fuzzy
+#~| msgid "Family"
+#~ msgid "Family"
+#~ msgstr "Familh"
+
+#~ msgid "Birthdate:"
+#~ msgstr "Deiz-ha-bloaz :"
+
+#~ msgid "Anniversary:"
+#~ msgstr "Deiz ha bloaz :"
+
+#, fuzzy
+#~| msgid "Partner's name:"
+#~ msgid "Partner's name:"
+#~ msgstr "Anv ar c'henc'hoarier :"
+
+#, fuzzy
+#~| msgid "Edit Contact"
+#~ msgid "Edit Contact Group"
+#~ msgstr "Aozañ an darempred"
+
+#~ msgid "Custom Fields"
+#~ msgstr "Tachennoù diouzhoc'h"
+
+#~ msgctxt "label (number)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "street/postal"
+#~ msgid "&Edit Addresses..."
+#~ msgstr "&Aozañ ar c'harned chomlec'hioù ..."
+
+#~ msgid "Edit Contact '%1'"
+#~ msgstr "Aozañ an darempred '%1'"
+
+#~ msgctxt "<roleLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgctxt "<organizationLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgctxt "<urlLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#~ msgctxt "<titleLabel>:"
+#~ msgid "%1:"
+#~ msgstr "%1 :"
+
+#, fuzzy
+#~| msgid "&Details"
+#~ msgid "Details"
+#~ msgstr "&Munudoù"
+
+#~ msgid "Misc"
+#~ msgstr "A bep seurt"
+
+#~ msgid "You must specify a valid date"
+#~ msgstr "Ret eo deoc'h reiñ un deiziad mat"
+
+#~ msgid "Add View"
+#~ msgstr "Ouzhpennañ ur gwell"
+
+#~ msgid "View name:"
+#~ msgstr "Sell ouzh an anv :"
+
+#~ msgid "View Type"
+#~ msgstr "Sell ouzh ar c'hiz"
+
+#~ msgid "Add Field"
+#~ msgstr "Ouzhpennañ un dachenn"
+
+#~ msgid "Type:"
+#~ msgstr "Rizh :"
+
+#~ msgid "Time"
+#~ msgstr "Eur"
+
+#~ msgid "Date & Time"
+#~ msgstr "Deiziad hag eur"
+
+#~ msgid "Remove Field"
+#~ msgstr "Dilemel an dachenn"
+
+#~ msgid "Add Field..."
+#~ msgstr "Ouzhpennañ un dachenn ..."
+
+#~ msgid "Remove Field..."
+#~ msgstr "Dilemel an dachenn ..."
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "Edit Distribution List"
+#~ msgstr "Roll ingaladur nevez"
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgctxt "@label:textbox Name of the distribution list"
+#~ msgid "Name:"
+#~ msgstr "Anv :"
+
+#, fuzzy
+#~| msgid "Distribution List Editor"
+#~ msgid "Distribution list members:"
+#~ msgstr "Aozer ar roll ingaladur"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "<b>Distribution list:</b>"
+#~ msgstr "Roll ingaladur nevez"
+
+#, fuzzy
+#~| msgid "Address Book"
+#~ msgid "<b>Address book:</b> %1"
+#~ msgstr "Karned chomlec'h"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "Add New Distribution List"
+#~ msgstr "Roll ingaladur nevez"
+
+#, fuzzy
+#~| msgid "Rename Distribution List"
+#~ msgid "Enter a name for the new distribution list:"
+#~ msgstr "Adenvel ar roll ingaladur"
+
+#~ msgid "Edit Email Addresses..."
+#~ msgstr "Aozañ ar chomlec'hoù postel ..."
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgctxt "@label:textbox Name of the filter"
+#~ msgid "Name:"
+#~ msgstr "Anv :"
+
+#~ msgid "Edit Address Book Filters"
+#~ msgstr "Aozañ siloù ar c'harned chomlec'hioù"
+
+#~ msgid "&Remove"
+#~ msgstr "&Lemel"
+
+#~ msgid "Filter:"
+#~ msgstr "Sil :"
+
+#, fuzzy
+#~| msgid "Latitude:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Latitude:"
+#~ msgstr "Lec'hed :"
+
+#, fuzzy
+#~| msgid "Latitude:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Longitude:"
+#~ msgstr "Lec'hed :"
+
+#, fuzzy
+#~| msgid "&Edit Contact..."
+#~ msgctxt "@action:button"
+#~ msgid "Edit Geo Data..."
+#~ msgstr "&Aozañ an darempred ..."
+
+#, fuzzy
+#~| msgid "Latitude:"
+#~ msgctxt "@label:spinbox"
+#~ msgid "Latitude:"
+#~ msgstr "Lec'hed :"
+
+#, fuzzy
+#~| msgid "North"
+#~ msgctxt "@item:inlistbox Latitude direction"
+#~ msgid "North"
+#~ msgstr "Norzh"
+
+#, fuzzy
+#~| msgid "South"
+#~ msgctxt "@item:inlistbox Latitude direction"
+#~ msgid "South"
+#~ msgstr "Su"
+
+#, fuzzy
+#~| msgid "Latitude:"
+#~ msgctxt "@label:spinbox"
+#~ msgid "Longitude:"
+#~ msgstr "Lec'hed :"
+
+#, fuzzy
+#~| msgid "East"
+#~ msgctxt "@item:inlistbox Longtitude direction"
+#~ msgid "East"
+#~ msgstr "Reter"
+
+#, fuzzy
+#~| msgid "West"
+#~ msgctxt "@item:inlistbox Longtitude direction"
+#~ msgid "West"
+#~ msgstr "Kornaoueg"
+
+#, fuzzy
+#~| msgid "Undefined"
+#~ msgctxt "@item:inlistbox Undefined location"
+#~ msgid "Undefined"
+#~ msgstr "Didermenet"
+
+#~ msgid "Reset"
+#~ msgstr "Adkorañ"
+
+#~ msgid "IM address:"
+#~ msgstr "Chomlec'h IM :"
+
+#~ msgid "Edit IM Addresses..."
+#~ msgstr "Aozañ ar chomlec'h IM ..."
+
+#~ msgctxt "as in 'Search in:'"
+#~ msgid "&in:"
+#~ msgstr "&e-barzh :"
+
+#~ msgid "Visible Fields"
+#~ msgstr "Tachennoù hewel"
+
+#~ msgid "All Fields"
+#~ msgstr "An holl dachennoù"
+
+#, fuzzy
+#~| msgid "Contact Headers"
+#~ msgid "Don Sanders"
+#~ msgstr "Reollinoù darempred"
+
+#~ msgid "Original author"
+#~ msgstr "Oberour kentañ"
+
+#~ msgid "DCOP interface"
+#~ msgstr "Etrefas DCOP"
+
+#~ msgid "LDAP Lookup"
+#~ msgstr "Klask LDAP"
+
+#, fuzzy
+#~| msgid "Do you really want to delete this contact?"
+#~| msgid_plural "Do you really want to delete these %1 contacts?"
+#~ msgid "Do you really want to delete this distribution list?"
+#~ msgid_plural "Do you really want to delete these %1 distribution lists?"
+#~ msgstr[0] "Ha fellout a ra deoc'h da vat lemel ar %1 darempred dibabet ?"
+
+#~ msgid "Do you really want to delete this contact?"
+#~ msgid_plural "Do you really want to delete these %1 contacts?"
+#~ msgstr[0] "Ha fellout a ra deoc'h da vat lemel ar %1 darempred dibabet ?"
+
+#~ msgid "Use"
+#~ msgstr "Implijit"
+
+#~ msgid "Do Not Use"
+#~ msgstr "Ni'implijit ket"
+
+#~ msgid "New Distribution List"
+#~ msgstr "Roll ingaladur nevez"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "New Distribution List (%1)"
+#~ msgstr "Roll ingaladur nevez"
+
+#~ msgid "<qt>Unable to save address book <b>%1</b>.</qt>"
+#~ msgstr ""
+#~ "<qt>N'hellan ket kargañ/enrollañ ar c'harned chomlec'hioù <b>%1</b>.</qt>"
+
+#~ msgid "Print Addresses"
+#~ msgstr "Moulañ ar chomlec'hoù"
+
+#~ msgid "&Send Email to Contact..."
+#~ msgstr "&Kas ur postel d'an darempred ..."
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:intoolbar Create new contact"
+#~ msgid "New"
+#~ msgstr "Nevez ..."
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "&New Distribution List..."
+#~ msgstr "Roll ingaladur nevez"
+
+#~ msgid "Chat &With..."
+#~ msgstr "Flapañ &gant ..."
+
+#, fuzzy
+#~| msgid "&Edit"
+#~ msgid "Edit"
+#~ msgstr "&Aozañ"
+
+#~ msgid "&Delete Contact"
+#~ msgstr "&Lemel an darempred"
+
+#, fuzzy
+#~| msgid "St&ore Contact In..."
+#~ msgid "&Move Contact To..."
+#~ msgstr "En&rollañ an darempred e ..."
+
+#, fuzzy
+#~| msgid "LDAP Lookup"
+#~ msgid "LDAP &Lookup"
+#~ msgstr "Klask LDAP"
+
+#~ msgid "Select Categories..."
+#~ msgstr "Dibabit ar rummoù ..."
+
+#~ msgid "Clear Search Bar"
+#~ msgstr "Goullonderiñ ar varrenn klask"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "Distribution List: %1"
+#~ msgstr "Roll ingaladur nevez"
+
+#~ msgid "Keys:"
+#~ msgstr "Alc'hwezioù :"
+
+#~ msgid "Export..."
+#~ msgstr "Ezporzh ..."
+
+#~ msgid "Key Type"
+#~ msgstr "Rizh an alc'hwez"
+
+#~ msgid "<qt>Do you really want to remove the key <b>%1</b>?</qt>"
+#~ msgstr ""
+#~ "<qt>Ha fellout a ra deoc'h da vat lemel an alc'hwez <b>%1</b> ?</qt>"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "Add to Distribution List..."
+#~ msgstr "Roll ingaladur nevez"
+
+#~ msgid "Additional names:"
+#~ msgstr "Anvioù ouzhpenn :"
+
+#~ msgid "Formatted name:"
+#~ msgstr "Anv furmated :"
+
+#~ msgid "Miss"
+#~ msgstr "Dimezell"
+
+#~ msgid "Mr."
+#~ msgstr "Ao."
+
+#~ msgid "Mrs."
+#~ msgstr "Dim."
+
+#~ msgid "Ms."
+#~ msgstr "Itr."
+
+#~ msgid "Prof."
+#~ msgstr "Kelenner"
+
+#~ msgid "I"
+#~ msgstr "I"
+
+#~ msgid "II"
+#~ msgstr "II"
+
+#~ msgid "III"
+#~ msgstr "III"
+
+#~ msgid "Jr."
+#~ msgstr "Bihan"
+
+#~ msgid "Sr."
+#~ msgstr "Bras"
+
+#, fuzzy
+#~| msgid "Full Name"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Full Name"
+#~ msgstr "Anv leun"
+
+#, fuzzy
+#~| msgid "Organization"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Organization"
+#~ msgstr "Aozadur"
+
+#, fuzzy
+#~| msgid "Birthday"
+#~ msgid "Birthday:"
+#~ msgstr "Deiz-ha-bloaz"
+
+#, fuzzy
+#~| msgid "Partner's name:"
+#~ msgid "Partners name:"
+#~ msgstr "Anv ar c'henc'hoarier :"
+
+#~ msgid "Edit the contact's name"
+#~ msgstr "Aozañ anv an darempred"
+
+#~ msgid "Edit Name..."
+#~ msgstr "Aozañ an anv ..."
+
+#, fuzzy
+#~| msgid "&Remove"
+#~ msgid "&Role:"
+#~ msgstr "&Lemel"
+
+#, fuzzy
+#~| msgid "Organization"
+#~ msgid "&Organization"
+#~ msgstr "Aozadur"
+
+#~ msgid "Tools"
+#~ msgstr "Ostilhoù"
+
+#~ msgctxt "Instant messaging"
+#~ msgid "Edit Address"
+#~ msgstr "Aozañ ar chomlec'h"
+
+#~ msgctxt "Instant messaging"
+#~ msgid "&Protocol:"
+#~ msgstr "&Komenad :"
+
+#~ msgctxt "Instant messaging"
+#~ msgid "&Address:"
+#~ msgstr "&Chomlec'h :"
+
+#~ msgctxt "Instant messaging"
+#~ msgid "&Network:"
+#~ msgstr "&Rouedad :"
+
+#~ msgctxt "Instant messaging"
+#~ msgid "IM Addresses"
+#~ msgstr "Chomlec'hoù IM"
+
+#~ msgctxt "Instant messaging"
+#~ msgid "&Remove"
+#~ msgstr "&Lemel"
+
+#~ msgctxt "Instant messaging"
+#~ msgid "&Edit..."
+#~ msgstr "&Aozañ ..."
+
+#~ msgctxt "Instant messaging"
+#~ msgid "&Add..."
+#~ msgstr "&Ouzhpennañ ..."
+
+#~ msgctxt "Instant messaging"
+#~ msgid "Address"
+#~ msgstr "Chomlec'h"
+
+#~ msgid "Fax"
+#~ msgstr "Faks"
+
+#~ msgid "SMS"
+#~ msgstr "SMS"
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgctxt "@label:textbox Name of the contact"
+#~ msgid "Name:"
+#~ msgstr "Anv :"
+
+#, fuzzy
+#~| msgid "Email:"
+#~ msgctxt "@label:textbox Email address of the contact"
+#~ msgid "Email:"
+#~ msgstr "Postel :"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "Delete Distribution List"
+#~ msgid_plural "Delete %1 Distribution Lists"
+#~ msgstr[0] "Roll ingaladur nevez"
+
+#~ msgid "Select Fields to Display"
+#~ msgstr "Dibabit ar c'hatalog da ziskwel"
+
+#~ msgid "No default filter"
+#~ msgstr "Sil dre ziouer ebet"
+
+#~ msgid "Use filter:"
+#~ msgstr "Implijit ar sil :"
+
+#~ msgid "Default Filter"
+#~ msgstr "Sil dre ziouer"
+
+#~ msgid "Modify View: "
+#~ msgstr "Kemmañ ar gwel :"
+
+#, fuzzy
+#~| msgid "Delete View"
+#~ msgctxt "KAddressbook default view name"
+#~ msgid "Default Table View"
+#~ msgstr "Lemel ar gwell"
+
+#~ msgid "<qt>Are you sure that you want to delete the view <b>%1</b>?</qt>"
+#~ msgstr "<qt>Ha sur oc'h bezañ mennet da zilemel ar gwell <b>%1</b> ?</qt>"
+
+#~ msgid "Confirm Delete"
+#~ msgstr "Kadarnaat al lemel"
+
+#~ msgid "Import"
+#~ msgstr "Enporzh"
+
+#~ msgid "Do Not Import"
+#~ msgstr "N'enporzhit ket"
+
+#, fuzzy
+#~| msgid "None"
+#~ msgctxt "Category to filter on"
+#~ msgid "None"
+#~ msgstr "Ebet"
+
+#, fuzzy
+#~| msgid "Undefined"
+#~ msgctxt "Category to filter on"
+#~ msgid "Unfiled"
+#~ msgstr "Didermenet"
+
+#~ msgid "Select View"
+#~ msgstr "Dibab ur gwell"
+
+#~ msgid "Modify View..."
+#~ msgstr "Kemmañ ar gwel ..."
+
+#~ msgid "Add View..."
+#~ msgstr "Ouzhpennañ ur gwell ..."
+
+#~ msgid "Delete View"
+#~ msgstr "Lemel ar gwell"
+
+#~ msgid "Refresh View"
+#~ msgstr "Adtresañ ar gwell"
+
+#~ msgid "Edit &Filters..."
+#~ msgstr "Aozañ ar &siloù ..."
+
+#~ msgid "Unable to export contacts."
+#~ msgstr "N'hellan ket enporzh an darempredoù."
+
+#, fuzzy
+#~| msgid "Selection"
+#~ msgctxt "@title:group Selection of contacts that must be exported"
+#~ msgid "Selection"
+#~ msgstr "Diuzadenn"
+
+#~ msgid "Export the entire address book"
+#~ msgstr "Ezhporzh ar c'harned chomlec'hioù"
+
+#, fuzzy
+#~| msgid "School"
+#~ msgctxt "@item Contact category"
+#~ msgid "School"
+#~ msgstr "Skol"
+
+#, fuzzy
+#~| msgid "Friend"
+#~ msgctxt "@item Contact category"
+#~ msgid "Friend"
+#~ msgstr "Mignon"
+
+#~ msgid "Allowed Protocols"
+#~ msgstr "Komenadoù aotreet"
+
+#~ msgid "Preferred OpenPGP encryption key:"
+#~ msgstr "Alc'hwez enrinegadur gwellañ karet :"
+
+#~ msgid "Preferred S/MIME encryption certificate:"
+#~ msgstr "Testeni enrinegadur S/MIME gwellañ karet :"
+
+#~ msgid "Message Preference"
+#~ msgstr "Kefluniadur ar c'hemennad"
+
+#~ msgid "Sign:"
+#~ msgstr "Sinañ :"
+
+#~ msgid "Encrypt:"
+#~ msgstr "Enrinegañ :"
+
+#, fuzzy
+#~ msgid "Edit Instant Messaging Address"
+#~ msgstr "Aozañ ar chomlec'hoù postel"
+
+#~ msgctxt "Instant messaging"
+#~ msgid "Add Address"
+#~ msgstr "Ouzhpennañ ur chomlec'h"
+
+#~ msgid "Distribution List Editor"
+#~ msgstr "Aozer ar roll ingaladur"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "Distribution Lists"
+#~ msgstr "Roll ingaladur nevez"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "Add distribution list"
+#~ msgstr "Roll ingaladur nevez"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "Edit distribution list"
+#~ msgstr "Roll ingaladur nevez"
+
+#, fuzzy
+#~| msgid "Rename Distribution List"
+#~ msgid "Remove distribution list"
+#~ msgstr "Adenvel ar roll ingaladur"
+
+#, fuzzy
+#~| msgid "New Distribution List"
+#~ msgid "New Distribution List..."
+#~ msgstr "Roll ingaladur nevez"
+
+#~ msgid "%1 address book"
+#~ msgstr "Karned chomlec'hioù %1"
+
+#, fuzzy
+#~| msgid "Edit Address Book Filters"
+#~ msgid "Edit address book settings"
+#~ msgstr "Aozañ siloù ar c'harned chomlec'hioù"
+
+#~ msgid "Look & Feel"
+#~ msgstr "Neuz ha feson"
+
+#~ msgid "Text Color"
+#~ msgstr "Liv ar skrid"
+
+#~ msgid "Header Text Color"
+#~ msgstr "Liv skrid ar reollin"
+
+#~ msgid "Highlight Color"
+#~ msgstr "Liv splannadur"
+
+#~ msgid "Highlighted Text Color"
+#~ msgstr "Liv skrid splannadur"
+
+#, fuzzy
+#~| msgid "General"
+#~ msgctxt "@title:group General layout settings"
+#~ msgid "General"
+#~ msgstr "Pennañ"
+
+#~ msgid "Separator &width:"
+#~ msgstr "&Ledander an troc'h :"
+
+#~ msgid "Cards"
+#~ msgstr "Kartennoù"
+
+#~ msgid "Draw &borders"
+#~ msgstr "Tresañ ar &bevennoù"
+
+#, fuzzy
+#~| msgid "&Layout"
+#~ msgid "Layout"
+#~ msgstr "&Doare"
+
+#, fuzzy
+#~| msgid "&Colors"
+#~ msgid "Colors"
+#~ msgstr "&Livioù"
+
+#~ msgid "&Text font:"
+#~ msgstr "&Nodrezh ar skrid :"
+
+#~ msgid "Choose..."
+#~ msgstr "Dibabit ..."
+
+#~ msgid "&Header font:"
+#~ msgstr "Nodrezh ar &reollin :"
+
+#, fuzzy
+#~| msgid "&Fonts"
+#~ msgid "Fonts"
+#~ msgstr "&Nodrezhoù"
+
+#, fuzzy
+#~| msgid "Be&havior"
+#~ msgid "Behavior"
+#~ msgstr "Em&zalc'h"
+
+#~ msgid "Row Separator"
+#~ msgstr "Troc'h a vannoù"
+
+#~ msgid "Single line"
+#~ msgstr "Linenn unanel"
+
+#, fuzzy
+#~| msgid "None"
+#~ msgctxt "@option:radio Row separator option."
+#~ msgid "None"
+#~ msgstr "Ebet"
+
+#~ msgid "Enable background image:"
+#~ msgstr "Bevaat ar skeudenn drekleur :"
+
+#~ msgctxt "label: value"
+#~ msgid "%1: %2"
+#~ msgstr "%1 : %2"
+
+#~ msgctxt "label: value"
+#~ msgid "%1: \n"
+#~ msgstr "%1:\n"
+
+#~ msgid "Card"
+#~ msgstr "Kartenn"
+
+#~ msgid "Icon"
+#~ msgstr "Arlun"
+
+#~ msgid "Table"
+#~ msgstr "Taolenn"
+
+#~ msgid "Export Bookmarks Menu..."
+#~ msgstr "Ezporzh meuziad ar sinedoù ..."
+
+#~ msgid "AddressBook"
+#~ msgstr "Karned Chomlec'hioù"
+
+#, fuzzy
+#~| msgid "1"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "1"
+#~ msgstr "1"
+
+#, fuzzy
+#~| msgid "Import Eudora Addressbook..."
+#~ msgid "Import Eudora Address Book..."
+#~ msgstr "Enporzh karned chomlec'hioù Eudora (*.txt) ..."
+
+#, fuzzy
+#~| msgid "Eudora Light Addressbook (*.txt)"
+#~ msgid "Eudora Light Address Book (*.txt)"
+#~ msgstr "Karned chomlec'hioù Eudora Light (*.txt)"
+
+#~ msgid "Import GMX Address Book..."
+#~ msgstr "Enporzh karned chomlec'hioù GMX (*.txt) ..."
+
+#~ msgid "Gnokii is not yet configured."
+#~ msgstr "N'eo ket kefluniet Gnokii c'hoazh."
+
+#~ msgid "Unknown"
+#~ msgstr "Dianav"
+
+#~ msgid "Manufacturer"
+#~ msgstr "Farder"
+
+#~ msgid "Phone model"
+#~ msgstr "Gobari ar bellgomz"
+
+#~ msgid "IMEI"
+#~ msgstr "IMEI"
+
+#~ msgid "internal memory"
+#~ msgstr "memor diabarzh"
+
+#~ msgid "unknown memory"
+#~ msgstr "memor dianav"
+
+#~ msgid "&Stop Import"
+#~ msgstr "&Herzel an enporzh"
+
+#~ msgid "&Stop Export"
+#~ msgstr "&Herzel an ezporzh"
+
+#~ msgid "<qt>Could not find a KDE 2 address book <b>%1</b>.</qt>"
+#~ msgstr ""
+#~ "<qt>Ne m'eus ket gallet kavout ar c'harned chomlec'hioù KDE 2 <b>%1</b></"
+#~ "qt>"
+
+#, fuzzy
+#~| msgid "Import KDE 2 Addressbook"
+#~ msgid "Import KDE 2 Address Book"
+#~ msgstr "Enporzh ar c'harned chomlec'hioù KDE2"
+
+#, fuzzy
+#~| msgid "Import Opera Addressbook..."
+#~ msgid "Import Opera Address Book..."
+#~ msgstr "Enporzh ar c'harned chomlec'hioù Opera ..."
+
+#~ msgid "Cannot open %1 for reading"
+#~ msgstr "N'hellan ket digeriñ %1 evit lenn"
+
+#~ msgid ""
+#~ "<qt>Could not find a MS Exchange Personal Address Book <b>%1</b>.</qt>"
+#~ msgstr ""
+#~ "<qt>Ne m'eus ket gallet kavout ar c'harned chomlec'hioù MS Exchange <b>"
+#~ "%1</b></qt>"
+
+#~ msgid "Afghanistan"
+#~ msgstr "Afganistan"
+
+#~ msgid "Albania"
+#~ msgstr "Albani"
+
+#~ msgid "Algeria"
+#~ msgstr "Aljeri"
+
+#~ msgid "American Samoa"
+#~ msgstr "Samoa amerikanek"
+
+#~ msgid "Andorra"
+#~ msgstr "Andora"
+
+#~ msgid "Angola"
+#~ msgstr "Angola"
+
+#~ msgid "Anguilla"
+#~ msgstr "Angilla"
+
+#~ msgid "Antarctica"
+#~ msgstr "Antarktika"
+
+#~ msgid "Antigua and Barbuda"
+#~ msgstr "Antigwa ha Barbuda"
+
+#~ msgid "Argentina"
+#~ msgstr "Arc'hantin"
+
+#~ msgid "Armenia"
+#~ msgstr "Armeni"
+
+#~ msgid "Aruba"
+#~ msgstr "Aruba"
+
+#~ msgid "Australia"
+#~ msgstr "Australi"
+
+#~ msgid "Austria"
+#~ msgstr "Aostria"
+
+#~ msgid "Azerbaijan"
+#~ msgstr "Azerbeidjan"
+
+#~ msgid "Bahamas"
+#~ msgstr "Bahamas"
+
+#~ msgid "Bahrain"
+#~ msgstr "Barein"
+
+#~ msgid "Bangladesh"
+#~ msgstr "Bangladaech"
+
+#~ msgid "Barbados"
+#~ msgstr "Barbad"
+
+#~ msgid "Belarus"
+#~ msgstr "Belarusi"
+
+#~ msgid "Belgium"
+#~ msgstr "Beljik"
+
+#~ msgid "Belize"
+#~ msgstr "Beliz"
+
+#~ msgid "Benin"
+#~ msgstr "Benin"
+
+#~ msgid "Bermuda"
+#~ msgstr "Bermud"
+
+#~ msgid "Bhutan"
+#~ msgstr "Butañ"
+
+#~ msgid "Bolivia"
+#~ msgstr "Bolivi"
+
+#~ msgid "Bosnia and Herzegovina"
+#~ msgstr "Bosni hag Herzigovi"
+
+#~ msgid "Botswana"
+#~ msgstr "Botswana"
+
+#~ msgid "Brazil"
+#~ msgstr "Brazil"
+
+#~ msgid "Brunei"
+#~ msgstr "Brunei"
+
+#~ msgid "Bulgaria"
+#~ msgstr "Bulgari"
+
+#~ msgid "Burkina Faso"
+#~ msgstr "Burkina Faso"
+
+#~ msgid "Burundi"
+#~ msgstr "Burundi"
+
+#~ msgid "Cambodia"
+#~ msgstr "Kambodj"
+
+#~ msgid "Cameroon"
+#~ msgstr "Kameroun"
+
+#~ msgid "Canada"
+#~ msgstr "Kanada"
+
+#~ msgid "Cape Verde"
+#~ msgstr "Penn Verde"
+
+#~ msgid "Cayman Islands"
+#~ msgstr "Inizi Kaeman"
+
+#~ msgid "Central African Republic"
+#~ msgstr "Republik centrafricaine"
+
+#~ msgid "Chad"
+#~ msgstr "Tchad"
+
+#~ msgid "Chile"
+#~ msgstr "Chili"
+
+#~ msgid "China"
+#~ msgstr "Sina"
+
+#~ msgid "Colombia"
+#~ msgstr "Kolombi"
+
+#~ msgid "Comoros"
+#~ msgstr "Komoros"
+
+#~ msgid "Congo"
+#~ msgstr "Kongo"
+
+#~ msgid "Costa Rica"
+#~ msgstr "Kosta Rika"
+
+#~ msgid "Croatia"
+#~ msgstr "Kroati"
+
+#~ msgid "Cuba"
+#~ msgstr "Kuba"
+
+#~ msgid "Cyprus"
+#~ msgstr "Chipr"
+
+#~ msgid "Czech Republic"
+#~ msgstr "Republik Tchek"
+
+#~ msgid "Denmark"
+#~ msgstr "Danmark"
+
+#~ msgid "Djibouti"
+#~ msgstr "Djibouti"
+
+#~ msgid "Dominica"
+#~ msgstr "Dominik"
+
+#~ msgid "Dominican Republic"
+#~ msgstr "Republik Dominikan"
+
+#~ msgid "Ecuador"
+#~ msgstr "Kehider"
+
+#~ msgid "Egypt"
+#~ msgstr "Ejipt"
+
+#~ msgid "El Salvador"
+#~ msgstr "Ar Salvador"
+
+#~ msgid "Equatorial Guinea"
+#~ msgstr "Guine équatoriale"
+
+#~ msgid "Eritrea"
+#~ msgstr "Eritre"
+
+#~ msgid "Estonia"
+#~ msgstr "Estoni"
+
+#~ msgid "England"
+#~ msgstr "Bro-Saoz"
+
+#~ msgid "Ethiopia"
+#~ msgstr "Etiopi"
+
+#~ msgid "European Union"
+#~ msgstr "Unvaniezh europat"
+
+#~ msgid "Faroe Islands"
+#~ msgstr "Enez Faroe"
+
+#~ msgid "Fiji"
+#~ msgstr "Fidji"
+
+#~ msgid "Finland"
+#~ msgstr "Finland"
+
+#~ msgid "France"
+#~ msgstr "Gall"
+
+#~ msgid "French Polynesia"
+#~ msgstr "Polinezi galleg"
+
+#~ msgid "Gabon"
+#~ msgstr "Gabon"
+
+#~ msgid "Gambia"
+#~ msgstr "Gambi"
+
+#~ msgid "Georgia"
+#~ msgstr "Jeorji"
+
+#~ msgid "Germany"
+#~ msgstr "Alamagn"
+
+#~ msgid "Ghana"
+#~ msgstr "Gwana"
+
+#~ msgid "Greece"
+#~ msgstr "Gres"
+
+#~ msgid "Greenland"
+#~ msgstr "Griñland"
+
+#~ msgid "Grenada"
+#~ msgstr "Grenad"
+
+#~ msgid "Guam"
+#~ msgstr "Gwam"
+
+#~ msgid "Guatemala"
+#~ msgstr "Gwatemala"
+
+#~ msgid "Guinea"
+#~ msgstr "Gine"
+
+#~ msgid "Guinea-Bissau"
+#~ msgstr "Gine-Biso"
+
+#~ msgid "Guyana"
+#~ msgstr "Gwiana"
+
+#~ msgid "Haiti"
+#~ msgstr "Haiti"
+
+#~ msgid "Honduras"
+#~ msgstr "Honduras"
+
+#~ msgid "Hong Kong"
+#~ msgstr "Hong Kong"
+
+#~ msgid "Hungary"
+#~ msgstr "Hongri"
+
+#~ msgid "India"
+#~ msgstr "Indez"
+
+#~ msgid "Indonesia"
+#~ msgstr "Indonezi"
+
+#~ msgid "Iran"
+#~ msgstr "Iran"
+
+#~ msgid "Iraq"
+#~ msgstr "Irak"
+
+#~ msgid "Ireland"
+#~ msgstr "Iwerzhon"
+
+#~ msgid "Israel"
+#~ msgstr "Izrael"
+
+#~ msgid "Italy"
+#~ msgstr "Itali"
+
+#~ msgid "Ivory Coast"
+#~ msgstr "Aod an Olifant"
+
+#~ msgid "Jamaica"
+#~ msgstr "Jamaik"
+
+#~ msgid "Japan"
+#~ msgstr "Japon"
+
+#~ msgid "Jordan"
+#~ msgstr "Jordani"
+
+#~ msgid "Kazakhstan"
+#~ msgstr "Kazakstan"
+
+#~ msgid "Kenya"
+#~ msgstr "Kenya"
+
+#~ msgid "Kiribati"
+#~ msgstr "Kiribati"
+
+#~ msgid "Korea, North"
+#~ msgstr "Kore, Norzh"
+
+#~ msgid "Korea, South"
+#~ msgstr "Kore, Su"
+
+#~ msgid "Kuwait"
+#~ msgstr "Kowaet"
+
+#~ msgid "Kyrgyzstan"
+#~ msgstr "Kirgistan"
+
+#~ msgid "Laos"
+#~ msgstr "Laos"
+
+#~ msgid "Latvia"
+#~ msgstr "Latvia"
+
+#~ msgid "Lebanon"
+#~ msgstr "Liban"
+
+#~ msgid "Lesotho"
+#~ msgstr "Lesoto"
+
+#~ msgid "Liberia"
+#~ msgstr "Liberia"
+
+#~ msgid "Libya"
+#~ msgstr "Libi"
+
+#~ msgid "Liechtenstein"
+#~ msgstr "Liechtenstein"
+
+#~ msgid "Lithuania"
+#~ msgstr "Lituani"
+
+#~ msgid "Luxembourg"
+#~ msgstr "Luksembourg"
+
+#~ msgid "Macau"
+#~ msgstr "Makav"
+
+#~ msgid "Madagascar"
+#~ msgstr "Madagaskar"
+
+#~ msgid "Malawi"
+#~ msgstr "Malawi"
+
+#~ msgid "Malaysia"
+#~ msgstr "Malezia"
+
+#~ msgid "Maldives"
+#~ msgstr "Inizi Maldiv"
+
+#~ msgid "Mali"
+#~ msgstr "Mali"
+
+#~ msgid "Malta"
+#~ msgstr "Malt"
+
+#~ msgid "Marshall Islands"
+#~ msgstr "Inizi Marshall"
+
+#~ msgid "Martinique"
+#~ msgstr "Martinik"
+
+#~ msgid "Mauritania"
+#~ msgstr "Maouritani"
+
+#~ msgid "Mauritius"
+#~ msgstr "Mauris"
+
+#~ msgid "Mexico"
+#~ msgstr "Meksiko"
+
+#~ msgid "Moldova"
+#~ msgstr "Moldavi"
+
+#~ msgid "Monaco"
+#~ msgstr "Monako"
+
+#~ msgid "Mongolia"
+#~ msgstr "Mongoli"
+
+#~ msgid "Montserrat"
+#~ msgstr "Montserrat"
+
+#~ msgid "Morocco"
+#~ msgstr "Marok"
+
+#~ msgid "Mozambique"
+#~ msgstr "Mozambik"
+
+#~ msgid "Namibia"
+#~ msgstr "Namibi"
+
+#~ msgid "Nauru"
+#~ msgstr "Naurueg"
+
+#~ msgid "Nepal"
+#~ msgstr "Nepal"
+
+#~ msgid "Netherlands"
+#~ msgstr "Izelvroioù"
+
+#~ msgid "Netherlands Antilles"
+#~ msgstr "Antilh an Izelvroioù"
+
+#~ msgid "New Caledonia"
+#~ msgstr "Kaledoni-nevez"
+
+#~ msgid "New Zealand"
+#~ msgstr "Zeland Nevez"
+
+#~ msgid "Nicaragua"
+#~ msgstr "Nikwaraga"
+
+#~ msgid "Niger"
+#~ msgstr "Nijer"
+
+#~ msgid "Nigeria"
+#~ msgstr "Nijeria"
+
+#~ msgid "Niue"
+#~ msgstr "Niue"
+
+#~ msgid "North Korea"
+#~ msgstr "Kore norzh"
+
+#~ msgid "Northern Ireland"
+#~ msgstr "Iwerzhon an norzh"
+
+#~ msgid "Northern Mariana Islands"
+#~ msgstr "Inizi Mariana norzh"
+
+#~ msgid "Norway"
+#~ msgstr "Norvej"
+
+#~ msgid "Oman"
+#~ msgstr "Oman"
+
+#~ msgid "Pakistan"
+#~ msgstr "Pakistan"
+
+#~ msgid "Palau"
+#~ msgstr "Palo"
+
+#~ msgid "Palestinian"
+#~ msgstr "Palestiniek"
+
+#~ msgid "Panama"
+#~ msgstr "Panama"
+
+#~ msgid "Papua New Guinea"
+#~ msgstr "Papouazi Gine Nevez"
+
+#~ msgid "Paraguay"
+#~ msgstr "Paragwae"
+
+#~ msgid "Peru"
+#~ msgstr "Peroù"
+
+#~ msgid "Philippines"
+#~ msgstr "Filipin"
+
+#~ msgid "Poland"
+#~ msgstr "Pologn"
+
+#~ msgid "Portugal"
+#~ msgstr "Portugal"
+
+#~ msgid "Puerto Rico"
+#~ msgstr "Porto Rico"
+
+#~ msgid "Qatar"
+#~ msgstr "Kwatar"
+
+#~ msgid "Romania"
+#~ msgstr "Roumani"
+
+#~ msgid "Russia"
+#~ msgstr "Rusia"
+
+#~ msgid "Rwanda"
+#~ msgstr "Rwanda"
+
+#~ msgid "St. Kitts and Nevis"
+#~ msgstr "S. Kitts ha Nevis"
+
+#~ msgid "St. Lucia"
+#~ msgstr "S. Lucia"
+
+#~ msgid "St. Vincent and the Grenadines"
+#~ msgstr "S. Visant hag ar Grenadinez"
+
+#~ msgid "San Marino"
+#~ msgstr "San Marino"
+
+#~ msgid "Sao Tome and Principe"
+#~ msgstr "Sao Tome ha Principe"
+
+#~ msgid "Saudi Arabia"
+#~ msgstr "Arabi Saudiet"
+
+#~ msgid "Senegal"
+#~ msgstr "Senegal"
+
+#~ msgid "Serbia & Montenegro"
+#~ msgstr "Serbi & Montenegro"
+
+#~ msgid "Seychelles"
+#~ msgstr "Sechell"
+
+#~ msgid "Sierra Leone"
+#~ msgstr "Siera Leoñ"
+
+#~ msgid "Singapore"
+#~ msgstr "Singapour"
+
+#~ msgid "Slovakia"
+#~ msgstr "Slovaki"
+
+#~ msgid "Slovenia"
+#~ msgstr "Sloveni"
+
+#~ msgid "Solomon Islands"
+#~ msgstr "Inizi Salaun"
+
+#~ msgid "Somalia"
+#~ msgstr "Somali"
+
+#~ msgid "South Africa"
+#~ msgstr "Afrika Su"
+
+#~ msgid "South Korea"
+#~ msgstr "Kore Su"
+
+#~ msgid "Spain"
+#~ msgstr "Spagn"
+
+#~ msgid "Sri Lanka"
+#~ msgstr "Sri Lanka"
+
+#~ msgid "Sudan"
+#~ msgstr "Sondan"
+
+#~ msgid "Suriname"
+#~ msgstr "Surinam"
+
+#~ msgid "Swaziland"
+#~ msgstr "Swaziland"
+
+#~ msgid "Sweden"
+#~ msgstr "Sweden"
+
+#~ msgid "Switzerland"
+#~ msgstr "Suis"
+
+#~ msgid "Syria"
+#~ msgstr "Siri"
+
+#~ msgid "Taiwan"
+#~ msgstr "Taiwan"
+
+#~ msgid "Tajikistan"
+#~ msgstr "Tadjikistan"
+
+#~ msgid "Tanzania"
+#~ msgstr "Tanzani"
+
+#~ msgid "Thailand"
+#~ msgstr "Tailhland"
+
+#~ msgid "Tibet"
+#~ msgstr "Tibe"
+
+#~ msgid "Togo"
+#~ msgstr "Togo"
+
+#~ msgid "Tonga"
+#~ msgstr "Inizi Tonga"
+
+#~ msgid "Trinidad and Tobago"
+#~ msgstr "Trinidad ha Tobago"
+
+#~ msgid "Tunisia"
+#~ msgstr "Tunizi"
+
+#~ msgid "Turkey"
+#~ msgstr "Turki"
+
+#~ msgid "Turkmenistan"
+#~ msgstr "Turkmenistan"
+
+#~ msgid "Turks and Caicos Islands"
+#~ msgstr "Inizi Turks ha Kaikos"
+
+#~ msgid "Tuvalu"
+#~ msgstr "Tuvalu"
+
+#~ msgid "Uganda"
+#~ msgstr "Ouganda"
+
+#~ msgid "Ukraine"
+#~ msgstr "Ukren"
+
+#~ msgid "United Arab Emirates"
+#~ msgstr "Stadoù-Unanet Arabeg"
+
+#~ msgid "United Kingdom"
+#~ msgstr "Rouantelezh Unanet"
+
+#~ msgid "United States"
+#~ msgstr "Amerika"
+
+#~ msgid "Uruguay"
+#~ msgstr "Ourougwae"
+
+#~ msgid "Uzbekistan"
+#~ msgstr "Ouzbekistan"
+
+#~ msgid "Vanuatu"
+#~ msgstr "Vanuatu"
+
+#~ msgid "Vatican City"
+#~ msgstr "Ker Vatikan"
+
+#~ msgid "Venezuela"
+#~ msgstr "Venezuela"
+
+#~ msgid "Vietnam"
+#~ msgstr "Vietnam"
+
+#~ msgid "Western Samoa"
+#~ msgstr "Samoa kornaoueg"
+
+#~ msgid "Yemen"
+#~ msgstr "Ihlemeñ"
+
+#~ msgid "Yugoslavia"
+#~ msgstr "Yougoslavi"
+
+#~ msgid "Zaire"
+#~ msgstr "Zaire"
+
+#~ msgid "Zambia"
+#~ msgstr "Zambi"
+
+#~ msgid "Zimbabwe"
+#~ msgstr "Zimbabwe"
+
+#, fuzzy
+#~| msgid "None"
+#~ msgctxt "@option:radio Row seperator option."
+#~ msgid "None"
+#~ msgstr "Ebet"
+
+#, fuzzy
+#~| msgid "Title:"
+#~ msgctxt "@label:textbox Title of the contact"
+#~ msgid "Title:"
+#~ msgstr "Titl :"
+
+#, fuzzy
+#~| msgid "Name"
+#~ msgctxt "@label Displays an image"
+#~ msgid "Name"
+#~ msgstr "Anv"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "@label:textbox primary email address of the contact"
+#~ msgid "Email"
+#~ msgstr "Postel"
+
+#, fuzzy
+#~| msgctxt "Instant messaging"
+#~| msgid "Address"
+#~ msgctxt "@label Displays an image"
+#~ msgid "Address"
+#~ msgstr "Chomlec'h"
+
+#~ msgid "Address:"
+#~ msgstr "Chomlec'h :"
+
+#, fuzzy
+#~| msgid "New..."
+#~ msgctxt "@action:intoolbar Create ne contact"
+#~ msgid "New"
+#~ msgstr "Nevez ..."
+
+#~ msgid "&General"
+#~ msgstr "&Pennañ"
+
+#, fuzzy
+#~| msgid "Text"
+#~ msgid "TextLabel"
+#~ msgstr "Skrid"
+
+#, fuzzy
+#~| msgid "Distribution List Editor"
+#~ msgid "Distribution List Editor NG"
+#~ msgstr "Aozer ar roll ingaladur"
+
+#~ msgid "Yes"
+#~ msgstr "Ya"
+
+#~ msgid "No"
+#~ msgstr "N'eo ket"
+
+#~ msgid "New List..."
+#~ msgstr "Listenn nevez ..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Adenvel al listenn ..."
+
+#~ msgid "Remove Contact"
+#~ msgstr "Dilemel an darempred"
+
+#~ msgid "Please enter name:"
+#~ msgstr "Skrivit anv an arveriad mar plij :"
+
+#~ msgid "The name already exists"
+#~ msgstr "An anv a zo c'hoazh"
+
+#~ msgid "Rename Distribution List"
+#~ msgstr "Adenvel ar roll ingaladur"
+
+#~ msgid "The name already exists."
+#~ msgstr "An anv a zo c'hoazh."
+
+#~ msgid "<qt>Delete distribution list <b>%1</b>?</qt>"
+#~ msgstr "<qt>Lemel ar roll ingaladur <b>%1</b> ?</qt>"
+
+#~ msgid "Select Email Address"
+#~ msgstr "Diuzit ar chomlec'h postel"
+
+#~ msgid "Email Addresses"
+#~ msgstr "Chomlec'hioù postel"
+
+#~ msgid "Using codec '%1'"
+#~ msgstr "Oc'h implij ar c'hodek '%1'"
+
+#~ msgid "Encoding"
+#~ msgstr "Kodadur"
+
+#~ msgid "&Lookup Addresses in LDAP Directory..."
+#~ msgstr "&Klask ar chomlec'h er renkell LDAP ..."
+
+#~ msgid "Contact Toolbar"
+#~ msgstr "Barrenn ostilhoù an darempredoù"
+
+#~ msgid "Addressbook Bookmarks"
+#~ msgstr "Sinedoù ar c'harned chomlec'hioù"
+
+#~ msgid "Unable to load '%1'."
+#~ msgstr "N'em eus ket kargañ '%1'."
+
+#~ msgid "<qt>Unable to open file <b>%1</b>.%2.</qt>"
+#~ msgstr "<qt>N'hellan ket digeriñ ar restr <b>%1<b>.%2.</qt>"

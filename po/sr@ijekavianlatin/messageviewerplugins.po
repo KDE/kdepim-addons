@@ -1,0 +1,316 @@
+# Translation of messageviewerplugins.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: messageviewerplugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-31 18:10+0200\n"
+"PO-Revision-Date: 2017-07-16 22:56+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
+#, kde-format
+msgid "Current URL is not a shortened URL."
+msgstr "Ovaj URL nije skraćeni URL."
+
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:71
+#, kde-format
+msgid "Expand URL"
+msgstr "Proširi URL"
+
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:65
+#, kde-format
+msgid "Translate..."
+msgstr "Prevedi..."
+
+#: createeventplugin/eventedit.cpp:63
+#, kde-format
+msgid "Event:"
+msgstr "Događaj:"
+
+#: createeventplugin/eventedit.cpp:82 createnoteplugin/noteedit.cpp:75
+#, kde-format
+msgid "Calendar where the new event will be stored."
+msgstr "Kalendar u koji se smešta novi događaj."
+
+#: createeventplugin/eventedit.cpp:84 createnoteplugin/noteedit.cpp:77
+#, kde-format
+msgid "Calendar where the new event will be stored"
+msgstr "Kalendar u koji se smešta novi događaj"
+
+#: createeventplugin/eventedit.cpp:97
+#, kde-format
+msgid "Start:"
+msgstr "Početak:"
+
+#: createeventplugin/eventedit.cpp:104
+#, kde-format
+msgid "Select start time for event."
+msgstr "Izaberite vreme početka događaja."
+
+#: createeventplugin/eventedit.cpp:111
+#, kde-format
+msgid "End:"
+msgstr "Završetak:"
+
+#: createeventplugin/eventedit.cpp:117
+#, kde-format
+msgid "Select end time for event."
+msgstr "Izaberite vreme kraja događaja."
+
+#: createeventplugin/eventedit.cpp:133 createnoteplugin/noteedit.cpp:96
+#: createtodoplugin/todoedit.cpp:104
+#, kde-format
+msgid "&Save"
+msgstr "&Sačuvaj"
+
+#: createeventplugin/eventedit.cpp:137
+#, kde-format
+msgid "Create new event and close this widget."
+msgstr "Napravite novi događaj i zatvorite ovaj vidžet."
+
+#: createeventplugin/eventedit.cpp:142
+#, kde-format
+msgid "Open &editor..."
+msgstr "Otvori &uređivač..."
+
+#: createeventplugin/eventedit.cpp:144
+#, kde-format
+msgid "Open event editor, where more details can be changed."
+msgstr "Otvara uređivač događaja, gde se može izmeniti više detalja."
+
+#: createeventplugin/eventedit.cpp:155
+#, kde-format
+msgid "Close the widget for creating new events."
+msgstr "Zatvara vidžet za stvaranje novih događaja."
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:83
+#, kde-format
+msgid "Create Event..."
+msgstr "Napravi događaj..."
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:84
+#, kde-format
+msgid "Create Event"
+msgstr "Napravi događaj"
+
+#: createeventplugin/viewerplugincreateeventinterface.cpp:85
+#, kde-format
+msgid "Allows you to create a calendar Event"
+msgstr "Daje vam da napravite kalendarski događaj."
+
+#: createnoteplugin/noteedit.cpp:56
+#, kde-format
+msgid "Note:"
+msgstr "Napomena:"
+
+#: createnoteplugin/noteedit.cpp:100
+#, kde-format
+msgid "Create new note and close this widget."
+msgstr "Napravite novi događaj i zatvorite ovaj vidžet."
+
+#: createnoteplugin/noteedit.cpp:109
+#, kde-format
+msgid "Close the widget for creating new notes."
+msgstr "Zatvara vidžet za stvaranje novih beležaka."
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:135
+#, kde-format
+msgctxt "edit a note on this message"
+msgid "Edit Note"
+msgstr "Uredi belešku"
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:137
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:148
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:149
+#, kde-format
+msgctxt "create a new note out of this message"
+msgid "Create Note"
+msgstr "Napravi belešku"
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:150
+#, kde-format
+msgid "Allows you to create a note from this message"
+msgstr "Omogućava vam da od ove poruke napravite belešku."
+
+#: createnoteplugin/viewerplugincreatenoteinterface.cpp:151
+#, kde-format
+msgid ""
+"This option starts an editor to create a note. Then you can edit the note to "
+"your liking before saving it."
+msgstr ""
+"Ova opcija pokreće uređivač radi pisanja beleške. Zatim možete po želji "
+"urediti belešku pre nego što je sačuvate."
+
+#: createtodoplugin/todoedit.cpp:71
+#, kde-format
+msgid "Todo:"
+msgstr "Obaveza:"
+
+#: createtodoplugin/todoedit.cpp:91
+#, kde-format
+msgid "Todo list where the new task will be stored."
+msgstr "Lista obaveza u koju se smešta novi zadatak."
+
+#: createtodoplugin/todoedit.cpp:93
+#, kde-format
+msgid "Todo list where the new task will be stored"
+msgstr "Lista obaveza u koju se smešta novi zadatak"
+
+#: createtodoplugin/todoedit.cpp:108
+#, kde-format
+msgid "Create new todo and close this widget."
+msgstr "Napravite novu obavezu i zatvorite ovaj vidžet."
+
+#: createtodoplugin/todoedit.cpp:113
+#, fuzzy, kde-format
+#| msgid "Open &editor..."
+msgid "Open &Editor..."
+msgstr "Otvori &uređivač..."
+
+#: createtodoplugin/todoedit.cpp:116
+#, kde-format
+msgid "Open todo editor, where more details can be changed."
+msgstr "Otvara uređivač obaveza, gde se može izmeniti više detalja."
+
+#: createtodoplugin/todoedit.cpp:126
+#, kde-format
+msgid "Close the widget for creating new todos."
+msgstr "Zatvara vidžet za stvaranje novih obaveza."
+
+#: createtodoplugin/todoedit.cpp:163
+#, kde-format
+msgid "Check I received a reply about \"%1\""
+msgstr "Proveri da li je stigao odgovor na „%1“"
+
+#: createtodoplugin/todoedit.cpp:163
+#, kde-format
+msgid "Reply to \"%1\""
+msgstr "Odgovor na „%1“"
+
+#: createtodoplugin/todoedit.cpp:252
+#, kde-format
+msgctxt ""
+"%1 is summary of the todo, %2 is name of the folder in which it is stored"
+msgid "New todo '%1' was added to task list '%2'"
+msgstr "Nova obaveza „%1“ dodata u listu zadataka „%2“."
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:83
+#, kde-format
+msgid "Create Todo"
+msgstr "Napravi obavezu"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:84
+#, kde-format
+msgid "Create To-do"
+msgstr "Napravi obavezu"
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:85
+#, kde-format
+msgid "Allows you to create a calendar to-do or reminder from this message"
+msgstr ""
+"Omogućava vam da od ove poruke napravite kalendarsku obavezu ili podsetnik."
+
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:87
+#, kde-format
+msgid ""
+"This option starts the KOrganizer to-do editor with initial values taken "
+"from the currently selected message. Then you can edit the to-do to your "
+"liking before saving it to your calendar."
+msgstr ""
+"Ova opcija pokreće K‑organizatorov uređivač obaveza, sa početnim vrednostima "
+"prema trenutno izabranoj poruci. Zatim možete po želji urediti obavezu pre "
+"nego što je sačuvate u kalendar."
+
+# >> @title:window
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:29
+#, fuzzy, kde-format
+#| msgid "Configure \"External Script\" Plugin"
+msgctxt "@title:window"
+msgid "Configure \"External Script\" Plugin"
+msgstr "Podešavanje priključka za spoljašnju skriptu"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:71
+#, kde-format
+msgid "External Script:"
+msgstr "Spoljašnja skripta:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:88
+#, kde-format
+msgid "Add Script..."
+msgstr "Dodaj skriptu..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:93
+#, kde-format
+msgid "Modify Script..."
+msgstr "Izmeni skriptu..."
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:98
+#, kde-format
+msgid "Remove Script"
+msgstr "Ukloni skriptu"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:115
+#, kde-format
+msgid "Do you want to remove this script \"%1\"?"
+msgstr "Želite li da uklonite skriptu „%1“?"
+
+# >> @title:window
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:115
+#, kde-format
+msgid "Remove External Script"
+msgstr "Uklanjanje spoljašnje skripte"
+
+# >> @title:window
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:32
+#, fuzzy, kde-format
+#| msgid "Add or Modify External Script"
+msgctxt "@title:window"
+msgid "Add or Modify External Script"
+msgstr "Dodavanje ili menjanje spoljašnje skripte"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:35
+#, kde-format
+msgid "Name:"
+msgstr "Ime:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:39
+#, kde-format
+msgid "Description:"
+msgstr "Opis:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:44
+#, kde-format
+msgid "Command Line:"
+msgstr "Komandna linija:"
+
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:55
+#, kde-format
+msgid "Executable:"
+msgstr "Izvršni fajl:"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:84
+#, kde-format
+msgid "'%1' not found"
+msgstr "„%1“ nije nađeno."
+
+# >> @title:window
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:84
+#, kde-format
+msgid "Executable not found."
+msgstr "Izvršni fajl nije nađen"
+
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:94
+#, kde-format
+msgid "Impossible to start executable"
+msgstr "Ne mogu da pokrenem izvršni fajl."

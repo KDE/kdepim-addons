@@ -1,0 +1,481 @@
+# translation of messageviewerconfiguresettingsplugins.po to Slovak
+# Roman Paholík <wizzardsk@gmail.com>, 2018.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: messageviewerconfiguresettingsplugins\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"PO-Revision-Date: 2019-11-11 16:12+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: dkim-verify/dkimadvancedwidget.cpp:21
+#, kde-format
+msgid "Still verify the signature, if a domain is only testing DKIM"
+msgstr "Overiť podpis aj pokiaľ doména testuje iba DKIM"
+
+#: dkim-verify/dkimadvancedwidget.cpp:22
+#, fuzzy, kde-format
+#| msgid "Read Authentication-Results header"
+msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgstr "Prečítať hlavičku výsledkov overenia"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Nothing"
+msgstr "Nič"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Warning"
+msgstr "Upozornenie"
+
+#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#, kde-format
+msgid "Error"
+msgstr "Chyba"
+
+#: dkim-verify/dkimadvancedwidget.cpp:36
+#, kde-format
+msgid "Treat RSA-SHA1 sign algorithm as:"
+msgstr "Považovať algoritmus RSA-SHA1 ako:"
+
+#: dkim-verify/dkimadvancedwidget.cpp:40
+#, kde-format
+msgid "Treat small Key as:"
+msgstr ""
+
+#: dkim-verify/dkimadvancedwidget.cpp:42
+#, fuzzy, kde-format
+#| msgid "Configure DKIM"
+msgid "Configure"
+msgstr "Nastaviť DKIM"
+
+#: dkim-verify/dkimadvancedwidget.cpp:45
+#, kde-format
+msgid "Authentication Server verified:"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Authentication Verified Server"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
+#, kde-format
+msgid "New Server:"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
+#, kde-format
+msgid "New Server"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
+#, fuzzy, kde-format
+#| msgid "Modify Rule"
+msgid "Modify Server"
+msgstr "Upraviť pravidlo"
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
+#, kde-format
+msgid "Server:"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
+#, fuzzy, kde-format
+#| msgid "Do you want to delete this rule?"
+msgid "Do you want to delete selected server(s) name?"
+msgstr "Chcete odstrániť toto pravidlo?"
+
+#: dkim-verify/dkimconfiguredialog.cpp:25
+#, fuzzy, kde-format
+#| msgid "Configure DKIM"
+msgctxt "@title:window"
+msgid "Configure DKIM"
+msgstr "Nastaviť DKIM"
+
+#: dkim-verify/dkimconfiguretab.cpp:38
+#: foldersettings/folderconfiguresettingspagewidget.cpp:36
+#, kde-format
+msgid "General"
+msgstr "Všeobecné"
+
+#: dkim-verify/dkimconfiguretab.cpp:40
+#, kde-format
+msgid "Record Keys"
+msgstr "Zaznamenať kľúče"
+
+#: dkim-verify/dkimconfiguretab.cpp:42
+#, kde-format
+msgid "Policy"
+msgstr "Pravidlo"
+
+#: dkim-verify/dkimconfiguretab.cpp:44
+#, kde-format
+msgid "Advanced"
+msgstr "Pokročilé"
+
+#: dkim-verify/dkimgeneralwidget.cpp:19
+#, kde-format
+msgid "Enable DKIM Support"
+msgstr "Povoliť podporu pre DKIM"
+
+#: dkim-verify/dkimgeneralwidget.cpp:20
+#, kde-format
+msgid "Save DKIM Result"
+msgstr "Uložiť výsledok DKIM"
+
+#: dkim-verify/dkimgeneralwidget.cpp:22
+#, fuzzy, kde-format
+#| msgid "Read Authentication-Results header"
+msgid "Replace DKIM result by Authentication-Result header value"
+msgstr "Prečítať hlavičku výsledkov overenia"
+
+#: dkim-verify/dkimgeneralwidget.cpp:38
+#, fuzzy, kde-format
+#| msgid "Save Record Key"
+msgid "Save Record Key:"
+msgstr "Uložiť kľúč záznamu"
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: dkim-verify/dkimgeneralwidget.cpp:43
+#, kde-format
+msgid "Save and Compare"
+msgstr ""
+
+#: dkim-verify/dkimpolicywidget.cpp:21
+#, kde-format
+msgid "Check if e-mail should be signed"
+msgstr "Skontrolovať, či sa má e-mail podpísať"
+
+#: dkim-verify/dkimpolicywidget.cpp:22
+#, kde-format
+msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgstr "Použiť DMARC na heuristické určenie, či by sa mal e-mail podpísať"
+
+#: dkim-verify/dkimpolicywidget.cpp:23
+#, kde-format
+msgid "Use default rule"
+msgstr "Používať predvolené pravidlo"
+
+#: dkim-verify/dkimpolicywidget.cpp:24
+#, kde-format
+msgid "Autogenerate rule"
+msgstr "Automaticky generovať pravidlo"
+
+#: dkim-verify/dkimpolicywidget.cpp:25
+#, kde-format
+msgid "Read Authentication-Results header"
+msgstr "Prečítať hlavičku výsledkov overenia"
+
+#: dkim-verify/dkimpolicywidget.cpp:26
+#, kde-format
+msgid "Autogenerate when Sender in SDID"
+msgstr ""
+
+#: dkim-verify/dkimpolicywidget.cpp:27
+#, kde-format
+msgid "Show Rules"
+msgstr "Zobraziť pravidlá"
+
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Expiry Account Trash Folder"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingsdialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Configure Rule"
+msgctxt "@title:window"
+msgid "Configure Folder Settings"
+msgstr "Nastaviť pravidlo"
+
+#: foldersettings/folderconfiguresettingspagebase.cpp:17
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify"
+msgstr "Upraviť..."
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:40
+#, kde-format
+msgid "View"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:44
+#, kde-format
+msgid "Expiry"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:48
+#, kde-format
+msgid "Template"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:57
+#, kde-format
+msgid ""
+"It will override all settings for each selected folder. Do you want to "
+"continue?"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#, fuzzy, kde-format
+#| msgid "Configure Rule"
+msgid "Save Folder Settings"
+msgstr "Nastaviť pravidlo"
+
+#: foldersettings/folderconfiguretreewidget.cpp:52
+#, kde-format
+msgid "Select"
+msgstr ""
+
+#: foldersettings/folderconfiguretreewidget.cpp:60
+#, kde-format
+msgid "Unselect"
+msgstr ""
+
+#: gravatar/gravatarconfiguresettingsplugindialog.cpp:14
+#, fuzzy, kde-format
+#| msgid "Configure Gravatar"
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr "Nastaviť Gravatar"
+
+#: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
+#, kde-format
+msgid "Enable Gravatar Support"
+msgstr "Povoliť podporu Gravatar"
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Create"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:27
+#, kde-format
+msgid "Server Name:"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:31
+#, kde-format
+msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
+#, kde-format
+msgid ""
+"<qt><p><strong>These expressions may be used for the arguments:</strong></"
+"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:48
+#, kde-format
+msgid "Command line:"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:58
+#, kde-format
+msgid "Executable:"
+msgstr ""
+
+#: openurlwith/openurlwithconfiguredialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Open Url With Plugin"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "Add Rule"
+msgctxt "@action:button"
+msgid "Add Rule..."
+msgstr "Pridať pravidlo"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:56
+#, fuzzy, kde-format
+#| msgid "Remove Rule"
+msgctxt "@action:button"
+msgid "Remove Rule"
+msgstr "Odstrániť pravidlo"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:57
+#, fuzzy, kde-format
+#| msgid "Add Rule"
+msgctxt "@action:button"
+msgid "Modify Rule..."
+msgstr "Pridať pravidlo"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Rule already exists."
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, fuzzy, kde-format
+#| msgid "Delete Rule"
+msgid "Duplicate Rule"
+msgstr "Odstrániť pravidlo"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:191
+#, fuzzy, kde-format
+#| msgid "Do you want to delete this rule?"
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] "Chcete odstrániť toto pravidlo?"
+msgstr[1] "Chcete odstrániť toto pravidlo?"
+msgstr[2] "Chcete odstrániť toto pravidlo?"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:192
+#, fuzzy, kde-format
+#| msgid "Remove Rule"
+msgctxt "@title"
+msgid "Remove Rule"
+msgstr "Odstrániť pravidlo"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:208
+#, fuzzy, kde-format
+#| msgid "Add Rule"
+msgid "Add Rule..."
+msgstr "Pridať pravidlo"
+
+#: openurlwith/openurlwithconfigurewidget.cpp:210
+#, kde-format
+msgid "Edit Rule..."
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:215
+#, fuzzy, kde-format
+#| msgid "Remove Rule"
+msgid "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] "Odstrániť pravidlo"
+msgstr[1] "Odstrániť pravidlo"
+msgstr[2] "Odstrániť pravidlo"
+
+#: scamsettings/scamconfiguresettingsdialog.cpp:25
+#, fuzzy, kde-format
+#| msgid "Configure Rule"
+msgctxt "@title:window"
+msgid "Configure Scam Settings"
+msgstr "Nastaviť pravidlo"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Domain"
+msgstr "Doména"
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Check"
+msgstr ""
+
+#: scamsettings/scamconfigureutils.cpp:15
+#, kde-format
+msgid "Disable All Check"
+msgstr ""
+
+#: scamsettings/scamconfigureutils.cpp:17
+#, kde-format
+msgid "Redirect Url"
+msgstr ""
+
+#: scamsettings/scamconfigureutils.cpp:19
+#, kde-format
+msgid "Has Ip"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Configure Rule"
+#~ msgid "Modify Settings"
+#~ msgstr "Nastaviť pravidlo"
+
+#, fuzzy
+#~| msgid "Configure Gravatar"
+#~ msgctxt "@title:window"
+#~ msgid "Check and update Gravatar"
+#~ msgstr "Nastaviť Gravatar"
+
+#~ msgid "Must be signed"
+#~ msgstr "Musí byť podpísaný"
+
+#~ msgid "Can be signed"
+#~ msgstr "Môže byť podpísaný"
+
+#~ msgid "Ignore if not signed"
+#~ msgstr "Ignorovať ak nie je podpísaný"
+
+#~ msgid "Active"
+#~ msgstr "Aktívny"
+
+#~ msgid "From"
+#~ msgstr "Od"
+
+#~ msgid "SDID"
+#~ msgstr "SDID"
+
+#~ msgid "Rule type"
+#~ msgstr "Typ pravidla"
+
+#~ msgid "Add..."
+#~ msgstr "Pridať..."
+
+#~ msgid "Delete All"
+#~ msgstr "Odstrániť všetko"
+
+#~ msgid "Do you want to all rules?"
+#~ msgstr "Chcete odstrániť všetky pravidlá?"
+
+#~ msgid "Delete Rules"
+#~ msgstr "Odstrániť pravidlá"
+
+#~ msgid "Import..."
+#~ msgstr "Importovať..."
+
+#~ msgid "Export..."
+#~ msgstr "Exportovať..."
+
+#~ msgid "Export Rules"
+#~ msgstr "Exportovať pravidlá"
+
+#~ msgid "Import Rules"
+#~ msgstr "Importovať pravidlá"
+
+#~ msgid "Enabled"
+#~ msgstr "Povolené"
+
+#~ msgid "Domain:"
+#~ msgstr "Doména:"
+
+#~ msgid "From:"
+#~ msgstr "Od:"
+
+#~ msgid "Use '*' for specify all email from domain"
+#~ msgstr "Použite '*' na určenie všetkých emailov z domény"
+
+#~ msgid "SDID:"
+#~ msgstr "SDID:"
+
+#~ msgid "Rule:"
+#~ msgstr "Pravidlo:"
