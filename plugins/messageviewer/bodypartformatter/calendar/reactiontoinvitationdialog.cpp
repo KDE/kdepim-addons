@@ -10,11 +10,12 @@
 #include <KPIMTextEdit/PlainTextEditor>
 #include <KPIMTextEdit/PlainTextEditorWidget>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
-
+#include <QWindow>
 namespace
 {
 static const char myConfigReactionToInvitationDialog[] = "ReactionToInvitationDialog";
@@ -61,16 +62,16 @@ QString ReactionToInvitationDialog::comment() const
 
 void ReactionToInvitationDialog::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigReactionToInvitationDialog);
-    const QSize size = group.readEntry("Size", QSize(600, 400));
-    if (size.isValid()) {
-        resize(size);
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ReactionToInvitationDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigReactionToInvitationDialog);
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

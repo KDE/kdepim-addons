@@ -9,11 +9,12 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QListWidget>
 #include <QVBoxLayout>
-
+#include <QWindow>
 namespace
 {
 static const char myConfigCheckDuplicateEmailsDialog[] = "CheckDuplicateEmailsDialog";
@@ -56,14 +57,14 @@ void CheckDuplicateEmailsDialog::setDuplicatedEmails(const QMap<QString, int> &e
 void CheckDuplicateEmailsDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigCheckDuplicateEmailsDialog);
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void CheckDuplicateEmailsDialog::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(500, 300));
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigCheckDuplicateEmailsDialog);
-    const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

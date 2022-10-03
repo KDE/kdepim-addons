@@ -9,9 +9,10 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
-
+#include <QWindow>
 namespace
 {
 static const char myOpenUrlWithConfigureConfigGroupName[] = "OpenUrlWithConfigureDialog";
@@ -51,16 +52,16 @@ void OpenUrlWithConfigureDialog::slotAccepted()
 
 void OpenUrlWithConfigureDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openStateConfig(), myOpenUrlWithConfigureConfigGroupName);
-    const QSize size = grp.readEntry("Size", QSize(300, 200));
-    if (size.isValid()) {
-        resize(size);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(300, 200));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myOpenUrlWithConfigureConfigGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void OpenUrlWithConfigureDialog::writeConfig()
 {
     KConfigGroup grp(KSharedConfig::openStateConfig(), myOpenUrlWithConfigureConfigGroupName);
-    grp.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }

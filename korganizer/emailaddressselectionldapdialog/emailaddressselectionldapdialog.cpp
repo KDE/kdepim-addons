@@ -10,13 +10,14 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <PimCommonAkonadi/LdapSearchDialog>
 #include <QDialogButtonBox>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QTreeView>
 #include <QVBoxLayout>
-
+#include <QWindow>
 namespace
 {
 static const char myConfigEmailAddressSelectionLdapDialog[] = "EmailAddressSelectionLdapDialog";
@@ -55,19 +56,17 @@ EmailAddressSelectionLdapDialog::EmailAddressSelectionLdapDialog(QWidget *parent
 
 void EmailAddressSelectionLdapDialog::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(500, 300));
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigEmailAddressSelectionLdapDialog);
-    const QSize size = group.readEntry("Size", QSize());
-    if (size.isValid()) {
-        resize(size);
-    } else {
-        resize(sizeHint().width(), sizeHint().height());
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void EmailAddressSelectionLdapDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigEmailAddressSelectionLdapDialog);
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 EmailAddressSelectionLdapDialog::~EmailAddressSelectionLdapDialog()
