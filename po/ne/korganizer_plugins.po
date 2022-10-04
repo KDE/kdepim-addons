@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2007-09-17 14:45+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:34
+#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
 msgid "Search &Directory Service"
 msgstr ""

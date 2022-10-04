@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2022-07-14 09:29-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "Configurar"
 msgid "Authentication Server verified:"
 msgstr "Servidor de autenticação verificado:"
 
-#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:24
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
@@ -98,7 +98,7 @@ msgstr "Servidor:"
 msgid "Do you want to delete selected server(s) name?"
 msgstr "Deseja excluir o nome do servidor selecionado?"
 
-#: dkim-verify/dkimconfiguredialog.cpp:25
+#: dkim-verify/dkimconfiguredialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure DKIM"
@@ -193,13 +193,13 @@ msgstr "Autogerar quando o emissor estiver na SDID"
 msgid "Show Rules"
 msgstr "Mostrar regras"
 
-#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:26
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
 msgstr "Configurar expiração da pasta da Lixeira da conta"
 
-#: foldersettings/folderconfiguresettingsdialog.cpp:26
+#: foldersettings/folderconfiguresettingsdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Folder Settings"
@@ -302,7 +302,7 @@ msgstr "Linha de comando:"
 msgid "Executable:"
 msgstr "Executável:"
 
-#: openurlwith/openurlwithconfiguredialog.cpp:24
+#: openurlwith/openurlwithconfiguredialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
@@ -366,7 +366,7 @@ msgid_plural "Remove Rules"
 msgstr[0] "Remover regra"
 msgstr[1] "Remover regras"
 
-#: scamsettings/scamconfiguresettingsdialog.cpp:25
+#: scamsettings/scamconfiguresettingsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"

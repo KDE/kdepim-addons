@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2021-11-24 23:12+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -124,30 +124,30 @@ msgstr "Verifica indirizzi di posta duplicati"
 msgid "Check send attachment"
 msgstr "Verifica invio allegato"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:25
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "Messaggi di posta duplicati"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Questi messaggi sono duplicati. Vuoi inviare il messaggio?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:52
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:23
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
 msgstr "Verifica allegato"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:26
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
 #, kde-format
 msgid "Do you want to send some attachment?"
 msgstr "Vuoi inviare un qualche allegato?"

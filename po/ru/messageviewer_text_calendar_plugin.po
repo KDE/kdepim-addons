@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2022-01-28 10:51+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -69,7 +69,7 @@ msgstr "Выбор представителя"
 msgid "Delegate:"
 msgstr "Представитель:"
 
-#: reactiontoinvitationdialog.cpp:29
+#: reactiontoinvitationdialog.cpp:30
 #, kde-format
 msgid "Comment:"
 msgstr "Комментарий:"

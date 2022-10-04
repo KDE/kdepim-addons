@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2022-02-21 14:41+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -32,7 +32,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:34
+#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
 msgid "Search &Directory Service"
 msgstr "Поиск в &службе каталогов"

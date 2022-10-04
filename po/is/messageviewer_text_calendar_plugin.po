@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2009-06-13 16:20+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: icelandic <kde-isl@molar.is>\n"
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Delegate:"
 msgstr "Framvísað: %1"
 
-#: reactiontoinvitationdialog.cpp:29
+#: reactiontoinvitationdialog.cpp:30
 #, fuzzy, kde-format
 msgid "Comment:"
 msgstr "Athugasemd:"

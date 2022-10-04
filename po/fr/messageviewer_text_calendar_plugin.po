@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2021-11-06 22:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "Sélectionner un délégué"
 msgid "Delegate:"
 msgstr "Délégué :"
 
-#: reactiontoinvitationdialog.cpp:29
+#: reactiontoinvitationdialog.cpp:30
 #, kde-format
 msgid "Comment:"
 msgstr "Commentaire :"

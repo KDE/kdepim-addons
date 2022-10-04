@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2021-02-24 18:25-0300\n"
 "Last-Translator: Frederico Gonçalves Guimarães <frederico@teia.bio.br>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:34
+#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
 msgid "Search &Directory Service"
 msgstr "Serviço de &diretório de pesquisa"

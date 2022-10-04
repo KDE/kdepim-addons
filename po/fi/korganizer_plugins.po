@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2020-01-01 13:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 "X-POT-Import-Date: 2013-01-13 20:43:22+0000\n"
 "X-Generator: Lokalize 18.12.3\n"
 
-#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:34
+#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
 msgid "Search &Directory Service"
 msgstr "Etsi &hakemistopalvelusta"

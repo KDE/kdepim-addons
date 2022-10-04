@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2020-02-06 14:58+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -63,7 +63,7 @@ msgstr "Seadista "
 msgid "Authentication Server verified:"
 msgstr "Verifitseeritud autentimisserver:"
 
-#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:24
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
@@ -99,7 +99,7 @@ msgstr "Uus server"
 msgid "Do you want to delete selected server(s) name?"
 msgstr "Kas kustutada valitud serveri nimi?"
 
-#: dkim-verify/dkimconfiguredialog.cpp:25
+#: dkim-verify/dkimconfiguredialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure DKIM"
@@ -193,13 +193,13 @@ msgstr "Automaatne loomine, kui saatja on SDID-s"
 msgid "Show Rules"
 msgstr "Näita reegleid"
 
-#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:26
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
 msgstr ""
 
-#: foldersettings/folderconfiguresettingsdialog.cpp:26
+#: foldersettings/folderconfiguresettingsdialog.cpp:27
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Configure Rule"
@@ -303,7 +303,7 @@ msgstr ""
 msgid "Executable:"
 msgstr ""
 
-#: openurlwith/openurlwithconfiguredialog.cpp:24
+#: openurlwith/openurlwithconfiguredialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
@@ -378,7 +378,7 @@ msgid_plural "Remove Rules"
 msgstr[0] "Eemalda reegel"
 msgstr[1] "Eemalda reegel"
 
-#: scamsettings/scamconfiguresettingsdialog.cpp:25
+#: scamsettings/scamconfiguresettingsdialog.cpp:26
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Configure Rule"

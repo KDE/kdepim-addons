@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2009-02-28 13:57+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Delegate:"
 msgstr "प्रतिनिधित्व: %1"
 
-#: reactiontoinvitationdialog.cpp:29
+#: reactiontoinvitationdialog.cpp:30
 #, kde-format
 msgid "Comment:"
 msgstr "टिप्पनीः"

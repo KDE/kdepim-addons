@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2021-12-07 14:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "Valitse henkilö, jolle delegoida"
 msgid "Delegate:"
 msgstr "Delegoi:"
 
-#: reactiontoinvitationdialog.cpp:29
+#: reactiontoinvitationdialog.cpp:30
 #, kde-format
 msgid "Comment:"
 msgstr "Huomautus:"

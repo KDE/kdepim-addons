@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2021-08-20 11:44-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "Verifi&car gramática (Grammalecte)"
 msgid "Grammalecte Plugin"
 msgstr "Plugin Grammalecte"
 
-#: grammalecte/src/grammalecteconfigdialog.cpp:23
+#: grammalecte/src/grammalecteconfigdialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Grammalecte"
@@ -319,7 +319,7 @@ msgstr "Tâmil"
 msgid "Ukrainian"
 msgstr "Ucraniano"
 
-#: languagetool/src/languagetoolconfigdialog.cpp:24
+#: languagetool/src/languagetoolconfigdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure LanguageTool"

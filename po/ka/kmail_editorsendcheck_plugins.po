@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2022-08-23 07:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -123,30 +123,30 @@ msgstr "ელფოსტის დუბლირებული მისა�
 msgid "Check send attachment"
 msgstr "მიმაგრებული ფაილის შემოწმება"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:25
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "დუბლიკატი ელფოსტები"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "ეს ელფოსტები დუბლირებულია. გნებავთ ელფოსტის გაგზავნა?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:52
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:23
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
 msgstr "მიმაგრებული ფაილის შემოწმება"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:26
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
 #, kde-format
 msgid "Do you want to send some attachment?"
 msgstr "გნებავთ მიმაგრებული ფალების გაგზავნა?"

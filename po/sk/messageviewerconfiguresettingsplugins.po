@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2019-11-11 16:12+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "Nastaviť DKIM"
 msgid "Authentication Server verified:"
 msgstr ""
 
-#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:24
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Do you want to delete selected server(s) name?"
 msgstr "Chcete odstrániť toto pravidlo?"
 
-#: dkim-verify/dkimconfiguredialog.cpp:25
+#: dkim-verify/dkimconfiguredialog.cpp:26
 #, fuzzy, kde-format
 #| msgid "Configure DKIM"
 msgctxt "@title:window"
@@ -192,13 +192,13 @@ msgstr ""
 msgid "Show Rules"
 msgstr "Zobraziť pravidlá"
 
-#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:26
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
 msgstr ""
 
-#: foldersettings/folderconfiguresettingsdialog.cpp:26
+#: foldersettings/folderconfiguresettingsdialog.cpp:27
 #, fuzzy, kde-format
 #| msgid "Configure Rule"
 msgctxt "@title:window"
@@ -300,7 +300,7 @@ msgstr ""
 msgid "Executable:"
 msgstr ""
 
-#: openurlwith/openurlwithconfiguredialog.cpp:24
+#: openurlwith/openurlwithconfiguredialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
@@ -374,7 +374,7 @@ msgstr[0] "Odstrániť pravidlo"
 msgstr[1] "Odstrániť pravidlo"
 msgstr[2] "Odstrániť pravidlo"
 
-#: scamsettings/scamconfiguresettingsdialog.cpp:25
+#: scamsettings/scamconfiguresettingsdialog.cpp:26
 #, fuzzy, kde-format
 #| msgid "Configure Rule"
 msgctxt "@title:window"
