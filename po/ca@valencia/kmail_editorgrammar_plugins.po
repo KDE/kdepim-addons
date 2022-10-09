@@ -63,7 +63,7 @@ msgstr "Error durant les opcions d'extracció"
 #: grammalecte/src/grammalecteconfigwidget.cpp:110
 #, kde-format
 msgid "Press Button for Reloading Settings"
-msgstr "Premeu el botó per tornar a carregar la configuració"
+msgstr "Premeu el botó per a tornar a carregar la configuració"
 
 #: grammalecte/src/grammalecteconfigwidget.cpp:117
 #, kde-format
