@@ -7,6 +7,7 @@
 
 #include <QFile>
 #include <QProcess>
+#include <QRegularExpression>
 #include <QTest>
 
 static void compareFile(const QString &outFile, const QString &referenceFile)
@@ -20,11 +21,11 @@ static void compareFile(const QString &outFile, const QString &referenceFile)
         QVERIFY(f.open(QIODevice::ReadOnly));
         QString content = QString::fromUtf8(f.readAll());
         f.close();
-        content.replace(QRegExp(QStringLiteral("[\t ]+")), QStringLiteral(" "));
-        content.replace(QRegExp(QStringLiteral("[\t ]*\n+[\t ]*")), QStringLiteral("\n"));
-        content.replace(QRegExp(QStringLiteral("([\n\t ])\\1+")), QStringLiteral("\\1"));
-        content.replace(QRegExp(QStringLiteral(">\n+[\t ]*")), QStringLiteral(">"));
-        content.replace(QRegExp(QStringLiteral("[\t ]*\n+[\t ]*<")), QStringLiteral("<"));
+        content.replace(QRegularExpression(QStringLiteral("[\t ]+")), QStringLiteral(" "));
+        content.replace(QRegularExpression(QStringLiteral("[\t ]*\n+[\t ]*")), QStringLiteral("\n"));
+        content.replace(QRegularExpression(QStringLiteral("([\n\t ])\\1+")), QStringLiteral("\\1"));
+        content.replace(QRegularExpression(QStringLiteral(">\n+[\t ]*")), QStringLiteral(">"));
+        content.replace(QRegularExpression(QStringLiteral("[\t ]*\n+[\t ]*<")), QStringLiteral("<"));
         content.replace(QLatin1String("&nbsp;"), QLatin1String("NBSP_ENTITY_PLACEHOLDER")); // xmlling chokes on &nbsp;
         QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
         f.write(content.toUtf8());
