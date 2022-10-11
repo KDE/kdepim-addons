@@ -44,9 +44,9 @@ static void compareFile(const QString &outFile, const QString &referenceFile)
         QVERIFY(f.open(QIODevice::ReadOnly));
         QString content = QString::fromUtf8(f.readAll());
         f.close();
-        content.replace(QRegExp(QStringLiteral("\"file:[^\"]*[/(?:%2F)]([^\"/(?:%2F)]*)\"")), QStringLiteral("\"file:\\1\""));
+        content.replace(QRegularExpression(QStringLiteral("\"file:[^\"]*[/(?:%2F)]([^\"/(?:%2F)]*)\"")), QStringLiteral("\"file:\\1\""));
         content.replace(QLatin1String("NBSP_ENTITY_PLACEHOLDER"), QLatin1String("&nbsp;")); // undo above transformation for xmllint
-        content.replace(QRegExp(QStringLiteral("/bodypart/\\d+/")), QStringLiteral("/bodypart/0/"));
+        content.replace(QRegularExpression(QStringLiteral("/bodypart/\\d+/")), QStringLiteral("/bodypart/0/"));
         QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
         f.write(content.toUtf8());
         f.close();
