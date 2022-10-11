@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-04 00:45+0000\n"
-"PO-Revision-Date: 2022-02-21 16:54+0300\n"
+"PO-Revision-Date: 2022-10-10 16:41+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 22.04.3\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:21
 #, kde-format
@@ -303,23 +303,19 @@ msgid "Configure Open Url With Plugin"
 msgstr "Настройка открытия URL с помощью модуля"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
 msgstr "Добавить правило…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:56
-#, fuzzy, kde-format
-#| msgid "Remove Rule"
-#| msgid_plural "Remove Rules"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
-msgstr "Удалить правила"
+msgstr "Удалить правило"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:57
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
 msgstr "Изменить правило…"
