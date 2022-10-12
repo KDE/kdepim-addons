@@ -21,7 +21,12 @@ using namespace AdBlock;
 
 static QString toSecondLevelDomain(const QUrl &url)
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     const QString topLevelDomain = url.topLevelDomain();
+#else
+    qWarning() << "QT6! topLevelDomain not ported";
+    const QString topLevelDomain = url.toString();
+#endif
     const QString urlHost = url.host();
 
     if (topLevelDomain.isEmpty() || urlHost.isEmpty()) {
