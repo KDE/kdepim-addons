@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
 "PO-Revision-Date: 2015-02-07 19:09+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -678,19 +678,19 @@ msgstr ""
 "for fullt navn. Dette kan være nødvendig for å få vist navnet riktig i GMail "
 "eller Android."
 
-#: vcards/engine/vcardviewerdialog.cpp:22
+#: vcards/engine/vcardviewerdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "Importer vCard"
 
-#: vcards/engine/vcardviewerdialog.cpp:45
+#: vcards/engine/vcardviewerdialog.cpp:51
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "Vil du importere denne kontakten til adresseboka?"
 
-#: vcards/engine/vcardviewerdialog.cpp:55
+#: vcards/engine/vcardviewerdialog.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All..."
