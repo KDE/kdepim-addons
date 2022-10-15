@@ -19,6 +19,7 @@
 #include <QPushButton>
 #include <QStandardPaths>
 #include <QVBoxLayout>
+#include <kwidgetsaddons_version.h>
 
 class ViewerPluginExternalScriptItem : public QListWidgetItem
 {
@@ -102,12 +103,20 @@ void ViewerPluginExternalConfigureWidget::slotRemoveScript()
 {
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        const int answer = KMessageBox::warningTwoActions(this,
+#else
         const int answer = KMessageBox::warningYesNo(this,
-                                                     i18n("Do you want to remove this script \"%1\"?", item->text()),
-                                                     i18n("Remove External Script"),
-                                                     KStandardGuiItem::remove(),
-                                                     KStandardGuiItem::cancel());
+#endif
+                                                          i18n("Do you want to remove this script \"%1\"?", item->text()),
+                                                          i18n("Remove External Script"),
+                                                          KStandardGuiItem::remove(),
+                                                          KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+#else
         if (answer == KMessageBox::Yes) {
+#endif
             auto scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
             mFilesToRemove.append(scriptItem->scriptInfo().fileName());
             delete mListExternal->takeItem(mListExternal->currentRow());

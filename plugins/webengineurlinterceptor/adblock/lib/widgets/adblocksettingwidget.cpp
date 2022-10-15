@@ -41,6 +41,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 #include <QStandardPaths>
 #include <QWhatsThis>
 #include <adblocksubscription.h>
+#include <kwidgetsaddons_version.h>
 
 using namespace AdBlock;
 AdBlockSettingWidget::AdBlockSettingWidget(QWidget *parent)
@@ -190,12 +191,20 @@ void AdBlockSettingWidget::removeRule()
     if (select.isEmpty()) {
         return;
     }
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    const int answer = KMessageBox::warningTwoActions(this,
+#else
     const int answer = KMessageBox::warningYesNo(this,
-                                                 i18np("Do you want to remove this rule?", "Do you want to remove these rules?", select.count()),
-                                                 i18n("Remove"),
-                                                 KStandardGuiItem::remove(),
-                                                 KStandardGuiItem::cancel());
+#endif
+                                                      i18np("Do you want to remove this rule?", "Do you want to remove these rules?", select.count()),
+                                                      i18n("Remove"),
+                                                      KStandardGuiItem::remove(),
+                                                      KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (answer == KMessageBox::ButtonCode::SecondaryAction) {
+#else
     if (answer == KMessageBox::No) {
+#endif
         return;
     }
     for (QListWidgetItem *item : select) {
@@ -332,12 +341,20 @@ void AdBlockSettingWidget::slotRemoveSubscription()
 {
     QListWidgetItem *item = mUi->automaticFiltersListWidget->currentItem();
     if (item) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        const int answer = KMessageBox::questionTwoActions(this,
+#else
         const int answer = KMessageBox::questionYesNo(this,
-                                                      i18n("Do you want to delete list \"%1\"?", item->text()),
-                                                      i18n("Delete current list"),
-                                                      KStandardGuiItem::del(),
-                                                      KStandardGuiItem::cancel());
+#endif
+                                                           i18n("Do you want to delete list \"%1\"?", item->text()),
+                                                           i18n("Delete current list"),
+                                                           KStandardGuiItem::del(),
+                                                           KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+#else
         if (answer == KMessageBox::Yes) {
+#endif
             auto subItem = dynamic_cast<AdBlockListwidgetItem *>(item);
             if (subItem) {
                 if (AdblockManager::self()->removeSubscription(subItem->subscription())) {

@@ -19,6 +19,7 @@
 #include <KSharedConfig>
 
 #include <QPointer>
+#include <kwidgetsaddons_version.h>
 
 CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
@@ -31,12 +32,20 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
 {
     if (mSendPlainText) {
         if (params.isHtmlMail()) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            const int answer = KMessageBox::questionTwoActions(parentWidget(),
+#else
             const int answer = KMessageBox::questionYesNo(parentWidget(),
-                                                          i18n("Do you want to send the email as HTML?"),
-                                                          i18n("Send email as plain text"),
-                                                          KGuiItem(i18nc("@action:button", "Send As HTML")),
-                                                          KStandardGuiItem::cancel());
+#endif
+                                                               i18n("Do you want to send the email as HTML?"),
+                                                               i18n("Send email as plain text"),
+                                                               KGuiItem(i18nc("@action:button", "Send As HTML")),
+                                                               KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (answer == KMessageBox::ButtonCode::SecondaryAction) {
+#else
             if (answer == KMessageBox::No) {
+#endif
                 return false;
             }
         }
