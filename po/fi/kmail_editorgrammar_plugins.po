@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2022-10-16 00:47+0000\n"
 "PO-Revision-Date: 2021-10-11 14:32+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -140,12 +140,12 @@ msgstr "Katso: %1"
 msgid "Close"
 msgstr "Sulje"
 
-#: languagetool/plugin/languagetoolinterface.cpp:81
+#: languagetool/plugin/languagetoolinterface.cpp:82
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "Tarkista kielioppi (&LanguageTool)"
 
-#: languagetool/plugin/languagetoolinterface.cpp:95
+#: languagetool/plugin/languagetoolinterface.cpp:101
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -156,7 +156,7 @@ msgstr ""
 "Tekstisi lähetetään ulkoiselle sivulle (https://languagetool.org/).\n"
 "Haluatko jatkaa?"
 
-#: languagetool/plugin/languagetoolinterface.cpp:96
+#: languagetool/plugin/languagetoolinterface.cpp:102
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "Tarkista kielioppi LanguageToolilla"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2022-10-16 00:47+0000\n"
 "PO-Revision-Date: 2021-08-20 11:44-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -143,12 +143,12 @@ msgstr "Veja em: %1"
 msgid "Close"
 msgstr "Fechar"
 
-#: languagetool/plugin/languagetoolinterface.cpp:81
+#: languagetool/plugin/languagetoolinterface.cpp:82
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "Verifi&car gramática (LanguageTool)"
 
-#: languagetool/plugin/languagetoolinterface.cpp:95
+#: languagetool/plugin/languagetoolinterface.cpp:101
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -159,7 +159,7 @@ msgstr ""
 "O seu texto será enviado para um site externo (https://languagetool.org/).\n"
 "Deseja continuar?"
 
-#: languagetool/plugin/languagetoolinterface.cpp:96
+#: languagetool/plugin/languagetoolinterface.cpp:102
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "Verificar a gramática com LanguageTool"

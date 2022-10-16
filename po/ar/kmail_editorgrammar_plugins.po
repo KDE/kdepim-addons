@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2022-10-16 00:47+0000\n"
 "PO-Revision-Date: 2022-09-24 16:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -141,12 +141,12 @@ msgstr "انظر في: %1"
 msgid "Close"
 msgstr "أغلق"
 
-#: languagetool/plugin/languagetoolinterface.cpp:81
+#: languagetool/plugin/languagetoolinterface.cpp:82
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&تحقق من النحو (LanguageTool)"
 
-#: languagetool/plugin/languagetoolinterface.cpp:95
+#: languagetool/plugin/languagetoolinterface.cpp:101
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -157,7 +157,7 @@ msgstr ""
 "سيرسل كل ما تكتبه إلى موقع خارجي (https://languagetool.org/).\n"
 "أتريد الاستمرار؟"
 
-#: languagetool/plugin/languagetoolinterface.cpp:96
+#: languagetool/plugin/languagetoolinterface.cpp:102
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "تحقق من النحو بأداة LanguageTool"

@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-04 00:45+0000\n"
-"PO-Revision-Date: 2022-07-20 22:05+0300\n"
+"PO-Revision-Date: 2022-09-06 16:51+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language-Team: KDE\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,18 +27,17 @@ msgstr "Akonadi-tietokantatyökalu"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
 msgid "&Akonadi Vacuum..."
-msgstr ""
+msgstr "&Akonadin siivous…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:29
 #, kde-format
 msgid "Do you want to vacuum akonadi database?"
-msgstr ""
+msgstr "Haluatko siivota Akonadin tietokannan?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:29
-#, fuzzy, kde-format
-#| msgid "&Akonadi Fsck..."
+#, kde-format
 msgid "Akonadi Vacuum"
-msgstr "Akonadin fs&ck…"
+msgstr "Akonadin siivous"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:39
 #, kde-format
@@ -48,27 +47,24 @@ msgstr "Akonadin fs&ck…"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:42
 #, kde-format
 msgid "Do you want to fsck akonadi database?"
-msgstr ""
+msgstr "Haluatko fsck-tarkistaa Akonadin tietokannan?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "&Akonadi Fsck..."
+#, kde-format
 msgid "Akonadi Fsck"
-msgstr "Akonadin fs&ck…"
+msgstr "Akonadin fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:63
-#, fuzzy, kde-format
-#| msgid "&Akonadi Fsck..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Fsck"
-msgstr "Akonadin fs&ck…"
+msgstr "Akonadin fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:66
-#, fuzzy, kde-format
-#| msgid "&Akonadi Fsck..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Vacuum"
-msgstr "Akonadin fs&ck…"
+msgstr "Akonadin siivous"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:80
 #, kde-format
