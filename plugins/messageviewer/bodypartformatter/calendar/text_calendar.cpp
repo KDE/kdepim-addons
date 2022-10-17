@@ -26,6 +26,7 @@
 #include <MessageViewer/Viewer>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/MessagePart>
+#include <kwidgetsaddons_version.h>
 using namespace MessageViewer;
 
 #include <KCalendarCore/ICalFormat>
@@ -1260,20 +1261,28 @@ public:
         } else if (path == QLatin1String("record")) {
             incidence = stringToIncidence(iCal);
             QString summary;
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            int response = KMessageBox::questionTwoActionsCancel(nullptr,
+#else
             int response = KMessageBox::questionYesNoCancel(nullptr,
-                                                            i18nc("@info",
-                                                                  "The organizer is not expecting a reply to this invitation "
-                                                                  "but you can send them an email message if you desire.\n\n"
-                                                                  "Would you like to send the organizer a message regarding this invitation?\n"
-                                                                  "Press the [Cancel] button to cancel the recording operation."),
-                                                            i18nc("@title:window", "Send Email to Organizer"),
-                                                            KGuiItem(i18n("Do Not Send")),
-                                                            KGuiItem(i18n("Send EMail")));
+#endif
+                                                                 i18nc("@info",
+                                                                       "The organizer is not expecting a reply to this invitation "
+                                                                       "but you can send them an email message if you desire.\n\n"
+                                                                       "Would you like to send the organizer a message regarding this invitation?\n"
+                                                                       "Press the [Cancel] button to cancel the recording operation."),
+                                                                 i18nc("@title:window", "Send Email to Organizer"),
+                                                                 KGuiItem(i18n("Do Not Send")),
+                                                                 KGuiItem(i18n("Send EMail")));
 
             switch (response) {
             case KMessageBox::Cancel:
                 break;
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            case KMessageBox::ButtonCode::SecondaryAction: { // means "send email"
+#else
             case KMessageBox::No: { // means "send email"
+#endif
                 summary = incidence->summary();
                 if (!summary.isEmpty()) {
                     summary = i18n("Re: %1", summary);
@@ -1288,7 +1297,11 @@ public:
                 QDesktopServices::openUrl(url);
             }
             // fall through
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            case KMessageBox::ButtonCode::PrimaryAction: // means "do not send"
+#else
             case KMessageBox::Yes: // means "do not send"
+#endif
                 if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, QStringLiteral("reply"), part)) {
                     if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                         viewerInstance->deleteMessage();
