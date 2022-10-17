@@ -59,7 +59,7 @@ msgstr "Quins contactes voleu exportar?"
 #: vcards/vcardimportexportplugininterface.cpp:383
 #, kde-format
 msgid "You have not selected any contacts to export."
-msgstr "No heu seleccionat cap contacte que s'haja d'exportar."
+msgstr "No heu seleccionat cap contacte per a exportar."
 
 #: csv/csvimportexportplugininterface.cpp:191
 #: gmx/gmximportexportplugininterface.cpp:124
@@ -97,7 +97,7 @@ msgstr "Fitxer que s'ha d'importar:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select a csv file to import"
-msgstr "Selecciona un fitxer «csv» que s'importarà"
+msgstr "Selecciona un fitxer «csv» per a importar"
 
 #: csv/import/csvimportdialog.cpp:304
 #, kde-format
@@ -671,13 +671,13 @@ msgstr "Opcions d'exportació"
 #, kde-format
 msgctxt "@option:check"
 msgid "Display name as full name"
-msgstr "Nom que es mostrarà com a nom complet"
+msgstr "Nom que s'ha de mostrar com a nom complet"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export display name as full name"
-msgstr "Exporta el nom que es mostrarà com a nom complet"
+msgstr "Exporta el nom que s'ha de mostrar com a nom complet"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:73
 #, kde-format
@@ -758,7 +758,7 @@ msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;Tots els fitxers (*)"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
-msgstr "Seleccioneu la vCard que s'importarà"
+msgstr "Seleccioneu la vCard que s'ha d'importar"
 
 #: vcards/vcardimportexportplugininterface.cpp:121
 #, kde-format
