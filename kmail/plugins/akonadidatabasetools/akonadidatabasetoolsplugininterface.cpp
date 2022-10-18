@@ -12,6 +12,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QAction>
+#include <kwidgetsaddons_version.h>
 
 AkonadiDatabaseToolsPluginInterface::AkonadiDatabaseToolsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -26,7 +27,21 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
         auto action = new QAction(i18n("&Akonadi Vacuum..."), this);
         ac->addAction(QStringLiteral("akonadivacuum"), action);
         connect(action, &QAction::triggered, this, [this]() {
-            if (KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to vacuum akonadi database?"), i18n("Akonadi Vacuum")) == KMessageBox::Yes) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (KMessageBox::warningTwoActions(
+#else
+            if (KMessageBox::questionYesNo(
+#endif
+                    parentWidget(),
+                    i18n("Do you want to vacuum akonadi database?"),
+                    i18n("Akonadi Vacuum"),
+                    KGuiItem(i18n("Vacuum")),
+                    KStandardGuiItem::cancel())
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                == KMessageBox::ButtonCode::PrimaryAction) {
+#else
+                    == KMessageBox::Yes) {
+#endif
                 mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Vacuum;
                 slotActivated();
             }
@@ -39,7 +54,22 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
         auto action = new QAction(i18n("&Akonadi Fsck..."), this);
         ac->addAction(QStringLiteral("akonadifsck"), action);
         connect(action, &QAction::triggered, this, [this]() {
-            if (KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to fsck akonadi database?"), i18n("Akonadi Fsck")) == KMessageBox::Yes) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (KMessageBox::warningTwoActions(
+#else
+            if (KMessageBox::questionYesNo(
+#endif
+
+                    parentWidget(),
+                    i18n("Do you want to fsck akonadi database?"),
+                    i18n("Akonadi Fsck"),
+                    KGuiItem(i18n("Fsck")),
+                    KStandardGuiItem::cancel())
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                == KMessageBox::ButtonCode::PrimaryAction) {
+#else
+                    == KMessageBox::Yes) {
+#endif
                 mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Fsck;
                 slotActivated();
             }

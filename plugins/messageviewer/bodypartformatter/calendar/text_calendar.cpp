@@ -856,14 +856,30 @@ public:
                 return false;
             } else {
                 queryStr = i18n("%1?", path);
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                yesItem = KStandardGuiItem::ok();
+#else
                 yesItem = KStandardGuiItem::yes();
+#endif
             }
 
             if (noItem.text().isEmpty()) {
                 noItem = KStandardGuiItem::cancel();
             }
-            const int answer = KMessageBox::warningYesNo(nullptr, i18n("%1\n%2", warnStr, queryStr), QString(), yesItem, noItem);
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            const int answer = KMessageBox::warningTwoActions(nullptr,
+#else
+            const int answer = KMessageBox::warningYesNo(nullptr,
+#endif
+                                                              i18n("%1\n%2", warnStr, queryStr),
+                                                              QString(),
+                                                              yesItem,
+                                                              noItem);
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            if (answer == KMessageBox::ButtonCode::SecondaryAction) {
+#else
             if (answer == KMessageBox::No) {
+#endif
                 return true;
             }
         }

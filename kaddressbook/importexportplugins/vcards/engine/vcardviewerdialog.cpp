@@ -36,8 +36,8 @@ VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWi
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &VCardViewerDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &VCardViewerDialog::reject);
-    KGuiItem::assign(user1Button, KStandardGuiItem::no());
-    KGuiItem::assign(user2Button, KStandardGuiItem::yes());
+    KGuiItem::assign(user1Button, KStandardGuiItem::cancel());
+    KGuiItem::assign(user2Button, KStandardGuiItem::ok());
     mApplyButton = buttonBox->button(QDialogButtonBox::Apply);
     user1Button->setDefault(true);
     setModal(true);
