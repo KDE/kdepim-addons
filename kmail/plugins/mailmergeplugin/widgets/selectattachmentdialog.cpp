@@ -6,10 +6,10 @@
 
 #include "selectattachmentdialog.h"
 #include <KLocalizedString>
+#include <KUrlRequester>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <kurlrequester.h>
 using namespace MailMerge;
 
 SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
