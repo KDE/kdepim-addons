@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:47+0000\n"
-"PO-Revision-Date: 2022-06-21 17:43+0400\n"
+"PO-Revision-Date: 2022-10-18 12:24+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -109,13 +109,13 @@ msgstr "Birləşdirilmiş əlqələr saxlanılacaq ünvan kitabçasını seçin:
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "Hamısını seç"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
 #, kde-format
 msgid "Deselect All"
-msgstr ""
+msgstr "Seçimləri ləğv et"
 
 #: mergelib/searchduplicate/mergecontactselectinformationtabwidget.cpp:35
 #, kde-format
@@ -128,10 +128,9 @@ msgid "Contacts"
 msgstr "Əlaqələr"
 
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
-#, fuzzy, kde-format
-#| msgid "Duplicate contact %1"
+#, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
-msgstr "%1 əlaqəsinin təkrarını yaradın"
+msgstr "%1 əlaqəsinin təkrarını yarat (%2 element)"
 
 #: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
 #, kde-format
@@ -140,10 +139,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Birləşdiriləcək təkrarlanan əlaqələri axtarın və seçin"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search is impossible."
+#, kde-format
 msgid "Search in result..."
-msgstr "Axtarış mümkün deyil."
+msgstr "Nəticələrdə axtar..."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -159,12 +157,12 @@ msgstr "Birləşdirin"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
 #, kde-format
 msgid "Expand All"
-msgstr ""
+msgstr "Hamısını aç"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
 #, kde-format
 msgid "Collapse All"
-msgstr ""
+msgstr "Hamısını yığ"
 
 #: mergelib/widgets/mergecontacterrorlabel.cpp:18
 #, kde-format

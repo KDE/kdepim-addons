@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:45+0000\n"
+"POT-Creation-Date: 2022-10-19 00:46+0000\n"
 "PO-Revision-Date: 2011-06-29 23:11+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -363,7 +363,7 @@ msgstr "ਘਟਨਾ ਨੂੰ ਮੇਰੇ ਕੈਲੰਡਰ ਵਿੱਚੋ �
 msgid "%1?"
 msgstr "%1?"
 
-#: text_calendar.cpp:865
+#: text_calendar.cpp:874
 #, kde-format
 msgid ""
 "%1\n"
@@ -372,36 +372,36 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: text_calendar.cpp:891
+#: text_calendar.cpp:907
 #, fuzzy, kde-format
 #| msgid "Decline invitation"
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "ਸੱਦਾ ਨਾ-ਮਨਜ਼ੂਰ"
 
-#: text_calendar.cpp:902 text_calendar.cpp:1161
+#: text_calendar.cpp:918 text_calendar.cpp:1177
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
 msgstr ""
 
-#: text_calendar.cpp:935
+#: text_calendar.cpp:951
 #, kde-format
 msgid "Delegation to organizer is not possible."
 msgstr ""
 
-#: text_calendar.cpp:1069
+#: text_calendar.cpp:1085
 #, kde-format
 msgid "Save Invitation Attachment"
 msgstr ""
 
-#: text_calendar.cpp:1150
+#: text_calendar.cpp:1166
 #, fuzzy, kde-format
 #| msgid "Create a counter proposal..."
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "ਇੱਕ ਬਦਲਵਾਂ ਸੁਝਾਅ ਬਣਾਓ..."
 
-#: text_calendar.cpp:1192
+#: text_calendar.cpp:1208
 #, kde-format
 msgid ""
 "You have no writable calendar folders for invitations, so storing or saving "
@@ -409,14 +409,14 @@ msgid ""
 "Please create at least 1 writable events calendar and re-sync."
 msgstr ""
 
-#: text_calendar.cpp:1211
+#: text_calendar.cpp:1227
 #, kde-format
 msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
 "Unable to continue."
 msgstr ""
 
-#: text_calendar.cpp:1270
+#: text_calendar.cpp:1286
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -427,119 +427,119 @@ msgid ""
 "Press the [Cancel] button to cancel the recording operation."
 msgstr ""
 
-#: text_calendar.cpp:1274
+#: text_calendar.cpp:1290
 #, fuzzy, kde-format
 #| msgid "Could not save file to KOrganizer"
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
 msgstr "ਕੇ-ਪ੍ਰਬੰਧਕ ਲਈ ਫਾਇਲ ਸੰਭਾਲ ਨਹੀਂ ਜਾ ਸਕੀ"
 
-#: text_calendar.cpp:1275
+#: text_calendar.cpp:1291
 #, kde-format
 msgid "Do Not Send"
 msgstr "ਨਾ ਭੇਜੋ"
 
-#: text_calendar.cpp:1276
+#: text_calendar.cpp:1292
 #, kde-format
 msgid "Send EMail"
 msgstr "ਈਮੇਲ ਭੇਜੋ"
 
-#: text_calendar.cpp:1288
+#: text_calendar.cpp:1304
 #, kde-format
 msgid "Re: %1"
 msgstr "ਜਵਾਬ: %1"
 
-#: text_calendar.cpp:1354
+#: text_calendar.cpp:1370
 #, kde-format
 msgid "Open Attachment"
 msgstr "ਅਟੈਚਮੈਂਟ ਖੋਲ੍ਹੋ"
 
-#: text_calendar.cpp:1355
+#: text_calendar.cpp:1371
 #, kde-format
 msgid "Save Attachment As..."
 msgstr "ਅਟੈਚਮੈਂਟ ਵਜੋਂ ਸੰਭਾਲੋ..."
 
-#: text_calendar.cpp:1371
+#: text_calendar.cpp:1387
 #, kde-format
 msgid "Accept invitation"
 msgstr "ਸੱਦਾ ਮਨਜ਼ੂਰ"
 
-#: text_calendar.cpp:1373
+#: text_calendar.cpp:1389
 #, fuzzy, kde-format
 #| msgid "Accept incidence conditionally"
 msgid "Accept invitation conditionally"
 msgstr "ਵਾਕਿਆ ਸ਼ਰਤਾਂ ਨਾਲ ਸਵੀਕਾਰ"
 
-#: text_calendar.cpp:1375
+#: text_calendar.cpp:1391
 #, kde-format
 msgid "Accept counter proposal"
 msgstr ""
 
-#: text_calendar.cpp:1377
+#: text_calendar.cpp:1393
 #, kde-format
 msgid "Create a counter proposal..."
 msgstr "ਇੱਕ ਬਦਲਵਾਂ ਸੁਝਾਅ ਬਣਾਓ..."
 
-#: text_calendar.cpp:1379
+#: text_calendar.cpp:1395
 #, kde-format
 msgid "Throw mail away"
 msgstr "ਪੱਤਰ ਸੁੱਟ ਦਿਓ"
 
-#: text_calendar.cpp:1381
+#: text_calendar.cpp:1397
 #, kde-format
 msgid "Decline invitation"
 msgstr "ਸੱਦਾ ਨਾ-ਮਨਜ਼ੂਰ"
 
-#: text_calendar.cpp:1383
+#: text_calendar.cpp:1399
 #, kde-format
 msgid "Postpone"
 msgstr ""
 
-#: text_calendar.cpp:1385
+#: text_calendar.cpp:1401
 #, kde-format
 msgid "Decline counter proposal"
 msgstr ""
 
-#: text_calendar.cpp:1387
+#: text_calendar.cpp:1403
 #, kde-format
 msgid "Check my calendar..."
 msgstr "ਮੇਰਾ ਕੈਲੰਡਰ ਚੈੱਕ ਕਰੋ..."
 
-#: text_calendar.cpp:1389
+#: text_calendar.cpp:1405
 #, fuzzy, kde-format
 #| msgid "Enter incidence into my calendar"
 msgid "Record response into my calendar"
 msgstr "ਘਟਨਾ ਨੂੰ ਮੇਰੇ ਕੈਲੰਡਰ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰੋ"
 
-#: text_calendar.cpp:1391
+#: text_calendar.cpp:1407
 #, fuzzy, kde-format
 #| msgid "Remove incidence from my calendar"
 msgid "Record invitation into my calendar"
 msgstr "ਘਟਨਾ ਨੂੰ ਮੇਰੇ ਕੈਲੰਡਰ ਵਿੱਚੋ ਹਟਾਓ"
 
-#: text_calendar.cpp:1393
+#: text_calendar.cpp:1409
 #, fuzzy, kde-format
 #| msgid "Remove incidence from my calendar"
 msgid "Move this invitation to my trash folder"
 msgstr "ਘਟਨਾ ਨੂੰ ਮੇਰੇ ਕੈਲੰਡਰ ਵਿੱਚੋ ਹਟਾਓ"
 
-#: text_calendar.cpp:1395
+#: text_calendar.cpp:1411
 #, fuzzy, kde-format
 #| msgid "Decline incidence"
 msgid "Delegate invitation"
 msgstr "ਵਾਕਿਆ ਨਾ-ਮੰਨਜ਼ੂਰ"
 
-#: text_calendar.cpp:1397
+#: text_calendar.cpp:1413
 #, kde-format
 msgid "Forward invitation"
 msgstr "ਸੱਦਾ ਅੱਗੇ ਭੇਜੋ"
 
-#: text_calendar.cpp:1399
+#: text_calendar.cpp:1415
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "ਮੇਰੇ ਕੈਲੰਡਰ ਤੋਂ ਸੱਦਾ ਹਟਾਓ"
 
-#: text_calendar.cpp:1402
+#: text_calendar.cpp:1418
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "\"%1\" ਅਟੈਚਮੈਂਟ ਖੋਲ੍ਹੋ"
