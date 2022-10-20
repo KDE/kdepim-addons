@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2022-08-15 01:14+0100\n"
+"PO-Revision-Date: 2022-10-19 09:34+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -27,18 +27,17 @@ msgstr "Limpeza do &Akonadi..."
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:36
 #, kde-format
 msgid "Do you want to vacuum akonadi database?"
-msgstr "Deseja esvaziar a base de dados do Akonadi?"
+msgstr "Deseja limpar dados antigos da base de dados do Akonadi?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:37
 #, kde-format
 msgid "Akonadi Vacuum"
-msgstr "Esvaziamento do Akonadi"
+msgstr "Limpeza do Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:38
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgid "Vacuum"
-msgstr "Esvaziamento do Akonadi"
+msgstr "Limpeza"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
 #, kde-format
@@ -58,7 +57,7 @@ msgstr "Verificação do Akonadi"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:66
 #, kde-format
 msgid "Fsck"
-msgstr ""
+msgstr "Verificação"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:93
 #, kde-format

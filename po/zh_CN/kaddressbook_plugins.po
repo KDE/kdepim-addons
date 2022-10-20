@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:47+0000\n"
-"PO-Revision-Date: 2022-10-02 15:49\n"
+"PO-Revision-Date: 2022-10-19 13:22\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -109,7 +109,7 @@ msgstr "选择要保存合并的联系人的地址簿："
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "全选"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102

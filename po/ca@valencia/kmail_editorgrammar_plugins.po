@@ -113,7 +113,7 @@ msgstr "S'ha produït un error de Grammalecte"
 #: grammarcommon/grammarresulttextedit.cpp:40
 #, kde-format
 msgid "Any text to check."
-msgstr "Qualsevol text que s'haja de comprovar."
+msgstr "Qualsevol text a comprovar."
 
 #: grammarcommon/grammarresulttextedit.cpp:94
 #, kde-format

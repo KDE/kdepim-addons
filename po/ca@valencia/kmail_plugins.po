@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2022-08-10 18:30+0200\n"
+"PO-Revision-Date: 2022-10-19 09:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -46,10 +46,9 @@ msgid "Akonadi Vacuum"
 msgstr "Buidatge d'Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:38
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgid "Vacuum"
-msgstr "Buidatge d'Akonadi"
+msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
 #, kde-format
@@ -69,7 +68,7 @@ msgstr "Fsck d'Akonadi"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:66
 #, kde-format
 msgid "Fsck"
-msgstr ""
+msgstr "Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:93
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2022-08-10 08:29+0300\n"
+"PO-Revision-Date: 2022-10-19 14:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -42,10 +42,9 @@ msgid "Akonadi Vacuum"
 msgstr "Vacuum Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:38
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgid "Vacuum"
-msgstr "Vacuum Akonadi"
+msgstr "Очистити"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
 #, kde-format
@@ -65,7 +64,7 @@ msgstr "Fsck Akonadi"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:66
 #, kde-format
 msgid "Fsck"
-msgstr ""
+msgstr "Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:93
 #, kde-format
