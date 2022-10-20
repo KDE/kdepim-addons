@@ -12,7 +12,9 @@
 #include <KLocalizedString>
 #include <KPIMTextEdit/RichTextEditor>
 #include <PimCommon/KActionMenuChangeCase>
+
 #include <QAction>
+#include <QMenu>
 
 ShareTextPluginEditorInterface::ShareTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
