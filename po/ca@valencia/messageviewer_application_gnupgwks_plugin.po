@@ -160,7 +160,7 @@ msgstr "Oculta els detalls de la clau"
 
 #: templates/pgpkeymessagepart.html:49
 msgid "Open in Kleopatra"
-msgstr "Obri a Kleopatra"
+msgstr "Obri en Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
 msgid "Show key details ..."

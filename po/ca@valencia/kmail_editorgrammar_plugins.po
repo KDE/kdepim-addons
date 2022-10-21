@@ -78,7 +78,7 @@ msgstr "Camí de Python:"
 #: grammalecte/src/grammalecteconfigwidget.cpp:138
 #, kde-format
 msgid "Add full 'grammalecte-cli.py' path"
-msgstr "Afegiu tot el camí a «grammalecte-cli.py»"
+msgstr "Afegiu tot el camí cap a «grammalecte-cli.py»"
 
 #: grammalecte/src/grammalecteconfigwidget.cpp:139
 #, kde-format

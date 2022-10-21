@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-21 00:47+0000\n"
 "PO-Revision-Date: 2019-12-18 19:26+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -119,8 +119,8 @@ msgstr "Kiirteksti import"
 msgid "Export QuickText"
 msgstr "Kiirteksti eksport"
 
-#: quicktext/quicktextplugineditorinterface.cpp:38
-#: quicktext/quicktextplugineditorinterface.cpp:44
+#: quicktext/quicktextplugineditorinterface.cpp:40
+#: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr "Muutujad"
@@ -201,7 +201,7 @@ msgstr "Salvesta"
 msgid "General"
 msgstr "Üldine"
 
-#: sharetext/sharetextplugineditorinterface.cpp:28
+#: sharetext/sharetextplugineditorinterface.cpp:30
 #, kde-format
 msgid "Share Mail Text..."
 msgstr "Kirja teksti jagamine  ..."

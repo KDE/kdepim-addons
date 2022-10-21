@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2022-08-23 09:49+0200\n"
+"PO-Revision-Date: 2022-10-20 06:20+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -40,10 +40,9 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadi-ის მომტვერსასრუტება"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:38
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgid "Vacuum"
-msgstr "Akonadi-ის მომტვერსასრუტება"
+msgstr "მომტვერსასრუტება"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
 #, kde-format
@@ -63,7 +62,7 @@ msgstr "Akonadi-ის Fsck"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:66
 #, kde-format
 msgid "Fsck"
-msgstr ""
+msgstr "Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:93
 #, kde-format
@@ -355,7 +354,7 @@ msgstr "გადახედვა"
 #, kde-format
 msgctxt "@title:window"
 msgid "Mail Merge"
-msgstr ""
+msgstr "ელფოსტის შერწყმა"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
 #, kde-format
@@ -367,7 +366,7 @@ msgstr "ბილიკი:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Attachment"
-msgstr ""
+msgstr "დანართი"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
 #, kde-format
@@ -387,7 +386,7 @@ msgstr "CSV"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
 #, kde-format
 msgid "Attachment:"
-msgstr ""
+msgstr "მიმაგრება:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -407,4 +406,4 @@ msgstr "&შეცვლა..."
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
 #, kde-format
 msgid "Select attachment:"
-msgstr ""
+msgstr "აირჩიეთ მიმაგრებული ფაილი:"

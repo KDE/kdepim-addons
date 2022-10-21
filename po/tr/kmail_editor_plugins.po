@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-21 00:47+0000\n"
 "PO-Revision-Date: 2022-04-05 12:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -120,8 +120,8 @@ msgstr "Hızlı Metin İçe Aktar"
 msgid "Export QuickText"
 msgstr "Hızlı Metin Dışa Aktar"
 
-#: quicktext/quicktextplugineditorinterface.cpp:38
-#: quicktext/quicktextplugineditorinterface.cpp:44
+#: quicktext/quicktextplugineditorinterface.cpp:40
+#: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr "Değişkenler"
@@ -202,7 +202,7 @@ msgstr "Kaydet"
 msgid "General"
 msgstr "Genel"
 
-#: sharetext/sharetextplugineditorinterface.cpp:28
+#: sharetext/sharetextplugineditorinterface.cpp:30
 #, kde-format
 msgid "Share Mail Text..."
 msgstr "E-posta Metni Paylaş..."

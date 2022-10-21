@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:47+0000\n"
-"PO-Revision-Date: 2022-04-16 19:06+0300\n"
+"PO-Revision-Date: 2022-10-20 12:40+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,13 +21,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.1\n"
 "X-POOTLE-MTIME: 1413102213.000000\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Export CSV file..."
-msgstr "CSV Dosyasını Dışa Aktar..."
+msgstr "CSV Dosyası Olarak Dışa Aktar..."
 
 #: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
@@ -258,7 +258,7 @@ msgid ""
 "if the comma is the field delimiter, then any comma occurring with the data "
 "will be \"quoted\" by the character specified here."
 msgstr ""
-"Bu karakter veri içerisinde gerçekleştiğinde csv verinizin alan ayırıcısını "
+"Bu karakter veri içinde gerçekleştiğinde csv verinizin alan ayırıcısını "
 "\"alıntılaması\" için kullandığı karakteri seçin. Örneğin, virgül bir alan "
 "ayırıcı ise, veri içerisinde görülen her virgül için burada belirtilen "
 "karakter \"alıntılanacaktır\"."
@@ -353,7 +353,7 @@ msgstr "Dosyanın ilk satırını atla"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip first row of csv file when importing"
-msgstr "İçeri aktarım sırasında csv dosyasının ilk satırını atla"
+msgstr "İçe aktarım sırasında csv dosyasının ilk satırını atla"
 
 #: csv/import/csvimportdialog.cpp:432
 #, kde-format
@@ -363,7 +363,7 @@ msgid ""
 "data. In many cases, the first line of a csv file will be a comment line "
 "describing the order of the data fields included in the file."
 msgstr ""
-"Bu kutucuğu, csv dosyasını içeri aktarırken ilk satırın atlanmasını "
+"Bu kutucuğu, csv dosyasını içe aktarırken ilk satırın atlanmasını "
 "istiyorsanız seçin. Çoğunlukla csv dosyasının ilk satırı, veri alanlarının "
 "sıralamasını tanımlayan bir yorum içerir. "
 
@@ -470,7 +470,7 @@ msgstr "GMX adres defteri dosyası (*.gmxa)"
 #: gmx/gmximportexportplugininterface.cpp:40
 #, kde-format
 msgid "Import GMX file..."
-msgstr "İçeriye GMX dosyası aktar..."
+msgstr "GMX Dosyası İçe Aktar..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
 #, kde-format
@@ -480,7 +480,7 @@ msgstr "Kişileri GMX adres defteri dosyasından içe aktar."
 #: gmx/gmximportexportplugininterface.cpp:46
 #, kde-format
 msgid "Export GMX file..."
-msgstr "GMX dosyasını dışa aktar..."
+msgstr "GMX Dosyası Olarak Dışa Aktar..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
 #, kde-format
@@ -512,7 +512,7 @@ msgstr "Kişileri bir LDAP sunucusundan içe aktar."
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Import LDIF file..."
-msgstr "İçeriye LDIF Dosyası Aktar..."
+msgstr "LDIF Dosyası İçe Aktar..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
 #, kde-format
@@ -522,7 +522,7 @@ msgstr "Kişileri bir LDIF dosyasından içe aktar."
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Export LDIF file..."
-msgstr "LDIF dosyasını dışa aktar..."
+msgstr "LDIF Dosyası Olarak Dışa Aktar..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
 #, kde-format
@@ -665,7 +665,7 @@ msgstr "Dışa aktarım seçenekleri"
 #, kde-format
 msgctxt "@option:check"
 msgid "Display name as full name"
-msgstr "İsimleri tam olarak göster"
+msgstr "Adları tam olarak göster"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
@@ -689,7 +689,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
-msgstr "İçeriye vCard Aktar"
+msgstr "vCard İçe Aktar"
 
 #: vcards/engine/vcardviewerdialog.cpp:51
 #, kde-format
@@ -701,12 +701,12 @@ msgstr "Bu kişiyi adres defterinize aktarmak istiyor musunuz?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All..."
-msgstr "Tümünü İçeriye Aktar..."
+msgstr "Tümünü İçe Aktar..."
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
 msgid "Import vCard..."
-msgstr "İçeriye vCard Aktar..."
+msgstr "vCard İçe Aktar..."
 
 #: vcards/vcardimportexportplugininterface.cpp:46
 #, kde-format
@@ -721,12 +721,12 @@ msgstr "Kişileri vCard 4.0 dosyası olarak dışa aktar."
 #: vcards/vcardimportexportplugininterface.cpp:54
 #, kde-format
 msgid "Export vCard 4.0..."
-msgstr "vCard 4.0 olarak dışa aktar..."
+msgstr "vCard 4.0 Olarak Dışa Aktar..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
 msgid "Export vCard 3.0..."
-msgstr "vCard 3.0 olarak dışa aktar..."
+msgstr "vCard 3.0 Olarak Dışa Aktar..."
 
 #: vcards/vcardimportexportplugininterface.cpp:60
 #, kde-format
@@ -736,7 +736,7 @@ msgstr "Kişileri vCard 3.0 dosyası olarak dışa aktar."
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
 msgid "Export vCard 2.1..."
-msgstr "vCard 2.1 olarak dışarıya aktar..."
+msgstr "vCard 2.1 Olarak Dışa Aktar..."
 
 #: vcards/vcardimportexportplugininterface.cpp:66
 #, kde-format
@@ -752,13 +752,13 @@ msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;Tüm dosyalar (*)"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
-msgstr "İçeriye Aktarılacak vCard'ı Seçin"
+msgstr "İçe Aktarılacak vCard'ı Seçin"
 
 #: vcards/vcardimportexportplugininterface.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
-msgstr "vCard'ın İçeri Aktarımı Başarısız Oldu"
+msgstr "vCard İçe Aktarımı Başarısız"
 
 #: vcards/vcardimportexportplugininterface.cpp:135
 #, kde-kuit-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2022-08-11 06:56+0200\n"
+"PO-Revision-Date: 2022-10-20 07:14+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -41,10 +41,9 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadi Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:38
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgid "Vacuum"
-msgstr "Akonadi Vacuum"
+msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
 #, kde-format
@@ -64,7 +63,7 @@ msgstr "Akonadi Fsck"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:66
 #, kde-format
 msgid "Fsck"
-msgstr ""
+msgstr "Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:93
 #, kde-format

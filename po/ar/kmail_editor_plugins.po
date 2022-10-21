@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-21 00:47+0000\n"
 "PO-Revision-Date: 2022-06-06 18:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -121,8 +121,8 @@ msgstr "استورد نص سريع"
 msgid "Export QuickText"
 msgstr "صد نص سريع"
 
-#: quicktext/quicktextplugineditorinterface.cpp:38
-#: quicktext/quicktextplugineditorinterface.cpp:44
+#: quicktext/quicktextplugineditorinterface.cpp:40
+#: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr "المتغيّرات"
@@ -203,7 +203,7 @@ msgstr "احفظ"
 msgid "General"
 msgstr "عامّ"
 
-#: sharetext/sharetextplugineditorinterface.cpp:28
+#: sharetext/sharetextplugineditorinterface.cpp:30
 #, kde-format
 msgid "Share Mail Text..."
 msgstr "شارك نص البريد…"

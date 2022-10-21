@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-21 00:47+0000\n"
 "PO-Revision-Date: 2020-02-16 00:55+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -119,8 +119,8 @@ msgstr "빠른 텍스트 가져오기"
 msgid "Export QuickText"
 msgstr "빠른 텍스트 내보내기"
 
-#: quicktext/quicktextplugineditorinterface.cpp:38
-#: quicktext/quicktextplugineditorinterface.cpp:44
+#: quicktext/quicktextplugineditorinterface.cpp:40
+#: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr "변수"
@@ -201,7 +201,7 @@ msgstr "저장"
 msgid "General"
 msgstr "일반"
 
-#: sharetext/sharetextplugineditorinterface.cpp:28
+#: sharetext/sharetextplugineditorinterface.cpp:30
 #, kde-format
 msgid "Share Mail Text..."
 msgstr "메일 텍스트 공유..."

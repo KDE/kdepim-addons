@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-21 00:47+0000\n"
 "PO-Revision-Date: 2018-12-21 19:36+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -120,8 +120,8 @@ msgstr ""
 msgid "Export QuickText"
 msgstr ""
 
-#: quicktext/quicktextplugineditorinterface.cpp:38
-#: quicktext/quicktextplugineditorinterface.cpp:44
+#: quicktext/quicktextplugineditorinterface.cpp:40
+#: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr ""
@@ -198,7 +198,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: sharetext/sharetextplugineditorinterface.cpp:28
+#: sharetext/sharetextplugineditorinterface.cpp:30
 #, kde-format
 msgid "Share Mail Text..."
 msgstr "分享信件文字…"
