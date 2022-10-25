@@ -93,7 +93,7 @@ msgstr "Nom de la carpeta:"
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
 #, kde-format
 msgid "Slashes are not allowed in folder names."
-msgstr "No es permeten barres en els noms de carpetes."
+msgstr "No es permeten barres en els noms de carpeta."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
 #, kde-format
