@@ -155,7 +155,7 @@ msgstr "Afig un grup..."
 #: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
 msgid "Rename Group..."
-msgstr "Canvia el nom el grup..."
+msgstr "Canvia el nom del grup..."
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
