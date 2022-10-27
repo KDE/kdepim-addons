@@ -71,7 +71,7 @@ msgstr "Títol:"
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:40
 #, kde-format
 msgid "Image Link:"
-msgstr "Enllaç a la imatge:"
+msgstr "Enllaç cap a la imatge:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:41
 #, kde-format
