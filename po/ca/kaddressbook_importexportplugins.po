@@ -808,21 +808,3 @@ msgstr "Importa els contactes des d'un fitxer de contactes de Windows."
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr "Fitxer de contactes de Windows (*.contact)"
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Address Book"
-#~ msgstr "Selecció de la llibreta d'adreces"
-
-#~ msgid "Select the address book the imported contact(s) shall be saved in:"
-#~ msgstr ""
-#~ "Seleccioneu la llibreta d'adreces on es desarà/an el/s contacte/s "
-#~ "importat/s:"
-
-#~ msgctxt "@title:window"
-#~ msgid "Import Contacts"
-#~ msgstr "Importació dels contactes"
-
-#~ msgid "Importing one contact to %2"
-#~ msgid_plural "Importing %1 contacts to %2"
-#~ msgstr[0] "S'està important un contacte a %2"
-#~ msgstr[1] "S'estan important %1 contactes a %2"

@@ -6,7 +6,6 @@
 
 #pragma once
 
-#include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <MailCommon/SnippetsModel>
 #include <MessageComposer/PluginEditorInterface>
 #include <QTextCursor>

@@ -346,12 +346,3 @@ msgstr "Script extern"
 #, kde-format
 msgid "Configure"
 msgstr "Configura"
-
-#~ msgid "Todo:"
-#~ msgstr "Tasca pendent:"
-
-#~ msgid "Create Todo"
-#~ msgstr "Crea una tasca pendent"
-
-#~ msgid "Open &editor..."
-#~ msgstr "Obre l'&editor..."
