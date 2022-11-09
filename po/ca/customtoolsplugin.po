@@ -30,3 +30,8 @@ msgstr "Traductor"
 #, kde-format
 msgid "&Translator"
 msgstr "&Traductor"
+
+#~| msgid "Translator"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "Configura el traductor"
