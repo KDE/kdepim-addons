@@ -212,7 +212,8 @@ msgid ""
 "moved into the folder named <i>%1</i>.</p>"
 msgstr ""
 "<p>Els missatges classificats com a brossa es marquen com a llegits.<br /"
-">Els missatges brossa es mouen a la carpeta anomenada <i>%1</i>.</p>"
+">Els missatges brossa es mouen cap a dins de la carpeta anomenada <i>%1</i>."
+"</p>"
 
 #: common/antispamwizard.cpp:533
 #, kde-format
@@ -230,7 +231,8 @@ msgid ""
 "are moved into the folder named <i>%1</i>.</p>"
 msgstr ""
 "<p>Els missatges classificats com a brossa no es marquen com a llegits.<br /"
-">Els missatges brossa es mouen a la carpeta anomenada <i>%1</i>.</p>"
+">Els missatges brossa es mouen cap a dins de la carpeta anomenada <i>%1</i>."
+"</p>"
 
 #: common/antispamwizard.cpp:544
 #, kde-format
@@ -367,7 +369,7 @@ msgstr ""
 #: common/antispamwizard.cpp:1196
 #, kde-format
 msgid "Move detected viral messages to the selected folder"
-msgstr "Mou els missatges amb virus detectats a la carpeta seleccionada"
+msgstr "Mou els missatges amb virus detectats cap a la carpeta seleccionada"
 
 #: common/antispamwizard.cpp:1198
 #, kde-format
@@ -392,7 +394,7 @@ msgid ""
 "as moving them to the selected folder."
 msgstr ""
 "Marca els missatges que s'hagen classificat com a infectats per virus com a "
-"llegits a més a més de moure'ls a la carpeta seleccionada."
+"llegits a més a més de moure'ls cap a la carpeta seleccionada."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
 #, kde-format
