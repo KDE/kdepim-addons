@@ -27,8 +27,8 @@
 #include <grantlee/context.h>
 #include <grantlee/template.h>
 #else
-#include <KTextTemplate/context.h>
-#include <KTextTemplate/template.h>
+#include <KTextTemplate/Context>
+#include <KTextTemplate/Template>
 #endif
 
 #include <QGpgME/DecryptJob>

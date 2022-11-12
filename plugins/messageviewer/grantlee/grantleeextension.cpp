@@ -13,8 +13,8 @@
 #include <grantlee/exception.h>
 #include <grantlee/parser.h>
 #else
-#include <KTextTemplate/exception.h>
-#include <KTextTemplate/parser.h>
+#include <KTextTemplate/Exception>
+#include <KTextTemplate/Parser>
 #endif
 
 #include <QDateTime>

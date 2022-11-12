@@ -27,9 +27,9 @@
 #include <grantlee/metatype.h>
 #include <grantlee/template.h>
 #else
-#include <KTextTemplate/engine.h>
-#include <KTextTemplate/metatype.h>
-#include <KTextTemplate/template.h>
+#include <KTextTemplate/Engine>
+#include <KTextTemplate/MetaType>
+#include <KTextTemplate/Template>
 #endif
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <prison/Prison>

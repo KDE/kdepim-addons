@@ -10,8 +10,8 @@
 #include <grantlee/filter.h>
 #include <grantlee/taglibraryinterface.h>
 #else
-#include <KTextTemplate/filter.h>
-#include <KTextTemplate/taglibraryinterface.h>
+#include <KTextTemplate/Filter>
+#include <KTextTemplate/TagLibraryInterface>
 #endif
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
