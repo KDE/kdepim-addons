@@ -135,7 +135,7 @@ find_package(KPimPkPass ${KPIMPKPASS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPimItinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
 
 if (QT_MAJOR_VERSION STREQUAL "5")
-    find_package(Grantlee5 "5.2" CONFIG REQUIRED)
+    find_package(Grantlee5 "5.3" CONFIG REQUIRED)
     set(TEMPLATES_LIB Grantlee5::Templates)
 else()
     find_package(KF6TextTemplate ${KF5_MIN_VERSION} CONFIG REQUIRED)
