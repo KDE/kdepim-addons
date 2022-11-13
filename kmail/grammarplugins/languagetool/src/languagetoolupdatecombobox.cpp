@@ -37,6 +37,8 @@ void LanguageToolUpdateComboBox::firstRefreshListOfLanguages()
 {
     if (!mBListWasLoaded) {
         checkListOfLanguagesFromSpecificPath(LanguageToolManager::self()->languageToolLanguagesPath());
+    } else {
+        mLanguageToolCombobox->setLanguage(LanguageToolManager::self()->language());
     }
 }
 
