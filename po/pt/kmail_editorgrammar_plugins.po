@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-14 00:46+0000\n"
 "PO-Revision-Date: 2021-05-24 02:49+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -357,7 +357,7 @@ msgstr "Não foi possível verificar a gramática."
 msgid "Check"
 msgstr "Verificar"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#: languagetool/src/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid ""
 "An error occurred attempting to load the list of available languages:\n"
@@ -366,7 +366,7 @@ msgstr ""
 "Ocorreu um erro ao tentar obter a lista de línguas disponíveis:\n"
 "%1"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#: languagetool/src/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid "List of Languages"
 msgstr "Lista de Línguas"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-14 00:46+0000\n"
 "PO-Revision-Date: 2022-10-18 12:22+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -359,7 +359,7 @@ msgstr "Qrammatikanı yoxlamaq mümkün olmadı."
 msgid "Check"
 msgstr "Yoxla"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#: languagetool/src/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid ""
 "An error occurred attempting to load the list of available languages:\n"
@@ -368,7 +368,7 @@ msgstr ""
 "Əlçatan dillər siyahısını yükləməyə cəhd edərkən xəta baş verdi:\n"
 "%1"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#: languagetool/src/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid "List of Languages"
 msgstr "Dillər siyahısı"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorgrammar_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-14 00:46+0000\n"
 "PO-Revision-Date: 2019-11-05 19:56+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -364,7 +364,7 @@ msgstr "Nepodarilo sa skontrolovať pravopis."
 msgid "Check"
 msgstr "Znovu skontrolovať"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#: languagetool/src/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid ""
 "An error occurred attempting to load the list of available languages:\n"
@@ -373,7 +373,7 @@ msgstr ""
 "Pri pokuse o načítanie zoznamu dostupných jazykov sa vyskytla chyba:\n"
 "%1"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#: languagetool/src/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid "List of Languages"
 msgstr "Zoznam jazykov"

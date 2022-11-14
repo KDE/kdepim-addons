@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-14 00:46+0000\n"
 "PO-Revision-Date: 2021-03-30 15:32+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -355,14 +355,14 @@ msgstr ""
 msgid "Check"
 msgstr "Zkontrolovat"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#: languagetool/src/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid ""
 "An error occurred attempting to load the list of available languages:\n"
 "%1"
 msgstr ""
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:73
+#: languagetool/src/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid "List of Languages"
 msgstr ""
