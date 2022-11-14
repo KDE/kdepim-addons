@@ -8,7 +8,7 @@
 
 #include <PimCommon/CustomToolsViewInterface>
 class KActionCollection;
-namespace PimCommon
+namespace PimCommonTextTranslator
 {
 class TranslatorWidget;
 }
@@ -26,5 +26,5 @@ private:
     void slotActivateTranslator(bool state);
     void createAction(KActionCollection *ac);
     KToggleAction *mAction = nullptr;
-    PimCommon::TranslatorWidget *const mTranslatorWidget;
+    PimCommonTextTranslator::TranslatorWidget *const mTranslatorWidget;
 };

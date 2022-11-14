@@ -8,7 +8,7 @@
 
 #include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
-namespace PimCommon
+namespace PimCommonTextTranslator
 {
 class TranslatorWidget;
 }
@@ -27,9 +27,9 @@ public:
     Q_REQUIRED_RESULT ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
 private:
-    Q_REQUIRED_RESULT PimCommon::TranslatorWidget *widget();
+    Q_REQUIRED_RESULT PimCommonTextTranslator::TranslatorWidget *widget();
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
-    PimCommon::TranslatorWidget *mTranslatorWidget = nullptr;
+    PimCommonTextTranslator::TranslatorWidget *mTranslatorWidget = nullptr;
 };
 }

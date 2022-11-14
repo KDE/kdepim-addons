@@ -5,7 +5,7 @@
 */
 
 #include "translatorview.h"
-#include <PimCommon/TranslatorWidget>
+#include <PimCommonTextTranslator/TranslatorWidget>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -14,11 +14,11 @@
 
 TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
     : PimCommon::CustomToolsViewInterface(parent)
-    , mTranslatorWidget(new PimCommon::TranslatorWidget(this))
+    , mTranslatorWidget(new PimCommonTextTranslator::TranslatorWidget(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
-    connect(mTranslatorWidget, &PimCommon::TranslatorWidget::toolsWasClosed, this, &TranslatorView::toolsWasClosed);
+    connect(mTranslatorWidget, &PimCommonTextTranslator::TranslatorWidget::toolsWasClosed, this, &TranslatorView::toolsWasClosed);
 
     layout->addWidget(mTranslatorWidget);
     createAction(ac);

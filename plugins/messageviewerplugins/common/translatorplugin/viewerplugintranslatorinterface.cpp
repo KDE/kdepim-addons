@@ -5,7 +5,7 @@
 */
 
 #include "viewerplugintranslatorinterface.h"
-#include <PimCommon/TranslatorWidget>
+#include <PimCommonTextTranslator/TranslatorWidget>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -55,11 +55,11 @@ void ViewerPluginTranslatorInterface::createAction(KActionCollection *ac)
     }
 }
 
-PimCommon::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
+PimCommonTextTranslator::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
 {
     if (!mTranslatorWidget) {
         auto parentWidget = static_cast<QWidget *>(parent());
-        mTranslatorWidget = new PimCommon::TranslatorWidget(parentWidget);
+        mTranslatorWidget = new PimCommonTextTranslator::TranslatorWidget(parentWidget);
         mTranslatorWidget->setObjectName(QStringLiteral("translatorwidget"));
         parentWidget->layout()->addWidget(mTranslatorWidget);
         mTranslatorWidget->hide();
