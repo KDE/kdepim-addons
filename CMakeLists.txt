@@ -140,7 +140,7 @@ if (QT_MAJOR_VERSION STREQUAL "5")
     set(TEMPLATES_LIB Grantlee5::Templates)
 else()
     find_package(KF6TextTemplate ${KF5_MIN_VERSION} CONFIG REQUIRED)
-    set(TEMPLATES_LIB KF6TextTemplate::Templates)
+    set(TEMPLATES_LIB KF6::TextTemplate)
 endif()
 
 if(BUILD_TESTING)
