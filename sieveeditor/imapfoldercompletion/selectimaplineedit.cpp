@@ -7,7 +7,7 @@
 #include "selectimaplineedit.h"
 #include "selectimaplineeditcompletermodel.h"
 #include <QCompleter>
-//#define COMPLETION_LINE_EDIT 1
+// #define COMPLETION_LINE_EDIT 1
 SelectImapLineEdit::SelectImapLineEdit(QWidget *parent)
     : QLineEdit(parent)
 {
