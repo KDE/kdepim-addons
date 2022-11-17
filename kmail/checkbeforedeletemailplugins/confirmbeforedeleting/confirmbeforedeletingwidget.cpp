@@ -16,7 +16,6 @@
 #include <QPushButton>
 #include <QTreeWidget>
 #include <QVBoxLayout>
-#include <kwidgetsaddons_version.h>
 
 ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     : QWidget(parent)
@@ -135,21 +134,13 @@ void ConfirmBeforeDeletingWidget::slotRemoveRule()
 {
     auto items = mTreeWidget->selectedItems();
     if (!items.isEmpty()) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         const int answer = KMessageBox::questionTwoActions(this,
-#else
-        const int answer = KMessageBox::questionYesNo(this,
-#endif
                                                            i18np("Do you want to remove this rule?", "Do you want to remove these rules?", items.count()),
                                                            i18nc("@title", "Remove Rule"),
                                                            KStandardGuiItem::remove(),
                                                            KStandardGuiItem::cancel());
 
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-        if (answer == KMessageBox::Yes) {
-#endif
             while (!items.isEmpty()) {
                 delete items.takeFirst();
             }

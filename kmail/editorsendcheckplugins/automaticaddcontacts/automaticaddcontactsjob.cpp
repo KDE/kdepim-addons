@@ -21,7 +21,6 @@
 #include <KMessageBox>
 #include <PimCommon/PimUtil>
 #include <QPointer>
-#include <kwidgetsaddons_version.h>
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent)
@@ -94,21 +93,12 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 
     const int nbItemCollection(canCreateItemCollections.size());
     if (nbItemCollection == 0) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (KMessageBox::questionTwoActions(nullptr,
-#else
-        if (KMessageBox::questionYesNo(nullptr,
-
-#endif
                                             i18nc("@info", "You must create an address book before adding a contact. Do you want to create an address book?"),
                                             i18nc("@title:window", "No Address Book Available"),
                                             KGuiItem(i18nc("@action:button", "Create Address Book"), QStringLiteral("address-book-new")),
                                             KStandardGuiItem::cancel())
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-            == KMessageBox::Yes) {
-#endif
             QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(nullptr);
             dlg->setWindowTitle(i18nc("@title:window", "Add Address Book"));
             dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());

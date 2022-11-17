@@ -26,7 +26,6 @@
 #include <MessageViewer/Viewer>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/MessagePart>
-#include <kwidgetsaddons_version.h>
 using namespace MessageViewer;
 
 #include <KCalendarCore/ICalFormat>
@@ -856,30 +855,14 @@ public:
                 return false;
             } else {
                 queryStr = i18n("%1?", path);
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 yesItem = KStandardGuiItem::ok();
-#else
-                yesItem = KStandardGuiItem::yes();
-#endif
             }
 
             if (noItem.text().isEmpty()) {
                 noItem = KStandardGuiItem::cancel();
             }
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
-            const int answer = KMessageBox::warningTwoActions(nullptr,
-#else
-            const int answer = KMessageBox::warningYesNo(nullptr,
-#endif
-                                                              i18n("%1\n%2", warnStr, queryStr),
-                                                              QString(),
-                                                              yesItem,
-                                                              noItem);
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+            const int answer = KMessageBox::warningTwoActions(nullptr, i18n("%1\n%2", warnStr, queryStr), QString(), yesItem, noItem);
             if (answer == KMessageBox::ButtonCode::SecondaryAction) {
-#else
-            if (answer == KMessageBox::No) {
-#endif
                 return true;
             }
         }
@@ -1277,11 +1260,7 @@ public:
         } else if (path == QLatin1String("record")) {
             incidence = stringToIncidence(iCal);
             QString summary;
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             int response = KMessageBox::questionTwoActionsCancel(nullptr,
-#else
-            int response = KMessageBox::questionYesNoCancel(nullptr,
-#endif
                                                                  i18nc("@info",
                                                                        "The organizer is not expecting a reply to this invitation "
                                                                        "but you can send them an email message if you desire.\n\n"
@@ -1294,11 +1273,7 @@ public:
             switch (response) {
             case KMessageBox::Cancel:
                 break;
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             case KMessageBox::ButtonCode::SecondaryAction: { // means "send email"
-#else
-            case KMessageBox::No: { // means "send email"
-#endif
                 summary = incidence->summary();
                 if (!summary.isEmpty()) {
                     summary = i18n("Re: %1", summary);
@@ -1313,11 +1288,7 @@ public:
                 QDesktopServices::openUrl(url);
             }
             // fall through
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             case KMessageBox::ButtonCode::PrimaryAction: // means "do not send"
-#else
-            case KMessageBox::Yes: // means "do not send"
-#endif
                 if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, QStringLiteral("reply"), part)) {
                     if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                         viewerInstance->deleteMessage();

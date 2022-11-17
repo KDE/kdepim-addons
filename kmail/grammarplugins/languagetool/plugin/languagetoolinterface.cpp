@@ -17,7 +17,6 @@
 
 #include <QHBoxLayout>
 #include <QTextBlock>
-#include <kwidgetsaddons_version.h>
 
 LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
@@ -91,23 +90,14 @@ bool LanguageToolInterface::checkAgain()
 {
     if (richTextEditor()) {
         if (!LanguageToolManager::self()->useLocalInstance()) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
             if (KMessageBox::warningTwoActions(
-#else
-            if (KMessageBox::warningYesNo(
-
-#endif
                     parentWidget(),
                     i18n("You do not use local instance.\nYour text will send on a external web site (https://languagetool.org/).\nDo you want to continue?"),
                     i18n("Check Grammar with LanguageTool"),
                     KStandardGuiItem::cont(),
                     KStandardGuiItem::cancel(),
                     QStringLiteral("send_data_on_languagetool"))
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 == KMessageBox::ButtonCode::SecondaryAction) {
-#else
-                == KMessageBox::No) {
-#endif
                 return false;
             }
         }

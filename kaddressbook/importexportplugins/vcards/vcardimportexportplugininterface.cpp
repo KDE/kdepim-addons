@@ -25,7 +25,6 @@
 #include <gpgme++/context.h>
 #include <gpgme++/data.h>
 #include <gpgme++/key.h>
-#include <kwidgetsaddons_version.h>
 #include <qgpgme/dataprovider.h>
 #endif // QGPGME_FOUND
 
@@ -432,11 +431,7 @@ void VCardImportExportPluginInterface::exportVCard()
             break;
         }
     } else {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         const int answer = KMessageBox::questionTwoActionsCancel(parentWidget(),
-#else
-        const int answer = KMessageBox::questionYesNoCancel(parentWidget(),
-#endif
                                                                  i18nc("@info",
                                                                        "You have selected a list of contacts, "
                                                                        "shall they be exported to several files?"),
@@ -445,11 +440,7 @@ void VCardImportExportPluginInterface::exportVCard()
                                                                  KGuiItem(i18nc("@action:button", "Export to Several Files")));
 
         switch (answer) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         case KMessageBox::ButtonCode::SecondaryAction: {
-#else
-        case KMessageBox::No: {
-#endif
             const QUrl baseUrl = QFileDialog::getExistingDirectoryUrl();
             if (baseUrl.isEmpty()) {
                 return; // user canceled export
@@ -477,11 +468,7 @@ void VCardImportExportPluginInterface::exportVCard()
             }
             break;
         }
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         case KMessageBox::ButtonCode::PrimaryAction: {
-#else
-        case KMessageBox::Yes: {
-#endif
             QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
             url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.vcf")), QString(), nullptr, options);
             if (url.isEmpty()) {

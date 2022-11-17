@@ -15,7 +15,6 @@
 #include <QScrollArea>
 #include <QStackedWidget>
 #include <QVBoxLayout>
-#include <kwidgetsaddons_version.h>
 using namespace KABMergeContacts;
 
 MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea(QWidget *parent)
@@ -84,13 +83,8 @@ void MergeContactSelectInformationScrollArea::slotMergeContacts()
     }
     const bool result = mSelectInformationWidget->verifySelectedInfo();
     if (!result) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (KMessageBox::ButtonCode::SecondaryAction
             == KMessageBox::warningTwoActions(this,
-#else
-        if (KMessageBox::No
-            == KMessageBox::warningYesNo(this,
-#endif
                                               i18n("Some information was not selected. You can lose this information. Do you want to continue merging?"),
                                               i18n("Missing Selected Information"),
                                               KStandardGuiItem::cont(),

@@ -12,7 +12,6 @@
 #include <MailCommon/SnippetsModel>
 #include <QHBoxLayout>
 #include <QStackedWidget>
-#include <kwidgetsaddons_version.h>
 
 QuickTextWidget::QuickTextWidget(QWidget *parent)
     : QWidget(parent)
@@ -65,20 +64,12 @@ QuickTextWidget::~QuickTextWidget() = default;
 void QuickTextWidget::save()
 {
     if (mSnippetWidget->wasChanged()) {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         const int answer = KMessageBox::warningTwoActions(this,
-#else
-        const int answer = KMessageBox::warningYesNo(this,
-#endif
                                                           i18n("QuickText was changed. Do you want to save it?"),
                                                           i18n("Save"),
                                                           KStandardGuiItem::save(),
                                                           KStandardGuiItem::discard());
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-        if (answer == KMessageBox::Yes) {
-#endif
             switch (mMode) {
             case EditMode::AddSnippet:
                 saveAddSnippet();

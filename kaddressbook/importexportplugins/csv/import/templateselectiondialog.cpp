@@ -14,7 +14,6 @@
 #include <QIcon>
 #include <QStandardPaths>
 #include <QVBoxLayout>
-#include <kwidgetsaddons_version.h>
 
 #include <KConfigGroup>
 #include <QAbstractTableModel>
@@ -179,20 +178,12 @@ public:
 
             if (buttonRect.contains(mouseEvent->pos())) {
                 const QString templateName = index.data(Qt::DisplayRole).toString();
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 const int answer = KMessageBox::questionTwoActions(nullptr,
-#else
-                const int answer = KMessageBox::questionYesNo(nullptr,
-#endif
                                                                    i18nc("@label", "Do you really want to delete template '%1'?", templateName),
                                                                    QString(),
                                                                    KStandardGuiItem::del(),
                                                                    KStandardGuiItem::cancel());
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
                 if (answer == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-                if (answer == KMessageBox::Yes) {
-#endif
                     model->removeRows(index.row(), 1);
                     return true;
                 }
