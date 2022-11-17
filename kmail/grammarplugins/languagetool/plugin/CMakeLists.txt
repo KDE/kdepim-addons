@@ -24,5 +24,5 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_languagetoolplugin
-    KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::XmlGui kmaillanguagetool  grammarcommon
+    KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::XmlGui KF5::PimCommonTextGrammarCheck
     )

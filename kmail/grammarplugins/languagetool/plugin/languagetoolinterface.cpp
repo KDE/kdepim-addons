@@ -5,11 +5,12 @@
 */
 
 #include "languagetoolinterface.h"
-#include "languagetoolmanager.h"
 #include "languagetoolplugin_debug.h"
-#include "languagetoolresultwidget.h"
 #include <KMessageBox>
 #include <KPIMTextEdit/RichTextComposer>
+#include <PimCommonTextGrammarCheck/GrammarAction>
+#include <PimCommonTextGrammarCheck/LanguageToolManager>
+#include <PimCommonTextGrammarCheck/LanguageToolResultWidget>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -20,14 +21,14 @@
 
 LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
-    , mGrammarResultWidget(new LanguageToolResultWidget(this))
+    , mGrammarResultWidget(new PimCommonTextGrammarCheck::LanguageToolResultWidget(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
-    connect(mGrammarResultWidget, &LanguageToolResultWidget::replaceText, this, &LanguageToolInterface::slotReplaceText);
-    connect(mGrammarResultWidget, &LanguageToolResultWidget::checkAgain, this, &LanguageToolInterface::checkAgain);
-    connect(mGrammarResultWidget, &LanguageToolResultWidget::closeChecker, this, &LanguageToolInterface::closeChecker);
-    connect(mGrammarResultWidget, &LanguageToolResultWidget::configure, this, [this]() {
+    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::LanguageToolResultWidget::replaceText, this, &LanguageToolInterface::slotReplaceText);
+    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::LanguageToolResultWidget::checkAgain, this, &LanguageToolInterface::checkAgain);
+    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::LanguageToolResultWidget::closeChecker, this, &LanguageToolInterface::closeChecker);
+    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::LanguageToolResultWidget::configure, this, [this]() {
         Q_EMIT configure(parentWidget());
     });
 
@@ -37,7 +38,7 @@ LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *par
 
 LanguageToolInterface::~LanguageToolInterface() = default;
 
-void LanguageToolInterface::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
+void LanguageToolInterface::slotReplaceText(const PimCommonTextGrammarCheck::GrammarAction &act)
 {
     if (richTextEditor()) {
         QTextBlock block = richTextEditor()->document()->findBlockByNumber(act.blockId() - 1);
@@ -89,7 +90,7 @@ void LanguageToolInterface::createAction(KActionCollection *ac)
 bool LanguageToolInterface::checkAgain()
 {
     if (richTextEditor()) {
-        if (!LanguageToolManager::self()->useLocalInstance()) {
+        if (!PimCommonTextGrammarCheck::LanguageToolManager::self()->useLocalInstance()) {
             if (KMessageBox::warningTwoActions(
                     parentWidget(),
                     i18n("You do not use local instance.\nYour text will send on a external web site (https://languagetool.org/).\nDo you want to continue?"),

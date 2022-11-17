@@ -5,12 +5,12 @@
 */
 
 #include "languagetoolplugin.h"
-#include "languagetoolconfigdialog.h"
 #include "languagetoolinterface.h"
-#include "languagetoolmanager.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <PimCommon/CustomToolsWidgetng>
+#include <PimCommonTextGrammarCheck/LanguageToolConfigDialog>
+#include <PimCommonTextGrammarCheck/LanguageToolManager>
 
 K_PLUGIN_CLASS_WITH_JSON(LanguageToolPlugin, "kmail_languagetoolplugin.json")
 LanguageToolPlugin::LanguageToolPlugin(QObject *parent, const QList<QVariant> &)
@@ -43,9 +43,9 @@ bool LanguageToolPlugin::hasConfigureDialog() const
 
 void LanguageToolPlugin::showConfigureDialog(QWidget *parent)
 {
-    LanguageToolConfigDialog dlg(parent);
+    PimCommonTextGrammarCheck::LanguageToolConfigDialog dlg(parent);
     if (dlg.exec()) {
-        LanguageToolManager::self()->loadSettings();
+        PimCommonTextGrammarCheck::LanguageToolManager::self()->loadSettings();
     }
 }
 
