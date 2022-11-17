@@ -6,9 +6,9 @@
 
 #include "grammalecteinterface.h"
 #include "grammalecteplugin_debug.h"
-#include "grammalecteresultwidget.h"
-
 #include <KPIMTextEdit/RichTextComposer>
+#include <PimCommonTextGrammarCheck/GrammalecteResultWidget>
+#include <PimCommonTextGrammarCheck/GrammarAction>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -19,14 +19,14 @@
 
 GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
-    , mGrammarResultWidget(new GrammalecteResultWidget(this))
+    , mGrammarResultWidget(new PimCommonTextGrammarCheck::GrammalecteResultWidget(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
-    connect(mGrammarResultWidget, &GrammalecteResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
-    connect(mGrammarResultWidget, &GrammalecteResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
-    connect(mGrammarResultWidget, &GrammalecteResultWidget::closeChecker, this, &GrammalecteInterface::closeChecker);
-    connect(mGrammarResultWidget, &GrammalecteResultWidget::configure, this, [this]() {
+    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::GrammalecteResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
+    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::GrammalecteResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
+    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::GrammalecteResultWidget::closeChecker, this, &GrammalecteInterface::closeChecker);
+    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::GrammalecteResultWidget::configure, this, [this]() {
         Q_EMIT configure(parentWidget());
     });
 
@@ -36,7 +36,7 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
 
 GrammalecteInterface::~GrammalecteInterface() = default;
 
-void GrammalecteInterface::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
+void GrammalecteInterface::slotReplaceText(const PimCommonTextGrammarCheck::GrammarAction &act)
 {
     if (richTextEditor()) {
         QTextBlock block = richTextEditor()->document()->findBlockByNumber(act.blockId() - 1);

@@ -5,12 +5,12 @@
 */
 
 #include "grammalecteplugin.h"
-#include "grammalecteconfigdialog.h"
 #include "grammalecteinterface.h"
-#include "grammalectemanager.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <PimCommon/CustomToolsWidgetng>
+#include <PimCommonTextGrammarCheck/GrammalecteConfigDialog>
+#include <PimCommonTextGrammarCheck/GrammalecteManager>
 
 #include <QPointer>
 
@@ -44,9 +44,9 @@ bool GrammalectePlugin::hasConfigureDialog() const
 
 void GrammalectePlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<GrammalecteConfigDialog> dlg = new GrammalecteConfigDialog(parent);
+    QPointer<PimCommonTextGrammarCheck::GrammalecteConfigDialog> dlg = new PimCommonTextGrammarCheck::GrammalecteConfigDialog(parent);
     if (dlg->exec()) {
-        GrammalecteManager::self()->loadSettings();
+        PimCommonTextGrammarCheck::GrammalecteManager::self()->loadSettings();
     }
     delete dlg;
 }
