@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:46+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-09-18 10:59+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -28,126 +28,12 @@ msgstr "Preveri slovnico (Grammalecte)"
 msgid "Grammalecte Plugin"
 msgstr "Vtičnik Grammalecte"
 
-#: grammalecte/src/grammalecteconfigdialog.cpp:24
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Grammalecte"
-msgstr "Nastavi Grammalecte"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:34
-#, kde-format
-msgid "General"
-msgstr "Splošno"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:35
-#, kde-format
-msgid "Grammar Settings"
-msgstr "Nastavitve slovnice"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:60
-#, kde-format
-msgid ""
-"Impossible to get options. Please verify that you have grammalected "
-"installed."
-msgstr ""
-"Možnosti ni mogoče dobiti. Preverite, ali imate nameščen paket grammalected."
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:61
-#, kde-format
-msgid "Error during Extracting Options"
-msgstr "Napaka med ekstrahiranjem možnosti"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:110
-#, kde-format
-msgid "Press Button for Reloading Settings"
-msgstr "Pritisnite gumb za ponovno nalaganje nastavitev"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:117
-#, kde-format
-msgid "Reload Settings"
-msgstr "Ponovno naloži nastavitve"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:134
-#, kde-format
-msgid "Python Path:"
-msgstr "Pot za Python:"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:138
-#, kde-format
-msgid "Add full 'grammalecte-cli.py' path"
-msgstr "Dodaj polno pot 'grammalecte-cli.py'"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:139
-#, kde-format
-msgid "Grammalecte Path:"
-msgstr "Pot za Grammalecte:"
-
-#: grammalecte/src/grammalecteresultwidget.cpp:54
-#, kde-format
-msgid "Python path is missing."
-msgstr "Pot do Pythona manjka."
-
-#: grammalecte/src/grammalecteresultwidget.cpp:58
-#, kde-format
-msgid "Grammalecte path not found."
-msgstr "Poti za Grammalecte ni mogoče najti."
-
-#: grammalecte/src/grammalecteresultwidget.cpp:65
-#, kde-format
-msgid "Grammalecte program file not found."
-msgstr "Programa Grammalecte ni mogoče najti."
-
-#: grammalecte/src/grammalecteresultwidget.cpp:69
-#, kde-format
-msgid "Grammalecte cli file not found."
-msgstr "Datoteke cli za Grammalecte ni mogoče najti."
-
-#: grammalecte/src/grammalecteresultwidget.cpp:73
-#, kde-format
-msgid "Grammalecte error"
-msgstr "Napaka Grammalecte"
-
-#: grammarcommon/grammarresulttextedit.cpp:40
-#, kde-format
-msgid "Any text to check."
-msgstr "Kakršnokoli besedilo za preverjanje."
-
-#: grammarcommon/grammarresulttextedit.cpp:94
-#, kde-format
-msgid "Replacement"
-msgstr "Zamenjava"
-
-#: grammarcommon/grammarresulttextedit.cpp:103
-#, kde-format
-msgid "Online Grammar Information"
-msgstr "Informacije o spletni slovnici"
-
-#: grammarcommon/grammarresulttextedit.cpp:116
-#, kde-format
-msgid "Check Again"
-msgstr "Ponovno preveri"
-
-#: grammarcommon/grammarresulttextedit.cpp:119
-#, kde-format
-msgid "Configure..."
-msgstr "Nastavi..."
-
-#: grammarcommon/grammarresultutil.cpp:48
-#, kde-format
-msgid "See on: %1"
-msgstr "Poglejte na: %1"
-
-#: grammarcommon/grammarresultwidget.cpp:32
-#, kde-format
-msgid "Close"
-msgstr "Zapri"
-
 #: languagetool/plugin/languagetoolinterface.cpp:82
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "Preveri slovnico (LanguageTool)"
 
-#: languagetool/plugin/languagetoolinterface.cpp:101
+#: languagetool/plugin/languagetoolinterface.cpp:96
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -158,7 +44,7 @@ msgstr ""
 "Besedilo bo poslano na zunanje spletno mesto (https://languagetool.org/).\n"
 "Ali želite nadaljevati?"
 
-#: languagetool/plugin/languagetoolinterface.cpp:102
+#: languagetool/plugin/languagetoolinterface.cpp:97
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "Preveri slovnico z LanguageTool"
@@ -168,207 +54,198 @@ msgstr "Preveri slovnico z LanguageTool"
 msgid "LanguageTool Plugin"
 msgstr "Vtičnik za LanguageTool"
 
-#: languagetool/src/languagetoolcombobox.cpp:31
-#, kde-format
-msgid "English"
-msgstr "Angleški"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Grammalecte"
+#~ msgstr "Nastavi Grammalecte"
 
-#: languagetool/src/languagetoolcombobox.cpp:32
-#, kde-format
-msgid "Asturian"
-msgstr "Asturijski"
+#~ msgid "General"
+#~ msgstr "Splošno"
 
-#: languagetool/src/languagetoolcombobox.cpp:33
-#, kde-format
-msgid "Belarusian"
-msgstr "Beloruski"
+#~ msgid "Grammar Settings"
+#~ msgstr "Nastavitve slovnice"
 
-#: languagetool/src/languagetoolcombobox.cpp:34
-#, kde-format
-msgid "Breton"
-msgstr "Bretonski"
+#~ msgid ""
+#~ "Impossible to get options. Please verify that you have grammalected "
+#~ "installed."
+#~ msgstr ""
+#~ "Možnosti ni mogoče dobiti. Preverite, ali imate nameščen paket "
+#~ "grammalected."
 
-#: languagetool/src/languagetoolcombobox.cpp:35
-#, kde-format
-msgid "Catalan"
-msgstr "Katalonski"
+#~ msgid "Error during Extracting Options"
+#~ msgstr "Napaka med ekstrahiranjem možnosti"
 
-#: languagetool/src/languagetoolcombobox.cpp:36
-#, kde-format
-msgid "Chinese"
-msgstr "Kitajski"
+#~ msgid "Press Button for Reloading Settings"
+#~ msgstr "Pritisnite gumb za ponovno nalaganje nastavitev"
 
-#: languagetool/src/languagetoolcombobox.cpp:37
-#, kde-format
-msgid "Danish"
-msgstr "Danski"
+#~ msgid "Reload Settings"
+#~ msgstr "Ponovno naloži nastavitve"
 
-#: languagetool/src/languagetoolcombobox.cpp:38
-#, kde-format
-msgid "Dutch"
-msgstr "Nizozemski"
+#~ msgid "Python Path:"
+#~ msgstr "Pot za Python:"
 
-#: languagetool/src/languagetoolcombobox.cpp:39
-#, kde-format
-msgid "English (Australian)"
-msgstr "Angleški (Avstralski)"
+#~ msgid "Add full 'grammalecte-cli.py' path"
+#~ msgstr "Dodaj polno pot 'grammalecte-cli.py'"
 
-#: languagetool/src/languagetoolcombobox.cpp:40
-#, kde-format
-msgid "English (Canadian)"
-msgstr "Angleški (Kanadski)"
+#~ msgid "Grammalecte Path:"
+#~ msgstr "Pot za Grammalecte:"
 
-#: languagetool/src/languagetoolcombobox.cpp:41
-#, kde-format
-msgid "Esperanto"
-msgstr "Esperanto"
+#~ msgid "Python path is missing."
+#~ msgstr "Pot do Pythona manjka."
 
-#: languagetool/src/languagetoolcombobox.cpp:42
-#, kde-format
-msgid "French"
-msgstr "Francoski"
+#~ msgid "Grammalecte path not found."
+#~ msgstr "Poti za Grammalecte ni mogoče najti."
 
-#: languagetool/src/languagetoolcombobox.cpp:43
-#, kde-format
-msgid "Galician"
-msgstr "Galicijsko"
+#~ msgid "Grammalecte program file not found."
+#~ msgstr "Programa Grammalecte ni mogoče najti."
 
-#: languagetool/src/languagetoolcombobox.cpp:44
-#, kde-format
-msgid "German"
-msgstr "Nemško"
+#~ msgid "Grammalecte cli file not found."
+#~ msgstr "Datoteke cli za Grammalecte ni mogoče najti."
 
-#: languagetool/src/languagetoolcombobox.cpp:45
-#, kde-format
-msgid "Greek"
-msgstr "Grško"
+#~ msgid "Grammalecte error"
+#~ msgstr "Napaka Grammalecte"
 
-#: languagetool/src/languagetoolcombobox.cpp:46
-#, kde-format
-msgid "Italian"
-msgstr "Italijansko"
+#~ msgid "Any text to check."
+#~ msgstr "Kakršnokoli besedilo za preverjanje."
 
-#: languagetool/src/languagetoolcombobox.cpp:47
-#, kde-format
-msgid "Japanese"
-msgstr "Japonsko"
+#~ msgid "Replacement"
+#~ msgstr "Zamenjava"
 
-#: languagetool/src/languagetoolcombobox.cpp:48
-#, kde-format
-msgid "Khmer"
-msgstr "Kmersko"
+#~ msgid "Online Grammar Information"
+#~ msgstr "Informacije o spletni slovnici"
 
-#: languagetool/src/languagetoolcombobox.cpp:49
-#, kde-format
-msgid "Persian"
-msgstr "Perzijsko"
+#~ msgid "Check Again"
+#~ msgstr "Ponovno preveri"
 
-#: languagetool/src/languagetoolcombobox.cpp:50
-#, kde-format
-msgid "Polish"
-msgstr "Poljsko"
+#~ msgid "Configure..."
+#~ msgstr "Nastavi..."
 
-#: languagetool/src/languagetoolcombobox.cpp:51
-#, kde-format
-msgid "Portuguese"
-msgstr "Portugalsko"
+#~ msgid "See on: %1"
+#~ msgstr "Poglejte na: %1"
 
-#: languagetool/src/languagetoolcombobox.cpp:52
-#, kde-format
-msgid "Romanian"
-msgstr "Romunsko"
+#~ msgid "Close"
+#~ msgstr "Zapri"
 
-#: languagetool/src/languagetoolcombobox.cpp:53
-#, kde-format
-msgid "Russian"
-msgstr "Rusko"
+#~ msgid "English"
+#~ msgstr "Angleški"
 
-#: languagetool/src/languagetoolcombobox.cpp:54
-#, kde-format
-msgid "Slovak"
-msgstr "Slovaško"
+#~ msgid "Asturian"
+#~ msgstr "Asturijski"
 
-#: languagetool/src/languagetoolcombobox.cpp:55
-#, kde-format
-msgid "Slovenian"
-msgstr "Slovensko"
+#~ msgid "Belarusian"
+#~ msgstr "Beloruski"
 
-#: languagetool/src/languagetoolcombobox.cpp:56
-#, kde-format
-msgid "Spanish"
-msgstr "Špansko"
+#~ msgid "Breton"
+#~ msgstr "Bretonski"
 
-#: languagetool/src/languagetoolcombobox.cpp:57
-#, kde-format
-msgid "Swedish"
-msgstr "Švedsko"
+#~ msgid "Catalan"
+#~ msgstr "Katalonski"
 
-#: languagetool/src/languagetoolcombobox.cpp:58
-#, kde-format
-msgid "Tagalog"
-msgstr "Tagalog"
+#~ msgid "Chinese"
+#~ msgstr "Kitajski"
 
-#: languagetool/src/languagetoolcombobox.cpp:59
-#, kde-format
-msgid "Tamil"
-msgstr "Tamislko"
+#~ msgid "Danish"
+#~ msgstr "Danski"
 
-#: languagetool/src/languagetoolcombobox.cpp:60
-#, kde-format
-msgid "Ukrainian"
-msgstr "Ukrajinsko"
+#~ msgid "Dutch"
+#~ msgstr "Nizozemski"
 
-#: languagetool/src/languagetoolconfigdialog.cpp:25
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure LanguageTool"
-msgstr "Nastavi LanguageTool"
+#~ msgid "English (Australian)"
+#~ msgstr "Angleški (Avstralski)"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:24
-#, kde-format
-msgid "Use Local Instance"
-msgstr "Uporabi lokalni pojavek"
+#~ msgid "English (Canadian)"
+#~ msgstr "Angleški (Kanadski)"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:26
-#, kde-format
-msgid "Instance Path:"
-msgstr "Pot do pojavka:"
+#~ msgid "Esperanto"
+#~ msgstr "Esperanto"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:54
-#, kde-format
-msgid "Language:"
-msgstr "Jezik:"
+#~ msgid "French"
+#~ msgstr "Francoski"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:66
-#, kde-format
-msgid "Refresh"
-msgstr "Osveži"
+#~ msgid "Galician"
+#~ msgstr "Galicijsko"
 
-#: languagetool/src/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "An error was reported: %1"
-msgstr "Poročano je o napaki: %1"
+#~ msgid "German"
+#~ msgstr "Nemško"
 
-#: languagetool/src/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "Failed to check grammar."
-msgstr "Preverjanje slovnice ni uspelo."
+#~ msgid "Greek"
+#~ msgstr "Grško"
 
-#: languagetool/src/languagetoolresultwidget.cpp:76
-#, kde-format
-msgid "Check"
-msgstr "Preveri"
+#~ msgid "Italian"
+#~ msgstr "Italijansko"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid ""
-"An error occurred attempting to load the list of available languages:\n"
-"%1"
-msgstr ""
-"Pri poskusu nalaganja seznama jezikov na voljo je prišlo do napake:\n"
-"%1"
+#~ msgid "Japanese"
+#~ msgstr "Japonsko"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid "List of Languages"
-msgstr "Seznam jezikov"
+#~ msgid "Khmer"
+#~ msgstr "Kmersko"
+
+#~ msgid "Persian"
+#~ msgstr "Perzijsko"
+
+#~ msgid "Polish"
+#~ msgstr "Poljsko"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugalsko"
+
+#~ msgid "Romanian"
+#~ msgstr "Romunsko"
+
+#~ msgid "Russian"
+#~ msgstr "Rusko"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovaško"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slovensko"
+
+#~ msgid "Spanish"
+#~ msgstr "Špansko"
+
+#~ msgid "Swedish"
+#~ msgstr "Švedsko"
+
+#~ msgid "Tagalog"
+#~ msgstr "Tagalog"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamislko"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrajinsko"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure LanguageTool"
+#~ msgstr "Nastavi LanguageTool"
+
+#~ msgid "Use Local Instance"
+#~ msgstr "Uporabi lokalni pojavek"
+
+#~ msgid "Instance Path:"
+#~ msgstr "Pot do pojavka:"
+
+#~ msgid "Language:"
+#~ msgstr "Jezik:"
+
+#~ msgid "Refresh"
+#~ msgstr "Osveži"
+
+#~ msgid "An error was reported: %1"
+#~ msgstr "Poročano je o napaki: %1"
+
+#~ msgid "Failed to check grammar."
+#~ msgstr "Preverjanje slovnice ni uspelo."
+
+#~ msgid "Check"
+#~ msgstr "Preveri"
+
+#~ msgid ""
+#~ "An error occurred attempting to load the list of available languages:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Pri poskusu nalaganja seznama jezikov na voljo je prišlo do napake:\n"
+#~ "%1"
+
+#~ msgid "List of Languages"
+#~ msgstr "Seznam jezikov"

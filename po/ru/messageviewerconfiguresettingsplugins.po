@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-10-10 16:41+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -302,35 +302,35 @@ msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
 msgstr "Настройка открытия URL с помощью модуля"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:56
+#: openurlwith/openurlwithconfigurewidget.cpp:55
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
 msgstr "Добавить правило…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:57
+#: openurlwith/openurlwithconfigurewidget.cpp:56
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "Удалить правило"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:58
+#: openurlwith/openurlwithconfigurewidget.cpp:57
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
 msgstr "Изменить правило…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:151
+#: openurlwith/openurlwithconfigurewidget.cpp:150
 #, kde-format
 msgid "Rule already exists."
 msgstr "Правило уже существует."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:151
+#: openurlwith/openurlwithconfigurewidget.cpp:150
 #, kde-format
 msgid "Duplicate Rule"
 msgstr "Дубликат правила"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:196
+#: openurlwith/openurlwithconfigurewidget.cpp:191
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
@@ -339,23 +339,23 @@ msgstr[1] "Удалить эти правила?"
 msgstr[2] "Удалить эти правила?"
 msgstr[3] "Удалить это правило?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:197
+#: openurlwith/openurlwithconfigurewidget.cpp:192
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Удаление правила"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:217
+#: openurlwith/openurlwithconfigurewidget.cpp:208
 #, kde-format
 msgid "Add Rule..."
 msgstr "Добавить правило…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:219
+#: openurlwith/openurlwithconfigurewidget.cpp:210
 #, kde-format
 msgid "Edit Rule..."
 msgstr "Изменить правило…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:224
+#: openurlwith/openurlwithconfigurewidget.cpp:215
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2019-12-18 18:42+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -151,7 +151,7 @@ msgid "Select AddressBook:"
 msgstr "Aadressiraamat:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:45
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
 #, kde-format
 msgid "Merge"
 msgstr "Ühenda"
@@ -200,7 +200,7 @@ msgstr "Kohandamine"
 msgid "Automatic Merging"
 msgstr "Automaatne ühendamine"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:94
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
 #, kde-format
 msgid ""
 "Some information was not selected. You can lose this information. Do you "
@@ -209,7 +209,7 @@ msgstr ""
 "Osa teavet jäi valimata. See võib kaotsi minna. Kas tõesti ühendamisega "
 "jätkata?"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:95
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
 msgid "Missing Selected Information"
 msgstr "Osa teavet puudub"

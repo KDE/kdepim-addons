@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-09-18 05:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -151,7 +151,7 @@ msgid "Select AddressBook:"
 msgstr "აირჩიეთ მისამართების წიგნი:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:45
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
 #, kde-format
 msgid "Merge"
 msgstr "შერწყმა"
@@ -200,7 +200,7 @@ msgstr "მორგება"
 msgid "Automatic Merging"
 msgstr "ავტომატური შერწყმა"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:94
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
 #, kde-format
 msgid ""
 "Some information was not selected. You can lose this information. Do you "
@@ -209,7 +209,7 @@ msgstr ""
 "ზოგიერთი ინფორმაცია მონიშნული არაა. თქვენ შეიძლება დაკარგოთ ის. გნებავთ, "
 "გააგრძელოთ შერწყმა?"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:95
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
 msgid "Missing Selected Information"
 msgstr "აუცილებელი ინფორმაცია ნაპოვნი არაა"

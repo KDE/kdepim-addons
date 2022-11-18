@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2015-12-14 07:07-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -146,7 +146,7 @@ msgid "Select AddressBook:"
 msgstr ""
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:45
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
 #, kde-format
 msgid "Merge"
 msgstr ""
@@ -193,14 +193,14 @@ msgstr ""
 msgid "Automatic Merging"
 msgstr ""
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:94
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
 #, kde-format
 msgid ""
 "Some information was not selected. You can lose this information. Do you "
 "want to continue merging?"
 msgstr ""
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:95
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
 msgid "Missing Selected Information"
 msgstr ""

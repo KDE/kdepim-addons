@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-10-12 15:39+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -150,7 +150,7 @@ msgid "Select AddressBook:"
 msgstr "Selige adressario:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:45
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
 #, kde-format
 msgid "Merge"
 msgstr "Fusiona"
@@ -199,7 +199,7 @@ msgstr "Personalisa"
 msgid "Automatic Merging"
 msgstr "Fusionar Automatic"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:94
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
 #, kde-format
 msgid ""
 "Some information was not selected. You can lose this information. Do you "
@@ -208,7 +208,7 @@ msgstr ""
 "Alcun information non esseve selectionate. Tu poterea perder iste "
 "information. Tu vole continuar a fusionar?"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:95
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
 msgid "Missing Selected Information"
 msgstr "Information Selectionate Mancante"

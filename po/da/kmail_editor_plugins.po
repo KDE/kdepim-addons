@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-21 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2020-07-31 19:25+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -187,17 +187,17 @@ msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
 msgstr "Vil du virkelig fjerne gruppen \"%1\"?"
 
-#: quicktext/quicktextwidget.cpp:73
+#: quicktext/quicktextwidget.cpp:68
 #, kde-format
 msgid "QuickText was changed. Do you want to save it?"
 msgstr ""
 
-#: quicktext/quicktextwidget.cpp:74
+#: quicktext/quicktextwidget.cpp:69
 #, kde-format
 msgid "Save"
 msgstr "Gem"
 
-#: quicktext/quicktextwidget.cpp:120
+#: quicktext/quicktextwidget.cpp:111
 #, kde-format
 msgid "General"
 msgstr "Generelt"

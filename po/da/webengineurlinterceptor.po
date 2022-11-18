@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2020-07-31 19:21+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -209,7 +209,7 @@ msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr ""
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:54
+#: adblock/lib/widgets/adblocksettingwidget.cpp:53
 #, kde-format
 msgid ""
 "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
@@ -218,14 +218,14 @@ msgstr ""
 "<qt>Filterudtryk (f.eks. <tt>http://www.eksempel.dk/ad/*</tt>, <a href="
 "\"filterhelp\">mere information</a>):"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:70
+#: adblock/lib/widgets/adblocksettingwidget.cpp:69
 #, kde-format
 msgid " day"
 msgid_plural " days"
 msgstr[0] " dag"
 msgstr[1] " dage"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:143
+#: adblock/lib/widgets/adblocksettingwidget.cpp:142
 #, kde-format
 msgid ""
 "<qt><p>Enter an expression to filter. Filters can be defined as either:"
@@ -244,45 +244,45 @@ msgstr ""
 "hvidliste (tillad) matchende URL'er, hvilket har forrang over alle sortliste-"
 "filtre (blokering).<br><a href='%1'>%2</a></qt>"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:151
+#: adblock/lib/widgets/adblocksettingwidget.cpp:150
 #, kde-format
 msgid "More information"
 msgstr "Mere information"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:199
+#: adblock/lib/widgets/adblocksettingwidget.cpp:194
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Vil du fjerne denne regel?"
 msgstr[1] "Vil du fjerne disse regler?"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:200
+#: adblock/lib/widgets/adblocksettingwidget.cpp:195
 #, kde-format
 msgid "Remove"
 msgstr "Fjern"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:349
+#: adblock/lib/widgets/adblocksettingwidget.cpp:336
 #, kde-format
 msgid "Do you want to delete list \"%1\"?"
 msgstr "Vil du slette listen \"%1\"?"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:350
+#: adblock/lib/widgets/adblocksettingwidget.cpp:337
 #, kde-format
 msgid "Delete current list"
 msgstr "Slet aktuel liste"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:399
-#: adblock/lib/widgets/adblocksettingwidget.cpp:441
+#: adblock/lib/widgets/adblocksettingwidget.cpp:382
+#: adblock/lib/widgets/adblocksettingwidget.cpp:424
 #, kde-format
 msgid "All Files (*)"
 msgstr "Alle filer (*)"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:400
+#: adblock/lib/widgets/adblocksettingwidget.cpp:383
 #, kde-format
 msgid "Import Filters"
 msgstr "Importér filtre"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:451
+#: adblock/lib/widgets/adblocksettingwidget.cpp:434
 #, kde-format
 msgid "Export Filters"
 msgstr "Eksportér filtre"

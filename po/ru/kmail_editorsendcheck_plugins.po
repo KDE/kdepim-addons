@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-02-18 17:03+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -26,7 +26,7 @@ msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "Настройка модуля «Автоматическое добавление контактов»"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:97
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -36,19 +36,19 @@ msgstr ""
 "Перед добавлением контакта необходимо создать адресную книгу. Сделать это "
 "сейчас?"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:104
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Нет доступных адресных книг"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:105
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Создать адресную книгу"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:113
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
@@ -64,17 +64,17 @@ msgstr "Автоматическое добавление контактов"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "Адресная книга для сохранения контактов:"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:40
+#: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
 msgid "Do you want to send the email as HTML?"
 msgstr "Отправить это письмо с форматированием HTML?"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:41
+#: checkbeforesend/checkbeforesendinterface.cpp:36
 #, kde-format
 msgid "Send email as plain text"
 msgstr "Отправка письма в виде обычного текста"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:42
+#: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"

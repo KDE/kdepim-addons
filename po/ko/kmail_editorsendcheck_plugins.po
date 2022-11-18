@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2021-11-14 19:25+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23,7 +23,7 @@ msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "\"자동으로 연락처 추가\" 플러그인 설정"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:97
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -31,19 +31,19 @@ msgid ""
 "create an address book?"
 msgstr "연락처를 추가하려면 주소록을 만들어야 합니다. 주소록을 만드시겠습니까?"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:104
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "주소록을 사용할 수 없음"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:105
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "주소록 만들기"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:113
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
@@ -59,17 +59,17 @@ msgstr "자동으로 연락처 추가"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "연락처를 저장할 주소록 선택:"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:40
+#: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
 msgid "Do you want to send the email as HTML?"
 msgstr "HTML로 이메일을 보내시겠습니까?"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:41
+#: checkbeforesend/checkbeforesendinterface.cpp:36
 #, kde-format
 msgid "Send email as plain text"
 msgstr "일반 텍스트로 이메일 보내기"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:42
+#: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"

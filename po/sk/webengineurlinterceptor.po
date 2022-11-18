@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2016-09-28 20:38+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -211,7 +211,7 @@ msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Nastaviť plugin AdBlock"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:54
+#: adblock/lib/widgets/adblocksettingwidget.cpp:53
 #, kde-format
 msgid ""
 "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
@@ -220,7 +220,7 @@ msgstr ""
 "<qt>Výraz filtra (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
 "\"filterhelp\">viac informácií</a>):"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:70
+#: adblock/lib/widgets/adblocksettingwidget.cpp:69
 #, kde-format
 msgid " day"
 msgid_plural " days"
@@ -228,7 +228,7 @@ msgstr[0] " deň"
 msgstr[1] " dni"
 msgstr[2] " dní"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:143
+#: adblock/lib/widgets/adblocksettingwidget.cpp:142
 #, kde-format
 msgid ""
 "<qt><p>Enter an expression to filter. Filters can be defined as either:"
@@ -247,12 +247,12 @@ msgstr ""
 "URL, ktorá má prioritu pred blacklistom (blokovacím filtrom).<br><a "
 "href='%1'>%2</a></qt>"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:151
+#: adblock/lib/widgets/adblocksettingwidget.cpp:150
 #, kde-format
 msgid "More information"
 msgstr "Viac informácií"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:199
+#: adblock/lib/widgets/adblocksettingwidget.cpp:194
 #, fuzzy, kde-format
 #| msgid "Do you want to delete list \"%1\"?"
 msgid "Do you want to remove this rule?"
@@ -261,34 +261,34 @@ msgstr[0] "Chcete vymazať zoznam \"%1\"?"
 msgstr[1] "Chcete vymazať zoznam \"%1\"?"
 msgstr[2] "Chcete vymazať zoznam \"%1\"?"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:200
+#: adblock/lib/widgets/adblocksettingwidget.cpp:195
 #, fuzzy, kde-format
 #| msgid "Remove filter"
 msgid "Remove"
 msgstr "Odstrániť filter"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:349
+#: adblock/lib/widgets/adblocksettingwidget.cpp:336
 #, kde-format
 msgid "Do you want to delete list \"%1\"?"
 msgstr "Chcete vymazať zoznam \"%1\"?"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:350
+#: adblock/lib/widgets/adblocksettingwidget.cpp:337
 #, kde-format
 msgid "Delete current list"
 msgstr "Vymazať aktuálny zoznam"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:399
-#: adblock/lib/widgets/adblocksettingwidget.cpp:441
+#: adblock/lib/widgets/adblocksettingwidget.cpp:382
+#: adblock/lib/widgets/adblocksettingwidget.cpp:424
 #, kde-format
 msgid "All Files (*)"
 msgstr "Všetky súbory (*)"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:400
+#: adblock/lib/widgets/adblocksettingwidget.cpp:383
 #, kde-format
 msgid "Import Filters"
 msgstr "Importovať filtre"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:451
+#: adblock/lib/widgets/adblocksettingwidget.cpp:434
 #, kde-format
 msgid "Export Filters"
 msgstr "Exportovať filtre"

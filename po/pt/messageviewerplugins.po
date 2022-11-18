@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-03-25 09:57+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -231,32 +231,32 @@ msgctxt "@title:window"
 msgid "Configure \"External Script\" Plugin"
 msgstr "Configurar o 'Plugin' de \"Programa Externo\""
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
 #, kde-format
 msgid "Add Script..."
 msgstr "Adicionar um Programa..."
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
 msgid "Remove Script"
 msgstr "Remover o Programa"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:62
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, kde-format
 msgid "Modify Script..."
 msgstr "Modificar o Programa..."
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:68
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
 msgid "External Script:"
 msgstr "Programa Externo:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:111
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
 #, kde-format
 msgid "Do you want to remove this script \"%1\"?"
 msgstr "Deseja remover este programa \"%1\"?"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:112
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
 #, kde-format
 msgid "Remove External Script"
 msgstr "Remover o Programa Externo"

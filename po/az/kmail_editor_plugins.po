@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-21 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-06-21 17:59+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -186,17 +186,17 @@ msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
 msgstr "\"%1\" qrupunu doğrudan silmək istəyirsiniz?"
 
-#: quicktext/quicktextwidget.cpp:73
+#: quicktext/quicktextwidget.cpp:68
 #, kde-format
 msgid "QuickText was changed. Do you want to save it?"
 msgstr "Sürətli mətn dəyişdirildi. Onu doğrudan saxlamaq istəyirsiniz?"
 
-#: quicktext/quicktextwidget.cpp:74
+#: quicktext/quicktextwidget.cpp:69
 #, kde-format
 msgid "Save"
 msgstr "Saxlayın"
 
-#: quicktext/quicktextwidget.cpp:120
+#: quicktext/quicktextwidget.cpp:111
 #, kde-format
 msgid "General"
 msgstr "Ümumi"

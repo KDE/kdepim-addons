@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2005-03-16 01:39-0800\n"
 "Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
 "Language-Team:  <ta@li.org>\n"
@@ -50,7 +50,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:152
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:130
-#: vcards/vcardimportexportplugininterface.cpp:371
+#: vcards/vcardimportexportplugininterface.cpp:370
 #, fuzzy, kde-format
 #| msgid "Which contacts do you want to export?"
 msgid "Which contact do you want to export?"
@@ -59,7 +59,7 @@ msgstr "எந்த தொடர்புகளை ஏற்றுமதி ச
 #: csv/csvimportexportplugininterface.cpp:162
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:140
-#: vcards/vcardimportexportplugininterface.cpp:383
+#: vcards/vcardimportexportplugininterface.cpp:382
 #, fuzzy, kde-format
 #| msgid ""
 #| "Copy the currently selected contact(s) to system clipboard in vCard "
@@ -470,21 +470,21 @@ msgstr "உள்ளிடும் கோப்பினை திறக்க 
 msgid "Device is not open"
 msgstr ""
 
-#: csv/import/templateselectiondialog.cpp:187
+#: csv/import/templateselectiondialog.cpp:182
 #, fuzzy, kde-format
 #| msgid "<qt>Do you really want to remove the address book <b>%1</b>?</qt>"
 msgctxt "@label"
 msgid "Do you really want to delete template '%1'?"
 msgstr "<qt><b>%1</b>முகவரிப் புத்தகத்தை நிஜமாகவே நீக்க விரும்புகிறீர்களா?</qt>"
 
-#: csv/import/templateselectiondialog.cpp:212
+#: csv/import/templateselectiondialog.cpp:203
 #, fuzzy, kde-format
 #| msgid "Template Selection"
 msgctxt "@title:window"
 msgid "Template Selection"
 msgstr "மாதிரி உரு தேர்ந்தெடுப்பு"
 
-#: csv/import/templateselectiondialog.cpp:215
+#: csv/import/templateselectiondialog.cpp:206
 #, fuzzy, kde-format
 #| msgid "Please select a template, that matches the CSV file:"
 msgctxt "@info"
@@ -740,78 +740,78 @@ msgctxt "@action:button"
 msgid "Import All..."
 msgstr "அனைத்தையும் இறக்குமதி செய்..."
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard..."
 msgstr "வி கார்டு இறக்குமதி செய்..."
 
-#: vcards/vcardimportexportplugininterface.cpp:46
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
 #| msgid "Import Contacts?"
 msgid "Import contacts from a vCard file."
 msgstr "தொடர்புகளை உள்வாங்கு"
 
-#: vcards/vcardimportexportplugininterface.cpp:53
+#: vcards/vcardimportexportplugininterface.cpp:52
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
 msgid "Export contacts to a vCard 4.0 file."
 msgstr "ஏற்றுமதி வி கார்டு 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:54
+#: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
 msgid "Export vCard 4.0..."
 msgstr "ஏற்றுமதி வி கார்டு 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:59
+#: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0..."
 msgstr "ஏற்றுமதி வி கார்டு 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:60
+#: vcards/vcardimportexportplugininterface.cpp:59
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
 msgid "Export contacts to a vCard 3.0 file."
 msgstr "ஏற்றுமதி வி கார்டு 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:65
+#: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1..."
 msgstr "ஏற்றுமதி வி கார்டு 2.1..."
 
-#: vcards/vcardimportexportplugininterface.cpp:66
+#: vcards/vcardimportexportplugininterface.cpp:65
 #, fuzzy, kde-format
 #| msgid "Export vCard 2.1..."
 msgid "Export contacts to a vCard 2.1 file."
 msgstr "ஏற்றுமதி வி கார்டு 2.1..."
 
-#: vcards/vcardimportexportplugininterface.cpp:114
+#: vcards/vcardimportexportplugininterface.cpp:113
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:115
+#: vcards/vcardimportexportplugininterface.cpp:114
 #, fuzzy, kde-format
 #| msgid "Select vCard to Import"
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "வி கார்டை இறக்க தேர்ந்தெடு"
 
-#: vcards/vcardimportexportplugininterface.cpp:121
+#: vcards/vcardimportexportplugininterface.cpp:120
 #, fuzzy, kde-format
 #| msgid "vCard Import Failed"
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "வி கார்டை இறக்க இயலவில்லை"
 
-#: vcards/vcardimportexportplugininterface.cpp:135
+#: vcards/vcardimportexportplugininterface.cpp:134
 #, fuzzy, kde-kuit-format
 #| msgid "<qt>Unable to access vCard: %1</qt>"
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<qt>விகார்டை அணுக முடியவில்லை<b>%1</b>.</qt>"
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:436
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have selected a list of contacts, shall they be exported to several "
@@ -824,13 +824,13 @@ msgstr ""
 "நீங்கள் இணைப்பு பட்டியலை தேர்வு செய்துள்ளீர்கள், அவற்றை பல கோப்புகளுக்கும் இறக்குமதி "
 "செய்யப்படலாம?"
 
-#: vcards/vcardimportexportplugininterface.cpp:444
+#: vcards/vcardimportexportplugininterface.cpp:439
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "தொலைபேசிக்கு ஏற்ற இயலவில்லை."
 
-#: vcards/vcardimportexportplugininterface.cpp:445
+#: vcards/vcardimportexportplugininterface.cpp:440
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

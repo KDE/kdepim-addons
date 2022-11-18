@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:46+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-11-06 01:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,125 +28,12 @@ msgstr "检查语法 (Grammalecte, &C)"
 msgid "Grammalecte Plugin"
 msgstr "Grammalecte 插件"
 
-#: grammalecte/src/grammalecteconfigdialog.cpp:24
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Grammalecte"
-msgstr "配置 Grammalecte"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:34
-#, kde-format
-msgid "General"
-msgstr "常规"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:35
-#, kde-format
-msgid "Grammar Settings"
-msgstr "语法设置"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:60
-#, kde-format
-msgid ""
-"Impossible to get options. Please verify that you have grammalected "
-"installed."
-msgstr "无法获取选项。请确认您已经安装了 grammalected。"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:61
-#, kde-format
-msgid "Error during Extracting Options"
-msgstr "提取选项时出错"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:110
-#, kde-format
-msgid "Press Button for Reloading Settings"
-msgstr "可按按钮来重新加载设置"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:117
-#, kde-format
-msgid "Reload Settings"
-msgstr "重新加载设置"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:134
-#, kde-format
-msgid "Python Path:"
-msgstr "Python 路径："
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:138
-#, kde-format
-msgid "Add full 'grammalecte-cli.py' path"
-msgstr "添加完整的“grammalecte-cli.py”的路径"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:139
-#, kde-format
-msgid "Grammalecte Path:"
-msgstr "Grammalecte 路径："
-
-#: grammalecte/src/grammalecteresultwidget.cpp:54
-#, kde-format
-msgid "Python path is missing."
-msgstr "Python 的路径不能为空。"
-
-#: grammalecte/src/grammalecteresultwidget.cpp:58
-#, kde-format
-msgid "Grammalecte path not found."
-msgstr "Grammalecte 的路径不能为空。"
-
-#: grammalecte/src/grammalecteresultwidget.cpp:65
-#, kde-format
-msgid "Grammalecte program file not found."
-msgstr "无法找到 Grammalecte 程序的文件。"
-
-#: grammalecte/src/grammalecteresultwidget.cpp:69
-#, kde-format
-msgid "Grammalecte cli file not found."
-msgstr "无法找到 Grammalecte 命令行的文件。"
-
-#: grammalecte/src/grammalecteresultwidget.cpp:73
-#, kde-format
-msgid "Grammalecte error"
-msgstr "Grammalecte 出错"
-
-#: grammarcommon/grammarresulttextedit.cpp:40
-#, kde-format
-msgid "Any text to check."
-msgstr "任何要检查的文本。"
-
-#: grammarcommon/grammarresulttextedit.cpp:94
-#, kde-format
-msgid "Replacement"
-msgstr "替换"
-
-#: grammarcommon/grammarresulttextedit.cpp:103
-#, kde-format
-msgid "Online Grammar Information"
-msgstr "在线语法信息"
-
-#: grammarcommon/grammarresulttextedit.cpp:116
-#, kde-format
-msgid "Check Again"
-msgstr "再次检查"
-
-#: grammarcommon/grammarresulttextedit.cpp:119
-#, kde-format
-msgid "Configure..."
-msgstr "配置..."
-
-#: grammarcommon/grammarresultutil.cpp:48
-#, kde-format
-msgid "See on: %1"
-msgstr "参见：%1"
-
-#: grammarcommon/grammarresultwidget.cpp:32
-#, kde-format
-msgid "Close"
-msgstr "关闭"
-
 #: languagetool/plugin/languagetoolinterface.cpp:82
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "检查语法 (LanguageTool, &C)"
 
-#: languagetool/plugin/languagetoolinterface.cpp:101
+#: languagetool/plugin/languagetoolinterface.cpp:96
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -157,7 +44,7 @@ msgstr ""
 "您的文本将发送到外部网站 (https://languagetool.org/)。\n"
 "您想要继续吗？"
 
-#: languagetool/plugin/languagetoolinterface.cpp:102
+#: languagetool/plugin/languagetoolinterface.cpp:97
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "使用 LanguageTool 检查语法"
@@ -167,207 +54,193 @@ msgstr "使用 LanguageTool 检查语法"
 msgid "LanguageTool Plugin"
 msgstr "LanguageTool 插件"
 
-#: languagetool/src/languagetoolcombobox.cpp:31
-#, kde-format
-msgid "English"
-msgstr "英语"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Grammalecte"
+#~ msgstr "配置 Grammalecte"
 
-#: languagetool/src/languagetoolcombobox.cpp:32
-#, kde-format
-msgid "Asturian"
-msgstr "阿斯图里亚斯语"
+#~ msgid "General"
+#~ msgstr "常规"
 
-#: languagetool/src/languagetoolcombobox.cpp:33
-#, kde-format
-msgid "Belarusian"
-msgstr "白俄罗斯语"
+#~ msgid "Grammar Settings"
+#~ msgstr "语法设置"
 
-#: languagetool/src/languagetoolcombobox.cpp:34
-#, kde-format
-msgid "Breton"
-msgstr "布列塔尼语"
+#~ msgid ""
+#~ "Impossible to get options. Please verify that you have grammalected "
+#~ "installed."
+#~ msgstr "无法获取选项。请确认您已经安装了 grammalected。"
 
-#: languagetool/src/languagetoolcombobox.cpp:35
-#, kde-format
-msgid "Catalan"
-msgstr "加泰罗尼亚语"
+#~ msgid "Error during Extracting Options"
+#~ msgstr "提取选项时出错"
 
-#: languagetool/src/languagetoolcombobox.cpp:36
-#, kde-format
-msgid "Chinese"
-msgstr "中文"
+#~ msgid "Press Button for Reloading Settings"
+#~ msgstr "可按按钮来重新加载设置"
 
-#: languagetool/src/languagetoolcombobox.cpp:37
-#, kde-format
-msgid "Danish"
-msgstr "丹麦语"
+#~ msgid "Reload Settings"
+#~ msgstr "重新加载设置"
 
-#: languagetool/src/languagetoolcombobox.cpp:38
-#, kde-format
-msgid "Dutch"
-msgstr "荷兰语"
+#~ msgid "Python Path:"
+#~ msgstr "Python 路径："
 
-#: languagetool/src/languagetoolcombobox.cpp:39
-#, kde-format
-msgid "English (Australian)"
-msgstr "英语 (澳大利亚)"
+#~ msgid "Add full 'grammalecte-cli.py' path"
+#~ msgstr "添加完整的“grammalecte-cli.py”的路径"
 
-#: languagetool/src/languagetoolcombobox.cpp:40
-#, kde-format
-msgid "English (Canadian)"
-msgstr "英语 (加拿大)"
+#~ msgid "Grammalecte Path:"
+#~ msgstr "Grammalecte 路径："
 
-#: languagetool/src/languagetoolcombobox.cpp:41
-#, kde-format
-msgid "Esperanto"
-msgstr "世界语"
+#~ msgid "Python path is missing."
+#~ msgstr "Python 的路径不能为空。"
 
-#: languagetool/src/languagetoolcombobox.cpp:42
-#, kde-format
-msgid "French"
-msgstr "法语"
+#~ msgid "Grammalecte path not found."
+#~ msgstr "Grammalecte 的路径不能为空。"
 
-#: languagetool/src/languagetoolcombobox.cpp:43
-#, kde-format
-msgid "Galician"
-msgstr "加利西亚语"
+#~ msgid "Grammalecte program file not found."
+#~ msgstr "无法找到 Grammalecte 程序的文件。"
 
-#: languagetool/src/languagetoolcombobox.cpp:44
-#, kde-format
-msgid "German"
-msgstr "德语"
+#~ msgid "Grammalecte cli file not found."
+#~ msgstr "无法找到 Grammalecte 命令行的文件。"
 
-#: languagetool/src/languagetoolcombobox.cpp:45
-#, kde-format
-msgid "Greek"
-msgstr "希腊语"
+#~ msgid "Grammalecte error"
+#~ msgstr "Grammalecte 出错"
 
-#: languagetool/src/languagetoolcombobox.cpp:46
-#, kde-format
-msgid "Italian"
-msgstr "意大利语"
+#~ msgid "Any text to check."
+#~ msgstr "任何要检查的文本。"
 
-#: languagetool/src/languagetoolcombobox.cpp:47
-#, kde-format
-msgid "Japanese"
-msgstr "日语"
+#~ msgid "Replacement"
+#~ msgstr "替换"
 
-#: languagetool/src/languagetoolcombobox.cpp:48
-#, kde-format
-msgid "Khmer"
-msgstr "高棉语"
+#~ msgid "Online Grammar Information"
+#~ msgstr "在线语法信息"
 
-#: languagetool/src/languagetoolcombobox.cpp:49
-#, kde-format
-msgid "Persian"
-msgstr "波斯语"
+#~ msgid "Check Again"
+#~ msgstr "再次检查"
 
-#: languagetool/src/languagetoolcombobox.cpp:50
-#, kde-format
-msgid "Polish"
-msgstr "波兰语"
+#~ msgid "Configure..."
+#~ msgstr "配置..."
 
-#: languagetool/src/languagetoolcombobox.cpp:51
-#, kde-format
-msgid "Portuguese"
-msgstr "葡萄牙语"
+#~ msgid "See on: %1"
+#~ msgstr "参见：%1"
 
-#: languagetool/src/languagetoolcombobox.cpp:52
-#, kde-format
-msgid "Romanian"
-msgstr "罗马尼亚语"
+#~ msgid "Close"
+#~ msgstr "关闭"
 
-#: languagetool/src/languagetoolcombobox.cpp:53
-#, kde-format
-msgid "Russian"
-msgstr "俄语"
+#~ msgid "English"
+#~ msgstr "英语"
 
-#: languagetool/src/languagetoolcombobox.cpp:54
-#, kde-format
-msgid "Slovak"
-msgstr "斯洛伐克语"
+#~ msgid "Asturian"
+#~ msgstr "阿斯图里亚斯语"
 
-#: languagetool/src/languagetoolcombobox.cpp:55
-#, kde-format
-msgid "Slovenian"
-msgstr "斯洛文尼亚语"
+#~ msgid "Belarusian"
+#~ msgstr "白俄罗斯语"
 
-#: languagetool/src/languagetoolcombobox.cpp:56
-#, kde-format
-msgid "Spanish"
-msgstr "西班牙语"
+#~ msgid "Breton"
+#~ msgstr "布列塔尼语"
 
-#: languagetool/src/languagetoolcombobox.cpp:57
-#, kde-format
-msgid "Swedish"
-msgstr "瑞典语"
+#~ msgid "Catalan"
+#~ msgstr "加泰罗尼亚语"
 
-#: languagetool/src/languagetoolcombobox.cpp:58
-#, kde-format
-msgid "Tagalog"
-msgstr "他加禄语"
+#~ msgid "Chinese"
+#~ msgstr "中文"
 
-#: languagetool/src/languagetoolcombobox.cpp:59
-#, kde-format
-msgid "Tamil"
-msgstr "泰米尔语"
+#~ msgid "Danish"
+#~ msgstr "丹麦语"
 
-#: languagetool/src/languagetoolcombobox.cpp:60
-#, kde-format
-msgid "Ukrainian"
-msgstr "乌克兰语"
+#~ msgid "Dutch"
+#~ msgstr "荷兰语"
 
-#: languagetool/src/languagetoolconfigdialog.cpp:25
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure LanguageTool"
-msgstr "配置 LanguageTool"
+#~ msgid "English (Australian)"
+#~ msgstr "英语 (澳大利亚)"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:24
-#, kde-format
-msgid "Use Local Instance"
-msgstr "使用本地实例"
+#~ msgid "English (Canadian)"
+#~ msgstr "英语 (加拿大)"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:26
-#, kde-format
-msgid "Instance Path:"
-msgstr "实例路径："
+#~ msgid "Esperanto"
+#~ msgstr "世界语"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:54
-#, kde-format
-msgid "Language:"
-msgstr "语言："
+#~ msgid "French"
+#~ msgstr "法语"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:66
-#, kde-format
-msgid "Refresh"
-msgstr "刷新"
+#~ msgid "Galician"
+#~ msgstr "加利西亚语"
 
-#: languagetool/src/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "An error was reported: %1"
-msgstr "报告了一个错误：%1"
+#~ msgid "German"
+#~ msgstr "德语"
 
-#: languagetool/src/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "Failed to check grammar."
-msgstr "检查语法失败。"
+#~ msgid "Greek"
+#~ msgstr "希腊语"
 
-#: languagetool/src/languagetoolresultwidget.cpp:76
-#, kde-format
-msgid "Check"
-msgstr ""
+#~ msgid "Italian"
+#~ msgstr "意大利语"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid ""
-"An error occurred attempting to load the list of available languages:\n"
-"%1"
-msgstr ""
-"尝试加载可用语言列表时出错：\n"
-"%1"
+#~ msgid "Japanese"
+#~ msgstr "日语"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid "List of Languages"
-msgstr "语言列表"
+#~ msgid "Khmer"
+#~ msgstr "高棉语"
+
+#~ msgid "Persian"
+#~ msgstr "波斯语"
+
+#~ msgid "Polish"
+#~ msgstr "波兰语"
+
+#~ msgid "Portuguese"
+#~ msgstr "葡萄牙语"
+
+#~ msgid "Romanian"
+#~ msgstr "罗马尼亚语"
+
+#~ msgid "Russian"
+#~ msgstr "俄语"
+
+#~ msgid "Slovak"
+#~ msgstr "斯洛伐克语"
+
+#~ msgid "Slovenian"
+#~ msgstr "斯洛文尼亚语"
+
+#~ msgid "Spanish"
+#~ msgstr "西班牙语"
+
+#~ msgid "Swedish"
+#~ msgstr "瑞典语"
+
+#~ msgid "Tagalog"
+#~ msgstr "他加禄语"
+
+#~ msgid "Tamil"
+#~ msgstr "泰米尔语"
+
+#~ msgid "Ukrainian"
+#~ msgstr "乌克兰语"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure LanguageTool"
+#~ msgstr "配置 LanguageTool"
+
+#~ msgid "Use Local Instance"
+#~ msgstr "使用本地实例"
+
+#~ msgid "Instance Path:"
+#~ msgstr "实例路径："
+
+#~ msgid "Language:"
+#~ msgstr "语言："
+
+#~ msgid "Refresh"
+#~ msgstr "刷新"
+
+#~ msgid "An error was reported: %1"
+#~ msgstr "报告了一个错误：%1"
+
+#~ msgid "Failed to check grammar."
+#~ msgstr "检查语法失败。"
+
+#~ msgid ""
+#~ "An error occurred attempting to load the list of available languages:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "尝试加载可用语言列表时出错：\n"
+#~ "%1"
+
+#~ msgid "List of Languages"
+#~ msgstr "语言列表"

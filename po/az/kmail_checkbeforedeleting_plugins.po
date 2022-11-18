@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-06-21 17:49+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -116,70 +116,70 @@ msgstr "\"%2\" mövzulu məktubda \"%1\" var"
 msgid "The message with subject '%1' is %2"
 msgstr "\"%1\" mövzulu məktub %2-dir"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
 msgstr "Qayda əlavə edin..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "Qaydanı silin"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:26
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
 msgstr "Qaydanı dəyişin..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:43
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Type"
 msgstr "Növ"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:43
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Pattern"
 msgstr "Nümünə"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:120
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
 #, kde-format
 msgid "Add Rule..."
 msgstr "Qayda əlavə edin..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:122
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
 #, kde-format
 msgid "Edit Rule..."
 msgstr "Qaydaya düzəliş edin..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:127
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Qaydanı silin"
 msgstr[1] "Qaydaları silin"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:143
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Bu qaydanı silmək istəyirsiniz?"
 msgstr[1] "Bu qaydaları silmək istəyirsiniz?"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:144
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Qaydanı silin"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:176
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Same rule already exists."
 msgstr "Eyni qayda artıq mövcuddur."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:176
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Create Rule"
 msgstr "Qayda yaradın"

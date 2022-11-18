@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-11-06 01:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -117,68 +117,68 @@ msgstr "主题为“%2”的信件中含有关键字“%1”"
 msgid "The message with subject '%1' is %2"
 msgstr "主题为“%1”的信件是“%2”"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "删除规则"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:26
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:43
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Type"
 msgstr "类型"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:43
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Pattern"
 msgstr "表达式"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:120
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
 #, kde-format
 msgid "Add Rule..."
 msgstr "添加规则..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:122
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
 #, kde-format
 msgid "Edit Rule..."
 msgstr "编辑规则..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:127
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "删除规则"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:143
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "您确定要删除这些规则吗？"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:144
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "删除规则"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:176
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Same rule already exists."
 msgstr "相同的规则已经存在。"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:176
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Create Rule"
 msgstr "创建规则"

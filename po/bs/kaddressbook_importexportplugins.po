@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2014-01-31 19:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -42,7 +42,7 @@ msgstr "Uvezite kontakte iz datoteke u formatu zarezom odvojenih vrijednosti."
 #: csv/csvimportexportplugininterface.cpp:152
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:130
-#: vcards/vcardimportexportplugininterface.cpp:371
+#: vcards/vcardimportexportplugininterface.cpp:370
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Koji kontakt želite da izvezete?"
@@ -50,7 +50,7 @@ msgstr "Koji kontakt želite da izvezete?"
 #: csv/csvimportexportplugininterface.cpp:162
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:140
-#: vcards/vcardimportexportplugininterface.cpp:383
+#: vcards/vcardimportexportplugininterface.cpp:382
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Niste označili nijedan kontakt za izvoz."
@@ -447,19 +447,19 @@ msgstr "Nije moguće otvoriti novu ulaznu datoteku."
 msgid "Device is not open"
 msgstr "Uređaj nije otovren"
 
-#: csv/import/templateselectiondialog.cpp:187
+#: csv/import/templateselectiondialog.cpp:182
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to delete template '%1'?"
 msgstr "Da li stvarno želite da obriete šablon '%1'?"
 
-#: csv/import/templateselectiondialog.cpp:212
+#: csv/import/templateselectiondialog.cpp:203
 #, kde-format
 msgctxt "@title:window"
 msgid "Template Selection"
 msgstr "Odabiranje šablona"
 
-#: csv/import/templateselectiondialog.cpp:215
+#: csv/import/templateselectiondialog.cpp:206
 #, kde-format
 msgctxt "@info"
 msgid "Please select a template, that matches the CSV file:"
@@ -706,49 +706,49 @@ msgctxt "@action:button"
 msgid "Import All..."
 msgstr "Uvezi sve..."
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard..."
 msgstr "Uvezi vCard..."
 
-#: vcards/vcardimportexportplugininterface.cpp:46
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
 msgid "Import contacts from a vCard file."
 msgstr "Uvezite kontakte iz vKard datoteke."
 
-#: vcards/vcardimportexportplugininterface.cpp:53
+#: vcards/vcardimportexportplugininterface.cpp:52
 #, fuzzy, kde-format
 #| msgid "Export contacts to a vCard 3.0 file."
 msgid "Export contacts to a vCard 4.0 file."
 msgstr "Izvezite kontakte u vKard 3.0 datoteku."
 
-#: vcards/vcardimportexportplugininterface.cpp:54
+#: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
 msgid "Export vCard 4.0..."
 msgstr "Izvezi vCard 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:59
+#: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0..."
 msgstr "Izvezi vCard 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:60
+#: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
 msgid "Export contacts to a vCard 3.0 file."
 msgstr "Izvezite kontakte u vKard 3.0 datoteku."
 
-#: vcards/vcardimportexportplugininterface.cpp:65
+#: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1..."
 msgstr "Izvezi vCard 2.1..."
 
-#: vcards/vcardimportexportplugininterface.cpp:66
+#: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
 msgid "Export contacts to a vCard 2.1 file."
 msgstr "Izvezite kontakte u vKard 2.1 datoteku."
 
-#: vcards/vcardimportexportplugininterface.cpp:114
+#: vcards/vcardimportexportplugininterface.cpp:113
 #, fuzzy, kde-format
 #| msgid ""
 #| "*.vcf|Vcard (*.vcf)\n"
@@ -758,25 +758,25 @@ msgstr ""
 "*.vcf|Vcard (*.vcf)\n"
 "*|sve datoteke (*)"
 
-#: vcards/vcardimportexportplugininterface.cpp:115
+#: vcards/vcardimportexportplugininterface.cpp:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "Izaberite vCard za uvoz"
 
-#: vcards/vcardimportexportplugininterface.cpp:121
+#: vcards/vcardimportexportplugininterface.cpp:120
 #, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "Uvoženje vCard-a nije uspelo"
 
-#: vcards/vcardimportexportplugininterface.cpp:135
+#: vcards/vcardimportexportplugininterface.cpp:134
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<para>Nije moguće pristupiti vKard-u:</para><para>%1</para>"
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:436
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -784,13 +784,13 @@ msgid ""
 "files?"
 msgstr "Označili ste listu kontaata, da li ih treba izvesti u više datoteka?"
 
-#: vcards/vcardimportexportplugininterface.cpp:444
+#: vcards/vcardimportexportplugininterface.cpp:439
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Izvezi u jednu datoteku"
 
-#: vcards/vcardimportexportplugininterface.cpp:445
+#: vcards/vcardimportexportplugininterface.cpp:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

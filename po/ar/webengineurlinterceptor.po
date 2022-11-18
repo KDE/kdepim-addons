@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2022-08-23 22:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -212,7 +212,7 @@ msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "اضبط ملحقة «حاجب الإعلانات»"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:54
+#: adblock/lib/widgets/adblocksettingwidget.cpp:53
 #, kde-format
 msgid ""
 "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
@@ -221,7 +221,7 @@ msgstr ""
 "<html dir=\"rtl\">تعبير التّرشيح (مثلًا <tt>http://www.example.com/ad/*‎</tt>، "
 "<a href=\"filterhelp\">معلومات أكثر</a>):"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:70
+#: adblock/lib/widgets/adblocksettingwidget.cpp:69
 #, kde-format
 msgid " day"
 msgid_plural " days"
@@ -232,7 +232,7 @@ msgstr[3] " أيّام"
 msgstr[4] " يومًا"
 msgstr[5] " يوم"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:143
+#: adblock/lib/widgets/adblocksettingwidget.cpp:142
 #, kde-format
 msgid ""
 "<qt><p>Enter an expression to filter. Filters can be defined as either:"
@@ -251,12 +251,12 @@ msgstr ""
 "يأخذ الأولويّة على أيّ مرشّح محجوب في القائمة السّوداء.<br><a href='%1'>%2</a></"
 "html>"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:151
+#: adblock/lib/widgets/adblocksettingwidget.cpp:150
 #, kde-format
 msgid "More information"
 msgstr "معلومات أخرى"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:199
+#: adblock/lib/widgets/adblocksettingwidget.cpp:194
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
@@ -267,33 +267,33 @@ msgstr[3] "أتريد إزالة هذه القواعد؟"
 msgstr[4] "أتريد إزالة هذه القواعد؟"
 msgstr[5] "أتريد إزالة هذه القواعد؟"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:200
+#: adblock/lib/widgets/adblocksettingwidget.cpp:195
 #, kde-format
 msgid "Remove"
 msgstr "أزِل"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:349
+#: adblock/lib/widgets/adblocksettingwidget.cpp:336
 #, kde-format
 msgid "Do you want to delete list \"%1\"?"
 msgstr "أتري حذف القائمة ”%1“؟"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:350
+#: adblock/lib/widgets/adblocksettingwidget.cpp:337
 #, kde-format
 msgid "Delete current list"
 msgstr "حذف القائمة الحاليّة"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:399
-#: adblock/lib/widgets/adblocksettingwidget.cpp:441
+#: adblock/lib/widgets/adblocksettingwidget.cpp:382
+#: adblock/lib/widgets/adblocksettingwidget.cpp:424
 #, kde-format
 msgid "All Files (*)"
 msgstr "كلّ الملفّات (*)"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:400
+#: adblock/lib/widgets/adblocksettingwidget.cpp:383
 #, kde-format
 msgid "Import Filters"
 msgstr "استيراد مرشّحات"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:451
+#: adblock/lib/widgets/adblocksettingwidget.cpp:434
 #, kde-format
 msgid "Export Filters"
 msgstr "تصدير مرشّحات"

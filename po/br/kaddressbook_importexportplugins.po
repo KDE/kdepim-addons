@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2005-03-04 00:29+0100\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: Breton <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:152
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:130
-#: vcards/vcardimportexportplugininterface.cpp:371
+#: vcards/vcardimportexportplugininterface.cpp:370
 #, fuzzy, kde-format
 #| msgid "Which contacts do you want to print?"
 msgid "Which contact do you want to export?"
@@ -48,7 +48,7 @@ msgstr "Peseurt darempredoù e fell deoc'h da voulañ ?"
 #: csv/csvimportexportplugininterface.cpp:162
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:140
-#: vcards/vcardimportexportplugininterface.cpp:383
+#: vcards/vcardimportexportplugininterface.cpp:382
 #, fuzzy, kde-format
 #| msgid "Delete all selected contacts."
 msgid "You have not selected any contacts to export."
@@ -437,7 +437,7 @@ msgstr "N'hellan ket digeriñ ar restr enkas."
 msgid "Device is not open"
 msgstr ""
 
-#: csv/import/templateselectiondialog.cpp:187
+#: csv/import/templateselectiondialog.cpp:182
 #, fuzzy, kde-format
 #| msgid "<qt>Do you really want to remove the address book <b>%1</b>?</qt>"
 msgctxt "@label"
@@ -446,14 +446,14 @@ msgstr ""
 "<qt>Ha fellout a ra deoc'h da vat lemel ar c'harned chomlec'hioù <b>%1</b> ?"
 "</qt>"
 
-#: csv/import/templateselectiondialog.cpp:212
+#: csv/import/templateselectiondialog.cpp:203
 #, fuzzy, kde-format
 #| msgid "Template Selection"
 msgctxt "@title:window"
 msgid "Template Selection"
 msgstr "Diuzadenn ar patrom"
 
-#: csv/import/templateselectiondialog.cpp:215
+#: csv/import/templateselectiondialog.cpp:206
 #, kde-format
 msgctxt "@info"
 msgid "Please select a template, that matches the CSV file:"
@@ -712,74 +712,74 @@ msgctxt "@action:button"
 msgid "Import All..."
 msgstr "Enporzh an holl re ..."
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard..."
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:46
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
 #| msgid "Import Contacts?"
 msgid "Import contacts from a vCard file."
 msgstr "Enporzh an darempredoù ?"
 
-#: vcards/vcardimportexportplugininterface.cpp:53
+#: vcards/vcardimportexportplugininterface.cpp:52
 #, fuzzy, kde-format
 #| msgid "Import Contacts?"
 msgid "Export contacts to a vCard 4.0 file."
 msgstr "Enporzh an darempredoù ?"
 
-#: vcards/vcardimportexportplugininterface.cpp:54
+#: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export CSV List..."
 msgid "Export vCard 4.0..."
 msgstr "Ezporzh ar roll CSV ..."
 
-#: vcards/vcardimportexportplugininterface.cpp:59
+#: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0..."
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:60
+#: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
 msgid "Export contacts to a vCard 3.0 file."
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:65
+#: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1..."
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:66
+#: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
 msgid "Export contacts to a vCard 2.1 file."
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:114
+#: vcards/vcardimportexportplugininterface.cpp:113
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:115
+#: vcards/vcardimportexportplugininterface.cpp:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:121
+#: vcards/vcardimportexportplugininterface.cpp:120
 #, fuzzy, kde-format
 #| msgid "vCard Import Failed"
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "Ne m'eus ket enporzh ar vCard"
 
-#: vcards/vcardimportexportplugininterface.cpp:135
+#: vcards/vcardimportexportplugininterface.cpp:134
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:436
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -787,14 +787,14 @@ msgid ""
 "files?"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:444
+#: vcards/vcardimportexportplugininterface.cpp:439
 #, fuzzy, kde-format
 #| msgid "Export LDIF Addressbook..."
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Ezporzh ar c'harned chomlec'hioù LDIF ..."
 
-#: vcards/vcardimportexportplugininterface.cpp:445
+#: vcards/vcardimportexportplugininterface.cpp:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

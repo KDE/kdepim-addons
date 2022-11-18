@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorgrammar_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:46+0000\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
 "PO-Revision-Date: 2019-11-05 19:56+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -26,131 +26,12 @@ msgstr "Skontrolovať pravopis (Grammalecte)"
 msgid "Grammalecte Plugin"
 msgstr "Doplnok Grammalecte"
 
-#: grammalecte/src/grammalecteconfigdialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Configure Grammalecte"
-msgctxt "@title:window"
-msgid "Configure Grammalecte"
-msgstr "Nastaviť Grammalecte"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:34
-#, kde-format
-msgid "General"
-msgstr "Všeobecné"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:35
-#, kde-format
-msgid "Grammar Settings"
-msgstr "Nastavenie gramatiky"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:60
-#, kde-format
-msgid ""
-"Impossible to get options. Please verify that you have grammalected "
-"installed."
-msgstr ""
-"Nemožné získať možnosti. Prosím skontrolujte že máte nainštalované "
-"grammalected."
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:61
-#, kde-format
-msgid "Error during Extracting Options"
-msgstr "Chyba pri extrahovaní možností"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:110
-#, kde-format
-msgid "Press Button for Reloading Settings"
-msgstr "Stlačte tlačidlo na znovu-načítanie nastavení"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:117
-#, kde-format
-msgid "Reload Settings"
-msgstr "Znovunačítať nastavenia"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:134
-#, kde-format
-msgid "Python Path:"
-msgstr "Cesta k Python-u:"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:138
-#, kde-format
-msgid "Add full 'grammalecte-cli.py' path"
-msgstr ""
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:139
-#, kde-format
-msgid "Grammalecte Path:"
-msgstr "Cesta k Grammalecte:"
-
-#: grammalecte/src/grammalecteresultwidget.cpp:54
-#, kde-format
-msgid "Python path is missing."
-msgstr ""
-
-#: grammalecte/src/grammalecteresultwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Grammalecte Path:"
-msgid "Grammalecte path not found."
-msgstr "Cesta k Grammalecte:"
-
-#: grammalecte/src/grammalecteresultwidget.cpp:65
-#, kde-format
-msgid "Grammalecte program file not found."
-msgstr ""
-
-#: grammalecte/src/grammalecteresultwidget.cpp:69
-#, fuzzy, kde-format
-#| msgid "Grammalecte Plugin"
-msgid "Grammalecte cli file not found."
-msgstr "Doplnok Grammalecte"
-
-#: grammalecte/src/grammalecteresultwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Grammalecte Path:"
-msgid "Grammalecte error"
-msgstr "Cesta k Grammalecte:"
-
-#: grammarcommon/grammarresulttextedit.cpp:40
-#, kde-format
-msgid "Any text to check."
-msgstr "Akýkoľvek text na kontrolu."
-
-#: grammarcommon/grammarresulttextedit.cpp:94
-#, kde-format
-msgid "Replacement"
-msgstr "Náhrada"
-
-#: grammarcommon/grammarresulttextedit.cpp:103
-#, kde-format
-msgid "Online Grammar Information"
-msgstr "Informácie o gramatike online"
-
-#: grammarcommon/grammarresulttextedit.cpp:116
-#, kde-format
-msgid "Check Again"
-msgstr "Znovu skontrolovať"
-
-#: grammarcommon/grammarresulttextedit.cpp:119
-#, kde-format
-msgid "Configure..."
-msgstr ""
-
-#: grammarcommon/grammarresultutil.cpp:48
-#, kde-format
-msgid "See on: %1"
-msgstr "Pozrieť na: %1"
-
-#: grammarcommon/grammarresultwidget.cpp:32
-#, kde-format
-msgid "Close"
-msgstr "Zatvoriť"
-
 #: languagetool/plugin/languagetoolinterface.cpp:82
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "Skontrolovať Pravopis (LanguageTool)"
 
-#: languagetool/plugin/languagetoolinterface.cpp:101
+#: languagetool/plugin/languagetoolinterface.cpp:96
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -161,7 +42,7 @@ msgstr ""
 "Váš text bude odoslaný na externú stránku (https://languagetool.org/).\n"
 "Chcete pokračovať?"
 
-#: languagetool/plugin/languagetoolinterface.cpp:102
+#: languagetool/plugin/languagetoolinterface.cpp:97
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "Skontrolovať pravopis s LanguageTool"
@@ -171,212 +52,201 @@ msgstr "Skontrolovať pravopis s LanguageTool"
 msgid "LanguageTool Plugin"
 msgstr "Doplnok LanguageTool"
 
-#: languagetool/src/languagetoolcombobox.cpp:31
-#, kde-format
-msgid "English"
-msgstr "Angličtina"
+#, fuzzy
+#~| msgid "Configure Grammalecte"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Grammalecte"
+#~ msgstr "Nastaviť Grammalecte"
 
-#: languagetool/src/languagetoolcombobox.cpp:32
-#, kde-format
-msgid "Asturian"
-msgstr "Astúrčina"
+#~ msgid "General"
+#~ msgstr "Všeobecné"
 
-#: languagetool/src/languagetoolcombobox.cpp:33
-#, kde-format
-msgid "Belarusian"
-msgstr "Bieloruština"
+#~ msgid "Grammar Settings"
+#~ msgstr "Nastavenie gramatiky"
 
-#: languagetool/src/languagetoolcombobox.cpp:34
-#, kde-format
-msgid "Breton"
-msgstr "Bretónčina"
+#~ msgid ""
+#~ "Impossible to get options. Please verify that you have grammalected "
+#~ "installed."
+#~ msgstr ""
+#~ "Nemožné získať možnosti. Prosím skontrolujte že máte nainštalované "
+#~ "grammalected."
 
-#: languagetool/src/languagetoolcombobox.cpp:35
-#, kde-format
-msgid "Catalan"
-msgstr "Katalánčina"
+#~ msgid "Error during Extracting Options"
+#~ msgstr "Chyba pri extrahovaní možností"
 
-#: languagetool/src/languagetoolcombobox.cpp:36
-#, kde-format
-msgid "Chinese"
-msgstr "Čínština"
+#~ msgid "Press Button for Reloading Settings"
+#~ msgstr "Stlačte tlačidlo na znovu-načítanie nastavení"
 
-#: languagetool/src/languagetoolcombobox.cpp:37
-#, kde-format
-msgid "Danish"
-msgstr "Dánčina"
+#~ msgid "Reload Settings"
+#~ msgstr "Znovunačítať nastavenia"
 
-#: languagetool/src/languagetoolcombobox.cpp:38
-#, kde-format
-msgid "Dutch"
-msgstr "Holandčina"
+#~ msgid "Python Path:"
+#~ msgstr "Cesta k Python-u:"
 
-#: languagetool/src/languagetoolcombobox.cpp:39
-#, kde-format
-msgid "English (Australian)"
-msgstr "Angličtina (Austrália)"
+#~ msgid "Grammalecte Path:"
+#~ msgstr "Cesta k Grammalecte:"
 
-#: languagetool/src/languagetoolcombobox.cpp:40
-#, kde-format
-msgid "English (Canadian)"
-msgstr "Angličtina (Kanada)"
+#, fuzzy
+#~| msgid "Grammalecte Path:"
+#~ msgid "Grammalecte path not found."
+#~ msgstr "Cesta k Grammalecte:"
 
-#: languagetool/src/languagetoolcombobox.cpp:41
-#, kde-format
-msgid "Esperanto"
-msgstr "Esperanto"
+#, fuzzy
+#~| msgid "Grammalecte Plugin"
+#~ msgid "Grammalecte cli file not found."
+#~ msgstr "Doplnok Grammalecte"
 
-#: languagetool/src/languagetoolcombobox.cpp:42
-#, kde-format
-msgid "French"
-msgstr "Francúzština"
+#, fuzzy
+#~| msgid "Grammalecte Path:"
+#~ msgid "Grammalecte error"
+#~ msgstr "Cesta k Grammalecte:"
 
-#: languagetool/src/languagetoolcombobox.cpp:43
-#, kde-format
-msgid "Galician"
-msgstr "Galícijčina"
+#~ msgid "Any text to check."
+#~ msgstr "Akýkoľvek text na kontrolu."
 
-#: languagetool/src/languagetoolcombobox.cpp:44
-#, kde-format
-msgid "German"
-msgstr "Nemčina"
+#~ msgid "Replacement"
+#~ msgstr "Náhrada"
 
-#: languagetool/src/languagetoolcombobox.cpp:45
-#, kde-format
-msgid "Greek"
-msgstr "Gréčtina"
+#~ msgid "Online Grammar Information"
+#~ msgstr "Informácie o gramatike online"
 
-#: languagetool/src/languagetoolcombobox.cpp:46
-#, kde-format
-msgid "Italian"
-msgstr "Taliančina"
+#~ msgid "Check Again"
+#~ msgstr "Znovu skontrolovať"
 
-#: languagetool/src/languagetoolcombobox.cpp:47
-#, kde-format
-msgid "Japanese"
-msgstr "Japončina"
+#~ msgid "See on: %1"
+#~ msgstr "Pozrieť na: %1"
 
-#: languagetool/src/languagetoolcombobox.cpp:48
-#, kde-format
-msgid "Khmer"
-msgstr "Khmérčina"
+#~ msgid "Close"
+#~ msgstr "Zatvoriť"
 
-#: languagetool/src/languagetoolcombobox.cpp:49
-#, kde-format
-msgid "Persian"
-msgstr "Perzština"
+#~ msgid "English"
+#~ msgstr "Angličtina"
 
-#: languagetool/src/languagetoolcombobox.cpp:50
-#, kde-format
-msgid "Polish"
-msgstr "Poľština"
+#~ msgid "Asturian"
+#~ msgstr "Astúrčina"
 
-#: languagetool/src/languagetoolcombobox.cpp:51
-#, kde-format
-msgid "Portuguese"
-msgstr "Portugalčina"
+#~ msgid "Belarusian"
+#~ msgstr "Bieloruština"
 
-#: languagetool/src/languagetoolcombobox.cpp:52
-#, kde-format
-msgid "Romanian"
-msgstr "Rumunčina"
+#~ msgid "Breton"
+#~ msgstr "Bretónčina"
 
-#: languagetool/src/languagetoolcombobox.cpp:53
-#, kde-format
-msgid "Russian"
-msgstr "Ruština"
+#~ msgid "Catalan"
+#~ msgstr "Katalánčina"
 
-#: languagetool/src/languagetoolcombobox.cpp:54
-#, kde-format
-msgid "Slovak"
-msgstr "Slovenčina"
+#~ msgid "Chinese"
+#~ msgstr "Čínština"
 
-#: languagetool/src/languagetoolcombobox.cpp:55
-#, kde-format
-msgid "Slovenian"
-msgstr "Slovinčina"
+#~ msgid "Danish"
+#~ msgstr "Dánčina"
 
-#: languagetool/src/languagetoolcombobox.cpp:56
-#, kde-format
-msgid "Spanish"
-msgstr "Španielčina"
+#~ msgid "Dutch"
+#~ msgstr "Holandčina"
 
-#: languagetool/src/languagetoolcombobox.cpp:57
-#, kde-format
-msgid "Swedish"
-msgstr "Švédčina"
+#~ msgid "English (Australian)"
+#~ msgstr "Angličtina (Austrália)"
 
-#: languagetool/src/languagetoolcombobox.cpp:58
-#, kde-format
-msgid "Tagalog"
-msgstr "Tagalog"
+#~ msgid "English (Canadian)"
+#~ msgstr "Angličtina (Kanada)"
 
-#: languagetool/src/languagetoolcombobox.cpp:59
-#, kde-format
-msgid "Tamil"
-msgstr "Tamilčina"
+#~ msgid "Esperanto"
+#~ msgstr "Esperanto"
 
-#: languagetool/src/languagetoolcombobox.cpp:60
-#, kde-format
-msgid "Ukrainian"
-msgstr "Ukrajinčina"
+#~ msgid "French"
+#~ msgstr "Francúzština"
 
-#: languagetool/src/languagetoolconfigdialog.cpp:25
-#, fuzzy, kde-format
-#| msgid "Configure LanguageTool"
-msgctxt "@title:window"
-msgid "Configure LanguageTool"
-msgstr "Nastaviť LanguageTool"
+#~ msgid "Galician"
+#~ msgstr "Galícijčina"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:24
-#, kde-format
-msgid "Use Local Instance"
-msgstr "Používať miestnu inštanciu"
+#~ msgid "German"
+#~ msgstr "Nemčina"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:26
-#, kde-format
-msgid "Instance Path:"
-msgstr "Cesta inštancie:"
+#~ msgid "Greek"
+#~ msgstr "Gréčtina"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:54
-#, kde-format
-msgid "Language:"
-msgstr "Jazyk:"
+#~ msgid "Italian"
+#~ msgstr "Taliančina"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:66
-#, kde-format
-msgid "Refresh"
-msgstr "Obnoviť"
+#~ msgid "Japanese"
+#~ msgstr "Japončina"
 
-#: languagetool/src/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "An error was reported: %1"
-msgstr "Bola nahlásená chyba: %1"
+#~ msgid "Khmer"
+#~ msgstr "Khmérčina"
 
-#: languagetool/src/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "Failed to check grammar."
-msgstr "Nepodarilo sa skontrolovať pravopis."
+#~ msgid "Persian"
+#~ msgstr "Perzština"
 
-#: languagetool/src/languagetoolresultwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Check Again"
-msgid "Check"
-msgstr "Znovu skontrolovať"
+#~ msgid "Polish"
+#~ msgstr "Poľština"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid ""
-"An error occurred attempting to load the list of available languages:\n"
-"%1"
-msgstr ""
-"Pri pokuse o načítanie zoznamu dostupných jazykov sa vyskytla chyba:\n"
-"%1"
+#~ msgid "Portuguese"
+#~ msgstr "Portugalčina"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid "List of Languages"
-msgstr "Zoznam jazykov"
+#~ msgid "Romanian"
+#~ msgstr "Rumunčina"
+
+#~ msgid "Russian"
+#~ msgstr "Ruština"
+
+#~ msgid "Slovak"
+#~ msgstr "Slovenčina"
+
+#~ msgid "Slovenian"
+#~ msgstr "Slovinčina"
+
+#~ msgid "Spanish"
+#~ msgstr "Španielčina"
+
+#~ msgid "Swedish"
+#~ msgstr "Švédčina"
+
+#~ msgid "Tagalog"
+#~ msgstr "Tagalog"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamilčina"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrajinčina"
+
+#, fuzzy
+#~| msgid "Configure LanguageTool"
+#~ msgctxt "@title:window"
+#~ msgid "Configure LanguageTool"
+#~ msgstr "Nastaviť LanguageTool"
+
+#~ msgid "Use Local Instance"
+#~ msgstr "Používať miestnu inštanciu"
+
+#~ msgid "Instance Path:"
+#~ msgstr "Cesta inštancie:"
+
+#~ msgid "Language:"
+#~ msgstr "Jazyk:"
+
+#~ msgid "Refresh"
+#~ msgstr "Obnoviť"
+
+#~ msgid "An error was reported: %1"
+#~ msgstr "Bola nahlásená chyba: %1"
+
+#~ msgid "Failed to check grammar."
+#~ msgstr "Nepodarilo sa skontrolovať pravopis."
+
+#, fuzzy
+#~| msgid "Check Again"
+#~ msgid "Check"
+#~ msgstr "Znovu skontrolovať"
+
+#~ msgid ""
+#~ "An error occurred attempting to load the list of available languages:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Pri pokuse o načítanie zoznamu dostupných jazykov sa vyskytla chyba:\n"
+#~ "%1"
+
+#~ msgid "List of Languages"
+#~ msgstr "Zoznam jazykov"
 
 #~ msgid "Grammar Web Site Info"
 #~ msgstr "Informácie o webovej stránke gramatiky"

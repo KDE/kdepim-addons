@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-14 00:46+0000\n"
-"PO-Revision-Date: 2022-09-18 01:21+0200\n"
+"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"PO-Revision-Date: 2022-11-17 07:59+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: grammalecte/plugin/grammalecteinterface.cpp:77
 #, kde-format
@@ -28,351 +28,228 @@ msgstr "A&ztertu gramatika (Grammalecte)"
 #: grammalecte/plugin/grammalecteplugin.cpp:37
 #, kde-format
 msgid "Grammalecte Plugin"
-msgstr "Grammalecte plugina"
-
-#: grammalecte/src/grammalecteconfigdialog.cpp:24
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Grammalecte"
-msgstr "Konfiguratu Grammalecte"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:34
-#, kde-format
-msgid "General"
-msgstr "Orokorra"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:35
-#, kde-format
-msgid "Grammar Settings"
-msgstr "Gramatika ezarpenak"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:60
-#, kde-format
-msgid ""
-"Impossible to get options. Please verify that you have grammalected "
-"installed."
-msgstr ""
-"Aukerak lortzea ezinezkoa da. Mesedez, egiaztatu «grammalected» instalatuta "
-"duzula."
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:61
-#, kde-format
-msgid "Error during Extracting Options"
-msgstr "Errorea erauzteko aukeretan"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:110
-#, kde-format
-msgid "Press Button for Reloading Settings"
-msgstr "Sakatu botoia ezarpenak birzamatzeko"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:117
-#, kde-format
-msgid "Reload Settings"
-msgstr "Birzamatu ezarpenak"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:134
-#, kde-format
-msgid "Python Path:"
-msgstr "Python-en bide-izena:"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:138
-#, kde-format
-msgid "Add full 'grammalecte-cli.py' path"
-msgstr "Gehitu 'grammalecte-cli.py' bide-izen osoa"
-
-#: grammalecte/src/grammalecteconfigwidget.cpp:139
-#, kde-format
-msgid "Grammalecte Path:"
-msgstr "Grammalecte-ren bide-izena:"
-
-#: grammalecte/src/grammalecteresultwidget.cpp:54
-#, kde-format
-msgid "Python path is missing."
-msgstr "Python-en bide-izena falta da."
-
-#: grammalecte/src/grammalecteresultwidget.cpp:58
-#, kde-format
-msgid "Grammalecte path not found."
-msgstr "Ez du aurkitu Grammalecte-ren bide-izena."
-
-#: grammalecte/src/grammalecteresultwidget.cpp:65
-#, kde-format
-msgid "Grammalecte program file not found."
-msgstr "Ez du aurkitu Grammalecte programaren fitxategia."
-
-#: grammalecte/src/grammalecteresultwidget.cpp:69
-#, kde-format
-msgid "Grammalecte cli file not found."
-msgstr "Ez du aurkitu Grammalecte «cli» fitxategia."
-
-#: grammalecte/src/grammalecteresultwidget.cpp:73
-#, kde-format
-msgid "Grammalecte error"
-msgstr "Grammalecte-ren errorea"
-
-#: grammarcommon/grammarresulttextedit.cpp:40
-#, kde-format
-msgid "Any text to check."
-msgstr "Egiaztatu beharreko edozein testu."
-
-#: grammarcommon/grammarresulttextedit.cpp:94
-#, kde-format
-msgid "Replacement"
-msgstr "Ordezkatzea"
-
-#: grammarcommon/grammarresulttextedit.cpp:103
-#, kde-format
-msgid "Online Grammar Information"
-msgstr "Lerroko gramatika-informazioa"
-
-#: grammarcommon/grammarresulttextedit.cpp:116
-#, kde-format
-msgid "Check Again"
-msgstr "Egiaztatu berriz"
-
-#: grammarcommon/grammarresulttextedit.cpp:119
-#, kde-format
-msgid "Configure..."
-msgstr "Konfiguratu..."
-
-#: grammarcommon/grammarresultutil.cpp:48
-#, kde-format
-msgid "See on: %1"
-msgstr "Ikusi hemen: %1"
-
-#: grammarcommon/grammarresultwidget.cpp:32
-#, kde-format
-msgid "Close"
-msgstr "Itxi"
+msgstr "«Grammalecte» plugina"
 
 #: languagetool/plugin/languagetoolinterface.cpp:82
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "A&ztertu gramatika (LanguageTool)"
 
-#: languagetool/plugin/languagetoolinterface.cpp:101
+#: languagetool/plugin/languagetoolinterface.cpp:96
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
 "Your text will send on a external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
-"Ez duzu erabiltzen instantzia lokala.\n"
+"Ez duzu erabiltzen instantzia lokalik.\n"
 "Zure testua kanpoko web leku batera bidaliko da (https://languagetool."
 "org/).\n"
 "Jarraitu nahi duzu?"
 
-#: languagetool/plugin/languagetoolinterface.cpp:102
+#: languagetool/plugin/languagetoolinterface.cpp:97
 #, kde-format
 msgid "Check Grammar with LanguageTool"
-msgstr "Aztertu gramatika LanguageTool erabiliz"
+msgstr "Aztertu gramatika «LanguageTool» erabiliz"
 
 #: languagetool/plugin/languagetoolplugin.cpp:36
 #, kde-format
 msgid "LanguageTool Plugin"
-msgstr "LanguageTool plugina"
+msgstr "«LanguageTool» plugina"
 
-#: languagetool/src/languagetoolcombobox.cpp:31
-#, kde-format
-msgid "English"
-msgstr "Ingelesa"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Grammalecte"
+#~ msgstr "Konfiguratu «Grammalecte»"
 
-#: languagetool/src/languagetoolcombobox.cpp:32
-#, kde-format
-msgid "Asturian"
-msgstr "Asturiera"
+#~ msgid "General"
+#~ msgstr "Orokorra"
 
-#: languagetool/src/languagetoolcombobox.cpp:33
-#, kde-format
-msgid "Belarusian"
-msgstr "Bielorrusiera"
+#~ msgid "Grammar Settings"
+#~ msgstr "Gramatika ezarpenak"
 
-#: languagetool/src/languagetoolcombobox.cpp:34
-#, kde-format
-msgid "Breton"
-msgstr "Bretoiera"
+#~ msgid ""
+#~ "Impossible to get options. Please verify that you have grammalected "
+#~ "installed."
+#~ msgstr ""
+#~ "Aukerak lortzea ezinezkoa da. Mesedez, egiaztatu «grammalected» "
+#~ "instalatuta duzula."
 
-#: languagetool/src/languagetoolcombobox.cpp:35
-#, kde-format
-msgid "Catalan"
-msgstr "Katalana"
+#~ msgid "Error during Extracting Options"
+#~ msgstr "Errorea erauzteko aukeretan"
 
-#: languagetool/src/languagetoolcombobox.cpp:36
-#, kde-format
-msgid "Chinese"
-msgstr "Txinera"
+#~ msgid "Press Button for Reloading Settings"
+#~ msgstr "Sakatu botoia ezarpenak birzamatzeko"
 
-#: languagetool/src/languagetoolcombobox.cpp:37
-#, kde-format
-msgid "Danish"
-msgstr "Daniera"
+#~ msgid "Reload Settings"
+#~ msgstr "Birzamatu ezarpenak"
 
-#: languagetool/src/languagetoolcombobox.cpp:38
-#, kde-format
-msgid "Dutch"
-msgstr "Nederlandera"
+#~ msgid "Python Path:"
+#~ msgstr "Python-en bide-izena:"
 
-#: languagetool/src/languagetoolcombobox.cpp:39
-#, kde-format
-msgid "English (Australian)"
-msgstr "Ingelesa (Australiakoa)"
+#~ msgid "Add full 'grammalecte-cli.py' path"
+#~ msgstr "Gehitu 'grammalecte-cli.py' bide-izen osoa"
 
-#: languagetool/src/languagetoolcombobox.cpp:40
-#, kde-format
-msgid "English (Canadian)"
-msgstr "Ingelesa (Kanadakoa)"
+#~ msgid "Grammalecte Path:"
+#~ msgstr "«Grammalecte»ren bide-izena:"
 
-#: languagetool/src/languagetoolcombobox.cpp:41
-#, kde-format
-msgid "Esperanto"
-msgstr "Esperantoa"
+#~ msgid "Python path is missing."
+#~ msgstr "Python-en bide-izena falta da."
 
-#: languagetool/src/languagetoolcombobox.cpp:42
-#, kde-format
-msgid "French"
-msgstr "Frantsesa"
+#~ msgid "Grammalecte path not found."
+#~ msgstr "Ez du aurkitu «Grammalecte»ren bide-izena."
 
-#: languagetool/src/languagetoolcombobox.cpp:43
-#, kde-format
-msgid "Galician"
-msgstr "Galiziera"
+#~ msgid "Grammalecte program file not found."
+#~ msgstr "Ez du aurkitu «Grammalecte» programaren fitxategia."
 
-#: languagetool/src/languagetoolcombobox.cpp:44
-#, kde-format
-msgid "German"
-msgstr "Alemana"
+#~ msgid "Grammalecte cli file not found."
+#~ msgstr "Ez du aurkitu «Grammalecte» «cli» fitxategia."
 
-#: languagetool/src/languagetoolcombobox.cpp:45
-#, kde-format
-msgid "Greek"
-msgstr "Grekoa"
+#~ msgid "Grammalecte error"
+#~ msgstr "«Grammalecte»ren errorea"
 
-#: languagetool/src/languagetoolcombobox.cpp:46
-#, kde-format
-msgid "Italian"
-msgstr "Italiera"
+#~ msgid "Any text to check."
+#~ msgstr "Egiaztatu beharreko edozein testu."
 
-#: languagetool/src/languagetoolcombobox.cpp:47
-#, kde-format
-msgid "Japanese"
-msgstr "Japoniera"
+#~ msgid "Replacement"
+#~ msgstr "Ordezkapena"
 
-#: languagetool/src/languagetoolcombobox.cpp:48
-#, kde-format
-msgid "Khmer"
-msgstr "Khemerera"
+#~ msgid "Online Grammar Information"
+#~ msgstr "Lerroko gramatika-informazioa"
 
-#: languagetool/src/languagetoolcombobox.cpp:49
-#, kde-format
-msgid "Persian"
-msgstr "Persiera"
+#~ msgid "Check Again"
+#~ msgstr "Egiaztatu berriz"
 
-#: languagetool/src/languagetoolcombobox.cpp:50
-#, kde-format
-msgid "Polish"
-msgstr "Poloniera"
+#~ msgid "Configure..."
+#~ msgstr "Konfiguratu..."
 
-#: languagetool/src/languagetoolcombobox.cpp:51
-#, kde-format
-msgid "Portuguese"
-msgstr "Portugesa"
+#~ msgid "See on: %1"
+#~ msgstr "Ikusi hemen: %1"
 
-#: languagetool/src/languagetoolcombobox.cpp:52
-#, kde-format
-msgid "Romanian"
-msgstr "Errumaniera"
+#~ msgid "Close"
+#~ msgstr "Itxi"
 
-#: languagetool/src/languagetoolcombobox.cpp:53
-#, kde-format
-msgid "Russian"
-msgstr "Errusiera"
+#~ msgid "English"
+#~ msgstr "Ingelesa"
 
-#: languagetool/src/languagetoolcombobox.cpp:54
-#, kde-format
-msgid "Slovak"
-msgstr "Eslovakiera"
+#~ msgid "Asturian"
+#~ msgstr "Asturiera"
 
-#: languagetool/src/languagetoolcombobox.cpp:55
-#, kde-format
-msgid "Slovenian"
-msgstr "Esloveniera"
+#~ msgid "Belarusian"
+#~ msgstr "Bielorrusiera"
 
-#: languagetool/src/languagetoolcombobox.cpp:56
-#, kde-format
-msgid "Spanish"
-msgstr "Gaztelania"
+#~ msgid "Breton"
+#~ msgstr "Bretoiera"
 
-#: languagetool/src/languagetoolcombobox.cpp:57
-#, kde-format
-msgid "Swedish"
-msgstr "Suediera"
+#~ msgid "Catalan"
+#~ msgstr "Katalana"
 
-#: languagetool/src/languagetoolcombobox.cpp:58
-#, kde-format
-msgid "Tagalog"
-msgstr "Tagaloa"
+#~ msgid "Chinese"
+#~ msgstr "Txinera"
 
-#: languagetool/src/languagetoolcombobox.cpp:59
-#, kde-format
-msgid "Tamil"
-msgstr "Tamilera"
+#~ msgid "Danish"
+#~ msgstr "Daniera"
 
-#: languagetool/src/languagetoolcombobox.cpp:60
-#, kde-format
-msgid "Ukrainian"
-msgstr "Ukrainera"
+#~ msgid "Dutch"
+#~ msgstr "Nederlandera"
 
-#: languagetool/src/languagetoolconfigdialog.cpp:25
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure LanguageTool"
-msgstr "LanguageTool konfiguratzea"
+#~ msgid "English (Australian)"
+#~ msgstr "Ingelesa (Australiakoa)"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:24
-#, kde-format
-msgid "Use Local Instance"
-msgstr "Erabili instantzia lokala"
+#~ msgid "English (Canadian)"
+#~ msgstr "Ingelesa (Kanadakoa)"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:26
-#, kde-format
-msgid "Instance Path:"
-msgstr "Instantziaren bide-izena:"
+#~ msgid "Esperanto"
+#~ msgstr "Esperantoa"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:54
-#, kde-format
-msgid "Language:"
-msgstr "Hizkuntza:"
+#~ msgid "French"
+#~ msgstr "Frantsesa"
 
-#: languagetool/src/languagetoolconfigwidget.cpp:66
-#, kde-format
-msgid "Refresh"
-msgstr "Freskatu"
+#~ msgid "Galician"
+#~ msgstr "Galiziera"
 
-#: languagetool/src/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "An error was reported: %1"
-msgstr "Errore baten berri eman du: %1"
+#~ msgid "German"
+#~ msgstr "Alemana"
 
-#: languagetool/src/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "Failed to check grammar."
-msgstr "Gramatika aztertzea huts egin du."
+#~ msgid "Greek"
+#~ msgstr "Greziera"
 
-#: languagetool/src/languagetoolresultwidget.cpp:76
-#, kde-format
-msgid "Check"
-msgstr "Aztertu"
+#~ msgid "Italian"
+#~ msgstr "Italiera"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid ""
-"An error occurred attempting to load the list of available languages:\n"
-"%1"
-msgstr ""
-"Errore bat gertatu da hizkuntza erabilgarrien zerrenda zamatzen saiatzean:\n"
-"%1"
+#~ msgid "Japanese"
+#~ msgstr "Japoniera"
 
-#: languagetool/src/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid "List of Languages"
-msgstr "Hizkuntzen zerrenda"
+#~ msgid "Khmer"
+#~ msgstr "Khemerera"
+
+#~ msgid "Persian"
+#~ msgstr "Persiera"
+
+#~ msgid "Polish"
+#~ msgstr "Poloniera"
+
+#~ msgid "Portuguese"
+#~ msgstr "Portugesa"
+
+#~ msgid "Romanian"
+#~ msgstr "Errumaniera"
+
+#~ msgid "Russian"
+#~ msgstr "Errusiera"
+
+#~ msgid "Slovak"
+#~ msgstr "Eslovakiera"
+
+#~ msgid "Slovenian"
+#~ msgstr "Esloveniera"
+
+#~ msgid "Spanish"
+#~ msgstr "Gaztelania"
+
+#~ msgid "Swedish"
+#~ msgstr "Suediera"
+
+#~ msgid "Tagalog"
+#~ msgstr "Tagaloa"
+
+#~ msgid "Tamil"
+#~ msgstr "Tamilera"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ukrainera"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure LanguageTool"
+#~ msgstr "Konfiguratu «LanguageTool»"
+
+#~ msgid "Use Local Instance"
+#~ msgstr "Erabili instantzia lokala"
+
+#~ msgid "Instance Path:"
+#~ msgstr "Instantziaren bide-izena:"
+
+#~ msgid "Language:"
+#~ msgstr "Hizkuntza:"
+
+#~ msgid "Refresh"
+#~ msgstr "Freskatu"
+
+#~ msgid "An error was reported: %1"
+#~ msgstr "Errore baten berri eman du: %1"
+
+#~ msgid "Failed to check grammar."
+#~ msgstr "Gramatika aztertzea huts egin du."
+
+#~ msgid "Check"
+#~ msgstr "Aztertu"
+
+#~ msgid ""
+#~ "An error occurred attempting to load the list of available languages:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Errore bat gertatu da hizkuntza erabilgarrien zerrenda zamatzen "
+#~ "saiatzean:\n"
+#~ "%1"
+
+#~ msgid "List of Languages"
+#~ msgstr "Hizkuntzen zerrenda"
