@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2022-11-19 00:46+0000\n"
 "PO-Revision-Date: 2022-09-18 10:59+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
-#: grammalecte/plugin/grammalecteinterface.cpp:77
+#: grammalecte/grammalecteinterface.cpp:77
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "Preveri slovnico (Grammalecte)"
 
-#: grammalecte/plugin/grammalecteplugin.cpp:37
+#: grammalecte/grammalecteplugin.cpp:37
 #, kde-format
 msgid "Grammalecte Plugin"
 msgstr "Vtičnik Grammalecte"
 
-#: languagetool/plugin/languagetoolinterface.cpp:82
+#: languagetool/languagetoolinterface.cpp:82
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "Preveri slovnico (LanguageTool)"
 
-#: languagetool/plugin/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:96
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -44,12 +44,12 @@ msgstr ""
 "Besedilo bo poslano na zunanje spletno mesto (https://languagetool.org/).\n"
 "Ali želite nadaljevati?"
 
-#: languagetool/plugin/languagetoolinterface.cpp:97
+#: languagetool/languagetoolinterface.cpp:97
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "Preveri slovnico z LanguageTool"
 
-#: languagetool/plugin/languagetoolplugin.cpp:36
+#: languagetool/languagetoolplugin.cpp:36
 #, kde-format
 msgid "LanguageTool Plugin"
 msgstr "Vtičnik za LanguageTool"

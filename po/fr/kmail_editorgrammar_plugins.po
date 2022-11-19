@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2022-11-19 00:46+0000\n"
 "PO-Revision-Date: 2022-09-17 20:26+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: grammalecte/plugin/grammalecteinterface.cpp:77
+#: grammalecte/grammalecteinterface.cpp:77
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "&Vérifier la grammaire (Grammalecte)"
 
-#: grammalecte/plugin/grammalecteplugin.cpp:37
+#: grammalecte/grammalecteplugin.cpp:37
 #, kde-format
 msgid "Grammalecte Plugin"
 msgstr "Module externe Grammalecte"
 
-#: languagetool/plugin/languagetoolinterface.cpp:82
+#: languagetool/languagetoolinterface.cpp:82
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&Vérifier la grammaire (LanguageTool)"
 
-#: languagetool/plugin/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:96
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -45,12 +45,12 @@ msgstr ""
 "org/).\n"
 "Voulez-vous continuer ?"
 
-#: languagetool/plugin/languagetoolinterface.cpp:97
+#: languagetool/languagetoolinterface.cpp:97
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "Vérifier la grammaire avec LanguageTool"
 
-#: languagetool/plugin/languagetoolplugin.cpp:36
+#: languagetool/languagetoolplugin.cpp:36
 #, kde-format
 msgid "LanguageTool Plugin"
 msgstr "Module externe LanguageTool"
