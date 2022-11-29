@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:47+0000\n"
-"PO-Revision-Date: 2022-10-12 15:39+0200\n"
+"PO-Revision-Date: 2022-11-28 15:13+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -109,13 +109,13 @@ msgstr "Selige le adressario ubi tu vole immagazinar contactos fusionate:"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "Selige toto"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
-#, fuzzy, kde-format
+#, kde-format
 msgid "Deselect All"
-msgstr "De-selectiona Omne"
+msgstr "De-selectiona Toto"
 
 #: mergelib/searchduplicate/mergecontactselectinformationtabwidget.cpp:35
 #, kde-format
@@ -128,10 +128,9 @@ msgid "Contacts"
 msgstr "Contactos"
 
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
-#, fuzzy, kde-format
-#| msgid "Duplicate contact %1"
+#, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
-msgstr "Comtacto duplicate  %1"
+msgstr "Duplicate contacto \"%1\" (%2 vices)"
 
 #: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
 #, kde-format
@@ -156,12 +155,12 @@ msgid "Merge"
 msgstr "Fusiona"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
-#, fuzzy, kde-format
+#, kde-format
 msgid "Expand All"
 msgstr "Expande omne"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
-#, fuzzy, kde-format
+#, kde-format
 msgid "Collapse All"
 msgstr "Plica omne"
 

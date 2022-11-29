@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# giovanni <g.sora@tiscali.it>, 2020, 2021.
+# giovanni <g.sora@tiscali.it>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-14 02:35+0000\n"
-"PO-Revision-Date: 2021-08-31 18:26+0200\n"
+"PO-Revision-Date: 2022-11-28 15:13+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: grammalecte/plugin/grammalecteinterface.cpp:77
 #, kde-format
@@ -356,10 +356,9 @@ msgid "Failed to check grammar."
 msgstr "Falleva a verificar grmmatica."
 
 #: languagetool/src/languagetoolresultwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Check Again"
+#, kde-format
 msgid "Check"
-msgstr "Verifica de nove"
+msgstr "Verifica"
 
 #: languagetool/src/languagetoolupdatecombobox.cpp:75
 #, kde-format
