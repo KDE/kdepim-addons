@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-07-14 19:11+0200\n"
+"PO-Revision-Date: 2022-11-28 15:58+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -34,16 +34,14 @@ msgid "Do you want to vacuum akonadi database?"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:31
-#, fuzzy, kde-format
-#| msgid "&Akonadi Vacuum..."
+#, kde-format
 msgid "Akonadi Vacuum"
-msgstr "&Akonadi Vacuum..."
+msgstr "Akonadi Vacuum (vacuar de akonadi)..."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "&Akonadi Vacuum..."
+#, kde-format
 msgid "Vacuum"
-msgstr "&Akonadi Vacuum..."
+msgstr "Vacuum..."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
@@ -53,32 +51,29 @@ msgstr "&Akonadi Fsck..."
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
 msgid "Do you want to fsck akonadi database?"
-msgstr ""
+msgstr "Tu vole executar fsck sur lòe base de datos de akonadi?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:51
-#, fuzzy, kde-format
-#| msgid "&Akonadi Fsck..."
+#, kde-format
 msgid "Akonadi Fsck"
-msgstr "&Akonadi Fsck..."
+msgstr "Fsck de Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
 msgid "Fsck"
-msgstr ""
+msgstr "Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:75
-#, fuzzy, kde-format
-#| msgid "&Akonadi Fsck..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Fsck"
-msgstr "&Akonadi Fsck..."
+msgstr "Fsck de Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:78
-#, fuzzy, kde-format
-#| msgid "&Akonadi Vacuum..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Vacuum"
-msgstr "&Akonadi Vacuum..."
+msgstr "Akonadi Vacuum (vacuar de akonadi)"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
 #, kde-format
