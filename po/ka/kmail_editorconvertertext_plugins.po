@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-01 00:49+0000\n"
-"PO-Revision-Date: 2022-08-23 07:03+0200\n"
+"PO-Revision-Date: 2022-12-04 11:47+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: markdown/markdownlib/markdownconfiguredialog.cpp:16
 #, kde-format
@@ -37,7 +37,7 @@ msgstr ""
 #: markdown/markdownlib/markdownconverter.cpp:68
 #, kde-format
 msgid "Failed to compile the Markdown document."
-msgstr ""
+msgstr "Markdown-ის დოკუმენტის კომპილაციის შეცდომა."
 
 #: markdown/markdownlib/markdowncreateimagedialog.cpp:27
 #, kde-format
