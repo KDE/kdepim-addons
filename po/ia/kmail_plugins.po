@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-11-28 15:58+0100\n"
+"PO-Revision-Date: 2022-12-14 16:04+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -31,7 +31,7 @@ msgstr "&Akonadi Vacuum..."
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
 msgid "Do you want to vacuum akonadi database?"
-msgstr ""
+msgstr "Tu vole vacuar base de datos de akonadi?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:31
 #, kde-format
