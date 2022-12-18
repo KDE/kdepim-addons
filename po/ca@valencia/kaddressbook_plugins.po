@@ -258,7 +258,7 @@ msgstr "Cònjuge"
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:120
 #, kde-format
 msgid "(Undefined)"
-msgstr "(Sense definir)"
+msgstr "(Sense establir)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
 #, kde-format
