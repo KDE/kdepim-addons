@@ -9,10 +9,15 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
-
+#include <QWindow>
+namespace
+{
+static const char myViewerPluginExternalEditDialog[] = "ViewerPluginExternalEditDialog";
+}
 ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     : QDialog(parent)
     , mEditWidget(new ViewerPluginExternalEditWidget(this))
@@ -44,20 +49,20 @@ void ViewerPluginExternalEditDialog::slotScriptIsValid(bool valid)
     mOkButton->setEnabled(valid);
 }
 
-void ViewerPluginExternalEditDialog::readConfig()
-{
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ViewerPluginExternalEditDialog");
-    const QSize size = group.readEntry("Size", QSize(350, 200));
-    if (size.isValid()) {
-        resize(size);
-    }
-}
-
 void ViewerPluginExternalEditDialog::saveConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ViewerPluginExternalEditDialog");
-    group.writeEntry("Size", size());
+    KConfigGroup group(KSharedConfig::openStateConfig(), myViewerPluginExternalEditDialog);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
+}
+
+void ViewerPluginExternalEditDialog::readConfig()
+{
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(350, 200));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myViewerPluginExternalEditDialog);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ViewerPluginExternalEditDialog::slotAccepted()

@@ -52,7 +52,7 @@ void ConfirmBeforeDeletingDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfirmBeforeDeletingConfigGroupName);
     KWindowConfig::saveWindowSize(windowHandle(), group);
-    group.writeEntry("Size", size());
+    group.sync();
 }
 
 void ConfirmBeforeDeletingDialog::readConfig()

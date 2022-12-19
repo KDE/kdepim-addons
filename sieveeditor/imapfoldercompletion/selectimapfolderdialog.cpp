@@ -11,9 +11,11 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 namespace
 {
 static const char myConfigSelectImapFolderDialog[] = "SelectImapFolderDialog";
@@ -56,19 +58,20 @@ QString SelectImapFolderDialog::selectedFolderName() const
     return mSelectImapFolderWidget->selectedFolderName();
 }
 
+void SelectImapFolderDialog::readConfig()
+{
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(500, 300));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigSelectImapFolderDialog);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
+}
+
 void SelectImapFolderDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigSelectImapFolderDialog);
-    group.writeEntry("Size", size());
-}
-
-void SelectImapFolderDialog::readConfig()
-{
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigSelectImapFolderDialog);
-    const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
+    KWindowConfig::saveWindowSize(windowHandle(), group);
+    group.sync();
 }
 
 void SelectImapFolderDialog::slotCreateFolder()

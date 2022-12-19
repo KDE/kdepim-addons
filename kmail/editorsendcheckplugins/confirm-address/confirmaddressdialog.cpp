@@ -10,9 +10,11 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 namespace
 {
@@ -53,16 +55,17 @@ ConfirmAddressDialog::~ConfirmAddressDialog()
 void ConfirmAddressDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigConfirmAddressDialog);
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
+    group.sync();
 }
 
 void ConfirmAddressDialog::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(500, 300));
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigConfirmAddressDialog);
-    const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ConfirmAddressDialog::setValidAddresses(const QStringList &addresses)
