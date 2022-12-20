@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2022-07-21 09:59+0200\n"
 "Last-Translator: mkkDr2010 <mkondarev@yahoo.de>\n"
 "Language-Team: none\n"
@@ -212,23 +212,23 @@ msgstr "Въведете нов имейл адрес:"
 msgid "Do you want to remove this email address?"
 msgstr "Искате ли да премахнете този имейл адрес?"
 
-#: confirm-address/confirmaddressdialog.cpp:24
+#: confirm-address/confirmaddressdialog.cpp:26
 #, kde-format
 msgid "Add Selected Emails to WhiteList"
 msgstr "Добавяне на избрани имейли към белия списък"
 
-#: confirm-address/confirmaddressdialog.cpp:26
+#: confirm-address/confirmaddressdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr "Потвърждаване на адресите"
 
-#: confirm-address/confirmaddressdialog.cpp:88
+#: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgid "All selected emails are added to white list"
 msgstr "Всички избрани имейли се добавят към белия списък"
 
-#: confirm-address/confirmaddressdialog.cpp:88
+#: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgid "Emails added to white list"
 msgstr "Имейлите са добавени към белия списък"

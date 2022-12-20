@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2019-12-18 20:04+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -256,7 +256,7 @@ msgstr "Kas eemaldada skript \"%1\"?"
 msgid "Remove External Script"
 msgstr "Välise skripti eemaldamine"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:20
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"

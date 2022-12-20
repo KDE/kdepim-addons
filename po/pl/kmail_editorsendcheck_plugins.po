@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2021-11-07 11:11+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -210,23 +210,23 @@ msgstr "Podaj nowy adres pocztowy:"
 msgid "Do you want to remove this email address?"
 msgstr "Czy usunąć ten adres e-mail?"
 
-#: confirm-address/confirmaddressdialog.cpp:24
+#: confirm-address/confirmaddressdialog.cpp:26
 #, kde-format
 msgid "Add Selected Emails to WhiteList"
 msgstr "Dodaj wybrane adresy do białej listy"
 
-#: confirm-address/confirmaddressdialog.cpp:26
+#: confirm-address/confirmaddressdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr "Potwierdzaj adresy"
 
-#: confirm-address/confirmaddressdialog.cpp:88
+#: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgid "All selected emails are added to white list"
 msgstr "Wszystkie wybrane adresy zostaną dodane do białej białej listy"
 
-#: confirm-address/confirmaddressdialog.cpp:88
+#: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgid "Emails added to white list"
 msgstr "Adresy pocztowe dodane do białej listy"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2022-02-06 22:03+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -261,7 +261,7 @@ msgstr "Vuoi rimuovere questo script «%1»?"
 msgid "Remove External Script"
 msgstr "Rimuovi script esterno"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:20
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"

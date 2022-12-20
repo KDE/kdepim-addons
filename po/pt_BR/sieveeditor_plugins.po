@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2019-12-20 10:58-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -53,12 +53,12 @@ msgstr "Criar pasta"
 msgid "Error during creating folder: %1"
 msgstr "Erro durante a criação da pasta: %1"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:25
+#: imapfoldercompletion/selectimapfolderdialog.cpp:27
 #, kde-format
 msgid "Create Folder..."
 msgstr "Criar pasta..."
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:27
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"

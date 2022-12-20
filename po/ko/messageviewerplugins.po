@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2022-02-20 22:13+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -255,7 +255,7 @@ msgstr "이 스크립트 \"%1\"을(를) 삭제하시겠습니까?"
 msgid "Remove External Script"
 msgstr "외부 스크립트 삭제"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:20
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"

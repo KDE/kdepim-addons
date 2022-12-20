@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2017-08-02 21:42+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -256,7 +256,7 @@ msgstr "Chcete odstrániť tento skript? \"%1\"?"
 msgid "Remove External Script"
 msgstr "Odstrániť externý skript"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:20
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
 #, fuzzy, kde-format
 #| msgid "Add or Modify External Script"
 msgctxt "@title:window"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2020-07-31 19:21+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -51,12 +51,12 @@ msgstr "Opret mappe"
 msgid "Error during creating folder: %1"
 msgstr ""
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:25
+#: imapfoldercompletion/selectimapfolderdialog.cpp:27
 #, kde-format
 msgid "Create Folder..."
 msgstr "Opret mappe..."
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:27
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"

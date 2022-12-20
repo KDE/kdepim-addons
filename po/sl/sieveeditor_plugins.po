@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-29 00:47+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2020-08-20 12:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -54,12 +54,12 @@ msgstr "Ustvari mapo"
 msgid "Error during creating folder: %1"
 msgstr "Napaka med ustvarjanjem mape: %1"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:25
+#: imapfoldercompletion/selectimapfolderdialog.cpp:27
 #, kde-format
 msgid "Create Folder..."
 msgstr "Ustvari mapo..."
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:27
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"

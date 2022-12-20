@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
 "PO-Revision-Date: 2021-11-09 11:10-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -213,23 +213,23 @@ msgstr "Digite o novo endereço de e-mail:"
 msgid "Do you want to remove this email address?"
 msgstr "Deseja remover este endereço de e-mail?"
 
-#: confirm-address/confirmaddressdialog.cpp:24
+#: confirm-address/confirmaddressdialog.cpp:26
 #, kde-format
 msgid "Add Selected Emails to WhiteList"
 msgstr "Adicionar os e-mails selecionados à lista de permissões"
 
-#: confirm-address/confirmaddressdialog.cpp:26
+#: confirm-address/confirmaddressdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr "Confirmar endereços"
 
-#: confirm-address/confirmaddressdialog.cpp:88
+#: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgid "All selected emails are added to white list"
 msgstr "Todos os e-mails selecionados foram adicionados à lista de permissões"
 
-#: confirm-address/confirmaddressdialog.cpp:88
+#: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgid "Emails added to white list"
 msgstr "E-mails adicionados à lista de permissões"
