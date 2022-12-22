@@ -12,7 +12,10 @@
 #include <QCheckBox>
 #include <QLabel>
 #include <QVBoxLayout>
-
+namespace
+{
+static const char myExternalComposerGroupName[] = "External Composer";
+}
 ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConfigureBaseWidget(parent)
     , mExternalEditorCheck(new QCheckBox(i18n("Use external editor instead of composer"), this))
@@ -62,7 +65,7 @@ ExternalComposerConfigureWidget::~ExternalComposerConfigureWidget() = default;
 void ExternalComposerConfigureWidget::loadSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group = config->group(QStringLiteral("External Composer"));
+    KConfigGroup group = config->group(myExternalComposerGroupName);
     mExternalEditorCheck->setChecked(group.readEntry("Enabled", false));
     mEditorRequester->setText(group.readEntry("ComposerPath", QStringLiteral("kwrite %f")));
 }
@@ -70,7 +73,7 @@ void ExternalComposerConfigureWidget::loadSettings()
 void ExternalComposerConfigureWidget::saveSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group = config->group(QStringLiteral("External Composer"));
+    KConfigGroup group = config->group(myExternalComposerGroupName);
     group.writeEntry("Enabled", mExternalEditorCheck->isChecked());
     group.writeEntry("ComposerPath", mEditorRequester->text());
 }
