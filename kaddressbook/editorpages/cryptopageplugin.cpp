@@ -21,9 +21,6 @@
 #include <QComboBox>
 #include <QHBoxLayout>
 
-#include "gpgme++/data.h"
-#include "gpgme++/key.h"
-
 #include <Libkleo/Enum>
 #include <Libkleo/KeyRequester>
 
