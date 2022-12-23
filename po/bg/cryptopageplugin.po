@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-23 00:47+0000\n"
 "PO-Revision-Date: 2022-05-20 20:38+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <dict@ludost.net>\n"
@@ -18,37 +18,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.0\n"
 
-#: cryptopageplugin.cpp:40
+#: cryptopageplugin.cpp:37
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Разрешени протоколи"
 
-#: cryptopageplugin.cpp:55
+#: cryptopageplugin.cpp:52
 #, kde-format
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Предпочитан OpenPGP ключ за шифроване:"
 
-#: cryptopageplugin.cpp:60
+#: cryptopageplugin.cpp:57
 #, kde-format
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Предпочитано S/MIME удостоверение за шифроване:"
 
-#: cryptopageplugin.cpp:65
+#: cryptopageplugin.cpp:62
 #, kde-format
 msgid "Message Preference"
 msgstr "Настройки на съобщението"
 
-#: cryptopageplugin.cpp:74
+#: cryptopageplugin.cpp:71
 #, kde-format
 msgid "Sign:"
 msgstr "Подписване:"
 
-#: cryptopageplugin.cpp:91
+#: cryptopageplugin.cpp:88
 #, kde-format
 msgid "Encrypt:"
 msgstr "Шифроване:"
 
-#: cryptopageplugin.cpp:109
+#: cryptopageplugin.cpp:106
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Настройки на шифроването"

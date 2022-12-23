@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cryptopageplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-23 00:47+0000\n"
 "PO-Revision-Date: 2011-12-21 14:56+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -18,37 +18,37 @@ msgstr ""
 "X-Language: km-KH\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cryptopageplugin.cpp:40
+#: cryptopageplugin.cpp:37
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "ពិធីការ​ដែល​បាន​អនុញ្ញាត"
 
-#: cryptopageplugin.cpp:55
+#: cryptopageplugin.cpp:52
 #, kde-format
 msgid "Preferred OpenPGP encryption key:"
 msgstr "សោ​អ៊ិនគ្រីប OpenPGP ដែល​ពេញចិត្ត ៖"
 
-#: cryptopageplugin.cpp:60
+#: cryptopageplugin.cpp:57
 #, kde-format
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "វិញ្ញាបនបត្រ​អ៊ិនគ្រីប S/MIME ដែល​ពេញចិត្ត ៖"
 
-#: cryptopageplugin.cpp:65
+#: cryptopageplugin.cpp:62
 #, kde-format
 msgid "Message Preference"
 msgstr "ចំណូលចិត្ត​សារ"
 
-#: cryptopageplugin.cpp:74
+#: cryptopageplugin.cpp:71
 #, kde-format
 msgid "Sign:"
 msgstr "សញ្ញា ៖"
 
-#: cryptopageplugin.cpp:91
+#: cryptopageplugin.cpp:88
 #, kde-format
 msgid "Encrypt:"
 msgstr "អ៊ិនគ្រីប ៖"
 
-#: cryptopageplugin.cpp:109
+#: cryptopageplugin.cpp:106
 #, kde-format
 msgid "Crypto Settings"
 msgstr "ការ​កំណត់​ការ​អ៊ិនគ្រីប"

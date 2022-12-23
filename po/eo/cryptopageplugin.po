@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cryptopageplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-23 00:47+0000\n"
 "PO-Revision-Date: 2012-05-22 16:50+0200\n"
 "Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -17,37 +17,37 @@ msgstr ""
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: cryptopageplugin.cpp:40
+#: cryptopageplugin.cpp:37
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Permesitaj protokoloj"
 
-#: cryptopageplugin.cpp:55
+#: cryptopageplugin.cpp:52
 #, kde-format
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Preferata ŝlosilo de OpenPGP-ĉifrado:"
 
-#: cryptopageplugin.cpp:60
+#: cryptopageplugin.cpp:57
 #, kde-format
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Preferata atestilo de S/MIME-ĉifrado:"
 
-#: cryptopageplugin.cpp:65
+#: cryptopageplugin.cpp:62
 #, kde-format
 msgid "Message Preference"
 msgstr "Agordoj de mesaĝoj"
 
-#: cryptopageplugin.cpp:74
+#: cryptopageplugin.cpp:71
 #, kde-format
 msgid "Sign:"
 msgstr "Subskribi:"
 
-#: cryptopageplugin.cpp:91
+#: cryptopageplugin.cpp:88
 #, kde-format
 msgid "Encrypt:"
 msgstr "Ĉifri:"
 
-#: cryptopageplugin.cpp:109
+#: cryptopageplugin.cpp:106
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Agordoj pri ĉifrado"

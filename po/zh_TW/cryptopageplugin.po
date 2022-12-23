@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-08 00:48+0000\n"
+"POT-Creation-Date: 2022-12-23 00:47+0000\n"
 "PO-Revision-Date: 2009-12-09 17:22+0800\n"
 "Last-Translator: Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv "
 "dot tw>\n"
@@ -18,37 +18,37 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cryptopageplugin.cpp:40
+#: cryptopageplugin.cpp:37
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "允許的協定"
 
-#: cryptopageplugin.cpp:55
+#: cryptopageplugin.cpp:52
 #, kde-format
 msgid "Preferred OpenPGP encryption key:"
 msgstr "預設使用的 OpenPGP 加密金鑰："
 
-#: cryptopageplugin.cpp:60
+#: cryptopageplugin.cpp:57
 #, kde-format
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "預設使用的 S/MIME 加密認證："
 
-#: cryptopageplugin.cpp:65
+#: cryptopageplugin.cpp:62
 #, kde-format
 msgid "Message Preference"
 msgstr "信件設定"
 
-#: cryptopageplugin.cpp:74
+#: cryptopageplugin.cpp:71
 #, kde-format
 msgid "Sign:"
 msgstr "簽署："
 
-#: cryptopageplugin.cpp:91
+#: cryptopageplugin.cpp:88
 #, kde-format
 msgid "Encrypt:"
 msgstr "加密："
 
-#: cryptopageplugin.cpp:109
+#: cryptopageplugin.cpp:106
 #, kde-format
 msgid "Crypto Settings"
 msgstr "加密設定"
