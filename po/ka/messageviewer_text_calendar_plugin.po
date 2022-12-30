@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2022-08-22 17:29+0200\n"
+"PO-Revision-Date: 2022-12-29 12:04+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,18 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr ""
+msgstr "აირჩიეთ დამსწრეები"
 
 #: attendeeselector.cpp:40
 #, kde-format
 msgid "Click to add a new attendee"
-msgstr ""
+msgstr "ახალი დამსწრის დასამატებლად დააწკაპუნეთ"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: attendeeselector.ui:24
@@ -93,30 +93,30 @@ msgstr ""
 #: text_calendar.cpp:444
 #, kde-format
 msgid "Select Address"
-msgstr ""
+msgstr "აირჩიეთ მისამართი"
 
 #: text_calendar.cpp:509
 #, kde-format
 msgid "Answer: "
-msgstr ""
+msgstr "პასუხი: "
 
 #: text_calendar.cpp:511
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
-msgstr ""
+msgstr "უარყოფილია: %1"
 
 #: text_calendar.cpp:513
 #, kde-format
 msgctxt "Unsure if it is possible to attend."
 msgid "Tentative: %1"
-msgstr ""
+msgstr "სავარაუდო: %1"
 
 #: text_calendar.cpp:515
 #, kde-format
 msgctxt "Accepted the invitation."
 msgid "Accepted: %1"
-msgstr ""
+msgstr "მიღებულია: %1"
 
 #: text_calendar.cpp:537 text_calendar.cpp:557
 #, kde-format
@@ -141,7 +141,7 @@ msgstr ""
 #: text_calendar.cpp:671
 #, kde-format
 msgid "Forwarded: %1"
-msgstr ""
+msgstr "გადაგზავნილი: %1"
 
 #: text_calendar.cpp:674
 #, kde-format
@@ -151,12 +151,12 @@ msgstr ""
 #: text_calendar.cpp:729 text_calendar.cpp:735
 #, kde-format
 msgid "\"%1\" occurred already."
-msgstr ""
+msgstr "\"%1\" უკვე მოხდა."
 
 #: text_calendar.cpp:731 text_calendar.cpp:748
 #, kde-format
 msgid "\"%1\" is currently in-progress."
-msgstr ""
+msgstr "\"%1\" ახლა მიმდინარეობს."
 
 #: text_calendar.cpp:737
 #, kde-format
@@ -422,7 +422,7 @@ msgstr "არ გააგზავნო"
 #: text_calendar.cpp:1292
 #, kde-format
 msgid "Send EMail"
-msgstr ""
+msgstr "ელფოსტის გაგზავნა"
 
 #: text_calendar.cpp:1304
 #, kde-format
@@ -432,12 +432,12 @@ msgstr "Re: %1"
 #: text_calendar.cpp:1370
 #, kde-format
 msgid "Open Attachment"
-msgstr ""
+msgstr "მიმაგრებული ფაილის გახსნა"
 
 #: text_calendar.cpp:1371
 #, kde-format
 msgid "Save Attachment As..."
-msgstr ""
+msgstr "მიმაგრებული ფაილის შენახვა, როგორც..."
 
 #: text_calendar.cpp:1387
 #, kde-format
@@ -472,7 +472,7 @@ msgstr ""
 #: text_calendar.cpp:1399
 #, kde-format
 msgid "Postpone"
-msgstr ""
+msgstr "გადადება"
 
 #: text_calendar.cpp:1401
 #, kde-format
