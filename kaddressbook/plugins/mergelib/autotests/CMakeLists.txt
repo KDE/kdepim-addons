@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2022 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
 set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )

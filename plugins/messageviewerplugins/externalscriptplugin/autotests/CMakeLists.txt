@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2022 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 add_definitions (-DTEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/externaldatas")
 

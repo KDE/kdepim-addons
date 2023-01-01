@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2022 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 kcoreaddons_add_plugin(messageviewer_fancyheaderstyleplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/messageviewer/headerstyle)
 target_sources(messageviewer_fancyheaderstyleplugin PRIVATE

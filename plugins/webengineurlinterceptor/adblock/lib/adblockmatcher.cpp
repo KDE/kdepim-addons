@@ -1,5 +1,5 @@
 /*
-   SPDX-FileCopyrightText: 2016-2022 Laurent Montel <montel@kde.org>
+   SPDX-FileCopyrightText: 2016-2023 Laurent Montel <montel@kde.org>
 
    This file originates from QupZilla - WebKit based browser
    SPDX-FileCopyrightText: 2014 David Rosca <nowrep@gmail.com>

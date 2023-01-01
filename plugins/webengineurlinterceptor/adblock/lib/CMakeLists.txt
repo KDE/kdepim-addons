@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2022 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
 ecm_qt_declare_logging_category(adblocklibprivate HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor)

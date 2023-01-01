@@ -2,7 +2,7 @@
  *
  * This file is a part of the rekonq project
  *
- * SPDX-FileCopyrightText: 2013-2022 Laurent Montel <montel@kde.org>
+ * SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
  * based on code from rekonq
  * SPDX-FileCopyrightText: 2010-2012 Andrea Diamantini <adjam7 at gmail dot com>
  *
