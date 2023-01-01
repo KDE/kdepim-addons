@@ -109,7 +109,8 @@ msgid "Group: %1"
 msgstr "Grupo: %1"
 
 #: templates/foodestablishmentreservation.html:9
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Number Of People: %1"
 msgid "Number Of People: %1"
 msgstr "Número de persoas: %1"
 
