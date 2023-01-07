@@ -10,6 +10,7 @@
         "Description[en_GB]": "This plugin reduces mail header to strict minimum.",
         "Description[es]": "Este complemento reduce el encabezado del mensaje al mínimo estricto.",
         "Description[et]": "See plugin kahandab kirja päise rangelt nõutava miinimumini.",
+        "Description[eu]": "Plugin horrek postako goiburua gutxienekora murrizten du.",
         "Description[fi]": "Tällä liitännäisellä voi vähentää viestin näytetyt otsakkeet minimiin.",
         "Description[fr]": "Ce module réduit l'en-tête du message au strict minimum.",
         "Description[gl]": "Este complemento reduce a cabeceira do correo ao mínimo posíbel.",
