@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2017.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2022-10-19 12:24+0300\n"
+"PO-Revision-Date: 2023-01-10 21:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -109,12 +109,12 @@ msgstr "Antivirüs Sihirbazı"
 #: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Spam Wizard"
-msgstr "KMail İstenmeyen Posta Sihirbazı'na Hoş Geldiniz"
+msgstr "K Posta İstenmeyen Posta Sihirbazı'na Hoş Geldiniz"
 
 #: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Virus Wizard"
-msgstr "KMail Antivirüs Sihirbazı'na Hoş Geldiniz"
+msgstr "K Posta Antivirüs Sihirbazı'na Hoş Geldiniz"
 
 #: common/antispamwizard.cpp:96
 #, kde-format
@@ -247,12 +247,12 @@ msgstr ""
 #: common/antispamwizard.cpp:581
 #, kde-format
 msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
-msgstr "<p>Sihirbaz aşağıdaki filtreleri oluşturacak:<ul>%1</ul></p>"
+msgstr "<p>Sihirbaz aşağıdaki süzgeçleri oluşturacak:<ul>%1</ul></p>"
 
 #: common/antispamwizard.cpp:584
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
-msgstr "<p>Sihirbaz aşağıdaki filtreleri değiştirecek:<ul>%1</ul></p>"
+msgstr "<p>Sihirbaz aşağıdaki süzgeçleri değiştirecek:<ul>%1</ul></p>"
 
 #: common/antispamwizard.cpp:981
 #, kde-format
@@ -261,7 +261,7 @@ msgid ""
 "and setup KMail to work with them."
 msgstr ""
 "Sihirbaz, gereksiz (spam) tespiti için araçları arayacak\n"
-"ve KMail'in onlarla çalışabilmesi için yapılandıracak."
+"ve K Posta'nın onlarla çalışabilmesi için yapılandıracak."
 
 #: common/antispamwizard.cpp:983
 #, kde-format
@@ -277,16 +277,16 @@ msgid ""
 "time consuming; please consider deleting the filter rules created by the "
 "wizard to get back to the former behavior.</p>"
 msgstr ""
-"<p>Burada, bazı bilinen çalışır antivirüs yazılımlarının kullanılmasında "
-"KMail'in filtre kurallarını ayarlamada destek alabilirsiniz.</p><p>Sihirbaz "
+"<p>Burada, bazı bilinen çalışır antivirüs yazılımlarının kullanılmasında K "
+"Posta'nın süzgeç kurallarını ayarlamada destek alabilirsiniz.</p><p>Sihirbaz "
 "bilgisayarınızda bu araçları tespit edebilir ve bu araçları kullanıp virüslü "
 "iletileri sınıflandırmak ve ayırmak için filtre kuralları oluşturabilir. "
 "Sihirbaz mevcut filtre kurallarını önemsemeyecektir: her zaman yeni kural "
-"ekler.</p><p><b>Uyarı:</b> KMail virüslü iletilerin taranması sırasında "
-"donuyor gibi görünürse, KMail'in yanıt vermesi ile ilgili sorunlar "
+"ekler.</p><p><b>Uyarı:</b> K Posta virüslü iletilerin taranması sırasında "
+"donuyor gibi görünürse, K Posta'nın yanıt vermesi ile ilgili sorunlar "
 "yaşayabilirsiniz. Bunun nedeni, antivirüs araçlarının işlemlerinin "
 "genellikle zaman gerektirmesindendir. Önceki davranışına dönmek için "
-"sihirbaz tarafından oluşturulmuş filtreleri silebilirsiniz.</p>"
+"sihirbaz tarafından oluşturulmuş süzgeçleri silebilirsiniz.</p>"
 
 #: common/antispamwizard.cpp:1033
 #, kde-format
@@ -352,8 +352,8 @@ msgid ""
 "a special folder."
 msgstr ""
 "İletilerinizi antivirüs araçlarının denetlemesine izin ver. Sihirbaz ilgili "
-"filtreleri oluşturacaktır. İletiler genellikle araçlar tarafından "
-"işaretlenir ve aşağıdaki filtreler bu etiketlere göre davranabilir. Örn. "
+"süzgeçleri oluşturacaktır. İletiler genellikle araçlar tarafından "
+"işaretlenir ve aşağıdaki süzgeçler bu etiketlere göre davranabilir. Örn. "
 "virüslü iletiyi özel bir klasöre taşıma."
 
 #: common/antispamwizard.cpp:1196
@@ -369,8 +369,8 @@ msgid ""
 "trash folder, but you may change that in the folder view."
 msgstr ""
 "Virüslü olarak sınıflandırılan iletileri tespit etmek ve bunları "
-"oluşturulmuş öntanımlı bir klasöre taşımak için filtre. Öntanımlı klasör çöp "
-"klasörüdür, ancak bunu aşağıdaki klasör görünümünden değiştirebilirsiniz."
+"oluşturulmuş öntanımlı bir klasöre taşımak için süzgeç. Öntanımlı klasör çöp "
+"klasörüdür; ancak bunu aşağıdaki klasör görünümünden değiştirebilirsiniz."
 
 #: common/antispamwizard.cpp:1204
 #, kde-format
