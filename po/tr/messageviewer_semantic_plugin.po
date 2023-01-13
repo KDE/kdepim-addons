@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:46+0000\n"
-"PO-Revision-Date: 2022-04-05 12:18+0300\n"
+"PO-Revision-Date: 2023-01-13 00:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
@@ -35,7 +35,7 @@ msgstr "Rezervasyonu takvimiminize ekle."
 #: itineraryurlhandler.cpp:132
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
-msgstr "Rezervasyonu KDE Itienary'ye içe aktar."
+msgstr "Rezervasyonu KDE Yolcu Belgesi'ne içe aktar."
 
 #: itineraryurlhandler.cpp:135
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "Takvime Ekle"
 
 #: templates/itinerary.html:72
 msgid "Add to KDE Itinerary"
-msgstr "KDE Itinerary'ye Ekle"
+msgstr "KDE Yolcu Belgesi'ne Ekle"
 
 #: templates/itinerary.html:78
 msgid "Send to Device..."
