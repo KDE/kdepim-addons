@@ -12,13 +12,13 @@
 
 #include "korganizer_picoftheday_plugin_debug.h"
 
-#include <KIO/Scheduler>
 #include <KIO/StoredTransferJob>
 #include <KLocalizedString>
 
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QTimer>
 #include <QUrlQuery>
 
 #include <chrono>
