@@ -43,7 +43,7 @@ static bool isCalendarContent(KMime::Content *content)
 {
     const auto ct = content->contentType();
     const QByteArray mimetype = ct ? ct->mimeType() : QByteArray();
-    if (mimetype == "text/calendar") {
+    if (mimetype == "text/calendar" || mimetype == "application/ics") {
         return true;
     }
     if (mimetype != "text/plain" && mimetype != "application/octet-stream") {
