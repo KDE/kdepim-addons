@@ -43,6 +43,7 @@ Dependencies:
     'pim/kpkpass' : '@same'
     'pim/kitinerary' : '@same'
     'pim/kaddressbook' : '@same'
+    'libraries/ktextaddons': '@stable'
 
 - 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6']
   'require':
