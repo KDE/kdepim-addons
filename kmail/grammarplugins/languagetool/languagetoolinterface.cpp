@@ -8,10 +8,15 @@
 #include "languagetoolplugin_debug.h"
 #include <KMessageBox>
 #include <KPIMTextEdit/RichTextComposer>
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+#include <TextGrammarCheck/GrammarAction>
+#include <TextGrammarCheck/LanguageToolManager>
+#include <TextGrammarCheck/LanguageToolResultWidget>
+#else
 #include <PimCommonTextGrammarCheck/GrammarAction>
 #include <PimCommonTextGrammarCheck/LanguageToolManager>
 #include <PimCommonTextGrammarCheck/LanguageToolResultWidget>
-
+#endif
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KToggleAction>
@@ -21,16 +26,30 @@
 
 LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+    , mGrammarResultWidget(new TextGrammarCheck::LanguageToolResultWidget(this))
+#else
     , mGrammarResultWidget(new PimCommonTextGrammarCheck::LanguageToolResultWidget(this))
+#endif
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+    connect(mGrammarResultWidget, &TextGrammarCheck::LanguageToolResultWidget::replaceText, this, &LanguageToolInterface::slotReplaceText);
+    connect(mGrammarResultWidget, &TextGrammarCheck::LanguageToolResultWidget::checkAgain, this, &LanguageToolInterface::checkAgain);
+    connect(mGrammarResultWidget, &TextGrammarCheck::LanguageToolResultWidget::closeChecker, this, &LanguageToolInterface::closeChecker);
+    connect(mGrammarResultWidget, &TextGrammarCheck::LanguageToolResultWidget::configure, this, [this]() {
+        Q_EMIT configure(parentWidget());
+    });
+#else
     connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::LanguageToolResultWidget::replaceText, this, &LanguageToolInterface::slotReplaceText);
     connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::LanguageToolResultWidget::checkAgain, this, &LanguageToolInterface::checkAgain);
     connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::LanguageToolResultWidget::closeChecker, this, &LanguageToolInterface::closeChecker);
     connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::LanguageToolResultWidget::configure, this, [this]() {
         Q_EMIT configure(parentWidget());
     });
+
+#endif
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);

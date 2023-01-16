@@ -7,7 +7,11 @@
 
 #include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 class KActionCollection;
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+namespace TextGrammarCheck
+#else
 namespace PimCommonTextGrammarCheck
+#endif
 {
 class LanguageToolResultWidget;
 class GrammarAction;
@@ -28,6 +32,10 @@ private:
     void createAction(KActionCollection *ac);
     void closeChecker();
     bool checkAgain();
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+    TextGrammarCheck::LanguageToolResultWidget *const mGrammarResultWidget;
+#else
     PimCommonTextGrammarCheck::LanguageToolResultWidget *const mGrammarResultWidget;
+#endif
     KToggleAction *mAction = nullptr;
 };
