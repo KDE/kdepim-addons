@@ -8,13 +8,19 @@ ecm_qt_declare_logging_category(common_SRCS HEADER createtodoplugin_debug.h IDEN
 macro(add_kdepim_addons_viewerplugin_unittest _source _additional)
     set( _test ${_source}  ${_additional} ${common_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
+    if (USE_KTEXTADDONS_LIB)
+        set(TEXTTRANSLATE_LIBS KF5::TextTranslator)
+    else()
+        set(TEXTTRANSLATE_LIBS KF5::PimCommonTextTranslator)
+    endif()
     ecm_add_test(${_test} ${_name}.h
                  TEST_NAME ${_name}
                  NAME_PREFIX "kdepim-addons-"
                  LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt::Test KF5::KIOCore KF5::Mime
                  KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor
-                 KF5::AkonadiWidgets KF5::XmlGui KF5::CalendarSupport KF5::PimCommonTextTranslator
+                 KF5::AkonadiWidgets KF5::XmlGui KF5::CalendarSupport ${TEXTTRANSLATE_LIBS}
                 )
+
 endmacro ()
 
 
