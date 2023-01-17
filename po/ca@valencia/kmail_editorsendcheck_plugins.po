@@ -25,7 +25,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
-msgstr "Configuració del connector «Afig automàticament als contactes»"
+msgstr "Configureu el connector «Afig automàticament als contactes»"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, kde-format
@@ -106,7 +106,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
-msgstr "Configuració del connector «Comprova abans d'enviar el correu»"
+msgstr "Configureu el connector «Comprova abans d'enviar el correu»"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
 #, kde-format
@@ -160,7 +160,7 @@ msgstr "Voleu enviar algun adjunt?"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
-msgstr "Configuració del connector «Confirma l'adreça de correu»"
+msgstr "Configureu el connector «Confirma l'adreça de correu»"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
 #, kde-format

@@ -24,7 +24,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Markdown Plugin"
-msgstr "Configuració del connector «Markdown»"
+msgstr "Configureu el connector «Markdown»"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
 #, kde-format

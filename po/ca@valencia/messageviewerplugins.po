@@ -233,7 +233,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Script\" Plugin"
-msgstr "Configuració del connector «Script extern»"
+msgstr "Configureu el connector «Script extern»"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format

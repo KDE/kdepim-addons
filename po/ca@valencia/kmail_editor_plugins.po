@@ -104,7 +104,7 @@ msgstr "Inserix un espai no divisible"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure quick text"
-msgstr "Configuració del Text ràpid"
+msgstr "Configureu el Text ràpid"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
 #, kde-format

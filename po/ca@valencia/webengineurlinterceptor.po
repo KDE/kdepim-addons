@@ -188,7 +188,7 @@ msgstr "Desconegut"
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Filter"
-msgstr "Creació d'un filtre"
+msgstr "Creeu un filtre"
 
 #: adblock/lib/widgets/adblockcreatefilterdialog.cpp:46
 #, kde-format
@@ -214,7 +214,7 @@ msgstr "No s'ha afegit cap subscripció"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
-msgstr "Configuració del connector de Bloqueig publicitari"
+msgstr "Configureu el connector de Bloqueig publicitari"
 
 #: adblock/lib/widgets/adblocksettingwidget.cpp:54
 #, kde-format

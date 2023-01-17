@@ -49,4 +49,4 @@ msgstr "Una instal·lació local de «sendmail»"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
-msgstr "Configuració del compte"
+msgstr "Configureu el compte"

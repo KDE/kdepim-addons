@@ -34,7 +34,7 @@ msgstr "Busca al servei de &directori"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Day Numbers"
-msgstr "Configuració dels números de dia"
+msgstr "Configureu els números de dia"
 
 #: plugins/datenums/configdialog.cpp:43
 #, kde-format
@@ -150,7 +150,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Holidays"
-msgstr "Configuració dels festius"
+msgstr "Configureu els festius"
 
 #: plugins/hebrew/configdialog.cpp:42
 #, kde-format

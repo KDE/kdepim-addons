@@ -140,19 +140,19 @@ msgstr "Opcions per a l'afinament en la gestió del correu amb virus"
 #: common/antispamwizard.cpp:170
 #, kde-format
 msgid "Virus handling"
-msgstr "Gestió dels virus"
+msgstr "Gestioneu els virus"
 
 #: common/antispamwizard.cpp:249 common/antispamwizard.cpp:251
 #: common/antispamwizard.cpp:554
 #, kde-format
 msgid "Spam Handling"
-msgstr "Gestió del correu brossa"
+msgstr "Gestioneu el correu brossa"
 
 #: common/antispamwizard.cpp:285 common/antispamwizard.cpp:287
 #: common/antispamwizard.cpp:569
 #, kde-format
 msgid "Semi spam (unsure) handling"
-msgstr "Gestió del correu semibrossa (no segur)"
+msgstr "Gestioneu el correu semibrossa (no segur)"
 
 #: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
 #: common/antispamwizard.cpp:576
