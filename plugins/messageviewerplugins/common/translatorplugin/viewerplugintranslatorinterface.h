@@ -8,7 +8,11 @@
 
 #include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+namespace TextTranslator
+#else
 namespace PimCommonTextTranslator
+#endif
 {
 class TranslatorWidget;
 }
@@ -30,6 +34,10 @@ private:
     Q_REQUIRED_RESULT PimCommonTextTranslator::TranslatorWidget *widget();
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+    TextTranslator::TranslatorWidget *mTranslatorWidget = nullptr;
+#else
     PimCommonTextTranslator::TranslatorWidget *mTranslatorWidget = nullptr;
+#endif
 };
 }

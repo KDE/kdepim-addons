@@ -9,8 +9,11 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <PimCommon/CustomToolsWidgetng>
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+#include <TextTranslator/TranslatorConfigureDialog>
+#else
 #include <PimCommonTextTranslator/TranslatorConfigureDialog>
-
+#endif
 K_PLUGIN_CLASS_WITH_JSON(TranslatorPlugin, "pimcommon_translatorplugin.json")
 TranslatorPlugin::TranslatorPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::CustomToolsPlugin(parent)
@@ -41,7 +44,11 @@ bool TranslatorPlugin::hasConfigureDialog() const
 
 void TranslatorPlugin::showConfigureDialog(QWidget *parent)
 {
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+    TextTranslator::TranslatorConfigureDialog dialog(parent);
+#else
     PimCommonTextTranslator::TranslatorConfigureDialog dialog(parent);
+#endif
     dialog.exec();
 }
 

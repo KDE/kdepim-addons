@@ -5,7 +5,11 @@
 */
 
 #include "translatorview.h"
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+#include <TextTranslator/TranslatorWidget>
+#else
 #include <PimCommonTextTranslator/TranslatorWidget>
+#endif
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -14,11 +18,19 @@
 
 TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
     : PimCommon::CustomToolsViewInterface(parent)
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+    , mTranslatorWidget(new TextTranslator::TranslatorWidget(this))
+#else
     , mTranslatorWidget(new PimCommonTextTranslator::TranslatorWidget(this))
+#endif
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+    connect(mTranslatorWidget, &TextTranslator::TranslatorWidget::toolsWasClosed, this, &TranslatorView::toolsWasClosed);
+#else
     connect(mTranslatorWidget, &PimCommonTextTranslator::TranslatorWidget::toolsWasClosed, this, &TranslatorView::toolsWasClosed);
+#endif
 
     layout->addWidget(mTranslatorWidget);
     createAction(ac);
