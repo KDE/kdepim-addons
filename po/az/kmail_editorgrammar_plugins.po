@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-19 00:46+0000\n"
+"POT-Creation-Date: 2023-01-17 00:59+0000\n"
 "PO-Revision-Date: 2022-10-18 12:22+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.2\n"
 
-#: grammalecte/grammalecteinterface.cpp:77
+#: grammalecte/grammalecteinterface.cpp:97
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "Qrammatik &yoxlama (Grammalecte)"
 
-#: grammalecte/grammalecteplugin.cpp:37
+#: grammalecte/grammalecteplugin.cpp:42
 #, kde-format
 msgid "Grammalecte Plugin"
 msgstr "Grammalecte qoşması"
 
-#: languagetool/languagetoolinterface.cpp:82
+#: languagetool/languagetoolinterface.cpp:101
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "Qrammatika &yoxlaması (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:115
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -43,12 +43,12 @@ msgstr ""
 "Mətniniz xarici veb-sayta (https://languagetool.org/) göndəriləcək \n"
 "Davam etmək istəyirsiniz?"
 
-#: languagetool/languagetoolinterface.cpp:97
+#: languagetool/languagetoolinterface.cpp:116
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "LanguageTool ilə qrammatik yoxlama"
 
-#: languagetool/languagetoolplugin.cpp:36
+#: languagetool/languagetoolplugin.cpp:41
 #, kde-format
 msgid "LanguageTool Plugin"
 msgstr "LanguageTool qoşması"

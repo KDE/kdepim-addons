@@ -28,7 +28,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
-msgstr "Configuració del connector «Editor extern»"
+msgstr "Configureu el connector «Editor extern»"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:21
 #, kde-format

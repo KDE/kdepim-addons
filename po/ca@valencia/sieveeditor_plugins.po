@@ -39,7 +39,7 @@ msgstr "Selecciona els correu electrònics"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
-msgstr "Selecció dels correus electrònics"
+msgstr "Seleccioneu els correus electrònics"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107

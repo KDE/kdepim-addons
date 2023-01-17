@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-19 00:46+0000\n"
+"POT-Creation-Date: 2023-01-17 00:59+0000\n"
 "PO-Revision-Date: 2022-11-17 07:59+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.3\n"
 
-#: grammalecte/grammalecteinterface.cpp:77
+#: grammalecte/grammalecteinterface.cpp:97
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "A&ztertu gramatika (Grammalecte)"
 
-#: grammalecte/grammalecteplugin.cpp:37
+#: grammalecte/grammalecteplugin.cpp:42
 #, kde-format
 msgid "Grammalecte Plugin"
 msgstr "«Grammalecte» plugina"
 
-#: languagetool/languagetoolinterface.cpp:82
+#: languagetool/languagetoolinterface.cpp:101
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "A&ztertu gramatika (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:115
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -47,12 +47,12 @@ msgstr ""
 "org/).\n"
 "Jarraitu nahi duzu?"
 
-#: languagetool/languagetoolinterface.cpp:97
+#: languagetool/languagetoolinterface.cpp:116
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "Aztertu gramatika «LanguageTool» erabiliz"
 
-#: languagetool/languagetoolplugin.cpp:36
+#: languagetool/languagetoolplugin.cpp:41
 #, kde-format
 msgid "LanguageTool Plugin"
 msgstr "«LanguageTool» plugina"

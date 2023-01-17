@@ -54,4 +54,4 @@ msgstr "Encripta:"
 #: cryptopageplugin.cpp:106
 #, kde-format
 msgid "Crypto Settings"
-msgstr "Configuració de la criptografia"
+msgstr "Configureu la criptografia"

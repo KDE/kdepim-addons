@@ -695,7 +695,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
-msgstr "Importació de la vCard"
+msgstr "Importeu la vCard"
 
 #: vcards/engine/vcardviewerdialog.cpp:51
 #, kde-format

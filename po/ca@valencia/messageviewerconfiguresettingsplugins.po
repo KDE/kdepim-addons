@@ -72,7 +72,7 @@ msgstr "Verificada l'autenticació amb el servidor:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
-msgstr "Configuració del servidor de verificació d'autenticació"
+msgstr "Configureu el servidor de verificació d'autenticació"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
 #, kde-format
@@ -103,7 +103,7 @@ msgstr "Voleu suprimir el nom dels servidors seleccionats?"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure DKIM"
-msgstr "Configuració del DKIM"
+msgstr "Configureu DKIM"
 
 #: dkim-verify/dkimconfiguretab.cpp:38
 #: foldersettings/folderconfiguresettingspagewidget.cpp:36
@@ -134,7 +134,7 @@ msgstr "Activa el funcionament amb DKIM"
 #: dkim-verify/dkimgeneralwidget.cpp:20
 #, kde-format
 msgid "Save DKIM Result"
-msgstr "Guarda el resultat del DKIM"
+msgstr "Guarda el resultat de DKIM"
 
 #: dkim-verify/dkimgeneralwidget.cpp:22
 #, kde-format
@@ -198,13 +198,13 @@ msgstr "Mostra les regles"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
-msgstr "Configuració de la caducitat de la carpeta paperera per compte"
+msgstr "Configureu la caducitat de la carpeta paperera per compte"
 
 #: foldersettings/folderconfiguresettingsdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Folder Settings"
-msgstr "Configuració de les opcions de les carpetes"
+msgstr "Configureu les opcions de les carpetes"
 
 #: foldersettings/folderconfiguresettingspagebase.cpp:17
 #, kde-format
@@ -254,7 +254,7 @@ msgstr "Desselecciona"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
-msgstr "Configuració de Gravatar"
+msgstr "Configureu Gravatar"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
 #, kde-format
@@ -308,7 +308,7 @@ msgstr "Executable:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
-msgstr "Configuració del connector obri l'URL amb"
+msgstr "Configureu el connector obri l'URL amb"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:55
 #, kde-format
@@ -372,7 +372,7 @@ msgstr[1] "Elimina les regles"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
-msgstr "Configuració de les opcions de la suplantació"
+msgstr "Configureu les opcions de la suplantació"
 
 #: scamsettings/scamconfiguresettingswidget.cpp:26
 #, kde-format

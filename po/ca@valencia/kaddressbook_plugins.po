@@ -93,7 +93,7 @@ msgstr "Fusiona els contactes..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Contacts to merge"
-msgstr "Selecció dels contactes que s'han de fusionar"
+msgstr "Seleccioneu els contactes que s'han de fusionar"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:32
 #, kde-format

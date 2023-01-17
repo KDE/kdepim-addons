@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-19 00:46+0000\n"
+"POT-Creation-Date: 2023-01-17 00:59+0000\n"
 "PO-Revision-Date: 2022-09-19 06:28+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: grammalecte/grammalecteinterface.cpp:77
+#: grammalecte/grammalecteinterface.cpp:97
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "&გრამატიკის შემოწმება (Grammalecte)"
 
-#: grammalecte/grammalecteplugin.cpp:37
+#: grammalecte/grammalecteplugin.cpp:42
 #, kde-format
 msgid "Grammalecte Plugin"
 msgstr "დამატება Grammalecte"
 
-#: languagetool/languagetoolinterface.cpp:82
+#: languagetool/languagetoolinterface.cpp:101
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&გრამატიკის შემოწმება (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:115
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -44,12 +44,12 @@ msgstr ""
 "თქვენი ტექსტი გარე ვებგვერდზე აიტვირთება (https://languagetool.org/).\n"
 "გნებავთ გააგრძელოთ?"
 
-#: languagetool/languagetoolinterface.cpp:97
+#: languagetool/languagetoolinterface.cpp:116
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "გრამატიკის LanguageTool-ით შემოწმება"
 
-#: languagetool/languagetoolplugin.cpp:36
+#: languagetool/languagetoolplugin.cpp:41
 #, kde-format
 msgid "LanguageTool Plugin"
 msgstr "დამატება LanguageTool"

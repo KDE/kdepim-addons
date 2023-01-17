@@ -24,7 +24,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Rule"
-msgstr "Configuració de la regla"
+msgstr "Configureu la regla"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
 #, kde-format
@@ -77,7 +77,7 @@ msgstr "Important"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Before Deleting Mail"
-msgstr "Configuració d'«Abans de suprimir el correu»"
+msgstr "Configureu «Abans de suprimir el correu»"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
 #, kde-format
@@ -185,4 +185,4 @@ msgstr "Ja existix la mateixa regla."
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Create Rule"
-msgstr "Creació d'una regla"
+msgstr "Creeu una regla"
