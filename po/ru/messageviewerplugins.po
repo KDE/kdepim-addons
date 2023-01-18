@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-20 00:47+0000\n"
+"POT-Creation-Date: 2023-01-18 00:58+0000\n"
 "PO-Revision-Date: 2022-02-21 16:48+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -40,7 +40,7 @@ msgstr "Текущая ссылка не является сокращённой
 msgid "Expand URL"
 msgstr "Раскрыть URL"
 
-#: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:53
 #, kde-format
 msgid "Translate..."
 msgstr "Перевести..."

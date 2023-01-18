@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-24 00:47+0000\n"
+"POT-Creation-Date: 2023-01-18 00:58+0000\n"
 "PO-Revision-Date: 2017-10-08 16:50+0300\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -22,12 +22,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: translatorplugin/translatorplugin.cpp:34
+#: translatorplugin/translatorplugin.cpp:37
 #, kde-format
 msgid "Translator"
 msgstr "Машинный перевод"
 
-#: translatorplugin/translatorview.cpp:52
+#: translatorplugin/translatorview.cpp:64
 #, kde-format
 msgid "&Translator"
 msgstr "Машинный &перевод"

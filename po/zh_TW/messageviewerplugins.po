@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-20 00:47+0000\n"
+"POT-Creation-Date: 2023-01-18 00:58+0000\n"
 "PO-Revision-Date: 2016-09-22 20:30+0800\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Expand URL"
 msgstr ""
 
-#: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:53
 #, kde-format
 msgid "Translate..."
 msgstr ""
