@@ -56,7 +56,11 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
 
 GrammalecteInterface::~GrammalecteInterface() = default;
 
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+void GrammalecteInterface::slotReplaceText(const TextGrammarCheck::GrammarAction &act)
+#else
 void GrammalecteInterface::slotReplaceText(const PimCommonTextGrammarCheck::GrammarAction &act)
+#endif
 {
     if (richTextEditor()) {
         QTextBlock block = richTextEditor()->document()->findBlockByNumber(act.blockId() - 1);

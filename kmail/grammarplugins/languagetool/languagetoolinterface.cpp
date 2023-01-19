@@ -57,7 +57,11 @@ LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *par
 
 LanguageToolInterface::~LanguageToolInterface() = default;
 
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+void LanguageToolInterface::slotReplaceText(const TextGrammarCheck::GrammarAction &act)
+#else
 void LanguageToolInterface::slotReplaceText(const PimCommonTextGrammarCheck::GrammarAction &act)
+#endif
 {
     if (richTextEditor()) {
         QTextBlock block = richTextEditor()->document()->findBlockByNumber(act.blockId() - 1);
@@ -109,7 +113,11 @@ void LanguageToolInterface::createAction(KActionCollection *ac)
 bool LanguageToolInterface::checkAgain()
 {
     if (richTextEditor()) {
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+        if (!TextGrammarCheck::LanguageToolManager::self()->useLocalInstance()) {
+#else
         if (!PimCommonTextGrammarCheck::LanguageToolManager::self()->useLocalInstance()) {
+#endif
             if (KMessageBox::warningTwoActions(
                     parentWidget(),
                     i18n("You do not use local instance.\nYour text will send on a external web site (https://languagetool.org/).\nDo you want to continue?"),

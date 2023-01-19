@@ -27,7 +27,11 @@ public:
 
 private:
     Q_DISABLE_COPY(LanguageToolInterface)
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+    void slotReplaceText(const TextGrammarCheck::GrammarAction &act);
+#else
     void slotReplaceText(const PimCommonTextGrammarCheck::GrammarAction &act);
+#endif
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);
     void closeChecker();

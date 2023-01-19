@@ -59,7 +59,11 @@ void ViewerPluginTranslatorInterface::createAction(KActionCollection *ac)
     }
 }
 
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+TextTranslator::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
+#else
 PimCommonTextTranslator::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
+#endif
 {
     if (!mTranslatorWidget) {
         auto parentWidget = static_cast<QWidget *>(parent());

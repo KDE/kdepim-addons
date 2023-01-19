@@ -31,7 +31,11 @@ public:
     Q_REQUIRED_RESULT ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
 private:
+#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
+    Q_REQUIRED_RESULT TextTranslator::TranslatorWidget *widget();
+#else
     Q_REQUIRED_RESULT PimCommonTextTranslator::TranslatorWidget *widget();
+#endif
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
 #ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
