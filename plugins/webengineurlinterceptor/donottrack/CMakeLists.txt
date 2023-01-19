@@ -3,6 +3,8 @@
 set(webengineviewer_webengineurlinterceptor_donottrack_SRCS
     donottrackinterceptorinterface.cpp
     donottrackpluginurlinterceptor.cpp
+    donottrackinterceptorinterface.h
+    donottrackpluginurlinterceptor.h
     )
 
 ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_donottrack_SRCS HEADER donottrackinterceptor_debug.h IDENTIFIER DONOTTRACKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.donottrackinterceptor

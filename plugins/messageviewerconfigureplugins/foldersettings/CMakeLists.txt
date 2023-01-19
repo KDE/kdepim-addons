@@ -54,6 +54,7 @@ kcoreaddons_add_plugin(messageviewer_folderconfiguresettingsplugin INSTALL_NAMES
 
 target_sources(messageviewer_folderconfiguresettingsplugin PRIVATE
    folderconfiguresettingsplugin.cpp
+   folderconfiguresettingsplugin.h
 )
 
 

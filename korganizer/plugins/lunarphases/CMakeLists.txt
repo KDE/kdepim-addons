@@ -3,7 +3,7 @@
 
 ########### next target ###############
 
-add_library(lunarphases MODULE lunarphases.cpp)
+add_library(lunarphases MODULE lunarphases.cpp lunarphases.h)
 
 
 target_link_libraries(lunarphases

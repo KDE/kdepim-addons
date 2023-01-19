@@ -17,7 +17,7 @@ target_link_libraries(adblocksettingsdialog_gui
     KF5::I18n
     KF5::CoreAddons
     )
-set(adblockautomaticruleslistwidget_gui_SRCS adblockautomaticruleslistwidget_gui.cpp)
+set(adblockautomaticruleslistwidget_gui_SRCS adblockautomaticruleslistwidget_gui.cpp adblockautomaticruleslistwidget_gui.h)
 add_executable(adblockautomaticruleslistwidget_gui ${adblockautomaticruleslistwidget_gui_SRCS})
 target_link_libraries(adblockautomaticruleslistwidget_gui
     adblocklibprivate
