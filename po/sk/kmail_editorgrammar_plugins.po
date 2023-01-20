@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorgrammar_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 00:59+0000\n"
+"POT-Creation-Date: 2023-01-20 00:58+0000\n"
 "PO-Revision-Date: 2019-11-05 19:56+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Lokalize 19.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: grammalecte/grammalecteinterface.cpp:97
+#: grammalecte/grammalecteinterface.cpp:101
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "Skontrolovať pravopis (Grammalecte)"
@@ -26,12 +26,12 @@ msgstr "Skontrolovať pravopis (Grammalecte)"
 msgid "Grammalecte Plugin"
 msgstr "Doplnok Grammalecte"
 
-#: languagetool/languagetoolinterface.cpp:101
+#: languagetool/languagetoolinterface.cpp:105
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "Skontrolovať Pravopis (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:115
+#: languagetool/languagetoolinterface.cpp:123
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -42,7 +42,7 @@ msgstr ""
 "Váš text bude odoslaný na externú stránku (https://languagetool.org/).\n"
 "Chcete pokračovať?"
 
-#: languagetool/languagetoolinterface.cpp:116
+#: languagetool/languagetoolinterface.cpp:124
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "Skontrolovať pravopis s LanguageTool"

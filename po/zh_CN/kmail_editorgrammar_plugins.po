@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-17 00:59+0000\n"
+"POT-Creation-Date: 2023-01-20 00:58+0000\n"
 "PO-Revision-Date: 2023-01-12 10:30\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,7 +18,7 @@ msgstr ""
 "kmail_editorgrammar_plugins.pot\n"
 "X-Crowdin-File-ID: 9614\n"
 
-#: grammalecte/grammalecteinterface.cpp:97
+#: grammalecte/grammalecteinterface.cpp:101
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "检查语法 (Grammalecte, &C)"
@@ -28,12 +28,12 @@ msgstr "检查语法 (Grammalecte, &C)"
 msgid "Grammalecte Plugin"
 msgstr "Grammalecte 插件"
 
-#: languagetool/languagetoolinterface.cpp:101
+#: languagetool/languagetoolinterface.cpp:105
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "检查语法 (LanguageTool, &C)"
 
-#: languagetool/languagetoolinterface.cpp:115
+#: languagetool/languagetoolinterface.cpp:123
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -44,7 +44,7 @@ msgstr ""
 "您的文本将发送到外部网站 (https://languagetool.org/)。\n"
 "您想要继续吗？"
 
-#: languagetool/languagetoolinterface.cpp:116
+#: languagetool/languagetoolinterface.cpp:124
 #, kde-format
 msgid "Check Grammar with LanguageTool"
 msgstr "使用 LanguageTool 检查语法"
