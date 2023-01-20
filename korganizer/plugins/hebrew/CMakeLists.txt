@@ -1,6 +1,6 @@
 
 ########### next target ###############
-find_package(KF5KDELibs4Support ${KF5_MIN_VERSION} CONFIG REQUIRED) #for the korganizer hebrew plugin
+find_package(KF5KDELibs4Support ${KF_MIN_VERSION} CONFIG REQUIRED) #for the korganizer hebrew plugin
 add_library(hebrew MODULE)
 target_sources(hebrew PRIVATE
   qcalendarsystem.cpp
