@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2017.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-04-13 00:18+0000\n"
-"PO-Revision-Date: 2022-04-05 12:34+0300\n"
+"PO-Revision-Date: 2023-01-21 14:48+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:14
 #, kde-format
@@ -27,7 +27,7 @@ msgstr "\"Harici Oluşturucu\" Eklentisini Yapılandır"
 #: externalcomposer/externalcomposerconfigurewidget.cpp:18
 #, kde-format
 msgid "Use external editor instead of composer"
-msgstr "Oluşturucu yerine harici düzenleyici kullanın"
+msgstr "Oluşturucu yerine dış düzenleyici kullan"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:45
 #, kde-format
