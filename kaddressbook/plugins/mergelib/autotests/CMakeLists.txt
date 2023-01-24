@@ -16,7 +16,7 @@ macro( kaddressbook_merge _source _additional _additionallib)
     add_executable( ${_name} ${_test}  ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name} )
     ecm_mark_as_test(kaddressbookmerge-${_name})
-    target_link_libraries( ${_name} kaddressbookmergelibprivate Qt::Test  KF5::AkonadiCore KF5::Contacts KF5::I18n ${_additionallib})
+    target_link_libraries( ${_name} kaddressbookmergelibprivate Qt::Test  KF5::AkonadiCore KF${KF_MAJOR_VERSION}::Contacts KF${KF_MAJOR_VERSION}::I18n ${_additionallib})
 endmacro()
 
 kaddressbook_merge(mergecontactstest.cpp "../job/mergecontacts.cpp;../kaddressbookmergelibprivate_debug.cpp" "")
@@ -26,20 +26,20 @@ if (KDEPIM_RUN_AKONADI_TEST)
     set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 
     add_akonadi_isolated_test_advanced( mergecontactinfowidgettest.cpp "../widgets/mergecontactinfowidget.cpp;${kaddressbookmergelibprivate_common_SRCS}" "KF5::AkonadiContact")
-    add_akonadi_isolated_test_advanced( mergecontactwidgettest.cpp "../widgets/mergecontactinfowidget.cpp;${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::WidgetsAddons")
-    add_akonadi_isolated_test_advanced( searchandmergecontactduplicatecontactdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
-    add_akonadi_isolated_test_advanced( searchduplicateresultwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts;KF5::WidgetsAddons;KF5::AkonadiWidgets;KF5::AkonadiContact")
-    add_akonadi_isolated_test_advanced( resultduplicatetreewidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
-    add_akonadi_isolated_test_advanced( searchpotentialduplicatecontactjobtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../job/searchpotentialduplicatecontactjob.cpp" "KF5::Contacts")
-    add_akonadi_isolated_test_advanced( mergecontactselectinformationwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
-    add_akonadi_isolated_test_advanced( mergecontactselectlistwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
+    add_akonadi_isolated_test_advanced( mergecontactwidgettest.cpp "../widgets/mergecontactinfowidget.cpp;${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts;KF5::AkonadiContact;KF${KF_MAJOR_VERSION}::WidgetsAddons")
+    add_akonadi_isolated_test_advanced( searchandmergecontactduplicatecontactdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts")
+    add_akonadi_isolated_test_advanced( searchduplicateresultwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts;KF${KF_MAJOR_VERSION}::WidgetsAddons;KF5::AkonadiWidgets;KF5::AkonadiContact")
+    add_akonadi_isolated_test_advanced( resultduplicatetreewidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts")
+    add_akonadi_isolated_test_advanced( searchpotentialduplicatecontactjobtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../job/searchpotentialduplicatecontactjob.cpp" "KF${KF_MAJOR_VERSION}::Contacts")
+    add_akonadi_isolated_test_advanced( mergecontactselectinformationwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts")
+    add_akonadi_isolated_test_advanced( mergecontactselectlistwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts")
 
-    add_akonadi_isolated_test_advanced( mergecontactselectinformationscrollareatest.cpp "${kaddressbookmergelibprivate_common_SRCS};../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact")
+    add_akonadi_isolated_test_advanced( mergecontactselectinformationscrollareatest.cpp "${kaddressbookmergelibprivate_common_SRCS};../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts;KF5::AkonadiContact")
 
-    add_akonadi_isolated_test_advanced( mergecontactselectinformationtabwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
+    add_akonadi_isolated_test_advanced( mergecontactselectinformationtabwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts")
 
-    add_akonadi_isolated_test_advanced(mergecontactsdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../widgets/mergecontacterrorlabel.cpp;../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::I18n;KF5::WidgetsAddons")
-    add_akonadi_isolated_test_advanced(mergecontactwidgetlisttest.cpp "${kaddressbookmergelibprivate_common_SRCS};../manualmerge/mergecontactwidgetlist.cpp;" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::I18n")
+    add_akonadi_isolated_test_advanced(mergecontactsdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../widgets/mergecontacterrorlabel.cpp;../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts;KF5::AkonadiContact;KF${KF_MAJOR_VERSION}::I18n;KF${KF_MAJOR_VERSION}::WidgetsAddons")
+    add_akonadi_isolated_test_advanced(mergecontactwidgetlisttest.cpp "${kaddressbookmergelibprivate_common_SRCS};../manualmerge/mergecontactwidgetlist.cpp;" "kaddressbookmergelibprivate;KF${KF_MAJOR_VERSION}::Contacts;KF5::AkonadiContact;KF${KF_MAJOR_VERSION}::I18n")
 
 endif()
 
@@ -47,5 +47,5 @@ set( kaddressbook_merge_mergecontactloseinformationwarning_source mergecontactlo
 add_executable( mergecontactloseinformationwarningtest ${kaddressbook_merge_mergecontactloseinformationwarning_source})
 add_test(NAME mergecontactloseinformationwarningtest COMMAND mergecontactloseinformationwarningtest)
 ecm_mark_as_test(mergecontactloseinformationwarningtest)
-target_link_libraries( mergecontactloseinformationwarningtest Qt::Test  Qt::Gui kaddressbookmergelibprivate KF5::WidgetsAddons KF5::I18n)
+target_link_libraries( mergecontactloseinformationwarningtest Qt::Test  Qt::Gui kaddressbookmergelibprivate KF${KF_MAJOR_VERSION}::WidgetsAddons KF${KF_MAJOR_VERSION}::I18n)
 

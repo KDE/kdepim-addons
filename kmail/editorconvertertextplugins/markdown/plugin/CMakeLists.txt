@@ -16,7 +16,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_markdownplugin PRIVATE
-    KF5::I18n KF5::XmlGui
+    KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::XmlGui
     kmailmarkdown
     )
 

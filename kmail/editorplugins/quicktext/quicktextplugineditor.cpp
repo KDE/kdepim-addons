@@ -8,6 +8,7 @@
 #include "quicktextconfiguredialog.h"
 #include "quicktextplugineditorinterface.h"
 #include <KPluginFactory>
+#include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(QuickTextPluginEditor, "kmail_quicktextplugin.json")
 

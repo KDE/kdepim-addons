@@ -14,8 +14,8 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_pkpass HEADER pk
 
 
 target_link_libraries(messageviewer_bodypartformatter_pkpass
-    KF5::Archive
-    KF5::Prison
+    KF${KF_MAJOR_VERSION}::Archive
+    KF${KF_MAJOR_VERSION}::Prison
     KF5::MessageViewer
     ${TEMPLATES_LIB}
     KPim::PkPass

@@ -11,6 +11,6 @@ ecm_qt_declare_logging_category(pimcommon_isgdshorturlengineplugin HEADER isgdsh
 
 
 target_link_libraries(pimcommon_isgdshorturlengineplugin
-    KF5::Service KF5::I18n Qt::Network KF5::CoreAddons shorturlpluginprivate Qt::Gui
+    KF${KF_MAJOR_VERSION}::Service KF${KF_MAJOR_VERSION}::I18n Qt::Network KF${KF_MAJOR_VERSION}::CoreAddons shorturlpluginprivate Qt::Gui
     )
 

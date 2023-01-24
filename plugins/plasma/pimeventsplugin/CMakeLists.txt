@@ -37,11 +37,11 @@ target_link_libraries(pimevents
     Qt::Core
     KF5::AkonadiCore
     KF5::AkonadiCalendar
-    KF5::CalendarCore
-    KF5::CalendarEvents
+    KF${KF_MAJOR_VERSION}::CalendarCore
+    KF${KF_MAJOR_VERSION}::CalendarEvents
     KF5::EventViews # for reading KOrganizer calendar colors
-    KF5::ConfigCore
-    KF5::KIOCore
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::KIOCore
     )
 
 
@@ -62,8 +62,8 @@ target_link_libraries(pimcalendarsplugin
     Qt::Core
     Qt::Qml
     KF5::AkonadiCore
-    KF5::CalendarCore
-    KF5::ConfigCore
+    KF${KF_MAJOR_VERSION}::CalendarCore
+    KF${KF_MAJOR_VERSION}::ConfigCore
     )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(pimcalendarsplugin PROPERTIES UNITY_BUILD ON)

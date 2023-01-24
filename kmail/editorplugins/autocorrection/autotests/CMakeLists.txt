@@ -8,7 +8,7 @@ macro(add_kmail_editorplugin_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_editorplugin-${_name})
-    target_link_libraries( ${_name} Qt::Test KF5::XmlGui KF5::MessageComposer KF5::I18n)
+    target_link_libraries( ${_name} Qt::Test KF${KF_MAJOR_VERSION}::XmlGui KF5::MessageComposer KF${KF_MAJOR_VERSION}::I18n)
 endmacro ()
 
 add_kmail_editorplugin_unittest(autocorrectionplugineditortest.cpp "../autocorrectionplugineditor.cpp;../autocorrectionplugineditorinterface.cpp")

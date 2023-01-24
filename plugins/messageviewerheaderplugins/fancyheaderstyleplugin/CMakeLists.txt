@@ -13,6 +13,6 @@ target_sources(messageviewer_fancyheaderstyleplugin PRIVATE
 
 target_link_libraries(messageviewer_fancyheaderstyleplugin
   KF5::MessageViewer
-  KF5::XmlGui
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::XmlGui
+  KF${KF_MAJOR_VERSION}::I18n
 )

@@ -21,7 +21,7 @@ endif()
 target_link_libraries(picoftheday
     PRIVATE
     KF5::EventViews
-    KF5::KIOCore
+    KF${KF_MAJOR_VERSION}::KIOCore
     Qt::Xml
     )
 

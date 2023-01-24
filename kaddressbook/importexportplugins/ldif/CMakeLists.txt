@@ -17,9 +17,9 @@ endif()
 target_link_libraries(kaddressbook_importexportldifplugin
         KPim::AddressbookImportExport
         KF5::PimCommon
-        KF5::I18n
-        KF5::XmlGui
-        KF5::Contacts
-        KF5::JobWidgets
+        KF${KF_MAJOR_VERSION}::I18n
+        KF${KF_MAJOR_VERSION}::XmlGui
+        KF${KF_MAJOR_VERSION}::Contacts
+        KF${KF_MAJOR_VERSION}::JobWidgets
         KF5::AkonadiCore
     )

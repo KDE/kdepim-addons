@@ -19,9 +19,9 @@ endif()
 
 target_link_libraries(gearyimporterplugin
   KPim::ImportWizard
-  KF5::XmlGui
-  KF5::I18n
-  KF5::Contacts
+  KF${KF_MAJOR_VERSION}::XmlGui
+  KF${KF_MAJOR_VERSION}::I18n
+  KF${KF_MAJOR_VERSION}::Contacts
   KF5::MailImporterAkonadi
   KF5::MailTransport
   KF5::IdentityManagement

@@ -10,6 +10,6 @@ kcoreaddons_add_plugin(pimcommon_tinyurlengineplugin SOURCES
 
 
 target_link_libraries(pimcommon_tinyurlengineplugin
-    KF5::Service KF5::I18n Qt::Network KF5::CoreAddons shorturlpluginprivate Qt::Gui
+    KF${KF_MAJOR_VERSION}::Service KF${KF_MAJOR_VERSION}::I18n Qt::Network KF${KF_MAJOR_VERSION}::CoreAddons shorturlpluginprivate Qt::Gui
 )
 

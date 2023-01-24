@@ -13,7 +13,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_translatorplugin
-  KF5::MessageViewer KF5::XmlGui KF5::PimTextEdit KF5::I18n
+  KF5::MessageViewer KF${KF_MAJOR_VERSION}::XmlGui KF5::PimTextEdit KF${KF_MAJOR_VERSION}::I18n
 )
  
 if (USE_KTEXTADDONS_LIB)

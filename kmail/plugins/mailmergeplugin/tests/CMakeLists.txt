@@ -3,10 +3,10 @@
 set(mailmergewidget_gui_SRCS mailmergewidgettest_gui.cpp)
 add_executable(mailmergewidget_gui ${mailmergewidget_gui_SRCS})
 target_link_libraries(mailmergewidget_gui
-  KF5::KIOCore
-  KF5::KIOWidgets
+  KF${KF_MAJOR_VERSION}::KIOCore
+  KF${KF_MAJOR_VERSION}::KIOWidgets
   KF5::PimCommon
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::I18n
   mailmerge
 )
 

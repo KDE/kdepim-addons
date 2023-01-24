@@ -11,7 +11,7 @@ macro(add_kmail_confirmaddress_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_editorplugin-${_name})
-    target_link_libraries( ${_name} Qt::Test KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::Libkdepim)
+    target_link_libraries( ${_name} Qt::Test KF5::MessageComposer KF${KF_MAJOR_VERSION}::I18n KF5::PimCommon KF5::Libkdepim)
 endmacro ()
 
 add_kmail_confirmaddress_unittest(confirmaddressplugintest.cpp "../confirmaddressemailentrydialog.cpp;../confirmaddresssimplestringlisteditor.cpp;../confirmaddressconfiguredialog.cpp;../confirmaddressplugin.cpp;../confirmaddressinterface.cpp;../confirmaddressconfigurewidget.cpp;../confirmaddressdialog.cpp;../confirmaddresswidget.cpp;../confirmaddressconfiguretab.cpp;../confirmaddressconfiguretabwidget.cpp;../confirmaddresscheckjob.cpp")

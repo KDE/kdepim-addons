@@ -9,6 +9,6 @@ kcoreaddons_add_plugin(pimcommon_ur1cashorturlengineplugin SOURCES
     ${pimcommon_ur1cashorturlengineplugin_SRCS} INSTALL_NAMESPACE pimcommon)
 
 target_link_libraries(pimcommon_ur1cashorturlengineplugin
-    KF5::Service KF5::I18n Qt::Network KF5::CoreAddons shorturlpluginprivate Qt::Gui
+    KF${KF_MAJOR_VERSION}::Service KF${KF_MAJOR_VERSION}::I18n Qt::Network KF${KF_MAJOR_VERSION}::CoreAddons shorturlpluginprivate Qt::Gui
 )
 

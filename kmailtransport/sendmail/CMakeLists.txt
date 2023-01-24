@@ -28,8 +28,8 @@ endif()
 
 target_link_libraries(mailtransport_sendplugin
     KF5::MailTransport
-    KF5::CoreAddons
-    KF5::I18n
-    KF5::ConfigWidgets
-    KF5::KIOWidgets
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::KIOWidgets
     )

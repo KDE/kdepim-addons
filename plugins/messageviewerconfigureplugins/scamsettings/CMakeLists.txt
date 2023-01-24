@@ -24,7 +24,7 @@ endif()
 generate_export_header(scamconfiguresettings BASE_NAME libscamconfiguresettings)
 target_link_libraries(scamconfiguresettings
     KF5::MessageViewer
-    KF5::I18n
+    KF${KF_MAJOR_VERSION}::I18n
     )
 
 set_target_properties(scamconfiguresettings

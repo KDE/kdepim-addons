@@ -13,7 +13,7 @@ target_sources(messageviewer_standardsheaderstyleplugin PRIVATE
 
 target_link_libraries(messageviewer_standardsheaderstyleplugin
   KF5::MessageViewer
-  KF5::XmlGui
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::XmlGui
+  KF${KF_MAJOR_VERSION}::I18n
   KF5::GrantleeTheme
 )

@@ -3,7 +3,7 @@
 add_library(kitinerary_grantlee_extension MODULE grantleeextension.cpp grantleeextension.h)
 target_link_libraries(kitinerary_grantlee_extension
     KPim::Itinerary
-    KF5::Contacts
+    KF${KF_MAJOR_VERSION}::Contacts
     ${TEMPLATES_LIB}
 )
 if (QT_MAJOR_VERSION STREQUAL "5")

@@ -10,7 +10,7 @@ ki18n_wrap_ui(attendeeselector_SRCS ../attendeeselector.ui)
 
 add_executable(attendeeselector_gui ${attendeeselector_SRCS})
 target_link_libraries(attendeeselector_gui
-	KF5::PimCommon KF5::Completion KF5::KIOWidgets KF5::PimCommonAkonadi KF5::XmlGui KF5::I18n KF5::Codecs
+	KF5::PimCommon KF${KF_MAJOR_VERSION}::Completion KF${KF_MAJOR_VERSION}::KIOWidgets KF5::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Codecs
 )
 
 

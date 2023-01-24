@@ -9,8 +9,8 @@ target_link_libraries(gravatarupdatedialog_gui
     Qt::Gui
     KF5::PimCommon
     KF5::Gravatar
-    KF5::I18n
+    KF${KF_MAJOR_VERSION}::I18n
     KF5::AkonadiCore
-    KF5::Contacts
+    KF${KF_MAJOR_VERSION}::Contacts
     )
 

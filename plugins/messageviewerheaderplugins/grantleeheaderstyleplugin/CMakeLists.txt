@@ -13,5 +13,5 @@ target_sources(messageviewer_grantleeheaderstyleplugin PRIVATE
 target_link_libraries(messageviewer_grantleeheaderstyleplugin
   KF5::MessageViewer
   KF5::GrantleeTheme
-  KF5::XmlGui
+  KF${KF_MAJOR_VERSION}::XmlGui
 )

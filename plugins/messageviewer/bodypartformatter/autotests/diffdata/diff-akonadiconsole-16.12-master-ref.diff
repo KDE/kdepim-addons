@@ -55,7 +55,7 @@ index b4ef75c..258dcc1 100644
 <span style="color:#0057ae;">+set(KMIME_LIB_VERSION &quot;5.4.40&quot;)</span>
  
  # Find KF5 package
- find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
+ find_package(KF${KF_MAJOR_VERSION}Completion ${KF5_VERSION} CONFIG REQUIRED)
 <span style="font-weight:bold;">diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt</span>
 index 4986439..9f3e884 100644
 <span style="color:#0057ae;">--- a/src/CMakeLists.txt</span>
@@ -74,7 +74,7 @@ index 4986439..9f3e884 100644
      KF5::AkonadiContact
 <span style="color:#0057ae;">+    KF5::AkonadiXml</span>
      KF5::CalendarSupport
-     KF5::CalendarCore
+     KF${KF_MAJOR_VERSION}::CalendarCore
      KF5::Libkdepim
 <span style="font-weight:bold;">diff --git a/src/agentconfigdialog.h b/src/agentconfigdialog.h</span>
 index ff27c29..2ff0c62 100644

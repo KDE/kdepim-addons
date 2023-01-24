@@ -29,8 +29,8 @@ target_link_libraries(webengineviewer_donottrackplugin
     
     Qt::WebEngineWidgets
     KF5::WebEngineViewer
-    KF5::ConfigGui
-    KF5::CoreAddons
+    KF${KF_MAJOR_VERSION}::ConfigGui
+    KF${KF_MAJOR_VERSION}::CoreAddons
     )
 if(BUILD_TESTING)
     add_subdirectory(autotests)

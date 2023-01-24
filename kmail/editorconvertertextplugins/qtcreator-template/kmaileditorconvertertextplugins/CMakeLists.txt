@@ -27,10 +27,10 @@ include(ECMQtDeclareLoggingCategory)
 
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 
-find_package(KF5I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5XmlGui ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5IconThemes ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}XmlGui ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}IconThemes ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 
 set(MESSAGELIB_LIB_VERSION "5.9.0")
@@ -49,7 +49,7 @@ kcoreaddons_add_plugin(%{ProjectNameLower}editorplugin JSON %{ProjectNameLower}e
     ${%{ProjectNameUpper}_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(%{ProjectNameLower}editorplugin
-   KF5::MessageComposer KF5::XmlGui KF5::I18n
+   KF5::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n
 )
 
 

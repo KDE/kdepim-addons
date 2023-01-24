@@ -24,12 +24,12 @@ endif()
 target_link_libraries(kaddressbook_importexportwindowscontactplugin
     KPim::AddressbookImportExport
     KF5::PimCommon
-    KF5::I18n
-    KF5::XmlGui
-    KF5::Contacts
-    KF5::JobWidgets
-    KF5::Completion
-    KF5::KIOWidgets
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::Contacts
+    KF${KF_MAJOR_VERSION}::JobWidgets
+    KF${KF_MAJOR_VERSION}::Completion
+    KF${KF_MAJOR_VERSION}::KIOWidgets
     KF5::AkonadiCore
 )
 

@@ -7,7 +7,7 @@ add_library(lunarphases MODULE lunarphases.cpp lunarphases.h)
 
 
 target_link_libraries(lunarphases
-  KF5::Holidays
+  KF${KF_MAJOR_VERSION}::Holidays
   KF5::EventViews
 )
 

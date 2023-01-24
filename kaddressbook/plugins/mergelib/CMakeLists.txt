@@ -60,13 +60,13 @@ endif()
 target_link_libraries(kaddressbookmergelibprivate
     PRIVATE
     Qt::Network
-    KF5::I18n
-    KF5::Contacts
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::Contacts
     KF5::AkonadiContact
-    KF5::ConfigCore
-    KF5::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::ConfigCore
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF5::AkonadiWidgets
-    KF5::ItemViews
+    KF${KF_MAJOR_VERSION}::ItemViews
     )
 
 set_target_properties(kaddressbookmergelibprivate

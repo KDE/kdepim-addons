@@ -26,7 +26,7 @@ endif()
 
 
 target_link_libraries(kmail_zoomtexteditorplugin
-    KF5::MessageComposer KF5::XmlGui KF5::I18n
+    KF5::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n
     )
 
 if(BUILD_TESTING)

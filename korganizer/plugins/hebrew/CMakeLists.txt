@@ -16,7 +16,7 @@ ecm_qt_declare_logging_category(hebrew HEADER korganizer_hebrew_debug.h IDENTIFI
 
 target_link_libraries(hebrew
   KF5::EventViews
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::I18n
   KF5::KDELibs4Support
 )
 

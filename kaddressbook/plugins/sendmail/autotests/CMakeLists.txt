@@ -8,5 +8,5 @@ if (KDEPIM_RUN_AKONADI_TEST)
 	set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
 	set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 
-	add_akonadi_isolated_test_advanced( mailsenderjobtest.cpp "../mailsenderjob.cpp;../kaddressbook_sendmailplugin_debug.cpp" "KF5::Contacts;KF5::Codecs;KF5::I18n;KF5::Codecs")
+	add_akonadi_isolated_test_advanced( mailsenderjobtest.cpp "../mailsenderjob.cpp;../kaddressbook_sendmailplugin_debug.cpp" "KF${KF_MAJOR_VERSION}::Contacts;KF${KF_MAJOR_VERSION}::Codecs;KF${KF_MAJOR_VERSION}::I18n;KF${KF_MAJOR_VERSION}::Codecs")
 endif()

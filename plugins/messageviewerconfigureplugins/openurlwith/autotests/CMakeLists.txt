@@ -5,7 +5,7 @@ macro(add_messageviewer_openwithurl_unittest _source)
     ecm_add_test(${_source} ${_name}.h
         TEST_NAME ${_name}
         NAME_PREFIX "messageviewer-"
-        LINK_LIBRARIES KF5::MessageViewer KF5::Libkdepim openurlwithconfigure Qt::Test KF5::KIOWidgets
+        LINK_LIBRARIES KF5::MessageViewer KF5::Libkdepim openurlwithconfigure Qt::Test KF${KF_MAJOR_VERSION}::KIOWidgets
     )
 endmacro ()
 

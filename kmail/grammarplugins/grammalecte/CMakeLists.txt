@@ -20,7 +20,7 @@ ecm_qt_declare_logging_category(kmail_grammalecteplugin HEADER grammalecteplugin
 
 
 target_link_libraries(kmail_grammalecteplugin
-    KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::XmlGui
+    KF5::MessageComposer KF${KF_MAJOR_VERSION}::I18n KF5::PimCommon KF${KF_MAJOR_VERSION}::XmlGui
     )
 if (USE_KTEXTADDONS_LIB)
     target_link_libraries(kmail_grammalecteplugin KF5::TextGrammarCheck)

@@ -18,7 +18,7 @@ target_link_libraries(messageviewer_gravatarconfigplugin
   KF5::MessageViewer
   KF5::PimCommon
   KF5::Gravatar
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::I18n
 )
 
 if(BUILD_TESTING)

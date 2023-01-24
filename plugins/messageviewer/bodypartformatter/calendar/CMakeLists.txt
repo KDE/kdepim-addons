@@ -30,9 +30,9 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_bodypartformatter_text_calendar
-    KF5::Codecs
+    KF${KF_MAJOR_VERSION}::Codecs
     Qt::Core
-    KF5::CalendarCore
+    KF${KF_MAJOR_VERSION}::CalendarCore
     KF5::CalendarUtils
     KF5::Mime
     KF5::IdentityManagement
@@ -44,7 +44,7 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KF5::MessageViewer
     KF5::IncidenceEditor
     KF5::PimTextEdit
-    KF5::KIOWidgets
+    KF${KF_MAJOR_VERSION}::KIOWidgets
     Qt::DBus
     )
 

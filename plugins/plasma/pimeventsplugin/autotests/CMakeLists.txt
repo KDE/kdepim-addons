@@ -17,10 +17,10 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
                                    Qt::Test
                                    KF5::AkonadiCore
                                    KF5::AkonadiCalendar
-                                   KF5::CalendarCore
-                                   KF5::CalendarEvents
+                                   KF${KF_MAJOR_VERSION}::CalendarCore
+                                   KF${KF_MAJOR_VERSION}::CalendarEvents
                                    KF5::EventViews
-                                   KF5::ConfigCore
+                                   KF${KF_MAJOR_VERSION}::ConfigCore
     )
     include_directories(${CMAKE_CURRENT_SOURCE_DIR}/..
                         ${CMAKE_CURRENT_BINARY_DIR}/..

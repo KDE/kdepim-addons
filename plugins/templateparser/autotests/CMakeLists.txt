@@ -10,7 +10,7 @@ macro(add_templateparserplugin_unittest _source _extrasources)
     KF5::TemplateParser
     KF5::AkonadiContact
     Qt::Test
-    KF5::Service
+    KF${KF_MAJOR_VERSION}::Service
   )
 endmacro()
 

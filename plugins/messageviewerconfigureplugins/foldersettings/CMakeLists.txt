@@ -39,7 +39,7 @@ endif()
 generate_export_header(folderconfiguresettings BASE_NAME libfolderconfiguresettings)
 target_link_libraries(folderconfiguresettings
     KF5::MessageViewer
-    KF5::I18n
+    KF${KF_MAJOR_VERSION}::I18n
     KF5::MailCommon
     )
 
@@ -60,7 +60,7 @@ target_sources(messageviewer_folderconfiguresettingsplugin PRIVATE
 
 target_link_libraries(messageviewer_folderconfiguresettingsplugin
   KF5::MessageViewer
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::I18n
   KF5::MailCommon
   folderconfiguresettings
 )
