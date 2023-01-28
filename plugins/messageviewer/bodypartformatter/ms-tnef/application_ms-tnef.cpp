@@ -9,7 +9,6 @@
 #include <MessageViewer/MessagePartRenderPlugin>
 #include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessagePartRendererManager>
-#include <MessageViewer/MessageViewerUtil>
 #include <MessageViewer/MimeType>
 
 #include <MessageCore/StringUtil>
