@@ -17,7 +17,7 @@ target_link_libraries(messageviewer_translatorplugin
 )
  
 if (USE_KTEXTADDONS_LIB)
-    target_link_libraries(messageviewer_translatorplugin KF5::TextTranslator)
+    target_link_libraries(messageviewer_translatorplugin KF${KF_MAJOR_VERSION}::TextTranslator)
 else()
     target_link_libraries(messageviewer_translatorplugin KF5::PimCommonTextTranslator)
 endif()
