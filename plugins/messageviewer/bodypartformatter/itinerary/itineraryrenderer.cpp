@@ -144,7 +144,11 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
             }
             if (barcode) {
                 const QVariant barcodeContent = ticket.ticketTokenData();
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
                 if (barcodeContent.type() == QVariant::String) {
+#else
+                if (barcodeContent.userType() == QMetaType::QString) {
+#endif
                     barcode->setData(barcodeContent.toString());
                 } else {
                     barcode->setData(barcodeContent.toByteArray());
