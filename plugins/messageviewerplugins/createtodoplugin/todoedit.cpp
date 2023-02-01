@@ -251,20 +251,23 @@ void TodoEdit::slotReturnPressed()
 
 KCalendarCore::Todo::Ptr TodoEdit::createTodoItem()
 {
-    KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
-    todo->setSummary(mNoteEdit->text());
-    KCalendarCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
-    const KMime::Headers::Subject *const subject = mMessage->subject(false);
-    if (subject) {
-        attachment.setLabel(subject->asUnicodeString());
-    }
-    if (CalendarSupport::KCalPrefs::instance()->defaultTodoReminders()) {
-        KCalendarCore::Alarm::Ptr alm = todo->newAlarm();
-        CalendarSupport::createAlarmReminder(alm, todo->type());
-    }
+    if (mMessage) {
+        KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
+        todo->setSummary(mNoteEdit->text());
+        KCalendarCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
+        const KMime::Headers::Subject *const subject = mMessage->subject(false);
+        if (subject) {
+            attachment.setLabel(subject->asUnicodeString());
+        }
+        if (CalendarSupport::KCalPrefs::instance()->defaultTodoReminders()) {
+            KCalendarCore::Alarm::Ptr alm = todo->newAlarm();
+            CalendarSupport::createAlarmReminder(alm, todo->type());
+        }
 
-    todo->addAttachment(attachment);
-    return todo;
+        todo->addAttachment(attachment);
+        return todo;
+    }
+    return {};
 }
 
 bool TodoEdit::eventFilter(QObject *object, QEvent *e)
@@ -297,16 +300,18 @@ bool TodoEdit::eventFilter(QObject *object, QEvent *e)
 void TodoEdit::slotOpenEditor()
 {
     KCalendarCore::Todo::Ptr event = createTodoItem();
+    if (event) {
+        Akonadi::Item item;
+        item.setPayload<KCalendarCore::Todo::Ptr>(event);
+        item.setMimeType(KCalendarCore::Todo::todoMimeType());
 
-    Akonadi::Item item;
-    item.setPayload<KCalendarCore::Todo::Ptr>(event);
-    item.setMimeType(KCalendarCore::Todo::todoMimeType());
-
-    IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalendarCore::IncidenceBase::TypeTodo, nullptr, this);
-    dlg->selectCollection(mCollectionCombobox->currentCollection());
-    connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &TodoEdit::slotCloseWidget);
-    dlg->load(item);
-    dlg->open();
+        IncidenceEditorNG::IncidenceDialog *dlg =
+            IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalendarCore::IncidenceBase::TypeTodo, nullptr, this);
+        dlg->selectCollection(mCollectionCombobox->currentCollection());
+        connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &TodoEdit::slotCloseWidget);
+        dlg->load(item);
+        dlg->open();
+    }
 }
 
 void TodoEdit::slotTextEdited(const QString &subject)
