@@ -60,7 +60,6 @@ else()
 endif()
 
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
-option(USE_KTEXTADDONS_LIB "Use ktextaddons lib (experimental)" ON)
 
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngineWidgets Widgets Test)
@@ -118,14 +117,8 @@ find_package(KPimAddressbookImportExport ${KADDRESSBOOK_IMPORTEXPORT_LIB_VERSION
 find_package(KF5Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
-if (USE_KTEXTADDONS_LIB)
-    find_package(KF${KF_MAJOR_VERSION}TextGrammarCheck ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
-    find_package(KF${KF_MAJOR_VERSION}TextTranslator ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
-    add_definitions(-DHAVE_KTEXTADDONS_TEXT_SUPPORT)
-else()
-    find_package(KF5PimCommonTextGrammarCheck ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
-    find_package(KF5PimCommonTextTranslator ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
-endif()
+find_package(KF${KF_MAJOR_VERSION}TextGrammarCheck ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}TextTranslator ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5IncidenceEditor ${INCIDENCEEDITOR_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5MessageCore ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
@@ -171,8 +164,11 @@ endif()
 # Extra package
 find_package(Gpgmepp 1.16.0 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "https://www.gnupg.org" TYPE REQUIRED)
+if (QT_MAJOR_VERSION STREQUAL "5")
+ecm_set_disabled_deprecation_versions(QT 5.14.0  KF 5.102.0)
+else()
 ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.102.0)
-
+endif()
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})

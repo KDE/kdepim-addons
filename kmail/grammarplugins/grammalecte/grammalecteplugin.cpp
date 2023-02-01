@@ -9,13 +9,8 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <PimCommon/CustomToolsWidgetng>
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
 #include <TextGrammarCheck/GrammalecteConfigDialog>
 #include <TextGrammarCheck/GrammalecteManager>
-#else
-#include <PimCommonTextGrammarCheck/GrammalecteConfigDialog>
-#include <PimCommonTextGrammarCheck/GrammalecteManager>
-#endif
 
 #include <QPointer>
 
@@ -49,19 +44,11 @@ bool GrammalectePlugin::hasConfigureDialog() const
 
 void GrammalectePlugin::showConfigureDialog(QWidget *parent)
 {
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
     QPointer<TextGrammarCheck::GrammalecteConfigDialog> dlg = new TextGrammarCheck::GrammalecteConfigDialog(parent);
     if (dlg->exec()) {
         TextGrammarCheck::GrammalecteManager::self()->loadSettings();
     }
     delete dlg;
-#else
-    QPointer<PimCommonTextGrammarCheck::GrammalecteConfigDialog> dlg = new PimCommonTextGrammarCheck::GrammalecteConfigDialog(parent);
-    if (dlg->exec()) {
-        PimCommonTextGrammarCheck::GrammalecteManager::self()->loadSettings();
-    }
-    delete dlg;
-#endif
 }
 
 #include "grammalecteplugin.moc"

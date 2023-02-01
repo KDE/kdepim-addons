@@ -24,9 +24,4 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_languagetoolplugin
-    KF5::MessageComposer KF${KF_MAJOR_VERSION}::I18n KF5::PimCommon KF${KF_MAJOR_VERSION}::XmlGui)
-if (USE_KTEXTADDONS_LIB)
-    target_link_libraries(kmail_languagetoolplugin KF${KF_MAJOR_VERSION}::TextGrammarCheck)
-else()
-    target_link_libraries(kmail_languagetoolplugin KF5::PimCommonTextGrammarCheck)
-endif()
+    KF5::MessageComposer KF${KF_MAJOR_VERSION}::I18n KF5::PimCommon KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::TextGrammarCheck)

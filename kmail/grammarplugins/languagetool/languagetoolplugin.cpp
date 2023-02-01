@@ -9,13 +9,8 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <PimCommon/CustomToolsWidgetng>
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
 #include <TextGrammarCheck/LanguageToolConfigDialog>
 #include <TextGrammarCheck/LanguageToolManager>
-#else
-#include <PimCommonTextGrammarCheck/LanguageToolConfigDialog>
-#include <PimCommonTextGrammarCheck/LanguageToolManager>
-#endif
 
 K_PLUGIN_CLASS_WITH_JSON(LanguageToolPlugin, "kmail_languagetoolplugin.json")
 LanguageToolPlugin::LanguageToolPlugin(QObject *parent, const QList<QVariant> &)
@@ -48,18 +43,10 @@ bool LanguageToolPlugin::hasConfigureDialog() const
 
 void LanguageToolPlugin::showConfigureDialog(QWidget *parent)
 {
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
     TextGrammarCheck::LanguageToolConfigDialog dlg(parent);
     if (dlg.exec()) {
         TextGrammarCheck::LanguageToolManager::self()->loadSettings();
     }
-#else
-    PimCommonTextGrammarCheck::LanguageToolConfigDialog dlg(parent);
-    if (dlg.exec()) {
-        PimCommonTextGrammarCheck::LanguageToolManager::self()->loadSettings();
-    }
-
-#endif
 }
 
 #include "languagetoolplugin.moc"

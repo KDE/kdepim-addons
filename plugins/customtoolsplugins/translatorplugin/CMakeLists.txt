@@ -17,10 +17,6 @@ target_link_libraries(pimcommon_translatorplugin
   KF5::PimTextEdit
   KF${KF_MAJOR_VERSION}::XmlGui
   KF${KF_MAJOR_VERSION}::I18n
+  KF${KF_MAJOR_VERSION}::TextTranslator
 )
 
-if (USE_KTEXTADDONS_LIB)
-    target_link_libraries(pimcommon_translatorplugin KF${KF_MAJOR_VERSION}::TextTranslator)
-else()
-    target_link_libraries(pimcommon_translatorplugin KF5::PimCommonTextTranslator)
-endif()

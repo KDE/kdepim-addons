@@ -8,11 +8,7 @@
 #include "viewerplugintranslatorinterface.h"
 #include <KActionCollection>
 #include <KPluginFactory>
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
 #include <TextTranslator/TranslatorConfigureDialog>
-#else
-#include <PimCommonTextTranslator/TranslatorConfigureDialog>
-#endif
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginTranslator, "messageviewer_translatorplugin.json")
@@ -35,11 +31,7 @@ QString ViewerPluginTranslator::viewerPluginName() const
 
 void MessageViewer::ViewerPluginTranslator::showConfigureDialog(QWidget *parent)
 {
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
     TextTranslator::TranslatorConfigureDialog dialog(parent);
-#else
-    PimCommonTextTranslator::TranslatorConfigureDialog dialog(parent);
-#endif
     dialog.exec();
 }
 

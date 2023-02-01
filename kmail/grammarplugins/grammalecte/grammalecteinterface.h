@@ -7,19 +7,11 @@
 
 #include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 class KActionCollection;
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
 namespace TextGrammarCheck
 {
 class GrammalecteResultWidget;
 class GrammarAction;
 }
-#else
-namespace PimCommonTextGrammarCheck
-{
-class GrammalecteResultWidget;
-class GrammarAction;
-}
-#endif
 class GrammalecteInterface : public MessageComposer::PluginEditorGrammarCustomToolsViewInterface
 {
     Q_OBJECT
@@ -31,19 +23,11 @@ public:
 
 private:
     Q_DISABLE_COPY(GrammalecteInterface)
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
     void slotReplaceText(const TextGrammarCheck::GrammarAction &act);
-#else
-    void slotReplaceText(const PimCommonTextGrammarCheck::GrammarAction &act);
-#endif
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);
     void checkAgain();
     void closeChecker();
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
     TextGrammarCheck::GrammalecteResultWidget *const mGrammarResultWidget;
-#else
-    PimCommonTextGrammarCheck::GrammalecteResultWidget *const mGrammarResultWidget;
-#endif
     KToggleAction *mAction = nullptr;
 };

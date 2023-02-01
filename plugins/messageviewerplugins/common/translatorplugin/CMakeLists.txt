@@ -14,10 +14,5 @@ endif()
 
 target_link_libraries(messageviewer_translatorplugin
   KF5::MessageViewer KF${KF_MAJOR_VERSION}::XmlGui KF5::PimTextEdit KF${KF_MAJOR_VERSION}::I18n
+  KF${KF_MAJOR_VERSION}::TextTranslator
 )
- 
-if (USE_KTEXTADDONS_LIB)
-    target_link_libraries(messageviewer_translatorplugin KF${KF_MAJOR_VERSION}::TextTranslator)
-else()
-    target_link_libraries(messageviewer_translatorplugin KF5::PimCommonTextTranslator)
-endif()

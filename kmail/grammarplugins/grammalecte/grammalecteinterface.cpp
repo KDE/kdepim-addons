@@ -8,13 +8,8 @@
 #include "grammalecteplugin_debug.h"
 #include <KPIMTextEdit/RichTextComposer>
 
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
 #include <TextGrammarCheck/GrammalecteResultWidget>
 #include <TextGrammarCheck/GrammarAction>
-#else
-#include <PimCommonTextGrammarCheck/GrammalecteResultWidget>
-#include <PimCommonTextGrammarCheck/GrammarAction>
-#endif
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -25,30 +20,16 @@
 
 GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
     , mGrammarResultWidget(new TextGrammarCheck::GrammalecteResultWidget(this))
-#else
-    , mGrammarResultWidget(new PimCommonTextGrammarCheck::GrammalecteResultWidget(this))
-#endif
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
     connect(mGrammarResultWidget, &TextGrammarCheck::GrammalecteResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
     connect(mGrammarResultWidget, &TextGrammarCheck::GrammalecteResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
     connect(mGrammarResultWidget, &TextGrammarCheck::GrammalecteResultWidget::closeChecker, this, &GrammalecteInterface::closeChecker);
     connect(mGrammarResultWidget, &TextGrammarCheck::GrammalecteResultWidget::configure, this, [this]() {
         Q_EMIT configure(parentWidget());
     });
-#else
-    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::GrammalecteResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
-    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::GrammalecteResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
-    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::GrammalecteResultWidget::closeChecker, this, &GrammalecteInterface::closeChecker);
-    connect(mGrammarResultWidget, &PimCommonTextGrammarCheck::GrammalecteResultWidget::configure, this, [this]() {
-        Q_EMIT configure(parentWidget());
-    });
-
-#endif
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);
@@ -56,11 +37,7 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
 
 GrammalecteInterface::~GrammalecteInterface() = default;
 
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
 void GrammalecteInterface::slotReplaceText(const TextGrammarCheck::GrammarAction &act)
-#else
-void GrammalecteInterface::slotReplaceText(const PimCommonTextGrammarCheck::GrammarAction &act)
-#endif
 {
     if (richTextEditor()) {
         QTextBlock block = richTextEditor()->document()->findBlockByNumber(act.blockId() - 1);

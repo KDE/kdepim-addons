@@ -5,11 +5,7 @@
 */
 
 #include "viewerplugintranslatorinterface.h"
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
 #include <TextTranslator/TranslatorWidget>
-#else
-#include <PimCommonTextTranslator/TranslatorWidget>
-#endif
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -59,19 +55,11 @@ void ViewerPluginTranslatorInterface::createAction(KActionCollection *ac)
     }
 }
 
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
 TextTranslator::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
-#else
-PimCommonTextTranslator::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
-#endif
 {
     if (!mTranslatorWidget) {
         auto parentWidget = static_cast<QWidget *>(parent());
-#ifdef HAVE_KTEXTADDONS_TEXT_SUPPORT
         mTranslatorWidget = new TextTranslator::TranslatorWidget(parentWidget);
-#else
-        mTranslatorWidget = new PimCommonTextTranslator::TranslatorWidget(parentWidget);
-#endif
         mTranslatorWidget->setObjectName(QStringLiteral("translatorwidget"));
         parentWidget->layout()->addWidget(mTranslatorWidget);
         mTranslatorWidget->hide();
