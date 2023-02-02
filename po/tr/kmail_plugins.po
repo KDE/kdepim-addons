@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2023-01-31 01:05+0300\n"
+"PO-Revision-Date: 2023-02-01 12:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -146,7 +146,7 @@ msgstr "İstenmeyen Posta İşlemleri"
 #: common/antispamwizard.cpp:569
 #, kde-format
 msgid "Semi spam (unsure) handling"
-msgstr "Yarı gereksiz posta (emin olunmayan) işlemleri"
+msgstr "Emin olunmayan istenmeyen posta işlemesi"
 
 #: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
 #: common/antispamwizard.cpp:576
@@ -191,8 +191,8 @@ msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
 "detection software and re-run this wizard.</p>"
 msgstr ""
-"<p>Üzgünüz, gereksiz posta tespit aracı bulunamadı. İstenmeyen posta tespit "
-"yazılımı kurun ve bu yazılımı yeniden çalıştırın.</p>"
+"<p>Üzgünüz, istenmeyen posta tespit aracı bulunamadı. İstenmeyen posta "
+"tespit yazılımı kurun ve bu sihirbazı yeniden çalıştırın.</p>"
 
 #: common/antispamwizard.cpp:506
 #, kde-format
@@ -241,8 +241,8 @@ msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
 "</p>"
 msgstr ""
-"<p>Emin olunmayan olarak sınıflandırılmış iletiler (muhtemel gereksiz) için "
-"klasör <i>%1</i>.</p>"
+"<p>Emin olunmayan olarak sınıflandırılmış iletiler (büyük olasılıkla "
+"istenmeyen) için klasör <i>%1</i>.</p>"
 
 #: common/antispamwizard.cpp:581
 #, kde-format
@@ -260,7 +260,7 @@ msgid ""
 "The wizard will search for any tools to do spam detection\n"
 "and setup KMail to work with them."
 msgstr ""
-"Sihirbaz, gereksiz (spam) tespiti için araçları arayacak\n"
+"Sihirbaz, istenmeyen posta tespiti için araçları arayacak\n"
 "ve K Posta'nın onlarla çalışabilmesi için yapılandıracak."
 
 #: common/antispamwizard.cpp:983
@@ -300,7 +300,7 @@ msgstr ""
 #: common/antispamwizard.cpp:1057
 #, kde-format
 msgid "&Mark detected spam messages as read"
-msgstr "Tespit edilen gereksiz iletileri okundu &işaretle"
+msgstr "Tespit edilen istenmeyen iletileri okundu &işaretle"
 
 #: common/antispamwizard.cpp:1058
 #, kde-format
@@ -310,7 +310,7 @@ msgstr "İstenmeyen olarak sınıflandırılmış iletileri okundu işaretle."
 #: common/antispamwizard.cpp:1061
 #, kde-format
 msgid "Move &known spam to:"
-msgstr "Bilinen gereksizleri şuraya &taşı:"
+msgstr "Bilinen istenmeyen postayı şuraya &taşı:"
 
 #: common/antispamwizard.cpp:1063
 #, kde-format
@@ -324,7 +324,7 @@ msgstr ""
 #: common/antispamwizard.cpp:1076
 #, kde-format
 msgid "Move &probable spam to:"
-msgstr "&Muhtemel gereksizleri şuraya taşı:"
+msgstr "&Olası istenmeyen postayı şuraya taşı:"
 
 #: common/antispamwizard.cpp:1078
 #, kde-format
