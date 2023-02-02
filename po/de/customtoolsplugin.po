@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-18 00:58+0000\n"
+"POT-Creation-Date: 2023-02-02 00:59+0000\n"
 "PO-Revision-Date: 2017-01-08 20:50+0100\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: translatorplugin/translatorplugin.cpp:37
+#: translatorplugin/translatorplugin.cpp:33
 #, kde-format
 msgid "Translator"
 msgstr "Übersetzung"
 
-#: translatorplugin/translatorview.cpp:64
+#: translatorplugin/translatorview.cpp:52
 #, kde-format
 msgid "&Translator"
 msgstr "Überse&tzung"

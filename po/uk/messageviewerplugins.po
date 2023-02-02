@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-18 00:58+0000\n"
+"POT-Creation-Date: 2023-02-02 00:59+0000\n"
 "PO-Revision-Date: 2022-02-03 09:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Поточна адреса не є скороченою адресою.
 msgid "Expand URL"
 msgstr "Розгортання адреси"
 
-#: common/translatorplugin/viewerplugintranslatorinterface.cpp:53
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
 msgid "Translate..."
 msgstr "Перекласти…"
