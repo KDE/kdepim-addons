@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-12-04 11:46+0100\n"
+"PO-Revision-Date: 2023-02-02 08:45+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -481,7 +481,7 @@ msgstr "LDAP სერვერიდან შემოტანა..."
 #: ldap/ldapimportexportplugininterface.cpp:26
 #, kde-format
 msgid "Import contacts from an LDAP server."
-msgstr ""
+msgstr "კონტაქტების შემოტანა LDAP სერვერიდან."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, kde-format
@@ -517,7 +517,7 @@ msgstr "LDif ფაილები (*.ldif)"
 #, kde-format
 msgctxt "@title:group"
 msgid "Fields to be exported"
-msgstr ""
+msgstr "გასატანი ველები"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:29
 #, kde-format
@@ -629,13 +629,13 @@ msgstr "გატანის მორგება"
 #, kde-format
 msgctxt "@option:check"
 msgid "Display name as full name"
-msgstr ""
+msgstr "სახელის სრულ სახელად ჩვენება"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export display name as full name"
-msgstr ""
+msgstr "სახელის სრულ სახელად გატანა"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:73
 #, kde-format
@@ -650,7 +650,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
-msgstr ""
+msgstr "VCard ფაილების შემოტანა"
 
 #: vcards/engine/vcardviewerdialog.cpp:51
 #, kde-format
@@ -662,32 +662,32 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All..."
-msgstr ""
+msgstr "ყველას შემოტანა…"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard..."
-msgstr ""
+msgstr "VCard შემოტანა..."
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
 msgid "Import contacts from a vCard file."
-msgstr ""
+msgstr "კონტაქტების შემოტანა vCard ფაილიდან."
 
 #: vcards/vcardimportexportplugininterface.cpp:52
 #, kde-format
 msgid "Export contacts to a vCard 4.0 file."
-msgstr ""
+msgstr "კონტაქტების გატანა vCard 4.0 ფაილში."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
 msgid "Export vCard 4.0..."
-msgstr ""
+msgstr "გატანა vCard 4.0-ში..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0..."
-msgstr ""
+msgstr "გატანა vCard 3.0-ში..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -697,7 +697,7 @@ msgstr ""
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1..."
-msgstr ""
+msgstr "გატანა vCard 2.1-ში..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
@@ -707,13 +707,13 @@ msgstr ""
 #: vcards/vcardimportexportplugininterface.cpp:113
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
-msgstr ""
+msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;ყველა ფაილი (*)"
 
 #: vcards/vcardimportexportplugininterface.cpp:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
-msgstr ""
+msgstr "აირჩიეთ შემოსატანი vCard ფაილი"
 
 #: vcards/vcardimportexportplugininterface.cpp:120
 #, kde-format

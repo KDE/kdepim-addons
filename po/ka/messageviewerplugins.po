@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 00:59+0000\n"
-"PO-Revision-Date: 2023-01-30 09:38+0100\n"
+"PO-Revision-Date: 2023-02-02 08:43+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -87,7 +87,7 @@ msgstr "ახალი მოვლენის შექმნა და ა�
 #: createeventplugin/eventedit.cpp:131
 #, kde-format
 msgid "Open event editor, where more details can be changed."
-msgstr ""
+msgstr "გახსენით მოვლენების რედაქტორი, სადაც მეტი რამის შეცვლა შეგიძლიათ."
 
 #: createeventplugin/eventedit.cpp:142
 #, kde-format
@@ -149,6 +149,8 @@ msgid ""
 "This option starts an editor to create a note. Then you can edit the note to "
 "your liking before saving it."
 msgstr ""
+"ეს პარამეტრი ახალი შენიშვნის შესაქმნელად რედაქტორს გაუშვებს. იქ შეგეძლებათ "
+"შენიშვნა ისე ჩაასწოროთ, როგორც თქვენ გნებავთ."
 
 #: createtodoplugin/todoedit.cpp:61
 #, kde-format
@@ -173,7 +175,7 @@ msgstr "ახალი შენიშვნის შექმნა და �
 #: createtodoplugin/todoedit.cpp:103
 #, kde-format
 msgid "Open todo editor, where more details can be changed."
-msgstr ""
+msgstr "გეგმის რედაქტორის გახსნა, სადაც მეტი რამის შეცვლა სეგიძლიათ."
 
 #: createtodoplugin/todoedit.cpp:113
 #, kde-format
@@ -183,7 +185,7 @@ msgstr "ახალი გეგმების შესაქმნელა�
 #: createtodoplugin/todoedit.cpp:150
 #, kde-format
 msgid "Check I received a reply about \"%1\""
-msgstr ""
+msgstr "შემოწმება, მივიღე თუ არა გამოხმაურება \"%1\"-ის შესახებ"
 
 #: createtodoplugin/todoedit.cpp:151
 #, kde-format
@@ -195,7 +197,7 @@ msgstr "%1-სთვის პასუხი"
 msgctxt ""
 "%1 is summary of the todo, %2 is name of the folder in which it is stored"
 msgid "New todo '%1' was added to task list '%2'"
-msgstr ""
+msgstr "ახალი გეგმა '%1' დამატებულია ამოცანების სიაში '%2'"
 
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:68
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:69
