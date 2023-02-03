@@ -9,6 +9,7 @@
 #include "markdowncreatelinkwidget.h"
 
 #include <QDialogButtonBox>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(MarkdownCreateLinkDialogTest)
@@ -16,6 +17,7 @@ QTEST_MAIN(MarkdownCreateLinkDialogTest)
 MarkdownCreateLinkDialogTest::MarkdownCreateLinkDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void MarkdownCreateLinkDialogTest::shouldHaveDefaultValue()

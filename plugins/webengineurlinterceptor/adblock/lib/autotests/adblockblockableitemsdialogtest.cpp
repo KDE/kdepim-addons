@@ -9,11 +9,13 @@
 #include "../lib/widgets/adblockblockableitemswidget.h"
 
 #include <QDialogButtonBox>
+#include <QStandardPaths>
 #include <QTest>
 using namespace AdBlock;
 AdBlockBlockableItemsDialogTest::AdBlockBlockableItemsDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 AdBlockBlockableItemsDialogTest::~AdBlockBlockableItemsDialogTest() = default;

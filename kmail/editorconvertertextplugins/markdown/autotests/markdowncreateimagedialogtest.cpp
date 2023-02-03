@@ -10,6 +10,7 @@
 
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(MarkdownCreateImageDialogTest)
@@ -17,6 +18,7 @@ QTEST_MAIN(MarkdownCreateImageDialogTest)
 MarkdownCreateImageDialogTest::MarkdownCreateImageDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void MarkdownCreateImageDialogTest::shouldHaveDefaultValue()

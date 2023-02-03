@@ -8,11 +8,13 @@
 #include "../widgets/gravatarupdatedialog.h"
 #include "../widgets/gravatarupdatewidget.h"
 #include <QDialogButtonBox>
+#include <QStandardPaths>
 #include <QTest>
 
 GravatarUpdateDialogTest::GravatarUpdateDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 GravatarUpdateDialogTest::~GravatarUpdateDialogTest() = default;
