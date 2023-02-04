@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# Vit Pelcak <vit@pelcak.org>, 2018, 2019, 2020, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2018, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2021-03-30 15:33+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2023-02-01 11:21+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:21
 #, kde-format
@@ -262,7 +262,7 @@ msgstr "Vytvořit"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:27
 #, kde-format
@@ -295,30 +295,30 @@ msgstr "Program:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
-msgstr ""
+msgstr "Nastavit otevření URL modulem"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:55
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
-msgstr ""
+msgstr "Přidat pravidlo..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:56
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
-msgstr ""
+msgstr "Odstranit pravidlo"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:57
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
-msgstr ""
+msgstr "Upravit pravidlo..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:150
 #, kde-format
 msgid "Rule already exists."
-msgstr ""
+msgstr "Pravidlo již existuje."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:150
 #, kde-format
@@ -329,9 +329,9 @@ msgstr "Duplikovat pravidlo"
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Chcete odstranit toto pravidlo?"
+msgstr[1] "Chcete odstranit tato pravidla?"
+msgstr[2] "Chcete odstranit tato pravidla?"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:192
 #, kde-format
@@ -353,15 +353,15 @@ msgstr "Upravit pravidlo..."
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Odstranit pravidlo"
+msgstr[1] "Odstranit pravidla"
+msgstr[2] "Odstranit pravidla"
 
 #: scamsettings/scamconfiguresettingsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
-msgstr ""
+msgstr "Nastavit možnosti Scamu"
 
 #: scamsettings/scamconfiguresettingswidget.cpp:26
 #, kde-format
@@ -376,12 +376,12 @@ msgstr "Zkontrolovat"
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
-msgstr ""
+msgstr "Zakázat všechny kontroly"
 
 #: scamsettings/scamconfigureutils.cpp:17
 #, kde-format
 msgid "Redirect Url"
-msgstr ""
+msgstr "Přesměrovat URL"
 
 #: scamsettings/scamconfigureutils.cpp:19
 #, kde-format
