@@ -6,6 +6,7 @@
         "Description[bg]": "За всеки ден този плъгин показва номера на годината си в горната част на изгледа на дневния ред. Например 1 февруари е ден 32 от годината.",
         "Description[ca@valencia]": "Per a cada dia, este connector mostrarà el número de dia de l'any al capdamunt de la vista d'agenda. Per exemple, l'1 de febrer serà el dia 32 de l'any.",
         "Description[ca]": "Per a cada dia, aquest connector mostrarà el número de dia de l'any al capdamunt de la vista d'agenda. Per exemple, l'1 de febrer serà el dia 32 de l'any.",
+        "Description[cs]": "Tento modul pro každý den zobrazuje číslo dne roku na vrcholu pohledu na agendu. Např. 1. únor je 32. den v roce.",
         "Description[de]": "Für jeden Tag des Jahres wird mit diesem Modul der Kalendertag oben in der Terminplanansicht angezeigt. Der 1. Februar ist beispielsweise der 32. Kalendertag des Jahres.",
         "Description[en_GB]": "For each day this plugin shows its day number of the year at the top of the agenda view. For example, February 1 is day 32 of the year.",
         "Description[es]": "Este complemento muestra el número del día del año para cada día en la parte superior de la vista de la agenda. Por ejemplo, el 1 de febrero es el día 32 del año.",
