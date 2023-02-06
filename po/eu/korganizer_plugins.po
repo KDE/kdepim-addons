@@ -1,35 +1,37 @@
-# translation of korganizer.po to
-# translation of korganizer.po to Basque
-# Copyright (C) 2003, 2005 Free Software Foundation, Inc.
+# Translation for korganizer_plugins.po to Euskara/Basque (eu).
+# Copyright (C) 2003-2023 This file is copyright: 
+# This file is distributed under the same license as the original file.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
+# Translators:
 # Marcos  <marcos@euskalgnu.org>, 2003, 2005.
 # Ion Gaztañaga <ion_g_m@hotmail.com>, 2005.
 # Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
 # Marcos <marcos@euskalgnu.org>, 2005.
 # Ignigo Salvador Azurmendi <xalba@euskalnet.net>, 2010.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-04 00:45+0000\n"
-"PO-Revision-Date: 2010-08-12 00:42+0200\n"
-"Last-Translator: Ignigo Salvador Azurmendi <xalba@euskalnet.net>\n"
-"Language-Team: Basque <itzulpena@euskalgnu.org>\n"
+"PO-Revision-Date: 2023-02-05 17:52+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
 msgid "Search &Directory Service"
-msgstr ""
+msgstr "Bilatu &direktorio zerbitzuan"
 
 #: plugins/datenums/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure Day Numbers"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Day Numbers"
 msgstr "Konfiguratu egunen zenbakiak"
@@ -58,15 +60,15 @@ msgstr "Erakutsi biak"
 #, kde-format
 msgid "This plugin shows information on a day's position in the year."
 msgstr ""
+"Plugin honek egun batek urtean duen kokapenari buruzko informazioa erakusten "
+"du."
 
 #: plugins/datenums/datenums.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "N days/hours/minutes before/after the start/end"
-#| msgid "%1 before the end"
+#, kde-format
 msgid "1 day before the end of the year"
 msgid_plural "%1 days before the end of the year"
-msgstr[0] "%1 amaiera baina lehen"
-msgstr[1] "%1 amaiera baina lehen"
+msgstr[0] "Urtea amaitu baino egun 1 lehenago"
+msgstr[1] "Urtea amaitu baino %1 egun lehenago"
 
 #: plugins/datenums/datenums.cpp:59
 #, kde-format
@@ -75,97 +77,87 @@ msgid "%1 / %2"
 msgstr "%1 / %2"
 
 #: plugins/datenums/datenums.cpp:60
-#, fuzzy, kde-format
-#| msgid "Show days to end of year"
+#, kde-format
 msgid "1 day since the beginning of the year,\n"
 msgid_plural "%1 days since the beginning of the year,\n"
-msgstr[0] "Erakutsi urtea amaitzeko egunak"
-msgstr[1] "Erakutsi urtea amaitzeko egunak"
+msgstr[0] "Urte hasieratik egun 1,\n"
+msgstr[1] "Urte hasieratik %1 egun,\n"
 
 #: plugins/datenums/datenums.cpp:61
-#, fuzzy, kde-format
-#| msgid "Show days to end of year"
+#, kde-format
 msgid "1 day until the end of the year"
 msgid_plural "%1 days until the end of the year"
-msgstr[0] "Erakutsi urtea amaitzeko egunak"
-msgstr[1] "Erakutsi urtea amaitzeko egunak"
+msgstr[0] "Egun 1 urtea amaitzeko"
+msgstr[1] "%1 egun urtea amaitzeko"
 
 #: plugins/datenums/datenums.cpp:102
-#, fuzzy, kde-format
-#| msgid "Week"
+#, kde-format
 msgctxt "Week weekOfYear"
 msgid "Week %1"
-msgstr "Astea"
+msgstr "%1. astea"
 
 #: plugins/datenums/datenums.cpp:103 plugins/datenums/datenums.cpp:113
 #: plugins/datenums/datenums.cpp:118
-#, fuzzy, kde-format
-#| msgid "Show days to end of year"
+#, kde-format
 msgid "1 week since the beginning of the year"
 msgid_plural "%1 weeks since the beginning of the year"
-msgstr[0] "Erakutsi urtea amaitzeko egunak"
-msgstr[1] "Erakutsi urtea amaitzeko egunak"
+msgstr[0] "Urte hasieratik aste 1"
+msgstr[1] "Urte hasieratik %1 aste"
 
 #: plugins/datenums/datenums.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "short_weekday date (e.g. Mon 13)"
-#| msgid "%1 %2"
+#, kde-format
 msgctxt "weekOfYear (year)"
 msgid "%1 (%2)"
-msgstr "%1 %2"
+msgstr "%1 (%2)"
 
 #: plugins/datenums/datenums.cpp:107
-#, fuzzy, kde-format
-#| msgctxt "short_weekday date (e.g. Mon 13)"
-#| msgid "%1 %2"
+#, kde-format
 msgctxt "Week weekOfYear (year)"
 msgid "Week %1 (%2)"
-msgstr "%1 %2"
+msgstr "%1. astea (%2)"
 
 #: plugins/datenums/datenums.cpp:122
 #, kde-format
 msgid "1 week remaining"
 msgid_plural "%1 weeks remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Aste 1 falta da"
+msgstr[1] "%1 aste falta dira"
 
 #: plugins/datenums/datenums.cpp:123
-#, fuzzy, kde-format
-#| msgid "Show days to end of year"
+#, kde-format
 msgid "1 week until the end of the year"
 msgid_plural "%1 weeks until the end of the year"
-msgstr[0] "Erakutsi urtea amaitzeko egunak"
-msgstr[1] "Erakutsi urtea amaitzeko egunak"
+msgstr[0] "Aste 1 urtea amaitzeko"
+msgstr[1] "%1 aste urtea amaitzeko"
 
 #: plugins/datenums/datenums.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "dayOfYear / daysTillEndOfYear"
-#| msgid "%1 / %2"
+#, kde-format
 msgctxt "weekOfYear / weeksTillEndOfYear"
 msgid "%1 / %2"
 msgstr "%1 / %2"
 
 #: plugins/datenums/datenums.cpp:140
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "n weeks since the beginning of the year\n"
 "n weeks until the end of the year"
 msgid ""
 "%1\n"
 "%2"
-msgstr "%1 - %2"
+msgstr ""
+"%1\n"
+"%2"
 
 #: plugins/hebrew/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure Holidays"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Holidays"
-msgstr "Konfiguratu oporrak"
+msgstr "Konfiguratu jaiegunak"
 
 #: plugins/hebrew/configdialog.cpp:42
 #, kde-format
 msgid "Use Israeli holidays"
-msgstr "Erabili opor israeldarrak"
+msgstr "Erabili Israelgo jaiegunak"
 
 #: plugins/hebrew/configdialog.cpp:46
 #, kde-format
@@ -191,6 +183,9 @@ msgid ""
 "%1\n"
 "</i></p></qt>"
 msgstr ""
+"<qt><p align=\"center\"><i>\n"
+"%1\n"
+"</i></p></qt>"
 
 #: plugins/hebrew/hebrew.cpp:67
 #, kde-format
@@ -198,8 +193,7 @@ msgid "This plugin provides the date in the Jewish calendar."
 msgstr "Plugin honek egutegi judeatarreko data eskeintzen du."
 
 #: plugins/hebrew/holiday.cpp:75
-#, fuzzy, kde-format
-#| msgid "Sh. HaHodesh"
+#, kde-format
 msgctxt ""
 "These are Jewish holidays and mostly do not have translations. They may have "
 "different spellings in your language; otherwise, just translate the sound to "
@@ -697,34 +691,37 @@ msgid ""
 "Currently, the phase is computed for noon at UTC; therefore, you should "
 "expect variations by 1 day in either direction."
 msgstr ""
+"Plugin honek eguneko ilargi-fasea azaltzen du (ilberria, ilgora, ilbetea, "
+"ilbehera). Egun, fasea UTCaren eguerdirako kalkulatzen da; beraz, egun "
+"bateko aldaketak izan daitezke bi norabideetako bakoitzean."
 
 #: plugins/picoftheday/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure &Date && Time..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Picture of the Day"
-msgstr "Konriguratu &data eta ordua..."
+msgstr "Konriguratu Eguneko argazkia"
 
 #: plugins/picoftheday/configdialog.cpp:42
 #, kde-format
 msgid "Thumbnail Aspect Ratio Mode"
-msgstr ""
+msgstr "Koadro-txikien itxura-proportzio modua"
 
 #: plugins/picoftheday/configdialog.cpp:46
 #, kde-format
 msgid "Ignore aspect ratio"
-msgstr ""
+msgstr "Ezikusi itxura-proportzioa"
 
 #: plugins/picoftheday/configdialog.cpp:48
 #, kde-format
 msgid ""
 "The thumbnail will be scaled freely. The aspect ratio will not be preserved."
 msgstr ""
+"Koadro-txikia askatasunez eskalatuko da. Itxura-proportzioa ez da gordeko."
 
 #: plugins/picoftheday/configdialog.cpp:52
 #, kde-format
 msgid "Keep aspect ratio"
-msgstr ""
+msgstr "Eutsi itxura-proportzioari"
 
 #: plugins/picoftheday/configdialog.cpp:54
 #, kde-format
@@ -732,11 +729,13 @@ msgid ""
 "The thumbnail will be scaled to a rectangle as large as possible inside a "
 "given rectangle, preserving the aspect ratio."
 msgstr ""
+"Koadro-txikia, emandako laukizuzen baten barruan, ahalik laukizuzen "
+"handienera eskalatutako da, itxura-proportzioari etsiz."
 
 #: plugins/picoftheday/configdialog.cpp:59
 #, kde-format
 msgid "Keep aspect ratio by expanding"
-msgstr ""
+msgstr "Eutsi itxura-proportzioari, zabalduz"
 
 #: plugins/picoftheday/configdialog.cpp:61
 #, kde-format
@@ -744,69 +743,69 @@ msgid ""
 "The thumbnail will be scaled to a rectangle as small as possible outside a "
 "given rectangle, preserving the aspect ratio."
 msgstr ""
+"Koadro-txikia, emandako laukizuzen baten barruan, ahalik laukizuzen "
+"txikienera eskalatutako da, itxura-proportzioari etsiz."
 
 #: plugins/picoftheday/element.cpp:209
 #, kde-format
 msgid "Wikipedia POTD: %1"
-msgstr ""
+msgstr "Wikipedia POTD: %1"
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
+#, kde-format
 msgid "Picture Page"
-msgstr "Ezabatu %1"
+msgstr "Argazkiaren orria"
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Go &Forward"
+#, kde-format
 msgid "Loading..."
-msgstr "Joan &aurrera"
+msgstr "Zamatzen..."
 
 #: plugins/picoftheday/element.cpp:332
-#, fuzzy, kde-format
-#| msgid "This plugin provides the date in the Jewish calendar."
+#, kde-format
 msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
-msgstr "Plugin honek egutegi judeatarreko data eskeintzen du."
+msgstr "<qt><i>Eguneko irudia</i> zamatzen...</qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48
-#, fuzzy, kde-format
-#| msgid "This plugin provides the date in the Jewish calendar."
+#, kde-format
 msgid "<qt>This plugin provides the Wikipedia <i>Picture of the Day</i>.</qt>"
-msgstr "Plugin honek egutegi judeatarreko data eskeintzen du."
+msgstr "<qt>Plugin honek wikipediako <i>Eguneko irudia</i> hornitzen du.</qt>"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:29
-#, fuzzy, kde-format
-#| msgid "This plugin provides numbers of days and weeks."
+#, kde-format
 msgid "This plugin provides links to Wikipedia's 'This Day in History' pages."
-msgstr "Plugin honek egun eta aske zenbakiak eskeintzen ditu."
+msgstr ""
+"Plugin honek Wikipediaren 'Egun hau historian' orrietarako estekak hornitzen "
+"ditu."
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:37
 #, kde-format
 msgid "This day in history"
-msgstr ""
+msgstr "Egun hau historian"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:39
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:53
 #, kde-format
 msgctxt "Localized Wikipedia website"
 msgid "https://en.wikipedia.org/wiki/"
-msgstr ""
+msgstr "https://en.wikipedia.org/wiki/"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:40
 #, kde-format
 msgctxt "Qt date format used by the localized Wikipedia"
 msgid "MMMM_d"
-msgstr ""
+msgstr "MMMM_d1"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:51
 #, kde-format
 msgid "This month in history"
-msgstr ""
+msgstr "Hilabete hau historian"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:54
 #, kde-format
 msgctxt "Qt date format used by the localized Wikipedia"
 msgid "MMMM_yyyy"
-msgstr ""
+msgstr "yyyy_MMMM"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
