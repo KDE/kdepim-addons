@@ -37,7 +37,7 @@ InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
         mShortUrlServer->addItem(plugin->pluginName(), plugin->engineName());
     }
 
-    connect(mShortUrlServer, qOverload<int>(&QComboBox::activated), this, &InsertShorturlConfigureWidget::slotChanged);
+    connect(mShortUrlServer, &QComboBox::activated, this, &InsertShorturlConfigureWidget::slotChanged);
     loadConfig();
 }
 

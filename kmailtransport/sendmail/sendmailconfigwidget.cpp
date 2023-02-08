@@ -55,7 +55,7 @@ void SendmailConfigWidget::init()
         // is saved in the config.
         d->ui.kcfg_host->setText(QStandardPaths::findExecutable(QStringLiteral("sendmail")));
     }
-    connect(d->ui.kcfg_host->lineEdit(), qOverload<const QString &>(&QLineEdit::textChanged), this, &SendmailConfigWidget::slotTextChanged);
+    connect(d->ui.kcfg_host->lineEdit(), &QLineEdit::textChanged, this, &SendmailConfigWidget::slotTextChanged);
     slotTextChanged(d->ui.kcfg_host->text());
 }
 

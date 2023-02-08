@@ -39,7 +39,7 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWi
     connect(mPatternLineEdit, &QLineEdit::textChanged, this, [this](const QString &str) {
         Q_EMIT updateOkButton(!str.trimmed().isEmpty());
     });
-    connect(mRuleTypeComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, &ConfirmBeforeDeletingCreateRuleWidget::slotRuleTypeChanged);
+    connect(mRuleTypeComboBox, &QComboBox::currentIndexChanged, this, &ConfirmBeforeDeletingCreateRuleWidget::slotRuleTypeChanged);
 }
 
 ConfirmBeforeDeletingCreateRuleWidget::~ConfirmBeforeDeletingCreateRuleWidget() = default;

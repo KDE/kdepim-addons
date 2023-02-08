@@ -73,7 +73,7 @@ AdBlockSettingWidget::AdBlockSettingWidget(QWidget *parent)
     // Q_EMIT changed signal
     connect(mUi->checkEnableAdblock, &QCheckBox::stateChanged, this, &AdBlockSettingWidget::hasChanged);
     connect(mUi->checkHideAds, &QCheckBox::stateChanged, this, &AdBlockSettingWidget::hasChanged);
-    connect(mUi->spinBox, qOverload<int>(&KPluralHandlingSpinBox::valueChanged), this, &AdBlockSettingWidget::hasChanged);
+    connect(mUi->spinBox, &KPluralHandlingSpinBox::valueChanged, this, &AdBlockSettingWidget::hasChanged);
     connect(mUi->addFilters, &QPushButton::clicked, this, &AdBlockSettingWidget::slotAddFilter);
     connect(mUi->showList, &QPushButton::clicked, this, &AdBlockSettingWidget::slotShowList);
     connect(mUi->editFilter, &QPushButton::clicked, this, &AdBlockSettingWidget::slotEditFilter);

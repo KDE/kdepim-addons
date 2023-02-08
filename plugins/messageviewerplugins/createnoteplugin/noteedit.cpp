@@ -66,8 +66,8 @@ NoteEdit::NoteEdit(QWidget *parent)
     mCollectionCombobox->setAccessibleDescription(i18n("Calendar where the new event will be stored."));
 #endif
     mCollectionCombobox->setToolTip(i18n("Calendar where the new event will be stored"));
-    connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &NoteEdit::slotCollectionChanged);
-    connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::activated), this, &NoteEdit::slotCollectionChanged);
+    connect(mCollectionCombobox, &Akonadi::CollectionComboBox::currentIndexChanged, this, &NoteEdit::slotCollectionChanged);
+    connect(mCollectionCombobox, &Akonadi::CollectionComboBox::activated, this, &NoteEdit::slotCollectionChanged);
     hbox->addWidget(mCollectionCombobox);
 
     hbox = new QHBoxLayout;

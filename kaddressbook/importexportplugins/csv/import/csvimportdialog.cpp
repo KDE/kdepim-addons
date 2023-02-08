@@ -174,19 +174,19 @@ CSVImportDialog::CSVImportDialog(QWidget *parent)
 
     reloadCodecs();
 
-    connect(mUrlRequester, qOverload<const QString &>(&KUrlRequester::returnPressed), this, &CSVImportDialog::setFile);
+    connect(mUrlRequester, &KUrlRequester::returnPressed, this, &CSVImportDialog::setFile);
     connect(mUrlRequester, &KUrlRequester::urlSelected, this, &CSVImportDialog::setUrl);
     connect(mUrlRequester->lineEdit(), &QLineEdit::textChanged, this, &CSVImportDialog::urlChanged);
-    connect(mDelimiterGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked), this, [this](QAbstractButton *button) {
+    connect(mDelimiterGroup, &QButtonGroup::buttonClicked, this, [this](QAbstractButton *button) {
         if (button) {
             const int val = mDelimiterGroup->id(button);
             delimiterClicked(val);
         }
     });
-    connect(mDelimiterEdit, qOverload<>(&QLineEdit::returnPressed), this, [this]() {
+    connect(mDelimiterEdit, &QLineEdit::returnPressed, this, [this]() {
         customDelimiterChanged();
     });
-    connect(mDelimiterEdit, qOverload<const QString &>(&QLineEdit::textChanged), this, [this](const QString &str) {
+    connect(mDelimiterEdit, &QLineEdit::textChanged, this, [this](const QString &str) {
         customDelimiterChanged(str);
     });
     connect(mComboQuote, &QComboBox::textActivated, this, [this](const QString &str) {
