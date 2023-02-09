@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Frederik Schwarzer <schwarzer@kde.org>, 2016.
+# Frederik Schwarzer <schwarzer@kde.org>, 2016, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2016, 2017, 2020.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:47+0000\n"
-"PO-Revision-Date: 2020-10-19 06:54+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-02-09 01:09+0100\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -40,12 +41,10 @@ msgid "No Address Book Available"
 msgstr "Es ist kein Adressbuch verfügbar"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:105
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Address Book"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr "Adressbuch hinzufügen"
+msgstr "Adressbuch erstellen"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:113
 #, kde-format
@@ -77,7 +76,7 @@ msgstr "E-Mail als einfachen Text senden"
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
-msgstr ""
+msgstr "Als HTML senden"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
 #, kde-format

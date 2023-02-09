@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vit Pelcak <vit@pelcak.org>, 2017, 2018, 2019, 2020.
+# Vit Pelcak <vit@pelcak.org>, 2017, 2018, 2019, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:46+0000\n"
-"PO-Revision-Date: 2020-04-27 17:16+0200\n"
+"PO-Revision-Date: 2023-02-07 10:46+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
@@ -25,7 +25,7 @@ msgstr "Poslat: %1"
 #: itineraryurlhandler.cpp:126
 #, kde-format
 msgid "Show calendar at the time of this reservation."
-msgstr ""
+msgstr "Zobrazit kalendář v čase rezervace."
 
 #: itineraryurlhandler.cpp:129
 #, kde-format
@@ -35,12 +35,12 @@ msgstr "Přidat rezervaci do vašeho kalendáře"
 #: itineraryurlhandler.cpp:132
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
-msgstr ""
+msgstr "Importovat rezervaci do Itineráře KDE."
 
 #: itineraryurlhandler.cpp:135
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
-msgstr ""
+msgstr "Zaslat tuto rezervaci na zařízení pomocí DE Connect."
 
 #: itineraryurlhandler.cpp:206
 #, kde-format
@@ -50,7 +50,7 @@ msgstr "Nástupní doklad"
 #: itineraryurlhandler.cpp:207
 #, kde-format
 msgid "Ticket"
-msgstr ""
+msgstr "Vstupenka"
 
 #: templates/actions.html:4
 msgid "View"

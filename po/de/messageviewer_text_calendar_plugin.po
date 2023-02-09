@@ -3,21 +3,22 @@
 # Matthias Kalle Dalheimer <kalle@kdab.net>, 2004.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2007, 2008, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2008, 2010, 2012, 2013, 2015, 2017, 2020, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2013.
+# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2013, 2023.
 # Torbjörn Klatt <torbjoern.k@googlemail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:46+0000\n"
-"PO-Revision-Date: 2021-04-14 06:28+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-02-09 01:12+0100\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -205,12 +206,10 @@ msgid "Do you still want to accept the invitation?"
 msgstr "Möchten Sie die Einladung dennoch annehmen?"
 
 #: text_calendar.cpp:780 text_calendar.cpp:792
-#, fuzzy, kde-format
-#| msgctxt "Accepted the invitation."
-#| msgid "Accepted: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Accept"
-msgstr "Akzeptiert: %1"
+msgstr "Annehmen"
 
 #: text_calendar.cpp:784
 #, kde-format
@@ -226,7 +225,7 @@ msgstr "Möchten Sie die bedingte Annahme der Aufgabe dennoch senden?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "Senden"
 
 #: text_calendar.cpp:791
 #, kde-format
@@ -249,12 +248,10 @@ msgid "Do you still want to decline the counter proposal?"
 msgstr "Möchten Sie den Gegenvorschlag dennoch ablehnen?"
 
 #: text_calendar.cpp:804
-#, fuzzy, kde-format
-#| msgctxt "Not able to attend."
-#| msgid "Declined: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Decline"
-msgstr "Abgelehnt: %1"
+msgstr "Ablehnen"
 
 #: text_calendar.cpp:806
 #, kde-format
@@ -265,7 +262,7 @@ msgstr "Möchten Sie diese Antwort dennoch in Ihren Kalender übernehmen?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
-msgstr ""
+msgstr "Aufnahme"
 
 #: text_calendar.cpp:810
 #, kde-format
@@ -278,11 +275,10 @@ msgid "Do you still want to delegate this invitation?"
 msgstr "Möchten Sie diese Einladung dennoch delegieren?"
 
 #: text_calendar.cpp:814
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
-msgstr "Delegieren:"
+msgstr "Delegieren"
 
 #: text_calendar.cpp:817
 #, kde-format
@@ -295,11 +291,10 @@ msgid "Do you still want to forward this invitation?"
 msgstr "Möchten Sie diese Einladung dennoch weiterleiten?"
 
 #: text_calendar.cpp:821
-#, fuzzy, kde-format
-#| msgid "Forwarded: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr "Weitergeleitet: %1"
+msgstr "Vorwärts"
 
 #: text_calendar.cpp:825
 #, kde-format
@@ -310,7 +305,7 @@ msgstr "Möchten Sie die Aufgabe immer noch abbrechen?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
-msgstr ""
+msgstr "Aufgabe abbrechen"
 
 #: text_calendar.cpp:828
 #, kde-format
@@ -318,18 +313,16 @@ msgid "Do you still want to cancel this invitation?"
 msgstr "Möchten Sie die Einladung immer noch zurücknehmen?"
 
 #: text_calendar.cpp:829 text_calendar.cpp:850
-#, fuzzy, kde-format
-#| msgid "Accept invitation"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
-msgstr "Einladung annehmen"
+msgstr "Einladung abbrechen"
 
 #: text_calendar.cpp:832 text_calendar.cpp:853
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Nicht senden"
+msgstr "Nicht abbrechen"
 
 #: text_calendar.cpp:835
 #, kde-format
@@ -340,7 +333,7 @@ msgstr "Möchten Sie dennoch Ihren Kalender überprüfen?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
-msgstr ""
+msgstr "Prüfen"
 
 #: text_calendar.cpp:839
 #, kde-format
