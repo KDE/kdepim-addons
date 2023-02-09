@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 # Burkhard Lück <lueck@hube-lueck.de>, 2018, 2019, 2020, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-07-24 15:19+0200\n"
+"PO-Revision-Date: 2023-02-09 01:14+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:21
 #, kde-format
@@ -280,6 +280,9 @@ msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
 msgstr ""
+"<qt><p><strong>Diese Ausdrücke können für die Argumente verwendet werden:</"
+"strong></p><ul><li>%u - vom Befehl verwendete Adresse</li></ul></strong></"
+"p></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:48
 #, kde-format
@@ -371,17 +374,17 @@ msgstr "Domäne"
 #: scamsettings/scamconfiguresettingswidget.cpp:26
 #, kde-format
 msgid "Check"
-msgstr ""
+msgstr "Prüfen"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
-msgstr ""
+msgstr "Alle Prüfungen deaktivieren"
 
 #: scamsettings/scamconfigureutils.cpp:17
 #, kde-format
 msgid "Redirect Url"
-msgstr ""
+msgstr "Adresse umleiten"
 
 #: scamsettings/scamconfigureutils.cpp:19
 #, kde-format

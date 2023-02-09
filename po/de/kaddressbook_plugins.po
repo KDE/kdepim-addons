@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
-# Frederik Schwarzer <schwarzer@kde.org>, 2015, 2016.
+# Frederik Schwarzer <schwarzer@kde.org>, 2015, 2016, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2020.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2020-01-08 08:43+0100\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2023-02-09 01:06+0100\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -111,13 +112,13 @@ msgstr ""
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "Alles auswählen"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
 #, kde-format
 msgid "Deselect All"
-msgstr ""
+msgstr "Auswahl aufheben"
 
 #: mergelib/searchduplicate/mergecontactselectinformationtabwidget.cpp:35
 #, kde-format
@@ -130,10 +131,9 @@ msgid "Contacts"
 msgstr "Kontakte"
 
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
-#, fuzzy, kde-format
-#| msgid "Duplicate contact %1"
+#, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
-msgstr "Doppelter Kontakt %1"
+msgstr "Doppelter Kontakt „%1“ (%2 Mal)"
 
 #: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
 #, kde-format
@@ -142,10 +142,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Doppelte Kontakte zum Zusammenführen suchen und auswählen"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search is impossible."
+#, kde-format
 msgid "Search in result..."
-msgstr "Die Suche ist nicht möglich."
+msgstr "In Ergebnissen suchen ..."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -161,12 +160,12 @@ msgstr "Zusammenführen"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
 #, kde-format
 msgid "Expand All"
-msgstr ""
+msgstr "Alle aufklappen"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
 #, kde-format
 msgid "Collapse All"
-msgstr ""
+msgstr "Alle einklappen"
 
 #: mergelib/widgets/mergecontacterrorlabel.cpp:18
 #, kde-format
