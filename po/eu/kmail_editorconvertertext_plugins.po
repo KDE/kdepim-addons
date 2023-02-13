@@ -1,0 +1,168 @@
+# Translation for kmail_editorconvertertext_plugins.po to Euskara/Basque (eu).
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"PO-Revision-Date: 2023-02-12 08:57+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.2\n"
+
+#: markdown/markdownlib/markdownconfiguredialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Markdown Plugin"
+msgstr "Konfiguratu  «Markdown» plugina"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:19
+#, kde-format
+msgid "Enable embedded LaTeX"
+msgstr "Gaitu kapsulatutako LaTeX"
+
+#: markdown/markdownlib/markdownconfigurewidget.cpp:20
+#, kde-format
+msgid "Enable PHP Markdown Extra definition lists"
+msgstr "Gaitu PHP «Markdown» definizio-zerrenda gehigarriak"
+
+#: markdown/markdownlib/markdownconverter.cpp:68
+#, kde-format
+msgid "Failed to compile the Markdown document."
+msgstr "«Markdown» dokumentua konpilatzea huts egin du."
+
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Image"
+msgstr "Gehitu irudia"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:19
+#, kde-format
+msgid "Keep original size"
+msgstr "Mantendu jatorrizko neurria"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#, kde-format
+msgid "Width:"
+msgstr "Zabalera:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
+#, kde-format
+msgid "Height:"
+msgstr "Altuera:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:39
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
+#, kde-format
+msgid "Title:"
+msgstr "Titulua:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#, kde-format
+msgid "Image Link:"
+msgstr "Irudi-esteka:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#, kde-format
+msgid "Alternate text:"
+msgstr "Ordezko testua:"
+
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
+#, kde-format
+msgid " px"
+msgstr " px"
+
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Link"
+msgstr "Gehitu esteka"
+
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:30
+#, kde-format
+msgid "Link:"
+msgstr "Esteka:"
+
+#: markdown/markdownlib/markdownpreviewdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Markdown Rendering Preview"
+msgstr "«Markdown» errendatze aurreikuspegia"
+
+#: markdown/markdownlib/markdownpreviewwidget.cpp:75
+#, kde-format
+msgid "Converter Error"
+msgstr "Bihurtzailearen errorea"
+
+#: markdown/plugin/markdowninterface.cpp:36
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr "Sortu HTML «markdown» lengoaiatik."
+
+#: markdown/plugin/markdowninterface.cpp:53
+#, kde-format
+msgid "Markdown"
+msgstr "Markdown"
+
+#: markdown/plugin/markdowninterface.cpp:55
+#, kde-format
+msgid "Markdown Action"
+msgstr "«Markdown» ekintza"
+
+#: markdown/plugin/markdowninterface.cpp:60
+#, kde-format
+msgid "Add Title"
+msgstr "Gehitu titulua"
+
+#: markdown/plugin/markdowninterface.cpp:63
+#, kde-format
+msgid "Level %1"
+msgstr "%1. maila"
+
+#: markdown/plugin/markdowninterface.cpp:67
+#, kde-format
+msgid "Horizontal Rule"
+msgstr "Zuzen horizontala"
+
+#: markdown/plugin/markdowninterface.cpp:69
+#, kde-format
+msgid "Change Selected Text as Bold"
+msgstr "Aldatu hautatutako testua Lodira"
+
+#: markdown/plugin/markdowninterface.cpp:71
+#, kde-format
+msgid "Change Selected Text as Italic"
+msgstr "Aldatu hautatutako testua Etzanera"
+
+#: markdown/plugin/markdowninterface.cpp:73
+#, kde-format
+msgid "Change Selected Text as Code"
+msgstr "Aldatu hautatutako testua Kodera"
+
+#: markdown/plugin/markdowninterface.cpp:75
+#, kde-format
+msgid "Change Selected Text as Block Quote"
+msgstr "Aldatu hautatutako testua Aipu-blokera"
+
+#: markdown/plugin/markdowninterface.cpp:78
+#, kde-format
+msgid "Add Link"
+msgstr "Gehitu esteka"
+
+#: markdown/plugin/markdowninterface.cpp:79
+#, kde-format
+msgid "Add Image"
+msgstr "Gehitu irudia"
