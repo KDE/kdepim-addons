@@ -1,0 +1,167 @@
+# Translation for messageviewer_application_gnupgwks_plugin.po to Euskara/Basque (eu).
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-04 00:44+0000\n"
+"PO-Revision-Date: 2023-02-13 07:39+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.2\n"
+
+#: gnupgwksurlhandler.cpp:85
+#, kde-format
+msgid "Display key details"
+msgstr "Azaldu gakoaren xehetasunak"
+
+#: gnupgwksurlhandler.cpp:87
+#, kde-format
+msgid "Publish the key"
+msgstr "Argitaratu gakoa"
+
+#: pgpkeyformatter.cpp:43
+#, kde-format
+msgid "No valid key data in file."
+msgstr "Fitxategian ez dago balio duen gako-daturik."
+
+#: pgpkeyurlhandler.cpp:46
+#, kde-format
+msgid "Import the key"
+msgstr "Inportatu gakoa"
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "An error occurred while importing the key."
+msgstr "Errore bat gertatu da gakoa inportatzean."
+
+#: pgpkeyurlhandler.cpp:64
+#, kde-format
+msgid "Import error"
+msgstr "Inportatzeko errorea"
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "The key has been successfully imported."
+msgstr "Gakoa ondo inportatu da."
+
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "Import finished"
+msgstr "Inportatzea burutu da"
+
+#: templates/gnupgwksmessagepart.html:26
+msgid "Register your OpenPGP key with your email provider. "
+msgstr "Erregistratu zure OpenPGP gakoa zure e-posta hornitzailearekin."
+
+#: templates/gnupgwksmessagepart.html:28
+msgid ""
+"When you register your key with your email provider other people will then "
+"be able to retrieve the key and send you encrypted emails and verify "
+"authenticity of emails you send them."
+msgstr ""
+"Zure gakoa zure e-posta hornitzailearekin erregistratzen duzunean, beste "
+"batzuek gakoa eskuratu ahalko dute, zuri zifratutako e-postak bidali eta zuk "
+"haiei bidalitakoen egiazkotasuna egiaztatu ahalko dute."
+
+#: templates/gnupgwksmessagepart.html:31
+msgid "An error occurred while publishing the key. Please try again later."
+msgstr ""
+"Errore bat gertatu da gakoa argitaratzean. Mesedez, saiatu berriz beranduago."
+
+#: templates/gnupgwksmessagepart.html:33
+msgid "Register the key"
+msgstr "Erregistratu gakoa"
+
+#: templates/gnupgwksmessagepart.html:35
+msgid ""
+"The email will be automatically deleted once you confirm the registration."
+msgstr "E-posta automatikoki ezabatuko da erregistroa berresten duzunean."
+
+#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+msgid "Show key details"
+msgstr "Erakutsi gakoaren xehetasunak"
+
+#: templates/gnupgwksmessagepart.html:42
+msgid ""
+"This is an automatically generated email. The purpose of this email is to "
+"register your OpenPGP key with your email provider."
+msgstr ""
+"Hau, automatikoki sortutako e-posta bat da. E-posta honen helburua, zure "
+"OpenPGP gakoa zure e-posta hornitzailearekin partekatzea da."
+
+#: templates/gnupgwksmessagepart.html:45
+msgid ""
+"Your OpenPGP key will be published on your email provider's key server. "
+"Other users will be able to retrieve the key and send you encrypted emails "
+"and verify authenticity of emails you send them."
+msgstr ""
+"Zure OpenPGP gakoa, zure e-posta hornitzailearen giltza-sortan argitaratuko "
+"da. Beste erabiltzaile batzuk gakoa eskuratzeko aukera izango dute, zuri "
+"zifratutako e-postak bidali eta beraiei bidali dizkiezun e-posten "
+"egiazkotasuna egiaztatu ahalko dute."
+
+#: templates/pgpkeymessagepart.html:14
+msgid "OpenPGP Key"
+msgstr "OpenPGP gakoa"
+
+#: templates/pgpkeymessagepart.html:18
+msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
+msgstr ""
+"Hau, OpenPGP gako bat da, e-postak sinatzeko edo zifratzeko erabil "
+"daitekeena."
+
+#: templates/pgpkeymessagepart.html:23
+msgid "Loading key details..."
+msgstr "Gakoaren xehetasunak zamatzen..."
+
+#: templates/pgpkeymessagepart.html:28
+msgid "Owner:"
+msgstr "Jabea:"
+
+#: templates/pgpkeymessagepart.html:32
+msgid "Created:"
+msgstr "Sortze-data:"
+
+#: templates/pgpkeymessagepart.html:37
+msgid "Fingerprint:"
+msgstr "Hatz-marka:"
+
+#: templates/pgpkeymessagepart.html:42
+msgid ""
+"This key is unknown, it could not be found in your local keyring. You may "
+"want to import this key."
+msgstr ""
+"Gako hori ezezaguna da, ezin izan du zure gako-sortan aurkitu. Agian gako "
+"hori inportatu nahiko duzu."
+
+#: templates/pgpkeymessagepart.html:45
+#, kde-format
+msgid "Error while loading key: %1"
+msgstr "Errorea gakoa inportatzean: %1"
+
+#: templates/pgpkeymessagepart.html:47
+msgid "Hide key details"
+msgstr "Ezkutatu gakoaren xehetasunak"
+
+#: templates/pgpkeymessagepart.html:49
+msgid "Open in Kleopatra"
+msgstr "Ireki «Kleopatra»n"
+
+#: templates/pgpkeymessagepart.html:52
+msgid "Show key details ..."
+msgstr "Erakutsi gakoaren xehetasunak..."
+
+#: templates/pgpkeymessagepart.html:54
+msgid "Import key"
+msgstr "Inportatu gakoa"
