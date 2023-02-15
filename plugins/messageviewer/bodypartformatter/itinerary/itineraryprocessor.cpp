@@ -11,6 +11,8 @@
 #include <KItinerary/CreativeWork>
 #include <KItinerary/DocumentUtil>
 #include <KItinerary/Event>
+#include <KItinerary/ExtractorDocumentNode>
+#include <KItinerary/ExtractorDocumentNodeFactory>
 #include <KItinerary/ExtractorEngine>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/Reservation>
@@ -54,6 +56,17 @@ static bool isCalendarContent(KMime::Content *content)
     }
     const auto cd = content->contentDisposition(false);
     return cd && cd->filename().endsWith(QLatin1String(".ics"));
+}
+
+static KMime::Content *findMultipartRelatedParent(KMime::Content *node)
+{
+    while (node) {
+        if (node->contentType()->mimeType() == "multipart/related") {
+            return node;
+        }
+        node = node->parent();
+    }
+    return nullptr;
 }
 
 ItineraryProcessor::ItineraryProcessor() = default;
@@ -102,6 +115,17 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
         engine.setContent(QVariant::fromValue<KPkPass::Pass *>(pass.get()), u"application/vnd.apple.pkpass");
     } else if (part.content()->contentType()->isHTMLText()) {
         engine.setContent(part.content()->decodedText(), u"text/html");
+        // find embedded images that belong to this HTML part, and create child-nodes for those
+        // this is needed for finding barcodes in those images
+        if (const auto rootNode = findMultipartRelatedParent(part.content())) {
+            const auto children = rootNode->contents();
+            for (const auto node : children) {
+                if (node->contentID(false) && node->contentType(false) && node->contentType()->mimeType() == "image/png") {
+                    auto pngNode = engine.documentNodeFactory()->createNode(node->decodedContent(), {}, u"image/png");
+                    engine.rootDocumentNode().appendChild(pngNode);
+                }
+            }
+        }
     } else if (part.content()->contentType()->mimeType() == "application/pdf"
                || part.content()->contentType()->name().endsWith(QLatin1String(".pdf"), Qt::CaseInsensitive)) {
         isPdf = true;
