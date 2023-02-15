@@ -1,0 +1,253 @@
+# Translation for kmail_editorsendcheck_plugins.po to Euskara/Basque (eu).
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"PO-Revision-Date: 2023-02-14 18:34+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.2\n"
+
+#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Automatic Add Contacts\" Plugin"
+msgstr "Konfiguratu \"Kontaktuak automatikoki gehitzea\" plugina"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr ""
+"Helbide-liburu bat sortu behar duzu kontaktu bat gehitu aurretik. Helbide-"
+"liburu bat sortu nahi duzu?"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:104
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "Ez dago helbide-libururik erabilgarri"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:105
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Sortu helbide-liburua"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:113
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Gehitu helbide-liburua"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
+#, kde-format
+msgid "Automatic Add Contacts"
+msgstr "Gehitu kontaktuak automatikoa"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
+#, kde-format
+msgid "Select the addressbook in which to store contacts:"
+msgstr "Hautatu kontaktuak gordetzeko helbide-liburua:"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:40
+#, kde-format
+msgid "Do you want to send the email as HTML?"
+msgstr "E-posta HTML gisa bidali nahi duzu?"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:41
+#, kde-format
+msgid "Send email as plain text"
+msgstr "Bidali e-posta testu arrunt gisa"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:42
+#, kde-format
+msgctxt "@action:button"
+msgid "Send As HTML"
+msgstr "Bidali HTML gisa"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
+#, kde-format
+msgid "Update SMTP server"
+msgstr "Eguneratu SMTP zerbitzaria"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Check SMTP server"
+msgstr "Egiaztatu SMTP zerbitzaria"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
+#, kde-format
+msgid ""
+"Do you want to send the email with a different SMTP than the one defined in "
+"the current identity?"
+msgstr ""
+"E-posta, uneko nortasunean definitutako SMTP ez den beste batetik bidali "
+"nahi duzu?"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Check Before Send Mail\" Plugin"
+msgstr "Konfiguratu \" Egiaztatu posta bidali aurretik\" plugina"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
+#, kde-format
+msgid "Send as plain text"
+msgstr "Bidali testu arrunt gisa"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
+#, kde-format
+msgid "Use SMTP server defined in identity"
+msgstr "Erabili nortasunean definitutako SMTP zerbitzaria"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
+#, kde-format
+msgid "Check duplicated emails addresses"
+msgstr "Egiaztatu bikoiztutako e-posta helbideak"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
+#, kde-format
+msgid "Check send attachment"
+msgstr "Egiaztatu eranskin bidalketa"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Duplicated emails"
+msgstr "Bikoiztutako e-postak"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#, kde-format
+msgid "These emails are duplicated. Do you want to send email?"
+msgstr "E-posta hauek bikoiztuta daude. E-posta bidali nahi duzu?"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
+#, kde-format
+msgctxt "emails (number of emails)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Attachment"
+msgstr "Egiaztatu eranskina"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
+#, kde-format
+msgid "Do you want to send some attachment?"
+msgstr "Eranskin batzuk bidali nahi dituzu?"
+
+#: confirm-address/confirmaddressconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Confirm Email Address\" Plugin"
+msgstr "Konfiguratu \"Berretsi e-posta helbidea\" plugina"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:32
+#, kde-format
+msgid "Accepted Domain Name"
+msgstr "Onartutako domeinu-izena"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:37
+#, kde-format
+msgid "Rejected Domain Name"
+msgstr "Errefusatutako domeinu-izena"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:45
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:64
+#, kde-format
+msgid "A&dd..."
+msgstr "&Gehitu..."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:46
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:65
+#, kde-format
+msgid "Re&move"
+msgstr "&Kendu"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#, kde-format
+msgid "Mod&ify..."
+msgstr "&Aldatu..."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressemailentrydialog.cpp:21
+#, kde-format
+msgid "Enter new domain name:"
+msgstr "Sartu domeinu-izen berria:"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#, kde-format
+msgid "Do you want to remove this domain?"
+msgstr "Domeinu hau kendu nahi duzu?"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:54
+#, kde-format
+msgid "Whitelist of Addresses"
+msgstr "Helbideen zerrenda-zuria"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#, kde-format
+msgid "Enter new email address:"
+msgstr "Sartu e-posta helbide berria:"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgstr "E-posta helbide hau kendu nahi duzu?"
+
+#: confirm-address/confirmaddressdialog.cpp:24
+#, kde-format
+msgid "Add Selected Emails to WhiteList"
+msgstr "Gehitu hautatutako e-postak zerrenda-zurira"
+
+#: confirm-address/confirmaddressdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Addresses"
+msgstr "Baieztatu helbideak"
+
+#: confirm-address/confirmaddressdialog.cpp:88
+#, kde-format
+msgid "All selected emails are added to white list"
+msgstr "Hautatutako e-posta guztiak zerrenda-zurira gehituko dira"
+
+#: confirm-address/confirmaddressdialog.cpp:88
+#, kde-format
+msgid "Emails added to white list"
+msgstr "E-postak zerrenda-zurira gehitu dira"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Value"
+msgstr "Gehitu balioa"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Value"
+msgstr "Aldatu balioa"
+
+#: confirm-address/confirmaddresswidget.cpp:22
+#, kde-format
+msgid "Potentially invalid emails are displayed in red:"
+msgstr "Baliogabeak izan daitezkeen e-postak gorriz agertzen dira:"
