@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:47+0000\n"
-"PO-Revision-Date: 2023-02-07 11:05\n"
+"PO-Revision-Date: 2023-02-15 11:07\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -473,7 +473,7 @@ msgstr "导出联系人为 GMX 地址簿文件。"
 #: windows-contacts/importwindowcontact.cpp:26
 #, kde-format
 msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
-msgstr "<qt>无法以读模式打开 <b>%1</b>。</qt>"
+msgstr "<qt>无法打开 <b>%1</b> 进行读取。</qt>"
 
 #: gmx/gmximportexportplugininterface.cpp:455
 #, kde-format
