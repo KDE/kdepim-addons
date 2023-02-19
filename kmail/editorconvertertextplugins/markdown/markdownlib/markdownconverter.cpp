@@ -54,7 +54,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     const QByteArray textArray = str.toUtf8();
 #if defined(MKD_NOLINKS)
     // on discount 2 MKD_NOLINKS is a define
-    MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.count(), 0);
+    MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.size(), 0);
     mkd_flag_t flags = MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK;
     if (mEnableEmbeddedLabel) {
         flags |= MKD_LATEX;

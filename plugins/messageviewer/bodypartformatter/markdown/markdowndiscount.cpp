@@ -22,7 +22,7 @@ QString MarkdownDiscount::toHtml() const
     const QByteArray textArray = mText.toUtf8();
 #if defined(MKD_NOLINKS)
     // on discount 2 MKD_NOLINKS is a define
-    MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.count(), 0);
+    MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.size(), 0);
     mkd_flag_t flags = MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK;
     if (!mkd_compile(markdownHandle, flags)) {
         qWarning() << "Failed to compile the Markdown document.";
