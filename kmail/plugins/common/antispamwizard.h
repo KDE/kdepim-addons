@@ -387,6 +387,6 @@ public:
     void setSummaryText(const QString &text);
 
 private:
-    QLabel *mSummaryText = nullptr;
+    QLabel *const mSummaryText;
 };
 } // namespace KMail

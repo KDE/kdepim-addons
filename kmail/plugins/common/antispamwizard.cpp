@@ -1264,11 +1264,11 @@ void ASWizVirusRulesPage::processSelectionChange()
 //---------------------------------------------------------------------------
 ASWizSummaryPage::ASWizSummaryPage(QWidget *parent, const QString &name)
     : ASWizPage(parent, name)
+    , mSummaryText(new QLabel(this))
 {
     QBoxLayout *layout = new QVBoxLayout();
     mLayout->addItem(layout);
 
-    mSummaryText = new QLabel(this);
     layout->addWidget(mSummaryText);
     layout->addStretch();
 }
