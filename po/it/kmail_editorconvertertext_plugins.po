@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"POT-Creation-Date: 2023-02-20 02:50+0000\n"
 "PO-Revision-Date: 2019-12-25 15:11+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -33,7 +33,8 @@ msgstr "Abilita LaTeX integrato"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "Abilita gli elenchi di definizioni di PHP Markdown Extra"
 
-#: markdown/markdownlib/markdownconverter.cpp:68
+#: markdown/markdownlib/markdownconverter.cpp:69
+#: markdown/markdownlib/markdownconverter.cpp:89
 #, kde-format
 msgid "Failed to compile the Markdown document."
 msgstr "Compilazione del documento Markdown non riuscita."
