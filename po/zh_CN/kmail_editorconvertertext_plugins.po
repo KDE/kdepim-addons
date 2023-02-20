@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-01 00:49+0000\n"
+"POT-Creation-Date: 2023-02-20 00:58+0000\n"
 "PO-Revision-Date: 2023-02-15 11:04\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -34,7 +34,8 @@ msgstr "启用嵌入的 LaTeX"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "启用 PHP Markdown 额外定义列表"
 
-#: markdown/markdownlib/markdownconverter.cpp:68
+#: markdown/markdownlib/markdownconverter.cpp:69
+#: markdown/markdownlib/markdownconverter.cpp:89
 #, kde-format
 msgid "Failed to compile the Markdown document."
 msgstr "编译 Markdown 文档失败。"
