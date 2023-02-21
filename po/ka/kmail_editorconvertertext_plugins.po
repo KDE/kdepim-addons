@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-20 00:58+0000\n"
-"PO-Revision-Date: 2022-12-04 11:47+0100\n"
+"PO-Revision-Date: 2023-02-20 06:51+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -22,17 +22,17 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Markdown Plugin"
-msgstr ""
+msgstr "მარკდაუნის დამატების გამართვა"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
 #, kde-format
 msgid "Enable embedded LaTeX"
-msgstr ""
+msgstr "ჩაშენებული LaTeX-ის ჩართვა"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
 #, kde-format
 msgid "Enable PHP Markdown Extra definition lists"
-msgstr ""
+msgstr "PHP მარკდაუნის დამატებითი აღწერის სიის ჩართვა"
 
 #: markdown/markdownlib/markdownconverter.cpp:69
 #: markdown/markdownlib/markdownconverter.cpp:89
@@ -49,7 +49,7 @@ msgstr "გამოსახულების დამატება"
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
 #, kde-format
 msgid "Keep original size"
-msgstr ""
+msgstr "საწყისი ზომის შენარჩუნება"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:20
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "სურათის ბმული:"
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:41
 #, kde-format
 msgid "Alternate text:"
-msgstr ""
+msgstr "ალტერნატიული ტექსტი:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:62
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:73
@@ -98,7 +98,7 @@ msgstr "ბმული:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"
-msgstr ""
+msgstr "მარკდაუნის რენდერის მინიატურა"
 
 #: markdown/markdownlib/markdownpreviewwidget.cpp:75
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "გადამყვანის შეცდომა"
 #: markdown/plugin/markdownplugin.cpp:48
 #, kde-format
 msgid "Generate HTML from markdown language."
-msgstr ""
+msgstr "მარკდაუნის ენიდან HTML-ის გენერაცია."
 
 #: markdown/plugin/markdowninterface.cpp:53
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "მარკდაუნი"
 #: markdown/plugin/markdowninterface.cpp:55
 #, kde-format
 msgid "Markdown Action"
-msgstr ""
+msgstr "მარკდაუნის ქმედება"
 
 #: markdown/plugin/markdowninterface.cpp:60
 #, kde-format
@@ -139,22 +139,22 @@ msgstr "ჰორიზონტალური წესი"
 #: markdown/plugin/markdowninterface.cpp:69
 #, kde-format
 msgid "Change Selected Text as Bold"
-msgstr ""
+msgstr "მონიშნული ტექსტის გასქელება"
 
 #: markdown/plugin/markdowninterface.cpp:71
 #, kde-format
 msgid "Change Selected Text as Italic"
-msgstr ""
+msgstr "მონიშნული ტექსტის კურსივი"
 
 #: markdown/plugin/markdowninterface.cpp:73
 #, kde-format
 msgid "Change Selected Text as Code"
-msgstr ""
+msgstr "მონიშნული ტექსტის კოდად შეცვლა"
 
 #: markdown/plugin/markdowninterface.cpp:75
 #, kde-format
 msgid "Change Selected Text as Block Quote"
-msgstr ""
+msgstr "მონიშნული ტექსტის ბლოკურ ციტატად შეცვლა"
 
 #: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
