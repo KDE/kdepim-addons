@@ -30,7 +30,7 @@ target_compile_definitions(messageviewer_bodypartformatter_semantic PRIVATE -DTR
 target_link_libraries(messageviewer_bodypartformatter_semantic
     KF${KF_MAJOR_VERSION}::KIOGui
     KF5::MessageViewer
-    KF5::CalendarSupport
+    KPim${KF_MAJOR_VERSION}::CalendarSupport
     KF${KF_MAJOR_VERSION}::I18n
     KPim${KF_MAJOR_VERSION}::GrantleeTheme
     ${TEMPLATES_LIB}

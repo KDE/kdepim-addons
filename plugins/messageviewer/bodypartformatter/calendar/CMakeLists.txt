@@ -36,10 +36,10 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KPim${KF_MAJOR_VERSION}::CalendarUtils
     KPim${KF_MAJOR_VERSION}::Mime
     KPim${KF_MAJOR_VERSION}::IdentityManagement
-    KF5::MailTransportAkonadi
+    KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
     KF5::MailTransport
     KF5::AkonadiMime
-    KF5::CalendarSupport
+    KPim${KF_MAJOR_VERSION}::CalendarSupport
     KF5::PimCommonAkonadi
     KF5::MessageViewer
     KF5::IncidenceEditor
