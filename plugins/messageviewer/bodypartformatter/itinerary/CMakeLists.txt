@@ -32,7 +32,7 @@ target_link_libraries(messageviewer_bodypartformatter_semantic
     KF5::MessageViewer
     KF5::CalendarSupport
     KF${KF_MAJOR_VERSION}::I18n
-    KF5::GrantleeTheme
+    KPim${KF_MAJOR_VERSION}::GrantleeTheme
     ${TEMPLATES_LIB}
     Qt::DBus
     KF${KF_MAJOR_VERSION}::Prison

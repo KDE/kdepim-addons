@@ -75,7 +75,7 @@ index 4986439..9f3e884 100644
 <span style="color:#0057ae;">+    KF5::AkonadiXml</span>
      KF5::CalendarSupport
      KF${KF_MAJOR_VERSION}::CalendarCore
-     KF5::Libkdepim
+     KPim${KF_MAJOR_VERSION}::Libkdepim
 <span style="font-weight:bold;">diff --git a/src/agentconfigdialog.h b/src/agentconfigdialog.h</span>
 index ff27c29..2ff0c62 100644
 <span style="color:#0057ae;">--- a/src/agentconfigdialog.h</span>

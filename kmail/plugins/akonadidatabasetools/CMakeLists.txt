@@ -43,7 +43,7 @@ target_sources(kmail_akonadidatabasetoolplugin PRIVATE
 )
 
 target_link_libraries(kmail_akonadidatabasetoolplugin
-    KF5::PimCommon KF5::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui KF5::Libkdepim KF${KF_MAJOR_VERSION}::I18n akonadidatasetools
+    KF5::PimCommon KF5::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::Libkdepim KF${KF_MAJOR_VERSION}::I18n akonadidatasetools
     )
 
 install(TARGETS akonadidatasetools ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)

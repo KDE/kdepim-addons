@@ -21,7 +21,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_expertplugin
-    KF5::PimCommon KF5::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui KF5::Libkdepim KF${KF_MAJOR_VERSION}::I18n
+    KF5::PimCommon KF5::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::Libkdepim KF${KF_MAJOR_VERSION}::I18n
     )
 if(BUILD_TESTING)
     add_subdirectory(autotests)

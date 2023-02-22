@@ -16,7 +16,7 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_mstn
 target_link_libraries(messageviewer_bodypartformatter_application_mstnef
     Qt::Core
     KF${KF_MAJOR_VERSION}::CalendarCore
-    KF5::CalendarUtils
+    KPim${KF_MAJOR_VERSION}::CalendarUtils
     KF5::Tnef
     KF5::MessageCore
     KF5::MessageViewer

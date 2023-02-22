@@ -33,9 +33,9 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KF${KF_MAJOR_VERSION}::Codecs
     Qt::Core
     KF${KF_MAJOR_VERSION}::CalendarCore
-    KF5::CalendarUtils
+    KPim${KF_MAJOR_VERSION}::CalendarUtils
     KPim${KF_MAJOR_VERSION}::Mime
-    KF5::IdentityManagement
+    KPim${KF_MAJOR_VERSION}::IdentityManagement
     KF5::MailTransportAkonadi
     KF5::MailTransport
     KF5::AkonadiMime

@@ -44,7 +44,7 @@ target_link_libraries(openurlwithconfigure
     KF5::MessageViewer
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KF${KF_MAJOR_VERSION}::ItemViews
-    KF5::Libkdepim
+    KPim${KF_MAJOR_VERSION}::Libkdepim
     )
 
 set_target_properties(openurlwithconfigure

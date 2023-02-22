@@ -44,10 +44,10 @@ target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     KF5::MessageViewer
     KF5::MailTransportAkonadi
     KF5::MailTransport
-    KF5::GrantleeTheme
+    KPim${KF_MAJOR_VERSION}::GrantleeTheme
     KF${KF_MAJOR_VERSION}::I18n
     KPim${KF_MAJOR_VERSION}::Mime
-    KF5::IdentityManagement
+    KPim${KF_MAJOR_VERSION}::IdentityManagement
     ${TEMPLATES_LIB}
     Gpgmepp
     )

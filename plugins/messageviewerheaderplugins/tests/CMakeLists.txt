@@ -4,7 +4,7 @@ add_executable(headerstylemenu_gui headerstylemenu_gui.cpp)
 target_link_libraries(headerstylemenu_gui
   KF5::MessageViewer
   KF${KF_MAJOR_VERSION}::XmlGui
-  KF5::GrantleeTheme
+  KPim${KF_MAJOR_VERSION}::GrantleeTheme
   KF${KF_MAJOR_VERSION}::I18n
 )
 

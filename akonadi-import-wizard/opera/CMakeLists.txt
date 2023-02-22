@@ -24,5 +24,5 @@ target_link_libraries(operaimporterplugin
   KF5::MailImporterAkonadi
   KF5::MailTransport
   KF5::MailCommon
-  KF5::IdentityManagement
+  KPim${KF_MAJOR_VERSION}::IdentityManagement
 )
