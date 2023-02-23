@@ -16,10 +16,10 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
     target_link_libraries(${_name} Qt::Core
                                    Qt::Test
                                    KF5::AkonadiCore
-                                   KF5::AkonadiCalendar
+                                   KPim${KF_MAJOR_VERSION}::AkonadiCalendar
                                    KF${KF_MAJOR_VERSION}::CalendarCore
                                    KF${KF_MAJOR_VERSION}::CalendarEvents
-                                   KF5::EventViews
+                                   KPim${KF_MAJOR_VERSION}::EventViews
                                    KF${KF_MAJOR_VERSION}::ConfigCore
     )
     include_directories(${CMAKE_CURRENT_SOURCE_DIR}/..

@@ -36,10 +36,10 @@ endif()
 target_link_libraries(pimevents
     Qt::Core
     KF5::AkonadiCore
-    KF5::AkonadiCalendar
+    KPim${KF_MAJOR_VERSION}::AkonadiCalendar
     KF${KF_MAJOR_VERSION}::CalendarCore
     KF${KF_MAJOR_VERSION}::CalendarEvents
-    KF5::EventViews # for reading KOrganizer calendar colors
+    KPim${KF_MAJOR_VERSION}::EventViews # for reading KOrganizer calendar colors
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::KIOCore
     )

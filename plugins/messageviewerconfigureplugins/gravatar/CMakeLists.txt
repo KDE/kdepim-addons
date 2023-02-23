@@ -17,7 +17,7 @@ endif()
 target_link_libraries(messageviewer_gravatarconfigplugin
   KF5::MessageViewer
   KF5::PimCommon
-  KF5::Gravatar
+  KPim${KF_MAJOR_VERSION}::Gravatar
   KF${KF_MAJOR_VERSION}::I18n
 )
 

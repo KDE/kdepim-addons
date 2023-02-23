@@ -26,7 +26,7 @@ endif()
 
 target_link_libraries(kmailquicktextpluginprivate
     PRIVATE
-    KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::CoreAddons Qt::Gui Qt::Widgets KF5::MessageComposer KF5::MailCommon KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::CoreAddons Qt::Gui Qt::Widgets KF5::MessageComposer KPim${KF_MAJOR_VERSION}::MailCommon KF${KF_MAJOR_VERSION}::XmlGui
     )
 
 set_target_properties(kmailquicktextpluginprivate
@@ -58,5 +58,5 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_quicktextplugin
-    KF5::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n kmailquicktextpluginprivate KF5::MailCommon
+    KF5::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n kmailquicktextpluginprivate KPim${KF_MAJOR_VERSION}::MailCommon
     )

@@ -43,7 +43,7 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KF5::PimCommonAkonadi
     KF5::MessageViewer
     KF5::IncidenceEditor
-    KF5::PimTextEdit
+    KPim${KF_MAJOR_VERSION}::PimTextEdit
     KF${KF_MAJOR_VERSION}::KIOWidgets
     Qt::DBus
     )

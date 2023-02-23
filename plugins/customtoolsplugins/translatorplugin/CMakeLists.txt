@@ -14,7 +14,7 @@ endif()
 
 target_link_libraries(pimcommon_translatorplugin
   KF5::PimCommon
-  KF5::PimTextEdit
+  KPim${KF_MAJOR_VERSION}::PimTextEdit
   KF${KF_MAJOR_VERSION}::XmlGui
   KF${KF_MAJOR_VERSION}::I18n
   KF${KF_MAJOR_VERSION}::TextTranslator

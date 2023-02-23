@@ -10,7 +10,7 @@ target_sources(thisdayinhistory PRIVATE
 )
 
 target_link_libraries(thisdayinhistory
-  KF5::EventViews
+  KPim${KF_MAJOR_VERSION}::EventViews
 )
 
 install(TARGETS

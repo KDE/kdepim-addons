@@ -40,7 +40,7 @@ generate_export_header(folderconfiguresettings BASE_NAME libfolderconfiguresetti
 target_link_libraries(folderconfiguresettings
     KF5::MessageViewer
     KF${KF_MAJOR_VERSION}::I18n
-    KF5::MailCommon
+    KPim${KF_MAJOR_VERSION}::MailCommon
     )
 
 set_target_properties(folderconfiguresettings
@@ -61,7 +61,7 @@ target_sources(messageviewer_folderconfiguresettingsplugin PRIVATE
 target_link_libraries(messageviewer_folderconfiguresettingsplugin
   KF5::MessageViewer
   KF${KF_MAJOR_VERSION}::I18n
-  KF5::MailCommon
+  KPim${KF_MAJOR_VERSION}::MailCommon
   folderconfiguresettings
 )
 

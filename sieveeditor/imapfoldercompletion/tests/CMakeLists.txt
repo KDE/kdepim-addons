@@ -7,6 +7,6 @@ target_sources(sieveeditorimapfoldercompletion_gui PRIVATE
 )
 
 target_link_libraries(sieveeditorimapfoldercompletion_gui
-     KF5::PimCommon KF${KF_MAJOR_VERSION}::Completion KF${KF_MAJOR_VERSION}::I18n KF5::KSieveUi
+     KF5::PimCommon KF${KF_MAJOR_VERSION}::Completion KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::KSieveUi
 )
 

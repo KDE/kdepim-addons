@@ -12,7 +12,7 @@ target_sources(kmail_antispamplugin PRIVATE
 )
 
 target_link_libraries(kmail_antispamplugin
-  KF5::PimCommonAkonadi KF${KF_MAJOR_VERSION}::Completion KF5::MailCommon KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::GuiAddons
+  KF5::PimCommonAkonadi KF${KF_MAJOR_VERSION}::Completion KPim${KF_MAJOR_VERSION}::MailCommon KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::GuiAddons
 )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_antispamplugin PROPERTIES UNITY_BUILD ON)

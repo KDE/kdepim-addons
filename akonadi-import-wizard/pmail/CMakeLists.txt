@@ -14,8 +14,8 @@ target_link_libraries(pmailimporterplugin
   KF${KF_MAJOR_VERSION}::XmlGui
   KF${KF_MAJOR_VERSION}::I18n
   KF${KF_MAJOR_VERSION}::Contacts
-  KF5::MailImporterAkonadi
+  KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
   KF5::MailTransport
-  KF5::MailCommon
+  KPim${KF_MAJOR_VERSION}::MailCommon
   KPim${KF_MAJOR_VERSION}::IdentityManagement
 )

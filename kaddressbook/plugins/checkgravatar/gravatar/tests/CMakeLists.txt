@@ -8,7 +8,7 @@ ecm_mark_as_test(gravatarupdatedialog_gui)
 target_link_libraries(gravatarupdatedialog_gui
     Qt::Gui
     KF5::PimCommon
-    KF5::Gravatar
+    KPim${KF_MAJOR_VERSION}::Gravatar
     KF${KF_MAJOR_VERSION}::I18n
     KF5::AkonadiCore
     KF${KF_MAJOR_VERSION}::Contacts
