@@ -15,5 +15,5 @@ target_sources(sieveeditoremailinedit_gui PRIVATE
 )
 
 target_link_libraries(sieveeditoremailinedit_gui
-     KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::KSieveUi KF5::AkonadiContact
+     KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::KSieveUi KPim${KF_MAJOR_VERSION}::AkonadiContact
 )

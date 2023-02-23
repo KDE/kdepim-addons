@@ -8,7 +8,7 @@ macro(add_templateparserplugin_unittest _source _extrasources)
   ecm_mark_as_test(templateparserplugin-${_name})
   target_link_libraries(${_name}
     KF5::TemplateParser
-    KF5::AkonadiContact
+    KPim${KF_MAJOR_VERSION}::AkonadiContact
     Qt::Test
     KF${KF_MAJOR_VERSION}::Service
   )

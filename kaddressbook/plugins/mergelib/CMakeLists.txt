@@ -62,7 +62,7 @@ target_link_libraries(kaddressbookmergelibprivate
     Qt::Network
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::Contacts
-    KF5::AkonadiContact
+    KPim${KF_MAJOR_VERSION}::AkonadiContact
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF5::AkonadiWidgets

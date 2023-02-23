@@ -12,7 +12,7 @@ target_link_libraries(mailappimporterplugin
   KF${KF_MAJOR_VERSION}::I18n
   KF${KF_MAJOR_VERSION}::Contacts
   KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
-  KF5::MailTransport
+  KPim${KF_MAJOR_VERSION}::MailTransport
   KPim${KF_MAJOR_VERSION}::IdentityManagement
   KPim${KF_MAJOR_VERSION}::MailCommon
 )

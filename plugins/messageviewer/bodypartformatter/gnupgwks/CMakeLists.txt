@@ -43,7 +43,7 @@ target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     KF5::MessageCore
     KF5::MessageViewer
     KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
-    KF5::MailTransport
+    KPim${KF_MAJOR_VERSION}::MailTransport
     KPim${KF_MAJOR_VERSION}::GrantleeTheme
     KF${KF_MAJOR_VERSION}::I18n
     KPim${KF_MAJOR_VERSION}::Mime

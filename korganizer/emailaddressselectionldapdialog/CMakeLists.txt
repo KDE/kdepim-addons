@@ -15,5 +15,5 @@ target_sources(emailaddressselectionldapdialogplugin PRIVATE
 
 
 target_link_libraries(emailaddressselectionldapdialogplugin
-    KF${KF_MAJOR_VERSION}::I18n KF5::AkonadiContact KF5::PimCommonAkonadi
+    KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::AkonadiContact KF5::PimCommonAkonadi
     )
