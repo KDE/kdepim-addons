@@ -17,7 +17,7 @@ target_link_libraries(messageviewer_bodypartformatter_application_mstnef
     Qt::Core
     KF${KF_MAJOR_VERSION}::CalendarCore
     KPim${KF_MAJOR_VERSION}::CalendarUtils
-    KF5::Tnef
+    KPim${KF_MAJOR_VERSION}::Tnef
     KF5::MessageCore
     KF5::MessageViewer
     KF${KF_MAJOR_VERSION}::IconThemes
