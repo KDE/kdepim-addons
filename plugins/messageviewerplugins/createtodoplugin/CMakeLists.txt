@@ -24,6 +24,6 @@ endif()
 
 
 target_link_libraries(messageviewer_createtodoplugin
-    KF5::MessageViewer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::CalendarCore KF5::IncidenceEditor KPim${KF_MAJOR_VERSION}::AkonadiMime KF5::AkonadiWidgets KPim${KF_MAJOR_VERSION}::CalendarSupport
+    KF5::MessageViewer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::IncidenceEditor KPim${KF_MAJOR_VERSION}::AkonadiMime KF5::AkonadiWidgets KPim${KF_MAJOR_VERSION}::CalendarSupport
     )
 
