@@ -17,7 +17,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(operaimporterplugin
-  KPim::ImportWizard
+  KPim${KF_MAJOR_VERSION}::ImportWizard
   KF${KF_MAJOR_VERSION}::XmlGui
   KF${KF_MAJOR_VERSION}::I18n
   KF${KF_MAJOR_VERSION}::Contacts

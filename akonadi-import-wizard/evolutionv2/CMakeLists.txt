@@ -6,7 +6,7 @@ kcoreaddons_add_plugin(evolutionv2importerplugin SOURCES
 
 
 target_link_libraries(evolutionv2importerplugin
-  KPim::ImportWizard
+  KPim${KF_MAJOR_VERSION}::ImportWizard
   KF${KF_MAJOR_VERSION}::XmlGui
   KF${KF_MAJOR_VERSION}::I18n
   KF${KF_MAJOR_VERSION}::Contacts
