@@ -15,7 +15,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kaddressbook_importexportldifplugin
-        KPim::AddressbookImportExport
+        KPim${KF_MAJOR_VERSION}::AddressbookImportExport
         KF5::PimCommon
         KF${KF_MAJOR_VERSION}::I18n
         KF${KF_MAJOR_VERSION}::XmlGui

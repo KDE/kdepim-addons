@@ -19,7 +19,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportgmxplugin PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(kaddressbook_importexportgmxplugin
-    KPim::AddressbookImportExport
+    KPim${KF_MAJOR_VERSION}::AddressbookImportExport
     KF5::PimCommon
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::XmlGui
