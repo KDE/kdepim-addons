@@ -1,24 +1,22 @@
-# German translations for kdepim-addons package
-# German translation for kdepim-addons.
-# Copyright (C) 2021 This file is copyright:
+# Lithuanian translations for kdepim-addons package.
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022, 2023.
+# Automatically generated, 2023.
 #
-# Automatically generated, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2023-02-09 01:08+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
-"Language-Team: German <kde-i18n-de@kde.org>\n"
-"Language: de\n"
+"PO-Revision-Date: 2022-11-18 00:45+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -29,49 +27,49 @@ msgstr ""
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
 #, kde-format
 msgid "Type:"
-msgstr "Typ:"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
 #, kde-format
 msgid "Contains:"
-msgstr "Enthält:"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:74
 #, kde-format
 msgid "Body"
-msgstr "Nachrichtentext"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:75
 #, kde-format
 msgid "Subject"
-msgstr "Betreff"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:76
 #, kde-format
 msgid "To"
-msgstr "An"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:77
 #, kde-format
 msgid "Cc"
-msgstr "Kopie"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:78
 #, kde-format
 msgid "Bcc"
-msgstr "Blindkopie"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:170
 #, kde-format
 msgid "Unread"
-msgstr "Ungelesen"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:179
 #, kde-format
 msgid "Important"
-msgstr "Wichtig"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingdialog.cpp:25
 #, kde-format
@@ -82,12 +80,12 @@ msgstr ""
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
 #, kde-format
 msgid "Confirm Before Deleting"
-msgstr "Vor dem Löschen bestätigen"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
 #, kde-format
 msgid "Configure"
-msgstr "Einrichten"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:66
 #, kde-format
@@ -95,19 +93,17 @@ msgid ""
 "Do you want to delete this email?\n"
 "%1"
 msgstr ""
-"Möchten Sie diese E-Mail löschen?\n"
-"%1"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxdialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete Mail"
-msgstr "Löschen der Mail bestätigen"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
 #, kde-format
 msgid "Apply to All"
-msgstr "Bei allen anwenden"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
 #, kde-format
@@ -123,66 +119,68 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
-msgstr "Regel hinzufügen ..."
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
-msgstr "Regel entfernen"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
-msgstr "Regel ändern ..."
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Type"
-msgstr "Typ"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Pattern"
-msgstr "Muster"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
 #, kde-format
 msgid "Add Rule..."
-msgstr "Regel hinzufügen ..."
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
 #, kde-format
 msgid "Edit Rule..."
-msgstr "Regel bearbeiten ..."
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] "Regel entfernen"
-msgstr[1] "Regeln entfernen"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
-msgstr[0] "Möchten Sie diese Regel entfernen?"
-msgstr[1] "Möchten Sie diese Regeln entfernen?"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
-msgstr "Regel entfernen"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Same rule already exists."
-msgstr "Regel existiert bereits"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Create Rule"
-msgstr "Regel erstellen"
+msgstr ""
