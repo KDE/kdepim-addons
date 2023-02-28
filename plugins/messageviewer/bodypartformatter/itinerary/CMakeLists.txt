@@ -36,7 +36,7 @@ target_link_libraries(messageviewer_bodypartformatter_semantic
     ${TEMPLATES_LIB}
     Qt::DBus
     KF${KF_MAJOR_VERSION}::Prison
-    KPim::Itinerary
+    KPim${KF_MAJOR_VERSION}::Itinerary
     KPim${KF_MAJOR_VERSION}::PkPass
     )
 install(TARGETS messageviewer_bodypartformatter_semantic DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)
