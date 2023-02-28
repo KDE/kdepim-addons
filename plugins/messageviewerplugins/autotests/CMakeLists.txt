@@ -11,7 +11,7 @@ macro(add_kdepim_addons_viewerplugin_unittest _source _additional)
     ecm_add_test(${_test} ${_name}.h
                  TEST_NAME ${_name}
                  NAME_PREFIX "kdepim-addons-"
-                 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime
+                 LINK_LIBRARIES KF5::MessageViewer KPim${KF_MAJOR_VERSION}::Libkleo Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime
                  KF5::AkonadiCore KPim${KF_MAJOR_VERSION}::AkonadiNotes KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::GrantleeTheme KPim${KF_MAJOR_VERSION}::IncidenceEditor
                  KF5::AkonadiWidgets KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::CalendarSupport KF${KF_MAJOR_VERSION}::TextTranslator
                 )
@@ -27,7 +27,7 @@ macro(add_kdepim_addons_viewerplugin_class_unittest _source )
     ecm_add_test(${_test} ${_name}.h
                  TEST_NAME ${_name}
                  NAME_PREFIX "kdepim-addons-"
-		 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime KF5::AkonadiCore KPim${KF_MAJOR_VERSION}::AkonadiNotes KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::GrantleeTheme KF5::AkonadiWidgets KPim${KF_MAJOR_VERSION}::CalendarSupport
+		 LINK_LIBRARIES KF5::MessageViewer KPim${KF_MAJOR_VERSION}::Libkleo Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime KF5::AkonadiCore KPim${KF_MAJOR_VERSION}::AkonadiNotes KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::GrantleeTheme KF5::AkonadiWidgets KPim${KF_MAJOR_VERSION}::CalendarSupport
                 )
 endmacro ()
 
@@ -38,7 +38,7 @@ macro(add_kdepim_addons_viewerplugin_widget_unittest _source _additional )
     ecm_add_test(${_test} ${_name}.h
                  TEST_NAME ${_name}
                  NAME_PREFIX "kdepim-addons-"
-                 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime KF5::AkonadiCore KPim${KF_MAJOR_VERSION}::AkonadiNotes KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::GrantleeTheme KPim${KF_MAJOR_VERSION}::IncidenceEditor KF5::AkonadiWidgets KPim${KF_MAJOR_VERSION}::CalendarSupport)
+                 LINK_LIBRARIES KF5::MessageViewer KPim${KF_MAJOR_VERSION}::Libkleo Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime KF5::AkonadiCore KPim${KF_MAJOR_VERSION}::AkonadiNotes KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::GrantleeTheme KPim${KF_MAJOR_VERSION}::IncidenceEditor KF5::AkonadiWidgets KPim${KF_MAJOR_VERSION}::CalendarSupport)
 endmacro ()
 
 
