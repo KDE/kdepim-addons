@@ -15,7 +15,7 @@ target_sources(kmail_insertemaileditorplugin PRIVATE
 
 
 target_link_libraries(kmail_insertemaileditorplugin
-  KF5::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::AkonadiContact
+  KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::AkonadiContact
 )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_insertemaileditorplugin PROPERTIES UNITY_BUILD ON)

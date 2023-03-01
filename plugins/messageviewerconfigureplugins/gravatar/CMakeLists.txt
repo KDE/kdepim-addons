@@ -15,7 +15,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_gravatarconfigplugin
-  KF5::MessageViewer
+  KPim${KF_MAJOR_VERSION}::MessageViewer
   KF5::PimCommon
   KPim${KF_MAJOR_VERSION}::Gravatar
   KF${KF_MAJOR_VERSION}::I18n

@@ -35,7 +35,7 @@ find_package(KF${KF_MAJOR_VERSION}KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 set(MESSAGELIB_LIB_VERSION "5.9.0")
 
-find_package(KF5MessageComposer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim${KF_MAJOR_VERSION}MessageComposer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 
 
 set(%{ProjectNameUpper}_SRCS
@@ -49,7 +49,7 @@ kcoreaddons_add_plugin(%{ProjectNameLower}editorplugin JSON %{ProjectNameLower}e
     ${%{ProjectNameUpper}_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(%{ProjectNameLower}editorplugin
-   KF5::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n
+   KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n
 )
 
 

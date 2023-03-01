@@ -12,7 +12,7 @@ target_sources(kmail_autocorrectioneditorplugin PRIVATE
 
 
 target_link_libraries(kmail_autocorrectioneditorplugin
-    KF5::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n
+    KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n
     )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_autocorrectioneditorplugin PROPERTIES UNITY_BUILD ON)

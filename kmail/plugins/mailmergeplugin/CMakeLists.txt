@@ -32,7 +32,7 @@ endif()
 
 target_link_libraries(mailmerge
     KF${KF_MAJOR_VERSION}::I18n
-    KF5::MessageComposer
+    KPim${KF_MAJOR_VERSION}::MessageComposer
     KF${KF_MAJOR_VERSION}::KIOWidgets
     )
 

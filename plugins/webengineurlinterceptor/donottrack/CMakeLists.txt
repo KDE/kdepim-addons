@@ -28,7 +28,7 @@ endif()
 target_link_libraries(webengineviewer_donottrackplugin
     
     Qt::WebEngineWidgets
-    KF5::WebEngineViewer
+    KPim${KF_MAJOR_VERSION}::WebEngineViewer
     KF${KF_MAJOR_VERSION}::ConfigGui
     KF${KF_MAJOR_VERSION}::CoreAddons
     )

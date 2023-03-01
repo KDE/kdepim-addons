@@ -27,7 +27,7 @@ endif()
 
 target_link_libraries(akonadidatasetools
     KF${KF_MAJOR_VERSION}::I18n
-    KF5::MessageComposer
+    KPim${KF_MAJOR_VERSION}::MessageComposer
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KF${KF_MAJOR_VERSION}::XmlGui
     )

@@ -7,4 +7,4 @@ kconfig_add_kcfg_files(donottrackpluginurlinterceptortest_SRCS
 add_executable( donottrackpluginurlinterceptortest ${donottrackpluginurlinterceptortest_SRCS})
 add_test(NAME donottrackpluginurlinterceptortest COMMAND donottrackpluginurlinterceptortest)
 ecm_mark_as_test(donottrackpluginurlinterceptortest)
-target_link_libraries( donottrackpluginurlinterceptortest Qt::Test Qt::Widgets KF5::MessageViewer  Qt::WebEngineWidgets KF5::WebEngineViewer)
+target_link_libraries( donottrackpluginurlinterceptortest Qt::Test Qt::Widgets KPim${KF_MAJOR_VERSION}::MessageViewer  Qt::WebEngineWidgets KPim${KF_MAJOR_VERSION}::WebEngineViewer)

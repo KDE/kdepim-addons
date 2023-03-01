@@ -7,7 +7,7 @@ macro(add_gravatar_plugin_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(gravatarplugin-${_name})
-    target_link_libraries( ${_name} KF5::PimCommon Qt::Test KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::Gravatar KF5::MessageViewer)
+    target_link_libraries( ${_name} KF5::PimCommon Qt::Test KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::Gravatar KPim${KF_MAJOR_VERSION}::MessageViewer)
 endmacro ()
 
 add_gravatar_plugin_unittest(gravatarconfiguresettingspluginwidgettest.cpp "../gravatarconfiguresettingspluginwidget.cpp")

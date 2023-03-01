@@ -8,7 +8,7 @@ macro(add_kmail_externalcomposer_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_editorinitplugin-${_name})
-    target_link_libraries( ${_name} Qt::Test KF5::MessageComposer KF${KF_MAJOR_VERSION}::I18n KF5::PimCommon KF${KF_MAJOR_VERSION}::KIOWidgets)
+    target_link_libraries( ${_name} Qt::Test KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::I18n KF5::PimCommon KF${KF_MAJOR_VERSION}::KIOWidgets)
 endmacro ()
 
 add_kmail_externalcomposer_unittest(externalcomposerconfigurewidgettest.cpp "../externalcomposerconfigurewidget.cpp")

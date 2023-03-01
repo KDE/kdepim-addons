@@ -18,7 +18,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_briefheaderstyleplugin
-  KF5::MessageViewer
+  KPim${KF_MAJOR_VERSION}::MessageViewer
   KF${KF_MAJOR_VERSION}::XmlGui
   KF${KF_MAJOR_VERSION}::I18n
 )

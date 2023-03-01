@@ -4,6 +4,6 @@ add_executable(adblockblockableelementgui ${adblockblockableelementgui_SRCS})
 target_sources(adblockblockableelementgui PRIVATE adblockblockableelementgui.cpp adblockblockableelementgui.h)
 ecm_qt_declare_logging_category(adblockblockableelementgui HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor)
 target_link_libraries(adblockblockableelementgui
-  KF5::MessageViewer  adblocklibprivate Qt::WebEngineWidgets KF${KF_MAJOR_VERSION}::ItemViews KF${KF_MAJOR_VERSION}::KIOWidgets KF5::MessageViewer KF5::WebEngineViewer
+  KPim${KF_MAJOR_VERSION}::MessageViewer  adblocklibprivate Qt::WebEngineWidgets KF${KF_MAJOR_VERSION}::ItemViews KF${KF_MAJOR_VERSION}::KIOWidgets KPim${KF_MAJOR_VERSION}::MessageViewer KPim${KF_MAJOR_VERSION}::WebEngineViewer
 )
 

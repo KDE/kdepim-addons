@@ -38,7 +38,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 generate_export_header(kmailmarkdown BASE_NAME libkmailmarkdown)
 target_link_libraries(kmailmarkdown
-    KF5::MessageComposer
+    KPim${KF_MAJOR_VERSION}::MessageComposer
     KF${KF_MAJOR_VERSION}::I18n
     Qt::WebEngineWidgets
     discount::Lib

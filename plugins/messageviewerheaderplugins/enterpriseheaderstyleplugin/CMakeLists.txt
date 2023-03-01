@@ -12,7 +12,7 @@ target_sources(messageviewer_enterpriseheaderstyleplugin PRIVATE
 
 
 target_link_libraries(messageviewer_enterpriseheaderstyleplugin
-  KF5::MessageViewer 
+  KPim${KF_MAJOR_VERSION}::MessageViewer 
   KF${KF_MAJOR_VERSION}::XmlGui
   KF${KF_MAJOR_VERSION}::I18n
 )

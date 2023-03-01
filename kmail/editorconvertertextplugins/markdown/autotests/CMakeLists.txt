@@ -12,7 +12,7 @@ macro(add_kmail_converttext_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_converttext-${_name})
-    target_link_libraries( ${_name} Qt::Test KF${KF_MAJOR_VERSION}::XmlGui KF5::MessageComposer KF${KF_MAJOR_VERSION}::I18n Qt::WebEngineWidgets discount::Lib KF${KF_MAJOR_VERSION}::SyntaxHighlighting kmailmarkdown)
+    target_link_libraries( ${_name} Qt::Test KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::I18n Qt::WebEngineWidgets discount::Lib KF${KF_MAJOR_VERSION}::SyntaxHighlighting kmailmarkdown)
 endmacro ()
 
 add_kmail_converttext_unittest(markdowninterfacetest.cpp "../plugin/markdowninterface.cpp")

@@ -8,7 +8,7 @@ target_sources(messageviewer_openurlwithconfigplugin PRIVATE
 
 
 target_link_libraries(messageviewer_openurlwithconfigplugin
-    KF5::MessageViewer
+    KPim${KF_MAJOR_VERSION}::MessageViewer
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::KIOWidgets
     openurlwithconfigure
@@ -41,7 +41,7 @@ endif()
 generate_export_header(openurlwithconfigure BASE_NAME libopenurlwithconfigure)
 target_link_libraries(openurlwithconfigure
     KF${KF_MAJOR_VERSION}::I18n
-    KF5::MessageViewer
+    KPim${KF_MAJOR_VERSION}::MessageViewer
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KF${KF_MAJOR_VERSION}::ItemViews
     KPim${KF_MAJOR_VERSION}::Libkdepim

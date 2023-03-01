@@ -18,8 +18,8 @@ target_link_libraries(messageviewer_bodypartformatter_application_mstnef
     KF${KF_MAJOR_VERSION}::CalendarCore
     KPim${KF_MAJOR_VERSION}::CalendarUtils
     KPim${KF_MAJOR_VERSION}::Tnef
-    KF5::MessageCore
-    KF5::MessageViewer
+    KPim${KF_MAJOR_VERSION}::MessageCore
+    KPim${KF_MAJOR_VERSION}::MessageViewer
     KF${KF_MAJOR_VERSION}::IconThemes
     KF${KF_MAJOR_VERSION}::I18n
     ${TEMPLATES_LIB}

@@ -13,6 +13,6 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_translatorplugin
-  KF5::MessageViewer KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::PimTextEdit KF${KF_MAJOR_VERSION}::I18n
+  KPim${KF_MAJOR_VERSION}::MessageViewer KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::PimTextEdit KF${KF_MAJOR_VERSION}::I18n
   KF${KF_MAJOR_VERSION}::TextTranslator
 )

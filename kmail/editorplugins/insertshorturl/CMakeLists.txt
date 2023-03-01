@@ -51,7 +51,7 @@ ecm_qt_declare_logging_category(kmail_insertshorturleditorplugin HEADER kmail_in
 
 
 target_link_libraries(kmail_insertshorturleditorplugin
-    KF5::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n shorturlpluginprivate KF${KF_MAJOR_VERSION}::CoreAddons
+    KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n shorturlpluginprivate KF${KF_MAJOR_VERSION}::CoreAddons
     )
 
 if(BUILD_TESTING)

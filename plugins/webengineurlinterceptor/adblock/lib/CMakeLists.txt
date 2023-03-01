@@ -63,7 +63,7 @@ target_link_libraries(adblocklibprivate
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF5::PimCommon
     KF${KF_MAJOR_VERSION}::KIOWidgets
-    KF5::WebEngineViewer
+    KPim${KF_MAJOR_VERSION}::WebEngineViewer
     KF${KF_MAJOR_VERSION}::TextWidgets
     KPim${KF_MAJOR_VERSION}::PimTextEdit
     KPim${KF_MAJOR_VERSION}::Libkdepim

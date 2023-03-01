@@ -8,7 +8,7 @@ target_sources(messageviewer_dkimconfigplugin PRIVATE
 
 
 target_link_libraries(messageviewer_dkimconfigplugin
-    KF5::MessageViewer
+    KPim${KF_MAJOR_VERSION}::MessageViewer
     KF${KF_MAJOR_VERSION}::I18n
     dkimverifyconfigure
     )
@@ -50,7 +50,7 @@ target_link_libraries(dkimverifyconfigure
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::ConfigCore
     KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KF5::MessageViewer
+    KPim${KF_MAJOR_VERSION}::MessageViewer
     KF${KF_MAJOR_VERSION}::ItemViews
     )
 

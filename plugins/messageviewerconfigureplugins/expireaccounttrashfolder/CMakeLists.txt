@@ -20,7 +20,7 @@ endif()
 
 generate_export_header(expireaccounttrashfolderconfig BASE_NAME libexpireaccounttrashfolderconfig)
 target_link_libraries(expireaccounttrashfolderconfig
-    KF5::MessageViewer
+    KPim${KF_MAJOR_VERSION}::MessageViewer
     KF${KF_MAJOR_VERSION}::I18n
     KPim${KF_MAJOR_VERSION}::MailCommon
     )
@@ -40,7 +40,7 @@ target_sources(messageviewer_expireaccounttrashfolderconfigplugin PRIVATE
 )
 
 target_link_libraries(messageviewer_expireaccounttrashfolderconfigplugin
-  KF5::MessageViewer
+  KPim${KF_MAJOR_VERSION}::MessageViewer
   KF${KF_MAJOR_VERSION}::I18n
   KPim${KF_MAJOR_VERSION}::MailCommon
   expireaccounttrashfolderconfig

@@ -29,7 +29,7 @@ endif()
 target_compile_definitions(messageviewer_bodypartformatter_semantic PRIVATE -DTRANSLATION_DOMAIN=\"messageviewer_semantic_plugin\")
 target_link_libraries(messageviewer_bodypartformatter_semantic
     KF${KF_MAJOR_VERSION}::KIOGui
-    KF5::MessageViewer
+    KPim${KF_MAJOR_VERSION}::MessageViewer
     KPim${KF_MAJOR_VERSION}::CalendarSupport
     KF${KF_MAJOR_VERSION}::I18n
     KPim${KF_MAJOR_VERSION}::GrantleeTheme

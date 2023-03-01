@@ -40,8 +40,8 @@ endif()
 
 target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     Qt::Core
-    KF5::MessageCore
-    KF5::MessageViewer
+    KPim${KF_MAJOR_VERSION}::MessageCore
+    KPim${KF_MAJOR_VERSION}::MessageViewer
     KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
     KPim${KF_MAJOR_VERSION}::MailTransport
     KPim${KF_MAJOR_VERSION}::GrantleeTheme
