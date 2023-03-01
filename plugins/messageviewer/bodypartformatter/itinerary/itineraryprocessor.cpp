@@ -80,12 +80,23 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     }
 
     // determine sender date of the current part (differs from topLevel()->date() for forwarded mails
+    bool contextIsToplevel = false;
     QDateTime senderDateTime;
     auto node = part.content();
     auto dateHdr = node->header<KMime::Headers::Date>();
     while (!dateHdr && node->parent()) {
         node = node->parent();
         dateHdr = node->header<KMime::Headers::Date>();
+    }
+    if (!dateHdr) { // search outside of the current MIME tree if necessary, relevant e.g. for encrypted nodes
+        node = part.topLevelContent();
+        if (node) {
+            contextIsToplevel = true;
+        }
+        while (!dateHdr && node) {
+            dateHdr = node->header<KMime::Headers::Date>();
+            node = node->parent();
+        }
     }
     if (dateHdr) {
         senderDateTime = dateHdr->dateTime();
@@ -109,7 +120,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
 
     ExtractorEngine engine;
     engine.setUseSeparateProcess(true);
-    engine.setContext(QVariant::fromValue<KMime::Content *>(part.content()), u"message/rfc822");
+    engine.setContext(QVariant::fromValue<KMime::Content *>(contextIsToplevel ? part.topLevelContent() : part.content()), u"message/rfc822");
     if (isPkPassContent(part.content())) {
         pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
         engine.setContent(QVariant::fromValue<KPkPass::Pass *>(pass.get()), u"application/vnd.apple.pkpass");
