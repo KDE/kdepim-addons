@@ -35,7 +35,7 @@ endif()
 
 target_link_libraries(pimevents
     Qt::Core
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KPim${KF_MAJOR_VERSION}::AkonadiCalendar
     KF${KF_MAJOR_VERSION}::CalendarCore
     KF${KF_MAJOR_VERSION}::CalendarEvents
@@ -61,7 +61,7 @@ target_sources(pimcalendarsplugin PRIVATE
 target_link_libraries(pimcalendarsplugin
     Qt::Core
     Qt::Qml
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KF${KF_MAJOR_VERSION}::CalendarCore
     KF${KF_MAJOR_VERSION}::ConfigCore
     )

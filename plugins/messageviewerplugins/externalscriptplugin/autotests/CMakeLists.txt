@@ -13,7 +13,7 @@ macro(add_messageviewer_viewerplugin_external_plugin_unittest _source _additiona
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-                 LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MessageViewer Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime KF5::AkonadiCore KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::XmlGui KF5::PimCommon KF${KF_MAJOR_VERSION}::KIOWidgets KPim${KF_MAJOR_VERSION}::Libkdepim
+                 LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MessageViewer Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime KPim${KF_MAJOR_VERSION}::AkonadiCore KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::XmlGui KF5::PimCommon KF${KF_MAJOR_VERSION}::KIOWidgets KPim${KF_MAJOR_VERSION}::Libkdepim
                 )
 endmacro ()
 

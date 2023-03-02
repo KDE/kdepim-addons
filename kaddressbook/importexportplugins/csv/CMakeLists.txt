@@ -32,5 +32,5 @@ target_link_libraries(kaddressbook_importexportcsvplugin
         KF${KF_MAJOR_VERSION}::JobWidgets
         KF${KF_MAJOR_VERSION}::Completion
         KF${KF_MAJOR_VERSION}::KIOWidgets
-        KF5::AkonadiCore
+        KPim${KF_MAJOR_VERSION}::AkonadiCore
     )

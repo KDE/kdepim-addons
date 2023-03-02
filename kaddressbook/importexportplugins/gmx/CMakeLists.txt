@@ -25,5 +25,5 @@ target_link_libraries(kaddressbook_importexportgmxplugin
     KF${KF_MAJOR_VERSION}::XmlGui
     KF${KF_MAJOR_VERSION}::Contacts
     KF${KF_MAJOR_VERSION}::JobWidgets
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     )

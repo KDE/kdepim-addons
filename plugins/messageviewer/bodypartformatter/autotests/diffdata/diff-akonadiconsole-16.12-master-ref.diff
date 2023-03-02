@@ -69,8 +69,8 @@ index 4986439..9f3e884 100644
      )
  
 <span style="color:#0057ae;">@@ -89,6 +90,7 @@ target_link_libraries(akonadiconsole_bin</span>
-     KF5::AkonadiCore
-     KF5::AkonadiPrivate
+     KPim${KF_MAJOR_VERSION}::AkonadiCore
+     KPim${KF_MAJOR_VERSION}::AkonadiPrivate
      KF5::AkonadiContact
 <span style="color:#0057ae;">+    KF5::AkonadiXml</span>
      KF5::CalendarSupport

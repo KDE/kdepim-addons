@@ -10,7 +10,7 @@ target_link_libraries(gravatarupdatedialog_gui
     KF5::PimCommon
     KPim${KF_MAJOR_VERSION}::Gravatar
     KF${KF_MAJOR_VERSION}::I18n
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KF${KF_MAJOR_VERSION}::Contacts
     )
 
