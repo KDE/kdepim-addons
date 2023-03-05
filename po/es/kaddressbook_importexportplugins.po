@@ -2,7 +2,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2019, 2020, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2019, 2020, 2022, 2023.
 # Javier Vinal <fjvinalgmail.com>, 2009, 2010, 2011, 2012, 2017.
 # Javier Viñal <fjvinal@gmail.com>, 2010, 2012, 2013, 2014, 2015, 2016, 2018.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-04-16 19:50+0200\n"
+"PO-Revision-Date: 2023-03-04 11:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.03.90\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
@@ -235,8 +235,8 @@ msgid ""
 "characters will be ignored."
 msgstr ""
 "Introduzca un carácter personalizado para usar como carácter delimitador. Si "
-"usted introduce más de un carácter, solo se usará el primero y los restantes "
-"se ignorarán."
+"introduce más de un carácter, solo se usará el primero y los restantes se "
+"ignorarán."
 
 #: csv/import/csvimportdialog.cpp:363
 #, kde-format
@@ -365,10 +365,10 @@ msgid ""
 "data. In many cases, the first line of a csv file will be a comment line "
 "describing the order of the data fields included in the file."
 msgstr ""
-"Marque esta casilla si usted quiere que la importación se salte la primera "
-"fila de los datos csv. En muchos casos, la primera fila de un archivo csv es "
-"una línea de comentario que describe el orden de los campos de datos "
-"incluidos en el archivo."
+"Marque esta casilla si quiere que la importación omita la primera fila de "
+"los datos csv. En muchos casos, la primera fila de un archivo csv es una "
+"línea de comentario que describe el orden de los campos de datos incluidos "
+"en el archivo."
 
 #: csv/import/csvimportdialog.cpp:448
 #, kde-format
@@ -410,7 +410,7 @@ msgstr "Unicode de Microsoft"
 #, kde-format
 msgctxt "@info:status"
 msgid "You must assign at least one column."
-msgstr "Usted debe asignar al menos una columna."
+msgstr "Debe asignar al menos una columna."
 
 #: csv/import/csvimportdialog.cpp:584
 #, kde-format
@@ -463,7 +463,7 @@ msgstr "Selección de plantilla"
 #, kde-format
 msgctxt "@info"
 msgid "Please select a template, that matches the CSV file:"
-msgstr "Por favor, seleccione una plantilla que haga juego con el archivo CSV:"
+msgstr "Seleccione una plantilla que coincida con el archivo CSV:"
 
 #: gmx/gmximportexportplugininterface.cpp:25
 #, kde-format
@@ -567,8 +567,8 @@ msgid ""
 "Check this box if you want to export the contact's private fields to the "
 "vCard output file."
 msgstr ""
-"Marque esta casilla si usted no quiere exportar los campos de contactos "
-"privados al archivo de salida vCard."
+"Marque esta casilla si no desea exportar los campos privados de los "
+"contactos en el archivo de salida vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:36
 #, kde-format
@@ -589,8 +589,8 @@ msgid ""
 "Check this box if you want to export the contact's business fields to the "
 "vCard output file."
 msgstr ""
-"Marque esta casilla si usted no quiere exportar los campos de contactos de "
-"negocios al archivo de salida vCard."
+"Marque esta casilla si no desea exportar los campos de negocios de los "
+"contactos en el archivo de salida vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:43
 #, kde-format
@@ -611,8 +611,8 @@ msgid ""
 "Check this box if you want to export the contact's other fields to the vCard "
 "output file."
 msgstr ""
-"Marque esta casilla si usted quiere exportar los otros campos del contacto "
-"al archivo de salida vCard."
+"Marque esta casilla si desea exportar el resto de campos del contacto en el "
+"archivo de salida vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:50
 #, kde-format
@@ -633,8 +633,8 @@ msgid ""
 "Check this box if you want to export the contact's encryption keys to the "
 "vCard output file."
 msgstr ""
-"Marque esta casilla si usted quiere exportar las claves de cifrado del "
-"contacto al archivo de salida vCard."
+"Marque esta casilla si desea exportar las claves de cifrado del contacto en "
+"el archivo de salida vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:57
 #, kde-format
@@ -655,8 +655,8 @@ msgid ""
 "Check this box if you want to export the contact's picture to the vCard "
 "output file."
 msgstr ""
-"Marque esta casilla si usted quiere exportar la imagen del contacto al "
-"archivo de salida vCard."
+"Marque esta casilla si desea exportar la imagen del contacto en el archivo "
+"de salida vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:64
 #, kde-format
@@ -668,13 +668,13 @@ msgstr "Opciones de exportación"
 #, kde-format
 msgctxt "@option:check"
 msgid "Display name as full name"
-msgstr "Mostrar nombre cómo nombre completo"
+msgstr "Mostrar el nombre como nombre completo"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export display name as full name"
-msgstr "Exportar mostrar nombre como nombre completo"
+msgstr "Exportar el nombre a mostrar como nombre completo"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:73
 #, kde-format
@@ -684,9 +684,9 @@ msgid ""
 "vCard's full name field.  This may be required to get the name shown "
 "correctly in GMail or Android."
 msgstr ""
-"Marque esta casilla si usted quiere exportar el nombre del contacto mostrado "
-"en el campo de nombre completo de la vCard. Esto puede necesitarse para que "
-"el nombre se muestre correctamente en GMail o Android."
+"Marque esta casilla si desea exportar el nombre de contacto que se muestra "
+"en el campo de nombre completo de la vCard. Esto puede ser necesario para "
+"que el nombre se muestre correctamente en GMail o Android."
 
 #: vcards/engine/vcardviewerdialog.cpp:28
 #, kde-format
@@ -776,7 +776,7 @@ msgid ""
 "You have selected a list of contacts, shall they be exported to several "
 "files?"
 msgstr ""
-"Usted ha seleccionado una lista de contactos, ¿se deberían exportar a varios "
+"Ha seleccionado una lista de contactos. ¿Se deberían exportar a varios "
 "archivos?"
 
 #: vcards/vcardimportexportplugininterface.cpp:439

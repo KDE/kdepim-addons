@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Automatically generated, 2021.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_checkbeforedeleting_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-05-15 14:50+0200\n"
+"PO-Revision-Date: 2023-03-04 12:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -179,7 +179,7 @@ msgstr "Eliminar regla"
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Same rule already exists."
-msgstr "ya existe una regla similar."
+msgstr "Ya existe una regla similar."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format

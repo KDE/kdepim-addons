@@ -22,7 +22,7 @@ msgstr ""
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
 msgid "Check Gravatar..."
-msgstr "افحص «غراڤاتار»..."
+msgstr "افحص «غرافاتار»..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -59,7 +59,7 @@ msgstr "احفظ عنوان الصّورة"
 #, kde-format
 msgctxt "@title:window"
 msgid "Check and update Gravatar"
-msgstr "فحص «غراڤاتار» وتحديثه"
+msgstr "فحص «غرافاتار» وتحديثه"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
 #, kde-format
@@ -79,7 +79,7 @@ msgstr "البحث غير ممكن."
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:128
 #, kde-format
 msgid "No Gravatar Found."
-msgstr "لم يُعثر على «غراڤاتار»."
+msgstr "لم يُعثر على «غرافاتار»."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
 #, kde-format
@@ -285,7 +285,7 @@ msgstr "أرسل بطاقات vCard..."
 #~ msgstr "استخدم Libravatar"
 
 #~ msgid "Fallback to Gravatar"
-#~ msgstr "استخدم «غراڤاتار» كاحتياط"
+#~ msgstr "استخدم «غرافاتار» كاحتياط"
 
 #~ msgid "Use HTTPS Protocol"
 #~ msgstr "استخدم ميفاق HTTPS"

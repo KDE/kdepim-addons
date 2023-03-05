@@ -247,12 +247,12 @@ msgstr "ألغِ التحديد"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
-msgstr "اضبط «غراڤاتار»"
+msgstr "اضبط «غرافاتار»"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
 #, kde-format
 msgid "Enable Gravatar Support"
-msgstr "فعّل دعم «غراڤاتار»"
+msgstr "فعّل دعم «غرافاتار»"
 
 #: openurlwith/openurlwithconfigurecreatedialog.cpp:16
 #, kde-format

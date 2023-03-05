@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2015, 2016.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-09-09 11:50+0200\n"
+"PO-Revision-Date: 2023-03-04 11:51+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -27,7 +27,7 @@ msgstr "Comprobar Gravatar..."
 #: sendmail/sendmailplugininterface.cpp:59
 #, kde-format
 msgid "You have not selected any contacts."
-msgstr "Usted no ha seleccionado ningún contacto."
+msgstr "No ha seleccionado ningún contacto."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:69
 #, kde-format
@@ -170,7 +170,7 @@ msgstr "Contraer todo"
 #: mergelib/widgets/mergecontacterrorlabel.cpp:18
 #, kde-format
 msgid "You must select at least two elements."
-msgstr "Usted debe seleccionar al menos dos elementos."
+msgstr "Debe seleccionar al menos dos elementos."
 
 #: mergelib/widgets/mergecontacterrorlabel.cpp:21
 #, kde-format
@@ -188,8 +188,8 @@ msgid ""
 "Some information can be lost. Do you want to continue, or customize what you "
 "want to merge?"
 msgstr ""
-"Parte de la información puede perderse. ¿Quiere usted continuar o "
-"personalizar lo que quiere mezclar?"
+"Se puede perder parte de la información. ¿Desea continuar o personalizar lo "
+"que quiere mezclar?"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
 #, kde-format
@@ -207,8 +207,8 @@ msgid ""
 "Some information was not selected. You can lose this information. Do you "
 "want to continue merging?"
 msgstr ""
-"Parte de la información se seleccionó. Usted puede perder esa información. "
-"¿Quiere usted continuar mezclando?"
+"No se ha seleccionado parte de la información. Puede perder dicha "
+"información. ¿Quiere continuar la fusión?"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
@@ -239,7 +239,7 @@ msgstr "Oficina"
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:93
 #, kde-format
 msgid "Manager"
-msgstr "Gestor"
+msgstr "Representante"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:96
 #, kde-format
@@ -249,7 +249,7 @@ msgstr "Asistente"
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:105
 #, kde-format
 msgid "Spouse"
-msgstr "Esposa"
+msgstr "Cónyuge"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:120
 #, kde-format

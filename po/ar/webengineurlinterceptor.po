@@ -167,7 +167,7 @@ msgstr "كائن"
 #: adblock/lib/widgets/adblockblockableitemswidget.cpp:206
 #, kde-format
 msgid "Audio/Video"
-msgstr "صوت/ڤديو"
+msgstr "صوت/فديو"
 
 #: adblock/lib/widgets/adblockblockableitemswidget.cpp:209
 #, kde-format

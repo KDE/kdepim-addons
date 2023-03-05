@@ -37,12 +37,12 @@ msgstr "أضف الحجز إلى التّقويم لديك."
 #: itineraryurlhandler.cpp:132
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
-msgstr "استورد الحجز إلى كدي Itinerary."
+msgstr "استورد الحجز إلى كِيدِي Itinerary."
 
 #: itineraryurlhandler.cpp:135
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
-msgstr "أرسل هذا الحجز إلى جهاز أخر باستعمال كدي المتصل."
+msgstr "أرسل هذا الحجز إلى جهاز أخر باستعمال كِيدِي المتصل."
 
 #: itineraryurlhandler.cpp:206
 #, kde-format
@@ -133,7 +133,7 @@ msgstr "أضف إلى التّقويم"
 
 #: templates/itinerary.html:72
 msgid "Add to KDE Itinerary"
-msgstr "أضف إلى كدي Itinerary"
+msgstr "أضف إلى كِيدِي Itinerary"
 
 #: templates/itinerary.html:78
 msgid "Send to Device..."

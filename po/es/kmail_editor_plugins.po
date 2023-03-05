@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2016, 2018.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2019-12-26 22:19+0100\n"
+"PO-Revision-Date: 2023-03-04 12:26+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,22 +16,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
 msgid "Autocorrect Text"
-msgstr "Autocorregir texto"
+msgstr "Corregir el texto automáticamente"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
 #, kde-format
 msgid "Autocorrect Full Text"
-msgstr "Autocorregir el texto completo"
+msgstr "Corregir todo el texto automáticamente"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
 #, kde-format
 msgid "Autocorrect Selected Text"
-msgstr "Autocorregir el texto seleccionado"
+msgstr "Corregir el texto seleccionado automáticamente"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
@@ -51,17 +51,17 @@ msgstr "Insertar URL corto..."
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
-msgstr "No se ha detectado conexión de red, no podemos acortar el URL."
+msgstr "No se ha detectado conexión de red. No se puede acortar el URL."
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:92
 #, kde-format
 msgid "String doesn't seem to be a URL"
-msgstr "La cadena no parece ser un URL"
+msgstr "Parece que la cadena no es un URL"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:98
 #, kde-format
 msgid "An error occurred: \"%1\""
-msgstr "Ocurrió un error: «%1»"
+msgstr "Ha ocurrido un error: «%1»"
 
 #: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
 #: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
@@ -178,7 +178,7 @@ msgid ""
 "Do you really want to remove group \"%1\" along with all its snippets?<nl/"
 "><warning>There is no way to undo the removal.</warning>"
 msgstr ""
-"¿Realmente desea eliminar el grupo «%1»? junto con todos sus fragmentos?<nl/"
+"¿Realmente desea eliminar el grupo «%1» junto con todos sus fragmentos?<nl/"
 "><warning>No se puede deshacer la eliminación.</warning>"
 
 #: quicktext/quicktexttreewidget.cpp:177
@@ -210,12 +210,12 @@ msgstr "Compartir texto del correo..."
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
 msgid "Zoom: %1%"
-msgstr "Zum: %1%"
+msgstr "Ampliación: %1%"
 
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom..."
-msgstr "Zum..."
+msgstr "Ampliación..."
 
 #~ msgid "To"
 #~ msgstr "Para"
