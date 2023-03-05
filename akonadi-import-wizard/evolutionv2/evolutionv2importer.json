@@ -2,7 +2,7 @@
     "KPlugin": {
         "Id": "evolution2importer",
         "Name": "Evolution2 Importer",
-        "Name[ar]": "مستورد «إڤلوشن٢»",
+        "Name[ar]": "مستورد «إفلوشن٢»",
         "Name[az]": "Evolution2 idxalçısı",
         "Name[bg]": "Импортиране от Evolution2",
         "Name[ca@valencia]": "Importador d'Evolution2",
@@ -11,7 +11,7 @@
         "Name[da]": "Evolution2-importør",
         "Name[de]": "Import-Modul für Evolution2",
         "Name[en_GB]": "Evolution2 Importer",
-        "Name[es]": "Importador Evolution2",
+        "Name[es]": "Importador de Evolution2",
         "Name[et]": "Evolution2 importija",
         "Name[eu]": "Evolution2 inportatzailea",
         "Name[fi]": "Evolution2-tuonti",
