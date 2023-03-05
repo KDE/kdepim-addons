@@ -8,7 +8,7 @@
         "Description[ca]": "Aquest connector permet comprovar si es vol suprimir un correu electrònic específic",
         "Description[cs]": "Tento modul umožňuje rozhodnout zda smazat vybraný e-mail",
         "Description[en_GB]": "This plugin allows you to check if we want to delete specific email",
-        "Description[es]": "Este complemento le permite comprobar si desea borrar el correo indicado",
+        "Description[es]": "Este complemento le permite comprobar si desea borrar el correo indicado.",
         "Description[eu]": "Plugin horrek e-posta jakin bat ezabatu nahi dugun egiaztatzeko aukera ematen",
         "Description[fi]": "Tällä liitännäisellä voi tarkistaa, haluaako poistaa tietyn viestin",
         "Description[fr]": "Ce module externe vous permet de confirmer que nous voulons vraiment supprimer un courriel spécifique.",

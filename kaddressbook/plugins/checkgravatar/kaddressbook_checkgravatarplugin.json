@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check the Gravatar images.",
-        "Description[ar]": "تتيح لك هذه الملحقة فحص صور «غراڤاتار».",
+        "Description[ar]": "تتيح لك هذه الملحقة فحص صور «غرافاتار».",
         "Description[az]": "Bu əlavə, sizə Gravatar şəkillərini istifadə etməyə imkan verir.",
         "Description[bg]": "Тази приставка ви позволява да проверявате изображенията Gravatar.",
         "Description[ca@valencia]": "Este connector permet comprovar les imatges «Gravatar».",
@@ -37,7 +37,7 @@
         "EnabledByDefault": "false",
         "Id": "kaddressbookcheckgravatar",
         "Name": "Check Gravatar",
-        "Name[ar]": "فحص «غراڤاتار»",
+        "Name[ar]": "فحص «غرافاتار»",
         "Name[az]": "Gravatar ilə inteqrasiya",
         "Name[bg]": "Проверка на Gravatar",
         "Name[ca@valencia]": "Comprova «Gravatar»",

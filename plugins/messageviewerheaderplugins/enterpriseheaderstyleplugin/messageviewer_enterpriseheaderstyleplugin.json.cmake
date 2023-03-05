@@ -9,7 +9,7 @@
         "Description[cs]": "Tento modul popisuje hlavičku souboru pro enterprise.",
         "Description[de]": "Dieses Modul definiert ein grafisches Vorspann-Design.",
         "Description[en_GB]": "This plugin defines a mail header style for enterprise.",
-        "Description[es]": "Este complemento define un estilo de encabezado de correo para empresarial.",
+        "Description[es]": "Este complemento define un estilo de encabezado de correo empresarial.",
         "Description[et]": "See plugin võimaldab kasutada firmapäise stiili.",
         "Description[eu]": "Plugin horrek enpresarako posta-goiburuko estilo bat definitzen du.",
         "Description[fi]": "Tällä liitännäisellä voi asettaa yrityksen viestiotsaketyylin.",

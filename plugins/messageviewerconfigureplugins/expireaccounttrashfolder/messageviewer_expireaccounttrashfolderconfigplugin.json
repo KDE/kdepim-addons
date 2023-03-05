@@ -8,7 +8,7 @@
         "Description[ca]": "Aquest connector permet configurar la caducitat de la carpeta paperera per cada compte.",
         "Description[de]": "Mit diesem Modul können Sie das Leeren des Papierkorbs für jedes Konto einrichten.",
         "Description[en_GB]": "This plugin allows you to configure expire wastebin folder for each accounts.",
-        "Description[es]": "Este complemento le permite configurar la expiración de la carpeta de papelera para cada cuenta.",
+        "Description[es]": "Este complemento le permite configurar la expiración de la carpeta de papelera de cada cuenta.",
         "Description[eu]": "Plugin horrek kontu bakoitzeko zakarrontzi karpeta iraungitzea konfiguratzeko aukera ematen dizu.",
         "Description[fi]": "Tällä liitännäisellä voi vanhentaa kunkin tilin roskakorikansion.",
         "Description[fr]": "Ce module externe vous permet de configurer l'expiration du dossier de corbeille pour chaque compte.",
