@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2016, 2017.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-16 00:47+0000\n"
-"PO-Revision-Date: 2021-11-06 22:26+0100\n"
+"PO-Revision-Date: 2023-03-04 12:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -38,7 +38,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr "Sin libreta de direcciones disponible"
+msgstr "Ninguna libreta de direcciones disponible"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:105
 #, kde-format
@@ -50,7 +50,7 @@ msgstr "Crear libreta de direcciones"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr "Añadir una libreta de direcciones"
+msgstr "Añadir libreta de direcciones"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
 #, kde-format
@@ -60,8 +60,7 @@ msgstr "Añadir contactos automáticamente"
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
 #, kde-format
 msgid "Select the addressbook in which to store contacts:"
-msgstr ""
-"Seleccione la libreta de direcciones en la que almacenar los contactos:"
+msgstr "Seleccione la libreta de direcciones para guardar contactos:"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:40
 #, kde-format
@@ -96,7 +95,7 @@ msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
 "the current identity?"
 msgstr ""
-"¿Quiere enviar correo con una SMTP distinta de la definida en la identidad "
+"¿Quiere enviar el correo con un SMTP distinto del definido en la identidad "
 "actual?"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
@@ -113,7 +112,7 @@ msgstr "Enviar como texto sin formato"
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
 #, kde-format
 msgid "Use SMTP server defined in identity"
-msgstr "Usar la SMTP del servidor definida en la identidad"
+msgstr "Usar el servidor SMTP definido en la identidad"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format
@@ -134,7 +133,7 @@ msgstr "Correos duplicados"
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
 msgid "These emails are duplicated. Do you want to send email?"
-msgstr "Esos correos están duplicados. ¿Quiere enviar el correo?"
+msgstr "Estos correos están duplicados. ¿Quiere enviar el correo?"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
@@ -206,7 +205,7 @@ msgstr "Lista blanca de direcciones"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "Enter new email address:"
-msgstr "Introduzca el nuevo nombre de correo:"
+msgstr "Introduzca la nueva dirección de correo:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
@@ -216,23 +215,24 @@ msgstr "¿Desea eliminar esta dirección de correo electrónico?"
 #: confirm-address/confirmaddressdialog.cpp:24
 #, kde-format
 msgid "Add Selected Emails to WhiteList"
-msgstr "Añadir los correos seleccionados a la lista blanca"
+msgstr "Añadir las direcciones de correo seleccionadas a la lista blanca"
 
 #: confirm-address/confirmaddressdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
-msgstr "Confirmar dirección"
+msgstr "Confirmar direcciones"
 
 #: confirm-address/confirmaddressdialog.cpp:88
 #, kde-format
 msgid "All selected emails are added to white list"
-msgstr "Todos los correos seleccionados se añaden a la lista blanca"
+msgstr ""
+"Todas las direcciones de correo seleccionadas se añaden a la lista blanca"
 
 #: confirm-address/confirmaddressdialog.cpp:88
 #, kde-format
 msgid "Emails added to white list"
-msgstr "Correos añadidos a la lista blanca"
+msgstr "Direcciones de correo añadidas a la lista blanca"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format
@@ -249,4 +249,4 @@ msgstr "Cambiar valor"
 #: confirm-address/confirmaddresswidget.cpp:22
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
-msgstr "Los posibles correos inválidos se muestran en rojo:"
+msgstr "Las posibles direcciones de correo no válidas se muestran en rojo:"

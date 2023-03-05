@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-14 02:35+0000\n"
-"PO-Revision-Date: 2022-09-17 19:19+0200\n"
+"PO-Revision-Date: 2023-03-04 12:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: grammalecte/plugin/grammalecteinterface.cpp:77
 #, kde-format
@@ -155,14 +155,14 @@ msgid ""
 "Your text will send on a external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
-"Usted no usa la instancia local.\n"
+"No se está usando una instancia local.\n"
 "El texto se enviará a un sitio web externo (https://languagetool.org/).\n"
-"¿Quiere continuar?"
+"¿Desea continuar?"
 
 #: languagetool/plugin/languagetoolinterface.cpp:102
 #, kde-format
 msgid "Check Grammar with LanguageTool"
-msgstr "Comprobar la gramátíca con LanguageTool"
+msgstr "Comprobar la gramática con LanguageTool"
 
 #: languagetool/plugin/languagetoolplugin.cpp:36
 #, kde-format
