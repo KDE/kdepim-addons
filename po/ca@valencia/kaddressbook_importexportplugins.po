@@ -25,7 +25,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Export CSV file..."
-msgstr "Exporta a un fitxer CSV..."
+msgstr "Exporta cap a un fitxer CSV..."
 
 #: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
@@ -486,7 +486,7 @@ msgstr "Importa els contactes des d'un fitxer GMX de llibreta d'adreces."
 #: gmx/gmximportexportplugininterface.cpp:46
 #, kde-format
 msgid "Export GMX file..."
-msgstr "Exporta a un fitxer GMX..."
+msgstr "Exporta cap a un fitxer GMX..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
 #, kde-format
@@ -528,7 +528,7 @@ msgstr "Importa els contactes des d'un fitxer LDIF."
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Export LDIF file..."
-msgstr "Exporta a un fitxer LDIF..."
+msgstr "Exporta cap a un fitxer LDIF..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
 #, kde-format
@@ -727,12 +727,12 @@ msgstr "Exporta els contactes a un fitxer vCard 4.0."
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
 msgid "Export vCard 4.0..."
-msgstr "Exporta a vCard 4.0..."
+msgstr "Exporta cap a vCard 4.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0..."
-msgstr "Exporta a vCard 3.0..."
+msgstr "Exporta cap a vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -742,7 +742,7 @@ msgstr "Exporta els contactes a un fitxer vCard 3.0."
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1..."
-msgstr "Exporta a vCard 2.1..."
+msgstr "Exporta cap a vCard 2.1..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
@@ -785,13 +785,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
-msgstr "Exporta a un fitxer"
+msgstr "Exporta cap a un fitxer"
 
 #: vcards/vcardimportexportplugininterface.cpp:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"
-msgstr "Exporta a diversos fitxers"
+msgstr "Exporta cap a diversos fitxers"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, kde-format
