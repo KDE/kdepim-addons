@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016.
-# Tommi Nieminen <translator@legisign.org>, 2020.
+# Tommi Nieminen <translator@legisign.org>, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2020-01-01 12:48+0200\n"
+"PO-Revision-Date: 2023-01-18 12:39+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -110,18 +110,18 @@ msgstr "Valitse osoitekirja, jonne yhdistetyt yhteystiedot tallennetaan:"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "Valitse kaikki"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
 #, kde-format
 msgid "Deselect All"
-msgstr ""
+msgstr "Poista kaikki valinnat"
 
 #: mergelib/searchduplicate/mergecontactselectinformationtabwidget.cpp:35
 #, kde-format
 msgid "Duplicate contact %1"
-msgstr "Monisteinen yhteystieto %1"
+msgstr "Toistuva yhteystieto %1"
 
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:17
 #, kde-format
@@ -129,10 +129,9 @@ msgid "Contacts"
 msgstr "Yhteystiedot"
 
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
-#, fuzzy, kde-format
-#| msgid "Duplicate contact %1"
+#, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
-msgstr "Monisteinen yhteystieto %1"
+msgstr "Yhteystieto ”%1” toistuu (%2 kertaa)"
 
 #: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
 #, kde-format
@@ -141,10 +140,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Etsi ja valitse yhdistettävät toistuvat yhteystiedot"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search is impossible."
+#, kde-format
 msgid "Search in result..."
-msgstr "Etsiminen on mahdotonta."
+msgstr "Etsi tuloksista…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -160,12 +158,12 @@ msgstr "Yhdistä"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
 #, kde-format
 msgid "Expand All"
-msgstr ""
+msgstr "Laajenna kaikki"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
 #, kde-format
 msgid "Collapse All"
-msgstr ""
+msgstr "Supista kaikki"
 
 #: mergelib/widgets/mergecontacterrorlabel.cpp:18
 #, kde-format
@@ -175,7 +173,7 @@ msgstr "Vähintään kaksi yhteystietoa on valittava."
 #: mergelib/widgets/mergecontacterrorlabel.cpp:21
 #, kde-format
 msgid "No duplicated contact found."
-msgstr "Monisteisia yhteystietoja ei löytynyt."
+msgstr "Toistuvia yhteystietoja ei löytynyt."
 
 #: mergelib/widgets/mergecontacterrorlabel.cpp:24
 #, kde-format
@@ -259,7 +257,7 @@ msgstr "(määrittämätön)"
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
 #, kde-format
 msgid "Search Duplicate Contacts..."
-msgstr "Etsi monisteisia yhteystietoja…"
+msgstr "Etsi toistuvia yhteystietoja…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
