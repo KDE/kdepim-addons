@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 00:59+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-03-11 04:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/kdepim-addons/"
+"X-Crowdin-File: /kf5-stable/messages/kdepim-addons/"
 "kmail_editorgrammar_plugins.pot\n"
-"X-Crowdin-File-ID: 9614\n"
+"X-Crowdin-File-ID: 10228\n"
 
 #: grammalecte/grammalecteinterface.cpp:78
 #, kde-format
@@ -53,3 +53,194 @@ msgstr "使用 LanguageTool 检查语法"
 #, kde-format
 msgid "LanguageTool Plugin"
 msgstr "LanguageTool 插件"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Grammalecte"
+#~ msgstr "配置 Grammalecte"
+
+#~ msgid "General"
+#~ msgstr "常规"
+
+#~ msgid "Grammar Settings"
+#~ msgstr "语法设置"
+
+#~ msgid ""
+#~ "Impossible to get options. Please verify that you have grammalected "
+#~ "installed."
+#~ msgstr "无法获取选项。请确认您已经安装了 grammalected。"
+
+#~ msgid "Error during Extracting Options"
+#~ msgstr "提取选项时出错"
+
+#~ msgid "Press Button for Reloading Settings"
+#~ msgstr "可按按钮来重新加载设置"
+
+#~ msgid "Reload Settings"
+#~ msgstr "重新加载设置"
+
+#~ msgid "Python Path:"
+#~ msgstr "Python 路径："
+
+#~ msgid "Add full 'grammalecte-cli.py' path"
+#~ msgstr "添加完整的“grammalecte-cli.py”的路径"
+
+#~ msgid "Grammalecte Path:"
+#~ msgstr "Grammalecte 路径："
+
+#~ msgid "Python path is missing."
+#~ msgstr "Python 的路径不能为空。"
+
+#~ msgid "Grammalecte path not found."
+#~ msgstr "Grammalecte 的路径不能为空。"
+
+#~ msgid "Grammalecte program file not found."
+#~ msgstr "无法找到 Grammalecte 程序的文件。"
+
+#~ msgid "Grammalecte cli file not found."
+#~ msgstr "无法找到 Grammalecte 命令行的文件。"
+
+#~ msgid "Grammalecte error"
+#~ msgstr "Grammalecte 出错"
+
+#~ msgid "Any text to check."
+#~ msgstr "任何要检查的文本。"
+
+#~ msgid "Replacement"
+#~ msgstr "替换"
+
+#~ msgid "Online Grammar Information"
+#~ msgstr "在线语法信息"
+
+#~ msgid "Check Again"
+#~ msgstr "再次检查"
+
+#~ msgid "Configure..."
+#~ msgstr "配置..."
+
+#~ msgid "See on: %1"
+#~ msgstr "参见：%1"
+
+#~ msgid "Close"
+#~ msgstr "关闭"
+
+#~ msgid "English"
+#~ msgstr "英语"
+
+#~ msgid "Asturian"
+#~ msgstr "阿斯图里亚斯语"
+
+#~ msgid "Belarusian"
+#~ msgstr "白俄罗斯语"
+
+#~ msgid "Breton"
+#~ msgstr "布列塔尼语"
+
+#~ msgid "Catalan"
+#~ msgstr "加泰罗尼亚语"
+
+#~ msgid "Chinese"
+#~ msgstr "中文"
+
+#~ msgid "Danish"
+#~ msgstr "丹麦语"
+
+#~ msgid "Dutch"
+#~ msgstr "荷兰语"
+
+#~ msgid "English (Australian)"
+#~ msgstr "英语 (澳大利亚)"
+
+#~ msgid "English (Canadian)"
+#~ msgstr "英语 (加拿大)"
+
+#~ msgid "Esperanto"
+#~ msgstr "世界语"
+
+#~ msgid "French"
+#~ msgstr "法语"
+
+#~ msgid "Galician"
+#~ msgstr "加利西亚语"
+
+#~ msgid "German"
+#~ msgstr "德语"
+
+#~ msgid "Greek"
+#~ msgstr "希腊语"
+
+#~ msgid "Italian"
+#~ msgstr "意大利语"
+
+#~ msgid "Japanese"
+#~ msgstr "日语"
+
+#~ msgid "Khmer"
+#~ msgstr "高棉语"
+
+#~ msgid "Persian"
+#~ msgstr "波斯语"
+
+#~ msgid "Polish"
+#~ msgstr "波兰语"
+
+#~ msgid "Portuguese"
+#~ msgstr "葡萄牙语"
+
+#~ msgid "Romanian"
+#~ msgstr "罗马尼亚语"
+
+#~ msgid "Russian"
+#~ msgstr "俄语"
+
+#~ msgid "Slovak"
+#~ msgstr "斯洛伐克语"
+
+#~ msgid "Slovenian"
+#~ msgstr "斯洛文尼亚语"
+
+#~ msgid "Spanish"
+#~ msgstr "西班牙语"
+
+#~ msgid "Swedish"
+#~ msgstr "瑞典语"
+
+#~ msgid "Tagalog"
+#~ msgstr "他加禄语"
+
+#~ msgid "Tamil"
+#~ msgstr "泰米尔语"
+
+#~ msgid "Ukrainian"
+#~ msgstr "乌克兰语"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure LanguageTool"
+#~ msgstr "配置 LanguageTool"
+
+#~ msgid "Use Local Instance"
+#~ msgstr "使用本地实例"
+
+#~ msgid "Instance Path:"
+#~ msgstr "实例路径："
+
+#~ msgid "Language:"
+#~ msgstr "语言："
+
+#~ msgid "Refresh"
+#~ msgstr "刷新"
+
+#~ msgid "An error was reported: %1"
+#~ msgstr "报告了一个错误：%1"
+
+#~ msgid "Failed to check grammar."
+#~ msgstr "检查语法失败。"
+
+#~ msgid ""
+#~ "An error occurred attempting to load the list of available languages:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "尝试加载可用语言列表时出错：\n"
+#~ "%1"
+
+#~ msgid "List of Languages"
+#~ msgstr "语言列表"
