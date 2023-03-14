@@ -155,7 +155,9 @@ bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
         return result;
     }
 
-    qCDebug(ADBLOCKINTERCEPTOR_LOG) << " urlString" << urlString;
+    if (scheme != QLatin1String("data")) { // may be long, so don't show in log
+        qCDebug(ADBLOCKINTERCEPTOR_LOG) << " urlString" << urlString;
+    }
     const AdBlockRule *blockedRule = mAdBlockMatcher->match(info, host, urlString);
     if (blockedRule) {
         result = true;
