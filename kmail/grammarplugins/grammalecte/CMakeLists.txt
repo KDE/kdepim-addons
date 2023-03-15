@@ -20,5 +20,5 @@ ecm_qt_declare_logging_category(kmail_grammalecteplugin HEADER grammalecteplugin
 
 
 target_link_libraries(kmail_grammalecteplugin
-    KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::I18n KF5::PimCommon KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::TextGrammarCheck
+    KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::PimCommon KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::TextGrammarCheck
     )

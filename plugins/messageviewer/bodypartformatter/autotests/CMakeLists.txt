@@ -36,7 +36,7 @@ macro(add_messageviewer_bodyformatter_class_unittest _source _additional)
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-		 LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MessageViewer Qt::Test KPim${KF_MAJOR_VERSION}::PimTextEdit KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Completion KF5::PimCommonAkonadi
+		 LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MessageViewer Qt::Test KPim${KF_MAJOR_VERSION}::PimTextEdit KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Completion KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
                 )
 endmacro ()
 add_messageviewer_bodyformatter_class_unittest(reactiontoinvitationdialogtest.cpp "../calendar/reactiontoinvitationdialog.cpp")

@@ -8,10 +8,10 @@ if (KDEPIM_RUN_AKONADI_TEST)
     ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_test_SRCS HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME org.kde.pim.kaddressbook_checkgravatar)
 
 
-    add_akonadi_isolated_test_advanced( gravatarupdatejobtest.cpp "../job/gravatarupdatejob.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KF5::PimCommon;KF${KF_MAJOR_VERSION}::Contacts;KPim${KF_MAJOR_VERSION}::Gravatar;KF${KF_MAJOR_VERSION}::I18n")
+    add_akonadi_isolated_test_advanced( gravatarupdatejobtest.cpp "../job/gravatarupdatejob.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KPim${KF_MAJOR_VERSION}::PimCommon;KF${KF_MAJOR_VERSION}::Contacts;KPim${KF_MAJOR_VERSION}::Gravatar;KF${KF_MAJOR_VERSION}::I18n")
 
-    add_akonadi_isolated_test_advanced( gravatarupdatedialogtest.cpp "../widgets/gravatarupdatedialog.cpp;../widgets/gravatarupdatewidget.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KF5::PimCommon;KPim${KF_MAJOR_VERSION}::Gravatar;KF${KF_MAJOR_VERSION}::I18n")
-    add_akonadi_isolated_test_advanced( gravatarupdatewidgettest.cpp "../widgets/gravatarupdatewidget.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KF5::PimCommon;KPim${KF_MAJOR_VERSION}::Gravatar;KF${KF_MAJOR_VERSION}::I18n")
+    add_akonadi_isolated_test_advanced( gravatarupdatedialogtest.cpp "../widgets/gravatarupdatedialog.cpp;../widgets/gravatarupdatewidget.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KPim${KF_MAJOR_VERSION}::PimCommon;KPim${KF_MAJOR_VERSION}::Gravatar;KF${KF_MAJOR_VERSION}::I18n")
+    add_akonadi_isolated_test_advanced( gravatarupdatewidgettest.cpp "../widgets/gravatarupdatewidget.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KPim${KF_MAJOR_VERSION}::PimCommon;KPim${KF_MAJOR_VERSION}::Gravatar;KF${KF_MAJOR_VERSION}::I18n")
 
-    #add_akonadi_isolated_test_advanced( checkgravatarplugintest.cpp "../../checkgravatarplugin.cpp;../../checkgravatarplugininterface.cpp" "KF5::PimCommon;KF${KF_MAJOR_VERSION}::I18n;KF${KF_MAJOR_VERSION}::XmlGui;KF${KF_MAJOR_VERSION}::Contacts;KPim${KF_MAJOR_VERSION}::Gravatar;${kaddressbook_checkgravatarplugin_SRCS};${kaddressbook_checkgravatarplugin_test_SRCS}")
+    #add_akonadi_isolated_test_advanced( checkgravatarplugintest.cpp "../../checkgravatarplugin.cpp;../../checkgravatarplugininterface.cpp" "KPim${KF_MAJOR_VERSION}::PimCommon;KF${KF_MAJOR_VERSION}::I18n;KF${KF_MAJOR_VERSION}::XmlGui;KF${KF_MAJOR_VERSION}::Contacts;KPim${KF_MAJOR_VERSION}::Gravatar;${kaddressbook_checkgravatarplugin_SRCS};${kaddressbook_checkgravatarplugin_test_SRCS}")
 endif()

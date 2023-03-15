@@ -17,7 +17,7 @@ add_executable( adblockblockableitemsdialogtest ${adblockblockableitemsdialogtes
 add_test(NAME adblockblockableitemsdialogtest COMMAND adblockblockableitemsdialogtest)
 ecm_mark_as_test(adblockblockableitemsdialogtest)
 target_link_libraries( adblockblockableitemsdialogtest adblocklibprivate Qt::Test Qt::Widgets KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::MessageViewer
-    KF5::PimCommon KF${KF_MAJOR_VERSION}::ItemViews  Qt::WebEngineWidgets KF${KF_MAJOR_VERSION}::ConfigCore KF${KF_MAJOR_VERSION}::KIOWidgets KPim${KF_MAJOR_VERSION}::WebEngineViewer)
+    KPim${KF_MAJOR_VERSION}::PimCommon KF${KF_MAJOR_VERSION}::ItemViews  Qt::WebEngineWidgets KF${KF_MAJOR_VERSION}::ConfigCore KF${KF_MAJOR_VERSION}::KIOWidgets KPim${KF_MAJOR_VERSION}::WebEngineViewer)
 
 
 set( adblockblockableitemsjobtest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockblockableitemsjobtest.cpp)

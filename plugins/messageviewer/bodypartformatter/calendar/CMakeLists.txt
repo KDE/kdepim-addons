@@ -40,7 +40,7 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KPim${KF_MAJOR_VERSION}::MailTransport
     KPim${KF_MAJOR_VERSION}::AkonadiMime
     KPim${KF_MAJOR_VERSION}::CalendarSupport
-    KF5::PimCommonAkonadi
+    KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
     KPim${KF_MAJOR_VERSION}::MessageViewer
     KPim${KF_MAJOR_VERSION}::IncidenceEditor
     KPim${KF_MAJOR_VERSION}::PimTextEdit

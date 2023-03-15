@@ -5,7 +5,7 @@ add_executable(mailmergewidget_gui ${mailmergewidget_gui_SRCS})
 target_link_libraries(mailmergewidget_gui
   KF${KF_MAJOR_VERSION}::KIOCore
   KF${KF_MAJOR_VERSION}::KIOWidgets
-  KF5::PimCommon
+  KPim${KF_MAJOR_VERSION}::PimCommon
   KF${KF_MAJOR_VERSION}::I18n
   mailmerge
 )

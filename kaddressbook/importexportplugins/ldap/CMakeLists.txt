@@ -20,5 +20,5 @@ target_link_libraries(kaddressbook_importexportldapplugin
         KF${KF_MAJOR_VERSION}::I18n
         KF${KF_MAJOR_VERSION}::XmlGui
         KF${KF_MAJOR_VERSION}::Contacts
-        KF5::PimCommonAkonadi
+        KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
     )
