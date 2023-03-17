@@ -147,7 +147,7 @@ msgstr "أخفِ تفاصيل المفتاح"
 
 #: templates/pgpkeymessagepart.html:49
 msgid "Open in Kleopatra"
-msgstr "افتح في «كليوپترا»"
+msgstr "افتح في «كليوبترا»"
 
 #: templates/pgpkeymessagepart.html:52
 msgid "Show key details ..."
