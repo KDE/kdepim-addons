@@ -67,6 +67,7 @@ target_link_libraries(kaddressbookmergelibprivate
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KF${KF_MAJOR_VERSION}::ItemViews
+    KF${KF_MAJOR_VERSION}::ConfigGui
     )
 
 set_target_properties(kaddressbookmergelibprivate
