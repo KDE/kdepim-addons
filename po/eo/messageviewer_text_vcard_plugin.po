@@ -1,14 +1,16 @@
-# Translation of kmail_text_vcard_plugin into esperanto.
-#
+# Translation of messageviewer_text_vcard_plugin.pot into esperanto.
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the kdepim-addons package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
 # Michael Moroni <michael.moroni@mailoo.org>, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-26 00:44+0000\n"
-"PO-Revision-Date: 2012-05-22 16:55+0200\n"
-"Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
+"PO-Revision-Date: 2023-03-20 22:43+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -30,16 +32,14 @@ msgid "[Add this contact to the address book]"
 msgstr "[Aldoni ĉi tiun kontakton al adresaro]"
 
 #: text_vcard.cpp:135
-#, fuzzy, kde-format
-#| msgid "[Add this contact to the address book]"
+#, kde-format
 msgid "[Update this contact in the address book]"
-msgstr "[Aldoni ĉi tiun kontakton al adresaro]"
+msgstr "[Ĝisdatigi ĉi tiun kontakton en la adresaro]"
 
 #: text_vcard.cpp:140
-#, fuzzy, kde-format
-#| msgid "[Add this contact to the address book]"
+#, kde-format
 msgid "[This contact is already in addressbook]"
-msgstr "[Aldoni ĉi tiun kontakton al adresaro]"
+msgstr "[Ĉi tiu kontakto jam estas en la adresaro]"
 
 #: text_vcard.cpp:222
 #, kde-format
@@ -57,10 +57,9 @@ msgid "Add this contact to the address book."
 msgstr "Aldoni ĉi tiun kontakton al adresaro."
 
 #: text_vcard.cpp:240
-#, fuzzy, kde-format
-#| msgid "[Add this contact to the address book]"
+#, kde-format
 msgid "Update this contact to the address book."
-msgstr "[Aldoni ĉi tiun kontakton al adresaro]"
+msgstr "Ĝisdatigi ĉi tiun kontakton al adresaro."
 
 #: text_vcard.cpp:242
 #, kde-format
@@ -68,10 +67,9 @@ msgid "Add \"%1\" to the address book."
 msgstr "Aldoni \"%1\" al adresaro."
 
 #: text_vcard.cpp:242
-#, fuzzy, kde-format
-#| msgid "Add \"%1\" to the address book."
+#, kde-format
 msgid "Update \"%1\" to the address book."
-msgstr "Aldoni \"%1\" al adresaro."
+msgstr "Ĝisdatigi\"%1\" al la adresaro."
 
 #: text_vcard.cpp:266
 #, kde-format
@@ -79,16 +77,14 @@ msgid "Save Business Card"
 msgstr "Konservi komercan karton"
 
 #: updatecontactjob.cpp:37
-#, fuzzy, kde-format
-#| msgid "[Add this contact to the address book]"
+#, kde-format
 msgid "The vCard's primary email address is not in addressbook."
-msgstr "[Aldoni ĉi tiun kontakton al adresaro]"
+msgstr ""
 
 #: updatecontactjob.cpp:43
-#, fuzzy, kde-format
-#| msgid "[Add this contact to the address book]"
+#, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
-msgstr "[Aldoni ĉi tiun kontakton al adresaro]"
+msgstr ""
 
 #: updatecontactjob.cpp:65
 #, kde-format
@@ -100,13 +96,4 @@ msgstr ""
 #: updatecontactjob.cpp:76
 #, kde-format
 msgid "Email not specified"
-msgstr ""
-
-#~ msgid "%1 already exists. Do you want to overwrite it?"
-#~ msgstr "%1 jam ekzistas. Ĉu vi volas anstataŭigi ĝin?"
-
-#~ msgid "Add"
-#~ msgstr "Aldoni"
-
-#~ msgid "Remove"
-#~ msgstr "Forigi"
+msgstr "E-poŝto ne specifita"
