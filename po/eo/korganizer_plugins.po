@@ -1,13 +1,16 @@
-# Translation of korganizer into esperanto.
+# Translation of korganizer_plugins.pot into esperanto.
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the kdepim-addons package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-04 00:45+0000\n"
-"PO-Revision-Date: 2009-11-15 12:06+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-03-23 22:12+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -19,46 +22,45 @@ msgstr ""
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
 msgid "Search &Directory Service"
-msgstr ""
+msgstr "Serĉi &Dosierujo-Servon"
 
 #: plugins/datenums/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Day Numbers"
-msgstr "Agordi"
+msgstr "Agordi Tagnombrojn"
 
 #: plugins/datenums/configdialog.cpp:43
 #, kde-format
 msgid "Show Date Number"
-msgstr ""
+msgstr "Montri Datonombron"
 
 #: plugins/datenums/configdialog.cpp:47
 #, kde-format
 msgid "Show day number"
-msgstr ""
+msgstr "Montri tagnombron"
 
 #: plugins/datenums/configdialog.cpp:50
 #, kde-format
 msgid "Show days to end of year"
-msgstr ""
+msgstr "Montri tagojn ĝis jarfino"
 
 #: plugins/datenums/configdialog.cpp:53
 #, kde-format
 msgid "Show both"
-msgstr ""
+msgstr "Montri ambaŭ"
 
 #: plugins/datenums/datenums.cpp:36
 #, kde-format
 msgid "This plugin shows information on a day's position in the year."
-msgstr ""
+msgstr "Tiu kromprogramo montras informojn pri pozicio de tago ene de jaro."
 
 #: plugins/datenums/datenums.cpp:54
 #, kde-format
 msgid "1 day before the end of the year"
 msgid_plural "%1 days before the end of the year"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 tago antaŭ la fino de la jaro"
+msgstr[1] "%1 tagoj antaŭ la fino de la jaro"
 
 #: plugins/datenums/datenums.cpp:59
 #, kde-format
@@ -70,29 +72,29 @@ msgstr "%1 / %2"
 #, kde-format
 msgid "1 day since the beginning of the year,\n"
 msgid_plural "%1 days since the beginning of the year,\n"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 tago ekde la komenco de la jaro,\n"
+msgstr[1] "%1 tagoj ekde la komenco de la jaro,\n"
 
 #: plugins/datenums/datenums.cpp:61
 #, kde-format
 msgid "1 day until the end of the year"
 msgid_plural "%1 days until the end of the year"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 tago ĝis la fino de la jaro"
+msgstr[1] "%1 tagoj ĝis la fino de la jaro"
 
 #: plugins/datenums/datenums.cpp:102
 #, kde-format
 msgctxt "Week weekOfYear"
 msgid "Week %1"
-msgstr ""
+msgstr "Semajno %1"
 
 #: plugins/datenums/datenums.cpp:103 plugins/datenums/datenums.cpp:113
 #: plugins/datenums/datenums.cpp:118
 #, kde-format
 msgid "1 week since the beginning of the year"
 msgid_plural "%1 weeks since the beginning of the year"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 semajno ekde la komenco de la jaro"
+msgstr[1] "%1 semajnoj ekde la komenco de la jaro"
 
 #: plugins/datenums/datenums.cpp:106
 #, kde-format
@@ -101,26 +103,24 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: plugins/datenums/datenums.cpp:107
-#, fuzzy, kde-format
-#| msgctxt "Holday region, region language"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "Week weekOfYear (year)"
 msgid "Week %1 (%2)"
-msgstr "%1 (%2)"
+msgstr "Semajno %1 (%2)"
 
 #: plugins/datenums/datenums.cpp:122
 #, kde-format
 msgid "1 week remaining"
 msgid_plural "%1 weeks remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 semajno restanta"
+msgstr[1] "%1 semajnoj restantaj"
 
 #: plugins/datenums/datenums.cpp:123
 #, kde-format
 msgid "1 week until the end of the year"
 msgid_plural "%1 weeks until the end of the year"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 semajno ĝis la fino de la jaro"
+msgstr[1] "%1 semajnoj ĝis la fino de la jaro"
 
 #: plugins/datenums/datenums.cpp:124
 #, kde-format
@@ -141,11 +141,10 @@ msgstr ""
 "%2"
 
 #: plugins/hebrew/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Holidays"
-msgstr "Agordi"
+msgstr "Agordi Feriojn"
 
 #: plugins/hebrew/configdialog.cpp:42
 #, kde-format
@@ -163,10 +162,9 @@ msgid "Show day of Omer"
 msgstr ""
 
 #: plugins/hebrew/configdialog.cpp:54
-#, fuzzy, kde-format
-#| msgid "Chol Hamoed"
+#, kde-format
 msgid "Show Chol HaMoed"
-msgstr "Chol Hamoed"
+msgstr ""
 
 #: plugins/hebrew/hebrew.cpp:60
 #, kde-format
@@ -410,14 +408,13 @@ msgid " Omer"
 msgstr " Omer"
 
 #: plugins/hebrew/parsha.cpp:28
-#, fuzzy, kde-format
-#| msgid "&Refresh"
+#, kde-format
 msgctxt ""
 "These are weekly readings and do not have translations. They may have "
 "different spellings in your language; otherwise, just translate the sound to "
 "your characters"
 msgid "Bereshit"
-msgstr "&Refreŝigu"
+msgstr ""
 
 #: plugins/hebrew/parsha.cpp:29
 #, kde-format
@@ -688,11 +685,10 @@ msgid ""
 msgstr ""
 
 #: plugins/picoftheday/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Picture of the Day"
-msgstr "Agordi"
+msgstr ""
 
 #: plugins/picoftheday/configdialog.cpp:42
 #, kde-format
@@ -740,16 +736,14 @@ msgid "Wikipedia POTD: %1"
 msgstr ""
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Calendar"
+#, kde-format
 msgid "Picture Page"
-msgstr "Kalendaro"
+msgstr "Bildopaĝoj"
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Change..."
+#, kde-format
 msgid "Loading..."
-msgstr "Ŝanĝi..."
+msgstr "Ŝargante..."
 
 #: plugins/picoftheday/element.cpp:332
 #, kde-format
@@ -765,18 +759,19 @@ msgstr ""
 #, kde-format
 msgid "This plugin provides links to Wikipedia's 'This Day in History' pages."
 msgstr ""
+"Ĉi kromaĵo provizias ligilojn al 'Tiu Tago en Historio' paĝoj de Wikipedia."
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:37
 #, kde-format
 msgid "This day in history"
-msgstr ""
+msgstr "Ĉi tago en historio"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:39
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:53
 #, kde-format
 msgctxt "Localized Wikipedia website"
 msgid "https://en.wikipedia.org/wiki/"
-msgstr ""
+msgstr "https://eo.wikipedia.org/wiki/"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:40
 #, kde-format
@@ -787,1339 +782,10 @@ msgstr "MMMM_d"
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:51
 #, kde-format
 msgid "This month in history"
-msgstr ""
+msgstr "Ĉi monato en historio"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:54
-#, fuzzy, kde-format
-#| msgctxt "Qt date format used by the localized Wikipedia"
-#| msgid "MMMM_d"
+#, kde-format
 msgctxt "Qt date format used by the localized Wikipedia"
 msgid "MMMM_yyyy"
-msgstr "MMMM_d"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Axel Rousseau"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "axel@esperanto-jeunes.org"
-
-#~ msgid "Allen Winter"
-#~ msgstr "Allen Winter"
-
-#~ msgid "Maintainer"
-#~ msgstr "Prizorganto"
-
-#~ msgid "Reinhold Kainhofer"
-#~ msgstr "Reinhold Kainhofer"
-
-#~ msgid "Cornelius Schumacher"
-#~ msgstr "Cornelius Schumacher"
-
-#~ msgid "Preston Brown"
-#~ msgstr "Preston Brown"
-
-#~ msgid "Original Author"
-#~ msgstr "Originala aŭtoro"
-
-#~ msgid "Richard Apodaca"
-#~ msgstr "Richard Apodaca"
-
-#~ msgid "Jan-Pascal van Best"
-#~ msgstr "Jan-Pascal van Best"
-
-#~ msgid "Laszlo Boloni"
-#~ msgstr "Laszlo Boloni"
-
-#~ msgid "Barry Benowitz"
-#~ msgstr "Barry Benowitz"
-
-#~ msgid "Christopher Beard"
-#~ msgstr "Christopher Beard"
-
-#~ msgid "Kalle Dalheimer"
-#~ msgstr "Kalle Dalheimer"
-
-#~ msgid "Ian Dawes"
-#~ msgstr "Ian Dawes"
-
-#~ msgid "Thomas Eitzenberger"
-#~ msgstr "Thomas Eitzenberger"
-
-#~ msgid "Neil Hart"
-#~ msgstr "Neil Hart"
-
-#~ msgid "Declan Houlihan"
-#~ msgstr "Declan Houlihan"
-
-#~ msgid "Hans-Jürgen Husel"
-#~ msgstr "Hans-Jürgen Husel"
-
-#~ msgid "Tim Jansen"
-#~ msgstr "Tim Jansen"
-
-#~ msgid "Christian Kirsch"
-#~ msgstr "Christian Kirsch"
-
-#~ msgid "Tobias König"
-#~ msgstr "Tobias König"
-
-#~ msgid "Martin Koller"
-#~ msgstr "Martin Koller"
-
-#~ msgid "Uwe Koloska"
-#~ msgstr "Uwe Koloska"
-
-#~ msgid "Glen Parker"
-#~ msgstr "Glen Parker"
-
-#~ msgid "Dan Pilone"
-#~ msgstr "Dan Pilone"
-
-#~ msgid "Roman Rohr"
-#~ msgstr "Roman Rohr"
-
-#~ msgid "Rafał Rzepecki"
-#~ msgstr "Rafał Rzepecki"
-
-#~ msgid "Don Sanders"
-#~ msgstr "Don Sanders"
-
-#~ msgid "Bram Schoenmakers"
-#~ msgstr "Bram Schoenmakers"
-
-#~ msgid "Günter Schwann"
-#~ msgstr "Günter Schwann"
-
-#~ msgid "Herwin Jan Steehouwer"
-#~ msgstr "Herwin Jan Steehouwer"
-
-#~ msgid "Mario Teijeiro"
-#~ msgstr "Mario Teijeiro"
-
-#~ msgid "Nick Thompson"
-#~ msgstr "Nick Thompson"
-
-#~ msgid "Bo Thorsen"
-#~ msgstr "Bo Thorsen"
-
-#~ msgid "Larry Wright"
-#~ msgstr "Larry Wright"
-
-#~ msgid "Thomas Zander"
-#~ msgstr "Thomas Zander"
-
-#~ msgid "Fester Zigterman"
-#~ msgstr "Fester Zigterman"
-
-#, fuzzy
-#~| msgid "&iCalendar..."
-#~ msgid "Export as &iCalendar..."
-#~ msgstr "&iCalendar..."
-
-#, fuzzy
-#~| msgid "&vCalendar..."
-#~ msgid "Export as &vCalendar..."
-#~ msgstr "&vCalendar..."
-
-#~ msgid "&Delete"
-#~ msgstr "&Forigi"
-
-#, fuzzy
-#~| msgid "&View"
-#~ msgid "&Month"
-#~ msgstr "&Rigardi"
-
-#~ msgid "&Refresh"
-#~ msgstr "&Refreŝigu"
-
-#~ msgid "F&ilter"
-#~ msgstr "F&iltrilo"
-
-#~ msgid "Today"
-#~ msgstr "Hodiaŭ"
-
-#~ msgid "&Show"
-#~ msgstr "&Montri"
-
-#~ msgid "&Edit..."
-#~ msgstr "&Redakto"
-
-#~ msgid "&Address Book"
-#~ msgstr "&Adresaro"
-
-#, fuzzy
-#~| msgid "Select a year"
-#~ msgid "Select path for HTML calendar export"
-#~ msgstr "Elektu jaron"
-
-#~ msgid "Error"
-#~ msgstr "Eraro"
-
-#~ msgid "C&ancel"
-#~ msgstr "Rezi&gnu"
-
-#~ msgid "Undo: %1"
-#~ msgstr "Malfari: %1"
-
-#~ msgid "Undo"
-#~ msgstr "Malfari"
-
-#, fuzzy
-#~| msgid "Undo: %1"
-#~ msgid "Redo: %1"
-#~ msgstr "Malfari: %1"
-
-#~ msgid "Redo"
-#~ msgstr "Refari"
-
-#, fuzzy
-#~| msgid "&iCalendar..."
-#~ msgctxt "@title:window"
-#~ msgid "Import Calendar"
-#~ msgstr "&iCalendar..."
-
-#, fuzzy
-#~| msgid "Shelach"
-#~ msgctxt ""
-#~ "@info/plain Displayed grayed-out inside the textbox, verb to search"
-#~ msgid "Search"
-#~ msgstr "Shelach"
-
-#, fuzzy
-#~| msgid "Start searching"
-#~ msgid "searching..."
-#~ msgstr "Starti serĉadon"
-
-#, fuzzy
-#~| msgid "&Use colors"
-#~ msgid "&Disable Color"
-#~ msgstr "&Uzi kolorojn"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Use as &Default Calendar"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Add Calendar"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Do you want to overwrite %1?"
-#~ msgid "Do you really want to delete calendar %1?"
-#~ msgstr "Ĉu vi volas anstataŭigi %1?"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Delete Calendar"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Completed"
-#~ msgid "Toggle To-do Completed"
-#~ msgstr "Preta"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "iCalendars (*.ics)"
-#~ msgstr "Kalendaro"
-
-#~ msgid "Do you want to overwrite %1?"
-#~ msgstr "Ĉu vi volas anstataŭigi %1?"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "vCalendars (*.vcs)"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~ msgid "Delete All"
-#~ msgstr "Forigu arĥivon"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Delete parent to-do"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "General"
-#~ msgctxt "@title:tab General settings for a folder."
-#~ msgid "General"
-#~ msgstr "Ĝenerale"
-
-#, fuzzy
-#~| msgid "User&name:"
-#~ msgctxt "@label:textbox Name of the folder."
-#~ msgid "&Name:"
-#~ msgstr "Uzant&nomo:"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgctxt "@option:check"
-#~ msgid "&Use custom icon:"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgctxt "@info:tooltip"
-#~ msgid "Set a custom icon"
-#~ msgstr "Kalendaro"
-
-#~ msgid "&File"
-#~ msgstr "&Dosiero"
-
-#~ msgid "&Import"
-#~ msgstr "&Importi"
-
-#~ msgid "&Export"
-#~ msgstr "E&ksporti"
-
-#~ msgid "&Edit"
-#~ msgstr "&Redakti"
-
-#~ msgid "&View"
-#~ msgstr "&Rigardi"
-
-#~ msgid "&Zoom"
-#~ msgstr "&Grandigo"
-
-#~ msgid "&Go"
-#~ msgstr "Navi&gi"
-
-#~ msgid "&Settings"
-#~ msgstr "A&gordo"
-
-#~ msgid "&Help"
-#~ msgstr "&Helpo"
-
-#~ msgid "Views"
-#~ msgstr "Perspektivoj"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Calendar Colors"
-#~ msgstr "Kalendaro"
-
-#~ msgid "Export"
-#~ msgstr "Eksporti"
-
-#~ msgid "Reset to Defaults"
-#~ msgstr "Restarigi defaŭltojn"
-
-#~ msgid "View Type"
-#~ msgstr "Rigardo tipo"
-
-#~ msgid "Destination"
-#~ msgstr "Celo"
-
-#, fuzzy
-#~ msgid "Events"
-#~ msgstr "Eventoj:"
-
-#~ msgid "Edit..."
-#~ msgstr "Redakti..."
-
-#, fuzzy
-#~| msgid "&Cancel"
-#~ msgctxt "@action:discard creating note"
-#~ msgid "Cancel"
-#~ msgstr "&Rezigni"
-
-#, fuzzy
-#~| msgid "&Title:"
-#~ msgid "Title:"
-#~ msgstr "&Titolo:"
-
-#, fuzzy
-#~| msgid "Text"
-#~ msgid "Text:"
-#~ msgstr "Teksto"
-
-#~ msgid "Start searching"
-#~ msgstr "Starti serĉadon"
-
-#, fuzzy
-#~| msgid "Shelach"
-#~ msgid "Search Results"
-#~ msgstr "Shelach"
-
-#~ msgctxt "@title month and year"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
-
-#, fuzzy
-#~| msgid "Time"
-#~ msgctxt "@title:column event end time"
-#~ msgid "End Time"
-#~ msgstr "Tempo"
-
-#, fuzzy
-#~ msgctxt "@title:column event description"
-#~ msgid "Event"
-#~ msgstr "Eventoj:"
-
-#, fuzzy
-#~| msgid "Locations"
-#~ msgctxt "@title:column event locatin"
-#~ msgid "Location"
-#~ msgstr "Lokoj"
-
-#~ msgctxt "@title:column event categories"
-#~ msgid "Categories"
-#~ msgstr "Kategorioj"
-
-#, fuzzy
-#~| msgid "Toldot"
-#~ msgctxt "@title:column"
-#~ msgid "To-do"
-#~ msgstr "Toldot"
-
-#~ msgctxt "@title:column to-do priority"
-#~ msgid "Priority"
-#~ msgstr "Prioritato"
-
-#~ msgctxt "@title:column to-do percent completed"
-#~ msgid "Completed"
-#~ msgstr "Preta"
-
-#, fuzzy
-#~ msgctxt "@title:column to-do due date"
-#~ msgid "Due Date"
-#~ msgstr "Delegita"
-
-#, fuzzy
-#~| msgid "Locations"
-#~ msgctxt "@title:column to-do location"
-#~ msgid "Location"
-#~ msgstr "Lokoj"
-
-#~ msgctxt "@title:column to-do categories"
-#~ msgid "Categories"
-#~ msgstr "Kategorioj"
-
-#~ msgctxt "@info to-do percent complete"
-#~ msgid "%1 %"
-#~ msgstr "%1 %"
-
-#, fuzzy
-#~| msgid "- %1"
-#~ msgctxt "@info page creator name only"
-#~ msgid "by %1 "
-#~ msgstr "- %1"
-
-#~ msgctxt "@info holiday by date and name"
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"
-
-#~ msgid "Text"
-#~ msgstr "Teksto"
-
-#~ msgid "Boolean"
-#~ msgstr "Bulea"
-
-#, fuzzy
-#~| msgid "Select a month"
-#~ msgid "Selection"
-#~ msgstr "Elektu monaton"
-
-#, fuzzy
-#~| msgid "Time"
-#~ msgid "Date & Time"
-#~ msgstr "Tempo"
-
-#, fuzzy
-#~| msgid "Time"
-#~ msgid "Date"
-#~ msgstr "Tempo"
-
-#, fuzzy
-#~| msgid "Tobias König"
-#~ msgid "(c) 2004 Tobias Koenig"
-#~ msgstr "Tobias König"
-
-#, fuzzy
-#~| msgid "Tobias König"
-#~ msgid "Tobias Koenig"
-#~ msgstr "Tobias König"
-
-#, fuzzy
-#~| msgid "Do you want to overwrite %1?"
-#~ msgid "<qt>Do you really want to delete '<b>%1</b>'?</qt>"
-#~ msgstr "Ĉu vi volas anstataŭigi %1?"
-
-#, fuzzy
-#~| msgid "&Import"
-#~ msgid "Import Page"
-#~ msgstr "&Importi"
-
-#~ msgid "Key:"
-#~ msgstr "Ŝlosilo:"
-
-#~ msgid "Type:"
-#~ msgstr "Tipo:"
-
-#, fuzzy
-#~| msgid "User&name:"
-#~ msgid "Classname:"
-#~ msgstr "Uzant&nomo:"
-
-#~ msgid "Description:"
-#~ msgstr "Priskribo:"
-
-#~ msgctxt "@item:intext delimiter for joining holiday names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgctxt "delimiter for joining holiday names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgid "&Move"
-#~ msgstr "&Movi"
-
-#~ msgid "&Copy"
-#~ msgstr "&Kopii"
-
-#~ msgid "&Add"
-#~ msgstr "&Aldoni"
-
-#~ msgid "&Cancel"
-#~ msgstr "&Rezigni"
-
-#~ msgid "&Print..."
-#~ msgstr "&Presi..."
-
-#~ msgid "&Paste"
-#~ msgstr "Al&glui"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Create To-do"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Today"
-#~ msgid "&Today only"
-#~ msgstr "Hodiaŭ"
-
-#, fuzzy
-#~| msgid "Categories"
-#~ msgid "&Edit Appointment..."
-#~ msgstr "Kategorioj"
-
-#, fuzzy
-#~| msgctxt "NAME OF TRANSLATORS"
-#~| msgid "Your names"
-#~ msgctxt "@action:inmenu"
-#~ msgid "New Journal..."
-#~ msgstr "Axel Rousseau"
-
-#, fuzzy
-#~| msgctxt "NAME OF TRANSLATORS"
-#~| msgid "Your names"
-#~ msgctxt "@action:inmenu"
-#~ msgid "Sync Journal"
-#~ msgstr "Axel Rousseau"
-
-#, fuzzy
-#~| msgid "&iCalendar..."
-#~ msgctxt "@action:inmenu"
-#~ msgid "New Event..."
-#~ msgstr "&iCalendar..."
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgctxt "@action:inmenu"
-#~ msgid "Sync Calendar"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "&Settings"
-#~ msgctxt "@item"
-#~ msgid "Meeting"
-#~ msgstr "A&gordo"
-
-#, fuzzy
-#~| msgid "Notes:"
-#~ msgctxt "@item"
-#~ msgid "Note: %1"
-#~ msgstr "Notoj:"
-
-#, fuzzy
-#~| msgid "KMail"
-#~ msgctxt "@item"
-#~ msgid "Mail: %1"
-#~ msgstr "KMail"
-
-#~ msgctxt "the appointment is today"
-#~ msgid "Today"
-#~ msgstr "Hodiaŭ"
-
-#~ msgctxt "Time from - to"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
-#, fuzzy
-#~| msgid "Undo: %1"
-#~ msgctxt "next occurrence"
-#~ msgid "Next: %1"
-#~ msgstr "Malfari: %1"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgctxt "@info:status"
-#~ msgid "Create a new to-do"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Completed"
-#~ msgid "&Completed"
-#~ msgstr "Preta"
-
-#~ msgctxt "the to-do is due today"
-#~ msgid "Today"
-#~ msgstr "Hodiaŭ"
-
-#, fuzzy
-#~| msgid "Completed"
-#~ msgid "&Mark To-do Completed"
-#~ msgstr "Preta"
-
-#, fuzzy
-#~| msgid "Completed"
-#~ msgctxt "the to-do is completed"
-#~ msgid "completed"
-#~ msgstr "Preta"
-
-#~ msgctxt "Separator for status like this: overdue, completed"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgctxt "the special day is today"
-#~ msgid "Today"
-#~ msgstr "Hodiaŭ"
-
-#, fuzzy
-#~| msgid "Today"
-#~ msgid "Holiday"
-#~ msgstr "Hodiaŭ"
-
-#, fuzzy
-#~| msgid "Send Email"
-#~ msgid "Send &Mail"
-#~ msgstr "Sendi retleteron"
-
-#, fuzzy
-#~| msgid "View Columns"
-#~ msgid "View &Contact"
-#~ msgstr "Rigardi kolumnojn"
-
-#, fuzzy
-#~| msgid "Maintainer"
-#~ msgid "Current Maintainer"
-#~ msgstr "Prizorganto"
-
-#~ msgid "Calendar"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "&iCalendar..."
-#~ msgctxt "@title:group"
-#~ msgid "Exporting Calendar"
-#~ msgstr "&iCalendar..."
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgctxt "@title:tab calendar account settings"
-#~ msgid "Calendars"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Notes:"
-#~ msgctxt "No holiday region"
-#~ msgid "None"
-#~ msgstr "Notoj:"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Fonts"
-#~ msgstr "Tiparoj"
-
-#, fuzzy
-#~| msgid "Select a year"
-#~ msgid "Title for the event calendar"
-#~ msgstr "Elektu jaron"
-
-#, fuzzy
-#~| msgctxt "NAME OF TRANSLATORS"
-#~| msgid "Your names"
-#~ msgid "Journals"
-#~ msgstr "Axel Rousseau"
-
-#, fuzzy
-#~| msgid " time(s)"
-#~ msgid "Busy times"
-#~ msgstr " foje"
-
-#, fuzzy
-#~| msgid "Shelach"
-#~ msgid "Search"
-#~ msgstr "Shelach"
-
-#~ msgid "&New"
-#~ msgstr "&Nova"
-
-#~ msgid "Categories"
-#~ msgstr "Kategorioj"
-
-#~ msgid "Change..."
-#~ msgstr "Ŝanĝi..."
-
-#~ msgid "Server Information"
-#~ msgstr "Servila informo"
-
-#~ msgid "Password:"
-#~ msgstr "Pasvorto:"
-
-#~ msgid "User&name:"
-#~ msgstr "Uzant&nomo:"
-
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "Locations"
-#~ msgstr "Lokoj"
-
-#~ msgid "2008-08-18"
-#~ msgstr "2008-08-18"
-
-#, fuzzy
-#~| msgid "Undo: %1"
-#~ msgid "Person: %1"
-#~ msgstr "Malfari: %1"
-
-#, fuzzy
-#~| msgid "KMail"
-#~ msgid "Mail: %1"
-#~ msgstr "KMail"
-
-#, fuzzy
-#~| msgid "&View"
-#~ msgid "Month"
-#~ msgstr "&Rigardi"
-
-#~ msgid "<"
-#~ msgstr "<"
-
-#~ msgid ">"
-#~ msgstr ">"
-
-#, fuzzy
-#~| msgid "&Title:"
-#~ msgid "Title"
-#~ msgstr "&Titolo:"
-
-#, fuzzy
-#~| msgid "Select a year"
-#~ msgid "Selected Calendars"
-#~ msgstr "Elektu jaron"
-
-#~ msgctxt "start/end week number of line in date picker"
-#~ msgid "%1/%2"
-#~ msgstr "%1/%2"
-
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Calendar's custom icon"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Toldot"
-#~ msgid "To-do"
-#~ msgstr "Toldot"
-
-#, fuzzy
-#~| msgctxt "NAME OF TRANSLATORS"
-#~| msgid "Your names"
-#~ msgid "Journal"
-#~ msgstr "Axel Rousseau"
-
-#, fuzzy
-#~| msgid "Alarms"
-#~ msgid "Alarm"
-#~ msgstr "Alarmoj"
-
-#~ msgid "Select a month"
-#~ msgstr "Elektu monaton"
-
-#~ msgid "Select a year"
-#~ msgstr "Elektu jaron"
-
-#~ msgctxt "monthname"
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgctxt "4 digit year"
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#, fuzzy
-#~| msgid "&iCalendar..."
-#~ msgid "Import Calendar/Event"
-#~ msgstr "&iCalendar..."
-
-#, fuzzy
-#~| msgid "&iCalendar..."
-#~ msgid "&Add as new calendar..."
-#~ msgstr "&iCalendar..."
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "&Add as new calendar"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Select a year"
-#~ msgid "Select path for new calendar"
-#~ msgstr "Elektu jaron"
-
-#, fuzzy
-#~| msgid "&Edit..."
-#~ msgid "A&dd..."
-#~ msgstr "&Redakto"
-
-#, fuzzy
-#~| msgid "&Edit..."
-#~ msgid "&Modify..."
-#~ msgstr "&Redakto"
-
-#, fuzzy
-#~| msgid "Remove"
-#~ msgid "R&emove"
-#~ msgstr "Forigi"
-
-#, fuzzy
-#~| msgid "Do you want to overwrite %1?"
-#~ msgid "Do you want to remove account '%1'?"
-#~ msgstr "Ĉu vi volas anstataŭigi %1?"
-
-#, fuzzy
-#~| msgid "Remove Template"
-#~ msgid "Remove account?"
-#~ msgstr "Forigi ŝablonon"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Add a new recipient"
-#~ msgstr "Kalendaro"
-
-#~ msgid "&Remove"
-#~ msgstr "Fo&rigi"
-
-#~ msgid "&Select..."
-#~ msgstr "&Elekti..."
-
-#~ msgid "© 2007 Loïc Corbasson"
-#~ msgstr "© 2007 Loïc Corbasson"
-
-#, fuzzy
-#~| msgid "Print"
-#~ msgid "Print Item list"
-#~ msgstr "Presi"
-
-#~ msgid "Display Options"
-#~ msgstr "Prezentad-Opcioj"
-
-#~ msgctxt "date from - to"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
-#~ msgctxt ""
-#~ "date from -\n"
-#~ "to"
-#~ msgid ""
-#~ "%1 -\n"
-#~ "%2"
-#~ msgstr ""
-#~ "%1 -\n"
-#~ "%2"
-
-#~ msgid "2009-01-19"
-#~ msgstr "2009-01-19"
-
-#~ msgid "hh:mm"
-#~ msgstr "hh:mm"
-
-#~ msgid "&Use colors"
-#~ msgstr "&Uzi kolorojn"
-
-#~ msgctxt "Spacer for the joined list of categories"
-#~ msgid ", "
-#~ msgstr ", "
-
-#~ msgctxt "subitem counter"
-#~ msgid "%1: "
-#~ msgstr "%1: "
-
-#~ msgctxt "Spacer for list of attachments"
-#~ msgid "  "
-#~ msgstr "  "
-
-#~ msgctxt ""
-#~ "Formatting of an attendee: 'Name (Role): Status', e.g. 'Reinhold "
-#~ "Kainhofer <reinhold@kainhofer.com> (Participant): Awaiting Response'"
-#~ msgid "%1 (%2): %3"
-#~ msgstr "%1 (%2): %3"
-
-#~ msgctxt "date from-to"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
-#~ msgctxt ""
-#~ "date from-\n"
-#~ "to"
-#~ msgid ""
-#~ "%1 -\n"
-#~ "%2"
-#~ msgstr ""
-#~ "%1 -\n"
-#~ "%2"
-
-#, fuzzy
-#~ msgid "Today's Events"
-#~ msgstr "Eventoj:"
-
-#~ msgctxt "summary, location"
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"
-
-#~ msgctxt "monthname year"
-#~ msgid "%1 <numid>%2</numid>"
-#~ msgstr "%1 <numid>%2</numid>"
-
-#, fuzzy
-#~| msgid "&Title:"
-#~ msgctxt "@option sort by title"
-#~ msgid "Title"
-#~ msgstr "&Titolo:"
-
-#, fuzzy
-#~ msgctxt "@option sort by due date/time"
-#~ msgid "Due Date"
-#~ msgstr "Delegita"
-
-#, fuzzy
-#~| msgid "Priority"
-#~ msgctxt "@option sort by priority"
-#~ msgid "Priority"
-#~ msgstr "Prioritato"
-
-#, fuzzy
-#~| msgid "Completed"
-#~ msgctxt "@option sort by percent completed"
-#~ msgid "Percent Complete"
-#~ msgstr "Preta"
-
-#~ msgid "Priority"
-#~ msgstr "Prioritato"
-
-#, fuzzy
-#~| msgid "&Title:"
-#~ msgctxt "@label to-do summary"
-#~ msgid "Title"
-#~ msgstr "&Titolo:"
-
-#, fuzzy
-#~| msgid "Print"
-#~ msgctxt "@title:window"
-#~ msgid "Print"
-#~ msgstr "Presi"
-
-#, fuzzy
-#~| msgid "Print"
-#~ msgctxt "@title:group"
-#~ msgid "Print Style"
-#~ msgstr "Presi"
-
-#, fuzzy
-#~| msgid "Reset to Defaults"
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Use Printer Default"
-#~ msgstr "Restarigi defaŭltojn"
-
-#, fuzzy
-#~| msgid "Portrait"
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Portrait"
-#~ msgstr "Vertikale"
-
-#, fuzzy
-#~| msgid "Landscape"
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Landscape"
-#~ msgstr "Horizontale"
-
-#, fuzzy
-#~| msgid "&Preview"
-#~ msgctxt "@action:button"
-#~ msgid "&Preview"
-#~ msgstr "&Antaŭrigardo"
-
-#~ msgctxt "starttime - endtime summary"
-#~ msgid "%1-%2 %3"
-#~ msgstr "%1-%2 %3"
-
-#~ msgctxt "starttime - endtime summary, location"
-#~ msgid "%1-%2 %3, %4"
-#~ msgstr "%1-%2 %3, %4"
-
-#~ msgctxt "weekday, shortmonthname daynumber"
-#~ msgid "%1, %2 <numid>%3</numid>"
-#~ msgstr "%1, %2 <numid>%3</numid>"
-
-#, fuzzy
-#~| msgid "%1 - %2"
-#~ msgctxt "to-do summary (Due: datetime)"
-#~ msgid "%1 (Due: %2)"
-#~ msgstr "%1 - %2"
-
-#, fuzzy
-#~| msgid "%1 - %2"
-#~ msgctxt "to-do summary (Due: date)"
-#~ msgid "%1 (Due: %2)"
-#~ msgstr "%1 - %2"
-
-#, fuzzy
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgctxt "Description - date"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
-#, fuzzy
-#~| msgid "Time"
-#~ msgctxt "@title:column happens at date/time"
-#~ msgid "Date Time"
-#~ msgstr "Tempo"
-
-#, fuzzy
-#~| msgid "Edit..."
-#~ msgctxt "@label an elipsis"
-#~ msgid "..."
-#~ msgstr "Redakti..."
-
-#, fuzzy
-#~| msgid "&Copy To"
-#~ msgid "Copy All"
-#~ msgstr "&Kopii al"
-
-#~ msgid "&Print"
-#~ msgstr "&Presi"
-
-#~ msgctxt "Date from - to"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "2"
-#~ msgstr "2"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "3"
-#~ msgstr "3"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "4"
-#~ msgstr "4"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "6"
-#~ msgstr "6"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "7"
-#~ msgstr "7"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "8"
-#~ msgstr "8"
-
-#~ msgctxt "delimiter for joining category names"
-#~ msgid ","
-#~ msgstr ","
-
-#~ msgid "Summary"
-#~ msgstr "Resumo"
-
-#~ msgid "Description"
-#~ msgstr "Priskribo"
-
-#, fuzzy
-#~| msgid "&Show"
-#~ msgctxt "@action:inmenu show the to-do"
-#~ msgid "&Show"
-#~ msgstr "&Montri"
-
-#, fuzzy
-#~| msgid "&Edit..."
-#~ msgctxt "@action:inmenu edit the to-do"
-#~ msgid "&Edit..."
-#~ msgstr "&Redakto"
-
-#, fuzzy
-#~| msgid "&Print..."
-#~ msgctxt "@action:inmenu print the to-do"
-#~ msgid "&Print..."
-#~ msgstr "&Presi..."
-
-#, fuzzy
-#~| msgid "&Print..."
-#~ msgctxt "@action:inmenu print preview the to-do"
-#~ msgid "Print Previe&w..."
-#~ msgstr "&Presi..."
-
-#, fuzzy
-#~| msgid "&Delete"
-#~ msgctxt "@action:inmenu delete the to-do"
-#~ msgid "&Delete"
-#~ msgstr "&Forigi"
-
-#, fuzzy
-#~| msgid "&Copy To"
-#~ msgctxt "@title:menu"
-#~ msgid "&Copy To"
-#~ msgstr "&Kopii al"
-
-#, fuzzy
-#~| msgid "&Move To"
-#~ msgctxt "@title:menu"
-#~ msgid "&Move To"
-#~ msgstr "&Movi al"
-
-#, fuzzy
-#~| msgid "2"
-#~ msgctxt "@action:inmenu priority value=2"
-#~ msgid "2"
-#~ msgstr "2"
-
-#, fuzzy
-#~| msgid "3"
-#~ msgctxt "@action:inmenu priority value=3"
-#~ msgid "3"
-#~ msgstr "3"
-
-#, fuzzy
-#~| msgid "4"
-#~ msgctxt "@action:inmenu priority value=4"
-#~ msgid "4"
-#~ msgstr "4"
-
-#, fuzzy
-#~| msgid "6"
-#~ msgctxt "@action:inmenu priority value=6"
-#~ msgid "6"
-#~ msgstr "6"
-
-#, fuzzy
-#~| msgid "7"
-#~ msgctxt "@action:inmenu priority value=7"
-#~ msgid "7"
-#~ msgstr "7"
-
-#, fuzzy
-#~| msgid "8"
-#~ msgctxt "@action:inmenu priority value=8"
-#~ msgid "8"
-#~ msgstr "8"
-
-#, fuzzy
-#~| msgid "Categories"
-#~ msgctxt "@info:tooltip"
-#~ msgid "Filter on these categories"
-#~ msgstr "Kategorioj"
-
-#~ msgctxt "@item:intext delimiter for joining category names"
-#~ msgid ","
-#~ msgstr ","
-
-#, fuzzy
-#~| msgid "Priority"
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Select Priority"
-#~ msgstr "Prioritato"
-
-#, fuzzy
-#~| msgid "%1"
-#~ msgctxt "@action:inmenu"
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgctxt "date, from - to"
-#~ msgid "%1, %2 - %3"
-#~ msgstr "%1, %2 - %3"
-
-#, fuzzy
-#~| msgid "Categories"
-#~ msgid "Edit Categories"
-#~ msgstr "Kategorioj"
-
-#, fuzzy
-#~| msgid "&Add"
-#~ msgid "A&dd"
-#~ msgstr "&Aldoni"
-
-#, fuzzy
-#~| msgid "Categories"
-#~ msgid "Category list"
-#~ msgstr "Kategorioj"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Default Category"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~| msgid "Time"
-#~ msgid "Start Date/Time"
-#~ msgstr "Tempo"
-
-#, fuzzy
-#~| msgid "Time"
-#~ msgid "End Date/Time"
-#~ msgstr "Tempo"
-
-#, fuzzy
-#~ msgctxt "monthname year"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
-
-#~ msgctxt "short_weekday date (e.g. Mon 13)"
-#~ msgid "%1 %2"
-#~ msgstr "%1 %2"
-
-#~ msgid "- %1"
-#~ msgstr "- %1"
-
-#, fuzzy
-#~| msgid "&iCalendar..."
-#~ msgid "Add Calendar..."
-#~ msgstr "&iCalendar..."
-
-#, fuzzy
-#~| msgid "Redo"
-#~ msgid "Reload"
-#~ msgstr "Refari"
-
-#, fuzzy
-#~ msgid "Properties..."
-#~ msgstr "Ebeno-proprecoj..."
-
-#~ msgid "Mike Arthur"
-#~ msgstr "Mike Arthur"
-
-#~ msgctxt "@label"
-#~ msgid "Type:"
-#~ msgstr "Tipo:"
-
-#~ msgctxt "@label"
-#~ msgid "Size:"
-#~ msgstr "Grando:"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "Calendar:"
-#~ msgstr "Kalendaro"
-
-#, fuzzy
-#~ msgctxt "@title:window"
-#~ msgid "Edit %1: %2"
-#~ msgstr "%1 %2"
-
-#~ msgid "Overwrite"
-#~ msgstr "Anstataŭigu"
-
-#~ msgid "Remove"
-#~ msgstr "Forigi"
-
-#~ msgctxt "Percent complete"
-#~ msgid "%1 %"
-#~ msgstr "%1 %"
-
-#~ msgctxt "@label"
-#~ msgid ", "
-#~ msgstr ", "
-
-#, fuzzy
-#~| msgid "Categories"
-#~ msgid "Category"
-#~ msgstr "Kategorioj"
-
-#~ msgid "Time"
-#~ msgstr "Tempo"
-
-#~ msgid "Type"
-#~ msgstr "Tipo"
-
-#~ msgid "audio/x-wav audio/x-mp3 application/ogg"
-#~ msgstr "audio/x-wav audio/x-mp3 application/ogg"
-
-#~ msgid "Offset"
-#~ msgstr "Deŝovo"
-
-#~ msgid "Repeat"
-#~ msgstr "Ripeti"
-
-#~ msgid "&New..."
-#~ msgstr "&Nova..."
-
-#~ msgid "Apply"
-#~ msgstr "Apliki"
-
-#, fuzzy
-#~| msgid "Locations"
-#~ msgctxt "incidence category"
-#~ msgid "Education"
-#~ msgstr "Lokoj"
-
-#, fuzzy
-#~| msgid "Locations"
-#~ msgctxt ""
-#~ "incidence category: a lengthy time away from work or school, a trip "
-#~ "abroad, or simply a pleasure trip away from home"
-#~ msgid "Vacation"
-#~ msgstr "Lokoj"
-
-#, fuzzy
-#~| msgid "Tzav"
-#~ msgctxt ""
-#~ "incidence category: typically associated with leaving home for business, "
-#~ "and not pleasure"
-#~ msgid "Travel"
-#~ msgstr "Tzav"
-
-#, fuzzy
-#~| msgid "Calendar"
-#~ msgid "text/calendar"
-#~ msgstr "Kalendaro"
-
-#~ msgid "Invalid URL"
-#~ msgstr "Nevalida URL"
-
-#~ msgid "Save Error"
-#~ msgstr "Konservo-eraro"
-
-#~ msgid "Sendmail"
-#~ msgstr "per Sendmail"
-
-#~ msgid "&OK"
-#~ msgstr "&Bone"
-
-#~ msgctxt "@title:tab"
-#~ msgid "Details"
-#~ msgstr "Detaloj"
+msgstr "MMMM_jjjj"
