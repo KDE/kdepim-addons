@@ -89,8 +89,8 @@ public:
 
         count = 0;
         static QString defaultPixmapPath = QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("user-identity"), KIconLoader::Desktop)).url();
-        static QString defaultMapIconPath =
-            QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("document-open-remote"), KIconLoader::Small)).url();
+        static QString defaultMapIconPath = QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("map-symbolic"), KIconLoader::Small)).url();
+        static QString defaultSmsIconPath = QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("message-new"), KIconLoader::Small)).url();
 
         if (!memento) {
             memento = new MessageViewer::VcardMemento(lst);
@@ -111,7 +111,8 @@ public:
             formatter.setDisplayQRCode(false);
             QString htmlStr = formatter.toHtml(Akonadi::StandardContactFormatter::EmbeddableForm);
             const KContacts::Picture photo = a.photo();
-            htmlStr.replace(QStringLiteral("<img src=\"map_icon\""), QStringLiteral("<img src=\"%1\"").arg(defaultMapIconPath));
+            htmlStr.replace(QStringLiteral("<img src=\"map_icon\""), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(defaultMapIconPath));
+            htmlStr.replace(QStringLiteral("<img src=\"sms_icon\""), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(defaultSmsIconPath));
             if (photo.isEmpty()) {
                 htmlStr.replace(QStringLiteral("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(defaultPixmapPath));
             } else {
