@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"POT-Creation-Date: 2023-03-31 00:48+0000\n"
 "PO-Revision-Date: 2020-06-02 20:19+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -32,52 +32,52 @@ msgid_plural "Attached business cards"
 msgstr[0] "Carte professionnelle jointe"
 msgstr[1] "Cartes professionnelles jointes"
 
-#: text_vcard.cpp:129
+#: text_vcard.cpp:130
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Ajouter ce contact à mon carnet d'adresses]"
 
-#: text_vcard.cpp:135
+#: text_vcard.cpp:136
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Mettre à jour ce contact dans le carnet d'adresses]"
 
-#: text_vcard.cpp:140
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Ce contact est déjà dans mon carnet d'adresses]"
 
-#: text_vcard.cpp:222
+#: text_vcard.cpp:223
 #, kde-format
 msgid "View Business Card"
 msgstr "Afficher une carte professionnelle"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:224
 #, kde-format
 msgid "Save Business Card As..."
 msgstr "Enregistrer une carte professionnelle sous..."
 
-#: text_vcard.cpp:240
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Ajoute ce contact au carnet d'adresses."
 
-#: text_vcard.cpp:240
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Met à jour ce contact dans le carnet d'adresses."
 
-#: text_vcard.cpp:242
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Ajoute « %1 » au carnet d'adresses."
 
-#: text_vcard.cpp:242
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Met à jour « %1 » dans le carnet d'adresses."
 
-#: text_vcard.cpp:266
+#: text_vcard.cpp:267
 #, kde-format
 msgid "Save Business Card"
 msgstr "Enregistrer une carte professionnelle"

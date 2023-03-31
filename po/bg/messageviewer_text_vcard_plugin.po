@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"POT-Creation-Date: 2023-03-31 00:48+0000\n"
 "PO-Revision-Date: 2022-07-20 22:42+0200\n"
 "Last-Translator: mkkDr2010 <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -26,52 +26,52 @@ msgid_plural "Attached business cards"
 msgstr[0] "Прикачена визитка"
 msgstr[1] "Прикачени визитки"
 
-#: text_vcard.cpp:129
+#: text_vcard.cpp:130
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Добавяне на контакта към адресника]"
 
-#: text_vcard.cpp:135
+#: text_vcard.cpp:136
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Обновяване на контакта в адресника]"
 
-#: text_vcard.cpp:140
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Този контакт вече съществува в адресника]"
 
-#: text_vcard.cpp:222
+#: text_vcard.cpp:223
 #, kde-format
 msgid "View Business Card"
 msgstr "Преглед на визитка"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:224
 #, kde-format
 msgid "Save Business Card As..."
 msgstr "Запис на визитката като..."
 
-#: text_vcard.cpp:240
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Добавяне на контакта към адресника."
 
-#: text_vcard.cpp:240
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Обновяване на контакта в адресника."
 
-#: text_vcard.cpp:242
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Добавяне на \"%1\" към адресника."
 
-#: text_vcard.cpp:242
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Обновяване на \"%1\" в адресника."
 
-#: text_vcard.cpp:266
+#: text_vcard.cpp:267
 #, kde-format
 msgid "Save Business Card"
 msgstr "Запис на визитката"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"POT-Creation-Date: 2023-03-31 00:48+0000\n"
 "PO-Revision-Date: 2017-05-16 06:42-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
@@ -23,52 +23,52 @@ msgid_plural "Attached business cards"
 msgstr[0] "כרטיסי ביקור מצורפים"
 msgstr[1] "כרטיסי ביקור מצורפים"
 
-#: text_vcard.cpp:129
+#: text_vcard.cpp:130
 #, fuzzy, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[הוסף איש קשר זה אל פנקס הכתובות]"
 
-#: text_vcard.cpp:135
+#: text_vcard.cpp:136
 #, fuzzy, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[הוסף איש קשר זה אל פנקס הכתובות]"
 
-#: text_vcard.cpp:140
+#: text_vcard.cpp:141
 #, fuzzy, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[הוסף איש קשר זה אל פנקס הכתובות]"
 
-#: text_vcard.cpp:222
+#: text_vcard.cpp:223
 #, fuzzy, kde-format
 msgid "View Business Card"
 msgstr "כרטיסי ביקור מצורפים"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:224
 #, fuzzy, kde-format
 msgid "Save Business Card As..."
 msgstr "כרטיסי ביקור מצורפים"
 
-#: text_vcard.cpp:240
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "הוסף איש קשר זה אל פנקס הכתובות."
 
-#: text_vcard.cpp:240
+#: text_vcard.cpp:241
 #, fuzzy, kde-format
 msgid "Update this contact to the address book."
 msgstr "[הוסף איש קשר זה אל פנקס הכתובות]"
 
-#: text_vcard.cpp:242
+#: text_vcard.cpp:243
 #, fuzzy, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "הוסף איש קשר זה אל פנקס הכתובות."
 
-#: text_vcard.cpp:242
+#: text_vcard.cpp:243
 #, fuzzy, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "הוסף איש קשר זה אל פנקס הכתובות."
 
-#: text_vcard.cpp:266
+#: text_vcard.cpp:267
 #, fuzzy, kde-format
 msgid "Save Business Card"
 msgstr "כרטיסי ביקור מצורפים"
