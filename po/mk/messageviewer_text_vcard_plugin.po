@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-26 00:44+0000\n"
+"POT-Creation-Date: 2023-03-31 02:50+0000\n"
 "PO-Revision-Date: 2004-11-02 10:41+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -27,60 +27,60 @@ msgstr[0] "Приложени бизнис-картички"
 msgstr[1] "Приложени бизнис-картички"
 msgstr[2] "Приложени бизнис-картички"
 
-#: text_vcard.cpp:129
+#: text_vcard.cpp:130
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "[Add this contact to the address book]"
 msgstr "[Додај го овој контакт во адресарот]"
 
-#: text_vcard.cpp:135
+#: text_vcard.cpp:136
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "[Update this contact in the address book]"
 msgstr "[Додај го овој контакт во адресарот]"
 
-#: text_vcard.cpp:140
+#: text_vcard.cpp:141
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "[This contact is already in addressbook]"
 msgstr "[Додај го овој контакт во адресарот]"
 
-#: text_vcard.cpp:222
+#: text_vcard.cpp:223
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "View Business Card"
 msgstr "Приложени бизнис-картички"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:224
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "Save Business Card As..."
 msgstr "Приложени бизнис-картички"
 
-#: text_vcard.cpp:240
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Додај го овој контакт во адресарот."
 
-#: text_vcard.cpp:240
+#: text_vcard.cpp:241
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "Update this contact to the address book."
 msgstr "[Додај го овој контакт во адресарот]"
 
-#: text_vcard.cpp:242
+#: text_vcard.cpp:243
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Add \"%1\" to the address book."
 msgstr "Додај го овој контакт во адресарот."
 
-#: text_vcard.cpp:242
+#: text_vcard.cpp:243
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Update \"%1\" to the address book."
 msgstr "Додај го овој контакт во адресарот."
 
-#: text_vcard.cpp:266
+#: text_vcard.cpp:267
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "Save Business Card"
