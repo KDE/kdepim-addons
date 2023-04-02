@@ -36,7 +36,7 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KPim${KF_MAJOR_VERSION}::CalendarUtils
     KPim${KF_MAJOR_VERSION}::Mime
     KPim${KF_MAJOR_VERSION}::IdentityManagement
-    KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
+    KPim${KF_MAJOR_VERSION}::AkonadiMime
     KPim${KF_MAJOR_VERSION}::MailTransport
     KPim${KF_MAJOR_VERSION}::AkonadiMime
     KPim${KF_MAJOR_VERSION}::CalendarSupport

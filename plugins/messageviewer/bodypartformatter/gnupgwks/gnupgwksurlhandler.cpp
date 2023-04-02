@@ -19,9 +19,9 @@
 #include <QGpgME/Protocol>
 #include <QGpgME/WKSPublishJob>
 
+#include <Akonadi/MessageQueueJob>
 #include <MailTransport/Transport>
 #include <MailTransport/TransportManager>
-#include <MailTransportAkonadi/MessageQueueJob>
 
 #include <KIdentityManagement/Identity>
 #include <KIdentityManagement/IdentityManager>
@@ -154,11 +154,11 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
 
     // Move to outbox
     auto transport = transportMgr->transportById(transportId);
-    auto job = new MailTransport::MessageQueueJob;
+    auto job = new Akonadi::MessageQueueJob;
     job->addressAttribute().setTo({msg->to(false)->asUnicodeString()});
     job->transportAttribute().setTransportId(transport->id());
     job->addressAttribute().setFrom(msg->from(false)->asUnicodeString());
-    job->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::Delete);
+    job->sentBehaviourAttribute().setSentBehaviour(Akonadi::SentBehaviourAttribute::Delete);
     job->sentBehaviourAttribute().setSendSilently(true);
     job->setMessage(msg);
 

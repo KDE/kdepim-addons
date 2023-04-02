@@ -39,8 +39,8 @@ using namespace KCalendarCore;
 
 #include <KEmailAddress>
 
+#include <Akonadi/MessageQueueJob>
 #include <MailTransport/TransportManager>
-#include <MailTransportAkonadi/MessageQueueJob>
 
 #include "text_calendar_debug.h"
 
@@ -617,7 +617,7 @@ public:
         msg->assemble();
         MailTransport::Transport *transport = MailTransport::TransportManager::self()->transportById(transportId);
 
-        auto job = new MailTransport::MessageQueueJob;
+        auto job = new Akonadi::MessageQueueJob;
 
         job->addressAttribute().setTo(QStringList() << KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(to)));
         job->transportAttribute().setTransportId(transport->id());

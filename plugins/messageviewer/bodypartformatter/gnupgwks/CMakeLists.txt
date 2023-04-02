@@ -42,7 +42,7 @@ target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     Qt::Core
     KPim${KF_MAJOR_VERSION}::MessageCore
     KPim${KF_MAJOR_VERSION}::MessageViewer
-    KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
+    KPim${KF_MAJOR_VERSION}::AkonadiMime
     KPim${KF_MAJOR_VERSION}::MailTransport
     KPim${KF_MAJOR_VERSION}::GrantleeTheme
     KF${KF_MAJOR_VERSION}::I18n
