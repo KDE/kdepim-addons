@@ -27,6 +27,7 @@ target_link_libraries(kaddressbook_importexportvcardplugin
     KF${KF_MAJOR_VERSION}::Contacts
     KF${KF_MAJOR_VERSION}::JobWidgets
     KPim${KF_MAJOR_VERSION}::AkonadiContact
+    KPim${KF_MAJOR_VERSION}::ContactEditor
     Gpgmepp
     )
 if (QT_MAJOR_VERSION STREQUAL "6")

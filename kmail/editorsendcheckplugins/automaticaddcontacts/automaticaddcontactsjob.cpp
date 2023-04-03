@@ -133,7 +133,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
         addressBook = canCreateItemCollections[0];
     } else {
         // ask user in which address book the new contact shall be stored
-        QPointer<Akonadi::SelectAddressBookDialog> dlg = new Akonadi::SelectAddressBookDialog(nullptr);
+        QPointer<ContactEditor::SelectAddressBookDialog> dlg = new ContactEditor::SelectAddressBookDialog(nullptr);
 
         bool gotIt = true;
         if (dlg->exec()) {
