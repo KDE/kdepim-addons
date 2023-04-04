@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 kcoreaddons_add_plugin(kmail_antivirusplugin SOURCES
-    ${kmail_antivirusplugin_SRCS} INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/mainview)
+    ${kmail_antivirusplugin_SRCS} INSTALL_NAMESPACE pim6/kmail/mainview)
 
 target_sources(kmail_antivirusplugin PRIVATE
     antivirusplugin.cpp

@@ -7,7 +7,7 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-kcoreaddons_add_plugin(templateparseraddressrequesterplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/templateparser)
+kcoreaddons_add_plugin(templateparseraddressrequesterplugin INSTALL_NAMESPACE pim6/templateparser)
 
 target_sources(templateparseraddressrequesterplugin PRIVATE
     templateparseremailaddressrequesterakonadi.cpp

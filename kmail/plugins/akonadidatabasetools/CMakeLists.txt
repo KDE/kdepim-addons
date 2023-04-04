@@ -36,7 +36,7 @@ set_target_properties(akonadidatasetools
     PROPERTIES OUTPUT_NAME akonadidatasetools VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
     )
 
-kcoreaddons_add_plugin(kmail_akonadidatabasetoolplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/mainview)
+kcoreaddons_add_plugin(kmail_akonadidatabasetoolplugin INSTALL_NAMESPACE pim6/kmail/mainview)
 target_sources(kmail_akonadidatabasetoolplugin PRIVATE
     akonadidatabasetoolsplugin.cpp
     akonadidatabasetoolsplugin.h

@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-kcoreaddons_add_plugin(emaillineeditplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/libksieve)
+kcoreaddons_add_plugin(emaillineeditplugin INSTALL_NAMESPACE pim6/libksieve)
 
 ecm_qt_declare_logging_category(emaillineeditplugin HEADER sieveeditoremaillineditplugin_debug.h IDENTIFIER
     EMAILLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.sieveeditoremaillinedit

@@ -51,4 +51,4 @@ target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     ${TEMPLATES_LIB}
     Gpgmepp
     )
-install(TARGETS messageviewer_bodypartformatter_application_gnupgwks DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)
+install(TARGETS messageviewer_bodypartformatter_application_gnupgwks DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)

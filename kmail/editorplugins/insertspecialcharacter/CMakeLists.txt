@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-kcoreaddons_add_plugin(kmail_insertspecialcharactereditorplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/plugineditor)
+kcoreaddons_add_plugin(kmail_insertspecialcharactereditorplugin INSTALL_NAMESPACE pim6/kmail/plugineditor)
 target_sources(kmail_insertspecialcharactereditorplugin PRIVATE
     insertspecialcharacterplugineditor.cpp
     insertspecialcharacterplugineditorinterface.cpp

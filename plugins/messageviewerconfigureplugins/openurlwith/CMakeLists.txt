@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2022-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-kcoreaddons_add_plugin(messageviewer_openurlwithconfigplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/messageviewer/configuresettings)
+kcoreaddons_add_plugin(messageviewer_openurlwithconfigplugin INSTALL_NAMESPACE pim6/messageviewer/configuresettings)
 target_sources(messageviewer_openurlwithconfigplugin PRIVATE
     openurlwithconfigplugin.cpp
     openurlwithconfigplugin.h

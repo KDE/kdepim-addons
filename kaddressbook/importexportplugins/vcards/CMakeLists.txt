@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 
-kcoreaddons_add_plugin(kaddressbook_importexportvcardplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kaddressbook/importexportplugin)
+kcoreaddons_add_plugin(kaddressbook_importexportvcardplugin INSTALL_NAMESPACE pim6/kaddressbook/importexportplugin)
 
 target_sources(kaddressbook_importexportvcardplugin PRIVATE
     vcardimportexportplugin.cpp
@@ -30,8 +30,4 @@ target_link_libraries(kaddressbook_importexportvcardplugin
     KPim6::ContactEditor
     Gpgmepp
     )
-if (QT_MAJOR_VERSION STREQUAL "6")
     target_link_libraries(kaddressbook_importexportvcardplugin QGpgmeQt6)
-else()
-    target_link_libraries(kaddressbook_importexportvcardplugin QGpgme)
-endif()

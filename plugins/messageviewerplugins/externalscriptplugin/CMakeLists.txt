@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 kcoreaddons_add_plugin(messageviewer_externalscriptplugin
-    INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/messageviewer/viewerplugin)
+    INSTALL_NAMESPACE pim6/messageviewer/viewerplugin)
 target_sources(messageviewer_externalscriptplugin PRIVATE
     viewerpluginexternalscript.cpp
     viewerpluginexternalscriptinterface.cpp

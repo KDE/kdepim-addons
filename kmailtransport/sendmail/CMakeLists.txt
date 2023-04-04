@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-kcoreaddons_add_plugin(mailtransport_sendplugin INSTALL_NAMESPACE "pim${QT_MAJOR_VERSION}/mailtransport")
+kcoreaddons_add_plugin(mailtransport_sendplugin INSTALL_NAMESPACE "pim6/mailtransport")
 
 target_sources(mailtransport_sendplugin PRIVATE
     sendmailtransportplugin.cpp

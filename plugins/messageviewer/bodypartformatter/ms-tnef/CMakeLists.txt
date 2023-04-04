@@ -24,4 +24,4 @@ target_link_libraries(messageviewer_bodypartformatter_application_mstnef
     KF6::I18n
     ${TEMPLATES_LIB}
     )
-install(TARGETS messageviewer_bodypartformatter_application_mstnef DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)
+install(TARGETS messageviewer_bodypartformatter_application_mstnef DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)

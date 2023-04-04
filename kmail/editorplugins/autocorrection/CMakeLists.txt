@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 kcoreaddons_add_plugin(kmail_autocorrectioneditorplugin
-     INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/plugineditor)
+     INSTALL_NAMESPACE pim6/kmail/plugineditor)
 target_sources(kmail_autocorrectioneditorplugin PRIVATE
     autocorrectionplugineditor.cpp
     autocorrectionplugineditorinterface.cpp

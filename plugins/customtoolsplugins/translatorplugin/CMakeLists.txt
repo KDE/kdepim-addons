@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-kcoreaddons_add_plugin(pimcommon_translatorplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/pimcommon/customtools)
+kcoreaddons_add_plugin(pimcommon_translatorplugin INSTALL_NAMESPACE pim6/pimcommon/customtools)
 target_sources(pimcommon_translatorplugin PRIVATE
    translatorplugin.cpp
    translatorview.cpp

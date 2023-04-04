@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-set( GNUPGHOME ${CMAKE_BINARY_DIR}/plugins/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter/autotests/gnupg_home )
+set( GNUPGHOME ${CMAKE_BINARY_DIR}/plugins/pim6/messageviewer/bodypartformatter/autotests/gnupg_home )
 
 macro (ADD_GPG_CRYPTO_TEST _target _testname)
    if (UNIX)

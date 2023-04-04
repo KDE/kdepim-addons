@@ -20,5 +20,5 @@ target_link_libraries(datenums
 )
 install(TARGETS
   datenums
-  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/korganizer
+  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/korganizer
 )

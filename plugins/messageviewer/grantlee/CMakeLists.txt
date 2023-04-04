@@ -6,8 +6,4 @@ target_link_libraries(kitinerary_grantlee_extension
     KF6::Contacts
     ${TEMPLATES_LIB}
 )
-if (QT_MAJOR_VERSION STREQUAL "5")
-install(TARGETS kitinerary_grantlee_extension DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/grantlee/5.0)
-else()
-install(TARGETS kitinerary_grantlee_extension DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/kf6/ktexttemplate)
-endif()
+install(TARGETS kitinerary_grantlee_extension DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/kf6/ktexttemplate)

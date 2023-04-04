@@ -49,7 +49,7 @@ install(TARGETS kmailconfirmbeforedeleting ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} L
 if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
-kcoreaddons_add_plugin(kmail_confirmbeforedeletingplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/messageviewer/checkbeforedeleting)
+kcoreaddons_add_plugin(kmail_confirmbeforedeletingplugin INSTALL_NAMESPACE pim6/messageviewer/checkbeforedeleting)
 target_sources(kmail_confirmbeforedeletingplugin PRIVATE
     confirmbeforedeletinginterface.cpp
     confirmbeforedeletingplugin.cpp

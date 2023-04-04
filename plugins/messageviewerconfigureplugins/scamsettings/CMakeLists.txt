@@ -36,7 +36,7 @@ install(TARGETS scamconfiguresettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRAR
 
 
 ######
-kcoreaddons_add_plugin(messageviewer_scamconfiguresettingsplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/messageviewer/configuresettings)
+kcoreaddons_add_plugin(messageviewer_scamconfiguresettingsplugin INSTALL_NAMESPACE pim6/messageviewer/configuresettings)
 
 target_sources(messageviewer_scamconfiguresettingsplugin PRIVATE
    scamconfiguresettingsplugin.cpp

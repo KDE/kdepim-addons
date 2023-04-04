@@ -6,7 +6,7 @@ set(pimcommon_tinyplugin_SRCS
 )
 
 kcoreaddons_add_plugin(pimcommon_tinyurlengineplugin SOURCES
-    ${pimcommon_tinyplugin_SRCS} INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/pimcommon/shorturlengine)
+    ${pimcommon_tinyplugin_SRCS} INSTALL_NAMESPACE pim6/pimcommon/shorturlengine)
 
 
 target_link_libraries(pimcommon_tinyurlengineplugin

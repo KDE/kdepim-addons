@@ -7,7 +7,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 #    add_subdirectory(autotests)
 #endif()
 
-kcoreaddons_add_plugin(emailaddressselectionldapdialogplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/akonadi)
+kcoreaddons_add_plugin(emailaddressselectionldapdialogplugin INSTALL_NAMESPACE pim6/akonadi)
 target_sources(emailaddressselectionldapdialogplugin PRIVATE
     emailaddressselectionldapdialog.cpp
     emailaddressselectionldapdialog.h

@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-kcoreaddons_add_plugin(webengineviewer_adblockplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/webengineviewer/urlinterceptor)
+kcoreaddons_add_plugin(webengineviewer_adblockplugin INSTALL_NAMESPACE pim6/webengineviewer/urlinterceptor)
 target_sources(webengineviewer_adblockplugin PRIVATE
     adblockinterceptorinterface.cpp
     adblockpluginurlinterceptor.cpp

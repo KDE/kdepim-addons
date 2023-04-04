@@ -50,7 +50,7 @@ set_target_properties(folderconfiguresettings
 install(TARGETS folderconfiguresettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 #####
-kcoreaddons_add_plugin(messageviewer_folderconfiguresettingsplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/messageviewer/configuresettings)
+kcoreaddons_add_plugin(messageviewer_folderconfiguresettingsplugin INSTALL_NAMESPACE pim6/messageviewer/configuresettings)
 
 target_sources(messageviewer_folderconfiguresettingsplugin PRIVATE
    folderconfiguresettingsplugin.cpp

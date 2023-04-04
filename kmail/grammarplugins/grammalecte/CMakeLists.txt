@@ -5,7 +5,7 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-kcoreaddons_add_plugin(kmail_grammalecteplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/plugineditorgrammar)
+kcoreaddons_add_plugin(kmail_grammalecteplugin INSTALL_NAMESPACE pim6/kmail/plugineditorgrammar)
 target_sources(kmail_grammalecteplugin PRIVATE
     grammalecteplugin.cpp
     grammalecteinterface.cpp

@@ -20,5 +20,5 @@ target_link_libraries(messageviewer_bodypartformatter_pkpass
     ${TEMPLATES_LIB}
     KPim6::PkPass
     )
-install(TARGETS messageviewer_bodypartformatter_pkpass DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)
+install(TARGETS messageviewer_bodypartformatter_pkpass DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)
 

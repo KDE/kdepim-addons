@@ -4,7 +4,7 @@
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/
     )
-kcoreaddons_add_plugin(kmail_checkbeforesendeditorplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/plugincheckbeforesend)
+kcoreaddons_add_plugin(kmail_checkbeforesendeditorplugin INSTALL_NAMESPACE pim6/kmail/plugincheckbeforesend)
 
 target_sources(kmail_checkbeforesendeditorplugin PRIVATE
     checkbeforesendplugin.cpp

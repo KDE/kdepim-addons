@@ -5,7 +5,7 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
     )
 
-kcoreaddons_add_plugin(kaddressbook_sendmailplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kaddressbook/mainview)
+kcoreaddons_add_plugin(kaddressbook_sendmailplugin INSTALL_NAMESPACE pim6/kaddressbook/mainview)
 
 target_sources(kaddressbook_sendmailplugin PRIVATE
     sendmailplugininterface.cpp

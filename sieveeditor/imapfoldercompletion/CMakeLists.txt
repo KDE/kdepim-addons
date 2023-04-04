@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-kcoreaddons_add_plugin(imapfoldercompletionplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/libksieve)
+kcoreaddons_add_plugin(imapfoldercompletionplugin INSTALL_NAMESPACE pim6/libksieve)
 
 set(sieveeditor_plugin_categories_SRCS)
 ecm_qt_declare_logging_category(sieveeditor_plugin_categories_SRCS HEADER imapfoldercompletionplugin_debug.h IDENTIFIER

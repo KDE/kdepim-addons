@@ -38,7 +38,7 @@ install(TARGETS kmailquicktextpluginprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} 
 if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
-kcoreaddons_add_plugin(kmail_quicktextplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/plugineditor)
+kcoreaddons_add_plugin(kmail_quicktextplugin INSTALL_NAMESPACE pim6/kmail/plugineditor)
 target_sources(kmail_quicktextplugin PRIVATE
     quicktextplugineditor.cpp
     quicktextplugineditorinterface.cpp

@@ -33,7 +33,7 @@ install(TARGETS expireaccounttrashfolderconfig ${KDE_INSTALL_TARGETS_DEFAULT_ARG
 
 
 
-kcoreaddons_add_plugin(messageviewer_expireaccounttrashfolderconfigplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/messageviewer/configuresettings)
+kcoreaddons_add_plugin(messageviewer_expireaccounttrashfolderconfigplugin INSTALL_NAMESPACE pim6/messageviewer/configuresettings)
 target_sources(messageviewer_expireaccounttrashfolderconfigplugin PRIVATE
    expireaccounttrashfolderconfigplugin.cpp
    expireaccounttrashfolderconfigplugin.h
