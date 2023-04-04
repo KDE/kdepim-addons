@@ -22,20 +22,10 @@
 #include <KItinerary/Ticket>
 
 #include <KColorScheme>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <grantlee/engine.h>
-#include <grantlee/metatype.h>
-#include <grantlee/template.h>
-#else
 #include <KTextTemplate/Engine>
 #include <KTextTemplate/MetaType>
 #include <KTextTemplate/Template>
-#endif
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <prison/Prison>
-#else
 #include <Prison/Prison>
-#endif
 
 #include <QGuiApplication>
 #include <QPalette>
@@ -144,11 +134,7 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
             }
             if (barcode) {
                 const QVariant barcodeContent = ticket.ticketTokenData();
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-                if (barcodeContent.type() == QVariant::String) {
-#else
                 if (barcodeContent.userType() == QMetaType::QString) {
-#endif
                     barcode->setData(barcodeContent.toString());
                 } else {
                     barcode->setData(barcodeContent.toByteArray());
@@ -169,17 +155,6 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
     c.insert(QStringLiteral("data"), elems);
 
     auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/itinerary/itinerary.html"));
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    const_cast<Grantlee::Engine *>(t->engine())->addDefaultLibrary(QStringLiteral("kitinerary_grantlee_extension"));
-    dynamic_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))
-        ->localizer()
-        ->setApplicationDomain(QByteArrayLiteral("messageviewer_semantic_plugin"));
-    Grantlee::OutputStream s(htmlWriter->stream());
-    t->render(&s, &c);
-    qobject_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))
-        ->localizer()
-        ->setApplicationDomain(QByteArrayLiteral("libmessageviewer"));
-#else
     const_cast<KTextTemplate::Engine *>(t->engine())->addDefaultLibrary(QStringLiteral("kitinerary_grantlee_extension"));
     dynamic_cast<GrantleeTheme::Engine *>(const_cast<KTextTemplate::Engine *>(t->engine()))
         ->localizer()
@@ -189,6 +164,5 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
     qobject_cast<GrantleeTheme::Engine *>(const_cast<KTextTemplate::Engine *>(t->engine()))
         ->localizer()
         ->setApplicationDomain(QByteArrayLiteral("libmessageviewer"));
-#endif
     return false; // yes, false, we want the rest of the email rendered normally after this
 }

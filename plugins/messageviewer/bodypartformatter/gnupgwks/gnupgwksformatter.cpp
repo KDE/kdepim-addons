@@ -23,13 +23,8 @@
 
 #include <GrantleeTheme/GrantleeKi18nLocalizer>
 #include <GrantleeTheme/GrantleeThemeEngine>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <grantlee/context.h>
-#include <grantlee/template.h>
-#else
 #include <KTextTemplate/Context>
 #include <KTextTemplate/Template>
-#endif
 
 #include <QGpgME/DecryptJob>
 #include <QGpgME/Protocol>
@@ -95,26 +90,14 @@ bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &
     }
     GrantleeTheme::Engine engine;
     engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    auto loader = QSharedPointer<Grantlee::FileSystemTemplateLoader>::create();
-#else
     auto loader = QSharedPointer<KTextTemplate::FileSystemTemplateLoader>::create();
-#endif
     loader->setTemplateDirs({QStringLiteral(":/")});
     engine.addTemplateLoader(loader);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Grantlee::Template tpl = engine.loadByName(QStringLiteral("gnupgwksmessagepart.html"));
-#else
     KTextTemplate::Template tpl = engine.loadByName(QStringLiteral("gnupgwksmessagepart.html"));
-#endif
     if (tpl->error()) {
         qCWarning(GNUPGWKS_LOG) << tpl->errorString();
     }
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Grantlee::Context ctx;
-#else
     KTextTemplate::Context ctx;
-#endif
     ctx.setLocalizer(engine.localizer());
 
     QObject block;
@@ -144,11 +127,7 @@ bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &
     style.setProperty("buttonFg", p.color(QPalette::ButtonText).name());
     style.setProperty("errorFg", MessageCore::ColorUtil::self()->pgpSignedBadTextColor().name());
     ctx.insert(QStringLiteral("style"), &style);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Grantlee::OutputStream s(htmlWriter->stream());
-#else
     KTextTemplate::OutputStream s(htmlWriter->stream());
-#endif
     tpl->render(&s, &ctx);
     return true;
 }

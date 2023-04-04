@@ -83,11 +83,7 @@ void LDifImportExportPluginInterface::importLdifFile(const QString &fileName)
     }
 
     QTextStream stream(&file);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    stream.setCodec("ISO 8859-1");
-#else
     stream.setEncoding(QStringConverter::Latin1);
-#endif
 
     const QString wholeFile = stream.readAll();
     const QDateTime dtDefault = QFileInfo(file).lastModified();
@@ -117,9 +113,6 @@ void doExport(QFile *file, const KAddressBookImportExport::ContactList &list)
     KContacts::LDIFConverter::addresseeAndContactGroupToLDIF(list.addressList(), list.contactGroupList(), data);
 
     QTextStream stream(file);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    stream.setCodec("UTF-8");
-#endif
     stream << data;
 }
 
@@ -196,9 +189,6 @@ void LDifImportExportPluginInterface::exportLdif()
         KContacts::LDIFConverter::addresseeAndContactGroupToLDIF(contactLists.addressList(), contactLists.contactGroupList(), data);
 
         QTextStream stream(&file);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        stream.setCodec("UTF-8");
-#endif
         stream << data;
         file.close();
     }

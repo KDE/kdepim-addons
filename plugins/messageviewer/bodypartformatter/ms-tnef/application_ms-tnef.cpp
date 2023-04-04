@@ -29,11 +29,7 @@
 #include <ktnef/ktnefmessage.h>
 #include <ktnef/ktnefparser.h>
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <grantlee/template.h>
-#else
 #include <KTextTemplate/Template>
-#endif
 
 #include <KIconLoader>
 #include <KLocalizedString>
@@ -91,50 +87,6 @@ public:
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([&](Grantlee::OutputStream *stream) {
-                     const auto tnefatts = parser.message()->attachmentList();
-                     if (tnefatts.isEmpty() && inviteStr.isEmpty()) {
-                         qCDebug(MS_TNEF_LOG) << "No attachments or invitation found in" << fileName;
-                         (*stream) << QStringLiteral("&nbsp;&lt;") << i18nc("TNEF attachment has no content", "empty") << QStringLiteral("&gt;");
-                         return;
-                     }
-
-                     if (!inviteStr.isEmpty()) {
-                         (*stream) << inviteStr;
-                     }
-
-                     const int numberOfTnef(tnefatts.count());
-                     for (int i = 0; i < numberOfTnef; ++i) {
-                         KTnef::KTNEFAttach *att = tnefatts.at(i);
-                         QString label = att->displayName();
-                         if (label.isEmpty()) {
-                             label = att->name();
-                         }
-                         label = MessageCore::StringUtil::quoteHtmlChars(label, true);
-
-                         const QString dir = mp->nodeHelper()->createTempDir(QLatin1String("ktnef-") + QString::number(i));
-                         if (!parser.extractFileTo(att->name(), dir)) {
-                             qCDebug(MS_TNEF_LOG) << "No possible to extract file:" << att->name();
-                         }
-
-                         // falling back to internal TNEF attachment name if no filename is given for the attached file
-                         // this follows the logic of KTNEFParser::extractFileTo(...)
-                         QString attFileName = att->fileName();
-                         if (attFileName.isEmpty()) {
-                             attFileName = att->name();
-                         }
-                         mp->nodeHelper()->addTempFile(dir + QLatin1Char('/') + attFileName);
-                         const QString href = QLatin1String("file:") + dir + QLatin1Char('/') + attFileName;
-
-                         const QString iconName =
-                             QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(), KIconLoader::Desktop, attFileName)).url();
-
-                         (*stream) << QStringLiteral("<div><a href=\"") << href << QStringLiteral("\"><img src=\"") << iconName
-                                   << QStringLiteral("\" border=\"0\" style=\"max-width: 100%\"/>") << label << QStringLiteral("</a></div><br/>");
-                     }
-                 }));
-#else
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([&](KTextTemplate::OutputStream *stream) {
                      const auto tnefatts = parser.message()->attachmentList();
                      if (tnefatts.isEmpty() && inviteStr.isEmpty()) {
@@ -178,13 +130,8 @@ public:
                      }
                  }));
 
-#endif
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        Grantlee::OutputStream s(htmlWriter->stream());
-#else
         KTextTemplate::OutputStream s(htmlWriter->stream());
-#endif
         t->render(&s, &c);
         return true;
     }

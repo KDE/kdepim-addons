@@ -45,11 +45,7 @@ public:
 
 protected:
     void parseContent(KMime::Content *node);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Q_REQUIRED_RESULT ConfirmationType stringToType(const QStringRef &str);
-#else
     Q_REQUIRED_RESULT ConfirmationType stringToType(const QStringView &str);
-#endif
     QString mSender;
     QString mAddress;
     QString mFingerprint;

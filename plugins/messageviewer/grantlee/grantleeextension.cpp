@@ -9,13 +9,8 @@
 #include <KContacts/Address>
 #include <KItinerary/Place>
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <grantlee/exception.h>
-#include <grantlee/parser.h>
-#else
 #include <KTextTemplate/Exception>
 #include <KTextTemplate/Parser>
-#endif
 
 #include <QDateTime>
 #include <QTimeZone>
@@ -97,18 +92,10 @@ TagLibrary::TagLibrary(QObject *parent)
     : QObject(parent)
 {
 }
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-QHash<QString, Grantlee::Filter *> TagLibrary::filters(const QString &name)
-#else
 QHash<QString, KTextTemplate::Filter *> TagLibrary::filters(const QString &name)
-#endif
 {
     Q_UNUSED(name)
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QHash<QString, Grantlee::Filter *> filters;
-#else
     QHash<QString, KTextTemplate::Filter *> filters;
-#endif
     filters.insert(QStringLiteral("formatAddress"), new AddressFormatter());
     filters.insert(QStringLiteral("formatDate"), new DateFormatter());
     filters.insert(QStringLiteral("formatDateTime"), new DateTimeFormatter());

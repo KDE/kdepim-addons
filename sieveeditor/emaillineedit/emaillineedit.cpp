@@ -76,8 +76,7 @@ void EmailLineEdit::insertAddresses(const KContacts::Addressee::List &list)
 void EmailLineEdit::slotSelectEmail()
 {
     std::unique_ptr<Akonadi::AbstractEmailAddressSelectionDialog> dlg;
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR))
-                                           + QStringLiteral("/akonadi/emailaddressselectionldapdialogplugin"));
+    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim6/akonadi/emailaddressselectionldapdialogplugin"));
 
     const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin);
     if (result) {

@@ -87,11 +87,7 @@ void CSVImportExportPluginInterface::slotExportCVS()
 void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::Addressee::List &contacts) const
 {
     QTextStream stream(file);
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     stream.setEncoding(QStringConverter::System);
-#else
-    stream.setCodec(QTextCodec::codecForLocale());
-#endif
 
     auto fields = KAddressBookImportExport::ContactFields::allFields();
     fields.remove(KAddressBookImportExport::ContactFields::Undefined);

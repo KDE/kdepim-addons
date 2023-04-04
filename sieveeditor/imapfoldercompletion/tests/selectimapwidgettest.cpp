@@ -17,7 +17,7 @@ SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
     auto mainLayout = new QHBoxLayout(this);
 
     KSieveUi::AbstractMoveImapFolderWidget *lineEdit = nullptr;
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR)) + QStringLiteral("/libksieve/imapfoldercompletionplugin"));
+    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim6/libksieve/imapfoldercompletionplugin"));
 
     const auto result = KPluginFactory::instantiatePlugin<KSieveUi::AbstractMoveImapFolderWidget>(editWidgetPlugin);
     if (result) {

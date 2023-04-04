@@ -200,11 +200,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
     }
 
     QTextStream t(fp);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    t.setCodec("ISO 8859-1");
-#else
     t.setEncoding(QStringConverter::Latin1);
-#endif
 
     using AddresseeMap = QMap<int, const KContacts::Addressee *>;
     AddresseeMap addresseeMap;
@@ -442,11 +438,7 @@ void GMXImportExportPluginInterface::importGMX()
 
     QDateTime dt;
     QTextStream gmxStream(&file);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    gmxStream.setCodec("ISO 8859-1");
-#else
     gmxStream.setEncoding(QStringConverter::Latin1);
-#endif
     QString line;
     QString line2;
     line = gmxStream.readLine();

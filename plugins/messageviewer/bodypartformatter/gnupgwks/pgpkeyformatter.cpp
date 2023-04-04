@@ -69,26 +69,14 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
     GrantleeTheme::Engine engine;
     engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    auto loader = QSharedPointer<Grantlee::FileSystemTemplateLoader>::create();
-#else
     auto loader = QSharedPointer<KTextTemplate::FileSystemTemplateLoader>::create();
-#endif
     loader->setTemplateDirs({QStringLiteral(":/")});
     engine.addTemplateLoader(loader);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Grantlee::Template tpl = engine.loadByName(QStringLiteral("pgpkeymessagepart.html"));
-#else
     KTextTemplate::Template tpl = engine.loadByName(QStringLiteral("pgpkeymessagepart.html"));
-#endif
     if (tpl->error()) {
         qWarning() << tpl->errorString();
     }
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Grantlee::Context ctx;
-#else
     KTextTemplate::Context ctx;
-#endif
     ctx.setLocalizer(engine.localizer());
 
     QObject block;
@@ -118,11 +106,7 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
 
     ctx.insert(QStringLiteral("block"), &block);
     ctx.insert(QStringLiteral("style"), &style);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Grantlee::OutputStream s(htmlWriter->stream());
-#else
     KTextTemplate::OutputStream s(htmlWriter->stream());
-#endif
     tpl->render(&s, &ctx);
     return true;
 }

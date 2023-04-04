@@ -79,9 +79,6 @@ void AdblockManager::loadSubscriptions()
         }
 
         QTextStream textStream(&file);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        textStream.setCodec("UTF-8");
-#endif
         const QString title = textStream.readLine(1024).remove(QLatin1String("Title: "));
         const QUrl url = QUrl(textStream.readLine(1024).remove(QLatin1String("Url: ")));
 

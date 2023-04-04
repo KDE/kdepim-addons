@@ -19,7 +19,7 @@ void ViewerPluginManagerTest::shouldHaveDefaultValue()
 {
     auto manager = new MessageViewer::ViewerPluginManager(this);
     manager->setPluginName(QStringLiteral("messageviewer"));
-    manager->setPluginDirectory(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR)) + QStringLiteral("/messageviewer/viewerplugin"));
+    manager->setPluginDirectory(QStringLiteral("pim6/messageviewer/viewerplugin"));
     QVERIFY(manager->initializePluginList());
     QVERIFY(!manager->pluginsList().isEmpty());
 }

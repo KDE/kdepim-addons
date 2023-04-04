@@ -19,11 +19,7 @@
 #include <KSyntaxHighlighting/Repository>
 #include <KSyntaxHighlighting/Theme>
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <grantlee/template.h>
-#else
 #include <KTextTemplate/Template>
-#endif
 
 #include <QGuiApplication>
 #include <QMimeDatabase>
@@ -59,16 +55,6 @@ public:
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
-                     Highlighter highLighter(htmlWriter->stream());
-                     highLighter.setDefinition(def);
-                     highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
-                                              ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
-                                              : mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
-                     highLighter.highlight(msgPart->text());
-                 }));
-#else
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](KTextTemplate::OutputStream *) {
                      Highlighter highLighter(htmlWriter->stream());
                      highLighter.setDefinition(def);
@@ -77,14 +63,9 @@ public:
                                               : mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
                      highLighter.highlight(msgPart->text());
                  }));
-#endif
 
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        Grantlee::OutputStream s(htmlWriter->stream());
-#else
         KTextTemplate::OutputStream s(htmlWriter->stream());
-#endif
         t->render(&s, &c);
         return true;
     }

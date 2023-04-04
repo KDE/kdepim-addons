@@ -14,19 +14,10 @@
 #include <KPkPass/Barcode>
 #include <KPkPass/BoardingPass>
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <grantlee/metatype.h>
-#include <grantlee/template.h>
-#else
 #include <KTextTemplate/MetaType>
 #include <KTextTemplate/Template>
-#endif
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <prison/Prison>
-#else
 #include <Prison/Prison>
-#endif
 
 #include <QGuiApplication>
 #include <QUrl>
@@ -148,11 +139,7 @@ public:
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), mp.data());
         c.insert(QStringLiteral("pass"), pass.get());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        Grantlee::Template t;
-#else
         KTextTemplate::Template t;
-#endif
         if (qobject_cast<KPkPass::BoardingPass *>(pass.get())) {
             t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/boardingpass.html"));
         } else if (pass->type() == KPkPass::Pass::EventTicket) {
@@ -163,11 +150,7 @@ public:
             // unknown pass type we have no template for
             return false;
         }
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        Grantlee::OutputStream s(htmlWriter->stream());
-#else
         KTextTemplate::OutputStream s(htmlWriter->stream());
-#endif
         t->render(&s, &c);
         return true;
     }

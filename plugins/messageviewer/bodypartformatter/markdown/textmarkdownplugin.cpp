@@ -17,13 +17,9 @@
 #include "markdownqtextdocument.h"
 #endif
 
+#include <KTextTemplate/Template>
 #include <QMimeDatabase>
 #include <QTextDocument>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <grantlee/template.h>
-#else
-#include <KTextTemplate/Template>
-#endif
 
 namespace
 {
@@ -50,21 +46,6 @@ public:
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
-                     QString result;
-#ifdef USE_DISCOUNT_LIB
-                     MarkdownDiscount engine;
-                     engine.setText(msgPart->text());
-                     result = engine.toHtml();
-#else
-                     MarkdownQTextDocument engine;
-                     engine.setText(msgPart->text());
-                     result = engine.toHtml();
-#endif
-                     (*htmlWriter->stream()) << result;
-                 }));
-#else
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](KTextTemplate::OutputStream *) {
                      QString result;
 #ifdef USE_DISCOUNT_LIB
@@ -78,13 +59,8 @@ public:
 #endif
                      (*htmlWriter->stream()) << result;
                  }));
-#endif
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        Grantlee::OutputStream s(htmlWriter->stream());
-#else
         KTextTemplate::OutputStream s(htmlWriter->stream());
-#endif
         t->render(&s, &c);
         return true;
     }
