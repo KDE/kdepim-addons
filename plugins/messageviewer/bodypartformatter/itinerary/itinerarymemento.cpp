@@ -50,7 +50,7 @@ void ItineraryMemento::setMessageDate(const QDateTime &contextDt)
     m_postProc.setContextDate(contextDt);
 }
 
-void ItineraryMemento::appendData(const QVector<QVariant> &data)
+void ItineraryMemento::appendData(const QList<QVariant> &data)
 {
     m_postProc.process(data);
 }
@@ -60,7 +60,7 @@ bool ItineraryMemento::hasData() const
     return !m_data.isEmpty() || !m_postProc.result().isEmpty();
 }
 
-QVector<ItineraryMemento::TripData> ItineraryMemento::data()
+QList<ItineraryMemento::TripData> ItineraryMemento::data()
 {
     if (m_data.isEmpty() && !m_postProc.result().isEmpty()) {
         // filter out types we can't handle, but keep incomplete elements to see if we can complete them from the calendar

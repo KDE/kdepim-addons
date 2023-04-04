@@ -102,7 +102,7 @@ void EventModel::removeCalendar(const Akonadi::Collection &col)
     }
 }
 
-QVector<Akonadi::Collection> EventModel::collections() const
+QList<Akonadi::Collection> EventModel::collections() const
 {
     return mCols;
 }
@@ -154,7 +154,7 @@ void EventModel::removeCollection(const Akonadi::Collection &col)
         return;
     }
 
-    QVector<Akonadi::Item::Id> ids;
+    QList<Akonadi::Item::Id> ids;
     ids.reserve(items.size());
     std::transform(items.cbegin(), items.cend(), std::back_inserter(ids), std::mem_fn(&Akonadi::Item::id));
 

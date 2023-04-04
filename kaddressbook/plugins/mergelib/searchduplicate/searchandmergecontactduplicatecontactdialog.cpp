@@ -108,7 +108,7 @@ void SearchAndMergeContactDuplicateContactDialog::writeConfig()
     grp.sync();
 }
 
-void SearchAndMergeContactDuplicateContactDialog::slotDuplicateFound(const QVector<Akonadi::Item::List> &duplicate)
+void SearchAndMergeContactDuplicateContactDialog::slotDuplicateFound(const QList<Akonadi::Item::List> &duplicate)
 {
     if (duplicate.isEmpty()) {
         mStackedWidget->setCurrentWidget(mNoDuplicateContactFound);
@@ -128,7 +128,7 @@ void SearchAndMergeContactDuplicateContactDialog::slotMergeDone()
     mStackedWidget->setCurrentWidget(mMergeContactResult);
 }
 
-void SearchAndMergeContactDuplicateContactDialog::slotCustomizeMergeContacts(const QVector<MergeConflictResult> &lst, const Akonadi::Collection &col)
+void SearchAndMergeContactDuplicateContactDialog::slotCustomizeMergeContacts(const QList<MergeConflictResult> &lst, const Akonadi::Collection &col)
 {
     mSelectInformation->setRequiresSelectInformationWidgets(lst, col);
     mStackedWidget->setCurrentWidget(mSelectInformation);

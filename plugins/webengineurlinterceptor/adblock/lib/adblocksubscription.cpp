@@ -180,7 +180,7 @@ const AdBlockRule *AdBlockSubscription::rule(int offset) const
     return mRules[offset];
 }
 
-QVector<AdBlockRule *> AdBlockSubscription::allRules() const
+QList<AdBlockRule *> AdBlockSubscription::allRules() const
 {
     return mRules;
 }

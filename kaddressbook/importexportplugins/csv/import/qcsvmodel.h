@@ -117,7 +117,7 @@ private Q_SLOTS:
 
 private:
     CsvParser *mParser = nullptr;
-    QVector<QString> mFieldIdentifiers;
+    QList<QString> mFieldIdentifiers;
     QMap<QPair<int, int>, QString> mFields;
     QIODevice *mDevice = nullptr;
 

@@ -29,7 +29,7 @@ AdblockBlockableElementGui::AdblockBlockableElementGui(QWidget *parent)
 
 AdblockBlockableElementGui::~AdblockBlockableElementGui() = default;
 
-void AdblockBlockableElementGui::slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result)
+void AdblockBlockableElementGui::slotSearchItemsDone(const QList<AdBlock::AdBlockResult> &result)
 {
     AdBlockBlockableItemsDialog dlg(this);
     dlg.setAdblockResult(result);

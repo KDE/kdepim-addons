@@ -40,7 +40,7 @@ public:
         return Visitor::isInRange(start, end);
     }
 
-    QVector<CalendarEvents::EventData>
+    QList<CalendarEvents::EventData>
     callExplodeIncidenceOccurences(const CalendarEvents::EventData &baseEd, const KCalendarCore::Incidence::Ptr &incidence, bool &ok)
     {
         return Visitor::explodeIncidenceOccurences(baseEd, incidence, ok);
@@ -133,7 +133,7 @@ void EventDataVisitorTest::testExplodeIncidenceOccurences_data()
     QTest::addColumn<CalendarEvents::EventData>("baseEventData");
     QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
     QTest::addColumn<qint64>("akonadiItemId");
-    QTest::addColumn<QVector<CalendarEvents::EventData>>("expectedEventData");
+    QTest::addColumn<QList<CalendarEvents::EventData>>("expectedEventData");
 
     const auto allTestData = TestDataParser::allTestData();
     for (const auto &testData : allTestData) {
@@ -154,7 +154,7 @@ void EventDataVisitorTest::testExplodeIncidenceOccurences()
     QFETCH(CalendarEvents::EventData, baseEventData);
     QFETCH(KCalendarCore::Incidence::Ptr, incidence);
     QFETCH(qint64, akonadiItemId);
-    QFETCH(QVector<CalendarEvents::EventData>, expectedEventData);
+    QFETCH(QList<CalendarEvents::EventData>, expectedEventData);
 
     FakePimDataSource source;
     source.setAkonadiIdForIncidence(incidence, akonadiItemId);
@@ -175,7 +175,7 @@ void EventDataVisitorTest::testEventDataVisitor_data()
     QTest::addColumn<QDate>("rangeEnd");
     QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
     QTest::addColumn<qint64>("akonadiItemId");
-    QTest::addColumn<QVector<CalendarEvents::EventData>>("expectedResults");
+    QTest::addColumn<QList<CalendarEvents::EventData>>("expectedResults");
 
     const auto allTestData = TestDataParser::allTestData();
     for (const auto &testData : allTestData) {
@@ -191,7 +191,7 @@ void EventDataVisitorTest::testEventDataVisitor()
     QFETCH(QDate, rangeEnd);
     QFETCH(KCalendarCore::Incidence::Ptr, incidence);
     QFETCH(qint64, akonadiItemId);
-    QFETCH(QVector<CalendarEvents::EventData>, expectedResults);
+    QFETCH(QList<CalendarEvents::EventData>, expectedResults);
 
     FakePimDataSource source;
     source.setAkonadiIdForIncidence(incidence, akonadiItemId);

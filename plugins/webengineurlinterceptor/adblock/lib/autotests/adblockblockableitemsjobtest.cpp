@@ -9,12 +9,12 @@
 #include <QSignalSpy>
 #include <QTest>
 
-Q_DECLARE_METATYPE(QVector<AdBlock::AdBlockResult>)
+Q_DECLARE_METATYPE(QList<AdBlock::AdBlockResult>)
 
 AdBlockBlockableItemsJobTest::AdBlockBlockableItemsJobTest(QObject *parent)
     : QObject(parent)
 {
-    qRegisterMetaType<QVector<AdBlock::AdBlockResult>>();
+    qRegisterMetaType<QList<AdBlock::AdBlockResult>>();
 }
 
 AdBlockBlockableItemsJobTest::~AdBlockBlockableItemsJobTest() = default;
@@ -31,7 +31,7 @@ void AdBlockBlockableItemsJobTest::shouldReturnEmptyListWhenWebEngineIsNotSet()
     QSignalSpy blockableItemsSpy(&job, &AdBlock::AdBlockBlockableItemsJob::searchItemsDone);
     job.start();
     QCOMPARE(blockableItemsSpy.count(), 1);
-    const auto resultLst = blockableItemsSpy.at(0).at(0).value<QVector<AdBlock::AdBlockResult>>();
+    const auto resultLst = blockableItemsSpy.at(0).at(0).value<QList<AdBlock::AdBlockResult>>();
     QCOMPARE(resultLst.count(), 0);
 }
 

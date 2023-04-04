@@ -212,10 +212,10 @@ protected:
     class ConfigReader
     {
     public:
-        ConfigReader(WizardMode mode, QVector<SpamToolConfig> &configList);
+        ConfigReader(WizardMode mode, QList<SpamToolConfig> &configList);
         ~ConfigReader();
 
-        QVector<SpamToolConfig> &getToolList()
+        QList<SpamToolConfig> &getToolList()
         {
             return mToolList;
         }
@@ -223,7 +223,7 @@ protected:
         void readAndMergeConfig();
 
     private:
-        QVector<SpamToolConfig> &mToolList;
+        QList<SpamToolConfig> &mToolList;
         KSharedConfig::Ptr mConfig;
         WizardMode mMode;
 
@@ -271,7 +271,7 @@ private:
     KPageWidgetItem *mSummaryPageItem = nullptr;
 
     /* The configured tools and it's settings to be used in the wizard. */
-    QVector<SpamToolConfig> mToolList;
+    QList<SpamToolConfig> mToolList;
 
     /* Are any spam tools selected? */
     bool mSpamToolsUsed;

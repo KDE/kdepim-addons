@@ -147,11 +147,11 @@ void ViewerPluginExternalConfigureWidget::load()
         QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewerplugins/"), QStandardPaths::LocateDirectory);
     job.setExternalScriptsDirectories(lst);
     job.start();
-    const QVector<ViewerPluginExternalScriptInfo> scriptInfos = job.scriptInfos();
+    const QList<ViewerPluginExternalScriptInfo> scriptInfos = job.scriptInfos();
     fillScriptInfo(scriptInfos);
 }
 
-void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QVector<ViewerPluginExternalScriptInfo> &scriptInfos)
+void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QList<ViewerPluginExternalScriptInfo> &scriptInfos)
 {
     for (const ViewerPluginExternalScriptInfo &script : scriptInfos) {
         auto item = new ViewerPluginExternalScriptItem(mListExternal);

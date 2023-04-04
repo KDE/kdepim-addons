@@ -182,7 +182,7 @@ bool MarkdownInterface::reformatText()
 void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, QString &textVersion, QString &htmlVersion) const
 {
     QStringList listImage = MarkdownUtil::imagePaths(textVersion);
-    QVector<QSharedPointer<KPIMTextEdit::EmbeddedImage>> lstEmbeddedImages;
+    QList<QSharedPointer<KPIMTextEdit::EmbeddedImage>> lstEmbeddedImages;
     if (!listImage.isEmpty()) {
         listImage.removeDuplicates();
         QStringList imageNameAdded;

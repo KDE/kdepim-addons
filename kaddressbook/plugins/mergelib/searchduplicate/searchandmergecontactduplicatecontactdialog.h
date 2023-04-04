@@ -29,10 +29,10 @@ public:
     void searchPotentialDuplicateContacts(const Akonadi::Item::List &list);
 
 private:
-    void slotDuplicateFound(const QVector<Akonadi::Item::List> &duplicate);
+    void slotDuplicateFound(const QList<Akonadi::Item::List> &duplicate);
     void slotMergeDone();
     void slotContactMerged(const Akonadi::Item &item);
-    void slotCustomizeMergeContacts(const QVector<KABMergeContacts::MergeConflictResult> &lst, const Akonadi::Collection &col);
+    void slotCustomizeMergeContacts(const QList<KABMergeContacts::MergeConflictResult> &lst, const Akonadi::Collection &col);
     void readConfig();
     void writeConfig();
     SearchDuplicateResultWidget *const mSearchResult;

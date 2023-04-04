@@ -29,7 +29,7 @@ InsertShorturlPluginEditorInterface::~InsertShorturlPluginEditorInterface() = de
 
 void InsertShorturlPluginEditorInterface::initializePlugins()
 {
-    const QVector<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
+    const QList<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
     for (ShortUrlEnginePlugin *plugin : lstPlugin) {
         ShortUrlEngineInterface *interface = plugin->createInterface(this);
         if (interface) {

@@ -8,8 +8,8 @@
 
 #include "adblocklib_export.h"
 
+#include <QList>
 #include <QObject>
-#include <QVector>
 
 class QWebEngineView;
 
@@ -35,7 +35,7 @@ public:
     void start();
 
 Q_SIGNALS:
-    void searchItemsDone(const QVector<AdBlock::AdBlockResult> &);
+    void searchItemsDone(const QList<AdBlock::AdBlockResult> &);
 
 private Q_SLOTS:
     void handleSearchBlockableImageItems(const QVariant &result);
@@ -44,7 +44,7 @@ private Q_SLOTS:
 private:
     void searchBlockableItems();
     void adaptSource(QString &src, const QString &hostName);
-    QVector<AdBlock::AdBlockResult> mAdblockResultList;
+    QList<AdBlock::AdBlockResult> mAdblockResultList;
     QWebEngineView *mWebEngineView = nullptr;
 };
 

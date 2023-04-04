@@ -69,7 +69,7 @@ QStringList ViewerPluginExternalScriptsLoadJob::externalScriptsDirectories() con
     return mDirectories;
 }
 
-QVector<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptsLoadJob::scriptInfos() const
+QList<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptsLoadJob::scriptInfos() const
 {
     return mScriptInfos;
 }

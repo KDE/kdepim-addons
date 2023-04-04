@@ -31,7 +31,7 @@ public:
 private:
     void slotBlockImage();
     void slotShowBlockableElement();
-    void slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result);
+    void slotSearchItemsDone(const QList<AdBlock::AdBlockResult> &result);
     mutable WebEngineViewer::WebHitTestResult mCurrentWebHitTest;
     QAction *mShowBlockableItems = nullptr;
     QAction *mBlockImage = nullptr;

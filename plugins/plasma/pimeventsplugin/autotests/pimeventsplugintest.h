@@ -34,5 +34,5 @@ private Q_SLOTS:
 private:
     Q_REQUIRED_RESULT bool compareEventDataHashes(const DateEventDataHash &actual, const DateEventDataHash &expected);
     Q_REQUIRED_RESULT DateEventDataHash populateCalendar(FakePimDataSource *source, bool uniqueEventData);
-    Q_REQUIRED_RESULT QVector<CalendarEvents::EventData> findEventData(const KCalendarCore::Event::Ptr &event, const DateEventDataHash &allData);
+    Q_REQUIRED_RESULT QList<CalendarEvents::EventData> findEventData(const KCalendarCore::Event::Ptr &event, const DateEventDataHash &allData);
 };

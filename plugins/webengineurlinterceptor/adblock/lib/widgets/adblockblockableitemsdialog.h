@@ -20,7 +20,7 @@ public:
     ~AdBlockBlockableItemsDialog() override;
 
     void saveFilters();
-    void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);
+    void setAdblockResult(const QList<AdBlock::AdBlockResult> &result);
 
     void accept() override;
 

@@ -22,7 +22,7 @@ public:
 
 private:
     void modifyScript(QListWidgetItem *item);
-    void fillScriptInfo(const QVector<ViewerPluginExternalScriptInfo> &scriptInfos);
+    void fillScriptInfo(const QList<ViewerPluginExternalScriptInfo> &scriptInfos);
     void slotAddScript();
     void slotModifyScript();
     void updateButtons();

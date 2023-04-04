@@ -59,7 +59,7 @@ void AdBlockBlockableItemsDialog::saveFilters()
     mBlockableItems->saveFilters();
 }
 
-void AdBlockBlockableItemsDialog::setAdblockResult(const QVector<AdBlock::AdBlockResult> &result)
+void AdBlockBlockableItemsDialog::setAdblockResult(const QList<AdBlock::AdBlockResult> &result)
 {
     mBlockableItems->setAdblockResult(result);
 }

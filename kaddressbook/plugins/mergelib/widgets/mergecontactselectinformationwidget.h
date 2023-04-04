@@ -28,6 +28,6 @@ public:
 private:
     void addInformationWidget(MergeContacts::ConflictInformation conflictType);
     KContacts::Addressee::List mAddressList;
-    QVector<MergeContactSelectListWidget *> mListMergeSelectInformation;
+    QList<MergeContactSelectListWidget *> mListMergeSelectInformation;
 };
 }

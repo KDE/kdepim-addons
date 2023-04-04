@@ -8,8 +8,8 @@
 
 #include "viewerpluginexternalscriptinfo.h"
 
+#include <QList>
 #include <QObject>
-#include <QVector>
 
 class ViewerPluginExternalScriptManager : public QObject
 {
@@ -20,8 +20,8 @@ public:
     static ViewerPluginExternalScriptManager *self();
 
     void readExternalScriptInfo();
-    Q_REQUIRED_RESULT QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
+    Q_REQUIRED_RESULT QList<ViewerPluginExternalScriptInfo> scriptInfos() const;
 
 private:
-    QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
+    QList<ViewerPluginExternalScriptInfo> mScriptInfos;
 };

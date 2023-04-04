@@ -26,6 +26,6 @@ private:
     void updateSnippetsInfo();
     void slotActivated();
     void selectPreviousWord(QTextCursor &cursor, int cursorPosition);
-    QVector<MailCommon::SnippetsInfo> mSnippetsInfo;
+    QList<MailCommon::SnippetsInfo> mSnippetsInfo;
     MailCommon::SnippetsModel *const mModel;
 };

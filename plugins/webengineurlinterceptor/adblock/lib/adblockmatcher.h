@@ -11,9 +11,9 @@
 
 #include "adblockrule.h"
 #include "adblocksearchtree.h"
+#include <QList>
 #include <QObject>
 #include <QUrl>
-#include <QVector>
 
 class QWebEngineUrlRequestInfo;
 
@@ -45,12 +45,12 @@ private:
     void enabledChanged(bool enabled);
     AdblockManager *mManager = nullptr;
 
-    QVector<AdBlockRule *> mCreatedRules;
-    QVector<const AdBlockRule *> mNetworkExceptionRules;
-    QVector<const AdBlockRule *> mNetworkBlockRules;
-    QVector<const AdBlockRule *> mDomainRestrictedCssRules;
-    QVector<const AdBlockRule *> mDocumentRules;
-    QVector<const AdBlockRule *> mElemhideRules;
+    QList<AdBlockRule *> mCreatedRules;
+    QList<const AdBlockRule *> mNetworkExceptionRules;
+    QList<const AdBlockRule *> mNetworkBlockRules;
+    QList<const AdBlockRule *> mDomainRestrictedCssRules;
+    QList<const AdBlockRule *> mDocumentRules;
+    QList<const AdBlockRule *> mElemhideRules;
 
     QString mElementHidingRules;
     AdBlockSearchTree mNetworkBlockTree;

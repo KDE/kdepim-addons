@@ -10,8 +10,8 @@
 #include "kmailconfirmbeforedeleting_export.h"
 #include <Akonadi/Item>
 #include <KSharedConfig>
+#include <QList>
 #include <QObject>
-#include <QVector>
 
 class KMAILCONFIRMBEFOREDELETING_EXPORT ConfirmBeforeDeletingManager : public QObject
 {
@@ -27,12 +27,12 @@ public:
 
     Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &list, QString &checkFound, ConfirmBeforeDeletingRule &rule) const;
 
-    Q_REQUIRED_RESULT const QVector<ConfirmBeforeDeletingRule> &rules() const;
+    Q_REQUIRED_RESULT const QList<ConfirmBeforeDeletingRule> &rules() const;
 
-    void setRules(const QVector<ConfirmBeforeDeletingRule> &newRules);
+    void setRules(const QList<ConfirmBeforeDeletingRule> &newRules);
 
 private:
     Q_REQUIRED_RESULT QString defaultConfigFileName() const;
     Q_REQUIRED_RESULT QStringList ruleGroups(const KSharedConfig::Ptr &config) const;
-    QVector<ConfirmBeforeDeletingRule> mRules;
+    QList<ConfirmBeforeDeletingRule> mRules;
 };

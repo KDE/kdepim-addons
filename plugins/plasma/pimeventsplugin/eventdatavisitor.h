@@ -27,7 +27,7 @@ protected:
     Q_REQUIRED_RESULT QString generateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId = {}) const;
     Q_REQUIRED_RESULT bool isInRange(QDate start, QDate end) const;
 
-    Q_REQUIRED_RESULT QVector<CalendarEvents::EventData>
+    Q_REQUIRED_RESULT QList<CalendarEvents::EventData>
     explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok);
 
 protected:

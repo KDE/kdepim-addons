@@ -8,8 +8,8 @@
 
 #include "viewerpluginexternalscriptinfo.h"
 
+#include <QList>
 #include <QStringList>
-#include <QVector>
 class ViewerPluginExternalScriptsLoadJob
 {
 public:
@@ -19,9 +19,9 @@ public:
     void start();
     void setExternalScriptsDirectories(const QStringList &dir);
     Q_REQUIRED_RESULT QStringList externalScriptsDirectories() const;
-    Q_REQUIRED_RESULT QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
+    Q_REQUIRED_RESULT QList<ViewerPluginExternalScriptInfo> scriptInfos() const;
 
 private:
-    QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
+    QList<ViewerPluginExternalScriptInfo> mScriptInfos;
     QStringList mDirectories;
 };

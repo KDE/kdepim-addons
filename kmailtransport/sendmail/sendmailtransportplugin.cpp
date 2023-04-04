@@ -19,14 +19,14 @@ SendMailTransportPlugin::SendMailTransportPlugin(QObject *parent, const QList<QV
 
 SendMailTransportPlugin::~SendMailTransportPlugin() = default;
 
-QVector<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::names() const
+QList<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::names() const
 {
     MailTransport::TransportAbstractPluginInfo info;
     info.name = i18nc("@option sendmail transport", "Sendmail");
     info.identifier = QStringLiteral("sendmail");
     info.description = i18n("A local sendmail installation");
     info.isAkonadi = false;
-    return QVector<MailTransport::TransportAbstractPluginInfo>() << info;
+    return QList<MailTransport::TransportAbstractPluginInfo>() << info;
 }
 
 bool SendMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)

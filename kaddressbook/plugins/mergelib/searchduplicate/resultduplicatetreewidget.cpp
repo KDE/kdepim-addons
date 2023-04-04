@@ -69,7 +69,7 @@ void ResultDuplicateTreeWidget::slotItemSelectionChanged()
     }
 }
 
-void ResultDuplicateTreeWidget::setContacts(const QVector<Akonadi::Item::List> &lstItem)
+void ResultDuplicateTreeWidget::setContacts(const QList<Akonadi::Item::List> &lstItem)
 {
     clear();
     int i = 1;
@@ -88,9 +88,9 @@ void ResultDuplicateTreeWidget::setContacts(const QVector<Akonadi::Item::List> &
     expandAll();
 }
 
-QVector<Akonadi::Item::List> ResultDuplicateTreeWidget::selectedContactsToMerge() const
+QList<Akonadi::Item::List> ResultDuplicateTreeWidget::selectedContactsToMerge() const
 {
-    QVector<Akonadi::Item::List> listItems;
+    QList<Akonadi::Item::List> listItems;
     for (int i = 0; i < topLevelItemCount(); ++i) {
         QTreeWidgetItem *item = topLevelItem(i);
         const int childCount = item->childCount();

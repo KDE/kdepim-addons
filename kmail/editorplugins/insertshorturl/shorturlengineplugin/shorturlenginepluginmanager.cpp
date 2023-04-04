@@ -9,7 +9,7 @@
 #include <KPluginFactory>
 #include <KPluginMetaData>
 #include <QFileInfo>
-#include <QVector>
+#include <QList>
 
 class ShortUrlEnginePluginInfo
 {
@@ -30,14 +30,14 @@ public:
 
     void initializePlugins();
     void loadPlugin(ShortUrlEnginePluginInfo *item);
-    Q_REQUIRED_RESULT QVector<ShortUrlEnginePlugin *> pluginsList() const;
-    QVector<ShortUrlEnginePluginInfo> mPluginList;
+    Q_REQUIRED_RESULT QList<ShortUrlEnginePlugin *> pluginsList() const;
+    QList<ShortUrlEnginePluginInfo> mPluginList;
     ShortUrlEnginePluginManager *const q;
 };
 
 void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 {
-    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/pimcommon/shorturlengine"));
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/pimcommon/shorturlengine"));
 
     QListIterator<KPluginMetaData> i(plugins);
     i.toBack();
@@ -51,8 +51,8 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
         info.plugin = nullptr;
         mPluginList.push_back(info);
     }
-    const QVector<ShortUrlEnginePluginInfo>::iterator end(mPluginList.end());
-    for (QVector<ShortUrlEnginePluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
+    const QList<ShortUrlEnginePluginInfo>::iterator end(mPluginList.end());
+    for (QList<ShortUrlEnginePluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }
 }
@@ -65,11 +65,11 @@ void ShortUrlEnginePluginManagerPrivate::loadPlugin(ShortUrlEnginePluginInfo *it
     }
 }
 
-QVector<ShortUrlEnginePlugin *> ShortUrlEnginePluginManagerPrivate::pluginsList() const
+QList<ShortUrlEnginePlugin *> ShortUrlEnginePluginManagerPrivate::pluginsList() const
 {
-    QVector<ShortUrlEnginePlugin *> lst;
-    QVector<ShortUrlEnginePluginInfo>::ConstIterator end(mPluginList.constEnd());
-    for (QVector<ShortUrlEnginePluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+    QList<ShortUrlEnginePlugin *> lst;
+    QList<ShortUrlEnginePluginInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QList<ShortUrlEnginePluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if ((*it).plugin) {
             lst << (*it).plugin;
         }
@@ -92,7 +92,7 @@ ShortUrlEnginePluginManager *ShortUrlEnginePluginManager::self()
     return &s_self;
 }
 
-QVector<ShortUrlEnginePlugin *> ShortUrlEnginePluginManager::pluginsList() const
+QList<ShortUrlEnginePlugin *> ShortUrlEnginePluginManager::pluginsList() const
 {
     return d->pluginsList();
 }

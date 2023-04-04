@@ -15,8 +15,8 @@
 using namespace KABMergeContacts;
 SearchPotentialDuplicateContactJobTest::SearchPotentialDuplicateContactJobTest()
 {
-    qRegisterMetaType<QVector<Akonadi::Item>>();
-    qRegisterMetaType<QVector<Akonadi::Item::List>>();
+    qRegisterMetaType<QList<Akonadi::Item>>();
+    qRegisterMetaType<QList<Akonadi::Item::List>>();
 }
 
 void SearchPotentialDuplicateContactJobTest::shouldReturnEmptyListWhenNoItem()
@@ -26,7 +26,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnEmptyListWhenNoItem()
     QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
-    auto lstResult = spy.at(0).at(0).value<QVector<Akonadi::Item::List>>();
+    auto lstResult = spy.at(0).at(0).value<QList<Akonadi::Item::List>>();
     QCOMPARE(lstResult.count(), 0);
 }
 
@@ -38,7 +38,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnEmptyListWhenOneItem()
     QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
-    auto lstResult = spy.at(0).at(0).value<QVector<Akonadi::Item::List>>();
+    auto lstResult = spy.at(0).at(0).value<QList<Akonadi::Item::List>>();
     QCOMPARE(lstResult.count(), 0);
 }
 
@@ -57,7 +57,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnListWhenTwoItemsAreDupl
     QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
-    auto lstResult = spy.at(0).at(0).value<QVector<Akonadi::Item::List>>();
+    auto lstResult = spy.at(0).at(0).value<QList<Akonadi::Item::List>>();
     QCOMPARE(lstResult.count(), 1);
 }
 
@@ -76,7 +76,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnListWhenThreeItemsAreDu
     QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
-    auto lstResult = spy.at(0).at(0).value<QVector<Akonadi::Item::List>>();
+    auto lstResult = spy.at(0).at(0).value<QList<Akonadi::Item::List>>();
     QCOMPARE(lstResult.count(), 1);
 }
 
@@ -102,7 +102,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnTwoList()
     QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
-    auto lstResult = spy.at(0).at(0).value<QVector<Akonadi::Item::List>>();
+    auto lstResult = spy.at(0).at(0).value<QList<Akonadi::Item::List>>();
     QCOMPARE(lstResult.count(), 2);
 }
 
@@ -169,7 +169,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnList()
     QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
-    auto lstResult = spy.at(0).at(0).value<QVector<Akonadi::Item::List>>();
+    auto lstResult = spy.at(0).at(0).value<QList<Akonadi::Item::List>>();
     QCOMPARE(lstResult.count(), numberOfList);
 }
 

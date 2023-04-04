@@ -113,7 +113,7 @@ void OpenUrlWithConfigureWidget::displayText(const MessageViewer::OpenWithUrlInf
 
 void OpenUrlWithConfigureWidget::loadSettings()
 {
-    const QVector<MessageViewer::OpenWithUrlInfo> rules = MessageViewer::OpenUrlWithManager::self()->openWithUrlInfo();
+    const QList<MessageViewer::OpenWithUrlInfo> rules = MessageViewer::OpenUrlWithManager::self()->openWithUrlInfo();
     for (const MessageViewer::OpenWithUrlInfo &r : rules) {
         auto item = new OpenUrlWithConfigureItem(mListWidget);
         displayText(r, item);
@@ -122,7 +122,7 @@ void OpenUrlWithConfigureWidget::loadSettings()
 
 void OpenUrlWithConfigureWidget::writeSettings()
 {
-    QVector<MessageViewer::OpenWithUrlInfo> rules;
+    QList<MessageViewer::OpenWithUrlInfo> rules;
     for (int i = 0, total = mListWidget->count(); i < total; ++i) {
         auto item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
         const MessageViewer::OpenWithUrlInfo r = item->info();

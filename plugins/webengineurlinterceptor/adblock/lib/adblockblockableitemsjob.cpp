@@ -50,7 +50,7 @@ void AdBlockBlockableItemsJob::searchBlockableItems()
                                               WebEngineViewer::WebEngineManageScript::scriptWordId(),
                                               invoke(this, &AdBlockBlockableItemsJob::handleSearchBlockableImageItems));
     } else {
-        Q_EMIT searchItemsDone(QVector<AdBlock::AdBlockResult>());
+        Q_EMIT searchItemsDone(QList<AdBlock::AdBlockResult>());
         deleteLater();
     }
 }

@@ -56,7 +56,7 @@ AdBlockBlockableItemsWidget::~AdBlockBlockableItemsWidget()
     writeConfig();
 }
 
-void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> &result)
+void AdBlockBlockableItemsWidget::setAdblockResult(const QList<AdBlockResult> &result)
 {
     for (const AdBlockResult &res : result) {
         auto item = new QTreeWidgetItem(mCustomTreeView);

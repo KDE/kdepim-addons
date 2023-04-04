@@ -8,10 +8,10 @@
 
 #include <KLocalizedString>
 #include <QIODevice>
+#include <QList>
 #include <QStringList>
 #include <QTextCodec>
 #include <QTextStream>
-#include <QVector>
 
 QCsvBuilderInterface::~QCsvBuilderInterface() = default;
 
@@ -303,7 +303,7 @@ public:
     QString mLastErrorString;
     uint mRowCount;
     uint mColumnCount;
-    QVector<QStringList> mRows;
+    QList<QStringList> mRows;
 };
 
 void QCsvStandardBuilderPrivate::init()

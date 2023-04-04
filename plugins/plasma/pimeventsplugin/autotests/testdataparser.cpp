@@ -55,7 +55,7 @@ qint64 TestDataParser::akonadiId() const
     return mAkonadiId;
 }
 
-QVector<CalendarEvents::EventData> TestDataParser::eventData() const
+QList<CalendarEvents::EventData> TestDataParser::eventData() const
 {
     return mEventData;
 }

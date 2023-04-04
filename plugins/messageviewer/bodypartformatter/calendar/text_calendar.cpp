@@ -392,8 +392,8 @@ public:
             addrs = header->mailboxes();
         }
         int found = 0;
-        QVector<KMime::Types::Mailbox>::const_iterator end = addrs.constEnd();
-        for (QVector<KMime::Types::Mailbox>::const_iterator it = addrs.constBegin(); it != end; ++it) {
+        QList<KMime::Types::Mailbox>::const_iterator end = addrs.constEnd();
+        for (QList<KMime::Types::Mailbox>::const_iterator it = addrs.constBegin(); it != end; ++it) {
             if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagement::Identity::null()) {
                 // Ok, this could be us
                 ++found;
@@ -406,7 +406,7 @@ public:
             ccaddrs = header->mailboxes();
         }
         end = ccaddrs.constEnd();
-        for (QVector<KMime::Types::Mailbox>::const_iterator it = ccaddrs.constBegin(); it != end; ++it) {
+        for (QList<KMime::Types::Mailbox>::const_iterator it = ccaddrs.constBegin(); it != end; ++it) {
             if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagement::Identity::null()) {
                 // Ok, this could be us
                 ++found;

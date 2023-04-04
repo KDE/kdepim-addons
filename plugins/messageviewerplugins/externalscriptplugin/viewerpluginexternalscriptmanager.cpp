@@ -33,7 +33,7 @@ void ViewerPluginExternalScriptManager::readExternalScriptInfo()
     mScriptInfos = job.scriptInfos();
 }
 
-QVector<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptManager::scriptInfos() const
+QList<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptManager::scriptInfos() const
 {
     return mScriptInfos;
 }

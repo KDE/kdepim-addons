@@ -36,12 +36,12 @@ class KADDRESSBOOKMERGELIB_EXPORT SearchDuplicateResultWidget : public QWidget
 public:
     explicit SearchDuplicateResultWidget(QWidget *parent = nullptr);
     ~SearchDuplicateResultWidget() override;
-    void setContacts(const QVector<Akonadi::Item::List> &lstItem);
+    void setContacts(const QList<Akonadi::Item::List> &lstItem);
 
 Q_SIGNALS:
     void contactMerged(const Akonadi::Item &item);
     void mergeDone();
-    void customizeMergeContact(const QVector<KABMergeContacts::MergeConflictResult> &, const Akonadi::Collection &col);
+    void customizeMergeContact(const QList<KABMergeContacts::MergeConflictResult> &, const Akonadi::Collection &col);
 
 private:
     void slotMergeContact();
@@ -56,8 +56,8 @@ private:
     void slotCollapseAll();
     void slotSelectAll();
     void slotDeselectAll();
-    QVector<MergeConflictResult> mResultConflictList;
-    QVector<Akonadi::Item::List> mListContactToMerge;
+    QList<MergeConflictResult> mResultConflictList;
+    QList<Akonadi::Item::List> mListContactToMerge;
     ResultDuplicateTreeWidget *const mResultTreeWidget;
     KAddressBookGrantlee::GrantleeContactViewer *const mContactViewer;
     QPushButton *mMergeContact = nullptr;

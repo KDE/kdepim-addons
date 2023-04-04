@@ -76,7 +76,7 @@ void AdblockInterceptorInterface::slotBlockImage()
     // TODO
 }
 
-void AdblockInterceptorInterface::slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result)
+void AdblockInterceptorInterface::slotSearchItemsDone(const QList<AdBlock::AdBlockResult> &result)
 {
     // TODO update
     QPointer<AdBlock::AdBlockBlockableItemsDialog> dlg = new AdBlock::AdBlockBlockableItemsDialog(mWebEngineView);

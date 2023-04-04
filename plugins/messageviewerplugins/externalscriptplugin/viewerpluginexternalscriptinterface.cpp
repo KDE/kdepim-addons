@@ -102,7 +102,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
         auto mainMenu = new QAction(i18n("External Script"), this);
-        const QVector<ViewerPluginExternalScriptInfo> infos = ViewerPluginExternalScriptManager::self()->scriptInfos();
+        const QList<ViewerPluginExternalScriptInfo> infos = ViewerPluginExternalScriptManager::self()->scriptInfos();
         auto menu = new QMenu;
         if (!infos.isEmpty()) {
             connect(mActionGroup, &QActionGroup::triggered, this, &ViewerPluginExternalscriptInterface::slotScriptActivated);

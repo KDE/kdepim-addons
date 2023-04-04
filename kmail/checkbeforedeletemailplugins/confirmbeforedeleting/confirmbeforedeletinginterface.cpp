@@ -49,8 +49,8 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
     Akonadi::Item::List lst;
     QString checkFoundStr;
 
-    QVector<ConfirmBeforeDeletingRule> ruleDelete;
-    QVector<ConfirmBeforeDeletingRule> ruleNotDelete;
+    QList<ConfirmBeforeDeletingRule> ruleDelete;
+    QList<ConfirmBeforeDeletingRule> ruleNotDelete;
     for (const auto &item : list) {
         ConfirmBeforeDeletingRule r;
         if (ConfirmBeforeDeletingManager::self()->deletingNeedToConfirm(item, checkFoundStr, r)) {

@@ -53,7 +53,7 @@ private:
     void slotSearchJobFinished(KJob *job);
     void checkEmail();
     void continueToCheckEmail();
-    QVector<VCard> mVCardList;
+    QList<VCard> mVCardList;
     int mIndex = 0;
     bool mFinished = false;
 };

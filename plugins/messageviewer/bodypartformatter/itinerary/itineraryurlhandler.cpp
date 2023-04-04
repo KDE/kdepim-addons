@@ -187,7 +187,7 @@ void ItineraryUrlHandler::showCalendar(QDate date) const
     job->start();
 }
 
-static void attachPass(const KCalendarCore::Event::Ptr &event, const QVector<QVariant> &reservations, ItineraryMemento *memento)
+static void attachPass(const KCalendarCore::Event::Ptr &event, const QList<QVariant> &reservations, ItineraryMemento *memento)
 {
     for (const auto &reservation : reservations) {
         if (!JsonLd::canConvert<Reservation>(reservation)) {

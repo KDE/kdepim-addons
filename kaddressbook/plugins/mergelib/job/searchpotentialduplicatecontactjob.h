@@ -20,15 +20,15 @@ public:
 
     void start();
 
-    Q_REQUIRED_RESULT QVector<Akonadi::Item::List> potentialDuplicateContacts() const;
+    Q_REQUIRED_RESULT QList<Akonadi::Item::List> potentialDuplicateContacts() const;
 
 Q_SIGNALS:
-    void finished(const QVector<Akonadi::Item::List> &);
+    void finished(const QList<Akonadi::Item::List> &);
 
 private:
     Q_REQUIRED_RESULT Akonadi::Item::List checkList(const Akonadi::Item::List &lstItem);
     Q_REQUIRED_RESULT bool isDuplicate(const Akonadi::Item &itemA, const Akonadi::Item &itemB);
     const Akonadi::Item::List mListItem;
-    QVector<Akonadi::Item::List> mListDuplicate;
+    QList<Akonadi::Item::List> mListDuplicate;
 };
 }

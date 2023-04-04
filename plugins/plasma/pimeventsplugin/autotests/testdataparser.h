@@ -26,7 +26,7 @@ public:
     Q_REQUIRED_RESULT QDate rangeEnd() const;
     Q_REQUIRED_RESULT qint64 akonadiId() const;
     Q_REQUIRED_RESULT KCalendarCore::Incidence::Ptr incidence() const;
-    Q_REQUIRED_RESULT QVector<CalendarEvents::EventData> eventData() const;
+    Q_REQUIRED_RESULT QList<CalendarEvents::EventData> eventData() const;
 
     Q_REQUIRED_RESULT static QStringList allTestData();
 
@@ -39,6 +39,6 @@ private:
     QDate mRangeEnd;
     qint64 mAkonadiId;
     KCalendarCore::Incidence::Ptr mIncidence;
-    QVector<CalendarEvents::EventData> mEventData;
+    QList<CalendarEvents::EventData> mEventData;
     bool mUniqueEventData;
 };

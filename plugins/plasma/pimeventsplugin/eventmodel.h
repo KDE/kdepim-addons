@@ -8,7 +8,7 @@
 #pragma once
 
 #include <Akonadi/CalendarBase>
-#include <QVector>
+#include <QList>
 
 namespace Akonadi
 {
@@ -22,7 +22,7 @@ public:
     explicit EventModel(QObject *parent = nullptr);
     ~EventModel() override;
 
-    Q_REQUIRED_RESULT QVector<Akonadi::Collection> collections() const;
+    Q_REQUIRED_RESULT QList<Akonadi::Collection> collections() const;
 
     Q_REQUIRED_RESULT Akonadi::Collection collection(qint64 id) const;
 
@@ -38,7 +38,7 @@ private:
     void populateCollection(const Akonadi::Collection &col);
     void removeCollection(const Akonadi::Collection &col);
 
-    QVector<Akonadi::Collection> mCols;
+    QList<Akonadi::Collection> mCols;
     Akonadi::Monitor *mMonitor = nullptr;
     QMap<Akonadi::Collection::Id, KJob *> mFetchJobs;
 };

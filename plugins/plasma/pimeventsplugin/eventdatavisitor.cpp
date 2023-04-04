@@ -76,7 +76,7 @@ QString BaseEventDataVisitor::generateUid(const KCalendarCore::Incidence::Ptr &i
     }
 }
 
-QVector<CalendarEvents::EventData>
+QList<CalendarEvents::EventData>
 BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok)
 {
     Q_ASSERT(incidence->recurs());
@@ -85,7 +85,7 @@ BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData
 
     QDateTime rec(mStart.addDays(-1), QTime(0, 0, 0));
     rec = incidence->recurrence()->getNextDateTime(rec);
-    QVector<CalendarEvents::EventData> results;
+    QList<CalendarEvents::EventData> results;
     while (rec.isValid() && rec.date() <= mEnd) {
         CalendarEvents::EventData copy = ed;
         QDateTime dt;

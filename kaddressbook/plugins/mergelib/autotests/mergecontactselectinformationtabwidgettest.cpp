@@ -26,7 +26,7 @@ void MergeContactSelectInformationTabWidgetTest::shouldAddTab()
 {
     KABMergeContacts::MergeContactSelectInformationTabWidget w;
 
-    QVector<KABMergeContacts::MergeConflictResult> list;
+    QList<KABMergeContacts::MergeConflictResult> list;
     KABMergeContacts::MergeConflictResult conflict;
     Akonadi::Item::List listItem;
     KContacts::Addressee address1;

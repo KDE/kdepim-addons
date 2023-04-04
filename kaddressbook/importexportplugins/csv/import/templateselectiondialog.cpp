@@ -136,7 +136,7 @@ public:
     }
 
 private:
-    QVector<TemplateInfo> mTemplates;
+    QList<TemplateInfo> mTemplates;
 };
 
 class TemplateSelectionDelegate : public QStyledItemDelegate

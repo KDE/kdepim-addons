@@ -130,7 +130,7 @@ void AdBlockMatcher::update()
     clear();
 
     QHash<QString, const AdBlockRule *> cssRulesHash;
-    QVector<const AdBlockRule *> exceptionCssRules;
+    QList<const AdBlockRule *> exceptionCssRules;
     const auto subscriptions = mManager->subscriptions();
     for (AdBlockSubscription *subscription : subscriptions) {
         for (const AdBlockRule *rule : subscription->allRules()) {

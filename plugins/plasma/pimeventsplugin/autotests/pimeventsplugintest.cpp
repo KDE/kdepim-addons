@@ -69,9 +69,9 @@ DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *sourc
     return expectedData;
 }
 
-QVector<CalendarEvents::EventData> PimEventsPluginTest::findEventData(const KCalendarCore::Event::Ptr &event, const DateEventDataHash &allData)
+QList<CalendarEvents::EventData> PimEventsPluginTest::findEventData(const KCalendarCore::Event::Ptr &event, const DateEventDataHash &allData)
 {
-    QVector<CalendarEvents::EventData> data;
+    QList<CalendarEvents::EventData> data;
     for (auto it = allData.cbegin(), end = allData.cend(); it != end; ++it) {
         // This is a very naive check
         if (it->title() == event->summary() && it->description() == event->description() && it->isAllDay() == event->allDay()) {

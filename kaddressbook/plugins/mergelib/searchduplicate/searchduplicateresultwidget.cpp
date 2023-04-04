@@ -123,7 +123,7 @@ void SearchDuplicateResultWidget::slotDeselectAll()
     mResultTreeWidget->uncheckAllItems();
 }
 
-void SearchDuplicateResultWidget::setContacts(const QVector<Akonadi::Item::List> &lstItem)
+void SearchDuplicateResultWidget::setContacts(const QList<Akonadi::Item::List> &lstItem)
 {
     mResultTreeWidget->setContacts(lstItem);
 }

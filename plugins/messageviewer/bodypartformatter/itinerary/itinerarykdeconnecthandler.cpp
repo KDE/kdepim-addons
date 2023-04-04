@@ -10,15 +10,15 @@
 #include <QDBusInterface>
 #include <QDBusMessage>
 #include <QDBusReply>
+#include <QList>
 #include <QUrl>
-#include <QVector>
 
 ItineraryKDEConnectHandler::ItineraryKDEConnectHandler(QObject *parent)
     : QObject(parent)
 {
 }
 
-QVector<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices() const
+QList<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices() const
 {
     // TODO we might want to do all this asynchronously by watching change signals and cache the device list
 
@@ -34,7 +34,7 @@ QVector<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices(
         return {};
     }
 
-    QVector<Device> devices;
+    QList<Device> devices;
     const auto values = reply.value();
     for (const QString &deviceId : values) {
         QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"),

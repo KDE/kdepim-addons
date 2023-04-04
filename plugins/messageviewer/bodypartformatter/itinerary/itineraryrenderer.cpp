@@ -103,7 +103,7 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
         data.insert(QStringLiteral("state"), state);
         data.insert(QStringLiteral("groupId"), i);
 
-        QVector<QVariant> reservations;
+        QList<QVariant> reservations;
         reservations.reserve(d.reservations.count());
         for (const auto &r : d.reservations) {
             QVariantMap m;

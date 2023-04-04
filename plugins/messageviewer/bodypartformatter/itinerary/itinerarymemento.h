@@ -11,9 +11,9 @@
 #include <KCalendarCore/Event>
 #include <KItinerary/ExtractorPostprocessor>
 
+#include <QList>
 #include <QSet>
 #include <QVariant>
-#include <QVector>
 
 #include <vector>
 
@@ -43,15 +43,15 @@ public:
     void setParsed(const KMime::ContentIndex &index);
 
     void setMessageDate(const QDateTime &contextDt);
-    void appendData(const QVector<QVariant> &data);
+    void appendData(const QList<QVariant> &data);
 
     Q_REQUIRED_RESULT bool hasData() const;
     struct TripData {
-        QVector<QVariant> reservations;
+        QList<QVariant> reservations;
         KCalendarCore::Event::Ptr event;
         bool expanded;
     };
-    Q_REQUIRED_RESULT QVector<TripData> data();
+    Q_REQUIRED_RESULT QList<TripData> data();
     void toggleExpanded(int index);
 
     void addPass(KPkPass::Pass *pass, const QByteArray &rawData);
@@ -90,7 +90,7 @@ public:
 private:
     QSet<KMime::ContentIndex> m_parsedParts;
     KItinerary::ExtractorPostprocessor m_postProc;
-    QVector<TripData> m_data;
+    QList<TripData> m_data;
     std::vector<PassData> m_passes;
     std::vector<DocumentData> m_docs;
 };

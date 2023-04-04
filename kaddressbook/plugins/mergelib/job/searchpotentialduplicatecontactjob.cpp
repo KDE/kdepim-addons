@@ -30,7 +30,7 @@ void SearchPotentialDuplicateContactJob::start()
     deleteLater();
 }
 
-QVector<Akonadi::Item::List> SearchPotentialDuplicateContactJob::potentialDuplicateContacts() const
+QList<Akonadi::Item::List> SearchPotentialDuplicateContactJob::potentialDuplicateContacts() const
 {
     return mListDuplicate;
 }

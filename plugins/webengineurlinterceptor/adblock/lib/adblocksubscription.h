@@ -10,8 +10,8 @@
 
 #pragma once
 
+#include <QList>
 #include <QUrl>
-#include <QVector>
 
 #include "adblockrule.h"
 #include "adblocksearchtree.h"
@@ -39,7 +39,7 @@ public:
     virtual void saveSubscription();
 
     const AdBlockRule *rule(int offset) const;
-    QVector<AdBlockRule *> allRules() const;
+    QList<AdBlockRule *> allRules() const;
 
     const AdBlockRule *enableRule(int offset);
     const AdBlockRule *disableRule(int offset);
@@ -69,7 +69,7 @@ protected:
     virtual bool saveDownloadedData(const QByteArray &data);
 
     QNetworkReply *mReply = nullptr;
-    QVector<AdBlockRule *> mRules;
+    QList<AdBlockRule *> mRules;
 
 private:
     QString mTitle;
