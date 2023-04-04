@@ -6,7 +6,7 @@ set(PIM_VERSION "5.23.40")
 project(kdepim-addons VERSION ${PIM_VERSION})
 
 set(KF_MIN_VERSION "5.240.0")
-
+set(QT_REQUIRED_VERSION "6.4.0")
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/ ${ECM_MODULE_PATH})
 
@@ -23,9 +23,6 @@ set(KDEPIMADDONS_VERSION "${KDEPIMADDONS_VERSION_NUMBER}${KDEPIM_DEV_VERSION}")
 
 set(KDEPIMADDONS_LIB_VERSION "${KDEPIMADDONS_VERSION_NUMBER}")
 set(KDEPIMADDONS_LIB_SOVERSION "5")
-
-set(QT_REQUIRED_VERSION "6.4.0")
-
 
 include(ECMInstallIcons)
 include(ECMSetupVersion)
@@ -49,24 +46,14 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-    set(KTEXTADDONS_MIN_VERSION "1.1.0")
-else()
-    set(KF_MAJOR_VERSION "5")
-    set(KTEXTADDONS_MIN_VERSION "1.0.0")
-endif()
+set(KTEXTADDONS_MIN_VERSION "1.1.0")
 
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
 
 
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngineWidgets Widgets Test)
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    find_package(Qt6Core5Compat)
-endif()
+find_package(Qt6Core5Compat)
 
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Config ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -145,13 +132,8 @@ find_package(KPim6MailImporterAkonadi ${MAILIMPORTER_LIB_VERSION} CONFIG REQUIRE
 find_package(KPim6PkPass ${KPIMPKPASS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Itinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
 
-if (QT_MAJOR_VERSION STREQUAL "5")
-    find_package(Grantlee5 "5.3" CONFIG REQUIRED)
-    set(TEMPLATES_LIB Grantlee5::Templates)
-else()
-    find_package(KF6TextTemplate CONFIG REQUIRED)
-    set(TEMPLATES_LIB KF6::TextTemplate)
-endif()
+find_package(KF6TextTemplate CONFIG REQUIRED)
+set(TEMPLATES_LIB KF6::TextTemplate)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
@@ -166,11 +148,7 @@ endif()
 # Extra package
 find_package(Gpgmepp 1.16.0 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "https://www.gnupg.org" TYPE REQUIRED)
-if (QT_MAJOR_VERSION STREQUAL "5")
-ecm_set_disabled_deprecation_versions(QT 5.15.0  KF 5.105.0)
-else()
 ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.105.0)
-endif()
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
