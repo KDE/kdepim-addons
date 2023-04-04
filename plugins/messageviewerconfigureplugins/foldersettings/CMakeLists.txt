@@ -38,9 +38,9 @@ endif()
 
 generate_export_header(folderconfiguresettings BASE_NAME libfolderconfiguresettings)
 target_link_libraries(folderconfiguresettings
-    KPim${KF_MAJOR_VERSION}::MessageViewer
-    KF${KF_MAJOR_VERSION}::I18n
-    KPim${KF_MAJOR_VERSION}::MailCommon
+    KPim6::MessageViewer
+    KF6::I18n
+    KPim6::MailCommon
     )
 
 set_target_properties(folderconfiguresettings
@@ -59,9 +59,9 @@ target_sources(messageviewer_folderconfiguresettingsplugin PRIVATE
 
 
 target_link_libraries(messageviewer_folderconfiguresettingsplugin
-  KPim${KF_MAJOR_VERSION}::MessageViewer
-  KF${KF_MAJOR_VERSION}::I18n
-  KPim${KF_MAJOR_VERSION}::MailCommon
+  KPim6::MessageViewer
+  KF6::I18n
+  KPim6::MailCommon
   folderconfiguresettings
 )
 

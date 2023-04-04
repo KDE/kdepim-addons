@@ -37,7 +37,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_checkbeforesendeditorplugin
-    KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Codecs
+    KPim6::MessageComposer KF6::I18n KF6::Codecs
     )
 
 if(BUILD_TESTING)

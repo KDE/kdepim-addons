@@ -13,5 +13,5 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kaddressbook_searchduplicatesplugin
-  KPim${KF_MAJOR_VERSION}::PimCommon KF${KF_MAJOR_VERSION}::Completion  KPim${KF_MAJOR_VERSION}::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui kaddressbookmergelibprivate KF${KF_MAJOR_VERSION}::I18n
+  KPim6::PimCommon KF6::Completion  KPim6::PimCommonAkonadi KF6::XmlGui kaddressbookmergelibprivate KF6::I18n
 )

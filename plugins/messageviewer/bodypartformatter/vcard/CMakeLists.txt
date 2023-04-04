@@ -11,7 +11,7 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_vcard HEADE
     )
 
 
-target_link_libraries(messageviewer_bodypartformatter_text_vcard  KF${KF_MAJOR_VERSION}::Contacts
-    KPim${KF_MAJOR_VERSION}::PimCommonAkonadi KPim${KF_MAJOR_VERSION}::MessageViewer KF${KF_MAJOR_VERSION}::IconThemes KF${KF_MAJOR_VERSION}::JobWidgets
-    KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::ContactEditor)
+target_link_libraries(messageviewer_bodypartformatter_text_vcard  KF6::Contacts
+    KPim6::PimCommonAkonadi KPim6::MessageViewer KF6::IconThemes KF6::JobWidgets
+    KF6::I18n KPim6::ContactEditor)
 install(TARGETS messageviewer_bodypartformatter_text_vcard DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)

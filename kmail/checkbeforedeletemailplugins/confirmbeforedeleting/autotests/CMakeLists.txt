@@ -7,7 +7,7 @@ macro(add_kmail_checkbeforedeleting_unittest _source)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_checkbeforedeleting-${_name})
-    target_link_libraries( ${_name} Qt::Test KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::MessageViewer KF${KF_MAJOR_VERSION}::I18n kmailconfirmbeforedeleting)
+    target_link_libraries( ${_name} Qt::Test KF6::XmlGui KPim6::MessageViewer KF6::I18n kmailconfirmbeforedeleting)
 endmacro ()
 
 add_kmail_checkbeforedeleting_unittest(confirmbeforedeletingdialogtest.cpp)

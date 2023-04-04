@@ -7,10 +7,10 @@ add_executable(gravatarupdatedialog_gui ${gravatarupdatedialog_gui_SRCS})
 ecm_mark_as_test(gravatarupdatedialog_gui)
 target_link_libraries(gravatarupdatedialog_gui
     Qt::Gui
-    KPim${KF_MAJOR_VERSION}::PimCommon
-    KPim${KF_MAJOR_VERSION}::Gravatar
-    KF${KF_MAJOR_VERSION}::I18n
-    KPim${KF_MAJOR_VERSION}::AkonadiCore
-    KF${KF_MAJOR_VERSION}::Contacts
+    KPim6::PimCommon
+    KPim6::Gravatar
+    KF6::I18n
+    KPim6::AkonadiCore
+    KF6::Contacts
     )
 

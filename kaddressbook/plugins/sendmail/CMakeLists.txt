@@ -28,7 +28,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kaddressbook_sendmailplugin
-    KPim${KF_MAJOR_VERSION}::PimCommon KF${KF_MAJOR_VERSION}::Completion  KPim${KF_MAJOR_VERSION}::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Codecs
+    KPim6::PimCommon KF6::Completion  KPim6::PimCommonAkonadi KF6::XmlGui KF6::I18n KF6::Codecs
     )
 
 if (BUILD_TESTING)

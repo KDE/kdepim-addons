@@ -24,6 +24,6 @@ endif()
 
 
 target_link_libraries(messageviewer_createnoteplugin
-    KPim${KF_MAJOR_VERSION}::MessageViewer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::AkonadiNotes KPim${KF_MAJOR_VERSION}::IncidenceEditor KPim${KF_MAJOR_VERSION}::AkonadiWidgets
+    KPim6::MessageViewer KF6::XmlGui KF6::CalendarCore KPim6::AkonadiNotes KPim6::IncidenceEditor KPim6::AkonadiWidgets
     )
 

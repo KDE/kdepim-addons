@@ -7,7 +7,7 @@ macro(add_foldersettings_plugin_unittest _source )
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(foldersettings-${_name})
-    target_link_libraries( ${_name} KPim${KF_MAJOR_VERSION}::PimCommon Qt::Test KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::MessageViewer folderconfiguresettings)
+    target_link_libraries( ${_name} KPim6::PimCommon Qt::Test KF6::I18n KPim6::MessageViewer folderconfiguresettings)
 endmacro ()
 
 

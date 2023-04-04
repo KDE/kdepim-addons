@@ -11,7 +11,7 @@ macro(add_kmail_checkbeforesend_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_editorplugin-${_name})
-    target_link_libraries( ${_name} Qt::Test KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::PimCommon KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Codecs)
+    target_link_libraries( ${_name} Qt::Test KPim6::MessageComposer KF6::I18n KPim6::PimCommon KF6::I18n KF6::Codecs)
 endmacro ()
 
 

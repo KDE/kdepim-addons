@@ -31,9 +31,9 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(mailmerge
-    KF${KF_MAJOR_VERSION}::I18n
-    KPim${KF_MAJOR_VERSION}::MessageComposer
-    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF6::I18n
+    KPim6::MessageComposer
+    KF6::KIOWidgets
     )
 
 set_target_properties(mailmerge

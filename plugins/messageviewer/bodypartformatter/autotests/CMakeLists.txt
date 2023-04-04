@@ -12,7 +12,7 @@ macro(add_kdepimaddons_crypto_unittest _source)
     get_filename_component(_name ${_source} NAME_WE)
     add_executable( ${_name} ${_source})
     target_link_libraries( ${_name}
-        KPim${KF_MAJOR_VERSION}::MessageViewer
+        KPim6::MessageViewer
         Qt::Test
         
     )
@@ -25,7 +25,7 @@ endmacro ()
 add_kdepimaddons_crypto_unittest(rendertest.cpp)
 
 if (KDEPIM_RUN_AKONADI_TEST)
-	add_akonadi_isolated_test(SOURCE rendertest-akonadi.cpp BACKENDS SQLITE LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MessageViewer)
+	add_akonadi_isolated_test(SOURCE rendertest-akonadi.cpp BACKENDS SQLITE LINK_LIBRARIES KPim6::MessageViewer)
 	target_compile_definitions(rendertest-akonadi PRIVATE -DDATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data-akonadi")
 endif()	
 
@@ -36,7 +36,7 @@ macro(add_messageviewer_bodyformatter_class_unittest _source _additional)
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-		 LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MessageViewer Qt::Test KPim${KF_MAJOR_VERSION}::PimTextEdit KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Completion KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
+		 LINK_LIBRARIES KPim6::MessageViewer Qt::Test KPim6::PimTextEdit KF6::I18n KF6::Completion KPim6::PimCommonAkonadi
                 )
 endmacro ()
 add_messageviewer_bodyformatter_class_unittest(reactiontoinvitationdialogtest.cpp "../calendar/reactiontoinvitationdialog.cpp")
@@ -49,7 +49,7 @@ macro(add_diff_bodyformatter_class_unittest _source _additional)
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-                 LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MessageViewer Qt::Test KPim${KF_MAJOR_VERSION}::PimTextEdit KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::SyntaxHighlighting
+                 LINK_LIBRARIES KPim6::MessageViewer Qt::Test KPim6::PimTextEdit KF6::I18n KF6::SyntaxHighlighting
                 )
 endmacro ()
 

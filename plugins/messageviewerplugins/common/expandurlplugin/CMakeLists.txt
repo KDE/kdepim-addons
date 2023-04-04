@@ -18,6 +18,6 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_expandurlplugin PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(messageviewer_expandurlplugin
-    KPim${KF_MAJOR_VERSION}::MessageViewer KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::Libkdepim KF${KF_MAJOR_VERSION}::I18n
+    KPim6::MessageViewer KF6::XmlGui KPim6::Libkdepim KF6::I18n
     )
 

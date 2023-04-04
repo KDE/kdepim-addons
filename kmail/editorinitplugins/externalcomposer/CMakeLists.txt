@@ -18,7 +18,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_externalcomposereditorplugin
-    KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::KIOWidgets
+    KPim6::MessageComposer KF6::XmlGui KF6::I18n KF6::KIOWidgets
     )
 
 if(BUILD_TESTING)

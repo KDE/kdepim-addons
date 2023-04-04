@@ -40,14 +40,14 @@ endif()
 
 target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     Qt::Core
-    KPim${KF_MAJOR_VERSION}::MessageCore
-    KPim${KF_MAJOR_VERSION}::MessageViewer
-    KPim${KF_MAJOR_VERSION}::AkonadiMime
-    KPim${KF_MAJOR_VERSION}::MailTransport
-    KPim${KF_MAJOR_VERSION}::GrantleeTheme
-    KF${KF_MAJOR_VERSION}::I18n
-    KPim${KF_MAJOR_VERSION}::Mime
-    KPim${KF_MAJOR_VERSION}::IdentityManagement
+    KPim6::MessageCore
+    KPim6::MessageViewer
+    KPim6::AkonadiMime
+    KPim6::MailTransport
+    KPim6::GrantleeTheme
+    KF6::I18n
+    KPim6::Mime
+    KPim6::IdentityManagement
     ${TEMPLATES_LIB}
     Gpgmepp
     )

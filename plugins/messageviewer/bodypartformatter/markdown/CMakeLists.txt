@@ -20,7 +20,7 @@ endif()
 
 target_link_libraries(messageviewer_bodypartformatter_text_markdown
     Qt::Core
-    KPim${KF_MAJOR_VERSION}::MessageViewer
+    KPim6::MessageViewer
     ${TEMPLATES_LIB}
 )
 install(TARGETS messageviewer_bodypartformatter_text_markdown DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)

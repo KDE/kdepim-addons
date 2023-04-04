@@ -27,6 +27,6 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_createeventplugin
-    KPim${KF_MAJOR_VERSION}::MessageViewer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::IncidenceEditor KPim${KF_MAJOR_VERSION}::AkonadiWidgets KPim${KF_MAJOR_VERSION}::CalendarSupport
+    KPim6::MessageViewer KF6::XmlGui KF6::CalendarCore KPim6::IncidenceEditor KPim6::AkonadiWidgets KPim6::CalendarSupport
     )
 

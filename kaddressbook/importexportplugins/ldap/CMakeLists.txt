@@ -15,10 +15,10 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kaddressbook_importexportldapplugin
-        KPim${KF_MAJOR_VERSION}::AddressbookImportExport
-        KPim${KF_MAJOR_VERSION}::AkonadiCore
-        KF${KF_MAJOR_VERSION}::I18n
-        KF${KF_MAJOR_VERSION}::XmlGui
-        KF${KF_MAJOR_VERSION}::Contacts
-        KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
+        KPim6::AddressbookImportExport
+        KPim6::AkonadiCore
+        KF6::I18n
+        KF6::XmlGui
+        KF6::Contacts
+        KPim6::PimCommonAkonadi
     )

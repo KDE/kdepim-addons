@@ -33,8 +33,8 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 generate_export_header(kmailconfirmbeforedeleting BASE_NAME kmailconfirmbeforedeleting)
 target_link_libraries(kmailconfirmbeforedeleting
-    KPim${KF_MAJOR_VERSION}::MessageViewer
-    KF${KF_MAJOR_VERSION}::I18n
+    KPim6::MessageViewer
+    KF6::I18n
 )
 
 set_target_properties(kmailconfirmbeforedeleting
@@ -68,5 +68,5 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_confirmbeforedeletingplugin
-    KPim${KF_MAJOR_VERSION}::MessageViewer KF${KF_MAJOR_VERSION}::I18n KPim${KF_MAJOR_VERSION}::PimCommon KPim${KF_MAJOR_VERSION}::Libkdepim kmailconfirmbeforedeleting
+    KPim6::MessageViewer KF6::I18n KPim6::PimCommon KPim6::Libkdepim kmailconfirmbeforedeleting
     )

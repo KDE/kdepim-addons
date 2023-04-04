@@ -2,9 +2,9 @@
 # SPDX-License-Identifier: BSD-3-Clause
 add_executable(headerstylemenu_gui headerstylemenu_gui.cpp)
 target_link_libraries(headerstylemenu_gui
-  KPim${KF_MAJOR_VERSION}::MessageViewer
-  KF${KF_MAJOR_VERSION}::XmlGui
-  KPim${KF_MAJOR_VERSION}::GrantleeTheme
-  KF${KF_MAJOR_VERSION}::I18n
+  KPim6::MessageViewer
+  KF6::XmlGui
+  KPim6::GrantleeTheme
+  KF6::I18n
 )
 

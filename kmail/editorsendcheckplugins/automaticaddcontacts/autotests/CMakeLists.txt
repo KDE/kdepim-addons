@@ -14,8 +14,8 @@ macro(add_kmail_automaticaddscontacts_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_editorplugin-${_name})
-    target_link_libraries( ${_name} Qt::Test KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Codecs
-        KPim${KF_MAJOR_VERSION}::PimCommon KPim${KF_MAJOR_VERSION}::ContactEditor)
+    target_link_libraries( ${_name} Qt::Test KPim6::MessageComposer KF6::I18n KF6::Codecs
+        KPim6::PimCommon KPim6::ContactEditor)
 endmacro ()
 
 if (KDEPIM_RUN_AKONADI_TEST)
@@ -23,11 +23,11 @@ if (KDEPIM_RUN_AKONADI_TEST)
     set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 
 
-    add_akonadi_isolated_test_advanced(automaticaddcontactsplugintest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfiguredialog.cpp;../automaticaddcontactsconfigurewidget.cpp;../automaticaddcontactsconfiguretab.cpp;../automaticaddcontactstabwidget.cpp;../automaticaddcontactsjob.cpp;../automaticaddcontactsplugin.cpp;../automaticaddcontactsinterface.cpp;../automaticaddcontactsconfigurewidget.cpp" "KPim${KF_MAJOR_VERSION}::MessageComposer;KF${KF_MAJOR_VERSION}::I18n;KPim${KF_MAJOR_VERSION}::PimCommon;KPim${KF_MAJOR_VERSION}::ContactEditor;KF${KF_MAJOR_VERSION}::Codecs")
-    add_akonadi_isolated_test_advanced(automaticaddcontactsconfigurewidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfiguretab.cpp;../automaticaddcontactstabwidget.cpp;../automaticaddcontactsconfigurewidget.cpp" "KPim${KF_MAJOR_VERSION}::MessageComposer;KF${KF_MAJOR_VERSION}::I18n;KPim${KF_MAJOR_VERSION}::PimCommon;KPim${KF_MAJOR_VERSION}::AkonadiContact")
-    add_akonadi_isolated_test_advanced(automaticaddcontactstabwidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactstabwidget.cpp" "KPim${KF_MAJOR_VERSION}::MessageComposer;KF${KF_MAJOR_VERSION}::I18n;KPim${KF_MAJOR_VERSION}::PimCommon;KPim${KF_MAJOR_VERSION}::AkonadiContact")
-    add_akonadi_isolated_test_advanced(automaticaddcontactsconfiguretabtest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactstabwidget.cpp;../automaticaddcontactsconfiguretab.cpp" "KPim${KF_MAJOR_VERSION}::MessageComposer;KF${KF_MAJOR_VERSION}::I18n;KPim${KF_MAJOR_VERSION}::PimCommon;KPim${KF_MAJOR_VERSION}::AkonadiContact")
+    add_akonadi_isolated_test_advanced(automaticaddcontactsplugintest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfiguredialog.cpp;../automaticaddcontactsconfigurewidget.cpp;../automaticaddcontactsconfiguretab.cpp;../automaticaddcontactstabwidget.cpp;../automaticaddcontactsjob.cpp;../automaticaddcontactsplugin.cpp;../automaticaddcontactsinterface.cpp;../automaticaddcontactsconfigurewidget.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::ContactEditor;KF6::Codecs")
+    add_akonadi_isolated_test_advanced(automaticaddcontactsconfigurewidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfiguretab.cpp;../automaticaddcontactstabwidget.cpp;../automaticaddcontactsconfigurewidget.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::AkonadiContact")
+    add_akonadi_isolated_test_advanced(automaticaddcontactstabwidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactstabwidget.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::AkonadiContact")
+    add_akonadi_isolated_test_advanced(automaticaddcontactsconfiguretabtest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactstabwidget.cpp;../automaticaddcontactsconfiguretab.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::AkonadiContact")
 endif()
 
 
-add_kmail_automaticaddscontacts_unittest(automaticaddcontactsjobtest.cpp "../automaticaddcontactsjob.cpp" "KPim${KF_MAJOR_VERSION}::MessageComposer;KF${KF_MAJOR_VERSION}::I18n;KPim${KF_MAJOR_VERSION}::PimCommon;KPim${KF_MAJOR_VERSION}::AkonadiContact;KF${KF_MAJOR_VERSION}::Codecs")
+add_kmail_automaticaddscontacts_unittest(automaticaddcontactsjobtest.cpp "../automaticaddcontactsjob.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::AkonadiContact;KF6::Codecs")

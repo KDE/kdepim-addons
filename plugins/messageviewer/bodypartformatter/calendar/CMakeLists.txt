@@ -30,21 +30,21 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_bodypartformatter_text_calendar
-    KF${KF_MAJOR_VERSION}::Codecs
+    KF6::Codecs
     Qt::Core
-    KF${KF_MAJOR_VERSION}::CalendarCore
-    KPim${KF_MAJOR_VERSION}::CalendarUtils
-    KPim${KF_MAJOR_VERSION}::Mime
-    KPim${KF_MAJOR_VERSION}::IdentityManagement
-    KPim${KF_MAJOR_VERSION}::AkonadiMime
-    KPim${KF_MAJOR_VERSION}::MailTransport
-    KPim${KF_MAJOR_VERSION}::AkonadiMime
-    KPim${KF_MAJOR_VERSION}::CalendarSupport
-    KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
-    KPim${KF_MAJOR_VERSION}::MessageViewer
-    KPim${KF_MAJOR_VERSION}::IncidenceEditor
-    KPim${KF_MAJOR_VERSION}::PimTextEdit
-    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF6::CalendarCore
+    KPim6::CalendarUtils
+    KPim6::Mime
+    KPim6::IdentityManagement
+    KPim6::AkonadiMime
+    KPim6::MailTransport
+    KPim6::AkonadiMime
+    KPim6::CalendarSupport
+    KPim6::PimCommonAkonadi
+    KPim6::MessageViewer
+    KPim6::IncidenceEditor
+    KPim6::PimTextEdit
+    KF6::KIOWidgets
     Qt::DBus
     )
 

@@ -27,9 +27,9 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(mailtransport_sendplugin
-    KPim${KF_MAJOR_VERSION}::MailTransport
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::ConfigWidgets
-    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KPim6::MailTransport
+    KF6::CoreAddons
+    KF6::I18n
+    KF6::ConfigWidgets
+    KF6::KIOWidgets
     )

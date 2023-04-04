@@ -43,5 +43,5 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(imapfoldercompletionplugin PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(imapfoldercompletionplugin
-    KPim${KF_MAJOR_VERSION}::PimCommon KF${KF_MAJOR_VERSION}::Completion KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::KIOWidgets KPim${KF_MAJOR_VERSION}::KSieveUi KPim${KF_MAJOR_VERSION}::MailTransport KPim${KF_MAJOR_VERSION}::IMAP KF${KF_MAJOR_VERSION}::ItemModels
+    KPim6::PimCommon KF6::Completion KF6::I18n KF6::KIOWidgets KPim6::KSieveUi KPim6::MailTransport KPim6::IMAP KF6::ItemModels
     )

@@ -16,5 +16,5 @@ target_sources(templateparseraddressrequesterplugin PRIVATE
 
 
 target_link_libraries(templateparseraddressrequesterplugin
-    KPim${KF_MAJOR_VERSION}::TemplateParser KPim${KF_MAJOR_VERSION}::AkonadiContact
+    KPim6::TemplateParser KPim6::AkonadiContact
     )

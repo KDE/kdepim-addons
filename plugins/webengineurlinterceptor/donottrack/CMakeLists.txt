@@ -28,9 +28,9 @@ endif()
 target_link_libraries(webengineviewer_donottrackplugin
     
     Qt::WebEngineWidgets
-    KPim${KF_MAJOR_VERSION}::WebEngineViewer
-    KF${KF_MAJOR_VERSION}::ConfigGui
-    KF${KF_MAJOR_VERSION}::CoreAddons
+    KPim6::WebEngineViewer
+    KF6::ConfigGui
+    KF6::CoreAddons
     )
 if(BUILD_TESTING)
     add_subdirectory(autotests)

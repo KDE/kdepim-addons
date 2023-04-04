@@ -60,14 +60,14 @@ endif()
 target_link_libraries(kaddressbookmergelibprivate
     PRIVATE
     Qt::Network
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::Contacts
-    KPim${KF_MAJOR_VERSION}::ContactEditor
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
-    KF${KF_MAJOR_VERSION}::ItemViews
-    KF${KF_MAJOR_VERSION}::ConfigGui
+    KF6::I18n
+    KF6::Contacts
+    KPim6::ContactEditor
+    KF6::ConfigCore
+    KF6::WidgetsAddons
+    KPim6::AkonadiWidgets
+    KF6::ItemViews
+    KF6::ConfigGui
     )
 
 set_target_properties(kaddressbookmergelibprivate

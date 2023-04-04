@@ -8,11 +8,11 @@ macro(add_kmail_mailmergeunittest _source )
   add_test(NAME ${_name} COMMAND ${_name} )
   ecm_mark_as_test(kmail-${_name})
   target_link_libraries( ${_name}
-    KPim${KF_MAJOR_VERSION}::PimCommon
+    KPim6::PimCommon
     Qt::Test
-    KF${KF_MAJOR_VERSION}::KIOCore
-    KF${KF_MAJOR_VERSION}::KIOWidgets
-    KF${KF_MAJOR_VERSION}::I18n
+    KF6::KIOCore
+    KF6::KIOWidgets
+    KF6::I18n
     mailmerge
   )
 endmacro ()

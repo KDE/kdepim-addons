@@ -12,7 +12,7 @@ macro(add_messageviewer_header_unittest _source _additional)
     
     ecm_mark_as_test(messageviewer-header-${_name})
     set_tests_properties(${_name} PROPERTIES ENVIRONMENT "LC_ALL=C;TZ=UTC")
-    target_link_libraries( ${_name} KPim${KF_MAJOR_VERSION}::MessageViewer KPim${KF_MAJOR_VERSION}::Libkleo Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime KPim${KF_MAJOR_VERSION}::AkonadiCore KPim${KF_MAJOR_VERSION}::AkonadiNotes KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::GrantleeTheme KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n)
+    target_link_libraries( ${_name} KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime KPim6::AkonadiCore KPim6::AkonadiNotes KF6::CalendarCore KPim6::GrantleeTheme KF6::XmlGui KF6::I18n)
 endmacro ()
 
 
@@ -24,7 +24,7 @@ macro(add_messageviewer_header_class_unittest _source )
 
     ecm_mark_as_test(messageviewer-header-${_name})
     set_tests_properties(${_name} PROPERTIES ENVIRONMENT "LC_ALL=C;TZ=UTC")
-    target_link_libraries( ${_name} KPim${KF_MAJOR_VERSION}::MessageViewer KPim${KF_MAJOR_VERSION}::Libkleo Qt::Test KF${KF_MAJOR_VERSION}::KIOCore KPim${KF_MAJOR_VERSION}::Mime KPim${KF_MAJOR_VERSION}::AkonadiCore KPim${KF_MAJOR_VERSION}::AkonadiNotes KF${KF_MAJOR_VERSION}::CalendarCore KPim${KF_MAJOR_VERSION}::GrantleeTheme KF${KF_MAJOR_VERSION}::XmlGui)
+    target_link_libraries( ${_name} KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime KPim6::AkonadiCore KPim6::AkonadiNotes KF6::CalendarCore KPim6::GrantleeTheme KF6::XmlGui)
 endmacro ()
 
 configure_file(

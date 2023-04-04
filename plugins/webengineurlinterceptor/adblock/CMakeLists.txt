@@ -17,14 +17,14 @@ ecm_qt_declare_logging_category(webengineviewer_adblockplugin HEADER adblockinte
 
 
 target_link_libraries(webengineviewer_adblockplugin
-    KPim${KF_MAJOR_VERSION}::MessageViewer
+    KPim6::MessageViewer
     Qt::WebEngineWidgets
-    KF${KF_MAJOR_VERSION}::ItemViews
+    KF6::ItemViews
     adblocklibprivate
-    KF${KF_MAJOR_VERSION}::KIOWidgets
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KF${KF_MAJOR_VERSION}::I18n
-    KPim${KF_MAJOR_VERSION}::WebEngineViewer
+    KF6::KIOWidgets
+    KF6::XmlGui
+    KF6::I18n
+    KPim6::WebEngineViewer
     )
 
 if(BUILD_TESTING)

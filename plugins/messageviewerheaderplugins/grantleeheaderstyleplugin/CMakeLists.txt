@@ -11,7 +11,7 @@ target_sources(messageviewer_grantleeheaderstyleplugin PRIVATE
 )
 
 target_link_libraries(messageviewer_grantleeheaderstyleplugin
-  KPim${KF_MAJOR_VERSION}::MessageViewer
-  KPim${KF_MAJOR_VERSION}::GrantleeTheme
-  KF${KF_MAJOR_VERSION}::XmlGui
+  KPim6::MessageViewer
+  KPim6::GrantleeTheme
+  KF6::XmlGui
 )

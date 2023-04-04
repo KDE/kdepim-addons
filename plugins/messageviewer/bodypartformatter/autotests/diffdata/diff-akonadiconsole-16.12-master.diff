@@ -54,8 +54,8 @@ index b4ef75c..258dcc1 100644
 +set(KCONTACTS_LIB_VERSION "5.4.40")
 +set(KMIME_LIB_VERSION "5.4.40")
  
- # Find KF5 package
- find_package(KF${KF_MAJOR_VERSION}Completion ${KF5_VERSION} CONFIG REQUIRED)
+ # Find KF6 package
+ find_package(KF6Completion ${KF6_VERSION} CONFIG REQUIRED)
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
 index 4986439..9f3e884 100644
 --- a/src/CMakeLists.txt
@@ -69,13 +69,13 @@ index 4986439..9f3e884 100644
      )
  
 @@ -89,6 +90,7 @@ target_link_libraries(akonadiconsole_bin
-     KPim${KF_MAJOR_VERSION}::AkonadiCore
-     KPim${KF_MAJOR_VERSION}::AkonadiPrivate
-     KF5::AkonadiContact
-+    KF5::AkonadiXml
-     KF5::CalendarSupport
-     KF${KF_MAJOR_VERSION}::CalendarCore
-     KPim${KF_MAJOR_VERSION}::Libkdepim
+     KPim6::AkonadiCore
+     KPim6::AkonadiPrivate
+     KF6::AkonadiContact
++    KF6::AkonadiXml
+     KF6::CalendarSupport
+     KF6::CalendarCore
+     KPim6::Libkdepim
 diff --git a/src/agentconfigdialog.h b/src/agentconfigdialog.h
 index ff27c29..2ff0c62 100644
 --- a/src/agentconfigdialog.h

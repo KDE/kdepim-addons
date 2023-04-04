@@ -16,7 +16,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(datenums
-  KPim${KF_MAJOR_VERSION}::EventViews
+  KPim6::EventViews
 )
 install(TARGETS
   datenums

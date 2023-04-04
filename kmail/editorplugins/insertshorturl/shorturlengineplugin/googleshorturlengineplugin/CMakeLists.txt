@@ -6,7 +6,7 @@ target_sources(pimcommon_googleshorturlengineplugin PRIVATE
 
 
 target_link_libraries(pimcommon_googleshorturlengineplugin
-  KPim${KF_MAJOR_VERSION}::PimCommon
+  KPim6::PimCommon
 )
 
 install(TARGETS pimcommon_googleshorturlengineplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/pimcommon)

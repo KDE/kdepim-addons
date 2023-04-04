@@ -7,10 +7,10 @@ macro(add_templateparserplugin_unittest _source _extrasources)
   add_test(NAME ${_name} COMMAND ${_name})
   ecm_mark_as_test(templateparserplugin-${_name})
   target_link_libraries(${_name}
-    KPim${KF_MAJOR_VERSION}::TemplateParser
-    KPim${KF_MAJOR_VERSION}::AkonadiContact
+    KPim6::TemplateParser
+    KPim6::AkonadiContact
     Qt::Test
-    KF${KF_MAJOR_VERSION}::Service
+    KF6::Service
   )
 endmacro()
 

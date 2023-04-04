@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 add_library(kitinerary_grantlee_extension MODULE grantleeextension.cpp grantleeextension.h)
 target_link_libraries(kitinerary_grantlee_extension
-    KPim${KF_MAJOR_VERSION}::Itinerary
-    KF${KF_MAJOR_VERSION}::Contacts
+    KPim6::Itinerary
+    KF6::Contacts
     ${TEMPLATES_LIB}
 )
 if (QT_MAJOR_VERSION STREQUAL "5")

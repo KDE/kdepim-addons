@@ -10,7 +10,7 @@ target_sources(messageviewer_longheaderstyleplugin PRIVATE
 
 
 target_link_libraries(messageviewer_longheaderstyleplugin
-  KPim${KF_MAJOR_VERSION}::MessageViewer
-  KF${KF_MAJOR_VERSION}::XmlGui
-  KF${KF_MAJOR_VERSION}::I18n
+  KPim6::MessageViewer
+  KF6::XmlGui
+  KF6::I18n
 )

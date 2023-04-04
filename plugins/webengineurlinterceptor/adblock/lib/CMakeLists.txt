@@ -58,16 +58,16 @@ target_link_libraries(adblocklibprivate
     Qt::Core
     
     Qt::WebEngineWidgets
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::ItemViews
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KPim${KF_MAJOR_VERSION}::PimCommon
-    KF${KF_MAJOR_VERSION}::KIOWidgets
-    KPim${KF_MAJOR_VERSION}::WebEngineViewer
-    KF${KF_MAJOR_VERSION}::TextWidgets
-    KPim${KF_MAJOR_VERSION}::PimTextEdit
-    KPim${KF_MAJOR_VERSION}::Libkdepim
-    KF${KF_MAJOR_VERSION}::SyntaxHighlighting
+    KF6::I18n
+    KF6::ItemViews
+    KF6::ConfigCore
+    KPim6::PimCommon
+    KF6::KIOWidgets
+    KPim6::WebEngineViewer
+    KF6::TextWidgets
+    KPim6::PimTextEdit
+    KPim6::Libkdepim
+    KF6::SyntaxHighlighting
     )
 
 set_target_properties(adblocklibprivate

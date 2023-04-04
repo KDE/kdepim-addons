@@ -5,7 +5,7 @@ macro(add_messageviewer_expireaccounttrash_unittest _source)
     ecm_add_test(${_source}
         TEST_NAME ${_name}
         NAME_PREFIX "messageviewer-"
-        LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MessageViewer Qt::Test expireaccounttrashfolderconfig
+        LINK_LIBRARIES KPim6::MessageViewer Qt::Test expireaccounttrashfolderconfig
     )
 endmacro ()
 

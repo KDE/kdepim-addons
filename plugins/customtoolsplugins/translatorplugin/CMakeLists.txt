@@ -13,10 +13,10 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(pimcommon_translatorplugin
-  KPim${KF_MAJOR_VERSION}::PimCommon
-  KPim${KF_MAJOR_VERSION}::PimTextEdit
-  KF${KF_MAJOR_VERSION}::XmlGui
-  KF${KF_MAJOR_VERSION}::I18n
-  KF${KF_MAJOR_VERSION}::TextTranslator
+  KPim6::PimCommon
+  KPim6::PimTextEdit
+  KF6::XmlGui
+  KF6::I18n
+  KF6::TextTranslator
 )
 

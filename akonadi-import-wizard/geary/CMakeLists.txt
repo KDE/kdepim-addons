@@ -18,12 +18,12 @@ endif()
 
 
 target_link_libraries(gearyimporterplugin
-  KPim${KF_MAJOR_VERSION}::ImportWizard
-  KF${KF_MAJOR_VERSION}::XmlGui
-  KF${KF_MAJOR_VERSION}::I18n
-  KF${KF_MAJOR_VERSION}::Contacts
-  KPim${KF_MAJOR_VERSION}::MailImporterAkonadi
-  KPim${KF_MAJOR_VERSION}::MailTransport
-  KPim${KF_MAJOR_VERSION}::IdentityManagement
-  KPim${KF_MAJOR_VERSION}::MailCommon
+  KPim6::ImportWizard
+  KF6::XmlGui
+  KF6::I18n
+  KF6::Contacts
+  KPim6::MailImporterAkonadi
+  KPim6::MailTransport
+  KPim6::IdentityManagement
+  KPim6::MailCommon
 )

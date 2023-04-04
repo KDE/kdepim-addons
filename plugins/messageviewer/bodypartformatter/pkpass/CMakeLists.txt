@@ -14,11 +14,11 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_pkpass HEADER pk
 
 
 target_link_libraries(messageviewer_bodypartformatter_pkpass
-    KF${KF_MAJOR_VERSION}::Archive
-    KF${KF_MAJOR_VERSION}::Prison
-    KPim${KF_MAJOR_VERSION}::MessageViewer
+    KF6::Archive
+    KF6::Prison
+    KPim6::MessageViewer
     ${TEMPLATES_LIB}
-    KPim${KF_MAJOR_VERSION}::PkPass
+    KPim6::PkPass
     )
 install(TARGETS messageviewer_bodypartformatter_pkpass DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)
 

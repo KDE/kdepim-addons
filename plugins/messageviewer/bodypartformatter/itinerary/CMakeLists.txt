@@ -28,15 +28,15 @@ endif()
 
 target_compile_definitions(messageviewer_bodypartformatter_semantic PRIVATE -DTRANSLATION_DOMAIN=\"messageviewer_semantic_plugin\")
 target_link_libraries(messageviewer_bodypartformatter_semantic
-    KF${KF_MAJOR_VERSION}::KIOGui
-    KPim${KF_MAJOR_VERSION}::MessageViewer
-    KPim${KF_MAJOR_VERSION}::CalendarSupport
-    KF${KF_MAJOR_VERSION}::I18n
-    KPim${KF_MAJOR_VERSION}::GrantleeTheme
+    KF6::KIOGui
+    KPim6::MessageViewer
+    KPim6::CalendarSupport
+    KF6::I18n
+    KPim6::GrantleeTheme
     ${TEMPLATES_LIB}
     Qt::DBus
-    KF${KF_MAJOR_VERSION}::Prison
-    KPim${KF_MAJOR_VERSION}::Itinerary
-    KPim${KF_MAJOR_VERSION}::PkPass
+    KF6::Prison
+    KPim6::Itinerary
+    KPim6::PkPass
     )
 install(TARGETS messageviewer_bodypartformatter_semantic DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)

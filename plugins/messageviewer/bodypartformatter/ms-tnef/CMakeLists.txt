@@ -15,13 +15,13 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_mstn
 
 target_link_libraries(messageviewer_bodypartformatter_application_mstnef
     Qt::Core
-    KF${KF_MAJOR_VERSION}::CalendarCore
-    KPim${KF_MAJOR_VERSION}::CalendarUtils
-    KPim${KF_MAJOR_VERSION}::Tnef
-    KPim${KF_MAJOR_VERSION}::MessageCore
-    KPim${KF_MAJOR_VERSION}::MessageViewer
-    KF${KF_MAJOR_VERSION}::IconThemes
-    KF${KF_MAJOR_VERSION}::I18n
+    KF6::CalendarCore
+    KPim6::CalendarUtils
+    KPim6::Tnef
+    KPim6::MessageCore
+    KPim6::MessageViewer
+    KF6::IconThemes
+    KF6::I18n
     ${TEMPLATES_LIB}
     )
 install(TARGETS messageviewer_bodypartformatter_application_mstnef DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)

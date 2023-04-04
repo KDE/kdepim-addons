@@ -7,8 +7,8 @@ add_library(lunarphases MODULE lunarphases.cpp lunarphases.h)
 
 
 target_link_libraries(lunarphases
-  KF${KF_MAJOR_VERSION}::Holidays
-  KPim${KF_MAJOR_VERSION}::EventViews
+  KF6::Holidays
+  KPim6::EventViews
 )
 
 install(TARGETS

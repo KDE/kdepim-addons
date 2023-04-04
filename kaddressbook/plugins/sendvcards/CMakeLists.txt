@@ -24,7 +24,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_sendvcardsplugin PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(kaddressbook_sendvcardsplugin
-    KPim${KF_MAJOR_VERSION}::PimCommon KF${KF_MAJOR_VERSION}::Completion  KPim${KF_MAJOR_VERSION}::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::MimeTreeParser KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Service KF${KF_MAJOR_VERSION}::KIOGui
+    KPim6::PimCommon KF6::Completion  KPim6::PimCommonAkonadi KF6::XmlGui KPim6::MimeTreeParser KF6::I18n KF6::Service KF6::KIOGui
     )
 
 if (BUILD_TESTING)

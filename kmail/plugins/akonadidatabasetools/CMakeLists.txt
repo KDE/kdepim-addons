@@ -26,10 +26,10 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(akonadidatasetools
-    KF${KF_MAJOR_VERSION}::I18n
-    KPim${KF_MAJOR_VERSION}::MessageComposer
-    KF${KF_MAJOR_VERSION}::KIOWidgets
-    KF${KF_MAJOR_VERSION}::XmlGui
+    KF6::I18n
+    KPim6::MessageComposer
+    KF6::KIOWidgets
+    KF6::XmlGui
     )
 
 set_target_properties(akonadidatasetools
@@ -43,7 +43,7 @@ target_sources(kmail_akonadidatabasetoolplugin PRIVATE
 )
 
 target_link_libraries(kmail_akonadidatabasetoolplugin
-    KPim${KF_MAJOR_VERSION}::PimCommon KPim${KF_MAJOR_VERSION}::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::Libkdepim KF${KF_MAJOR_VERSION}::I18n akonadidatasetools
+    KPim6::PimCommon KPim6::PimCommonAkonadi KF6::XmlGui KPim6::Libkdepim KF6::I18n akonadidatasetools
     )
 
 install(TARGETS akonadidatasetools ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)

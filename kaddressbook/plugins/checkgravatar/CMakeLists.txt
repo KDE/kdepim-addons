@@ -32,7 +32,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kaddressbook_checkgravatarplugin
-    KPim${KF_MAJOR_VERSION}::PimCommon KF${KF_MAJOR_VERSION}::Completion  KPim${KF_MAJOR_VERSION}::PimCommonAkonadi KF${KF_MAJOR_VERSION}::XmlGui KPim${KF_MAJOR_VERSION}::Gravatar KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Contacts
+    KPim6::PimCommon KF6::Completion  KPim6::PimCommonAkonadi KF6::XmlGui KPim6::Gravatar KF6::I18n KF6::Contacts
     )
 
 if (BUILD_TESTING)

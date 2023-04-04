@@ -10,8 +10,8 @@ endif()
 
 target_link_libraries(messageviewer_bodypartformatter_text_highlighter
     Qt::Core
-    KPim${KF_MAJOR_VERSION}::MessageViewer
-    KF${KF_MAJOR_VERSION}::SyntaxHighlighting
+    KPim6::MessageViewer
+    KF6::SyntaxHighlighting
     ${TEMPLATES_LIB}
 )
 

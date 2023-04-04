@@ -19,7 +19,7 @@ endif()
 
 target_link_libraries(shorturlpluginprivate
     PRIVATE
-    Qt::Network KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::CoreAddons Qt::Gui
+    Qt::Network KF6::I18n KF6::CoreAddons Qt::Gui
     )
 
 set_target_properties(shorturlpluginprivate
@@ -51,7 +51,7 @@ ecm_qt_declare_logging_category(kmail_insertshorturleditorplugin HEADER kmail_in
 
 
 target_link_libraries(kmail_insertshorturleditorplugin
-    KPim${KF_MAJOR_VERSION}::MessageComposer KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n shorturlpluginprivate KF${KF_MAJOR_VERSION}::CoreAddons
+    KPim6::MessageComposer KF6::XmlGui KF6::I18n shorturlpluginprivate KF6::CoreAddons
     )
 
 if(BUILD_TESTING)

@@ -15,10 +15,10 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_gravatarconfigplugin
-  KPim${KF_MAJOR_VERSION}::MessageViewer
-  KPim${KF_MAJOR_VERSION}::PimCommon
-  KPim${KF_MAJOR_VERSION}::Gravatar
-  KF${KF_MAJOR_VERSION}::I18n
+  KPim6::MessageViewer
+  KPim6::PimCommon
+  KPim6::Gravatar
+  KF6::I18n
 )
 
 if(BUILD_TESTING)

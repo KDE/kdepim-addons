@@ -8,8 +8,8 @@ target_sources(messageviewer_dkimconfigplugin PRIVATE
 
 
 target_link_libraries(messageviewer_dkimconfigplugin
-    KPim${KF_MAJOR_VERSION}::MessageViewer
-    KF${KF_MAJOR_VERSION}::I18n
+    KPim6::MessageViewer
+    KF6::I18n
     dkimverifyconfigure
     )
 
@@ -47,11 +47,11 @@ endif()
 
 generate_export_header(dkimverifyconfigure BASE_NAME libdkimverifyconfigure)
 target_link_libraries(dkimverifyconfigure
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::ConfigCore
-    KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KPim${KF_MAJOR_VERSION}::MessageViewer
-    KF${KF_MAJOR_VERSION}::ItemViews
+    KF6::I18n
+    KF6::ConfigCore
+    KF6::WidgetsAddons
+    KPim6::MessageViewer
+    KF6::ItemViews
     )
 
 set_target_properties(dkimverifyconfigure

@@ -38,11 +38,11 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 generate_export_header(kmailmarkdown BASE_NAME libkmailmarkdown)
 target_link_libraries(kmailmarkdown
-    KPim${KF_MAJOR_VERSION}::MessageComposer
-    KF${KF_MAJOR_VERSION}::I18n
+    KPim6::MessageComposer
+    KF6::I18n
     Qt::WebEngineWidgets
     discount::Lib
-    KF${KF_MAJOR_VERSION}::SyntaxHighlighting
+    KF6::SyntaxHighlighting
 )
 
 set_target_properties(kmailmarkdown
