@@ -1,8 +1,0 @@
-File=webengineurlinterceptoradblock.kcfg
-ClassName=AdBlockSettings
-NameSpace=AdBlock
-Mutators=true
-Singleton=true
-ItemAccessors=true
-SetUserTexts=true
-TranslationSystem=kde

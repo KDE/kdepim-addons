@@ -1,8 +1,0 @@
-Version=5
-
-Id=webengineurlinterceptoradblock_move_settings
-File=kmail2rc,webengineurlinterceptoradblockrc
-Group=Reader,General
-Key=AdBlockEnabled,AdBlockEnabled
-Key=HideAdsEnabled,HideAdsEnabled
-Key=AdBlockUpdateInterval,AdBlockUpdateInterval
