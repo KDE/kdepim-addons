@@ -31,7 +31,6 @@
         "Description[x-test]": "xxThis plugin allows you to share text.xx",
         "Description[zh_CN]": "此插件允许您共享文本。",
         "EnabledByDefault": "false",
-        "Id": "kmailsharetext",
         "Name": "Share Text",
         "Name[ar]": "مشاركة النص",
         "Name[az]": "Mətni paylaşın",

@@ -35,7 +35,6 @@
         "Description[x-test]": "xxThis plugin allows you to merge contacts.xx",
         "Description[zh_CN]": "此插件允许您合并联系人。",
         "EnabledByDefault": "true",
-        "Id": "kaddressbookmergecontact",
         "Name": "Merge Contacts",
         "Name[ar]": "دمج المتراسلين",
         "Name[az]": "Əlaqələri birləşdirin",

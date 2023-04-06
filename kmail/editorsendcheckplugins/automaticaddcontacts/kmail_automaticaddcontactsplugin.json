@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to add automatically email address to addressbook.xx",
         "Description[zh_CN]": "此插件允许您自动添加电子邮件地址到地址簿。",
         "EnabledByDefault": "false",
-        "Id": "kmailautomaticaddcontacts",
         "Name": "Automatic Add Contacts",
         "Name[ar]": "إضافة المتراسلين آليًّا",
         "Name[az]": "Avtomatik Əlaqə əlavə edilməsi",

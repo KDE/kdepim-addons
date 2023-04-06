@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin activates some expert actions.xx",
         "Description[zh_CN]": "此插件激活一些专家操作。",
         "EnabledByDefault": "false",
-        "Id": "kmailexpert",
         "Name": "Expert Plugin",
         "Name[ar]": "ملحقة الخبراء",
         "Name[az]": "Təcrübəli istifadəçilər üçün",

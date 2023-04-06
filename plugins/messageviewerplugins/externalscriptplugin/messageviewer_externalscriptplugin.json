@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to use an external script against the message viewer.xx",
         "Description[zh_CN]": "此插件允许您在信件阅读器中使用外部脚本。",
         "EnabledByDefault": "false",
-        "Id": "messageviewerexternalscriptplugin",
         "Name": "External Script",
         "Name[ar]": "السّكربت الخارجيّ",
         "Name[az]": "Xarici skript",

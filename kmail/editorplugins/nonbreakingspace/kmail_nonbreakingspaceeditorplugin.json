@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to add non breaking space. It's useful in french language.xx",
         "Description[zh_CN]": "此插件允许您添加不换行空格。它在法语中非常有用。",
         "EnabledByDefault": "false",
-        "Id": "kmailinsertnonbreakingspace",
         "Name": "Insert Non Breaking Space",
         "Name[ar]": "إدراج مسافة واصلة",
         "Name[az]": "Qırılmayan boşluq əlavə edin",

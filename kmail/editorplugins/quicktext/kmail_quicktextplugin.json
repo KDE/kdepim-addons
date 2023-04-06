@@ -30,7 +30,6 @@
         "Description[x-test]": "xxThis plugin allows you to insert special text as attachment name, emails etc.xx",
         "Description[zh_CN]": "此插件可以让您插入特殊文本作为附件名称、电子邮件等。",
         "EnabledByDefault": "false",
-        "Id": "kmailquicktext",
         "Name": "Quick Text",
         "Name[ar]": "نص سريع",
         "Name[az]": "Sürətli mətn",

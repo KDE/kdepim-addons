@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin expands URL.xx",
         "Description[zh_CN]": "此插件可展开 URL。",
         "EnabledByDefault": "false",
-        "Id": "messageviewerexpandurl",
         "Name": "Expand URL",
         "Name[ar]": "توسيع المسارات",
         "Name[az]": "Geniş URL",

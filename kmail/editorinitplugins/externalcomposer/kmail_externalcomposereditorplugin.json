@@ -35,7 +35,6 @@
         "Description[x-test]": "xxThis plugin allows you to use an external composer.xx",
         "Description[zh_CN]": "此插件允许您使用外部编辑器。",
         "EnabledByDefault": "false",
-        "Id": "kmailexternalcomposer",
         "Name": "Open External Composer",
         "Name[ar]": "افتح المؤلّف الخارجيّ",
         "Name[az]": "Xarici redaktoru açın",

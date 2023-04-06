@@ -35,7 +35,6 @@
         "Description[x-test]": "xxThis plugin allows you to check the Gravatar images.xx",
         "Description[zh_CN]": "此插件允许您检查 Gravatar 头像。",
         "EnabledByDefault": "false",
-        "Id": "kaddressbookcheckgravatar",
         "Name": "Check Gravatar",
         "Name[ar]": "فحص «غرافاتار»",
         "Name[az]": "Gravatar ilə inteqrasiya",

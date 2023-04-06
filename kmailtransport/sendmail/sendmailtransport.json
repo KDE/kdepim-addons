@@ -1,6 +1,5 @@
 {
     "KPlugin": {
-        "Id": "sendmailtransport",
         "Name": "SendMail Mail Transport",
         "Name[ar]": "نقولات بريد SendMail",
         "Name[az]": "SendMail göndərmə metodu",

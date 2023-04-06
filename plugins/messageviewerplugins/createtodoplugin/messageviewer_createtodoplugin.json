@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to create a todo from a message.xx",
         "Description[zh_CN]": "此插件允许您从信件创建待办事项。",
         "EnabledByDefault": "false",
-        "Id": "messageviewercreatetodoplugin",
         "Name": "Create Todo",
         "Name[ar]": "إنشاء المهامّ",
         "Name[az]": "Tapşırıq yaradın",

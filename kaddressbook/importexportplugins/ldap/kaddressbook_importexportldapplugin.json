@@ -35,7 +35,6 @@
         "Description[x-test]": "xxThis plugin allows you to import/export LDAP contacts.xx",
         "Description[zh_CN]": "此插件能让您导入或导出 LDAP 联系人。",
         "EnabledByDefault": "false",
-        "Id": "kaddressbookimportexportldap",
         "Name": "Import/Export LDAP Contacts",
         "Name[ar]": "استيراد/تصدير متراسلو LDAP",
         "Name[az]": "LDAP idxal/ixrac",

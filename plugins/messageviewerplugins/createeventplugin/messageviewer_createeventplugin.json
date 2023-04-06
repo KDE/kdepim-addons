@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to create an event from a message.xx",
         "Description[zh_CN]": "此插件允许您从信件创建日历事件。",
         "EnabledByDefault": "false",
-        "Id": "messageviewercreateeventplugin",
         "Name": "Create Event",
         "Name[ar]": "إنشاء الأحداث",
         "Name[az]": "Tədbir yaradın",

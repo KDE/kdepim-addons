@@ -1,6 +1,5 @@
 {
     "KPlugin": {
-        "Id": "templateparseremailaddressrequesterakonadi",
         "Name": "Email Address Akonadi Requester for Template Parser library",
         "Name[ar]": "أداة طلب عنوان البريد لِ‍مكتبة محلّل القوالب",
         "Name[az]": "Şablonların araşdırılması üçün e-poçtların tələb olunması təşəbbüskarı",

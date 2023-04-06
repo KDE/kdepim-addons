@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to change the case of the selected text.xx",
         "Description[zh_CN]": "此插件允许您更改所选文本的大小写。",
         "EnabledByDefault": "false",
-        "Id": "kmailchangecase",
         "Name": "Change Case",
         "Name[ar]": "تغيير حالة الأحرف",
         "Name[az]": "Böyük/kiçik hərfləri dəyişin",

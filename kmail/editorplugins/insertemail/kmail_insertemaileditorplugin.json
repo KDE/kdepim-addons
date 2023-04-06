@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to select email and insert it in composer.xx",
         "Description[zh_CN]": "此插件允许您选择邮件地址并插入到邮件编辑器中。",
         "EnabledByDefault": "false",
-        "Id": "kmailinsertemail",
         "Name": "Insert Email",
         "Name[ar]": "إدراج البريد",
         "Name[az]": "E-poçt ünvanı daxil edin",

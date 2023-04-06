@@ -30,7 +30,6 @@
         "Description[x-test]": "xxThis plugin allows you to generate html from markdown languagexx",
         "Description[zh_CN]": "此插件允许您根据 Markdown 语言生成 HTML",
         "EnabledByDefault": "false",
-        "Id": "kmailmarkdown",
         "Name": "Markdown",
         "Name[ar]": "مارك‌داون",
         "Name[az]": "Markdown",

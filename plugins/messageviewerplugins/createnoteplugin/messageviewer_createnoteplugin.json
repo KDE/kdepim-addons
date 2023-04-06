@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to create a note from a message.xx",
         "Description[zh_CN]": "此插件允许您从信件创建便笺。",
         "EnabledByDefault": "false",
-        "Id": "messageviewercreatenoteplugin",
         "Name": "Create Note",
         "Name[ar]": "إنشاء ملاحظة",
         "Name[az]": "Qeyd yazın",

@@ -31,7 +31,6 @@
         "Description[x-test]": "xxThis plugin allows you to check grammar using LanguageTool.xx",
         "Description[zh_CN]": "此插件可以让您使用语言工具检查语法。",
         "EnabledByDefault": "false",
-        "Id": "kmaillanguagetool",
         "Name": "Grammar Checker (LanguageTool)",
         "Name[ar]": "مدقق النحو (LanguageTool)",
         "Name[az]": "Qrammatika yoxlaması (LanguageTool)",

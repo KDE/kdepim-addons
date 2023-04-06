@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to check mail before to send itxx",
         "Description[zh_CN]": "此插件允许您在发送前检查邮件",
         "EnabledByDefault": "false",
-        "Id": "kmailconfirmaddress",
         "Name": "Confirm Address",
         "Name[ar]": "تأكيد العنوان",
         "Name[az]": "Ünvanı təsdiqləyin",

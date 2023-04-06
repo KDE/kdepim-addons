@@ -35,7 +35,6 @@
         "Description[x-test]": "xxThis plugin allows you to import/export GMX.xx",
         "Description[zh_CN]": "此插件能让您导入或导出 GMX。",
         "EnabledByDefault": "false",
-        "Id": "kaddressbookimportexportgmx",
         "Name": "Import Export GMX",
         "Name[ar]": "استيراد وتصدير GMX",
         "Name[az]": "GMX idxal/ixrac",

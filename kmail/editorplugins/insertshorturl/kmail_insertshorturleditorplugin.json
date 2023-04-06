@@ -34,7 +34,6 @@
         "Description[x-test]": "xxThis plugin allows you to generate a shorter URL.xx",
         "Description[zh_CN]": "此插件允许您生成较短的 URL。",
         "EnabledByDefault": "false",
-        "Id": "kmailinsertshorturl",
         "Name": "Insert Short URL",
         "Name[ar]": "إدراج مسار مختصر",
         "Name[az]": "Qısa URL daxil edin",

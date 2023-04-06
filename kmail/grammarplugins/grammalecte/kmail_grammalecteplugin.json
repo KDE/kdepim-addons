@@ -31,7 +31,6 @@
         "Description[x-test]": "xxThis plugin allows you to check grammar in french only.xx",
         "Description[zh_CN]": "此插件可以让您只检查法语语法。",
         "EnabledByDefault": "false",
-        "Id": "kmailgrammalecte",
         "Name": "French Grammar Checker",
         "Name[ar]": "المدقق النحوي الفرنسي",
         "Name[az]": "Fransız dili qrammatika yoxlaması",

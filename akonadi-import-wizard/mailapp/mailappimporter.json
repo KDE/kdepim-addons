@@ -1,6 +1,5 @@
 {
     "KPlugin": {
-        "Id": "mailappimporter",
         "Name": "MailApp Importer",
         "Name[ar]": "مستورد MailApp",
         "Name[az]": "MailApp idxalçısı",

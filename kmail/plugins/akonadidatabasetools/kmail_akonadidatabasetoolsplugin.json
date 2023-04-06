@@ -26,7 +26,6 @@
         "Description[uk]": "За допомогою цього додатка можна керувати базою даних Akonadi.",
         "Description[x-test]": "xxThis plugin allows you to manage Akonadi database.xx",
         "EnabledByDefault": "false",
-        "Id": "kmailakonadidatabasetool",
         "Name": "Akonadi Database Manager",
         "Name[ar]": "مدير قاعدة بيانات أكونادي",
         "Name[az]": "Akonadi verilənlər bazası meneceri",
