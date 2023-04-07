@@ -2,7 +2,6 @@
     "KPlugin": {
         "Description": "%{PluginDescription}",
         "EnabledByDefault": "false",
-        "Id": "kmail%{CN}",
         "Name": "%{PluginName}",
         "Version": "1.0"
     },
