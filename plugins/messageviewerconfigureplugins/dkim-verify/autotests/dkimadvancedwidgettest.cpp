@@ -23,19 +23,19 @@ void DKIMAdvancedWidgetTest::shouldHaveDefaultValues()
     auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
-    auto mCheckDKIMWhenOnlyTesting = w.findChild<QCheckBox *>(QStringLiteral("mCheckDKIMWhenOnlyTesting"));
+    auto mCheckDKIMWhenOnlyTesting = w.findChild<QCheckBox *>(QStringLiteral("kcfg_VerifySignatureWhenOnlyTest"));
     QVERIFY(mCheckDKIMWhenOnlyTesting);
     QVERIFY(!mCheckDKIMWhenOnlyTesting->text().isEmpty());
 
-    auto mUseAuthenticationResultRelaxedParser = w.findChild<QCheckBox *>(QStringLiteral("mUseAuthenticationResultRelaxedParser"));
+    auto mUseAuthenticationResultRelaxedParser = w.findChild<QCheckBox *>(QStringLiteral("kcfg_UseRelaxedParsingAuthenticationResults"));
     QVERIFY(mUseAuthenticationResultRelaxedParser);
     QVERIFY(!mUseAuthenticationResultRelaxedParser->text().isEmpty());
 
-    auto mSha1Policy = w.findChild<QComboBox *>(QStringLiteral("rsa1-policy"));
+    auto mSha1Policy = w.findChild<QComboBox *>(QStringLiteral("kcfg_PolicyRsaSha1"));
     QVERIFY(mSha1Policy);
     QVERIFY(mSha1Policy->count() > 0);
 
-    auto mSmallKeyPolicy = w.findChild<QComboBox *>(QStringLiteral("mSmallKeyPolicy"));
+    auto mSmallKeyPolicy = w.findChild<QComboBox *>(QStringLiteral("kcfg_PublicRsaTooSmall"));
     QVERIFY(mSmallKeyPolicy);
     QVERIFY(mSmallKeyPolicy->count() > 0);
 }

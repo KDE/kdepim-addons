@@ -8,12 +8,11 @@
 #include <KLocalizedString>
 #include <MessageViewer/DKIMManager>
 #include <MessageViewer/MessageViewerSettings>
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QLabel>
 #include <QVBoxLayout>
-using namespace PimCommon::ConfigureImmutableWidgetUtils;
+
 DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     : QWidget(parent)
     , mEnableDkimSupport(new QCheckBox(i18n("Enable DKIM Support"), this))
@@ -24,11 +23,11 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mEnableDkimSupport->setObjectName(QStringLiteral("enableDkimSupport"));
+    mEnableDkimSupport->setObjectName(QStringLiteral("kcfg_EnabledDkim"));
     mEnableDkimSupport->setChecked(false);
     mainLayout->addWidget(mEnableDkimSupport);
 
-    mSaveResult->setObjectName(QStringLiteral("mSaveResult"));
+    mSaveResult->setObjectName(QStringLiteral("kcfg_SaveDkimResult"));
     mSaveResult->setChecked(false);
     mainLayout->addWidget(mSaveResult);
 
@@ -39,12 +38,12 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     saveKeyLabel->setObjectName(QStringLiteral("saveKeyLabel"));
     saveKeyLayout->addWidget(saveKeyLabel);
 
-    mSaveKey->setObjectName(QStringLiteral("mSaveKey"));
+    mSaveKey->setObjectName(QStringLiteral("kcfg_SaveKey"));
     mSaveKey->addItems({i18n("Nothing"), i18n("Save"), i18n("Save and Compare")});
     saveKeyLayout->addWidget(mSaveKey);
     saveKeyLayout->addStretch(1);
 
-    mUseOnlyAuthenticationResult->setObjectName(QStringLiteral("mUseOnlyAuthenticationResult"));
+    mUseOnlyAuthenticationResult->setObjectName(QStringLiteral("kcfg_UseOnlyAuthenticationResults"));
     mUseOnlyAuthenticationResult->setChecked(false);
     mainLayout->addWidget(mUseOnlyAuthenticationResult);
 
@@ -53,28 +52,9 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
 
 DKIMGeneralWidget::~DKIMGeneralWidget() = default;
 
-void DKIMGeneralWidget::loadSettings()
-{
-    loadWidget(mEnableDkimSupport, MessageViewer::MessageViewerSettings::self()->enabledDkimItem());
-    loadWidget(mSaveResult, MessageViewer::MessageViewerSettings::self()->saveDkimResultItem());
-    loadWidget(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
-    loadWidget(mUseOnlyAuthenticationResult, MessageViewer::MessageViewerSettings::self()->useOnlyAuthenticationResultsItem());
-}
-
 void DKIMGeneralWidget::saveSettings()
 {
-    saveCheckBox(mEnableDkimSupport, MessageViewer::MessageViewerSettings::self()->enabledDkimItem());
-    saveCheckBox(mSaveResult, MessageViewer::MessageViewerSettings::self()->saveDkimResultItem());
-    saveComboBox(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
     if (!mEnableDkimSupport->isChecked()) {
         MessageViewer::DKIMManager::self()->clearInfoWidget();
     }
-    loadWidget(mUseOnlyAuthenticationResult, MessageViewer::MessageViewerSettings::self()->useOnlyAuthenticationResultsItem());
-}
-
-void DKIMGeneralWidget::resetSettings()
-{
-    const bool bUseDefaults = MessageViewer::MessageViewerSettings::self()->useDefaults(true);
-    loadSettings();
-    MessageViewer::MessageViewerSettings::self()->useDefaults(bUseDefaults);
 }

@@ -8,12 +8,10 @@
 #include "dkimauthenticationverifiedserverdialog.h"
 #include <KLocalizedString>
 #include <MessageViewer/MessageViewerSettings>
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QFormLayout>
 #include <QPushButton>
-using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     : QWidget(parent)
@@ -25,17 +23,17 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mCheckDKIMWhenOnlyTesting->setObjectName(QStringLiteral("mCheckDKIMWhenOnlyTesting"));
+    mCheckDKIMWhenOnlyTesting->setObjectName(QStringLiteral("kcfg_VerifySignatureWhenOnlyTest"));
     mainLayout->addRow(mCheckDKIMWhenOnlyTesting);
 
-    mUseAuthenticationResultRelaxedParser->setObjectName(QStringLiteral("mUseAuthenticationResultRelaxedParser"));
+    mUseAuthenticationResultRelaxedParser->setObjectName(QStringLiteral("kcfg_UseRelaxedParsingAuthenticationResults"));
     mainLayout->addRow(mUseAuthenticationResultRelaxedParser);
 
-    mSha1Policy->setObjectName(QStringLiteral("rsa1-policy"));
+    mSha1Policy->setObjectName(QStringLiteral("kcfg_PolicyRsaSha1"));
     mSha1Policy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
     mainLayout->addRow(i18n("Treat RSA-SHA1 sign algorithm as:"), mSha1Policy);
 
-    mSmallKeyPolicy->setObjectName(QStringLiteral("mSmallKeyPolicy"));
+    mSmallKeyPolicy->setObjectName(QStringLiteral("kcfg_PublicRsaTooSmall"));
     mSmallKeyPolicy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
     mainLayout->addRow(i18n("Treat small Key as:"), mSmallKeyPolicy);
 
@@ -51,27 +49,4 @@ void DKIMAdvancedWidget::slotConfigureAuthenticationServer()
 {
     DKIMAuthenticationVerifiedServerDialog dlg(this);
     dlg.exec();
-}
-
-void DKIMAdvancedWidget::loadSettings()
-{
-    loadWidget(mSha1Policy, MessageViewer::MessageViewerSettings::self()->policyRsaSha1Item());
-    loadWidget(mCheckDKIMWhenOnlyTesting, MessageViewer::MessageViewerSettings::self()->verifySignatureWhenOnlyTestItem());
-    loadWidget(mUseAuthenticationResultRelaxedParser, MessageViewer::MessageViewerSettings::self()->useRelaxedParsingAuthenticationResultsItem());
-    loadWidget(mSmallKeyPolicy, MessageViewer::MessageViewerSettings::self()->publicRsaTooSmallItem());
-}
-
-void DKIMAdvancedWidget::saveSettings()
-{
-    saveComboBox(mSha1Policy, MessageViewer::MessageViewerSettings::self()->policyRsaSha1Item());
-    saveCheckBox(mCheckDKIMWhenOnlyTesting, MessageViewer::MessageViewerSettings::self()->verifySignatureWhenOnlyTestItem());
-    saveCheckBox(mUseAuthenticationResultRelaxedParser, MessageViewer::MessageViewerSettings::self()->useRelaxedParsingAuthenticationResultsItem());
-    saveComboBox(mSmallKeyPolicy, MessageViewer::MessageViewerSettings::self()->publicRsaTooSmallItem());
-}
-
-void DKIMAdvancedWidget::resetSettings()
-{
-    const bool bUseDefaults = MessageViewer::MessageViewerSettings::self()->useDefaults(true);
-    loadSettings();
-    MessageViewer::MessageViewerSettings::self()->useDefaults(bUseDefaults);
 }

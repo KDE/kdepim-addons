@@ -8,13 +8,10 @@
 #include <KLocalizedString>
 #include <MessageViewer/DKIMManageRulesDialog>
 #include <MessageViewer/MessageViewerSettings>
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QCheckBox>
 #include <QPushButton>
 #include <QSpacerItem>
 #include <QVBoxLayout>
-
-using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     : QWidget(parent)
@@ -29,7 +26,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mVerifyIfEmailMustBeSigned->setObjectName(QStringLiteral("mVerifyIfEmailMustBeSigned"));
+    mVerifyIfEmailMustBeSigned->setObjectName(QStringLiteral("kcfg_CheckIfEmailShouldBeSigned"));
     mainLayout->addWidget(mVerifyIfEmailMustBeSigned);
     connect(mVerifyIfEmailMustBeSigned, &QCheckBox::toggled, this, [this](bool state) {
         mUseDMARC->setEnabled(state);
@@ -40,19 +37,19 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
         mReadAuthResultHeader->setEnabled(state);
     });
 
-    mUseDMARC->setObjectName(QStringLiteral("mUseDMARC"));
+    mUseDMARC->setObjectName(QStringLiteral("kcfg_UseDMarc"));
     mUseDMARC->setEnabled(false);
     mainLayout->addWidget(mUseDMARC);
 
-    mReadAuthResultHeader->setObjectName(QStringLiteral("mReadAuthResultHeader"));
+    mReadAuthResultHeader->setObjectName(QStringLiteral("kcfg_UseAuthenticationResults"));
     mReadAuthResultHeader->setEnabled(false);
     mainLayout->addWidget(mReadAuthResultHeader);
 
-    mUseDefaultRules->setObjectName(QStringLiteral("mUseDefaultRules"));
+    mUseDefaultRules->setObjectName(QStringLiteral("kcfg_UseDefaultRules"));
     mUseDefaultRules->setEnabled(false);
     mainLayout->addWidget(mUseDefaultRules);
 
-    mAutoGenerateRule->setObjectName(QStringLiteral("mAutoGenerateRule"));
+    mAutoGenerateRule->setObjectName(QStringLiteral("kcfg_AutogenerateRule"));
     mAutoGenerateRule->setEnabled(false);
     mainLayout->addWidget(mAutoGenerateRule);
 
@@ -63,7 +60,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     auto item = new QSpacerItem(30, 0);
     autogenerateOnlyLayout->addItem(item);
 
-    mAutoGenerateOnlyIfSenderInSDID->setObjectName(QStringLiteral("mAutoGenerateOnlyIfSenderInSDID"));
+    mAutoGenerateOnlyIfSenderInSDID->setObjectName(QStringLiteral("kcfg_AutogenerateRuleOnlyIfSenderOnSDID"));
     mAutoGenerateOnlyIfSenderInSDID->setEnabled(false);
     autogenerateOnlyLayout->addWidget(mAutoGenerateOnlyIfSenderInSDID);
 
@@ -82,30 +79,3 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
 }
 
 DKIMPolicyWidget::~DKIMPolicyWidget() = default;
-
-void DKIMPolicyWidget::loadSettings()
-{
-    loadWidget(mVerifyIfEmailMustBeSigned, MessageViewer::MessageViewerSettings::self()->checkIfEmailShouldBeSignedItem());
-    loadWidget(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
-    loadWidget(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
-    loadWidget(mAutoGenerateRule, MessageViewer::MessageViewerSettings::self()->autogenerateRuleItem());
-    loadWidget(mReadAuthResultHeader, MessageViewer::MessageViewerSettings::self()->useAuthenticationResultsItem());
-    loadWidget(mAutoGenerateOnlyIfSenderInSDID, MessageViewer::MessageViewerSettings::self()->autogenerateRuleOnlyIfSenderOnSDIDItem());
-}
-
-void DKIMPolicyWidget::saveSettings()
-{
-    saveCheckBox(mVerifyIfEmailMustBeSigned, MessageViewer::MessageViewerSettings::self()->checkIfEmailShouldBeSignedItem());
-    saveCheckBox(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
-    saveCheckBox(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
-    saveCheckBox(mAutoGenerateRule, MessageViewer::MessageViewerSettings::self()->autogenerateRuleItem());
-    saveCheckBox(mReadAuthResultHeader, MessageViewer::MessageViewerSettings::self()->useAuthenticationResultsItem());
-    saveCheckBox(mAutoGenerateOnlyIfSenderInSDID, MessageViewer::MessageViewerSettings::self()->autogenerateRuleOnlyIfSenderOnSDIDItem());
-}
-
-void DKIMPolicyWidget::resetSettings()
-{
-    const bool bUseDefaults = MessageViewer::MessageViewerSettings::self()->useDefaults(true);
-    loadSettings();
-    MessageViewer::MessageViewerSettings::self()->useDefaults(bUseDefaults);
-}

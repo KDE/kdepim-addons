@@ -6,6 +6,10 @@
 
 #include "dkimconfigurewidget.h"
 #include "dkimconfiguretab.h"
+
+#include <MessageViewer/MessageViewerSettings>
+
+#include <KConfigDialogManager>
 #include <QVBoxLayout>
 
 DKIMConfigureWidget::DKIMConfigureWidget(QWidget *parent)
@@ -18,21 +22,26 @@ DKIMConfigureWidget::DKIMConfigureWidget(QWidget *parent)
 
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
+
+    m_configDialogManager = new KConfigDialogManager(this, MessageViewer::MessageViewerSettings::self());
 }
 
 DKIMConfigureWidget::~DKIMConfigureWidget() = default;
 
 void DKIMConfigureWidget::loadSettings()
 {
+    m_configDialogManager->updateWidgets();
     mTabWidget->loadSettings();
 }
 
 void DKIMConfigureWidget::saveSettings()
 {
+    m_configDialogManager->updateSettings();
     mTabWidget->saveSettings();
 }
 
 void DKIMConfigureWidget::resetSettings()
 {
+    m_configDialogManager->updateWidgetsDefault();
     mTabWidget->resetSettings();
 }

@@ -10,6 +10,8 @@
 #include <QWidget>
 
 class DKIMConfigureTab;
+class KConfigDialogManager;
+
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureWidget : public QWidget
 {
     Q_OBJECT
@@ -22,5 +24,6 @@ public:
     void resetSettings();
 
 private:
+    KConfigDialogManager *m_configDialogManager = nullptr;
     DKIMConfigureTab *const mTabWidget;
 };
