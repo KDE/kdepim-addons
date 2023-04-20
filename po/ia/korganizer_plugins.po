@@ -2222,7 +2222,7 @@ msgstr "MMMM_aaaa"
 #~ msgstr "Paginas disponibile"
 
 #~ msgid "Preview of Selected Page"
-#~ msgstr "Vista preliminari de pagina selectionate"
+#~ msgstr "Vista preliminar de pagina selectionate"
 
 #~ msgid ""
 #~ "<qt><p>This section allows you to add your own GUI Elements ('<i>Widgets</"
@@ -2305,7 +2305,7 @@ msgstr "MMMM_aaaa"
 #~ msgstr "Im&prime..."
 
 #~ msgid "Print Previe&w..."
-#~ msgstr "Imprime &vista preliminari..."
+#~ msgstr "Imprime &vista preliminar..."
 
 #~ msgctxt "cut this event"
 #~ msgid "C&ut"
@@ -6865,7 +6865,7 @@ msgstr "MMMM_aaaa"
 
 #~ msgctxt "@action:inmenu print preview the to-do"
 #~ msgid "Print Previe&w..."
-#~ msgstr "Imprime &vista preliminari..."
+#~ msgstr "Imprime &vista preliminar..."
 
 #~ msgctxt "@action:inmenu delete the to-do"
 #~ msgid "&Delete"
