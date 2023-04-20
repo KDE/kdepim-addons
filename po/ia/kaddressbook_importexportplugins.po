@@ -1434,7 +1434,7 @@ msgstr "File de Windows Contact  (*.contact)"
 
 #~ msgctxt "@label"
 #~ msgid "(No preview available.)"
-#~ msgstr "(Nulle vista preliminari disponibile.)"
+#~ msgstr "(Nulle vista preliminar disponibile.)"
 
 #~ msgctxt "@title:window"
 #~ msgid "Choose Printing Style"
@@ -1505,7 +1505,7 @@ msgstr "File de Windows Contact  (*.contact)"
 #~ "Choose your desired printing style. See the preview image to help you "
 #~ "decide."
 #~ msgstr ""
-#~ "Selige tu desirate stilo de imprimer. Vide le image preliminari pro "
+#~ "Selige tu desirate stilo de imprimer. Vide le image preliminar pro "
 #~ "adjutar te decider."
 
 #~ msgctxt "@info:tooltip"
