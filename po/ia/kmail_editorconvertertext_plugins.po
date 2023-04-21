@@ -97,7 +97,7 @@ msgstr "Ligamine"
 #, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"
-msgstr "Vista preliminari de rendition de Markdown"
+msgstr "Vista preliminar de rendition de Markdown"
 
 #: markdown/markdownlib/markdownpreviewwidget.cpp:75
 #, kde-format
