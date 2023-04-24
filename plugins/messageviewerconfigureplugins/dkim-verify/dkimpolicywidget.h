@@ -16,9 +16,6 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMPolicyWidget : public QWidget
 public:
     explicit DKIMPolicyWidget(QWidget *parent = nullptr);
     ~DKIMPolicyWidget() override;
-    void loadSettings();
-    void saveSettings();
-    void resetSettings();
 
 private:
     QCheckBox *const mVerifyIfEmailMustBeSigned;

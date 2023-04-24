@@ -16,9 +16,6 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAdvancedWidget : public QWidget
 public:
     explicit DKIMAdvancedWidget(QWidget *parent = nullptr);
     ~DKIMAdvancedWidget() override;
-    void loadSettings();
-    void saveSettings();
-    void resetSettings();
 
 private:
     void slotConfigureAuthenticationServer();

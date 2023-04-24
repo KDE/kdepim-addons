@@ -46,24 +46,16 @@ void DKIMConfigureTab::initTab()
 
 void DKIMConfigureTab::loadSettings()
 {
-    mGeneralWidget->loadSettings();
     mRecordWidget->loadSettings();
-    mPolicyWidget->loadSettings();
-    mAdvancedWidget->loadSettings();
 }
 
 void DKIMConfigureTab::saveSettings()
 {
     mGeneralWidget->saveSettings();
     mRecordWidget->saveSettings();
-    mPolicyWidget->saveSettings();
-    mAdvancedWidget->saveSettings();
 }
 
 void DKIMConfigureTab::resetSettings()
 {
-    mGeneralWidget->resetSettings();
     mRecordWidget->resetSettings();
-    mPolicyWidget->resetSettings();
-    mAdvancedWidget->resetSettings();
 }

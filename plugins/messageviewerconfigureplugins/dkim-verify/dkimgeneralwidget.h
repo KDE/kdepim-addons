@@ -16,9 +16,7 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMGeneralWidget : public QWidget
 public:
     explicit DKIMGeneralWidget(QWidget *parent = nullptr);
     ~DKIMGeneralWidget() override;
-    void loadSettings();
     void saveSettings();
-    void resetSettings();
 
 private:
     QCheckBox *const mEnableDkimSupport;
