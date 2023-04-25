@@ -242,7 +242,7 @@ void TodoEditTest::shouldClearAllWhenCloseWidget()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
-    qApp->setActiveWindow(&edit);
+    edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
@@ -302,7 +302,7 @@ void TodoEditTest::shouldHideWidgetWhenPressEscape()
     MessageViewer::TodoEdit edit;
     edit.show();
     // make sure the window is active so we can test for focus
-    qApp->setActiveWindow(&edit);
+    edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setFocus();
@@ -361,7 +361,7 @@ void TodoEditTest::shouldSetFocusWhenWeCallTodoEdit()
     MessageViewer::TodoEdit edit;
     edit.show();
     // make sure the window is active so we can test for focus
-    qApp->setActiveWindow(&edit);
+    edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
@@ -403,7 +403,7 @@ void TodoEditTest::shouldHaveLineEditFocus()
     MessageViewer::TodoEdit edit;
     edit.show();
     // make sure the window is active so we can test for focus
-    qApp->setActiveWindow(&edit);
+    edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");

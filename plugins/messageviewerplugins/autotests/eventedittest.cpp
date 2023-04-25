@@ -130,7 +130,7 @@ void EventEditTest::shouldEmitEventWhenPressEnter()
     MessageViewer::EventEdit edit;
     edit.show();
     // make sure the window is active so we can test for focus
-    qApp->setActiveWindow(&edit);
+    edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QVERIFY(edit.isVisible());
 
@@ -166,7 +166,7 @@ void EventEditTest::shouldHideWidgetWhenPressEscape()
     MessageViewer::EventEdit edit;
     edit.show();
     // make sure the window is active so we can test for focus
-    qApp->setActiveWindow(&edit);
+    edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     eventedit->setFocus();
@@ -312,7 +312,7 @@ void EventEditTest::shouldSetFocusWhenWeCallTodoEdit()
     MessageViewer::EventEdit edit;
     edit.show();
     // make sure the window is active so we can test for focus
-    qApp->setActiveWindow(&edit);
+    edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
