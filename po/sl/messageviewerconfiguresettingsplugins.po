@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-04-25 00:52+0000\n"
 "PO-Revision-Date: 2022-11-18 11:55+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,49 +20,49 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: dkim-verify/dkimadvancedwidget.cpp:21
+#: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Še vedno preverjajte podpis, če neka domena samo preizkuša DKIM"
 
-#: dkim-verify/dkimadvancedwidget.cpp:22
+#: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
 "Pri branju glave »Authentication-Result« uporabite sproščeno razčlenjevanje"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Nothing"
 msgstr "Nič"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #, kde-format
 msgid "Warning"
 msgstr "Opozorilo"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #, kde-format
 msgid "Error"
 msgstr "Napaka"
 
-#: dkim-verify/dkimadvancedwidget.cpp:36
+#: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
 msgstr "Obravnavaj podpisovalni algoritem RSA-SHA1 kot:"
 
-#: dkim-verify/dkimadvancedwidget.cpp:40
+#: dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Treat small Key as:"
 msgstr "Obravnavaj majhen ključ kot:"
 
-#: dkim-verify/dkimadvancedwidget.cpp:42
+#: dkim-verify/dkimadvancedwidget.cpp:40
 #, kde-format
 msgid "Configure"
 msgstr "Nastavi"
 
-#: dkim-verify/dkimadvancedwidget.cpp:45
+#: dkim-verify/dkimadvancedwidget.cpp:43
 #, kde-format
 msgid "Authentication Server verified:"
 msgstr "Strežnik za preverjanje pristnosti preverjen:"
@@ -125,69 +125,69 @@ msgstr "Politika"
 msgid "Advanced"
 msgstr "Napredno"
 
-#: dkim-verify/dkimgeneralwidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:18
 #, kde-format
 msgid "Enable DKIM Support"
 msgstr "Omogoči podporo DKIM"
 
-#: dkim-verify/dkimgeneralwidget.cpp:20
+#: dkim-verify/dkimgeneralwidget.cpp:19
 #, kde-format
 msgid "Save DKIM Result"
 msgstr "Shrani rezultat DKIM"
 
-#: dkim-verify/dkimgeneralwidget.cpp:22
+#: dkim-verify/dkimgeneralwidget.cpp:21
 #, kde-format
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "Zamenjaj rezultat DKIN za vrednostjo glave Authentication-Result"
 
-#: dkim-verify/dkimgeneralwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:37
 #, kde-format
 msgid "Save Record Key:"
 msgstr "Shrani ključ zapisa:"
 
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Save"
 msgstr "Shrani"
 
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Save and Compare"
 msgstr "Shrani in primerjaj"
 
-#: dkim-verify/dkimpolicywidget.cpp:21
+#: dkim-verify/dkimpolicywidget.cpp:18
 #, kde-format
 msgid "Check if e-mail should be signed"
 msgstr "Preveri, če bi morala biti e-pošta podpisana"
 
-#: dkim-verify/dkimpolicywidget.cpp:22
+#: dkim-verify/dkimpolicywidget.cpp:19
 #, kde-format
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
 "Uporabite DMARC, da hevristično ugotovite, ali naj se bi bila e-pošta "
 "podpisana"
 
-#: dkim-verify/dkimpolicywidget.cpp:23
+#: dkim-verify/dkimpolicywidget.cpp:20
 #, kde-format
 msgid "Use default rule"
 msgstr "Uporabi privzeto pravilo"
 
-#: dkim-verify/dkimpolicywidget.cpp:24
+#: dkim-verify/dkimpolicywidget.cpp:21
 #, kde-format
 msgid "Autogenerate rule"
 msgstr "Samodejno kreiraj pravilo"
 
-#: dkim-verify/dkimpolicywidget.cpp:25
+#: dkim-verify/dkimpolicywidget.cpp:22
 #, kde-format
 msgid "Read Authentication-Results header"
 msgstr "Beri glavo rezultata overitve"
 
-#: dkim-verify/dkimpolicywidget.cpp:26
+#: dkim-verify/dkimpolicywidget.cpp:23
 #, kde-format
 msgid "Autogenerate when Sender in SDID"
 msgstr "Samodejno generiraj kadar je pošiljatelj v SDID"
 
-#: dkim-verify/dkimpolicywidget.cpp:27
+#: dkim-verify/dkimpolicywidget.cpp:24
 #, kde-format
 msgid "Show Rules"
 msgstr "Prikaži pravila"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-04-25 00:52+0000\n"
 "PO-Revision-Date: 2023-04-16 12:31\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,48 +18,48 @@ msgstr ""
 "messageviewerconfiguresettingsplugins.pot\n"
 "X-Crowdin-File-ID: 8128\n"
 
-#: dkim-verify/dkimadvancedwidget.cpp:21
+#: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "即使一个域只是在测试 DKIM 也验证签名"
 
-#: dkim-verify/dkimadvancedwidget.cpp:22
+#: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr "读取“Authentication-Result”头部时使用宽松的解析方法"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Nothing"
 msgstr "不提醒"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #, kde-format
 msgid "Warning"
 msgstr "警告"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #, kde-format
 msgid "Error"
 msgstr "报错"
 
-#: dkim-verify/dkimadvancedwidget.cpp:36
+#: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
 msgstr "RSA-SHA1 签名算法："
 
-#: dkim-verify/dkimadvancedwidget.cpp:40
+#: dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Treat small Key as:"
 msgstr "过短的密钥长度："
 
-#: dkim-verify/dkimadvancedwidget.cpp:42
+#: dkim-verify/dkimadvancedwidget.cpp:40
 #, kde-format
 msgid "Configure"
 msgstr "配置"
 
-#: dkim-verify/dkimadvancedwidget.cpp:45
+#: dkim-verify/dkimadvancedwidget.cpp:43
 #, kde-format
 msgid "Authentication Server verified:"
 msgstr "认证服务器已验证："
@@ -122,67 +122,67 @@ msgstr "策略"
 msgid "Advanced"
 msgstr "高级"
 
-#: dkim-verify/dkimgeneralwidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:18
 #, kde-format
 msgid "Enable DKIM Support"
 msgstr "启用 DKIM 支持"
 
-#: dkim-verify/dkimgeneralwidget.cpp:20
+#: dkim-verify/dkimgeneralwidget.cpp:19
 #, kde-format
 msgid "Save DKIM Result"
 msgstr "保存 DKIM 结果"
 
-#: dkim-verify/dkimgeneralwidget.cpp:22
+#: dkim-verify/dkimgeneralwidget.cpp:21
 #, kde-format
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "将 DKIM 结果替换为邮件头部 Authentication-Result 值"
 
-#: dkim-verify/dkimgeneralwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:37
 #, kde-format
 msgid "Save Record Key:"
 msgstr "保存记录密钥："
 
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Save"
 msgstr "保存"
 
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Save and Compare"
 msgstr "保存并比较"
 
-#: dkim-verify/dkimpolicywidget.cpp:21
+#: dkim-verify/dkimpolicywidget.cpp:18
 #, kde-format
 msgid "Check if e-mail should be signed"
 msgstr "检查电子邮件是否应被签名"
 
-#: dkim-verify/dkimpolicywidget.cpp:22
+#: dkim-verify/dkimpolicywidget.cpp:19
 #, kde-format
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr "使用 DMARC 来估计一封邮件是否应被签名"
 
-#: dkim-verify/dkimpolicywidget.cpp:23
+#: dkim-verify/dkimpolicywidget.cpp:20
 #, kde-format
 msgid "Use default rule"
 msgstr "使用默认规则"
 
-#: dkim-verify/dkimpolicywidget.cpp:24
+#: dkim-verify/dkimpolicywidget.cpp:21
 #, kde-format
 msgid "Autogenerate rule"
 msgstr "自动生成规则"
 
-#: dkim-verify/dkimpolicywidget.cpp:25
+#: dkim-verify/dkimpolicywidget.cpp:22
 #, kde-format
 msgid "Read Authentication-Results header"
 msgstr "读取 Authentication-Results 邮件头"
 
-#: dkim-verify/dkimpolicywidget.cpp:26
+#: dkim-verify/dkimpolicywidget.cpp:23
 #, kde-format
 msgid "Autogenerate when Sender in SDID"
 msgstr "当发件人配置了 SDID 时自动生成"
 
-#: dkim-verify/dkimpolicywidget.cpp:27
+#: dkim-verify/dkimpolicywidget.cpp:24
 #, kde-format
 msgid "Show Rules"
 msgstr "显示规则"

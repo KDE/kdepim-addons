@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-04-25 00:52+0000\n"
 "PO-Revision-Date: 2022-07-20 22:04+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,49 +17,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: dkim-verify/dkimadvancedwidget.cpp:21
+#: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Todenna allekirjoitus yhä, jos toimialue vain testaa DKIMiä"
 
-#: dkim-verify/dkimadvancedwidget.cpp:22
+#: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr "Jäsennä ”Authentication-Result”-otsake löyhemmin"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Nothing"
 msgstr "Ei mitään"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #, kde-format
 msgid "Warning"
 msgstr "Varoitus"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35 dkim-verify/dkimadvancedwidget.cpp:39
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #, kde-format
 msgid "Error"
 msgstr "Virhe"
 
-#: dkim-verify/dkimadvancedwidget.cpp:36
+#: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
 msgstr "Kohtele RSA-SHA1-allekirjoitusalgoritmia kuten:"
 
 # *** TARKISTA: id ei sano oikein mitään
-#: dkim-verify/dkimadvancedwidget.cpp:40
+#: dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Treat small Key as:"
 msgstr "Pienen avaimen käsittely:"
 
-#: dkim-verify/dkimadvancedwidget.cpp:42
+#: dkim-verify/dkimadvancedwidget.cpp:40
 #, kde-format
 msgid "Configure"
 msgstr "Asetukset"
 
-#: dkim-verify/dkimadvancedwidget.cpp:45
+#: dkim-verify/dkimadvancedwidget.cpp:43
 #, kde-format
 msgid "Authentication Server verified:"
 msgstr "Todennuspalvelimen varmentama:"
@@ -122,67 +122,67 @@ msgstr "Käytäntö"
 msgid "Advanced"
 msgstr "Lisäasetukset"
 
-#: dkim-verify/dkimgeneralwidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:18
 #, kde-format
 msgid "Enable DKIM Support"
 msgstr "Käytä DKIM-tukea"
 
-#: dkim-verify/dkimgeneralwidget.cpp:20
+#: dkim-verify/dkimgeneralwidget.cpp:19
 #, kde-format
 msgid "Save DKIM Result"
 msgstr "Tallenna DKIM-tulos"
 
-#: dkim-verify/dkimgeneralwidget.cpp:22
+#: dkim-verify/dkimgeneralwidget.cpp:21
 #, kde-format
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "Korvaa DKIM-tulos Authentication-Result-otsakkeen arvolla"
 
-#: dkim-verify/dkimgeneralwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:37
 #, kde-format
 msgid "Save Record Key:"
 msgstr "Tallenna tietueavain:"
 
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Save"
 msgstr "Tallenna"
 
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Save and Compare"
 msgstr "Tallenna ja vertaa"
 
-#: dkim-verify/dkimpolicywidget.cpp:21
+#: dkim-verify/dkimpolicywidget.cpp:18
 #, kde-format
 msgid "Check if e-mail should be signed"
 msgstr "Valitse, tulisiko sähköposti allekirjoittaa"
 
-#: dkim-verify/dkimpolicywidget.cpp:22
+#: dkim-verify/dkimpolicywidget.cpp:19
 #, kde-format
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr "Päättele DMARC-heuristiikalla, tulisiko sähköposti allekirjoittaa"
 
-#: dkim-verify/dkimpolicywidget.cpp:23
+#: dkim-verify/dkimpolicywidget.cpp:20
 #, kde-format
 msgid "Use default rule"
 msgstr "Käytä oletussääntöä"
 
-#: dkim-verify/dkimpolicywidget.cpp:24
+#: dkim-verify/dkimpolicywidget.cpp:21
 #, kde-format
 msgid "Autogenerate rule"
 msgstr "Luo sääntö automaattisesti"
 
-#: dkim-verify/dkimpolicywidget.cpp:25
+#: dkim-verify/dkimpolicywidget.cpp:22
 #, kde-format
 msgid "Read Authentication-Results header"
 msgstr "Lue Authentication-Results-otsake"
 
-#: dkim-verify/dkimpolicywidget.cpp:26
+#: dkim-verify/dkimpolicywidget.cpp:23
 #, kde-format
 msgid "Autogenerate when Sender in SDID"
 msgstr "Luo uudelleen, kun lähettäjä on SDID:ssä"
 
-#: dkim-verify/dkimpolicywidget.cpp:27
+#: dkim-verify/dkimpolicywidget.cpp:24
 #, kde-format
 msgid "Show Rules"
 msgstr "Näytä säännöt"
