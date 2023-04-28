@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 
 project(%{ProjectName})
 
-set(KF_MIN_VERSION "5.50.0")
-set(QT_REQUIRED_VERSION "5.9.0")
+set(KF_MIN_VERSION "5.240.0")
+set(QT_REQUIRED_VERSION "6.4.0")
 
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -25,7 +25,7 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
 
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6XmlGui ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -33,7 +33,7 @@ find_package(KF6IconThemes ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 
-set(MESSAGELIB_LIB_VERSION "5.9.0")
+set(MESSAGELIB_LIB_VERSION "5.240.0")
 
 find_package(KPim6MessageComposer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 
