@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <MessageComposer/PluginEditorInterface>
 #include <QPointer>
+#include <TextAddonsWidgets/SelectSpecialCharDialog>
 
 class InsertSpecialCharacterPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
@@ -23,5 +23,5 @@ public:
 private:
     void charSelected(QChar c);
     void slotActivated();
-    QPointer<KPIMTextEdit::SelectSpecialCharDialog> mSelectSpecialChar;
+    QPointer<TextAddonsWidgets::SelectSpecialCharDialog> mSelectSpecialChar;
 };

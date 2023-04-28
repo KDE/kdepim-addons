@@ -34,11 +34,11 @@ void InsertSpecialCharacterPluginEditorInterface::slotActivated()
 void InsertSpecialCharacterPluginEditorInterface::exec()
 {
     if (!mSelectSpecialChar) {
-        mSelectSpecialChar = new KPIMTextEdit::SelectSpecialCharDialog(parentWidget());
+        mSelectSpecialChar = new TextAddonsWidgets::SelectSpecialCharDialog(parentWidget());
         mSelectSpecialChar->setWindowTitle(i18nc("@title:window", "Insert Special Character"));
         mSelectSpecialChar->setOkButtonText(i18n("Insert"));
         connect(mSelectSpecialChar.data(),
-                &KPIMTextEdit::SelectSpecialCharDialog::charSelected,
+                &TextAddonsWidgets::SelectSpecialCharDialog::charSelected,
                 this,
                 &InsertSpecialCharacterPluginEditorInterface::charSelected);
     }
