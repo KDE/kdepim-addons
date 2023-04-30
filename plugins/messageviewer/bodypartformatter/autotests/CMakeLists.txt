@@ -16,9 +16,7 @@ macro(add_kdepimaddons_crypto_unittest _source)
         Qt::Test
         
     )
-    if (TARGET Qt6::Core5Compat)
-        target_link_libraries(${_name} Qt6::Core5Compat)
-    endif()
+    target_link_libraries(${_name} Qt6::Core5Compat)
     add_gpg_crypto_test(${_name} messageviewerplugins-${_name})
     ecm_mark_as_test(messageviewerplugins-${_name})
 endmacro ()
