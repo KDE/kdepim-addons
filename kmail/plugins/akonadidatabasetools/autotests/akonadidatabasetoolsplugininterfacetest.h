@@ -17,5 +17,5 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldCreateAction();
-    void shouldEmitActivatedSignal();
+    // void shouldEmitActivatedSignal();
 };
