@@ -122,9 +122,8 @@ QList<ItineraryMemento::TripData> ItineraryMemento::data()
             ++it;
 
             if (JsonLd::canConvert<Reservation>(data.reservations.at(0))) {
-                const auto trip = JsonLd::convert<Reservation>(data.reservations.at(0)).reservationFor();
                 for (; it != resolvedEvents.end(); ++it) {
-                    if (!JsonLd::canConvert<Reservation>((*it).first) || !MergeUtil::isSame(JsonLd::convert<Reservation>((*it).first).reservationFor(), trip)) {
+                    if (!MergeUtil::isSameIncidence(data.reservations.at(0), (*it).first)) {
                         break;
                     }
                     data.reservations.push_back((*it).first);
