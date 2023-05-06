@@ -38,7 +38,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_confirmaddresseditorplugin
-    KPim6::MessageComposer KF6::I18n KPim6::PimCommon KPim6::Libkdepim
+    KPim6::MessageComposer KF6::I18n KPim6::PimCommon KPim6::Libkdepim KF6::Completion
     )
 
 if(BUILD_TESTING)

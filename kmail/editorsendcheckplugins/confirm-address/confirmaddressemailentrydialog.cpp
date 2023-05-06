@@ -5,8 +5,8 @@
 */
 
 #include "confirmaddressemailentrydialog.h"
+#include <KEmailValidator>
 #include <KLocalizedString>
-#include <PimCommon/EmailValidator>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QLineEdit>
@@ -25,7 +25,7 @@ ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     mainLayout->addWidget(mLineEdit);
 
-    auto emailValidator = new PimCommon::EmailValidator(this);
+    auto emailValidator = new KEmailValidator(this);
     mLineEdit->setValidator(emailValidator);
 
     auto buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
