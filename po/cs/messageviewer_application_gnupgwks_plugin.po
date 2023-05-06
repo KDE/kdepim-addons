@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:44+0000\n"
+"POT-Creation-Date: 2023-05-06 00:48+0000\n"
 "PO-Revision-Date: 2021-08-19 15:02+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -43,17 +43,22 @@ msgstr "Importovat klíč"
 msgid "An error occurred while importing the key."
 msgstr ""
 
-#: pgpkeyurlhandler.cpp:64
+#: pgpkeyurlhandler.cpp:64 pgpkeyurlhandler.cpp:66
 #, kde-format
 msgid "Import error"
 msgstr "Chyba importu"
 
 #: pgpkeyurlhandler.cpp:66
 #, kde-format
+msgid "No keys to import where found."
+msgstr ""
+
+#: pgpkeyurlhandler.cpp:68
+#, kde-format
 msgid "The key has been successfully imported."
 msgstr ""
 
-#: pgpkeyurlhandler.cpp:66
+#: pgpkeyurlhandler.cpp:68
 #, kde-format
 msgid "Import finished"
 msgstr "Import dokončen"
