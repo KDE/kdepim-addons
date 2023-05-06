@@ -6,5 +6,13 @@
     {% with trip as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
     {{ res.checkinTime|formatDate }} - {{ res.checkoutTime|formatDate }}</div>
 <div>{{ trip.address|formatAddress|safe }}</div>
+{% if elem.reservations.size > 1 or elem.reservations.0.reservation.underName.name %}
+    {% i18n "Reserved for: " %}
+    {% for d in elem.reservations %}
+        {% with d.reservation as res %}
+        {% if res.underName.name %}{{ res.underName.name }}{% if forloop.counter != elem.reservations.size %}, {% endif %}{% endif %}
+        {% endwith %}
+    {% endfor %}
+{% endif %}
 {% include "org.kde.messageviewer/itinerary/actions.html" %}
 <div style="clear:both;"></div>
