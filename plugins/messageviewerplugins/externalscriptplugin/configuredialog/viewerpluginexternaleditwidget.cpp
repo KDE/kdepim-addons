@@ -6,9 +6,9 @@
 
 #include "viewerpluginexternaleditwidget.h"
 #include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <KUrlRequester>
-#include <Libkdepim/LineEditCatchReturnKey>
 #include <QFormLayout>
 #include <QLabel>
 #include <QWhatsThis>
@@ -26,17 +26,17 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
     mName->setObjectName(QStringLiteral("name"));
     mainLayout->addRow(i18n("Name:"), mName);
-    new KPIM::LineEditCatchReturnKey(mName, this);
+    KLineEditEventHandler::catchReturnKey(mName);
 
     mDescription->setObjectName(QStringLiteral("description"));
     mainLayout->addRow(i18n("Description:"), mDescription);
-    new KPIM::LineEditCatchReturnKey(mDescription, this);
+    KLineEditEventHandler::catchReturnKey(mDescription);
 
     mCommandLine->setClearButtonEnabled(true);
     mCommandLine->setObjectName(QStringLiteral("commandline"));
     mCommandLine->setPlaceholderText(i18n("Add command arguments..."));
     mainLayout->addRow(i18n("Command Line:"), mCommandLine);
-    new KPIM::LineEditCatchReturnKey(mCommandLine, this);
+    KLineEditEventHandler::catchReturnKey(mCommandLine);
 
     auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
     formatHelp->setObjectName(QStringLiteral("formatHelp"));

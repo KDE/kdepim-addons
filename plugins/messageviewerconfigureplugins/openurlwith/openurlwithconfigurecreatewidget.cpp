@@ -6,9 +6,9 @@
 
 #include "openurlwithconfigurecreatewidget.h"
 #include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <KUrlRequester>
-#include <Libkdepim/LineEditCatchReturnKey>
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
@@ -26,7 +26,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     mServerName->setObjectName(QStringLiteral("mServerName"));
     mainLayout->addRow(i18n("Server Name:"), mServerName);
     mServerName->setClearButtonEnabled(true);
-    KPIM::LineEditCatchReturnKey(mServerName, this);
+    KLineEditEventHandler::catchReturnKey(mServerName);
 
     auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
     formatHelp->setObjectName(QStringLiteral("formatHelp"));
@@ -46,7 +46,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     mCommandLine->setObjectName(QStringLiteral("mCommandLine"));
     mCommandLine->setClearButtonEnabled(true);
     mainLayout->addRow(i18n("Command line:"), mCommandLine);
-    KPIM::LineEditCatchReturnKey(mCommandLine, this);
+    KLineEditEventHandler::catchReturnKey(mCommandLine);
 
     mExecutable->setObjectName(QStringLiteral("mEditorRequester"));
 
