@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-02-04 00:44+0000\n"
-"PO-Revision-Date: 2022-04-05 12:20+0300\n"
+"PO-Revision-Date: 2023-05-06 10:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: gnupgwksurlhandler.cpp:85
 #, kde-format
@@ -35,7 +35,7 @@ msgstr "Dosyada geçerli anahtar verisi yok."
 #: pgpkeyurlhandler.cpp:46
 #, kde-format
 msgid "Import the key"
-msgstr "Anahtarı içe aktar"
+msgstr "Anahtar içe aktar"
 
 #: pgpkeyurlhandler.cpp:64
 #, kde-format
@@ -159,7 +159,7 @@ msgstr "Anahtar ayrıntılarını göster ..."
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
-msgstr "Anahtarı içe aktar"
+msgstr "Anahtar içe aktar"
 
 #~ msgid "Unknown identity"
 #~ msgstr "Bilinmeyen kimlik"
