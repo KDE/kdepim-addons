@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"POT-Creation-Date: 2023-05-07 00:51+0000\n"
 "PO-Revision-Date: 2022-09-11 21:19+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -146,6 +146,10 @@ msgstr "اعرض الموقع في الخريطة"
 #: templates/location.html:10
 msgid "Search address on map"
 msgstr "ابحث العنوان على الخريطة"
+
+#: templates/lodgingreservation.html:10
+msgid "Reserved for: "
+msgstr ""
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"POT-Creation-Date: 2023-05-07 00:51+0000\n"
 "PO-Revision-Date: 2022-09-04 13:35+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -147,6 +147,10 @@ msgstr "Mostra la ubicació en el mapa"
 #: templates/location.html:10
 msgid "Search address on map"
 msgstr "Cerca l'adreça en el mapa"
+
+#: templates/lodgingreservation.html:10
+msgid "Reserved for: "
+msgstr ""
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"POT-Creation-Date: 2023-05-07 00:51+0000\n"
 "PO-Revision-Date: 2020-03-21 10:49+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -144,6 +144,10 @@ msgstr "Näita asukohta kaardil"
 #: templates/location.html:10
 msgid "Search address on map"
 msgstr "Otsi aadressi kaardil"
+
+#: templates/lodgingreservation.html:10
+msgid "Reserved for: "
+msgstr ""
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format

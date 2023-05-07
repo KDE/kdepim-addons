@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"POT-Creation-Date: 2023-05-07 00:51+0000\n"
 "PO-Revision-Date: 2023-02-07 10:46+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -144,6 +144,10 @@ msgstr "Zobrazit umístění na mapě"
 #: templates/location.html:10
 msgid "Search address on map"
 msgstr "Hledat adresu na mapě"
+
+#: templates/lodgingreservation.html:10
+msgid "Reserved for: "
+msgstr ""
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format

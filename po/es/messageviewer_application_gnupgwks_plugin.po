@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2016, 2018.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-04 00:44+0000\n"
-"PO-Revision-Date: 2018-01-05 23:36+0100\n"
-"Last-Translator: Javier Vinal <fjvinal@gmail.com>\n"
+"POT-Creation-Date: 2023-05-06 00:48+0000\n"
+"PO-Revision-Date: 2023-05-06 20:47+0200\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: gnupgwksurlhandler.cpp:85
 #, kde-format
@@ -42,17 +43,22 @@ msgstr "Importar la clave"
 msgid "An error occurred while importing the key."
 msgstr "Ha ocurrido un error al importar la clave."
 
-#: pgpkeyurlhandler.cpp:64
+#: pgpkeyurlhandler.cpp:64 pgpkeyurlhandler.cpp:66
 #, kde-format
 msgid "Import error"
 msgstr "Error de importación"
 
 #: pgpkeyurlhandler.cpp:66
 #, kde-format
+msgid "No keys to import where found."
+msgstr "No se han encontrado claves para importar."
+
+#: pgpkeyurlhandler.cpp:68
+#, kde-format
 msgid "The key has been successfully imported."
 msgstr "La clave se ha importado correctamente."
 
-#: pgpkeyurlhandler.cpp:66
+#: pgpkeyurlhandler.cpp:68
 #, kde-format
 msgid "Import finished"
 msgstr "Importación finalizada"
