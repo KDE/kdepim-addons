@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-26 00:46+0000\n"
+"POT-Creation-Date: 2023-05-07 00:51+0000\n"
 "PO-Revision-Date: 2019-02-23 03:18+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -144,6 +144,10 @@ msgstr ""
 
 #: templates/location.html:10
 msgid "Search address on map"
+msgstr ""
+
+#: templates/lodgingreservation.html:10
+msgid "Reserved for: "
 msgstr ""
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
