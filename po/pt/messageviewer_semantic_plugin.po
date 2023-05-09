@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: messageviewer_semantic_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-07 00:51+0000\n"
-"PO-Revision-Date: 2021-11-10 18:31+0000\n"
+"PO-Revision-Date: 2023-05-07 13:51+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -143,7 +143,7 @@ msgstr "Pesquisar o endereço no mapa"
 
 #: templates/lodgingreservation.html:10
 msgid "Reserved for: "
-msgstr ""
+msgstr "Reservado para: "
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format
