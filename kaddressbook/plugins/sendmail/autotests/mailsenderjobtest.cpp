@@ -8,7 +8,6 @@
 #include "mailsenderjob.h"
 
 #include <KContacts/Addressee>
-#include <kcontacts_version.h>
 
 #include <QSignalSpy>
 #include <QTest>
