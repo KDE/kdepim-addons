@@ -34,7 +34,7 @@
         "Description[uk]": "Цим додатком визначається стиль заголовка повідомлення для бізнес-середовищ.",
         "Description[x-test]": "xxThis plugin defines a mail header style for enterprise.xx",
         "Description[zh_CN]": "此插件定义了企业邮件头部样式。",
-        "EnabledByDefault": "@KDEPIM_ENTERPRISE_BUILD@",
+        "EnabledByDefault": @KDEPIM_ENTERPRISE_BUILD@,
         "Name": "Enterprise Header Style",
         "Name[ar]": "نمط التّرويسات ”شركة“",
         "Name[az]": "Korparativ başlıq tərzi",
