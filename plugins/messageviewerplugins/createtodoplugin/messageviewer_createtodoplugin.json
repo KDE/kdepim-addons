@@ -33,7 +33,7 @@
         "Description[uk]": "За допомогою цього додатка можна створювати записи завдань на основі повідомлення.",
         "Description[x-test]": "xxThis plugin allows you to create a todo from a message.xx",
         "Description[zh_CN]": "此插件允许您从信件创建待办事项。",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "Create Todo",
         "Name[ar]": "إنشاء المهامّ",
         "Name[az]": "Tapşırıq yaradın",

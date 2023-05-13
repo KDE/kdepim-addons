@@ -32,7 +32,7 @@
         "Description[uk]": "Цей додаток реалізує підтримку режиму «не стежити».",
         "Description[x-test]": "xxThis plugin adds support for \"do not track\".xx",
         "Description[zh_CN]": "此插件添加“请勿追踪”支持。",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "Do Not Track",
         "Name[ar]": "عدم التّعقّب",
         "Name[az]": "İzləmək qadağandır",

@@ -33,7 +33,7 @@
         "Description[uk]": "За допомогою цього додатка можна використати найвигадливіші стилі заголовків повідомлення.",
         "Description[x-test]": "xxThis plugin provides you a fancy mail header style.xx",
         "Description[zh_CN]": "此插件为您提供了花式的邮件头部样式。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": true,
         "Name": "Fancy Header Style",
         "Name[ar]": "نمط التّرويسات ”خياليّ“",
         "Name[az]": "Gözəl başlıq tərzi",

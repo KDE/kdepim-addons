@@ -33,7 +33,7 @@
         "Description[uk]": "За допомогою цього додатка можна вставити спеціальний символ до вікна редактора повідомлень.",
         "Description[x-test]": "xxThis plugin allows you to insert special character in composer.xx",
         "Description[zh_CN]": "此插件允许您在编辑器中插入特殊字符。",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "Insert Special Character",
         "Name[ar]": "إدراج محرف خاصّ",
         "Name[az]": "Xüsusi simvol daxil edin",

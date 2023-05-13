@@ -33,7 +33,7 @@
         "Description[uk]": "За допомогою цього додатка можна автоматично виправляти текст у редакторі повідомлень або позначений фрагмент тексту.",
         "Description[x-test]": "xxThis plugin allows you to autocorrect all text in composer or selected text.xx",
         "Description[zh_CN]": "此插件允许您自动更正编辑器中的所有文本或者选中文本。",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "Autocorrection",
         "Name[ar]": "التّصحيح الآليّ",
         "Name[az]": "Avtomatik düzəliş",

@@ -33,7 +33,7 @@
         "Description[uk]": "За допомогою цього додатка можна налаштувати антивірус у KMail.",
         "Description[x-test]": "xxThis plugin allows you to configure Anti Virus in KMail.xx",
         "Description[zh_CN]": "此插件允许您配置 KMail 防病毒机制。",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "Antivirus",
         "Name[ar]": "مضادّ الفيروسات",
         "Name[az]": "Antivirus",

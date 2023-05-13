@@ -33,7 +33,7 @@
         "Description[uk]": "Цей додаток розгортає адресу.",
         "Description[x-test]": "xxThis plugin expands URL.xx",
         "Description[zh_CN]": "此插件可展开 URL。",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "Expand URL",
         "Name[ar]": "توسيع المسارات",
         "Name[az]": "Geniş URL",

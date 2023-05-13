@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Description": "%{PluginDescription}",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "%{PluginName}",
         "Version": "1.0"
     },

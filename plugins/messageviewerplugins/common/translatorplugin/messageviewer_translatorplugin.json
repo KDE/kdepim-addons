@@ -33,7 +33,7 @@
         "Description[uk]": "За допомогою цього додатка можна перекладати позначені фрагменти тексту.",
         "Description[x-test]": "xxThis plugin allows you to translate selected text.xx",
         "Description[zh_CN]": "此插件允许您翻译选中的文本。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": true,
         "Name": "Translator",
         "Name[ar]": "المترجم",
         "Name[az]": "Tərcüməçi",

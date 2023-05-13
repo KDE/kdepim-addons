@@ -33,7 +33,7 @@
         "Description[uk]": "Цим додатком визначається стандартний стиль заголовка повідомлення.",
         "Description[x-test]": "xxThis plugin defines the standard mail header style.xx",
         "Description[zh_CN]": "此插件定义了标注邮件头部样式。",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "Standards Header Style",
         "Name[ar]": "نمط التّرويسات ”معايير“",
         "Name[az]": "Standart başlıqlı",

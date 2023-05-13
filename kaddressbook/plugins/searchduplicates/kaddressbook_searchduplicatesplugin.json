@@ -34,7 +34,7 @@
         "Description[uk]": "За допомогою цього додатка можна виявляти дублікати записів контактів.",
         "Description[x-test]": "xxThis plugin allows you to search duplicate contacts.xx",
         "Description[zh_CN]": "此茶碗见允许您搜索重复的联系人。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": true,
         "Name": "Search Duplicate Contacts",
         "Name[ar]": "البحث عن المتراسلين المتكرّرين",
         "Name[az]": "Əlaqərin dublikatlarını axtarın",

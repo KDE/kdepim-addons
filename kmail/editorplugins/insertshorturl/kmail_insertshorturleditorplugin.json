@@ -33,7 +33,7 @@
         "Description[uk]": "За допомогою цього додатка можна створювати скорочені адреси.",
         "Description[x-test]": "xxThis plugin allows you to generate a shorter URL.xx",
         "Description[zh_CN]": "此插件允许您生成较短的 URL。",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "Insert Short URL",
         "Name[ar]": "إدراج مسار مختصر",
         "Name[az]": "Qısa URL daxil edin",

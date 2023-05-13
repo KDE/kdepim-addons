@@ -33,7 +33,7 @@
         "Description[uk]": "За допомогою цього додатка можна надсилати ваші візитівки вибраним контактам.",
         "Description[x-test]": "xxThis plugin allows you to send vCard from selected contacts.xx",
         "Description[zh_CN]": "此插件允许您发送选定联系人的 vCard 名片。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": true,
         "Name": "Send vCards",
         "Name[ar]": "إرسال بطاقات vCar",
         "Name[az]": "vCard göndərin",

@@ -34,7 +34,7 @@
         "Description[uk]": "За допомогою цього додатка можна безпосередньо надсилати повідомлення вибраним контактам.",
         "Description[x-test]": "xxThis plugin allows you to send email directly to selected contacts.xx",
         "Description[zh_CN]": "此插件允许您直接发送邮件给选中的联系人。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": true,
         "Name": "Send Mail",
         "Name[ar]": "إرسال البريد",
         "Name[az]": "Poçt göndərişi",

@@ -33,7 +33,7 @@
         "Description[uk]": "За допомогою цього додатка можна змінювати масштаб у редакторі повідомлень.",
         "Description[x-test]": "xxThis plugin allows you to change zoom factor in composer.xx",
         "Description[zh_CN]": "此插件允许您更改编辑器的缩放倍数。",
-        "EnabledByDefault": "false",
+        "EnabledByDefault": false,
         "Name": "Zoom Text",
         "Name[ar]": "تغيير مستوى تكبير النّصّ",
         "Name[az]": "Mətni böyüdün",

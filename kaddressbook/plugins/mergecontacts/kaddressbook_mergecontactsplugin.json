@@ -34,7 +34,7 @@
         "Description[uk]": "За допомогою цього додатка можна об’єднувати записи контактів.",
         "Description[x-test]": "xxThis plugin allows you to merge contacts.xx",
         "Description[zh_CN]": "此插件允许您合并联系人。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": true,
         "Name": "Merge Contacts",
         "Name[ar]": "دمج المتراسلين",
         "Name[az]": "Əlaqələri birləşdirin",
