@@ -6,7 +6,7 @@
 # Munzir Taha <munzir@kacst.edu.sa>, 2004.
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# Safa Alfulaij <safa1996alfulaij@gmail.com>, ٢٠١٦, 2018.
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2016, 2018.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
 msgid ""
 msgstr ""
@@ -314,7 +314,7 @@ msgstr ""
 "item><item>‏M: الشّهر بخانتين</item><item>‏d: اليوم بخانة أو خانتين</"
 "item><item>‏D: اليوم بخانتين</item><item>‏H: السّاعات بخانتين</item><item>‏I: "
 "الدّقائق بخانتين</item><item>‏S: الثّواني بخانتين</item></list></"
-"para><para>مثال: ”D/M/Y“ يقابل تاريخًا مثل ”15/01/2012 ‏١٥‏/٠١‏/٢٠١٢“</para>"
+"para><para>مثال: ”D/M/Y“ يقابل تاريخًا مثل ”15/01/2012 ‏15‏/01‏/2012“</para>"
 
 #: csv/import/csvimportdialog.cpp:417
 #, kde-format
@@ -379,7 +379,7 @@ msgstr "محليّ (%1)"
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Latin1"
-msgstr "اللاتينيّة١"
+msgstr "اللاتينيّة1"
 
 #: csv/import/csvimportdialog.cpp:472
 #, kde-format
@@ -700,32 +700,32 @@ msgstr "استورد متراسلين من ملفّ vCard."
 #: vcards/vcardimportexportplugininterface.cpp:52
 #, kde-format
 msgid "Export contacts to a vCard 4.0 file."
-msgstr "صدّر المتراسلين إلى ملفّ vCard الإصدارة ٤٫٠."
+msgstr "صدّر المتراسلين إلى ملفّ vCard الإصدارة 4٫0."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
 msgid "Export vCard 4.0..."
-msgstr "صدّر vCard الإصدارة ٤٫٠..."
+msgstr "صدّر vCard الإصدارة 4٫0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0..."
-msgstr "صدّر vCard الإصدارة ٣٫٠..."
+msgstr "صدّر vCard الإصدارة 3٫0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
 msgid "Export contacts to a vCard 3.0 file."
-msgstr "صدّر المتراسلين إلى ملفّ vCard الإصدارة ٣٫٠."
+msgstr "صدّر المتراسلين إلى ملفّ vCard الإصدارة 3٫0."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1..."
-msgstr "صدّر vCard الإصدارة ٢٫١..."
+msgstr "صدّر vCard الإصدارة 2٫1..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
 msgid "Export contacts to a vCard 2.1 file."
-msgstr "صدّر المتراسلين إلى ملفّ vCard الإصدارة ٢٫١."
+msgstr "صدّر المتراسلين إلى ملفّ vCard الإصدارة 2٫1."
 
 #: vcards/vcardimportexportplugininterface.cpp:113
 #, kde-format
