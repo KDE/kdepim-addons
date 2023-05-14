@@ -362,7 +362,7 @@ public:
             if (attachmentUrl.isLocalFile()) {
                 fileExists = QFile::exists(attachmentUrl.toLocalFile());
             } else {
-                auto job = KIO::statDetails(attachmentUrl, KIO::StatJob::SourceSide, KIO::StatBasic);
+                auto job = KIO::stat(attachmentUrl, KIO::StatJob::SourceSide, KIO::StatBasic);
                 fileExists = job->exec();
             }
             if (!fileExists) {
