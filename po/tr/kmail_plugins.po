@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2023-02-01 12:54+0300\n"
+"PO-Revision-Date: 2023-05-15 21:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -407,7 +407,7 @@ msgstr "Yol:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Attachment"
-msgstr "Eklenti"
+msgstr "Ek"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
 #, kde-format
@@ -427,7 +427,7 @@ msgstr "CSV"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
 #, kde-format
 msgid "Attachment:"
-msgstr "Eklenti:"
+msgstr "Ek:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -447,4 +447,4 @@ msgstr "&Değiştir..."
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
 #, kde-format
 msgid "Select attachment:"
-msgstr "Eklenti seç:"
+msgstr "Ek seç:"

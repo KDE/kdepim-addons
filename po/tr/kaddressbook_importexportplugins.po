@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2023-01-18 22:31+0300\n"
+"PO-Revision-Date: 2023-05-15 22:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.03.70\n"
 "X-POOTLE-MTIME: 1413102213.000000\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
@@ -234,8 +234,8 @@ msgid ""
 "characters will be ignored."
 msgstr ""
 "Alan ayırıcısı olarak kullanılacak karakteri girin. Eğer birden fazla "
-"karakter girerseniz, ayırıcı olarak yalnızca girilen ilk karakter "
-"kullanılacak, diğer karakterler gözardı edilecektir."
+"karakter girerseniz ayırıcı olarak yalnızca girilen ilk karakter "
+"kullanılacak, diğer karakterler yok sayılacaktır."
 
 #: csv/import/csvimportdialog.cpp:363
 #, kde-format
