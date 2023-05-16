@@ -21,6 +21,6 @@ endif()
 target_link_libraries(messageviewer_bodypartformatter_text_markdown
     Qt::Core
     KPim6::MessageViewer
-    ${TEMPLATES_LIB}
+    KF6::TextTemplate
 )
 install(TARGETS messageviewer_bodypartformatter_text_markdown DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)

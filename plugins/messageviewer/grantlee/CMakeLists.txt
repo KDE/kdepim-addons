@@ -4,6 +4,6 @@ add_library(kitinerary_grantlee_extension MODULE grantleeextension.cpp grantleee
 target_link_libraries(kitinerary_grantlee_extension
     KPim6::Itinerary
     KF6::Contacts
-    ${TEMPLATES_LIB}
+    KF6::TextTemplate
 )
 install(TARGETS kitinerary_grantlee_extension DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/kf6/ktexttemplate)

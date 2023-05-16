@@ -12,7 +12,7 @@ target_link_libraries(messageviewer_bodypartformatter_text_highlighter
     Qt::Core
     KPim6::MessageViewer
     KF6::SyntaxHighlighting
-    ${TEMPLATES_LIB}
+    KF6::TextTemplate
 )
 
 install(TARGETS messageviewer_bodypartformatter_text_highlighter DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)

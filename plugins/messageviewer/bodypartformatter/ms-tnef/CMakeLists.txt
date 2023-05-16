@@ -22,6 +22,6 @@ target_link_libraries(messageviewer_bodypartformatter_application_mstnef
     KPim6::MessageViewer
     KF6::IconThemes
     KF6::I18n
-    ${TEMPLATES_LIB}
+    KF6::TextTemplate
     )
 install(TARGETS messageviewer_bodypartformatter_application_mstnef DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)

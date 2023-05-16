@@ -134,7 +134,6 @@ find_package(KPim6PkPass ${KPIMPKPASS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Itinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF6TextTemplate CONFIG REQUIRED)
-set(TEMPLATES_LIB KF6::TextTemplate)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)

@@ -17,7 +17,7 @@ target_link_libraries(messageviewer_bodypartformatter_pkpass
     KF6::Archive
     KF6::Prison
     KPim6::MessageViewer
-    ${TEMPLATES_LIB}
+    KF6::TextTemplate
     KPim6::PkPass
     )
 install(TARGETS messageviewer_bodypartformatter_pkpass DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)

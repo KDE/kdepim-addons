@@ -33,7 +33,7 @@ target_link_libraries(messageviewer_bodypartformatter_semantic
     KPim6::CalendarSupport
     KF6::I18n
     KPim6::GrantleeTheme
-    ${TEMPLATES_LIB}
+    KF6::TextTemplate
     Qt::DBus
     KF6::Prison
     KPim6::Itinerary
