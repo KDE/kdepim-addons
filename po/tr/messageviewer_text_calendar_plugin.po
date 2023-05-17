@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-04-05 12:12+0300\n"
+"PO-Revision-Date: 2023-05-15 21:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 
 #: attendeeselector.cpp:21
@@ -390,7 +390,7 @@ msgstr "Düzenleyiciyi yetkilendirme olanaklı değil."
 #: text_calendar.cpp:1068
 #, kde-format
 msgid "Save Invitation Attachment"
-msgstr "Davet Eklentisini Kaydet"
+msgstr "Davet Ekini Kaydet"
 
 #: text_calendar.cpp:1149
 #, kde-format
@@ -458,12 +458,12 @@ msgstr "Ynt: %1"
 #: text_calendar.cpp:1341
 #, kde-format
 msgid "Open Attachment"
-msgstr "Eklentiyi Aç"
+msgstr "Ek Aç"
 
 #: text_calendar.cpp:1342
 #, kde-format
 msgid "Save Attachment As..."
-msgstr "Eklentiyi Farklı Kaydet..."
+msgstr "Eki Farklı Kaydet..."
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -543,4 +543,4 @@ msgstr "Daveti takvimimden sil"
 #: text_calendar.cpp:1389
 #, kde-format
 msgid "Open attachment \"%1\""
-msgstr "\"%1\" eklentisini aç"
+msgstr "\"%1\" ekini aç"
