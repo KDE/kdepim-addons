@@ -13,8 +13,8 @@
 #include <KSharedConfig>
 #include <QPointer>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 #include <MessageComposer/AliasesExpandJob>
 #include <PimCommon/PimUtil>
 namespace
@@ -101,9 +101,9 @@ void ConfirmAddressInterface::reloadConfig()
     KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     mHashSettings.clear();
 
-    KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
-    KIdentityManagement::IdentityManager::ConstIterator end = im->end();
-    for (KIdentityManagement::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {
+    KIdentityManagementCore::IdentityManager *im = KIdentityManagementCore::IdentityManager::self();
+    KIdentityManagementCore::IdentityManager::ConstIterator end = im->end();
+    for (KIdentityManagementCore::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {
         const uint identity = (*it).uoid();
         KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(identity));
         ConfirmAddressSettings settings;

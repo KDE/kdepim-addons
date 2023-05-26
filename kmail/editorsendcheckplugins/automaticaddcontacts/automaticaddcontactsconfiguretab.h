@@ -10,7 +10,7 @@
 class QTabWidget;
 class AutomaticAddContactsTabWidget;
 
-namespace KIdentityManagement
+namespace KIdentityManagementCore
 {
 class IdentityManager;
 }
@@ -30,7 +30,7 @@ Q_SIGNALS:
     void configureChanged();
 
 private:
-    void initTab(KIdentityManagement::IdentityManager *identityManager);
+    void initTab(KIdentityManagementCore::IdentityManager *identityManager);
     QTabWidget *const mTabWidget;
     QList<AutomaticAddContactsTabWidget *> mListTabWidget;
 };

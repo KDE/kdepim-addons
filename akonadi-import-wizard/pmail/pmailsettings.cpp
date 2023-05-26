@@ -10,7 +10,7 @@
 #include <MailCommon/MailUtil>
 #include <MailTransport/TransportManager>
 
-#include <KIdentityManagement/Identity>
+#include <KIdentityManagementCore/Identity>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -49,7 +49,7 @@ void PMailSettings::readIdentity(const KConfigGroup &group)
         personalName = group.readEntry(personalNameStr);
         personalName.remove(0, 1); // Remove first space
     }
-    KIdentityManagement::Identity *newIdentity = createIdentity(personalName);
+    KIdentityManagementCore::Identity *newIdentity = createIdentity(personalName);
     newIdentity->setFullName(personalName);
     newIdentity->setIdentityName(personalName);
 

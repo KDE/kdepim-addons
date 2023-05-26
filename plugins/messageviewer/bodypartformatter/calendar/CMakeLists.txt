@@ -35,7 +35,7 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KF6::CalendarCore
     KPim6::CalendarUtils
     KPim6::Mime
-    KPim6::IdentityManagement
+    KPim6::IdentityManagementCore
     KPim6::AkonadiMime
     KPim6::MailTransport
     KPim6::AkonadiMime

@@ -23,8 +23,8 @@
 #include <MailTransport/Transport>
 #include <MailTransport/TransportManager>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 
 #include <KMime/Util>
 
@@ -121,8 +121,8 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
     msg->parse();
 
     // Find identity
-    const auto identity = KIdentityManagement::IdentityManager::self()->identityForAddress(mp.address());
-    const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
+    const auto identity = KIdentityManagementCore::IdentityManager::self()->identityForAddress(mp.address());
+    const bool nullIdentity = (identity == KIdentityManagementCore::Identity::null());
     if (!nullIdentity) {
         auto x_header = new KMime::Headers::Generic("X-KMail-Identity");
         x_header->from7BitString(QByteArray::number(identity.uoid()));

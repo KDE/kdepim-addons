@@ -7,8 +7,8 @@
 #include "confirmaddressconfiguretab.h"
 
 #include "confirmaddressconfiguretabwidget.h"
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 #include <QTabWidget>
 #include <QVBoxLayout>
 
@@ -23,7 +23,7 @@ ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 
-    initTab(KIdentityManagement::IdentityManager::self());
+    initTab(KIdentityManagementCore::IdentityManager::self());
 }
 
 ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab() = default;
@@ -49,10 +49,10 @@ void ConfirmAddressConfigureTab::resetSettings()
     }
 }
 
-void ConfirmAddressConfigureTab::initTab(KIdentityManagement::IdentityManager *identityManager)
+void ConfirmAddressConfigureTab::initTab(KIdentityManagementCore::IdentityManager *identityManager)
 {
-    KIdentityManagement::IdentityManager::ConstIterator end = identityManager->end();
-    for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
+    KIdentityManagementCore::IdentityManager::ConstIterator end = identityManager->end();
+    for (KIdentityManagementCore::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         auto w = new ConfirmAddressConfigureTabWidget(this);
         connect(w, &ConfirmAddressConfigureTabWidget::configureChanged, this, &ConfirmAddressConfigureTab::configureChanged);
         mTabWidget->addTab(w, QStringLiteral("%1 (%2)").arg((*it).identityName(), (*it).primaryEmailAddress()));

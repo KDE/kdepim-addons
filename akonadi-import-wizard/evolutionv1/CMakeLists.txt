@@ -13,6 +13,6 @@ target_link_libraries(evolutionv1importerplugin
   KPim6::MailImporterAkonadi
   KPim6::MailTransport
   KPim6::MailCommon
-  KPim6::IdentityManagement
+  KPim6::IdentityManagementCore
   KPim6::MessageViewer
 )

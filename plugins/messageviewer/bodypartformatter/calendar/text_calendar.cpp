@@ -16,7 +16,7 @@
 #include "reactiontoinvitationdialog.h"
 #include "syncitiphandler.h"
 
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/IdentityManager>
 
 #include <MessageViewer/BodyPartURLHandler>
 #include <MessageViewer/HtmlWriter>
@@ -35,7 +35,7 @@ using namespace KCalendarCore;
 
 #include <KMime/Message>
 
-#include <KIdentityManagement/Identity>
+#include <KIdentityManagementCore/Identity>
 
 #include <KEmailAddress>
 
@@ -385,7 +385,7 @@ public:
         }
 
         QString receiver;
-        KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
+        KIdentityManagementCore::IdentityManager *im = KIdentityManagementCore::IdentityManager::self();
 
         KMime::Types::Mailbox::List addrs;
         if (auto header = node->topLevel()->header<KMime::Headers::To>()) {
@@ -394,7 +394,7 @@ public:
         int found = 0;
         QList<KMime::Types::Mailbox>::const_iterator end = addrs.constEnd();
         for (QList<KMime::Types::Mailbox>::const_iterator it = addrs.constBegin(); it != end; ++it) {
-            if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagement::Identity::null()) {
+            if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagementCore::Identity::null()) {
                 // Ok, this could be us
                 ++found;
                 receiver = QLatin1String((*it).address());
@@ -407,7 +407,7 @@ public:
         }
         end = ccaddrs.constEnd();
         for (QList<KMime::Types::Mailbox>::const_iterator it = ccaddrs.constBegin(); it != end; ++it) {
-            if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagement::Identity::null()) {
+            if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagementCore::Identity::null()) {
                 // Ok, this could be us
                 ++found;
                 receiver = QLatin1String((*it).address());
@@ -576,10 +576,10 @@ public:
         // Try and match the receiver with an identity.
         // Setting the identity here is important, as that is used to select the correct
         // transport later
-        KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
-        const KIdentityManagement::Identity identity = im->identityForAddress(findReceiver(viewerInstance->message().data()));
+        KIdentityManagementCore::IdentityManager *im = KIdentityManagementCore::IdentityManager::self();
+        const KIdentityManagementCore::Identity identity = im->identityForAddress(findReceiver(viewerInstance->message().data()));
 
-        const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
+        const bool nullIdentity = (identity == KIdentityManagementCore::Identity::null());
 
         if (!nullIdentity) {
             auto x_header = new KMime::Headers::Generic("X-KMail-Identity");
@@ -607,7 +607,7 @@ public:
         // Outlook will only understand the reply if the From: header is the
         // same as the To: header of the invitation message.
         if (!MessageViewer::MessageViewerSettings::self()->legacyMangleFromToHeaders()) {
-            if (identity != KIdentityManagement::Identity::null()) {
+            if (identity != KIdentityManagementCore::Identity::null()) {
                 msg->from()->fromUnicodeString(identity.fullEmailAddr(), "utf-8");
             }
             // Remove BCC from identity on ical invitations (kolab/issue474)

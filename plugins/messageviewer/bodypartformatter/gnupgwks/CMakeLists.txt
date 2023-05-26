@@ -47,7 +47,7 @@ target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     KPim6::GrantleeTheme
     KF6::I18n
     KPim6::Mime
-    KPim6::IdentityManagement
+    KPim6::IdentityManagementCore
     KF6::TextTemplate
     Gpgmepp
     )

@@ -9,8 +9,8 @@
 
 #include <MailTransport/TransportManager>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/Signature>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/Signature>
 
 #include <QSettings>
 
@@ -102,7 +102,7 @@ void GearySettings::readIdentity()
 {
     QString realName = settings->value(QStringLiteral("realName")).toString();
     if (!realName.isEmpty()) {
-        KIdentityManagement::Identity *identity = createIdentity(realName);
+        KIdentityManagementCore::Identity *identity = createIdentity(realName);
         identity->setFullName(realName);
         identity->setIdentityName(realName);
         const QString address = settings->value(QStringLiteral("primary_email")).toString();
@@ -113,8 +113,8 @@ void GearySettings::readIdentity()
         }
         const QString signatureStr = settings->value(QStringLiteral("email_signature")).toString();
         if (!signatureStr.isEmpty()) {
-            KIdentityManagement::Signature signature;
-            signature.setType(KIdentityManagement::Signature::Inlined);
+            KIdentityManagementCore::Signature signature;
+            signature.setType(KIdentityManagementCore::Signature::Inlined);
             signature.setText(signatureStr);
             const bool useSignature = settings->value(QStringLiteral("use_email_signature"), true).toBool();
             signature.setEnabledSignature(useSignature);

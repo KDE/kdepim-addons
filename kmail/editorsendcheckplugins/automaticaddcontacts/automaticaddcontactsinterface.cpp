@@ -7,8 +7,8 @@
 #include "automaticaddcontactsinterface.h"
 #include "automaticaddcontactsjob.h"
 #include <KConfigGroup>
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 #include <KSharedConfig>
 
 AutomaticAddContactsInterface::AutomaticAddContactsInterface(QObject *parent)
@@ -49,10 +49,10 @@ void AutomaticAddContactsInterface::reloadConfig()
 {
     mHashSettings.clear();
 
-    KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
-    KIdentityManagement::IdentityManager::ConstIterator end = im->end();
+    KIdentityManagementCore::IdentityManager *im = KIdentityManagementCore::IdentityManager::self();
+    KIdentityManagementCore::IdentityManager::ConstIterator end = im->end();
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    for (KIdentityManagement::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {
+    for (KIdentityManagementCore::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {
         const uint identity = (*it).uoid();
         KConfigGroup identityGroup = config->group(QStringLiteral("Automatic Add Contacts %1").arg(identity));
         AutomaticAddContactsSettings settings;

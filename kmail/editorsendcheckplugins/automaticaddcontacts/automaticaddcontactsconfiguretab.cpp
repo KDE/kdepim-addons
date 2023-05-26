@@ -7,8 +7,8 @@
 #include "automaticaddcontactsconfiguretab.h"
 #include "automaticaddcontactstabwidget.h"
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 #include <KSharedConfig>
 #include <QHBoxLayout>
 #include <QRegularExpression>
@@ -23,15 +23,15 @@ AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *pare
     mainLayout->setContentsMargins({});
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
-    initTab(KIdentityManagement::IdentityManager::self());
+    initTab(KIdentityManagementCore::IdentityManager::self());
 }
 
 AutomaticAddContactsConfigureTab::~AutomaticAddContactsConfigureTab() = default;
 
-void AutomaticAddContactsConfigureTab::initTab(KIdentityManagement::IdentityManager *identityManager)
+void AutomaticAddContactsConfigureTab::initTab(KIdentityManagementCore::IdentityManager *identityManager)
 {
-    KIdentityManagement::IdentityManager::ConstIterator end = identityManager->end();
-    for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
+    KIdentityManagementCore::IdentityManager::ConstIterator end = identityManager->end();
+    for (KIdentityManagementCore::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         auto w = new AutomaticAddContactsTabWidget(this);
         connect(w, &AutomaticAddContactsTabWidget::configureChanged, this, &AutomaticAddContactsConfigureTab::configureChanged);
         mTabWidget->addTab(w, QStringLiteral("%1 (%2)").arg((*it).identityName(), (*it).primaryEmailAddress()));

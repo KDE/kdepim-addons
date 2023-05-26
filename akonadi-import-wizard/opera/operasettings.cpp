@@ -11,8 +11,8 @@
 #include <MailCommon/MailUtil>
 #include <MailTransport/TransportManager>
 
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/Signature>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/Signature>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -213,7 +213,7 @@ void OperaSettings::readTransport(const KConfigGroup &grp)
 void OperaSettings::readIdentity(const KConfigGroup &grp)
 {
     QString realName = grp.readEntry(QStringLiteral("Real Name"));
-    KIdentityManagement::Identity *newIdentity = createIdentity(realName);
+    KIdentityManagementCore::Identity *newIdentity = createIdentity(realName);
     const QString cc = grp.readEntry(QStringLiteral("Auto CC"));
     newIdentity->setCc(cc);
 
@@ -238,7 +238,7 @@ void OperaSettings::readIdentity(const KConfigGroup &grp)
 
     QString signatureFile = grp.readEntry(QStringLiteral("Signature File"));
     if (!signatureFile.isEmpty()) {
-        KIdentityManagement::Signature signature;
+        KIdentityManagementCore::Signature signature;
         const int signatureHtml = grp.readEntry(QStringLiteral("Signature is HTML"), -1);
         if (signatureFile.contains(QLatin1String("{Preferences}"))) {
             signatureFile.replace(QStringLiteral("{Preferences}"), MailImporter::FilterOpera::defaultSettingsPath() + QStringLiteral("/"));
@@ -254,12 +254,12 @@ void OperaSettings::readIdentity(const KConfigGroup &grp)
                     break;
                 case 0:
                     signature.setInlinedHtml(false);
-                    signature.setType(KIdentityManagement::Signature::Inlined);
+                    signature.setType(KIdentityManagementCore::Signature::Inlined);
                     signature.setText(QString::fromUtf8(sigText));
                     break;
                 case 1:
                     signature.setInlinedHtml(true);
-                    signature.setType(KIdentityManagement::Signature::Inlined);
+                    signature.setType(KIdentityManagementCore::Signature::Inlined);
                     signature.setText(QString::fromUtf8(sigText));
                     break;
                 default:

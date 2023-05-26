@@ -12,8 +12,8 @@
 #include "sendattachments/checkattachmentjob.h"
 
 #include <KConfigGroup>
-#include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagementCore/Identity>
+#include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
@@ -42,7 +42,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         }
     }
     if (mCheckMailTransport) {
-        KIdentityManagement::Identity *identity = &KIdentityManagement::IdentityManager::self()->modifyIdentityForUoid(params.identity());
+        KIdentityManagementCore::Identity *identity = &KIdentityManagementCore::IdentityManager::self()->modifyIdentityForUoid(params.identity());
         if (identity->transport() != QString::number(params.transportId())) {
             QPointer<CheckBeforeSendUpdateSmtpDialog> dlg = new CheckBeforeSendUpdateSmtpDialog(parentWidget());
             if (!dlg->exec()) {
@@ -51,7 +51,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
             }
             if (dlg->changeSmtp()) {
                 identity->setTransport(QString::number(params.transportId()));
-                KIdentityManagement::IdentityManager::self()->commit();
+                KIdentityManagementCore::IdentityManager::self()->commit();
             }
             delete dlg;
         }
