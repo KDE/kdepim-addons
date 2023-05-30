@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -154,14 +154,12 @@ msgstr ""
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] ""
-msgstr[1] ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] ""
-msgstr[1] ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
 #, kde-format
