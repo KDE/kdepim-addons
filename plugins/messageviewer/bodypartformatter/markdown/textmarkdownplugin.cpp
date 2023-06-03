@@ -46,7 +46,7 @@ public:
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
-        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](KTextTemplate::OutputStream *) {
+        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::KTextTemplateCallback>([=](KTextTemplate::OutputStream *) {
                      QString result;
 #ifdef USE_DISCOUNT_LIB
                      MarkdownDiscount engine;

@@ -87,7 +87,7 @@ public:
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
-        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([&](KTextTemplate::OutputStream *stream) {
+        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::KTextTemplateCallback>([&](KTextTemplate::OutputStream *stream) {
                      const auto tnefatts = parser.message()->attachmentList();
                      if (tnefatts.isEmpty() && inviteStr.isEmpty()) {
                          qCDebug(MS_TNEF_LOG) << "No attachments or invitation found in" << fileName;
