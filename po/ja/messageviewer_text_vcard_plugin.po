@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
@@ -26,7 +26,6 @@ msgstr ""
 msgid "Attached business card"
 msgid_plural "Attached business cards"
 msgstr[0] "添付のビジネスカード"
-msgstr[1] "添付のビジネスカード"
 
 #: text_vcard.cpp:130
 #, kde-format
