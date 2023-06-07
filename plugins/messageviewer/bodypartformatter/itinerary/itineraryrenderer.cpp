@@ -5,7 +5,6 @@
 */
 
 #include "itineraryrenderer.h"
-#include "itinerary_debug.h"
 #include "itinerarykdeconnecthandler.h"
 #include "itinerarymemento.h"
 #include "itineraryurlhandler.h"
