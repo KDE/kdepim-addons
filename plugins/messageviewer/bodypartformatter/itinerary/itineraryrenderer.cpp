@@ -155,7 +155,7 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
     c.insert(QStringLiteral("data"), elems);
 
     auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/itinerary/itinerary.html"));
-    const_cast<KTextTemplate::Engine *>(t->engine())->addDefaultLibrary(QStringLiteral("kitinerary_grantlee_extension"));
+    const_cast<KTextTemplate::Engine *>(t->engine())->addDefaultLibrary(QStringLiteral("kitinerary_ktexttemplate_extension"));
     dynamic_cast<GrantleeTheme::Engine *>(const_cast<KTextTemplate::Engine *>(t->engine()))
         ->localizer()
         ->setApplicationDomain(QByteArrayLiteral("messageviewer_semantic_plugin"));

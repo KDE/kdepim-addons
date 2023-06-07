@@ -4,7 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "grantleeextension.h"
+#include "ktexttemplateextension.h"
 
 #include <KContacts/Address>
 #include <KItinerary/Place>
