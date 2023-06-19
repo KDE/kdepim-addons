@@ -63,6 +63,9 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
             }
 
             QPointer<ConfirmBeforeDeletingMessageBoxDialog> dlg = new ConfirmBeforeDeletingMessageBoxDialog(parentWidget());
+            if (checkFoundStr.length() > 200) {
+                checkFoundStr = checkFoundStr.left(200) + QStringLiteral("...");
+            }
             dlg->setInfo(i18n("Do you want to delete this email?\n%1", checkFoundStr));
             const int result = dlg->exec();
             const auto button = static_cast<QDialogButtonBox::StandardButton>(result);
