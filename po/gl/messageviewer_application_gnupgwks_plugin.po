@@ -1,25 +1,26 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# Adrian Chaves <adrian@chaves.io>, 2018, 2023.
 #
-# Adrian Chaves <adrian@chaves.io>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-02-04 00:44+0000\n"
-"PO-Revision-Date: 2018-04-29 19:35+0100\n"
-"Last-Translator: Adrian Chaves <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-06-18 16:15+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: gnupgwksurlhandler.cpp:85
 #, kde-format
 msgid "Display key details"
-msgstr "Mostrar os detalles da chave"
+msgstr "Amosar os detalles da chave"
 
 #: gnupgwksurlhandler.cpp:87
 #, kde-format
@@ -85,7 +86,7 @@ msgstr "A mensaxe eliminarase automaticamente unha vez confirme o rexistro."
 
 #: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
 msgid "Show key details"
-msgstr "Mostrar os detalles da chave…"
+msgstr "Amosar os detalles da chave…"
 
 #: templates/gnupgwksmessagepart.html:42
 msgid ""
@@ -156,7 +157,7 @@ msgstr "Abrir en Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
 msgid "Show key details ..."
-msgstr "Mostrar os detalles da chave…"
+msgstr "Amosar os detalles da chave…"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
