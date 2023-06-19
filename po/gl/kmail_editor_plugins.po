@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Adrian Chaves <adrian@chaves.io>, 2018, 2019.
+# Adrian Chaves <adrian@chaves.io>, 2018, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2019-11-26 23:18+0100\n"
+"PO-Revision-Date: 2023-06-18 15:32+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -78,8 +78,7 @@ msgid "Insert Special Character..."
 msgstr "Inserir un carácter especial…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
-#, fuzzy, kde-format
-#| msgid "Insert Special Character"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "Inserir un carácter especial"
@@ -95,8 +94,7 @@ msgid "Insert Non Breaking Space"
 msgstr "Inserir un espazo inseparábel"
 
 #: quicktext/quicktextconfiguredialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Configure quick text"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure quick text"
 msgstr "Configurar o texto rápido"

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Adrian Chaves <adrian@chaves.io>, 2018, 2019.
+# Adrian Chaves <adrian@chaves.io>, 2018, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-07 00:51+0000\n"
-"PO-Revision-Date: 2019-11-26 23:16+0100\n"
+"PO-Revision-Date: 2023-06-18 19:46+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
@@ -25,7 +25,7 @@ msgstr "Enviar a %1"
 #: itineraryurlhandler.cpp:126
 #, kde-format
 msgid "Show calendar at the time of this reservation."
-msgstr "Mostrar o calendario no momento da reserva."
+msgstr "Amosar o calendario no momento da reserva."
 
 #: itineraryurlhandler.cpp:129
 #, kde-format
@@ -45,12 +45,12 @@ msgstr "Enviar esta reserva a un dispositivo usando KDE Connect."
 #: itineraryurlhandler.cpp:206
 #, kde-format
 msgid "Boarding Pass"
-msgstr "Pase de embarque"
+msgstr "Tarxeta de embarque"
 
 #: itineraryurlhandler.cpp:207
 #, kde-format
 msgid "Ticket"
-msgstr ""
+msgstr "Billete"
 
 #: templates/actions.html:4
 msgid "View"
@@ -74,10 +74,8 @@ msgstr "Rexistro"
 
 #: templates/boatreservation.html:9 templates/busreservation.html:12
 #: templates/flightreservation.html:13 templates/trainreservation.html:12
-#, fuzzy
-#| msgid "Add reservation to calendar."
 msgid "Reservation canceled."
-msgstr "Engadir a reserva ao calendario."
+msgstr "Cancelouse a reserva."
 
 #: templates/busreservation.html:49 templates/busreservation.html:69
 #: templates/flightreservation.html:62 templates/flightreservation.html:79
@@ -88,10 +86,8 @@ msgstr "Asento: %1"
 
 #: templates/event.html:3 templates/foodestablishmentreservation.html:3
 #: templates/lodgingreservation.html:3
-#, fuzzy
-#| msgid "Cancel"
 msgid "Canceled:"
-msgstr "Cancelar"
+msgstr "Cancelada:"
 
 #: templates/flightreservation.html:50
 #, kde-format
@@ -109,8 +105,7 @@ msgid "Group: %1"
 msgstr "Grupo: %1"
 
 #: templates/foodestablishmentreservation.html:9
-#, fuzzy, kde-format
-#| msgid "Number Of People: %1"
+#, kde-format
 msgid "Number Of People: %1"
 msgstr "Número de persoas: %1"
 
@@ -128,7 +123,7 @@ msgstr "A nome de: %1"
 
 #: templates/itinerary.html:66
 msgid "Show Calendar"
-msgstr "Mostrar o calendario"
+msgstr "Amosar o calendario"
 
 #: templates/itinerary.html:69
 msgid "Add to Calendar"
@@ -144,7 +139,7 @@ msgstr "Enviar a un dispositivo…"
 
 #: templates/location.html:4
 msgid "Show location on map"
-msgstr "Mostrar o lugar nun mapa"
+msgstr "Amosar o lugar nun mapa"
 
 #: templates/location.html:10
 msgid "Search address on map"
@@ -152,7 +147,7 @@ msgstr "Buscar o enderezo nun mapa"
 
 #: templates/lodgingreservation.html:10
 msgid "Reserved for: "
-msgstr ""
+msgstr "Reservado para: "
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format

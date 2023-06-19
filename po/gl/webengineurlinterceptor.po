@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2016.
-# Adrian Chaves <adrian@chaves.io>, 2018, 2019.
+# Adrian Chaves <adrian@chaves.io>, 2018, 2019, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2019-02-15 22:15+0100\n"
+"PO-Revision-Date: 2023-06-18 21:34+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: adblock/adblockinterceptorinterface.cpp:49
 #, kde-format
@@ -56,8 +57,7 @@ msgid "Update interval list of adblock"
 msgstr "Intervalo de actualización da lista de bloqueo de publicidade"
 
 #: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add subscription"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add subscription"
 msgstr "Engadir unha subscrición"
@@ -70,11 +70,10 @@ msgstr "Seleccionar a lista:"
 #: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:41
 #, kde-format
 msgid "Show List"
-msgstr "Mostrar a lista"
+msgstr "Amosar a lista"
 
 #: adblock/lib/widgets/adblockblockableitemsdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Blockable Items"
+#, kde-format
 msgctxt "@title:window"
 msgid "Blockable Items"
 msgstr "Elementos bloqueábeis"
@@ -137,7 +136,7 @@ msgstr "Imaxe"
 #: adblock/lib/widgets/adblockblockableitemswidget.cpp:188
 #, kde-format
 msgid "Script"
-msgstr "Script"
+msgstr "Guión"
 
 #: adblock/lib/widgets/adblockblockableitemswidget.cpp:191
 #, kde-format
@@ -180,8 +179,7 @@ msgid "Unknown"
 msgstr "Descoñecido"
 
 #: adblock/lib/widgets/adblockcreatefilterdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid "Create Filter"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Filter"
 msgstr "Crear un filtro"
@@ -207,8 +205,7 @@ msgid "No subscription added"
 msgstr "Non se engadiu ningunha subscrición"
 
 #: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:18
-#, fuzzy, kde-format
-#| msgid "Configure AdBlock Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Configurar o complemento AdBlock"
@@ -242,12 +239,12 @@ msgid ""
 msgstr ""
 "<qt><p>Insira unha expresión a filtrar. Os filtros poden definirse como:"
 "<ul><li>Expresións estilo consola, como <tt>http://www.example.com/ads*</"
-"tt>. Poden empregarse os símbolos <tt>*?[]</tt>.</li><li>Expresións "
-"regulares, delimitadas por barras inclinadas («<tt>/</tt>»), como <tt>/\\/"
-"(ad|banner)\\./</tt></li></ul><p>Calquera expresión de filtrado pode "
-"precederse de «<tt>@@</tt>» para permitir os URL que se correspondan con "
-"ela. As expresións de filtrado de URL permitidos teñen prioridade sobre "
-"calquera lista negra.<br><a href='%1'>%2</a></qt>"
+"tt>. Poden usarse os símbolos <tt>*?[]</tt>.</li><li>Expresións regulares, "
+"delimitadas por barras inclinadas («<tt>/</tt>»), como <tt>/\\/(ad|"
+"banner)\\./</tt></li></ul><p>Calquera expresión de filtrado pode precederse "
+"de «<tt>@@</tt>» para permitir os URL que se correspondan con ela. As "
+"expresións de filtrado de URL permitidos teñen prioridade sobre calquera "
+"lista negra.<br><a href='%1'>%2</a></qt>"
 
 #: adblock/lib/widgets/adblocksettingwidget.cpp:150
 #, kde-format
@@ -293,11 +290,10 @@ msgid "Export Filters"
 msgstr "Exportar filtros"
 
 #: adblock/lib/widgets/adblockshowlistdialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Show adblock list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show adblock list"
-msgstr "Mostrar a lista de bloqueo de publicidade"
+msgstr "Amosar a lista de bloqueo de publicidade"
 
 #: adblock/lib/widgets/adblockshowlistdialog.cpp:45
 #, kde-format
@@ -402,7 +398,7 @@ msgstr "Pregar o bloqueado:"
 #: adblock/lib/widgets/ui/settings_adblock.ui:29
 #, kde-format
 msgid "&Enable Ad Block"
-msgstr "&Activar o anti-publicidade"
+msgstr "&Activar o bloqueo de publicidade"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
 #: adblock/lib/widgets/ui/settings_adblock.ui:36
@@ -438,7 +434,7 @@ msgstr "Actualizar os filtros automáticos activados cada:"
 #: adblock/lib/widgets/ui/settings_adblock.ui:136
 #, kde-format
 msgid "Show List..."
-msgstr "Mostrar a lista…"
+msgstr "Amosar a lista…"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab)
 #: adblock/lib/widgets/ui/settings_adblock.ui:144
