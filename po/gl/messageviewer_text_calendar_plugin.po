@@ -6,24 +6,24 @@
 # Xosé <xosecalvo@gmail.com>, 2009, 2010, 2011, 2012.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2019-03-28 13:06+0100\n"
+"PO-Revision-Date: 2023-06-19 09:14+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: attendeeselector.cpp:21
-#, fuzzy, kde-format
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Seleccionar os asistentes"
@@ -51,8 +51,7 @@ msgid "Keep me informed about status changes of this incidence."
 msgstr "Mantéñame informado sobre os cambios de estado desta incidencia."
 
 #: delegateselector.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select delegate"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
 msgstr "Seleccionar o delegado"
@@ -70,7 +69,7 @@ msgstr "Comentario:"
 #: text_calendar.cpp:355
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
-msgstr "Non se atopou ningún anexo chamado «%1» no convite."
+msgstr "Non se atopou ningún anexo chamado «%1» na invitación."
 
 #: text_calendar.cpp:370
 #, kde-format
@@ -79,9 +78,9 @@ msgid ""
 "this computer. Please ask the event organizer to resend the invitation with "
 "this attachment stored inline instead of a link."
 msgstr ""
-"O anexo de convite «%1» é unha ligazón web que non é accesíbel desde este "
-"computador. Pídalle ao organizador do evento que envíe de novo o convite con "
-"este anexo almacenado dentro no canto dunha ligazón."
+"O anexo da invitación, «%1», é unha ligazón web que non é accesíbel desde "
+"este computador. Pídalle á organizadora do evento que envíe de novo a "
+"invitación co anexo almacenado dentro no canto dunha ligazón."
 
 #: text_calendar.cpp:422
 #, kde-format
@@ -134,7 +133,7 @@ msgstr "Aceptado: %1"
 #: text_calendar.cpp:536 text_calendar.cpp:556
 #, kde-format
 msgid "Invitation answer attached."
-msgstr "Vai anexa a resposta ao convite."
+msgstr "Vai anexa a resposta á invitación."
 
 #: text_calendar.cpp:659
 #, kde-format
@@ -204,20 +203,18 @@ msgstr "Aínda quere aceptar a tarefa?"
 #: text_calendar.cpp:777
 #, kde-format
 msgid "Do you still want to accept the invitation?"
-msgstr "Aínda quere aceptar o convite?"
+msgstr "Aínda quere aceptar a invitación?"
 
 #: text_calendar.cpp:779 text_calendar.cpp:791
-#, fuzzy, kde-format
-#| msgctxt "Accepted the invitation."
-#| msgid "Accepted: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Accept"
-msgstr "Aceptado: %1"
+msgstr "Aceptar"
 
 #: text_calendar.cpp:783
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
-msgstr "Aínda quere enviar a aceptación condicional do convite?"
+msgstr "Aínda quere enviar a aceptación condicional da invitación?"
 
 #: text_calendar.cpp:785
 #, kde-format
@@ -228,7 +225,7 @@ msgstr "Aínda quere enviar a aceptación condicional da tarefa?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #: text_calendar.cpp:790
 #, kde-format
@@ -251,12 +248,10 @@ msgid "Do you still want to decline the counter proposal?"
 msgstr "Aínda quere rexeitar a contraproposta?"
 
 #: text_calendar.cpp:803
-#, fuzzy, kde-format
-#| msgctxt "Not able to attend."
-#| msgid "Declined: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Decline"
-msgstr "Rexeitado: %1"
+msgstr "Rexeitar"
 
 #: text_calendar.cpp:805
 #, kde-format
@@ -267,7 +262,7 @@ msgstr "Aínda quere gravar a resposta no seu calendario?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
-msgstr ""
+msgstr "Gravar"
 
 #: text_calendar.cpp:809
 #, kde-format
@@ -277,14 +272,13 @@ msgstr "Aínda quere delegar esta tarefa?"
 #: text_calendar.cpp:811
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
-msgstr "Aínda quere delegar este convite?"
+msgstr "Aínda quere delegar a invitación?"
 
 #: text_calendar.cpp:813
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
-msgstr "Delegado:"
+msgstr "Delegado"
 
 #: text_calendar.cpp:816
 #, kde-format
@@ -294,14 +288,13 @@ msgstr "Aínda quere reenviar esta tarefa?"
 #: text_calendar.cpp:818
 #, kde-format
 msgid "Do you still want to forward this invitation?"
-msgstr "Aínda quere reenviar este convite?"
+msgstr "Aínda quere reenviar a invitación?"
 
 #: text_calendar.cpp:820
-#, fuzzy, kde-format
-#| msgid "Forwarded: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr "Reenviado: %1"
+msgstr "Reenviar"
 
 #: text_calendar.cpp:824
 #, kde-format
@@ -312,26 +305,24 @@ msgstr "Aínda quere cancelar esta tarefa?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
-msgstr ""
+msgstr "Cancelar a tarefa"
 
 #: text_calendar.cpp:827
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
-msgstr "Aínda quere cancelar este convite?"
+msgstr "Aínda quere cancelar a invitación?"
 
 #: text_calendar.cpp:828 text_calendar.cpp:849
-#, fuzzy, kde-format
-#| msgid "Accept invitation"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
-msgstr "Aceptar o convite"
+msgstr "Cancelar a invitación"
 
 #: text_calendar.cpp:831 text_calendar.cpp:852
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Non enviar"
+msgstr "Non cancelar"
 
 #: text_calendar.cpp:834
 #, kde-format
@@ -342,7 +333,7 @@ msgstr "Aínda quere comprobar o calendario?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
-msgstr ""
+msgstr "Comprobar"
 
 #: text_calendar.cpp:838
 #, kde-format
@@ -352,7 +343,7 @@ msgstr "Aínda quere gravar esta tarefa no seu calendario?"
 #: text_calendar.cpp:840
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
-msgstr "Aínda quere gravar o convite no seu calendario?"
+msgstr "Aínda quere gardar a invitación no calendario?"
 
 #: text_calendar.cpp:845
 #, kde-format
@@ -362,7 +353,7 @@ msgstr "Seguro que quere cancelar esta tarefa?"
 #: text_calendar.cpp:848
 #, kde-format
 msgid "Do you really want to cancel this invitation?"
-msgstr "Seguro que quere cancelar este convite?"
+msgstr "Seguro que quere cancelar a invitación?"
 
 #: text_calendar.cpp:857
 #, kde-format
@@ -379,11 +370,10 @@ msgstr ""
 "%2"
 
 #: text_calendar.cpp:890
-#, fuzzy, kde-format
-#| msgid "Reaction to Invitation"
+#, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
-msgstr "Reacción ao convite"
+msgstr "Reacción á invitación"
 
 #: text_calendar.cpp:901 text_calendar.cpp:1160
 #, kde-format
@@ -398,11 +388,10 @@ msgstr "Non é posíbel delegar no organizador."
 #: text_calendar.cpp:1068
 #, kde-format
 msgid "Save Invitation Attachment"
-msgstr "Gardar o anexo do convite"
+msgstr "Gardar o anexo da invitación"
 
 #: text_calendar.cpp:1149
-#, fuzzy, kde-format
-#| msgid "Decline Counter Proposal"
+#, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "Rexeitar a contraproposta"
@@ -414,8 +403,8 @@ msgid ""
 "a response will not be possible.\n"
 "Please create at least 1 writable events calendar and re-sync."
 msgstr ""
-"Non ten cartafoles de calendario para os convites, polo que non é posíbel "
-"almacenar ou gravar unha resposta.\n"
+"Non ten cartafoles de calendario para as invitacións, polo que non é posíbel "
+"almacenar ou gardar unha resposta.\n"
 "Cree polo menos un calendario de eventos que permita escritura e sincronice "
 "de novo."
 
@@ -425,7 +414,7 @@ msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
 "Unable to continue."
 msgstr ""
-"O convite de calendario almacenado nesta mensaxe de correo está estragado "
+"A invitación de calendario almacenada nesta mensaxe de correo está estragada "
 "por algunha causa. Non se pode continuar."
 
 #: text_calendar.cpp:1265
@@ -438,11 +427,11 @@ msgid ""
 "Would you like to send the organizer a message regarding this invitation?\n"
 "Press the [Cancel] button to cancel the recording operation."
 msgstr ""
-"O organizador non está a agardar por unha resposta a este convite pero, se o "
-"desexar, pódelle enviar unha mensaxe de correo electrónico.\n"
+"A organizadora non espera unha resposta á invitación, pero se quere pódelle "
+"enviar unha mensaxe de correo electrónico.\n"
 "\n"
-"Desexa enviarlle unha mensaxe ao organizador en relación con este convite?\n"
-"Prema o botón [Cancelar] para cancelar a operación de gravado."
+"Quere enviarlle unha mensaxe?\n"
+"Prema o botón de «Cancelar» para cancelar a operación de gardar."
 
 #: text_calendar.cpp:1269
 #, kde-format
@@ -478,12 +467,12 @@ msgstr "Gardar o anexo como…"
 #: text_calendar.cpp:1358
 #, kde-format
 msgid "Accept invitation"
-msgstr "Aceptar o convite"
+msgstr "Aceptar a invitación"
 
 #: text_calendar.cpp:1360
 #, kde-format
 msgid "Accept invitation conditionally"
-msgstr "Aceptar o convite con condicións"
+msgstr "Aceptar a invitación con condicións"
 
 #: text_calendar.cpp:1362
 #, kde-format
@@ -503,7 +492,7 @@ msgstr "Desfacerse do correo"
 #: text_calendar.cpp:1368
 #, kde-format
 msgid "Decline invitation"
-msgstr "Rexeitar o convite"
+msgstr "Rexeitar a invitación"
 
 #: text_calendar.cpp:1370
 #, kde-format
@@ -528,27 +517,27 @@ msgstr "Gravar a resposta no meu calendario"
 #: text_calendar.cpp:1378
 #, kde-format
 msgid "Record invitation into my calendar"
-msgstr "Gravar o convite no meu calendario"
+msgstr "Gardar a invitación no calendario"
 
 #: text_calendar.cpp:1380
 #, kde-format
 msgid "Move this invitation to my trash folder"
-msgstr "Deitar este convite no cartafol do lixo"
+msgstr "Botar a invitación no cartafol do lixo"
 
 #: text_calendar.cpp:1382
 #, kde-format
 msgid "Delegate invitation"
-msgstr "Delegar o convite"
+msgstr "Delegar a invitación"
 
 #: text_calendar.cpp:1384
 #, kde-format
 msgid "Forward invitation"
-msgstr "Reenviar o convite"
+msgstr "Reenviar a invitación"
 
 #: text_calendar.cpp:1386
 #, kde-format
 msgid "Remove invitation from my calendar"
-msgstr "Retirar o convite do meu calendario"
+msgstr "Retirar a invitación do calendario"
 
 #: text_calendar.cpp:1389
 #, kde-format
