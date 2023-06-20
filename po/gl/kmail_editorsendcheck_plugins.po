@@ -260,4 +260,4 @@ msgstr "Cambiar o valor"
 #: confirm-address/confirmaddresswidget.cpp:22
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
-msgstr "As mensaxes potencialmente incorrectas móstranse en vermello:"
+msgstr "As mensaxes potencialmente incorrectas amósanse en vermello:"

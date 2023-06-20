@@ -278,16 +278,16 @@ msgid ""
 "wizard to get back to the former behavior.</p>"
 msgstr ""
 "<p>Aquí pode obter axuda para estabelecer as regras de filtrado de KMail "
-"para empregar algunhas das ferramentas máis coñecidas contra os virus.</"
-"p><p>O asistente pode detectar estas ferramentas no computador, así como "
-"crear regras de filtrado para clasificar as mensaxes empregando estas "
-"ferramentas e para separar as mensaxes que conteñan virus. O asistente non "
-"terá en conta ningunha regra de filtrado xa existente: ha amecer sempre as "
-"regras novas.</p><p><b>Coidado:</b> Xa que KMail está bloqueado durante a "
-"análise das mensaxes, pode que se atope con problemas de capacidade de "
-"reacción de KMail, xa que estas operacións contra os virus consumen "
-"normalmente algo de tempo; por favor, considere eliminar as regras de "
-"filtrado se quere volver ao comportamento anterior.</p>"
+"para usar algunhas das ferramentas máis coñecidas contra os virus.</p><p>O "
+"asistente pode detectar estas ferramentas no computador, así como crear "
+"regras de filtrado para clasificar as mensaxes usando estas ferramentas e "
+"para separar as mensaxes que conteñan virus. O asistente non terá en conta "
+"ningunha regra de filtrado xa existente: ha amecer sempre as regras novas.</"
+"p><p><b>Coidado:</b> Xa que KMail está bloqueado durante a análise das "
+"mensaxes, pode que se atope con problemas de capacidade de reacción de "
+"KMail, xa que estas operacións contra os virus consumen normalmente algo de "
+"tempo; por favor, considere eliminar as regras de filtrado se quere volver "
+"ao comportamento anterior.</p>"
 
 #: common/antispamwizard.cpp:1033
 #, kde-format
@@ -295,8 +295,8 @@ msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
 "page.</p>"
 msgstr ""
-"<p>Escolla as ferramentas a empregar para a detección de correo non desexado "
-"e vaia á páxina seguinte.</p>"
+"<p>Escolla as ferramentas a usar para a detección de correo non desexado e "
+"vaia á páxina seguinte.</p>"
 
 #: common/antispamwizard.cpp:1057
 #, kde-format
@@ -342,7 +342,7 @@ msgstr ""
 #: common/antispamwizard.cpp:1188
 #, kde-format
 msgid "Check messages using the anti-virus tools"
-msgstr "Comprobar as mensaxes empregando as ferramentas anti-virus"
+msgstr "Comprobar as mensaxes usando as ferramentas anti-virus"
 
 #: common/antispamwizard.cpp:1190
 #, kde-format

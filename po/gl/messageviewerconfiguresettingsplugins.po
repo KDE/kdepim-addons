@@ -192,7 +192,7 @@ msgstr ""
 #: dkim-verify/dkimpolicywidget.cpp:27
 #, kde-format
 msgid "Show Rules"
-msgstr "Mostrar as regras"
+msgstr "Amosar as regras"
 
 #: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:27
 #, kde-format
