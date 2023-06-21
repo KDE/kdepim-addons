@@ -31,3 +31,5 @@ void MergeContactSelectListWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(MergeContactSelectListWidgetTest)
+
+#include "moc_mergecontactselectlistwidgettest.cpp"

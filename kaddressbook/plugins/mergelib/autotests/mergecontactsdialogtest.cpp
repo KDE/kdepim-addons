@@ -73,3 +73,5 @@ void MergeContactsDialogTest::shouldSwithStackedWidget()
 }
 
 QTEST_MAIN(MergeContactsDialogTest)
+
+#include "moc_mergecontactsdialogtest.cpp"

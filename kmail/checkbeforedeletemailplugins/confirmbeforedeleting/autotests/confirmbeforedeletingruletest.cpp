@@ -22,3 +22,5 @@ void ConfirmBeforeDeletingRuleTest::shouldHaveDefaultValues()
     QCOMPARE(r.ruleType(), ConfirmBeforeDeletingRule::RuleType::Unknown);
     // TODO
 }
+
+#include "moc_confirmbeforedeletingruletest.cpp"

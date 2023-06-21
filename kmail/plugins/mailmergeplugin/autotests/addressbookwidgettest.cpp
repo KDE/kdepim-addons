@@ -14,3 +14,5 @@ AddressBookWidgetTest::AddressBookWidgetTest(QObject *parent)
 AddressBookWidgetTest::~AddressBookWidgetTest() = default;
 
 QTEST_MAIN(AddressBookWidgetTest)
+
+#include "moc_addressbookwidgettest.cpp"

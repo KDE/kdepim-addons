@@ -41,3 +41,5 @@ void ViewerPluginExternalConfigureDialog::help()
 {
     showHelp(QStringLiteral("kmail2"), QString());
 }
+
+#include "moc_viewerpluginexternalconfiguredialog.cpp"

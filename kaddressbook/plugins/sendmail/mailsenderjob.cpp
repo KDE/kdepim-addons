@@ -128,3 +128,5 @@ void MailSenderJob::finishJob()
     }
     deleteLater();
 }
+
+#include "moc_mailsenderjob.cpp"

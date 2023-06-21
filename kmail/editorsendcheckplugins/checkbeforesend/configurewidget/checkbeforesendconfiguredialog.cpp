@@ -42,3 +42,5 @@ void CheckBeforeSendConfigureDialog::help()
 {
     showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
 }
+
+#include "moc_checkbeforesendconfiguredialog.cpp"

@@ -59,3 +59,5 @@ bool FolderSettingFilterProxyModel::setData(const QModelIndex &index, const QVar
 
     return QSortFilterProxyModel::setData(index, value, role);
 }
+
+#include "moc_foldersettingfilterproxymodel.cpp"

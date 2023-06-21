@@ -160,3 +160,5 @@ void EventModel::removeCollection(const Akonadi::Collection &col)
 
     Q_EMIT incidenceChanger()->deleteFinished(0, ids, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
 }
+
+#include "moc_eventmodel.cpp"

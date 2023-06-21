@@ -76,3 +76,5 @@ void MailMergeWidget::slotSourceChanged(int index)
         mStackedWidget->setCurrentIndex(index);
     }
 }
+
+#include "moc_mailmergewidget.cpp"

@@ -118,3 +118,5 @@ void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const KMime:
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptParseArgumentTest)
+
+#include "moc_viewerpluginexternalscriptparseargumenttest.cpp"

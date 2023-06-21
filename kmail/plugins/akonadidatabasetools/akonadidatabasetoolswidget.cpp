@@ -26,3 +26,5 @@ void AkonadiDatabaseToolsWidget::appendText(const QString &text)
 {
     mPlainTextEdit->appendHtml(text);
 }
+
+#include "moc_akonadidatabasetoolswidget.cpp"

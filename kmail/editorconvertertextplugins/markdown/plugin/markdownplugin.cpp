@@ -69,3 +69,5 @@ bool MarkdownPlugin::hasToolBarSupport() const
 }
 
 #include "markdownplugin.moc"
+
+#include "moc_markdownplugin.cpp"

@@ -24,3 +24,5 @@ void ScamConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "scamconfiguresettingsplugin.moc"
+
+#include "moc_scamconfiguresettingsplugin.cpp"

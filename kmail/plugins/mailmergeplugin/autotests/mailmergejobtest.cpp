@@ -14,3 +14,5 @@ MailMergeJobTest::MailMergeJobTest(QObject *parent)
 MailMergeJobTest::~MailMergeJobTest() = default;
 
 QTEST_MAIN(MailMergeJobTest)
+
+#include "moc_mailmergejobtest.cpp"

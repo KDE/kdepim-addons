@@ -110,3 +110,5 @@ void PimCalendarsModel::saveConfig()
         SettingsChangeNotifier::self()->notifySettingsChanged();
     }
 }
+
+#include "moc_pimcalendarsmodel.cpp"

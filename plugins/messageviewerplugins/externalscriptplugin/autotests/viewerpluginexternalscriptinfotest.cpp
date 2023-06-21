@@ -68,3 +68,5 @@ void ViewerPluginExternalScriptInfoTest::shouldBeEqual()
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptInfoTest)
+
+#include "moc_viewerpluginexternalscriptinfotest.cpp"

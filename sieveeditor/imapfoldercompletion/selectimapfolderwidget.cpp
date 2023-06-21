@@ -132,3 +132,5 @@ void SelectImapFolderWidget::slotRefreshImap()
 {
     SelectImapFolderModel::self()->reloadFolderModel(mAccount);
 }
+
+#include "moc_selectimapfolderwidget.cpp"

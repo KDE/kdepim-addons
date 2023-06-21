@@ -46,3 +46,5 @@ void MergeContactLoseInformationWarningTest::shouldEmitSignals()
 }
 
 QTEST_MAIN(MergeContactLoseInformationWarningTest)
+
+#include "moc_mergecontactloseinformationwarningtest.cpp"

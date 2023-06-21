@@ -25,3 +25,5 @@ void ViewerPluginManagerTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ViewerPluginManagerTest)
+
+#include "moc_viewerpluginmanagertest.cpp"

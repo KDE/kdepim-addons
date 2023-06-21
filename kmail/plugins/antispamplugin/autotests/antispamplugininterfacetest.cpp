@@ -43,3 +43,5 @@ void AntiSpamPluginInterfaceTest::shouldEmitActivatedSignal()
 }
 
 QTEST_MAIN(AntiSpamPluginInterfaceTest)
+
+#include "moc_antispamplugininterfacetest.cpp"

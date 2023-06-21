@@ -205,3 +205,5 @@ void LDifImportExportPluginInterface::importFile(const QUrl &url)
         importLdifFile(url.path());
     }
 }
+
+#include "moc_ldifimportexportplugininterface.cpp"

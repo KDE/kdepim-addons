@@ -44,3 +44,5 @@ void MergeContactSelectInformationScrollAreaTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(MergeContactSelectInformationScrollAreaTest)
+
+#include "moc_mergecontactselectinformationscrollareatest.cpp"

@@ -20,3 +20,5 @@ MailMergeJob::~MailMergeJob()
 void MailMergeJob::start()
 {
 }
+
+#include "moc_mailmergejob.cpp"

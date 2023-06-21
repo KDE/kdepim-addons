@@ -58,3 +58,5 @@ void ExpireAccountTrashFolderConfigDialog::writeConfig()
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }
+
+#include "moc_expireaccounttrashfolderconfigdialog.cpp"

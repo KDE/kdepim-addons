@@ -77,3 +77,5 @@ void DelegateSelectorTest::shouldReturnCheckBoxState()
 }
 
 QTEST_MAIN(DelegateSelectorTest)
+
+#include "moc_delegateselectortest.cpp"

@@ -157,3 +157,5 @@ void MarkdownCreateImageWidgetTest::shouldEmitSignal()
     QCOMPARE(spy.at(0).at(0).value<bool>(), false);
     spy.clear();
 }
+
+#include "moc_markdowncreateimagewidgettest.cpp"

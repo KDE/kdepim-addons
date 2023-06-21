@@ -40,3 +40,5 @@ void DKIMGeneralWidgetTest::shouldHaveDefaultValues()
     QVERIFY(!mUseOnlyAuthenticationResult->text().isEmpty());
     QVERIFY(!mUseOnlyAuthenticationResult->isChecked());
 }
+
+#include "moc_dkimgeneralwidgettest.cpp"

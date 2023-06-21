@@ -50,3 +50,5 @@ void DKIMAdvancedWidget::slotConfigureAuthenticationServer()
     DKIMAuthenticationVerifiedServerDialog dlg(this);
     dlg.exec();
 }
+
+#include "moc_dkimadvancedwidget.cpp"

@@ -23,3 +23,5 @@ void GravatarUpdateJobTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(GravatarUpdateJobTest)
+
+#include "moc_gravatarupdatejobtest.cpp"

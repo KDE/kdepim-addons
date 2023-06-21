@@ -214,3 +214,5 @@ QDebug operator<<(QDebug d, const ConfirmBeforeDeletingRule &t)
     d << "mRuleType " << t.ruleType();
     return d;
 }
+
+#include "moc_confirmbeforedeletingrule.cpp"

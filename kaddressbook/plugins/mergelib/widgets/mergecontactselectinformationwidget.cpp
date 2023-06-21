@@ -194,3 +194,5 @@ void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &ad
         }
     }
 }
+
+#include "moc_mergecontactselectinformationwidget.cpp"

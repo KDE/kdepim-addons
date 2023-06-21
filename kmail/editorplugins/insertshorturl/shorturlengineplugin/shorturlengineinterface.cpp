@@ -50,3 +50,5 @@ void ShortUrlEngineInterface::setTextCursor(const QTextCursor &cursor)
 {
     mTextCursor = cursor;
 }
+
+#include "moc_shorturlengineinterface.cpp"

@@ -13,3 +13,5 @@ SelectMailDialogTest::SelectMailDialogTest(QObject *parent)
     : QObject(parent)
 {
 }
+
+#include "moc_selectmaildialogtest.cpp"

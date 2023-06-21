@@ -93,3 +93,5 @@ void ViewerPluginCreateEventInterface::slotCreateEvent(const KCalendarCore::Even
     auto createJob = new CreateEventJob(eventPtr, collection, mMessageItem, this);
     createJob->start();
 }
+
+#include "moc_viewerplugincreateeventinterface.cpp"

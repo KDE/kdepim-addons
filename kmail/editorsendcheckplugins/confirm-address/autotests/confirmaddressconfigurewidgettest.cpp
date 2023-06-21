@@ -41,3 +41,5 @@ void ConfirmAddressConfigureWidgetTest::shouldLoadSaveResetValue()
 }
 
 QTEST_MAIN(ConfirmAddressConfigureWidgetTest)
+
+#include "moc_confirmaddressconfigurewidgettest.cpp"

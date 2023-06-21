@@ -28,3 +28,5 @@ MessageComposer::PluginEditorInterface *ChangeCasePluginEditor::createInterface(
 }
 
 #include "changecaseplugineditor.moc"
+
+#include "moc_changecaseplugineditor.cpp"

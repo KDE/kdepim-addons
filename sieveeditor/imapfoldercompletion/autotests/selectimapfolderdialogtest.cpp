@@ -46,3 +46,5 @@ void SelectImapFolderDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(SelectImapFolderDialogTest)
+
+#include "moc_selectimapfolderdialogtest.cpp"

@@ -40,3 +40,5 @@ void SendVcardsJobTest::shouldChangeExportVersion()
 }
 
 QTEST_MAIN(SendVcardsJobTest)
+
+#include "moc_sendvcardsjobtest.cpp"

@@ -45,3 +45,5 @@ void CheckAttachmentDialogTest::shouldAddEmails()
 }
 
 QTEST_MAIN(CheckAttachmentDialogTest)
+
+#include "moc_checkattachmentdialogtest.cpp"

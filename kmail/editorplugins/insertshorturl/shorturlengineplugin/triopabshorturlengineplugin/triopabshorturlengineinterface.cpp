@@ -40,3 +40,5 @@ void TripAbShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
     }
     reply->deleteLater();
 }
+
+#include "moc_triopabshorturlengineinterface.cpp"

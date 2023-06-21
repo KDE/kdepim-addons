@@ -28,3 +28,5 @@ bool LDapImportExportPlugin::hasPopupMenuSupport() const
 }
 
 #include "ldapimportexportplugin.moc"
+
+#include "moc_ldapimportexportplugin.cpp"

@@ -41,3 +41,5 @@ void AutomaticAddContactsConfigureWidget::resetSettings()
 {
     mConfigureTab->resetSettings();
 }
+
+#include "moc_automaticaddcontactsconfigurewidget.cpp"

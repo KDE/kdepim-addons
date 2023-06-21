@@ -39,3 +39,5 @@ QString AttachmentListWidget::modifyEntry(const QString &text)
     delete dlg;
     return attachmentPath;
 }
+
+#include "moc_attachmentlistwidget.cpp"

@@ -242,3 +242,5 @@ void TemplateSelectionDialog::updateButtons()
 }
 
 #include "templateselectiondialog.moc"
+
+#include "moc_templateselectiondialog.cpp"

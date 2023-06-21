@@ -41,3 +41,5 @@ bool CheckBeforeSendUpdateSmtpDialog::changeSmtp() const
 {
     return mChangeSmtp->isChecked();
 }
+
+#include "moc_checkbeforesendupdatesmtpdialog.cpp"

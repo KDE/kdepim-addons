@@ -77,3 +77,5 @@ bool SendmailJob::doKill()
     delete mProcess;
     return true;
 }
+
+#include "moc_sendmailjob.cpp"

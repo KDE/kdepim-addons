@@ -26,3 +26,5 @@ MessageComposer::PluginEditorConvertTextInterface * % {CN} PluginEditor::createI
 }
 
 #include "%{ProjectNameLower}plugineditor.moc"
+
+#include "moc_plugineditor.cpp"

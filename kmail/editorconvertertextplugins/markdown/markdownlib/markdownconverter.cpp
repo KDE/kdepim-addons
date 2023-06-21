@@ -127,3 +127,5 @@ void MarkdownConverter::setEnableExtraDefinitionLists(bool enableExtraDefinition
 {
     mEnableExtraDefinitionLists = enableExtraDefinitionLists;
 }
+
+#include "moc_markdownconverter.cpp"

@@ -42,3 +42,5 @@ void OpenUrlWithConfigureCreateWidgetTest::shouldHaveDefaultValues()
     auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
     QVERIFY(mExecutable);
 }
+
+#include "moc_openurlwithconfigurecreatewidgettest.cpp"

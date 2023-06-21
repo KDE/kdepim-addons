@@ -27,3 +27,5 @@ void FolderConfigureSettingsViewWidget::save(Akonadi::Collection &col)
         mCollectionViewWidget->save(col);
     }
 }
+
+#include "moc_folderconfiguresettingsviewwidget.cpp"

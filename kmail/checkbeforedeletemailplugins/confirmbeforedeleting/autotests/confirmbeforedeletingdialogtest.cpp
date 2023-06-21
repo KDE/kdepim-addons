@@ -31,3 +31,5 @@ void ConfirmBeforeDeletingDialogTest::shouldHaveDefaultValues()
     auto buttonBox = d.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
 }
+
+#include "moc_confirmbeforedeletingdialogtest.cpp"

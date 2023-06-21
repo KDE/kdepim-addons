@@ -29,3 +29,5 @@ QString ViewerPluginCreateevent::viewerPluginName() const
 }
 
 #include "viewerplugincreateevent.moc"
+
+#include "moc_viewerplugincreateevent.cpp"

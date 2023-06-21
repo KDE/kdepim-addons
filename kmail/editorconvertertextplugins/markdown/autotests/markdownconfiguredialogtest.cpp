@@ -13,3 +13,5 @@ MarkdownConfigureDialogTest::MarkdownConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
 }
+
+#include "moc_markdownconfiguredialogtest.cpp"

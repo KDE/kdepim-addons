@@ -32,3 +32,5 @@ MessageViewer::MessageViewerCheckBeforeDeletingInterface *ConfirmBeforeDeletingP
 }
 
 #include "confirmbeforedeletingplugin.moc"
+
+#include "moc_confirmbeforedeletingplugin.cpp"

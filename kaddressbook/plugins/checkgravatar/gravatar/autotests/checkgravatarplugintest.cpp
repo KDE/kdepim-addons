@@ -12,3 +12,5 @@ CheckGravatarPluginTest::CheckGravatarPluginTest(QObject *parent)
 }
 
 QTEST_MAIN(CheckGravatarPluginTest)
+
+#include "moc_checkgravatarplugintest.cpp"

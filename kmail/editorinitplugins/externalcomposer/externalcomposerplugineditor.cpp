@@ -35,3 +35,5 @@ void ExternalComposerPluginEditor::showConfigureDialog(QWidget *parent)
 }
 
 #include "externalcomposerplugineditor.moc"
+
+#include "moc_externalcomposerplugineditor.cpp"

@@ -42,3 +42,5 @@ void ConfirmAddressConfigureDialog::help()
 {
     showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
 }
+
+#include "moc_confirmaddressconfiguredialog.cpp"

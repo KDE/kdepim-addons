@@ -75,3 +75,5 @@ void ReactionToInvitationDialog::writeConfig()
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
+
+#include "moc_reactiontoinvitationdialog.cpp"

@@ -38,3 +38,5 @@ void ConfirmBeforeDeletingCreateRuleWidgetTest::shouldHaveDefaultValues()
     label = w.findChild<QLabel *>(QStringLiteral("containsLabel"));
     QVERIFY(!label->text().isEmpty());
 }
+
+#include "moc_confirmbeforedeletingcreaterulewidgettest.cpp"

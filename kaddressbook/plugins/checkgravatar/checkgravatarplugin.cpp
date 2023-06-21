@@ -28,3 +28,5 @@ bool CheckGravatarPlugin::hasPopupMenuSupport() const
 }
 
 #include "checkgravatarplugin.moc"
+
+#include "moc_checkgravatarplugin.cpp"

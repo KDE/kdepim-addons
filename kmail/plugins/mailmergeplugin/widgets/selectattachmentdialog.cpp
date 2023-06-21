@@ -49,3 +49,5 @@ QString SelectAttachmentDialog::attachmentPath() const
 {
     return mUrlRequester->url().path();
 }
+
+#include "moc_selectattachmentdialog.cpp"

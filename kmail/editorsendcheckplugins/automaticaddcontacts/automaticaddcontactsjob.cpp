@@ -248,3 +248,5 @@ void AutomaticAddContactsJob::deleteLaterAndEmitSignal()
     Q_EMIT finished();
     deleteLater();
 }
+
+#include "moc_automaticaddcontactsjob.cpp"

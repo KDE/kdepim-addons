@@ -26,3 +26,5 @@ void % {CN} PluginEditorInterface::exec()
 {
     // TODO
 }
+
+#include "moc_plugineditorinterface.cpp"

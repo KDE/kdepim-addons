@@ -32,3 +32,5 @@ void ExternalComposerPluginEditorInterface::reloadConfig()
     mEnabled = group.readEntry("Enabled", false);
     mExternalComposerPath = group.readEntry("ComposerPath", QString());
 }
+
+#include "moc_externalcomposerplugineditorinterface.cpp"

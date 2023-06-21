@@ -190,3 +190,5 @@ void ConfirmBeforeDeletingWidget::save()
     ConfirmBeforeDeletingManager::self()->setRules(rules);
     ConfirmBeforeDeletingManager::self()->saveRules();
 }
+
+#include "moc_confirmbeforedeletingwidget.cpp"

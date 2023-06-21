@@ -91,3 +91,5 @@ void ConfirmAddressWidgetTest::shouldGetWhileListEmails()
 }
 
 QTEST_MAIN(ConfirmAddressWidgetTest)
+
+#include "moc_confirmaddresswidgettest.cpp"

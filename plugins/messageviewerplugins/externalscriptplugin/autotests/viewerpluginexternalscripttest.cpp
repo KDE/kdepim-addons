@@ -16,3 +16,5 @@ ViewerPluginExternalscriptTest::~ViewerPluginExternalscriptTest()
 }
 
 QTEST_MAIN(ViewerPluginExternalscriptTest)
+
+#include "moc_viewerpluginexternalscripttest.cpp"

@@ -44,3 +44,5 @@ void MailMergeDialog::slotPreview()
 {
     // TODO show generated email
 }
+
+#include "moc_mailmergedialog.cpp"

@@ -59,3 +59,5 @@ void DKIMKeyRecordWidget::resetSettings()
 {
     mManagerKeyWidget->resetKeys();
 }
+
+#include "moc_dkimkeyrecordwidget.cpp"

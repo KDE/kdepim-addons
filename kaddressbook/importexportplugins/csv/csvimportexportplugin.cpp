@@ -28,3 +28,5 @@ bool CSVImportExportPlugin::hasPopupMenuSupport() const
 }
 
 #include "csvimportexportplugin.moc"
+
+#include "moc_csvimportexportplugin.cpp"

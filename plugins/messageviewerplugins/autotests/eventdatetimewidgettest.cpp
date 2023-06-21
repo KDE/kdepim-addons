@@ -93,3 +93,5 @@ void EventDateTimeWidgetTest::shouldNotEmitSignalWhenDateTimeWasNotChanged()
 }
 
 QTEST_MAIN(EventDateTimeWidgetTest)
+
+#include "moc_eventdatetimewidgettest.cpp"

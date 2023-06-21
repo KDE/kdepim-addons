@@ -34,3 +34,5 @@ bool ZoomTextPluginEditor::hasStatusBarSupport() const
 }
 
 #include "zoomtextplugineditor.moc"
+
+#include "moc_zoomtextplugineditor.cpp"

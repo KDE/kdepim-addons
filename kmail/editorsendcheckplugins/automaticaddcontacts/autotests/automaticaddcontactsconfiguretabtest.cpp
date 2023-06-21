@@ -30,3 +30,5 @@ void AutomaticAddContactsConfigureTabTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(AutomaticAddContactsConfigureTabTest)
+
+#include "moc_automaticaddcontactsconfiguretabtest.cpp"

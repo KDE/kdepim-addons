@@ -29,3 +29,5 @@ void MailMergeDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(MailMergeDialogTest)
+
+#include "moc_mailmergedialogtest.cpp"

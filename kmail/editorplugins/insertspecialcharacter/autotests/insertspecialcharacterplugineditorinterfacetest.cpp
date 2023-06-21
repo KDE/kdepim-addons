@@ -26,3 +26,5 @@ void InsertSpecialCharacterPluginEditorInterfaceTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(InsertSpecialCharacterPluginEditorInterfaceTest)
+
+#include "moc_insertspecialcharacterplugineditorinterfacetest.cpp"

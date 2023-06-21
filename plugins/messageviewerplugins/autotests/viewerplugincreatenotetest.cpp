@@ -50,3 +50,5 @@ void ViewerPluginCreateNoteTest::shouldShowWidget()
 }
 
 QTEST_MAIN(ViewerPluginCreateNoteTest)
+
+#include "moc_viewerplugincreatenotetest.cpp"

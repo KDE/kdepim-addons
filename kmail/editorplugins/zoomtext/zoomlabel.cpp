@@ -19,3 +19,5 @@ void ZoomLabel::setZoomLabel(int value)
 {
     setText(value == 100 ? QString() : i18n("Zoom: %1%", value));
 }
+
+#include "moc_zoomlabel.cpp"

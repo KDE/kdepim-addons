@@ -72,3 +72,5 @@ void DiffHighlighterTest::shouldGenerateDiff()
 }
 
 QTEST_MAIN(DiffHighlighterTest)
+
+#include "moc_diffhighlightertest.cpp"

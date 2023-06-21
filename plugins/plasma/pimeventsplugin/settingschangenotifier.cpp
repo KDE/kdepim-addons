@@ -56,3 +56,5 @@ void SettingsChangeNotifier::notifySettingsChanged()
 {
     Q_EMIT settingsChanged();
 }
+
+#include "moc_settingschangenotifier.cpp"

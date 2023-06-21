@@ -29,3 +29,5 @@ QString ViewerPluginCreatetodo::viewerPluginName() const
 }
 
 #include "viewerplugincreatetodo.moc"
+
+#include "moc_viewerplugincreatetodo.cpp"

@@ -79,3 +79,5 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
 }
 
 DKIMPolicyWidget::~DKIMPolicyWidget() = default;
+
+#include "moc_dkimpolicywidget.cpp"

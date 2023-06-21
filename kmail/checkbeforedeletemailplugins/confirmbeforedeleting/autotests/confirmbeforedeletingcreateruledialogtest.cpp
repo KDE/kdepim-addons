@@ -33,3 +33,5 @@ void ConfirmBeforeDeletingCreateRuleDialogTest::shouldHaveDefaultValues()
     auto okButton = buttonBox->button(QDialogButtonBox::Ok);
     QVERIFY(!okButton->isEnabled());
 }
+
+#include "moc_confirmbeforedeletingcreateruledialogtest.cpp"

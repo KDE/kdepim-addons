@@ -25,3 +25,5 @@ void SharetextPurposeMenuWidget::setEditorWidget(ShareTextPluginEditorInterface 
 {
     mInterface = interface;
 }
+
+#include "moc_sharetextpurposemenuwidget.cpp"

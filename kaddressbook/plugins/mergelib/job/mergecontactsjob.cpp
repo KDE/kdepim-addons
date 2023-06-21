@@ -114,3 +114,5 @@ void MergeContactsJob::slotDeleteContactsFinished(KJob *job)
     Q_EMIT finished(mCreatedContact);
     deleteLater();
 }
+
+#include "moc_mergecontactsjob.cpp"

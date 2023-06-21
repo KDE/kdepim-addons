@@ -24,3 +24,5 @@ void GravatarConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "gravatarconfiguresettingsplugin.moc"
+
+#include "moc_gravatarconfiguresettingsplugin.cpp"

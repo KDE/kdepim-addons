@@ -23,3 +23,5 @@ void AutomaticAddContactsPluginTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(AutomaticAddContactsPluginTest)
+
+#include "moc_automaticaddcontactsplugintest.cpp"

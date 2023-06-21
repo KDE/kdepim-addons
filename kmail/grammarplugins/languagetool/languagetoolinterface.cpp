@@ -108,3 +108,5 @@ bool LanguageToolInterface::checkAgain()
     }
     return true;
 }
+
+#include "moc_languagetoolinterface.cpp"

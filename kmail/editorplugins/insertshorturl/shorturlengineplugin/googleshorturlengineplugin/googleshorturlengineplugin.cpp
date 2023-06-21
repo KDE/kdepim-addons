@@ -25,3 +25,5 @@ ShortUrlEngineInterface *GoogleShortUrlEnginePlugin::createInterface(QObject *pa
 }
 
 #include "googleshorturlengineplugin.moc"
+
+#include "moc_googleshorturlengineplugin.cpp"

@@ -50,3 +50,5 @@ void AutoCorrectionPluginEditorInterface::exec()
 {
     richTextEditor()->forceAutoCorrection(mSelectedText);
 }
+
+#include "moc_autocorrectionplugineditorinterface.cpp"

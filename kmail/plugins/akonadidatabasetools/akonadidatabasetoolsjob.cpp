@@ -76,3 +76,5 @@ void AkonadiDatabaseToolsJob::start()
     }
     }
 }
+
+#include "moc_akonadidatabasetoolsjob.cpp"

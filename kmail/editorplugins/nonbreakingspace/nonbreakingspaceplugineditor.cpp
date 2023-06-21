@@ -23,3 +23,5 @@ MessageComposer::PluginEditorInterface *NonBreakingSpacePluginEditor::createInte
 }
 
 #include "nonbreakingspaceplugineditor.moc"
+
+#include "moc_nonbreakingspaceplugineditor.cpp"

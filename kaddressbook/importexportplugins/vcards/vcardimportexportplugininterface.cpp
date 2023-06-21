@@ -520,3 +520,5 @@ QString VCardImportExportPluginInterface::contactFileName(const KContacts::Addre
 
     return contact.uid();
 }
+
+#include "moc_vcardimportexportplugininterface.cpp"

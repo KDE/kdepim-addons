@@ -363,3 +363,5 @@ void EventEdit::slotOpenEditor()
         dlg->open();
     }
 }
+
+#include "moc_eventedit.cpp"

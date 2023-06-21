@@ -47,3 +47,5 @@ void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ViewerPluginExternalConfigureWidgetTest)
+
+#include "moc_viewerpluginexternalconfigurewidgettest.cpp"

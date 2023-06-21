@@ -59,3 +59,5 @@ void DKIMConfigureTab::resetSettings()
 {
     mRecordWidget->resetSettings();
 }
+
+#include "moc_dkimconfiguretab.cpp"

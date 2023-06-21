@@ -26,3 +26,5 @@ void InsertEmailPluginEditorTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(InsertEmailPluginEditorTest)
+
+#include "moc_insertemailplugineditortest.cpp"

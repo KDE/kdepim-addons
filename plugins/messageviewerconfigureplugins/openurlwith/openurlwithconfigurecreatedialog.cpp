@@ -45,3 +45,5 @@ void OpenUrlWithConfigureCreateDialog::setInfo(const OpenUrlWithConfigureCreateW
     setWindowTitle(i18nc("@title:window", "Edit"));
     mOpenUrlWithCreateWidget->setInfo(i);
 }
+
+#include "moc_openurlwithconfigurecreatedialog.cpp"

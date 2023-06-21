@@ -68,3 +68,5 @@ void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &co
         }
     }
 }
+
+#include "moc_folderconfiguresettingspagewidget.cpp"

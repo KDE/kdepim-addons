@@ -142,3 +142,5 @@ void VCardViewerDialog::slotCancel()
     mContacts.clear();
     reject();
 }
+
+#include "moc_vcardviewerdialog.cpp"

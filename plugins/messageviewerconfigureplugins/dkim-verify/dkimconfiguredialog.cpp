@@ -72,3 +72,5 @@ void DKIMConfigureDialog::writeConfig()
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
+
+#include "moc_dkimconfiguredialog.cpp"

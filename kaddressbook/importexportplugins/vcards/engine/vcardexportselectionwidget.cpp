@@ -132,3 +132,5 @@ VCardExportSelectionWidget::ExportFields VCardExportSelectionWidget::exportType(
     }
     return type;
 }
+
+#include "moc_vcardexportselectionwidget.cpp"

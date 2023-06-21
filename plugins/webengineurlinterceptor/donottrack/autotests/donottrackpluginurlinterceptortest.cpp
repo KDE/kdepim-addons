@@ -23,3 +23,5 @@ void DoNotTrackPluginUrlInterceptorTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(DoNotTrackPluginUrlInterceptorTest)
+
+#include "moc_donottrackpluginurlinterceptortest.cpp"

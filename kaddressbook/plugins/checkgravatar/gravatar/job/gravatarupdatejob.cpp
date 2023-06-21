@@ -99,3 +99,5 @@ void GravatarUpdateJob::slotUpdateGravatarDone(KJob *job)
     }
     deleteLater();
 }
+
+#include "moc_gravatarupdatejob.cpp"

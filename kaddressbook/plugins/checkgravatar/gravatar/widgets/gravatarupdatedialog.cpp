@@ -114,3 +114,5 @@ void GravatarUpdateDialog::writeConfig()
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }
+
+#include "moc_gravatarupdatedialog.cpp"

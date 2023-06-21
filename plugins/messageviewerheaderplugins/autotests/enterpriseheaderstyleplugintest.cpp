@@ -81,3 +81,5 @@ void EnterpriseHeaderStylePluginTest::testFormat()
 }
 
 QTEST_MAIN(EnterpriseHeaderStylePluginTest)
+
+#include "moc_enterpriseheaderstyleplugintest.cpp"

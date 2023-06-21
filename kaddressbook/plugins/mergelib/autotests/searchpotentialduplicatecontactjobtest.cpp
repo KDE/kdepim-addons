@@ -174,3 +174,5 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnList()
 }
 
 QTEST_MAIN(SearchPotentialDuplicateContactJobTest)
+
+#include "moc_searchpotentialduplicatecontactjobtest.cpp"

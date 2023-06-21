@@ -185,3 +185,5 @@ void QuicktextTreeWidget::deleteSnippetGroup()
     mSnippetsManager->model()->removeRow(groupIndex.row(), QModelIndex());
     mSnippetsManager->save();
 }
+
+#include "moc_quicktexttreewidget.cpp"

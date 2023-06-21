@@ -102,3 +102,5 @@ QHash<QString, KTextTemplate::Filter *> TagLibrary::filters(const QString &name)
     filters.insert(QStringLiteral("formatTime"), new TimeFormatter());
     return filters;
 }
+
+#include "moc_ktexttemplateextension.cpp"

@@ -31,3 +31,5 @@ void BriefHeaderStyleInterface::activateAction()
 {
     mAction.at(0)->setChecked(true);
 }
+
+#include "moc_briefheaderstyleinterface.cpp"

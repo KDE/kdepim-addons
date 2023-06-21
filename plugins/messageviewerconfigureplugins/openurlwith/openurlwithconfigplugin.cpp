@@ -25,3 +25,5 @@ void OpenUrlWithConfigPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "openurlwithconfigplugin.moc"
+
+#include "moc_openurlwithconfigplugin.cpp"

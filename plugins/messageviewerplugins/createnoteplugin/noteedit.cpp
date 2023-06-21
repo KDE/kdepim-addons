@@ -231,3 +231,5 @@ bool NoteEdit::eventFilter(QObject *object, QEvent *e)
     }
     return QWidget::eventFilter(object, e);
 }
+
+#include "moc_noteedit.cpp"

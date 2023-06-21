@@ -99,3 +99,5 @@ void ZoomTextPluginEditorInterface::zoomOut()
     richTextEditor()->zoomOut();
     Q_EMIT zoomFactorChanged(richTextEditor()->zoomFactor());
 }
+
+#include "moc_zoomtextplugineditorinterface.cpp"

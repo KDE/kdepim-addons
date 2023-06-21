@@ -46,3 +46,5 @@ bool ViewerPluginExternalscript::hasConfigureDialog() const
 }
 
 #include "viewerpluginexternalscript.moc"
+
+#include "moc_viewerpluginexternalscript.cpp"

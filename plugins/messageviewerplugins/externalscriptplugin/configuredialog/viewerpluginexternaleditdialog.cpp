@@ -85,3 +85,5 @@ ViewerPluginExternalScriptInfo ViewerPluginExternalEditDialog::scriptInfo() cons
 {
     return mEditWidget->scriptInfo();
 }
+
+#include "moc_viewerpluginexternaleditdialog.cpp"

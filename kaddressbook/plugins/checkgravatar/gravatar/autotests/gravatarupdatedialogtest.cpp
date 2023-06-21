@@ -32,3 +32,5 @@ void GravatarUpdateDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(GravatarUpdateDialogTest)
+
+#include "moc_gravatarupdatedialogtest.cpp"

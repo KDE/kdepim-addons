@@ -29,3 +29,5 @@ MailMergePreviewDialog::MailMergePreviewDialog(QWidget *parent)
 }
 
 MailMergePreviewDialog::~MailMergePreviewDialog() = default;
+
+#include "moc_mailmergepreviewdialog.cpp"

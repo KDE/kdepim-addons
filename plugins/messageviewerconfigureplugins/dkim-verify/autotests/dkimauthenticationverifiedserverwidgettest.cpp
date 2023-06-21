@@ -25,3 +25,5 @@ void DKIMAuthenticationVerifiedServerWidgetTest::shouldHaveDefaultValues()
     auto mSelector = w.findChild<DKIMAuthenticationVerifiedServerSelectorWidget *>(QStringLiteral("mSelector"));
     QVERIFY(mSelector);
 }
+
+#include "moc_dkimauthenticationverifiedserverwidgettest.cpp"

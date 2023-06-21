@@ -37,3 +37,5 @@ void GravatarConfigureSettingsPluginDialog::reset()
 {
     mWidget->resetSettings();
 }
+
+#include "moc_gravatarconfiguresettingsplugindialog.cpp"

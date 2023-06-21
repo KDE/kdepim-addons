@@ -85,3 +85,5 @@ void MarkdownPreviewWidget::slotUpdatePreview(const QString &text)
 {
     mWebView->setHtml(mConverter->convertTextToMarkdown(text), QUrl(QStringLiteral("file://")));
 }
+
+#include "moc_markdownpreviewwidget.cpp"

@@ -65,3 +65,5 @@ void DKIMAuthenticationVerifiedServerDialog::writeConfig()
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
+
+#include "moc_dkimauthenticationverifiedserverdialog.cpp"

@@ -40,3 +40,5 @@ QStringList SelectMailWidget::selectedEmails() const
     }
     return lst;
 }
+
+#include "moc_selectmailwidget.cpp"

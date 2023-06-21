@@ -12,3 +12,5 @@ MailMergePreviewWidget::MailMergePreviewWidget(QWidget *parent)
 }
 
 MailMergePreviewWidget::~MailMergePreviewWidget() = default;
+
+#include "moc_mailmergepreviewwidget.cpp"

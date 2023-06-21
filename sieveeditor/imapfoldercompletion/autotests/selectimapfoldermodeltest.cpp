@@ -27,3 +27,5 @@ void SelectImapFolderModelTest::shouldNotCreateModelIfAccountIsNotValid()
 }
 
 QTEST_MAIN(SelectImapFolderModelTest)
+
+#include "moc_selectimapfoldermodeltest.cpp"

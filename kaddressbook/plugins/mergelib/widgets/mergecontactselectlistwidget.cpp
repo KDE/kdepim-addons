@@ -245,3 +245,5 @@ bool MergeContactSelectListWidget::verifySelectedInfo() const
 {
     return selectedContact() != -1;
 }
+
+#include "moc_mergecontactselectlistwidget.cpp"

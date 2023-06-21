@@ -39,3 +39,5 @@ QUrl CsvWidget::path() const
 {
     return mCvsUrlRequester->url();
 }
+
+#include "moc_csvwidget.cpp"

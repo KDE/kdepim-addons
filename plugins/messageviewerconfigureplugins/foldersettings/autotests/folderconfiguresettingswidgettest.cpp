@@ -18,3 +18,5 @@ void FolderConfigureSettingsWidgetTest::shouldHaveDefaultValues()
     FolderConfigureSettingsWidget w;
     // TODO
 }
+
+#include "moc_folderconfiguresettingswidgettest.cpp"

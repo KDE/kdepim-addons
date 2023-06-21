@@ -102,3 +102,5 @@ Akonadi::Item MergeContactWidgetListItem::item() const
 {
     return mItem;
 }
+
+#include "moc_mergecontactwidgetlist.cpp"

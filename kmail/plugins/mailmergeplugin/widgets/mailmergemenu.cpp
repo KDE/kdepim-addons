@@ -12,3 +12,5 @@ MailMergeMenu::MailMergeMenu(QWidget *parent)
 }
 
 MailMergeMenu::~MailMergeMenu() = default;
+
+#include "moc_mailmergemenu.cpp"

@@ -26,3 +26,5 @@ void NonBreakingSpacePluginEditorTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(NonBreakingSpacePluginEditorTest)
+
+#include "moc_nonbreakingspaceplugineditortest.cpp"

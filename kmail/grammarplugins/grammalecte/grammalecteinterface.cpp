@@ -92,3 +92,5 @@ void GrammalecteInterface::checkAgain()
         qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not set, it's a bug";
     }
 }
+
+#include "moc_grammalecteinterface.cpp"

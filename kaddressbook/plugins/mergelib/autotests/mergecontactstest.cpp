@@ -1164,3 +1164,5 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday()
 }
 
 QTEST_MAIN(MergeContactsTest)
+
+#include "moc_mergecontactstest.cpp"

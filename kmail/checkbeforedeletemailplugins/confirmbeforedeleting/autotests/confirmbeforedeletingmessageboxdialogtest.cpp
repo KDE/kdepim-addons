@@ -33,3 +33,5 @@ void ConfirmBeforeDeletingMessageBoxDialogTest::shouldHaveDefaultValues()
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::Yes | QDialogButtonBox::Cancel | QDialogButtonBox::No);
 }
+
+#include "moc_confirmbeforedeletingmessageboxdialogtest.cpp"

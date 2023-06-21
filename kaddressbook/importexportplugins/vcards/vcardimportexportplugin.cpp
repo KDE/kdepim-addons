@@ -27,3 +27,5 @@ bool VCardImportExportPlugin::hasPopupMenuSupport() const
 }
 
 #include "vcardimportexportplugin.moc"
+
+#include "moc_vcardimportexportplugin.cpp"

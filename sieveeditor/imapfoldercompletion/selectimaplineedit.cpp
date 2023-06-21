@@ -30,3 +30,5 @@ void SelectImapLineEdit::setSieveImapAccountSettings(const KSieveUi::SieveImapAc
     Q_UNUSED(account)
 #endif
 }
+
+#include "moc_selectimaplineedit.cpp"

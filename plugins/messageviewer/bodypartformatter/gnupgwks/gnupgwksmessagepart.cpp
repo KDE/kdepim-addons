@@ -72,3 +72,5 @@ void GnuPGWKSMessagePart::parseContent(KMime::Content *node)
         }
     }
 }
+
+#include "moc_gnupgwksmessagepart.cpp"

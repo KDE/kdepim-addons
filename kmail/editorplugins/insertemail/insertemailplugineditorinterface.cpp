@@ -45,3 +45,5 @@ void InsertEmailPluginEditorInterface::slotEmailSelected(const QStringList &lst)
 {
     Q_EMIT insertText(lst.join(QLatin1Char(' ')));
 }
+
+#include "moc_insertemailplugineditorinterface.cpp"

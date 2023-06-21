@@ -87,3 +87,5 @@ void QuickTextConfigureDialog::slotAccepted()
     mQuickTextConfigureWidget->save();
     QDialog::accept();
 }
+
+#include "moc_quicktextconfiguredialog.cpp"

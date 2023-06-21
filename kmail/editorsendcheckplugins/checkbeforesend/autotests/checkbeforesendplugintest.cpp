@@ -23,3 +23,5 @@ void CheckBeforeSendPluginTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(CheckBeforeSendPluginTest)
+
+#include "moc_checkbeforesendplugintest.cpp"

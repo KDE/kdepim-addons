@@ -52,3 +52,5 @@ QString StandardsHeaderStylePlugin::name() const
 }
 
 #include "standardsheaderstyleplugin.moc"
+
+#include "moc_standardsheaderstyleplugin.cpp"

@@ -505,3 +505,5 @@ void ImportWindowContactTest::shouldImportWindowContact()
     QEXPECT_FAIL("sample4", "Bug in picture", Continue);
     QVERIFY(contactEqual);
 }
+
+#include "moc_importwindowcontacttest.cpp"

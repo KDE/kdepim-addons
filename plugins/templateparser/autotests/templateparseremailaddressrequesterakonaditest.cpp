@@ -64,3 +64,5 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldEmitSignal()
 }
 
 QTEST_MAIN(TemplateParserEmailAddressRequesterAkonadiTest)
+
+#include "moc_templateparseremailaddressrequesterakonaditest.cpp"

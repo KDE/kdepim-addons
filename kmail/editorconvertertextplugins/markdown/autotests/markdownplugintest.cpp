@@ -22,3 +22,5 @@ void MarkdownPluginTest::shouldCreateInterface()
     QVERIFY(w.hasConfigureDialog());
     QVERIFY(w.hasStatusBarSupport());
 }
+
+#include "moc_markdownplugintest.cpp"

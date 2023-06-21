@@ -76,3 +76,5 @@ void SendmailConfigWidget::apply()
     d->ui.kcfg_options->setText(d->ui.kcfg_options->text().trimmed());
     TransportConfigWidget::apply();
 }
+
+#include "moc_sendmailconfigwidget.cpp"

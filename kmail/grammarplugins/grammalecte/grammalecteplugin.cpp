@@ -52,3 +52,5 @@ void GrammalectePlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "grammalecteplugin.moc"
+
+#include "moc_grammalecteplugin.cpp"

@@ -44,3 +44,5 @@ void MarkdownUtilTest::shouldConvert_data()
     QTest::newRow("two item-3") << QStringLiteral("![foo](image.png =50x50 \"blz\") bla ![bli](image2.png \"ez\" )") << result;
     QTest::newRow("two item-3") << QStringLiteral("![foo](image.png =50x50 \"blz\") bla ![bli](image2.png =100x100 \"ez\" ) sdfsdf ") << result;
 }
+
+#include "moc_markdownutiltest.cpp"

@@ -23,3 +23,5 @@ void ExternalComposerPluginEditorTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ExternalComposerPluginEditorTest)
+
+#include "moc_externalcomposerplugineditortest.cpp"

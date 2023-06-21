@@ -46,3 +46,5 @@ void InsertShorturlPluginEditor::showConfigureDialog(QWidget *parent)
 }
 
 #include "insertshorturlplugineditor.moc"
+
+#include "moc_insertshorturlplugineditor.cpp"

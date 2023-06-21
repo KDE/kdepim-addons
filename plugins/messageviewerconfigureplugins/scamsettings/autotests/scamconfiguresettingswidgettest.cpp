@@ -27,3 +27,5 @@ void ScamConfigureSettingsWidgetTest::shouldHaveDefaultValues()
     QVERIFY(!mTreeWidget->rootIsDecorated());
     QVERIFY(!mTreeWidget->header()->sectionsMovable());
 }
+
+#include "moc_scamconfiguresettingswidgettest.cpp"

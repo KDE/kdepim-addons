@@ -73,3 +73,5 @@ void MarkdownCreateLinkDialog::readConfig()
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
+
+#include "moc_markdowncreatelinkdialog.cpp"

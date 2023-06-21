@@ -53,3 +53,5 @@ void DefaultMoveImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::Si
 {
     Q_UNUSED(account)
 }
+
+#include "moc_selectimapwidgettest.cpp"

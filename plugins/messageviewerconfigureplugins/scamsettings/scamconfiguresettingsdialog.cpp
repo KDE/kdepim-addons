@@ -65,3 +65,5 @@ void ScamConfigureSettingsDialog::writeConfig()
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }
+
+#include "moc_scamconfiguresettingsdialog.cpp"

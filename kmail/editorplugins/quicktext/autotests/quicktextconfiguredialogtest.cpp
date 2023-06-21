@@ -33,3 +33,5 @@ void QuickTextConfigureDialogTest::shouldHaveDefaultValues()
     auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 }
+
+#include "moc_quicktextconfiguredialogtest.cpp"

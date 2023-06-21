@@ -45,3 +45,5 @@ void AkonadiDatabaseToolsPluginInterfaceTest::shouldEmitActivatedSignal()
     QCOMPARE(spy1.count(), 1);
 }
 #endif
+
+#include "moc_akonadidatabasetoolsplugininterfacetest.cpp"

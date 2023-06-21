@@ -38,3 +38,5 @@ void QuickTextConfigureWidget::exportQuickText()
 {
     mSnippetWidget->exportQuickText();
 }
+
+#include "moc_quicktextconfigurewidget.cpp"

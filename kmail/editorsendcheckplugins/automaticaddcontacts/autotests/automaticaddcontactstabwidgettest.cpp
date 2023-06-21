@@ -81,3 +81,5 @@ void AutomaticAddContactsTabWidgetTest::shouldResetValue()
 }
 
 QTEST_MAIN(AutomaticAddContactsTabWidgetTest)
+
+#include "moc_automaticaddcontactstabwidgettest.cpp"

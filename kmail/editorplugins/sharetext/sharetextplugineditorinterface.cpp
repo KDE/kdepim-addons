@@ -41,3 +41,5 @@ void ShareTextPluginEditorInterface::exec()
 {
     // Nothing
 }
+
+#include "moc_sharetextplugineditorinterface.cpp"

@@ -177,3 +177,5 @@ void GrantleeHeaderStylePluginTest::testThemeRender()
 }
 
 QTEST_MAIN(GrantleeHeaderStylePluginTest)
+
+#include "moc_grantleeheaderstyleplugintest.cpp"

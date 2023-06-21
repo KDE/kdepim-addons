@@ -642,3 +642,5 @@ bool GMXImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
     return url.path().endsWith(QLatin1String(".gmx"));
 }
+
+#include "moc_gmximportexportplugininterface.cpp"

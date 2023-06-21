@@ -121,3 +121,5 @@ void PgpKeyMessagePart::parseContent(KMime::Content *node)
         }
     }
 }
+
+#include "moc_pgpkeymessagepart.cpp"

@@ -25,3 +25,5 @@ void ExternalComposerConfigureDialogTest::shouldHaveDefaultValues()
 }
 
 QTEST_MAIN(ExternalComposerConfigureDialogTest)
+
+#include "moc_externalcomposerconfiguredialogtest.cpp"

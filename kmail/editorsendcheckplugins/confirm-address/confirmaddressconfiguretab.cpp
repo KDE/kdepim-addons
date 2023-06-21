@@ -60,3 +60,5 @@ void ConfirmAddressConfigureTab::initTab(KIdentityManagementCore::IdentityManage
         mListTabWidget.append(w);
     }
 }
+
+#include "moc_confirmaddressconfiguretab.cpp"

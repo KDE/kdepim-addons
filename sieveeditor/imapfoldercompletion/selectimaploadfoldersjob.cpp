@@ -142,3 +142,5 @@ void SelectImapLoadFoldersJob::slotFullListingDone(KJob *job)
     }
     deleteLater();
 }
+
+#include "moc_selectimaploadfoldersjob.cpp"

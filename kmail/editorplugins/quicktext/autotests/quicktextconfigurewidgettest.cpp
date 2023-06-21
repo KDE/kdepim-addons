@@ -27,3 +27,5 @@ void QuickTextConfigureWidgetTest::shouldHaveDefaultValues()
     auto mSnippetWidget = w.findChild<QuickTextWidget *>(QStringLiteral("snippetwidget"));
     QVERIFY(mSnippetWidget);
 }
+
+#include "moc_quicktextconfigurewidgettest.cpp"

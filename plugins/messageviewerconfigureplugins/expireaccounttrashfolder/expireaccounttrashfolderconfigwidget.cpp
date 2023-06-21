@@ -58,3 +58,5 @@ void ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested()
 {
     save(true, true);
 }
+
+#include "moc_expireaccounttrashfolderconfigwidget.cpp"

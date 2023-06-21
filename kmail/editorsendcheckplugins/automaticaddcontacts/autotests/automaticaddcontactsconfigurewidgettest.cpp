@@ -32,3 +32,5 @@ void AutomaticAddContactsConfigureWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(AutomaticAddContactsConfigureWidgetTest)
+
+#include "moc_automaticaddcontactsconfigurewidgettest.cpp"

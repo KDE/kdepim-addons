@@ -96,3 +96,5 @@ QList<ShortUrlEnginePlugin *> ShortUrlEnginePluginManager::pluginsList() const
 {
     return d->pluginsList();
 }
+
+#include "moc_shorturlenginepluginmanager.cpp"

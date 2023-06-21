@@ -174,3 +174,5 @@ QString ResultDuplicateTreeWidgetItem::displayName(const Akonadi::Item &item)
     }
     return {};
 }
+
+#include "moc_resultduplicatetreewidget.cpp"

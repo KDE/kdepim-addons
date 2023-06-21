@@ -538,3 +538,5 @@ void TodoEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmp
 }
 
 QTEST_MAIN(TodoEditTest)
+
+#include "moc_todoedittest.cpp"

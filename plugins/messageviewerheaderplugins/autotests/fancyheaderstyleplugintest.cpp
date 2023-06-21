@@ -79,3 +79,5 @@ void FancyHeaderStylePluginTest::testFormat()
 }
 
 QTEST_MAIN(FancyHeaderStylePluginTest)
+
+#include "moc_fancyheaderstyleplugintest.cpp"

@@ -68,3 +68,5 @@ int EnterpriseHeaderStylePlugin::elidedTextSize() const
 }
 
 #include "enterpriseheaderstyleplugin.moc"
+
+#include "moc_enterpriseheaderstyleplugin.cpp"

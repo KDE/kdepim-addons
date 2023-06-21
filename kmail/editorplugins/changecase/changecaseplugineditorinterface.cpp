@@ -106,3 +106,5 @@ void ChangeCasePluginEditorInterface::slotReverseCase()
     mType = ReverseCase;
     Q_EMIT emitPluginActivated(this);
 }
+
+#include "moc_changecaseplugineditorinterface.cpp"

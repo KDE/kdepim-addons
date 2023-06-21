@@ -44,3 +44,5 @@ bool ConfirmBeforeDeletingMessageBoxDialog::useSameResult() const
 {
     return mConfirmBeforeDeletingWidget->useSameResult();
 }
+
+#include "moc_confirmbeforedeletingmessageboxdialog.cpp"

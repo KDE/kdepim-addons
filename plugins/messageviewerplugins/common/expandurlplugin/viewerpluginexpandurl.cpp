@@ -29,3 +29,5 @@ QString ViewerPluginExpandurl::viewerPluginName() const
 }
 
 #include "viewerpluginexpandurl.moc"
+
+#include "moc_viewerpluginexpandurl.cpp"

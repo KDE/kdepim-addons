@@ -30,3 +30,5 @@ void QuickTextWidgetTest::shouldHaveDefaultValues()
     auto mStackedWidget = w.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
     QVERIFY(mStackedWidget);
 }
+
+#include "moc_quicktextwidgettest.cpp"

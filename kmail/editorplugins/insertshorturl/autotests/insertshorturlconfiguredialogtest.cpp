@@ -28,3 +28,5 @@ void InsertShorturlConfigureDialogTest::shouldHaveDefaultValues()
     auto mInsertShortUrlWidget = dlg.findChild<InsertShorturlConfigureWidget *>(QStringLiteral("insertshorturlwidget"));
     QVERIFY(mInsertShortUrlWidget);
 }
+
+#include "moc_insertshorturlconfiguredialogtest.cpp"

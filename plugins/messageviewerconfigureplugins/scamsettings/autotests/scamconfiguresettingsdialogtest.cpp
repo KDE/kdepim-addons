@@ -32,3 +32,5 @@ void ScamConfigureSettingsDialogTest::shouldHaveDefaultValues()
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 }
+
+#include "moc_scamconfiguresettingsdialogtest.cpp"

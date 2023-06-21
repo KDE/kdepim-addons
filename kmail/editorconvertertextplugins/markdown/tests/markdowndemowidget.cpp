@@ -31,3 +31,5 @@ MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
     defaultTextFile.open(QIODevice::ReadOnly);
     mEdit->setPlainText(QString::fromUtf8(defaultTextFile.readAll()));
 }
+
+#include "moc_markdowndemowidget.cpp"

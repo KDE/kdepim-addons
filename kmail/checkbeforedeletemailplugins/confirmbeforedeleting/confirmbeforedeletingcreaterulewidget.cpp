@@ -89,3 +89,5 @@ bool ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo::operator!
 {
     return !operator==(other);
 }
+
+#include "moc_confirmbeforedeletingcreaterulewidget.cpp"

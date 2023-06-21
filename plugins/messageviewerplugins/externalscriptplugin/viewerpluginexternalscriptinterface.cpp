@@ -158,3 +158,5 @@ QStringList ViewerPluginExternalscriptInterface::adaptArguments(const QStringLis
     parser.setAkonadiUrl(mAkonadiUrl);
     return parser.parse(scriptArguments);
 }
+
+#include "moc_viewerpluginexternalscriptinterface.cpp"

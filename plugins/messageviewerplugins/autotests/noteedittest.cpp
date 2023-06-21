@@ -419,3 +419,5 @@ void NoteEditTest::shouldShouldEnabledSaveEditorButton()
 }
 
 QTEST_MAIN(NoteEditTest)
+
+#include "moc_noteedittest.cpp"

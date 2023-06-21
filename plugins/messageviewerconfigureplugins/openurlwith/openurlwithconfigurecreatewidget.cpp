@@ -94,3 +94,5 @@ void OpenUrlWithConfigureCreateWidget::slotInfoChanged()
 {
     Q_EMIT updateOkButton(!mServerName->text().trimmed().isEmpty() && !mExecutable->text().trimmed().isEmpty());
 }
+
+#include "moc_openurlwithconfigurecreatewidget.cpp"

@@ -37,3 +37,5 @@ QList<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptManager::scriptI
 {
     return mScriptInfos;
 }
+
+#include "moc_viewerpluginexternalscriptmanager.cpp"

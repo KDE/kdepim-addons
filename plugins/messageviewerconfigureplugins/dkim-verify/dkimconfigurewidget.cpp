@@ -45,3 +45,5 @@ void DKIMConfigureWidget::resetSettings()
     m_configDialogManager->updateWidgetsDefault();
     mTabWidget->resetSettings();
 }
+
+#include "moc_dkimconfigurewidget.cpp"

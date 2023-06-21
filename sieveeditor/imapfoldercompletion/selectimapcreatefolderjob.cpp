@@ -94,3 +94,5 @@ void SelectImapCreateFolderJob::slotCreateFolderDone(KJob *job)
     }
     deleteLater();
 }
+
+#include "moc_selectimapcreatefolderjob.cpp"

@@ -31,3 +31,5 @@ void LongHeaderStyleInterface::activateAction()
 {
     mAction.at(0)->setChecked(true);
 }
+
+#include "moc_longheaderstyleinterface.cpp"

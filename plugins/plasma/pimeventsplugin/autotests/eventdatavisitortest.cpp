@@ -251,3 +251,5 @@ void EventDataVisitorTest::testEventDataIdVisitor()
 }
 
 QTEST_MAIN(EventDataVisitorTest)
+
+#include "moc_eventdatavisitortest.cpp"

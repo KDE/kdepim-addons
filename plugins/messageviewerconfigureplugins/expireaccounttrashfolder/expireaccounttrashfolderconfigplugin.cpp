@@ -24,3 +24,5 @@ void ExpireAccountTrashFolderConfigPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "expireaccounttrashfolderconfigplugin.moc"
+
+#include "moc_expireaccounttrashfolderconfigplugin.cpp"

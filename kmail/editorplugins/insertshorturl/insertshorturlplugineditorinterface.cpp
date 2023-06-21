@@ -97,3 +97,5 @@ void InsertShorturlPluginEditorInterface::slotShortUrlFailed(const QString &errM
 {
     Q_EMIT message(i18n("An error occurred: \"%1\"", errMsg));
 }
+
+#include "moc_insertshorturlplugineditorinterface.cpp"

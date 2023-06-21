@@ -216,3 +216,5 @@ void CSVImportExportPluginInterface::importFile(const QUrl &url)
     // TODO
     Q_UNUSED(url)
 }
+
+#include "moc_csvimportexportplugininterface.cpp"

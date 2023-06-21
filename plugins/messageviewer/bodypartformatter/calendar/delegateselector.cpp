@@ -65,3 +65,5 @@ bool DelegateSelector::rsvp() const
 {
     return mRsvp->isChecked();
 }
+
+#include "moc_delegateselector.cpp"

@@ -30,3 +30,5 @@ void OpenUrlWithConfigureCreateDialogTest::shouldHaveDefaultValues()
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::StandardButtons{QDialogButtonBox::Ok | QDialogButtonBox::Cancel});
 }
+
+#include "moc_openurlwithconfigurecreatedialogtest.cpp"

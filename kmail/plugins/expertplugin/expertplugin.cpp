@@ -23,3 +23,5 @@ PimCommon::GenericPluginInterface *ExpertPlugin::createInterface(QObject *parent
 }
 
 #include "expertplugin.moc"
+
+#include "moc_expertplugin.cpp"

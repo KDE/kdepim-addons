@@ -58,3 +58,5 @@ void MergeContactSelectInformationTabWidgetTest::shouldAddTab()
 }
 
 QTEST_MAIN(MergeContactSelectInformationTabWidgetTest)
+
+#include "moc_mergecontactselectinformationtabwidgettest.cpp"

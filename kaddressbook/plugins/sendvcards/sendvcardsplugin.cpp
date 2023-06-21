@@ -28,3 +28,5 @@ bool SendVcardsPlugin::hasPopupMenuSupport() const
 }
 
 #include "sendvcardsplugin.moc"
+
+#include "moc_sendvcardsplugin.cpp"

@@ -33,3 +33,5 @@ void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mHoverUrlLabel);
     QVERIFY(mHoverUrlLabel->text().isEmpty());
 }
+
+#include "moc_markdownpreviewwidgettest.cpp"

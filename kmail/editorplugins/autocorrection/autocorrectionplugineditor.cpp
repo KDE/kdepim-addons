@@ -23,3 +23,5 @@ MessageComposer::PluginEditorInterface *AutoCorrectionPluginEditor::createInterf
 }
 
 #include "autocorrectionplugineditor.moc"
+
+#include "moc_autocorrectionplugineditor.cpp"

@@ -144,3 +144,5 @@ void EmailLineEdit::verifyAddress()
 }
 
 #include "emaillineedit.moc"
+
+#include "moc_emaillineedit.cpp"

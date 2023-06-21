@@ -78,3 +78,5 @@ void ExternalComposerConfigureWidgetTest::shouldEnableDisableElements()
 }
 
 QTEST_MAIN(ExternalComposerConfigureWidgetTest)
+
+#include "moc_externalcomposerconfigurewidgettest.cpp"

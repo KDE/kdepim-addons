@@ -16,3 +16,5 @@ AddressBookWidget::AddressBookWidget(QWidget *parent)
 }
 
 AddressBookWidget::~AddressBookWidget() = default;
+
+#include "moc_addressbookwidget.cpp"

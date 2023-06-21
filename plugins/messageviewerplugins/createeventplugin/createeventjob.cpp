@@ -88,3 +88,5 @@ void CreateEventJob::slotRelationCreated(KJob *job)
     }
     emitResult();
 }
+
+#include "moc_createeventjob.cpp"

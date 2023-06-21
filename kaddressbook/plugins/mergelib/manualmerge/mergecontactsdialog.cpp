@@ -113,3 +113,5 @@ void MergeContactsDialog::slotContactMerged(const Akonadi::Item &item)
     mMergeContactInfo->setContact(item);
     mStackedWidget->setCurrentWidget(mMergeContactInfo);
 }
+
+#include "moc_mergecontactsdialog.cpp"

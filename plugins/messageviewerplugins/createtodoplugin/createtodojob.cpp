@@ -92,3 +92,5 @@ void CreateTodoJob::relationCreated(KJob *job)
     }
     emitResult();
 }
+
+#include "moc_createtodojob.cpp"

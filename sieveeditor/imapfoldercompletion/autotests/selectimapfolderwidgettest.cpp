@@ -41,3 +41,5 @@ void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(SelectImapFolderWidgetTest)
+
+#include "moc_selectimapfolderwidgettest.cpp"

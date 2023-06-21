@@ -65,3 +65,5 @@ void ViewerPluginExpandurlInterface::setUrl(const QUrl &url)
 {
     mCurrentUrl = url;
 }
+
+#include "moc_viewerpluginexpandurlinterface.cpp"

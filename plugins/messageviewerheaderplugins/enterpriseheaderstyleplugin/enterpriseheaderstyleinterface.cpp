@@ -30,3 +30,5 @@ void EnterpriseHeaderStyleInterface::activateAction()
 {
     mAction.at(0)->setChecked(true);
 }
+
+#include "moc_enterpriseheaderstyleinterface.cpp"

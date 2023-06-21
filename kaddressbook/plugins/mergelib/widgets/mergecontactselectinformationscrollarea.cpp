@@ -117,3 +117,5 @@ void MergeContactSelectInformationScrollArea::slotMergeDone(const Akonadi::Item 
     mMergedContactWidget->setContact(item);
     mStackWidget->setCurrentWidget(mMergedContactWidget);
 }
+
+#include "moc_mergecontactselectinformationscrollarea.cpp"

@@ -33,3 +33,5 @@ void MarkdownCreateLinkDialogTest::shouldHaveDefaultValue()
     QVERIFY(box);
     QVERIFY(dlg.linkStr().isEmpty());
 }
+
+#include "moc_markdowncreatelinkdialogtest.cpp"

@@ -90,3 +90,5 @@ bool SearchPotentialDuplicateContactJob::isDuplicate(const Akonadi::Item &itemA,
     }
     return false;
 }
+
+#include "moc_searchpotentialduplicatecontactjob.cpp"

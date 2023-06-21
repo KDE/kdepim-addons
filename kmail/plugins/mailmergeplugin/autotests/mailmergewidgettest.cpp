@@ -75,3 +75,5 @@ void MailMergeWidgetTest::shouldChangeStackedWidgetIndexWhenChangeComboboxIndex(
 }
 
 QTEST_MAIN(MailMergeWidgetTest)
+
+#include "moc_mailmergewidgettest.cpp"

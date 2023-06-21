@@ -17,3 +17,5 @@ void ExpireAccountTrashFolderConfigWidgetTest::shouldHaveDefaultValues()
 {
     ExpireAccountTrashFolderConfigWidget w;
 }
+
+#include "moc_expireaccounttrashfolderconfigwidgettest.cpp"

@@ -39,3 +39,5 @@ void LongHeaderStylePluginTest::shouldCreateInterface()
 }
 
 QTEST_MAIN(LongHeaderStylePluginTest)
+
+#include "moc_longheaderstyleplugintest.cpp"

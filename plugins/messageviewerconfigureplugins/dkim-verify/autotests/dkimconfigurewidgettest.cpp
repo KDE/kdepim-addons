@@ -27,3 +27,5 @@ void DKIMConfigureWidgetTest::shouldHaveDefaultValue()
     auto mTabWidget = w.findChild<DKIMConfigureTab *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
 }
+
+#include "moc_dkimconfigurewidgettest.cpp"

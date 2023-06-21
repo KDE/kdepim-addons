@@ -99,3 +99,5 @@ void PimEventsPlugin::calendarIncidenceAboutToBeDeleted(const KCalendarCore::Inc
         }
     }
 }
+
+#include "moc_pimeventsplugin.cpp"

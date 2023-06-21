@@ -57,3 +57,5 @@ void TranslatorView::createAction(KActionCollection *ac)
     }
     mAction->setChecked(false);
 }
+
+#include "moc_translatorview.cpp"

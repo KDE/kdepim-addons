@@ -81,3 +81,5 @@ void AutomaticAddContactsTabWidget::saveSettings()
     grp.writeEntry("Enabled", mEnabled->isChecked());
     grp.writeEntry("Collection", mCollectionCombobox->currentCollection().id());
 }
+
+#include "moc_automaticaddcontactstabwidget.cpp"

@@ -64,3 +64,5 @@ void CheckAttachmentDialog::readConfig()
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
+
+#include "moc_checkattachmentdialog.cpp"

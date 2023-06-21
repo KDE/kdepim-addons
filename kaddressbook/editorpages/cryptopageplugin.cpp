@@ -188,3 +188,5 @@ void CryptoPagePlugin::setReadOnly(bool readOnly)
     mPgpKey->setEnabled(!readOnly);
     mSmimeCert->setEnabled(!readOnly);
 }
+
+#include "moc_cryptopageplugin.cpp"

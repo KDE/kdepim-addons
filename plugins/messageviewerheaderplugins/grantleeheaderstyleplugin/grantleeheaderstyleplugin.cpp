@@ -52,3 +52,5 @@ QString GrantleeHeaderStylePlugin::name() const
 }
 
 #include "grantleeheaderstyleplugin.moc"
+
+#include "moc_grantleeheaderstyleplugin.cpp"

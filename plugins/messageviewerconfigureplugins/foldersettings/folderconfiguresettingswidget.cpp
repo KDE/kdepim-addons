@@ -64,3 +64,5 @@ void FolderConfigureSettingsWidget::saveConfig()
     KConfigGroup grp(KSharedConfig::openStateConfig(), myFolderConfigureSettingsWidgetGroupName);
     grp.writeEntry("SplitterSize", sizes);
 }
+
+#include "moc_folderconfiguresettingswidget.cpp"

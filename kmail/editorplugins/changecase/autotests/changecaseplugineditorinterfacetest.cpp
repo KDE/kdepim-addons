@@ -26,3 +26,5 @@ void ChangeCasePluginEditorInterfaceTest::shouldHaveDefaultValues()
 }
 
 QTEST_MAIN(ChangeCasePluginEditorInterfaceTest)
+
+#include "moc_changecaseplugineditorinterfacetest.cpp"

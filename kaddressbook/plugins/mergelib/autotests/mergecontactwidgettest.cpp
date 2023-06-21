@@ -175,3 +175,5 @@ void MergeContactWidgetTest::shouldEmitSignalsWhenSelectContact()
 }
 
 QTEST_MAIN(MergeContactWidgetTest)
+
+#include "moc_mergecontactwidgettest.cpp"

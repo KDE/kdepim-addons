@@ -49,3 +49,5 @@ bool MarkdownEnginePage::acceptNavigationRequest(const QUrl &url, NavigationType
     }
     return false;
 }
+
+#include "moc_markdownenginepage.cpp"

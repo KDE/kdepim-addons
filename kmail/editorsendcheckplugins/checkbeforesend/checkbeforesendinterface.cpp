@@ -125,3 +125,5 @@ void CheckBeforeSendInterface::reloadConfig()
     mCheckDuplicateEmails = grp.readEntry("CheckDuplicatedEmails", false);
     mCheckSendAttachments = grp.readEntry("CheckSendAttachment", false);
 }
+
+#include "moc_checkbeforesendinterface.cpp"

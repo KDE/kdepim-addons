@@ -23,3 +23,5 @@ PimCommon::GenericPluginInterface *AntiVirusPlugin::createInterface(QObject *par
 }
 
 #include "antivirusplugin.moc"
+
+#include "moc_antivirusplugin.cpp"

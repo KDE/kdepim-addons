@@ -25,3 +25,5 @@ void ConfirmAddressPluginTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ConfirmAddressPluginTest)
+
+#include "moc_confirmaddressplugintest.cpp"

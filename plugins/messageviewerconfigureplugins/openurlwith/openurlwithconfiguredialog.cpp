@@ -65,3 +65,5 @@ void OpenUrlWithConfigureDialog::writeConfig()
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }
+
+#include "moc_openurlwithconfiguredialog.cpp"

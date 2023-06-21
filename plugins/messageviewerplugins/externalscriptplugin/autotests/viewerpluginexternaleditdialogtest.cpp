@@ -32,3 +32,5 @@ void ViewerPluginExternalEditDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ViewerPluginExternalEditDialogTest)
+
+#include "moc_viewerpluginexternaleditdialogtest.cpp"

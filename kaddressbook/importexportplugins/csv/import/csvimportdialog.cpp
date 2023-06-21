@@ -757,3 +757,5 @@ void CSVImportDialog::modelFinishedLoading()
 }
 
 #include "csvimportdialog.moc"
+
+#include "moc_csvimportdialog.cpp"

@@ -124,3 +124,5 @@ void QuickTextPluginEditorInterface::selectPreviousWord(QTextCursor &cursor, int
     }
     cursor.setPosition(pos + block.position(), QTextCursor::KeepAnchor);
 }
+
+#include "moc_quicktextplugineditorinterface.cpp"

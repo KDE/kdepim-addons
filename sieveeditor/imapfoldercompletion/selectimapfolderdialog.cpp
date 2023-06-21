@@ -83,3 +83,5 @@ void SelectImapFolderDialog::slotEnabledNewFolder(bool enabled)
 {
     mNewFolder->setEnabled(enabled);
 }
+
+#include "moc_selectimapfolderdialog.cpp"

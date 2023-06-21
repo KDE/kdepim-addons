@@ -17,3 +17,5 @@ AutomaticAddContactsJobTest::AutomaticAddContactsJobTest(QObject *parent)
 AutomaticAddContactsJobTest::~AutomaticAddContactsJobTest() = default;
 
 QTEST_MAIN(AutomaticAddContactsJobTest)
+
+#include "moc_automaticaddcontactsjobtest.cpp"

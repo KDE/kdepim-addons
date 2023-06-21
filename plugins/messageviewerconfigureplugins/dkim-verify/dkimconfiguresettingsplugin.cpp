@@ -24,3 +24,5 @@ void DkimConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "dkimconfiguresettingsplugin.moc"
+
+#include "moc_dkimconfiguresettingsplugin.cpp"

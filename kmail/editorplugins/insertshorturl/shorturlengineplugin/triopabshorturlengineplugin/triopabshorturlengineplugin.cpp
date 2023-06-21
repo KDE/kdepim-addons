@@ -28,3 +28,5 @@ QString TriopAbShortUrlEnginePlugin::engineName() const
 }
 
 #include "triopabshorturlengineplugin.moc"
+
+#include "moc_triopabshorturlengineplugin.cpp"

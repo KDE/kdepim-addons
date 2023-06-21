@@ -91,3 +91,5 @@ void ConfirmAddressDialog::slotWhiteListSelectedEmails()
         KMessageBox::information(this, i18n("All selected emails are added to white list"), i18n("Emails added to white list"));
     }
 }
+
+#include "moc_confirmaddressdialog.cpp"

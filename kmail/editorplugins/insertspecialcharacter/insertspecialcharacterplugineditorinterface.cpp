@@ -49,3 +49,5 @@ void InsertSpecialCharacterPluginEditorInterface::charSelected(QChar c)
 {
     Q_EMIT insertText(c);
 }
+
+#include "moc_insertspecialcharacterplugineditorinterface.cpp"

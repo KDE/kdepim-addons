@@ -247,3 +247,5 @@ void PimEventsPluginTest::testEventRemoved()
 }
 
 QTEST_MAIN(PimEventsPluginTest)
+
+#include "moc_pimeventsplugintest.cpp"

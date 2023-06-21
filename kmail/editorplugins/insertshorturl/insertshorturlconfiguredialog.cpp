@@ -32,3 +32,5 @@ void InsertShorturlConfigureDialog::accept()
     mInsertShortUrlWidget->writeConfig();
     QDialog::accept();
 }
+
+#include "moc_insertshorturlconfiguredialog.cpp"

@@ -44,3 +44,5 @@ QString MarkdownCreateLinkWidget::linkStr() const
     }
     return QStringLiteral("[%1](%2)").arg(mTitle->text().trimmed(), mLink->text().trimmed());
 }
+
+#include "moc_markdowncreatelinkwidget.cpp"

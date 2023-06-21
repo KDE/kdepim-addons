@@ -102,3 +102,5 @@ void EmailAddressSelectionLdapDialog::ldapSearchResult()
 }
 
 #include "emailaddressselectionldapdialog.moc"
+
+#include "moc_emailaddressselectionldapdialog.cpp"

@@ -68,3 +68,5 @@ void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo()
 }
 
 QTEST_MAIN(ViewerPluginExternalEditWidgetTest)
+
+#include "moc_viewerpluginexternaleditwidgettest.cpp"

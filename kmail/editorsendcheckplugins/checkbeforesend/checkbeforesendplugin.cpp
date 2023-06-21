@@ -39,3 +39,5 @@ void CheckBeforeSendPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "checkbeforesendplugin.moc"
+
+#include "moc_checkbeforesendplugin.cpp"

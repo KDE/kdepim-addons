@@ -67,3 +67,5 @@ void MarkdownPreviewDialog::setConverterSettings(bool enableEmbeddedLabel, bool 
 {
     mPreviewWidget->setConverterSettings(enableEmbeddedLabel, enableExtraDefinitionLists);
 }
+
+#include "moc_markdownpreviewdialog.cpp"

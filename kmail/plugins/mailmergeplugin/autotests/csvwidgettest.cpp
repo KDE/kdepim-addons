@@ -40,3 +40,5 @@ void CsvWidgetTest::shouldChangePath()
 }
 
 QTEST_MAIN(CsvWidgetTest)
+
+#include "moc_csvwidgettest.cpp"

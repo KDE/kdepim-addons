@@ -51,3 +51,5 @@ void CheckDuplicateEmailsDialogTest::shouldAddEmails()
 }
 
 QTEST_MAIN(CheckDuplicateEmailsDialogTest)
+
+#include "moc_checkduplicateemailsdialogtest.cpp"

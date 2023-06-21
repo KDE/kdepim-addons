@@ -39,3 +39,5 @@ void QuickTextMenu::setPluginComposerInterface(MessageComposer::PluginComposerIn
 {
     mComposerInterface = composerInterface;
 }
+
+#include "moc_quicktextmenu.cpp"

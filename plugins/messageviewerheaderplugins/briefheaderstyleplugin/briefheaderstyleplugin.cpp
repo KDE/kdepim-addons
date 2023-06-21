@@ -52,3 +52,5 @@ QString BriefHeaderStylePlugin::name() const
 }
 
 #include "briefheaderstyleplugin.moc"
+
+#include "moc_briefheaderstyleplugin.cpp"

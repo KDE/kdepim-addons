@@ -97,3 +97,5 @@ void SearchDuplicateResultWidgetTest::shouldHaveMergeButtonEnabled()
 }
 
 QTEST_MAIN(SearchDuplicateResultWidgetTest)
+
+#include "moc_searchduplicateresultwidgettest.cpp"

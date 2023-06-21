@@ -112,3 +112,5 @@ QString MarkdownCreateImageWidget::linkStr() const
         return QStringLiteral("![%1](%2)").arg(mTitle->text().trimmed(), imageText);
     }
 }
+
+#include "moc_markdowncreateimagewidget.cpp"

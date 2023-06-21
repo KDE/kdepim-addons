@@ -132,3 +132,5 @@ void ConfirmAddressCheckJobTest::shouldNotDuplicateValue()
 }
 
 QTEST_MAIN(ConfirmAddressCheckJobTest)
+
+#include "moc_confirmaddresscheckjobtest.cpp"

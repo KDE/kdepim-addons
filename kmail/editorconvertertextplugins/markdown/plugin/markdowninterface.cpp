@@ -295,3 +295,5 @@ void MarkdownInterface::slotActivated(bool checked)
     }
     mPopupMenuAction->setEnabled(checked);
 }
+
+#include "moc_markdowninterface.cpp"

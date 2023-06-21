@@ -20,3 +20,5 @@ void QuickTextMenuTest::shouldHaveDefaultValues()
     QuickTextMenu m(nullptr);
     QVERIFY(m.menu());
 }
+
+#include "moc_quicktextmenutest.cpp"

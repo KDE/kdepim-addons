@@ -28,3 +28,5 @@ MessageComposer::PluginEditorInterface *ShareTextPluginEditor::createInterface(Q
 }
 
 #include "sharetextplugineditor.moc"
+
+#include "moc_sharetextplugineditor.cpp"

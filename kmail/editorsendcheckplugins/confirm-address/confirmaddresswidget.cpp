@@ -82,3 +82,5 @@ void ConfirmAddressWidget::slotItemChanged(QListWidgetItem *)
     }
     Q_EMIT updateButtonStatus(hasElementChecked);
 }
+
+#include "moc_confirmaddresswidget.cpp"

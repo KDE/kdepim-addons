@@ -42,3 +42,5 @@ void AutomaticAddContactsConfigureDialog::help()
 {
     showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
 }
+
+#include "moc_automaticaddcontactsconfiguredialog.cpp"

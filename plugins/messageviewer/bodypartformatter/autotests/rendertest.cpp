@@ -170,3 +170,5 @@ void RenderTest::testRenderKeyDetails()
 }
 
 QTEST_MAIN(RenderTest)
+
+#include "moc_rendertest.cpp"

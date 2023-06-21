@@ -15,3 +15,5 @@ GearyAddressBook::~GearyAddressBook() = default;
 void GearyAddressBook::importAddressBook()
 {
 }
+
+#include "moc_gearyaddressbook.cpp"

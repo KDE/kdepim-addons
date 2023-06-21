@@ -47,3 +47,5 @@ void ConfirmAddressConfigureTabWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ConfirmAddressConfigureTabWidgetTest)
+
+#include "moc_confirmaddressconfiguretabwidgettest.cpp"

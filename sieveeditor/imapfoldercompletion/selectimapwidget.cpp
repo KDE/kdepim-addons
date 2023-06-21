@@ -80,3 +80,5 @@ void SelectImapWidget::slotOpenSelectImapFolder()
 }
 
 #include "selectimapwidget.moc"
+
+#include "moc_selectimapwidget.cpp"

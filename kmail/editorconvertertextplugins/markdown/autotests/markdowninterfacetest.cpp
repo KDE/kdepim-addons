@@ -17,3 +17,5 @@ MarkdownInterfaceTest::MarkdownInterfaceTest(QObject *parent)
 void MarkdownInterfaceTest::shouldHaveDefaultValue()
 {
 }
+
+#include "moc_markdowninterfacetest.cpp"

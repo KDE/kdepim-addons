@@ -48,3 +48,5 @@ void FolderConfigureSettingsPageBase::addMainWidget(QWidget *widget)
     mMainLayout->addWidget(mMainWidget);
     mMainWidget->setEnabled(false); // Disable it directly
 }
+
+#include "moc_folderconfiguresettingspagebase.cpp"

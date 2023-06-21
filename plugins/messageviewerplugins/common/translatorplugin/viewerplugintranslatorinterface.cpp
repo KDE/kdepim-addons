@@ -66,3 +66,5 @@ TextTranslator::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
     }
     return mTranslatorWidget;
 }
+
+#include "moc_viewerplugintranslatorinterface.cpp"

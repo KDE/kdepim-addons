@@ -23,3 +23,5 @@ void FolderConfigureSettingsTemplateWidget::save(Akonadi::Collection &col)
         mCollectionTemplateWidget->save(col);
     }
 }
+
+#include "moc_folderconfiguresettingstemplatewidget.cpp"

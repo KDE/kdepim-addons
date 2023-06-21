@@ -22,3 +22,5 @@ PimCommon::GenericPluginInterface *AkonadiDatabaseToolsPlugin::createInterface(Q
 }
 
 #include "akonadidatabasetoolsplugin.moc"
+
+#include "moc_akonadidatabasetoolsplugin.cpp"

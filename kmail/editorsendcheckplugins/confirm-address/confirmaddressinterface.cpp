@@ -114,3 +114,5 @@ void ConfirmAddressInterface::reloadConfig()
         mHashSettings.insert(identity, settings);
     }
 }
+
+#include "moc_confirmaddressinterface.cpp"

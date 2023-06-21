@@ -22,3 +22,5 @@ PimCommon::GenericPluginInterface *AntiSpamPlugin::createInterface(QObject *pare
 }
 
 #include "antispamplugin.moc"
+
+#include "moc_antispamplugin.cpp"

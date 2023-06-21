@@ -94,3 +94,5 @@ QStandardItemModel *SelectImapFolderModel::folderModel(const KSieveUi::SieveImap
     }
     return model;
 }
+
+#include "moc_selectimapfoldermodel.cpp"

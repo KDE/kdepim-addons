@@ -53,3 +53,5 @@ QString LongHeaderStylePlugin::name() const
 }
 
 #include "longheaderstyleplugin.moc"
+
+#include "moc_longheaderstyleplugin.cpp"

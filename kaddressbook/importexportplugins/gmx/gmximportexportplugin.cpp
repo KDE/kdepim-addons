@@ -28,3 +28,5 @@ bool GMXImportExportPlugin::hasPopupMenuSupport() const
 }
 
 #include "gmximportexportplugin.moc"
+
+#include "moc_gmximportexportplugin.cpp"

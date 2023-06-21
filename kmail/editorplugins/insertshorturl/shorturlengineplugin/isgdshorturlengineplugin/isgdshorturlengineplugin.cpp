@@ -28,3 +28,5 @@ QString IsgdShortUrlEnginePlugin::engineName() const
 }
 
 #include "isgdshorturlengineplugin.moc"
+
+#include "moc_isgdshorturlengineplugin.cpp"

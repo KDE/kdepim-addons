@@ -47,3 +47,5 @@ void MergeContactWidgetListTest::shouldCleanListWhenSetItems()
 }
 
 QTEST_MAIN(MergeContactWidgetListTest)
+
+#include "moc_mergecontactwidgetlisttest.cpp"

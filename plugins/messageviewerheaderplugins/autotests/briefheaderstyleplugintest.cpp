@@ -78,3 +78,5 @@ void BriefHeaderStylePluginTest::testFormat()
 }
 
 QTEST_MAIN(BriefHeaderStylePluginTest)
+
+#include "moc_briefheaderstyleplugintest.cpp"

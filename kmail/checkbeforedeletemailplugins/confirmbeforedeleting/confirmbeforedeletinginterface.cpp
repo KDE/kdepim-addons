@@ -93,3 +93,5 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
     }
     return lst;
 }
+
+#include "moc_confirmbeforedeletinginterface.cpp"

@@ -154,3 +154,5 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
 // TODO Create unittest for ContactGroup too
 
 QTEST_MAIN(MailSenderJobTest)
+
+#include "moc_mailsenderjobtest.cpp"

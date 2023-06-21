@@ -24,3 +24,5 @@ WebEngineViewer::NetworkPluginUrlInterceptorInterface *DoNotTrackPluginUrlInterc
 }
 
 #include "donottrackpluginurlinterceptor.moc"
+
+#include "moc_donottrackpluginurlinterceptor.cpp"

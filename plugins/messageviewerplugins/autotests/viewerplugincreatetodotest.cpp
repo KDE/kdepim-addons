@@ -50,3 +50,5 @@ void ViewerPluginCreateTodoTest::shouldShowWidget()
 }
 
 QTEST_MAIN(ViewerPluginCreateTodoTest)
+
+#include "moc_viewerplugincreatetodotest.cpp"

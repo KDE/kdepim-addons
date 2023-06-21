@@ -36,3 +36,5 @@ void NonBreakingSpacePluginEditorInterface::exec()
 {
     richTextEditor()->insertPlainText(QChar(0x000A0));
 }
+
+#include "moc_nonbreakingspaceplugineditorinterface.cpp"

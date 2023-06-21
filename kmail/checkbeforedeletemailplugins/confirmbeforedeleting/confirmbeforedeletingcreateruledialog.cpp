@@ -42,3 +42,5 @@ void ConfirmBeforeDeletingCreateRuleDialog::setInfo(const ConfirmBeforeDeletingC
 {
     mConfirmBeforeDeletingCreateRuleWidget->setInfo(info);
 }
+
+#include "moc_confirmbeforedeletingcreateruledialog.cpp"

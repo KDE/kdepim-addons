@@ -77,3 +77,5 @@ Element::List Lunarphases::createDayElements(const QDate &date)
 }
 
 #include "lunarphases.moc"
+
+#include "moc_lunarphases.cpp"

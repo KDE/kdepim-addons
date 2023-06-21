@@ -288,3 +288,5 @@ QString ItineraryUrlHandler::createItineraryFile(MimeTreeParser::Interface::Body
 
     return f.fileName();
 }
+
+#include "moc_itineraryurlhandler.cpp"

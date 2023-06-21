@@ -66,3 +66,5 @@ void IsgdShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
         mTextCursor.insertText(var.toString());
     }
 }
+
+#include "moc_isgdshorturlengineinterface.cpp"

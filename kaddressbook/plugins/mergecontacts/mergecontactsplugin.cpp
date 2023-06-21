@@ -23,3 +23,5 @@ PimCommon::GenericPluginInterface *MergeContactsPlugin::createInterface(QObject 
 }
 
 #include "mergecontactsplugin.moc"
+
+#include "moc_mergecontactsplugin.cpp"

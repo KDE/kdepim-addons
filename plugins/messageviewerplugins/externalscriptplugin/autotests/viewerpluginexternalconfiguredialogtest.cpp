@@ -29,3 +29,5 @@ void ViewerPluginExternalConfigureDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ViewerPluginExternalConfigureDialogTest)
+
+#include "moc_viewerpluginexternalconfiguredialogtest.cpp"

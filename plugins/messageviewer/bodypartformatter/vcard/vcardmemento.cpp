@@ -91,3 +91,5 @@ KContacts::Addressee VcardMemento::address(int index) const
     }
     return mVCardList.at(index).address;
 }
+
+#include "moc_vcardmemento.cpp"

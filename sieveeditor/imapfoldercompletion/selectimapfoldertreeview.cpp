@@ -57,3 +57,5 @@ void SelectImapFolderTreeView::paintEvent(QPaintEvent *event)
 
     p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, label);
 }
+
+#include "moc_selectimapfoldertreeview.cpp"

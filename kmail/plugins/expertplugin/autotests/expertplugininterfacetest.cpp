@@ -14,3 +14,5 @@ ExpertPluginInterfaceTest::ExpertPluginInterfaceTest(QObject *parent)
     : QObject(parent)
 {
 }
+
+#include "moc_expertplugininterfacetest.cpp"

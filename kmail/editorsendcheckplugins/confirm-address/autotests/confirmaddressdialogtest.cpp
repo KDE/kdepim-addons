@@ -39,3 +39,5 @@ void ConfirmAddressDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ConfirmAddressDialogTest)
+
+#include "moc_confirmaddressdialogtest.cpp"

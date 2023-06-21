@@ -51,3 +51,5 @@ bool QuickTextPluginEditor::canProcessKeyEvent() const
 }
 
 #include "quicktextplugineditor.moc"
+
+#include "moc_quicktextplugineditor.cpp"

@@ -218,3 +218,5 @@ void OpenUrlWithConfigureWidget::slotCustomContextMenuRequested(const QPoint &p)
     }
     menu.exec(QCursor::pos());
 }
+
+#include "moc_openurlwithconfigurewidget.cpp"

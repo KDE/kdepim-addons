@@ -66,3 +66,5 @@ void SearchAndMergeContactDuplicateContactDialogTest::shouldShowNoContactWhenLis
 }
 
 QTEST_MAIN(SearchAndMergeContactDuplicateContactDialogTest)
+
+#include "moc_searchandmergecontactduplicatecontactdialogtest.cpp"

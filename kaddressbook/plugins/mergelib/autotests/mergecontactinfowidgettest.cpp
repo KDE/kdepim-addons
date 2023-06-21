@@ -48,3 +48,5 @@ void MergeContactInfoWidgetTest::shouldHaveActivateNoWidgetWhenSelectNoContact()
 }
 
 QTEST_MAIN(MergeContactInfoWidgetTest)
+
+#include "moc_mergecontactinfowidgettest.cpp"

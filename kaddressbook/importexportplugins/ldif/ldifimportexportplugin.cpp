@@ -28,3 +28,5 @@ bool LDifImportExportPlugin::hasPopupMenuSupport() const
 }
 
 #include "ldifimportexportplugin.moc"
+
+#include "moc_ldifimportexportplugin.cpp"

@@ -30,3 +30,5 @@ QString Ur1CaShortUrlEnginePlugin::engineName() const
 }
 
 #include "ur1cashorturlengineplugin.moc"
+
+#include "moc_ur1cashorturlengineplugin.cpp"

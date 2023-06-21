@@ -59,3 +59,5 @@ void GravatarConfigureSettingsPluginWidget::resetSettings()
     Gravatar::GravatarSettings::self()->useDefaults(bUseDefaults);
     mGravatarConfigWidget->slotRestoreDefault();
 }
+
+#include "moc_gravatarconfiguresettingspluginwidget.cpp"

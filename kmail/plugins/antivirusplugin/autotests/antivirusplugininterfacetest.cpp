@@ -43,3 +43,5 @@ void AntiVirusPluginInterfaceTest::shouldEmitActivatedSignal()
 }
 
 QTEST_MAIN(AntiVirusPluginInterfaceTest)
+
+#include "moc_antivirusplugininterfacetest.cpp"

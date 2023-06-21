@@ -24,3 +24,5 @@ MessageComposer::PluginEditorInterface *InsertSpecialCharacterPluginEditor::crea
 }
 
 #include "insertspecialcharacterplugineditor.moc"
+
+#include "moc_insertspecialcharacterplugineditor.cpp"

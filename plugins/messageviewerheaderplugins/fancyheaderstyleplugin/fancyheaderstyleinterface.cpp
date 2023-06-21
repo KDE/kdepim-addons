@@ -31,3 +31,5 @@ void FancyHeaderStyleInterface::activateAction()
 {
     mAction.at(0)->setChecked(true);
 }
+
+#include "moc_fancyheaderstyleinterface.cpp"

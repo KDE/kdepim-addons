@@ -158,3 +158,5 @@ NoteEdit *ViewerPluginCreatenoteInterface::widget()
     }
     return mNoteEdit;
 }
+
+#include "moc_viewerplugincreatenoteinterface.cpp"

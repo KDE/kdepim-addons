@@ -99,3 +99,5 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldNotLoadTwoSameNameDesktopFile
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptsLoadJobTest)
+
+#include "moc_viewerpluginexternalscriptsloadjobtest.cpp"

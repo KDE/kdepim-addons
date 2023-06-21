@@ -140,3 +140,5 @@ void SendVcardsJob::createTemporaryFile(const QByteArray &data, const QString &f
     file.close();
     mAttachmentTemporary->addTempFile(file.fileName());
 }
+
+#include "moc_sendvcardsjob.cpp"

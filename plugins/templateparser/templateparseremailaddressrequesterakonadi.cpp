@@ -47,3 +47,5 @@ void TemplateParserEmailAddressRequesterAkonadi::clear()
 }
 
 #include "templateparseremailaddressrequesterakonadi.moc"
+
+#include "moc_templateparseremailaddressrequesterakonadi.cpp"

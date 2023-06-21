@@ -58,3 +58,5 @@ void DKIMGeneralWidget::saveSettings()
         MessageViewer::DKIMManager::self()->clearInfoWidget();
     }
 }
+
+#include "moc_dkimgeneralwidget.cpp"

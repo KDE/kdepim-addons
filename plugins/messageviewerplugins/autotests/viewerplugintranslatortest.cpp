@@ -40,3 +40,5 @@ void ViewerPluginTranslatorTest::shouldCreateAction()
 }
 
 QTEST_MAIN(ViewerPluginTranslatorTest)
+
+#include "moc_viewerplugintranslatortest.cpp"

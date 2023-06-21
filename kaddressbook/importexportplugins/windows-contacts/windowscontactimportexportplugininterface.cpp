@@ -102,3 +102,5 @@ void WindowsContactImportExportPluginInterface::importFile(const QUrl &url)
 {
     Q_UNUSED(url)
 }
+
+#include "moc_windowscontactimportexportplugininterface.cpp"

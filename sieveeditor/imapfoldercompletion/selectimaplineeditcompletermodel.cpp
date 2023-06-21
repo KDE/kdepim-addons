@@ -26,3 +26,5 @@ QAbstractProxyModel *SelectImapLineEditCompleterModel::completerModel() const
 {
     return mFlatProxy;
 }
+
+#include "moc_selectimaplineeditcompletermodel.cpp"

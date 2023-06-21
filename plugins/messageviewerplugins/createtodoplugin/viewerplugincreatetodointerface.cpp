@@ -101,3 +101,5 @@ void MessageViewer::ViewerPluginCreateTodoInterface::setCurrentCollection(const 
 {
     widget()->setCurrentCollection(col);
 }
+
+#include "moc_viewerplugincreatetodointerface.cpp"

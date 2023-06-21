@@ -26,3 +26,5 @@ void AkonadiDatabaseToolsWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mPlainTextEdit->toPlainText().isEmpty());
     QVERIFY(mPlainTextEdit->isReadOnly());
 }
+
+#include "moc_akonadidatabasetoolswidgettest.cpp"

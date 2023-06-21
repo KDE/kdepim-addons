@@ -83,3 +83,5 @@ void ExternalComposerConfigureWidget::resetSettings()
     mExternalEditorCheck->setChecked(false);
     mEditorRequester->setText(QStringLiteral("kwrite %f"));
 }
+
+#include "moc_externalcomposerconfigurewidget.cpp"

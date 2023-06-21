@@ -16,3 +16,5 @@ SelectImapCreateJobTest::SelectImapCreateJobTest(QObject *parent)
 SelectImapCreateJobTest::~SelectImapCreateJobTest() = default;
 
 QTEST_MAIN(SelectImapCreateJobTest)
+
+#include "moc_selectimapcreatefolderjobtest.cpp"

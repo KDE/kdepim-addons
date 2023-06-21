@@ -26,3 +26,5 @@ void ShareTextPluginEditorInterfaceTest::shouldHaveDefaultValues()
 }
 
 QTEST_MAIN(ShareTextPluginEditorInterfaceTest)
+
+#include "moc_sharetextplugineditorinterfacetest.cpp"

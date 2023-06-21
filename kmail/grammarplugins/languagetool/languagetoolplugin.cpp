@@ -50,3 +50,5 @@ void LanguageToolPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "languagetoolplugin.moc"
+
+#include "moc_languagetoolplugin.cpp"

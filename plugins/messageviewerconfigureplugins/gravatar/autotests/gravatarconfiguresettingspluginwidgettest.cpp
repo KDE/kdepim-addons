@@ -34,3 +34,5 @@ void GravatarConfigureSettingsPluginWidgetTest::shouldHaveDefaultValue()
     auto mGravatarConfigWidget = w.findChild<Gravatar::GravatarConfigureSettingsWidget *>(QStringLiteral("gravatarconfigwidget"));
     QVERIFY(mGravatarConfigWidget);
 }
+
+#include "moc_gravatarconfiguresettingspluginwidgettest.cpp"

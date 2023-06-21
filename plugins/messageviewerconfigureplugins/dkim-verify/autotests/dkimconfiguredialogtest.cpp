@@ -36,3 +36,5 @@ void DKIMConfigureDialogTest::shouldHaveDefaultValue()
     QCOMPARE(buttonBox->standardButtons(),
              QDialogButtonBox::StandardButtons{QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults});
 }
+
+#include "moc_dkimconfiguredialogtest.cpp"

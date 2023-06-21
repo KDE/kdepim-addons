@@ -207,3 +207,5 @@ void ResultDuplicateTreeWidgetTest::shouldReturnJustOnList()
 }
 
 QTEST_MAIN(ResultDuplicateTreeWidgetTest)
+
+#include "moc_resultduplicatetreewidgettest.cpp"

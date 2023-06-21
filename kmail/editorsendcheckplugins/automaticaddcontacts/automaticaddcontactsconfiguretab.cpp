@@ -66,3 +66,5 @@ void AutomaticAddContactsConfigureTab::resetSettings()
         w->resetSettings();
     }
 }
+
+#include "moc_automaticaddcontactsconfiguretab.cpp"

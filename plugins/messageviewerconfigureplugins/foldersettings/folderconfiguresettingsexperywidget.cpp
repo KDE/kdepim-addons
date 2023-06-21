@@ -28,3 +28,5 @@ void FolderConfigureSettingsExperyWidget::save(Akonadi::Collection &col)
         }
     }
 }
+
+#include "moc_folderconfiguresettingsexperywidget.cpp"

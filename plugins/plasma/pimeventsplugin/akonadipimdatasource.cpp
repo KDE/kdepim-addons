@@ -101,3 +101,5 @@ void AkonadiPimDataSource::onSettingsChanged()
     const auto toDisable = monitored - configured;
     std::for_each(toDisable.cbegin(), toDisable.cend(), std::bind(&EventModel::removeCalendar, mCalendar, _1));
 }
+
+#include "moc_akonadipimdatasource.cpp"

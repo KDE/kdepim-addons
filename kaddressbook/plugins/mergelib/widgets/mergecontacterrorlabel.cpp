@@ -30,3 +30,5 @@ MergeContactErrorLabel::MergeContactErrorLabel(ErrorType type, QWidget *parent)
 }
 
 MergeContactErrorLabel::~MergeContactErrorLabel() = default;
+
+#include "moc_mergecontacterrorlabel.cpp"

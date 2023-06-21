@@ -112,3 +112,5 @@ ViewerPluginExternalScriptInfo ViewerPluginExternalEditWidget::scriptInfo() cons
 {
     return mScriptInfo;
 }
+
+#include "moc_viewerpluginexternaleditwidget.cpp"

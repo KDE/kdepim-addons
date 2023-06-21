@@ -23,3 +23,5 @@ PimCommon::GenericPluginInterface *SearchDuplicatesPlugin::createInterface(QObje
 }
 
 #include "searchduplicatesplugin.moc"
+
+#include "moc_searchduplicatesplugin.cpp"

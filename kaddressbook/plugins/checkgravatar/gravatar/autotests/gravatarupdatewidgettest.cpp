@@ -69,3 +69,5 @@ void GravatarUpdateWidgetTest::shouldAffectEmail()
 }
 
 QTEST_MAIN(GravatarUpdateWidgetTest)
+
+#include "moc_gravatarupdatewidgettest.cpp"

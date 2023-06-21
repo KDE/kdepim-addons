@@ -44,3 +44,5 @@ void MergeContactSelectInformationTabWidget::setRequiresSelectInformationWidgets
     }
     updateTabWidget();
 }
+
+#include "moc_mergecontactselectinformationtabwidget.cpp"

@@ -43,3 +43,5 @@ void OpenUrlWithConfigureWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mModifyRule);
     QVERIFY(!mModifyRule->text().isEmpty());
 }
+
+#include "moc_openurlwithconfigurewidgettest.cpp"

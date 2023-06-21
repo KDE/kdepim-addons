@@ -26,3 +26,5 @@ void AutoCorrectionPluginEditorTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(AutoCorrectionPluginEditorTest)
+
+#include "moc_autocorrectionplugineditortest.cpp"

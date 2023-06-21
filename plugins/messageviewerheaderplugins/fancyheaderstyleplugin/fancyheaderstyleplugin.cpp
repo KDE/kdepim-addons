@@ -191,3 +191,5 @@ QString MessageViewer::FancyHeaderStylePlugin::attachmentHtml() const
 }
 
 #include "fancyheaderstyleplugin.moc"
+
+#include "moc_fancyheaderstyleplugin.cpp"

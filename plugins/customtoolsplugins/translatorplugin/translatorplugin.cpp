@@ -45,3 +45,5 @@ void TranslatorPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "translatorplugin.moc"
+
+#include "moc_translatorplugin.cpp"

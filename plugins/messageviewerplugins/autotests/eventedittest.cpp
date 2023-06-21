@@ -430,3 +430,5 @@ void EventEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEm
 }
 
 QTEST_MAIN(EventEditTest)
+
+#include "moc_eventedittest.cpp"

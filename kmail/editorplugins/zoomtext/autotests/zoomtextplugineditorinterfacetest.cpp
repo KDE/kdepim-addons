@@ -31,3 +31,5 @@ void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ZoomTextPluginEditorInterfaceTest)
+
+#include "moc_zoomtextplugineditorinterfacetest.cpp"

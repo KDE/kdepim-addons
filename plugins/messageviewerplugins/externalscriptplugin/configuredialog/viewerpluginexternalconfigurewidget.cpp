@@ -223,3 +223,5 @@ void ViewerPluginExternalConfigureWidget::modifyScript(QListWidgetItem *item)
         delete dlg;
     }
 }
+
+#include "moc_viewerpluginexternalconfigurewidget.cpp"

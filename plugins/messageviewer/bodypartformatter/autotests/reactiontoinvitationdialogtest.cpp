@@ -38,3 +38,5 @@ void ReactionToInvitationDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ReactionToInvitationDialogTest)
+
+#include "moc_reactiontoinvitationdialogtest.cpp"

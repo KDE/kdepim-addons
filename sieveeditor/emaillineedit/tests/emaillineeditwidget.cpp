@@ -18,3 +18,5 @@ EmailLineEditWidget::EmailLineEditWidget(QWidget *parent)
     layout->addWidget(mail);
     layout->addStretch(1);
 }
+
+#include "moc_emaillineeditwidget.cpp"

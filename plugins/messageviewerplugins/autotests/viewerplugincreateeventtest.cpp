@@ -50,3 +50,5 @@ void ViewerPluginCreateeventTest::shouldShowWidget()
 }
 
 QTEST_MAIN(ViewerPluginCreateeventTest)
+
+#include "moc_viewerplugincreateeventtest.cpp"

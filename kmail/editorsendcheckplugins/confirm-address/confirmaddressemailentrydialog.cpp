@@ -44,3 +44,5 @@ void ConfirmAddressEmailEntryDialog::setValue(const QString &val)
 {
     mLineEdit->setText(val);
 }
+
+#include "moc_confirmaddressemailentrydialog.cpp"

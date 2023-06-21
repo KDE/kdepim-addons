@@ -86,3 +86,5 @@ void ConfigDialog::slotOk()
     save();
     accept();
 }
+
+#include "moc_configdialog.cpp"

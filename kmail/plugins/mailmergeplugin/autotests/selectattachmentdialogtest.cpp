@@ -28,3 +28,5 @@ void SelectAttachmentDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(SelectAttachmentDialogTest)
+
+#include "moc_selectattachmentdialogtest.cpp"

@@ -11,3 +11,5 @@ ExpireAccountTrashFolderConfigDialogTest::ExpireAccountTrashFolderConfigDialogTe
     : QObject(parent)
 {
 }
+
+#include "moc_expireaccounttrashfolderconfigdialogtest.cpp"

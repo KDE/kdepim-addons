@@ -61,3 +61,5 @@ void MarkdownCreateLinkWidgetTest::shouldEmitSignal()
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(0).value<bool>(), true);
 }
+
+#include "moc_markdowncreatelinkwidgettest.cpp"

@@ -41,3 +41,5 @@ bool MessageViewer::ViewerPluginTranslator::hasConfigureDialog() const
 }
 
 #include "viewerplugintranslator.moc"
+
+#include "moc_viewerplugintranslator.cpp"

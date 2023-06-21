@@ -68,3 +68,5 @@ void SendVcardsPluginInterface::slotSendVcardsError(const QString &error)
 {
     KMessageBox::error(parentWidget(), error);
 }
+
+#include "moc_sendvcardsplugininterface.cpp"

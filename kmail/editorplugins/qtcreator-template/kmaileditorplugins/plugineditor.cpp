@@ -30,3 +30,5 @@ MessageComposer::PluginEditorInterface * % {CN} PluginEditor::createInterface(QO
 }
 
 #include "%{ProjectNameLower}plugineditor.moc"
+
+#include "moc_plugineditor.cpp"

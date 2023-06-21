@@ -37,3 +37,5 @@ void ScamConfigureSettingsWidget::saveSettings()
 {
     // TODO
 }
+
+#include "moc_scamconfiguresettingswidget.cpp"

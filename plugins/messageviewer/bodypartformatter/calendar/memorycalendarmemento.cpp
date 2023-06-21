@@ -58,3 +58,5 @@ void MemoryCalendarMemento::detach()
 {
     disconnect(this, &MemoryCalendarMemento::update, nullptr, nullptr);
 }
+
+#include "moc_memorycalendarmemento.cpp"

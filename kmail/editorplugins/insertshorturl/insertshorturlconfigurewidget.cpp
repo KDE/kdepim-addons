@@ -68,3 +68,5 @@ void InsertShorturlConfigureWidget::writeConfig()
         grp.sync();
     }
 }
+
+#include "moc_insertshorturlconfigurewidget.cpp"

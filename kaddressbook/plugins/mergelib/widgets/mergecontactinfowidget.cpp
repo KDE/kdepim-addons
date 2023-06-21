@@ -45,3 +45,5 @@ void MergeContactInfoWidget::setContact(const Akonadi::Item &item)
         mStackWidget->setCurrentWidget(mNoContactSelected);
     }
 }
+
+#include "moc_mergecontactinfowidget.cpp"

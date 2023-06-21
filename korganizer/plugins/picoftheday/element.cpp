@@ -380,3 +380,5 @@ QPixmap POTDElement::newPixmap(const QSize &size)
     }
     return mData->mThumbnail.scaled(mRequestedThumbSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 }
+
+#include "moc_element.cpp"

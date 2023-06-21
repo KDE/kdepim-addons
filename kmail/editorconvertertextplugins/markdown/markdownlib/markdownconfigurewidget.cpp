@@ -52,3 +52,5 @@ void MarkdownConfigureWidget::resetSettings()
     mLatexSupport->setChecked(false);
     mExtraDefinitionLists->setChecked(false);
 }
+
+#include "moc_markdownconfigurewidget.cpp"

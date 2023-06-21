@@ -62,3 +62,5 @@ void ItineraryKDEConnectHandler::sendToDevice(const QString &fileName, const QSt
 
     QDBusConnection::sessionBus().send(msg);
 }
+
+#include "moc_itinerarykdeconnecthandler.cpp"

@@ -25,3 +25,5 @@ void DKIMKeyRecordWidgetTest::shouldHaveDefaultValues()
     auto mManagerKeyWidget = w.findChild<MessageViewer::DKIMManagerKeyWidget *>(QStringLiteral("mManagerKeyWidget"));
     QVERIFY(mManagerKeyWidget);
 }
+
+#include "moc_dkimkeyrecordwidgettest.cpp"

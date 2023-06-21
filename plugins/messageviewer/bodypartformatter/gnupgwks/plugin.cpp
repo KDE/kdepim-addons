@@ -58,3 +58,5 @@ const MessageViewer::Interface::BodyPartURLHandler *ApplicationGnuPGWKSPlugin::u
         return nullptr;
     }
 }
+
+#include "moc_plugin.cpp"

@@ -39,3 +39,5 @@ void DKIMAdvancedWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mSmallKeyPolicy);
     QVERIFY(mSmallKeyPolicy->count() > 0);
 }
+
+#include "moc_dkimadvancedwidgettest.cpp"

@@ -33,3 +33,5 @@ void FolderConfigureModifyCollectionJob::slotCollectionModified(KJob *job)
     }
     deleteLater();
 }
+
+#include "moc_folderconfiguremodifycollectionjob.cpp"

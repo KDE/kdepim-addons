@@ -42,3 +42,5 @@ void ConfirmBeforeDeletingWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mModifyRule);
     QVERIFY(!mModifyRule->text().isEmpty());
 }
+
+#include "moc_confirmbeforedeletingwidgettest.cpp"

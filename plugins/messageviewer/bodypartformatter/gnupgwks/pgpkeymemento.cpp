@@ -85,3 +85,5 @@ void PgpKeyMemento::onListJobFinished(const GpgME::KeyListResult &result)
     setRunning(false);
     notify();
 }
+
+#include "moc_pgpkeymemento.cpp"

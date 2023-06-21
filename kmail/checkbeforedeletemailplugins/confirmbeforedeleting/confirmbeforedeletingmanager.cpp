@@ -89,3 +89,5 @@ bool ConfirmBeforeDeletingManager::deletingNeedToConfirm(const Akonadi::Item &it
     }
     return false;
 }
+
+#include "moc_confirmbeforedeletingmanager.cpp"

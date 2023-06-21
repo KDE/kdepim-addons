@@ -59,3 +59,5 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVERIFY(!mAutoGenerateOnlyIfSenderInSDID->text().isEmpty());
     QVERIFY(!mAutoGenerateOnlyIfSenderInSDID->isEnabled());
 }
+
+#include "moc_dkimpolicywidgettest.cpp"

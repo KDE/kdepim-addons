@@ -23,3 +23,5 @@ void HeaderStylePluginManagerTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(HeaderStylePluginManagerTest)
+
+#include "moc_headerstylepluginmanagertest.cpp"

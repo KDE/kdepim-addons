@@ -192,3 +192,5 @@ void SearchDuplicateResultWidget::slotCustomizeMergingContacts()
 {
     Q_EMIT customizeMergeContact(mResultConflictList, mCollectionCombobox->currentCollection());
 }
+
+#include "moc_searchduplicateresultwidget.cpp"

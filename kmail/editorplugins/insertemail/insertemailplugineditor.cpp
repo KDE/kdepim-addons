@@ -23,3 +23,5 @@ MessageComposer::PluginEditorInterface *InsertEmailPluginEditor::createInterface
 }
 
 #include "insertemailplugineditor.moc"
+
+#include "moc_insertemailplugineditor.cpp"

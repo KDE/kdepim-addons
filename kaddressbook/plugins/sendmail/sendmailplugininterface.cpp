@@ -79,3 +79,5 @@ void SendMailPluginInterface::slotSendMails(const QStringList &emails)
         QDesktopServices::openUrl(url);
     }
 }
+
+#include "moc_sendmailplugininterface.cpp"

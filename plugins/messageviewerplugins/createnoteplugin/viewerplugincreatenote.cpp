@@ -29,3 +29,5 @@ QString ViewerPluginCreatenote::viewerPluginName() const
 }
 
 #include "viewerplugincreatenote.moc"
+
+#include "moc_viewerplugincreatenote.cpp"

@@ -34,3 +34,5 @@ void InsertShorturlConfigureWidgetTest::shouldHaveDefaultValues()
     auto mShortUrlServer = w.findChild<QComboBox *>(QStringLiteral("shorturlserver"));
     QVERIFY(mShortUrlServer);
 }
+
+#include "moc_insertshorturlconfigurewidgettest.cpp"

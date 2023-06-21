@@ -146,3 +146,5 @@ void MergeContactWidget::slotMergeDone(const Akonadi::Item &item)
 {
     Q_EMIT contactMerged(item);
 }
+
+#include "moc_mergecontactwidget.cpp"

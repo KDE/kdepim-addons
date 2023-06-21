@@ -60,3 +60,5 @@ void LDapImportExportPluginInterface::importLdap()
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();
 }
+
+#include "moc_ldapimportexportplugininterface.cpp"

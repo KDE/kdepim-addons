@@ -24,3 +24,5 @@ void FolderConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "folderconfiguresettingsplugin.moc"
+
+#include "moc_folderconfiguresettingsplugin.cpp"

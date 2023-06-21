@@ -41,3 +41,5 @@ void ConfirmBeforeDeletingMessageBoxWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mLabelInfo->text().isEmpty());
     QVERIFY(mLabelInfo->wordWrap());
 }
+
+#include "moc_confirmbeforedeletingmessageboxwidgettest.cpp"

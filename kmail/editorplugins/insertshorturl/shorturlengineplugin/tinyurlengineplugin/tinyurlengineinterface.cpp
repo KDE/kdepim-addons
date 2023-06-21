@@ -47,3 +47,5 @@ void TinyUrlEngineInterface::slotErrorFound(QNetworkReply::NetworkError error)
     auto reply = qobject_cast<QNetworkReply *>(sender());
     Q_EMIT shortUrlFailed(i18n("Error reported by server:\n\'%1\'", (reply ? reply->errorString() : QString::number(error))));
 }
+
+#include "moc_tinyurlengineinterface.cpp"

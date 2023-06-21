@@ -26,3 +26,5 @@ void InsertShorturlPluginEditorTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(InsertShorturlPluginEditorTest)
+
+#include "moc_insertshorturlplugineditortest.cpp"

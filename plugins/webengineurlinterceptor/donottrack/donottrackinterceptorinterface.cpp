@@ -22,3 +22,5 @@ bool DoNotTrackInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &
     }
     return false;
 }
+
+#include "moc_donottrackinterceptorinterface.cpp"

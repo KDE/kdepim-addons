@@ -39,3 +39,5 @@ void ConfirmAddressEmailEntryDialogTest::shouldHaveDefaultValue()
     auto buttons = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttons"));
     QVERIFY(buttons);
 }
+
+#include "moc_confirmaddressemailentrydialogtest.cpp"

@@ -38,3 +38,5 @@ void MarkdownCreateImageDialogTest::shouldHaveDefaultValue()
     QVERIFY(mOkButton);
     QVERIFY(!mOkButton->isEnabled());
 }
+
+#include "moc_markdowncreateimagedialogtest.cpp"

@@ -48,3 +48,5 @@ QString ConfirmAddressSimpleStringListEditor::modifyEntry(const QString &text)
     delete dlg;
     return newText;
 }
+
+#include "moc_confirmaddresssimplestringlisteditor.cpp"

@@ -39,3 +39,5 @@ void StandardsHeaderStylePluginTest::shouldCreateInterface()
 }
 
 QTEST_MAIN(StandardsHeaderStylePluginTest)
+
+#include "moc_standardsheaderstyleplugintest.cpp"

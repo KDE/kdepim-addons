@@ -29,3 +29,5 @@ void MarkdownPreviewDialogTest::shouldHaveDefaultValue()
     auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 }
+
+#include "moc_markdownpreviewdialogtest.cpp"

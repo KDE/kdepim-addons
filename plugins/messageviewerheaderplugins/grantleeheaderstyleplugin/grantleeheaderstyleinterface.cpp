@@ -56,3 +56,5 @@ void GrantleeHeaderStyleInterface::slotGrantleeHeaders()
     mHeaderStylePlugin->headerStyle()->setTheme(mThemeManager->theme(themeName));
     slotStyleChanged();
 }
+
+#include "moc_grantleeheaderstyleinterface.cpp"

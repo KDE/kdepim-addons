@@ -45,3 +45,5 @@ void MarkdownConfigureDialog::help()
 {
     QDesktopServices::openUrl(QUrl(QStringLiteral("https://tools.ietf.org/html/rfc7763")));
 }
+
+#include "moc_markdownconfiguredialog.cpp"

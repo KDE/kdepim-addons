@@ -31,3 +31,5 @@ void StandardsHeaderStyleInterface::activateAction()
 {
     mAction.at(0)->setChecked(true);
 }
+
+#include "moc_standardsheaderstyleinterface.cpp"

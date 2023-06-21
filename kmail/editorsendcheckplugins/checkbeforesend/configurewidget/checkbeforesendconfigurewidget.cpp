@@ -71,3 +71,5 @@ void CheckBeforeSendConfigureWidget::resetSettings()
     mCheckSendAttachments->setChecked(false);
     mCheckDuplicateEmailsAddresses->setChecked(false);
 }
+
+#include "moc_checkbeforesendconfigurewidget.cpp"

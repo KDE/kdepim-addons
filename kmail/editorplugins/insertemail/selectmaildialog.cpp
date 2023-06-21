@@ -71,3 +71,5 @@ void SelectMailDialog::writeConfig()
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }
+
+#include "moc_selectmaildialog.cpp"

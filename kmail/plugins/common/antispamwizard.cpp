@@ -1277,3 +1277,5 @@ void ASWizSummaryPage::setSummaryText(const QString &text)
 {
     mSummaryText->setText(text);
 }
+
+#include "moc_antispamwizard.cpp"

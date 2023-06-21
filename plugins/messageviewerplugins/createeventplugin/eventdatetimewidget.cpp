@@ -84,3 +84,5 @@ void EventDateTimeWidget::setDate(QDate date)
 {
     mDateEdit->setDate(date);
 }
+
+#include "moc_eventdatetimewidget.cpp"

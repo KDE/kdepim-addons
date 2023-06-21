@@ -37,3 +37,5 @@ void CheckBeforeSendUpdateSmtpDialogTest::shouldHaveDefaultValue()
 
     QVERIFY(!w.windowTitle().isEmpty());
 }
+
+#include "moc_checkbeforesendupdatesmtpdialogtest.cpp"

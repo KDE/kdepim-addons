@@ -55,3 +55,5 @@ void SendMailConfigDialog::slotTextChanged(const QString &text)
 {
     mOkButton->setEnabled(!text.isEmpty());
 }
+
+#include "moc_sendmailconfigdialog.cpp"

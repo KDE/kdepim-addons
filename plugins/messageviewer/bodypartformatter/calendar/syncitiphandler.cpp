@@ -52,3 +52,5 @@ Akonadi::ITIPHandler::Result SyncItipHandler::result() const
 {
     return m_result;
 }
+
+#include "moc_syncitiphandler.cpp"

@@ -133,3 +133,5 @@ void SearchAndMergeContactDuplicateContactDialog::slotCustomizeMergeContacts(con
     mSelectInformation->setRequiresSelectInformationWidgets(lst, col);
     mStackedWidget->setCurrentWidget(mSelectInformation);
 }
+
+#include "moc_searchandmergecontactduplicatecontactdialog.cpp"

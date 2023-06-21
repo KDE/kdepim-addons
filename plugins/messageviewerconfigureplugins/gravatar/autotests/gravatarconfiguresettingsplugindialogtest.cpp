@@ -13,3 +13,5 @@ GravatarConfigureSettingsPluginDialogTest::GravatarConfigureSettingsPluginDialog
     : QObject(parent)
 {
 }
+
+#include "moc_gravatarconfiguresettingsplugindialogtest.cpp"

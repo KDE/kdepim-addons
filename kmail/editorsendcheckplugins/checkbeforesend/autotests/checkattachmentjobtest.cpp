@@ -88,3 +88,5 @@ void CheckAttachmentJobTest::shouldRemoveDuplicatedEmails_data()
 }
 
 QTEST_MAIN(CheckAttachmentJobTest)
+
+#include "moc_checkattachmentjobtest.cpp"

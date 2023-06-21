@@ -22,3 +22,5 @@ void ShortUrlEnginePlugin::setPluginName(const QString &pluginname)
 {
     mName = pluginname;
 }
+
+#include "moc_shorturlengineplugin.cpp"

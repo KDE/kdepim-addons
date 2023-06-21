@@ -28,3 +28,5 @@ bool SendMailPlugin::hasPopupMenuSupport() const
 }
 
 #include "sendmailplugin.moc"
+
+#include "moc_sendmailplugin.cpp"

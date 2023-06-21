@@ -382,3 +382,5 @@ void QCsvStandardBuilder::error(const QString &errorMsg)
 {
     d->mLastErrorString = errorMsg;
 }
+
+#include "moc_qcsvreader.cpp"

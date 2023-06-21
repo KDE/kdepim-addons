@@ -104,3 +104,5 @@ void ConfirmAddressConfigureTabWidget::setIdentity(uint identity)
 {
     mIdentity = identity;
 }
+
+#include "moc_confirmaddressconfiguretabwidget.cpp"

@@ -48,3 +48,5 @@ void SelectImapWidgetTest::shouldAssignText()
 }
 
 QTEST_MAIN(SelectImapWidgetTest)
+
+#include "moc_selectimapwidgettest.cpp"

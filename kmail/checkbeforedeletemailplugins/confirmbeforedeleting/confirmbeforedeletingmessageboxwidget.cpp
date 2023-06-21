@@ -59,3 +59,5 @@ bool ConfirmBeforeDeletingMessageBoxWidget::useSameResult() const
 {
     return mUseSameResultForOtherCheck->isChecked();
 }
+
+#include "moc_confirmbeforedeletingmessageboxwidget.cpp"

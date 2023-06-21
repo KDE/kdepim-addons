@@ -28,3 +28,5 @@ QString TinyUrlEnginePlugin::engineName() const
 }
 
 #include "tinyurlengineplugin.moc"
+
+#include "moc_tinyurlengineplugin.cpp"

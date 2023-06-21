@@ -130,3 +130,5 @@ void GravatarUpdateWidget::slotSearchGravatarFinished(Gravatar::GravatarResolvUr
     Q_EMIT activateDialogButton(foundGravatar);
     mSearchGravatar->setEnabled(true);
 }
+
+#include "moc_gravatarupdatewidget.cpp"

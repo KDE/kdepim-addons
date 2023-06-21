@@ -88,3 +88,5 @@ void CheckBeforeSendConfigureWidgetTest::shouldResetValue()
 }
 
 QTEST_MAIN(CheckBeforeSendConfigureWidgetTest)
+
+#include "moc_checkbeforesendconfigurewidgettest.cpp"

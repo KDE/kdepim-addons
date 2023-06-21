@@ -102,3 +102,5 @@ Akonadi::Collection::List FolderConfigureTreeWidget::listCollections() const
 {
     return mFolderSettingFilterProxyModel->listCollections();
 }
+
+#include "moc_folderconfiguretreewidget.cpp"

@@ -70,3 +70,5 @@ void Ur1CaShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
     }
     reply->deleteLater();
 }
+
+#include "moc_ur1cashorturlengineinterface.cpp"

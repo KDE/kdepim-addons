@@ -45,3 +45,5 @@ DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServer
 }
 
 DKIMAuthenticationVerifiedServerSelectorWidget::~DKIMAuthenticationVerifiedServerSelectorWidget() = default;
+
+#include "moc_dkimauthenticationverifiedserverwidget.cpp"

@@ -29,3 +29,5 @@ bool WindowsContactImportExportPlugin::hasPopupMenuSupport() const
 }
 
 #include "windowscontactimportexportplugin.moc"
+
+#include "moc_windowscontactimportexportplugin.cpp"

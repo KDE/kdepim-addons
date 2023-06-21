@@ -91,3 +91,5 @@ void CreateNoteJob::relationCreated(KJob *job)
     }
     emitResult();
 }
+
+#include "moc_createnotejob.cpp"

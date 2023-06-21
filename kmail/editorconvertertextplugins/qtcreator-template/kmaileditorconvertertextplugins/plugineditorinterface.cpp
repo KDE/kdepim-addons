@@ -33,3 +33,5 @@ void % {CN} PluginEditorInterface::setInitialData(const MessageComposer::PluginE
 {
     Q_UNUSED(data)
 }
+
+#include "moc_plugineditorinterface.cpp"

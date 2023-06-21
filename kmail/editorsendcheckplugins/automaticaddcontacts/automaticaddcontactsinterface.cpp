@@ -61,3 +61,5 @@ void AutomaticAddContactsInterface::reloadConfig()
         mHashSettings.insert(identity, settings);
     }
 }
+
+#include "moc_automaticaddcontactsinterface.cpp"

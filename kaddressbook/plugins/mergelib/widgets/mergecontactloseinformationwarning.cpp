@@ -43,3 +43,5 @@ void MergeContactLoseInformationWarning::slotAutomaticMerging()
     animatedHide();
     Q_EMIT continueMerging();
 }
+
+#include "moc_mergecontactloseinformationwarning.cpp"

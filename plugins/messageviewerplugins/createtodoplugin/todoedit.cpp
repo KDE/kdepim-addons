@@ -321,3 +321,5 @@ void TodoEdit::slotTextEdited(const QString &subject)
         mMsgWidget->hide();
     }
 }
+
+#include "moc_todoedit.cpp"

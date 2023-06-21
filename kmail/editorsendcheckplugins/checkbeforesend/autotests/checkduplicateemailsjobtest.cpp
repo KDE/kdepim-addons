@@ -105,3 +105,5 @@ void CheckDuplicateEmailsJobTest::shouldReturnEmails()
 }
 
 QTEST_MAIN(CheckDuplicateEmailsJobTest)
+
+#include "moc_checkduplicateemailsjobtest.cpp"
