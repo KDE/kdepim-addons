@@ -4,43 +4,43 @@
 # mvillarino <mvillarino@users.sourceforge.net>, 2008.
 # Xosé <xosecalvo@gmail.com>, 2009, 2010, 2012, 2014.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-31 00:48+0000\n"
-"PO-Revision-Date: 2019-02-15 21:43+0100\n"
+"PO-Revision-Date: 2023-06-21 08:57+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: text_vcard.cpp:87
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
-msgstr[0] "Tarxetas de visita anexa"
+msgstr[0] "Tarxeta de visita anexa"
 msgstr[1] "Tarxetas de visita anexas"
 
 #: text_vcard.cpp:130
 #, kde-format
 msgid "[Add this contact to the address book]"
-msgstr "[Engadir este contacto ao caderno de enderezos]"
+msgstr "[Engadir este contacto á axenda de enderezos]"
 
 #: text_vcard.cpp:136
-#, fuzzy, kde-format
-#| msgid "[Update this contact to the address book]"
+#, kde-format
 msgid "[Update this contact in the address book]"
-msgstr "[Actualizar este contacto no caderno de enderezos]"
+msgstr "[Actualizar este contacto na axenda de enderezos]"
 
 #: text_vcard.cpp:141
 #, kde-format
 msgid "[This contact is already in addressbook]"
-msgstr "[Este contacto xa está no caderno de enderezos]"
+msgstr "[Este contacto xa está na axenda de enderezos]"
 
 #: text_vcard.cpp:223
 #, kde-format
@@ -55,22 +55,22 @@ msgstr "Gardar a tarxeta de visita como…"
 #: text_vcard.cpp:241
 #, kde-format
 msgid "Add this contact to the address book."
-msgstr "Engadir este contacto ao caderno de enderezos."
+msgstr "Engadir este contacto á axenda de enderezos."
 
 #: text_vcard.cpp:241
 #, kde-format
 msgid "Update this contact to the address book."
-msgstr "Actualizar este contacto no caderno de enderezos."
+msgstr "Actualizar este contacto na axenda de enderezos."
 
 #: text_vcard.cpp:243
 #, kde-format
 msgid "Add \"%1\" to the address book."
-msgstr "Engadir «%1» ao caderno de enderezos."
+msgstr "Engadir «%1» á axenda de enderezos."
 
 #: text_vcard.cpp:243
 #, kde-format
 msgid "Update \"%1\" to the address book."
-msgstr "Actualizar «%1» no caderno de enderezos."
+msgstr "Actualizar «%1» na axenda de enderezos."
 
 #: text_vcard.cpp:267
 #, kde-format
@@ -81,26 +81,23 @@ msgstr "Gardar a tarxeta de visita"
 #, kde-format
 msgid "The vCard's primary email address is not in addressbook."
 msgstr ""
-"O enderezo de correo principal da vCard non está no caderno de enderezos."
+"O enderezo de correo principal da vCard non está na axenda de enderezos."
 
 #: updatecontactjob.cpp:43
 #, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
 msgstr ""
-"Hai dous ou máis contactos co mesmo enderezo de correo almacenado no caderno "
+"Hai dous ou máis contactos co mesmo enderezo de correo almacenado na axenda "
 "de enderezos."
 
 #: updatecontactjob.cpp:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "The vCard was updated to your address book; you can add more information "
-#| "to this entry by opening the address book."
+#, kde-format
 msgid ""
 "The vCard was updated in your address book; you can add more information to "
 "this entry by opening the address book."
 msgstr ""
-"Actualizouse o vCard no caderno de enderezos; pode engadir máis información "
-"á entrada abrindo o caderno."
+"Actualizouse o vCard na axenda de enderezos; pode engadir máis información á "
+"entrada abrindo a axenda."
 
 #: updatecontactjob.cpp:76
 #, kde-format
