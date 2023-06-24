@@ -26,7 +26,7 @@ msgstr "Configurar o complemento «Editor externo»"
 #: externalcomposer/externalcomposerconfigurewidget.cpp:21
 #, kde-format
 msgid "Use external editor instead of composer"
-msgstr "Empregar un editor externo no canto do editor propio."
+msgstr "Usar un editor externo no canto do editor propio."
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:48
 #, kde-format

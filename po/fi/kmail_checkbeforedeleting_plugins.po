@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-06-20 00:53+0000\n"
 "PO-Revision-Date: 2022-07-20 22:09+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -86,7 +86,7 @@ msgstr "Varmista ennen poistamista"
 msgid "Configure"
 msgstr "Asetukset"
 
-#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:66
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:69
 #, kde-format
 msgid ""
 "Do you want to delete this email?\n"
