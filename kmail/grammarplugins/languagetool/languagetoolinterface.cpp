@@ -90,13 +90,13 @@ bool LanguageToolInterface::checkAgain()
 {
     if (richTextEditor()) {
         if (!TextGrammarCheck::LanguageToolManager::self()->useLocalInstance()) {
-            if (KMessageBox::warningTwoActions(
-                    parentWidget(),
-                    i18n("You do not use local instance.\nYour text will send on a external web site (https://languagetool.org/).\nDo you want to continue?"),
-                    i18n("Check Grammar with LanguageTool"),
-                    KStandardGuiItem::cont(),
-                    KStandardGuiItem::cancel(),
-                    QStringLiteral("send_data_on_languagetool"))
+            if (KMessageBox::warningTwoActions(parentWidget(),
+                                               i18n("You do not use local instance.\nYour text will be sent to an external web site "
+                                                    "(https://languagetool.org/).\nDo you want to continue?"),
+                                               i18n("Check Grammar with LanguageTool"),
+                                               KStandardGuiItem::cont(),
+                                               KStandardGuiItem::cancel(),
+                                               QStringLiteral("send_data_on_languagetool"))
                 == KMessageBox::ButtonCode::SecondaryAction) {
                 return false;
             }
