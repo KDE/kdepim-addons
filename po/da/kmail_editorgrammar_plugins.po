@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
+"POT-Creation-Date: 2023-06-26 00:51+0000\n"
 "PO-Revision-Date: 2020-07-31 19:28+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -32,11 +32,11 @@ msgstr ""
 msgid "&Check Grammar (LanguageTool)"
 msgstr ""
 
-#: languagetool/languagetoolinterface.cpp:95
+#: languagetool/languagetoolinterface.cpp:94
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
-"Your text will send on a external web site (https://languagetool.org/).\n"
+"Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
 

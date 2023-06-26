@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
+"POT-Creation-Date: 2023-06-26 00:51+0000\n"
 "PO-Revision-Date: 2022-02-21 14:34+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -34,11 +34,15 @@ msgstr "Модуль Grammalecte"
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&Проверка грамматики (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:95
-#, kde-format
+#: languagetool/languagetoolinterface.cpp:94
+#, fuzzy, kde-format
+#| msgid ""
+#| "You do not use local instance.\n"
+#| "Your text will send on a external web site (https://languagetool.org/).\n"
+#| "Do you want to continue?"
 msgid ""
 "You do not use local instance.\n"
-"Your text will send on a external web site (https://languagetool.org/).\n"
+"Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
 "Используется не локальный экземпляр.\n"

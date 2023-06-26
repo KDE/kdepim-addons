@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
+"POT-Creation-Date: 2023-06-26 00:51+0000\n"
 "PO-Revision-Date: 2022-04-15 04:26+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -33,11 +33,15 @@ msgstr "Grammalecte-Modul"
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&Grammatikprüfung (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:95
-#, kde-format
+#: languagetool/languagetoolinterface.cpp:94
+#, fuzzy, kde-format
+#| msgid ""
+#| "You do not use local instance.\n"
+#| "Your text will send on a external web site (https://languagetool.org/).\n"
+#| "Do you want to continue?"
 msgid ""
 "You do not use local instance.\n"
-"Your text will send on a external web site (https://languagetool.org/).\n"
+"Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
 "Sie benutzen keine lokale Instanz.\n"
