@@ -1,24 +1,24 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# Adrian Chaves <adrian@chaves.io>, 2018, 2019, 2023.
 #
-# Adrian Chaves <adrian@chaves.io>, 2018, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-20 00:47+0000\n"
-"PO-Revision-Date: 2019-04-06 11:06+0200\n"
+"PO-Revision-Date: 2023-06-28 07:51+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
-#, fuzzy, kde-format
-#| msgid "Configure \"Automatic Add Contacts\" Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "Configurar o complemento «Engadir contactos automaticamente»"
@@ -30,28 +30,26 @@ msgid ""
 "You must create an address book before adding a contact. Do you want to "
 "create an address book?"
 msgstr ""
-"Debe crear un caderno de enderezos para poder engadir un contacto. Quere "
-"crear un caderno de enderezos?"
+"Debe crear unha axenda de enderezos para poder engadir un contacto. Quere "
+"creala?"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr "Non hai ningún caderno de enderezos dispoñíbel"
+msgstr "Non hai axenda de enderezos"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:99
-#, fuzzy, kde-format
-#| msgid "Add Address Book"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr "Engadir un caderno de enderezos"
+msgstr "Crear unha axenda de enderezos"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:103
-#, fuzzy, kde-format
-#| msgid "Add Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr "Engadir un caderno de enderezos"
+msgstr "Engadir unha axenda de enderezos"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
 #, kde-format
@@ -61,8 +59,7 @@ msgstr "Engadir contactos automaticamente"
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
 #, kde-format
 msgid "Select the addressbook in which to store contacts:"
-msgstr ""
-"Seleccione o caderno de enderezos no que queira almacenar os contactos:"
+msgstr "Seleccione a axenda de enderezos na que queira almacenar os contactos:"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
@@ -78,7 +75,7 @@ msgstr "Enviar a mensaxe como texto simple"
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
-msgstr ""
+msgstr "Enviar como HTML"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
 #, kde-format
@@ -86,8 +83,7 @@ msgid "Update SMTP server"
 msgstr "Actualizar o servidor de SMTP"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
-#, fuzzy, kde-format
-#| msgid "Check SMTP server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check SMTP server"
 msgstr "Comprobar o servidor de SMTP"
@@ -101,8 +97,7 @@ msgstr ""
 "Quere enviar a mensaxe cun SMTP distinto do definido na identidade actual?"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
-#, fuzzy, kde-format
-#| msgid "Configure \"Check Before Send Mail\" Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "Configurar o complemento «Comprobar antes de enviar»"
@@ -128,8 +123,7 @@ msgid "Check send attachment"
 msgstr "Comprobar os anexos a enviar"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Duplicated emails"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "Mensaxes duplicadas"
@@ -146,8 +140,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Check Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
 msgstr "Comprobar o anexo"
@@ -158,8 +151,7 @@ msgid "Do you want to send some attachment?"
 msgstr "Quere enviar un anexo?"
 
 #: confirm-address/confirmaddressconfiguredialog.cpp:14
-#, fuzzy, kde-format
-#| msgid "Configure \"Confirm Email Address\" Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Configurar o complemento «Confirmar o enderezo»"
@@ -199,10 +191,9 @@ msgid "Enter new domain name:"
 msgstr "Escriba o novo nome de dominio:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Do you want to send some attachment?"
+#, kde-format
 msgid "Do you want to remove this domain?"
-msgstr "Quere enviar un anexo?"
+msgstr "Quere retirar o dominio?"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:54
 #, kde-format
@@ -215,10 +206,9 @@ msgid "Enter new email address:"
 msgstr "Escriba o novo enderezo de correo electrónico:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:69
-#, fuzzy, kde-format
-#| msgid "Do you want to send the email as HTML?"
+#, kde-format
 msgid "Do you want to remove this email address?"
-msgstr "Quere enviar a mensaxe como HTML?"
+msgstr "Quere retirar o enderezo de correo?"
 
 #: confirm-address/confirmaddressdialog.cpp:26
 #, kde-format
@@ -226,8 +216,7 @@ msgid "Add Selected Emails to WhiteList"
 msgstr "Engadir os correos electrónicos seleccionados á lista branca"
 
 #: confirm-address/confirmaddressdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Confirm Addresses"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr "Confirmar o enderezo"
@@ -244,15 +233,13 @@ msgid "Emails added to white list"
 msgstr "Correos electrónicos engadidos á lista branca."
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add Value"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Value"
 msgstr "Engadir un valor"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
-#, fuzzy, kde-format
-#| msgid "Change Value"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Value"
 msgstr "Cambiar o valor"
