@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
-"PO-Revision-Date: 2023-06-24 18:26+0100\n"
+"POT-Creation-Date: 2023-06-26 00:51+0000\n"
+"PO-Revision-Date: 2023-06-26 07:00+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -32,15 +32,15 @@ msgstr "Grammalecte-kromprogramo"
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&Kontroli Gramatikon (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:95
+#: languagetool/languagetoolinterface.cpp:94
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
-"Your text will send on a external web site (https://languagetool.org/).\n"
+"Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
-"Vi ne uzas lokan petskribon.\n"
-"Via teksto sendos al ekstera retejo (https://languagetool.org/).\n"
+"Vi ne uzas lokan instancon.\n"
+"Via teksto estos sendata al ekstera retejo (https://languagetool.org/).\n"
 "Ĉu vi volas daŭrigi?"
 
 #: languagetool/languagetoolinterface.cpp:96
