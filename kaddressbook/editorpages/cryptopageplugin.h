@@ -17,10 +17,10 @@ class KeyRequester;
 class QComboBox;
 class QCheckBox;
 
-class CryptoPagePlugin : public ContactEditor::ContactEditorPagePlugin
+class CryptoPagePlugin : public Akonadi::ContactEditorPagePlugin
 {
     Q_OBJECT
-    Q_INTERFACES(ContactEditor::ContactEditorPagePlugin)
+    Q_INTERFACES(Akonadi::ContactEditorPagePlugin)
     Q_PLUGIN_METADATA(IID "org.kde.kaddressbook.CryptoPagePlugin")
 public:
     CryptoPagePlugin();

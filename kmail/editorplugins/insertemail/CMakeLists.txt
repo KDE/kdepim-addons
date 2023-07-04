@@ -15,7 +15,7 @@ target_sources(kmail_insertemaileditorplugin PRIVATE
 
 
 target_link_libraries(kmail_insertemaileditorplugin
-  KPim6::MessageComposer KF6::XmlGui KF6::I18n KPim6::AkonadiContact
+  KPim6::MessageComposer KF6::XmlGui KF6::I18n KPim6::AkonadiContactCore
 )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_insertemaileditorplugin PROPERTIES UNITY_BUILD ON)

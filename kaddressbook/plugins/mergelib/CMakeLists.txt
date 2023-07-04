@@ -62,7 +62,7 @@ target_link_libraries(kaddressbookmergelibprivate
     Qt::Network
     KF6::I18n
     KF6::Contacts
-    KPim6::ContactEditor
+    KPim6::AkonadiContactWidgets
     KF6::ConfigCore
     KF6::WidgetsAddons
     KPim6::AkonadiWidgets

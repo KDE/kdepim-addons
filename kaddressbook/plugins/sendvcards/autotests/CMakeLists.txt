@@ -8,5 +8,5 @@ if (KDEPIM_RUN_AKONADI_TEST)
 	set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
 	set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 
-        add_akonadi_isolated_test_advanced( sendvcardsjobtest.cpp "../sendvcardsjob.cpp;../kaddressbook_sendvcardsplugin_debug.cpp" "KF6::Contacts;KPim6::PimCommon;KPim6::MimeTreeParser;KF6::I18n;KPim6::AkonadiContact;KF6::Service;KF6::KIOGui")
+        add_akonadi_isolated_test_advanced( sendvcardsjobtest.cpp "../sendvcardsjob.cpp;../kaddressbook_sendvcardsplugin_debug.cpp" "KF6::Contacts;KPim6::PimCommon;KPim6::MimeTreeParser;KF6::I18n;KPim6::AkonadiContactCore;KF6::Service;KF6::KIOGui")
 endif()

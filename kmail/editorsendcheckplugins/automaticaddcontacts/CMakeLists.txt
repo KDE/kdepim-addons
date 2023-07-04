@@ -31,7 +31,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_automaticaddcontactseditorplugin
-    KPim6::MessageComposer KF6::I18n KPim6::PimCommon KPim6::ContactEditor KPim6::AkonadiCore KF6::Codecs
+    KPim6::MessageComposer KF6::I18n KPim6::PimCommon KPim6::AkonadiContactWidgets KPim6::AkonadiCore KF6::Codecs
     )
 
 if(BUILD_TESTING)

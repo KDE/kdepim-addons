@@ -176,7 +176,7 @@ public:
         }
 
         if (path.startsWith(QLatin1String("addToAddressBook"))) {
-            auto job = new ContactEditor::AddContactJob(a, nullptr);
+            auto job = new Akonadi::AddContactJob(a, nullptr);
             job->start();
         } else if (path.startsWith(QLatin1String("updateToAddressBook"))) {
             auto job = new UpdateContactJob(a.emails().constFirst(), a, nullptr);
@@ -239,7 +239,7 @@ public:
     Q_REQUIRED_RESULT bool openVCard(const KContacts::Addressee &a, const QString &vCard) const
     {
         Q_UNUSED(vCard)
-        auto view = new ContactEditor::ContactViewer(nullptr);
+        auto view = new Akonadi::ContactViewer(nullptr);
         view->setRawContact(a);
         view->setMinimumSize(300, 400);
         view->show();

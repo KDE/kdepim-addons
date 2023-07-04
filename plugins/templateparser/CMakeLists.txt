@@ -16,5 +16,5 @@ target_sources(templateparseraddressrequesterplugin PRIVATE
 
 
 target_link_libraries(templateparseraddressrequesterplugin
-    KPim6::TemplateParser KPim6::AkonadiContact
+    KPim6::TemplateParser KPim6::AkonadiContactWidgets
     )

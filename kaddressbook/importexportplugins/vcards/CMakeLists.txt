@@ -26,8 +26,8 @@ target_link_libraries(kaddressbook_importexportvcardplugin
     KF6::XmlGui
     KF6::Contacts
     KF6::JobWidgets
-    KPim6::AkonadiContact
-    KPim6::ContactEditor
+    KPim6::AkonadiContactCore
+    KPim6::AkonadiContactWidgets
     Gpgmepp
     )
     target_link_libraries(kaddressbook_importexportvcardplugin QGpgmeQt6)
