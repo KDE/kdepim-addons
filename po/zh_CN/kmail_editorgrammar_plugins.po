@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-26 00:51+0000\n"
-"PO-Revision-Date: 2023-06-17 04:11\n"
+"PO-Revision-Date: 2023-07-03 11:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -34,19 +34,12 @@ msgid "&Check Grammar (LanguageTool)"
 msgstr "检查语法 (LanguageTool, &C)"
 
 #: languagetool/languagetoolinterface.cpp:94
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not use local instance.\n"
-#| "Your text will send on a external web site (https://languagetool.org/).\n"
-#| "Do you want to continue?"
+#, kde-format
 msgid ""
 "You do not use local instance.\n"
 "Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
-"您没有使用本地实例。\n"
-"您的文本将发送到外部网站 (https://languagetool.org/)。\n"
-"您想要继续吗？"
 
 #: languagetool/languagetoolinterface.cpp:96
 #, kde-format
