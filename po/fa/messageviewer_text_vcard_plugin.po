@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: text_vcard.cpp:87
 #, fuzzy, kde-format
@@ -22,6 +22,7 @@ msgstr ""
 msgid "Attached business card"
 msgid_plural "Attached business cards"
 msgstr[0] "کارتهای تجاری پیوست‌شده"
+msgstr[1] ""
 
 #: text_vcard.cpp:130
 #, fuzzy, kde-format
