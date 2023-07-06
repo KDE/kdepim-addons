@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
@@ -57,10 +57,11 @@ msgid "This plugin shows information on a day's position in the year."
 msgstr ""
 
 #: plugins/datenums/datenums.cpp:54
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 day before the end of the year"
 msgid_plural "%1 days before the end of the year"
 msgstr[0] " %1 روز پیش از پایان سال"
+msgstr[1] ""
 
 #: plugins/datenums/datenums.cpp:59
 #, kde-format
@@ -75,12 +76,14 @@ msgstr ""
 msgid "1 day since the beginning of the year,\n"
 msgid_plural "%1 days since the beginning of the year,\n"
 msgstr[0] "%1 هفته از شروع سال"
+msgstr[1] ""
 
 #: plugins/datenums/datenums.cpp:61
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 day until the end of the year"
 msgid_plural "%1 days until the end of the year"
 msgstr[0] "%1 روز تا پایان سال"
+msgstr[1] ""
 
 #: plugins/datenums/datenums.cpp:102
 #, fuzzy, kde-format
@@ -92,10 +95,11 @@ msgstr "هفته"
 
 #: plugins/datenums/datenums.cpp:103 plugins/datenums/datenums.cpp:113
 #: plugins/datenums/datenums.cpp:118
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 week since the beginning of the year"
 msgid_plural "%1 weeks since the beginning of the year"
 msgstr[0] "%1 هفته از شروع سال"
+msgstr[1] ""
 
 #: plugins/datenums/datenums.cpp:106
 #, fuzzy, kde-format
@@ -118,12 +122,14 @@ msgstr "%1 ٪"
 msgid "1 week remaining"
 msgid_plural "%1 weeks remaining"
 msgstr[0] ""
+msgstr[1] ""
 
 #: plugins/datenums/datenums.cpp:123
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 week until the end of the year"
 msgid_plural "%1 weeks until the end of the year"
 msgstr[0] "%1 هفته تا پایان سال"
+msgstr[1] ""
 
 #: plugins/datenums/datenums.cpp:124
 #, kde-format
