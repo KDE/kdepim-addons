@@ -8,12 +8,14 @@
 #include "dkimkeyrecordwidget.h"
 #include <MessageViewer/DKIMManagerKeyWidget>
 #include <QHBoxLayout>
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(DKIMKeyRecordWidgetTest)
 
 DKIMKeyRecordWidgetTest::DKIMKeyRecordWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void DKIMKeyRecordWidgetTest::shouldHaveDefaultValues()

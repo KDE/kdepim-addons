@@ -8,13 +8,16 @@
 #include "markdownpreviewdialog.h"
 #include "markdownpreviewwidget.h"
 #include <QDialogButtonBox>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
 QTEST_MAIN(MarkdownPreviewDialogTest)
 
 MarkdownPreviewDialogTest::MarkdownPreviewDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void MarkdownPreviewDialogTest::shouldHaveDefaultValue()

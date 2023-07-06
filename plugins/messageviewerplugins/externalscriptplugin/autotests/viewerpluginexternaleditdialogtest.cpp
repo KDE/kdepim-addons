@@ -11,11 +11,13 @@
 
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QTest>
 
 ViewerPluginExternalEditDialogTest::ViewerPluginExternalEditDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ViewerPluginExternalEditDialogTest::~ViewerPluginExternalEditDialogTest() = default;

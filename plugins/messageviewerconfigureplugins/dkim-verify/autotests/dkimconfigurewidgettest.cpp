@@ -7,6 +7,7 @@
 #include "dkimconfigurewidgettest.h"
 #include "../dkimconfiguretab.h"
 #include "../dkimconfigurewidget.h"
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -15,6 +16,7 @@ QTEST_MAIN(DKIMConfigureWidgetTest)
 DKIMConfigureWidgetTest::DKIMConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void DKIMConfigureWidgetTest::shouldHaveDefaultValue()
