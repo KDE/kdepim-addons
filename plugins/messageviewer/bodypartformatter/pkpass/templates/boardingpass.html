@@ -64,11 +64,11 @@
     <table style="width:100%; border-collapse: collapse;">
         <tr>
         {% for field in pass.auxiliaryFields %}
-            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;{% if field.textAlignment == 2 %}text-align:right;{% endif %}">{{ field.label }}</td>
         {% endfor %}
         </tr><tr style="font-size: 150%;">
         {% for field in pass.auxiliaryFields %}
-            <td style="vertical-align:top; padding-top:0px;">{{ field.valueDisplayString }}</td>
+            <td style="vertical-align:top; padding-top:0px;{% if field.textAlignment == 2 %}text-align:right;{% endif %}">{{ field.valueDisplayString }}</td>
         {% endfor %}
         </tr>
     </table>
@@ -78,11 +78,11 @@
     <table style="width:100%; border-collapse: collapse;">
         <tr>
         {% for field in pass.secondaryFields %}
-            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;{% if field.textAlignment == 2 %}text-align:right;{% endif %}">{{ field.label }}</td>
         {% endfor %}
         </tr><tr style="font-size: 150%;">
         {% for field in pass.secondaryFields %}
-            <td style="vertical-align:top; padding-top:0px;">{{ field.valueDisplayString }}</td>
+            <td style="vertical-align:top; padding-top:0px;{% if field.textAlignment == 2 %}text-align:right;{% endif %}">{{ field.valueDisplayString }}</td>
         {% endfor %}
         </tr>
     </table>
