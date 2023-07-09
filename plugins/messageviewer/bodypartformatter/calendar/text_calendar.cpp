@@ -157,6 +157,14 @@ private:
     const KCalendarCore::MemoryCalendar::Ptr mCalendar;
 };
 
+static QString getSender(const MimeTreeParser::MessagePart *msgPart)
+{
+    if (auto msg = dynamic_cast<KMime::Message *>(msgPart->content()->topLevel()); msg != nullptr) {
+        return msg->sender()->asUnicodeString();
+    }
+    return {};
+}
+
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
@@ -184,12 +192,6 @@ public:
         auto memento = dynamic_cast<MemoryCalendarMemento *>(msgPart->memento());
 
         if (memento) {
-            auto const message = dynamic_cast<KMime::Message *>(msgPart->content()->topLevel());
-            if (!message) {
-                qCWarning(TEXT_CALENDAR_LOG) << "The top-level content is not a message. Cannot handle the invitation then.";
-                return false;
-            }
-
             if (memento->finished()) {
                 KMInvitationFormatterHelper helper(msgPart, memento->calendar());
                 QString source;
@@ -203,7 +205,9 @@ public:
                 }
 
                 MemoryCalendar::Ptr cl(new MemoryCalendar(QTimeZone::systemTimeZone()));
-                const QString html = KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(source, cl, &helper, message->sender()->asUnicodeString());
+
+                const auto sender = getSender(msgPart.get());
+                const QString html = KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(source, cl, &helper, sender);
 
                 if (html.isEmpty()) {
                     return false;
