@@ -16,7 +16,7 @@ public:
 
     void setText(const QString &str) override;
     QString text() const override;
-    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account) override;
+    void setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account) override;
 };
 
 class SelectImapWidgetTest : public QWidget

@@ -23,7 +23,7 @@ SelectImapFolderModel *SelectImapFolderModel::self()
     return &s_self;
 }
 
-void SelectImapFolderModel::createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName)
+void SelectImapFolderModel::createNewFolder(const KSieveCore::SieveImapAccountSettings &account, const QString &folderName)
 {
     // qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG)  << " folderName " << folderName;
     auto job = new SelectImapCreateFolderJob(this);
@@ -33,7 +33,7 @@ void SelectImapFolderModel::createNewFolder(const KSieveUi::SieveImapAccountSett
     job->start();
 }
 
-void SelectImapFolderModel::slotCreateFolderDone(const KSieveUi::SieveImapAccountSettings &account, bool success)
+void SelectImapFolderModel::slotCreateFolderDone(const KSieveCore::SieveImapAccountSettings &account, bool success)
 {
     if (success) {
         reloadFolderModel(account);
@@ -42,7 +42,7 @@ void SelectImapFolderModel::slotCreateFolderDone(const KSieveUi::SieveImapAccoun
     }
 }
 
-void SelectImapFolderModel::fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model)
+void SelectImapFolderModel::fillModel(const KSieveCore::SieveImapAccountSettings &account, QStandardItemModel *model)
 {
     auto job = new SelectImapLoadFoldersJob(model, this);
     job->setSieveImapAccountSettings(account);
@@ -58,7 +58,7 @@ void SelectImapFolderModel::slotLoaded(bool success, QStandardItemModel *model)
     }
 }
 
-void SelectImapFolderModel::reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account)
+void SelectImapFolderModel::reloadFolderModel(const KSieveCore::SieveImapAccountSettings &account)
 {
     if (account.isValid()) {
         const QString identifier = account.identifier();
@@ -74,7 +74,7 @@ void SelectImapFolderModel::reloadFolderModel(const KSieveUi::SieveImapAccountSe
     }
 }
 
-QStandardItemModel *SelectImapFolderModel::folderModel(const KSieveUi::SieveImapAccountSettings &account, bool &modelIsInitialized)
+QStandardItemModel *SelectImapFolderModel::folderModel(const KSieveCore::SieveImapAccountSettings &account, bool &modelIsInitialized)
 {
     QStandardItemModel *model = nullptr;
     if (account.isValid()) {

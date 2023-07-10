@@ -21,7 +21,7 @@ namespace
 static const char myConfigSelectImapFolderDialog[] = "SelectImapFolderDialog";
 }
 
-SelectImapFolderDialog::SelectImapFolderDialog(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
+SelectImapFolderDialog::SelectImapFolderDialog(const KSieveCore::SieveImapAccountSettings &account, QWidget *parent)
     : QDialog(parent)
     , mSelectImapFolderWidget(new SelectImapFolderWidget(account, this))
     , mNewFolder(new QPushButton(i18n("Create Folder..."), this))

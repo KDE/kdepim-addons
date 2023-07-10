@@ -21,7 +21,7 @@ SelectImapFolderWidgetTest::~SelectImapFolderWidgetTest() = default;
 
 void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
 {
-    KSieveUi::SieveImapAccountSettings account;
+    KSieveCore::SieveImapAccountSettings account;
     SelectImapFolderWidget w(account);
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);

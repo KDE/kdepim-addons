@@ -49,7 +49,7 @@ QString SelectImapWidget::text() const
     return mLineEdit->text();
 }
 
-void SelectImapWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
+void SelectImapWidget::setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account)
 {
     mAccount = account;
     if (mAccount.isValid()) {

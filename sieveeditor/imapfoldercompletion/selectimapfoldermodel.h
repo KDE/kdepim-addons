@@ -9,7 +9,7 @@
 #include <QHash>
 #include <QObject>
 class QStandardItemModel;
-namespace KSieveUi
+namespace KSieveCore
 {
 class SieveImapAccountSettings;
 }
@@ -22,18 +22,18 @@ public:
 
     static SelectImapFolderModel *self();
 
-    QStandardItemModel *folderModel(const KSieveUi::SieveImapAccountSettings &account, bool &modelIsInitialized);
+    QStandardItemModel *folderModel(const KSieveCore::SieveImapAccountSettings &account, bool &modelIsInitialized);
 
-    void reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account);
+    void reloadFolderModel(const KSieveCore::SieveImapAccountSettings &account);
 
-    void createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName);
+    void createNewFolder(const KSieveCore::SieveImapAccountSettings &account, const QString &folderName);
 
 Q_SIGNALS:
     void modelLoaded(QStandardItemModel *model, bool success);
 
 private:
     void slotLoaded(bool success, QStandardItemModel *model);
-    void slotCreateFolderDone(const KSieveUi::SieveImapAccountSettings &account, bool success);
-    void fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model);
+    void slotCreateFolderDone(const KSieveCore::SieveImapAccountSettings &account, bool success);
+    void fillModel(const KSieveCore::SieveImapAccountSettings &account, QStandardItemModel *model);
     QHash<QString, QStandardItemModel *> mHashFolderModel;
 };

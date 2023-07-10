@@ -7,7 +7,7 @@
 #pragma once
 
 #include <QDialog>
-namespace KSieveUi
+namespace KSieveCore
 {
 class SieveImapAccountSettings;
 }
@@ -16,7 +16,7 @@ class SelectImapFolderDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit SelectImapFolderDialog(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = nullptr);
+    explicit SelectImapFolderDialog(const KSieveCore::SieveImapAccountSettings &account, QWidget *parent = nullptr);
     ~SelectImapFolderDialog() override;
 
     Q_REQUIRED_RESULT QString selectedFolderName() const;

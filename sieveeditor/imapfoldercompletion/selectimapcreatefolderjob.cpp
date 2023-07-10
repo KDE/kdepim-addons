@@ -67,7 +67,7 @@ void SelectImapCreateFolderJob::createFolderRequested()
     job->start();
 }
 
-void SelectImapCreateFolderJob::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
+void SelectImapCreateFolderJob::setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account)
 {
 #if 0
     qDebug() << " void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)" << account.serverName()

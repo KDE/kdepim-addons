@@ -9,7 +9,7 @@
 #include <QObject>
 class KDescendantsProxyModel;
 class QAbstractProxyModel;
-namespace KSieveUi
+namespace KSieveCore
 {
 class SieveImapAccountSettings;
 }
@@ -17,7 +17,7 @@ class SelectImapLineEditCompleterModel : public QObject
 {
     Q_OBJECT
 public:
-    explicit SelectImapLineEditCompleterModel(const KSieveUi::SieveImapAccountSettings &account, QObject *parent = nullptr);
+    explicit SelectImapLineEditCompleterModel(const KSieveCore::SieveImapAccountSettings &account, QObject *parent = nullptr);
     ~SelectImapLineEditCompleterModel() override;
 
     Q_REQUIRED_RESULT QAbstractProxyModel *completerModel() const;

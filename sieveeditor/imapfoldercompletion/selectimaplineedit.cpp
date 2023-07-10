@@ -16,7 +16,7 @@ SelectImapLineEdit::SelectImapLineEdit(QWidget *parent)
 
 SelectImapLineEdit::~SelectImapLineEdit() = default;
 
-void SelectImapLineEdit::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
+void SelectImapLineEdit::setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account)
 {
     // TODO FIXME
 #ifdef COMPLETION_LINE_EDIT

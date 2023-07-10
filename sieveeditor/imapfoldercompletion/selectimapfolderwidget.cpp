@@ -21,7 +21,7 @@
 #include <KLocalizedString>
 #include <QToolButton>
 
-SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
+SelectImapFolderWidget::SelectImapFolderWidget(const KSieveCore::SieveImapAccountSettings &account, QWidget *parent)
     : QWidget(parent)
     , mAccount(account)
     , mSearchLineEdit(new QLineEdit(this))

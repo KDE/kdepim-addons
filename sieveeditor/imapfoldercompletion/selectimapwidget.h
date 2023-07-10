@@ -6,8 +6,8 @@
 
 #pragma once
 
+#include <KSieveCore/SieveImapAccountSettings>
 #include <KSieveUi/AbstractMoveImapFolderWidget>
-#include <KSieveUi/SieveImapAccountSettings>
 #include <QPointer>
 class QWidget;
 class QToolButton;
@@ -23,12 +23,12 @@ public:
     void setText(const QString &str) override;
     Q_REQUIRED_RESULT QString text() const override;
 
-    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account) override;
+    void setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account) override;
 
 private:
     void slotOpenSelectImapFolder();
     SelectImapFolderDialog *selectFolderDialog();
-    KSieveUi::SieveImapAccountSettings mAccount;
+    KSieveCore::SieveImapAccountSettings mAccount;
     QPointer<SelectImapFolderDialog> mSelectImapFolderDialog;
     QToolButton *const mToolButton;
     SelectImapLineEdit *const mLineEdit;

@@ -9,7 +9,7 @@
 #include <QTreeView>
 #include <QWidget>
 
-#include <KSieveUi/SieveImapAccountSettings>
+#include <KSieveCore/SieveImapAccountSettings>
 
 class QStandardItemModel;
 class QLineEdit;
@@ -20,7 +20,7 @@ class SelectImapFolderWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = nullptr);
+    explicit SelectImapFolderWidget(const KSieveCore::SieveImapAccountSettings &account, QWidget *parent = nullptr);
     ~SelectImapFolderWidget() override;
 
     Q_REQUIRED_RESULT QString selectedFolderName() const;
@@ -37,7 +37,7 @@ private:
     void slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous);
     void slotRefreshImap();
 
-    const KSieveUi::SieveImapAccountSettings mAccount;
+    const KSieveCore::SieveImapAccountSettings mAccount;
     QLineEdit *const mSearchLineEdit;
     SelectImapFolderTreeView *const mTreeView;
     QStandardItemModel *mModel = nullptr;

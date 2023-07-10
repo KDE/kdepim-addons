@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <KSieveUi/SieveImapAccountSettings>
+#include <KSieveCore/SieveImapAccountSettings>
 #include <QObject>
 class KJob;
 namespace KIMAP
@@ -20,19 +20,19 @@ public:
     explicit SelectImapCreateFolderJob(QObject *parent = nullptr);
     ~SelectImapCreateFolderJob() override;
     void start();
-    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
+    void setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account);
 
     void setNewFolderName(const QString &newFolderName);
 
 Q_SIGNALS:
-    void finished(const KSieveUi::SieveImapAccountSettings &account, bool success);
+    void finished(const KSieveCore::SieveImapAccountSettings &account, bool success);
 
 private:
     void createFolderRequested();
     void slotCreateFolderDone(KJob *job);
     void slotLoginDone(KJob *job);
     void failed();
-    KSieveUi::SieveImapAccountSettings mSieveImapAccount;
+    KSieveCore::SieveImapAccountSettings mSieveImapAccount;
     QString mNewFolderName;
     KIMAP::Session *mSession = nullptr;
 };

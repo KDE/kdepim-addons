@@ -7,7 +7,7 @@
 #pragma once
 
 #include <QLineEdit>
-namespace KSieveUi
+namespace KSieveCore
 {
 class SieveImapAccountSettings;
 }
@@ -19,7 +19,7 @@ public:
     explicit SelectImapLineEdit(QWidget *parent = nullptr);
     ~SelectImapLineEdit() override;
 
-    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
+    void setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account);
 
 private:
     QCompleter *mCompleter = nullptr;

@@ -22,7 +22,7 @@ SelectImapFolderDialogTest::~SelectImapFolderDialogTest() = default;
 
 void SelectImapFolderDialogTest::shouldHaveDefaultValue()
 {
-    KSieveUi::SieveImapAccountSettings account;
+    KSieveCore::SieveImapAccountSettings account;
     SelectImapFolderDialog w(account);
 
     auto mSelectImapFolderWidget = w.findChild<SelectImapFolderWidget *>(QStringLiteral("selectimapfolderwidget"));

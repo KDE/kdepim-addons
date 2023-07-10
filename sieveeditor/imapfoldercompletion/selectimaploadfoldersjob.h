@@ -7,7 +7,7 @@
 #pragma once
 
 #include <KIMAP/ListJob>
-#include <KSieveUi/SieveImapAccountSettings>
+#include <KSieveCore/SieveImapAccountSettings>
 #include <QObject>
 namespace KIMAP
 {
@@ -30,7 +30,7 @@ public:
 
     void start();
 
-    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
+    void setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account);
 
 Q_SIGNALS:
     void finished(bool success, QStandardItemModel *model);
@@ -41,7 +41,7 @@ private:
     void slotReloadRequested();
     void slotFullListingDone(KJob *job);
 
-    KSieveUi::SieveImapAccountSettings mSieveImapAccount;
+    KSieveCore::SieveImapAccountSettings mSieveImapAccount;
     QMap<QString, QStandardItem *> mItemsMap;
     KIMAP::Session *mSession = nullptr;
     QStandardItemModel *const mModel;

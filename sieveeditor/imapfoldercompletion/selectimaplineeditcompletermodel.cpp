@@ -10,7 +10,7 @@
 #include <KDescendantsProxyModel>
 #include <QStandardItemModel>
 
-SelectImapLineEditCompleterModel::SelectImapLineEditCompleterModel(const KSieveUi::SieveImapAccountSettings &account, QObject *parent)
+SelectImapLineEditCompleterModel::SelectImapLineEditCompleterModel(const KSieveCore::SieveImapAccountSettings &account, QObject *parent)
     : QObject(parent)
     , mFlatProxy(new KDescendantsProxyModel(this))
 {
