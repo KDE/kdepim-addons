@@ -29,7 +29,7 @@ Hebrew::Hebrew(QObject *parent, const QVariantList &args)
     KConfig config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
 
     KConfigGroup group(&config, "Hebrew Calendar Plugin");
-    areWeInIsrael = group.readEntry("UseIsraelSettings", QLocale::countryToString(QLocale().country()) == QLatin1String(".il"));
+    areWeInIsrael = group.readEntry("UseIsraelSettings", QLocale::territoryToString(QLocale().territory()) == QLatin1String(".il"));
     showParsha = group.readEntry("ShowParsha", true);
     showChol = group.readEntry("ShowChol_HaMoed", true);
     showOmer = group.readEntry("ShowOmer", true);
