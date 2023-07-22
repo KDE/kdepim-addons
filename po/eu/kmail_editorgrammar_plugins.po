@@ -1,16 +1,16 @@
 # Translation for kmail_editorgrammar_plugins.po to Euskara/Basque (eu).
-# Copyright (C) 2022 This file is copyright:
+# Copyright (C) 2022-2023 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-26 00:51+0000\n"
-"PO-Revision-Date: 2022-11-17 07:59+0100\n"
+"PO-Revision-Date: 2023-07-21 11:06+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: grammalecte/grammalecteinterface.cpp:78
 #, kde-format
@@ -36,17 +36,13 @@ msgid "&Check Grammar (LanguageTool)"
 msgstr "A&ztertu gramatika (LanguageTool)"
 
 #: languagetool/languagetoolinterface.cpp:94
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not use local instance.\n"
-#| "Your text will send on a external web site (https://languagetool.org/).\n"
-#| "Do you want to continue?"
+#, kde-format
 msgid ""
 "You do not use local instance.\n"
 "Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
-"Ez duzu erabiltzen instantzia lokalik.\n"
+"Ez duzu instantzia lokala erabiltzen.\n"
 "Zure testua kanpoko web leku batera bidaliko da (https://languagetool."
 "org/).\n"
 "Jarraitu nahi duzu?"
