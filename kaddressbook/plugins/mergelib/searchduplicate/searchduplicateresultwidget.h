@@ -67,4 +67,4 @@ private:
     int mIndexListContact = 0;
 };
 }
-Q_DECLARE_TYPEINFO(KABMergeContacts::MergeConflictResult, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(KABMergeContacts::MergeConflictResult, Q_RELOCATABLE_TYPE);

@@ -53,5 +53,5 @@ private:
     QString mPattern;
     RuleType mRuleType = RuleType::Unknown;
 };
-Q_DECLARE_TYPEINFO(ConfirmBeforeDeletingRule, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(ConfirmBeforeDeletingRule, Q_RELOCATABLE_TYPE);
 KMAILCONFIRMBEFOREDELETING_EXPORT QDebug operator<<(QDebug d, const ConfirmBeforeDeletingRule &t);

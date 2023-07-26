@@ -46,5 +46,5 @@ private:
     QString mFileName;
     bool mIsReadOnly = false;
 };
-Q_DECLARE_TYPEINFO(ViewerPluginExternalScriptInfo, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(ViewerPluginExternalScriptInfo, Q_RELOCATABLE_TYPE);
 Q_DECLARE_METATYPE(ViewerPluginExternalScriptInfo)
