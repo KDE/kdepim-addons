@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# Shinjo Park <kde@peremen.name>, 2019, 2020, 2021.
+# Shinjo Park <kde@peremen.name>, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-26 00:51+0000\n"
-"PO-Revision-Date: 2021-11-14 19:25+0100\n"
+"PO-Revision-Date: 2023-07-23 00:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: grammalecte/grammalecteinterface.cpp:78
 #, kde-format
@@ -33,11 +33,7 @@ msgid "&Check Grammar (LanguageTool)"
 msgstr "문법 검사기(LanguageTool)(&C)"
 
 #: languagetool/languagetoolinterface.cpp:94
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not use local instance.\n"
-#| "Your text will send on a external web site (https://languagetool.org/).\n"
-#| "Do you want to continue?"
+#, kde-format
 msgid ""
 "You do not use local instance.\n"
 "Your text will be sent to an external web site (https://languagetool.org/).\n"
