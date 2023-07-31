@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2020 Jonah Brüchert <jbb@kaidan.im>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+[package]
+name = "angelfish-adblock"
+version = "0.1.0"
+authors = ["Jonah Brüchert <jbb.prv@gmx.de>"]
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+cxx-build = "1.0"
+
+[dependencies]
+adblock = {version = "0.7", default-features = false, features = [ "full-regex-handling", "object-pooling", "embedded-domain-resolver" ]}
+cxx = "1.0"
