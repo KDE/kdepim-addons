@@ -135,6 +135,16 @@ find_package(KPim6Itinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF6TextTemplate CONFIG REQUIRED)
 
+# For adblocker
+find_package(Corrosion)
+set_package_properties(Corrosion PROPERTIES
+    TYPE RECOMMENDED
+    PURPOSE "Required to build the builtin adblocker"
+    DESCRIPTION "CMake scripts to seamlessly build and link to targets using cargo"
+    URL https://github.com/corrosion-rs/corrosion
+)
+
+
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
