@@ -3,5 +3,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"webengineurlinterceptor\")
 add_subdirectory(donottrack)
 if (Corrosion_FOUND)
-    add_subdirectory(addblock)
+    add_subdirectory(adblock)
 endif()
