@@ -34,3 +34,5 @@ void AdblockPluginUrlInterceptor::showConfigureDialog(QWidget *parent)
 }
 
 #include "adblockpluginurlinterceptor.moc"
+
+#include "moc_adblockpluginurlinterceptor.cpp"

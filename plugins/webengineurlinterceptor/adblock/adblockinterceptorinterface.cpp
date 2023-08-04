@@ -67,3 +67,5 @@ void AdblockInterceptorInterface::setWebEngineView(QWebEngineView *webEngineView
 {
     mWebEngineView = webEngineView;
 }
+
+#include "moc_adblockinterceptorinterface.cpp"
