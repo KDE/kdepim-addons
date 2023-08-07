@@ -17,9 +17,10 @@
 #include <KTextTemplate/MetaType>
 #include <KTextTemplate/Template>
 
-#include <Prison/Prison>
+#include <Prison/Barcode>
 
 #include <QGuiApplication>
+#include <QImage>
 #include <QUrl>
 
 static bool isPkPassContent(KMime::Content *content)
@@ -96,19 +97,19 @@ public:
         const auto barcodes = pass->barcodes();
         if (!barcodes.isEmpty()) {
             const auto barcode = barcodes.at(0);
-            std::unique_ptr<Prison::AbstractBarcode> code;
+            std::optional<Prison::Barcode> code;
             switch (barcode.format()) {
             case KPkPass::Barcode::QR:
-                code.reset(Prison::createBarcode(Prison::QRCode));
+                code = Prison::Barcode::create(Prison::QRCode);
                 break;
             case KPkPass::Barcode::Aztec:
-                code.reset(Prison::createBarcode(Prison::Aztec));
+                code = Prison::Barcode::create(Prison::Aztec);
                 break;
             case KPkPass::Barcode::PDF417:
-                code.reset(Prison::createBarcode(Prison::PDF417));
+                code = Prison::Barcode::create(Prison::PDF417);
                 break;
             case KPkPass::Barcode::Code128:
-                code.reset(Prison::createBarcode(Prison::Code128));
+                code = Prison::Barcode::create(Prison::Code128);
                 break;
             default:
                 break;

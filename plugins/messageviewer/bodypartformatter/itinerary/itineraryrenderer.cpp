@@ -24,7 +24,7 @@
 #include <KTextTemplate/Engine>
 #include <KTextTemplate/MetaType>
 #include <KTextTemplate/Template>
-#include <Prison/Prison>
+#include <Prison/Barcode>
 
 #include <QGuiApplication>
 #include <QPalette>
@@ -110,23 +110,22 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
 
             // generate ticket barcodes
             const auto ticket = JsonLd::convert<Reservation>(r).reservedTicket().value<Ticket>();
-            std::unique_ptr<Prison::AbstractBarcode> barcode;
+            std::optional<Prison::Barcode> barcode;
             switch (ticket.ticketTokenType()) {
             case Ticket::AztecCode:
-                barcode.reset(Prison::createBarcode(Prison::Aztec));
+                barcode = Prison::Barcode::create(Prison::Aztec);
                 break;
             case Ticket::QRCode:
-                barcode.reset(Prison::createBarcode(Prison::QRCode));
+                barcode = Prison::Barcode::create(Prison::QRCode);
                 break;
             case Ticket::DataMatrix:
-                barcode.reset(Prison::createBarcode(Prison::DataMatrix));
+                barcode = Prison::Barcode::create(Prison::DataMatrix);
                 break;
             case Ticket::Code128:
-                barcode.reset(Prison::createBarcode(Prison::Code128));
+                barcode = Prison::Barcode::create(Prison::Code128);
                 break;
             case Ticket::PDF417:
-                // waiting for https://invent.kde.org/frameworks/prison/-/merge_requests/6
-                // barcode.reset(Prison::createBarcode(Prison::PDF417));
+                barcode = Prison::Barcode::create(Prison::PDF417);
                 break;
             default:
                 break;
