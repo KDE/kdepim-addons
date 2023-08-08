@@ -6,6 +6,8 @@ target_sources(webengineviewer_adblockplugin PRIVATE
     adblockpluginurlinterceptor.cpp
     adblockinterceptorinterface.h
     adblockpluginurlinterceptor.h
+    adblockmanager.h
+    adblockmanager.cpp
     )
 
 ecm_qt_declare_logging_category(webengineviewer_adblockplugin HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor
