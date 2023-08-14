@@ -23,7 +23,7 @@ add_custom_target(adblock
 corrosion_import_crate(MANIFEST_PATH ${CMAKE_CURRENT_SOURCE_DIR}/rs/adblock/Cargo.toml)
 
 target_include_directories(webengineviewer_adblockplugin PRIVATE
-    ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblockplugin/src/)
+    ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/)
 
 
 ecm_qt_declare_logging_category(webengineviewer_adblockplugin HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor
@@ -32,8 +32,13 @@ ecm_qt_declare_logging_category(webengineviewer_adblockplugin HEADER adblockinte
     EXPORT KDEPIMADDONS
     )
 
+kconfig_add_kcfg_files(webengineviewer_adblockplugin
+    settings/globalsettings_webengineurlinterceptoradblock.kcfgc
+    )
+
 target_link_libraries(webengineviewer_adblockplugin
     KPim6::MessageViewer
+    KF6::I18n
     Qt::WebEngineWidgets
     KPim6::WebEngineViewer
     webengineviewer-adblock
