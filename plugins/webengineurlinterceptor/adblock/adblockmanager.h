@@ -16,4 +16,10 @@ public:
     ~AdblockManager() override;
 
     static AdblockManager *self();
+
+Q_SIGNALS:
+    void enabledChanged(bool enabled);
+
+private:
+    void reloadConfig();
 };

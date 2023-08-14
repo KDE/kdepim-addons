@@ -5,10 +5,12 @@
 */
 
 #include "adblockmanager.h"
+#include "globalsettings_webengineurlinterceptoradblock.h"
 
 AdblockManager::AdblockManager(QObject *parent)
     : QObject{parent}
 {
+    reloadConfig();
 }
 
 AdblockManager::~AdblockManager() = default;
@@ -17,4 +19,11 @@ AdblockManager *AdblockManager::self()
 {
     static AdblockManager s_self;
     return &s_self;
+}
+
+void AdblockManager::reloadConfig()
+{
+    // loadSubscriptions();
+    const bool enabled = AdBlockSettings::self()->adBlockEnabled();
+    Q_EMIT enabledChanged(enabled);
 }
