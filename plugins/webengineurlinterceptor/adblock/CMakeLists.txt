@@ -32,8 +32,6 @@ ecm_qt_declare_logging_category(webengineviewer_adblockplugin HEADER adblockinte
     EXPORT KDEPIMADDONS
     )
 
-
-
 target_link_libraries(webengineviewer_adblockplugin
     KPim6::MessageViewer
     Qt::WebEngineWidgets
