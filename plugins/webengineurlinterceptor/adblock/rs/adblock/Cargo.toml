@@ -1,11 +1,12 @@
 # SPDX-FileCopyrightText: 2020 Jonah Brüchert <jbb@kaidan.im>
+# SPDX-FileCopyrightText: 2023 Laurent Montel <montel@kde.org>
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 [package]
-name = "angelfish-adblock"
+name = "webengineviewer-adblock"
 version = "0.1.0"
-authors = ["Jonah Brüchert <jbb.prv@gmx.de>"]
+authors = ["Laurent Montel <montel@kde.org>"]
 edition = "2018"
 
 [lib]
