@@ -5,11 +5,16 @@
 */
 #pragma once
 
+#include "adblockfilter.h"
 #include <QAbstractListModel>
-
 class AdblockFilterListsModel : public QAbstractListModel
 {
 public:
     explicit AdblockFilterListsModel(QObject *parent = nullptr);
     ~AdblockFilterListsModel() override;
+    Q_REQUIRED_RESULT QList<AdblockFilter> adblockFilter() const;
+    void setAdblockFilter(const QList<AdblockFilter> &newAdblockFilter);
+
+private:
+    QList<AdblockFilter> mAdblockFilter;
 };

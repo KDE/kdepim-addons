@@ -12,3 +12,13 @@ AdblockFilterListsModel::AdblockFilterListsModel(QObject *parent)
 }
 
 AdblockFilterListsModel::~AdblockFilterListsModel() = default;
+
+QList<AdblockFilter> AdblockFilterListsModel::adblockFilter() const
+{
+    return mAdblockFilter;
+}
+
+void AdblockFilterListsModel::setAdblockFilter(const QList<AdblockFilter> &newAdblockFilter)
+{
+    mAdblockFilter = newAdblockFilter;
+}
