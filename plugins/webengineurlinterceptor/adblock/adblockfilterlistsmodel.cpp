@@ -36,6 +36,10 @@ QVariant AdblockFilterListsModel::data(const QModelIndex &index, int role) const
     if (index.row() < 0 || index.row() >= mAdblockFilter.count()) {
         return {};
     }
-    // TODO
+    const AdblockFilter &adblockFilter = mAdblockFilter.at(index.row());
+    switch (role) {
+    case UrlRole:
+        return adblockFilter.url();
+    }
     return {};
 }
