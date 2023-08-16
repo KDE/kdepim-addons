@@ -10,10 +10,19 @@
 class AdblockFilterListsModel : public QAbstractListModel
 {
 public:
+    enum AdblockFilterRoles {
+        UrlRole,
+        LastColumn = UrlRole,
+    };
+    Q_ENUM(AdblockFilterRoles)
+
     explicit AdblockFilterListsModel(QObject *parent = nullptr);
     ~AdblockFilterListsModel() override;
     Q_REQUIRED_RESULT QList<AdblockFilter> adblockFilter() const;
     void setAdblockFilter(const QList<AdblockFilter> &newAdblockFilter);
+
+    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
 
 private:
     QList<AdblockFilter> mAdblockFilter;

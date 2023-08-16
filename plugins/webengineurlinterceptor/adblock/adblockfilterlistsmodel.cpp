@@ -22,3 +22,20 @@ void AdblockFilterListsModel::setAdblockFilter(const QList<AdblockFilter> &newAd
 {
     mAdblockFilter = newAdblockFilter;
 }
+
+int AdblockFilterListsModel::rowCount(const QModelIndex &parent) const
+{
+    if (parent.isValid()) {
+        return 0; // flat model
+    }
+    return mAdblockFilter.count();
+}
+
+QVariant AdblockFilterListsModel::data(const QModelIndex &index, int role) const
+{
+    if (index.row() < 0 || index.row() >= mAdblockFilter.count()) {
+        return {};
+    }
+    // TODO
+    return {};
+}
