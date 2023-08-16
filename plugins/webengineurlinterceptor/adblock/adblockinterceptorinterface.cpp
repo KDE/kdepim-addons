@@ -5,6 +5,7 @@
 */
 
 #include "adblockinterceptorinterface.h"
+#include "globalsettings_webengineurlinterceptoradblock.h"
 #include <QAction>
 #include <QPointer>
 #include <QWebEngineView>
@@ -18,13 +19,12 @@ AdblockInterceptorInterface::~AdblockInterceptorInterface() = default;
 
 bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
+    if (!AdBlockSettings::self()->adBlockEnabled()) {
+        return false;
+    }
+    // return mAdblockManager->interceptRequest(info);
+    // TODO
     return false;
-    /*
-        if (!mAdblockManager->isEnabled()) {
-            return false;
-        }
-        return mAdblockManager->interceptRequest(info);
-    */
 }
 
 QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const

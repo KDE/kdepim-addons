@@ -9,11 +9,6 @@
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 #include <WebEngineViewer/WebHitTestResult>
 class QWebEngineView;
-namespace AdBlock
-{
-class AdblockManager;
-struct AdBlockResult;
-}
 class AdblockInterceptorInterface : public WebEngineViewer::NetworkPluginUrlInterceptorInterface
 {
     Q_OBJECT
