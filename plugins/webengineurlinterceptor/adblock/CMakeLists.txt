@@ -12,6 +12,10 @@ target_sources(webengineviewer_adblockplugin PRIVATE
     adblockfilterlistsmodel.cpp
     adblockfilter.h
     adblockfilter.cpp
+    adblockpluginurlinterceptorconfiguredialog.cpp
+    adblockpluginurlinterceptorconfiguredialog.h
+    adblockpluginurlinterceptorconfigurewidget.cpp
+    adblockpluginurlinterceptorconfigurewidget.h
     )
 
 add_custom_target(adblock
