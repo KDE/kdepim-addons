@@ -51,3 +51,7 @@ target_link_libraries(webengineviewer_adblockplugin
     KPim6::WebEngineViewer
     webengineviewer-adblock
     )
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
