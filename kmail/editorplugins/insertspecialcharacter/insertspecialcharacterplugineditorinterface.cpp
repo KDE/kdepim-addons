@@ -7,7 +7,6 @@
 #include "insertspecialcharacterplugineditorinterface.h"
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <KPIMTextEdit/RichTextEditor>
 #include <QAction>
 
 InsertSpecialCharacterPluginEditorInterface::InsertSpecialCharacterPluginEditorInterface(QObject *parent)

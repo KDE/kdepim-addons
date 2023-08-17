@@ -8,8 +8,8 @@
 #include "selectmaildialog.h"
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <KPIMTextEdit/RichTextEditor>
 #include <QAction>
+#include <TextCustomEditor/RichTextEditor>
 
 InsertEmailPluginEditorInterface::InsertEmailPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

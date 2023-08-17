@@ -18,6 +18,16 @@ QList<AdblockFilter> AdblockFilterListsModel::adblockFilter() const
     return mAdblockFilter;
 }
 
+void AdblockFilterListsModel::removeList(const QString &identifier)
+{
+    // TODO
+}
+
+void AdblockFilterListsModel::insertList(const AdblockFilter &filter)
+{
+    // TODO
+}
+
 void AdblockFilterListsModel::setAdblockFilter(const QList<AdblockFilter> &newAdblockFilter)
 {
     mAdblockFilter = newAdblockFilter;

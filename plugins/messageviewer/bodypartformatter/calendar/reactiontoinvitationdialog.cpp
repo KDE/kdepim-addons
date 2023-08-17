@@ -7,8 +7,6 @@
 #include "reactiontoinvitationdialog.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KPIMTextEdit/PlainTextEditor>
-#include <KPIMTextEdit/PlainTextEditorWidget>
 #include <KSharedConfig>
 #include <KWindowConfig>
 #include <QDialogButtonBox>
@@ -16,13 +14,15 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextCustomEditor/PlainTextEditor>
+#include <TextCustomEditor/PlainTextEditorWidget>
 namespace
 {
 static const char myConfigReactionToInvitationDialog[] = "ReactionToInvitationDialog";
 }
 ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     : QDialog(parent)
-    , mPlainTextEditor(new KPIMTextEdit::PlainTextEditorWidget(this))
+    , mPlainTextEditor(new TextCustomEditor::PlainTextEditorWidget(this))
 {
     auto layout = new QVBoxLayout(this);
     layout->setObjectName(QStringLiteral("layout"));
@@ -33,7 +33,7 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
 
     mPlainTextEditor->setObjectName(QStringLiteral("plaintexteditor"));
     layout->addWidget(mPlainTextEditor);
-    connect(mPlainTextEditor->editor(), &KPIMTextEdit::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);
+    connect(mPlainTextEditor->editor(), &TextCustomEditor::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
@@ -46,7 +46,7 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
 
 ReactionToInvitationDialog::~ReactionToInvitationDialog()
 {
-    disconnect(mPlainTextEditor->editor(), &KPIMTextEdit::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);
+    disconnect(mPlainTextEditor->editor(), &TextCustomEditor::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);
     writeConfig();
 }
 

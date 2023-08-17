@@ -8,9 +8,9 @@
 #include "quicktextmenu.h"
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <KPIMTextEdit/RichTextEditor>
 #include <MessageComposer/ConvertSnippetVariablesJob>
 #include <MessageComposer/PluginComposerInterface>
+#include <TextCustomEditor/RichTextEditor>
 
 #include <QAction>
 #include <QDebug>

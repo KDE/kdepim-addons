@@ -6,11 +6,11 @@
 
 #include "reactiontoinvitationdialogtest.h"
 #include "../calendar/reactiontoinvitationdialog.h"
-#include <KPIMTextEdit/PlainTextEditorWidget>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QStandardPaths>
 #include <QTest>
+#include <TextCustomEditor/PlainTextEditorWidget>
 
 ReactionToInvitationDialogTest::ReactionToInvitationDialogTest(QObject *parent)
     : QObject(parent)
@@ -27,7 +27,7 @@ void ReactionToInvitationDialogTest::shouldHaveDefaultValue()
     auto label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
 
-    auto mPlainTextEditor = w.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("plaintexteditor"));
+    auto mPlainTextEditor = w.findChild<TextCustomEditor::PlainTextEditorWidget *>(QStringLiteral("plaintexteditor"));
     QVERIFY(mPlainTextEditor);
     QVERIFY(mPlainTextEditor->toPlainText().isEmpty());
 

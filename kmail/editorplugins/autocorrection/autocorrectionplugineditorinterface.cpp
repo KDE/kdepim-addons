@@ -8,8 +8,8 @@
 #include <KActionCollection>
 #include <KActionMenu>
 #include <KLocalizedString>
-#include <KPIMTextEdit/RichTextEditor>
 #include <QAction>
+#include <TextCustomEditor/RichTextEditor>
 
 AutoCorrectionPluginEditorInterface::AutoCorrectionPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

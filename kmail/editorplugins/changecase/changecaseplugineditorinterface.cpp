@@ -8,9 +8,9 @@
 #include "changecaseeditorplugin_debug.h"
 #include <KActionCollection>
 #include <KPIMTextEdit/EditorUtil>
-#include <KPIMTextEdit/RichTextEditor>
 #include <PimCommon/KActionMenuChangeCase>
 #include <QAction>
+#include <TextCustomEditor/RichTextEditor>
 
 ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

@@ -10,8 +10,8 @@
 #include <KActionCollection>
 #include <KActionMenu>
 #include <KLocalizedString>
-#include <KPIMTextEdit/RichTextEditor>
 #include <PimCommon/KActionMenuChangeCase>
+#include <TextCustomEditor/RichTextEditor>
 
 #include <QAction>
 #include <QMenu>

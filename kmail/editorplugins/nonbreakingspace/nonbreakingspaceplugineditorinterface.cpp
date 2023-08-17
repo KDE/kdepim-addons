@@ -7,8 +7,8 @@
 #include "nonbreakingspaceplugineditorinterface.h"
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <KPIMTextEdit/RichTextEditor>
 #include <QAction>
+#include <TextCustomEditor/RichTextEditor>
 
 NonBreakingSpacePluginEditorInterface::NonBreakingSpacePluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

@@ -24,6 +24,9 @@ public:
     Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
 
+    void insertList(const AdblockFilter &filter);
+    void removeList(const QString &identifier);
+
 private:
     QList<AdblockFilter> mAdblockFilter;
 };

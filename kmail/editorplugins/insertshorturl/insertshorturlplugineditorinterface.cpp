@@ -12,10 +12,10 @@
 #include <KActionCollection>
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KPIMTextEdit/RichTextEditor>
 #include <KSharedConfig>
 #include <PimCommon/NetworkManager>
 #include <QAction>
+#include <TextCustomEditor/RichTextEditor>
 
 InsertShorturlPluginEditorInterface::InsertShorturlPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

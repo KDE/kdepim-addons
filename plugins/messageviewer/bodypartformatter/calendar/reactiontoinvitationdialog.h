@@ -7,7 +7,7 @@
 #pragma once
 
 #include <QDialog>
-namespace KPIMTextEdit
+namespace TextCustomEditor
 {
 class PlainTextEditorWidget;
 }
@@ -25,6 +25,6 @@ private:
     void slotTextChanged();
     void writeConfig();
     void readConfig();
-    KPIMTextEdit::PlainTextEditorWidget *const mPlainTextEditor;
+    TextCustomEditor::PlainTextEditorWidget *const mPlainTextEditor;
     QPushButton *mOkButton = nullptr;
 };
