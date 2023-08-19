@@ -18,6 +18,10 @@ target_sources(webengineviewer_adblockplugin PRIVATE
     adblockpluginurlinterceptorconfigurewidget.h
     adblockfilterlistsview.h
     adblockfilterlistsview.cpp
+    adblockfilterdialog.h
+    adblockfilterdialog.cpp
+    adblockfilterwidget.h
+    adblockfilterwidget.cpp
     )
 
 add_custom_target(adblock
@@ -31,7 +35,6 @@ add_custom_target(adblock
 )
 
 corrosion_import_crate(MANIFEST_PATH ${CMAKE_CURRENT_SOURCE_DIR}/rs/adblock/Cargo.toml)
-
 
 target_include_directories(webengineviewer_adblockplugin PRIVATE
     ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/)
