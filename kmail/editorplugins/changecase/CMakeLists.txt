@@ -20,7 +20,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(kmail_changecaseeditorplugin
-    KPim6::MessageComposer KF6::XmlGui KF6::I18n
+    KPim6::MessageComposer KF6::XmlGui KF6::I18n KF6::TextUtils
     )
 
 if(BUILD_TESTING)

@@ -7,10 +7,10 @@
 #include "changecaseplugineditorinterface.h"
 #include "changecaseeditorplugin_debug.h"
 #include <KActionCollection>
-#include <KPIMTextEdit/EditorUtil>
 #include <PimCommon/KActionMenuChangeCase>
 #include <QAction>
 #include <TextCustomEditor/RichTextEditor>
+#include <TextUtils/ConvertText>
 
 ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
@@ -58,29 +58,25 @@ void ChangeCasePluginEditorInterface::exec()
 void ChangeCasePluginEditorInterface::sentenceCase()
 {
     QTextCursor textCursor = richTextEditor()->textCursor();
-    KPIMTextEdit::EditorUtil editorUtil;
-    editorUtil.sentenceCase(textCursor);
+    TextUtils::ConvertText::sentenceCase(textCursor);
 }
 
 void ChangeCasePluginEditorInterface::upperCase()
 {
-    KPIMTextEdit::EditorUtil editorUtil;
     QTextCursor textCursor = richTextEditor()->textCursor();
-    editorUtil.upperCase(textCursor);
+    TextUtils::ConvertText::upperCase(textCursor);
 }
 
 void ChangeCasePluginEditorInterface::lowerCase()
 {
     QTextCursor textCursor = richTextEditor()->textCursor();
-    KPIMTextEdit::EditorUtil editorUtil;
-    editorUtil.lowerCase(textCursor);
+    TextUtils::ConvertText::lowerCase(textCursor);
 }
 
 void ChangeCasePluginEditorInterface::reverseCase()
 {
     QTextCursor textCursor = richTextEditor()->textCursor();
-    KPIMTextEdit::EditorUtil editorUtil;
-    editorUtil.reverseCase(textCursor);
+    TextUtils::ConvertText::reverseCase(textCursor);
 }
 
 void ChangeCasePluginEditorInterface::slotUpperCase()
