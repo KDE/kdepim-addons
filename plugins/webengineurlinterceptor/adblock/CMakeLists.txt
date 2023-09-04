@@ -1,13 +1,9 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-kcoreaddons_add_plugin(webengineviewer_adblockplugin INSTALL_NAMESPACE pim6/webengineviewer/urlinterceptor)
-target_sources(webengineviewer_adblockplugin PRIVATE
-    adblockinterceptorinterface.cpp
-    adblockpluginurlinterceptor.cpp
-    adblockinterceptorinterface.h
-    adblockpluginurlinterceptor.h
-    adblockmanager.h
-    adblockmanager.cpp
+
+
+add_library(adblockplugin)
+target_sources(adblockplugin PRIVATE
     adblockfilterlistsmodel.h
     adblockfilterlistsmodel.cpp
     adblockfilter.h
@@ -22,6 +18,41 @@ target_sources(webengineviewer_adblockplugin PRIVATE
     adblockfilterdialog.cpp
     adblockfilterwidget.h
     adblockfilterwidget.cpp
+
+    adblockplugin_private_export.h
+    )
+
+ecm_qt_declare_logging_category(adblockplugin HEADER libadblockplugin_debug.h IDENTIFIER LIBADBLOCKPLUGIN_PLUGIN_LOG
+    CATEGORY_NAME org.kde.pim.adblockplugin
+    DESCRIPTION "kdepim-addons (adblockplugin lib)"
+    EXPORT KDEPIMADDONS
+    )
+
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(adblockplugin PROPERTIES UNITY_BUILD ON)
+endif()
+
+generate_export_header(adblockplugin BASE_NAME libadblockplugin)
+target_link_libraries(adblockplugin
+    KF6::I18n
+    Qt::WebEngineWidgets
+    KPim6::WebEngineViewer
+    )
+
+set_target_properties(adblockplugin
+    PROPERTIES OUTPUT_NAME adblockplugin VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+    )
+
+install(TARGETS adblockplugin ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+
+kcoreaddons_add_plugin(webengineviewer_adblockplugin INSTALL_NAMESPACE pim6/webengineviewer/urlinterceptor)
+target_sources(webengineviewer_adblockplugin PRIVATE
+    adblockinterceptorinterface.cpp
+    adblockinterceptorinterface.h
+    adblockpluginurlinterceptor.cpp
+    adblockpluginurlinterceptor.h
+    adblockmanager.h
+    adblockmanager.cpp
     )
 
 add_custom_target(adblock
@@ -56,6 +87,7 @@ target_link_libraries(webengineviewer_adblockplugin
     Qt::WebEngineWidgets
     KPim6::WebEngineViewer
     webengineviewer-adblock
+    adblockplugin
     )
 
 if(BUILD_TESTING)
