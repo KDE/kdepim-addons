@@ -36,3 +36,5 @@ void AdblockPluginUrlInterceptorConfigureWidget::resetSettings()
 {
     //    mConfigureWidget->doResetToDefaultsOther();
 }
+
+#include "moc_adblockpluginurlinterceptorconfigurewidget.cpp"

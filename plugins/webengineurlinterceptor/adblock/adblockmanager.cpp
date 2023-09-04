@@ -27,3 +27,5 @@ void AdblockManager::reloadConfig()
     const bool enabled = AdBlockSettings::self()->adBlockEnabled();
     Q_EMIT enabledChanged(enabled);
 }
+
+#include "moc_adblockmanager.cpp"

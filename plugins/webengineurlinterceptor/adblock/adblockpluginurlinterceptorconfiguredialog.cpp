@@ -44,3 +44,5 @@ void AdblockPluginUrlInterceptorConfigureDialog::help()
     // TODO we can use in akregator too. We need a specific doc.
     showHelp(QStringLiteral("kmail2"), mAdblockConfigureWidget->helpAnchor());
 }
+
+#include "moc_adblockpluginurlinterceptorconfiguredialog.cpp"

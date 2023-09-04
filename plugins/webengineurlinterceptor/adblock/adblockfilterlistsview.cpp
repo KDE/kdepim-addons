@@ -12,3 +12,5 @@ AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
 }
 
 AdblockFilterListsView::~AdblockFilterListsView() = default;
+
+#include "moc_adblockfilterlistsview.cpp"

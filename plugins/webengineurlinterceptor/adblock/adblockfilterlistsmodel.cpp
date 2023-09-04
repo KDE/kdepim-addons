@@ -53,3 +53,5 @@ QVariant AdblockFilterListsModel::data(const QModelIndex &index, int role) const
     }
     return {};
 }
+
+#include "moc_adblockfilterlistsmodel.cpp"
