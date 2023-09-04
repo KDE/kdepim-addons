@@ -20,4 +20,4 @@ public:
 private:
     QString mUrl;
 };
-Q_DECLARE_TYPEINFO(AdblockFilter, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(AdblockFilter, Q_RELOCATABLE_TYPE);
