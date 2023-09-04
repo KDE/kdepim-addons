@@ -6,11 +6,12 @@
 
 #pragma once
 
+#include "adblockplugin_private_export.h"
 #include <PimCommon/ConfigurePluginDialog>
 class QWidget;
 
 class AdblockPluginUrlInterceptorConfigureWidget;
-class AdblockPluginUrlInterceptorConfigureDialog : public PimCommon::ConfigurePluginDialog
+class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockPluginUrlInterceptorConfigureDialog : public PimCommon::ConfigurePluginDialog
 {
     Q_OBJECT
 public:

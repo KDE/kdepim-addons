@@ -5,11 +5,11 @@
 */
 
 #pragma once
-
+#include "adblockplugin_private_export.h"
 #include <WebEngineViewer/NetworkPluginUrlInterceptorConfigureWidget>
 
 class AdBlockSettingWidget;
-class AdblockPluginUrlInterceptorConfigureWidget : public WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget
+class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockPluginUrlInterceptorConfigureWidget : public WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget
 {
     Q_OBJECT
 public:
