@@ -9,6 +9,7 @@
 #include <QAbstractListModel>
 class AdblockFilterListsModel : public QAbstractListModel
 {
+    Q_OBJECT
 public:
     enum AdblockFilterRoles {
         UrlRole,
