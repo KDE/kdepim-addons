@@ -5,15 +5,23 @@
 */
 
 #include "adblockfilterwidget.h"
+#include "adblockfilterlistsview.h"
 
 #include <QVBoxLayout>
 
 AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
     : QWidget{parent}
+    , mAdblockFilterListView(new AdblockFilterListsView(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    // TODO
+    mainLayout->setContentsMargins({});
+
+    // TODO add search line
+    mAdblockFilterListView->setObjectName(QStringLiteral("mAdblockFilterListView"));
+    mainLayout->addWidget(mAdblockFilterListView);
 }
 
 AdblockFilterWidget::~AdblockFilterWidget() = default;
+
+#include "moc_adblockfilterwidget.cpp"

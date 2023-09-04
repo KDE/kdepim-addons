@@ -7,11 +7,14 @@
 #pragma once
 
 #include <QWidget>
-
+class AdblockFilterListsView;
 class AdblockFilterWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit AdblockFilterWidget(QWidget *parent = nullptr);
     ~AdblockFilterWidget() override;
+
+private:
+    AdblockFilterListsView *const mAdblockFilterListView;
 };
