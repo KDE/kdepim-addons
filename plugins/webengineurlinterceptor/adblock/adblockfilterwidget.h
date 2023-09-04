@@ -6,9 +6,11 @@
 
 #pragma once
 
+#include "adblockplugin_private_export.h"
 #include <QWidget>
 class AdblockFilterListsView;
-class AdblockFilterWidget : public QWidget
+class QLineEdit;
+class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterWidget : public QWidget
 {
     Q_OBJECT
 public:
@@ -17,4 +19,5 @@ public:
 
 private:
     AdblockFilterListsView *const mAdblockFilterListView;
+    QLineEdit *const mSearchLineEdit;
 };

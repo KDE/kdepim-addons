@@ -7,17 +7,21 @@
 #include "adblockfilterwidget.h"
 #include "adblockfilterlistsview.h"
 
+#include <QLineEdit>
 #include <QVBoxLayout>
 
 AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
     : QWidget{parent}
     , mAdblockFilterListView(new AdblockFilterListsView(this))
+    , mSearchLineEdit(new QLineEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    // TODO add search line
+    mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
+    mainLayout->addWidget(mSearchLineEdit);
+
     mAdblockFilterListView->setObjectName(QStringLiteral("mAdblockFilterListView"));
     mainLayout->addWidget(mAdblockFilterListView);
 }
