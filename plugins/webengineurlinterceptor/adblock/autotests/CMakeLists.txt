@@ -7,5 +7,7 @@ macro(add_adblockplugin_unittest _source)
     add_test(NAME ${_name} COMMAND ${_name})
 
     ecm_mark_as_test(adblockplugin-${_name})
-    target_link_libraries( ${_name} Qt::Widgets Qt::Test)
+    target_link_libraries( ${_name} Qt::Widgets Qt::Test adblockplugin)
 endmacro ()
+
+add_adblockplugin_unittest(adblockfiltertest.cpp)

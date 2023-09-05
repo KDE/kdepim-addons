@@ -5,10 +5,10 @@
 */
 
 #pragma once
-
+#include "adblockplugin_private_export.h"
 #include <QString>
 
-class AdblockFilter
+class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilter
 {
 public:
     AdblockFilter();

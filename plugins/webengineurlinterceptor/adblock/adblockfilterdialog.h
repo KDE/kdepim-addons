@@ -5,10 +5,10 @@
 */
 
 #pragma once
-
+#include "adblockplugin_private_export.h"
 #include <QDialog>
 class AdblockFilterWidget;
-class AdblockFilterDialog : public QDialog
+class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterDialog : public QDialog
 {
     Q_OBJECT
 public:
