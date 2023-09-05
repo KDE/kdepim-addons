@@ -18,8 +18,14 @@ target_sources(adblockplugin PRIVATE
     adblockfilterdialog.cpp
     adblockfilterwidget.h
     adblockfilterwidget.cpp
+    adblockmanager.h
+    adblockmanager.cpp
 
     adblockplugin_private_export.h
+    )
+
+kconfig_add_kcfg_files(adblockplugin
+    settings/globalsettings_webengineurlinterceptoradblock.kcfgc
     )
 
 ecm_qt_declare_logging_category(adblockplugin HEADER libadblockplugin_debug.h IDENTIFIER LIBADBLOCKPLUGIN_PLUGIN_LOG
@@ -51,8 +57,6 @@ target_sources(webengineviewer_adblockplugin PRIVATE
     adblockinterceptorinterface.h
     adblockpluginurlinterceptor.cpp
     adblockpluginurlinterceptor.h
-    adblockmanager.h
-    adblockmanager.cpp
     )
 
 add_custom_target(adblock
@@ -75,10 +79,6 @@ ecm_qt_declare_logging_category(webengineviewer_adblockplugin HEADER adblockinte
     DESCRIPTION "kdepim-addons (adblock interceptor)"
     OLD_CATEGORY_NAMES log_adblockinterceptor
     EXPORT KDEPIMADDONS
-    )
-
-kconfig_add_kcfg_files(webengineviewer_adblockplugin
-    settings/globalsettings_webengineurlinterceptoradblock.kcfgc
     )
 
 target_link_libraries(webengineviewer_adblockplugin
