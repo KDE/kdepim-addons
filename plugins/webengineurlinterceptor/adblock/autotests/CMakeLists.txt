@@ -11,3 +11,4 @@ macro(add_adblockplugin_unittest _source)
 endmacro ()
 
 add_adblockplugin_unittest(adblockfiltertest.cpp)
+add_adblockplugin_unittest(adblockfilterwidgettest.cpp)
