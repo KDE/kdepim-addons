@@ -6,9 +6,11 @@
 
 #pragma once
 
+#include "adblockfilter.h"
+#include "libadblockplugin_export.h"
+#include <QList>
 #include <QObject>
-
-class AdblockManager : public QObject
+class LIBADBLOCKPLUGIN_EXPORT AdblockManager : public QObject
 {
     Q_OBJECT
 public:
@@ -17,9 +19,13 @@ public:
 
     static AdblockManager *self();
 
+    Q_REQUIRED_RESULT QList<AdblockFilter> adblockFilterLists() const;
+    void setAdblockFilterLists(const QList<AdblockFilter> &newAdblockFilterLists);
+
 Q_SIGNALS:
     void enabledChanged(bool enabled);
 
 private:
     void reloadConfig();
+    QList<AdblockFilter> mAdblockFilterLists;
 };

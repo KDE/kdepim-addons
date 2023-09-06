@@ -5,6 +5,7 @@
 */
 
 #include "adblockmanager.h"
+#include "adblockfilter.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 
 AdblockManager::AdblockManager(QObject *parent)
@@ -26,6 +27,16 @@ void AdblockManager::reloadConfig()
     // loadSubscriptions();
     const bool enabled = AdBlockSettings::self()->adBlockEnabled();
     Q_EMIT enabledChanged(enabled);
+}
+
+QList<AdblockFilter> AdblockManager::adblockFilterLists() const
+{
+    return mAdblockFilterLists;
+}
+
+void AdblockManager::setAdblockFilterLists(const QList<AdblockFilter> &newAdblockFilterLists)
+{
+    mAdblockFilterLists = newAdblockFilterLists;
 }
 
 #include "moc_adblockmanager.cpp"
