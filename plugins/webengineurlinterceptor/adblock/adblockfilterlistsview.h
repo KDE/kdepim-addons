@@ -6,11 +6,14 @@
 #pragma once
 #include "adblockplugin_private_export.h"
 #include <QListView>
-
+class AdblockFilterListsModel;
 class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterListsView : public QListView
 {
     Q_OBJECT
 public:
     explicit AdblockFilterListsView(QWidget *parent = nullptr);
     ~AdblockFilterListsView() override;
+
+private:
+    AdblockFilterListsModel *const mAdblockFilterListsModel;
 };
