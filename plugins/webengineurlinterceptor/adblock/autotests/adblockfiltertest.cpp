@@ -18,3 +18,5 @@ void AdblockFilterTest::shouldHaveDefaultValues()
     AdblockFilter f;
     QVERIFY(f.url().isEmpty());
 }
+
+#include "moc_adblockfiltertest.cpp"

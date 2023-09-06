@@ -19,3 +19,5 @@ void AdblockManagerTest::shouldHaveDefaultValues()
     AdblockManager m;
     QVERIFY(m.adblockFilterLists().isEmpty());
 }
+
+#include "moc_adblockmanagertest.cpp"

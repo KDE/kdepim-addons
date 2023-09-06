@@ -31,3 +31,5 @@ void AdblockFilterWidgetTest::shouldHaveDefaultValues()
     auto mAdblockFilterListView = w.findChild<AdblockFilterListsView *>(QStringLiteral("mAdblockFilterListView"));
     QVERIFY(mAdblockFilterListView);
 }
+
+#include "moc_adblockfilterwidgettest.cpp"

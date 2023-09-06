@@ -30,3 +30,5 @@ void AdblockFilterDialogTest::shouldHaveDefaultValues()
     auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
 }
+
+#include "moc_adblockfilterdialogtest.cpp"
