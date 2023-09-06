@@ -5,8 +5,11 @@
 */
 
 #include "adblockfilterwidgettest.h"
+#include "adblockfilterlistsview.h"
 #include "adblockfilterwidget.h"
+#include <QLineEdit>
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(AdblockFilterWidgetTest)
 
 AdblockFilterWidgetTest::AdblockFilterWidgetTest(QObject *parent)
@@ -17,5 +20,14 @@ AdblockFilterWidgetTest::AdblockFilterWidgetTest(QObject *parent)
 void AdblockFilterWidgetTest::shouldHaveDefaultValues()
 {
     AdblockFilterWidget w;
-    // TODO
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins{});
+
+    auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
+    QVERIFY(mSearchLineEdit);
+    QVERIFY(mSearchLineEdit->text().isEmpty());
+
+    auto mAdblockFilterListView = w.findChild<AdblockFilterListsView *>(QStringLiteral("mAdblockFilterListView"));
+    QVERIFY(mAdblockFilterListView);
 }
