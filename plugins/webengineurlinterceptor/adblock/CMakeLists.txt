@@ -14,6 +14,10 @@ add_custom_target(adblock
 corrosion_import_crate(MANIFEST_PATH ${CMAKE_CURRENT_SOURCE_DIR}/rs/adblock/Cargo.toml)
 
 add_library(adblockplugin)
+
+target_include_directories(adblockplugin PRIVATE
+    ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/)
+
 target_sources(adblockplugin PRIVATE
     adblockfilterlistsmodel.h
     adblockfilterlistsmodel.cpp
@@ -54,6 +58,7 @@ target_link_libraries(adblockplugin
     KF6::I18n
     Qt::WebEngineWidgets
     KPim6::WebEngineViewer
+    webengineviewer-adblock
     )
 
 set_target_properties(adblockplugin
@@ -70,8 +75,6 @@ target_sources(webengineviewer_adblockplugin PRIVATE
     adblockpluginurlinterceptor.h
     )
 
-target_include_directories(adblockplugin PRIVATE
-    ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/)
 
 
 ecm_qt_declare_logging_category(webengineviewer_adblockplugin HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor
@@ -85,9 +88,11 @@ target_link_libraries(webengineviewer_adblockplugin
     KF6::I18n
     Qt::WebEngineWidgets
     KPim6::WebEngineViewer
-    webengineviewer-adblock
+
     adblockplugin
     )
+target_include_directories(webengineviewer_adblockplugin PRIVATE
+    ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/)
 
 if(BUILD_TESTING)
     add_subdirectory(autotests)

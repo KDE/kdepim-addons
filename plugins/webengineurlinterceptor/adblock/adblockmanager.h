@@ -12,7 +12,7 @@
 #include <QObject>
 #include <QWebEngineUrlRequestInfo>
 
-// #include <adblock.rs.h>
+#include <adblock.rs.h>
 #include <future>
 #include <optional>
 
