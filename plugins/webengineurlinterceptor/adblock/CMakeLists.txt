@@ -1,6 +1,17 @@
 # SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
+add_custom_target(adblock
+    SOURCES
+    rs/adblock/Cargo.toml
+    rs/adblock/build.rs
+    rs/adblock/src/lib.rs
+    rs/adblock/src/adblock.rs
+    rs/adblock/src/domainresolver.rs
+    rs/adblock/src/logging.rs
+)
+
+corrosion_import_crate(MANIFEST_PATH ${CMAKE_CURRENT_SOURCE_DIR}/rs/adblock/Cargo.toml)
 
 add_library(adblockplugin)
 target_sources(adblockplugin PRIVATE
@@ -59,19 +70,7 @@ target_sources(webengineviewer_adblockplugin PRIVATE
     adblockpluginurlinterceptor.h
     )
 
-add_custom_target(adblock
-    SOURCES
-    rs/adblock/Cargo.toml
-    rs/adblock/build.rs
-    rs/adblock/src/lib.rs
-    rs/adblock/src/adblock.rs
-    rs/adblock/src/domainresolver.rs
-    rs/adblock/src/logging.rs
-)
-
-corrosion_import_crate(MANIFEST_PATH ${CMAKE_CURRENT_SOURCE_DIR}/rs/adblock/Cargo.toml)
-
-target_include_directories(webengineviewer_adblockplugin PRIVATE
+target_include_directories(adblockplugin PRIVATE
     ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/)
 
 

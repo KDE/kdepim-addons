@@ -39,4 +39,10 @@ void AdblockManager::setAdblockFilterLists(const QList<AdblockFilter> &newAdbloc
     mAdblockFilterLists = newAdblockFilterLists;
 }
 
+bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
+{
+    // TODO
+    return false;
+}
+
 #include "moc_adblockmanager.cpp"
