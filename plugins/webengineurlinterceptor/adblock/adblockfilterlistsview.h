@@ -7,6 +7,7 @@
 #include "adblockplugin_private_export.h"
 #include <QListView>
 class AdblockFilterListsModel;
+class QSortFilterProxyModel;
 class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterListsView : public QListView
 {
     Q_OBJECT
@@ -14,6 +15,9 @@ public:
     explicit AdblockFilterListsView(QWidget *parent = nullptr);
     ~AdblockFilterListsView() override;
 
+    void setFilterString(const QString &str);
+
 private:
     AdblockFilterListsModel *const mAdblockFilterListsModel;
+    QSortFilterProxyModel *const mSortFilterProxyModel;
 };

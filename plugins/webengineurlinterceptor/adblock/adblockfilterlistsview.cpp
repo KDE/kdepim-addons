@@ -7,16 +7,27 @@
 #include "adblockfilterlistsview.h"
 #include "adblockfilterlistsmodel.h"
 #include "adblockmanager.h"
+#include <QSortFilterProxyModel>
 
 AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
     : QListView(parent)
     , mAdblockFilterListsModel(new AdblockFilterListsModel(this))
+    , mSortFilterProxyModel(new QSortFilterProxyModel(this))
 {
     mAdblockFilterListsModel->setObjectName(QStringLiteral("mAdblockFilterListsModel"));
+
+    mSortFilterProxyModel->setObjectName(QStringLiteral("mSortFilterProxyModel"));
+
     mAdblockFilterListsModel->setAdblockFilter(AdblockManager::self()->adblockFilterLists());
-    setModel(mAdblockFilterListsModel);
+    mSortFilterProxyModel->setSourceModel(mAdblockFilterListsModel);
+    setModel(mSortFilterProxyModel);
 }
 
 AdblockFilterListsView::~AdblockFilterListsView() = default;
+
+void AdblockFilterListsView::setFilterString(const QString &str)
+{
+    mSortFilterProxyModel->setFilterFixedString(str);
+}
 
 #include "moc_adblockfilterlistsview.cpp"
