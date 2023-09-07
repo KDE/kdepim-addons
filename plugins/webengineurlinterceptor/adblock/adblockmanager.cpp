@@ -7,6 +7,7 @@
 #include "adblockmanager.h"
 #include "adblockfilter.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
+#include "libadblockplugin_debug.h"
 
 #include <QFile>
 
@@ -22,18 +23,26 @@ AdblockManager::AdblockManager(QObject *parent)
     reloadConfig();
 }
 
-AdblockManager::~AdblockManager() = default;
+AdblockManager::~AdblockManager()
+{
+    if (mAdblock && (*mAdblock)->isValid() && (*mAdblock)->needsSave()) {
+        (*mAdblock)->save(adblockCacheLocation().toStdString());
+    }
+}
+
+QString AdblockManager::adblockCacheLocation() const
+{
+    return QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/adblockCache");
+}
 
 rust::Box<Adblock> AdblockManager::createOrRestoreAdblock()
 {
-    rust::Box<Adblock> adb = [] {
-#if 0
+    rust::Box<Adblock> adb = [this] {
         auto cacheLocation = adblockCacheLocation();
         if (QFile::exists(cacheLocation)) {
             return loadAdblock(cacheLocation.toStdString());
         }
-        return newAdblock(AdblockFilterListsManager::filterListPath().toStdString());
-#endif
+        // return newAdblock(AdblockFilterListsManager::filterListPath().toStdString());
         return newAdblock("");
     }();
 
@@ -103,7 +112,7 @@ bool AdblockManager::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
     // Only wait for the adblock initialization if it isn't ready on first use
     if (!mAdblock) {
-        qDebug() << "Adblock not yet initialized, blindly allowing request";
+        qDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Adblock not yet initialized, blindly allowing request";
         return false;
     }
 
@@ -125,7 +134,7 @@ bool AdblockManager::interceptRequest(QWebEngineUrlRequestInfo &info)
 
 void q_cdebug_adblock(const char *message)
 {
-    // TODO
-    // qCDebug(AdblockCategory) << message;
+    qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << message;
 }
+
 #include "moc_adblockmanager.cpp"

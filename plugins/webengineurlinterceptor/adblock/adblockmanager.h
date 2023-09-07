@@ -34,6 +34,7 @@ Q_SIGNALS:
 
 private:
     void reloadConfig();
+    Q_REQUIRED_RESULT QString adblockCacheLocation() const;
 
     /// If an adblock cache is found, loads it, otherwise creates a new adblock
     /// from the current filter lists.
