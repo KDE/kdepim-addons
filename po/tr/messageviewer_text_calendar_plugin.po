@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-09 01:03+0000\n"
-"PO-Revision-Date: 2023-05-15 21:29+0300\n"
+"PO-Revision-Date: 2023-09-03 21:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 
 #: attendeeselector.cpp:21
@@ -216,12 +216,12 @@ msgstr "Kabul Et"
 #: text_calendar.cpp:787
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
-msgstr "Hâlâ davetin şartlı kabulünü göndermek istiyor musunuz?"
+msgstr "Davetin şartlı kabulünü göndermeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:789
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the task?"
-msgstr "Hâlâ görevin şartlı kabulünü göndermek istiyor musunuz?"
+msgstr "Görevin şartlı kabulünü göndermeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:791 text_calendar.cpp:799 text_calendar.cpp:803
 #, kde-format
@@ -242,7 +242,7 @@ msgstr "Hâlâ sayaç önerisi göndermek mi istiyorsunuz?"
 #: text_calendar.cpp:802
 #, kde-format
 msgid "Do you still want to send a decline response?"
-msgstr "Hâlâ red yanıtı göndermek istiyor musunuz?"
+msgstr "Red yanıtı göndermeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:806
 #, kde-format
@@ -258,7 +258,7 @@ msgstr "Reddet"
 #: text_calendar.cpp:809
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
-msgstr "Hâlâ bu yanıtı takviminize kaydetmek istiyor musunuz?"
+msgstr "Bu yanıtı takviminize kaydetmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:810 text_calendar.cpp:846
 #, kde-format
@@ -269,12 +269,12 @@ msgstr "Kayıt Yap"
 #: text_calendar.cpp:813
 #, kde-format
 msgid "Do you still want to delegate this task?"
-msgstr "Hâlâ bu görevi temsil etmek istiyor musunuz?"
+msgstr "Bu görevi temsil etmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:815
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
-msgstr "Hâlâ bu daveti temsil etmek istiyor musunuz?"
+msgstr "Bu daveti temsil etmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:817
 #, kde-format
@@ -285,12 +285,12 @@ msgstr "Temsil Et"
 #: text_calendar.cpp:820
 #, kde-format
 msgid "Do you still want to forward this task?"
-msgstr "Hâlâ bu görevi yönlendirmek istiyor musunuz?"
+msgstr "Bu görevi yönlendirmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:822
 #, kde-format
 msgid "Do you still want to forward this invitation?"
-msgstr "Hâlâ bu daveti yönlendirmek istiyor musunuz?"
+msgstr "Bu daveti yönlendirmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:824
 #, kde-format
@@ -301,7 +301,7 @@ msgstr "İlet"
 #: text_calendar.cpp:828
 #, kde-format
 msgid "Do you still want to cancel this task?"
-msgstr "Hâlâ bu görevi iptal etmek istiyor musunuz?"
+msgstr "Bu görevi iptal etmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:829 text_calendar.cpp:850
 #, kde-format
@@ -312,7 +312,7 @@ msgstr "Görevi İptal Et"
 #: text_calendar.cpp:831
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
-msgstr "Hâlâ bu daveti iptal etmek istiyor musunuz?"
+msgstr "Bu daveti iptal etmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:832 text_calendar.cpp:853
 #, kde-format
@@ -329,7 +329,7 @@ msgstr "İptal Etme"
 #: text_calendar.cpp:838
 #, kde-format
 msgid "Do you still want to check your calendar?"
-msgstr "Hâlâ takviminize bakmak istiyor musunuz?"
+msgstr "Takviminize bakmayı hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:839
 #, kde-format
@@ -340,12 +340,12 @@ msgstr "Denetle"
 #: text_calendar.cpp:842
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
-msgstr "Hâlâ bu görevi takviminize kaydetmek istiyor musunuz?"
+msgstr "Bu görevi takviminize kaydetmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:844
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
-msgstr "Hâlâ bu daveti takviminize kaydetmek istiyor musunuz?"
+msgstr "Bu daveti takviminize kaydetmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:849
 #, kde-format
@@ -355,7 +355,7 @@ msgstr "Bu görevi iptal etmek istediğinize emin misiniz?"
 #: text_calendar.cpp:852
 #, kde-format
 msgid "Do you really want to cancel this invitation?"
-msgstr "Gerçekten bu daveti iptal etmek istiyor musunuz?"
+msgstr "Bu daveti iptal etmeyi gerçekten istiyor musunuz?"
 
 #: text_calendar.cpp:861
 #, kde-format
