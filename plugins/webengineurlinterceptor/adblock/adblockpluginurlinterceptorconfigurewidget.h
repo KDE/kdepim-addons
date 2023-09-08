@@ -8,7 +8,7 @@
 #include "adblockplugin_private_export.h"
 #include <WebEngineViewer/NetworkPluginUrlInterceptorConfigureWidget>
 
-class AdBlockSettingWidget;
+class AdblockFilterWidget;
 class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockPluginUrlInterceptorConfigureWidget : public WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget
 {
     Q_OBJECT
@@ -21,5 +21,5 @@ public:
     void resetSettings() override;
 
 private:
-    // AdBlockSettingWidget *mConfigureWidget = nullptr;
+    AdblockFilterWidget *const mAdblockFilterWidget;
 };

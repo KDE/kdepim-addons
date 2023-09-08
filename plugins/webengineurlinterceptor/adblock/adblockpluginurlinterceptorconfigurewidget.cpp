@@ -5,18 +5,18 @@
 */
 
 #include "adblockpluginurlinterceptorconfigurewidget.h"
-// #include "adblocksettingwidget.h"
+#include "adblockfilterwidget.h"
 #include <QHBoxLayout>
 
 AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget(parent)
+    , mAdblockFilterWidget(new AdblockFilterWidget(this))
 {
     auto hbox = new QHBoxLayout(this);
     hbox->setContentsMargins({});
-    //    mConfigureWidget = new AdBlock::AdBlockSettingWidget(this);
-    //    mConfigureWidget->setObjectName(QStringLiteral("configurewidget"));
-    //    hbox->addWidget(mConfigureWidget);
-    //    connect(mConfigureWidget, &AdBlockSettingWidget::settingsChanged, this, &AdblockPluginUrlInterceptorConfigureWidget::configureChanged);
+    mAdblockFilterWidget->setObjectName(QStringLiteral("mAdblockFilterWidget"));
+    hbox->addWidget(mAdblockFilterWidget);
+    // connect(mAdblockFilterWidget, &AdBlockSettingWidget::settingsChanged, this, &AdblockPluginUrlInterceptorConfigureWidget::configureChanged);
 }
 
 AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget() = default;
