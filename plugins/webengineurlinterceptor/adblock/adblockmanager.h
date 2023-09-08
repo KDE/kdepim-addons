@@ -15,7 +15,7 @@
 #include <adblock.rs.h>
 #include <future>
 #include <optional>
-
+class AdblockListsManager;
 class LIBADBLOCKPLUGIN_EXPORT AdblockManager : public QObject
 {
     Q_OBJECT
@@ -44,6 +44,7 @@ private:
     std::future<rust::Box<Adblock>> mAdblockInitFuture;
     std::optional<rust::Box<Adblock>> mAdblock;
     QList<AdblockFilter> mAdblockFilterLists;
+    AdblockListsManager *const mAdblockListManager;
 };
 
 extern "C" {

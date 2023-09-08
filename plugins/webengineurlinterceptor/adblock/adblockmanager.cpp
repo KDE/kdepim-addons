@@ -6,6 +6,8 @@
 
 #include "adblockmanager.h"
 #include "adblockfilter.h"
+#include "adblocklistsmanager.h"
+
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include "libadblockplugin_debug.h"
 
@@ -19,6 +21,7 @@ AdblockManager::AdblockManager(QObject *parent)
                                         return createOrRestoreAdblock();
                                     }))
     , mAdblock(std::nullopt)
+    , mAdblockListManager(new AdblockListsManager(this))
 {
     reloadConfig();
 }

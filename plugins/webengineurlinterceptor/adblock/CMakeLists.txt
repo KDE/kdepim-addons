@@ -36,6 +36,9 @@ target_sources(adblockplugin PRIVATE
     adblockmanager.h
     adblockmanager.cpp
 
+    adblocklistsmanager.h
+    adblocklistsmanager.cpp
+
     adblockplugin_private_export.h
     )
 
