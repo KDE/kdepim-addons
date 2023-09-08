@@ -13,4 +13,7 @@ class AdblockListsManager : public QObject
 public:
     explicit AdblockListsManager(QObject *parent = nullptr);
     ~AdblockListsManager() override;
+
+private:
+    const QString mFilterListsPath;
 };

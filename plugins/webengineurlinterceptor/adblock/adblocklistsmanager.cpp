@@ -6,9 +6,14 @@
 
 #include "adblocklistsmanager.h"
 
+#include <QDir>
+#include <QStandardPaths>
+
 AdblockListsManager::AdblockListsManager(QObject *parent)
     : QObject{parent}
+    , mFilterListsPath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QStringLiteral("/filterlists/"))
 {
+    QDir().mkdir(mFilterListsPath);
 }
 
 AdblockListsManager::~AdblockListsManager() = default;
