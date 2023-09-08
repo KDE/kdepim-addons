@@ -47,7 +47,7 @@ kconfig_add_kcfg_files(adblockplugin
     )
 
 ecm_qt_declare_logging_category(adblockplugin HEADER libadblockplugin_debug.h IDENTIFIER LIBADBLOCKPLUGIN_PLUGIN_LOG
-    CATEGORY_NAME org.kde.pim.adblockplugin
+    CATEGORY_NAME org.kde.pim.libadblockplugin
     DESCRIPTION "kdepim-addons (adblockplugin lib)"
     EXPORT KDEPIMADDONS
     )
