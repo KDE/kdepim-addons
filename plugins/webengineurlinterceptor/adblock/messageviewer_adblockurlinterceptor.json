@@ -36,7 +36,6 @@
         "Description[x-test]": "xxThis plugin allows you to block advertising.xx",
         "Description[zh_CN]": "此插件允许您屏蔽广告。",
         "EnabledByDefault": false,
-        "Id": "messagevieweradblockplugin",
         "Name": "Adblock",
         "Name[ar]": "حاجب الإعلانات",
         "Name[az]": "Reklam əngəlləyici",
