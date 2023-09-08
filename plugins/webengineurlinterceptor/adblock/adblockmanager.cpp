@@ -134,7 +134,7 @@ bool AdblockManager::interceptRequest(QWebEngineUrlRequestInfo &info)
 
 void q_cdebug_adblock(const char *message)
 {
-    qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << message;
+    qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "AdblockManager message: " << message;
 }
 
 #include "moc_adblockmanager.cpp"
