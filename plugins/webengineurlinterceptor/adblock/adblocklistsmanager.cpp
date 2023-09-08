@@ -17,3 +17,8 @@ AdblockListsManager::AdblockListsManager(QObject *parent)
 }
 
 AdblockListsManager::~AdblockListsManager() = default;
+
+QString AdblockListsManager::filterListsPath() const
+{
+    return mFilterListsPath;
+}

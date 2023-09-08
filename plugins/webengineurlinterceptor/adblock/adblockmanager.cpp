@@ -45,8 +45,7 @@ rust::Box<Adblock> AdblockManager::createOrRestoreAdblock()
         if (QFile::exists(cacheLocation)) {
             return loadAdblock(cacheLocation.toStdString());
         }
-        // return newAdblock(AdblockFilterListsManager::filterListPath().toStdString());
-        return newAdblock("");
+        return newAdblock(mAdblockListManager->filterListsPath().toStdString());
     }();
 
     Q_EMIT adblockInitialized();
