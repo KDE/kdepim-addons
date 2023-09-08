@@ -46,7 +46,7 @@ rust::Box<Adblock> AdblockManager::createOrRestoreAdblock()
         return newAdblock("");
     }();
 
-    // Q_EMIT adblockInitialized();
+    Q_EMIT adblockInitialized();
     return adb;
 }
 

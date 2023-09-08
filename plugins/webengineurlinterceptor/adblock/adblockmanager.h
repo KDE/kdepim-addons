@@ -31,6 +31,7 @@ public:
     Q_REQUIRED_RESULT bool interceptRequest(QWebEngineUrlRequestInfo &info);
 Q_SIGNALS:
     void enabledChanged(bool enabled);
+    void adblockInitialized();
 
 private:
     void reloadConfig();
