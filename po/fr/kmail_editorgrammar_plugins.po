@@ -1,19 +1,19 @@
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Simon Depiets <sdepiets@gmail.com>, 2019.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-26 00:51+0000\n"
-"PO-Revision-Date: 2022-09-17 20:26+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2023-09-09 14:23+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.08.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -34,18 +34,14 @@ msgid "&Check Grammar (LanguageTool)"
 msgstr "&Vérifier la grammaire (LanguageTool)"
 
 #: languagetool/languagetoolinterface.cpp:94
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not use local instance.\n"
-#| "Your text will send on a external web site (https://languagetool.org/).\n"
-#| "Do you want to continue?"
+#, kde-format
 msgid ""
 "You do not use local instance.\n"
 "Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
 "Vous n'utilisez pas d'instance locale.\n"
-"Votre texte sera envoyé sur un site web externe (https://languagetool."
+"Votre texte sera envoyé vers un site Internet externe (https://languagetool."
 "org/).\n"
 "Voulez-vous continuer ?"
 
