@@ -27,6 +27,9 @@ ShareTextPluginEditorInterface::~ShareTextPluginEditorInterface() = default;
 void ShareTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto purposeMenu = new SharetextPurposeMenuWidget(parentWidget(), this);
+    connect(purposeMenu, &SharetextPurposeMenuWidget::shareError, this, &ShareTextPluginEditorInterface::errorMessage);
+    connect(purposeMenu, &SharetextPurposeMenuWidget::shareSuccess, this, &ShareTextPluginEditorInterface::successMessage);
+
     auto shareAction = new KActionMenu(i18n("Share Mail Text..."), this);
     shareAction->setMenu(purposeMenu->menu());
     shareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
