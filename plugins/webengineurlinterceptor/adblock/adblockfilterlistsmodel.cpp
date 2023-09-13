@@ -20,12 +20,23 @@ QList<AdblockFilter> AdblockFilterListsModel::adblockFilter() const
 
 void AdblockFilterListsModel::removeList(const QString &identifier)
 {
-    // TODO
+    const int roomCount = mAdblockFilter.count();
+    for (int i = 0; i < roomCount; ++i) {
+        if (mAdblockFilter.at(i).name() == identifier) {
+            beginRemoveRows(QModelIndex(), i, i);
+            mAdblockFilter.removeAt(i);
+            endRemoveRows();
+            break;
+        }
+    }
 }
 
 void AdblockFilterListsModel::insertList(const AdblockFilter &filter)
 {
-    // TODO
+    const int numberOfElement = mAdblockFilter.count();
+    mAdblockFilter.append(filter);
+    beginInsertRows(QModelIndex(), numberOfElement, mAdblockFilter.count() - 1);
+    endInsertRows();
 }
 
 void AdblockFilterListsModel::setAdblockFilter(const QList<AdblockFilter> &newAdblockFilter)

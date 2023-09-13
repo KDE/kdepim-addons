@@ -6,7 +6,10 @@
 
 #include "adblockpluginurlinterceptor.h"
 #include "adblockinterceptorinterface.h"
+#include "adblockpluginurlinterceptorconfiguredialog.h"
+
 #include <KPluginFactory>
+#include <QPointer>
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 
 K_PLUGIN_CLASS_WITH_JSON(AdblockPluginUrlInterceptor, "messageviewer_adblockurlinterceptor.json")
@@ -31,7 +34,8 @@ bool AdblockPluginUrlInterceptor::hasConfigureDialog() const
 
 void AdblockPluginUrlInterceptor::showConfigureDialog(QWidget *parent)
 {
-    // TODO
+    AdblockPluginUrlInterceptorConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "adblockpluginurlinterceptor.moc"
