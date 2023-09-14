@@ -22,3 +22,5 @@ QString AdblockListsManager::filterListsPath() const
 {
     return mFilterListsPath;
 }
+
+#include "moc_adblocklistsmanager.cpp"
