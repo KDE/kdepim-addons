@@ -21,7 +21,7 @@ void AdblockFilterDialogTest::shouldHaveDefaultValues()
 {
     AdblockFilterDialog w;
     QVERIFY(!w.windowTitle().isEmpty());
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
     auto mAdblockFilterWidget = w.findChild<AdblockFilterWidget *>(QStringLiteral("mAdblockFilterWidget"));
