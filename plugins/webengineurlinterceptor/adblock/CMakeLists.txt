@@ -99,4 +99,5 @@ target_include_directories(webengineviewer_adblockplugin PRIVATE
 
 if(BUILD_TESTING)
     add_subdirectory(autotests)
+    add_subdirectory(tests)
 endif()
