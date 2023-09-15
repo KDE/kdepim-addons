@@ -26,5 +26,7 @@ protected:
     void help() override;
 
 private:
+    void readConfig();
+    void writeConfig();
     AdblockPluginUrlInterceptorConfigureWidget *mAdblockConfigureWidget = nullptr;
 };

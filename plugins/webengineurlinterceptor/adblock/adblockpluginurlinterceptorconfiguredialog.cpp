@@ -7,16 +7,28 @@
 #include "adblockpluginurlinterceptorconfiguredialog.h"
 #include "adblockpluginurlinterceptorconfigurewidget.h"
 
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
+#include <KWindowConfig>
+#include <QWindow>
 
+namespace
+{
+static const char myConfigGroupName[] = "AdblockPluginUrlInterceptorConfigureDialog";
+}
 AdblockPluginUrlInterceptorConfigureDialog::AdblockPluginUrlInterceptorConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure AdBlock Plugin"));
     initLayout();
+    readConfig();
 }
 
-AdblockPluginUrlInterceptorConfigureDialog::~AdblockPluginUrlInterceptorConfigureDialog() = default;
+AdblockPluginUrlInterceptorConfigureDialog::~AdblockPluginUrlInterceptorConfigureDialog()
+{
+    writeConfig();
+}
 
 QWidget *AdblockPluginUrlInterceptorConfigureDialog::createLayout()
 {
@@ -43,6 +55,22 @@ void AdblockPluginUrlInterceptorConfigureDialog::help()
 {
     // TODO we can use in akregator too. We need a specific doc.
     showHelp(QStringLiteral("kmail2"), mAdblockConfigureWidget->helpAnchor());
+}
+
+void AdblockPluginUrlInterceptorConfigureDialog::readConfig()
+{
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
+}
+
+void AdblockPluginUrlInterceptorConfigureDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
+    group.sync();
 }
 
 #include "moc_adblockpluginurlinterceptorconfiguredialog.cpp"
