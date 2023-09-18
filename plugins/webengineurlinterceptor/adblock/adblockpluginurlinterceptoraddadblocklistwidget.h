@@ -16,6 +16,7 @@ public:
     struct AdBlockListInfo {
         QString name;
         QString url;
+        Q_REQUIRED_RESULT bool isValid() const;
     };
 
     explicit AdblockPluginUrlInterceptorAddAdblockListWidget(QWidget *parent = nullptr);
@@ -28,3 +29,4 @@ private:
     QLineEdit *const mName;
     QLineEdit *const mUrl;
 };
+LIBADBLOCKPLUGIN_TESTS_EXPORT QDebug operator<<(QDebug d, const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &t);

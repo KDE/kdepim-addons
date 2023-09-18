@@ -44,4 +44,16 @@ void AdblockPluginUrlInterceptorAddAdblockListWidget::setInfo(const AdBlockListI
     mUrl->setText(adblockInfo.url);
 }
 
+bool AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo::isValid() const
+{
+    return name.trimmed().isEmpty() && url.trimmed().isEmpty();
+}
+
+QDebug operator<<(QDebug d, const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &t)
+{
+    d << " Name " << t.name;
+    d << " Url " << t.url;
+    return d;
+}
+
 #include "moc_adblockpluginurlinterceptoraddadblocklistwidget.cpp"
