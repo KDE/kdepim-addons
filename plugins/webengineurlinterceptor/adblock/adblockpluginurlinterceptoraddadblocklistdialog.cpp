@@ -5,6 +5,8 @@
 */
 
 #include "adblockpluginurlinterceptoraddadblocklistdialog.h"
+#include <KLocalizedString>
+#include <QVBoxLayout>
 
 AdblockPluginUrlInterceptorAddAdblockListDialog::AdblockPluginUrlInterceptorAddAdblockListDialog(QWidget *parent)
     : QDialog(parent)

@@ -42,6 +42,9 @@ target_sources(adblockplugin PRIVATE
     adblockpluginurlinterceptoraddadblocklistdialog.h
     adblockpluginurlinterceptoraddadblocklistdialog.cpp
 
+    adblockpluginurlinterceptoraddadblocklistwidget.h
+    adblockpluginurlinterceptoraddadblocklistwidget.cpp
+
     adblockplugin_private_export.h
     )
 
