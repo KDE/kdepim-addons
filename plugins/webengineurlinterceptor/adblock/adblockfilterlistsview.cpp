@@ -7,6 +7,9 @@
 #include "adblockfilterlistsview.h"
 #include "adblockfilterlistsmodel.h"
 #include "adblockmanager.h"
+#include <KLocalizedString>
+#include <QContextMenuEvent>
+#include <QMenu>
 #include <QSortFilterProxyModel>
 
 AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
@@ -33,7 +36,13 @@ void AdblockFilterListsView::setFilterString(const QString &str)
 
 void AdblockFilterListsView::contextMenuEvent(QContextMenuEvent *event)
 {
+    QMenu menu;
     // TODO
+    // TODO add/remove/modify
+    menu.addSeparator();
+    auto deleteAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Delete"), &menu);
+    menu.addAction(deleteAction);
+    menu.exec(event->globalPos());
 }
 
 #include "moc_adblockfilterlistsview.cpp"

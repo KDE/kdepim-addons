@@ -30,4 +30,14 @@ AdblockPluginUrlInterceptorAddAdblockListDialog::AdblockPluginUrlInterceptorAddA
 
 AdblockPluginUrlInterceptorAddAdblockListDialog::~AdblockPluginUrlInterceptorAddAdblockListDialog() = default;
 
+AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo AdblockPluginUrlInterceptorAddAdblockListDialog::info() const
+{
+    return mAddAdblockListWidget->info();
+}
+
+void AdblockPluginUrlInterceptorAddAdblockListDialog::setInfo(const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &adblockInfo)
+{
+    mAddAdblockListWidget->setInfo(adblockInfo);
+}
+
 #include "moc_adblockpluginurlinterceptoraddadblocklistdialog.cpp"
