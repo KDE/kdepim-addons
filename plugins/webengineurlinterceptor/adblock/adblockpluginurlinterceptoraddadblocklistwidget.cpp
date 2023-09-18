@@ -16,6 +16,7 @@ AdblockPluginUrlInterceptorAddAdblockListWidget::AdblockPluginUrlInterceptorAddA
 {
     auto mainLayout = new QFormLayout(this);
     mainLayout->setContentsMargins({});
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mName->setObjectName(QStringLiteral("mName"));
     mUrl->setObjectName(QStringLiteral("mUrl"));
