@@ -39,6 +39,9 @@ target_sources(adblockplugin PRIVATE
     adblocklistsmanager.h
     adblocklistsmanager.cpp
 
+    adblockpluginurlinterceptoraddadblocklistdialog.h
+    adblockpluginurlinterceptoraddadblocklistdialog.cpp
+
     adblockplugin_private_export.h
     )
 
