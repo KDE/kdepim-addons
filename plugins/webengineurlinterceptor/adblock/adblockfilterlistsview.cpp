@@ -21,6 +21,7 @@ AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
     mAdblockFilterListsModel->setAdblockFilter(AdblockManager::self()->adblockFilterLists());
     mSortFilterProxyModel->setSourceModel(mAdblockFilterListsModel);
     setModel(mSortFilterProxyModel);
+    setContextMenuPolicy(Qt::DefaultContextMenu);
 }
 
 AdblockFilterListsView::~AdblockFilterListsView() = default;
@@ -28,6 +29,11 @@ AdblockFilterListsView::~AdblockFilterListsView() = default;
 void AdblockFilterListsView::setFilterString(const QString &str)
 {
     mSortFilterProxyModel->setFilterFixedString(str);
+}
+
+void AdblockFilterListsView::contextMenuEvent(QContextMenuEvent *event)
+{
+    // TODO
 }
 
 #include "moc_adblockfilterlistsview.cpp"

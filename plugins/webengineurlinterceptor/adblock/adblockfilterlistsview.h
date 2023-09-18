@@ -17,6 +17,9 @@ public:
 
     void setFilterString(const QString &str);
 
+protected:
+    void contextMenuEvent(QContextMenuEvent *event) override;
+
 private:
     AdblockFilterListsModel *const mAdblockFilterListsModel;
     QSortFilterProxyModel *const mSortFilterProxyModel;
