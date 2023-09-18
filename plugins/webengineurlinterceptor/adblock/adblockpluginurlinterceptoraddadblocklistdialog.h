@@ -8,11 +8,14 @@
 
 #include "adblockplugin_private_export.h"
 #include <QDialog>
-
+class AdblockPluginUrlInterceptorAddAdblockListWidget;
 class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockPluginUrlInterceptorAddAdblockListDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit AdblockPluginUrlInterceptorAddAdblockListDialog(QWidget *parent = nullptr);
     ~AdblockPluginUrlInterceptorAddAdblockListDialog() override;
+
+private:
+    AdblockPluginUrlInterceptorAddAdblockListWidget *const mAddAdblockListWidget;
 };

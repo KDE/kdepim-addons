@@ -5,6 +5,8 @@
 */
 
 #include "adblockpluginurlinterceptoraddadblocklistwidget.h"
+#include <KLocalizedString>
+#include <QFormLayout>
 
 AdblockPluginUrlInterceptorAddAdblockListWidget::AdblockPluginUrlInterceptorAddAdblockListWidget(QWidget *parent)
     : QWidget{parent}
