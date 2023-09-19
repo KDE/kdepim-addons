@@ -21,6 +21,9 @@ protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
 
 private:
+    void slotAddAdblock();
+    void slotModifyAdblock();
+    void slotDeleteAdblock();
     AdblockFilterListsModel *const mAdblockFilterListsModel;
     QSortFilterProxyModel *const mSortFilterProxyModel;
 };
