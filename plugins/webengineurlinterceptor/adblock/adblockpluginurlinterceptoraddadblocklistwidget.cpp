@@ -5,6 +5,7 @@
 */
 
 #include "adblockpluginurlinterceptoraddadblocklistwidget.h"
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QFormLayout>
 #include <QLineEdit>
@@ -23,6 +24,8 @@ AdblockPluginUrlInterceptorAddAdblockListWidget::AdblockPluginUrlInterceptorAddA
 
     mName->setClearButtonEnabled(true);
     mUrl->setClearButtonEnabled(true);
+    KLineEditEventHandler::catchReturnKey(mName);
+    KLineEditEventHandler::catchReturnKey(mUrl);
 
     mainLayout->addRow(i18n("Name:"), mName);
     mainLayout->addRow(i18n("Url:"), mUrl);
