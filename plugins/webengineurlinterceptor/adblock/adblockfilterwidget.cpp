@@ -7,6 +7,7 @@
 #include "adblockfilterwidget.h"
 #include "adblockfilterlistsview.h"
 
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QLineEdit>
 #include <QVBoxLayout>
@@ -23,6 +24,7 @@ AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
     mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
     mainLayout->addWidget(mSearchLineEdit);
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
+    KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
 
     mAdblockFilterListView->setObjectName(QStringLiteral("mAdblockFilterListView"));
     mainLayout->addWidget(mAdblockFilterListView);
