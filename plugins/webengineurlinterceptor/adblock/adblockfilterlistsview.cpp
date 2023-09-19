@@ -38,7 +38,12 @@ void AdblockFilterListsView::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu;
     // TODO
-    // TODO add/remove/modify
+    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), &menu);
+    menu.addAction(addAction);
+
+    auto modifyAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Modify..."), &menu);
+    menu.addAction(modifyAction);
+
     menu.addSeparator();
     auto deleteAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Delete"), &menu);
     menu.addAction(deleteAction);
