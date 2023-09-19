@@ -60,11 +60,20 @@ void AdblockFilterListsView::contextMenuEvent(QContextMenuEvent *event)
     menu.exec(event->globalPos());
 }
 
+Q_REQUIRED_RESULT AdblockFilter convertToAdblockFilter(const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &info)
+{
+    AdblockFilter filter;
+    filter.setName(info.name);
+    filter.setUrl(info.url);
+    return filter;
+}
+
 void AdblockFilterListsView::slotAddAdblock()
 {
     QPointer<AdblockPluginUrlInterceptorAddAdblockListDialog> dlg = new AdblockPluginUrlInterceptorAddAdblockListDialog(this);
     if (dlg->exec()) {
-        // TODO
+        const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
+        mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
     }
     delete dlg;
 }
@@ -72,7 +81,9 @@ void AdblockFilterListsView::slotAddAdblock()
 void AdblockFilterListsView::slotModifyAdblock()
 {
     QPointer<AdblockPluginUrlInterceptorAddAdblockListDialog> dlg = new AdblockPluginUrlInterceptorAddAdblockListDialog(this);
+    // TODO dlg->setInfo(...)
     if (dlg->exec()) {
+        const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
         // TODO
     }
     delete dlg;
@@ -80,7 +91,11 @@ void AdblockFilterListsView::slotModifyAdblock()
 
 void AdblockFilterListsView::slotDeleteAdblock()
 {
-    // TODO
+    if (KMessageBox::questionTwoActions(this, i18n("Remove"), i18n("Remove"), KStandardGuiItem::ok(), KStandardGuiItem::cancel())
+        == KMessageBox::ButtonCode::PrimaryAction) {
+        // mAdblockFilterListsModel->removeList();
+        // TODO
+    }
 }
 
 #include "moc_adblockfilterlistsview.cpp"
