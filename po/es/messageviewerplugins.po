@@ -3,13 +3,13 @@
 #
 # Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2015.
 # Javier Vinal <fjvinal@gmail.com>, 2016, 2017, 2018.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2021, 2022.
+# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 00:59+0000\n"
-"PO-Revision-Date: 2022-02-03 21:47+0100\n"
+"PO-Revision-Date: 2023-09-20 02:21+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -307,8 +307,8 @@ msgid ""
 msgstr ""
 "<qt><p><strong>Puede usar las siguientes expresiones para los argumentos:</"
 "strong></p><ul><li>%s - el asunto del mensaje</li><li>%from - la dirección "
-"del remitente del mensaje</li><li>%cc - la lista de direcciones CC del "
-"mensaje</li><li>%bcc - la lista de direcciones BCC del mensaje</li><li>%body "
+"del remitente del mensaje</li><li>%cc - la lista de direcciones Cc del "
+"mensaje</li><li>%bcc - la lista de direcciones Cco del mensaje</li><li>%body "
 "- el cuerpo del mensaje</li><li>%inreplyto - la dirección de respuesta del "
 "mensaje</li><li>%akonadiUrl - la URL de Akonadi (como akonadi:?item=187020)</"
 "li></ul></strong></p></qt>"
