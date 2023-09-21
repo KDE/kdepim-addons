@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -39,37 +39,37 @@ msgstr "[بۇ ئالاقەداشنى ئادرېس دەپتىرىگە قوشۇش]
 msgid "[This contact is already in addressbook]"
 msgstr ""
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:215
 #, kde-format
 msgid "View Business Card"
 msgstr ""
 
-#: text_vcard.cpp:224
+#: text_vcard.cpp:216
 #, kde-format
 msgid "Save Business Card As..."
 msgstr ""
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:233
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "بۇ ئالاقەداشنى ئادرېس دەپتىرىگە قوشىدۇ."
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:233
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr ""
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:235
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr ""
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:235
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr ""
 
-#: text_vcard.cpp:267
+#: text_vcard.cpp:259
 #, kde-format
 msgid "Save Business Card"
 msgstr ""

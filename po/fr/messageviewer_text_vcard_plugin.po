@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2020-06-02 20:19+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -47,37 +47,37 @@ msgstr "[Mettre à jour ce contact dans le carnet d'adresses]"
 msgid "[This contact is already in addressbook]"
 msgstr "[Ce contact est déjà dans mon carnet d'adresses]"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:215
 #, kde-format
 msgid "View Business Card"
 msgstr "Afficher une carte professionnelle"
 
-#: text_vcard.cpp:224
+#: text_vcard.cpp:216
 #, kde-format
 msgid "Save Business Card As..."
 msgstr "Enregistrer une carte professionnelle sous..."
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:233
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Ajoute ce contact au carnet d'adresses."
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:233
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Met à jour ce contact dans le carnet d'adresses."
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:235
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Ajoute « %1 » au carnet d'adresses."
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:235
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Met à jour « %1 » dans le carnet d'adresses."
 
-#: text_vcard.cpp:267
+#: text_vcard.cpp:259
 #, kde-format
 msgid "Save Business Card"
 msgstr "Enregistrer une carte professionnelle"

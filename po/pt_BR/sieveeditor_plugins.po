@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-20 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2019-12-20 10:58-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "..."
 msgid "Select Emails"
 msgstr "Selecionar e-mails"
 
-#: emaillineedit/emaillineedit.cpp:88
+#: emaillineedit/emaillineedit.cpp:87
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"

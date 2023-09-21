@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-04-05 11:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -17,473 +17,312 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: adblock/adblockinterceptorinterface.cpp:49
-#, kde-format
-msgid "Open Blockable Items..."
-msgstr "Engellenebilir Ögeleri Aç..."
-
-#: adblock/adblockinterceptorinterface.cpp:53
-#, kde-format
-msgid "Block Image"
-msgstr "Görseli Engelle"
-
-#: adblock/lib/adblocksubscription.cpp:141
-#, kde-format
-msgid "Cannot load subscription!"
-msgstr "Abonelik yüklenemiyor!"
-
-#: adblock/lib/adblocksubscription.cpp:257
-#, kde-format
-msgid "Custom Rules"
-msgstr "Özel Kurallar"
-
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
-#, kde-format
-msgid "Enabled ad block"
-msgstr "Reklam engellemeyi etkinleştir"
-
-#. i18n: ectx: label, entry (HideAdsEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
-#, kde-format
-msgid "Hide advertisement enabled"
-msgstr "Reklam gizleme etkinleştirildi"
-
-#. i18n: ectx: label, entry (AdBlockUpdateInterval), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:16
-#, kde-format
-msgid "Update interval list of adblock"
-msgstr "Reklam engelleyicinin güncelleme aralığı"
-
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:26
-#, kde-format
+#: adblock/adblockfilterdialog.cpp:17
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Show adblock list"
 msgctxt "@title:window"
-msgid "Add subscription"
-msgstr "Abonelik ekle"
+msgid "Add Adblock List"
+msgstr "Reklam engelleme listesini göster"
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:32
+#: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
-msgid "Select List:"
-msgstr "Liste Seç:"
+msgid "Add..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:41
+#: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
-msgid "Show List"
-msgstr "Listeyi Göster"
+msgid "Modify..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemsdialog.cpp:26
+#: adblock/adblockfilterlistsview.cpp:56
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "Listeyi Sil"
+
+#: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
-msgctxt "@title:window"
-msgid "Blockable Items"
-msgstr "Engellenebilir Ögeler"
+msgid "Remove"
+msgstr "Kaldır"
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:35
-#, kde-format
-msgid "No blockable element found."
-msgstr "Engellenebilir öge bulunamadı."
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Filter"
-msgstr "Süzgeç"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Address"
-msgstr "Adres"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Type"
-msgstr "Tür"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:46
+#: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Ara..."
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:103
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
-msgid "Copy URL"
-msgstr "URL'yi kopyala"
+msgid "Name:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:106
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
-msgid "Copy filter"
-msgstr "Süzgeci kopyala"
+msgid "Url:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:108
-#, kde-format
-msgid "Block item..."
-msgstr "Ögeyi engelle..."
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:110
-#, kde-format
-msgid "Open"
-msgstr "Aç"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:113
-#, kde-format
-msgid "Remove filter"
-msgstr "Süzgeci kaldır"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:185
-#, kde-format
-msgid "Image"
-msgstr "Görsel"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:188
-#, kde-format
-msgid "Script"
-msgstr "Betik"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:191
-#, kde-format
-msgid "Stylesheet"
-msgstr "Stil Tablosu"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:194
-#, kde-format
-msgid "Font"
-msgstr "Yazıtipi"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:197
-#, kde-format
-msgid "Frame"
-msgstr "Çerçeve"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:200
-#, kde-format
-msgid "XML Request"
-msgstr "XML İsteği"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:203
-#, kde-format
-msgid "Object"
-msgstr "Nesne"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:206
-#, kde-format
-msgid "Audio/Video"
-msgstr "Ses/Video"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:209
-#, kde-format
-msgid "Popup window"
-msgstr "Açılır Pencere"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:213
-#, kde-format
-msgid "Unknown"
-msgstr "Bilinmeyen"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:22
-#, kde-format
-msgctxt "@title:window"
-msgid "Create Filter"
-msgstr "Süzgeç Oluştur"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:46
-#, kde-format
-msgid "Use default"
-msgstr "Öntanımlıyı kullan"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:47
-#, kde-format
-msgid "Yes"
-msgstr "Evet"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:48
-#, kde-format
-msgid "Not"
-msgstr "Değil"
-
-#: adblock/lib/widgets/adblocklistwidget.cpp:52
-#, kde-format
-msgid "No subscription added"
-msgstr "Abonelik eklenmedi"
-
-#: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:18
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "AdBlock Eklentisini Yapılandır"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:53
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
-msgid ""
-"<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-"\"filterhelp\">more information</a>):"
-msgstr ""
-"<qt>İfadeyi süz (örn. <tt>http://www.example.com/ad/*</tt>, <a href="
-"\"filterhelp\">daha fazla bilgi</a>):"
+msgid "Enabled ad block"
+msgstr "Reklam engellemeyi etkinleştir"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:69
-#, kde-format
-msgid " day"
-msgid_plural " days"
-msgstr[0] " gün"
-msgstr[1] " gün"
+#~ msgid "Open Blockable Items..."
+#~ msgstr "Engellenebilir Ögeleri Aç..."
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:142
-#, kde-format
-msgid ""
-"<qt><p>Enter an expression to filter. Filters can be defined as either:"
-"<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
-"the wildcards <tt>*?[]</tt> may be used</li><li>a full regular expression by "
-"surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</tt></"
-"li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist "
-"(allow) any matching URL, which takes priority over any blacklist (blocking) "
-"filter.<br><a href='%1'>%2</a></qt>"
-msgstr ""
-"<qt><p>Süzülecek bir ifade girin. İfadeler şu şekilde tanımlanabilir:"
-"<ul><li>bir kabuk tarzı joker; örn. <tt>http://www.example.com/ads*</tt>, "
-"<tt>*?[]</tt> jokerleri kullanılabilir</li><li>diziyi '<tt>/</tt>' ile "
-"sararak tam bir düzenli ifade; örn. <tt>/\\/(ad|banner)\\./</tt></li></"
-"ul><p>Herhangi bir eşleşen URL'ye izin vermek için tüm süzgeç dizileri önüne "
-"'<tt>@@</tt>' getirilebilir; bunlar engelleme listelerine göre öncelik "
-"alırlar.<br><a href='%1'>%2</a></qt>"
+#~ msgid "Block Image"
+#~ msgstr "Görseli Engelle"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:150
-#, kde-format
-msgid "More information"
-msgstr "Daha fazla bilgi"
+#~ msgid "Cannot load subscription!"
+#~ msgstr "Abonelik yüklenemiyor!"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:194
-#, kde-format
-msgid "Do you want to remove this rule?"
-msgid_plural "Do you want to remove these rules?"
-msgstr[0] "Bu kuralı kaldırmak istiyor musunuz?"
-msgstr[1] "Bu kuralları kaldırmak istiyor musunuz?"
+#~ msgid "Custom Rules"
+#~ msgstr "Özel Kurallar"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:195
-#, kde-format
-msgid "Remove"
-msgstr "Kaldır"
+#~ msgid "Hide advertisement enabled"
+#~ msgstr "Reklam gizleme etkinleştirildi"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:336
-#, kde-format
-msgid "Do you want to delete list \"%1\"?"
-msgstr "\"%1\" listesini silmek istiyor musunuz?"
+#~ msgid "Update interval list of adblock"
+#~ msgstr "Reklam engelleyicinin güncelleme aralığı"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:337
-#, kde-format
-msgid "Delete current list"
-msgstr "Geçerli listeyi sil"
+#~ msgctxt "@title:window"
+#~ msgid "Add subscription"
+#~ msgstr "Abonelik ekle"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:382
-#: adblock/lib/widgets/adblocksettingwidget.cpp:424
-#, kde-format
-msgid "All Files (*)"
-msgstr "Tüm Dosyalar (*)"
+#~ msgid "Select List:"
+#~ msgstr "Liste Seç:"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:383
-#, kde-format
-msgid "Import Filters"
-msgstr "Süzgeçleri İçe Aktar"
+#~ msgid "Show List"
+#~ msgstr "Listeyi Göster"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:434
-#, kde-format
-msgid "Export Filters"
-msgstr "Süzgeçleri Dışa Aktar"
+#~ msgctxt "@title:window"
+#~ msgid "Blockable Items"
+#~ msgstr "Engellenebilir Ögeler"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:38
-#, kde-format
-msgctxt "@title:window"
-msgid "Show adblock list"
-msgstr "Reklam engelleme listesini göster"
+#~ msgid "No blockable element found."
+#~ msgstr "Engellenebilir öge bulunamadı."
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:45
-#, kde-format
-msgid "Delete List"
-msgstr "Listeyi Sil"
+#~ msgid "Filter"
+#~ msgstr "Süzgeç"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:62
-#, kde-format
-msgid "Download..."
-msgstr "İndir..."
+#~ msgid "Address"
+#~ msgstr "Adres"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:135
-#, kde-format
-msgid "An error occurred while downloading the list: \"%1\""
-msgstr "Liste indirilirken bir hata oluştu: \"%1\""
+#~ msgid "Type"
+#~ msgstr "Tür"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:31
-#, kde-format
-msgid "Filters:"
-msgstr "Süzgeçler:"
+#~ msgid "Copy URL"
+#~ msgstr "URL'yi kopyala"
 
-#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:49
-#, kde-format
-msgid "&Blocking filter"
-msgstr "&Engelleme süzgeci"
+#~ msgid "Copy filter"
+#~ msgstr "Süzgeci kopyala"
 
-#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:56
-#, kde-format
-msgid "Exception Filter"
-msgstr "İstisna Süzgeci"
+#~ msgid "Block item..."
+#~ msgstr "Ögeyi engelle..."
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:65
-#, kde-format
-msgid "Pattern"
-msgstr "Kalıp"
+#~ msgid "Open"
+#~ msgstr "Aç"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:73
-#, kde-format
-msgid "custom"
-msgstr "özel"
+#~ msgid "Remove filter"
+#~ msgstr "Süzgeci kaldır"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:88
-#, kde-format
-msgid "Accept pattern only"
-msgstr "Yalnızca kalıbı kabul et"
+#~ msgid "Image"
+#~ msgstr "Görsel"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
-#, kde-format
-msgid "At the beginning of the address"
-msgstr "Adresin başında"
+#~ msgid "Script"
+#~ msgstr "Betik"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
-#, kde-format
-msgid "At the end of address"
-msgstr "Adresın sonunda"
+#~ msgid "Stylesheet"
+#~ msgstr "Stil Tablosu"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
-#, kde-format
-msgid "Options"
-msgstr "Seçenekler"
+#~ msgid "Font"
+#~ msgstr "Yazıtipi"
 
-#. i18n: ectx: property (text), widget (QCheckBox, firstPartOnly)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
-#, kde-format
-msgid "First-part only"
-msgstr "Yalnızca ilk kısım"
+#~ msgid "Frame"
+#~ msgstr "Çerçeve"
 
-#. i18n: ectx: property (text), widget (QCheckBox, matchCase)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
-#, kde-format
-msgid "Match case"
-msgstr "Tam sözcük"
+#~ msgid "XML Request"
+#~ msgstr "XML İsteği"
 
-#. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
-#, kde-format
-msgid "Restrict to domain"
-msgstr "Alan adına sınırla"
+#~ msgid "Object"
+#~ msgstr "Nesne"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
-#, kde-format
-msgid "Apply to:"
-msgstr "Şuna uygula:"
+#~ msgid "Audio/Video"
+#~ msgstr "Ses/Video"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:160
-#, kde-format
-msgid "Collapse blocked:"
-msgstr "Engelleneni daralt:"
+#~ msgid "Popup window"
+#~ msgstr "Açılır Pencere"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
-#: adblock/lib/widgets/ui/settings_adblock.ui:29
-#, kde-format
-msgid "&Enable Ad Block"
-msgstr "&Reklam Engellemeyi Etkinleştir"
+#~ msgid "Unknown"
+#~ msgstr "Bilinmeyen"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
-#: adblock/lib/widgets/ui/settings_adblock.ui:36
-#, kde-format
-msgid "&Hide filtered elements"
-msgstr "&Süzülen Ögeleri Gizle"
+#~ msgctxt "@title:window"
+#~ msgid "Create Filter"
+#~ msgstr "Süzgeç Oluştur"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:50
-#, kde-format
-msgid "Automatic Filters"
-msgstr "Otomatik Süzgeçler"
+#~ msgid "Use default"
+#~ msgstr "Öntanımlıyı kullan"
 
-#. i18n: ectx: property (text), widget (QPushButton, addFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:56
-#, kde-format
-msgid "Add Filters subscriptions..."
-msgstr "Süzgeç abonelikleri ekle..."
+#~ msgid "Yes"
+#~ msgstr "Evet"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeSubscription)
-#: adblock/lib/widgets/ui/settings_adblock.ui:76
-#, kde-format
-msgid "Remove subscription"
-msgstr "Aboneliği kaldır"
+#~ msgid "Not"
+#~ msgstr "Değil"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:98
-#, kde-format
-msgid "Update enabled automatic filters every:"
-msgstr "Etkin otomatik süzgeçleri güncelleme aralığı:"
+#~ msgid "No subscription added"
+#~ msgstr "Abonelik eklenmedi"
 
-#. i18n: ectx: property (text), widget (QPushButton, showList)
-#: adblock/lib/widgets/ui/settings_adblock.ui:136
-#, kde-format
-msgid "Show List..."
-msgstr "Listeyi Göster..."
+#~ msgid ""
+#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">more information</a>):"
+#~ msgstr ""
+#~ "<qt>İfadeyi süz (örn. <tt>http://www.example.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">daha fazla bilgi</a>):"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: adblock/lib/widgets/ui/settings_adblock.ui:144
-#, kde-format
-msgid "Manual Filters"
-msgstr "Elle Yapılan Süzgeçler"
+#~ msgid " day"
+#~ msgid_plural " days"
+#~ msgstr[0] " gün"
+#~ msgstr[1] " gün"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:155
-#, kde-format
-msgid "Add filter expression"
-msgstr "Süzgeç ifadesi ekle"
+#~ msgid ""
+#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
+#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
+#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
+#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
+#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
+#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
+#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
+#~ msgstr ""
+#~ "<qt><p>Süzülecek bir ifade girin. İfadeler şu şekilde tanımlanabilir:"
+#~ "<ul><li>bir kabuk tarzı joker; örn. <tt>http://www.example.com/ads*</tt>, "
+#~ "<tt>*?[]</tt> jokerleri kullanılabilir</li><li>diziyi '<tt>/</tt>' ile "
+#~ "sararak tam bir düzenli ifade; örn. <tt>/\\/(ad|banner)\\./</tt></li></"
+#~ "ul><p>Herhangi bir eşleşen URL'ye izin vermek için tüm süzgeç dizileri "
+#~ "önüne '<tt>@@</tt>' getirilebilir; bunlar engelleme listelerine göre "
+#~ "öncelik alırlar.<br><a href='%1'>%2</a></qt>"
 
-#. i18n: ectx: property (text), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:158
-#, kde-format
-msgid "..."
-msgstr "..."
+#~ msgid "More information"
+#~ msgstr "Daha fazla bilgi"
 
-#. i18n: ectx: property (text), widget (QPushButton, importFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:200
-#, kde-format
-msgid "Import Filters..."
-msgstr "Süzgeçleri İçe Aktar..."
+#~ msgid "Do you want to remove this rule?"
+#~ msgid_plural "Do you want to remove these rules?"
+#~ msgstr[0] "Bu kuralı kaldırmak istiyor musunuz?"
+#~ msgstr[1] "Bu kuralları kaldırmak istiyor musunuz?"
 
-#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:207
-#, kde-format
-msgid "Export filters..."
-msgstr "Süzgeçleri Dışa Aktar..."
+#~ msgid "Do you want to delete list \"%1\"?"
+#~ msgstr "\"%1\" listesini silmek istiyor musunuz?"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/settings_adblock.ui:216
-#, kde-format
-msgid "Search:"
-msgstr "Ara:"
+#~ msgid "Delete current list"
+#~ msgstr "Geçerli listeyi sil"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFilter)
-#: adblock/lib/widgets/ui/settings_adblock.ui:228
-#, kde-format
-msgid "Edit"
-msgstr "Düzenle"
+#~ msgid "All Files (*)"
+#~ msgstr "Tüm Dosyalar (*)"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:235
-#, kde-format
-msgid "Remove filter expression"
-msgstr "Süzgeç ifadesini kaldır"
+#~ msgid "Import Filters"
+#~ msgstr "Süzgeçleri İçe Aktar"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:238
-#, kde-format
-msgid "Remove Filter"
-msgstr "Süzgeci Kaldır"
+#~ msgid "Export Filters"
+#~ msgstr "Süzgeçleri Dışa Aktar"
+
+#~ msgid "Download..."
+#~ msgstr "İndir..."
+
+#~ msgid "An error occurred while downloading the list: \"%1\""
+#~ msgstr "Liste indirilirken bir hata oluştu: \"%1\""
+
+#~ msgid "Filters:"
+#~ msgstr "Süzgeçler:"
+
+#~ msgid "&Blocking filter"
+#~ msgstr "&Engelleme süzgeci"
+
+#~ msgid "Exception Filter"
+#~ msgstr "İstisna Süzgeci"
+
+#~ msgid "Pattern"
+#~ msgstr "Kalıp"
+
+#~ msgid "custom"
+#~ msgstr "özel"
+
+#~ msgid "Accept pattern only"
+#~ msgstr "Yalnızca kalıbı kabul et"
+
+#~ msgid "At the beginning of the address"
+#~ msgstr "Adresin başında"
+
+#~ msgid "At the end of address"
+#~ msgstr "Adresın sonunda"
+
+#~ msgid "Options"
+#~ msgstr "Seçenekler"
+
+#~ msgid "First-part only"
+#~ msgstr "Yalnızca ilk kısım"
+
+#~ msgid "Match case"
+#~ msgstr "Tam sözcük"
+
+#~ msgid "Restrict to domain"
+#~ msgstr "Alan adına sınırla"
+
+#~ msgid "Apply to:"
+#~ msgstr "Şuna uygula:"
+
+#~ msgid "Collapse blocked:"
+#~ msgstr "Engelleneni daralt:"
+
+#~ msgid "&Enable Ad Block"
+#~ msgstr "&Reklam Engellemeyi Etkinleştir"
+
+#~ msgid "&Hide filtered elements"
+#~ msgstr "&Süzülen Ögeleri Gizle"
+
+#~ msgid "Automatic Filters"
+#~ msgstr "Otomatik Süzgeçler"
+
+#~ msgid "Add Filters subscriptions..."
+#~ msgstr "Süzgeç abonelikleri ekle..."
+
+#~ msgid "Remove subscription"
+#~ msgstr "Aboneliği kaldır"
+
+#~ msgid "Update enabled automatic filters every:"
+#~ msgstr "Etkin otomatik süzgeçleri güncelleme aralığı:"
+
+#~ msgid "Show List..."
+#~ msgstr "Listeyi Göster..."
+
+#~ msgid "Manual Filters"
+#~ msgstr "Elle Yapılan Süzgeçler"
+
+#~ msgid "Add filter expression"
+#~ msgstr "Süzgeç ifadesi ekle"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Import Filters..."
+#~ msgstr "Süzgeçleri İçe Aktar..."
+
+#~ msgid "Export filters..."
+#~ msgstr "Süzgeçleri Dışa Aktar..."
+
+#~ msgid "Search:"
+#~ msgstr "Ara:"
+
+#~ msgid "Edit"
+#~ msgstr "Düzenle"
+
+#~ msgid "Remove filter expression"
+#~ msgstr "Süzgeç ifadesini kaldır"
+
+#~ msgid "Remove Filter"
+#~ msgstr "Süzgeci Kaldır"

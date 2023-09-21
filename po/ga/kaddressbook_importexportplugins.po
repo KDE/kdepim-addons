@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2009-01-28 10:19-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -37,18 +37,18 @@ msgstr "Iompórtáil Comhad CSV..."
 msgid "Import contacts from a file in comma separated value format."
 msgstr ""
 
-#: csv/csvimportexportplugininterface.cpp:152
+#: csv/csvimportexportplugininterface.cpp:148
 #: gmx/gmximportexportplugininterface.cpp:80
-#: ldif/ldifimportexportplugininterface.cpp:130
+#: ldif/ldifimportexportplugininterface.cpp:123
 #: vcards/vcardimportexportplugininterface.cpp:370
 #, fuzzy, kde-format
 #| msgid "Which contacts do you want to print?"
 msgid "Which contact do you want to export?"
 msgstr "Cé acu teagmhálacha is mian leat a phriontáil?"
 
-#: csv/csvimportexportplugininterface.cpp:162
+#: csv/csvimportexportplugininterface.cpp:158
 #: gmx/gmximportexportplugininterface.cpp:90
-#: ldif/ldifimportexportplugininterface.cpp:140
+#: ldif/ldifimportexportplugininterface.cpp:133
 #: vcards/vcardimportexportplugininterface.cpp:382
 #, fuzzy, kde-format
 #| msgctxt "@info"
@@ -56,16 +56,16 @@ msgstr "Cé acu teagmhálacha is mian leat a phriontáil?"
 msgid "You have not selected any contacts to export."
 msgstr "Níl aon teagmhálacha sa v-Chárta."
 
-#: csv/csvimportexportplugininterface.cpp:191
+#: csv/csvimportexportplugininterface.cpp:187
 #: gmx/gmximportexportplugininterface.cpp:124
-#: ldif/ldifimportexportplugininterface.cpp:161
+#: ldif/ldifimportexportplugininterface.cpp:154
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>Ní féidir comhad <b>%1</b> a oscailt.</qt>"
 
-#: csv/csvimportexportplugininterface.cpp:203
+#: csv/csvimportexportplugininterface.cpp:199
 #: gmx/gmximportexportplugininterface.cpp:139
-#: ldif/ldifimportexportplugininterface.cpp:191
+#: ldif/ldifimportexportplugininterface.cpp:184
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>Ní féidir an comhad <b>%1</b> a oscailt.</qt>"
@@ -462,14 +462,14 @@ msgstr "Easpórtáil Comhad GMX..."
 msgid "Export contacts to a GMX address book file."
 msgstr ""
 
-#: gmx/gmximportexportplugininterface.cpp:438
+#: gmx/gmximportexportplugininterface.cpp:434
 #: ldif/ldifimportexportplugininterface.cpp:80
 #: windows-contacts/importwindowcontact.cpp:26
 #, kde-format
 msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
 msgstr "<qt>Ní féidir <b>%1</b> a oscailt chun é a léamh.</qt>"
 
-#: gmx/gmximportexportplugininterface.cpp:455
+#: gmx/gmximportexportplugininterface.cpp:447
 #, kde-format
 msgid "%1 is not a GMX address book file."
 msgstr "Ní leabhar seoltaí GMX é %1."
@@ -505,12 +505,12 @@ msgstr "Easpórtáil comhad LDIF..."
 msgid "Export contacts to an LDIF file."
 msgstr ""
 
-#: ldif/ldifimportexportplugininterface.cpp:110
+#: ldif/ldifimportexportplugininterface.cpp:106
 #, kde-format
 msgid "LDif Files"
 msgstr ""
 
-#: ldif/ldifimportexportplugininterface.cpp:151
+#: ldif/ldifimportexportplugininterface.cpp:144
 #, kde-format
 msgid "LDif Files (*.ldif)"
 msgstr ""

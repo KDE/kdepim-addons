@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2023-09-16 10:08\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,469 +18,308 @@ msgstr ""
 "pot\n"
 "X-Crowdin-File-ID: 3792\n"
 
-#: adblock/adblockinterceptorinterface.cpp:49
-#, kde-format
-msgid "Open Blockable Items..."
-msgstr "打开可屏蔽项..."
-
-#: adblock/adblockinterceptorinterface.cpp:53
-#, kde-format
-msgid "Block Image"
-msgstr "屏蔽图像"
-
-#: adblock/lib/adblocksubscription.cpp:141
-#, kde-format
-msgid "Cannot load subscription!"
-msgstr "无法加载订阅！"
-
-#: adblock/lib/adblocksubscription.cpp:257
-#, kde-format
-msgid "Custom Rules"
-msgstr "自定义规则"
-
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
-#, kde-format
-msgid "Enabled ad block"
-msgstr "已启用广告屏蔽"
-
-#. i18n: ectx: label, entry (HideAdsEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
-#, kde-format
-msgid "Hide advertisement enabled"
-msgstr "已启用隐藏广告"
-
-#. i18n: ectx: label, entry (AdBlockUpdateInterval), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:16
-#, kde-format
-msgid "Update interval list of adblock"
-msgstr "广告屏蔽列表更新间隔"
-
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:26
-#, kde-format
+#: adblock/adblockfilterdialog.cpp:17
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Show adblock list"
 msgctxt "@title:window"
-msgid "Add subscription"
-msgstr "添加订阅"
+msgid "Add Adblock List"
+msgstr "显示广告屏蔽列表"
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:32
+#: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
-msgid "Select List:"
-msgstr "选择列表："
+msgid "Add..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:41
+#: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
-msgid "Show List"
-msgstr "显示列表"
+msgid "Modify..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemsdialog.cpp:26
+#: adblock/adblockfilterlistsview.cpp:56
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "删除列表"
+
+#: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
-msgctxt "@title:window"
-msgid "Blockable Items"
-msgstr "可屏蔽项目"
+msgid "Remove"
+msgstr "删除"
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:35
-#, kde-format
-msgid "No blockable element found."
-msgstr "没找到可屏蔽的元素。"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Filter"
-msgstr "过滤器"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Address"
-msgstr "地址"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Type"
-msgstr "类型"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:46
+#: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "搜索..."
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:103
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
-msgid "Copy URL"
-msgstr "复制 URL"
+msgid "Name:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:106
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
-msgid "Copy filter"
-msgstr "复制过滤器"
+msgid "Url:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:108
-#, kde-format
-msgid "Block item..."
-msgstr "屏蔽项..."
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:110
-#, kde-format
-msgid "Open"
-msgstr "打开"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:113
-#, kde-format
-msgid "Remove filter"
-msgstr "移除过滤器"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:185
-#, kde-format
-msgid "Image"
-msgstr "图像"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:188
-#, kde-format
-msgid "Script"
-msgstr "脚本"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:191
-#, kde-format
-msgid "Stylesheet"
-msgstr "样式表"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:194
-#, kde-format
-msgid "Font"
-msgstr "字体"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:197
-#, kde-format
-msgid "Frame"
-msgstr "框架"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:200
-#, kde-format
-msgid "XML Request"
-msgstr "XML请求"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:203
-#, kde-format
-msgid "Object"
-msgstr "对象"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:206
-#, kde-format
-msgid "Audio/Video"
-msgstr "音频/视频"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:209
-#, kde-format
-msgid "Popup window"
-msgstr "弹出窗口"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:213
-#, kde-format
-msgid "Unknown"
-msgstr "未知"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:22
-#, kde-format
-msgctxt "@title:window"
-msgid "Create Filter"
-msgstr "创建过滤器"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:46
-#, kde-format
-msgid "Use default"
-msgstr "使用默认值"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:47
-#, kde-format
-msgid "Yes"
-msgstr "是"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:48
-#, kde-format
-msgid "Not"
-msgstr "否"
-
-#: adblock/lib/widgets/adblocklistwidget.cpp:52
-#, kde-format
-msgid "No subscription added"
-msgstr "没有添加订阅"
-
-#: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:18
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "配置广告屏蔽插件"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:53
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
-msgid ""
-"<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-"\"filterhelp\">more information</a>):"
-msgstr ""
-"<qt>过滤表达式(如 <tt>http://www.example.com/ad/*</tt>，<a href=\"filterhelp"
-"\">更多信息</a>)："
+msgid "Enabled ad block"
+msgstr "已启用广告屏蔽"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:69
-#, kde-format
-msgid " day"
-msgid_plural " days"
-msgstr[0] " 天"
+#~ msgid "Open Blockable Items..."
+#~ msgstr "打开可屏蔽项..."
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:142
-#, kde-format
-msgid ""
-"<qt><p>Enter an expression to filter. Filters can be defined as either:"
-"<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
-"the wildcards <tt>*?[]</tt> may be used</li><li>a full regular expression by "
-"surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</tt></"
-"li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist "
-"(allow) any matching URL, which takes priority over any blacklist (blocking) "
-"filter.<br><a href='%1'>%2</a></qt>"
-msgstr ""
-"<qt><p>输入过滤表达式。它可以像这样定义：<ul><li>shell 风格的通配符，如："
-"<tt>http://www.example.com/ads*</tt>，其中的 <tt>*?[]</tt> 就是通配符</"
-"li><li>由“<tt>/</tt>”符号包起来的完整正则表达式，如：<tt>/\\/(ad|banner)\\./"
-"</tt></li></ul><p>任何以 “<tt>@@</tt>” 开头的过滤字符串都表示白名单里的 URL，"
-"其优先级要高于黑名单。<br><a href='%1'>%2</a></qt>"
+#~ msgid "Block Image"
+#~ msgstr "屏蔽图像"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:150
-#, kde-format
-msgid "More information"
-msgstr "更多信息"
+#~ msgid "Cannot load subscription!"
+#~ msgstr "无法加载订阅！"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:194
-#, kde-format
-msgid "Do you want to remove this rule?"
-msgid_plural "Do you want to remove these rules?"
-msgstr[0] "您是否要删除这条规则？"
+#~ msgid "Custom Rules"
+#~ msgstr "自定义规则"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:195
-#, kde-format
-msgid "Remove"
-msgstr "删除"
+#~ msgid "Hide advertisement enabled"
+#~ msgstr "已启用隐藏广告"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:336
-#, kde-format
-msgid "Do you want to delete list \"%1\"?"
-msgstr "您是否想要删除列表“%1”？"
+#~ msgid "Update interval list of adblock"
+#~ msgstr "广告屏蔽列表更新间隔"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:337
-#, kde-format
-msgid "Delete current list"
-msgstr "删除当前列表"
+#~ msgctxt "@title:window"
+#~ msgid "Add subscription"
+#~ msgstr "添加订阅"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:382
-#: adblock/lib/widgets/adblocksettingwidget.cpp:424
-#, kde-format
-msgid "All Files (*)"
-msgstr "所有文件 (*)"
+#~ msgid "Select List:"
+#~ msgstr "选择列表："
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:383
-#, kde-format
-msgid "Import Filters"
-msgstr "导入过滤器"
+#~ msgid "Show List"
+#~ msgstr "显示列表"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:434
-#, kde-format
-msgid "Export Filters"
-msgstr "导出过滤器"
+#~ msgctxt "@title:window"
+#~ msgid "Blockable Items"
+#~ msgstr "可屏蔽项目"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:38
-#, kde-format
-msgctxt "@title:window"
-msgid "Show adblock list"
-msgstr "显示广告屏蔽列表"
+#~ msgid "No blockable element found."
+#~ msgstr "没找到可屏蔽的元素。"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:45
-#, kde-format
-msgid "Delete List"
-msgstr "删除列表"
+#~ msgid "Filter"
+#~ msgstr "过滤器"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:62
-#, kde-format
-msgid "Download..."
-msgstr "下载..."
+#~ msgid "Address"
+#~ msgstr "地址"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:135
-#, kde-format
-msgid "An error occurred while downloading the list: \"%1\""
-msgstr "下载列表时出现错误：“%1”"
+#~ msgid "Type"
+#~ msgstr "类型"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:31
-#, kde-format
-msgid "Filters:"
-msgstr "过滤："
+#~ msgid "Copy URL"
+#~ msgstr "复制 URL"
 
-#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:49
-#, kde-format
-msgid "&Blocking filter"
-msgstr "屏蔽过滤器(&B)"
+#~ msgid "Copy filter"
+#~ msgstr "复制过滤器"
 
-#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:56
-#, kde-format
-msgid "Exception Filter"
-msgstr "例外过滤器"
+#~ msgid "Block item..."
+#~ msgstr "屏蔽项..."
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:65
-#, kde-format
-msgid "Pattern"
-msgstr "模式"
+#~ msgid "Open"
+#~ msgstr "打开"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:73
-#, kde-format
-msgid "custom"
-msgstr "自定义"
+#~ msgid "Remove filter"
+#~ msgstr "移除过滤器"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:88
-#, kde-format
-msgid "Accept pattern only"
-msgstr "正接受模式"
+#~ msgid "Image"
+#~ msgstr "图像"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
-#, kde-format
-msgid "At the beginning of the address"
-msgstr "在地址的开头"
+#~ msgid "Script"
+#~ msgstr "脚本"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
-#, kde-format
-msgid "At the end of address"
-msgstr "在地址的结尾"
+#~ msgid "Stylesheet"
+#~ msgstr "样式表"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
-#, kde-format
-msgid "Options"
-msgstr "选项"
+#~ msgid "Font"
+#~ msgstr "字体"
 
-#. i18n: ectx: property (text), widget (QCheckBox, firstPartOnly)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
-#, kde-format
-msgid "First-part only"
-msgstr "只是第一部分"
+#~ msgid "Frame"
+#~ msgstr "框架"
 
-#. i18n: ectx: property (text), widget (QCheckBox, matchCase)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
-#, kde-format
-msgid "Match case"
-msgstr "区分大小写"
+#~ msgid "XML Request"
+#~ msgstr "XML请求"
 
-#. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
-#, kde-format
-msgid "Restrict to domain"
-msgstr "限制到域名"
+#~ msgid "Object"
+#~ msgstr "对象"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
-#, kde-format
-msgid "Apply to:"
-msgstr "应用到："
+#~ msgid "Audio/Video"
+#~ msgstr "音频/视频"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:160
-#, kde-format
-msgid "Collapse blocked:"
-msgstr "折叠屏蔽的："
+#~ msgid "Popup window"
+#~ msgstr "弹出窗口"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
-#: adblock/lib/widgets/ui/settings_adblock.ui:29
-#, kde-format
-msgid "&Enable Ad Block"
-msgstr "启用广告屏蔽(&E)"
+#~ msgid "Unknown"
+#~ msgstr "未知"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
-#: adblock/lib/widgets/ui/settings_adblock.ui:36
-#, kde-format
-msgid "&Hide filtered elements"
-msgstr "隐藏过滤的元素(&H)"
+#~ msgctxt "@title:window"
+#~ msgid "Create Filter"
+#~ msgstr "创建过滤器"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:50
-#, kde-format
-msgid "Automatic Filters"
-msgstr "自动过滤器"
+#~ msgid "Use default"
+#~ msgstr "使用默认值"
 
-#. i18n: ectx: property (text), widget (QPushButton, addFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:56
-#, kde-format
-msgid "Add Filters subscriptions..."
-msgstr "添加过滤器订阅..."
+#~ msgid "Yes"
+#~ msgstr "是"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeSubscription)
-#: adblock/lib/widgets/ui/settings_adblock.ui:76
-#, kde-format
-msgid "Remove subscription"
-msgstr "移除订阅"
+#~ msgid "Not"
+#~ msgstr "否"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:98
-#, kde-format
-msgid "Update enabled automatic filters every:"
-msgstr "已启用自动过滤器的更新间隔："
+#~ msgid "No subscription added"
+#~ msgstr "没有添加订阅"
 
-#. i18n: ectx: property (text), widget (QPushButton, showList)
-#: adblock/lib/widgets/ui/settings_adblock.ui:136
-#, kde-format
-msgid "Show List..."
-msgstr "显示列表..."
+#~ msgid ""
+#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">more information</a>):"
+#~ msgstr ""
+#~ "<qt>过滤表达式(如 <tt>http://www.example.com/ad/*</tt>，<a href="
+#~ "\"filterhelp\">更多信息</a>)："
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: adblock/lib/widgets/ui/settings_adblock.ui:144
-#, kde-format
-msgid "Manual Filters"
-msgstr "手动过滤器"
+#~ msgid " day"
+#~ msgid_plural " days"
+#~ msgstr[0] " 天"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:155
-#, kde-format
-msgid "Add filter expression"
-msgstr "添加过滤器表达式"
+#~ msgid ""
+#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
+#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
+#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
+#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
+#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
+#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
+#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
+#~ msgstr ""
+#~ "<qt><p>输入过滤表达式。它可以像这样定义：<ul><li>shell 风格的通配符，如："
+#~ "<tt>http://www.example.com/ads*</tt>，其中的 <tt>*?[]</tt> 就是通配符</"
+#~ "li><li>由“<tt>/</tt>”符号包起来的完整正则表达式，如：<tt>/\\/(ad|"
+#~ "banner)\\./</tt></li></ul><p>任何以 “<tt>@@</tt>” 开头的过滤字符串都表示白"
+#~ "名单里的 URL，其优先级要高于黑名单。<br><a href='%1'>%2</a></qt>"
 
-#. i18n: ectx: property (text), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:158
-#, kde-format
-msgid "..."
-msgstr "..."
+#~ msgid "More information"
+#~ msgstr "更多信息"
 
-#. i18n: ectx: property (text), widget (QPushButton, importFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:200
-#, kde-format
-msgid "Import Filters..."
-msgstr "导入过滤器..."
+#~ msgid "Do you want to remove this rule?"
+#~ msgid_plural "Do you want to remove these rules?"
+#~ msgstr[0] "您是否要删除这条规则？"
 
-#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:207
-#, kde-format
-msgid "Export filters..."
-msgstr "导出过滤器..."
+#~ msgid "Do you want to delete list \"%1\"?"
+#~ msgstr "您是否想要删除列表“%1”？"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/settings_adblock.ui:216
-#, kde-format
-msgid "Search:"
-msgstr "搜索："
+#~ msgid "Delete current list"
+#~ msgstr "删除当前列表"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFilter)
-#: adblock/lib/widgets/ui/settings_adblock.ui:228
-#, kde-format
-msgid "Edit"
-msgstr "编辑"
+#~ msgid "All Files (*)"
+#~ msgstr "所有文件 (*)"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:235
-#, kde-format
-msgid "Remove filter expression"
-msgstr "删除过滤器表达式"
+#~ msgid "Import Filters"
+#~ msgstr "导入过滤器"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:238
-#, kde-format
-msgid "Remove Filter"
-msgstr "移除过滤器"
+#~ msgid "Export Filters"
+#~ msgstr "导出过滤器"
+
+#~ msgid "Download..."
+#~ msgstr "下载..."
+
+#~ msgid "An error occurred while downloading the list: \"%1\""
+#~ msgstr "下载列表时出现错误：“%1”"
+
+#~ msgid "Filters:"
+#~ msgstr "过滤："
+
+#~ msgid "&Blocking filter"
+#~ msgstr "屏蔽过滤器(&B)"
+
+#~ msgid "Exception Filter"
+#~ msgstr "例外过滤器"
+
+#~ msgid "Pattern"
+#~ msgstr "模式"
+
+#~ msgid "custom"
+#~ msgstr "自定义"
+
+#~ msgid "Accept pattern only"
+#~ msgstr "正接受模式"
+
+#~ msgid "At the beginning of the address"
+#~ msgstr "在地址的开头"
+
+#~ msgid "At the end of address"
+#~ msgstr "在地址的结尾"
+
+#~ msgid "Options"
+#~ msgstr "选项"
+
+#~ msgid "First-part only"
+#~ msgstr "只是第一部分"
+
+#~ msgid "Match case"
+#~ msgstr "区分大小写"
+
+#~ msgid "Restrict to domain"
+#~ msgstr "限制到域名"
+
+#~ msgid "Apply to:"
+#~ msgstr "应用到："
+
+#~ msgid "Collapse blocked:"
+#~ msgstr "折叠屏蔽的："
+
+#~ msgid "&Enable Ad Block"
+#~ msgstr "启用广告屏蔽(&E)"
+
+#~ msgid "&Hide filtered elements"
+#~ msgstr "隐藏过滤的元素(&H)"
+
+#~ msgid "Automatic Filters"
+#~ msgstr "自动过滤器"
+
+#~ msgid "Add Filters subscriptions..."
+#~ msgstr "添加过滤器订阅..."
+
+#~ msgid "Remove subscription"
+#~ msgstr "移除订阅"
+
+#~ msgid "Update enabled automatic filters every:"
+#~ msgstr "已启用自动过滤器的更新间隔："
+
+#~ msgid "Show List..."
+#~ msgstr "显示列表..."
+
+#~ msgid "Manual Filters"
+#~ msgstr "手动过滤器"
+
+#~ msgid "Add filter expression"
+#~ msgstr "添加过滤器表达式"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Import Filters..."
+#~ msgstr "导入过滤器..."
+
+#~ msgid "Export filters..."
+#~ msgstr "导出过滤器..."
+
+#~ msgid "Search:"
+#~ msgstr "搜索："
+
+#~ msgid "Edit"
+#~ msgstr "编辑"
+
+#~ msgid "Remove filter expression"
+#~ msgstr "删除过滤器表达式"
+
+#~ msgid "Remove Filter"
+#~ msgstr "移除过滤器"

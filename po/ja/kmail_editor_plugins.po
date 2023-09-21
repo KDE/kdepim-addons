@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2016-06-20 21:04-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -67,18 +67,18 @@ msgid ""
 "'%1'"
 msgstr ""
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:22
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
 msgid "Insert Special Character..."
 msgstr ""
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr ""
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
 #, kde-format
 msgid "Insert"
 msgstr ""
@@ -192,7 +192,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: sharetext/sharetextplugineditorinterface.cpp:30
+#: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
 msgid "Share Mail Text..."
 msgstr ""

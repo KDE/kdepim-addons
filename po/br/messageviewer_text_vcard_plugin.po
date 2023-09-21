@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim/kmail_text_vcard_plugin.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-31 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: Breton <LL@li.org>\n"
@@ -41,40 +41,40 @@ msgstr "[Ouzhpennañ an darempred-mañ er c'harned chomlec'hioù]"
 msgid "[This contact is already in addressbook]"
 msgstr "[Ouzhpennañ an darempred-mañ er c'harned chomlec'hioù]"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:215
 #, kde-format
 msgid "View Business Card"
 msgstr ""
 
-#: text_vcard.cpp:224
+#: text_vcard.cpp:216
 #, kde-format
 msgid "Save Business Card As..."
 msgstr ""
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:233
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Ouzhpennañ an darempred-mañ er c'harned chomlec'hioù."
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:233
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "Update this contact to the address book."
 msgstr "[Ouzhpennañ an darempred-mañ er c'harned chomlec'hioù]"
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:235
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Add \"%1\" to the address book."
 msgstr "Ouzhpennañ an darempred-mañ er c'harned chomlec'hioù."
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:235
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Update \"%1\" to the address book."
 msgstr "Ouzhpennañ an darempred-mañ er c'harned chomlec'hioù."
 
-#: text_vcard.cpp:267
+#: text_vcard.cpp:259
 #, kde-format
 msgid "Save Business Card"
 msgstr ""

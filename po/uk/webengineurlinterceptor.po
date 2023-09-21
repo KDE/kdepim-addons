@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2019-12-17 08:58+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,482 +20,321 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.03.70\n"
 
-#: adblock/adblockinterceptorinterface.cpp:49
-#, kde-format
-msgid "Open Blockable Items..."
-msgstr "Відкрити список блокованих елементів…"
-
-#: adblock/adblockinterceptorinterface.cpp:53
-#, kde-format
-msgid "Block Image"
-msgstr "Заблокувати зображення"
-
-#: adblock/lib/adblocksubscription.cpp:141
-#, kde-format
-msgid "Cannot load subscription!"
-msgstr "Не вдалося завантажити підписку!"
-
-#: adblock/lib/adblocksubscription.cpp:257
-#, kde-format
-msgid "Custom Rules"
-msgstr "Нетипові правила"
-
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
-#, kde-format
-msgid "Enabled ad block"
-msgstr "Увімкнено блокування реклами"
-
-#. i18n: ectx: label, entry (HideAdsEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
-#, kde-format
-msgid "Hide advertisement enabled"
-msgstr "Увімкнено приховування реклами"
-
-#. i18n: ectx: label, entry (AdBlockUpdateInterval), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:16
-#, kde-format
-msgid "Update interval list of adblock"
-msgstr "Проміжок між оновленням списку блокування реклами"
-
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:26
-#, kde-format
+#: adblock/adblockfilterdialog.cpp:17
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Show adblock list"
 msgctxt "@title:window"
-msgid "Add subscription"
-msgstr "Додавання підписки"
+msgid "Add Adblock List"
+msgstr "Показ списку блокування реклами"
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:32
+#: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
-msgid "Select List:"
-msgstr "Виберіть список:"
+msgid "Add..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:41
+#: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
-msgid "Show List"
-msgstr "Показати список"
+msgid "Modify..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemsdialog.cpp:26
+#: adblock/adblockfilterlistsview.cpp:56
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "Вилучити список"
+
+#: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
-msgctxt "@title:window"
-msgid "Blockable Items"
-msgstr "Елементи блокування"
+msgid "Remove"
+msgstr "Вилучення"
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:35
-#, kde-format
-msgid "No blockable element found."
-msgstr "Елементів блокування не знайдено."
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Filter"
-msgstr "Фільтр"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Address"
-msgstr "Адреса"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Type"
-msgstr "Тип"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:46
+#: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Шукати…"
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:103
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
-msgid "Copy URL"
-msgstr "Копіювати адресу"
+msgid "Name:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:106
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
-msgid "Copy filter"
-msgstr "Копіювати фільтр"
+msgid "Url:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:108
-#, kde-format
-msgid "Block item..."
-msgstr "Заблокувати елемент…"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:110
-#, kde-format
-msgid "Open"
-msgstr "Відкрити"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:113
-#, kde-format
-msgid "Remove filter"
-msgstr "Вилучити фільтр"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:185
-#, kde-format
-msgid "Image"
-msgstr "Зображення"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:188
-#, kde-format
-msgid "Script"
-msgstr "Скрипт"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:191
-#, kde-format
-msgid "Stylesheet"
-msgstr "Таблиця стилів"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:194
-#, kde-format
-msgid "Font"
-msgstr "Шрифт"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:197
-#, kde-format
-msgid "Frame"
-msgstr "Фрейм"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:200
-#, kde-format
-msgid "XML Request"
-msgstr "Запит XML"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:203
-#, kde-format
-msgid "Object"
-msgstr "Об'єкт"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:206
-#, kde-format
-msgid "Audio/Video"
-msgstr "Звук/Відео"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:209
-#, kde-format
-msgid "Popup window"
-msgstr "Контекстне вікно"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:213
-#, kde-format
-msgid "Unknown"
-msgstr "Невідомий"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:22
-#, kde-format
-msgctxt "@title:window"
-msgid "Create Filter"
-msgstr "Створення фільтра"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:46
-#, kde-format
-msgid "Use default"
-msgstr "Типовий"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:47
-#, kde-format
-msgid "Yes"
-msgstr "Так"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:48
-#, kde-format
-msgid "Not"
-msgstr "Ні"
-
-#: adblock/lib/widgets/adblocklistwidget.cpp:52
-#, kde-format
-msgid "No subscription added"
-msgstr "Підписок не додано"
-
-#: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:18
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Налаштовування додатка блокування реклами"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:53
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
-msgid ""
-"<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-"\"filterhelp\">more information</a>):"
-msgstr ""
-"<qt>Ключ фільтрування (наприклад <tt>http://www.example.com/ad/*</tt>, <a "
-"href=\"filterhelp\">додаткові відомості</a>):"
+msgid "Enabled ad block"
+msgstr "Увімкнено блокування реклами"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:69
-#, kde-format
-msgid " day"
-msgid_plural " days"
-msgstr[0] " день"
-msgstr[1] " дні"
-msgstr[2] " днів"
-msgstr[3] " день"
+#~ msgid "Open Blockable Items..."
+#~ msgstr "Відкрити список блокованих елементів…"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:142
-#, kde-format
-msgid ""
-"<qt><p>Enter an expression to filter. Filters can be defined as either:"
-"<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
-"the wildcards <tt>*?[]</tt> may be used</li><li>a full regular expression by "
-"surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</tt></"
-"li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist "
-"(allow) any matching URL, which takes priority over any blacklist (blocking) "
-"filter.<br><a href='%1'>%2</a></qt>"
-msgstr ""
-"<qt><p>Введіть вираз-фільтр. Фільтри можна визначити у декілька способів:"
-"<ul><li>у стилі шаблону командної оболонки, наприклад, <tt>http://www."
-"example.com/ads*</tt>, можна використовувати шаблони заміни <tt>*?[]</tt></"
-"li><li>як повноцінний формальний вираз (для цього рядок слід обмежити "
-"символами «<tt>/</tt>», наприклад, <tt>/\\/(ad|banner)\\./</tt></li></"
-"ul><p>Перед будь-яким з рядків-фільтрів можна вказати «<tt>@@</tt>», щоб "
-"додати до «білого» списку всі відповідні адреси. Подібні фільтри "
-"отримуватимуть вищий пріоритет, ніж фільтри «чорного» списку (списку "
-"блокування).<br><a href='%1'>%2</a></qt>"
+#~ msgid "Block Image"
+#~ msgstr "Заблокувати зображення"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:150
-#, kde-format
-msgid "More information"
-msgstr "Докладніше"
+#~ msgid "Cannot load subscription!"
+#~ msgstr "Не вдалося завантажити підписку!"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:194
-#, kde-format
-msgid "Do you want to remove this rule?"
-msgid_plural "Do you want to remove these rules?"
-msgstr[0] "Хочете вилучити ці правила?"
-msgstr[1] "Хочете вилучити ці правила?"
-msgstr[2] "Хочете вилучити ці правила?"
-msgstr[3] "Хочете вилучити це правило?"
+#~ msgid "Custom Rules"
+#~ msgstr "Нетипові правила"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:195
-#, kde-format
-msgid "Remove"
-msgstr "Вилучення"
+#~ msgid "Hide advertisement enabled"
+#~ msgstr "Увімкнено приховування реклами"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:336
-#, kde-format
-msgid "Do you want to delete list \"%1\"?"
-msgstr "Хочете вилучити список «%1»?"
+#~ msgid "Update interval list of adblock"
+#~ msgstr "Проміжок між оновленням списку блокування реклами"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:337
-#, kde-format
-msgid "Delete current list"
-msgstr "Вилучити поточний список"
+#~ msgctxt "@title:window"
+#~ msgid "Add subscription"
+#~ msgstr "Додавання підписки"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:382
-#: adblock/lib/widgets/adblocksettingwidget.cpp:424
-#, kde-format
-msgid "All Files (*)"
-msgstr "усі файли (*)"
+#~ msgid "Select List:"
+#~ msgstr "Виберіть список:"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:383
-#, kde-format
-msgid "Import Filters"
-msgstr "Імпорт фільтрів"
+#~ msgid "Show List"
+#~ msgstr "Показати список"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:434
-#, kde-format
-msgid "Export Filters"
-msgstr "Експорт фільтрів"
+#~ msgctxt "@title:window"
+#~ msgid "Blockable Items"
+#~ msgstr "Елементи блокування"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:38
-#, kde-format
-msgctxt "@title:window"
-msgid "Show adblock list"
-msgstr "Показ списку блокування реклами"
+#~ msgid "No blockable element found."
+#~ msgstr "Елементів блокування не знайдено."
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:45
-#, kde-format
-msgid "Delete List"
-msgstr "Вилучити список"
+#~ msgid "Filter"
+#~ msgstr "Фільтр"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:62
-#, kde-format
-msgid "Download..."
-msgstr "Отримати…"
+#~ msgid "Address"
+#~ msgstr "Адреса"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:135
-#, kde-format
-msgid "An error occurred while downloading the list: \"%1\""
-msgstr "Сталась помилка під час отримання списку: «%1»"
+#~ msgid "Type"
+#~ msgstr "Тип"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:31
-#, kde-format
-msgid "Filters:"
-msgstr "Фільтри:"
+#~ msgid "Copy URL"
+#~ msgstr "Копіювати адресу"
 
-#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:49
-#, kde-format
-msgid "&Blocking filter"
-msgstr "Фільтр &блокування"
+#~ msgid "Copy filter"
+#~ msgstr "Копіювати фільтр"
 
-#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:56
-#, kde-format
-msgid "Exception Filter"
-msgstr "Фільтр виключень"
+#~ msgid "Block item..."
+#~ msgstr "Заблокувати елемент…"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:65
-#, kde-format
-msgid "Pattern"
-msgstr "Взірець"
+#~ msgid "Open"
+#~ msgstr "Відкрити"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:73
-#, kde-format
-msgid "custom"
-msgstr "нетиповий"
+#~ msgid "Remove filter"
+#~ msgstr "Вилучити фільтр"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:88
-#, kde-format
-msgid "Accept pattern only"
-msgstr "Приймати лише за зразками"
+#~ msgid "Image"
+#~ msgstr "Зображення"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
-#, kde-format
-msgid "At the beginning of the address"
-msgstr "На початку адреси"
+#~ msgid "Script"
+#~ msgstr "Скрипт"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
-#, kde-format
-msgid "At the end of address"
-msgstr "Наприкінці адреси"
+#~ msgid "Stylesheet"
+#~ msgstr "Таблиця стилів"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
-#, kde-format
-msgid "Options"
-msgstr "Параметри"
+#~ msgid "Font"
+#~ msgstr "Шрифт"
 
-#. i18n: ectx: property (text), widget (QCheckBox, firstPartOnly)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
-#, kde-format
-msgid "First-part only"
-msgstr "Лише перша частина"
+#~ msgid "Frame"
+#~ msgstr "Фрейм"
 
-#. i18n: ectx: property (text), widget (QCheckBox, matchCase)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
-#, kde-format
-msgid "Match case"
-msgstr "Враховувати регістр"
+#~ msgid "XML Request"
+#~ msgstr "Запит XML"
 
-#. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
-#, kde-format
-msgid "Restrict to domain"
-msgstr "Обмежити доменом"
+#~ msgid "Object"
+#~ msgstr "Об'єкт"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
-#, kde-format
-msgid "Apply to:"
-msgstr "Застосувати до:"
+#~ msgid "Audio/Video"
+#~ msgstr "Звук/Відео"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:160
-#, kde-format
-msgid "Collapse blocked:"
-msgstr "Згортати заблоковані:"
+#~ msgid "Popup window"
+#~ msgstr "Контекстне вікно"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
-#: adblock/lib/widgets/ui/settings_adblock.ui:29
-#, kde-format
-msgid "&Enable Ad Block"
-msgstr "&Увімкнути блокування реклами"
+#~ msgid "Unknown"
+#~ msgstr "Невідомий"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
-#: adblock/lib/widgets/ui/settings_adblock.ui:36
-#, kde-format
-msgid "&Hide filtered elements"
-msgstr "При&ховати фільтровані елементи"
+#~ msgctxt "@title:window"
+#~ msgid "Create Filter"
+#~ msgstr "Створення фільтра"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:50
-#, kde-format
-msgid "Automatic Filters"
-msgstr "Автоматичне фільтрування"
+#~ msgid "Use default"
+#~ msgstr "Типовий"
 
-#. i18n: ectx: property (text), widget (QPushButton, addFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:56
-#, kde-format
-msgid "Add Filters subscriptions..."
-msgstr "Додати підписки на фільтри…"
+#~ msgid "Yes"
+#~ msgstr "Так"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeSubscription)
-#: adblock/lib/widgets/ui/settings_adblock.ui:76
-#, kde-format
-msgid "Remove subscription"
-msgstr "Вилучити підписку"
+#~ msgid "Not"
+#~ msgstr "Ні"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:98
-#, kde-format
-msgid "Update enabled automatic filters every:"
-msgstr "Оновлювати увімкнені автоматичні фільтри кожні:"
+#~ msgid "No subscription added"
+#~ msgstr "Підписок не додано"
 
-#. i18n: ectx: property (text), widget (QPushButton, showList)
-#: adblock/lib/widgets/ui/settings_adblock.ui:136
-#, kde-format
-msgid "Show List..."
-msgstr "Показати список…"
+#~ msgid ""
+#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">more information</a>):"
+#~ msgstr ""
+#~ "<qt>Ключ фільтрування (наприклад <tt>http://www.example.com/ad/*</tt>, <a "
+#~ "href=\"filterhelp\">додаткові відомості</a>):"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: adblock/lib/widgets/ui/settings_adblock.ui:144
-#, kde-format
-msgid "Manual Filters"
-msgstr "Фільтрування вручну"
+#~ msgid " day"
+#~ msgid_plural " days"
+#~ msgstr[0] " день"
+#~ msgstr[1] " дні"
+#~ msgstr[2] " днів"
+#~ msgstr[3] " день"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:155
-#, kde-format
-msgid "Add filter expression"
-msgstr "Додати правило фільтрування"
+#~ msgid ""
+#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
+#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
+#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
+#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
+#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
+#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
+#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
+#~ msgstr ""
+#~ "<qt><p>Введіть вираз-фільтр. Фільтри можна визначити у декілька способів:"
+#~ "<ul><li>у стилі шаблону командної оболонки, наприклад, <tt>http://www."
+#~ "example.com/ads*</tt>, можна використовувати шаблони заміни <tt>*?[]</"
+#~ "tt></li><li>як повноцінний формальний вираз (для цього рядок слід "
+#~ "обмежити символами «<tt>/</tt>», наприклад, <tt>/\\/(ad|banner)\\./</tt></"
+#~ "li></ul><p>Перед будь-яким з рядків-фільтрів можна вказати «<tt>@@</tt>», "
+#~ "щоб додати до «білого» списку всі відповідні адреси. Подібні фільтри "
+#~ "отримуватимуть вищий пріоритет, ніж фільтри «чорного» списку (списку "
+#~ "блокування).<br><a href='%1'>%2</a></qt>"
 
-#. i18n: ectx: property (text), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:158
-#, kde-format
-msgid "..."
-msgstr "…"
+#~ msgid "More information"
+#~ msgstr "Докладніше"
 
-#. i18n: ectx: property (text), widget (QPushButton, importFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:200
-#, kde-format
-msgid "Import Filters..."
-msgstr "Імпортувати фільтри…"
+#~ msgid "Do you want to remove this rule?"
+#~ msgid_plural "Do you want to remove these rules?"
+#~ msgstr[0] "Хочете вилучити ці правила?"
+#~ msgstr[1] "Хочете вилучити ці правила?"
+#~ msgstr[2] "Хочете вилучити ці правила?"
+#~ msgstr[3] "Хочете вилучити це правило?"
 
-#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:207
-#, kde-format
-msgid "Export filters..."
-msgstr "Експортувати фільтри…"
+#~ msgid "Do you want to delete list \"%1\"?"
+#~ msgstr "Хочете вилучити список «%1»?"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/settings_adblock.ui:216
-#, kde-format
-msgid "Search:"
-msgstr "Пошук:"
+#~ msgid "Delete current list"
+#~ msgstr "Вилучити поточний список"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFilter)
-#: adblock/lib/widgets/ui/settings_adblock.ui:228
-#, kde-format
-msgid "Edit"
-msgstr "Змінити"
+#~ msgid "All Files (*)"
+#~ msgstr "усі файли (*)"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:235
-#, kde-format
-msgid "Remove filter expression"
-msgstr "Вилучити правило фільтрування"
+#~ msgid "Import Filters"
+#~ msgstr "Імпорт фільтрів"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:238
-#, kde-format
-msgid "Remove Filter"
-msgstr "Вилучити фільтр"
+#~ msgid "Export Filters"
+#~ msgstr "Експорт фільтрів"
+
+#~ msgid "Download..."
+#~ msgstr "Отримати…"
+
+#~ msgid "An error occurred while downloading the list: \"%1\""
+#~ msgstr "Сталась помилка під час отримання списку: «%1»"
+
+#~ msgid "Filters:"
+#~ msgstr "Фільтри:"
+
+#~ msgid "&Blocking filter"
+#~ msgstr "Фільтр &блокування"
+
+#~ msgid "Exception Filter"
+#~ msgstr "Фільтр виключень"
+
+#~ msgid "Pattern"
+#~ msgstr "Взірець"
+
+#~ msgid "custom"
+#~ msgstr "нетиповий"
+
+#~ msgid "Accept pattern only"
+#~ msgstr "Приймати лише за зразками"
+
+#~ msgid "At the beginning of the address"
+#~ msgstr "На початку адреси"
+
+#~ msgid "At the end of address"
+#~ msgstr "Наприкінці адреси"
+
+#~ msgid "Options"
+#~ msgstr "Параметри"
+
+#~ msgid "First-part only"
+#~ msgstr "Лише перша частина"
+
+#~ msgid "Match case"
+#~ msgstr "Враховувати регістр"
+
+#~ msgid "Restrict to domain"
+#~ msgstr "Обмежити доменом"
+
+#~ msgid "Apply to:"
+#~ msgstr "Застосувати до:"
+
+#~ msgid "Collapse blocked:"
+#~ msgstr "Згортати заблоковані:"
+
+#~ msgid "&Enable Ad Block"
+#~ msgstr "&Увімкнути блокування реклами"
+
+#~ msgid "&Hide filtered elements"
+#~ msgstr "При&ховати фільтровані елементи"
+
+#~ msgid "Automatic Filters"
+#~ msgstr "Автоматичне фільтрування"
+
+#~ msgid "Add Filters subscriptions..."
+#~ msgstr "Додати підписки на фільтри…"
+
+#~ msgid "Remove subscription"
+#~ msgstr "Вилучити підписку"
+
+#~ msgid "Update enabled automatic filters every:"
+#~ msgstr "Оновлювати увімкнені автоматичні фільтри кожні:"
+
+#~ msgid "Show List..."
+#~ msgstr "Показати список…"
+
+#~ msgid "Manual Filters"
+#~ msgstr "Фільтрування вручну"
+
+#~ msgid "Add filter expression"
+#~ msgstr "Додати правило фільтрування"
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgid "Import Filters..."
+#~ msgstr "Імпортувати фільтри…"
+
+#~ msgid "Export filters..."
+#~ msgstr "Експортувати фільтри…"
+
+#~ msgid "Search:"
+#~ msgstr "Пошук:"
+
+#~ msgid "Edit"
+#~ msgstr "Змінити"
+
+#~ msgid "Remove filter expression"
+#~ msgstr "Вилучити правило фільтрування"
+
+#~ msgid "Remove Filter"
+#~ msgstr "Вилучити фільтр"
 
 #~ msgid "AdBlock"
 #~ msgstr "Блокування реклами"

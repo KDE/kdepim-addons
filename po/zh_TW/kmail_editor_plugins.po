@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2018-12-21 19:36+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -72,19 +72,19 @@ msgstr ""
 "來自伺服器的錯誤回報：\n"
 "「%1」"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:22
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
 msgid "Insert Special Character..."
 msgstr "插入特殊符號…"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, fuzzy, kde-format
 #| msgid "Insert Special Character"
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "插入特殊符號"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
 #, kde-format
 msgid "Insert"
 msgstr "插入"
@@ -198,7 +198,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: sharetext/sharetextplugineditorinterface.cpp:30
+#: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
 msgid "Share Mail Text..."
 msgstr "分享信件文字…"

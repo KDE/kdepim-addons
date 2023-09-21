@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2023-09-16 10:08\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -38,32 +38,32 @@ msgstr "导入 CSV 文件..."
 msgid "Import contacts from a file in comma separated value format."
 msgstr "从以逗号分隔各条目的文件中导入联系人。"
 
-#: csv/csvimportexportplugininterface.cpp:152
+#: csv/csvimportexportplugininterface.cpp:148
 #: gmx/gmximportexportplugininterface.cpp:80
-#: ldif/ldifimportexportplugininterface.cpp:130
+#: ldif/ldifimportexportplugininterface.cpp:123
 #: vcards/vcardimportexportplugininterface.cpp:370
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "您想要导出哪一位联系人？"
 
-#: csv/csvimportexportplugininterface.cpp:162
+#: csv/csvimportexportplugininterface.cpp:158
 #: gmx/gmximportexportplugininterface.cpp:90
-#: ldif/ldifimportexportplugininterface.cpp:140
+#: ldif/ldifimportexportplugininterface.cpp:133
 #: vcards/vcardimportexportplugininterface.cpp:382
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "您还没有选择任何要导出的联系人。"
 
-#: csv/csvimportexportplugininterface.cpp:191
+#: csv/csvimportexportplugininterface.cpp:187
 #: gmx/gmximportexportplugininterface.cpp:124
-#: ldif/ldifimportexportplugininterface.cpp:161
+#: ldif/ldifimportexportplugininterface.cpp:154
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>无法打开文件 <b>%1</b></qt>"
 
-#: csv/csvimportexportplugininterface.cpp:203
+#: csv/csvimportexportplugininterface.cpp:199
 #: gmx/gmximportexportplugininterface.cpp:139
-#: ldif/ldifimportexportplugininterface.cpp:191
+#: ldif/ldifimportexportplugininterface.cpp:184
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>无法打开文件 <b>%1</b>。</qt>"
@@ -468,14 +468,14 @@ msgstr "导出 GMX 文件..."
 msgid "Export contacts to a GMX address book file."
 msgstr "导出联系人为 GMX 地址簿文件。"
 
-#: gmx/gmximportexportplugininterface.cpp:438
+#: gmx/gmximportexportplugininterface.cpp:434
 #: ldif/ldifimportexportplugininterface.cpp:80
 #: windows-contacts/importwindowcontact.cpp:26
 #, kde-format
 msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
 msgstr "<qt>无法打开 <b>%1</b> 进行读取。</qt>"
 
-#: gmx/gmximportexportplugininterface.cpp:455
+#: gmx/gmximportexportplugininterface.cpp:447
 #, kde-format
 msgid "%1 is not a GMX address book file."
 msgstr "%1 不是一个 GMX 地址簿文件。"
@@ -510,12 +510,12 @@ msgstr "导出 LDIF 文件..."
 msgid "Export contacts to an LDIF file."
 msgstr "导出联系人为 LDIF 文件。"
 
-#: ldif/ldifimportexportplugininterface.cpp:110
+#: ldif/ldifimportexportplugininterface.cpp:106
 #, kde-format
 msgid "LDif Files"
 msgstr "LDif 文件"
 
-#: ldif/ldifimportexportplugininterface.cpp:151
+#: ldif/ldifimportexportplugininterface.cpp:144
 #, kde-format
 msgid "LDif Files (*.ldif)"
 msgstr "LDif 文件 (*.ldif)"

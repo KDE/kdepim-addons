@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2009-06-22 16:49+0200\n"
 "Last-Translator: ivan <admin@linuxzasve.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -41,33 +41,33 @@ msgstr "Uvezi CSV popis..."
 msgid "Import contacts from a file in comma separated value format."
 msgstr ""
 
-#: csv/csvimportexportplugininterface.cpp:152
+#: csv/csvimportexportplugininterface.cpp:148
 #: gmx/gmximportexportplugininterface.cpp:80
-#: ldif/ldifimportexportplugininterface.cpp:130
+#: ldif/ldifimportexportplugininterface.cpp:123
 #: vcards/vcardimportexportplugininterface.cpp:370
 #, fuzzy, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Koje kontakte želite da izvezete?"
 
-#: csv/csvimportexportplugininterface.cpp:162
+#: csv/csvimportexportplugininterface.cpp:158
 #: gmx/gmximportexportplugininterface.cpp:90
-#: ldif/ldifimportexportplugininterface.cpp:140
+#: ldif/ldifimportexportplugininterface.cpp:133
 #: vcards/vcardimportexportplugininterface.cpp:382
 #, fuzzy, kde-format
 #| msgid "Select a filter to decide which contacts to export."
 msgid "You have not selected any contacts to export."
 msgstr "Odaberite filter da označite koje kontakte želite izvesti."
 
-#: csv/csvimportexportplugininterface.cpp:191
+#: csv/csvimportexportplugininterface.cpp:187
 #: gmx/gmximportexportplugininterface.cpp:124
-#: ldif/ldifimportexportplugininterface.cpp:161
+#: ldif/ldifimportexportplugininterface.cpp:154
 #, fuzzy, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>Ne mogu otvoriti datoteku <b>%1</b>.</qt>"
 
-#: csv/csvimportexportplugininterface.cpp:203
+#: csv/csvimportexportplugininterface.cpp:199
 #: gmx/gmximportexportplugininterface.cpp:139
-#: ldif/ldifimportexportplugininterface.cpp:191
+#: ldif/ldifimportexportplugininterface.cpp:184
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>Ne mogu otvoriti datoteku <b>%1</b>.</qt>"
@@ -472,14 +472,14 @@ msgstr "Izvezi LDIF adresar..."
 msgid "Export contacts to a GMX address book file."
 msgstr "KAdresar"
 
-#: gmx/gmximportexportplugininterface.cpp:438
+#: gmx/gmximportexportplugininterface.cpp:434
 #: ldif/ldifimportexportplugininterface.cpp:80
 #: windows-contacts/importwindowcontact.cpp:26
 #, fuzzy, kde-format
 msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
 msgstr "<qt>Ne mogu otvoriti <b>%1</b> za čitanje.</qt>"
 
-#: gmx/gmximportexportplugininterface.cpp:455
+#: gmx/gmximportexportplugininterface.cpp:447
 #, fuzzy, kde-format
 msgid "%1 is not a GMX address book file."
 msgstr "KAdresar"
@@ -514,12 +514,12 @@ msgstr "Izvezi LDIF adresar..."
 msgid "Export contacts to an LDIF file."
 msgstr "Izvezi LDIF adresar..."
 
-#: ldif/ldifimportexportplugininterface.cpp:110
+#: ldif/ldifimportexportplugininterface.cpp:106
 #, kde-format
 msgid "LDif Files"
 msgstr ""
 
-#: ldif/ldifimportexportplugininterface.cpp:151
+#: ldif/ldifimportexportplugininterface.cpp:144
 #, kde-format
 msgid "LDif Files (*.ldif)"
 msgstr ""

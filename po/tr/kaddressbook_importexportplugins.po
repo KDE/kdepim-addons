@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2023-05-15 22:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -44,32 +44,32 @@ msgstr "CSV dosyası içe aktar..."
 msgid "Import contacts from a file in comma separated value format."
 msgstr "Virgülle ayrılmış biçimdeki bir dosyadan kişileri içe aktar."
 
-#: csv/csvimportexportplugininterface.cpp:152
+#: csv/csvimportexportplugininterface.cpp:148
 #: gmx/gmximportexportplugininterface.cpp:80
-#: ldif/ldifimportexportplugininterface.cpp:130
+#: ldif/ldifimportexportplugininterface.cpp:123
 #: vcards/vcardimportexportplugininterface.cpp:370
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Hangi kişiyi dışa aktarmak istiyorsunuz?"
 
-#: csv/csvimportexportplugininterface.cpp:162
+#: csv/csvimportexportplugininterface.cpp:158
 #: gmx/gmximportexportplugininterface.cpp:90
-#: ldif/ldifimportexportplugininterface.cpp:140
+#: ldif/ldifimportexportplugininterface.cpp:133
 #: vcards/vcardimportexportplugininterface.cpp:382
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Dışa aktarmak için henüz bir kişi seçmediniz."
 
-#: csv/csvimportexportplugininterface.cpp:191
+#: csv/csvimportexportplugininterface.cpp:187
 #: gmx/gmximportexportplugininterface.cpp:124
-#: ldif/ldifimportexportplugininterface.cpp:161
+#: ldif/ldifimportexportplugininterface.cpp:154
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt><b>%1</b> dosyası açılamadı.</qt>"
 
-#: csv/csvimportexportplugininterface.cpp:203
+#: csv/csvimportexportplugininterface.cpp:199
 #: gmx/gmximportexportplugininterface.cpp:139
-#: ldif/ldifimportexportplugininterface.cpp:191
+#: ldif/ldifimportexportplugininterface.cpp:184
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt><b>%1</b> dosyası açılamadı.</qt>"
@@ -487,14 +487,14 @@ msgstr "GMX Dosyası Olarak Dışa Aktar..."
 msgid "Export contacts to a GMX address book file."
 msgstr "Kişileri bir GMX adres defteri dosyasına aktar."
 
-#: gmx/gmximportexportplugininterface.cpp:438
+#: gmx/gmximportexportplugininterface.cpp:434
 #: ldif/ldifimportexportplugininterface.cpp:80
 #: windows-contacts/importwindowcontact.cpp:26
 #, kde-format
 msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
 msgstr "<qt><b>%1</b> dosyası okumak için açılamadı.</qt>"
 
-#: gmx/gmximportexportplugininterface.cpp:455
+#: gmx/gmximportexportplugininterface.cpp:447
 #, kde-format
 msgid "%1 is not a GMX address book file."
 msgstr "%1 bir GMX adres defteri dosyası değil."
@@ -529,12 +529,12 @@ msgstr "LDIF Dosyası Olarak Dışa Aktar..."
 msgid "Export contacts to an LDIF file."
 msgstr "Kişileri bir LDIF dosyasına aktar."
 
-#: ldif/ldifimportexportplugininterface.cpp:110
+#: ldif/ldifimportexportplugininterface.cpp:106
 #, kde-format
 msgid "LDif Files"
 msgstr "LDif Dosyaları"
 
-#: ldif/ldifimportexportplugininterface.cpp:151
+#: ldif/ldifimportexportplugininterface.cpp:144
 #, kde-format
 msgid "LDif Files (*.ldif)"
 msgstr "LDif Dosyaları (*.ldif)"

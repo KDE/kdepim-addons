@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2019-11-05 19:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -71,19 +71,19 @@ msgstr ""
 "Chyba hlásená serverom:\n"
 "'%1'"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:22
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
 msgid "Insert Special Character..."
 msgstr "Vložiť špeciálny &znak..."
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, fuzzy, kde-format
 #| msgid "Insert Special Character"
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "Vložiť špeciálny znak"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
 #, kde-format
 msgid "Insert"
 msgstr "Vložiť"
@@ -202,7 +202,7 @@ msgstr "Uložiť"
 msgid "General"
 msgstr "Všeobecné"
 
-#: sharetext/sharetextplugineditorinterface.cpp:30
+#: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
 msgid "Share Mail Text..."
 msgstr "Zdieľať text správy"

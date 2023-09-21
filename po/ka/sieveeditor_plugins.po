@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-20 00:47+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-08-23 10:21+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "..."
 msgid "Select Emails"
 msgstr "აირჩიეთ ელფოსტები"
 
-#: emaillineedit/emaillineedit.cpp:88
+#: emaillineedit/emaillineedit.cpp:87
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"

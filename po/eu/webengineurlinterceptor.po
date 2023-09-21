@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2022-09-17 08:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,474 +20,313 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.0\n"
 
-#: adblock/adblockinterceptorinterface.cpp:49
-#, kde-format
-msgid "Open Blockable Items..."
-msgstr "Ireki blokea daitezkeen elementuak..."
-
-#: adblock/adblockinterceptorinterface.cpp:53
-#, kde-format
-msgid "Block Image"
-msgstr "Blokeatu irudia"
-
-#: adblock/lib/adblocksubscription.cpp:141
-#, kde-format
-msgid "Cannot load subscription!"
-msgstr "Ezin du harpidetza zamatu!"
-
-#: adblock/lib/adblocksubscription.cpp:257
-#, kde-format
-msgid "Custom Rules"
-msgstr "Norberak finkatutako arauak"
-
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
-#, kde-format
-msgid "Enabled ad block"
-msgstr "Iragarkiak blokeatzea gaituta"
-
-#. i18n: ectx: label, entry (HideAdsEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
-#, kde-format
-msgid "Hide advertisement enabled"
-msgstr "Iragarkiak ezkutatzea gaituta"
-
-#. i18n: ectx: label, entry (AdBlockUpdateInterval), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:16
-#, kde-format
-msgid "Update interval list of adblock"
-msgstr "Iragarkiak blokeatzeko zerrenda eguneratzeko bitartea"
-
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:26
-#, kde-format
+#: adblock/adblockfilterdialog.cpp:17
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Show adblock list"
 msgctxt "@title:window"
-msgid "Add subscription"
-msgstr "Gehitu Harpidetza"
+msgid "Add Adblock List"
+msgstr "Erakutsi «AdBlock» zerrenda"
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:32
+#: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
-msgid "Select List:"
-msgstr "Hautatu zerrenda:"
+msgid "Add..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:41
+#: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
-msgid "Show List"
-msgstr "Erakutsi zerrenda"
+msgid "Modify..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemsdialog.cpp:26
+#: adblock/adblockfilterlistsview.cpp:56
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "Ezabatu zerrenda"
+
+#: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
-msgctxt "@title:window"
-msgid "Blockable Items"
-msgstr "Blokeatu daitezkeen elementuak"
+msgid "Remove"
+msgstr "Kendu"
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:35
-#, kde-format
-msgid "No blockable element found."
-msgstr "Ez da blokeatu daitekeen elementurik aurkitu."
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Filter"
-msgstr "Iragazkia"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Address"
-msgstr "Helbidea"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Type"
-msgstr "Mota"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:46
+#: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Bilatu..."
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:103
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
-msgid "Copy URL"
-msgstr "Kopiatu URLa"
+msgid "Name:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:106
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
-msgid "Copy filter"
-msgstr "Kopiatu iragazkia"
+msgid "Url:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:108
-#, kde-format
-msgid "Block item..."
-msgstr "Blokeatu elementua..."
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:110
-#, kde-format
-msgid "Open"
-msgstr "Ireki"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:113
-#, kde-format
-msgid "Remove filter"
-msgstr "Kendu iragazkia"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:185
-#, kde-format
-msgid "Image"
-msgstr "Irudia"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:188
-#, kde-format
-msgid "Script"
-msgstr "Gidoia"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:191
-#, kde-format
-msgid "Stylesheet"
-msgstr "Estilo-orria"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:194
-#, kde-format
-msgid "Font"
-msgstr "Letra-tipoa"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:197
-#, kde-format
-msgid "Frame"
-msgstr "Markoa"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:200
-#, kde-format
-msgid "XML Request"
-msgstr "XML eskaera"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:203
-#, kde-format
-msgid "Object"
-msgstr "Objektua"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:206
-#, kde-format
-msgid "Audio/Video"
-msgstr "Audioa/Bideoa"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:209
-#, kde-format
-msgid "Popup window"
-msgstr "Leiho gainerakorra"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:213
-#, kde-format
-msgid "Unknown"
-msgstr "Ezezaguna"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:22
-#, kde-format
-msgctxt "@title:window"
-msgid "Create Filter"
-msgstr "Garbitu iragazkia"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:46
-#, kde-format
-msgid "Use default"
-msgstr "Erabili lehenetsia"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:47
-#, kde-format
-msgid "Yes"
-msgstr "Bai"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:48
-#, kde-format
-msgid "Not"
-msgstr "Ez"
-
-#: adblock/lib/widgets/adblocklistwidget.cpp:52
-#, kde-format
-msgid "No subscription added"
-msgstr "Ez da harpidetzarik gehitu"
-
-#: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:18
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Konfiguratu iragazkiak blokeatzeko «AdBlock» plugina"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:53
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
-msgid ""
-"<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-"\"filterhelp\">more information</a>):"
-msgstr ""
-"<qt>Iragazteko adierazpena (adib <tt>http://www.example.com/ad/*</tt>, <a "
-"href=\"filterhelp\">informazio gehiago</a>):"
+msgid "Enabled ad block"
+msgstr "Iragarkiak blokeatzea gaituta"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:69
-#, kde-format
-msgid " day"
-msgid_plural " days"
-msgstr[0] " egun"
-msgstr[1] " egun"
+#~ msgid "Open Blockable Items..."
+#~ msgstr "Ireki blokea daitezkeen elementuak..."
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:142
-#, kde-format
-msgid ""
-"<qt><p>Enter an expression to filter. Filters can be defined as either:"
-"<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
-"the wildcards <tt>*?[]</tt> may be used</li><li>a full regular expression by "
-"surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</tt></"
-"li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist "
-"(allow) any matching URL, which takes priority over any blacklist (blocking) "
-"filter.<br><a href='%1'>%2</a></qt>"
-msgstr ""
-"<qt><p>Sartu iragazi beharreko adierazpen bat. Iragazkiak honela definitu "
-"daitezke:<ul><li>shell-eko komodin gisa, adib <tt>http://www.example.com/"
-"ads*</tt>, <tt>*?[]</tt> komodinak erabili daitezke</li><li>adierazpen "
-"erregular oso bat katea '<tt>/</tt>' bitartez inguratuz, adib <tt>/\\/(ad|"
-"banner)\\./</tt></li></ul><p>Edozein iragazki katek '<tt>@@</tt>' izan "
-"dezake aurretik bat datorren edozein URL zerrenda zurikotzat jotzeko "
-"(onartu), zerrenda beltzeko (ukatu) edozein iragazkirekiko lehentasuna "
-"hartzen du.<br><a href='%1'>%2</a></qt>"
+#~ msgid "Block Image"
+#~ msgstr "Blokeatu irudia"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:150
-#, kde-format
-msgid "More information"
-msgstr "Informazio gehiago"
+#~ msgid "Cannot load subscription!"
+#~ msgstr "Ezin du harpidetza zamatu!"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:194
-#, kde-format
-msgid "Do you want to remove this rule?"
-msgid_plural "Do you want to remove these rules?"
-msgstr[0] "Arau hau kendu nahi duzu?"
-msgstr[1] "Arau hauek kendu nahi dituzu?"
+#~ msgid "Custom Rules"
+#~ msgstr "Norberak finkatutako arauak"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:195
-#, kde-format
-msgid "Remove"
-msgstr "Kendu"
+#~ msgid "Hide advertisement enabled"
+#~ msgstr "Iragarkiak ezkutatzea gaituta"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:336
-#, kde-format
-msgid "Do you want to delete list \"%1\"?"
-msgstr "\"%1\" zerrenda ezabatu nahi duzu?"
+#~ msgid "Update interval list of adblock"
+#~ msgstr "Iragarkiak blokeatzeko zerrenda eguneratzeko bitartea"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:337
-#, kde-format
-msgid "Delete current list"
-msgstr "Ezabatu uneko zerrenda"
+#~ msgctxt "@title:window"
+#~ msgid "Add subscription"
+#~ msgstr "Gehitu Harpidetza"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:382
-#: adblock/lib/widgets/adblocksettingwidget.cpp:424
-#, kde-format
-msgid "All Files (*)"
-msgstr "Fitxategi guztiak (*)"
+#~ msgid "Select List:"
+#~ msgstr "Hautatu zerrenda:"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:383
-#, kde-format
-msgid "Import Filters"
-msgstr "Inportatu iragazkiak"
+#~ msgid "Show List"
+#~ msgstr "Erakutsi zerrenda"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:434
-#, kde-format
-msgid "Export Filters"
-msgstr "Esportatu iragazkiak"
+#~ msgctxt "@title:window"
+#~ msgid "Blockable Items"
+#~ msgstr "Blokeatu daitezkeen elementuak"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:38
-#, kde-format
-msgctxt "@title:window"
-msgid "Show adblock list"
-msgstr "Erakutsi «AdBlock» zerrenda"
+#~ msgid "No blockable element found."
+#~ msgstr "Ez da blokeatu daitekeen elementurik aurkitu."
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:45
-#, kde-format
-msgid "Delete List"
-msgstr "Ezabatu zerrenda"
+#~ msgid "Filter"
+#~ msgstr "Iragazkia"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:62
-#, kde-format
-msgid "Download..."
-msgstr "Zama-jaitsi..."
+#~ msgid "Address"
+#~ msgstr "Helbidea"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:135
-#, kde-format
-msgid "An error occurred while downloading the list: \"%1\""
-msgstr "Errore bat gertatu da zerrenda zama-jaistean: \"%1\""
+#~ msgid "Type"
+#~ msgstr "Mota"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:31
-#, kde-format
-msgid "Filters:"
-msgstr "Iragazkiak:"
+#~ msgid "Copy URL"
+#~ msgstr "Kopiatu URLa"
 
-#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:49
-#, kde-format
-msgid "&Blocking filter"
-msgstr "&Blokeatzeko iragazkiak"
+#~ msgid "Copy filter"
+#~ msgstr "Kopiatu iragazkia"
 
-#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:56
-#, kde-format
-msgid "Exception Filter"
-msgstr "Salbuespen iragazkia"
+#~ msgid "Block item..."
+#~ msgstr "Blokeatu elementua..."
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:65
-#, kde-format
-msgid "Pattern"
-msgstr "Eredua"
+#~ msgid "Open"
+#~ msgstr "Ireki"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:73
-#, kde-format
-msgid "custom"
-msgstr "norberak finkatua"
+#~ msgid "Remove filter"
+#~ msgstr "Kendu iragazkia"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:88
-#, kde-format
-msgid "Accept pattern only"
-msgstr "Eredua bakarrik onartu"
+#~ msgid "Image"
+#~ msgstr "Irudia"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
-#, kde-format
-msgid "At the beginning of the address"
-msgstr "Helbidearen hasieran"
+#~ msgid "Script"
+#~ msgstr "Gidoia"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
-#, kde-format
-msgid "At the end of address"
-msgstr "Helbidearen bukaeran"
+#~ msgid "Stylesheet"
+#~ msgstr "Estilo-orria"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
-#, kde-format
-msgid "Options"
-msgstr "Aukerak"
+#~ msgid "Font"
+#~ msgstr "Letra-tipoa"
 
-#. i18n: ectx: property (text), widget (QCheckBox, firstPartOnly)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
-#, kde-format
-msgid "First-part only"
-msgstr "Lehen zatia bakarrik"
+#~ msgid "Frame"
+#~ msgstr "Markoa"
 
-#. i18n: ectx: property (text), widget (QCheckBox, matchCase)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
-#, kde-format
-msgid "Match case"
-msgstr "Bereizi maiuskulak/minuskulak"
+#~ msgid "XML Request"
+#~ msgstr "XML eskaera"
 
-#. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
-#, kde-format
-msgid "Restrict to domain"
-msgstr "Murriztu domeinura"
+#~ msgid "Object"
+#~ msgstr "Objektua"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
-#, kde-format
-msgid "Apply to:"
-msgstr "Ezarri honi:"
+#~ msgid "Audio/Video"
+#~ msgstr "Audioa/Bideoa"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:160
-#, kde-format
-msgid "Collapse blocked:"
-msgstr "Tolestu blokeatutakoak:"
+#~ msgid "Popup window"
+#~ msgstr "Leiho gainerakorra"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
-#: adblock/lib/widgets/ui/settings_adblock.ui:29
-#, kde-format
-msgid "&Enable Ad Block"
-msgstr "&Gaitu iragazkiak blokeatzea"
+#~ msgid "Unknown"
+#~ msgstr "Ezezaguna"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
-#: adblock/lib/widgets/ui/settings_adblock.ui:36
-#, kde-format
-msgid "&Hide filtered elements"
-msgstr "E&zkutatu iragazitako elementuak"
+#~ msgctxt "@title:window"
+#~ msgid "Create Filter"
+#~ msgstr "Garbitu iragazkia"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:50
-#, kde-format
-msgid "Automatic Filters"
-msgstr "Iragazki automatikoak"
+#~ msgid "Use default"
+#~ msgstr "Erabili lehenetsia"
 
-#. i18n: ectx: property (text), widget (QPushButton, addFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:56
-#, kde-format
-msgid "Add Filters subscriptions..."
-msgstr "Gehitu iragazkien harpidetza..."
+#~ msgid "Yes"
+#~ msgstr "Bai"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeSubscription)
-#: adblock/lib/widgets/ui/settings_adblock.ui:76
-#, kde-format
-msgid "Remove subscription"
-msgstr "Kendu harpidetza"
+#~ msgid "Not"
+#~ msgstr "Ez"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:98
-#, kde-format
-msgid "Update enabled automatic filters every:"
-msgstr "Eguneratu gaitutako iragazki automatikoak hainbestero:"
+#~ msgid "No subscription added"
+#~ msgstr "Ez da harpidetzarik gehitu"
 
-#. i18n: ectx: property (text), widget (QPushButton, showList)
-#: adblock/lib/widgets/ui/settings_adblock.ui:136
-#, kde-format
-msgid "Show List..."
-msgstr "Erakutsi zerrenda..."
+#~ msgid ""
+#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">more information</a>):"
+#~ msgstr ""
+#~ "<qt>Iragazteko adierazpena (adib <tt>http://www.example.com/ad/*</tt>, <a "
+#~ "href=\"filterhelp\">informazio gehiago</a>):"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: adblock/lib/widgets/ui/settings_adblock.ui:144
-#, kde-format
-msgid "Manual Filters"
-msgstr "Eskuzko iragazkiak"
+#~ msgid " day"
+#~ msgid_plural " days"
+#~ msgstr[0] " egun"
+#~ msgstr[1] " egun"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:155
-#, kde-format
-msgid "Add filter expression"
-msgstr "Gehitu iragazki adierazpena"
+#~ msgid ""
+#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
+#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
+#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
+#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
+#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
+#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
+#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
+#~ msgstr ""
+#~ "<qt><p>Sartu iragazi beharreko adierazpen bat. Iragazkiak honela definitu "
+#~ "daitezke:<ul><li>shell-eko komodin gisa, adib <tt>http://www.example.com/"
+#~ "ads*</tt>, <tt>*?[]</tt> komodinak erabili daitezke</li><li>adierazpen "
+#~ "erregular oso bat katea '<tt>/</tt>' bitartez inguratuz, adib <tt>/\\/(ad|"
+#~ "banner)\\./</tt></li></ul><p>Edozein iragazki katek '<tt>@@</tt>' izan "
+#~ "dezake aurretik bat datorren edozein URL zerrenda zurikotzat jotzeko "
+#~ "(onartu), zerrenda beltzeko (ukatu) edozein iragazkirekiko lehentasuna "
+#~ "hartzen du.<br><a href='%1'>%2</a></qt>"
 
-#. i18n: ectx: property (text), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:158
-#, kde-format
-msgid "..."
-msgstr "..."
+#~ msgid "More information"
+#~ msgstr "Informazio gehiago"
 
-#. i18n: ectx: property (text), widget (QPushButton, importFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:200
-#, kde-format
-msgid "Import Filters..."
-msgstr "Inportatu iragazkiak..."
+#~ msgid "Do you want to remove this rule?"
+#~ msgid_plural "Do you want to remove these rules?"
+#~ msgstr[0] "Arau hau kendu nahi duzu?"
+#~ msgstr[1] "Arau hauek kendu nahi dituzu?"
 
-#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:207
-#, kde-format
-msgid "Export filters..."
-msgstr "Esportatu iragazkiak..."
+#~ msgid "Do you want to delete list \"%1\"?"
+#~ msgstr "\"%1\" zerrenda ezabatu nahi duzu?"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/settings_adblock.ui:216
-#, kde-format
-msgid "Search:"
-msgstr "Bilatu:"
+#~ msgid "Delete current list"
+#~ msgstr "Ezabatu uneko zerrenda"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFilter)
-#: adblock/lib/widgets/ui/settings_adblock.ui:228
-#, kde-format
-msgid "Edit"
-msgstr "Editatu"
+#~ msgid "All Files (*)"
+#~ msgstr "Fitxategi guztiak (*)"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:235
-#, kde-format
-msgid "Remove filter expression"
-msgstr "Kendu iragazki-adierazpena"
+#~ msgid "Import Filters"
+#~ msgstr "Inportatu iragazkiak"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:238
-#, kde-format
-msgid "Remove Filter"
-msgstr "Kendu iragazkia"
+#~ msgid "Export Filters"
+#~ msgstr "Esportatu iragazkiak"
+
+#~ msgid "Download..."
+#~ msgstr "Zama-jaitsi..."
+
+#~ msgid "An error occurred while downloading the list: \"%1\""
+#~ msgstr "Errore bat gertatu da zerrenda zama-jaistean: \"%1\""
+
+#~ msgid "Filters:"
+#~ msgstr "Iragazkiak:"
+
+#~ msgid "&Blocking filter"
+#~ msgstr "&Blokeatzeko iragazkiak"
+
+#~ msgid "Exception Filter"
+#~ msgstr "Salbuespen iragazkia"
+
+#~ msgid "Pattern"
+#~ msgstr "Eredua"
+
+#~ msgid "custom"
+#~ msgstr "norberak finkatua"
+
+#~ msgid "Accept pattern only"
+#~ msgstr "Eredua bakarrik onartu"
+
+#~ msgid "At the beginning of the address"
+#~ msgstr "Helbidearen hasieran"
+
+#~ msgid "At the end of address"
+#~ msgstr "Helbidearen bukaeran"
+
+#~ msgid "Options"
+#~ msgstr "Aukerak"
+
+#~ msgid "First-part only"
+#~ msgstr "Lehen zatia bakarrik"
+
+#~ msgid "Match case"
+#~ msgstr "Bereizi maiuskulak/minuskulak"
+
+#~ msgid "Restrict to domain"
+#~ msgstr "Murriztu domeinura"
+
+#~ msgid "Apply to:"
+#~ msgstr "Ezarri honi:"
+
+#~ msgid "Collapse blocked:"
+#~ msgstr "Tolestu blokeatutakoak:"
+
+#~ msgid "&Enable Ad Block"
+#~ msgstr "&Gaitu iragazkiak blokeatzea"
+
+#~ msgid "&Hide filtered elements"
+#~ msgstr "E&zkutatu iragazitako elementuak"
+
+#~ msgid "Automatic Filters"
+#~ msgstr "Iragazki automatikoak"
+
+#~ msgid "Add Filters subscriptions..."
+#~ msgstr "Gehitu iragazkien harpidetza..."
+
+#~ msgid "Remove subscription"
+#~ msgstr "Kendu harpidetza"
+
+#~ msgid "Update enabled automatic filters every:"
+#~ msgstr "Eguneratu gaitutako iragazki automatikoak hainbestero:"
+
+#~ msgid "Show List..."
+#~ msgstr "Erakutsi zerrenda..."
+
+#~ msgid "Manual Filters"
+#~ msgstr "Eskuzko iragazkiak"
+
+#~ msgid "Add filter expression"
+#~ msgstr "Gehitu iragazki adierazpena"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Import Filters..."
+#~ msgstr "Inportatu iragazkiak..."
+
+#~ msgid "Export filters..."
+#~ msgstr "Esportatu iragazkiak..."
+
+#~ msgid "Search:"
+#~ msgstr "Bilatu:"
+
+#~ msgid "Edit"
+#~ msgstr "Editatu"
+
+#~ msgid "Remove filter expression"
+#~ msgstr "Kendu iragazki-adierazpena"
+
+#~ msgid "Remove Filter"
+#~ msgstr "Kendu iragazkia"

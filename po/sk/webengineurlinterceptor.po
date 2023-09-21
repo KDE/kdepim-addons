@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2016-09-28 20:38+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,485 +15,326 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: adblock/adblockinterceptorinterface.cpp:49
-#, kde-format
-msgid "Open Blockable Items..."
-msgstr "Otvoriť blokovateľné položky..."
-
-#: adblock/adblockinterceptorinterface.cpp:53
-#, kde-format
-msgid "Block Image"
-msgstr "Zablokovať obrázok"
-
-#: adblock/lib/adblocksubscription.cpp:141
-#, kde-format
-msgid "Cannot load subscription!"
-msgstr "Nemôžem načítať odber!"
-
-#: adblock/lib/adblocksubscription.cpp:257
-#, kde-format
-msgid "Custom Rules"
-msgstr "Vlastné pravidlá"
-
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
-#, kde-format
-msgid "Enabled ad block"
-msgstr "Povolený ad block"
-
-#. i18n: ectx: label, entry (HideAdsEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
-#, kde-format
-msgid "Hide advertisement enabled"
-msgstr "Skrytie reklám povolené"
-
-#. i18n: ectx: label, entry (AdBlockUpdateInterval), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:16
-#, kde-format
-msgid "Update interval list of adblock"
-msgstr "Interval aktualizácie zoznamu adblocku"
-
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:26
+#: adblock/adblockfilterdialog.cpp:17
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
 #, fuzzy, kde-format
-#| msgid "Add subscription"
+#| msgid "Show adblock list"
 msgctxt "@title:window"
-msgid "Add subscription"
-msgstr "Pridať prihlásenie"
+msgid "Add Adblock List"
+msgstr "Zobraziť zoznam adblock"
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:32
+#: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
-msgid "Select List:"
-msgstr "Vybrať zoznam:"
+msgid "Add..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:41
+#: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
-msgid "Show List"
-msgstr "Zobraziť zoznam"
+msgid "Modify..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemsdialog.cpp:26
+#: adblock/adblockfilterlistsview.cpp:56
 #, fuzzy, kde-format
-#| msgid "Blockable Items"
-msgctxt "@title:window"
-msgid "Blockable Items"
-msgstr "Blokovateľné položky"
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "Vymazať zoznam"
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:35
-#, kde-format
-msgid "No blockable element found."
-msgstr "Nenašiel sa blokovateľný prvok."
+#: adblock/adblockfilterlistsview.cpp:94
+#, fuzzy, kde-format
+#| msgid "Remove filter"
+msgid "Remove"
+msgstr "Odstrániť filter"
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Filter"
-msgstr "Filter"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Address"
-msgstr "Adresa"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Type"
-msgstr "Typ"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:46
+#: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Hľadať..."
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:103
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
-msgid "Copy URL"
-msgstr "Kopírovať URL"
+msgid "Name:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:106
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
-msgid "Copy filter"
-msgstr "Kopírovať filter"
+msgid "Url:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:108
-#, kde-format
-msgid "Block item..."
-msgstr "Blokovať položku..."
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:110
-#, kde-format
-msgid "Open"
-msgstr "Otvoriť"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:113
-#, kde-format
-msgid "Remove filter"
-msgstr "Odstrániť filter"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:185
-#, kde-format
-msgid "Image"
-msgstr "Obrázok"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:188
-#, kde-format
-msgid "Script"
-msgstr "Skript"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:191
-#, kde-format
-msgid "Stylesheet"
-msgstr "Štýl"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:194
-#, kde-format
-msgid "Font"
-msgstr "Písmo"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:197
-#, kde-format
-msgid "Frame"
-msgstr "Rámec"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:200
-#, kde-format
-msgid "XML Request"
-msgstr "XML požiadavka"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:203
-#, kde-format
-msgid "Object"
-msgstr "Objekt"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:206
-#, kde-format
-msgid "Audio/Video"
-msgstr "Zvuk/video"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:209
-#, kde-format
-msgid "Popup window"
-msgstr "Vyskakovacie okno"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:213
-#, kde-format
-msgid "Unknown"
-msgstr "Neznáme"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid "Create Filter"
-msgctxt "@title:window"
-msgid "Create Filter"
-msgstr "&Vytvoriť filter"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:46
-#, kde-format
-msgid "Use default"
-msgstr "Použiť predvolené"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:47
-#, kde-format
-msgid "Yes"
-msgstr "Áno"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:48
-#, kde-format
-msgid "Not"
-msgstr "Nie"
-
-#: adblock/lib/widgets/adblocklistwidget.cpp:52
-#, kde-format
-msgid "No subscription added"
-msgstr "Nepridaná náhrada"
-
-#: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:18
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, fuzzy, kde-format
 #| msgid "Configure AdBlock Plugin"
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Nastaviť plugin AdBlock"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:53
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
-msgid ""
-"<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-"\"filterhelp\">more information</a>):"
-msgstr ""
-"<qt>Výraz filtra (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-"\"filterhelp\">viac informácií</a>):"
+msgid "Enabled ad block"
+msgstr "Povolený ad block"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:69
-#, kde-format
-msgid " day"
-msgid_plural " days"
-msgstr[0] " deň"
-msgstr[1] " dni"
-msgstr[2] " dní"
+#~ msgid "Open Blockable Items..."
+#~ msgstr "Otvoriť blokovateľné položky..."
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:142
-#, kde-format
-msgid ""
-"<qt><p>Enter an expression to filter. Filters can be defined as either:"
-"<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
-"the wildcards <tt>*?[]</tt> may be used</li><li>a full regular expression by "
-"surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</tt></"
-"li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist "
-"(allow) any matching URL, which takes priority over any blacklist (blocking) "
-"filter.<br><a href='%1'>%2</a></qt>"
-msgstr ""
-"<qt><p>Zadajte výraz do filtra. Filtre sa môže definovať ako:"
-"<ul><li>shellovská maska, napr. <tt>http://www.example.com/ads*</tt>, masky "
-"<tt>*?[]</tt> sa dajú použiť</li><li>plný regulárny výraz obklopený reťazcom "
-"s '<tt>/</tt>', napr. <tt>/\\/(ad|banner)\\./</tt></li></ul><p>Iný reťazec "
-"filtra môže nasledovať za '<tt>@@</tt>' na výnimku (povolenie) ľubovoľnej "
-"URL, ktorá má prioritu pred blacklistom (blokovacím filtrom).<br><a "
-"href='%1'>%2</a></qt>"
+#~ msgid "Block Image"
+#~ msgstr "Zablokovať obrázok"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:150
-#, kde-format
-msgid "More information"
-msgstr "Viac informácií"
+#~ msgid "Cannot load subscription!"
+#~ msgstr "Nemôžem načítať odber!"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:194
-#, fuzzy, kde-format
-#| msgid "Do you want to delete list \"%1\"?"
-msgid "Do you want to remove this rule?"
-msgid_plural "Do you want to remove these rules?"
-msgstr[0] "Chcete vymazať zoznam \"%1\"?"
-msgstr[1] "Chcete vymazať zoznam \"%1\"?"
-msgstr[2] "Chcete vymazať zoznam \"%1\"?"
+#~ msgid "Custom Rules"
+#~ msgstr "Vlastné pravidlá"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:195
-#, fuzzy, kde-format
-#| msgid "Remove filter"
-msgid "Remove"
-msgstr "Odstrániť filter"
+#~ msgid "Hide advertisement enabled"
+#~ msgstr "Skrytie reklám povolené"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:336
-#, kde-format
-msgid "Do you want to delete list \"%1\"?"
-msgstr "Chcete vymazať zoznam \"%1\"?"
+#~ msgid "Update interval list of adblock"
+#~ msgstr "Interval aktualizácie zoznamu adblocku"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:337
-#, kde-format
-msgid "Delete current list"
-msgstr "Vymazať aktuálny zoznam"
+#, fuzzy
+#~| msgid "Add subscription"
+#~ msgctxt "@title:window"
+#~ msgid "Add subscription"
+#~ msgstr "Pridať prihlásenie"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:382
-#: adblock/lib/widgets/adblocksettingwidget.cpp:424
-#, kde-format
-msgid "All Files (*)"
-msgstr "Všetky súbory (*)"
+#~ msgid "Select List:"
+#~ msgstr "Vybrať zoznam:"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:383
-#, kde-format
-msgid "Import Filters"
-msgstr "Importovať filtre"
+#~ msgid "Show List"
+#~ msgstr "Zobraziť zoznam"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:434
-#, kde-format
-msgid "Export Filters"
-msgstr "Exportovať filtre"
+#, fuzzy
+#~| msgid "Blockable Items"
+#~ msgctxt "@title:window"
+#~ msgid "Blockable Items"
+#~ msgstr "Blokovateľné položky"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Show adblock list"
-msgctxt "@title:window"
-msgid "Show adblock list"
-msgstr "Zobraziť zoznam adblock"
+#~ msgid "No blockable element found."
+#~ msgstr "Nenašiel sa blokovateľný prvok."
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:45
-#, kde-format
-msgid "Delete List"
-msgstr "Vymazať zoznam"
+#~ msgid "Filter"
+#~ msgstr "Filter"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:62
-#, kde-format
-msgid "Download..."
-msgstr "Stiahnuť..."
+#~ msgid "Address"
+#~ msgstr "Adresa"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:135
-#, kde-format
-msgid "An error occurred while downloading the list: \"%1\""
-msgstr "Nastala chyba počas sťahovania zoznamu: \"%1\""
+#~ msgid "Type"
+#~ msgstr "Typ"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:31
-#, kde-format
-msgid "Filters:"
-msgstr "Filtre:"
+#~ msgid "Copy URL"
+#~ msgstr "Kopírovať URL"
 
-#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:49
-#, kde-format
-msgid "&Blocking filter"
-msgstr "Filter blokovania"
+#~ msgid "Copy filter"
+#~ msgstr "Kopírovať filter"
 
-#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:56
-#, kde-format
-msgid "Exception Filter"
-msgstr "Filter výnimiek"
+#~ msgid "Block item..."
+#~ msgstr "Blokovať položku..."
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:65
-#, kde-format
-msgid "Pattern"
-msgstr "Vzorka"
+#~ msgid "Open"
+#~ msgstr "Otvoriť"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:73
-#, kde-format
-msgid "custom"
-msgstr "vlastné"
+#~ msgid "Remove filter"
+#~ msgstr "Odstrániť filter"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:88
-#, kde-format
-msgid "Accept pattern only"
-msgstr "Prijať iba vzor"
+#~ msgid "Image"
+#~ msgstr "Obrázok"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
-#, kde-format
-msgid "At the beginning of the address"
-msgstr "Na začiatku adresy"
+#~ msgid "Script"
+#~ msgstr "Skript"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
-#, kde-format
-msgid "At the end of address"
-msgstr "Na konci adresy"
+#~ msgid "Stylesheet"
+#~ msgstr "Štýl"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
-#, kde-format
-msgid "Options"
-msgstr "Voľby"
+#~ msgid "Font"
+#~ msgstr "Písmo"
 
-#. i18n: ectx: property (text), widget (QCheckBox, firstPartOnly)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
-#, kde-format
-msgid "First-part only"
-msgstr "Iba prvý vzor"
+#~ msgid "Frame"
+#~ msgstr "Rámec"
 
-#. i18n: ectx: property (text), widget (QCheckBox, matchCase)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
-#, kde-format
-msgid "Match case"
-msgstr "Rozlišovať veľkosť"
+#~ msgid "XML Request"
+#~ msgstr "XML požiadavka"
 
-#. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
-#, kde-format
-msgid "Restrict to domain"
-msgstr "Obmedziť na doménu"
+#~ msgid "Object"
+#~ msgstr "Objekt"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
-#, kde-format
-msgid "Apply to:"
-msgstr "Použiť pre:"
+#~ msgid "Audio/Video"
+#~ msgstr "Zvuk/video"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:160
-#, kde-format
-msgid "Collapse blocked:"
-msgstr "Zvinúť blokované:"
+#~ msgid "Popup window"
+#~ msgstr "Vyskakovacie okno"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
-#: adblock/lib/widgets/ui/settings_adblock.ui:29
-#, kde-format
-msgid "&Enable Ad Block"
-msgstr "Povoliť Ad Block"
+#~ msgid "Unknown"
+#~ msgstr "Neznáme"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
-#: adblock/lib/widgets/ui/settings_adblock.ui:36
-#, kde-format
-msgid "&Hide filtered elements"
-msgstr "Skryť filtrované prvky"
+#, fuzzy
+#~| msgid "Create Filter"
+#~ msgctxt "@title:window"
+#~ msgid "Create Filter"
+#~ msgstr "&Vytvoriť filter"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:50
-#, kde-format
-msgid "Automatic Filters"
-msgstr "Automatické filtre"
+#~ msgid "Use default"
+#~ msgstr "Použiť predvolené"
 
-#. i18n: ectx: property (text), widget (QPushButton, addFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:56
-#, kde-format
-msgid "Add Filters subscriptions..."
-msgstr "Pridať prihlásenie filtrov..."
+#~ msgid "Yes"
+#~ msgstr "Áno"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeSubscription)
-#: adblock/lib/widgets/ui/settings_adblock.ui:76
-#, kde-format
-msgid "Remove subscription"
-msgstr "Odstrániť odoberanie"
+#~ msgid "Not"
+#~ msgstr "Nie"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:98
-#, kde-format
-msgid "Update enabled automatic filters every:"
-msgstr "Aktualizovať povolené automatické filtre každých:"
+#~ msgid "No subscription added"
+#~ msgstr "Nepridaná náhrada"
 
-#. i18n: ectx: property (text), widget (QPushButton, showList)
-#: adblock/lib/widgets/ui/settings_adblock.ui:136
-#, kde-format
-msgid "Show List..."
-msgstr "Zobraziť zoznam..."
+#~ msgid ""
+#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">more information</a>):"
+#~ msgstr ""
+#~ "<qt>Výraz filtra (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">viac informácií</a>):"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: adblock/lib/widgets/ui/settings_adblock.ui:144
-#, kde-format
-msgid "Manual Filters"
-msgstr "Manuálne filtre"
+#~ msgid " day"
+#~ msgid_plural " days"
+#~ msgstr[0] " deň"
+#~ msgstr[1] " dni"
+#~ msgstr[2] " dní"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:155
-#, kde-format
-msgid "Add filter expression"
-msgstr "Pridať výraz filtra"
+#~ msgid ""
+#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
+#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
+#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
+#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
+#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
+#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
+#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
+#~ msgstr ""
+#~ "<qt><p>Zadajte výraz do filtra. Filtre sa môže definovať ako:"
+#~ "<ul><li>shellovská maska, napr. <tt>http://www.example.com/ads*</tt>, "
+#~ "masky <tt>*?[]</tt> sa dajú použiť</li><li>plný regulárny výraz obklopený "
+#~ "reťazcom s '<tt>/</tt>', napr. <tt>/\\/(ad|banner)\\./</tt></li></"
+#~ "ul><p>Iný reťazec filtra môže nasledovať za '<tt>@@</tt>' na výnimku "
+#~ "(povolenie) ľubovoľnej URL, ktorá má prioritu pred blacklistom "
+#~ "(blokovacím filtrom).<br><a href='%1'>%2</a></qt>"
 
-#. i18n: ectx: property (text), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:158
-#, kde-format
-msgid "..."
-msgstr "..."
+#~ msgid "More information"
+#~ msgstr "Viac informácií"
 
-#. i18n: ectx: property (text), widget (QPushButton, importFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:200
-#, kde-format
-msgid "Import Filters..."
-msgstr "Importovať filtre..."
+#, fuzzy
+#~| msgid "Do you want to delete list \"%1\"?"
+#~ msgid "Do you want to remove this rule?"
+#~ msgid_plural "Do you want to remove these rules?"
+#~ msgstr[0] "Chcete vymazať zoznam \"%1\"?"
+#~ msgstr[1] "Chcete vymazať zoznam \"%1\"?"
+#~ msgstr[2] "Chcete vymazať zoznam \"%1\"?"
 
-#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:207
-#, kde-format
-msgid "Export filters..."
-msgstr "Exportovať filtre..."
+#~ msgid "Do you want to delete list \"%1\"?"
+#~ msgstr "Chcete vymazať zoznam \"%1\"?"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/settings_adblock.ui:216
-#, kde-format
-msgid "Search:"
-msgstr "Hľadať:"
+#~ msgid "Delete current list"
+#~ msgstr "Vymazať aktuálny zoznam"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFilter)
-#: adblock/lib/widgets/ui/settings_adblock.ui:228
-#, kde-format
-msgid "Edit"
-msgstr "Upraviť"
+#~ msgid "All Files (*)"
+#~ msgstr "Všetky súbory (*)"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:235
-#, kde-format
-msgid "Remove filter expression"
-msgstr "Odstrániť výraz filtra"
+#~ msgid "Import Filters"
+#~ msgstr "Importovať filtre"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:238
-#, kde-format
-msgid "Remove Filter"
-msgstr "Odstrániť filter"
+#~ msgid "Export Filters"
+#~ msgstr "Exportovať filtre"
+
+#~ msgid "Download..."
+#~ msgstr "Stiahnuť..."
+
+#~ msgid "An error occurred while downloading the list: \"%1\""
+#~ msgstr "Nastala chyba počas sťahovania zoznamu: \"%1\""
+
+#~ msgid "Filters:"
+#~ msgstr "Filtre:"
+
+#~ msgid "&Blocking filter"
+#~ msgstr "Filter blokovania"
+
+#~ msgid "Exception Filter"
+#~ msgstr "Filter výnimiek"
+
+#~ msgid "Pattern"
+#~ msgstr "Vzorka"
+
+#~ msgid "custom"
+#~ msgstr "vlastné"
+
+#~ msgid "Accept pattern only"
+#~ msgstr "Prijať iba vzor"
+
+#~ msgid "At the beginning of the address"
+#~ msgstr "Na začiatku adresy"
+
+#~ msgid "At the end of address"
+#~ msgstr "Na konci adresy"
+
+#~ msgid "Options"
+#~ msgstr "Voľby"
+
+#~ msgid "First-part only"
+#~ msgstr "Iba prvý vzor"
+
+#~ msgid "Match case"
+#~ msgstr "Rozlišovať veľkosť"
+
+#~ msgid "Restrict to domain"
+#~ msgstr "Obmedziť na doménu"
+
+#~ msgid "Apply to:"
+#~ msgstr "Použiť pre:"
+
+#~ msgid "Collapse blocked:"
+#~ msgstr "Zvinúť blokované:"
+
+#~ msgid "&Enable Ad Block"
+#~ msgstr "Povoliť Ad Block"
+
+#~ msgid "&Hide filtered elements"
+#~ msgstr "Skryť filtrované prvky"
+
+#~ msgid "Automatic Filters"
+#~ msgstr "Automatické filtre"
+
+#~ msgid "Add Filters subscriptions..."
+#~ msgstr "Pridať prihlásenie filtrov..."
+
+#~ msgid "Remove subscription"
+#~ msgstr "Odstrániť odoberanie"
+
+#~ msgid "Update enabled automatic filters every:"
+#~ msgstr "Aktualizovať povolené automatické filtre každých:"
+
+#~ msgid "Show List..."
+#~ msgstr "Zobraziť zoznam..."
+
+#~ msgid "Manual Filters"
+#~ msgstr "Manuálne filtre"
+
+#~ msgid "Add filter expression"
+#~ msgstr "Pridať výraz filtra"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Import Filters..."
+#~ msgstr "Importovať filtre..."
+
+#~ msgid "Export filters..."
+#~ msgstr "Exportovať filtre..."
+
+#~ msgid "Search:"
+#~ msgstr "Hľadať:"
+
+#~ msgid "Edit"
+#~ msgstr "Upraviť"
+
+#~ msgid "Remove filter expression"
+#~ msgstr "Odstrániť výraz filtra"
+
+#~ msgid "Remove Filter"
+#~ msgstr "Odstrániť filter"
 
 #~ msgid "AdBlock"
 #~ msgstr "AdBlock"

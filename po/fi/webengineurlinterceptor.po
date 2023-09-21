@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2020-01-01 13:23+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -18,478 +18,317 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 18.12.3\n"
 
-#: adblock/adblockinterceptorinterface.cpp:49
-#, kde-format
-msgid "Open Blockable Items..."
-msgstr "Avaa estettävät kohteet…"
-
-#: adblock/adblockinterceptorinterface.cpp:53
-#, kde-format
-msgid "Block Image"
-msgstr "Estä kuva"
-
-#: adblock/lib/adblocksubscription.cpp:141
-#, kde-format
-msgid "Cannot load subscription!"
-msgstr "Tilausta ei voi ladata!"
-
-#: adblock/lib/adblocksubscription.cpp:257
-#, kde-format
-msgid "Custom Rules"
-msgstr "Mukautetut säännöt"
-
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
-#, kde-format
-msgid "Enabled ad block"
-msgstr "Mainosesto käytössä"
-
-#. i18n: ectx: label, entry (HideAdsEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
-#, kde-format
-msgid "Hide advertisement enabled"
-msgstr "Mainosten piilotus käytössä"
-
-# *** TARKISTA: Alkuperäinen on käsittämätön, käännös on yritys saada siitä tolkkua
-#. i18n: ectx: label, entry (AdBlockUpdateInterval), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:16
-#, kde-format
-msgid "Update interval list of adblock"
-msgstr "Mainostorjuntaluettelon päivitysväli"
-
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:26
-#, kde-format
+#: adblock/adblockfilterdialog.cpp:17
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Show adblock list"
 msgctxt "@title:window"
-msgid "Add subscription"
-msgstr "Lisää tilaus"
+msgid "Add Adblock List"
+msgstr "Näytä mainosestoluettelo"
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:32
+#: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
-msgid "Select List:"
-msgstr "Valitse luettelo:"
+msgid "Add..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:41
+#: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
-msgid "Show List"
-msgstr "Näytä luettelo"
+msgid "Modify..."
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemsdialog.cpp:26
+#: adblock/adblockfilterlistsview.cpp:56
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "Poista luettelo"
+
+#: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
-msgctxt "@title:window"
-msgid "Blockable Items"
-msgstr "Estettävät kohteet"
+msgid "Remove"
+msgstr "Poista"
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:35
-#, kde-format
-msgid "No blockable element found."
-msgstr "Torjuttavia alkioita ei löytynyt."
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Filter"
-msgstr "Suodata"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Address"
-msgstr "Osoite (address)"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:42
-#, kde-format
-msgid "Type"
-msgstr "Tyypin mukaan"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:46
+#: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Etsi…"
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:103
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
-msgid "Copy URL"
-msgstr "Kopioi osoite"
+msgid "Name:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:106
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
-msgid "Copy filter"
-msgstr "Kopioi suodatin"
+msgid "Url:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:108
-#, kde-format
-msgid "Block item..."
-msgstr "Estä kohde…"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:110
-#, kde-format
-msgid "Open"
-msgstr "Avaa"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:113
-#, kde-format
-msgid "Remove filter"
-msgstr "Poista suodatin"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:185
-#, kde-format
-msgid "Image"
-msgstr "Kuva"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:188
-#, kde-format
-msgid "Script"
-msgstr "Skripti"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:191
-#, kde-format
-msgid "Stylesheet"
-msgstr "Tyylisivu"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:194
-#, kde-format
-msgid "Font"
-msgstr "Fontti"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:197
-#, kde-format
-msgid "Frame"
-msgstr "Kehys"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:200
-#, kde-format
-msgid "XML Request"
-msgstr "XML-pyyntö"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:203
-#, kde-format
-msgid "Object"
-msgstr "Objekti"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:206
-#, kde-format
-msgid "Audio/Video"
-msgstr "Ääni tai video"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:209
-#, kde-format
-msgid "Popup window"
-msgstr "Ponnahdusikkuna"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:213
-#, kde-format
-msgid "Unknown"
-msgstr "Tuntematon"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:22
-#, kde-format
-msgctxt "@title:window"
-msgid "Create Filter"
-msgstr "Luo suodatin"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:46
-#, kde-format
-msgid "Use default"
-msgstr "Käytä oletusta"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:47
-#, kde-format
-msgid "Yes"
-msgstr "Kyllä"
-
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:48
-#, kde-format
-msgid "Not"
-msgstr "Ei"
-
-#: adblock/lib/widgets/adblocklistwidget.cpp:52
-#, kde-format
-msgid "No subscription added"
-msgstr "Tilausta ei lisätty"
-
-#: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:18
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Mainosestoliitännäisen asetukset"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:53
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
-msgid ""
-"<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-"\"filterhelp\">more information</a>):"
-msgstr ""
-"<qt>Suodatuslauseke (esim. <tt>http://www.esimerkki.fi/ad/*</tt>, <a href="
-"\"filterhelp\">lisätietoa</a>):"
+msgid "Enabled ad block"
+msgstr "Mainosesto käytössä"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:69
-#, kde-format
-msgid " day"
-msgid_plural " days"
-msgstr[0] " päivä"
-msgstr[1] " päivää"
+#~ msgid "Open Blockable Items..."
+#~ msgstr "Avaa estettävät kohteet…"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:142
-#, kde-format
-msgid ""
-"<qt><p>Enter an expression to filter. Filters can be defined as either:"
-"<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
-"the wildcards <tt>*?[]</tt> may be used</li><li>a full regular expression by "
-"surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</tt></"
-"li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist "
-"(allow) any matching URL, which takes priority over any blacklist (blocking) "
-"filter.<br><a href='%1'>%2</a></qt>"
-msgstr ""
-"<qt><p>Kirjoita suodatuslauseke. Suodattimet voi määrittää joko:"
-"<ul><li>komentotulkkimaisin jokerimerkein, esim. <tt>http://www.esimerkki.fi/"
-"ads*</tt>; jokerimerkkeinä käyvät <tt>*?[]</tt></li><li>täytenä "
-"säännöllisenä lausekkeena ympäröimällä merkkijono puolilainausmerkein '<tt>/"
-"</tt>', esim. <tt>/\\/(ad|banner)\\./</tt></li></ul><p>Jos suodatin alkaa "
-"'<tt>@@</tt>', kaikki täsmäävät osoitteet sallitaan (valkolistataan), mikä "
-"ohittaa mahdolliset torjuvat (mustalistaavat) suodattimet.<br><a href='%1'>"
-"%2</a></qt>"
+#~ msgid "Block Image"
+#~ msgstr "Estä kuva"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:150
-#, kde-format
-msgid "More information"
-msgstr "Lisätietoa"
+#~ msgid "Cannot load subscription!"
+#~ msgstr "Tilausta ei voi ladata!"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:194
-#, kde-format
-msgid "Do you want to remove this rule?"
-msgid_plural "Do you want to remove these rules?"
-msgstr[0] "Haluatko poistaa tämän säännön?"
-msgstr[1] "Haluatko poistaa nämä säännöt?"
+#~ msgid "Custom Rules"
+#~ msgstr "Mukautetut säännöt"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:195
-#, kde-format
-msgid "Remove"
-msgstr "Poista"
+#~ msgid "Hide advertisement enabled"
+#~ msgstr "Mainosten piilotus käytössä"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:336
-#, kde-format
-msgid "Do you want to delete list \"%1\"?"
-msgstr "Haluatko poistaa luettelon ”%1”?"
+# *** TARKISTA: Alkuperäinen on käsittämätön, käännös on yritys saada siitä tolkkua
+#~ msgid "Update interval list of adblock"
+#~ msgstr "Mainostorjuntaluettelon päivitysväli"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:337
-#, kde-format
-msgid "Delete current list"
-msgstr "Poista nykyinen luettelo"
+#~ msgctxt "@title:window"
+#~ msgid "Add subscription"
+#~ msgstr "Lisää tilaus"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:382
-#: adblock/lib/widgets/adblocksettingwidget.cpp:424
-#, kde-format
-msgid "All Files (*)"
-msgstr "Kaikki tiedostot (*)"
+#~ msgid "Select List:"
+#~ msgstr "Valitse luettelo:"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:383
-#, kde-format
-msgid "Import Filters"
-msgstr "Tuo suodattimia"
+#~ msgid "Show List"
+#~ msgstr "Näytä luettelo"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:434
-#, kde-format
-msgid "Export Filters"
-msgstr "Vie suodattimia"
+#~ msgctxt "@title:window"
+#~ msgid "Blockable Items"
+#~ msgstr "Estettävät kohteet"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:38
-#, kde-format
-msgctxt "@title:window"
-msgid "Show adblock list"
-msgstr "Näytä mainosestoluettelo"
+#~ msgid "No blockable element found."
+#~ msgstr "Torjuttavia alkioita ei löytynyt."
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:45
-#, kde-format
-msgid "Delete List"
-msgstr "Poista luettelo"
+#~ msgid "Filter"
+#~ msgstr "Suodata"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:62
-#, kde-format
-msgid "Download..."
-msgstr "Lataa…"
+#~ msgid "Address"
+#~ msgstr "Osoite (address)"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:135
-#, kde-format
-msgid "An error occurred while downloading the list: \"%1\""
-msgstr "Sattui virhe ladattaessa luetteloa: ”%1”"
+#~ msgid "Type"
+#~ msgstr "Tyypin mukaan"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:31
-#, kde-format
-msgid "Filters:"
-msgstr "Suodattimet:"
+#~ msgid "Copy URL"
+#~ msgstr "Kopioi osoite"
 
-#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:49
-#, kde-format
-msgid "&Blocking filter"
-msgstr "&Estosuodatin"
+#~ msgid "Copy filter"
+#~ msgstr "Kopioi suodatin"
 
-#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:56
-#, kde-format
-msgid "Exception Filter"
-msgstr "Poikkeussuodatin"
+#~ msgid "Block item..."
+#~ msgstr "Estä kohde…"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:65
-#, kde-format
-msgid "Pattern"
-msgstr "Kuvio"
+#~ msgid "Open"
+#~ msgstr "Avaa"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:73
-#, kde-format
-msgid "custom"
-msgstr "mukautettu"
+#~ msgid "Remove filter"
+#~ msgstr "Poista suodatin"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:88
-#, kde-format
-msgid "Accept pattern only"
-msgstr "Hyväksy kuvio vain"
+#~ msgid "Image"
+#~ msgstr "Kuva"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
-#, kde-format
-msgid "At the beginning of the address"
-msgstr "Osoitteen alussa"
+#~ msgid "Script"
+#~ msgstr "Skripti"
 
-#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
-#, kde-format
-msgid "At the end of address"
-msgstr "Osoitteen lopussa"
+#~ msgid "Stylesheet"
+#~ msgstr "Tyylisivu"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
-#, kde-format
-msgid "Options"
-msgstr "Asetukset"
+#~ msgid "Font"
+#~ msgstr "Fontti"
 
-#. i18n: ectx: property (text), widget (QCheckBox, firstPartOnly)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
-#, kde-format
-msgid "First-part only"
-msgstr "Vain ensimmäinen osa"
+#~ msgid "Frame"
+#~ msgstr "Kehys"
 
-#. i18n: ectx: property (text), widget (QCheckBox, matchCase)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
-#, kde-format
-msgid "Match case"
-msgstr "Erota pien- ja suuraakkoset"
+#~ msgid "XML Request"
+#~ msgstr "XML-pyyntö"
 
-#. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
-#, kde-format
-msgid "Restrict to domain"
-msgstr "Rajoita verkkotunnukseen"
+#~ msgid "Object"
+#~ msgstr "Objekti"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
-#, kde-format
-msgid "Apply to:"
-msgstr "Käytä kohteisiin:"
+#~ msgid "Audio/Video"
+#~ msgstr "Ääni tai video"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:160
-#, kde-format
-msgid "Collapse blocked:"
-msgstr "Estettyjen kohteiden pienentäminen"
+#~ msgid "Popup window"
+#~ msgstr "Ponnahdusikkuna"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
-#: adblock/lib/widgets/ui/settings_adblock.ui:29
-#, kde-format
-msgid "&Enable Ad Block"
-msgstr "Käytä &mainosestoa"
+#~ msgid "Unknown"
+#~ msgstr "Tuntematon"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
-#: adblock/lib/widgets/ui/settings_adblock.ui:36
-#, kde-format
-msgid "&Hide filtered elements"
-msgstr "P&iilota suodatetut alkiot"
+#~ msgctxt "@title:window"
+#~ msgid "Create Filter"
+#~ msgstr "Luo suodatin"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:50
-#, kde-format
-msgid "Automatic Filters"
-msgstr "Automaattiset suodattimet"
+#~ msgid "Use default"
+#~ msgstr "Käytä oletusta"
 
-#. i18n: ectx: property (text), widget (QPushButton, addFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:56
-#, kde-format
-msgid "Add Filters subscriptions..."
-msgstr "Lisää suodatintilauksia…"
+#~ msgid "Yes"
+#~ msgstr "Kyllä"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeSubscription)
-#: adblock/lib/widgets/ui/settings_adblock.ui:76
-#, kde-format
-msgid "Remove subscription"
-msgstr "Poista tilaus"
+#~ msgid "Not"
+#~ msgstr "Ei"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:98
-#, kde-format
-msgid "Update enabled automatic filters every:"
-msgstr "Päivitä käytössä olevat automaattiset suodattimet joka:"
+#~ msgid "No subscription added"
+#~ msgstr "Tilausta ei lisätty"
 
-#. i18n: ectx: property (text), widget (QPushButton, showList)
-#: adblock/lib/widgets/ui/settings_adblock.ui:136
-#, kde-format
-msgid "Show List..."
-msgstr "Näytä luettelo…"
+#~ msgid ""
+#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">more information</a>):"
+#~ msgstr ""
+#~ "<qt>Suodatuslauseke (esim. <tt>http://www.esimerkki.fi/ad/*</tt>, <a href="
+#~ "\"filterhelp\">lisätietoa</a>):"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: adblock/lib/widgets/ui/settings_adblock.ui:144
-#, kde-format
-msgid "Manual Filters"
-msgstr "Omat suodattimet"
+#~ msgid " day"
+#~ msgid_plural " days"
+#~ msgstr[0] " päivä"
+#~ msgstr[1] " päivää"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:155
-#, kde-format
-msgid "Add filter expression"
-msgstr "Lisää suodatuslauseke"
+#~ msgid ""
+#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
+#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
+#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
+#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
+#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
+#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
+#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
+#~ msgstr ""
+#~ "<qt><p>Kirjoita suodatuslauseke. Suodattimet voi määrittää joko:"
+#~ "<ul><li>komentotulkkimaisin jokerimerkein, esim. <tt>http://www.esimerkki."
+#~ "fi/ads*</tt>; jokerimerkkeinä käyvät <tt>*?[]</tt></li><li>täytenä "
+#~ "säännöllisenä lausekkeena ympäröimällä merkkijono puolilainausmerkein "
+#~ "'<tt>/</tt>', esim. <tt>/\\/(ad|banner)\\./</tt></li></ul><p>Jos suodatin "
+#~ "alkaa '<tt>@@</tt>', kaikki täsmäävät osoitteet sallitaan "
+#~ "(valkolistataan), mikä ohittaa mahdolliset torjuvat (mustalistaavat) "
+#~ "suodattimet.<br><a href='%1'>%2</a></qt>"
 
-#. i18n: ectx: property (text), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:158
-#, kde-format
-msgid "..."
-msgstr "…"
+#~ msgid "More information"
+#~ msgstr "Lisätietoa"
 
-#. i18n: ectx: property (text), widget (QPushButton, importFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:200
-#, kde-format
-msgid "Import Filters..."
-msgstr "Tuo suodattimia…"
+#~ msgid "Do you want to remove this rule?"
+#~ msgid_plural "Do you want to remove these rules?"
+#~ msgstr[0] "Haluatko poistaa tämän säännön?"
+#~ msgstr[1] "Haluatko poistaa nämä säännöt?"
 
-#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:207
-#, kde-format
-msgid "Export filters..."
-msgstr "Vie suodattimia…"
+#~ msgid "Do you want to delete list \"%1\"?"
+#~ msgstr "Haluatko poistaa luettelon ”%1”?"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/settings_adblock.ui:216
-#, kde-format
-msgid "Search:"
-msgstr "Etsi:"
+#~ msgid "Delete current list"
+#~ msgstr "Poista nykyinen luettelo"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFilter)
-#: adblock/lib/widgets/ui/settings_adblock.ui:228
-#, kde-format
-msgid "Edit"
-msgstr "Muokkaa"
+#~ msgid "All Files (*)"
+#~ msgstr "Kaikki tiedostot (*)"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:235
-#, kde-format
-msgid "Remove filter expression"
-msgstr "Poista suodatuslauseke"
+#~ msgid "Import Filters"
+#~ msgstr "Tuo suodattimia"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:238
-#, kde-format
-msgid "Remove Filter"
-msgstr "Poista suodatin"
+#~ msgid "Export Filters"
+#~ msgstr "Vie suodattimia"
+
+#~ msgid "Download..."
+#~ msgstr "Lataa…"
+
+#~ msgid "An error occurred while downloading the list: \"%1\""
+#~ msgstr "Sattui virhe ladattaessa luetteloa: ”%1”"
+
+#~ msgid "Filters:"
+#~ msgstr "Suodattimet:"
+
+#~ msgid "&Blocking filter"
+#~ msgstr "&Estosuodatin"
+
+#~ msgid "Exception Filter"
+#~ msgstr "Poikkeussuodatin"
+
+#~ msgid "Pattern"
+#~ msgstr "Kuvio"
+
+#~ msgid "custom"
+#~ msgstr "mukautettu"
+
+#~ msgid "Accept pattern only"
+#~ msgstr "Hyväksy kuvio vain"
+
+#~ msgid "At the beginning of the address"
+#~ msgstr "Osoitteen alussa"
+
+#~ msgid "At the end of address"
+#~ msgstr "Osoitteen lopussa"
+
+#~ msgid "Options"
+#~ msgstr "Asetukset"
+
+#~ msgid "First-part only"
+#~ msgstr "Vain ensimmäinen osa"
+
+#~ msgid "Match case"
+#~ msgstr "Erota pien- ja suuraakkoset"
+
+#~ msgid "Restrict to domain"
+#~ msgstr "Rajoita verkkotunnukseen"
+
+#~ msgid "Apply to:"
+#~ msgstr "Käytä kohteisiin:"
+
+#~ msgid "Collapse blocked:"
+#~ msgstr "Estettyjen kohteiden pienentäminen"
+
+#~ msgid "&Enable Ad Block"
+#~ msgstr "Käytä &mainosestoa"
+
+#~ msgid "&Hide filtered elements"
+#~ msgstr "P&iilota suodatetut alkiot"
+
+#~ msgid "Automatic Filters"
+#~ msgstr "Automaattiset suodattimet"
+
+#~ msgid "Add Filters subscriptions..."
+#~ msgstr "Lisää suodatintilauksia…"
+
+#~ msgid "Remove subscription"
+#~ msgstr "Poista tilaus"
+
+#~ msgid "Update enabled automatic filters every:"
+#~ msgstr "Päivitä käytössä olevat automaattiset suodattimet joka:"
+
+#~ msgid "Show List..."
+#~ msgstr "Näytä luettelo…"
+
+#~ msgid "Manual Filters"
+#~ msgstr "Omat suodattimet"
+
+#~ msgid "Add filter expression"
+#~ msgstr "Lisää suodatuslauseke"
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgid "Import Filters..."
+#~ msgstr "Tuo suodattimia…"
+
+#~ msgid "Export filters..."
+#~ msgstr "Vie suodattimia…"
+
+#~ msgid "Search:"
+#~ msgstr "Etsi:"
+
+#~ msgid "Edit"
+#~ msgstr "Muokkaa"
+
+#~ msgid "Remove filter expression"
+#~ msgstr "Poista suodatuslauseke"
+
+#~ msgid "Remove Filter"
+#~ msgstr "Poista suodatin"
 
 #~ msgid "AdBlock"
 #~ msgstr "Mainosesto"
