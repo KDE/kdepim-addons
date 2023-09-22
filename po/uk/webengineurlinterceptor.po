@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2016, 2017, 2019.
+# Yuri Chornoivan <yurchor@ukr.net>, 2016, 2017, 2019, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2019-12-17 08:58+0200\n"
+"PO-Revision-Date: 2023-09-21 13:23+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -18,32 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.03.70\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #: adblock/adblockfilterdialog.cpp:17
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr "Показ списку блокування реклами"
+msgstr "Додавання списку блокування реклами"
 
 #: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Додати…"
 
 #: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
 msgid "Modify..."
-msgstr ""
+msgstr "Змінити…"
 
 #: adblock/adblockfilterlistsview.cpp:56
-#, fuzzy, kde-format
-#| msgid "Delete List"
+#, kde-format
 msgid "Delete"
-msgstr "Вилучити список"
+msgstr "Вилучити"
 
 #: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
@@ -58,12 +55,12 @@ msgstr "Шукати…"
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Назва:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "Адреса:"
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format

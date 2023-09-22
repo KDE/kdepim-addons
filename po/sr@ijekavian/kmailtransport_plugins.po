@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-12-17 03:18+0100\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
 "PO-Revision-Date: 2017-07-16 22:56+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,34 +18,34 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: sendmail/sendmailjob.cpp:61
+#: sendmail/sendmailjob.cpp:44
 #, kde-format
 msgid "Failed to execute mailer program %1"
 msgstr "Не могу да извршим поштански програм %1"
 
-#: sendmail/sendmailjob.cpp:74
+#: sendmail/sendmailjob.cpp:57
 #, kde-format
 msgid "Sendmail exited abnormally."
 msgstr "Абнормално окончање сендмејла."
 
-#: sendmail/sendmailjob.cpp:76
+#: sendmail/sendmailjob.cpp:59
 #, kde-format
 msgid "Sendmail exited abnormally: %1"
 msgstr "Абнормално окончање сендмејла: %1"
 
-#: sendmail/sendmailtransportplugin.cpp:41
+#: sendmail/sendmailtransportplugin.cpp:25
 #, kde-format
 msgctxt "@option sendmail transport"
 msgid "Sendmail"
 msgstr "Сендмејл"
 
-#: sendmail/sendmailtransportplugin.cpp:43
+#: sendmail/sendmailtransportplugin.cpp:27
 #, kde-format
 msgid "A local sendmail installation"
 msgstr "Локална инсталација сендмејла"
 
 # >> @title:window
-#: sendmail/sendmailtransportplugin.cpp:53
+#: sendmail/sendmailtransportplugin.cpp:36
 #, fuzzy, kde-format
 #| msgid "Configure account"
 msgctxt "@title:window"

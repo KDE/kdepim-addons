@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cryptopageplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:15+0200\n"
+"POT-Creation-Date: 2022-12-23 00:47+0000\n"
 "PO-Revision-Date: 2015-12-26 20:17+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,37 +18,37 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: cryptopageplugin.cpp:55
+#: cryptopageplugin.cpp:37
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Дозвољени протоколи"
 
-#: cryptopageplugin.cpp:70
+#: cryptopageplugin.cpp:52
 #, kde-format
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Пожељни опенПГП шифрарски кључ:"
 
-#: cryptopageplugin.cpp:76
+#: cryptopageplugin.cpp:57
 #, kde-format
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Пожељни С/МИМЕ сертификат за шифровање:"
 
-#: cryptopageplugin.cpp:82
+#: cryptopageplugin.cpp:62
 #, kde-format
 msgid "Message Preference"
 msgstr "Пожељно за поруке"
 
-#: cryptopageplugin.cpp:91
+#: cryptopageplugin.cpp:71
 #, kde-format
 msgid "Sign:"
 msgstr "Потпис:"
 
-#: cryptopageplugin.cpp:109
+#: cryptopageplugin.cpp:88
 #, kde-format
 msgid "Encrypt:"
 msgstr "Шифровање:"
 
-#: cryptopageplugin.cpp:130
+#: cryptopageplugin.cpp:106
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Криптографске поставке"

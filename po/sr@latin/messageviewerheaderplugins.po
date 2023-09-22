@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerheaderplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-31 18:10+0200\n"
+"POT-Creation-Date: 2022-09-26 00:46+0000\n"
 "PO-Revision-Date: 2015-12-26 20:17+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,131 +18,131 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:96
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:123
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:125
+#: briefheaderstyleplugin/briefheaderstyle.cpp:67
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:126
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
 #, kde-format
 msgid "[vCard]"
 msgstr "[vCard]"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:104
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:154
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:167
+#: briefheaderstyleplugin/briefheaderstyle.cpp:75
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:164
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
 #, kde-format
 msgid "CC: "
 msgstr "CC: "
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:111
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:167
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:177
+#: briefheaderstyleplugin/briefheaderstyle.cpp:82
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:179
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
 #, kde-format
 msgid "BCC: "
 msgstr "BCC: "
 
-#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:37
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:22
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Brief Headers"
 msgstr "Saže&ta zaglavlja"
 
-#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:40
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:25
 #, kde-format
 msgid "Show brief list of message headers"
 msgstr "Prikaži sažet spisak zaglavlja poruke"
 
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:130
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:117
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:134
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:92
 #, kde-format
 msgid "From: "
 msgstr "Od: "
 
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:141
+#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:149
 #, kde-format
 msgid "To: "
 msgstr "Za: "
 
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:36
+#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:21
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Enterprise Headers"
 msgstr "&Poslovna zaglavlja"
 
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:39
+#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:24
 #, kde-format
 msgid "Show the list of headers in Enterprise style"
 msgstr "Prikaži spisak zaglavlja u poslovnom stilu"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:120
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
 #, kde-format
 msgid "(resent from %1)"
 msgstr "(ponovo poslato iz %1)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:143
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:112
 #, kde-format
 msgid "(receiver was %1)"
 msgstr "(primalac je %1)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:156
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:130
 #, kde-format
 msgctxt "To-field of the mail header."
 msgid "To: "
 msgstr "Za: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:184
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:161
 #, kde-format
 msgid "Date: "
 msgstr "Datum: "
 
 # Назив поља заглавља. Превести или не дирати?
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:204
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:183
 #, kde-format
 msgid "Bugzilla: "
 msgstr "Bubaždaja: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:213
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:192
 #, kde-format
 msgid "MDN To: "
 msgstr "MDN za: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:219
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:200
 #, kde-format
 msgid "Spam Status:"
 msgstr "Stanje spama:"
 
-#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:37
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:22
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Fancy Headers"
 msgstr "Po&modna zaglavlja"
 
-#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:40
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:25
 #, kde-format
 msgid "Show the list of headers in a fancy format"
 msgstr "Prikaži spisak zaglavlja u pomodnom formatu"
 
-#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:203
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:190
 #, kde-format
 msgid "Attachments:"
 msgstr ""
 
-#: longheaderstyleplugin/longheaderstyleinterface.cpp:37
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:22
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Long Headers"
 msgstr "&Dugačka zaglavlja"
 
-#: longheaderstyleplugin/longheaderstyleinterface.cpp:40
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:25
 #, kde-format
 msgid "Show long list of message headers"
 msgstr "Prikaži dugačak spisak zaglavlja poruke"
 
-#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:37
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:22
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Standard Headers"
 msgstr "&Standardna zaglavlja"
 
-#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:40
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:25
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "Prikaži standardni spisak zaglavlja poruke"

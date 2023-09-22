@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_semantic_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-03-20 03:26+0100\n"
+"POT-Creation-Date: 2023-05-07 00:51+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,37 +18,42 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: itineraryurlhandler.cpp:142 templates/itinerary.html:73
+#: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
 msgid "Send to %1"
 msgstr ""
 
-#: itineraryurlhandler.cpp:156
+#: itineraryurlhandler.cpp:126
 #, kde-format
 msgid "Show calendar at the time of this reservation."
 msgstr ""
 
-#: itineraryurlhandler.cpp:159
+#: itineraryurlhandler.cpp:129
 #, kde-format
 msgid "Add reservation to your calendar."
 msgstr "Dodaj rezervaciju u kalendar"
 
-#: itineraryurlhandler.cpp:162
+#: itineraryurlhandler.cpp:132
 #, fuzzy, kde-format
 #| msgid "Add reservation to calendar."
 msgid "Import reservation into KDE Itinerary."
 msgstr "Dodaj rezervaciju u kalendar"
 
-#: itineraryurlhandler.cpp:165
+#: itineraryurlhandler.cpp:135
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
 msgstr ""
 
-#: itineraryurlhandler.cpp:217
+#: itineraryurlhandler.cpp:206
 #, fuzzy, kde-format
 #| msgid "Boarding: %1"
 msgid "Boarding Pass"
 msgstr "Ukrcavanje: %1"
+
+#: itineraryurlhandler.cpp:207
+#, kde-format
+msgid "Ticket"
+msgstr ""
 
 #: templates/actions.html:4
 #, fuzzy
@@ -76,16 +81,16 @@ msgstr "Otkaži..."
 msgid "Check-In"
 msgstr ""
 
-#: templates/busreservation.html:12 templates/flightreservation.html:13
-#: templates/trainreservation.html:12
+#: templates/boatreservation.html:9 templates/busreservation.html:12
+#: templates/flightreservation.html:13 templates/trainreservation.html:12
 #, fuzzy
 #| msgid "Add reservation to calendar."
 msgid "Reservation canceled."
 msgstr "Dodaj rezervaciju u kalendar"
 
-#: templates/busreservation.html:49 templates/flightreservation.html:62
-#: templates/flightreservation.html:79 templates/trainreservation.html:62
-#: templates/trainreservation.html:90
+#: templates/busreservation.html:49 templates/busreservation.html:69
+#: templates/flightreservation.html:62 templates/flightreservation.html:79
+#: templates/trainreservation.html:62 templates/trainreservation.html:90
 #, kde-format
 msgid "Seat: %1"
 msgstr "Sedište: %1"
@@ -129,21 +134,21 @@ msgstr ""
 msgid "Under Name: %1"
 msgstr ""
 
-#: templates/itinerary.html:63
+#: templates/itinerary.html:66
 msgid "Show Calendar"
 msgstr "Prikaži kalendar"
 
-#: templates/itinerary.html:66
+#: templates/itinerary.html:69
 #, fuzzy
 #| msgid "Add To Calendar"
 msgid "Add to Calendar"
 msgstr "Dodaj u kalendar"
 
-#: templates/itinerary.html:69
+#: templates/itinerary.html:72
 msgid "Add to KDE Itinerary"
 msgstr ""
 
-#: templates/itinerary.html:75
+#: templates/itinerary.html:78
 msgid "Send to Device..."
 msgstr ""
 
@@ -153,6 +158,10 @@ msgstr ""
 
 #: templates/location.html:10
 msgid "Search address on map"
+msgstr ""
+
+#: templates/lodgingreservation.html:10
+msgid "Reserved for: "
 msgstr ""
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2016, 2017.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019.
+# SPDX-FileCopyrightText: 2019, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2019-12-21 18:36+0100\n"
+"PO-Revision-Date: 2023-09-21 16:15+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,32 +16,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.12.0\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: adblock/adblockfilterdialog.cpp:17
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr "Mostrar lista de bloqueo"
+msgstr "Añadir lista de bloqueo publicitario"
 
 #: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Añadir..."
 
 #: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
 msgid "Modify..."
-msgstr ""
+msgstr "Modificar..."
 
 #: adblock/adblockfilterlistsview.cpp:56
-#, fuzzy, kde-format
-#| msgid "Delete List"
+#, kde-format
 msgid "Delete"
-msgstr "Borrar lista"
+msgstr "Borrar"
 
 #: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
@@ -56,12 +53,12 @@ msgstr "Buscar..."
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Nombre:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "URL:"
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
@@ -73,7 +70,7 @@ msgstr "Configurar complemento AdBlock"
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
 msgid "Enabled ad block"
-msgstr "Activado el bloqueo de anuncios"
+msgstr "Activado el bloqueo publicitario"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "Abrir elementos bloqueables..."

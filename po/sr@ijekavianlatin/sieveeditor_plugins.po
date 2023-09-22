@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-04-07 03:42+0200\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,114 +18,111 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: emaillineedit/emaillineedit.cpp:46
+#: emaillineedit/emaillineedit.cpp:34
 #, kde-format
 msgid "Click on button for selecting contacts..."
 msgstr ""
 
-#: emaillineedit/emaillineedit.cpp:51
-#: regexeditorlineedit/regexpeditorlineedit.cpp:66
+#: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "..."
 msgstr "..."
 
-#: emaillineedit/emaillineedit.cpp:53
+#: emaillineedit/emaillineedit.cpp:40
 #, kde-format
 msgid "Select Emails"
 msgstr ""
 
-#: emaillineedit/emaillineedit.cpp:101
+#: emaillineedit/emaillineedit.cpp:87
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
 msgstr ""
 
-#: imapfoldercompletion/selectimapcreatefolderjob.cpp:106
-#, kde-format
-msgid "Error during creating folder: %1"
-msgstr "Greška pri stvaranju fascikle: %1"
-
 # >> @title:window
-#: imapfoldercompletion/selectimapcreatefolderjob.cpp:106
-#: imapfoldercompletion/selectimapfolderwidget.cpp:123
-#: imapfoldercompletion/selectimapfolderwidget.cpp:130
-#: imapfoldercompletion/selectimapfolderwidget.cpp:136
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
 #, kde-format
 msgid "Create Folder"
 msgstr "Stvaranje fascikle"
 
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#, kde-format
+msgid "Error during creating folder: %1"
+msgstr "Greška pri stvaranju fascikle: %1"
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:27
+#, kde-format
+msgid "Create Folder..."
+msgstr "Napravi fasciklu..."
+
 # >> @title:window
-#: imapfoldercompletion/selectimapfolderdialog.cpp:34
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Select IMAP folder"
 msgctxt "@title:window"
 msgid "Select IMAP folder"
 msgstr "Izbor IMAP fascikle"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:46
-#, kde-format
-msgid "Create Folder..."
-msgstr "Napravi fasciklu..."
-
-#: imapfoldercompletion/selectimapfoldertreeview.cpp:53
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:37
 #, kde-format
 msgid "Unable to load folder list"
 msgstr "Ne mogu da učitam spisak fascikli"
 
-#: imapfoldercompletion/selectimapfoldertreeview.cpp:56
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:40
 #, kde-format
 msgid "Loading in progress..."
 msgstr "Učitavanje u toku..."
 
 # >> @label
-#: imapfoldercompletion/selectimapfolderwidget.cpp:55
+#: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
 msgid "Search..."
 msgstr "Pretraga..."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:61
+#: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
 msgid "Refresh IMAP Folder List"
 msgstr "Osveži spisak IMAP fascikli"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:123
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #, kde-format
 msgid "Folder Name:"
 msgstr "Ime fascikle:"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:130
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
 #, kde-format
 msgid "Slashes are not allowed in folder names."
 msgstr "Kose crte nisu dozvoljene u imenima fascikli."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:136
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
 #, kde-format
 msgid "Empty folder name is not supported."
 msgstr "Prazno ime fascikle nije podržano."
 
-#: imapfoldercompletion/selectimaploadfoldersjob.cpp:154
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
 #, kde-format
 msgid "Error during loading folders: %1"
 msgstr "Greška pri učitavanju fascikli: %1"
 
 # >> @title:window
-#: imapfoldercompletion/selectimaploadfoldersjob.cpp:154
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
 #, kde-format
 msgid "Load Folders"
 msgstr "Učitavanje fascikli"
 
 # >> @title:window
-#: imapfoldercompletion/selectimapwidget.cpp:45
+#: imapfoldercompletion/selectimapwidget.cpp:31
 #, kde-format
 msgid "Select IMAP folder"
 msgstr "Izbor IMAP fascikle"
 
-#: imapfoldercompletion/selectimapwidget.cpp:72
+#: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
 msgid "Click on button for selecting folder..."
 msgstr ""
 
-#: regexeditorlineedit/regexpeditorlineedit.cpp:68
-#, kde-format
-msgid "Create Regular Expression"
-msgstr "Napravi regularni izraz"
+#~ msgid "Create Regular Expression"
+#~ msgstr "Napravi regularni izraz"

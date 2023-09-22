@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-12-17 03:18+0100\n"
+"POT-Creation-Date: 2022-10-04 00:45+0000\n"
 "PO-Revision-Date: 2016-04-15 23:50+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -21,45 +21,45 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:43
+#: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
 msgid "Search &Directory Service"
 msgstr ""
 
 # >> @title:window
-#: plugins/datenums/configdialog.cpp:39
+#: plugins/datenums/configdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Configure Day Numbers"
 msgctxt "@title:window"
 msgid "Configure Day Numbers"
 msgstr "Podešavanje brojeva dana"
 
-#: plugins/datenums/configdialog.cpp:54
+#: plugins/datenums/configdialog.cpp:43
 #, kde-format
 msgid "Show Date Number"
 msgstr "Prikaži broj datuma"
 
-#: plugins/datenums/configdialog.cpp:59
+#: plugins/datenums/configdialog.cpp:47
 #, kde-format
 msgid "Show day number"
 msgstr "Prikaži broj dana"
 
-#: plugins/datenums/configdialog.cpp:62
+#: plugins/datenums/configdialog.cpp:50
 #, kde-format
 msgid "Show days to end of year"
 msgstr "Prikaži dane do kraja godine"
 
-#: plugins/datenums/configdialog.cpp:65
+#: plugins/datenums/configdialog.cpp:53
 #, kde-format
 msgid "Show both"
 msgstr "Prikaži oba"
 
-#: plugins/datenums/datenums.cpp:46
+#: plugins/datenums/datenums.cpp:36
 #, kde-format
 msgid "This plugin shows information on a day's position in the year."
 msgstr "Ovaj priključak prikazuje informacije o položaju dana u godini."
 
-#: plugins/datenums/datenums.cpp:63
+#: plugins/datenums/datenums.cpp:54
 #, kde-format
 msgid "1 day before the end of the year"
 msgid_plural "%1 days before the end of the year"
@@ -68,13 +68,13 @@ msgstr[1] "%1 dana pre kraja godine"
 msgstr[2] "%1 dan pre kraja godine"
 msgstr[3] "%1 dan pre kraja godine"
 
-#: plugins/datenums/datenums.cpp:70
+#: plugins/datenums/datenums.cpp:59
 #, kde-format
 msgctxt "dayOfYear / daysTillEndOfYear"
 msgid "%1 / %2"
 msgstr "%1 / %2"
 
-#: plugins/datenums/datenums.cpp:72
+#: plugins/datenums/datenums.cpp:60
 #, kde-format
 msgid "1 day since the beginning of the year,\n"
 msgid_plural "%1 days since the beginning of the year,\n"
@@ -83,7 +83,7 @@ msgstr[1] "%1 dana od početka godine,\n"
 msgstr[2] "%1 dana od početka godine,\n"
 msgstr[3] "%1 dan od početka godine,\n"
 
-#: plugins/datenums/datenums.cpp:75
+#: plugins/datenums/datenums.cpp:61
 #, kde-format
 msgid "1 day until the end of the year"
 msgid_plural "%1 days until the end of the year"
@@ -92,14 +92,14 @@ msgstr[1] "%1 dana do kraja godine"
 msgstr[2] "%1 dana do kraja godine"
 msgstr[3] "%1 dan do kraja godine"
 
-#: plugins/datenums/datenums.cpp:118
+#: plugins/datenums/datenums.cpp:102
 #, kde-format
 msgctxt "Week weekOfYear"
 msgid "Week %1"
 msgstr "sedmica %1"
 
-#: plugins/datenums/datenums.cpp:119 plugins/datenums/datenums.cpp:133
-#: plugins/datenums/datenums.cpp:140
+#: plugins/datenums/datenums.cpp:103 plugins/datenums/datenums.cpp:113
+#: plugins/datenums/datenums.cpp:118
 #, kde-format
 msgid "1 week since the beginning of the year"
 msgid_plural "%1 weeks since the beginning of the year"
@@ -108,19 +108,19 @@ msgstr[1] "%1 sedmice od početka godine"
 msgstr[2] "%1 sedmica od početka godine"
 msgstr[3] "%1 sedmica od početka godine"
 
-#: plugins/datenums/datenums.cpp:125
+#: plugins/datenums/datenums.cpp:106
 #, kde-format
 msgctxt "weekOfYear (year)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugins/datenums/datenums.cpp:127
+#: plugins/datenums/datenums.cpp:107
 #, kde-format
 msgctxt "Week weekOfYear (year)"
 msgid "Week %1 (%2)"
 msgstr "sedmica %1 (%2)"
 
-#: plugins/datenums/datenums.cpp:146
+#: plugins/datenums/datenums.cpp:122
 #, kde-format
 msgid "1 week remaining"
 msgid_plural "%1 weeks remaining"
@@ -129,7 +129,7 @@ msgstr[1] "još %1 sedmice"
 msgstr[2] "još %1 sedmica"
 msgstr[3] "još %1 sedmica"
 
-#: plugins/datenums/datenums.cpp:149
+#: plugins/datenums/datenums.cpp:123
 #, kde-format
 msgid "1 week until the end of the year"
 msgid_plural "%1 weeks until the end of the year"
@@ -138,13 +138,13 @@ msgstr[1] "%1 sedmice do kraja godine"
 msgstr[2] "%1 sedmice do kraja godine"
 msgstr[3] "%1 sedmica do kraja godine"
 
-#: plugins/datenums/datenums.cpp:153
+#: plugins/datenums/datenums.cpp:124
 #, kde-format
 msgctxt "weekOfYear / weeksTillEndOfYear"
 msgid "%1 / %2"
 msgstr "%1 / %2"
 
-#: plugins/datenums/datenums.cpp:172
+#: plugins/datenums/datenums.cpp:140
 #, kde-format
 msgctxt ""
 "n weeks since the beginning of the year\n"
@@ -157,34 +157,34 @@ msgstr ""
 "%2"
 
 # >> @title:window
-#: plugins/hebrew/configdialog.cpp:40
+#: plugins/hebrew/configdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Configure Holidays"
 msgctxt "@title:window"
 msgid "Configure Holidays"
 msgstr "Podešavanje praznika"
 
-#: plugins/hebrew/configdialog.cpp:54
+#: plugins/hebrew/configdialog.cpp:42
 #, kde-format
 msgid "Use Israeli holidays"
 msgstr "Koristi izraelske praznike"
 
-#: plugins/hebrew/configdialog.cpp:58
+#: plugins/hebrew/configdialog.cpp:46
 #, kde-format
 msgid "Show weekly parsha"
 msgstr "Prikaži sedmičnu parshu"
 
-#: plugins/hebrew/configdialog.cpp:62
+#: plugins/hebrew/configdialog.cpp:50
 #, kde-format
 msgid "Show day of Omer"
 msgstr "Prikaži dan Omera"
 
-#: plugins/hebrew/configdialog.cpp:66
+#: plugins/hebrew/configdialog.cpp:54
 #, kde-format
 msgid "Show Chol HaMoed"
 msgstr "Prikaži Kol Ha‑moed"
 
-#: plugins/hebrew/hebrew.cpp:75
+#: plugins/hebrew/hebrew.cpp:60
 #, kde-format
 msgctxt ""
 "Change the next two strings if emphasis is done differently in your language."
@@ -197,12 +197,12 @@ msgstr ""
 "%1\n"
 "</i></p></qt>"
 
-#: plugins/hebrew/hebrew.cpp:82
+#: plugins/hebrew/hebrew.cpp:67
 #, kde-format
 msgid "This plugin provides the date in the Jewish calendar."
 msgstr "Ovaj priključak daje datume u jevrejskom kalendaru."
 
-#: plugins/hebrew/holiday.cpp:69
+#: plugins/hebrew/holiday.cpp:75
 #, kde-format
 msgctxt ""
 "These are Jewish holidays and mostly do not have translations. They may have "
@@ -211,211 +211,211 @@ msgctxt ""
 msgid "Sh. HaHodesh"
 msgstr "š. ha‑hodeš"
 
-#: plugins/hebrew/holiday.cpp:77
+#: plugins/hebrew/holiday.cpp:83
 #, kde-format
 msgid "Erev Pesach"
 msgstr "erev pesač"
 
-#: plugins/hebrew/holiday.cpp:88
+#: plugins/hebrew/holiday.cpp:94
 #, kde-format
 msgid "Sh. HaGadol"
 msgstr "š. ha‑gadol"
 
-#: plugins/hebrew/holiday.cpp:96
+#: plugins/hebrew/holiday.cpp:102
 #, kde-format
 msgid "Pesach"
 msgstr "pesač"
 
-#: plugins/hebrew/holiday.cpp:107 plugins/hebrew/holiday.cpp:305
+#: plugins/hebrew/holiday.cpp:113 plugins/hebrew/holiday.cpp:307
 #, kde-format
 msgid "Chol Hamoed"
 msgstr "kol ha‑moed"
 
-#: plugins/hebrew/holiday.cpp:118 plugins/hebrew/holiday.cpp:123
-#: plugins/hebrew/holiday.cpp:132
+#: plugins/hebrew/holiday.cpp:124 plugins/hebrew/holiday.cpp:129
+#: plugins/hebrew/holiday.cpp:138
 #, kde-format
 msgid "Yom HaShoah"
 msgstr "jom ha‑šoa"
 
-#: plugins/hebrew/holiday.cpp:158 plugins/hebrew/holiday.cpp:165
-#: plugins/hebrew/holiday.cpp:176
+#: plugins/hebrew/holiday.cpp:164 plugins/hebrew/holiday.cpp:171
+#: plugins/hebrew/holiday.cpp:182
 #, kde-format
 msgid "Yom HaAtzmaut"
 msgstr "jom ha‑acmaut"
 
-#: plugins/hebrew/holiday.cpp:160 plugins/hebrew/holiday.cpp:174
+#: plugins/hebrew/holiday.cpp:166 plugins/hebrew/holiday.cpp:180
 #, kde-format
 msgid "Yom HaZikaron"
 msgstr "jom ha‑zikaron"
 
-#: plugins/hebrew/holiday.cpp:184
+#: plugins/hebrew/holiday.cpp:190
 #, kde-format
 msgid "Yom Yerushalayim"
 msgstr "jom jerušalajim"
 
-#: plugins/hebrew/holiday.cpp:188
+#: plugins/hebrew/holiday.cpp:194
 #, kde-format
 msgid "Lag BaOmer"
 msgstr "lag ba‑omer"
 
-#: plugins/hebrew/holiday.cpp:214
+#: plugins/hebrew/holiday.cpp:220
 #, kde-format
 msgid "Erev Shavuot"
 msgstr "erev šavuot"
 
-#: plugins/hebrew/holiday.cpp:220
+#: plugins/hebrew/holiday.cpp:225
 #, kde-format
 msgid "Shavuot"
 msgstr "šavuot"
 
-#: plugins/hebrew/holiday.cpp:230
+#: plugins/hebrew/holiday.cpp:234
 #, kde-format
 msgid "Tzom Tammuz"
 msgstr "com tamuz"
 
-#: plugins/hebrew/holiday.cpp:238
+#: plugins/hebrew/holiday.cpp:242
 #, kde-format
 msgid "Sh. Hazon"
 msgstr "š. hazon"
 
-#: plugins/hebrew/holiday.cpp:240
+#: plugins/hebrew/holiday.cpp:244
 #, kde-format
 msgid "Sh. Nahamu"
 msgstr "š. nahamu"
 
-#: plugins/hebrew/holiday.cpp:245
+#: plugins/hebrew/holiday.cpp:248
 #, kde-format
 msgid "Tisha B'Av"
 msgstr "tiša b'av"
 
-#: plugins/hebrew/holiday.cpp:251
+#: plugins/hebrew/holiday.cpp:254
 #, kde-format
 msgid "S'lichot"
 msgstr "s'lihot"
 
-#: plugins/hebrew/holiday.cpp:253
+#: plugins/hebrew/holiday.cpp:256
 #, kde-format
 msgid "Erev R.H."
 msgstr "erev r.h."
 
-#: plugins/hebrew/holiday.cpp:262
+#: plugins/hebrew/holiday.cpp:264
 #, kde-format
 msgid "Rosh Hashana"
 msgstr "roš hašana"
 
-#: plugins/hebrew/holiday.cpp:266 plugins/hebrew/holiday.cpp:281
+#: plugins/hebrew/holiday.cpp:268 plugins/hebrew/holiday.cpp:283
 #, kde-format
 msgid "Sh. Shuvah"
 msgstr "š. šuva"
 
-#: plugins/hebrew/holiday.cpp:268 plugins/hebrew/holiday.cpp:273
+#: plugins/hebrew/holiday.cpp:270 plugins/hebrew/holiday.cpp:275
 #, kde-format
 msgid "Tzom Gedalia"
 msgstr "com gedalija"
 
-#: plugins/hebrew/holiday.cpp:285
+#: plugins/hebrew/holiday.cpp:287
 #, kde-format
 msgid "Erev Y.K."
 msgstr "erev j.k."
 
-#: plugins/hebrew/holiday.cpp:288
+#: plugins/hebrew/holiday.cpp:290
 #, kde-format
 msgid "Yom Kippur"
 msgstr "jom kipur"
 
-#: plugins/hebrew/holiday.cpp:291
+#: plugins/hebrew/holiday.cpp:293
 #, kde-format
 msgid "Erev Sukkot"
 msgstr "erev sukot"
 
-#: plugins/hebrew/holiday.cpp:296
+#: plugins/hebrew/holiday.cpp:298
 #, kde-format
 msgid "Sukkot"
 msgstr "sukot"
 
-#: plugins/hebrew/holiday.cpp:309
+#: plugins/hebrew/holiday.cpp:311
 #, kde-format
 msgid "Hoshana Rabah"
 msgstr "hošana raba"
 
-#: plugins/hebrew/holiday.cpp:312
+#: plugins/hebrew/holiday.cpp:314
 #, kde-format
 msgid "Shmini Atzeret"
 msgstr "šmini aceret"
 
-#: plugins/hebrew/holiday.cpp:316
+#: plugins/hebrew/holiday.cpp:318
 #, kde-format
 msgid "Simchat Torah"
 msgstr "simčat tora"
 
-#: plugins/hebrew/holiday.cpp:327
+#: plugins/hebrew/holiday.cpp:329
 #, kde-format
 msgid "Erev Hanukah"
 msgstr "erev hanuka"
 
-#: plugins/hebrew/holiday.cpp:329 plugins/hebrew/holiday.cpp:337
+#: plugins/hebrew/holiday.cpp:331 plugins/hebrew/holiday.cpp:339
 #, kde-format
 msgid "Hanukah"
 msgstr "hanuka"
 
-#: plugins/hebrew/holiday.cpp:341
+#: plugins/hebrew/holiday.cpp:342
 #, kde-format
 msgid "Tzom Tevet"
 msgstr "com tevet"
 
-#: plugins/hebrew/holiday.cpp:351 plugins/hebrew/holiday.cpp:360
-#: plugins/hebrew/holiday.cpp:365 plugins/hebrew/holiday.cpp:371
+#: plugins/hebrew/holiday.cpp:352 plugins/hebrew/holiday.cpp:361
+#: plugins/hebrew/holiday.cpp:366 plugins/hebrew/holiday.cpp:372
 #, kde-format
 msgid "Sh. Shirah"
 msgstr "š. šira"
 
-#: plugins/hebrew/holiday.cpp:367
+#: plugins/hebrew/holiday.cpp:368
 #, kde-format
 msgid "Tu B'Shvat"
 msgstr "tu b'švat"
 
-#: plugins/hebrew/holiday.cpp:382 plugins/hebrew/holiday.cpp:394
-#: plugins/hebrew/holiday.cpp:402
+#: plugins/hebrew/holiday.cpp:383 plugins/hebrew/holiday.cpp:395
+#: plugins/hebrew/holiday.cpp:403
 #, kde-format
 msgid "Sh. Shekalim"
 msgstr "š. šekalim"
 
-#: plugins/hebrew/holiday.cpp:391
+#: plugins/hebrew/holiday.cpp:392
 #, kde-format
 msgid "Purim Katan"
 msgstr "purim katan"
 
-#: plugins/hebrew/holiday.cpp:410 plugins/hebrew/holiday.cpp:430
+#: plugins/hebrew/holiday.cpp:411 plugins/hebrew/holiday.cpp:431
 #, kde-format
 msgid "Ta'anit Ester"
 msgstr "ta'anit ester"
 
-#: plugins/hebrew/holiday.cpp:419 plugins/hebrew/holiday.cpp:424
+#: plugins/hebrew/holiday.cpp:420 plugins/hebrew/holiday.cpp:425
 #, kde-format
 msgid "Sh. Zachor"
 msgstr "š. zakhor"
 
-#: plugins/hebrew/holiday.cpp:426
+#: plugins/hebrew/holiday.cpp:427
 #, kde-format
 msgid "Erev Purim"
 msgstr "erev purim"
 
-#: plugins/hebrew/holiday.cpp:434
+#: plugins/hebrew/holiday.cpp:435
 #, kde-format
 msgid "Purim"
 msgstr "purim"
 
-#: plugins/hebrew/holiday.cpp:438 plugins/hebrew/holiday.cpp:443
+#: plugins/hebrew/holiday.cpp:439 plugins/hebrew/holiday.cpp:444
 #, kde-format
 msgid "Shushan Purim"
 msgstr "šušan purim"
 
-#: plugins/hebrew/holiday.cpp:454
+#: plugins/hebrew/holiday.cpp:455
 #, kde-format
 msgid "Sh. Parah"
 msgstr "š. para"
 
-#: plugins/hebrew/holiday.cpp:464
+#: plugins/hebrew/holiday.cpp:465
 #, kde-format
 msgid "Sh. HaHodesh"
 msgstr "š. ha‑hodeš"
@@ -425,7 +425,7 @@ msgstr "š. ha‑hodeš"
 msgid " Omer"
 msgstr " omer"
 
-#: plugins/hebrew/parsha.cpp:39
+#: plugins/hebrew/parsha.cpp:28
 #, kde-format
 msgctxt ""
 "These are weekly readings and do not have translations. They may have "
@@ -434,267 +434,267 @@ msgctxt ""
 msgid "Bereshit"
 msgstr "berešit"
 
-#: plugins/hebrew/parsha.cpp:40
+#: plugins/hebrew/parsha.cpp:29
 #, kde-format
 msgid "Noach"
 msgstr "noa"
 
-#: plugins/hebrew/parsha.cpp:41
+#: plugins/hebrew/parsha.cpp:29
 #, kde-format
 msgid "Lech L'cha"
 msgstr "leh l'ča"
 
-#: plugins/hebrew/parsha.cpp:42
+#: plugins/hebrew/parsha.cpp:29
 #, kde-format
 msgid "Vayera"
 msgstr "vajera"
 
-#: plugins/hebrew/parsha.cpp:43
+#: plugins/hebrew/parsha.cpp:29
 #, kde-format
 msgid "Chaye Sarah"
 msgstr "čaje sara"
 
-#: plugins/hebrew/parsha.cpp:44
+#: plugins/hebrew/parsha.cpp:29
 #, kde-format
 msgid "Toldot"
 msgstr "toldot"
 
-#: plugins/hebrew/parsha.cpp:45
+#: plugins/hebrew/parsha.cpp:29
 #, kde-format
 msgid "Vayetze"
 msgstr "vajece"
 
-#: plugins/hebrew/parsha.cpp:46
+#: plugins/hebrew/parsha.cpp:29
 #, kde-format
 msgid "Vayishlach"
 msgstr "vajišlah"
 
-#: plugins/hebrew/parsha.cpp:47
+#: plugins/hebrew/parsha.cpp:30
 #, kde-format
 msgid "Vayeshev"
 msgstr "vaješev"
 
-#: plugins/hebrew/parsha.cpp:48
+#: plugins/hebrew/parsha.cpp:30
 #, kde-format
 msgid "Miketz"
 msgstr "mikec"
 
-#: plugins/hebrew/parsha.cpp:49
+#: plugins/hebrew/parsha.cpp:30
 #, kde-format
 msgid "Vayigash"
 msgstr "vajigaš"
 
-#: plugins/hebrew/parsha.cpp:50
+#: plugins/hebrew/parsha.cpp:30
 #, kde-format
 msgid "Vayechi"
 msgstr "vaječi"
 
-#: plugins/hebrew/parsha.cpp:51
+#: plugins/hebrew/parsha.cpp:30
 #, kde-format
 msgid "Shemot"
 msgstr "šemot"
 
-#: plugins/hebrew/parsha.cpp:52
+#: plugins/hebrew/parsha.cpp:30
 #, kde-format
 msgid "Vaera"
 msgstr "vaera"
 
-#: plugins/hebrew/parsha.cpp:53
+#: plugins/hebrew/parsha.cpp:30
 #, kde-format
 msgid "Bo"
 msgstr "bo"
 
-#: plugins/hebrew/parsha.cpp:54
+#: plugins/hebrew/parsha.cpp:31
 #, kde-format
 msgid "Beshalach"
 msgstr "bešalač"
 
-#: plugins/hebrew/parsha.cpp:55
+#: plugins/hebrew/parsha.cpp:31
 #, kde-format
 msgid "Yitro"
 msgstr "jitro"
 
-#: plugins/hebrew/parsha.cpp:56
+#: plugins/hebrew/parsha.cpp:31
 #, kde-format
 msgid "Mishpatim"
 msgstr "mišpatim"
 
-#: plugins/hebrew/parsha.cpp:57
+#: plugins/hebrew/parsha.cpp:31
 #, kde-format
 msgid "Terumah"
 msgstr "terumah"
 
-#: plugins/hebrew/parsha.cpp:58
+#: plugins/hebrew/parsha.cpp:31
 #, kde-format
 msgid "Tetzaveh"
 msgstr "tecaveh"
 
-#: plugins/hebrew/parsha.cpp:59
+#: plugins/hebrew/parsha.cpp:31
 #, kde-format
 msgid "Ki Tisa"
 msgstr "ki tisa"
 
-#: plugins/hebrew/parsha.cpp:60
+#: plugins/hebrew/parsha.cpp:31
 #, kde-format
 msgid "Vayakhel"
 msgstr "vajakhel"
 
-#: plugins/hebrew/parsha.cpp:61
+#: plugins/hebrew/parsha.cpp:32
 #, kde-format
 msgid "Pekudei"
 msgstr "pekudei"
 
-#: plugins/hebrew/parsha.cpp:62
+#: plugins/hebrew/parsha.cpp:32
 #, kde-format
 msgid "Vayikra"
 msgstr "vajikra"
 
-#: plugins/hebrew/parsha.cpp:63
+#: plugins/hebrew/parsha.cpp:32
 #, kde-format
 msgid "Tzav"
 msgstr "cav"
 
-#: plugins/hebrew/parsha.cpp:64
+#: plugins/hebrew/parsha.cpp:32
 #, kde-format
 msgid "Shemini"
 msgstr "šemini"
 
-#: plugins/hebrew/parsha.cpp:65
+#: plugins/hebrew/parsha.cpp:32
 #, kde-format
 msgid "Tazria"
 msgstr "tazrija"
 
-#: plugins/hebrew/parsha.cpp:66
+#: plugins/hebrew/parsha.cpp:32
 #, kde-format
 msgid "Metzora"
 msgstr "mecora"
 
-#: plugins/hebrew/parsha.cpp:67
+#: plugins/hebrew/parsha.cpp:32
 #, kde-format
 msgid "Acharei Mot"
 msgstr "akerej mot"
 
-#: plugins/hebrew/parsha.cpp:68
+#: plugins/hebrew/parsha.cpp:33
 #, kde-format
 msgid "Kedoshim"
 msgstr "kedošim"
 
-#: plugins/hebrew/parsha.cpp:69
+#: plugins/hebrew/parsha.cpp:33
 #, kde-format
 msgid "Emor"
 msgstr "emor"
 
-#: plugins/hebrew/parsha.cpp:70
+#: plugins/hebrew/parsha.cpp:33
 #, kde-format
 msgid "Behar"
 msgstr "behar"
 
-#: plugins/hebrew/parsha.cpp:71
+#: plugins/hebrew/parsha.cpp:33
 #, kde-format
 msgid "Bechukotai"
 msgstr "bečukotaj"
 
-#: plugins/hebrew/parsha.cpp:72
+#: plugins/hebrew/parsha.cpp:33
 #, kde-format
 msgid "Bemidbar"
 msgstr "bemidbar"
 
-#: plugins/hebrew/parsha.cpp:73
+#: plugins/hebrew/parsha.cpp:33
 #, kde-format
 msgid "Naso"
 msgstr "naso"
 
-#: plugins/hebrew/parsha.cpp:74
+#: plugins/hebrew/parsha.cpp:33
 #, kde-format
 msgid "Behaalotcha"
 msgstr "behaloča"
 
-#: plugins/hebrew/parsha.cpp:75
+#: plugins/hebrew/parsha.cpp:34
 #, kde-format
 msgid "Shelach"
 msgstr "šelač"
 
-#: plugins/hebrew/parsha.cpp:76
+#: plugins/hebrew/parsha.cpp:34
 #, kde-format
 msgid "Korach"
 msgstr "korač"
 
-#: plugins/hebrew/parsha.cpp:77
+#: plugins/hebrew/parsha.cpp:34
 #, kde-format
 msgid "Chukat"
 msgstr "čukati"
 
-#: plugins/hebrew/parsha.cpp:78
+#: plugins/hebrew/parsha.cpp:34
 #, kde-format
 msgid "Balak"
 msgstr "balak"
 
-#: plugins/hebrew/parsha.cpp:79
+#: plugins/hebrew/parsha.cpp:34
 #, kde-format
 msgid "Pinchas"
 msgstr "pinčas"
 
-#: plugins/hebrew/parsha.cpp:80
+#: plugins/hebrew/parsha.cpp:34
 #, kde-format
 msgid "Matot"
 msgstr "matot"
 
-#: plugins/hebrew/parsha.cpp:81
+#: plugins/hebrew/parsha.cpp:34
 #, kde-format
 msgid "Masei"
 msgstr "masej"
 
-#: plugins/hebrew/parsha.cpp:82
+#: plugins/hebrew/parsha.cpp:35
 #, kde-format
 msgid "Devarim"
 msgstr "devarim"
 
-#: plugins/hebrew/parsha.cpp:83
+#: plugins/hebrew/parsha.cpp:35
 #, kde-format
 msgid "Vaetchanan"
 msgstr "vetčanan"
 
-#: plugins/hebrew/parsha.cpp:84
+#: plugins/hebrew/parsha.cpp:35
 #, kde-format
 msgid "Ekev"
 msgstr "ekev"
 
-#: plugins/hebrew/parsha.cpp:85
+#: plugins/hebrew/parsha.cpp:35
 #, kde-format
 msgid "Reeh"
 msgstr "rih"
 
-#: plugins/hebrew/parsha.cpp:86
+#: plugins/hebrew/parsha.cpp:35
 #, kde-format
 msgid "Shoftim"
 msgstr "šoftim"
 
-#: plugins/hebrew/parsha.cpp:87
+#: plugins/hebrew/parsha.cpp:35
 #, kde-format
 msgid "Ki Tetze"
 msgstr "ki tece"
 
-#: plugins/hebrew/parsha.cpp:88
+#: plugins/hebrew/parsha.cpp:35
 #, kde-format
 msgid "Ki Tavo"
 msgstr "ki tavo"
 
-#: plugins/hebrew/parsha.cpp:89
+#: plugins/hebrew/parsha.cpp:36
 #, kde-format
 msgid "Nitzavim"
 msgstr "nicavim"
 
-#: plugins/hebrew/parsha.cpp:90
+#: plugins/hebrew/parsha.cpp:36
 #, kde-format
 msgid "Vayelech"
 msgstr "vajeleč"
 
-#: plugins/hebrew/parsha.cpp:91
+#: plugins/hebrew/parsha.cpp:36
 #, kde-format
 msgid "Haazinu"
 msgstr "hazinu"
 
-#: plugins/lunarphases/lunarphases.cpp:35
+#: plugins/lunarphases/lunarphases.cpp:61
 #, kde-format
 msgid ""
 "This plugin displays the day's lunar phase (New, First, Last, Full). "
@@ -703,35 +703,35 @@ msgid ""
 msgstr ""
 
 # >> @title:window
-#: plugins/picoftheday/configdialog.cpp:39
+#: plugins/picoftheday/configdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Configure Picture of the Day"
 msgctxt "@title:window"
 msgid "Configure Picture of the Day"
 msgstr "Podešavanje slike dana"
 
-#: plugins/picoftheday/configdialog.cpp:53
+#: plugins/picoftheday/configdialog.cpp:42
 #, kde-format
 msgid "Thumbnail Aspect Ratio Mode"
 msgstr "Režim proporcije sličica"
 
-#: plugins/picoftheday/configdialog.cpp:58
+#: plugins/picoftheday/configdialog.cpp:46
 #, kde-format
 msgid "Ignore aspect ratio"
 msgstr "Ignoriši proporciju"
 
-#: plugins/picoftheday/configdialog.cpp:59
+#: plugins/picoftheday/configdialog.cpp:48
 #, kde-format
 msgid ""
 "The thumbnail will be scaled freely. The aspect ratio will not be preserved."
 msgstr "Sličice se slobodno skaliraju. Razmera neće biti održavana."
 
-#: plugins/picoftheday/configdialog.cpp:63
+#: plugins/picoftheday/configdialog.cpp:52
 #, kde-format
 msgid "Keep aspect ratio"
 msgstr "Održavaj proporciju"
 
-#: plugins/picoftheday/configdialog.cpp:64
+#: plugins/picoftheday/configdialog.cpp:54
 #, kde-format
 msgid ""
 "The thumbnail will be scaled to a rectangle as large as possible inside a "
@@ -740,12 +740,12 @@ msgstr ""
 "Sličice se skaliraju do najvećeg mogućeg pravougaonika unutar datog "
 "pravougaonika, održavajući proporciju."
 
-#: plugins/picoftheday/configdialog.cpp:69
+#: plugins/picoftheday/configdialog.cpp:59
 #, kde-format
 msgid "Keep aspect ratio by expanding"
 msgstr "Održavaj proporciju širenjem"
 
-#: plugins/picoftheday/configdialog.cpp:71
+#: plugins/picoftheday/configdialog.cpp:61
 #, kde-format
 msgid ""
 "The thumbnail will be scaled to a rectangle as small as possible outside a "
@@ -754,33 +754,33 @@ msgstr ""
 "Sličice se skaliraju do najmanjeg mogućeg pravougaonika izvan datog "
 "pravougaonika, održavajući proporciju."
 
-#: plugins/picoftheday/picoftheday.cpp:53
-#, kde-format
-msgid "<qt>This plugin provides the Wikipedia <i>Picture of the Day</i>.</qt>"
-msgstr "<qt>Ovaj priključak dobavlja <i>sliku dana</i> sa Wikipedije.</qt>"
-
-#: plugins/picoftheday/picoftheday.cpp:79
-#, kde-format
-msgid "Loading..."
-msgstr "Učitavam..."
-
-#: plugins/picoftheday/picoftheday.cpp:80
-#, kde-format
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
-msgstr "<qt>Učitavam <i>sliku dana</i>...</qt>"
-
-#: plugins/picoftheday/picoftheday.cpp:145
+#: plugins/picoftheday/element.cpp:209
 #, kde-format
 msgid "Wikipedia POTD: %1"
 msgstr "Wikipedijina slika dana: %1"
 
-#: plugins/picoftheday/picoftheday.cpp:164
+#: plugins/picoftheday/element.cpp:326
 #, kde-format
 msgid "Picture Page"
 msgstr "Stranica slike"
 
+#: plugins/picoftheday/element.cpp:326
+#, kde-format
+msgid "Loading..."
+msgstr "Učitavam..."
+
+#: plugins/picoftheday/element.cpp:332
+#, kde-format
+msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgstr "<qt>Učitavam <i>sliku dana</i>...</qt>"
+
+#: plugins/picoftheday/picoftheday.cpp:48
+#, kde-format
+msgid "<qt>This plugin provides the Wikipedia <i>Picture of the Day</i>.</qt>"
+msgstr "<qt>Ovaj priključak dobavlja <i>sliku dana</i> sa Wikipedije.</qt>"
+
 # skip-rule: t-history
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:36
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:29
 #, kde-format
 msgid "This plugin provides links to Wikipedia's 'This Day in History' pages."
 msgstr ""
@@ -788,13 +788,13 @@ msgstr ""
 "današnji dan“."
 
 # skip-rule: t-history
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:45
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:37
 #, kde-format
 msgid "This day in history"
 msgstr "Dogodilo se na današnji dan"
 
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:48
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:65
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:39
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:53
 #, fuzzy, kde-format
 #| msgctxt "Localized Wikipedia website"
 #| msgid "http://en.wikipedia.org/wiki/"
@@ -802,20 +802,20 @@ msgctxt "Localized Wikipedia website"
 msgid "https://en.wikipedia.org/wiki/"
 msgstr "http://sr.wikipedia.org/wiki/"
 
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:50
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:40
 #, kde-format
 msgctxt "Qt date format used by the localized Wikipedia"
 msgid "MMMM_d"
 msgstr "d._MMMM"
 
 # skip-rule: t-history
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:62
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:51
 #, kde-format
 msgid "This month in history"
 msgstr "Ovaj mesec u istoriji"
 
 # ? Изгледа да не ради...
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:67
+#: plugins/thisdayinhistory/thisdayinhistory.cpp:54
 #, kde-format
 msgctxt "Qt date format used by the localized Wikipedia"
 msgid "MMMM_yyyy"

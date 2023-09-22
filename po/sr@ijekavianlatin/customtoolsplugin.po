@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: customtoolsplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-05-20 03:15+0200\n"
+"POT-Creation-Date: 2023-02-02 00:59+0000\n"
 "PO-Revision-Date: 2016-04-15 23:42+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: translatorplugin/translatorplugin.cpp:48
+#: translatorplugin/translatorplugin.cpp:33
 #, kde-format
 msgid "Translator"
 msgstr "Prevodilac"
 
-#: translatorplugin/translatorview.cpp:69
+#: translatorplugin/translatorview.cpp:52
 #, kde-format
 msgid "&Translator"
 msgstr "&Prevodilac"

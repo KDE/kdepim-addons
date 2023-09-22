@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-05-31 18:10+0200\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2015-04-24 13:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: text_vcard.cpp:110
+#: text_vcard.cpp:87
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
@@ -30,70 +30,70 @@ msgstr[1] "Priložene poslovne kartice"
 msgstr[2] "Priložene poslovne kartice"
 msgstr[3] "Priložena poslovna kartica"
 
-#: text_vcard.cpp:154
+#: text_vcard.cpp:130
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Dodaj ovaj kontakt u adresar]"
 
-#: text_vcard.cpp:163
+#: text_vcard.cpp:136
 #, fuzzy, kde-format
 #| msgid "[Update this contact to the address book]"
 msgid "[Update this contact in the address book]"
 msgstr "[Ažuriraj ovaj kontakt u adresaru]"
 
-#: text_vcard.cpp:171
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Ovaj kontakt je već u adresaru]"
 
-#: text_vcard.cpp:248
+#: text_vcard.cpp:215
 #, kde-format
 msgid "View Business Card"
 msgstr "Prikaži poslovnu karticu"
 
-#: text_vcard.cpp:250
+#: text_vcard.cpp:216
 #, kde-format
 msgid "Save Business Card As..."
 msgstr "Sačuvaj poslovnu karticu kao..."
 
-#: text_vcard.cpp:267
+#: text_vcard.cpp:233
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Dodaj ovaj kontakt u adresar"
 
-#: text_vcard.cpp:267
+#: text_vcard.cpp:233
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Ažuriraj ovaj kontakt u adresaru"
 
-#: text_vcard.cpp:269
+#: text_vcard.cpp:235
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Dodaj „%1“ u adresar"
 
-#: text_vcard.cpp:269
+#: text_vcard.cpp:235
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Ažuriraj „%1“ u adresaru"
 
 # >> @title:window
-#: text_vcard.cpp:294
+#: text_vcard.cpp:259
 #, kde-format
 msgid "Save Business Card"
 msgstr "Upisivanje poslovne kartice"
 
-#: updatecontactjob.cpp:53
+#: updatecontactjob.cpp:37
 #, kde-format
 msgid "The vCard's primary email address is not in addressbook."
 msgstr "Primarna adresa e‑pošte iz vCarda nije u adresaru."
 
 # rewrite-msgid: /email/email address/
-#: updatecontactjob.cpp:59
+#: updatecontactjob.cpp:43
 #, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
 msgstr "U adresaru ima dva ili više kontakata sa istom adresom e‑pošte."
 
-#: updatecontactjob.cpp:80
+#: updatecontactjob.cpp:65
 #, fuzzy, kde-format
 #| msgid ""
 #| "The vCard was updated to your address book; you can add more information "
@@ -105,7 +105,7 @@ msgstr ""
 "VCard je ažuriran prema adresaru; možete dodati još podataka ovom unosu ako "
 "otvorite adresar."
 
-#: updatecontactjob.cpp:91
+#: updatecontactjob.cpp:76
 #, kde-format
 msgid "Email not specified"
 msgstr "E‑pošta nije zadata."

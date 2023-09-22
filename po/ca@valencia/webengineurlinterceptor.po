@@ -5,7 +5,7 @@
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2002, 2003, 2004, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2009.
 # David Gil <al016950@yahoo.es>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2021, 2023.
 # Joan Maspons <joanmaspons@gmail.com>, 2009.
 # Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2009, 2010.
 msgid ""
@@ -13,41 +13,38 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2021-11-07 19:56+0100\n"
+"PO-Revision-Date: 2023-09-21 15:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
 #: adblock/adblockfilterdialog.cpp:17
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr "Mostra la llista de bloqueig publicitari"
+msgstr "Afegir una llista de bloqueig publicitari"
 
 #: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Afig..."
 
 #: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
 msgid "Modify..."
-msgstr ""
+msgstr "Modifica..."
 
 #: adblock/adblockfilterlistsview.cpp:56
-#, fuzzy, kde-format
-#| msgid "Delete List"
+#, kde-format
 msgid "Delete"
-msgstr "Elimina la llista"
+msgstr "Suprimix"
 
 #: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
@@ -62,12 +59,12 @@ msgstr "Busca..."
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Nom:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "URL:"
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
@@ -80,257 +77,3 @@ msgstr "Configureu el connector de Bloqueig publicitari"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "El bloqueig publicitari està permés"
-
-#~ msgid "Open Blockable Items..."
-#~ msgstr "Obri els elements blocables..."
-
-#~ msgid "Block Image"
-#~ msgstr "Bloca la imatge"
-
-#~ msgid "Cannot load subscription!"
-#~ msgstr "No s'ha pogut carregar la subscripció!"
-
-#~ msgid "Custom Rules"
-#~ msgstr "Regles personalitzades"
-
-#~ msgid "Hide advertisement enabled"
-#~ msgstr "Oculta l'anunci està habilitat"
-
-#~ msgid "Update interval list of adblock"
-#~ msgstr "Interval d'actualització de la llista de bloqueig publicitari"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add subscription"
-#~ msgstr "Afig una subscripció"
-
-#~ msgid "Select List:"
-#~ msgstr "Seleccioneu una llista:"
-
-#~ msgid "Show List"
-#~ msgstr "Mostra la llista"
-
-#~ msgctxt "@title:window"
-#~ msgid "Blockable Items"
-#~ msgstr "Elements blocables"
-
-#~ msgid "No blockable element found."
-#~ msgstr "No s'ha trobat cap element blocable."
-
-#~ msgid "Filter"
-#~ msgstr "Filtre"
-
-#~ msgid "Address"
-#~ msgstr "Adreça"
-
-#~ msgid "Type"
-#~ msgstr "Tipus"
-
-#~ msgid "Copy URL"
-#~ msgstr "Copia l'URL"
-
-#~ msgid "Copy filter"
-#~ msgstr "Copia el filtre"
-
-#~ msgid "Block item..."
-#~ msgstr "Bloca l'element..."
-
-#~ msgid "Open"
-#~ msgstr "Obri"
-
-#~ msgid "Remove filter"
-#~ msgstr "Elimina el filtre"
-
-#~ msgid "Image"
-#~ msgstr "Imatge"
-
-#~ msgid "Script"
-#~ msgstr "Script"
-
-#~ msgid "Stylesheet"
-#~ msgstr "Full d'estil"
-
-#~ msgid "Font"
-#~ msgstr "Tipus de lletra"
-
-#~ msgid "Frame"
-#~ msgstr "Marc"
-
-#~ msgid "XML Request"
-#~ msgstr "Petició XML"
-
-#~ msgid "Object"
-#~ msgstr "Objecte"
-
-#~ msgid "Audio/Video"
-#~ msgstr "Àudio/vídeo"
-
-#~ msgid "Popup window"
-#~ msgstr "Finestra emergent"
-
-#~ msgid "Unknown"
-#~ msgstr "Desconegut"
-
-#~ msgctxt "@title:window"
-#~ msgid "Create Filter"
-#~ msgstr "Creeu un filtre"
-
-#~ msgid "Use default"
-#~ msgstr "Utilitza el predeterminat"
-
-#~ msgid "Yes"
-#~ msgstr "Sí"
-
-#~ msgid "Not"
-#~ msgstr "No"
-
-#~ msgid "No subscription added"
-#~ msgstr "No s'ha afegit cap subscripció"
-
-#~ msgid ""
-#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-#~ "\"filterhelp\">more information</a>):"
-#~ msgstr ""
-#~ "<qt>Expressió de filtre (p. ex., <tt>http://www.exemple.com/ad/*</tt>, <a "
-#~ "href=\"filterhelp\">més informació</a>):"
-
-#~ msgid " day"
-#~ msgid_plural " days"
-#~ msgstr[0] " dia"
-#~ msgstr[1] " dies"
-
-#~ msgid ""
-#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
-#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
-#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
-#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
-#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
-#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
-#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
-#~ msgstr ""
-#~ "<qt><p>Introduïu una expressió per a filtrar. Els filtres es poden "
-#~ "definir com:<ul><li>un comodí a l'estil de l'intèrpret d'ordres, p. ex., "
-#~ "<tt>http://www.example.com/ads*</tt>, es poden utilitzar els comodins "
-#~ "<tt>*?[]</tt></li><li>una expressió regular completa circumdant la cadena "
-#~ "amb «<tt>/</tt>», p. ex., <tt>/\\/(ad|banner)\\./</tt></li></"
-#~ "ul><p>Qualsevol cadena de filtre es pot precedir amb «<tt>@@</tt>» per a "
-#~ "permetre (llista blanca) qualsevol URL coincident, que té prioritat sobre "
-#~ "qualsevol filtre bloquejant (llista negra).<br><a href='%1'>%2</a></qt>"
-
-#~ msgid "More information"
-#~ msgstr "Més informació"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "Voleu eliminar esta regla?"
-#~ msgstr[1] "Voleu eliminar estes regles?"
-
-#~ msgid "Do you want to delete list \"%1\"?"
-#~ msgstr "Voleu eliminar la llista «%1»?"
-
-#~ msgid "Delete current list"
-#~ msgstr "Elimina la llista actual"
-
-#~ msgid "All Files (*)"
-#~ msgstr "Tots els fitxers (*)"
-
-#~ msgid "Import Filters"
-#~ msgstr "Importa els filtres"
-
-#~ msgid "Export Filters"
-#~ msgstr "Exporta els filtres"
-
-#~ msgid "Download..."
-#~ msgstr "Baixa..."
-
-#~ msgid "An error occurred while downloading the list: \"%1\""
-#~ msgstr "Ha succeït un error en baixar la llista: «%1»"
-
-#~ msgid "Filters:"
-#~ msgstr "Filtres:"
-
-#~ msgid "&Blocking filter"
-#~ msgstr "Filtre de &bloqueig"
-
-#~ msgid "Exception Filter"
-#~ msgstr "Filtre d'excepcions"
-
-#~ msgid "Pattern"
-#~ msgstr "Patró"
-
-#~ msgid "custom"
-#~ msgstr "A mida"
-
-#~ msgid "Accept pattern only"
-#~ msgstr "Accepta només el patró"
-
-#~ msgid "At the beginning of the address"
-#~ msgstr "Al començament de l'adreça"
-
-#~ msgid "At the end of address"
-#~ msgstr "Al final de l'adreça"
-
-#~ msgid "Options"
-#~ msgstr "Opcions"
-
-#~ msgid "First-part only"
-#~ msgstr "Només la primera part"
-
-#~ msgid "Match case"
-#~ msgstr "Coincidència de majúscules"
-
-#~ msgid "Restrict to domain"
-#~ msgstr "Restringix al domini"
-
-#~ msgid "Apply to:"
-#~ msgstr "Aplica a:"
-
-#~ msgid "Collapse blocked:"
-#~ msgstr "Plega els bloquejats:"
-
-#~ msgid "&Enable Ad Block"
-#~ msgstr "Habilita el bloqu&eig publicitari"
-
-#~ msgid "&Hide filtered elements"
-#~ msgstr "&Oculta els elements filtrats"
-
-#~ msgid "Automatic Filters"
-#~ msgstr "Filtres automàtics"
-
-#~ msgid "Add Filters subscriptions..."
-#~ msgstr "Afig les subscripcions dels filtres..."
-
-#~ msgid "Remove subscription"
-#~ msgstr "Elimina la subscripció"
-
-#~ msgid "Update enabled automatic filters every:"
-#~ msgstr "Actualitza els filtres automàtics habilitats cada:"
-
-#~ msgid "Show List..."
-#~ msgstr "Mostra la llista..."
-
-#~ msgid "Manual Filters"
-#~ msgstr "Filtres manuals"
-
-#~ msgid "Add filter expression"
-#~ msgstr "Afig una expressió de filtre"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Import Filters..."
-#~ msgstr "Importa els filtres..."
-
-#~ msgid "Export filters..."
-#~ msgstr "Exporta els filtres..."
-
-#~ msgid "Search:"
-#~ msgstr "Busca:"
-
-#~ msgid "Edit"
-#~ msgstr "Edita"
-
-#~ msgid "Remove filter expression"
-#~ msgstr "Elimina l'expressió de filtre"
-
-#~ msgid "Remove Filter"
-#~ msgstr "Elimina el filtre"

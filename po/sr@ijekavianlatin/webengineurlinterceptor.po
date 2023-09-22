@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-15 02:17+0200\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,511 +18,352 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: adblock/adblockinterceptorinterface.cpp:69
-#, kde-format
-msgid "Open Blockable Items..."
-msgstr "Otvori stavke za blokiranje..."
+# >> @title:window
+#: adblock/adblockfilterdialog.cpp:17
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
+#, fuzzy, kde-format
+#| msgid "Show adblock list"
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "Prikaz liste AdBlocka"
 
-#: adblock/adblockinterceptorinterface.cpp:73
+#: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
-msgid "Block Image"
-msgstr "Blokiraj sliku"
+msgid "Add..."
+msgstr ""
 
-#: adblock/lib/adblocksubscription.cpp:191
+#: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
-msgid "Cannot load subscription!"
-msgstr "Ne mogu da dodam pretplatu"
+msgid "Modify..."
+msgstr ""
 
-#: adblock/lib/adblocksubscription.cpp:307
-#, kde-format
-msgid "Custom Rules"
-msgstr "Posebna pravila"
-
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
-#, kde-format
-msgid "Enabled ad block"
-msgstr "Aktiviraj AdBlock"
-
-#. i18n: ectx: label, entry (HideAdsEnabled), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
-#, kde-format
-msgid "Hide advertisement enabled"
-msgstr "Aktiviraj sakrivanje reklama"
-
-#. i18n: ectx: label, entry (AdBlockUpdateInterval), group (General)
-#: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:16
-#, kde-format
-msgid "Update interval list of adblock"
-msgstr "Period ažuriranja AdBlockovih lista"
+#: adblock/adblockfilterlistsview.cpp:56
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "Obriši listu"
 
 # >> @title:window
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:39
-#, fuzzy, kde-format
-#| msgid "Add subscription"
-msgctxt "@title:window"
-msgid "Add subscription"
-msgstr "Dodavanje pretplate"
-
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:45
+#: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
-msgid "Select List:"
-msgstr "Izaberite listu:"
+msgid "Remove"
+msgstr "Uklanjanje"
 
-#: adblock/lib/widgets/adblockaddsubscriptiondialog.cpp:54
-#, kde-format
-msgid "Show List"
-msgstr "Prikaži listu"
-
-# >> @title:window
-#: adblock/lib/widgets/adblockblockableitemsdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Blockable Items"
-msgctxt "@title:window"
-msgid "Blockable Items"
-msgstr "Stavke za blokiranje"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:48
-#, kde-format
-msgid "No blockable element found."
-msgstr "Nema ničeg za blokiranje."
-
-# >> @title:column
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:55
-#, kde-format
-msgid "Filter"
-msgstr "filter"
-
-# >> @title:column
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:55
-#, kde-format
-msgid "Address"
-msgstr "adresa"
-
-# >> @title:column
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:55
-#, kde-format
-msgid "Type"
-msgstr "tip"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:59
+#: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Traži..."
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:116
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
-msgid "Copy URL"
-msgstr "Kopiraj URL"
+msgid "Name:"
+msgstr ""
 
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:119
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
-msgid "Copy filter"
-msgstr "Kopiraj filter"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:121
-#, kde-format
-msgid "Block item..."
-msgstr "Blokiraj stavku..."
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:123
-#, kde-format
-msgid "Open"
-msgstr "Otvori"
-
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:126
-#, kde-format
-msgid "Remove filter"
-msgstr "Ukloni filter"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:198
-#, kde-format
-msgid "Image"
-msgstr "slika"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:201
-#, kde-format
-msgid "Script"
-msgstr "skripta"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:204
-#, kde-format
-msgid "Stylesheet"
-msgstr "opis stila"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:207
-#, kde-format
-msgid "Font"
-msgstr "font"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:210
-#, kde-format
-msgid "Frame"
-msgstr "okvir"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:213
-#, kde-format
-msgid "XML Request"
-msgstr "XML zahtev"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:216
-#, kde-format
-msgid "Object"
-msgstr "objekat"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:219
-#, kde-format
-msgid "Audio/Video"
-msgstr "audio/video"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:222
-#, kde-format
-msgid "Popup window"
-msgstr "iskačući prozor"
-
-# >> @item
-#: adblock/lib/widgets/adblockblockableitemswidget.cpp:226
-#, kde-format
-msgid "Unknown"
-msgstr "nepoznato"
+msgid "Url:"
+msgstr ""
 
 # >> @title:window
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Create Filter"
-msgctxt "@title:window"
-msgid "Create Filter"
-msgstr "Stvaranje filtera"
-
-# >> @item
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:59
-#, kde-format
-msgid "Use default"
-msgstr "po podrazumevanom"
-
-# >> @item
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:60
-#, kde-format
-msgid "Yes"
-msgstr "da"
-
-# >> @item
-#: adblock/lib/widgets/adblockcreatefilterdialog.cpp:61
-#, kde-format
-msgid "Not"
-msgstr "ne"
-
-#: adblock/lib/widgets/adblocklistwidget.cpp:67
-#, kde-format
-msgid "No subscription added"
-msgstr "Nema dodatih pretplata"
-
-# >> @title:window
-#: adblock/lib/widgets/adblockpluginurlinterceptorconfiguredialog.cpp:32
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, fuzzy, kde-format
 #| msgid "Configure AdBlock Plugin"
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Podešavanje priključka AdBlocka"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:70
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
-msgid ""
-"<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-"\"filterhelp\">more information</a>):"
-msgstr ""
-"<qt>Filterski izraz (npr. <tt>http://www.primer.com/ad/*</tt>, <a href="
-"\"filterhelp\">više detalja</a>):</qt>"
+msgid "Enabled ad block"
+msgstr "Aktiviraj AdBlock"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:86
-#, kde-format
-msgid " day"
-msgid_plural " days"
-msgstr[0] " dan"
-msgstr[1] " dana"
-msgstr[2] " dana"
-msgstr[3] " dan"
+#~ msgid "Open Blockable Items..."
+#~ msgstr "Otvori stavke za blokiranje..."
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:158
-#, kde-format
-msgid ""
-"<qt><p>Enter an expression to filter. Filters can be defined as either:"
-"<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
-"the wildcards <tt>*?[]</tt> may be used</li><li>a full regular expression by "
-"surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</tt></"
-"li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist "
-"(allow) any matching URL, which takes priority over any blacklist (blocking) "
-"filter.<br><a href='%1'>%2</a></qt>"
-msgstr ""
-"<qt><p>Unesite izraz za filtriranje. Filteri se mogu definisati:</"
-"p><ul><li>sa džokerima u stilu školjke, npr. <tt>http://www.primer.com/ads*</"
-"tt>, gde su mogući džokeri <tt>*?[]</tt>;</li><li>kao puni regularni izrazi "
-"ako se niska okruži sa '<tt>/</tt>', npr. <tt>/\\/(ad|banner)\\./</tt>.</"
-"li></ul><p>Filterska niska može da počinje sa <tt>@@</tt> za stavljanje "
-"poklopljenih URL‑ova na belu listu (dopušteno), što ima prednost nad "
-"filterima za crnu listu (blokirano).<br /><a href='%1'>%2</a></p></qt>"
+#~ msgid "Block Image"
+#~ msgstr "Blokiraj sliku"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:164
-#, kde-format
-msgid "More information"
-msgstr "Više detalja"
+#~ msgid "Cannot load subscription!"
+#~ msgstr "Ne mogu da dodam pretplatu"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:208
-#, kde-format
-msgid "Do you want to remove this rule?"
-msgid_plural "Do you want to remove these rules?"
-msgstr[0] "Želite li da uklonite ova pravila?"
-msgstr[1] "Želite li da uklonite ova pravila?"
-msgstr[2] "Želite li da uklonite ova pravila?"
-msgstr[3] "Želite li da uklonite ovo pravilo?"
+#~ msgid "Custom Rules"
+#~ msgstr "Posebna pravila"
+
+#~ msgid "Hide advertisement enabled"
+#~ msgstr "Aktiviraj sakrivanje reklama"
+
+#~ msgid "Update interval list of adblock"
+#~ msgstr "Period ažuriranja AdBlockovih lista"
 
 # >> @title:window
-#: adblock/lib/widgets/adblocksettingwidget.cpp:209
-#, kde-format
-msgid "Remove"
-msgstr "Uklanjanje"
+#, fuzzy
+#~| msgid "Add subscription"
+#~ msgctxt "@title:window"
+#~ msgid "Add subscription"
+#~ msgstr "Dodavanje pretplate"
 
-#: adblock/lib/widgets/adblocksettingwidget.cpp:346
-#, kde-format
-msgid "Do you want to delete list \"%1\"?"
-msgstr "Želite li da obrišete listu „%1“?"
+#~ msgid "Select List:"
+#~ msgstr "Izaberite listu:"
+
+#~ msgid "Show List"
+#~ msgstr "Prikaži listu"
 
 # >> @title:window
-#: adblock/lib/widgets/adblocksettingwidget.cpp:346
-#, kde-format
-msgid "Delete current list"
-msgstr "Brisanje trenutne liste"
+#, fuzzy
+#~| msgid "Blockable Items"
+#~ msgctxt "@title:window"
+#~ msgid "Blockable Items"
+#~ msgstr "Stavke za blokiranje"
+
+#~ msgid "No blockable element found."
+#~ msgstr "Nema ničeg za blokiranje."
+
+# >> @title:column
+#~ msgid "Filter"
+#~ msgstr "filter"
+
+# >> @title:column
+#~ msgid "Address"
+#~ msgstr "adresa"
+
+# >> @title:column
+#~ msgid "Type"
+#~ msgstr "tip"
+
+#~ msgid "Copy URL"
+#~ msgstr "Kopiraj URL"
+
+#~ msgid "Copy filter"
+#~ msgstr "Kopiraj filter"
+
+#~ msgid "Block item..."
+#~ msgstr "Blokiraj stavku..."
+
+#~ msgid "Open"
+#~ msgstr "Otvori"
+
+#~ msgid "Remove filter"
+#~ msgstr "Ukloni filter"
 
 # >> @item
-#: adblock/lib/widgets/adblocksettingwidget.cpp:388
-#: adblock/lib/widgets/adblocksettingwidget.cpp:430
-#, kde-format
-msgid "All Files (*)"
-msgstr "svi fajlovi (*)"
+#~ msgid "Image"
+#~ msgstr "slika"
+
+# >> @item
+#~ msgid "Script"
+#~ msgstr "skripta"
+
+# >> @item
+#~ msgid "Stylesheet"
+#~ msgstr "opis stila"
+
+# >> @item
+#~ msgid "Font"
+#~ msgstr "font"
+
+# >> @item
+#~ msgid "Frame"
+#~ msgstr "okvir"
+
+# >> @item
+#~ msgid "XML Request"
+#~ msgstr "XML zahtev"
+
+# >> @item
+#~ msgid "Object"
+#~ msgstr "objekat"
+
+# >> @item
+#~ msgid "Audio/Video"
+#~ msgstr "audio/video"
+
+# >> @item
+#~ msgid "Popup window"
+#~ msgstr "iskačući prozor"
+
+# >> @item
+#~ msgid "Unknown"
+#~ msgstr "nepoznato"
 
 # >> @title:window
-#: adblock/lib/widgets/adblocksettingwidget.cpp:389
-#, kde-format
-msgid "Import Filters"
-msgstr "Uvoz filtera"
+#, fuzzy
+#~| msgid "Create Filter"
+#~ msgctxt "@title:window"
+#~ msgid "Create Filter"
+#~ msgstr "Stvaranje filtera"
+
+# >> @item
+#~ msgid "Use default"
+#~ msgstr "po podrazumevanom"
+
+# >> @item
+#~ msgid "Yes"
+#~ msgstr "da"
+
+# >> @item
+#~ msgid "Not"
+#~ msgstr "ne"
+
+#~ msgid "No subscription added"
+#~ msgstr "Nema dodatih pretplata"
+
+#~ msgid ""
+#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">more information</a>):"
+#~ msgstr ""
+#~ "<qt>Filterski izraz (npr. <tt>http://www.primer.com/ad/*</tt>, <a href="
+#~ "\"filterhelp\">više detalja</a>):</qt>"
+
+#~ msgid " day"
+#~ msgid_plural " days"
+#~ msgstr[0] " dan"
+#~ msgstr[1] " dana"
+#~ msgstr[2] " dana"
+#~ msgstr[3] " dan"
+
+#~ msgid ""
+#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
+#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
+#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
+#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
+#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
+#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
+#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
+#~ msgstr ""
+#~ "<qt><p>Unesite izraz za filtriranje. Filteri se mogu definisati:</"
+#~ "p><ul><li>sa džokerima u stilu školjke, npr. <tt>http://www.primer.com/"
+#~ "ads*</tt>, gde su mogući džokeri <tt>*?[]</tt>;</li><li>kao puni "
+#~ "regularni izrazi ako se niska okruži sa '<tt>/</tt>', npr. <tt>/\\/(ad|"
+#~ "banner)\\./</tt>.</li></ul><p>Filterska niska može da počinje sa <tt>@@</"
+#~ "tt> za stavljanje poklopljenih URL‑ova na belu listu (dopušteno), što ima "
+#~ "prednost nad filterima za crnu listu (blokirano).<br /><a href='%1'>%2</"
+#~ "a></p></qt>"
+
+#~ msgid "More information"
+#~ msgstr "Više detalja"
+
+#~ msgid "Do you want to remove this rule?"
+#~ msgid_plural "Do you want to remove these rules?"
+#~ msgstr[0] "Želite li da uklonite ova pravila?"
+#~ msgstr[1] "Želite li da uklonite ova pravila?"
+#~ msgstr[2] "Želite li da uklonite ova pravila?"
+#~ msgstr[3] "Želite li da uklonite ovo pravilo?"
+
+#~ msgid "Do you want to delete list \"%1\"?"
+#~ msgstr "Želite li da obrišete listu „%1“?"
 
 # >> @title:window
-#: adblock/lib/widgets/adblocksettingwidget.cpp:440
-#, kde-format
-msgid "Export Filters"
-msgstr "Izvoz filtera"
+#~ msgid "Delete current list"
+#~ msgstr "Brisanje trenutne liste"
+
+# >> @item
+#~ msgid "All Files (*)"
+#~ msgstr "svi fajlovi (*)"
 
 # >> @title:window
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:46
-#, fuzzy, kde-format
-#| msgid "Show adblock list"
-msgctxt "@title:window"
-msgid "Show adblock list"
-msgstr "Prikaz liste AdBlocka"
+#~ msgid "Import Filters"
+#~ msgstr "Uvoz filtera"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:53
-#, kde-format
-msgid "Delete List"
-msgstr "Obriši listu"
+# >> @title:window
+#~ msgid "Export Filters"
+#~ msgstr "Izvoz filtera"
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:71
-#, kde-format
-msgid "Download..."
-msgstr "Preuzmi..."
+#~ msgid "Download..."
+#~ msgstr "Preuzmi..."
 
-#: adblock/lib/widgets/adblockshowlistdialog.cpp:144
-#, kde-format
-msgid "An error occurred while downloading the list: \"%1\""
-msgstr "Greška pri preuzimanju liste: „%1“"
+#~ msgid "An error occurred while downloading the list: \"%1\""
+#~ msgstr "Greška pri preuzimanju liste: „%1“"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:31
-#, kde-format
-msgid "Filters:"
-msgstr "Filteri:"
+#~ msgid "Filters:"
+#~ msgstr "Filteri:"
 
-#. i18n: ectx: property (text), widget (QRadioButton, blockingFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:49
-#, kde-format
-msgid "&Blocking filter"
-msgstr "Filter &blokiranja"
+#~ msgid "&Blocking filter"
+#~ msgstr "Filter &blokiranja"
 
-#. i18n: ectx: property (text), widget (QRadioButton, exceptionFilter)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:56
-#, kde-format
-msgid "Exception Filter"
-msgstr "Filter izuzetaka"
+#~ msgid "Exception Filter"
+#~ msgstr "Filter izuzetaka"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:65
-#, kde-format
-msgid "Pattern"
-msgstr "Obrazac"
+#~ msgid "Pattern"
+#~ msgstr "Obrazac"
 
 # >> @label Pattern
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:73
-#, kde-format
-msgid "custom"
-msgstr "Poseban"
+#~ msgid "custom"
+#~ msgstr "Poseban"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:88
-#, kde-format
-msgid "Accept pattern only"
-msgstr "Prihvati obrazac samo"
+#~ msgid "Accept pattern only"
+#~ msgstr "Prihvati obrazac samo"
 
 # @option:checkbox Accept pattern only
-#. i18n: ectx: property (text), widget (QCheckBox, atTheBeginning)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
-#, kde-format
-msgid "At the beginning of the address"
-msgstr "na početku adrese"
+#~ msgid "At the beginning of the address"
+#~ msgstr "na početku adrese"
 
 # @option:checkbox Accept pattern only
-#. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
-#, kde-format
-msgid "At the end of address"
-msgstr "na kraju adrese"
+#~ msgid "At the end of address"
+#~ msgstr "na kraju adrese"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
-#, kde-format
-msgid "Options"
-msgstr "Opcije"
+#~ msgid "Options"
+#~ msgstr "Opcije"
 
-#. i18n: ectx: property (text), widget (QCheckBox, firstPartOnly)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
-#, kde-format
-msgid "First-part only"
-msgstr "Samo prvi deo"
+#~ msgid "First-part only"
+#~ msgstr "Samo prvi deo"
 
-#. i18n: ectx: property (text), widget (QCheckBox, matchCase)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
-#, kde-format
-msgid "Match case"
-msgstr "Poklopi veličinu"
+#~ msgid "Match case"
+#~ msgstr "Poklopi veličinu"
 
-#. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
-#, kde-format
-msgid "Restrict to domain"
-msgstr "Ograniči na domen"
+#~ msgid "Restrict to domain"
+#~ msgstr "Ograniči na domen"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
-#, kde-format
-msgid "Apply to:"
-msgstr "Primeni na:"
+#~ msgid "Apply to:"
+#~ msgstr "Primeni na:"
 
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_4)
-#: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:160
-#, kde-format
-msgid "Collapse blocked:"
-msgstr "Sažmi blokirano:"
+#~ msgid "Collapse blocked:"
+#~ msgstr "Sažmi blokirano:"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkEnableAdblock)
-#: adblock/lib/widgets/ui/settings_adblock.ui:29
-#, kde-format
-msgid "&Enable Ad Block"
-msgstr "&Aktiviraj AdBlock"
+#~ msgid "&Enable Ad Block"
+#~ msgstr "&Aktiviraj AdBlock"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
-#: adblock/lib/widgets/ui/settings_adblock.ui:36
-#, kde-format
-msgid "&Hide filtered elements"
-msgstr "&Sakrij filtrirane elemente"
+#~ msgid "&Hide filtered elements"
+#~ msgstr "&Sakrij filtrirane elemente"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:50
-#, kde-format
-msgid "Automatic Filters"
-msgstr "Automatski filteri"
+#~ msgid "Automatic Filters"
+#~ msgstr "Automatski filteri"
 
-#. i18n: ectx: property (text), widget (QPushButton, addFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:56
-#, kde-format
-msgid "Add Filters subscriptions..."
-msgstr "Dodaj pretplatu na filtere..."
+#~ msgid "Add Filters subscriptions..."
+#~ msgstr "Dodaj pretplatu na filtere..."
 
-#. i18n: ectx: property (text), widget (QPushButton, removeSubscription)
-#: adblock/lib/widgets/ui/settings_adblock.ui:76
-#, kde-format
-msgid "Remove subscription"
-msgstr "Ukloni pretplatu"
+#~ msgid "Remove subscription"
+#~ msgstr "Ukloni pretplatu"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: adblock/lib/widgets/ui/settings_adblock.ui:98
-#, kde-format
-msgid "Update enabled automatic filters every:"
-msgstr "Automatski ažuriraj filtere svakih:"
+#~ msgid "Update enabled automatic filters every:"
+#~ msgstr "Automatski ažuriraj filtere svakih:"
 
-#. i18n: ectx: property (text), widget (QPushButton, showList)
-#: adblock/lib/widgets/ui/settings_adblock.ui:136
-#, kde-format
-msgid "Show List..."
-msgstr "Prikaži listu..."
+#~ msgid "Show List..."
+#~ msgstr "Prikaži listu..."
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: adblock/lib/widgets/ui/settings_adblock.ui:144
-#, kde-format
-msgid "Manual Filters"
-msgstr "Ručni filteri"
+#~ msgid "Manual Filters"
+#~ msgstr "Ručni filteri"
 
-#. i18n: ectx: property (toolTip), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:155
-#, kde-format
-msgid "Add filter expression"
-msgstr "Dodaj filterski izraz"
+#~ msgid "Add filter expression"
+#~ msgstr "Dodaj filterski izraz"
 
-#. i18n: ectx: property (text), widget (QToolButton, insertButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:158
-#, kde-format
-msgid "..."
-msgstr "..."
+#~ msgid "..."
+#~ msgstr "..."
 
-#. i18n: ectx: property (text), widget (QPushButton, importFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:200
-#, kde-format
-msgid "Import Filters..."
-msgstr "Uvezi filtere..."
+#~ msgid "Import Filters..."
+#~ msgstr "Uvezi filtere..."
 
-#. i18n: ectx: property (text), widget (QPushButton, exportFilters)
-#: adblock/lib/widgets/ui/settings_adblock.ui:207
-#, kde-format
-msgid "Export filters..."
-msgstr "Izvezi filtere..."
+#~ msgid "Export filters..."
+#~ msgstr "Izvezi filtere..."
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: adblock/lib/widgets/ui/settings_adblock.ui:216
-#, kde-format
-msgid "Search:"
-msgstr "Traži:"
+#~ msgid "Search:"
+#~ msgstr "Traži:"
 
-#. i18n: ectx: property (text), widget (QPushButton, editFilter)
-#: adblock/lib/widgets/ui/settings_adblock.ui:228
-#, kde-format
-msgid "Edit"
-msgstr "Uredi"
+#~ msgid "Edit"
+#~ msgstr "Uredi"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:235
-#, kde-format
-msgid "Remove filter expression"
-msgstr "Ukloni filterski izraz"
+#~ msgid "Remove filter expression"
+#~ msgstr "Ukloni filterski izraz"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: adblock/lib/widgets/ui/settings_adblock.ui:238
-#, kde-format
-msgid "Remove Filter"
-msgstr "Ukloni filter"
+#~ msgid "Remove Filter"
+#~ msgstr "Ukloni filter"

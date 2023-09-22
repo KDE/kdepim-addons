@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-07-06 03:13+0200\n"
+"POT-Creation-Date: 2023-05-06 00:48+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,42 +18,47 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: gnupgwksurlhandler.cpp:96
+#: gnupgwksurlhandler.cpp:85
 #, kde-format
 msgid "Display key details"
 msgstr "Prikaži detalje ključa"
 
-#: gnupgwksurlhandler.cpp:98
+#: gnupgwksurlhandler.cpp:87
 #, kde-format
 msgid "Publish the key"
 msgstr "Objavi ključ"
 
-#: pgpkeyformatter.cpp:57
+#: pgpkeyformatter.cpp:43
 #, kde-format
 msgid "No valid key data in file."
 msgstr "U fajlu nema valjanih podataka o ključu."
 
-#: pgpkeyurlhandler.cpp:59
+#: pgpkeyurlhandler.cpp:46
 #, kde-format
 msgid "Import the key"
 msgstr "Uvezi ključ"
 
-#: pgpkeyurlhandler.cpp:78
+#: pgpkeyurlhandler.cpp:64
 #, kde-format
 msgid "An error occurred while importing the key."
 msgstr "Greška pri uvoženju ključa."
 
-#: pgpkeyurlhandler.cpp:80
+#: pgpkeyurlhandler.cpp:64 pgpkeyurlhandler.cpp:66
 #, kde-format
 msgid "Import error"
 msgstr "Greška uvoza"
 
-#: pgpkeyurlhandler.cpp:83
+#: pgpkeyurlhandler.cpp:66
+#, kde-format
+msgid "No keys to import where found."
+msgstr ""
+
+#: pgpkeyurlhandler.cpp:68
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "Ključ je uspešno uvezen."
 
-#: pgpkeyurlhandler.cpp:84
+#: pgpkeyurlhandler.cpp:68
 #, kde-format
 msgid "Import finished"
 msgstr "Uvoz završen"

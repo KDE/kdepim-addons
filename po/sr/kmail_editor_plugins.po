@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-02-04 03:29+0100\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,54 +18,54 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:38
+#: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
 msgid "Autocorrect Text"
 msgstr "Аутоматско исправљање текста"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:43
+#: autocorrection/autocorrectionplugineditorinterface.cpp:28
 #, kde-format
 msgid "Autocorrect Full Text"
 msgstr "Аутоматски исправљај цео текст"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:47
+#: autocorrection/autocorrectionplugineditorinterface.cpp:32
 #, kde-format
 msgid "Autocorrect Selected Text"
 msgstr "Аутоматски исправљај изабрани текст"
 
 # rewrite-msgid: /Email//
-#: insertemail/insertemailplugineditorinterface.cpp:38
+#: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
 msgid "Insert Email..."
 msgstr "Уметни другу поруку..."
 
-#: insertshorturl/insertshorturlconfigurewidget.cpp:38
+#: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
 msgid "Select Short URL server:"
 msgstr "Сервер скраћених УРЛ‑ова:"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:77
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
 msgid "Insert Short URL..."
 msgstr "Уметни скраћени УРЛ..."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:101
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
 msgstr "Нема везе са мрежом, не могу да скратим УРЛ."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:108
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:92
 #, kde-format
 msgid "String doesn't seem to be a URL"
 msgstr ""
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:114
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:98
 #, kde-format
 msgid "An error occurred: \"%1\""
 msgstr "Грешка: %1"
 
-#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:46
-#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:63
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
+#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
 #, kde-format
 msgid ""
 "Error reported by server:\n"
@@ -74,97 +74,97 @@ msgstr ""
 "Сервер пријављује грешку:\n"
 "'%1'"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
 msgid "Insert Special Character..."
 msgstr "Уметни специјални знак..."
 
 # >> @title:window
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:53
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, fuzzy, kde-format
 #| msgid "Insert Special Character"
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "Уметање специјалног знака"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:54
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
 #, kde-format
 msgid "Insert"
 msgstr "Уметни"
 
-#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:37
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
 #, kde-format
 msgid "Insert Non Breaking Space"
 msgstr "Уметни беспреломни размак"
 
-#: quicktext/quicktextconfiguredialog.cpp:36
+#: quicktext/quicktextconfiguredialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure quick text"
 msgstr ""
 
-#: quicktext/quicktextconfiguredialog.cpp:48
+#: quicktext/quicktextconfiguredialog.cpp:38
 #, kde-format
 msgid "Import..."
 msgstr ""
 
-#: quicktext/quicktextconfiguredialog.cpp:51
+#: quicktext/quicktextconfiguredialog.cpp:41
 #, kde-format
 msgid "Export..."
 msgstr ""
 
-#: quicktext/quicktextmanager.cpp:126
+#: quicktext/quicktextmanager.cpp:78
 #, kde-format
 msgid "Import QuickText"
 msgstr ""
 
-#: quicktext/quicktextmanager.cpp:134
+#: quicktext/quicktextmanager.cpp:86
 #, kde-format
 msgid "Export QuickText"
 msgstr ""
 
-#: quicktext/quicktextplugineditorinterface.cpp:53
-#: quicktext/quicktextplugineditorinterface.cpp:59
+#: quicktext/quicktextplugineditorinterface.cpp:40
+#: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:56
+#: quicktext/quicktexttreewidget.cpp:37
 #, kde-format
 msgid "Add Snippet..."
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:58
+#: quicktext/quicktexttreewidget.cpp:39
 #, kde-format
 msgid "Edit Snippet..."
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:60
+#: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
 msgid "Remove Snippet"
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:63
+#: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
 msgid "Add Group..."
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:65
+#: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
 msgid "Rename Group..."
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:67
+#: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
 msgid "Remove Group"
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:118
+#: quicktext/quicktexttreewidget.cpp:85
 #, kde-format
 msgid "Text Snippets"
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:176
+#: quicktext/quicktexttreewidget.cpp:142
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -172,7 +172,7 @@ msgid ""
 "undo the removal.</warning>"
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:200
+#: quicktext/quicktexttreewidget.cpp:167
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -180,39 +180,39 @@ msgid ""
 "><warning>There is no way to undo the removal.</warning>"
 msgstr ""
 
-#: quicktext/quicktexttreewidget.cpp:210
+#: quicktext/quicktexttreewidget.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
 msgstr ""
 
-#: quicktext/quicktextwidget.cpp:84
+#: quicktext/quicktextwidget.cpp:68
 #, kde-format
 msgid "QuickText was changed. Do you want to save it?"
 msgstr ""
 
-#: quicktext/quicktextwidget.cpp:84
+#: quicktext/quicktextwidget.cpp:69
 #, kde-format
 msgid "Save"
 msgstr ""
 
-#: quicktext/quicktextwidget.cpp:123
+#: quicktext/quicktextwidget.cpp:111
 #, kde-format
 msgid "General"
 msgstr ""
 
-#: sharetext/sharetextplugineditorinterface.cpp:43
+#: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
 msgid "Share Mail Text..."
 msgstr ""
 
-#: zoomtext/zoomlabel.cpp:35
+#: zoomtext/zoomlabel.cpp:20
 #, kde-format
 msgid "Zoom: %1%"
 msgstr ""
 
 # >> @title:menu
-#: zoomtext/zoomtextplugineditorinterface.cpp:40
+#: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom..."
 msgstr "Увеличање..."
