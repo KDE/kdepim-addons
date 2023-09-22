@@ -1,7 +1,7 @@
 # Translation for webengineurlinterceptor.po to Euskara/Basque (eu).
 # Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-09-17 08:50+0200\n"
+"PO-Revision-Date: 2023-09-21 22:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: adblock/adblockinterceptorinterface.cpp:49
 #, kde-format
@@ -44,7 +44,7 @@ msgstr "Norberak finkatutako arauak"
 #: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
 msgid "Enabled ad block"
-msgstr "Iragarkiak blokeatzea gaituta"
+msgstr "Iragarkiak oztopatzea gaituta"
 
 #. i18n: ectx: label, entry (HideAdsEnabled), group (General)
 #: adblock/lib/settings/webengineurlinterceptoradblock.kcfg:12
@@ -210,7 +210,7 @@ msgstr "Ez da harpidetzarik gehitu"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
-msgstr "Konfiguratu iragazkiak blokeatzeko «AdBlock» plugina"
+msgstr "Konfiguratu iragazkiak oztopatzeko «AdBlock» plugina"
 
 #: adblock/lib/widgets/adblocksettingwidget.cpp:53
 #, kde-format
