@@ -19,28 +19,25 @@ msgstr ""
 
 #: adblock/adblockfilterdialog.cpp:17
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr "Reklam engelleme listesini göster"
+msgstr "Reklam Engelleme Listesi Ekle"
 
 #: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Ekle..."
 
 #: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
 msgid "Modify..."
-msgstr ""
+msgstr "Değiştir..."
 
 #: adblock/adblockfilterlistsview.cpp:56
-#, fuzzy, kde-format
-#| msgid "Delete List"
+#, kde-format
 msgid "Delete"
-msgstr "Listeyi Sil"
+msgstr "Sil"
 
 #: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
@@ -55,12 +52,12 @@ msgstr "Ara..."
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Ad:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "URL:"
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
@@ -72,257 +69,4 @@ msgstr "AdBlock Eklentisini Yapılandır"
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:8
 #, kde-format
 msgid "Enabled ad block"
-msgstr "Reklam engellemeyi etkinleştir"
-
-#~ msgid "Open Blockable Items..."
-#~ msgstr "Engellenebilir Ögeleri Aç..."
-
-#~ msgid "Block Image"
-#~ msgstr "Görseli Engelle"
-
-#~ msgid "Cannot load subscription!"
-#~ msgstr "Abonelik yüklenemiyor!"
-
-#~ msgid "Custom Rules"
-#~ msgstr "Özel Kurallar"
-
-#~ msgid "Hide advertisement enabled"
-#~ msgstr "Reklam gizleme etkinleştirildi"
-
-#~ msgid "Update interval list of adblock"
-#~ msgstr "Reklam engelleyicinin güncelleme aralığı"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add subscription"
-#~ msgstr "Abonelik ekle"
-
-#~ msgid "Select List:"
-#~ msgstr "Liste Seç:"
-
-#~ msgid "Show List"
-#~ msgstr "Listeyi Göster"
-
-#~ msgctxt "@title:window"
-#~ msgid "Blockable Items"
-#~ msgstr "Engellenebilir Ögeler"
-
-#~ msgid "No blockable element found."
-#~ msgstr "Engellenebilir öge bulunamadı."
-
-#~ msgid "Filter"
-#~ msgstr "Süzgeç"
-
-#~ msgid "Address"
-#~ msgstr "Adres"
-
-#~ msgid "Type"
-#~ msgstr "Tür"
-
-#~ msgid "Copy URL"
-#~ msgstr "URL'yi kopyala"
-
-#~ msgid "Copy filter"
-#~ msgstr "Süzgeci kopyala"
-
-#~ msgid "Block item..."
-#~ msgstr "Ögeyi engelle..."
-
-#~ msgid "Open"
-#~ msgstr "Aç"
-
-#~ msgid "Remove filter"
-#~ msgstr "Süzgeci kaldır"
-
-#~ msgid "Image"
-#~ msgstr "Görsel"
-
-#~ msgid "Script"
-#~ msgstr "Betik"
-
-#~ msgid "Stylesheet"
-#~ msgstr "Stil Tablosu"
-
-#~ msgid "Font"
-#~ msgstr "Yazıtipi"
-
-#~ msgid "Frame"
-#~ msgstr "Çerçeve"
-
-#~ msgid "XML Request"
-#~ msgstr "XML İsteği"
-
-#~ msgid "Object"
-#~ msgstr "Nesne"
-
-#~ msgid "Audio/Video"
-#~ msgstr "Ses/Video"
-
-#~ msgid "Popup window"
-#~ msgstr "Açılır Pencere"
-
-#~ msgid "Unknown"
-#~ msgstr "Bilinmeyen"
-
-#~ msgctxt "@title:window"
-#~ msgid "Create Filter"
-#~ msgstr "Süzgeç Oluştur"
-
-#~ msgid "Use default"
-#~ msgstr "Öntanımlıyı kullan"
-
-#~ msgid "Yes"
-#~ msgstr "Evet"
-
-#~ msgid "Not"
-#~ msgstr "Değil"
-
-#~ msgid "No subscription added"
-#~ msgstr "Abonelik eklenmedi"
-
-#~ msgid ""
-#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-#~ "\"filterhelp\">more information</a>):"
-#~ msgstr ""
-#~ "<qt>İfadeyi süz (örn. <tt>http://www.example.com/ad/*</tt>, <a href="
-#~ "\"filterhelp\">daha fazla bilgi</a>):"
-
-#~ msgid " day"
-#~ msgid_plural " days"
-#~ msgstr[0] " gün"
-#~ msgstr[1] " gün"
-
-#~ msgid ""
-#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
-#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
-#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
-#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
-#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
-#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
-#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
-#~ msgstr ""
-#~ "<qt><p>Süzülecek bir ifade girin. İfadeler şu şekilde tanımlanabilir:"
-#~ "<ul><li>bir kabuk tarzı joker; örn. <tt>http://www.example.com/ads*</tt>, "
-#~ "<tt>*?[]</tt> jokerleri kullanılabilir</li><li>diziyi '<tt>/</tt>' ile "
-#~ "sararak tam bir düzenli ifade; örn. <tt>/\\/(ad|banner)\\./</tt></li></"
-#~ "ul><p>Herhangi bir eşleşen URL'ye izin vermek için tüm süzgeç dizileri "
-#~ "önüne '<tt>@@</tt>' getirilebilir; bunlar engelleme listelerine göre "
-#~ "öncelik alırlar.<br><a href='%1'>%2</a></qt>"
-
-#~ msgid "More information"
-#~ msgstr "Daha fazla bilgi"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "Bu kuralı kaldırmak istiyor musunuz?"
-#~ msgstr[1] "Bu kuralları kaldırmak istiyor musunuz?"
-
-#~ msgid "Do you want to delete list \"%1\"?"
-#~ msgstr "\"%1\" listesini silmek istiyor musunuz?"
-
-#~ msgid "Delete current list"
-#~ msgstr "Geçerli listeyi sil"
-
-#~ msgid "All Files (*)"
-#~ msgstr "Tüm Dosyalar (*)"
-
-#~ msgid "Import Filters"
-#~ msgstr "Süzgeçleri İçe Aktar"
-
-#~ msgid "Export Filters"
-#~ msgstr "Süzgeçleri Dışa Aktar"
-
-#~ msgid "Download..."
-#~ msgstr "İndir..."
-
-#~ msgid "An error occurred while downloading the list: \"%1\""
-#~ msgstr "Liste indirilirken bir hata oluştu: \"%1\""
-
-#~ msgid "Filters:"
-#~ msgstr "Süzgeçler:"
-
-#~ msgid "&Blocking filter"
-#~ msgstr "&Engelleme süzgeci"
-
-#~ msgid "Exception Filter"
-#~ msgstr "İstisna Süzgeci"
-
-#~ msgid "Pattern"
-#~ msgstr "Kalıp"
-
-#~ msgid "custom"
-#~ msgstr "özel"
-
-#~ msgid "Accept pattern only"
-#~ msgstr "Yalnızca kalıbı kabul et"
-
-#~ msgid "At the beginning of the address"
-#~ msgstr "Adresin başında"
-
-#~ msgid "At the end of address"
-#~ msgstr "Adresın sonunda"
-
-#~ msgid "Options"
-#~ msgstr "Seçenekler"
-
-#~ msgid "First-part only"
-#~ msgstr "Yalnızca ilk kısım"
-
-#~ msgid "Match case"
-#~ msgstr "Tam sözcük"
-
-#~ msgid "Restrict to domain"
-#~ msgstr "Alan adına sınırla"
-
-#~ msgid "Apply to:"
-#~ msgstr "Şuna uygula:"
-
-#~ msgid "Collapse blocked:"
-#~ msgstr "Engelleneni daralt:"
-
-#~ msgid "&Enable Ad Block"
-#~ msgstr "&Reklam Engellemeyi Etkinleştir"
-
-#~ msgid "&Hide filtered elements"
-#~ msgstr "&Süzülen Ögeleri Gizle"
-
-#~ msgid "Automatic Filters"
-#~ msgstr "Otomatik Süzgeçler"
-
-#~ msgid "Add Filters subscriptions..."
-#~ msgstr "Süzgeç abonelikleri ekle..."
-
-#~ msgid "Remove subscription"
-#~ msgstr "Aboneliği kaldır"
-
-#~ msgid "Update enabled automatic filters every:"
-#~ msgstr "Etkin otomatik süzgeçleri güncelleme aralığı:"
-
-#~ msgid "Show List..."
-#~ msgstr "Listeyi Göster..."
-
-#~ msgid "Manual Filters"
-#~ msgstr "Elle Yapılan Süzgeçler"
-
-#~ msgid "Add filter expression"
-#~ msgstr "Süzgeç ifadesi ekle"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Import Filters..."
-#~ msgstr "Süzgeçleri İçe Aktar..."
-
-#~ msgid "Export filters..."
-#~ msgstr "Süzgeçleri Dışa Aktar..."
-
-#~ msgid "Search:"
-#~ msgstr "Ara:"
-
-#~ msgid "Edit"
-#~ msgstr "Düzenle"
-
-#~ msgid "Remove filter expression"
-#~ msgstr "Süzgeç ifadesini kaldır"
-
-#~ msgid "Remove Filter"
-#~ msgstr "Süzgeci Kaldır"
+msgstr "Reklam engelleme etkin"
