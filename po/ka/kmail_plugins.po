@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-10-20 06:20+0200\n"
+"PO-Revision-Date: 2023-09-23 09:33+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -119,17 +119,17 @@ msgstr "მოგესალმებით KMail-ის ანტივირ�
 #: common/antispamwizard.cpp:96
 #, kde-format
 msgid "Options to fine-tune the handling of spam messages"
-msgstr ""
+msgstr "სპამ-შეტყობინებების დამუშავების დამატებითი პარამეტრები"
 
 #: common/antispamwizard.cpp:100
 #, kde-format
 msgid "Summary of changes to be made by this wizard"
-msgstr ""
+msgstr "ამ ოსტატის მიერ შეტანილი ცვლილებების შეჯამება"
 
 #: common/antispamwizard.cpp:103
 #, kde-format
 msgid "Options to fine-tune the handling of virus messages"
-msgstr ""
+msgstr "ვირუსიანი შეტყობინებების დამუშავების დამატებითი პარამეტრები"
 
 #: common/antispamwizard.cpp:170
 #, kde-format
@@ -168,7 +168,7 @@ msgstr "გამოცხადება, როგორც არა-სპ�
 #: common/antispamwizard.cpp:391
 #, kde-format
 msgid "Ham"
-msgstr ""
+msgstr "სპამი არაა"
 
 #: common/antispamwizard.cpp:457
 #, kde-format
@@ -191,6 +191,8 @@ msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
 "detection software and re-run this wizard.</p>"
 msgstr ""
+"<p>უკაცრავად, სპამის ამოცნობის პროგრამები აღმოჩენილი არაა. დააყენეთ ერთი "
+"მაინც და ეს ოსტატი თავიდან გაუშვით.</p>"
 
 #: common/antispamwizard.cpp:506
 #, kde-format
@@ -231,16 +233,18 @@ msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
 "</p>"
 msgstr ""
+"<p>საქაღალდე შეტყობინებებისთვის, რომლებიც მონიშნულია, როგორც საეჭვო, (ალბათ-"
+"სპამი) არის <i>%1</i>.</p>"
 
 #: common/antispamwizard.cpp:581
 #, kde-format
 msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
-msgstr ""
+msgstr "<p>ოსტატი შექმნის შემდეგ ფილტრებს:<ul>%1</ul></p>"
 
 #: common/antispamwizard.cpp:584
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
-msgstr ""
+msgstr "<p>ოსტატი ჩაანაცვლებს შემდეგ ფილტრებს:<ul>%1</ul></p>"
 
 #: common/antispamwizard.cpp:981
 #, kde-format
@@ -248,6 +252,8 @@ msgid ""
 "The wizard will search for any tools to do spam detection\n"
 "and setup KMail to work with them."
 msgstr ""
+"ეს ოსტატი მოძებნის ყველა პროგრამას, რათა სპამი აღმოაჩინოს\n"
+"და KMail-ს მათთან სამუშაოდ მოირგებს."
 
 #: common/antispamwizard.cpp:983
 #, kde-format
@@ -269,22 +275,22 @@ msgstr ""
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
 "page.</p>"
-msgstr ""
+msgstr "<p>აირჩიეთ აღმომჩენი პროგრამები და გადადით შემდეგ გვერდზე.</p>"
 
 #: common/antispamwizard.cpp:1057
 #, kde-format
 msgid "&Mark detected spam messages as read"
-msgstr ""
+msgstr "&აღმოჩენილი სპამ-შეტყობინებების წაკითხულად მონიშვნა"
 
 #: common/antispamwizard.cpp:1058
 #, kde-format
 msgid "Mark messages which have been classified as spam as read."
-msgstr ""
+msgstr "სპამად მონიშნული შეტყობინებების წაკითხულად მონიშვნა."
 
 #: common/antispamwizard.cpp:1061
 #, kde-format
 msgid "Move &known spam to:"
-msgstr ""
+msgstr "&ცნობილი სპამის გადატანა საქაღალდეში:"
 
 #: common/antispamwizard.cpp:1063
 #, kde-format
@@ -292,11 +298,13 @@ msgid ""
 "The default folder for spam messages is the trash folder, but you may change "
 "that in the folder view below."
 msgstr ""
+"ნაგულისხმევი საქაღალდე სპამ-შეტყობინებებისთვის ნაგვის ყუთია, მაგრამ მისი "
+"შეცვლა ქვემოთ შეგიძლიათ."
 
 #: common/antispamwizard.cpp:1076
 #, kde-format
 msgid "Move &probable spam to:"
-msgstr ""
+msgstr "&დიდი ალბათობით სპამის გადატანა საქაღალდეში:"
 
 #: common/antispamwizard.cpp:1078
 #, kde-format
@@ -305,11 +313,14 @@ msgid ""
 "folder view below.<p>Not all tools support a classification as unsure. If "
 "you have not selected a capable tool, you cannot select a folder as well.</p>"
 msgstr ""
+"ნაგულისხმევი საქაღალდეა შემომავალი საქაღალდე, მაგრამ ამის შეცვლა ქვემოთ "
+"შეგიძლიათ.<p>ყველა პროგრამას საეჭვოდ კლასიფიკაციის მხარდაჭერა არ გააჩნია. თუ "
+"შესაბამისი პროგრამა არ აგირჩევიათ, საქაღალდესაც ვერ აირჩევთ.</p>"
 
 #: common/antispamwizard.cpp:1188
 #, kde-format
 msgid "Check messages using the anti-virus tools"
-msgstr ""
+msgstr "შეტყობინების შემოწმება ანტივირუსით"
 
 #: common/antispamwizard.cpp:1190
 #, kde-format
@@ -323,7 +334,7 @@ msgstr ""
 #: common/antispamwizard.cpp:1196
 #, kde-format
 msgid "Move detected viral messages to the selected folder"
-msgstr ""
+msgstr "ვირუსიანი შეტყობინებების მითითებულ საქაღალდეში გადატანა"
 
 #: common/antispamwizard.cpp:1198
 #, kde-format
@@ -336,7 +347,7 @@ msgstr ""
 #: common/antispamwizard.cpp:1204
 #, kde-format
 msgid "Additionally, mark detected viral messages as read"
-msgstr ""
+msgstr "დამატებით, ვირუსიანი შეტყობინებების წაკითხულად მონიშვნა"
 
 #: common/antispamwizard.cpp:1207
 #, kde-format

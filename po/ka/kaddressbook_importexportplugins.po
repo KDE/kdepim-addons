@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-09-22 21:31+0200\n"
+"PO-Revision-Date: 2023-09-23 09:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -255,6 +255,9 @@ msgid ""
 "if the comma is the field delimiter, then any comma occurring with the data "
 "will be \"quoted\" by the character specified here."
 msgstr ""
+"აირჩიეთ სიმბოლო, რომელსაც თქვენი CSV ფაილი ციტატებისთვის იყენებს, თუ ასეთ "
+"სიმბოლოს იყენებთ.  მაგალთად, თუ მძიმე ველის გამყოფია, ნებისმიერი მძიმე, "
+"რომელიც ამ მონაცემებში გამოჩნდება, \"დაციტირდება\" ამ სიმბოლოს მიერ."
 
 #: csv/import/csvimportdialog.cpp:376
 #, kde-format
@@ -290,6 +293,10 @@ msgid ""
 "item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
 "item><item>S: seconds with 2 digits</item></list></para>"
 msgstr ""
+"<para><list><item>y: წელი ორი ციფრით</item><item>Y: წელი 4 ციფრით</"
+"item><item>m: თვე 1 ან 2 ციფრით</item><item>M: თვე ორი ციფრით</item><item>d: "
+"დღე 1 ან 2 ციფრით</item><item>D: დღე 2 ციფრით</item><item>H: საათი 2 ციფრით</"
+"item><item>I: წუთი 2 ციფრით</item><item>S: წამი 2 ციფრით</item></list></para>"
 
 #: csv/import/csvimportdialog.cpp:401
 #, kde-kuit-format

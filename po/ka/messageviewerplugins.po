@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-02 00:59+0000\n"
-"PO-Revision-Date: 2023-02-02 08:43+0100\n"
+"PO-Revision-Date: 2023-09-23 09:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -209,6 +209,8 @@ msgstr "გეგმის შექმნა"
 #, kde-format
 msgid "Allows you to create a calendar to-do or reminder from this message"
 msgstr ""
+"საშუალებას გაძლევთ, ამ შეტყობინებიდან კალენდრის გასაკეთებელი ან შემხსენებელი "
+"შექმნათ"
 
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:72
 #, kde-format
@@ -217,6 +219,10 @@ msgid ""
 "from the currently selected message. Then you can edit the to-do to your "
 "liking before saving it to your calendar."
 msgstr ""
+"ეს პარამეტრი გაშვებს KOrganizer-ის გასაკეთებლის რედაქტორს, რომლის საწყისი "
+"მნიშვნელობები ამჟამად მონიშნული შეტყობინებიდან იქნება აღებული. შემდეგ კი "
+"შეგეძლებათ, ჩაასწოროთ ეს გასაკეთებელი, როგორც თქვენ გნებავთ და კალენდარშიც "
+"შეინახოთ."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:16
 #, kde-format
@@ -295,6 +301,12 @@ msgid ""
 "- the reply email address</li><li>%akonadiUrl - the akonadi url (as akonadi:?"
 "item=187020)</li></ul></strong></p></qt>"
 msgstr ""
+"<qt><p><strong>ეს გამოსახულებები შეგიძლიათ გამოიყენოთ არგუმენტებად:</"
+"strong></p><ul><li>%s - შეტყობინების სათაური</li><li>%from - ვისგან მოვიდა "
+"ელფოსტა-მისამართი</li><li>%cc - CC-ში არსებული ელფოსტების სია</li><li>%bcc - "
+"BCC-ში არსებული ელფოსტის მისამართების სია</li><li>%body - შეტყობინების "
+"სხეული</li><li>%inreplyto - პასუხის ელფოსტის მისამართი</li><li>%akonadiUrl - "
+"akonadi-ის ბმული(მაგ: akonadi:?item=187020)</li></ul></strong></p></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format
