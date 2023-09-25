@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-09-23 09:55+0200\n"
+"PO-Revision-Date: 2023-09-24 16:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -312,6 +312,14 @@ msgid ""
 "para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
 "para>"
 msgstr ""
+"<para>მიუთითეთ ფორმატები თარიღებისთვის, რომლების თქვენს csv მონაცემებშია. "
+"გამოიყენეთ შემდეგ მიმდევრობები ფორმატის აღსაწერად: </"
+"para><para><list><item>y: წელი ორი ციფრით</item><item>Y: წელი ოთხ ციფრით</"
+"item><item>m: თვე 1 ან ორი ციფრით</item><item>M: თვე ორი ციფრით</"
+"item><item>d: დღე 1 ან 2 ციფრით</item><item>D: დღე ორი ციფრით</item><item>H: "
+"საათი ორი ციფრით</item><item>I: წუთები ორი ციფრით</item><item>S: წამი ორი "
+"ციფრით</item></list></para><para>მაგ: \"Y-M-D\" შეესაბამება თარიღს"
+"\"2012-01-04\"</para>"
 
 #: csv/import/csvimportdialog.cpp:417
 #, kde-format
@@ -351,6 +359,9 @@ msgid ""
 "data. In many cases, the first line of a csv file will be a comment line "
 "describing the order of the data fields included in the file."
 msgstr ""
+"ჩართეთ ეს პარამეტრი, თუ გნებავთ, შემოტანამ CSV ფაილის პირველი მწკრივი "
+"გამოტოვოს. ბევრ შემთხვევაში CSV ფაილის პირველი მწკრივი კომენტარის ხაზია, "
+"რომელიც ფაილში არსებული მონაცემის ველების მიმდევრობას აღწერს."
 
 #: csv/import/csvimportdialog.cpp:448
 #, kde-format

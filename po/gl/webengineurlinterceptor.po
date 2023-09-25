@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2016.
-# Adrian Chaves <adrian@chaves.io>, 2018, 2019, 2023.
+# SPDX-FileCopyrightText: 2018, 2019, 2023 Adrian Chaves <adrian@chaves.io>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-06-18 21:34+0200\n"
+"PO-Revision-Date: 2023-09-24 14:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,32 +16,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: adblock/adblockfilterdialog.cpp:17
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr "Amosar a lista de bloqueo de publicidade"
+msgstr "Engadir unha lista de bloqueo de publicidade"
 
 #: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Engadir…"
 
 #: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
 msgid "Modify..."
-msgstr ""
+msgstr "Modificar…"
 
 #: adblock/adblockfilterlistsview.cpp:56
-#, fuzzy, kde-format
-#| msgid "Delete List"
+#, kde-format
 msgid "Delete"
-msgstr "Eliminar a lista"
+msgstr "Eliminar"
 
 #: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
@@ -56,12 +53,12 @@ msgstr "Buscar…"
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Nome:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "URL:"
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format

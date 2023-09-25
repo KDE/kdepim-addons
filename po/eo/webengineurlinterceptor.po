@@ -1,0 +1,73 @@
+# Translation of webengineurlinterceptor.pot into esperanto.
+# Copyright (C) 2023 Free Software Foundation, Inc.
+# This file is distributed under the same license as the kdepim-addons package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"PO-Revision-Date: 2023-09-24 23:18+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: adblock/adblockfilterdialog.cpp:17
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "Aldoni Adblock-Liston"
+
+#: adblock/adblockfilterlistsview.cpp:46
+#, kde-format
+msgid "Add..."
+msgstr "Aldoni..."
+
+#: adblock/adblockfilterlistsview.cpp:51
+#, kde-format
+msgid "Modify..."
+msgstr "Modifi..."
+
+#: adblock/adblockfilterlistsview.cpp:56
+#, kde-format
+msgid "Delete"
+msgstr "Forigi"
+
+#: adblock/adblockfilterlistsview.cpp:94
+#, kde-format
+msgid "Remove"
+msgstr "Forigi"
+
+#: adblock/adblockfilterwidget.cpp:26
+#, kde-format
+msgid "Search..."
+msgstr "Serĉi..."
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
+#, kde-format
+msgid "Name:"
+msgstr "Nomo:"
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
+#, kde-format
+msgid "Url:"
+msgstr "Url:"
+
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure AdBlock Plugin"
+msgstr "Agordi AdBlock-Kromprogramon"
+
+#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#, kde-format
+msgid "Enabled ad block"
+msgstr "Ebligita reklambloko"

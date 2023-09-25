@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2023-09-23 09:33+0200\n"
+"PO-Revision-Date: 2023-09-24 16:26+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -205,6 +205,8 @@ msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
 "moved into the folder named <i>%1</i>.</p>"
 msgstr ""
+"<p>სპამად მონიშნული შეტყობინებები წაკითხულად მოინიშნება.<br />სპამ-"
+"შეტყობინებები გადატანილი იქნება საქაღალდეში სახელით <i>%1</i>.</p>"
 
 #: common/antispamwizard.cpp:533
 #, kde-format
@@ -212,6 +214,8 @@ msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
 "not moved into a certain folder.</p>"
 msgstr ""
+"<p>სპამად ჩათვლილი შეტყობინებები წაკითხულად მოინიშნება.<br />სპამ-"
+"შეტყობინებები სხვა საქაღალდეში გადატანილი არ იქნება.</p>"
 
 #: common/antispamwizard.cpp:539
 #, kde-format
@@ -219,6 +223,8 @@ msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
 "are moved into the folder named <i>%1</i>.</p>"
 msgstr ""
+"<p>სპამად მონიშნული შეტყობინებები წაკითხულად არ მოინიშნება.<br />სპამ-"
+"შეტყობინებები გადატანილი იქნება საქაღალდეში სახელით <i>%1</i>.</p>"
 
 #: common/antispamwizard.cpp:544
 #, kde-format
@@ -226,6 +232,8 @@ msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
 "are not moved into a certain folder.</p>"
 msgstr ""
+"<p>სპამად ჩათვლილი შეტყობინებები წაკითხულად არ მოინიშნება.<br />სპამ-"
+"შეტყობინებები სხვა საქაღალდეში გადატანილი არ იქნება.</p>"
 
 #: common/antispamwizard.cpp:571
 #, kde-format
@@ -269,6 +277,17 @@ msgid ""
 "time consuming; please consider deleting the filter rules created by the "
 "wizard to get back to the former behavior.</p>"
 msgstr ""
+"<p> აქ შეგიძლიათ მიიღოთ გარკვეული დახმარება KMail-ის ფილტრის წესების "
+"დაყენებაში, რათა გამოიყენოთ საყოველთაოდ ცნობილი ანტივირუსული საშუალებები.</"
+"p><p>ოსტატს შეუძლია აღმოაჩინოს ეს ინსტრუმენტები თქვენს კომპიუტერში, ასევე "
+"შექმნას ფილტრის წესები შეტყობინებების კლასიფიკაციისთვის ამ ინსტრუმენტების "
+"გამოყენებით და ვირუსების შემცველი შეტყობინებების გასაყოფად. ოსტატი არ "
+"გაითვალისწინებს ფილტრის არსებულ წესებს: ის ყოველთვის დაამატებს ახალ წესებს.</"
+"p><p> <b>გაფრთხილება: </b> როგორც ჩანს, KMail გაყინულია ვირუსების "
+"შეტყობინებების სკანირების დროს, თქვენ შეიძლება შეგექმნათ პრობლემები KMail-ის "
+"რეაგირებასთან დაკავშირებით, რადგან ანტივირუსული ხელსაწყოების ოპერაციები, "
+"როგორც წესი, შრომატევადია; გთხოვთ, გაითვალისწინოთ ოსტატის მიერ შექმნილი "
+"ფილტრის წესების წაშლა, რომ დაუბრუნდეთ ყოფილ ქცევას.</p>"
 
 #: common/antispamwizard.cpp:1033
 #, kde-format
@@ -330,6 +349,10 @@ msgid ""
 "following filters can react on this and, for example, move virus messages to "
 "a special folder."
 msgstr ""
+"თქვენი შეტყობინებების ანტივირუსით შემოწმება. ოსტატი შესაბამის ფილტრებს "
+"შექმნის. შეტყობინებები ამ პროგრამების მიერ ჩვეულებრივ დანიშნულია, რათა მეორე "
+"ბოლოში არსებულმა პროგრამებმა ზომები მიიღონ, მაგალითად ვირუსიანი შეტყობინების "
+"სპეციალურ საქაღალდეში გადატანით."
 
 #: common/antispamwizard.cpp:1196
 #, kde-format
@@ -343,6 +366,9 @@ msgid ""
 "messages into a predefined folder is created. The default folder is the "
 "trash folder, but you may change that in the folder view."
 msgstr ""
+"ფილტრი, რომელიც ვირუსით ინფიცირებულად მონიშნულ შეტყობინებებს იპოვის და მას "
+"წინასწარ მითითებულ საქაღალდეში გადაიტანს. ნაგულისხმევად ეს საქაღალდე ნაგვის "
+"ყუთია, მაგრამ ეს შეგიძლიათ შეცვალოთ."
 
 #: common/antispamwizard.cpp:1204
 #, kde-format
@@ -355,6 +381,8 @@ msgid ""
 "Mark messages which have been classified as virus-infected as read, as well "
 "as moving them to the selected folder."
 msgstr ""
+"ინფიცირებულად მონიშნული შეტყობინებების წაკითხულად მონიშვნა და მათი არჩეულ "
+"საქაღალდეში გადატანა."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
 #, kde-format

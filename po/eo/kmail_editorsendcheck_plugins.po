@@ -1,0 +1,251 @@
+# Translation of kmail_editorsendcheck_plugins.pot into esperanto.
+# Copyright (C) 2022 Free Software Foundation, Inc.
+# This file is distributed under the same license as the kdepim-addons package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-20 00:47+0000\n"
+"PO-Revision-Date: 2023-09-24 23:18+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Automatic Add Contacts\" Plugin"
+msgstr "Agordi kromprogramon \"Aŭtomate Aldoni Kontaktojn\"."
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:97
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You must create an address book before adding a contact. Do you want to "
+"create an address book?"
+msgstr ""
+"Vi devas krei adreslibron antaŭ ol aldoni kontakton. Ĉu vi volas krei "
+"adreslibron?"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:98
+#, kde-format
+msgctxt "@title:window"
+msgid "No Address Book Available"
+msgstr "Neniu Adreslibro Disponebla"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Address Book"
+msgstr "Krei Adreslibron"
+
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Address Book"
+msgstr "Aldoni Adreslibron"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
+#, kde-format
+msgid "Automatic Add Contacts"
+msgstr "Aŭtomate Aldoni Kontaktojn"
+
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
+#, kde-format
+msgid "Select the addressbook in which to store contacts:"
+msgstr "Elektu la adreslibron en kiu konservi kontaktojn:"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:35
+#, kde-format
+msgid "Do you want to send the email as HTML?"
+msgstr "Ĉu vi volas sendi la retmesaĝon kiel HTML?"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:36
+#, kde-format
+msgid "Send email as plain text"
+msgstr "Sendi retpoŝton kiel simpla teksto"
+
+#: checkbeforesend/checkbeforesendinterface.cpp:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Send As HTML"
+msgstr "Sendi Kiel HTML"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
+#, kde-format
+msgid "Update SMTP server"
+msgstr "Ĝisdatigi SMTP-servilon"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Check SMTP server"
+msgstr "Kontroli SMTP-servilon"
+
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
+#, kde-format
+msgid ""
+"Do you want to send the email with a different SMTP than the one defined in "
+"the current identity?"
+msgstr ""
+"Ĉu vi volas sendi la retpoŝton kun malsama SMTP ol tiu difinita en la nuna "
+"identeco?"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Check Before Send Mail\" Plugin"
+msgstr "Agordi kromprogramon \"Kontroli antaŭ sendi retpoŝton\""
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
+#, kde-format
+msgid "Send as plain text"
+msgstr "Sendi kiel simpla teksto"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
+#, kde-format
+msgid "Use SMTP server defined in identity"
+msgstr "Uzi SMTP-servilon difinitan en identeco"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
+#, kde-format
+msgid "Check duplicated emails addresses"
+msgstr "Kontroli duobligitajn retadresojn"
+
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
+#, kde-format
+msgid "Check send attachment"
+msgstr "Kontroli sendi aldonaĵon"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Duplicated emails"
+msgstr "Duoblaj retpoŝtoj"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#, kde-format
+msgid "These emails are duplicated. Do you want to send email?"
+msgstr "Ĉi tiuj retpoŝtoj estas duobligitaj. Ĉu vi volas sendi retpoŝton?"
+
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
+#, kde-format
+msgctxt "emails (number of emails)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Attachment"
+msgstr "Kontroli Aldonaĵon"
+
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
+#, kde-format
+msgid "Do you want to send some attachment?"
+msgstr "Ĉu vi volas sendi iun aldonaĵon?"
+
+#: confirm-address/confirmaddressconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"Confirm Email Address\" Plugin"
+msgstr "Agordi la kromprogramon \"Konfirmi Retpoŝtadreson\"."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:32
+#, kde-format
+msgid "Accepted Domain Name"
+msgstr "Akceptita Domajna Nomo"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:37
+#, kde-format
+msgid "Rejected Domain Name"
+msgstr "Malakceptita Domajna Nomo"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:45
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:64
+#, kde-format
+msgid "A&dd..."
+msgstr "Al&doni..."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:46
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:65
+#, kde-format
+msgid "Re&move"
+msgstr "&Forigi"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#, kde-format
+msgid "Mod&ify..."
+msgstr "Mod&ifi..."
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressemailentrydialog.cpp:21
+#, kde-format
+msgid "Enter new domain name:"
+msgstr "Enigu novan domajnan nomon:"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#, kde-format
+msgid "Do you want to remove this domain?"
+msgstr "Ĉu vi volas forigi ĉi tiun domajnon?"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:54
+#, kde-format
+msgid "Whitelist of Addresses"
+msgstr "Blanklisto de Adresoj"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#, kde-format
+msgid "Enter new email address:"
+msgstr "Enigu novan retadreson:"
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgstr "Ĉu vi volas forigi ĉi tiun retpoŝtadreson?"
+
+#: confirm-address/confirmaddressdialog.cpp:26
+#, kde-format
+msgid "Add Selected Emails to WhiteList"
+msgstr "Aldoni Elektitajn Retpoŝtojn al Blanka Listo"
+
+#: confirm-address/confirmaddressdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Confirm Addresses"
+msgstr "Konfirmi Adresojn"
+
+#: confirm-address/confirmaddressdialog.cpp:91
+#, kde-format
+msgid "All selected emails are added to white list"
+msgstr "Ĉiuj elektitaj retpoŝtoj estas aldonitaj al blanka listo"
+
+#: confirm-address/confirmaddressdialog.cpp:91
+#, kde-format
+msgid "Emails added to white list"
+msgstr "Retpoŝtoj aldonitaj al blanka listo"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Value"
+msgstr "Aldoni Valoron"
+
+#: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Value"
+msgstr "Ŝanĝi Valoron"
+
+#: confirm-address/confirmaddresswidget.cpp:22
+#, kde-format
+msgid "Potentially invalid emails are displayed in red:"
+msgstr "Estas montrataj ruĝe retpoŝtoj kiuj eble nevalidas:"
