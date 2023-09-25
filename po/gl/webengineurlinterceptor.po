@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2016.
-# Adrian Chaves <adrian@chaves.io>, 2018, 2019, 2023.
+# SPDX-FileCopyrightText: 2018, 2019, 2023 Adrian Chaves <adrian@chaves.io>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2023-06-18 21:34+0200\n"
+"PO-Revision-Date: 2023-09-24 14:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: adblock/adblockinterceptorinterface.cpp:49
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "Bloquear a imaxe"
 #: adblock/lib/adblocksubscription.cpp:141
 #, kde-format
 msgid "Cannot load subscription!"
-msgstr "Non se pode cargar a subscrición!"
+msgstr "Non é posíbel cargar a subscrición!"
 
 #: adblock/lib/adblocksubscription.cpp:257
 #, kde-format
@@ -238,13 +238,13 @@ msgid ""
 "filter.<br><a href='%1'>%2</a></qt>"
 msgstr ""
 "<qt><p>Insira unha expresión a filtrar. Os filtros poden definirse como:"
-"<ul><li>Expresións estilo consola, como <tt>http://www.example.com/ads*</"
-"tt>. Poden usarse os símbolos <tt>*?[]</tt>.</li><li>Expresións regulares, "
-"delimitadas por barras inclinadas («<tt>/</tt>»), como <tt>/\\/(ad|"
-"banner)\\./</tt></li></ul><p>Calquera expresión de filtrado pode precederse "
-"de «<tt>@@</tt>» para permitir os URL que se correspondan con ela. As "
-"expresións de filtrado de URL permitidos teñen prioridade sobre calquera "
-"lista negra.<br><a href='%1'>%2</a></qt>"
+"<ul><li>Expresións estilo intérprete de ordes, como <tt>http://www.example."
+"com/ads*</tt>. Poden usarse os símbolos <tt>*?[]</tt>.</li><li>Expresións "
+"regulares, delimitadas por barras inclinadas («<tt>/</tt>»), como <tt>/\\/"
+"(ad|banner)\\./</tt></li></ul><p>Calquera expresión de filtrado pode "
+"precederse de «<tt>@@</tt>» para permitir os URL que se correspondan con "
+"ela. As expresións de filtrado de URL permitidos teñen prioridade sobre "
+"calquera lista negra.<br><a href='%1'>%2</a></qt>"
 
 #: adblock/lib/widgets/adblocksettingwidget.cpp:150
 #, kde-format
@@ -350,13 +350,13 @@ msgstr "Aceptar só padróns"
 #: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:94
 #, kde-format
 msgid "At the beginning of the address"
-msgstr "No inicio do enderezo"
+msgstr "No inicio do enderezo."
 
 #. i18n: ectx: property (text), widget (QCheckBox, atTheEnd)
 #: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:101
 #, kde-format
 msgid "At the end of address"
-msgstr "No final do enderezo"
+msgstr "No final do enderezo."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:111
@@ -368,19 +368,19 @@ msgstr "Opcións"
 #: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:117
 #, kde-format
 msgid "First-part only"
-msgstr "Só na primeira parte"
+msgstr "Só na primeira parte."
 
 #. i18n: ectx: property (text), widget (QCheckBox, matchCase)
 #: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:124
 #, kde-format
 msgid "Match case"
-msgstr "Distinguir as maiúsculas"
+msgstr "Distinguir as maiúsculas."
 
 #. i18n: ectx: property (text), widget (QCheckBox, restrictToDomain)
 #: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:133
 #, kde-format
 msgid "Restrict to domain"
-msgstr "Restrinxir ao dominio"
+msgstr "Restrinxir ao dominio."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: adblock/lib/widgets/ui/adblockcreatefilterwidget.ui:148
@@ -398,13 +398,13 @@ msgstr "Pregar o bloqueado:"
 #: adblock/lib/widgets/ui/settings_adblock.ui:29
 #, kde-format
 msgid "&Enable Ad Block"
-msgstr "&Activar o bloqueo de publicidade"
+msgstr "&Activar o bloqueo de publicidade."
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkHideAds)
 #: adblock/lib/widgets/ui/settings_adblock.ui:36
 #, kde-format
 msgid "&Hide filtered elements"
-msgstr "&Agochar os elementos filtrados"
+msgstr "&Agochar os elementos filtrados."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: adblock/lib/widgets/ui/settings_adblock.ui:50
@@ -446,7 +446,7 @@ msgstr "Filtros manuais"
 #: adblock/lib/widgets/ui/settings_adblock.ui:155
 #, kde-format
 msgid "Add filter expression"
-msgstr "Engadir a expresión de filtrado"
+msgstr "Engadir a expresión de filtrado."
 
 #. i18n: ectx: property (text), widget (QToolButton, insertButton)
 #: adblock/lib/widgets/ui/settings_adblock.ui:158
@@ -482,7 +482,7 @@ msgstr "Editar"
 #: adblock/lib/widgets/ui/settings_adblock.ui:235
 #, kde-format
 msgid "Remove filter expression"
-msgstr "Retirar a expresión de filtrado"
+msgstr "Retirar a expresión de filtrado."
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: adblock/lib/widgets/ui/settings_adblock.ui:238
