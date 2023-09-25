@@ -61,11 +61,14 @@ bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v, BodyPart
         auto job = QGpgME::openpgp()->importJob();
         auto res = job->exec(part->content()->decodedContent());
         if (res.error()) {
-            KMessageBox::detailedError(v, i18n("An error occurred while importing the key."), QString::fromUtf8(res.error().asString()), i18n("Import error"));
+            KMessageBox::detailedError(v,
+                                       i18n("An error occurred while importing the key."),
+                                       QString::fromUtf8(res.error().asString()),
+                                       i18nc("@title:window", "Import error"));
         } else if (res.numConsidered() == 0) {
-            KMessageBox::error(v, i18n("No keys to import where found."), i18n("Import error"));
+            KMessageBox::error(v, i18n("No keys to import where found."), i18nc("@title:window", "Import error"));
         } else {
-            KMessageBox::information(v, i18n("The key has been successfully imported."), i18n("Import finished"));
+            KMessageBox::information(v, i18n("The key has been successfully imported."), i18nc("@title:window", "Import finished"));
         }
 
         return true;

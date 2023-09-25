@@ -66,7 +66,7 @@ void QuickTextWidget::save()
     if (mSnippetWidget->wasChanged()) {
         const int answer = KMessageBox::warningTwoActions(this,
                                                           i18n("QuickText was changed. Do you want to save it?"),
-                                                          i18n("Save"),
+                                                          i18nc("@title:window", "Save"),
                                                           KStandardGuiItem::save(),
                                                           KStandardGuiItem::discard());
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {

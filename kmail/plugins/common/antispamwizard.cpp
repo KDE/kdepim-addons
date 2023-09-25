@@ -86,7 +86,7 @@ AntiSpamWizard::AntiSpamWizard(WizardMode mode, QWidget *parent)
 #endif
 
     const bool isAntiSpam = (mMode == AntiSpam);
-    setWindowTitle(isAntiSpam ? i18n("Anti-Spam Wizard") : i18n("Anti-Virus Wizard"));
+    setWindowTitle(isAntiSpam ? i18nc("@title:window", "Anti-Spam Wizard") : i18nc("@title:window", "Anti-Virus Wizard"));
     mInfoPage = new ASWizInfoPage(mMode, nullptr, QString());
     mInfoPageItem = addPage(mInfoPage, isAntiSpam ? i18n("Welcome to the KMail Anti-Spam Wizard") : i18n("Welcome to the KMail Anti-Virus Wizard"));
     connect(mInfoPage, &ASWizInfoPage::selectionChanged, this, &AntiSpamWizard::checkProgramsSelections);

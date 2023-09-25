@@ -117,7 +117,7 @@ void SelectImapFolderWidget::createFolder()
             // TODO more check for folder name ?
             SelectImapFolderModel::self()->createNewFolder(mAccount, currentPath + QLatin1Char('/') + name);
         } else {
-            KMessageBox::error(this, i18n("Empty folder name is not supported."), i18n("Create Folder"));
+            KMessageBox::error(this, i18n("Empty folder name is not supported."), i18nc("@title:window", "Create Folder"));
         }
     }
 }

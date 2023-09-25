@@ -28,7 +28,7 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
         connect(action, &QAction::triggered, this, [this]() {
             if (KMessageBox::warningTwoActions(parentWidget(),
                                                i18n("Do you want to vacuum akonadi database?"),
-                                               i18n("Akonadi Vacuum"),
+                                               i18nc("@title:window", "Akonadi Vacuum"),
                                                KGuiItem(i18n("Vacuum")),
                                                KStandardGuiItem::cancel())
                 == KMessageBox::ButtonCode::PrimaryAction) {
@@ -48,7 +48,7 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
 
                     parentWidget(),
                     i18n("Do you want to fsck akonadi database?"),
-                    i18n("Akonadi Fsck"),
+                    i18nc("@title:window", "Akonadi Fsck"),
                     KGuiItem(i18n("Fsck")),
                     KStandardGuiItem::cancel())
                 == KMessageBox::ButtonCode::PrimaryAction) {

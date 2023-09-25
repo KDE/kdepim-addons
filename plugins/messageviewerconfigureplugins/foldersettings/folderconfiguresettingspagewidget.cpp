@@ -55,7 +55,7 @@ void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &co
     if (KMessageBox::Continue
         == KMessageBox::warningContinueCancel(this,
                                               i18n("It will override all settings for each selected folder. Do you want to continue?"),
-                                              i18n("Save Folder Settings"),
+                                              i18nc("@title:window", "Save Folder Settings"),
                                               KStandardGuiItem::save())) {
         for (Akonadi::Collection col : cols) {
             mFolderConfigureSettingsGeneralWidget->save(col);

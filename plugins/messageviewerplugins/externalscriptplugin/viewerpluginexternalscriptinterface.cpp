@@ -76,7 +76,7 @@ void ViewerPluginExternalscriptInterface::execute()
         const QString executable = mCurrentInfo.at(1);
         const QString executablePath = QStandardPaths::findExecutable(executable);
         if (executablePath.isEmpty()) {
-            KMessageBox::error(nullptr, i18n("\'%1\' not found", executable), i18n("Executable not found."));
+            KMessageBox::error(nullptr, i18n("\'%1\' not found", executable), i18nc("@title:window", "Executable not found."));
         } else {
             QProcess proc;
             const QStringList newCommandLine = mCurrentInfo.at(0).split(QLatin1Char(' '), Qt::SkipEmptyParts);

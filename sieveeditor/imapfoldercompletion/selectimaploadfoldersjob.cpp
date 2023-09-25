@@ -134,7 +134,7 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
 void SelectImapLoadFoldersJob::slotFullListingDone(KJob *job)
 {
     if (job->error()) {
-        KMessageBox::error(nullptr, i18n("Error during loading folders: %1", job->errorString()), i18n("Load Folders"));
+        KMessageBox::error(nullptr, i18n("Error during loading folders: %1", job->errorString()), i18nc("@title:window", "Load Folders"));
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Error during full listing : " << job->errorString();
         Q_EMIT finished(false, mModel);
     } else {

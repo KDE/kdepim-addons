@@ -86,7 +86,7 @@ void MergeContactSelectInformationScrollArea::slotMergeContacts()
         if (KMessageBox::ButtonCode::SecondaryAction
             == KMessageBox::warningTwoActions(this,
                                               i18n("Some information was not selected. You can lose this information. Do you want to continue merging?"),
-                                              i18n("Missing Selected Information"),
+                                              i18nc("@title:window", "Missing Selected Information"),
                                               KStandardGuiItem::cont(),
                                               KStandardGuiItem::cancel())) {
             return;

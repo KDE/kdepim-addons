@@ -87,7 +87,7 @@ void SelectImapCreateFolderJob::setNewFolderName(const QString &newFolderName)
 void SelectImapCreateFolderJob::slotCreateFolderDone(KJob *job)
 {
     if (job->error()) {
-        KMessageBox::error(nullptr, i18n("Error during creating folder: %1", job->errorString()), i18n("Create Folder"));
+        KMessageBox::error(nullptr, i18n("Error during creating folder: %1", job->errorString()), i18nc("@title:window", "Create Folder"));
         Q_EMIT finished(mSieveImapAccount, false);
     } else {
         Q_EMIT finished(mSieveImapAccount, true);

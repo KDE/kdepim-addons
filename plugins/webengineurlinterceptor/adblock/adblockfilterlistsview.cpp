@@ -91,7 +91,7 @@ void AdblockFilterListsView::slotModifyAdblock()
 
 void AdblockFilterListsView::slotDeleteAdblock()
 {
-    if (KMessageBox::questionTwoActions(this, i18n("Remove"), i18n("Remove"), KStandardGuiItem::ok(), KStandardGuiItem::cancel())
+    if (KMessageBox::questionTwoActions(this, i18n("Remove"), i18nc("@title:window", "Remove"), KStandardGuiItem::ok(), KStandardGuiItem::cancel())
         == KMessageBox::ButtonCode::PrimaryAction) {
         // mAdblockFilterListsModel->removeList();
         // TODO
