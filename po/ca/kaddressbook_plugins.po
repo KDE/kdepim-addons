@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-09-08 10:33+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -214,7 +214,9 @@ msgstr ""
 "informació. Voleu continuar amb la fusió?"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Missing Selected Information"
+msgctxt "@title:window"
 msgid "Missing Selected Information"
 msgstr "Manca informació seleccionada"
 

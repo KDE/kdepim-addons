@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-25 00:52+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2023-07-02 21:34+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -234,7 +234,9 @@ msgstr ""
 "continuar?"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Folder Settings"
+msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "Salveguarda preferentias de dossier "
 

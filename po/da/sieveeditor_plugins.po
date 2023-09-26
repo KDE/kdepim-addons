@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2020-07-31 19:21+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -39,10 +39,10 @@ msgid "Select Emails"
 msgstr ""
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Folder"
+msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "Opret mappe"
 
@@ -83,6 +83,12 @@ msgid "Refresh IMAP Folder List"
 msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#, kde-format
+msgid "Create Folder"
+msgstr "Opret mappe"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #, kde-format
 msgid "Folder Name:"
 msgstr "Mappenavn:"
@@ -103,9 +109,11 @@ msgid "Error during loading folders: %1"
 msgstr ""
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Folder"
+msgctxt "@title:window"
 msgid "Load Folders"
-msgstr ""
+msgstr "Opret mappe"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
 #, kde-format

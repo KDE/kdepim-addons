@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-25 00:52+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-05-15 23:57+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -226,7 +226,9 @@ msgid ""
 msgstr "각각 선택한 폴더의 설정을 덮어씁니다. 계속 진행하시겠습니까?"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Folder Settings"
+msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "폴더 설정 저장"
 

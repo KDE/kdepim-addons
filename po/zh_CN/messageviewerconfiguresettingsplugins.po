@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-25 00:52+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2023-09-16 10:08\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -227,7 +227,9 @@ msgid ""
 msgstr "这将覆盖每个所选文件夹的全部设置，您要继续吗？"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Folder Settings"
+msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "保存文件夹设置"
 

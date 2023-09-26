@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-20 00:47+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-07-20 11:37+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -228,7 +228,9 @@ msgid "All selected emails are added to white list"
 msgstr "Bütün seçilmiş e-poçtları ağ siyahıya əlavə edildi"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Emails added to white list"
+msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "E-poçtlar ağ siyahıya əlavə edildi"
 

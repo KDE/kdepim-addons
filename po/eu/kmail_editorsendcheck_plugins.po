@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-20 00:47+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2023-02-14 18:34+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -231,7 +231,9 @@ msgid "All selected emails are added to white list"
 msgstr "Hautatutako e-posta guztiak zerrenda-zurira gehituko dira"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Emails added to white list"
+msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "E-postak zerrenda-zurira gehitu dira"
 

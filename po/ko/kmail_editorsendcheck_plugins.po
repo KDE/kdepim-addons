@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-20 00:47+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2021-11-14 19:25+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -224,7 +224,9 @@ msgid "All selected emails are added to white list"
 msgstr "선택한 모든 이메일을 허용 목록에 추가함"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Emails added to white list"
+msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "이메일을 허용 목록에 추가함"
 

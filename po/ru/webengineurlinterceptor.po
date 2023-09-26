@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-02-21 17:06+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -58,6 +58,13 @@ msgstr "Удалить список"
 
 #: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
+msgid "Remove"
+msgstr "Удалить"
+
+#: adblock/adblockfilterlistsview.cpp:94
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
 msgid "Remove"
 msgstr "Удалить"
 

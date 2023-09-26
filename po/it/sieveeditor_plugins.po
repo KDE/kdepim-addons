@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2019-12-24 22:23+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -39,10 +39,10 @@ msgid "Select Emails"
 msgstr "Seleziona messaggi di posta"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Folder"
+msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "Crea cartella"
 
@@ -83,6 +83,12 @@ msgid "Refresh IMAP Folder List"
 msgstr "Aggiorna la lista delle cartelle IMAP"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#, kde-format
+msgid "Create Folder"
+msgstr "Crea cartella"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #, kde-format
 msgid "Folder Name:"
 msgstr "Nome cartella:"
@@ -103,7 +109,9 @@ msgid "Error during loading folders: %1"
 msgstr "Errore durante il caricamento delle cartelle: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load Folders"
+msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "Carica cartelle"
 

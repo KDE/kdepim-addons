@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2023-09-24 23:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -40,10 +40,10 @@ msgid "Select Emails"
 msgstr "Elektu Retpoŝtojn"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Folder"
+msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "Krei Dosierujon"
 
@@ -84,6 +84,12 @@ msgid "Refresh IMAP Folder List"
 msgstr "Refreŝigi IMAP-dosierujon"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#, kde-format
+msgid "Create Folder"
+msgstr "Krei Dosierujon"
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #, kde-format
 msgid "Folder Name:"
 msgstr "Nomo de dosierujo:"
@@ -104,7 +110,9 @@ msgid "Error during loading folders: %1"
 msgstr "Eraro dum ŝargo de dosierujoj: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load Folders"
+msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "Ŝargi Dosierujojn"
 

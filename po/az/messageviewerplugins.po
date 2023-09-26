@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-07-22 16:26+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -318,7 +318,9 @@ msgid "'%1' not found"
 msgstr "'%1' tapılmadı"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Executable not found."
+msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "İcra faylı taöəılmadı."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-07-21 09:58+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -194,7 +194,9 @@ msgid "QuickText was changed. Do you want to save it?"
 msgstr "Бърз текст се промени. Искате ли да го запазите?"
 
 #: quicktext/quicktextwidget.cpp:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@title:window"
 msgid "Save"
 msgstr "_Запазване"
 

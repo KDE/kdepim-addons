@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-20 00:47+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-01-02 20:37+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -226,7 +226,9 @@ msgid "All selected emails are added to white list"
 msgstr "أُضيفت كلّ عناوين البريد المحدّدة إلى القائمة البيضاء"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Emails added to white list"
+msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "أُضيفت العناوين إلى القائمة البيضاء"
 

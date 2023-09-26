@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2016-09-22 20:30+0800\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -206,6 +206,7 @@ msgstr ""
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
+msgctxt "@title:window"
 msgid "Missing Selected Information"
 msgstr ""
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-25 00:52+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2019-03-22 00:33+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -233,6 +233,7 @@ msgstr ""
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
 #, fuzzy, kde-format
 #| msgid "Configure Gravatar"
+msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "設定大頭貼"
 

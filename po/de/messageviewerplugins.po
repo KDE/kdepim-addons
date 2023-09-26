@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-03-13 10:34+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -320,7 +320,9 @@ msgid "'%1' not found"
 msgstr "„%1“ nicht gefunden"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Executable not found."
+msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "Ausführbare Datei nicht gefunden."
 

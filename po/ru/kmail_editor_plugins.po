@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2020-04-24 13:49+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -194,7 +194,9 @@ msgid "QuickText was changed. Do you want to save it?"
 msgstr "Шаблон был изменён. Сохранить его?"
 
 #: quicktext/quicktextwidget.cpp:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@title:window"
 msgid "Save"
 msgstr "Сохранить"
 

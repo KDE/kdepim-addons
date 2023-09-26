@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2016-06-02 18:36+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -211,7 +211,9 @@ msgstr ""
 "pokračovať v zlučovaní?"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Missing Selected Information"
+msgctxt "@title:window"
 msgid "Missing Selected Information"
 msgstr "Chýbajúce informácie kontaktu"
 

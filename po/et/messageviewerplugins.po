@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2019-12-18 20:04+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -309,7 +309,9 @@ msgid "'%1' not found"
 msgstr "\"%1\" ei leitud"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Executable not found."
+msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "Täitmisfaili ei leitud."
 

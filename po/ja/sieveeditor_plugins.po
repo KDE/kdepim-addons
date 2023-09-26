@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2016-12-15 09:01-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -36,10 +36,9 @@ msgid "Select Emails"
 msgstr ""
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
 #, kde-format
+msgctxt "@title:window"
 msgid "Create Folder"
 msgstr ""
 
@@ -80,6 +79,12 @@ msgid "Refresh IMAP Folder List"
 msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#, kde-format
+msgid "Create Folder"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #, kde-format
 msgid "Folder Name:"
 msgstr ""
@@ -101,6 +106,7 @@ msgstr ""
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
 #, kde-format
+msgctxt "@title:window"
 msgid "Load Folders"
 msgstr ""
 

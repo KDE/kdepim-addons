@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-09-08 10:08+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -209,7 +209,9 @@ msgstr ""
 "verloren gaan. Wilt u doorgaan met samenvoegen?"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Missing Selected Information"
+msgctxt "@title:window"
 msgid "Missing Selected Information"
 msgstr "Ontbrekende geselecteerde informatie"
 

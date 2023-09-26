@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2019-04-18 03:40+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -35,7 +35,9 @@ msgid "Do you want to vacuum akonadi database?"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:31
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:78
 #, kde-format
+msgctxt "@title:window"
 msgid "Akonadi Vacuum"
 msgstr ""
 
@@ -55,25 +57,15 @@ msgid "Do you want to fsck akonadi database?"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:51
-#, kde-format
-msgid "Akonadi Fsck"
-msgstr ""
-
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, kde-format
-msgid "Fsck"
-msgstr ""
-
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:75
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Fsck"
 msgstr ""
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:78
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
-msgctxt "@title:window"
-msgid "Akonadi Vacuum"
+msgid "Fsck"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
@@ -98,11 +90,13 @@ msgstr ""
 
 #: common/antispamwizard.cpp:89
 #, kde-format
+msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr ""
 
 #: common/antispamwizard.cpp:89
 #, kde-format
+msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr ""
 

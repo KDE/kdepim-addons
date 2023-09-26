@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2023-04-24 09:14+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -222,7 +222,9 @@ msgstr ""
 "слияние?"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Missing Selected Information"
+msgctxt "@title:window"
 msgid "Missing Selected Information"
 msgstr "Выбрана не вся информация"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2020-06-17 09:24+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -19,31 +19,35 @@ msgstr ""
 
 #: adblock/adblockfilterdialog.cpp:17
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr "Zobrazit seznam blokovaných reklam"
+msgstr ""
 
 #: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Přidat..."
 
 #: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
 msgid "Modify..."
-msgstr ""
+msgstr "Změnit..."
 
 #: adblock/adblockfilterlistsview.cpp:56
-#, fuzzy, kde-format
-#| msgid "Delete List"
+#, kde-format
 msgid "Delete"
-msgstr "Smazat seznam"
+msgstr "Smazat"
 
 #: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
+msgid "Remove"
+msgstr "Odstranit"
+
+#: adblock/adblockfilterlistsview.cpp:94
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
 msgid "Remove"
 msgstr "Odstranit"
 
@@ -55,12 +59,12 @@ msgstr "Hledat..."
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Název:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "Url:"
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
@@ -73,238 +77,3 @@ msgstr "Nastavit modul AdBlock"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Povolena blokace reklam"
-
-#~ msgid "Open Blockable Items..."
-#~ msgstr "Otevřít blokovatelné položky..."
-
-#~ msgid "Block Image"
-#~ msgstr "Blokovat obrázek"
-
-#~ msgid "Cannot load subscription!"
-#~ msgstr "Nemohu načíst sadu filtrů."
-
-#~ msgid "Custom Rules"
-#~ msgstr "Vlastní pravidla"
-
-#~ msgid "Hide advertisement enabled"
-#~ msgstr "Povoleno skrývání reklam"
-
-#~ msgid "Update interval list of adblock"
-#~ msgstr "Interval aktualizace seznamu pro adblock"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add subscription"
-#~ msgstr "Přidat sadu filtrů"
-
-#~ msgid "Select List:"
-#~ msgstr "Vyberte seznam:"
-
-#~ msgid "Show List"
-#~ msgstr "Zobrazit seznam"
-
-#~ msgctxt "@title:window"
-#~ msgid "Blockable Items"
-#~ msgstr "Položky k blokaci"
-
-#~ msgid "Filter"
-#~ msgstr "Filtr"
-
-#~ msgid "Address"
-#~ msgstr "Adresa"
-
-#~ msgid "Type"
-#~ msgstr "Typ"
-
-#~ msgid "Copy URL"
-#~ msgstr "Kopírovat URL"
-
-#~ msgid "Copy filter"
-#~ msgstr "Kopírovat filtr"
-
-#~ msgid "Block item..."
-#~ msgstr "Blokovat položku..."
-
-#~ msgid "Open"
-#~ msgstr "Otevřít"
-
-#~ msgid "Remove filter"
-#~ msgstr "Odstranit filtr"
-
-#~ msgid "Image"
-#~ msgstr "Obrázek"
-
-#~ msgid "Script"
-#~ msgstr "Skript"
-
-#~ msgid "Stylesheet"
-#~ msgstr "Styl"
-
-#~ msgid "Font"
-#~ msgstr "Písmo"
-
-#~ msgid "Frame"
-#~ msgstr "Rámec"
-
-#~ msgid "XML Request"
-#~ msgstr "Požadavek XML"
-
-#~ msgid "Object"
-#~ msgstr "Objekt"
-
-#~ msgid "Audio/Video"
-#~ msgstr "Audio/Video"
-
-#~ msgid "Popup window"
-#~ msgstr "Vyskakovací okno"
-
-#~ msgid "Unknown"
-#~ msgstr "Neznámý"
-
-#~ msgctxt "@title:window"
-#~ msgid "Create Filter"
-#~ msgstr "Vytvořit filtr"
-
-#~ msgid "Use default"
-#~ msgstr "Použít výchozí"
-
-#~ msgid "Yes"
-#~ msgstr "Ano"
-
-#~ msgid "Not"
-#~ msgstr "Ne"
-
-#~ msgid ""
-#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-#~ "\"filterhelp\">more information</a>):"
-#~ msgstr ""
-#~ "<qt>Filtrovat výraz (např. <tt>http://www.example.com/ad/*</tt>, <a href="
-#~ "\"filterhelp\">více informací</a>):"
-
-#~ msgid " day"
-#~ msgid_plural " days"
-#~ msgstr[0] " den"
-#~ msgstr[1] " dny"
-#~ msgstr[2] " dnů"
-
-#~ msgid ""
-#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
-#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
-#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
-#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
-#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
-#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
-#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
-#~ msgstr ""
-#~ "<qt><p>Zadejte výraz, který se má filtrovat. Filtry mohou být zadány jako:"
-#~ "<ul><li>zástupný znak jako v příkazovém řádku, např. <tt>http://www."
-#~ "example.com/ads*</tt>, mohou být použity zástupné znaky <tt>*?[]</tt></"
-#~ "li><li>plnohodnotný regulární výraz obklopující řetězec znaky '<tt>/</"
-#~ "tt>', např. <tt>/\\/(ad|banner)\\./</tt></li></ul><p>Před každým "
-#~ "filtrovacím řetězcem může být '<tt>@@</tt>' pro povolení odpovídajícího "
-#~ "URL, což má přednost před všemi blokovacími filtry.<br><a href='%1'>%2</"
-#~ "a></qt>"
-
-#~ msgid "More information"
-#~ msgstr "Více informací"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "Chcete odstranit toto pravidlo?"
-#~ msgstr[1] "Chcete odstranit tato pravidla?"
-#~ msgstr[2] "Chcete odstranit tato pravidla?"
-
-#~ msgid "Do you want to delete list \"%1\"?"
-#~ msgstr "Přejete si smazat seznam \"%1\"?"
-
-#~ msgid "Delete current list"
-#~ msgstr "Smazat současný seznam"
-
-#~ msgid "All Files (*)"
-#~ msgstr "Všechny soubory (*)"
-
-#~ msgid "Import Filters"
-#~ msgstr "Importní filtry"
-
-#~ msgid "Export Filters"
-#~ msgstr "Exportovat filtry"
-
-#~ msgid "Download..."
-#~ msgstr "Stažení..."
-
-#~ msgid "Filters:"
-#~ msgstr "Filtry:"
-
-#~ msgid "&Blocking filter"
-#~ msgstr "&Blokovací filtr"
-
-#~ msgid "Exception Filter"
-#~ msgstr "Filtr výjimek"
-
-#~ msgid "Pattern"
-#~ msgstr "Vzorek"
-
-#~ msgid "custom"
-#~ msgstr "vlastní"
-
-#~ msgid "At the end of address"
-#~ msgstr "Na konci adresy"
-
-#~ msgid "Options"
-#~ msgstr "Možnosti"
-
-#~ msgid "Match case"
-#~ msgstr "Rozlišovat malá/VELKÁ"
-
-#~ msgid "Restrict to domain"
-#~ msgstr "Omezit na doménu"
-
-#~ msgid "Apply to:"
-#~ msgstr "Použít na:"
-
-#~ msgid "Collapse blocked:"
-#~ msgstr "Sbalit blokované:"
-
-#~ msgid "&Enable Ad Block"
-#~ msgstr "Povol&it Ad Block"
-
-#~ msgid "&Hide filtered elements"
-#~ msgstr "Skrýt &filtrované prvky"
-
-#~ msgid "Automatic Filters"
-#~ msgstr "Automatické filtry"
-
-#~ msgid "Remove subscription"
-#~ msgstr "Odstranit sadu filtrů"
-
-#~ msgid "Update enabled automatic filters every:"
-#~ msgstr "Aktualizovat povolené filtry každých:"
-
-#~ msgid "Show List..."
-#~ msgstr "Zobrazit seznam..."
-
-#~ msgid "Manual Filters"
-#~ msgstr "Manuální filtry"
-
-#~ msgid "Add filter expression"
-#~ msgstr "Přidat filtrovací výraz"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Import Filters..."
-#~ msgstr "Importovat filtry..."
-
-#~ msgid "Export filters..."
-#~ msgstr "Exportovat filtry..."
-
-#~ msgid "Search:"
-#~ msgstr "Hledat:"
-
-#~ msgid "Edit"
-#~ msgstr "Upravit"
-
-#~ msgid "Remove filter expression"
-#~ msgstr "Odstranit filtrovací výraz"
-
-#~ msgid "Remove Filter"
-#~ msgstr "Odstranit filtr"

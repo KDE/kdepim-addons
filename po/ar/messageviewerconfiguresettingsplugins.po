@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-25 00:52+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-09-24 17:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -229,7 +229,9 @@ msgid ""
 msgstr "سوف يتجاوز جميع الإعدادات لكل مجلد محدد. هل تريد الاستمرار؟"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Folder Settings"
+msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "احفظ إعدادات المجلد"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2020-01-01 15:35+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -193,7 +193,9 @@ msgid "QuickText was changed. Do you want to save it?"
 msgstr "Pikateksti on muuttunut. Haluatko tallentaa sen?"
 
 #: quicktext/quicktextwidget.cpp:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@title:window"
 msgid "Save"
 msgstr "Tallenna"
 

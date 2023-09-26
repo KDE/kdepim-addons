@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
 "PO-Revision-Date: 2022-07-22 17:19+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -44,6 +44,13 @@ msgstr "Siyahını silin"
 
 #: adblock/adblockfilterlistsview.cpp:94
 #, kde-format
+msgid "Remove"
+msgstr "Silin"
+
+#: adblock/adblockfilterlistsview.cpp:94
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
 msgid "Remove"
 msgstr "Silin"
 
