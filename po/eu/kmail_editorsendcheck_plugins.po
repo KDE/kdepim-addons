@@ -1,7 +1,7 @@
 # Translation for kmail_editorsendcheck_plugins.po to Euskara/Basque (eu).
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-02-14 18:34+0100\n"
+"PO-Revision-Date: 2023-09-26 22:33+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -231,11 +231,10 @@ msgid "All selected emails are added to white list"
 msgstr "Hautatutako e-posta guztiak zerrenda-zurira gehituko dira"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, fuzzy, kde-format
-#| msgid "Emails added to white list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
-msgstr "E-postak zerrenda-zurira gehitu dira"
+msgstr "Zerrenda-zurira gehitutako e-postak"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format

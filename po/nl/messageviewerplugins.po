@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-02-03 12:40+0100\n"
+"PO-Revision-Date: 2023-09-26 10:53+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -318,8 +318,7 @@ msgid "'%1' not found"
 msgstr "'%1' niet gevonden"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
-#, fuzzy, kde-format
-#| msgid "Executable not found."
+#, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "Uitvoerbaar programma niet gevonden."

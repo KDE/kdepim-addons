@@ -1,17 +1,17 @@
 # Translation of kmail_editorsendcheck_plugins.po to Catalan (Valencian)
-# Copyright (C) 2016-2021 This_file_is_part_of_KDE
+# Copyright (C) 2016-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2016, 2017, 2019, 2021.
-# Josep M. Ferrer <txemaq@gmail.com>, 2016, 2017, 2020.
+# Josep M. Ferrer <txemaq@gmail.com>, 2016, 2017, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2021-11-06 08:55+0100\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"PO-Revision-Date: 2023-09-26 12:19+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -233,8 +233,7 @@ msgid "All selected emails are added to white list"
 msgstr "Tots els correus seleccionats seran afegits a la llista blanca"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, fuzzy, kde-format
-#| msgid "Emails added to white list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "Correus afegits a la llista blanca"

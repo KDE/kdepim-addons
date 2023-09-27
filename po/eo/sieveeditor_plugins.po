@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-24 23:18+0100\n"
+"PO-Revision-Date: 2023-09-26 20:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -41,8 +41,7 @@ msgstr "Elektu Retpoŝtojn"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "Krei Dosierujon"
@@ -110,8 +109,7 @@ msgid "Error during loading folders: %1"
 msgstr "Eraro dum ŝargo de dosierujoj: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, fuzzy, kde-format
-#| msgid "Load Folders"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "Ŝargi Dosierujojn"

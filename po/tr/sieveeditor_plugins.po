@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-04-05 11:51+0300\n"
+"PO-Revision-Date: 2023-09-26 06:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
@@ -40,8 +40,7 @@ msgstr "E-postaları Seç"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "Klasör Oluştur"
@@ -60,7 +59,7 @@ msgstr "Klasör Oluştur..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
-msgstr "IMAP klasörü seç"
+msgstr "IMAP Klasörü Seç"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:37
 #, kde-format
@@ -109,8 +108,7 @@ msgid "Error during loading folders: %1"
 msgstr "Klasörler yüklenirken hata oluştu: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, fuzzy, kde-format
-#| msgid "Load Folders"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "Klasörleri Yükle"
@@ -123,7 +121,7 @@ msgstr "IMAP klasörü seç"
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
 msgid "Click on button for selecting folder..."
-msgstr "Klasör seçmek için düğmeye tıklayın..."
+msgstr "Klasör seçimi için düğmeye tıklayın..."
 
 #~ msgid "Create Regular Expression"
 #~ msgstr "Düzenli İfade Oluştur"

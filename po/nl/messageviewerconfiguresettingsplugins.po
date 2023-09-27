@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-05-15 15:55+0200\n"
+"PO-Revision-Date: 2023-09-26 10:53+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -233,8 +233,7 @@ msgstr ""
 "doorgaan?"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Save Folder Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "Mapinstellingen opslaan"

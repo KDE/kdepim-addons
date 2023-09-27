@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2015, 2016.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2022, 2023.
+# SPDX-FileCopyrightText: 2019, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-03-04 11:51+0100\n"
+"PO-Revision-Date: 2023-09-27 00:42+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -211,11 +211,10 @@ msgstr ""
 "información. ¿Quiere continuar la fusión?"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
-#, fuzzy, kde-format
-#| msgid "Missing Selected Information"
+#, kde-format
 msgctxt "@title:window"
 msgid "Missing Selected Information"
-msgstr "Perdida información seleccionada"
+msgstr "Falta la información seleccionada"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:63
 #, kde-format

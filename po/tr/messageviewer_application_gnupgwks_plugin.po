@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-05-06 10:52+0300\n"
+"PO-Revision-Date: 2023-09-26 06:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: gnupgwksurlhandler.cpp:85
 #, kde-format
@@ -43,11 +43,10 @@ msgid "An error occurred while importing the key."
 msgstr "Anahtar içe aktarılırken hata oluştu."
 
 #: pgpkeyurlhandler.cpp:67 pgpkeyurlhandler.cpp:69
-#, fuzzy, kde-format
-#| msgid "Import error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import error"
-msgstr "İçe aktarma hatası"
+msgstr "İçe Aktarma Hatası"
 
 #: pgpkeyurlhandler.cpp:69
 #, kde-format
@@ -60,11 +59,10 @@ msgid "The key has been successfully imported."
 msgstr "Anahtar başarıyla içe aktarıldı."
 
 #: pgpkeyurlhandler.cpp:71
-#, fuzzy, kde-format
-#| msgid "Import finished"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import finished"
-msgstr "İçe aktarma tamamlandı"
+msgstr "İçe Aktarma Bitti"
 
 #: templates/gnupgwksmessagepart.html:26
 msgid "Register your OpenPGP key with your email provider. "
@@ -139,7 +137,7 @@ msgstr "Oluşturulma:"
 
 #: templates/pgpkeymessagepart.html:37
 msgid "Fingerprint:"
-msgstr "Parmak İzi:"
+msgstr "Parmak izi:"
 
 #: templates/pgpkeymessagepart.html:42
 msgid ""

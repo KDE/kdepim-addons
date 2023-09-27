@@ -1,11 +1,11 @@
 # Translation of kmail_plugins.po to Catalan (Valencian)
-# Copyright (C) 1998-2022 This_file_is_part_of_KDE
+# Copyright (C) 1998-2023 This_file_is_part_of_KDE
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2002, 2003, 2004, 2011, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2009.
 # David Gil <al016950@yahoo.es>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2019, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2019, 2022, 2023.
 # Joan Maspons <joanmaspons@gmail.com>, 2009.
 # Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2009, 2010, 2011.
 msgid ""
@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-10-19 09:54+0200\n"
+"PO-Revision-Date: 2023-09-26 12:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -95,15 +95,13 @@ msgid "&Anti-Virus Wizard..."
 msgstr "Assistent contra els &virus..."
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Assistent contra el correu brossa"
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Assistent contra els virus"
@@ -454,9 +452,3 @@ msgstr "&Modifica..."
 #, kde-format
 msgid "Select attachment:"
 msgstr "Seleccioneu l'adjunt:"
-
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Buidatge d'Akonadi"
-
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Fsck d'Akonadi"

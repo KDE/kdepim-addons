@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-24 23:18+0100\n"
+"PO-Revision-Date: 2023-09-26 20:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -316,11 +316,10 @@ msgid "'%1' not found"
 msgstr "'%1' ne trovita"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
-#, fuzzy, kde-format
-#| msgid "Executable not found."
+#, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
-msgstr "Efektivaĵo ne trovita."
+msgstr "Ruleblaĵo ne trovita."
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:85
 #, kde-format

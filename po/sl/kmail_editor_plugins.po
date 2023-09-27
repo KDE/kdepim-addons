@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2020-08-20 12:53+0200\n"
+"PO-Revision-Date: 2023-09-26 09:18+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 2.4.1\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -196,8 +196,7 @@ msgid "QuickText was changed. Do you want to save it?"
 msgstr "Hitro besedilo se je spremenilo. Ali ga želite shraniti?"
 
 #: quicktext/quicktextwidget.cpp:69
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save"
 msgstr "Shrani"

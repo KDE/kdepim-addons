@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-10-20 07:14+0200\n"
+"PO-Revision-Date: 2023-09-26 09:17+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -90,15 +90,13 @@ msgid "&Anti-Virus Wizard..."
 msgstr "Č&arovnik proti virusom..."
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Čarovnik proti neželeni pošti"
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Čarovnik proti virusom"

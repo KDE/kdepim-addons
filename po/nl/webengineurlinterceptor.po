@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-21 18:18+0200\n"
+"PO-Revision-Date: 2023-09-26 10:54+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: adblock/adblockfilterdialog.cpp:17
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
@@ -45,8 +45,7 @@ msgid "Remove"
 msgstr "Verwijderen"
 
 #: adblock/adblockfilterlistsview.cpp:94
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Verwijderen"

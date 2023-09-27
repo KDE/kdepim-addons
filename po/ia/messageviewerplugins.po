@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# giovanni <g.sora@tiscali.it>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-02-05 22:47+0100\n"
+"PO-Revision-Date: 2023-09-26 22:41+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -319,8 +319,7 @@ msgid "'%1' not found"
 msgstr "'%1' Non trovate"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
-#, fuzzy, kde-format
-#| msgid "Executable not found."
+#, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "Executabile non trovate."

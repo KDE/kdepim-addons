@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-09-09 07:51+0200\n"
+"PO-Revision-Date: 2023-09-26 09:18+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -210,11 +210,10 @@ msgstr ""
 "želite nadaljevati z združevanjem?"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
-#, fuzzy, kde-format
-#| msgid "Missing Selected Information"
+#, kde-format
 msgctxt "@title:window"
 msgid "Missing Selected Information"
-msgstr "Izbrani podatki manjkajo"
+msgstr "Manjkajoče izbrane informacije"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:63
 #, kde-format
