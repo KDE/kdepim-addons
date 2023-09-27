@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2017.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-04-05 12:39+0300\n"
+"PO-Revision-Date: 2023-09-26 06:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,22 +16,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
 msgid "Autocorrect Text"
-msgstr "Metni Otomatik Düzelt"
+msgstr "Metni Kendiliğinden Düzelt"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
 #, kde-format
 msgid "Autocorrect Full Text"
-msgstr "Tüm Metni Otomatik Düzelt"
+msgstr "Tüm Metni Kendiliğinden Düzelt"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
 #, kde-format
 msgid "Autocorrect Selected Text"
-msgstr "Seçili Metni Otomatik Düzelt"
+msgstr "Seçili Metni Kendiliğinden Düzelt"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
