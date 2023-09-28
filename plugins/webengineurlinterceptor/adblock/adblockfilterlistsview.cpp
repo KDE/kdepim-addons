@@ -73,7 +73,9 @@ void AdblockFilterListsView::slotAddAdblock()
     QPointer<AdblockPluginUrlInterceptorAddAdblockListDialog> dlg = new AdblockPluginUrlInterceptorAddAdblockListDialog(this);
     if (dlg->exec()) {
         const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
-        mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
+        if (info.isValid()) {
+            mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
+        }
     }
     delete dlg;
 }
@@ -84,7 +86,9 @@ void AdblockFilterListsView::slotModifyAdblock()
     // TODO dlg->setInfo(...)
     if (dlg->exec()) {
         const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
-        // TODO
+        if (info.isValid()) {
+            // TODO
+        }
     }
     delete dlg;
 }
