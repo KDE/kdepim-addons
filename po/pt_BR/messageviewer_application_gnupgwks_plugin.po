@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2023-09-28 01:40+0000\n"
 "PO-Revision-Date: 2023-07-04 15:19-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -70,7 +70,7 @@ msgstr "Importação concluída"
 msgid "Register your OpenPGP key with your email provider. "
 msgstr "Registre sua chave OpenPGP com seu provedor de e-mail."
 
-#: templates/gnupgwksmessagepart.html:28
+#: templates/gnupgwksmessagepart.html:29
 msgid ""
 "When you register your key with your email provider other people will then "
 "be able to retrieve the key and send you encrypted emails and verify "
@@ -80,25 +80,25 @@ msgstr ""
 "poderão obter a chave e enviar a você e-mails criptografados e verificar a "
 "autenticidade dos e-mails que você enviar."
 
-#: templates/gnupgwksmessagepart.html:31
+#: templates/gnupgwksmessagepart.html:33
 msgid "An error occurred while publishing the key. Please try again later."
 msgstr "Ocorreu um erro ao publicar a chave. Tente novamente mais tarde."
 
-#: templates/gnupgwksmessagepart.html:33
+#: templates/gnupgwksmessagepart.html:35
 msgid "Register the key"
 msgstr "Registrar a chave"
 
-#: templates/gnupgwksmessagepart.html:35
+#: templates/gnupgwksmessagepart.html:37
 msgid ""
 "The email will be automatically deleted once you confirm the registration."
 msgstr ""
 "O e-mail será excluído automaticamente quando você confirmar o registro."
 
-#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+#: templates/gnupgwksmessagepart.html:40
 msgid "Show key details"
 msgstr "Exibir detalhes da chave"
 
-#: templates/gnupgwksmessagepart.html:42
+#: templates/gnupgwksmessagepart.html:44
 msgid ""
 "This is an automatically generated email. The purpose of this email is to "
 "register your OpenPGP key with your email provider."
@@ -106,7 +106,7 @@ msgstr ""
 "Este é um e-mail gerado automaticamente. O propósito deste e-mail é "
 "registrar sua chave OpenPGP com seu provedor de e-mail."
 
-#: templates/gnupgwksmessagepart.html:45
+#: templates/gnupgwksmessagepart.html:47
 msgid ""
 "Your OpenPGP key will be published on your email provider's key server. "
 "Other users will be able to retrieve the key and send you encrypted emails "

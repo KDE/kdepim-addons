@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2023-09-28 01:40+0000\n"
 "PO-Revision-Date: 2023-09-26 12:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -73,7 +73,7 @@ msgstr ""
 "Registreu la vostra clau OpenPGP amb el vostre proveïdor de correu "
 "electrònic."
 
-#: templates/gnupgwksmessagepart.html:28
+#: templates/gnupgwksmessagepart.html:29
 msgid ""
 "When you register your key with your email provider other people will then "
 "be able to retrieve the key and send you encrypted emails and verify "
@@ -83,26 +83,26 @@ msgstr ""
 "els altres seran capaços de rebre la clau i enviar-vos correu electrònic "
 "encriptat, així com verificar l'autenticitat dels missatges que els envieu."
 
-#: templates/gnupgwksmessagepart.html:31
+#: templates/gnupgwksmessagepart.html:33
 msgid "An error occurred while publishing the key. Please try again later."
 msgstr "S'ha produït un error en publicar la clau. Intenteu-ho més tard."
 
-#: templates/gnupgwksmessagepart.html:33
+#: templates/gnupgwksmessagepart.html:35
 msgid "Register the key"
 msgstr "Registra la clau"
 
-#: templates/gnupgwksmessagepart.html:35
+#: templates/gnupgwksmessagepart.html:37
 msgid ""
 "The email will be automatically deleted once you confirm the registration."
 msgstr ""
 "El correu electrònic serà eliminat automàticament una vegada es confirme el "
 "registre."
 
-#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+#: templates/gnupgwksmessagepart.html:40
 msgid "Show key details"
 msgstr "Mostra els detalls de la clau"
 
-#: templates/gnupgwksmessagepart.html:42
+#: templates/gnupgwksmessagepart.html:44
 msgid ""
 "This is an automatically generated email. The purpose of this email is to "
 "register your OpenPGP key with your email provider."
@@ -111,7 +111,7 @@ msgstr ""
 "missatge és registrar la vostra clau OpenPGP amb el vostre proveïdor de "
 "correu."
 
-#: templates/gnupgwksmessagepart.html:45
+#: templates/gnupgwksmessagepart.html:47
 msgid ""
 "Your OpenPGP key will be published on your email provider's key server. "
 "Other users will be able to retrieve the key and send you encrypted emails "

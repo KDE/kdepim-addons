@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2023-09-28 01:40+0000\n"
 "PO-Revision-Date: 2023-09-26 18:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -71,7 +71,7 @@ msgstr "Імпортування завершено"
 msgid "Register your OpenPGP key with your email provider. "
 msgstr "Зареєструвати ваш ключ OpenPGP у надавача послуг електронної пошти. "
 
-#: templates/gnupgwksmessagepart.html:28
+#: templates/gnupgwksmessagepart.html:29
 msgid ""
 "When you register your key with your email provider other people will then "
 "be able to retrieve the key and send you encrypted emails and verify "
@@ -81,28 +81,28 @@ msgstr ""
 "інші користувачі зможуть отримувати цей ключ і надсилати вам зашифровані "
 "повідомлення, а також перевіряти достовірність надісланих вами повідомлень."
 
-#: templates/gnupgwksmessagepart.html:31
+#: templates/gnupgwksmessagepart.html:33
 msgid "An error occurred while publishing the key. Please try again later."
 msgstr ""
 "Під час спроби оприлюднити ключ сталася помилка. Будь ласка, повторіть "
 "спробу пізніше."
 
-#: templates/gnupgwksmessagepart.html:33
+#: templates/gnupgwksmessagepart.html:35
 msgid "Register the key"
 msgstr "Зареєструвати ключ"
 
-#: templates/gnupgwksmessagepart.html:35
+#: templates/gnupgwksmessagepart.html:37
 msgid ""
 "The email will be automatically deleted once you confirm the registration."
 msgstr ""
 "Це повідомлення електронної пошти буде автоматично вилучено, щойно вами буде "
 "підтверджено реєстрацію."
 
-#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+#: templates/gnupgwksmessagepart.html:40
 msgid "Show key details"
 msgstr "Показати параметри ключа"
 
-#: templates/gnupgwksmessagepart.html:42
+#: templates/gnupgwksmessagepart.html:44
 msgid ""
 "This is an automatically generated email. The purpose of this email is to "
 "register your OpenPGP key with your email provider."
@@ -111,7 +111,7 @@ msgstr ""
 "того, щоб зареєструвати ваш ключ OpenPGP у вашого надавача послуг "
 "електронної пошти."
 
-#: templates/gnupgwksmessagepart.html:45
+#: templates/gnupgwksmessagepart.html:47
 msgid ""
 "Your OpenPGP key will be published on your email provider's key server. "
 "Other users will be able to retrieve the key and send you encrypted emails "

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-05-06 15:30+0200\n"
+"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"PO-Revision-Date: 2023-09-27 01:11+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -43,8 +43,7 @@ msgid "An error occurred while importing the key."
 msgstr "Si è verificato un errore durante l'importazione della chiave."
 
 #: pgpkeyurlhandler.cpp:67 pgpkeyurlhandler.cpp:69
-#, fuzzy, kde-format
-#| msgid "Import error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Errore di importazione"
@@ -60,8 +59,7 @@ msgid "The key has been successfully imported."
 msgstr "La chiave è stata importata con successo."
 
 #: pgpkeyurlhandler.cpp:71
-#, fuzzy, kde-format
-#| msgid "Import finished"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import finished"
 msgstr "Importazione conclusa"
@@ -70,7 +68,7 @@ msgstr "Importazione conclusa"
 msgid "Register your OpenPGP key with your email provider. "
 msgstr "Registra la tua chiave OpenPGP con il fornitore di posta elettronica."
 
-#: templates/gnupgwksmessagepart.html:28
+#: templates/gnupgwksmessagepart.html:29
 msgid ""
 "When you register your key with your email provider other people will then "
 "be able to retrieve the key and send you encrypted emails and verify "
@@ -80,28 +78,28 @@ msgstr ""
 "altre persone potranno recuperare la chiave, inviarti messaggi di posta "
 "cifrati e verificare l'autenticità dei messaggi di posta che invii loro."
 
-#: templates/gnupgwksmessagepart.html:31
+#: templates/gnupgwksmessagepart.html:33
 msgid "An error occurred while publishing the key. Please try again later."
 msgstr ""
 "Si è verificato un errore durante la pubblicazione della chiave. Riprova più "
 "tardi."
 
-#: templates/gnupgwksmessagepart.html:33
+#: templates/gnupgwksmessagepart.html:35
 msgid "Register the key"
 msgstr "Registra la chiave"
 
-#: templates/gnupgwksmessagepart.html:35
+#: templates/gnupgwksmessagepart.html:37
 msgid ""
 "The email will be automatically deleted once you confirm the registration."
 msgstr ""
 "Il messaggio di posta verrà eliminato automaticamente quando confermi la "
 "registrazione."
 
-#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+#: templates/gnupgwksmessagepart.html:40
 msgid "Show key details"
 msgstr "Mostra i dettagli della chiave"
 
-#: templates/gnupgwksmessagepart.html:42
+#: templates/gnupgwksmessagepart.html:44
 msgid ""
 "This is an automatically generated email. The purpose of this email is to "
 "register your OpenPGP key with your email provider."
@@ -110,7 +108,7 @@ msgstr ""
 "messaggio è la registrazione della tua chiave OpenPGP con il tuo fornitore "
 "di posta elettronica."
 
-#: templates/gnupgwksmessagepart.html:45
+#: templates/gnupgwksmessagepart.html:47
 msgid ""
 "Your OpenPGP key will be published on your email provider's key server. "
 "Other users will be able to retrieve the key and send you encrypted emails "

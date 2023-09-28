@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2023-09-28 01:40+0000\n"
 "PO-Revision-Date: 2023-07-04 21:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -71,7 +71,7 @@ msgstr "Tuonti valmis"
 msgid "Register your OpenPGP key with your email provider. "
 msgstr "Rekisteröi OpenPGP-avaimesi sähköpostintarjoajallesi."
 
-#: templates/gnupgwksmessagepart.html:28
+#: templates/gnupgwksmessagepart.html:29
 msgid ""
 "When you register your key with your email provider other people will then "
 "be able to retrieve the key and send you encrypted emails and verify "
@@ -81,24 +81,24 @@ msgstr ""
 "ja lähettää sinulle salattuja viestejä sekä varmentaa lähettämiesi viestien "
 "autenttisuuden."
 
-#: templates/gnupgwksmessagepart.html:31
+#: templates/gnupgwksmessagepart.html:33
 msgid "An error occurred while publishing the key. Please try again later."
 msgstr "Avainta julkaistaessa sattui virhe. Yritä myöhemmin uudelleen."
 
-#: templates/gnupgwksmessagepart.html:33
+#: templates/gnupgwksmessagepart.html:35
 msgid "Register the key"
 msgstr "Rekisteröi avain"
 
-#: templates/gnupgwksmessagepart.html:35
+#: templates/gnupgwksmessagepart.html:37
 msgid ""
 "The email will be automatically deleted once you confirm the registration."
 msgstr "Viesti poistetaan automaattisesti heti vahvistettuasi rekisteröinnin."
 
-#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+#: templates/gnupgwksmessagepart.html:40
 msgid "Show key details"
 msgstr "Näytä avaimen tiedot"
 
-#: templates/gnupgwksmessagepart.html:42
+#: templates/gnupgwksmessagepart.html:44
 msgid ""
 "This is an automatically generated email. The purpose of this email is to "
 "register your OpenPGP key with your email provider."
@@ -106,7 +106,7 @@ msgstr ""
 "Tämä on automaattisesti luotu viesti. Viestin tarkoitus on rekisteröidä "
 "OpenPGP-avaimesi sähköpostintarjoajallesi."
 
-#: templates/gnupgwksmessagepart.html:45
+#: templates/gnupgwksmessagepart.html:47
 msgid ""
 "Your OpenPGP key will be published on your email provider's key server. "
 "Other users will be able to retrieve the key and send you encrypted emails "

@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2017, 2019, 2021, 2022.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2017, 2019, 2021, 2022, 2023.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2022.
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-11-01 14:34+0100\n"
-"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"PO-Revision-Date: 2023-09-27 01:12+0200\n"
+"Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -89,15 +89,13 @@ msgid "&Anti-Virus Wizard..."
 msgstr "Procedura guidata &anti-virus..."
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Procedura guidata anti-spam"
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Procedura guidata anti-virus"

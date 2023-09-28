@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2023-09-28 01:40+0000\n"
 "PO-Revision-Date: 2023-09-26 22:47+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -71,7 +71,7 @@ msgstr "Inportatzea amaitu da"
 msgid "Register your OpenPGP key with your email provider. "
 msgstr "Erregistratu zure OpenPGP gakoa zure e-posta hornitzailearekin."
 
-#: templates/gnupgwksmessagepart.html:28
+#: templates/gnupgwksmessagepart.html:29
 msgid ""
 "When you register your key with your email provider other people will then "
 "be able to retrieve the key and send you encrypted emails and verify "
@@ -81,25 +81,25 @@ msgstr ""
 "batzuek gakoa eskuratu ahalko dute, zuri zifratutako e-postak bidali eta zuk "
 "haiei bidalitakoen egiazkotasuna egiaztatu ahalko dute."
 
-#: templates/gnupgwksmessagepart.html:31
+#: templates/gnupgwksmessagepart.html:33
 msgid "An error occurred while publishing the key. Please try again later."
 msgstr ""
 "Errore bat gertatu da gakoa argitaratzean. Mesedez, saiatu berriz beranduago."
 
-#: templates/gnupgwksmessagepart.html:33
+#: templates/gnupgwksmessagepart.html:35
 msgid "Register the key"
 msgstr "Erregistratu gakoa"
 
-#: templates/gnupgwksmessagepart.html:35
+#: templates/gnupgwksmessagepart.html:37
 msgid ""
 "The email will be automatically deleted once you confirm the registration."
 msgstr "E-posta automatikoki ezabatuko da erregistroa berresten duzunean."
 
-#: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
+#: templates/gnupgwksmessagepart.html:40
 msgid "Show key details"
 msgstr "Erakutsi gakoaren xehetasunak"
 
-#: templates/gnupgwksmessagepart.html:42
+#: templates/gnupgwksmessagepart.html:44
 msgid ""
 "This is an automatically generated email. The purpose of this email is to "
 "register your OpenPGP key with your email provider."
@@ -107,7 +107,7 @@ msgstr ""
 "Hau, automatikoki sortutako e-posta bat da. E-posta honen helburua, zure "
 "OpenPGP gakoa zure e-posta hornitzailearekin partekatzea da."
 
-#: templates/gnupgwksmessagepart.html:45
+#: templates/gnupgwksmessagepart.html:47
 msgid ""
 "Your OpenPGP key will be published on your email provider's key server. "
 "Other users will be able to retrieve the key and send you encrypted emails "
