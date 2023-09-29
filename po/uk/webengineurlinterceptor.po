@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2023-09-29 01:39+0000\n"
 "PO-Revision-Date: 2023-09-26 18:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -42,12 +42,12 @@ msgstr "Змінити…"
 msgid "Delete"
 msgstr "Вилучити"
 
-#: adblock/adblockfilterlistsview.cpp:94
+#: adblock/adblockfilterlistsview.cpp:98
 #, kde-format
 msgid "Remove"
 msgstr "Вилучення"
 
-#: adblock/adblockfilterlistsview.cpp:94
+#: adblock/adblockfilterlistsview.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove"
