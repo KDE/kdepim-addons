@@ -91,7 +91,7 @@ msgid ""
 msgstr ""
 "<qt>Ningunha das súas identidades coincide co destinatario desta mensaxe."
 "<br />Escolla cal dos enderezos seguintes é o seu,<br/> de o ser algún, ou "
-"escolla unha das súas identidades para utilizala na resposta.</qt>"
+"escolla unha das súas identidades para usala na resposta.</qt>"
 
 #: text_calendar.cpp:432
 #, kde-format

@@ -20,7 +20,7 @@ msgstr ""
 #: sendmail/sendmailjob.cpp:44
 #, kde-format
 msgid "Failed to execute mailer program %1"
-msgstr "Non se puido executar o programa de envío de correo «%1»."
+msgstr "Non foi posíbel executar o programa de envío de correo «%1»."
 
 #: sendmail/sendmailjob.cpp:57
 #, kde-format
