@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the kdepim-addons package.
 # Automatically generated, 2022.
 #
+# SPDX-FileCopyrightText: 2023 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-07-21 09:59+0200\n"
-"Last-Translator: mkkDr2010 <mkondarev@yahoo.de>\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-09-30 10:39+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: \n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -229,8 +230,7 @@ msgid "All selected emails are added to white list"
 msgstr "Всички избрани имейли се добавят към белия списък"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, fuzzy, kde-format
-#| msgid "Emails added to white list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "Имейлите са добавени към белия списък"

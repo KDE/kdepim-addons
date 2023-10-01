@@ -441,7 +441,7 @@ msgstr "Insira un nome para o modelo:"
 #, kde-format
 msgctxt "@info:status"
 msgid "Cannot open input file."
-msgstr "Non se pode abrir o ficheiro de entrada."
+msgstr "Non é posíbel abrir o ficheiro de entrada."
 
 #: csv/import/qcsvreader.cpp:92
 #, kde-format

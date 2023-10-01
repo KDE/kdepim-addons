@@ -37,7 +37,7 @@ msgstr "Activas as listas de definición adicionais de Markdown de PHP"
 #: markdown/markdownlib/markdownconverter.cpp:89
 #, kde-format
 msgid "Failed to compile the Markdown document."
-msgstr "Non se puido compilar o documento de Markdown."
+msgstr "Non foi posíbel compilar o documento de Markdown."
 
 #: markdown/markdownlib/markdowncreateimagedialog.cpp:27
 #, kde-format

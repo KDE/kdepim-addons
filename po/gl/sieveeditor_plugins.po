@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Adrian Chaves <adrian@chaves.io>, 2018, 2023.
+# SPDX-FileCopyrightText: 2018, 2023 Adrian Chaves <adrian@chaves.io>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-06-18 15:19+0200\n"
+"PO-Revision-Date: 2023-09-30 09:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
@@ -40,8 +40,7 @@ msgstr "Seleccionar mensaxes"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "Crear un cartafol"
@@ -65,7 +64,7 @@ msgstr "Seleccionar un cartafol de IMAP"
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:37
 #, kde-format
 msgid "Unable to load folder list"
-msgstr "Non se pode cargar a lista de cartafoles"
+msgstr "Non é posíbel cargar a lista de cartafoles"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
 #, kde-format
@@ -109,11 +108,10 @@ msgid "Error during loading folders: %1"
 msgstr "Erro ao cargar os cartafoles: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, fuzzy, kde-format
-#| msgid "Load Folders"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Folders"
-msgstr "Cargar os cartafoles"
+msgstr "Cargar cartafoles"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
 #, kde-format
