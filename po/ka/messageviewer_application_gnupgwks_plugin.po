@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-06 00:48+0000\n"
-"PO-Revision-Date: 2022-08-23 10:01+0200\n"
+"PO-Revision-Date: 2023-10-04 18:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.4\n"
 
 #: gnupgwksurlhandler.cpp:85
 #, kde-format
@@ -51,7 +51,7 @@ msgstr "შემოტანის შეცდომა"
 #: pgpkeyurlhandler.cpp:66
 #, kde-format
 msgid "No keys to import where found."
-msgstr ""
+msgstr "შემოსატანი გასაღებები აღმოჩენილი არაა."
 
 #: pgpkeyurlhandler.cpp:68
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "შემოტანა დასრულებულია"
 
 #: templates/gnupgwksmessagepart.html:26
 msgid "Register your OpenPGP key with your email provider. "
-msgstr ""
+msgstr "გასაღების რეგისტრაცია თქვენი ელფოსტის მომწოდებელთან. "
 
 #: templates/gnupgwksmessagepart.html:28
 msgid ""
@@ -73,6 +73,9 @@ msgid ""
 "be able to retrieve the key and send you encrypted emails and verify "
 "authenticity of emails you send them."
 msgstr ""
+"როცა თქვენს გასაღებს ელფოსტის მომწოდებელთან დაარეგისტრირებთ, თქვენი "
+"გასაღების გადმოწერა, თქვენთვის დაშიფრული ელფოსტის გამოგზავნა და თქვენგან "
+"გაგზავნილი ელფოსტების გადამოწმება სხვა მომხმარებლებსაც შეეძლებათ."
 
 #: templates/gnupgwksmessagepart.html:31
 msgid "An error occurred while publishing the key. Please try again later."
@@ -85,7 +88,7 @@ msgstr "გასაღების რეგისტრაცია"
 #: templates/gnupgwksmessagepart.html:35
 msgid ""
 "The email will be automatically deleted once you confirm the registration."
-msgstr ""
+msgstr "ელფოსტა ავტომატურად წაიშლება, როცა რეგისტრაციას დაადასტურებთ."
 
 #: templates/gnupgwksmessagepart.html:38 templates/gnupgwksmessagepart.html:48
 msgid "Show key details"
@@ -96,6 +99,8 @@ msgid ""
 "This is an automatically generated email. The purpose of this email is to "
 "register your OpenPGP key with your email provider."
 msgstr ""
+"ეს ავტომატურად შექმნილი ელფოსტაა. ამ ელფოსტის დანიშნულებაა თქვენი OpenPGP-ის "
+"გასაღები თქვენს ელფოსტის მომწოდებელთან დაარეგისტრიროს."
 
 #: templates/gnupgwksmessagepart.html:45
 msgid ""
@@ -103,6 +108,10 @@ msgid ""
 "Other users will be able to retrieve the key and send you encrypted emails "
 "and verify authenticity of emails you send them."
 msgstr ""
+"თქვენი OpenPGP-ის გასაღები თქვენი ელფოსტის მომწოდებლის გასაღებების სერვერზე "
+"გამოქვეყნდება. სხვა მომხმარებლებს საშუალება მიეცემათ, ეს გასაღები გადმოწერონ "
+"და დაშიფრული ელფოსტა გამოგიგზავნონ. ასევე შეეძლებათ გადაამოწმონ თქვენი "
+"ელფოსტების სინამდვილეც."
 
 #: templates/pgpkeymessagepart.html:14
 msgid "OpenPGP Key"
@@ -111,6 +120,8 @@ msgstr "OpenPGP-ის გასაღები"
 #: templates/pgpkeymessagepart.html:18
 msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
 msgstr ""
+"ეს OpenPGP-ის გასაღებია, რომელიც ელფოსტების ხელმოსაწერად ან დასაშიფრად "
+"შეგიძლიათ, გამოიყენოთ."
 
 #: templates/pgpkeymessagepart.html:23
 msgid "Loading key details..."
