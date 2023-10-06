@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-09 01:03+0000\n"
-"PO-Revision-Date: 2023-09-03 21:46+0300\n"
+"PO-Revision-Date: 2023-10-05 13:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 
 #: attendeeselector.cpp:21
@@ -406,8 +406,8 @@ msgid ""
 "Please create at least 1 writable events calendar and re-sync."
 msgstr ""
 "Davetiyeler için yazılabilir bir takvim klasörünüz yok, bu yüzden yanıtların "
-"depolanması ve kaydedilmesi mümkün olmayacak.\n"
-"Lütfen en az 1 yazılabilir olay takvimi oluşturun ve tekrar eşitleme yapın."
+"depolanması ve kaydedilmesi olanaklı olmayacak.\n"
+"Lütfen en az 1 yazılabilir olay takvimi oluşturun ve yeniden eşzamanlayın."
 
 #: text_calendar.cpp:1214
 #, kde-format
