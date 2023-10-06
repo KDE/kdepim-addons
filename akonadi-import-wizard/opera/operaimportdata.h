@@ -15,11 +15,11 @@ public:
     ~OperaImportData() override;
 
     TypeSupportedOptions supportedOption() override;
-    Q_REQUIRED_RESULT bool foundMailer() const override;
+    [[nodiscard]] bool foundMailer() const override;
 
-    Q_REQUIRED_RESULT bool importMails() override;
-    Q_REQUIRED_RESULT bool importAddressBook() override;
-    Q_REQUIRED_RESULT bool importSettings() override;
+    [[nodiscard]] bool importMails() override;
+    [[nodiscard]] bool importAddressBook() override;
+    [[nodiscard]] bool importSettings() override;
 
-    Q_REQUIRED_RESULT QString name() const override;
+    [[nodiscard]] QString name() const override;
 };

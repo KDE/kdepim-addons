@@ -25,7 +25,7 @@ class CryptoPagePlugin : public Akonadi::ContactEditorPagePlugin
 public:
     CryptoPagePlugin();
     ~CryptoPagePlugin() override;
-    Q_REQUIRED_RESULT QString title() const override;
+    [[nodiscard]] QString title() const override;
     void loadContact(const KContacts::Addressee &contact) override;
     void storeContact(KContacts::Addressee &contact) const override;
     void setReadOnly(bool readOnly) override;

@@ -20,7 +20,7 @@ public:
     explicit SelectImapLineEditCompleterModel(const KSieveCore::SieveImapAccountSettings &account, QObject *parent = nullptr);
     ~SelectImapLineEditCompleterModel() override;
 
-    Q_REQUIRED_RESULT QAbstractProxyModel *completerModel() const;
+    [[nodiscard]] QAbstractProxyModel *completerModel() const;
 
 private:
     KDescendantsProxyModel *const mFlatProxy;

@@ -18,8 +18,8 @@ public:
 
     void start();
     void setExternalScriptsDirectories(const QStringList &dir);
-    Q_REQUIRED_RESULT QStringList externalScriptsDirectories() const;
-    Q_REQUIRED_RESULT QList<ViewerPluginExternalScriptInfo> scriptInfos() const;
+    [[nodiscard]] QStringList externalScriptsDirectories() const;
+    [[nodiscard]] QList<ViewerPluginExternalScriptInfo> scriptInfos() const;
 
 private:
     QList<ViewerPluginExternalScriptInfo> mScriptInfos;

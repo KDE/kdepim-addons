@@ -20,7 +20,7 @@ public:
         QString name;
     };
 
-    Q_REQUIRED_RESULT QList<Device> devices() const;
+    [[nodiscard]] QList<Device> devices() const;
 
     void sendToDevice(const QString &fileName, const QString &deviceId);
 };

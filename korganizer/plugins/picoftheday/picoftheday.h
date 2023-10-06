@@ -19,11 +19,11 @@ class Picoftheday : public Decoration
 public:
     Picoftheday(QObject *parent = nullptr, const QVariantList &args = {});
 
-    Q_REQUIRED_RESULT Element::List createDayElements(const QDate &) override;
+    [[nodiscard]] Element::List createDayElements(const QDate &) override;
 
     void configure(QWidget *parent) override;
 
-    Q_REQUIRED_RESULT QString info() const override;
+    [[nodiscard]] QString info() const override;
 
     static void cacheData(QDate date, ElementData *data);
 

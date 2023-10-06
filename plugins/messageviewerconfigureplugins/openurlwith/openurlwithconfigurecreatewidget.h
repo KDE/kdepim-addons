@@ -17,13 +17,13 @@ public:
         QString command;
         QString commandLines;
         QString url;
-        Q_REQUIRED_RESULT bool isValid() const;
+        [[nodiscard]] bool isValid() const;
     };
 
     explicit OpenUrlWithConfigureCreateWidget(QWidget *parent = nullptr);
     ~OpenUrlWithConfigureCreateWidget() override;
 
-    Q_REQUIRED_RESULT OpenUrlWithInfo info() const;
+    [[nodiscard]] OpenUrlWithInfo info() const;
     void setInfo(const OpenUrlWithInfo &i);
 Q_SIGNALS:
     void updateOkButton(bool enabled);

@@ -30,7 +30,7 @@ public:
 
     void initializePlugins();
     void loadPlugin(ShortUrlEnginePluginInfo *item);
-    Q_REQUIRED_RESULT QList<ShortUrlEnginePlugin *> pluginsList() const;
+    [[nodiscard]] QList<ShortUrlEnginePlugin *> pluginsList() const;
     QList<ShortUrlEnginePluginInfo> mPluginList;
     ShortUrlEnginePluginManager *const q;
 };

@@ -29,10 +29,10 @@ public:
     explicit EventEdit(QWidget *parent = nullptr);
     ~EventEdit() override;
 
-    Q_REQUIRED_RESULT Akonadi::Collection collection() const;
+    [[nodiscard]] Akonadi::Collection collection() const;
     void setCollection(const Akonadi::Collection &value);
 
-    Q_REQUIRED_RESULT KMime::Message::Ptr message() const;
+    [[nodiscard]] KMime::Message::Ptr message() const;
     void setMessage(const KMime::Message::Ptr &value);
 
     void writeConfig();

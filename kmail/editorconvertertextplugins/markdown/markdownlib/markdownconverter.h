@@ -14,12 +14,12 @@ class LIBKMAILMARKDOWN_EXPORT MarkdownConverter : public QObject
 public:
     explicit MarkdownConverter(QObject *parent = nullptr);
     ~MarkdownConverter() override;
-    Q_REQUIRED_RESULT QString convertTextToMarkdown(const QString &str);
+    [[nodiscard]] QString convertTextToMarkdown(const QString &str);
 
-    Q_REQUIRED_RESULT bool enableEmbeddedLabel() const;
+    [[nodiscard]] bool enableEmbeddedLabel() const;
     void setEnableEmbeddedLabel(bool enableEmbeddedLabel);
 
-    Q_REQUIRED_RESULT bool enableExtraDefinitionLists() const;
+    [[nodiscard]] bool enableExtraDefinitionLists() const;
     void setEnableExtraDefinitionLists(bool enableExtraDefinitionLists);
 
 Q_SIGNALS:

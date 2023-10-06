@@ -23,5 +23,5 @@ public:
     WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) override;
 
     void showConfigureDialog(QWidget *parent) override;
-    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
+    [[nodiscard]] bool hasConfigureDialog() const override;
 };

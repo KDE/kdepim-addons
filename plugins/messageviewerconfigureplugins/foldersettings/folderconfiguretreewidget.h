@@ -21,7 +21,7 @@ class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureTreeWidget : public
 public:
     explicit FolderConfigureTreeWidget(QWidget *parent = nullptr);
     ~FolderConfigureTreeWidget() override;
-    Q_REQUIRED_RESULT Akonadi::Collection::List listCollections() const;
+    [[nodiscard]] Akonadi::Collection::List listCollections() const;
 
 private:
     void changeFolderSelection(bool select);

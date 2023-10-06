@@ -21,14 +21,14 @@ public:
     explicit ResultDuplicateTreeWidgetItem(QTreeWidget *parent = nullptr);
     ~ResultDuplicateTreeWidgetItem() override;
 
-    Q_REQUIRED_RESULT Akonadi::Item item() const;
+    [[nodiscard]] Akonadi::Item item() const;
     void setItem(const Akonadi::Item &item);
 
-    Q_REQUIRED_RESULT static QString displayName(const Akonadi::Item &item);
+    [[nodiscard]] static QString displayName(const Akonadi::Item &item);
 
 private:
     void setDisplayName();
-    Q_REQUIRED_RESULT static QString contactName(const KContacts::Addressee &address);
+    [[nodiscard]] static QString contactName(const KContacts::Addressee &address);
     Akonadi::Item mItem;
 };
 
@@ -40,7 +40,7 @@ public:
     ~ResultDuplicateTreeWidget() override;
     void setContacts(const QList<Akonadi::Item::List> &lstItem);
 
-    Q_REQUIRED_RESULT QList<Akonadi::Item::List> selectedContactsToMerge() const;
+    [[nodiscard]] QList<Akonadi::Item::List> selectedContactsToMerge() const;
 
     void checkAllItems();
     void uncheckAllItems();

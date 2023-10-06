@@ -50,10 +50,10 @@ public:
     ~POTDElement() override;
 
 public: // Element API
-    Q_REQUIRED_RESULT QString shortText() const override;
-    Q_REQUIRED_RESULT QString longText() const override;
-    Q_REQUIRED_RESULT QUrl url() const override;
-    Q_REQUIRED_RESULT QPixmap newPixmap(const QSize &size) override;
+    [[nodiscard]] QString shortText() const override;
+    [[nodiscard]] QString longText() const override;
+    [[nodiscard]] QUrl url() const override;
+    [[nodiscard]] QPixmap newPixmap(const QSize &size) override;
 
 private:
     void queryImagesJson();

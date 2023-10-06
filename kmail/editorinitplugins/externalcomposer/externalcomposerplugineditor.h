@@ -20,6 +20,6 @@ public:
 
     MessageComposer::PluginEditorInitInterface *createInterface(QObject *parent = nullptr) override;
 
-    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
+    [[nodiscard]] bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
 };

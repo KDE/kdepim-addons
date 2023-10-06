@@ -19,10 +19,10 @@ public:
     ~QuickTextPluginEditor() override;
 
     MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
-    Q_REQUIRED_RESULT bool hasStatusBarSupport() const override;
+    [[nodiscard]] bool hasStatusBarSupport() const override;
 
-    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
+    [[nodiscard]] bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
 
-    Q_REQUIRED_RESULT bool canProcessKeyEvent() const override;
+    [[nodiscard]] bool canProcessKeyEvent() const override;
 };

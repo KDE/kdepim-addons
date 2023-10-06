@@ -23,7 +23,7 @@ public:
     void setContacts(KABMergeContacts::MergeContacts::ConflictInformations conflictTypes, const Akonadi::Item::List &listItem);
     void createContact(KContacts::Addressee &addr);
 
-    Q_REQUIRED_RESULT bool verifySelectedInfo() const;
+    [[nodiscard]] bool verifySelectedInfo() const;
 
 private:
     void addInformationWidget(MergeContacts::ConflictInformation conflictType);

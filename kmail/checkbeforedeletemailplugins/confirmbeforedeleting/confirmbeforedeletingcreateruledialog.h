@@ -16,7 +16,7 @@ public:
     explicit ConfirmBeforeDeletingCreateRuleDialog(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingCreateRuleDialog() override;
 
-    Q_REQUIRED_RESULT ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info() const;
+    [[nodiscard]] ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info() const;
 
     void setInfo(const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info);
 

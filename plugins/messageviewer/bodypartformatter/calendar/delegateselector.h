@@ -26,8 +26,8 @@ class DelegateSelector : public QDialog
 public:
     explicit DelegateSelector(QWidget *parent = nullptr);
 
-    Q_REQUIRED_RESULT QString delegate() const;
-    Q_REQUIRED_RESULT bool rsvp() const;
+    [[nodiscard]] QString delegate() const;
+    [[nodiscard]] bool rsvp() const;
 
 private:
     void slotTextChanged(const QString &text);

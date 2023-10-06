@@ -19,5 +19,5 @@ public:
                                                   const QString &addDialogLabel = QString());
 
     void addNewEntry() override;
-    Q_REQUIRED_RESULT QString modifyEntry(const QString &text) override;
+    [[nodiscard]] QString modifyEntry(const QString &text) override;
 };

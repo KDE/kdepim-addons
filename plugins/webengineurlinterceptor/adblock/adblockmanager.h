@@ -25,17 +25,17 @@ public:
 
     static AdblockManager *self();
 
-    Q_REQUIRED_RESULT QList<AdblockFilter> adblockFilterLists() const;
+    [[nodiscard]] QList<AdblockFilter> adblockFilterLists() const;
     void setAdblockFilterLists(const QList<AdblockFilter> &newAdblockFilterLists);
 
-    Q_REQUIRED_RESULT bool interceptRequest(QWebEngineUrlRequestInfo &info);
+    [[nodiscard]] bool interceptRequest(QWebEngineUrlRequestInfo &info);
 Q_SIGNALS:
     void enabledChanged(bool enabled);
     void adblockInitialized();
 
 private:
     void reloadConfig();
-    Q_REQUIRED_RESULT QString adblockCacheLocation() const;
+    [[nodiscard]] QString adblockCacheLocation() const;
 
     /// If an adblock cache is found, loads it, otherwise creates a new adblock
     /// from the current filter lists.

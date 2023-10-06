@@ -32,7 +32,7 @@ private Q_SLOTS:
     void testEventRemoved();
 
 private:
-    Q_REQUIRED_RESULT bool compareEventDataHashes(const DateEventDataHash &actual, const DateEventDataHash &expected);
-    Q_REQUIRED_RESULT DateEventDataHash populateCalendar(FakePimDataSource *source, bool uniqueEventData);
-    Q_REQUIRED_RESULT QList<CalendarEvents::EventData> findEventData(const KCalendarCore::Event::Ptr &event, const DateEventDataHash &allData);
+    [[nodiscard]] bool compareEventDataHashes(const DateEventDataHash &actual, const DateEventDataHash &expected);
+    [[nodiscard]] DateEventDataHash populateCalendar(FakePimDataSource *source, bool uniqueEventData);
+    [[nodiscard]] QList<CalendarEvents::EventData> findEventData(const KCalendarCore::Event::Ptr &event, const DateEventDataHash &allData);
 };

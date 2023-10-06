@@ -16,7 +16,7 @@ public:
     explicit ConfirmAddressEmailEntryDialog(QWidget *parent = nullptr);
     ~ConfirmAddressEmailEntryDialog() override = default;
 
-    Q_REQUIRED_RESULT QString emails() const;
+    [[nodiscard]] QString emails() const;
     void setValue(const QString &val);
 
 private:

@@ -15,7 +15,7 @@ public:
     explicit CheckBeforeSendUpdateSmtpDialog(QWidget *parent = nullptr);
     ~CheckBeforeSendUpdateSmtpDialog() override;
 
-    Q_REQUIRED_RESULT bool changeSmtp() const;
+    [[nodiscard]] bool changeSmtp() const;
 
 private:
     QCheckBox *const mChangeSmtp;

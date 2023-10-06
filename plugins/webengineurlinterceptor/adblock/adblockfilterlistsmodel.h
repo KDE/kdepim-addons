@@ -19,11 +19,11 @@ public:
 
     explicit AdblockFilterListsModel(QObject *parent = nullptr);
     ~AdblockFilterListsModel() override;
-    Q_REQUIRED_RESULT QList<AdblockFilter> adblockFilter() const;
+    [[nodiscard]] QList<AdblockFilter> adblockFilter() const;
     void setAdblockFilter(const QList<AdblockFilter> &newAdblockFilter);
 
-    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
+    [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
 
     void insertList(const AdblockFilter &filter);
     void removeList(const QString &identifier);

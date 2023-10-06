@@ -22,10 +22,10 @@ public:
 
     void setMinimumDateTime(const QDateTime &dateTime);
     void setDateTime(const QDateTime &dateTime);
-    Q_REQUIRED_RESULT QDateTime dateTime() const;
+    [[nodiscard]] QDateTime dateTime() const;
 
-    Q_REQUIRED_RESULT QDate date() const;
-    Q_REQUIRED_RESULT QTime time() const;
+    [[nodiscard]] QDate date() const;
+    [[nodiscard]] QTime time() const;
     void setTime(QTime time);
     void setDate(QDate date);
 

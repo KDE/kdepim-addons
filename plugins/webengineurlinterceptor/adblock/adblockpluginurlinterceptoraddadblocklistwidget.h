@@ -16,13 +16,13 @@ public:
     struct AdBlockListInfo {
         QString name;
         QString url;
-        Q_REQUIRED_RESULT bool isValid() const;
+        [[nodiscard]] bool isValid() const;
     };
 
     explicit AdblockPluginUrlInterceptorAddAdblockListWidget(QWidget *parent = nullptr);
     ~AdblockPluginUrlInterceptorAddAdblockListWidget() override;
 
-    Q_REQUIRED_RESULT AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info() const;
+    [[nodiscard]] AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info() const;
     void setInfo(const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &adblockInfo);
 
 private:

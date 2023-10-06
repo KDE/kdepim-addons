@@ -16,7 +16,7 @@ class ViewerPluginCreatetodo : public MessageViewer::ViewerPlugin
 public:
     explicit ViewerPluginCreatetodo(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
 
-    Q_REQUIRED_RESULT ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
-    Q_REQUIRED_RESULT QString viewerPluginName() const override;
+    [[nodiscard]] ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
+    [[nodiscard]] QString viewerPluginName() const override;
 };
 }

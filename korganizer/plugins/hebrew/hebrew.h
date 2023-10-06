@@ -20,9 +20,9 @@ public:
 
     void configure(QWidget *parent) override;
 
-    Q_REQUIRED_RESULT Element::List createDayElements(const QDate &) override;
+    [[nodiscard]] Element::List createDayElements(const QDate &) override;
 
-    Q_REQUIRED_RESULT QString info() const override;
+    [[nodiscard]] QString info() const override;
 
 private:
     bool showParsha, showChol, showOmer;

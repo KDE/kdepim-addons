@@ -18,9 +18,9 @@ public:
     explicit ViewerPluginExpandurlInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginExpandurlInterface() override;
 
-    Q_REQUIRED_RESULT QList<QAction *> actions() const override;
+    [[nodiscard]] QList<QAction *> actions() const override;
     void execute() override;
-    Q_REQUIRED_RESULT ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
+    [[nodiscard]] ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
     void setUrl(const QUrl &url) override;
 

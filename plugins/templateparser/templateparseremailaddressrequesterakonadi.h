@@ -20,7 +20,7 @@ public:
     explicit TemplateParserEmailAddressRequesterAkonadi(QWidget *parent = nullptr, const QList<QVariant> & = {});
     ~TemplateParserEmailAddressRequesterAkonadi() override;
 
-    Q_REQUIRED_RESULT QString text() const override;
+    [[nodiscard]] QString text() const override;
     void setText(const QString &str) override;
     void clear() override;
 

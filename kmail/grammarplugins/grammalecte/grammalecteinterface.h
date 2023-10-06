@@ -19,7 +19,7 @@ public:
     explicit GrammalecteInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~GrammalecteInterface() override;
 
-    Q_REQUIRED_RESULT KToggleAction *action() const override;
+    [[nodiscard]] KToggleAction *action() const override;
 
 private:
     Q_DISABLE_COPY(GrammalecteInterface)

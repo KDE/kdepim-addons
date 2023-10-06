@@ -15,7 +15,7 @@ public:
     explicit SharetextPurposeMenuWidget(QWidget *parentWidget, QObject *parent = nullptr);
     ~SharetextPurposeMenuWidget() override;
 
-    Q_REQUIRED_RESULT QByteArray text() override;
+    [[nodiscard]] QByteArray text() override;
     void setEditorWidget(ShareTextPluginEditorInterface *interface);
 
 private:

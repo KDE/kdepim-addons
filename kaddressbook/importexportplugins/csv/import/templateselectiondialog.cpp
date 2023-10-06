@@ -42,7 +42,7 @@ public:
         update();
     }
 
-    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override
+    [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return mTemplates.count();
@@ -51,7 +51,7 @@ public:
         }
     }
 
-    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override
+    [[nodiscard]] int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return 2;
@@ -60,7 +60,7 @@ public:
         }
     }
 
-    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
+    [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (!index.isValid() || index.row() >= mTemplates.count() || index.column() >= 2) {
             return {};
@@ -130,7 +130,7 @@ public:
         endResetModel();
     }
 
-    Q_REQUIRED_RESULT bool templatesAvailable() const
+    [[nodiscard]] bool templatesAvailable() const
     {
         return !mTemplates.isEmpty();
     }
@@ -158,7 +158,7 @@ public:
         }
     }
 
-    Q_REQUIRED_RESULT QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override
+    [[nodiscard]] QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
         QSize hint = QStyledItemDelegate::sizeHint(option, index);
 

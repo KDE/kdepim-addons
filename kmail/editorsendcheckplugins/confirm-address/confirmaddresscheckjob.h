@@ -21,9 +21,9 @@ public:
 
     void setAddressList(const QStringList &addressList);
 
-    Q_REQUIRED_RESULT QStringList validEmails() const;
+    [[nodiscard]] QStringList validEmails() const;
 
-    Q_REQUIRED_RESULT QStringList invalidEmails() const;
+    [[nodiscard]] QStringList invalidEmails() const;
 
 private:
     QStringList mAddressList;

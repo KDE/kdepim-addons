@@ -13,12 +13,12 @@ public:
     explicit GearyImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~GearyImportData() override;
 
-    Q_REQUIRED_RESULT TypeSupportedOptions supportedOption() override;
-    Q_REQUIRED_RESULT bool foundMailer() const override;
+    [[nodiscard]] TypeSupportedOptions supportedOption() override;
+    [[nodiscard]] bool foundMailer() const override;
 
-    Q_REQUIRED_RESULT bool importMails() override;
-    Q_REQUIRED_RESULT bool importSettings() override;
-    Q_REQUIRED_RESULT bool importAddressBook() override;
+    [[nodiscard]] bool importMails() override;
+    [[nodiscard]] bool importSettings() override;
+    [[nodiscard]] bool importAddressBook() override;
 
-    Q_REQUIRED_RESULT QString name() const override;
+    [[nodiscard]] QString name() const override;
 };

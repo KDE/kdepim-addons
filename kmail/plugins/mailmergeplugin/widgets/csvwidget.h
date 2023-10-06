@@ -20,7 +20,7 @@ public:
     ~CsvWidget() override;
 
     void setPath(const QUrl &path);
-    Q_REQUIRED_RESULT QUrl path() const;
+    [[nodiscard]] QUrl path() const;
 
 private:
     KUrlRequester *const mCvsUrlRequester;

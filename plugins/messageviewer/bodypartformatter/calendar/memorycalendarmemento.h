@@ -19,8 +19,8 @@ class MemoryCalendarMemento : public QObject, public MimeTreeParser::Interface::
 public:
     MemoryCalendarMemento();
 
-    Q_REQUIRED_RESULT bool finished() const;
-    Q_REQUIRED_RESULT Akonadi::CalendarBase::Ptr calendar() const;
+    [[nodiscard]] bool finished() const;
+    [[nodiscard]] Akonadi::CalendarBase::Ptr calendar() const;
 
     void detach() override;
 

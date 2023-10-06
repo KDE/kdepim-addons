@@ -25,14 +25,14 @@ public:
     void loadRules();
     void saveRules();
 
-    Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &list, QString &checkFound, ConfirmBeforeDeletingRule &rule) const;
+    [[nodiscard]] bool deletingNeedToConfirm(const Akonadi::Item &list, QString &checkFound, ConfirmBeforeDeletingRule &rule) const;
 
-    Q_REQUIRED_RESULT const QList<ConfirmBeforeDeletingRule> &rules() const;
+    [[nodiscard]] const QList<ConfirmBeforeDeletingRule> &rules() const;
 
     void setRules(const QList<ConfirmBeforeDeletingRule> &newRules);
 
 private:
-    Q_REQUIRED_RESULT QString defaultConfigFileName() const;
-    Q_REQUIRED_RESULT QStringList ruleGroups(const KSharedConfig::Ptr &config) const;
+    [[nodiscard]] QString defaultConfigFileName() const;
+    [[nodiscard]] QStringList ruleGroups(const KSharedConfig::Ptr &config) const;
     QList<ConfirmBeforeDeletingRule> mRules;
 };

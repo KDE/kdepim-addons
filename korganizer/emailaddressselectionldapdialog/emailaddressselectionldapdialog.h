@@ -23,8 +23,8 @@ public:
     explicit EmailAddressSelectionLdapDialog(QWidget *parent = nullptr, const QList<QVariant> & = {});
     ~EmailAddressSelectionLdapDialog() override;
 
-    Q_REQUIRED_RESULT Akonadi::EmailAddressSelection::List selectedAddresses() const override;
-    Q_REQUIRED_RESULT Akonadi::EmailAddressSelectionWidget *view() const override;
+    [[nodiscard]] Akonadi::EmailAddressSelection::List selectedAddresses() const override;
+    [[nodiscard]] Akonadi::EmailAddressSelectionWidget *view() const override;
 
 private:
     void writeConfig();

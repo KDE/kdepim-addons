@@ -19,7 +19,7 @@ public:
     explicit LanguageToolInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~LanguageToolInterface() override;
 
-    Q_REQUIRED_RESULT KToggleAction *action() const override;
+    [[nodiscard]] KToggleAction *action() const override;
 
 private:
     Q_DISABLE_COPY(LanguageToolInterface)

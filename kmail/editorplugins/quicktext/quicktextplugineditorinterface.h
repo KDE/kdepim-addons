@@ -18,7 +18,7 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
-    Q_REQUIRED_RESULT bool processProcessKeyEvent(QKeyEvent *event) override;
+    [[nodiscard]] bool processProcessKeyEvent(QKeyEvent *event) override;
 
     void reloadConfig();
 

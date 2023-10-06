@@ -16,6 +16,6 @@ public:
     explicit ViewerPluginCreateevent(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
 
     ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
-    Q_REQUIRED_RESULT QString viewerPluginName() const override;
+    [[nodiscard]] QString viewerPluginName() const override;
 };
 }

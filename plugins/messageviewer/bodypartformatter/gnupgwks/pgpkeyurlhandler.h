@@ -7,7 +7,7 @@
 #pragma once
 
 #include <MessageViewer/BodyPartURLHandler>
-// needed for Q_REQUIRED_RESULT
+// needed for [[nodiscard]]
 #include <QtGlobal>
 class QUrlQuery;
 
@@ -21,5 +21,5 @@ public:
     QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
 private:
-    Q_REQUIRED_RESULT QUrlQuery decodePath(const QString &path) const;
+    [[nodiscard]] QUrlQuery decodePath(const QString &path) const;
 };

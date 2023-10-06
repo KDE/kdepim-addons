@@ -33,7 +33,7 @@ class SendmailConfigWidget : public TransportConfigWidget
 
 public:
     explicit SendmailConfigWidget(Transport *transport, QWidget *parent = nullptr);
-    Q_REQUIRED_RESULT bool pathIsEmpty() const;
+    [[nodiscard]] bool pathIsEmpty() const;
 Q_SIGNALS:
     void enableButtonOk(bool);
 

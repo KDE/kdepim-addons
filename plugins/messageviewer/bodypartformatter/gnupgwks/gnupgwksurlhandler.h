@@ -25,5 +25,5 @@ public:
 private:
     bool sendConfirmation(MessageViewer::Viewer *viewerInstance, const GnuPGWKSMessagePart &mp) const;
 
-    Q_REQUIRED_RESULT QByteArray createConfirmation(const KMime::Message::Ptr &msg) const;
+    [[nodiscard]] QByteArray createConfirmation(const KMime::Message::Ptr &msg) const;
 };

@@ -20,14 +20,14 @@ public:
 
     void start();
 
-    Q_REQUIRED_RESULT QList<Akonadi::Item::List> potentialDuplicateContacts() const;
+    [[nodiscard]] QList<Akonadi::Item::List> potentialDuplicateContacts() const;
 
 Q_SIGNALS:
     void finished(const QList<Akonadi::Item::List> &);
 
 private:
-    Q_REQUIRED_RESULT Akonadi::Item::List checkList(const Akonadi::Item::List &lstItem);
-    Q_REQUIRED_RESULT bool isDuplicate(const Akonadi::Item &itemA, const Akonadi::Item &itemB);
+    [[nodiscard]] Akonadi::Item::List checkList(const Akonadi::Item::List &lstItem);
+    [[nodiscard]] bool isDuplicate(const Akonadi::Item &itemA, const Akonadi::Item &itemB);
     const Akonadi::Item::List mListItem;
     QList<Akonadi::Item::List> mListDuplicate;
 };

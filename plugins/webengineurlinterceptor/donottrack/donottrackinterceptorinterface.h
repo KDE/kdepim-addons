@@ -14,5 +14,5 @@ public:
     explicit DoNotTrackInterceptorInterface(QObject *parent = nullptr);
     ~DoNotTrackInterceptorInterface() override;
 
-    Q_REQUIRED_RESULT bool interceptRequest(QWebEngineUrlRequestInfo &info) override;
+    [[nodiscard]] bool interceptRequest(QWebEngineUrlRequestInfo &info) override;
 };

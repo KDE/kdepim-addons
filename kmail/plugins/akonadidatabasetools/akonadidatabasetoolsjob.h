@@ -17,7 +17,7 @@ public:
     explicit AkonadiDatabaseToolsJob(QObject *parent = nullptr);
     ~AkonadiDatabaseToolsJob() override;
 
-    Q_REQUIRED_RESULT bool canStart() const;
+    [[nodiscard]] bool canStart() const;
 
     void start();
     void setTool(AkonadiDatabaseToolsUtils::AkonadiDatabaseTool newTool);
@@ -28,7 +28,7 @@ Q_SIGNALS:
     void finished();
 
 private:
-    Q_REQUIRED_RESULT QString akonadiProcessPath() const;
+    [[nodiscard]] QString akonadiProcessPath() const;
     AkonadiDatabaseToolsUtils::AkonadiDatabaseTool mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown;
     QProcess *mProcess = nullptr;
 };

@@ -14,5 +14,5 @@ public:
     MarkdownDiscount();
     ~MarkdownDiscount() override;
 
-    Q_REQUIRED_RESULT QString toHtml() const override;
+    [[nodiscard]] QString toHtml() const override;
 };

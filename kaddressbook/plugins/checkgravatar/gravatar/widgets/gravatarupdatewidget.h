@@ -25,9 +25,9 @@ public:
     ~GravatarUpdateWidget() override;
 
     void setEmail(const QString &email);
-    Q_REQUIRED_RESULT QPixmap pixmap() const;
+    [[nodiscard]] QPixmap pixmap() const;
     void setOriginalPixmap(const QPixmap &pix);
-    Q_REQUIRED_RESULT QUrl resolvedUrl() const;
+    [[nodiscard]] QUrl resolvedUrl() const;
 
     void setOriginalUrl(const QUrl &url);
 

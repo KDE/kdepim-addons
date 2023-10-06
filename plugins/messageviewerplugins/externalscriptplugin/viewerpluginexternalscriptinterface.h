@@ -18,8 +18,8 @@ public:
     explicit ViewerPluginExternalscriptInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginExternalscriptInterface() override;
 
-    Q_REQUIRED_RESULT QList<QAction *> actions() const override;
-    Q_REQUIRED_RESULT ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
+    [[nodiscard]] QList<QAction *> actions() const override;
+    [[nodiscard]] ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
     void execute() override;
 
     void setText(const QString &text) override;
@@ -37,7 +37,7 @@ private:
     void clear();
     void slotConfigure();
     QList<QAction *> mAction;
-    Q_REQUIRED_RESULT QStringList adaptArguments(const QStringList &scriptArguments);
+    [[nodiscard]] QStringList adaptArguments(const QStringList &scriptArguments);
     QStringList mCurrentInfo;
     QString mText;
     QString mAkonadiUrl;

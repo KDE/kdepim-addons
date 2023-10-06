@@ -23,7 +23,7 @@ public:
     explicit SelectImapFolderWidget(const KSieveCore::SieveImapAccountSettings &account, QWidget *parent = nullptr);
     ~SelectImapFolderWidget() override;
 
-    Q_REQUIRED_RESULT QString selectedFolderName() const;
+    [[nodiscard]] QString selectedFolderName() const;
     void createFolder();
 
 Q_SIGNALS:

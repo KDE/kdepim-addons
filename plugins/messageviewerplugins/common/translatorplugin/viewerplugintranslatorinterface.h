@@ -22,12 +22,12 @@ public:
     ~ViewerPluginTranslatorInterface() override;
 
     void setText(const QString &text) override;
-    Q_REQUIRED_RESULT QList<QAction *> actions() const override;
+    [[nodiscard]] QList<QAction *> actions() const override;
     void showWidget() override;
-    Q_REQUIRED_RESULT ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
+    [[nodiscard]] ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
 private:
-    Q_REQUIRED_RESULT TextTranslator::TranslatorWidget *widget();
+    [[nodiscard]] TextTranslator::TranslatorWidget *widget();
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
     TextTranslator::TranslatorWidget *mTranslatorWidget = nullptr;

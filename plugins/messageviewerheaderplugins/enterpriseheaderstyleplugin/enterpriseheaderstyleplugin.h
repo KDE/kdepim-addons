@@ -22,10 +22,10 @@ public:
     HeaderStyle *headerStyle() const override;
     HeaderStrategy *headerStrategy() const override;
     HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
-    Q_REQUIRED_RESULT QString name() const override;
-    Q_REQUIRED_RESULT bool hasMargin() const override;
-    Q_REQUIRED_RESULT QString alignment() const override;
-    Q_REQUIRED_RESULT int elidedTextSize() const override;
+    [[nodiscard]] QString name() const override;
+    [[nodiscard]] bool hasMargin() const override;
+    [[nodiscard]] QString alignment() const override;
+    [[nodiscard]] int elidedTextSize() const override;
 
 private:
     HeaderStyle *const mHeaderStyle;

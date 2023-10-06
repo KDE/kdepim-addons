@@ -17,7 +17,7 @@ public:
     ItineraryRenderer();
     void setKDEConnectHandler(ItineraryKDEConnectHandler *kdeConnect);
 
-    Q_REQUIRED_RESULT bool
+    [[nodiscard]] bool
     render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
 
 private:

@@ -16,7 +16,7 @@ public:
     explicit OpenUrlWithConfigureCreateDialog(QWidget *parent = nullptr);
     ~OpenUrlWithConfigureCreateDialog() override;
 
-    Q_REQUIRED_RESULT OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info() const;
+    [[nodiscard]] OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info() const;
     void setInfo(const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo &i);
 
 private:

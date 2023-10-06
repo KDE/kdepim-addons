@@ -16,10 +16,10 @@ public:
 
     void start();
 
-    Q_REQUIRED_RESULT QStringList originalEmails() const;
+    [[nodiscard]] QStringList originalEmails() const;
     void setOriginalEmails(const QStringList &originalEmails);
 
-    Q_REQUIRED_RESULT QStringList resultList() const;
+    [[nodiscard]] QStringList resultList() const;
     void setResultList(const QStringList &resultList);
 
 private:

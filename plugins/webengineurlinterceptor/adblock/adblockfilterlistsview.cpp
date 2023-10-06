@@ -60,7 +60,7 @@ void AdblockFilterListsView::contextMenuEvent(QContextMenuEvent *event)
     menu.exec(event->globalPos());
 }
 
-Q_REQUIRED_RESULT AdblockFilter convertToAdblockFilter(const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &info)
+[[nodiscard]] AdblockFilter convertToAdblockFilter(const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &info)
 {
     AdblockFilter filter;
     filter.setName(info.name);

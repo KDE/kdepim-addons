@@ -17,10 +17,10 @@ class ThisDayInHistory : public Decoration
 public:
     ThisDayInHistory(QObject *parent = nullptr, const QVariantList &args = {});
 
-    Q_REQUIRED_RESULT Element::List createDayElements(const QDate &) override;
-    Q_REQUIRED_RESULT Element::List createMonthElements(const QDate &) override;
+    [[nodiscard]] Element::List createDayElements(const QDate &) override;
+    [[nodiscard]] Element::List createMonthElements(const QDate &) override;
 
     //    void configure( QWidget *parent );
 
-    Q_REQUIRED_RESULT QString info() const override;
+    [[nodiscard]] QString info() const override;
 };

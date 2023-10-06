@@ -17,17 +17,17 @@ class BaseEventDataVisitor : public KCalendarCore::Visitor
 public:
     ~BaseEventDataVisitor() override;
 
-    Q_REQUIRED_RESULT bool act(const KCalendarCore::Incidence::Ptr &incidence);
-    Q_REQUIRED_RESULT bool act(const KCalendarCore::Event::List &events);
-    Q_REQUIRED_RESULT bool act(const KCalendarCore::Todo::List &todos);
+    [[nodiscard]] bool act(const KCalendarCore::Incidence::Ptr &incidence);
+    [[nodiscard]] bool act(const KCalendarCore::Event::List &events);
+    [[nodiscard]] bool act(const KCalendarCore::Todo::List &todos);
 
 protected:
     BaseEventDataVisitor(PimDataSource *dataSource, QDate start, QDate end);
 
-    Q_REQUIRED_RESULT QString generateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId = {}) const;
-    Q_REQUIRED_RESULT bool isInRange(QDate start, QDate end) const;
+    [[nodiscard]] QString generateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId = {}) const;
+    [[nodiscard]] bool isInRange(QDate start, QDate end) const;
 
-    Q_REQUIRED_RESULT QList<CalendarEvents::EventData>
+    [[nodiscard]] QList<CalendarEvents::EventData>
     explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok);
 
 protected:
@@ -60,7 +60,7 @@ protected:
 private:
     void insertResult(const CalendarEvents::EventData &result);
 
-    Q_REQUIRED_RESULT bool visit(const KCalendarCore::Incidence::Ptr &incidence, CalendarEvents::EventData::EventType eventType);
+    [[nodiscard]] bool visit(const KCalendarCore::Incidence::Ptr &incidence, CalendarEvents::EventData::EventType eventType);
     CalendarEvents::EventData incidenceData(const KCalendarCore::Incidence::Ptr &incidence) const;
 
     QMultiHash<QDate, CalendarEvents::EventData> mResults;

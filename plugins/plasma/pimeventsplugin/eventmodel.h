@@ -22,9 +22,9 @@ public:
     explicit EventModel(QObject *parent = nullptr);
     ~EventModel() override;
 
-    Q_REQUIRED_RESULT QList<Akonadi::Collection> collections() const;
+    [[nodiscard]] QList<Akonadi::Collection> collections() const;
 
-    Q_REQUIRED_RESULT Akonadi::Collection collection(qint64 id) const;
+    [[nodiscard]] Akonadi::Collection collection(qint64 id) const;
 
 public Q_SLOTS:
     void addCalendar(const Akonadi::Collection &col);

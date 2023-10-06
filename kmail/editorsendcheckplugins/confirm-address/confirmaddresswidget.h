@@ -18,7 +18,7 @@ public:
 
     void setValidAddresses(const QStringList &addresses);
     void setInvalidAddresses(const QStringList &addresses);
-    Q_REQUIRED_RESULT QStringList whiteListSelectedEmails() const;
+    [[nodiscard]] QStringList whiteListSelectedEmails() const;
 
 Q_SIGNALS:
     void updateButtonStatus(bool hasElementChecked);

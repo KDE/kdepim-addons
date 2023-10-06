@@ -23,12 +23,12 @@ public:
     ~GravatarUpdateJob() override;
 
     void start();
-    Q_REQUIRED_RESULT bool canStart() const;
+    [[nodiscard]] bool canStart() const;
 
-    Q_REQUIRED_RESULT QString email() const;
+    [[nodiscard]] QString email() const;
     void setEmail(const QString &email);
 
-    Q_REQUIRED_RESULT Akonadi::Item item() const;
+    [[nodiscard]] Akonadi::Item item() const;
     void setItem(const Akonadi::Item &item);
 
 Q_SIGNALS:

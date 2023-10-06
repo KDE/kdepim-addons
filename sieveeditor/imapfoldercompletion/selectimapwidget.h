@@ -21,7 +21,7 @@ public:
     ~SelectImapWidget() override;
 
     void setText(const QString &str) override;
-    Q_REQUIRED_RESULT QString text() const override;
+    [[nodiscard]] QString text() const override;
 
     void setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account) override;
 

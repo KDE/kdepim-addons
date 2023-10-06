@@ -11,5 +11,5 @@
 
 namespace ScamConfigureUtils
 {
-Q_REQUIRED_RESULT QString convertEnumToString(MessageViewer::ScamDetectionInfo::ScamDetectionField flag);
+[[nodiscard]] QString convertEnumToString(MessageViewer::ScamDetectionInfo::ScamDetectionField flag);
 };

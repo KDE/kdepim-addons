@@ -84,7 +84,7 @@ public:
         setCurrentIndex(findData((uint)field));
     }
 
-    Q_REQUIRED_RESULT KAddressBookImportExport::ContactFields::Field currentField() const
+    [[nodiscard]] KAddressBookImportExport::ContactFields::Field currentField() const
     {
         return (KAddressBookImportExport::ContactFields::Field)itemData(currentIndex()).toUInt();
     }
@@ -117,7 +117,7 @@ public:
     {
     }
 
-    Q_REQUIRED_RESULT QString displayText(const QVariant &value, const QLocale &) const override
+    [[nodiscard]] QString displayText(const QVariant &value, const QLocale &) const override
     {
         return KAddressBookImportExport::ContactFields::label((KAddressBookImportExport::ContactFields::Field)value.toUInt());
     }

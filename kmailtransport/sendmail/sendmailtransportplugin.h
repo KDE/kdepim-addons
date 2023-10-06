@@ -16,7 +16,7 @@ public:
     explicit SendMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~SendMailTransportPlugin() override;
 
-    Q_REQUIRED_RESULT QList<MailTransport::TransportAbstractPluginInfo> names() const override;
+    [[nodiscard]] QList<MailTransport::TransportAbstractPluginInfo> names() const override;
     bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;
     MailTransport::TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) override;
 };

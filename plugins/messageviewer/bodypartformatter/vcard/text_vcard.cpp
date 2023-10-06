@@ -152,7 +152,7 @@ public:
 class UrlHandler : public MessageViewer::Interface::BodyPartURLHandler
 {
 public:
-    Q_REQUIRED_RESULT QString name() const override
+    [[nodiscard]] QString name() const override
     {
         return QStringLiteral("vcardhandler");
     }
@@ -236,7 +236,7 @@ public:
         }
     }
 
-    Q_REQUIRED_RESULT bool openVCard(const KContacts::Addressee &a, const QString &vCard) const
+    [[nodiscard]] bool openVCard(const KContacts::Addressee &a, const QString &vCard) const
     {
         Q_UNUSED(vCard)
         auto view = new Akonadi::ContactViewer(nullptr);
@@ -246,7 +246,7 @@ public:
         return true;
     }
 
-    Q_REQUIRED_RESULT bool saveAsVCard(const KContacts::Addressee &a, const QString &vCard) const
+    [[nodiscard]] bool saveAsVCard(const KContacts::Addressee &a, const QString &vCard) const
     {
         QString fileName;
         const QString givenName(a.givenName());
@@ -284,13 +284,13 @@ public:
         return validIndex(index) ? new Formatter() : nullptr;
     }
 
-    Q_REQUIRED_RESULT const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
+    [[nodiscard]] const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
         return validIndex(idx) ? new UrlHandler() : nullptr;
     }
 
 private:
-    Q_REQUIRED_RESULT bool validIndex(int idx) const
+    [[nodiscard]] bool validIndex(int idx) const
     {
         return idx == 0;
     }

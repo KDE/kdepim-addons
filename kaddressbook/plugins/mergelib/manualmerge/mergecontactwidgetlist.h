@@ -16,7 +16,7 @@ class MergeContactWidgetListItem : public QListWidgetItem
 {
 public:
     explicit MergeContactWidgetListItem(const Akonadi::Item &item, QListWidget *parent = nullptr);
-    Q_REQUIRED_RESULT Akonadi::Item item() const;
+    [[nodiscard]] Akonadi::Item item() const;
 
 private:
     const Akonadi::Item mItem;
@@ -30,11 +30,11 @@ public:
     ~MergeContactWidgetList() override;
 
     void fillListContact(const Akonadi::Item::List &items);
-    Q_REQUIRED_RESULT Akonadi::Item::List listSelectedContacts() const;
-    Q_REQUIRED_RESULT Akonadi::Item currentAkonadiItem() const;
+    [[nodiscard]] Akonadi::Item::List listSelectedContacts() const;
+    [[nodiscard]] Akonadi::Item currentAkonadiItem() const;
 
 private:
-    Q_REQUIRED_RESULT QString itemName(const KContacts::Addressee &address) const;
+    [[nodiscard]] QString itemName(const KContacts::Addressee &address) const;
     void slotCustomContextMenuRequested(const QPoint &);
     void slotSelectAll();
     void slotDeselectAll();

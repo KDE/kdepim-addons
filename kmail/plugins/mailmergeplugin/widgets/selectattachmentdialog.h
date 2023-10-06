@@ -19,7 +19,7 @@ public:
     ~SelectAttachmentDialog() override;
 
     void setAttachmentPath(const QUrl &path);
-    Q_REQUIRED_RESULT QString attachmentPath() const;
+    [[nodiscard]] QString attachmentPath() const;
 
 private:
     KUrlRequester *const mUrlRequester;

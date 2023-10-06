@@ -14,7 +14,7 @@ public:
     explicit CheckBeforeSendInterface(QObject *parent = nullptr);
     ~CheckBeforeSendInterface() override;
 
-    Q_REQUIRED_RESULT bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) override;
+    [[nodiscard]] bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) override;
 
 public Q_SLOTS:
     void reloadConfig() override;

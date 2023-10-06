@@ -16,7 +16,7 @@ public:
 
     void exec() override;
     void createAction(KActionCollection *ac) override;
-    Q_REQUIRED_RESULT PimCommon::GenericPluginInterface::RequireTypes requiresFeatures() const override;
+    [[nodiscard]] PimCommon::GenericPluginInterface::RequireTypes requiresFeatures() const override;
     void setItems(const Akonadi::Item::List &items) override;
 
 private:

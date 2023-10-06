@@ -24,13 +24,13 @@ public:
     PgpKeyMemento();
     ~PgpKeyMemento() override;
 
-    Q_REQUIRED_RESULT bool isRunning() const;
+    [[nodiscard]] bool isRunning() const;
     void setRunning(bool running);
 
-    Q_REQUIRED_RESULT GpgME::Key key() const;
-    Q_REQUIRED_RESULT QString error() const;
+    [[nodiscard]] GpgME::Key key() const;
+    [[nodiscard]] QString error() const;
 
-    Q_REQUIRED_RESULT bool start(const QString &fingerprint);
+    [[nodiscard]] bool start(const QString &fingerprint);
     void exec(const QString &fingerprint);
 
     void detach() override;

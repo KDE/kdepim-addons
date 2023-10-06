@@ -16,7 +16,7 @@ public:
     ~CheckBeforeSendPlugin() override;
 
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) override;
-    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
+    [[nodiscard]] bool hasConfigureDialog() const override;
 
     void showConfigureDialog(QWidget *parent) override;
 };

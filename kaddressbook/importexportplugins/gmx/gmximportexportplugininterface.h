@@ -19,7 +19,7 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
-    Q_REQUIRED_RESULT bool canImportFileType(const QUrl &url) override;
+    [[nodiscard]] bool canImportFileType(const QUrl &url) override;
 
 private:
     void doExport(QFile *fp, const KContacts::AddresseeList &list) const;

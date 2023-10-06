@@ -16,7 +16,7 @@ public:
     explicit SelectMailDialog(QWidget *parent = nullptr);
     ~SelectMailDialog() override;
 
-    Q_REQUIRED_RESULT QStringList selectedEmails() const;
+    [[nodiscard]] QStringList selectedEmails() const;
 
     void accept() override;
 Q_SIGNALS:

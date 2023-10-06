@@ -47,16 +47,16 @@ public:
     /**
      * Returns whether the currently selected item is a snippet group.
      */
-    Q_REQUIRED_RESULT bool snippetGroupSelected() const;
+    [[nodiscard]] bool snippetGroupSelected() const;
 
     /**
      * Returns the name of the currently selected snippet or snippet group.
      */
-    Q_REQUIRED_RESULT QString selectedName() const;
+    [[nodiscard]] QString selectedName() const;
 
     void save();
 
-    Q_REQUIRED_RESULT QModelIndex currentGroupIndex() const;
+    [[nodiscard]] QModelIndex currentGroupIndex() const;
 
     void importQuickText();
     void exportQuickText();

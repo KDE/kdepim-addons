@@ -15,7 +15,7 @@ public:
 
     void setMessage(const KMime::Message::Ptr &msg);
 
-    Q_REQUIRED_RESULT QStringList parse(const QStringList &lst);
+    [[nodiscard]] QStringList parse(const QStringList &lst);
 
     void setAkonadiUrl(const QString &akonadiUrl);
 

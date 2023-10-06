@@ -20,7 +20,7 @@ public:
     static ViewerPluginExternalScriptManager *self();
 
     void readExternalScriptInfo();
-    Q_REQUIRED_RESULT QList<ViewerPluginExternalScriptInfo> scriptInfos() const;
+    [[nodiscard]] QList<ViewerPluginExternalScriptInfo> scriptInfos() const;
 
 private:
     QList<ViewerPluginExternalScriptInfo> mScriptInfos;

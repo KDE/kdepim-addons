@@ -23,9 +23,9 @@ public:
     explicit SendVcardsJob(const Akonadi::Item::List &listItem, QObject *parent = nullptr);
     ~SendVcardsJob() override;
 
-    Q_REQUIRED_RESULT bool start();
+    [[nodiscard]] bool start();
 
-    Q_REQUIRED_RESULT KContacts::VCardConverter::Version version() const;
+    [[nodiscard]] KContacts::VCardConverter::Version version() const;
     void setVersion(KContacts::VCardConverter::Version version);
 
 Q_SIGNALS:

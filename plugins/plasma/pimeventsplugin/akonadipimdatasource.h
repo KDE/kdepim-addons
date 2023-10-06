@@ -21,9 +21,9 @@ public:
     explicit AkonadiPimDataSource(QObject *parent = nullptr);
     ~AkonadiPimDataSource() override;
 
-    Q_REQUIRED_RESULT qint64 akonadiIdForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
-    Q_REQUIRED_RESULT KCalendarCore::Calendar *calendar() const override;
-    Q_REQUIRED_RESULT QString calendarColorForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
+    [[nodiscard]] qint64 akonadiIdForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
+    [[nodiscard]] KCalendarCore::Calendar *calendar() const override;
+    [[nodiscard]] QString calendarColorForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
 
 private Q_SLOTS:
     void onSettingsChanged();

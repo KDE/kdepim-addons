@@ -19,14 +19,14 @@ public:
 
     void setEmail(const QString &email);
 
-    Q_REQUIRED_RESULT QPixmap pixmap() const;
+    [[nodiscard]] QPixmap pixmap() const;
     void setOriginalPixmap(const QPixmap &pix);
 
     void setOriginalUrl(const QUrl &url);
 
-    Q_REQUIRED_RESULT QUrl resolvedUrl() const;
+    [[nodiscard]] QUrl resolvedUrl() const;
 
-    Q_REQUIRED_RESULT bool saveUrl() const;
+    [[nodiscard]] bool saveUrl() const;
 
 private:
     void slotSaveImage();

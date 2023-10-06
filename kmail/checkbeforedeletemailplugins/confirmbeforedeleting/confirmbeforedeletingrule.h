@@ -30,22 +30,22 @@ public:
     ConfirmBeforeDeletingRule();
     ~ConfirmBeforeDeletingRule();
 
-    Q_REQUIRED_RESULT const QString &pattern() const;
+    [[nodiscard]] const QString &pattern() const;
     void setPattern(const QString &newPattern);
 
-    Q_REQUIRED_RESULT RuleType ruleType() const;
+    [[nodiscard]] RuleType ruleType() const;
     void setRuleType(RuleType newRuleType);
 
-    Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFoundInfo) const;
+    [[nodiscard]] bool deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFoundInfo) const;
 
     void save(KConfigGroup &group) const;
     void load(const KConfigGroup &group);
 
-    Q_REQUIRED_RESULT bool isValid() const;
-    Q_REQUIRED_RESULT static QString ruleTypeToString(ConfirmBeforeDeletingRule::RuleType r);
-    Q_REQUIRED_RESULT static ConfirmBeforeDeletingRule::RuleType stringToRuleType(const QString &str);
+    [[nodiscard]] bool isValid() const;
+    [[nodiscard]] static QString ruleTypeToString(ConfirmBeforeDeletingRule::RuleType r);
+    [[nodiscard]] static ConfirmBeforeDeletingRule::RuleType stringToRuleType(const QString &str);
 
-    Q_REQUIRED_RESULT bool operator==(const ConfirmBeforeDeletingRule &other) const;
+    [[nodiscard]] bool operator==(const ConfirmBeforeDeletingRule &other) const;
 
 private:
     void generateConfirmMessageInfo(const KMime::Message::Ptr &msg, QString &checkFoundInfo) const;

@@ -19,5 +19,5 @@ public:
     explicit SearchDuplicatesPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~SearchDuplicatesPlugin() override;
 
-    Q_REQUIRED_RESULT PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
 };

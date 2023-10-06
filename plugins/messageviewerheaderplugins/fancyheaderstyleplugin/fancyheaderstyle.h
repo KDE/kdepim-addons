@@ -21,7 +21,7 @@ public:
 public:
     const char *name() const override;
 
-    Q_REQUIRED_RESULT QString format(KMime::Message *message) const override;
+    [[nodiscard]] QString format(KMime::Message *message) const override;
 
 private:
     MessageViewer::HeaderStyleUtil mHeaderStyleUtil;

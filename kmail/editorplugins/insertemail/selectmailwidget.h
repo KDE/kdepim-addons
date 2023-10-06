@@ -19,7 +19,7 @@ public:
     explicit SelectMailWidget(QWidget *parent = nullptr);
     ~SelectMailWidget() override;
 
-    Q_REQUIRED_RESULT QStringList selectedEmails() const;
+    [[nodiscard]] QStringList selectedEmails() const;
 
 Q_SIGNALS:
     void doubleClicked();

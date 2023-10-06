@@ -19,5 +19,5 @@ public:
     explicit DoNotTrackPluginUrlInterceptor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~DoNotTrackPluginUrlInterceptor() override;
 
-    Q_REQUIRED_RESULT WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) override;
+    [[nodiscard]] WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) override;
 };

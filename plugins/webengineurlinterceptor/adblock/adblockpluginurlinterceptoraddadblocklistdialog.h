@@ -16,7 +16,7 @@ public:
     explicit AdblockPluginUrlInterceptorAddAdblockListDialog(QWidget *parent = nullptr);
     ~AdblockPluginUrlInterceptorAddAdblockListDialog() override;
 
-    Q_REQUIRED_RESULT AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info() const;
+    [[nodiscard]] AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info() const;
     void setInfo(const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &adblockInfo);
 
 private:

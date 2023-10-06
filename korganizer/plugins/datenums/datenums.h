@@ -28,7 +28,7 @@ public:
     };
     Q_DECLARE_FLAGS(DayNumbers, DayNumber)
 
-    Q_REQUIRED_RESULT QString info() const override;
+    [[nodiscard]] QString info() const override;
 
 private:
     DayNumbers mDisplayedInfo;

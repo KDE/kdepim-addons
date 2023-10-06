@@ -19,7 +19,7 @@ public:
     explicit ReactionToInvitationDialog(QWidget *parent = nullptr);
     ~ReactionToInvitationDialog() override;
 
-    Q_REQUIRED_RESULT QString comment() const;
+    [[nodiscard]] QString comment() const;
 
 private:
     void slotTextChanged();

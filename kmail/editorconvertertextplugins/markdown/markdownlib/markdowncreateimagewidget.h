@@ -18,7 +18,7 @@ class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownCreateImageWidget : public QW
 public:
     explicit MarkdownCreateImageWidget(QWidget *parent = nullptr);
     ~MarkdownCreateImageWidget() override;
-    Q_REQUIRED_RESULT QString linkStr() const;
+    [[nodiscard]] QString linkStr() const;
 
 Q_SIGNALS:
     void enabledOkButton(bool enabled);

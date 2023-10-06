@@ -22,7 +22,7 @@ public:
     explicit OpenUrlWithConfigureItem(QListWidget *parent);
 
     void setInfo(const MessageViewer::OpenWithUrlInfo &info);
-    Q_REQUIRED_RESULT MessageViewer::OpenWithUrlInfo info() const;
+    [[nodiscard]] MessageViewer::OpenWithUrlInfo info() const;
 
 private:
     MessageViewer::OpenWithUrlInfo mScriptInfo;

@@ -18,7 +18,7 @@ public:
     ~ConfirmBeforeDeletingMessageBoxWidget() override;
 
     void setInfo(const QString &str);
-    Q_REQUIRED_RESULT bool useSameResult() const;
+    [[nodiscard]] bool useSameResult() const;
 
 private:
     QLabel *const mLabelInfo;

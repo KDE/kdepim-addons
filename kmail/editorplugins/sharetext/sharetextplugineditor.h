@@ -19,5 +19,5 @@ public:
     ~ShareTextPluginEditor() override;
 
     MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
-    Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
+    [[nodiscard]] bool hasPopupMenuSupport() const override;
 };

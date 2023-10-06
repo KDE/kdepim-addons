@@ -13,9 +13,9 @@ public:
     explicit Evolutionv1ImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~Evolutionv1ImportData() override;
 
-    Q_REQUIRED_RESULT TypeSupportedOptions supportedOption() override;
-    Q_REQUIRED_RESULT bool foundMailer() const override;
+    [[nodiscard]] TypeSupportedOptions supportedOption() override;
+    [[nodiscard]] bool foundMailer() const override;
 
-    Q_REQUIRED_RESULT bool importMails() override;
-    Q_REQUIRED_RESULT QString name() const override;
+    [[nodiscard]] bool importMails() override;
+    [[nodiscard]] QString name() const override;
 };

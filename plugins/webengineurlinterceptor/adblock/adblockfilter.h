@@ -15,10 +15,10 @@ public:
     AdblockFilter();
     ~AdblockFilter();
 
-    Q_REQUIRED_RESULT QString url() const;
+    [[nodiscard]] QString url() const;
     void setUrl(const QString &newUrl);
 
-    Q_REQUIRED_RESULT QString name() const;
+    [[nodiscard]] QString name() const;
     void setName(const QString &newName);
 
 private:

@@ -10,7 +10,7 @@
 */
 #pragma once
 
-// needed for Q_REQUIRED_RESULT
+// needed for [[nodiscard]]
 
 struct DateResult {
     int year;
@@ -39,17 +39,17 @@ public:
     static HebrewDate fromSecular(int year, int month, int day);
     static HebrewDate fromHebrew(int year, int month, int day);
 
-    Q_REQUIRED_RESULT int year() const;
-    Q_REQUIRED_RESULT int month() const;
-    Q_REQUIRED_RESULT int day() const;
-    Q_REQUIRED_RESULT int dayOfWeek() const;
+    [[nodiscard]] int year() const;
+    [[nodiscard]] int month() const;
+    [[nodiscard]] int day() const;
+    [[nodiscard]] int dayOfWeek() const;
 
-    Q_REQUIRED_RESULT int hebrewMonthLength() const;
-    Q_REQUIRED_RESULT int secularMonthLength() const;
-    Q_REQUIRED_RESULT bool isOnHebrewLeapYear() const;
-    Q_REQUIRED_RESULT bool isOnSecularLeapYear() const;
-    Q_REQUIRED_RESULT int kvia() const;
-    Q_REQUIRED_RESULT int hebrewDayNumber() const;
+    [[nodiscard]] int hebrewMonthLength() const;
+    [[nodiscard]] int secularMonthLength() const;
+    [[nodiscard]] bool isOnHebrewLeapYear() const;
+    [[nodiscard]] bool isOnSecularLeapYear() const;
+    [[nodiscard]] int kvia() const;
+    [[nodiscard]] int hebrewDayNumber() const;
 
 private:
     int mYear, mMonth, mDay, mDayOfWeek;

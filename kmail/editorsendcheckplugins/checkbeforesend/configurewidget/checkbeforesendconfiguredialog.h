@@ -16,7 +16,7 @@ public:
     ~CheckBeforeSendConfigureDialog() override;
 
 protected:
-    Q_REQUIRED_RESULT QWidget *createLayout() override;
+    [[nodiscard]] QWidget *createLayout() override;
     void save() override;
     void load() override;
     void reset() override;

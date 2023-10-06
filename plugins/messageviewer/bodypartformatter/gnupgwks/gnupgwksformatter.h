@@ -26,5 +26,5 @@ private:
         Published,
     };
 
-    Q_REQUIRED_RESULT QString render(const GnuPGWKSMessagePart &mp, WKSStatus status) const;
+    [[nodiscard]] QString render(const GnuPGWKSMessagePart &mp, WKSStatus status) const;
 };

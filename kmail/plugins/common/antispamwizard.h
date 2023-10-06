@@ -135,30 +135,30 @@ protected:
                        bool tristateDetection,
                        WizardMode type);
 
-        Q_REQUIRED_RESULT int getVersion() const;
-        Q_REQUIRED_RESULT int getPrio() const;
-        Q_REQUIRED_RESULT QString getId() const;
-        Q_REQUIRED_RESULT QString getVisibleName() const;
-        Q_REQUIRED_RESULT QString getExecutable() const;
-        Q_REQUIRED_RESULT QString getWhatsThisText() const;
-        Q_REQUIRED_RESULT QString getFilterName() const;
-        Q_REQUIRED_RESULT QString getDetectCmd() const;
-        Q_REQUIRED_RESULT QString getSpamCmd() const;
-        Q_REQUIRED_RESULT QString getHamCmd() const;
-        Q_REQUIRED_RESULT QString getNoSpamCmd() const;
-        Q_REQUIRED_RESULT QString getDetectionHeader() const;
-        Q_REQUIRED_RESULT QString getDetectionPattern() const;
-        Q_REQUIRED_RESULT QString getDetectionPattern2() const;
-        Q_REQUIRED_RESULT QString getServerPattern() const;
-        Q_REQUIRED_RESULT bool isServerBased() const;
-        Q_REQUIRED_RESULT bool isDetectionOnly() const;
-        Q_REQUIRED_RESULT bool isUseRegExp() const;
-        Q_REQUIRED_RESULT bool useBayesFilter() const;
-        Q_REQUIRED_RESULT bool hasTristateDetection() const;
-        Q_REQUIRED_RESULT WizardMode getType() const;
+        [[nodiscard]] int getVersion() const;
+        [[nodiscard]] int getPrio() const;
+        [[nodiscard]] QString getId() const;
+        [[nodiscard]] QString getVisibleName() const;
+        [[nodiscard]] QString getExecutable() const;
+        [[nodiscard]] QString getWhatsThisText() const;
+        [[nodiscard]] QString getFilterName() const;
+        [[nodiscard]] QString getDetectCmd() const;
+        [[nodiscard]] QString getSpamCmd() const;
+        [[nodiscard]] QString getHamCmd() const;
+        [[nodiscard]] QString getNoSpamCmd() const;
+        [[nodiscard]] QString getDetectionHeader() const;
+        [[nodiscard]] QString getDetectionPattern() const;
+        [[nodiscard]] QString getDetectionPattern2() const;
+        [[nodiscard]] QString getServerPattern() const;
+        [[nodiscard]] bool isServerBased() const;
+        [[nodiscard]] bool isDetectionOnly() const;
+        [[nodiscard]] bool isUseRegExp() const;
+        [[nodiscard]] bool useBayesFilter() const;
+        [[nodiscard]] bool hasTristateDetection() const;
+        [[nodiscard]] WizardMode getType() const;
         // convenience methods for types
-        Q_REQUIRED_RESULT bool isSpamTool() const;
-        Q_REQUIRED_RESULT bool isVirusTool() const;
+        [[nodiscard]] bool isSpamTool() const;
+        [[nodiscard]] bool isVirusTool() const;
 
     private:
         // used to identify configs for the same tool
@@ -251,9 +251,9 @@ protected Q_SLOTS:
 
 private:
     /* Check for the availability of an executible along the PATH */
-    Q_REQUIRED_RESULT int checkForProgram(const QString &executable) const;
+    [[nodiscard]] int checkForProgram(const QString &executable) const;
     /* generic checks if any option in a page is checked */
-    Q_REQUIRED_RESULT bool anyVirusOptionChecked() const;
+    [[nodiscard]] bool anyVirusOptionChecked() const;
     /* convenience method calling the appropriate filter manager method */
     const QString uniqueNameFor(const QString &name);
     /* convenience method to sort out new and existing filters */
@@ -302,7 +302,7 @@ public:
 
     void setScanProgressText(const QString &toolName);
     void addAvailableTool(const QString &visibleName);
-    Q_REQUIRED_RESULT bool isProgramSelected(const QString &visibleName) const;
+    [[nodiscard]] bool isProgramSelected(const QString &visibleName) const;
 
 Q_SIGNALS:
     void selectionChanged();
@@ -322,18 +322,18 @@ class ASWizSpamRulesPage : public ASWizPage
 public:
     ASWizSpamRulesPage(QWidget *parent, const QString &name);
 
-    Q_REQUIRED_RESULT bool markAsReadSelected() const;
-    Q_REQUIRED_RESULT bool moveSpamSelected() const;
-    Q_REQUIRED_RESULT bool moveUnsureSelected() const;
+    [[nodiscard]] bool markAsReadSelected() const;
+    [[nodiscard]] bool moveSpamSelected() const;
+    [[nodiscard]] bool moveUnsureSelected() const;
 
-    Q_REQUIRED_RESULT QString selectedUnsureCollectionName() const;
-    Q_REQUIRED_RESULT QString selectedUnsureCollectionId() const;
+    [[nodiscard]] QString selectedUnsureCollectionName() const;
+    [[nodiscard]] QString selectedUnsureCollectionId() const;
 
     void allowUnsureFolderSelection(bool enabled);
     void allowMoveSpam(bool enabled);
 
-    Q_REQUIRED_RESULT QString selectedSpamCollectionId() const;
-    Q_REQUIRED_RESULT QString selectedSpamCollectionName() const;
+    [[nodiscard]] QString selectedSpamCollectionId() const;
+    [[nodiscard]] QString selectedSpamCollectionName() const;
 
 protected:
     Akonadi::Collection selectedSpamCollection() const;
@@ -359,11 +359,11 @@ class ASWizVirusRulesPage : public ASWizPage
 public:
     ASWizVirusRulesPage(QWidget *parent, const QString &name);
 
-    Q_REQUIRED_RESULT bool pipeRulesSelected() const;
-    Q_REQUIRED_RESULT bool moveRulesSelected() const;
-    Q_REQUIRED_RESULT bool markReadRulesSelected() const;
+    [[nodiscard]] bool pipeRulesSelected() const;
+    [[nodiscard]] bool moveRulesSelected() const;
+    [[nodiscard]] bool markReadRulesSelected() const;
 
-    Q_REQUIRED_RESULT QString selectedFolderName() const;
+    [[nodiscard]] QString selectedFolderName() const;
 
 Q_SIGNALS:
     void selectionChanged();

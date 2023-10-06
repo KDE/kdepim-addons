@@ -27,7 +27,7 @@ public:
     {
     }
 
-    Q_REQUIRED_RESULT const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
+    [[nodiscard]] const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
         if (idx < 3) {
             return new ItineraryProcessor();
@@ -45,7 +45,7 @@ public:
         return nullptr;
     }
 
-    Q_REQUIRED_RESULT const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
+    [[nodiscard]] const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
         if (idx == 0) {
             auto handler = new ItineraryUrlHandler();
