@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2016, 2017, 2020, 2021.
+# Shinjo Park <kde@peremen.name>, 2016, 2017, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2021-11-14 19:25+0100\n"
+"PO-Revision-Date: 2023-10-08 22:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -224,8 +224,7 @@ msgid "All selected emails are added to white list"
 msgstr "선택한 모든 이메일을 허용 목록에 추가함"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, fuzzy, kde-format
-#| msgid "Emails added to white list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "이메일을 허용 목록에 추가함"

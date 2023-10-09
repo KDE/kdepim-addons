@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-04-22 00:50+0200\n"
+"PO-Revision-Date: 2023-10-08 22:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -88,15 +88,13 @@ msgid "&Anti-Virus Wizard..."
 msgstr "안티바이러스 마법사(&A)..."
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "스팸 방지 마법사"
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "안티바이러스 마법사"

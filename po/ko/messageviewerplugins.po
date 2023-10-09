@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2016, 2017, 2018, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2016, 2017, 2018, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2022-02-20 22:13+0100\n"
+"PO-Revision-Date: 2023-10-08 23:00+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -313,8 +313,7 @@ msgid "'%1' not found"
 msgstr "'%1'을(를) 찾을 수 없음"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
-#, fuzzy, kde-format
-#| msgid "Executable not found."
+#, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "실행 파일을 찾을 수 없습니다."
