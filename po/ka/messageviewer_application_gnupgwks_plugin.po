@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-06 00:48+0000\n"
-"PO-Revision-Date: 2023-10-04 18:45+0200\n"
+"PO-Revision-Date: 2023-10-08 06:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -144,6 +144,8 @@ msgid ""
 "This key is unknown, it could not be found in your local keyring. You may "
 "want to import this key."
 msgstr ""
+"ეს გასაღები უცნობია. მისი აღმოჩენა ლოკალურ ბრელოკში შეუძლებელია. შეიძლება, "
+"ეს გასაღები საჭიროა, შემოიტანოთ."
 
 #: templates/pgpkeymessagepart.html:45
 #, kde-format

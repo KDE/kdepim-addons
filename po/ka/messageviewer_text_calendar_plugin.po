@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-09 01:03+0000\n"
-"PO-Revision-Date: 2023-10-04 18:45+0200\n"
+"PO-Revision-Date: 2023-10-08 06:27+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -170,7 +170,7 @@ msgstr "\"%1\" ახლა მიმდინარეობს."
 #: text_calendar.cpp:740
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
-msgstr ""
+msgstr "\"%1\", დღეს მთელი დღის განმავლობაში ხდება და ამჟამადაც მიმდინარეობს."
 
 #: text_calendar.cpp:749 text_calendar.cpp:761
 #, kde-format
@@ -392,7 +392,7 @@ msgstr "მოსაწვევზე მიმაგრებული ფა�
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
-msgstr ""
+msgstr "მოსაწვევის პირიქით უარი"
 
 #: text_calendar.cpp:1195
 #, kde-format
@@ -424,6 +424,11 @@ msgid ""
 "Would you like to send the organizer a message regarding this invitation?\n"
 "Press the [Cancel] button to cancel the recording operation."
 msgstr ""
+"ორგანიზატორი არ ელის მოსაწვევზე პასუხს, მაგრამ, შეგიძლიათ, მას ელფოსტა "
+"მისწეროთ, თუ გნებავთ.\n"
+"\n"
+"გნებავთ გაუგზავნოთ ორგანიზატორის შეტყობინება ამ მოსაწვევის შესახებ?\n"
+"ჩასაწერის ოპერაციის გასაუქმებლად დააჭირეთ [გაუქმების] ღილაკს."
 
 #: text_calendar.cpp:1273
 #, kde-format
@@ -484,7 +489,7 @@ msgstr "ელფოსტის გადაგდება"
 #: text_calendar.cpp:1372
 #, kde-format
 msgid "Decline invitation"
-msgstr ""
+msgstr "მოწვევის უარი"
 
 #: text_calendar.cpp:1374
 #, kde-format

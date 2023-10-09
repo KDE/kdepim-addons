@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:45+0000\n"
-"PO-Revision-Date: 2022-09-18 06:03+0200\n"
+"PO-Revision-Date: 2023-10-08 06:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.4\n"
 
 #: adblock/adblockinterceptorinterface.cpp:49
 #, kde-format
@@ -237,6 +237,13 @@ msgid ""
 "(allow) any matching URL, which takes priority over any blacklist (blocking) "
 "filter.<br><a href='%1'>%2</a></qt>"
 msgstr ""
+"<qt><p>შეიყვანეთ ფილტრის გამოხულება. ფილტრები შეგიძლია, განსაზღვროთ როგორც :"
+"<ul><li>გარსის სტილის ვაილდკარდი მაგ: <tt>http://www.example.com/ads*</tt>, "
+"ვაილდკარდები <tt>*?[]</tt> შეგიძლიათ გამოიყენოთ</li><li>სრული რეგულარული "
+"გამოსახულება, რომელსაც ჩასვამთ '<tt>/</tt>', e.g. <tt>/\\/(ad|banner)\\./</"
+"tt></li></ul><p>Any filter string can be preceded by '<tt>@@</tt>' to "
+"whitelist (allow) any matching URL, which takes priority over any blacklist "
+"(blocking) filter.<br><a href='%1'>%2</a></qt>"
 
 #: adblock/lib/widgets/adblocksettingwidget.cpp:150
 #, kde-format
