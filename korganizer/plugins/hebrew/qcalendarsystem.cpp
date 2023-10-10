@@ -326,7 +326,7 @@ int QCalendarSystemPrivate::quarter(int month) const
         if (month == 13) { // Consider the short epagomenal month as part of the 4th quarter
             return 4;
         }
-        Q_FALLTHROUGH();
+        [[fallthrough]];
     default:
         return ((month - 1) / 3) + 1;
     }
