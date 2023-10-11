@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-25 00:52+0000\n"
-"PO-Revision-Date: 2023-09-16 10:11\n"
+"PO-Revision-Date: 2023-10-10 14:33\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -303,19 +303,19 @@ msgstr "配置打开 URL 方式插件"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
-msgstr ""
+msgstr "添加规则..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:56
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
-msgstr ""
+msgstr "移除规则"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:57
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
-msgstr ""
+msgstr "修改规则..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:150
 #, kde-format
