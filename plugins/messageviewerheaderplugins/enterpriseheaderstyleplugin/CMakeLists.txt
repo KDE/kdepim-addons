@@ -1,6 +1,6 @@
 kcoreaddons_add_plugin(messageviewer_enterpriseheaderstyleplugin JSON ${CMAKE_CURRENT_BINARY_DIR}/messageviewer_enterpriseheaderstyleplugin.json INSTALL_NAMESPACE messageviewer)
 configure_file(
-        ${CMAKE_CURRENT_SOURCE_DIR}/messageviewer_enterpriseheaderstyleplugin.json.cmake
+        ${CMAKE_CURRENT_SOURCE_DIR}/messageviewer_enterpriseheaderstyleplugin.json.in
         ${CMAKE_CURRENT_BINARY_DIR}/messageviewer_enterpriseheaderstyleplugin.json)
 
    
