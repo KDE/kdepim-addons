@@ -227,11 +227,10 @@ msgstr ""
 "Přepíše všechna nastavení pro každou vybranou složku. Přejete si pokračovat?"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Save Folder Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Folder Settings"
-msgstr "Uložit nastavení složek"
+msgstr ""
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
 #, kde-format

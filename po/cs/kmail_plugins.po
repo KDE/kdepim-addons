@@ -88,18 +88,16 @@ msgid "&Anti-Virus Wizard..."
 msgstr "Průvodce nastavením anti&viru..."
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
-msgstr "Průvodce nastavením antispamu"
+msgstr ""
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
-msgstr "Průvodce nastavením antiviru"
+msgstr ""
 
 #: common/antispamwizard.cpp:91
 #, kde-format
@@ -439,9 +437,3 @@ msgstr "Změn&it..."
 #, kde-format
 msgid "Select attachment:"
 msgstr "Vyberte přílohu:"
-
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Akonadi Vacuum"
-
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Akonadi Fsck"

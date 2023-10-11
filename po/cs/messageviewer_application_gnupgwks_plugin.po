@@ -44,11 +44,10 @@ msgid "An error occurred while importing the key."
 msgstr ""
 
 #: pgpkeyurlhandler.cpp:67 pgpkeyurlhandler.cpp:69
-#, fuzzy, kde-format
-#| msgid "Import error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import error"
-msgstr "Chyba importu"
+msgstr ""
 
 #: pgpkeyurlhandler.cpp:69
 #, kde-format
@@ -61,11 +60,10 @@ msgid "The key has been successfully imported."
 msgstr ""
 
 #: pgpkeyurlhandler.cpp:71
-#, fuzzy, kde-format
-#| msgid "Import finished"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import finished"
-msgstr "Import dokončen"
+msgstr ""
 
 #: templates/gnupgwksmessagepart.html:26
 msgid "Register your OpenPGP key with your email provider. "

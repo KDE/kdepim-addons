@@ -227,11 +227,10 @@ msgid "All selected emails are added to white list"
 msgstr "Všechny vybrané e-maily jsou přidány na bílou listinu"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, fuzzy, kde-format
-#| msgid "Emails added to white list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
-msgstr "E-maily jsou přidány na bílou listinu"
+msgstr ""
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-16 10:08\n"
+"PO-Revision-Date: 2023-10-10 14:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/kdepim-addons/"
+"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/"
 "messageviewerconfiguresettingsplugins.pot\n"
-"X-Crowdin-File-ID: 8128\n"
+"X-Crowdin-File-ID: 45693\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -227,8 +227,7 @@ msgid ""
 msgstr "这将覆盖每个所选文件夹的全部设置，您要继续吗？"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Save Folder Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "保存文件夹设置"
@@ -305,19 +304,19 @@ msgstr "配置打开 URL 方式插件"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
-msgstr ""
+msgstr "添加规则..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:56
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
-msgstr ""
+msgstr "移除规则"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:57
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
-msgstr ""
+msgstr "修改规则..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:150
 #, kde-format

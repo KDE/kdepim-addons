@@ -45,11 +45,10 @@ msgid "Remove"
 msgstr "Odstranit"
 
 #: adblock/adblockfilterlistsview.cpp:98
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
-msgstr "Odstranit"
+msgstr ""
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format

@@ -208,11 +208,10 @@ msgstr ""
 "pokračovat se slučováním?"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
-#, fuzzy, kde-format
-#| msgid "Missing Selected Information"
+#, kde-format
 msgctxt "@title:window"
 msgid "Missing Selected Information"
-msgstr "Chybí vybrané informace"
+msgstr ""
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:63
 #, kde-format

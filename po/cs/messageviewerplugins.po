@@ -311,11 +311,10 @@ msgid "'%1' not found"
 msgstr "'%1' nenalezen"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
-#, fuzzy, kde-format
-#| msgid "Executable not found."
+#, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
-msgstr "Spustitelný soubor nebyl nalezen."
+msgstr ""
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:85
 #, kde-format

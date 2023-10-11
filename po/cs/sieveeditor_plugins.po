@@ -40,8 +40,7 @@ msgstr "Vyberte e-maily"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "Vytvořit složku"
@@ -109,11 +108,10 @@ msgid "Error during loading folders: %1"
 msgstr "Chyba při vytváření složek: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, fuzzy, kde-format
-#| msgid "Load Folders"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Folders"
-msgstr "Načíst složky"
+msgstr ""
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
 #, kde-format

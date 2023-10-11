@@ -190,11 +190,10 @@ msgid "QuickText was changed. Do you want to save it?"
 msgstr "QuickText byl změněn. Přejete si jej uložit?"
 
 #: quicktext/quicktextwidget.cpp:69
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save"
-msgstr "Uložit"
+msgstr ""
 
 #: quicktext/quicktextwidget.cpp:111
 #, kde-format

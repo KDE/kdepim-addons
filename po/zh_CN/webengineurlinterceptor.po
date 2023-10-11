@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-29 01:39+0000\n"
-"PO-Revision-Date: 2023-09-16 10:08\n"
+"PO-Revision-Date: 2023-10-10 14:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,34 +14,31 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/kdepim-addons/webengineurlinterceptor."
+"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/webengineurlinterceptor."
 "pot\n"
-"X-Crowdin-File-ID: 3792\n"
+"X-Crowdin-File-ID: 45301\n"
 
 #: adblock/adblockfilterdialog.cpp:17
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:17
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr "显示广告屏蔽列表"
+msgstr "添加 Adblock 列表"
 
 #: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "添加..."
 
 #: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
 msgid "Modify..."
-msgstr ""
+msgstr "修改..."
 
 #: adblock/adblockfilterlistsview.cpp:56
-#, fuzzy, kde-format
-#| msgid "Delete List"
+#, kde-format
 msgid "Delete"
-msgstr "删除列表"
+msgstr "删除"
 
 #: adblock/adblockfilterlistsview.cpp:98
 #, kde-format
@@ -49,8 +46,7 @@ msgid "Remove"
 msgstr "删除"
 
 #: adblock/adblockfilterlistsview.cpp:98
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "删除"
@@ -63,12 +59,12 @@ msgstr "搜索..."
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "名称："
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "URL："
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
@@ -81,252 +77,3 @@ msgstr "配置广告屏蔽插件"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "已启用广告屏蔽"
-
-#~ msgid "Open Blockable Items..."
-#~ msgstr "打开可屏蔽项..."
-
-#~ msgid "Block Image"
-#~ msgstr "屏蔽图像"
-
-#~ msgid "Cannot load subscription!"
-#~ msgstr "无法加载订阅！"
-
-#~ msgid "Custom Rules"
-#~ msgstr "自定义规则"
-
-#~ msgid "Hide advertisement enabled"
-#~ msgstr "已启用隐藏广告"
-
-#~ msgid "Update interval list of adblock"
-#~ msgstr "广告屏蔽列表更新间隔"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add subscription"
-#~ msgstr "添加订阅"
-
-#~ msgid "Select List:"
-#~ msgstr "选择列表："
-
-#~ msgid "Show List"
-#~ msgstr "显示列表"
-
-#~ msgctxt "@title:window"
-#~ msgid "Blockable Items"
-#~ msgstr "可屏蔽项目"
-
-#~ msgid "No blockable element found."
-#~ msgstr "没找到可屏蔽的元素。"
-
-#~ msgid "Filter"
-#~ msgstr "过滤器"
-
-#~ msgid "Address"
-#~ msgstr "地址"
-
-#~ msgid "Type"
-#~ msgstr "类型"
-
-#~ msgid "Copy URL"
-#~ msgstr "复制 URL"
-
-#~ msgid "Copy filter"
-#~ msgstr "复制过滤器"
-
-#~ msgid "Block item..."
-#~ msgstr "屏蔽项..."
-
-#~ msgid "Open"
-#~ msgstr "打开"
-
-#~ msgid "Remove filter"
-#~ msgstr "移除过滤器"
-
-#~ msgid "Image"
-#~ msgstr "图像"
-
-#~ msgid "Script"
-#~ msgstr "脚本"
-
-#~ msgid "Stylesheet"
-#~ msgstr "样式表"
-
-#~ msgid "Font"
-#~ msgstr "字体"
-
-#~ msgid "Frame"
-#~ msgstr "框架"
-
-#~ msgid "XML Request"
-#~ msgstr "XML请求"
-
-#~ msgid "Object"
-#~ msgstr "对象"
-
-#~ msgid "Audio/Video"
-#~ msgstr "音频/视频"
-
-#~ msgid "Popup window"
-#~ msgstr "弹出窗口"
-
-#~ msgid "Unknown"
-#~ msgstr "未知"
-
-#~ msgctxt "@title:window"
-#~ msgid "Create Filter"
-#~ msgstr "创建过滤器"
-
-#~ msgid "Use default"
-#~ msgstr "使用默认值"
-
-#~ msgid "Yes"
-#~ msgstr "是"
-
-#~ msgid "Not"
-#~ msgstr "否"
-
-#~ msgid "No subscription added"
-#~ msgstr "没有添加订阅"
-
-#~ msgid ""
-#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-#~ "\"filterhelp\">more information</a>):"
-#~ msgstr ""
-#~ "<qt>过滤表达式(如 <tt>http://www.example.com/ad/*</tt>，<a href="
-#~ "\"filterhelp\">更多信息</a>)："
-
-#~ msgid " day"
-#~ msgid_plural " days"
-#~ msgstr[0] " 天"
-
-#~ msgid ""
-#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
-#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
-#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
-#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
-#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
-#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
-#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
-#~ msgstr ""
-#~ "<qt><p>输入过滤表达式。它可以像这样定义：<ul><li>shell 风格的通配符，如："
-#~ "<tt>http://www.example.com/ads*</tt>，其中的 <tt>*?[]</tt> 就是通配符</"
-#~ "li><li>由“<tt>/</tt>”符号包起来的完整正则表达式，如：<tt>/\\/(ad|"
-#~ "banner)\\./</tt></li></ul><p>任何以 “<tt>@@</tt>” 开头的过滤字符串都表示白"
-#~ "名单里的 URL，其优先级要高于黑名单。<br><a href='%1'>%2</a></qt>"
-
-#~ msgid "More information"
-#~ msgstr "更多信息"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "您是否要删除这条规则？"
-
-#~ msgid "Do you want to delete list \"%1\"?"
-#~ msgstr "您是否想要删除列表“%1”？"
-
-#~ msgid "Delete current list"
-#~ msgstr "删除当前列表"
-
-#~ msgid "All Files (*)"
-#~ msgstr "所有文件 (*)"
-
-#~ msgid "Import Filters"
-#~ msgstr "导入过滤器"
-
-#~ msgid "Export Filters"
-#~ msgstr "导出过滤器"
-
-#~ msgid "Download..."
-#~ msgstr "下载..."
-
-#~ msgid "An error occurred while downloading the list: \"%1\""
-#~ msgstr "下载列表时出现错误：“%1”"
-
-#~ msgid "Filters:"
-#~ msgstr "过滤："
-
-#~ msgid "&Blocking filter"
-#~ msgstr "屏蔽过滤器(&B)"
-
-#~ msgid "Exception Filter"
-#~ msgstr "例外过滤器"
-
-#~ msgid "Pattern"
-#~ msgstr "模式"
-
-#~ msgid "custom"
-#~ msgstr "自定义"
-
-#~ msgid "Accept pattern only"
-#~ msgstr "正接受模式"
-
-#~ msgid "At the beginning of the address"
-#~ msgstr "在地址的开头"
-
-#~ msgid "At the end of address"
-#~ msgstr "在地址的结尾"
-
-#~ msgid "Options"
-#~ msgstr "选项"
-
-#~ msgid "First-part only"
-#~ msgstr "只是第一部分"
-
-#~ msgid "Match case"
-#~ msgstr "区分大小写"
-
-#~ msgid "Restrict to domain"
-#~ msgstr "限制到域名"
-
-#~ msgid "Apply to:"
-#~ msgstr "应用到："
-
-#~ msgid "Collapse blocked:"
-#~ msgstr "折叠屏蔽的："
-
-#~ msgid "&Enable Ad Block"
-#~ msgstr "启用广告屏蔽(&E)"
-
-#~ msgid "&Hide filtered elements"
-#~ msgstr "隐藏过滤的元素(&H)"
-
-#~ msgid "Automatic Filters"
-#~ msgstr "自动过滤器"
-
-#~ msgid "Add Filters subscriptions..."
-#~ msgstr "添加过滤器订阅..."
-
-#~ msgid "Remove subscription"
-#~ msgstr "移除订阅"
-
-#~ msgid "Update enabled automatic filters every:"
-#~ msgstr "已启用自动过滤器的更新间隔："
-
-#~ msgid "Show List..."
-#~ msgstr "显示列表..."
-
-#~ msgid "Manual Filters"
-#~ msgstr "手动过滤器"
-
-#~ msgid "Add filter expression"
-#~ msgstr "添加过滤器表达式"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Import Filters..."
-#~ msgstr "导入过滤器..."
-
-#~ msgid "Export filters..."
-#~ msgstr "导出过滤器..."
-
-#~ msgid "Search:"
-#~ msgstr "搜索："
-
-#~ msgid "Edit"
-#~ msgstr "编辑"
-
-#~ msgid "Remove filter expression"
-#~ msgstr "删除过滤器表达式"
-
-#~ msgid "Remove Filter"
-#~ msgstr "移除过滤器"

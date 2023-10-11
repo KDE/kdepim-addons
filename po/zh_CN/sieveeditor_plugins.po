@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-16 10:08\n"
+"PO-Revision-Date: 2023-10-10 14:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/kdepim-addons/sieveeditor_plugins.pot\n"
-"X-Crowdin-File-ID: 3883\n"
+"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/sieveeditor_plugins.pot\n"
+"X-Crowdin-File-ID: 45623\n"
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
@@ -40,8 +40,7 @@ msgstr "选择邮件"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "创建文件夹"
@@ -109,8 +108,7 @@ msgid "Error during loading folders: %1"
 msgstr "加载文件夹时出现错误：%1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, fuzzy, kde-format
-#| msgid "Load Folders"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "加载文件夹"
