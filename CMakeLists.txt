@@ -145,7 +145,6 @@ set_package_properties(Corrosion PROPERTIES
     URL https://github.com/corrosion-rs/corrosion
 )
 
-
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
