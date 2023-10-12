@@ -29,6 +29,7 @@ PimCommon::CustomToolsViewInterface *GrammalectePlugin::createView(KActionCollec
     connect(view, &GrammalecteInterface::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
     connect(view, &GrammalecteInterface::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);
     connect(view, &GrammalecteInterface::activateView, parent, &PimCommon::CustomToolsWidgetNg::slotActivateView);
+    connect(view, &GrammalecteInterface::configure, this, &GrammalectePlugin::showConfigureDialog);
     return view;
 }
 
