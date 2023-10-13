@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-26 00:51+0000\n"
+"POT-Creation-Date: 2023-10-13 02:29+0000\n"
 "PO-Revision-Date: 2023-10-10 14:33\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "&Check Grammar (Grammalecte)"
 msgstr "检查语法 (Grammalecte, &C)"
 
-#: grammalecte/grammalecteplugin.cpp:37
+#: grammalecte/grammalecteplugin.cpp:38
 #, kde-format
 msgid "Grammalecte Plugin"
 msgstr "Grammalecte 插件"

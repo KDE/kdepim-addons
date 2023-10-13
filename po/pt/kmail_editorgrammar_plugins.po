@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-26 00:51+0000\n"
+"POT-Creation-Date: 2023-10-13 02:29+0000\n"
 "PO-Revision-Date: 2023-07-03 01:16+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "&Check Grammar (Grammalecte)"
 msgstr "&Verificar a Gramática (Grammalecte)"
 
-#: grammalecte/grammalecteplugin.cpp:37
+#: grammalecte/grammalecteplugin.cpp:38
 #, kde-format
 msgid "Grammalecte Plugin"
 msgstr "'Plugin' do Grammalecte"
