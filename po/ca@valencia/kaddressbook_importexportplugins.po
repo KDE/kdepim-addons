@@ -779,7 +779,8 @@ msgid ""
 "You have selected a list of contacts, shall they be exported to several "
 "files?"
 msgstr ""
-"Heu seleccionat una llista de contactes. S'han d'exportar a diversos fitxers?"
+"Heu seleccionat una llista de contactes. S'han d'exportar cap a diversos "
+"fitxers?"
 
 #: vcards/vcardimportexportplugininterface.cpp:439
 #, kde-format

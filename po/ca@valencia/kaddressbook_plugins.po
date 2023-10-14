@@ -229,7 +229,7 @@ msgstr "Aniversari"
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:72
 #, kde-format
 msgid "Blog Feed"
-msgstr "Enllaç al blog"
+msgstr "Enllaç cap al blog"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:81
 #, kde-format
