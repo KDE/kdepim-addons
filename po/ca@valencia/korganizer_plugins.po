@@ -775,7 +775,7 @@ msgstr ""
 #, kde-format
 msgid "This plugin provides links to Wikipedia's 'This Day in History' pages."
 msgstr ""
-"Este connector proporciona enllaços a les pàgines d'efemèrides de la "
+"Este connector proporciona enllaços cap a les pàgines d'efemèrides de la "
 "Viquipèdia."
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:37

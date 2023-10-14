@@ -78,9 +78,10 @@ msgid ""
 "this computer. Please ask the event organizer to resend the invitation with "
 "this attachment stored inline instead of a link."
 msgstr ""
-"L'adjunt «%1» de la invitació és un enllaç a la web que és inaccessible des "
-"d'este ordinador. Demaneu a l'organitzador de l'esdeveniment que vos torne a "
-"enviar la invitació amb este adjunt guardat inclòs en lloc d'un enllaç."
+"L'adjunt «%1» de la invitació és un enllaç cap a la web que és inaccessible "
+"des d'este ordinador. Demaneu a l'organitzador de l'esdeveniment que vos "
+"torne a enviar la invitació amb este adjunt guardat inclòs en lloc d'un "
+"enllaç."
 
 #: text_calendar.cpp:426
 #, kde-format

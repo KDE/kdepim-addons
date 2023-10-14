@@ -379,7 +379,7 @@ msgid ""
 "trash folder, but you may change that in the folder view."
 msgstr ""
 "Es crea un filtre per a detectar els missatges infectats per virus i "
-"moure'ls a una carpeta determinada. La carpeta predeterminada és la "
+"moure'ls cap a una carpeta determinada. La carpeta predeterminada és la "
 "paperera, però podeu canviar-la en la vista de carpetes."
 
 #: common/antispamwizard.cpp:1204
