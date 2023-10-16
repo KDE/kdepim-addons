@@ -7,8 +7,6 @@
 #pragma once
 
 #include <MessageViewer/BodyPartURLHandler>
-// needed for [[nodiscard]]
-#include <QtGlobal>
 class QUrlQuery;
 
 class ApplicationPgpKeyUrlHandler : public MessageViewer::Interface::BodyPartURLHandler
