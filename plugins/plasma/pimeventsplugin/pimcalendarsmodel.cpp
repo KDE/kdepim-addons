@@ -52,33 +52,47 @@ PimCalendarsModel::~PimCalendarsModel() = default;
 
 QHash<int, QByteArray> PimCalendarsModel::roleNames() const
 {
-    return {{DataRole, "data"}};
+    return {
+        {CollectionIdRole, "collectionId"},
+        {NameRole, "name"},
+        {EnabledRole, "enabled"},
+        {CheckedRole, "checked"},
+        {IconNameRole, "iconName"},
+    };
 }
 
 QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
 {
+    Q_ASSERT(checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid));
+
     if (role == Qt::DisplayRole) {
         return QSortFilterProxyModel::data(index, role);
     }
 
-    if (role != DataRole) {
-        return {};
-    }
-
     const auto &col = QSortFilterProxyModel::data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+
     if (!col.isValid()) {
         return {};
     }
-    const auto mts = col.contentMimeTypes();
-    const bool enabled = mts.contains(KCalendarCore::Event::eventMimeType()) || mts.contains(KCalendarCore::Todo::todoMimeType());
 
-    auto attr = col.attribute<Akonadi::EntityDisplayAttribute>();
-    const QString icon = attr ? attr->iconName() : QString();
-    return QVariantMap{{QStringLiteral("id"), col.id()},
-                       {QStringLiteral("name"), col.displayName()},
-                       {QStringLiteral("enabled"), enabled},
-                       {QStringLiteral("checked"), mEnabledCalendars.contains(col.id())},
-                       {QStringLiteral("iconName"), icon}};
+    switch (role) {
+    case CollectionIdRole:
+        return col.id();
+    case NameRole:
+        return col.displayName();
+    case EnabledRole: {
+        const auto mts = col.contentMimeTypes();
+        return mts.contains(KCalendarCore::Event::eventMimeType()) || mts.contains(KCalendarCore::Todo::todoMimeType());
+    }
+    case CheckedRole:
+        return mEnabledCalendars.contains(col.id());
+    case IconNameRole: {
+        const auto attr = col.attribute<Akonadi::EntityDisplayAttribute>();
+        const QString icon = attr ? attr->iconName() : QString();
+    }
+    default:
+        return {};
+    }
 }
 
 void PimCalendarsModel::setChecked(qint64 collectionId, bool checked)
