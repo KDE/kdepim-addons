@@ -79,7 +79,7 @@
         "Description[x-test]": "xxCalendar plugin for displaying events from KDE PIM calendarsxx",
         "Description[zh_CN]": "用于显示 KDE PIM 日历中事件的日历插件",
         "Icon": "view-calendar",
-        "Name": "PIM Events Plugin",
+        "Name": "Calendar Events",
         "Name[ar]": "ملحقة أحداث PIM",
         "Name[az]": "Fərdi İdarəetmə hadisələri əlavəsi",
         "Name[bg]": "Приставка за събития от календар и контакти",
