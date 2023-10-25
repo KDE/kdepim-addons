@@ -296,7 +296,7 @@ msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
 "page.</p>"
 msgstr ""
-"<p>Seleccioneu les eines que s'utilitzaran per a la detecció i aneu a la "
+"<p>Seleccioneu les eines que s'utilitzaran per a la detecció i aneu cap a la "
 "pàgina següent.</p>"
 
 #: common/antispamwizard.cpp:1057
