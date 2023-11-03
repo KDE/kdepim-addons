@@ -5,7 +5,6 @@
 */
 
 #include "adblockpluginurlinterceptoraddadblocklistdialog.h"
-#include "adblockpluginurlinterceptoraddadblocklistwidget.h"
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>

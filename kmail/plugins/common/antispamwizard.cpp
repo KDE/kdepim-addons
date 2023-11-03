@@ -36,7 +36,6 @@
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QLabel>
-#include <QList>
 #include <QListWidget>
 #include <QPushButton>
 #include <QTextEdit>

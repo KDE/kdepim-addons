@@ -5,7 +5,6 @@
 */
 
 #include "adblockmanager.h"
-#include "adblockfilter.h"
 #include "adblocklistsmanager.h"
 
 #include "globalsettings_webengineurlinterceptoradblock.h"
