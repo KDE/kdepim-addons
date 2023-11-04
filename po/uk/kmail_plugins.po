@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2023-11-04 01:38+0000\n"
 "PO-Revision-Date: 2023-09-26 18:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -90,98 +90,98 @@ msgstr "Майстер блокування &спаму…"
 msgid "&Anti-Virus Wizard..."
 msgstr "Майстер блокування &вірусів…"
 
-#: common/antispamwizard.cpp:89
+#: common/antispamwizard.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Майстер блокування спаму"
 
-#: common/antispamwizard.cpp:89
+#: common/antispamwizard.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Майстер блокування вірусів"
 
-#: common/antispamwizard.cpp:91
+#: common/antispamwizard.cpp:90
 #, kde-format
 msgid "Welcome to the KMail Anti-Spam Wizard"
 msgstr "Ласкаво просимо до майстра блокування спаму"
 
-#: common/antispamwizard.cpp:91
+#: common/antispamwizard.cpp:90
 #, kde-format
 msgid "Welcome to the KMail Anti-Virus Wizard"
 msgstr "Ласкаво просимо до майстра блокування вірусів"
 
-#: common/antispamwizard.cpp:96
+#: common/antispamwizard.cpp:95
 #, kde-format
 msgid "Options to fine-tune the handling of spam messages"
 msgstr "Параметри для налаштування опрацювання небажаної пошти"
 
-#: common/antispamwizard.cpp:100
+#: common/antispamwizard.cpp:99
 #, kde-format
 msgid "Summary of changes to be made by this wizard"
 msgstr "Зведення змін, які буде зроблено цим майстром"
 
-#: common/antispamwizard.cpp:103
+#: common/antispamwizard.cpp:102
 #, kde-format
 msgid "Options to fine-tune the handling of virus messages"
 msgstr "Параметри для налаштування опрацювання пошти з вірусами"
 
-#: common/antispamwizard.cpp:170
+#: common/antispamwizard.cpp:169
 #, kde-format
 msgid "Virus handling"
 msgstr "Робота з вірусами"
 
-#: common/antispamwizard.cpp:249 common/antispamwizard.cpp:251
-#: common/antispamwizard.cpp:554
+#: common/antispamwizard.cpp:248 common/antispamwizard.cpp:250
+#: common/antispamwizard.cpp:553
 #, kde-format
 msgid "Spam Handling"
 msgstr "Робота зі спамом"
 
-#: common/antispamwizard.cpp:285 common/antispamwizard.cpp:287
-#: common/antispamwizard.cpp:569
+#: common/antispamwizard.cpp:284 common/antispamwizard.cpp:286
+#: common/antispamwizard.cpp:568
 #, kde-format
 msgid "Semi spam (unsure) handling"
 msgstr "Робота з напівспамом (невпевнений)"
 
-#: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
-#: common/antispamwizard.cpp:576
+#: common/antispamwizard.cpp:340 common/antispamwizard.cpp:342
+#: common/antispamwizard.cpp:575
 #, kde-format
 msgid "Classify as Spam"
 msgstr "Класифікувати як спам"
 
-#: common/antispamwizard.cpp:352
+#: common/antispamwizard.cpp:351
 #, kde-format
 msgid "Spam"
 msgstr "Спам"
 
-#: common/antispamwizard.cpp:380 common/antispamwizard.cpp:382
-#: common/antispamwizard.cpp:577
+#: common/antispamwizard.cpp:379 common/antispamwizard.cpp:381
+#: common/antispamwizard.cpp:576
 #, kde-format
 msgid "Classify as NOT Spam"
 msgstr "Класифікувати як НЕ спам"
 
-#: common/antispamwizard.cpp:391
+#: common/antispamwizard.cpp:390
 #, kde-format
 msgid "Ham"
 msgstr "Не спам"
 
-#: common/antispamwizard.cpp:457
+#: common/antispamwizard.cpp:456
 #, kde-format
 msgid "Scanning for %1..."
 msgstr "Сканування на %1…"
 
-#: common/antispamwizard.cpp:501
+#: common/antispamwizard.cpp:500
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
 msgstr "Сканування на засоби блокування спаму завершено."
 
-#: common/antispamwizard.cpp:501
+#: common/antispamwizard.cpp:500
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
 msgstr "Сканування на засоби блокування вірусів завершено."
 
-#: common/antispamwizard.cpp:503
+#: common/antispamwizard.cpp:502
 #, kde-format
 msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
@@ -190,12 +190,12 @@ msgstr ""
 "<p>Не знайдено засобів виявлення спаму. Встановіть програму виявлення спаму "
 "і повторно запустіть цей майстер.</p>"
 
-#: common/antispamwizard.cpp:506
+#: common/antispamwizard.cpp:505
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
 msgstr "Сканування закінчене. Не знайдено засобів блокування вірусів."
 
-#: common/antispamwizard.cpp:528
+#: common/antispamwizard.cpp:527
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -204,7 +204,7 @@ msgstr ""
 "<p>Повідомлення, класифіковані як спам, позначатимуться як прочитані.<br /"
 ">Повідомлення зі спамом пересуваються у теку <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:533
+#: common/antispamwizard.cpp:532
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -213,7 +213,7 @@ msgstr ""
 "<p>Повідомлення, класифіковані як спам, позначатимуться як прочитані.<br /"
 ">Повідомлення зі спамом не пересуваються у певну теку.</p>"
 
-#: common/antispamwizard.cpp:539
+#: common/antispamwizard.cpp:538
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -222,7 +222,7 @@ msgstr ""
 "<p>Повідомлення, класифіковані як спам, не позначатимуться як прочитані.<br /"
 ">Повідомлення зі спамом пересуваються у теку <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:544
+#: common/antispamwizard.cpp:543
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -231,7 +231,7 @@ msgstr ""
 "<p>Повідомлення, класифіковані як спам, не позначатимуться як прочитані.<br /"
 ">Повідомлення зі спамом не пересуваються у певну теку.</p>"
 
-#: common/antispamwizard.cpp:571
+#: common/antispamwizard.cpp:570
 #, kde-format
 msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
@@ -240,17 +240,17 @@ msgstr ""
 "<p>Тека для повідомлень, які класифіковано як непевні (ймовірно, спам): <i>"
 "%1</i>.</p>"
 
-#: common/antispamwizard.cpp:581
+#: common/antispamwizard.cpp:580
 #, kde-format
 msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
 msgstr "<p>Майстер створить наступні фільтри:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:584
+#: common/antispamwizard.cpp:583
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
 msgstr "<p>Майстер замінить наступні фільтри:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:981
+#: common/antispamwizard.cpp:980
 #, kde-format
 msgid ""
 "The wizard will search for any tools to do spam detection\n"
@@ -259,7 +259,7 @@ msgstr ""
 "Майстер знайде інструменти виявлення спаму\n"
 "і налаштує KMail для роботи з ними."
 
-#: common/antispamwizard.cpp:983
+#: common/antispamwizard.cpp:982
 #, kde-format
 msgid ""
 "<p>Here you can get some assistance in setting up KMail's filter rules to "
@@ -284,7 +284,7 @@ msgstr ""
 "проблеми з реакцією KMail на ваші дії. Для повернення до звичайної поведінки "
 "вилучіть фільтри, створені цим майстром.</p>"
 
-#: common/antispamwizard.cpp:1033
+#: common/antispamwizard.cpp:1032
 #, kde-format
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
@@ -293,22 +293,22 @@ msgstr ""
 "<p>Будь ласка, виберіть засоби для виявлення небажаної пошти (спаму) і "
 "перейдіть на наступну сторінку.</p>"
 
-#: common/antispamwizard.cpp:1057
+#: common/antispamwizard.cpp:1056
 #, kde-format
 msgid "&Mark detected spam messages as read"
 msgstr "&Позначити виявлені повідомлення спаму як прочитані"
 
-#: common/antispamwizard.cpp:1058
+#: common/antispamwizard.cpp:1057
 #, kde-format
 msgid "Mark messages which have been classified as spam as read."
 msgstr "Позначати виявлені небажані повідомлення як прочитані."
 
-#: common/antispamwizard.cpp:1061
+#: common/antispamwizard.cpp:1060
 #, kde-format
 msgid "Move &known spam to:"
 msgstr "Пересувати &виявлений спам до:"
 
-#: common/antispamwizard.cpp:1063
+#: common/antispamwizard.cpp:1062
 #, kde-format
 msgid ""
 "The default folder for spam messages is the trash folder, but you may change "
@@ -317,12 +317,12 @@ msgstr ""
 "Типова тека для спам-повідомлень — це смітник, але нижче можна вказати й "
 "іншу теку."
 
-#: common/antispamwizard.cpp:1076
+#: common/antispamwizard.cpp:1075
 #, kde-format
 msgid "Move &probable spam to:"
 msgstr "Пересувати &ймовірний спам у:"
 
-#: common/antispamwizard.cpp:1078
+#: common/antispamwizard.cpp:1077
 #, kde-format
 msgid ""
 "The default folder is the inbox folder, but you may change that in the "
@@ -333,12 +333,12 @@ msgstr ""
 "підтримують класифікацію ймовірного спаму. Ви не зможете вибрати теку, якщо "
 "ваш засіб не має таких функціональних можливостей.</p>"
 
-#: common/antispamwizard.cpp:1188
+#: common/antispamwizard.cpp:1187
 #, kde-format
 msgid "Check messages using the anti-virus tools"
 msgstr "Перевіряти повідомлення засобами блокування вірусів"
 
-#: common/antispamwizard.cpp:1190
+#: common/antispamwizard.cpp:1189
 #, kde-format
 msgid ""
 "Let the anti-virus tools check your messages. The wizard will create "
@@ -351,12 +351,12 @@ msgstr ""
 "фільтри будуть реагувати на ці мітки та, наприклад, пересуватимуть "
 "повідомлення зі спамом у окрему теку."
 
-#: common/antispamwizard.cpp:1196
+#: common/antispamwizard.cpp:1195
 #, kde-format
 msgid "Move detected viral messages to the selected folder"
 msgstr "Пересувати виявлені повідомлення з вірусами до вибраної теки"
 
-#: common/antispamwizard.cpp:1198
+#: common/antispamwizard.cpp:1197
 #, kde-format
 msgid ""
 "A filter to detect messages classified as virus-infected and to move those "
@@ -367,12 +367,12 @@ msgstr ""
 "вірусом та пересування цих повідомлень у вказану теку. Типова тека — це тека "
 "смітника, але ви можете вказати іншу у перегляді тек."
 
-#: common/antispamwizard.cpp:1204
+#: common/antispamwizard.cpp:1203
 #, kde-format
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Додатково позначати виявлені повідомлення з вірусами як прочитані"
 
-#: common/antispamwizard.cpp:1207
+#: common/antispamwizard.cpp:1206
 #, kde-format
 msgid ""
 "Mark messages which have been classified as virus-infected as read, as well "
