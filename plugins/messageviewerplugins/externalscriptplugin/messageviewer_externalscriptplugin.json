@@ -38,6 +38,7 @@
         "EnabledByDefault": false,
         "Name": "External Script",
         "Name[ar]": "السّكربت الخارجيّ",
+        "Name[ast]": "Script esternu",
         "Name[az]": "Xarici skript",
         "Name[bg]": "Външен скрипт",
         "Name[ca@valencia]": "Script extern",
