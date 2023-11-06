@@ -28,7 +28,7 @@ ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget() = default;
 
 void ConfirmAddressConfigureWidget::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String("Confirm Address"));
+    KConfigGroup grp(KSharedConfig::openConfig(), QStringLiteral("Confirm Address"));
     mConfirmAddressConfigureTab->loadSettings(grp);
 }
 
@@ -40,7 +40,7 @@ void ConfirmAddressConfigureWidget::saveSettings()
     for (const QString &group : filterGroups) {
         config->deleteGroup(group);
     }
-    KConfigGroup grp(config, QLatin1String("Confirm Address"));
+    KConfigGroup grp(config, QStringLiteral("Confirm Address"));
     mConfirmAddressConfigureTab->saveSettings(grp);
 }
 

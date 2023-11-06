@@ -32,7 +32,7 @@ Picoftheday::Picoftheday(QObject *parent, const QVariantList &args)
     : Decoration(parent, args)
 {
     KConfig _config(QStringLiteral("korganizerrc"));
-    KConfigGroup config(&_config, QLatin1String("Picture of the Day Plugin"));
+    KConfigGroup config(&_config, QStringLiteral("Picture of the Day Plugin"));
     mThumbSize = config.readEntry("InitialThumbnailSize", QSize(120, 60));
 }
 

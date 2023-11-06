@@ -664,7 +664,7 @@ void CSVImportDialog::saveTemplate()
     QDir().mkpath(fileInfo.absolutePath());
 
     KConfig config(fileName);
-    KConfigGroup generalGroup(&config, QLatin1String("General"));
+    KConfigGroup generalGroup(&config, QStringLiteral("General"));
     generalGroup.writeEntry("DatePattern", mDatePatternEdit->text());
     generalGroup.writeEntry("Columns", mModel->columnCount());
     generalGroup.writeEntry("DelimiterType", mDelimiterGroup->checkedId());
@@ -672,10 +672,10 @@ void CSVImportDialog::saveTemplate()
     generalGroup.writeEntry("SkipFirstRow", mSkipFirstRow->isChecked());
     generalGroup.writeEntry("QuoteType", mComboQuote->currentIndex());
 
-    KConfigGroup miscGroup(&config, QLatin1String("Misc"));
+    KConfigGroup miscGroup(&config, QStringLiteral("Misc"));
     miscGroup.writeEntry("Name", name);
 
-    KConfigGroup columnMapGroup(&config, QLatin1String("csv column map"));
+    KConfigGroup columnMapGroup(&config, QStringLiteral("csv column map"));
     for (int column = 0; column < numberOfColumn; ++column) {
         columnMapGroup.writeEntry(QString::number(column), mModel->data(mModel->index(0, column), Qt::DisplayRole).toUInt());
     }

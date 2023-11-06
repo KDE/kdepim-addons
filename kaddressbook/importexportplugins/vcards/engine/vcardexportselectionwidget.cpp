@@ -86,7 +86,7 @@ VCardExportSelectionWidget::~VCardExportSelectionWidget()
 void VCardExportSelectionWidget::readSettings()
 {
     KConfig config(QStringLiteral("kaddressbookrc"));
-    const KConfigGroup group(&config, QLatin1String("XXPortVCard"));
+    const KConfigGroup group(&config, QStringLiteral("XXPortVCard"));
 
     mPrivateBox->setChecked(group.readEntry("ExportPrivateFields", true));
     mBusinessBox->setChecked(group.readEntry("ExportBusinessFields", true));
@@ -99,7 +99,7 @@ void VCardExportSelectionWidget::readSettings()
 void VCardExportSelectionWidget::writeSettings()
 {
     KConfig config(QStringLiteral("kaddressbookrc"));
-    KConfigGroup group(&config, QLatin1String("XXPortVCard"));
+    KConfigGroup group(&config, QStringLiteral("XXPortVCard"));
 
     group.writeEntry("ExportPrivateFields", mPrivateBox->isChecked());
     group.writeEntry("ExportBusinessFields", mBusinessBox->isChecked());

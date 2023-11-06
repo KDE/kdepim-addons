@@ -89,7 +89,7 @@ void AkonadiPimDataSource::onSettingsChanged()
     }
 
     const auto config = KSharedConfig::openConfig();
-    const auto group = config->group(QLatin1String("PIMEventsPlugin"));
+    const auto group = config->group(QStringLiteral("PIMEventsPlugin"));
     const QList<qint64> calendars = group.readEntry(QStringLiteral("calendars"), QList<qint64>());
     QSet<Akonadi::Collection> configured;
     for (const auto colId : calendars) {

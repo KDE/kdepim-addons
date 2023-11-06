@@ -119,7 +119,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
 
 void CheckBeforeSendInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String("Check Before Send"));
+    KConfigGroup grp(KSharedConfig::openConfig(), QStringLiteral("Check Before Send"));
     mSendPlainText = grp.readEntry("SendPlainText", false);
     mCheckMailTransport = grp.readEntry("SmtpDefinedInIdentity", false);
     mCheckDuplicateEmails = grp.readEntry("CheckDuplicatedEmails", false);

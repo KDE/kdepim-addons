@@ -43,7 +43,7 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
     setSourceModel(mEtm);
 
     auto config = KSharedConfig::openConfig();
-    auto group = config->group(QLatin1String("PIMEventsPlugin"));
+    auto group = config->group(QStringLiteral("PIMEventsPlugin"));
     const auto enabledCalendarIds = group.readEntry(QStringLiteral("calendars"), QList<qint64>());
     mEnabledCalendars = QSet<qint64>(enabledCalendarIds.begin(), enabledCalendarIds.end());
 }
@@ -113,7 +113,7 @@ void PimCalendarsModel::setChecked(qint64 collectionId, bool checked)
 void PimCalendarsModel::saveConfig()
 {
     auto config = KSharedConfig::openConfig();
-    auto group = config->group(QLatin1String("PIMEventsPlugin"));
+    auto group = config->group(QStringLiteral("PIMEventsPlugin"));
     auto savedList = group.readEntry("calendars", QList<qint64>());
     auto currentList = mEnabledCalendars.values();
     std::sort(savedList.begin(), savedList.end());

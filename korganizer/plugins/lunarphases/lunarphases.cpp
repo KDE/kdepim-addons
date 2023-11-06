@@ -52,7 +52,7 @@ Lunarphases::Lunarphases(QObject *parent, const QVariantList &args)
     : Decoration(parent, args)
 {
     KConfig _config(QStringLiteral("korganizerrc"));
-    KConfigGroup config(&_config, QLatin1String("Calendar/Lunar Phases Plugin"));
+    KConfigGroup config(&_config, QStringLiteral("Calendar/Lunar Phases Plugin"));
 }
 
 QString Lunarphases::info() const

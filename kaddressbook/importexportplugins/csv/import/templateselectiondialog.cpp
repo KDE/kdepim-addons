@@ -116,7 +116,7 @@ public:
                     continue;
                 }
 
-                KConfigGroup group(&config, QLatin1String("Misc"));
+                KConfigGroup group(&config, QStringLiteral("Misc"));
                 TemplateInfo info;
                 info.displayName = group.readEntry("Name");
                 info.fileName = fileName;
