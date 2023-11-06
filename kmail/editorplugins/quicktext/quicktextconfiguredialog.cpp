@@ -53,7 +53,7 @@ QuickTextConfigureDialog::~QuickTextConfigureDialog()
 
 void QuickTextConfigureDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
@@ -61,7 +61,7 @@ void QuickTextConfigureDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(300, 350));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

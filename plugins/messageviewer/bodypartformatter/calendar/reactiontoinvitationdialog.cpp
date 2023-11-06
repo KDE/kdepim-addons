@@ -64,14 +64,14 @@ void ReactionToInvitationDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigReactionToInvitationDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigReactionToInvitationDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ReactionToInvitationDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigReactionToInvitationDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigReactionToInvitationDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

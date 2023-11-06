@@ -58,14 +58,14 @@ void EmailAddressSelectionLdapDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigEmailAddressSelectionLdapDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigEmailAddressSelectionLdapDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void EmailAddressSelectionLdapDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigEmailAddressSelectionLdapDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigEmailAddressSelectionLdapDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 

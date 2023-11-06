@@ -54,7 +54,7 @@ ConfirmAddressDialog::~ConfirmAddressDialog()
 
 void ConfirmAddressDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigConfirmAddressDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigConfirmAddressDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
@@ -63,7 +63,7 @@ void ConfirmAddressDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigConfirmAddressDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigConfirmAddressDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

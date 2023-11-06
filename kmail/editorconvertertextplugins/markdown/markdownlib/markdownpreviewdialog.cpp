@@ -45,7 +45,7 @@ MarkdownPreviewDialog::~MarkdownPreviewDialog()
 
 void MarkdownPreviewDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownPreviewDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myMarkdownPreviewDialogGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
@@ -53,7 +53,7 @@ void MarkdownPreviewDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownPreviewDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myMarkdownPreviewDialogGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

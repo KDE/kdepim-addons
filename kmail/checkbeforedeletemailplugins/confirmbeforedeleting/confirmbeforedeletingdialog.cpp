@@ -50,7 +50,7 @@ void ConfirmBeforeDeletingDialog::slotSave()
 
 void ConfirmBeforeDeletingDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfirmBeforeDeletingConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfirmBeforeDeletingConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
@@ -59,7 +59,7 @@ void ConfirmBeforeDeletingDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfirmBeforeDeletingConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfirmBeforeDeletingConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

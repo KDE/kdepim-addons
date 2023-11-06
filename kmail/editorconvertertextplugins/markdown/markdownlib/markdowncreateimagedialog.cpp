@@ -61,7 +61,7 @@ QString MarkdownCreateImageDialog::linkStr() const
 
 void MarkdownCreateImageDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownCreateImageDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myMarkdownCreateImageDialogGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
@@ -69,7 +69,7 @@ void MarkdownCreateImageDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownCreateImageDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myMarkdownCreateImageDialogGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

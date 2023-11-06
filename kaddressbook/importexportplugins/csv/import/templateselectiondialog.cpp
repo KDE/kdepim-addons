@@ -112,11 +112,11 @@ public:
 
                 KConfig config(fileName, KConfig::SimpleConfig);
 
-                if (!config.hasGroup("csv column map")) {
+                if (!config.hasGroup(QLatin1String("csv column map"))) {
                     continue;
                 }
 
-                KConfigGroup group(&config, "Misc");
+                KConfigGroup group(&config, QLatin1String("Misc"));
                 TemplateInfo info;
                 info.displayName = group.readEntry("Name");
                 info.fileName = fileName;

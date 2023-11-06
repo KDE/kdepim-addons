@@ -54,14 +54,14 @@ void ScamConfigureSettingsDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myScamConfigureSettingsDialogConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myScamConfigureSettingsDialogConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ScamConfigureSettingsDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openStateConfig(), myScamConfigureSettingsDialogConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), QLatin1String(myScamConfigureSettingsDialogConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }

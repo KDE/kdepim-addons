@@ -270,7 +270,7 @@ void MarkdownInterface::enableDisablePluginActions(bool richText)
 
 void MarkdownInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Markdown");
+    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String("Markdown"));
 
     mEnableEmbeddedLabel = grp.readEntry("Enable Embedded Latex", false);
     mEnableExtraDefinitionLists = grp.readEntry("Enable Extra Definition Lists", false);

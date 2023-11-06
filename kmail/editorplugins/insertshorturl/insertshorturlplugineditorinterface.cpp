@@ -44,7 +44,7 @@ void InsertShorturlPluginEditorInterface::loadEngine()
         disconnect(mCurrentEngine, &ShortUrlEngineInterface::shortUrlFailed, this, &InsertShorturlPluginEditorInterface::slotShortUrlFailed);
     }
 
-    KConfigGroup grp(KSharedConfig::openConfig(), "ShortUrl");
+    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String("ShortUrl"));
     const QString engineName = grp.readEntry("EngineName");
     mCurrentEngine = mLstInterface.value(engineName);
     if (!mCurrentEngine && !mLstInterface.isEmpty()) {

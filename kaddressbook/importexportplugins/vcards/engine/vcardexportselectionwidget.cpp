@@ -99,7 +99,7 @@ void VCardExportSelectionWidget::readSettings()
 void VCardExportSelectionWidget::writeSettings()
 {
     KConfig config(QStringLiteral("kaddressbookrc"));
-    KConfigGroup group(&config, "XXPortVCard");
+    KConfigGroup group(&config, QLatin1String("XXPortVCard"));
 
     group.writeEntry("ExportPrivateFields", mPrivateBox->isChecked());
     group.writeEntry("ExportBusinessFields", mBusinessBox->isChecked());

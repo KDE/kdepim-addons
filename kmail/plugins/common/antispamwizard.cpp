@@ -792,10 +792,10 @@ void AntiSpamWizard::ConfigReader::readAndMergeConfig()
     QString groupName = (mMode == AntiSpam) ? QStringLiteral("Spamtool #%1") : QStringLiteral("Virustool #%1");
     // read the configuration from the global config file
     mConfig->setReadDefaults(true);
-    KConfigGroup general(mConfig, "General");
+    KConfigGroup general(mConfig, QLatin1String("General"));
     const int registeredTools = general.readEntry("tools", 0);
     for (int i = 1; i <= registeredTools; ++i) {
-        KConfigGroup toolConfig(mConfig, groupName.arg(i));
+        KConfigGroup toolConfig(mConfig, QLatin1String(groupName.arg(i)));
         if (!toolConfig.readEntry("HeadersOnly", false)) {
             mToolList.append(readToolConfig(toolConfig));
         }
@@ -804,10 +804,10 @@ void AntiSpamWizard::ConfigReader::readAndMergeConfig()
     // read the configuration from the user config file
     // and merge newer config data
     mConfig->setReadDefaults(false);
-    KConfigGroup user_general(mConfig, "General");
+    KConfigGroup user_general(mConfig, QLatin1String("General"));
     const int user_registeredTools = user_general.readEntry("tools", 0);
     for (int i = 1; i <= user_registeredTools; ++i) {
-        KConfigGroup toolConfig(mConfig, groupName.arg(i));
+        KConfigGroup toolConfig(mConfig, QLatin1String(groupName.arg(i)));
         if (!toolConfig.readEntry("HeadersOnly", false)) {
             mergeToolConfig(readToolConfig(toolConfig));
         }

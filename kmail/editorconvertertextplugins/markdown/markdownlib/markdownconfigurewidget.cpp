@@ -35,14 +35,14 @@ MarkdownConfigureWidget::~MarkdownConfigureWidget() = default;
 
 void MarkdownConfigureWidget::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String(myConfigGroupName));
     mLatexSupport->setChecked(grp.readEntry("Enable Embedded Latex", false));
     mExtraDefinitionLists->setChecked(grp.readEntry("Enable Extra Definition Lists", false));
 }
 
 void MarkdownConfigureWidget::saveSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String(myConfigGroupName));
     grp.writeEntry("Enable Embedded Latex", mLatexSupport->isChecked());
     grp.writeEntry("Enable Extra Definition Lists", mExtraDefinitionLists->isChecked());
 }

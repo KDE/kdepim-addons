@@ -47,14 +47,14 @@ void ExpireAccountTrashFolderConfigDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ExpireAccountTrashFolderConfigDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openStateConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), QLatin1String(myConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }

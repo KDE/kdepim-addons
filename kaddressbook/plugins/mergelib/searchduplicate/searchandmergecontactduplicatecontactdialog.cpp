@@ -96,14 +96,14 @@ void SearchAndMergeContactDuplicateContactDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(mySearchAndMergeContactDuplicateContactDialogGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void SearchAndMergeContactDuplicateContactDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openStateConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), QLatin1String(mySearchAndMergeContactDuplicateContactDialogGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }

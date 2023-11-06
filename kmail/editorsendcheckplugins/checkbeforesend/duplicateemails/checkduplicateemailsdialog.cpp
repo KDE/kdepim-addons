@@ -56,7 +56,7 @@ void CheckDuplicateEmailsDialog::setDuplicatedEmails(const QMap<QString, int> &e
 
 void CheckDuplicateEmailsDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigCheckDuplicateEmailsDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigCheckDuplicateEmailsDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
@@ -64,7 +64,7 @@ void CheckDuplicateEmailsDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigCheckDuplicateEmailsDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigCheckDuplicateEmailsDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

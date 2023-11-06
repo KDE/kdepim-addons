@@ -21,7 +21,7 @@ Datenums::Datenums(QObject *parent, const QVariantList &args)
     : Decoration(parent, args)
 {
     KConfig _config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
-    KConfigGroup config(&_config, "Calendar/Datenums Plugin");
+    KConfigGroup config(&_config, QLatin1String("Calendar/Datenums Plugin"));
     mDisplayedInfo = (DayNumbers)config.readEntry("ShowDayNumbers", int(DayOfYear | DaysRemaining));
 }
 

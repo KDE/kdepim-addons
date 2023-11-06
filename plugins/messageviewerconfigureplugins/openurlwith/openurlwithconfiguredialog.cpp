@@ -54,14 +54,14 @@ void OpenUrlWithConfigureDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myOpenUrlWithConfigureConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myOpenUrlWithConfigureConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void OpenUrlWithConfigureDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openStateConfig(), myOpenUrlWithConfigureConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), QLatin1String(myOpenUrlWithConfigureConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }
