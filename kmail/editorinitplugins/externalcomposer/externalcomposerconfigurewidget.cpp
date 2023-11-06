@@ -65,7 +65,7 @@ ExternalComposerConfigureWidget::~ExternalComposerConfigureWidget() = default;
 void ExternalComposerConfigureWidget::loadSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group = config->group(myExternalComposerGroupName);
+    KConfigGroup group = config->group(QLatin1String(myExternalComposerGroupName));
     mExternalEditorCheck->setChecked(group.readEntry("Enabled", false));
     mEditorRequester->setText(group.readEntry("ComposerPath", QStringLiteral("kwrite %f")));
 }
@@ -73,7 +73,7 @@ void ExternalComposerConfigureWidget::loadSettings()
 void ExternalComposerConfigureWidget::saveSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group = config->group(myExternalComposerGroupName);
+    KConfigGroup group = config->group(QLatin1String(myExternalComposerGroupName));
     group.writeEntry("Enabled", mExternalEditorCheck->isChecked());
     group.writeEntry("ComposerPath", mEditorRequester->text());
 }

@@ -37,7 +37,7 @@ EmailAddressSelectionLdapDialog::EmailAddressSelectionLdapDialog(QWidget *parent
     mainLayout->addWidget(searchLDAPButton);
 
     KConfig config(QStringLiteral("kabldaprc"));
-    KConfigGroup group = config.group("LDAP");
+    KConfigGroup group = config.group(QLatin1String("LDAP"));
     int numHosts = group.readEntry("NumSelectedHosts", 0);
     if (!numHosts) {
         searchLDAPButton->setVisible(false);

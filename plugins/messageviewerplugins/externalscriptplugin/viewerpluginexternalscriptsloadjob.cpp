@@ -33,7 +33,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
 
                     KConfig config(filePath);
                     qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "load file " << filePath;
-                    KConfigGroup group(&config, QLatin1String(QStringLiteral("Desktop Entry")));
+                    KConfigGroup group(&config, QStringLiteral("Desktop Entry"));
                     if (group.isValid()) {
                         ViewerPluginExternalScriptInfo info;
                         const QString name = group.readEntry("Name", QString());

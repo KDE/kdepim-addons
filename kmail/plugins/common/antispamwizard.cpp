@@ -795,7 +795,7 @@ void AntiSpamWizard::ConfigReader::readAndMergeConfig()
     KConfigGroup general(mConfig, QLatin1String("General"));
     const int registeredTools = general.readEntry("tools", 0);
     for (int i = 1; i <= registeredTools; ++i) {
-        KConfigGroup toolConfig(mConfig, QLatin1String(groupName.arg(i)));
+        KConfigGroup toolConfig(mConfig, groupName.arg(i));
         if (!toolConfig.readEntry("HeadersOnly", false)) {
             mToolList.append(readToolConfig(toolConfig));
         }
@@ -807,7 +807,7 @@ void AntiSpamWizard::ConfigReader::readAndMergeConfig()
     KConfigGroup user_general(mConfig, QLatin1String("General"));
     const int user_registeredTools = user_general.readEntry("tools", 0);
     for (int i = 1; i <= user_registeredTools; ++i) {
-        KConfigGroup toolConfig(mConfig, QLatin1String(groupName.arg(i)));
+        KConfigGroup toolConfig(mConfig, groupName.arg(i));
         if (!toolConfig.readEntry("HeadersOnly", false)) {
             mergeToolConfig(readToolConfig(toolConfig));
         }
