@@ -1,0 +1,387 @@
+# Copyright (C) 2023 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# SPDX-FileCopyrightText: 2023 Enol P. <enolp@softastur.org>
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"PO-Revision-Date: 2023-11-06 01:03+0100\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: \n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.2\n"
+
+#: dkim-verify/dkimadvancedwidget.cpp:19
+#, kde-format
+msgid "Still verify the signature, if a domain is only testing DKIM"
+msgstr ""
+
+#: dkim-verify/dkimadvancedwidget.cpp:20
+#, kde-format
+msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgstr ""
+
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimgeneralwidget.cpp:42
+#, kde-format
+msgid "Nothing"
+msgstr ""
+
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#, kde-format
+msgid "Warning"
+msgstr ""
+
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#, kde-format
+msgid "Error"
+msgstr ""
+
+#: dkim-verify/dkimadvancedwidget.cpp:34
+#, kde-format
+msgid "Treat RSA-SHA1 sign algorithm as:"
+msgstr ""
+
+#: dkim-verify/dkimadvancedwidget.cpp:38
+#, kde-format
+msgid "Treat small Key as:"
+msgstr ""
+
+#: dkim-verify/dkimadvancedwidget.cpp:40
+#, kde-format
+msgid "Configure"
+msgstr ""
+
+#: dkim-verify/dkimadvancedwidget.cpp:43
+#, kde-format
+msgid "Authentication Server verified:"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Authentication Verified Server"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
+#, kde-format
+msgid "New Server:"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
+#, kde-format
+msgid "New Server"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
+#, kde-format
+msgid "Modify Server"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
+#, kde-format
+msgid "Server:"
+msgstr ""
+
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
+#, kde-format
+msgid "Do you want to delete selected server(s) name?"
+msgstr ""
+
+#: dkim-verify/dkimconfiguredialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure DKIM"
+msgstr ""
+
+#: dkim-verify/dkimconfiguretab.cpp:38
+#: foldersettings/folderconfiguresettingspagewidget.cpp:36
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: dkim-verify/dkimconfiguretab.cpp:40
+#, kde-format
+msgid "Record Keys"
+msgstr ""
+
+#: dkim-verify/dkimconfiguretab.cpp:42
+#, kde-format
+msgid "Policy"
+msgstr ""
+
+#: dkim-verify/dkimconfiguretab.cpp:44
+#, kde-format
+msgid "Advanced"
+msgstr ""
+
+#: dkim-verify/dkimgeneralwidget.cpp:18
+#, kde-format
+msgid "Enable DKIM Support"
+msgstr ""
+
+#: dkim-verify/dkimgeneralwidget.cpp:19
+#, kde-format
+msgid "Save DKIM Result"
+msgstr ""
+
+#: dkim-verify/dkimgeneralwidget.cpp:21
+#, kde-format
+msgid "Replace DKIM result by Authentication-Result header value"
+msgstr ""
+
+#: dkim-verify/dkimgeneralwidget.cpp:37
+#, kde-format
+msgid "Save Record Key:"
+msgstr ""
+
+#: dkim-verify/dkimgeneralwidget.cpp:42
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: dkim-verify/dkimgeneralwidget.cpp:42
+#, kde-format
+msgid "Save and Compare"
+msgstr ""
+
+#: dkim-verify/dkimpolicywidget.cpp:18
+#, kde-format
+msgid "Check if e-mail should be signed"
+msgstr ""
+
+#: dkim-verify/dkimpolicywidget.cpp:19
+#, kde-format
+msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgstr ""
+
+#: dkim-verify/dkimpolicywidget.cpp:20
+#, kde-format
+msgid "Use default rule"
+msgstr ""
+
+#: dkim-verify/dkimpolicywidget.cpp:21
+#, kde-format
+msgid "Autogenerate rule"
+msgstr ""
+
+#: dkim-verify/dkimpolicywidget.cpp:22
+#, kde-format
+msgid "Read Authentication-Results header"
+msgstr ""
+
+#: dkim-verify/dkimpolicywidget.cpp:23
+#, kde-format
+msgid "Autogenerate when Sender in SDID"
+msgstr ""
+
+#: dkim-verify/dkimpolicywidget.cpp:24
+#, kde-format
+msgid "Show Rules"
+msgstr ""
+
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Expiry Account Trash Folder"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingsdialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Folder Settings"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagebase.cpp:17
+#, kde-format
+msgid "Modify"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:40
+#, kde-format
+msgid "View"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:44
+#, kde-format
+msgid "Expiry"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:48
+#, kde-format
+msgid "Template"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:57
+#, kde-format
+msgid ""
+"It will override all settings for each selected folder. Do you want to "
+"continue?"
+msgstr ""
+
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#, kde-format
+msgctxt "@title:window"
+msgid "Save Folder Settings"
+msgstr ""
+
+#: foldersettings/folderconfiguretreewidget.cpp:52
+#, kde-format
+msgid "Select"
+msgstr ""
+
+#: foldersettings/folderconfiguretreewidget.cpp:60
+#, kde-format
+msgid "Unselect"
+msgstr ""
+
+#: gravatar/gravatarconfiguresettingsplugindialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Gravatar"
+msgstr ""
+
+#: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
+#, kde-format
+msgid "Enable Gravatar Support"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Create"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:45
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:27
+#, kde-format
+msgid "Server Name:"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:31
+#, kde-format
+msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
+#, kde-format
+msgid ""
+"<qt><p><strong>These expressions may be used for the arguments:</strong></"
+"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:48
+#, kde-format
+msgid "Command line:"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:58
+#, kde-format
+msgid "Executable:"
+msgstr ""
+
+#: openurlwith/openurlwithconfiguredialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Open Url With Plugin"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:55
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Rule..."
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:56
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove Rule"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:57
+#, kde-format
+msgctxt "@action:button"
+msgid "Modify Rule..."
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Rule already exists."
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:150
+#, kde-format
+msgid "Duplicate Rule"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:191
+#, kde-format
+msgid "Do you want to remove this rule?"
+msgid_plural "Do you want to remove these rules?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:192
+#, kde-format
+msgctxt "@title"
+msgid "Remove Rule"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:208
+#, kde-format
+msgid "Add Rule..."
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:210
+#, kde-format
+msgid "Edit Rule..."
+msgstr ""
+
+#: openurlwith/openurlwithconfigurewidget.cpp:215
+#, kde-format
+msgid "Remove Rule"
+msgid_plural "Remove Rules"
+msgstr[0] ""
+msgstr[1] ""
+
+#: scamsettings/scamconfiguresettingsdialog.cpp:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Scam Settings"
+msgstr ""
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Domain"
+msgstr ""
+
+#: scamsettings/scamconfiguresettingswidget.cpp:26
+#, kde-format
+msgid "Check"
+msgstr ""
+
+#: scamsettings/scamconfigureutils.cpp:15
+#, kde-format
+msgid "Disable All Check"
+msgstr ""
+
+#: scamsettings/scamconfigureutils.cpp:17
+#, kde-format
+msgid "Redirect Url"
+msgstr ""
+
+#: scamsettings/scamconfigureutils.cpp:19
+#, kde-format
+msgid "Has Ip"
+msgstr ""
