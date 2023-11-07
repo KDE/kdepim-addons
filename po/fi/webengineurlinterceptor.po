@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2016.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2020.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2020, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:38+0000\n"
-"PO-Revision-Date: 2020-01-01 13:23+0200\n"
+"PO-Revision-Date: 2023-09-26 10:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,32 +16,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: adblock/adblockfilterdialog.cpp:17
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr "Näytä mainosestoluettelo"
+msgstr "Lisää mainosestoluettelo"
 
 #: adblock/adblockfilterlistsview.cpp:46
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Lisää…"
 
 #: adblock/adblockfilterlistsview.cpp:51
 #, kde-format
 msgid "Modify..."
-msgstr ""
+msgstr "Muuta…"
 
 #: adblock/adblockfilterlistsview.cpp:56
-#, fuzzy, kde-format
-#| msgid "Delete List"
+#, kde-format
 msgid "Delete"
-msgstr "Poista luettelo"
+msgstr "Poista"
 
 #: adblock/adblockfilterlistsview.cpp:98
 #, kde-format
@@ -63,12 +60,12 @@ msgstr "Etsi…"
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Nimi:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "Verkko-osoite:"
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
