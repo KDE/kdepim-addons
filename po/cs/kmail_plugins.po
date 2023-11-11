@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2016, 2017, 2020, 2023.
+# SPDX-FileCopyrightText: 2016, 2017, 2020, 2023 Vít Pelčák <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:38+0000\n"
-"PO-Revision-Date: 2023-02-03 16:57+0100\n"
+"PO-Revision-Date: 2023-11-03 09:07+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -91,13 +91,13 @@ msgstr "Průvodce nastavením anti&viru..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
-msgstr ""
+msgstr "Průvodce nastavením antispamu"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
-msgstr ""
+msgstr "Průvodce nastavením antiviru"
 
 #: common/antispamwizard.cpp:90
 #, kde-format
