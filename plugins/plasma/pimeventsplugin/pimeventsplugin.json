@@ -80,6 +80,7 @@
         "Description[zh_CN]": "用于显示 KDE PIM 日历中事件的日历插件",
         "Icon": "view-calendar",
         "Name": "Calendar Events",
+        "Name[bg]": "Календарни събития",
         "Name[ca@valencia]": "Esdeveniments de calendari",
         "Name[ca]": "Esdeveniments de calendari",
         "Name[cs]": "Události kalendáře",
