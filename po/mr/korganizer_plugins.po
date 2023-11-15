@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2013-04-15 10:39+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -34,17 +34,17 @@ msgstr "दिवसांच्या संख्येची मांडण�
 msgid "Show Date Number"
 msgstr "तारखांची संख्या दाखवा"
 
-#: plugins/datenums/configdialog.cpp:47
+#: plugins/datenums/configdialog.cpp:48
 #, kde-format
 msgid "Show day number"
 msgstr "दिवसाचा क्रमांक दाखवा"
 
-#: plugins/datenums/configdialog.cpp:50
+#: plugins/datenums/configdialog.cpp:51
 #, kde-format
 msgid "Show days to end of year"
 msgstr "वर्षाच्य शेवटी दिवस दाखवा"
 
-#: plugins/datenums/configdialog.cpp:53
+#: plugins/datenums/configdialog.cpp:54
 #, kde-format
 msgid "Show both"
 msgstr "दोन्ही दाखवा"

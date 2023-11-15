@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2008-01-01 23:20+0200\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -40,17 +40,17 @@ msgstr "Налада дат"
 msgid "Show Date Number"
 msgstr "Паказваць нумар дня"
 
-#: plugins/datenums/configdialog.cpp:47
+#: plugins/datenums/configdialog.cpp:48
 #, fuzzy, kde-format
 msgid "Show day number"
 msgstr "Паказваць нумар дня"
 
-#: plugins/datenums/configdialog.cpp:50
+#: plugins/datenums/configdialog.cpp:51
 #, fuzzy, kde-format
 msgid "Show days to end of year"
 msgstr "Паказваць колькасць дзён да канца года"
 
-#: plugins/datenums/configdialog.cpp:53
+#: plugins/datenums/configdialog.cpp:54
 #, fuzzy, kde-format
 msgid "Show both"
 msgstr "Паказаць абодва"

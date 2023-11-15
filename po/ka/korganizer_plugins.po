@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2023-09-24 05:30+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -34,17 +34,17 @@ msgstr "დღის რიცხვების მორგება"
 msgid "Show Date Number"
 msgstr "თარიღის რიცხვის ჩვენება"
 
-#: plugins/datenums/configdialog.cpp:47
+#: plugins/datenums/configdialog.cpp:48
 #, kde-format
 msgid "Show day number"
 msgstr "დღის რიცხვის ჩვენება"
 
-#: plugins/datenums/configdialog.cpp:50
+#: plugins/datenums/configdialog.cpp:51
 #, kde-format
 msgid "Show days to end of year"
 msgstr "წლის ბოლომდე დარჩენილი დღეების ჩვენება"
 
-#: plugins/datenums/configdialog.cpp:53
+#: plugins/datenums/configdialog.cpp:54
 #, kde-format
 msgid "Show both"
 msgstr "ორივეს ჩვენება"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2020-02-12 16:07+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-it@kde.org>\n"
@@ -34,17 +34,17 @@ msgstr "Configura numeros de die"
 msgid "Show Date Number"
 msgstr "Monstra numero de data"
 
-#: plugins/datenums/configdialog.cpp:47
+#: plugins/datenums/configdialog.cpp:48
 #, kde-format
 msgid "Show day number"
 msgstr "Monstra numero de die"
 
-#: plugins/datenums/configdialog.cpp:50
+#: plugins/datenums/configdialog.cpp:51
 #, kde-format
 msgid "Show days to end of year"
 msgstr "Monstra dies al fin del anno"
 
-#: plugins/datenums/configdialog.cpp:53
+#: plugins/datenums/configdialog.cpp:54
 #, kde-format
 msgid "Show both"
 msgstr "Monstra ambes"

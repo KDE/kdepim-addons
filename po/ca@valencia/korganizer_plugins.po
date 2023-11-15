@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2022-10-28 13:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -41,17 +41,17 @@ msgstr "Configureu els números de dia"
 msgid "Show Date Number"
 msgstr "Mostra el número de data"
 
-#: plugins/datenums/configdialog.cpp:47
+#: plugins/datenums/configdialog.cpp:48
 #, kde-format
 msgid "Show day number"
 msgstr "Mostra el número de dia"
 
-#: plugins/datenums/configdialog.cpp:50
+#: plugins/datenums/configdialog.cpp:51
 #, kde-format
 msgid "Show days to end of year"
 msgstr "Mostra els dies fins a final d'any"
 
-#: plugins/datenums/configdialog.cpp:53
+#: plugins/datenums/configdialog.cpp:54
 #, kde-format
 msgid "Show both"
 msgstr "Mostra'ls tots dos"

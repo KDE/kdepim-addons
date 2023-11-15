@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2012-07-09 10:04+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -37,17 +37,17 @@ msgstr "កំណត់​រចនាសម្ព័ន្ធ​ចំនួន
 msgid "Show Date Number"
 msgstr "បង្ហាញ​លេខ​កាលបរិច្ឆេទ"
 
-#: plugins/datenums/configdialog.cpp:47
+#: plugins/datenums/configdialog.cpp:48
 #, kde-format
 msgid "Show day number"
 msgstr "បង្ហាញ​លេខ​ថ្ងៃ"
 
-#: plugins/datenums/configdialog.cpp:50
+#: plugins/datenums/configdialog.cpp:51
 #, kde-format
 msgid "Show days to end of year"
 msgstr "បង្ហាញ​ថ្ងៃ​នៅ​ចុង​បញ្ចប់​នៃ​ឆ្នាំ"
 
-#: plugins/datenums/configdialog.cpp:53
+#: plugins/datenums/configdialog.cpp:54
 #, kde-format
 msgid "Show both"
 msgstr "បង្ហាញ​ទាំង​ពីរ"

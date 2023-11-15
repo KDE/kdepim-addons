@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2011-01-04 07:42+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -35,17 +35,17 @@ msgstr "ਦਿਨ ਗਿਣਤੀ ਸੰਰਚਨਾ"
 msgid "Show Date Number"
 msgstr "ਮਿਤੀ ਅੰਕ ਵੇਖਾਓ"
 
-#: plugins/datenums/configdialog.cpp:47
+#: plugins/datenums/configdialog.cpp:48
 #, kde-format
 msgid "Show day number"
 msgstr "ਦਿਨ ਅੰਕ ਵੇਖਾਓ"
 
-#: plugins/datenums/configdialog.cpp:50
+#: plugins/datenums/configdialog.cpp:51
 #, kde-format
 msgid "Show days to end of year"
 msgstr "ਸਾਲ ਦੇ ਅੰਤ ਦੇ ਦਿਨ ਵੇਖਾਓ"
 
-#: plugins/datenums/configdialog.cpp:53
+#: plugins/datenums/configdialog.cpp:54
 #, kde-format
 msgid "Show both"
 msgstr "ਦੋਵੇਂ ਵੇਖਾਓ"

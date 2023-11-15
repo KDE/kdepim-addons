@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer-1.1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:45+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2013-02-16 10:43+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -32,18 +32,18 @@ msgstr "Exclude sărbătorile"
 msgid "Show Date Number"
 msgstr "Vizualizor evenimente"
 
-#: plugins/datenums/configdialog.cpp:47
+#: plugins/datenums/configdialog.cpp:48
 #, fuzzy, kde-format
 msgid "Show day number"
 msgstr "Exportă calendar ca pagină de web"
 
-#: plugins/datenums/configdialog.cpp:50
+#: plugins/datenums/configdialog.cpp:51
 #, fuzzy, kde-format
 #| msgid "Import Calendar"
 msgid "Show days to end of year"
 msgstr "Importă calendar"
 
-#: plugins/datenums/configdialog.cpp:53
+#: plugins/datenums/configdialog.cpp:54
 #, fuzzy, kde-format
 msgid "Show both"
 msgstr "&Afișează"
