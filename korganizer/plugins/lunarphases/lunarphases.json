@@ -24,7 +24,7 @@
         "Description[ru]": "Этот модуль показывает соответствующую дню фазу луны (новолуние, первая четверть, последняя четверть, полнолуние).",
         "Description[sl]": "Ta vtičnik prikazuje lunine mene (mlaj, prvi krajec, zadnji krajec, ščip)",
         "Description[sv]": "Insticksprogrammet visar dagens månfas (ny, första, sista, full)",
-        "Description[tr]": "Bu eklenti, ayın evrelerini gösterir (Yeni, İlkdördür, Sondördün, Dolunay)",
+        "Description[tr]": "Bu eklenti, Ay'ın evrelerini gösterir (Yeniay, İlkdördün, Sondördün, Dolunay)",
         "Description[uk]": "Цей додаток показує фазу місяця (новий, перша чверть, остання чверть, повня)",
         "Description[x-test]": "xxThis plugin shows the day's lunar phase (New, First, Last, Full)xx",
         "Name": "Lunar Phases Plugin for Calendars",
@@ -52,7 +52,7 @@
         "Name[ru]": "Модуль фаз луны для календарей",
         "Name[sl]": "Vtičnik luninih men za koledarje",
         "Name[sv]": "Månfasinsticksprogram för kalendrar",
-        "Name[tr]": "Takvimler için Ay Evreleri Eklentisi",
+        "Name[tr]": "Takvimler için Ay'ın Evreleri Eklentisi",
         "Name[uk]": "Додаток фаз місяця для календарів",
         "Name[x-test]": "xxLunar Phases Plugin for Calendarsxx"
     },
