@@ -369,9 +369,10 @@ msgid ""
 "data. In many cases, the first line of a csv file will be a comment line "
 "describing the order of the data fields included in the file."
 msgstr ""
-"Marqueu esta casella si voleu que la importació ometa la primera fila de les "
-"dades «csv». En molts casos, la primera línia d'un fitxer «csv» és una línia "
-"de comentari que descriu l'ordre dels camps de dades continguts en el fitxer."
+"Seleccioneu esta casella si voleu que la importació ometa la primera fila de "
+"les dades «csv». En molts casos, la primera línia d'un fitxer «csv» és una "
+"línia de comentari que descriu l'ordre dels camps de dades continguts en el "
+"fitxer."
 
 #: csv/import/csvimportdialog.cpp:448
 #, kde-format
@@ -570,8 +571,8 @@ msgid ""
 "Check this box if you want to export the contact's private fields to the "
 "vCard output file."
 msgstr ""
-"Marqueu esta casella si voleu exportar els camps privats del contacte al "
-"fitxer d'eixida de la vCard."
+"Seleccioneu esta casella si voleu exportar els camps privats del contacte "
+"cap al fitxer d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:36
 #, kde-format
@@ -592,8 +593,8 @@ msgid ""
 "Check this box if you want to export the contact's business fields to the "
 "vCard output file."
 msgstr ""
-"Marqueu esta casella si voleu exportar els camps de negoci del contacte al "
-"fitxer d'eixida de la vCard."
+"Seleccioneu esta casella si voleu exportar els camps de negoci del contacte "
+"cap al fitxer d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:43
 #, kde-format
@@ -614,8 +615,8 @@ msgid ""
 "Check this box if you want to export the contact's other fields to the vCard "
 "output file."
 msgstr ""
-"Marqueu esta casella si voleu exportar els altres camps del contacte al "
-"fitxer d'eixida de la vCard."
+"Seleccioneu esta casella si voleu exportar els altres camps del contacte cap "
+"al fitxer d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:50
 #, kde-format
@@ -636,8 +637,8 @@ msgid ""
 "Check this box if you want to export the contact's encryption keys to the "
 "vCard output file."
 msgstr ""
-"Marqueu esta casella si voleu exportar les claus d'encriptació del contacte "
-"al fitxer d'eixida de la vCard."
+"Seleccioneu esta casella si voleu exportar les claus d'encriptació del "
+"contacte cap al fitxer d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:57
 #, kde-format
@@ -658,8 +659,8 @@ msgid ""
 "Check this box if you want to export the contact's picture to the vCard "
 "output file."
 msgstr ""
-"Marqueu esta casella si voleu exportar la imatge del contacte al fitxer "
-"d'eixida de la vCard."
+"Seleccioneu esta casella si voleu exportar la imatge del contacte cap al "
+"fitxer d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:64
 #, kde-format
@@ -687,9 +688,9 @@ msgid ""
 "vCard's full name field.  This may be required to get the name shown "
 "correctly in GMail or Android."
 msgstr ""
-"Marqueu esta casella si voleu exportar el nom que es mostrarà del contacte "
-"en el camp de nom complet de la vCard. Açò pot ser necessari per a obtindre "
-"el nom mostrat correctament en GMail o Android."
+"Seleccioneu esta casella si voleu exportar el nom que es mostrarà del "
+"contacte en el camp de nom complet de la vCard. Açò pot ser necessari per a "
+"obtindre el nom mostrat correctament en GMail o Android."
 
 #: vcards/engine/vcardviewerdialog.cpp:28
 #, kde-format
