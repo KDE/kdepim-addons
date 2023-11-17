@@ -31,3 +31,5 @@ void AdblockPluginUrlInterceptorAddAdblockListWidgetTest::shouldHaveDefaultValue
     QVERIFY(mUrl);
     QVERIFY(mUrl->text().isEmpty());
 }
+
+#include "moc_adblockpluginurlinterceptoraddadblocklistwidgettest.cpp"
