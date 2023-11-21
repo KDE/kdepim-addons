@@ -68,9 +68,9 @@ public:
         return false;
     }
 
-    const QTextCodec *overrideCodec() override
+    QByteArray overrideCodecName() const override
     {
-        return nullptr;
+        return {};
     }
 
     QString createMessageHeader(KMime::Message *message) override
