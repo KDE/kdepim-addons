@@ -12,7 +12,7 @@ AddressBookWidget::AddressBookWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 }
 
 AddressBookWidget::~AddressBookWidget() = default;

@@ -37,27 +37,27 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     lay->setContentsMargins({});
 
     auto splitter = new QSplitter;
-    splitter->setObjectName(QStringLiteral("splitter"));
+    splitter->setObjectName(QLatin1StringView("splitter"));
     splitter->setChildrenCollapsible(false);
     lay->addWidget(splitter);
 
     auto selectContactWidget = new QWidget(this);
-    selectContactWidget->setObjectName(QStringLiteral("selectcontactwidget"));
+    selectContactWidget->setObjectName(QLatin1StringView("selectcontactwidget"));
     auto vbox = new QVBoxLayout;
     selectContactWidget->setLayout(vbox);
     auto lab = new QLabel(i18n("Select contacts that you really want to merge:"), this);
     vbox->addWidget(lab);
-    mListWidget->setObjectName(QStringLiteral("listcontact"));
+    mListWidget->setObjectName(QLatin1StringView("listcontact"));
     mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
     vbox->addWidget(mListWidget);
     connect(mListWidget, &MergeContactWidgetList::itemSelectionChanged, this, &MergeContactWidget::slotUpdateMergeButton);
     connect(mListWidget, &MergeContactWidgetList::itemChanged, this, &MergeContactWidget::slotUpdateMergeButton);
     splitter->addWidget(selectContactWidget);
 
-    mMergeContactInfoWidget->setObjectName(QStringLiteral("mergecontactinfowidget"));
+    mMergeContactInfoWidget->setObjectName(QLatin1StringView("mergecontactinfowidget"));
     splitter->addWidget(mMergeContactInfoWidget);
 
-    mMergeContactWarning->setObjectName(QStringLiteral("mergecontactwarning"));
+    mMergeContactWarning->setObjectName(QLatin1StringView("mergecontactwarning"));
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::continueMerging, this, &MergeContactWidget::slotAutomaticMerging);
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::customizeMergingContacts, this, &MergeContactWidget::slotCustomizeMergingContacts);
     lay->addWidget(mMergeContactWarning);
@@ -72,7 +72,7 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
-    mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
+    mCollectionCombobox->setObjectName(QLatin1StringView("akonadicombobox"));
     connect(mCollectionCombobox, &Akonadi::CollectionComboBox::currentIndexChanged, this, &MergeContactWidget::slotUpdateMergeButton);
     connect(mCollectionCombobox, &Akonadi::CollectionComboBox::activated, this, &MergeContactWidget::slotUpdateMergeButton);
 
@@ -80,7 +80,7 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
 
     lay->addLayout(hbox);
 
-    mMergeButton->setObjectName(QStringLiteral("mergebutton"));
+    mMergeButton->setObjectName(QLatin1StringView("mergebutton"));
     hbox->addWidget(mMergeButton);
     mMergeButton->setEnabled(false);
 

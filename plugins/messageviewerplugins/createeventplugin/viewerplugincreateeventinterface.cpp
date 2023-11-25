@@ -81,7 +81,7 @@ EventEdit *ViewerPluginCreateEventInterface::widget()
         auto parentWidget = static_cast<QWidget *>(parent());
         mEventEdit = new EventEdit(parentWidget);
         connect(mEventEdit, &EventEdit::createEvent, this, &ViewerPluginCreateEventInterface::slotCreateEvent);
-        mEventEdit->setObjectName(QStringLiteral("eventedit"));
+        mEventEdit->setObjectName(QLatin1StringView("eventedit"));
         parentWidget->layout()->addWidget(mEventEdit);
         mEventEdit->hide();
     }

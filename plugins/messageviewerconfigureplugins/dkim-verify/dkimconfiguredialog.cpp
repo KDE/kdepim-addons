@@ -25,13 +25,13 @@ DKIMConfigureDialog::DKIMConfigureDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure DKIM"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mConfigureWidget->setObjectName(QStringLiteral("mConfigureWidget"));
+    mConfigureWidget->setObjectName(QLatin1StringView("mConfigureWidget"));
     mainLayout->addWidget(mConfigureWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &DKIMConfigureDialog::slotAccepted);

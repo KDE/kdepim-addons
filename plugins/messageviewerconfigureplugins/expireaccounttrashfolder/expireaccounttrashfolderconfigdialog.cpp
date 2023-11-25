@@ -23,14 +23,14 @@ ExpireAccountTrashFolderConfigDialog::ExpireAccountTrashFolderConfigDialog(QWidg
     , mExpireAccountTrashFolderConfig(new ExpireAccountTrashFolderConfigWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     setWindowTitle(i18nc("@title:window", "Configure Expiry Account Trash Folder"));
 
-    mExpireAccountTrashFolderConfig->setObjectName(QStringLiteral("mExpireAccountTrashFolderConfig"));
+    mExpireAccountTrashFolderConfig->setObjectName(QLatin1StringView("mExpireAccountTrashFolderConfig"));
     mainLayout->addWidget(mExpireAccountTrashFolderConfig);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel | QDialogButtonBox::Ok, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ExpireAccountTrashFolderConfigDialog::reject);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ExpireAccountTrashFolderConfigDialog::accept);
     mainLayout->addWidget(buttonBox);

@@ -50,7 +50,7 @@ NoteEdit::NoteEdit(QWidget *parent)
     hbox->addWidget(lab);
 
     mNoteEdit->setClearButtonEnabled(true);
-    mNoteEdit->setObjectName(QStringLiteral("noteedit"));
+    mNoteEdit->setObjectName(QLatin1StringView("noteedit"));
     mNoteEdit->setFocus();
     connect(mNoteEdit, &QLineEdit::returnPressed, this, &NoteEdit::slotReturnPressed);
     connect(mNoteEdit, &QLineEdit::textChanged, this, &NoteEdit::slotUpdateButtons);
@@ -61,7 +61,7 @@ NoteEdit::NoteEdit(QWidget *parent)
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << Akonadi::NoteUtils::noteMimeType());
-    mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
+    mCollectionCombobox->setObjectName(QLatin1StringView("akonadicombobox"));
 #ifndef QT_NO_ACCESSIBILITY
     mCollectionCombobox->setAccessibleDescription(i18n("Calendar where the new event will be stored."));
 #endif
@@ -84,7 +84,7 @@ NoteEdit::NoteEdit(QWidget *parent)
 
     hbox->addStretch(1);
 
-    mSaveButton->setObjectName(QStringLiteral("save-button"));
+    mSaveButton->setObjectName(QLatin1StringView("save-button"));
     mSaveButton->setEnabled(false);
 #ifndef QT_NO_ACCESSIBILITY
     mSaveButton->setAccessibleDescription(i18n("Create new note and close this widget."));
@@ -94,7 +94,7 @@ NoteEdit::NoteEdit(QWidget *parent)
 
     auto btn = new QPushButton(this);
     KGuiItem::assign(btn, KStandardGuiItem::cancel());
-    btn->setObjectName(QStringLiteral("close-button"));
+    btn->setObjectName(QLatin1StringView("close-button"));
 #ifndef QT_NO_ACCESSIBILITY
     btn->setAccessibleDescription(i18n("Close the widget for creating new notes."));
 #endif

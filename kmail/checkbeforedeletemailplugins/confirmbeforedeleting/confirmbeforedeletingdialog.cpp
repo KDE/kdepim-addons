@@ -24,13 +24,13 @@ ConfirmBeforeDeletingDialog::ConfirmBeforeDeletingDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Before Deleting Mail"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mConfirmBeforeDeletingWidget->setObjectName(QStringLiteral("mConfirmBeforeDeletingWidget"));
+    mConfirmBeforeDeletingWidget->setObjectName(QLatin1StringView("mConfirmBeforeDeletingWidget"));
     mainLayout->addWidget(mConfirmBeforeDeletingWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmBeforeDeletingDialog::slotSave);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmBeforeDeletingDialog::reject);

@@ -16,10 +16,10 @@ ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidg
     , mCollectionExpiryWidget(new MailCommon::CollectionExpiryWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
+    mCollectionExpiryWidget->setObjectName(QLatin1StringView("mCollectionExpiryWidget"));
     connect(mCollectionExpiryWidget,
             &MailCommon::CollectionExpiryWidget::saveAndExpireRequested,
             this,

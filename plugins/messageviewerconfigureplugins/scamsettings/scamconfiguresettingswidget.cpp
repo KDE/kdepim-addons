@@ -16,10 +16,10 @@ ScamConfigureSettingsWidget::ScamConfigureSettingsWidget(QWidget *parent)
     , mTreeWidget(new QTreeWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    mTreeWidget->setObjectName(QStringLiteral("mTreeWidget"));
+    mTreeWidget->setObjectName(QLatin1StringView("mTreeWidget"));
     mainLayout->addWidget(mTreeWidget);
     mTreeWidget->setRootIsDecorated(false);
     mTreeWidget->header()->setSectionsMovable(false);

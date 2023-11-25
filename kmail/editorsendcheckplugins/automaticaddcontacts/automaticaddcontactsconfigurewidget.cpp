@@ -18,9 +18,9 @@ AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mConfigureTab->setObjectName(QStringLiteral("configuretab"));
+    mConfigureTab->setObjectName(QLatin1StringView("configuretab"));
     mainLayout->addWidget(mConfigureTab);
     connect(mConfigureTab, &AutomaticAddContactsConfigureTab::configureChanged, this, &AutomaticAddContactsConfigureWidget::configureChanged);
 }

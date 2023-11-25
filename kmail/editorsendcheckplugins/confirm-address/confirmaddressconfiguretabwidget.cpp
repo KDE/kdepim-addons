@@ -16,26 +16,26 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     : QWidget(parent)
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
 
     auto groupBoxDomainName = new QGroupBox(this);
-    groupBoxDomainName->setObjectName(QStringLiteral("groupboxdomainname"));
+    groupBoxDomainName->setObjectName(QLatin1StringView("groupboxdomainname"));
     mainLayout->addWidget(groupBoxDomainName);
     auto layoutDomainName = new QVBoxLayout(groupBoxDomainName);
-    layoutDomainName->setObjectName(QStringLiteral("layoutdomainname"));
+    layoutDomainName->setObjectName(QLatin1StringView("layoutdomainname"));
 
     auto radioButtonLayout = new QHBoxLayout;
     layoutDomainName->addLayout(radioButtonLayout);
     radioButtonLayout->setAlignment(Qt::AlignHCenter);
 
     mAcceptedDomain = new QRadioButton(i18n("Accepted Domain Name"), this);
-    mAcceptedDomain->setObjectName(QStringLiteral("acceptdomainname"));
+    mAcceptedDomain->setObjectName(QLatin1StringView("acceptdomainname"));
     radioButtonLayout->addWidget(mAcceptedDomain);
     mAcceptedDomain->setChecked(true);
 
     mRejectedDomain = new QRadioButton(i18n("Rejected Domain Name"), this);
-    mRejectedDomain->setObjectName(QStringLiteral("rejectdomainname"));
+    mRejectedDomain->setObjectName(QLatin1StringView("rejectdomainname"));
     radioButtonLayout->addWidget(mRejectedDomain);
 
     auto buttonCode = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(
@@ -46,16 +46,16 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
                                                                      i18n("Re&move"),
                                                                      i18n("Mod&ify..."),
                                                                      i18n("Enter new domain name:"));
-    mDomainNameListEditor->setObjectName(QStringLiteral("domainnamelisteditor"));
+    mDomainNameListEditor->setObjectName(QLatin1StringView("domainnamelisteditor"));
     mDomainNameListEditor->setRemoveDialogLabel(i18n("Do you want to remove this domain?"));
     connect(mDomainNameListEditor, &ConfirmAddressSimpleStringListEditor::changed, this, &ConfirmAddressConfigureTabWidget::configureChanged);
     layoutDomainName->addWidget(mDomainNameListEditor);
 
     auto groupBoxWhiteList = new QGroupBox(i18n("Whitelist of Addresses"), this);
-    groupBoxWhiteList->setObjectName(QStringLiteral("groupboxwhitelist"));
+    groupBoxWhiteList->setObjectName(QLatin1StringView("groupboxwhitelist"));
     mainLayout->addWidget(groupBoxWhiteList);
     auto layoutWhiteList = new QVBoxLayout(groupBoxWhiteList);
-    layoutWhiteList->setObjectName(QStringLiteral("layoutwhitelist"));
+    layoutWhiteList->setObjectName(QLatin1StringView("layoutwhitelist"));
 
     buttonCode = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove
                                                                             | PimCommon::SimpleStringListEditor::Modify);
@@ -65,7 +65,7 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
                                                                 i18n("Re&move"),
                                                                 i18n("Mod&ify..."),
                                                                 i18n("Enter new email address:"));
-    mWhiteListEditor->setObjectName(QStringLiteral("whitelisteditor"));
+    mWhiteListEditor->setObjectName(QLatin1StringView("whitelisteditor"));
     mWhiteListEditor->setRemoveDialogLabel(i18n("Do you want to remove this email address?"));
     layoutWhiteList->addWidget(mWhiteListEditor);
     connect(mWhiteListEditor, &ConfirmAddressSimpleStringListEditor::changed, this, &ConfirmAddressConfigureTabWidget::configureChanged);

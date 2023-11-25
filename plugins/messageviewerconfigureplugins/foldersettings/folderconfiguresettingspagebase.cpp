@@ -17,11 +17,11 @@ FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent
     , mGroupBox(new QGroupBox(i18n("Modify"), this))
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setObjectName(QStringLiteral("topLayout"));
+    topLayout->setObjectName(QLatin1StringView("topLayout"));
 
-    mMainLayout->setObjectName(QStringLiteral("mMainLayout"));
+    mMainLayout->setObjectName(QLatin1StringView("mMainLayout"));
 
-    mGroupBox->setObjectName(QStringLiteral("mGroupBox"));
+    mGroupBox->setObjectName(QLatin1StringView("mGroupBox"));
     mGroupBox->setCheckable(true);
     mGroupBox->setChecked(false);
 

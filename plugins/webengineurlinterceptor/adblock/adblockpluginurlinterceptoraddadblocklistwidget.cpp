@@ -17,10 +17,10 @@ AdblockPluginUrlInterceptorAddAdblockListWidget::AdblockPluginUrlInterceptorAddA
 {
     auto mainLayout = new QFormLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
-    mName->setObjectName(QStringLiteral("mName"));
-    mUrl->setObjectName(QStringLiteral("mUrl"));
+    mName->setObjectName(QLatin1StringView("mName"));
+    mUrl->setObjectName(QLatin1StringView("mUrl"));
 
     mName->setClearButtonEnabled(true);
     mUrl->setClearButtonEnabled(true);

@@ -20,16 +20,16 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     , mExecutable(new KUrlRequester(this))
 {
     auto mainLayout = new QFormLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins(QMargins());
 
-    mServerName->setObjectName(QStringLiteral("mServerName"));
+    mServerName->setObjectName(QLatin1StringView("mServerName"));
     mainLayout->addRow(i18n("Server Name:"), mServerName);
     mServerName->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mServerName);
 
     auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
-    formatHelp->setObjectName(QStringLiteral("formatHelp"));
+    formatHelp->setObjectName(QLatin1StringView("formatHelp"));
     formatHelp->setContextMenuPolicy(Qt::NoContextMenu);
     connect(formatHelp, &QLabel::linkActivated, this, &OpenUrlWithConfigureCreateWidget::slotLinkClicked);
 
@@ -43,12 +43,12 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     formatHelp->setWhatsThis(mCommandWhatsThis);
     mainLayout->addWidget(formatHelp);
 
-    mCommandLine->setObjectName(QStringLiteral("mCommandLine"));
+    mCommandLine->setObjectName(QLatin1StringView("mCommandLine"));
     mCommandLine->setClearButtonEnabled(true);
     mainLayout->addRow(i18n("Command line:"), mCommandLine);
     KLineEditEventHandler::catchReturnKey(mCommandLine);
 
-    mExecutable->setObjectName(QStringLiteral("mEditorRequester"));
+    mExecutable->setObjectName(QLatin1StringView("mEditorRequester"));
 
     mExecutable->setMimeTypeFilters(
         {QStringLiteral("application/x-executable"), QStringLiteral("application/x-shellscript"), QStringLiteral("application/x-desktop")});

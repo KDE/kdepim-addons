@@ -20,7 +20,7 @@ ExternalComposerConfigureDialog::~ExternalComposerConfigureDialog() = default;
 QWidget *ExternalComposerConfigureDialog::createLayout()
 {
     mConfigureWidget = new ExternalComposerConfigureWidget(this);
-    mConfigureWidget->setObjectName(QStringLiteral("configurewidget"));
+    mConfigureWidget->setObjectName(QLatin1StringView("configurewidget"));
     return mConfigureWidget;
 }
 

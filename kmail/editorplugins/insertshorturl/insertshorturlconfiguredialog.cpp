@@ -15,11 +15,11 @@ InsertShorturlConfigureDialog::InsertShorturlConfigureDialog(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
 
-    mInsertShortUrlWidget->setObjectName(QStringLiteral("insertshorturlwidget"));
+    mInsertShortUrlWidget->setObjectName(QLatin1StringView("insertshorturlwidget"));
     mainLayout->addWidget(mInsertShortUrlWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &InsertShorturlConfigureDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &InsertShorturlConfigureDialog::reject);
     mainLayout->addWidget(buttonBox);

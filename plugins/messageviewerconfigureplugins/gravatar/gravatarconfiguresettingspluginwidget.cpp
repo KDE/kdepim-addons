@@ -23,14 +23,14 @@ GravatarConfigureSettingsPluginWidget::GravatarConfigureSettingsPluginWidget(QWi
     , mEnableGravatarSupport(new QCheckBox(i18n("Enable Gravatar Support"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mEnableGravatarSupport->setObjectName(QStringLiteral("gravatarcheckbox"));
+    mEnableGravatarSupport->setObjectName(QLatin1StringView("gravatarcheckbox"));
     mEnableGravatarSupport->setChecked(false);
     mainLayout->addWidget(mEnableGravatarSupport);
 
-    mGravatarConfigWidget->setObjectName(QStringLiteral("gravatarconfigwidget"));
+    mGravatarConfigWidget->setObjectName(QLatin1StringView("gravatarconfigwidget"));
     mainLayout->addWidget(mGravatarConfigWidget);
     connect(mEnableGravatarSupport, &QCheckBox::clicked, mGravatarConfigWidget, &Gravatar::GravatarConfigureSettingsWidget::setEnabled);
 }

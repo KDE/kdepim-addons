@@ -36,14 +36,14 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     mainLayout->setContentsMargins({});
 
     auto splitter = new QSplitter;
-    splitter->setObjectName(QStringLiteral("splitter"));
+    splitter->setObjectName(QLatin1StringView("splitter"));
     splitter->setChildrenCollapsible(false);
     mainLayout->addWidget(splitter);
-    mResultTreeWidget->setObjectName(QStringLiteral("result_treewidget"));
-    mContactViewer->setObjectName(QStringLiteral("contact_viewer"));
+    mResultTreeWidget->setObjectName(QLatin1StringView("result_treewidget"));
+    mContactViewer->setObjectName(QLatin1StringView("contact_viewer"));
 
     mSearchInResultLineEdit = new KTreeWidgetSearchLineWidget(this, mResultTreeWidget);
-    mSearchInResultLineEdit->setObjectName(QStringLiteral("searchinresultlineedit"));
+    mSearchInResultLineEdit->setObjectName(QLatin1StringView("searchinresultlineedit"));
     mSearchInResultLineEdit->searchLine()->setClearButtonEnabled(true);
     mSearchInResultLineEdit->searchLine()->setPlaceholderText(i18n("Search in result..."));
 
@@ -57,7 +57,7 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     connect(mResultTreeWidget, &ResultDuplicateTreeWidget::showContactPreview, mContactViewer, &KAddressBookGrantlee::GrantleeContactViewer::setContact);
     connect(mResultTreeWidget, &ResultDuplicateTreeWidget::customContextMenuRequested, this, &SearchDuplicateResultWidget::slotCustomContextMenuRequested);
 
-    mMergeContactWarning->setObjectName(QStringLiteral("mergecontactwarning"));
+    mMergeContactWarning->setObjectName(QLatin1StringView("mergecontactwarning"));
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::continueMerging, this, &SearchDuplicateResultWidget::slotAutomaticMerging);
     connect(mMergeContactWarning,
             &MergeContactLoseInformationWarning::customizeMergingContacts,
@@ -70,20 +70,20 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     mergeLayout->addStretch();
 
     auto lab = new QLabel(i18n("Select AddressBook:"));
-    lab->setObjectName(QStringLiteral("select_addressbook_label"));
+    lab->setObjectName(QLatin1StringView("select_addressbook_label"));
     mergeLayout->addWidget(lab);
 
     mCollectionCombobox = new Akonadi::CollectionComboBox(_k_searchDuplicateResultStubModel, this);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
-    mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
+    mCollectionCombobox->setObjectName(QLatin1StringView("akonadicombobox"));
     connect(mCollectionCombobox, &Akonadi::CollectionComboBox::currentIndexChanged, this, &SearchDuplicateResultWidget::slotUpdateMergeButton);
     connect(mCollectionCombobox, &Akonadi::CollectionComboBox::activated, this, &SearchDuplicateResultWidget::slotUpdateMergeButton);
     mergeLayout->addWidget(mCollectionCombobox);
 
     mMergeContact = new QPushButton(i18n("Merge"), this);
-    mMergeContact->setObjectName(QStringLiteral("merge_contact_button"));
+    mMergeContact->setObjectName(QLatin1StringView("merge_contact_button"));
     connect(mMergeContact, &QPushButton::clicked, this, &SearchDuplicateResultWidget::slotMergeContact);
     mergeLayout->addWidget(mMergeContact);
     mMergeContact->setEnabled(false);

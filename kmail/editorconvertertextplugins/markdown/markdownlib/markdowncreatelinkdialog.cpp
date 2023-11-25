@@ -25,20 +25,20 @@ MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Add Link"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mMarkdownCreateLinkWidget->setObjectName(QStringLiteral("markdowncreatelinkwidget"));
+    mMarkdownCreateLinkWidget->setObjectName(QLatin1StringView("markdowncreatelinkwidget"));
 
     mainLayout->addWidget(mMarkdownCreateLinkWidget);
 
     auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    box->setObjectName(QStringLiteral("buttonbox"));
+    box->setObjectName(QLatin1StringView("buttonbox"));
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateLinkDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &MarkdownCreateLinkDialog::reject);
 
     mOkButton = box->button(QDialogButtonBox::Ok);
-    mOkButton->setObjectName(QStringLiteral("okbutton"));
+    mOkButton->setObjectName(QLatin1StringView("okbutton"));
     mOkButton->setEnabled(false);
     connect(mMarkdownCreateLinkWidget, &MarkdownCreateLinkWidget::enabledOkButton, this, &MarkdownCreateLinkDialog::slotEnabledOkButton);
     readConfig();

@@ -152,7 +152,7 @@ NoteEdit *ViewerPluginCreatenoteInterface::widget()
         auto parentWidget = static_cast<QWidget *>(parent());
         mNoteEdit = new NoteEdit(parentWidget);
         connect(mNoteEdit, &NoteEdit::createNote, this, &ViewerPluginCreatenoteInterface::slotCreateNote);
-        mNoteEdit->setObjectName(QStringLiteral("noteedit"));
+        mNoteEdit->setObjectName(QLatin1StringView("noteedit"));
         parentWidget->layout()->addWidget(mNoteEdit);
         mNoteEdit->hide();
     }

@@ -20,12 +20,12 @@ MergeContactLoseInformationWarning::MergeContactLoseInformationWarning(QWidget *
     setText(i18n("Some information can be lost. Do you want to continue, or customize what you want to merge?"));
 
     auto action = new QAction(i18n("Customize"), this);
-    action->setObjectName(QStringLiteral("customize"));
+    action->setObjectName(QLatin1StringView("customize"));
     connect(action, &QAction::triggered, this, &MergeContactLoseInformationWarning::slotCustomizeMerge);
     addAction(action);
 
     action = new QAction(i18n("Automatic Merging"), this);
-    action->setObjectName(QStringLiteral("automatic"));
+    action->setObjectName(QLatin1StringView("automatic"));
     connect(action, &QAction::triggered, this, &MergeContactLoseInformationWarning::slotAutomaticMerging);
     addAction(action);
 }

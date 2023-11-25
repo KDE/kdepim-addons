@@ -23,14 +23,14 @@ FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)
     , mFolderConfigureSettingsWidget(new FolderConfigureSettingsWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     setWindowTitle(i18nc("@title:window", "Configure Folder Settings"));
 
-    mFolderConfigureSettingsWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsWidget"));
+    mFolderConfigureSettingsWidget->setObjectName(QLatin1StringView("mFolderConfigureSettingsWidget"));
     mainLayout->addWidget(mFolderConfigureSettingsWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel | QDialogButtonBox::Ok, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::rejected, this, &FolderConfigureSettingsDialog::reject);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &FolderConfigureSettingsDialog::slotSave);
     mainLayout->addWidget(buttonBox);

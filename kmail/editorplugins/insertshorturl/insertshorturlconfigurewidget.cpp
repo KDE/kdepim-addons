@@ -23,14 +23,14 @@ InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
     , mShortUrlServer(new QComboBox(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
 
     auto lab = new QLabel(i18n("Select Short URL server:"), this);
-    lab->setObjectName(QStringLiteral("label"));
+    lab->setObjectName(QLatin1StringView("label"));
     mainLayout->addWidget(lab);
 
-    mShortUrlServer->setObjectName(QStringLiteral("shorturlserver"));
+    mShortUrlServer->setObjectName(QLatin1StringView("shorturlserver"));
     mainLayout->addWidget(mShortUrlServer);
     const QList<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
     for (ShortUrlEnginePlugin *plugin : lstPlugin) {

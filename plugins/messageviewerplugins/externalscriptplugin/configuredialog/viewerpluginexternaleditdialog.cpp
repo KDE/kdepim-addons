@@ -25,12 +25,12 @@ ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Add or Modify External Script"));
     auto mainLayout = new QVBoxLayout(this);
 
-    mEditWidget->setObjectName(QStringLiteral("editwidget"));
+    mEditWidget->setObjectName(QLatin1StringView("editwidget"));
     mainLayout->addWidget(mEditWidget);
     connect(mEditWidget, &ViewerPluginExternalEditWidget::scriptIsValid, this, &ViewerPluginExternalEditDialog::slotScriptIsValid);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ViewerPluginExternalEditDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ViewerPluginExternalEditDialog::reject);
     mainLayout->addWidget(buttonBox);

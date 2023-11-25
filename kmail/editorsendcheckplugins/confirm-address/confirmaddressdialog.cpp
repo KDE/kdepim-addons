@@ -27,17 +27,17 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Confirm Addresses"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mConfirmWidget->setObjectName(QStringLiteral("confirmwidget"));
+    mConfirmWidget->setObjectName(QLatin1StringView("confirmwidget"));
     mainLayout->addWidget(mConfirmWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmAddressDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmAddressDialog::reject);
 
-    mWhiteListEmailsButton->setObjectName(QStringLiteral("whiteListEmailsButton"));
+    mWhiteListEmailsButton->setObjectName(QLatin1StringView("whiteListEmailsButton"));
     mWhiteListEmailsButton->setEnabled(false);
     buttonBox->addButton(mWhiteListEmailsButton, QDialogButtonBox::ActionRole);
     connect(mWhiteListEmailsButton, &QPushButton::clicked, this, &ConfirmAddressDialog::slotWhiteListSelectedEmails);

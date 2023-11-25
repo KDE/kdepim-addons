@@ -26,17 +26,17 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     , mEmailButton(new QToolButton(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mLineEdit->setObjectName(QStringLiteral("lineedit"));
+    mLineEdit->setObjectName(QLatin1StringView("lineedit"));
     mLineEdit->setClearButtonEnabled(true);
     mLineEdit->setPlaceholderText(i18n("Click on button for selecting contacts..."));
     connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::slotTextChanged);
     mainLayout->addWidget(mLineEdit);
 
     mEmailButton->setText(i18n("..."));
-    mEmailButton->setObjectName(QStringLiteral("emailbutton"));
+    mEmailButton->setObjectName(QLatin1StringView("emailbutton"));
     mEmailButton->setToolTip(i18n("Select Emails"));
     mainLayout->addWidget(mEmailButton);
     connect(mEmailButton, &QToolButton::clicked, this, &EmailLineEdit::slotSelectEmail);

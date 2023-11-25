@@ -17,19 +17,19 @@ ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
     , mLineEdit(new QLineEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     auto label = new QLabel(i18n("Enter new domain name:"), this);
-    label->setObjectName(QStringLiteral("label"));
+    label->setObjectName(QLatin1StringView("label"));
     mainLayout->addWidget(label);
 
-    mLineEdit->setObjectName(QStringLiteral("lineedit"));
+    mLineEdit->setObjectName(QLatin1StringView("lineedit"));
     mainLayout->addWidget(mLineEdit);
 
     auto emailValidator = new KEmailValidator(this);
     mLineEdit->setValidator(emailValidator);
 
     auto buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttons->setObjectName(QStringLiteral("buttons"));
+    buttons->setObjectName(QLatin1StringView("buttons"));
     mainLayout->addWidget(buttons);
     connect(buttons, &QDialogButtonBox::accepted, this, &ConfirmAddressEmailEntryDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, this, &ConfirmAddressEmailEntryDialog::reject);

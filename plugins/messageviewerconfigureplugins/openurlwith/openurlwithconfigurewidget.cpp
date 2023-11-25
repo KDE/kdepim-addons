@@ -57,13 +57,13 @@ OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     , mModifyRule(new QPushButton(i18nc("@action:button", "Modify Rule..."), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     mainLayout->setContentsMargins(QMargins());
 
     auto listLayout = new QHBoxLayout;
     mainLayout->addLayout(listLayout);
 
-    mListWidget->setObjectName(QStringLiteral("mListWidget"));
+    mListWidget->setObjectName(QLatin1StringView("mListWidget"));
     listLayout->addWidget(mListWidget);
     mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
@@ -77,15 +77,15 @@ OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     listLayout->addLayout(buttonLayout);
 
     connect(mAddRule, &QPushButton::clicked, this, &OpenUrlWithConfigureWidget::slotAddRule);
-    mAddRule->setObjectName(QStringLiteral("mAddRule"));
+    mAddRule->setObjectName(QLatin1StringView("mAddRule"));
     buttonLayout->addWidget(mAddRule);
 
     connect(mModifyRule, &QPushButton::clicked, this, &OpenUrlWithConfigureWidget::slotEditRule);
-    mModifyRule->setObjectName(QStringLiteral("mModifyRule"));
+    mModifyRule->setObjectName(QLatin1StringView("mModifyRule"));
     buttonLayout->addWidget(mModifyRule);
 
     connect(mRemoveRule, &QPushButton::clicked, this, &OpenUrlWithConfigureWidget::slotRemoveRule);
-    mRemoveRule->setObjectName(QStringLiteral("mRemoveRule"));
+    mRemoveRule->setObjectName(QLatin1StringView("mRemoveRule"));
     buttonLayout->addWidget(mRemoveRule);
     buttonLayout->addStretch(1);
     updateButtons();

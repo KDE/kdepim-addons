@@ -16,13 +16,13 @@ AdblockFilterDialog::AdblockFilterDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Add Adblock List"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
-    mAdblockFilterWidget->setObjectName(QStringLiteral("mAdblockFilterWidget"));
+    mAdblockFilterWidget->setObjectName(QLatin1StringView("mAdblockFilterWidget"));
     mainLayout->addWidget(mAdblockFilterWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AdblockFilterDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdblockFilterDialog::reject);

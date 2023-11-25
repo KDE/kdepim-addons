@@ -24,13 +24,13 @@ OpenUrlWithConfigureDialog::OpenUrlWithConfigureDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Open Url With Plugin"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mOpenUrlWithWidget->setObjectName(QStringLiteral("mOpenUrlWithWidget"));
+    mOpenUrlWithWidget->setObjectName(QLatin1StringView("mOpenUrlWithWidget"));
     mainLayout->addWidget(mOpenUrlWithWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &OpenUrlWithConfigureDialog::slotAccepted);

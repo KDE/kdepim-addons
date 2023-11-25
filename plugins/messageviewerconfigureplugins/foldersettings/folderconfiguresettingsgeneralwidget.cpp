@@ -14,7 +14,7 @@ FolderConfigureSettingsGeneralWidget::FolderConfigureSettingsGeneralWidget(QWidg
 {
     auto mainWidget = new QWidget(this);
     auto mainLayout = new QHBoxLayout(mainWidget);
-    mCollectionGeneralWidget->setObjectName(QStringLiteral("mCollectionGeneralWidget"));
+    mCollectionGeneralWidget->setObjectName(QLatin1StringView("mCollectionGeneralWidget"));
     mainLayout->addWidget(mCollectionGeneralWidget);
     addMainWidget(mainWidget);
     mMainLayout->addStretch();

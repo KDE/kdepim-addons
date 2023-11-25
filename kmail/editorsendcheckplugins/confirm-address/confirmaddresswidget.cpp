@@ -17,13 +17,13 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
     auto lab = new QLabel(i18n("Potentially invalid emails are displayed in red:"), this);
-    lab->setObjectName(QStringLiteral("label"));
+    lab->setObjectName(QLatin1StringView("label"));
     mainLayout->addWidget(lab);
 
-    mListEmails->setObjectName(QStringLiteral("listemails"));
+    mListEmails->setObjectName(QLatin1StringView("listemails"));
     connect(mListEmails, &QListWidget::itemChanged, this, &ConfirmAddressWidget::slotItemChanged);
     mainLayout->addWidget(mListEmails);
 }

@@ -21,9 +21,9 @@ MergeContactSelectListWidget::MergeContactSelectListWidget(QWidget *parent)
     , mConflictType(MergeContacts::None)
 {
     auto vbox = new QVBoxLayout(this);
-    mTitle->setObjectName(QStringLiteral("title"));
+    mTitle->setObjectName(QLatin1StringView("title"));
     vbox->addWidget(mTitle);
-    mSelectListWidget->setObjectName(QStringLiteral("listwidget"));
+    mSelectListWidget->setObjectName(QLatin1StringView("listwidget"));
     vbox->addWidget(mSelectListWidget);
 }
 

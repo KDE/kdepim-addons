@@ -37,30 +37,30 @@ MergeContactsDialog::MergeContactsDialog(QWidget *parent)
     , mMergeContactInfo(new KABMergeContacts::MergeContactInfoWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Select Contacts to merge"));
-    mButtonBox->setObjectName(QStringLiteral("buttonbox"));
+    mButtonBox->setObjectName(QLatin1StringView("buttonbox"));
     auto mainLayout = new QVBoxLayout(this);
     connect(mButtonBox, &QDialogButtonBox::rejected, this, &MergeContactsDialog::reject);
     readConfig();
 
-    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
     mainLayout->addWidget(mStackedWidget);
     mainLayout->addWidget(mButtonBox);
 
-    mNoEnoughContactSelected->setObjectName(QStringLiteral("notenoughcontactselected"));
+    mNoEnoughContactSelected->setObjectName(QLatin1StringView("notenoughcontactselected"));
     mStackedWidget->addWidget(mNoEnoughContactSelected);
 
-    mNoContactSelected->setObjectName(QStringLiteral("nocontactselected"));
+    mNoContactSelected->setObjectName(QLatin1StringView("nocontactselected"));
     mStackedWidget->addWidget(mNoContactSelected);
 
-    mManualMergeResultWidget->setObjectName(QStringLiteral("manualmergeresultwidget"));
+    mManualMergeResultWidget->setObjectName(QLatin1StringView("manualmergeresultwidget"));
     mStackedWidget->addWidget(mManualMergeResultWidget);
     connect(mManualMergeResultWidget, &MergeContactWidget::customizeMergeContact, this, &MergeContactsDialog::slotCustomizeMergeContact);
     connect(mManualMergeResultWidget, &MergeContactWidget::contactMerged, this, &MergeContactsDialog::slotContactMerged);
 
-    mSelectInformation->setObjectName(QStringLiteral("selectioninformation"));
+    mSelectInformation->setObjectName(QLatin1StringView("selectioninformation"));
     mStackedWidget->addWidget(mSelectInformation);
 
-    mMergeContactInfo->setObjectName(QStringLiteral("mergecontactinfowidget"));
+    mMergeContactInfo->setObjectName(QLatin1StringView("mergecontactinfowidget"));
     mStackedWidget->addWidget(mMergeContactInfo);
 
     mStackedWidget->setCurrentWidget(mNoContactSelected);

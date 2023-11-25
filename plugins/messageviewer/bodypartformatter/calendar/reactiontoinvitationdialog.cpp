@@ -25,18 +25,18 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     , mPlainTextEditor(new TextCustomEditor::PlainTextEditorWidget(this))
 {
     auto layout = new QVBoxLayout(this);
-    layout->setObjectName(QStringLiteral("layout"));
+    layout->setObjectName(QLatin1StringView("layout"));
 
     auto label = new QLabel(i18n("Comment:"), this);
-    label->setObjectName(QStringLiteral("label"));
+    label->setObjectName(QLatin1StringView("label"));
     layout->addWidget(label);
 
-    mPlainTextEditor->setObjectName(QStringLiteral("plaintexteditor"));
+    mPlainTextEditor->setObjectName(QLatin1StringView("plaintexteditor"));
     layout->addWidget(mPlainTextEditor);
     connect(mPlainTextEditor->editor(), &TextCustomEditor::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     layout->addWidget(buttonBox);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ReactionToInvitationDialog::accept);

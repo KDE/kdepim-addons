@@ -26,13 +26,13 @@ MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     setAttribute(Qt::WA_DeleteOnClose);
 
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mPreviewWidget->setObjectName(QStringLiteral("previewwidget"));
+    mPreviewWidget->setObjectName(QLatin1StringView("previewwidget"));
     mainLayout->addWidget(mPreviewWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &MarkdownPreviewDialog::reject);
     readConfig();

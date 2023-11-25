@@ -90,7 +90,7 @@ TodoEdit *ViewerPluginCreateTodoInterface::widget()
         auto parentWidget = static_cast<QWidget *>(parent());
         mTodoEdit = new TodoEdit(parentWidget);
         connect(mTodoEdit, &TodoEdit::createTodo, this, &ViewerPluginCreateTodoInterface::slotCreateTodo);
-        mTodoEdit->setObjectName(QStringLiteral("todoedit"));
+        mTodoEdit->setObjectName(QLatin1StringView("todoedit"));
         parentWidget->layout()->addWidget(mTodoEdit);
         mTodoEdit->hide();
     }

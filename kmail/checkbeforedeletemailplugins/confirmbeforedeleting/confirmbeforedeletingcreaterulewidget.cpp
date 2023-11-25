@@ -19,20 +19,20 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWi
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
     auto label = new QLabel(i18n("Type:"), this);
-    label->setObjectName(QStringLiteral("typeLabel"));
+    label->setObjectName(QLatin1StringView("typeLabel"));
     mainLayout->addWidget(label);
 
-    mRuleTypeComboBox->setObjectName(QStringLiteral("mRuleTypeComboBox"));
+    mRuleTypeComboBox->setObjectName(QLatin1StringView("mRuleTypeComboBox"));
     mainLayout->addWidget(mRuleTypeComboBox);
 
     label = new QLabel(i18n("Contains:"), this);
-    label->setObjectName(QStringLiteral("containsLabel"));
+    label->setObjectName(QLatin1StringView("containsLabel"));
     mainLayout->addWidget(label);
 
-    mPatternLineEdit->setObjectName(QStringLiteral("mPatternLineEdit"));
+    mPatternLineEdit->setObjectName(QLatin1StringView("mPatternLineEdit"));
     mPatternLineEdit->setClearButtonEnabled(true);
     mainLayout->addWidget(mPatternLineEdit);
     fillComboBox();

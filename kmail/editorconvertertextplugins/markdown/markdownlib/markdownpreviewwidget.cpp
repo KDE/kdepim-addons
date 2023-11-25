@@ -21,11 +21,11 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     , mConverter(new MarkdownConverter(this))
     , mHoverUrlLabel(new QLabel(this))
 {
-    mConverter->setObjectName(QStringLiteral("converter"));
+    mConverter->setObjectName(QLatin1StringView("converter"));
     connect(mConverter, &MarkdownConverter::failed, this, &MarkdownPreviewWidget::converterFailed);
 
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     mainLayout->setContentsMargins({});
 
     auto page = new MarkdownEnginePage(this);
@@ -47,10 +47,10 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mWebView->settings()->setAttribute(QWebEngineSettings::Accelerated2dCanvasEnabled, false);
     mWebView->settings()->setAttribute(QWebEngineSettings::WebGLEnabled, false);
 
-    mWebView->setObjectName(QStringLiteral("webengine"));
+    mWebView->setObjectName(QLatin1StringView("webengine"));
     mainLayout->addWidget(mWebView);
 
-    mHoverUrlLabel->setObjectName(QStringLiteral("mHoverUrlLabel"));
+    mHoverUrlLabel->setObjectName(QLatin1StringView("mHoverUrlLabel"));
     mainLayout->addWidget(mHoverUrlLabel);
 
     mWebView->setContextMenuPolicy(Qt::NoContextMenu);

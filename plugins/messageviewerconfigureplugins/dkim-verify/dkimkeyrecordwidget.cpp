@@ -20,9 +20,9 @@ DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
     , mManagerKeyWidget(new MessageViewer::DKIMManagerKeyWidget(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
-    mManagerKeyWidget->setObjectName(QStringLiteral("mManagerKeyWidget"));
+    mManagerKeyWidget->setObjectName(QLatin1StringView("mManagerKeyWidget"));
     mainLayout->addWidget(mManagerKeyWidget);
     readConfig();
 }

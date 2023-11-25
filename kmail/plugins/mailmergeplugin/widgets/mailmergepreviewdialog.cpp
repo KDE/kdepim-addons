@@ -15,10 +15,10 @@ MailMergePreviewDialog::MailMergePreviewDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Attachment"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
 
     mainLayout->addWidget(buttonBox);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);

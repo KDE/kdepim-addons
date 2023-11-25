@@ -17,10 +17,10 @@ ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     , mTabWidget(new QTabWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mTabWidget->setObjectName(QStringLiteral("tabwidget"));
+    mTabWidget->setObjectName(QLatin1StringView("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 
     initTab(KIdentityManagementCore::IdentityManager::self());

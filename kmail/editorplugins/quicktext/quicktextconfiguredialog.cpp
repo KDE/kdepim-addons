@@ -26,12 +26,12 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure quick text"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mQuickTextConfigureWidget->setObjectName(QStringLiteral("quicktextconfigurewidget"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mQuickTextConfigureWidget->setObjectName(QLatin1StringView("quicktextconfigurewidget"));
     mainLayout->addWidget(mQuickTextConfigureWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QuickTextConfigureDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QuickTextConfigureDialog::reject);
 

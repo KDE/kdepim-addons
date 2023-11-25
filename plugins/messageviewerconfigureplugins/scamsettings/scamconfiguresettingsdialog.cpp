@@ -22,14 +22,14 @@ ScamConfigureSettingsDialog::ScamConfigureSettingsDialog(QWidget *parent)
     , mScamConfigureSettingsWidget(new ScamConfigureSettingsWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     setWindowTitle(i18nc("@title:window", "Configure Scam Settings"));
 
-    mScamConfigureSettingsWidget->setObjectName(QStringLiteral("mScamConfigureSettingsWidget"));
+    mScamConfigureSettingsWidget->setObjectName(QLatin1StringView("mScamConfigureSettingsWidget"));
     mainLayout->addWidget(mScamConfigureSettingsWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ScamConfigureSettingsDialog::slotAccepted);

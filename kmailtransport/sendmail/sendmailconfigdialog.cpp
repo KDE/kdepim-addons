@@ -22,10 +22,10 @@ SendMailConfigDialog::SendMailConfigDialog(MailTransport::Transport *transport, 
 {
     Q_ASSERT(transport);
     auto mainLayout = new QVBoxLayout(this);
-    mConfigWidget->setObjectName(QStringLiteral("sendmailconfigwidget"));
+    mConfigWidget->setObjectName(QLatin1StringView("sendmailconfigwidget"));
     mainLayout->addWidget(mConfigWidget);
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setEnabled(false);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);

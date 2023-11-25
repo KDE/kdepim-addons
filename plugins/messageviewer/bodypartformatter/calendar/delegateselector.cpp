@@ -26,22 +26,22 @@ DelegateSelector::DelegateSelector(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
 
     auto label = new QLabel(i18n("Delegate:"), this);
-    label->setObjectName(QStringLiteral("label"));
+    label->setObjectName(QLatin1StringView("label"));
     mainLayout->addWidget(label);
 
-    mDelegate->setObjectName(QStringLiteral("delegate"));
+    mDelegate->setObjectName(QLatin1StringView("delegate"));
     mainLayout->addWidget(mDelegate);
 
     connect(mDelegate, &PimCommon::AddresseeLineEdit::textChanged, this, &DelegateSelector::slotTextChanged);
-    mRsvp->setObjectName(QStringLiteral("informcheckbox"));
+    mRsvp->setObjectName(QLatin1StringView("informcheckbox"));
 
     mRsvp->setChecked(true);
     mainLayout->addWidget(mRsvp);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
-    mOkButton->setObjectName(QStringLiteral("okbutton"));
+    mOkButton->setObjectName(QLatin1StringView("okbutton"));
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &DelegateSelector::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &DelegateSelector::reject);

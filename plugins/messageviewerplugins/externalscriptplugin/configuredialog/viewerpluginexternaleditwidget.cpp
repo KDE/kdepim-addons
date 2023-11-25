@@ -21,25 +21,25 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     , mExecutable(new KUrlRequester(this))
 {
     auto mainLayout = new QFormLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mName->setObjectName(QStringLiteral("name"));
+    mName->setObjectName(QLatin1StringView("name"));
     mainLayout->addRow(i18n("Name:"), mName);
     KLineEditEventHandler::catchReturnKey(mName);
 
-    mDescription->setObjectName(QStringLiteral("description"));
+    mDescription->setObjectName(QLatin1StringView("description"));
     mainLayout->addRow(i18n("Description:"), mDescription);
     KLineEditEventHandler::catchReturnKey(mDescription);
 
     mCommandLine->setClearButtonEnabled(true);
-    mCommandLine->setObjectName(QStringLiteral("commandline"));
+    mCommandLine->setObjectName(QLatin1StringView("commandline"));
     mCommandLine->setPlaceholderText(i18n("Add command arguments..."));
     mainLayout->addRow(i18n("Command Line:"), mCommandLine);
     KLineEditEventHandler::catchReturnKey(mCommandLine);
 
     auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
-    formatHelp->setObjectName(QStringLiteral("formatHelp"));
+    formatHelp->setObjectName(QLatin1StringView("formatHelp"));
     formatHelp->setContextMenuPolicy(Qt::NoContextMenu);
     connect(formatHelp, &QLabel::linkActivated, this, &ViewerPluginExternalEditWidget::slotLinkClicked);
 
@@ -60,7 +60,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
     mainLayout->addWidget(formatHelp);
 
-    mExecutable->setObjectName(QStringLiteral("mEditorRequester"));
+    mExecutable->setObjectName(QLatin1StringView("mEditorRequester"));
 
     mExecutable->setMimeTypeFilters(
         {QStringLiteral("application/x-executable"), QStringLiteral("application/x-shellscript"), QStringLiteral("application/x-desktop")});

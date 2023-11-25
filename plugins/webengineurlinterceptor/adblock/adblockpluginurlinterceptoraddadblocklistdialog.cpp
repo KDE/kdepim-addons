@@ -15,13 +15,13 @@ AdblockPluginUrlInterceptorAddAdblockListDialog::AdblockPluginUrlInterceptorAddA
 {
     setWindowTitle(i18nc("@title:window", "Add Adblock List"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
-    mAddAdblockListWidget->setObjectName(QStringLiteral("mAddAdblockListWidget"));
+    mAddAdblockListWidget->setObjectName(QLatin1StringView("mAddAdblockListWidget"));
     mainLayout->addWidget(mAddAdblockListWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AdblockPluginUrlInterceptorAddAdblockListDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdblockPluginUrlInterceptorAddAdblockListDialog::reject);

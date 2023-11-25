@@ -19,12 +19,12 @@ ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWi
     , mUseSameResultForOtherCheck(new QCheckBox(i18n("Apply to All"), this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     mainLayout->setContentsMargins({});
 
     const QIcon tmpIcon = style()->standardIcon(QStyle::SP_MessageBoxQuestion, nullptr, this);
     auto iconLabel = new QLabel(this);
-    iconLabel->setObjectName(QStringLiteral("iconLabel"));
+    iconLabel->setObjectName(QLatin1StringView("iconLabel"));
     if (!tmpIcon.isNull()) {
         QStyleOption option;
         option.initFrom(this);
@@ -33,16 +33,16 @@ ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWi
     mainLayout->addWidget(iconLabel);
 
     auto textLayout = new QVBoxLayout;
-    textLayout->setObjectName(QStringLiteral("textLayout"));
+    textLayout->setObjectName(QLatin1StringView("textLayout"));
     textLayout->setContentsMargins({});
 
     mainLayout->addLayout(textLayout);
 
-    mLabelInfo->setObjectName(QStringLiteral("mLabelInfo"));
+    mLabelInfo->setObjectName(QLatin1StringView("mLabelInfo"));
     mLabelInfo->setWordWrap(true);
     textLayout->addWidget(mLabelInfo, Qt::AlignTop);
 
-    mUseSameResultForOtherCheck->setObjectName(QStringLiteral("mUseSameResultForOtherCheck"));
+    mUseSameResultForOtherCheck->setObjectName(QLatin1StringView("mUseSameResultForOtherCheck"));
     textLayout->addWidget(mUseSameResultForOtherCheck);
 
     mUseSameResultForOtherCheck->setChecked(false);

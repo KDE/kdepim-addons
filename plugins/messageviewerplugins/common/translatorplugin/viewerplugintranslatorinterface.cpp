@@ -60,7 +60,7 @@ TextTranslator::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
     if (!mTranslatorWidget) {
         auto parentWidget = static_cast<QWidget *>(parent());
         mTranslatorWidget = new TextTranslator::TranslatorWidget(parentWidget);
-        mTranslatorWidget->setObjectName(QStringLiteral("translatorwidget"));
+        mTranslatorWidget->setObjectName(QLatin1StringView("translatorwidget"));
         parentWidget->layout()->addWidget(mTranslatorWidget);
         mTranslatorWidget->hide();
     }

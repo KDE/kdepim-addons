@@ -19,9 +19,9 @@ EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setSpacing(0);
     mainLayout->setContentsMargins({});
-    mDateEdit->setObjectName(QStringLiteral("eventdatecombobox"));
+    mDateEdit->setObjectName(QLatin1StringView("eventdatecombobox"));
     mainLayout->addWidget(mDateEdit);
-    mTimeEdit->setObjectName(QStringLiteral("eventtimecombobox"));
+    mTimeEdit->setObjectName(QLatin1StringView("eventtimecombobox"));
     mainLayout->addWidget(mTimeEdit);
     const QDateTime currentDateTime = QDateTime::currentDateTime();
     setDateTime(currentDateTime);

@@ -26,12 +26,12 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
     auto listLayout = new QHBoxLayout;
     mainLayout->addLayout(listLayout);
 
-    mTreeWidget->setObjectName(QStringLiteral("mTreeWidget"));
+    mTreeWidget->setObjectName(QLatin1StringView("mTreeWidget"));
     listLayout->addWidget(mTreeWidget);
     mTreeWidget->setAlternatingRowColors(true);
     mTreeWidget->setRootIsDecorated(false);
@@ -49,15 +49,15 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     listLayout->addLayout(buttonLayout);
 
     connect(mAddRule, &QPushButton::clicked, this, &ConfirmBeforeDeletingWidget::slotAddRule);
-    mAddRule->setObjectName(QStringLiteral("mAddRule"));
+    mAddRule->setObjectName(QLatin1StringView("mAddRule"));
     buttonLayout->addWidget(mAddRule);
 
     connect(mModifyRule, &QPushButton::clicked, this, &ConfirmBeforeDeletingWidget::slotEditRule);
-    mModifyRule->setObjectName(QStringLiteral("mModifyRule"));
+    mModifyRule->setObjectName(QLatin1StringView("mModifyRule"));
     buttonLayout->addWidget(mModifyRule);
 
     connect(mRemoveRule, &QPushButton::clicked, this, &ConfirmBeforeDeletingWidget::slotRemoveRule);
-    mRemoveRule->setObjectName(QStringLiteral("mRemoveRule"));
+    mRemoveRule->setObjectName(QLatin1StringView("mRemoveRule"));
     buttonLayout->addWidget(mRemoveRule);
     buttonLayout->addStretch(1);
     updateButtons();

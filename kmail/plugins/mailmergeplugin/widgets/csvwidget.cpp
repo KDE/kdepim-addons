@@ -18,13 +18,13 @@ CsvWidget::CsvWidget(QWidget *parent)
     , mCvsUrlRequester(new KUrlRequester(this))
 {
     auto csvWidgetLayout = new QVBoxLayout(this);
-    csvWidgetLayout->setObjectName(QStringLiteral("csvWidgetLayout"));
+    csvWidgetLayout->setObjectName(QLatin1StringView("csvWidgetLayout"));
     csvWidgetLayout->setContentsMargins({});
 
     auto lab = new QLabel(i18n("Path:"), this);
-    lab->setObjectName(QStringLiteral("label"));
+    lab->setObjectName(QLatin1StringView("label"));
     csvWidgetLayout->addWidget(lab);
-    mCvsUrlRequester->setObjectName(QStringLiteral("cvsurlrequester"));
+    mCvsUrlRequester->setObjectName(QLatin1StringView("cvsurlrequester"));
     csvWidgetLayout->addWidget(mCvsUrlRequester);
 }
 

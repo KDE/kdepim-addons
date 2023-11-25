@@ -20,9 +20,9 @@ AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
     , mAdblockFilterListsModel(new AdblockFilterListsModel(this))
     , mSortFilterProxyModel(new QSortFilterProxyModel(this))
 {
-    mAdblockFilterListsModel->setObjectName(QStringLiteral("mAdblockFilterListsModel"));
+    mAdblockFilterListsModel->setObjectName(QLatin1StringView("mAdblockFilterListsModel"));
 
-    mSortFilterProxyModel->setObjectName(QStringLiteral("mSortFilterProxyModel"));
+    mSortFilterProxyModel->setObjectName(QLatin1StringView("mSortFilterProxyModel"));
 
     mAdblockFilterListsModel->setAdblockFilter(AdblockManager::self()->adblockFilterLists());
     mSortFilterProxyModel->setSourceModel(mAdblockFilterListsModel);

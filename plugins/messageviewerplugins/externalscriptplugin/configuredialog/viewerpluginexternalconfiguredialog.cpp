@@ -23,7 +23,7 @@ ViewerPluginExternalConfigureDialog::~ViewerPluginExternalConfigureDialog() = de
 QWidget *ViewerPluginExternalConfigureDialog::createLayout()
 {
     mConfigWidget = new ViewerPluginExternalConfigureWidget(this);
-    mConfigWidget->setObjectName(QStringLiteral("externalconfigwidget"));
+    mConfigWidget->setObjectName(QLatin1StringView("externalconfigwidget"));
     return mConfigWidget;
 }
 

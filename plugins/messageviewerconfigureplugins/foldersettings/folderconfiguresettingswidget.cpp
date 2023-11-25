@@ -22,19 +22,19 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     , mSplitter(new QSplitter(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     mainLayout->setContentsMargins({});
 
     // TODO add label ?
 
-    mSplitter->setObjectName(QStringLiteral("splitter"));
+    mSplitter->setObjectName(QLatin1StringView("splitter"));
     mSplitter->setChildrenCollapsible(false);
     mainLayout->addWidget(mSplitter);
 
-    mFolderConfigureTreeWidget->setObjectName(QStringLiteral("mFolderConfigureTreeWidget"));
+    mFolderConfigureTreeWidget->setObjectName(QLatin1StringView("mFolderConfigureTreeWidget"));
     mSplitter->addWidget(mFolderConfigureTreeWidget);
 
-    mFolderConfigureSettingsPageWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsPageWidget"));
+    mFolderConfigureSettingsPageWidget->setObjectName(QLatin1StringView("mFolderConfigureSettingsPageWidget"));
     mSplitter->addWidget(mFolderConfigureSettingsPageWidget);
     readConfig();
 }

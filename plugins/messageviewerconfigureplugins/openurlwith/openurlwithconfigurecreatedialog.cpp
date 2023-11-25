@@ -15,13 +15,13 @@ OpenUrlWithConfigureCreateDialog::OpenUrlWithConfigureCreateDialog(QWidget *pare
 {
     setWindowTitle(i18nc("@title:window", "Create"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mOpenUrlWithCreateWidget->setObjectName(QStringLiteral("mOpenUrlWithCreateWidget"));
+    mOpenUrlWithCreateWidget->setObjectName(QLatin1StringView("mOpenUrlWithCreateWidget"));
     mainLayout->addWidget(mOpenUrlWithCreateWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &OpenUrlWithConfigureCreateDialog::accept);

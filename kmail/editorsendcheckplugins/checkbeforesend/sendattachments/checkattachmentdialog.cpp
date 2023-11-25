@@ -25,14 +25,14 @@ CheckAttachmentDialog::CheckAttachmentDialog(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
 
     auto lab = new QLabel(i18n("Do you want to send some attachment?"), this);
-    lab->setObjectName(QStringLiteral("lab"));
+    lab->setObjectName(QLatin1StringView("lab"));
     mainLayout->addWidget(lab);
 
-    mListWidget->setObjectName(QStringLiteral("listwidget"));
+    mListWidget->setObjectName(QLatin1StringView("listwidget"));
     mainLayout->addWidget(mListWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckAttachmentDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckAttachmentDialog::reject);
     mainLayout->addWidget(buttonBox);

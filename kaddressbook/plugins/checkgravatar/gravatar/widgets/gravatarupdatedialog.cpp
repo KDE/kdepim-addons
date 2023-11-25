@@ -29,10 +29,10 @@ GravatarUpdateDialog::GravatarUpdateDialog(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("@title:window", "Check and update Gravatar"));
     connect(mGravatarUpdateWidget, &GravatarUpdateWidget::activateDialogButton, this, &GravatarUpdateDialog::slotActivateButton);
-    mGravatarUpdateWidget->setObjectName(QStringLiteral("gravatarupdatewidget"));
+    mGravatarUpdateWidget->setObjectName(QLatin1StringView("gravatarupdatewidget"));
     mainLayout->addWidget(mGravatarUpdateWidget);
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     mSaveImageButton->setEnabled(false);
     buttonBox->addButton(mSaveImageButton, QDialogButtonBox::ActionRole);
     connect(mSaveImageButton, &QPushButton::clicked, this, &GravatarUpdateDialog::slotSaveImage);

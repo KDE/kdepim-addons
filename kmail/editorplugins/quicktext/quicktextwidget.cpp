@@ -17,21 +17,21 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     mainLayout->setContentsMargins({});
 
     mSnippetsManager = new QuicktextManager(this, this);
 
     mTreeWidget = new QuicktextTreeWidget(mSnippetsManager, this);
-    mTreeWidget->setObjectName(QStringLiteral("treewidget"));
+    mTreeWidget->setObjectName(QLatin1StringView("treewidget"));
     mainLayout->addWidget(mTreeWidget);
 
     mStackedWidget = new QStackedWidget(this);
-    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
     mainLayout->addWidget(mStackedWidget);
 
     mSnippetWidget = new MailCommon::SnippetWidget(this);
-    mSnippetWidget->setObjectName(QStringLiteral("snippetwidget"));
+    mSnippetWidget->setObjectName(QLatin1StringView("snippetwidget"));
     mStackedWidget->addWidget(mSnippetWidget);
 
     mEmptyWidget = new QWidget(this);

@@ -20,13 +20,13 @@ MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     , mExtraDefinitionLists(new QCheckBox(i18n("Enable PHP Markdown Extra definition lists"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mLatexSupport->setObjectName(QStringLiteral("latex"));
+    mLatexSupport->setObjectName(QLatin1StringView("latex"));
     mainLayout->addWidget(mLatexSupport);
 
-    mExtraDefinitionLists->setObjectName(QStringLiteral("extradefinitionlists"));
+    mExtraDefinitionLists->setObjectName(QLatin1StringView("extradefinitionlists"));
     mainLayout->addWidget(mExtraDefinitionLists);
     mainLayout->addStretch(1);
 }

@@ -11,7 +11,7 @@ FolderConfigureSettingsTemplateWidget::FolderConfigureSettingsTemplateWidget(QWi
     : FolderConfigureSettingsPageBase(parent)
     , mCollectionTemplateWidget(new MailCommon::CollectionTemplatesWidget(this))
 {
-    mCollectionTemplateWidget->setObjectName(QStringLiteral("mCollectionTemplateWidget"));
+    mCollectionTemplateWidget->setObjectName(QLatin1StringView("mCollectionTemplateWidget"));
     addMainWidget(mCollectionTemplateWidget);
 }
 

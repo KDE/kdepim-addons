@@ -20,14 +20,14 @@ MergeContactInfoWidget::MergeContactInfoWidget(QWidget *parent)
     , mContactViewer(new KAddressBookGrantlee::GrantleeContactViewer(this))
 {
     auto lay = new QHBoxLayout(this);
-    mStackWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mStackWidget->setObjectName(QLatin1StringView("stackedwidget"));
 
-    mContactViewer->setObjectName(QStringLiteral("contactwidget"));
+    mContactViewer->setObjectName(QLatin1StringView("contactwidget"));
     mContactViewer->setForceDisableQRCode(true);
 
     mStackWidget->addWidget(mContactViewer);
 
-    mNoContactSelected->setObjectName(QStringLiteral("nocontact"));
+    mNoContactSelected->setObjectName(QLatin1StringView("nocontact"));
     mStackWidget->addWidget(mNoContactSelected);
 
     lay->addWidget(mStackWidget);

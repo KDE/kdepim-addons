@@ -28,16 +28,16 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     , mAddressbookWidget(new MailMerge::AddressBookWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
     auto hbox = new QHBoxLayout;
     mainLayout->addLayout(hbox);
 
     auto lab = new QLabel(i18n("Source:"), this);
-    lab->setObjectName(QStringLiteral("lab"));
+    lab->setObjectName(QLatin1StringView("lab"));
     hbox->addWidget(lab);
 
-    mSource->setObjectName(QStringLiteral("source"));
+    mSource->setObjectName(QLatin1StringView("source"));
     mSource->addItem(i18n("Address Book"), AddressBook);
     mSource->addItem(i18n("CSV"), CSV);
     connect(mSource, &QComboBox::currentIndexChanged, this, &MailMergeWidget::slotSourceChanged);
@@ -45,13 +45,13 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
 
     hbox->addWidget(mSource);
 
-    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
     mainLayout->addWidget(mStackedWidget);
 
-    mAddressbookWidget->setObjectName(QStringLiteral("addressbookwidget"));
+    mAddressbookWidget->setObjectName(QLatin1StringView("addressbookwidget"));
     mStackedWidget->addWidget(mAddressbookWidget);
 
-    mCsvWidget->setObjectName(QStringLiteral("csvwidget"));
+    mCsvWidget->setObjectName(QLatin1StringView("csvwidget"));
 
     mStackedWidget->addWidget(mCsvWidget);
 
@@ -61,7 +61,7 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     auto buttonCode = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(
         PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
     mAttachment = new AttachmentListWidget(this, buttonCode, i18n("A&dd..."), i18n("Re&move"), i18n("Mod&ify..."));
-    mAttachment->setObjectName(QStringLiteral("attachment-list"));
+    mAttachment->setObjectName(QLatin1StringView("attachment-list"));
 
     mainLayout->addWidget(mAttachment);
     mainLayout->addStretch();

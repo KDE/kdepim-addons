@@ -17,19 +17,19 @@ CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent
 {
     setWindowTitle(i18nc("@title:window", "Check SMTP server"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
     auto lab = new QLabel(i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), this);
-    lab->setObjectName(QStringLiteral("label"));
+    lab->setObjectName(QLatin1StringView("label"));
     lab->setWordWrap(true);
     mainLayout->addWidget(lab);
 
-    mChangeSmtp->setObjectName(QStringLiteral("changesmtp"));
+    mChangeSmtp->setObjectName(QLatin1StringView("changesmtp"));
     mChangeSmtp->setChecked(false);
     mainLayout->addWidget(mChangeSmtp);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckBeforeSendUpdateSmtpDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckBeforeSendUpdateSmtpDialog::reject);

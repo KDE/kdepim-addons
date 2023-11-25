@@ -14,10 +14,10 @@ QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
     , mSnippetWidget(new QuickTextWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mSnippetWidget->setObjectName(QStringLiteral("snippetwidget"));
+    mSnippetWidget->setObjectName(QLatin1StringView("snippetwidget"));
 
     mainLayout->addWidget(mSnippetWidget);
 }

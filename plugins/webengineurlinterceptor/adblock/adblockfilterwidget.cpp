@@ -18,15 +18,15 @@ AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
     , mSearchLineEdit(new QLineEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
+    mSearchLineEdit->setObjectName(QLatin1StringView("mSearchLineEdit"));
     mainLayout->addWidget(mSearchLineEdit);
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
 
-    mAdblockFilterListView->setObjectName(QStringLiteral("mAdblockFilterListView"));
+    mAdblockFilterListView->setObjectName(QLatin1StringView("mAdblockFilterListView"));
     mainLayout->addWidget(mAdblockFilterListView);
     connect(mSearchLineEdit, &QLineEdit::textChanged, mAdblockFilterListView, &AdblockFilterListsView::setFilterString);
 }

@@ -26,16 +26,16 @@ MarkdownCreateImageDialog::MarkdownCreateImageDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Add Image"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mMarkdownCreateImageWidget->setObjectName(QStringLiteral("markdowncreateimagewidget"));
+    mMarkdownCreateImageWidget->setObjectName(QLatin1StringView("markdowncreateimagewidget"));
 
     mainLayout->addWidget(mMarkdownCreateImageWidget);
 
     auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    box->setObjectName(QStringLiteral("buttonbox"));
+    box->setObjectName(QLatin1StringView("buttonbox"));
     mOkButton = box->button(QDialogButtonBox::Ok);
-    mOkButton->setObjectName(QStringLiteral("okbutton"));
+    mOkButton->setObjectName(QLatin1StringView("okbutton"));
     mOkButton->setEnabled(false);
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateImageDialog::accept);

@@ -24,13 +24,13 @@ DKIMAuthenticationVerifiedServerDialog::DKIMAuthenticationVerifiedServerDialog(Q
 {
     setWindowTitle(i18nc("@title:window", "Configure Authentication Verified Server"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mAuthenticationVerifiedWidget->setObjectName(QStringLiteral("mAuthenticationVerifiedWidget"));
+    mAuthenticationVerifiedWidget->setObjectName(QLatin1StringView("mAuthenticationVerifiedWidget"));
     mainLayout->addWidget(mAuthenticationVerifiedWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &DKIMAuthenticationVerifiedServerDialog::slotAccepted);

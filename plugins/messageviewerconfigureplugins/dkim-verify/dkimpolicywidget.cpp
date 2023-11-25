@@ -24,9 +24,9 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     , mRulesButton(new QPushButton(i18n("Show Rules"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
-    mVerifyIfEmailMustBeSigned->setObjectName(QStringLiteral("kcfg_CheckIfEmailShouldBeSigned"));
+    mVerifyIfEmailMustBeSigned->setObjectName(QLatin1StringView("kcfg_CheckIfEmailShouldBeSigned"));
     mainLayout->addWidget(mVerifyIfEmailMustBeSigned);
     connect(mVerifyIfEmailMustBeSigned, &QCheckBox::toggled, this, [this](bool state) {
         mUseDMARC->setEnabled(state);
@@ -37,19 +37,19 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
         mReadAuthResultHeader->setEnabled(state);
     });
 
-    mUseDMARC->setObjectName(QStringLiteral("kcfg_UseDMarc"));
+    mUseDMARC->setObjectName(QLatin1StringView("kcfg_UseDMarc"));
     mUseDMARC->setEnabled(false);
     mainLayout->addWidget(mUseDMARC);
 
-    mReadAuthResultHeader->setObjectName(QStringLiteral("kcfg_UseAuthenticationResults"));
+    mReadAuthResultHeader->setObjectName(QLatin1StringView("kcfg_UseAuthenticationResults"));
     mReadAuthResultHeader->setEnabled(false);
     mainLayout->addWidget(mReadAuthResultHeader);
 
-    mUseDefaultRules->setObjectName(QStringLiteral("kcfg_UseDefaultRules"));
+    mUseDefaultRules->setObjectName(QLatin1StringView("kcfg_UseDefaultRules"));
     mUseDefaultRules->setEnabled(false);
     mainLayout->addWidget(mUseDefaultRules);
 
-    mAutoGenerateRule->setObjectName(QStringLiteral("kcfg_AutogenerateRule"));
+    mAutoGenerateRule->setObjectName(QLatin1StringView("kcfg_AutogenerateRule"));
     mAutoGenerateRule->setEnabled(false);
     mainLayout->addWidget(mAutoGenerateRule);
 
@@ -60,13 +60,13 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     auto item = new QSpacerItem(30, 0);
     autogenerateOnlyLayout->addItem(item);
 
-    mAutoGenerateOnlyIfSenderInSDID->setObjectName(QStringLiteral("kcfg_AutogenerateRuleOnlyIfSenderOnSDID"));
+    mAutoGenerateOnlyIfSenderInSDID->setObjectName(QLatin1StringView("kcfg_AutogenerateRuleOnlyIfSenderOnSDID"));
     mAutoGenerateOnlyIfSenderInSDID->setEnabled(false);
     autogenerateOnlyLayout->addWidget(mAutoGenerateOnlyIfSenderInSDID);
 
     auto ruleLayout = new QHBoxLayout;
     mainLayout->addLayout(ruleLayout);
-    mRulesButton->setObjectName(QStringLiteral("rules"));
+    mRulesButton->setObjectName(QLatin1StringView("rules"));
     mRulesButton->setEnabled(false);
     ruleLayout->addWidget(mRulesButton);
     connect(mRulesButton, &QPushButton::clicked, this, [this]() {

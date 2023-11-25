@@ -43,28 +43,28 @@ SearchAndMergeContactDuplicateContactDialog::SearchAndMergeContactDuplicateConta
     auto mainLayout = new QVBoxLayout(this);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SearchAndMergeContactDuplicateContactDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SearchAndMergeContactDuplicateContactDialog::reject);
-    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
 
-    mSearchResult->setObjectName(QStringLiteral("mergecontact"));
+    mSearchResult->setObjectName(QLatin1StringView("mergecontact"));
     mStackedWidget->addWidget(mSearchResult);
     connect(mSearchResult, &SearchDuplicateResultWidget::contactMerged, this, &SearchAndMergeContactDuplicateContactDialog::slotContactMerged);
     connect(mSearchResult, &SearchDuplicateResultWidget::mergeDone, this, &SearchAndMergeContactDuplicateContactDialog::slotMergeDone);
     connect(mSearchResult, &SearchDuplicateResultWidget::customizeMergeContact, this, &SearchAndMergeContactDuplicateContactDialog::slotCustomizeMergeContacts);
 
-    mNoContactSelected->setObjectName(QStringLiteral("nocontactselected"));
+    mNoContactSelected->setObjectName(QLatin1StringView("nocontactselected"));
     mStackedWidget->addWidget(mNoContactSelected);
 
-    mNoDuplicateContactFound->setObjectName(QStringLiteral("nocontactduplicatesfound"));
+    mNoDuplicateContactFound->setObjectName(QLatin1StringView("nocontactduplicatesfound"));
     mStackedWidget->addWidget(mNoDuplicateContactFound);
 
-    mMergeContactResult->setObjectName(QStringLiteral("mergecontactresult"));
+    mMergeContactResult->setObjectName(QLatin1StringView("mergecontactresult"));
     mStackedWidget->addWidget(mMergeContactResult);
 
-    mNoEnoughContactSelected->setObjectName(QStringLiteral("noenoughcontactselected"));
+    mNoEnoughContactSelected->setObjectName(QLatin1StringView("noenoughcontactselected"));
     mStackedWidget->addWidget(mNoEnoughContactSelected);
     mStackedWidget->setCurrentWidget(mNoContactSelected);
 
-    mSelectInformation->setObjectName(QStringLiteral("selectioninformation"));
+    mSelectInformation->setObjectName(QLatin1StringView("selectioninformation"));
     mStackedWidget->addWidget(mSelectInformation);
 
     mainLayout->addWidget(mStackedWidget);

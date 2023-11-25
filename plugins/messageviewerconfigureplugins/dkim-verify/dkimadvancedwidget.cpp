@@ -21,24 +21,24 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     , mSmallKeyPolicy(new QComboBox(this))
 {
     auto mainLayout = new QFormLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
-    mCheckDKIMWhenOnlyTesting->setObjectName(QStringLiteral("kcfg_VerifySignatureWhenOnlyTest"));
+    mCheckDKIMWhenOnlyTesting->setObjectName(QLatin1StringView("kcfg_VerifySignatureWhenOnlyTest"));
     mainLayout->addRow(mCheckDKIMWhenOnlyTesting);
 
-    mUseAuthenticationResultRelaxedParser->setObjectName(QStringLiteral("kcfg_UseRelaxedParsingAuthenticationResults"));
+    mUseAuthenticationResultRelaxedParser->setObjectName(QLatin1StringView("kcfg_UseRelaxedParsingAuthenticationResults"));
     mainLayout->addRow(mUseAuthenticationResultRelaxedParser);
 
-    mSha1Policy->setObjectName(QStringLiteral("kcfg_PolicyRsaSha1"));
+    mSha1Policy->setObjectName(QLatin1StringView("kcfg_PolicyRsaSha1"));
     mSha1Policy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
     mainLayout->addRow(i18n("Treat RSA-SHA1 sign algorithm as:"), mSha1Policy);
 
-    mSmallKeyPolicy->setObjectName(QStringLiteral("kcfg_PublicRsaTooSmall"));
+    mSmallKeyPolicy->setObjectName(QLatin1StringView("kcfg_PublicRsaTooSmall"));
     mSmallKeyPolicy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
     mainLayout->addRow(i18n("Treat small Key as:"), mSmallKeyPolicy);
 
     auto configureServer = new QPushButton(i18n("Configure"), this);
-    configureServer->setObjectName(QStringLiteral("configure_button"));
+    configureServer->setObjectName(QLatin1StringView("configure_button"));
     connect(configureServer, &QPushButton::clicked, this, &DKIMAdvancedWidget::slotConfigureAuthenticationServer);
     mainLayout->addRow(i18n("Authentication Server verified:"), configureServer);
 }

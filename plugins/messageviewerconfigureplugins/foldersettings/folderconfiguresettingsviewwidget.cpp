@@ -13,7 +13,7 @@ FolderConfigureSettingsViewWidget::FolderConfigureSettingsViewWidget(QWidget *pa
 {
     auto mainWidget = new QWidget(this);
     auto mainLayout = new QHBoxLayout(mainWidget);
-    mCollectionViewWidget->setObjectName(QStringLiteral("mCollectionTemplateWidget"));
+    mCollectionViewWidget->setObjectName(QLatin1StringView("mCollectionTemplateWidget"));
     mainLayout->addWidget(mCollectionViewWidget);
     addMainWidget(mainWidget);
     mMainLayout->addStretch();

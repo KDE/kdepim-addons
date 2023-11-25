@@ -23,10 +23,10 @@ MailMergeDialog::MailMergeDialog(QWidget *parent)
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
 
-    mMailMergeWidget->setObjectName(QStringLiteral("mailmergewidget"));
+    mMailMergeWidget->setObjectName(QLatin1StringView("mailmergewidget"));
     mainLayout->addWidget(mMailMergeWidget);
 
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &MailMergeDialog::accept);

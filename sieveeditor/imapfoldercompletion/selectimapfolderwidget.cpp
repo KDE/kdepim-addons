@@ -31,25 +31,25 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveCore::SieveImapAccoun
     mModel = SelectImapFolderModel::self()->folderModel(mAccount, modelIsInitialized);
     connect(SelectImapFolderModel::self(), &SelectImapFolderModel::modelLoaded, this, &SelectImapFolderWidget::slotModelLoaded);
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
 
     auto topLayout = new QHBoxLayout;
     topLayout->setContentsMargins({});
     mainLayout->addLayout(topLayout);
-    mSearchLineEdit->setObjectName(QStringLiteral("searchline"));
+    mSearchLineEdit->setObjectName(QLatin1StringView("searchline"));
     mSearchLineEdit->setClearButtonEnabled(true);
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     topLayout->addWidget(mSearchLineEdit);
 
     auto refreshImap = new QToolButton(this);
-    refreshImap->setObjectName(QStringLiteral("refreshimap"));
+    refreshImap->setObjectName(QLatin1StringView("refreshimap"));
     refreshImap->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     refreshImap->setToolTip(i18n("Refresh IMAP Folder List"));
     connect(refreshImap, &QToolButton::clicked, this, &SelectImapFolderWidget::slotRefreshImap);
     topLayout->addWidget(refreshImap);
 
-    mTreeView->setObjectName(QStringLiteral("treeview"));
+    mTreeView->setObjectName(QLatin1StringView("treeview"));
     mTreeView->header()->hide();
     mFilter = new QSortFilterProxyModel(this);
     mFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);

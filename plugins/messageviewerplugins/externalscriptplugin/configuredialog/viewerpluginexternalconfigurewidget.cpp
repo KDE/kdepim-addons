@@ -61,17 +61,17 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     , mModifyScript(new QPushButton(i18n("Modify Script..."), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("layout"));
+    mainLayout->setObjectName(QLatin1StringView("layout"));
     mainLayout->setContentsMargins({});
 
     auto lab = new QLabel(i18n("External Script:"), this);
-    lab->setObjectName(QStringLiteral("lab"));
+    lab->setObjectName(QLatin1StringView("lab"));
     mainLayout->addWidget(lab);
 
     auto listLayout = new QHBoxLayout;
     mainLayout->addLayout(listLayout);
 
-    mListExternal->setObjectName(QStringLiteral("listexternal"));
+    mListExternal->setObjectName(QLatin1StringView("listexternal"));
     mListExternal->setSelectionMode(QAbstractItemView::SingleSelection);
     mListExternal->setAlternatingRowColors(true);
     listLayout->addWidget(mListExternal);
@@ -82,15 +82,15 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     listLayout->addLayout(buttonLayout);
 
     connect(mAddScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotAddScript);
-    mAddScript->setObjectName(QStringLiteral("addscript"));
+    mAddScript->setObjectName(QLatin1StringView("addscript"));
     buttonLayout->addWidget(mAddScript);
 
     connect(mModifyScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotModifyScript);
-    mModifyScript->setObjectName(QStringLiteral("modifyscript"));
+    mModifyScript->setObjectName(QLatin1StringView("modifyscript"));
     buttonLayout->addWidget(mModifyScript);
 
     connect(mRemoveScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotRemoveScript);
-    mRemoveScript->setObjectName(QStringLiteral("removescript"));
+    mRemoveScript->setObjectName(QLatin1StringView("removescript"));
     buttonLayout->addWidget(mRemoveScript);
     buttonLayout->addStretch(1);
     updateButtons();

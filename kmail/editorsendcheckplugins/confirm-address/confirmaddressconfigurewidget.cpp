@@ -18,8 +18,8 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
 {
     auto vboxlayout = new QVBoxLayout(this);
     vboxlayout->setContentsMargins({});
-    vboxlayout->setObjectName(QStringLiteral("mainlayout"));
-    mConfirmAddressConfigureTab->setObjectName(QStringLiteral("confirmaddresstab"));
+    vboxlayout->setObjectName(QLatin1StringView("mainlayout"));
+    mConfirmAddressConfigureTab->setObjectName(QLatin1StringView("confirmaddresstab"));
     connect(mConfirmAddressConfigureTab, &ConfirmAddressConfigureTab::configureChanged, this, &ConfirmAddressConfigureWidget::configureChanged);
     vboxlayout->addWidget(mConfirmAddressConfigureTab);
 }
