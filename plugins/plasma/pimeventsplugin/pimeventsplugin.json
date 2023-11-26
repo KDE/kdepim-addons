@@ -99,6 +99,7 @@
         "Name[tr]": "Takvim Etkinlikleri",
         "Name[uk]": "Календарні події",
         "Name[x-test]": "xxCalendar Eventsxx",
+        "Name[zh_CN]": "日历事件",
         "ServiceTypes": [
             "PlasmaCalendar/Plugin"
         ],
