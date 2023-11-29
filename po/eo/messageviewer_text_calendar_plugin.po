@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-09 01:03+0000\n"
-"PO-Revision-Date: 2023-03-21 22:43+0100\n"
+"PO-Revision-Date: 2023-09-24 17:43+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -27,7 +27,7 @@ msgstr "Elekti Partoprenantojn"
 #: attendeeselector.cpp:40
 #, kde-format
 msgid "Click to add a new attendee"
-msgstr ""
+msgstr "Klaki por aldoni novan partoprenanton"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: attendeeselector.ui:24
@@ -44,18 +44,18 @@ msgstr "Forigi"
 #: delegateselector.cpp:23
 #, kde-format
 msgid "Keep me informed about status changes of this incidence."
-msgstr ""
+msgstr "Tenu min informita pri statusaj ŝanĝoj de ĉi tiu okazo."
 
 #: delegateselector.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
-msgstr ""
+msgstr "Elekti delegiton"
 
 #: delegateselector.cpp:28
 #, kde-format
 msgid "Delegate:"
-msgstr ""
+msgstr "Delegito:"
 
 #: reactiontoinvitationdialog.cpp:30
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "Komento:"
 #: text_calendar.cpp:359
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
-msgstr ""
+msgstr "Neniu aldonaĵo nomita \"%1\" trovita en la invito."
 
 #: text_calendar.cpp:374
 #, kde-format
@@ -74,6 +74,9 @@ msgid ""
 "this computer. Please ask the event organizer to resend the invitation with "
 "this attachment stored inline instead of a link."
 msgstr ""
+"La invitaldonaĵo \"%1\" estas retligilo, kiu estas neatingebla de ĉi tiu "
+"komputilo. Bonvolu peti al la aranĝanto resendi la inviton kun ĉi tiu "
+"aldonaĵo konservita en linio anstataŭ ligo."
 
 #: text_calendar.cpp:426
 #, kde-format
@@ -82,6 +85,9 @@ msgid ""
 "choose which of the following addresses is yours,<br/> if any, or select one "
 "of your identities to use in the reply:</qt>"
 msgstr ""
+"<qt>Neniu el viaj identecoj kongruas kun la ricevanto de ĉi tiu mesaĝo,<br/"
+">bonvolu elekti kiu el la sekvaj adresoj estas via,<br/> se ekzistas, aŭ "
+"elektu unu el viaj identecoj por uzi en la respondo:</qt >"
 
 #: text_calendar.cpp:432
 #, kde-format
@@ -89,6 +95,8 @@ msgid ""
 "<qt>Several of your identities match the receiver of this message,<br/"
 ">please choose which of the following addresses is yours:</qt>"
 msgstr ""
+"<qt>Pluraj el viaj identecoj kongruas kun la ricevilo de ĉi tiu mesaĝo,<br/"
+">bonvolu elekti kiu el la sekvaj adresoj estas via:</qt>"
 
 #: text_calendar.cpp:447
 #, kde-format
@@ -98,250 +106,250 @@ msgstr "Elekti retpoŝtan adreson"
 #: text_calendar.cpp:512
 #, kde-format
 msgid "Answer: "
-msgstr ""
+msgstr "Respondo:"
 
 #: text_calendar.cpp:514
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
-msgstr ""
+msgstr "Malakceptita: %1"
 
 #: text_calendar.cpp:516
 #, kde-format
 msgctxt "Unsure if it is possible to attend."
 msgid "Tentative: %1"
-msgstr ""
+msgstr "Prova: %1"
 
 #: text_calendar.cpp:518
 #, kde-format
 msgctxt "Accepted the invitation."
 msgid "Accepted: %1"
-msgstr ""
+msgstr "Akceptita: %1"
 
 #: text_calendar.cpp:540 text_calendar.cpp:560
 #, kde-format
 msgid "Invitation answer attached."
-msgstr ""
+msgstr "Invita respondo alkroĉita."
 
 #: text_calendar.cpp:663
 #, kde-format
 msgid "Incidence with no summary"
-msgstr ""
+msgstr "Incidenco sen resumo"
 
 #: text_calendar.cpp:668
 #, kde-format
 msgid "Answer: %1"
-msgstr ""
+msgstr "Respondo: %1"
 
 #: text_calendar.cpp:671
 #, kde-format
 msgid "Delegated: %1"
-msgstr ""
+msgstr "Delegito: %1"
 
 #: text_calendar.cpp:674
 #, kde-format
 msgid "Forwarded: %1"
-msgstr ""
+msgstr "Plusendita: %1"
 
 #: text_calendar.cpp:677
 #, kde-format
 msgid "Declined Counter Proposal: %1"
-msgstr ""
+msgstr "Malakceptita Kontraŭpropono: %1"
 
 #: text_calendar.cpp:732 text_calendar.cpp:738
 #, kde-format
 msgid "\"%1\" occurred already."
-msgstr ""
+msgstr "\"%1\" jam okazis."
 
 #: text_calendar.cpp:734 text_calendar.cpp:751
 #, kde-format
 msgid "\"%1\" is currently in-progress."
-msgstr ""
+msgstr "\"%1\" estas nuntempe en progreso."
 
 #: text_calendar.cpp:740
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
-msgstr ""
+msgstr "\"%1\", okazanta la tutan tagon hodiaŭ, estas nuntempe en progreso."
 
 #: text_calendar.cpp:749 text_calendar.cpp:761
 #, kde-format
 msgid "\"%1\" is past due."
-msgstr ""
+msgstr "\"%1\" estas preterpasita."
 
 #: text_calendar.cpp:755
 #, kde-format
 msgid "\"%1\" has already started."
-msgstr ""
+msgstr "\"%1\" jam komenciĝis."
 
 #: text_calendar.cpp:763
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
-msgstr ""
+msgstr "\"%1\", okazanta dum la tuta tago hodiaŭ, estas nuntempe en progreso."
 
 #: text_calendar.cpp:767
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
-msgstr ""
+msgstr "\"%1\", okazanta la tutan tagon, jam komenciĝis."
 
 #: text_calendar.cpp:779
 #, kde-format
 msgid "Do you still want to accept the task?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas akcepti la taskon?"
 
 #: text_calendar.cpp:781
 #, kde-format
 msgid "Do you still want to accept the invitation?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas akcepti la inviton?"
 
 #: text_calendar.cpp:783 text_calendar.cpp:795
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept"
-msgstr ""
+msgstr "Akcepti"
 
 #: text_calendar.cpp:787
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas sendi kondiĉan akcepton de la invito?"
 
 #: text_calendar.cpp:789
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the task?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas sendi kondiĉan akcepton de la tasko?"
 
 #: text_calendar.cpp:791 text_calendar.cpp:799 text_calendar.cpp:803
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "Sendi"
 
 #: text_calendar.cpp:794
 #, kde-format
 msgid "Do you still want to accept the counter proposal?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas akcepti la kontraŭproponon?"
 
 #: text_calendar.cpp:798
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas sendi kontraŭproponon?"
 
 #: text_calendar.cpp:802
 #, kde-format
 msgid "Do you still want to send a decline response?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas sendi malakceptan respondon?"
 
 #: text_calendar.cpp:806
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas malakcepti la kontraŭproponon?"
 
 #: text_calendar.cpp:807
 #, kde-format
 msgctxt "@action:button"
 msgid "Decline"
-msgstr ""
+msgstr "Malakcepto"
 
 #: text_calendar.cpp:809
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas registri ĉi tiun respondon en via kalendaro?"
 
 #: text_calendar.cpp:810 text_calendar.cpp:846
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
-msgstr ""
+msgstr "Registri"
 
 #: text_calendar.cpp:813
 #, kde-format
 msgid "Do you still want to delegate this task?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas delegi ĉi tiun taskon?"
 
 #: text_calendar.cpp:815
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas delegi ĉi tiun inviton?"
 
 #: text_calendar.cpp:817
 #, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
-msgstr ""
+msgstr "Delegito"
 
 #: text_calendar.cpp:820
 #, kde-format
 msgid "Do you still want to forward this task?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas plusendi ĉi tiun taskon?"
 
 #: text_calendar.cpp:822
 #, kde-format
 msgid "Do you still want to forward this invitation?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas plusendi ĉi tiun inviton?"
 
 #: text_calendar.cpp:824
 #, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr ""
+msgstr "Plusendi"
 
 #: text_calendar.cpp:828
 #, kde-format
 msgid "Do you still want to cancel this task?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas nuligi ĉi tiun taskon?"
 
 #: text_calendar.cpp:829 text_calendar.cpp:850
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
-msgstr ""
+msgstr "Nuligi Taskon"
 
 #: text_calendar.cpp:831
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas nuligi ĉi tiun inviton?"
 
 #: text_calendar.cpp:832 text_calendar.cpp:853
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
-msgstr ""
+msgstr "Nuligi Inviton"
 
 #: text_calendar.cpp:835 text_calendar.cpp:856
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr ""
+msgstr "Ne Nuligi"
 
 #: text_calendar.cpp:838
 #, kde-format
 msgid "Do you still want to check your calendar?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas kontroli vian kalendaron?"
 
 #: text_calendar.cpp:839
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
-msgstr ""
+msgstr "Kontroli"
 
 #: text_calendar.cpp:842
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas registri ĉi tiun taskon en via kalendaro?"
 
 #: text_calendar.cpp:844
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
-msgstr ""
+msgstr "Ĉu vi ankoraŭ volas registri ĉi tiun inviton en via kalendaro?"
 
 #: text_calendar.cpp:849
 #, kde-format
 msgid "Do you really want to cancel this task?"
-msgstr ""
+msgstr "Ĉu vi vere volas nuligi ĉi tiun taskon?"
 
 #: text_calendar.cpp:852
 #, kde-format
 msgid "Do you really want to cancel this invitation?"
-msgstr ""
+msgstr "Ĉu vi vere volas nuligi ĉi tiun inviton?"
 
 #: text_calendar.cpp:861
 #, kde-format
@@ -354,33 +362,35 @@ msgid ""
 "%1\n"
 "%2"
 msgstr ""
+"%1\n"
+"%2"
 
 #: text_calendar.cpp:894
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
-msgstr ""
+msgstr "Reago al Invito"
 
 #: text_calendar.cpp:905 text_calendar.cpp:1164
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
-msgstr ""
+msgstr "Vi forgesis aldoni proponon. Bonvolu aldoni ĝin. Dankon"
 
 #: text_calendar.cpp:938
 #, kde-format
 msgid "Delegation to organizer is not possible."
-msgstr ""
+msgstr "Delegado al organizanto ne eblas."
 
 #: text_calendar.cpp:1072
 #, kde-format
 msgid "Save Invitation Attachment"
-msgstr ""
+msgstr "Konservi Invitan Aldonaĵon"
 
 #: text_calendar.cpp:1153
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
-msgstr ""
+msgstr "Malakcepti Kontraŭproponon"
 
 #: text_calendar.cpp:1195
 #, kde-format
@@ -389,6 +399,9 @@ msgid ""
 "a response will not be possible.\n"
 "Please create at least 1 writable events calendar and re-sync."
 msgstr ""
+"Vi ne havas skribeblajn kalendarajn dosierujojn por invitoj, do konservi "
+"respondon ne eblos.\n"
+"Bonvolu krei almenaŭ 1 skribeblan kalendaron de eventoj kaj re-sinkronigi."
 
 #: text_calendar.cpp:1214
 #, kde-format
@@ -396,6 +409,8 @@ msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
 "Unable to continue."
 msgstr ""
+"La kalendara invito konservita en ĉi tiu retpoŝta mesaĝo estas iel rompita. "
+"Ne eblas daŭrigi."
 
 #: text_calendar.cpp:1269
 #, kde-format
@@ -407,22 +422,27 @@ msgid ""
 "Would you like to send the organizer a message regarding this invitation?\n"
 "Press the [Cancel] button to cancel the recording operation."
 msgstr ""
+"La organizanto ne atendas respondon al ĉi tiu invito, sed vi povas sendi al "
+"ili retmesaĝon, se vi volas.\n"
+"\n"
+"Ĉu vi volas sendi al la organizanto mesaĝon pri ĉi tiu invito?\n"
+"Premu la butonon [Nuligi] por nuligi la registradon."
 
 #: text_calendar.cpp:1273
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
-msgstr ""
+msgstr "Sendi Retpoŝton al Organizanto"
 
 #: text_calendar.cpp:1274
 #, kde-format
 msgid "Do Not Send"
-msgstr ""
+msgstr "Ne Sendi"
 
 #: text_calendar.cpp:1275
 #, kde-format
 msgid "Send EMail"
-msgstr ""
+msgstr "Sendi retpoŝton"
 
 #: text_calendar.cpp:1283
 #, kde-format
@@ -432,89 +452,89 @@ msgstr "Refari: %1"
 #: text_calendar.cpp:1345
 #, kde-format
 msgid "Open Attachment"
-msgstr ""
+msgstr "Malfermi Aldonaĵon"
 
 #: text_calendar.cpp:1346
 #, kde-format
 msgid "Save Attachment As..."
-msgstr ""
+msgstr "Konservi aldonaĵon kiel..."
 
 #: text_calendar.cpp:1362
 #, kde-format
 msgid "Accept invitation"
-msgstr ""
+msgstr "Akcepti inviton"
 
 #: text_calendar.cpp:1364
 #, kde-format
 msgid "Accept invitation conditionally"
-msgstr ""
+msgstr "Akcepti inviton kondiĉe"
 
 #: text_calendar.cpp:1366
 #, kde-format
 msgid "Accept counter proposal"
-msgstr ""
+msgstr "Akcepti kontraŭproponon"
 
 #: text_calendar.cpp:1368
 #, kde-format
 msgid "Create a counter proposal..."
-msgstr ""
+msgstr "Krei kontraŭproponon..."
 
 #: text_calendar.cpp:1370
 #, kde-format
 msgid "Throw mail away"
-msgstr ""
+msgstr "Forĵeti poŝton"
 
 #: text_calendar.cpp:1372
 #, kde-format
 msgid "Decline invitation"
-msgstr ""
+msgstr "Malakcepti inviton"
 
 #: text_calendar.cpp:1374
 #, kde-format
 msgid "Postpone"
-msgstr ""
+msgstr "Prokrasti"
 
 #: text_calendar.cpp:1376
 #, kde-format
 msgid "Decline counter proposal"
-msgstr ""
+msgstr "Malakcepti kontraŭproponon"
 
 #: text_calendar.cpp:1378
 #, kde-format
 msgid "Check my calendar..."
-msgstr ""
+msgstr "Kontroli mian kalendaron..."
 
 #: text_calendar.cpp:1380
 #, kde-format
 msgid "Record response into my calendar"
-msgstr ""
+msgstr "Registri respondon en mia kalendaro"
 
 #: text_calendar.cpp:1382
 #, kde-format
 msgid "Record invitation into my calendar"
-msgstr ""
+msgstr "Registri inviton en mian kalendaron"
 
 #: text_calendar.cpp:1384
 #, kde-format
 msgid "Move this invitation to my trash folder"
-msgstr ""
+msgstr "Movi ĉi tiun inviton al mia rubujo"
 
 #: text_calendar.cpp:1386
 #, kde-format
 msgid "Delegate invitation"
-msgstr ""
+msgstr "Delegi invito"
 
 #: text_calendar.cpp:1388
 #, kde-format
 msgid "Forward invitation"
-msgstr ""
+msgstr "Plusendi inviton"
 
 #: text_calendar.cpp:1390
 #, kde-format
 msgid "Remove invitation from my calendar"
-msgstr ""
+msgstr "Forigi inviton el mia kalendaro"
 
 #: text_calendar.cpp:1393
 #, kde-format
 msgid "Open attachment \"%1\""
-msgstr ""
+msgstr "Malfermi aldonaĵon \"%1\""
