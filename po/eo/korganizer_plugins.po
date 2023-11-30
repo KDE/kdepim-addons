@@ -129,13 +129,7 @@ msgid "%1 / %2"
 msgstr "%1 / %2"
 
 #: plugins/datenums/datenums.cpp:140
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "n weeks since the beginning of the year\n"
-#| "¦n weeks until the end of the year"
-#| msgid ""
-#| "%1\n"
-#| "%2"
+#, kde-format
 msgctxt ""
 "n weeks since the beginning of the year\n"
 "n weeks until the end of the year"
@@ -415,12 +409,7 @@ msgid " Omer"
 msgstr " Omer"
 
 #: plugins/hebrew/parsha.cpp:28
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "These are weekly readings and do not have translations. They may have "
-#| "¦different spellings in your language; otherwise, just translate the "
-#| "sound to ¦your characters"
-#| msgid "Bereshit"
+#, kde-format
 msgctxt ""
 "These are weekly readings and do not have translations. They may have "
 "different spellings in your language; otherwise, just translate the sound to "
