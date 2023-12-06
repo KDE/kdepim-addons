@@ -91,6 +91,8 @@ set(KPIMPKPASS_LIB_VERSION "5.240.85")
 set(KPIMITINERARY_LIB_VERSION "5.240.85")
 set(AKONADINOTES_LIB_VERSION "5.240.85")
 set(KPIM_MIME_VERSION "5.240.85")
+
+set(KLLMCORE_VERSION "0.1.0")
 find_package(KPim6Mime ${KPIM_MIME_VERSION} CONFIG REQUIRED)
 find_package(KPim6AkonadiNotes ${AKONADINOTES_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6CalendarCore ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -133,6 +135,14 @@ find_package(KPim6PkPass ${KPIMPKPASS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Itinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF6TextTemplate CONFIG REQUIRED)
+
+find_package(KLLMCore ${KLLMCORE_VERSION})
+set_package_properties(KLLMCore PROPERTIES
+    TYPE RECOMMENDED
+    PURPOSE "Required for building IA plugins support"
+    DESCRIPTION "Use local IA plugin"
+    URL https://invent.kde.org/lorendb/kandalf/
+)
 
 # For adblocker
 find_package(Corrosion)
