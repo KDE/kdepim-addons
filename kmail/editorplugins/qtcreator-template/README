@@ -1,8 +1,0 @@
-This subdirectory contains a qtcreator template.
-You need to move in $HOME/.config/QtProject/qtcreator/templates/wizards for the moment.
-I created a patch for qtcreator for allowing it to use specific directory.
-
-In qtcreator 4.8 you can use the new environment variable: QTCREATOR_TEMPLATES_PATH
-
-
-Laurent Montel <montel@kde.org>
