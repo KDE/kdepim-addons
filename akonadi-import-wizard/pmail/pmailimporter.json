@@ -37,6 +37,7 @@
         "Name[uk]": "Засіб імпортування з PMail",
         "Name[x-test]": "xxPMail Importerxx",
         "Name[zh_CN]": "PMail 导入器",
+        "Name[zh_TW]": "PMail 匯入工具",
         "Version": "1.0"
     }
 }

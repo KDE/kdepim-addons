@@ -36,6 +36,7 @@
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі візитівок.",
         "Description[x-test]": "xxThis plugin allows you to import/export vCards.xx",
         "Description[zh_CN]": "此插件能让您导入或导出 vCard 名片。",
+        "Description[zh_TW]": "這個外掛程式讓您匯入/匯出 vCard。",
         "EnabledByDefault": true,
         "Name": "Import/Export vCard",
         "Name[ar]": "استيراد/تصدير vCard",
@@ -73,6 +74,7 @@
         "Name[uk]": "Імпортування та експортування vCard",
         "Name[x-test]": "xxImport/Export vCardxx",
         "Name[zh_CN]": "导入/导出 vCard 名片",
+        "Name[zh_TW]": "匯入/匯出 vCard",
         "Version": "1.0"
     }
 }

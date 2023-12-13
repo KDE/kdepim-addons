@@ -29,6 +29,7 @@
         "Description[uk]": "За допомогою цього додатка можна налаштувати те, які програми буде використано для певної адреси.",
         "Description[x-test]": "xxThis plugin allows you to configure which apps used for specific url.xx",
         "Description[zh_CN]": "此插件用于指定特定 URL 用何种应用程序打开。",
+        "Description[zh_TW]": "這個外掛程式讓您設定指定網址要用哪個應用程式。",
         "Name": "Open Url With",
         "Name[ar]": "فتح الرابط بواسطة",
         "Name[az]": "URL-u bununla açın:",

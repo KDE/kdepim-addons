@@ -64,6 +64,7 @@
         "Name[uk]": "Швидкий текст",
         "Name[x-test]": "xxQuick Textxx",
         "Name[zh_CN]": "快速文本",
+        "Name[zh_TW]": "快速文字",
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"

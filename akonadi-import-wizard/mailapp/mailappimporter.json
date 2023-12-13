@@ -37,6 +37,7 @@
         "Name[uk]": "Засіб імпортування з MailApp",
         "Name[x-test]": "xxMailApp Importerxx",
         "Name[zh_CN]": "MailApp 导入器",
+        "Name[zh_TW]": "MailApp 匯入工具",
         "Version": "1.0"
     }
 }

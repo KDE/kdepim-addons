@@ -35,6 +35,7 @@
         "Description[uk]": "За допомогою цього додатка можна вибрати адресу електронної пошти і вставити її до вікна редактора.",
         "Description[x-test]": "xxThis plugin allows you to select email and insert it in composer.xx",
         "Description[zh_CN]": "此插件允许您选择邮件地址并插入到邮件编辑器中。",
+        "Description[zh_TW]": "這個外掛程式讓您選擇郵件並將其插入至撰寫工具中。",
         "EnabledByDefault": false,
         "Name": "Insert Email",
         "Name[ar]": "إدراج البريد",
@@ -72,6 +73,7 @@
         "Name[uk]": "Вставлення адреси ел. пошти",
         "Name[x-test]": "xxInsert Emailxx",
         "Name[zh_CN]": "插入电子邮件",
+        "Name[zh_TW]": "插入郵件",
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"

@@ -35,6 +35,7 @@
         "Description[uk]": "За допомогою цього додатка можна увімкнути деякі дії для досвідчених користувачів.",
         "Description[x-test]": "xxThis plugin activates some expert actions.xx",
         "Description[zh_CN]": "此插件激活一些专家操作。",
+        "Description[zh_TW]": "這個外掛程式會啟用一些專家動作。",
         "EnabledByDefault": false,
         "Name": "Expert Plugin",
         "Name[ar]": "ملحقة الخبراء",
@@ -72,6 +73,7 @@
         "Name[uk]": "Додаток експерта",
         "Name[x-test]": "xxExpert Pluginxx",
         "Name[zh_CN]": "专家插件",
+        "Name[zh_TW]": "專家外掛程式",
         "Version": "1.0"
     }
 }

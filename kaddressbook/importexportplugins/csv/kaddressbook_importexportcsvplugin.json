@@ -36,6 +36,7 @@
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі CSV.",
         "Description[x-test]": "xxThis plugin allows you to import/export CSV.xx",
         "Description[zh_CN]": "此插件能让您导入或导出 CSV 表格。",
+        "Description[zh_TW]": "這個外掛程式讓您匯入/匯出 CSV。",
         "EnabledByDefault": false,
         "Name": "Import/Export CSV",
         "Name[ar]": "استيراد/تصدير CSV",
@@ -73,6 +74,7 @@
         "Name[uk]": "Імпортування та експортування CSV",
         "Name[x-test]": "xxImport/Export CSVxx",
         "Name[zh_CN]": "导入/导出 CSV 表格",
+        "Name[zh_TW]": "匯入/匯出 CSV",
         "Version": "1.0"
     }
 }

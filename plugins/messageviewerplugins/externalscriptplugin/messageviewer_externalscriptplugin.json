@@ -35,6 +35,7 @@
         "Description[uk]": "За допомогою цього додатка можна скористатися зовнішнім скриптом для вмісту панелі перегляду повідомлень.",
         "Description[x-test]": "xxThis plugin allows you to use an external script against the message viewer.xx",
         "Description[zh_CN]": "此插件允许您在信件阅读器中使用外部脚本。",
+        "Description[zh_TW]": "這個外掛程式讓您對信件檢視器使用外部文稿。",
         "EnabledByDefault": false,
         "Name": "External Script",
         "Name[ar]": "السّكربت الخارجيّ",
@@ -73,6 +74,7 @@
         "Name[uk]": "Зовнішній скрипт",
         "Name[x-test]": "xxExternal Scriptxx",
         "Name[zh_CN]": "外部脚本",
+        "Name[zh_TW]": "外部文稿",
         "Version": "2.0"
     }
 }

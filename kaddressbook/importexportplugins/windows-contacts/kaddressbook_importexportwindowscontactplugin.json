@@ -30,6 +30,7 @@
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі записів контактів Windows.",
         "Description[x-test]": "xxThis plugin allows you to import/export Windows Contacts.xx",
         "Description[zh_CN]": "此插件能让您导入或导出 Windows 联系人。",
+        "Description[zh_TW]": "這個外掛程式讓您匯入/匯出 Windows 聯絡人。",
         "EnabledByDefault": false,
         "Name": "Import/Export Windows Contact",
         "Name[ar]": "استيراد/تصدير متراسلو ويندوز",
@@ -61,6 +62,7 @@
         "Name[uk]": "Імпортування та експортування записів контактів Windows",
         "Name[x-test]": "xxImport/Export Windows Contactxx",
         "Name[zh_CN]": "导入或导出 Windows 联系人",
+        "Name[zh_TW]": "匯入/匯出 Windows 聯絡人",
         "Version": "1.0"
     }
 }

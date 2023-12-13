@@ -72,6 +72,7 @@
         "Name[uk]": "Підтвердження адреси",
         "Name[x-test]": "xxConfirm Addressxx",
         "Name[zh_CN]": "确认地址",
+        "Name[zh_TW]": "確認地址",
         "Version": "1.0"
     }
 }

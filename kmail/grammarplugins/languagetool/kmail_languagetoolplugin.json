@@ -66,6 +66,7 @@
         "Name[uk]": "Перевірка граматики (LanguageTool)",
         "Name[x-test]": "xxGrammar Checker (LanguageTool)xx",
         "Name[zh_CN]": "语法检查器 (语言工具)",
+        "Name[zh_TW]": "文法檢查工具 (LanguageTool)",
         "Version": "1.0"
     }
 }

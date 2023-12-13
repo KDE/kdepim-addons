@@ -31,6 +31,7 @@
         "Description[uk]": "За допомогою цього додатка можна створювати сторінки HTML на основі коду мовою Markdown.",
         "Description[x-test]": "xxThis plugin allows you to generate html from markdown languagexx",
         "Description[zh_CN]": "此插件允许您根据 Markdown 语言生成 HTML",
+        "Description[zh_TW]": "這個外掛程式讓您從 Markdown 語言產生 HTML",
         "EnabledByDefault": false,
         "Name": "Markdown",
         "Name[ar]": "مارك‌داون",
@@ -65,6 +66,7 @@
         "Name[uk]": "Markdown",
         "Name[x-test]": "xxMarkdownxx",
         "Name[zh_CN]": "Markdown",
+        "Name[zh_TW]": "Markdown",
         "Version": "1.0"
     }
 }

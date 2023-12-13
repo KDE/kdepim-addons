@@ -37,6 +37,7 @@
         "Name[uk]": "TinyUrl",
         "Name[x-test]": "xxTinyUrlxx",
         "Name[zh_CN]": "TinyUrl",
+        "Name[zh_TW]": "TinyUrl",
         "Version": "1.0"
     }
 }

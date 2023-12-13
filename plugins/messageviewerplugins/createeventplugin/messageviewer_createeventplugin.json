@@ -35,6 +35,7 @@
         "Description[uk]": "За допомогою цього додатка можна створювати записи подій на основі повідомлення.",
         "Description[x-test]": "xxThis plugin allows you to create an event from a message.xx",
         "Description[zh_CN]": "此插件允许您从信件创建日历事件。",
+        "Description[zh_TW]": "這個外掛程式讓您從信件建立事件。",
         "EnabledByDefault": false,
         "Name": "Create Event",
         "Name[ar]": "إنشاء الأحداث",

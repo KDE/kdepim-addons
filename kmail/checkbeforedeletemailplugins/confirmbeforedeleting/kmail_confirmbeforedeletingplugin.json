@@ -29,6 +29,7 @@
         "Description[uk]": "За допомогою цього додатка можна наказати програмі просити підтвердження щодо вилучення певних повідомлень",
         "Description[x-test]": "xxThis plugin allows you to check if we want to delete specific emailxx",
         "Description[zh_CN]": "此插件能让您确认删除特定邮件。",
+        "Description[zh_TW]": "這個外掛程式讓您檢查我們是否要刪除某個郵件",
         "EnabledByDefault": false,
         "Name": "Confirm Before Deleting Emails",
         "Name[ar]": "أكدّ قبل حذف رسائل البريد الإلكتروني",
@@ -60,6 +61,7 @@
         "Name[uk]": "Підтвердження перед вилученням повідомлень",
         "Name[x-test]": "xxConfirm Before Deleting Emailsxx",
         "Name[zh_CN]": "删前确认",
+        "Name[zh_TW]": "刪除郵件前進行確認",
         "Version": "1.0"
     }
 }

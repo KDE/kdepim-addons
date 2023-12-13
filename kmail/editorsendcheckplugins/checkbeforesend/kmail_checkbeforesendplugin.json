@@ -72,6 +72,7 @@
         "Name[uk]": "Перевірка перед надсиланням",
         "Name[x-test]": "xxCheck Before Sendxx",
         "Name[zh_CN]": "发送前检查",
+        "Name[zh_TW]": "送出前檢查",
         "Version": "1.0"
     }
 }

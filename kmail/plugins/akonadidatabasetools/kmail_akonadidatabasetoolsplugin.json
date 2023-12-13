@@ -58,6 +58,7 @@
         "Name[tr]": "Akonadi Veritabanı Yöneticisi",
         "Name[uk]": "Керування базою даних Akonadi",
         "Name[x-test]": "xxAkonadi Database Managerxx",
+        "Name[zh_TW]": "Akonadi 資料庫管理器",
         "Version": "1.0"
     }
 }

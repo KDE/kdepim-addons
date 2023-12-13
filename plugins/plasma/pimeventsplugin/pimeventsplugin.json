@@ -39,7 +39,8 @@
                 "Name[tr]": "Daniel Vrátil",
                 "Name[uk]": "Daniel Vrátil",
                 "Name[x-test]": "xxDaniel Vrátilxx",
-                "Name[zh_CN]": "Daniel Vrátil"
+                "Name[zh_CN]": "Daniel Vrátil",
+                "Name[zh_TW]": "Daniel Vrátil"
             }
         ],
         "Description": "Calendar plugin for displaying events from KDE PIM calendars",

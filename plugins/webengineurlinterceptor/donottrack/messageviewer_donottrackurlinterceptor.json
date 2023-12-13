@@ -34,6 +34,7 @@
         "Description[uk]": "Цей додаток реалізує підтримку режиму «не стежити».",
         "Description[x-test]": "xxThis plugin adds support for \"do not track\".xx",
         "Description[zh_CN]": "此插件添加“请勿追踪”支持。",
+        "Description[zh_TW]": "這個外掛程式提供對「不要追蹤我」的支援。",
         "EnabledByDefault": false,
         "Name": "Do Not Track",
         "Name[ar]": "عدم التّعقّب",
@@ -71,6 +72,7 @@
         "Name[uk]": "Вимикання стеження",
         "Name[x-test]": "xxDo Not Trackxx",
         "Name[zh_CN]": "请勿追踪",
+        "Name[zh_TW]": "不要追蹤我",
         "Version": "1.0"
     }
 }

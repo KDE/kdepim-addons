@@ -36,6 +36,7 @@
         "Description[uk]": "За допомогою цього додатка можна блокувати рекламу.",
         "Description[x-test]": "xxThis plugin allows you to block advertising.xx",
         "Description[zh_CN]": "此插件允许您屏蔽广告。",
+        "Description[zh_TW]": "這個外掛程式讓您擋掉廣告。",
         "EnabledByDefault": false,
         "Name": "Adblock",
         "Name[ar]": "حاجب الإعلانات",
@@ -74,6 +75,7 @@
         "Name[uk]": "Блокування реклами",
         "Name[x-test]": "xxAdblockxx",
         "Name[zh_CN]": "Adblock",
+        "Name[zh_TW]": "廣告阻擋",
         "Version": "1.0"
     }
 }
