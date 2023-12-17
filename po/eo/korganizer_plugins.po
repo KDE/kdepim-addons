@@ -185,8 +185,7 @@ msgid "This plugin provides the date in the Jewish calendar."
 msgstr "Ĉi kromprogramo provizas la daton en la juda kalendaro."
 
 #: plugins/hebrew/holiday.cpp:75
-#, fuzzy, kde-format
-#| msgid "Sh. HaHodesh"
+#, kde-format
 msgctxt ""
 "These are Jewish holidays and mostly do not have translations. They may have "
 "different spellings in your language; otherwise, just translate the sound to "
@@ -798,10 +797,3 @@ msgstr "Ĉi monato en historio"
 msgctxt "Qt date format used by the localized Wikipedia"
 msgid "MMMM_yyyy"
 msgstr "MMMM_jjjj"
-
-#~ msgctxt ""
-#~ "These are Jewish holidays and mostly do not have translations. They may "
-#~ "have ¦different spellings in your language; otherwise, just translate the "
-#~ "sound to ¦your characters."
-#~ msgid "Sh. HaHodesh"
-#~ msgstr "Sh. HaHodesh"
