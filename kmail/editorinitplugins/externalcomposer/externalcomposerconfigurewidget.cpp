@@ -6,6 +6,8 @@
 
 #include "externalcomposerconfigurewidget.h"
 #include <KConfigGroup>
+#include <KLineEdit>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KUrlRequester>
@@ -42,6 +44,7 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
 
     mEditorRequester->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
     mEditorRequester->setEnabled(false);
+    KLineEditEventHandler::catchReturnKey(mEditorRequester->lineEdit());
 
     mainLayout->addLayout(hbox);
 
