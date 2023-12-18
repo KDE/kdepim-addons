@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorinit_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-23 00:47+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2017-05-07 22:20+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -27,12 +27,12 @@ msgid "Configure \"External Composer\" Plugin"
 msgstr "Подешавање прикључка за спољашњи састављач"
 
 # >> @option:check
-#: externalcomposer/externalcomposerconfigurewidget.cpp:21
+#: externalcomposer/externalcomposerconfigurewidget.cpp:23
 #, kde-format
 msgid "Use external editor instead of composer"
 msgstr "Спољашњи уређивач уместо састављача"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:48
+#: externalcomposer/externalcomposerconfigurewidget.cpp:51
 #, kde-format
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "

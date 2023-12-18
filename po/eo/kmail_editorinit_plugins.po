@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-23 00:47+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2023-06-24 18:26+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -24,12 +24,12 @@ msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
 msgstr "Agordi kromaĵon \"External Composer\""
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:21
+#: externalcomposer/externalcomposerconfigurewidget.cpp:23
 #, kde-format
 msgid "Use external editor instead of composer"
 msgstr "Uzi eksternan redaktilon anstataŭ komponilon"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:48
+#: externalcomposer/externalcomposerconfigurewidget.cpp:51
 #, kde-format
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "

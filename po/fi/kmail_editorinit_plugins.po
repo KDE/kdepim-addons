@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-23 00:47+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2020-01-01 13:03+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -23,12 +23,12 @@ msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
 msgstr "Ulkoinen muokkain -liitännäisen asetukset"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:21
+#: externalcomposer/externalcomposerconfigurewidget.cpp:23
 #, kde-format
 msgid "Use external editor instead of composer"
 msgstr "Käytä ulkoista muokkainta"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:48
+#: externalcomposer/externalcomposerconfigurewidget.cpp:51
 #, kde-format
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "

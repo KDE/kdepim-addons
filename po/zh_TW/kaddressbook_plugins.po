@@ -1,282 +1,281 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2016-09-22 20:30+0800\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-12-17 19:45+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.10.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
 msgid "Check Gravatar..."
-msgstr ""
+msgstr "檢查 Gravatar..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
 #, kde-format
 msgid "You have not selected any contacts."
-msgstr ""
+msgstr "您尚未選取任何聯絡人。"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:69
 #, kde-format
 msgid "No email found for this contact."
-msgstr ""
+msgstr "找不到此聯絡人的電子郵件。"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:108
 #, kde-format
 msgid "A contact group was selected."
-msgstr ""
+msgstr "已選取了聯絡人群組。"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:111
 #, kde-format
 msgid "Too many contacts selected."
-msgstr ""
+msgstr "選取太多聯絡人了。"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
 #, kde-format
 msgid "Save Image"
-msgstr ""
+msgstr "儲存影像"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
 #, kde-format
 msgid "Save Image URL"
-msgstr ""
+msgstr "儲存影像網址"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Check and update Gravatar"
-msgstr ""
+msgstr "檢查並更新 Gravatar"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "搜尋"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
 #, kde-format
 msgid "Email:"
-msgstr ""
+msgstr "電子郵件："
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:109
 #, kde-format
 msgid "Search is impossible."
-msgstr ""
+msgstr "無法搜尋。"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:128
 #, kde-format
 msgid "No Gravatar Found."
-msgstr ""
+msgstr "找不到 Gravatar 影像。"
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
 #, kde-format
 msgid "Merge Contacts..."
-msgstr ""
+msgstr "合併聯絡人..."
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Contacts to merge"
-msgstr ""
+msgstr "選擇要合併的聯絡人"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:32
 #, kde-format
 msgid "merge"
-msgstr ""
+msgstr "合併"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
 #, kde-format
 msgid "Select contacts that you really want to merge:"
-msgstr ""
+msgstr "選擇您確定要合併的聯絡人："
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
 #, kde-format
 msgid "Select the addressbook in which to store merged contacts:"
-msgstr ""
+msgstr "選擇要將合併後的聯絡人儲存在哪個通訊錄裡："
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "全部選取"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
 #, kde-format
 msgid "Deselect All"
-msgstr ""
+msgstr "全部取消選取"
 
 #: mergelib/searchduplicate/mergecontactselectinformationtabwidget.cpp:35
 #, kde-format
 msgid "Duplicate contact %1"
-msgstr ""
+msgstr "重複聯絡人 %1"
 
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:17
 #, kde-format
 msgid "Contacts"
-msgstr ""
+msgstr "聯絡人"
 
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
 #, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
-msgstr ""
+msgstr "重複聯絡人 \"%1\"（%2 次）"
 
 #: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Search and Select Duplicate Contacts to merge"
-msgstr ""
+msgstr "搜尋並選取要合併的重複聯絡人"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, kde-format
 msgid "Search in result..."
-msgstr ""
+msgstr "在結果中搜尋..."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
 msgid "Select AddressBook:"
-msgstr ""
+msgstr "選擇通訊錄："
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
 #, kde-format
 msgid "Merge"
-msgstr ""
+msgstr "合併"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
 #, kde-format
 msgid "Expand All"
-msgstr ""
+msgstr "全部展開"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
 #, kde-format
 msgid "Collapse All"
-msgstr ""
+msgstr "折疊全部"
 
 #: mergelib/widgets/mergecontacterrorlabel.cpp:18
 #, kde-format
 msgid "You must select at least two elements."
-msgstr ""
+msgstr "您必須選取至少兩個元素。"
 
 #: mergelib/widgets/mergecontacterrorlabel.cpp:21
 #, kde-format
 msgid "No duplicated contact found."
-msgstr ""
+msgstr "未找到重複的聯絡人。"
 
 #: mergelib/widgets/mergecontacterrorlabel.cpp:24
 #, kde-format
 msgid "No contacts selected."
-msgstr ""
+msgstr "未選取聯絡人。"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:20
 #, kde-format
 msgid ""
 "Some information can be lost. Do you want to continue, or customize what you "
 "want to merge?"
-msgstr ""
+msgstr "某些資訊可能會喪失。您要直接繼續，還是要自訂要合併哪些資訊？"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
 #, kde-format
 msgid "Customize"
-msgstr ""
+msgstr "自訂"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
 #, kde-format
 msgid "Automatic Merging"
-msgstr ""
+msgstr "自動合併"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
 #, kde-format
 msgid ""
 "Some information was not selected. You can lose this information. Do you "
 "want to continue merging?"
-msgstr ""
+msgstr "某些資訊未被選取。您可能會喪失該資訊。您確定要繼續合併嗎？"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Missing Selected Information"
-msgstr ""
+msgstr "有未選取資訊"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:63
 #, kde-format
 msgctxt "The wedding anniversary of a contact"
 msgid "Anniversary"
-msgstr ""
+msgstr "紀念日"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:72
 #, kde-format
 msgid "Blog Feed"
-msgstr ""
+msgstr "部落格 Feed"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:81
 #, kde-format
 msgid "Profession"
-msgstr ""
+msgstr "職業"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:90
 #, kde-format
 msgid "Office"
-msgstr ""
+msgstr "辦公室"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:93
 #, kde-format
 msgid "Manager"
-msgstr ""
+msgstr "經理"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:96
 #, kde-format
 msgid "Assistant"
-msgstr ""
+msgstr "助理"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:105
 #, kde-format
 msgid "Spouse"
-msgstr ""
+msgstr "配偶"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:120
 #, kde-format
 msgid "(Undefined)"
-msgstr ""
+msgstr "(未定義)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
 #, kde-format
 msgid "Search Duplicate Contacts..."
-msgstr ""
+msgstr "查詢重複聯絡人..."
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
 msgid "No emails found in selected contacts."
-msgstr ""
+msgstr "已選聯絡人中未找到電子郵件。"
 
 #: sendmail/sendmailplugininterface.cpp:26
 #, kde-format
 msgid "Send an email..."
-msgstr ""
+msgstr "傳送電子郵件..."
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
 msgid "No vCard created."
-msgstr ""
+msgstr "未建立 vCard。"
 
 #: sendvcards/sendvcardsjob.cpp:134
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
-msgstr ""
+msgstr "無法建立暫存檔案 '%1'"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
 #, kde-format
 msgid "Send vCards..."
-msgstr ""
+msgstr "傳送 vCard..."

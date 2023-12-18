@@ -5,20 +5,21 @@
 # pan93412 <pan93412@gmail.com>, 2018.
 #
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2009, 2010.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2018-12-21 19:36+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-12-17 19:39+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 18.12.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
@@ -248,9 +249,7 @@ msgstr ""
 "用逗號做為分隔字元，則資料裡本身就有的逗號就該用這裡設定的字元區隔開來。"
 
 #: csv/import/csvimportdialog.cpp:376
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Qoute character option"
-#| msgid "\""
+#, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr "\""
@@ -759,21 +758,19 @@ msgid "Export to Several Files"
 msgstr "匯出成不同檔案"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
-#, fuzzy, kde-format
-#| msgid "Import CSV file..."
+#, kde-format
 msgid "Import Windows Contact file..."
-msgstr "匯入 CSV 檔案..."
+msgstr "匯入 Windows 聯絡人檔案..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
-#, fuzzy, kde-format
-#| msgid "Import contacts from an LDIF file."
+#, kde-format
 msgid "Import contacts from windows contact file."
-msgstr "從 LDIF 檔匯入聯絡人。"
+msgstr "從 Windows 聯絡人檔案匯入聯絡人。"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:68
 #, kde-format
 msgid "Windows Contact file (*.contact)"
-msgstr ""
+msgstr "Windows 聯絡人檔案 (*.contact)"
 
 #, fuzzy
 #~| msgid "Select Address Book"
