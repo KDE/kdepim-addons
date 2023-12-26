@@ -36,6 +36,7 @@
         "Description[uk]": "За допомогою цього додатка можна строго мінімізувати заголовок повідомлення.",
         "Description[x-test]": "xxThis plugin reduces mail header to strict minimum.xx",
         "Description[zh_CN]": "此插件将邮件头部精简到最小。",
+        "Description[zh_TW]": "這個外掛程式會將郵件標頭縮減到只有完全必要的。",
         "EnabledByDefault": false,
         "Name": "Brief Header Style",
         "Name[ar]": "نمط التّرويسات مختصر",
@@ -73,6 +74,7 @@
         "Name[uk]": "Короткий стиль заголовків",
         "Name[x-test]": "xxBrief Header Stylexx",
         "Name[zh_CN]": "简要信头风格",
+        "Name[zh_TW]": "簡要標頭風格",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Header-Order": "5"

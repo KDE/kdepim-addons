@@ -60,6 +60,7 @@
         "Name[uk]": "Відкриття адрес за допомогою програм",
         "Name[x-test]": "xxOpen Url Withxx",
         "Name[zh_CN]": "打开 URL 方式",
+        "Name[zh_TW]": "網址開啟方式",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"

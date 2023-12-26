@@ -74,6 +74,7 @@
         "Name[uk]": "Створення запису події",
         "Name[x-test]": "xxCreate Eventxx",
         "Name[zh_CN]": "创建事件",
+        "Name[zh_TW]": "建立事件",
         "Version": "2.0"
     }
 }

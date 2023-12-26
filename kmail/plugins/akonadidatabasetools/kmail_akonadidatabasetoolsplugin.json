@@ -28,6 +28,7 @@
         "Description[tr]": "Bu eklenti, Akonadi veritabanını yönetmenize izin verir.",
         "Description[uk]": "За допомогою цього додатка можна керувати базою даних Akonadi.",
         "Description[x-test]": "xxThis plugin allows you to manage Akonadi database.xx",
+        "Description[zh_TW]": "這個外掛程式讓您管理 Akonadi 資料庫。",
         "EnabledByDefault": false,
         "Name": "Akonadi Database Manager",
         "Name[ar]": "مدير قاعدة بيانات أكونادي",

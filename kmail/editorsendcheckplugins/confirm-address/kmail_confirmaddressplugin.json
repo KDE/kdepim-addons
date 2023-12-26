@@ -35,6 +35,7 @@
         "Description[uk]": "За допомогою цього додатка можна перевіряти повідомлення перед надсиланням.",
         "Description[x-test]": "xxThis plugin allows you to check mail before to send itxx",
         "Description[zh_CN]": "此插件允许您在发送前检查邮件",
+        "Description[zh_TW]": "這個外掛程式讓您在寄出之前檢查郵件。",
         "EnabledByDefault": false,
         "Name": "Confirm Address",
         "Name[ar]": "تأكيد العنوان",

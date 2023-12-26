@@ -28,6 +28,7 @@
         "Description[tr]": "Bu eklenti, Ay'ın evrelerini gösterir (Yeniay, İlkdördün, Sondördün, Dolunay)",
         "Description[uk]": "Цей додаток показує фазу місяця (новий, перша чверть, остання чверть, повня)",
         "Description[x-test]": "xxThis plugin shows the day's lunar phase (New, First, Last, Full)xx",
+        "Description[zh_TW]": "這個外掛程式會顯示當天的月相（新月、上弦月、下弦月、滿月）",
         "Name": "Lunar Phases Plugin for Calendars",
         "Name[ar]": "ملحق مراحل القمر للتقويم",
         "Name[az]": "Təqvim üçün ay fazaları qoşması",
@@ -56,7 +57,8 @@
         "Name[sv]": "Månfasinsticksprogram för kalendrar",
         "Name[tr]": "Takvimler için Ay'ın Evreleri Eklentisi",
         "Name[uk]": "Додаток фаз місяця для календарів",
-        "Name[x-test]": "xxLunar Phases Plugin for Calendarsxx"
+        "Name[x-test]": "xxLunar Phases Plugin for Calendarsxx",
+        "Name[zh_TW]": "行事曆用的月相外掛程式"
     },
     "X-KDE-KOrganizer-HasSettings": false,
     "X-KDE-PluginInterfaceVersion": 2

@@ -35,6 +35,7 @@
         "Description[uk]": "За допомогою цього додатка можна використати найвигадливіші стилі заголовків повідомлення.",
         "Description[x-test]": "xxThis plugin provides you a fancy mail header style.xx",
         "Description[zh_CN]": "此插件为您提供了花式的邮件头部样式。",
+        "Description[zh_TW]": "這個外掛程式提供您一個豪華的郵件標頭風格。",
         "EnabledByDefault": true,
         "Name": "Fancy Header Style",
         "Name[ar]": "نمط التّرويسات ”خياليّ“",
@@ -72,6 +73,7 @@
         "Name[uk]": "Красивий стиль заголовків",
         "Name[x-test]": "xxFancy Header Stylexx",
         "Name[zh_CN]": "亮丽信头风格",
+        "Name[zh_TW]": "豪華標頭風格",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Header-Order": "2"

@@ -36,6 +36,7 @@
         "Description[uk]": "За допомогою цього додатка реалізовано підтримку стилів заголовка повідомлення на основі Grantlee.",
         "Description[x-test]": "xxThis plugin allows you to use a Grantlee-based mail header style.xx",
         "Description[zh_CN]": "此插件允许您使用基于 Grantlee 的邮件头部样式。",
+        "Description[zh_TW]": "這個外掛程式讓您使用一個基於 Grantlee 的郵件標頭風格。",
         "EnabledByDefault": true,
         "Name": "Grantlee Header Style",
         "Name[ar]": "نمط ترويسات «غرانتلي»",
@@ -73,6 +74,7 @@
         "Name[uk]": "Стиль заголовків Grantlee",
         "Name[x-test]": "xxGrantlee Header Stylexx",
         "Name[zh_CN]": "Grantlee 信头风格",
+        "Name[zh_TW]": "Grantlee 標頭風格",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Header-Order": "100"

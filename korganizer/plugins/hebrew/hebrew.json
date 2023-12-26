@@ -29,6 +29,7 @@
         "Description[tr]": "K Organizatör'deki tüm tarihleri Yahudi takvim sisteminde de gösterir.",
         "Description[uk]": "Показує всі дати в korganizer також і в системі єврейського календаря.",
         "Description[x-test]": "xxShows all dates in KOrganizer also in the Jewish calendar system.xx",
+        "Description[zh_TW]": "在 KOrganizer 也以猶太曆法顯示所有日期。",
         "Name": "Jewish Calendar Plugin",
         "Name[ar]": "ملحق التّقويم اليهوديّ",
         "Name[az]": "Yəhudi təqvimi qoşması",
@@ -57,7 +58,8 @@
         "Name[sv]": "Insticksprogram för judisk kalender",
         "Name[tr]": "Yahudi Takvimi Eklentisi",
         "Name[uk]": "Додаток єврейського календаря",
-        "Name[x-test]": "xxJewish Calendar Pluginxx"
+        "Name[x-test]": "xxJewish Calendar Pluginxx",
+        "Name[zh_TW]": "猶太行事曆外掛程式"
     },
     "X-KDE-KOrganizer-HasSettings": true,
     "X-KDE-PluginInterfaceVersion": 2

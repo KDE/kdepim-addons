@@ -79,6 +79,7 @@
         "Description[uk]": "Додаток календаря для показу подій з календарів PIM KDE",
         "Description[x-test]": "xxCalendar plugin for displaying events from KDE PIM calendarsxx",
         "Description[zh_CN]": "用于显示 KDE PIM 日历中事件的日历插件",
+        "Description[zh_TW]": "用來顯示 KDE PIM 行事曆中的事件的行事曆外掛程式",
         "Icon": "view-calendar",
         "Name": "Calendar Events",
         "Name[bg]": "Календарни събития",
@@ -101,6 +102,7 @@
         "Name[uk]": "Календарні події",
         "Name[x-test]": "xxCalendar Eventsxx",
         "Name[zh_CN]": "日历事件",
+        "Name[zh_TW]": "行事曆時間",
         "ServiceTypes": [
             "PlasmaCalendar/Plugin"
         ],

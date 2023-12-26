@@ -57,7 +57,8 @@
         "Name[sv]": "Datuminsticksprogram för kalendrar",
         "Name[tr]": "Takvimler için Tarih Numarası Eklentisi",
         "Name[uk]": "Додаток дат для календарів",
-        "Name[x-test]": "xxDate Numbers Plugin for Calendarsxx"
+        "Name[x-test]": "xxDate Numbers Plugin for Calendarsxx",
+        "Name[zh_TW]": "行事曆用的日期編號外掛程式"
     },
     "X-KDE-KOrganizer-HasSettings": true,
     "X-KDE-PluginInterfaceVersion": 2
