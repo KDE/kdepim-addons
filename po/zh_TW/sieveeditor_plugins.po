@@ -3,20 +3,21 @@
 #
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2019-01-19 19:39+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-12-25 17:41+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 18.12.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
@@ -34,16 +35,14 @@ msgid "Select Emails"
 msgstr "選擇 Email"
 
 #: emaillineedit/emaillineedit.cpp:87
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
 msgstr "選擇 Email"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "建立資料夾"
@@ -59,8 +58,7 @@ msgid "Create Folder..."
 msgstr "建立資料夾…"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
 msgstr "選擇 IMAP 資料夾"
@@ -112,8 +110,7 @@ msgid "Error during loading folders: %1"
 msgstr "載入資料夾時發生錯誤：%1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, fuzzy, kde-format
-#| msgid "Load Folders"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "載入資料夾"

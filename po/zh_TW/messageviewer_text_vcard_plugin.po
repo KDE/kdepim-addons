@@ -3,19 +3,20 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2009.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007.
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2012, 2015.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2015-06-09 17:42+0800\n"
-"Last-Translator: Franklin\n"
-"Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-12-25 17:41+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: text_vcard.cpp:87
@@ -30,10 +31,9 @@ msgid "[Add this contact to the address book]"
 msgstr "【新增此聯絡人到通訊錄】"
 
 #: text_vcard.cpp:136
-#, fuzzy, kde-format
-#| msgid "[Update this contact to the address book]"
+#, kde-format
 msgid "[Update this contact in the address book]"
-msgstr "【更新此聯絡人到通訊錄】"
+msgstr "【在通訊錄中更新此聯絡人】"
 
 #: text_vcard.cpp:141
 #, kde-format
@@ -86,14 +86,11 @@ msgid "There are two or more contacts with same email stored in addressbook."
 msgstr "通訊錄內儲存了兩筆以上相同電子郵件的聯絡人。"
 
 #: updatecontactjob.cpp:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "The vCard was updated to your address book; you can add more information "
-#| "to this entry by opening the address book."
+#, kde-format
 msgid ""
 "The vCard was updated in your address book; you can add more information to "
 "this entry by opening the address book."
-msgstr "vCard 已經在您的通訊錄中更新。您可以開啟通訊錄並新增其資訊。"
+msgstr "vCard 已經在您的通訊錄中更新；您可以開啟通訊錄來為其加入更多資訊。"
 
 #: updatecontactjob.cpp:76
 #, kde-format

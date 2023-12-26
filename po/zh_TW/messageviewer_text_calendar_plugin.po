@@ -4,24 +4,24 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007, 2008.
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2015.
 # pan93412 <pan93412@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-07 01:41+0000\n"
-"PO-Revision-Date: 2019-03-22 00:38+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-12-25 17:46+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: attendeeselector.cpp:21
-#, fuzzy, kde-format
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "選擇參加者"
@@ -49,8 +49,7 @@ msgid "Keep me informed about status changes of this incidence."
 msgstr "此事件的狀態有變化時請通知我。"
 
 #: delegateselector.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select delegate"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
 msgstr "選擇委託"
@@ -81,18 +80,14 @@ msgstr ""
 "並將附件以內含方式而不要用連結方式傳送。"
 
 #: text_calendar.cpp:426
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt>None of your identities match the receiver of this message,<br/"
-#| ">please choose which of the following addresses is yours, if any, or "
-#| "select one of your identities to use in the reply:</qt>"
+#, kde-format
 msgid ""
 "<qt>None of your identities match the receiver of this message,<br/>please "
 "choose which of the following addresses is yours,<br/> if any, or select one "
 "of your identities to use in the reply:</qt>"
 msgstr ""
-"<qt>收件人中沒有一個符合您所設定的身份。<br/>請從以下的地址中選擇您的電子郵件"
-"地址：</qt>"
+"<qt>您沒有任何身份符合這個信件的收件人，<br/>請選擇以下哪個地址是您的（如果有"
+"的話），<br/>或是選擇一個回覆用的身份：</qt>"
 
 #: text_calendar.cpp:432
 #, kde-format
@@ -207,12 +202,10 @@ msgid "Do you still want to accept the invitation?"
 msgstr "您仍然要接受此邀請嗎？"
 
 #: text_calendar.cpp:780 text_calendar.cpp:792
-#, fuzzy, kde-format
-#| msgctxt "Accepted the invitation."
-#| msgid "Accepted: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Accept"
-msgstr "接受：%1"
+msgstr "接受"
 
 #: text_calendar.cpp:784
 #, kde-format
@@ -228,7 +221,7 @@ msgstr "您仍然要傳送有條件接受此工作的訊息嗎？"
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "傳送"
 
 #: text_calendar.cpp:791
 #, kde-format
@@ -251,12 +244,10 @@ msgid "Do you still want to decline the counter proposal?"
 msgstr "您仍然要拒絕此反提案嗎？"
 
 #: text_calendar.cpp:804
-#, fuzzy, kde-format
-#| msgctxt "Not able to attend."
-#| msgid "Declined: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Decline"
-msgstr "拒絕：%1"
+msgstr "拒絕"
 
 #: text_calendar.cpp:806
 #, kde-format
@@ -267,7 +258,7 @@ msgstr "您仍然要在行事曆中紀錄此回應嗎？"
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
-msgstr ""
+msgstr "紀錄"
 
 #: text_calendar.cpp:810
 #, kde-format
@@ -280,11 +271,10 @@ msgid "Do you still want to delegate this invitation?"
 msgstr "您仍然要授權此邀請嗎？"
 
 #: text_calendar.cpp:814
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
-msgstr "委託："
+msgstr "委託"
 
 #: text_calendar.cpp:817
 #, kde-format
@@ -297,11 +287,10 @@ msgid "Do you still want to forward this invitation?"
 msgstr "您仍然要轉寄此邀請嗎？"
 
 #: text_calendar.cpp:821
-#, fuzzy, kde-format
-#| msgid "Forwarded: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr "轉寄：%1"
+msgstr "轉寄"
 
 #: text_calendar.cpp:825
 #, kde-format
@@ -312,7 +301,7 @@ msgstr "您確定要取消此工作？"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
-msgstr ""
+msgstr "取消工作"
 
 #: text_calendar.cpp:828
 #, kde-format
@@ -320,18 +309,16 @@ msgid "Do you still want to cancel this invitation?"
 msgstr "您確定要取消此邀請？"
 
 #: text_calendar.cpp:829 text_calendar.cpp:850
-#, fuzzy, kde-format
-#| msgid "Accept invitation"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
-msgstr "接受邀請"
+msgstr "取消邀請"
 
 #: text_calendar.cpp:832 text_calendar.cpp:853
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "不要傳送"
+msgstr "不要取消"
 
 #: text_calendar.cpp:835
 #, kde-format
@@ -342,7 +329,7 @@ msgstr "您仍然要檢查您的行事曆嗎？"
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
-msgstr ""
+msgstr "檢查"
 
 #: text_calendar.cpp:839
 #, kde-format
@@ -379,8 +366,7 @@ msgstr ""
 "%2"
 
 #: text_calendar.cpp:891
-#, fuzzy, kde-format
-#| msgid "Reaction to Invitation"
+#, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "邀請的反應"
@@ -401,8 +387,7 @@ msgid "Save Invitation Attachment"
 msgstr "儲存邀請附加檔"
 
 #: text_calendar.cpp:1150
-#, fuzzy, kde-format
-#| msgid "Decline Counter Proposal"
+#, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "拒絕反提案"

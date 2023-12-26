@@ -1,21 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerheaderplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:46+0000\n"
-"PO-Revision-Date: 2016-09-22 20:30+0800\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-12-25 17:40+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.10.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:67
@@ -23,125 +22,125 @@ msgstr ""
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
 #, kde-format
 msgid "[vCard]"
-msgstr ""
+msgstr "[vCard]"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:75
 #: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:164
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
 #, kde-format
 msgid "CC: "
-msgstr ""
+msgstr "副本："
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:82
 #: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:179
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
 #, kde-format
 msgid "BCC: "
-msgstr ""
+msgstr "密件副本："
 
 #: briefheaderstyleplugin/briefheaderstyleinterface.cpp:22
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Brief Headers"
-msgstr ""
+msgstr "簡要標頭(&B)"
 
 #: briefheaderstyleplugin/briefheaderstyleinterface.cpp:25
 #, kde-format
 msgid "Show brief list of message headers"
-msgstr ""
+msgstr "顯示信件標頭的簡要列表"
 
 #: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:134
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:92
 #, kde-format
 msgid "From: "
-msgstr ""
+msgstr "寄件者："
 
 #: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:149
 #, kde-format
 msgid "To: "
-msgstr ""
+msgstr "收件者："
 
 #: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:21
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Enterprise Headers"
-msgstr ""
+msgstr "企業標頭(&E)"
 
 #: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:24
 #, kde-format
 msgid "Show the list of headers in Enterprise style"
-msgstr ""
+msgstr "以企業風格顯示標頭列表"
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
 #, kde-format
 msgid "(resent from %1)"
-msgstr ""
+msgstr "（從 %1 重新傳送）"
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:112
 #, kde-format
 msgid "(receiver was %1)"
-msgstr ""
+msgstr "（收件者原本是 %1）"
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:130
 #, kde-format
 msgctxt "To-field of the mail header."
 msgid "To: "
-msgstr ""
+msgstr "收件者："
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:161
 #, kde-format
 msgid "Date: "
-msgstr ""
+msgstr "日期："
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:183
 #, kde-format
 msgid "Bugzilla: "
-msgstr ""
+msgstr "Bugzilla："
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:192
 #, kde-format
 msgid "MDN To: "
-msgstr ""
+msgstr "MDN To: "
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:200
 #, kde-format
 msgid "Spam Status:"
-msgstr ""
+msgstr "垃圾信判讀狀態："
 
 #: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:22
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Fancy Headers"
-msgstr ""
+msgstr "豪華標頭(&F)"
 
 #: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:25
 #, kde-format
 msgid "Show the list of headers in a fancy format"
-msgstr ""
+msgstr "用一個豪華格式顯示標頭列表"
 
 #: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:190
 #, kde-format
 msgid "Attachments:"
-msgstr ""
+msgstr "附件："
 
 #: longheaderstyleplugin/longheaderstyleinterface.cpp:22
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Long Headers"
-msgstr ""
+msgstr "長標頭(&L)"
 
 #: longheaderstyleplugin/longheaderstyleinterface.cpp:25
 #, kde-format
 msgid "Show long list of message headers"
-msgstr ""
+msgstr "顯示較長的信件標頭列表"
 
 #: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:22
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Standard Headers"
-msgstr ""
+msgstr "標準標頭(&S)"
 
 #: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:25
 #, kde-format
 msgid "Show standard list of message headers"
-msgstr ""
+msgstr "顯示標準的信件標頭列表"

@@ -10,29 +10,29 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2007, 2008, 2009, 2010.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007, 2008.
 # pan93412 <pan93412@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:39+0000\n"
-"PO-Revision-Date: 2019-01-19 19:50+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-12-25 17:44+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 18.12.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
 msgid "Search &Directory Service"
-msgstr ""
+msgstr "搜尋目錄服務(&D)"
 
 #: plugins/datenums/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure Day Numbers"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Day Numbers"
 msgstr "設定日期編號"
@@ -142,8 +142,7 @@ msgstr ""
 "%2"
 
 #: plugins/hebrew/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure Holidays"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Holidays"
 msgstr "設定假日"
@@ -685,10 +684,11 @@ msgid ""
 "Currently, the phase is computed for noon at UTC; therefore, you should "
 "expect variations by 1 day in either direction."
 msgstr ""
+"這個外掛程式會顯示當日的月相（新月、上弦月、下弦月、滿月）。目前月相是在當日 "
+"UTC 時間中午計算的，因此可能會在兩個方向各有一天的誤差範圍。"
 
 #: plugins/picoftheday/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure Picture of the Day"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Picture of the Day"
 msgstr "設定本日圖片"
