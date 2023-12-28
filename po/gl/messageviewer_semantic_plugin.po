@@ -80,8 +80,7 @@ msgstr "Cancelouse a reserva."
 #: templates/busreservation.html:49 templates/busreservation.html:69
 #: templates/flightreservation.html:62 templates/flightreservation.html:79
 #: templates/trainreservation.html:62 templates/trainreservation.html:90
-#, fuzzy, kde-format
-#| msgid "Seat: %1"
+#, kde-format
 msgid "Seat: %1"
 msgstr "Asento: %1"
 
@@ -156,8 +155,7 @@ msgid "Class: %1"
 msgstr "Clase: %1"
 
 #: templates/trainreservation.html:58 templates/trainreservation.html:86
-#, fuzzy, kde-format
-#| msgid "Coach: %1"
+#, kde-format
 msgid "Coach: %1"
 msgstr "Coche: %1"
 
