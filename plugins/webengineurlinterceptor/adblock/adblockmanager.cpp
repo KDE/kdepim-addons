@@ -10,7 +10,20 @@
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include "libadblockplugin_debug.h"
 
+#include <QDir>
 #include <QFile>
+#include <QNetworkReply>
+#include <QNetworkRequest>
+
+QString filterListPath()
+{
+    static const auto path = []() -> QString {
+        QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QStringLiteral("/filterlists/");
+        QDir(path).mkpath(QStringLiteral("."));
+        return path;
+    }();
+    return path;
+}
 
 AdblockManager::AdblockManager(QObject *parent)
     : QObject{parent} // parsing the block lists takes some time, try to do it asynchronously
@@ -23,6 +36,13 @@ AdblockManager::AdblockManager(QObject *parent)
     , mAdblockListManager(new AdblockListsManager(this))
 {
     reloadConfig();
+
+    connect(&m_networkManager, &QNetworkAccessManager::finished, this, &AdblockManager::handleListFetched);
+    m_networkManager.setRedirectPolicy(QNetworkRequest::SameOriginRedirectPolicy);
+
+    if (QDir(filterListPath()).isEmpty()) {
+        refreshLists();
+    }
 }
 
 AdblockManager::~AdblockManager()
@@ -51,6 +71,24 @@ rust::Box<Adblock> AdblockManager::createOrRestoreAdblock()
     return adb;
 }
 
+void copyStream(QIODevice &input, QIODevice &output)
+{
+    constexpr auto BUFFER_SIZE = 1024;
+
+    QByteArray buffer;
+    buffer.reserve(BUFFER_SIZE);
+
+    while (true) {
+        int64_t read = input.read(buffer.data(), BUFFER_SIZE);
+
+        if (read > 0) {
+            output.write(buffer.data(), read);
+        } else {
+            break;
+        }
+    }
+}
+
 AdblockManager *AdblockManager::self()
 {
     static AdblockManager s_self = AdblockManager();
@@ -59,7 +97,6 @@ AdblockManager *AdblockManager::self()
 
 void AdblockManager::reloadConfig()
 {
-    // loadSubscriptions();
     const bool enabled = AdBlockSettings::self()->adBlockEnabled();
     Q_EMIT enabledChanged(enabled);
 
@@ -82,6 +119,51 @@ void AdblockManager::reloadConfig()
         namesIt++;
         urlsIt++;
         mAdblockFilterLists << filter;
+    }
+}
+
+const QString filterListIdFromUrl(const QString &url)
+{
+    QCryptographicHash fileNameHash(QCryptographicHash::Sha256);
+    fileNameHash.addData(url.toUtf8());
+    return QString::fromUtf8(fileNameHash.result().toHex());
+}
+
+void AdblockManager::handleListFetched(QNetworkReply *reply)
+{
+    Q_ASSERT(reply);
+
+    m_runningRequests--;
+
+    if (m_runningRequests < 1) {
+        Q_EMIT refreshFinished();
+    }
+
+    const auto id = filterListIdFromUrl(reply->url().toString());
+
+    QFile file(filterListPath() + id);
+    if (!file.open(QIODevice::WriteOnly)) {
+        qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Failed to open" << file.fileName() << "for writing."
+                                             << "Filter list not updated";
+        return;
+    }
+
+    copyStream(*reply, file);
+}
+
+void AdblockManager::refreshLists()
+{
+    // Delete old lists, in case the names change.
+    // Otherwise we might not be overwriting all of them.
+    const QDir dir(filterListPath());
+    const auto entries = dir.entryList();
+    for (const auto &entry : entries) {
+        QFile::remove(dir.path() + QDir::separator() + entry);
+    }
+
+    for (const auto &list : std::as_const(mAdblockFilterLists)) {
+        m_runningRequests++;
+        m_networkManager.get(QNetworkRequest(QUrl(list.url())));
     }
 }
 
@@ -139,7 +221,7 @@ bool AdblockManager::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
     // Only wait for the adblock initialization if it isn't ready on first use
     if (!mAdblock) {
-        qDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Adblock not yet initialized, blindly allowing request";
+        qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Adblock not yet initialized, blindly allowing request";
         return false;
     }
 

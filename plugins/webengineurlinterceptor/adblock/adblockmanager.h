@@ -9,13 +9,17 @@
 #include "adblockfilter.h"
 #include "libadblockplugin_export.h"
 #include <QList>
+#include <QNetworkAccessManager>
 #include <QObject>
 #include <QWebEngineUrlRequestInfo>
 
 #include <adblock.rs.h>
 #include <future>
 #include <optional>
+
 class AdblockListsManager;
+class QNetworkReply;
+
 class LIBADBLOCKPLUGIN_EXPORT AdblockManager : public QObject
 {
     Q_OBJECT
@@ -31,10 +35,15 @@ public:
     [[nodiscard]] bool interceptRequest(QWebEngineUrlRequestInfo &info);
 
     void saveSettings();
+    void refreshLists();
 
 Q_SIGNALS:
     void enabledChanged(bool enabled);
     void adblockInitialized();
+    void refreshFinished();
+
+private Q_SLOTS:
+    void handleListFetched(QNetworkReply *reply);
 
 private:
     void reloadConfig();
@@ -48,6 +57,8 @@ private:
     std::optional<rust::Box<Adblock>> mAdblock;
     QList<AdblockFilter> mAdblockFilterLists;
     AdblockListsManager *const mAdblockListManager;
+    QNetworkAccessManager m_networkManager;
+    int m_runningRequests = 0;
 };
 
 extern "C" {
