@@ -5,18 +5,21 @@
 */
 
 #include "adblockfilterlistsview.h"
+#include "adblockfilter.h"
 #include "adblockfilterlistsmodel.h"
 #include "adblockmanager.h"
 #include "adblockpluginurlinterceptoraddadblocklistdialog.h"
+#include "globalsettings_webengineurlinterceptoradblock.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QContextMenuEvent>
+#include <QHeaderView>
 #include <QMenu>
 #include <QPointer>
 #include <QSortFilterProxyModel>
 
 AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
-    : QListView(parent)
+    : QTableView(parent)
     , mAdblockFilterListsModel(new AdblockFilterListsModel(this))
     , mSortFilterProxyModel(new QSortFilterProxyModel(this))
 {
@@ -24,10 +27,14 @@ AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
 
     mSortFilterProxyModel->setObjectName(QLatin1StringView("mSortFilterProxyModel"));
 
-    mAdblockFilterListsModel->setAdblockFilter(AdblockManager::self()->adblockFilterLists());
     mSortFilterProxyModel->setSourceModel(mAdblockFilterListsModel);
     setModel(mSortFilterProxyModel);
     setContextMenuPolicy(Qt::DefaultContextMenu);
+    verticalHeader()->hide();
+
+    for (int c = 0; c < horizontalHeader()->count(); ++c) {
+        horizontalHeader()->setSectionResizeMode(c, QHeaderView::Stretch);
+    }
 }
 
 AdblockFilterListsView::~AdblockFilterListsView() = default;
@@ -100,6 +107,17 @@ void AdblockFilterListsView::slotDeleteAdblock()
         // mAdblockFilterListsModel->removeList();
         // TODO
     }
+}
+
+void AdblockFilterListsView::loadSettings()
+{
+    mAdblockFilterListsModel->setAdblockFilter(AdblockManager::self()->adblockFilterLists());
+}
+
+void AdblockFilterListsView::saveSettings() const
+{
+    AdblockManager::self()->setAdblockFilterLists(mAdblockFilterListsModel->adblockFilter());
+    AdblockManager::self()->saveSettings();
 }
 
 #include "moc_adblockfilterlistsview.cpp"

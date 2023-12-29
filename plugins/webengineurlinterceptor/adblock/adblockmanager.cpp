@@ -53,7 +53,7 @@ rust::Box<Adblock> AdblockManager::createOrRestoreAdblock()
 
 AdblockManager *AdblockManager::self()
 {
-    static AdblockManager s_self;
+    static AdblockManager s_self = AdblockManager();
     return &s_self;
 }
 
@@ -62,6 +62,32 @@ void AdblockManager::reloadConfig()
     // loadSubscriptions();
     const bool enabled = AdBlockSettings::self()->adBlockEnabled();
     Q_EMIT enabledChanged(enabled);
+
+    mAdblockFilterLists.clear();
+
+    const auto filterUrls = AdBlockSettings::self()->adblockFilterUrls();
+    const auto filterNames = AdBlockSettings::self()->adblockFilterNames();
+
+    auto namesIt = filterNames.begin();
+    auto urlsIt = filterUrls.begin();
+
+    // Otherwise list is corrupted, but we will still not crash in release mode
+    Q_ASSERT(filterNames.size() == filterUrls.size());
+
+    while (namesIt != filterNames.end() && urlsIt != filterUrls.end()) {
+        AdblockFilter filter;
+        filter.setName(*namesIt);
+        filter.setUrl(urlsIt->toDisplayString());
+
+        namesIt++;
+        urlsIt++;
+        mAdblockFilterLists << filter;
+    }
+}
+
+void AdblockManager::saveSettings()
+{
+    AdBlockSettings::self()->save();
 }
 
 QList<AdblockFilter> AdblockManager::adblockFilterLists() const

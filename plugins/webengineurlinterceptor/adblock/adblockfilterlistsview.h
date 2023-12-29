@@ -4,11 +4,16 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
+
 #include "adblockplugin_private_export.h"
-#include <QListView>
+
+#include <KConfigGroup>
+#include <QTableView>
+
 class AdblockFilterListsModel;
 class QSortFilterProxyModel;
-class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterListsView : public QListView
+
+class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterListsView : public QTableView
 {
     Q_OBJECT
 public:
@@ -16,6 +21,9 @@ public:
     ~AdblockFilterListsView() override;
 
     void setFilterString(const QString &str);
+
+    void saveSettings() const;
+    void loadSettings();
 
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;

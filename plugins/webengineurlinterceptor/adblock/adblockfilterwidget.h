@@ -7,15 +7,21 @@
 #pragma once
 
 #include "adblockplugin_private_export.h"
+#include <KConfigGroup>
 #include <QWidget>
+
 class AdblockFilterListsView;
 class QLineEdit;
+
 class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit AdblockFilterWidget(QWidget *parent = nullptr);
     ~AdblockFilterWidget() override;
+
+    void loadSettings();
+    void saveSettings() const;
 
 private:
     AdblockFilterListsView *const mAdblockFilterListView;

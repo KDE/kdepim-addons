@@ -6,6 +6,8 @@
 
 #include "adblockpluginurlinterceptorconfigurewidget.h"
 #include "adblockfilterwidget.h"
+
+#include <KSharedConfig>
 #include <QHBoxLayout>
 
 AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent)
@@ -23,12 +25,12 @@ AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigur
 
 void AdblockPluginUrlInterceptorConfigureWidget::loadSettings()
 {
-    //    mConfigureWidget->doLoadFromGlobalSettings();
+    mAdblockFilterWidget->loadSettings();
 }
 
 void AdblockPluginUrlInterceptorConfigureWidget::saveSettings()
 {
-    //    mConfigureWidget->save();
+    mAdblockFilterWidget->saveSettings();
     Q_EMIT configureChanged();
 }
 

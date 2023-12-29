@@ -29,6 +29,9 @@ public:
     void setAdblockFilterLists(const QList<AdblockFilter> &newAdblockFilterLists);
 
     [[nodiscard]] bool interceptRequest(QWebEngineUrlRequestInfo &info);
+
+    void saveSettings();
+
 Q_SIGNALS:
     void enabledChanged(bool enabled);
     void adblockInitialized();

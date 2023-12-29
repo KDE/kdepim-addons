@@ -33,4 +33,14 @@ AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
 
 AdblockFilterWidget::~AdblockFilterWidget() = default;
 
+void AdblockFilterWidget::loadSettings()
+{
+    mAdblockFilterListView->loadSettings();
+}
+
+void AdblockFilterWidget::saveSettings() const
+{
+    mAdblockFilterListView->saveSettings();
+}
+
 #include "moc_adblockfilterwidget.cpp"

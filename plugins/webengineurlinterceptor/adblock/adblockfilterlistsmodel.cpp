@@ -6,8 +6,10 @@
 
 #include "adblockfilterlistsmodel.h"
 
+#include <KLocalizedString>
+
 AdblockFilterListsModel::AdblockFilterListsModel(QObject *parent)
-    : QAbstractListModel{parent}
+    : QAbstractTableModel{parent}
 {
 }
 
@@ -52,6 +54,14 @@ int AdblockFilterListsModel::rowCount(const QModelIndex &parent) const
     return mAdblockFilter.count();
 }
 
+int AdblockFilterListsModel::columnCount(const QModelIndex &parent) const
+{
+    if (parent.isValid()) {
+        return 0; // flat model
+    }
+    return 2;
+}
+
 QVariant AdblockFilterListsModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() >= mAdblockFilter.count()) {
@@ -59,10 +69,23 @@ QVariant AdblockFilterListsModel::data(const QModelIndex &index, int role) const
     }
     const AdblockFilter &adblockFilter = mAdblockFilter.at(index.row());
     switch (role) {
-    case UrlRole:
-        return adblockFilter.url();
+    case Qt::DisplayRole:
+        return index.column() == 0 ? adblockFilter.name() : adblockFilter.url();
     }
     return {};
+}
+
+QVariant AdblockFilterListsModel::headerData(int section, Qt::Orientation orientation, int role) const
+{
+    if (role != Qt::DisplayRole || orientation != Qt::Horizontal) {
+        return {};
+    }
+
+    if (section == 0) {
+        return i18nc("@title:column", "Name");
+    } else {
+        return i18nc("@title:column", "Url");
+    }
 }
 
 #include "moc_adblockfilterlistsmodel.cpp"
