@@ -29,6 +29,7 @@ AdblockPluginUrlInterceptorAddAdblockListWidget::AdblockPluginUrlInterceptorAddA
 
     mainLayout->addRow(i18n("Name:"), mName);
     mainLayout->addRow(i18n("Url:"), mUrl);
+    mName->setFocus();
 }
 
 AdblockPluginUrlInterceptorAddAdblockListWidget::~AdblockPluginUrlInterceptorAddAdblockListWidget() = default;
