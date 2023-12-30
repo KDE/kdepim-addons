@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
 "PO-Revision-Date: 2019-12-17 18:58+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -26,28 +26,40 @@ msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr "Visa reklamblockeringslista"
 
-#: adblock/adblockfilterlistsview.cpp:46
+#: adblock/adblockfilterlistsmodel.cpp:87
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr ""
+
+#: adblock/adblockfilterlistsmodel.cpp:89
+#, kde-format
+msgctxt "@title:column"
+msgid "Url"
+msgstr ""
+
+#: adblock/adblockfilterlistsview.cpp:53
 #, kde-format
 msgid "Add..."
 msgstr ""
 
-#: adblock/adblockfilterlistsview.cpp:51
+#: adblock/adblockfilterlistsview.cpp:58
 #, kde-format
 msgid "Modify..."
 msgstr ""
 
-#: adblock/adblockfilterlistsview.cpp:56
+#: adblock/adblockfilterlistsview.cpp:63
 #, fuzzy, kde-format
 #| msgid "Delete List"
 msgid "Delete"
 msgstr "Ta bort lista"
 
-#: adblock/adblockfilterlistsview.cpp:98
+#: adblock/adblockfilterlistsview.cpp:105
 #, kde-format
 msgid "Remove"
 msgstr "Ta bort"
 
-#: adblock/adblockfilterlistsview.cpp:98
+#: adblock/adblockfilterlistsview.cpp:105
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@title:window"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
 "PO-Revision-Date: 2023-09-26 20:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -25,27 +25,41 @@ msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr "Aldoni Adblock-Liston"
 
-#: adblock/adblockfilterlistsview.cpp:46
+#: adblock/adblockfilterlistsmodel.cpp:87
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Nomo:"
+
+#: adblock/adblockfilterlistsmodel.cpp:89
+#, fuzzy, kde-format
+#| msgid "Url:"
+msgctxt "@title:column"
+msgid "Url"
+msgstr "Url:"
+
+#: adblock/adblockfilterlistsview.cpp:53
 #, kde-format
 msgid "Add..."
 msgstr "Aldoni..."
 
-#: adblock/adblockfilterlistsview.cpp:51
+#: adblock/adblockfilterlistsview.cpp:58
 #, kde-format
 msgid "Modify..."
 msgstr "Modifi..."
 
-#: adblock/adblockfilterlistsview.cpp:56
+#: adblock/adblockfilterlistsview.cpp:63
 #, kde-format
 msgid "Delete"
 msgstr "Forigi"
 
-#: adblock/adblockfilterlistsview.cpp:98
+#: adblock/adblockfilterlistsview.cpp:105
 #, kde-format
 msgid "Remove"
 msgstr "Forigi"
 
-#: adblock/adblockfilterlistsview.cpp:98
+#: adblock/adblockfilterlistsview.cpp:105
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove"

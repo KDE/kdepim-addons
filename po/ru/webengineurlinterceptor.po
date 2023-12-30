@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2023-12-30 01:38+0000\n"
 "PO-Revision-Date: 2022-02-21 17:06+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -38,30 +38,42 @@ msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr "Просмотр списка блокировки рекламы"
 
-#: adblock/adblockfilterlistsview.cpp:46
+#: adblock/adblockfilterlistsmodel.cpp:87
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr ""
+
+#: adblock/adblockfilterlistsmodel.cpp:89
+#, kde-format
+msgctxt "@title:column"
+msgid "Url"
+msgstr ""
+
+#: adblock/adblockfilterlistsview.cpp:53
 #, fuzzy, kde-format
 #| msgid "A&dd..."
 msgid "Add..."
 msgstr "&Добавить..."
 
-#: adblock/adblockfilterlistsview.cpp:51
+#: adblock/adblockfilterlistsview.cpp:58
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgid "Modify..."
 msgstr "&Изменить..."
 
-#: adblock/adblockfilterlistsview.cpp:56
+#: adblock/adblockfilterlistsview.cpp:63
 #, fuzzy, kde-format
 #| msgid "Delete List"
 msgid "Delete"
 msgstr "Удалить список"
 
-#: adblock/adblockfilterlistsview.cpp:98
+#: adblock/adblockfilterlistsview.cpp:105
 #, kde-format
 msgid "Remove"
 msgstr "Удалить"
 
-#: adblock/adblockfilterlistsview.cpp:98
+#: adblock/adblockfilterlistsview.cpp:105
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@title:window"
