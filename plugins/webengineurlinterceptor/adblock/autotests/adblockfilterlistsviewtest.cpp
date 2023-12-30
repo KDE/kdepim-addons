@@ -19,3 +19,5 @@ void AdblockFilterListsViewTest::shouldHaveDefaultValues()
     QVERIFY(!w.rootIsDecorated());
     QCOMPARE(w.contextMenuPolicy(), Qt::DefaultContextMenu);
 }
+
+#include "moc_adblockfilterlistsviewtest.cpp"
