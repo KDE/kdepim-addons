@@ -8,12 +8,12 @@
 #include "adblockplugin_private_export.h"
 
 #include <KConfigGroup>
-#include <QTableView>
+#include <QTreeView>
 
 class AdblockFilterListsModel;
 class QSortFilterProxyModel;
 
-class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterListsView : public QTableView
+class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterListsView : public QTreeView
 {
     Q_OBJECT
 public:

@@ -9,11 +9,12 @@
 #include <KConfigGroup>
 #include <QAbstractTableModel>
 
-class AdblockFilterListsModel : public QAbstractTableModel
+class AdblockFilterListsModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
     enum AdblockFilterRoles {
+        NameRole,
         UrlRole,
         LastColumn = UrlRole,
     };

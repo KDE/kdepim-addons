@@ -19,7 +19,7 @@
 #include <QSortFilterProxyModel>
 
 AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
-    : QTableView(parent)
+    : QTreeView(parent)
     , mAdblockFilterListsModel(new AdblockFilterListsModel(this))
     , mSortFilterProxyModel(new QSortFilterProxyModel(this))
 {
@@ -30,11 +30,10 @@ AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
     mSortFilterProxyModel->setSourceModel(mAdblockFilterListsModel);
     setModel(mSortFilterProxyModel);
     setContextMenuPolicy(Qt::DefaultContextMenu);
-    verticalHeader()->hide();
 
-    for (int c = 0; c < horizontalHeader()->count(); ++c) {
-        horizontalHeader()->setSectionResizeMode(c, QHeaderView::Stretch);
-    }
+    // for (int c = 0; c < horizontalHeader()->count(); ++c) {
+    //     horizontalHeader()->setSectionResizeMode(c, QHeaderView::Stretch);
+    // }
 }
 
 AdblockFilterListsView::~AdblockFilterListsView() = default;
