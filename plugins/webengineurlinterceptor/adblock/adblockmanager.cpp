@@ -15,7 +15,7 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 
-QString filterListPath()
+[[nodiscard]] QString filterListPath()
 {
     static const auto path = []() -> QString {
         QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QStringLiteral("/filterlists/");
