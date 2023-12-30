@@ -4,11 +4,11 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
-
+#include "adblockplugin_private_export.h"
 #include <QStringList>
 #include <QUrl>
 namespace AdblockListsUtil
 {
-QStringList adblockFilterNamesDefaultList();
-QList<QUrl> adblockFilterUrlsDefaultList();
+[[nodiscard]] LIBADBLOCKPLUGIN_TESTS_EXPORT QStringList adblockFilterNamesDefaultList();
+[[nodiscard]] LIBADBLOCKPLUGIN_TESTS_EXPORT QList<QUrl> adblockFilterUrlsDefaultList();
 };
