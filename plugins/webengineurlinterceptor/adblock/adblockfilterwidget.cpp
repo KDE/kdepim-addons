@@ -40,7 +40,7 @@ void AdblockFilterWidget::loadSettings()
     mAdblockFilterListView->loadSettings();
 }
 
-void AdblockFilterWidget::saveSettings() const
+void AdblockFilterWidget::saveSettings()
 {
     mAdblockFilterListView->saveSettings();
 }

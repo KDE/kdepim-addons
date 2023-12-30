@@ -31,7 +31,6 @@ void AdblockPluginUrlInterceptorConfigureWidget::loadSettings()
 void AdblockPluginUrlInterceptorConfigureWidget::saveSettings()
 {
     mAdblockFilterWidget->saveSettings();
-    Q_EMIT configureChanged();
 }
 
 void AdblockPluginUrlInterceptorConfigureWidget::resetSettings()

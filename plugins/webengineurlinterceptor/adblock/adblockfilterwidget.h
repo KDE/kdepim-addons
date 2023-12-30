@@ -21,7 +21,7 @@ public:
     ~AdblockFilterWidget() override;
 
     void loadSettings();
-    void saveSettings() const;
+    void saveSettings();
 
 Q_SIGNALS:
     void settingsChanged();
