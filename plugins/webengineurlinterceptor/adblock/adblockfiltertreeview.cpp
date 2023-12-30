@@ -35,6 +35,7 @@ AdblockFilterTreeView::AdblockFilterTreeView(QWidget *parent)
         header()->setSectionResizeMode(c, QHeaderView::Stretch);
     }
     setRootIsDecorated(false);
+    setSortingEnabled(true);
 }
 
 AdblockFilterTreeView::~AdblockFilterTreeView() = default;
@@ -97,8 +98,10 @@ void AdblockFilterTreeView::slotModifyAdblock(const QModelIndex &index)
 {
     QPointer<AdblockPluginUrlInterceptorAddAdblockListDialog> dlg = new AdblockPluginUrlInterceptorAddAdblockListDialog(this);
     AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info;
-    const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(index.row(), AdblockFilterListsModel::UrlRole);
-    const QModelIndex modelIndexName = mAdblockFilterListsModel->index(index.row(), AdblockFilterListsModel::NameRole);
+    const QModelIndex newModelIndex = mSortFilterProxyModel->mapToSource(index);
+
+    const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::UrlRole);
+    const QModelIndex modelIndexName = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::NameRole);
     // qDebug() << " modelIndexUrl " << modelIndexUrl.data() << " modelIndexName " << modelIndexName.data();
     info.name = modelIndexName.data().toString();
     info.url = modelIndexUrl.data().toString();

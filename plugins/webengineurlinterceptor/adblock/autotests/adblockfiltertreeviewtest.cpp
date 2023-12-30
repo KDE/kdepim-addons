@@ -18,6 +18,7 @@ void AdblockFilterTreeViewTest::shouldHaveDefaultValues()
     AdblockFilterTreeView w;
     QVERIFY(!w.rootIsDecorated());
     QCOMPARE(w.contextMenuPolicy(), Qt::DefaultContextMenu);
+    QVERIFY(w.isSortingEnabled());
 }
 
 #include "moc_adblockfiltertreeviewtest.cpp"
