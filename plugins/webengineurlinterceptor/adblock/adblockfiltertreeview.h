@@ -22,8 +22,11 @@ public:
 
     void setFilterString(const QString &str);
 
-    void saveSettings() const;
+    void saveSettings();
     void loadSettings();
+
+Q_SIGNALS:
+    void settingsChanged();
 
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
@@ -32,6 +35,7 @@ private:
     void slotAddAdblock();
     void slotModifyAdblock(const QModelIndex &index);
     void slotDeleteAdblock(const QModelIndex &index);
+    bool mSettingsChanged = false;
     AdblockFilterListsModel *const mAdblockFilterListsModel;
     QSortFilterProxyModel *const mSortFilterProxyModel;
 };

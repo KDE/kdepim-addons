@@ -30,6 +30,7 @@ AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
     mAdblockFilterListView->setObjectName(QLatin1StringView("mAdblockFilterListView"));
     mainLayout->addWidget(mAdblockFilterListView);
     connect(mSearchLineEdit, &QLineEdit::textChanged, mAdblockFilterListView, &AdblockFilterTreeView::setFilterString);
+    connect(mAdblockFilterListView, &AdblockFilterTreeView::settingsChanged, this, &AdblockFilterWidget::settingsChanged);
 }
 
 AdblockFilterWidget::~AdblockFilterWidget() = default;

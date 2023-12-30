@@ -23,6 +23,9 @@ public:
     void loadSettings();
     void saveSettings() const;
 
+Q_SIGNALS:
+    void settingsChanged();
+
 private:
     AdblockFilterTreeView *const mAdblockFilterListView;
     QLineEdit *const mSearchLineEdit;

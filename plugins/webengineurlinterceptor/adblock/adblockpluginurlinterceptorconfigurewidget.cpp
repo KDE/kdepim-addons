@@ -18,7 +18,7 @@ AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigure
     hbox->setContentsMargins({});
     mAdblockFilterWidget->setObjectName(QLatin1StringView("mAdblockFilterWidget"));
     hbox->addWidget(mAdblockFilterWidget);
-    // connect(mAdblockFilterWidget, &AdBlockSettingWidget::settingsChanged, this, &AdblockPluginUrlInterceptorConfigureWidget::configureChanged);
+    connect(mAdblockFilterWidget, &AdblockFilterWidget::settingsChanged, this, &AdblockPluginUrlInterceptorConfigureWidget::configureChanged);
 }
 
 AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget() = default;

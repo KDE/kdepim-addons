@@ -92,6 +92,7 @@ void AdblockFilterTreeView::slotAddAdblock()
         const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
         if (info.isValid()) {
             mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
+            mSettingsChanged = true;
         }
     }
     delete dlg;
@@ -115,6 +116,7 @@ void AdblockFilterTreeView::slotModifyAdblock(const QModelIndex &index)
         if (info.isValid()) {
             mAdblockFilterListsModel->removeList(listName);
             mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
+            mSettingsChanged = true;
         }
     }
     delete dlg;
@@ -132,6 +134,7 @@ void AdblockFilterTreeView::slotDeleteAdblock(const QModelIndex &index)
                                         KStandardGuiItem::cancel())
         == KMessageBox::ButtonCode::PrimaryAction) {
         mAdblockFilterListsModel->removeList(listName);
+        mSettingsChanged = true;
     }
 }
 
@@ -140,10 +143,13 @@ void AdblockFilterTreeView::loadSettings()
     mAdblockFilterListsModel->setAdblockFilter(AdblockManager::self()->adblockFilterLists());
 }
 
-void AdblockFilterTreeView::saveSettings() const
+void AdblockFilterTreeView::saveSettings()
 {
-    AdblockManager::self()->setAdblockFilterLists(mAdblockFilterListsModel->adblockFilter());
-    AdblockManager::self()->saveSettings();
+    if (mSettingsChanged) {
+        AdblockManager::self()->setAdblockFilterLists(mAdblockFilterListsModel->adblockFilter());
+        AdblockManager::self()->saveSettings();
+        Q_EMIT settingsChanged();
+    }
 }
 
 #include "moc_adblockfiltertreeview.cpp"
