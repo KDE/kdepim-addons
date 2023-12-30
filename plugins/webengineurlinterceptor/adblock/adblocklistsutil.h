@@ -5,6 +5,10 @@
 */
 #pragma once
 
+#include <QStringList>
+#include <QUrl>
 namespace AdblockListsUtil
 {
+QStringList adblockFilterNamesDefaultList();
+QList<QUrl> adblockFilterUrlsDefaultList();
 };
