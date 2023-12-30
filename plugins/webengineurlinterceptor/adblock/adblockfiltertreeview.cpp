@@ -4,7 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "adblockfilterlistsview.h"
+#include "adblockfiltertreeview.h"
 #include "adblockfilter.h"
 #include "adblockfilterlistsmodel.h"
 #include "adblockmanager.h"
@@ -18,7 +18,7 @@
 #include <QPointer>
 #include <QSortFilterProxyModel>
 
-AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
+AdblockFilterTreeView::AdblockFilterTreeView(QWidget *parent)
     : QTreeView(parent)
     , mAdblockFilterListsModel(new AdblockFilterListsModel(this))
     , mSortFilterProxyModel(new QSortFilterProxyModel(this))
@@ -37,31 +37,31 @@ AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
     setRootIsDecorated(false);
 }
 
-AdblockFilterListsView::~AdblockFilterListsView() = default;
+AdblockFilterTreeView::~AdblockFilterTreeView() = default;
 
-void AdblockFilterListsView::setFilterString(const QString &str)
+void AdblockFilterTreeView::setFilterString(const QString &str)
 {
     mSortFilterProxyModel->setFilterFixedString(str);
 }
 
-void AdblockFilterListsView::contextMenuEvent(QContextMenuEvent *event)
+void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu;
 
     const auto itemSelected = selectionModel()->selectedIndexes();
 
     auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), &menu);
-    connect(addAction, &QAction::triggered, this, &AdblockFilterListsView::slotAddAdblock);
+    connect(addAction, &QAction::triggered, this, &AdblockFilterTreeView::slotAddAdblock);
     menu.addAction(addAction);
 
     if (!itemSelected.isEmpty()) {
         auto modifyAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Modify..."), &menu);
-        connect(modifyAction, &QAction::triggered, this, &AdblockFilterListsView::slotModifyAdblock);
+        connect(modifyAction, &QAction::triggered, this, &AdblockFilterTreeView::slotModifyAdblock);
         menu.addAction(modifyAction);
 
         menu.addSeparator();
         auto deleteAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Delete"), &menu);
-        connect(deleteAction, &QAction::triggered, this, &AdblockFilterListsView::slotDeleteAdblock);
+        connect(deleteAction, &QAction::triggered, this, &AdblockFilterTreeView::slotDeleteAdblock);
         menu.addAction(deleteAction);
     }
     menu.exec(event->globalPos());
@@ -75,7 +75,7 @@ void AdblockFilterListsView::contextMenuEvent(QContextMenuEvent *event)
     return filter;
 }
 
-void AdblockFilterListsView::slotAddAdblock()
+void AdblockFilterTreeView::slotAddAdblock()
 {
     QPointer<AdblockPluginUrlInterceptorAddAdblockListDialog> dlg = new AdblockPluginUrlInterceptorAddAdblockListDialog(this);
     if (dlg->exec()) {
@@ -87,7 +87,7 @@ void AdblockFilterListsView::slotAddAdblock()
     delete dlg;
 }
 
-void AdblockFilterListsView::slotModifyAdblock()
+void AdblockFilterTreeView::slotModifyAdblock()
 {
     QPointer<AdblockPluginUrlInterceptorAddAdblockListDialog> dlg = new AdblockPluginUrlInterceptorAddAdblockListDialog(this);
     AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info;
@@ -103,7 +103,7 @@ void AdblockFilterListsView::slotModifyAdblock()
     delete dlg;
 }
 
-void AdblockFilterListsView::slotDeleteAdblock()
+void AdblockFilterTreeView::slotDeleteAdblock()
 {
     if (KMessageBox::questionTwoActions(this, i18n("Remove"), i18nc("@title:window", "Remove"), KStandardGuiItem::ok(), KStandardGuiItem::cancel())
         == KMessageBox::ButtonCode::PrimaryAction) {
@@ -112,15 +112,15 @@ void AdblockFilterListsView::slotDeleteAdblock()
     }
 }
 
-void AdblockFilterListsView::loadSettings()
+void AdblockFilterTreeView::loadSettings()
 {
     mAdblockFilterListsModel->setAdblockFilter(AdblockManager::self()->adblockFilterLists());
 }
 
-void AdblockFilterListsView::saveSettings() const
+void AdblockFilterTreeView::saveSettings() const
 {
     AdblockManager::self()->setAdblockFilterLists(mAdblockFilterListsModel->adblockFilter());
     AdblockManager::self()->saveSettings();
 }
 
-#include "moc_adblockfilterlistsview.cpp"
+#include "moc_adblockfiltertreeview.cpp"

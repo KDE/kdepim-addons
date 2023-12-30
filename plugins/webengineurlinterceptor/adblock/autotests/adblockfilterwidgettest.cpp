@@ -5,7 +5,7 @@
 */
 
 #include "adblockfilterwidgettest.h"
-#include "adblockfilterlistsview.h"
+#include "adblockfiltertreeview.h"
 #include "adblockfilterwidget.h"
 #include <QLineEdit>
 #include <QTest>
@@ -29,7 +29,7 @@ void AdblockFilterWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mSearchLineEdit->text().isEmpty());
     QVERIFY(!mSearchLineEdit->placeholderText().isEmpty());
 
-    auto mAdblockFilterListView = w.findChild<AdblockFilterListsView *>(QStringLiteral("mAdblockFilterListView"));
+    auto mAdblockFilterListView = w.findChild<AdblockFilterTreeView *>(QStringLiteral("mAdblockFilterListView"));
     QVERIFY(mAdblockFilterListView);
 }
 

@@ -13,12 +13,12 @@
 class AdblockFilterListsModel;
 class QSortFilterProxyModel;
 
-class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterListsView : public QTreeView
+class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterTreeView : public QTreeView
 {
     Q_OBJECT
 public:
-    explicit AdblockFilterListsView(QWidget *parent = nullptr);
-    ~AdblockFilterListsView() override;
+    explicit AdblockFilterTreeView(QWidget *parent = nullptr);
+    ~AdblockFilterTreeView() override;
 
     void setFilterString(const QString &str);
 

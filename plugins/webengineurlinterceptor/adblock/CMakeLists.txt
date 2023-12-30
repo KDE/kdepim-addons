@@ -27,8 +27,8 @@ target_sources(adblockplugin PRIVATE
     adblockpluginurlinterceptorconfiguredialog.h
     adblockpluginurlinterceptorconfigurewidget.cpp
     adblockpluginurlinterceptorconfigurewidget.h
-    adblockfilterlistsview.h
-    adblockfilterlistsview.cpp
+    adblockfiltertreeview.h
+    adblockfiltertreeview.cpp
     adblockfilterdialog.h
     adblockfilterdialog.cpp
     adblockfilterwidget.h

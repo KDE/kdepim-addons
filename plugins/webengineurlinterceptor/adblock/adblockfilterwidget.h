@@ -10,7 +10,7 @@
 #include <KConfigGroup>
 #include <QWidget>
 
-class AdblockFilterListsView;
+class AdblockFilterTreeView;
 class QLineEdit;
 
 class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilterWidget : public QWidget
@@ -24,6 +24,6 @@ public:
     void saveSettings() const;
 
 private:
-    AdblockFilterListsView *const mAdblockFilterListView;
+    AdblockFilterTreeView *const mAdblockFilterListView;
     QLineEdit *const mSearchLineEdit;
 };

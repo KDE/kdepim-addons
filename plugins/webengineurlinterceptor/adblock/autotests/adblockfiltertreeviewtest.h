@@ -8,12 +8,12 @@
 
 #include <QObject>
 
-class AdblockFilterListsViewTest : public QObject
+class AdblockFilterTreeViewTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdblockFilterListsViewTest(QObject *parent = nullptr);
-    ~AdblockFilterListsViewTest() override = default;
+    explicit AdblockFilterTreeViewTest(QObject *parent = nullptr);
+    ~AdblockFilterTreeViewTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

@@ -5,7 +5,7 @@
 */
 
 #include "adblockfilterwidget.h"
-#include "adblockfilterlistsview.h"
+#include "adblockfiltertreeview.h"
 
 #include <KLineEditEventHandler>
 #include <KLocalizedString>
@@ -14,7 +14,7 @@
 
 AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
     : QWidget{parent}
-    , mAdblockFilterListView(new AdblockFilterListsView(this))
+    , mAdblockFilterListView(new AdblockFilterTreeView(this))
     , mSearchLineEdit(new QLineEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
@@ -28,7 +28,7 @@ AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
 
     mAdblockFilterListView->setObjectName(QLatin1StringView("mAdblockFilterListView"));
     mainLayout->addWidget(mAdblockFilterListView);
-    connect(mSearchLineEdit, &QLineEdit::textChanged, mAdblockFilterListView, &AdblockFilterListsView::setFilterString);
+    connect(mSearchLineEdit, &QLineEdit::textChanged, mAdblockFilterListView, &AdblockFilterTreeView::setFilterString);
 }
 
 AdblockFilterWidget::~AdblockFilterWidget() = default;
