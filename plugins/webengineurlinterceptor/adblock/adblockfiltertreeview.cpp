@@ -128,7 +128,7 @@ void AdblockFilterTreeView::slotDeleteAdblock(const QModelIndex &index)
     const QModelIndex modelIndexName = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::NameRole);
     const QString listName = modelIndexName.data().toString();
     if (KMessageBox::questionTwoActions(this,
-                                        i18n("Remove \'%1\' ?", listName),
+                                        i18n("Do you want to remove \'%1\' ?", listName),
                                         i18nc("@title:window", "Remove List"),
                                         KStandardGuiItem::ok(),
                                         KStandardGuiItem::cancel())
