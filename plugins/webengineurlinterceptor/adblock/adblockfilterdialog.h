@@ -15,6 +15,8 @@ public:
     explicit AdblockFilterDialog(QWidget *parent = nullptr);
     ~AdblockFilterDialog() override;
 
+    void loadSettings();
+
 private:
     AdblockFilterWidget *const mAdblockFilterWidget;
 };

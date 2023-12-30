@@ -30,4 +30,9 @@ AdblockFilterDialog::AdblockFilterDialog(QWidget *parent)
 
 AdblockFilterDialog::~AdblockFilterDialog() = default;
 
+void AdblockFilterDialog::loadSettings()
+{
+    mAdblockFilterWidget->loadSettings();
+}
+
 #include "moc_adblockfilterdialog.cpp"
