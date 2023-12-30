@@ -68,7 +68,10 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
     if (selectedItemsNumber >= 1) { // Remove multi elements
         menu.addSeparator();
         auto deleteAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Delete"), &menu);
-        connect(deleteAction, &QAction::triggered, this, &AdblockFilterTreeView::slotDeleteAdblock);
+        connect(deleteAction, &QAction::triggered, this, [this, itemSelected]() {
+            // For the moment remove only one element
+            slotDeleteAdblock(itemSelected.at(0));
+        });
         menu.addAction(deleteAction);
     }
     menu.exec(event->globalPos());
@@ -115,12 +118,18 @@ void AdblockFilterTreeView::slotModifyAdblock(const QModelIndex &index)
     delete dlg;
 }
 
-void AdblockFilterTreeView::slotDeleteAdblock()
+void AdblockFilterTreeView::slotDeleteAdblock(const QModelIndex &index)
 {
-    if (KMessageBox::questionTwoActions(this, i18n("Remove"), i18nc("@title:window", "Remove"), KStandardGuiItem::ok(), KStandardGuiItem::cancel())
+    const QModelIndex newModelIndex = mSortFilterProxyModel->mapToSource(index);
+    const QModelIndex modelIndexName = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::NameRole);
+    const QString listName = modelIndexName.data().toString();
+    if (KMessageBox::questionTwoActions(this,
+                                        i18n("Remove \'%1\' ?", listName),
+                                        i18nc("@title:window", "Remove List"),
+                                        KStandardGuiItem::ok(),
+                                        KStandardGuiItem::cancel())
         == KMessageBox::ButtonCode::PrimaryAction) {
-        // mAdblockFilterListsModel->removeList();
-        // TODO
+        mAdblockFilterListsModel->removeList(listName);
     }
 }
 

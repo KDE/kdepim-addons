@@ -31,7 +31,7 @@ protected:
 private:
     void slotAddAdblock();
     void slotModifyAdblock(const QModelIndex &index);
-    void slotDeleteAdblock();
+    void slotDeleteAdblock(const QModelIndex &index);
     AdblockFilterListsModel *const mAdblockFilterListsModel;
     QSortFilterProxyModel *const mSortFilterProxyModel;
 };
