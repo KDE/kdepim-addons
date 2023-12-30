@@ -31,7 +31,7 @@ AdblockFilterTreeView::AdblockFilterTreeView(QWidget *parent)
     setModel(mSortFilterProxyModel);
     setContextMenuPolicy(Qt::DefaultContextMenu);
 
-    for (int c = 0; c < header()->count(); ++c) {
+    for (int c = 0, total = header()->count(); c < total; ++c) {
         header()->setSectionResizeMode(c, QHeaderView::Stretch);
     }
     setRootIsDecorated(false);
