@@ -13,7 +13,7 @@ class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockPluginUrlInterceptorAddAdblockListWid
 {
     Q_OBJECT
 public:
-    struct AdBlockListInfo {
+    struct LIBADBLOCKPLUGIN_TESTS_EXPORT AdBlockListInfo {
         QString name;
         QString url;
         [[nodiscard]] bool isValid() const;

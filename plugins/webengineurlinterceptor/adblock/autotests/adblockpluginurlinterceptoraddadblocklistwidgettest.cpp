@@ -32,4 +32,19 @@ void AdblockPluginUrlInterceptorAddAdblockListWidgetTest::shouldHaveDefaultValue
     QVERIFY(mUrl->text().isEmpty());
 }
 
+void AdblockPluginUrlInterceptorAddAdblockListWidgetTest::shouldVerifyAdBlockListInfo()
+{
+    AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info;
+    QVERIFY(!info.isValid());
+
+    info.name = QStringLiteral("bla");
+    QVERIFY(!info.isValid());
+
+    info.url = QStringLiteral("bli");
+    QVERIFY(info.isValid());
+
+    info.name.clear();
+    QVERIFY(!info.isValid());
+}
+
 #include "moc_adblockpluginurlinterceptoraddadblocklistwidgettest.cpp"

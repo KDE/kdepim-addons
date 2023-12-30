@@ -49,7 +49,7 @@ void AdblockPluginUrlInterceptorAddAdblockListWidget::setInfo(const AdBlockListI
 
 bool AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo::isValid() const
 {
-    return name.trimmed().isEmpty() && url.trimmed().isEmpty();
+    return !name.trimmed().isEmpty() && !url.trimmed().isEmpty();
 }
 
 QDebug operator<<(QDebug d, const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &t)
