@@ -68,6 +68,10 @@ QVariant AdblockFilterListsModel::data(const QModelIndex &index, int role) const
     if (index.row() < 0 || index.row() >= mAdblockFilter.count()) {
         return {};
     }
+    if (role != Qt::DisplayRole) {
+        return {};
+    }
+
     const AdblockFilter &adblockFilter = mAdblockFilter.at(index.row());
     const int col = index.column();
     switch (static_cast<AdblockFilterRoles>(col)) {
