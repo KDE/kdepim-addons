@@ -34,6 +34,7 @@ AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
     for (int c = 0; c < header()->count(); ++c) {
         header()->setSectionResizeMode(c, QHeaderView::Stretch);
     }
+    setRootIsDecorated(false);
 }
 
 AdblockFilterListsView::~AdblockFilterListsView() = default;
