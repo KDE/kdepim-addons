@@ -59,7 +59,7 @@ int AdblockFilterListsModel::rowCount(const QModelIndex &parent) const
 int AdblockFilterListsModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
-    constexpr int val = static_cast<int>(AdblockFilterRoles::LastColumn) + 1;
+    constexpr int val = static_cast<int>(AdblockFilterRole::LastColumn) + 1;
     return val;
 }
 
@@ -74,10 +74,10 @@ QVariant AdblockFilterListsModel::data(const QModelIndex &index, int role) const
 
     const AdblockFilter &adblockFilter = mAdblockFilter.at(index.row());
     const int col = index.column();
-    switch (static_cast<AdblockFilterRoles>(col)) {
-    case AdblockFilterRoles::NameRole:
+    switch (static_cast<AdblockFilterRole>(col)) {
+    case AdblockFilterRole::Name:
         return adblockFilter.name();
-    case AdblockFilterRoles::UrlRole:
+    case AdblockFilterRole::Url:
         return adblockFilter.url();
     }
     return {};
@@ -86,10 +86,10 @@ QVariant AdblockFilterListsModel::data(const QModelIndex &index, int role) const
 QVariant AdblockFilterListsModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (role == Qt::DisplayRole && orientation == Qt::Horizontal) {
-        switch (static_cast<AdblockFilterRoles>(section)) {
-        case AdblockFilterRoles::NameRole:
+        switch (static_cast<AdblockFilterRole>(section)) {
+        case AdblockFilterRole::Name:
             return i18nc("@title:column", "Name");
-        case AdblockFilterRoles::UrlRole:
+        case AdblockFilterRole::Url:
             return i18nc("@title:column", "Url");
         }
     }

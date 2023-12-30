@@ -104,8 +104,8 @@ void AdblockFilterTreeView::slotModifyAdblock(const QModelIndex &index)
     AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info;
     const QModelIndex newModelIndex = mSortFilterProxyModel->mapToSource(index);
 
-    const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::UrlRole);
-    const QModelIndex modelIndexName = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::NameRole);
+    const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::Url);
+    const QModelIndex modelIndexName = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::Name);
     const QString listName = modelIndexName.data().toString();
     // qDebug() << " modelIndexUrl " << modelIndexUrl.data() << " modelIndexName " << modelIndexName.data();
     info.name = listName;
@@ -125,7 +125,7 @@ void AdblockFilterTreeView::slotModifyAdblock(const QModelIndex &index)
 void AdblockFilterTreeView::slotDeleteAdblock(const QModelIndex &index)
 {
     const QModelIndex newModelIndex = mSortFilterProxyModel->mapToSource(index);
-    const QModelIndex modelIndexName = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::NameRole);
+    const QModelIndex modelIndexName = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::Name);
     const QString listName = modelIndexName.data().toString();
     if (KMessageBox::questionTwoActions(this,
                                         i18n("Do you want to remove \'%1\' ?", listName),

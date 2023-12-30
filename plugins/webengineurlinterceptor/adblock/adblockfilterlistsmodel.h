@@ -13,12 +13,12 @@ class AdblockFilterListsModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    enum AdblockFilterRoles {
-        NameRole,
-        UrlRole,
-        LastColumn = UrlRole,
+    enum AdblockFilterRole {
+        Name,
+        Url,
+        LastColumn = Url,
     };
-    Q_ENUM(AdblockFilterRoles)
+    Q_ENUM(AdblockFilterRole)
 
     explicit AdblockFilterListsModel(QObject *parent = nullptr);
     ~AdblockFilterListsModel() override;
