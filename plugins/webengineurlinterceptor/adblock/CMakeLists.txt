@@ -46,6 +46,8 @@ target_sources(adblockplugin PRIVATE
     adblockpluginurlinterceptoraddadblocklistwidget.cpp
 
     adblockplugin_private_export.h
+    adblocklistsutil.h
+    adblocklistsutil.cpp
     )
 
 kconfig_add_kcfg_files(adblockplugin
