@@ -54,7 +54,7 @@ void AdblockFilterListsView::contextMenuEvent(QContextMenuEvent *event)
     connect(addAction, &QAction::triggered, this, &AdblockFilterListsView::slotAddAdblock);
     menu.addAction(addAction);
 
-    if (itemSelected.count() > 0) {
+    if (!itemSelected.isEmpty()) {
         auto modifyAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Modify..."), &menu);
         connect(modifyAction, &QAction::triggered, this, &AdblockFilterListsView::slotModifyAdblock);
         menu.addAction(modifyAction);
