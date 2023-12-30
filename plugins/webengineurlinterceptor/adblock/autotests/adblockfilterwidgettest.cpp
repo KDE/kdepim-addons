@@ -28,6 +28,7 @@ void AdblockFilterWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->text().isEmpty());
     QVERIFY(!mSearchLineEdit->placeholderText().isEmpty());
+    QVERIFY(mSearchLineEdit->isClearButtonEnabled());
 
     auto mAdblockFilterListView = w.findChild<AdblockFilterTreeView *>(QStringLiteral("mAdblockFilterListView"));
     QVERIFY(mAdblockFilterListView);
