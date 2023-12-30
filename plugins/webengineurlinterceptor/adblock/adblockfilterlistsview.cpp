@@ -31,9 +31,9 @@ AdblockFilterListsView::AdblockFilterListsView(QWidget *parent)
     setModel(mSortFilterProxyModel);
     setContextMenuPolicy(Qt::DefaultContextMenu);
 
-    // for (int c = 0; c < horizontalHeader()->count(); ++c) {
-    //     horizontalHeader()->setSectionResizeMode(c, QHeaderView::Stretch);
-    // }
+    for (int c = 0; c < header()->count(); ++c) {
+        header()->setSectionResizeMode(c, QHeaderView::Stretch);
+    }
 }
 
 AdblockFilterListsView::~AdblockFilterListsView() = default;
