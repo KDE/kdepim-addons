@@ -48,17 +48,23 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu;
 
-    const auto itemSelected = selectionModel()->selectedIndexes();
+    const QModelIndexList itemSelected = selectionModel()->selectedRows();
 
     auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), &menu);
     connect(addAction, &QAction::triggered, this, &AdblockFilterTreeView::slotAddAdblock);
     menu.addAction(addAction);
 
-    if (!itemSelected.isEmpty()) {
+    const int selectedItemsNumber = itemSelected.count();
+    // qDebug() <<" selectedItemsNumber " << selectedItemsNumber;
+    if (selectedItemsNumber == 1) { // Edit only one element
         auto modifyAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Modify..."), &menu);
-        connect(modifyAction, &QAction::triggered, this, &AdblockFilterTreeView::slotModifyAdblock);
+        connect(modifyAction, &QAction::triggered, this, [this, itemSelected]() {
+            slotModifyAdblock(itemSelected.at(0));
+        });
         menu.addAction(modifyAction);
+    }
 
+    if (selectedItemsNumber >= 1) { // Remove multi elements
         menu.addSeparator();
         auto deleteAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Delete"), &menu);
         connect(deleteAction, &QAction::triggered, this, &AdblockFilterTreeView::slotDeleteAdblock);
@@ -87,12 +93,15 @@ void AdblockFilterTreeView::slotAddAdblock()
     delete dlg;
 }
 
-void AdblockFilterTreeView::slotModifyAdblock()
+void AdblockFilterTreeView::slotModifyAdblock(const QModelIndex &index)
 {
     QPointer<AdblockPluginUrlInterceptorAddAdblockListDialog> dlg = new AdblockPluginUrlInterceptorAddAdblockListDialog(this);
     AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info;
-    // TODO info.name = ;
-    // TODO info.url = ;
+    const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(index.row(), AdblockFilterListsModel::UrlRole);
+    const QModelIndex modelIndexName = mAdblockFilterListsModel->index(index.row(), AdblockFilterListsModel::NameRole);
+    // qDebug() << " modelIndexUrl " << modelIndexUrl.data() << " modelIndexName " << modelIndexName.data();
+    info.name = modelIndexName.data().toString();
+    info.url = modelIndexUrl.data().toString();
     dlg->setInfo(info);
     if (dlg->exec()) {
         const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
