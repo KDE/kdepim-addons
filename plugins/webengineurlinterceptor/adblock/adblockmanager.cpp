@@ -14,6 +14,7 @@
 #include <QFile>
 #include <QNetworkReply>
 #include <QNetworkRequest>
+#include <QStandardPaths>
 
 [[nodiscard]] QString filterListPath()
 {
