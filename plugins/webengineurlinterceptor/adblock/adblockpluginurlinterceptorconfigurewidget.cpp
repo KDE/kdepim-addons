@@ -6,6 +6,7 @@
 
 #include "adblockpluginurlinterceptorconfigurewidget.h"
 #include "adblockfilterwidget.h"
+#include "globalsettings_webengineurlinterceptoradblock.h"
 
 #include <KSharedConfig>
 #include <QHBoxLayout>
@@ -35,7 +36,9 @@ void AdblockPluginUrlInterceptorConfigureWidget::saveSettings()
 
 void AdblockPluginUrlInterceptorConfigureWidget::resetSettings()
 {
-    //    mConfigureWidget->doResetToDefaultsOther();
+    const bool bUseDefaults = AdBlockSettings::self()->useDefaults(true);
+    mAdblockFilterWidget->loadSettings();
+    AdBlockSettings::self()->useDefaults(bUseDefaults);
 }
 
 #include "moc_adblockpluginurlinterceptorconfigurewidget.cpp"
