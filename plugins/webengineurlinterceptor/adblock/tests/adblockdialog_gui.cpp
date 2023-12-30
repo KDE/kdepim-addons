@@ -19,6 +19,7 @@ int main(int argc, char **argv)
     parser.process(app);
 
     auto w = new AdblockFilterDialog;
+    w->loadSettings();
     w->resize(800, 600);
     w->show();
     app.exec();
