@@ -20,3 +20,5 @@ void AdblockListsUtilTest::shouldVerifyList()
 
     QCOMPARE(AdblockListsUtil::adblockFilterNamesDefaultList().count(), AdblockListsUtil::adblockFilterUrlsDefaultList().count());
 }
+
+#include "moc_adblocklistsutiltest.cpp"
