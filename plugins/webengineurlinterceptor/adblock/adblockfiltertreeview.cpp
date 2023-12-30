@@ -105,14 +105,16 @@ void AdblockFilterTreeView::slotModifyAdblock(const QModelIndex &index)
 
     const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::UrlRole);
     const QModelIndex modelIndexName = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::NameRole);
+    const QString listName = modelIndexName.data().toString();
     // qDebug() << " modelIndexUrl " << modelIndexUrl.data() << " modelIndexName " << modelIndexName.data();
-    info.name = modelIndexName.data().toString();
+    info.name = listName;
     info.url = modelIndexUrl.data().toString();
     dlg->setInfo(info);
     if (dlg->exec()) {
         const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
         if (info.isValid()) {
-            // TODO
+            mAdblockFilterListsModel->removeList(listName);
+            mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
         }
     }
     delete dlg;
