@@ -63,9 +63,6 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
             slotModifyAdblock(itemSelected.at(0));
         });
         menu.addAction(modifyAction);
-    }
-
-    if (selectedItemsNumber >= 1) { // Remove multi elements
         menu.addSeparator();
         auto deleteAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Delete"), &menu);
         connect(deleteAction, &QAction::triggered, this, [this, itemSelected]() {
