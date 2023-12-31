@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2016, 2017, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2016, 2017, 2020, 2021, 2023 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
-"PO-Revision-Date: 2023-09-30 11:00+0200\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
+"PO-Revision-Date: 2023-12-30 11:03+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,59 +16,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: adblock/adblockfilterdialog.cpp:17
-#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Adblock List"
-msgstr "Pokaż listę Adblock'a"
-
-#: adblock/adblockfilterlistsmodel.cpp:87
 #, fuzzy, kde-format
-#| msgid "Name:"
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
+msgctxt "@title:window"
+msgid "Configure Adblock List"
+msgstr "Ustawienia wtyczki AdBlock"
+
+#: adblock/adblockfilterlistsmodel.cpp:91
+#, kde-format
 msgctxt "@title:column"
 msgid "Name"
-msgstr "Nazwa:"
+msgstr "Nazwa"
 
-#: adblock/adblockfilterlistsmodel.cpp:89
-#, fuzzy, kde-format
-#| msgid "Url:"
+#: adblock/adblockfilterlistsmodel.cpp:93
+#, kde-format
 msgctxt "@title:column"
 msgid "Url"
-msgstr "Url:"
+msgstr "Adres URL"
 
-#: adblock/adblockfilterlistsview.cpp:53
+#: adblock/adblockfiltertreeview.cpp:54
 #, kde-format
 msgid "Add..."
 msgstr "Dodaj..."
 
-#: adblock/adblockfilterlistsview.cpp:58
+#: adblock/adblockfiltertreeview.cpp:61
 #, kde-format
 msgid "Modify..."
 msgstr "Zmień..."
 
-#: adblock/adblockfilterlistsview.cpp:63
+#: adblock/adblockfiltertreeview.cpp:70
 #, kde-format
 msgid "Delete"
 msgstr "Usuń"
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
-msgid "Remove"
-msgstr "Usuń"
+#: adblock/adblockfiltertreeview.cpp:131
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these rules?"
+msgid "Do you want to remove '%1' ?"
+msgstr "Czy chcesz usunąć tę zasadę?"
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove filter"
 msgctxt "@title:window"
-msgid "Remove"
-msgstr "Usuń"
+msgid "Remove List"
+msgstr "Usuń filtr"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Poszukaj..."
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "Pokaż listę Adblock'a"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -87,10 +95,17 @@ msgid "Configure AdBlock Plugin"
 msgstr "Ustawienia wtyczki AdBlock"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Włącz blokowanie reklam"
+
+#~ msgid "Remove"
+#~ msgstr "Usuń"
+
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "Usuń"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "Otwórz blokowane elementy..."
@@ -147,9 +162,6 @@ msgstr "Włącz blokowanie reklam"
 
 #~ msgid "Open"
 #~ msgstr "Otwórz"
-
-#~ msgid "Remove filter"
-#~ msgstr "Usuń filtr"
 
 #~ msgid "Image"
 #~ msgstr "Obraz"
@@ -229,12 +241,6 @@ msgstr "Włącz blokowanie reklam"
 
 #~ msgid "More information"
 #~ msgstr "Więcej szczegółów"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "Czy chcesz usunąć tę zasadę?"
-#~ msgstr[1] "Czy chcesz usunąć te zasady?"
-#~ msgstr[2] "Czy chcesz usunąć te zasady?"
 
 #~ msgid "Do you want to delete list \"%1\"?"
 #~ msgstr "Czy chcesz usunąć spis \"%1\"?"

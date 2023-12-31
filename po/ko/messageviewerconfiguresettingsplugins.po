@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
 "PO-Revision-Date: 2023-10-08 23:00+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -339,17 +339,17 @@ msgctxt "@title"
 msgid "Remove Rule"
 msgstr "규칙 삭제"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:208
+#: openurlwith/openurlwithconfigurewidget.cpp:209
 #, kde-format
 msgid "Add Rule..."
 msgstr "규칙 추가..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:210
+#: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgid "Edit Rule..."
 msgstr "규칙 편집..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:215
+#: openurlwith/openurlwithconfigurewidget.cpp:216
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"

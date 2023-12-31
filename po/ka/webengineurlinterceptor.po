@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
-"PO-Revision-Date: 2023-09-27 05:35+0200\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
+"PO-Revision-Date: 2023-12-30 05:52+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19,56 +19,64 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 
 #: adblock/adblockfilterdialog.cpp:17
-#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Adblock List"
-msgstr "Adblock-ის სიის დამატება"
-
-#: adblock/adblockfilterlistsmodel.cpp:87
 #, fuzzy, kde-format
-#| msgid "Name:"
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
+msgctxt "@title:window"
+msgid "Configure Adblock List"
+msgstr "რეკლამების დამატების მორგება"
+
+#: adblock/adblockfilterlistsmodel.cpp:91
+#, kde-format
 msgctxt "@title:column"
 msgid "Name"
-msgstr "სახელი:"
+msgstr "სახელი"
 
-#: adblock/adblockfilterlistsmodel.cpp:89
-#, fuzzy, kde-format
-#| msgid "Url:"
+#: adblock/adblockfilterlistsmodel.cpp:93
+#, kde-format
 msgctxt "@title:column"
 msgid "Url"
-msgstr "URL:"
+msgstr "Url"
 
-#: adblock/adblockfilterlistsview.cpp:53
+#: adblock/adblockfiltertreeview.cpp:54
 #, kde-format
 msgid "Add..."
 msgstr "დამატება..."
 
-#: adblock/adblockfilterlistsview.cpp:58
+#: adblock/adblockfiltertreeview.cpp:61
 #, kde-format
 msgid "Modify..."
 msgstr "ჩასწორება..."
 
-#: adblock/adblockfilterlistsview.cpp:63
+#: adblock/adblockfiltertreeview.cpp:70
 #, kde-format
 msgid "Delete"
 msgstr "წაშლა"
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
-msgid "Remove"
-msgstr "წაშლა"
+#: adblock/adblockfiltertreeview.cpp:131
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these rules?"
+msgid "Do you want to remove '%1' ?"
+msgstr "გსურთ ამ წესის წაშლა?"
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove filter"
 msgctxt "@title:window"
-msgid "Remove"
-msgstr "წაშლა"
+msgid "Remove List"
+msgstr "ფილტრის გაუქმება"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "ძებნა..."
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "Adblock-ის სიის დამატება"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -87,10 +95,17 @@ msgid "Configure AdBlock Plugin"
 msgstr "რეკლამების დამატების მორგება"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "რეკლამების ბლოკირების ჩართვა"
+
+#~ msgid "Remove"
+#~ msgstr "წაშლა"
+
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "წაშლა"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "დაბლოკვადი ჩანაწერების გახსნა..."
@@ -147,9 +162,6 @@ msgstr "რეკლამების ბლოკირების ჩარ�
 
 #~ msgid "Open"
 #~ msgstr "გახსნა"
-
-#~ msgid "Remove filter"
-#~ msgstr "ფილტრის გაუქმება"
 
 #~ msgid "Image"
 #~ msgstr "გამოსახულება"
@@ -211,11 +223,6 @@ msgstr "რეკლამების ბლოკირების ჩარ�
 
 #~ msgid "More information"
 #~ msgstr "მეტი ინფორმაცია"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "გსურთ ამ წესის წაშლა?"
-#~ msgstr[1] "გსურთ ამ წესების წაშლა?"
 
 #~ msgid "Do you want to delete list \"%1\"?"
 #~ msgstr "გსურთ წაშალოთ სია \"%1\"?"

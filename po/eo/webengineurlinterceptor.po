@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
-"PO-Revision-Date: 2023-09-26 20:18+0100\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
+"PO-Revision-Date: 2023-12-30 07:09+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -19,56 +19,62 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: adblock/adblockfilterdialog.cpp:17
-#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Adblock List"
-msgstr "Aldoni Adblock-Liston"
-
-#: adblock/adblockfilterlistsmodel.cpp:87
 #, fuzzy, kde-format
-#| msgid "Name:"
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
+msgctxt "@title:window"
+msgid "Configure Adblock List"
+msgstr "Agordi AdBlock-Kromprogramon"
+
+#: adblock/adblockfilterlistsmodel.cpp:91
+#, kde-format
 msgctxt "@title:column"
 msgid "Name"
-msgstr "Nomo:"
+msgstr "Nomo"
 
-#: adblock/adblockfilterlistsmodel.cpp:89
-#, fuzzy, kde-format
-#| msgid "Url:"
+#: adblock/adblockfilterlistsmodel.cpp:93
+#, kde-format
 msgctxt "@title:column"
 msgid "Url"
-msgstr "Url:"
+msgstr "Url"
 
-#: adblock/adblockfilterlistsview.cpp:53
+#: adblock/adblockfiltertreeview.cpp:54
 #, kde-format
 msgid "Add..."
 msgstr "Aldoni..."
 
-#: adblock/adblockfilterlistsview.cpp:58
+#: adblock/adblockfiltertreeview.cpp:61
 #, kde-format
 msgid "Modify..."
 msgstr "Modifi..."
 
-#: adblock/adblockfilterlistsview.cpp:63
+#: adblock/adblockfiltertreeview.cpp:70
 #, kde-format
 msgid "Delete"
 msgstr "Forigi"
 
-#: adblock/adblockfilterlistsview.cpp:105
+#: adblock/adblockfiltertreeview.cpp:131
 #, kde-format
-msgid "Remove"
-msgstr "Forigi"
+msgid "Do you want to remove '%1' ?"
+msgstr ""
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove"
 msgctxt "@title:window"
-msgid "Remove"
+msgid "Remove List"
 msgstr "Forigi"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Serĉi..."
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "Aldoni Adblock-Liston"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -87,7 +93,11 @@ msgid "Configure AdBlock Plugin"
 msgstr "Agordi AdBlock-Kromprogramon"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Ebligita reklambloko"
+
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "Forigi"

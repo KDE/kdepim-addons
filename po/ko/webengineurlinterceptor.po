@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
 "PO-Revision-Date: 2023-10-08 23:04+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,56 +18,66 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: adblock/adblockfilterdialog.cpp:17
-#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
 msgctxt "@title:window"
-msgid "Add Adblock List"
-msgstr "광고 차단 목록 추가"
+msgid "Configure Adblock List"
+msgstr "AdBlock 플러그인 설정"
 
-#: adblock/adblockfilterlistsmodel.cpp:87
+#: adblock/adblockfilterlistsmodel.cpp:91
 #, fuzzy, kde-format
 #| msgid "Name:"
 msgctxt "@title:column"
 msgid "Name"
 msgstr "이름:"
 
-#: adblock/adblockfilterlistsmodel.cpp:89
+#: adblock/adblockfilterlistsmodel.cpp:93
 #, fuzzy, kde-format
 #| msgid "Url:"
 msgctxt "@title:column"
 msgid "Url"
 msgstr "URL:"
 
-#: adblock/adblockfilterlistsview.cpp:53
+#: adblock/adblockfiltertreeview.cpp:54
 #, kde-format
 msgid "Add..."
 msgstr "추가..."
 
-#: adblock/adblockfilterlistsview.cpp:58
+#: adblock/adblockfiltertreeview.cpp:61
 #, kde-format
 msgid "Modify..."
 msgstr "수정..."
 
-#: adblock/adblockfilterlistsview.cpp:63
+#: adblock/adblockfiltertreeview.cpp:70
 #, kde-format
 msgid "Delete"
 msgstr "삭제"
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
-msgid "Remove"
-msgstr "삭제"
+#: adblock/adblockfiltertreeview.cpp:131
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these rules?"
+msgid "Do you want to remove '%1' ?"
+msgstr "이 규칙을 삭제하시겠습니까?"
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove filter"
 msgctxt "@title:window"
-msgid "Remove"
-msgstr "삭제"
+msgid "Remove List"
+msgstr "필터 삭제"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "찾기..."
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "광고 차단 목록 추가"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -86,10 +96,17 @@ msgid "Configure AdBlock Plugin"
 msgstr "AdBlock 플러그인 설정"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "광고 차단 활성화"
+
+#~ msgid "Remove"
+#~ msgstr "삭제"
+
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "삭제"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "차단 가능한 항목 열기..."
@@ -146,9 +163,6 @@ msgstr "광고 차단 활성화"
 
 #~ msgid "Open"
 #~ msgstr "열기"
-
-#~ msgid "Remove filter"
-#~ msgstr "필터 삭제"
 
 #~ msgid "Image"
 #~ msgstr "그림"
@@ -226,10 +240,6 @@ msgstr "광고 차단 활성화"
 
 #~ msgid "More information"
 #~ msgstr "더 많은 정보"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "이 규칙을 삭제하시겠습니까?"
 
 #~ msgid "Do you want to delete list \"%1\"?"
 #~ msgstr "목록 \"%1\"을(를) 삭제하시겠습니까?"

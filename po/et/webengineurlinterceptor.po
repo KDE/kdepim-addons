@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
 "PO-Revision-Date: 2019-12-18 20:08+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -18,6 +18,60 @@ msgstr ""
 "X-Generator: Lokalize 19.08.1\n"
 
 #: adblock/adblockfilterdialog.cpp:17
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
+msgctxt "@title:window"
+msgid "Configure Adblock List"
+msgstr "AdBlocki plugina seadistamine"
+
+#: adblock/adblockfilterlistsmodel.cpp:91
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr ""
+
+#: adblock/adblockfilterlistsmodel.cpp:93
+#, kde-format
+msgctxt "@title:column"
+msgid "Url"
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:54
+#, kde-format
+msgid "Add..."
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:61
+#, kde-format
+msgid "Modify..."
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:70
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "Kustuta loend"
+
+#: adblock/adblockfiltertreeview.cpp:131
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these rules?"
+msgid "Do you want to remove '%1' ?"
+msgstr "Kas eemaldada see reegel?"
+
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove filter"
+msgctxt "@title:window"
+msgid "Remove List"
+msgstr "Eemalda filter"
+
+#: adblock/adblockfilterwidget.cpp:26
+#, kde-format
+msgid "Search..."
+msgstr "Otsing..."
+
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
@@ -25,51 +79,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr "AdBlocki loendi näitamine"
-
-#: adblock/adblockfilterlistsmodel.cpp:87
-#, kde-format
-msgctxt "@title:column"
-msgid "Name"
-msgstr ""
-
-#: adblock/adblockfilterlistsmodel.cpp:89
-#, kde-format
-msgctxt "@title:column"
-msgid "Url"
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:53
-#, kde-format
-msgid "Add..."
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:58
-#, kde-format
-msgid "Modify..."
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:63
-#, fuzzy, kde-format
-#| msgid "Delete List"
-msgid "Delete"
-msgstr "Kustuta loend"
-
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
-msgid "Remove"
-msgstr "Eemalda"
-
-#: adblock/adblockfilterlistsview.cpp:105
-#, fuzzy, kde-format
-#| msgid "Remove"
-msgctxt "@title:window"
-msgid "Remove"
-msgstr "Eemalda"
-
-#: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Otsing..."
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -88,10 +97,19 @@ msgid "Configure AdBlock Plugin"
 msgstr "AdBlocki plugina seadistamine"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "AdBlocki lubamine"
+
+#~ msgid "Remove"
+#~ msgstr "Eemalda"
+
+#, fuzzy
+#~| msgid "Remove"
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "Eemalda"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "Ava blokitavad elemendid..."
@@ -148,9 +166,6 @@ msgstr "AdBlocki lubamine"
 
 #~ msgid "Open"
 #~ msgstr "Ava"
-
-#~ msgid "Remove filter"
-#~ msgstr "Eemalda filter"
 
 #~ msgid "Image"
 #~ msgstr "Pilt"
@@ -230,11 +245,6 @@ msgstr "AdBlocki lubamine"
 
 #~ msgid "More information"
 #~ msgstr "Rohkem teavet"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "Kas eemaldada see reegel?"
-#~ msgstr[1] "Kas eemaldada need reeglid?"
 
 #~ msgid "Do you want to delete list \"%1\"?"
 #~ msgstr "Kas kustutada loend \"%1\"?"

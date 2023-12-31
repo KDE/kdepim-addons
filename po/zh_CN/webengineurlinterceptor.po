@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
-"PO-Revision-Date: 2023-12-23 08:00\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
+"PO-Revision-Date: 2023-12-30 13:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -19,56 +19,64 @@ msgstr ""
 "X-Crowdin-File-ID: 45301\n"
 
 #: adblock/adblockfilterdialog.cpp:17
-#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
 msgctxt "@title:window"
-msgid "Add Adblock List"
-msgstr "添加 Adblock 列表"
+msgid "Configure Adblock List"
+msgstr "配置广告屏蔽插件"
 
-#: adblock/adblockfilterlistsmodel.cpp:87
+#: adblock/adblockfilterlistsmodel.cpp:91
 #, fuzzy, kde-format
 #| msgid "Name:"
 msgctxt "@title:column"
 msgid "Name"
 msgstr "名称："
 
-#: adblock/adblockfilterlistsmodel.cpp:89
+#: adblock/adblockfilterlistsmodel.cpp:93
 #, fuzzy, kde-format
 #| msgid "Url:"
 msgctxt "@title:column"
 msgid "Url"
 msgstr "URL："
 
-#: adblock/adblockfilterlistsview.cpp:53
+#: adblock/adblockfiltertreeview.cpp:54
 #, kde-format
 msgid "Add..."
 msgstr "添加..."
 
-#: adblock/adblockfilterlistsview.cpp:58
+#: adblock/adblockfiltertreeview.cpp:61
 #, kde-format
 msgid "Modify..."
 msgstr "修改..."
 
-#: adblock/adblockfilterlistsview.cpp:63
+#: adblock/adblockfiltertreeview.cpp:70
 #, kde-format
 msgid "Delete"
 msgstr "删除"
 
-#: adblock/adblockfilterlistsview.cpp:105
+#: adblock/adblockfiltertreeview.cpp:131
 #, kde-format
-msgid "Remove"
-msgstr "删除"
+msgid "Do you want to remove '%1' ?"
+msgstr ""
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove"
 msgctxt "@title:window"
-msgid "Remove"
+msgid "Remove List"
 msgstr "删除"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "搜索..."
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "添加 Adblock 列表"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -87,7 +95,11 @@ msgid "Configure AdBlock Plugin"
 msgstr "配置广告屏蔽插件"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "已启用广告屏蔽"
+
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "删除"

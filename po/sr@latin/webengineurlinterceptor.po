@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,59 +20,66 @@ msgstr ""
 
 # >> @title:window
 #: adblock/adblockfilterdialog.cpp:17
+#, fuzzy, kde-format
+#| msgid "Configure AdBlock Plugin"
+msgctxt "@title:window"
+msgid "Configure Adblock List"
+msgstr "Podešavanje priključka AdBlocka"
+
+#: adblock/adblockfilterlistsmodel.cpp:91
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr ""
+
+#: adblock/adblockfilterlistsmodel.cpp:93
+#, kde-format
+msgctxt "@title:column"
+msgid "Url"
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:54
+#, kde-format
+msgid "Add..."
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:61
+#, kde-format
+msgid "Modify..."
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:70
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "Obriši listu"
+
+#: adblock/adblockfiltertreeview.cpp:131
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these rules?"
+msgid "Do you want to remove '%1' ?"
+msgstr "Želite li da uklonite ova pravila?"
+
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove filter"
+msgctxt "@title:window"
+msgid "Remove List"
+msgstr "Ukloni filter"
+
+#: adblock/adblockfilterwidget.cpp:26
+#, kde-format
+msgid "Search..."
+msgstr "Traži..."
+
+# >> @title:window
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, fuzzy, kde-format
 #| msgid "Show adblock list"
 msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr "Prikaz liste AdBlocka"
-
-#: adblock/adblockfilterlistsmodel.cpp:87
-#, kde-format
-msgctxt "@title:column"
-msgid "Name"
-msgstr ""
-
-#: adblock/adblockfilterlistsmodel.cpp:89
-#, kde-format
-msgctxt "@title:column"
-msgid "Url"
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:53
-#, kde-format
-msgid "Add..."
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:58
-#, kde-format
-msgid "Modify..."
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:63
-#, fuzzy, kde-format
-#| msgid "Delete List"
-msgid "Delete"
-msgstr "Obriši listu"
-
-# >> @title:window
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
-msgid "Remove"
-msgstr "Uklanjanje"
-
-# >> @title:window
-#: adblock/adblockfilterlistsview.cpp:105
-#, fuzzy, kde-format
-#| msgid "Remove"
-msgctxt "@title:window"
-msgid "Remove"
-msgstr "Uklanjanje"
-
-#: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Traži..."
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -93,10 +100,21 @@ msgid "Configure AdBlock Plugin"
 msgstr "Podešavanje priključka AdBlocka"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Aktiviraj AdBlock"
+
+# >> @title:window
+#~ msgid "Remove"
+#~ msgstr "Uklanjanje"
+
+# >> @title:window
+#, fuzzy
+#~| msgid "Remove"
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "Uklanjanje"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "Otvori stavke za blokiranje..."
@@ -162,9 +180,6 @@ msgstr "Aktiviraj AdBlock"
 
 #~ msgid "Open"
 #~ msgstr "Otvori"
-
-#~ msgid "Remove filter"
-#~ msgstr "Ukloni filter"
 
 # >> @item
 #~ msgid "Image"
@@ -262,13 +277,6 @@ msgstr "Aktiviraj AdBlock"
 
 #~ msgid "More information"
 #~ msgstr "Više detalja"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "Želite li da uklonite ova pravila?"
-#~ msgstr[1] "Želite li da uklonite ova pravila?"
-#~ msgstr[2] "Želite li da uklonite ova pravila?"
-#~ msgstr[3] "Želite li da uklonite ovo pravilo?"
 
 #~ msgid "Do you want to delete list \"%1\"?"
 #~ msgstr "Želite li da obrišete listu „%1“?"

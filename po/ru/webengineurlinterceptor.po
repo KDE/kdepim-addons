@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
 "PO-Revision-Date: 2022-02-21 17:06+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -30,6 +30,62 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: adblock/adblockfilterdialog.cpp:17
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
+msgctxt "@title:window"
+msgid "Configure Adblock List"
+msgstr "Настроить модуль AdBlock"
+
+#: adblock/adblockfilterlistsmodel.cpp:91
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr ""
+
+#: adblock/adblockfilterlistsmodel.cpp:93
+#, kde-format
+msgctxt "@title:column"
+msgid "Url"
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:54
+#, fuzzy, kde-format
+#| msgid "A&dd..."
+msgid "Add..."
+msgstr "&Добавить..."
+
+#: adblock/adblockfiltertreeview.cpp:61
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "Modify..."
+msgstr "&Изменить..."
+
+#: adblock/adblockfiltertreeview.cpp:70
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "Удалить список"
+
+#: adblock/adblockfiltertreeview.cpp:131
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these rules?"
+msgid "Do you want to remove '%1' ?"
+msgstr "Удалить данные правила?"
+
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove filter"
+msgctxt "@title:window"
+msgid "Remove List"
+msgstr "Удалить фильтр"
+
+#: adblock/adblockfilterwidget.cpp:26
+#, kde-format
+msgid "Search..."
+msgstr "Поиск..."
+
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
@@ -37,53 +93,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr "Просмотр списка блокировки рекламы"
-
-#: adblock/adblockfilterlistsmodel.cpp:87
-#, kde-format
-msgctxt "@title:column"
-msgid "Name"
-msgstr ""
-
-#: adblock/adblockfilterlistsmodel.cpp:89
-#, kde-format
-msgctxt "@title:column"
-msgid "Url"
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:53
-#, fuzzy, kde-format
-#| msgid "A&dd..."
-msgid "Add..."
-msgstr "&Добавить..."
-
-#: adblock/adblockfilterlistsview.cpp:58
-#, fuzzy, kde-format
-#| msgid "&Modify..."
-msgid "Modify..."
-msgstr "&Изменить..."
-
-#: adblock/adblockfilterlistsview.cpp:63
-#, fuzzy, kde-format
-#| msgid "Delete List"
-msgid "Delete"
-msgstr "Удалить список"
-
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
-msgid "Remove"
-msgstr "Удалить"
-
-#: adblock/adblockfilterlistsview.cpp:105
-#, fuzzy, kde-format
-#| msgid "Remove"
-msgctxt "@title:window"
-msgid "Remove"
-msgstr "Удалить"
-
-#: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Поиск..."
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -102,10 +111,19 @@ msgid "Configure AdBlock Plugin"
 msgstr "Настроить модуль AdBlock"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Включена блокировка рекламы"
+
+#~ msgid "Remove"
+#~ msgstr "Удалить"
+
+#, fuzzy
+#~| msgid "Remove"
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "Удалить"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "Показать блокируемые элементы..."
@@ -163,9 +181,6 @@ msgstr "Включена блокировка рекламы"
 
 #~ msgid "Open"
 #~ msgstr "Открыть"
-
-#~ msgid "Remove filter"
-#~ msgstr "Удалить фильтр"
 
 #~ msgid "Image"
 #~ msgstr "Изображение"
@@ -250,13 +265,6 @@ msgstr "Включена блокировка рекламы"
 
 #~ msgid "More information"
 #~ msgstr "Дополнительная информация"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "Удалить данные правила?"
-#~ msgstr[1] "Удалить данные правила?"
-#~ msgstr[2] "Удалить данные правила?"
-#~ msgstr[3] "Удалить данное правило?"
 
 #~ msgid "Do you want to delete list \"%1\"?"
 #~ msgstr "Удалить список фильтров рекламы «%1»?"

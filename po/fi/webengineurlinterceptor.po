@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
 "PO-Revision-Date: 2023-09-26 10:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -19,57 +19,66 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: adblock/adblockfilterdialog.cpp:17
-#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
 msgctxt "@title:window"
-msgid "Add Adblock List"
-msgstr "Lisää mainosestoluettelo"
+msgid "Configure Adblock List"
+msgstr "Mainosestoliitännäisen asetukset"
 
-#: adblock/adblockfilterlistsmodel.cpp:87
+#: adblock/adblockfilterlistsmodel.cpp:91
 #, fuzzy, kde-format
 #| msgid "Name:"
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Nimi:"
 
-#: adblock/adblockfilterlistsmodel.cpp:89
+#: adblock/adblockfilterlistsmodel.cpp:93
 #, fuzzy, kde-format
 #| msgid "Url:"
 msgctxt "@title:column"
 msgid "Url"
 msgstr "Verkko-osoite:"
 
-#: adblock/adblockfilterlistsview.cpp:53
+#: adblock/adblockfiltertreeview.cpp:54
 #, kde-format
 msgid "Add..."
 msgstr "Lisää…"
 
-#: adblock/adblockfilterlistsview.cpp:58
+#: adblock/adblockfiltertreeview.cpp:61
 #, kde-format
 msgid "Modify..."
 msgstr "Muuta…"
 
-#: adblock/adblockfilterlistsview.cpp:63
+#: adblock/adblockfiltertreeview.cpp:70
 #, kde-format
 msgid "Delete"
 msgstr "Poista"
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
-msgid "Remove"
-msgstr "Poista"
-
-#: adblock/adblockfilterlistsview.cpp:105
+#: adblock/adblockfiltertreeview.cpp:131
 #, fuzzy, kde-format
-#| msgid "Remove"
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these rules?"
+msgid "Do you want to remove '%1' ?"
+msgstr "Haluatko poistaa tämän säännön?"
+
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove filter"
 msgctxt "@title:window"
-msgid "Remove"
-msgstr "Poista"
+msgid "Remove List"
+msgstr "Poista suodatin"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Etsi…"
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "Lisää mainosestoluettelo"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -88,10 +97,19 @@ msgid "Configure AdBlock Plugin"
 msgstr "Mainosestoliitännäisen asetukset"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Mainosesto käytössä"
+
+#~ msgid "Remove"
+#~ msgstr "Poista"
+
+#, fuzzy
+#~| msgid "Remove"
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "Poista"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "Avaa estettävät kohteet…"
@@ -149,9 +167,6 @@ msgstr "Mainosesto käytössä"
 
 #~ msgid "Open"
 #~ msgstr "Avaa"
-
-#~ msgid "Remove filter"
-#~ msgstr "Poista suodatin"
 
 #~ msgid "Image"
 #~ msgstr "Kuva"
@@ -231,11 +246,6 @@ msgstr "Mainosesto käytössä"
 
 #~ msgid "More information"
 #~ msgstr "Lisätietoa"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "Haluatko poistaa tämän säännön?"
-#~ msgstr[1] "Haluatko poistaa nämä säännöt?"
 
 #~ msgid "Do you want to delete list \"%1\"?"
 #~ msgstr "Haluatko poistaa luettelon ”%1”?"

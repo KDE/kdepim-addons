@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
 "PO-Revision-Date: 2022-08-23 22:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -20,6 +20,60 @@ msgstr ""
 "X-Generator: Lokalize 21.07.70\n"
 
 #: adblock/adblockfilterdialog.cpp:17
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
+msgctxt "@title:window"
+msgid "Configure Adblock List"
+msgstr "اضبط ملحقة «حاجب الإعلانات»"
+
+#: adblock/adblockfilterlistsmodel.cpp:91
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr ""
+
+#: adblock/adblockfilterlistsmodel.cpp:93
+#, kde-format
+msgctxt "@title:column"
+msgid "Url"
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:54
+#, kde-format
+msgid "Add..."
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:61
+#, kde-format
+msgid "Modify..."
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:70
+#, fuzzy, kde-format
+#| msgid "Delete List"
+msgid "Delete"
+msgstr "احذف القائمة"
+
+#: adblock/adblockfiltertreeview.cpp:131
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these rules?"
+msgid "Do you want to remove '%1' ?"
+msgstr "أتريد إزالة هذه القاعدة؟"
+
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove filter"
+msgctxt "@title:window"
+msgid "Remove List"
+msgstr "أزِل المرشّح"
+
+#: adblock/adblockfilterwidget.cpp:26
+#, kde-format
+msgid "Search..."
+msgstr "ابحث..."
+
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
@@ -27,51 +81,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr "اعرض قائمة «حاجب الإعلانات»"
-
-#: adblock/adblockfilterlistsmodel.cpp:87
-#, kde-format
-msgctxt "@title:column"
-msgid "Name"
-msgstr ""
-
-#: adblock/adblockfilterlistsmodel.cpp:89
-#, kde-format
-msgctxt "@title:column"
-msgid "Url"
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:53
-#, kde-format
-msgid "Add..."
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:58
-#, kde-format
-msgid "Modify..."
-msgstr ""
-
-#: adblock/adblockfilterlistsview.cpp:63
-#, fuzzy, kde-format
-#| msgid "Delete List"
-msgid "Delete"
-msgstr "احذف القائمة"
-
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
-msgid "Remove"
-msgstr "أزِل"
-
-#: adblock/adblockfilterlistsview.cpp:105
-#, fuzzy, kde-format
-#| msgid "Remove"
-msgctxt "@title:window"
-msgid "Remove"
-msgstr "أزِل"
-
-#: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "ابحث..."
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -90,10 +99,19 @@ msgid "Configure AdBlock Plugin"
 msgstr "اضبط ملحقة «حاجب الإعلانات»"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "«حاجب الإعلانات» مفعّل"
+
+#~ msgid "Remove"
+#~ msgstr "أزِل"
+
+#, fuzzy
+#~| msgid "Remove"
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "أزِل"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "افتح العناصر التي يمكن حجبها..."
@@ -150,9 +168,6 @@ msgstr "«حاجب الإعلانات» مفعّل"
 
 #~ msgid "Open"
 #~ msgstr "افتح"
-
-#~ msgid "Remove filter"
-#~ msgstr "أزِل المرشّح"
 
 #~ msgid "Image"
 #~ msgstr "صورة"
@@ -236,15 +251,6 @@ msgstr "«حاجب الإعلانات» مفعّل"
 
 #~ msgid "More information"
 #~ msgstr "معلومات أخرى"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "أتريد إزالة هذه القاعدة؟"
-#~ msgstr[1] "أتريد إزالة هذه القاعدة؟"
-#~ msgstr[2] "أتريد إزالة هتين القاعدتين؟"
-#~ msgstr[3] "أتريد إزالة هذه القواعد؟"
-#~ msgstr[4] "أتريد إزالة هذه القواعد؟"
-#~ msgstr[5] "أتريد إزالة هذه القواعد؟"
 
 #~ msgid "Do you want to delete list \"%1\"?"
 #~ msgstr "أتري حذف القائمة ”%1“؟"

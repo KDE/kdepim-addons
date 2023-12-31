@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-12-23 08:00\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
+"PO-Revision-Date: 2023-12-30 13:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -340,17 +340,17 @@ msgctxt "@title"
 msgid "Remove Rule"
 msgstr "移除规则"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:208
+#: openurlwith/openurlwithconfigurewidget.cpp:209
 #, kde-format
 msgid "Add Rule..."
 msgstr "添加规则..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:210
+#: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgid "Edit Rule..."
 msgstr "编辑规则..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:215
+#: openurlwith/openurlwithconfigurewidget.cpp:216
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"

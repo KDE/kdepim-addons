@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
 "PO-Revision-Date: 2023-11-03 09:07+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,56 +18,64 @@ msgstr ""
 "X-Generator: Lokalize 23.08.2\n"
 
 #: adblock/adblockfilterdialog.cpp:17
-#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
 msgctxt "@title:window"
-msgid "Add Adblock List"
-msgstr "Přidat seznam Adblock"
+msgid "Configure Adblock List"
+msgstr "Nastavit modul AdBlock"
 
-#: adblock/adblockfilterlistsmodel.cpp:87
+#: adblock/adblockfilterlistsmodel.cpp:91
 #, fuzzy, kde-format
 #| msgid "Name:"
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Název:"
 
-#: adblock/adblockfilterlistsmodel.cpp:89
+#: adblock/adblockfilterlistsmodel.cpp:93
 #, fuzzy, kde-format
 #| msgid "Url:"
 msgctxt "@title:column"
 msgid "Url"
 msgstr "Url:"
 
-#: adblock/adblockfilterlistsview.cpp:53
+#: adblock/adblockfiltertreeview.cpp:54
 #, kde-format
 msgid "Add..."
 msgstr "Přidat..."
 
-#: adblock/adblockfilterlistsview.cpp:58
+#: adblock/adblockfiltertreeview.cpp:61
 #, kde-format
 msgid "Modify..."
 msgstr "Změnit..."
 
-#: adblock/adblockfilterlistsview.cpp:63
+#: adblock/adblockfiltertreeview.cpp:70
 #, kde-format
 msgid "Delete"
 msgstr "Smazat"
 
-#: adblock/adblockfilterlistsview.cpp:105
+#: adblock/adblockfiltertreeview.cpp:131
 #, kde-format
-msgid "Remove"
-msgstr "Odstranit"
+msgid "Do you want to remove '%1' ?"
+msgstr ""
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove"
 msgctxt "@title:window"
-msgid "Remove"
+msgid "Remove List"
 msgstr "Odstranit"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Hledat..."
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "Přidat seznam Adblock"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -86,7 +94,11 @@ msgid "Configure AdBlock Plugin"
 msgstr "Nastavit modul AdBlock"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Povolena blokace reklam"
+
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "Odstranit"

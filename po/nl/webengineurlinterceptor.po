@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-30 01:38+0000\n"
-"PO-Revision-Date: 2023-09-26 10:54+0200\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
+"PO-Revision-Date: 2023-12-30 14:38+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,59 +15,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: adblock/adblockfilterdialog.cpp:17
-#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Adblock List"
-msgstr "Lijst met adblock's toevoegen"
-
-#: adblock/adblockfilterlistsmodel.cpp:87
 #, fuzzy, kde-format
-#| msgid "Name:"
+#| msgctxt "@title:window"
+#| msgid "Configure AdBlock Plugin"
+msgctxt "@title:window"
+msgid "Configure Adblock List"
+msgstr "Plug-in AdBlock instellen"
+
+#: adblock/adblockfilterlistsmodel.cpp:91
+#, kde-format
 msgctxt "@title:column"
 msgid "Name"
-msgstr "Naam:"
+msgstr "Naam"
 
-#: adblock/adblockfilterlistsmodel.cpp:89
-#, fuzzy, kde-format
-#| msgid "Url:"
+#: adblock/adblockfilterlistsmodel.cpp:93
+#, kde-format
 msgctxt "@title:column"
 msgid "Url"
-msgstr "Url:"
+msgstr "Url"
 
-#: adblock/adblockfilterlistsview.cpp:53
+#: adblock/adblockfiltertreeview.cpp:54
 #, kde-format
 msgid "Add..."
 msgstr "Toevoegen..."
 
-#: adblock/adblockfilterlistsview.cpp:58
+#: adblock/adblockfiltertreeview.cpp:61
 #, kde-format
 msgid "Modify..."
 msgstr "Wijzigen..."
 
-#: adblock/adblockfilterlistsview.cpp:63
+#: adblock/adblockfiltertreeview.cpp:70
 #, kde-format
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
-msgid "Remove"
-msgstr "Verwijderen"
+#: adblock/adblockfiltertreeview.cpp:131
+#, fuzzy, kde-format
+#| msgid "Do you want to remove this rule?"
+#| msgid_plural "Do you want to remove these rules?"
+msgid "Do you want to remove '%1' ?"
+msgstr "Wilt u deze regel verwijderen?"
 
-#: adblock/adblockfilterlistsview.cpp:105
-#, kde-format
+#: adblock/adblockfiltertreeview.cpp:132
+#, fuzzy, kde-format
+#| msgid "Remove filter"
 msgctxt "@title:window"
-msgid "Remove"
-msgstr "Verwijderen"
+msgid "Remove List"
+msgstr "Filter verwijderen"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
 msgstr "Zoeken..."
+
+#: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Adblock List"
+msgstr "Lijst met adblock's toevoegen"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -86,10 +94,17 @@ msgid "Configure AdBlock Plugin"
 msgstr "Plug-in AdBlock instellen"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:8
+#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Adv. blokkering inschakelen"
+
+#~ msgid "Remove"
+#~ msgstr "Verwijderen"
+
+#~ msgctxt "@title:window"
+#~ msgid "Remove"
+#~ msgstr "Verwijderen"
 
 #~ msgid "Open Blockable Items..."
 #~ msgstr "Te blokkeren items openen"
@@ -146,9 +161,6 @@ msgstr "Adv. blokkering inschakelen"
 
 #~ msgid "Open"
 #~ msgstr "Openen"
-
-#~ msgid "Remove filter"
-#~ msgstr "Filter verwijderen"
 
 #~ msgid "Image"
 #~ msgstr "Afbeelding"
@@ -228,11 +240,6 @@ msgstr "Adv. blokkering inschakelen"
 
 #~ msgid "More information"
 #~ msgstr "Meer informatie"
-
-#~ msgid "Do you want to remove this rule?"
-#~ msgid_plural "Do you want to remove these rules?"
-#~ msgstr[0] "Wilt u deze regel verwijderen?"
-#~ msgstr[1] "Wilt u deze regels verwijderen?"
 
 #~ msgid "Do you want to delete list \"%1\"?"
 #~ msgstr "Wilt u de lijst \"%1\" verwijderen?"

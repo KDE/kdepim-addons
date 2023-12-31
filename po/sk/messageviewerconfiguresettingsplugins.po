@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2023-12-31 01:54+0000\n"
 "PO-Revision-Date: 2019-11-11 16:12+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -355,18 +355,18 @@ msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Odstrániť pravidlo"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:208
+#: openurlwith/openurlwithconfigurewidget.cpp:209
 #, fuzzy, kde-format
 #| msgid "Add Rule"
 msgid "Add Rule..."
 msgstr "Pridať pravidlo"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:210
+#: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgid "Edit Rule..."
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:215
+#: openurlwith/openurlwithconfigurewidget.cpp:216
 #, fuzzy, kde-format
 #| msgid "Remove Rule"
 msgid "Remove Rule"
