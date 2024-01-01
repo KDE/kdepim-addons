@@ -1,5 +1,5 @@
 /*
-  SPDX-FileCopyrightText: 2013-2023 Laurent Montel <montel@kde.org>
+  SPDX-FileCopyrightText: 2013-2024 Laurent Montel <montel@kde.org>
   SPDX-FileCopyrightText: 2009 Constantin Berzan <exit3219@gmail.com>
 
   Based on MailTransport code by:

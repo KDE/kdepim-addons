@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2023 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2024 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 kcoreaddons_add_plugin(emaillineeditplugin INSTALL_NAMESPACE pim6/libksieve)

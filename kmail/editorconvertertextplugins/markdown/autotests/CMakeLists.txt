@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2018-2023 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2018-2024 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
 set(kmail_markdownplugin_debug_SRCS)
