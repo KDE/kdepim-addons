@@ -144,8 +144,8 @@ void AdblockManager::handleListFetched(QNetworkReply *reply)
 
     QFile file(filterListPath() + id);
     if (!file.open(QIODevice::WriteOnly)) {
-        qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Failed to open" << file.fileName() << "for writing."
-                                             << "Filter list not updated";
+        qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Failed to open" << file.fileName() << "for writing."
+                                               << "Filter list not updated";
         return;
     }
 
@@ -159,7 +159,10 @@ void AdblockManager::refreshLists()
     const QDir dir(filterListPath());
     const auto entries = dir.entryList();
     for (const auto &entry : entries) {
-        QFile::remove(dir.path() + QDir::separator() + entry);
+        const QString path{dir.path() + QDir::separator() + entry};
+        if (!QFile::remove(path)) {
+            qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Impossible to create: " << path;
+        }
     }
 
     for (const auto &list : std::as_const(mAdblockFilterLists)) {
@@ -185,7 +188,7 @@ void AdblockManager::setAdblockFilterLists(const QList<AdblockFilter> &newAdbloc
 
 inline auto resourceTypeToString(const QWebEngineUrlRequestInfo::ResourceType type)
 {
-    // Strings from https://docs.rs/crate/adblock/0.3.3/source/src/request.rs
+    // Strings from https://docs.rs/crate/adblock/0.8.1/source/src/request.rs
     using Type = QWebEngineUrlRequestInfo::ResourceType;
     switch (type) {
     case Type::ResourceTypeMainFrame:
