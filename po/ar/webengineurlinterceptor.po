@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-31 01:54+0000\n"
+"POT-Creation-Date: 2024-01-01 01:35+0000\n"
 "PO-Revision-Date: 2022-08-23 22:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -49,20 +49,20 @@ msgstr ""
 msgid "Modify..."
 msgstr ""
 
-#: adblock/adblockfiltertreeview.cpp:70
+#: adblock/adblockfiltertreeview.cpp:67
 #, fuzzy, kde-format
 #| msgid "Delete List"
 msgid "Delete"
 msgstr "احذف القائمة"
 
-#: adblock/adblockfiltertreeview.cpp:131
+#: adblock/adblockfiltertreeview.cpp:128
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule?"
 #| msgid_plural "Do you want to remove these rules?"
 msgid "Do you want to remove '%1' ?"
 msgstr "أتريد إزالة هذه القاعدة؟"
 
-#: adblock/adblockfiltertreeview.cpp:132
+#: adblock/adblockfiltertreeview.cpp:129
 #, fuzzy, kde-format
 #| msgid "Remove filter"
 msgctxt "@title:window"

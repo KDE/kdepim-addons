@@ -125,6 +125,3 @@ msgstr "Selecció de la carpeta IMAP"
 #, kde-format
 msgid "Click on button for selecting folder..."
 msgstr "Feu clic al botó per a seleccionar la carpeta..."
-
-#~ msgid "Create Regular Expression"
-#~ msgstr "Crea una expressió regular"

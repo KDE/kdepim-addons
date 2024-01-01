@@ -451,9 +451,3 @@ msgstr "&Modifica..."
 #, kde-format
 msgid "Select attachment:"
 msgstr "Seleccioneu l'adjunt:"
-
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Vacuum de l'Akonadi"
-
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Fsck de l'Akonadi"
