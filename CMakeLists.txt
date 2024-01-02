@@ -197,6 +197,8 @@ if (USE_UNITY_CMAKE_SUPPORT)
     add_definitions(-DCOMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
+option(BUILD_SCAM_SETTINGS_PLUGINS "Build scam settings plugins (In progress)" OFF)
+
 add_subdirectory(plugins)
 add_subdirectory(korganizer)
 add_subdirectory(kmail)
