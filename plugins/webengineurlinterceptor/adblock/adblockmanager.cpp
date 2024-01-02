@@ -161,7 +161,7 @@ void AdblockManager::refreshLists()
     for (const auto &entry : entries) {
         const QString path{dir.path() + QDir::separator() + entry};
         if (!QFile::remove(path)) {
-            qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Impossible to create: " << path;
+            qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Impossible to remove file: " << path;
         }
     }
 
