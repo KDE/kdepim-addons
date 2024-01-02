@@ -13,7 +13,7 @@ AdblockListsManager::AdblockListsManager(QObject *parent)
     : QObject{parent}
     , mFilterListsPath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QStringLiteral("/filterlists/"))
 {
-    if (!QDir().mkdir(mFilterListsPath)) {
+    if (!QDir().mkpath(mFilterListsPath)) {
         qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Impossible to create " << mFilterListsPath;
     }
 }
