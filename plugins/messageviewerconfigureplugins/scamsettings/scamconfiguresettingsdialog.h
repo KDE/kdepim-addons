@@ -16,8 +16,8 @@ public:
     ~ScamConfigureSettingsDialog() override;
 
 private:
-    void readConfig();
-    void writeConfig();
-    void slotAccepted();
+    LIBSCAMCONFIGURESETTINGS_NO_EXPORT void readConfig();
+    LIBSCAMCONFIGURESETTINGS_NO_EXPORT void writeConfig();
+    LIBSCAMCONFIGURESETTINGS_NO_EXPORT void slotAccepted();
     ScamConfigureSettingsWidget *const mScamConfigureSettingsWidget;
 };
