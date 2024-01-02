@@ -5,7 +5,6 @@
 */
 #pragma once
 
-#include "scamconfiguresettings_private_export.h"
 #include <MessageViewer/ScamDetectionInfo>
 #include <QString>
 
