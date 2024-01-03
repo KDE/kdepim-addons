@@ -5,6 +5,7 @@
 */
 
 #include "adblockviewfilterdialog.h"
+#include "adblockviewfilterwidget.h"
 
 #include <KLocalizedString>
 
@@ -13,13 +14,14 @@
 
 AdblockViewFilterDialog::AdblockViewFilterDialog(QWidget *parent)
     : QDialog(parent)
+    , mAdblockViewFilterWidget(new AdblockViewFilterWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Configure Adblock List"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
-    // mAdblockFilterWidget->setObjectName(QLatin1StringView("mAdblockFilterWidget"));
-    // mainLayout->addWidget(mAdblockFilterWidget);
+    mAdblockViewFilterWidget->setObjectName(QLatin1StringView("mAdblockViewFilterWidget"));
+    mainLayout->addWidget(mAdblockViewFilterWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     buttonBox->setObjectName(QLatin1StringView("buttonBox"));
@@ -29,3 +31,5 @@ AdblockViewFilterDialog::AdblockViewFilterDialog(QWidget *parent)
 }
 
 AdblockViewFilterDialog::~AdblockViewFilterDialog() = default;
+
+#include "moc_adblockviewfilterdialog.cpp"

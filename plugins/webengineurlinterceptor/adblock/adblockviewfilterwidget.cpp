@@ -10,6 +10,12 @@
 AdblockViewFilterWidget::AdblockViewFilterWidget(QWidget *parent)
     : QWidget{parent}
 {
+    auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setContentsMargins({});
+    // TODO
 }
 
 AdblockViewFilterWidget::~AdblockViewFilterWidget() = default;
+
+#include "moc_adblockviewfilterwidget.cpp"
