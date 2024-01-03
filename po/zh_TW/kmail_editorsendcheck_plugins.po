@@ -1,28 +1,27 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2016-09-22 20:30+0800\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2024-01-02 19:50+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.10.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
-msgstr ""
+msgstr "設定「自動新增聯絡人」外掛程式"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:97
 #, kde-format
@@ -30,219 +29,219 @@ msgctxt "@info"
 msgid ""
 "You must create an address book before adding a contact. Do you want to "
 "create an address book?"
-msgstr ""
+msgstr "您必須先建立通訊錄才能新增聯絡人。您要建立通訊錄嗎？"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr ""
+msgstr "沒有可用的通訊錄"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr ""
+msgstr "建立通訊錄"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr ""
+msgstr "新增通訊錄"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
 #, kde-format
 msgid "Automatic Add Contacts"
-msgstr ""
+msgstr "自動新增聯絡人"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
 #, kde-format
 msgid "Select the addressbook in which to store contacts:"
-msgstr ""
+msgstr "選擇要儲存聯絡人在哪個通訊錄："
 
 #: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
 msgid "Do you want to send the email as HTML?"
-msgstr ""
+msgstr "您要將郵件作為 HTML 傳送嗎？"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:36
 #, kde-format
 msgid "Send email as plain text"
-msgstr ""
+msgstr "用純文字傳送郵件"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
-msgstr ""
+msgstr "傳送 HTML"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
 #, kde-format
 msgid "Update SMTP server"
-msgstr ""
+msgstr "更新 SMTP 伺服器"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Check SMTP server"
-msgstr ""
+msgstr "檢查 SMTP 伺服器"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
 #, kde-format
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
 "the current identity?"
-msgstr ""
+msgstr "您要使用與目前身份所定義不同的 SMTP 來傳送郵件嗎？"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
-msgstr ""
+msgstr "設定「傳送郵件前檢查」外掛程式"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
 #, kde-format
 msgid "Send as plain text"
-msgstr ""
+msgstr "用純文字傳送"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
 #, kde-format
 msgid "Use SMTP server defined in identity"
-msgstr ""
+msgstr "使用身份中定義的 SMTP 伺服器"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format
 msgid "Check duplicated emails addresses"
-msgstr ""
+msgstr "檢查"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
 #, kde-format
 msgid "Check send attachment"
-msgstr ""
+msgstr "檢查傳送附件"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
-msgstr ""
+msgstr "重複的郵件"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
 msgid "These emails are duplicated. Do you want to send email?"
-msgstr ""
+msgstr "這些郵件地址是重複的。您還是要傳送郵件嗎？"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
-msgstr ""
+msgstr "檢查附件"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
 #, kde-format
 msgid "Do you want to send some attachment?"
-msgstr ""
+msgstr "您要傳送附件嗎？"
 
 #: confirm-address/confirmaddressconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
-msgstr ""
+msgstr "設定「確認電子郵件地址」外掛程式"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
 #, kde-format
 msgid "Accepted Domain Name"
-msgstr ""
+msgstr "已接受網域名稱"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
 #, kde-format
 msgid "Rejected Domain Name"
-msgstr ""
+msgstr "已拒絕網域名稱"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
 msgid "A&dd..."
-msgstr ""
+msgstr "新增(&D)..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
 #, kde-format
 msgid "Re&move"
-msgstr ""
+msgstr "移除(&M)"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "Mod&ify..."
-msgstr ""
+msgstr "修改(&I)..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
 #, kde-format
 msgid "Enter new domain name:"
-msgstr ""
+msgstr "輸入新網域名稱："
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:50
 #, kde-format
 msgid "Do you want to remove this domain?"
-msgstr ""
+msgstr "您確定要移除這個網域嗎？"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:54
 #, kde-format
 msgid "Whitelist of Addresses"
-msgstr ""
+msgstr "地址白名單"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "Enter new email address:"
-msgstr ""
+msgstr "輸入新電子郵件地址："
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Do you want to remove this email address?"
-msgstr ""
+msgstr "您確定要移除這個電子郵件地址嗎？"
 
 #: confirm-address/confirmaddressdialog.cpp:26
 #, kde-format
 msgid "Add Selected Emails to WhiteList"
-msgstr ""
+msgstr "新增所選郵件地址到白名單"
 
 #: confirm-address/confirmaddressdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
-msgstr ""
+msgstr "確認地址"
 
 #: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgid "All selected emails are added to white list"
-msgstr ""
+msgstr "所選所有郵件地址皆已加入白名單"
 
 #: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
-msgstr ""
+msgstr "郵件已加入白名單"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Value"
-msgstr ""
+msgstr "新增數值"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Value"
-msgstr ""
+msgstr "變更數值"
 
 #: confirm-address/confirmaddresswidget.cpp:22
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
-msgstr ""
+msgstr "可能無效的郵件會以紅色顯示："
