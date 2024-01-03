@@ -7,6 +7,7 @@
 #include "scamconfiguresettingswidget.h"
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <MessageViewer/ScamDetectionWhiteListSettingsManager>
 #include <QHeaderView>
 #include <QTreeWidget>
 #include <QVBoxLayout>
@@ -30,11 +31,15 @@ ScamConfigureSettingsWidget::~ScamConfigureSettingsWidget() = default;
 
 void ScamConfigureSettingsWidget::loadSettings()
 {
+    const QList<MessageViewer::ScamDetectionInfo> scanInfo = MessageViewer::ScamDetectionWhiteListSettingsManager::self()->scamDetectionInfoList();
     // TODO
 }
 
 void ScamConfigureSettingsWidget::saveSettings()
 {
+    QList<MessageViewer::ScamDetectionInfo> scanInfo;
+    // TODO
+    MessageViewer::ScamDetectionWhiteListSettingsManager::self()->setScamDetectionInfoList(scanInfo);
     // TODO
 }
 
