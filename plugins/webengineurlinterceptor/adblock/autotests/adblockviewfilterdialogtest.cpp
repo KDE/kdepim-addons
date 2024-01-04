@@ -18,3 +18,5 @@ void AdblockViewFilterDialogTest::shouldHaveDefaultValues()
     AdblockViewFilterDialog d;
     // TODO
 }
+
+#include "moc_adblockviewfilterdialogtest.cpp"

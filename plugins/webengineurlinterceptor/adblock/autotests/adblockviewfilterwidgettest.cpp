@@ -18,3 +18,5 @@ void AdblockViewFilterWidgetTest::shouldHaveDefaultValues()
     AdblockViewFilterWidget w;
     // TODO
 }
+
+#include "moc_adblockviewfilterwidgettest.cpp"
