@@ -8,10 +8,17 @@
 
 #include <QWidget>
 
+namespace TextCustomEditor
+{
+class RichTextBrowser;
+}
 class AdblockViewFilterWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit AdblockViewFilterWidget(QWidget *parent = nullptr);
     ~AdblockViewFilterWidget() override;
+
+private:
+    TextCustomEditor::RichTextBrowser *const(mRichTextBrowser);
 };

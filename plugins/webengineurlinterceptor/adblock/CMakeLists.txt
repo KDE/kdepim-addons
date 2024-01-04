@@ -76,6 +76,7 @@ target_link_libraries(adblockplugin
     Qt::WebEngineWidgets
     KPim6::WebEngineViewer
     webengineviewer-adblock
+    KF6::TextCustomEditor
     )
 
 set_target_properties(adblockplugin
