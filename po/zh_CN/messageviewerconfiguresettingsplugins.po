@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-31 01:54+0000\n"
+"POT-Creation-Date: 2024-01-04 01:34+0000\n"
 "PO-Revision-Date: 2023-12-30 13:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -362,12 +362,12 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "配置垃圾邮件设置"
 
-#: scamsettings/scamconfiguresettingswidget.cpp:26
+#: scamsettings/scamconfiguresettingswidget.cpp:27
 #, kde-format
 msgid "Domain"
 msgstr "域"
 
-#: scamsettings/scamconfiguresettingswidget.cpp:26
+#: scamsettings/scamconfiguresettingswidget.cpp:27
 #, kde-format
 msgid "Check"
 msgstr "检查"

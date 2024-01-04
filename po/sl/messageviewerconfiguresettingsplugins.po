@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-31 01:54+0000\n"
+"POT-Creation-Date: 2024-01-04 01:34+0000\n"
 "PO-Revision-Date: 2023-09-26 09:17+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -375,12 +375,12 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "Postavi nastavitve scam"
 
-#: scamsettings/scamconfiguresettingswidget.cpp:26
+#: scamsettings/scamconfiguresettingswidget.cpp:27
 #, kde-format
 msgid "Domain"
 msgstr "Domena"
 
-#: scamsettings/scamconfiguresettingswidget.cpp:26
+#: scamsettings/scamconfiguresettingswidget.cpp:27
 #, kde-format
 msgid "Check"
 msgstr "Preveri"
