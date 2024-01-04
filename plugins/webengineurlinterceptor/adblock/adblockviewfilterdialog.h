@@ -6,9 +6,10 @@
 
 #pragma once
 
+#include "adblockplugin_private_export.h"
 #include <QDialog>
 class AdblockViewFilterWidget;
-class AdblockViewFilterDialog : public QDialog
+class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockViewFilterDialog : public QDialog
 {
     Q_OBJECT
 public:

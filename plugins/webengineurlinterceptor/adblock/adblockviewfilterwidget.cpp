@@ -22,4 +22,9 @@ AdblockViewFilterWidget::AdblockViewFilterWidget(QWidget *parent)
 
 AdblockViewFilterWidget::~AdblockViewFilterWidget() = default;
 
+void AdblockViewFilterWidget::setFilterText(const QString &str)
+{
+    mRichTextBrowser->setPlainText(str);
+}
+
 #include "moc_adblockviewfilterwidget.cpp"
