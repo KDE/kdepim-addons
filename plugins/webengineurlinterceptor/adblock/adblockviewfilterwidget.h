@@ -22,5 +22,5 @@ public:
     void setFilterText(const QString &str);
 
 private:
-    TextCustomEditor::RichTextBrowser *const(mRichTextBrowser);
+    TextCustomEditor::RichTextBrowser *const mRichTextBrowser;
 };
