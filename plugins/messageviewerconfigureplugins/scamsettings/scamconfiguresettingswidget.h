@@ -9,6 +9,10 @@
 #include "scamconfiguresettings_private_export.h"
 #include <QWidget>
 class QTreeWidget;
+namespace MessageViewer
+{
+class ScamDetectionInfo;
+}
 class LIBSCAMCONFIGURESETTINGS_TESTS_EXPORT ScamConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT
@@ -20,5 +24,6 @@ public:
     void saveSettings();
 
 private:
+    void fillList(const QList<MessageViewer::ScamDetectionInfo> &scanInfo);
     QTreeWidget *const mTreeWidget;
 };
