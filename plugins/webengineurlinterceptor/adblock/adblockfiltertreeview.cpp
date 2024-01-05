@@ -36,6 +36,10 @@ AdblockFilterTreeView::AdblockFilterTreeView(QWidget *parent)
     }
     setRootIsDecorated(false);
     setSortingEnabled(true);
+
+    connect(AdblockManager::self(), &AdblockManager::refreshFinished, this, [this]() {
+        loadSettings();
+    });
 }
 
 AdblockFilterTreeView::~AdblockFilterTreeView() = default;
@@ -71,6 +75,12 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
         });
         menu.addAction(deleteAction);
     }
+    menu.addSeparator();
+    auto updateListsAction = new QAction(/*QIcon::fromTheme(QStringLiteral("edit-delete")), */ i18n("Update Lists"), &menu);
+    connect(updateListsAction, &QAction::triggered, this, []() {
+        AdblockManager::self()->refreshLists();
+    });
+
     menu.exec(event->globalPos());
 }
 

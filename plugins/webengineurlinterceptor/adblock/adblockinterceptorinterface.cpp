@@ -32,6 +32,8 @@ bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
 
 QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const
 {
+    // TODO
+    Q_UNUSED(result);
     QList<QAction *> lstAction;
     /*
         if (mAdblockManager->isEnabled()) {
@@ -47,6 +49,8 @@ QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const WebEng
 
 void AdblockInterceptorInterface::createActions(KActionCollection *ac)
 {
+    // TODO
+    Q_UNUSED(ac);
     /*
         if (ac) {
             mShowBlockableItems = new QAction(i18n("Open Blockable Items..."), this);
