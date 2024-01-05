@@ -157,7 +157,7 @@ void AdblockManager::refreshLists()
     // Delete old lists, in case the names change.
     // Otherwise we might not be overwriting all of them.
     const QDir dir(filterListPath());
-    const auto entries = dir.entryList();
+    const auto entries = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
     for (const auto &entry : entries) {
         const QString path{dir.path() + QDir::separator() + entry};
         if (!QFile::remove(path)) {
