@@ -80,6 +80,7 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
     connect(updateListsAction, &QAction::triggered, this, []() {
         AdblockManager::self()->refreshLists();
     });
+    menu.addAction(updateListsAction);
 
     menu.exec(event->globalPos());
 }
