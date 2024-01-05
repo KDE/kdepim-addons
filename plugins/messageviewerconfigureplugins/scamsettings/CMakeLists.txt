@@ -10,6 +10,8 @@ target_sources(scamconfiguresettings PRIVATE
     scamconfiguresettingsdialog.h
     scamconfiguresettingswidget.h
     scamconfigureutils.h
+    scamconfiguresettingstreewidget.h
+    scamconfiguresettingstreewidget.cpp
     )
 
 ecm_qt_declare_logging_category(scamconfiguresettings HEADER libscamconfiguresettings_debug.h IDENTIFIER LIBSCAMCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libfolderconfiguresettingsplugin
