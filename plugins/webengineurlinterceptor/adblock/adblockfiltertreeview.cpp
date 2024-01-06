@@ -74,6 +74,13 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
             slotDeleteAdblock(itemSelected.at(0));
         });
         menu.addAction(deleteAction);
+
+        menu.addSeparator();
+        auto showAdblockAction = new QAction(QIcon::fromTheme(QStringLiteral("document-preview")), i18n("Show"), &menu);
+        connect(showAdblockAction, &QAction::triggered, this, [this, itemSelected]() {
+            // TODO
+        });
+        menu.addAction(showAdblockAction);
     }
     menu.addSeparator();
     auto updateListsAction = new QAction(/*QIcon::fromTheme(QStringLiteral("edit-delete")), */ i18n("Update Lists"), &menu);
