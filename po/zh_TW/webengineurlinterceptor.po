@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:34+0000\n"
+"POT-Creation-Date: 2024-01-06 01:33+0000\n"
 "PO-Revision-Date: 2024-01-02 19:54+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -35,27 +35,32 @@ msgctxt "@title:column"
 msgid "Url"
 msgstr "網址"
 
-#: adblock/adblockfiltertreeview.cpp:54
+#: adblock/adblockfiltertreeview.cpp:58
 #, kde-format
 msgid "Add..."
 msgstr "新增..."
 
-#: adblock/adblockfiltertreeview.cpp:61
+#: adblock/adblockfiltertreeview.cpp:65
 #, kde-format
 msgid "Modify..."
 msgstr "變更..."
 
-#: adblock/adblockfiltertreeview.cpp:67
+#: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
 msgid "Delete"
 msgstr "刪除"
 
-#: adblock/adblockfiltertreeview.cpp:128
+#: adblock/adblockfiltertreeview.cpp:79
+#, kde-format
+msgid "Update Lists"
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:139
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "您確定要移除 '%1' 嗎？"
 
-#: adblock/adblockfiltertreeview.cpp:129
+#: adblock/adblockfiltertreeview.cpp:140
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"

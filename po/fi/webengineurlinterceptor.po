@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-04 01:34+0000\n"
+"POT-Creation-Date: 2024-01-06 01:33+0000\n"
 "PO-Revision-Date: 2023-09-26 10:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -40,29 +40,34 @@ msgctxt "@title:column"
 msgid "Url"
 msgstr "Verkko-osoite:"
 
-#: adblock/adblockfiltertreeview.cpp:54
+#: adblock/adblockfiltertreeview.cpp:58
 #, kde-format
 msgid "Add..."
 msgstr "Lisää…"
 
-#: adblock/adblockfiltertreeview.cpp:61
+#: adblock/adblockfiltertreeview.cpp:65
 #, kde-format
 msgid "Modify..."
 msgstr "Muuta…"
 
-#: adblock/adblockfiltertreeview.cpp:67
+#: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
 msgid "Delete"
 msgstr "Poista"
 
-#: adblock/adblockfiltertreeview.cpp:128
+#: adblock/adblockfiltertreeview.cpp:79
+#, kde-format
+msgid "Update Lists"
+msgstr ""
+
+#: adblock/adblockfiltertreeview.cpp:139
 #, fuzzy, kde-format
 #| msgid "Do you want to remove this rule?"
 #| msgid_plural "Do you want to remove these rules?"
 msgid "Do you want to remove '%1' ?"
 msgstr "Haluatko poistaa tämän säännön?"
 
-#: adblock/adblockfiltertreeview.cpp:129
+#: adblock/adblockfiltertreeview.cpp:140
 #, fuzzy, kde-format
 #| msgid "Remove filter"
 msgctxt "@title:window"
