@@ -17,5 +17,7 @@ public:
     ~AdblockViewFilterDialog() override;
 
 private:
+    void readConfig();
+    void writeConfig();
     AdblockViewFilterWidget *const mAdblockViewFilterWidget;
 };

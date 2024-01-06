@@ -6,12 +6,20 @@
 
 #include "adblockviewfilterdialog.h"
 #include "adblockviewfilterwidget.h"
+#include "kwindowconfig.h"
 
 #include <KLocalizedString>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+#include <QWindow>
 
+namespace
+{
+static const char myAdblockViewFilterDialogGroupName[] = "AdblockViewFilterDialog";
+}
 AdblockViewFilterDialog::AdblockViewFilterDialog(QWidget *parent)
     : QDialog(parent)
     , mAdblockViewFilterWidget(new AdblockViewFilterWidget(this))
@@ -28,8 +36,27 @@ AdblockViewFilterDialog::AdblockViewFilterDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AdblockViewFilterDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdblockViewFilterDialog::reject);
+    readConfig();
 }
 
-AdblockViewFilterDialog::~AdblockViewFilterDialog() = default;
+AdblockViewFilterDialog::~AdblockViewFilterDialog()
+{
+    writeConfig();
+}
 
+void AdblockViewFilterDialog::readConfig()
+{
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myAdblockViewFilterDialogGroupName));
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
+}
+
+void AdblockViewFilterDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myAdblockViewFilterDialogGroupName));
+    KWindowConfig::saveWindowSize(windowHandle(), group);
+    group.sync();
+}
 #include "moc_adblockviewfilterdialog.cpp"
