@@ -102,7 +102,7 @@
         "Name[uk]": "Календарні події",
         "Name[x-test]": "xxCalendar Eventsxx",
         "Name[zh_CN]": "日历事件",
-        "Name[zh_TW]": "行事曆時間",
+        "Name[zh_TW]": "行事曆事件",
         "ServiceTypes": [
             "PlasmaCalendar/Plugin"
         ],
