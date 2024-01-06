@@ -16,7 +16,7 @@ AdblockViewFilterDialog::AdblockViewFilterDialog(QWidget *parent)
     : QDialog(parent)
     , mAdblockViewFilterWidget(new AdblockViewFilterWidget(this))
 {
-    setWindowTitle(i18nc("@title:window", "Configure Adblock List"));
+    setWindowTitle(i18nc("@title:window", "Show Adblock List"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainLayout"));
 
