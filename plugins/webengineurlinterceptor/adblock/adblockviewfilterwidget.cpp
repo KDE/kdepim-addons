@@ -16,8 +16,8 @@ AdblockViewFilterWidget::AdblockViewFilterWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
+    mRichTextBrowser->setObjectName(QStringLiteral("mRichTextBrowser"));
     mainLayout->addWidget(mRichTextBrowser);
-    // TODO
 }
 
 AdblockViewFilterWidget::~AdblockViewFilterWidget() = default;

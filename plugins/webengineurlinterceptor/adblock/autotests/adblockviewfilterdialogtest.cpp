@@ -6,7 +6,11 @@
 
 #include "adblockviewfilterdialogtest.h"
 #include "adblockviewfilterdialog.h"
+#include "adblockviewfilterwidget.h"
+#include <QDialogButtonBox>
 #include <QTest>
+#include <QVBoxLayout>
+
 QTEST_MAIN(AdblockViewFilterDialogTest)
 AdblockViewFilterDialogTest::AdblockViewFilterDialogTest(QObject *parent)
     : QObject{parent}
@@ -15,8 +19,16 @@ AdblockViewFilterDialogTest::AdblockViewFilterDialogTest(QObject *parent)
 
 void AdblockViewFilterDialogTest::shouldHaveDefaultValues()
 {
-    AdblockViewFilterDialog d;
-    // TODO
+    AdblockViewFilterDialog w;
+    QVERIFY(!w.windowTitle().isEmpty());
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+
+    auto mAdblockViewFilterWidget = w.findChild<AdblockViewFilterWidget *>(QStringLiteral("mAdblockViewFilterWidget"));
+    QVERIFY(mAdblockViewFilterWidget);
+
+    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    QVERIFY(buttonBox);
 }
 
 #include "moc_adblockviewfilterdialogtest.cpp"
