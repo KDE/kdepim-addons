@@ -18,5 +18,7 @@ public:
     void loadSettings();
 
 private:
+    void readConfig();
+    void writeConfig();
     AdblockFilterWidget *const mAdblockFilterWidget;
 };
