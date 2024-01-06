@@ -9,7 +9,7 @@
 #include "adblockfilterlistsmodel.h"
 #include "adblockmanager.h"
 #include "adblockpluginurlinterceptoraddadblocklistdialog.h"
-#include "globalsettings_webengineurlinterceptoradblock.h"
+#include "adblockviewfilterdialog.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QContextMenuEvent>
@@ -78,7 +78,9 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
         menu.addSeparator();
         auto showAdblockAction = new QAction(QIcon::fromTheme(QStringLiteral("document-preview")), i18n("Show"), &menu);
         connect(showAdblockAction, &QAction::triggered, this, [this, itemSelected]() {
-            // TODO
+            AdblockViewFilterDialog dlg(this);
+            // TODO add list view
+            dlg.exec();
         });
         menu.addAction(showAdblockAction);
     }
