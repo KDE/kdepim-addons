@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
+"POT-Creation-Date: 2024-01-07 01:54+0000\n"
 "PO-Revision-Date: 2023-12-31 10:52+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: adblock/adblockfilterdialog.cpp:17 adblock/adblockviewfilterdialog.cpp:19
+#: adblock/adblockfilterdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
@@ -52,16 +52,22 @@ msgid "Delete"
 msgstr "Usuń"
 
 #: adblock/adblockfiltertreeview.cpp:79
+#, fuzzy, kde-format
+#| msgid "Show List"
+msgid "Show"
+msgstr "Pokaż spis"
+
+#: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
 msgid "Update Lists"
 msgstr ""
 
-#: adblock/adblockfiltertreeview.cpp:139
+#: adblock/adblockfiltertreeview.cpp:148
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "Czy usunąć '%1'?"
 
-#: adblock/adblockfiltertreeview.cpp:140
+#: adblock/adblockfiltertreeview.cpp:149
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
@@ -93,6 +99,14 @@ msgstr "Url:"
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Ustawienia wtyczki AdBlock"
+
+#: adblock/adblockviewfilterdialog.cpp:27
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Adblock List"
+msgctxt "@title:window"
+msgid "Show Adblock List"
+msgstr "Pokaż listę Adblock'a"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9
@@ -131,9 +145,6 @@ msgstr "Włącz blokowanie reklam"
 
 #~ msgid "Select List:"
 #~ msgstr "Wybierz spis:"
-
-#~ msgid "Show List"
-#~ msgstr "Pokaż spis"
 
 #~ msgctxt "@title:window"
 #~ msgid "Blockable Items"

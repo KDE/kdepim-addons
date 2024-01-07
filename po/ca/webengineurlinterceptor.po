@@ -1,19 +1,19 @@
 # Translation of webengineurlinterceptor.po to Catalan
-# Copyright (C) 1998-2023 This_file_is_part_of_KDE
+# Copyright (C) 1998-2024 This_file_is_part_of_KDE
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2002, 2003, 2004, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2009.
 # David Gil <al016950@yahoo.es>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2021, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2021, 2023, 2024.
 # Joan Maspons <joanmaspons@gmail.com>, 2009.
 # Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
-"PO-Revision-Date: 2023-12-31 09:21+0200\n"
+"POT-Creation-Date: 2024-01-07 01:54+0000\n"
+"PO-Revision-Date: 2024-01-06 12:46+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: adblock/adblockfilterdialog.cpp:17 adblock/adblockviewfilterdialog.cpp:19
+#: adblock/adblockfilterdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
@@ -59,15 +59,20 @@ msgstr "Suprimeix"
 
 #: adblock/adblockfiltertreeview.cpp:79
 #, kde-format
-msgid "Update Lists"
+msgid "Show"
 msgstr ""
 
-#: adblock/adblockfiltertreeview.cpp:139
+#: adblock/adblockfiltertreeview.cpp:88
+#, kde-format
+msgid "Update Lists"
+msgstr "Actualitza les llistes"
+
+#: adblock/adblockfiltertreeview.cpp:148
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "Voleu eliminar «%1»?"
 
-#: adblock/adblockfiltertreeview.cpp:140
+#: adblock/adblockfiltertreeview.cpp:149
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
@@ -99,6 +104,14 @@ msgstr "URL:"
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Configuració del connector de Bloqueig publicitari"
+
+#: adblock/adblockviewfilterdialog.cpp:27
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Adblock List"
+msgctxt "@title:window"
+msgid "Show Adblock List"
+msgstr "Afegir una llista de bloqueig publicitari"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9

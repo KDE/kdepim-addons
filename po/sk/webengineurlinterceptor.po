@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
+"POT-Creation-Date: 2024-01-07 01:54+0000\n"
 "PO-Revision-Date: 2016-09-28 20:38+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: adblock/adblockfilterdialog.cpp:17 adblock/adblockviewfilterdialog.cpp:19
+#: adblock/adblockfilterdialog.cpp:26
 #, fuzzy, kde-format
 #| msgid "Configure AdBlock Plugin"
 msgctxt "@title:window"
@@ -51,17 +51,23 @@ msgid "Delete"
 msgstr "Vymazať zoznam"
 
 #: adblock/adblockfiltertreeview.cpp:79
+#, fuzzy, kde-format
+#| msgid "Show List"
+msgid "Show"
+msgstr "Zobraziť zoznam"
+
+#: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
 msgid "Update Lists"
 msgstr ""
 
-#: adblock/adblockfiltertreeview.cpp:139
+#: adblock/adblockfiltertreeview.cpp:148
 #, fuzzy, kde-format
 #| msgid "Do you want to delete list \"%1\"?"
 msgid "Do you want to remove '%1' ?"
 msgstr "Chcete vymazať zoznam \"%1\"?"
 
-#: adblock/adblockfiltertreeview.cpp:140
+#: adblock/adblockfiltertreeview.cpp:149
 #, fuzzy, kde-format
 #| msgid "Remove filter"
 msgctxt "@title:window"
@@ -96,6 +102,13 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Nastaviť plugin AdBlock"
+
+#: adblock/adblockviewfilterdialog.cpp:27
+#, fuzzy, kde-format
+#| msgid "Show adblock list"
+msgctxt "@title:window"
+msgid "Show Adblock List"
+msgstr "Zobraziť zoznam adblock"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9
@@ -140,9 +153,6 @@ msgstr "Povolený ad block"
 
 #~ msgid "Select List:"
 #~ msgstr "Vybrať zoznam:"
-
-#~ msgid "Show List"
-#~ msgstr "Zobraziť zoznam"
 
 #, fuzzy
 #~| msgid "Blockable Items"

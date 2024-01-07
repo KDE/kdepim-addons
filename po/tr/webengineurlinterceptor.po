@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
-"PO-Revision-Date: 2023-12-31 11:15+0300\n"
+"POT-Creation-Date: 2024-01-07 01:54+0000\n"
+"PO-Revision-Date: 2024-01-06 22:35+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 24.01.85\n"
 
-#: adblock/adblockfilterdialog.cpp:17 adblock/adblockviewfilterdialog.cpp:19
+#: adblock/adblockfilterdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
@@ -52,15 +52,20 @@ msgstr "Sil"
 
 #: adblock/adblockfiltertreeview.cpp:79
 #, kde-format
-msgid "Update Lists"
+msgid "Show"
 msgstr ""
 
-#: adblock/adblockfiltertreeview.cpp:139
+#: adblock/adblockfiltertreeview.cpp:88
+#, kde-format
+msgid "Update Lists"
+msgstr "Listeleri Güncelle"
+
+#: adblock/adblockfiltertreeview.cpp:148
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "'%1' ögesini kaldırmak istediğinizden emin misiniz?"
 
-#: adblock/adblockfiltertreeview.cpp:140
+#: adblock/adblockfiltertreeview.cpp:149
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
@@ -92,6 +97,14 @@ msgstr "URL:"
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "AdBlock Eklentisini Yapılandır"
+
+#: adblock/adblockviewfilterdialog.cpp:27
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Adblock List"
+msgctxt "@title:window"
+msgid "Show Adblock List"
+msgstr "Reklam Engelleme Listesi Ekle"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9
