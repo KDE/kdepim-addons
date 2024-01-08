@@ -44,6 +44,11 @@ AdblockViewFilterDialog::~AdblockViewFilterDialog()
     writeConfig();
 }
 
+void AdblockViewFilterDialog::setFilterText(const QString &str)
+{
+    mAdblockViewFilterWidget->setFilterText(str);
+}
+
 void AdblockViewFilterDialog::readConfig()
 {
     create(); // ensure a window is created

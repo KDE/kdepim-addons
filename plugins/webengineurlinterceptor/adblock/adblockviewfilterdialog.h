@@ -16,6 +16,8 @@ public:
     explicit AdblockViewFilterDialog(QWidget *parent = nullptr);
     ~AdblockViewFilterDialog() override;
 
+    void setFilterText(const QString &str);
+
 private:
     void readConfig();
     void writeConfig();
