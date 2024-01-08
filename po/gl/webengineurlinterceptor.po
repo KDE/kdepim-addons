@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2016.
-# SPDX-FileCopyrightText: 2018, 2019, 2023 Adrian Chaves <adrian@chaves.io>
+# SPDX-FileCopyrightText: 2018, 2019, 2023, 2024 Adrian Chaves <adrian@chaves.io>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-07 01:54+0000\n"
-"PO-Revision-Date: 2023-12-31 20:26+0100\n"
+"PO-Revision-Date: 2024-01-07 14:12+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -52,15 +52,14 @@ msgid "Delete"
 msgstr "Eliminar"
 
 #: adblock/adblockfiltertreeview.cpp:79
-#, fuzzy, kde-format
-#| msgid "Show List"
+#, kde-format
 msgid "Show"
-msgstr "Amosar a lista"
+msgstr "Amosar"
 
 #: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
 msgid "Update Lists"
-msgstr ""
+msgstr "Actualizar as listas"
 
 #: adblock/adblockfiltertreeview.cpp:148
 #, kde-format
@@ -101,12 +100,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "Configurar o complemento AdBlock"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "Engadir unha lista de bloqueo de publicidade"
+msgstr "Amosar a lista de bloqueo de publicidade"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9

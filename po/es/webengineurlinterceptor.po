@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-07 01:54+0000\n"
-"PO-Revision-Date: 2024-01-06 18:31+0100\n"
+"PO-Revision-Date: 2024-01-07 22:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -52,10 +52,9 @@ msgid "Delete"
 msgstr "Borrar"
 
 #: adblock/adblockfiltertreeview.cpp:79
-#, fuzzy, kde-format
-#| msgid "Show List"
+#, kde-format
 msgid "Show"
-msgstr "Mostrar lista"
+msgstr "Mostrar"
 
 #: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
@@ -101,9 +100,7 @@ msgid "Configure AdBlock Plugin"
 msgstr "Configurar complemento Adblock"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "Añadir lista de Adblock"

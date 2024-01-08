@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-07 01:54+0000\n"
-"PO-Revision-Date: 2023-12-31 09:27+0100\n"
+"PO-Revision-Date: 2024-01-07 16:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -54,12 +54,12 @@ msgstr "Forigi"
 #: adblock/adblockfiltertreeview.cpp:79
 #, kde-format
 msgid "Show"
-msgstr ""
+msgstr "Montri"
 
 #: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
 msgid "Update Lists"
-msgstr ""
+msgstr "Ĝisdatigi Listojn"
 
 #: adblock/adblockfiltertreeview.cpp:148
 #, kde-format
@@ -100,12 +100,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "Agordi AdBlock-Kromprogramon"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "Aldoni Adblock-Liston"
+msgstr "Montri Adblock-Liston"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9

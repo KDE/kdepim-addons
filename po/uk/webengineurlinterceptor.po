@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-07 01:54+0000\n"
-"PO-Revision-Date: 2024-01-06 09:34+0200\n"
+"PO-Revision-Date: 2024-01-07 15:01+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -54,10 +54,9 @@ msgid "Delete"
 msgstr "Вилучити"
 
 #: adblock/adblockfiltertreeview.cpp:79
-#, fuzzy, kde-format
-#| msgid "Show List"
+#, kde-format
 msgid "Show"
-msgstr "Показати список"
+msgstr "Показати"
 
 #: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
@@ -103,12 +102,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "Налаштовування додатка блокування реклами"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "Додавання списку блокування реклами"
+msgstr "Показ списку блокування реклами"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9

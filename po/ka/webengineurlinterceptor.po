@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-07 01:54+0000\n"
-"PO-Revision-Date: 2024-01-06 04:39+0100\n"
+"PO-Revision-Date: 2024-01-07 05:44+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -52,10 +52,9 @@ msgid "Delete"
 msgstr "წაშლა"
 
 #: adblock/adblockfiltertreeview.cpp:79
-#, fuzzy, kde-format
-#| msgid "Show List"
+#, kde-format
 msgid "Show"
-msgstr "სიის ჩვენება"
+msgstr "ჩვენება"
 
 #: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
@@ -101,12 +100,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "რეკლამების დამატების მორგება"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "Adblock-ის სიის დამატება"
+msgstr "Adblock-ის სიის ჩვენება"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9
