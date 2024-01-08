@@ -34,7 +34,6 @@ public:
 
     [[nodiscard]] bool interceptRequest(QWebEngineUrlRequestInfo &info);
 
-    void saveSettings();
     void refreshLists();
 
 Q_SIGNALS:
@@ -47,6 +46,7 @@ private Q_SLOTS:
 
 private:
     void reloadConfig();
+    void writeConfig();
     [[nodiscard]] QString adblockCacheLocation() const;
 
     /// If an adblock cache is found, loads it, otherwise creates a new adblock

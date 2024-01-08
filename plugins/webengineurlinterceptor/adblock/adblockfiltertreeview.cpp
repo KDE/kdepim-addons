@@ -164,7 +164,6 @@ void AdblockFilterTreeView::saveSettings()
 {
     if (mSettingsChanged) {
         AdblockManager::self()->setAdblockFilterLists(mAdblockFilterListsModel->adblockFilter());
-        AdblockManager::self()->saveSettings();
         Q_EMIT settingsChanged();
     }
 }

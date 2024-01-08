@@ -21,6 +21,8 @@ public:
     [[nodiscard]] QString name() const;
     void setName(const QString &newName);
 
+    [[nodiscard]] bool operator==(const AdblockFilter &other) const;
+
 private:
     QString mUrl;
     QString mName;

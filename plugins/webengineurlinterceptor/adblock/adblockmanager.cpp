@@ -123,6 +123,21 @@ void AdblockManager::reloadConfig()
     }
 }
 
+void AdblockManager::writeConfig()
+{
+    QStringList filterNames;
+    QList<QUrl> filterUrls;
+
+    for (const auto &filterList : std::as_const(mAdblockFilterLists)) {
+        filterNames.push_back(filterList.name());
+        filterUrls.push_back(QUrl(filterList.url()));
+    }
+
+    AdBlockSettings::self()->setAdblockFilterNames(filterNames);
+    AdBlockSettings::self()->setAdblockFilterUrls(filterUrls);
+    AdBlockSettings::self()->save();
+}
+
 const QString filterListIdFromUrl(const QString &url)
 {
     QCryptographicHash fileNameHash(QCryptographicHash::Sha256);
@@ -171,11 +186,6 @@ void AdblockManager::refreshLists()
     }
 }
 
-void AdblockManager::saveSettings()
-{
-    AdBlockSettings::self()->save();
-}
-
 QList<AdblockFilter> AdblockManager::adblockFilterLists() const
 {
     return mAdblockFilterLists;
@@ -183,7 +193,10 @@ QList<AdblockFilter> AdblockManager::adblockFilterLists() const
 
 void AdblockManager::setAdblockFilterLists(const QList<AdblockFilter> &newAdblockFilterLists)
 {
-    mAdblockFilterLists = newAdblockFilterLists;
+    if (mAdblockFilterLists != newAdblockFilterLists) {
+        mAdblockFilterLists = newAdblockFilterLists;
+        writeConfig();
+    }
 }
 
 inline auto resourceTypeToString(const QWebEngineUrlRequestInfo::ResourceType type)
