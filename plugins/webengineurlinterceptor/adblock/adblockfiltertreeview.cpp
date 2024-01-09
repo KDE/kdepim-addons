@@ -108,8 +108,9 @@ void AdblockFilterTreeView::slotAddAdblock()
     if (dlg->exec()) {
         const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
         if (info.isValid()) {
-            mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
-            mSettingsChanged = true;
+            if (mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)))) {
+                mSettingsChanged = true;
+            }
         }
     }
     delete dlg;
@@ -118,22 +119,24 @@ void AdblockFilterTreeView::slotAddAdblock()
 void AdblockFilterTreeView::slotModifyAdblock(const QModelIndex &index)
 {
     QPointer<AdblockPluginUrlInterceptorAddAdblockListDialog> dlg = new AdblockPluginUrlInterceptorAddAdblockListDialog(this);
-    AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info;
+    AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo originalInfo;
     const QModelIndex newModelIndex = mSortFilterProxyModel->mapToSource(index);
 
     const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::Url);
     const QModelIndex modelIndexName = mAdblockFilterListsModel->index(newModelIndex.row(), AdblockFilterListsModel::Name);
     const QString listName = modelIndexName.data().toString();
     // qDebug() << " modelIndexUrl " << modelIndexUrl.data() << " modelIndexName " << modelIndexName.data();
-    info.name = listName;
-    info.url = modelIndexUrl.data().toString();
-    dlg->setInfo(info);
+    originalInfo.name = listName;
+    originalInfo.url = modelIndexUrl.data().toString();
+    dlg->setInfo(originalInfo);
     if (dlg->exec()) {
         const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
-        if (info.isValid()) {
-            mAdblockFilterListsModel->removeList(listName);
-            mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
-            mSettingsChanged = true;
+        if (info != originalInfo) {
+            if (info.isValid()) {
+                mAdblockFilterListsModel->removeList(listName);
+                (void)mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
+                mSettingsChanged = true;
+            }
         }
     }
     delete dlg;

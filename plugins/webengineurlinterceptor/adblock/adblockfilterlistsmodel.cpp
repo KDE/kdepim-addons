@@ -33,12 +33,16 @@ void AdblockFilterListsModel::removeList(const QString &identifier)
     }
 }
 
-void AdblockFilterListsModel::insertList(const AdblockFilter &filter)
+bool AdblockFilterListsModel::insertList(const AdblockFilter &filter)
 {
+    if (mAdblockFilter.contains(filter)) {
+        return false;
+    }
     const int numberOfElement = mAdblockFilter.count();
     beginInsertRows(QModelIndex(), numberOfElement, mAdblockFilter.count());
     mAdblockFilter.append(filter);
     endInsertRows();
+    return true;
 }
 
 void AdblockFilterListsModel::setAdblockFilter(const QList<AdblockFilter> &newAdblockFilter)

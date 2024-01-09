@@ -30,7 +30,7 @@ public:
     [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
     [[nodiscard]] QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
 
-    void insertList(const AdblockFilter &filter);
+    [[nodiscard]] bool insertList(const AdblockFilter &filter);
     void removeList(const QString &identifier);
 
 private:
