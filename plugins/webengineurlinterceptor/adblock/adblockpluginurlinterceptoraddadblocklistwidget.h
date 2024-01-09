@@ -17,6 +17,8 @@ public:
         QString name;
         QString url;
         [[nodiscard]] bool isValid() const;
+        [[nodiscard]] bool operator==(const AdBlockListInfo &other) const;
+        [[nodiscard]] bool operator!=(const AdBlockListInfo &other) const;
     };
 
     explicit AdblockPluginUrlInterceptorAddAdblockListWidget(QWidget *parent = nullptr);
