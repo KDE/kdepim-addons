@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2019, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2019, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-07 01:54+0000\n"
-"PO-Revision-Date: 2023-12-31 19:03+0100\n"
+"PO-Revision-Date: 2024-01-08 23:23+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -51,15 +51,14 @@ msgid "Delete"
 msgstr "Elimina"
 
 #: adblock/adblockfiltertreeview.cpp:79
-#, fuzzy, kde-format
-#| msgid "Show List"
+#, kde-format
 msgid "Show"
-msgstr "Mostra elenco"
+msgstr "Mostra"
 
 #: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
 msgid "Update Lists"
-msgstr ""
+msgstr "Aggiorna elenchi"
 
 #: adblock/adblockfiltertreeview.cpp:148
 #, kde-format
@@ -100,12 +99,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "Configura estensione AdBlock"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "Aggiungi elenco di Adblock"
+msgstr "Mostra l'elenco di Adblock"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9

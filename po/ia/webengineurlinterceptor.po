@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-07 01:54+0000\n"
-"PO-Revision-Date: 2024-01-03 12:27+0100\n"
+"PO-Revision-Date: 2024-01-08 12:02+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -52,15 +52,14 @@ msgid "Delete"
 msgstr "Dele"
 
 #: adblock/adblockfiltertreeview.cpp:79
-#, fuzzy, kde-format
-#| msgid "Show List"
+#, kde-format
 msgid "Show"
-msgstr "Monstra lista"
+msgstr "Monstra "
 
 #: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
 msgid "Update Lists"
-msgstr ""
+msgstr "Actualisa listas"
 
 #: adblock/adblockfiltertreeview.cpp:148
 #, kde-format
@@ -101,12 +100,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "Configura Plugin de AdBlock"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "Adde lista de adblock (bloco de reclamos)"
+msgstr "Monstra lista de adblock (bloco de reclamos)"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9
