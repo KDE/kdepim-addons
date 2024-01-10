@@ -151,6 +151,7 @@ QString AdblockManager::adblockListText(const QString &url)
 
     QFile file(filterListPath() + id);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Impossible to open file " << file.fileName();
         return {};
     }
     const QString list = QString::fromLatin1(file.readAll());
