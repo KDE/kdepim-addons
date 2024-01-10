@@ -10,6 +10,7 @@
 #include "adblockmanager.h"
 #include "adblockpluginurlinterceptoraddadblocklistdialog.h"
 #include "adblockviewfilterdialog.h"
+#include "libadblockplugin_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QContextMenuEvent>
@@ -78,15 +79,20 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
         menu.addSeparator();
         auto showAdblockAction = new QAction(QIcon::fromTheme(QStringLiteral("document-preview")), i18n("Show"), &menu);
         connect(showAdblockAction, &QAction::triggered, this, [this, itemSelected]() {
-            AdblockViewFilterDialog dlg(this);
             const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(itemSelected.at(0).row(), AdblockFilterListsModel::Url);
-            dlg.setFilterText(AdblockManager::self()->adblockListText(modelIndexUrl.data().toString()));
-            dlg.exec();
+            const QString filterText = AdblockManager::self()->adblockListText(modelIndexUrl.data().toString());
+            if (filterText.isEmpty()) {
+                AdblockViewFilterDialog dlg(this);
+                dlg.setFilterText(filterText);
+                dlg.exec();
+            } else {
+                qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "List is empty. Perhaps we need to refresh lists";
+            }
         });
         menu.addAction(showAdblockAction);
     }
     menu.addSeparator();
-    auto updateListsAction = new QAction(/*QIcon::fromTheme(QStringLiteral("edit-delete")), */ i18n("Update Lists"), &menu);
+    auto updateListsAction = new QAction(QIcon::fromTheme(QStringLiteral("view-refresh")), i18n("Update Lists"), &menu);
     connect(updateListsAction, &QAction::triggered, this, []() {
         AdblockManager::self()->refreshLists();
     });
