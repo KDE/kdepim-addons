@@ -138,7 +138,7 @@ void AdblockManager::writeConfig()
     AdBlockSettings::self()->save();
 }
 
-const QString filterListIdFromUrl(const QString &url)
+QString AdblockManager::filterListIdFromUrl(const QString &url) const
 {
     QCryptographicHash fileNameHash(QCryptographicHash::Sha256);
     fileNameHash.addData(url.toUtf8());
