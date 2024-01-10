@@ -6,6 +6,7 @@
 
 #include "adblockpluginurlinterceptorconfigurewidget.h"
 #include "adblockfilterwidget.h"
+#include "adblockmanager.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 
 #include <KSharedConfig>
@@ -19,7 +20,10 @@ AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigure
     hbox->setContentsMargins({});
     mAdblockFilterWidget->setObjectName(QLatin1StringView("mAdblockFilterWidget"));
     hbox->addWidget(mAdblockFilterWidget);
-    connect(mAdblockFilterWidget, &AdblockFilterWidget::settingsChanged, this, &AdblockPluginUrlInterceptorConfigureWidget::configureChanged);
+    connect(mAdblockFilterWidget, &AdblockFilterWidget::settingsChanged, this, [this]() {
+        AdblockManager::self()->refreshLists();
+        Q_EMIT configureChanged();
+    });
 }
 
 AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget() = default;
