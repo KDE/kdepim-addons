@@ -37,6 +37,8 @@ public:
     void refreshLists();
 
     [[nodiscard]] QString filterListIdFromUrl(const QString &url) const;
+    [[nodiscard]] QString adblockListText(const QString &url);
+
 Q_SIGNALS:
     void enabledChanged(bool enabled);
     void adblockInitialized();

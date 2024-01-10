@@ -145,6 +145,18 @@ QString AdblockManager::filterListIdFromUrl(const QString &url) const
     return QString::fromUtf8(fileNameHash.result().toHex());
 }
 
+QString AdblockManager::adblockListText(const QString &url)
+{
+    const auto id = filterListIdFromUrl(url);
+
+    QFile file(filterListPath() + id);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        return {};
+    }
+    const QString list = QString::fromLatin1(file.readAll());
+    return list;
+}
+
 void AdblockManager::handleListFetched(QNetworkReply *reply)
 {
     Q_ASSERT(reply);

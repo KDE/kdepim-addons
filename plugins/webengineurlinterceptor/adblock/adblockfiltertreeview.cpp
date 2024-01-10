@@ -80,8 +80,7 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
         connect(showAdblockAction, &QAction::triggered, this, [this, itemSelected]() {
             AdblockViewFilterDialog dlg(this);
             const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(itemSelected.at(0).row(), AdblockFilterListsModel::Url);
-            qDebug() << " url " << modelIndexUrl.data().toString();
-            // TODO add list view
+            dlg.setFilterText(AdblockManager::self()->adblockListText(modelIndexUrl.data().toString()));
             dlg.exec();
         });
         menu.addAction(showAdblockAction);
