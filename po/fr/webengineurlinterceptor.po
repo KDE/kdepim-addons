@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-07 01:54+0000\n"
-"PO-Revision-Date: 2024-01-07 09:19+0100\n"
+"POT-Creation-Date: 2024-01-10 01:34+0000\n"
+"PO-Revision-Date: 2024-01-08 09:26+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -28,13 +28,13 @@ msgctxt "@title:window"
 msgid "Configure Adblock List"
 msgstr "Configurer la liste du module AdBlock"
 
-#: adblock/adblockfilterlistsmodel.cpp:91
+#: adblock/adblockfilterlistsmodel.cpp:95
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Nom"
 
-#: adblock/adblockfilterlistsmodel.cpp:93
+#: adblock/adblockfilterlistsmodel.cpp:97
 #, kde-format
 msgctxt "@title:column"
 msgid "Url"
@@ -56,22 +56,21 @@ msgid "Delete"
 msgstr "Supprimer"
 
 #: adblock/adblockfiltertreeview.cpp:79
-#, fuzzy, kde-format
-#| msgid "Show List"
+#, kde-format
 msgid "Show"
-msgstr "Afficher la liste"
+msgstr "Afficher"
 
 #: adblock/adblockfiltertreeview.cpp:88
 #, kde-format
 msgid "Update Lists"
 msgstr "Mettre à jour les listes"
 
-#: adblock/adblockfiltertreeview.cpp:148
+#: adblock/adblockfiltertreeview.cpp:151
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "Voulez-vous supprimer « %1 » ?"
 
-#: adblock/adblockfiltertreeview.cpp:149
+#: adblock/adblockfiltertreeview.cpp:152
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
@@ -105,12 +104,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "Configurer le module AdBlock"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "Afficher la liste de AdBlock"
+msgstr "Afficher la liste « AdBlock »"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9

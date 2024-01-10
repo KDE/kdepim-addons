@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-07 01:54+0000\n"
+"POT-Creation-Date: 2024-01-10 01:34+0000\n"
 "PO-Revision-Date: 2023-11-03 09:07+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -25,14 +25,14 @@ msgctxt "@title:window"
 msgid "Configure Adblock List"
 msgstr "Nastavit modul AdBlock"
 
-#: adblock/adblockfilterlistsmodel.cpp:91
+#: adblock/adblockfilterlistsmodel.cpp:95
 #, fuzzy, kde-format
 #| msgid "Name:"
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Název:"
 
-#: adblock/adblockfilterlistsmodel.cpp:93
+#: adblock/adblockfilterlistsmodel.cpp:97
 #, fuzzy, kde-format
 #| msgid "Url:"
 msgctxt "@title:column"
@@ -64,12 +64,12 @@ msgstr ""
 msgid "Update Lists"
 msgstr ""
 
-#: adblock/adblockfiltertreeview.cpp:148
+#: adblock/adblockfiltertreeview.cpp:151
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr ""
 
-#: adblock/adblockfiltertreeview.cpp:149
+#: adblock/adblockfiltertreeview.cpp:152
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@title:window"
