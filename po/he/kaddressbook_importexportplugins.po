@@ -17,90 +17,90 @@ msgstr ""
 "Project-Id-Version: kaddressbook_importexportplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2017-05-16 07:05-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"PO-Revision-Date: 2024-01-11 00:45+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export CSV file..."
-msgstr "ייצא רשימת CSV..."
+msgstr "ייצוא קובץ CSV…"
 
 #: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
 msgid "Export contacts to a file in comma separated value format."
-msgstr ""
+msgstr "ייצוא אנשי קשר לקובץ בתבנית ערכים שמופרדים בפסיקים."
 
 #: csv/csvimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import CSV file..."
-msgstr "ייבא רשימת CSV..."
+msgstr "ייבוא קובץ CSV…"
 
 #: csv/csvimportexportplugininterface.cpp:43
 #, kde-format
 msgid "Import contacts from a file in comma separated value format."
-msgstr ""
+msgstr "ייבוא אנשי קשר מקובץ בתבנית ערכים שמופרדים בפסיקים."
 
 #: csv/csvimportexportplugininterface.cpp:148
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
 #: vcards/vcardimportexportplugininterface.cpp:370
-#, fuzzy, kde-format
+#, kde-format
 msgid "Which contact do you want to export?"
-msgstr "איזה אנשי קשר ברצונך להדפיס?"
+msgstr "איזה איש קשר לייצא?"
 
 #: csv/csvimportexportplugininterface.cpp:158
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
 #: vcards/vcardimportexportplugininterface.cpp:382
-#, fuzzy, kde-format
+#, kde-format
 msgid "You have not selected any contacts to export."
-msgstr "בחר מסנן כדי לבחור איזה אנשי קשר לייצא."
+msgstr "לא בחרת אנשי קשר לייצוא."
 
 #: csv/csvimportexportplugininterface.cpp:187
 #: gmx/gmximportexportplugininterface.cpp:124
 #: ldif/ldifimportexportplugininterface.cpp:154
-#, fuzzy, kde-format
+#, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
-msgstr "<qt>אין אפשרות לפתוח את הקובץ <b>%1</b>.</qt>"
+msgstr "<qt>לא ניתן לפתוח את הקובץ <b>%1</b></qt>"
 
 #: csv/csvimportexportplugininterface.cpp:199
 #: gmx/gmximportexportplugininterface.cpp:139
 #: ldif/ldifimportexportplugininterface.cpp:184
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
-msgstr "<qt>אין אפשרות לפתוח את הקובץ <b>%1</b>.</qt>"
+msgstr "<qt>לא ניתן לפתוח את הקובץ <b>%1</b>.</qt>"
 
 #: csv/import/csvimportdialog.cpp:168
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "CSV Import Dialog"
-msgstr "חלון יבוא CSV"
+msgstr "חלונית ייבוא CSV"
 
 #: csv/import/csvimportdialog.cpp:223
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label"
 msgid "Importing contacts"
-msgstr "מייבא אנשי קשר"
+msgstr "אנשי קשר מיובאים"
 
 #: csv/import/csvimportdialog.cpp:294
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label"
 msgid "File to import:"
-msgstr "קובץ ייבוא:"
+msgstr "קובץ לייבוא:"
 
 #: csv/import/csvimportdialog.cpp:302
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select a csv file to import"
-msgstr "בחירת כרטיס וירטואלי לייבוא"
+msgstr "נא לבחור קובץ csv לייבוא"
 
 #: csv/import/csvimportdialog.cpp:304
 #, kde-format
@@ -109,43 +109,44 @@ msgid ""
 "Click this button to start a file chooser that will allow you to select a "
 "csv file to import."
 msgstr ""
+"יש ללחוץ על הכפתור הזה כדי להתחיל בורר קבצים שיאפשר לך לבחור קובץ csv לייבוא."
 
 #: csv/import/csvimportdialog.cpp:311
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:group"
 msgid "Delimiter"
 msgstr "מפריד"
 
 #: csv/import/csvimportdialog.cpp:321
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Comma"
 msgstr "פסיק"
 
 #: csv/import/csvimportdialog.cpp:322
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a comma"
-msgstr "בחר את השדה שברצונך להסיר:"
+msgstr "הגדרת מפריד השדות לפסיק"
 
 #: csv/import/csvimportdialog.cpp:323
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the comma as a field separator."
-msgstr ""
+msgstr "יש לבחור באפשרות הזאת אם קובץ ה־csv שלך משתמש בפסיק כמפריד בין השדות."
 
 #: csv/import/csvimportdialog.cpp:328
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Semicolon"
-msgstr "פסיק־נקודה"
+msgstr "נקודה־פסיק"
 
 #: csv/import/csvimportdialog.cpp:329
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a semicolon"
-msgstr "בחר את השדה שברצונך להסיר:"
+msgstr "הגדרת מפריד השדות לנקודה־פסיק"
 
 #: csv/import/csvimportdialog.cpp:330
 #, kde-format
@@ -153,18 +154,19 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the semicolon as a field separator."
 msgstr ""
+"יש לבחור באפשרות הזאת אם קובץ ה־csv שלך משתמש בנקודה־פסיק כמפריד בין השדות."
 
 #: csv/import/csvimportdialog.cpp:334
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Tabulator"
 msgstr "טאב"
 
 #: csv/import/csvimportdialog.cpp:335
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a tab character"
-msgstr "בחר את השדה שברצונך להסיר:"
+msgstr "הגדרת מפריד השדות לתו tab (טאב)"
 
 #: csv/import/csvimportdialog.cpp:336
 #, kde-format
@@ -173,18 +175,19 @@ msgid ""
 "Select this option if your csv file uses the tab character as a field "
 "separator."
 msgstr ""
+"יש לבחור באפשרות הזאת אם קובץ ה־csv שלך משתמש בטאב (tab) כמפריד בין השדות."
 
 #: csv/import/csvimportdialog.cpp:340
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Space"
 msgstr "רווח"
 
 #: csv/import/csvimportdialog.cpp:341
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a space character"
-msgstr "בחר את השדה שברצונך להסיר:"
+msgstr "הגדרת מפריד השדות לרווח"
 
 #: csv/import/csvimportdialog.cpp:342
 #, kde-format
@@ -192,19 +195,19 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the space character as a field "
 "separator."
-msgstr ""
+msgstr "יש לבחור באפשרות הזאת אם קובץ ה־csv שלך משתמש ברווח כמפריד בין השדות."
 
 #: csv/import/csvimportdialog.cpp:346
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Custom field separator"
 msgid "Other"
 msgstr "אחר"
 
 #: csv/import/csvimportdialog.cpp:347
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a custom character"
-msgstr "בחר את השדה שברצונך להסיר:"
+msgstr "הגדרת מפריד השדות לתו אחר"
 
 #: csv/import/csvimportdialog.cpp:349
 #, kde-format
@@ -213,12 +216,13 @@ msgid ""
 "Select this option if to use some other character as the field delimiter for "
 "the data in your csv file."
 msgstr ""
+"יש לבחור באפשרות הזאת אם קובץ ה־csv שלך משתמש בתו אחר כלשהו כמפריד בין השדות."
 
 #: csv/import/csvimportdialog.cpp:355
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the custom delimiter character"
-msgstr "&אנשי קשר נבחרים"
+msgstr "הגדרת התו המפריד האחר"
 
 #: csv/import/csvimportdialog.cpp:357
 #, kde-format
@@ -228,18 +232,20 @@ msgid ""
 "more than 1 character, only the first will be used and the remaining "
 "characters will be ignored."
 msgstr ""
+"נא למלא תו אחר לשימוש כתו ההפרדה. הקלדה של יותר מתו 1 יוביל להחרגת כל התווים "
+"למעט הראשון."
 
 #: csv/import/csvimportdialog.cpp:363
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Text quote:"
-msgstr "ציטוט:"
+msgstr "ציטוט טקסט:"
 
 #: csv/import/csvimportdialog.cpp:369
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the quote character"
-msgstr "&אנשי קשר נבחרים"
+msgstr "נא לבחור את תו הציטוט"
 
 #: csv/import/csvimportdialog.cpp:371
 #, kde-format
@@ -252,25 +258,25 @@ msgid ""
 msgstr ""
 
 #: csv/import/csvimportdialog.cpp:376
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr "\""
 
 #: csv/import/csvimportdialog.cpp:377
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "'"
 msgstr "'"
 
 #: csv/import/csvimportdialog.cpp:378
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "None"
 msgstr "ללא"
 
 #: csv/import/csvimportdialog.cpp:382
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "תבנית התאריך:"
@@ -285,6 +291,11 @@ msgid ""
 "item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
 "item><item>S: seconds with 2 digits</item></list></para>"
 msgstr ""
+"<para><list><item>y: שנה בשתי ספרות</item><item>Y: שנה ב־4 ספרות</"
+"item><item>m: חודש בספרה 1 או 2</item><item>M: חודש בשתי ספרות</"
+"item><item>d: יום בספרה 1 או 2</item><item>D: יום בשתי ספרות</item><item>H: "
+"שעות בשתי ספרות</item><item>I: דקות בשתי ספרות</item><item>S: שניות בשתי "
+"ספרות</item></list></para>"
 
 #: csv/import/csvimportdialog.cpp:401
 #, kde-kuit-format
@@ -302,34 +313,34 @@ msgid ""
 msgstr ""
 
 #: csv/import/csvimportdialog.cpp:417
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Text codec:"
-msgstr "ציטוט:"
+msgstr "מפענח טקסט:"
 
 #: csv/import/csvimportdialog.cpp:423
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
-msgstr "%1 פנקסי כתובות"
+msgstr "נא לבחור את מפענח הטקסט"
 
 #: csv/import/csvimportdialog.cpp:424
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose the character encoding of the data in your csv file."
-msgstr ""
+msgstr "נא לבחור את קידוד התווים של הנתונים בקובץ ה־csv שלך."
 
 #: csv/import/csvimportdialog.cpp:428
 #, kde-format
 msgctxt "@option:check"
 msgid "Skip first row of file"
-msgstr ""
+msgstr "דילוג על השורה הראשונה בקובץ"
 
 #: csv/import/csvimportdialog.cpp:430
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip first row of csv file when importing"
-msgstr ""
+msgstr "דילוג על השורה הראשונה בקובץ ה־CSV בעת ייבוא"
 
 #: csv/import/csvimportdialog.cpp:432
 #, kde-format
@@ -339,196 +350,199 @@ msgid ""
 "data. In many cases, the first line of a csv file will be a comment line "
 "describing the order of the data fields included in the file."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי להנחות את הייבוא לדלג על השורה הראשונה של נתוני ה־"
+"csv. במקרים רבים, השורה הראשונה של קובץ csv תהיה שורת הערה שמתארת את סדר "
+"שדות הנתונים שבקובץ."
 
 #: csv/import/csvimportdialog.cpp:448
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Template..."
-msgstr "החל תבנית..."
+msgstr "החלת תבנית…"
 
 #: csv/import/csvimportdialog.cpp:449
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Template..."
-msgstr "שמור תבנית..."
+msgstr "שמירת תבנית…"
 
 #: csv/import/csvimportdialog.cpp:470
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Local (%1)"
 msgstr "מקומי (%1)"
 
 #: csv/import/csvimportdialog.cpp:471
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Latin1"
-msgstr "Latin1"
+msgstr "לטינית1"
 
 #: csv/import/csvimportdialog.cpp:472
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Unicode"
 msgstr "יוניקוד"
 
 #: csv/import/csvimportdialog.cpp:473
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Microsoft Unicode"
-msgstr "יוניקוד של מיקרוסופט"
+msgstr "יוניקוד של Microsoft"
 
 #: csv/import/csvimportdialog.cpp:574
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "You must assign at least one column."
-msgstr "עליך לקבוע לפחות עמודה אחת"
+msgstr "צריך להקצות עמודה אחת לפחות."
 
 #: csv/import/csvimportdialog.cpp:584
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label"
 msgid "There are no templates available yet."
-msgstr "(אין תצוגה מקדימה זמינה.)"
+msgstr "אין תבניות זמינות עדיין."
 
 #: csv/import/csvimportdialog.cpp:584
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "No templates available"
-msgstr "(אין תצוגה מקדימה זמינה.)"
+msgstr "אין תבניות זמינות"
 
 #: csv/import/csvimportdialog.cpp:649
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Template Name"
 msgstr "שם התבנית"
 
 #: csv/import/csvimportdialog.cpp:649
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid "Please enter a name for the template:"
-msgstr "אנא הזן שם עבור התבנית:"
+msgstr "נא למלא את שם התבנית:"
 
 #: csv/import/csvimportdialog.cpp:699
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Cannot open input file."
-msgstr "אין אפשרות לפתוח את קובץ הקלט."
+msgstr "לא ניתן לפתוח קובץ קלט."
 
 #: csv/import/qcsvreader.cpp:92
 #, kde-format
 msgid "Device is not open"
-msgstr ""
+msgstr "המכשיר לא פתוח"
 
 #: csv/import/templateselectiondialog.cpp:182
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label"
 msgid "Do you really want to delete template '%1'?"
-msgstr "<qt>האם אתה בטוח שברצונך למחוק את פנקס הכתובות <b>%1</b>? </qt>"
+msgstr "למחוק את התבנית ‚%1’?"
 
 #: csv/import/templateselectiondialog.cpp:203
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Template Selection"
-msgstr "החלת תבנית"
+msgstr "בחירת תבנית"
 
 #: csv/import/templateselectiondialog.cpp:206
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid "Please select a template, that matches the CSV file:"
-msgstr "אנא בחר תבנית התואמת את קובץ ה־CSV:"
+msgstr "נא לבחור תנית שתואמת לקובץ ה־CSV:"
 
 #: gmx/gmximportexportplugininterface.cpp:25
-#, fuzzy, kde-format
+#, kde-format
 msgid "GMX address book file (*.gmxa)"
-msgstr "%1 פנקסי כתובות"
+msgstr "קובץ פנקס כתובות מסוג GMX‏ (‎*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import GMX file..."
-msgstr "ייבוא את כולם..."
+msgstr "ייבוא קובץ GMX…"
 
 #: gmx/gmximportexportplugininterface.cpp:41
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import contacts from a GMX address book file."
-msgstr "%1 פנקסי כתובות"
+msgstr "ייבוא אנשי קשר מקובץ כתובות מסוג GMX."
 
 #: gmx/gmximportexportplugininterface.cpp:46
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export GMX file..."
-msgstr "ייצוא של פנקס כתובות LDIF..."
+msgstr "ייצוא קובץ GMX…"
 
 #: gmx/gmximportexportplugininterface.cpp:47
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export contacts to a GMX address book file."
-msgstr "%1 פנקסי כתובות"
+msgstr "ייצוא אנשי קשר לקובץ פנקס כתובות של GMX."
 
 #: gmx/gmximportexportplugininterface.cpp:434
 #: ldif/ldifimportexportplugininterface.cpp:80
 #: windows-contacts/importwindowcontact.cpp:26
 #, kde-format
 msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
-msgstr "<qt> אין אפשרות לפתוח את <b>%1</b> לקריאה. </qt>"
+msgstr "<qt>לא ניתן לפתוח את <b>%1</b> לקריאה.</qt>"
 
 #: gmx/gmximportexportplugininterface.cpp:447
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 is not a GMX address book file."
-msgstr "%1 פנקסי כתובות"
+msgstr "%1 אינו קובץ פנקס כתובות מסוג GMX."
 
 #: ldap/ldapimportexportplugininterface.cpp:25
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import From LDAP server..."
-msgstr "ייבא מטלפון נייד..."
+msgstr "ייבוא משרת LDAP…"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import contacts from an LDAP server."
-msgstr "ייבוא אנשי קשר"
+msgstr "ייבוא אנשי קשר משרת LDAP."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import LDIF file..."
-msgstr "ייבוא פנקס כתובות של LDIF"
+msgstr "ייבוא קובץ LDIF…"
 
 #: ldif/ldifimportexportplugininterface.cpp:37
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import contacts from an LDIF file."
-msgstr "ייבוא אנשי קשר"
+msgstr "ייבוא אנשי קשר מקובץ LDIF."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export LDIF file..."
-msgstr "ייצוא של פנקס כתובות LDIF..."
+msgstr "ייצוא קובץ LDIF…"
 
 #: ldif/ldifimportexportplugininterface.cpp:43
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export contacts to an LDIF file."
-msgstr "ייצוא של פנקס כתובות LDIF..."
+msgstr "ייצוא אנשי קשר לקובץ LDIF."
 
 #: ldif/ldifimportexportplugininterface.cpp:106
 #, kde-format
 msgid "LDif Files"
-msgstr ""
+msgstr "קובצי LDif"
 
 #: ldif/ldifimportexportplugininterface.cpp:144
 #, kde-format
 msgid "LDif Files (*.ldif)"
-msgstr ""
+msgstr "קובצי LDif‏ (‎*.ldiff)"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:22
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:group"
 msgid "Fields to be exported"
-msgstr "קובץ ייבוא:"
+msgstr "שדות לייצוא"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:29
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Private fields"
 msgstr "שדות פרטיים"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:30
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Export private fields"
-msgstr "שדות פרטיים"
+msgstr "ייצוא שדות פרטיים"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:32
 #, kde-format
@@ -537,18 +551,20 @@ msgid ""
 "Check this box if you want to export the contact's private fields to the "
 "vCard output file."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי לייצא את השדות הפרטיים של איש הקשר לקובץ הפלט מסוג "
+"vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:36
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Business fields"
-msgstr "שדות עסקים"
+msgstr "שדות עסקיים"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:37
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Export business fields"
-msgstr "שדות עסקים"
+msgstr "ייצוא שדות עסקיים"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:39
 #, kde-format
@@ -557,18 +573,20 @@ msgid ""
 "Check this box if you want to export the contact's business fields to the "
 "vCard output file."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי לייצא את השדות העסקיים של איש הקשר לקובץ הפלט מסוג "
+"vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:43
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Other fields"
 msgstr "שדות אחרים"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:44
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Export other fields"
-msgstr "שדות אחרים"
+msgstr "ייצוא שדות אחרים"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:46
 #, kde-format
@@ -577,18 +595,20 @@ msgid ""
 "Check this box if you want to export the contact's other fields to the vCard "
 "output file."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי לייצא את השדות האחרים של איש הקשר לקובץ הפלט מסוג "
+"vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:50
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Encryption keys"
 msgstr "מפתחות הצפנה"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:51
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Export encryption keys"
-msgstr "מפתחות הצפנה"
+msgstr "ייצוא מפתחות הצפנה"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:53
 #, kde-format
@@ -597,18 +617,20 @@ msgid ""
 "Check this box if you want to export the contact's encryption keys to the "
 "vCard output file."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי לייצא את מפתחות ההצפנה של איש הקשר לקובץ הפלט מסוג "
+"vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:57
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Pictures"
-msgstr "תמונה"
+msgstr "תמונות"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:58
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Export pictures"
-msgstr "תמונה"
+msgstr "ייצוא תמונות"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:60
 #, kde-format
@@ -617,24 +639,25 @@ msgid ""
 "Check this box if you want to export the contact's picture to the vCard "
 "output file."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי לייצא את תמונת איש הקשר לקובץ הפלט של ה־vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:64
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:group"
 msgid "Export options"
-msgstr "הייצוא אל הטלפון הסתיים."
+msgstr "אפשרויות ייצוא"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:70
 #, kde-format
 msgctxt "@option:check"
 msgid "Display name as full name"
-msgstr ""
+msgstr "שם התצוגה כשם מלא"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export display name as full name"
-msgstr ""
+msgstr "ייצוא שם התצוגה כשם מלא"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:73
 #, kde-format
@@ -644,78 +667,80 @@ msgid ""
 "vCard's full name field.  This may be required to get the name shown "
 "correctly in GMail or Android."
 msgstr ""
+"יש לסמן את התיבה הזאת כדי לייצא את שם התצוגה של איש הקשר בשדה השם המלא של ה־"
+"vCard.  יכול להיות שזה יהיה נחוץ כדי להציג את השם נכון ב־GMail או ב־Android."
 
 #: vcards/engine/vcardviewerdialog.cpp:28
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "ייבוא vCard"
 
 #: vcards/engine/vcardviewerdialog.cpp:51
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
-msgstr "האם לייבא איש קשר זה לתוך פנקס הכתובות שלך?"
+msgstr "לייבא את איש הקשר הזה לתוך פנקס הכתובות שלך?"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Import All..."
-msgstr "ייבוא את כולם..."
+msgstr "ייבוא של הכול…"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard..."
-msgstr "ייבוא vCard..."
+msgstr "ייבוא vCard…"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import contacts from a vCard file."
-msgstr "ייבוא אנשי קשר"
+msgstr "ייבוא אנשי קשר מקובץ vCard."
 
 #: vcards/vcardimportexportplugininterface.cpp:52
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export contacts to a vCard 4.0 file."
-msgstr "ייצוא vCard 3.0..."
+msgstr "ייצוא אנשי קשר לקובץ vCard 4.0."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export vCard 4.0..."
-msgstr "ייצוא vCard 3.0..."
+msgstr "ייצוא ל־vCard 4.0…"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0..."
-msgstr "ייצוא vCard 3.0..."
+msgstr "ייצוא vCard 3.0…"
 
 #: vcards/vcardimportexportplugininterface.cpp:59
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export contacts to a vCard 3.0 file."
-msgstr "ייצוא vCard 3.0..."
+msgstr "ייצוא אנשי קשר לקובץ vCard 3.0."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1..."
-msgstr "ייצוא vCard 2.1..."
+msgstr "ייצוא vCard 2.1…"
 
 #: vcards/vcardimportexportplugininterface.cpp:65
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export contacts to a vCard 2.1 file."
-msgstr "ייצוא vCard 2.1..."
+msgstr "ייצוא אנשי קשר לקובץ vCard 2.1."
 
 #: vcards/vcardimportexportplugininterface.cpp:113
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
-msgstr ""
+msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;כל הקבצים (*)"
 
 #: vcards/vcardimportexportplugininterface.cpp:114
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
-msgstr "בחירת כרטיס וירטואלי לייבוא"
+msgstr "נא לבחור vCard לייבוא"
 
 #: vcards/vcardimportexportplugininterface.cpp:120
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "ייבוא ה־vCard נכשל"
@@ -724,42 +749,42 @@ msgstr "ייבוא ה־vCard נכשל"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
-msgstr ""
+msgstr "<para>לא ניתן לגשת ל־vCard:</para><para>%1</para>"
 
 #: vcards/vcardimportexportplugininterface.cpp:436
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid ""
 "You have selected a list of contacts, shall they be exported to several "
 "files?"
-msgstr "בחר מסנן כדי לבחור איזה אנשי קשר לייצא."
+msgstr "בחרת רשימה של אנשי קשר, לייצא אותם למספר קבצים?"
 
 #: vcards/vcardimportexportplugininterface.cpp:439
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
-msgstr "הייצוא אל הטלפון הסתיים."
+msgstr "ייצוא לקובץ אחד"
 
 #: vcards/vcardimportexportplugininterface.cpp:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"
-msgstr ""
+msgstr "ייצוא למספר קבצים"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import Windows Contact file..."
-msgstr "ייבא רשימת CSV..."
+msgstr "ייבוא קובץ אנשי קשר של Windows…"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
-#, fuzzy, kde-format
+#, kde-format
 msgid "Import contacts from windows contact file."
-msgstr "ייבוא אנשי קשר"
+msgstr "ייבוא אנשי קשר מקובץ אנשי קשר של Windows."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:68
 #, kde-format
 msgid "Windows Contact file (*.contact)"
-msgstr ""
+msgstr "קובץ פרטי קשר של Windows‏ (‎*.contact)"
 
 #, fuzzy
 #~ msgctxt "@title:window"

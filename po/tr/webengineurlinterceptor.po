@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:34+0000\n"
+"POT-Creation-Date: 2024-01-11 00:37+0000\n"
 "PO-Revision-Date: 2024-01-07 13:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -35,37 +35,37 @@ msgctxt "@title:column"
 msgid "Url"
 msgstr "URL"
 
-#: adblock/adblockfiltertreeview.cpp:58
+#: adblock/adblockfiltertreeview.cpp:59
 #, kde-format
 msgid "Add..."
 msgstr "Ekle..."
 
-#: adblock/adblockfiltertreeview.cpp:65
+#: adblock/adblockfiltertreeview.cpp:66
 #, kde-format
 msgid "Modify..."
 msgstr "Değiştir..."
 
-#: adblock/adblockfiltertreeview.cpp:71
+#: adblock/adblockfiltertreeview.cpp:72
 #, kde-format
 msgid "Delete"
 msgstr "Sil"
 
-#: adblock/adblockfiltertreeview.cpp:79
+#: adblock/adblockfiltertreeview.cpp:80
 #, kde-format
 msgid "Show"
 msgstr "Göster"
 
-#: adblock/adblockfiltertreeview.cpp:88
+#: adblock/adblockfiltertreeview.cpp:95
 #, kde-format
 msgid "Update Lists"
 msgstr "Listeleri Güncelle"
 
-#: adblock/adblockfiltertreeview.cpp:151
+#: adblock/adblockfiltertreeview.cpp:158
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "'%1' ögesini kaldırmak istediğinizden emin misiniz?"
 
-#: adblock/adblockfiltertreeview.cpp:152
+#: adblock/adblockfiltertreeview.cpp:159
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
