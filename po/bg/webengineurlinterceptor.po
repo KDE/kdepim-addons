@@ -3,43 +3,39 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:37+0000\n"
-"PO-Revision-Date: 2023-09-30 10:41+0200\n"
+"PO-Revision-Date: 2024-01-11 21:54+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: adblock/adblockfilterdialog.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure AdBlock Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
-msgstr "Конфигуриране на приставки на AdBlock"
+msgstr "Конфигуриране на списък на AdBlock"
 
 #: adblock/adblockfilterlistsmodel.cpp:95
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Name"
-msgstr "Име:"
+msgstr "Име"
 
 #: adblock/adblockfilterlistsmodel.cpp:97
-#, fuzzy, kde-format
-#| msgid "Url:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Url"
-msgstr "Адрес:"
+msgstr "Url-адрес"
 
 #: adblock/adblockfiltertreeview.cpp:59
 #, kde-format
@@ -57,29 +53,25 @@ msgid "Delete"
 msgstr "Изтриване"
 
 #: adblock/adblockfiltertreeview.cpp:80
-#, fuzzy, kde-format
-#| msgid "Show List"
+#, kde-format
 msgid "Show"
-msgstr "Показване на списък"
+msgstr "Показване"
 
 #: adblock/adblockfiltertreeview.cpp:95
 #, kde-format
 msgid "Update Lists"
-msgstr ""
+msgstr "Обновяване на списъците"
 
 #: adblock/adblockfiltertreeview.cpp:158
-#, fuzzy, kde-format
-#| msgid "Do you want to remove this rule?"
-#| msgid_plural "Do you want to remove these rules?"
+#, kde-format
 msgid "Do you want to remove '%1' ?"
-msgstr "Искате ли да премахнете това правило?"
+msgstr "Искате ли да премахнете '%1?"
 
 #: adblock/adblockfiltertreeview.cpp:159
-#, fuzzy, kde-format
-#| msgid "Remove filter"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
-msgstr "Премахване на филтър"
+msgstr "Премахване на списъка"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
@@ -109,12 +101,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "Конфигуриране на приставки на AdBlock"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "Добавяне на списък на Adblock"
+msgstr "Показване на списък на Adblock"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9
