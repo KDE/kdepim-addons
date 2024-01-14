@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:37+0000\n"
-"PO-Revision-Date: 2024-01-06 03:32\n"
+"PO-Revision-Date: 2024-01-13 05:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -54,12 +54,12 @@ msgstr "删除"
 #: adblock/adblockfiltertreeview.cpp:80
 #, kde-format
 msgid "Show"
-msgstr ""
+msgstr "显示"
 
 #: adblock/adblockfiltertreeview.cpp:95
 #, kde-format
 msgid "Update Lists"
-msgstr ""
+msgstr "更新列表"
 
 #: adblock/adblockfiltertreeview.cpp:158
 #, kde-format
@@ -100,12 +100,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "配置广告屏蔽插件"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "添加 Adblock 列表"
+msgstr "显示 Adblock 列表"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9
