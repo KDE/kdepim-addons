@@ -52,6 +52,7 @@
         "Name[tr]": "Parçacık",
         "Name[uk]": "Фрагмент",
         "Name[x-test]": "xxSnippetxx",
+        "Name[zh_TW]": "文字片段",
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"
