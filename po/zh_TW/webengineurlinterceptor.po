@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:37+0000\n"
-"PO-Revision-Date: 2024-01-02 19:54+0900\n"
+"PO-Revision-Date: 2024-01-15 00:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.01.90\n"
 
 #: adblock/adblockfilterdialog.cpp:26
 #, kde-format
@@ -53,12 +53,12 @@ msgstr "刪除"
 #: adblock/adblockfiltertreeview.cpp:80
 #, kde-format
 msgid "Show"
-msgstr ""
+msgstr "顯示"
 
 #: adblock/adblockfiltertreeview.cpp:95
 #, kde-format
 msgid "Update Lists"
-msgstr ""
+msgstr "更新清單"
 
 #: adblock/adblockfiltertreeview.cpp:158
 #, kde-format
@@ -99,12 +99,10 @@ msgid "Configure AdBlock Plugin"
 msgstr "設定廣告阻擋外掛程式"
 
 #: adblock/adblockviewfilterdialog.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Adblock List"
+#, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr "新增廣告阻擋清單"
+msgstr "顯示廣告阻擋清單"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9
