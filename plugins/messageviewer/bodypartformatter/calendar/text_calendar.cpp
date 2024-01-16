@@ -557,7 +557,7 @@ public:
             const QString answer = i18n("Invitation answer attached.");
             bodyMessage->setBody(answer.toUtf8());
             bodyMessage->setHeader(bodyDisposition);
-            msg->addContent(bodyMessage);
+            msg->appendContent(bodyMessage);
 
             // Set the second multipart, the attachment.
             auto attachMessage = new KMime::Content;
@@ -571,7 +571,7 @@ public:
             attachMessage->setHeader(attachDisposition);
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             attachMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
-            msg->addContent(attachMessage);
+            msg->appendContent(attachMessage);
         }
 
         // Try and match the receiver with an identity.
