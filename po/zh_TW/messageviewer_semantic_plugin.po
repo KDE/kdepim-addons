@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-07 00:51+0000\n"
-"PO-Revision-Date: 2024-01-02 19:53+0900\n"
+"PO-Revision-Date: 2024-01-15 23:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.01.90\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
@@ -45,7 +45,7 @@ msgstr "將此預約透過 KDE 連線傳送至裝置。"
 #: itineraryurlhandler.cpp:206
 #, kde-format
 msgid "Boarding Pass"
-msgstr ""
+msgstr "登機證/登船證"
 
 #: itineraryurlhandler.cpp:207
 #, kde-format
@@ -152,7 +152,7 @@ msgstr "為誰保留："
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format
 msgid "Class: %1"
-msgstr ""
+msgstr "艙等：%1"
 
 #: templates/trainreservation.html:58 templates/trainreservation.html:86
 #, kde-format
