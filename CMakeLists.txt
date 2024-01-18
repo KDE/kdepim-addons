@@ -138,10 +138,10 @@ find_package(KF6TextTemplate CONFIG REQUIRED)
 
 find_package(KLLMCore ${KLLMCORE_VERSION})
 set_package_properties(KLLMCore PROPERTIES
-    TYPE RECOMMENDED
+    TYPE OPTIONAL
     PURPOSE "Required for building IA plugins support"
     DESCRIPTION "Use local IA plugin"
-    URL https://invent.kde.org/lorendb/kandalf/
+    URL https://invent.kde.org/utilities/alpaka
 )
 
 # For adblocker
