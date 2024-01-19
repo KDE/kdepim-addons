@@ -449,9 +449,3 @@ msgstr "Промя&на..."
 #, kde-format
 msgid "Select attachment:"
 msgstr "Избор на прикачен файл:"
-
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Akonadi Vacuum"
-
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Akonadi Fsck"
