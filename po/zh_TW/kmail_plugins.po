@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 # Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:38+0000\n"
-"PO-Revision-Date: 2023-12-26 21:43+0900\n"
+"PO-Revision-Date: 2024-01-21 01:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
@@ -167,17 +167,17 @@ msgstr ""
 #: common/antispamwizard.cpp:456
 #, kde-format
 msgid "Scanning for %1..."
-msgstr ""
+msgstr "正在掃描 %1..."
 
 #: common/antispamwizard.cpp:500
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
-msgstr ""
+msgstr "防垃圾信工具掃描完成。"
 
 #: common/antispamwizard.cpp:500
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
-msgstr ""
+msgstr "防毒工具掃描完成。"
 
 #: common/antispamwizard.cpp:502
 #, kde-format
@@ -185,11 +185,13 @@ msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
 "detection software and re-run this wizard.</p>"
 msgstr ""
+"<p>抱歉，沒有找到任何垃圾信偵測工具。請安裝您的垃圾信偵測軟體之後重新執行這個"
+"精靈。</p>"
 
 #: common/antispamwizard.cpp:505
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
-msgstr ""
+msgstr "掃描完成。未找到防毒工具。"
 
 #: common/antispamwizard.cpp:527
 #, kde-format
@@ -224,7 +226,7 @@ msgstr ""
 msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
 "</p>"
-msgstr ""
+msgstr "<p>分類為不確定（可能是垃圾信）的信件用的資料夾是 <i>%1</i>。</p>"
 
 #: common/antispamwizard.cpp:580
 #, kde-format
@@ -263,7 +265,7 @@ msgstr ""
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
 "page.</p>"
-msgstr ""
+msgstr "<p>請選擇用來偵測的工具，然後跳到下一頁。</p>"
 
 #: common/antispamwizard.cpp:1056
 #, kde-format
@@ -299,6 +301,8 @@ msgid ""
 "folder view below.<p>Not all tools support a classification as unsure. If "
 "you have not selected a capable tool, you cannot select a folder as well.</p>"
 msgstr ""
+"預設資料夾是收件匣，但您可以在下方的資料夾檢視變更它。<p>不是所有工具都支援"
+"「不確定」的分類。如果您未選取支援它的工具，您也會沒辦法選擇資料夾。</p>"
 
 #: common/antispamwizard.cpp:1187
 #, kde-format
@@ -313,11 +317,13 @@ msgid ""
 "following filters can react on this and, for example, move virus messages to "
 "a special folder."
 msgstr ""
+"讓防毒工具檢查您的信件。本精靈將會建立合適的過濾器。通常防毒工具會標記信件，"
+"讓之後的過濾器可以對其進行反應，例如將有毒的信件移動到特別的資料夾。"
 
 #: common/antispamwizard.cpp:1195
 #, kde-format
 msgid "Move detected viral messages to the selected folder"
-msgstr ""
+msgstr "將偵測為有毒的信件移動到選取的資料夾"
 
 #: common/antispamwizard.cpp:1197
 #, kde-format
@@ -326,6 +332,8 @@ msgid ""
 "messages into a predefined folder is created. The default folder is the "
 "trash folder, but you may change that in the folder view."
 msgstr ""
+"已建立過濾器來將分類為中毒的信件移動至預先定義的資料夾。預設資料夾是垃圾桶，"
+"但您可以在資料夾檢視中變更它。"
 
 #: common/antispamwizard.cpp:1203
 #, kde-format
