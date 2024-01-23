@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:38+0000\n"
-"PO-Revision-Date: 2024-01-21 01:48+0900\n"
+"PO-Revision-Date: 2024-01-22 16:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -27,24 +27,24 @@ msgstr "Akonadi 資料庫工具"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
 msgid "&Akonadi Vacuum..."
-msgstr ""
+msgstr "&Akonadi 資料庫清理..."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
 msgid "Do you want to vacuum akonadi database?"
-msgstr ""
+msgstr "您確定要清理 (vacuum) Akonadi 的資料庫嗎？"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:31
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:78
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Vacuum"
-msgstr ""
+msgstr "Akonadi 資料庫清理"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
 msgid "Vacuum"
-msgstr ""
+msgstr "資料庫清理"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
@@ -162,7 +162,7 @@ msgstr "分類為不是垃圾信"
 #: common/antispamwizard.cpp:390
 #, kde-format
 msgid "Ham"
-msgstr ""
+msgstr "正常信件"
 
 #: common/antispamwizard.cpp:456
 #, kde-format
@@ -266,6 +266,12 @@ msgid ""
 "time consuming; please consider deleting the filter rules created by the "
 "wizard to get back to the former behavior.</p>"
 msgstr ""
+"<p>此精靈會幫助您設定 KMail 的過濾器規則來使用一些常用的防毒工具。</p><p>此精"
+"靈可以偵測您的電腦上的這些工具，並且依已安裝的工具建立過濾器規則，來利用這些"
+"工具分類信件，並把包含病毒的信件分開來。它不會考慮現有的過濾器規則：它只會加"
+"入新規則。</p><p><b>警告：</b>由於掃描信件是否有病毒的過程中，防毒工具通常會"
+"花一些時間，KMail 會看起來有當機的情形，而您可能會遇到 KMail 的反應不佳的問"
+"題。要回到原先的行為方式，您可以將精靈所建立的過濾器規則刪除。</p>"
 
 #: common/antispamwizard.cpp:1032
 #, kde-format
