@@ -544,7 +544,6 @@ public:
             KMime::Headers::ContentType *ct = msg->contentType();
             ct->setMimeType("multipart/mixed");
             ct->setBoundary(KMime::multiPartBoundary());
-            ct->setCategory(KMime::Headers::CCcontainer);
 
             // Set the first multipart, the body message.
             auto bodyMessage = new KMime::Content;
