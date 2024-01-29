@@ -418,11 +418,11 @@ index a16f320f..bc91299c 100644
 <span style="color:#bf0303;">-</span>
 <span style="color:#0057ae;">+    if (!m_encoding.isEmpty()) {</span>
          // have to decode the data
-<span style="color:#bf0303;">-        if (encoding == QLatin1String(&quot;b&quot;) || encoding == QLatin1String(&quot;base64&quot;)) {</span>
+<span style="color:#bf0303;">-        if (encoding == QLatin1StringView(&quot;b&quot;) || encoding == QLatin1String(&quot;base64&quot;)) {</span>
 <span style="color:#0057ae;">+        if (m_encoding == &quot;b&quot; || m_encoding == &quot;base64&quot;) {</span>
              output = QByteArray::fromBase64(value);
              wasBase64Encoded = true;
-<span style="color:#bf0303;">-        } else if (encoding == QLatin1String(&quot;quoted-printable&quot;)) {</span>
+<span style="color:#bf0303;">-        } else if (encoding == QLatin1StringView(&quot;quoted-printable&quot;)) {</span>
 <span style="color:#0057ae;">+        } else if (m_encoding == &quot;quoted-printable&quot;) {</span>
              // join any qp-folded lines
              while (value.endsWith('=')) {
@@ -430,7 +430,7 @@ index a16f320f..bc91299c 100644
                  value.append(m_fetchAnotherLine());
              }
              KCodecs::quotedPrintableDecode(value, output);
-<span style="color:#bf0303;">-        } else if (encoding == QLatin1String(&quot;8bit&quot;)) {</span>
+<span style="color:#bf0303;">-        } else if (encoding == QLatin1StringView(&quot;8bit&quot;)) {</span>
 <span style="color:#0057ae;">+        } else if (m_encoding == &quot;8bit&quot;) {</span>
              output = value;
          } else {

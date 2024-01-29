@@ -50,7 +50,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
     }
     const QStringList emails = PimCommon::Util::generateEmailList(lst);
 #if 0
-    MessageComposer::AliasesExpandJob job(params.addresses().join(QLatin1String(", ")), params.defaultDomain(), this);
+    MessageComposer::AliasesExpandJob job(params.addresses().join(QLatin1StringView(", ")), params.defaultDomain(), this);
     if (job.exec()) {
         emails = job.emailAddressOnly();
     }
@@ -83,7 +83,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
 
 void ConfirmAddressInterface::slotAddWhiteListEmails(const QStringList &lst, uint currentIdentity)
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String(myConfigGroupName));
+    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1StringView(myConfigGroupName));
     KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(currentIdentity));
     QStringList oldWhiteList = identityGroup.readEntry("Emails", QStringList());
     for (const QString &email : lst) {
@@ -98,7 +98,7 @@ void ConfirmAddressInterface::slotAddWhiteListEmails(const QStringList &lst, uin
 
 void ConfirmAddressInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String(myConfigGroupName));
+    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1StringView(myConfigGroupName));
     mHashSettings.clear();
 
     KIdentityManagementCore::IdentityManager *im = KIdentityManagementCore::IdentityManager::self();

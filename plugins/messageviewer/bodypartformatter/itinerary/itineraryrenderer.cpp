@@ -139,7 +139,7 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
                 }
 
                 const auto img = barcode->toImage(barcode->preferredSize(qGuiApp->devicePixelRatio()));
-                const QString fileName = dir + QLatin1String("/ticketToken") + QString::number(ticketTokenId++) + QLatin1String(".png");
+                const QString fileName = dir + QLatin1StringView("/ticketToken") + QString::number(ticketTokenId++) + QLatin1String(".png");
                 img.save(fileName);
                 m.insert(QStringLiteral("ticketToken"), fileName);
                 nodeHelper->addTempFile(fileName);

@@ -52,7 +52,7 @@ public:
     {
         QMimeDatabase db;
         auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));
-        if (!mt.isValid() || mt.name() != QLatin1String("text/vcard")) {
+        if (!mt.isValid() || mt.name() != QLatin1StringView("text/vcard")) {
             return false;
         }
 
@@ -117,12 +117,12 @@ public:
                 htmlStr.replace(QStringLiteral("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(defaultPixmapPath));
             } else {
                 QImage img = a.photo().data();
-                const QString dir = msgPart->nodeHelper()->createTempDir(QLatin1String("vcard-") + a.uid());
+                const QString dir = msgPart->nodeHelper()->createTempDir(QLatin1StringView("vcard-") + a.uid());
                 const QString filename = dir + QLatin1Char('/') + a.uid();
                 img.save(filename, "PNG");
                 msgPart->nodeHelper()->addTempFile(filename);
-                const QString href = QLatin1String("file:") + QLatin1String(QUrl::toPercentEncoding(filename));
-                htmlStr.replace(QLatin1String("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(href));
+                const QString href = QLatin1StringView("file:") + QLatin1String(QUrl::toPercentEncoding(filename));
+                htmlStr.replace(QLatin1StringView("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(href));
             }
             writer->write(htmlStr);
 
@@ -175,10 +175,10 @@ public:
             return true;
         }
 
-        if (path.startsWith(QLatin1String("addToAddressBook"))) {
+        if (path.startsWith(QLatin1StringView("addToAddressBook"))) {
             auto job = new Akonadi::AddContactJob(a, nullptr);
             job->start();
-        } else if (path.startsWith(QLatin1String("updateToAddressBook"))) {
+        } else if (path.startsWith(QLatin1StringView("updateToAddressBook"))) {
             auto job = new UpdateContactJob(a.emails().constFirst(), a, nullptr);
             job->start();
         }
@@ -228,7 +228,7 @@ public:
     QString statusBarMessage(BodyPart *part, const QString &path) const override
     {
         KContacts::Addressee a = findAddressee(part, path);
-        const bool addToAddressBook = path.startsWith(QLatin1String("addToAddressBook"));
+        const bool addToAddressBook = path.startsWith(QLatin1StringView("addToAddressBook"));
         if (a.realName().isEmpty()) {
             return addToAddressBook ? i18n("Add this contact to the address book.") : i18n("Update this contact to the address book.");
         } else {

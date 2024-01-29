@@ -38,7 +38,7 @@ void MarkdownHighlighter::highlight(const QString &str)
         state = highlightLine(mCurrentLine, state);
         *mStream << QLatin1Char('\n');
     }
-    *mStream << QLatin1String("</pre></blockquote>\n");
+    *mStream << QLatin1StringView("</pre></blockquote>\n");
 }
 
 void MarkdownHighlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)

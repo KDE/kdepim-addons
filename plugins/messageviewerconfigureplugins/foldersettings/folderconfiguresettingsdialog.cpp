@@ -52,14 +52,14 @@ void FolderConfigureSettingsDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void FolderConfigureSettingsDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openStateConfig(), QLatin1String(myConfigGroupName));
+    KConfigGroup grp(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }

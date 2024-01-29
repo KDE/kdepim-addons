@@ -38,7 +38,7 @@ void Highlighter::highlight(const QString &str)
         state = highlightLine(mCurrentLine, state);
         *mStream << QLatin1Char('\n');
     }
-    *mStream << QLatin1String("</pre>\n");
+    *mStream << QLatin1StringView("</pre>\n");
 }
 
 void Highlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)

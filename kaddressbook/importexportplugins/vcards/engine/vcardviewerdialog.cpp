@@ -80,14 +80,14 @@ void VCardViewerDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigVCardViewerDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigVCardViewerDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void VCardViewerDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigVCardViewerDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigVCardViewerDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

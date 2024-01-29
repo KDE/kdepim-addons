@@ -25,7 +25,7 @@
 #ifndef Q_OS_WIN
 void initLocale()
 {
-    setenv("KDEHOME", QFile::encodeName(QDir::homePath() + QLatin1String("/.qttest")).constData(), 1);
+    setenv("KDEHOME", QFile::encodeName(QDir::homePath() + QLatin1StringView("/.qttest")).constData(), 1);
     setenv("LC_ALL", "en_US.utf-8", 1);
     setenv("TZ", "UTC", 1);
     QStandardPaths::setTestModeEnabled(true);

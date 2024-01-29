@@ -48,7 +48,7 @@ CheckBeforeSendConfigureWidget::~CheckBeforeSendConfigureWidget() = default;
 
 void CheckBeforeSendConfigureWidget::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String(myConfigGroupName));
+    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1StringView(myConfigGroupName));
     mCheckPlainTextMail->setChecked(grp.readEntry("SendPlainText", false));
     mCheckMailTransport->setChecked(grp.readEntry("SmtpDefinedInIdentity", false));
     mCheckDuplicateEmailsAddresses->setChecked(grp.readEntry("CheckDuplicatedEmails", false));
@@ -57,7 +57,7 @@ void CheckBeforeSendConfigureWidget::loadSettings()
 
 void CheckBeforeSendConfigureWidget::saveSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String(myConfigGroupName));
+    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1StringView(myConfigGroupName));
     grp.writeEntry("SendPlainText", mCheckPlainTextMail->isChecked());
     grp.writeEntry("SmtpDefinedInIdentity", mCheckMailTransport->isChecked());
     grp.writeEntry("CheckDuplicatedEmails", mCheckDuplicateEmailsAddresses->isChecked());

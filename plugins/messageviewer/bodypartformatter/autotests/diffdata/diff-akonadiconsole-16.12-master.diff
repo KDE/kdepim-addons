@@ -560,7 +560,7 @@ index 5a6280f..ede37c9 100644
 -    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole"));
 +    const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : QLatin1Char('-') + Akonadi::Instance::identifier();
 +    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole") + suffix);
-     QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name),
+     QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1StringView(name),
              this, QDBusConnection::ExportAdaptors);
  
 @@ -243,7 +245,8 @@ QList<JobInfo> JobTracker::jobs(const QString &parent) const

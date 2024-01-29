@@ -146,7 +146,7 @@ void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
 
     const auto signPref = static_cast<Kleo::SigningPreference>(mSignPref->currentIndex());
     if (signPref != Kleo::UnknownSigningPreference) {
-        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"), QLatin1String(Kleo::signingPreferenceToString(signPref)));
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"), QLatin1StringView(Kleo::signingPreferenceToString(signPref)));
     } else {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"));
     }
@@ -155,7 +155,7 @@ void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
     if (encryptPref != Kleo::UnknownPreference) {
         contact.insertCustom(QStringLiteral("KADDRESSBOOK"),
                              QStringLiteral("CRYPTOENCRYPTPREF"),
-                             QLatin1String(Kleo::encryptionPreferenceToString(encryptPref)));
+                             QLatin1StringView(Kleo::encryptionPreferenceToString(encryptPref)));
     } else {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOENCRYPTPREF"));
     }

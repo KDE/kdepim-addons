@@ -48,19 +48,19 @@ bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerIns
 {
     Q_UNUSED(viewerInstance)
 
-    if (!path.startsWith(QLatin1String("gnupgwks?"))) {
+    if (!path.startsWith(QLatin1StringView("gnupgwks?"))) {
         return false;
     }
 
     const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
-    if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("show")) {
+    if (q.queryItemValue(QStringLiteral("action")) == QLatin1StringView("show")) {
         const QString progFullPath = QStandardPaths::findExecutable(QStringLiteral("kleopatra"));
         if (progFullPath.isEmpty()
             || !QProcess::startDetached(QStringLiteral("kleopatra"), {QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr"))})) {
             return false;
         }
         return true;
-    } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("confirm")) {
+    } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1StringView("confirm")) {
         GnuPGWKSMessagePart mp(part);
         if (!sendConfirmation(viewerInstance, mp)) {
             part->nodeHelper()->setProperty((QStringLiteral("__GnuPGWKS") + mp.fingerprint()).toLatin1().constData(), QStringLiteral("error"));
@@ -75,15 +75,15 @@ QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart *part, const QS
 {
     Q_UNUSED(part)
 
-    if (!path.startsWith(QLatin1String("gnupgwks?"))) {
+    if (!path.startsWith(QLatin1StringView("gnupgwks?"))) {
         return {};
     }
 
     const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
     const QString actionStr = q.queryItemValue(QStringLiteral("action"));
-    if (actionStr == QLatin1String("show")) {
+    if (actionStr == QLatin1StringView("show")) {
         return i18n("Display key details");
-    } else if (actionStr == QLatin1String("confirm")) {
+    } else if (actionStr == QLatin1StringView("confirm")) {
         return i18n("Publish the key");
     }
     return {};

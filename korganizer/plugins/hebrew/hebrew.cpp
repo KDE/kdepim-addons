@@ -29,7 +29,7 @@ Hebrew::Hebrew(QObject *parent, const QVariantList &args)
     KConfig config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
 
     KConfigGroup group(&config, QStringLiteral("Hebrew Calendar Plugin"));
-    areWeInIsrael = group.readEntry("UseIsraelSettings", QLocale::territoryToString(QLocale().territory()) == QLatin1String(".il"));
+    areWeInIsrael = group.readEntry("UseIsraelSettings", QLocale::territoryToString(QLocale().territory()) == QLatin1StringView(".il"));
     showParsha = group.readEntry("ShowParsha", true);
     showChol = group.readEntry("ShowChol_HaMoed", true);
     showOmer = group.readEntry("ShowOmer", true);
@@ -54,7 +54,7 @@ Element::List Hebrew::createDayElements(const QDate &date)
     text = cal->formatDate(date, KLocale::Day, KLocale::LongNumber) + QLatin1Char(' ') + cal->monthName(date);
 
     for (const QString &holiday : holidays) {
-        text += QLatin1String("<br/>\n") + holiday;
+        text += QLatin1StringView("<br/>\n") + holiday;
     }
 
     text = i18nc("Change the next two strings if emphasis is done differently in your language.", "<qt><p align=\"center\"><i>\n%1\n</i></p></qt>", text);

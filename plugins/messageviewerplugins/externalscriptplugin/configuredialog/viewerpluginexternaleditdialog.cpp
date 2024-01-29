@@ -51,7 +51,7 @@ void ViewerPluginExternalEditDialog::slotScriptIsValid(bool valid)
 
 void ViewerPluginExternalEditDialog::saveConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myViewerPluginExternalEditDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myViewerPluginExternalEditDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
@@ -60,7 +60,7 @@ void ViewerPluginExternalEditDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(350, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myViewerPluginExternalEditDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myViewerPluginExternalEditDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

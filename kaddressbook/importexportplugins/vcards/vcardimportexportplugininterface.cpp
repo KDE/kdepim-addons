@@ -282,7 +282,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
             QStringList exportFields;
             const QStringList customs = (*it).customs();
             for (const QString &customStr : customs) {
-                if (!customStr.startsWith(QLatin1String("X-GCALENDAR-groupMembershipInfo"))) {
+                if (!customStr.startsWith(QLatin1StringView("X-GCALENDAR-groupMembershipInfo"))) {
                     exportFields.append(customStr);
                 }
             }
@@ -497,7 +497,7 @@ void VCardImportExportPluginInterface::exportVCard()
 
 bool VCardImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
-    return url.path().endsWith(QLatin1String(".vcf"));
+    return url.path().endsWith(QLatin1StringView(".vcf"));
 }
 
 QString VCardImportExportPluginInterface::contactFileName(const KContacts::Addressee &contact) const

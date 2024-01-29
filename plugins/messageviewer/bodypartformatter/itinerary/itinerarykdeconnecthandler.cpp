@@ -40,7 +40,7 @@ QList<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices() 
         QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"),
                                    QStringLiteral("/modules/kdeconnect/devices/") + deviceId,
                                    QStringLiteral("org.kde.kdeconnect.device"));
-        QDBusReply<bool> pluginReply = deviceIface.call(QStringLiteral("hasPlugin"), QLatin1String("kdeconnect_share"));
+        QDBusReply<bool> pluginReply = deviceIface.call(QStringLiteral("hasPlugin"), QLatin1StringView("kdeconnect_share"));
 
         if (pluginReply.value()) {
             devices.push_back({deviceId, deviceIface.property("name").toString()});

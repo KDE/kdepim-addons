@@ -33,9 +33,9 @@ void ShortUrlEngineInterface::slotErrorFound(QNetworkReply::NetworkError error)
 void ShortUrlEngineInterface::setShortUrl(const QString &url)
 {
     mErrorFound = false;
-    if (!url.trimmed().startsWith(QLatin1String("http://")) && !url.trimmed().startsWith(QLatin1String("https://"))
-        && !url.trimmed().startsWith(QLatin1String("ftp://")) && !url.trimmed().startsWith(QLatin1String("ftps://"))) {
-        mOriginalUrl = QLatin1String("http://") + url;
+    if (!url.trimmed().startsWith(QLatin1StringView("http://")) && !url.trimmed().startsWith(QLatin1String("https://"))
+        && !url.trimmed().startsWith(QLatin1StringView("ftp://")) && !url.trimmed().startsWith(QLatin1String("ftps://"))) {
+        mOriginalUrl = QLatin1StringView("http://") + url;
     } else {
         mOriginalUrl = url;
     }

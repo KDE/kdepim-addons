@@ -69,7 +69,7 @@ void SendmailJob::receivedError()
 
 void SendmailJob::receivedStdErr()
 {
-    mLastError += QLatin1String(mProcess->readAllStandardError());
+    mLastError += QLatin1StringView(mProcess->readAllStandardError());
 }
 
 bool SendmailJob::doKill()

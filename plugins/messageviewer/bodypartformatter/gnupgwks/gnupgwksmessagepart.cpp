@@ -43,9 +43,9 @@ QString GnuPGWKSMessagePart::nonce() const
 
 GnuPGWKSMessagePart::ConfirmationType GnuPGWKSMessagePart::stringToType(const QStringView &str)
 {
-    if (str == QLatin1String("confirmation-request")) {
+    if (str == QLatin1StringView("confirmation-request")) {
         return ConfirmationRequest;
-    } else if (str == QLatin1String("confirmation-response")) {
+    } else if (str == QLatin1StringView("confirmation-response")) {
         return ConfirmationResponse;
     } else {
         return UnknownType;
@@ -59,15 +59,15 @@ void GnuPGWKSMessagePart::parseContent(KMime::Content *node)
     // https://tools.ietf.org/id/draft-koch-openpgp-webkey-service-02.txt
     // sections 4.3 and 4.4
     for (const auto &line : lines) {
-        if (line.startsWith(QLatin1String("type:"))) {
+        if (line.startsWith(QLatin1StringView("type:"))) {
             mType = stringToType(QStringView(line).mid(sizeof("type:") - 1).trimmed());
-        } else if (line.startsWith(QLatin1String("sender:"))) {
+        } else if (line.startsWith(QLatin1StringView("sender:"))) {
             mSender = QStringView(line).mid(sizeof("sender:") - 1).trimmed().toString();
-        } else if (line.startsWith(QLatin1String("address:"))) {
+        } else if (line.startsWith(QLatin1StringView("address:"))) {
             mAddress = QStringView(line).mid(sizeof("address:") - 1).trimmed().toString();
-        } else if (line.startsWith(QLatin1String("fingerprint:"))) {
+        } else if (line.startsWith(QLatin1StringView("fingerprint:"))) {
             mFingerprint = QStringView(line).mid(sizeof("fingerprint:") - 1).trimmed().toString();
-        } else if (line.startsWith(QLatin1String("nonce:"))) {
+        } else if (line.startsWith(QLatin1StringView("nonce:"))) {
             mNonce = QStringView(line).mid(sizeof("nonce:") - 1).trimmed().toString();
         }
     }

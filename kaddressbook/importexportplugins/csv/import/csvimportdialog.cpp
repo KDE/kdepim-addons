@@ -243,7 +243,7 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
                     value = dateParser.parse(value).toString(Qt::ISODate);
                 }
 
-                value.replace(QLatin1String("\\n"), QStringLiteral("\n"));
+                value.replace(QLatin1StringView("\\n"), QStringLiteral("\n"));
 
                 KAddressBookImportExport::ContactFields::setValue(field, value, contact);
             }
@@ -467,13 +467,13 @@ void CSVImportDialog::reloadCodecs()
         mCodecs.append(QTextCodec::codecForName(name));
     }
 
-    mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Local (%1)", QLatin1String(QTextCodec::codecForLocale()->name())), Local);
+    mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Local (%1)", QLatin1StringView(QTextCodec::codecForLocale()->name())), Local);
     mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Latin1"), Latin1);
     mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Unicode"), Uni);
     mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Microsoft Unicode"), MSBug);
 
     for (int i = 0, total = mCodecs.count(); i < total; ++i) {
-        mCodecCombo->addItem(QLatin1String(mCodecs.at(i)->name()), Codec + i);
+        mCodecCombo->addItem(QLatin1StringView(mCodecs.at(i)->name()), Codec + i);
     }
 }
 

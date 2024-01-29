@@ -48,14 +48,14 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     }
 
     QString imgpath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("libmessageviewer/pics/"), QStandardPaths::LocateDirectory));
-    imgpath.prepend(QLatin1String("file://"));
-    imgpath.append(QLatin1String("enterprise_"));
+    imgpath.prepend(QLatin1StringView("file://"));
+    imgpath.append(QLatin1StringView("enterprise_"));
     const QString borderSettings(QStringLiteral(" padding-top: 0px; padding-bottom: 0px; border-width: 0px "));
     QString headerStr;
 
     // 3D borders
     if (isTopLevel()) {
-        headerStr += QLatin1String(
+        headerStr += QLatin1StringView(
             "<div style=\"position: fixed; top: 0px; left: 0px; background-color: #606060; "
             "width: 10px; min-height: 100%;\">&nbsp;</div>"
             "<div style=\"position: fixed; top: 0px; right: 0px;  background-color: #606060; "
@@ -97,8 +97,8 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         + QStringLiteral(
                      "icon.png\"/>\n"
                      "</div>\n");
-    headerStr +=
-        QLatin1String("    <table style=\"color: ") + fontColor.name() + QLatin1String(" ! important; margin: 1px; border-spacing: 0px;\" cellpadding='0'> \n");
+    headerStr += QLatin1StringView("    <table style=\"color: ") + fontColor.name()
+        + QLatin1String(" ! important; margin: 1px; border-spacing: 0px;\" cellpadding='0'> \n");
 
     // subject
     if (strategy->showHeader(QStringLiteral("subject"))) {
@@ -123,15 +123,15 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         // We by design use the stripped mail address here, it is more enterprise-like.
         QString fromPart = StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayFullAddress, linkColor);
         if (!vCardName().isEmpty()) {
-            fromPart += QLatin1String("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1String("\" ") + linkColor + QLatin1Char('>') + i18n("[vCard]")
-                + QLatin1String("</a>");
+            fromPart += QLatin1StringView("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1String("\" ") + linkColor + QLatin1Char('>') + i18n("[vCard]")
+                + QLatin1StringView("</a>");
         }
         // TDDO strategy date
         // if ( strategy->showHeader( "date" ) )
         headerStr += QStringLiteral(
                          "     <tr> \n"
                          "      <td style=\"font-size: 0.8em; padding-left: 5px; padding-right: 24px; text-align: right; vertical-align:top; ")
-            + borderSettings + QLatin1String("\">") + i18n("From: ")
+            + borderSettings + QLatin1StringView("\">") + i18n("From: ")
             + QStringLiteral(
                          "</td> \n"
                          "      <td style=\"")
@@ -146,7 +146,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         headerStr += QStringLiteral(
                          "     <tr> "
                          "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ")
-            + borderSettings + QLatin1String("\">") + i18n("To: ")
+            + borderSettings + QLatin1StringView("\">") + i18n("To: ")
             + QStringLiteral(
                          "</td> "
                          "      <td style=\"")
@@ -161,7 +161,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         headerStr += QStringLiteral(
                          "     <tr> "
                          "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ")
-            + borderSettings + QLatin1String("\">") + i18n("CC: ")
+            + borderSettings + QLatin1StringView("\">") + i18n("CC: ")
             + QStringLiteral(
                          "</td> "
                          "      <td style=\"")
@@ -176,7 +176,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         headerStr += QStringLiteral(
                          "     <tr> "
                          "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ")
-            + borderSettings + QLatin1String("\">") + i18n("BCC: ")
+            + borderSettings + QLatin1StringView("\">") + i18n("BCC: ")
             + QStringLiteral(
                          "</td> "
                          "      <td style=\"")
@@ -246,9 +246,9 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     if (isPrinting()) {
         // provide a bit more left padding when printing
         // kolab/issue3254 (printed mail cut at the left side)
-        headerStr += QLatin1String("<div style=\"padding: 6px; padding-left: 10px;\">");
+        headerStr += QLatin1StringView("<div style=\"padding: 6px; padding-left: 10px;\">");
     } else {
-        headerStr += QLatin1String("<div style=\"padding: 6px;\">");
+        headerStr += QLatin1StringView("<div style=\"padding: 6px;\">");
     }
 
     // TODO

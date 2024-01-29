@@ -66,7 +66,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
     Q_UNUSED(markAsSeen)
 
     QMap<QString, QVariant> settings;
-    if (incomingProtocol == QLatin1String("IMAP")) {
+    if (incomingProtocol == QLatin1StringView("IMAP")) {
         settings.insert(QStringLiteral("ImapServer"), serverName);
         settings.insert(QStringLiteral("UserName"), userName);
         if (port != -1) {
@@ -89,7 +89,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
         addToManualCheck(agentIdentifyName, enableManualCheck);
         // We have not settings for it => same than manual check
         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
-    } else if (incomingProtocol == QLatin1String("POP")) {
+    } else if (incomingProtocol == QLatin1StringView("POP")) {
         settings.insert(QStringLiteral("Host"), serverName);
         settings.insert(QStringLiteral("Login"), userName);
 
@@ -163,7 +163,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
 void OperaSettings::readTransport(const KConfigGroup &grp)
 {
     const QString outgoingProtocol = grp.readEntry(QStringLiteral("Outgoing Protocol"));
-    if (outgoingProtocol == QLatin1String("SMTP")) {
+    if (outgoingProtocol == QLatin1StringView("SMTP")) {
         const int authMethod = grp.readEntry(QStringLiteral("Outgoing Authentication Method"), -1);
         MailTransport::Transport *mt = createTransport();
         const int port = grp.readEntry(QStringLiteral("Outgoing Port"), -1);
@@ -240,7 +240,7 @@ void OperaSettings::readIdentity(const KConfigGroup &grp)
     if (!signatureFile.isEmpty()) {
         KIdentityManagementCore::Signature signature;
         const int signatureHtml = grp.readEntry(QStringLiteral("Signature is HTML"), -1);
-        if (signatureFile.contains(QLatin1String("{Preferences}"))) {
+        if (signatureFile.contains(QLatin1StringView("{Preferences}"))) {
             signatureFile.replace(QStringLiteral("{Preferences}"), MailImporter::FilterOpera::defaultSettingsPath() + QStringLiteral("/"));
         }
 

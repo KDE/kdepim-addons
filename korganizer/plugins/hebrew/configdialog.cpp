@@ -67,7 +67,7 @@ void ConfigDialog::load()
     KConfig config(QStringLiteral("korganizerrc"));
 
     KConfigGroup group(&config, QStringLiteral("Hebrew Calendar Plugin"));
-    mIsraelBox->setChecked(group.readEntry("UseIsraelSettings", QLocale::territoryToString(QLocale().territory()) == QLatin1String(".il")));
+    mIsraelBox->setChecked(group.readEntry("UseIsraelSettings", QLocale::territoryToString(QLocale().territory()) == QLatin1StringView(".il")));
     mParshaBox->setChecked(group.readEntry("ShowParsha", true));
     mCholBox->setChecked(group.readEntry("ShowChol_HaMoed", true));
     mOmerBox->setChecked(group.readEntry("ShowOmer", true));

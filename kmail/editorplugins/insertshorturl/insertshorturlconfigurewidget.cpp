@@ -50,7 +50,7 @@ void InsertShorturlConfigureWidget::slotChanged()
 
 void InsertShorturlConfigureWidget::loadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String(myConfigGroupName));
+    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1StringView(myConfigGroupName));
     const QString engineName = grp.readEntry("EngineName");
     int index = mShortUrlServer->findData(engineName);
     if (index < 0) {
@@ -63,7 +63,7 @@ void InsertShorturlConfigureWidget::loadConfig()
 void InsertShorturlConfigureWidget::writeConfig()
 {
     if (mChanged) {
-        KConfigGroup grp(KSharedConfig::openConfig(), QLatin1String(myConfigGroupName));
+        KConfigGroup grp(KSharedConfig::openConfig(), QLatin1StringView(myConfigGroupName));
         grp.writeEntry("EngineName", mShortUrlServer->itemData(mShortUrlServer->currentIndex()).toString());
         grp.sync();
     }

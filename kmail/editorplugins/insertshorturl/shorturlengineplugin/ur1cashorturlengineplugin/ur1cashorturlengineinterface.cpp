@@ -53,7 +53,7 @@ void Ur1CaShortUrlEngineInterface::slotSslErrors(QNetworkReply *reply, const QLi
 void Ur1CaShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
 {
     if (!mErrorFound) {
-        QString output = QLatin1String(reply->readAll());
+        QString output = QLatin1StringView(reply->readAll());
         qCDebug(UR1CASHORTURLENGINEPLUGIN_LOG) << "void Ur1CaShortUrl::slotShortUrlFinished(QNetworkReply *reply) " << output;
         QRegExp rx(QStringLiteral("<p class=[\'\"]success[\'\"]>(.*)</p>"));
         rx.setMinimal(true);

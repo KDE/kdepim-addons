@@ -44,7 +44,7 @@ bool MarkdownEnginePage::acceptNavigationRequest(const QUrl &url, NavigationType
 {
     Q_UNUSED(type)
     Q_UNUSED(isMainFrame)
-    if (url.scheme() == QLatin1String("data")) {
+    if (url.scheme() == QLatin1StringView("data")) {
         return true;
     }
     return false;

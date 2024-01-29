@@ -97,7 +97,7 @@ KIO::SimpleJob *POTDElement::createJsonQueryJob(const QString &property, const Q
 KIO::SimpleJob *POTDElement::createImagesJsonQueryJob(PageProtectionState state)
 {
     const char *const templatePagePrefix = (state == ProtectedPage) ? "Template:POTD_protected/" : "Template:POTD/";
-    const QString templatePageName = QLatin1String(templatePagePrefix) + mDate.toString(Qt::ISODate);
+    const QString templatePageName = QLatin1StringView(templatePagePrefix) + mDate.toString(Qt::ISODate);
     const QList<QueryItem> otherQueryItems{
         // TODO: unsure if formatversion is needed, used by https://www.mediawiki.org/wiki/API:Picture_of_the_day_viewer in October 2021
         {QStringLiteral("formatversion"), QStringLiteral("2")},
@@ -125,9 +125,9 @@ void POTDElement::handleImagesJsonResponse(KJob *job, PageProtectionState pagePr
 
     const auto json = QJsonDocument::fromJson(transferJob->data());
 
-    const auto pageObject = json.object().value(QLatin1String("query")).toObject().value(QLatin1String("pages")).toArray().at(0).toObject();
+    const auto pageObject = json.object().value(QLatin1StringView("query")).toObject().value(QLatin1String("pages")).toArray().at(0).toObject();
 
-    auto missingIt = pageObject.find(QLatin1String("missing"));
+    auto missingIt = pageObject.find(QLatin1StringView("missing"));
     if ((missingIt != pageObject.end()) && missingIt.value().toBool(false)) {
         // fallback to unprotected variant in case there is no protected variant
         if (pageProtectionState == ProtectedPage) {
@@ -144,8 +144,8 @@ void POTDElement::handleImagesJsonResponse(KJob *job, PageProtectionState pagePr
         return;
     }
 
-    const auto imageObject = pageObject.value(QLatin1String("images")).toArray().at(0).toObject();
-    const QString imageFile = imageObject.value(QLatin1String("title")).toString();
+    const auto imageObject = pageObject.value(QLatin1StringView("images")).toArray().at(0).toObject();
+    const QString imageFile = imageObject.value(QLatin1StringView("title")).toString();
     if (imageFile.isEmpty()) {
         qCWarning(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << mDate << ": missing images data in reply:" << json;
         setLoadingFailed();
@@ -191,25 +191,25 @@ void POTDElement::handleBasicImageInfoJsonResponse(KJob *job)
 
     const auto json = QJsonDocument::fromJson(transferJob->data());
 
-    const auto pagesObject = json.object().value(QLatin1String("query")).toObject().value(QLatin1String("pages")).toObject();
+    const auto pagesObject = json.object().value(QLatin1StringView("query")).toObject().value(QLatin1String("pages")).toObject();
     const auto pageObject = pagesObject.isEmpty() ? QJsonObject() : pagesObject.begin()->toObject();
-    const auto imageInfo = pageObject.value(QLatin1String("imageinfo")).toArray().at(0).toObject();
+    const auto imageInfo = pageObject.value(QLatin1StringView("imageinfo")).toArray().at(0).toObject();
 
-    const QString url = imageInfo.value(QLatin1String("url")).toString();
+    const QString url = imageInfo.value(QLatin1StringView("url")).toString();
     if (url.isEmpty()) {
         qCWarning(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << mDate << ": missing imageinfo data in reply:" << json;
         setLoadingFailed();
         return;
     }
 
-    const QString descriptionUrl = imageInfo.value(QLatin1String("descriptionurl")).toString();
+    const QString descriptionUrl = imageInfo.value(QLatin1StringView("descriptionurl")).toString();
     mData->mAboutPageUrl = QUrl(descriptionUrl);
 
-    const QString description = imageInfo.value(QLatin1String("canonicaltitle")).toString();
+    const QString description = imageInfo.value(QLatin1StringView("canonicaltitle")).toString();
     mData->mTitle = i18n("Wikipedia POTD: %1", description);
 
-    const int width = imageInfo.value(QLatin1String("width")).toInt();
-    const int height = imageInfo.value(QLatin1String("height")).toInt();
+    const int width = imageInfo.value(QLatin1StringView("width")).toInt();
+    const int height = imageInfo.value(QLatin1StringView("height")).toInt();
     mData->mPictureHWRatio = ((width != 0) && (height != 0)) ? height / static_cast<float>(width) : 1.0;
     qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << mDate << ": thumb width" << width << " thumb height" << height << "ratio" << mData->mPictureHWRatio;
     mData->updateFetchedThumbSize();
@@ -247,9 +247,9 @@ void POTDElement::handleThumbImageInfoJsonResponse(KJob *job)
     auto const transferJob = static_cast<KIO::StoredTransferJob *>(job);
 
     const auto json = QJsonDocument::fromJson(transferJob->data());
-    auto pagesObject = json.object().value(QLatin1String("query")).toObject().value(QLatin1String("pages")).toObject();
+    auto pagesObject = json.object().value(QLatin1StringView("query")).toObject().value(QLatin1String("pages")).toObject();
     auto pageObject = pagesObject.isEmpty() ? QJsonObject() : pagesObject.begin()->toObject();
-    auto imageInfo = pageObject.value(QLatin1String("imageinfo")).toArray().at(0).toObject();
+    auto imageInfo = pageObject.value(QLatin1StringView("imageinfo")).toArray().at(0).toObject();
 
     const QString thumbUrl = imageInfo.value(QStringLiteral("thumburl")).toString();
     if (thumbUrl.isEmpty()) {

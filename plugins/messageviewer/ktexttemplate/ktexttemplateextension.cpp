@@ -33,7 +33,7 @@ QVariant AddressFormatter::doFilter(const QVariant &input, const QVariant &arg, 
     address.setCountry(a.addressCountry());
 
     auto s = escape(address.formatted(KContacts::AddressFormatStyle::MultiLineInternational));
-    return s.get().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
+    return s.get().replace(QLatin1Char('\n'), QLatin1StringView("<br/>"));
 }
 
 bool AddressFormatter::isSafe() const

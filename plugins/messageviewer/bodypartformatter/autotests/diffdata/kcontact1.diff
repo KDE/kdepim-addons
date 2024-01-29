@@ -418,11 +418,11 @@ index a16f320f..bc91299c 100644
 -
 +    if (!m_encoding.isEmpty()) {
          // have to decode the data
--        if (encoding == QLatin1String("b") || encoding == QLatin1String("base64")) {
+-        if (encoding == QLatin1StringView("b") || encoding == QLatin1String("base64")) {
 +        if (m_encoding == "b" || m_encoding == "base64") {
              output = QByteArray::fromBase64(value);
              wasBase64Encoded = true;
--        } else if (encoding == QLatin1String("quoted-printable")) {
+-        } else if (encoding == QLatin1StringView("quoted-printable")) {
 +        } else if (m_encoding == "quoted-printable") {
              // join any qp-folded lines
              while (value.endsWith('=')) {
@@ -430,7 +430,7 @@ index a16f320f..bc91299c 100644
                  value.append(m_fetchAnotherLine());
              }
              KCodecs::quotedPrintableDecode(value, output);
--        } else if (encoding == QLatin1String("8bit")) {
+-        } else if (encoding == QLatin1StringView("8bit")) {
 +        } else if (m_encoding == "8bit") {
              output = value;
          } else {

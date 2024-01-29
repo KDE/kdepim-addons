@@ -46,12 +46,12 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
 
     const QString subjectDir = mHeaderStyleUtil.subjectDirectionString(message);
 
-    QString headerStr = QLatin1String(R"(<div class="header" dir=")") + dir + QLatin1String("\">\n");
+    QString headerStr = QLatin1StringView(R"(<div class="header" dir=")") + dir + QLatin1String("\">\n");
 
     if (strategy->showHeader(QStringLiteral("subject"))) {
         const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
-        headerStr += QLatin1String("<div dir=\"") + subjectDir + QLatin1String("\">\n") + QStringLiteral("<b style=\"font-size:130%\">");
+        headerStr += QLatin1StringView("<div dir=\"") + subjectDir + QLatin1String("\">\n") + QStringLiteral("<b style=\"font-size:130%\">");
 
         headerStr += mHeaderStyleUtil.subjectString(message, flags) + QStringLiteral("</b></div>\n");
     }
@@ -64,7 +64,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
         */
         QString fromPart = StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayFullAddress);
         if (!vCardName().isEmpty()) {
-            fromPart += QLatin1String("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1String("\">") + i18n("[vCard]") + QLatin1String("</a>");
+            fromPart += QLatin1StringView("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1String("\">") + i18n("[vCard]") + QLatin1String("</a>");
         }
         headerParts << fromPart;
     }
@@ -88,9 +88,9 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     }
 
     // remove all empty (modulo whitespace) entries and joins them via ", \n"
-    headerStr += QLatin1String(" (") + headerParts.filter(QRegularExpression(QStringLiteral("\\S"))).join(QLatin1String(",\n")) + QLatin1Char(')');
+    headerStr += QLatin1StringView(" (") + headerParts.filter(QRegularExpression(QStringLiteral("\\S"))).join(QLatin1String(",\n")) + QLatin1Char(')');
 
-    headerStr += QLatin1String("</div>\n");
+    headerStr += QLatin1StringView("</div>\n");
 
     // ### iterate over the rest of strategy->headerToDisplay() (or
     // ### all headers if DefaultPolicy == Display) (elsewhere, too)

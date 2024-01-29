@@ -112,7 +112,7 @@ public:
 
                 KConfig config(fileName, KConfig::SimpleConfig);
 
-                if (!config.hasGroup(QLatin1String("csv column map"))) {
+                if (!config.hasGroup(QLatin1StringView("csv column map"))) {
                     continue;
                 }
 

@@ -64,7 +64,7 @@ OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget() = default;
 
 void OpenUrlWithConfigureCreateWidget::slotLinkClicked(const QString &link)
 {
-    if (link == QLatin1String("whatsthis1")) {
+    if (link == QLatin1StringView("whatsthis1")) {
         QWhatsThis::showText(QCursor::pos(), mCommandWhatsThis);
     }
 }

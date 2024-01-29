@@ -52,7 +52,7 @@ void CheckAttachmentDialog::setEmails(const QStringList &emails)
 
 void CheckAttachmentDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigCheckAttachmentDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigCheckAttachmentDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
@@ -60,7 +60,7 @@ void CheckAttachmentDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigCheckAttachmentDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigCheckAttachmentDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

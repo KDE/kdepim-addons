@@ -62,14 +62,14 @@ void SelectImapFolderDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigSelectImapFolderDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigSelectImapFolderDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void SelectImapFolderDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigSelectImapFolderDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigSelectImapFolderDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }

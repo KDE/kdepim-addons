@@ -608,9 +608,9 @@ const QString AntiSpamWizard::uniqueNameFor(const QString &name)
 void AntiSpamWizard::sortFilterOnExistance(const QString &intendedFilterName, QString &newFilters, QString &replaceFilters)
 {
     if (uniqueNameFor(intendedFilterName) == intendedFilterName) {
-        newFilters += QLatin1String("<li>") + intendedFilterName + QLatin1String("</li>");
+        newFilters += QLatin1StringView("<li>") + intendedFilterName + QLatin1String("</li>");
     } else {
-        replaceFilters += QLatin1String("<li>") + intendedFilterName + QLatin1String("</li>");
+        replaceFilters += QLatin1StringView("<li>") + intendedFilterName + QLatin1String("</li>");
     }
 }
 

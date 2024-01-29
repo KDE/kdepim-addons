@@ -108,7 +108,7 @@ public:
                          }
                          label = MessageCore::StringUtil::quoteHtmlChars(label, true);
 
-                         const QString dir = mp->nodeHelper()->createTempDir(QLatin1String("ktnef-") + QString::number(i));
+                         const QString dir = mp->nodeHelper()->createTempDir(QLatin1StringView("ktnef-") + QString::number(i));
                          if (!parser.extractFileTo(att->name(), dir)) {
                              qCDebug(MS_TNEF_LOG) << "No possible to extract file:" << att->name();
                          }
@@ -120,7 +120,7 @@ public:
                              attFileName = att->name();
                          }
                          mp->nodeHelper()->addTempFile(dir + QLatin1Char('/') + attFileName);
-                         const QString href = QLatin1String("file:") + dir + QLatin1Char('/') + attFileName;
+                         const QString href = QLatin1StringView("file:") + dir + QLatin1Char('/') + attFileName;
 
                          const QString iconName =
                              QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(), KIconLoader::Desktop, attFileName)).url();

@@ -70,7 +70,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     if (!xface.photoURL.isEmpty()) {
         // qCDebug(MESSAGEVIEWER_LOG) << "Got a photo:" << xface.photoURL;
         userHTML = QStringLiteral("<img src=\"%1\" width=\"%2\" height=\"%3\"/>").arg(xface.photoURL).arg(xface.photoWidth).arg(xface.photoHeight);
-        userHTML = QLatin1String("<div class=\"senderpic\">") + userHTML + QLatin1String("</div>");
+        userHTML = QLatin1StringView("<div class=\"senderpic\">") + userHTML + QLatin1String("</div>");
     }
 
     // the subject line and box below for details
@@ -79,7 +79,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
 
         headerStr += QStringLiteral("<div dir=\"%1\">%2</div>\n").arg(subjectDir, mHeaderStyleUtil.subjectString(message, flags));
     }
-    headerStr += QLatin1String("<table class=\"outer\"><tr><td width=\"100%\"><table>\n");
+    headerStr += QLatin1StringView("<table class=\"outer\"><tr><td width=\"100%\"><table>\n");
     // headerStr += "<table>\n";
     // from line
     // the mailto: URLs can contain %3 etc., therefore usage of multiple
@@ -204,6 +204,6 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
 
     headerStr.append(QStringLiteral("</table></td><td align=\"center\">%1</td></tr></table>\n").arg(userHTML));
 
-    headerStr += QLatin1String("</div>\n\n");
+    headerStr += QLatin1StringView("</div>\n\n");
     return headerStr;
 }

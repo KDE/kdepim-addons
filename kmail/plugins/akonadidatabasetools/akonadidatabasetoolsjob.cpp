@@ -49,10 +49,10 @@ void AkonadiDatabaseToolsJob::start()
             deleteLater();
         });
         connect(mProcess, &QProcess::readyReadStandardError, this, [this]() {
-            Q_EMIT receivedStandardError(QLatin1String(mProcess->readAllStandardError()));
+            Q_EMIT receivedStandardError(QLatin1StringView(mProcess->readAllStandardError()));
         });
         connect(mProcess, &QProcess::readyReadStandardOutput, this, [this]() {
-            Q_EMIT receivedStandardOutput(QLatin1String(mProcess->readAllStandardOutput()));
+            Q_EMIT receivedStandardOutput(QLatin1StringView(mProcess->readAllStandardOutput()));
         });
         mProcess->start();
         break;
@@ -66,10 +66,10 @@ void AkonadiDatabaseToolsJob::start()
             deleteLater();
         });
         connect(mProcess, &QProcess::readyReadStandardError, this, [this]() {
-            Q_EMIT receivedStandardError(QLatin1String(mProcess->readAllStandardError()));
+            Q_EMIT receivedStandardError(QLatin1StringView(mProcess->readAllStandardError()));
         });
         connect(mProcess, &QProcess::readyReadStandardOutput, this, [this]() {
-            Q_EMIT receivedStandardOutput(QLatin1String(mProcess->readAllStandardOutput()));
+            Q_EMIT receivedStandardOutput(QLatin1StringView(mProcess->readAllStandardOutput()));
         });
         mProcess->start();
         break;

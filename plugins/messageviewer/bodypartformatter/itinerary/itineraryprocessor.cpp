@@ -34,11 +34,11 @@ static bool isPkPassContent(KMime::Content *content)
     if (mimetype != "application/octet-stream" && mimetype != "application/zip") {
         return false;
     }
-    if (ct->name().endsWith(QLatin1String("pkpass"))) {
+    if (ct->name().endsWith(QLatin1StringView("pkpass"))) {
         return true;
     }
     const auto cd = content->contentDisposition(false);
-    return cd && cd->filename().endsWith(QLatin1String("pkpass"));
+    return cd && cd->filename().endsWith(QLatin1StringView("pkpass"));
 }
 
 static bool isCalendarContent(KMime::Content *content)
@@ -51,11 +51,11 @@ static bool isCalendarContent(KMime::Content *content)
     if (mimetype != "text/plain" && mimetype != "application/octet-stream") {
         return false;
     }
-    if (ct && ct->name().endsWith(QLatin1String(".ics"))) {
+    if (ct && ct->name().endsWith(QLatin1StringView(".ics"))) {
         return true;
     }
     const auto cd = content->contentDisposition(false);
-    return cd && cd->filename().endsWith(QLatin1String(".ics"));
+    return cd && cd->filename().endsWith(QLatin1StringView(".ics"));
 }
 
 static KMime::Content *findMultipartRelatedParent(KMime::Content *node)
@@ -138,7 +138,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
             }
         }
     } else if (part.content()->contentType()->mimeType() == "application/pdf"
-               || part.content()->contentType()->name().endsWith(QLatin1String(".pdf"), Qt::CaseInsensitive)) {
+               || part.content()->contentType()->name().endsWith(QLatin1StringView(".pdf"), Qt::CaseInsensitive)) {
         isPdf = true;
         engine.setData(part.content()->decodedContent());
     } else if (isCalendarContent(part.content())) {

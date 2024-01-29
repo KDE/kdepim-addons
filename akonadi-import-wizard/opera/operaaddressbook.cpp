@@ -29,10 +29,10 @@ void OperaAddressBook::importAddressBook()
     KContacts::Addressee *contact = nullptr;
     while (!stream.atEnd()) {
         QString line = stream.readLine();
-        if (line == QLatin1String("#CONTACT")) {
+        if (line == QLatin1StringView("#CONTACT")) {
             appendContact(contact);
             foundContact = true;
-        } else if (line == QLatin1String("#FOLDER")) {
+        } else if (line == QLatin1StringView("#FOLDER")) {
             appendContact(contact);
             foundContact = false;
             // TODO
@@ -41,27 +41,27 @@ void OperaAddressBook::importAddressBook()
             if (!contact) {
                 contact = new KContacts::Addressee;
             }
-            if (line.startsWith(QLatin1String("ID"))) {
+            if (line.startsWith(QLatin1StringView("ID"))) {
                 // Nothing
-            } else if (line.startsWith(QLatin1String("NAME"))) {
+            } else if (line.startsWith(QLatin1StringView("NAME"))) {
                 contact->setName(line.remove(QStringLiteral("NAME=")));
-            } else if (line.startsWith(QLatin1String("URL"))) {
+            } else if (line.startsWith(QLatin1StringView("URL"))) {
                 KContacts::ResourceLocatorUrl url;
                 url.setUrl(QUrl(line.remove(QStringLiteral("URL="))));
                 contact->setUrl(url);
-            } else if (line.startsWith(QLatin1String("DESCRIPTION"))) {
+            } else if (line.startsWith(QLatin1StringView("DESCRIPTION"))) {
                 contact->setNote(line.remove(QStringLiteral("DESCRIPTION=")));
-            } else if (line.startsWith(QLatin1String("PHONE"))) {
+            } else if (line.startsWith(QLatin1StringView("PHONE"))) {
                 contact->insertPhoneNumber(KContacts::PhoneNumber(line.remove(QStringLiteral("PHONE=")), KContacts::PhoneNumber::Home));
-            } else if (line.startsWith(QLatin1String("FAX"))) {
+            } else if (line.startsWith(QLatin1StringView("FAX"))) {
                 contact->insertPhoneNumber(KContacts::PhoneNumber(line.remove(QStringLiteral("FAX=")), KContacts::PhoneNumber::Fax));
-            } else if (line.startsWith(QLatin1String("POSTALADDRESS"))) {
+            } else if (line.startsWith(QLatin1StringView("POSTALADDRESS"))) {
                 // TODO
-            } else if (line.startsWith(QLatin1String("PICTUREURL"))) {
+            } else if (line.startsWith(QLatin1StringView("PICTUREURL"))) {
                 // TODO
-            } else if (line.startsWith(QLatin1String("ICON"))) {
+            } else if (line.startsWith(QLatin1StringView("ICON"))) {
                 // TODO
-            } else if (line.startsWith(QLatin1String("SHORT NAME"))) {
+            } else if (line.startsWith(QLatin1StringView("SHORT NAME"))) {
                 contact->setNickName(line.remove(QStringLiteral("SHORT NAME=")));
             }
         }
