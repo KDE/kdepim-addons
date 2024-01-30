@@ -3,20 +3,21 @@
 # Tamas Szanto <taszanto@gmail.com>, 2004.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2012, 2014.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2014-10-18 12:14+0200\n"
-"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"PO-Revision-Date: 2024-01-29 09:41+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.01.90\n"
 
 #: text_vcard.cpp:87
 #, kde-format
@@ -31,10 +32,9 @@ msgid "[Add this contact to the address book]"
 msgstr "[A névjegy felvétele a címjegyzékbe]"
 
 #: text_vcard.cpp:136
-#, fuzzy, kde-format
-#| msgid "[Update this contact to the address book]"
+#, kde-format
 msgid "[Update this contact in the address book]"
-msgstr "[A névjegy frissítése a címjegyzékbe]"
+msgstr "[A névjegy frissítése a címjegyzékben]"
 
 #: text_vcard.cpp:141
 #, kde-format
@@ -77,10 +77,9 @@ msgid "Save Business Card"
 msgstr "Névjegy mentése"
 
 #: updatecontactjob.cpp:37
-#, fuzzy, kde-format
-#| msgid "The vCard's primary email address is already in addressbook."
+#, kde-format
 msgid "The vCard's primary email address is not in addressbook."
-msgstr "A vCard elsődleges e-mail címe már a címjegyzékben van."
+msgstr "A vCard elsődleges e-mail címe nincs a címjegyzékben."
 
 #: updatecontactjob.cpp:43
 #, kde-format
@@ -88,10 +87,7 @@ msgid "There are two or more contacts with same email stored in addressbook."
 msgstr "Két vagy több névjegy van ugyanazzal az e-mail címmel a névjegyzékben."
 
 #: updatecontactjob.cpp:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "The vCard was updated to your address book; you can add more information "
-#| "to this entry by opening the address book."
+#, kde-format
 msgid ""
 "The vCard was updated in your address book; you can add more information to "
 "this entry by opening the address book."
@@ -102,7 +98,7 @@ msgstr ""
 #: updatecontactjob.cpp:76
 #, kde-format
 msgid "Email not specified"
-msgstr ""
+msgstr "Az e-mail cím nincs megadva."
 
 #~ msgid "%1 already exists. Do you want to overwrite it?"
 #~ msgstr "%1 már létezik, felül szeretné írni?"

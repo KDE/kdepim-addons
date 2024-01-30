@@ -2,114 +2,114 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:37+0000\n"
-"PO-Revision-Date: 2017-03-04 14:42+0100\n"
-"Last-Translator: Kiszel Kristóf <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-01-29 09:47+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.01.90\n"
 
 #: adblock/adblockfilterdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
-msgstr ""
+msgstr "Reklámblokkoló lista beállítása"
 
 #: adblock/adblockfilterlistsmodel.cpp:95
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
-msgstr ""
+msgstr "Név"
 
 #: adblock/adblockfilterlistsmodel.cpp:97
 #, kde-format
 msgctxt "@title:column"
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: adblock/adblockfiltertreeview.cpp:59
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Hozzáadás…"
 
 #: adblock/adblockfiltertreeview.cpp:66
 #, kde-format
 msgid "Modify..."
-msgstr ""
+msgstr "Módosítás…"
 
 #: adblock/adblockfiltertreeview.cpp:72
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #: adblock/adblockfiltertreeview.cpp:80
 #, kde-format
 msgid "Show"
-msgstr ""
+msgstr "Megjelenítés"
 
 #: adblock/adblockfiltertreeview.cpp:95
 #, kde-format
 msgid "Update Lists"
-msgstr ""
+msgstr "Listák frissítése"
 
 #: adblock/adblockfiltertreeview.cpp:158
 #, kde-format
 msgid "Do you want to remove '%1' ?"
-msgstr ""
+msgstr "Szeretné eltávolítani ezt: „%1”?"
 
 #: adblock/adblockfiltertreeview.cpp:159
-#, fuzzy, kde-format
-#| msgid "Remove Filter"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
-msgstr "Szűrő eltávolítása"
+msgstr "Lista eltávolítása"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgid "Search..."
-msgstr ""
+msgstr "Keresés…"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr ""
+msgstr "Reklámblokkoló lista hozzáadása"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Név:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "URL:"
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
-msgstr ""
+msgstr "Reklámblokkoló bővítmény beállítása"
 
 #: adblock/adblockviewfilterdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr ""
+msgstr "Reklámblokkoló lista megjelenítése"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9
 #, kde-format
 msgid "Enabled ad block"
-msgstr ""
+msgstr "Reklámblokkolás bekapcsolva"
 
 #, fuzzy
 #~| msgid "Remove Filter"

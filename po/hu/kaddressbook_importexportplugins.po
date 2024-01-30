@@ -2,20 +2,21 @@
 # Tamas Szanto <taszanto@gmail.com>, 2000.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2014-07-24 22:01+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"PO-Revision-Date: 2024-01-29 09:34+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.01.90\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
@@ -195,9 +196,7 @@ msgstr ""
 "mezőelválasztóként."
 
 #: csv/import/csvimportdialog.cpp:346
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Custum field separator"
-#| msgid "Other"
+#, kde-format
 msgctxt "@option:radio Custom field separator"
 msgid "Other"
 msgstr "Egyéb"
@@ -263,9 +262,7 @@ msgstr ""
 "adatot „idézni” kell az itt megadott karakterrel."
 
 #: csv/import/csvimportdialog.cpp:376
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Qoute character option"
-#| msgid "\""
+#, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr "\""
@@ -535,12 +532,12 @@ msgstr "Névjegyek exportálása LDIF-fájlba."
 #: ldif/ldifimportexportplugininterface.cpp:106
 #, kde-format
 msgid "LDif Files"
-msgstr ""
+msgstr "LDif-fájlok"
 
 #: ldif/ldifimportexportplugininterface.cpp:144
 #, kde-format
 msgid "LDif Files (*.ldif)"
-msgstr ""
+msgstr "LDif-fájlok (*.ldif)"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:22
 #, kde-format
@@ -747,14 +744,9 @@ msgid "Export contacts to a vCard 2.1 file."
 msgstr "Névjegyek exportálása vCard 2.1 fájlba."
 
 #: vcards/vcardimportexportplugininterface.cpp:113
-#, fuzzy, kde-format
-#| msgid ""
-#| "*.vcf|vCard (*.vcf)\n"
-#| "*|all files (*)"
+#, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
-msgstr ""
-"*.vcf|vCard (*.vcf)\n"
-"*|minden fájl (*)"
+msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;Minden fájl (*)"
 
 #: vcards/vcardimportexportplugininterface.cpp:114
 #, kde-format
@@ -795,21 +787,19 @@ msgid "Export to Several Files"
 msgstr "Exportálás több fájlba"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
-#, fuzzy, kde-format
-#| msgid "Import CSV file..."
+#, kde-format
 msgid "Import Windows Contact file..."
-msgstr "CSV-fájl importálása…"
+msgstr "Windows névjegyfájl importálása…"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
-#, fuzzy, kde-format
-#| msgid "Import contacts from an LDIF file."
+#, kde-format
 msgid "Import contacts from windows contact file."
-msgstr "Névjegyek importálása egy LDIF-fájlból."
+msgstr "Névjegyek importálása egy Windows névjegyfájlból."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:68
 #, kde-format
 msgid "Windows Contact file (*.contact)"
-msgstr ""
+msgstr "Windows névjegyfájl (*.contact)"
 
 #, fuzzy
 #~| msgid "Select Address Book"
