@@ -29,12 +29,12 @@
 AdblockManager::AdblockManager(QObject *parent)
     : QObject{parent} // parsing the block lists takes some time, try to do it asynchronously
                       // if it is not ready when it's needed, reading the future will block
+    , mAdblockListManager(new AdblockListsManager(this))
     , mAdblockInitFuture(std::async(std::launch::async,
                                     [this] {
                                         return createOrRestoreAdblock();
                                     }))
     , mAdblock(std::nullopt)
-    , mAdblockListManager(new AdblockListsManager(this))
 {
     reloadConfig();
 
