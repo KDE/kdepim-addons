@@ -20,7 +20,7 @@
 #include <KMessageBox>
 #include <QMenu>
 
-#include <configuredialog/viewerpluginexternalconfiguredialog.h>
+#include "configuredialog/viewerpluginexternalconfiguredialog.h"
 
 using namespace MessageViewer;
 

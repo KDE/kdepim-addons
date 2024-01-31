@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <pimcommon/shorturlengineinterface.h>
+#include "pimcommon/shorturlengineinterface.h"
 
 class GoogleShortUrlEngineInterface : public ShortUrlEngineInterface
 {

@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <../shorturlengineinterface.h>
+#include "../shorturlengineinterface.h"
 
 #include <QSslError>
 class QNetworkReply;

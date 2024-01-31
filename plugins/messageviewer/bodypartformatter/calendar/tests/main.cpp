@@ -4,7 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include <../attendeeselector.h>
+#include "../attendeeselector.h"
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>

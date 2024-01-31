@@ -10,14 +10,14 @@
 #include <KLocalizedString>
 #include <QSplitter>
 
+#include "job/mergecontacts.h"
+#include "job/mergecontactsjob.h"
+#include "widgets/mergecontactinfowidget.h"
+#include "widgets/mergecontactloseinformationwarning.h"
 #include <Akonadi/CollectionComboBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <job/mergecontacts.h>
-#include <job/mergecontactsjob.h>
-#include <widgets/mergecontactinfowidget.h>
-#include <widgets/mergecontactloseinformationwarning.h>
 
 namespace KABMergeContacts
 {

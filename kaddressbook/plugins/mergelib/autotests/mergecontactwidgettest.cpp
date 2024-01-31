@@ -16,8 +16,8 @@
 #include <QTest>
 #include <qtestmouse.h>
 
-#include <widgets/mergecontactinfowidget.h>
-#include <widgets/mergecontactloseinformationwarning.h>
+#include "widgets/mergecontactinfowidget.h"
+#include "widgets/mergecontactloseinformationwarning.h"
 using namespace KABMergeContacts;
 
 namespace KABMergeContacts
