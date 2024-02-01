@@ -16,10 +16,10 @@ public:
     explicit AdblockInterceptorInterface(QObject *parent = nullptr);
     ~AdblockInterceptorInterface() override;
 
-    bool interceptRequest(QWebEngineUrlRequestInfo &info) override;
-    QList<QAction *> interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const override;
+    [[nodiscard]] bool interceptRequest(QWebEngineUrlRequestInfo &info) override;
+    [[nodiscard]] QList<QAction *> interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const override;
     void createActions(KActionCollection *ac) override;
-    QWebEngineView *webEngineView() const;
+    [[nodiscard]] QWebEngineView *webEngineView() const;
 
     void setWebEngineView(QWebEngineView *webEngineView);
 
