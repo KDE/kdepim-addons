@@ -443,7 +443,7 @@ void GMXImportExportPluginInterface::importGMX()
     QString line2;
     line = gmxStream.readLine();
     line2 = gmxStream.readLine();
-    if (!line.startsWith(QLatin1StringView("AB_ADDRESSES:")) || !line2.startsWith(QLatin1String("Address_id"))) {
+    if (!line.startsWith(QLatin1StringView("AB_ADDRESSES:")) || !line2.startsWith(QLatin1StringView("Address_id"))) {
         KMessageBox::error(parentWidget(), i18n("%1 is not a GMX address book file.", fileName));
         return;
     }
@@ -589,7 +589,7 @@ void GMXImportExportPluginInterface::importGMX()
     QStringList usedCategoryList;
     line = gmxStream.readLine();
     line2 = gmxStream.readLine();
-    if (!line.startsWith(QLatin1StringView("AB_CATEGORIES:")) || !line2.startsWith(QLatin1String("Category_id"))) {
+    if (!line.startsWith(QLatin1StringView("AB_CATEGORIES:")) || !line2.startsWith(QLatin1StringView("Category_id"))) {
         qCWarning(KADDRESSBOOK_IMPORTEXPORT_GMX_LOG) << "Could not find category records!";
     } else {
         while (!line.startsWith(QLatin1StringView("####")) && !gmxStream.atEnd()) {

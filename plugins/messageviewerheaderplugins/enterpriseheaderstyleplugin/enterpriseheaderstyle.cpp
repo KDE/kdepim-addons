@@ -98,7 +98,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
                      "icon.png\"/>\n"
                      "</div>\n");
     headerStr += QLatin1StringView("    <table style=\"color: ") + fontColor.name()
-        + QLatin1String(" ! important; margin: 1px; border-spacing: 0px;\" cellpadding='0'> \n");
+        + QLatin1StringView(" ! important; margin: 1px; border-spacing: 0px;\" cellpadding='0'> \n");
 
     // subject
     if (strategy->showHeader(QStringLiteral("subject"))) {
@@ -123,7 +123,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         // We by design use the stripped mail address here, it is more enterprise-like.
         QString fromPart = StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayFullAddress, linkColor);
         if (!vCardName().isEmpty()) {
-            fromPart += QLatin1StringView("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1String("\" ") + linkColor + QLatin1Char('>') + i18n("[vCard]")
+            fromPart += QLatin1StringView("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1StringView("\" ") + linkColor + QLatin1Char('>') + i18n("[vCard]")
                 + QLatin1StringView("</a>");
         }
         // TDDO strategy date

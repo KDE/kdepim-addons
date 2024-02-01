@@ -43,7 +43,7 @@ public:
         if (!mt.isValid()) {
             return false;
         }
-        if (mt.name() != QLatin1StringView("text/plain") && !mt.allAncestors().contains(QLatin1String("text/plain"))) {
+        if (mt.name() != QLatin1StringView("text/plain") && !mt.allAncestors().contains(QLatin1StringView("text/plain"))) {
             return false;
         }
 

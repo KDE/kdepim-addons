@@ -1182,7 +1182,7 @@ public:
     {
         // filter out known paths that don't belong to this type of urlmanager.
         // kolab/issue4054 msg27201
-        if (path.contains(QLatin1StringView("addToAddressBook:")) || path.contains(QLatin1String("updateToAddressBook"))) {
+        if (path.contains(QLatin1StringView("addToAddressBook:")) || path.contains(QLatin1StringView("updateToAddressBook"))) {
             return false;
         }
 
@@ -1248,7 +1248,7 @@ public:
             incidence = stringToIncidence(iCal);
             showCalendar(incidence->dtStart().date());
             return true;
-        } else if (path == QLatin1StringView("reply") || path == QLatin1String("cancel") || path == QLatin1String("accept_counter")) {
+        } else if (path == QLatin1StringView("reply") || path == QLatin1StringView("cancel") || path == QLatin1StringView("accept_counter")) {
             // These should just be saved with their type as the dir
             const QString p = (path == QLatin1StringView("accept_counter") ? QStringLiteral("reply") : path);
             if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, p, part)) {

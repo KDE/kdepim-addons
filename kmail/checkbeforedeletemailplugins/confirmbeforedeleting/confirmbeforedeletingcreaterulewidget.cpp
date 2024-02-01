@@ -53,7 +53,7 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDe
 void ConfirmBeforeDeletingCreateRuleWidget::slotRuleTypeChanged(int index)
 {
     const QString str = mRuleTypeComboBox->itemData(index).toString();
-    const bool isAStatus = (str == QLatin1StringView("unread") || str == QLatin1String("important"));
+    const bool isAStatus = (str == QLatin1StringView("unread") || str == QLatin1StringView("important"));
     mPatternLineEdit->setEnabled(!isAStatus);
     if (isAStatus) {
         mPatternLineEdit->clear();

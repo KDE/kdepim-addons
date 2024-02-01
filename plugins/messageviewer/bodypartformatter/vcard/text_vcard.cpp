@@ -121,7 +121,7 @@ public:
                 const QString filename = dir + QLatin1Char('/') + a.uid();
                 img.save(filename, "PNG");
                 msgPart->nodeHelper()->addTempFile(filename);
-                const QString href = QLatin1StringView("file:") + QLatin1String(QUrl::toPercentEncoding(filename));
+                const QString href = QLatin1StringView("file:") + QLatin1StringView(QUrl::toPercentEncoding(filename));
                 htmlStr.replace(QLatin1StringView("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(href));
             }
             writer->write(htmlStr);

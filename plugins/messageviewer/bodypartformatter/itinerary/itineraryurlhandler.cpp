@@ -90,7 +90,7 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
 bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
     Q_UNUSED(part)
-    if (path == QLatin1StringView("showCalendar") || path == QLatin1String("addToCalendar") || path == QLatin1String("import")
+    if (path == QLatin1StringView("showCalendar") || path == QLatin1StringView("addToCalendar") || path == QLatin1StringView("import")
         || path.startsWith(QLatin1StringView("sendToDevice-"))) {
         // suppress default context menus for our buttons
         return true;

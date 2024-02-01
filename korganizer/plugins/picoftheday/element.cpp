@@ -125,7 +125,7 @@ void POTDElement::handleImagesJsonResponse(KJob *job, PageProtectionState pagePr
 
     const auto json = QJsonDocument::fromJson(transferJob->data());
 
-    const auto pageObject = json.object().value(QLatin1StringView("query")).toObject().value(QLatin1String("pages")).toArray().at(0).toObject();
+    const auto pageObject = json.object().value(QLatin1StringView("query")).toObject().value(QLatin1StringView("pages")).toArray().at(0).toObject();
 
     auto missingIt = pageObject.find(QLatin1StringView("missing"));
     if ((missingIt != pageObject.end()) && missingIt.value().toBool(false)) {
@@ -191,7 +191,7 @@ void POTDElement::handleBasicImageInfoJsonResponse(KJob *job)
 
     const auto json = QJsonDocument::fromJson(transferJob->data());
 
-    const auto pagesObject = json.object().value(QLatin1StringView("query")).toObject().value(QLatin1String("pages")).toObject();
+    const auto pagesObject = json.object().value(QLatin1StringView("query")).toObject().value(QLatin1StringView("pages")).toObject();
     const auto pageObject = pagesObject.isEmpty() ? QJsonObject() : pagesObject.begin()->toObject();
     const auto imageInfo = pageObject.value(QLatin1StringView("imageinfo")).toArray().at(0).toObject();
 
@@ -247,7 +247,7 @@ void POTDElement::handleThumbImageInfoJsonResponse(KJob *job)
     auto const transferJob = static_cast<KIO::StoredTransferJob *>(job);
 
     const auto json = QJsonDocument::fromJson(transferJob->data());
-    auto pagesObject = json.object().value(QLatin1StringView("query")).toObject().value(QLatin1String("pages")).toObject();
+    auto pagesObject = json.object().value(QLatin1StringView("query")).toObject().value(QLatin1StringView("pages")).toObject();
     auto pageObject = pagesObject.isEmpty() ? QJsonObject() : pagesObject.begin()->toObject();
     auto imageInfo = pageObject.value(QLatin1StringView("imageinfo")).toArray().at(0).toObject();
 

@@ -42,7 +42,7 @@ void HeaderStyleMenuTest::styleChanged(MessageViewer::HeaderStylePlugin *plugin)
 {
     mTextEdit->append(QStringLiteral("strategy: %1, headerstyle: %2")
                           .arg(QLatin1StringView(plugin->headerStrategy()->name()))
-                          .arg(QLatin1String(plugin->headerStyle()->name())));
+                          .arg(QLatin1StringView(plugin->headerStyle()->name())));
 }
 
 int main(int argc, char **argv)

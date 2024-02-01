@@ -418,7 +418,7 @@ index a16f320f..bc91299c 100644
 -
 +    if (!m_encoding.isEmpty()) {
          // have to decode the data
--        if (encoding == QLatin1StringView("b") || encoding == QLatin1String("base64")) {
+-        if (encoding == QLatin1StringView("b") || encoding == QLatin1StringView("base64")) {
 +        if (m_encoding == "b" || m_encoding == "base64") {
              output = QByteArray::fromBase64(value);
              wasBase64Encoded = true;
