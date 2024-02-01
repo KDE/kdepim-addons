@@ -14,7 +14,6 @@
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent)
-    , mAdblockManager(new AdblockManager(this))
 {
 }
 
@@ -27,7 +26,7 @@ bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
         return false;
     }
     qDebug(ADBLOCKINTERCEPTOR_LOG) << "Enabled at the moment";
-    return mAdblockManager->interceptRequest(info);
+    return AdblockManager::self()->interceptRequest(info);
 }
 
 QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const
