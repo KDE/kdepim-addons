@@ -20,7 +20,7 @@ public:
     explicit AdblockPluginUrlInterceptor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~AdblockPluginUrlInterceptor() override;
 
-    WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) override;
+    [[nodiscard]] WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) override;
 
     void showConfigureDialog(QWidget *parent) override;
     [[nodiscard]] bool hasConfigureDialog() const override;

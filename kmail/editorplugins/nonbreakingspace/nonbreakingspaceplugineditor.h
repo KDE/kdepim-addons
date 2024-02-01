@@ -18,5 +18,5 @@ public:
     explicit NonBreakingSpacePluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~NonBreakingSpacePluginEditor() override;
 
-    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
 };

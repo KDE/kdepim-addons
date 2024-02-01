@@ -18,7 +18,7 @@ public:
     explicit ExternalComposerPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~ExternalComposerPluginEditor() override;
 
-    MessageComposer::PluginEditorInitInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] MessageComposer::PluginEditorInitInterface *createInterface(QObject *parent = nullptr) override;
 
     [[nodiscard]] bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;

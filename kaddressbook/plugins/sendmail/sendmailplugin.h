@@ -19,6 +19,6 @@ public:
     explicit SendMailPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~SendMailPlugin() override;
 
-    PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
     [[nodiscard]] bool hasPopupMenuSupport() const override;
 };

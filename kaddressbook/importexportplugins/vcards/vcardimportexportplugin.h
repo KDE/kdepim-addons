@@ -16,6 +16,6 @@ public:
     explicit VCardImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~VCardImportExportPlugin() override;
 
-    PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent) override;
+    [[nodiscard]] PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent) override;
     [[nodiscard]] bool hasPopupMenuSupport() const override;
 };

@@ -19,5 +19,5 @@ public:
     explicit AkonadiDatabaseToolsPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~AkonadiDatabaseToolsPlugin() override;
 
-    PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
 };

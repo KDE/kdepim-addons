@@ -18,5 +18,5 @@ public:
     explicit AutoCorrectionPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~AutoCorrectionPluginEditor() override;
 
-    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
 };
