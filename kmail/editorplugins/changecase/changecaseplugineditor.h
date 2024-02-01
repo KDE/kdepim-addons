@@ -18,6 +18,6 @@ public:
     explicit ChangeCasePluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~ChangeCasePluginEditor() override;
 
-    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
     [[nodiscard]] bool hasPopupMenuSupport() const override;
 };

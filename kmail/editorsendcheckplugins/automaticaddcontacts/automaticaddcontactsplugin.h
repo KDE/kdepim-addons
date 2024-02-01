@@ -15,7 +15,7 @@ public:
     explicit AutomaticAddContactsPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~AutomaticAddContactsPlugin() override;
 
-    MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) override;
+    [[nodiscard]] MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) override;
     [[nodiscard]] bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
 };

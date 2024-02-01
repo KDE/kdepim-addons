@@ -19,5 +19,5 @@ public:
     explicit AntiVirusPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~AntiVirusPlugin() override;
 
-    PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
 };

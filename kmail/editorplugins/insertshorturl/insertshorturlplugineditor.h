@@ -18,7 +18,7 @@ public:
     explicit InsertShorturlPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~InsertShorturlPluginEditor() override;
 
-    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
 
     [[nodiscard]] bool hasPopupMenuSupport() const override;
     [[nodiscard]] bool hasConfigureDialog() const override;

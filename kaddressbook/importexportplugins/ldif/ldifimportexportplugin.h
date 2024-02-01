@@ -16,6 +16,6 @@ public:
     explicit LDifImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~LDifImportExportPlugin() override;
 
-    PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent) override;
+    [[nodiscard]] PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent) override;
     [[nodiscard]] bool hasPopupMenuSupport() const override;
 };

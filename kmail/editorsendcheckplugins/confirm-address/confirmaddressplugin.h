@@ -16,7 +16,7 @@ public:
     explicit ConfirmAddressPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~ConfirmAddressPlugin() override;
 
-    MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) override;
+    [[nodiscard]] MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) override;
     [[nodiscard]] bool hasConfigureDialog() const override;
 
     void showConfigureDialog(QWidget *parent) override;

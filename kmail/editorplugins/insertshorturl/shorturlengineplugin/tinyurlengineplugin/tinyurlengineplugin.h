@@ -17,6 +17,6 @@ public:
     explicit TinyUrlEnginePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~TinyUrlEnginePlugin() override;
 
-    ShortUrlEngineInterface *createInterface(QObject *parent) override;
-    QString engineName() const override;
+    [[nodiscard]] ShortUrlEngineInterface *createInterface(QObject *parent) override;
+    [[nodiscard]] QString engineName() const override;
 };

@@ -18,7 +18,7 @@ public:
     explicit QuickTextPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~QuickTextPluginEditor() override;
 
-    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
     [[nodiscard]] bool hasStatusBarSupport() const override;
 
     [[nodiscard]] bool hasConfigureDialog() const override;

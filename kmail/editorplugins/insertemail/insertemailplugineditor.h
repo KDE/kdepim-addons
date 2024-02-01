@@ -18,5 +18,5 @@ public:
     explicit InsertEmailPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~InsertEmailPluginEditor() override;
 
-    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
 };
