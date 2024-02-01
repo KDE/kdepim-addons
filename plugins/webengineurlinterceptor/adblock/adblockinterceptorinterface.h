@@ -9,7 +9,6 @@
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 #include <WebEngineViewer/WebHitTestResult>
 class QWebEngineView;
-class AdblockManager;
 class AdblockInterceptorInterface : public WebEngineViewer::NetworkPluginUrlInterceptorInterface
 {
     Q_OBJECT
@@ -29,5 +28,4 @@ private:
     QAction *mShowBlockableItems = nullptr;
     QAction *mBlockImage = nullptr;
     QWebEngineView *mWebEngineView = nullptr;
-    AdblockManager *const mAdblockManager;
 };
