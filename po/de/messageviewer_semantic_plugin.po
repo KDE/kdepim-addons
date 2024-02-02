@@ -81,7 +81,8 @@ msgstr "Reservierung abgebrochen."
 #: templates/busreservation.html:49 templates/busreservation.html:69
 #: templates/flightreservation.html:62 templates/flightreservation.html:79
 #: templates/trainreservation.html:62 templates/trainreservation.html:90
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Seat: %1"
 msgid "Seat: %1"
 msgstr "Sitz: %1"
 
@@ -156,7 +157,8 @@ msgid "Class: %1"
 msgstr "Klasse: %1"
 
 #: templates/trainreservation.html:58 templates/trainreservation.html:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Coach: %1"
 msgid "Coach: %1"
 msgstr "Wagen: %1"
 
