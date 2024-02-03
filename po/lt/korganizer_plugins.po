@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:39+0000\n"
-"PO-Revision-Date: 2015-12-29 21:21+0200\n"
+"PO-Revision-Date: 2024-02-02 21:30+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "Rodyti abu"
 #: plugins/datenums/datenums.cpp:36
 #, kde-format
 msgid "This plugin shows information on a day's position in the year."
-msgstr "Šis priedas rodo informaciją apie dienos poziciją metuose."
+msgstr "Šis įskiepis rodo informaciją apie dienos poziciją metuose."
 
 #: plugins/datenums/datenums.cpp:54
 #, kde-format
@@ -199,7 +199,7 @@ msgstr ""
 #: plugins/hebrew/hebrew.cpp:67
 #, kde-format
 msgid "This plugin provides the date in the Jewish calendar."
-msgstr "Šis priedas pateikia datą pagal žydų kalendorių."
+msgstr "Šis įskiepis pateikia datą pagal žydų kalendorių."
 
 #: plugins/hebrew/holiday.cpp:75
 #, kde-format
@@ -775,13 +775,13 @@ msgstr "<qt>Įkeliama <i>Dienos nuotrauka</i>...</qt>"
 #: plugins/picoftheday/picoftheday.cpp:48
 #, kde-format
 msgid "<qt>This plugin provides the Wikipedia <i>Picture of the Day</i>.</qt>"
-msgstr "<qt>Šis priedas pateikia Wikipedijos <i>Dienos nuotrauką</i>.</qt>"
+msgstr "<qt>Šis įskiepis pateikia Vikipedijos <i>dienos nuotrauką</i>.</qt>"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:29
 #, kde-format
 msgid "This plugin provides links to Wikipedia's 'This Day in History' pages."
 msgstr ""
-"Šis priedas pateikia nuorodas į Wikipedijos puslapius apie „Šią dieną "
+"Šis įskiepis pateikia nuorodas į Vikipedijos puslapius apie „Šią dieną "
 "istorijoje“."
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:37
