@@ -12,21 +12,22 @@
 # Diego Iastrubni <elcuco@kde.org>, 2005.
 # Diego Iastrubni <elcuco@kde.org>, 2005.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_importexportplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2024-01-11 00:45+0200\n"
+"PO-Revision-Date: 2024-02-04 22:22+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
@@ -256,6 +257,9 @@ msgid ""
 "if the comma is the field delimiter, then any comma occurring with the data "
 "will be \"quoted\" by the character specified here."
 msgstr ""
+"נא לבחור את התו בו נתוני ה־csv שלך משתמשים כדי „לתחום” את מפריד השדות אם התו "
+"הוא חלק מהנתונים. למשל, אם פסיק מפריד בין השדות, אז פסיק כחלק מהנתונים "
+"„יתוחם” בתו שצוין כאן."
 
 #: csv/import/csvimportdialog.cpp:376
 #, kde-format
@@ -311,6 +315,13 @@ msgid ""
 "para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
 "para>"
 msgstr ""
+"<para>נא לציין את התסדיר לשימוש עבור התאריכים שבנתוני ה־csv שלך. יש להשתמש "
+"ברצפים הבאים כדי לסייע לך להגדיר את התסדיר:</para><para><list><item>y: שנה "
+"בשתי ספרות</item><item>Y: שנה ב־4 ספרות</item><item>m: חודש בספרה או שתי "
+"ספרות</item><item>M: חודש ב־2 ספרות</item><item>d: יום בספרה או שתי ספרות</"
+"item><item>D: יום ב־2 ספרות</item><item>H: שעות ב־2 ספרות</item><item>I: "
+"דקות ב־2 ספרות</item><item>S: שניות ב־2 ספרות</item></list></"
+"para><para>לדוגמה: „Y-M-D” תואם לתאריך כגון „2012-01-04”</para>"
 
 #: csv/import/csvimportdialog.cpp:417
 #, kde-format
