@@ -131,8 +131,12 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
         if (const auto rootNode = findMultipartRelatedParent(part.content())) {
             const auto children = rootNode->contents();
             for (const auto node : children) {
-                if (node->contentID(false) && node->contentType(false) && node->contentType()->mimeType() == "image/png") {
-                    auto pngNode = engine.documentNodeFactory()->createNode(node->decodedContent(), {}, u"image/png");
+                const auto ct = node->contentType(false);
+                if (!ct || !node->contentID(false)) {
+                    continue;
+                }
+                if (ct->mimeType() == "image/png" || ct->mimeType() == "image/gif") {
+                    auto pngNode = engine.documentNodeFactory()->createNode(node->decodedContent(), {}, QString::fromUtf8(ct->mimeType()));
                     engine.rootDocumentNode().appendChild(pngNode);
                 }
             }
