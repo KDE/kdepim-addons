@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2017.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-26 06:23+0300\n"
+"PO-Revision-Date: 2024-02-09 17:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
 msgid "Check Gravatar..."
-msgstr "Gravatar'ı Denetle..."
+msgstr "Gravatar’ı Denetle..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -52,13 +52,13 @@ msgstr "Görseli Kaydet"
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
 #, kde-format
 msgid "Save Image URL"
-msgstr "Görsel URL'sini Kaydet"
+msgstr "Görsel URL’sini Kaydet"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Check and update Gravatar"
-msgstr "Gravatar'ı denetle ve güncelle"
+msgstr "Gravatar’ı denetle ve güncelle"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
 #, kde-format

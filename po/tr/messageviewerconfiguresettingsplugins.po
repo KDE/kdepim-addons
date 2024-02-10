@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-06 01:33+0000\n"
-"PO-Revision-Date: 2023-09-26 06:19+0300\n"
+"PO-Revision-Date: 2024-02-09 17:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -249,7 +249,7 @@ msgstr "Seçimi Kaldır"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Gravatar"
-msgstr "Gravatar'ı Yapılandır"
+msgstr "Gravatar’ı Yapılandır"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
 #, kde-format
@@ -301,7 +301,7 @@ msgstr "Çalıştırılabilir:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
-msgstr "URL Aç'ı Eklentiyle Yapılandır"
+msgstr "URL Aç’ı Eklentiyle Yapılandır"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:55
 #, kde-format
@@ -385,9 +385,9 @@ msgstr "Tüm Denetlemeleri Kapat"
 #: scamsettings/scamconfigureutils.cpp:17
 #, kde-format
 msgid "Redirect Url"
-msgstr "URL'yi Yeniden Yönlendir"
+msgstr "URL’yi Yeniden Yönlendir"
 
 #: scamsettings/scamconfigureutils.cpp:19
 #, kde-format
 msgid "Has Ip"
-msgstr "IP'si var"
+msgstr "IP’si var"

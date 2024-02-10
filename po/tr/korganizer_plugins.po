@@ -14,13 +14,13 @@
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2015.
 # Yaşar Şentürk <yasar@kde.org.tr>, 2005.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:39+0000\n"
-"PO-Revision-Date: 2023-11-13 07:32+0300\n"
+"PO-Revision-Date: 2024-02-09 17:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.01.95\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413104942.000000\n"
 
@@ -281,12 +281,12 @@ msgstr "Ş. Nahamu"
 #: plugins/hebrew/holiday.cpp:248
 #, kde-format
 msgid "Tisha B'Av"
-msgstr "Tişa B'Av"
+msgstr "Tişa B’Av"
 
 #: plugins/hebrew/holiday.cpp:254
 #, kde-format
 msgid "S'lichot"
-msgstr "S'lihot"
+msgstr "S’lihot"
 
 #: plugins/hebrew/holiday.cpp:256
 #, kde-format
@@ -383,7 +383,7 @@ msgstr "Purim Katan"
 #: plugins/hebrew/holiday.cpp:411 plugins/hebrew/holiday.cpp:431
 #, kde-format
 msgid "Ta'anit Ester"
-msgstr "Ta'anit Ester"
+msgstr "Ta’anit Ester"
 
 #: plugins/hebrew/holiday.cpp:420 plugins/hebrew/holiday.cpp:425
 #, kde-format
@@ -437,7 +437,7 @@ msgstr "Noah"
 #: plugins/hebrew/parsha.cpp:29
 #, kde-format
 msgid "Lech L'cha"
-msgstr "Leh L'cha"
+msgstr "Leh L’cha"
 
 #: plugins/hebrew/parsha.cpp:29
 #, kde-format
