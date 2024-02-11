@@ -34,6 +34,7 @@
         "Description[zh_TW]": "這個外掛程式讓您輸入特殊字元到附件名稱或郵件等等當中。",
         "EnabledByDefault": false,
         "Name": "Snippet",
+        "Name[ar]": "قصاصة",
         "Name[bg]": "Фрагмент",
         "Name[ca@valencia]": "Retall",
         "Name[ca]": "Retall",
