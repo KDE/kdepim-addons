@@ -14,4 +14,7 @@ class ScamConfigureSettingsTreeView : public QTreeView
 public:
     explicit ScamConfigureSettingsTreeView(QWidget *parent = nullptr);
     ~ScamConfigureSettingsTreeView() override;
+
+protected:
+    void contextMenuEvent(QContextMenuEvent *event) override;
 };
