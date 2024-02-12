@@ -20,6 +20,17 @@
 #include <KActionCollection>
 #include <KActionMenu>
 
+#ifndef Q_OS_WIN
+void initLocale()
+{
+    setenv("LC_ALL", "en_US.utf-8", 1);
+    setenv("TZ", "UTC", 1);
+    QLocale::setDefault(QLocale(QStringLiteral("en_US")));
+}
+
+Q_CONSTRUCTOR_FUNCTION(initLocale)
+#endif
+
 GrantleeHeaderStylePluginTest::GrantleeHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
 {
@@ -30,7 +41,6 @@ GrantleeHeaderStylePluginTest::~GrantleeHeaderStylePluginTest() = default;
 void GrantleeHeaderStylePluginTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
-    qputenv("LC_ALL", "C");
     expectedDataLocation = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     expectedDataLocation += QStringLiteral("/messageviewer/themes");
     QDir targetDir(expectedDataLocation);
