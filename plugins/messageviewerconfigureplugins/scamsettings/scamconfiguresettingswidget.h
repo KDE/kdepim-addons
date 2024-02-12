@@ -8,7 +8,7 @@
 
 #include "scamconfiguresettings_private_export.h"
 #include <QWidget>
-class ScamConfigureSettingsTreeWidget;
+class ScamConfigureSettingsTreeView;
 namespace MessageViewer
 {
 class ScamDetectionInfo;
@@ -25,5 +25,5 @@ public:
 
 private:
     void fillList(const QList<MessageViewer::ScamDetectionInfo> &scanInfo);
-    ScamConfigureSettingsTreeWidget *const mTreeWidget;
+    ScamConfigureSettingsTreeView *const mTreeWidget;
 };

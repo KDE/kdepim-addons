@@ -10,8 +10,8 @@ target_sources(scamconfiguresettings PRIVATE
     scamconfiguresettingsdialog.h
     scamconfiguresettingswidget.h
     scamconfigureutils.h
-    scamconfiguresettingstreewidget.h
-    scamconfiguresettingstreewidget.cpp
+    scamconfiguresettingstreeview.h
+    scamconfiguresettingstreeview.cpp
     scamlistsmodel.h
     scamlistsmodel.cpp
     )
