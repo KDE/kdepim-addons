@@ -12,3 +12,5 @@ ScamConfigureSettingsTreeWidget::ScamConfigureSettingsTreeWidget(QWidget *parent
 }
 
 ScamConfigureSettingsTreeWidget::~ScamConfigureSettingsTreeWidget() = default;
+
+#include "moc_scamconfiguresettingstreewidget.cpp"
