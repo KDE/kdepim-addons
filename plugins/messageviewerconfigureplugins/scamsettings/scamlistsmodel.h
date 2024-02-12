@@ -16,6 +16,7 @@ class ScamListsModel : public QAbstractListModel
     Q_OBJECT
 public:
     enum ScamRole {
+        Enabled,
         Domain,
         Check,
         LastColumn = Check,

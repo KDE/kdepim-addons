@@ -45,8 +45,9 @@ void ScamConfigureSettingsWidget::saveSettings()
 
 void ScamConfigureSettingsWidget::fillList(const QList<MessageViewer::ScamDetectionInfo> &scanInfo)
 {
-    for (const MessageViewer::ScamDetectionInfo &info : scanInfo) { }
-    // TODO
+    for (const MessageViewer::ScamDetectionInfo &info : scanInfo) {
+        // TODO
+    }
 }
 
 #include "moc_scamconfiguresettingswidget.cpp"

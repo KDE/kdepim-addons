@@ -51,6 +51,8 @@ QVariant ScamListsModel::headerData(int section, Qt::Orientation orientation, in
 {
     if (role == Qt::DisplayRole && orientation == Qt::Horizontal) {
         switch (static_cast<ScamRole>(section)) {
+        case ScamRole::Enabled:
+            return {};
         case ScamRole::Domain:
             return i18nc("@title:column", "Domain");
         case ScamRole::Check:
@@ -72,6 +74,8 @@ QVariant ScamListsModel::data(const QModelIndex &index, int role) const
     const MessageViewer::ScamDetectionInfo &info = mInfo.at(index.row());
     const int col = index.column();
     switch (static_cast<ScamRole>(col)) {
+    case ScamRole::Enabled:
+        return info.enabled();
     case ScamRole::Domain:
         return info.domainOrEmail();
     case ScamRole::Check:
