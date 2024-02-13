@@ -3,13 +3,14 @@
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2017.
 # Мария Шикунова <translation-team@basealt.ru>, 2022.
+# SPDX-FileCopyrightText: 2024 Alexander Yavorsky <kekcuha@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-07 00:51+0000\n"
-"PO-Revision-Date: 2022-02-21 14:46+0300\n"
-"Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
+"PO-Revision-Date: 2024-02-12 10:02+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
@@ -149,7 +150,7 @@ msgstr "Искать адрес на карте"
 
 #: templates/lodgingreservation.html:10
 msgid "Reserved for: "
-msgstr ""
+msgstr "Забронировано для: "
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format
