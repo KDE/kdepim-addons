@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2024-02-05 11:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -362,16 +362,6 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "配置垃圾邮件设置"
 
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Domain"
-msgstr "域"
-
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Check"
-msgstr "检查"
-
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
@@ -386,3 +376,17 @@ msgstr "重定向网址"
 #, kde-format
 msgid "Has Ip"
 msgstr "有 IP"
+
+#: scamsettings/scamlistsmodel.cpp:57
+#, fuzzy, kde-format
+#| msgid "Domain"
+msgctxt "@title:column"
+msgid "Domain"
+msgstr "域"
+
+#: scamsettings/scamlistsmodel.cpp:59
+#, fuzzy, kde-format
+#| msgid "Check"
+msgctxt "@title:column"
+msgid "Check"
+msgstr "检查"

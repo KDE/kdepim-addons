@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2023-09-30 10:39+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -371,16 +371,6 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "Конфигуриране на настройки за измами"
 
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Domain"
-msgstr "Домейн"
-
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Check"
-msgstr "Проверка"
-
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
@@ -395,3 +385,17 @@ msgstr "Пренасочване на Url"
 #, kde-format
 msgid "Has Ip"
 msgstr "Има Ip"
+
+#: scamsettings/scamlistsmodel.cpp:57
+#, fuzzy, kde-format
+#| msgid "Domain"
+msgctxt "@title:column"
+msgid "Domain"
+msgstr "Домейн"
+
+#: scamsettings/scamlistsmodel.cpp:59
+#, fuzzy, kde-format
+#| msgid "Check"
+msgctxt "@title:column"
+msgid "Check"
+msgstr "Проверка"

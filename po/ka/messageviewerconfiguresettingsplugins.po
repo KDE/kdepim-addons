@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2023-09-27 05:35+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -370,16 +370,6 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "სკამის მორგება"
 
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Domain"
-msgstr "დომენი"
-
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Check"
-msgstr "შემოწმება"
-
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
@@ -394,3 +384,17 @@ msgstr "გადამისამართების URL-ი"
 #, kde-format
 msgid "Has Ip"
 msgstr "მისი IP"
+
+#: scamsettings/scamlistsmodel.cpp:57
+#, fuzzy, kde-format
+#| msgid "Domain"
+msgctxt "@title:column"
+msgid "Domain"
+msgstr "დომენი"
+
+#: scamsettings/scamlistsmodel.cpp:59
+#, fuzzy, kde-format
+#| msgid "Check"
+msgctxt "@title:column"
+msgid "Check"
+msgstr "შემოწმება"

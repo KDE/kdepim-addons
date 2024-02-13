@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2023-09-26 12:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -376,16 +376,6 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "Configuració de les opcions de la suplantació"
 
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Domain"
-msgstr "Domini"
-
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Check"
-msgstr "Comprovació"
-
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
@@ -400,3 +390,17 @@ msgstr "URL de redirecció"
 #, kde-format
 msgid "Has Ip"
 msgstr "Té la IP"
+
+#: scamsettings/scamlistsmodel.cpp:57
+#, fuzzy, kde-format
+#| msgid "Domain"
+msgctxt "@title:column"
+msgid "Domain"
+msgstr "Domini"
+
+#: scamsettings/scamlistsmodel.cpp:59
+#, fuzzy, kde-format
+#| msgid "Check"
+msgctxt "@title:column"
+msgid "Check"
+msgstr "Comprovació"

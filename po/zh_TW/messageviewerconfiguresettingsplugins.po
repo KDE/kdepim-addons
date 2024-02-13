@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2024-01-15 23:45+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -363,16 +363,6 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "設定垃圾信選項"
 
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Domain"
-msgstr "網域"
-
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Check"
-msgstr "檢查"
-
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
@@ -387,6 +377,20 @@ msgstr "重新導向 URL"
 #, kde-format
 msgid "Has Ip"
 msgstr "有 IP"
+
+#: scamsettings/scamlistsmodel.cpp:57
+#, fuzzy, kde-format
+#| msgid "Domain"
+msgctxt "@title:column"
+msgid "Domain"
+msgstr "網域"
+
+#: scamsettings/scamlistsmodel.cpp:59
+#, fuzzy, kde-format
+#| msgid "Check"
+msgctxt "@title:column"
+msgid "Check"
+msgstr "檢查"
 
 #, fuzzy
 #~| msgid "Configure Gravatar"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-06 01:33+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -361,16 +361,6 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr ""
 
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Domain"
-msgstr ""
-
-#: scamsettings/scamconfiguresettingswidget.cpp:28
-#, kde-format
-msgid "Check"
-msgstr ""
-
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
@@ -384,4 +374,16 @@ msgstr ""
 #: scamsettings/scamconfigureutils.cpp:19
 #, kde-format
 msgid "Has Ip"
+msgstr ""
+
+#: scamsettings/scamlistsmodel.cpp:57
+#, kde-format
+msgctxt "@title:column"
+msgid "Domain"
+msgstr ""
+
+#: scamsettings/scamlistsmodel.cpp:59
+#, kde-format
+msgctxt "@title:column"
+msgid "Check"
 msgstr ""
