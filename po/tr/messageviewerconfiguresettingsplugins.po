@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-13 00:38+0000\n"
-"PO-Revision-Date: 2024-02-09 17:46+0300\n"
+"PO-Revision-Date: 2024-02-13 16:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
 msgid "Still verify the signature, if a domain is only testing DKIM"
-msgstr "Bir alan adı yalnızca DKIM sınaması yapıyorsa imzayı yine de doğrula"
+msgstr "Bir etki alanı yalnızca DKIM sınaması yapıyorsa imzayı yine de doğrula"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format
@@ -383,15 +383,13 @@ msgid "Has Ip"
 msgstr "IP’si var"
 
 #: scamsettings/scamlistsmodel.cpp:57
-#, fuzzy, kde-format
-#| msgid "Domain"
+#, kde-format
 msgctxt "@title:column"
 msgid "Domain"
-msgstr "Alan Adı"
+msgstr "Etki Alanı"
 
 #: scamsettings/scamlistsmodel.cpp:59
-#, fuzzy, kde-format
-#| msgid "Check"
+#, kde-format
 msgctxt "@title:column"
 msgid "Check"
-msgstr "Denetle"
+msgstr "Denetim"

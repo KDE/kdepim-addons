@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-13 00:38+0000\n"
-"PO-Revision-Date: 2023-09-27 05:35+0200\n"
+"PO-Revision-Date: 2024-02-13 05:09+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -386,15 +386,13 @@ msgid "Has Ip"
 msgstr "მისი IP"
 
 #: scamsettings/scamlistsmodel.cpp:57
-#, fuzzy, kde-format
-#| msgid "Domain"
+#, kde-format
 msgctxt "@title:column"
 msgid "Domain"
 msgstr "დომენი"
 
 #: scamsettings/scamlistsmodel.cpp:59
-#, fuzzy, kde-format
-#| msgid "Check"
+#, kde-format
 msgctxt "@title:column"
 msgid "Check"
 msgstr "შემოწმება"
