@@ -25,12 +25,12 @@ public:
     void writeSettings();
 
 private:
-    void slotCustomContextMenuRequested(const QPoint &p);
-    void slotAddRule();
-    void slotEditRule();
-    void slotRemoveRule();
-    void displayText(const MessageViewer::OpenWithUrlInfo &r, OpenUrlWithConfigureItem *item);
-    void updateButtons();
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void slotCustomContextMenuRequested(const QPoint &p);
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void slotAddRule();
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void slotEditRule();
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void slotRemoveRule();
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void displayText(const MessageViewer::OpenWithUrlInfo &r, OpenUrlWithConfigureItem *item);
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void updateButtons();
     QListWidget *const mListWidget;
     QPushButton *const mAddRule;
     QPushButton *const mRemoveRule;

@@ -24,8 +24,8 @@ public:
     [[nodiscard]] Akonadi::Collection::List listCollections() const;
 
 private:
-    void changeFolderSelection(bool select);
-    void slotSelectionChanged();
+    LIBFOLDERCONFIGURESETTINGS_NO_EXPORT void changeFolderSelection(bool select);
+    LIBFOLDERCONFIGURESETTINGS_NO_EXPORT void slotSelectionChanged();
     FolderSettingFilterProxyModel *const mFolderSettingFilterProxyModel;
     MailCommon::FolderTreeWidget *const mFolderTreeWidget;
     QPushButton *mSelectFolder = nullptr;

@@ -19,9 +19,9 @@ public:
     explicit FancyHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~FancyHeaderStylePlugin() override;
 
-    HeaderStyle *headerStyle() const override;
-    HeaderStrategy *headerStrategy() const override;
-    HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
+    [[nodiscard]] HeaderStyle *headerStyle() const override;
+    [[nodiscard]] HeaderStrategy *headerStrategy() const override;
+    [[nodiscard]] HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
     [[nodiscard]] QString name() const override;
     [[nodiscard]] int elidedTextSize() const override;
     [[nodiscard]] QString extraScreenCss(const QString &headerFont) const override;

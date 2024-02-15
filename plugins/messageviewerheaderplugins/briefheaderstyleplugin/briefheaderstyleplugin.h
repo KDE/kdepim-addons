@@ -20,10 +20,10 @@ public:
     explicit BriefHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~BriefHeaderStylePlugin() override;
 
-    HeaderStyle *headerStyle() const override;
-    HeaderStrategy *headerStrategy() const override;
-    HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
-    QString name() const override;
+    [[nodiscard]] HeaderStyle *headerStyle() const override;
+    [[nodiscard]] HeaderStrategy *headerStrategy() const override;
+    [[nodiscard]] HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
+    [[nodiscard]] QString name() const override;
 
 private:
     HeaderStyle *const mHeaderStyle;

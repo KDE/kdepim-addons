@@ -17,8 +17,8 @@ public:
     ~OpenUrlWithConfigureDialog() override;
 
 private:
-    void slotAccepted();
-    void readConfig();
-    void writeConfig();
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void slotAccepted();
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void readConfig();
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void writeConfig();
     OpenUrlWithConfigureWidget *const mOpenUrlWithWidget;
 };

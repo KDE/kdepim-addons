@@ -16,7 +16,7 @@ class ViewerPluginCreatenote : public MessageViewer::ViewerPlugin
 public:
     explicit ViewerPluginCreatenote(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
 
-    ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
+    [[nodiscard]] ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
     [[nodiscard]] QString viewerPluginName() const override;
 };
 }

@@ -17,8 +17,8 @@ public:
     ~FolderConfigureSettingsDialog() override;
 
 private:
-    void slotSave();
-    void readConfig();
-    void writeConfig();
+    LIBFOLDERCONFIGURESETTINGS_NO_EXPORT void slotSave();
+    LIBFOLDERCONFIGURESETTINGS_NO_EXPORT void readConfig();
+    LIBFOLDERCONFIGURESETTINGS_NO_EXPORT void writeConfig();
     FolderConfigureSettingsWidget *const mFolderConfigureSettingsWidget;
 };

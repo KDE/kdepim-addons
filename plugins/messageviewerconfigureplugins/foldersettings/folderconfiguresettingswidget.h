@@ -20,8 +20,8 @@ public:
     void save();
 
 private:
-    void readConfig();
-    void saveConfig();
+    LIBFOLDERCONFIGURESETTINGS_NO_EXPORT void readConfig();
+    LIBFOLDERCONFIGURESETTINGS_NO_EXPORT void saveConfig();
     FolderConfigureTreeWidget *const mFolderConfigureTreeWidget;
     FolderConfigureSettingsPageWidget *const mFolderConfigureSettingsPageWidget;
     QSplitter *const mSplitter;

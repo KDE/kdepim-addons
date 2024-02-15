@@ -28,12 +28,12 @@ public:
         return "standard";
     }
 
-    QStringList headersToDisplay() const override
+    [[nodiscard]] QStringList headersToDisplay() const override
     {
         return mHeadersToDisplay;
     }
 
-    DefaultPolicy defaultPolicy() const override
+    [[nodiscard]] DefaultPolicy defaultPolicy() const override
     {
         return Hide;
     }

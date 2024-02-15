@@ -35,9 +35,9 @@ Q_SIGNALS:
 private:
     void createAction(KActionCollection *ac);
     void clear();
+    [[nodiscard]] QStringList adaptArguments(const QStringList &scriptArguments);
     void slotConfigure();
     QList<QAction *> mAction;
-    [[nodiscard]] QStringList adaptArguments(const QStringList &scriptArguments);
     QStringList mCurrentInfo;
     QString mText;
     QString mAkonadiUrl;

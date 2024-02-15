@@ -58,7 +58,7 @@ protected:
     bool eventFilter(QObject *object, QEvent *e) override;
 
 private:
-    KCalendarCore::Event::Ptr createEventItem();
+    [[nodiscard]] KCalendarCore::Event::Ptr createEventItem();
     void readConfig();
     void comboboxRowInserted();
     Akonadi::Collection mCollection;

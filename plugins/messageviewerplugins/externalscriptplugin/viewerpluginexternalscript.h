@@ -16,7 +16,7 @@ class ViewerPluginExternalscript : public MessageViewer::ViewerPlugin
 public:
     explicit ViewerPluginExternalscript(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
 
-    ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
+    [[nodiscard]] ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
     [[nodiscard]] QString viewerPluginName() const override;
 
     void showConfigureDialog(QWidget *parent) override;

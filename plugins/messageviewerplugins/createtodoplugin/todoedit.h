@@ -50,7 +50,7 @@ protected:
     bool eventFilter(QObject *object, QEvent *e) override;
 
 private:
-    KCalendarCore::Todo::Ptr createTodoItem();
+    [[nodiscard]] KCalendarCore::Todo::Ptr createTodoItem();
     void comboboxRowInserted();
     void slotReturnPressed();
     void slotCollectionChanged(int);

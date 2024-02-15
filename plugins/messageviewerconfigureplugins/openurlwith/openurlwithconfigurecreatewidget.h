@@ -29,8 +29,8 @@ Q_SIGNALS:
     void updateOkButton(bool enabled);
 
 private:
-    void slotLinkClicked(const QString &link);
-    void slotInfoChanged();
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void slotLinkClicked(const QString &link);
+    LIBOPENURLWITHCONFIGURE_NO_EXPORT void slotInfoChanged();
     QString mCommandWhatsThis;
     QLineEdit *const mServerName;
     QLineEdit *const mCommandLine;
