@@ -17,6 +17,6 @@ public:
     ~SendMailTransportPlugin() override;
 
     [[nodiscard]] QList<MailTransport::TransportAbstractPluginInfo> names() const override;
-    bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;
-    MailTransport::TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) override;
+    [[nodiscard]] bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;
+    [[nodiscard]] MailTransport::TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) override;
 };

@@ -15,7 +15,7 @@ public:
     explicit TranslatorPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~TranslatorPlugin() override;
 
-    PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) override;
+    [[nodiscard]] PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) override;
     [[nodiscard]] QString customToolName() const override;
     [[nodiscard]] bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
