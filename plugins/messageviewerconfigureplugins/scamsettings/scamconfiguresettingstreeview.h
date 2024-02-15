@@ -7,7 +7,7 @@
 #pragma once
 
 #include <QTreeView>
-
+class ScamListsModel;
 class ScamConfigureSettingsTreeView : public QTreeView
 {
     Q_OBJECT
@@ -17,4 +17,7 @@ public:
 
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
+
+private:
+    ScamListsModel *const mScamListsModel;
 };

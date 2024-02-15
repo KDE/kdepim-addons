@@ -5,9 +5,11 @@
 */
 
 #include "scamconfiguresettingstreeview.h"
+#include "scamlistsmodel.h"
 #include <QHeaderView>
 ScamConfigureSettingsTreeView::ScamConfigureSettingsTreeView(QWidget *parent)
     : QTreeView(parent)
+    , mScamListsModel(new ScamListsModel(this))
 {
     setContextMenuPolicy(Qt::DefaultContextMenu);
     for (int c = 0, total = header()->count(); c < total; ++c) {
@@ -15,6 +17,7 @@ ScamConfigureSettingsTreeView::ScamConfigureSettingsTreeView(QWidget *parent)
     }
     setRootIsDecorated(false);
     setSortingEnabled(true);
+    setModel(mScamListsModel);
 }
 
 ScamConfigureSettingsTreeView::~ScamConfigureSettingsTreeView() = default;
