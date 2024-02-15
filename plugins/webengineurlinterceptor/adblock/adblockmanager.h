@@ -56,10 +56,10 @@ private:
     /// from the current filter lists.
     rust::Box<Adblock> createOrRestoreAdblock();
 
+    AdblockListsManager *const mAdblockListManager;
     std::future<rust::Box<Adblock>> mAdblockInitFuture;
     std::optional<rust::Box<Adblock>> mAdblock;
     QList<AdblockFilter> mAdblockFilterLists;
-    AdblockListsManager *const mAdblockListManager;
     QNetworkAccessManager m_networkManager;
     int m_runningRequests = 0;
 };
