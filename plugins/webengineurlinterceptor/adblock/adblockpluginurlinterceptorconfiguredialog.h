@@ -26,7 +26,7 @@ protected:
     void help() override;
 
 private:
-    void readConfig();
-    void writeConfig();
+    LIBADBLOCKPLUGIN_NO_EXPORT void readConfig();
+    LIBADBLOCKPLUGIN_NO_EXPORT void writeConfig();
     AdblockPluginUrlInterceptorConfigureWidget *mAdblockConfigureWidget = nullptr;
 };

@@ -48,13 +48,13 @@ private Q_SLOTS:
     void handleListFetched(QNetworkReply *reply);
 
 private:
-    void reloadConfig();
-    void writeConfig();
-    [[nodiscard]] QString adblockCacheLocation() const;
+    LIBADBLOCKPLUGIN_NO_EXPORT void reloadConfig();
+    LIBADBLOCKPLUGIN_NO_EXPORT void writeConfig();
+    [[nodiscard]] LIBADBLOCKPLUGIN_NO_EXPORT QString adblockCacheLocation() const;
 
     /// If an adblock cache is found, loads it, otherwise creates a new adblock
     /// from the current filter lists.
-    rust::Box<Adblock> createOrRestoreAdblock();
+    LIBADBLOCKPLUGIN_NO_EXPORT rust::Box<Adblock> createOrRestoreAdblock();
 
     AdblockListsManager *const mAdblockListManager;
     std::future<rust::Box<Adblock>> mAdblockInitFuture;

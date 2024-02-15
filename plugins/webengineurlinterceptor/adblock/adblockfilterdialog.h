@@ -18,7 +18,7 @@ public:
     void loadSettings();
 
 private:
-    void readConfig();
-    void writeConfig();
+    LIBADBLOCKPLUGIN_NO_EXPORT void readConfig();
+    LIBADBLOCKPLUGIN_NO_EXPORT void writeConfig();
     AdblockFilterWidget *const mAdblockFilterWidget;
 };

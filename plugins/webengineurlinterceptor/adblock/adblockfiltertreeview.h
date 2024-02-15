@@ -32,9 +32,9 @@ protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
 
 private:
-    void slotAddAdblock();
-    void slotModifyAdblock(const QModelIndex &index);
-    void slotDeleteAdblock(const QModelIndex &index);
+    LIBADBLOCKPLUGIN_NO_EXPORT void slotAddAdblock();
+    LIBADBLOCKPLUGIN_NO_EXPORT void slotModifyAdblock(const QModelIndex &index);
+    LIBADBLOCKPLUGIN_NO_EXPORT void slotDeleteAdblock(const QModelIndex &index);
     bool mSettingsChanged = false;
     AdblockFilterListsModel *const mAdblockFilterListsModel;
     QSortFilterProxyModel *const mSortFilterProxyModel;
