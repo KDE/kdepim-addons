@@ -40,15 +40,13 @@ Q_SIGNALS:
 public Q_SLOTS:
     void apply() override;
 
-private Q_SLOTS:
-    void slotTextChanged(const QString &text);
-
 protected:
     SendmailConfigWidget(SendmailConfigWidgetPrivate &dd, Transport *transport, QWidget *parent);
 
 private:
     Q_DECLARE_PRIVATE(SendmailConfigWidget)
 
+    void slotTextChanged(const QString &text);
     void init();
 };
 } // namespace MailTransport
