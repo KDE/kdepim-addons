@@ -19,10 +19,10 @@ protected:
     void closeEvent(QCloseEvent *e) override;
 
 private:
-    void writeConfig();
-    void readConfig();
-    void slotAccepted();
-    void slotExport();
-    void slotImport();
+    QUICKTEXT_NO_EXPORT void writeConfig();
+    QUICKTEXT_NO_EXPORT void readConfig();
+    QUICKTEXT_NO_EXPORT void slotAccepted();
+    QUICKTEXT_NO_EXPORT void slotExport();
+    QUICKTEXT_NO_EXPORT void slotImport();
     QuickTextConfigureWidget *const mQuickTextConfigureWidget;
 };

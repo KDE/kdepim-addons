@@ -18,7 +18,7 @@ public:
     ~ShortUrlEnginePlugin() override;
     virtual ShortUrlEngineInterface *createInterface(QObject *parent) = 0;
     virtual QString engineName() const = 0;
-    QString pluginName() const;
+    [[nodiscard]] QString pluginName() const;
     void setPluginName(const QString &pluginname);
 
 private:

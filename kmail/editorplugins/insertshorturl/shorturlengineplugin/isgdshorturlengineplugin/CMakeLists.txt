@@ -2,6 +2,8 @@ kcoreaddons_add_plugin(pimcommon_isgdshorturlengineplugin INSTALL_NAMESPACE pim6
 target_sources(pimcommon_isgdshorturlengineplugin PRIVATE
     isgdshorturlengineplugin.cpp
     isgdshorturlengineinterface.cpp
+    isgdshorturlengineplugin.h
+    isgdshorturlengineinterface.h
     )
 ecm_qt_declare_logging_category(pimcommon_isgdshorturlengineplugin HEADER isgdshorturlengineplugin_debug.h IDENTIFIER ISGDSHORTURLENGINEPLUGIN_LOG CATEGORY_NAME org.kde.pim.isgdshorturlengineplugin
     DESCRIPTION "kdepim-addons (shorturl engine isgd)"

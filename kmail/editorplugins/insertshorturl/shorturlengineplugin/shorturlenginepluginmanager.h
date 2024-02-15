@@ -20,7 +20,7 @@ public:
     explicit ShortUrlEnginePluginManager(QObject *parent = nullptr);
     ~ShortUrlEnginePluginManager() override;
 
-    QList<ShortUrlEnginePlugin *> pluginsList() const;
+    [[nodiscard]] QList<ShortUrlEnginePlugin *> pluginsList() const;
 
     static ShortUrlEnginePluginManager *self();
 

@@ -36,8 +36,8 @@ Q_SIGNALS:
     void updateOkButton(bool enabled);
 
 private:
-    void slotRuleTypeChanged(int index);
-    void fillComboBox();
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void slotRuleTypeChanged(int index);
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void fillComboBox();
     QLineEdit *const mPatternLineEdit;
     QComboBox *const mRuleTypeComboBox;
 };

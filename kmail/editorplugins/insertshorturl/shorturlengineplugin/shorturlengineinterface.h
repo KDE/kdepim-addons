@@ -22,7 +22,7 @@ public:
     void setShortUrl(const QString &url);
     virtual void generateShortUrl() = 0;
     virtual QString engineName() const = 0;
-    QString pluginName() const;
+    [[nodiscard]] QString pluginName() const;
 
     void setTextCursor(const QTextCursor &cursor);
 protected Q_SLOTS:

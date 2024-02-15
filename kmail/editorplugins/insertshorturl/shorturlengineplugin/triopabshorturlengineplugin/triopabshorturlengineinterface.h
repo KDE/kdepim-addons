@@ -17,7 +17,7 @@ public:
     ~TripAbShortUrlEngineInterface() override;
 
     void generateShortUrl() override;
-    QString engineName() const override;
+    [[nodiscard]] QString engineName() const override;
 
 private:
     void slotShortUrlFinished(QNetworkReply *reply);

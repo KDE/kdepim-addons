@@ -22,13 +22,14 @@ public:
     void save();
 
 private:
-    void slotCustomContextMenuRequested(const QPoint &p);
-    void slotRemoveRule();
-    void slotAddRule();
-    void fillRules();
-    void slotEditRule();
-    void initializeItem(QTreeWidgetItem *item, const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info);
-    void updateButtons();
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void slotCustomContextMenuRequested(const QPoint &p);
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void slotRemoveRule();
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void slotAddRule();
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void fillRules();
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void slotEditRule();
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void initializeItem(QTreeWidgetItem *item,
+                                                             const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info);
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void updateButtons();
     QTreeWidget *const mTreeWidget;
     QPushButton *const mAddRule;
     QPushButton *const mRemoveRule;

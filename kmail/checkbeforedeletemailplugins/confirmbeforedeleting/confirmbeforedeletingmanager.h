@@ -32,7 +32,7 @@ public:
     void setRules(const QList<ConfirmBeforeDeletingRule> &newRules);
 
 private:
-    [[nodiscard]] QString defaultConfigFileName() const;
-    [[nodiscard]] QStringList ruleGroups(const KSharedConfig::Ptr &config) const;
+    [[nodiscard]] KMAILCONFIRMBEFOREDELETING_NO_EXPORT QString defaultConfigFileName() const;
+    [[nodiscard]] KMAILCONFIRMBEFOREDELETING_NO_EXPORT QStringList ruleGroups(const KSharedConfig::Ptr &config) const;
     QList<ConfirmBeforeDeletingRule> mRules;
 };

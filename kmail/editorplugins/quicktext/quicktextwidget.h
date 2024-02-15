@@ -35,16 +35,16 @@ private:
         EditGroup,
         Unknown,
     };
-    void addSnippet();
-    void editSnippet();
-    void addSnippetGroup();
-    void editSnippetGroup();
+    QUICKTEXT_NO_EXPORT void addSnippet();
+    QUICKTEXT_NO_EXPORT void editSnippet();
+    QUICKTEXT_NO_EXPORT void addSnippetGroup();
+    QUICKTEXT_NO_EXPORT void editSnippetGroup();
 
-    void saveAddSnippet();
-    void saveEditSnippet();
-    void saveAddGroup();
-    void saveEditGroup();
-    void saveModelIndex(const QModelIndex &index);
+    QUICKTEXT_NO_EXPORT void saveAddSnippet();
+    QUICKTEXT_NO_EXPORT void saveEditSnippet();
+    QUICKTEXT_NO_EXPORT void saveAddGroup();
+    QUICKTEXT_NO_EXPORT void saveEditGroup();
+    QUICKTEXT_NO_EXPORT void saveModelIndex(const QModelIndex &index);
 
     QModelIndex mCurrentGroupIndex;
     EditMode mMode = EditMode::Unknown;

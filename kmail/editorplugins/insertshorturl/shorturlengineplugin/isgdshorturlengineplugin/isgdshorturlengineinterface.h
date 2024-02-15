@@ -19,7 +19,7 @@ public:
     ~IsgdShortUrlEngineInterface() override;
 
     void generateShortUrl() override;
-    QString engineName() const override;
+    [[nodiscard]] QString engineName() const override;
 
 private:
     void slotSslErrors(QNetworkReply *reply, const QList<QSslError> &error);

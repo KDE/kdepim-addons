@@ -17,7 +17,7 @@ public:
     explicit QuicktextTreeWidget(QuicktextManager *manager, QWidget *parent = nullptr);
     ~QuicktextTreeWidget() override;
 
-    QuicktextManager *snippetsManager() const;
+    [[nodiscard]] QuicktextManager *snippetsManager() const;
 
 protected:
     void contextMenuEvent(QContextMenuEvent *) override;
@@ -32,9 +32,9 @@ Q_SIGNALS:
     void editSnippetGroup();
 
 private:
-    void deleteSnippet();
-    void deleteSnippetGroup();
-    void selectionWasChanged();
+    QUICKTEXT_NO_EXPORT void deleteSnippet();
+    QUICKTEXT_NO_EXPORT void deleteSnippetGroup();
+    QUICKTEXT_NO_EXPORT void selectionWasChanged();
     QuicktextManager *const mSnippetsManager;
     QAction *mAddSnippetAction = nullptr;
     QAction *mEditSnippetAction = nullptr;
