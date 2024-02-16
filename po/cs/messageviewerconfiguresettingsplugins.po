@@ -380,15 +380,13 @@ msgid "Has Ip"
 msgstr ""
 
 #: scamsettings/scamlistsmodel.cpp:57
-#, fuzzy, kde-format
-#| msgid "Domain"
+#, kde-format
 msgctxt "@title:column"
 msgid "Domain"
-msgstr "Doména"
+msgstr ""
 
 #: scamsettings/scamlistsmodel.cpp:59
-#, fuzzy, kde-format
-#| msgid "Check"
+#, kde-format
 msgctxt "@title:column"
 msgid "Check"
-msgstr "Zkontrolovat"
+msgstr ""
