@@ -5,8 +5,8 @@
  *
  */
 
+#include <QQmlEngine>
 #include <QQmlExtensionPlugin>
-#include <QtQml>
 
 #include "pimcalendarsmodel.h"
 
