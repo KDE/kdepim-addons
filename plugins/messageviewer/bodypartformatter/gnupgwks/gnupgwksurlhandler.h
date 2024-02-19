@@ -17,13 +17,13 @@ class ApplicationGnuPGWKSUrlHandler : public MessageViewer::Interface::BodyPartU
 public:
     ApplicationGnuPGWKSUrlHandler() = default;
 
-    QString name() const override;
+    [[nodiscard]] QString name() const override;
     bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
     bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const override;
-    QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
+    [[nodiscard]] QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
 private:
-    bool sendConfirmation(MessageViewer::Viewer *viewerInstance, const GnuPGWKSMessagePart &mp) const;
+    [[nodiscard]] bool sendConfirmation(MessageViewer::Viewer *viewerInstance, const GnuPGWKSMessagePart &mp) const;
 
     [[nodiscard]] QByteArray createConfirmation(const KMime::Message::Ptr &msg) const;
 };
