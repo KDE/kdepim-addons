@@ -17,7 +17,7 @@ public:
     ~ExpireAccountTrashFolderConfigDialog() override;
 
 private:
-    void writeConfig();
-    void readConfig();
+    LIBEXPIREACCOUNTTRASHFOLDERCONFIG_NO_EXPORT void writeConfig();
+    LIBEXPIREACCOUNTTRASHFOLDERCONFIG_NO_EXPORT void readConfig();
     ExpireAccountTrashFolderConfigWidget *const mExpireAccountTrashFolderConfig;
 };

@@ -18,7 +18,7 @@ public:
     ~DKIMAdvancedWidget() override;
 
 private:
-    void slotConfigureAuthenticationServer();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void slotConfigureAuthenticationServer();
     QComboBox *const mSha1Policy;
     QCheckBox *const mCheckDKIMWhenOnlyTesting;
     QCheckBox *const mUseAuthenticationResultRelaxedParser;

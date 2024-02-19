@@ -17,8 +17,8 @@ public:
     ~DKIMAuthenticationVerifiedServerDialog() override;
 
 private:
-    void slotAccepted();
-    void readConfig();
-    void writeConfig();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void slotAccepted();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void readConfig();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void writeConfig();
     DKIMAuthenticationVerifiedServerWidget *const mAuthenticationVerifiedWidget;
 };

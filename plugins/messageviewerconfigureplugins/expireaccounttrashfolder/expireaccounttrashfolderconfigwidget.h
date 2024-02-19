@@ -21,7 +21,7 @@ public:
     void save();
 
 private:
-    void save(bool saveSettings, bool expireNow);
-    void slotSaveAndExpireRequested();
+    LIBEXPIREACCOUNTTRASHFOLDERCONFIG_NO_EXPORT void save(bool saveSettings, bool expireNow);
+    LIBEXPIREACCOUNTTRASHFOLDERCONFIG_NO_EXPORT void slotSaveAndExpireRequested();
     MailCommon::CollectionExpiryWidget *const mCollectionExpiryWidget;
 };

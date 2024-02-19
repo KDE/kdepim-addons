@@ -23,7 +23,7 @@ public:
     void resetSettings();
 
 private:
-    void readConfig();
-    void writeConfig();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void readConfig();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void writeConfig();
     MessageViewer::DKIMManagerKeyWidget *const mManagerKeyWidget;
 };

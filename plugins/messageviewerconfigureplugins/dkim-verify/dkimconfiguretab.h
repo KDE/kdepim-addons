@@ -26,7 +26,7 @@ public:
     void resetSettings();
 
 private:
-    void initTab();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void initTab();
     DKIMGeneralWidget *const mGeneralWidget;
     DKIMKeyRecordWidget *const mRecordWidget;
     DKIMAdvancedWidget *const mAdvancedWidget;

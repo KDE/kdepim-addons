@@ -18,9 +18,9 @@ public:
     ~DKIMConfigureDialog() override;
 
 private:
-    void slotReset();
-    void readConfig();
-    void slotAccepted();
-    void writeConfig();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void slotReset();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void readConfig();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void slotAccepted();
+    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void writeConfig();
     DKIMConfigureWidget *const mConfigureWidget;
 };
