@@ -8,13 +8,9 @@
 
 #include <QTextDocument>
 
-MarkdownQTextDocument::MarkdownQTextDocument()
-{
-}
+MarkdownQTextDocument::MarkdownQTextDocument() = default;
 
-MarkdownQTextDocument::~MarkdownQTextDocument()
-{
-}
+MarkdownQTextDocument::~MarkdownQTextDocument() = default;
 
 QString MarkdownQTextDocument::toHtml() const
 {
