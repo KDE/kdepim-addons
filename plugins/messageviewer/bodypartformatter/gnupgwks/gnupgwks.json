@@ -1,7 +1,6 @@
 {
     "formatter": [
         { "mimetype": "application/pgp-keys" },
-        { "mimetype": "multipart/mixed" },
         { "mimetype": "application/vnd.gnupg.wks" }
     ],
     "renderer": [
