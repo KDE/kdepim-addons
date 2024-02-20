@@ -112,19 +112,19 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
             const auto ticket = JsonLd::convert<Reservation>(r).reservedTicket().value<Ticket>();
             std::optional<Prison::Barcode> barcode;
             switch (ticket.ticketTokenType()) {
-            case Ticket::AztecCode:
+            case Token::AztecCode:
                 barcode = Prison::Barcode::create(Prison::Aztec);
                 break;
-            case Ticket::QRCode:
+            case Token::QRCode:
                 barcode = Prison::Barcode::create(Prison::QRCode);
                 break;
-            case Ticket::DataMatrix:
+            case Token::DataMatrix:
                 barcode = Prison::Barcode::create(Prison::DataMatrix);
                 break;
-            case Ticket::Code128:
+            case Token::Code128:
                 barcode = Prison::Barcode::create(Prison::Code128);
                 break;
-            case Ticket::PDF417:
+            case Token::PDF417:
                 barcode = Prison::Barcode::create(Prison::PDF417);
                 break;
             default:
