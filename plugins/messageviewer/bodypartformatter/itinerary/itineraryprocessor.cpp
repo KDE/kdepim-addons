@@ -28,10 +28,10 @@ static bool isPkPassContent(KMime::Content *content)
 {
     const auto ct = content->contentType();
     const QByteArray mimetype = ct->mimeType();
-    if (mimetype == "application/vnd.apple.pkpass") {
+    if (mimetype == QByteArrayLiteral("application/vnd.apple.pkpass")) {
         return true;
     }
-    if (mimetype != "application/octet-stream" && mimetype != "application/zip") {
+    if (mimetype != QByteArrayLiteral("application/octet-stream") && mimetype != QByteArrayLiteral("application/zip")) {
         return false;
     }
     if (ct->name().endsWith(QLatin1StringView("pkpass"))) {
@@ -45,10 +45,10 @@ static bool isCalendarContent(KMime::Content *content)
 {
     const auto ct = content->contentType();
     const QByteArray mimetype = ct ? ct->mimeType() : QByteArray();
-    if (mimetype == "text/calendar" || mimetype == "application/ics") {
+    if (mimetype == QByteArrayLiteral("text/calendar") || mimetype == QByteArrayLiteral("application/ics")) {
         return true;
     }
-    if (mimetype != "text/plain" && mimetype != "application/octet-stream") {
+    if (mimetype != QByteArrayLiteral("text/plain") && mimetype != QByteArrayLiteral("application/octet-stream")) {
         return false;
     }
     if (ct && ct->name().endsWith(QLatin1StringView(".ics"))) {
@@ -61,7 +61,7 @@ static bool isCalendarContent(KMime::Content *content)
 static KMime::Content *findMultipartRelatedParent(KMime::Content *node)
 {
     while (node) {
-        if (node->contentType()->mimeType() == "multipart/related") {
+        if (node->contentType()->mimeType() == QByteArrayLiteral("multipart/related")) {
             return node;
         }
         node = node->parent();
@@ -135,7 +135,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
                 if (!ct || !node->contentID(false)) {
                     continue;
                 }
-                if (ct->mimeType() == "image/png" || ct->mimeType() == "image/gif") {
+                if (ct->mimeType() == QByteArrayLiteral("image/png") || ct->mimeType() == QByteArrayLiteral("image/gif")) {
                     auto pngNode = engine.documentNodeFactory()->createNode(node->decodedContent(), {}, QString::fromUtf8(ct->mimeType()));
                     engine.rootDocumentNode().appendChild(pngNode);
                 }
