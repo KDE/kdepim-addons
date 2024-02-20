@@ -6,7 +6,11 @@
 
 #include "scamconfiguresettingstreeview.h"
 #include "scamlistsmodel.h"
+#include <KLocalizedString>
+#include <QContextMenuEvent>
 #include <QHeaderView>
+#include <QMenu>
+
 ScamConfigureSettingsTreeView::ScamConfigureSettingsTreeView(QWidget *parent)
     : QTreeView(parent)
     , mScamListsModel(new ScamListsModel(this))
@@ -24,7 +28,12 @@ ScamConfigureSettingsTreeView::~ScamConfigureSettingsTreeView() = default;
 
 void ScamConfigureSettingsTreeView::contextMenuEvent(QContextMenuEvent *event)
 {
-    // TODO
+    QMenu menu;
+    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), &menu);
+    // TODO connect(addAction, &QAction::triggered, this, &AdblockFilterTreeView::slotAddAdblock);
+    menu.addAction(addAction);
+
+    menu.exec(event->globalPos());
 }
 
 #include "moc_scamconfiguresettingstreeview.cpp"
