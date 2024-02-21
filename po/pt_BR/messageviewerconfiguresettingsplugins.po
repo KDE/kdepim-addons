@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:38+0000\n"
+"POT-Creation-Date: 2024-02-21 00:37+0000\n"
 "PO-Revision-Date: 2023-11-14 13:39-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -372,6 +372,11 @@ msgstr[1] "Remover regras"
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "Configurações de fraude"
+
+#: scamsettings/scamconfiguresettingstreeview.cpp:32
+#, kde-format
+msgid "Add..."
+msgstr ""
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

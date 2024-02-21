@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:38+0000\n"
+"POT-Creation-Date: 2024-02-21 00:37+0000\n"
 "PO-Revision-Date: 2024-02-13 05:09+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -369,6 +369,11 @@ msgstr[1] "წესების წაშლა"
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "სკამის მორგება"
+
+#: scamsettings/scamconfiguresettingstreeview.cpp:32
+#, kde-format
+msgid "Add..."
+msgstr ""
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

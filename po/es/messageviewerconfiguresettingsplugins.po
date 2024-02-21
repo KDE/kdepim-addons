@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:38+0000\n"
+"POT-Creation-Date: 2024-02-21 00:37+0000\n"
 "PO-Revision-Date: 2024-02-14 01:12+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -371,6 +371,11 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "Configurar las propiedades contra estafas"
 
+#: scamsettings/scamconfiguresettingstreeview.cpp:32
+#, kde-format
+msgid "Add..."
+msgstr "Añadir..."
+
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
@@ -435,9 +440,6 @@ msgstr "Comprobar"
 
 #~ msgid "Rule type"
 #~ msgstr "Tipo de regla"
-
-#~ msgid "Add..."
-#~ msgstr "Añadir..."
 
 #~ msgid "Delete All"
 #~ msgstr "Borrar todo"

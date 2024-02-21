@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:38+0000\n"
+"POT-Creation-Date: 2024-02-21 00:37+0000\n"
 "PO-Revision-Date: 2024-02-05 11:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -361,6 +361,11 @@ msgstr[0] "移除规则"
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "配置垃圾邮件设置"
+
+#: scamsettings/scamconfiguresettingstreeview.cpp:32
+#, kde-format
+msgid "Add..."
+msgstr ""
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

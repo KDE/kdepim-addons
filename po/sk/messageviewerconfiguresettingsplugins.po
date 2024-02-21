@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-13 00:38+0000\n"
+"POT-Creation-Date: 2024-02-21 00:37+0000\n"
 "PO-Revision-Date: 2019-11-11 16:12+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -382,6 +382,11 @@ msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "Nastaviť pravidlo"
 
+#: scamsettings/scamconfiguresettingstreeview.cpp:32
+#, kde-format
+msgid "Add..."
+msgstr "Pridať..."
+
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
@@ -441,9 +446,6 @@ msgstr ""
 
 #~ msgid "Rule type"
 #~ msgstr "Typ pravidla"
-
-#~ msgid "Add..."
-#~ msgstr "Pridať..."
 
 #~ msgid "Delete All"
 #~ msgstr "Odstrániť všetko"
