@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:37+0000\n"
-"PO-Revision-Date: 2024-02-13 06:37+0100\n"
+"PO-Revision-Date: 2024-02-21 06:35+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -378,7 +378,7 @@ msgstr "Postavi nastavitve scam"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Dodaj..."
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

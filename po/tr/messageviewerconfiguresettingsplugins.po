@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-21 00:37+0000\n"
-"PO-Revision-Date: 2024-02-13 16:21+0300\n"
+"PO-Revision-Date: 2024-02-21 17:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -26,7 +26,7 @@ msgstr "Bir etki alanı yalnızca DKIM sınaması yapıyorsa imzayı yine de do�
 #, kde-format
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
-"\"Authentication-Result\" üstbilgisi okunurken gevşetilmiş ayrıştırma kullan"
+"‘Authentication-Result’ üstbilgisi okunurken gevşetilmiş ayrıştırma kullan"
 
 #: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #: dkim-verify/dkimgeneralwidget.cpp:42
@@ -47,7 +47,7 @@ msgstr "Hata"
 #: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
-msgstr "RSA-SHA1 imzalama algoritmasına davranma biçimi:"
+msgstr "RSA–SHA1 imzalama algoritmasına davranma biçimi:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "Kimlik Doğrulama Doğrulanmış Sunucusunu Yapılandır"
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
 #, kde-format
 msgid "New Server:"
-msgstr "Yeni Sunucu:"
+msgstr "Yeni sunucu:"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
 #, kde-format
@@ -135,12 +135,12 @@ msgstr "DKIM Sonucunu Kaydet"
 #: dkim-verify/dkimgeneralwidget.cpp:21
 #, kde-format
 msgid "Replace DKIM result by Authentication-Result header value"
-msgstr "DKIM sonucunu Authentication-Result üstbilgi değeriyle değiştir"
+msgstr "DKIM sonucunu Authentication-Result üstbilgisi değeriyle değiştir"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
 #, kde-format
 msgid "Save Record Key:"
-msgstr "Kayıt Anahtarını Kaydet:"
+msgstr "Kayıt anahtarını kaydet:"
 
 #: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
@@ -271,12 +271,12 @@ msgstr "Düzenle"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:27
 #, kde-format
 msgid "Server Name:"
-msgstr "Sunucu Adı:"
+msgstr "Sunucu adı:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:31
 #, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">Argüman biçim bilgisi...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">Argüman biçim bilgisi…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:37
 #, kde-format
@@ -295,7 +295,7 @@ msgstr "Komut satırı:"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:58
 #, kde-format
 msgid "Executable:"
-msgstr "Çalıştırılabilir:"
+msgstr "Yürütülebilir:"
 
 #: openurlwith/openurlwithconfiguredialog.cpp:25
 #, kde-format
@@ -307,7 +307,7 @@ msgstr "URL Aç’ı Eklentiyle Yapılandır"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
-msgstr "Kural Ekle..."
+msgstr "Kural Ekle…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:56
 #, kde-format
@@ -319,7 +319,7 @@ msgstr "Kuralı Kaldır"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
-msgstr "Kural Düzenle..."
+msgstr "Kuralı Değiştir…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:150
 #, kde-format
@@ -347,12 +347,12 @@ msgstr "Kuralı Kaldır"
 #: openurlwith/openurlwithconfigurewidget.cpp:209
 #, kde-format
 msgid "Add Rule..."
-msgstr "Kural Ekle..."
+msgstr "Kural Ekle…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgid "Edit Rule..."
-msgstr "Kural Düzenle..."
+msgstr "Kuralı Düzenle…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:216
 #, kde-format
@@ -370,7 +370,7 @@ msgstr "Aldatma Ayarlarını Yapılandır"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Ekle…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
