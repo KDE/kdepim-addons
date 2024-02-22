@@ -41,6 +41,11 @@ AdblockFilterTreeView::AdblockFilterTreeView(QWidget *parent)
     connect(AdblockManager::self(), &AdblockManager::refreshFinished, this, [this]() {
         loadSettings();
     });
+    connect(this, &QTreeView::doubleClicked, this, [this](const QModelIndex &index) {
+        if (index.isValid()) {
+            slotModifyAdblock(index);
+        }
+    });
 }
 
 AdblockFilterTreeView::~AdblockFilterTreeView() = default;
