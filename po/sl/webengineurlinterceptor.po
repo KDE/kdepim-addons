@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-11 00:37+0000\n"
+"POT-Creation-Date: 2024-02-23 00:38+0000\n"
 "PO-Revision-Date: 2024-01-07 08:49+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -37,37 +37,37 @@ msgctxt "@title:column"
 msgid "Url"
 msgstr "Url"
 
-#: adblock/adblockfiltertreeview.cpp:59
+#: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
 msgid "Add..."
 msgstr "Dodaj..."
 
-#: adblock/adblockfiltertreeview.cpp:66
+#: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
 msgid "Modify..."
 msgstr "Spremeni..."
 
-#: adblock/adblockfiltertreeview.cpp:72
+#: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
 msgid "Delete"
 msgstr "Izbriši"
 
-#: adblock/adblockfiltertreeview.cpp:80
+#: adblock/adblockfiltertreeview.cpp:85
 #, kde-format
 msgid "Show"
 msgstr "Pokaži"
 
-#: adblock/adblockfiltertreeview.cpp:95
+#: adblock/adblockfiltertreeview.cpp:100
 #, kde-format
 msgid "Update Lists"
 msgstr "Osveži sezname"
 
-#: adblock/adblockfiltertreeview.cpp:158
+#: adblock/adblockfiltertreeview.cpp:163
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "Ali želite odstraniti '%1' ?"
 
-#: adblock/adblockfiltertreeview.cpp:159
+#: adblock/adblockfiltertreeview.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"

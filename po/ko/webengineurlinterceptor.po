@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-11 00:37+0000\n"
+"POT-Creation-Date: 2024-02-23 00:38+0000\n"
 "PO-Revision-Date: 2024-02-09 23:34+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -35,37 +35,37 @@ msgctxt "@title:column"
 msgid "Url"
 msgstr "URL"
 
-#: adblock/adblockfiltertreeview.cpp:59
+#: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
 msgid "Add..."
 msgstr "추가..."
 
-#: adblock/adblockfiltertreeview.cpp:66
+#: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
 msgid "Modify..."
 msgstr "수정..."
 
-#: adblock/adblockfiltertreeview.cpp:72
+#: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
 msgid "Delete"
 msgstr "삭제"
 
-#: adblock/adblockfiltertreeview.cpp:80
+#: adblock/adblockfiltertreeview.cpp:85
 #, kde-format
 msgid "Show"
 msgstr "표시"
 
-#: adblock/adblockfiltertreeview.cpp:95
+#: adblock/adblockfiltertreeview.cpp:100
 #, kde-format
 msgid "Update Lists"
 msgstr "목록 업데이트"
 
-#: adblock/adblockfiltertreeview.cpp:158
+#: adblock/adblockfiltertreeview.cpp:163
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "'%1'을(를) 삭제하시겠습니까?"
 
-#: adblock/adblockfiltertreeview.cpp:159
+#: adblock/adblockfiltertreeview.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"

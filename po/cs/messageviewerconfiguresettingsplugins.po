@@ -367,7 +367,7 @@ msgstr "Nastavit možnosti Scamu"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Přidat..."
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
