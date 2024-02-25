@@ -367,7 +367,7 @@ msgstr "Huijauksentunnistuksen asetukset"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Lisää…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

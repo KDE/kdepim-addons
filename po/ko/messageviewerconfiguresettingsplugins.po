@@ -364,7 +364,7 @@ msgstr "사기 설정 변경"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "추가..."
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
