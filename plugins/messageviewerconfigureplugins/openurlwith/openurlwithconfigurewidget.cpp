@@ -41,6 +41,9 @@ void OpenUrlWithConfigureItem::setInfo(const MessageViewer::OpenWithUrlInfo &scr
     if (!mScriptInfo.commandLine().isEmpty()) {
         commandLine += QLatin1Char(' ') + mScriptInfo.commandLine();
     }
+    if (!scriptInfo.isLocalOpenWithInfo()) {
+        setFlags(flags() & ~Qt::ItemIsEnabled);
+    }
     setToolTip(commandLine);
 }
 
