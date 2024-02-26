@@ -43,6 +43,7 @@ void OpenUrlWithConfigureItem::setInfo(const MessageViewer::OpenWithUrlInfo &scr
     }
     if (!scriptInfo.isLocalOpenWithInfo()) {
         setFlags(flags() & ~Qt::ItemIsEnabled);
+        setFlags(flags() & ~Qt::ItemIsSelectable);
     }
     setToolTip(commandLine);
 }
