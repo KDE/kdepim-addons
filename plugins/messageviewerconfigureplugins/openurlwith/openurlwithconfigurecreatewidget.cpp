@@ -9,12 +9,14 @@
 #include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <KUrlRequester>
+#include <QCheckBox>
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
 #include <QWhatsThis>
 OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *parent)
     : QWidget{parent}
+    , mEnabled(new QCheckBox(i18n("Enabled"), this))
     , mServerName(new QLineEdit(this))
     , mCommandLine(new QLineEdit(this))
     , mExecutable(new KUrlRequester(this))
@@ -22,6 +24,9 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins(QMargins());
+
+    mEnabled->setObjectName(QStringLiteral("mEnabled"));
+    mainLayout->addWidget(mEnabled);
 
     mServerName->setObjectName(QLatin1StringView("mServerName"));
     mainLayout->addRow(i18n("Server Name:"), mServerName);
@@ -75,6 +80,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo OpenUrlWithConfigureCreateWidg
     info.url = mServerName->text().trimmed();
     info.command = mExecutable->text().trimmed();
     info.commandLines = mCommandLine->text().trimmed();
+    info.enabled = mEnabled->checkState() == Qt::Checked;
     return info;
 }
 
@@ -83,6 +89,7 @@ void OpenUrlWithConfigureCreateWidget::setInfo(const OpenUrlWithInfo &i)
     mServerName->setText(i.url);
     mExecutable->setText(i.command);
     mCommandLine->setText(i.commandLines);
+    mEnabled->setChecked(i.enabled);
 }
 
 bool OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo::isValid() const

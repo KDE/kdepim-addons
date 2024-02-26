@@ -7,6 +7,7 @@
 #include "openurlwithconfigurecreatewidgettest.h"
 #include "openurlwithconfigurecreatewidget.h"
 #include <KUrlRequester>
+#include <QCheckBox>
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
@@ -41,6 +42,9 @@ void OpenUrlWithConfigureCreateWidgetTest::shouldHaveDefaultValues()
 
     auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
     QVERIFY(mExecutable);
+
+    auto mEnabled = w.findChild<QCheckBox *>(QStringLiteral("mEnabled"));
+    QVERIFY(mEnabled);
 }
 
 #include "moc_openurlwithconfigurecreatewidgettest.cpp"

@@ -9,6 +9,7 @@
 #include <QWidget>
 class QLineEdit;
 class KUrlRequester;
+class QCheckBox;
 class LIBOPENURLWITHCONFIGURE_TESTS_EXPORT OpenUrlWithConfigureCreateWidget : public QWidget
 {
     Q_OBJECT
@@ -17,6 +18,7 @@ public:
         QString command;
         QString commandLines;
         QString url;
+        bool enabled = true;
         [[nodiscard]] bool isValid() const;
     };
 
@@ -32,6 +34,7 @@ private:
     LIBOPENURLWITHCONFIGURE_NO_EXPORT void slotLinkClicked(const QString &link);
     LIBOPENURLWITHCONFIGURE_NO_EXPORT void slotInfoChanged();
     QString mCommandWhatsThis;
+    QCheckBox *const mEnabled;
     QLineEdit *const mServerName;
     QLineEdit *const mCommandLine;
     KUrlRequester *const mExecutable;

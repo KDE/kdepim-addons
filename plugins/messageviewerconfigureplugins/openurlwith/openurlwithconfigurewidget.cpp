@@ -108,6 +108,7 @@ void OpenUrlWithConfigureWidget::updateButtons()
 void OpenUrlWithConfigureWidget::displayText(const MessageViewer::OpenWithUrlInfo &r, OpenUrlWithConfigureItem *item)
 {
     item->setInfo(r);
+    item->setCheckState(r.enabled() ? Qt::Checked : Qt::Unchecked);
     item->setText(QStringLiteral("%1 (%2)").arg(r.command() + QLatin1Char(' ') + r.commandLine(), r.url()));
 }
 
@@ -142,6 +143,7 @@ void OpenUrlWithConfigureWidget::slotAddRule()
             r.setCommand(info.command);
             r.setCommandLine(info.commandLines);
             r.setUrl(info.url);
+            r.setEnabled(info.enabled);
 
             for (int i = 0, total = mListWidget->count(); i < total; ++i) {
                 auto item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
@@ -169,6 +171,7 @@ void OpenUrlWithConfigureWidget::slotEditRule()
         info.command = r.command();
         info.url = r.url();
         info.commandLines = r.commandLine();
+        info.enabled = r.enabled();
         dlg->setInfo(info);
         if (dlg->exec()) {
             const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
@@ -176,6 +179,7 @@ void OpenUrlWithConfigureWidget::slotEditRule()
                 r.setCommand(info.command);
                 r.setCommandLine(info.commandLines);
                 r.setUrl(info.url);
+                r.setEnabled(info.enabled);
                 displayText(r, item);
             }
         }
