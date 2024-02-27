@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:37+0000\n"
+"POT-Creation-Date: 2024-02-27 00:37+0000\n"
 "PO-Revision-Date: 2024-02-05 11:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -265,17 +265,22 @@ msgctxt "@title:window"
 msgid "Edit"
 msgstr "编辑"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:27
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:19
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
 msgid "Server Name:"
 msgstr "服务器名："
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:31
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">参数格式信息...</a></qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
@@ -284,12 +289,12 @@ msgstr ""
 "<qt><p><strong>这些表达式可用于该参数：</strong></p><ul><li>%u - 命令使用的 "
 "URL</li></ul></strong></p></qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:48
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:53
 #, kde-format
 msgid "Command line:"
 msgstr "命令行："
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:58
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:63
 #, kde-format
 msgid "Executable:"
 msgstr "可执行程序："
@@ -300,57 +305,57 @@ msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
 msgstr "配置打开 URL 方式插件"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:55
+#: openurlwith/openurlwithconfigurewidget.cpp:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
 msgstr "添加规则..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:56
+#: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "移除规则"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:57
+#: openurlwith/openurlwithconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
 msgstr "修改规则..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:150
+#: openurlwith/openurlwithconfigurewidget.cpp:156
 #, kde-format
 msgid "Rule already exists."
 msgstr "规则已存在。"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:150
+#: openurlwith/openurlwithconfigurewidget.cpp:156
 #, kde-format
 msgid "Duplicate Rule"
 msgstr "重复规则"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:191
+#: openurlwith/openurlwithconfigurewidget.cpp:199
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "您要移除这些规则吗？"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:192
+#: openurlwith/openurlwithconfigurewidget.cpp:200
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "移除规则"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:209
+#: openurlwith/openurlwithconfigurewidget.cpp:217
 #, kde-format
 msgid "Add Rule..."
 msgstr "添加规则..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:211
+#: openurlwith/openurlwithconfigurewidget.cpp:219
 #, kde-format
 msgid "Edit Rule..."
 msgstr "编辑规则..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:216
+#: openurlwith/openurlwithconfigurewidget.cpp:224
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"

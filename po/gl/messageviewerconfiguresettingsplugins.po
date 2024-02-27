@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-21 00:37+0000\n"
+"POT-Creation-Date: 2024-02-27 00:37+0000\n"
 "PO-Revision-Date: 2024-02-14 15:22+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -270,19 +270,24 @@ msgctxt "@title:window"
 msgid "Edit"
 msgstr "Editar"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:27
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:19
+#, kde-format
+msgid "Enabled"
+msgstr "Activado"
+
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
 msgid "Server Name:"
 msgstr "Nome do servidor:"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:31
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
 msgstr ""
 "<qt><a href=\"whatsthis1\">Información sobre o formato dos argumentos…</a></"
 "qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
@@ -291,12 +296,12 @@ msgstr ""
 "<qt><p><strong>Pode usar as seguintes expresións nos argumentos:</strong></"
 "p><ul><li>%u: URL usado pola orde.</li></ul></strong></p></qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:48
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:53
 #, kde-format
 msgid "Command line:"
 msgstr "Liña de ordes:"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:58
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:63
 #, kde-format
 msgid "Executable:"
 msgstr "Executábel:"
@@ -307,58 +312,58 @@ msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
 msgstr "Configurar a apertura de URL co complemento"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:55
+#: openurlwith/openurlwithconfigurewidget.cpp:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
 msgstr "Engadir unha regra…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:56
+#: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "Eliminar a regra"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:57
+#: openurlwith/openurlwithconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
 msgstr "Modificar a regra…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:150
+#: openurlwith/openurlwithconfigurewidget.cpp:156
 #, kde-format
 msgid "Rule already exists."
 msgstr "A regra xa existe."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:150
+#: openurlwith/openurlwithconfigurewidget.cpp:156
 #, kde-format
 msgid "Duplicate Rule"
 msgstr "Regra duplicada"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:191
+#: openurlwith/openurlwithconfigurewidget.cpp:199
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Quere eliminar a regra?"
 msgstr[1] "Quere eliminar estas regras?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:192
+#: openurlwith/openurlwithconfigurewidget.cpp:200
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Eliminar a regra"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:209
+#: openurlwith/openurlwithconfigurewidget.cpp:217
 #, kde-format
 msgid "Add Rule..."
 msgstr "Engadir unha regra…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:211
+#: openurlwith/openurlwithconfigurewidget.cpp:219
 #, kde-format
 msgid "Edit Rule..."
 msgstr "Editar a regra…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:216
+#: openurlwith/openurlwithconfigurewidget.cpp:224
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
@@ -458,9 +463,6 @@ msgstr "Comprobar"
 
 #~ msgid "Import Rules"
 #~ msgstr "Importar regras"
-
-#~ msgid "Enabled"
-#~ msgstr "Activado"
 
 #~ msgid "Domain:"
 #~ msgstr "Dominio:"
