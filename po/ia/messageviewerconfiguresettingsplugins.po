@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-27 00:37+0000\n"
-"PO-Revision-Date: 2024-02-23 09:58+0100\n"
+"PO-Revision-Date: 2024-02-27 09:49+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -276,7 +276,7 @@ msgstr "Modifica"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Habilitate"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format

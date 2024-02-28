@@ -271,7 +271,8 @@ msgid "Edit"
 msgstr "Editar"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enabled"
 msgid "Enabled"
 msgstr "Activado"
 
