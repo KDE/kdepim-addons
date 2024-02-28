@@ -112,7 +112,10 @@ void OpenUrlWithConfigureWidget::updateButtons()
 void OpenUrlWithConfigureWidget::displayText(const MessageViewer::OpenWithUrlInfo &r, OpenUrlWithConfigureItem *item)
 {
     item->setInfo(r);
-    item->setCheckState(r.enabled() ? Qt::Checked : Qt::Unchecked);
+    // Don't allow to enable/disable global rules.
+    if (r.isLocalOpenWithInfo()) {
+        item->setCheckState(r.enabled() ? Qt::Checked : Qt::Unchecked);
+    }
     item->setText(QStringLiteral("%1 (%2)").arg(r.command() + QLatin1Char(' ') + r.commandLine(), r.url()));
 }
 
