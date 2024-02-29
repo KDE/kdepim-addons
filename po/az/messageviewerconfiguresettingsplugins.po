@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-27 00:37+0000\n"
+"POT-Creation-Date: 2024-02-29 00:38+0000\n"
 "PO-Revision-Date: 2022-07-22 12:21+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -331,40 +331,40 @@ msgctxt "@action:button"
 msgid "Modify Rule..."
 msgstr "Qaydanı dəyişin..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:156
+#: openurlwith/openurlwithconfigurewidget.cpp:159
 #, kde-format
 msgid "Rule already exists."
 msgstr "Qayda artıq mövcuddur."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:156
+#: openurlwith/openurlwithconfigurewidget.cpp:159
 #, kde-format
 msgid "Duplicate Rule"
 msgstr "Qaydanın təkrarı"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:199
+#: openurlwith/openurlwithconfigurewidget.cpp:202
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Bu qaydanı silmək istəyirsiniz?"
 msgstr[1] "Bu qaydaları silmək istəyirsiniz?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:200
+#: openurlwith/openurlwithconfigurewidget.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Qaydanı silin"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:217
+#: openurlwith/openurlwithconfigurewidget.cpp:220
 #, kde-format
 msgid "Add Rule..."
 msgstr "Qayda əlavə edin..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:219
+#: openurlwith/openurlwithconfigurewidget.cpp:222
 #, kde-format
 msgid "Edit Rule..."
 msgstr "Qaydaya düzəliş edin..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:224
+#: openurlwith/openurlwithconfigurewidget.cpp:227
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"

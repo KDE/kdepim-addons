@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-27 00:37+0000\n"
-"PO-Revision-Date: 2024-02-13 11:55+0100\n"
+"POT-Creation-Date: 2024-02-29 00:38+0000\n"
+"PO-Revision-Date: 2024-02-27 13:28+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -277,7 +277,7 @@ msgstr "Edita"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Activat"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
@@ -334,40 +334,40 @@ msgctxt "@action:button"
 msgid "Modify Rule..."
 msgstr "Modifica la regla..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:156
+#: openurlwith/openurlwithconfigurewidget.cpp:159
 #, kde-format
 msgid "Rule already exists."
 msgstr "La regla ja existix."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:156
+#: openurlwith/openurlwithconfigurewidget.cpp:159
 #, kde-format
 msgid "Duplicate Rule"
 msgstr "Duplica la regla"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:199
+#: openurlwith/openurlwithconfigurewidget.cpp:202
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Voleu eliminar esta regla?"
 msgstr[1] "Voleu eliminar estes regles?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:200
+#: openurlwith/openurlwithconfigurewidget.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Elimina la regla"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:217
+#: openurlwith/openurlwithconfigurewidget.cpp:220
 #, kde-format
 msgid "Add Rule..."
 msgstr "Afig una regla..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:219
+#: openurlwith/openurlwithconfigurewidget.cpp:222
 #, kde-format
 msgid "Edit Rule..."
 msgstr "Edita la regla..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:224
+#: openurlwith/openurlwithconfigurewidget.cpp:227
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
@@ -383,7 +383,7 @@ msgstr "Configureu les opcions de la suplantació"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add..."
-msgstr ""
+msgstr "Afig..."
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

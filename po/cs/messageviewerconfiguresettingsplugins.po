@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-27 00:37+0000\n"
+"POT-Creation-Date: 2024-02-29 00:38+0000\n"
 "PO-Revision-Date: 2023-11-03 09:08+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -268,7 +268,7 @@ msgstr "Upravit"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Povoleno"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
@@ -321,17 +321,17 @@ msgctxt "@action:button"
 msgid "Modify Rule..."
 msgstr "Upravit pravidlo..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:156
+#: openurlwith/openurlwithconfigurewidget.cpp:159
 #, kde-format
 msgid "Rule already exists."
 msgstr "Pravidlo již existuje."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:156
+#: openurlwith/openurlwithconfigurewidget.cpp:159
 #, kde-format
 msgid "Duplicate Rule"
 msgstr "Duplikovat pravidlo"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:199
+#: openurlwith/openurlwithconfigurewidget.cpp:202
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
@@ -339,23 +339,23 @@ msgstr[0] "Chcete odstranit toto pravidlo?"
 msgstr[1] "Chcete odstranit tato pravidla?"
 msgstr[2] "Chcete odstranit tato pravidla?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:200
+#: openurlwith/openurlwithconfigurewidget.cpp:203
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Odstranit pravidlo"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:217
+#: openurlwith/openurlwithconfigurewidget.cpp:220
 #, kde-format
 msgid "Add Rule..."
 msgstr "Přidat pravidlo..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:219
+#: openurlwith/openurlwithconfigurewidget.cpp:222
 #, kde-format
 msgid "Edit Rule..."
 msgstr "Upravit pravidlo..."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:224
+#: openurlwith/openurlwithconfigurewidget.cpp:227
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
