@@ -145,24 +145,28 @@ void OpenUrlWithConfigureWidget::slotAddRule()
     QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
     if (dlg->exec()) {
         const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
-        if (info.isValid()) {
-            MessageViewer::OpenWithUrlInfo r;
-            r.setCommand(info.command);
-            r.setCommandLine(info.commandLines);
-            r.setUrl(info.url);
-            r.setEnabled(info.enabled);
+        if (MessageViewer::OpenUrlWithManager::self()->hosts().contains(info.url)) {
+            KMessageBox::information(this, i18n("A rule for host was already added."), i18n("Host already checked"));
+        } else {
+            if (info.isValid()) {
+                MessageViewer::OpenWithUrlInfo r;
+                r.setCommand(info.command);
+                r.setCommandLine(info.commandLines);
+                r.setUrl(info.url);
+                r.setEnabled(info.enabled);
 
-            for (int i = 0, total = mListWidget->count(); i < total; ++i) {
-                auto item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
-                const MessageViewer::OpenWithUrlInfo openInfo = item->info();
-                if (openInfo == r) {
-                    KMessageBox::information(this, i18n("Rule already exists."), i18n("Duplicate Rule"));
-                    delete dlg;
-                    return;
+                for (int i = 0, total = mListWidget->count(); i < total; ++i) {
+                    auto item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
+                    const MessageViewer::OpenWithUrlInfo openInfo = item->info();
+                    if (openInfo == r) {
+                        KMessageBox::information(this, i18n("Rule already exists."), i18n("Duplicate Rule"));
+                        delete dlg;
+                        return;
+                    }
                 }
+                auto item = new OpenUrlWithConfigureItem(mListWidget);
+                displayText(r, item);
             }
-            auto item = new OpenUrlWithConfigureItem(mListWidget);
-            displayText(r, item);
         }
     }
     delete dlg;
