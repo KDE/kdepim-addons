@@ -268,7 +268,7 @@ msgstr "Muokkaa"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Käytössä"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
