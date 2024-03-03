@@ -6,11 +6,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kmail_text_vcard_plugin\n"
+"Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
 "PO-Revision-Date: 2008-12-15 13:30+0200\n"
-"Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@lists.kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -110,9 +110,3 @@ msgstr ""
 #, kde-format
 msgid "Email not specified"
 msgstr ""
-
-#~ msgid "Add"
-#~ msgstr "Adaugă"
-
-#~ msgid "Remove"
-#~ msgstr "Elimină"

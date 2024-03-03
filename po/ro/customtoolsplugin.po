@@ -27,9 +27,3 @@ msgstr "Traducător"
 #, kde-format
 msgid "&Translator"
 msgstr "&Traducător"
-
-#, fuzzy
-#~| msgid "Translator"
-#~ msgctxt "@title:window"
-#~ msgid "Configure Translator"
-#~ msgstr "Traducător"
