@@ -267,7 +267,8 @@ msgid "Edit"
 msgstr "Bearbeiten"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enabled"
 msgid "Enabled"
 msgstr "Aktiviert"
 
@@ -384,7 +385,8 @@ msgid "Configure Scam Settings"
 msgstr "Ordner-Einstellungen einrichten"
 
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add..."
 msgid "Add..."
 msgstr "Hinzufügen ..."
 
