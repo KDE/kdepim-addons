@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-02 00:38+0000\n"
-"PO-Revision-Date: 2024-02-26 08:33+0100\n"
+"PO-Revision-Date: 2024-03-06 10:46+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -275,7 +275,7 @@ msgstr "Редактиране"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Включено"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
@@ -333,12 +333,12 @@ msgstr "Промяна на правило..."
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr ""
+msgstr "Правилото за хоста вече е добавено."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "Host already checked"
-msgstr ""
+msgstr "Хостът вече е проверен"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format

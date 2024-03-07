@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-02 00:38+0000\n"
-"PO-Revision-Date: 2024-02-29 02:36+0900\n"
+"PO-Revision-Date: 2024-03-06 18:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -327,12 +327,12 @@ msgstr "修改規則..."
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr ""
+msgstr "主機的規則已經存在。"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "Host already checked"
-msgstr ""
+msgstr "已檢查主機"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
