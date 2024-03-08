@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-02 00:38+0000\n"
-"PO-Revision-Date: 2024-02-28 09:09+0100\n"
+"PO-Revision-Date: 2024-03-06 12:31+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -338,12 +338,12 @@ msgstr "Modifier une règle..."
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr ""
+msgstr "Une règle pour l'hôte a déjà été ajoutée."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "Host already checked"
-msgstr ""
+msgstr "Hôte déjà vérifié"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
