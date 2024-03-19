@@ -19,6 +19,6 @@ public:
     void createAction(KActionCollection *ac) override;
 
 private:
-    void slotActivated();
+    AKONADIDATASETOOLS_NO_EXPORT void slotActivated();
     AkonadiDatabaseToolsUtils::AkonadiDatabaseTool mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown;
 };

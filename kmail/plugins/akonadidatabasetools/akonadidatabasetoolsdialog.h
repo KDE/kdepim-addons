@@ -20,7 +20,7 @@ public:
     void appendErrorText(const QString &text);
 
 private:
-    void writeConfig();
-    void readConfig();
+    AKONADIDATASETOOLS_NO_EXPORT void writeConfig();
+    AKONADIDATASETOOLS_NO_EXPORT void readConfig();
     AkonadiDatabaseToolsWidget *const mAkonadiDatabaseToolsWidget;
 };

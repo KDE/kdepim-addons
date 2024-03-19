@@ -28,7 +28,7 @@ Q_SIGNALS:
     void finished();
 
 private:
-    [[nodiscard]] QString akonadiProcessPath() const;
+    [[nodiscard]] AKONADIDATASETOOLS_NO_EXPORT QString akonadiProcessPath() const;
     AkonadiDatabaseToolsUtils::AkonadiDatabaseTool mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown;
     QProcess *mProcess = nullptr;
 };

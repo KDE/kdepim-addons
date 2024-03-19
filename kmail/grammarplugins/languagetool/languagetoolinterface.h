@@ -27,7 +27,7 @@ private:
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);
     void closeChecker();
-    bool checkAgain();
+    [[nodiscard]] bool checkAgain();
     TextGrammarCheck::LanguageToolResultWidget *const mGrammarResultWidget;
     KToggleAction *mAction = nullptr;
 };
