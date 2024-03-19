@@ -1,9 +1,0 @@
-{
-    "KPlugin": {
-        "Description": "%{PluginDescription}",
-        "EnabledByDefault": false,
-        "Name": "%{PluginName}",
-        "Version": "1.0"
-    },
-    "X-KDE-KMailEditor-Order": "1"
-}
