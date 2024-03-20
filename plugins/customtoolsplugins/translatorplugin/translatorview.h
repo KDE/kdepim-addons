@@ -18,7 +18,7 @@ class TranslatorView : public PimCommon::CustomToolsViewInterface
 public:
     explicit TranslatorView(KActionCollection *ac, QWidget *parent);
     ~TranslatorView() override;
-    KToggleAction *action() const override;
+    [[nodiscard]] KToggleAction *action() const override;
 
     void setText(const QString &text) override;
 
