@@ -88,14 +88,14 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
     for (int i = 0; i < numberOfMailBoxes; i++) {
         KIMAP::MailBoxDescriptor mailBox = mailBoxes[i];
 
-        const QStringList pathParts = mailBox.name.split(mailBox.separator);
+        const QList<QStringView> pathParts = QStringView(mailBox.name).split(mailBox.separator);
         const QString separator = mailBox.separator;
         Q_ASSERT(separator.size() == 1); // that's what the spec says
 
         QString parentPath;
         QString currentPath;
         for (int j = 0; j < pathParts.size(); ++j) {
-            const QString pathPart = pathParts.at(j);
+            const QStringView pathPart = pathParts.at(j);
             currentPath += separator + pathPart;
             const bool isSelectable = !flags[i].contains("\\noselect");
             if (mItemsMap.contains(currentPath)) {
@@ -105,7 +105,7 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
 
                 QStandardItem *parentItem = mItemsMap[parentPath];
 
-                auto item = new QStandardItem(pathPart);
+                auto item = new QStandardItem(pathPart.toString());
                 Qt::ItemFlags itemflags = Qt::ItemIsEnabled;
                 if (isSelectable) {
                     itemflags |= Qt::ItemIsSelectable;
@@ -115,7 +115,7 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
                 parentItem->appendRow(item);
                 mItemsMap[currentPath] = item;
             } else {
-                auto item = new QStandardItem(pathPart);
+                auto item = new QStandardItem(pathPart.toString());
                 Qt::ItemFlags itemflags = Qt::ItemIsEnabled;
                 if (isSelectable) {
                     itemflags |= Qt::ItemIsSelectable;
