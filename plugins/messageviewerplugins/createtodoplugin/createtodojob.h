@@ -25,12 +25,10 @@ public:
 
     void start() override;
 
-private Q_SLOTS:
+private:
     void slotFetchDone(KJob *job);
     void todoCreated(KJob *job);
     void relationCreated(KJob *job);
-
-private:
     void createTodo();
     Akonadi::Item mItem;
     const Akonadi::Collection mCollection;

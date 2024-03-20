@@ -41,14 +41,6 @@ public:
 public Q_SLOTS:
     void slotCloseWidget();
 
-private Q_SLOTS:
-    void slotReturnPressed();
-    void slotCollectionChanged(int);
-    void slotOpenEditor();
-    void slotStartDateTimeChanged(const QDateTime &newDateTime);
-    void slotUpdateButtons(const QString &subject);
-
-    void slotEndDateTimeChanged(const QDateTime &newDateTime);
 Q_SIGNALS:
     void createEvent(const KCalendarCore::Event::Ptr &event, const Akonadi::Collection &collection);
     void collectionChanged(const Akonadi::Collection &col);
@@ -58,6 +50,13 @@ protected:
     bool eventFilter(QObject *object, QEvent *e) override;
 
 private:
+    void slotReturnPressed();
+    void slotCollectionChanged(int);
+    void slotOpenEditor();
+    void slotStartDateTimeChanged(const QDateTime &newDateTime);
+    void slotUpdateButtons(const QString &subject);
+
+    void slotEndDateTimeChanged(const QDateTime &newDateTime);
     [[nodiscard]] KCalendarCore::Event::Ptr createEventItem();
     void readConfig();
     void comboboxRowInserted();

@@ -26,12 +26,11 @@ public:
 
     void start() override;
 
-private Q_SLOTS:
+private:
     void noteCreated(KJob *job);
     void noteUpdated(KJob *job);
     void relationCreated(KJob *job);
 
-private:
     const Akonadi::Item mItem;
     const Akonadi::Collection mCollection;
     Akonadi::NoteUtils::NoteMessageWrapper mNote;
