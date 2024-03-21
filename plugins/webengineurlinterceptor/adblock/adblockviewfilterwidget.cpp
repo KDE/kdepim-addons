@@ -7,6 +7,7 @@
 #include "adblockviewfilterwidget.h"
 #include <QVBoxLayout>
 #include <TextCustomEditor/RichTextBrowser>
+#include <TextCustomEditor/RichTextBrowserWidget>
 
 AdblockViewFilterWidget::AdblockViewFilterWidget(QWidget *parent)
     : QWidget{parent}
@@ -16,8 +17,10 @@ AdblockViewFilterWidget::AdblockViewFilterWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
+    auto richTextBrowerWidget = new TextCustomEditor::RichTextBrowserWidget(mRichTextBrowser, this);
+    richTextBrowerWidget->setObjectName(QStringLiteral("richTextBrowerWidget"));
     mRichTextBrowser->setObjectName(QStringLiteral("mRichTextBrowser"));
-    mainLayout->addWidget(mRichTextBrowser);
+    mainLayout->addWidget(richTextBrowerWidget);
 }
 
 AdblockViewFilterWidget::~AdblockViewFilterWidget() = default;
