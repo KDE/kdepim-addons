@@ -86,7 +86,7 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
         connect(showAdblockAction, &QAction::triggered, this, [this, itemSelected]() {
             const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(itemSelected.at(0).row(), AdblockFilterListsModel::Url);
             const QString filterText = AdblockManager::self()->adblockListText(modelIndexUrl.data().toString());
-            if (filterText.isEmpty()) {
+            if (!filterText.isEmpty()) {
                 AdblockViewFilterDialog dlg(this);
                 dlg.setFilterText(filterText);
                 dlg.exec();
