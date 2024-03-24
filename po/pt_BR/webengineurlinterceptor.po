@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-11 00:37+0000\n"
-"PO-Revision-Date: 2024-01-11 20:55-0300\n"
+"PO-Revision-Date: 2024-03-23 19:05-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,12 +20,10 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: adblock/adblockfilterdialog.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure AdBlock Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
-msgstr "Configurar o plugin AdBlock"
+msgstr "Configurar a lista do Adblock"
 
 #: adblock/adblockfilterlistsmodel.cpp:95
 #, kde-format
