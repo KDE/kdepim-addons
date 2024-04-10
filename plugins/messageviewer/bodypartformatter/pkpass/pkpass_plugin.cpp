@@ -119,7 +119,19 @@ public:
                 code->setData(barcode.message());
 
                 const QString fileName = dir + QStringLiteral("/barcode.png");
-                code->toImage(code->preferredSize(qGuiApp->devicePixelRatio())).save(fileName);
+
+                // determine the closest to preferred barcode size that fits
+                // within the pass and is an integer scale of the minimum size
+                const auto maxWidth = 332 * qGuiApp->devicePixelRatio();
+                auto size = code->preferredSize(qGuiApp->devicePixelRatio());
+                if (size.width() > maxWidth) {
+                    const auto minSize = code->minimumSize();
+                    const auto w = std::max<int>(1, maxWidth / minSize.width()) * minSize.width();
+                    const auto h =
+                        code->dimensions() == Prison::Barcode::TwoDimensions ? std::max<int>(1, maxWidth / minSize.width()) * minSize.height() : size.height();
+                    size = QSizeF(w, h);
+                }
+                code->toImage(size).save(fileName);
 
                 pass->setProperty("barcodeUrl", QUrl::fromLocalFile(fileName));
                 mp->nodeHelper()->addTempFile(fileName);
