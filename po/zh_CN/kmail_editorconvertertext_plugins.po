@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:58+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2024-03-30 19:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -77,8 +77,8 @@ msgstr "图像链接:"
 msgid "Alternate text:"
 msgstr "替代文本："
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:66
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:77
 #, kde-format
 msgid " px"
 msgstr " px"

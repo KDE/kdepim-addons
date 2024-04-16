@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:58+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2020-02-12 16:14+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-it@kde.org>\n"
@@ -76,8 +76,8 @@ msgstr "Ligamine de Image:"
 msgid "Alternate text:"
 msgstr "Texto alternative:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:66
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:77
 #, kde-format
 msgid " px"
 msgstr "px"

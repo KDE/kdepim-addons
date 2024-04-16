@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:58+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2020-01-01 13:03+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -76,8 +76,8 @@ msgstr "Kuvalinkki:"
 msgid "Alternate text:"
 msgstr "Vaihtoehtoinen teksti:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:66
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:77
 #, kde-format
 msgid " px"
 msgstr " px"
