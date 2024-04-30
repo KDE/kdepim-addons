@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Burkhard Lück <lueck@hube-lueck.de>, 2017, 2018, 2019, 2020.
 # Frederik Schwarzer <schwarzer@kde.org>, 2018, 2023.
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-07 00:51+0000\n"
-"PO-Revision-Date: 2023-05-08 23:44+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2024-04-28 20:00+0200\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
@@ -81,10 +82,9 @@ msgstr "Reservierung abgebrochen."
 #: templates/busreservation.html:49 templates/busreservation.html:69
 #: templates/flightreservation.html:62 templates/flightreservation.html:79
 #: templates/trainreservation.html:62 templates/trainreservation.html:90
-#, fuzzy, kde-format
-#| msgid "Seat: %1"
+#, kde-format
 msgid "Seat: %1"
-msgstr "Sitz: %1"
+msgstr "Platz: %1"
 
 #: templates/event.html:3 templates/foodestablishmentreservation.html:3
 #: templates/lodgingreservation.html:3
@@ -157,8 +157,7 @@ msgid "Class: %1"
 msgstr "Klasse: %1"
 
 #: templates/trainreservation.html:58 templates/trainreservation.html:86
-#, fuzzy, kde-format
-#| msgid "Coach: %1"
+#, kde-format
 msgid "Coach: %1"
 msgstr "Wagen: %1"
 
