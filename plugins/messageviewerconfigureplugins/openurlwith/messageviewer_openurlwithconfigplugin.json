@@ -7,6 +7,7 @@
         "Description[ca@valencia]": "Este connector permet configurar quines aplicacions s'utilitzen per a un URL específic.",
         "Description[ca]": "Aquest connector permet configurar quines aplicacions s'usen per a un URL específic.",
         "Description[cs]": "Tento modul umožňuje nastavit které aplikace jsou použity pro konkrétní URL.",
+        "Description[de]": "Mit diesem Modul können Sie das zu verwendende Programm für die angegebene Adresse einrichten.",
         "Description[en_GB]": "This plugin allows you to configure which apps used for specific URL.",
         "Description[eo]": "Ĉi tiu kromaĵo ebligas al vi agordi kiajn aplikaĵojn uzatajn por specifa url.",
         "Description[es]": "Este complemento le permite configurar las aplicaciones que se usan para determinadas URL.",
