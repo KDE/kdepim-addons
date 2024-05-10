@@ -34,11 +34,11 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
     mCommandLine->setClearButtonEnabled(true);
     mCommandLine->setObjectName(QLatin1StringView("commandline"));
-    mCommandLine->setPlaceholderText(i18n("Add command arguments..."));
+    mCommandLine->setPlaceholderText(i18n("Add command arguments…"));
     mainLayout->addRow(i18n("Command Line:"), mCommandLine);
     KLineEditEventHandler::catchReturnKey(mCommandLine);
 
-    auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
+    auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"), this);
     formatHelp->setObjectName(QLatin1StringView("formatHelp"));
     formatHelp->setContextMenuPolicy(Qt::NoContextMenu);
     connect(formatHelp, &QLabel::linkActivated, this, &ViewerPluginExternalEditWidget::slotLinkClicked);

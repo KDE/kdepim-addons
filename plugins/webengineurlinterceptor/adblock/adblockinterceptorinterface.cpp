@@ -52,7 +52,7 @@ void AdblockInterceptorInterface::createActions(KActionCollection *ac)
     Q_UNUSED(ac);
     /*
         if (ac) {
-            mShowBlockableItems = new QAction(i18n("Open Blockable Items..."), this);
+            mShowBlockableItems = new QAction(i18n("Open Blockable Items…"), this);
             ac->addAction(QStringLiteral("adblock_blockable_items"), mShowBlockableItems);
             connect(mShowBlockableItems, &QAction::triggered, this, &AdblockInterceptorInterface::slotShowBlockableElement);
 

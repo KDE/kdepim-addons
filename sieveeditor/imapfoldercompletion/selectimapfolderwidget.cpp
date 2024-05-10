@@ -39,7 +39,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveCore::SieveImapAccoun
     mainLayout->addLayout(topLayout);
     mSearchLineEdit->setObjectName(QLatin1StringView("searchline"));
     mSearchLineEdit->setClearButtonEnabled(true);
-    mSearchLineEdit->setPlaceholderText(i18n("Search..."));
+    mSearchLineEdit->setPlaceholderText(i18n("Search…"));
     topLayout->addWidget(mSearchLineEdit);
 
     auto refreshImap = new QToolButton(this);

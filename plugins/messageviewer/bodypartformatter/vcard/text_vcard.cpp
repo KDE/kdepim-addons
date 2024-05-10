@@ -213,7 +213,7 @@ public:
 
         auto menu = new QMenu();
         QAction *open = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("View Business Card"));
-        QAction *saveas = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Business Card As..."));
+        QAction *saveas = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Business Card As…"));
 
         QAction *action = menu->exec(point, nullptr);
         if (action == open) {

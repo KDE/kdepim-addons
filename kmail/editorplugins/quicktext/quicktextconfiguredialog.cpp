@@ -35,10 +35,10 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QuickTextConfigureDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QuickTextConfigureDialog::reject);
 
-    auto importButton = new QPushButton(i18n("Import..."), this);
+    auto importButton = new QPushButton(i18n("Import…"), this);
     buttonBox->addButton(importButton, QDialogButtonBox::ActionRole);
     connect(importButton, &QPushButton::clicked, this, &QuickTextConfigureDialog::slotImport);
-    auto exportButton = new QPushButton(i18n("Export..."), this);
+    auto exportButton = new QPushButton(i18n("Export…"), this);
     buttonBox->addButton(exportButton, QDialogButtonBox::ActionRole);
     connect(exportButton, &QPushButton::clicked, this, &QuickTextConfigureDialog::slotExport);
 

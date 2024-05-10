@@ -42,9 +42,9 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
         PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
     mDomainNameListEditor = new ConfirmAddressSimpleStringListEditor(groupBoxDomainName,
                                                                      buttonCode,
-                                                                     i18n("A&dd..."),
+                                                                     i18n("A&dd…"),
                                                                      i18n("Re&move"),
-                                                                     i18n("Mod&ify..."),
+                                                                     i18n("Mod&ify…"),
                                                                      i18n("Enter new domain name:"));
     mDomainNameListEditor->setObjectName(QLatin1StringView("domainnamelisteditor"));
     mDomainNameListEditor->setRemoveDialogLabel(i18n("Do you want to remove this domain?"));
@@ -61,9 +61,9 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
                                                                             | PimCommon::SimpleStringListEditor::Modify);
     mWhiteListEditor = new ConfirmAddressSimpleStringListEditor(groupBoxWhiteList,
                                                                 buttonCode,
-                                                                i18n("A&dd..."),
+                                                                i18n("A&dd…"),
                                                                 i18n("Re&move"),
-                                                                i18n("Mod&ify..."),
+                                                                i18n("Mod&ify…"),
                                                                 i18n("Enter new email address:"));
     mWhiteListEditor->setObjectName(QLatin1StringView("whitelisteditor"));
     mWhiteListEditor->setRemoveDialogLabel(i18n("Do you want to remove this email address?"));

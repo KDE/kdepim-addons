@@ -58,7 +58,7 @@ VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWi
 
     layout->addWidget(mView);
 
-    buttonBox->button(QDialogButtonBox::Apply)->setText(i18nc("@action:button", "Import All..."));
+    buttonBox->button(QDialogButtonBox::Apply)->setText(i18nc("@action:button", "Import All…"));
 
     mIt = mContacts.begin();
 

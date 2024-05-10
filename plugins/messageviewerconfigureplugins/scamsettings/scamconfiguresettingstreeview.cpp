@@ -29,7 +29,7 @@ ScamConfigureSettingsTreeView::~ScamConfigureSettingsTreeView() = default;
 void ScamConfigureSettingsTreeView::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu;
-    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), &menu);
+    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add…"), &menu);
     // TODO connect(addAction, &QAction::triggered, this, &AdblockFilterTreeView::slotAddAdblock);
     menu.addAction(addAction);
 

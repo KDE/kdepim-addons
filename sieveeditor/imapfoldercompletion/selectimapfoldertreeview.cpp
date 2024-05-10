@@ -37,7 +37,7 @@ void SelectImapFolderTreeView::paintEvent(QPaintEvent *event)
         label = i18n("Unable to load folder list");
         break;
     case InProgress:
-        label = i18n("Loading in progress...");
+        label = i18n("Loading in progress…");
         break;
     case Success:
         QTreeView::paintEvent(event);

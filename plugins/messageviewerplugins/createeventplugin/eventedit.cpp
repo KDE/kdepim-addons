@@ -42,7 +42,7 @@ EventEdit::EventEdit(QWidget *parent)
     , mStartDateTimeEdit(new EventDateTimeWidget(this))
     , mEndDateTimeEdit(new EventDateTimeWidget(this))
     , mSaveButton(new QPushButton(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("&Save"), this))
-    , mOpenEditorButton(new QPushButton(i18n("Open &Editor..."), this))
+    , mOpenEditorButton(new QPushButton(i18n("Open &Editor…"), this))
 {
     auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(5, 5, 5, 5);

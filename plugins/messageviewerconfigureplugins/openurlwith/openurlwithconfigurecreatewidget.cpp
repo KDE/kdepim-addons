@@ -33,7 +33,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     mServerName->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mServerName);
 
-    auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
+    auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"), this);
     formatHelp->setObjectName(QLatin1StringView("formatHelp"));
     formatHelp->setContextMenuPolicy(Qt::NoContextMenu);
     connect(formatHelp, &QLabel::linkActivated, this, &OpenUrlWithConfigureCreateWidget::slotLinkClicked);

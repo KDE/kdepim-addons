@@ -26,7 +26,7 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     mLineEdit->setObjectName(QLatin1StringView("lineedit"));
     layout->addWidget(mLineEdit);
 
-    mToolButton->setText(QStringLiteral("..."));
+    mToolButton->setText(QStringLiteral("…"));
     mToolButton->setObjectName(QLatin1StringView("toolbutton"));
     mToolButton->setToolTip(i18n("Select IMAP folder"));
     mToolButton->hide();
@@ -55,7 +55,7 @@ void SelectImapWidget::setSieveImapAccountSettings(const KSieveCore::SieveImapAc
     if (mAccount.isValid()) {
         mToolButton->show();
         mLineEdit->setSieveImapAccountSettings(account);
-        mLineEdit->setPlaceholderText(i18n("Click on button for selecting folder..."));
+        mLineEdit->setPlaceholderText(i18n("Click on button for selecting folder…"));
     } else {
         qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Account is not defined";
     }

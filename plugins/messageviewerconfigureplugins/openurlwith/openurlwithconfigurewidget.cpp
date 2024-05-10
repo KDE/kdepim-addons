@@ -56,9 +56,9 @@ MessageViewer::OpenWithUrlInfo OpenUrlWithConfigureItem::info() const
 OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     : QWidget{parent}
     , mListWidget(new QListWidget(this))
-    , mAddRule(new QPushButton(i18nc("@action:button", "Add Rule..."), this))
+    , mAddRule(new QPushButton(i18nc("@action:button", "Add Rule…"), this))
     , mRemoveRule(new QPushButton(i18nc("@action:button", "Remove Rule"), this))
-    , mModifyRule(new QPushButton(i18nc("@action:button", "Modify Rule..."), this))
+    , mModifyRule(new QPushButton(i18nc("@action:button", "Modify Rule…"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainLayout"));
@@ -221,9 +221,9 @@ void OpenUrlWithConfigureWidget::slotCustomContextMenuRequested(const QPoint &p)
     Q_UNUSED(p);
     QMenu menu(this);
     const auto selectedItemCount{mListWidget->selectedItems().count()};
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &OpenUrlWithConfigureWidget::slotAddRule);
+    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule…"), this, &OpenUrlWithConfigureWidget::slotAddRule);
     if (selectedItemCount == 1) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule..."), this, &OpenUrlWithConfigureWidget::slotEditRule);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule…"), this, &OpenUrlWithConfigureWidget::slotEditRule);
     }
     if (selectedItemCount > 0) {
         menu.addSeparator();

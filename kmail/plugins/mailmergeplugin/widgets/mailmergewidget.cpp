@@ -60,7 +60,7 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
 
     auto buttonCode = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(
         PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
-    mAttachment = new AttachmentListWidget(this, buttonCode, i18n("A&dd..."), i18n("Re&move"), i18n("Mod&ify..."));
+    mAttachment = new AttachmentListWidget(this, buttonCode, i18n("A&dd…"), i18n("Re&move"), i18n("Mod&ify..."));
     mAttachment->setObjectName(QLatin1StringView("attachment-list"));
 
     mainLayout->addWidget(mAttachment);

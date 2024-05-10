@@ -20,7 +20,7 @@ table .keyB {
 
   {% if block.showKeyDetails %}
     {% if block.searchRunning %}
-        <p>{% i18n "Loading key details..." %}</p>
+        <p>{% i18n "Loading key details…" %}</p>
     {% endif %}
     {% if not block.error %}
       <table border="0" cellspacing="1" cellpadding="1">
@@ -49,7 +49,7 @@ table .keyB {
         | <a href="{{ block.keyUrl }}">{% i18n "Open in Kleopatra" %}</a>
     {% endif %}
   {% else %}
-    <a href="kmail:showSignatureDetails">{% i18n "Show key details ..." %}</a>
+    <a href="kmail:showSignatureDetails">{% i18n "Show key details …" %}</a>
   {% endif %}
     | <a href="{{ block.importUrl }}">{% i18n "Import key" %}</a>
     </div>

@@ -75,7 +75,7 @@ a.itineraryButton:active {
         {% if actionState.defaultDeviceName %}
             <a href="x-kmail:/bodypart/0//sendToDevice-{{ actionState.defaultDeviceId }}" class="itineraryButton" draggable="false"><span>{% icon "kdeconnect" small %}{% i18n "Send to %1" actionState.defaultDeviceName %}</span></a>
         {% else %}
-            <a href="x-kmail:/bodypart/0//sendToDeviceList" class="itineraryButton" draggable="false"><span>{% icon "kdeconnect" small %}{% i18n "Send to Device..." %}</span></a>
+            <a href="x-kmail:/bodypart/0//sendToDeviceList" class="itineraryButton" draggable="false"><span>{% icon "kdeconnect" small %}{% i18n "Send to Device…" %}</span></a>
         {% endif %}
     {% endif %}
 </div>

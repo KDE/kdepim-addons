@@ -23,7 +23,7 @@ SendMailPluginInterface::~SendMailPluginInterface() = default;
 void SendMailPluginInterface::createAction(KActionCollection *ac)
 {
     mAction = ac->addAction(QStringLiteral("send_mail"));
-    mAction->setText(i18n("Send an email..."));
+    mAction->setText(i18n("Send an email…"));
     mAction->setIcon(QIcon::fromTheme(QStringLiteral("mail-message-new")));
     connect(mAction, &QAction::triggered, this, &SendMailPluginInterface::slotActivated);
     const PimCommon::ActionType type(mAction, PimCommon::ActionType::Action);

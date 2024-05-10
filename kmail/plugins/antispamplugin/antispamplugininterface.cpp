@@ -19,7 +19,7 @@ AntiSpamPluginInterface::~AntiSpamPluginInterface() = default;
 
 void AntiSpamPluginInterface::createAction(KActionCollection *ac)
 {
-    auto action = new QAction(i18n("&Anti-Spam Wizard..."), this);
+    auto action = new QAction(i18n("&Anti-Spam Wizard…"), this);
     ac->addAction(QStringLiteral("antiSpamWizard"), action);
     connect(action, &QAction::triggered, this, &AntiSpamPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);

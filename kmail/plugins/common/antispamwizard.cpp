@@ -453,7 +453,7 @@ void AntiSpamWizard::checkToolAvailability()
     bool found = false;
     QList<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
     for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin(); it != end; ++it) {
-        const QString text(i18n("Scanning for %1...", (*it).getId()));
+        const QString text(i18n("Scanning for %1…", (*it).getId()));
         mInfoPage->setScanProgressText(text);
         if ((*it).isSpamTool() && (*it).isServerBased()) {
             // check the configured account for pattern in <server>

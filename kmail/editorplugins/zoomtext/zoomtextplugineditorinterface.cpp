@@ -22,7 +22,7 @@ ZoomTextPluginEditorInterface::~ZoomTextPluginEditorInterface() = default;
 
 void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    auto zoomMenu = new KActionMenu(i18n("Zoom..."), this);
+    auto zoomMenu = new KActionMenu(i18n("Zoom…"), this);
     ac->addAction(QStringLiteral("zoom_menu"), zoomMenu);
 
     QAction *zoomInAction = KStandardAction::zoomIn(this, &ZoomTextPluginEditorInterface::slotZoomIn, this);

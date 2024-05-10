@@ -31,11 +31,11 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
 
     mLineEdit->setObjectName(QLatin1StringView("lineedit"));
     mLineEdit->setClearButtonEnabled(true);
-    mLineEdit->setPlaceholderText(i18n("Click on button for selecting contacts..."));
+    mLineEdit->setPlaceholderText(i18n("Click on button for selecting contacts…"));
     connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::slotTextChanged);
     mainLayout->addWidget(mLineEdit);
 
-    mEmailButton->setText(i18n("..."));
+    mEmailButton->setText(i18n("…"));
     mEmailButton->setObjectName(QLatin1StringView("emailbutton"));
     mEmailButton->setToolTip(i18n("Select Emails"));
     mainLayout->addWidget(mEmailButton);

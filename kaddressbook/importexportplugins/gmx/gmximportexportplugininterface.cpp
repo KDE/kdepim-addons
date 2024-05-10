@@ -37,13 +37,13 @@ GMXImportExportPluginInterface::~GMXImportExportPluginInterface() = default;
 void GMXImportExportPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("file_import_gmx"));
-    action->setText(i18n("Import GMX file..."));
+    action->setText(i18n("Import GMX file…"));
     action->setWhatsThis(i18n("Import contacts from a GMX address book file."));
     setImportActions(QList<QAction *>() << action);
     connect(action, &QAction::triggered, this, &GMXImportExportPluginInterface::slotImportGmx);
 
     action = ac->addAction(QStringLiteral("file_export_gmx"));
-    action->setText(i18n("Export GMX file..."));
+    action->setText(i18n("Export GMX file…"));
     action->setWhatsThis(i18n("Export contacts to a GMX address book file."));
     setExportActions(QList<QAction *>() << action);
     connect(action, &QAction::triggered, this, &GMXImportExportPluginInterface::slotExportGmx);

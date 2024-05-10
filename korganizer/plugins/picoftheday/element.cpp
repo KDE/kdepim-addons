@@ -323,14 +323,12 @@ void POTDElement::setLoadingFailed()
 
 QString POTDElement::shortText() const
 {
-    return (mData->mState >= DataLoaded) ? i18n("Picture Page") : (mData->mState >= NeedingPageData) ? i18n("Loading...") : QString();
+    return (mData->mState >= DataLoaded) ? i18n("Picture Page") : (mData->mState >= NeedingPageData) ? i18n("Loading…") : QString();
 }
 
 QString POTDElement::longText() const
 {
-    return (mData->mState >= DataLoaded)     ? mData->mTitle
-        : (mData->mState >= NeedingPageData) ? i18n("<qt>Loading <i>Picture of the Day</i>...</qt>")
-                                             : QString();
+    return (mData->mState >= DataLoaded) ? mData->mTitle : (mData->mState >= NeedingPageData) ? i18n("<qt>Loading <i>Picture of the Day</i>…</qt>") : QString();
 }
 
 QUrl POTDElement::url() const

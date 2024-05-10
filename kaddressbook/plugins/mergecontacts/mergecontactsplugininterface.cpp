@@ -22,7 +22,7 @@ MergeContactsPluginInterface::~MergeContactsPluginInterface() = default;
 void MergeContactsPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("merge_contacts"));
-    action->setText(i18n("Merge Contacts..."));
+    action->setText(i18n("Merge Contacts…"));
     connect(action, &QAction::triggered, this, &MergeContactsPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     addActionType(type);

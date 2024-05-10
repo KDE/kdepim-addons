@@ -26,14 +26,14 @@ WindowsContactImportExportPluginInterface::~WindowsContactImportExportPluginInte
 void WindowsContactImportExportPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("file_import_windows_contact"));
-    action->setText(i18n("Import Windows Contact file..."));
+    action->setText(i18n("Import Windows Contact file…"));
     action->setWhatsThis(i18n("Import contacts from windows contact file."));
     setImportActions(QList<QAction *>() << action);
     connect(action, &QAction::triggered, this, &WindowsContactImportExportPluginInterface::slotImportWindowsContact);
 
     // If a day we implement it
     //    action = ac->addAction(QStringLiteral("file_export_windows_contact"));
-    //    action->setText(i18n("Export Windows Contact file..."));
+    //    action->setText(i18n("Export Windows Contact file…"));
     //    action->setWhatsThis(i18n("Export contacts to windows contact file."));
     //    setExportActions(QList<QAction *>() << action);
     //    connect(action, &QAction::triggered, this, &WindowsContactImportExportPluginInterface::slotExportWindowsContact);

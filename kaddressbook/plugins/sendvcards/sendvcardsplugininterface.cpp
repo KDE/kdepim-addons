@@ -31,7 +31,7 @@ void SendVcardsPluginInterface::updateActions(int numberOfSelectedItems, int num
 void SendVcardsPluginInterface::createAction(KActionCollection *ac)
 {
     mAction = ac->addAction(QStringLiteral("send_vcards"));
-    mAction->setText(i18n("Send vCards..."));
+    mAction->setText(i18n("Send vCards…"));
     mAction->setIcon(QIcon::fromTheme(QStringLiteral("mail-message-new")));
     connect(mAction, &QAction::triggered, this, &SendVcardsPluginInterface::slotActivated);
     const PimCommon::ActionType type(mAction, PimCommon::ActionType::Action);

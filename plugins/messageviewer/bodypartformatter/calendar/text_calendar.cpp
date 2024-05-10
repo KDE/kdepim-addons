@@ -1339,7 +1339,7 @@ public:
 
         auto menu = new QMenu();
         QAction *open = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
-        QAction *saveas = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Attachment As..."));
+        QAction *saveas = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Attachment As…"));
 
         QAction *a = menu->exec(point, nullptr);
         if (a == open) {
@@ -1361,7 +1361,7 @@ public:
             } else if (path == QLatin1StringView("accept_counter")) {
                 return i18n("Accept counter proposal");
             } else if (path == QLatin1StringView("counter")) {
-                return i18n("Create a counter proposal...");
+                return i18n("Create a counter proposal…");
             } else if (path == QLatin1StringView("ignore")) {
                 return i18n("Throw mail away");
             } else if (path == QLatin1StringView("decline")) {
@@ -1371,7 +1371,7 @@ public:
             } else if (path == QLatin1StringView("decline_counter")) {
                 return i18n("Decline counter proposal");
             } else if (path == QLatin1StringView("check_calendar")) {
-                return i18n("Check my calendar...");
+                return i18n("Check my calendar…");
             } else if (path == QLatin1StringView("reply")) {
                 return i18n("Record response into my calendar");
             } else if (path == QLatin1StringView("record")) {

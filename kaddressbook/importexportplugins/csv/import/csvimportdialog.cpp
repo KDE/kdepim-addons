@@ -445,8 +445,8 @@ void CSVImportDialog::initGUI()
     mTable->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     layout->addWidget(mTable, 5, 0, 1, 5);
 
-    mUser1Button->setText(i18nc("@action:button", "Apply Template..."));
-    mUser2Button->setText(i18nc("@action:button", "Save Template..."));
+    mUser1Button->setText(i18nc("@action:button", "Apply Template…"));
+    mUser2Button->setText(i18nc("@action:button", "Save Template…"));
 
     mOkButton->setEnabled(false);
     mUser1Button->setEnabled(false);

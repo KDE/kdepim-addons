@@ -34,7 +34,7 @@ void CheckGravatarPluginInterface::updateActions(int numberOfSelectedItems, int 
 void CheckGravatarPluginInterface::createAction(KActionCollection *ac)
 {
     mAction = ac->addAction(QStringLiteral("search_gravatar"));
-    mAction->setText(i18n("Check Gravatar..."));
+    mAction->setText(i18n("Check Gravatar…"));
     connect(mAction, &QAction::triggered, this, &CheckGravatarPluginInterface::slotActivated);
     PimCommon::ActionType type(mAction, PimCommon::ActionType::Tools);
     addActionType(type);

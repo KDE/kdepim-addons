@@ -20,9 +20,9 @@
 ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     : QWidget(parent)
     , mTreeWidget(new QTreeWidget(this))
-    , mAddRule(new QPushButton(i18nc("@action:button", "Add Rule..."), this))
+    , mAddRule(new QPushButton(i18nc("@action:button", "Add Rule…"), this))
     , mRemoveRule(new QPushButton(i18nc("@action:button", "Remove Rule"), this))
-    , mModifyRule(new QPushButton(i18nc("@action:button", "Modify Rule..."), this))
+    , mModifyRule(new QPushButton(i18nc("@action:button", "Modify Rule…"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
@@ -116,9 +116,9 @@ void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p
 {
     QMenu menu(this);
     const auto selectedItemCount{mTreeWidget->selectedItems().count()};
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &ConfirmBeforeDeletingWidget::slotAddRule);
+    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule…"), this, &ConfirmBeforeDeletingWidget::slotAddRule);
     if (selectedItemCount == 1) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule..."), this, &ConfirmBeforeDeletingWidget::slotEditRule);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule…"), this, &ConfirmBeforeDeletingWidget::slotEditRule);
     }
     if (selectedItemCount > 0) {
         menu.addSeparator();

@@ -40,7 +40,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     , mNoteEdit(new QLineEdit(this))
     , mMsgWidget(new KMessageWidget(this))
     , mSaveButton(new QPushButton(QIcon::fromTheme(QStringLiteral("task-new")), i18n("&Save"), this))
-    , mOpenEditorButton(new QPushButton(i18n("Open &Editor..."), this))
+    , mOpenEditorButton(new QPushButton(i18n("Open &Editor…"), this))
 {
     auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(5, 5, 5, 5);

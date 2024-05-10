@@ -45,7 +45,7 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     mSearchInResultLineEdit = new KTreeWidgetSearchLineWidget(this, mResultTreeWidget);
     mSearchInResultLineEdit->setObjectName(QLatin1StringView("searchinresultlineedit"));
     mSearchInResultLineEdit->searchLine()->setClearButtonEnabled(true);
-    mSearchInResultLineEdit->searchLine()->setPlaceholderText(i18n("Search in result..."));
+    mSearchInResultLineEdit->searchLine()->setPlaceholderText(i18n("Search in result…"));
 
     auto resultWidget = new QWidget(this);
     auto resultWidgetLayout = new QVBoxLayout(resultWidget);

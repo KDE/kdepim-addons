@@ -56,9 +56,9 @@ ViewerPluginExternalScriptInfo ViewerPluginExternalScriptItem::scriptInfo() cons
 ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget *parent)
     : QWidget(parent)
     , mListExternal(new QListWidget(this))
-    , mAddScript(new QPushButton(i18n("Add Script..."), this))
+    , mAddScript(new QPushButton(i18n("Add Script…"), this))
     , mRemoveScript(new QPushButton(i18n("Remove Script"), this))
-    , mModifyScript(new QPushButton(i18n("Modify Script..."), this))
+    , mModifyScript(new QPushButton(i18n("Modify Script…"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("layout"));

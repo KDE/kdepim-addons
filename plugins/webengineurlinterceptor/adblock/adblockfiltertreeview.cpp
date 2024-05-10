@@ -61,14 +61,14 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
 
     const QModelIndexList itemSelected = selectionModel()->selectedRows();
 
-    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), &menu);
+    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add…"), &menu);
     connect(addAction, &QAction::triggered, this, &AdblockFilterTreeView::slotAddAdblock);
     menu.addAction(addAction);
 
     const int selectedItemsNumber = itemSelected.count();
     // qDebug() <<" selectedItemsNumber " << selectedItemsNumber;
     if (selectedItemsNumber == 1) { // Edit only one element
-        auto modifyAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18n("Modify..."), &menu);
+        auto modifyAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18n("Modify…"), &menu);
         connect(modifyAction, &QAction::triggered, this, [this, itemSelected]() {
             slotModifyAdblock(itemSelected.at(0));
         });

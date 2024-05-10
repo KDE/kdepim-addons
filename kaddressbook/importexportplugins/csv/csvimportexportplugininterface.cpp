@@ -33,13 +33,13 @@ CSVImportExportPluginInterface::~CSVImportExportPluginInterface() = default;
 void CSVImportExportPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("file_export_csv"));
-    action->setText(i18n("Export CSV file..."));
+    action->setText(i18n("Export CSV file…"));
     action->setWhatsThis(i18n("Export contacts to a file in comma separated value format."));
     setExportActions(QList<QAction *>() << action);
     connect(action, &QAction::triggered, this, &CSVImportExportPluginInterface::slotExportCVS);
 
     action = ac->addAction(QStringLiteral("file_import_csv"));
-    action->setText(i18n("Import CSV file..."));
+    action->setText(i18n("Import CSV file…"));
     action->setWhatsThis(i18n("Import contacts from a file in comma separated value format."));
     setImportActions(QList<QAction *>() << action);
     connect(action, &QAction::triggered, this, &CSVImportExportPluginInterface::slotImportCVS);
