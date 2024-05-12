@@ -288,8 +288,7 @@ msgstr "Nom del servidor:"
 #, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
 msgstr ""
-"<qt><a href=\"whatsthis\">Informació sobre el format dels arguments...</a></"
-"qt>"
+"<qt><a href=\"whatsthis\">Informació sobre el format dels arguments…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -320,7 +319,7 @@ msgstr "Configureu el connector obri l'URL amb"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule..."
-msgstr "Afig una regla..."
+msgstr "Afig una regla…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
@@ -332,7 +331,7 @@ msgstr "Elimina la regla"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule..."
-msgstr "Modifica la regla..."
+msgstr "Modifica la regla…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
@@ -370,12 +369,12 @@ msgstr "Elimina la regla"
 #: openurlwith/openurlwithconfigurewidget.cpp:224
 #, kde-format
 msgid "Add Rule..."
-msgstr "Afig una regla..."
+msgstr "Afig una regla…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
 #, kde-format
 msgid "Edit Rule..."
-msgstr "Edita la regla..."
+msgstr "Edita la regla…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -393,7 +392,7 @@ msgstr "Configureu les opcions de la suplantació"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add..."
-msgstr "Afig..."
+msgstr "Afig…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

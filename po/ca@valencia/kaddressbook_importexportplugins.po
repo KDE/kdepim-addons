@@ -25,7 +25,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Export CSV file..."
-msgstr "Exporta cap a un fitxer CSV..."
+msgstr "Exporta cap a un fitxer CSV…"
 
 #: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
@@ -36,7 +36,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Import CSV file..."
-msgstr "Importa un fitxer CSV..."
+msgstr "Importa un fitxer CSV…"
 
 #: csv/csvimportexportplugininterface.cpp:43
 #, kde-format
@@ -369,22 +369,21 @@ msgid ""
 "data. In many cases, the first line of a csv file will be a comment line "
 "describing the order of the data fields included in the file."
 msgstr ""
-"Seleccioneu esta casella si voleu que la importació ometa la primera fila de "
-"les dades «csv». En molts casos, la primera línia d'un fitxer «csv» és una "
-"línia de comentari que descriu l'ordre dels camps de dades continguts en el "
-"fitxer."
+"Marqueu esta casella si voleu que la importació ometa la primera fila de les "
+"dades «csv». En molts casos, la primera línia d'un fitxer «csv» és una línia "
+"de comentari que descriu l'ordre dels camps de dades continguts en el fitxer."
 
 #: csv/import/csvimportdialog.cpp:448
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Template..."
-msgstr "Aplica la plantilla..."
+msgstr "Aplica la plantilla…"
 
 #: csv/import/csvimportdialog.cpp:449
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Template..."
-msgstr "Guarda la plantilla..."
+msgstr "Guarda la plantilla…"
 
 #: csv/import/csvimportdialog.cpp:470
 #, kde-format
@@ -477,7 +476,7 @@ msgstr "Fitxer de llibreta d'adreces GMX (*.gmxa)"
 #: gmx/gmximportexportplugininterface.cpp:40
 #, kde-format
 msgid "Import GMX file..."
-msgstr "Importa un fitxer GMX..."
+msgstr "Importa un fitxer GMX…"
 
 #: gmx/gmximportexportplugininterface.cpp:41
 #, kde-format
@@ -487,7 +486,7 @@ msgstr "Importa els contactes des d'un fitxer GMX de llibreta d'adreces."
 #: gmx/gmximportexportplugininterface.cpp:46
 #, kde-format
 msgid "Export GMX file..."
-msgstr "Exporta cap a un fitxer GMX..."
+msgstr "Exporta cap a un fitxer GMX…"
 
 #: gmx/gmximportexportplugininterface.cpp:47
 #, kde-format
@@ -509,7 +508,7 @@ msgstr "%1 no és una llibreta d'adreces GMX."
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, kde-format
 msgid "Import From LDAP server..."
-msgstr "Importa des d'un servidor LDAP..."
+msgstr "Importa des d'un servidor LDAP…"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
 #, kde-format
@@ -519,7 +518,7 @@ msgstr "Importa els contactes des d'un servidor LDAP."
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Import LDIF file..."
-msgstr "Importa un fitxer LDIF..."
+msgstr "Importa un fitxer LDIF…"
 
 #: ldif/ldifimportexportplugininterface.cpp:37
 #, kde-format
@@ -529,7 +528,7 @@ msgstr "Importa els contactes des d'un fitxer LDIF."
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Export LDIF file..."
-msgstr "Exporta cap a un fitxer LDIF..."
+msgstr "Exporta cap a un fitxer LDIF…"
 
 #: ldif/ldifimportexportplugininterface.cpp:43
 #, kde-format
@@ -571,8 +570,8 @@ msgid ""
 "Check this box if you want to export the contact's private fields to the "
 "vCard output file."
 msgstr ""
-"Seleccioneu esta casella si voleu exportar els camps privats del contacte "
-"cap al fitxer d'eixida de la vCard."
+"Marqueu esta casella si voleu exportar els camps privats del contacte cap al "
+"fitxer d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:36
 #, kde-format
@@ -593,8 +592,8 @@ msgid ""
 "Check this box if you want to export the contact's business fields to the "
 "vCard output file."
 msgstr ""
-"Seleccioneu esta casella si voleu exportar els camps de negoci del contacte "
-"cap al fitxer d'eixida de la vCard."
+"Marqueu esta casella si voleu exportar els camps de negoci del contacte cap "
+"al fitxer d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:43
 #, kde-format
@@ -615,8 +614,8 @@ msgid ""
 "Check this box if you want to export the contact's other fields to the vCard "
 "output file."
 msgstr ""
-"Seleccioneu esta casella si voleu exportar els altres camps del contacte cap "
-"al fitxer d'eixida de la vCard."
+"Marqueu esta casella si voleu exportar els altres camps del contacte cap al "
+"fitxer d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:50
 #, kde-format
@@ -637,8 +636,8 @@ msgid ""
 "Check this box if you want to export the contact's encryption keys to the "
 "vCard output file."
 msgstr ""
-"Seleccioneu esta casella si voleu exportar les claus d'encriptació del "
-"contacte cap al fitxer d'eixida de la vCard."
+"Marqueu esta casella si voleu exportar les claus d'encriptació del contacte "
+"cap al fitxer d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:57
 #, kde-format
@@ -659,8 +658,8 @@ msgid ""
 "Check this box if you want to export the contact's picture to the vCard "
 "output file."
 msgstr ""
-"Seleccioneu esta casella si voleu exportar la imatge del contacte cap al "
-"fitxer d'eixida de la vCard."
+"Marqueu esta casella si voleu exportar la imatge del contacte cap al fitxer "
+"d'eixida de la vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:64
 #, kde-format
@@ -688,9 +687,9 @@ msgid ""
 "vCard's full name field.  This may be required to get the name shown "
 "correctly in GMail or Android."
 msgstr ""
-"Seleccioneu esta casella si voleu exportar el nom que es mostrarà del "
-"contacte en el camp de nom complet de la vCard. Açò pot ser necessari per a "
-"obtindre el nom mostrat correctament en GMail o Android."
+"Marqueu esta casella si voleu exportar el nom que es mostrarà del contacte "
+"en el camp de nom complet de la vCard. Açò pot ser necessari per a obtindre "
+"el nom mostrat correctament en GMail o Android."
 
 #: vcards/engine/vcardviewerdialog.cpp:28
 #, kde-format
@@ -708,12 +707,12 @@ msgstr "Voleu importar este contacte a dins de la llibreta d'adreces?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All..."
-msgstr "Importa-ho tot..."
+msgstr "Importa-ho tot…"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard..."
-msgstr "Importa una vCard..."
+msgstr "Importa una vCard…"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -728,12 +727,12 @@ msgstr "Exporta els contactes a un fitxer vCard 4.0."
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
 msgid "Export vCard 4.0..."
-msgstr "Exporta cap a vCard 4.0..."
+msgstr "Exporta cap a vCard 4.0…"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0..."
-msgstr "Exporta cap a vCard 3.0..."
+msgstr "Exporta cap a vCard 3.0…"
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -743,7 +742,7 @@ msgstr "Exporta els contactes a un fitxer vCard 3.0."
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1..."
-msgstr "Exporta cap a vCard 2.1..."
+msgstr "Exporta cap a vCard 2.1…"
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
@@ -798,7 +797,7 @@ msgstr "Exporta cap a diversos fitxers"
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, kde-format
 msgid "Import Windows Contact file..."
-msgstr "Importa un fitxer de contactes de Windows..."
+msgstr "Importa un fitxer de contactes de Windows…"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
 #, kde-format

@@ -757,12 +757,12 @@ msgstr "Pàgina de la imatge"
 #: plugins/picoftheday/element.cpp:326
 #, kde-format
 msgid "Loading..."
-msgstr "S'està carregant..."
+msgstr "S'està carregant…"
 
 #: plugins/picoftheday/element.cpp:332
 #, kde-format
 msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
-msgstr "<qt>S'està carregant la <i>imatge del dia</i>...</qt>"
+msgstr "<qt>S'està carregant la <i>imatge del dia</i>…</qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48
 #, kde-format

@@ -134,7 +134,7 @@ msgstr ""
 
 #: templates/pgpkeymessagepart.html:23
 msgid "Loading key details..."
-msgstr "S'estan carregant els detalls de la clau..."
+msgstr "S'estan carregant els detalls de la clau…"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -171,7 +171,7 @@ msgstr "Obri en Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
 msgid "Show key details ..."
-msgstr "Mostra els detalls de la clau..."
+msgstr "Mostra els detalls de la clau…"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"

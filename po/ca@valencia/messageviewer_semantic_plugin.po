@@ -138,7 +138,7 @@ msgstr "Afig a KDE Itinerary"
 
 #: templates/itinerary.html:78
 msgid "Send to Device..."
-msgstr "Envia a un dispositiu..."
+msgstr "Envia a un dispositiu…"
 
 #: templates/location.html:4
 msgid "Show location on map"

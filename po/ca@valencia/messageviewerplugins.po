@@ -37,7 +37,7 @@ msgstr "Expandix l'URL"
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
 msgid "Translate..."
-msgstr "Traduïx..."
+msgstr "Traduïx…"
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
 #: createtodoplugin/todoedit.cpp:42
@@ -48,7 +48,7 @@ msgstr "Guar&da"
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, kde-format
 msgid "Open &Editor..."
-msgstr "Obri l'&editor..."
+msgstr "Obri l'&editor…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -103,7 +103,7 @@ msgstr "Tanca el giny per a crear esdeveniments nous."
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
 #, kde-format
 msgid "Create Event..."
-msgstr "Crea un esdeveniment..."
+msgstr "Crea un esdeveniment…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -238,7 +238,7 @@ msgstr "Configureu el connector «Script extern»"
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
 #, kde-format
 msgid "Add Script..."
-msgstr "Afig un script..."
+msgstr "Afig un script…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -248,7 +248,7 @@ msgstr "Elimina l'script"
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, kde-format
 msgid "Modify Script..."
-msgstr "Modifica l'script..."
+msgstr "Modifica l'script…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -284,7 +284,7 @@ msgstr "Descripció:"
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
 #, kde-format
 msgid "Add command arguments..."
-msgstr "Afig arguments a la línia d'ordres..."
+msgstr "Afig arguments a la línia d'ordres…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -295,8 +295,7 @@ msgstr "Línia d'ordres:"
 #, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
 msgstr ""
-"<qt><a href=\"whatsthis\">Informació sobre el format dels arguments...</a></"
-"qt>"
+"<qt><a href=\"whatsthis\">Informació sobre el format dels arguments…</a></qt>"
 
 # skip-rule: t-sp_in
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47

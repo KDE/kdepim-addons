@@ -466,7 +466,7 @@ msgstr "Obri l'adjunt"
 #: text_calendar.cpp:1342
 #, kde-format
 msgid "Save Attachment As..."
-msgstr "Guarda l'adjunt com a..."
+msgstr "Guarda l'adjunt com a…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -486,7 +486,7 @@ msgstr "Accepta la contraproposta"
 #: text_calendar.cpp:1364
 #, kde-format
 msgid "Create a counter proposal..."
-msgstr "Crea una contraproposta..."
+msgstr "Crea una contraproposta…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -511,7 +511,7 @@ msgstr "Declina la contraproposta"
 #: text_calendar.cpp:1374
 #, kde-format
 msgid "Check my calendar..."
-msgstr "Comprova el meu calendari..."
+msgstr "Comprova el meu calendari…"
 
 #: text_calendar.cpp:1376
 #, kde-format

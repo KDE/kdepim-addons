@@ -42,7 +42,7 @@ msgstr "Correcció automàtica del text seleccionat"
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
 msgid "Insert Email..."
-msgstr "Inserix un correu electrònic..."
+msgstr "Inserix un correu electrònic…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "Seleccioneu el servidor d'URL curt:"
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
 msgid "Insert Short URL..."
-msgstr "Inserix un URL curt..."
+msgstr "Inserix un URL curt…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -82,7 +82,7 @@ msgstr ""
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
 msgid "Insert Special Character..."
-msgstr "Inserix un caràcter especial..."
+msgstr "Inserix un caràcter especial…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -109,12 +109,12 @@ msgstr "Configureu el Text ràpid"
 #: quicktext/quicktextconfiguredialog.cpp:38
 #, kde-format
 msgid "Import..."
-msgstr "Importa..."
+msgstr "Importa…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
 #, kde-format
 msgid "Export..."
-msgstr "Exporta..."
+msgstr "Exporta…"
 
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
@@ -135,12 +135,12 @@ msgstr "Variables"
 #: quicktext/quicktexttreewidget.cpp:37
 #, kde-format
 msgid "Add Snippet..."
-msgstr "Afig un fragment..."
+msgstr "Afig un fragment…"
 
 #: quicktext/quicktexttreewidget.cpp:39
 #, kde-format
 msgid "Edit Snippet..."
-msgstr "Edita el fragment..."
+msgstr "Edita el fragment…"
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
@@ -150,12 +150,12 @@ msgstr "Elimina el fragment"
 #: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
 msgid "Add Group..."
-msgstr "Afig un grup..."
+msgstr "Afig un grup…"
 
 #: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
 msgid "Rename Group..."
-msgstr "Canvia el nom del grup..."
+msgstr "Canvia el nom del grup…"
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
@@ -212,7 +212,7 @@ msgstr "General"
 #: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
 msgid "Share Mail Text..."
-msgstr "Compartix el text del correu..."
+msgstr "Compartix el text del correu…"
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -222,4 +222,4 @@ msgstr "Zoom: %1%"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom..."
-msgstr "Zoom..."
+msgstr "Zoom…"

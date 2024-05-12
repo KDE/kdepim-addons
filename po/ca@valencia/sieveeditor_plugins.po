@@ -23,12 +23,12 @@ msgstr ""
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
 msgid "Click on button for selecting contacts..."
-msgstr "Feu clic en el botó per a seleccionar els contactes..."
+msgstr "Feu clic en el botó per a seleccionar els contactes…"
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "Error durant la creació de la carpeta: %1"
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
 #, kde-format
 msgid "Create Folder..."
-msgstr "Crea una carpeta..."
+msgstr "Crea una carpeta…"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -72,12 +72,12 @@ msgstr "No s'ha pogut carregar la llista de carpetes"
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
 #, kde-format
 msgid "Loading in progress..."
-msgstr "La càrrega es troba en curs..."
+msgstr "La càrrega es troba en curs…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
 msgid "Search..."
-msgstr "Busca..."
+msgstr "Busca…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
@@ -124,4 +124,4 @@ msgstr "Seleccioneu la carpeta IMAP"
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
 msgid "Click on button for selecting folder..."
-msgstr "Feu clic en el botó per a seleccionar la carpeta..."
+msgstr "Feu clic en el botó per a seleccionar la carpeta…"

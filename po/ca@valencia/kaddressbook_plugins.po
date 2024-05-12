@@ -25,7 +25,7 @@ msgstr ""
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
 msgid "Check Gravatar..."
-msgstr "Comprova «Gravatar»..."
+msgstr "Comprova «Gravatar»…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -87,7 +87,7 @@ msgstr "No s'ha trobat «Gravatar»."
 #: mergecontacts/mergecontactsplugininterface.cpp:25
 #, kde-format
 msgid "Merge Contacts..."
-msgstr "Fusiona els contactes..."
+msgstr "Fusiona els contactes…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -148,7 +148,7 @@ msgstr "Busca i selecció dels contactes que s'han de fusionar"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, kde-format
 msgid "Search in result..."
-msgstr "Busca en el resultat..."
+msgstr "Busca en el resultat…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -264,7 +264,7 @@ msgstr "(Sense establir)"
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
 #, kde-format
 msgid "Search Duplicate Contacts..."
-msgstr "Busca els contactes duplicats..."
+msgstr "Busca els contactes duplicats…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -274,7 +274,7 @@ msgstr "No s'ha trobat cap correu en els contactes seleccionats."
 #: sendmail/sendmailplugininterface.cpp:26
 #, kde-format
 msgid "Send an email..."
-msgstr "Envia un correu electrònic..."
+msgstr "Envia un correu electrònic…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -289,4 +289,4 @@ msgstr "No s'ha pogut crear el fitxer temporal «%1»"
 #: sendvcards/sendvcardsplugininterface.cpp:34
 #, kde-format
 msgid "Send vCards..."
-msgstr "Envia unes quantes vCard..."
+msgstr "Envia unes quantes vCard…"
