@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-28 18:07+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -176,8 +176,8 @@ msgstr "Nom de domaine rejeté"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
-msgid "A&dd..."
-msgstr "&Ajouter…"
+msgid "A&dd…"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -187,8 +187,9 @@ msgstr "Suppri&mer"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, kde-format
-msgid "Mod&ify..."
+#, fuzzy, kde-format
+#| msgid "Mod&ify..."
+msgid "Mod&ify…"
 msgstr "Mod&ifier…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
@@ -255,3 +256,6 @@ msgstr "Modifier la valeur"
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Les courriels potentiellement non valables sont affichés en rouge :"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Ajouter…"

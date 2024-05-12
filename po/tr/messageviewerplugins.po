@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 17:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -28,8 +28,9 @@ msgid "Expand URL"
 msgstr "URL’yi Genişlet"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, kde-format
-msgid "Translate..."
+#, fuzzy, kde-format
+#| msgid "Translate..."
+msgid "Translate…"
 msgstr "Çevir..."
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
@@ -39,8 +40,9 @@ msgid "&Save"
 msgstr "&Kaydet"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, kde-format
-msgid "Open &Editor..."
+#, fuzzy, kde-format
+#| msgid "Open &Editor..."
+msgid "Open &Editor…"
 msgstr "Dü&zenleyiciyi Aç..."
 
 #: createeventplugin/eventedit.cpp:56
@@ -94,9 +96,10 @@ msgid "Close the widget for creating new events."
 msgstr "Yeni etkinlik oluşturmak için pencereyi kapat."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, kde-format
-msgid "Create Event..."
-msgstr "Etkinlik Oluştur..."
+#, fuzzy, kde-format
+#| msgid "Create Event"
+msgid "Create Event…"
+msgstr "Etkinlik Oluştur"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -229,8 +232,9 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "\"Dış Betik\" Eklentisini Yapılandır"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, kde-format
-msgid "Add Script..."
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Script…"
 msgstr "Betik Ekle..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
@@ -239,8 +243,9 @@ msgid "Remove Script"
 msgstr "Betiği Kaldır"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, kde-format
-msgid "Modify Script..."
+#, fuzzy, kde-format
+#| msgid "Modify Script..."
+msgid "Modify Script…"
 msgstr "Betiği Düzenle..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
@@ -275,8 +280,9 @@ msgid "Description:"
 msgstr "Açıklama:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, kde-format
-msgid "Add command arguments..."
+#, fuzzy, kde-format
+#| msgid "Add command arguments..."
+msgid "Add command arguments…"
 msgstr "Komut argümanları ekle..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
@@ -285,8 +291,9 @@ msgid "Command Line:"
 msgstr "Komut Satırı:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, kde-format
-msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, fuzzy, kde-format
+#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Argüman biçim bilgisi...</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
@@ -336,3 +343,6 @@ msgstr "Dış Betik"
 #, kde-format
 msgid "Configure"
 msgstr "Yapılandır"
+
+#~ msgid "Create Event..."
+#~ msgstr "Etkinlik Oluştur..."

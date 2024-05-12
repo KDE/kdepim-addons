@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2013-03-24 10:49+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -744,13 +744,13 @@ msgstr "Pådje di l' imådje"
 #: plugins/picoftheday/element.cpp:326
 #, fuzzy, kde-format
 #| msgid "Loading…"
-msgid "Loading..."
+msgid "Loading…"
 msgstr "Dji tchedje..."
 
-#: plugins/picoftheday/element.cpp:332
+#: plugins/picoftheday/element.cpp:331
 #, fuzzy, kde-format
 #| msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "<qt>Dji tchedje l' <i>Imådje do djoû</i>...</qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48

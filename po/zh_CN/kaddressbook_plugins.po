@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,8 +18,9 @@ msgstr ""
 "X-Crowdin-File-ID: 45403\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, kde-format
-msgid "Check Gravatar..."
+#, fuzzy, kde-format
+#| msgid "Check Gravatar..."
+msgid "Check Gravatar…"
 msgstr "检查 Gravatar 头像..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
@@ -80,8 +81,9 @@ msgid "No Gravatar Found."
 msgstr "未找到 Gravatar 头像。"
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, kde-format
-msgid "Merge Contacts..."
+#, fuzzy, kde-format
+#| msgid "Merge Contacts..."
+msgid "Merge Contacts…"
 msgstr "合并联系人..."
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
@@ -140,7 +142,7 @@ msgstr "选择重复的联系人来合并"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, kde-format
-msgid "Search in result..."
+msgid "Search in result…"
 msgstr ""
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
@@ -251,8 +253,9 @@ msgid "(Undefined)"
 msgstr "(未定义)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, kde-format
-msgid "Search Duplicate Contacts..."
+#, fuzzy, kde-format
+#| msgid "Search Duplicate Contacts..."
+msgid "Search Duplicate Contacts…"
 msgstr "搜索重复的联系人..."
 
 #: sendmail/mailsenderjob.cpp:127
@@ -261,8 +264,9 @@ msgid "No emails found in selected contacts."
 msgstr "选中的联系人中未找到电子邮件。"
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, kde-format
-msgid "Send an email..."
+#, fuzzy, kde-format
+#| msgid "Send an email..."
+msgid "Send an email…"
 msgstr "发送电子邮件..."
 
 #: sendvcards/sendvcardsjob.cpp:96
@@ -276,6 +280,7 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "无法创建临时文件“%1”"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, kde-format
-msgid "Send vCards..."
+#, fuzzy, kde-format
+#| msgid "Send vCards..."
+msgid "Send vCards…"
 msgstr "发送 vCard..."

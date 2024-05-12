@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 13:38-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -20,14 +20,15 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, kde-format
-msgid "Click on button for selecting contacts..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting contacts..."
+msgid "Click on button for selecting contacts…"
 msgstr "Clique no botão para selecionar os contatos..."
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
-msgid "..."
-msgstr "..."
+msgid "…"
+msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
@@ -53,9 +54,10 @@ msgid "Error during creating folder: %1"
 msgstr "Erro durante a criação da pasta: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, kde-format
-msgid "Create Folder..."
-msgstr "Criar pasta..."
+#, fuzzy, kde-format
+#| msgid "Create Folder"
+msgid "Create Folder…"
+msgstr "Criar pasta"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -69,13 +71,15 @@ msgid "Unable to load folder list"
 msgstr "Não foi possível carregar a lista de pastas"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, kde-format
-msgid "Loading in progress..."
+#, fuzzy, kde-format
+#| msgid "Loading in progress..."
+msgid "Loading in progress…"
 msgstr "Carregamento em progresso..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Pesquisar..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
@@ -121,9 +125,16 @@ msgid "Select IMAP folder"
 msgstr "Selecionar a pasta IMAP"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, kde-format
-msgid "Click on button for selecting folder..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting folder..."
+msgid "Click on button for selecting folder…"
 msgstr "Clique no botão para selecionar a pasta..."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Create Folder..."
+#~ msgstr "Criar pasta..."
 
 #~ msgid "Create Regular Expression"
 #~ msgstr "Criar uma expressão regular"

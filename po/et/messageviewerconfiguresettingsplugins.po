@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-02 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2020-02-06 14:58+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -289,7 +289,7 @@ msgstr "Uus server"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, kde-format
-msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
@@ -320,7 +320,7 @@ msgstr ""
 #| msgctxt "@title:window"
 #| msgid "Add Rule"
 msgctxt "@action:button"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Reegli lisamine"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
@@ -335,7 +335,7 @@ msgstr "Eemalda reegel"
 #| msgctxt "@title:window"
 #| msgid "Add Rule"
 msgctxt "@action:button"
-msgid "Modify Rule..."
+msgid "Modify Rule…"
 msgstr "Reegli lisamine"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
@@ -378,12 +378,12 @@ msgstr "Eemalda reegel"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add Rule"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Reegli lisamine"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
 #, kde-format
-msgid "Edit Rule..."
+msgid "Edit Rule…"
 msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
@@ -404,8 +404,8 @@ msgstr "Reegli seadistamine"
 
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
-msgid "Add..."
-msgstr "Lisa ..."
+msgid "Add…"
+msgstr ""
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
@@ -434,6 +434,9 @@ msgstr "Domeen:"
 msgctxt "@title:column"
 msgid "Check"
 msgstr ""
+
+#~ msgid "Add..."
+#~ msgstr "Lisa ..."
 
 #, fuzzy
 #~| msgctxt "@title:window"

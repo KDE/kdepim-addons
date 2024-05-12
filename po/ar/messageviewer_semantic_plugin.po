@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-07 00:51+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-05-11 09:57+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -136,7 +136,9 @@ msgid "Add to KDE Itinerary"
 msgstr "أضف إلى كِيدِي Itinerary"
 
 #: templates/itinerary.html:78
-msgid "Send to Device..."
+#, fuzzy
+#| msgid "Send to Device..."
+msgid "Send to Device…"
 msgstr "أرسِل إلى جهاز…..."
 
 #: templates/location.html:4

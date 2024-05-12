@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2022-09-11 20:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -776,13 +776,15 @@ msgid "Picture Page"
 msgstr "صفحة الصورة"
 
 #: plugins/picoftheday/element.cpp:326
-#, kde-format
-msgid "Loading..."
+#, fuzzy, kde-format
+#| msgid "Loading..."
+msgid "Loading…"
 msgstr "يحمّل..."
 
-#: plugins/picoftheday/element.cpp:332
-#, kde-format
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#: plugins/picoftheday/element.cpp:331
+#, fuzzy, kde-format
+#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "<qt> يحمل<i> صورة اليوم</i></qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48

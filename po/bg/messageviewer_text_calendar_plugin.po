@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:37+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2022-07-21 20:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -457,8 +457,9 @@ msgid "Open Attachment"
 msgstr "Отваряне на прикачен файл?"
 
 #: text_calendar.cpp:1342
-#, kde-format
-msgid "Save Attachment As..."
+#, fuzzy, kde-format
+#| msgid "Save Attachment As..."
+msgid "Save Attachment As…"
 msgstr "Запазване на прикачения файл като..."
 
 #: text_calendar.cpp:1358
@@ -477,8 +478,9 @@ msgid "Accept counter proposal"
 msgstr "Приемане на контрапредложение"
 
 #: text_calendar.cpp:1364
-#, kde-format
-msgid "Create a counter proposal..."
+#, fuzzy, kde-format
+#| msgid "Create a counter proposal..."
+msgid "Create a counter proposal…"
 msgstr "Създайте контрапредложение ..."
 
 #: text_calendar.cpp:1366
@@ -502,8 +504,9 @@ msgid "Decline counter proposal"
 msgstr "Отклоняване на контрапредложението"
 
 #: text_calendar.cpp:1374
-#, kde-format
-msgid "Check my calendar..."
+#, fuzzy, kde-format
+#| msgid "Check my calendar..."
+msgid "Check my calendar…"
 msgstr "Провери календара ми..."
 
 #: text_calendar.cpp:1376

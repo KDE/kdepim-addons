@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2004-01-07 21:14+0000\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Export CSV List..."
-msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "Allforio rhestr CSV..."
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -35,7 +35,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
-msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "Mewnforio rhestr CSV..."
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -376,14 +376,14 @@ msgstr ""
 #: csv/import/csvimportdialog.cpp:448
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr "Gweithredu'r Patrymlun"
 
 #: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
 #| msgid "Save Template..."
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr "Cadw Patrymlun ..."
 
 #: csv/import/csvimportdialog.cpp:470
@@ -486,7 +486,7 @@ msgstr "LlyfrCyfeiriadau"
 
 #: gmx/gmximportexportplugininterface.cpp:40
 #, fuzzy, kde-format
-msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "Mewnforio vCerdyn..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -496,7 +496,7 @@ msgstr "LlyfrCyfeiriadau"
 
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "Allforio Llyfr Cyfeiriadau LDIF..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -518,7 +518,7 @@ msgstr "LlyfrCyfeiriadau"
 
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, fuzzy, kde-format
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "Mewnforio o Ffôn Symudol Nokia..."
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -530,7 +530,7 @@ msgstr "Mewnforio Cysylltau?"
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Import LDIF Addressbook..."
-msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "Mewnforio Llyfr Cyfeiriadau LDIF..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -542,7 +542,7 @@ msgstr "Mewnforio Cysylltau?"
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Export LDIF Addressbook..."
-msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "Allforio Llyfr Cyfeiriadau LDIF..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -716,13 +716,14 @@ msgstr "Ydych eisiau mewnforio'r cyswllt yma i'ch llyfr cyfeiriad?"
 #: vcards/engine/vcardviewerdialog.cpp:61
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "Mewnforio vCerdyn..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
-msgstr "Mewnforio vCerdyn..."
+#, fuzzy, kde-format
+#| msgid "Import vCard"
+msgid "Import vCard…"
+msgstr "Mewnforio vCard"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
@@ -739,12 +740,13 @@ msgstr "Allforio vCerdyn 3.0..."
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "Allforio vCerdyn 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, kde-format
-msgid "Export vCard 3.0..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 3.0..."
+msgid "Export vCard 3.0…"
 msgstr "Allforio vCerdyn 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
@@ -754,8 +756,9 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "Allforio vCerdyn 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, kde-format
-msgid "Export vCard 2.1..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 2.1..."
+msgid "Export vCard 2.1…"
 msgstr "Allforio vCerdyn 2.1..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
@@ -816,7 +819,7 @@ msgstr "Allforio i ffôn symudol"
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "Mewnforio rhestr CSV..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
@@ -829,6 +832,9 @@ msgstr "Mewnforio Cysylltau?"
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#~ msgid "Import vCard..."
+#~ msgstr "Mewnforio vCerdyn..."
 
 #, fuzzy
 #~| msgid "Address Book"

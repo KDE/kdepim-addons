@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2007-09-17 14:45+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -766,13 +766,13 @@ msgstr "मेट्नुहोस्"
 #: plugins/picoftheday/element.cpp:326
 #, fuzzy, kde-format
 #| msgid "Forwarding"
-msgid "Loading..."
+msgid "Loading…"
 msgstr "फरवार्डिङ"
 
-#: plugins/picoftheday/element.cpp:332
+#: plugins/picoftheday/element.cpp:331
 #, fuzzy, kde-format
 #| msgid "Configure Picture of the Day"
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "यस दिनको तस्वीर कन्फिगर गर्नुहोस्"
 
 #: plugins/picoftheday/picoftheday.cpp:48

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 23:00+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,8 +28,9 @@ msgid "Expand URL"
 msgstr "URL 확장"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, kde-format
-msgid "Translate..."
+#, fuzzy, kde-format
+#| msgid "Translate..."
+msgid "Translate…"
 msgstr "번역..."
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
@@ -39,8 +40,9 @@ msgid "&Save"
 msgstr "저장(&S)"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, kde-format
-msgid "Open &Editor..."
+#, fuzzy, kde-format
+#| msgid "Open &Editor..."
+msgid "Open &Editor…"
 msgstr "편집기 열기(&E)..."
 
 #: createeventplugin/eventedit.cpp:56
@@ -94,9 +96,10 @@ msgid "Close the widget for creating new events."
 msgstr "새 할 일 생성 위젯을 닫습니다."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, kde-format
-msgid "Create Event..."
-msgstr "이벤트 만들기..."
+#, fuzzy, kde-format
+#| msgid "Create Event"
+msgid "Create Event…"
+msgstr "이벤트 만들기"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -226,8 +229,9 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "\"외부 스크립트\" 플러그인 설정"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, kde-format
-msgid "Add Script..."
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Script…"
 msgstr "스크립트 추가..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
@@ -236,8 +240,9 @@ msgid "Remove Script"
 msgstr "스크립트 삭제"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, kde-format
-msgid "Modify Script..."
+#, fuzzy, kde-format
+#| msgid "Modify Script..."
+msgid "Modify Script…"
 msgstr "스크립트 수정..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
@@ -272,8 +277,9 @@ msgid "Description:"
 msgstr "설명:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, kde-format
-msgid "Add command arguments..."
+#, fuzzy, kde-format
+#| msgid "Add command arguments..."
+msgid "Add command arguments…"
 msgstr "명령행 인자 추가..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
@@ -282,8 +288,9 @@ msgid "Command Line:"
 msgstr "명령행:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, kde-format
-msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, fuzzy, kde-format
+#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">인자 형식 정보...</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
@@ -332,6 +339,9 @@ msgstr "외부 스크립트"
 #, kde-format
 msgid "Configure"
 msgstr "설정"
+
+#~ msgid "Create Event..."
+#~ msgstr "이벤트 만들기..."
 
 #~ msgid "Todo:"
 #~ msgstr "할 일:"

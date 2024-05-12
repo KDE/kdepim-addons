@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 00:53+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2022-07-14 09:29-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -117,9 +117,11 @@ msgid "The message with subject '%1' is %2"
 msgstr "A mensagem com o assunto '%1 é %2"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Rule..."
 msgctxt "@action:button"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Adicionar regra..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
@@ -129,9 +131,11 @@ msgid "Remove Rule"
 msgstr "Remover regra"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Modify Rule..."
 msgctxt "@action:button"
-msgid "Modify Rule..."
+msgid "Modify Rule…"
 msgstr "Modificar regra..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
@@ -145,13 +149,15 @@ msgid "Pattern"
 msgstr "Padrão"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, kde-format
-msgid "Add Rule..."
+#, fuzzy, kde-format
+#| msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Adicionar regra..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, kde-format
-msgid "Edit Rule..."
+#, fuzzy, kde-format
+#| msgid "Edit Rule..."
+msgid "Edit Rule…"
 msgstr "Editar regra..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126

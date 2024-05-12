@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 22:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -166,8 +166,8 @@ msgstr "거부된 도메인 이름"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
-msgid "A&dd..."
-msgstr "추가(&D)..."
+msgid "A&dd…"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -177,8 +177,9 @@ msgstr "삭제(&M)"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, kde-format
-msgid "Mod&ify..."
+#, fuzzy, kde-format
+#| msgid "Mod&ify..."
+msgid "Mod&ify…"
 msgstr "수정(&I)..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
@@ -245,3 +246,6 @@ msgstr "값 변경"
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "잘못되었을 수도 있는 이메일은 빨간색으로 표시됨:"
+
+#~ msgid "A&dd..."
+#~ msgstr "추가(&D)..."

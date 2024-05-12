@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-01-31 21:04+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -51,8 +51,9 @@ msgid "View Business Card"
 msgstr "Ikusi bisita-txartela"
 
 #: text_vcard.cpp:216
-#, kde-format
-msgid "Save Business Card As..."
+#, fuzzy, kde-format
+#| msgid "Save Business Card As..."
+msgid "Save Business Card As…"
 msgstr "Gorde bisita-txartela honela..."
 
 #: text_vcard.cpp:233

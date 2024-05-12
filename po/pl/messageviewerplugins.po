@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-30 11:02+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -29,8 +29,9 @@ msgid "Expand URL"
 msgstr "Rozwiń adres URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, kde-format
-msgid "Translate..."
+#, fuzzy, kde-format
+#| msgid "Translate..."
+msgid "Translate…"
 msgstr "Przetłumacz..."
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
@@ -40,8 +41,9 @@ msgid "&Save"
 msgstr "Zapi&sz"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, kde-format
-msgid "Open &Editor..."
+#, fuzzy, kde-format
+#| msgid "Open &Editor..."
+msgid "Open &Editor…"
 msgstr "Otwórz &edytor..."
 
 #: createeventplugin/eventedit.cpp:56
@@ -95,9 +97,10 @@ msgid "Close the widget for creating new events."
 msgstr "Zamknij element interfejsu do tworzenia nowych wydarzeń."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, kde-format
-msgid "Create Event..."
-msgstr "Utwórz wydarzenie..."
+#, fuzzy, kde-format
+#| msgid "Create Event"
+msgid "Create Event…"
+msgstr "Utwórz wydarzenie"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -230,8 +233,9 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Ustawienia wtyczki \"Zewnętrzne skrypty\""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, kde-format
-msgid "Add Script..."
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Script…"
 msgstr "Dodaj skrypt..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
@@ -240,8 +244,9 @@ msgid "Remove Script"
 msgstr "Usuń skrypt"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, kde-format
-msgid "Modify Script..."
+#, fuzzy, kde-format
+#| msgid "Modify Script..."
+msgid "Modify Script…"
 msgstr "Zmień skrypt..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
@@ -276,8 +281,9 @@ msgid "Description:"
 msgstr "Opis:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, kde-format
-msgid "Add command arguments..."
+#, fuzzy, kde-format
+#| msgid "Add command arguments..."
+msgid "Add command arguments…"
 msgstr "Dodaj argumenty polecenia..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
@@ -286,8 +292,9 @@ msgid "Command Line:"
 msgstr "Wiersz poleceń:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, kde-format
-msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, fuzzy, kde-format
+#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Szczegóły formatu argumentu...</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
@@ -337,6 +344,9 @@ msgstr "Zewnętrzny skrypt"
 #, kde-format
 msgid "Configure"
 msgstr "Ustawienia"
+
+#~ msgid "Create Event..."
+#~ msgstr "Utwórz wydarzenie..."
 
 #~ msgid "Todo:"
 #~ msgstr "Zadanie:"

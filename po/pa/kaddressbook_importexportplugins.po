@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2010-02-01 21:44+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -20,8 +20,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
-#, kde-format
-msgid "Export CSV file..."
+#, fuzzy, kde-format
+#| msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "CSV ਫਾਇਲ ਐਕਸਪੋਰਟ..."
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -30,8 +31,9 @@ msgid "Export contacts to a file in comma separated value format."
 msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:42
-#, kde-format
-msgid "Import CSV file..."
+#, fuzzy, kde-format
+#| msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "CSV ਫਾਇਲ ਇੰਪੋਰਟ ਕਰੋ..."
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -347,15 +349,19 @@ msgid ""
 msgstr ""
 
 #: csv/import/csvimportdialog.cpp:448
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Apply Template..."
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr "ਟੈਂਪਲੇਟ ਲਾਗੂ ਕਰੋ..."
 
 #: csv/import/csvimportdialog.cpp:449
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Template..."
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr "ਟੈਂਪਲੇਟ ਸੰਭਾਲੋ..."
 
 #: csv/import/csvimportdialog.cpp:470
@@ -454,8 +460,9 @@ msgid "GMX address book file (*.gmxa)"
 msgstr "GMX ਐਡਰੈੱਸਬੁੱਕ ਫਾਇਲ (*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
-#, kde-format
-msgid "Import GMX file..."
+#, fuzzy, kde-format
+#| msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "GMX ਫਾਇਲ ਇੰਪੋਰਟ ਕਰੋ..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -468,7 +475,7 @@ msgstr "ਆਪਣੀ ਐਡਰੈੱਸਬੁੱਕ ਵਿੱਚ ਇੱਕ ਸ�
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
 #| msgid "Export..."
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "ਐਕਸਪੋਰਟ..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -496,7 +503,7 @@ msgstr "ਆਪਣੀ ਐਡਰੈੱਸਬੁੱਕ ਵਿੱਚ ਇੱਕ ਸ�
 #, fuzzy, kde-format
 #| msgctxt "arguments are host name, datetime"
 #| msgid "Imported from LDAP directory %1 on %2"
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "%2 ਉੱਤੇ %1 LDAP ਡਾਇਰੈਕਟਰੀ ਤੋਂ ਇੰਪੋਰਟ ਕੀਤੇ"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -506,8 +513,9 @@ msgid "Import contacts from an LDAP server."
 msgstr "ਸੰਪਰਕ ਇੰਪੋਰਟ ਕਰਨੇ ਹਨ?"
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, kde-format
-msgid "Import LDIF file..."
+#, fuzzy, kde-format
+#| msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "LDIF ਫਾਇਲ ਇੰਪੋਰਟ..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -517,8 +525,9 @@ msgid "Import contacts from an LDIF file."
 msgstr "ਸੰਪਰਕ ਇੰਪੋਰਟ ਕਰਨੇ ਹਨ?"
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, kde-format
-msgid "Export LDIF file..."
+#, fuzzy, kde-format
+#| msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "LDIF ਫਾਇਲ ਐਕਸਪੋਰਟ..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -699,13 +708,14 @@ msgstr "ਕੀ ਤੁਸੀਂ ਆਪਣੀ ਐਡਰੈੱਸ ਬੁੱਕ ਵ�
 #, fuzzy, kde-format
 #| msgid "Import All..."
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "ਸਭ ਇੰਪੋਰਟ..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
-msgstr "vCard ਇੰਪੋਰਟ..."
+#, fuzzy, kde-format
+#| msgid "Import vCard"
+msgid "Import vCard…"
+msgstr "vCard ਇੰਪੋਰਟ"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
@@ -722,12 +732,13 @@ msgstr "vCard 3.0 ਐਕਸਪੋਰਟ..."
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "vCard 3.0 ਐਕਸਪੋਰਟ..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, kde-format
-msgid "Export vCard 3.0..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 3.0..."
+msgid "Export vCard 3.0…"
 msgstr "vCard 3.0 ਐਕਸਪੋਰਟ..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
@@ -737,8 +748,9 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "vCard 3.0 ਐਕਸਪੋਰਟ..."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, kde-format
-msgid "Export vCard 2.1..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 2.1..."
+msgid "Export vCard 2.1…"
 msgstr "vCard 2.1 ਐਕਸਪੋਰਟ..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
@@ -800,7 +812,7 @@ msgstr "ਕਈ ਫਾਇਲਾਂ ਵਿੱਚ ਐਕਸਪੋਰਟ"
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
 #| msgid "Import CSV file..."
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "CSV ਫਾਇਲ ਇੰਪੋਰਟ ਕਰੋ..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
@@ -813,6 +825,9 @@ msgstr "ਸੰਪਰਕ ਇੰਪੋਰਟ ਕਰਨੇ ਹਨ?"
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#~ msgid "Import vCard..."
+#~ msgstr "vCard ਇੰਪੋਰਟ..."
 
 #, fuzzy
 #~| msgid "Select Address Book"

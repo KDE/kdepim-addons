@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2016-09-28 20:38+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -36,12 +36,12 @@ msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
+msgid "Add…"
 msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
-msgid "Modify..."
+msgid "Modify…"
 msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -75,9 +75,10 @@ msgid "Remove List"
 msgstr "Odstrániť filter"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Hľadať..."
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgid "Search…"
+msgstr "Hľadať:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, fuzzy, kde-format
@@ -115,6 +116,9 @@ msgstr "Zobraziť zoznam adblock"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Povolený ad block"
+
+#~ msgid "Search..."
+#~ msgstr "Hľadať..."
 
 #, fuzzy
 #~| msgid "Remove filter"
@@ -363,9 +367,6 @@ msgstr "Povolený ad block"
 
 #~ msgid "Export filters..."
 #~ msgstr "Exportovať filtre..."
-
-#~ msgid "Search:"
-#~ msgstr "Hľadať:"
 
 #~ msgid "Edit"
 #~ msgstr "Upraviť"

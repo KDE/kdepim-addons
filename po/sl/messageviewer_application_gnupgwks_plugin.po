@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 09:17+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -125,7 +125,9 @@ msgstr ""
 "pošte."
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
+#, fuzzy
+#| msgid "Loading key details..."
+msgid "Loading key details…"
 msgstr "Nalaganje podrobnosti o ključu ..."
 
 #: templates/pgpkeymessagepart.html:28
@@ -162,12 +164,17 @@ msgid "Open in Kleopatra"
 msgstr "Odpri v Kleopatri"
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
-msgstr "Pokaži podrobnosti o ključu ..."
+#, fuzzy
+#| msgid "Show key details"
+msgid "Show key details …"
+msgstr "Pokaži podrobnosti o ključu"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Uvozi ključ"
+
+#~ msgid "Show key details ..."
+#~ msgstr "Pokaži podrobnosti o ključu ..."
 
 #~ msgid "Unknown identity"
 #~ msgstr "Neznana istovetnost"

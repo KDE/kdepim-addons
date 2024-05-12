@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-07 00:51+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-05-31 09:52+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -134,7 +134,9 @@ msgid "Add to KDE Itinerary"
 msgstr "Přidat do itineráře KDE"
 
 #: templates/itinerary.html:78
-msgid "Send to Device..."
+#, fuzzy
+#| msgid "Send to Device..."
+msgid "Send to Device…"
 msgstr "Poslat na zařízení..."
 
 #: templates/location.html:4

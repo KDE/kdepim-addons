@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2009-06-22 16:49+0200\n"
 "Last-Translator: ivan <admin@linuxzasve.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
-msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "Izvezi CSV popis..."
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -33,7 +33,7 @@ msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
-msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "Uvezi CSV popis..."
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -350,13 +350,13 @@ msgstr ""
 #: csv/import/csvimportdialog.cpp:448
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr "Priizbornik šablon"
 
 #: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr "Spremi predložak"
 
 #: csv/import/csvimportdialog.cpp:470
@@ -454,7 +454,7 @@ msgstr "KAdresar"
 
 #: gmx/gmximportexportplugininterface.cpp:40
 #, fuzzy, kde-format
-msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "&Uvezi popis..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -464,7 +464,7 @@ msgstr "KAdresar"
 
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "Izvezi LDIF adresar..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -486,7 +486,7 @@ msgstr "KAdresar"
 
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, fuzzy, kde-format
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "Uvezi iz Nokia-jinog mobilnog telefona..."
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -496,7 +496,7 @@ msgstr "Da li da uvezem kontakte?"
 
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
-msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "Uvezi LDIF adresar..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -506,7 +506,7 @@ msgstr "Da li da uvezem kontakte?"
 
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
-msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "Izvezi LDIF adresar..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -678,13 +678,14 @@ msgstr "Da li da uvezem ovaj kontakt u vaš adresar?"
 #: vcards/engine/vcardviewerdialog.cpp:61
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "&Uvezi popis..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
-msgstr "Uvezi vCard …"
+#, fuzzy, kde-format
+#| msgid "Import vCard"
+msgid "Import vCard…"
+msgstr "Uvezi vCard"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
@@ -698,12 +699,12 @@ msgstr "Izvezi vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "Izvezi vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, fuzzy, kde-format
-msgid "Export vCard 3.0..."
+msgid "Export vCard 3.0…"
 msgstr "Izvezi vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
@@ -713,7 +714,7 @@ msgstr "Izvezi vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, fuzzy, kde-format
-msgid "Export vCard 2.1..."
+msgid "Export vCard 2.1…"
 msgstr "Izvezi vCard 2.1..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
@@ -766,7 +767,7 @@ msgstr "Izvezi u mobilni telefon"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "Uvezi CSV popis..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
@@ -778,6 +779,9 @@ msgstr "Da li da uvezem kontakte?"
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#~ msgid "Import vCard..."
+#~ msgstr "Uvezi vCard …"
 
 #, fuzzy
 #~ msgctxt "@title:window"

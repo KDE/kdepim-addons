@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2009-06-08 01:08+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -752,12 +752,12 @@ msgstr "&Fshije"
 
 #: plugins/picoftheday/element.cpp:326
 #, kde-format
-msgid "Loading..."
+msgid "Loading…"
 msgstr ""
 
-#: plugins/picoftheday/element.cpp:332
+#: plugins/picoftheday/element.cpp:331
 #, kde-format
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr ""
 
 #: plugins/picoftheday/picoftheday.cpp:48

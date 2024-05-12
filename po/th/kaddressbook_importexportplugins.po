@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2010-03-25 14:22+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Export CSV List..."
-msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "ส่งออกเป็นรายการไปยังแฟ้ม CSV..."
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -32,7 +32,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
-msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "นำเข้ารายการจากแฟ้ม CSV..."
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -364,14 +364,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Apply Template..."
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr "ปรับใช้แม่แบบ..."
 
 #: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
 #| msgid "Save Template..."
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr "จัดเก็บแม่แบบ..."
 
 #: csv/import/csvimportdialog.cpp:470
@@ -478,7 +478,7 @@ msgstr "แฟ้มสมุดที่อยู่แบบ GMX (*.gmxa)"
 #: gmx/gmximportexportplugininterface.cpp:40
 #, fuzzy, kde-format
 #| msgid "Import All..."
-msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "นำเข้าจากทั้งหมด..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -490,7 +490,7 @@ msgstr "แฟ้ม %1 ไม่ใช่แฟ้มสมุดที่อ�
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
 #| msgid "Export GMX Address Book..."
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "ส่งออกเป็นสมุดที่อยู่แบบ GMX..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -515,7 +515,7 @@ msgstr "แฟ้ม %1 ไม่ใช่แฟ้มสมุดที่อ�
 #, fuzzy, kde-format
 #| msgctxt "arguments are host name, datetime"
 #| msgid "Imported from LDAP directory %1 on %2"
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "นำเข้าข้อมูลจากไดเร็กทอรี LDAP %1 เมื่อ %2"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -527,7 +527,7 @@ msgstr "นำเข้าที่อยู่ติดต่อหรือไ
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Import LDIF Addressbook..."
-msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "นำเข้าจากสมุดที่อยู่ LDIF..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -539,7 +539,7 @@ msgstr "นำเข้าที่อยู่ติดต่อหรือไ
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Export LDIF Addressbook..."
-msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "ส่งออกเป็นสมุดที่อยู่ LDIF..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -721,13 +721,14 @@ msgstr "คุณต้องการจะนำเข้าที่อยู
 #, fuzzy, kde-format
 #| msgid "Import All..."
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "นำเข้าจากทั้งหมด..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
-msgstr "นำเข้าจากนามบัตรเสมือน..."
+#, fuzzy, kde-format
+#| msgid "Import vCard"
+msgid "Import vCard…"
+msgstr "นำเข้าจากนามบัตรเสมือน"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
@@ -744,12 +745,13 @@ msgstr "ส่งออกเป็นนามบัตรเสมือน 3.
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "ส่งออกเป็นนามบัตรเสมือน 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, kde-format
-msgid "Export vCard 3.0..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 3.0..."
+msgid "Export vCard 3.0…"
 msgstr "ส่งออกเป็นนามบัตรเสมือน 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
@@ -759,8 +761,9 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "ส่งออกเป็นนามบัตรเสมือน 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, kde-format
-msgid "Export vCard 2.1..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 2.1..."
+msgid "Export vCard 2.1…"
 msgstr "ส่งออกเป็นนามบัตรเสมือน 2.1..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
@@ -822,7 +825,7 @@ msgstr "ส่งออกเป็นหลายแฟ้ม"
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "นำเข้ารายการจากแฟ้ม CSV..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
@@ -835,6 +838,9 @@ msgstr "นำเข้าที่อยู่ติดต่อหรือไ
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#~ msgid "Import vCard..."
+#~ msgstr "นำเข้าจากนามบัตรเสมือน..."
 
 #, fuzzy
 #~| msgid "Address Book"

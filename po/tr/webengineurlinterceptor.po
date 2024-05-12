@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-07 13:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -37,12 +37,13 @@ msgstr "URL"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "Ekle..."
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Değiştir..."
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -72,8 +73,9 @@ msgid "Remove List"
 msgstr "Listeyi Kaldır"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Ara..."
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
@@ -109,6 +111,9 @@ msgstr "Reklam Engelleme Listesini Göster"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Reklam engelleme etkin"
+
+#~ msgid "Add..."
+#~ msgstr "Ekle..."
 
 #~ msgctxt "@title:window"
 #~ msgid "Remove"

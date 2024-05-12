@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-28 19:58+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -132,7 +132,9 @@ msgstr ""
 "Mails verwendet werden kann."
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
+#, fuzzy
+#| msgid "Loading key details..."
+msgid "Loading key details…"
 msgstr "Schlüsseldetails werden geladen ..."
 
 #: templates/pgpkeymessagepart.html:28
@@ -169,12 +171,17 @@ msgid "Open in Kleopatra"
 msgstr "In Kleopatra öffnen"
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
-msgstr "Schlüsseldetails anzeigen ..."
+#, fuzzy
+#| msgid "Show key details"
+msgid "Show key details …"
+msgstr "Schlüsseldetails anzeigen"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Schlüssel importieren"
+
+#~ msgid "Show key details ..."
+#~ msgstr "Schlüsseldetails anzeigen ..."
 
 #~ msgid "Unknown identity"
 #~ msgstr "Unbekannte Identität"

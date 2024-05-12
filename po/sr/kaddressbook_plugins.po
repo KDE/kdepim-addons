@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,8 +19,9 @@ msgstr ""
 "X-Environment: kde\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, kde-format
-msgid "Check Gravatar..."
+#, fuzzy, kde-format
+#| msgid "Check Gravatar..."
+msgid "Check Gravatar…"
 msgstr "Провери граватар..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
@@ -83,8 +84,9 @@ msgid "No Gravatar Found."
 msgstr "Граватар није нађен."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, kde-format
-msgid "Merge Contacts..."
+#, fuzzy, kde-format
+#| msgid "Merge Contacts..."
+msgid "Merge Contacts…"
 msgstr "Стопи контакте..."
 
 # >> @title:window
@@ -150,7 +152,7 @@ msgstr "Тражење и избор дупликата контаката за 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, fuzzy, kde-format
 #| msgid "Search is impossible."
-msgid "Search in result..."
+msgid "Search in result…"
 msgstr "Претрага није могућа."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
@@ -274,8 +276,9 @@ msgid "(Undefined)"
 msgstr "(недефинисано)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, kde-format
-msgid "Search Duplicate Contacts..."
+#, fuzzy, kde-format
+#| msgid "Search Duplicate Contacts..."
+msgid "Search Duplicate Contacts…"
 msgstr "Потражи дупликате контаката..."
 
 #: sendmail/mailsenderjob.cpp:127
@@ -284,8 +287,9 @@ msgid "No emails found in selected contacts."
 msgstr "Нема адреса е‑поште у изабраним контактима."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, kde-format
-msgid "Send an email..."
+#, fuzzy, kde-format
+#| msgid "Send an email..."
+msgid "Send an email…"
 msgstr "Пошаљи е‑пошту..."
 
 #: sendvcards/sendvcardsjob.cpp:96
@@ -299,6 +303,7 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Привремени фајл „%1“ не може да се направи."
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, kde-format
-msgid "Send vCards..."
+#, fuzzy, kde-format
+#| msgid "Send vCards..."
+msgid "Send vCards…"
 msgstr "Пошаљи в‑кардове..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2019-12-18 19:29+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -171,8 +171,8 @@ msgstr "Tagasi lükatud domeeninimi"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
-msgid "A&dd..."
-msgstr "L&isa..."
+msgid "A&dd…"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -182,8 +182,9 @@ msgstr "&Eemalda"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, kde-format
-msgid "Mod&ify..."
+#, fuzzy, kde-format
+#| msgid "Mod&ify..."
+msgid "Mod&ify…"
 msgstr "&Muuda..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
@@ -253,6 +254,9 @@ msgstr "Väärtuse muutmine"
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Potentsiaalselt vigased kirjad kuvatakse punasena:"
+
+#~ msgid "A&dd..."
+#~ msgstr "L&isa..."
 
 #~ msgid "Enable"
 #~ msgstr "Lubatud"

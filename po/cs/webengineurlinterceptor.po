@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-11-03 09:07+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -37,12 +37,13 @@ msgstr "Url"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "Přidat..."
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Změnit..."
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -72,8 +73,9 @@ msgid "Remove List"
 msgstr ""
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Hledat..."
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
@@ -109,3 +111,6 @@ msgstr ""
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Povolena blokace reklam"
+
+#~ msgid "Add..."
+#~ msgstr "Přidat..."

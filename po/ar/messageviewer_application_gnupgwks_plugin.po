@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-10 21:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -121,7 +121,9 @@ msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
 msgstr "هذا مفتاح OpenPGP يمكن استخدامه لتوقيع رسائل البريد أو تعميتها."
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
+#, fuzzy
+#| msgid "Loading key details..."
+msgid "Loading key details…"
 msgstr "يحمّل تفاصيل المفتاح..."
 
 #: templates/pgpkeymessagepart.html:28
@@ -158,9 +160,14 @@ msgid "Open in Kleopatra"
 msgstr "افتح في «كليوبترا»"
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
-msgstr "اعرض تفاصيل المفتاح..."
+#, fuzzy
+#| msgid "Show key details"
+msgid "Show key details …"
+msgstr "اعرض تفاصيل المفتاح"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "استورد مفتاحًا"
+
+#~ msgid "Show key details ..."
+#~ msgstr "اعرض تفاصيل المفتاح..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-07 00:51+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 17:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -134,7 +134,9 @@ msgid "Add to KDE Itinerary"
 msgstr "KDE Yol Kılavuzu’na Ekle"
 
 #: templates/itinerary.html:78
-msgid "Send to Device..."
+#, fuzzy
+#| msgid "Send to Device..."
+msgid "Send to Device…"
 msgstr "Aygıta Gönder..."
 
 #: templates/location.html:4

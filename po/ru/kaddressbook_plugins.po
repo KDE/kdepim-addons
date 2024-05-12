@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-12 10:02+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -32,8 +32,9 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, kde-format
-msgid "Check Gravatar..."
+#, fuzzy, kde-format
+#| msgid "Check Gravatar..."
+msgid "Check Gravatar…"
 msgstr "Показать Gravatar..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
@@ -94,9 +95,9 @@ msgid "No Gravatar Found."
 msgstr "Не найдено изображений на Gravatar."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, kde-format
-msgid "Merge Contacts..."
-msgstr "Объединить контакты..."
+#, fuzzy, kde-format
+msgid "Merge Contacts…"
+msgstr "Добавить контакт..."
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -153,8 +154,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Поиск и выбор повторных контактов для слияния"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, kde-format
-msgid "Search in result..."
+#, fuzzy, kde-format
+#| msgid "Search in result..."
+msgid "Search in result…"
 msgstr "Поиск в результатах..."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
@@ -269,8 +271,9 @@ msgid "(Undefined)"
 msgstr "(не определено)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, kde-format
-msgid "Search Duplicate Contacts..."
+#, fuzzy, kde-format
+#| msgid "Search Duplicate Contacts..."
+msgid "Search Duplicate Contacts…"
 msgstr "Найти повторные записи контактов..."
 
 #: sendmail/mailsenderjob.cpp:127
@@ -280,8 +283,9 @@ msgstr ""
 "Ни у одного из выбранных контактов не указаны адреса электронной почты."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, kde-format
-msgid "Send an email..."
+#, fuzzy, kde-format
+#| msgid "Send an email..."
+msgid "Send an email…"
 msgstr "Написать письмо..."
 
 #: sendvcards/sendvcardsjob.cpp:96
@@ -295,9 +299,13 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Не удалось создать временный файл «%1»."
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, kde-format
-msgid "Send vCards..."
+#, fuzzy, kde-format
+#| msgid "Send vCards..."
+msgid "Send vCards…"
 msgstr "Отправить в формате электронных визиток..."
+
+#~ msgid "Merge Contacts..."
+#~ msgstr "Объединить контакты..."
 
 #~ msgid "Use Libravatar"
 #~ msgstr "Использовать Libravatar"
@@ -1517,10 +1525,6 @@ msgstr "Отправить в формате электронных визито
 #~ msgstr ""
 #~ "<para>Невозможно открыть файл визитки <filename>%1</filename> в формате "
 #~ "vCard:</para><para>%2</para>"
-
-#, fuzzy
-#~ msgid "Merged Contact"
-#~ msgstr "Добавить контакт..."
 
 # BUGME: please change to "Failed to merge contacts" --aspotashev
 #~ msgid "Error during merge contacts."

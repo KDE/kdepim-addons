@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2009-07-28 20:21+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
@@ -763,13 +763,13 @@ msgstr "Eyða %1"
 #: plugins/picoftheday/element.cpp:326
 #, fuzzy, kde-format
 #| msgid "Go &Forward"
-msgid "Loading..."
+msgid "Loading…"
 msgstr "Á&fram"
 
-#: plugins/picoftheday/element.cpp:332
+#: plugins/picoftheday/element.cpp:331
 #, fuzzy, kde-format
 #| msgid "This plugin provides the date in the Jewish calendar."
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "Þetta íforrit skaffar dagana í gyðingardagatalinu."
 
 #: plugins/picoftheday/picoftheday.cpp:48

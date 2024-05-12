@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-07 08:49+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -39,12 +39,13 @@ msgstr "Url"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "Dodaj..."
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Spremeni..."
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -74,9 +75,10 @@ msgid "Remove List"
 msgstr "Odstrani seznam"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Poišči..."
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgid "Search…"
+msgstr "Poišči:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
@@ -111,6 +113,12 @@ msgstr "Prikaži seznam AdBlock"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "AdBlock omogočen"
+
+#~ msgid "Add..."
+#~ msgstr "Dodaj..."
+
+#~ msgid "Search..."
+#~ msgstr "Poišči..."
 
 #~ msgid "Remove"
 #~ msgstr "Odstrani"
@@ -350,9 +358,6 @@ msgstr "AdBlock omogočen"
 
 #~ msgid "Export filters..."
 #~ msgstr "Izvozi filtre..."
-
-#~ msgid "Search:"
-#~ msgstr "Poišči:"
 
 #~ msgid "Edit"
 #~ msgstr "Uredi"

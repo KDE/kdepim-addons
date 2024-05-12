@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-02 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-03-02 11:45+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -282,8 +282,9 @@ msgid "Server Name:"
 msgstr "Servernaam:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, kde-format
-msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, fuzzy, kde-format
+#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Argument voor formaatinformatie...</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
@@ -313,9 +314,11 @@ msgid "Configure Open Url With Plugin"
 msgstr "Open Url met plug-in configureren"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Rule..."
 msgctxt "@action:button"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Regel toevoegen..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
@@ -325,9 +328,11 @@ msgid "Remove Rule"
 msgstr "Regel verwijderen"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Modify Rule..."
 msgctxt "@action:button"
-msgid "Modify Rule..."
+msgid "Modify Rule…"
 msgstr "Regel wijzigen..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
@@ -364,13 +369,15 @@ msgid "Remove Rule"
 msgstr "Regel verwijderen"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, kde-format
-msgid "Add Rule..."
+#, fuzzy, kde-format
+#| msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Regel toevoegen..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, kde-format
-msgid "Edit Rule..."
+#, fuzzy, kde-format
+#| msgid "Edit Rule..."
+msgid "Edit Rule…"
 msgstr "Regel bewerken..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
@@ -388,8 +395,8 @@ msgstr "Scaminstellingen configureren"
 
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
-msgid "Add..."
-msgstr "Toevoegen..."
+msgid "Add…"
+msgstr ""
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
@@ -417,6 +424,9 @@ msgstr "Domein"
 msgctxt "@title:column"
 msgid "Check"
 msgstr "Controle"
+
+#~ msgid "Add..."
+#~ msgstr "Toevoegen..."
 
 #~ msgid "Command:"
 #~ msgstr "Commando:"

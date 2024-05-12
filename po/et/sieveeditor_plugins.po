@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2019-12-18 20:06+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -18,14 +18,15 @@ msgstr ""
 "X-Generator: Lokalize 19.08.1\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, kde-format
-msgid "Click on button for selecting contacts..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting contacts..."
+msgid "Click on button for selecting contacts…"
 msgstr "Kontaktide valimiseks klõpsa nupule ..."
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
-msgid "..."
-msgstr "..."
+msgid "…"
+msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
@@ -52,9 +53,10 @@ msgid "Error during creating folder: %1"
 msgstr "Tõrge kausta loomisel: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, kde-format
-msgid "Create Folder..."
-msgstr "Loo kaust ..."
+#, fuzzy, kde-format
+#| msgid "Create Folder"
+msgid "Create Folder…"
+msgstr "Kausta loomine"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -68,13 +70,15 @@ msgid "Unable to load folder list"
 msgstr "Kaustaloendi laadimine nurjus"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, kde-format
-msgid "Loading in progress..."
+#, fuzzy, kde-format
+#| msgid "Loading in progress..."
+msgid "Loading in progress…"
 msgstr "Laadimine käib ..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Otsi ..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
@@ -121,9 +125,16 @@ msgid "Select IMAP folder"
 msgstr "IMAP kausta valimine"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, kde-format
-msgid "Click on button for selecting folder..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting folder..."
+msgid "Click on button for selecting folder…"
 msgstr "Kausta valimiseks klõpsa nupule ..."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Create Folder..."
+#~ msgstr "Loo kaust ..."
 
 #~ msgid "Create Regular Expression"
 #~ msgstr "Regulaaravaldise loomine"

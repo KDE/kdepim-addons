@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -38,12 +38,13 @@ msgstr "URL"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "添加..."
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "修改..."
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -73,8 +74,9 @@ msgid "Remove List"
 msgstr "移除列表"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "搜索..."
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
@@ -110,3 +112,6 @@ msgstr "显示 Adblock 列表"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "已启用广告屏蔽"
+
+#~ msgid "Add..."
+#~ msgstr "添加..."

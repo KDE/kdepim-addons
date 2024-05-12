@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mimos\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2005-11-26 19:59+0800\n"
 "Last-Translator: MIMOS <opensource@mimos.my>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -750,13 +750,13 @@ msgstr "Hapuskan%1"
 #: plugins/picoftheday/element.cpp:326
 #, fuzzy, kde-format
 #| msgid "Go &Forward"
-msgid "Loading..."
+msgid "Loading…"
 msgstr "Pergi ke &Hadapan"
 
-#: plugins/picoftheday/element.cpp:332
+#: plugins/picoftheday/element.cpp:331
 #, fuzzy, kde-format
 #| msgid "This plugin provides the date in the Jewish calendar."
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "Plugin ini memberikan tarikh dalam kalendar Yahudi."
 
 #: plugins/picoftheday/picoftheday.cpp:48

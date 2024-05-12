@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:37+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-12 22:25+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -454,8 +454,9 @@ msgid "Open Attachment"
 msgstr "פתיחת צרופה"
 
 #: text_calendar.cpp:1342
-#, kde-format
-msgid "Save Attachment As..."
+#, fuzzy, kde-format
+#| msgid "Save Attachment As..."
+msgid "Save Attachment As…"
 msgstr "שמירת הצרופה בשם…"
 
 #: text_calendar.cpp:1358
@@ -474,8 +475,9 @@ msgid "Accept counter proposal"
 msgstr "קבלת ההצעה הנגדית"
 
 #: text_calendar.cpp:1364
-#, kde-format
-msgid "Create a counter proposal..."
+#, fuzzy, kde-format
+#| msgid "Create a counter proposal..."
+msgid "Create a counter proposal…"
 msgstr "יצירת הצעה נגדית…"
 
 #: text_calendar.cpp:1366
@@ -499,8 +501,9 @@ msgid "Decline counter proposal"
 msgstr "סירוב להצעה הנגדית"
 
 #: text_calendar.cpp:1374
-#, kde-format
-msgid "Check my calendar..."
+#, fuzzy, kde-format
+#| msgid "Check my calendar..."
+msgid "Check my calendar…"
 msgstr "בדיקת לוח־השנה שלי…"
 
 #: text_calendar.cpp:1376

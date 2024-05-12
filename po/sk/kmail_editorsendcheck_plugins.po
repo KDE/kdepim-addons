@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2017-11-01 11:09+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -175,8 +175,8 @@ msgstr "Odmietnutý názov domény"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
-msgid "A&dd..."
-msgstr "&Pridať..."
+msgid "A&dd…"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -186,8 +186,9 @@ msgstr "O&dstrániť"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, kde-format
-msgid "Mod&ify..."
+#, fuzzy, kde-format
+#| msgid "Mod&ify..."
+msgid "Mod&ify…"
 msgstr "&Upraviť..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
@@ -260,6 +261,9 @@ msgstr "Zmeniť hodnotu"
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Potenciálne neplatné e-maily sú zobrazené červenou:"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Pridať..."
 
 #~ msgid "Enable"
 #~ msgstr "Povoliť"

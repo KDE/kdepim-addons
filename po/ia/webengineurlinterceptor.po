@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-08 12:02+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -38,12 +38,13 @@ msgstr "Url"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "Adde..."
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Modifica..."
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -73,9 +74,10 @@ msgid "Remove List"
 msgstr "Remove Lista"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Cerca..."
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgid "Search…"
+msgstr "Cerca:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
@@ -110,6 +112,12 @@ msgstr "Monstra lista de adblock (bloco de reclamos)"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Habilita bloco de reclamos (ad block)"
+
+#~ msgid "Add..."
+#~ msgstr "Adde..."
+
+#~ msgid "Search..."
+#~ msgstr "Cerca..."
 
 #~ msgid "Remove"
 #~ msgstr "Remove"
@@ -348,9 +356,6 @@ msgstr "Habilita bloco de reclamos (ad block)"
 
 #~ msgid "Export filters..."
 #~ msgstr "Exporta filtros..."
-
-#~ msgid "Search:"
-#~ msgstr "Cerca:"
 
 #~ msgid "Edit"
 #~ msgstr "Modifica"

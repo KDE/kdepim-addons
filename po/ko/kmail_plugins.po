@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 22:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -24,9 +24,10 @@ msgid "Akonadi Database Tool"
 msgstr "Akonadi 데이터베이스 도구"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, kde-format
-msgid "&Akonadi Vacuum..."
-msgstr "Akonadi 청소(&A)..."
+#, fuzzy, kde-format
+#| msgid "Akonadi Vacuum"
+msgid "&Akonadi Vacuum…"
+msgstr "Akonadi 청소"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -46,9 +47,10 @@ msgid "Vacuum"
 msgstr "청소"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, kde-format
-msgid "&Akonadi Fsck..."
-msgstr "Akonadi 검사(&A)..."
+#, fuzzy, kde-format
+#| msgid "Akonadi Fsck"
+msgid "&Akonadi Fsck…"
+msgstr "Akonadi 검사"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -73,19 +75,24 @@ msgid "Finished."
 msgstr "완료됨."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, kde-format
-msgid "Start..."
+#, fuzzy, kde-format
+#| msgid "Start..."
+msgid "Start…"
 msgstr "시작..."
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Spam Wizard..."
-msgstr "스팸 방지 마법사(&A)..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Spam Wizard"
+msgid "&Anti-Spam Wizard…"
+msgstr "스팸 방지 마법사"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Virus Wizard..."
-msgstr "안티바이러스 마법사(&A)..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Virus Wizard"
+msgid "&Anti-Virus Wizard…"
+msgstr "안티바이러스 마법사"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -164,8 +171,9 @@ msgid "Ham"
 msgstr "햄"
 
 #: common/antispamwizard.cpp:456
-#, kde-format
-msgid "Scanning for %1..."
+#, fuzzy, kde-format
+#| msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr "%1 검사 중..."
 
 #: common/antispamwizard.cpp:500
@@ -417,8 +425,8 @@ msgstr "첨부:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
-msgstr "추가(&D)..."
+msgid "A&dd…"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -435,11 +443,20 @@ msgstr "수정(&I)..."
 msgid "Select attachment:"
 msgstr "첨부 선택:"
 
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Akonadi 청소"
+#~ msgid "&Akonadi Vacuum..."
+#~ msgstr "Akonadi 청소(&A)..."
 
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Akonadi 검사"
+#~ msgid "&Akonadi Fsck..."
+#~ msgstr "Akonadi 검사(&A)..."
+
+#~ msgid "&Anti-Spam Wizard..."
+#~ msgstr "스팸 방지 마법사(&A)..."
+
+#~ msgid "&Anti-Virus Wizard..."
+#~ msgstr "안티바이러스 마법사(&A)..."
+
+#~ msgid "A&dd..."
+#~ msgstr "추가(&D)..."
 
 #~ msgid "&Log Activities..."
 #~ msgstr "활동 기록(&L)..."

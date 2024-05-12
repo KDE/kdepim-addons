@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
-msgid "Insert Email..."
+msgid "Insert Email…"
 msgstr ""
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
@@ -44,7 +44,7 @@ msgstr ""
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
-msgid "Insert Short URL..."
+msgid "Insert Short URL…"
 msgstr ""
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
@@ -72,7 +72,7 @@ msgstr ""
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
-msgid "Insert Special Character..."
+msgid "Insert Special Character…"
 msgstr ""
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
@@ -99,12 +99,12 @@ msgstr ""
 
 #: quicktext/quicktextconfiguredialog.cpp:38
 #, kde-format
-msgid "Import..."
+msgid "Import…"
 msgstr ""
 
 #: quicktext/quicktextconfiguredialog.cpp:41
 #, kde-format
-msgid "Export..."
+msgid "Export…"
 msgstr ""
 
 #: quicktext/quicktextmanager.cpp:78
@@ -125,12 +125,12 @@ msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:37
 #, kde-format
-msgid "Add Snippet..."
+msgid "Add Snippet…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:39
 #, kde-format
-msgid "Edit Snippet..."
+msgid "Edit Snippet…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:41
@@ -140,12 +140,12 @@ msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
-msgid "Add Group..."
+msgid "Add Group…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
-msgid "Rename Group..."
+msgid "Rename Group…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:48
@@ -198,7 +198,7 @@ msgstr ""
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
-msgid "Share Mail Text..."
+msgid "Share Mail Text…"
 msgstr ""
 
 #: zoomtext/zoomlabel.cpp:20
@@ -208,5 +208,8 @@ msgstr ""
 
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
-msgid "Zoom..."
-msgstr "Zoom…"
+msgid "Zoom…"
+msgstr ""
+
+#~ msgid "Zoom..."
+#~ msgstr "Zoom…"

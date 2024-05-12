@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-12-17 19:45+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -18,8 +18,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, kde-format
-msgid "Check Gravatar..."
+#, fuzzy, kde-format
+#| msgid "Check Gravatar..."
+msgid "Check Gravatar…"
 msgstr "檢查 Gravatar..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
@@ -80,8 +81,9 @@ msgid "No Gravatar Found."
 msgstr "找不到 Gravatar 影像。"
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, kde-format
-msgid "Merge Contacts..."
+#, fuzzy, kde-format
+#| msgid "Merge Contacts..."
+msgid "Merge Contacts…"
 msgstr "合併聯絡人..."
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
@@ -139,8 +141,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "搜尋並選取要合併的重複聯絡人"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, kde-format
-msgid "Search in result..."
+#, fuzzy, kde-format
+#| msgid "Search in result..."
+msgid "Search in result…"
 msgstr "在結果中搜尋..."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
@@ -251,8 +254,9 @@ msgid "(Undefined)"
 msgstr "(未定義)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, kde-format
-msgid "Search Duplicate Contacts..."
+#, fuzzy, kde-format
+#| msgid "Search Duplicate Contacts..."
+msgid "Search Duplicate Contacts…"
 msgstr "查詢重複聯絡人..."
 
 #: sendmail/mailsenderjob.cpp:127
@@ -261,8 +265,9 @@ msgid "No emails found in selected contacts."
 msgstr "已選聯絡人中未找到電子郵件。"
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, kde-format
-msgid "Send an email..."
+#, fuzzy, kde-format
+#| msgid "Send an email..."
+msgid "Send an email…"
 msgstr "傳送電子郵件..."
 
 #: sendvcards/sendvcardsjob.cpp:96
@@ -276,6 +281,7 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "無法建立暫存檔案 '%1'"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, kde-format
-msgid "Send vCards..."
+#, fuzzy, kde-format
+#| msgid "Send vCards..."
+msgid "Send vCards…"
 msgstr "傳送 vCard..."

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2002-11-09 12:52+0200\n"
 "Last-Translator: Thelma Lungcuzo <thelma@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -752,12 +752,12 @@ msgstr "Cima..."
 #: plugins/picoftheday/element.cpp:326
 #, fuzzy, kde-format
 #| msgid "Go &Forward"
-msgid "Loading..."
+msgid "Loading…"
 msgstr "Yiya &Phambili"
 
-#: plugins/picoftheday/element.cpp:332
+#: plugins/picoftheday/element.cpp:331
 #, fuzzy, kde-format
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "Rhweba ngaphandle ikhalenda njenga maphepha e web."
 
 #: plugins/picoftheday/picoftheday.cpp:48

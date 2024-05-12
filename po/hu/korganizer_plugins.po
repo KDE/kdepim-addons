@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-29 13:39+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -748,13 +748,15 @@ msgid "Picture Page"
 msgstr "Képoldal"
 
 #: plugins/picoftheday/element.cpp:326
-#, kde-format
-msgid "Loading..."
+#, fuzzy, kde-format
+#| msgid "Loading..."
+msgid "Loading…"
 msgstr "Betöltés…"
 
-#: plugins/picoftheday/element.cpp:332
-#, kde-format
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#: plugins/picoftheday/element.cpp:331
+#, fuzzy, kde-format
+#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "<qt>A <i>Nap képének</i> betöltése ...</qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48

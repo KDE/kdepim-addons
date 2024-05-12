@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 00:53+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2022-06-21 17:49+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -117,9 +117,11 @@ msgid "The message with subject '%1' is %2"
 msgstr "\"%1\" mövzulu məktub %2-dir"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Rule..."
 msgctxt "@action:button"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Qayda əlavə edin..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
@@ -129,9 +131,11 @@ msgid "Remove Rule"
 msgstr "Qaydanı silin"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Modify Rule..."
 msgctxt "@action:button"
-msgid "Modify Rule..."
+msgid "Modify Rule…"
 msgstr "Qaydanı dəyişin..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
@@ -145,13 +149,15 @@ msgid "Pattern"
 msgstr "Nümünə"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, kde-format
-msgid "Add Rule..."
+#, fuzzy, kde-format
+#| msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Qayda əlavə edin..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, kde-format
-msgid "Edit Rule..."
+#, fuzzy, kde-format
+#| msgid "Edit Rule..."
+msgid "Edit Rule…"
 msgstr "Qaydaya düzəliş edin..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126

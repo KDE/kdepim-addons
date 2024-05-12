@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-07 00:51+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-15 23:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -134,7 +134,9 @@ msgid "Add to KDE Itinerary"
 msgstr "加入至 KDE 旅程計劃"
 
 #: templates/itinerary.html:78
-msgid "Send to Device..."
+#, fuzzy
+#| msgid "Send to Device..."
+msgid "Send to Device…"
 msgstr "傳送到裝置…"
 
 #: templates/location.html:4

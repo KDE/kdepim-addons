@@ -1,7 +1,7 @@
 # translation of korganizer.po to Slovenian
 # Translation of korganizer.po to Slovenian
 # Copyright (C) 2001,2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-# $Id: korganizer_plugins.po 1674274 2024-02-27 01:07:58Z scripty $
+# $Id: korganizer_plugins.po 1679822 2024-05-12 01:11:46Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@hermes.si>, 2001.
@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-26 19:07+0100\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -767,13 +767,15 @@ msgid "Picture Page"
 msgstr "Stran s sliko"
 
 #: plugins/picoftheday/element.cpp:326
-#, kde-format
-msgid "Loading..."
+#, fuzzy, kde-format
+#| msgid "Loading..."
+msgid "Loading…"
 msgstr "Nalaganje …"
 
-#: plugins/picoftheday/element.cpp:332
-#, kde-format
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#: plugins/picoftheday/element.cpp:331
+#, fuzzy, kde-format
+#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "<qt>Nalaganje <i>Izbrane slike</i> …</qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48

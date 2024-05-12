@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 18:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -27,9 +27,10 @@ msgid "Akonadi Database Tool"
 msgstr "Засіб для роботи із базою даних Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, kde-format
-msgid "&Akonadi Vacuum..."
-msgstr "&Vacuum Akonadi…"
+#, fuzzy, kde-format
+#| msgid "Akonadi Vacuum"
+msgid "&Akonadi Vacuum…"
+msgstr "Vacuum Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -49,9 +50,10 @@ msgid "Vacuum"
 msgstr "Очистити"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, kde-format
-msgid "&Akonadi Fsck..."
-msgstr "&Fsck Akonadi…"
+#, fuzzy, kde-format
+#| msgid "Akonadi Fsck"
+msgid "&Akonadi Fsck…"
+msgstr "Fsck Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -76,19 +78,24 @@ msgid "Finished."
 msgstr "Завершено."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, kde-format
-msgid "Start..."
+#, fuzzy, kde-format
+#| msgid "Start..."
+msgid "Start…"
 msgstr "Початок…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Spam Wizard..."
-msgstr "Майстер блокування &спаму…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Spam Wizard"
+msgid "&Anti-Spam Wizard…"
+msgstr "Майстер блокування спаму"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Virus Wizard..."
-msgstr "Майстер блокування &вірусів…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Virus Wizard"
+msgid "&Anti-Virus Wizard…"
+msgstr "Майстер блокування вірусів"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -167,8 +174,9 @@ msgid "Ham"
 msgstr "Не спам"
 
 #: common/antispamwizard.cpp:456
-#, kde-format
-msgid "Scanning for %1..."
+#, fuzzy, kde-format
+#| msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr "Сканування на %1…"
 
 #: common/antispamwizard.cpp:500
@@ -426,8 +434,8 @@ msgstr "Долучення:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
-msgstr "&Додати…"
+msgid "A&dd…"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -444,11 +452,20 @@ msgstr "З&мінити…"
 msgid "Select attachment:"
 msgstr "Виберіть долучення:"
 
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Vacuum Akonadi"
+#~ msgid "&Akonadi Vacuum..."
+#~ msgstr "&Vacuum Akonadi…"
 
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Fsck Akonadi"
+#~ msgid "&Akonadi Fsck..."
+#~ msgstr "&Fsck Akonadi…"
+
+#~ msgid "&Anti-Spam Wizard..."
+#~ msgstr "Майстер блокування &спаму…"
+
+#~ msgid "&Anti-Virus Wizard..."
+#~ msgstr "Майстер блокування &вірусів…"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Додати…"
 
 #~ msgid "&Log Activities..."
 #~ msgstr "&Журнал дій…"

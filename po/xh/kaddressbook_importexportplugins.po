@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2002-10-12 14:50+0200\n"
 "Last-Translator: Thelma Lungcuzo <thelma@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
-msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "&Uluhlu lorhwebo langaphandle..."
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -36,7 +36,7 @@ msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
-msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "&Rhweba Uluhlu..."
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -342,13 +342,13 @@ msgstr ""
 #: csv/import/csvimportdialog.cpp:448
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr "Udidi Lwemboniselo"
 
 #: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr "Udidi Lwemboniselo"
 
 #: csv/import/csvimportdialog.cpp:470
@@ -443,7 +443,7 @@ msgstr "KAddressBook"
 
 #: gmx/gmximportexportplugininterface.cpp:40
 #, fuzzy, kde-format
-msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "Rhweba i vCard..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -453,7 +453,7 @@ msgstr "KAddressBook"
 
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "Rhweba I&KDE 2 Address Book..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -475,7 +475,7 @@ msgstr "KAddressBook"
 
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, fuzzy, kde-format
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "&Rhweba ngaphandle i vCard 3.0..."
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -486,7 +486,7 @@ msgstr "Rhweba ngaphakathi Iziqhagamshelwano?"
 
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
-msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "Rhweba I&KDE 2 Address Book..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -497,7 +497,7 @@ msgstr "Rhweba ngaphakathi Iziqhagamshelwano?"
 
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
-msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "Rhweba I&KDE 2 Address Book..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -665,12 +665,12 @@ msgstr ""
 #: vcards/engine/vcardviewerdialog.cpp:61
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "Rhweba i vCard..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
+#, fuzzy, kde-format
+msgid "Import vCard…"
 msgstr "Rhweba i vCard..."
 
 #: vcards/vcardimportexportplugininterface.cpp:45
@@ -686,12 +686,12 @@ msgstr "&Rhweba ngaphandle i vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "&Rhweba ngaphandle i vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, fuzzy, kde-format
-msgid "Export vCard 3.0..."
+msgid "Export vCard 3.0…"
 msgstr "&Rhweba ngaphandle i vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
@@ -701,7 +701,7 @@ msgstr "&Rhweba ngaphandle i vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, fuzzy, kde-format
-msgid "Export vCard 2.1..."
+msgid "Export vCard 2.1…"
 msgstr "&Rhweba ngaphandle i vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
@@ -756,7 +756,7 @@ msgstr "&Rhweba ngaphandle i vCard 3.0..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "&Rhweba Uluhlu..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
@@ -769,6 +769,9 @@ msgstr "Rhweba ngaphakathi Iziqhagamshelwano?"
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#~ msgid "Import vCard..."
+#~ msgstr "Rhweba i vCard..."
 
 #, fuzzy
 #~ msgctxt "@title:window"

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2007-03-28 20:53+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -769,13 +769,13 @@ msgstr "%1 wiskje"
 #: plugins/picoftheday/element.cpp:326
 #, fuzzy, kde-format
 #| msgid "Change..."
-msgid "Loading..."
+msgid "Loading…"
 msgstr "Oanpasse..."
 
-#: plugins/picoftheday/element.cpp:332
+#: plugins/picoftheday/element.cpp:331
 #, fuzzy, kde-format
 #| msgid "This plugin provides the date in the Jewish calendar."
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "Dizze plugin toant de datum yn de Joadske aginda."
 
 #: plugins/picoftheday/picoftheday.cpp:48

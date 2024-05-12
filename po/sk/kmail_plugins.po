@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2017-02-04 11:09+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
-msgid "&Akonadi Vacuum..."
+msgid "&Akonadi Vacuum…"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
@@ -45,7 +45,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
-msgid "&Akonadi Fsck..."
+msgid "&Akonadi Fsck…"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
@@ -72,18 +72,20 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
-msgid "Start..."
+msgid "Start…"
 msgstr ""
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Spam Wizard..."
-msgstr "Sprievodca pre &antispam..."
+#, fuzzy, kde-format
+#| msgid "Anti-Spam Wizard"
+msgid "&Anti-Spam Wizard…"
+msgstr "Sprievodca kontrolou spamu"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Virus Wizard..."
-msgstr "Sprievodca pre &antiviry..."
+#, fuzzy, kde-format
+#| msgid "Anti-Virus Wizard"
+msgid "&Anti-Virus Wizard…"
+msgstr "Sprievodca nastavením antivirovej podpory"
 
 #: common/antispamwizard.cpp:88
 #, fuzzy, kde-format
@@ -164,8 +166,9 @@ msgid "Ham"
 msgstr "Ham"
 
 #: common/antispamwizard.cpp:456
-#, kde-format
-msgid "Scanning for %1..."
+#, fuzzy, kde-format
+#| msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr "Hľadám %1..."
 
 #: common/antispamwizard.cpp:500
@@ -424,8 +427,8 @@ msgstr "Príloha:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
-msgstr "&Pridať..."
+msgid "A&dd…"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -441,6 +444,15 @@ msgstr "&Upraviť..."
 #, kde-format
 msgid "Select attachment:"
 msgstr "Vybrať prílohu:"
+
+#~ msgid "&Anti-Spam Wizard..."
+#~ msgstr "Sprievodca pre &antispam..."
+
+#~ msgid "&Anti-Virus Wizard..."
+#~ msgstr "Sprievodca pre &antiviry..."
+
+#~ msgid "A&dd..."
+#~ msgstr "&Pridať..."
 
 #~ msgid "&Log Activities..."
 #~ msgstr "Záznam aktivít..."

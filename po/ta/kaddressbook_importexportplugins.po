@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2005-03-16 01:39-0800\n"
 "Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
 "Language-Team:  <ta@li.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Export CSV List..."
-msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "ஏற்றுமதி CSV பட்டியல்..."
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -39,7 +39,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
-msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "உள்வாங்கு CSV பட்டியல்..."
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -385,14 +385,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Apply Template..."
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr "வார்ப்புருவை பயன்படுத்து..."
 
 #: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
 #| msgid "Save Template..."
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr "வார்ப்புருவைச் சேமி..."
 
 #: csv/import/csvimportdialog.cpp:470
@@ -499,7 +499,7 @@ msgstr "%1 முகவரிபுத்தகம்"
 #: gmx/gmximportexportplugininterface.cpp:40
 #, fuzzy, kde-format
 #| msgid "Import All..."
-msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "அனைத்தையும் இறக்குமதி செய்..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -509,7 +509,7 @@ msgstr "%1 முகவரிபுத்தகம்"
 
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "ஏற்றுமதி LDIF முகவரிப்புத்தகம்..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -532,7 +532,7 @@ msgstr "%1 முகவரிபுத்தகம்"
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, fuzzy, kde-format
 #| msgid "Import From Mobile Phone..."
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "நடமாடும் தொலைபேசியிலிருந்து இறக்கு... "
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -544,7 +544,7 @@ msgstr "தொடர்புகளை உள்வாங்கு"
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Import LDIF Addressbook..."
-msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "LDIF முகவரிப்புத்தகம் இறக்கு..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -556,7 +556,7 @@ msgstr "தொடர்புகளை உள்வாங்கு"
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Export LDIF Addressbook..."
-msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "ஏற்றுமதி LDIF முகவரிப்புத்தகம்..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -737,13 +737,14 @@ msgstr "முகவரிப் புத்தகத்திலிருந�
 #, fuzzy, kde-format
 #| msgid "Import All..."
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "அனைத்தையும் இறக்குமதி செய்..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
-msgstr "வி கார்டு இறக்குமதி செய்..."
+#, fuzzy, kde-format
+#| msgid "Import vCard"
+msgid "Import vCard…"
+msgstr "வி கார்டை இறக்குமதி செய்"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
@@ -760,12 +761,13 @@ msgstr "ஏற்றுமதி வி கார்டு 3.0..."
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "ஏற்றுமதி வி கார்டு 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, kde-format
-msgid "Export vCard 3.0..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 3.0..."
+msgid "Export vCard 3.0…"
 msgstr "ஏற்றுமதி வி கார்டு 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
@@ -775,8 +777,9 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "ஏற்றுமதி வி கார்டு 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, kde-format
-msgid "Export vCard 2.1..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 2.1..."
+msgid "Export vCard 2.1…"
 msgstr "ஏற்றுமதி வி கார்டு 2.1..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
@@ -839,7 +842,7 @@ msgstr "தொலைபேசிக்கு ஏற்ற இயலவில்�
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "உள்வாங்கு CSV பட்டியல்..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
@@ -852,6 +855,9 @@ msgstr "தொடர்புகளை உள்வாங்கு"
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#~ msgid "Import vCard..."
+#~ msgstr "வி கார்டு இறக்குமதி செய்..."
 
 #, fuzzy
 #~| msgid "Address Book"

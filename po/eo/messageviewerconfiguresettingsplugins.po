@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-02 00:38+0000\n"
-"PO-Revision-Date: 2024-03-04 23:34+0100\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"PO-Revision-Date: 2024-05-10 11:33+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -63,7 +63,7 @@ msgstr "Agordi"
 #: dkim-verify/dkimadvancedwidget.cpp:43
 #, kde-format
 msgid "Authentication Server verified:"
-msgstr "Aŭtentikigoservilo kontrolita:"
+msgstr "Aŭtentikigoservilo konfirmita:"
 
 #: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
 #, kde-format
@@ -279,8 +279,9 @@ msgid "Server Name:"
 msgstr "Servilo Nomo:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, kde-format
-msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, fuzzy, kde-format
+#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Argumentformata informo...</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
@@ -309,9 +310,11 @@ msgid "Configure Open Url With Plugin"
 msgstr "Agordi Malfermi Url Per Kromaĵo"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Rule..."
 msgctxt "@action:button"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Aldoni regulon..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
@@ -321,9 +324,11 @@ msgid "Remove Rule"
 msgstr "Forigi Regulon"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Modify Rule..."
 msgctxt "@action:button"
-msgid "Modify Rule..."
+msgid "Modify Rule…"
 msgstr "Modifi Regulon..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
@@ -360,13 +365,15 @@ msgid "Remove Rule"
 msgstr "Forigi Regulon"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, kde-format
-msgid "Add Rule..."
+#, fuzzy, kde-format
+#| msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Aldoni regulon..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, kde-format
-msgid "Edit Rule..."
+#, fuzzy, kde-format
+#| msgid "Edit Rule..."
+msgid "Edit Rule…"
 msgstr "Redakti Regulon..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
@@ -384,8 +391,8 @@ msgstr "Agordi Fraŭdo-Agordojn"
 
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
-msgid "Add..."
-msgstr "Aldoni..."
+msgid "Add…"
+msgstr ""
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
@@ -413,3 +420,6 @@ msgstr "Domajno"
 msgctxt "@title:column"
 msgid "Check"
 msgstr "Kontroli"
+
+#~ msgid "Add..."
+#~ msgstr "Aldoni..."

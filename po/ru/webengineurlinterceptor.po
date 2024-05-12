@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-12 10:00+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -50,12 +50,13 @@ msgstr "URL"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "Добавить…"
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Изменить..."
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -85,9 +86,10 @@ msgid "Remove List"
 msgstr "Удаление списка"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Поиск..."
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgid "Search…"
+msgstr "Поиск:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
@@ -122,6 +124,12 @@ msgstr "Просмотр списка AdBlock"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Включена блокировка рекламы"
+
+#~ msgid "Add..."
+#~ msgstr "Добавить…"
+
+#~ msgid "Search..."
+#~ msgstr "Поиск..."
 
 #~ msgid "Remove"
 #~ msgstr "Удалить"
@@ -373,9 +381,6 @@ msgstr "Включена блокировка рекламы"
 
 #~ msgid "Export filters..."
 #~ msgstr "Экспорт фильтров..."
-
-#~ msgid "Search:"
-#~ msgstr "Поиск:"
 
 #~ msgid "Edit"
 #~ msgstr "Изменить"

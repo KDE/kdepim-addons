@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-06-21 08:57+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -48,8 +48,9 @@ msgid "View Business Card"
 msgstr "Ver a tarxetas de visita"
 
 #: text_vcard.cpp:216
-#, kde-format
-msgid "Save Business Card As..."
+#, fuzzy, kde-format
+#| msgid "Save Business Card As..."
+msgid "Save Business Card As…"
 msgstr "Gardar a tarxeta de visita como…"
 
 #: text_vcard.cpp:233

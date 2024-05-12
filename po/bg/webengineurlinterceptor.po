@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-11 21:54+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -39,12 +39,13 @@ msgstr "Url-адрес"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "Добавяне..."
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Промяна..."
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -74,8 +75,9 @@ msgid "Remove List"
 msgstr "Премахване на списъка"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Търсене ..."
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
@@ -111,3 +113,6 @@ msgstr "Показване на списък на Adblock"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Блокирането на реклами е активирано"
+
+#~ msgid "Add..."
+#~ msgstr "Добавяне..."

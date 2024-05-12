@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-22 16:10+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -38,12 +38,13 @@ msgstr "Verkko-osoite"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "Lisää…"
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Muuta…"
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -73,9 +74,10 @@ msgid "Remove List"
 msgstr "Poista luettelo"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Etsi…"
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgid "Search…"
+msgstr "Etsi:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
@@ -110,6 +112,12 @@ msgstr "Näytä mainosestoluettelo"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Mainosesto käytössä"
+
+#~ msgid "Add..."
+#~ msgstr "Lisää…"
+
+#~ msgid "Search..."
+#~ msgstr "Etsi…"
 
 #~ msgid "Remove"
 #~ msgstr "Poista"
@@ -351,9 +359,6 @@ msgstr "Mainosesto käytössä"
 
 #~ msgid "Export filters..."
 #~ msgstr "Vie suodattimia…"
-
-#~ msgid "Search:"
-#~ msgstr "Etsi:"
 
 #~ msgid "Edit"
 #~ msgstr "Muokkaa"

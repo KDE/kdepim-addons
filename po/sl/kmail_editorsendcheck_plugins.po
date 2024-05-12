@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 09:17+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -172,8 +172,8 @@ msgstr "Zavrnjeno ime domene"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
-msgid "A&dd..."
-msgstr "&Dodaj ..."
+msgid "A&dd…"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -183,8 +183,9 @@ msgstr "Ods&trani"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, kde-format
-msgid "Mod&ify..."
+#, fuzzy, kde-format
+#| msgid "Mod&ify..."
+msgid "Mod&ify…"
 msgstr "Spremen&i ..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
@@ -251,6 +252,9 @@ msgstr "Spremeni vrednost"
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Morebitni neveljavni e-naslovi so označeni rdeče:"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Dodaj ..."
 
 #~ msgid "Enable"
 #~ msgstr "Omogoči"

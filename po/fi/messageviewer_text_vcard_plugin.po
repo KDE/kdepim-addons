@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2020-06-26 18:37+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -50,8 +50,9 @@ msgid "View Business Card"
 msgstr "Näytä käyntikortti"
 
 #: text_vcard.cpp:216
-#, kde-format
-msgid "Save Business Card As..."
+#, fuzzy, kde-format
+#| msgid "Save Business Card As..."
+msgid "Save Business Card As…"
 msgstr "Tallenna käyntikortti nimellä…"
 
 #: text_vcard.cpp:233

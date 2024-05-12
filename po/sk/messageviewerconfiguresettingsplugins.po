@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-02 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2019-11-11 16:12+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -286,7 +286,7 @@ msgstr ""
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, kde-format
-msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
@@ -316,7 +316,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Add Rule"
 msgctxt "@action:button"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Pridať pravidlo"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
@@ -330,7 +330,7 @@ msgstr "Odstrániť pravidlo"
 #, fuzzy, kde-format
 #| msgid "Add Rule"
 msgctxt "@action:button"
-msgid "Modify Rule..."
+msgid "Modify Rule…"
 msgstr "Pridať pravidlo"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
@@ -373,12 +373,12 @@ msgstr "Odstrániť pravidlo"
 #: openurlwith/openurlwithconfigurewidget.cpp:224
 #, fuzzy, kde-format
 #| msgid "Add Rule"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "Pridať pravidlo"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
 #, kde-format
-msgid "Edit Rule..."
+msgid "Edit Rule…"
 msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
@@ -399,8 +399,8 @@ msgstr "Nastaviť pravidlo"
 
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
-msgid "Add..."
-msgstr "Pridať..."
+msgid "Add…"
+msgstr ""
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
@@ -429,6 +429,9 @@ msgstr "Doména"
 msgctxt "@title:column"
 msgid "Check"
 msgstr ""
+
+#~ msgid "Add..."
+#~ msgstr "Pridať..."
 
 #, fuzzy
 #~| msgid "Configure Rule"

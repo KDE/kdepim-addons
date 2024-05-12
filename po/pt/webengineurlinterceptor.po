@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2019-12-17 11:55+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
+msgid "Add…"
 msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
-msgid "Modify..."
+msgid "Modify…"
 msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -77,9 +77,10 @@ msgid "Remove List"
 msgstr "Remover o filtro"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Procurar..."
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgid "Search…"
+msgstr "Procurar:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, fuzzy, kde-format
@@ -118,6 +119,9 @@ msgstr "Mostrar a lista do AdBlock"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Bloqueio de anúncios activo"
+
+#~ msgid "Search..."
+#~ msgstr "Procurar..."
 
 #~ msgid "Remove"
 #~ msgstr "Remover"
@@ -358,9 +362,6 @@ msgstr "Bloqueio de anúncios activo"
 
 #~ msgid "Export filters..."
 #~ msgstr "Exportar os Filtros..."
-
-#~ msgid "Search:"
-#~ msgstr "Procurar:"
 
 #~ msgid "Edit"
 #~ msgstr "Editar"

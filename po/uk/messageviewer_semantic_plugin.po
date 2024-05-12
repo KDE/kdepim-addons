@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_semantic_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-07 00:51+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-05-07 09:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -137,7 +137,9 @@ msgid "Add to KDE Itinerary"
 msgstr "Додати до KDE Itinerary"
 
 #: templates/itinerary.html:78
-msgid "Send to Device..."
+#, fuzzy
+#| msgid "Send to Device..."
+msgid "Send to Device…"
 msgstr "Надіслати на пристрій…"
 
 #: templates/location.html:4

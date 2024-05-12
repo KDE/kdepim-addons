@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-30 10:59+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -127,7 +127,9 @@ msgstr ""
 "poczty."
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
+#, fuzzy
+#| msgid "Loading key details..."
+msgid "Loading key details…"
 msgstr "Wczytywanie szczegółów klucza..."
 
 #: templates/pgpkeymessagepart.html:28
@@ -164,12 +166,17 @@ msgid "Open in Kleopatra"
 msgstr "Otwórz w Kleopatrze"
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
-msgstr "Wyświetlanie szczegółów klucza ..."
+#, fuzzy
+#| msgid "Show key details"
+msgid "Show key details …"
+msgstr "Pokaż szczegóły klucza"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Zaimportuj klucz"
+
+#~ msgid "Show key details ..."
+#~ msgstr "Wyświetlanie szczegółów klucza ..."
 
 #~ msgid "Unknown identity"
 #~ msgstr "Nieznana tożsamość"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-28 19:56+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -35,8 +35,9 @@ msgid "Autocorrect Selected Text"
 msgstr "Automatische Korrektur von ausgewähltem Text"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, kde-format
-msgid "Insert Email..."
+#, fuzzy, kde-format
+#| msgid "Insert Email..."
+msgid "Insert Email…"
 msgstr "E-Mail-Adresse einfügen..."
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
@@ -45,8 +46,9 @@ msgid "Select Short URL server:"
 msgstr "Server für abgekürzte Adresse auswählen:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, kde-format
-msgid "Insert Short URL..."
+#, fuzzy, kde-format
+#| msgid "Insert Short URL..."
+msgid "Insert Short URL…"
 msgstr "Abgekürzte Adresse einfügen ..."
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
@@ -77,9 +79,11 @@ msgstr ""
 "„%1“"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
-msgid "Insert Special Character..."
-msgstr "Sonderzeichen einfügen ..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Insert Special Character"
+msgid "Insert Special Character…"
+msgstr "Sonderzeichen einfügen"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -104,13 +108,15 @@ msgid "Configure quick text"
 msgstr "Textbausteine einrichten"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "Importieren ..."
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, kde-format
-msgid "Export..."
+#, fuzzy, kde-format
+#| msgid "Export..."
+msgid "Export…"
 msgstr "Exportieren ..."
 
 #: quicktext/quicktextmanager.cpp:78
@@ -130,13 +136,15 @@ msgid "Variables"
 msgstr "Variablen"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, kde-format
-msgid "Add Snippet..."
+#, fuzzy, kde-format
+#| msgid "Add Snippet..."
+msgid "Add Snippet…"
 msgstr "Textbaustein hinzufügen ..."
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, kde-format
-msgid "Edit Snippet..."
+#, fuzzy, kde-format
+#| msgid "Edit Snippet..."
+msgid "Edit Snippet…"
 msgstr "Textbaustein bearbeiten ..."
 
 #: quicktext/quicktexttreewidget.cpp:41
@@ -145,13 +153,15 @@ msgid "Remove Snippet"
 msgstr "Textbaustein entfernen"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, kde-format
-msgid "Add Group..."
+#, fuzzy, kde-format
+#| msgid "Add Group..."
+msgid "Add Group…"
 msgstr "Gruppe hinzufügen ..."
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, kde-format
-msgid "Rename Group..."
+#, fuzzy, kde-format
+#| msgid "Rename Group..."
+msgid "Rename Group…"
 msgstr "Gruppe umbenennen ..."
 
 #: quicktext/quicktexttreewidget.cpp:48
@@ -208,8 +218,9 @@ msgid "General"
 msgstr "Allgemein"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, kde-format
-msgid "Share Mail Text..."
+#, fuzzy, kde-format
+#| msgid "Share Mail Text..."
+msgid "Share Mail Text…"
 msgstr "E-Mail-Text teilen ..."
 
 #: zoomtext/zoomlabel.cpp:20
@@ -219,8 +230,14 @@ msgstr "Vergrößerung: %1 %"
 
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
-msgid "Zoom..."
-msgstr "Skalierung ..."
+msgid "Zoom…"
+msgstr ""
+
+#~ msgid "Insert Special Character..."
+#~ msgstr "Sonderzeichen einfügen ..."
+
+#~ msgid "Zoom..."
+#~ msgstr "Skalierung ..."
 
 #~ msgid "Reset"
 #~ msgstr "Zurücksetzen"

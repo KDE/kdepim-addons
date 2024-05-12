@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 18:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -133,7 +133,9 @@ msgstr ""
 "повідомлень електронної пошти."
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
+#, fuzzy
+#| msgid "Loading key details..."
+msgid "Loading key details…"
 msgstr "Завантажуємо параметри ключа…"
 
 #: templates/pgpkeymessagepart.html:28
@@ -170,12 +172,17 @@ msgid "Open in Kleopatra"
 msgstr "Відкрити у Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
-msgstr "Показати параметри ключа…"
+#, fuzzy
+#| msgid "Show key details"
+msgid "Show key details …"
+msgstr "Показати параметри ключа"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Імпорт ключа"
+
+#~ msgid "Show key details ..."
+#~ msgstr "Показати параметри ключа…"
 
 #~ msgid "Unknown identity"
 #~ msgstr "Невідомий профіль"

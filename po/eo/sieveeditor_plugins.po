@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 20:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -19,14 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, kde-format
-msgid "Click on button for selecting contacts..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting contacts..."
+msgid "Click on button for selecting contacts…"
 msgstr "Alklaki la butonon por elekti kontaktojn..."
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
-msgid "..."
-msgstr "..."
+msgid "…"
+msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
@@ -52,9 +53,10 @@ msgid "Error during creating folder: %1"
 msgstr "Eraro dum kreado de dosierujo: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, kde-format
-msgid "Create Folder..."
-msgstr "Krei dosierujon..."
+#, fuzzy, kde-format
+#| msgid "Create Folder"
+msgid "Create Folder…"
+msgstr "Krei Dosierujon"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -68,13 +70,15 @@ msgid "Unable to load folder list"
 msgstr "Ne eblas ŝargi dosierujon"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, kde-format
-msgid "Loading in progress..."
+#, fuzzy, kde-format
+#| msgid "Loading in progress..."
+msgid "Loading in progress…"
 msgstr "Ŝargo en progreso..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Serĉi..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
@@ -120,6 +124,13 @@ msgid "Select IMAP folder"
 msgstr "Elekti IMAP-dosierujon"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, kde-format
-msgid "Click on button for selecting folder..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting folder..."
+msgid "Click on button for selecting folder…"
 msgstr "Alklaku la butonon por elekti dosierujon..."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Create Folder..."
+#~ msgstr "Krei dosierujon..."

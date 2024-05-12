@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-12-30 17:43+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -34,8 +34,9 @@ msgid "Autocorrect Selected Text"
 msgstr "自動修正選取的文字"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, kde-format
-msgid "Insert Email..."
+#, fuzzy, kde-format
+#| msgid "Insert Email..."
+msgid "Insert Email…"
 msgstr "插入郵件…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
@@ -44,8 +45,9 @@ msgid "Select Short URL server:"
 msgstr "選取短網址伺服器："
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, kde-format
-msgid "Insert Short URL..."
+#, fuzzy, kde-format
+#| msgid "Insert Short URL..."
+msgid "Insert Short URL…"
 msgstr "插入短網址…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
@@ -74,9 +76,11 @@ msgstr ""
 "「%1」"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
-msgid "Insert Special Character..."
-msgstr "插入特殊符號…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Insert Special Character"
+msgid "Insert Special Character…"
+msgstr "插入特殊符號"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -101,13 +105,15 @@ msgid "Configure quick text"
 msgstr "設定快速文字"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "匯入..."
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, kde-format
-msgid "Export..."
+#, fuzzy, kde-format
+#| msgid "Export..."
+msgid "Export…"
 msgstr "匯出..."
 
 #: quicktext/quicktextmanager.cpp:78
@@ -127,13 +133,15 @@ msgid "Variables"
 msgstr "變數"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, kde-format
-msgid "Add Snippet..."
+#, fuzzy, kde-format
+#| msgid "Add Snippet..."
+msgid "Add Snippet…"
 msgstr "新增片段..."
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, kde-format
-msgid "Edit Snippet..."
+#, fuzzy, kde-format
+#| msgid "Edit Snippet..."
+msgid "Edit Snippet…"
 msgstr "編輯片段..."
 
 #: quicktext/quicktexttreewidget.cpp:41
@@ -142,13 +150,15 @@ msgid "Remove Snippet"
 msgstr "移除片段"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, kde-format
-msgid "Add Group..."
+#, fuzzy, kde-format
+#| msgid "Add Group..."
+msgid "Add Group…"
 msgstr "新增群組..."
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, kde-format
-msgid "Rename Group..."
+#, fuzzy, kde-format
+#| msgid "Rename Group..."
+msgid "Rename Group…"
 msgstr "重新命名群組..."
 
 #: quicktext/quicktexttreewidget.cpp:48
@@ -202,8 +212,9 @@ msgid "General"
 msgstr "一般"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, kde-format
-msgid "Share Mail Text..."
+#, fuzzy, kde-format
+#| msgid "Share Mail Text..."
+msgid "Share Mail Text…"
 msgstr "分享信件文字…"
 
 #: zoomtext/zoomlabel.cpp:20
@@ -213,5 +224,11 @@ msgstr "縮放：%1%"
 
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
-msgid "Zoom..."
-msgstr "放大…"
+msgid "Zoom…"
+msgstr ""
+
+#~ msgid "Insert Special Character..."
+#~ msgstr "插入特殊符號…"
+
+#~ msgid "Zoom..."
+#~ msgstr "放大…"

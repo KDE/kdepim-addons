@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2018-12-18 03:18+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -20,12 +20,12 @@ msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
-msgid "Click on button for selecting contacts..."
+msgid "Click on button for selecting contacts…"
 msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
-msgid "..."
+msgid "…"
 msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:40
@@ -53,7 +53,7 @@ msgstr ""
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
 #, kde-format
-msgid "Create Folder..."
+msgid "Create Folder…"
 msgstr ""
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
@@ -69,12 +69,12 @@ msgstr ""
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
 #, kde-format
-msgid "Loading in progress..."
+msgid "Loading in progress…"
 msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
-msgid "Search..."
+msgid "Search…"
 msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
@@ -121,5 +121,5 @@ msgstr ""
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
-msgid "Click on button for selecting folder..."
+msgid "Click on button for selecting folder…"
 msgstr ""

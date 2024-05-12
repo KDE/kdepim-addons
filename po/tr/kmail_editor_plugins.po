@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-03-22 16:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -34,8 +34,9 @@ msgid "Autocorrect Selected Text"
 msgstr "Seçili Metni Kendiliğinden Düzelt"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, kde-format
-msgid "Insert Email..."
+#, fuzzy, kde-format
+#| msgid "Insert Email..."
+msgid "Insert Email…"
 msgstr "E-posta Ekle..."
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
@@ -44,8 +45,9 @@ msgid "Select Short URL server:"
 msgstr "Kısa URL sunucusu seç:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, kde-format
-msgid "Insert Short URL..."
+#, fuzzy, kde-format
+#| msgid "Insert Short URL..."
+msgid "Insert Short URL…"
 msgstr "Kısa URL Ekle..."
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
@@ -74,9 +76,11 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
-msgid "Insert Special Character..."
-msgstr "Özel Karakter Ekle..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Insert Special Character"
+msgid "Insert Special Character…"
+msgstr "Özel Karakter Ekle"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -101,13 +105,15 @@ msgid "Configure quick text"
 msgstr "Tez Metni Yapılandır"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "İçe Aktar..."
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, kde-format
-msgid "Export..."
+#, fuzzy, kde-format
+#| msgid "Export..."
+msgid "Export…"
 msgstr "Dışa Aktar..."
 
 #: quicktext/quicktextmanager.cpp:78
@@ -127,13 +133,15 @@ msgid "Variables"
 msgstr "Değişkenler"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, kde-format
-msgid "Add Snippet..."
+#, fuzzy, kde-format
+#| msgid "Add Snippet..."
+msgid "Add Snippet…"
 msgstr "Kırpma Ekle..."
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, kde-format
-msgid "Edit Snippet..."
+#, fuzzy, kde-format
+#| msgid "Edit Snippet..."
+msgid "Edit Snippet…"
 msgstr "Kırpma Düzenle..."
 
 #: quicktext/quicktexttreewidget.cpp:41
@@ -142,13 +150,15 @@ msgid "Remove Snippet"
 msgstr "Kırpma Kaldır"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, kde-format
-msgid "Add Group..."
+#, fuzzy, kde-format
+#| msgid "Add Group..."
+msgid "Add Group…"
 msgstr "Grup Ekle..."
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, kde-format
-msgid "Rename Group..."
+#, fuzzy, kde-format
+#| msgid "Rename Group..."
+msgid "Rename Group…"
 msgstr "Grubu Yeniden Adlandır..."
 
 #: quicktext/quicktexttreewidget.cpp:48
@@ -204,8 +214,9 @@ msgid "General"
 msgstr "Genel"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, kde-format
-msgid "Share Mail Text..."
+#, fuzzy, kde-format
+#| msgid "Share Mail Text..."
+msgid "Share Mail Text…"
 msgstr "E-posta Metni Paylaş..."
 
 #: zoomtext/zoomlabel.cpp:20
@@ -215,8 +226,14 @@ msgstr "Yakınlaştırma: %​%1"
 
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
-msgid "Zoom..."
-msgstr "Yakınlaştır..."
+msgid "Zoom…"
+msgstr ""
+
+#~ msgid "Insert Special Character..."
+#~ msgstr "Özel Karakter Ekle..."
+
+#~ msgid "Zoom..."
+#~ msgstr "Yakınlaştır..."
 
 #~ msgid "Reset"
 #~ msgstr "Sıfırla"

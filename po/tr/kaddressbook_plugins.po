@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-03-08 19:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -19,8 +19,9 @@ msgstr ""
 "X-Generator: Lokalize 24.02.0\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, kde-format
-msgid "Check Gravatar..."
+#, fuzzy, kde-format
+#| msgid "Check Gravatar..."
+msgid "Check Gravatar…"
 msgstr "Gravatar’ı Denetle..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
@@ -81,8 +82,9 @@ msgid "No Gravatar Found."
 msgstr "Gravatar Bulunamadı."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, kde-format
-msgid "Merge Contacts..."
+#, fuzzy, kde-format
+#| msgid "Merge Contacts..."
+msgid "Merge Contacts…"
 msgstr "Kişileri Birleştir..."
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
@@ -140,8 +142,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Birleştirmek için Kişileri Ara ve Yinelenmiş Kişileri Seç"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, kde-format
-msgid "Search in result..."
+#, fuzzy, kde-format
+#| msgid "Search in result..."
+msgid "Search in result…"
 msgstr "Sonuçta ara..."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
@@ -256,8 +259,9 @@ msgid "(Undefined)"
 msgstr "(Tanımlanmamış)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, kde-format
-msgid "Search Duplicate Contacts..."
+#, fuzzy, kde-format
+#| msgid "Search Duplicate Contacts..."
+msgid "Search Duplicate Contacts…"
 msgstr "Yinelenmiş Kişileri Bul..."
 
 #: sendmail/mailsenderjob.cpp:127
@@ -266,8 +270,9 @@ msgid "No emails found in selected contacts."
 msgstr "Seçili kişilerde e-posta bulunamadı."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, kde-format
-msgid "Send an email..."
+#, fuzzy, kde-format
+#| msgid "Send an email..."
+msgid "Send an email…"
 msgstr "Bir E-posta Gönder..."
 
 #: sendvcards/sendvcardsjob.cpp:96
@@ -281,8 +286,9 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Geçici dosya '%1' oluşturulamıyor"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, kde-format
-msgid "Send vCards..."
+#, fuzzy, kde-format
+#| msgid "Send vCards..."
+msgid "Send vCards…"
 msgstr "vCard Gönder..."
 
 #~ msgid "Use Libravatar"

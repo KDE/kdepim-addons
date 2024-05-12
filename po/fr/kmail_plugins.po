@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-25 14:51+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -29,9 +29,10 @@ msgid "Akonadi Database Tool"
 msgstr "Outil pour base de données pour Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, kde-format
-msgid "&Akonadi Vacuum..."
-msgstr "Vidage de &Akonadi..."
+#, fuzzy, kde-format
+#| msgid "Akonadi Vacuum"
+msgid "&Akonadi Vacuum…"
+msgstr "Vidage de Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -51,9 +52,10 @@ msgid "Vacuum"
 msgstr "Vidage"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, kde-format
-msgid "&Akonadi Fsck..."
-msgstr "Vérification « fsck » pour &Akonadi..."
+#, fuzzy, kde-format
+#| msgid "Akonadi Fsck"
+msgid "&Akonadi Fsck…"
+msgstr "Vérification « fsck » d'Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -80,19 +82,24 @@ msgid "Finished."
 msgstr "Terminé."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, kde-format
-msgid "Start..."
+#, fuzzy, kde-format
+#| msgid "Start..."
+msgid "Start…"
 msgstr "Démarrer..."
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Spam Wizard..."
-msgstr "&Assistant anti indésirables…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Spam Wizard"
+msgid "&Anti-Spam Wizard…"
+msgstr "Assistant pour la protection contre les indésirables"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Virus Wizard..."
-msgstr "&Assistant anti virus…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Virus Wizard"
+msgid "&Anti-Virus Wizard…"
+msgstr "Assistant pour la protection contre les virus"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -172,8 +179,9 @@ msgid "Ham"
 msgstr "Courriel normal"
 
 #: common/antispamwizard.cpp:456
-#, kde-format
-msgid "Scanning for %1..."
+#, fuzzy, kde-format
+#| msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr "Analyse de %1…"
 
 #: common/antispamwizard.cpp:500
@@ -439,8 +447,8 @@ msgstr "Pièce jointe :"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
-msgstr "&Ajouter…"
+msgid "A&dd…"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -457,11 +465,20 @@ msgstr "Mod&ifier…"
 msgid "Select attachment:"
 msgstr "Sélectionner une pièce jointe :"
 
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Vidage de Akonadi"
+#~ msgid "&Akonadi Vacuum..."
+#~ msgstr "Vidage de &Akonadi..."
 
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Vérification « fsck » d'Akonadi"
+#~ msgid "&Akonadi Fsck..."
+#~ msgstr "Vérification « fsck » pour &Akonadi..."
+
+#~ msgid "&Anti-Spam Wizard..."
+#~ msgstr "&Assistant anti indésirables…"
+
+#~ msgid "&Anti-Virus Wizard..."
+#~ msgstr "&Assistant anti virus…"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Ajouter…"
 
 #~ msgid "&Log Activities..."
 #~ msgstr "&Journaliser les activités…"

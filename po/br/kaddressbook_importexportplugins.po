@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2005-03-04 00:29+0100\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: Breton <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Export CSV List..."
-msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "Ezporzh ar roll CSV ..."
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -28,7 +28,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
-msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "Enporzh ur roll CSV ..."
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -353,14 +353,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Apply Template..."
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr "Arloañ ar patrom ..."
 
 #: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
 #| msgid "Save Template..."
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr "Enrollañ ar patrom ..."
 
 #: csv/import/csvimportdialog.cpp:470
@@ -468,7 +468,7 @@ msgstr "N'eo ket ur restr karned chomlec'hioù GMX %1."
 #: gmx/gmximportexportplugininterface.cpp:40
 #, fuzzy, kde-format
 #| msgid "Import All..."
-msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "Enporzh an holl re ..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -480,7 +480,7 @@ msgstr "N'eo ket ur restr karned chomlec'hioù GMX %1."
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
 #| msgid "Export GMX Address Book..."
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "Ezporzh ar c'harned chomlec'hioù GMX ..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -504,7 +504,7 @@ msgstr "N'eo ket ur restr karned chomlec'hioù GMX %1."
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, fuzzy, kde-format
 #| msgid "Import Contacts?"
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "Enporzh an darempredoù ?"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -516,7 +516,7 @@ msgstr "Enporzh an darempredoù ?"
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Import LDIF Addressbook..."
-msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "Enporzh ar c'harned chomlec'hioù LDIF ..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -528,7 +528,7 @@ msgstr "Enporzh an darempredoù ?"
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Export LDIF Addressbook..."
-msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "Ezporzh ar c'harned chomlec'hioù LDIF ..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -709,13 +709,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Import All..."
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "Enporzh an holl re ..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Importing contacts"
+msgid "Import vCard…"
+msgstr "Emaon oc'h enporzh ar zarempredoù"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
@@ -732,13 +733,14 @@ msgstr "Enporzh an darempredoù ?"
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export CSV List..."
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "Ezporzh ar roll CSV ..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, kde-format
-msgid "Export vCard 3.0..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Export CSV List..."
+msgid "Export vCard 3.0…"
+msgstr "Ezporzh ar roll CSV ..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -746,9 +748,10 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr ""
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, kde-format
-msgid "Export vCard 2.1..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Export CSV List..."
+msgid "Export vCard 2.1…"
+msgstr "Ezporzh ar roll CSV ..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
@@ -803,7 +806,7 @@ msgstr ""
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "Enporzh ur roll CSV ..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:37+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -449,8 +449,9 @@ msgid "Open Attachment"
 msgstr "打开附件"
 
 #: text_calendar.cpp:1342
-#, kde-format
-msgid "Save Attachment As..."
+#, fuzzy, kde-format
+#| msgid "Save Attachment As..."
+msgid "Save Attachment As…"
 msgstr "附件另存为..."
 
 #: text_calendar.cpp:1358
@@ -469,8 +470,9 @@ msgid "Accept counter proposal"
 msgstr "接受反对意见"
 
 #: text_calendar.cpp:1364
-#, kde-format
-msgid "Create a counter proposal..."
+#, fuzzy, kde-format
+#| msgid "Create a counter proposal..."
+msgid "Create a counter proposal…"
 msgstr "创建反对意见..."
 
 #: text_calendar.cpp:1366
@@ -494,8 +496,9 @@ msgid "Decline counter proposal"
 msgstr "拒绝反对意见"
 
 #: text_calendar.cpp:1374
-#, kde-format
-msgid "Check my calendar..."
+#, fuzzy, kde-format
+#| msgid "Check my calendar..."
+msgid "Check my calendar…"
 msgstr "检查我的日历..."
 
 #: text_calendar.cpp:1376

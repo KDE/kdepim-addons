@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:37+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2012-06-20 10:14+0700\n"
 "Last-Translator: Sophea <sophea@khmeros.info>\n"
 "Language-Team: Khmer <>\n"
@@ -472,8 +472,9 @@ msgid "Open Attachment"
 msgstr "បើក​ឯកសារ​ភ្ជាប់"
 
 #: text_calendar.cpp:1342
-#, kde-format
-msgid "Save Attachment As..."
+#, fuzzy, kde-format
+#| msgid "Save Attachment As..."
+msgid "Save Attachment As…"
 msgstr "រក្សា​ឯក​សា​រ​ភ្ជាប់​ទុក​ជា..."
 
 #: text_calendar.cpp:1358
@@ -492,8 +493,9 @@ msgid "Accept counter proposal"
 msgstr "ទទួល​យក​សំណើ​របស់​កម្មវិធី​រាប់"
 
 #: text_calendar.cpp:1364
-#, kde-format
-msgid "Create a counter proposal..."
+#, fuzzy, kde-format
+#| msgid "Create a counter proposal..."
+msgid "Create a counter proposal…"
 msgstr "បង្កើត​សំណើ​កម្ម​វិធី​រាប់..."
 
 #: text_calendar.cpp:1366
@@ -517,8 +519,9 @@ msgid "Decline counter proposal"
 msgstr "បដិសេធ​សំណើ​របស់​កម្មវិធី​រាប់"
 
 #: text_calendar.cpp:1374
-#, kde-format
-msgid "Check my calendar..."
+#, fuzzy, kde-format
+#| msgid "Check my calendar..."
+msgid "Check my calendar…"
 msgstr "ពិនិត្យ​ប្រតិទិន​របស់​ខ្ញុំ..."
 
 #: text_calendar.cpp:1376

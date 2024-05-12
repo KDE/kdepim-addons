@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:37+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-02-09 01:12+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -460,8 +460,9 @@ msgid "Open Attachment"
 msgstr "Anhang öffnen"
 
 #: text_calendar.cpp:1342
-#, kde-format
-msgid "Save Attachment As..."
+#, fuzzy, kde-format
+#| msgid "Save Attachment As..."
+msgid "Save Attachment As…"
 msgstr "Anhang speichern &unter ..."
 
 #: text_calendar.cpp:1358
@@ -480,8 +481,9 @@ msgid "Accept counter proposal"
 msgstr "Gegenvorschlag annehmen"
 
 #: text_calendar.cpp:1364
-#, kde-format
-msgid "Create a counter proposal..."
+#, fuzzy, kde-format
+#| msgid "Create a counter proposal..."
+msgid "Create a counter proposal…"
 msgstr "Gegenvorschlag machen ..."
 
 #: text_calendar.cpp:1366
@@ -505,8 +507,9 @@ msgid "Decline counter proposal"
 msgstr "Gegenvorschlag ablehnen"
 
 #: text_calendar.cpp:1374
-#, kde-format
-msgid "Check my calendar..."
+#, fuzzy, kde-format
+#| msgid "Check my calendar..."
+msgid "Check my calendar…"
 msgstr "Meinen Kalender überprüfen ..."
 
 #: text_calendar.cpp:1376

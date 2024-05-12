@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -126,7 +126,9 @@ msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
 msgstr "Ово је опенПГП кључ, којим се поруке могу потписивати и шифровати."
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
+#, fuzzy
+#| msgid "Loading key details..."
+msgid "Loading key details…"
 msgstr "Учитавам детаље кључа..."
 
 #: templates/pgpkeymessagepart.html:28
@@ -163,9 +165,14 @@ msgid "Open in Kleopatra"
 msgstr "Отвори Клеопатром"
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
-msgstr "Прикажи детаље кључа..."
+#, fuzzy
+#| msgid "Show key details"
+msgid "Show key details …"
+msgstr "Прикажи детаље кључа"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Увези кључ"
+
+#~ msgid "Show key details ..."
+#~ msgstr "Прикажи детаље кључа..."

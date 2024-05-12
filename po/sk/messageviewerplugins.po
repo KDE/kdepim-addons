@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2017-08-02 21:42+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -26,8 +26,9 @@ msgid "Expand URL"
 msgstr "Rozbaliť URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, kde-format
-msgid "Translate..."
+#, fuzzy, kde-format
+#| msgid "Translate..."
+msgid "Translate…"
 msgstr "Preložiť..."
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
@@ -39,7 +40,7 @@ msgstr "&Uložiť"
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, fuzzy, kde-format
 #| msgid "Open &editor..."
-msgid "Open &Editor..."
+msgid "Open &Editor…"
 msgstr "&Otvoriť editor..."
 
 #: createeventplugin/eventedit.cpp:56
@@ -93,9 +94,10 @@ msgid "Close the widget for creating new events."
 msgstr "Zatvoriť widget na vytvorenie novej udalosti"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, kde-format
-msgid "Create Event..."
-msgstr "Vytvoriť udalosť..."
+#, fuzzy, kde-format
+#| msgid "Create Event"
+msgid "Create Event…"
+msgstr "Vytvoriť udalosť"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -227,8 +229,9 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Nastaviť plugin \"Externý skript\""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, kde-format
-msgid "Add Script..."
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Script…"
 msgstr "Pridať skript..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
@@ -237,8 +240,9 @@ msgid "Remove Script"
 msgstr "Odstrániť skript"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, kde-format
-msgid "Modify Script..."
+#, fuzzy, kde-format
+#| msgid "Modify Script..."
+msgid "Modify Script…"
 msgstr "Zmeniť skript..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
@@ -275,7 +279,7 @@ msgstr "Popis:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
 #, kde-format
-msgid "Add command arguments..."
+msgid "Add command arguments…"
 msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
@@ -285,7 +289,7 @@ msgstr "Príkazový riadok:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
 #, kde-format
-msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
@@ -331,6 +335,9 @@ msgstr "Externý skript:"
 #, kde-format
 msgid "Configure"
 msgstr ""
+
+#~ msgid "Create Event..."
+#~ msgstr "Vytvoriť udalosť..."
 
 #~ msgid "Todo:"
 #~ msgstr "Úlohy:"

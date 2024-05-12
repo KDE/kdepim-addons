@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 23:34+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -37,12 +37,13 @@ msgstr "URL"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "추가..."
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "수정..."
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -72,9 +73,10 @@ msgid "Remove List"
 msgstr "목록 삭제"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "찾기..."
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgid "Search…"
+msgstr "찾기:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
@@ -109,6 +111,12 @@ msgstr "광고 차단 목록 표시"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "광고 차단 활성화"
+
+#~ msgid "Add..."
+#~ msgstr "추가..."
+
+#~ msgid "Search..."
+#~ msgstr "찾기..."
 
 #~ msgid "Remove"
 #~ msgstr "삭제"
@@ -345,9 +353,6 @@ msgstr "광고 차단 활성화"
 
 #~ msgid "Export filters..."
 #~ msgstr "필터 내보내기..."
-
-#~ msgid "Search:"
-#~ msgstr "찾기:"
 
 #~ msgid "Edit"
 #~ msgstr "편집"

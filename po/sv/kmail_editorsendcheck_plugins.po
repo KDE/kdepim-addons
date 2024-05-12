@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2021-11-06 14:36+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -169,8 +169,8 @@ msgstr "Förkastade domännamn"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
-msgid "A&dd..."
-msgstr "Lä&gg till..."
+msgid "A&dd…"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -180,8 +180,9 @@ msgstr "Ta &bort"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, kde-format
-msgid "Mod&ify..."
+#, fuzzy, kde-format
+#| msgid "Mod&ify..."
+msgid "Mod&ify…"
 msgstr "&Ändra..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
@@ -249,6 +250,9 @@ msgstr "Ändra värde"
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Potentiellt ogiltiga brev visas i rött:"
+
+#~ msgid "A&dd..."
+#~ msgstr "Lä&gg till..."
 
 #~ msgid "Enable"
 #~ msgstr "Aktivera"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-30 10:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -20,14 +20,15 @@ msgstr ""
 "X-Generator: Lokalize 23.08.1\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, kde-format
-msgid "Click on button for selecting contacts..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting contacts..."
+msgid "Click on button for selecting contacts…"
 msgstr "Щракнете върху бутона за избор на контакти..."
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
-msgid "..."
-msgstr "..."
+msgid "…"
+msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
@@ -53,9 +54,10 @@ msgid "Error during creating folder: %1"
 msgstr "Грешка при създаването на папка: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, kde-format
-msgid "Create Folder..."
-msgstr "Създаване на директория..."
+#, fuzzy, kde-format
+#| msgid "Create Folder"
+msgid "Create Folder…"
+msgstr "Създаване на папка"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -69,13 +71,15 @@ msgid "Unable to load folder list"
 msgstr "Не може да се извлече списък с папки"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, kde-format
-msgid "Loading in progress..."
+#, fuzzy, kde-format
+#| msgid "Loading in progress..."
+msgid "Loading in progress…"
 msgstr "Извършва се извличане..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Търсене..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
@@ -121,6 +125,13 @@ msgid "Select IMAP folder"
 msgstr "Избиране на IMAP папка"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, kde-format
-msgid "Click on button for selecting folder..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting folder..."
+msgid "Click on button for selecting folder…"
 msgstr "Щракнете върху бутона за избиране на папки..."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Create Folder..."
+#~ msgstr "Създаване на директория..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2010-09-24 16:26+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
-msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -31,7 +31,7 @@ msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:42
 #, kde-format
-msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -338,13 +338,13 @@ msgstr ""
 #: csv/import/csvimportdialog.cpp:448
 #, kde-format
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr ""
 
 #: csv/import/csvimportdialog.cpp:449
 #, kde-format
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr ""
 
 #: csv/import/csvimportdialog.cpp:470
@@ -437,7 +437,7 @@ msgstr ""
 
 #: gmx/gmximportexportplugininterface.cpp:40
 #, kde-format
-msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr ""
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -447,7 +447,7 @@ msgstr ""
 
 #: gmx/gmximportexportplugininterface.cpp:46
 #, kde-format
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr ""
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -469,7 +469,7 @@ msgstr ""
 
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, kde-format
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr ""
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -479,7 +479,7 @@ msgstr ""
 
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, kde-format
-msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr ""
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -489,7 +489,7 @@ msgstr ""
 
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, kde-format
-msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr ""
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -659,13 +659,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "&Import"
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "आयात करू (&I)"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "&Import"
+msgid "Import vCard…"
+msgstr "आयात करू (&I)"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -680,13 +681,14 @@ msgstr ""
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "&Import"
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "आयात करू (&I)"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, kde-format
-msgid "Export vCard 3.0..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "&Import"
+msgid "Export vCard 3.0…"
+msgstr "आयात करू (&I)"
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -694,9 +696,10 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr ""
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, kde-format
-msgid "Export vCard 2.1..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "&Import"
+msgid "Export vCard 2.1…"
+msgstr "आयात करू (&I)"
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
@@ -749,7 +752,7 @@ msgstr ""
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
 #| msgid "&Import"
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "आयात करू (&I)"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -35,8 +35,9 @@ msgstr "Automatski ispravljaj izabrani tekst"
 
 # rewrite-msgid: /Email//
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, kde-format
-msgid "Insert Email..."
+#, fuzzy, kde-format
+#| msgid "Insert Email..."
+msgid "Insert Email…"
 msgstr "Umetni drugu poruku..."
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
@@ -45,8 +46,9 @@ msgid "Select Short URL server:"
 msgstr "Server skraćenih URL‑ova:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, kde-format
-msgid "Insert Short URL..."
+#, fuzzy, kde-format
+#| msgid "Insert Short URL..."
+msgid "Insert Short URL…"
 msgstr "Umetni skraćeni URL..."
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
@@ -74,10 +76,12 @@ msgstr ""
 "Server prijavljuje grešku:\n"
 "'%1'"
 
+# >> @title:window
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
-msgid "Insert Special Character..."
-msgstr "Umetni specijalni znak..."
+#, fuzzy, kde-format
+#| msgid "Insert Special Character"
+msgid "Insert Special Character…"
+msgstr "Umetanje specijalnog znaka"
 
 # >> @title:window
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
@@ -105,12 +109,12 @@ msgstr ""
 
 #: quicktext/quicktextconfiguredialog.cpp:38
 #, kde-format
-msgid "Import..."
+msgid "Import…"
 msgstr ""
 
 #: quicktext/quicktextconfiguredialog.cpp:41
 #, kde-format
-msgid "Export..."
+msgid "Export…"
 msgstr ""
 
 #: quicktext/quicktextmanager.cpp:78
@@ -131,12 +135,12 @@ msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:37
 #, kde-format
-msgid "Add Snippet..."
+msgid "Add Snippet…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:39
 #, kde-format
-msgid "Edit Snippet..."
+msgid "Edit Snippet…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:41
@@ -146,12 +150,12 @@ msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
-msgid "Add Group..."
+msgid "Add Group…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
-msgid "Rename Group..."
+msgid "Rename Group…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:48
@@ -204,7 +208,7 @@ msgstr ""
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
-msgid "Share Mail Text..."
+msgid "Share Mail Text…"
 msgstr ""
 
 #: zoomtext/zoomlabel.cpp:20
@@ -212,8 +216,14 @@ msgstr ""
 msgid "Zoom: %1%"
 msgstr ""
 
-# >> @title:menu
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
-msgid "Zoom..."
-msgstr "Uveličanje..."
+msgid "Zoom…"
+msgstr ""
+
+#~ msgid "Insert Special Character..."
+#~ msgstr "Umetni specijalni znak..."
+
+# >> @title:menu
+#~ msgid "Zoom..."
+#~ msgstr "Uveličanje..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-11-11 23:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -125,7 +125,9 @@ msgstr ""
 "anahtarıdır."
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
+#, fuzzy
+#| msgid "Loading key details..."
+msgid "Loading key details…"
 msgstr "Anahtar ayrıntıları yükleniyor..."
 
 #: templates/pgpkeymessagepart.html:28
@@ -162,12 +164,17 @@ msgid "Open in Kleopatra"
 msgstr "Kleopatra içinde aç"
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
-msgstr "Anahtar ayrıntılarını göster ..."
+#, fuzzy
+#| msgid "Show key details"
+msgid "Show key details …"
+msgstr "Anahtar ayrıntılarını göster"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Anahtar içe aktar"
+
+#~ msgid "Show key details ..."
+#~ msgstr "Anahtar ayrıntılarını göster ..."
 
 #~ msgid "Unknown identity"
 #~ msgstr "Bilinmeyen kimlik"

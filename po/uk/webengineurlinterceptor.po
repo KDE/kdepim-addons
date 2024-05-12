@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-07 15:01+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -40,12 +40,13 @@ msgstr "Адреса"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
-msgstr "Додати…"
+msgid "Add…"
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, kde-format
-msgid "Modify..."
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgid "Modify…"
 msgstr "Змінити…"
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -75,9 +76,10 @@ msgid "Remove List"
 msgstr "Вилучити список"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Шукати…"
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgid "Search…"
+msgstr "Пошук:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
@@ -112,6 +114,12 @@ msgstr "Показ списку блокування реклами"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Увімкнено блокування реклами"
+
+#~ msgid "Add..."
+#~ msgstr "Додати…"
+
+#~ msgid "Search..."
+#~ msgstr "Шукати…"
 
 #~ msgid "Remove"
 #~ msgstr "Вилучення"
@@ -353,9 +361,6 @@ msgstr "Увімкнено блокування реклами"
 
 #~ msgid "Export filters..."
 #~ msgstr "Експортувати фільтри…"
-
-#~ msgid "Search:"
-#~ msgstr "Пошук:"
 
 #~ msgid "Edit"
 #~ msgstr "Змінити"

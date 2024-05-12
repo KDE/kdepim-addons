@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2019-12-29 15:43+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -18,14 +18,15 @@ msgstr ""
 "X-Generator: Lokalize 19.07.70\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, kde-format
-msgid "Click on button for selecting contacts..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting contacts..."
+msgid "Click on button for selecting contacts…"
 msgstr "Click on button for selecting contacts..."
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
-msgid "..."
-msgstr "..."
+msgid "…"
+msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
@@ -52,9 +53,10 @@ msgid "Error during creating folder: %1"
 msgstr "Error during creating folder: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, kde-format
-msgid "Create Folder..."
-msgstr "Create Folder..."
+#, fuzzy, kde-format
+#| msgid "Create Folder"
+msgid "Create Folder…"
+msgstr "Create Folder"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -68,13 +70,15 @@ msgid "Unable to load folder list"
 msgstr "Unable to load folder list"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, kde-format
-msgid "Loading in progress..."
+#, fuzzy, kde-format
+#| msgid "Loading in progress..."
+msgid "Loading in progress…"
 msgstr "Loading in progress..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, kde-format
-msgid "Search..."
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
 msgstr "Search..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
@@ -121,9 +125,16 @@ msgid "Select IMAP folder"
 msgstr "Select IMAP folder"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, kde-format
-msgid "Click on button for selecting folder..."
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting folder..."
+msgid "Click on button for selecting folder…"
 msgstr "Click on button for selecting folder..."
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Create Folder..."
+#~ msgstr "Create Folder..."
 
 #~ msgid "Create Regular Expression"
 #~ msgstr "Create Regular Expression"

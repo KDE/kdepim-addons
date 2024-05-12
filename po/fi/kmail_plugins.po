@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-11-15 18:25+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -25,9 +25,10 @@ msgid "Akonadi Database Tool"
 msgstr "Akonadi-tietokantatyökalu"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, kde-format
-msgid "&Akonadi Vacuum..."
-msgstr "&Akonadin siivous…"
+#, fuzzy, kde-format
+#| msgid "Akonadi Vacuum"
+msgid "&Akonadi Vacuum…"
+msgstr "Akonadin siivous"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -47,9 +48,10 @@ msgid "Vacuum"
 msgstr "Siivoa"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, kde-format
-msgid "&Akonadi Fsck..."
-msgstr "Akonadin fs&ck…"
+#, fuzzy, kde-format
+#| msgid "Akonadi Fsck"
+msgid "&Akonadi Fsck…"
+msgstr "Akonadin fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -74,19 +76,24 @@ msgid "Finished."
 msgstr "Valmis."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, kde-format
-msgid "Start..."
+#, fuzzy, kde-format
+#| msgid "Start..."
+msgid "Start…"
 msgstr "Aloita…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Spam Wizard..."
-msgstr "Opastettu &roskapostin suodatus…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Spam Wizard"
+msgid "&Anti-Spam Wizard…"
+msgstr "Opastettu roskapostin suodatus"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Virus Wizard..."
-msgstr "Opastettu &virusten suodatus…"
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Virus Wizard"
+msgid "&Anti-Virus Wizard…"
+msgstr "Opastettu virusten suodatus"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -165,8 +172,9 @@ msgid "Ham"
 msgstr "Ei-roskaposti"
 
 #: common/antispamwizard.cpp:456
-#, kde-format
-msgid "Scanning for %1..."
+#, fuzzy, kde-format
+#| msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr "Etsitään %1…"
 
 #: common/antispamwizard.cpp:500
@@ -424,8 +432,8 @@ msgstr "Liite:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
-msgstr "&Lisää…"
+msgid "A&dd…"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -442,11 +450,20 @@ msgstr "&Muuta…"
 msgid "Select attachment:"
 msgstr "Valitse liite:"
 
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Akonadin siivous"
+#~ msgid "&Akonadi Vacuum..."
+#~ msgstr "&Akonadin siivous…"
 
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Akonadin fsck"
+#~ msgid "&Akonadi Fsck..."
+#~ msgstr "Akonadin fs&ck…"
+
+#~ msgid "&Anti-Spam Wizard..."
+#~ msgstr "Opastettu &roskapostin suodatus…"
+
+#~ msgid "&Anti-Virus Wizard..."
+#~ msgstr "Opastettu &virusten suodatus…"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Lisää…"
 
 #~ msgid "&Log Activities..."
 #~ msgstr "Kirjaa toiminnot &lokiin…"

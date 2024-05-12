@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2005-09-02 17:30+0300\n"
 "Last-Translator: Donatas Glodenis <dgvirtual@akl.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr "Pridėtos verslo kortelės"
 #: text_vcard.cpp:216
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
-msgid "Save Business Card As..."
+msgid "Save Business Card As…"
 msgstr "Pridėtos verslo kortelės"
 
 #: text_vcard.cpp:233

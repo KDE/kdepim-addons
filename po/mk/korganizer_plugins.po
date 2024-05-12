@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2007-02-28 14:24+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -769,13 +769,14 @@ msgstr "Избриши %1"
 #: plugins/picoftheday/element.cpp:326
 #, fuzzy, kde-format
 #| msgid "Change..."
-msgid "Loading..."
+msgid "Loading…"
 msgstr "Измени..."
 
-#: plugins/picoftheday/element.cpp:332
-#, kde-format
-msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
-msgstr ""
+#: plugins/picoftheday/element.cpp:331
+#, fuzzy, kde-format
+#| msgid "Configure &Date && Time..."
+msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
+msgstr "Конфигурирај &датум и време..."
 
 #: plugins/picoftheday/picoftheday.cpp:48
 #, kde-format

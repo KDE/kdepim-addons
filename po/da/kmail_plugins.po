@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2020-07-31 19:16+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
-msgid "&Akonadi Vacuum..."
+msgid "&Akonadi Vacuum…"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
@@ -47,7 +47,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
-msgid "&Akonadi Fsck..."
+msgid "&Akonadi Fsck…"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
@@ -74,18 +74,20 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
-msgid "Start..."
+msgid "Start…"
 msgstr ""
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Spam Wizard..."
-msgstr "&Anti-spam-guide..."
+#, fuzzy, kde-format
+#| msgid "Anti-Spam Wizard"
+msgid "&Anti-Spam Wizard…"
+msgstr "Anti-spam-guide"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Virus Wizard..."
-msgstr "&Anti-virus guide..."
+#, fuzzy, kde-format
+#| msgid "Anti-Virus Wizard"
+msgid "&Anti-Virus Wizard…"
+msgstr "Anti-virus guide"
 
 #: common/antispamwizard.cpp:88
 #, fuzzy, kde-format
@@ -166,8 +168,9 @@ msgid "Ham"
 msgstr "Ikke spam"
 
 #: common/antispamwizard.cpp:456
-#, kde-format
-msgid "Scanning for %1..."
+#, fuzzy, kde-format
+#| msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr "Scanner efter %1..."
 
 #: common/antispamwizard.cpp:500
@@ -424,8 +427,8 @@ msgstr "Bilag:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
-msgstr "&Tilføj..."
+msgid "A&dd…"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -441,6 +444,15 @@ msgstr "Æn&dr..."
 #, kde-format
 msgid "Select attachment:"
 msgstr "Vælg bilag:"
+
+#~ msgid "&Anti-Spam Wizard..."
+#~ msgstr "&Anti-spam-guide..."
+
+#~ msgid "&Anti-Virus Wizard..."
+#~ msgstr "&Anti-virus guide..."
+
+#~ msgid "A&dd..."
+#~ msgstr "&Tilføj..."
 
 #~ msgid "&Log Activities..."
 #~ msgstr "&Log aktiviteter..."

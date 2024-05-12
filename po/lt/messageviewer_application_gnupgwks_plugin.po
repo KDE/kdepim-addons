@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2018-08-16 09:12+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -115,7 +115,7 @@ msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
 msgstr ""
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
+msgid "Loading key details…"
 msgstr ""
 
 #: templates/pgpkeymessagepart.html:28
@@ -150,7 +150,7 @@ msgid "Open in Kleopatra"
 msgstr ""
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
+msgid "Show key details …"
 msgstr ""
 
 #: templates/pgpkeymessagepart.html:54

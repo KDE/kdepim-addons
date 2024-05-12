@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2002-04-26 01:03GMT+0900\n"
 "Last-Translator: Nguyen Hung Vu <vuhung@feduDOTuecDOTacDOTjp>\n"
 "Language-Team: VIETNAMESE <vi@i18n.kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
-msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "&Xuất ra danh sách"
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -29,7 +29,7 @@ msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
-msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "Danh sách &nhập vào"
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -334,13 +334,13 @@ msgstr ""
 #: csv/import/csvimportdialog.cpp:448
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr "&Xuất ra danh sách"
 
 #: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr "&Xuất ra danh sách"
 
 #: csv/import/csvimportdialog.cpp:470
@@ -433,7 +433,7 @@ msgstr "KAđressBook"
 
 #: gmx/gmximportexportplugininterface.cpp:40
 #, fuzzy, kde-format
-msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "Danh sách &nhập vào"
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -443,7 +443,7 @@ msgstr "KAđressBook"
 
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "Nhập vào tự sổ danh sách của kde2"
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -465,7 +465,7 @@ msgstr "KAđressBook"
 
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, fuzzy, kde-format
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "Điện thoại di động"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -475,7 +475,7 @@ msgstr "Tất cả cá c trường  liên hệ"
 
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
-msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "Nhập vào tự sổ danh sách của kde2"
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -485,7 +485,7 @@ msgstr "Tất cả cá c trường  liên hệ"
 
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
-msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "Nhập vào tự sổ danh sách của kde2"
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -651,12 +651,12 @@ msgstr "Xin lỗi, contact không tìm thấy trong sổ địa chỉ"
 #: vcards/engine/vcardviewerdialog.cpp:61
 #, fuzzy, kde-format
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "Danh sách &nhập vào"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
 #, fuzzy, kde-format
-msgid "Import vCard..."
+msgid "Import vCard…"
 msgstr "Danh sách &nhập vào"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
@@ -671,12 +671,12 @@ msgstr "Danh sách &nhập vào"
 
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "Danh sách &nhập vào"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, fuzzy, kde-format
-msgid "Export vCard 3.0..."
+msgid "Export vCard 3.0…"
 msgstr "Danh sách &nhập vào"
 
 #: vcards/vcardimportexportplugininterface.cpp:59
@@ -686,7 +686,7 @@ msgstr "Danh sách &nhập vào"
 
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, fuzzy, kde-format
-msgid "Export vCard 2.1..."
+msgid "Export vCard 2.1…"
 msgstr "Danh sách &nhập vào"
 
 #: vcards/vcardimportexportplugininterface.cpp:65
@@ -739,7 +739,7 @@ msgstr "Điện thoại di động"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "Danh sách &nhập vào"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
@@ -751,3 +751,7 @@ msgstr "Tất cả cá c trường  liên hệ"
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Import vCard..."
+#~ msgstr "Danh sách &nhập vào"

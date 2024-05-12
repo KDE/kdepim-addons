@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-28 19:43+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -20,8 +20,9 @@ msgstr ""
 "X-Generator: Lokalize 24.02.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, kde-format
-msgid "Check Gravatar..."
+#, fuzzy, kde-format
+#| msgid "Check Gravatar..."
+msgid "Check Gravatar…"
 msgstr "Gravatar überprüfen ..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
@@ -82,8 +83,9 @@ msgid "No Gravatar Found."
 msgstr "Es wurde kein Gravatar gefunden."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, kde-format
-msgid "Merge Contacts..."
+#, fuzzy, kde-format
+#| msgid "Merge Contacts..."
+msgid "Merge Contacts…"
 msgstr "Kontakte zusammenführen ..."
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
@@ -143,8 +145,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Doppelte Kontakte zum Zusammenführen suchen und auswählen"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, kde-format
-msgid "Search in result..."
+#, fuzzy, kde-format
+#| msgid "Search in result..."
+msgid "Search in result…"
 msgstr "In Ergebnissen suchen ..."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
@@ -259,8 +262,9 @@ msgid "(Undefined)"
 msgstr "(Nicht definiert)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, kde-format
-msgid "Search Duplicate Contacts..."
+#, fuzzy, kde-format
+#| msgid "Search Duplicate Contacts..."
+msgid "Search Duplicate Contacts…"
 msgstr "Doppelte Kontakte suchen ..."
 
 #: sendmail/mailsenderjob.cpp:127
@@ -269,8 +273,9 @@ msgid "No emails found in selected contacts."
 msgstr "Es wurden keine E-Mails in den ausgewählten Kontakten gefunden."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, kde-format
-msgid "Send an email..."
+#, fuzzy, kde-format
+#| msgid "Send an email..."
+msgid "Send an email…"
 msgstr "Eine E-Mail senden ..."
 
 #: sendvcards/sendvcardsjob.cpp:96
@@ -284,8 +289,9 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Die temporäre Datei '%1 kann nicht erstellt werden"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, kde-format
-msgid "Send vCards..."
+#, fuzzy, kde-format
+#| msgid "Send vCards..."
+msgid "Send vCards…"
 msgstr "vCard versenden ..."
 
 #~ msgid "Use Libravatar"

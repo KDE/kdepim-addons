@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2016-06-02 18:36+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -16,8 +16,9 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, kde-format
-msgid "Check Gravatar..."
+#, fuzzy, kde-format
+#| msgid "Check Gravatar..."
+msgid "Check Gravatar…"
 msgstr "Skontrolovať Gravatar..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
@@ -79,8 +80,9 @@ msgid "No Gravatar Found."
 msgstr "Nenašiel sa gravatar."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, kde-format
-msgid "Merge Contacts..."
+#, fuzzy, kde-format
+#| msgid "Merge Contacts..."
+msgid "Merge Contacts…"
 msgstr "Zlúčiť kontakty..."
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
@@ -143,7 +145,7 @@ msgstr "Vyhľadať a vybrať kontakty na zlúčenie"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, fuzzy, kde-format
 #| msgid "Search is impossible."
-msgid "Search in result..."
+msgid "Search in result…"
 msgstr "Hľadanie nie je možné."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
@@ -259,8 +261,9 @@ msgid "(Undefined)"
 msgstr "(Nedefinované)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, kde-format
-msgid "Search Duplicate Contacts..."
+#, fuzzy, kde-format
+#| msgid "Search Duplicate Contacts..."
+msgid "Search Duplicate Contacts…"
 msgstr "Hľadať duplicitné kontakty..."
 
 #: sendmail/mailsenderjob.cpp:127
@@ -269,8 +272,9 @@ msgid "No emails found in selected contacts."
 msgstr "Nenašiel sa žiadny e-mail vo vybraných kontaktoch."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, kde-format
-msgid "Send an email..."
+#, fuzzy, kde-format
+#| msgid "Send an email..."
+msgid "Send an email…"
 msgstr "Poslať e-mail..."
 
 #: sendvcards/sendvcardsjob.cpp:96
@@ -284,8 +288,9 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Dočasný súbor '%1' nie je možné vytvoriť"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, kde-format
-msgid "Send vCards..."
+#, fuzzy, kde-format
+#| msgid "Send vCards..."
+msgid "Send vCards…"
 msgstr "Poslať vCard..."
 
 #~ msgid "Use Libravatar"

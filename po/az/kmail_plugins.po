@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2022-11-11 11:18+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -24,9 +24,10 @@ msgid "Akonadi Database Tool"
 msgstr "Akonadi verilənlər bazası aləti"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, kde-format
-msgid "&Akonadi Vacuum..."
-msgstr "&Akonadi Vacuum..."
+#, fuzzy, kde-format
+#| msgid "Akonadi Vacuum"
+msgid "&Akonadi Vacuum…"
+msgstr "Akonadi Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -46,9 +47,10 @@ msgid "Vacuum"
 msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, kde-format
-msgid "&Akonadi Fsck..."
-msgstr "&Akonadi Fsck..."
+#, fuzzy, kde-format
+#| msgid "Akonadi Fsck"
+msgid "&Akonadi Fsck…"
+msgstr "Akonadi Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -73,19 +75,22 @@ msgid "Finished."
 msgstr "Tamamlandı."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, kde-format
-msgid "Start..."
+#, fuzzy, kde-format
+#| msgid "Start..."
+msgid "Start…"
 msgstr "Başladın..."
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Spam Wizard..."
-msgstr "&Antispam bələdçisi..."
+#, fuzzy, kde-format
+#| msgid "Anti-Spam Wizard"
+msgid "&Anti-Spam Wizard…"
+msgstr "Antispam bələdçisi"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Virus Wizard..."
-msgstr "&Antivirus bələdçisi..."
+#, fuzzy, kde-format
+#| msgid "Anti-Virus Wizard"
+msgid "&Anti-Virus Wizard…"
+msgstr "Antivirus bələdçisi"
 
 #: common/antispamwizard.cpp:88
 #, fuzzy, kde-format
@@ -166,8 +171,9 @@ msgid "Ham"
 msgstr "Spam deyil"
 
 #: common/antispamwizard.cpp:456
-#, kde-format
-msgid "Scanning for %1..."
+#, fuzzy, kde-format
+#| msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr "%1 axtarılır..."
 
 #: common/antispamwizard.cpp:500
@@ -422,8 +428,8 @@ msgstr "Qoşma fayl:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
-msgstr "Əlavə e&din..."
+msgid "A&dd…"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -440,8 +446,17 @@ msgstr "Dəy&işdirin..."
 msgid "Select attachment:"
 msgstr "Qoşma faylı seçin:"
 
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Akonadi Vacuum"
+#~ msgid "&Akonadi Vacuum..."
+#~ msgstr "&Akonadi Vacuum..."
 
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Akonadi Fsck"
+#~ msgid "&Akonadi Fsck..."
+#~ msgstr "&Akonadi Fsck..."
+
+#~ msgid "&Anti-Spam Wizard..."
+#~ msgstr "&Antispam bələdçisi..."
+
+#~ msgid "&Anti-Virus Wizard..."
+#~ msgstr "&Antivirus bələdçisi..."
+
+#~ msgid "A&dd..."
+#~ msgstr "Əlavə e&din..."

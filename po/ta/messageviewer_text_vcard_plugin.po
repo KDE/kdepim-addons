@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2004-08-25 00:30-0800\n"
 "Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
 "Language-Team: KDE <kde-i18n-doc@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "வணிக கார்டுகள் இணைக்கப்பட�
 #: text_vcard.cpp:216
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
-msgid "Save Business Card As..."
+msgid "Save Business Card As…"
 msgstr "வணிக கார்டுகள் இணைக்கப்பட்டது"
 
 #: text_vcard.cpp:233

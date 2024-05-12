@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 10:52+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -33,8 +33,9 @@ msgid "Autocorrect Selected Text"
 msgstr "Autocorrectie van geselecteerde tekst"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, kde-format
-msgid "Insert Email..."
+#, fuzzy, kde-format
+#| msgid "Insert Email..."
+msgid "Insert Email…"
 msgstr "E-mail invoegen..."
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
@@ -43,8 +44,9 @@ msgid "Select Short URL server:"
 msgstr "Server voor ingekort URL-adres selecteren:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, kde-format
-msgid "Insert Short URL..."
+#, fuzzy, kde-format
+#| msgid "Insert Short URL..."
+msgid "Insert Short URL…"
 msgstr "Ingekort URL-adres invoegen..."
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
@@ -73,9 +75,11 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
-msgid "Insert Special Character..."
-msgstr "Speciaal teken invoegen..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Insert Special Character"
+msgid "Insert Special Character…"
+msgstr "Speciaal teken invoegen"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -100,13 +104,15 @@ msgid "Configure quick text"
 msgstr "Snelle tekst configureren"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, kde-format
-msgid "Import..."
+#, fuzzy, kde-format
+#| msgid "Import..."
+msgid "Import…"
 msgstr "Importeren..."
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, kde-format
-msgid "Export..."
+#, fuzzy, kde-format
+#| msgid "Export..."
+msgid "Export…"
 msgstr "Exporteren..."
 
 #: quicktext/quicktextmanager.cpp:78
@@ -126,14 +132,18 @@ msgid "Variables"
 msgstr "Variabelen"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, kde-format
-msgid "Add Snippet..."
-msgstr "Fragment toevoegen..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Snippet"
+msgid "Add Snippet…"
+msgstr "Fragment toevoegen"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, kde-format
-msgid "Edit Snippet..."
-msgstr "Fragment bewerken..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Edit Snippet"
+msgid "Edit Snippet…"
+msgstr "Fragment bewerken"
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
@@ -141,13 +151,16 @@ msgid "Remove Snippet"
 msgstr "Fragment verwijderen"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, kde-format
-msgid "Add Group..."
-msgstr "Groep toevoegen..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Group"
+msgid "Add Group…"
+msgstr "Groep toevoegen"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, kde-format
-msgid "Rename Group..."
+#, fuzzy, kde-format
+#| msgid "Rename Group..."
+msgid "Rename Group…"
 msgstr "Groep hernoemen..."
 
 #: quicktext/quicktexttreewidget.cpp:48
@@ -203,8 +216,9 @@ msgid "General"
 msgstr "Algemeen"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, kde-format
-msgid "Share Mail Text..."
+#, fuzzy, kde-format
+#| msgid "Share Mail Text..."
+msgid "Share Mail Text…"
 msgstr "E-mailtekst delen..."
 
 #: zoomtext/zoomlabel.cpp:20
@@ -214,20 +228,23 @@ msgstr "Zoomen: %1%"
 
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
-msgid "Zoom..."
-msgstr "Zoomen..."
+msgid "Zoom…"
+msgstr ""
 
-#~ msgctxt "@title:window"
-#~ msgid "Add Snippet"
-#~ msgstr "Fragment toevoegen"
+#~ msgid "Insert Special Character..."
+#~ msgstr "Speciaal teken invoegen..."
 
-#~ msgctxt "@title:window"
-#~ msgid "Edit Snippet"
-#~ msgstr "Fragment bewerken"
+#~ msgid "Add Snippet..."
+#~ msgstr "Fragment toevoegen..."
 
-#~ msgctxt "@title:window"
-#~ msgid "Add Group"
-#~ msgstr "Groep toevoegen"
+#~ msgid "Edit Snippet..."
+#~ msgstr "Fragment bewerken..."
+
+#~ msgid "Add Group..."
+#~ msgstr "Groep toevoegen..."
+
+#~ msgid "Zoom..."
+#~ msgstr "Zoomen..."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Group"

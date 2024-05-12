@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-02 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2024-03-30 10:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -278,8 +278,9 @@ msgid "Server Name:"
 msgstr "اسم الخادوم:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, kde-format
-msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, fuzzy, kde-format
+#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">معلومات عن نسق المعاملات...</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
@@ -308,9 +309,11 @@ msgid "Configure Open Url With Plugin"
 msgstr "اضبط محلق افتح رابط بواسطة"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Rule..."
 msgctxt "@action:button"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "أضِف قاعدة..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
@@ -320,9 +323,11 @@ msgid "Remove Rule"
 msgstr "أزِل القاعدة"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Modify Rule..."
 msgctxt "@action:button"
-msgid "Modify Rule..."
+msgid "Modify Rule…"
 msgstr "عدّل القاعدة..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
@@ -363,13 +368,15 @@ msgid "Remove Rule"
 msgstr "أزِل القاعدة"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, kde-format
-msgid "Add Rule..."
+#, fuzzy, kde-format
+#| msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr "أضِف قاعدة..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, kde-format
-msgid "Edit Rule..."
+#, fuzzy, kde-format
+#| msgid "Edit Rule..."
+msgid "Edit Rule…"
 msgstr "حرر القاعدة"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
@@ -391,8 +398,8 @@ msgstr "إعدادات ضبط السخام"
 
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
-msgid "Add..."
-msgstr "أضف..."
+msgid "Add…"
+msgstr ""
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
@@ -420,3 +427,6 @@ msgstr "المجال"
 msgctxt "@title:column"
 msgid "Check"
 msgstr "التحقّق"
+
+#~ msgid "Add..."
+#~ msgstr "أضف..."

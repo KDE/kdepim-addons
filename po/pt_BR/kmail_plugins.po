@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 13:37-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -27,9 +27,10 @@ msgid "Akonadi Database Tool"
 msgstr "Ferramenta de banco de dados do Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, kde-format
-msgid "&Akonadi Vacuum..."
-msgstr "&Limpar o Akonadi..."
+#, fuzzy, kde-format
+#| msgid "Akonadi Vacuum"
+msgid "&Akonadi Vacuum…"
+msgstr "Limpar o Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -49,9 +50,10 @@ msgid "Vacuum"
 msgstr "Limpar"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, kde-format
-msgid "&Akonadi Fsck..."
-msgstr "Fsck &Akonadi..."
+#, fuzzy, kde-format
+#| msgid "Akonadi Fsck"
+msgid "&Akonadi Fsck…"
+msgstr "Fsck no Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -76,19 +78,24 @@ msgid "Finished."
 msgstr "Concluído."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, kde-format
-msgid "Start..."
+#, fuzzy, kde-format
+#| msgid "Start..."
+msgid "Start…"
 msgstr "Iniciar..."
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Spam Wizard..."
-msgstr "Assistente de anti-&spam..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Spam Wizard"
+msgid "&Anti-Spam Wizard…"
+msgstr "Assistente de anti-spam"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Virus Wizard..."
-msgstr "&Assistente de antivírus..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Anti-Virus Wizard"
+msgid "&Anti-Virus Wizard…"
+msgstr "Assistente de antivírus"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -167,8 +174,9 @@ msgid "Ham"
 msgstr "Não-spam"
 
 #: common/antispamwizard.cpp:456
-#, kde-format
-msgid "Scanning for %1..."
+#, fuzzy, kde-format
+#| msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr "Procurando por %1..."
 
 #: common/antispamwizard.cpp:500
@@ -432,8 +440,8 @@ msgstr "Anexo:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
-msgstr "A&dicionar..."
+msgid "A&dd…"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -450,11 +458,20 @@ msgstr "Mod&ificar..."
 msgid "Select attachment:"
 msgstr "Selecionar anexo:"
 
-#~ msgid "Akonadi Vacuum"
-#~ msgstr "Limpar o Akonadi"
+#~ msgid "&Akonadi Vacuum..."
+#~ msgstr "&Limpar o Akonadi..."
 
-#~ msgid "Akonadi Fsck"
-#~ msgstr "Fsck no Akonadi"
+#~ msgid "&Akonadi Fsck..."
+#~ msgstr "Fsck &Akonadi..."
+
+#~ msgid "&Anti-Spam Wizard..."
+#~ msgstr "Assistente de anti-&spam..."
+
+#~ msgid "&Anti-Virus Wizard..."
+#~ msgstr "&Assistente de antivírus..."
+
+#~ msgid "A&dd..."
+#~ msgstr "A&dicionar..."
 
 #~ msgid "&Log Activities..."
 #~ msgstr "&Registrar atividades..."

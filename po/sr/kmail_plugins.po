@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2017-02-11 11:14+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
-msgid "&Akonadi Vacuum..."
+msgid "&Akonadi Vacuum…"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
@@ -48,7 +48,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
-msgid "&Akonadi Fsck..."
+msgid "&Akonadi Fsck…"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
@@ -75,18 +75,20 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
-msgid "Start..."
+msgid "Start…"
 msgstr ""
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Spam Wizard..."
-msgstr "Чаробњак против &спама..."
+#, fuzzy, kde-format
+#| msgid "Anti-Spam Wizard"
+msgid "&Anti-Spam Wizard…"
+msgstr "Чаробњак против спама"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
-msgid "&Anti-Virus Wizard..."
-msgstr "Чаробњак против &вируса..."
+#, fuzzy, kde-format
+#| msgid "Anti-Virus Wizard"
+msgid "&Anti-Virus Wizard…"
+msgstr "Чаробњак против вируса"
 
 #: common/antispamwizard.cpp:88
 #, fuzzy, kde-format
@@ -170,8 +172,9 @@ msgid "Ham"
 msgstr "Хам"
 
 #: common/antispamwizard.cpp:456
-#, kde-format
-msgid "Scanning for %1..."
+#, fuzzy, kde-format
+#| msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr "Тражим %1..."
 
 #: common/antispamwizard.cpp:500
@@ -431,8 +434,8 @@ msgstr "Прилог:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
-msgstr "&Додај..."
+msgid "A&dd…"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -448,6 +451,15 @@ msgstr "&Измени..."
 #, kde-format
 msgid "Select attachment:"
 msgstr "Изаберите прилог:"
+
+#~ msgid "&Anti-Spam Wizard..."
+#~ msgstr "Чаробњак против &спама..."
+
+#~ msgid "&Anti-Virus Wizard..."
+#~ msgstr "Чаробњак против &вируса..."
+
+#~ msgid "A&dd..."
+#~ msgstr "&Додај..."
 
 #~ msgid "&Log Activities..."
 #~ msgstr "&Бележи активности..."

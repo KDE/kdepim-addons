@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2020-07-31 19:21+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -39,12 +39,12 @@ msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
-msgid "Add..."
+msgid "Add…"
 msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
-msgid "Modify..."
+msgid "Modify…"
 msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:77
@@ -79,9 +79,10 @@ msgid "Remove List"
 msgstr "Fjern filter"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, kde-format
-msgid "Search..."
-msgstr "Søg..."
+#, fuzzy, kde-format
+#| msgid "Search:"
+msgid "Search…"
+msgstr "Søg:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, fuzzy, kde-format
@@ -120,6 +121,9 @@ msgstr "Vis ad-block-liste"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Ad-block aktiveret"
+
+#~ msgid "Search..."
+#~ msgstr "Søg..."
 
 #~ msgid "Remove"
 #~ msgstr "Fjern"
@@ -351,9 +355,6 @@ msgstr "Ad-block aktiveret"
 
 #~ msgid "Export filters..."
 #~ msgstr "Eksportér filtre..."
-
-#~ msgid "Search:"
-#~ msgstr "Søg:"
 
 #~ msgid "Edit"
 #~ msgstr "Redigér"

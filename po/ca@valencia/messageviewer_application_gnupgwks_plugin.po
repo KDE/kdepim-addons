@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 12:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -133,8 +133,10 @@ msgstr ""
 "els missatges de correu electrònic."
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
-msgstr "S'estan carregant els detalls de la clau..."
+#, fuzzy
+#| msgid "Loading key details..."
+msgid "Loading key details…"
+msgstr "S'estan carregant els detalls de la clau…"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -170,9 +172,14 @@ msgid "Open in Kleopatra"
 msgstr "Obri en Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
-msgstr "Mostra els detalls de la clau..."
+#, fuzzy
+#| msgid "Show key details"
+msgid "Show key details …"
+msgstr "Mostra els detalls de la clau"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Importa la clau"
+
+#~ msgid "Show key details ..."
+#~ msgstr "Mostra els detalls de la clau…"

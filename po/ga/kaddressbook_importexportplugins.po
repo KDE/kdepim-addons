@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2009-01-28 10:19-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -18,8 +18,9 @@ msgstr ""
 "3 : 4\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
-#, kde-format
-msgid "Export CSV file..."
+#, fuzzy, kde-format
+#| msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "Easpórtáil go Comhad CSV..."
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -28,8 +29,9 @@ msgid "Export contacts to a file in comma separated value format."
 msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:42
-#, kde-format
-msgid "Import CSV file..."
+#, fuzzy, kde-format
+#| msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "Iompórtáil Comhad CSV..."
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -341,15 +343,19 @@ msgid ""
 msgstr ""
 
 #: csv/import/csvimportdialog.cpp:448
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Apply Template..."
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr "Cuir Teimpléad i bhFeidhm..."
 
 #: csv/import/csvimportdialog.cpp:449
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Template..."
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr "Sábháil Teimpléad..."
 
 #: csv/import/csvimportdialog.cpp:470
@@ -443,8 +449,9 @@ msgid "GMX address book file (*.gmxa)"
 msgstr "Comhad leabhair seoltaí GMX (*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
-#, kde-format
-msgid "Import GMX file..."
+#, fuzzy, kde-format
+#| msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "Iompórtáil Comhad GMX..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -453,8 +460,9 @@ msgid "Import contacts from a GMX address book file."
 msgstr ""
 
 #: gmx/gmximportexportplugininterface.cpp:46
-#, kde-format
-msgid "Export GMX file..."
+#, fuzzy, kde-format
+#| msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "Easpórtáil Comhad GMX..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -477,7 +485,7 @@ msgstr "Ní leabhar seoltaí GMX é %1."
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, fuzzy, kde-format
 #| msgid "Import from LDAP server..."
-msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "Iompórtáil ó fhreastalaí LDAP..."
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -486,8 +494,9 @@ msgid "Import contacts from an LDAP server."
 msgstr "Iompórtáil teagmhálacha ó fhreastalaí LDAP."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, kde-format
-msgid "Import LDIF file..."
+#, fuzzy, kde-format
+#| msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "Iompórtáil Comhad LDIF..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -496,8 +505,9 @@ msgid "Import contacts from an LDIF file."
 msgstr "Iompórtáil teagmhálacha ó chomhad LDIF."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, kde-format
-msgid "Export LDIF file..."
+#, fuzzy, kde-format
+#| msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "Easpórtáil comhad LDIF..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -663,15 +673,19 @@ msgstr ""
 "An bhfuil fonn ort an teagmháil seo a iompórtáil isteach sa leabhar seoltaí?"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Import All..."
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "Iompórtáil Gach Rud..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
-msgstr "Iompórtáil v-Chárta..."
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Import vCard"
+msgid "Import vCard…"
+msgstr "Iompórtáil v-Chárta"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -687,12 +701,13 @@ msgstr "Iompórtáil teagmhálacha ó chomhad LDIF."
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
-msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "Easpórtáil v-Chárta 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, kde-format
-msgid "Export vCard 3.0..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 3.0..."
+msgid "Export vCard 3.0…"
 msgstr "Easpórtáil v-Chárta 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
@@ -701,8 +716,9 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr ""
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, kde-format
-msgid "Export vCard 2.1..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 2.1..."
+msgid "Export vCard 2.1…"
 msgstr "Easpórtáil v-Chárta 2.1..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
@@ -758,7 +774,7 @@ msgstr "Easpórtáil go Comhaid Éagsúla"
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
 #| msgid "Import CSV file..."
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "Iompórtáil Comhad CSV..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
@@ -771,6 +787,9 @@ msgstr "Iompórtáil teagmhálacha ó chomhad LDIF."
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#~ msgid "Import vCard..."
+#~ msgstr "Iompórtáil v-Chárta..."
 
 #, fuzzy
 #~| msgid "Select Address Book"
