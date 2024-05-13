@@ -736,16 +736,14 @@ msgid "Picture Page"
 msgstr "图片页"
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Loading..."
+#, kde-format
 msgid "Loading…"
-msgstr "正在加载..."
+msgstr ""
 
 #: plugins/picoftheday/element.cpp:331
-#, fuzzy, kde-format
-#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#, kde-format
 msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
-msgstr "<qt>正在加载<i>今日图片</i>...</qt>"
+msgstr ""
 
 #: plugins/picoftheday/picoftheday.cpp:48
 #, kde-format

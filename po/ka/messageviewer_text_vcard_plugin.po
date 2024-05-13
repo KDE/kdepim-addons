@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-09-18 06:01+0200\n"
+"PO-Revision-Date: 2024-05-12 03:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: text_vcard.cpp:87
 #, kde-format
@@ -46,10 +46,9 @@ msgid "View Business Card"
 msgstr "საქმიანი ბარათის ნახვა"
 
 #: text_vcard.cpp:216
-#, fuzzy, kde-format
-#| msgid "Save Business Card As..."
+#, kde-format
 msgid "Save Business Card As…"
-msgstr "საქმიანი ბარათის შენახვა, როგორც..."
+msgstr "საქმიანი ბარათის შენახვა, როგორც…"
 
 #: text_vcard.cpp:233
 #, kde-format

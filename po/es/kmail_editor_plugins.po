@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2016, 2018.
-# SPDX-FileCopyrightText: 2019, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2019, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 00:42+0200\n"
+"PO-Revision-Date: 2024-05-12 15:41+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -34,31 +34,29 @@ msgid "Autocorrect Selected Text"
 msgstr "Corregir el texto seleccionado automáticamente"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgid "Insert Email…"
 msgstr "Insertar correo..."
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
 msgid "Select Short URL server:"
-msgstr "Seleccionar URL corto del servidor:"
+msgstr "Seleccionar URL corta del servidor:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgid "Insert Short URL…"
-msgstr "Insertar URL corto..."
+msgstr "Insertar URL corta..."
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
-msgstr "No se ha detectado conexión de red. No se puede acortar el URL."
+msgstr "No se ha detectado conexión de red. No se puede acortar la URL."
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:92
 #, kde-format
 msgid "String doesn't seem to be a URL"
-msgstr "Parece que la cadena no es un URL"
+msgstr "Parece que la cadena no es una URL"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:98
 #, kde-format
@@ -76,11 +74,9 @@ msgstr ""
 "«%1»"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgid "Insert Special Character…"
-msgstr "Insertar carácter especial"
+msgstr "Insertar carácter especial..."
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -105,14 +101,12 @@ msgid "Configure quick text"
 msgstr "Configurar texto rápido"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgid "Import…"
 msgstr "Importar..."
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
 msgstr "Exportar..."
 
@@ -133,14 +127,12 @@ msgid "Variables"
 msgstr "Variables"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add Snippet..."
+#, kde-format
 msgid "Add Snippet…"
 msgstr "Añadir fragmento..."
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Edit Snippet..."
+#, kde-format
 msgid "Edit Snippet…"
 msgstr "Editar fragmento..."
 
@@ -150,14 +142,12 @@ msgid "Remove Snippet"
 msgstr "Eliminar fragmento"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Group..."
+#, kde-format
 msgid "Add Group…"
 msgstr "Añadir grupo..."
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgid "Rename Group…"
 msgstr "Cambiar nombre de grupo..."
 
@@ -214,8 +204,7 @@ msgid "General"
 msgstr "General"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
 msgstr "Compartir texto del correo..."
 
@@ -227,7 +216,7 @@ msgstr "Ampliación: %1%"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom…"
-msgstr ""
+msgstr "Ampliación..."
 
 #~ msgid "Insert Special Character..."
 #~ msgstr "Insertar carácter especial..."

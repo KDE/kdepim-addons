@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-22 21:24+0200\n"
+"PO-Revision-Date: 2024-05-12 03:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -457,10 +457,9 @@ msgid "Open Attachment"
 msgstr "მიმაგრებული ფაილის გახსნა"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "მიმაგრებული ფაილის შენახვა, როგორც..."
+msgstr "მიმაგრებული ფაილის შენახვა, როგორც…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -478,10 +477,9 @@ msgid "Accept counter proposal"
 msgstr "პირიქით შეთავაზებაზე თანხმობა"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "პირიქით შეთავაზების შექმნა..."
+msgstr "პირიქით შეთავაზების შექმნა…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -504,10 +502,9 @@ msgid "Decline counter proposal"
 msgstr "მოსაწვევის პირიქით უარი"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "ჩემი კალენდრის შემოწმება..."
+msgstr "ჩემი კალენდრის შემოწმება…"
 
 #: text_calendar.cpp:1376
 #, kde-format

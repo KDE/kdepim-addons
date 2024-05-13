@@ -178,10 +178,9 @@ msgstr "移除(&M)"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mod&ify..."
+#, kde-format
 msgid "Mod&ify…"
-msgstr "修改(&I)..."
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
@@ -247,6 +246,3 @@ msgstr "更改值"
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "可能无效的邮件地址显示为红色："
-
-#~ msgid "A&dd..."
-#~ msgstr "添加(&D)..."

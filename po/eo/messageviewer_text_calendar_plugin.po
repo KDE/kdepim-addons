@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-24 17:43+0100\n"
+"PO-Revision-Date: 2024-05-12 10:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -455,10 +455,9 @@ msgid "Open Attachment"
 msgstr "Malfermi Aldonaĵon"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "Konservi aldonaĵon kiel..."
+msgstr "Konservi aldonaĵon kiel…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -476,10 +475,9 @@ msgid "Accept counter proposal"
 msgstr "Akcepti kontraŭproponon"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "Krei kontraŭproponon..."
+msgstr "Krei kontraŭproponon…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -502,10 +500,9 @@ msgid "Decline counter proposal"
 msgstr "Malakcepti kontraŭproponon"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "Kontroli mian kalendaron..."
+msgstr "Kontroli mian kalendaron…"
 
 #: text_calendar.cpp:1376
 #, kde-format

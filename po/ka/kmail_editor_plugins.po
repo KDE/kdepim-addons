@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 05:34+0200\n"
+"PO-Revision-Date: 2024-05-12 03:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -34,10 +34,9 @@ msgid "Autocorrect Selected Text"
 msgstr "მონიშნული ტექსტის ავტოკორექცია"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgid "Insert Email…"
-msgstr "ელფოსტის ჩასმა..."
+msgstr "ელფოსტის ჩასმა…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
@@ -45,10 +44,9 @@ msgid "Select Short URL server:"
 msgstr "აირჩიეთ მოკლე URL-ის სერვერი:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgid "Insert Short URL…"
-msgstr "მოკლე URL-ის ჩასმა..."
+msgstr "მოკლე URL-ის ჩასმა…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -76,11 +74,9 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgid "Insert Special Character…"
-msgstr "სპეციალური სიმბოლოს ჩასმა"
+msgstr "სპეციალური სიმბოლოს ჩასმა…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -105,16 +101,14 @@ msgid "Configure quick text"
 msgstr "სწრაფი ტექსტის მორგება"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgid "Import…"
-msgstr "შემოტანა..."
+msgstr "შემოტანა…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
-msgstr "გატანა..."
+msgstr "გატანა…"
 
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
@@ -133,16 +127,14 @@ msgid "Variables"
 msgstr "ცვლადები"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add Snippet..."
+#, kde-format
 msgid "Add Snippet…"
-msgstr "ნაწყვეტის დამატება..."
+msgstr "ნაწყვეტის დამატება…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Edit Snippet..."
+#, kde-format
 msgid "Edit Snippet…"
-msgstr "ნაწყვეტის ჩასწორება..."
+msgstr "ნაწყვეტის ჩასწორება…"
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
@@ -150,16 +142,14 @@ msgid "Remove Snippet"
 msgstr "ნაწყვეტის წაშლა"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Group..."
+#, kde-format
 msgid "Add Group…"
-msgstr "ჯგუფის დამატება..."
+msgstr "ჯგუფის დამატება…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgid "Rename Group…"
-msgstr "ჯგუფის გადარქმევა..."
+msgstr "ჯგუფის გადარქმევა…"
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
@@ -214,10 +204,9 @@ msgid "General"
 msgstr "მთავარი"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
-msgstr "გააზიარეთ ფოსტის ტექსტი..."
+msgstr "გააზიარეთ ფოსტის ტექსტი…"
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -227,7 +216,7 @@ msgstr "გადიდება: %1%"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom…"
-msgstr ""
+msgstr "გადიდება…"
 
 #~ msgid "Insert Special Character..."
 #~ msgstr "სპეციალური სიმბოლოს ჩასმა..."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-03-02 02:53+0100\n"
+"PO-Revision-Date: 2024-05-12 03:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -281,10 +281,9 @@ msgid "Server Name:"
 msgstr "სერვერი სახელი:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">არგუმენტის ფორმატის ინფორმაცია...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">არგუმენტის ფორმატის ინფორმაცია…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -313,12 +312,10 @@ msgid "Configure Open Url With Plugin"
 msgstr "დამატებით URL-ის გახსნის მორგება"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "წესის დამატება..."
+msgstr "წესის დამატება…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
@@ -327,17 +324,15 @@ msgid "Remove Rule"
 msgstr "წესის წაშლა"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "წესის შეცვლა..."
+msgstr "წესის შეცვლა…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr "წესი ჰოსტისთვის უკვე დამატებულია"
+msgstr "წესი ჰოსტისთვის უკვე დამატებულია."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
@@ -368,16 +363,14 @@ msgid "Remove Rule"
 msgstr "წესის წაშლა"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "წესის დამატება..."
+msgstr "წესის დამატება…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "წესის ჩასწორება..."
+msgstr "წესის ჩასწორება…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -395,7 +388,7 @@ msgstr "სკამის მორგება"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "დამატება…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

@@ -1,16 +1,16 @@
 # Translation of messageviewer_application_gnupgwks_plugin.po to Catalan (Valencian)
-# Copyright (C) 2016-2023 This_file_is_part_of_KDE
+# Copyright (C) 2016-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2016, 2017, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2017, 2020, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2017, 2020, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 12:19+0200\n"
+"PO-Revision-Date: 2024-05-12 21:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -133,8 +133,6 @@ msgstr ""
 "els missatges de correu electrònic."
 
 #: templates/pgpkeymessagepart.html:23
-#, fuzzy
-#| msgid "Loading key details..."
 msgid "Loading key details…"
 msgstr "S'estan carregant els detalls de la clau…"
 
@@ -172,14 +170,9 @@ msgid "Open in Kleopatra"
 msgstr "Obri en Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
-#, fuzzy
-#| msgid "Show key details"
 msgid "Show key details …"
-msgstr "Mostra els detalls de la clau"
+msgstr "Mostra els detalls de la clau…"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Importa la clau"
-
-#~ msgid "Show key details ..."
-#~ msgstr "Mostra els detalls de la clau…"

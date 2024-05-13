@@ -3,26 +3,25 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2019, 2020, 2022, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2019, 2020, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 18:45+0300\n"
+"PO-Revision-Date: 2024-05-12 09:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language-Team: Ukrainian\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
 msgstr "Перевірити Gravatar…"
 
@@ -84,8 +83,7 @@ msgid "No Gravatar Found."
 msgstr "Gravatar не знайдено."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
 msgstr "Об’єднати контакти…"
 
@@ -145,8 +143,7 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Пошук і позначення записів контактів для об'єднання"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
 msgstr "Шукати у результатах…"
 
@@ -262,8 +259,7 @@ msgid "(Undefined)"
 msgstr "(Не визначено)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
 msgstr "Шукати дублікати записів контактів…"
 
@@ -273,8 +269,7 @@ msgid "No emails found in selected contacts."
 msgstr "У позначених записах контактів не виявлено адрес електронної пошти."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
 msgstr "Надіслати повідомлення…"
 
@@ -289,8 +284,7 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Не вдалося створити тимчасовий файл «%1»"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
 msgstr "Надіслати візитівки…"
 

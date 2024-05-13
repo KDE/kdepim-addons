@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-01-07 08:30+0100\n"
+"PO-Revision-Date: 2024-05-12 21:48+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -45,11 +45,10 @@ msgstr "URL"
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Afig…"
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgid "Modify…"
 msgstr "Modifica…"
 
@@ -80,8 +79,7 @@ msgid "Remove List"
 msgstr "Elimina la llista"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
 msgstr "Busca…"
 
@@ -118,6 +116,3 @@ msgstr "Mostra una llista de bloqueig publicitari"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "El bloqueig publicitari està permés"
-
-#~ msgid "Add..."
-#~ msgstr "Afig…"

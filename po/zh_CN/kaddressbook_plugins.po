@@ -18,10 +18,9 @@ msgstr ""
 "X-Crowdin-File-ID: 45403\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
-msgstr "检查 Gravatar 头像..."
+msgstr ""
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -81,10 +80,9 @@ msgid "No Gravatar Found."
 msgstr "未找到 Gravatar 头像。"
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
-msgstr "合并联系人..."
+msgstr ""
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -253,10 +251,9 @@ msgid "(Undefined)"
 msgstr "(未定义)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "搜索重复的联系人..."
+msgstr ""
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -264,10 +261,9 @@ msgid "No emails found in selected contacts."
 msgstr "选中的联系人中未找到电子邮件。"
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
-msgstr "发送电子邮件..."
+msgstr ""
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -280,7 +276,6 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "无法创建临时文件“%1”"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
-msgstr "发送 vCard..."
+msgstr ""

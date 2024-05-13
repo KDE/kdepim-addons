@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-03-22 16:14+0300\n"
+"PO-Revision-Date: 2024-05-12 14:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Rule"
-msgstr "Kural Yapılandır"
+msgstr "Kuralı Yapılandır"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
 #, kde-format
@@ -109,20 +109,18 @@ msgstr "Tümüne Uygula"
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
-msgstr "'%2' konulu ileti '%1' içeriyor"
+msgstr "“%2” konulu ileti “%1” içeriyor"
 
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:208
 #, kde-format
 msgid "The message with subject '%1' is %2"
-msgstr "'%1' konulu ileti '%2'"
+msgstr "“%1” konulu ileti “%2”"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "Kural Ekle..."
+msgstr "Kural Ekle…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
@@ -131,12 +129,10 @@ msgid "Remove Rule"
 msgstr "Kuralı Kaldır"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "Kuralı Düzenle..."
+msgstr "Kuralı Değiştir…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
@@ -149,16 +145,14 @@ msgid "Pattern"
 msgstr "Dizgi"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Kural Ekle..."
+msgstr "Kural Ekle…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "Kuralı Düzenle..."
+msgstr "Kuralı Düzenle…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format
@@ -183,7 +177,7 @@ msgstr "Kuralı Kaldır"
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Same rule already exists."
-msgstr "Aynı kural zaten var."
+msgstr "Aynı kural halihazırda var."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format

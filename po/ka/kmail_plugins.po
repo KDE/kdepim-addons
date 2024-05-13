@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 05:34+0200\n"
+"PO-Revision-Date: 2024-05-12 03:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -25,10 +25,9 @@ msgid "Akonadi Database Tool"
 msgstr "Akonadi ბაზების მმართველი"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgid "&Akonadi Vacuum…"
-msgstr "Akonadi-ის მომტვერსასრუტება"
+msgstr "&Akonadi-ის მომტვერსასრუტება…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -48,10 +47,9 @@ msgid "Vacuum"
 msgstr "მომტვერსასრუტება"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgid "Akonadi Fsck"
+#, kde-format
 msgid "&Akonadi Fsck…"
-msgstr "Akonadi-ის Fsck"
+msgstr "&Akonadi-ის Fsck…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -76,30 +74,25 @@ msgid "Finished."
 msgstr "დასრულდა."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, fuzzy, kde-format
-#| msgid "Start..."
+#, kde-format
 msgid "Start…"
-msgstr "გაშვება..."
+msgstr "გაშვება…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgid "&Anti-Spam Wizard…"
-msgstr "ანტისპამის მორგება"
+msgstr "&ანტისპამის ოსტატი…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgid "&Anti-Virus Wizard…"
-msgstr "ანტივირუსის მორგება"
+msgstr "ანტივირუსის მორგება…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
-msgstr "ანტისპამის მორგება"
+msgstr "ანტისპამის ოსტატი"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -172,10 +165,9 @@ msgid "Ham"
 msgstr "სპამი არაა"
 
 #: common/antispamwizard.cpp:456
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
-msgstr "%1-ზე სკანირება..."
+msgstr "%1-ზე სკანირება…"
 
 #: common/antispamwizard.cpp:500
 #, kde-format
@@ -432,7 +424,7 @@ msgstr "მიმაგრება:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&დამატება…"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format

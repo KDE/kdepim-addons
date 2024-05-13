@@ -135,10 +135,8 @@ msgid "Add to KDE Itinerary"
 msgstr "添加到 KDE 行程"
 
 #: templates/itinerary.html:78
-#, fuzzy
-#| msgid "Send to Device..."
 msgid "Send to Device…"
-msgstr "发送到设备..."
+msgstr ""
 
 #: templates/location.html:4
 msgid "Show location on map"

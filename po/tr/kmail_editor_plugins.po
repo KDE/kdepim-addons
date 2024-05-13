@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-03-22 16:14+0300\n"
+"PO-Revision-Date: 2024-05-12 14:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -34,10 +34,9 @@ msgid "Autocorrect Selected Text"
 msgstr "Seçili Metni Kendiliğinden Düzelt"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgid "Insert Email…"
-msgstr "E-posta Ekle..."
+msgstr "E-posta Ekle…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
@@ -45,10 +44,9 @@ msgid "Select Short URL server:"
 msgstr "Kısa URL sunucusu seç:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgid "Insert Short URL…"
-msgstr "Kısa URL Ekle..."
+msgstr "Kısa URL Ekle…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -63,7 +61,7 @@ msgstr "Dizi, bir URL gibi görünmüyor"
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:98
 #, kde-format
 msgid "An error occurred: \"%1\""
-msgstr "Bir hata oluştu: \"%1\""
+msgstr "Bir hata oluştu: “%1”"
 
 #: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
 #: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
@@ -73,14 +71,12 @@ msgid ""
 "'%1'"
 msgstr ""
 "Sunucu hata bildirdi:\n"
-"'%1'"
+"“%1”"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgid "Insert Special Character…"
-msgstr "Özel Karakter Ekle"
+msgstr "Özel Karakter Ekle…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -105,16 +101,14 @@ msgid "Configure quick text"
 msgstr "Tez Metni Yapılandır"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgid "Import…"
-msgstr "İçe Aktar..."
+msgstr "İçe Aktar…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
-msgstr "Dışa Aktar..."
+msgstr "Dışa Aktar…"
 
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
@@ -133,16 +127,14 @@ msgid "Variables"
 msgstr "Değişkenler"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add Snippet..."
+#, kde-format
 msgid "Add Snippet…"
-msgstr "Kırpma Ekle..."
+msgstr "Kırpma Ekle…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Edit Snippet..."
+#, kde-format
 msgid "Edit Snippet…"
-msgstr "Kırpma Düzenle..."
+msgstr "Kırpmayı Düzenle…"
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
@@ -150,16 +142,14 @@ msgid "Remove Snippet"
 msgstr "Kırpma Kaldır"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Group..."
+#, kde-format
 msgid "Add Group…"
-msgstr "Grup Ekle..."
+msgstr "Grup Ekle…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgid "Rename Group…"
-msgstr "Grubu Yeniden Adlandır..."
+msgstr "Grubu Yeniden Adlandır…"
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
@@ -178,7 +168,7 @@ msgid ""
 "Do you really want to remove snippet \"%1\"?<nl/><warning>There is no way to "
 "undo the removal.</warning>"
 msgstr ""
-"\"%1\" kırpmasını gerçekten kaldırmak istediinize emin misiniz?<nl/"
+"“%1” kırpmasını gerçekten kaldırmak istediinize emin misiniz?<nl/"
 "><warning>Bu kaldırma geri alınamaz.</warning>"
 
 #: quicktext/quicktexttreewidget.cpp:167
@@ -188,14 +178,14 @@ msgid ""
 "Do you really want to remove group \"%1\" along with all its snippets?<nl/"
 "><warning>There is no way to undo the removal.</warning>"
 msgstr ""
-"\"%1\" grubunu tüm kırpmalarla birlikte kaldırmak istediğinizden emin "
-"misiniz?<nl/><warning>Bu kaldırma geri alınamaz.</warning>"
+"“%1” grubunu tüm kırpmalarla birlikte kaldırmak istediğinizden emin misiniz?"
+"<nl/><warning>Bu kaldırma geri alınamaz.</warning>"
 
 #: quicktext/quicktexttreewidget.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
-msgstr "\"%1\" grubunu gerçekten kaldırmak istiyor musunuz?"
+msgstr "“%1” grubunu kaldırmayı gerçekten istiyor musunuz?"
 
 #: quicktext/quicktextwidget.cpp:68
 #, kde-format
@@ -214,10 +204,9 @@ msgid "General"
 msgstr "Genel"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
-msgstr "E-posta Metni Paylaş..."
+msgstr "E-posta Metni Paylaş…"
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -227,7 +216,7 @@ msgstr "Yakınlaştırma: %​%1"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom…"
-msgstr ""
+msgstr "Yakınlaştır…"
 
 #~ msgid "Insert Special Character..."
 #~ msgstr "Özel Karakter Ekle..."

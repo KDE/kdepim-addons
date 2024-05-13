@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 05:35+0200\n"
+"PO-Revision-Date: 2024-05-12 03:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -126,10 +126,8 @@ msgstr ""
 "შეგიძლიათ, გამოიყენოთ."
 
 #: templates/pgpkeymessagepart.html:23
-#, fuzzy
-#| msgid "Loading key details..."
 msgid "Loading key details…"
-msgstr "გასაღების დეტალების ჩატვირთვა ..."
+msgstr "გასაღების დეტალების ჩატვირთვა…"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -165,10 +163,8 @@ msgid "Open in Kleopatra"
 msgstr "Kleopatra-ში გახსნა"
 
 #: templates/pgpkeymessagepart.html:52
-#, fuzzy
-#| msgid "Show key details"
 msgid "Show key details …"
-msgstr "გასაღების დეტალების ჩვენება"
+msgstr "გასაღების დეტალების ჩვენება …"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"

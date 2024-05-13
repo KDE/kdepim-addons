@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 09:17+0200\n"
+"PO-Revision-Date: 2024-05-12 07:44+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: gnupgwksurlhandler.cpp:85
 #, kde-format
@@ -125,10 +125,8 @@ msgstr ""
 "pošte."
 
 #: templates/pgpkeymessagepart.html:23
-#, fuzzy
-#| msgid "Loading key details..."
 msgid "Loading key details…"
-msgstr "Nalaganje podrobnosti o ključu ..."
+msgstr "Nalaganje podrobnosti o ključu…"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -164,10 +162,8 @@ msgid "Open in Kleopatra"
 msgstr "Odpri v Kleopatri"
 
 #: templates/pgpkeymessagepart.html:52
-#, fuzzy
-#| msgid "Show key details"
 msgid "Show key details …"
-msgstr "Pokaži podrobnosti o ključu"
+msgstr "Pokaži podrobnosti o ključu…"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"

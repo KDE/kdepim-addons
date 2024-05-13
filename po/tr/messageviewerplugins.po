@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-02-09 17:46+0300\n"
+"PO-Revision-Date: 2024-05-12 14:35+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -28,10 +28,9 @@ msgid "Expand URL"
 msgstr "URL’yi Genişlet"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate..."
+#, kde-format
 msgid "Translate…"
-msgstr "Çevir..."
+msgstr "Çevir…"
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
 #: createtodoplugin/todoedit.cpp:42
@@ -40,10 +39,9 @@ msgid "&Save"
 msgstr "&Kaydet"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor..."
+#, kde-format
 msgid "Open &Editor…"
-msgstr "Dü&zenleyiciyi Aç..."
+msgstr "Dü&zenleyiciyi Aç…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -96,10 +94,9 @@ msgid "Close the widget for creating new events."
 msgstr "Yeni etkinlik oluşturmak için pencereyi kapat."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Event…"
-msgstr "Etkinlik Oluştur"
+msgstr "Etkinlik Oluştur…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -189,19 +186,19 @@ msgstr "Yeni yapılacaklar oluşturmak için pencereyi kapat."
 #: createtodoplugin/todoedit.cpp:150
 #, kde-format
 msgid "Check I received a reply about \"%1\""
-msgstr "\"%1\" üzerine aldığım yanıtı denetle"
+msgstr "“%1” üzerine aldığım yanıtı denetle"
 
 #: createtodoplugin/todoedit.cpp:151
 #, kde-format
 msgid "Reply to \"%1\""
-msgstr "Yanıtla: \"%1\""
+msgstr "Yanıtla: “%1”"
 
 #: createtodoplugin/todoedit.cpp:240
 #, kde-format
 msgctxt ""
 "%1 is summary of the todo, %2 is name of the folder in which it is stored"
 msgid "New todo '%1' was added to task list '%2'"
-msgstr "Yeni '%1' yapılacak iş, '%2' görev listesine eklendi"
+msgstr "Yeni “%1” yapılacak ögesi “%2” görev listesine eklendi"
 
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:68
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:69
@@ -229,13 +226,12 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Script\" Plugin"
-msgstr "\"Dış Betik\" Eklentisini Yapılandır"
+msgstr "“Dış Betik” Eklentisini Yapılandır"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Script…"
-msgstr "Betik Ekle..."
+msgstr "Betik Ekle…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -243,10 +239,9 @@ msgid "Remove Script"
 msgstr "Betiği Kaldır"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script..."
+#, kde-format
 msgid "Modify Script…"
-msgstr "Betiği Düzenle..."
+msgstr "Betiği Değiştir…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -256,7 +251,7 @@ msgstr "Dış Betik:"
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
 #, kde-format
 msgid "Do you want to remove this script \"%1\"?"
-msgstr "\"%1\" betiğini kaldırmak istiyor musunuz?"
+msgstr "“%1” betiğini kaldırmak istiyor musunuz?"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
 #, kde-format
@@ -280,10 +275,9 @@ msgid "Description:"
 msgstr "Açıklama:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments..."
+#, kde-format
 msgid "Add command arguments…"
-msgstr "Komut argümanları ekle..."
+msgstr "Komut Argümanları Ekle…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -291,10 +285,9 @@ msgid "Command Line:"
 msgstr "Komut Satırı:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">Argüman biçim bilgisi...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">Argüman biçim bilgisi…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -307,10 +300,10 @@ msgid ""
 "item=187020)</li></ul></strong></p></qt>"
 msgstr ""
 "<qt><p><strong>Bu ifadeler şu argümanlar için kullanılabilir:</strong></"
-"p><ul><li>%s - ileti konusu</li><li>%from - e-posta gelen adresi</li><li>%cc "
-"- kopyalanacak e-posta adresleri</li><li>%bcc - gizli kopya e-posta "
-"adresleri</li><li>%body - ileti gövdesi</li><li>%inreplyto - yanıt e-posta "
-"adresi</li><li>%akonadiUrl - akonadi url’si (akonadi:?item=187020 "
+"p><ul><li>%s — ileti konusu</li><li>%from — e-posta gelen adresi</li><li>%cc "
+"- kopyalanacak e-posta adresleri</li><li>%bcc — gizli kopya e-posta "
+"adresleri</li><li>%body — ileti gövdesi</li><li>%inreplyto — yanıt e-posta "
+"adresi</li><li>%akonadiUrl — Akonadi URL’si (akonadi:?item=187020 "
 "biçiminde)</li></ul></strong></p></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
@@ -321,7 +314,7 @@ msgstr "Çalıştırılabilir Dosya:"
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
 #, kde-format
 msgid "'%1' not found"
-msgstr "'%1' bulunamadı"
+msgstr "“%1” bulunamadı"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
 #, kde-format

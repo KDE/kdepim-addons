@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 00:53+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2021-06-29 22:46-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -114,7 +114,7 @@ msgstr ""
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
 #, kde-format
 msgctxt "@action:button"
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
@@ -126,7 +126,7 @@ msgstr ""
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
-msgid "Modify Rule..."
+msgid "Modify Rule…"
 msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
@@ -141,12 +141,12 @@ msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
 #, kde-format
-msgid "Add Rule..."
+msgid "Add Rule…"
 msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
 #, kde-format
-msgid "Edit Rule..."
+msgid "Edit Rule…"
 msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126

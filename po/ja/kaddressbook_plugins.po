@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:46+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2015-12-14 07:07-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
-msgid "Check Gravatar..."
+msgid "Check Gravatar…"
 msgstr ""
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
@@ -78,7 +78,7 @@ msgstr ""
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
 #, kde-format
-msgid "Merge Contacts..."
+msgid "Merge Contacts…"
 msgstr ""
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
@@ -137,7 +137,7 @@ msgstr ""
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, kde-format
-msgid "Search in result..."
+msgid "Search in result…"
 msgstr ""
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
@@ -249,7 +249,7 @@ msgstr ""
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
 #, kde-format
-msgid "Search Duplicate Contacts..."
+msgid "Search Duplicate Contacts…"
 msgstr ""
 
 #: sendmail/mailsenderjob.cpp:127
@@ -259,7 +259,7 @@ msgstr ""
 
 #: sendmail/sendmailplugininterface.cpp:26
 #, kde-format
-msgid "Send an email..."
+msgid "Send an email…"
 msgstr ""
 
 #: sendvcards/sendvcardsjob.cpp:96
@@ -274,5 +274,5 @@ msgstr ""
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
 #, kde-format
-msgid "Send vCards..."
+msgid "Send vCards…"
 msgstr ""

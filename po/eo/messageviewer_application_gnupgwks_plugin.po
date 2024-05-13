@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-05-10 11:33+0100\n"
+"PO-Revision-Date: 2024-05-12 10:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -126,10 +126,8 @@ msgstr ""
 "retpoŝtojn."
 
 #: templates/pgpkeymessagepart.html:23
-#, fuzzy
-#| msgid "Loading key details..."
 msgid "Loading key details…"
-msgstr "Ŝargante ŝlosilajn detalojn..."
+msgstr "Ŝargante ŝlosilajn detalojn…"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -165,14 +163,9 @@ msgid "Open in Kleopatra"
 msgstr "Malfermi en Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
-#, fuzzy
-#| msgid "Show key details"
 msgid "Show key details …"
-msgstr "Montri ŝlosilajn detalojn"
+msgstr "Montri ŝlosilajn detalojn …"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Importi ŝlosilon"
-
-#~ msgid "Show key details ..."
-#~ msgstr "Montri ŝlosilajn detalojn..."

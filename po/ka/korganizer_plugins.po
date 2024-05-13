@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-24 05:30+0200\n"
+"PO-Revision-Date: 2024-05-12 03:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -749,16 +749,14 @@ msgid "Picture Page"
 msgstr "სურათის გვერდი"
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Loading..."
+#, kde-format
 msgid "Loading…"
-msgstr "იტვირთება..."
+msgstr "ჩატვირთვა…"
 
 #: plugins/picoftheday/element.cpp:331
-#, fuzzy, kde-format
-#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#, kde-format
 msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
-msgstr "<qt>იტვირთება <i>დღი სურათი</i>...</qt>"
+msgstr "<qt>იტვირთება <i>დღის სურათი</i>…</qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48
 #, kde-format

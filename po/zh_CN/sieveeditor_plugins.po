@@ -18,10 +18,9 @@ msgstr ""
 "X-Crowdin-File-ID: 45623\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts..."
+#, kde-format
 msgid "Click on button for selecting contacts…"
-msgstr "点击按钮选择联系人..."
+msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
@@ -52,10 +51,9 @@ msgid "Error during creating folder: %1"
 msgstr "创建文件夹时出现错误：%1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgid "Create Folder…"
-msgstr "创建文件夹"
+msgstr ""
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -69,16 +67,14 @@ msgid "Unable to load folder list"
 msgstr "无法加载文件夹列表"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, fuzzy, kde-format
-#| msgid "Loading in progress..."
+#, kde-format
 msgid "Loading in progress…"
-msgstr "正在加载..."
+msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "搜索..."
+msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
@@ -123,13 +119,6 @@ msgid "Select IMAP folder"
 msgstr "选择 IMAP 文件夹"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder..."
+#, kde-format
 msgid "Click on button for selecting folder…"
-msgstr "点击按钮选择文件夹..."
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Create Folder..."
-#~ msgstr "创建文件夹..."
+msgstr ""

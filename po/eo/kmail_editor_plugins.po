@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 20:18+0100\n"
+"PO-Revision-Date: 2024-05-12 10:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -34,10 +34,9 @@ msgid "Autocorrect Selected Text"
 msgstr "Aŭtomate korekti Elektitan Tekston"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgid "Insert Email…"
-msgstr "Enmeti Retpoŝton..."
+msgstr "Enmeti Retpoŝton…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
@@ -45,10 +44,9 @@ msgid "Select Short URL server:"
 msgstr "Elektu servilon por Mallongaj URL:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgid "Insert Short URL…"
-msgstr "Enigi Mallongan URL..."
+msgstr "Enigi Mallongan URL…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -76,11 +74,9 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgid "Insert Special Character…"
-msgstr "Enigi Specialan Signon"
+msgstr "Enigi Specialan Signon…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -105,26 +101,24 @@ msgid "Configure quick text"
 msgstr "Agordi rapidan tekston"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgid "Import…"
-msgstr "Importi..."
+msgstr "Enporti…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
-msgstr "Eksporti..."
+msgstr "Elporti…"
 
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
 msgid "Import QuickText"
-msgstr "Importi QuickText"
+msgstr "Enporti QuickText"
 
 #: quicktext/quicktextmanager.cpp:86
 #, kde-format
 msgid "Export QuickText"
-msgstr "Eksporti QuickText"
+msgstr "Elporti QuickText"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
 #: quicktext/quicktextplugineditorinterface.cpp:46
@@ -133,16 +127,14 @@ msgid "Variables"
 msgstr "Variabloj"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add Snippet..."
+#, kde-format
 msgid "Add Snippet…"
-msgstr "Aldoni fragmenton..."
+msgstr "Aldoni Fragmenton…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Edit Snippet..."
+#, kde-format
 msgid "Edit Snippet…"
-msgstr "Redakti fragmenton..."
+msgstr "Redakti Fragmenton…"
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
@@ -150,16 +142,14 @@ msgid "Remove Snippet"
 msgstr "Forigi Fragmenton"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Group..."
+#, kde-format
 msgid "Add Group…"
-msgstr "Aldoni grupon..."
+msgstr "Aldoni Grupon…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgid "Rename Group…"
-msgstr "Alinomi grupon..."
+msgstr "Alinomi grupon…"
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
@@ -214,10 +204,9 @@ msgid "General"
 msgstr "Ĝenerala"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
-msgstr "Kunhavigi Poŝtan Tekston..."
+msgstr "Kunhavigi Poŝtan Tekston…"
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -227,10 +216,4 @@ msgstr "Zomo: %1%"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom…"
-msgstr ""
-
-#~ msgid "Insert Special Character..."
-#~ msgstr "Enigi Specialan Signon..."
-
-#~ msgid "Zoom..."
-#~ msgstr "Zomi..."
+msgstr "Zomi…"

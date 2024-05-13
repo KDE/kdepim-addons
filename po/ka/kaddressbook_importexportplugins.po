@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-24 16:31+0200\n"
+"PO-Revision-Date: 2024-05-12 03:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19,10 +19,9 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Export CSV file..."
+#, kde-format
 msgid "Export CSV file…"
-msgstr "CVS-ში გატანa..."
+msgstr "CVS-ში გატანა…"
 
 #: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
@@ -31,10 +30,9 @@ msgstr ""
 "კონტაქტების გატანა მძიმით გამოყოფილი მნიშვნელობების ფორმატის მქონე ფალში."
 
 #: csv/csvimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Import CSV file..."
+#, kde-format
 msgid "Import CSV file…"
-msgstr "CSV-ის შემოტანა..."
+msgstr "CSV-ის შემოტანა…"
 
 #: csv/csvimportexportplugininterface.cpp:43
 #, kde-format
@@ -366,20 +364,16 @@ msgstr ""
 "რომელიც ფაილში არსებული მონაცემის ველების მიმდევრობას აღწერს."
 
 #: csv/import/csvimportdialog.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Apply Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
-msgstr "შაბლონის გადატარება..."
+msgstr "ნიმუშის გადატარება…"
 
 #: csv/import/csvimportdialog.cpp:449
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
-msgstr "შაბლონის შენახვა..."
+msgstr "ნიმუშის შენახვა…"
 
 #: csv/import/csvimportdialog.cpp:470
 #, kde-format
@@ -470,10 +464,9 @@ msgid "GMX address book file (*.gmxa)"
 msgstr "GMX მისამართების წიგნის ფაილი (*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Import GMX file..."
+#, kde-format
 msgid "Import GMX file…"
-msgstr "GMX ფაილის შემოტანა..."
+msgstr "GMX ფაილის შემოტანა…"
 
 #: gmx/gmximportexportplugininterface.cpp:41
 #, kde-format
@@ -481,10 +474,9 @@ msgid "Import contacts from a GMX address book file."
 msgstr "კონტაქტების შემოტანა GMX მისამართების წიგნს ფაილიდან."
 
 #: gmx/gmximportexportplugininterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Export GMX file..."
+#, kde-format
 msgid "Export GMX file…"
-msgstr "GMX ფაილის გატანა..."
+msgstr "GMX ფაილის გატანა…"
 
 #: gmx/gmximportexportplugininterface.cpp:47
 #, kde-format
@@ -504,10 +496,9 @@ msgid "%1 is not a GMX address book file."
 msgstr "%1 GMX მისამართების წიგნის ფაილი არაა."
 
 #: ldap/ldapimportexportplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import From LDAP server..."
+#, kde-format
 msgid "Import From LDAP server…"
-msgstr "LDAP სერვერიდან შემოტანა..."
+msgstr "LDAP სერვერიდან შემოტანა…"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
 #, kde-format
@@ -515,10 +506,9 @@ msgid "Import contacts from an LDAP server."
 msgstr "კონტაქტების შემოტანა LDAP სერვერიდან."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Import LDIF file..."
+#, kde-format
 msgid "Import LDIF file…"
-msgstr "LDIF ფაილის შემოტანა..."
+msgstr "LDIF ფაილის შემოტანა…"
 
 #: ldif/ldifimportexportplugininterface.cpp:37
 #, kde-format
@@ -526,10 +516,9 @@ msgid "Import contacts from an LDIF file."
 msgstr "კონტაქტების LDIF ფაილიდან შემოტანა."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Export LDIF file..."
+#, kde-format
 msgid "Export LDIF file…"
-msgstr "LDIF ფაილის გატანა..."
+msgstr "LDIF ფაილის გატანა…"
 
 #: ldif/ldifimportexportplugininterface.cpp:43
 #, kde-format
@@ -703,19 +692,15 @@ msgid "Do you want to import this contact into your address book?"
 msgstr "მართლა გნებავთ ამ კონტაქტის შემოტანა თქვენს მისამართების წიგნში?"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Import All..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
 msgstr "ყველას შემოტანა…"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import vCard"
+#, kde-format
 msgid "Import vCard…"
-msgstr "VCard ფაილების შემოტანა"
+msgstr "VCard ფაილების შემოტანა…"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -728,16 +713,14 @@ msgid "Export contacts to a vCard 4.0 file."
 msgstr "კონტაქტების გატანა vCard 4.0 ფაილში."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0..."
+#, kde-format
 msgid "Export vCard 4.0…"
-msgstr "გატანა vCard 4.0-ში..."
+msgstr "გატანა vCard 4.0-ში…"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
+#, kde-format
 msgid "Export vCard 3.0…"
-msgstr "გატანა vCard 3.0-ში..."
+msgstr "გატანა vCard 3.0-ში…"
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -745,10 +728,9 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "კონტაქტების გატანა vCard 3.0 ფაილში."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
+#, kde-format
 msgid "Export vCard 2.1…"
-msgstr "გატანა vCard 2.1-ში..."
+msgstr "გატანა vCard 2.1-ში…"
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
@@ -799,10 +781,9 @@ msgid "Export to Several Files"
 msgstr "ერთზე მეტ ფაილში გატანა"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
-#, fuzzy, kde-format
-#| msgid "Import Windows Contact file..."
+#, kde-format
 msgid "Import Windows Contact file…"
-msgstr "Windows Contacts-ის ფაილის შემოტანა..."
+msgstr "Windows Contacts-ის ფაილის შემოტანა…"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
 #, kde-format

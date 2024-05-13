@@ -6,7 +6,7 @@
 # Tom Albers <tomalbers@kde.nl>, 2004.
 # Bram Schoenmakers <bramschoenmakers@kde.nl>, 2004, 2005, 2007.
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2008.
-# Freek de Kruijf <f.de.kruijf@hetnet.nl>, 2009.
+# SPDX-FileCopyrightText: 2009, 2024 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2012.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2011, 2015, 2017, 2019, 2021.
 msgid ""
@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2021-11-06 09:45+0100\n"
+"PO-Revision-Date: 2024-05-12 14:16+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: attendeeselector.cpp:21
@@ -465,10 +465,9 @@ msgid "Open Attachment"
 msgstr "Bijlage openen"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "Bijlage opslaan als..."
+msgstr "Bijlage opslaan als…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -486,10 +485,9 @@ msgid "Accept counter proposal"
 msgstr "Tegenvoorstel accepteren"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "Tegenvoorstel aanmaken..."
+msgstr "Tegenvoorstel aanmaken…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -512,10 +510,9 @@ msgid "Decline counter proposal"
 msgstr "Tegenvoorstel afwijzen"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "In mijn agenda kijken..."
+msgstr "In mijn agenda kijken…"
 
 #: text_calendar.cpp:1376
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 10:52+0200\n"
+"PO-Revision-Date: 2024-05-12 14:01+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -33,10 +33,9 @@ msgid "Autocorrect Selected Text"
 msgstr "Autocorrectie van geselecteerde tekst"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgid "Insert Email…"
-msgstr "E-mail invoegen..."
+msgstr "E-mail invoegen…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
@@ -44,10 +43,9 @@ msgid "Select Short URL server:"
 msgstr "Server voor ingekort URL-adres selecteren:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgid "Insert Short URL…"
-msgstr "Ingekort URL-adres invoegen..."
+msgstr "Ingekort URL-adres invoegen…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -75,11 +73,9 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgid "Insert Special Character…"
-msgstr "Speciaal teken invoegen"
+msgstr "Speciaal teken invoegen…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -104,16 +100,14 @@ msgid "Configure quick text"
 msgstr "Snelle tekst configureren"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgid "Import…"
-msgstr "Importeren..."
+msgstr "Importeren…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
-msgstr "Exporteren..."
+msgstr "Exporteren…"
 
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
@@ -132,18 +126,14 @@ msgid "Variables"
 msgstr "Variabelen"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Snippet"
+#, kde-format
 msgid "Add Snippet…"
-msgstr "Fragment toevoegen"
+msgstr "Fragment toevoegen…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Edit Snippet"
+#, kde-format
 msgid "Edit Snippet…"
-msgstr "Fragment bewerken"
+msgstr "Fragment bewerken…"
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
@@ -151,17 +141,14 @@ msgid "Remove Snippet"
 msgstr "Fragment verwijderen"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Group"
+#, kde-format
 msgid "Add Group…"
-msgstr "Groep toevoegen"
+msgstr "Groep toevoegen…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgid "Rename Group…"
-msgstr "Groep hernoemen..."
+msgstr "Groep hernoemen…"
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
@@ -216,10 +203,9 @@ msgid "General"
 msgstr "Algemeen"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
-msgstr "E-mailtekst delen..."
+msgstr "E-mailtekst delen…"
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -229,7 +215,7 @@ msgstr "Zoomen: %1%"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom…"
-msgstr ""
+msgstr "Zoomen…"
 
 #~ msgid "Insert Special Character..."
 #~ msgstr "Speciaal teken invoegen..."

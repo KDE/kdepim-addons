@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2015, 2016, 2019, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2015, 2016, 2019, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 10:52+0200\n"
+"PO-Revision-Date: 2024-05-12 13:59+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,13 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
-msgstr "Gravatar activeren..."
+msgstr "Gravatar activeren…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -81,10 +80,9 @@ msgid "No Gravatar Found."
 msgstr "Geen Gravatar gevonden."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
-msgstr "Contactpersonen samenvoegen..."
+msgstr "Contactpersonen samenvoegen…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -142,10 +140,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Samen te voegen dubbele contactpersonen zoeken en selecteren"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
-msgstr "In resultaat zoeken..."
+msgstr "In resultaat zoeken…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -259,10 +256,9 @@ msgid "(Undefined)"
 msgstr "(Ongedefinieerd)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "Naar dubbele contactpersonen zoeken..."
+msgstr "Naar dubbele contactpersonen zoeken…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -270,10 +266,9 @@ msgid "No emails found in selected contacts."
 msgstr "Geen e-mailadressen gevonden in de geselecteerde contactpersonen."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
-msgstr "Een e-mail sturen..."
+msgstr "Een e-mail sturen…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -286,10 +281,9 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Het tijdelijk bestand '%1 kan niet worden aangemaakt"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
-msgstr "vCard verzenden..."
+msgstr "vCard verzenden…"
 
 #~ msgid "Use Libravatar"
 #~ msgstr "Libravatar gebruiken"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 05:34+0200\n"
+"PO-Revision-Date: 2024-05-12 03:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19,10 +19,9 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
-msgstr "Gravatar-ის შემოწმება..."
+msgstr "Gravatar-ის შემოწმება…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -82,10 +81,9 @@ msgid "No Gravatar Found."
 msgstr "Gravatar-ის გარეშე."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
-msgstr "კონტაქტების შერწყმა..."
+msgstr "კონტაქტების შერწყმა…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -143,10 +141,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "მოძებნეთ და მონიშნეთ დუბლირებული კონტაქტები, მათ შესაწყმელად"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
-msgstr "წინა შედეგებში ძებნა..."
+msgstr "შედეგში ძებნა…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -260,10 +257,9 @@ msgid "(Undefined)"
 msgstr "(გაურკვეველი)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "დუბლიკატი კონტაქტების ძებნა..."
+msgstr "დუბლიკატი კონტაქტების ძებნა…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -271,10 +267,9 @@ msgid "No emails found in selected contacts."
 msgstr "მონიშნულ კონტაქტებს ელფოსტა არ აქვთ."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
-msgstr "ელფოსტის გაგზავნა..."
+msgstr "ელფოსტის გაგზავნა…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -287,7 +282,6 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "დროებითი ფაილის (%1) შექმნის შეცდომა"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
-msgstr "VCARD-ების გაგზავნა..."
+msgstr "VCARD-ების გაგზავნა…"

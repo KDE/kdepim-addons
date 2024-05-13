@@ -78,18 +78,14 @@ msgid "Start…"
 msgstr ""
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgid "&Anti-Spam Wizard…"
-msgstr "反垃圾向导"
+msgstr ""
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgid "&Anti-Virus Wizard…"
-msgstr "反病毒向导"
+msgstr ""
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -168,10 +164,9 @@ msgid "Ham"
 msgstr "非垃圾邮件"
 
 #: common/antispamwizard.cpp:456
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
-msgstr "正在扫描 %1..."
+msgstr ""
 
 #: common/antispamwizard.cpp:500
 #, kde-format
@@ -427,12 +422,3 @@ msgstr "修改...(&I)"
 #, kde-format
 msgid "Select attachment:"
 msgstr "选择附件："
-
-#~ msgid "&Anti-Spam Wizard..."
-#~ msgstr "反垃圾向导(&A)..."
-
-#~ msgid "&Anti-Virus Wizard..."
-#~ msgstr "反病毒向导(&A)..."
-
-#~ msgid "A&dd..."
-#~ msgstr "添加(&D)..."

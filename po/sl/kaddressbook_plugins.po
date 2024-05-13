@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 09:18+0200\n"
+"PO-Revision-Date: 2024-05-12 07:50+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -17,11 +17,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
 msgstr "Preveri Gravatar…"
 
@@ -83,10 +82,9 @@ msgid "No Gravatar Found."
 msgstr "Ni najdenih Gravatar-jev."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
-msgstr "Združi stike …"
+msgstr "Združi stike…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -143,10 +141,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Išči in izberi podvojene stike za združevanje"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
-msgstr "Poišči med rezultati..."
+msgstr "Poišči med rezultati…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -260,10 +257,9 @@ msgid "(Undefined)"
 msgstr "(nedoločeno)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "Poišči podvojene stike …"
+msgstr "Poišči podvojene stike…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -271,10 +267,9 @@ msgid "No emails found in selected contacts."
 msgstr "Med izbranimi stiki ni mogoče najti e-naslovov."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
-msgstr "Pošlji e-sporočilo …"
+msgstr "Pošlji e-sporočilo…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -287,10 +282,9 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Začasne datoteke '%1' ni mogoče ustvariti"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
-msgstr "Pošlji vCard ..."
+msgstr "Pošlji vCard…"
 
 #~ msgid "Use Libravatar"
 #~ msgstr "Uporabi Libravatar"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-28 01:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2016-11-11 23:12-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -111,7 +111,7 @@ msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
 msgstr ""
 
 #: templates/pgpkeymessagepart.html:23
-msgid "Loading key details..."
+msgid "Loading key details…"
 msgstr ""
 
 #: templates/pgpkeymessagepart.html:28
@@ -146,7 +146,7 @@ msgid "Open in Kleopatra"
 msgstr ""
 
 #: templates/pgpkeymessagepart.html:52
-msgid "Show key details ..."
+msgid "Show key details …"
 msgstr ""
 
 #: templates/pgpkeymessagepart.html:54

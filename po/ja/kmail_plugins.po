@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 01:38+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2015-12-10 23:47-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
-msgid "&Akonadi Vacuum..."
+msgid "&Akonadi Vacuum…"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
@@ -44,7 +44,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
-msgid "&Akonadi Fsck..."
+msgid "&Akonadi Fsck…"
 msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
@@ -71,17 +71,17 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
-msgid "Start..."
+msgid "Start…"
 msgstr ""
 
 #: antispamplugin/antispamplugininterface.cpp:22
 #, kde-format
-msgid "&Anti-Spam Wizard..."
+msgid "&Anti-Spam Wizard…"
 msgstr ""
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
 #, kde-format
-msgid "&Anti-Virus Wizard..."
+msgid "&Anti-Virus Wizard…"
 msgstr ""
 
 #: common/antispamwizard.cpp:88
@@ -162,7 +162,7 @@ msgstr ""
 
 #: common/antispamwizard.cpp:456
 #, kde-format
-msgid "Scanning for %1..."
+msgid "Scanning for %1…"
 msgstr ""
 
 #: common/antispamwizard.cpp:500
@@ -380,7 +380,7 @@ msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
-msgid "A&dd..."
+msgid "A&dd…"
 msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63

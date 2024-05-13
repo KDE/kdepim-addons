@@ -28,10 +28,9 @@ msgid "Expand URL"
 msgstr "展开 URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate..."
+#, kde-format
 msgid "Translate…"
-msgstr "翻译..."
+msgstr ""
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
 #: createtodoplugin/todoedit.cpp:42
@@ -40,10 +39,9 @@ msgid "&Save"
 msgstr "保存(&S)"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor..."
+#, kde-format
 msgid "Open &Editor…"
-msgstr "打开编辑器(&E)..."
+msgstr ""
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -96,10 +94,9 @@ msgid "Close the widget for creating new events."
 msgstr "关闭创建新事件的部件。"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Event…"
-msgstr "创建事件"
+msgstr ""
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -227,10 +224,9 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "配置“外部脚本”插件"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Script…"
-msgstr "添加脚本..."
+msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -238,10 +234,9 @@ msgid "Remove Script"
 msgstr "移除脚本"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script..."
+#, kde-format
 msgid "Modify Script…"
-msgstr "修改脚本..."
+msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -275,10 +270,9 @@ msgid "Description:"
 msgstr "描述："
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments..."
+#, kde-format
 msgid "Add command arguments…"
-msgstr "添加命令参数..."
+msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -286,10 +280,9 @@ msgid "Command Line:"
 msgstr "命令行："
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">参数格式信息...</a></qt>"
+msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -337,6 +330,3 @@ msgstr "外部脚本"
 #, kde-format
 msgid "Configure"
 msgstr "配置"
-
-#~ msgid "Create Event..."
-#~ msgstr "创建事件..."

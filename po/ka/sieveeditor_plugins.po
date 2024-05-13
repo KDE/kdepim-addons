@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 05:35+0200\n"
+"PO-Revision-Date: 2024-05-12 03:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19,15 +19,14 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts..."
+#, kde-format
 msgid "Click on button for selecting contacts…"
-msgstr "კონტაქტების ასარჩევად დააწექით ღილაკს..."
+msgstr "კონტაქტების ასარჩევად დააწექით ღილაკს…"
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
@@ -53,10 +52,9 @@ msgid "Error during creating folder: %1"
 msgstr "შეცდომა საქაღალდის შექმნისას: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgid "Create Folder…"
-msgstr "საქაღალდის შექმნა"
+msgstr "საქაღალდის შექმნა…"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -70,16 +68,14 @@ msgid "Unable to load folder list"
 msgstr "საქაღალდეების სიის ჩატვირთვის შეცდომა"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, fuzzy, kde-format
-#| msgid "Loading in progress..."
+#, kde-format
 msgid "Loading in progress…"
-msgstr "ჩატვირთვა..."
+msgstr "მიმდინარეობს ჩატვირთვა…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "ძებნა..."
+msgstr "ძებნა…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
@@ -124,10 +120,9 @@ msgid "Select IMAP folder"
 msgstr "აირჩიეთ IMAP საქაღალდე"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder..."
+#, kde-format
 msgid "Click on button for selecting folder…"
-msgstr "საქაღალდის ასარჩევად დააწექით ღილაკს..."
+msgstr "საქაღალდის ასარჩევად დააწექით ღილაკს…"
 
 #~ msgid "..."
 #~ msgstr "..."

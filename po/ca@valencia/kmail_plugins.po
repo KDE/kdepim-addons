@@ -1,11 +1,11 @@
 # Translation of kmail_plugins.po to Catalan (Valencian)
-# Copyright (C) 1998-2023 This_file_is_part_of_KDE
+# Copyright (C) 1998-2024 This_file_is_part_of_KDE
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2002, 2003, 2004, 2011, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2009.
 # David Gil <al016950@yahoo.es>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2019, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2019, 2022, 2023, 2024.
 # Joan Maspons <joanmaspons@gmail.com>, 2009.
 # Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2009, 2010, 2011.
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 12:19+0200\n"
+"PO-Revision-Date: 2024-05-12 21:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -31,11 +31,9 @@ msgid "Akonadi Database Tool"
 msgstr "Eina de base de dades d'Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgid "&Akonadi Vacuum…"
-msgstr "Buidatge d'Akonadi"
+msgstr "Vacuum d'&Akonadi…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -55,11 +53,9 @@ msgid "Vacuum"
 msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Akonadi Fsck"
+#, kde-format
 msgid "&Akonadi Fsck…"
-msgstr "Fsck d'Akonadi"
+msgstr "Fsck d'&Akonadi…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -84,24 +80,19 @@ msgid "Finished."
 msgstr "Ha finalitzat."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, fuzzy, kde-format
-#| msgid "Start..."
+#, kde-format
 msgid "Start…"
 msgstr "Inicia…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgid "&Anti-Spam Wizard…"
-msgstr "Assistent contra el correu brossa"
+msgstr "Assistent contra el correu &brossa…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgid "&Anti-Virus Wizard…"
-msgstr "Assistent contra els virus"
+msgstr "Assistent contra els &virus…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -180,8 +171,7 @@ msgid "Ham"
 msgstr "Correu legítim"
 
 #: common/antispamwizard.cpp:456
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
 msgstr "S'està buscant %1…"
 
@@ -446,7 +436,7 @@ msgstr "Adjunt:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Afi&g…"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -456,24 +446,9 @@ msgstr "&Elimina"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "Mod&ify..."
-msgstr "&Modifica…"
+msgstr "Mod&ifica…"
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
 #, kde-format
 msgid "Select attachment:"
 msgstr "Seleccioneu l'adjunt:"
-
-#~ msgid "&Akonadi Vacuum..."
-#~ msgstr "Vacuum d'&Akonadi…"
-
-#~ msgid "&Akonadi Fsck..."
-#~ msgstr "Fsck d'&Akonadi…"
-
-#~ msgid "&Anti-Spam Wizard..."
-#~ msgstr "Assistent contra el correu &brossa…"
-
-#~ msgid "&Anti-Virus Wizard..."
-#~ msgstr "Assistent contra els &virus…"
-
-#~ msgid "A&dd..."
-#~ msgstr "Afi&g…"

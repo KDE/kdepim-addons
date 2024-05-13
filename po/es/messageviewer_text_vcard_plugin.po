@@ -2,21 +2,21 @@
 # Copyright (C) 2004, 2007 Free Software Foundation, Inc.
 #
 # Juan Manuel Garcia Molina <juanma@superiodico.net>, 2004, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2020.
+# SPDX-FileCopyrightText: 2009, 2020, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 # Javier Vinal <fjvinal@gmail.com>, 2010, 2012, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2020-06-08 18:31+0200\n"
+"PO-Revision-Date: 2024-05-12 12:06+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: text_vcard.cpp:87
@@ -47,8 +47,7 @@ msgid "View Business Card"
 msgstr "Ver tarjeta de negocios"
 
 #: text_vcard.cpp:216
-#, fuzzy, kde-format
-#| msgid "Save Business Card As..."
+#, kde-format
 msgid "Save Business Card As…"
 msgstr "Guardar tarjeta de negocios como..."
 

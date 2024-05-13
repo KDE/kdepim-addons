@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-05-12 00:39+0000\n"
 "PO-Revision-Date: 2014-09-23 00:51-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -20,8 +20,9 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
-#, kde-format
-msgid "Export CSV file..."
+#, fuzzy, kde-format
+#| msgid "Export CSV file..."
+msgid "Export CSV file…"
 msgstr "CSV ファイルにエクスポート..."
 
 #: csv/csvimportexportplugininterface.cpp:37
@@ -30,8 +31,9 @@ msgid "Export contacts to a file in comma separated value format."
 msgstr "連絡先を CSV フォーマットのファイルにエクスポートします。"
 
 #: csv/csvimportexportplugininterface.cpp:42
-#, kde-format
-msgid "Import CSV file..."
+#, fuzzy, kde-format
+#| msgid "Import CSV file..."
+msgid "Import CSV file…"
 msgstr "CSV ファイルをインポート..."
 
 #: csv/csvimportexportplugininterface.cpp:43
@@ -343,13 +345,13 @@ msgstr ""
 #: csv/import/csvimportdialog.cpp:448
 #, kde-format
 msgctxt "@action:button"
-msgid "Apply Template..."
+msgid "Apply Template…"
 msgstr ""
 
 #: csv/import/csvimportdialog.cpp:449
 #, kde-format
 msgctxt "@action:button"
-msgid "Save Template..."
+msgid "Save Template…"
 msgstr ""
 
 #: csv/import/csvimportdialog.cpp:470
@@ -444,7 +446,7 @@ msgstr "連絡先を vCard 4.0 ファイルにエクスポートします。"
 #: gmx/gmximportexportplugininterface.cpp:40
 #, fuzzy, kde-format
 #| msgid "Import GMX file..."
-msgid "Import GMX file..."
+msgid "Import GMX file…"
 msgstr "GMX ファイルをインポート..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
@@ -456,7 +458,7 @@ msgstr "vCard ファイルから連絡先をインポートします。"
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
 #| msgid "Export CSV file..."
-msgid "Export GMX file..."
+msgid "Export GMX file…"
 msgstr "CSV ファイルにエクスポート..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
@@ -479,8 +481,9 @@ msgid "%1 is not a GMX address book file."
 msgstr "連絡先を vCard 4.0 ファイルにエクスポートします。"
 
 #: ldap/ldapimportexportplugininterface.cpp:25
-#, kde-format
-msgid "Import From LDAP server..."
+#, fuzzy, kde-format
+#| msgid "Import From LDAP server..."
+msgid "Import From LDAP server…"
 msgstr "LDAP サーバからインポート..."
 
 #: ldap/ldapimportexportplugininterface.cpp:26
@@ -489,8 +492,9 @@ msgid "Import contacts from an LDAP server."
 msgstr "LDAP サーバから連絡先をインポートします。"
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, kde-format
-msgid "Import LDIF file..."
+#, fuzzy, kde-format
+#| msgid "Import LDIF file..."
+msgid "Import LDIF file…"
 msgstr "LDIF ファイルをインポート..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
@@ -499,8 +503,9 @@ msgid "Import contacts from an LDIF file."
 msgstr "LDIF ファイルから連絡先をインポートします。"
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, kde-format
-msgid "Export LDIF file..."
+#, fuzzy, kde-format
+#| msgid "Export LDIF file..."
+msgid "Export LDIF file…"
 msgstr "LDIF ファイルにエクスポート..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
@@ -682,13 +687,14 @@ msgstr "本当にこの連絡先をアドレス帳にインポートしますか
 #, fuzzy, kde-format
 #| msgid "Import All..."
 msgctxt "@action:button"
-msgid "Import All..."
+msgid "Import All…"
 msgstr "すべてインポート..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, kde-format
-msgid "Import vCard..."
-msgstr "vCard をインポート..."
+#, fuzzy, kde-format
+#| msgid "Import vCard"
+msgid "Import vCard…"
+msgstr "vCard をインポート"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -701,13 +707,15 @@ msgid "Export contacts to a vCard 4.0 file."
 msgstr "連絡先を vCard 4.0 ファイルにエクスポートします。"
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, kde-format
-msgid "Export vCard 4.0..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 4.0..."
+msgid "Export vCard 4.0…"
 msgstr "vCard 4.0 にエクスポート..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, kde-format
-msgid "Export vCard 3.0..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 3.0..."
+msgid "Export vCard 3.0…"
 msgstr "vCard 3.0 にエクスポート..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
@@ -716,8 +724,9 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "連絡先を vCard 3.0 ファイルにエクスポートします。"
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, kde-format
-msgid "Export vCard 2.1..."
+#, fuzzy, kde-format
+#| msgid "Export vCard 2.1..."
+msgid "Export vCard 2.1…"
 msgstr "vCard 2.1 にエクスポート..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
@@ -780,7 +789,7 @@ msgstr "複数のファイルにエクスポート"
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
 #| msgid "Import CSV file..."
-msgid "Import Windows Contact file..."
+msgid "Import Windows Contact file…"
 msgstr "CSV ファイルをインポート..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
@@ -793,3 +802,6 @@ msgstr "LDIF ファイルから連絡先をインポートします。"
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#~ msgid "Import vCard..."
+#~ msgstr "vCard をインポート..."

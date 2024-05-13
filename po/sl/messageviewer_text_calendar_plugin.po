@@ -14,16 +14,16 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2021-11-08 08:16+0100\n"
+"PO-Revision-Date: 2024-05-12 07:17+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.2\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -462,10 +462,9 @@ msgid "Open Attachment"
 msgstr "Odpri prilogo"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "Shrani prilogo kot ..."
+msgstr "Shrani prilogo kot…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -483,10 +482,9 @@ msgid "Accept counter proposal"
 msgstr "Sprejmi nasprotni predlog"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "Ustvari nasprotni predlog ..."
+msgstr "Ustvari nasprotni predlog…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -509,10 +507,9 @@ msgid "Decline counter proposal"
 msgstr "Odkloni nasproten predlog"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "Preveri moj koledar ..."
+msgstr "Preveri moj koledar…"
 
 #: text_calendar.cpp:1376
 #, kde-format

@@ -33,10 +33,9 @@ msgid "Autocorrect Selected Text"
 msgstr "自动更正选中文字"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgid "Insert Email…"
-msgstr "插入电子邮件..."
+msgstr ""
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
@@ -44,10 +43,9 @@ msgid "Select Short URL server:"
 msgstr "选择短链接服务器："
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgid "Insert Short URL…"
-msgstr "插入短链接..."
+msgstr ""
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -75,11 +73,9 @@ msgstr ""
 "“%1”"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgid "Insert Special Character…"
-msgstr "插入特殊字符"
+msgstr ""
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -104,16 +100,14 @@ msgid "Configure quick text"
 msgstr "配置邮件模板"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgid "Import…"
-msgstr "导入..."
+msgstr ""
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
-msgstr "导出..."
+msgstr ""
 
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
@@ -132,16 +126,14 @@ msgid "Variables"
 msgstr "变量"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add Snippet..."
+#, kde-format
 msgid "Add Snippet…"
-msgstr "添加模板..."
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Edit Snippet..."
+#, kde-format
 msgid "Edit Snippet…"
-msgstr "编辑模板..."
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
@@ -149,16 +141,14 @@ msgid "Remove Snippet"
 msgstr "删除模板"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Group..."
+#, kde-format
 msgid "Add Group…"
-msgstr "添加分组..."
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgid "Rename Group…"
-msgstr "重命名分组..."
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
@@ -211,10 +201,9 @@ msgid "General"
 msgstr "通用"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
-msgstr "分享邮件文本..."
+msgstr ""
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -225,9 +214,3 @@ msgstr "缩放：%1%"
 #, kde-format
 msgid "Zoom…"
 msgstr ""
-
-#~ msgid "Insert Special Character..."
-#~ msgstr "插入特殊字符..."
-
-#~ msgid "Zoom..."
-#~ msgstr "缩放..."

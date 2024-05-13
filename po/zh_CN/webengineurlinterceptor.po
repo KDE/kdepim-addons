@@ -42,10 +42,9 @@ msgid "Add…"
 msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgid "Modify…"
-msgstr "修改..."
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
@@ -74,10 +73,9 @@ msgid "Remove List"
 msgstr "移除列表"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "搜索..."
+msgstr ""
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
@@ -112,6 +110,3 @@ msgstr "显示 Adblock 列表"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "已启用广告屏蔽"
-
-#~ msgid "Add..."
-#~ msgstr "添加..."
