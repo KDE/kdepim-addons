@@ -4,7 +4,7 @@
 #
 # Juan Manuel Garcia Molina <juanma@superiodico.net>, 2004, 2007.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2009, 2019, 2021.
+# SPDX-FileCopyrightText: 2008, 2009, 2019, 2021, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 # Franco Mariluis <fmariluis@gmail.com>, 2008.
 # Enrique Matias Sanchez (Quique) <cronopios@gmail.com>, 2009.
 # Javier Vinal <fjvinal@gmail.com>, 2009, 2010, 2011, 2017.
@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:37+0000\n"
-"PO-Revision-Date: 2021-11-06 22:27+0100\n"
+"PO-Revision-Date: 2024-05-12 15:54+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: attendeeselector.cpp:21
@@ -72,7 +72,7 @@ msgstr "Comentario:"
 #: text_calendar.cpp:359
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
-msgstr "No se encontró el adjunto «%1» en la invitación."
+msgstr "No se ha encontrado el adjunto «%1» en la invitación."
 
 #: text_calendar.cpp:374
 #, kde-format
@@ -82,8 +82,8 @@ msgid ""
 "this attachment stored inline instead of a link."
 msgstr ""
 "El adjunto «%1» de la invitación es un enlace web inaccesible desde este "
-"equipo. Por favor, pídale al organizador del evento que reenvíe la "
-"invitación con el adjunto intercalado en lugar de enlazado."
+"equipo. Pídale al organizador del evento que reenvíe la invitación con el "
+"adjunto intercalado en lugar de enlazado."
 
 #: text_calendar.cpp:426
 #, kde-format
@@ -92,9 +92,9 @@ msgid ""
 "choose which of the following addresses is yours,<br/> if any, or select one "
 "of your identities to use in the reply:</qt>"
 msgstr ""
-"<qt>Ninguna de sus identidades coincide con el receptor del mensaje.<br/>por "
-"favor elija cual de las siguientes direcciones es suya,<br/> si alguna lo es "
-"o seleccione una de sus identidades para utilizar en la respuesta:</qt>"
+"<qt>Ninguna de sus identidades coincide con el receptor del mensaje.<br/"
+">Elija cuál de las siguientes direcciones es suya (si alguna lo es)<br/> o "
+"seleccione una de sus identidades para usarla en la respuesta:</qt>"
 
 #: text_calendar.cpp:432
 #, kde-format
@@ -103,7 +103,7 @@ msgid ""
 ">please choose which of the following addresses is yours:</qt>"
 msgstr ""
 "<qt>Algunas de sus identidades coinciden con el destinatario de este mensaje."
-"<br />por favor elija cual de las siguientes direcciones es suya:</qt>"
+"<br />Elija cual de las siguientes direcciones es suya:</qt>"
 
 #: text_calendar.cpp:447
 #, kde-format
@@ -166,7 +166,7 @@ msgstr "Contrapropuesta rehusada: %1"
 #: text_calendar.cpp:728 text_calendar.cpp:734
 #, kde-format
 msgid "\"%1\" occurred already."
-msgstr "«%1» ocurrió ya."
+msgstr "«%1» ya ha ocurrido."
 
 #: text_calendar.cpp:730 text_calendar.cpp:747
 #, kde-format
@@ -181,7 +181,7 @@ msgstr "«%1», ocurre todo el día de hoy, está actualmente en curso."
 #: text_calendar.cpp:745 text_calendar.cpp:757
 #, kde-format
 msgid "\"%1\" is past due."
-msgstr "«%1» venció en el pasado."
+msgstr "«%1» ya ha vencido."
 
 #: text_calendar.cpp:751
 #, kde-format
@@ -201,12 +201,12 @@ msgstr "«%1», ocurre todo el día, ya se ha iniciado."
 #: text_calendar.cpp:775
 #, kde-format
 msgid "Do you still want to accept the task?"
-msgstr "¿Quiere usted todavía aceptar la tarea?"
+msgstr "¿Aún quiere aceptar la tarea?"
 
 #: text_calendar.cpp:777
 #, kde-format
 msgid "Do you still want to accept the invitation?"
-msgstr "¿Quiere usted todavía aceptar la invitación?"
+msgstr "¿Aún quiere aceptar la invitación?"
 
 #: text_calendar.cpp:779 text_calendar.cpp:791
 #, kde-format
@@ -217,13 +217,12 @@ msgstr "Aceptar"
 #: text_calendar.cpp:783
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
-msgstr ""
-"¿Quiere usted todavía enviar una aceptación condicional de la invitación?"
+msgstr "¿Aún quiere enviar una aceptación condicional de la invitación?"
 
 #: text_calendar.cpp:785
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the task?"
-msgstr "¿Quiere usted todavía enviar una aceptación condicional de la tarea?"
+msgstr "¿Aún quiere enviar una aceptación condicional de la tarea?"
 
 #: text_calendar.cpp:787 text_calendar.cpp:795 text_calendar.cpp:799
 #, kde-format
@@ -234,22 +233,22 @@ msgstr "Enviar"
 #: text_calendar.cpp:790
 #, kde-format
 msgid "Do you still want to accept the counter proposal?"
-msgstr "¿Quiere usted todavía aceptar la contrapropuesta?"
+msgstr "¿Aún quiere aceptar la contrapropuesta?"
 
 #: text_calendar.cpp:794
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
-msgstr "¿Quiere usted todavía enviar una contrapropuesta?"
+msgstr "¿Aún quiere enviar una contrapropuesta?"
 
 #: text_calendar.cpp:798
 #, kde-format
 msgid "Do you still want to send a decline response?"
-msgstr "¿Quiere usted todavía enviar una respuesta de rechazo?"
+msgstr "¿Aún quiere enviar una respuesta de rechazo?"
 
 #: text_calendar.cpp:802
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
-msgstr "¿Quiere usted todavía declinar la contrapropuesta?"
+msgstr "¿Aún quiere declinar la contrapropuesta?"
 
 #: text_calendar.cpp:803
 #, kde-format
@@ -260,7 +259,7 @@ msgstr "Declinar"
 #: text_calendar.cpp:805
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
-msgstr "¿Quiere usted todavía grabar esta respuesta en su calendario?"
+msgstr "¿Aún quiere grabar esta respuesta en su calendario?"
 
 #: text_calendar.cpp:806 text_calendar.cpp:842
 #, kde-format
@@ -271,12 +270,12 @@ msgstr "Grabar"
 #: text_calendar.cpp:809
 #, kde-format
 msgid "Do you still want to delegate this task?"
-msgstr "¿Quiere usted todavía delegar esta tarea?"
+msgstr "¿Aún quiere delegar esta tarea?"
 
 #: text_calendar.cpp:811
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
-msgstr "¿Quiere usted todavía delegar esta invitación?"
+msgstr "¿Aún quiere delegar esta invitación?"
 
 #: text_calendar.cpp:813
 #, kde-format
@@ -287,12 +286,12 @@ msgstr "Delegar"
 #: text_calendar.cpp:816
 #, kde-format
 msgid "Do you still want to forward this task?"
-msgstr "¿Quiere usted todavía reenviar esta tarea?"
+msgstr "¿Aún quiere reenviar esta tarea?"
 
 #: text_calendar.cpp:818
 #, kde-format
 msgid "Do you still want to forward this invitation?"
-msgstr "¿Quiere usted todavía reenviar esta invitación?"
+msgstr "¿Aún quiere reenviar esta invitación?"
 
 #: text_calendar.cpp:820
 #, kde-format
@@ -303,7 +302,7 @@ msgstr "Reenviar"
 #: text_calendar.cpp:824
 #, kde-format
 msgid "Do you still want to cancel this task?"
-msgstr "¿Quiere usted todavía cancelar esta tarea?"
+msgstr "¿Aún quiere cancelar esta tarea?"
 
 #: text_calendar.cpp:825 text_calendar.cpp:846
 #, kde-format
@@ -314,7 +313,7 @@ msgstr "Cancelar tarea"
 #: text_calendar.cpp:827
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
-msgstr "¿Quiere usted todavía cancelar esta invitación?"
+msgstr "¿Aún quiere cancelar esta invitación?"
 
 #: text_calendar.cpp:828 text_calendar.cpp:849
 #, kde-format
@@ -331,7 +330,7 @@ msgstr "No cancelar"
 #: text_calendar.cpp:834
 #, kde-format
 msgid "Do you still want to check your calendar?"
-msgstr "¿Quiere usted todavía comprobar su calendario?"
+msgstr "¿Aún quiere comprobar su calendario?"
 
 #: text_calendar.cpp:835
 #, kde-format
@@ -342,22 +341,22 @@ msgstr "Comprobar"
 #: text_calendar.cpp:838
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
-msgstr "¿Quiere usted todavía grabar esta tarea en su calendario?"
+msgstr "¿Aún quiere grabar esta tarea en su calendario?"
 
 #: text_calendar.cpp:840
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
-msgstr "¿Quiere usted todavía grabar esta invitación en su calendario?"
+msgstr "¿Aún quiere grabar esta invitación en su calendario?"
 
 #: text_calendar.cpp:845
 #, kde-format
 msgid "Do you really want to cancel this task?"
-msgstr "¿Quiere usted realmente cancelar esta tarea?"
+msgstr "¿Realmente quiere cancelar esta tarea?"
 
 #: text_calendar.cpp:848
 #, kde-format
 msgid "Do you really want to cancel this invitation?"
-msgstr "¿Quiere usted realmente cancelar esta invitación?"
+msgstr "¿Realmente quiere cancelar esta invitación?"
 
 #: text_calendar.cpp:857
 #, kde-format
@@ -382,7 +381,7 @@ msgstr "Reacción a la invitación"
 #: text_calendar.cpp:901 text_calendar.cpp:1160
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
-msgstr "Usted se olvidó de añadir una propuesta. Por favor, añádala. Gracias"
+msgstr "Se ha olvidado de añadir una propuesta. Añádala ahora. Gracias."
 
 #: text_calendar.cpp:934
 #, kde-format
@@ -407,9 +406,10 @@ msgid ""
 "a response will not be possible.\n"
 "Please create at least 1 writable events calendar and re-sync."
 msgstr ""
-"Usted no dispone de carpetas de calendario escribibles para invitaciones, "
+"No dispone de carpetas de calendario donde poder escribir las invitaciones, "
 "por lo que no es posible almacenar o guardar una respuesta.\n"
-"Por favor, cree al menos un calendario de eventos escribible y resincronice."
+"Cree al menos un calendario de eventos con permiso de escritura y vuelva a "
+"sincronizar."
 
 #: text_calendar.cpp:1210
 #, kde-format
@@ -430,8 +430,8 @@ msgid ""
 "Would you like to send the organizer a message regarding this invitation?\n"
 "Press the [Cancel] button to cancel the recording operation."
 msgstr ""
-"El organizador no espera respuesta a esta invitación, pero usted puede "
-"enviarle un mensaje de correo si lo desea.\n"
+"El organizador no espera respuesta a esta invitación, aunque puede enviarle "
+"un mensaje de correo si lo desea.\n"
 "\n"
 "¿Le gustaría enviar al organizador un mensaje respecto a esta invitación?\n"
 "Pulse el botón [Cancelar] para cancelar la operación de grabación."

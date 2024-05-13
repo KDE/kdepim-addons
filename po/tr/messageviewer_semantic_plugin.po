@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-07 00:51+0000\n"
-"PO-Revision-Date: 2024-02-09 17:46+0300\n"
+"PO-Revision-Date: 2024-05-12 15:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,32 +15,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
 msgid "Send to %1"
-msgstr "Şuraya gönder: %1"
+msgstr "Şuraya Gönder: %1"
 
 #: itineraryurlhandler.cpp:126
 #, kde-format
 msgid "Show calendar at the time of this reservation."
-msgstr "Bu rezervasyon zamanındaki takvimi göster."
+msgstr "Bu rezervasyon zamanındaki takvimi gösterin."
 
 #: itineraryurlhandler.cpp:129
 #, kde-format
 msgid "Add reservation to your calendar."
-msgstr "Rezervasyonu takvimiminize ekle."
+msgstr "Rezervasyonu takvimiminize ekleyin."
 
 #: itineraryurlhandler.cpp:132
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
-msgstr "Rezervasyonu KDE Yol Kılavuzu’na içe aktar."
+msgstr "Rezervasyonu KDE Yol Kılavuzu’na içe aktarın."
 
 #: itineraryurlhandler.cpp:135
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
-msgstr "Bu rezervasyonu KDE Bağlan kullanarak bir aygıta gönder."
+msgstr "Bu rezervasyonu KDE Bağlan kullanarak bir aygıta gönderin."
 
 #: itineraryurlhandler.cpp:206
 #, kde-format

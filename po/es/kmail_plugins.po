@@ -3,13 +3,13 @@
 #
 # Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2015.
 # Javier Vinal <fjvinal@gmail.com>, 2016, 2017.
-# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:38+0000\n"
-"PO-Revision-Date: 2023-09-27 00:48+0200\n"
+"PO-Revision-Date: 2024-05-12 15:44+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -174,12 +174,12 @@ msgstr "Escaneando %1..."
 #: common/antispamwizard.cpp:500
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
-msgstr "Ha finalizado el escaneo de herramientas anti correo basura."
+msgstr "Ha finalizado la exploración de herramientas anti correo basura."
 
 #: common/antispamwizard.cpp:500
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
-msgstr "Ha finalizado el escaneo de herramientas antivirus."
+msgstr "Ha finalizado la exploración de herramientas antivirus."
 
 #: common/antispamwizard.cpp:502
 #, kde-format
@@ -194,7 +194,7 @@ msgstr ""
 #: common/antispamwizard.cpp:505
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
-msgstr "Escaneo completo. No se han encontrado herramientas antivirus."
+msgstr "Exploración terminada. No se han encontrado herramientas antivirus."
 
 #: common/antispamwizard.cpp:527
 #, kde-format

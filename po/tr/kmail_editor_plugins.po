@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2024-03-22 16:14+0300\n"
+"PO-Revision-Date: 2024-05-12 14:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -61,7 +61,7 @@ msgstr "Dizi, bir URL gibi görünmüyor"
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:98
 #, kde-format
 msgid "An error occurred: \"%1\""
-msgstr "Bir hata oluştu: \"%1\""
+msgstr "Bir hata oluştu: “%1”"
 
 #: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
 #: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
@@ -71,7 +71,7 @@ msgid ""
 "'%1'"
 msgstr ""
 "Sunucu hata bildirdi:\n"
-"'%1'"
+"“%1”"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
@@ -168,7 +168,7 @@ msgid ""
 "Do you really want to remove snippet \"%1\"?<nl/><warning>There is no way to "
 "undo the removal.</warning>"
 msgstr ""
-"\"%1\" kırpmasını gerçekten kaldırmak istediinize emin misiniz?<nl/"
+"“%1” kırpmasını gerçekten kaldırmak istediinize emin misiniz?<nl/"
 "><warning>Bu kaldırma geri alınamaz.</warning>"
 
 #: quicktext/quicktexttreewidget.cpp:167
@@ -178,14 +178,14 @@ msgid ""
 "Do you really want to remove group \"%1\" along with all its snippets?<nl/"
 "><warning>There is no way to undo the removal.</warning>"
 msgstr ""
-"\"%1\" grubunu tüm kırpmalarla birlikte kaldırmak istediğinizden emin "
-"misiniz?<nl/><warning>Bu kaldırma geri alınamaz.</warning>"
+"“%1” grubunu tüm kırpmalarla birlikte kaldırmak istediğinizden emin misiniz?"
+"<nl/><warning>Bu kaldırma geri alınamaz.</warning>"
 
 #: quicktext/quicktexttreewidget.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
-msgstr "\"%1\" grubunu gerçekten kaldırmak istiyor musunuz?"
+msgstr "“%1” grubunu kaldırmayı gerçekten istiyor musunuz?"
 
 #: quicktext/quicktextwidget.cpp:68
 #, kde-format

@@ -12,13 +12,13 @@
 #
 # Ambalam <tamilpc@ambalam.com>, 2004.
 # root <root@localhost.localdomain>, 2004.
-# Kishore G <kishore96@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 01:39+0000\n"
-"PO-Revision-Date: 2021-07-30 21:48+0530\n"
+"PO-Revision-Date: 2024-05-12 11:35+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -26,12 +26,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.07.90\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
-#, kde-format
+#, fuzzy, kde-format
 msgid "Search &Directory Service"
-msgstr ""
+msgstr "&அடைவு சேவையில் தேடு"
 
 #: plugins/datenums/configdialog.cpp:28
 #, kde-format
@@ -728,7 +728,7 @@ msgstr "உருவ விகித‍த்தை வைத்திரு"
 msgid ""
 "The thumbnail will be scaled to a rectangle as large as possible inside a "
 "given rectangle, preserving the aspect ratio."
-msgstr ""
+msgstr "உருவ விகிதத்தை மாற்றாமல், முடிந்த அளவுக்கு பெரிதாக்கி சிறுபடத்தை காட்டும்"
 
 #: plugins/picoftheday/configdialog.cpp:59
 #, kde-format
@@ -741,6 +741,8 @@ msgid ""
 "The thumbnail will be scaled to a rectangle as small as possible outside a "
 "given rectangle, preserving the aspect ratio."
 msgstr ""
+"உருவ விகிதத்தை மாற்றாமல், கொடுத்துள்ள செவ்வகத்தை நிரப்பும் வகையில் சிறுபடத்தை "
+"பெரிதாக்கும்."
 
 #: plugins/picoftheday/element.cpp:209
 #, kde-format
@@ -783,7 +785,7 @@ msgstr "வரலாற்றில் இந்த நாள்"
 #, kde-format
 msgctxt "Localized Wikipedia website"
 msgid "https://en.wikipedia.org/wiki/"
-msgstr ""
+msgstr "https://ta.wikipedia.org/wiki/"
 
 #: plugins/thisdayinhistory/thisdayinhistory.cpp:40
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2024-03-08 19:41+0300\n"
+"PO-Revision-Date: 2024-05-12 14:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "Kişiler"
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
 #, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
-msgstr "Yinelenmiş kişi \"%1\" (%2 kez)"
+msgstr "Yinelenmiş kişi “%1” (%2 kez)"
 
 #: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
 #, kde-format
@@ -278,7 +278,7 @@ msgstr "Hiçbir vCard oluşturulmadı."
 #: sendvcards/sendvcardsjob.cpp:134
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
-msgstr "Geçici dosya '%1' oluşturulamıyor"
+msgstr "Geçici dosya “%1” oluşturulamıyor"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
 #, kde-format

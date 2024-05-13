@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-23 00:38+0000\n"
-"PO-Revision-Date: 2024-04-22 21:43+0530\n"
+"PO-Revision-Date: 2024-05-12 12:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -58,18 +58,18 @@ msgstr "காட்டு"
 #: adblock/adblockfiltertreeview.cpp:100
 #, kde-format
 msgid "Update Lists"
-msgstr ""
+msgstr "பட்டியல்களை புதுப்பி"
 
 #: adblock/adblockfiltertreeview.cpp:163
 #, kde-format
 msgid "Do you want to remove '%1' ?"
-msgstr ""
+msgstr "'%1' என்பதை உறுதியாக நீக்க வேண்டுமா?"
 
 #: adblock/adblockfiltertreeview.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
-msgstr ""
+msgstr "பட்டியலை நீக்கு"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
@@ -85,12 +85,12 @@ msgstr ""
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "பெயர்:"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format
 msgid "Url:"
-msgstr ""
+msgstr "முகவரி:"
 
 #: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
 #, kde-format

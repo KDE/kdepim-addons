@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2024-04-22 21:43+0530\n"
+"PO-Revision-Date: 2024-05-12 11:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -30,25 +30,25 @@ msgstr ""
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
 msgid "Select Emails"
-msgstr ""
+msgstr "அஞ்சல்களைத் தேர்ந்தெடு"
 
 #: emaillineedit/emaillineedit.cpp:87
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
-msgstr ""
+msgstr "அஞ்சல்களைத் தேர்ந்தெடுப்பது"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
-msgstr ""
+msgstr "அடைவை உருவாக்குவது"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #, kde-format
 msgid "Error during creating folder: %1"
-msgstr ""
+msgstr "அடைவை உருவாக்குவதில் சிக்கல்: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
 #, kde-format
@@ -59,12 +59,12 @@ msgstr "அடைவை உருவாக்கு..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
-msgstr ""
+msgstr "IMAP அடைவை தேர்வு செய்வது"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:37
 #, kde-format
 msgid "Unable to load folder list"
-msgstr ""
+msgstr "அடைவுப்பட்டியலை ஏற்ற முடியவில்லை"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
 #, kde-format
@@ -79,44 +79,44 @@ msgstr "தேடு..."
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
 msgid "Refresh IMAP Folder List"
-msgstr ""
+msgstr "IMAP அடைவுப்பட்டியலை புதுப்பி"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
 #, kde-format
 msgid "Create Folder"
-msgstr ""
+msgstr "அடைவை உருவாக்குவது"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #, kde-format
 msgid "Folder Name:"
-msgstr ""
+msgstr "அடைவின் பெயர்:"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
 #, kde-format
 msgid "Slashes are not allowed in folder names."
-msgstr ""
+msgstr "அடைவின் பெயரில் சாய்வுக்கோடு இருக்கக்கூடாது."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
 #, kde-format
 msgid "Empty folder name is not supported."
-msgstr ""
+msgstr "அடைவின் பெயர் காலியாக இருக்கக்கூடாது."
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
 #, kde-format
 msgid "Error during loading folders: %1"
-msgstr ""
+msgstr "அடைவுகளை ஏற்றுவதில் சிக்கல்: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Folders"
-msgstr ""
+msgstr "அடைவுகளை ஏற்றுவது"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
 #, kde-format
 msgid "Select IMAP folder"
-msgstr ""
+msgstr "IMAP அடைவை தேர்வு செய்ய விடும்"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format

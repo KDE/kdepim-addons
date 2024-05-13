@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2016, 2018.
-# SPDX-FileCopyrightText: 2019, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2019, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-27 00:42+0200\n"
+"PO-Revision-Date: 2024-05-12 15:41+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "Insertar correo..."
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
 msgid "Select Short URL server:"
-msgstr "Seleccionar URL corto del servidor:"
+msgstr "Seleccionar URL corta del servidor:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
@@ -51,12 +51,12 @@ msgstr "Insertar URL corto..."
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
-msgstr "No se ha detectado conexión de red. No se puede acortar el URL."
+msgstr "No se ha detectado conexión de red. No se puede acortar la URL."
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:92
 #, kde-format
 msgid "String doesn't seem to be a URL"
-msgstr "Parece que la cadena no es un URL"
+msgstr "Parece que la cadena no es una URL"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:98
 #, kde-format

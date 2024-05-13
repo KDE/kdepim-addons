@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:37+0000\n"
-"PO-Revision-Date: 2024-03-22 16:14+0300\n"
+"PO-Revision-Date: 2024-05-12 15:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 
 #: attendeeselector.cpp:21
@@ -71,7 +71,7 @@ msgstr "Açıklama:"
 #: text_calendar.cpp:359
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
-msgstr "Davetiyede \"%1\" adlı bir ek bulunamadı."
+msgstr "Davetiyede “%1” adlı bir ek bulunamadı."
 
 #: text_calendar.cpp:374
 #, kde-format
@@ -80,7 +80,7 @@ msgid ""
 "this computer. Please ask the event organizer to resend the invitation with "
 "this attachment stored inline instead of a link."
 msgstr ""
-"\"%1\" davet etki, bu bilgisayardan erişilemeyen bir web bağlantısı. Lütfen "
+"“%1” davet etki, bu bilgisayardan erişilemeyen bir web bağlantısı. Lütfen "
 "düzenleyiciden bu eki bir bağlantı yerine kaydedilmiş şekilde yeniden "
 "göndermesini isteyin."
 
@@ -165,37 +165,37 @@ msgstr "Kabul Edilmemiş Sayaç Önerisi: %1"
 #: text_calendar.cpp:728 text_calendar.cpp:734
 #, kde-format
 msgid "\"%1\" occurred already."
-msgstr "\"%1\" zaten gerçekleşti."
+msgstr "“%1” halihazırda gerçekleşti."
 
 #: text_calendar.cpp:730 text_calendar.cpp:747
 #, kde-format
 msgid "\"%1\" is currently in-progress."
-msgstr "\"%1\" şu anda sürüyor."
+msgstr "“%1” şu anda sürüyor."
 
 #: text_calendar.cpp:736
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
-msgstr "\"%1\", bugün tüm gün oluyor ve şu anda sürüyor."
+msgstr "“%1”, bugün tüm gün gerçekleşiyor ve şu anda sürüyor."
 
 #: text_calendar.cpp:745 text_calendar.cpp:757
 #, kde-format
 msgid "\"%1\" is past due."
-msgstr "\"%1\" zamanı geçti."
+msgstr "“%1” zamanı geçti."
 
 #: text_calendar.cpp:751
 #, kde-format
 msgid "\"%1\" has already started."
-msgstr "\"%1\" zaten başladı."
+msgstr "“%1” halihazırda başladı."
 
 #: text_calendar.cpp:759
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
-msgstr "\"%1\", bugün tüm gün oluyor ve şu anda sürüyor."
+msgstr "“%1”, bugün tüm gün gerçekleşiyor ve şu anda sürüyor."
 
 #: text_calendar.cpp:763
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
-msgstr "\"%1\", tüm gün oluyor ve başladı."
+msgstr "“%1”, tüm gün gerçekleşiyor ve başladı."
 
 #: text_calendar.cpp:775
 #, kde-format
@@ -543,4 +543,4 @@ msgstr "Daveti takvimimden sil"
 #: text_calendar.cpp:1389
 #, kde-format
 msgid "Open attachment \"%1\""
-msgstr "\"%1\" ekini aç"
+msgstr "“%1” ekini aç"
