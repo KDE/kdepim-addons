@@ -23,7 +23,7 @@ AkonadiDatabaseToolsPluginInterface::~AkonadiDatabaseToolsPluginInterface() = de
 void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
 {
     {
-        auto action = new QAction(i18n("&Akonadi Vacuum…"), this);
+        auto action = new QAction(i18nc("@action", "&Akonadi Vacuum…"), this);
         ac->addAction(QStringLiteral("akonadivacuum"), action);
         connect(action, &QAction::triggered, this, [this]() {
             if (KMessageBox::warningTwoActions(parentWidget(),
@@ -41,7 +41,7 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
         addActionType(type);
     }
     {
-        auto action = new QAction(i18n("&Akonadi Fsck…"), this);
+        auto action = new QAction(i18nc("@action", "&Akonadi Fsck…"), this);
         ac->addAction(QStringLiteral("akonadifsck"), action);
         connect(action, &QAction::triggered, this, [this]() {
             if (KMessageBox::warningTwoActions(

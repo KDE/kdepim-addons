@@ -29,7 +29,7 @@ QList<QAction *> ConfirmBeforeDeletingInterface::actions() const
 void ConfirmBeforeDeletingInterface::createActions(KActionCollection *ac)
 {
     if (ac) {
-        auto mainMenu = new QAction(i18n("Confirm Before Deleting"), this);
+        auto mainMenu = new QAction(i18nc("@action", "Confirm Before Deleting"), this);
         auto menu = new QMenu;
         auto act = new QAction(QIcon::fromTheme(QStringLiteral("settings-configure")), i18n("Configure"), menu);
         connect(act, &QAction::triggered, this, &ConfirmBeforeDeletingInterface::slotConfigure);

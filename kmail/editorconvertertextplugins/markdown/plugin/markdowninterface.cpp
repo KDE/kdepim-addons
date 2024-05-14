@@ -33,7 +33,7 @@ MarkdownInterface::~MarkdownInterface() = default;
 
 void MarkdownInterface::createAction(KActionCollection *ac)
 {
-    mAction = new QAction(i18n("Generate HTML from markdown language."), this);
+    mAction = new QAction(i18nc("@action", "Generate HTML from markdown language."), this);
     mAction->setCheckable(true);
     mAction->setChecked(false);
     ac->addAction(QStringLiteral("generate_markdown"), mAction);
@@ -52,7 +52,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     setStatusBarWidget(mStatusBarLabel);
     mStatusBarLabel->setStateString(i18n("Markdown"), QString());
 
-    mPopupMenuAction = new QAction(i18n("Markdown Action"), this);
+    mPopupMenuAction = new QAction(i18nc("@action", "Markdown Action"), this);
 
     auto mardownMenu = new QMenu(parentWidget());
     mPopupMenuAction->setMenu(mardownMenu);

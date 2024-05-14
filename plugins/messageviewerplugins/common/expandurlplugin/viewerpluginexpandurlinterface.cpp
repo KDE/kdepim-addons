@@ -53,7 +53,7 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExpandurlInterface::feat
 void ViewerPluginExpandurlInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        auto act = new QAction(i18n("Expand URL"), this);
+        auto act = new QAction(i18nc("@action", "Expand URL"), this);
         ac->addAction(QStringLiteral("expand_short_url"), act);
         ac->setShortcutsConfigurable(act, false);
         connect(act, &QAction::triggered, this, &ViewerPluginExpandurlInterface::slotActivatePlugin);

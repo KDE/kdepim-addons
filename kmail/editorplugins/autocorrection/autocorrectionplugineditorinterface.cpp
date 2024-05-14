@@ -25,11 +25,11 @@ void AutoCorrectionPluginEditorInterface::createAction(KActionCollection *ac)
     MessageComposer::PluginActionType type(menu, MessageComposer::PluginActionType::Tools);
     setActionType(type);
 
-    auto action = new QAction(i18n("Autocorrect Full Text"), this);
+    auto action = new QAction(i18nc("@action", "Autocorrect Full Text"), this);
     menu->addAction(action);
     connect(action, &QAction::triggered, this, &AutoCorrectionPluginEditorInterface::slotAutoCorrectAllText);
 
-    action = new QAction(i18n("Autocorrect Selected Text"), this);
+    action = new QAction(i18nc("@action", "Autocorrect Selected Text"), this);
     menu->addAction(action);
     connect(action, &QAction::triggered, this, &AutoCorrectionPluginEditorInterface::slotAutoCorrectSelectedText);
 }

@@ -52,11 +52,11 @@ void AdblockInterceptorInterface::createActions(KActionCollection *ac)
     Q_UNUSED(ac);
     /*
         if (ac) {
-            mShowBlockableItems = new QAction(i18n("Open Blockable Items…"), this);
+            mShowBlockableItems = new QAction(i18nc("@action", "Open Blockable Items…"), this);
             ac->addAction(QStringLiteral("adblock_blockable_items"), mShowBlockableItems);
             connect(mShowBlockableItems, &QAction::triggered, this, &AdblockInterceptorInterface::slotShowBlockableElement);
 
-            mBlockImage = new QAction(i18n("Block Image"), this);
+            mBlockImage = new QAction(i18nc("@action", "Block Image"), this);
             ac->addAction(QStringLiteral("adblock_image"), mBlockImage);
             ac->setShortcutsConfigurable(mBlockImage, false);
             connect(mBlockImage, &QAction::triggered, this, &AdblockInterceptorInterface::slotBlockImage);

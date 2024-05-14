@@ -19,7 +19,7 @@ NonBreakingSpacePluginEditorInterface::~NonBreakingSpacePluginEditorInterface() 
 
 void NonBreakingSpacePluginEditorInterface::createAction(KActionCollection *ac)
 {
-    auto action = new QAction(i18n("Insert Non Breaking Space"), this);
+    auto action = new QAction(i18nc("@action", "Insert Non Breaking Space"), this);
     ac->addAction(QStringLiteral("insert_non_breaking_space"), action);
     ac->setDefaultShortcut(action, Qt::CTRL | Qt::Key_Space);
     connect(action, &QAction::triggered, this, &NonBreakingSpacePluginEditorInterface::slotActivated);

@@ -34,18 +34,18 @@ QuicktextTreeWidget::QuicktextTreeWidget(QuicktextManager *manager, QWidget *par
     connect(mSnippetsManager->model(), &QAbstractItemModel::rowsInserted, this, &QTreeView::expandAll);
     connect(mSnippetsManager->model(), &QAbstractItemModel::rowsRemoved, this, &QTreeView::expandAll);
 
-    mAddSnippetAction = new QAction(i18n("Add Snippet…"), this);
+    mAddSnippetAction = new QAction(i18nc("@action", "Add Snippet…"), this);
     mAddSnippetAction->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-    mEditSnippetAction = new QAction(i18n("Edit Snippet…"), this);
+    mEditSnippetAction = new QAction(i18nc("@action", "Edit Snippet…"), this);
     mEditSnippetAction->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
-    mDeleteSnippetAction = new QAction(i18n("Remove Snippet"), this);
+    mDeleteSnippetAction = new QAction(i18nc("@action", "Remove Snippet"), this);
     mDeleteSnippetAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
 
-    mAddSnippetGroupAction = new QAction(i18n("Add Group…"), this);
+    mAddSnippetGroupAction = new QAction(i18nc("@action", "Add Group…"), this);
     mAddSnippetGroupAction->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-    mEditSnippetGroupAction = new QAction(i18n("Rename Group…"), this);
+    mEditSnippetGroupAction = new QAction(i18nc("@action", "Rename Group…"), this);
     mEditSnippetGroupAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-rename")));
-    mDeleteSnippetGroupAction = new QAction(i18n("Remove Group"), this);
+    mDeleteSnippetGroupAction = new QAction(i18nc("@action", "Remove Group"), this);
     mDeleteSnippetGroupAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
 
     connect(mAddSnippetAction, &QAction::triggered, this, &QuicktextTreeWidget::addSnippet);
