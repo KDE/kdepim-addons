@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-03-04 11:52+0100\n"
+"PO-Revision-Date: 2024-05-13 11:53+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -284,8 +284,7 @@ msgid "Server Name:"
 msgstr "Nomine de Servitor:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 "<qt><a href=\"whatsthis1\">Infomation de formato de argumento format ...</"
@@ -317,9 +316,7 @@ msgid "Configure Open Url With Plugin"
 msgstr "Configura  Aperi Url con Plugin"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Adde regula..."
@@ -331,9 +328,7 @@ msgid "Remove Rule"
 msgstr "Remove regula"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Modifica regula..."
@@ -372,14 +367,12 @@ msgid "Remove Rule"
 msgstr "Remove Regula"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Adde regula..."
+msgstr "Adde regula…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
 msgstr "Modifica regula..."
 
@@ -399,7 +392,7 @@ msgstr "Configura preferentias de Scam"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Adde..."
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

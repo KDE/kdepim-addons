@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-30 10:40+0200\n"
+"PO-Revision-Date: 2024-05-13 23:10+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -35,10 +35,9 @@ msgid "Autocorrect Selected Text"
 msgstr "Автокорекция на избрания текст"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgid "Insert Email…"
-msgstr "Вмъкване на писмо..."
+msgstr "Вмъкване на писмо…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
@@ -46,10 +45,9 @@ msgid "Select Short URL server:"
 msgstr "Адрес на сървър:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgid "Insert Short URL…"
-msgstr "Вмъкване на съкратен URL..."
+msgstr "Вмъкване на съкратен URL…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -77,11 +75,9 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgid "Insert Special Character…"
-msgstr "Вмъкване на специален символ"
+msgstr "Вмъкване на специален символ…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -106,16 +102,14 @@ msgid "Configure quick text"
 msgstr "Настройка на бърз текст"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgid "Import…"
-msgstr "Импортиране..."
+msgstr "Импортиране…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
-msgstr "Експортиране..."
+msgstr "Експортиране…"
 
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
@@ -134,16 +128,14 @@ msgid "Variables"
 msgstr "Променливи"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add Snippet..."
+#, kde-format
 msgid "Add Snippet…"
-msgstr "Добавяне на шаблон..."
+msgstr "Добавяне на фрагмент…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Edit Snippet..."
+#, kde-format
 msgid "Edit Snippet…"
-msgstr "Редактиране на шаблон..."
+msgstr "Редактиране на фрагмент…"
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
@@ -151,16 +143,14 @@ msgid "Remove Snippet"
 msgstr "Премахване на шаблон"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Group..."
+#, kde-format
 msgid "Add Group…"
-msgstr "Добавяне на група..."
+msgstr "Добавяне на група…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgid "Rename Group…"
-msgstr "Преименуване на група..."
+msgstr "Преименуване на група…"
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
@@ -215,10 +205,9 @@ msgid "General"
 msgstr "Основни"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
-msgstr "Споделяне на текст на писмо..."
+msgstr "Споделяне на текст на писмо…"
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -228,7 +217,7 @@ msgstr "Мащабиране: %1%"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom…"
-msgstr ""
+msgstr "Мащабиране…"
 
 #~ msgid "Insert Special Character..."
 #~ msgstr "Вмъкване на специален символ..."

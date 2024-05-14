@@ -3,27 +3,26 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-30 10:39+0200\n"
+"PO-Revision-Date: 2024-05-13 23:02+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
-msgstr "Проверка на Gravatar..."
+msgstr "Проверка на Gravatar…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -83,10 +82,9 @@ msgid "No Gravatar Found."
 msgstr "Не е намерен  Gravatar."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
-msgstr "Сливане на контакти..."
+msgstr "Сливане на контакти…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -143,10 +141,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Търсене и избиране на дублиращи се контакти за сливане"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
-msgstr "Търсене в резултата..."
+msgstr "Търсене в резултата…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -260,10 +257,9 @@ msgid "(Undefined)"
 msgstr "Неопределен"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "Търсене на дублирани контакти..."
+msgstr "Търсене на дублирани контакти…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -271,10 +267,9 @@ msgid "No emails found in selected contacts."
 msgstr "Не са намерени имейли за избраните контакти."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
-msgstr "Изпращане на имейл..."
+msgstr "Изпращане на имейл…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -287,7 +282,6 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Не може да се създаде временен файл \"%1\""
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
-msgstr "Изпращане на vCards..."
+msgstr "Изпращане на vCards…"

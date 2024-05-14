@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# giovanni <g.sora@tiscali.it>, 2021, 2022.
+# giovanni <g.sora@tiscali.it>, 2021, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-07-14 19:11+0200\n"
+"PO-Revision-Date: 2024-05-13 11:47+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -117,9 +117,7 @@ msgid "The message with subject '%1' is %2"
 msgstr "Le message con subjecto '%1' es '%2'"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Adde regula..."
@@ -131,9 +129,7 @@ msgid "Remove Rule"
 msgstr "Remove regula"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Modifica regula..."
@@ -149,14 +145,12 @@ msgid "Pattern"
 msgstr "Patrono"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Adde regula ..."
+msgstr "Adde regula…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
 msgstr "Modifica regula..."
 

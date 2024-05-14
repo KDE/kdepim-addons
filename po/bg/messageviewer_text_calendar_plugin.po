@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Krasimir Aranudov <krasi.arnaudov@gmail.com>, 2007.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-07-21 20:07+0200\n"
+"PO-Revision-Date: 2024-05-13 22:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -457,10 +457,9 @@ msgid "Open Attachment"
 msgstr "Отваряне на прикачен файл?"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "Запазване на прикачения файл като..."
+msgstr "Запазване на прикачения файл като…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -478,10 +477,9 @@ msgid "Accept counter proposal"
 msgstr "Приемане на контрапредложение"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "Създайте контрапредложение ..."
+msgstr "Създайте контрапредложение…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -504,10 +502,9 @@ msgid "Decline counter proposal"
 msgstr "Отклоняване на контрапредложението"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "Провери календара ми..."
+msgstr "Провери календара ми…"
 
 #: text_calendar.cpp:1376
 #, kde-format

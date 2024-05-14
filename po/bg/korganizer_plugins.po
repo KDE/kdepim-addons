@@ -3,13 +3,13 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-07-21 11:02+0200\n"
+"PO-Revision-Date: 2024-05-13 22:52+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
@@ -750,16 +750,14 @@ msgid "Picture Page"
 msgstr "Страница на изображение"
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Loading..."
+#, kde-format
 msgid "Loading…"
-msgstr "Зареждане..."
+msgstr "Зареждане…"
 
 #: plugins/picoftheday/element.cpp:331
-#, fuzzy, kde-format
-#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#, kde-format
 msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
-msgstr "<qt>Зареждане на<i>Изображение на деня</i> ...</qt>"
+msgstr "<qt>Зареждане на<i>Изображение на деня</i>…</qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48
 #, kde-format

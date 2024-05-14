@@ -2,12 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # SPDX-FileCopyrightText: 2017, 2020, 2022, 2023 giovanni <g.sora@tiscali.it>
+# giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 22:37+0200\n"
+"PO-Revision-Date: 2024-05-13 11:46+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,13 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
-msgstr "Verifica Gravatar ..."
+msgstr "Verifica Gravatar …"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -81,8 +81,7 @@ msgid "No Gravatar Found."
 msgstr "On trovava nulle Gravatar."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
 msgstr "Fusiona contactos..."
 
@@ -141,8 +140,7 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Cerca e selige contactos duplicate per fusionar"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
 msgstr "Cerca in exito..."
 
@@ -258,8 +256,7 @@ msgid "(Undefined)"
 msgstr "(Non definite)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
 msgstr "Cerca contactos duplicate..."
 
@@ -269,8 +266,7 @@ msgid "No emails found in selected contacts."
 msgstr "Necun messages de eposta in contactos selectionate."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
 msgstr "Invia un message de e-posta..."
 
@@ -285,7 +281,6 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "File temporanee '%1' non pote esser create"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
 msgstr "Invia vCards..."

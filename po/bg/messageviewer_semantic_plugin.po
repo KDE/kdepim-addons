@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Automatically generated, 2022.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-05-09 19:33+0200\n"
+"PO-Revision-Date: 2024-05-13 22:56+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
@@ -136,10 +136,8 @@ msgid "Add to KDE Itinerary"
 msgstr "Добавяне към пътеводител на KDE"
 
 #: templates/itinerary.html:78
-#, fuzzy
-#| msgid "Send to Device..."
 msgid "Send to Device…"
-msgstr "Изпращане до устройство..."
+msgstr "Изпращане до устройство…"
 
 #: templates/location.html:4
 msgid "Show location on map"

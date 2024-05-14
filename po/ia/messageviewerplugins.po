@@ -2,12 +2,13 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 giovanni <g.sora@tiscali.it>
+# giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 22:41+0200\n"
+"PO-Revision-Date: 2024-05-13 11:54+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -28,8 +29,7 @@ msgid "Expand URL"
 msgstr "Expande URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate..."
+#, kde-format
 msgid "Translate…"
 msgstr "Traduce..."
 
@@ -40,10 +40,9 @@ msgid "&Save"
 msgstr "&Salveguarda"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor..."
+#, kde-format
 msgid "Open &Editor…"
-msgstr "Aperir &Edito ..."
+msgstr "Aperir &Editor ..."
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -96,10 +95,9 @@ msgid "Close the widget for creating new events."
 msgstr "Crea widget per crear nove action de facer (Todo)"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Event…"
-msgstr "Crea  evento"
+msgstr "Crea  evento…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -232,8 +230,7 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Configura Plugin de \"Script Externe\""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Script…"
 msgstr "Adde script..."
 
@@ -243,8 +240,7 @@ msgid "Remove Script"
 msgstr "Remove script"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script..."
+#, kde-format
 msgid "Modify Script…"
 msgstr "Modifica script..."
 
@@ -280,8 +276,7 @@ msgid "Description:"
 msgstr "Description:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments..."
+#, kde-format
 msgid "Add command arguments…"
 msgstr "Adde argumentos de commando..."
 
@@ -291,8 +286,7 @@ msgid "Command Line:"
 msgstr "Linea de commando:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 "<qt><a href=\"whatsthis1\">Infomation de formato de argumento format ...</"
