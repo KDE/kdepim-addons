@@ -29,7 +29,7 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
             if (KMessageBox::warningTwoActions(parentWidget(),
                                                i18n("Do you want to vacuum akonadi database?"),
                                                i18nc("@title:window", "Akonadi Vacuum"),
-                                               KGuiItem(i18n("Vacuum")),
+                                               KGuiItem(i18nc("@action:button", "Vacuum")),
                                                KStandardGuiItem::cancel())
                 == KMessageBox::ButtonCode::PrimaryAction) {
                 mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Vacuum;
@@ -49,7 +49,7 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
                     parentWidget(),
                     i18n("Do you want to fsck akonadi database?"),
                     i18nc("@title:window", "Akonadi Fsck"),
-                    KGuiItem(i18n("Fsck")),
+                    KGuiItem(i18nc("@action:button", "Fsck")),
                     KStandardGuiItem::cancel())
                 == KMessageBox::ButtonCode::PrimaryAction) {
                 mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Fsck;

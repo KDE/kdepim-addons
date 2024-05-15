@@ -1267,8 +1267,8 @@ public:
                                                                        "Would you like to send the organizer a message regarding this invitation?\n"
                                                                        "Press the [Cancel] button to cancel the recording operation."),
                                                                  i18nc("@title:window", "Send Email to Organizer"),
-                                                                 KGuiItem(i18n("Do Not Send")),
-                                                                 KGuiItem(i18n("Send EMail")));
+                                                                 KGuiItem(i18nc("@action:button", "Do Not Send")),
+                                                                 KGuiItem(i18nc("@action:button", "Send EMail")));
 
             switch (response) {
             case KMessageBox::Cancel:
