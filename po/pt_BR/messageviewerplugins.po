@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 13:39-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -25,13 +25,16 @@ msgid "Current URL is not a shortened URL."
 msgstr "A URL atual não é uma URL reduzida."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Expand URL"
+msgctxt "@action"
 msgid "Expand URL"
 msgstr "Expandir URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, fuzzy, kde-format
 #| msgid "Translate..."
+msgctxt "@action"
 msgid "Translate…"
 msgstr "Traduzir..."
 
@@ -337,7 +340,9 @@ msgid "Impossible to start executable"
 msgstr "Não é possível iniciar o executável"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script"
+msgctxt "@action"
 msgid "External Script"
 msgstr "Script externo"
 

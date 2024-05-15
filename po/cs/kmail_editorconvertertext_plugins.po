@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2020-06-17 09:25+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -105,8 +105,8 @@ msgid "Converter Error"
 msgstr ""
 
 #: markdown/plugin/markdowninterface.cpp:36
-#: markdown/plugin/markdownplugin.cpp:48
 #, kde-format
+msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr ""
 
@@ -116,9 +116,11 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Markdown"
+msgctxt "@action"
 msgid "Markdown Action"
-msgstr ""
+msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:60
 #, kde-format
@@ -164,3 +166,8 @@ msgstr "Přidat odkaz"
 #, kde-format
 msgid "Add Image"
 msgstr "Přidat obrázek"
+
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr ""

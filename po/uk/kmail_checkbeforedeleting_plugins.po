@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 09:21+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -78,7 +78,9 @@ msgid "Configure Before Deleting Mail"
 msgstr "Налаштовування дій до вилучення пошти"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Before Deleting"
+msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "Підтверджувати перед вилученням"
 

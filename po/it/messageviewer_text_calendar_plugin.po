@@ -4,14 +4,14 @@
 # Alessandro Astarita <aleast@capri.it>, 2004, 2007.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2004.
 # Dario Panico <Dareus_Persarumrex@fastwebnet.it>, 2008.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2010, 2011, 2012, 2015, 2016, 2017, 2019, 2021.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2010, 2011, 2012, 2015, 2016, 2017, 2019, 2021, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2021-11-30 00:44+0100\n"
+"PO-Revision-Date: 2024-05-12 17:52+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -458,10 +458,9 @@ msgid "Open Attachment"
 msgstr "Apri allegato"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "Salva allegato come..."
+msgstr "Salva allegato come…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -479,10 +478,9 @@ msgid "Accept counter proposal"
 msgstr "Accetta controproposta"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "Crea una controproposta..."
+msgstr "Crea una controproposta…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -505,10 +503,9 @@ msgid "Decline counter proposal"
 msgstr "Declina controproposta"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "Controlla il mio calendario..."
+msgstr "Controlla il mio calendario…"
 
 #: text_calendar.cpp:1376
 #, kde-format

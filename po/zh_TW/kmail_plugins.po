@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-01-22 16:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -28,6 +28,7 @@ msgstr "Akonadi 資料庫工具"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Akonadi Vacuum"
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "Akonadi 資料庫清理"
 
@@ -52,6 +53,7 @@ msgstr "資料庫清理"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Akonadi Fsck"
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "Akonadi Fsck"
 
@@ -87,6 +89,7 @@ msgstr "開始..."
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Spam Wizard"
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "防垃圾信精靈"
 
@@ -94,6 +97,7 @@ msgstr "防垃圾信精靈"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Virus Wizard"
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "防毒精靈"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -23,17 +23,22 @@ msgid "Autocorrect Text"
 msgstr "自动更正文字"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Full Text"
+msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "自动更正全文文字"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Selected Text"
+msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "自动更正选中文字"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
+msgctxt "@action"
 msgid "Insert Email…"
 msgstr ""
 
@@ -44,6 +49,7 @@ msgstr "选择短链接服务器："
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
+msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr ""
 
@@ -73,9 +79,12 @@ msgstr ""
 "“%1”"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Insert Special Character"
+msgctxt "@action"
 msgid "Insert Special Character…"
-msgstr ""
+msgstr "插入特殊字符"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -89,7 +98,9 @@ msgid "Insert"
 msgstr "插入"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Non Breaking Space"
+msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "插入不换行空格"
 
@@ -120,6 +131,12 @@ msgid "Export QuickText"
 msgstr "导出邮件模板"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action"
+msgid "Variables"
+msgstr "变量"
+
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
@@ -127,31 +144,41 @@ msgstr "变量"
 
 #: quicktext/quicktexttreewidget.cpp:37
 #, kde-format
+msgctxt "@action"
 msgid "Add Snippet…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text Snippets"
+msgctxt "@action"
 msgid "Edit Snippet…"
-msgstr ""
+msgstr "模板"
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Snippet"
+msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "删除模板"
 
 #: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
+msgctxt "@action"
 msgid "Add Group…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@action"
 msgid "Rename Group…"
-msgstr ""
+msgstr "删除分组"
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@action"
 msgid "Remove Group"
 msgstr "删除分组"
 

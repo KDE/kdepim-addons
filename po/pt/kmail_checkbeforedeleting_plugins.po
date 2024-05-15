@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2022-05-16 13:58+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -73,7 +73,9 @@ msgid "Configure Before Deleting Mail"
 msgstr "Configurar Antes de Apagar o Correio"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Before Deleting"
+msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "Configurar Antes de Apagar"
 

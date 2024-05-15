@@ -5,9 +5,9 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-03-06 12:31+0100\n"
+"PO-Revision-Date: 2024-05-13 09:46+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: fr\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -285,8 +285,7 @@ msgid "Server Name:"
 msgstr "Nom du serveur :"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 "<qt><a href=\"whatsthis1\">Informations sur le format de l'argument...</a></"
@@ -319,9 +318,7 @@ msgid "Configure Open Url With Plugin"
 msgstr "Configurer l'ouverture d'URL avec un module externe"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Ajouter une règle..."
@@ -333,9 +330,7 @@ msgid "Remove Rule"
 msgstr "Supprimer une règle"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Modifier une règle..."
@@ -374,14 +369,12 @@ msgid "Remove Rule"
 msgstr "Supprimer une règle"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
 msgstr "Ajouter une règle..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
 msgstr "Modifier une règle..."
 
@@ -401,7 +394,7 @@ msgstr "Configurer les paramètres de fraude"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Ajouter…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

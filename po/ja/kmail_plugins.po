@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2015-12-10 23:47-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -22,6 +22,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr ""
 
@@ -44,6 +45,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr ""
 
@@ -76,11 +78,13 @@ msgstr ""
 
 #: antispamplugin/antispamplugininterface.cpp:22
 #, kde-format
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr ""
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
 #, kde-format
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr ""
 

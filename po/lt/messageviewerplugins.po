@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2018-08-16 09:12+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -25,11 +25,13 @@ msgstr ""
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
 #, kde-format
+msgctxt "@action"
 msgid "Expand URL"
 msgstr ""
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
+msgctxt "@action"
 msgid "Translate…"
 msgstr ""
 
@@ -317,6 +319,7 @@ msgstr ""
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
 #, kde-format
+msgctxt "@action"
 msgid "External Script"
 msgstr ""
 

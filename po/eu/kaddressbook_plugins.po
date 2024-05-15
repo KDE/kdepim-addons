@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 22:27+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -195,12 +195,16 @@ msgstr ""
 "nahi duzu?"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Customize"
+msgctxt "@action"
 msgid "Customize"
 msgstr "Neurrira egokitu"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Automatic Merging"
+msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "Bateratze automatikoa"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2022-06-21 17:59+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -23,18 +23,23 @@ msgid "Autocorrect Text"
 msgstr "Mətnin avtomatik düzəlişi"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Full Text"
+msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Tam mətnin avtomatik düzəlişi"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Selected Text"
+msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Seçilmiş mətnin avtomatik düzəlişi"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, fuzzy, kde-format
 #| msgid "Insert Email..."
+msgctxt "@action"
 msgid "Insert Email…"
 msgstr "E-poçt daxil edin..."
 
@@ -46,6 +51,7 @@ msgstr "Serverin qısa ünvanını seçin:"
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, fuzzy, kde-format
 #| msgid "Insert Short URL..."
+msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Qısa URL daxil edin..."
 
@@ -78,6 +84,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Insert Special Character"
+msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Xüsusi simvollar daxil edin"
 
@@ -93,7 +100,9 @@ msgid "Insert"
 msgstr "Daxil edin"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Non Breaking Space"
+msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Qırılmayan boşluq əlavə edin"
 
@@ -126,6 +135,12 @@ msgid "Export QuickText"
 msgstr "Sürətli mətni ixrac edin"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action"
+msgid "Variables"
+msgstr "Dəyişənlər"
+
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
@@ -134,34 +149,42 @@ msgstr "Dəyişənlər"
 #: quicktext/quicktexttreewidget.cpp:37
 #, fuzzy, kde-format
 #| msgid "Add Snippet..."
+msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Fraqment əlavə edin..."
 
 #: quicktext/quicktexttreewidget.cpp:39
 #, fuzzy, kde-format
 #| msgid "Edit Snippet..."
+msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Fraqmentə düzəliş edin..."
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Snippet"
+msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Fraqmenti silin"
 
 #: quicktext/quicktexttreewidget.cpp:44
 #, fuzzy, kde-format
 #| msgid "Add Group..."
+msgctxt "@action"
 msgid "Add Group…"
 msgstr "Qrup əlavə edin..."
 
 #: quicktext/quicktexttreewidget.cpp:46
 #, fuzzy, kde-format
 #| msgid "Rename Group..."
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Qrupun adını dəyişdirin..."
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@action"
 msgid "Remove Group"
 msgstr "Qrupu silin`"
 

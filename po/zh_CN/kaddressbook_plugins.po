@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -187,12 +187,16 @@ msgid ""
 msgstr "一些信息可能会丢失。您想要继续，还是自定义您想要合并的部分？"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Customize"
+msgctxt "@action"
 msgid "Customize"
 msgstr "自定义"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Automatic Merging"
+msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "自动合并"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 22:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -29,6 +29,7 @@ msgstr "«Akonadi»ren datu-baserako tresna"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, fuzzy, kde-format
 #| msgid "Akonadi Vacuum"
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "Akonadi Vacuum"
 
@@ -52,6 +53,7 @@ msgstr "Vacuum"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, fuzzy, kde-format
 #| msgid "Akonadi Fsck"
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "Akonadi Fsck"
 
@@ -87,6 +89,7 @@ msgstr "Hasi..."
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Spam Wizard"
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "«Spam»aren aurkako morroia"
 
@@ -94,6 +97,7 @@ msgstr "«Spam»aren aurkako morroia"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Virus Wizard"
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Birusen aurkako morroia"
 

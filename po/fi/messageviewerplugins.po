@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-11-15 18:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -24,13 +24,16 @@ msgid "Current URL is not a shortened URL."
 msgstr "Nykyinen osoite ei ole lyhytosoite."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Expand URL"
+msgctxt "@action"
 msgid "Expand URL"
 msgstr "Laajenna osoite"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, fuzzy, kde-format
 #| msgid "Translate..."
+msgctxt "@action"
 msgid "Translate…"
 msgstr "Käännä…"
 
@@ -334,7 +337,9 @@ msgid "Impossible to start executable"
 msgstr "Ohjelmatiedostoa on mahdotonta käynnistää."
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script"
+msgctxt "@action"
 msgid "External Script"
 msgstr "Ulkoinen skripti"
 

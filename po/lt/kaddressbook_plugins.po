@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2018-10-12 04:03+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -189,11 +189,13 @@ msgstr ""
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
 #, kde-format
+msgctxt "@action"
 msgid "Customize"
 msgstr ""
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
 #, kde-format
+msgctxt "@action"
 msgid "Automatic Merging"
 msgstr ""
 

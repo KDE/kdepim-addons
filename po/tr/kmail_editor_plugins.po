@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 14:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -24,17 +24,23 @@ msgid "Autocorrect Text"
 msgstr "Metni Kendiliğinden Düzelt"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Full Text"
+msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Tüm Metni Kendiliğinden Düzelt"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Selected Text"
+msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Seçili Metni Kendiliğinden Düzelt"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Email…"
+msgctxt "@action"
 msgid "Insert Email…"
 msgstr "E-posta Ekle…"
 
@@ -44,7 +50,9 @@ msgid "Select Short URL server:"
 msgstr "Kısa URL sunucusu seç:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Short URL…"
+msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Kısa URL Ekle…"
 
@@ -74,7 +82,9 @@ msgstr ""
 "“%1”"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Special Character…"
+msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Özel Karakter Ekle…"
 
@@ -90,7 +100,9 @@ msgid "Insert"
 msgstr "Ekle"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Non Breaking Space"
+msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Ayrılamaz Boşluk Ekle"
 
@@ -121,38 +133,56 @@ msgid "Export QuickText"
 msgstr "Tez Metin Dışa Aktar"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action"
+msgid "Variables"
+msgstr "Değişkenler"
+
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr "Değişkenler"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Snippet…"
+msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Kırpma Ekle…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Snippet…"
+msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Kırpmayı Düzenle…"
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Snippet"
+msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Kırpma Kaldır"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Group…"
+msgctxt "@action"
 msgid "Add Group…"
 msgstr "Grup Ekle…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group…"
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Grubu Yeniden Adlandır…"
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@action"
 msgid "Remove Group"
 msgstr "Grubu Kaldır"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2022-07-22 16:26+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -23,13 +23,16 @@ msgid "Current URL is not a shortened URL."
 msgstr "Cari URL qsaldılmış URL deyil"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Expand URL"
+msgctxt "@action"
 msgid "Expand URL"
 msgstr "URL-u genişləndirin"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, fuzzy, kde-format
 #| msgid "Translate..."
+msgctxt "@action"
 msgid "Translate…"
 msgstr "Tərcümə..."
 
@@ -337,7 +340,9 @@ msgid "Impossible to start executable"
 msgstr "İcra faylını başlatmaq mümkün deyil"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script"
+msgctxt "@action"
 msgid "External Script"
 msgstr "Xarici skript"
 

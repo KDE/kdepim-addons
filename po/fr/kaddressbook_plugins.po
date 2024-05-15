@@ -1,29 +1,28 @@
-# SPDX-FileCopyrightText: 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-28 18:07+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"PO-Revision-Date: 2024-05-13 11:31+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
-msgstr "Vérifier le Gravatar..."
+msgstr "Vérifier Gravatar..."
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -83,8 +82,7 @@ msgid "No Gravatar Found."
 msgstr "Pas de Gravatar trouvé."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
 msgstr "Fusionner des contacts..."
 
@@ -145,10 +143,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Rechercher et sélectionner des contacts dupliqués à fusionner"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
-msgstr "Rechercher dans le résultat."
+msgstr "Rechercher dans le résultat..."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -196,12 +193,16 @@ msgstr ""
 "personnaliser ce que vous voulez fusionner ?"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Customize"
+msgctxt "@action"
 msgid "Customize"
 msgstr "Personnaliser"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Automatic Merging"
+msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "Fusion automatique"
 
@@ -262,10 +263,9 @@ msgid "(Undefined)"
 msgstr "(Non défini)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "Sélectionner des contacts doublons..."
+msgstr "Rechercher des contacts en doublons..."
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -273,8 +273,7 @@ msgid "No emails found in selected contacts."
 msgstr "Pas d'adresse électronique trouvée dans les contacts sélectionnés."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
 msgstr "Envoyer un courriel..."
 
@@ -289,10 +288,9 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Impossible de créer le fichier temporaire « %1 »"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
-msgstr "Envoyer des vCard..."
+msgstr "Envoyer des éléments « vCard »..."
 
 #~ msgid "Use Libravatar"
 #~ msgstr "Utiliser Libgravatar"

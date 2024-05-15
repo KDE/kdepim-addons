@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-02-12 09:01+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -108,8 +108,9 @@ msgid "Converter Error"
 msgstr "Bihurtzailearen errorea"
 
 #: markdown/plugin/markdowninterface.cpp:36
-#: markdown/plugin/markdownplugin.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Generate HTML from markdown language."
+msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Sortu HTML «markdown» lengoaiatik."
 
@@ -119,7 +120,9 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Markdown Action"
+msgctxt "@action"
 msgid "Markdown Action"
 msgstr "«Markdown» ekintza"
 
@@ -167,3 +170,8 @@ msgstr "Gehitu esteka"
 #, kde-format
 msgid "Add Image"
 msgstr "Gehitu irudia"
+
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr "Sortu HTML «markdown» lengoaiatik."

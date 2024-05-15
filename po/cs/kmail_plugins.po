@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-11-03 09:07+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -27,6 +27,7 @@ msgstr "Nástroj databáze Akonadi"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Akonadi Vacuum"
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "Akonadi Vacuum"
 
@@ -51,6 +52,7 @@ msgstr "Vacuum"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Akonadi Fsck"
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "Akonadi Fsck"
 
@@ -86,6 +88,7 @@ msgstr "Spustit..."
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Spam Wizard"
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Průvodce nastavením antispamu"
 
@@ -93,6 +96,7 @@ msgstr "Průvodce nastavením antispamu"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Virus Wizard"
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Průvodce nastavením antiviru"
 

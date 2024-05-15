@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-11-14 13:37-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -29,6 +29,7 @@ msgstr "Ferramenta de banco de dados do Akonadi"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, fuzzy, kde-format
 #| msgid "Akonadi Vacuum"
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "Limpar o Akonadi"
 
@@ -52,6 +53,7 @@ msgstr "Limpar"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, fuzzy, kde-format
 #| msgid "Akonadi Fsck"
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "Fsck no Akonadi"
 
@@ -87,6 +89,7 @@ msgstr "Iniciar..."
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Spam Wizard"
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Assistente de anti-spam"
 
@@ -94,6 +97,7 @@ msgstr "Assistente de anti-spam"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Virus Wizard"
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Assistente de antivírus"
 

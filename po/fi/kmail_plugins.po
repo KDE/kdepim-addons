@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-11-15 18:25+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -27,6 +27,7 @@ msgstr "Akonadi-tietokantatyökalu"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, fuzzy, kde-format
 #| msgid "Akonadi Vacuum"
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "Akonadin siivous"
 
@@ -50,6 +51,7 @@ msgstr "Siivoa"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, fuzzy, kde-format
 #| msgid "Akonadi Fsck"
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "Akonadin fsck"
 
@@ -85,6 +87,7 @@ msgstr "Aloita…"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Spam Wizard"
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Opastettu roskapostin suodatus"
 
@@ -92,6 +95,7 @@ msgstr "Opastettu roskapostin suodatus"
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Anti-Virus Wizard"
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Opastettu virusten suodatus"
 

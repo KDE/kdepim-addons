@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-03-02 20:50+0100\n"
+"PO-Revision-Date: 2024-05-12 17:52+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -283,12 +283,10 @@ msgid "Server Name:"
 msgstr "Nome del server:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
-"<qt><a href=\"whatsthis1\">Informazioni sul formato degli argomenti...</a></"
-"qt>"
+"<qt><a href=\"whatsthis1\">Informazioni sul formato degli argomenti…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -316,12 +314,10 @@ msgid "Configure Open Url With Plugin"
 msgstr "Configura la finestra di apertura URL con l'estensione"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "Aggiungi regola..."
+msgstr "Aggiungi regola…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
@@ -330,12 +326,10 @@ msgid "Remove Rule"
 msgstr "Rimuovi regola"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "Modifica regola..."
+msgstr "Modifica regola…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
@@ -371,16 +365,14 @@ msgid "Remove Rule"
 msgstr "Rimuovi regola"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Aggiungi regola..."
+msgstr "Aggiungi regola…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "Modifica regola..."
+msgstr "Modifica regola…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -398,7 +390,7 @@ msgstr "Configura impostazioni anti-truffe"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Aggiungi…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

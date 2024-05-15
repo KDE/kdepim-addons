@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2020-07-31 19:16+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -25,6 +25,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr ""
 
@@ -47,6 +48,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr ""
 
@@ -80,12 +82,14 @@ msgstr ""
 #: antispamplugin/antispamplugininterface.cpp:22
 #, fuzzy, kde-format
 #| msgid "Anti-Spam Wizard"
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Anti-spam-guide"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
 #, fuzzy, kde-format
 #| msgid "Anti-Virus Wizard"
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Anti-virus guide"
 

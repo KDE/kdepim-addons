@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 01:11+0200\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"PO-Revision-Date: 2024-05-12 17:52+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,15 +23,18 @@ msgid "Current URL is not a shortened URL."
 msgstr "L'URL attuale non è un URL abbreviato."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Expand URL"
+msgctxt "@action"
 msgid "Expand URL"
 msgstr "Espandi URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, fuzzy, kde-format
-#| msgid "Translate..."
+#| msgid "Translate…"
+msgctxt "@action"
 msgid "Translate…"
-msgstr "Traduci..."
+msgstr "Traduci…"
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
 #: createtodoplugin/todoedit.cpp:42
@@ -40,10 +43,9 @@ msgid "&Save"
 msgstr "&Salva"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor..."
+#, kde-format
 msgid "Open &Editor…"
-msgstr "Apri &editor..."
+msgstr "Apri &editor…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -96,10 +98,9 @@ msgid "Close the widget for creating new events."
 msgstr "Chiude la finestra per la creazione di nuovi eventi."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Event…"
-msgstr "Crea evento"
+msgstr "Crea evento…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -235,10 +236,9 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Configura l'estensione «Script esterno»"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Script…"
-msgstr "Aggiungi script..."
+msgstr "Aggiungi script…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -246,10 +246,9 @@ msgid "Remove Script"
 msgstr "Rimuovi script"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script..."
+#, kde-format
 msgid "Modify Script…"
-msgstr "Modifica script..."
+msgstr "Modifica script…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -283,10 +282,9 @@ msgid "Description:"
 msgstr "Descrizione:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments..."
+#, kde-format
 msgid "Add command arguments…"
-msgstr "Aggiungi argomenti del comando..."
+msgstr "Aggiungi argomenti del comando…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -294,12 +292,10 @@ msgid "Command Line:"
 msgstr "Riga di comando:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
-"<qt><a href=\"whatsthis1\">Informazioni sul formato degli argomenti...</a></"
-"qt>"
+"<qt><a href=\"whatsthis1\">Informazioni sul formato degli argomenti…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -341,7 +337,9 @@ msgid "Impossible to start executable"
 msgstr "Impossibile avviare l'eseguibile"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script"
+msgctxt "@action"
 msgid "External Script"
 msgstr "Script esterno"
 

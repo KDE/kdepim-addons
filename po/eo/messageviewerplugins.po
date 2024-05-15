@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 10:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -24,12 +24,16 @@ msgid "Current URL is not a shortened URL."
 msgstr "Nuna URL ne estas mallongigita URL."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Expand URL"
+msgctxt "@action"
 msgid "Expand URL"
 msgstr "Vastigi URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Translate…"
+msgctxt "@action"
 msgid "Translate…"
 msgstr "Traduki…"
 
@@ -327,7 +331,9 @@ msgid "Impossible to start executable"
 msgstr "Neeble komenci ruleblan"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script"
+msgctxt "@action"
 msgid "External Script"
 msgstr "Ekstera Skripto"
 

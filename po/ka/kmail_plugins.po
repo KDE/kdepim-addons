@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 03:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -25,7 +25,9 @@ msgid "Akonadi Database Tool"
 msgstr "Akonadi ბაზების მმართველი"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Akonadi Vacuum…"
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "&Akonadi-ის მომტვერსასრუტება…"
 
@@ -47,7 +49,9 @@ msgid "Vacuum"
 msgstr "მომტვერსასრუტება"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Akonadi Fsck…"
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "&Akonadi-ის Fsck…"
 
@@ -79,12 +83,16 @@ msgid "Start…"
 msgstr "გაშვება…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Anti-Spam Wizard…"
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "&ანტისპამის ოსტატი…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Anti-Virus Wizard…"
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "ანტივირუსის მორგება…"
 

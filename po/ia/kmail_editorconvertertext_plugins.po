@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2020-02-12 16:14+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-it@kde.org>\n"
@@ -105,8 +105,9 @@ msgid "Converter Error"
 msgstr "Error de convertitor"
 
 #: markdown/plugin/markdowninterface.cpp:36
-#: markdown/plugin/markdownplugin.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Generate HTML from markdown language."
+msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Genera HTML ex linguage de markdown."
 
@@ -116,7 +117,9 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Markdown Action"
+msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Action de Markdown"
 
@@ -164,3 +167,8 @@ msgstr "Adde ligamine"
 #, kde-format
 msgid "Add Image"
 msgstr "Adde imagine"
+
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr "Genera HTML ex linguage de markdown."

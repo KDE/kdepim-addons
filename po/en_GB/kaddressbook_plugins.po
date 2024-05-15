@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2022-09-10 10:57+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -192,12 +192,16 @@ msgstr ""
 "want to merge?"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Customize"
+msgctxt "@action"
 msgid "Customize"
 msgstr "Customise"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Automatic Merging"
+msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "Automatic Merging"
 

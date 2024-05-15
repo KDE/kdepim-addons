@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the kaddressbook package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2019, 2022, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2016, 2019, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 01:13+0200\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"PO-Revision-Date: 2024-05-12 17:49+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -18,10 +18,9 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
-msgstr "Controlla il Gravatar..."
+msgstr "Controlla il Gravatar…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -81,10 +80,9 @@ msgid "No Gravatar Found."
 msgstr "Nessun Gravatar trovato."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
-msgstr "Unisci contatti..."
+msgstr "Unisci contatti…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -141,10 +139,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Cerca e seleziona contatti duplicati da unire"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
-msgstr "Cerca nei risultati..."
+msgstr "Cerca nei risultati…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -192,12 +189,16 @@ msgstr ""
 "personalizzare gli elementi da unire?"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Customize"
+msgctxt "@action"
 msgid "Customize"
 msgstr "Personalizza"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Automatic Merging"
+msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "Unione automatica"
 
@@ -258,10 +259,9 @@ msgid "(Undefined)"
 msgstr "(Non definito)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "Cerca contatti duplicati..."
+msgstr "Cerca contatti duplicati…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -269,10 +269,9 @@ msgid "No emails found in selected contacts."
 msgstr "Nessun messaggio di posta nei contatti selezionati."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
-msgstr "Invia un messaggio di posta elettronica..."
+msgstr "Invia un messaggio di posta elettronica…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -285,10 +284,9 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Impossibile creare il file temporaneo «%1»"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
-msgstr "Invia vCard..."
+msgstr "Invia vCard…"
 
 #~ msgid "Use Libravatar"
 #~ msgstr "Usa Libravatar"

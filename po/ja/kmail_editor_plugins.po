@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2016-06-20 21:04-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -21,16 +21,19 @@ msgstr ""
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
 #, kde-format
+msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr ""
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
 #, kde-format
+msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
+msgctxt "@action"
 msgid "Insert Email…"
 msgstr ""
 
@@ -41,6 +44,7 @@ msgstr ""
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
+msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr ""
 
@@ -69,6 +73,7 @@ msgstr ""
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
+msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr ""
 
@@ -85,6 +90,7 @@ msgstr ""
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
 #, kde-format
+msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr ""
 
@@ -115,6 +121,11 @@ msgid "Export QuickText"
 msgstr ""
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
+#, kde-format
+msgctxt "@action"
+msgid "Variables"
+msgstr ""
+
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
@@ -122,31 +133,37 @@ msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:37
 #, kde-format
+msgctxt "@action"
 msgid "Add Snippet…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:39
 #, kde-format
+msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
+msgctxt "@action"
 msgid "Remove Snippet"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
+msgctxt "@action"
 msgid "Add Group…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
+msgctxt "@action"
 msgid "Remove Group"
 msgstr ""
 

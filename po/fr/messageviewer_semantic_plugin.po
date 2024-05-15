@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: messageviewer_semantic_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-04-25 14:52+0200\n"
+"PO-Revision-Date: 2024-05-13 11:28+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -138,10 +138,8 @@ msgid "Add to KDE Itinerary"
 msgstr "Ajouter à KDE Itinerary"
 
 #: templates/itinerary.html:78
-#, fuzzy
-#| msgid "Send to Device..."
 msgid "Send to Device…"
-msgstr "Envoyer vers un appareil..."
+msgstr "Envoyer vers un périphérique..."
 
 #: templates/location.html:4
 msgid "Show location on map"

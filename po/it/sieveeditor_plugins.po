@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the sieveeditor package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2018, 2019, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2018, 2019, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 01:11+0200\n"
+"PO-Revision-Date: 2024-05-13 09:08+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -18,15 +18,14 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts..."
+#, kde-format
 msgid "Click on button for selecting contacts…"
-msgstr "Fai clic sul pulsante per selezionare dei contatti..."
+msgstr "Fai clic sul pulsante per selezionare dei contatti…"
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
@@ -52,10 +51,9 @@ msgid "Error during creating folder: %1"
 msgstr "Errore nella creazione della cartella: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgid "Create Folder…"
-msgstr "Crea cartella"
+msgstr "Crea cartella…"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -69,16 +67,14 @@ msgid "Unable to load folder list"
 msgstr "Impossibile caricare l'elenco delle cartelle"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, fuzzy, kde-format
-#| msgid "Loading in progress..."
+#, kde-format
 msgid "Loading in progress…"
-msgstr "Caricamento in corso..."
+msgstr "Caricamento in corso…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "Cerca..."
+msgstr "Cerca…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
@@ -123,10 +119,9 @@ msgid "Select IMAP folder"
 msgstr "Seleziona cartella IMAP"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder..."
+#, kde-format
 msgid "Click on button for selecting folder…"
-msgstr "Fai clic sul pulsante per selezionare una cartella..."
+msgstr "Fai clic sul pulsante per selezionare una cartella…"
 
 #~ msgid "..."
 #~ msgstr "..."

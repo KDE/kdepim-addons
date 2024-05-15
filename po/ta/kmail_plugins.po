@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 12:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -25,6 +25,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr ""
 
@@ -47,6 +48,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr ""
 
@@ -79,11 +81,13 @@ msgstr ""
 
 #: antispamplugin/antispamplugininterface.cpp:22
 #, kde-format
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr ""
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
 #, kde-format
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 07:48+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -26,17 +26,23 @@ msgid "Autocorrect Text"
 msgstr "Samodejno popravi besedilo"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Full Text"
+msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Samodejno popravi celotno besedilo"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Selected Text"
+msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Samodejno popravi izbrano besedilo"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Email…"
+msgctxt "@action"
 msgid "Insert Email…"
 msgstr "Vstavi e-pošto…"
 
@@ -46,7 +52,9 @@ msgid "Select Short URL server:"
 msgstr "Izberite strežnik za krajšanje URL-jev:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Short URL…"
+msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Vstavi kratek URL…"
 
@@ -77,7 +85,9 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Special Character…"
+msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Vstavi poseben znak…"
 
@@ -93,7 +103,9 @@ msgid "Insert"
 msgstr "Vstavi"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Non Breaking Space"
+msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Vstavi nelomljiv presledek"
 
@@ -124,38 +136,56 @@ msgid "Export QuickText"
 msgstr "Izvozi hitro besedilo"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action"
+msgid "Variables"
+msgstr "Spremenljivke"
+
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr "Spremenljivke"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Snippet…"
+msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Dodaj košček programske kode…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Snippet…"
+msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Uredi košček programske kode…"
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Snippet"
+msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Odstrani košček programske kode"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Group…"
+msgctxt "@action"
 msgid "Add Group…"
 msgstr "Dodaj skupino…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group…"
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Preimenuj skupino…"
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@action"
 msgid "Remove Group"
 msgstr "Odstrani skupino"
 

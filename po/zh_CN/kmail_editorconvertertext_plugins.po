@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -106,8 +106,9 @@ msgid "Converter Error"
 msgstr "转换器出错"
 
 #: markdown/plugin/markdowninterface.cpp:36
-#: markdown/plugin/markdownplugin.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Generate HTML from markdown language."
+msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "从 Markdown 语言生成 HTML"
 
@@ -117,7 +118,9 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Markdown Action"
+msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Markdown 操作"
 
@@ -165,3 +168,8 @@ msgstr "添加链接"
 #, kde-format
 msgid "Add Image"
 msgstr "添加图片"
+
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr "从 Markdown 语言生成 HTML"

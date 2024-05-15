@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-02-10 13:46+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -36,13 +36,16 @@ msgid "Current URL is not a shortened URL."
 msgstr "Текущая ссылка не является сокращённой."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Expand URL"
+msgctxt "@action"
 msgid "Expand URL"
 msgstr "Раскрыть URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, fuzzy, kde-format
 #| msgid "Translate..."
+msgctxt "@action"
 msgid "Translate…"
 msgstr "Перевести..."
 
@@ -352,7 +355,9 @@ msgid "Impossible to start executable"
 msgstr "Не удалось запустить исполняемый файл."
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script"
+msgctxt "@action"
 msgid "External Script"
 msgstr "Внешний сценарий"
 

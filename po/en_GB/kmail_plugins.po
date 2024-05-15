@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2022-12-31 15:24+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -26,6 +26,7 @@ msgstr "Akonadi Database Tool"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, fuzzy, kde-format
 #| msgid "Akonadi Vacuum"
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "Akonadi Vacuum"
 
@@ -49,6 +50,7 @@ msgstr "Vacuum"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, fuzzy, kde-format
 #| msgid "Akonadi Fsck"
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "Akonadi Fsck"
 
@@ -83,12 +85,14 @@ msgstr "Start..."
 #: antispamplugin/antispamplugininterface.cpp:22
 #, fuzzy, kde-format
 #| msgid "Anti-Spam Wizard"
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Anti-Spam Wizard"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
 #, fuzzy, kde-format
 #| msgid "Anti-Virus Wizard"
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Anti-Virus Wizard"
 

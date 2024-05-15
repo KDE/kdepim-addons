@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the its source package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2019, 2020, 2021, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2019, 2020, 2021, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 01:12+0200\n"
+"PO-Revision-Date: 2024-05-12 17:46+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -172,7 +172,7 @@ msgstr "Nome di dominio rifiutati"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "A&ggiungi…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -182,10 +182,9 @@ msgstr "Ri&muovi"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mod&ify..."
+#, kde-format
 msgid "Mod&ify…"
-msgstr "Mod&ifica..."
+msgstr "Mod&ifica…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #: confirm-address/confirmaddressemailentrydialog.cpp:21

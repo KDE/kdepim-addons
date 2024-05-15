@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdepim-addons package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-27 01:11+0200\n"
+"PO-Revision-Date: 2024-05-12 17:53+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -130,10 +130,8 @@ msgstr ""
 "messaggi di posta elettronica."
 
 #: templates/pgpkeymessagepart.html:23
-#, fuzzy
-#| msgid "Loading key details..."
 msgid "Loading key details…"
-msgstr "Caricamento dei dettagli della chiave in corso..."
+msgstr "Caricamento dei dettagli della chiave in corso…"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -169,10 +167,8 @@ msgid "Open in Kleopatra"
 msgstr "Apri in Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
-#, fuzzy
-#| msgid "Show key details"
 msgid "Show key details …"
-msgstr "Mostra i dettagli della chiave"
+msgstr "Mostra i dettagli della chiave…"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"

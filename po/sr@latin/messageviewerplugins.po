@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2017-07-16 22:56+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -24,13 +24,16 @@ msgid "Current URL is not a shortened URL."
 msgstr "Ovaj URL nije skraćeni URL."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Expand URL"
+msgctxt "@action"
 msgid "Expand URL"
 msgstr "Proširi URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, fuzzy, kde-format
 #| msgid "Translate..."
+msgctxt "@action"
 msgid "Translate…"
 msgstr "Prevedi..."
 
@@ -336,6 +339,7 @@ msgstr "Ne mogu da pokrenem izvršni fajl."
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
 #, fuzzy, kde-format
 #| msgid "External Script:"
+msgctxt "@action"
 msgid "External Script"
 msgstr "Spoljašnja skripta:"
 

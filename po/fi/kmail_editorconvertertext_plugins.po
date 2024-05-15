@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-16 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2020-01-01 13:03+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -105,8 +105,9 @@ msgid "Converter Error"
 msgstr "Muunnosvirhe"
 
 #: markdown/plugin/markdowninterface.cpp:36
-#: markdown/plugin/markdownplugin.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Generate HTML from markdown language."
+msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Luo Markdown-merkkauskielestä HTML:ää."
 
@@ -116,7 +117,9 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Markdown Action"
+msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Markdown-toiminto"
 
@@ -164,6 +167,11 @@ msgstr "Lisää linkki"
 #, kde-format
 msgid "Add Image"
 msgstr "Lisää kuva"
+
+#: markdown/plugin/markdownplugin.cpp:48
+#, kde-format
+msgid "Generate HTML from markdown language."
+msgstr "Luo Markdown-merkkauskielestä HTML:ää."
 
 #~ msgid "Insert Template Command..."
 #~ msgstr "Lisää mallipohjakomento..."

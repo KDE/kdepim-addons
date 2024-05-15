@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -23,12 +23,15 @@ msgid "Current URL is not a shortened URL."
 msgstr "当前 URL 不是缩短的 URL。"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Expand URL"
+msgctxt "@action"
 msgid "Expand URL"
 msgstr "展开 URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
+msgctxt "@action"
 msgid "Translate…"
 msgstr ""
 
@@ -322,7 +325,9 @@ msgid "Impossible to start executable"
 msgstr "无法启动可执行程序"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script"
+msgctxt "@action"
 msgid "External Script"
 msgstr "外部脚本"
 

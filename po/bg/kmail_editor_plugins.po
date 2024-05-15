@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-13 23:10+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -25,17 +25,23 @@ msgid "Autocorrect Text"
 msgstr "Автокорекция на текст"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Full Text"
+msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Автокорекция на целия текст"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Selected Text"
+msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Автокорекция на избрания текст"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Email…"
+msgctxt "@action"
 msgid "Insert Email…"
 msgstr "Вмъкване на писмо…"
 
@@ -45,7 +51,9 @@ msgid "Select Short URL server:"
 msgstr "Адрес на сървър:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Short URL…"
+msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Вмъкване на съкратен URL…"
 
@@ -75,7 +83,9 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Special Character…"
+msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Вмъкване на специален символ…"
 
@@ -91,7 +101,9 @@ msgid "Insert"
 msgstr "Вмъкване"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Non Breaking Space"
+msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Вмъкване на празно място без прекъсване"
 
@@ -122,38 +134,56 @@ msgid "Export QuickText"
 msgstr "Експортиране на QuickText"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action"
+msgid "Variables"
+msgstr "Променливи"
+
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr "Променливи"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Snippet…"
+msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Добавяне на фрагмент…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Snippet…"
+msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Редактиране на фрагмент…"
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Snippet"
+msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Премахване на шаблон"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Group…"
+msgctxt "@action"
 msgid "Add Group…"
 msgstr "Добавяне на група…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group…"
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Преименуване на група…"
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@action"
 msgid "Remove Group"
 msgstr "Премахване на група"
 

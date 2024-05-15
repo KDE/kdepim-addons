@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 14:01+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -23,17 +23,23 @@ msgid "Autocorrect Text"
 msgstr "Autocorrectie tekst"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Full Text"
+msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Volledige tekst automatisch corrigeren"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autocorrect Selected Text"
+msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Autocorrectie van geselecteerde tekst"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Email…"
+msgctxt "@action"
 msgid "Insert Email…"
 msgstr "E-mail invoegen…"
 
@@ -43,7 +49,9 @@ msgid "Select Short URL server:"
 msgstr "Server voor ingekort URL-adres selecteren:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Short URL…"
+msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Ingekort URL-adres invoegen…"
 
@@ -73,7 +81,9 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Special Character…"
+msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Speciaal teken invoegen…"
 
@@ -89,7 +99,9 @@ msgid "Insert"
 msgstr "Invoegen"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Insert Non Breaking Space"
+msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Vaste witruimte invoegen"
 
@@ -120,38 +132,56 @@ msgid "Export QuickText"
 msgstr "QuickText exporteren"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action"
+msgid "Variables"
+msgstr "Variabelen"
+
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
 msgstr "Variabelen"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Snippet…"
+msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Fragment toevoegen…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Snippet…"
+msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Fragment bewerken…"
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Snippet"
+msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Fragment verwijderen"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Group…"
+msgctxt "@action"
 msgid "Add Group…"
 msgstr "Groep toevoegen…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename Group…"
+msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Groep hernoemen…"
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgctxt "@action"
 msgid "Remove Group"
 msgstr "Groep verwijderen"
 

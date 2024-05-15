@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 10:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -25,7 +25,9 @@ msgid "Akonadi Database Tool"
 msgstr "Akonadi-Datumbaza Ilo"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Akonadi Vacuum…"
+msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "&Akonadi-Vakuilo…"
 
@@ -47,7 +49,9 @@ msgid "Vacuum"
 msgstr "Vakuo"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Akonadi Fsck…"
+msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "&Akonadi Fsck…"
 
@@ -79,12 +83,16 @@ msgid "Start…"
 msgstr "Komenci…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Anti-Spam Wizard…"
+msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Kontraŭ-Sp&ama Sorĉisto…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Anti-Virus Wizard…"
+msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Kontraŭvirus&a Sorĉisto…"
 

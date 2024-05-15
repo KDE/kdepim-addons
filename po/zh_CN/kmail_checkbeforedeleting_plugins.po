@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -78,7 +78,9 @@ msgid "Configure Before Deleting Mail"
 msgstr "配置“删前确认”插件"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Before Deleting"
+msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "删除前确认"
 

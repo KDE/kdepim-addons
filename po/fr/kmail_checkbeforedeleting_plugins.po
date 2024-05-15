@@ -1,18 +1,18 @@
-# Xavier Besnard <xavier.besnard@kde.org>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-05-15 19:24+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"PO-Revision-Date: 2024-05-13 11:30+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -74,7 +74,9 @@ msgid "Configure Before Deleting Mail"
 msgstr "Configurer avant la suppression du courriel"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Confirm Before Deleting"
+msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "Configurer avant la suppression"
 
@@ -114,9 +116,7 @@ msgid "The message with subject '%1' is %2"
 msgstr "Le message ayant « %1 » pour objet est %2"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Ajouter une règle..."
@@ -128,9 +128,7 @@ msgid "Remove Rule"
 msgstr "Supprimer une règle"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Modifier une règle..."
@@ -146,14 +144,12 @@ msgid "Pattern"
 msgstr "Motif"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
 msgstr "Ajouter une règle..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
 msgstr "Modifier une règle..."
 
