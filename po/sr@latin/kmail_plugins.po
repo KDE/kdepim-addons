@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2017-02-11 11:14+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -44,6 +44,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
+msgctxt "@action:button"
 msgid "Vacuum"
 msgstr ""
 
@@ -67,6 +68,7 @@ msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
+msgctxt "@action:button"
 msgid "Fsck"
 msgstr ""
 

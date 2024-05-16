@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2024-05-13 09:46+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -48,7 +48,9 @@ msgid "Akonadi Vacuum"
 msgstr "Vidage de Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Vacuum"
+msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Vidage"
 
@@ -74,7 +76,9 @@ msgid "Akonadi Fsck"
 msgstr "Vérification « fsck » pour Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Fsck"
+msgctxt "@action:button"
 msgid "Fsck"
 msgstr "fsck"
 

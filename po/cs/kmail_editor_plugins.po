@@ -23,25 +23,22 @@ msgid "Autocorrect Text"
 msgstr "Automaticky opravit text"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, fuzzy, kde-format
-#| msgid "Autocorrect Full Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
-msgstr "Automaticky opravit celý text"
+msgstr ""
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Autocorrect Selected Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
-msgstr "Automaticky opravit vybraný text"
+msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
-msgstr "Vložit e-mail..."
+msgstr ""
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
@@ -49,11 +46,10 @@ msgid "Select Short URL server:"
 msgstr "Vyberte server pro zkracování URL:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
-msgstr "Vložit krátkou URL..."
+msgstr ""
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -81,12 +77,10 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
-msgstr "Vložit speciální znak"
+msgstr ""
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -100,11 +94,10 @@ msgid "Insert"
 msgstr "Vložit"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "Insert Non Breaking Space"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
-msgstr "Vložit nezlomitelnou mezeru"
+msgstr ""
 
 #: quicktext/quicktextconfiguredialog.cpp:27
 #, kde-format
@@ -113,16 +106,14 @@ msgid "Configure quick text"
 msgstr "Nastavit rychlý text"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgid "Import…"
-msgstr "Importovat..."
+msgstr ""
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
-msgstr "Exportovat..."
+msgstr "Exportovat…"
 
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
@@ -135,11 +126,10 @@ msgid "Export QuickText"
 msgstr "Exportovat QuickText"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action"
 msgid "Variables"
-msgstr "Proměnné"
+msgstr ""
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
@@ -147,46 +137,40 @@ msgid "Variables"
 msgstr "Proměnné"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add Snippet..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
-msgstr "Přidat ústřižek..."
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Edit Snippet..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
-msgstr "Upravit ústřižek..."
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Remove Snippet"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
-msgstr "Odstranit ústřižek"
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Group..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Group…"
-msgstr "Přidat skupinu..."
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "Přejmenovat skupinu..."
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Group"
-msgstr "Odstranit skupinu"
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:85
 #, kde-format
@@ -234,10 +218,9 @@ msgid "General"
 msgstr "Obecné"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
-msgstr "Sdílet text e-mailu..."
+msgstr ""
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -248,9 +231,3 @@ msgstr "Přiblížení: %1%"
 #, kde-format
 msgid "Zoom…"
 msgstr ""
-
-#~ msgid "Insert Special Character..."
-#~ msgstr "Vložit speciální znak..."
-
-#~ msgid "Zoom..."
-#~ msgstr "Přiblížení..."

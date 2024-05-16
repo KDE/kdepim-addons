@@ -814,6 +814,3 @@ msgstr ""
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
-
-#~ msgid "Import vCard..."
-#~ msgstr "Importer vCard …"

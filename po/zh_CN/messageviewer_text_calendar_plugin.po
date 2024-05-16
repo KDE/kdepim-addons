@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -429,12 +429,16 @@ msgid "Send Email to Organizer"
 msgstr "给组织者发送电子邮件"
 
 #: text_calendar.cpp:1270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do Not Send"
+msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "不发送"
 
 #: text_calendar.cpp:1271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send EMail"
+msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "发送电子邮件"
 

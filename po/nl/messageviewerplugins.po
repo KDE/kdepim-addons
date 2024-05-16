@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 14:18+0200\n"
+"PO-Revision-Date: 2024-05-15 10:28+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -23,15 +23,13 @@ msgid "Current URL is not a shortened URL."
 msgstr "Huidige URL is geen verkorte URL."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, fuzzy, kde-format
-#| msgid "Expand URL"
+#, kde-format
 msgctxt "@action"
 msgid "Expand URL"
-msgstr "Expandeer URL"
+msgstr "URL expanderen"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate…"
+#, kde-format
 msgctxt "@action"
 msgid "Translate…"
 msgstr "Vertalen…"
@@ -333,8 +331,7 @@ msgid "Impossible to start executable"
 msgstr "uitvoerbaar programma opstarten lukt niet"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "External Script"
+#, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "Extern script"

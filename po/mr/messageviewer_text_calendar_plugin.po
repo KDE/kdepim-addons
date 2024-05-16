@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2013-03-11 16:07+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -422,12 +422,16 @@ msgid "Send Email to Organizer"
 msgstr ""
 
 #: text_calendar.cpp:1270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do Not Send"
+msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "पाठवू नका"
 
 #: text_calendar.cpp:1271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send EMail"
+msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "इमेल पाठवा"
 

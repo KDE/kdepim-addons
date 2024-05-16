@@ -23,15 +23,13 @@ msgid "Autocorrect Text"
 msgstr "自动更正文字"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, fuzzy, kde-format
-#| msgid "Autocorrect Full Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "自动更正全文文字"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Autocorrect Selected Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "自动更正选中文字"
@@ -79,12 +77,10 @@ msgstr ""
 "“%1”"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
-msgstr "插入特殊字符"
+msgstr ""
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -98,8 +94,7 @@ msgid "Insert"
 msgstr "插入"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "Insert Non Breaking Space"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "插入不换行空格"
@@ -131,8 +126,7 @@ msgid "Export QuickText"
 msgstr "导出邮件模板"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action"
 msgid "Variables"
 msgstr "变量"
@@ -149,15 +143,13 @@ msgid "Add Snippet…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Text Snippets"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
-msgstr "模板"
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Remove Snippet"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "删除模板"
@@ -169,15 +161,13 @@ msgid "Add Group…"
 msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "删除分组"
+msgstr ""
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "删除分组"

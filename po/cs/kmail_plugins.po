@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2023-11-03 09:07+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -24,12 +24,10 @@ msgid "Akonadi Database Tool"
 msgstr "Nástroj databáze Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr "Akonadi Vacuum"
+msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -44,17 +42,17 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadi Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Vacuum"
+msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Akonadi Fsck"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr "Akonadi Fsck"
+msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -69,7 +67,9 @@ msgid "Akonadi Fsck"
 msgstr "Akonadi Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Fsck"
+msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck"
 
@@ -79,26 +79,21 @@ msgid "Finished."
 msgstr "Dokončeno."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, fuzzy, kde-format
-#| msgid "Start..."
+#, kde-format
 msgid "Start…"
-msgstr "Spustit..."
+msgstr ""
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr "Průvodce nastavením antispamu"
+msgstr ""
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr "Průvodce nastavením antiviru"
+msgstr ""
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -177,10 +172,9 @@ msgid "Ham"
 msgstr "Ham"
 
 #: common/antispamwizard.cpp:456
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
-msgstr "Vyhledávám %1..."
+msgstr ""
 
 #: common/antispamwizard.cpp:500
 #, kde-format
@@ -451,18 +445,3 @@ msgstr "Změn&it..."
 #, kde-format
 msgid "Select attachment:"
 msgstr "Vyberte přílohu:"
-
-#~ msgid "&Akonadi Vacuum..."
-#~ msgstr "&Akonadi Vacuum..."
-
-#~ msgid "&Akonadi Fsck..."
-#~ msgstr "&Akonadi Fsck..."
-
-#~ msgid "&Anti-Spam Wizard..."
-#~ msgstr "Průvodce nastavením &antispamu..."
-
-#~ msgid "&Anti-Virus Wizard..."
-#~ msgstr "Průvodce nastavením anti&viru..."
-
-#~ msgid "A&dd..."
-#~ msgstr "Při&dat..."

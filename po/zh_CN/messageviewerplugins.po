@@ -23,8 +23,7 @@ msgid "Current URL is not a shortened URL."
 msgstr "当前 URL 不是缩短的 URL。"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, fuzzy, kde-format
-#| msgid "Expand URL"
+#, kde-format
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "展开 URL"
@@ -325,8 +324,7 @@ msgid "Impossible to start executable"
 msgstr "无法启动可执行程序"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "External Script"
+#, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "外部脚本"

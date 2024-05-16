@@ -116,11 +116,10 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
-#, fuzzy, kde-format
-#| msgid "Markdown"
+#, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
-msgstr "Markdown"
+msgstr ""
 
 #: markdown/plugin/markdowninterface.cpp:60
 #, kde-format

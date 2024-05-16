@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2006-02-12 21:11+0100\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -417,11 +417,13 @@ msgstr "Faylni KOrganizer'ga saqlab boʻlmadi"
 
 #: text_calendar.cpp:1270
 #, kde-format
+msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr ""
 
 #: text_calendar.cpp:1271
 #, kde-format
+msgctxt "@action:button"
 msgid "Send EMail"
 msgstr ""
 

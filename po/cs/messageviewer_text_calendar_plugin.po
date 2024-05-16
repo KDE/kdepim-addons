@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2023-02-07 10:43+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -423,12 +423,16 @@ msgid "Send Email to Organizer"
 msgstr "Poslat e-mail organizátorovi"
 
 #: text_calendar.cpp:1270
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do Not Send"
+msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Neodesílat"
 
 #: text_calendar.cpp:1271
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send EMail"
+msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Odeslat e-mail"
 
@@ -443,10 +447,9 @@ msgid "Open Attachment"
 msgstr "Otevřít přílohu"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "Uložit přílohu jako..."
+msgstr ""
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -464,10 +467,9 @@ msgid "Accept counter proposal"
 msgstr "Přijmout protinávrh"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "Vytvořit protinávrh..."
+msgstr ""
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -490,10 +492,9 @@ msgid "Decline counter proposal"
 msgstr "Odmítnout protinávrh"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "Zkontrolovat můj kalendář..."
+msgstr ""
 
 #: text_calendar.cpp:1376
 #, kde-format

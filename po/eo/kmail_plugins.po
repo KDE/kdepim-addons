@@ -1,15 +1,15 @@
 # Translation of kmail_plugins.pot into esperanto.
 # Copyright (C) 2022 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kdepim-addons package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 10:35+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"PO-Revision-Date: 2024-05-15 09:56+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,7 @@ msgid "Akonadi Database Tool"
 msgstr "Akonadi-Datumbaza Ilo"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "&Akonadi Vacuum…"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "&Akonadi-Vakuilo…"
@@ -44,13 +43,14 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadi Vakuilo"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Vacuum"
+msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Vakuo"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgid "&Akonadi Fsck…"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "&Akonadi Fsck…"
@@ -68,7 +68,9 @@ msgid "Akonadi Fsck"
 msgstr "Akonadi Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Fsck"
+msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck"
 
@@ -83,15 +85,13 @@ msgid "Start…"
 msgstr "Komenci…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "&Anti-Spam Wizard…"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Kontraŭ-Sp&ama Sorĉisto…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "&Anti-Virus Wizard…"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Kontraŭvirus&a Sorĉisto…"

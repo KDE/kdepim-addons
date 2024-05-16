@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -415,11 +415,13 @@ msgstr ""
 
 #: text_calendar.cpp:1270
 #, kde-format
+msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr ""
 
 #: text_calendar.cpp:1271
 #, kde-format
+msgctxt "@action:button"
 msgid "Send EMail"
 msgstr ""
 

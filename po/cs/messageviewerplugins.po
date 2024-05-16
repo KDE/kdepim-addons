@@ -24,18 +24,16 @@ msgid "Current URL is not a shortened URL."
 msgstr ""
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, fuzzy, kde-format
-#| msgid "Expand URL"
+#, kde-format
 msgctxt "@action"
 msgid "Expand URL"
-msgstr "Rozvinout URL"
+msgstr ""
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate..."
+#, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr "Přeložit..."
+msgstr ""
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
 #: createtodoplugin/todoedit.cpp:42
@@ -44,10 +42,9 @@ msgid "&Save"
 msgstr "&Uložit"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor..."
+#, kde-format
 msgid "Open &Editor…"
-msgstr "Otevřít &editor..."
+msgstr ""
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -100,10 +97,9 @@ msgid "Close the widget for creating new events."
 msgstr ""
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Event…"
-msgstr "Vytvořit událost"
+msgstr ""
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -234,10 +230,9 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Nastavit modul \"Externí skript\""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Script…"
-msgstr "Přidat skript..."
+msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -245,10 +240,9 @@ msgid "Remove Script"
 msgstr "Odstranit skript"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script..."
+#, kde-format
 msgid "Modify Script…"
-msgstr "Upravit skript..."
+msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -283,10 +277,9 @@ msgid "Description:"
 msgstr "Popis:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments..."
+#, kde-format
 msgid "Add command arguments…"
-msgstr "Přidat parametry příkazu..."
+msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -294,10 +287,9 @@ msgid "Command Line:"
 msgstr "Příkazový řádek:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">Informace o formátu argumentu...</a></qt>"
+msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -332,16 +324,12 @@ msgid "Impossible to start executable"
 msgstr "Spustitelný soubor nelze spustit"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "External Script"
+#, kde-format
 msgctxt "@action"
 msgid "External Script"
-msgstr "Externí skript"
+msgstr ""
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:129
 #, kde-format
 msgid "Configure"
 msgstr "Nastavit"
-
-#~ msgid "Create Event..."
-#~ msgstr "Vytvořit událost..."

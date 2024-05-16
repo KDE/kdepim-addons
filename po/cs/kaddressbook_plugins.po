@@ -18,10 +18,9 @@ msgstr ""
 "X-Generator: Lokalize 23.08.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
-msgstr "Zkontrolovat Gravatar..."
+msgstr ""
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -81,10 +80,9 @@ msgid "No Gravatar Found."
 msgstr "Gravatar nebyl nalezen."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
-msgstr "Sloučit kontakty..."
+msgstr ""
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -141,10 +139,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Hledat a vybrat duplicitní kontakty pro sloučení"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
-msgstr "Vyhledávám ve výsledcích..."
+msgstr ""
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -192,18 +189,16 @@ msgstr ""
 "přizpůsobit co se bude slučovat?"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
-#, fuzzy, kde-format
-#| msgid "Customize"
+#, kde-format
 msgctxt "@action"
 msgid "Customize"
-msgstr "Přizpůsobit"
+msgstr ""
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
-#, fuzzy, kde-format
-#| msgid "Automatic Merging"
+#, kde-format
 msgctxt "@action"
 msgid "Automatic Merging"
-msgstr "Automatické slučování"
+msgstr ""
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
 #, kde-format
@@ -262,10 +257,9 @@ msgid "(Undefined)"
 msgstr "(Nedefinovaný)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "Hledat duplicitní kontakty..."
+msgstr ""
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -273,10 +267,9 @@ msgid "No emails found in selected contacts."
 msgstr "Ve vybraných kontaktech nebyl nalezen žádný e-mail."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
-msgstr "Odeslat email..."
+msgstr ""
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -289,7 +282,6 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "Nelze vytvořit dočasný soubor '%1' "
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
-msgstr "Poslat vizitky..."
+msgstr ""

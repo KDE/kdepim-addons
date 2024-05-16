@@ -78,8 +78,7 @@ msgid "Configure Before Deleting Mail"
 msgstr "配置“删前确认”插件"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Confirm Before Deleting"
+#, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "删除前确认"

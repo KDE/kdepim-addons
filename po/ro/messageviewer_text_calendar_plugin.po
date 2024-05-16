@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2009-01-26 15:17+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@lists.kde.org>\n"
@@ -430,11 +430,13 @@ msgstr "Nu s-a putut salva fișierul în KOrganizer"
 
 #: text_calendar.cpp:1270
 #, kde-format
+msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr ""
 
 #: text_calendar.cpp:1271
 #, kde-format
+msgctxt "@action:button"
 msgid "Send EMail"
 msgstr ""
 

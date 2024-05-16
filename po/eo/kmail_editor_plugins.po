@@ -1,15 +1,15 @@
 # Translation of kmail_editor_plugins.pot into esperanto.
 # Copyright (C) 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kdepim-addons package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 10:35+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-15 09:56+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -24,22 +24,19 @@ msgid "Autocorrect Text"
 msgstr "Aŭtokorekti Tekston"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, fuzzy, kde-format
-#| msgid "Autocorrect Full Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Aŭtomate korekti Plenan Tekston"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Autocorrect Selected Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Aŭtomate korekti Elektitan Tekston"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email…"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
 msgstr "Enmeti Retpoŝton…"
@@ -50,8 +47,7 @@ msgid "Select Short URL server:"
 msgstr "Elektu servilon por Mallongaj URL:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL…"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Enigi Mallongan URL…"
@@ -82,8 +78,7 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgid "Insert Special Character…"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Enigi Specialan Signon…"
@@ -100,8 +95,7 @@ msgid "Insert"
 msgstr "Enmeti"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "Insert Non Breaking Space"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Enmeti Nerompeblan Spaceton"
@@ -133,8 +127,7 @@ msgid "Export QuickText"
 msgstr "Elporti QuickText"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action"
 msgid "Variables"
 msgstr "Variabloj"
@@ -145,43 +138,37 @@ msgid "Variables"
 msgstr "Variabloj"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add Snippet…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Aldoni Fragmenton…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Edit Snippet…"
+#, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Redakti Fragmenton…"
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Remove Snippet"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Forigi Fragmenton"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Add Group…"
 msgstr "Aldoni Grupon…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group…"
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Alinomi grupon…"
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "Forigi Grupon"

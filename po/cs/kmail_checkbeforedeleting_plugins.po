@@ -77,11 +77,10 @@ msgid "Configure Before Deleting Mail"
 msgstr "Nastavit před smazáním e-mailu"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Confirm Before Deleting"
+#, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
-msgstr "Potvrzovat před smazáním"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
 #, kde-format
@@ -119,12 +118,10 @@ msgid "The message with subject '%1' is %2"
 msgstr "Zpráva s předmětem '%1' je '%2'"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "Přidat pravidlo..."
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
@@ -133,12 +130,10 @@ msgid "Remove Rule"
 msgstr "Odstranit pravidlo"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "Upravit pravidlo"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
@@ -151,16 +146,14 @@ msgid "Pattern"
 msgstr "Vzorek"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Přidat pravidlo..."
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "Upravit pravidlo..."
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format

@@ -180,10 +180,9 @@ msgstr "Odstra&nit"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mod&ify..."
+#, kde-format
 msgid "Mod&ify…"
-msgstr "Změn&it..."
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
@@ -249,6 +248,3 @@ msgstr "Změnit hodnotu"
 #, kde-format
 msgid "Potentially invalid emails are displayed in red:"
 msgstr ""
-
-#~ msgid "A&dd..."
-#~ msgstr "Při&dat..."

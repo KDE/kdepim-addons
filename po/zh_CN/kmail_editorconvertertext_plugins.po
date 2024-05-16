@@ -106,8 +106,7 @@ msgid "Converter Error"
 msgstr "转换器出错"
 
 #: markdown/plugin/markdowninterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Generate HTML from markdown language."
+#, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "从 Markdown 语言生成 HTML"
@@ -118,8 +117,7 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
-#, fuzzy, kde-format
-#| msgid "Markdown Action"
+#, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Markdown 操作"

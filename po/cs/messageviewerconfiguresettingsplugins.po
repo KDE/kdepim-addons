@@ -276,10 +276,9 @@ msgid "Server Name:"
 msgstr "Název serveru:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">Informace o formátu argumentu...</a></qt>"
+msgstr ""
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -305,12 +304,10 @@ msgid "Configure Open Url With Plugin"
 msgstr "Nastavit otevření URL modulem"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "Přidat pravidlo..."
+msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
@@ -319,12 +316,10 @@ msgid "Remove Rule"
 msgstr "Odstranit pravidlo"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "Upravit pravidlo..."
+msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
@@ -361,16 +356,14 @@ msgid "Remove Rule"
 msgstr "Odstranit pravidlo"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Přidat pravidlo..."
+msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "Upravit pravidlo..."
+msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -389,7 +382,7 @@ msgstr "Nastavit možnosti Scamu"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Přidat…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
@@ -417,6 +410,3 @@ msgstr ""
 msgctxt "@title:column"
 msgid "Check"
 msgstr ""
-
-#~ msgid "Add..."
-#~ msgstr "Přidat..."

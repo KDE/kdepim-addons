@@ -38,13 +38,12 @@ msgstr "Url"
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Přidat…"
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgid "Modify…"
-msgstr "Změnit..."
+msgstr ""
 
 #: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
@@ -73,10 +72,9 @@ msgid "Remove List"
 msgstr ""
 
 #: adblock/adblockfilterwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "Hledat..."
+msgstr "Hledat…"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
@@ -111,6 +109,3 @@ msgstr ""
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Povolena blokace reklam"
-
-#~ msgid "Add..."
-#~ msgstr "Přidat..."

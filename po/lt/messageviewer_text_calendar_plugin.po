@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2005-09-02 17:30+0300\n"
 "Last-Translator: Donatas Glodenis <dgvirtual@akl.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -416,11 +416,13 @@ msgstr "Nepavyko išsaugoti failo į KOrganizer"
 
 #: text_calendar.cpp:1270
 #, kde-format
+msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr ""
 
 #: text_calendar.cpp:1271
 #, kde-format
+msgctxt "@action:button"
 msgid "Send EMail"
 msgstr ""
 

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2009-06-13 16:20+0000\n"
 "Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
 "Language-Team: icelandic <kde-isl@molar.is>\n"
@@ -430,11 +430,13 @@ msgstr "Gat ekki vistað skrá í KOrganizer"
 
 #: text_calendar.cpp:1270
 #, kde-format
+msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr ""
 
 #: text_calendar.cpp:1271
 #, kde-format
+msgctxt "@action:button"
 msgid "Send EMail"
 msgstr ""
 

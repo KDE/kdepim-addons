@@ -46,10 +46,9 @@ msgid "View Business Card"
 msgstr "Prohlédnout vizitku"
 
 #: text_vcard.cpp:216
-#, fuzzy, kde-format
-#| msgid "Save Business Card As..."
+#, kde-format
 msgid "Save Business Card As…"
-msgstr "Uložit vizitku jako..."
+msgstr ""
 
 #: text_vcard.cpp:233
 #, kde-format

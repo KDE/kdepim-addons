@@ -747,16 +747,14 @@ msgid "Picture Page"
 msgstr "Stránka s obrázkem"
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Loading..."
+#, kde-format
 msgid "Loading…"
-msgstr "Probíhá načítání..."
+msgstr "Probíhá načítání…"
 
 #: plugins/picoftheday/element.cpp:331
-#, fuzzy, kde-format
-#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#, kde-format
 msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
-msgstr "<qt>Načítám<i>Obrázek Dne</i>...</qt>"
+msgstr ""
 
 #: plugins/picoftheday/picoftheday.cpp:48
 #, kde-format
