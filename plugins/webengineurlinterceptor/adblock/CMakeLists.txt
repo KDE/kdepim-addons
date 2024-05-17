@@ -75,9 +75,13 @@ target_link_libraries(adblockplugin
     KF6::I18n
     Qt::WebEngineWidgets
     KPim6::WebEngineViewer
-    webengineviewer-adblock
     KF6::TextCustomEditor
     )
+if (Corrosion_VERSION VERSION_LESS 0.5.0)
+    target_link_libraries(adblockplugin webengineviewer-adblock)
+else()
+    target_link_libraries(adblockplugin webengineviewer_adblock)
+endif()
 
 set_target_properties(adblockplugin
     PROPERTIES OUTPUT_NAME adblockplugin VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
