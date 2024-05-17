@@ -5,13 +5,13 @@
 # Munzir Taha <munzir@kacst.edu.sa>, 2004.
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-09-11 20:36+0400\n"
+"PO-Revision-Date: 2024-05-16 13:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 "X-POOTLE-MTIME: 1381853701.0\n"
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
@@ -776,16 +776,14 @@ msgid "Picture Page"
 msgstr "صفحة الصورة"
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Loading..."
+#, kde-format
 msgid "Loading…"
 msgstr "يحمّل..."
 
 #: plugins/picoftheday/element.cpp:331
-#, fuzzy, kde-format
-#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#, kde-format
 msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
-msgstr "<qt> يحمل<i> صورة اليوم</i></qt>"
+msgstr "<qt> يحمل<i> صورة اليوم</i>…</qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48
 #, kde-format

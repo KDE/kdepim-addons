@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 14:35+0300\n"
+"PO-Revision-Date: 2024-05-17 01:22+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,15 +23,13 @@ msgid "Current URL is not a shortened URL."
 msgstr "Geçerli URL, kısaltılmış bir URL değil."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, fuzzy, kde-format
-#| msgid "Expand URL"
+#, kde-format
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "URL’yi Genişlet"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate…"
+#, kde-format
 msgctxt "@action"
 msgid "Translate…"
 msgstr "Çevir…"
@@ -250,7 +248,7 @@ msgstr "Betiği Değiştir…"
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
 msgid "External Script:"
-msgstr "Dış Betik:"
+msgstr "Dış betik:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
 #, kde-format
@@ -286,7 +284,7 @@ msgstr "Komut Argümanları Ekle…"
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
 msgid "Command Line:"
-msgstr "Komut Satırı:"
+msgstr "Komut satırı:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
 #, kde-format
@@ -313,7 +311,7 @@ msgstr ""
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format
 msgid "Executable:"
-msgstr "Çalıştırılabilir Dosya:"
+msgstr "Yürütülebilir:"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
 #, kde-format
@@ -332,8 +330,7 @@ msgid "Impossible to start executable"
 msgstr "Çalıştırılabilir dosyayı başlatmak olanaklı değil"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "External Script"
+#, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "Dış Betik"

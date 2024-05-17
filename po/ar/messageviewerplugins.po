@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-02-10 21:04+0400\n"
+"PO-Revision-Date: 2024-05-16 13:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -25,18 +25,16 @@ msgid "Current URL is not a shortened URL."
 msgstr "المسار الحاليّ ليس مسارًا مقصّرًا."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, fuzzy, kde-format
-#| msgid "Expand URL"
+#, kde-format
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "وسّع المسار"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate..."
+#, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr "ترجم..."
+msgstr "ترجم…"
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
 #: createtodoplugin/todoedit.cpp:42
@@ -45,10 +43,9 @@ msgid "&Save"
 msgstr "ا&حفظ"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor..."
+#, kde-format
 msgid "Open &Editor…"
-msgstr "افتح المح&رّر..."
+msgstr "افتح المح&رّر…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -101,10 +98,9 @@ msgid "Close the widget for creating new events."
 msgstr "أغلق ودجة إنشاء الأحداث الجديدة."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Event…"
-msgstr "أنشئ حدثًا"
+msgstr "أنشئ حدثًا…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -234,10 +230,9 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "اضبط ملحقة ”السّكربت الخارجيّ“"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Script…"
-msgstr "أضف سكربتًا..."
+msgstr "أضف سكربتًا…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -245,10 +240,9 @@ msgid "Remove Script"
 msgstr "أزِل السّكربت"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script..."
+#, kde-format
 msgid "Modify Script…"
-msgstr "عدّل السّكربت..."
+msgstr "عدّل السّكربت…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -282,8 +276,7 @@ msgid "Description:"
 msgstr "الوصف:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments..."
+#, kde-format
 msgid "Add command arguments…"
 msgstr "أضف معاملات الأمر…"
 
@@ -293,10 +286,9 @@ msgid "Command Line:"
 msgstr "سطر الأوامر:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">معلومات عن نسق المعاملات...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">معلومات عن نسق المعاملات…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -337,8 +329,7 @@ msgid "Impossible to start executable"
 msgstr "تعذّر بدء التّنفيذيّ"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "External Script"
+#, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "السّكربت الخارجيّ"

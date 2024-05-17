@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-02-10 21:07+0400\n"
+"PO-Revision-Date: 2024-05-16 13:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -40,13 +40,12 @@ msgstr "العنوان"
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "أضف…"
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgid "Modify…"
-msgstr "عدّل..."
+msgstr "عدّل…"
 
 #: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
@@ -75,10 +74,9 @@ msgid "Remove List"
 msgstr "أزل القائمة"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Search:"
+#, kde-format
 msgid "Search…"
-msgstr "ابحث عن:"
+msgstr "ابحث…"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format

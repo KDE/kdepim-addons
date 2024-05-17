@@ -42,11 +42,10 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadi Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Vacuum"
+#, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
-msgstr "Vacuum"
+msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
@@ -67,11 +66,10 @@ msgid "Akonadi Fsck"
 msgstr "Akonadi Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Fsck"
+#, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
-msgstr "Fsck"
+msgstr ""
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
 #, kde-format

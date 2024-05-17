@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2022-09-11 20:38+0400\n"
+"PO-Revision-Date: 2024-05-16 13:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -78,8 +78,7 @@ msgid "Configure Before Deleting Mail"
 msgstr "اضبط خيارات قبل حذف البريد"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Confirm Before Deleting"
+#, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "أكد قبل الحذف"
@@ -120,12 +119,10 @@ msgid "The message with subject '%1' is %2"
 msgstr "الرسالة بالعنوان '%1' هي %2"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "أضِف قاعدة..."
+msgstr "أضِف قاعدة…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
@@ -134,12 +131,10 @@ msgid "Remove Rule"
 msgstr "أزِل القاعدة"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "عدّل القاعدة..."
+msgstr "عدّل القاعدة…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
@@ -152,16 +147,14 @@ msgid "Pattern"
 msgstr "النمط"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "أضِف قاعدة..."
+msgstr "أضِف قاعدة…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "حرر القاعدة"
+msgstr "حرر القاعدة…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format

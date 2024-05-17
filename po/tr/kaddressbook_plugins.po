@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 14:37+0300\n"
+"PO-Revision-Date: 2024-05-17 01:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -190,18 +190,16 @@ msgstr ""
 "istediğiniz şeyi özelleştirecek misiniz?"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
-#, fuzzy, kde-format
-#| msgid "Customize"
+#, kde-format
 msgctxt "@action"
 msgid "Customize"
 msgstr "Özelleştir"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
-#, fuzzy, kde-format
-#| msgid "Automatic Merging"
+#, kde-format
 msgctxt "@action"
 msgid "Automatic Merging"
-msgstr "Otomatik Birleştirme"
+msgstr "Kendiliğinden Birleştirme"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
 #, kde-format
@@ -272,7 +270,7 @@ msgstr "Seçili kişilerde e-posta bulunamadı."
 #: sendmail/sendmailplugininterface.cpp:26
 #, kde-format
 msgid "Send an email…"
-msgstr "Bir E-posta Gönder…"
+msgstr "E-posta Gönder…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format

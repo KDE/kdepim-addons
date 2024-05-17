@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2024-02-10 21:04+0400\n"
+"PO-Revision-Date: 2024-05-16 13:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -20,10 +20,9 @@ msgstr ""
 "X-Generator: Lokalize 23.08.1\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Check Gravatar..."
+#, kde-format
 msgid "Check Gravatar…"
-msgstr "افحص «غرافاتار»..."
+msgstr "افحص «غرافاتار»…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -83,10 +82,9 @@ msgid "No Gravatar Found."
 msgstr "لم يُعثر على «غرافاتار»."
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Merge Contacts..."
+#, kde-format
 msgid "Merge Contacts…"
-msgstr "ادمج المتراسلين..."
+msgstr "ادمج المتراسلين…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -143,10 +141,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "ابحث عن متراسلين متكرّرين وحدّدهم لدمجهم"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgid "Search in result…"
-msgstr "ابحث في النتيجة..."
+msgstr "ابحث في النتيجة…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -192,15 +189,13 @@ msgid ""
 msgstr "قد تُفقد بعض البيانات. أتريد المتابعة أم تخصيص ما تريد دمجه؟"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
-#, fuzzy, kde-format
-#| msgid "Customize"
+#, kde-format
 msgctxt "@action"
 msgid "Customize"
 msgstr "خصّص"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
-#, fuzzy, kde-format
-#| msgid "Automatic Merging"
+#, kde-format
 msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "دمج آليّ"
@@ -260,10 +255,9 @@ msgid "(Undefined)"
 msgstr "(غير معرّف)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Search Duplicate Contacts..."
+#, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "ابحث عن متراسلين متكرّرين..."
+msgstr "ابحث عن متراسلين متكرّرين…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -271,10 +265,9 @@ msgid "No emails found in selected contacts."
 msgstr "لم توجد بُرد إلكترونيّة في المتراسلين المحدّدين."
 
 #: sendmail/sendmailplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Send an email..."
+#, kde-format
 msgid "Send an email…"
-msgstr "أرسل بريدًا إلكترونيًّا..."
+msgstr "أرسل بريدًا إلكترونيًّا…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -287,10 +280,9 @@ msgid "Temporary file '%1' cannot be created"
 msgstr "تعذّر إنشاء الملفّ ’%1‘ المؤقّت."
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Send vCards..."
+#, kde-format
 msgid "Send vCards…"
-msgstr "أرسل بطاقات vCard..."
+msgstr "أرسل بطاقات vCard…"
 
 #~ msgid "Use Libravatar"
 #~ msgstr "استخدم Libravatar"

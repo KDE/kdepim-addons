@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:39+0000\n"
-"PO-Revision-Date: 2024-05-13 22:55+0200\n"
+"PO-Revision-Date: 2024-05-16 11:16+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -437,15 +437,13 @@ msgid "Send Email to Organizer"
 msgstr "Изпращане на имейла в Организатора"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Да не се изпраща"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Изпращане на поща"

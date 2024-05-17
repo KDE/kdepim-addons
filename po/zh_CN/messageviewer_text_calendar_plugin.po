@@ -429,15 +429,13 @@ msgid "Send Email to Organizer"
 msgstr "给组织者发送电子邮件"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "不发送"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "发送电子邮件"

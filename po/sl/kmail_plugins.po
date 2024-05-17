@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:39+0000\n"
-"PO-Revision-Date: 2024-05-15 07:34+0200\n"
+"PO-Revision-Date: 2024-05-16 09:20+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -29,7 +29,7 @@ msgstr "Akonadi Database Tool"
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr "Akonadi Vacuum..."
+msgstr "Akonadi Vacuum…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -44,8 +44,7 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadi Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Vacuum"
+#, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Vacuum"
@@ -69,8 +68,7 @@ msgid "Akonadi Fsck"
 msgstr "Akonadi Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Fsck"
+#, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck"
