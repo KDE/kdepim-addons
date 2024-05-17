@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:38+0000\n"
-"PO-Revision-Date: 2024-05-12 15:44+0200\n"
+"PO-Revision-Date: 2024-05-16 12:20+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -282,9 +282,9 @@ msgstr ""
 "las reglas ya existentes: siempre añadirá nuevas reglas.</p><p><b>Aviso:</b> "
 "KMail parecerá bloqueado durante el escaneo de virus en los mensajes, puede "
 "que sufra problemas con KMail debido a que las operaciones de las "
-"herramientas antivirus consumen mucho tiempo; por favor, considere borrar "
-"las reglas de filtrado creadas por el asistente para recuperar el "
-"comportamiento previo.</p>"
+"herramientas antivirus consumen mucho tiempo; considere borrar las reglas de "
+"filtrado creadas por el asistente para recuperar el comportamiento previo.</"
+"p>"
 
 #: common/antispamwizard.cpp:1032
 #, kde-format
@@ -292,8 +292,8 @@ msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
 "page.</p>"
 msgstr ""
-"<p>Por favor, seleccione las herramientas a usar para la detección y vaya a "
-"la siguiente página.</p>"
+"<p>Seleccione las herramientas a usar para la detección y vaya a la "
+"siguiente página.</p>"
 
 #: common/antispamwizard.cpp:1056
 #, kde-format
