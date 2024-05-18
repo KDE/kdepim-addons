@@ -1,15 +1,15 @@
 # Translation of kmail_editor_plugins.pot into esperanto.
 # Copyright (C) 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kdepim-addons package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-26 20:18+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-15 09:56+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -113,12 +113,12 @@ msgstr "Eksporti..."
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
 msgid "Import QuickText"
-msgstr "Importi QuickText"
+msgstr "Enporti QuickText"
 
 #: quicktext/quicktextmanager.cpp:86
 #, kde-format
 msgid "Export QuickText"
-msgstr "Eksporti QuickText"
+msgstr "Elporti QuickText"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
 #: quicktext/quicktextplugineditorinterface.cpp:46

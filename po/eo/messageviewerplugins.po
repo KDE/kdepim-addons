@@ -1,15 +1,15 @@
 # Translation of messageviewerplugins.pot into esperanto.
 # Copyright (C) 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kdepim-addons package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-26 20:18+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-15 09:56+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -149,8 +149,8 @@ msgid ""
 "This option starts an editor to create a note. Then you can edit the note to "
 "your liking before saving it."
 msgstr ""
-"Ĉi tiu opcio komencas redaktilon por krei noton. Tiam vi povas redakti la "
-"noton laŭplaĉe antaŭ ol konservi ĝin."
+"Ĉi tiu elekteblo komencas redaktilon por krei noton. Tiam vi povas redakti "
+"la noton laŭplaĉe antaŭ ol konservi ĝin."
 
 #: createtodoplugin/todoedit.cpp:61
 #, kde-format
@@ -185,7 +185,7 @@ msgstr "Fermi la fenestraĵon por krei novajn farendojn."
 #: createtodoplugin/todoedit.cpp:150
 #, kde-format
 msgid "Check I received a reply about \"%1\""
-msgstr "Kontrolu, ke mi ricevis respondon pri \"%1\""
+msgstr "Kontroli, ke mi ricevis respondon pri \"%1\""
 
 #: createtodoplugin/todoedit.cpp:151
 #, kde-format
@@ -217,9 +217,9 @@ msgid ""
 "from the currently selected message. Then you can edit the to-do to your "
 "liking before saving it to your calendar."
 msgstr ""
-"Ĉi tiu opcio lanĉas la farend-redaktilon de KOrganizer kun komencaj valoroj "
-"prenitaj el la nuntempe elektita mesaĝo. Tiam vi povas redakti la farendon "
-"laŭplaĉe antaŭ ol konservi ĝin en via kalendaro."
+"Ĉi tiu elekteblo lanĉas la farend-redaktilon de KOrganizer kun komencaj "
+"valoroj prenitaj el la nuntempe elektita mesaĝo. Tiam vi povas redakti la "
+"farendon laŭplaĉe antaŭ ol konservi ĝin en via kalendaro."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:16
 #, kde-format

@@ -1,15 +1,15 @@
 # Translation of messageviewer_application_gnupgwks_plugin.pot into esperanto.
 # Copyright (C) 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kdepim-addons package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-28 01:40+0000\n"
-"PO-Revision-Date: 2023-09-26 20:18+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-12 10:35+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,7 @@ msgid ""
 "authenticity of emails you send them."
 msgstr ""
 "Kiam vi registras vian ŝlosilon ĉe via retpoŝta provizanto, aliaj homoj tiam "
-"povos preni la ŝlosilon kaj sendi al vi ĉifritajn retpoŝtojn kaj kontroli "
+"povos preni la ŝlosilon kaj sendi al vi ĉifritajn retpoŝtojn kaj konfirmi "
 "aŭtentikecon de retpoŝtoj, kiujn vi sendas al ili."
 
 #: templates/gnupgwksmessagepart.html:33
@@ -113,7 +113,7 @@ msgid ""
 msgstr ""
 "Via OpenPGP-ŝlosilo estos publikigita sur la ŝlosilservilo de via retpoŝta "
 "provizanto. Aliaj uzantoj povos preni la ŝlosilon kaj sendi al vi ĉifritajn "
-"retpoŝtojn kaj kontroli aŭtentikecon de retpoŝtoj, kiujn vi sendas al ili."
+"retpoŝtojn kaj konfirmi aŭtentikecon de retpoŝtoj, kiujn vi sendas al ili."
 
 #: templates/pgpkeymessagepart.html:14
 msgid "OpenPGP Key"
