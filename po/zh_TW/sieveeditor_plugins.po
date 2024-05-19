@@ -3,13 +3,13 @@
 #
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-12-25 17:41+0900\n"
+"PO-Revision-Date: 2024-05-18 17:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -17,18 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts..."
+#, kde-format
 msgid "Click on button for selecting contacts…"
 msgstr "點擊按鈕以選取聯絡人…"
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
@@ -54,10 +53,9 @@ msgid "Error during creating folder: %1"
 msgstr "建立資料夾時發生錯誤：%1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgid "Create Folder…"
-msgstr "建立資料夾"
+msgstr "建立資料夾…"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -71,16 +69,14 @@ msgid "Unable to load folder list"
 msgstr "無法載入資料夾清單"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, fuzzy, kde-format
-#| msgid "Loading in progress..."
+#, kde-format
 msgid "Loading in progress…"
 msgstr "正在載入…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "搜尋..."
+msgstr "搜尋…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
@@ -125,8 +121,7 @@ msgid "Select IMAP folder"
 msgstr "選擇 IMAP 資料夾"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder..."
+#, kde-format
 msgid "Click on button for selecting folder…"
 msgstr "點擊按鈕以選取資料夾…"
 

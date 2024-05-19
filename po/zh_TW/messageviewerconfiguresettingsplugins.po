@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-03-06 18:40+0900\n"
+"PO-Revision-Date: 2024-05-18 17:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -277,10 +277,9 @@ msgid "Server Name:"
 msgstr "伺服器名稱："
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">參數格式資訊...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">參數格式資訊…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -308,12 +307,10 @@ msgid "Configure Open Url With Plugin"
 msgstr "設定「網址開啟方式」外掛程式"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "新增規則..."
+msgstr "新增規則…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
@@ -322,12 +319,10 @@ msgid "Remove Rule"
 msgstr "移除規則"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "修改規則..."
+msgstr "修改規則…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
@@ -362,16 +357,14 @@ msgid "Remove Rule"
 msgstr "移除規則"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "新增規則..."
+msgstr "新增規則…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "編輯規則..."
+msgstr "編輯規則…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -388,7 +381,7 @@ msgstr "設定垃圾信選項"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "新增…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

@@ -10,20 +10,20 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2007, 2008, 2009, 2010.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007, 2008.
 # pan93412 <pan93412@gmail.com>, 2019.
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-12-25 17:44+0900\n"
+"PO-Revision-Date: 2024-05-18 17:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
@@ -744,16 +744,14 @@ msgid "Picture Page"
 msgstr "圖片頁面"
 
 #: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Loading..."
+#, kde-format
 msgid "Loading…"
-msgstr "載入中..."
+msgstr "載入中…"
 
 #: plugins/picoftheday/element.cpp:331
-#, fuzzy, kde-format
-#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#, kde-format
 msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
-msgstr "<qt>載入「本日圖片」中...</qt>"
+msgstr "<qt>載入「本日圖片」中…</qt>"
 
 #: plugins/picoftheday/picoftheday.cpp:48
 #, kde-format

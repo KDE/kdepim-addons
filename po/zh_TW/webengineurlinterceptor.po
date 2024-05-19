@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-01-15 00:50+0900\n"
+"PO-Revision-Date: 2024-05-18 17:46+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.90\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: adblock/adblockfilterdialog.cpp:26
 #, kde-format
@@ -38,13 +38,12 @@ msgstr "網址"
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "新增…"
 
 #: adblock/adblockfiltertreeview.cpp:71
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgid "Modify…"
-msgstr "變更..."
+msgstr "修改…"
 
 #: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
@@ -73,8 +72,7 @@ msgid "Remove List"
 msgstr "移除清單"
 
 #: adblock/adblockfilterwidget.cpp:26
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
 msgstr "搜尋…"
 
