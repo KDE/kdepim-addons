@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2024-03-08 21:32+0530\n"
+"PO-Revision-Date: 2024-05-19 15:01+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -40,7 +40,7 @@ msgstr ""
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
 msgid "Select Short URL server:"
-msgstr ""
+msgstr "குறுகிய முகவரிகளுக்கான சேவையகம்:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
@@ -50,7 +50,7 @@ msgstr ""
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
-msgstr ""
+msgstr "இணைய இணைப்பு இல்லாததால் முகவரியை சுருக்க முடியவில்லை."
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:92
 #, kde-format
@@ -60,7 +60,7 @@ msgstr "சரம் ஓர் முகவரிபோல் தெரியவ
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:98
 #, kde-format
 msgid "An error occurred: \"%1\""
-msgstr ""
+msgstr "சிக்கல் ஏற்பட்டது: \"%1\""
 
 #: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
 #: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
@@ -69,6 +69,8 @@ msgid ""
 "Error reported by server:\n"
 "'%1'"
 msgstr ""
+"சேவையகம் தெரிவித்த சிக்கல்:\n"
+"'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
@@ -79,23 +81,23 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
-msgstr ""
+msgstr "வேறுபட்ட எழுத்தை நுழைப்பது"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
 #, kde-format
 msgid "Insert"
-msgstr ""
+msgstr "நுழை"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
 #, kde-format
 msgid "Insert Non Breaking Space"
-msgstr ""
+msgstr "உடைக்கமுடியா இடைவெளியை நுழை"
 
 #: quicktext/quicktextconfiguredialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure quick text"
-msgstr ""
+msgstr "விரை உரையை அமை"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
 #, kde-format
@@ -121,7 +123,7 @@ msgstr ""
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
 msgid "Variables"
-msgstr ""
+msgstr "மாறிகள்"
 
 #: quicktext/quicktexttreewidget.cpp:37
 #, kde-format
@@ -151,7 +153,7 @@ msgstr ""
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
 msgid "Remove Group"
-msgstr ""
+msgstr "குழுவை நீக்கு"
 
 #: quicktext/quicktexttreewidget.cpp:85
 #, kde-format
@@ -189,12 +191,12 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: quicktext/quicktextwidget.cpp:111
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "பொதுவானவை"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
@@ -204,7 +206,7 @@ msgstr ""
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
 msgid "Zoom: %1%"
-msgstr ""
+msgstr "உருப்பெருக்கம்: %1%"
 
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
