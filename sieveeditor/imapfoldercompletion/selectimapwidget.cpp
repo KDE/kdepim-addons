@@ -28,7 +28,7 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
 
     mToolButton->setText(QStringLiteral("…"));
     mToolButton->setObjectName(QLatin1StringView("toolbutton"));
-    mToolButton->setToolTip(i18n("Select IMAP folder"));
+    mToolButton->setToolTip(i18nc("@info:tooltip", "Select IMAP folder"));
     mToolButton->hide();
     layout->addWidget(mToolButton);
     connect(mToolButton, &QToolButton::clicked, this, &SelectImapWidget::slotOpenSelectImapFolder);

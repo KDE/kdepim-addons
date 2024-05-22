@@ -37,7 +37,7 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
 
     mEmailButton->setText(i18n("…"));
     mEmailButton->setObjectName(QLatin1StringView("emailbutton"));
-    mEmailButton->setToolTip(i18n("Select Emails"));
+    mEmailButton->setToolTip(i18nc("@info:tooltip", "Select Emails"));
     mainLayout->addWidget(mEmailButton);
     connect(mEmailButton, &QToolButton::clicked, this, &EmailLineEdit::slotSelectEmail);
     verifyAkonadiStatus();
