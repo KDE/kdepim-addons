@@ -29,6 +29,7 @@ using MimeTreeParser::Interface::BodyPart;
 
 #include <Akonadi/ContactViewer>
 #include <Akonadi/StandardContactFormatter>
+#include <MessageViewer/IconNameCache>
 
 #include <KIO/FileCopyJob>
 #include <KIO/StatJob>
@@ -88,10 +89,9 @@ public:
                       + QStringLiteral("</h2></div>"));
 
         count = 0;
-        static QString defaultPixmapPath = QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("user-identity"), KIconLoader::Desktop)).url();
-        static QString defaultMapIconPath = QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("map-symbolic"), KIconLoader::Small)).url();
-        static QString defaultSmsIconPath = QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("message-new"), KIconLoader::Small)).url();
-
+        const QString defaultPixmapPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("user-identity"), KIconLoader::Desktop);
+        const QString defaultMapIconPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("map-symbolic"), KIconLoader::Small);
+        const QString defaultSmsIconPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("message-new"), KIconLoader::Small);
         if (!memento) {
             memento = new MessageViewer::VcardMemento(lst);
             msgPart->setMemento(memento);
