@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-15 10:28+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -56,7 +56,9 @@ msgid "Calendar where the new event will be stored."
 msgstr "Agenda waar de nieuwe afspraak zal worden opgeslagen."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Calendar where the new event will be stored"
+msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "Agenda waar de nieuwe afspraak zal worden opgeslagen"
 
@@ -165,7 +167,9 @@ msgid "Todo list where the new task will be stored."
 msgstr "Takenlijst waar de nieuwe taak zal worden opgeslagen."
 
 #: createtodoplugin/todoedit.cpp:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Todo list where the new task will be stored"
+msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "Takenlijst waar de nieuwe taak zal worden opgeslagen"
 

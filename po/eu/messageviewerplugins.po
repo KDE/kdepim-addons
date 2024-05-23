@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 22:40+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -62,7 +62,9 @@ msgid "Calendar where the new event will be stored."
 msgstr "Ekitaldi berria gordeko den egutegia."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Calendar where the new event will be stored"
+msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "Ekitaldi berria gordeko den egutegia"
 
@@ -171,7 +173,9 @@ msgid "Todo list where the new task will be stored."
 msgstr "Ataza berria gordeko den zeregin-zerrenda."
 
 #: createtodoplugin/todoedit.cpp:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Todo list where the new task will be stored"
+msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "Ataza berria gordeko den zeregin-zerrenda"
 

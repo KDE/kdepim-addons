@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 23:00+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -59,7 +59,9 @@ msgid "Calendar where the new event will be stored."
 msgstr "이벤트를 저장할 캘린더입니다."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Calendar where the new event will be stored"
+msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "이벤트를 저장할 캘린더"
 
@@ -168,7 +170,9 @@ msgid "Todo list where the new task will be stored."
 msgstr "새 할 일을 저장할 할 일 목록입니다."
 
 #: createtodoplugin/todoedit.cpp:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Todo list where the new task will be stored"
+msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "새 작업을 저장할 할 일 목록입니다"
 

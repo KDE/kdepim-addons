@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2019-12-18 20:06+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -29,7 +29,9 @@ msgid "…"
 msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select Emails"
+msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Kirjade valimine"
 
@@ -82,7 +84,9 @@ msgid "Search…"
 msgstr "Otsi ..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Refresh IMAP Folder List"
+msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Värskenda IMAP kaustaloendit"
 
@@ -120,7 +124,9 @@ msgid "Load Folders"
 msgstr "Kaustade laadimine"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select IMAP folder"
+msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "IMAP kausta valimine"
 

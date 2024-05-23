@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-15 09:56+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -57,7 +57,9 @@ msgid "Calendar where the new event will be stored."
 msgstr "Kalendaro kie la nova evento estos konservita."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Calendar where the new event will be stored"
+msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "Kalendaro kie la nova evento estos konservita"
 
@@ -165,7 +167,9 @@ msgid "Todo list where the new task will be stored."
 msgstr "Listo, kie la nova tasko estos konservita."
 
 #: createtodoplugin/todoedit.cpp:82
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Todo list where the new task will be stored"
+msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "Listo, kie la nova tasko estos konservita"
 

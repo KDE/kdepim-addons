@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -30,6 +30,7 @@ msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr ""
 
@@ -87,7 +88,9 @@ msgid "Search…"
 msgstr "Претрага..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Refresh IMAP Folder List"
+msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Освежи списак ИМАП фасцикли"
 
@@ -128,7 +131,9 @@ msgstr "Учитавање фасцикли"
 
 # >> @title:window
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select IMAP folder"
+msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Избор ИМАП фасцикле"
 

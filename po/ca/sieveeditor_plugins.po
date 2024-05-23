@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-05-12 21:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -31,7 +31,9 @@ msgid "…"
 msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select Emails"
+msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Selecciona els correu electrònics"
 
@@ -80,7 +82,9 @@ msgid "Search…"
 msgstr "Cerca…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Refresh IMAP Folder List"
+msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Actualitza la llista de les carpetes IMAP"
 
@@ -117,7 +121,9 @@ msgid "Load Folders"
 msgstr "Carrega les carpetes"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select IMAP folder"
+msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Selecció de la carpeta IMAP"
 
