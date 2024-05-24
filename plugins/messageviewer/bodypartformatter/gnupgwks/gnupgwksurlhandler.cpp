@@ -96,6 +96,7 @@ QByteArray ApplicationGnuPGWKSUrlHandler::createConfirmation(const KMime::Messag
     QByteArray result;
     QObject::connect(job,
                      &QGpgME::WKSPublishJob::result,
+                     job,
                      [&el, &result](const GpgME::Error &, const QByteArray &returnedData, const QByteArray &returnedError) {
                          if (returnedData.isEmpty()) {
                              qCWarning(GNUPGWKS_LOG) << "GPG:" << returnedError;

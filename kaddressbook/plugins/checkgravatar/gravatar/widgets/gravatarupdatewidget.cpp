@@ -68,7 +68,7 @@ void GravatarUpdateWidget::setOriginalUrl(const QUrl &url)
     QImage image;
     QByteArray imageData;
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload);
-    QObject::connect(job, &KIO::TransferJob::data, [&imageData](KIO::Job *, const QByteArray &data) {
+    QObject::connect(job, &KIO::TransferJob::data, this, [&imageData](KIO::Job *, const QByteArray &data) {
         imageData.append(data);
     });
     if (job->exec()) {
