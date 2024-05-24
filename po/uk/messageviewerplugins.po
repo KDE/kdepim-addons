@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-15 09:53+0300\n"
+"PO-Revision-Date: 2024-05-23 06:23+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -59,8 +59,7 @@ msgid "Calendar where the new event will be stored."
 msgstr "Календар, до якого слід зберігати нові записи подій."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, fuzzy, kde-format
-#| msgid "Calendar where the new event will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "Календар, до якого слід зберігати нові записи подій"
@@ -169,8 +168,7 @@ msgid "Todo list where the new task will be stored."
 msgstr "Список завдань, до якого слід зберегти новий запис завдання."
 
 #: createtodoplugin/todoedit.cpp:82
-#, fuzzy, kde-format
-#| msgid "Todo list where the new task will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "Список завдань, до якого слід зберегти новий запис завдання"

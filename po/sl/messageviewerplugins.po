@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-15 07:34+0200\n"
+"PO-Revision-Date: 2024-05-23 07:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -36,7 +36,7 @@ msgstr "Razširi naslov URL"
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr "Prevedi..."
+msgstr "Prevedi…"
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
 #: createtodoplugin/todoedit.cpp:42
@@ -60,11 +60,10 @@ msgid "Calendar where the new event will be stored."
 msgstr "Koledar, v katerega boste shranili nov dogodek."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, fuzzy, kde-format
-#| msgid "Calendar where the new event will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
-msgstr "Koledar, v katerega boste shranili nov dogodek"
+msgstr "Koledar kamor bo shranjen nov dogodek"
 
 #: createeventplugin/eventedit.cpp:89
 #, kde-format
@@ -170,11 +169,10 @@ msgid "Todo list where the new task will be stored."
 msgstr "Seznam opravil, kamor želite shraniti opravilo."
 
 #: createtodoplugin/todoedit.cpp:82
-#, fuzzy, kde-format
-#| msgid "Todo list where the new task will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
-msgstr "Seznam čakajočih opravil, kamor želite shraniti opravilo"
+msgstr "Seznam čakajočih opravil, kamor bo shranjeno opravilo"
 
 #: createtodoplugin/todoedit.cpp:96
 #, kde-format

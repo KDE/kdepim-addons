@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-24 00:39+0000\n"
 "PO-Revision-Date: 2020-06-26 18:37+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-POT-Import-Date: 2012-12-01 22:25:15+0000\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: text_vcard.cpp:87
+#: text_vcard.cpp:88
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"

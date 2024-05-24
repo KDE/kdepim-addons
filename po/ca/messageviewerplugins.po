@@ -63,8 +63,7 @@ msgid "Calendar where the new event will be stored."
 msgstr "Calendari on s'emmagatzemarà l'esdeveniment nou."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, fuzzy, kde-format
-#| msgid "Calendar where the new event will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "Calendari on s'emmagatzemarà l'esdeveniment nou"
@@ -173,8 +172,7 @@ msgid "Todo list where the new task will be stored."
 msgstr "La llista de tasques pendents on s'emmagatzemarà la tasca nova."
 
 #: createtodoplugin/todoedit.cpp:82
-#, fuzzy, kde-format
-#| msgid "Todo list where the new task will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "La llista de tasques pendents on s'emmagatzemarà la tasca nova"
