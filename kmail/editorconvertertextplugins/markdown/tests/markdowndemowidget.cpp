@@ -23,7 +23,7 @@ MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
     mPreview = new MarkdownPreviewWidget(this);
     mainLayout->addWidget(mPreview);
 
-    connect(mEdit, &QTextEdit::textChanged, [this]() {
+    connect(mEdit, &QTextEdit::textChanged, this, [this]() {
         mPreview->slotUpdatePreview(mEdit->toPlainText());
     });
 
