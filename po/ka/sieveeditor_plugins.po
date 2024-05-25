@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 03:50+0200\n"
+"PO-Revision-Date: 2024-05-24 16:27+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -29,8 +29,7 @@ msgid "…"
 msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "აირჩიეთ ელფოსტები"
@@ -80,8 +79,7 @@ msgid "Search…"
 msgstr "ძებნა…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Refresh IMAP Folder List"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "IMAP საქაღალდეების განახლება"
@@ -119,8 +117,7 @@ msgid "Load Folders"
 msgstr "საქაღალდეების ჩატვირთვა"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "აირჩიეთ IMAP საქაღალდე"

@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2016, 2017, 2019, 2020, 2022.
+# SPDX-FileCopyrightText: 2016, 2017, 2019, 2020, 2022, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-01-01 15:56+0000\n"
+"PO-Revision-Date: 2024-05-24 17:15+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -171,7 +171,7 @@ msgstr "Rejected Domain Name"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "A&dd…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -181,10 +181,9 @@ msgstr "Re&move"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mod&ify..."
+#, kde-format
 msgid "Mod&ify…"
-msgstr "Mod&ify..."
+msgstr "Mod&ify…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
@@ -229,8 +228,7 @@ msgid "All selected emails are added to white list"
 msgstr "All selected emails are added to white list"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, fuzzy, kde-format
-#| msgid "Emails added to white list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "Emails added to white list"

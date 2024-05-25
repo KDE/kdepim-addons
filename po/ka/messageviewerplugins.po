@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-15 05:32+0200\n"
+"PO-Revision-Date: 2024-05-24 16:27+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -57,8 +57,7 @@ msgid "Calendar where the new event will be stored."
 msgstr "კალენდარი, სადაც ახალი მოვლენა იქნება დამახსოვრებული."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, fuzzy, kde-format
-#| msgid "Calendar where the new event will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "კალენდარი, სადაც ახალი მოვლენა იქნება დამახსოვრებული"
@@ -167,8 +166,7 @@ msgid "Todo list where the new task will be stored."
 msgstr "გეგმის სია, სადაც ახალი ამოცანა იქნება შენახული."
 
 #: createtodoplugin/todoedit.cpp:82
-#, fuzzy, kde-format
-#| msgid "Todo list where the new task will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "გეგმის სია, სადაც ახალი ამოცანა იქნება შენახული"
