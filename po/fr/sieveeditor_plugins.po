@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-13 09:47+0200\n"
+"PO-Revision-Date: 2024-05-24 09:18+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -30,11 +30,10 @@ msgid "…"
 msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
-msgstr "Sélectionner les adresses courriel"
+msgstr "Sélectionner les courriels"
 
 #: emaillineedit/emaillineedit.cpp:87
 #, kde-format
@@ -81,11 +80,10 @@ msgid "Search…"
 msgstr "Rechercher…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Refresh IMAP Folder List"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
-msgstr "Rafraîchir la liste du dossier IMAP"
+msgstr "Rafraîchir la liste du dossier « IMAP »"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
@@ -120,11 +118,10 @@ msgid "Load Folders"
 msgstr "Charger des dossiers"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
-msgstr "Sélectionner le dossier IMAP"
+msgstr "Sélectionner un dossier « IMAP »"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
