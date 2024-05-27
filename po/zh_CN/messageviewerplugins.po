@@ -56,8 +56,7 @@ msgid "Calendar where the new event will be stored."
 msgstr "新事件将保存的日历。"
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, fuzzy, kde-format
-#| msgid "Calendar where the new event will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "新事件将保存的日历"
@@ -164,8 +163,7 @@ msgid "Todo list where the new task will be stored."
 msgstr "新任务将保存的待办事项列表。"
 
 #: createtodoplugin/todoedit.cpp:82
-#, fuzzy, kde-format
-#| msgid "Todo list where the new task will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "新任务将保存的待办事项列表"

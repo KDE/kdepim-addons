@@ -28,8 +28,7 @@ msgid "…"
 msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:40
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "选择邮件"
@@ -79,8 +78,7 @@ msgid "Search…"
 msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Refresh IMAP Folder List"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "刷新 IMAP 文件夹列表"
@@ -118,8 +116,7 @@ msgid "Load Folders"
 msgstr "加载文件夹"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "选择 IMAP 文件夹"
