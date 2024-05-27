@@ -48,10 +48,11 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
 
     mainLayout->addLayout(hbox);
 
-    label = new QLabel(i18n("<b>%f</b> will be replaced with the "
-                            "filename to edit.<br />"
-                            "<b>%w</b> will be replaced with the window id.<br />"
-                            "<b>%l</b> will be replaced with the line number."),
+    label = new QLabel(i18nc("@label:textbox",
+                             "<b>%f</b> will be replaced with the "
+                             "filename to edit.<br />"
+                             "<b>%w</b> will be replaced with the window id.<br />"
+                             "<b>%l</b> will be replaced with the line number."),
                        this);
     label->setObjectName(QLatin1StringView("explanationlabel"));
     label->setEnabled(false); // see above

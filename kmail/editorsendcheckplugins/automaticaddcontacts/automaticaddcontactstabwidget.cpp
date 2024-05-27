@@ -38,7 +38,7 @@ AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QA
     hlay->setObjectName(QLatin1StringView("folderlayout"));
     mainLayout->addLayout(hlay);
 
-    auto lab = new QLabel(i18n("Select the addressbook in which to store contacts:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Select the addressbook in which to store contacts:"), this);
     lab->setObjectName(QLatin1StringView("labelfolder"));
     hlay->addWidget(lab);
 

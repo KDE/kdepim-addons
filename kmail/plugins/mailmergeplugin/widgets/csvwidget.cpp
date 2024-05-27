@@ -21,7 +21,7 @@ CsvWidget::CsvWidget(QWidget *parent)
     csvWidgetLayout->setObjectName(QLatin1StringView("csvWidgetLayout"));
     csvWidgetLayout->setContentsMargins({});
 
-    auto lab = new QLabel(i18n("Path:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Path:"), this);
     lab->setObjectName(QLatin1StringView("label"));
     csvWidgetLayout->addWidget(lab);
     mCvsUrlRequester->setObjectName(QLatin1StringView("cvsurlrequester"));

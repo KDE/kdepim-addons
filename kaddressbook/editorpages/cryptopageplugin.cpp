@@ -49,12 +49,12 @@ CryptoPagePlugin::CryptoPagePlugin()
     }
     protGB->setLayout(protGBLayout);
 
-    auto l = new QLabel(i18n("Preferred OpenPGP encryption key:"), this);
+    auto l = new QLabel(i18nc("@label:textbox", "Preferred OpenPGP encryption key:"), this);
     topLayout->addWidget(l, 1, 0);
 
     topLayout->addWidget(mPgpKey, 1, 1);
 
-    l = new QLabel(i18n("Preferred S/MIME encryption certificate:"), this);
+    l = new QLabel(i18nc("@label:textbox", "Preferred S/MIME encryption certificate:"), this);
     topLayout->addWidget(l, 2, 0);
 
     topLayout->addWidget(mSmimeCert, 2, 1);
@@ -68,7 +68,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     auto hboxHBoxLayout = new QHBoxLayout(hbox);
     hboxHBoxLayout->setContentsMargins({});
 
-    l = new QLabel(i18n("Sign:"), hbox);
+    l = new QLabel(i18nc("@label:textbox", "Sign:"), hbox);
     hboxHBoxLayout->addWidget(l);
 
     mSignPref = new QComboBox(hbox);
@@ -85,7 +85,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     hboxHBoxLayout = new QHBoxLayout(hbox);
     hboxHBoxLayout->setContentsMargins({});
 
-    l = new QLabel(i18n("Encrypt:"), hbox);
+    l = new QLabel(i18nc("@label:textbox", "Encrypt:"), hbox);
     hboxHBoxLayout->addWidget(l);
 
     mCryptPref = new QComboBox(hbox);

@@ -28,7 +28,7 @@ SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
     auto w = new QWidget;
     auto vbox = new QVBoxLayout(w);
     vbox->setContentsMargins({});
-    auto lab = new QLabel(i18n("Select attachment:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Select attachment:"), this);
     lab->setObjectName(QLatin1StringView("selectattachment_label"));
     vbox->addWidget(lab);
     mUrlRequester->setMode(KFile::LocalOnly | KFile::ExistingOnly);

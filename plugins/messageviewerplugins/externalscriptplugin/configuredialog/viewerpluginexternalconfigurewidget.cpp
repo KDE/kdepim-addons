@@ -64,7 +64,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     mainLayout->setObjectName(QLatin1StringView("layout"));
     mainLayout->setContentsMargins({});
 
-    auto lab = new QLabel(i18n("External Script:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "External Script:"), this);
     lab->setObjectName(QLatin1StringView("lab"));
     mainLayout->addWidget(lab);
 

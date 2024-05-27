@@ -18,7 +18,7 @@ ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));
-    auto label = new QLabel(i18n("Enter new domain name:"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Enter new domain name:"), this);
     label->setObjectName(QLatin1StringView("label"));
     mainLayout->addWidget(label);
 

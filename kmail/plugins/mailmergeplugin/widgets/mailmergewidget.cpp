@@ -33,7 +33,7 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     auto hbox = new QHBoxLayout;
     mainLayout->addLayout(hbox);
 
-    auto lab = new QLabel(i18n("Source:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Source:"), this);
     lab->setObjectName(QLatin1StringView("lab"));
     hbox->addWidget(lab);
 
@@ -55,7 +55,7 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
 
     mStackedWidget->addWidget(mCsvWidget);
 
-    lab = new QLabel(i18n("Attachment:"), this);
+    lab = new QLabel(i18nc("@label:textbox", "Attachment:"), this);
     mainLayout->addWidget(lab);
 
     auto buttonCode = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(

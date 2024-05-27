@@ -19,7 +19,7 @@ CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    auto lab = new QLabel(i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Do you want to send the email with a different SMTP than the one defined in the current identity?"), this);
     lab->setObjectName(QLatin1StringView("label"));
     lab->setWordWrap(true);
     mainLayout->addWidget(lab);

@@ -27,7 +27,7 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     auto layout = new QVBoxLayout(this);
     layout->setObjectName(QLatin1StringView("layout"));
 
-    auto label = new QLabel(i18n("Comment:"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Comment:"), this);
     label->setObjectName(QLatin1StringView("label"));
     layout->addWidget(label);
 

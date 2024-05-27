@@ -19,7 +19,7 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    auto lab = new QLabel(i18n("Potentially invalid emails are displayed in red:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Potentially invalid emails are displayed in red:"), this);
     lab->setObjectName(QLatin1StringView("label"));
     mainLayout->addWidget(lab);
 

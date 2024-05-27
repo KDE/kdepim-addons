@@ -25,7 +25,7 @@ DelegateSelector::DelegateSelector(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Select delegate"));
     auto mainLayout = new QVBoxLayout(this);
 
-    auto label = new QLabel(i18n("Delegate:"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Delegate:"), this);
     label->setObjectName(QLatin1StringView("label"));
     mainLayout->addWidget(label);
 

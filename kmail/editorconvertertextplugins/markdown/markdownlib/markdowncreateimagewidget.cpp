@@ -17,9 +17,9 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     , mImageUrl(new QLineEdit(this))
     , mAlternateText(new QLineEdit(this))
     , mKeepOriginalSize(new QCheckBox(i18n("Keep original size"), this))
-    , mLabWidth(new QLabel(i18n("Width:"), this))
+    , mLabWidth(new QLabel(i18nc("@label:textbox", "Width:"), this))
     , mWidth(new QSpinBox(this))
-    , mLabHeight(new QLabel(i18n("Height:"), this))
+    , mLabHeight(new QLabel(i18nc("@label:textbox", "Height:"), this))
     , mHeight(new QSpinBox(this))
 {
     auto mainLayout = new QFormLayout(this);

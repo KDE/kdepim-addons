@@ -53,7 +53,7 @@ EventEdit::EventEdit(QWidget *parent)
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
 
-    auto lab = new QLabel(i18n("Event:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Event:"), this);
     hbox->addWidget(lab);
 
     mEventEdit->setClearButtonEnabled(true);
@@ -86,7 +86,7 @@ EventEdit::EventEdit(QWidget *parent)
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
 
-    lab = new QLabel(i18n("Start:"), this);
+    lab = new QLabel(i18nc("@label:textbox", "Start:"), this);
     hbox->addWidget(lab);
     QDateTime currentDateTime = QDateTime::currentDateTime();
     mStartDateTimeEdit->setObjectName(QLatin1StringView("startdatetimeedit"));
@@ -99,7 +99,7 @@ EventEdit::EventEdit(QWidget *parent)
 
     hbox->addSpacing(5);
 
-    lab = new QLabel(i18n("End:"), this);
+    lab = new QLabel(i18nc("@label:textbox", "End:"), this);
     hbox->addWidget(lab);
     mEndDateTimeEdit->setObjectName(QLatin1StringView("enddatetimeedit"));
     mEndDateTimeEdit->setDateTime(currentDateTime.addSecs(3600));
