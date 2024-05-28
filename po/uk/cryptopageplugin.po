@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cryptopageplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-23 00:47+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2009-12-08 08:09+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -26,12 +26,16 @@ msgid "Allowed Protocols"
 msgstr "Можливі протоколи"
 
 #: cryptopageplugin.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred OpenPGP encryption key:"
+msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Бажаний ключ шифрування OpenPGP:"
 
 #: cryptopageplugin.cpp:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred S/MIME encryption certificate:"
+msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Бажаний сертифікат шифрування S/MIME:"
 
@@ -41,12 +45,16 @@ msgid "Message Preference"
 msgstr "Налаштування повідомлень"
 
 #: cryptopageplugin.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sign:"
+msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Підписування:"
 
 #: cryptopageplugin.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Encrypt:"
+msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Шифрування:"
 

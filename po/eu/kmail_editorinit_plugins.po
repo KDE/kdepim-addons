@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-01-30 22:52+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -31,8 +31,13 @@ msgstr "Konfiguratu \"Kanpoko Konposatzaile\" plugina"
 msgid "Use external editor instead of composer"
 msgstr "Erabili kanpoko editorea bat konposatzailearen ordez"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:51
-#, kde-format
+#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
+#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
+#| "line number."
+msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
 "replaced with the window id.<br /><b>%l</b> will be replaced with the line "

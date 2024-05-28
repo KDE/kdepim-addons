@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-10-08 22:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -55,7 +55,9 @@ msgid "Automatic Add Contacts"
 msgstr "자동으로 연락처 추가"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the addressbook in which to store contacts:"
+msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "연락처를 저장할 주소록 선택:"
 
@@ -87,7 +89,11 @@ msgid "Check SMTP server"
 msgstr "SMTP 서버 확인"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Do you want to send the email with a different SMTP than the one defined "
+#| "in the current identity?"
+msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
 "the current identity?"
@@ -126,7 +132,9 @@ msgid "Duplicated emails"
 msgstr "중복된 이메일"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "These emails are duplicated. Do you want to send email?"
+msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "다음 이메일이 중복됩니다. 메일을 보내시겠습니까?"
 
@@ -143,7 +151,9 @@ msgid "Check Attachment"
 msgstr "첨부 파일 포함 여부 확인"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do you want to send some attachment?"
+msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "첨부 파일을 보내시겠습니까?"
 
@@ -183,7 +193,6 @@ msgid "Mod&ify…"
 msgstr "수정(&I)..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
-#: confirm-address/confirmaddressemailentrydialog.cpp:21
 #, kde-format
 msgid "Enter new domain name:"
 msgstr "새 도메인 이름 입력:"
@@ -230,6 +239,13 @@ msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "이메일을 허용 목록에 추가함"
 
+#: confirm-address/confirmaddressemailentrydialog.cpp:21
+#, fuzzy, kde-format
+#| msgid "Enter new domain name:"
+msgctxt "@label:textbox"
+msgid "Enter new domain name:"
+msgstr "새 도메인 이름 입력:"
+
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format
 msgctxt "@title:window"
@@ -243,7 +259,9 @@ msgid "Change Value"
 msgstr "값 변경"
 
 #: confirm-address/confirmaddresswidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Potentially invalid emails are displayed in red:"
+msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "잘못되었을 수도 있는 이메일은 빨간색으로 표시됨:"
 

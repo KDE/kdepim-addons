@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-23 00:47+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2022-08-21 07:27+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -24,12 +24,16 @@ msgid "Allowed Protocols"
 msgstr "ჩართული პროტოკოლები"
 
 #: cryptopageplugin.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred OpenPGP encryption key:"
+msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "OpenPGP-ის სასურველი დაშიფვრის გასაღები:"
 
 #: cryptopageplugin.cpp:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred S/MIME encryption certificate:"
+msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "S/MIME დაშიფვრის სასურველი სერტიფიკატი:"
 
@@ -39,12 +43,16 @@ msgid "Message Preference"
 msgstr "შეტყობინების სასურველობა"
 
 #: cryptopageplugin.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sign:"
+msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "შესვლა:"
 
 #: cryptopageplugin.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Encrypt:"
+msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "დაშიფვრა:"
 

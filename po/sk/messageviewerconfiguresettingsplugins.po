@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2019-11-11 16:12+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -144,6 +144,7 @@ msgstr "Prečítať hlavičku výsledkov overenia"
 #: dkim-verify/dkimgeneralwidget.cpp:37
 #, fuzzy, kde-format
 #| msgid "Save Record Key"
+msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Uložiť kľúč záznamu"
 
@@ -286,6 +287,7 @@ msgstr ""
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, kde-format
+msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 

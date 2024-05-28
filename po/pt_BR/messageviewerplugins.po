@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-11-14 13:39-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -51,7 +51,9 @@ msgid "Open &Editor…"
 msgstr "Abrir o &editor..."
 
 #: createeventplugin/eventedit.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Event:"
+msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Evento:"
 
@@ -68,7 +70,9 @@ msgid "Calendar where the new event will be stored"
 msgstr "Calendário onde o novo evento será armazenado"
 
 #: createeventplugin/eventedit.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start:"
+msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Início:"
 
@@ -78,7 +82,9 @@ msgid "Select start time for event."
 msgstr "Selecione a hora de início do evento."
 
 #: createeventplugin/eventedit.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "End:"
+msgctxt "@label:textbox"
 msgid "End:"
 msgstr "Fim:"
 
@@ -119,7 +125,9 @@ msgid "Allows you to create a calendar Event"
 msgstr "Permite-lhe criar um evento de calendário"
 
 #: createnoteplugin/noteedit.cpp:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Note:"
+msgctxt "@label:textbox"
 msgid "Note:"
 msgstr "Nota:"
 
@@ -162,7 +170,9 @@ msgstr ""
 "forma que desejar antes de salvá-la."
 
 #: createtodoplugin/todoedit.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "To-do:"
+msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "Tarefa:"
 
@@ -257,7 +267,9 @@ msgid "Modify Script…"
 msgstr "Modificar script..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script:"
+msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Script externo:"
 
@@ -301,6 +313,7 @@ msgstr "Linha de comando:"
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
 #, fuzzy, kde-format
 #| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 "<qt><a href=\"whatsthis1\">Informação do formato do argumento...</a></qt>"

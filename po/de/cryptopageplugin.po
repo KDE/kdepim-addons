@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cryptopageplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-23 00:47+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2009-12-12 23:00+0100\n"
 "Last-Translator: Thomas Reitelbach <tr@erdfunkstelle.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,12 +19,16 @@ msgid "Allowed Protocols"
 msgstr "Erlaubte Protokolle"
 
 #: cryptopageplugin.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred OpenPGP encryption key:"
+msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Bevorzugter OpenPGP-Verschlüsselungsschlüssel:"
 
 #: cryptopageplugin.cpp:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preferred S/MIME encryption certificate:"
+msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Bevorzugtes S/MIME-Verschlüsselungszertifikat:"
 
@@ -34,12 +38,16 @@ msgid "Message Preference"
 msgstr "Einstellungen für Nachrichten"
 
 #: cryptopageplugin.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sign:"
+msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Signieren:"
 
 #: cryptopageplugin.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Encrypt:"
+msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Verschlüsseln:"
 

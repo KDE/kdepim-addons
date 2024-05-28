@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-10-08 22:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -66,7 +66,9 @@ msgid "Search"
 msgstr "찾기"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "이메일:"
 
@@ -98,12 +100,16 @@ msgid "merge"
 msgstr "합치기"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select contacts that you really want to merge:"
+msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "합칠 연락처를 선택하십시오:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the addressbook in which to store merged contacts:"
+msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
 msgstr "합쳐진 연락처를 저장할 주소록을 선택하십시오:"
 
@@ -147,7 +153,9 @@ msgid "Search in result…"
 msgstr "결과에서 검색..."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select AddressBook:"
+msgctxt "@label:textbox"
 msgid "Select AddressBook:"
 msgstr "주소록 선택:"
 

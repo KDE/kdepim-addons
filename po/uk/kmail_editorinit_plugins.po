@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorinit_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2019-12-17 09:07+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -31,8 +31,13 @@ msgstr "Налаштовування додатка «Зовнішній ред�
 msgid "Use external editor instead of composer"
 msgstr "Використовувати зовнішній редактор"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:51
-#, kde-format
+#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
+#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
+#| "line number."
+msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
 "replaced with the window id.<br /><b>%l</b> will be replaced with the line "

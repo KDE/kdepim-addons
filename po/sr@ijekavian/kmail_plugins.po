@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2017-02-11 11:14+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -404,7 +404,9 @@ msgid "Mail Merge"
 msgstr "Стапање поште"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Path:"
+msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Путања:"
 
@@ -417,7 +419,9 @@ msgid "Attachment"
 msgstr "Прилог"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Source:"
+msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Извор:"
 
@@ -434,7 +438,9 @@ msgid "CSV"
 msgstr "ЦСВ"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attachment:"
+msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Прилог:"
 
@@ -454,7 +460,9 @@ msgid "Mod&ify..."
 msgstr "&Измени..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select attachment:"
+msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Изаберите прилог:"
 

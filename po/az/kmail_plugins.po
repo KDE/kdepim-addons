@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2022-11-11 11:18+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -403,7 +403,9 @@ msgid "Mail Merge"
 msgstr "Poçtun birləşdirilməsi"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Path:"
+msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Yol:"
 
@@ -415,7 +417,9 @@ msgid "Attachment"
 msgstr "Qoşma fayl"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Source:"
+msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Mənbə:"
 
@@ -430,7 +434,9 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attachment:"
+msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Qoşma fayl:"
 
@@ -450,7 +456,9 @@ msgid "Mod&ify..."
 msgstr "Dəy&işdirin..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select attachment:"
+msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Qoşma faylı seçin:"
 

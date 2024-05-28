@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-05-18 17:45+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -65,7 +65,9 @@ msgid "Search"
 msgstr "搜尋"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "電子郵件："
 
@@ -96,12 +98,16 @@ msgid "merge"
 msgstr "合併"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select contacts that you really want to merge:"
+msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "選擇您確定要合併的聯絡人："
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the addressbook in which to store merged contacts:"
+msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
 msgstr "選擇要將合併後的聯絡人儲存在哪個通訊錄裡："
 
@@ -144,7 +150,9 @@ msgid "Search in result…"
 msgstr "在結果中搜尋…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select AddressBook:"
+msgctxt "@label:textbox"
 msgid "Select AddressBook:"
 msgstr "選擇通訊錄："
 

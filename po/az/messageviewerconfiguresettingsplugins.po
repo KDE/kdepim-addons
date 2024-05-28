@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2022-07-22 12:21+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -140,7 +140,9 @@ msgstr ""
 "DKIM nəticəsini Kimlik doğrulaması nəticəsi başçlığındakı dəyər ilə əvəz edin"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Record Key:"
+msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Yazma aşarını saxlayın"
 
@@ -285,6 +287,7 @@ msgstr "Serverin adı:"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, fuzzy, kde-format
 #| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 "<qt><a href=\"whatsthis1\">Arqument formatı haqqında məlumat...</a></qt>"

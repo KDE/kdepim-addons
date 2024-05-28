@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2009-01-26 15:17+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@lists.kde.org>\n"
@@ -57,11 +57,14 @@ msgstr ""
 #: delegateselector.cpp:28
 #, fuzzy, kde-format
 #| msgid "Delegated: %1"
+msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Delegate: %1"
 
 #: reactiontoinvitationdialog.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Comment:"
+msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Comentariu:"
 

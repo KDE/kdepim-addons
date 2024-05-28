@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -378,7 +378,9 @@ msgid "Mail Merge"
 msgstr "邮件合并"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Path:"
+msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "路径："
 
@@ -390,7 +392,9 @@ msgid "Attachment"
 msgstr "附件"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Source:"
+msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "来源："
 
@@ -405,7 +409,9 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attachment:"
+msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "附件："
 
@@ -425,6 +431,8 @@ msgid "Mod&ify..."
 msgstr "修改...(&I)"
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select attachment:"
+msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "选择附件："

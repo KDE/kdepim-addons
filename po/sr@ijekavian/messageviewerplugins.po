@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2017-07-16 22:56+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -50,7 +50,9 @@ msgid "Open &Editor…"
 msgstr "Отвори &уређивач..."
 
 #: createeventplugin/eventedit.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Event:"
+msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Догађај:"
 
@@ -67,7 +69,9 @@ msgid "Calendar where the new event will be stored"
 msgstr "Календар у који се смешта нови догађај"
 
 #: createeventplugin/eventedit.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start:"
+msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Почетак:"
 
@@ -77,7 +81,9 @@ msgid "Select start time for event."
 msgstr "Изаберите време почетка догађаја."
 
 #: createeventplugin/eventedit.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "End:"
+msgctxt "@label:textbox"
 msgid "End:"
 msgstr "Завршетак:"
 
@@ -118,7 +124,9 @@ msgid "Allows you to create a calendar Event"
 msgstr "Даје вам да направите календарски догађај."
 
 #: createnoteplugin/noteedit.cpp:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Note:"
+msgctxt "@label:textbox"
 msgid "Note:"
 msgstr "Напомена:"
 
@@ -162,6 +170,7 @@ msgstr ""
 
 #: createtodoplugin/todoedit.cpp:61
 #, kde-format
+msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr ""
 
@@ -258,7 +267,9 @@ msgid "Modify Script…"
 msgstr "Измени скрипту..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script:"
+msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Спољашња скрипта:"
 
@@ -303,6 +314,7 @@ msgstr "Командна линија:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
 #, kde-format
+msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 

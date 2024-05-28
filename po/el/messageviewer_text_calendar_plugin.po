@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2012-02-18 16:19+0100\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
 "Language-Team: Greek <i18ngr@lists.hellug.gr>\n"
@@ -55,12 +55,16 @@ msgid "Select delegate"
 msgstr "Επιλογή εκπροσώπου"
 
 #: delegateselector.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delegate:"
+msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Εκπρόσωπος:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Comment:"
+msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Σχόλιο:"
 

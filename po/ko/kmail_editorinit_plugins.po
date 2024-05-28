@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2020-01-29 00:35+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,8 +28,13 @@ msgstr "\"외부 편집기\" 플러그인 설정"
 msgid "Use external editor instead of composer"
 msgstr "내부 편집기 대신에 외부 편집기 사용"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:51
-#, kde-format
+#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
+#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
+#| "line number."
+msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
 "replaced with the window id.<br /><b>%l</b> will be replaced with the line "

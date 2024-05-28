@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-11-03 09:08+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -65,7 +65,9 @@ msgid "Search"
 msgstr "Hledat"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-mail:"
 
@@ -96,12 +98,16 @@ msgid "merge"
 msgstr "sloučit"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select contacts that you really want to merge:"
+msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Vyberte kontakty které opravdu chcete sloučit:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the addressbook in which to store merged contacts:"
+msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
 msgstr "Vyberte knihu adres kde chcete ukládat sloučené kontakty:"
 
@@ -144,7 +150,9 @@ msgid "Search in result…"
 msgstr ""
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select AddressBook:"
+msgctxt "@label:textbox"
 msgid "Select AddressBook:"
 msgstr "Vybrat knihu adres:"
 

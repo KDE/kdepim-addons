@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2017-08-02 21:42+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -54,12 +54,16 @@ msgid "Select delegate"
 msgstr "Vybrať delegáta"
 
 #: delegateselector.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delegate:"
+msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Delegát:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Comment:"
+msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Komentár:"
 

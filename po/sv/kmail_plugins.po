@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-07-31 08:29+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -406,7 +406,9 @@ msgid "Mail Merge"
 msgstr "Sammanfoga brev"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Path:"
+msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Sökväg:"
 
@@ -418,7 +420,9 @@ msgid "Attachment"
 msgstr "Bilaga"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Source:"
+msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Källa:"
 
@@ -433,7 +437,9 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Attachment:"
+msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Bilaga:"
 
@@ -453,7 +459,9 @@ msgid "Mod&ify..."
 msgstr "Än&dra..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select attachment:"
+msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Välj bilaga:"
 

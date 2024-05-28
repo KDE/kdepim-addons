@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-04-28 20:16+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -139,7 +139,9 @@ msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Record Key:"
+msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Datensatzschlüssel speichern:"
 
@@ -279,6 +281,7 @@ msgstr "Servername:"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, fuzzy, kde-format
 #| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Information zum Argumentformat ...</a></qt>"
 

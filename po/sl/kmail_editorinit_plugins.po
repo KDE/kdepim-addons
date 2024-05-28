@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2020-06-10 16:09+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -30,8 +30,13 @@ msgstr "Nastavi vstavek \"Zunanji urejevalnik\""
 msgid "Use external editor instead of composer"
 msgstr "Uporabi zunanji urejevalnik namesto sestavljalnika"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:51
-#, kde-format
+#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
+#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
+#| "line number."
+msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
 "replaced with the window id.<br /><b>%l</b> will be replaced with the line "

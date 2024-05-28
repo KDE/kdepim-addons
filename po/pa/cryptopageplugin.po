@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-23 00:47+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2011-06-29 22:27+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -24,11 +24,13 @@ msgstr "ਮਨਜ਼ੂਰ ਪਰੋਟੋਕਾਲ"
 
 #: cryptopageplugin.cpp:52
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr ""
 
 #: cryptopageplugin.cpp:57
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr ""
 
@@ -38,12 +40,16 @@ msgid "Message Preference"
 msgstr "ਸੁਨੇਹਾ ਪਸੰਦ"
 
 #: cryptopageplugin.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sign:"
+msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "ਸਾਈਨ:"
 
 #: cryptopageplugin.cpp:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Encrypt:"
+msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "ਇੰਕ੍ਰਪਟ:"
 

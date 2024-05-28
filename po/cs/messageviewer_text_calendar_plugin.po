@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-02-07 10:43+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -54,12 +54,16 @@ msgid "Select delegate"
 msgstr "Vybrat delegáta"
 
 #: delegateselector.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delegate:"
+msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Delegovat:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Comment:"
+msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Komentář:"
 

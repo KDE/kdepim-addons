@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-01-21 14:48+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -29,8 +29,13 @@ msgstr "\"Harici Oluşturucu\" Eklentisini Yapılandır"
 msgid "Use external editor instead of composer"
 msgstr "Oluşturucu yerine dış düzenleyici kullan"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:51
-#, kde-format
+#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
+#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
+#| "line number."
+msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
 "replaced with the window id.<br /><b>%l</b> will be replaced with the line "

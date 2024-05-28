@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-03-02 12:55+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -142,7 +142,9 @@ msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "Ordeztu DKIM emaitza autentifikazio-emaitzaren goiburuko balioagatik"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Record Key:"
+msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Gorde erregistratutako gakoa:"
 
@@ -283,6 +285,7 @@ msgstr "Zerbitzariaren izena:"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, fuzzy, kde-format
 #| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 "<qt><a href=\"whatsthis1\">Argumentuen formatuari buruzko informazioa...</"

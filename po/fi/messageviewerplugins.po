@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2023-11-15 18:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -50,7 +50,9 @@ msgid "Open &Editor…"
 msgstr "Avaa &muokkain…"
 
 #: createeventplugin/eventedit.cpp:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Event:"
+msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Tapahtuma:"
 
@@ -67,7 +69,9 @@ msgid "Calendar where the new event will be stored"
 msgstr "Kalenteri, johon uusi tapahtuma tallennetaan"
 
 #: createeventplugin/eventedit.cpp:89
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Start:"
+msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Alkaa:"
 
@@ -77,7 +81,9 @@ msgid "Select start time for event."
 msgstr "Valitse tapahtuman alkoitusaika."
 
 #: createeventplugin/eventedit.cpp:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "End:"
+msgctxt "@label:textbox"
 msgid "End:"
 msgstr "Päättyy:"
 
@@ -118,7 +124,9 @@ msgid "Allows you to create a calendar Event"
 msgstr "Antaa sinun luoda kalenteritapahtuman"
 
 #: createnoteplugin/noteedit.cpp:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Note:"
+msgctxt "@label:textbox"
 msgid "Note:"
 msgstr "Muistiinpano:"
 
@@ -161,7 +169,9 @@ msgstr ""
 "muokata muistiinpanoa halusi mukaan ennen sen tallentamista."
 
 #: createtodoplugin/todoedit.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "To-do:"
+msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "Tehtävä:"
 
@@ -255,7 +265,9 @@ msgid "Modify Script…"
 msgstr "Muokkaa skriptiä…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "External Script:"
+msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Ulkoinen skripti:"
 
@@ -299,6 +311,7 @@ msgstr "Komentorivi:"
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
 #, fuzzy, kde-format
 #| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Tietoa parametrin muodosta…</a></qt>"
 

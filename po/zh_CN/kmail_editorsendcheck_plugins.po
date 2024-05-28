@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -56,7 +56,9 @@ msgid "Automatic Add Contacts"
 msgstr "自动添加联系人"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select the addressbook in which to store contacts:"
+msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "选择要保存联系人的地址簿"
 
@@ -88,7 +90,11 @@ msgid "Check SMTP server"
 msgstr "检查 SMTP 服务器"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Do you want to send the email with a different SMTP than the one defined "
+#| "in the current identity?"
+msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
 "the current identity?"
@@ -127,7 +133,9 @@ msgid "Duplicated emails"
 msgstr "重复的邮件"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "These emails are duplicated. Do you want to send email?"
+msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "这些邮件是重复的。您想发送邮件吗？"
 
@@ -144,7 +152,9 @@ msgid "Check Attachment"
 msgstr "检查附件"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do you want to send some attachment?"
+msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "您想发送附件吗？"
 
@@ -183,7 +193,6 @@ msgid "Mod&ify…"
 msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
-#: confirm-address/confirmaddressemailentrydialog.cpp:21
 #, kde-format
 msgid "Enter new domain name:"
 msgstr "输入新域名："
@@ -230,6 +239,13 @@ msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "电子邮件地址已添加到白名单"
 
+#: confirm-address/confirmaddressemailentrydialog.cpp:21
+#, fuzzy, kde-format
+#| msgid "Enter new domain name:"
+msgctxt "@label:textbox"
+msgid "Enter new domain name:"
+msgstr "输入新域名："
+
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format
 msgctxt "@title:window"
@@ -243,6 +259,8 @@ msgid "Change Value"
 msgstr "更改值"
 
 #: confirm-address/confirmaddresswidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Potentially invalid emails are displayed in red:"
+msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "可能无效的邮件地址显示为红色："

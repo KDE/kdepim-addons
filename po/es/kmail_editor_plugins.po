@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
 "PO-Revision-Date: 2024-05-16 00:50+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -42,7 +42,9 @@ msgid "Insert Email…"
 msgstr "Insertar correo..."
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select Short URL server:"
+msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "Seleccionar URL corta del servidor:"
 
