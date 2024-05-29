@@ -36,11 +36,7 @@ msgid "Use external editor instead of composer"
 msgstr "Empra l'editor extern en comptes de l'editor per omissió"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:52
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
-#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
-#| "line number."
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "

@@ -143,8 +143,7 @@ msgstr ""
 "Substituïx el resultat DKIM pel valor de la capçalera «Authentication-Result»"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Save Record Key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Guarda la clau de registre:"
@@ -287,8 +286,7 @@ msgid "Server Name:"
 msgstr "Nom del servidor:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""

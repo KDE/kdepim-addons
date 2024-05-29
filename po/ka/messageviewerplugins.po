@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-24 16:27+0200\n"
+"PO-Revision-Date: 2024-05-28 05:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -47,8 +47,7 @@ msgid "Open &Editor…"
 msgstr "რედაქტორში &გახსნა…"
 
 #: createeventplugin/eventedit.cpp:56
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "მოვლენა:"
@@ -65,8 +64,7 @@ msgid "Calendar where the new event will be stored"
 msgstr "კალენდარი, სადაც ახალი მოვლენა იქნება დამახსოვრებული"
 
 #: createeventplugin/eventedit.cpp:89
-#, fuzzy, kde-format
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "დასაწყისი:"
@@ -77,8 +75,7 @@ msgid "Select start time for event."
 msgstr "აირჩიეთ მოვლენის დაწყების დრო."
 
 #: createeventplugin/eventedit.cpp:102
-#, fuzzy, kde-format
-#| msgid "End:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "დასასრულ:"
@@ -119,8 +116,7 @@ msgid "Allows you to create a calendar Event"
 msgstr "საშუალებას გაძლევთ, ამ შეტყობინებიდან კალენდარის მოვლენა შექმნათ"
 
 #: createnoteplugin/noteedit.cpp:49
-#, fuzzy, kde-format
-#| msgid "Note:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Note:"
 msgstr "შენიშვნა:"
@@ -164,8 +160,7 @@ msgstr ""
 "შენიშვნა ისე ჩაასწოროთ, როგორც თქვენ გნებავთ."
 
 #: createtodoplugin/todoedit.cpp:61
-#, fuzzy, kde-format
-#| msgid "To-do:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "გასაკეთებელი:"
@@ -260,8 +255,7 @@ msgid "Modify Script…"
 msgstr "სკრიპტის ჩასწორება…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "External Script:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "გარე სკრიპტი:"
@@ -303,8 +297,7 @@ msgid "Command Line:"
 msgstr "ბრძანების სტრიქონი:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">არგუმენტის ფორმატის ინფორმაცია…</a></qt>"

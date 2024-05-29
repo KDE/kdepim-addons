@@ -46,8 +46,7 @@ msgid "Open &Editor…"
 msgstr ""
 
 #: createeventplugin/eventedit.cpp:56
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "事件："
@@ -64,8 +63,7 @@ msgid "Calendar where the new event will be stored"
 msgstr "新事件将保存的日历"
 
 #: createeventplugin/eventedit.cpp:89
-#, fuzzy, kde-format
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "开始："
@@ -76,8 +74,7 @@ msgid "Select start time for event."
 msgstr "选择事件的开始时间。"
 
 #: createeventplugin/eventedit.cpp:102
-#, fuzzy, kde-format
-#| msgid "End:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "结束："
@@ -118,8 +115,7 @@ msgid "Allows you to create a calendar Event"
 msgstr "允许您创建日历事件"
 
 #: createnoteplugin/noteedit.cpp:49
-#, fuzzy, kde-format
-#| msgid "Note:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Note:"
 msgstr "备注："
@@ -161,8 +157,7 @@ msgid ""
 msgstr "这选项将会启动编辑器来创建便笺。之后您可以在保存之前任意修改便笺。"
 
 #: createtodoplugin/todoedit.cpp:61
-#, fuzzy, kde-format
-#| msgid "To-do:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "待办事项："
@@ -253,8 +248,7 @@ msgid "Modify Script…"
 msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "External Script:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "外部脚本："

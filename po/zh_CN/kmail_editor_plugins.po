@@ -41,8 +41,7 @@ msgid "Insert Email…"
 msgstr ""
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select Short URL server:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "选择短链接服务器："

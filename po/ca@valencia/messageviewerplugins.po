@@ -53,8 +53,7 @@ msgid "Open &Editor…"
 msgstr "Obri l'&editor…"
 
 #: createeventplugin/eventedit.cpp:56
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Esdeveniment:"
@@ -71,8 +70,7 @@ msgid "Calendar where the new event will be stored"
 msgstr "Calendari on s'emmagatzemarà l'esdeveniment nou"
 
 #: createeventplugin/eventedit.cpp:89
-#, fuzzy, kde-format
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Inici:"
@@ -83,8 +81,7 @@ msgid "Select start time for event."
 msgstr "Seleccioneu l'hora d'inici per a l'esdeveniment."
 
 #: createeventplugin/eventedit.cpp:102
-#, fuzzy, kde-format
-#| msgid "End:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "Final:"
@@ -125,8 +122,7 @@ msgid "Allows you to create a calendar Event"
 msgstr "Permet crear un calendari d'esdeveniments"
 
 #: createnoteplugin/noteedit.cpp:49
-#, fuzzy, kde-format
-#| msgid "Note:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Note:"
 msgstr "Nota:"
@@ -170,8 +166,7 @@ msgstr ""
 "al vostre gust abans de guardar-la."
 
 #: createtodoplugin/todoedit.cpp:61
-#, fuzzy, kde-format
-#| msgid "To-do:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "Tasca pendent:"
@@ -265,8 +260,7 @@ msgid "Modify Script…"
 msgstr "Modifica l'script…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "External Script:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Script extern:"
@@ -308,8 +302,7 @@ msgid "Command Line:"
 msgstr "Línia d'ordres:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-15 07:32+0200\n"
+"PO-Revision-Date: 2024-05-28 06:59+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -41,11 +41,10 @@ msgstr "Samodejno popravi izbrano besedilo"
 #, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
-msgstr "Vstavi e-pošto..."
+msgstr "Vstavi e-pošto…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select Short URL server:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "Izberite strežnik za krajšanje URL-jev:"
@@ -54,7 +53,7 @@ msgstr "Izberite strežnik za krajšanje URL-jev:"
 #, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
-msgstr "Vstavi kratek URL..."
+msgstr "Vstavi kratek URL…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -86,7 +85,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
-msgstr "Vstavi posebni znak..."
+msgstr "Vstavi posebni znak…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
