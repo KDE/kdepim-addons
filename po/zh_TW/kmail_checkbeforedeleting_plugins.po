@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-18 17:44+0900\n"
+"PO-Revision-Date: 2024-05-30 02:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -27,15 +27,13 @@ msgid "Configure Rule"
 msgstr "設定規則"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "類型："
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Contains:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Contains:"
 msgstr "包含："

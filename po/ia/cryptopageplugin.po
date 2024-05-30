@@ -1,20 +1,20 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2011.
+# g.sora <g.sora@tiscali.it>, 2011, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2011-02-28 16:54+0100\n"
-"Last-Translator: g.sora <g.sora@tiscali.it>\n"
-"Language-Team: Interlingua <kde-i18n-it@kde.org>\n"
+"PO-Revision-Date: 2024-05-29 12:17+0200\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: cryptopageplugin.cpp:37
@@ -23,15 +23,13 @@ msgid "Allowed Protocols"
 msgstr "Protocollos permittite"
 
 #: cryptopageplugin.cpp:52
-#, fuzzy, kde-format
-#| msgid "Preferred OpenPGP encryption key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Clave de cryptation preferite de OpenPGP:"
 
 #: cryptopageplugin.cpp:57
-#, fuzzy, kde-format
-#| msgid "Preferred S/MIME encryption certificate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Preferite certificato de cryptation de S/MIME:"
@@ -42,15 +40,13 @@ msgid "Message Preference"
 msgstr "Preferentia de message"
 
 #: cryptopageplugin.cpp:71
-#, fuzzy, kde-format
-#| msgid "Sign:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Signa:"
 
 #: cryptopageplugin.cpp:88
-#, fuzzy, kde-format
-#| msgid "Encrypt:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Crypta:"

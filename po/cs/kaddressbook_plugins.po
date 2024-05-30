@@ -65,8 +65,7 @@ msgid "Search"
 msgstr "Hledat"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-mail:"
@@ -98,18 +97,16 @@ msgid "merge"
 msgstr "sloučit"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Select contacts that you really want to merge:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
-msgstr "Vyberte kontakty které opravdu chcete sloučit:"
+msgstr ""
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store merged contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
-msgstr "Vyberte knihu adres kde chcete ukládat sloučené kontakty:"
+msgstr ""
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
@@ -150,11 +147,10 @@ msgid "Search in result…"
 msgstr ""
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Select AddressBook:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
-msgstr "Vybrat knihu adres:"
+msgstr ""
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44

@@ -393,8 +393,7 @@ msgid "Mail Merge"
 msgstr "Slučování e-mailů"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Cesta:"
@@ -407,11 +406,10 @@ msgid "Attachment"
 msgstr "Příloha"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Source:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
-msgstr "Zdroj:"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:41
 #, kde-format
@@ -424,11 +422,10 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
-msgstr "Příloha:"
+msgstr ""
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -446,8 +443,7 @@ msgid "Mod&ify..."
 msgstr "Změn&it..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
-msgstr "Vyberte přílohu:"
+msgstr ""

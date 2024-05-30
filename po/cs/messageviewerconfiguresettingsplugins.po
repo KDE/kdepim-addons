@@ -137,11 +137,10 @@ msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Save Record Key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
-msgstr "Uložit klíč záznamu:"
+msgstr ""
 
 #: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format

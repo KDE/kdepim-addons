@@ -23,18 +23,16 @@ msgid "Allowed Protocols"
 msgstr "Povolené protokoly"
 
 #: cryptopageplugin.cpp:52
-#, fuzzy, kde-format
-#| msgid "Preferred OpenPGP encryption key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
-msgstr "Preferovaný šifrovací klíč OpenPGP:"
+msgstr ""
 
 #: cryptopageplugin.cpp:57
-#, fuzzy, kde-format
-#| msgid "Preferred S/MIME encryption certificate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
-msgstr "Preferovaný šifrovací S/MIME certifikát:"
+msgstr ""
 
 #: cryptopageplugin.cpp:62
 #, kde-format
@@ -42,18 +40,16 @@ msgid "Message Preference"
 msgstr "Nastavení zprávy"
 
 #: cryptopageplugin.cpp:71
-#, fuzzy, kde-format
-#| msgid "Sign:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
-msgstr "Podepsat:"
+msgstr ""
 
 #: cryptopageplugin.cpp:88
-#, fuzzy, kde-format
-#| msgid "Encrypt:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
-msgstr "Zašifrovat:"
+msgstr ""
 
 #: cryptopageplugin.cpp:106
 #, kde-format

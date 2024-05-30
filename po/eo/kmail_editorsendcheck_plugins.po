@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 10:35+0100\n"
+"PO-Revision-Date: 2024-05-29 22:04+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -58,8 +58,7 @@ msgid "Automatic Add Contacts"
 msgstr "Aŭtomate Aldoni Kontaktojn"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "Elektu la adreslibron en kiu konservi kontaktojn:"
@@ -92,10 +91,7 @@ msgid "Check SMTP server"
 msgstr "Kontroli SMTP-servilon"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to send the email with a different SMTP than the one defined "
-#| "in the current identity?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
@@ -137,8 +133,7 @@ msgid "Duplicated emails"
 msgstr "Duoblaj retpoŝtoj"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "These emails are duplicated. Do you want to send email?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Ĉi tiuj retpoŝtoj estas duobligitaj. Ĉu vi volas sendi retpoŝton?"
@@ -156,8 +151,7 @@ msgid "Check Attachment"
 msgstr "Kontroli Aldonaĵon"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Do you want to send some attachment?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "Ĉu vi volas sendi iun aldonaĵon?"
@@ -244,8 +238,7 @@ msgid "Emails added to white list"
 msgstr "Retpoŝtoj aldonitaj al blanka listo"
 
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
-#, fuzzy, kde-format
-#| msgid "Enter new domain name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
 msgstr "Enigu novan domajnan nomon:"
@@ -263,8 +256,7 @@ msgid "Change Value"
 msgstr "Ŝanĝi Valoron"
 
 #: confirm-address/confirmaddresswidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Potentially invalid emails are displayed in red:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Estas montrataj ruĝe retpoŝtoj kiuj eble nevalidas:"

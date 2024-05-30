@@ -47,11 +47,10 @@ msgid "Open &Editor…"
 msgstr ""
 
 #: createeventplugin/eventedit.cpp:56
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
-msgstr "Událost:"
+msgstr ""
 
 #: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
 #, kde-format
@@ -65,8 +64,7 @@ msgid "Calendar where the new event will be stored"
 msgstr ""
 
 #: createeventplugin/eventedit.cpp:89
-#, fuzzy, kde-format
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Zahájení:"
@@ -77,11 +75,10 @@ msgid "Select start time for event."
 msgstr ""
 
 #: createeventplugin/eventedit.cpp:102
-#, fuzzy, kde-format
-#| msgid "End:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
-msgstr "Konec:"
+msgstr ""
 
 #: createeventplugin/eventedit.cpp:107
 #, kde-format
@@ -119,11 +116,10 @@ msgid "Allows you to create a calendar Event"
 msgstr ""
 
 #: createnoteplugin/noteedit.cpp:49
-#, fuzzy, kde-format
-#| msgid "Note:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Note:"
-msgstr "Poznámka:"
+msgstr ""
 
 #: createnoteplugin/noteedit.cpp:90
 #, kde-format
@@ -164,11 +160,10 @@ msgstr ""
 "uložením libovolně upravit."
 
 #: createtodoplugin/todoedit.cpp:61
-#, fuzzy, kde-format
-#| msgid "To-do:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
-msgstr "Úkol:"
+msgstr ""
 
 #: createtodoplugin/todoedit.cpp:80
 #, kde-format
@@ -257,11 +252,10 @@ msgid "Modify Script…"
 msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "External Script:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
-msgstr "Externí skript:"
+msgstr ""
 
 # power-off message
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106

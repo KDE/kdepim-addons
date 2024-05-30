@@ -28,11 +28,10 @@ msgid "…"
 msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
-msgstr "Vyberte e-maily"
+msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:87
 #, kde-format
@@ -79,11 +78,10 @@ msgid "Search…"
 msgstr "Hledat…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Refresh IMAP Folder List"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
-msgstr "Obnovit seznam složek IMAP"
+msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
@@ -118,11 +116,10 @@ msgid "Load Folders"
 msgstr "Načíst složky"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
-msgstr "Vyberte složku IMAP"
+msgstr ""
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format

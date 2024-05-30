@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-17 20:59+0200\n"
+"PO-Revision-Date: 2024-05-29 08:59+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -66,8 +66,7 @@ msgid "Search"
 msgstr "Buscar"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "Correo electrónico:"
@@ -99,15 +98,13 @@ msgid "merge"
 msgstr "fusionar"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Select contacts that you really want to merge:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Seleccione os contactos que quere xuntar realmente:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store merged contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
 msgstr ""
@@ -153,8 +150,7 @@ msgid "Search in result…"
 msgstr "Buscar no resultado…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Select AddressBook:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
 msgstr "Seleccione unha axenda de enderezos:"

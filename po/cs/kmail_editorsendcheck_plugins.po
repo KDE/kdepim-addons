@@ -58,11 +58,10 @@ msgid "Automatic Add Contacts"
 msgstr "Automaticky přidat kontakty"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
-msgstr "Vyberte knihu adres kde chcete ukládat kontakty:"
+msgstr ""
 
 #: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
@@ -150,11 +149,10 @@ msgid "Check Attachment"
 msgstr "Zkontrolovat přílohu"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Do you want to remove this domain?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
-msgstr "Chcete odstranit tuto doménu?"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguredialog.cpp:14
 #, kde-format

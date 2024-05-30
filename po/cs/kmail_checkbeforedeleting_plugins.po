@@ -24,18 +24,16 @@ msgid "Configure Rule"
 msgstr "Nastavit pravidlo"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
-msgstr "Typ:"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Contains:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Contains:"
-msgstr "Obsahuje:"
+msgstr ""
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:74
 #, kde-format

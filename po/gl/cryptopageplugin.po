@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-03-02 17:20+0100\n"
+"PO-Revision-Date: 2024-05-29 08:56+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: cryptopageplugin.cpp:37
 #, kde-format
@@ -24,15 +24,13 @@ msgid "Allowed Protocols"
 msgstr "Protocolos permitidos"
 
 #: cryptopageplugin.cpp:52
-#, fuzzy, kde-format
-#| msgid "Preferred OpenPGP encryption key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Chave preferida para o cifrado OpenPGP:"
 
 #: cryptopageplugin.cpp:57
-#, fuzzy, kde-format
-#| msgid "Preferred S/MIME encryption certificate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Certificado preferido para o cifrado S/MIME:"
@@ -43,15 +41,13 @@ msgid "Message Preference"
 msgstr "Preferencia das mensaxes"
 
 #: cryptopageplugin.cpp:71
-#, fuzzy, kde-format
-#| msgid "Sign:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Signo:"
 
 #: cryptopageplugin.cpp:88
-#, fuzzy, kde-format
-#| msgid "Encrypt:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Cifrar:"
