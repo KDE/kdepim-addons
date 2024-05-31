@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 17:47+0200\n"
+"PO-Revision-Date: 2024-05-28 22:52+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -25,8 +25,7 @@ msgid "Akonadi Database Tool"
 msgstr "Strumento banca dati Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "&Akonadi Vacuum…"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "&Akonadi Vacuum…"
@@ -44,15 +43,13 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadi Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Vacuum"
+#, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgid "&Akonadi Fsck…"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "&Akonadi Fsck…"
@@ -70,8 +67,7 @@ msgid "Akonadi Fsck"
 msgstr "Akonadi Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Fsck"
+#, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck"
@@ -87,15 +83,13 @@ msgid "Start…"
 msgstr "Avvia…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "&Anti-Spam Wizard…"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Procedura guidata &anti-spam…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "&Anti-Virus Wizard…"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Procedura guidata &anti-virus…"
@@ -408,8 +402,7 @@ msgid "Mail Merge"
 msgstr "Unione della posta"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Percorso:"
@@ -422,8 +415,7 @@ msgid "Attachment"
 msgstr "Allegato"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Source:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Fonte:"
@@ -439,8 +431,7 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Allegato:"
@@ -461,8 +452,7 @@ msgid "Mod&ify..."
 msgstr "Mod&ifica..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Seleziona allegato:"

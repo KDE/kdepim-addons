@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-13 22:58+0200\n"
+"PO-Revision-Date: 2024-05-30 11:03+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -143,8 +143,7 @@ msgstr ""
 "удостоверяване"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Save Record Key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Запазване на ключ на запис:"
@@ -285,8 +284,7 @@ msgid "Server Name:"
 msgstr "Име на сървъра:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Информация за форматен аргумент…</a></qt>"
@@ -421,6 +419,3 @@ msgstr "Домейн"
 msgctxt "@title:column"
 msgid "Check"
 msgstr "Проверка"
-
-#~ msgid "Add..."
-#~ msgstr "Добавяне..."

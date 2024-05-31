@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 17:49+0200\n"
+"PO-Revision-Date: 2024-05-28 22:44+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -65,8 +65,7 @@ msgid "Search"
 msgstr "Cerca"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "Indirizzo di posta elettronica:"
@@ -98,15 +97,13 @@ msgid "merge"
 msgstr "unisci"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Select contacts that you really want to merge:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Seleziona i contatti che vuoi davvero unire:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store merged contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
 msgstr "Seleziona la rubrica in cui memorizzare i contatti unificati:"
@@ -150,8 +147,7 @@ msgid "Search in result…"
 msgstr "Cerca nei risultati…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Select AddressBook:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
 msgstr "Seleziona la rubrica indirizzi:"
@@ -197,15 +193,13 @@ msgstr ""
 "personalizzare gli elementi da unire?"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
-#, fuzzy, kde-format
-#| msgid "Customize"
+#, kde-format
 msgctxt "@action"
 msgid "Customize"
 msgstr "Personalizza"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
-#, fuzzy, kde-format
-#| msgid "Automatic Merging"
+#, kde-format
 msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "Unione automatica"

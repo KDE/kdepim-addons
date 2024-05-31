@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-05-13 23:05+0200\n"
+"PO-Revision-Date: 2024-05-30 19:17+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
@@ -299,11 +299,11 @@ msgid ""
 "item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
 "item><item>S: seconds with 2 digits</item></list></para>"
 msgstr ""
-"<para> <list> <item> y: година с 2 цифри </item> <item> Y: година с 4 цифри "
-"</item> <item> m: месец с 1 или 2 цифри </item><item> M: месец с 2 цифри </"
-"item> <item> d: ден с 1 или 2 цифри </item> <item> D: ден с 2 цифри </"
+"<para><list><item> y: година с 2 цифри </item><item> Y: година с 4 цифри </"
+"item><item> m: месец с 1 или 2 цифри </item><item> M: месец с 2 цифри </"
+"item><item> d: ден с 1 или 2 цифри </item><item> D: ден с 2 цифри </"
 "item><item> H: часове с 2 цифри </item><item> I: минути с 2 цифри </item> "
-"<item> S: секунди с 2 цифри </item> </list> </para>"
+"<item> S: секунди с 2 цифри </item></list></para>"
 
 #: csv/import/csvimportdialog.cpp:401
 #, kde-kuit-format
@@ -321,13 +321,12 @@ msgid ""
 msgstr ""
 "<para> Посочете формат, който да се използва за дати, включени във вашите "
 "csv данни. Използвайте следните последователности, за да ви помогне да "
-"дефинирате формата: </para> <para> <list> <item> y: година с 2 цифри </item> "
-"<item> Y: година с 4 цифри </item> <item> m: месец с 1 или 2 цифри </item> "
-"<item> M: месец с 2 цифри </item> <item> d: ден с 1 или 2 цифри </item> "
-"<item> D: ден с 2 цифри </item> <item> H: часове с 2 цифри </item> <item> I: "
-"минути с 2 цифри </item> <item> S : секунди с 2 цифри </item> </list> </"
-"para> <para> Пример: \"YMD \" съответства на дата като \\2012-01-04 \" </"
-"para>"
+"дефинирате формата: </para><para><list><item> y: година с 2 цифри </item> "
+"<item> Y: година с 4 цифри </item><item> m: месец с 1 или 2 цифри </item> "
+"<item> M: месец с 2 цифри </item><item> d: ден с 1 или 2 цифри </item> "
+"<item> D: ден с 2 цифри </item><item> H: часове с 2 цифри </item><item> I: "
+"минути с 2 цифри </item><item> S : секунди с 2 цифри </item></list></"
+"para><para> Пример: \"YMD \" съответства на дата като \\2012-01-04 \" </para>"
 
 #: csv/import/csvimportdialog.cpp:417
 #, kde-format
@@ -805,6 +804,3 @@ msgstr "Импортиране на контакти от Windows контакт
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr "Windows контакт файл (*.contact)"
-
-#~ msgid "Import vCard..."
-#~ msgstr "Импортиране на vCard..."

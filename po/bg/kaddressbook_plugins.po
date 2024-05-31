@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-15 22:52+0200\n"
+"PO-Revision-Date: 2024-05-30 11:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -67,8 +67,7 @@ msgid "Search"
 msgstr "Търсене"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "Е-поща:"
@@ -100,15 +99,13 @@ msgid "merge"
 msgstr "сливане"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Select contacts that you really want to merge:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Избиране на контакти за сливане:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store merged contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
 msgstr "Избиране на адресна книга за съхраняване на слетите контакти:"
@@ -152,11 +149,10 @@ msgid "Search in result…"
 msgstr "Търсене в резултата…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
-#, fuzzy, kde-format
-#| msgid "Select AddressBook:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
-msgstr "Избиране на адресна книга"
+msgstr "Избиране на адресна книга:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44

@@ -3,21 +3,22 @@
 # Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2014, 2017, 2020, 2023.
 # Lukáš Tinkl <lukas@kde.org>, 2012.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
+# SPDX-FileCopyrightText: 2024 Vit Pelcak <vpelcak@suse.cz>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2023-02-07 10:43+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-30 13:57+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -57,7 +58,7 @@ msgstr "Vybrat delegáta"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
-msgstr ""
+msgstr "Delegovat:"
 
 #: reactiontoinvitationdialog.cpp:30
 #, kde-format
@@ -428,13 +429,13 @@ msgstr "Poslat e-mail organizátorovi"
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
-msgstr ""
+msgstr "Neodesílat"
 
 #: text_calendar.cpp:1271
 #, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
-msgstr ""
+msgstr "Odeslat email"
 
 #: text_calendar.cpp:1279
 #, kde-format
@@ -449,7 +450,7 @@ msgstr "Otevřít přílohu"
 #: text_calendar.cpp:1342
 #, kde-format
 msgid "Save Attachment As…"
-msgstr ""
+msgstr "Uložit přílohu jako…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -469,7 +470,7 @@ msgstr "Přijmout protinávrh"
 #: text_calendar.cpp:1364
 #, kde-format
 msgid "Create a counter proposal…"
-msgstr ""
+msgstr "Vytvořit protinávrh…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -494,7 +495,7 @@ msgstr "Odmítnout protinávrh"
 #: text_calendar.cpp:1374
 #, kde-format
 msgid "Check my calendar…"
-msgstr ""
+msgstr "Zkontrolovat můj kalendář…"
 
 #: text_calendar.cpp:1376
 #, kde-format

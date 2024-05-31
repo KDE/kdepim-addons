@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 17:46+0200\n"
+"PO-Revision-Date: 2024-05-28 22:50+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -24,15 +24,13 @@ msgid "Configure Rule"
 msgstr "Configura regola"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Tipo:"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Contains:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Contains:"
 msgstr "Contiene:"
@@ -81,11 +79,10 @@ msgid "Configure Before Deleting Mail"
 msgstr "Configura prima dell'eliminazione dei messaggi"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Confirm Before Deleting"
+#, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
-msgstr "Configura prima dell'eliminazione"
+msgstr "Conferma prima dell'eliminazione"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
 #, kde-format

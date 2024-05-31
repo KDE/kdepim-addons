@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-16 11:16+0200\n"
+"PO-Revision-Date: 2024-05-30 20:46+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -53,15 +53,13 @@ msgid "Select delegate"
 msgstr "Изберете делегат"
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Делегиране:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Коментар:"
@@ -89,10 +87,10 @@ msgid ""
 "choose which of the following addresses is yours,<br/> if any, or select one "
 "of your identities to use in the reply:</qt>"
 msgstr ""
-"<qt> Нито една от вашите самоличности не отговаря на приемника на това "
+"<qt>Нито една от вашите самоличности не отговаря на приемника на това "
 "съобщение, <br/> моляизберете, кой от следните адреси е ваш, <br/> ако има "
 "такъв, или изберете такъвот вашите самоличности, които да използвате в "
-"отговора: </qt>"
+"отговора:</qt>"
 
 #: text_calendar.cpp:432
 #, kde-format
@@ -100,8 +98,8 @@ msgid ""
 "<qt>Several of your identities match the receiver of this message,<br/"
 ">please choose which of the following addresses is yours:</qt>"
 msgstr ""
-"<qt> Няколко от вашите самоличности съответстват на приемника на това "
-"съобщение, <br/> Моля, изберете, кой от следните адреси е ваш: </qt>"
+"<qt>Няколко от вашите самоличности съответстват на приемника на това "
+"съобщение, <br/> Моля, изберете, кой от следните адреси е ваш:</qt>"
 
 #: text_calendar.cpp:447
 #, kde-format

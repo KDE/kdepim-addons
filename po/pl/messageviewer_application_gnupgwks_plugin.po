@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2016, 2017, 2021, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2016, 2017, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-09-30 10:59+0200\n"
+"PO-Revision-Date: 2024-05-30 11:03+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: gnupgwksurlhandler.cpp:85
 #, kde-format
@@ -126,10 +127,8 @@ msgstr ""
 "poczty."
 
 #: templates/pgpkeymessagepart.html:23
-#, fuzzy
-#| msgid "Loading key details..."
 msgid "Loading key details…"
-msgstr "Wczytywanie szczegółów klucza..."
+msgstr "Wczytywanie szczegółów klucza…"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -165,10 +164,8 @@ msgid "Open in Kleopatra"
 msgstr "Otwórz w Kleopatrze"
 
 #: templates/pgpkeymessagepart.html:52
-#, fuzzy
-#| msgid "Show key details"
 msgid "Show key details …"
-msgstr "Pokaż szczegóły klucza"
+msgstr "Pokaż szczegóły klucza…"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"

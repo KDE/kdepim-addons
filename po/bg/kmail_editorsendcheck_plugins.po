@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-13 22:56+0200\n"
+"PO-Revision-Date: 2024-05-30 11:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -59,8 +59,7 @@ msgid "Automatic Add Contacts"
 msgstr "Автоматично добавяне на контакти"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "Избиране на адресна книга за съхраняване на контактите:"
@@ -93,10 +92,7 @@ msgid "Check SMTP server"
 msgstr "Проверяване на SMTP сървъра"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to send the email with a different SMTP than the one defined "
-#| "in the current identity?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
@@ -138,8 +134,7 @@ msgid "Duplicated emails"
 msgstr "Дублирани имейли"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "These emails are duplicated. Do you want to send email?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Тези имейли са дублирани. Искате ли да изпратите имейл?"
@@ -157,8 +152,7 @@ msgid "Check Attachment"
 msgstr "Проверяване на прикачен файл"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Do you want to send some attachment?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "Искате ли да изпратите прикачен файл?"
@@ -245,8 +239,7 @@ msgid "Emails added to white list"
 msgstr "Имейлите са добавени към белия списък"
 
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
-#, fuzzy, kde-format
-#| msgid "Enter new domain name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
 msgstr "Въведете ново име на домейн:"
@@ -264,11 +257,7 @@ msgid "Change Value"
 msgstr "Промяна на стойност"
 
 #: confirm-address/confirmaddresswidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Potentially invalid emails are displayed in red:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Потенциално невалидни имейли се показват в червено:"
-
-#~ msgid "A&dd..."
-#~ msgstr "Д&обавяне..."

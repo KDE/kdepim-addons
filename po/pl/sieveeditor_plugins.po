@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2016, 2017, 2018, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2023-09-30 10:58+0200\n"
+"PO-Revision-Date: 2024-05-30 11:10+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,21 +16,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts..."
+#, kde-format
 msgid "Click on button for selecting contacts…"
-msgstr "Kliknij na przycisku, aby wybrać kontakty..."
+msgstr "Kliknij na przycisku, aby wybrać kontakty…"
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Wybierz pocztę"
@@ -54,10 +53,9 @@ msgid "Error during creating folder: %1"
 msgstr "Błąd przy tworzeniu katalogu: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgid "Create Folder…"
-msgstr "Utwórz katalog"
+msgstr "Utwórz katalog…"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -71,20 +69,17 @@ msgid "Unable to load folder list"
 msgstr "Nie można wczytać listy katalogów"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, fuzzy, kde-format
-#| msgid "Loading in progress..."
+#, kde-format
 msgid "Loading in progress…"
-msgstr "Wczytywanie w trakcie..."
+msgstr "Wczytywanie w trakcie…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search…"
-msgstr "Wyszukaj..."
+msgstr "Wyszukaj…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Refresh IMAP Folder List"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Odśwież listę katalogów IMAP"
@@ -122,17 +117,15 @@ msgid "Load Folders"
 msgstr "Wczytaj katalogi"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Wybierz katalog IMAP"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder..."
+#, kde-format
 msgid "Click on button for selecting folder…"
-msgstr "Kliknij na przycisku do wybrania katalogu..."
+msgstr "Kliknij na przycisku, aby wybrać katalog…"
 
 #~ msgid "..."
 #~ msgstr "..."

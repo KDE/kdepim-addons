@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2016, 2017, 2020, 2023 Vít Pelčák <vit@pelcak.org>
-# Vit Pelcak <vit@pelcak.org>, 2021, 2023.
+# SPDX-FileCopyrightText: 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2023-11-03 09:08+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-30 13:57+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -61,7 +61,7 @@ msgstr "Automaticky přidat kontakty"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
-msgstr ""
+msgstr "Vyberte knihu adres kde chcete ukládat kontakty:"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
@@ -174,7 +174,7 @@ msgstr "Název odmítnuté domény"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Při&dat…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -186,7 +186,7 @@ msgstr "Odstra&nit"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "Mod&ify…"
-msgstr ""
+msgstr "Změn&it…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #, kde-format

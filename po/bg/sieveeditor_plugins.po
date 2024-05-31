@@ -127,9 +127,3 @@ msgstr "Избиране на IMAP папка"
 #, kde-format
 msgid "Click on button for selecting folder…"
 msgstr "Щракнете върху бутона за избиране на папки…"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Create Folder..."
-#~ msgstr "Създаване на директория..."

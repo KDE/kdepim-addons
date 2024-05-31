@@ -1,26 +1,27 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2024 Vit Pelcak <vpelcak@suse.cz>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2023-11-03 09:08+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-30 13:57+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
 msgid "Click on button for selecting contacts…"
-msgstr ""
+msgstr "Kliknutím na toto tlačítko vyberete kontakty…"
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
@@ -31,7 +32,7 @@ msgstr "…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
-msgstr ""
+msgstr "Vyberte e-maily"
 
 #: emaillineedit/emaillineedit.cpp:87
 #, kde-format
@@ -54,7 +55,7 @@ msgstr "Chyba při vytváření složky: %1"
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
 #, kde-format
 msgid "Create Folder…"
-msgstr ""
+msgstr "Vytvořit složku..."
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -70,7 +71,7 @@ msgstr "Nelze načíst seznam složek"
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
 #, kde-format
 msgid "Loading in progress…"
-msgstr ""
+msgstr "Probíhá načítání…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
@@ -81,7 +82,7 @@ msgstr "Hledat…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
-msgstr ""
+msgstr "Obnovit seznam složek IMAP"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
@@ -119,9 +120,9 @@ msgstr "Načíst složky"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
-msgstr ""
+msgstr "Vyberte složku IMAP"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
 msgid "Click on button for selecting folder…"
-msgstr ""
+msgstr "Kliknutím na toto tlačítko vyberete složku…"

@@ -1,26 +1,27 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2016, 2017, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2024 Vit Pelcak <vpelcak@suse.cz>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2023-11-03 09:08+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-30 13:56+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
 msgid "Check Gravatar…"
-msgstr ""
+msgstr "Zkontrolovat Gravatar…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -83,7 +84,7 @@ msgstr "Gravatar nebyl nalezen."
 #: mergecontacts/mergecontactsplugininterface.cpp:25
 #, kde-format
 msgid "Merge Contacts…"
-msgstr ""
+msgstr "Sloučit kontakty…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -100,13 +101,13 @@ msgstr "sloučit"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
-msgstr ""
+msgstr "Vyberte kontakty které opravdu chcete sloučit:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
-msgstr ""
+msgstr "Vyberte knihu adres kde chcete ukládat sloučené kontakty:"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
@@ -144,13 +145,13 @@ msgstr "Hledat a vybrat duplicitní kontakty pro sloučení"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, kde-format
 msgid "Search in result…"
-msgstr ""
+msgstr "Vyhledávám ve výsledcích…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
-msgstr ""
+msgstr "Vybrat knihu adres:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
@@ -196,13 +197,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Customize"
-msgstr ""
+msgstr "Přizpůsobit"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
 #, kde-format
 msgctxt "@action"
 msgid "Automatic Merging"
-msgstr ""
+msgstr "Automatické slučování"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
 #, kde-format
@@ -263,7 +264,7 @@ msgstr "(Nedefinovaný)"
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
 #, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr ""
+msgstr "Hledat duplicitní kontakty…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -273,7 +274,7 @@ msgstr "Ve vybraných kontaktech nebyl nalezen žádný e-mail."
 #: sendmail/sendmailplugininterface.cpp:26
 #, kde-format
 msgid "Send an email…"
-msgstr ""
+msgstr "Odeslat email…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -288,4 +289,4 @@ msgstr "Nelze vytvořit dočasný soubor '%1' "
 #: sendvcards/sendvcardsplugininterface.cpp:34
 #, kde-format
 msgid "Send vCards…"
-msgstr ""
+msgstr "Poslat vizitky…"

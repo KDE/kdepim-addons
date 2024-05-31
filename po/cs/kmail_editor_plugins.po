@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2016, 2018, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2024 Vit Pelcak <vpelcak@suse.cz>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2023-11-03 09:08+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-30 13:52+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -26,31 +27,31 @@ msgstr "Automaticky opravit text"
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
-msgstr ""
+msgstr "Automaticky opravit celý text"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
-msgstr ""
+msgstr "Automaticky opravit vybraný text"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
-msgstr ""
+msgstr "Vložit e-mail…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
-msgstr ""
+msgstr "Vyberte server pro zkracování URL:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
-msgstr ""
+msgstr "Vložit krátkou URL…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -81,7 +82,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
-msgstr ""
+msgstr "Vložit speciální znak…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -98,7 +99,7 @@ msgstr "Vložit"
 #, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
-msgstr ""
+msgstr "Vložit nezlomitelnou mezeru"
 
 #: quicktext/quicktextconfiguredialog.cpp:27
 #, kde-format
@@ -109,7 +110,7 @@ msgstr "Nastavit rychlý text"
 #: quicktext/quicktextconfiguredialog.cpp:38
 #, kde-format
 msgid "Import…"
-msgstr ""
+msgstr "Importovat…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
 #, kde-format
@@ -130,7 +131,7 @@ msgstr "Exportovat QuickText"
 #, kde-format
 msgctxt "@action"
 msgid "Variables"
-msgstr ""
+msgstr "Proměnné"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
@@ -141,37 +142,37 @@ msgstr "Proměnné"
 #, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
-msgstr ""
+msgstr "Přidat ústřižek…"
 
 #: quicktext/quicktexttreewidget.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
-msgstr ""
+msgstr "Upravit ústřižek…"
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
-msgstr ""
+msgstr "Odstranit ústřižek"
 
 #: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "Add Group…"
-msgstr ""
+msgstr "Přidat skupinu..."
 
 #: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr ""
+msgstr "Přejmenovat skupinu…"
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
 msgctxt "@action"
 msgid "Remove Group"
-msgstr ""
+msgstr "Odstranit skupinu"
 
 #: quicktext/quicktexttreewidget.cpp:85
 #, kde-format
@@ -221,7 +222,7 @@ msgstr "Obecné"
 #: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
 msgid "Share Mail Text…"
-msgstr ""
+msgstr "Sdílet text e-mailu…"
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -231,4 +232,4 @@ msgstr "Přiblížení: %1%"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom…"
-msgstr ""
+msgstr "Přiblížení…"

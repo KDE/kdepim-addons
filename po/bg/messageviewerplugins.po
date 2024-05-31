@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-27 00:10+0200\n"
+"PO-Revision-Date: 2024-05-30 21:11+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -48,8 +48,7 @@ msgid "Open &Editor…"
 msgstr "&Отваряне на редактора…"
 
 #: createeventplugin/eventedit.cpp:56
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Събитие:"
@@ -66,8 +65,7 @@ msgid "Calendar where the new event will be stored"
 msgstr "Календар, в който ще се съхранява новото събитие"
 
 #: createeventplugin/eventedit.cpp:89
-#, fuzzy, kde-format
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Начало:"
@@ -78,8 +76,7 @@ msgid "Select start time for event."
 msgstr "Задаване на началния час за събитие."
 
 #: createeventplugin/eventedit.cpp:102
-#, fuzzy, kde-format
-#| msgid "End:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "Край:"
@@ -99,7 +96,7 @@ msgstr "Създаване на ново събитие и затваряне н
 msgid "Open event editor, where more details can be changed."
 msgstr ""
 "Стартиране на редактор на събития, където могат да се извършат промени на "
-"повече детайли. "
+"повече детайли."
 
 #: createeventplugin/eventedit.cpp:142
 #, kde-format
@@ -122,8 +119,7 @@ msgid "Allows you to create a calendar Event"
 msgstr "Позволява създаването на календарни събития"
 
 #: createnoteplugin/noteedit.cpp:49
-#, fuzzy, kde-format
-#| msgid "Note:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Note:"
 msgstr "Бележка:"
@@ -167,8 +163,7 @@ msgstr ""
 "редактирате бележката по ваш вкус, преди да я запазите."
 
 #: createtodoplugin/todoedit.cpp:61
-#, fuzzy, kde-format
-#| msgid "To-do:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "Задача: "
@@ -264,8 +259,7 @@ msgid "Modify Script…"
 msgstr "Редактиране на скрипт…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "External Script:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Външен скрипт:"
@@ -307,8 +301,7 @@ msgid "Command Line:"
 msgstr "Команден ред:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Информация за форматен аргумент…</a></qt>"
@@ -361,6 +354,3 @@ msgstr "Външен скрипт"
 #, kde-format
 msgid "Configure"
 msgstr "Настройване"
-
-#~ msgid "Create Event..."
-#~ msgstr "Създаване на събитие..."

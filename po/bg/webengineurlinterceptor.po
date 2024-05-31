@@ -111,6 +111,3 @@ msgstr "Показване на списък на Adblock"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Блокирането на реклами е активирано"
-
-#~ msgid "Add..."
-#~ msgstr "Добавяне..."

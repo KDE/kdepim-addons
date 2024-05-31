@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-15 22:55+0200\n"
+"PO-Revision-Date: 2024-05-30 19:17+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -43,11 +43,10 @@ msgid "Insert Email…"
 msgstr "Вмъкване на писмо…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select Short URL server:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
-msgstr "Адрес на сървър:"
+msgstr "Избор на кратък адрес на сървър:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
@@ -188,8 +187,8 @@ msgid ""
 "Do you really want to remove snippet \"%1\"?<nl/><warning>There is no way to "
 "undo the removal.</warning>"
 msgstr ""
-"Наистина ли искате да премахнете шаблона „%1“? <nl /> <warning> Няма начин "
-"да отмените премахването. </warning>"
+"Наистина ли искате да премахнете шаблона „%1“? <nl /><warning> Няма начин да "
+"отмените премахването. </warning>"
 
 #: quicktext/quicktexttreewidget.cpp:167
 #, kde-kuit-format
@@ -199,7 +198,7 @@ msgid ""
 "><warning>There is no way to undo the removal.</warning>"
 msgstr ""
 "Наистина ли искате да премахнете групата „%1“ заедно с всички нейни шаблони? "
-"<nl /> <warning> Няма начин да отмените премахването. </warning>"
+"<nl /><warning> Няма начин да отмените премахването. </warning>"
 
 #: quicktext/quicktexttreewidget.cpp:177
 #, kde-format
@@ -237,9 +236,3 @@ msgstr "Мащабиране: %1%"
 #, kde-format
 msgid "Zoom…"
 msgstr "Мащабиране…"
-
-#~ msgid "Insert Special Character..."
-#~ msgstr "Вмъкване на специален символ..."
-
-#~ msgid "Zoom..."
-#~ msgstr "Мащабиране..."

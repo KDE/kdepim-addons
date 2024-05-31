@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2016, 2017, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2024 Vit Pelcak <vpelcak@suse.cz>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2023-11-03 09:07+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-30 13:55+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -27,7 +28,7 @@ msgstr "Nástroj databáze Akonadi"
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr ""
+msgstr "&Akonadi Vacuum…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -45,13 +46,13 @@ msgstr "Akonadi Vacuum"
 #, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
-msgstr ""
+msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr ""
+msgstr "&Akonadi Fsck…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -69,7 +70,7 @@ msgstr "Akonadi Fsck"
 #, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
-msgstr ""
+msgstr "Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
 #, kde-format
@@ -79,19 +80,19 @@ msgstr "Dokončeno."
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
 msgid "Start…"
-msgstr ""
+msgstr "Spustit…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr ""
+msgstr "Průvodce nastavením &antispamu…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr ""
+msgstr "Průvodce nastavením &antiviru…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -172,7 +173,7 @@ msgstr "Ham"
 #: common/antispamwizard.cpp:456
 #, kde-format
 msgid "Scanning for %1…"
-msgstr ""
+msgstr "Vyhledávám %1…"
 
 #: common/antispamwizard.cpp:500
 #, kde-format
@@ -409,7 +410,7 @@ msgstr "Příloha"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
-msgstr ""
+msgstr "Zdroj:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:41
 #, kde-format
@@ -425,12 +426,12 @@ msgstr "CSV"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
-msgstr ""
+msgstr "Příloha:"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Při&dat…"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -446,4 +447,4 @@ msgstr "Změn&it..."
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
-msgstr ""
+msgstr "Vyberte přílohu:"

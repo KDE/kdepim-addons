@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2023 Vít Pelčák <vit@pelcak.org>
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2023-11-03 09:08+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-05-30 13:53+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -27,13 +27,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Expand URL"
-msgstr ""
+msgstr "Rozvinout URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr ""
+msgstr "Přeložit…"
 
 #: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
 #: createtodoplugin/todoedit.cpp:42
@@ -44,24 +44,24 @@ msgstr "&Uložit"
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, kde-format
 msgid "Open &Editor…"
-msgstr ""
+msgstr "Otevřít &editor…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
-msgstr ""
+msgstr "Událost:"
 
 #: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
 #, kde-format
 msgid "Calendar where the new event will be stored."
-msgstr ""
+msgstr "Kalendář, kam bude nová událost uložena."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
-msgstr ""
+msgstr "Kalendář, kam bude nová událost uložena"
 
 #: createeventplugin/eventedit.cpp:89
 #, kde-format
@@ -78,7 +78,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
-msgstr ""
+msgstr "Konec:"
 
 #: createeventplugin/eventedit.cpp:107
 #, kde-format
@@ -103,7 +103,7 @@ msgstr ""
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
 #, kde-format
 msgid "Create Event…"
-msgstr ""
+msgstr "Vytvořit událost…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -119,7 +119,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Note:"
-msgstr ""
+msgstr "Poznámka:"
 
 #: createnoteplugin/noteedit.cpp:90
 #, kde-format
@@ -163,18 +163,18 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
-msgstr ""
+msgstr "Úkol:"
 
 #: createtodoplugin/todoedit.cpp:80
 #, kde-format
 msgid "Todo list where the new task will be stored."
-msgstr ""
+msgstr "Seznam úkolů, kam bude nová poznámka uložena."
 
 #: createtodoplugin/todoedit.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
-msgstr ""
+msgstr "Seznam úkolů, kam bude nová poznámka uložena"
 
 #: createtodoplugin/todoedit.cpp:96
 #, kde-format
@@ -239,7 +239,7 @@ msgstr "Nastavit modul \"Externí skript\""
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
 #, kde-format
 msgid "Add Script…"
-msgstr ""
+msgstr "Přidat skript…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -249,13 +249,13 @@ msgstr "Odstranit skript"
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, kde-format
 msgid "Modify Script…"
-msgstr ""
+msgstr "Upravit skript…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
-msgstr ""
+msgstr "Externí skript:"
 
 # power-off message
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
@@ -287,7 +287,7 @@ msgstr "Popis:"
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
 #, kde-format
 msgid "Add command arguments…"
-msgstr ""
+msgstr "Přidat parametry příkazu…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -298,7 +298,7 @@ msgstr "Příkazový řádek:"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"whatsthis1\">Informace o formátu argumentu…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -336,7 +336,7 @@ msgstr "Spustitelný soubor nelze spustit"
 #, kde-format
 msgctxt "@action"
 msgid "External Script"
-msgstr ""
+msgstr "Externí skript"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:129
 #, kde-format

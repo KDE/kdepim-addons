@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 17:52+0200\n"
+"PO-Revision-Date: 2024-05-28 23:00+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -23,15 +23,13 @@ msgid "Current URL is not a shortened URL."
 msgstr "L'URL attuale non è un URL abbreviato."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, fuzzy, kde-format
-#| msgid "Expand URL"
+#, kde-format
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "Espandi URL"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate…"
+#, kde-format
 msgctxt "@action"
 msgid "Translate…"
 msgstr "Traduci…"
@@ -48,8 +46,7 @@ msgid "Open &Editor…"
 msgstr "Apri &editor…"
 
 #: createeventplugin/eventedit.cpp:56
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Evento:"
@@ -60,15 +57,13 @@ msgid "Calendar where the new event will be stored."
 msgstr "Calendario dove memorizzare il nuovo evento."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
-#, fuzzy, kde-format
-#| msgid "Calendar where the new event will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "Calendario dove memorizzare il nuovo evento"
 
 #: createeventplugin/eventedit.cpp:89
-#, fuzzy, kde-format
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Inizio:"
@@ -79,8 +74,7 @@ msgid "Select start time for event."
 msgstr "Seleziona l'orario di inizio per l'evento."
 
 #: createeventplugin/eventedit.cpp:102
-#, fuzzy, kde-format
-#| msgid "End:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "Fine:"
@@ -121,8 +115,7 @@ msgid "Allows you to create a calendar Event"
 msgstr "Consente di creare un evento nel calendario"
 
 #: createnoteplugin/noteedit.cpp:49
-#, fuzzy, kde-format
-#| msgid "Note:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Note:"
 msgstr "Nota:"
@@ -166,8 +159,7 @@ msgstr ""
 "modificare come ritieni opportuno la nuova nota prima di salvarla."
 
 #: createtodoplugin/todoedit.cpp:61
-#, fuzzy, kde-format
-#| msgid "To-do:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "Da fare:"
@@ -178,8 +170,7 @@ msgid "Todo list where the new task will be stored."
 msgstr "Elenco delle cose da fare dove la nuova attività sarà memorizzata."
 
 #: createtodoplugin/todoedit.cpp:82
-#, fuzzy, kde-format
-#| msgid "Todo list where the new task will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "Elenco delle cose da fare dove la nuova attività sarà memorizzata"
@@ -265,8 +256,7 @@ msgid "Modify Script…"
 msgstr "Modifica script…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "External Script:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Script esterno:"
@@ -308,8 +298,7 @@ msgid "Command Line:"
 msgstr "Riga di comando:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
@@ -355,8 +344,7 @@ msgid "Impossible to start executable"
 msgstr "Impossibile avviare l'eseguibile"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "External Script"
+#, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "Script esterno"

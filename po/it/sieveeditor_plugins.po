@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-13 09:08+0200\n"
+"PO-Revision-Date: 2024-05-23 21:21+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -28,8 +28,7 @@ msgid "…"
 msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Seleziona messaggi di posta"
@@ -79,11 +78,10 @@ msgid "Search…"
 msgstr "Cerca…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Refresh IMAP Folder List"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
-msgstr "Aggiorna la lista delle cartelle IMAP"
+msgstr "Aggiorna l'elenco delle cartelle IMAP"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
@@ -118,8 +116,7 @@ msgid "Load Folders"
 msgstr "Carica cartelle"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Seleziona cartella IMAP"
