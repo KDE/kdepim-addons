@@ -1,8 +1,8 @@
 # translation of cryptopageplugin.po to Italian
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the cryptopageplugin package.
-# Luigi Toscano, 2009.
 #
+# Luigi Toscano, 2009, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: cryptopageplugin\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: cryptopageplugin.cpp:37
 #, kde-format

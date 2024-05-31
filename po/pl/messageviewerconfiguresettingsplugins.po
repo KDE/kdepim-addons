@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-02 00:38+0000\n"
-"PO-Revision-Date: 2024-03-02 12:44+0100\n"
+"PO-Revision-Date: 2024-05-30 11:04+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -368,7 +369,7 @@ msgstr "Dodaj zasadę..."
 #: openurlwith/openurlwithconfigurewidget.cpp:226
 #, kde-format
 msgid "Edit Rule..."
-msgstr "Zmień zasadę.."
+msgstr "Zmień zasadę..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -376,7 +377,7 @@ msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Usuń zasadę"
 msgstr[1] "Usuń zasady"
-msgstr[2] "Usuń zasadę"
+msgstr[2] "Usuń zasady"
 
 #: scamsettings/scamconfiguresettingsdialog.cpp:26
 #, kde-format

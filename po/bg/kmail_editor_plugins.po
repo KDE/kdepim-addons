@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-30 10:40+0200\n"
+"PO-Revision-Date: 2024-05-30 16:57+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -169,8 +169,8 @@ msgid ""
 "Do you really want to remove snippet \"%1\"?<nl/><warning>There is no way to "
 "undo the removal.</warning>"
 msgstr ""
-"Наистина ли искате да премахнете шаблона „%1“? <nl /> <warning> Няма начин "
-"да отмените премахването. </warning>"
+"Наистина ли искате да премахнете шаблона „%1“? <nl /><warning> Няма начин да "
+"отмените премахването. </warning>"
 
 #: quicktext/quicktexttreewidget.cpp:167
 #, kde-kuit-format
@@ -180,7 +180,7 @@ msgid ""
 "><warning>There is no way to undo the removal.</warning>"
 msgstr ""
 "Наистина ли искате да премахнете групата „%1“ заедно с всички нейни шаблони? "
-"<nl /> <warning> Няма начин да отмените премахването. </warning>"
+"<nl /><warning> Няма начин да отмените премахването. </warning>"
 
 #: quicktext/quicktexttreewidget.cpp:177
 #, kde-format

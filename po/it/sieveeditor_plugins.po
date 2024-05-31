@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2023-09-27 01:11+0200\n"
+"PO-Revision-Date: 2024-05-23 21:21+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -79,7 +79,7 @@ msgstr "Cerca..."
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
 msgid "Refresh IMAP Folder List"
-msgstr "Aggiorna la lista delle cartelle IMAP"
+msgstr "Aggiorna l'elenco delle cartelle IMAP"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114

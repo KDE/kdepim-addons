@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Automatically generated, 2022.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2022-07-20 22:36+0200\n"
+"PO-Revision-Date: 2024-05-30 16:18+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:14
 #, kde-format
@@ -38,5 +38,5 @@ msgid ""
 "number."
 msgstr ""
 "<b>%f</b> ще бъде заменен с името на файла за редактиране. <br /><b>%w </b> "
-"ще бъде заменен с идентификатора на прозореца. <br /><b>%l</ b> ще бъде "
+"ще бъде заменен с идентификатора на прозореца. <br /><b>%l</b> ще бъде "
 "заменен с номера на реда."
