@@ -1,0 +1,57 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"PO-Revision-Date: 2024-06-07 10:12+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.02.2\n"
+
+#: cryptopageplugin.cpp:37
+#, kde-format
+msgid "Allowed Protocols"
+msgstr "פרוטוקולים מורשים"
+
+#: cryptopageplugin.cpp:52
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Preferred OpenPGP encryption key:"
+msgstr "מפתח OpenPGP מועדף להצפנה:"
+
+#: cryptopageplugin.cpp:57
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Preferred S/MIME encryption certificate:"
+msgstr "אישור S/MIME מועדף להצפנה:"
+
+#: cryptopageplugin.cpp:62
+#, kde-format
+msgid "Message Preference"
+msgstr "העדפות הודעה"
+
+#: cryptopageplugin.cpp:71
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Sign:"
+msgstr "חתימה:"
+
+#: cryptopageplugin.cpp:88
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Encrypt:"
+msgstr "הצפנה:"
+
+#: cryptopageplugin.cpp:106
+#, kde-format
+msgid "Crypto Settings"
+msgstr "הגדרות קריפטו"

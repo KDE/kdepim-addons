@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-02-12 22:25+0200\n"
+"PO-Revision-Date: 2024-06-07 09:54+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -53,15 +53,13 @@ msgid "Select delegate"
 msgstr "נא לבחור מיופה כוח"
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "מיופה כוח:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "הערה:"
@@ -438,15 +436,13 @@ msgid "Send Email to Organizer"
 msgstr "שליחת דוא״ל למארגנים"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "לא לשלוח"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "לשלוח דוא״ל"
@@ -462,8 +458,7 @@ msgid "Open Attachment"
 msgstr "פתיחת צרופה"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
 msgstr "שמירת הצרופה בשם…"
 
@@ -483,8 +478,7 @@ msgid "Accept counter proposal"
 msgstr "קבלת ההצעה הנגדית"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
 msgstr "יצירת הצעה נגדית…"
 
@@ -509,10 +503,9 @@ msgid "Decline counter proposal"
 msgstr "סירוב להצעה הנגדית"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "בדיקת לוח־השנה שלי…"
+msgstr "בדיקת לוח השנה שלי…"
 
 #: text_calendar.cpp:1376
 #, kde-format
