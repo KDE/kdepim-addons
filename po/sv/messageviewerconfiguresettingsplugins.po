@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@bredband.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-02 00:38+0000\n"
-"PO-Revision-Date: 2022-05-15 12:19+0200\n"
+"PO-Revision-Date: 2024-06-08 22:08+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -228,8 +228,7 @@ msgstr ""
 "Överskrider alla inställningar för varje markerad katalog. Vill du fortsätta?"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Save Folder Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "Spara kataloginställningar"
@@ -328,12 +327,12 @@ msgstr "Ändra regel..."
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr ""
+msgstr "En regel för värddator har redan lagts till."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "Host already checked"
-msgstr ""
+msgstr "Värddator redan kontrollerad"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
@@ -402,15 +401,13 @@ msgid "Has Ip"
 msgstr "Har IP"
 
 #: scamsettings/scamlistsmodel.cpp:57
-#, fuzzy, kde-format
-#| msgid "Domain"
+#, kde-format
 msgctxt "@title:column"
 msgid "Domain"
 msgstr "Domän"
 
 #: scamsettings/scamlistsmodel.cpp:59
-#, fuzzy, kde-format
-#| msgid "Check"
+#, kde-format
 msgctxt "@title:column"
 msgid "Check"
 msgstr "Kontrollera"

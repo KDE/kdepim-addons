@@ -1,7 +1,7 @@
 # Traducerea kmail_text_calendar_plugin.po în Română
 # translation of kmail_text_calendar_plugin to Romanian
 # Copyright (C) 2008 This_file_is_part_of_KDE
-# This file is distributed under the same license as the kmail_text_calendar_plugin package.
+# This file is distributed under the same license as the kdepim-addons package.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
 # Sergiu Bivol <sergiu@cip.md>, 2008, 2009.
 #
