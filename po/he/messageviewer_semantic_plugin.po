@@ -1,210 +1,160 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2017, 2018, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2023-07-31 08:31+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
-"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
-"Language: sv\n"
+"PO-Revision-Date: 2024-06-09 06:57+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
 msgid "Send to %1"
-msgstr "Skicka till %1"
+msgstr "שליחה אל %1"
 
 #: itineraryurlhandler.cpp:126
 #, kde-format
 msgid "Show calendar at the time of this reservation."
-msgstr "Visa tiden för bokningen i kalendern."
+msgstr "הצגת לוח שנה בשעה של ההזמנה הזאת."
 
 #: itineraryurlhandler.cpp:129
 #, kde-format
 msgid "Add reservation to your calendar."
-msgstr "Lägg till bokning i kalendern."
+msgstr "הוספת הזמנה ללוח השנה שלך."
 
 #: itineraryurlhandler.cpp:132
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
-msgstr "Importera bokning till KDE-resplan"
+msgstr "ייבוא הזמנה ל־KDE Itinerary"
 
 #: itineraryurlhandler.cpp:135
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
-msgstr "Skicka bokningen till en enhet med användning av KDE-anslut."
+msgstr "שליחת ההזמנה הזאת למכשיר באמצעות KDE Connect."
 
 #: itineraryurlhandler.cpp:206
 #, kde-format
 msgid "Boarding Pass"
-msgstr "Boardingkort"
+msgstr "כרטיס עלייה למטוס"
 
 #: itineraryurlhandler.cpp:207
 #, kde-format
 msgid "Ticket"
-msgstr "Biljett"
+msgstr "כרטיס"
 
 #: templates/actions.html:4
 msgid "View"
-msgstr "Visa"
+msgstr "הצגה"
 
 #: templates/actions.html:6
 msgid "Download"
-msgstr "Ladda ner"
+msgstr "מחיקה"
 
 #: templates/actions.html:8
 msgid "Modify"
-msgstr "Ändra"
+msgstr "שינוי"
 
 #: templates/actions.html:10
 msgid "Cancel"
-msgstr "Avbryt"
+msgstr "ביטול"
 
 #: templates/actions.html:12
 msgid "Check-In"
-msgstr "Checka in"
+msgstr "רישום הגעה"
 
 #: templates/boatreservation.html:9 templates/busreservation.html:12
 #: templates/flightreservation.html:13 templates/trainreservation.html:12
 msgid "Reservation canceled."
-msgstr "Bokning annullerad."
+msgstr "ההזמנה בוטלה"
 
 #: templates/busreservation.html:49 templates/busreservation.html:69
 #: templates/flightreservation.html:62 templates/flightreservation.html:79
 #: templates/trainreservation.html:62 templates/trainreservation.html:90
 #, kde-format
 msgid "Seat: %1"
-msgstr "Plats: %1"
+msgstr "מושב: %1"
 
 #: templates/event.html:3 templates/foodestablishmentreservation.html:3
 #: templates/lodgingreservation.html:3
 msgid "Canceled:"
-msgstr "Annullerad:"
+msgstr "בוטל:"
 
 #: templates/flightreservation.html:50
 #, kde-format
 msgid "Gate: %1"
-msgstr "Utgång: %1"
+msgstr "שער: %1"
 
 #: templates/flightreservation.html:54
 #, kde-format
 msgid "Boarding: %1"
-msgstr "Ombordstigning: %1"
+msgstr "עלייה לכלי התחבורה: %1"
 
 #: templates/flightreservation.html:58 templates/flightreservation.html:78
 #, kde-format
 msgid "Group: %1"
-msgstr "Grupp: %1"
+msgstr "קבוצה: %1"
 
 #: templates/foodestablishmentreservation.html:9
 #, kde-format
 msgid "Number Of People: %1"
-msgstr "Antal personer: %1"
+msgstr "מספר האנשים: %1"
 
 #: templates/foodestablishmentreservation.html:12
 #: templates/taxireservation.html:2
 #, kde-format
 msgid "Reservation Number: %1"
-msgstr "Bokningsnummer: %1"
+msgstr "מספר ההזמנה: %1"
 
 #: templates/foodestablishmentreservation.html:15
 #: templates/taxireservation.html:4
 #, kde-format
 msgid "Under Name: %1"
-msgstr "I namn: %1"
+msgstr "תחת השם: %1"
 
 #: templates/itinerary.html:66
 msgid "Show Calendar"
-msgstr "Visa kalender"
+msgstr "הצגת לוח שנה"
 
 #: templates/itinerary.html:69
 msgid "Add to Calendar"
-msgstr "Lägg till i kalender"
+msgstr "הוספה ללוח השנה"
 
 #: templates/itinerary.html:72
 msgid "Add to KDE Itinerary"
-msgstr "Lägg till i KDE-resplan"
+msgstr "הוספה ל־KDE Itinerary"
 
 #: templates/itinerary.html:78
-#, fuzzy
-#| msgid "Send to Device..."
 msgid "Send to Device…"
-msgstr "Skicka till enhet..."
+msgstr "שליחה למכשיר…"
 
 #: templates/location.html:4
 msgid "Show location on map"
-msgstr "Visa plats på karta"
+msgstr "הצגת מקום במפה"
 
 #: templates/location.html:10
 msgid "Search address on map"
-msgstr "Sök efter adresser på karta"
+msgstr "חיפוש כתובת במפה"
 
 #: templates/lodgingreservation.html:10
 msgid "Reserved for: "
-msgstr "Reserverat för:"
+msgstr "שמור לטובת:"
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format
 msgid "Class: %1"
-msgstr "Klass: %1"
+msgstr "מחלקה: %1"
 
 #: templates/trainreservation.html:58 templates/trainreservation.html:86
 #, kde-format
 msgid "Coach: %1"
-msgstr "Buss: %1"
-
-#~ msgid "Show '%1' On Map"
-#~ msgstr "Visa '%1' på karta"
-
-#~ msgid "Flight %1 from %2 to %3"
-#~ msgstr "Flyg %1 från %2 till %3"
-
-#~ msgid "Boarding for flight %1"
-#~ msgstr "Ombordstigning för flyg %1"
-
-#~ msgid "Boarding for flight %1 at gate %2"
-#~ msgstr "Ombordstigning för flyg %1 grind %2"
-
-#~ msgid "Boarding time: %1"
-#~ msgstr "Ombordstigningstid: %1"
-
-#~ msgid "Departure gate: %1"
-#~ msgstr "Avgångsgrind: %1"
-
-#~ msgid "Boarding group: %1"
-#~ msgstr "Ombordstigningsgrupp: %1"
-
-#~ msgid "Booking reference: %1"
-#~ msgstr "Bokningsnummer: %1"
-
-#~ msgid "Departure platform: %1"
-#~ msgstr "Avgångsplattform: %1"
-
-#~ msgid "Arrival platform: %1"
-#~ msgstr "Ankomstplattform: %1"
-
-#~ msgid "Train %1 from %2 to %3"
-#~ msgstr "Tåg %1 från %2 till %3"
-
-#~ msgid "Bus %1 from %2 to %3"
-#~ msgstr "Buss %1 från %2 till %3"
-
-#~ msgid "%1, %2 %3, %4"
-#~ msgstr "%1, %2 %3, %4"
-
-#~ msgid ""
-#~ "Check-in: %1\n"
-#~ "Check-out: %2\n"
-#~ "Booking reference: %3"
-#~ msgstr ""
-#~ "Incheckning: %1\n"
-#~ "Utcheckning: %2\n"
-#~ "Bokningsnummer: %3"
+msgstr "אזור: %1"

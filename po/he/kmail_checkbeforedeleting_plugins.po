@@ -1,96 +1,94 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2022-05-15 12:18+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
-"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
-"Language: sv\n"
+"PO-Revision-Date: 2024-06-09 06:53+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3);\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Rule"
-msgstr "Anpassa regel"
+msgstr "הגדרת כלל"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
-msgstr "Typ:"
+msgstr "סוג:"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Contains:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Contains:"
-msgstr "Innehåller:"
+msgstr "מכיל:"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:74
 #, kde-format
 msgid "Body"
-msgstr "Text"
+msgstr "תוכן"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:75
 #, kde-format
 msgid "Subject"
-msgstr "Rubrik"
+msgstr "נושא"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:76
 #, kde-format
 msgid "To"
-msgstr "Till"
+msgstr "אל"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:77
 #, kde-format
 msgid "Cc"
-msgstr "Kopia"
+msgstr "עותק"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:78
 #, kde-format
 msgid "Bcc"
-msgstr "Dold kopia"
+msgstr "עותק סמוי"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:170
 #, kde-format
 msgid "Unread"
-msgstr "Oläst"
+msgstr "לא נקרא"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:179
 #, kde-format
 msgid "Important"
-msgstr "Viktigt"
+msgstr "חשוב"
 
 #: confirmbeforedeleting/confirmbeforedeletingdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Before Deleting Mail"
-msgstr "Anpassa Innan brev tas bort"
+msgstr "הגדרה בטרם מחיקת הודעה"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Confirm Before Deleting"
+#, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
-msgstr "Bekräfta innan borttagning"
+msgstr "אישור בטרם מחיקה"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
 #, kde-format
 msgid "Configure"
-msgstr "Anpassa"
+msgstr "הגדרה"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:69
 #, kde-format
@@ -98,118 +96,98 @@ msgid ""
 "Do you want to delete this email?\n"
 "%1"
 msgstr ""
-"Vill du ta bort brevet?\n"
+"למחוק את הודעת הדוא״ל הזאת?\n"
 "%1"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxdialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete Mail"
-msgstr "Bekräfta borttagning av brev"
+msgstr "אישור מחיקת דוא״ל"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
 #, kde-format
 msgid "Apply to All"
-msgstr "Verkställ för alla"
+msgstr "החלה על הכול"
 
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
-msgstr "Brevet med rubrik '%2' innehåller '%1'"
+msgstr "ההודעה עם הנושא ‚%2’ מכילה ‚%1’"
 
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:208
 #, kde-format
 msgid "The message with subject '%1' is %2"
-msgstr "Brevet med rubrik '%1' är %2"
+msgstr "ההודעה עם הנושא ‚%1’ היא ‚%2’"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "Lägg till regel..."
+msgstr "הוספת כלל…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
-msgstr "Ta bort regel"
+msgstr "הסרת כלל"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "Ändra regel..."
+msgstr "שינוי כלל…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Type"
-msgstr "Typ"
+msgstr "סוג"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Pattern"
-msgstr "Mönster"
+msgstr "תבנית"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Lägg till regel..."
+msgstr "הוספת כלל…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "Redigera regel..."
+msgstr "עריכת כלל…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] "Ta bort regel"
-msgstr[1] "Ta bort regler"
+msgstr[0] "הסרת כלל"
+msgstr[1] "הסרת כללים"
+msgstr[2] "הסרת כללים"
+msgstr[3] "הסרת כללים"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
-msgstr[0] "Vill du ta bort den här regeln?"
-msgstr[1] "Vill du ta bort de här reglerna?"
+msgstr[0] "להסיר את הכלל הזה?"
+msgstr[1] "להסיר את הכללים האלה?"
+msgstr[2] "להסיר את הכללים האלה?"
+msgstr[3] "להסיר את הכללים האלה?"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
-msgstr "Ta bort regel"
+msgstr "הסרת כלל"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Same rule already exists."
-msgstr "En likadan regel finns redan."
+msgstr "אותו הכלל כבר קיים."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Create Rule"
-msgstr "Skapa regel"
-
-#~ msgid "External Script"
-#~ msgstr "Externt skript"
-
-#~ msgid "Reuse..."
-#~ msgstr "Återanvänd..."
-
-#~ msgid "Confirm Delete Mail"
-#~ msgstr "Bekräfta borttagning av brev"
-
-#~ msgid "Name"
-#~ msgstr "Namn"
-
-#~ msgid "Open"
-#~ msgstr "Öppna"
-
-#~ msgid "Remove filter"
-#~ msgstr "Ta bort filter"
+msgstr "יצירת כלל"
