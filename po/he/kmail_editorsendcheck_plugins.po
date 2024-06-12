@@ -1,28 +1,27 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-04-22 15:58\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-06-11 07:25+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/"
-"kmail_editorsendcheck_plugins.pot\n"
-"X-Crowdin-File-ID: 45583\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
-msgstr "配置“自动添加联系人”插件"
+msgstr "הגדרת תוסף „הוספת אנשי קשר אוטומטית”"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:97
 #, kde-format
@@ -30,63 +29,63 @@ msgctxt "@info"
 msgid ""
 "You must create an address book before adding a contact. Do you want to "
 "create an address book?"
-msgstr "在添加联系人之前您必须创建一个地址簿。您是否想创建地址簿？"
+msgstr "יש ליצור פנקס כתובות בטרם הוספת אנשי קשר. ליצור פנקס כתובות?"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr "没有可用的地址簿"
+msgstr "אין פנקס כתובות זמין"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr "创建通讯簿"
+msgstr "יצירת פנקס כתובות"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr "添加地址簿"
+msgstr "הוספת פנקס כתובות"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
 #, kde-format
 msgid "Automatic Add Contacts"
-msgstr "自动添加联系人"
+msgstr "הוספת אנשי קשר אוטומטית"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
-msgstr "选择要保存联系人的地址簿"
+msgstr "נא לבחור את פנקס הכתובות לאחסון אנשי קשר:"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
 msgid "Do you want to send the email as HTML?"
-msgstr "您想发送 HTML 格式的邮件吗？"
+msgstr "לשלוח את הודעות הדוא״ל כ־HTML?"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:36
 #, kde-format
 msgid "Send email as plain text"
-msgstr "您想发送纯文本格式的邮件吗？"
+msgstr "שליחת דוא״ל כטקסט פשוט"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
-msgstr "作为 HTML 发送"
+msgstr "שליחה כ־HTML"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
 #, kde-format
 msgid "Update SMTP server"
-msgstr "更新 SMTP 服务器"
+msgstr "עדכון שרת SMTP"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Check SMTP server"
-msgstr "检查 SMTP 服务器"
+msgstr "בדיקת שרת SMTP"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
 #, kde-format
@@ -94,165 +93,165 @@ msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
 "the current identity?"
-msgstr "您想使用不同于当前身份定义的 SMTP 服务器发送邮件吧？"
+msgstr "לשלוח דוא״ל עם SMTP שונה מזה שהוגדר בזהות הנוכחית?"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
-msgstr "配置“发送邮件前检查”插件"
+msgstr "הגדרת תוסף „בדיקה בטרם שליחת הודעות דוא״ל”"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
 #, kde-format
 msgid "Send as plain text"
-msgstr "以纯文本发送"
+msgstr "שליחה כטקסט פשוט"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
 #, kde-format
 msgid "Use SMTP server defined in identity"
-msgstr "使用当前身份定义的 SMTP 服务器"
+msgstr "להשתמש בשרת ה־SMTP שמוגדר בזהות"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format
 msgid "Check duplicated emails addresses"
-msgstr "检查重复的电子邮件地址"
+msgstr "לנסות לאתר כתובות דוא״ל כפולות"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
 #, kde-format
 msgid "Check send attachment"
-msgstr "检查发送的附件"
+msgstr "בדיקת הצרופה לשילוח"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
-msgstr "重复的邮件"
+msgstr "כתובות דוא״ל כפולות"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
-msgstr "这些邮件是重复的。您想发送邮件吗？"
+msgstr "כתובות הדוא״ל כפולות. לשלוח הודעות דוא״ל?"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
-msgstr "%1 (%2 封)"
+msgstr "%1 (%2)"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
-msgstr "检查附件"
+msgstr "בדיקת צרופות"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
-msgstr "您想发送附件吗？"
+msgstr "לשלוח חלק מהצרופות?"
 
 #: confirm-address/confirmaddressconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
-msgstr "配置\"确认电子邮件地址\"插件"
+msgstr "הגדרת תוסף „אימות כתובת דוא״ל”"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
 #, kde-format
 msgid "Accepted Domain Name"
-msgstr "接受的域名"
+msgstr "שמות תחום מותרים"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
 #, kde-format
 msgid "Rejected Domain Name"
-msgstr "拒绝的域名"
+msgstr "שם תחום אסור"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "הו&ספה…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
 #, kde-format
 msgid "Re&move"
-msgstr "移除(&M)"
+msgstr "הס&רה"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "Mod&ify…"
-msgstr ""
+msgstr "&שינוי…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #, kde-format
 msgid "Enter new domain name:"
-msgstr "输入新域名："
+msgstr "נא למלא כאן שם תחום חדש:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:50
 #, kde-format
 msgid "Do you want to remove this domain?"
-msgstr "您想要移除此域名吗？"
+msgstr "להסיר את שם התחום הזה?"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:54
 #, kde-format
 msgid "Whitelist of Addresses"
-msgstr "地址白名单"
+msgstr "רשימת היתר של כתובות"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "Enter new email address:"
-msgstr "输入新电子邮件地址："
+msgstr "נא למלא כתובת דוא״ל חדשה:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Do you want to remove this email address?"
-msgstr "您想要移除此电邮地址吗？"
+msgstr "להסיר את כתובת הדוא״ל הזאת?"
 
 #: confirm-address/confirmaddressdialog.cpp:26
 #, kde-format
 msgid "Add Selected Emails to WhiteList"
-msgstr "添加选中的电子邮件地址到白名单"
+msgstr "הוספת כתובות הדוא״ל הנבחרות לרשימת ההיתר"
 
 #: confirm-address/confirmaddressdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
-msgstr "确认地址"
+msgstr "אישור כתובות"
 
 #: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgid "All selected emails are added to white list"
-msgstr "所有选中的电子邮件地址已经添加到白名单"
+msgstr "כל כתובות הדוא״ל הנבחרות נוספות לרשימת היתר"
 
 #: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
-msgstr "电子邮件地址已添加到白名单"
+msgstr "הודעות דוא״ל נוספו לרשימת היתר"
 
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
-msgstr "输入新域名："
+msgstr "נא למלא שם תחום חדש:"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Value"
-msgstr "添加值"
+msgstr "הוספת ערך"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Value"
-msgstr "更改值"
+msgstr "שינוי ערך"
 
 #: confirm-address/confirmaddresswidget.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
-msgstr "可能无效的邮件地址显示为红色："
+msgstr "כתובות דוא״ל שחשודות כשגויות מוצגות באדום:"
