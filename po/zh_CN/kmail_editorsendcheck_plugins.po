@@ -36,7 +36,7 @@ msgstr "在添加联系人之前您必须创建一个地址簿。您是否想创
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr "无可用地址簿"
+msgstr "没有可用的地址簿"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:99
 #, kde-format
