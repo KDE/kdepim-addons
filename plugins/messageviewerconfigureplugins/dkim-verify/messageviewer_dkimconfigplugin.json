@@ -16,6 +16,7 @@
         "Description[fi]": "Tällä liitännäisellä voi asettaa dkim-tuen.",
         "Description[fr]": "Ce module externe vous permet de configurer la prise en charge de dkim.",
         "Description[gl]": "Este complemento permítelle configurar a compatibilidade con dkim.",
+        "Description[he]": "התוסף הזה מאפשר לך להגדיר תמיכה ב־dkim (הודעה מזוהה לפי מפתחות שם תחום).",
         "Description[ia]": "Iste plugin te permitte configurar supporto de dkim.",
         "Description[it]": "Questa estensione permette di configurare il supporto per dkim.",
         "Description[ka]": "ეს დამატება DKIM-ის მხარდაჭერის მორგების საშუალებას გაძლევთ.",
