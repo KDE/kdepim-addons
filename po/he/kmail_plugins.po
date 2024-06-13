@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-06-11 15:58+0300\n"
+"PO-Revision-Date: 2024-06-12 07:13+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -51,25 +51,25 @@ msgstr "שאיבת אבק"
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr ""
+msgstr "בדיקת &רציפות ב־Akonadi…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
 msgid "Do you want to fsck akonadi database?"
-msgstr ""
+msgstr "לבדוק את רציפות מסד הנתונים של akonadi?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:51
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:75
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Fsck"
-msgstr ""
+msgstr "בדיקת רציפות ב־Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
-msgstr ""
+msgstr "בדיקת רציפות"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
 #, kde-format
@@ -85,13 +85,13 @@ msgstr "התחלה…"
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr ""
+msgstr "אשף מניעת &ספאם…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr ""
+msgstr "אשף מניעת &וירוסים…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -103,7 +103,7 @@ msgstr "אשף מניעת ספאם"
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
-msgstr "אפשר מניעת וירוסים"
+msgstr "אשף מניעת וירוסים"
 
 #: common/antispamwizard.cpp:90
 #, kde-format
@@ -118,17 +118,17 @@ msgstr "ברוך בואך לאשף מניעת הווירוסים של KMail"
 #: common/antispamwizard.cpp:95
 #, kde-format
 msgid "Options to fine-tune the handling of spam messages"
-msgstr ""
+msgstr "אפשרויות לכוונון הטיפול בהודעות ספאם"
 
 #: common/antispamwizard.cpp:99
 #, kde-format
 msgid "Summary of changes to be made by this wizard"
-msgstr ""
+msgstr "תקציר השינויים שיבצע האשף הזה"
 
 #: common/antispamwizard.cpp:102
 #, kde-format
 msgid "Options to fine-tune the handling of virus messages"
-msgstr ""
+msgstr "אפשרויות לכוונון הטיפול בהודעות וירוס"
 
 #: common/antispamwizard.cpp:169
 #, kde-format
@@ -167,22 +167,22 @@ msgstr "סיווג כﬥﬡ‎  ספאם"
 #: common/antispamwizard.cpp:390
 #, kde-format
 msgid "Ham"
-msgstr ""
+msgstr "תקין"
 
 #: common/antispamwizard.cpp:456
 #, kde-format
 msgid "Scanning for %1…"
-msgstr ""
+msgstr "סריקה אחר %1…"
 
 #: common/antispamwizard.cpp:500
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
-msgstr ""
+msgstr "סריקה לאיתור כלים למניעת ספאם הסתיימה."
 
 #: common/antispamwizard.cpp:500
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
-msgstr ""
+msgstr "סריקה לאיתור כלים למניעת וירוסים הסתיימה."
 
 #: common/antispamwizard.cpp:502
 #, kde-format
@@ -190,11 +190,13 @@ msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
 "detection software and re-run this wizard.</p>"
 msgstr ""
+"<p>לא נמצאו כלים לאיתור ספאם, עמך הסליחה. נא להתקין את תוכנות מניעת הספאם "
+"שלך ולהריץ את האשף הזה מחדש.</p>"
 
 #: common/antispamwizard.cpp:505
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
-msgstr ""
+msgstr "הסריקה הושלמה. לא נמצאו כלים למניעת וירוסים."
 
 #: common/antispamwizard.cpp:527
 #, kde-format
@@ -278,12 +280,12 @@ msgstr ""
 #: common/antispamwizard.cpp:1057
 #, kde-format
 msgid "Mark messages which have been classified as spam as read."
-msgstr ""
+msgstr "סימון הודעות שסווגו כספאם כאילו נקראו."
 
 #: common/antispamwizard.cpp:1060
 #, kde-format
 msgid "Move &known spam to:"
-msgstr ""
+msgstr "העברת ספאם מו&כר אל:"
 
 #: common/antispamwizard.cpp:1062
 #, kde-format
