@@ -8,7 +8,7 @@
 #pragma once
 
 #include "pimdatasource.h"
-#include <EventViews/Prefs>
+#include <Akonadi/Collection>
 #include <QObject>
 
 class EventModel;
@@ -30,6 +30,5 @@ private Q_SLOTS:
 
 private:
     EventModel *const mCalendar;
-    EventViews::PrefsPtr mEventViewsPrefs;
-    mutable QHash<qint64, QString> mColorCache;
+    mutable QHash<Akonadi::Collection::Id, QColor> colorCache;
 };

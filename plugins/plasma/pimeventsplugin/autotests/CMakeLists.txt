@@ -19,7 +19,6 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
                                    KPim6::AkonadiCalendar
                                    KF6::CalendarCore
                                    KF6::CalendarEvents
-                                   KPim6::EventViews
                                    KF6::ConfigCore
 )
     include_directories(${CMAKE_CURRENT_SOURCE_DIR}/..

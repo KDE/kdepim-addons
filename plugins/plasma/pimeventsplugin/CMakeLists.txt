@@ -39,7 +39,6 @@ target_link_libraries(pimevents
     KPim6::AkonadiCalendar
     KF6::CalendarCore
     KF6::CalendarEvents
-    KPim6::EventViews # for reading KOrganizer calendar colors
     KF6::ConfigCore
     KF6::KIOCore
 )

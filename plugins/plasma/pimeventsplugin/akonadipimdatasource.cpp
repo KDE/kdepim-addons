@@ -13,11 +13,13 @@
 #include <Akonadi/AttributeFactory>
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionColorAttribute>
+#include <Akonadi/CollectionModifyJob>
 
 #include <QSet>
 
 #include <KCoreConfigSkeleton>
 #include <KSharedConfig>
+#include <QRandomGenerator>
 
 using namespace std::placeholders;
 
@@ -34,8 +36,6 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     // Would be nice to have a proper API to read KOrganizer calendar colors...
     const auto korganizerrc = KSharedConfig::openConfig(QStringLiteral("korganizerrc"));
     const auto skel = new KCoreConfigSkeleton(korganizerrc);
-    mEventViewsPrefs = EventViews::PrefsPtr(new EventViews::Prefs(skel));
-    mEventViewsPrefs->readConfig();
 }
 
 AkonadiPimDataSource::~AkonadiPimDataSource() = default;
@@ -57,26 +57,43 @@ QString AkonadiPimDataSource::calendarColorForIncidence(const KCalendarCore::Inc
         return {};
     }
 
-    const auto &col = mCalendar->collection(item.parentCollection().id());
-    if (!col.isValid()) {
-        return {};
-    }
-
-    auto it = mColorCache.find(col.id());
-    if (it == mColorCache.end()) {
-        if (col.hasAttribute<Akonadi::CollectionColorAttribute>()) {
-            const auto attr = col.attribute<Akonadi::CollectionColorAttribute>();
-            it = mColorCache.insert(col.id(), attr->color().name());
-        } else {
-            QColor color = mEventViewsPrefs->resourceColorKnown(QString::number(col.id()));
-            if (color.isValid()) {
-                it = mColorCache.insert(col.id(), color.name());
-            } else {
-                it = mColorCache.insert(col.id(), QString());
-            }
+    auto collection = mCalendar->collection(item.parentCollection().id());
+    const auto id = collection.id();
+    if (collection.hasAttribute<Akonadi::CollectionColorAttribute>()) {
+        const auto colorAttr = collection.attribute<Akonadi::CollectionColorAttribute>();
+        if (colorAttr && colorAttr->color().isValid()) {
+            colorCache[id] = colorAttr->color();
+            return colorAttr->color().name();
         }
     }
-    return *it;
+
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("korganizerrc"));
+    KConfigGroup resourcesColorsConfig(config, QStringLiteral("Resources Colors"));
+    const QStringList colorKeyList = resourcesColorsConfig.keyList();
+
+    QColor color;
+    for (const QString &key : colorKeyList) {
+        if (key.toLongLong() == id) {
+            color = resourcesColorsConfig.readEntry(key, QColor("blue"));
+        }
+    }
+
+    if (!color.isValid()) {
+        color.setRgb(QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256));
+        colorCache[id] = color;
+    }
+
+    auto colorAttr = collection.attribute<Akonadi::CollectionColorAttribute>(Akonadi::Collection::AddIfMissing);
+    colorAttr->setColor(color);
+
+    auto modifyJob = new Akonadi::CollectionModifyJob(collection);
+    connect(modifyJob, &Akonadi::CollectionModifyJob::result, this, [](KJob *job) {
+        if (job->error()) {
+            qWarning() << "Error occurred modifying collection color: " << job->errorString();
+        }
+    });
+
+    return color.name();
 }
 
 void AkonadiPimDataSource::onSettingsChanged()
