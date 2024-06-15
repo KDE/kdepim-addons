@@ -7,15 +7,14 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-06-12 07:13+0300\n"
+"PO-Revision-Date: 2024-06-13 08:14+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.02.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
@@ -205,6 +204,8 @@ msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
 "moved into the folder named <i>%1</i>.</p>"
 msgstr ""
+"<p>הודעות שסווגו כספאם מסומנות כנקראו.<br />הודעות ספאם מועברות לתיקייה בשם "
+"<i>%1</i>.</p>"
 
 #: common/antispamwizard.cpp:532
 #, kde-format
@@ -212,6 +213,8 @@ msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
 "not moved into a certain folder.</p>"
 msgstr ""
+"<p>הודעות שסווגו כספאם מסומנות כנקראו.<br />הודעות ספאם לא מועברות לתיקייה "
+"כלשהי.</p>"
 
 #: common/antispamwizard.cpp:538
 #, kde-format
@@ -219,6 +222,8 @@ msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
 "are moved into the folder named <i>%1</i>.</p>"
 msgstr ""
+"<p>הודעות שסווגו כספאם לא מסומנות כנקראו.<br />הודעות ספאם מועברות לתיקייה "
+"בשם <i>%1</i>.</p>"
 
 #: common/antispamwizard.cpp:543
 #, kde-format
@@ -226,13 +231,15 @@ msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
 "are not moved into a certain folder.</p>"
 msgstr ""
+"<p>הודעות שסווגו כספאם לא מסומנות כנקראו.<br />הודעות ספאם לא מועברות "
+"לתיקייה כלשהי.</p>"
 
 #: common/antispamwizard.cpp:570
 #, kde-format
 msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
 "</p>"
-msgstr ""
+msgstr "<p>תיקייה להודעות שסווגו שהן בספק (ככל הנראה ספאם) היא <i>%1</i>.</p>"
 
 #: common/antispamwizard.cpp:580
 #, kde-format
@@ -271,12 +278,12 @@ msgstr ""
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
 "page.</p>"
-msgstr ""
+msgstr "<p>נא לבחור את הכלים לשימוש לזיהוי ולעבור לעמוד הבא.</p>"
 
 #: common/antispamwizard.cpp:1056
 #, kde-format
 msgid "&Mark detected spam messages as read"
-msgstr ""
+msgstr "סימון הודעות שזוהו כספאם כ&נקראו"
 
 #: common/antispamwizard.cpp:1057
 #, kde-format
@@ -294,11 +301,13 @@ msgid ""
 "The default folder for spam messages is the trash folder, but you may change "
 "that in the folder view below."
 msgstr ""
+"תיקיית ברירת המחדל להודעות ספאם היא תיקיית האשפה, אך אפשר לשנות זאת בתצוגת "
+"התיקיות להלן."
 
 #: common/antispamwizard.cpp:1075
 #, kde-format
 msgid "Move &probable spam to:"
-msgstr ""
+msgstr "העברת &חשד לספאם אל:"
 
 #: common/antispamwizard.cpp:1077
 #, kde-format
@@ -307,11 +316,14 @@ msgid ""
 "folder view below.<p>Not all tools support a classification as unsure. If "
 "you have not selected a capable tool, you cannot select a folder as well.</p>"
 msgstr ""
+"תיקיית ברירת המחדל היא תיקיית הדוא״ל הנכנס, אך ניתן לשנות את זה בתצוגת "
+"התיקיות להלן.<p>לא כל הכלים תומכים בסיווג אם בספק. אם לא בחרת בכלי שמסוגל "
+"לכך, אי אפשר לבחור גם תיקייה.</p>"
 
 #: common/antispamwizard.cpp:1187
 #, kde-format
 msgid "Check messages using the anti-virus tools"
-msgstr ""
+msgstr "לבדוק הודעות באמצעות כלי מניעת הווירוסים"
 
 #: common/antispamwizard.cpp:1189
 #, kde-format
@@ -321,11 +333,14 @@ msgid ""
 "following filters can react on this and, for example, move virus messages to "
 "a special folder."
 msgstr ""
+"לאפשר לכלי מניעת הווירוסים לבדוק את ההודעות שלך. האשף ייצור את המסננים "
+"המתאימים. ההודעות בדרך כלל מסומנות על ידי הכלים כדי שהמסננים הבאים יוכלו "
+"להגיב על כך וגם, למשל, להעביר הודעות עם וירוסים לתיקייה מיוחדת."
 
 #: common/antispamwizard.cpp:1195
 #, kde-format
 msgid "Move detected viral messages to the selected folder"
-msgstr ""
+msgstr "העברת הודעות שזוהו כמכילות וירוסים לתיקייה הנבחרת"
 
 #: common/antispamwizard.cpp:1197
 #, kde-format
@@ -334,11 +349,14 @@ msgid ""
 "messages into a predefined folder is created. The default folder is the "
 "trash folder, but you may change that in the folder view."
 msgstr ""
+"מסנן לזיהוי הודעות שסווגו כמודבקות בווירוסים ולהעביר את ההודעות האלו לתיקייה "
+"מוגדרת מראש נוצר. תיקיית ברירת המחדל היא תיקיית האשפה, אך ניתן לשנות את זה "
+"בתצוגת התיקיות."
 
 #: common/antispamwizard.cpp:1203
 #, kde-format
 msgid "Additionally, mark detected viral messages as read"
-msgstr ""
+msgstr "בנוסף, לסמן הודעות שזוהו כמכילות וירוסים כנקראו"
 
 #: common/antispamwizard.cpp:1206
 #, kde-format
@@ -346,6 +364,7 @@ msgid ""
 "Mark messages which have been classified as virus-infected as read, as well "
 "as moving them to the selected folder."
 msgstr ""
+"סימון הודעות שסווגו כמודבקות בווירוס כנקראו, בנוסף להעברתן לתיקייה הנבחרת."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
 #, kde-format
