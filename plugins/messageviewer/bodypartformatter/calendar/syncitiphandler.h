@@ -10,7 +10,6 @@
 
 #include <Akonadi/CalendarBase>
 #include <Akonadi/ITIPHandler>
-#include <IncidenceEditor/GroupwareUiDelegate>
 
 #include <QEventLoop>
 #include <QObject>
@@ -32,6 +31,4 @@ public:
 private:
     QString m_errorMessage;
     Akonadi::ITIPHandler::Result m_result = Akonadi::ITIPHandler::ResultSuccess;
-    QEventLoop m_eventLoop;
-    IncidenceEditorNG::GroupwareUiDelegate *const m_counterProposalEditorDelegate;
 };

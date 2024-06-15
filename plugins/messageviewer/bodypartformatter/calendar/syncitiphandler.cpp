@@ -14,19 +14,15 @@ using namespace Akonadi;
 
 SyncItipHandler::SyncItipHandler(const QString &receiver, const QString &iCal, const QString &type, const Akonadi::CalendarBase::Ptr &calendar, QObject *parent)
     : QObject(parent)
-    , m_counterProposalEditorDelegate(new IncidenceEditorNG::GroupwareUiDelegate())
 {
     Q_ASSERT(calendar);
     qCDebug(TEXT_CALENDAR_LOG) << "SyncItipHandler::SyncItipHandler: " << this;
     auto handler = new Akonadi::ITIPHandler(this);
     QObject::connect(handler, &Akonadi::ITIPHandler::iTipMessageProcessed, this, &SyncItipHandler::onITipMessageProcessed, Qt::QueuedConnection);
 
-    handler->setGroupwareUiDelegate(m_counterProposalEditorDelegate);
     handler->setCalendar(calendar);
 
     handler->processiTIPMessage(receiver, iCal, type);
-
-    m_eventLoop.exec();
 }
 
 SyncItipHandler::~SyncItipHandler()
@@ -38,9 +34,7 @@ void SyncItipHandler::onITipMessageProcessed(Akonadi::ITIPHandler::Result result
 {
     m_result = result;
     m_errorMessage = errorMessage;
-    m_eventLoop.exit();
     deleteLater();
-    delete m_counterProposalEditorDelegate;
 }
 
 QString SyncItipHandler::errorMessage() const
