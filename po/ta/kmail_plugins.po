@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-04 01:38+0000\n"
-"PO-Revision-Date: 2024-05-12 12:41+0530\n"
+"PO-Revision-Date: 2024-06-16 22:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -70,7 +70,7 @@ msgstr ""
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
 #, kde-format
 msgid "Finished."
-msgstr ""
+msgstr "முடிந்த‍து."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
