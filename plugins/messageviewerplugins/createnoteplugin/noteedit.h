@@ -10,7 +10,7 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/NoteUtils>
-#include <KMime/KMimeMessage>
+#include <KMime/Message>
 
 class QLineEdit;
 class QPushButton;

@@ -11,7 +11,7 @@
 #include <Akonadi/NoteUtils>
 #include <KJob>
 
-#include <KMime/KMimeMessage>
+#include <KMime/Message>
 
 class QObject;
 

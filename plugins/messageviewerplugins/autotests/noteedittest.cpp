@@ -9,7 +9,7 @@
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionComboBox>
 #include <Akonadi/EntityTreeModel>
-#include <KMime/KMimeMessage>
+#include <KMime/Message>
 #include <messageviewer/globalsettings_messageviewer.h>
 
 #include <QLineEdit>
