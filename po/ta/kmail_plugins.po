@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 12:41+0530\n"
+"PO-Revision-Date: 2024-06-16 22:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -74,12 +74,12 @@ msgstr ""
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
 #, kde-format
 msgid "Finished."
-msgstr ""
+msgstr "முடிந்த‍து."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
 msgid "Start…"
-msgstr ""
+msgstr "துவங்குகிறது…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
 #, kde-format
@@ -356,8 +356,7 @@ msgid "Mail Merge"
 msgstr "அஞ்சல் ஒன்றிணைப்பு"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "பாதை:"
@@ -370,8 +369,7 @@ msgid "Attachment"
 msgstr "உடனிணைப்பு"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Source:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "மூலம்:"
@@ -387,8 +385,7 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "உடனிணைப்பு:"
@@ -409,11 +406,10 @@ msgid "Mod&ify..."
 msgstr "&மாற்று..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
-msgstr "உடனிணைப்பைத் தேர்ந்தெடு"
+msgstr "உடனிணைப்பைத் தேர்ந்தெடுக்கவும்:"
 
 #~ msgid "A&dd..."
 #~ msgstr "&சேர்..."

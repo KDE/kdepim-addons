@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-03-08 21:29+0530\n"
+"PO-Revision-Date: 2024-06-16 22:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,24 +15,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Rule"
-msgstr ""
+msgstr "விதியை அமைப்பது"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "வகை:"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Contains:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Contains:"
 msgstr "இதைக் கொண்டது:"
@@ -40,7 +38,7 @@ msgstr "இதைக் கொண்டது:"
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:74
 #, kde-format
 msgid "Body"
-msgstr ""
+msgstr "உடல்"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:75
 #, kde-format
@@ -78,13 +76,13 @@ msgstr "முக்கியமானது"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Before Deleting Mail"
-msgstr ""
+msgstr "நீக்குமுன் உறுதிப்படுத்தும் அமைப்புகள்"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
 #, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
-msgstr ""
+msgstr "நீக்குமுன் உறுதிப்படுத்து"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
 #, kde-format
@@ -97,12 +95,14 @@ msgid ""
 "Do you want to delete this email?\n"
 "%1"
 msgstr ""
+"இந்த அஞ்சலை உறுதியாக நீக்க வேண்டுமா?\n"
+"%1"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxdialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete Mail"
-msgstr ""
+msgstr "அஞ்சலை நீக்குவதை உறுதிப்படுத்துவது"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
 #, kde-format
@@ -112,77 +112,77 @@ msgstr "அனைத்துக்கும் செயல்படுத்�
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
-msgstr ""
+msgstr "'%2' எனும் தலைப்பையுடைய அஞ்சலில் '%1' உள்ளது"
 
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:208
 #, kde-format
 msgid "The message with subject '%1' is %2"
-msgstr ""
+msgstr "'%1' எனும் தலைப்பையுடைய அஞ்சல் %2"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr ""
+msgstr "விதியை சேர்…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
-msgstr ""
+msgstr "விதியை நீக்கு"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr ""
+msgstr "விதியை திருத்து…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Type"
-msgstr ""
+msgstr "வகை"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
 msgid "Pattern"
-msgstr ""
+msgstr "பாங்கு"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
 #, kde-format
 msgid "Add Rule…"
-msgstr ""
+msgstr "விதியை சேர்…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
 #, kde-format
 msgid "Edit Rule…"
-msgstr ""
+msgstr "விதியை திருத்து…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "விதியை நீக்கு"
+msgstr[1] "விதிகளை நீக்கு"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "இந்த விதியை உறுதியாக நீக்க வேண்டுமா?"
+msgstr[1] "இந்த விதிகளை உறுதியாக நீக்க வேண்டுமா?"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
-msgstr ""
+msgstr "விதியை நீக்கு"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Same rule already exists."
-msgstr ""
+msgstr "இந்த விதி ஏற்கனவே உள்ளது."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
 #, kde-format
 msgid "Create Rule"
-msgstr ""
+msgstr "விதியை உருவாக்கு"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-19 15:01+0530\n"
+"PO-Revision-Date: 2024-06-16 16:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,24 +15,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
 msgid "Autocorrect Text"
-msgstr ""
+msgstr "உரையை தானாக திருத்துவது"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
-msgstr ""
+msgstr "முழு உரையையும் தானாக திருத்து"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
-msgstr ""
+msgstr "தேர்ந்தெடுத்த உரையை தானாக திருத்து"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
@@ -41,8 +41,7 @@ msgid "Insert Email…"
 msgstr "மின்னஞ்சலை நுழை…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select Short URL server:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "குறுகிய முகவரிகளுக்கான சேவையகம்:"

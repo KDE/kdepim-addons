@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-03-08 21:33+0530\n"
+"PO-Revision-Date: 2024-06-16 16:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -35,19 +35,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr ""
+msgstr "எந்த முகவரிப்புத்தகமும் இல்லை"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr ""
+msgstr "முகவரிப்புத்தகத்தை உருவாக்கு"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr ""
+msgstr "முகவரிப்புத்தகத்தை சேர்"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
 #, kde-format
@@ -63,7 +63,7 @@ msgstr ""
 #: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
 msgid "Do you want to send the email as HTML?"
-msgstr ""
+msgstr "அஞ்சலை HTML-ஆக அனுப்ப வேண்டுமா?"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:36
 #, kde-format
@@ -79,13 +79,13 @@ msgstr "அஞ்சலை HTML-ஆக அனுப்பு"
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
 #, kde-format
 msgid "Update SMTP server"
-msgstr ""
+msgstr "SMTP சேவையகத்தை மாற்று"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Check SMTP server"
-msgstr ""
+msgstr "SMTP சேவையகத்தை சரிபார்ப்பது"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
 #, kde-format
@@ -104,7 +104,7 @@ msgstr ""
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
 #, kde-format
 msgid "Send as plain text"
-msgstr ""
+msgstr "வெறும் உரையாக அனுப்பு"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
 #, kde-format
@@ -125,31 +125,31 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
-msgstr ""
+msgstr "பலமுறையுள்ள முகவரிகள்"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
-msgstr ""
+msgstr "இந்த முகவரிகள் பலமுறை உள்ளன. உறுதியாக அஞ்சலனுப்ப வேண்டுமா?"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
-msgstr ""
+msgstr "உடனிணைப்பை சரிபார்க்கவும்"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
-msgstr ""
+msgstr "எதையாவது உடனிணைப்பாக அனுப்ப வேண்டுமா?"
 
 #: confirm-address/confirmaddressconfiguredialog.cpp:14
 #, kde-format
@@ -171,19 +171,19 @@ msgstr ""
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&சேர்…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
 #, kde-format
 msgid "Re&move"
-msgstr ""
+msgstr "&நீக்கு..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "Mod&ify…"
-msgstr ""
+msgstr "&மாற்று…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #, kde-format
@@ -254,4 +254,4 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
-msgstr ""
+msgstr "முறையற்றவையாக இருக்கக்கூடிய முகவரிகள் சிவப்பாய் காட்டப்படுகின்றன:"

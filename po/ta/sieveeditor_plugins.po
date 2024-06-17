@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 11:43+0530\n"
+"PO-Revision-Date: 2024-06-16 16:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
@@ -28,11 +28,10 @@ msgid "…"
 msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
-msgstr "அஞ்சல்களைத் தேர்ந்தெடு"
+msgstr "அஞ்சல்களைத் தேர்ந்தெடுக்க விடும்"
 
 #: emaillineedit/emaillineedit.cpp:87
 #, kde-format
@@ -79,11 +78,10 @@ msgid "Search…"
 msgstr "தேடு…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Refresh IMAP Folder List"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
-msgstr "IMAP அடைவுப்பட்டியலை புதுப்பி"
+msgstr "IMAP அடைவுப்பட்டியலை புதுப்பிக்கும்"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
@@ -118,8 +116,7 @@ msgid "Load Folders"
 msgstr "அடைவுகளை ஏற்றுவது"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "IMAP அடைவை தேர்வு செய்ய விடும்"
