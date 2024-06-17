@@ -20,7 +20,7 @@ using namespace KABGravatar;
 GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     : QWidget(parent)
     , mEmailLab(new QLabel(this))
-    , mSearchGravatar(new QPushButton(i18n("Search"), this))
+    , mSearchGravatar(new QPushButton(i18nc("@action:button", "Search"), this))
     , mResultGravatar(new QLabel(this))
 {
     auto mainLayout = new QGridLayout(this);

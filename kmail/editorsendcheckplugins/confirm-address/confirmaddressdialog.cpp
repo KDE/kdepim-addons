@@ -23,7 +23,7 @@ static const char myConfigConfirmAddressDialog[] = "ConfirmAddressDialog";
 ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     : QDialog(parent)
     , mConfirmWidget(new ConfirmAddressWidget(this))
-    , mWhiteListEmailsButton(new QPushButton(i18n("Add Selected Emails to WhiteList"), this))
+    , mWhiteListEmailsButton(new QPushButton(i18nc("@action:button", "Add Selected Emails to WhiteList"), this))
 {
     setWindowTitle(i18nc("@title:window", "Confirm Addresses"));
     auto mainLayout = new QVBoxLayout(this);

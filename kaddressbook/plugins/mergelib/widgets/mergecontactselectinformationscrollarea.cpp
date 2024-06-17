@@ -41,7 +41,7 @@ MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea
 
     auto hbox = new QHBoxLayout;
     hbox->addStretch();
-    auto mergeButton = new QPushButton(i18n("Merge"), this);
+    auto mergeButton = new QPushButton(i18nc("@action:button", "Merge"), this);
     mergeButton->setObjectName(QLatin1StringView("merge"));
     hbox->addWidget(mergeButton);
     layout->addLayout(hbox);

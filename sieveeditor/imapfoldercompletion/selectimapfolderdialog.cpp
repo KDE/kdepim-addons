@@ -24,7 +24,7 @@ static const char myConfigSelectImapFolderDialog[] = "SelectImapFolderDialog";
 SelectImapFolderDialog::SelectImapFolderDialog(const KSieveCore::SieveImapAccountSettings &account, QWidget *parent)
     : QDialog(parent)
     , mSelectImapFolderWidget(new SelectImapFolderWidget(account, this))
-    , mNewFolder(new QPushButton(i18n("Create Folder…"), this))
+    , mNewFolder(new QPushButton(i18nc("@action:button", "Create Folder…"), this))
 {
     setWindowTitle(i18nc("@title:window", "Select IMAP folder"));
     auto layout = new QVBoxLayout(this);

@@ -23,8 +23,8 @@ static const char myConfigGroupName[] = "GravatarUpdateDialog";
 GravatarUpdateDialog::GravatarUpdateDialog(QWidget *parent)
     : QDialog(parent)
     , mGravatarUpdateWidget(new GravatarUpdateWidget(this))
-    , mSaveImageButton(new QPushButton(i18n("Save Image"), this))
-    , mSaveUrlButton(new QPushButton(i18n("Save Image URL"), this))
+    , mSaveImageButton(new QPushButton(i18nc("@action:button", "Save Image"), this))
+    , mSaveUrlButton(new QPushButton(i18nc("@action:button", "Save Image URL"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("@title:window", "Check and update Gravatar"));

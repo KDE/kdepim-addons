@@ -21,7 +21,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     , mAutoGenerateRule(new QCheckBox(i18n("Autogenerate rule"), this))
     , mReadAuthResultHeader(new QCheckBox(i18n("Read Authentication-Results header"), this))
     , mAutoGenerateOnlyIfSenderInSDID(new QCheckBox(i18n("Autogenerate when Sender in SDID"), this))
-    , mRulesButton(new QPushButton(i18n("Show Rules"), this))
+    , mRulesButton(new QPushButton(i18nc("@action:button", "Show Rules"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainLayout"));

@@ -49,7 +49,7 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     buttonLayout->setObjectName(QLatin1StringView("buttonLayout"));
     mainLayout->addLayout(buttonLayout);
 
-    mSelectFolder = new QPushButton(i18n("Select"), this);
+    mSelectFolder = new QPushButton(i18nc("@action:button", "Select"), this);
     mSelectFolder->setObjectName(QLatin1StringView("selectFolder"));
     buttonLayout->addWidget(mSelectFolder);
     mSelectFolder->setEnabled(false);
@@ -57,7 +57,7 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
         changeFolderSelection(true);
     });
 
-    mUnSelectFolder = new QPushButton(i18n("Unselect"), this);
+    mUnSelectFolder = new QPushButton(i18nc("@action:button", "Unselect"), this);
     mUnSelectFolder->setObjectName(QLatin1StringView("unSelectFolder"));
     mUnSelectFolder->setEnabled(false);
     buttonLayout->addWidget(mUnSelectFolder);

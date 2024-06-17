@@ -82,7 +82,7 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     connect(mCollectionCombobox, &Akonadi::CollectionComboBox::activated, this, &SearchDuplicateResultWidget::slotUpdateMergeButton);
     mergeLayout->addWidget(mCollectionCombobox);
 
-    mMergeContact = new QPushButton(i18n("Merge"), this);
+    mMergeContact = new QPushButton(i18nc("@action:button", "Merge"), this);
     mMergeContact->setObjectName(QLatin1StringView("merge_contact_button"));
     connect(mMergeContact, &QPushButton::clicked, this, &SearchDuplicateResultWidget::slotMergeContact);
     mergeLayout->addWidget(mMergeContact);

@@ -32,7 +32,7 @@ EmailAddressSelectionLdapDialog::EmailAddressSelectionLdapDialog(QWidget *parent
     mainLayout->addWidget(mView);
     connect(mView->emailAddressSelectionWidget()->view(), &QTreeView::doubleClicked, this, &QDialog::accept);
 
-    auto searchLDAPButton = new QPushButton(i18n("Search &Directory Service"), this);
+    auto searchLDAPButton = new QPushButton(i18nc("@action:button", "Search &Directory Service"), this);
     connect(searchLDAPButton, &QPushButton::clicked, this, &EmailAddressSelectionLdapDialog::slotSearchLDAP);
     mainLayout->addWidget(searchLDAPButton);
 

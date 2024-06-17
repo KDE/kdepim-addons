@@ -29,7 +29,7 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     : QWidget(parent)
     , mConflictTypes(MergeContacts::None)
     , mListWidget(new MergeContactWidgetList(this))
-    , mMergeButton(new QPushButton(i18n("merge"), this))
+    , mMergeButton(new QPushButton(i18nc("@action:button", "merge"), this))
     , mMergeContactWarning(new MergeContactLoseInformationWarning(this))
     , mMergeContactInfoWidget(new MergeContactInfoWidget(this))
 {
