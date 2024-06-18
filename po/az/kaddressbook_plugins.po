@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2022-10-18 12:24+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -45,12 +45,16 @@ msgid "Too many contacts selected."
 msgstr "Həddindən çox əlaqə seçilib."
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Image"
+msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Şəkili saxlayın"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Image URL"
+msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "Şəkili URL kimi saxlayın"
 
@@ -61,7 +65,9 @@ msgid "Check and update Gravatar"
 msgstr "Gravatarı yoxlayın və yeniləyin"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "Axtarış"
 
@@ -95,7 +101,9 @@ msgid "Select Contacts to merge"
 msgstr "Birləşdiriləcək əlaqələri seçin"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "merge"
+msgctxt "@action:button"
 msgid "merge"
 msgstr "birləşdirin"
 
@@ -161,7 +169,9 @@ msgstr "Ünvan kitabçasını seçin:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Merge"
+msgctxt "@action:button"
 msgid "Merge"
 msgstr "Birləşdirin"
 

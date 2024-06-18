@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2023-09-26 22:40+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -48,6 +48,7 @@ msgstr "&Gorde"
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, fuzzy, kde-format
 #| msgid "Open &Editor..."
+msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Ireki &editorea..."
 
@@ -254,17 +255,21 @@ msgstr "Konfiguratu «Kanpoko gidoia» plugina"
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
 #, fuzzy, kde-format
 #| msgid "Add Script..."
+msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Gehitu gidoia..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Script"
+msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Kendu gidoia"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, fuzzy, kde-format
 #| msgid "Modify Script..."
+msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Aldatu gidoia..."
 

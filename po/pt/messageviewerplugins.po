@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2022-03-25 09:57+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -47,6 +47,7 @@ msgstr "&Gravar"
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, fuzzy, kde-format
 #| msgid "Open &Editor..."
+msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Abrir o &Editor..."
 
@@ -254,17 +255,21 @@ msgstr "Configurar o 'Plugin' de \"Programa Externo\""
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
 #, fuzzy, kde-format
 #| msgid "Add Script..."
+msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Adicionar um Programa..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Script"
+msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Remover o Programa"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, fuzzy, kde-format
 #| msgid "Modify Script..."
+msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Modificar o Programa..."
 

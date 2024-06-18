@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-05-29 12:20+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -57,7 +57,9 @@ msgid "Treat small Key as:"
 msgstr "Tracta parve Clave como:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@action:button"
 msgid "Configure"
 msgstr "Configura"
 
@@ -190,7 +192,9 @@ msgid "Autogenerate when Sender in SDID"
 msgstr "Autogenera quando Mittente in SDID"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Rules"
+msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Monstra regulas"
 
@@ -242,12 +246,16 @@ msgid "Save Folder Settings"
 msgstr "Salveguarda preferentias de dossier "
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select"
+msgctxt "@action:button"
 msgid "Select"
 msgstr "Selige"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unselect"
+msgctxt "@action:button"
 msgid "Unselect"
 msgstr "De-selige"
 

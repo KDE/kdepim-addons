@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-05-30 07:11+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -54,7 +54,9 @@ msgid "Treat small Key as:"
 msgstr "عامل المفتاح الصغير كـ:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@action:button"
 msgid "Configure"
 msgstr "اضبط"
 
@@ -185,7 +187,9 @@ msgid "Autogenerate when Sender in SDID"
 msgstr "ولّد آليا عندما يكون المرسل في معرف مجال التوقيع  SDID"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Rules"
+msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "اعرض القواعد"
 
@@ -235,12 +239,16 @@ msgid "Save Folder Settings"
 msgstr "احفظ إعدادات المجلد"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select"
+msgctxt "@action:button"
 msgid "Select"
 msgstr "اختر"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unselect"
+msgctxt "@action:button"
 msgid "Unselect"
 msgstr "ألغِ التحديد"
 

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -46,12 +46,16 @@ msgid "Too many contacts selected."
 msgstr "Previše izabranih kontakata."
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Image"
+msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Sačuvaj sliku"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Image URL"
+msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "Sačuvaj URL slike"
 
@@ -64,7 +68,9 @@ msgid "Check and update Gravatar"
 msgstr "Provera i ažuriranje gravatara"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action:button"
 msgid "Search"
 msgstr "Traži"
 
@@ -100,7 +106,9 @@ msgid "Select Contacts to merge"
 msgstr "Izbor kontakata za stapanje"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "merge"
+msgctxt "@action:button"
 msgid "merge"
 msgstr "Stopi"
 
@@ -170,7 +178,9 @@ msgstr "Izaberite adresar:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Merge"
+msgctxt "@action:button"
 msgid "Merge"
 msgstr "Stopi"
 

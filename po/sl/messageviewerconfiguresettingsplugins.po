@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-05-28 06:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -58,7 +58,9 @@ msgid "Treat small Key as:"
 msgstr "Obravnavaj majhen ključ kot:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@action:button"
 msgid "Configure"
 msgstr "Nastavi"
 
@@ -189,7 +191,9 @@ msgid "Autogenerate when Sender in SDID"
 msgstr "Samodejno generiraj kadar je pošiljatelj v SDID"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Rules"
+msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Prikaži pravila"
 
@@ -241,12 +245,16 @@ msgid "Save Folder Settings"
 msgstr "Shrani nastavitve mape"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select"
+msgctxt "@action:button"
 msgid "Select"
 msgstr "Izberi"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unselect"
+msgctxt "@action:button"
 msgid "Unselect"
 msgstr "Odizberi"
 

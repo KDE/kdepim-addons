@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-03-02 12:55+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -59,7 +59,9 @@ msgid "Treat small Key as:"
 msgstr "Tratatu gako txikiak honela:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@action:button"
 msgid "Configure"
 msgstr "Konfiguratu"
 
@@ -189,7 +191,9 @@ msgid "Autogenerate when Sender in SDID"
 msgstr "Automatikoki sortu igorlea SDIDen dagoenean"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Rules"
+msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Erakutsi arauak"
 
@@ -240,12 +244,16 @@ msgid "Save Folder Settings"
 msgstr "Gorde karpeta-ezarpenak"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select"
+msgctxt "@action:button"
 msgid "Select"
 msgstr "Hautatu"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unselect"
+msgctxt "@action:button"
 msgid "Unselect"
 msgstr "Desautatu"
 

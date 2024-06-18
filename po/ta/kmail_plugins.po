@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-06-16 22:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -345,7 +345,9 @@ msgid ""
 msgstr ""
 
 #: mailmergeplugin/mailmergedialog.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgctxt "@action:button"
 msgid "Preview"
 msgstr "முன்னோட்டம்"
 

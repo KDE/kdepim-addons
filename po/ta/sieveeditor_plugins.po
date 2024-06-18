@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-06-16 16:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -52,7 +52,9 @@ msgid "Error during creating folder: %1"
 msgstr "அடைவை உருவாக்குவதில் சிக்கல்: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Folder…"
+msgctxt "@action:button"
 msgid "Create Folder…"
 msgstr "அடைவை உருவாக்கு…"
 

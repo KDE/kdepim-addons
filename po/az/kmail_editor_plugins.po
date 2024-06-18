@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2022-06-21 17:59+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -117,12 +117,14 @@ msgstr "Sürətli mətni tənzimləyin"
 #: quicktext/quicktextconfiguredialog.cpp:38
 #, fuzzy, kde-format
 #| msgid "Import..."
+msgctxt "@action:button"
 msgid "Import…"
 msgstr "İdxal edin..."
 
 #: quicktext/quicktextconfiguredialog.cpp:41
 #, fuzzy, kde-format
 #| msgid "Export..."
+msgctxt "@action:button"
 msgid "Export…"
 msgstr "İxrac edin..."
 
@@ -144,7 +146,9 @@ msgid "Variables"
 msgstr "Dəyişənlər"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action:button"
 msgid "Variables"
 msgstr "Dəyişənlər"
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2023-09-26 22:33+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -225,7 +225,9 @@ msgid "Do you want to remove this email address?"
 msgstr "E-posta helbide hau kendu nahi duzu?"
 
 #: confirm-address/confirmaddressdialog.cpp:26
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Selected Emails to WhiteList"
+msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Gehitu hautatutako e-postak zerrenda-zurira"
 

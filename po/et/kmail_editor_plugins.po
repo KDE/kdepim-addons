@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2019-12-18 19:26+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -117,12 +117,14 @@ msgstr "Kiirteksti seadistamine"
 #: quicktext/quicktextconfiguredialog.cpp:38
 #, fuzzy, kde-format
 #| msgid "Import..."
+msgctxt "@action:button"
 msgid "Import…"
 msgstr "Impordi ..."
 
 #: quicktext/quicktextconfiguredialog.cpp:41
 #, fuzzy, kde-format
 #| msgid "Export..."
+msgctxt "@action:button"
 msgid "Export…"
 msgstr "Ekspordi ..."
 
@@ -144,7 +146,9 @@ msgid "Variables"
 msgstr "Muutujad"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action:button"
 msgid "Variables"
 msgstr "Muutujad"
 

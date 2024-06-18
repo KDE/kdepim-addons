@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-05-24 17:16+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -52,7 +52,9 @@ msgid "Error during creating folder: %1"
 msgstr "Error during creating folder: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Folder…"
+msgctxt "@action:button"
 msgid "Create Folder…"
 msgstr "Create Folder…"
 

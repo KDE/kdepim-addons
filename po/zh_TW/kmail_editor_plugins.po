@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-05-30 02:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -108,12 +108,16 @@ msgid "Configure quick text"
 msgstr "設定快速文字"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import…"
+msgctxt "@action:button"
 msgid "Import…"
 msgstr "匯入…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export…"
+msgctxt "@action:button"
 msgid "Export…"
 msgstr "匯出…"
 
@@ -134,7 +138,9 @@ msgid "Variables"
 msgstr "變數"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action:button"
 msgid "Variables"
 msgstr "變數"
 

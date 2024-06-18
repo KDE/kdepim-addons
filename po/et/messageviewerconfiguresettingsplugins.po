@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2020-02-06 14:58+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -54,7 +54,9 @@ msgid "Treat small Key as:"
 msgstr "Väikese võtme kohtlemine:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@action:button"
 msgid "Configure"
 msgstr "Seadista "
 
@@ -191,7 +193,9 @@ msgid "Autogenerate when Sender in SDID"
 msgstr "Automaatne loomine, kui saatja on SDID-s"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Rules"
+msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Näita reegleid"
 
@@ -247,11 +251,13 @@ msgstr "Reegli seadistamine"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
 #, kde-format
+msgctxt "@action:button"
 msgid "Select"
 msgstr ""
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
 #, kde-format
+msgctxt "@action:button"
 msgid "Unselect"
 msgstr ""
 

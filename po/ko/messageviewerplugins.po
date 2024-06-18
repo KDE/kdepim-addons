@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2023-10-08 23:00+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -45,6 +45,7 @@ msgstr "저장(&S)"
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, fuzzy, kde-format
 #| msgid "Open &Editor..."
+msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "편집기 열기(&E)..."
 
@@ -248,17 +249,21 @@ msgstr "\"외부 스크립트\" 플러그인 설정"
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
 #, fuzzy, kde-format
 #| msgid "Add Script..."
+msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "스크립트 추가..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Script"
+msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "스크립트 삭제"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, fuzzy, kde-format
 #| msgid "Modify Script..."
+msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "스크립트 수정..."
 

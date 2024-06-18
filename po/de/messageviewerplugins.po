@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-04-28 20:02+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -47,6 +47,7 @@ msgstr "&Speichern"
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, fuzzy, kde-format
 #| msgid "Open &Editor..."
+msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Editor öff&nen ..."
 
@@ -255,17 +256,21 @@ msgstr "Modul für externe Skripte einrichten"
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
 #, fuzzy, kde-format
 #| msgid "Add Script..."
+msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Skript hinzufügen ..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Script"
+msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Skript entfernen"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, fuzzy, kde-format
 #| msgid "Modify Script..."
+msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Skript bearbeiten ..."
 

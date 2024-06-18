@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-05-28 22:50+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -107,12 +107,16 @@ msgid "Configure quick text"
 msgstr "Configura testo rapido"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import…"
+msgctxt "@action:button"
 msgid "Import…"
 msgstr "Importa…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export…"
+msgctxt "@action:button"
 msgid "Export…"
 msgstr "Esporta…"
 
@@ -133,7 +137,9 @@ msgid "Variables"
 msgstr "Variabili"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Variables"
+msgctxt "@action:button"
 msgid "Variables"
 msgstr "Variabili"
 
