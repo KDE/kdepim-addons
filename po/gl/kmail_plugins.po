@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 08:55+0200\n"
+"PO-Revision-Date: 2024-06-18 19:51+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -392,8 +392,7 @@ msgstr ""
 "lidas, así como movelas ao cartafol seleccionado."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Vista previa"

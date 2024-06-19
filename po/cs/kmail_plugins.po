@@ -383,8 +383,7 @@ msgstr ""
 "složky."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Náhled"

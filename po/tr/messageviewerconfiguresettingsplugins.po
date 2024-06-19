@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 12:37+0300\n"
+"PO-Revision-Date: 2024-06-18 12:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -55,8 +55,7 @@ msgid "Treat small Key as:"
 msgstr "Küçük anahtar davranma biçimi:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "Yapılandır"
@@ -188,8 +187,7 @@ msgid "Autogenerate when Sender in SDID"
 msgstr "Gönderici SDID içindeyse kendiliğinden oluştur"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Show Rules"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Kuralları Göster"
@@ -241,15 +239,13 @@ msgid "Save Folder Settings"
 msgstr "Klasör Ayarlarını Kaydet"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr "Seç"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect"
 msgstr "Seçimi Kaldır"

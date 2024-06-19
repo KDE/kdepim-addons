@@ -18,8 +18,7 @@ msgstr ""
 "X-Crowdin-File-ID: 45765\n"
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Search &Directory Service"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search &Directory Service"
 msgstr "目录搜索服务(&D)"

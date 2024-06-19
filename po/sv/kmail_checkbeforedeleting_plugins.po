@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2022-05-15 12:18+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-18 06:57+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -24,14 +24,14 @@ msgid "Configure Rule"
 msgstr "Anpassa regel"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Type:"
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Typ:"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Contains:"
 msgctxt "@label:textbox"
 msgid "Contains:"
@@ -81,7 +81,7 @@ msgid "Configure Before Deleting Mail"
 msgstr "Anpassa Innan brev tas bort"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Confirm Before Deleting"
 msgctxt "@action"
 msgid "Confirm Before Deleting"
@@ -123,12 +123,12 @@ msgid "The message with subject '%1' is %2"
 msgstr "Brevet med rubrik '%1' är %2"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, fuzzy, kde-format
+#, kde-format
 #| msgctxt "@action:button"
 #| msgid "Add Rule..."
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "Lägg till regel..."
+msgstr "Lägg till regel…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
@@ -137,12 +137,12 @@ msgid "Remove Rule"
 msgstr "Ta bort regel"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, fuzzy, kde-format
+#, kde-format
 #| msgctxt "@action:button"
 #| msgid "Modify Rule..."
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "Ändra regel..."
+msgstr "Ändra regel…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
@@ -155,16 +155,16 @@ msgid "Pattern"
 msgstr "Mönster"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Add Rule..."
 msgid "Add Rule…"
-msgstr "Lägg till regel..."
+msgstr "Lägg till regel…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Edit Rule..."
 msgid "Edit Rule…"
-msgstr "Redigera regel..."
+msgstr "Redigera regel…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format
@@ -213,3 +213,4 @@ msgstr "Skapa regel"
 
 #~ msgid "Remove filter"
 #~ msgstr "Ta bort filter"
+

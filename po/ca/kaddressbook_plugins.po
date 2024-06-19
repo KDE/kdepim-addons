@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-15 10:24+0200\n"
+"PO-Revision-Date: 2024-06-18 16:53+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -49,15 +49,13 @@ msgid "Too many contacts selected."
 msgstr "Hi ha massa contactes seleccionats."
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Save Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Desa la imatge"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Save Image URL"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "Desa l'URL de la imatge"
@@ -69,8 +67,7 @@ msgid "Check and update Gravatar"
 msgstr "Comprovació i actualització del «Gravatar»"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Cerca"
@@ -103,8 +100,7 @@ msgid "Select Contacts to merge"
 msgstr "Selecció dels contactes a fusionar"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "merge"
+#, kde-format
 msgctxt "@action:button"
 msgid "merge"
 msgstr "fusiona"
@@ -168,8 +164,7 @@ msgstr "Selecciona la llibreta d'adreces:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
-#, fuzzy, kde-format
-#| msgid "Merge"
+#, kde-format
 msgctxt "@action:button"
 msgid "Merge"
 msgstr "Fusiona"

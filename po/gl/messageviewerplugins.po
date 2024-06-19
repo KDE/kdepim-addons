@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 08:57+0200\n"
+"PO-Revision-Date: 2024-06-18 19:58+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -42,8 +42,7 @@ msgid "&Save"
 msgstr "&Gardar"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Abrir o &editor…"
@@ -240,22 +239,19 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Configurar o complemento «Guión externo»"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Engadir un guión…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Retirar o guión"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Modificar o guión…"

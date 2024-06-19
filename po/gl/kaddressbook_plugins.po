@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 08:59+0200\n"
+"PO-Revision-Date: 2024-06-18 19:55+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -45,15 +45,13 @@ msgid "Too many contacts selected."
 msgstr "Hai demasiados contactos seleccionados."
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Save Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Gardar a imaxe"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Save Image URL"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "Gardar o URL da imaxe"
@@ -65,8 +63,7 @@ msgid "Check and update Gravatar"
 msgstr "Comprobar e actualizar Gravatar"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Buscar"
@@ -99,8 +96,7 @@ msgid "Select Contacts to merge"
 msgstr "Seleccione os contactos para xuntalos"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "merge"
+#, kde-format
 msgctxt "@action:button"
 msgid "merge"
 msgstr "fusionar"
@@ -165,8 +161,7 @@ msgstr "Seleccione unha axenda de enderezos:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
-#, fuzzy, kde-format
-#| msgid "Merge"
+#, kde-format
 msgctxt "@action:button"
 msgid "Merge"
 msgstr "Fusionar"

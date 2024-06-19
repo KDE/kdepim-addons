@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2017, 2020, 2022, 2023 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2017, 2020, 2022, 2023, 2024 giovanni <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 12:17+0200\n"
+"PO-Revision-Date: 2024-06-18 14:50+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -45,15 +45,13 @@ msgid "Too many contacts selected."
 msgstr "Troppo contactos seligite."
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Save Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Salveguarda imagine"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Save Image URL"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "SalveguardaURL de  imagine"
@@ -65,8 +63,7 @@ msgid "Check and update Gravatar"
 msgstr "Verifica e actualisa Gravatar "
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Cerca"
@@ -99,8 +96,7 @@ msgid "Select Contacts to merge"
 msgstr "Selige contactos de fusionar"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "merge"
+#, kde-format
 msgctxt "@action:button"
 msgid "merge"
 msgstr "fusiona"
@@ -163,8 +159,7 @@ msgstr "Selige adressario:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
-#, fuzzy, kde-format
-#| msgid "Merge"
+#, kde-format
 msgctxt "@action:button"
 msgid "Merge"
 msgstr "Fusiona"

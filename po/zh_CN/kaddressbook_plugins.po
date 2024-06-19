@@ -44,15 +44,13 @@ msgid "Too many contacts selected."
 msgstr "所选的联系人太多。"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Save Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "保存图像"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Save Image URL"
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "保存图像链接"
@@ -64,8 +62,7 @@ msgid "Check and update Gravatar"
 msgstr "检查并更新 Gravatar 头像"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "搜索"
@@ -98,8 +95,7 @@ msgid "Select Contacts to merge"
 msgstr "选择要合并的联系人"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "merge"
+#, kde-format
 msgctxt "@action:button"
 msgid "merge"
 msgstr "合并"
@@ -162,8 +158,7 @@ msgstr "选择地址簿："
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
-#, fuzzy, kde-format
-#| msgid "Merge"
+#, kde-format
 msgctxt "@action:button"
 msgid "Merge"
 msgstr "合并"

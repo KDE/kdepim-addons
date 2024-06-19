@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2016, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2019-12-17 18:37+0100\n"
+"PO-Revision-Date: 2024-06-18 17:12+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -23,39 +23,39 @@ msgid "Autocorrect Text"
 msgstr "Korrigera text automatiskt"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Autocorrect Full Text"
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Korrigera hela texten automatiskt"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Autocorrect Selected Text"
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Korrigera markerad text automatiskt"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Insert Email..."
 msgctxt "@action"
 msgid "Insert Email…"
-msgstr "Infoga brev..."
+msgstr "Infoga brev…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Select Short URL server:"
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "Välj server för kort webbadress:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Insert Short URL..."
 msgctxt "@action"
 msgid "Insert Short URL…"
-msgstr "Infoga kort webbadress..."
+msgstr "Infoga kort webbadress…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -83,12 +83,12 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
+#, kde-format
 #| msgctxt "@title:window"
 #| msgid "Insert Special Character"
 msgctxt "@action"
 msgid "Insert Special Character…"
-msgstr "Infoga specialtecken"
+msgstr "Infoga specialtecken…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -102,7 +102,7 @@ msgid "Insert"
 msgstr "Infoga"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Insert Non Breaking Space"
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
@@ -115,18 +115,18 @@ msgid "Configure quick text"
 msgstr "Anpassa snabbtext"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Import..."
 msgctxt "@action:button"
 msgid "Import…"
-msgstr "Importera..."
+msgstr "Importera…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Export..."
 msgctxt "@action:button"
 msgid "Export…"
-msgstr "Exportera..."
+msgstr "Exportera…"
 
 #: quicktext/quicktextmanager.cpp:78
 #, kde-format
@@ -139,56 +139,56 @@ msgid "Export QuickText"
 msgstr "Exportera snabbtext"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Variables"
 msgctxt "@action"
 msgid "Variables"
 msgstr "Variabler"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Variables"
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "Variabler"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Add Snippet..."
 msgctxt "@action"
 msgid "Add Snippet…"
-msgstr "Lägg till textsnutt..."
+msgstr "Lägg till textsnutt…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Edit Snippet..."
 msgctxt "@action"
 msgid "Edit Snippet…"
-msgstr "Redigera textsnutt..."
+msgstr "Redigera textsnutt…"
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Remove Snippet"
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Ta bort textsnutt"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Add Group..."
 msgctxt "@action"
 msgid "Add Group…"
-msgstr "Lägg till grupp..."
+msgstr "Lägg till grupp…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Rename Group..."
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "Byt namn på grupp..."
+msgstr "Byt namn på grupp…"
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Remove Group"
 msgctxt "@action"
 msgid "Remove Group"
@@ -231,7 +231,7 @@ msgid "QuickText was changed. Do you want to save it?"
 msgstr "Snabbtext har ändrats. Vill du spara den?"
 
 #: quicktext/quicktextwidget.cpp:69
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Save"
 msgctxt "@title:window"
 msgid "Save"
@@ -243,10 +243,10 @@ msgid "General"
 msgstr "Allmänt"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Share Mail Text..."
 msgid "Share Mail Text…"
-msgstr "Dela brevtext..."
+msgstr "Dela brevtext…"
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -256,7 +256,7 @@ msgstr "Zoom: %1 %"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom…"
-msgstr ""
+msgstr "Zooma…"
 
 #~ msgid "Insert Special Character..."
 #~ msgstr "Infoga specialtecken..."
@@ -317,3 +317,5 @@ msgstr ""
 
 #~ msgid "Insert Template Command..."
 #~ msgstr "Infoga mallkommando..."
+
+

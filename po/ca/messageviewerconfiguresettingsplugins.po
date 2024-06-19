@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-12 21:46+0200\n"
+"PO-Revision-Date: 2024-06-18 16:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -59,8 +59,7 @@ msgid "Treat small Key as:"
 msgstr "Tracta una clau petita com a:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "Configura"
@@ -194,8 +193,7 @@ msgid "Autogenerate when Sender in SDID"
 msgstr "Genera automàticament quan el remitent estigui al SDID"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Show Rules"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Mostra les regles"
@@ -248,15 +246,13 @@ msgid "Save Folder Settings"
 msgstr "Desa la configuració de les carpetes"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr "Selecciona"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect"
 msgstr "Desselecciona"

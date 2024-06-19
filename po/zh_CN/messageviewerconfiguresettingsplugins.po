@@ -55,8 +55,7 @@ msgid "Treat small Key as:"
 msgstr "过短的密钥长度："
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "配置"
@@ -186,8 +185,7 @@ msgid "Autogenerate when Sender in SDID"
 msgstr "当发件人配置了 SDID 时自动生成"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Show Rules"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "显示规则"
@@ -238,15 +236,13 @@ msgid "Save Folder Settings"
 msgstr "保存文件夹设置"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr "选择"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect"
 msgstr "取消选择"

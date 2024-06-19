@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2018, 2019.
+# SPDX-FileCopyrightText: 2018, 2019, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2019-12-17 18:38+0100\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-18 06:59+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: markdown/markdownlib/markdownconfiguredialog.cpp:16
 #, kde-format
@@ -51,14 +51,14 @@ msgid "Keep original size"
 msgstr "Behåll originalstorlek"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:20
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Width:"
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "Bredd:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:22
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Height:"
 msgctxt "@label:textbox"
 msgid "Height:"
@@ -109,7 +109,7 @@ msgid "Converter Error"
 msgstr "Konverteringsfel"
 
 #: markdown/plugin/markdowninterface.cpp:36
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Generate HTML from markdown language."
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
@@ -121,7 +121,7 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Markdown Action"
 msgctxt "@action"
 msgid "Markdown Action"
@@ -194,3 +194,4 @@ msgstr "Skapa HTML från språket Markdown."
 
 #~ msgid "Generate HTML from markdown."
 #~ msgstr "Skapa HTML från Markdown."
+

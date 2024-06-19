@@ -135,8 +135,7 @@ msgid "Variables"
 msgstr "变量"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "变量"

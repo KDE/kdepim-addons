@@ -1,21 +1,21 @@
 # translation of kmail_text_calendar_plugin.po to Swedish
 # Copyright (C) 2004, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2004, 2007, 2008, 2009, 2010.
+# SPDX-FileCopyrightText: 2004, 2007, 2008, 2009, 2010, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2011, 2012, 2015, 2017, 2019, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2021-11-06 14:39+0100\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-18 07:03+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: attendeeselector.cpp:21
@@ -53,14 +53,14 @@ msgid "Select delegate"
 msgstr "Välj representant"
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Delegate:"
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Representant:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Comment:"
 msgctxt "@label:textbox"
 msgid "Comment:"
@@ -439,14 +439,14 @@ msgid "Send Email to Organizer"
 msgstr "Skicka e-post till organisatör"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Do Not Send"
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Skicka inte"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Send EMail"
 msgctxt "@action:button"
 msgid "Send EMail"
@@ -463,10 +463,10 @@ msgid "Open Attachment"
 msgstr "Öppna bilaga"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Save Attachment As..."
 msgid "Save Attachment As…"
-msgstr "Spara bilaga som..."
+msgstr "Spara bilaga som…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -484,10 +484,10 @@ msgid "Accept counter proposal"
 msgstr "Acceptera motförslag"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Create a counter proposal..."
 msgid "Create a counter proposal…"
-msgstr "Skapa ett motförslag..."
+msgstr "Skapa ett motförslag…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -510,10 +510,10 @@ msgid "Decline counter proposal"
 msgstr "Neka till motförslag"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
+#, kde-format
 #| msgid "Check my calendar..."
 msgid "Check my calendar…"
-msgstr "Kontrollera min kalender..."
+msgstr "Kontrollera min kalender…"
 
 #: text_calendar.cpp:1376
 #, kde-format
@@ -556,3 +556,4 @@ msgstr "Öppna bilaga \"%1\""
 
 #~ msgid "No writable calendar found."
 #~ msgstr "Någon skrivbar kalender hittades inte."
+

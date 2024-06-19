@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-15 10:26+0200\n"
+"PO-Revision-Date: 2024-06-18 16:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -48,8 +48,7 @@ msgid "&Save"
 msgstr "De&sa"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Obre l'&editor…"
@@ -247,22 +246,19 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Configuració del connector «Script extern»"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Afegeix un script…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Elimina l'script"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Modifica l'script…"

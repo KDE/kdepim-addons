@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-30 13:53+0200\n"
+"PO-Revision-Date: 2024-06-18 15:53+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -42,8 +42,7 @@ msgid "&Save"
 msgstr "&Uložit"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Otevřít &editor…"
@@ -239,22 +238,19 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Nastavit modul \"Externí skript\""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Přidat skript…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Odstranit skript"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Upravit skript…"

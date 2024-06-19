@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2017, 2019.
+# SPDX-FileCopyrightText: 2017, 2019, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2019-12-17 18:38+0100\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-18 06:59+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:14
 #, kde-format
@@ -29,7 +29,7 @@ msgid "Use external editor instead of composer"
 msgstr "Använd extern editor istället för brevfönstret"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:52
-#, fuzzy, kde-format
+#, kde-format
 #| msgid ""
 #| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
 #| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
@@ -42,3 +42,4 @@ msgid ""
 msgstr ""
 "<b>%f</b> ersätts med filnamnet att redigera.<br /><b>%w</b> ersätts med "
 "fönster-id.<br /><b>%l</b> ersätts med radnumret."
+

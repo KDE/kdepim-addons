@@ -240,8 +240,7 @@ msgid "Add Script…"
 msgstr ""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "移除脚本"

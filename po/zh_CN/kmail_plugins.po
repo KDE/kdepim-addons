@@ -367,8 +367,7 @@ msgid ""
 msgstr "将分类为已感染病毒的信件标为已读，并将其移至选中的文件夹。"
 
 #: mailmergeplugin/mailmergedialog.cpp:19
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "预览"

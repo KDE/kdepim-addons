@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-28 09:24+0300\n"
+"PO-Revision-Date: 2024-06-18 08:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -218,8 +218,7 @@ msgid "Do you want to remove this email address?"
 msgstr "Хочете вилучити цю адресу електронної пошти?"
 
 #: confirm-address/confirmaddressdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add Selected Emails to WhiteList"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Додати позначені адреси до «білого» списку"

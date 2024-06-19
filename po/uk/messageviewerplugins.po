@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-28 09:25+0300\n"
+"PO-Revision-Date: 2024-06-18 08:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -44,8 +44,7 @@ msgid "&Save"
 msgstr "&Зберегти"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Відкрити &редактор…"
@@ -244,22 +243,19 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Налаштовування додатка «Зовнішній скрипт»"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Додати скрипт…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Вилучити скрипт"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Змінити скрипт…"
