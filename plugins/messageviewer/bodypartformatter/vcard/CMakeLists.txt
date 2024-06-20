@@ -8,7 +8,7 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_vcard HEADE
     DESCRIPTION "kdepim-addons (vcard)"
     OLD_CATEGORY_NAMES log_vcard
     EXPORT KDEPIMADDONS
-    )
+)
 
 
 target_link_libraries(messageviewer_bodypartformatter_text_vcard  KF6::Contacts

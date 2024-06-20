@@ -21,14 +21,14 @@ target_sources(kmailconfirmbeforedeleting PRIVATE
     confirmbeforedeletingcreaterulewidget.h
     confirmbeforedeletingmessageboxdialog.h
     confirmbeforedeletingmessageboxwidget.h
-    )
+)
 ecm_qt_declare_logging_category(kmailconfirmbeforedeleting HEADER confirmbeforedeletingplugin_debug.h IDENTIFIER KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_confirmbeforedeletingplugin
     DESCRIPTION "kdepim-addons (Confirm Before Deleting email)"
     OLD_CATEGORY_NAMES log_kmail_confirmbeforedeletingplugin
     EXPORT KDEPIMADDONS
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmailconfirmbeforedeleting PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(kmailconfirmbeforedeleting BASE_NAME kmailconfirmbeforedeleting)
@@ -39,7 +39,7 @@ target_link_libraries(kmailconfirmbeforedeleting
 
 set_target_properties(kmailconfirmbeforedeleting
     PROPERTIES OUTPUT_NAME kmailconfirmbeforedeleting VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
-    )
+)
 
 
 install(TARGETS kmailconfirmbeforedeleting ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
@@ -55,18 +55,18 @@ target_sources(kmail_confirmbeforedeletingplugin PRIVATE
     confirmbeforedeletingplugin.cpp
     confirmbeforedeletinginterface.h
     confirmbeforedeletingplugin.h
-    )
+)
 
 ecm_qt_declare_logging_category(kmail_confirmbeforedeletingplugin HEADER confirmbeforedeletingplugin_debug.h IDENTIFIER KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_confirmbeforedeletingplugin
     DESCRIPTION "kdepim-addons (Confirm Before Deleting email)"
     OLD_CATEGORY_NAMES log_kmail_confirmbeforedeletingplugin
     EXPORT KDEPIMADDONS
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_confirmbeforedeletingplugin PROPERTIES UNITY_BUILD ON)
 endif()
 
 target_link_libraries(kmail_confirmbeforedeletingplugin
     KPim6::MessageViewer KF6::I18n KPim6::PimCommon KPim6::Libkdepim kmailconfirmbeforedeleting
-    )
+)

@@ -14,7 +14,7 @@ target_sources(kmail_antispamplugin PRIVATE
 target_link_libraries(kmail_antispamplugin
   KPim6::PimCommonAkonadi KF6::Completion KPim6::MailCommon KF6::XmlGui KF6::I18n KF6::GuiAddons
 )
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_antispamplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

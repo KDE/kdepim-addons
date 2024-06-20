@@ -7,7 +7,7 @@ ecm_qt_declare_logging_category(emaillineeditplugin HEADER sieveeditoremaillined
     EMAILLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.sieveeditoremaillinedit
     DESCRIPTION "kdepim-addons (SieveEditor email line plugin)"
     EXPORT KDEPIMADDONS
-    )
+)
 
 
 if(BUILD_TESTING)
@@ -18,12 +18,12 @@ endif()
 target_sources(emaillineeditplugin PRIVATE
     emaillineedit.cpp
     emaillineedit.h
-    )
+)
 
 
 target_link_libraries(emaillineeditplugin
         KF6::I18n KPim6::KSieveUi KPim6::AkonadiContactWidgets
-    )
+)
 
 
 

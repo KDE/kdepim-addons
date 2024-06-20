@@ -15,14 +15,14 @@ target_sources(messageviewer_bodypartformatter_semantic PRIVATE
     itineraryurlhandler.h
     itinerarykdeconnecthandler.h
     templates/templates.qrc
-    )
+)
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_semantic HEADER itinerary_debug.h IDENTIFIER ITINERARY_LOG CATEGORY_NAME org.kde.pim.messageviewer.itinerary
     DESCRIPTION "kdepim-addons (Itinerary plugin)"
     EXPORT KDEPIMADDONS
-    )
+)
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_bodypartformatter_semantic PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -38,5 +38,5 @@ target_link_libraries(messageviewer_bodypartformatter_semantic
     KF6::Prison
     KPim6::Itinerary
     KPim6::PkPass
-    )
+)
 install(TARGETS messageviewer_bodypartformatter_semantic DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)

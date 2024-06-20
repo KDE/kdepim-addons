@@ -12,21 +12,21 @@ target_sources(messageviewer_createeventplugin PRIVATE
     eventedit.h
     eventdatetimewidget.h
     createeventjob.h
-    )
+)
 
 ecm_qt_declare_logging_category(messageviewer_createeventplugin HEADER createeventplugin_debug.h IDENTIFIER CREATEEVENTPLUGIN_LOG CATEGORY_NAME org.kde.pim.createeventplugin
     DESCRIPTION "kdepim-addons (create event plugin)"
     OLD_CATEGORY_NAMES log_createeventplugin
     EXPORT KDEPIMADDONS
-    )
+)
 
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_createeventplugin PROPERTIES UNITY_BUILD ON)
 endif()
 
 target_link_libraries(messageviewer_createeventplugin
     KPim6::MessageViewer KF6::XmlGui KF6::CalendarCore KPim6::IncidenceEditor KPim6::AkonadiWidgets KPim6::CalendarSupport
-    )
+)
 

@@ -12,9 +12,9 @@ kcoreaddons_add_plugin(templateparseraddressrequesterplugin INSTALL_NAMESPACE pi
 target_sources(templateparseraddressrequesterplugin PRIVATE
     templateparseremailaddressrequesterakonadi.cpp
     templateparseremailaddressrequesterakonadi.h
-    )
+)
 
 
 target_link_libraries(templateparseraddressrequesterplugin
     KPim6::TemplateParser KPim6::AkonadiContactWidgets
-    )
+)

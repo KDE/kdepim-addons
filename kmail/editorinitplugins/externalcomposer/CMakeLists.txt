@@ -11,15 +11,15 @@ target_sources(kmail_externalcomposereditorplugin PRIVATE
     externalcomposerplugineditorinterface.h
     externalcomposerconfiguredialog.h
     externalcomposerconfigurewidget.h
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_externalcomposereditorplugin PROPERTIES UNITY_BUILD ON)
 endif()
 
 target_link_libraries(kmail_externalcomposereditorplugin
     KPim6::MessageComposer KF6::XmlGui KF6::I18n KF6::KIOWidgets
-    )
+)
 
 if(BUILD_TESTING)
     add_subdirectory(autotests)

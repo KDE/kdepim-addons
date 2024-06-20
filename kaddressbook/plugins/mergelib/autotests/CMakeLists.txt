@@ -1,27 +1,27 @@
 # SPDX-FileCopyrightText: 2015-2024 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
 
 set(kaddressbookmergelibprivate_common_SRCS)
 ecm_qt_declare_logging_category(kaddressbookmergelibprivate_common_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate)
 
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/../.. )
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 include_directories(${CMAKE_BINARY_DIR}/kaddressbook/)
 
 # Convenience macro to add unit tests.
-macro( kaddressbook_merge _source _additional _additionallib)
-    set( _test ${_source}  ${_additional})
-    get_filename_component( _name ${_source} NAME_WE )
-    add_executable( ${_name} ${_test}  ${_name}.h)
-    add_test(NAME ${_name} COMMAND ${_name} )
+macro(kaddressbook_merge _source _additional _additionallib)
+    set(_test ${_source}  ${_additional})
+    get_filename_component(_name ${_source} NAME_WE)
+    add_executable(${_name} ${_test}  ${_name}.h)
+    add_test(NAME ${_name} COMMAND ${_name})
     ecm_mark_as_test(kaddressbookmerge-${_name})
-    target_link_libraries( ${_name} kaddressbookmergelibprivate Qt::Test  KPim6::AkonadiCore KF6::Contacts KF6::I18n ${_additionallib})
+    target_link_libraries(${_name} kaddressbookmergelibprivate Qt::Test  KPim6::AkonadiCore KF6::Contacts KF6::I18n ${_additionallib})
 endmacro()
 
 kaddressbook_merge(mergecontactstest.cpp "../job/mergecontacts.cpp;../kaddressbookmergelibprivate_debug.cpp" "")
 
-if (KDEPIM_RUN_AKONADI_TEST)
+if(KDEPIM_RUN_AKONADI_TEST)
     set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
     set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 
@@ -43,9 +43,9 @@ if (KDEPIM_RUN_AKONADI_TEST)
 
 endif()
 
-set( kaddressbook_merge_mergecontactloseinformationwarning_source mergecontactloseinformationwarningtest.cpp ${kaddressbookmergelibprivate_common_SRCS})
-add_executable( mergecontactloseinformationwarningtest ${kaddressbook_merge_mergecontactloseinformationwarning_source})
+set(kaddressbook_merge_mergecontactloseinformationwarning_source mergecontactloseinformationwarningtest.cpp ${kaddressbookmergelibprivate_common_SRCS})
+add_executable(mergecontactloseinformationwarningtest ${kaddressbook_merge_mergecontactloseinformationwarning_source})
 add_test(NAME mergecontactloseinformationwarningtest COMMAND mergecontactloseinformationwarningtest)
 ecm_mark_as_test(mergecontactloseinformationwarningtest)
-target_link_libraries( mergecontactloseinformationwarningtest Qt::Test  Qt::Gui kaddressbookmergelibprivate KF6::WidgetsAddons KF6::I18n)
+target_link_libraries(mergecontactloseinformationwarningtest Qt::Test  Qt::Gui kaddressbookmergelibprivate KF6::WidgetsAddons KF6::I18n)
 

@@ -9,7 +9,7 @@ target_sources(kmail_insertspecialcharactereditorplugin PRIVATE
     insertspecialcharacterplugineditorinterface.h
 )
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_insertspecialcharactereditorplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

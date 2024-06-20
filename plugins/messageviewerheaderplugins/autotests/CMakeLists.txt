@@ -1,31 +1,31 @@
 # SPDX-FileCopyrightText: 2015-2024 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 # convenience macro to add qtest unit tests
-add_definitions( -DHEADER_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
-add_definitions( -DGRANTLEETHEME_DATA_DIR="${CMAKE_SOURCE_DIR}/examples/messageviewergrantleetheme/themes" )
+add_definitions(-DHEADER_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
+add_definitions(-DGRANTLEETHEME_DATA_DIR="${CMAKE_SOURCE_DIR}/examples/messageviewergrantleetheme/themes")
 
 macro(add_messageviewer_header_unittest _source _additional)
-    set( _test ${_source} utils.cpp  ${_additional})
+    set(_test ${_source} utils.cpp  ${_additional})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} ${_name}.h)
-    add_test(NAME ${_name} COMMAND ${_name} )
+    add_executable(${_name} ${_test} ${_name}.h)
+    add_test(NAME ${_name} COMMAND ${_name})
     
     ecm_mark_as_test(messageviewer-header-${_name})
     set_tests_properties(${_name} PROPERTIES ENVIRONMENT "LC_ALL=C;TZ=UTC")
-    target_link_libraries( ${_name} KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime KPim6::AkonadiCore KPim6::AkonadiNotes KF6::CalendarCore KPim6::GrantleeTheme KF6::XmlGui KF6::I18n)
-endmacro ()
+    target_link_libraries(${_name} KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime KPim6::AkonadiCore KPim6::AkonadiNotes KF6::CalendarCore KPim6::GrantleeTheme KF6::XmlGui KF6::I18n)
+endmacro()
 
 
-macro(add_messageviewer_header_class_unittest _source )
-    set( _test ${_source})
+macro(add_messageviewer_header_class_unittest _source)
+    set(_test ${_source})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} ${_name}.h)
-    add_test(NAME ${_name} COMMAND ${_name} )
+    add_executable(${_name} ${_test} ${_name}.h)
+    add_test(NAME ${_name} COMMAND ${_name})
 
     ecm_mark_as_test(messageviewer-header-${_name})
     set_tests_properties(${_name} PROPERTIES ENVIRONMENT "LC_ALL=C;TZ=UTC")
-    target_link_libraries( ${_name} KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime KPim6::AkonadiCore KPim6::AkonadiNotes KF6::CalendarCore KPim6::GrantleeTheme KF6::XmlGui)
-endmacro ()
+    target_link_libraries(${_name} KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime KPim6::AkonadiCore KPim6::AkonadiNotes KF6::CalendarCore KPim6::GrantleeTheme KF6::XmlGui)
+endmacro()
 
 configure_file(
         ${CMAKE_CURRENT_SOURCE_DIR}/../enterpriseheaderstyleplugin/messageviewer_enterpriseheaderstyleplugin.json.in

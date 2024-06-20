@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewerheaderplugins\")
 add_subdirectory(briefheaderstyleplugin)
-if (KDEPIM_ENTERPRISE_BUILD)
+if(KDEPIM_ENTERPRISE_BUILD)
 	add_subdirectory(enterpriseheaderstyleplugin)  
 endif()
 add_subdirectory(fancyheaderstyleplugin)  

@@ -11,14 +11,14 @@ target_sources(kmail_grammalecteplugin PRIVATE
     grammalecteinterface.cpp
     grammalecteplugin.h
     grammalecteinterface.h
-    )
+)
 
 ecm_qt_declare_logging_category(kmail_grammalecteplugin HEADER grammalecteplugin_debug.h IDENTIFIER KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_grammalecteplugin
     DESCRIPTION "kdepim-addons (grammalecte plugin)"
     EXPORT KDEPIMADDONS
-    )
+)
 
 
 target_link_libraries(kmail_grammalecteplugin
     KPim6::MessageComposer KF6::I18n KPim6::PimCommon KF6::XmlGui KF6::TextGrammarCheck
-    )
+)

@@ -17,10 +17,10 @@ target_sources(kaddressbook_importexportcsvplugin PRIVATE
     import/qcsvmodel.h
     import/qcsvreader.h
     import/templateselectiondialog.h
-    )
+)
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportcsvplugin PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(kaddressbook_importexportcsvplugin
@@ -33,4 +33,4 @@ target_link_libraries(kaddressbook_importexportcsvplugin
         KF6::Completion
         KF6::KIOWidgets
         KPim6::AkonadiCore
-    )
+)

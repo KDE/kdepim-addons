@@ -6,7 +6,7 @@ target_sources(kmail_expertplugin PRIVATE
     expertplugininterface.cpp
     expertplugin.h
     expertplugininterface.h
-    )
+)
 
 ecm_qt_declare_logging_category(kmail_expertplugin
     HEADER expertplugin_debug.h
@@ -14,15 +14,15 @@ ecm_qt_declare_logging_category(kmail_expertplugin
     CATEGORY_NAME org.kde.pim.kmail_expertplugin
     DESCRIPTION "kdepim-addons (kmail expert plugin)"
     EXPORT KDEPIMADDONS
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_expertplugin PROPERTIES UNITY_BUILD ON)
 endif()
 
 target_link_libraries(kmail_expertplugin
     KPim6::PimCommon KPim6::PimCommonAkonadi KF6::XmlGui KPim6::Libkdepim KF6::I18n
-    )
+)
 if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()

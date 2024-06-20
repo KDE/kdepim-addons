@@ -12,7 +12,7 @@ target_sources(operaimporterplugin PRIVATE
 )
 
 ecm_qt_declare_logging_category(operaimporterplugin HEADER operaplugin_debug.h IDENTIFIER OPERAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.operaplugin)
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(operaimporterplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

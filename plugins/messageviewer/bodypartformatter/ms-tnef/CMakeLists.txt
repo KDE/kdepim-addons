@@ -9,7 +9,7 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_mstn
     DESCRIPTION "kdepim-addons (ms_tnef)"
     OLD_CATEGORY_NAMES log_ms_tnef
     EXPORT KDEPIMADDONS
-    )
+)
 
 
 
@@ -23,5 +23,5 @@ target_link_libraries(messageviewer_bodypartformatter_application_mstnef
     KF6::IconThemes
     KF6::I18n
     KF6::TextTemplate
-    )
+)
 install(TARGETS messageviewer_bodypartformatter_application_mstnef DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)

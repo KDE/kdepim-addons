@@ -7,10 +7,10 @@ target_sources(kaddressbook_importexportldifplugin PRIVATE
     ldifimportexportplugininterface.cpp
     ldifimportexportplugin.h
     ldifimportexportplugininterface.h
-    )
+)
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportldifplugin PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -22,4 +22,4 @@ target_link_libraries(kaddressbook_importexportldifplugin
         KF6::Contacts
         KF6::JobWidgets
         KPim6::AkonadiCore
-    )
+)

@@ -13,7 +13,7 @@ target_sources(messageviewer_briefheaderstyleplugin PRIVATE
 )
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_briefheaderstyleplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

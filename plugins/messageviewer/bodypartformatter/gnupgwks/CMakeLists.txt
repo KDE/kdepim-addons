@@ -23,7 +23,7 @@ target_sources(messageviewer_bodypartformatter_application_gnupgwks PRIVATE
     pgpkeyurlhandler.h
 
     templates.qrc
-    )
+)
 
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnupgwks
     HEADER gnupgwks_debug.h
@@ -31,10 +31,10 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnup
     CATEGORY_NAME org.kde.pim.gnupgwks
     DESCRIPTION "kdepim-addons (OpenPGP and GnuPG WKS body part formatter plugin)"
     EXPORT KDEPIMADDONS
-    )
+)
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_bodypartformatter_application_gnupgwks PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -50,5 +50,5 @@ target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     KPim6::IdentityManagementCore
     KF6::TextTemplate
     Gpgmepp
-    )
+)
 install(TARGETS messageviewer_bodypartformatter_application_gnupgwks DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)

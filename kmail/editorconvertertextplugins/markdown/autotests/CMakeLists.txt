@@ -6,14 +6,14 @@ ecm_qt_declare_logging_category(kmail_markdownplugin_debug_SRCS HEADER markdownp
 
 
 macro(add_kmail_converttext_unittest _source _additional)
-    set( _test ${_source} ${_additional} ${kmail_markdownplugin_debug_SRCS})
+    set(_test ${_source} ${_additional} ${kmail_markdownplugin_debug_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} ${_name}.h)
-    add_test(NAME ${_name} COMMAND ${_name} )
+    add_executable(${_name} ${_test} ${_name}.h)
+    add_test(NAME ${_name} COMMAND ${_name})
 
     ecm_mark_as_test(kmail_converttext-${_name})
-    target_link_libraries( ${_name} Qt::Test KF6::XmlGui KPim6::MessageComposer KF6::I18n Qt::WebEngineWidgets discount::Lib KF6::SyntaxHighlighting kmailmarkdown)
-endmacro ()
+    target_link_libraries(${_name} Qt::Test KF6::XmlGui KPim6::MessageComposer KF6::I18n Qt::WebEngineWidgets discount::Lib KF6::SyntaxHighlighting kmailmarkdown)
+endmacro()
 
 add_kmail_converttext_unittest(markdowninterfacetest.cpp "../plugin/markdowninterface.cpp")
 add_kmail_converttext_unittest(markdownpreviewwidgettest.cpp "")

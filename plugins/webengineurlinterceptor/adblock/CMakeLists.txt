@@ -54,19 +54,19 @@ target_sources(adblockplugin PRIVATE
 
     adblockviewfilterwidget.h
     adblockviewfilterwidget.cpp
-    )
+)
 
 kconfig_add_kcfg_files(adblockplugin
     settings/globalsettings_webengineurlinterceptoradblock.kcfgc
-    )
+)
 
 ecm_qt_declare_logging_category(adblockplugin HEADER libadblockplugin_debug.h IDENTIFIER LIBADBLOCKPLUGIN_PLUGIN_LOG
     CATEGORY_NAME org.kde.pim.libadblockplugin
     DESCRIPTION "kdepim-addons (adblockplugin lib)"
     EXPORT KDEPIMADDONS
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(adblockplugin PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -76,8 +76,8 @@ target_link_libraries(adblockplugin
     Qt::WebEngineWidgets
     KPim6::WebEngineViewer
     KF6::TextCustomEditor
-    )
-if (Corrosion_VERSION VERSION_LESS 0.5.0)
+)
+if(Corrosion_VERSION VERSION_LESS 0.5.0)
     target_link_libraries(adblockplugin webengineviewer-adblock)
 else()
     target_link_libraries(adblockplugin webengineviewer_adblock)
@@ -85,7 +85,7 @@ endif()
 
 set_target_properties(adblockplugin
     PROPERTIES OUTPUT_NAME adblockplugin VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
-    )
+)
 
 install(TARGETS adblockplugin ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
@@ -95,7 +95,7 @@ target_sources(webengineviewer_adblockplugin PRIVATE
     adblockinterceptorinterface.h
     adblockpluginurlinterceptor.cpp
     adblockpluginurlinterceptor.h
-    )
+)
 
 
 
@@ -103,7 +103,7 @@ ecm_qt_declare_logging_category(webengineviewer_adblockplugin HEADER adblockinte
     DESCRIPTION "kdepim-addons (adblock interceptor)"
     OLD_CATEGORY_NAMES log_adblockinterceptor
     EXPORT KDEPIMADDONS
-    )
+)
 
 target_link_libraries(webengineviewer_adblockplugin
     KPim6::MessageViewer
@@ -112,7 +112,7 @@ target_link_libraries(webengineviewer_adblockplugin
     KPim6::WebEngineViewer
 
     adblockplugin
-    )
+)
 target_include_directories(webengineviewer_adblockplugin PRIVATE
     ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/)
 

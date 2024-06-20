@@ -7,14 +7,14 @@ target_sources(expireaccounttrashfolderconfig PRIVATE
 
     expireaccounttrashfolderconfigdialog.h
     expireaccounttrashfolderconfigwidget.h
-    )
+)
 
 ecm_qt_declare_logging_category(expireaccounttrashfolderconfig HEADER libexpireaccounttrashfolderconfig_debug.h IDENTIFIER LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libexpireaccounttrashfolderconfig
     DESCRIPTION "kdepim-addons (expire account trash folder config)"
     EXPORT KDEPIMADDONS
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(expireaccounttrashfolderconfig PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -23,11 +23,11 @@ target_link_libraries(expireaccounttrashfolderconfig
     KPim6::MessageViewer
     KF6::I18n
     KPim6::MailCommon
-    )
+)
 
 set_target_properties(expireaccounttrashfolderconfig
     PROPERTIES OUTPUT_NAME expireaccounttrashfolderconfig VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
-    )
+)
 
 install(TARGETS expireaccounttrashfolderconfig ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 

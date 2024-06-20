@@ -11,9 +11,9 @@ kcoreaddons_add_plugin(emailaddressselectionldapdialogplugin INSTALL_NAMESPACE p
 target_sources(emailaddressselectionldapdialogplugin PRIVATE
     emailaddressselectionldapdialog.cpp
     emailaddressselectionldapdialog.h
-    )
+)
 
 
 target_link_libraries(emailaddressselectionldapdialogplugin
     KF6::I18n KPim6::AkonadiContactCore KPim6::PimCommonAkonadi
-    )
+)

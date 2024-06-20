@@ -156,7 +156,7 @@ set_package_properties(Corrosion PROPERTIES
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
-endif(BUILD_TESTING)
+endif()
 
 if(KDEPIM_ENTERPRISE_BUILD)
   set(KDEPIM_ENTERPRISE_BUILD true)
@@ -182,10 +182,10 @@ set_package_properties("discount" PROPERTIES
         PURPOSE "Generate Markdown file.")
 
 if(discount_FOUND)
-   if (${PC_LIBMARKDOWN_VERSION})
-      if (${PC_LIBMARKDOWN_VERSION} VERSION_GREATER "2.2.5")
+   if(${PC_LIBMARKDOWN_VERSION})
+      if(${PC_LIBMARKDOWN_VERSION} VERSION_GREATER "2.2.5")
            set(DISCOUNT_HAS_HIGHLIGHTING_SUPPORT TRUE)
-           MESSAGE(STATUS "Discount ${PC_LIBMARKDOWN_VERSION}: has highlighting support")
+           message(STATUS "Discount ${PC_LIBMARKDOWN_VERSION}: has highlighting support")
       endif()
    endif()
 endif()
@@ -193,7 +193,7 @@ endif()
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
     add_definitions(-DCOMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
@@ -206,7 +206,7 @@ add_subdirectory(kmail)
 add_subdirectory(kaddressbook)
 add_subdirectory(sieveeditor)
 add_subdirectory(kmailtransport)
-if (TARGET KPim6::ImportWizard)
+if(TARGET KPim6::ImportWizard)
   add_subdirectory(akonadi-import-wizard)
 endif()
 
@@ -214,7 +214,7 @@ ecm_qt_install_logging_categories(
     EXPORT KDEPIMADDONS
     FILE kdepim-addons.categories
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
-    )
+)
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)
 ecm_feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

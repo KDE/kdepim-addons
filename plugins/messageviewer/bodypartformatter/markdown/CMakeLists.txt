@@ -14,7 +14,7 @@ endif()
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_text_markdown_plugin\")
 target_sources(messageviewer_bodypartformatter_text_markdown PRIVATE textmarkdownplugin.cpp markdownabstract.cpp markdownabstract.h)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_bodypartformatter_text_markdown PROPERTIES UNITY_BUILD ON)
 endif()
 

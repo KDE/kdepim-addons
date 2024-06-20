@@ -8,13 +8,13 @@ target_sources(kmail_autocorrectioneditorplugin PRIVATE
     autocorrectionplugineditorinterface.cpp
     autocorrectionplugineditor.h
     autocorrectionplugineditorinterface.h
-    )
+)
 
 
 target_link_libraries(kmail_autocorrectioneditorplugin
     KPim6::MessageComposer KF6::XmlGui KF6::I18n
-    )
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_autocorrectioneditorplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

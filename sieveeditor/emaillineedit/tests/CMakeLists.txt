@@ -5,7 +5,7 @@ ecm_qt_declare_logging_category(sieveeditoremailinedit_gui HEADER sieveeditorema
     EMAILLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.sieveeditoremaillinedit
     DESCRIPTION "kdepim-addons (SieveEditor email line plugin)"
     EXPORT KDEPIMADDONS
-    )
+)
 
 target_sources(sieveeditoremailinedit_gui PRIVATE
    main.cpp

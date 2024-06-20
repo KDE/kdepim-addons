@@ -25,14 +25,14 @@ target_sources(folderconfiguresettings PRIVATE
     folderconfiguremodifycollectionjob.h
     folderconfiguresettingspagebase.h
     folderconfiguresettingsexperywidget.h
-    )
+)
 
 ecm_qt_declare_logging_category(folderconfiguresettings HEADER libfolderconfiguresettings_debug.h IDENTIFIER LIBFOLDERCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libfolderconfiguresettingsplugin
     DESCRIPTION "kdepim-addons (foldersettings-configure)"
     EXPORT KDEPIMADDONS
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(folderconfiguresettings PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -41,11 +41,11 @@ target_link_libraries(folderconfiguresettings
     KPim6::MessageViewer
     KF6::I18n
     KPim6::MailCommon
-    )
+)
 
 set_target_properties(folderconfiguresettings
     PROPERTIES OUTPUT_NAME folderconfiguresettings VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
-    )
+)
 
 install(TARGETS folderconfiguresettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 

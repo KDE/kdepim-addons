@@ -12,7 +12,7 @@ target_sources(gearyimporterplugin PRIVATE
 )
 
 ecm_qt_declare_logging_category(gearyimporterplugin HEADER gearyplugin_debug.h IDENTIFIER GEARYPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.gearyplugin)
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(gearyimporterplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

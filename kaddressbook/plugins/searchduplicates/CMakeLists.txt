@@ -8,7 +8,7 @@ target_sources(kaddressbook_searchduplicatesplugin PRIVATE
     searchduplicatesplugininterface.h
     searchduplicatesplugin.h
 )
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_searchduplicatesplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

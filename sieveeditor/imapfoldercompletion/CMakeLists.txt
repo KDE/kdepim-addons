@@ -8,7 +8,7 @@ ecm_qt_declare_logging_category(sieveeditor_plugin_categories_SRCS HEADER imapfo
     IMAPFOLDERCOMPLETIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.imapfoldercompletion
     DESCRIPTION "kdepim-addons (SieveEditor imap completion folder)"
     EXPORT KDEPIMADDONS
-    )
+)
 
 
 if(BUILD_TESTING)
@@ -37,11 +37,11 @@ target_sources(imapfoldercompletionplugin PRIVATE
     selectimaplineeditcompletermodel.h
     selectimapcreatefolderjob.h
     selectimapfoldertreeview.h
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(imapfoldercompletionplugin PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(imapfoldercompletionplugin
     KPim6::PimCommon KF6::Completion KF6::I18n KF6::KIOWidgets KPim6::KSieveUi KPim6::MailTransport KPim6::IMAP KF6::ItemModels
-    )
+)

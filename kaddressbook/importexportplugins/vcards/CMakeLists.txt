@@ -12,10 +12,10 @@ target_sources(kaddressbook_importexportvcardplugin PRIVATE
     vcardimportexportplugininterface.h
     engine/vcardviewerdialog.h
     engine/vcardexportselectionwidget.h
-    )
+)
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportvcardplugin PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -29,5 +29,5 @@ target_link_libraries(kaddressbook_importexportvcardplugin
     KPim6::AkonadiContactCore
     KPim6::AkonadiContactWidgets
     Gpgmepp
-    )
+)
     target_link_libraries(kaddressbook_importexportvcardplugin QGpgmeQt6)

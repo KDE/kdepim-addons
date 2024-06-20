@@ -17,7 +17,7 @@ target_sources(kmail_antivirusplugin PRIVATE
 target_link_libraries(kmail_antivirusplugin
   KPim6::PimCommonAkonadi KF6::Completion KPim6::MailCommon KPim6::AkonadiWidgets KF6::XmlGui KPim6::Libkdepim KF6::I18n KF6::GuiAddons
 )
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_antivirusplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

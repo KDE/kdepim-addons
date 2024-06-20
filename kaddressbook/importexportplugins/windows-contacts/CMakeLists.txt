@@ -6,7 +6,7 @@ kcoreaddons_add_plugin(kaddressbook_importexportwindowscontactplugin INSTALL_NAM
 ecm_qt_declare_logging_category(kaddressbook_importexportwindowscontactplugin HEADER importexportwindowscontactplugin_debug.h IDENTIFIER IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG CATEGORY_NAME org.kde.pim.importexportwindowscontactplugin
     DESCRIPTION "kdepim-addons (Import/Export Windows Contact plugin)"
     EXPORT KDEPIMADDONS
-    )
+)
 target_sources(kaddressbook_importexportwindowscontactplugin PRIVATE
     ${kaddressbook_importexport_windowscontact_debugfile_SRCS}
     windowscontactimportexportplugin.cpp
@@ -15,9 +15,9 @@ target_sources(kaddressbook_importexportwindowscontactplugin PRIVATE
     windowscontactimportexportplugin.h
     windowscontactimportexportplugininterface.h
     importwindowcontact.h
-    )
+)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportwindowscontactplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

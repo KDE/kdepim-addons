@@ -7,10 +7,10 @@ target_sources(kaddressbook_importexportldapplugin PRIVATE
     ldapimportexportplugininterface.cpp
     ldapimportexportplugin.h
     ldapimportexportplugininterface.h
-    )
+)
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportldapplugin PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -21,4 +21,4 @@ target_link_libraries(kaddressbook_importexportldapplugin
         KF6::XmlGui
         KF6::Contacts
         KPim6::PimCommonAkonadi
-    )
+)

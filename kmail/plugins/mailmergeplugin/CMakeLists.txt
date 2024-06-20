@@ -26,7 +26,7 @@ target_sources(mailmerge PRIVATE
 )
 
 generate_export_header(mailmerge BASE_NAME mailmerge)
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(mailmerge PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -34,11 +34,11 @@ target_link_libraries(mailmerge
     KF6::I18n
     KPim6::MessageComposer
     KF6::KIOWidgets
-    )
+)
 
 set_target_properties(mailmerge
     PROPERTIES OUTPUT_NAME mailmerge VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
-    )
+)
 
 if(BUILD_TESTING)
    add_subdirectory(autotests)

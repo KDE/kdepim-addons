@@ -12,5 +12,5 @@ target_link_libraries(gravatarupdatedialog_gui
     KF6::I18n
     KPim6::AkonadiCore
     KF6::Contacts
-    )
+)
 

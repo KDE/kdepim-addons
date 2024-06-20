@@ -10,7 +10,7 @@ target_sources(kaddressbook_mergecontactsplugin PRIVATE
 )
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_mergecontactsplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

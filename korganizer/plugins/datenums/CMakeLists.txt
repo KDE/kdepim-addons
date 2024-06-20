@@ -11,7 +11,7 @@ target_sources(datenums PRIVATE
   datenums.h
 )
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(datenums PROPERTIES UNITY_BUILD ON)
 endif()
 

@@ -21,7 +21,7 @@ target_sources(akonadidatasetools PRIVATE
     akonadidatabasetoolswidget.cpp
 )
 generate_export_header(akonadidatasetools BASE_NAME akonadidatasetools)
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(akonadidatasetools PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -30,11 +30,11 @@ target_link_libraries(akonadidatasetools
     KPim6::MessageComposer
     KF6::KIOWidgets
     KF6::XmlGui
-    )
+)
 
 set_target_properties(akonadidatasetools
     PROPERTIES OUTPUT_NAME akonadidatasetools VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
-    )
+)
 
 kcoreaddons_add_plugin(kmail_akonadidatabasetoolplugin INSTALL_NAMESPACE pim6/kmail/mainview)
 target_sources(kmail_akonadidatabasetoolplugin PRIVATE
@@ -44,7 +44,7 @@ target_sources(kmail_akonadidatabasetoolplugin PRIVATE
 
 target_link_libraries(kmail_akonadidatabasetoolplugin
     KPim6::PimCommon KPim6::PimCommonAkonadi KF6::XmlGui KPim6::Libkdepim KF6::I18n akonadidatasetools
-    )
+)
 
 install(TARGETS akonadidatasetools ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
