@@ -56,7 +56,6 @@ msgstr "Behandla liten nyckel som:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
 #, kde-format
-#| msgid "Configure"
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "Anpassa"
@@ -141,7 +140,6 @@ msgstr "Ersätt DKIM-resultat med huvudvärde för Behörighetskontrollresultat"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
 #, kde-format
-#| msgid "Save Record Key:"
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Spara lagrad nyckel:"
@@ -188,7 +186,6 @@ msgstr "Generera automatiskt när avsändare i SDID"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
 #, kde-format
-#| msgid "Show Rules"
 msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Visa regler"
@@ -235,21 +232,18 @@ msgstr ""
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:58
 #, kde-format
-#| msgid "Save Folder Settings"
 msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "Spara kataloginställningar"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
 #, kde-format
-#| msgid "Select"
 msgctxt "@action:button"
 msgid "Select"
 msgstr "Markera"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
 #, kde-format
-#| msgid "Unselect"
 msgctxt "@action:button"
 msgid "Unselect"
 msgstr "Avmarkera"
@@ -289,7 +283,6 @@ msgstr "Servernamn:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Information om argumentformat…</a></qt>"
@@ -321,8 +314,6 @@ msgstr "Anpassa öppna webbadress med insticksprogram"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Lägg till regel…"
@@ -335,8 +326,6 @@ msgstr "Ta bort regel"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Ändra regel…"
@@ -376,13 +365,11 @@ msgstr "Ta bort regel"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
 #, kde-format
-#| msgid "Add Rule..."
 msgid "Add Rule…"
 msgstr "Lägg till regel…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
 #, kde-format
-#| msgid "Edit Rule..."
 msgid "Edit Rule…"
 msgstr "Redigera regel…"
 
@@ -421,14 +408,12 @@ msgstr "Har IP"
 
 #: scamsettings/scamlistsmodel.cpp:57
 #, kde-format
-#| msgid "Domain"
 msgctxt "@title:column"
 msgid "Domain"
 msgstr "Domän"
 
 #: scamsettings/scamlistsmodel.cpp:59
 #, kde-format
-#| msgid "Check"
 msgctxt "@title:column"
 msgid "Check"
 msgstr "Kontrollera"
@@ -508,5 +493,3 @@ msgstr "Kontrollera"
 
 #~ msgid "Rule:"
 #~ msgstr "Regel:"
-
-

@@ -25,14 +25,12 @@ msgstr "Anpassa regel"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
 #, kde-format
-#| msgid "Type:"
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "Typ:"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
 #, kde-format
-#| msgid "Contains:"
 msgctxt "@label:textbox"
 msgid "Contains:"
 msgstr "Innehåller:"
@@ -82,7 +80,6 @@ msgstr "Anpassa Innan brev tas bort"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
 #, kde-format
-#| msgid "Confirm Before Deleting"
 msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "Bekräfta innan borttagning"
@@ -124,8 +121,6 @@ msgstr "Brevet med rubrik '%1' är %2"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Lägg till regel…"
@@ -138,8 +133,6 @@ msgstr "Ta bort regel"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
 #, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Ändra regel…"
@@ -156,13 +149,11 @@ msgstr "Mönster"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
 #, kde-format
-#| msgid "Add Rule..."
 msgid "Add Rule…"
 msgstr "Lägg till regel…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
 #, kde-format
-#| msgid "Edit Rule..."
 msgid "Edit Rule…"
 msgstr "Redigera regel…"
 
@@ -213,4 +204,3 @@ msgstr "Skapa regel"
 
 #~ msgid "Remove filter"
 #~ msgstr "Ta bort filter"
-

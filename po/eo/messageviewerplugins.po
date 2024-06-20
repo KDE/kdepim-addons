@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 22:04+0200\n"
+"PO-Revision-Date: 2024-06-19 22:33+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -42,8 +42,7 @@ msgid "&Save"
 msgstr "Kon&servi"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Malfermi R&edaktilon…"
@@ -239,22 +238,19 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Agordi kromprogramon \"Ekstera Skripto\"."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
-msgstr "Aldoni skripton…"
+msgstr "Aldoni Skripton…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Forigi Skripton"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Modifi Skripton…"

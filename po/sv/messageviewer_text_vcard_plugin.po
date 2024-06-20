@@ -46,7 +46,6 @@ msgstr "Visa visitkort"
 
 #: text_vcard.cpp:216
 #, kde-format
-#| msgid "Save Business Card As..."
 msgid "Save Business Card As…"
 msgstr "Spara visitkort som…"
 
@@ -110,4 +109,3 @@ msgstr "E-post ej angiven"
 
 #~ msgid "Remove"
 #~ msgstr "Ta bort"
-

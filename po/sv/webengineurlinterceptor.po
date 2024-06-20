@@ -19,8 +19,6 @@ msgstr ""
 
 #: adblock/adblockfilterdialog.cpp:26
 #, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure AdBlock Plugin"
 msgctxt "@title:window"
 msgid "Configure Adblock List"
 msgstr "Anpassa reklamblockeringslista"
@@ -49,13 +47,11 @@ msgstr "Ändra…"
 
 #: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
-#| msgid "Delete List"
 msgid "Delete"
 msgstr "Ta bort"
 
 #: adblock/adblockfiltertreeview.cpp:85
 #, kde-format
-#| msgid "Show List"
 msgid "Show"
 msgstr "Visa"
 
@@ -66,28 +62,22 @@ msgstr "Uppdatera listor"
 
 #: adblock/adblockfiltertreeview.cpp:163
 #, kde-format
-#| msgid "Do you want to remove this rule?"
-#| msgid_plural "Do you want to remove these rules?"
 msgid "Do you want to remove '%1' ?"
 msgstr "Vill du ta bort '%1'?"
 
 #: adblock/adblockfiltertreeview.cpp:164
 #, kde-format
-#| msgid "Remove filter"
 msgctxt "@title:window"
 msgid "Remove List"
 msgstr "Ta bort lista"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
-#| msgid "Search:"
 msgid "Search…"
 msgstr "Sök…"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
 msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr "Lägg till reklamblockeringslista"
@@ -110,8 +100,6 @@ msgstr "Anpassa insticksprogram för reklamblockering"
 
 #: adblock/adblockviewfilterdialog.cpp:27
 #, kde-format
-#| msgctxt "@title:window"
-#| msgid "Show adblock list"
 msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "Visa reklamblockeringslista"
@@ -376,4 +364,3 @@ msgstr "Aktivera reklamblockering"
 
 #~ msgid "AdBlock"
 #~ msgstr "Reklamblockering"
-

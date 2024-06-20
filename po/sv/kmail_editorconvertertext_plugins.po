@@ -52,14 +52,12 @@ msgstr "Behåll originalstorlek"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:20
 #, kde-format
-#| msgid "Width:"
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "Bredd:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:22
 #, kde-format
-#| msgid "Height:"
 msgctxt "@label:textbox"
 msgid "Height:"
 msgstr "Höjd:"
@@ -110,7 +108,6 @@ msgstr "Konverteringsfel"
 
 #: markdown/plugin/markdowninterface.cpp:36
 #, kde-format
-#| msgid "Generate HTML from markdown language."
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Skapa HTML från språket Markdown."
@@ -122,7 +119,6 @@ msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
 #, kde-format
-#| msgid "Markdown Action"
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Markdown-åtgärd"
@@ -194,4 +190,3 @@ msgstr "Skapa HTML från språket Markdown."
 
 #~ msgid "Generate HTML from markdown."
 #~ msgstr "Skapa HTML från Markdown."
-

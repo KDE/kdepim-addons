@@ -19,7 +19,6 @@ msgstr ""
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
-#| msgid "Check Gravatar..."
 msgid "Check Gravatar…"
 msgstr "Kontrollera Gravatar…"
 
@@ -46,14 +45,12 @@ msgstr "För många kontakter markerade."
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
 #, kde-format
-#| msgid "Save Image"
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Spara bild"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
 #, kde-format
-#| msgid "Save Image URL"
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "Spara bildwebbadress"
@@ -66,14 +63,12 @@ msgstr "Kontrollera och uppdatera Gravatar"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
 #, kde-format
-#| msgid "Search"
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Sök"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
 #, kde-format
-#| msgid "Email:"
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-post:"
@@ -90,7 +85,6 @@ msgstr "Ingen Gravatar hittades"
 
 #: mergecontacts/mergecontactsplugininterface.cpp:25
 #, kde-format
-#| msgid "Merge Contacts..."
 msgid "Merge Contacts…"
 msgstr "Sammanfoga kontakter…"
 
@@ -102,21 +96,18 @@ msgstr "Markerade kontakter att sammanfoga"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:32
 #, kde-format
-#| msgid "merge"
 msgctxt "@action:button"
 msgid "merge"
 msgstr "sammanfoga"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
 #, kde-format
-#| msgid "Select contacts that you really want to merge:"
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Markera kontakter som du verkligen vill sammanfoga:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
 #, kde-format
-#| msgid "Select the addressbook in which to store merged contacts:"
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
 msgstr "Välj adressbok där sammanfogade kontakter ska lagras:"
@@ -156,13 +147,11 @@ msgstr "Sök och markera duplicerade kontakter att sammanfoga"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, kde-format
-#| msgid "Search in result..."
 msgid "Search in result…"
 msgstr "Sök i resultat…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
-#| msgid "Select AddressBook:"
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
 msgstr "Välj adressbok:"
@@ -170,7 +159,6 @@ msgstr "Välj adressbok:"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
 #, kde-format
-#| msgid "Merge"
 msgctxt "@action:button"
 msgid "Merge"
 msgstr "Sammanfoga"
@@ -211,14 +199,12 @@ msgstr ""
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
 #, kde-format
-#| msgid "Customize"
 msgctxt "@action"
 msgid "Customize"
 msgstr "Anpassa"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
 #, kde-format
-#| msgid "Automatic Merging"
 msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "Automatisk sammanfogning"
@@ -234,7 +220,6 @@ msgstr ""
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
-#| msgid "Missing Selected Information"
 msgctxt "@title:window"
 msgid "Missing Selected Information"
 msgstr "Saknar markerad information"
@@ -282,7 +267,6 @@ msgstr "(Odefinierad)"
 
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
 #, kde-format
-#| msgid "Search Duplicate Contacts..."
 msgid "Search Duplicate Contacts…"
 msgstr "Sök efter duplicerade kontakter…"
 
@@ -293,7 +277,6 @@ msgstr "Inga brev hittades för markerade kontakter."
 
 #: sendmail/sendmailplugininterface.cpp:26
 #, kde-format
-#| msgid "Send an email..."
 msgid "Send an email…"
 msgstr "Skicka ett brev…"
 
@@ -309,7 +292,6 @@ msgstr "Tillfällig fil '%1' kan inte skapas"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
 #, kde-format
-#| msgid "Send vCards..."
 msgid "Send vCards…"
 msgstr "Skicka visitkort…"
 
@@ -321,5 +303,3 @@ msgstr "Skicka visitkort…"
 
 #~ msgid "Use HTTPS Protocol"
 #~ msgstr "Använd protokollet HTTPS"
-
-

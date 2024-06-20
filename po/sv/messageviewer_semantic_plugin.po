@@ -134,7 +134,6 @@ msgid "Add to KDE Itinerary"
 msgstr "Lägg till i KDE-resplan"
 
 #: templates/itinerary.html:78
-#| msgid "Send to Device..."
 msgid "Send to Device…"
 msgstr "Skicka till enhet…"
 
@@ -207,4 +206,3 @@ msgstr "Buss: %1"
 #~ "Incheckning: %1\n"
 #~ "Utcheckning: %2\n"
 #~ "Bokningsnummer: %3"
-

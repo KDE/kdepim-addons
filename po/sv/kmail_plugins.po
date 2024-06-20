@@ -25,7 +25,6 @@ msgstr "Akonadi databasverktyg"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
-#| msgid "Akonadi Vacuum"
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "&Akonadistädning…"
@@ -44,14 +43,12 @@ msgstr "Akonadistädning"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
-#| msgid "Vacuum"
 msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Städning"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
-#| msgid "Akonadi Fsck"
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "&Akonadi konsistenskontroll…"
@@ -70,7 +67,6 @@ msgstr "Akonadi konsistenskontroll"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
-#| msgid "Fsck"
 msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Konsistenskontroll"
@@ -82,34 +78,29 @@ msgstr "Klar."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
-#| msgid "Start..."
 msgid "Start…"
 msgstr "Starta…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
 #, kde-format
-#| msgid "Anti-Spam Wizard"
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Guide för eliminering &av skräppost…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
 #, kde-format
-#| msgid "Anti-Virus Wizard"
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Guide för eliminering &av virus…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
-#| msgid "Anti-Spam Wizard"
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Guide för eliminering av skräppost"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
-#| msgid "Anti-Virus Wizard"
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Guide för eliminering av virus"
@@ -180,7 +171,6 @@ msgstr "Önskat"
 
 #: common/antispamwizard.cpp:456
 #, kde-format
-#| msgid "Scanning for %1..."
 msgid "Scanning for %1…"
 msgstr "Söker efter %1…"
 
@@ -396,7 +386,6 @@ msgstr ""
 
 #: mailmergeplugin/mailmergedialog.cpp:19
 #, kde-format
-#| msgid "Preview"
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Förhandsgranska"
@@ -409,7 +398,6 @@ msgstr "Sammanfoga brev"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
 #, kde-format
-#| msgid "Path:"
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Sökväg:"
@@ -423,7 +411,6 @@ msgstr "Bilaga"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
 #, kde-format
-#| msgid "Source:"
 msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Källa:"
@@ -440,7 +427,6 @@ msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
 #, kde-format
-#| msgid "Attachment:"
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Bilaga:"
@@ -462,7 +448,6 @@ msgstr "Än&dra..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
 #, kde-format
-#| msgid "Select attachment:"
 msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Välj bilaga:"
@@ -484,5 +469,3 @@ msgstr "Välj bilaga:"
 
 #~ msgid "&Log Activities..."
 #~ msgstr "&Logga aktiviteter..."
-
-

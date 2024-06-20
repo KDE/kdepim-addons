@@ -19,7 +19,6 @@ msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
-#| msgid "Click on button for selecting contacts..."
 msgid "Click on button for selecting contacts…"
 msgstr "Klicka på knappen för att välja kontakter…"
 
@@ -30,7 +29,6 @@ msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
-#| msgid "Select Emails"
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Välj e-post"
@@ -44,7 +42,6 @@ msgstr "Välj e-post"
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
 #, kde-format
-#| msgid "Create Folder"
 msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "Skapa korg"
@@ -56,7 +53,6 @@ msgstr "Fel när korg skulle skapas: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
 #, kde-format
-#| msgid "Create Folder"
 msgctxt "@action:button"
 msgid "Create Folder…"
 msgstr "Skapa korg…"
@@ -74,19 +70,16 @@ msgstr "Kunde inte läsa in korglista"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
 #, kde-format
-#| msgid "Loading in progress..."
 msgid "Loading in progress…"
 msgstr "Inläsning pågår…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
-#| msgid "Search..."
 msgid "Search…"
 msgstr "Sök…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
-#| msgid "Refresh IMAP Folder List"
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Uppdatera IMAP-korglista"
@@ -119,21 +112,18 @@ msgstr "Fel vid inläsning av korgar: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
 #, kde-format
-#| msgid "Load Folders"
 msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "Läs in korgar"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
 #, kde-format
-#| msgid "Select IMAP folder"
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Välj IMAP-korg"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
-#| msgid "Click on button for selecting folder..."
 msgid "Click on button for selecting folder…"
 msgstr "Klicka på knappen för att välja korg…"
 
@@ -145,4 +135,3 @@ msgstr "Klicka på knappen för att välja korg…"
 
 #~ msgid "Create Regular Expression"
 #~ msgstr "Skapa reguljärt uttryck"
-

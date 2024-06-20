@@ -44,7 +44,6 @@ msgstr "Ett fel uppstod vid import av nyckeln."
 
 #: pgpkeyurlhandler.cpp:67 pgpkeyurlhandler.cpp:69
 #, kde-format
-#| msgid "Import error"
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Importfel"
@@ -61,7 +60,6 @@ msgstr "Nyckeln har importerats med lyckat resultat."
 
 #: pgpkeyurlhandler.cpp:71
 #, kde-format
-#| msgid "Import finished"
 msgctxt "@title:window"
 msgid "Import finished"
 msgstr "Import klar"
@@ -126,7 +124,6 @@ msgstr ""
 "e-post."
 
 #: templates/pgpkeymessagepart.html:23
-#| msgid "Loading key details..."
 msgid "Loading key details…"
 msgstr "Läser in detaljinformation om nyckel…"
 
@@ -164,7 +161,6 @@ msgid "Open in Kleopatra"
 msgstr "Öppna i Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
-#| msgid "Show key details"
 msgid "Show key details …"
 msgstr "Visa detaljinformation om nyckel…"
 
@@ -177,4 +173,3 @@ msgstr "Importera nyckel"
 
 #~ msgid "Unknown identity"
 #~ msgstr "Okänd identitet"
-

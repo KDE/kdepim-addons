@@ -24,14 +24,12 @@ msgstr "Tillåtna protokoll"
 
 #: cryptopageplugin.cpp:52
 #, kde-format
-#| msgid "Preferred OpenPGP encryption key:"
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Föredragen OpenPGP-krypteringsnyckel:"
 
 #: cryptopageplugin.cpp:57
 #, kde-format
-#| msgid "Preferred S/MIME encryption certificate:"
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Föredraget S/MIME-krypteringscertifikat:"
@@ -43,14 +41,12 @@ msgstr "Meddelandeinställning"
 
 #: cryptopageplugin.cpp:71
 #, kde-format
-#| msgid "Sign:"
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Signera:"
 
 #: cryptopageplugin.cpp:88
 #, kde-format
-#| msgid "Encrypt:"
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Kryptera:"
@@ -59,4 +55,3 @@ msgstr "Kryptera:"
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Kryptoinställningar"
-

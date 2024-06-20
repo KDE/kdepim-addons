@@ -19,7 +19,6 @@ msgstr ""
 
 #: emailaddressselectionldapdialog/emailaddressselectionldapdialog.cpp:35
 #, kde-format
-#| msgid "Search &Directory Service"
 msgctxt "@action:button"
 msgid "Search &Directory Service"
 msgstr "Sök i &katalogtjänst"
@@ -750,13 +749,11 @@ msgstr "Bildsida"
 
 #: plugins/picoftheday/element.cpp:326
 #, kde-format
-#| msgid "Loading..."
 msgid "Loading…"
 msgstr "Läser in…"
 
 #: plugins/picoftheday/element.cpp:331
 #, kde-format
-#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
 msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
 msgstr "<qt>Läser in <i>Dagens bild</i>…</qt>"
 
@@ -802,5 +799,3 @@ msgstr "Månaden i historien"
 msgctxt "Qt date format used by the localized Wikipedia"
 msgid "MMMM_yyyy"
 msgstr "MMMM_åååå"
-
-

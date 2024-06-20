@@ -58,7 +58,6 @@ msgstr "Lägg automatiskt till kontakter"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
 #, kde-format
-#| msgid "Select the addressbook in which to store contacts:"
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "Välj adressbok där kontakter ska lagras:"
@@ -92,9 +91,6 @@ msgstr "Kontrollera SMTP-server"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
 #, kde-format
-#| msgid ""
-#| "Do you want to send the email with a different SMTP than the one defined "
-#| "in the current identity?"
 msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
@@ -136,7 +132,6 @@ msgstr "Duplicerade brev"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
-#| msgid "These emails are duplicated. Do you want to send email?"
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Följande brev är duplicerade. Vill du skicka brev?"
@@ -155,7 +150,6 @@ msgstr "Kontrollera bilaga"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
 #, kde-format
-#| msgid "Do you want to send some attachment?"
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "Vill du skicka någon bilaga?"
@@ -191,7 +185,6 @@ msgstr "Ta &bort"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
-#| msgid "Mod&ify..."
 msgid "Mod&ify…"
 msgstr "&Ändra…"
 
@@ -222,7 +215,6 @@ msgstr "Vill du ta bort e-postadressen?"
 
 #: confirm-address/confirmaddressdialog.cpp:26
 #, kde-format
-#| msgid "Add Selected Emails to WhiteList"
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Lägg till markerade brev i vitlistan"
@@ -240,14 +232,12 @@ msgstr "Alla markerade brev har lagts till i vitlistan"
 
 #: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
-#| msgid "Emails added to white list"
 msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "E-postadresser tillagda i vitlistan"
 
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
 #, kde-format
-#| msgid "Enter new domain name:"
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
 msgstr "Ange nytt domännamn:"
@@ -266,7 +256,6 @@ msgstr "Ändra värde"
 
 #: confirm-address/confirmaddresswidget.cpp:22
 #, kde-format
-#| msgid "Potentially invalid emails are displayed in red:"
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Potentiellt ogiltiga brev visas i rött:"
@@ -282,5 +271,3 @@ msgstr "Potentiellt ogiltiga brev visas i rött:"
 
 #~ msgid "Send Mail as PlainText"
 #~ msgstr "Skicka brev som vanlig text"
-
-

@@ -24,14 +24,12 @@ msgstr "Aktuell webbadress är inte avkortad"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
 #, kde-format
-#| msgid "Expand URL"
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "Expandera webbadress"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
-#| msgid "Translate..."
 msgctxt "@action"
 msgid "Translate…"
 msgstr "Översätt…"
@@ -44,14 +42,12 @@ msgstr "&Spara"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, kde-format
-#| msgid "Open &Editor..."
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Öppna &editor…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
-#| msgid "Event:"
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Händelse:"
@@ -63,14 +59,12 @@ msgstr "Kalender där den nya händelsen kommer att lagras."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
 #, kde-format
-#| msgid "Calendar where the new event will be stored"
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "Kalender där den nya händelsen kommer att lagras"
 
 #: createeventplugin/eventedit.cpp:89
 #, kde-format
-#| msgid "Start:"
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Start:"
@@ -82,7 +76,6 @@ msgstr "Välj starttid för händelsen."
 
 #: createeventplugin/eventedit.cpp:102
 #, kde-format
-#| msgid "End:"
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "Slut:"
@@ -109,7 +102,6 @@ msgstr "Stäng grafisk komponent för att skapa nya händelser."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
 #, kde-format
-#| msgid "Create Event"
 msgid "Create Event…"
 msgstr "Skapa händelse…"
 
@@ -125,7 +117,6 @@ msgstr "Låter dig skapa en kalenderhändelse"
 
 #: createnoteplugin/noteedit.cpp:49
 #, kde-format
-#| msgid "Note:"
 msgctxt "@label:textbox"
 msgid "Note:"
 msgstr "Anteckning:"
@@ -170,7 +161,6 @@ msgstr ""
 
 #: createtodoplugin/todoedit.cpp:61
 #, kde-format
-#| msgid "To-do:"
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "Uppgift:"
@@ -182,7 +172,6 @@ msgstr "Uppgiftslista där den nya uppgiften kommer att lagras."
 
 #: createtodoplugin/todoedit.cpp:82
 #, kde-format
-#| msgid "Todo list where the new task will be stored"
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "Uppgiftslista där den nya uppgiften kommer att lagras"
@@ -249,28 +238,24 @@ msgstr "Anpassa insticksprogram \"Externt skript\""
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
 #, kde-format
-#| msgid "Add Script..."
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Lägg till skript…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
-#| msgid "Remove Script"
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Ta bort skript"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, kde-format
-#| msgid "Modify Script..."
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Ändra skript…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
-#| msgid "External Script:"
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Externt skript:"
@@ -303,7 +288,6 @@ msgstr "Beskrivning:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
 #, kde-format
-#| msgid "Add command arguments..."
 msgid "Add command arguments…"
 msgstr "Lägg till kommandoargument…"
 
@@ -314,7 +298,6 @@ msgstr "Kommandorad:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
 #, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Information om argumentformat…</a></qt>"
@@ -348,7 +331,6 @@ msgstr "'%1' hittades inte"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
 #, kde-format
-#| msgid "Executable not found."
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "Körbart program hittades inte."
@@ -360,7 +342,6 @@ msgstr "Omöjligt att starta körbart program"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
 #, kde-format
-#| msgid "External Script"
 msgctxt "@action"
 msgid "External Script"
 msgstr "Externa skript"
@@ -381,5 +362,3 @@ msgstr "Anpassa"
 
 #~ msgid "Open &editor..."
 #~ msgstr "Öppna &editor..."
-
-

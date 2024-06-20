@@ -24,35 +24,30 @@ msgstr "Korrigera text automatiskt"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
 #, kde-format
-#| msgid "Autocorrect Full Text"
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Korrigera hela texten automatiskt"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
 #, kde-format
-#| msgid "Autocorrect Selected Text"
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Korrigera markerad text automatiskt"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
-#| msgid "Insert Email..."
 msgctxt "@action"
 msgid "Insert Email…"
 msgstr "Infoga brev…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format
-#| msgid "Select Short URL server:"
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "Välj server för kort webbadress:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
 #, kde-format
-#| msgid "Insert Short URL..."
 msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Infoga kort webbadress…"
@@ -84,8 +79,6 @@ msgstr ""
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
 #, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
 msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Infoga specialtecken…"
@@ -103,7 +96,6 @@ msgstr "Infoga"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
 #, kde-format
-#| msgid "Insert Non Breaking Space"
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Infoga icke-radbrytande mellanslag"
@@ -116,14 +108,12 @@ msgstr "Anpassa snabbtext"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
 #, kde-format
-#| msgid "Import..."
 msgctxt "@action:button"
 msgid "Import…"
 msgstr "Importera…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
 #, kde-format
-#| msgid "Export..."
 msgctxt "@action:button"
 msgid "Export…"
 msgstr "Exportera…"
@@ -140,56 +130,48 @@ msgstr "Exportera snabbtext"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
 #, kde-format
-#| msgid "Variables"
 msgctxt "@action"
 msgid "Variables"
 msgstr "Variabler"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
 #, kde-format
-#| msgid "Variables"
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "Variabler"
 
 #: quicktext/quicktexttreewidget.cpp:37
 #, kde-format
-#| msgid "Add Snippet..."
 msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Lägg till textsnutt…"
 
 #: quicktext/quicktexttreewidget.cpp:39
 #, kde-format
-#| msgid "Edit Snippet..."
 msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Redigera textsnutt…"
 
 #: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
-#| msgid "Remove Snippet"
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Ta bort textsnutt"
 
 #: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
-#| msgid "Add Group..."
 msgctxt "@action"
 msgid "Add Group…"
 msgstr "Lägg till grupp…"
 
 #: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
-#| msgid "Rename Group..."
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Byt namn på grupp…"
 
 #: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
-#| msgid "Remove Group"
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "Ta bort grupp"
@@ -232,7 +214,6 @@ msgstr "Snabbtext har ändrats. Vill du spara den?"
 
 #: quicktext/quicktextwidget.cpp:69
 #, kde-format
-#| msgid "Save"
 msgctxt "@title:window"
 msgid "Save"
 msgstr "Spara"
@@ -244,7 +225,6 @@ msgstr "Allmänt"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
 #, kde-format
-#| msgid "Share Mail Text..."
 msgid "Share Mail Text…"
 msgstr "Dela brevtext…"
 
@@ -317,5 +297,3 @@ msgstr "Zooma…"
 
 #~ msgid "Insert Template Command..."
 #~ msgstr "Infoga mallkommando..."
-
-

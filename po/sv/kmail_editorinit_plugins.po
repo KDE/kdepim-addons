@@ -30,10 +30,6 @@ msgstr "Använd extern editor istället för brevfönstret"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:52
 #, kde-format
-#| msgid ""
-#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
-#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
-#| "line number."
 msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
@@ -42,4 +38,3 @@ msgid ""
 msgstr ""
 "<b>%f</b> ersätts med filnamnet att redigera.<br /><b>%w</b> ersätts med "
 "fönster-id.<br /><b>%l</b> ersätts med radnumret."
-
