@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-06-16 16:50+0530\n"
+"PO-Revision-Date: 2024-06-20 21:22+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -41,8 +41,7 @@ msgid "&Save"
 msgstr "&சேமி"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "&உரைத்திருத்தியை திற…"
@@ -56,13 +55,13 @@ msgstr "நிகழ்வு:"
 #: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
 #, kde-format
 msgid "Calendar where the new event will be stored."
-msgstr ""
+msgstr "புதிய நிகழ்வை சேமிக்க வேண்டிய நாள்காட்டி."
 
 #: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
-msgstr ""
+msgstr "புதிய நிகழ்வை எந்த நாள்காட்டியில் சேமிக்க வேண்டும்"
 
 #: createeventplugin/eventedit.cpp:89
 #, kde-format
@@ -73,7 +72,7 @@ msgstr "துவக்கம்:"
 #: createeventplugin/eventedit.cpp:95
 #, kde-format
 msgid "Select start time for event."
-msgstr ""
+msgstr "நிகழ்வின் தொடக்க நேரத்தைத் தேர்ந்தெடுக்கவும்."
 
 #: createeventplugin/eventedit.cpp:102
 #, kde-format
@@ -84,22 +83,22 @@ msgstr "முடிவு:"
 #: createeventplugin/eventedit.cpp:107
 #, kde-format
 msgid "Select end time for event."
-msgstr ""
+msgstr "நிகழ்வின் முடிவு நேரத்தைத் தேர்ந்தெடுக்கவும்."
 
 #: createeventplugin/eventedit.cpp:125
 #, kde-format
 msgid "Create new event and close this widget."
-msgstr ""
+msgstr "புதிய நிகழ்வை உருவாக்கி இந்த சாளரத்தை மூடு."
 
 #: createeventplugin/eventedit.cpp:131
 #, kde-format
 msgid "Open event editor, where more details can be changed."
-msgstr ""
+msgstr "மேலும் விவரங்களை மாற்ற விடும் நிகழ்வு திருத்தியைத் திறக்கும்."
 
 #: createeventplugin/eventedit.cpp:142
 #, kde-format
 msgid "Close the widget for creating new events."
-msgstr ""
+msgstr "புதிய நிகழ்வுகளை உருவாக்குவதற்கான சாளரத்தை மூடு."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
 #, kde-format
@@ -114,7 +113,7 @@ msgstr "நிகழ்வை உருவாக்கு"
 #: createeventplugin/viewerplugincreateeventinterface.cpp:70
 #, kde-format
 msgid "Allows you to create a calendar Event"
-msgstr ""
+msgstr "நாள்காட்டி நிகழ்வை உருவாக்க விடும்"
 
 #: createnoteplugin/noteedit.cpp:49
 #, kde-format
@@ -125,12 +124,12 @@ msgstr "குறிப்பு:"
 #: createnoteplugin/noteedit.cpp:90
 #, kde-format
 msgid "Create new note and close this widget."
-msgstr ""
+msgstr "புதிய குறிப்பை உருவாக்கி இந்த சாளரத்தை மூடு"
 
 #: createnoteplugin/noteedit.cpp:99
 #, kde-format
 msgid "Close the widget for creating new notes."
-msgstr ""
+msgstr "புதிய குறிப்புகளை உருவாக்குவதற்கான சாளரத்தை மூடும்."
 
 #: createnoteplugin/viewerplugincreatenoteinterface.cpp:120
 #, kde-format
@@ -149,7 +148,7 @@ msgstr "குறிப்பை உருவாக்கு"
 #: createnoteplugin/viewerplugincreatenoteinterface.cpp:135
 #, kde-format
 msgid "Allows you to create a note from this message"
-msgstr ""
+msgstr "இந்த அஞ்சலிலிருந்து ஓர் குறிப்பை உருவாக்க விடும்"
 
 #: createnoteplugin/viewerplugincreatenoteinterface.cpp:136
 #, kde-format
@@ -157,6 +156,8 @@ msgid ""
 "This option starts an editor to create a note. Then you can edit the note to "
 "your liking before saving it."
 msgstr ""
+"குறிப்பை உருவாக்குவதற்கான திருத்தியை இந்தத் தேர்வு திறக்கும். விருப்பம்போல் குறிப்பைத் "
+"திருத்தியபின் அதை சேமிக்கலாம்."
 
 #: createtodoplugin/todoedit.cpp:61
 #, kde-format
@@ -167,18 +168,18 @@ msgstr "செய்யவேண்டியது:"
 #: createtodoplugin/todoedit.cpp:80
 #, kde-format
 msgid "Todo list where the new task will be stored."
-msgstr ""
+msgstr "புதயி பணியை எந்த பட்டியலில் சேமிக்க வேண்டும்."
 
 #: createtodoplugin/todoedit.cpp:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
-msgstr ""
+msgstr "புதிய பணியை எந்த பட்டியலில் சேமிக்க வேண்டும்"
 
 #: createtodoplugin/todoedit.cpp:96
 #, kde-format
 msgid "Create new todo and close this widget."
-msgstr ""
+msgstr "புதிய செய்யவேண்டியதை உருவாக்கி அந்த சாளரத்தை மூடு."
 
 #: createtodoplugin/todoedit.cpp:103
 #, kde-format
@@ -233,22 +234,19 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "\"வெளி சிறுநிரல்\" சிறுநிரலை அமைப்பது"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "சிறுநிரலை சேர்…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "சிறுநிரலை நீக்கு"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "சிறுநிரலை திருத்து…"

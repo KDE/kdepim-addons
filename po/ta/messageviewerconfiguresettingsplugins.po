@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-04-22 21:40+0530\n"
+"PO-Revision-Date: 2024-06-20 21:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -54,8 +54,7 @@ msgid "Treat small Key as:"
 msgstr ""
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "அமை"
@@ -74,22 +73,22 @@ msgstr ""
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
 #, kde-format
 msgid "New Server:"
-msgstr ""
+msgstr "புதிய சேவையகம்:"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
 #, kde-format
 msgid "New Server"
-msgstr ""
+msgstr "புதிய சேவையகம்"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
 #, kde-format
 msgid "Modify Server"
-msgstr ""
+msgstr "சேவையகத்தை திருத்து"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
 #, kde-format
 msgid "Server:"
-msgstr ""
+msgstr "சேவையகம்"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
 #, kde-format
@@ -106,7 +105,7 @@ msgstr ""
 #: foldersettings/folderconfiguresettingspagewidget.cpp:36
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "பொதுவானவை"
 
 #: dkim-verify/dkimconfiguretab.cpp:40
 #, kde-format
@@ -116,12 +115,12 @@ msgstr ""
 #: dkim-verify/dkimconfiguretab.cpp:42
 #, kde-format
 msgid "Policy"
-msgstr ""
+msgstr "கொள்கை"
 
 #: dkim-verify/dkimconfiguretab.cpp:44
 #, kde-format
 msgid "Advanced"
-msgstr ""
+msgstr "மேம்பட்டவை"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
 #, kde-format
@@ -147,12 +146,12 @@ msgstr ""
 #: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: dkim-verify/dkimgeneralwidget.cpp:42
 #, kde-format
 msgid "Save and Compare"
-msgstr ""
+msgstr "சேமித்து ஒப்பிடு"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
 #, kde-format
@@ -205,22 +204,22 @@ msgstr ""
 #: foldersettings/folderconfiguresettingspagebase.cpp:17
 #, kde-format
 msgid "Modify"
-msgstr ""
+msgstr "திருத்து"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:40
 #, kde-format
 msgid "View"
-msgstr ""
+msgstr "காட்டு"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:44
 #, kde-format
 msgid "Expiry"
-msgstr ""
+msgstr "காலாவதி"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:48
 #, kde-format
 msgid "Template"
-msgstr ""
+msgstr "வார்ப்புரு"
 
 #: foldersettings/folderconfiguresettingspagewidget.cpp:57
 #, kde-format
@@ -262,13 +261,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Create"
-msgstr ""
+msgstr "உருவாக்கு"
 
 #: openurlwith/openurlwithconfigurecreatedialog.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit"
-msgstr ""
+msgstr "திருத்து"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-28 09:50+0200\n"
+"PO-Revision-Date: 2024-06-19 10:57+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -107,15 +107,13 @@ msgid "Configure quick text"
 msgstr "Snelle tekst configureren"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Import…"
 msgstr "Importeren…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Export…"
 msgstr "Exporteren…"
@@ -137,8 +135,7 @@ msgid "Variables"
 msgstr "Variabelen"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "Variabelen"

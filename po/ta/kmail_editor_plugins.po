@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-06-16 16:59+0530\n"
+"PO-Revision-Date: 2024-06-20 21:25+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -107,15 +107,13 @@ msgid "Configure quick text"
 msgstr "விரை உரையை அமை"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Import…"
 msgstr "இறக்குமதி செய்…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Export…"
 msgstr "ஏற்றுமதி செய்…"
@@ -137,8 +135,7 @@ msgid "Variables"
 msgstr "மாறிகள்"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "மாறிகள்"
