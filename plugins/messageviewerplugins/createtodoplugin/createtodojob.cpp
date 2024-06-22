@@ -10,7 +10,6 @@
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/MessageParts>
-#include <Akonadi/RelationCreateJob>
 
 #include <KMime/Message>
 
@@ -76,19 +75,6 @@ void CreateTodoJob::todoCreated(KJob *job)
         qCDebug(CREATETODOPLUGIN_LOG) << "Error during create new Todo " << job->errorString();
         setError(job->error());
         setErrorText(job->errorText());
-        emitResult();
-    } else {
-        auto createJob = static_cast<Akonadi::ItemCreateJob *>(job);
-        Akonadi::Relation relation(Akonadi::Relation::GENERIC, mItem, createJob->item());
-        auto rJob = new Akonadi::RelationCreateJob(relation);
-        connect(rJob, &Akonadi::RelationCreateJob::result, this, &CreateTodoJob::relationCreated);
-    }
-}
-
-void CreateTodoJob::relationCreated(KJob *job)
-{
-    if (job->error()) {
-        qCDebug(CREATETODOPLUGIN_LOG) << "Error during create new Todo " << job->errorString();
     }
     emitResult();
 }

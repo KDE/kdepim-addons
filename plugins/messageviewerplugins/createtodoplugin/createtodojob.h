@@ -28,7 +28,6 @@ public:
 private:
     void slotFetchDone(KJob *job);
     void todoCreated(KJob *job);
-    void relationCreated(KJob *job);
     void createTodo();
     Akonadi::Item mItem;
     const Akonadi::Collection mCollection;
