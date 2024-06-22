@@ -29,7 +29,7 @@
         "Description[tr]": "Bu eklenti, her bir hesap için çöp klasörü süre geçimi yapılandırmanıza olanak verir.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати вилучення застарілих повідомлень з теки смітника для кожного з облікових записів.",
         "Description[x-test]": "xxThis plugin allows you to configure expire trash folder for each accounts.xx",
-        "Description[zh_CN]": "此插件能让您定时清空每个账号的已删除邮件文件夹。",
+        "Description[zh_CN]": "此插件能让您定时清空每个账户的已删除邮件文件夹。",
         "Description[zh_TW]": "這個外掛程式讓您為每個帳號設定垃圾桶資料夾的過期。",
         "Name": "Expire Trash Folder",
         "Name[ar]": "انتهاء صلاحية مجلد المهملات",
