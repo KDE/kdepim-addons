@@ -194,7 +194,7 @@ msgstr "显示规则"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
-msgstr "配置定期清空各账号的已删除邮件文件夹"
+msgstr "配置定期清空各账户的已删除邮件文件夹"
 
 #: foldersettings/folderconfiguresettingsdialog.cpp:27
 #, kde-format
