@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-24 00:38+0000\n"
 "PO-Revision-Date: 2024-06-20 21:22+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -34,8 +34,7 @@ msgctxt "@action"
 msgid "Translate…"
 msgstr "மொழிபெயர்…"
 
-#: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
-#: createtodoplugin/todoedit.cpp:42
+#: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
 msgid "&Save"
 msgstr "&சேமி"
@@ -52,12 +51,12 @@ msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "நிகழ்வு:"
 
-#: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
+#: createeventplugin/eventedit.cpp:74
 #, kde-format
 msgid "Calendar where the new event will be stored."
 msgstr "புதிய நிகழ்வை சேமிக்க வேண்டிய நாள்காட்டி."
 
-#: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
+#: createeventplugin/eventedit.cpp:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
@@ -114,50 +113,6 @@ msgstr "நிகழ்வை உருவாக்கு"
 #, kde-format
 msgid "Allows you to create a calendar Event"
 msgstr "நாள்காட்டி நிகழ்வை உருவாக்க விடும்"
-
-#: createnoteplugin/noteedit.cpp:49
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Note:"
-msgstr "குறிப்பு:"
-
-#: createnoteplugin/noteedit.cpp:90
-#, kde-format
-msgid "Create new note and close this widget."
-msgstr "புதிய குறிப்பை உருவாக்கி இந்த சாளரத்தை மூடு"
-
-#: createnoteplugin/noteedit.cpp:99
-#, kde-format
-msgid "Close the widget for creating new notes."
-msgstr "புதிய குறிப்புகளை உருவாக்குவதற்கான சாளரத்தை மூடும்."
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:120
-#, kde-format
-msgctxt "edit a note on this message"
-msgid "Edit Note"
-msgstr "குறிப்பை திருத்து"
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:122
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:133
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:134
-#, kde-format
-msgctxt "create a new note out of this message"
-msgid "Create Note"
-msgstr "குறிப்பை உருவாக்கு"
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:135
-#, kde-format
-msgid "Allows you to create a note from this message"
-msgstr "இந்த அஞ்சலிலிருந்து ஓர் குறிப்பை உருவாக்க விடும்"
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:136
-#, kde-format
-msgid ""
-"This option starts an editor to create a note. Then you can edit the note to "
-"your liking before saving it."
-msgstr ""
-"குறிப்பை உருவாக்குவதற்கான திருத்தியை இந்தத் தேர்வு திறக்கும். விருப்பம்போல் குறிப்பைத் "
-"திருத்தியபின் அதை சேமிக்கலாம்."
 
 #: createtodoplugin/todoedit.cpp:61
 #, kde-format
@@ -341,3 +296,31 @@ msgstr "வெளி சிறுநிரல்"
 #, kde-format
 msgid "Configure"
 msgstr "அமை"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Note:"
+#~ msgstr "குறிப்பு:"
+
+#~ msgid "Create new note and close this widget."
+#~ msgstr "புதிய குறிப்பை உருவாக்கி இந்த சாளரத்தை மூடு"
+
+#~ msgid "Close the widget for creating new notes."
+#~ msgstr "புதிய குறிப்புகளை உருவாக்குவதற்கான சாளரத்தை மூடும்."
+
+#~ msgctxt "edit a note on this message"
+#~ msgid "Edit Note"
+#~ msgstr "குறிப்பை திருத்து"
+
+#~ msgctxt "create a new note out of this message"
+#~ msgid "Create Note"
+#~ msgstr "குறிப்பை உருவாக்கு"
+
+#~ msgid "Allows you to create a note from this message"
+#~ msgstr "இந்த அஞ்சலிலிருந்து ஓர் குறிப்பை உருவாக்க விடும்"
+
+#~ msgid ""
+#~ "This option starts an editor to create a note. Then you can edit the note "
+#~ "to your liking before saving it."
+#~ msgstr ""
+#~ "குறிப்பை உருவாக்குவதற்கான திருத்தியை இந்தத் தேர்வு திறக்கும். விருப்பம்போல் குறிப்பைத் "
+#~ "திருத்தியபின் அதை சேமிக்கலாம்."

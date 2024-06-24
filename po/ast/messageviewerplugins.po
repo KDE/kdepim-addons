@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-24 00:38+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -34,8 +34,7 @@ msgctxt "@action"
 msgid "Translate…"
 msgstr ""
 
-#: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
-#: createtodoplugin/todoedit.cpp:42
+#: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
 msgid "&Save"
 msgstr ""
@@ -52,12 +51,12 @@ msgctxt "@label:textbox"
 msgid "Event:"
 msgstr ""
 
-#: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
+#: createeventplugin/eventedit.cpp:74
 #, kde-format
 msgid "Calendar where the new event will be stored."
 msgstr ""
 
-#: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
+#: createeventplugin/eventedit.cpp:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
@@ -113,48 +112,6 @@ msgstr ""
 #: createeventplugin/viewerplugincreateeventinterface.cpp:70
 #, kde-format
 msgid "Allows you to create a calendar Event"
-msgstr ""
-
-#: createnoteplugin/noteedit.cpp:49
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Note:"
-msgstr ""
-
-#: createnoteplugin/noteedit.cpp:90
-#, kde-format
-msgid "Create new note and close this widget."
-msgstr ""
-
-#: createnoteplugin/noteedit.cpp:99
-#, kde-format
-msgid "Close the widget for creating new notes."
-msgstr ""
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:120
-#, kde-format
-msgctxt "edit a note on this message"
-msgid "Edit Note"
-msgstr ""
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:122
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:133
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:134
-#, kde-format
-msgctxt "create a new note out of this message"
-msgid "Create Note"
-msgstr ""
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:135
-#, kde-format
-msgid "Allows you to create a note from this message"
-msgstr ""
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:136
-#, kde-format
-msgid ""
-"This option starts an editor to create a note. Then you can edit the note to "
-"your liking before saving it."
 msgstr ""
 
 #: createtodoplugin/todoedit.cpp:61

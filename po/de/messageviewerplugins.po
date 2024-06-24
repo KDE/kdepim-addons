@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-24 00:38+0000\n"
 "PO-Revision-Date: 2024-04-28 20:02+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -38,8 +38,7 @@ msgctxt "@action"
 msgid "Translate…"
 msgstr "Übersetzen ..."
 
-#: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
-#: createtodoplugin/todoedit.cpp:42
+#: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
 msgid "&Save"
 msgstr "&Speichern"
@@ -58,12 +57,12 @@ msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Termin:"
 
-#: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
+#: createeventplugin/eventedit.cpp:74
 #, kde-format
 msgid "Calendar where the new event will be stored."
 msgstr "Der Kalender, in dem der neue Termin gespeichert werden soll."
 
-#: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
+#: createeventplugin/eventedit.cpp:76
 #, fuzzy, kde-format
 #| msgid "Calendar where the new event will be stored"
 msgctxt "@info:tooltip"
@@ -125,51 +124,6 @@ msgstr "Termin erstellen"
 #, kde-format
 msgid "Allows you to create a calendar Event"
 msgstr "Ermöglicht Ihnen das Erstellen eines Kalendertermins"
-
-#: createnoteplugin/noteedit.cpp:49
-#, fuzzy, kde-format
-#| msgid "Note:"
-msgctxt "@label:textbox"
-msgid "Note:"
-msgstr "Notiz:"
-
-#: createnoteplugin/noteedit.cpp:90
-#, kde-format
-msgid "Create new note and close this widget."
-msgstr "Eine neue Notiz erstellen und diesen Dialog schließen."
-
-#: createnoteplugin/noteedit.cpp:99
-#, kde-format
-msgid "Close the widget for creating new notes."
-msgstr "Den Dialog zum Erstellen von neuen Notizen schließen."
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:120
-#, kde-format
-msgctxt "edit a note on this message"
-msgid "Edit Note"
-msgstr "Notiz bearbeiten"
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:122
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:133
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:134
-#, kde-format
-msgctxt "create a new note out of this message"
-msgid "Create Note"
-msgstr "Notiz erstellen"
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:135
-#, kde-format
-msgid "Allows you to create a note from this message"
-msgstr "Ermöglicht Ihnen das Erstellen einer Notiz aus dieser Nachricht."
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:136
-#, kde-format
-msgid ""
-"This option starts an editor to create a note. Then you can edit the note to "
-"your liking before saving it."
-msgstr ""
-"Dies startet einen Editor, um eine Notiz zu erstellen. Darin können Sie die "
-"Notiz bearbeiten und danach speichern."
 
 #: createtodoplugin/todoedit.cpp:61
 #, fuzzy, kde-format
@@ -374,6 +328,36 @@ msgstr "Externes Skript"
 #, kde-format
 msgid "Configure"
 msgstr "Einrichten"
+
+#, fuzzy
+#~| msgid "Note:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Note:"
+#~ msgstr "Notiz:"
+
+#~ msgid "Create new note and close this widget."
+#~ msgstr "Eine neue Notiz erstellen und diesen Dialog schließen."
+
+#~ msgid "Close the widget for creating new notes."
+#~ msgstr "Den Dialog zum Erstellen von neuen Notizen schließen."
+
+#~ msgctxt "edit a note on this message"
+#~ msgid "Edit Note"
+#~ msgstr "Notiz bearbeiten"
+
+#~ msgctxt "create a new note out of this message"
+#~ msgid "Create Note"
+#~ msgstr "Notiz erstellen"
+
+#~ msgid "Allows you to create a note from this message"
+#~ msgstr "Ermöglicht Ihnen das Erstellen einer Notiz aus dieser Nachricht."
+
+#~ msgid ""
+#~ "This option starts an editor to create a note. Then you can edit the note "
+#~ "to your liking before saving it."
+#~ msgstr ""
+#~ "Dies startet einen Editor, um eine Notiz zu erstellen. Darin können Sie "
+#~ "die Notiz bearbeiten und danach speichern."
 
 #~ msgid "Create Event..."
 #~ msgstr "Termin erstellen ..."

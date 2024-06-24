@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-24 00:38+0000\n"
 "PO-Revision-Date: 2017-07-16 22:56+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -37,8 +37,7 @@ msgctxt "@action"
 msgid "Translate…"
 msgstr "Prevedi..."
 
-#: createeventplugin/eventedit.cpp:44 createnoteplugin/noteedit.cpp:38
-#: createtodoplugin/todoedit.cpp:42
+#: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
 msgid "&Save"
 msgstr "&Sačuvaj"
@@ -57,12 +56,12 @@ msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Događaj:"
 
-#: createeventplugin/eventedit.cpp:74 createnoteplugin/noteedit.cpp:66
+#: createeventplugin/eventedit.cpp:74
 #, kde-format
 msgid "Calendar where the new event will be stored."
 msgstr "Kalendar u koji se smešta novi događaj."
 
-#: createeventplugin/eventedit.cpp:76 createnoteplugin/noteedit.cpp:68
+#: createeventplugin/eventedit.cpp:76
 #, fuzzy, kde-format
 #| msgid "Calendar where the new event will be stored"
 msgctxt "@info:tooltip"
@@ -123,51 +122,6 @@ msgstr "Napravi događaj"
 #, kde-format
 msgid "Allows you to create a calendar Event"
 msgstr "Daje vam da napravite kalendarski događaj."
-
-#: createnoteplugin/noteedit.cpp:49
-#, fuzzy, kde-format
-#| msgid "Note:"
-msgctxt "@label:textbox"
-msgid "Note:"
-msgstr "Napomena:"
-
-#: createnoteplugin/noteedit.cpp:90
-#, kde-format
-msgid "Create new note and close this widget."
-msgstr "Napravite novi događaj i zatvorite ovaj vidžet."
-
-#: createnoteplugin/noteedit.cpp:99
-#, kde-format
-msgid "Close the widget for creating new notes."
-msgstr "Zatvara vidžet za stvaranje novih beležaka."
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:120
-#, kde-format
-msgctxt "edit a note on this message"
-msgid "Edit Note"
-msgstr "Uredi belešku"
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:122
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:133
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:134
-#, kde-format
-msgctxt "create a new note out of this message"
-msgid "Create Note"
-msgstr "Napravi belešku"
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:135
-#, kde-format
-msgid "Allows you to create a note from this message"
-msgstr "Omogućava vam da od ove poruke napravite belešku."
-
-#: createnoteplugin/viewerplugincreatenoteinterface.cpp:136
-#, kde-format
-msgid ""
-"This option starts an editor to create a note. Then you can edit the note to "
-"your liking before saving it."
-msgstr ""
-"Ova opcija pokreće uređivač radi pisanja beleške. Zatim možete po želji "
-"urediti belešku pre nego što je sačuvate."
 
 #: createtodoplugin/todoedit.cpp:61
 #, kde-format
@@ -368,6 +322,36 @@ msgstr "Spoljašnja skripta:"
 #, kde-format
 msgid "Configure"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Note:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Note:"
+#~ msgstr "Napomena:"
+
+#~ msgid "Create new note and close this widget."
+#~ msgstr "Napravite novi događaj i zatvorite ovaj vidžet."
+
+#~ msgid "Close the widget for creating new notes."
+#~ msgstr "Zatvara vidžet za stvaranje novih beležaka."
+
+#~ msgctxt "edit a note on this message"
+#~ msgid "Edit Note"
+#~ msgstr "Uredi belešku"
+
+#~ msgctxt "create a new note out of this message"
+#~ msgid "Create Note"
+#~ msgstr "Napravi belešku"
+
+#~ msgid "Allows you to create a note from this message"
+#~ msgstr "Omogućava vam da od ove poruke napravite belešku."
+
+#~ msgid ""
+#~ "This option starts an editor to create a note. Then you can edit the note "
+#~ "to your liking before saving it."
+#~ msgstr ""
+#~ "Ova opcija pokreće uređivač radi pisanja beleške. Zatim možete po želji "
+#~ "urediti belešku pre nego što je sačuvate."
 
 #~ msgid "Create Event..."
 #~ msgstr "Napravi događaj..."
