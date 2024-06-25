@@ -301,25 +301,3 @@ msgstr "Externí skript"
 #, kde-format
 msgid "Configure"
 msgstr "Nastavit"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Note:"
-#~ msgstr "Poznámka:"
-
-#~ msgctxt "edit a note on this message"
-#~ msgid "Edit Note"
-#~ msgstr "Upravit poznámku"
-
-#~ msgctxt "create a new note out of this message"
-#~ msgid "Create Note"
-#~ msgstr "Vytvořit poznámku"
-
-#~ msgid "Allows you to create a note from this message"
-#~ msgstr "Umožní vytvoření poznámky z této zprávy"
-
-#~ msgid ""
-#~ "This option starts an editor to create a note. Then you can edit the note "
-#~ "to your liking before saving it."
-#~ msgstr ""
-#~ "Tato volba spustí editor pro vytvoření poznámky. Tento úkol můžete před "
-#~ "uložením libovolně upravit."
