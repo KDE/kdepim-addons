@@ -174,10 +174,12 @@ void AdblockManager::handleListFetched(QNetworkReply *reply)
     if (!file.open(QIODevice::WriteOnly)) {
         qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Failed to open" << file.fileName() << "for writing."
                                                << "Filter list not updated";
+        reply->deleteLater();
         return;
     }
 
     copyStream(*reply, file);
+    reply->deleteLater();
 }
 
 void AdblockManager::refreshLists()
