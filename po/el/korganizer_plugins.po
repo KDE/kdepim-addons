@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-26 00:39+0000\n"
 "PO-Revision-Date: 2014-03-29 09:00+0100\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@free.fr>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -32,789 +32,506 @@ msgctxt "@action:button"
 msgid "Search &Directory Service"
 msgstr ""
 
-#: plugins/datenums/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure Day Numbers"
-msgctxt "@title:window"
-msgid "Configure Day Numbers"
-msgstr "Διαμόρφωση των αριθμών ημερών"
-
-#: plugins/datenums/configdialog.cpp:43
-#, kde-format
-msgid "Show Date Number"
-msgstr "Εμφάνιση του αριθμού ημερομηνίας"
-
-#: plugins/datenums/configdialog.cpp:48
-#, kde-format
-msgid "Show day number"
-msgstr "Εμφάνιση του αριθμού ημέρας"
-
-#: plugins/datenums/configdialog.cpp:51
-#, kde-format
-msgid "Show days to end of year"
-msgstr "Εμφάνιση των ημερών μέχρι το τέλος του έτους"
-
-#: plugins/datenums/configdialog.cpp:54
-#, kde-format
-msgid "Show both"
-msgstr "Εμφάνιση και των δύο"
-
-#: plugins/datenums/datenums.cpp:36
-#, kde-format
-msgid "This plugin shows information on a day's position in the year."
-msgstr ""
-"Αυτό το πρόσθετο εμφανίζει πληροφορίες σχετικά με τη θέση μιας ημέρας μέσα "
-"στο έτος."
-
-#: plugins/datenums/datenums.cpp:54
-#, kde-format
-msgid "1 day before the end of the year"
-msgid_plural "%1 days before the end of the year"
-msgstr[0] "1 μέρα πριν το τέλος του έτους"
-msgstr[1] "%1 μέρες πριν το τέλος του έτους"
-
-#: plugins/datenums/datenums.cpp:59
-#, kde-format
-msgctxt "dayOfYear / daysTillEndOfYear"
-msgid "%1 / %2"
-msgstr "%1 / %2"
-
-#: plugins/datenums/datenums.cpp:60
-#, kde-format
-msgid "1 day since the beginning of the year,\n"
-msgid_plural "%1 days since the beginning of the year,\n"
-msgstr[0] "1 μέρα από την αρχή του έτους,\n"
-msgstr[1] "%1 μέρες από την αρχή του έτους,\n"
-
-#: plugins/datenums/datenums.cpp:61
-#, kde-format
-msgid "1 day until the end of the year"
-msgid_plural "%1 days until the end of the year"
-msgstr[0] "1 μέρα μέχρι το τέλος του έτους"
-msgstr[1] "%1 μέρες μέχρι το τέλος του έτους"
-
-#: plugins/datenums/datenums.cpp:102
-#, kde-format
-msgctxt "Week weekOfYear"
-msgid "Week %1"
-msgstr "Εβδομάδα %1"
-
-#: plugins/datenums/datenums.cpp:103 plugins/datenums/datenums.cpp:113
-#: plugins/datenums/datenums.cpp:118
-#, kde-format
-msgid "1 week since the beginning of the year"
-msgid_plural "%1 weeks since the beginning of the year"
-msgstr[0] "1 εβδομάδα από την αρχή του έτους"
-msgstr[1] "%1 εβδομάδες από την αρχή του έτους"
-
-#: plugins/datenums/datenums.cpp:106
-#, kde-format
-msgctxt "weekOfYear (year)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
-
-#: plugins/datenums/datenums.cpp:107
-#, kde-format
-msgctxt "Week weekOfYear (year)"
-msgid "Week %1 (%2)"
-msgstr "Εβδομάδα %1 (%2)"
-
-#: plugins/datenums/datenums.cpp:122
-#, kde-format
-msgid "1 week remaining"
-msgid_plural "%1 weeks remaining"
-msgstr[0] "Απομένει 1 εβδομάδα"
-msgstr[1] "Απομένουν %1 εβδομάδες"
-
-#: plugins/datenums/datenums.cpp:123
-#, kde-format
-msgid "1 week until the end of the year"
-msgid_plural "%1 weeks until the end of the year"
-msgstr[0] "1 εβδομάδα μέχρι το τέλος του έτους"
-msgstr[1] "%1 εβδομάδες μέχρι το τέλος του έτους"
-
-#: plugins/datenums/datenums.cpp:124
-#, kde-format
-msgctxt "weekOfYear / weeksTillEndOfYear"
-msgid "%1 / %2"
-msgstr "%1 / %2"
-
-#: plugins/datenums/datenums.cpp:140
-#, kde-format
-msgctxt ""
-"n weeks since the beginning of the year\n"
-"n weeks until the end of the year"
-msgid ""
-"%1\n"
-"%2"
-msgstr ""
-"%1\n"
-"%2"
-
-#: plugins/hebrew/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure Holidays"
-msgctxt "@title:window"
-msgid "Configure Holidays"
-msgstr "Διαμόρφωση αργιών"
-
-#: plugins/hebrew/configdialog.cpp:42
-#, kde-format
-msgid "Use Israeli holidays"
-msgstr "Χρήση ισραηλινών αργιών"
-
-#: plugins/hebrew/configdialog.cpp:46
-#, kde-format
-msgid "Show weekly parsha"
-msgstr "Εμφάνιση εβδομαδιαίου parsha"
-
-#: plugins/hebrew/configdialog.cpp:50
-#, kde-format
-msgid "Show day of Omer"
-msgstr "Εμφάνιση ημέρας του Omer"
-
-#: plugins/hebrew/configdialog.cpp:54
-#, kde-format
-msgid "Show Chol HaMoed"
-msgstr "Εμφάνιση Chol HaMoed"
-
-#: plugins/hebrew/hebrew.cpp:60
-#, kde-format
-msgctxt ""
-"Change the next two strings if emphasis is done differently in your language."
-msgid ""
-"<qt><p align=\"center\"><i>\n"
-"%1\n"
-"</i></p></qt>"
-msgstr ""
-"<qt><p align=\"center\"><i>\n"
-"%1\n"
-"</i></p></qt>"
-
-#: plugins/hebrew/hebrew.cpp:67
-#, kde-format
-msgid "This plugin provides the date in the Jewish calendar."
-msgstr "Αυτό το πρόσθετο προσφέρει την ημερομηνία στο εβραϊκό ημερολόγιο."
-
-#: plugins/hebrew/holiday.cpp:75
-#, kde-format
-msgctxt ""
-"These are Jewish holidays and mostly do not have translations. They may have "
-"different spellings in your language; otherwise, just translate the sound to "
-"your characters."
-msgid "Sh. HaHodesh"
-msgstr "Sh. HaHodesh"
-
-#: plugins/hebrew/holiday.cpp:83
-#, kde-format
-msgid "Erev Pesach"
-msgstr "Erev Pesach"
-
-#: plugins/hebrew/holiday.cpp:94
-#, kde-format
-msgid "Sh. HaGadol"
-msgstr "Sh. HaGadol"
-
-#: plugins/hebrew/holiday.cpp:102
-#, kde-format
-msgid "Pesach"
-msgstr "Pesach"
-
-#: plugins/hebrew/holiday.cpp:113 plugins/hebrew/holiday.cpp:307
-#, kde-format
-msgid "Chol Hamoed"
-msgstr "Chol Hamoed"
-
-#: plugins/hebrew/holiday.cpp:124 plugins/hebrew/holiday.cpp:129
-#: plugins/hebrew/holiday.cpp:138
-#, kde-format
-msgid "Yom HaShoah"
-msgstr "Yom HaShoah"
-
-#: plugins/hebrew/holiday.cpp:164 plugins/hebrew/holiday.cpp:171
-#: plugins/hebrew/holiday.cpp:182
-#, kde-format
-msgid "Yom HaAtzmaut"
-msgstr "Yom HaAtzmaut"
-
-#: plugins/hebrew/holiday.cpp:166 plugins/hebrew/holiday.cpp:180
-#, kde-format
-msgid "Yom HaZikaron"
-msgstr "Yom HaZikaron"
-
-#: plugins/hebrew/holiday.cpp:190
-#, kde-format
-msgid "Yom Yerushalayim"
-msgstr "Yom Yerushalayim"
-
-#: plugins/hebrew/holiday.cpp:194
-#, kde-format
-msgid "Lag BaOmer"
-msgstr "Lag BaOmer"
-
-#: plugins/hebrew/holiday.cpp:220
-#, kde-format
-msgid "Erev Shavuot"
-msgstr "Erev Shavuot"
-
-#: plugins/hebrew/holiday.cpp:225
-#, kde-format
-msgid "Shavuot"
-msgstr "Shavuot"
-
-#: plugins/hebrew/holiday.cpp:234
-#, kde-format
-msgid "Tzom Tammuz"
-msgstr "Tzom Tammuz"
-
-#: plugins/hebrew/holiday.cpp:242
-#, kde-format
-msgid "Sh. Hazon"
-msgstr "Sh. Hazon"
-
-#: plugins/hebrew/holiday.cpp:244
-#, kde-format
-msgid "Sh. Nahamu"
-msgstr "Sh. Nahamu"
-
-#: plugins/hebrew/holiday.cpp:248
-#, kde-format
-msgid "Tisha B'Av"
-msgstr "Tisha B'Av"
-
-#: plugins/hebrew/holiday.cpp:254
-#, kde-format
-msgid "S'lichot"
-msgstr "S'lichot"
-
-#: plugins/hebrew/holiday.cpp:256
-#, kde-format
-msgid "Erev R.H."
-msgstr "Erev R.H."
-
-#: plugins/hebrew/holiday.cpp:264
-#, kde-format
-msgid "Rosh Hashana"
-msgstr "Rosh Hashana"
-
-#: plugins/hebrew/holiday.cpp:268 plugins/hebrew/holiday.cpp:283
-#, kde-format
-msgid "Sh. Shuvah"
-msgstr "Sh. Shuvah"
-
-#: plugins/hebrew/holiday.cpp:270 plugins/hebrew/holiday.cpp:275
-#, kde-format
-msgid "Tzom Gedalia"
-msgstr "Tzom Gedalia"
-
-#: plugins/hebrew/holiday.cpp:287
-#, kde-format
-msgid "Erev Y.K."
-msgstr "Erev Y.K."
-
-#: plugins/hebrew/holiday.cpp:290
-#, kde-format
-msgid "Yom Kippur"
-msgstr "Yom Kippur"
-
-#: plugins/hebrew/holiday.cpp:293
-#, kde-format
-msgid "Erev Sukkot"
-msgstr "Erev Sukkot"
-
-#: plugins/hebrew/holiday.cpp:298
-#, kde-format
-msgid "Sukkot"
-msgstr "Sukkot"
-
-#: plugins/hebrew/holiday.cpp:311
-#, kde-format
-msgid "Hoshana Rabah"
-msgstr "Hoshana Rabah"
-
-#: plugins/hebrew/holiday.cpp:314
-#, kde-format
-msgid "Shmini Atzeret"
-msgstr "Shmini Atzeret"
-
-#: plugins/hebrew/holiday.cpp:318
-#, kde-format
-msgid "Simchat Torah"
-msgstr "Simchat Torah"
-
-#: plugins/hebrew/holiday.cpp:329
-#, kde-format
-msgid "Erev Hanukah"
-msgstr "Erev Hanukah"
-
-#: plugins/hebrew/holiday.cpp:331 plugins/hebrew/holiday.cpp:339
-#, kde-format
-msgid "Hanukah"
-msgstr "Hanukah"
-
-#: plugins/hebrew/holiday.cpp:342
-#, kde-format
-msgid "Tzom Tevet"
-msgstr "Tzom Tevet"
-
-#: plugins/hebrew/holiday.cpp:352 plugins/hebrew/holiday.cpp:361
-#: plugins/hebrew/holiday.cpp:366 plugins/hebrew/holiday.cpp:372
-#, kde-format
-msgid "Sh. Shirah"
-msgstr "Sh. Shirah"
-
-#: plugins/hebrew/holiday.cpp:368
-#, kde-format
-msgid "Tu B'Shvat"
-msgstr "Tu B'Shvat"
-
-#: plugins/hebrew/holiday.cpp:383 plugins/hebrew/holiday.cpp:395
-#: plugins/hebrew/holiday.cpp:403
-#, kde-format
-msgid "Sh. Shekalim"
-msgstr "Sh. Shekalim"
-
-#: plugins/hebrew/holiday.cpp:392
-#, kde-format
-msgid "Purim Katan"
-msgstr "Purim Katan"
-
-#: plugins/hebrew/holiday.cpp:411 plugins/hebrew/holiday.cpp:431
-#, kde-format
-msgid "Ta'anit Ester"
-msgstr "Ta'anit Ester"
-
-#: plugins/hebrew/holiday.cpp:420 plugins/hebrew/holiday.cpp:425
-#, kde-format
-msgid "Sh. Zachor"
-msgstr "Sh. Zachor"
-
-#: plugins/hebrew/holiday.cpp:427
-#, kde-format
-msgid "Erev Purim"
-msgstr "Erev Purim"
-
-#: plugins/hebrew/holiday.cpp:435
-#, kde-format
-msgid "Purim"
-msgstr "Purim"
-
-#: plugins/hebrew/holiday.cpp:439 plugins/hebrew/holiday.cpp:444
-#, kde-format
-msgid "Shushan Purim"
-msgstr "Shushan Purim"
-
-#: plugins/hebrew/holiday.cpp:455
-#, kde-format
-msgid "Sh. Parah"
-msgstr "Sh. Parah"
-
-#: plugins/hebrew/holiday.cpp:465
-#, kde-format
-msgid "Sh. HaHodesh"
-msgstr "Sh. HaHodesh"
-
-#: plugins/hebrew/holiday.cpp:481
-#, kde-format
-msgid " Omer"
-msgstr " Omer"
-
-#: plugins/hebrew/parsha.cpp:28
-#, kde-format
-msgctxt ""
-"These are weekly readings and do not have translations. They may have "
-"different spellings in your language; otherwise, just translate the sound to "
-"your characters"
-msgid "Bereshit"
-msgstr "Bereshit"
-
-#: plugins/hebrew/parsha.cpp:29
-#, kde-format
-msgid "Noach"
-msgstr "Noach"
-
-#: plugins/hebrew/parsha.cpp:29
-#, kde-format
-msgid "Lech L'cha"
-msgstr "Lech L'cha"
-
-#: plugins/hebrew/parsha.cpp:29
-#, kde-format
-msgid "Vayera"
-msgstr "Vayera"
-
-#: plugins/hebrew/parsha.cpp:29
-#, kde-format
-msgid "Chaye Sarah"
-msgstr "Chaye Sarah"
-
-#: plugins/hebrew/parsha.cpp:29
-#, kde-format
-msgid "Toldot"
-msgstr "Toldot"
-
-#: plugins/hebrew/parsha.cpp:29
-#, kde-format
-msgid "Vayetze"
-msgstr "Vayetze"
-
-#: plugins/hebrew/parsha.cpp:29
-#, kde-format
-msgid "Vayishlach"
-msgstr "Vayishlach"
-
-#: plugins/hebrew/parsha.cpp:30
-#, kde-format
-msgid "Vayeshev"
-msgstr "Vayeshev"
-
-#: plugins/hebrew/parsha.cpp:30
-#, kde-format
-msgid "Miketz"
-msgstr "Miketz"
-
-#: plugins/hebrew/parsha.cpp:30
-#, kde-format
-msgid "Vayigash"
-msgstr "Vayigash"
-
-#: plugins/hebrew/parsha.cpp:30
-#, kde-format
-msgid "Vayechi"
-msgstr "Vayechi"
-
-#: plugins/hebrew/parsha.cpp:30
-#, kde-format
-msgid "Shemot"
-msgstr "Shemot"
-
-#: plugins/hebrew/parsha.cpp:30
-#, kde-format
-msgid "Vaera"
-msgstr "Vaera"
-
-#: plugins/hebrew/parsha.cpp:30
-#, kde-format
-msgid "Bo"
-msgstr "Bo"
-
-#: plugins/hebrew/parsha.cpp:31
-#, kde-format
-msgid "Beshalach"
-msgstr "Beshalach"
-
-#: plugins/hebrew/parsha.cpp:31
-#, kde-format
-msgid "Yitro"
-msgstr "Yitro"
-
-#: plugins/hebrew/parsha.cpp:31
-#, kde-format
-msgid "Mishpatim"
-msgstr "Mishpatim"
-
-#: plugins/hebrew/parsha.cpp:31
-#, kde-format
-msgid "Terumah"
-msgstr "Terumah"
-
-#: plugins/hebrew/parsha.cpp:31
-#, kde-format
-msgid "Tetzaveh"
-msgstr "Tetzaveh"
-
-#: plugins/hebrew/parsha.cpp:31
-#, kde-format
-msgid "Ki Tisa"
-msgstr "Ki Tisa"
-
-#: plugins/hebrew/parsha.cpp:31
-#, kde-format
-msgid "Vayakhel"
-msgstr "Vayakhel"
-
-#: plugins/hebrew/parsha.cpp:32
-#, kde-format
-msgid "Pekudei"
-msgstr "Pekudei"
-
-#: plugins/hebrew/parsha.cpp:32
-#, kde-format
-msgid "Vayikra"
-msgstr "Vayikra"
-
-#: plugins/hebrew/parsha.cpp:32
-#, kde-format
-msgid "Tzav"
-msgstr "Tzav"
-
-#: plugins/hebrew/parsha.cpp:32
-#, kde-format
-msgid "Shemini"
-msgstr "Shemini"
-
-#: plugins/hebrew/parsha.cpp:32
-#, kde-format
-msgid "Tazria"
-msgstr "Tazria"
-
-#: plugins/hebrew/parsha.cpp:32
-#, kde-format
-msgid "Metzora"
-msgstr "Metzora"
-
-#: plugins/hebrew/parsha.cpp:32
-#, kde-format
-msgid "Acharei Mot"
-msgstr "Acharei Mot"
-
-#: plugins/hebrew/parsha.cpp:33
-#, kde-format
-msgid "Kedoshim"
-msgstr "Kedoshim"
-
-#: plugins/hebrew/parsha.cpp:33
-#, kde-format
-msgid "Emor"
-msgstr "Emor"
-
-#: plugins/hebrew/parsha.cpp:33
-#, kde-format
-msgid "Behar"
-msgstr "Behar"
-
-#: plugins/hebrew/parsha.cpp:33
-#, kde-format
-msgid "Bechukotai"
-msgstr "Bechukotai"
-
-#: plugins/hebrew/parsha.cpp:33
-#, kde-format
-msgid "Bemidbar"
-msgstr "Bemidbar"
-
-#: plugins/hebrew/parsha.cpp:33
-#, kde-format
-msgid "Naso"
-msgstr "Naso"
-
-#: plugins/hebrew/parsha.cpp:33
-#, kde-format
-msgid "Behaalotcha"
-msgstr "Behaalotcha"
-
-#: plugins/hebrew/parsha.cpp:34
-#, kde-format
-msgid "Shelach"
-msgstr "Shelach"
-
-#: plugins/hebrew/parsha.cpp:34
-#, kde-format
-msgid "Korach"
-msgstr "Korach"
-
-#: plugins/hebrew/parsha.cpp:34
-#, kde-format
-msgid "Chukat"
-msgstr "Chukat"
-
-#: plugins/hebrew/parsha.cpp:34
-#, kde-format
-msgid "Balak"
-msgstr "Balak"
-
-#: plugins/hebrew/parsha.cpp:34
-#, kde-format
-msgid "Pinchas"
-msgstr "Pinchas"
-
-#: plugins/hebrew/parsha.cpp:34
-#, kde-format
-msgid "Matot"
-msgstr "Matot"
-
-#: plugins/hebrew/parsha.cpp:34
-#, kde-format
-msgid "Masei"
-msgstr "Masei"
-
-#: plugins/hebrew/parsha.cpp:35
-#, kde-format
-msgid "Devarim"
-msgstr "Devarim"
-
-#: plugins/hebrew/parsha.cpp:35
-#, kde-format
-msgid "Vaetchanan"
-msgstr "Vaetchanan"
-
-#: plugins/hebrew/parsha.cpp:35
-#, kde-format
-msgid "Ekev"
-msgstr "Ekev"
-
-#: plugins/hebrew/parsha.cpp:35
-#, kde-format
-msgid "Reeh"
-msgstr "Reeh"
-
-#: plugins/hebrew/parsha.cpp:35
-#, kde-format
-msgid "Shoftim"
-msgstr "Shoftim"
-
-#: plugins/hebrew/parsha.cpp:35
-#, kde-format
-msgid "Ki Tetze"
-msgstr "Ki Tetze"
-
-#: plugins/hebrew/parsha.cpp:35
-#, kde-format
-msgid "Ki Tavo"
-msgstr "Ki Tavo"
-
-#: plugins/hebrew/parsha.cpp:36
-#, kde-format
-msgid "Nitzavim"
-msgstr "Nitzavim"
-
-#: plugins/hebrew/parsha.cpp:36
-#, kde-format
-msgid "Vayelech"
-msgstr "Vayelech"
-
-#: plugins/hebrew/parsha.cpp:36
-#, kde-format
-msgid "Haazinu"
-msgstr "Haazinu"
-
-#: plugins/lunarphases/lunarphases.cpp:61
-#, kde-format
-msgid ""
-"This plugin displays the day's lunar phase (New, First, Last, Full). "
-"Currently, the phase is computed for noon at UTC; therefore, you should "
-"expect variations by 1 day in either direction."
-msgstr ""
-
-#: plugins/picoftheday/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure Picture of the Day"
-msgctxt "@title:window"
-msgid "Configure Picture of the Day"
-msgstr "Διαμόρφωση εικόνας της ημέρας"
-
-#: plugins/picoftheday/configdialog.cpp:42
-#, kde-format
-msgid "Thumbnail Aspect Ratio Mode"
-msgstr "Λειτουργία αναλογίας διαστάσεων επισκόπησης"
-
-#: plugins/picoftheday/configdialog.cpp:46
-#, kde-format
-msgid "Ignore aspect ratio"
-msgstr "Αγνόηση αναλογίας διαστάσεων"
-
-#: plugins/picoftheday/configdialog.cpp:48
-#, kde-format
-msgid ""
-"The thumbnail will be scaled freely. The aspect ratio will not be preserved."
-msgstr ""
-"Η εικόνα επισκόπησης θα κλιμακώνεται ελεύθερα. Η αναλογία διαστάσεων δε θα "
-"διατηρηθεί."
-
-#: plugins/picoftheday/configdialog.cpp:52
-#, kde-format
-msgid "Keep aspect ratio"
-msgstr "Διατήρηση αναλογίας διαστάσεων"
-
-#: plugins/picoftheday/configdialog.cpp:54
-#, kde-format
-msgid ""
-"The thumbnail will be scaled to a rectangle as large as possible inside a "
-"given rectangle, preserving the aspect ratio."
-msgstr ""
-"Η εικόνα επισκόπησης θα κλιμακωθεί σε ένα ορθογώνιο όσο δυνατόν μεγαλύτερο, "
-"μέσα σε δοσμένο ορθογώνιο, διατηρώντας την αναλογία διαστάσεων."
-
-#: plugins/picoftheday/configdialog.cpp:59
-#, kde-format
-msgid "Keep aspect ratio by expanding"
-msgstr "Διατήρηση αναλογίας διαστάσεων με επέκταση"
-
-#: plugins/picoftheday/configdialog.cpp:61
-#, kde-format
-msgid ""
-"The thumbnail will be scaled to a rectangle as small as possible outside a "
-"given rectangle, preserving the aspect ratio."
-msgstr ""
-"Η εικόνα επισκόπησης θα κλιμακωθεί σε ένα ορθογώνιο όσο δυνατόν μικρότερο, "
-"έξω από δοσμένο ορθογώνιο, διατηρώντας την αναλογία διαστάσεων."
-
-#: plugins/picoftheday/element.cpp:209
-#, kde-format
-msgid "Wikipedia POTD: %1"
-msgstr "Wikipedia POTD: %1"
-
-#: plugins/picoftheday/element.cpp:326
-#, kde-format
-msgid "Picture Page"
-msgstr "Σελίδα εικόνας"
-
-#: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Loading..."
-msgid "Loading…"
-msgstr "Φόρτωση..."
-
-#: plugins/picoftheday/element.cpp:331
-#, fuzzy, kde-format
-#| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
-msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
-msgstr "<qt>Φόρτωση της <i>Εικόνας της ημέρας</i>…</qt>"
-
-#: plugins/picoftheday/picoftheday.cpp:48
-#, kde-format
-msgid "<qt>This plugin provides the Wikipedia <i>Picture of the Day</i>.</qt>"
-msgstr ""
-"<qt>Αυτό το πρόσθετο προσφέρει την <i>Εικόνα της ημέρας</i> της Wikipedia.</"
-"qt>"
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:29
-#, kde-format
-msgid "This plugin provides links to Wikipedia's 'This Day in History' pages."
-msgstr ""
-"Αυτό το πρόσθετο προσφέρει δεσμούς στις σελίδες 'Αυτή η ημέρα στην Ιστορία' "
-"της Wikipedia."
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:37
-#, kde-format
-msgid "This day in history"
-msgstr "Αυτή η ημέρα στην Ιστορία"
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:39
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "Localized Wikipedia website"
-#| msgid "http://en.wikipedia.org/wiki/"
-msgctxt "Localized Wikipedia website"
-msgid "https://en.wikipedia.org/wiki/"
-msgstr "http://en.wikipedia.org/wiki/"
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:40
-#, kde-format
-msgctxt "Qt date format used by the localized Wikipedia"
-msgid "MMMM_d"
-msgstr "MMMM_d"
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:51
-#, kde-format
-msgid "This month in history"
-msgstr "Αυτός ο μήνας στην Ιστορία"
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:54
-#, kde-format
-msgctxt "Qt date format used by the localized Wikipedia"
-msgid "MMMM_yyyy"
-msgstr "ΜΜΜΜ_εεεε"
+#, fuzzy
+#~| msgid "Configure Day Numbers"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Day Numbers"
+#~ msgstr "Διαμόρφωση των αριθμών ημερών"
+
+#~ msgid "Show Date Number"
+#~ msgstr "Εμφάνιση του αριθμού ημερομηνίας"
+
+#~ msgid "Show day number"
+#~ msgstr "Εμφάνιση του αριθμού ημέρας"
+
+#~ msgid "Show days to end of year"
+#~ msgstr "Εμφάνιση των ημερών μέχρι το τέλος του έτους"
+
+#~ msgid "Show both"
+#~ msgstr "Εμφάνιση και των δύο"
+
+#~ msgid "This plugin shows information on a day's position in the year."
+#~ msgstr ""
+#~ "Αυτό το πρόσθετο εμφανίζει πληροφορίες σχετικά με τη θέση μιας ημέρας "
+#~ "μέσα στο έτος."
+
+#~ msgid "1 day before the end of the year"
+#~ msgid_plural "%1 days before the end of the year"
+#~ msgstr[0] "1 μέρα πριν το τέλος του έτους"
+#~ msgstr[1] "%1 μέρες πριν το τέλος του έτους"
+
+#~ msgctxt "dayOfYear / daysTillEndOfYear"
+#~ msgid "%1 / %2"
+#~ msgstr "%1 / %2"
+
+#~ msgid "1 day since the beginning of the year,\n"
+#~ msgid_plural "%1 days since the beginning of the year,\n"
+#~ msgstr[0] "1 μέρα από την αρχή του έτους,\n"
+#~ msgstr[1] "%1 μέρες από την αρχή του έτους,\n"
+
+#~ msgid "1 day until the end of the year"
+#~ msgid_plural "%1 days until the end of the year"
+#~ msgstr[0] "1 μέρα μέχρι το τέλος του έτους"
+#~ msgstr[1] "%1 μέρες μέχρι το τέλος του έτους"
+
+#~ msgctxt "Week weekOfYear"
+#~ msgid "Week %1"
+#~ msgstr "Εβδομάδα %1"
+
+#~ msgid "1 week since the beginning of the year"
+#~ msgid_plural "%1 weeks since the beginning of the year"
+#~ msgstr[0] "1 εβδομάδα από την αρχή του έτους"
+#~ msgstr[1] "%1 εβδομάδες από την αρχή του έτους"
+
+#~ msgctxt "weekOfYear (year)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Week weekOfYear (year)"
+#~ msgid "Week %1 (%2)"
+#~ msgstr "Εβδομάδα %1 (%2)"
+
+#~ msgid "1 week remaining"
+#~ msgid_plural "%1 weeks remaining"
+#~ msgstr[0] "Απομένει 1 εβδομάδα"
+#~ msgstr[1] "Απομένουν %1 εβδομάδες"
+
+#~ msgid "1 week until the end of the year"
+#~ msgid_plural "%1 weeks until the end of the year"
+#~ msgstr[0] "1 εβδομάδα μέχρι το τέλος του έτους"
+#~ msgstr[1] "%1 εβδομάδες μέχρι το τέλος του έτους"
+
+#~ msgctxt "weekOfYear / weeksTillEndOfYear"
+#~ msgid "%1 / %2"
+#~ msgstr "%1 / %2"
+
+#~ msgctxt ""
+#~ "n weeks since the beginning of the year\n"
+#~ "n weeks until the end of the year"
+#~ msgid ""
+#~ "%1\n"
+#~ "%2"
+#~ msgstr ""
+#~ "%1\n"
+#~ "%2"
+
+#, fuzzy
+#~| msgid "Configure Holidays"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Holidays"
+#~ msgstr "Διαμόρφωση αργιών"
+
+#~ msgid "Use Israeli holidays"
+#~ msgstr "Χρήση ισραηλινών αργιών"
+
+#~ msgid "Show weekly parsha"
+#~ msgstr "Εμφάνιση εβδομαδιαίου parsha"
+
+#~ msgid "Show day of Omer"
+#~ msgstr "Εμφάνιση ημέρας του Omer"
+
+#~ msgid "Show Chol HaMoed"
+#~ msgstr "Εμφάνιση Chol HaMoed"
+
+#~ msgctxt ""
+#~ "Change the next two strings if emphasis is done differently in your "
+#~ "language."
+#~ msgid ""
+#~ "<qt><p align=\"center\"><i>\n"
+#~ "%1\n"
+#~ "</i></p></qt>"
+#~ msgstr ""
+#~ "<qt><p align=\"center\"><i>\n"
+#~ "%1\n"
+#~ "</i></p></qt>"
+
+#~ msgid "This plugin provides the date in the Jewish calendar."
+#~ msgstr "Αυτό το πρόσθετο προσφέρει την ημερομηνία στο εβραϊκό ημερολόγιο."
+
+#~ msgctxt ""
+#~ "These are Jewish holidays and mostly do not have translations. They may "
+#~ "have different spellings in your language; otherwise, just translate the "
+#~ "sound to your characters."
+#~ msgid "Sh. HaHodesh"
+#~ msgstr "Sh. HaHodesh"
+
+#~ msgid "Erev Pesach"
+#~ msgstr "Erev Pesach"
+
+#~ msgid "Sh. HaGadol"
+#~ msgstr "Sh. HaGadol"
+
+#~ msgid "Pesach"
+#~ msgstr "Pesach"
+
+#~ msgid "Chol Hamoed"
+#~ msgstr "Chol Hamoed"
+
+#~ msgid "Yom HaShoah"
+#~ msgstr "Yom HaShoah"
+
+#~ msgid "Yom HaAtzmaut"
+#~ msgstr "Yom HaAtzmaut"
+
+#~ msgid "Yom HaZikaron"
+#~ msgstr "Yom HaZikaron"
+
+#~ msgid "Yom Yerushalayim"
+#~ msgstr "Yom Yerushalayim"
+
+#~ msgid "Lag BaOmer"
+#~ msgstr "Lag BaOmer"
+
+#~ msgid "Erev Shavuot"
+#~ msgstr "Erev Shavuot"
+
+#~ msgid "Shavuot"
+#~ msgstr "Shavuot"
+
+#~ msgid "Tzom Tammuz"
+#~ msgstr "Tzom Tammuz"
+
+#~ msgid "Sh. Hazon"
+#~ msgstr "Sh. Hazon"
+
+#~ msgid "Sh. Nahamu"
+#~ msgstr "Sh. Nahamu"
+
+#~ msgid "Tisha B'Av"
+#~ msgstr "Tisha B'Av"
+
+#~ msgid "S'lichot"
+#~ msgstr "S'lichot"
+
+#~ msgid "Erev R.H."
+#~ msgstr "Erev R.H."
+
+#~ msgid "Rosh Hashana"
+#~ msgstr "Rosh Hashana"
+
+#~ msgid "Sh. Shuvah"
+#~ msgstr "Sh. Shuvah"
+
+#~ msgid "Tzom Gedalia"
+#~ msgstr "Tzom Gedalia"
+
+#~ msgid "Erev Y.K."
+#~ msgstr "Erev Y.K."
+
+#~ msgid "Yom Kippur"
+#~ msgstr "Yom Kippur"
+
+#~ msgid "Erev Sukkot"
+#~ msgstr "Erev Sukkot"
+
+#~ msgid "Sukkot"
+#~ msgstr "Sukkot"
+
+#~ msgid "Hoshana Rabah"
+#~ msgstr "Hoshana Rabah"
+
+#~ msgid "Shmini Atzeret"
+#~ msgstr "Shmini Atzeret"
+
+#~ msgid "Simchat Torah"
+#~ msgstr "Simchat Torah"
+
+#~ msgid "Erev Hanukah"
+#~ msgstr "Erev Hanukah"
+
+#~ msgid "Hanukah"
+#~ msgstr "Hanukah"
+
+#~ msgid "Tzom Tevet"
+#~ msgstr "Tzom Tevet"
+
+#~ msgid "Sh. Shirah"
+#~ msgstr "Sh. Shirah"
+
+#~ msgid "Tu B'Shvat"
+#~ msgstr "Tu B'Shvat"
+
+#~ msgid "Sh. Shekalim"
+#~ msgstr "Sh. Shekalim"
+
+#~ msgid "Purim Katan"
+#~ msgstr "Purim Katan"
+
+#~ msgid "Ta'anit Ester"
+#~ msgstr "Ta'anit Ester"
+
+#~ msgid "Sh. Zachor"
+#~ msgstr "Sh. Zachor"
+
+#~ msgid "Erev Purim"
+#~ msgstr "Erev Purim"
+
+#~ msgid "Purim"
+#~ msgstr "Purim"
+
+#~ msgid "Shushan Purim"
+#~ msgstr "Shushan Purim"
+
+#~ msgid "Sh. Parah"
+#~ msgstr "Sh. Parah"
+
+#~ msgid "Sh. HaHodesh"
+#~ msgstr "Sh. HaHodesh"
+
+#~ msgid " Omer"
+#~ msgstr " Omer"
+
+#~ msgctxt ""
+#~ "These are weekly readings and do not have translations. They may have "
+#~ "different spellings in your language; otherwise, just translate the sound "
+#~ "to your characters"
+#~ msgid "Bereshit"
+#~ msgstr "Bereshit"
+
+#~ msgid "Noach"
+#~ msgstr "Noach"
+
+#~ msgid "Lech L'cha"
+#~ msgstr "Lech L'cha"
+
+#~ msgid "Vayera"
+#~ msgstr "Vayera"
+
+#~ msgid "Chaye Sarah"
+#~ msgstr "Chaye Sarah"
+
+#~ msgid "Toldot"
+#~ msgstr "Toldot"
+
+#~ msgid "Vayetze"
+#~ msgstr "Vayetze"
+
+#~ msgid "Vayishlach"
+#~ msgstr "Vayishlach"
+
+#~ msgid "Vayeshev"
+#~ msgstr "Vayeshev"
+
+#~ msgid "Miketz"
+#~ msgstr "Miketz"
+
+#~ msgid "Vayigash"
+#~ msgstr "Vayigash"
+
+#~ msgid "Vayechi"
+#~ msgstr "Vayechi"
+
+#~ msgid "Shemot"
+#~ msgstr "Shemot"
+
+#~ msgid "Vaera"
+#~ msgstr "Vaera"
+
+#~ msgid "Bo"
+#~ msgstr "Bo"
+
+#~ msgid "Beshalach"
+#~ msgstr "Beshalach"
+
+#~ msgid "Yitro"
+#~ msgstr "Yitro"
+
+#~ msgid "Mishpatim"
+#~ msgstr "Mishpatim"
+
+#~ msgid "Terumah"
+#~ msgstr "Terumah"
+
+#~ msgid "Tetzaveh"
+#~ msgstr "Tetzaveh"
+
+#~ msgid "Ki Tisa"
+#~ msgstr "Ki Tisa"
+
+#~ msgid "Vayakhel"
+#~ msgstr "Vayakhel"
+
+#~ msgid "Pekudei"
+#~ msgstr "Pekudei"
+
+#~ msgid "Vayikra"
+#~ msgstr "Vayikra"
+
+#~ msgid "Tzav"
+#~ msgstr "Tzav"
+
+#~ msgid "Shemini"
+#~ msgstr "Shemini"
+
+#~ msgid "Tazria"
+#~ msgstr "Tazria"
+
+#~ msgid "Metzora"
+#~ msgstr "Metzora"
+
+#~ msgid "Acharei Mot"
+#~ msgstr "Acharei Mot"
+
+#~ msgid "Kedoshim"
+#~ msgstr "Kedoshim"
+
+#~ msgid "Emor"
+#~ msgstr "Emor"
+
+#~ msgid "Behar"
+#~ msgstr "Behar"
+
+#~ msgid "Bechukotai"
+#~ msgstr "Bechukotai"
+
+#~ msgid "Bemidbar"
+#~ msgstr "Bemidbar"
+
+#~ msgid "Naso"
+#~ msgstr "Naso"
+
+#~ msgid "Behaalotcha"
+#~ msgstr "Behaalotcha"
+
+#~ msgid "Shelach"
+#~ msgstr "Shelach"
+
+#~ msgid "Korach"
+#~ msgstr "Korach"
+
+#~ msgid "Chukat"
+#~ msgstr "Chukat"
+
+#~ msgid "Balak"
+#~ msgstr "Balak"
+
+#~ msgid "Pinchas"
+#~ msgstr "Pinchas"
+
+#~ msgid "Matot"
+#~ msgstr "Matot"
+
+#~ msgid "Masei"
+#~ msgstr "Masei"
+
+#~ msgid "Devarim"
+#~ msgstr "Devarim"
+
+#~ msgid "Vaetchanan"
+#~ msgstr "Vaetchanan"
+
+#~ msgid "Ekev"
+#~ msgstr "Ekev"
+
+#~ msgid "Reeh"
+#~ msgstr "Reeh"
+
+#~ msgid "Shoftim"
+#~ msgstr "Shoftim"
+
+#~ msgid "Ki Tetze"
+#~ msgstr "Ki Tetze"
+
+#~ msgid "Ki Tavo"
+#~ msgstr "Ki Tavo"
+
+#~ msgid "Nitzavim"
+#~ msgstr "Nitzavim"
+
+#~ msgid "Vayelech"
+#~ msgstr "Vayelech"
+
+#~ msgid "Haazinu"
+#~ msgstr "Haazinu"
+
+#, fuzzy
+#~| msgid "Configure Picture of the Day"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Picture of the Day"
+#~ msgstr "Διαμόρφωση εικόνας της ημέρας"
+
+#~ msgid "Thumbnail Aspect Ratio Mode"
+#~ msgstr "Λειτουργία αναλογίας διαστάσεων επισκόπησης"
+
+#~ msgid "Ignore aspect ratio"
+#~ msgstr "Αγνόηση αναλογίας διαστάσεων"
+
+#~ msgid ""
+#~ "The thumbnail will be scaled freely. The aspect ratio will not be "
+#~ "preserved."
+#~ msgstr ""
+#~ "Η εικόνα επισκόπησης θα κλιμακώνεται ελεύθερα. Η αναλογία διαστάσεων δε "
+#~ "θα διατηρηθεί."
+
+#~ msgid "Keep aspect ratio"
+#~ msgstr "Διατήρηση αναλογίας διαστάσεων"
+
+#~ msgid ""
+#~ "The thumbnail will be scaled to a rectangle as large as possible inside a "
+#~ "given rectangle, preserving the aspect ratio."
+#~ msgstr ""
+#~ "Η εικόνα επισκόπησης θα κλιμακωθεί σε ένα ορθογώνιο όσο δυνατόν "
+#~ "μεγαλύτερο, μέσα σε δοσμένο ορθογώνιο, διατηρώντας την αναλογία "
+#~ "διαστάσεων."
+
+#~ msgid "Keep aspect ratio by expanding"
+#~ msgstr "Διατήρηση αναλογίας διαστάσεων με επέκταση"
+
+#~ msgid ""
+#~ "The thumbnail will be scaled to a rectangle as small as possible outside "
+#~ "a given rectangle, preserving the aspect ratio."
+#~ msgstr ""
+#~ "Η εικόνα επισκόπησης θα κλιμακωθεί σε ένα ορθογώνιο όσο δυνατόν "
+#~ "μικρότερο, έξω από δοσμένο ορθογώνιο, διατηρώντας την αναλογία διαστάσεων."
+
+#~ msgid "Wikipedia POTD: %1"
+#~ msgstr "Wikipedia POTD: %1"
+
+#~ msgid "Picture Page"
+#~ msgstr "Σελίδα εικόνας"
+
+#, fuzzy
+#~| msgid "Loading..."
+#~ msgid "Loading…"
+#~ msgstr "Φόρτωση..."
+
+#, fuzzy
+#~| msgid "<qt>Loading <i>Picture of the Day</i>...</qt>"
+#~ msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
+#~ msgstr "<qt>Φόρτωση της <i>Εικόνας της ημέρας</i>…</qt>"
+
+#~ msgid ""
+#~ "<qt>This plugin provides the Wikipedia <i>Picture of the Day</i>.</qt>"
+#~ msgstr ""
+#~ "<qt>Αυτό το πρόσθετο προσφέρει την <i>Εικόνα της ημέρας</i> της Wikipedia."
+#~ "</qt>"
+
+#~ msgid ""
+#~ "This plugin provides links to Wikipedia's 'This Day in History' pages."
+#~ msgstr ""
+#~ "Αυτό το πρόσθετο προσφέρει δεσμούς στις σελίδες 'Αυτή η ημέρα στην "
+#~ "Ιστορία' της Wikipedia."
+
+#~ msgid "This day in history"
+#~ msgstr "Αυτή η ημέρα στην Ιστορία"
+
+#, fuzzy
+#~| msgctxt "Localized Wikipedia website"
+#~| msgid "http://en.wikipedia.org/wiki/"
+#~ msgctxt "Localized Wikipedia website"
+#~ msgid "https://en.wikipedia.org/wiki/"
+#~ msgstr "http://en.wikipedia.org/wiki/"
+
+#~ msgctxt "Qt date format used by the localized Wikipedia"
+#~ msgid "MMMM_d"
+#~ msgstr "MMMM_d"
+
+#~ msgid "This month in history"
+#~ msgstr "Αυτός ο μήνας στην Ιστορία"
+
+#~ msgctxt "Qt date format used by the localized Wikipedia"
+#~ msgid "MMMM_yyyy"
+#~ msgstr "ΜΜΜΜ_εεεε"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

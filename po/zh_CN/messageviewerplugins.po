@@ -303,29 +303,3 @@ msgstr "外部脚本"
 #, kde-format
 msgid "Configure"
 msgstr "配置"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Note:"
-#~ msgstr "备注："
-
-#~ msgid "Create new note and close this widget."
-#~ msgstr "创建新便笺并关闭这个部件。"
-
-#~ msgid "Close the widget for creating new notes."
-#~ msgstr "关闭创建新便笺的部件。"
-
-#~ msgctxt "edit a note on this message"
-#~ msgid "Edit Note"
-#~ msgstr "编辑便笺"
-
-#~ msgctxt "create a new note out of this message"
-#~ msgid "Create Note"
-#~ msgstr "创建便笺"
-
-#~ msgid "Allows you to create a note from this message"
-#~ msgstr "允许您从这封信件创建便笺"
-
-#~ msgid ""
-#~ "This option starts an editor to create a note. Then you can edit the note "
-#~ "to your liking before saving it."
-#~ msgstr "这选项将会启动编辑器来创建便笺。之后您可以在保存之前任意修改便笺。"

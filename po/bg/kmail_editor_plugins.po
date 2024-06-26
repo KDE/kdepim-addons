@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-30 19:17+0200\n"
+"PO-Revision-Date: 2024-06-25 17:56+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -109,15 +109,13 @@ msgid "Configure quick text"
 msgstr "Настройка на бърз текст"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Import…"
 msgstr "Импортиране…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Export…"
 msgstr "Експортиране…"
@@ -139,8 +137,7 @@ msgid "Variables"
 msgstr "Променливи"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "Променливи"

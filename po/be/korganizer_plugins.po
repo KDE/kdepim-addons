@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: korganizer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-26 00:39+0000\n"
 "PO-Revision-Date: 2008-01-01 23:20+0200\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -30,781 +30,547 @@ msgctxt "@action:button"
 msgid "Search &Directory Service"
 msgstr ""
 
-#: plugins/datenums/configdialog.cpp:28
-#, fuzzy, kde-format
-msgctxt "@title:window"
-msgid "Configure Day Numbers"
-msgstr "Налада дат"
-
-#: plugins/datenums/configdialog.cpp:43
-#, fuzzy, kde-format
-msgid "Show Date Number"
-msgstr "Паказваць нумар дня"
-
-#: plugins/datenums/configdialog.cpp:48
-#, fuzzy, kde-format
-msgid "Show day number"
-msgstr "Паказваць нумар дня"
-
-#: plugins/datenums/configdialog.cpp:51
-#, fuzzy, kde-format
-msgid "Show days to end of year"
-msgstr "Паказваць колькасць дзён да канца года"
-
-#: plugins/datenums/configdialog.cpp:54
-#, fuzzy, kde-format
-msgid "Show both"
-msgstr "Паказаць абодва"
-
-#: plugins/datenums/datenums.cpp:36
-#, kde-format
-msgid "This plugin shows information on a day's position in the year."
-msgstr ""
-
-#: plugins/datenums/datenums.cpp:54
-#, fuzzy, kde-format
-msgid "1 day before the end of the year"
-msgid_plural "%1 days before the end of the year"
-msgstr[0] "перад канчаткам"
-msgstr[1] "перад канчаткам"
-msgstr[2] "перад канчаткам"
-
-#: plugins/datenums/datenums.cpp:59
-#, fuzzy, kde-format
-#| msgid "%1 - %2"
-msgctxt "dayOfYear / daysTillEndOfYear"
-msgid "%1 / %2"
-msgstr "%1 / %2"
-
-#: plugins/datenums/datenums.cpp:60
-#, fuzzy, kde-format
-msgid "1 day since the beginning of the year,\n"
-msgid_plural "%1 days since the beginning of the year,\n"
-msgstr[0] "Паказваць колькасць дзён да канца года"
-msgstr[1] "Паказваць колькасць дзён да канца года"
-msgstr[2] "Паказваць колькасць дзён да канца года"
-
-#: plugins/datenums/datenums.cpp:61
-#, fuzzy, kde-format
-msgid "1 day until the end of the year"
-msgid_plural "%1 days until the end of the year"
-msgstr[0] "Паказваць колькасць дзён да канца года"
-msgstr[1] "Паказваць колькасць дзён да канца года"
-msgstr[2] "Паказваць колькасць дзён да канца года"
-
-#: plugins/datenums/datenums.cpp:102
-#, fuzzy, kde-format
-#| msgid "Week"
-msgctxt "Week weekOfYear"
-msgid "Week %1"
-msgstr "Тыдзень %1"
-
-#: plugins/datenums/datenums.cpp:103 plugins/datenums/datenums.cpp:113
-#: plugins/datenums/datenums.cpp:118
-#, fuzzy, kde-format
-msgid "1 week since the beginning of the year"
-msgid_plural "%1 weeks since the beginning of the year"
-msgstr[0] "Паказваць колькасць дзён да канца года"
-msgstr[1] "Паказваць колькасць дзён да канца года"
-msgstr[2] "Паказваць колькасць дзён да канца года"
-
-#: plugins/datenums/datenums.cpp:106
-#, fuzzy, kde-format
-#| msgid "%1 - %2"
-msgctxt "weekOfYear (year)"
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
-
-#: plugins/datenums/datenums.cpp:107
-#, fuzzy, kde-format
-#| msgid "%1 - %2"
-msgctxt "Week weekOfYear (year)"
-msgid "Week %1 (%2)"
-msgstr "%1 %2"
-
-#: plugins/datenums/datenums.cpp:122
-#, kde-format
-msgid "1 week remaining"
-msgid_plural "%1 weeks remaining"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-
-#: plugins/datenums/datenums.cpp:123
-#, fuzzy, kde-format
-msgid "1 week until the end of the year"
-msgid_plural "%1 weeks until the end of the year"
-msgstr[0] "Паказваць колькасць дзён да канца года"
-msgstr[1] "Паказваць колькасць дзён да канца года"
-msgstr[2] "Паказваць колькасць дзён да канца года"
-
-#: plugins/datenums/datenums.cpp:124
-#, fuzzy, kde-format
-#| msgid "%1 - %2"
-msgctxt "weekOfYear / weeksTillEndOfYear"
-msgid "%1 / %2"
-msgstr "%1 / %2"
-
-#: plugins/datenums/datenums.cpp:140
-#, fuzzy, kde-format
-#| msgid "%1 - %2"
-msgctxt ""
-"n weeks since the beginning of the year\n"
-"n weeks until the end of the year"
-msgid ""
-"%1\n"
-"%2"
-msgstr "%1 - %2"
-
-#: plugins/hebrew/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure Holidays"
-msgctxt "@title:window"
-msgid "Configure Holidays"
-msgstr "Настроіць сьвяты"
-
-#: plugins/hebrew/configdialog.cpp:42
-#, kde-format
-msgid "Use Israeli holidays"
-msgstr "Выкарыстоўваць ізраільскія сьвяты"
-
-#: plugins/hebrew/configdialog.cpp:46
-#, fuzzy, kde-format
-msgid "Show weekly parsha"
-msgstr "Паказваць тыднёвыя раздзелы Торы"
-
-#: plugins/hebrew/configdialog.cpp:50
-#, fuzzy, kde-format
-msgid "Show day of Omer"
-msgstr "Паказваць дзень Омера"
-
-#: plugins/hebrew/configdialog.cpp:54
-#, fuzzy, kde-format
-msgid "Show Chol HaMoed"
-msgstr "Паказваць Песці а-Моэд"
-
-#: plugins/hebrew/hebrew.cpp:60
-#, kde-format
-msgctxt ""
-"Change the next two strings if emphasis is done differently in your language."
-msgid ""
-"<qt><p align=\"center\"><i>\n"
-"%1\n"
-"</i></p></qt>"
-msgstr ""
-
-#: plugins/hebrew/hebrew.cpp:67
-#, fuzzy, kde-format
-msgid "This plugin provides the date in the Jewish calendar."
-msgstr "Гэты модуль дазваляе працаваць з габрэйскім каляндаром."
-
-#: plugins/hebrew/holiday.cpp:75
-#, fuzzy, kde-format
-msgctxt ""
-"These are Jewish holidays and mostly do not have translations. They may have "
-"different spellings in your language; otherwise, just translate the sound to "
-"your characters."
-msgid "Sh. HaHodesh"
-msgstr "Шаббат ха-Ходеш"
-
-#: plugins/hebrew/holiday.cpp:83
-#, fuzzy, kde-format
-msgid "Erev Pesach"
-msgstr "Пярэдадне Песах"
-
-#: plugins/hebrew/holiday.cpp:94
-#, fuzzy, kde-format
-msgid "Sh. HaGadol"
-msgstr "Шаббат ха-Гадоль"
-
-#: plugins/hebrew/holiday.cpp:102
-#, fuzzy, kde-format
-msgid "Pesach"
-msgstr "Песах"
-
-#: plugins/hebrew/holiday.cpp:113 plugins/hebrew/holiday.cpp:307
-#, fuzzy, kde-format
-msgid "Chol Hamoed"
-msgstr "Песці а-Моэд"
-
-#: plugins/hebrew/holiday.cpp:124 plugins/hebrew/holiday.cpp:129
-#: plugins/hebrew/holiday.cpp:138
-#, fuzzy, kde-format
-msgid "Yom HaShoah"
-msgstr "Йом Хашоа"
-
-#: plugins/hebrew/holiday.cpp:164 plugins/hebrew/holiday.cpp:171
-#: plugins/hebrew/holiday.cpp:182
-#, fuzzy, kde-format
-msgid "Yom HaAtzmaut"
-msgstr "Йом Хаацмаут"
-
-#: plugins/hebrew/holiday.cpp:166 plugins/hebrew/holiday.cpp:180
-#, fuzzy, kde-format
-msgid "Yom HaZikaron"
-msgstr "Йом Хазикарон"
-
-#: plugins/hebrew/holiday.cpp:190
-#, fuzzy, kde-format
-msgid "Yom Yerushalayim"
-msgstr "Дзень незалежнасці дзяржавы Ізраіль"
-
-#: plugins/hebrew/holiday.cpp:194
-#, fuzzy, kde-format
-msgid "Lag BaOmer"
-msgstr "Лаг ба-Омер"
-
-#: plugins/hebrew/holiday.cpp:220
-#, fuzzy, kde-format
-msgid "Erev Shavuot"
-msgstr "Пярэдадне Шавуот"
-
-#: plugins/hebrew/holiday.cpp:225
-#, fuzzy, kde-format
-msgid "Shavuot"
-msgstr "Шавуот"
-
-#: plugins/hebrew/holiday.cpp:234
-#, fuzzy, kde-format
-msgid "Tzom Tammuz"
-msgstr "Пост 17-го Таммуза"
-
-#: plugins/hebrew/holiday.cpp:242
-#, fuzzy, kde-format
-msgid "Sh. Hazon"
-msgstr "Шаббат Хазон"
-
-#: plugins/hebrew/holiday.cpp:244
-#, fuzzy, kde-format
-msgid "Sh. Nahamu"
-msgstr "Шаббат Нахаму"
-
-#: plugins/hebrew/holiday.cpp:248
-#, fuzzy, kde-format
-msgid "Tisha B'Av"
-msgstr "Тиша бэ-Ав"
-
-#: plugins/hebrew/holiday.cpp:254
-#, fuzzy, kde-format
-msgid "S'lichot"
-msgstr "Слихот"
-
-#: plugins/hebrew/holiday.cpp:256
-#, fuzzy, kde-format
-msgid "Erev R.H."
-msgstr "Пярэдадне Рош а-Шана"
-
-#: plugins/hebrew/holiday.cpp:264
-#, fuzzy, kde-format
-msgid "Rosh Hashana"
-msgstr "Рош а-Шана"
-
-#: plugins/hebrew/holiday.cpp:268 plugins/hebrew/holiday.cpp:283
-#, fuzzy, kde-format
-msgid "Sh. Shuvah"
-msgstr "Шаббат Тшува"
-
-#: plugins/hebrew/holiday.cpp:270 plugins/hebrew/holiday.cpp:275
-#, fuzzy, kde-format
-msgid "Tzom Gedalia"
-msgstr "Пост Гедалии"
-
-#: plugins/hebrew/holiday.cpp:287
-#, fuzzy, kde-format
-msgid "Erev Y.K."
-msgstr "Пярэдадне Йом-Кипур"
-
-#: plugins/hebrew/holiday.cpp:290
-#, fuzzy, kde-format
-msgid "Yom Kippur"
-msgstr "Йом-Кипур"
-
-#: plugins/hebrew/holiday.cpp:293
-#, fuzzy, kde-format
-msgid "Erev Sukkot"
-msgstr "Пярэдадне Суккот"
-
-#: plugins/hebrew/holiday.cpp:298
-#, fuzzy, kde-format
-msgid "Sukkot"
-msgstr "Суккот"
-
-#: plugins/hebrew/holiday.cpp:311
-#, fuzzy, kde-format
-msgid "Hoshana Rabah"
-msgstr "Оша-на Раба"
-
-#: plugins/hebrew/holiday.cpp:314
-#, fuzzy, kde-format
-msgid "Shmini Atzeret"
-msgstr "Шмини Ацерет"
-
-#: plugins/hebrew/holiday.cpp:318
-#, fuzzy, kde-format
-msgid "Simchat Torah"
-msgstr "Симхат Тора"
-
-#: plugins/hebrew/holiday.cpp:329
-#, fuzzy, kde-format
-msgid "Erev Hanukah"
-msgstr "Пярэдадне Хануки"
-
-#: plugins/hebrew/holiday.cpp:331 plugins/hebrew/holiday.cpp:339
-#, fuzzy, kde-format
-msgid "Hanukah"
-msgstr "Ханука"
-
-#: plugins/hebrew/holiday.cpp:342
-#, fuzzy, kde-format
-msgid "Tzom Tevet"
-msgstr "Пост 10-го Тевета"
-
-#: plugins/hebrew/holiday.cpp:352 plugins/hebrew/holiday.cpp:361
-#: plugins/hebrew/holiday.cpp:366 plugins/hebrew/holiday.cpp:372
-#, fuzzy, kde-format
-msgid "Sh. Shirah"
-msgstr "Шаббат Шира"
-
-#: plugins/hebrew/holiday.cpp:368
-#, fuzzy, kde-format
-msgid "Tu B'Shvat"
-msgstr "Тую-бі-Шват"
-
-#: plugins/hebrew/holiday.cpp:383 plugins/hebrew/holiday.cpp:395
-#: plugins/hebrew/holiday.cpp:403
-#, fuzzy, kde-format
-msgid "Sh. Shekalim"
-msgstr "Шаббат Шекалим"
-
-#: plugins/hebrew/holiday.cpp:392
-#, fuzzy, kde-format
-msgid "Purim Katan"
-msgstr "Пурим Валены"
-
-#: plugins/hebrew/holiday.cpp:411 plugins/hebrew/holiday.cpp:431
-#, fuzzy, kde-format
-msgid "Ta'anit Ester"
-msgstr "Пост Эстэр"
-
-#: plugins/hebrew/holiday.cpp:420 plugins/hebrew/holiday.cpp:425
-#, fuzzy, kde-format
-msgid "Sh. Zachor"
-msgstr "Шаббат Захор"
-
-#: plugins/hebrew/holiday.cpp:427
-#, fuzzy, kde-format
-msgid "Erev Purim"
-msgstr "Пярэдадне Пурима"
-
-#: plugins/hebrew/holiday.cpp:435
-#, fuzzy, kde-format
-msgid "Purim"
-msgstr "Пурим"
-
-#: plugins/hebrew/holiday.cpp:439 plugins/hebrew/holiday.cpp:444
-#, fuzzy, kde-format
-msgid "Shushan Purim"
-msgstr "Шушан Пурим"
-
-#: plugins/hebrew/holiday.cpp:455
-#, fuzzy, kde-format
-msgid "Sh. Parah"
-msgstr "Шаббат Пару"
-
-#: plugins/hebrew/holiday.cpp:465
-#, fuzzy, kde-format
-msgid "Sh. HaHodesh"
-msgstr "Шаббат ха-Ходеш"
-
-#: plugins/hebrew/holiday.cpp:481
-#, fuzzy, kde-format
-msgid " Omer"
-msgstr " Омер"
-
-#: plugins/hebrew/parsha.cpp:28
-#, fuzzy, kde-format
-msgctxt ""
-"These are weekly readings and do not have translations. They may have "
-"different spellings in your language; otherwise, just translate the sound to "
-"your characters"
-msgid "Bereshit"
-msgstr "&Абнавіць"
-
-#: plugins/hebrew/parsha.cpp:29
-#, fuzzy, kde-format
-msgid "Noach"
-msgstr "Ноах"
-
-#: plugins/hebrew/parsha.cpp:29
-#, fuzzy, kde-format
-msgid "Lech L'cha"
-msgstr "Лех Леха"
-
-#: plugins/hebrew/parsha.cpp:29
-#, fuzzy, kde-format
-msgid "Vayera"
-msgstr "Ваера"
-
-#: plugins/hebrew/parsha.cpp:29
-#, fuzzy, kde-format
-msgid "Chaye Sarah"
-msgstr "Хаей Сара"
-
-#: plugins/hebrew/parsha.cpp:29
-#, fuzzy, kde-format
-msgid "Toldot"
-msgstr "Толдот"
-
-#: plugins/hebrew/parsha.cpp:29
-#, fuzzy, kde-format
-msgid "Vayetze"
-msgstr "Вайеце"
-
-#: plugins/hebrew/parsha.cpp:29
-#, fuzzy, kde-format
-msgid "Vayishlach"
-msgstr "Ваишлах"
-
-#: plugins/hebrew/parsha.cpp:30
-#, fuzzy, kde-format
-msgid "Vayeshev"
-msgstr "Ваешев"
-
-#: plugins/hebrew/parsha.cpp:30
-#, fuzzy, kde-format
-msgid "Miketz"
-msgstr "Микец"
-
-#: plugins/hebrew/parsha.cpp:30
-#, fuzzy, kde-format
-msgid "Vayigash"
-msgstr "Вайигаш"
-
-#: plugins/hebrew/parsha.cpp:30
-#, fuzzy, kde-format
-msgid "Vayechi"
-msgstr "Вайехи"
-
-#: plugins/hebrew/parsha.cpp:30
-#, fuzzy, kde-format
-msgid "Shemot"
-msgstr "Шемот"
-
-#: plugins/hebrew/parsha.cpp:30
-#, fuzzy, kde-format
-msgid "Vaera"
-msgstr "Ваэра"
-
-#: plugins/hebrew/parsha.cpp:30
-#, fuzzy, kde-format
-msgid "Bo"
-msgstr "Бо"
-
-#: plugins/hebrew/parsha.cpp:31
-#, fuzzy, kde-format
-msgid "Beshalach"
-msgstr "Бешалах"
-
-#: plugins/hebrew/parsha.cpp:31
-#, fuzzy, kde-format
-msgid "Yitro"
-msgstr "Итро"
-
-#: plugins/hebrew/parsha.cpp:31
-#, fuzzy, kde-format
-msgid "Mishpatim"
-msgstr "Мишпатим"
-
-#: plugins/hebrew/parsha.cpp:31
-#, fuzzy, kde-format
-msgid "Terumah"
-msgstr "Трума"
-
-#: plugins/hebrew/parsha.cpp:31
-#, fuzzy, kde-format
-msgid "Tetzaveh"
-msgstr "Тецаве"
-
-#: plugins/hebrew/parsha.cpp:31
-#, fuzzy, kde-format
-msgid "Ki Tisa"
-msgstr "Ки Ціса"
-
-#: plugins/hebrew/parsha.cpp:31
-#, fuzzy, kde-format
-msgid "Vayakhel"
-msgstr "Ваякэль"
-
-#: plugins/hebrew/parsha.cpp:32
-#, fuzzy, kde-format
-msgid "Pekudei"
-msgstr "Пекудей"
-
-#: plugins/hebrew/parsha.cpp:32
-#, fuzzy, kde-format
-msgid "Vayikra"
-msgstr "Ваикра"
-
-#: plugins/hebrew/parsha.cpp:32
-#, fuzzy, kde-format
-msgid "Tzav"
-msgstr "Цав"
-
-#: plugins/hebrew/parsha.cpp:32
-#, fuzzy, kde-format
-msgid "Shemini"
-msgstr "Шмини"
-
-#: plugins/hebrew/parsha.cpp:32
-#, fuzzy, kde-format
-msgid "Tazria"
-msgstr "Тазриа"
-
-#: plugins/hebrew/parsha.cpp:32
-#, fuzzy, kde-format
-msgid "Metzora"
-msgstr "Мецора"
-
-#: plugins/hebrew/parsha.cpp:32
-#, fuzzy, kde-format
-msgid "Acharei Mot"
-msgstr "Ахарей Мантач"
-
-#: plugins/hebrew/parsha.cpp:33
-#, fuzzy, kde-format
-msgid "Kedoshim"
-msgstr "Кедошим"
-
-#: plugins/hebrew/parsha.cpp:33
-#, fuzzy, kde-format
-msgid "Emor"
-msgstr "Эмор"
-
-#: plugins/hebrew/parsha.cpp:33
-#, fuzzy, kde-format
-msgid "Behar"
-msgstr "Бехар"
-
-#: plugins/hebrew/parsha.cpp:33
-#, fuzzy, kde-format
-msgid "Bechukotai"
-msgstr "Бехукотай"
-
-#: plugins/hebrew/parsha.cpp:33
-#, fuzzy, kde-format
-msgid "Bemidbar"
-msgstr "Бемидбар"
-
-#: plugins/hebrew/parsha.cpp:33
-#, fuzzy, kde-format
-msgid "Naso"
-msgstr "Насо"
-
-#: plugins/hebrew/parsha.cpp:33
-#, fuzzy, kde-format
-msgid "Behaalotcha"
-msgstr "Бехаалотха"
-
-#: plugins/hebrew/parsha.cpp:34
-#, kde-format
-msgid "Shelach"
-msgstr "Шелах"
-
-#: plugins/hebrew/parsha.cpp:34
-#, fuzzy, kde-format
-msgid "Korach"
-msgstr "Корах"
-
-#: plugins/hebrew/parsha.cpp:34
-#, fuzzy, kde-format
-msgid "Chukat"
-msgstr "Хукат"
-
-#: plugins/hebrew/parsha.cpp:34
-#, fuzzy, kde-format
-msgid "Balak"
-msgstr "Балак"
-
-#: plugins/hebrew/parsha.cpp:34
-#, fuzzy, kde-format
-msgid "Pinchas"
-msgstr "Пинхас"
-
-#: plugins/hebrew/parsha.cpp:34
-#, fuzzy, kde-format
-msgid "Matot"
-msgstr "Матот"
-
-#: plugins/hebrew/parsha.cpp:34
-#, fuzzy, kde-format
-msgid "Masei"
-msgstr "Масей"
-
-#: plugins/hebrew/parsha.cpp:35
-#, fuzzy, kde-format
-msgid "Devarim"
-msgstr "Дварим"
-
-#: plugins/hebrew/parsha.cpp:35
-#, fuzzy, kde-format
-msgid "Vaetchanan"
-msgstr "Ваэтханан"
-
-#: plugins/hebrew/parsha.cpp:35
-#, fuzzy, kde-format
-msgid "Ekev"
-msgstr "Экев"
-
-#: plugins/hebrew/parsha.cpp:35
-#, fuzzy, kde-format
-msgid "Reeh"
-msgstr "Реэ"
-
-#: plugins/hebrew/parsha.cpp:35
-#, fuzzy, kde-format
-msgid "Shoftim"
-msgstr "Шофтим"
-
-#: plugins/hebrew/parsha.cpp:35
-#, fuzzy, kde-format
-msgid "Ki Tetze"
-msgstr "Ки Теце"
-
-#: plugins/hebrew/parsha.cpp:35
-#, fuzzy, kde-format
-msgid "Ki Tavo"
-msgstr "Ки Таво"
-
-#: plugins/hebrew/parsha.cpp:36
-#, fuzzy, kde-format
-msgid "Nitzavim"
-msgstr "Ницавим"
-
-#: plugins/hebrew/parsha.cpp:36
-#, fuzzy, kde-format
-msgid "Vayelech"
-msgstr "Вайелех"
-
-#: plugins/hebrew/parsha.cpp:36
-#, fuzzy, kde-format
-msgid "Haazinu"
-msgstr "Аазину"
-
-#: plugins/lunarphases/lunarphases.cpp:61
-#, kde-format
-msgid ""
-"This plugin displays the day's lunar phase (New, First, Last, Full). "
-"Currently, the phase is computed for noon at UTC; therefore, you should "
-"expect variations by 1 day in either direction."
-msgstr ""
-
-#: plugins/picoftheday/configdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Configure &Date && Time..."
-msgctxt "@title:window"
-msgid "Configure Picture of the Day"
-msgstr "Настроіць &дату і час..."
-
-#: plugins/picoftheday/configdialog.cpp:42
-#, kde-format
-msgid "Thumbnail Aspect Ratio Mode"
-msgstr ""
-
-#: plugins/picoftheday/configdialog.cpp:46
-#, kde-format
-msgid "Ignore aspect ratio"
-msgstr ""
-
-#: plugins/picoftheday/configdialog.cpp:48
-#, kde-format
-msgid ""
-"The thumbnail will be scaled freely. The aspect ratio will not be preserved."
-msgstr ""
-
-#: plugins/picoftheday/configdialog.cpp:52
-#, kde-format
-msgid "Keep aspect ratio"
-msgstr ""
-
-#: plugins/picoftheday/configdialog.cpp:54
-#, kde-format
-msgid ""
-"The thumbnail will be scaled to a rectangle as large as possible inside a "
-"given rectangle, preserving the aspect ratio."
-msgstr ""
-
-#: plugins/picoftheday/configdialog.cpp:59
-#, kde-format
-msgid "Keep aspect ratio by expanding"
-msgstr ""
-
-#: plugins/picoftheday/configdialog.cpp:61
-#, kde-format
-msgid ""
-"The thumbnail will be scaled to a rectangle as small as possible outside a "
-"given rectangle, preserving the aspect ratio."
-msgstr ""
-
-#: plugins/picoftheday/element.cpp:209
-#, kde-format
-msgid "Wikipedia POTD: %1"
-msgstr ""
-
-#: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Delete"
-msgid "Picture Page"
-msgstr "Выдаліць"
-
-#: plugins/picoftheday/element.cpp:326
-#, fuzzy, kde-format
-#| msgid "Go &Forward"
-msgid "Loading…"
-msgstr "Перайсці на&перад"
-
-#: plugins/picoftheday/element.cpp:331
-#, fuzzy, kde-format
-msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
-msgstr "Гэты модуль дазваляе працаваць з габрэйскім каляндаром."
-
-#: plugins/picoftheday/picoftheday.cpp:48
-#, fuzzy, kde-format
-msgid "<qt>This plugin provides the Wikipedia <i>Picture of the Day</i>.</qt>"
-msgstr "Гэты модуль дазваляе працаваць з габрэйскім каляндаром."
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:29
-#, fuzzy, kde-format
-msgid "This plugin provides links to Wikipedia's 'This Day in History' pages."
-msgstr "Гэты модуль падлічвае колькасць дзён і тыдняў."
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:37
-#, kde-format
-msgid "This day in history"
-msgstr ""
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:39
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:53
-#, kde-format
-msgctxt "Localized Wikipedia website"
-msgid "https://en.wikipedia.org/wiki/"
-msgstr ""
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:40
-#, kde-format
-msgctxt "Qt date format used by the localized Wikipedia"
-msgid "MMMM_d"
-msgstr ""
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:51
-#, kde-format
-msgid "This month in history"
-msgstr ""
-
-#: plugins/thisdayinhistory/thisdayinhistory.cpp:54
-#, kde-format
-msgctxt "Qt date format used by the localized Wikipedia"
-msgid "MMMM_yyyy"
-msgstr ""
+#, fuzzy
+#~ msgctxt "@title:window"
+#~ msgid "Configure Day Numbers"
+#~ msgstr "Налада дат"
+
+#, fuzzy
+#~ msgid "Show Date Number"
+#~ msgstr "Паказваць нумар дня"
+
+#, fuzzy
+#~ msgid "Show day number"
+#~ msgstr "Паказваць нумар дня"
+
+#, fuzzy
+#~ msgid "Show days to end of year"
+#~ msgstr "Паказваць колькасць дзён да канца года"
+
+#, fuzzy
+#~ msgid "Show both"
+#~ msgstr "Паказаць абодва"
+
+#, fuzzy
+#~ msgid "1 day before the end of the year"
+#~ msgid_plural "%1 days before the end of the year"
+#~ msgstr[0] "перад канчаткам"
+#~ msgstr[1] "перад канчаткам"
+#~ msgstr[2] "перад канчаткам"
+
+#, fuzzy
+#~| msgid "%1 - %2"
+#~ msgctxt "dayOfYear / daysTillEndOfYear"
+#~ msgid "%1 / %2"
+#~ msgstr "%1 / %2"
+
+#, fuzzy
+#~ msgid "1 day since the beginning of the year,\n"
+#~ msgid_plural "%1 days since the beginning of the year,\n"
+#~ msgstr[0] "Паказваць колькасць дзён да канца года"
+#~ msgstr[1] "Паказваць колькасць дзён да канца года"
+#~ msgstr[2] "Паказваць колькасць дзён да канца года"
+
+#, fuzzy
+#~ msgid "1 day until the end of the year"
+#~ msgid_plural "%1 days until the end of the year"
+#~ msgstr[0] "Паказваць колькасць дзён да канца года"
+#~ msgstr[1] "Паказваць колькасць дзён да канца года"
+#~ msgstr[2] "Паказваць колькасць дзён да канца года"
+
+#, fuzzy
+#~| msgid "Week"
+#~ msgctxt "Week weekOfYear"
+#~ msgid "Week %1"
+#~ msgstr "Тыдзень %1"
+
+#, fuzzy
+#~ msgid "1 week since the beginning of the year"
+#~ msgid_plural "%1 weeks since the beginning of the year"
+#~ msgstr[0] "Паказваць колькасць дзён да канца года"
+#~ msgstr[1] "Паказваць колькасць дзён да канца года"
+#~ msgstr[2] "Паказваць колькасць дзён да канца года"
+
+#, fuzzy
+#~| msgid "%1 - %2"
+#~ msgctxt "weekOfYear (year)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#, fuzzy
+#~| msgid "%1 - %2"
+#~ msgctxt "Week weekOfYear (year)"
+#~ msgid "Week %1 (%2)"
+#~ msgstr "%1 %2"
+
+#, fuzzy
+#~ msgid "1 week until the end of the year"
+#~ msgid_plural "%1 weeks until the end of the year"
+#~ msgstr[0] "Паказваць колькасць дзён да канца года"
+#~ msgstr[1] "Паказваць колькасць дзён да канца года"
+#~ msgstr[2] "Паказваць колькасць дзён да канца года"
+
+#, fuzzy
+#~| msgid "%1 - %2"
+#~ msgctxt "weekOfYear / weeksTillEndOfYear"
+#~ msgid "%1 / %2"
+#~ msgstr "%1 / %2"
+
+#, fuzzy
+#~| msgid "%1 - %2"
+#~ msgctxt ""
+#~ "n weeks since the beginning of the year\n"
+#~ "n weeks until the end of the year"
+#~ msgid ""
+#~ "%1\n"
+#~ "%2"
+#~ msgstr "%1 - %2"
+
+#, fuzzy
+#~| msgid "Configure Holidays"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Holidays"
+#~ msgstr "Настроіць сьвяты"
+
+#~ msgid "Use Israeli holidays"
+#~ msgstr "Выкарыстоўваць ізраільскія сьвяты"
+
+#, fuzzy
+#~ msgid "Show weekly parsha"
+#~ msgstr "Паказваць тыднёвыя раздзелы Торы"
+
+#, fuzzy
+#~ msgid "Show day of Omer"
+#~ msgstr "Паказваць дзень Омера"
+
+#, fuzzy
+#~ msgid "Show Chol HaMoed"
+#~ msgstr "Паказваць Песці а-Моэд"
+
+#, fuzzy
+#~ msgid "This plugin provides the date in the Jewish calendar."
+#~ msgstr "Гэты модуль дазваляе працаваць з габрэйскім каляндаром."
+
+#, fuzzy
+#~ msgctxt ""
+#~ "These are Jewish holidays and mostly do not have translations. They may "
+#~ "have different spellings in your language; otherwise, just translate the "
+#~ "sound to your characters."
+#~ msgid "Sh. HaHodesh"
+#~ msgstr "Шаббат ха-Ходеш"
+
+#, fuzzy
+#~ msgid "Erev Pesach"
+#~ msgstr "Пярэдадне Песах"
+
+#, fuzzy
+#~ msgid "Sh. HaGadol"
+#~ msgstr "Шаббат ха-Гадоль"
+
+#, fuzzy
+#~ msgid "Pesach"
+#~ msgstr "Песах"
+
+#, fuzzy
+#~ msgid "Chol Hamoed"
+#~ msgstr "Песці а-Моэд"
+
+#, fuzzy
+#~ msgid "Yom HaShoah"
+#~ msgstr "Йом Хашоа"
+
+#, fuzzy
+#~ msgid "Yom HaAtzmaut"
+#~ msgstr "Йом Хаацмаут"
+
+#, fuzzy
+#~ msgid "Yom HaZikaron"
+#~ msgstr "Йом Хазикарон"
+
+#, fuzzy
+#~ msgid "Yom Yerushalayim"
+#~ msgstr "Дзень незалежнасці дзяржавы Ізраіль"
+
+#, fuzzy
+#~ msgid "Lag BaOmer"
+#~ msgstr "Лаг ба-Омер"
+
+#, fuzzy
+#~ msgid "Erev Shavuot"
+#~ msgstr "Пярэдадне Шавуот"
+
+#, fuzzy
+#~ msgid "Shavuot"
+#~ msgstr "Шавуот"
+
+#, fuzzy
+#~ msgid "Tzom Tammuz"
+#~ msgstr "Пост 17-го Таммуза"
+
+#, fuzzy
+#~ msgid "Sh. Hazon"
+#~ msgstr "Шаббат Хазон"
+
+#, fuzzy
+#~ msgid "Sh. Nahamu"
+#~ msgstr "Шаббат Нахаму"
+
+#, fuzzy
+#~ msgid "Tisha B'Av"
+#~ msgstr "Тиша бэ-Ав"
+
+#, fuzzy
+#~ msgid "S'lichot"
+#~ msgstr "Слихот"
+
+#, fuzzy
+#~ msgid "Erev R.H."
+#~ msgstr "Пярэдадне Рош а-Шана"
+
+#, fuzzy
+#~ msgid "Rosh Hashana"
+#~ msgstr "Рош а-Шана"
+
+#, fuzzy
+#~ msgid "Sh. Shuvah"
+#~ msgstr "Шаббат Тшува"
+
+#, fuzzy
+#~ msgid "Tzom Gedalia"
+#~ msgstr "Пост Гедалии"
+
+#, fuzzy
+#~ msgid "Erev Y.K."
+#~ msgstr "Пярэдадне Йом-Кипур"
+
+#, fuzzy
+#~ msgid "Yom Kippur"
+#~ msgstr "Йом-Кипур"
+
+#, fuzzy
+#~ msgid "Erev Sukkot"
+#~ msgstr "Пярэдадне Суккот"
+
+#, fuzzy
+#~ msgid "Sukkot"
+#~ msgstr "Суккот"
+
+#, fuzzy
+#~ msgid "Hoshana Rabah"
+#~ msgstr "Оша-на Раба"
+
+#, fuzzy
+#~ msgid "Shmini Atzeret"
+#~ msgstr "Шмини Ацерет"
+
+#, fuzzy
+#~ msgid "Simchat Torah"
+#~ msgstr "Симхат Тора"
+
+#, fuzzy
+#~ msgid "Erev Hanukah"
+#~ msgstr "Пярэдадне Хануки"
+
+#, fuzzy
+#~ msgid "Hanukah"
+#~ msgstr "Ханука"
+
+#, fuzzy
+#~ msgid "Tzom Tevet"
+#~ msgstr "Пост 10-го Тевета"
+
+#, fuzzy
+#~ msgid "Sh. Shirah"
+#~ msgstr "Шаббат Шира"
+
+#, fuzzy
+#~ msgid "Tu B'Shvat"
+#~ msgstr "Тую-бі-Шват"
+
+#, fuzzy
+#~ msgid "Sh. Shekalim"
+#~ msgstr "Шаббат Шекалим"
+
+#, fuzzy
+#~ msgid "Purim Katan"
+#~ msgstr "Пурим Валены"
+
+#, fuzzy
+#~ msgid "Ta'anit Ester"
+#~ msgstr "Пост Эстэр"
+
+#, fuzzy
+#~ msgid "Sh. Zachor"
+#~ msgstr "Шаббат Захор"
+
+#, fuzzy
+#~ msgid "Erev Purim"
+#~ msgstr "Пярэдадне Пурима"
+
+#, fuzzy
+#~ msgid "Purim"
+#~ msgstr "Пурим"
+
+#, fuzzy
+#~ msgid "Shushan Purim"
+#~ msgstr "Шушан Пурим"
+
+#, fuzzy
+#~ msgid "Sh. Parah"
+#~ msgstr "Шаббат Пару"
+
+#, fuzzy
+#~ msgid "Sh. HaHodesh"
+#~ msgstr "Шаббат ха-Ходеш"
+
+#, fuzzy
+#~ msgid " Omer"
+#~ msgstr " Омер"
+
+#, fuzzy
+#~ msgctxt ""
+#~ "These are weekly readings and do not have translations. They may have "
+#~ "different spellings in your language; otherwise, just translate the sound "
+#~ "to your characters"
+#~ msgid "Bereshit"
+#~ msgstr "&Абнавіць"
+
+#, fuzzy
+#~ msgid "Noach"
+#~ msgstr "Ноах"
+
+#, fuzzy
+#~ msgid "Lech L'cha"
+#~ msgstr "Лех Леха"
+
+#, fuzzy
+#~ msgid "Vayera"
+#~ msgstr "Ваера"
+
+#, fuzzy
+#~ msgid "Chaye Sarah"
+#~ msgstr "Хаей Сара"
+
+#, fuzzy
+#~ msgid "Toldot"
+#~ msgstr "Толдот"
+
+#, fuzzy
+#~ msgid "Vayetze"
+#~ msgstr "Вайеце"
+
+#, fuzzy
+#~ msgid "Vayishlach"
+#~ msgstr "Ваишлах"
+
+#, fuzzy
+#~ msgid "Vayeshev"
+#~ msgstr "Ваешев"
+
+#, fuzzy
+#~ msgid "Miketz"
+#~ msgstr "Микец"
+
+#, fuzzy
+#~ msgid "Vayigash"
+#~ msgstr "Вайигаш"
+
+#, fuzzy
+#~ msgid "Vayechi"
+#~ msgstr "Вайехи"
+
+#, fuzzy
+#~ msgid "Shemot"
+#~ msgstr "Шемот"
+
+#, fuzzy
+#~ msgid "Vaera"
+#~ msgstr "Ваэра"
+
+#, fuzzy
+#~ msgid "Bo"
+#~ msgstr "Бо"
+
+#, fuzzy
+#~ msgid "Beshalach"
+#~ msgstr "Бешалах"
+
+#, fuzzy
+#~ msgid "Yitro"
+#~ msgstr "Итро"
+
+#, fuzzy
+#~ msgid "Mishpatim"
+#~ msgstr "Мишпатим"
+
+#, fuzzy
+#~ msgid "Terumah"
+#~ msgstr "Трума"
+
+#, fuzzy
+#~ msgid "Tetzaveh"
+#~ msgstr "Тецаве"
+
+#, fuzzy
+#~ msgid "Ki Tisa"
+#~ msgstr "Ки Ціса"
+
+#, fuzzy
+#~ msgid "Vayakhel"
+#~ msgstr "Ваякэль"
+
+#, fuzzy
+#~ msgid "Pekudei"
+#~ msgstr "Пекудей"
+
+#, fuzzy
+#~ msgid "Vayikra"
+#~ msgstr "Ваикра"
+
+#, fuzzy
+#~ msgid "Tzav"
+#~ msgstr "Цав"
+
+#, fuzzy
+#~ msgid "Shemini"
+#~ msgstr "Шмини"
+
+#, fuzzy
+#~ msgid "Tazria"
+#~ msgstr "Тазриа"
+
+#, fuzzy
+#~ msgid "Metzora"
+#~ msgstr "Мецора"
+
+#, fuzzy
+#~ msgid "Acharei Mot"
+#~ msgstr "Ахарей Мантач"
+
+#, fuzzy
+#~ msgid "Kedoshim"
+#~ msgstr "Кедошим"
+
+#, fuzzy
+#~ msgid "Emor"
+#~ msgstr "Эмор"
+
+#, fuzzy
+#~ msgid "Behar"
+#~ msgstr "Бехар"
+
+#, fuzzy
+#~ msgid "Bechukotai"
+#~ msgstr "Бехукотай"
+
+#, fuzzy
+#~ msgid "Bemidbar"
+#~ msgstr "Бемидбар"
+
+#, fuzzy
+#~ msgid "Naso"
+#~ msgstr "Насо"
+
+#, fuzzy
+#~ msgid "Behaalotcha"
+#~ msgstr "Бехаалотха"
+
+#~ msgid "Shelach"
+#~ msgstr "Шелах"
+
+#, fuzzy
+#~ msgid "Korach"
+#~ msgstr "Корах"
+
+#, fuzzy
+#~ msgid "Chukat"
+#~ msgstr "Хукат"
+
+#, fuzzy
+#~ msgid "Balak"
+#~ msgstr "Балак"
+
+#, fuzzy
+#~ msgid "Pinchas"
+#~ msgstr "Пинхас"
+
+#, fuzzy
+#~ msgid "Matot"
+#~ msgstr "Матот"
+
+#, fuzzy
+#~ msgid "Masei"
+#~ msgstr "Масей"
+
+#, fuzzy
+#~ msgid "Devarim"
+#~ msgstr "Дварим"
+
+#, fuzzy
+#~ msgid "Vaetchanan"
+#~ msgstr "Ваэтханан"
+
+#, fuzzy
+#~ msgid "Ekev"
+#~ msgstr "Экев"
+
+#, fuzzy
+#~ msgid "Reeh"
+#~ msgstr "Реэ"
+
+#, fuzzy
+#~ msgid "Shoftim"
+#~ msgstr "Шофтим"
+
+#, fuzzy
+#~ msgid "Ki Tetze"
+#~ msgstr "Ки Теце"
+
+#, fuzzy
+#~ msgid "Ki Tavo"
+#~ msgstr "Ки Таво"
+
+#, fuzzy
+#~ msgid "Nitzavim"
+#~ msgstr "Ницавим"
+
+#, fuzzy
+#~ msgid "Vayelech"
+#~ msgstr "Вайелех"
+
+#, fuzzy
+#~ msgid "Haazinu"
+#~ msgstr "Аазину"
+
+#, fuzzy
+#~| msgid "Configure &Date && Time..."
+#~ msgctxt "@title:window"
+#~ msgid "Configure Picture of the Day"
+#~ msgstr "Настроіць &дату і час..."
+
+#, fuzzy
+#~| msgid "Delete"
+#~ msgid "Picture Page"
+#~ msgstr "Выдаліць"
+
+#, fuzzy
+#~| msgid "Go &Forward"
+#~ msgid "Loading…"
+#~ msgstr "Перайсці на&перад"
+
+#, fuzzy
+#~ msgid "<qt>Loading <i>Picture of the Day</i>…</qt>"
+#~ msgstr "Гэты модуль дазваляе працаваць з габрэйскім каляндаром."
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>This plugin provides the Wikipedia <i>Picture of the Day</i>.</qt>"
+#~ msgstr "Гэты модуль дазваляе працаваць з габрэйскім каляндаром."
+
+#, fuzzy
+#~ msgid ""
+#~ "This plugin provides links to Wikipedia's 'This Day in History' pages."
+#~ msgstr "Гэты модуль падлічвае колькасць дзён і тыдняў."
 
 #, fuzzy
 #~ msgctxt "NAME OF TRANSLATORS"
