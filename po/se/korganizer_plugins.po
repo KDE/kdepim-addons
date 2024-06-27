@@ -24,30 +24,3 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Search &Directory Service"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Show both"
-#~ msgstr "Čáj&et dáhpahusa"
-
-#, fuzzy
-#~ msgctxt "Week weekOfYear"
-#~ msgid "Week %1"
-#~ msgstr "Vahku"
-
-#~ msgid "Shavuot"
-#~ msgstr "Shavuot"
-
-#~ msgid "Noach"
-#~ msgstr "Noach"
-
-#~ msgid "Metzora"
-#~ msgstr "Metzora"
-
-#~ msgid "Matot"
-#~ msgstr "Matot"
-
-#~ msgid "Masei"
-#~ msgstr "Masei"
-
-#~ msgid "Reeh"
-#~ msgstr "Reeh"
