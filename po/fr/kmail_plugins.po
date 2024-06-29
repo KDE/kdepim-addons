@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 13:36+0200\n"
+"PO-Revision-Date: 2024-06-26 20:22+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -401,11 +401,10 @@ msgstr ""
 "que les déplacer dans le dossier sélectionné."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
-msgstr "Aperçu"
+msgstr "Afficher un aperçu"
 
 #: mailmergeplugin/mailmergedialog.cpp:22
 #, kde-format
