@@ -23,7 +23,7 @@ AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
 
     mSearchLineEdit->setObjectName(QLatin1StringView("mSearchLineEdit"));
     mainLayout->addWidget(mSearchLineEdit);
-    mSearchLineEdit->setPlaceholderText(i18n("Search…"));
+    mSearchLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Search…"));
     mSearchLineEdit->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
 

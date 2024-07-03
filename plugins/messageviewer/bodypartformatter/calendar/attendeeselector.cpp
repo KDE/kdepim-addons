@@ -37,7 +37,7 @@ AttendeeSelector::AttendeeSelector(QWidget *parent)
     KGuiItem::assign(ui.removeButton, KStandardGuiItem::remove());
     connect(ui.removeButton, &QPushButton::clicked, this, &AttendeeSelector::removeClicked);
 
-    ui.attendeeEdit->setPlaceholderText(i18n("Click to add a new attendee"));
+    ui.attendeeEdit->setPlaceholderText(i18nc("@info:placeholder", "Click to add a new attendee"));
     connect(ui.attendeeEdit, &PimCommon::AddresseeLineEdit::textChanged, this, &AttendeeSelector::textChanged);
     connect(ui.attendeeEdit, &PimCommon::AddresseeLineEdit::returnPressed, this, &AttendeeSelector::addClicked);
 

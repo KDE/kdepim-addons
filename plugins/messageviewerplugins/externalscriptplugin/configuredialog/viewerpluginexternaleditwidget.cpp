@@ -34,7 +34,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
     mCommandLine->setClearButtonEnabled(true);
     mCommandLine->setObjectName(QLatin1StringView("commandline"));
-    mCommandLine->setPlaceholderText(i18n("Add command arguments…"));
+    mCommandLine->setPlaceholderText(i18nc("@info:placeholder", "Add command arguments…"));
     mainLayout->addRow(i18n("Command Line:"), mCommandLine);
     KLineEditEventHandler::catchReturnKey(mCommandLine);
 

@@ -31,7 +31,7 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
 
     mLineEdit->setObjectName(QLatin1StringView("lineedit"));
     mLineEdit->setClearButtonEnabled(true);
-    mLineEdit->setPlaceholderText(i18n("Click on button for selecting contacts…"));
+    mLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Click on button for selecting contacts…"));
     connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::slotTextChanged);
     mainLayout->addWidget(mLineEdit);
 

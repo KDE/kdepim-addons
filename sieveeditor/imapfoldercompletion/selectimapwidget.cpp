@@ -55,7 +55,7 @@ void SelectImapWidget::setSieveImapAccountSettings(const KSieveCore::SieveImapAc
     if (mAccount.isValid()) {
         mToolButton->show();
         mLineEdit->setSieveImapAccountSettings(account);
-        mLineEdit->setPlaceholderText(i18n("Click on button for selecting folder…"));
+        mLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Click on button for selecting folder…"));
     } else {
         qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Account is not defined";
     }
