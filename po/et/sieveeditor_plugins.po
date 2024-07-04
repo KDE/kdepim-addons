@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2019-12-18 20:06+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -20,6 +20,7 @@ msgstr ""
 #: emaillineedit/emaillineedit.cpp:34
 #, fuzzy, kde-format
 #| msgid "Click on button for selecting contacts..."
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Kontaktide valimiseks klõpsa nupule ..."
 
@@ -81,6 +82,7 @@ msgstr "Laadimine käib ..."
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, fuzzy, kde-format
 #| msgid "Search..."
+msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Otsi ..."
 
@@ -134,6 +136,7 @@ msgstr "IMAP kausta valimine"
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, fuzzy, kde-format
 #| msgid "Click on button for selecting folder..."
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr "Kausta valimiseks klõpsa nupule ..."
 

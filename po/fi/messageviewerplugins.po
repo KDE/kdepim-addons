@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:38+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2023-11-15 18:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -259,6 +259,7 @@ msgstr "Kuvaus:"
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
 #, fuzzy, kde-format
 #| msgid "Add command arguments..."
+msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "Lisää komennon parametrit…"
 

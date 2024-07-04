@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2023-09-26 22:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -23,6 +23,7 @@ msgstr ""
 #: emaillineedit/emaillineedit.cpp:34
 #, fuzzy, kde-format
 #| msgid "Click on button for selecting contacts..."
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Botoian klik egin, kontaktuak hautatzeko..."
 
@@ -83,6 +84,7 @@ msgstr "Zamatzen ari da..."
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, fuzzy, kde-format
 #| msgid "Search..."
+msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Bilatu..."
 
@@ -135,6 +137,7 @@ msgstr "Hautatu IMAP karpeta"
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, fuzzy, kde-format
 #| msgid "Click on button for selecting folder..."
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr "Botoian klik egin karpeta hautatzeko..."
 

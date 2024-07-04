@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2018-12-18 03:18+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -20,6 +20,7 @@ msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr ""
 
@@ -76,6 +77,7 @@ msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr ""
 
@@ -125,5 +127,6 @@ msgstr ""
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-06-22 13:08+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -18,7 +18,9 @@ msgstr ""
 "X-Generator: Lokalize 24.05.0\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting contacts…"
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Click on button for selecting contacts…"
 
@@ -74,7 +76,9 @@ msgid "Loading in progress…"
 msgstr "Loading in progress…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search…"
+msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Search…"
 
@@ -123,7 +127,9 @@ msgid "Select IMAP folder"
 msgstr "Select IMAP folder"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click on button for selecting folder…"
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr "Click on button for selecting folder…"
 

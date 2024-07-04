@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-06-20 02:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -146,7 +146,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "搜尋並選取要合併的重複聯絡人"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search in result…"
+msgctxt "@info:placeholder"
 msgid "Search in result…"
 msgstr "在結果中搜尋…"
 

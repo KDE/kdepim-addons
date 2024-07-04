@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-06-18 19:55+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -149,7 +149,9 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Buscar e seleccionar os contactos duplicados para fusionalos."
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search in result…"
+msgctxt "@info:placeholder"
 msgid "Search in result…"
 msgstr "Buscar no resultado…"
 

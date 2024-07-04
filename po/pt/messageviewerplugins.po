@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:38+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2022-03-25 09:57+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -263,6 +263,7 @@ msgstr "Descrição:"
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
 #, fuzzy, kde-format
 #| msgid "Add command arguments..."
+msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "Adicionar argumentos ao comando..."
 

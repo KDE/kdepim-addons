@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -147,6 +147,7 @@ msgstr "选择重复的联系人来合并"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Search in result…"
 msgstr ""
 

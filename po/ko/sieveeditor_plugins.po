@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 23:00+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -20,6 +20,7 @@ msgstr ""
 #: emaillineedit/emaillineedit.cpp:34
 #, fuzzy, kde-format
 #| msgid "Click on button for selecting contacts..."
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "연락처를 선택하려면 단추를 클릭하십시오..."
 
@@ -80,6 +81,7 @@ msgstr "불러오는 중..."
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, fuzzy, kde-format
 #| msgid "Search..."
+msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "찾기..."
 
@@ -132,6 +134,7 @@ msgstr "IMAP 폴더 선택"
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, fuzzy, kde-format
 #| msgid "Click on button for selecting folder..."
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr "폴더를 선택하려면 단추를 클릭하십시오..."
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -19,6 +19,7 @@ msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr ""
 
@@ -75,6 +76,7 @@ msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr ""
 
@@ -124,5 +126,6 @@ msgstr "选择 IMAP 文件夹"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr ""

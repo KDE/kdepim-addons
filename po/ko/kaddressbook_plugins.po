@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 22:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -157,6 +157,7 @@ msgstr "중복된 연락처를 검색하고 선택해서 합치기"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, fuzzy, kde-format
 #| msgid "Search in result..."
+msgctxt "@info:placeholder"
 msgid "Search in result…"
 msgstr "결과에서 검색..."
 

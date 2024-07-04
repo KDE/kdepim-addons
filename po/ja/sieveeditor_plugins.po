@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2016-12-15 09:01-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -16,6 +16,7 @@ msgstr ""
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr ""
 
@@ -72,6 +73,7 @@ msgstr ""
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr ""
 
@@ -121,5 +123,6 @@ msgstr ""
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr ""

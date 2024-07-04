@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-04-28 19:43+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -161,6 +161,7 @@ msgstr "Doppelte Kontakte zum Zusammenführen suchen und auswählen"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, fuzzy, kde-format
 #| msgid "Search in result..."
+msgctxt "@info:placeholder"
 msgid "Search in result…"
 msgstr "In Ergebnissen suchen ..."
 

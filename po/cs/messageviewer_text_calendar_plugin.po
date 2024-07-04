@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-05-30 13:57+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,9 @@ msgid "Select Attendees"
 msgstr "Vybrat účastníky"
 
 #: attendeeselector.cpp:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Click to add a new attendee"
+msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Klikněte pro přidání nového účastníka"
 
