@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-19 22:33+0200\n"
+"PO-Revision-Date: 2024-07-04 21:35+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -243,8 +243,7 @@ msgid "Description:"
 msgstr "Priskribo:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "Aldoni komandargumentojn…"
@@ -308,31 +307,3 @@ msgstr "Ekstera Skripto"
 #, kde-format
 msgid "Configure"
 msgstr "Agordi"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Note:"
-#~ msgstr "Noto:"
-
-#~ msgid "Create new note and close this widget."
-#~ msgstr "Krei novan noton kaj fermi ĉi tiun fenestraĵon."
-
-#~ msgid "Close the widget for creating new notes."
-#~ msgstr "Fermi la fenestraĵon por krei novajn notojn."
-
-#~ msgctxt "edit a note on this message"
-#~ msgid "Edit Note"
-#~ msgstr "Redakti Noton"
-
-#~ msgctxt "create a new note out of this message"
-#~ msgid "Create Note"
-#~ msgstr "Krei Noton"
-
-#~ msgid "Allows you to create a note from this message"
-#~ msgstr "Permesas al vi krei noton el ĉi tiu mesaĝo"
-
-#~ msgid ""
-#~ "This option starts an editor to create a note. Then you can edit the note "
-#~ "to your liking before saving it."
-#~ msgstr ""
-#~ "Ĉi tiu elekteblo komencas redaktilon por krei noton. Tiam vi povas "
-#~ "redakti la noton laŭplaĉe antaŭ ol konservi ĝin."

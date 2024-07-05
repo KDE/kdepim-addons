@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 08:15+0300\n"
+"PO-Revision-Date: 2024-07-04 06:45+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -147,11 +147,10 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "חיפוש ובחירה של אנשי קשר כפולים למיזוג"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result…"
-msgstr "חיפוש בתוצאות…"
+msgstr "חיפוש בתוצאה…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format

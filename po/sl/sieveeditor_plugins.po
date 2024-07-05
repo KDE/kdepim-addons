@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 07:48+0200\n"
+"PO-Revision-Date: 2024-07-04 10:34+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -21,8 +21,7 @@ msgstr ""
 "X-Generator: Poedit 3.4.4\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Kliknite na gumb za izbiro stikov…"
@@ -79,8 +78,7 @@ msgid "Loading in progress…"
 msgstr "Nalaganje v teku…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Išči…"
@@ -130,8 +128,7 @@ msgid "Select IMAP folder"
 msgstr "Izberi mapo IMAP"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr "Kliknite na gumb za izbiro mape…"

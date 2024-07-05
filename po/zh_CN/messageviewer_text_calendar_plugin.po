@@ -25,8 +25,7 @@ msgid "Select Attendees"
 msgstr "选择参与者"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "点击这里新加参与者"

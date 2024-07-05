@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 05:55+0200\n"
+"PO-Revision-Date: 2024-07-04 05:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -246,8 +246,7 @@ msgid "Description:"
 msgstr "აღწერა:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "დაამატეთ ბრძანების არგუმენტები…"

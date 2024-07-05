@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 03:37+0200\n"
+"PO-Revision-Date: 2024-07-05 02:10+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,14 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
-msgstr "Pulse sobre el botón para seleccionar contactos..."
+msgstr "Pulse el botón para seleccionar contactos..."
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
@@ -77,8 +76,7 @@ msgid "Loading in progress…"
 msgstr "Carga en curso..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Buscar..."
@@ -128,8 +126,7 @@ msgid "Select IMAP folder"
 msgstr "Seleccionar carpeta IMAP"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr "Pulse el botón para seleccionar la carpeta..."

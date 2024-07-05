@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 08:46+0300\n"
+"PO-Revision-Date: 2024-07-04 21:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -150,8 +150,7 @@ msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Пошук і позначення записів контактів для об'єднання"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search in result…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result…"
 msgstr "Шукати у результатах…"

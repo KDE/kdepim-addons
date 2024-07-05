@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 08:47+0300\n"
+"PO-Revision-Date: 2024-07-04 22:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -21,8 +21,7 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Натисніть кнопку для вибору записів контактів…"
@@ -79,8 +78,7 @@ msgid "Loading in progress…"
 msgstr "Триває завантаження…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Шукати…"
@@ -130,8 +128,7 @@ msgid "Select IMAP folder"
 msgstr "Виберіть теку IMAP"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr "Натисніть кнопку для вибору теки…"
