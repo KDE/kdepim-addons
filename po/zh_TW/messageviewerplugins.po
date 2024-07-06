@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-20 02:39+0900\n"
+"PO-Revision-Date: 2024-07-05 15:41+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -241,8 +241,7 @@ msgid "Description:"
 msgstr "描述："
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "新增命令列參數…"

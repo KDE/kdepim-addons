@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-05-30 02:57+0900\n"
+"PO-Revision-Date: 2024-07-05 15:41+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -27,8 +27,7 @@ msgid "Select Attendees"
 msgstr "選擇參加者"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "點選以加入新的參加者"

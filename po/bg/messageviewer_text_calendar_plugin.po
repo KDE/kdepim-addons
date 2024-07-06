@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-05-30 20:46+0200\n"
+"PO-Revision-Date: 2024-07-05 15:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -25,8 +25,7 @@ msgid "Select Attendees"
 msgstr "Избор на участници"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Натиснете тук, за да добавите нов участник"

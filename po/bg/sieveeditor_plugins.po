@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-25 17:55+0200\n"
+"PO-Revision-Date: 2024-07-05 15:58+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -20,8 +20,7 @@ msgstr ""
 "X-Generator: Lokalize 24.05.1\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Щракнете върху бутона за избор на контакти…"
@@ -78,11 +77,10 @@ msgid "Loading in progress…"
 msgstr "Извършва се зареждане…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Търсене..."
+msgstr "Търсене…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
@@ -129,8 +127,7 @@ msgid "Select IMAP folder"
 msgstr "Избиране на IMAP папка"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr "Щракнете върху бутона за избиране на папки…"

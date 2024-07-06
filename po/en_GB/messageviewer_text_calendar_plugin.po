@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-05-30 16:25+0100\n"
+"PO-Revision-Date: 2024-07-05 13:43+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -26,8 +26,7 @@ msgid "Select Attendees"
 msgstr "Select Attendees"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Click to add a new attendee"
