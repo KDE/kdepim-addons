@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2024-06-20 21:29+0530\n"
+"PO-Revision-Date: 2024-07-06 20:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -98,12 +98,12 @@ msgstr "ஒன்றிணை"
 #: mergelib/manualmerge/mergecontactwidget.cpp:48
 #, kde-format
 msgid "Select contacts that you really want to merge:"
-msgstr ""
+msgstr "ஒன்றாக்க வேண்டிய தொடர்புகளைத் தேர்ந்தெடுக்கவும்:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:68
 #, kde-format
 msgid "Select the addressbook in which to store merged contacts:"
-msgstr ""
+msgstr "ஒன்றாக்கிய தொடர்புகளை எந்த முகவரிப்புத்தகத்தில் செமிக்க வேண்டும்:"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
@@ -146,7 +146,7 @@ msgstr ""
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
 msgid "Select AddressBook:"
-msgstr ""
+msgstr "முகவரிப்புத்தகத்தை தேர்ந்தெடு:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
