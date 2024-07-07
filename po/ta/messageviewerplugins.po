@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-20 21:22+0530\n"
+"PO-Revision-Date: 2024-07-06 20:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -139,12 +139,12 @@ msgstr "புதிய செய்யவேண்டியதை உருவ�
 #: createtodoplugin/todoedit.cpp:103
 #, kde-format
 msgid "Open todo editor, where more details can be changed."
-msgstr ""
+msgstr "மேலும் விவரங்களை மாற்ற விடும் செய்யவேண்டியவை திருத்தியைத் திறக்கும்."
 
 #: createtodoplugin/todoedit.cpp:113
 #, kde-format
 msgid "Close the widget for creating new todos."
-msgstr ""
+msgstr "புதிய செய்யவேண்டியவற்றை உருவாக்குவதற்கான சாளரத்தை மூடும்."
 
 #: createtodoplugin/todoedit.cpp:150
 #, kde-format
@@ -161,7 +161,7 @@ msgstr "\"%1\"-க்கு பதிலளி"
 msgctxt ""
 "%1 is summary of the todo, %2 is name of the folder in which it is stored"
 msgid "New todo '%1' was added to task list '%2'"
-msgstr ""
+msgstr "'%2' எனும் பட்டியலில் '%1' எனும் செய்யவேண்டியது புதிதாக சேர்க்கப்பட்டது"
 
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:68
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:69
@@ -172,7 +172,7 @@ msgstr "செய்யவேண்டியதை உருவாக்கு"
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:70
 #, kde-format
 msgid "Allows you to create a calendar to-do or reminder from this message"
-msgstr ""
+msgstr "இவ்வஞ்சலிலிருந்து செய்யவேண்டியதையோ நினைவூட்டலையோ உருவாக்க உதவும்"
 
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:72
 #, kde-format
@@ -239,11 +239,10 @@ msgid "Description:"
 msgstr "விவரணம்:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
-msgstr "கட்டளைக்கான தருமதிப்புகள்…"
+msgstr "கட்டளைக்கான தருமதிப்புகளை உள்ளிடவும்…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -254,7 +253,7 @@ msgstr "கட்டளை வரி:"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"whatsthis1\">தருமதிப்பு வடிவ விவரங்கள்…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -266,6 +265,12 @@ msgid ""
 "- the reply email address</li><li>%akonadiUrl - the akonadi url (as akonadi:?"
 "item=187020)</li></ul></strong></p></qt>"
 msgstr ""
+"<qt><p><strong>தருமதிப்புகளில் இந்த கொள்ளிடங்களை பயன்படுத்தலாம்:</strong></p><ul><li>"
+"%s - அஞ்சலின் தலைப்பு</li><li>%from - அனுப்புநரின் முகவரி</li><li>%cc - நகல் "
+"முகவரிகளின் பட்டியல்</li><li>%bcc - மறைநகல் முகவரிகளின் பட்டியல்</li><li>%body - "
+"அஞ்சலின் உடல்பகுதி</li><li>%inreplyto - பதில்பெறவேண்டிய மின்னஞ்சல் முகவரி</li><li>"
+"%akonadiUrl - akonadi முகவரி (akonadi:?item=187020 என்பதைப் போன்றது)</li></ul></"
+"strong></p></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format

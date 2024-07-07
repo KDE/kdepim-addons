@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 16:54+0200\n"
+"PO-Revision-Date: 2024-07-04 13:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -251,8 +251,7 @@ msgid "Description:"
 msgstr "Descripció:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments…"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "Afig arguments a la línia d'ordres…"
@@ -319,31 +318,3 @@ msgstr "Script extern"
 #, kde-format
 msgid "Configure"
 msgstr "Configura"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Note:"
-#~ msgstr "Nota:"
-
-#~ msgid "Create new note and close this widget."
-#~ msgstr "Crea una nota nova i tanca este giny."
-
-#~ msgid "Close the widget for creating new notes."
-#~ msgstr "Tanca el giny per a crear notes noves."
-
-#~ msgctxt "edit a note on this message"
-#~ msgid "Edit Note"
-#~ msgstr "Edita la nota"
-
-#~ msgctxt "create a new note out of this message"
-#~ msgid "Create Note"
-#~ msgstr "Crea una nota"
-
-#~ msgid "Allows you to create a note from this message"
-#~ msgstr "Permet crear una nota a partir d'este missatge"
-
-#~ msgid ""
-#~ "This option starts an editor to create a note. Then you can edit the note "
-#~ "to your liking before saving it."
-#~ msgstr ""
-#~ "Esta opció inicia un editor per a crear una nota. Després podreu editar-"
-#~ "la al vostre gust abans de guardar-la."

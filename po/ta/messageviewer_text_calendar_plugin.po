@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-16 22:47+0530\n"
+"PO-Revision-Date: 2024-07-06 21:31+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -21,8 +21,7 @@ msgid "Select Attendees"
 msgstr "பங்கேற்போரை தேர்ந்தெடுப்பது"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "புதிய பங்கேற்பாளரை சேர்க்க கிளிக் செய்யவும்"
@@ -124,10 +123,9 @@ msgid "Invitation answer attached."
 msgstr "அழைப்பிதழுக்கான பதில் உடனிணைப்பாயுள்ளது."
 
 #: text_calendar.cpp:659
-#, fuzzy, kde-format
-#| msgid "Answer: Incidence with no summary"
+#, kde-format
 msgid "Incidence with no summary"
-msgstr "பதில்: சுருக்கமில்லாத நிகழ்வு"
+msgstr "சுருக்கமில்லாத நிகழ்வு"
 
 #: text_calendar.cpp:664
 #, kde-format
@@ -187,12 +185,12 @@ msgstr ""
 #: text_calendar.cpp:775
 #, kde-format
 msgid "Do you still want to accept the task?"
-msgstr ""
+msgstr "இருப்பினும் பணியை ஏற்றுக்கொள்ள வேண்டுமா?"
 
 #: text_calendar.cpp:777
 #, kde-format
 msgid "Do you still want to accept the invitation?"
-msgstr ""
+msgstr "இருப்பினும் அழைப்பை ஏற்க வேண்டுமா?"
 
 #: text_calendar.cpp:779 text_calendar.cpp:791
 #, kde-format
