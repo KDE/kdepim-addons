@@ -504,30 +504,30 @@ public:
 
         KMime::Message::Ptr msg(new KMime::Message);
         if (MessageViewer::MessageViewerSettings::self()->exchangeCompatibleInvitations()) {
-            msg->subject()->fromUnicodeString(status, "utf-8");
+            msg->subject()->fromUnicodeString(status);
             QString tsubject = subject;
             tsubject.remove(i18n("Answer: "));
             if (status == QLatin1StringView("cancel")) {
-                msg->subject()->fromUnicodeString(i18nc("Not able to attend.", "Declined: %1", tsubject), "utf-8");
+                msg->subject()->fromUnicodeString(i18nc("Not able to attend.", "Declined: %1", tsubject));
             } else if (status == QLatin1StringView("tentative")) {
-                msg->subject()->fromUnicodeString(i18nc("Unsure if it is possible to attend.", "Tentative: %1", tsubject), "utf-8");
+                msg->subject()->fromUnicodeString(i18nc("Unsure if it is possible to attend.", "Tentative: %1", tsubject));
             } else if (status == QLatin1StringView("accepted")) {
-                msg->subject()->fromUnicodeString(i18nc("Accepted the invitation.", "Accepted: %1", tsubject), "utf-8");
+                msg->subject()->fromUnicodeString(i18nc("Accepted the invitation.", "Accepted: %1", tsubject));
             } else {
-                msg->subject()->fromUnicodeString(subject, "utf-8");
+                msg->subject()->fromUnicodeString(subject);
             }
         } else {
-            msg->subject()->fromUnicodeString(subject, "utf-8");
+            msg->subject()->fromUnicodeString(subject);
         }
-        msg->to()->fromUnicodeString(to, "utf-8");
-        msg->from()->fromUnicodeString(receiver, "utf-8");
+        msg->to()->fromUnicodeString(to);
+        msg->from()->fromUnicodeString(receiver);
         msg->date()->setDateTime(QDateTime::currentDateTime());
 
         if (MessageViewer::MessageViewerSettings::self()->legacyBodyInvites()) {
             auto ct = msg->contentType(); // create
             ct->setMimeType("text/calendar");
             ct->setCharset("utf-8");
-            ct->setName(QStringLiteral("cal.ics"), "utf-8");
+            ct->setName(QStringLiteral("cal.ics"));
             ct->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
 
             auto disposition = new KMime::Headers::ContentDisposition;
@@ -565,7 +565,7 @@ public:
             auto attachCt = attachMessage->contentType();
             attachCt->setMimeType("text/calendar");
             attachCt->setCharset("utf-8");
-            attachCt->setName(QStringLiteral("cal.ics"), "utf-8");
+            attachCt->setName(QStringLiteral("cal.ics"));
             attachCt->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
             attachMessage->setHeader(attachDisposition);
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
@@ -601,14 +601,14 @@ public:
             transportId = TransportManager::self()->defaultTransportId();
         }
         auto header = new KMime::Headers::Generic("X-KMail-Transport");
-        header->fromUnicodeString(QString::number(transportId), "utf-8");
+        header->fromUnicodeString(QString::number(transportId));
         msg->setHeader(header);
 
         // Outlook will only understand the reply if the From: header is the
         // same as the To: header of the invitation message.
         if (!MessageViewer::MessageViewerSettings::self()->legacyMangleFromToHeaders()) {
             if (identity != KIdentityManagementCore::Identity::null()) {
-                msg->from()->fromUnicodeString(identity.fullEmailAddr(), "utf-8");
+                msg->from()->fromUnicodeString(identity.fullEmailAddr());
             }
             // Remove BCC from identity on ical invitations (kolab/issue474)
             msg->removeHeader<KMime::Headers::Bcc>();

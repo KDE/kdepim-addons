@@ -135,8 +135,9 @@ void EventEditTest::shouldEmitEventWhenPressEnter()
     QVERIFY(edit.isVisible());
 
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     eventedit->setFocus();
@@ -153,8 +154,9 @@ void EventEditTest::shouldHideWidgetWhenPressEnter()
     QVERIFY(edit.isVisible());
 
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QTest::keyClick(eventedit, Qt::Key_Enter);
@@ -182,7 +184,8 @@ void EventEditTest::shouldHideWidgetWhenSaveClicked()
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test Note"), "us-ascii");
+    msg->subject(true)->fromUnicodeString(QStringLiteral("Test Note"));
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QTest::mouseClick(save, Qt::LeftButton);
@@ -236,7 +239,8 @@ void EventEditTest::shouldNotEmitCreateEventWhenDateIsInvalid()
     endDateTime->setDateTime(QDateTime());
 
     QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
@@ -249,7 +253,8 @@ void EventEditTest::shouldEventHasCorrectSubject()
     MessageViewer::EventEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
@@ -266,7 +271,8 @@ void EventEditTest::shouldSelectLineWhenPutMessage()
     MessageViewer::EventEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
@@ -280,7 +286,8 @@ void EventEditTest::shouldHaveCorrectStartEndDateTime()
     MessageViewer::EventEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
 
     QDateTime currentDateTime = QDateTime::currentDateTime();
@@ -346,7 +353,8 @@ void EventEditTest::shouldEnabledSaveOpenEditorButton()
 {
     MessageViewer::EventEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
+    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"));
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
 
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
@@ -373,7 +381,9 @@ void EventEditTest::shouldUpdateStartEndDateWhenReopenIt()
 {
     MessageViewer::EventEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
 
     QDateTime currentDateTime = QDateTime::currentDateTime();
@@ -420,7 +430,9 @@ void EventEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEm
     // Create an empty combobox
     akonadicombobox->setModel(new QStandardItemModel());
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
 
     auto openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));

@@ -23,7 +23,6 @@ using namespace KItinerary;
 
 ItineraryMemento::ItineraryMemento()
 {
-    m_postProc.setValidationEnabled(false);
 }
 
 void ItineraryMemento::detach()

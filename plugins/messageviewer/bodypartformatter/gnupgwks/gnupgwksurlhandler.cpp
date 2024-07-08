@@ -147,7 +147,7 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
         transportId = transportMgr->defaultTransportId();
     }
     auto header = new KMime::Headers::Generic("X-KMail-Transport");
-    header->fromUnicodeString(QString::number(transportId), "utf-8");
+    header->fromUnicodeString(QString::number(transportId));
     msg->setHeader(header);
 
     // Build the message

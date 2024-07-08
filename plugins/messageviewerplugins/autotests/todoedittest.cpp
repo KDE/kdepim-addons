@@ -126,7 +126,9 @@ void TodoEditTest::shouldHaveASubject()
     QCOMPARE(noteedit->text(), QString());
 
     QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
+
     edit.setMessage(msg);
     edit.showToDoWidget();
 
@@ -137,8 +139,9 @@ void TodoEditTest::shouldEmptySubjectWhenMessageIsNull()
 {
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     edit.setMessage(KMime::Message::Ptr());
@@ -149,8 +152,9 @@ void TodoEditTest::shouldEmptySubjectWhenMessageHasNotSubject()
 {
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     KMime::Message::Ptr msgSubjectEmpty(new KMime::Message);
@@ -162,8 +166,9 @@ void TodoEditTest::shouldSelectLineWhenPutMessage()
 {
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
@@ -211,8 +216,9 @@ void TodoEditTest::shouldEmitTodoWhenPressEnter()
 {
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
@@ -225,8 +231,9 @@ void TodoEditTest::shouldTodoHasCorrectSubject()
 {
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
@@ -246,8 +253,9 @@ void TodoEditTest::shouldClearAllWhenCloseWidget()
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
 
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
@@ -273,8 +281,9 @@ void TodoEditTest::shouldEmitCorrectCollection()
     MessageViewer::TodoEdit edit;
     auto akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
     akonadicombobox->setCurrentIndex(3);
@@ -318,7 +327,9 @@ void TodoEditTest::shouldHideWidgetWhenSaveClicked()
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test Note"), "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QTest::mouseClick(save, Qt::LeftButton);
@@ -364,8 +375,9 @@ void TodoEditTest::shouldSetFocusWhenWeCallTodoEdit()
     edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QCOMPARE(noteedit->hasFocus(), true);
@@ -390,8 +402,10 @@ void TodoEditTest::shouldClearLineAfterEmitNewNote()
 {
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
+
     edit.setMessage(msg);
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QTest::keyClick(noteedit, Qt::Key_Enter);
@@ -406,8 +420,9 @@ void TodoEditTest::shouldHaveLineEditFocus()
     edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     KMime::Message::Ptr msg(new KMime::Message);
-    QString subject = QStringLiteral("Test Note");
-    msg->subject(true)->fromUnicodeString(subject, "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QCOMPARE(noteedit->hasFocus(), true);
@@ -420,7 +435,9 @@ void TodoEditTest::shouldShowMessageWidget()
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setText(QStringLiteral("Test Note"));
@@ -439,7 +456,9 @@ void TodoEditTest::shouldHideMessageWidget()
     noteedit->setText(QStringLiteral("Test note"));
 
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto msgwidget = edit.findChild<KMessageWidget *>(QStringLiteral("msgwidget"));
     msgwidget->show();
@@ -455,7 +474,9 @@ void TodoEditTest::shouldHideMessageWidgetWhenAddNewMessage()
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
@@ -478,7 +499,9 @@ void TodoEditTest::shouldHideMessageWidgetWhenCloseWidget()
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setText(QStringLiteral("Test Note"));
@@ -494,7 +517,9 @@ void TodoEditTest::shouldEnabledSaveOpenEditorButton()
 {
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
 
@@ -528,7 +553,9 @@ void TodoEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmp
     akonadicombobox->setModel(new QStandardItemModel());
 
     KMime::Message::Ptr msg(new KMime::Message);
-    msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
+    const QString subject = QStringLiteral("Test Note");
+    msg->subject(true)->fromUnicodeString(subject);
+    msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
 
     auto openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
