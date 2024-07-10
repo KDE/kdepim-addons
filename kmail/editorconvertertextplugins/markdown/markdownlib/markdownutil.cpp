@@ -12,7 +12,7 @@ QStringList MarkdownUtil::imagePaths(const QString &str)
     static QRegularExpression imageRegular(QStringLiteral("!\\[.*\\]\\((.*)([\\s]*=.*x.*)*\\s*([\\s]*\".*\")*\\s*\\)"));
 
     imageRegular.setPatternOptions(QRegularExpression::InvertedGreedinessOption);
-    QRegularExpressionMatchIterator i = imageRegular.globalMatch(str);
+    QRegularExpressionMatchIterator i = imageRegular.globalMatchView(str);
     QStringList results;
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
