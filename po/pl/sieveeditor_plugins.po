@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-26 01:46+0000\n"
-"PO-Revision-Date: 2024-05-30 11:10+0200\n"
+"PO-Revision-Date: 2024-07-13 07:55+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -75,7 +75,7 @@ msgstr "Wczytywanie w trakcie..."
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
 msgid "Search..."
-msgstr "Wyszukaj..."
+msgstr "Poszukaj..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
@@ -122,7 +122,7 @@ msgstr "Wybierz katalog IMAP"
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
 msgid "Click on button for selecting folder..."
-msgstr "Kliknij na przycisku, aby wybrać katalog…"
+msgstr "Naciśnij na przycisku, aby wskazać katalog…"
 
 #~ msgid "Create Regular Expression"
 #~ msgstr "Utwórz wyrażenie regularne"
