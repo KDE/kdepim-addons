@@ -1,16 +1,16 @@
 # Translation for kmail_editorsendcheck_plugins.po to Euskara/Basque (eu).
-# Copyright (C) 2023 This file is copyright:
+# Copyright (C) 2023-2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2023-09-26 22:33+0200\n"
+"PO-Revision-Date: 2024-07-16 11:35+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -60,8 +60,7 @@ msgid "Automatic Add Contacts"
 msgstr "Gehitu kontaktuak automatikoa"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "Hautatu kontaktuak gordetzeko helbide-liburua:"
@@ -94,10 +93,7 @@ msgid "Check SMTP server"
 msgstr "Egiaztatu SMTP zerbitzaria"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to send the email with a different SMTP than the one defined "
-#| "in the current identity?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
@@ -139,8 +135,7 @@ msgid "Duplicated emails"
 msgstr "Bikoiztutako e-postak"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "These emails are duplicated. Do you want to send email?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "E-posta hauek bikoiztuta daude. E-posta bidali nahi duzu?"
@@ -158,8 +153,7 @@ msgid "Check Attachment"
 msgstr "Egiaztatu eranskina"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Do you want to send some attachment?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "Eranskin batzuk bidali nahi dituzu?"
@@ -184,7 +178,7 @@ msgstr "Errefusatutako domeinu-izena"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Ge&hitu..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -194,8 +188,7 @@ msgstr "&Kendu"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mod&ify..."
+#, kde-format
 msgid "Mod&ify…"
 msgstr "&Aldatu..."
 
@@ -225,8 +218,7 @@ msgid "Do you want to remove this email address?"
 msgstr "E-posta helbide hau kendu nahi duzu?"
 
 #: confirm-address/confirmaddressdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add Selected Emails to WhiteList"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Gehitu hautatutako e-postak zerrenda-zurira"
@@ -249,8 +241,7 @@ msgid "Emails added to white list"
 msgstr "Zerrenda-zurira gehitutako e-postak"
 
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
-#, fuzzy, kde-format
-#| msgid "Enter new domain name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
 msgstr "Sartu domeinu-izen berria:"
@@ -268,8 +259,7 @@ msgid "Change Value"
 msgstr "Aldatu balioa"
 
 #: confirm-address/confirmaddresswidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Potentially invalid emails are displayed in red:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Baliogabeak izan daitezkeen e-postak gorriz agertzen dira:"

@@ -1,16 +1,16 @@
 # Translation for messageviewerplugins.po to Euskara/Basque (eu).
-# Copyright (C) 2023 This file is copyright:
+# Copyright (C) 2023-2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# SPDX-FileCopyrightText: 2022, 2023 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 22:40+0200\n"
+"PO-Revision-Date: 2024-07-16 12:01+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -26,15 +26,13 @@ msgid "Current URL is not a shortened URL."
 msgstr "Uneko URLa ez da laburtutako URL bat."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, fuzzy, kde-format
-#| msgid "Expand URL"
+#, kde-format
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "Zabaldu URLa"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate..."
+#, kde-format
 msgctxt "@action"
 msgid "Translate…"
 msgstr "Itzuli..."
@@ -45,15 +43,13 @@ msgid "&Save"
 msgstr "&Gorde"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Ireki &editorea..."
 
 #: createeventplugin/eventedit.cpp:56
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Ekitaldia:"
@@ -64,15 +60,13 @@ msgid "Calendar where the new event will be stored."
 msgstr "Ekitaldi berria gordeko den egutegia."
 
 #: createeventplugin/eventedit.cpp:76
-#, fuzzy, kde-format
-#| msgid "Calendar where the new event will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "Ekitaldi berria gordeko den egutegia"
 
 #: createeventplugin/eventedit.cpp:89
-#, fuzzy, kde-format
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Hasiera:"
@@ -83,16 +77,15 @@ msgid "Select start time for event."
 msgstr "Aukeratu ekitaldiaren hasierako ordua."
 
 #: createeventplugin/eventedit.cpp:102
-#, fuzzy, kde-format
-#| msgid "End:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
-msgstr "Amaiera:"
+msgstr "Bukatu:"
 
 #: createeventplugin/eventedit.cpp:107
 #, kde-format
 msgid "Select end time for event."
-msgstr "Aukeratu ekitaldiaren amaierako ordua."
+msgstr "Aukeratu ekitaldiaren bukaerako ordua."
 
 #: createeventplugin/eventedit.cpp:125
 #, kde-format
@@ -110,10 +103,9 @@ msgid "Close the widget for creating new events."
 msgstr "Itxi ekitaldi berriak sortzeko trepeta."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Event…"
-msgstr "Sortu ekitaldia"
+msgstr "Sortu ekitaldia..."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -126,8 +118,7 @@ msgid "Allows you to create a calendar Event"
 msgstr "Egutegiko ekitaldi bat sortzeko aukera ematen dizu"
 
 #: createtodoplugin/todoedit.cpp:61
-#, fuzzy, kde-format
-#| msgid "To-do:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "Zeregina:"
@@ -138,8 +129,7 @@ msgid "Todo list where the new task will be stored."
 msgstr "Ataza berria gordeko den zeregin-zerrenda."
 
 #: createtodoplugin/todoedit.cpp:82
-#, fuzzy, kde-format
-#| msgid "Todo list where the new task will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "Ataza berria gordeko den zeregin-zerrenda"
@@ -207,29 +197,25 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Konfiguratu «Kanpoko gidoia» plugina"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Gehitu gidoia..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Kendu gidoia"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Aldatu gidoia..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "External Script:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Kanpoko gidoia:"
@@ -261,8 +247,7 @@ msgid "Description:"
 msgstr "Azalpena:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "Gehitu komando-argumentuak..."
@@ -273,13 +258,12 @@ msgid "Command Line:"
 msgstr "Komando-lerroa:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
-"<qt><a href=\"whatsthis1\">Argumentuen formatuari buruzko informazioa...</"
-"a></qt>"
+"<qt><a href=\"whatsthis1\">Argumentu-formatuari buruzko informazioa...</a></"
+"qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -320,8 +304,7 @@ msgid "Impossible to start executable"
 msgstr "Exekutagarria abiaraztea ezinezkoa da"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "External Script"
+#, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "Kanpoko gidoia"

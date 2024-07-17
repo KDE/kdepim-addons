@@ -1,26 +1,26 @@
 # Translation for messageviewer_text_calendar_plugin.po to Euskara/Basque (eu).
-# Copyright (C) 2005-2022 This file is copyright:
+# Copyright (C) 2005-2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# kDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 kDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2005.
 # Ion Gaztañaga <ion_g_m@hotmail.com>, 2005.
 # Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2007.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2022-09-17 06:16+0200\n"
+"PO-Revision-Date: 2024-07-16 11:54+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: attendeeselector.cpp:21
@@ -30,8 +30,7 @@ msgid "Select Attendees"
 msgstr "Hautatu partaideak"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Egin klik partaide berri bat gehitzeko"
@@ -60,15 +59,13 @@ msgid "Select delegate"
 msgstr "Hautatu ordezkaria"
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Eskuordetu:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Iruzkina:"
@@ -447,15 +444,13 @@ msgid "Send Email to Organizer"
 msgstr "Bidali e-posta antolatzaileari"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Ez bidali"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Bidali e-posta"
@@ -471,8 +466,7 @@ msgid "Open Attachment"
 msgstr "Ireki eranskina"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
 msgstr "Gorde eranskina honela..."
 
@@ -492,10 +486,9 @@ msgid "Accept counter proposal"
 msgstr "Onartu ordezko proposamena"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "Sortu ordezko proposamen bat..."
+msgstr "Sortu kontraproposamen bat..."
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -518,8 +511,7 @@ msgid "Decline counter proposal"
 msgstr "Uko egin ordezko proposamenari"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
 msgstr "Egiaztatu nire egutegia..."
 

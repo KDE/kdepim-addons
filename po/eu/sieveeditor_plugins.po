@@ -1,16 +1,16 @@
 # Translation for sieveeditor_plugins.po to Euskara/Basque (eu).
-# Copyright (C) 2023 This file is copyright:
+# Copyright (C) 2023-2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2023-09-26 22:49+0200\n"
+"PO-Revision-Date: 2024-07-16 12:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,11 +18,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Botoian klik egin, kontaktuak hautatzeko..."
@@ -30,11 +29,10 @@ msgstr "Botoian klik egin, kontaktuak hautatzeko..."
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Hautatu e-postak"
@@ -58,11 +56,10 @@ msgid "Error during creating folder: %1"
 msgstr "Errorea karpeta sortzean: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Folder…"
-msgstr "Sortu karpeta"
+msgstr "Sortu karpeta..."
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -76,21 +73,18 @@ msgid "Unable to load folder list"
 msgstr "Ez da karpeta-zerrenda zamatzeko gai"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, fuzzy, kde-format
-#| msgid "Loading in progress..."
+#, kde-format
 msgid "Loading in progress…"
 msgstr "Zamatzen ari da..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Bilatu..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Refresh IMAP Folder List"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Berritu IMAP karpeta-zerrenda"
@@ -128,15 +122,13 @@ msgid "Load Folders"
 msgstr "Zamatu karpetak"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Hautatu IMAP karpeta"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
 msgstr "Botoian klik egin karpeta hautatzeko..."
