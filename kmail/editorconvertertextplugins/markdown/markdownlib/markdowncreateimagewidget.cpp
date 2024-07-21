@@ -43,11 +43,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mKeepOriginalSize->setObjectName(QLatin1StringView("keeporiginalsize"));
     mKeepOriginalSize->setChecked(true);
     mainLayout->addRow(mKeepOriginalSize);
-#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
-    connect(mKeepOriginalSize, &QCheckBox::stateChanged, this, &MarkdownCreateImageWidget::slotKeepOriginalSizeChanged);
-#else
     connect(mKeepOriginalSize, &QCheckBox::checkStateChanged, this, &MarkdownCreateImageWidget::slotKeepOriginalSizeChanged);
-#endif
 
     auto sizeWidget = new QWidget;
     sizeWidget->setObjectName(QLatin1StringView("sizeWidget"));
