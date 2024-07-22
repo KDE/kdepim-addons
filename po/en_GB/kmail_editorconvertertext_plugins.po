@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-07-22 00:39+0000\n"
 "PO-Revision-Date: 2024-05-30 16:24+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -78,8 +78,8 @@ msgstr "Image Link:"
 msgid "Alternate text:"
 msgstr "Alternate text:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:66
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:77
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
 #, kde-format
 msgid " px"
 msgstr " px"
