@@ -462,18 +462,3 @@ msgstr "Mod&ifica…"
 msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Seleccioneu l'adjunt:"
-
-#~ msgid "&Akonadi Vacuum..."
-#~ msgstr "Vacuum de l'&Akonadi..."
-
-#~ msgid "&Akonadi Fsck..."
-#~ msgstr "Fsck de l'&Akonadi..."
-
-#~ msgid "&Anti-Spam Wizard..."
-#~ msgstr "Assistent contra el correu &brossa..."
-
-#~ msgid "&Anti-Virus Wizard..."
-#~ msgstr "Assistent contra els &virus..."
-
-#~ msgid "A&dd..."
-#~ msgstr "A&fegeix..."

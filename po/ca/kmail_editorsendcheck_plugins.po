@@ -265,6 +265,3 @@ msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr ""
 "Els correus electrònics potencialment no vàlids es mostraran en vermell:"
-
-#~ msgid "A&dd..."
-#~ msgstr "A&fegeix..."
