@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/"
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/"
 "messageviewer_bodypartformatter_pkpass.pot\n"
-"X-Crowdin-File-ID: 45553\n"
+"X-Crowdin-File-ID: 50862\n"
 
 #: templates/barcode.html:7
 msgid "Unsupported barcode format."

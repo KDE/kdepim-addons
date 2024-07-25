@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/kmail_plugins.pot\n"
-"X-Crowdin-File-ID: 45685\n"
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/kmail_plugins.pot\n"
+"X-Crowdin-File-ID: 52748\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
