@@ -486,7 +486,7 @@ void TodoEditTest::shouldHideMessageWidgetWhenAddNewMessage()
     QCOMPARE(msgwidget->isVisible(), true);
 
     KMime::Message::Ptr msg2(new KMime::Message);
-    msg2->subject(true)->fromUnicodeString(QStringLiteral("Test note 2"), "us-ascii");
+    msg2->subject(true)->fromUnicodeString(QStringLiteral("Test note 2"));
     edit.setMessage(msg2);
     edit.showToDoWidget();
     QCOMPARE(msgwidget->isVisible(), false);

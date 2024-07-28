@@ -197,7 +197,7 @@ public:
                 QString source;
                 // If the bodypart does not have a charset specified, we need to fall back to utf8,
                 // not the KMail fallback encoding, so get the contents as binary and decode explicitly.
-                if (msgPart->content()->contentType()->parameter(QStringLiteral("charset")).isEmpty()) {
+                if (msgPart->content()->contentType()->parameter("charset").isEmpty()) {
                     const QByteArray &ba = msgPart->content()->decodedContent();
                     source = QString::fromUtf8(ba);
                 } else {
@@ -528,7 +528,7 @@ public:
             ct->setMimeType("text/calendar");
             ct->setCharset("utf-8");
             ct->setName(QStringLiteral("cal.ics"));
-            ct->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
+            ct->setParameter(QByteArrayLiteral("method"), QStringLiteral("reply"));
 
             auto disposition = new KMime::Headers::ContentDisposition;
             disposition->setDisposition(KMime::Headers::CDinline);
@@ -566,7 +566,7 @@ public:
             attachCt->setMimeType("text/calendar");
             attachCt->setCharset("utf-8");
             attachCt->setName(QStringLiteral("cal.ics"));
-            attachCt->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
+            attachCt->setParameter(QByteArrayLiteral("method"), QStringLiteral("reply"));
             attachMessage->setHeader(attachDisposition);
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             attachMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
@@ -1197,7 +1197,7 @@ public:
         // If the bodypart does not have a charset specified, we need to fall back to utf8,
         // not the KMail fallback encoding, so get the contents as binary and decode explicitly.
         QString iCal;
-        if (!part->content()->contentType()->hasParameter(QStringLiteral("charset"))) {
+        if (!part->content()->contentType()->hasParameter("charset")) {
             const QByteArray &ba = part->content()->decodedContent();
             iCal = QString::fromUtf8(ba);
         } else {
@@ -1330,7 +1330,7 @@ public:
         }
 
         QString iCal;
-        if (!part->content()->contentType()->hasParameter(QStringLiteral("charset"))) {
+        if (!part->content()->contentType()->hasParameter("charset")) {
             const QByteArray &ba = part->content()->decodedContent();
             iCal = QString::fromUtf8(ba);
         } else {
