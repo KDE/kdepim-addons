@@ -69,7 +69,7 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     mainLayout->addLayout(mergeLayout);
     mergeLayout->addStretch();
 
-    auto lab = new QLabel(i18nc("@label:textbox", "Select AddressBook:"));
+    auto lab = new QLabel(i18nc("@label:textbox", "Select AddressBook:"), this);
     lab->setObjectName(QLatin1StringView("select_addressbook_label"));
     mergeLayout->addWidget(lab);
 
