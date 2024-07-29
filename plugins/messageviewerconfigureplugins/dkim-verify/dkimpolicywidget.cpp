@@ -15,12 +15,12 @@
 
 DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     : QWidget(parent)
-    , mVerifyIfEmailMustBeSigned(new QCheckBox(i18n("Check if e-mail should be signed"), this))
-    , mUseDMARC(new QCheckBox(i18n("Use DMARC to heuristically determine if an e-mail should be signed"), this))
-    , mUseDefaultRules(new QCheckBox(i18n("Use default rule"), this))
-    , mAutoGenerateRule(new QCheckBox(i18n("Autogenerate rule"), this))
-    , mReadAuthResultHeader(new QCheckBox(i18n("Read Authentication-Results header"), this))
-    , mAutoGenerateOnlyIfSenderInSDID(new QCheckBox(i18n("Autogenerate when Sender in SDID"), this))
+    , mVerifyIfEmailMustBeSigned(new QCheckBox(i18nc("@option:check", "Check if e-mail should be signed"), this))
+    , mUseDMARC(new QCheckBox(i18nc("@option:check", "Use DMARC to heuristically determine if an e-mail should be signed"), this))
+    , mUseDefaultRules(new QCheckBox(i18nc("@option:check", "Use default rule"), this))
+    , mAutoGenerateRule(new QCheckBox(i18nc("@option:check", "Autogenerate rule"), this))
+    , mReadAuthResultHeader(new QCheckBox(i18nc("@option:check", "Read Authentication-Results header"), this))
+    , mAutoGenerateOnlyIfSenderInSDID(new QCheckBox(i18nc("@option:check", "Autogenerate when Sender in SDID"), this))
     , mRulesButton(new QPushButton(i18nc("@action:button", "Show Rules"), this))
 {
     auto mainLayout = new QVBoxLayout(this);

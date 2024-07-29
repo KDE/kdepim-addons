@@ -24,7 +24,7 @@ QString configGroupName()
 }
 AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QAbstractItemModel *model)
     : QWidget(parent)
-    , mEnabled(new QCheckBox(i18n("Automatic Add Contacts"), this))
+    , mEnabled(new QCheckBox(i18nc("@option:check", "Automatic Add Contacts"), this))
     , mCollectionCombobox(new Akonadi::CollectionComboBox(model, this))
 {
     auto mainLayout = new QVBoxLayout(this);

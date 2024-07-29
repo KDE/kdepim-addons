@@ -15,10 +15,10 @@
 
 DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     : QWidget(parent)
-    , mEnableDkimSupport(new QCheckBox(i18n("Enable DKIM Support"), this))
-    , mSaveResult(new QCheckBox(i18n("Save DKIM Result"), this))
+    , mEnableDkimSupport(new QCheckBox(i18nc("@option:check", "Enable DKIM Support"), this))
+    , mSaveResult(new QCheckBox(i18nc("@option:check", "Save DKIM Result"), this))
     , mSaveKey(new QComboBox(this))
-    , mUseOnlyAuthenticationResult(new QCheckBox(i18n("Replace DKIM result by Authentication-Result header value"), this))
+    , mUseOnlyAuthenticationResult(new QCheckBox(i18nc("@option:check", "Replace DKIM result by Authentication-Result header value"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainLayout"));

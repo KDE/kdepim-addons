@@ -16,7 +16,7 @@
 #include <QWhatsThis>
 OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *parent)
     : QWidget{parent}
-    , mEnabled(new QCheckBox(i18n("Enabled"), this))
+    , mEnabled(new QCheckBox(i18nc("@option:check", "Enabled"), this))
     , mServerName(new QLineEdit(this))
     , mCommandLine(new QLineEdit(this))
     , mExecutable(new KUrlRequester(this))

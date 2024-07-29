@@ -20,7 +20,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 GravatarConfigureSettingsPluginWidget::GravatarConfigureSettingsPluginWidget(QWidget *parent)
     : MessageViewer::MessageViewerConfigureSettingsPluginWidget(parent)
     , mGravatarConfigWidget(new Gravatar::GravatarConfigureSettingsWidget(this))
-    , mEnableGravatarSupport(new QCheckBox(i18n("Enable Gravatar Support"), this))
+    , mEnableGravatarSupport(new QCheckBox(i18nc("@option:check", "Enable Gravatar Support"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));

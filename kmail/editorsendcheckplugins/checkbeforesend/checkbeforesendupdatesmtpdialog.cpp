@@ -13,7 +13,7 @@
 
 CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent)
     : QDialog(parent)
-    , mChangeSmtp(new QCheckBox(i18n("Update SMTP server"), this))
+    , mChangeSmtp(new QCheckBox(i18nc("@option:check", "Update SMTP server"), this))
 {
     setWindowTitle(i18nc("@title:window", "Check SMTP server"));
     auto mainLayout = new QVBoxLayout(this);

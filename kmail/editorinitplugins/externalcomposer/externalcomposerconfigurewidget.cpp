@@ -20,7 +20,7 @@ static const char myExternalComposerGroupName[] = "External Composer";
 }
 ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConfigureBaseWidget(parent)
-    , mExternalEditorCheck(new QCheckBox(i18n("Use external editor instead of composer"), this))
+    , mExternalEditorCheck(new QCheckBox(i18nc("@option:check", "Use external editor instead of composer"), this))
     , mEditorRequester(new KUrlRequester(this))
 {
     auto mainLayout = new QVBoxLayout(this);

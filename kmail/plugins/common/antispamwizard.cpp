@@ -1053,11 +1053,11 @@ ASWizSpamRulesPage::ASWizSpamRulesPage(QWidget *parent, const QString &name)
     auto layout = new QVBoxLayout();
     mLayout->addItem(layout);
 
-    mMarkRules = new QCheckBox(i18n("&Mark detected spam messages as read"), this);
+    mMarkRules = new QCheckBox(i18nc("@option:check", "&Mark detected spam messages as read"), this);
     mMarkRules->setWhatsThis(i18n("Mark messages which have been classified as spam as read."));
     layout->addWidget(mMarkRules);
 
-    mMoveSpamRules = new QCheckBox(i18n("Move &known spam to:"), this);
+    mMoveSpamRules = new QCheckBox(i18nc("@option:check", "Move &known spam to:"), this);
     mMoveSpamRules->setWhatsThis(
         i18n("The default folder for spam messages is the trash folder, "
              "but you may change that in the folder view below."));
@@ -1072,7 +1072,7 @@ ASWizSpamRulesPage::ASWizSpamRulesPage(QWidget *parent, const QString &name)
     layout->addItem(hLayout1);
     hLayout1->addWidget(mFolderReqForSpamFolder);
 
-    mMoveUnsureRules = new QCheckBox(i18n("Move &probable spam to:"), this);
+    mMoveUnsureRules = new QCheckBox(i18nc("@option:check", "Move &probable spam to:"), this);
     mMoveUnsureRules->setWhatsThis(
         i18n("The default folder is the inbox folder, but you may change that "
              "in the folder view below.<p>"
@@ -1184,7 +1184,7 @@ ASWizVirusRulesPage::ASWizVirusRulesPage(QWidget *parent, const QString &name)
     auto grid = new QGridLayout();
     mLayout->addItem(grid);
 
-    mPipeRules = new QCheckBox(i18n("Check messages using the anti-virus tools"), this);
+    mPipeRules = new QCheckBox(i18nc("@option:check", "Check messages using the anti-virus tools"), this);
     mPipeRules->setWhatsThis(
         i18n("Let the anti-virus tools check your messages. The wizard "
              "will create appropriate filters. The messages are usually "
@@ -1192,7 +1192,7 @@ ASWizVirusRulesPage::ASWizVirusRulesPage(QWidget *parent, const QString &name)
              "on this and, for example, move virus messages to a special folder."));
     grid->addWidget(mPipeRules, 0, 0);
 
-    mMoveRules = new QCheckBox(i18n("Move detected viral messages to the selected folder"), this);
+    mMoveRules = new QCheckBox(i18nc("@option:check", "Move detected viral messages to the selected folder"), this);
     mMoveRules->setWhatsThis(
         i18n("A filter to detect messages classified as virus-infected and to move "
              "those messages into a predefined folder is created. The "
@@ -1200,7 +1200,7 @@ ASWizVirusRulesPage::ASWizVirusRulesPage(QWidget *parent, const QString &name)
              "in the folder view."));
     grid->addWidget(mMoveRules, 1, 0);
 
-    mMarkRules = new QCheckBox(i18n("Additionally, mark detected viral messages as read"), this);
+    mMarkRules = new QCheckBox(i18nc("@option:check", "Additionally, mark detected viral messages as read"), this);
     mMarkRules->setEnabled(false);
     mMarkRules->setWhatsThis(
         i18n("Mark messages which have been classified as "

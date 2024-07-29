@@ -16,10 +16,10 @@ static const char myConfigGroupName[] = "Check Before Send";
 }
 CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConfigureBaseWidget(parent)
-    , mCheckPlainTextMail(new QCheckBox(i18n("Send as plain text"), this))
-    , mCheckMailTransport(new QCheckBox(i18n("Use SMTP server defined in identity"), this))
-    , mCheckDuplicateEmailsAddresses(new QCheckBox(i18n("Check duplicated emails addresses"), this))
-    , mCheckSendAttachments(new QCheckBox(i18n("Check send attachment"), this))
+    , mCheckPlainTextMail(new QCheckBox(i18nc("@option:check", "Send as plain text"), this))
+    , mCheckMailTransport(new QCheckBox(i18nc("@option:check", "Use SMTP server defined in identity"), this))
+    , mCheckDuplicateEmailsAddresses(new QCheckBox(i18nc("@option:check", "Check duplicated emails addresses"), this))
+    , mCheckSendAttachments(new QCheckBox(i18nc("@option:check", "Check send attachment"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});

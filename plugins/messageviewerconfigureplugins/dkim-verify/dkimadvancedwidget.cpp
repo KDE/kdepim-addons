@@ -16,8 +16,8 @@
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     : QWidget(parent)
     , mSha1Policy(new QComboBox(this))
-    , mCheckDKIMWhenOnlyTesting(new QCheckBox(i18n("Still verify the signature, if a domain is only testing DKIM"), this))
-    , mUseAuthenticationResultRelaxedParser(new QCheckBox(i18n("Use relaxed parsing when reading \"Authentication-Result\" header"), this))
+    , mCheckDKIMWhenOnlyTesting(new QCheckBox(i18nc("@option:check", "Still verify the signature, if a domain is only testing DKIM"), this))
+    , mUseAuthenticationResultRelaxedParser(new QCheckBox(i18nc("@option:check", "Use relaxed parsing when reading \"Authentication-Result\" header"), this))
     , mSmallKeyPolicy(new QComboBox(this))
 {
     auto mainLayout = new QFormLayout(this);

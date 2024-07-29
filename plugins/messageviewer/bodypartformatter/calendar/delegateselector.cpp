@@ -20,7 +20,7 @@
 DelegateSelector::DelegateSelector(QWidget *parent)
     : QDialog(parent)
     , mDelegate(new PimCommon::AddresseeLineEdit(this))
-    , mRsvp(new QCheckBox(i18n("Keep me informed about status changes of this incidence."), this))
+    , mRsvp(new QCheckBox(i18nc("@option:check", "Keep me informed about status changes of this incidence."), this))
 {
     setWindowTitle(i18nc("@title:window", "Select delegate"));
     auto mainLayout = new QVBoxLayout(this);

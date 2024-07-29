@@ -16,7 +16,7 @@
 ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWidget *parent)
     : QWidget(parent)
     , mLabelInfo(new QLabel(this))
-    , mUseSameResultForOtherCheck(new QCheckBox(i18n("Apply to All"), this))
+    , mUseSameResultForOtherCheck(new QCheckBox(i18nc("@option:check", "Apply to All"), this))
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainLayout"));
