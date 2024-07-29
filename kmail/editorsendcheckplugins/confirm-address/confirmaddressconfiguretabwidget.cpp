@@ -29,12 +29,12 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     layoutDomainName->addLayout(radioButtonLayout);
     radioButtonLayout->setAlignment(Qt::AlignHCenter);
 
-    mAcceptedDomain = new QRadioButton(i18n("Accepted Domain Name"), this);
+    mAcceptedDomain = new QRadioButton(i18nc("@option:radio", "Accepted Domain Name"), this);
     mAcceptedDomain->setObjectName(QLatin1StringView("acceptdomainname"));
     radioButtonLayout->addWidget(mAcceptedDomain);
     mAcceptedDomain->setChecked(true);
 
-    mRejectedDomain = new QRadioButton(i18n("Rejected Domain Name"), this);
+    mRejectedDomain = new QRadioButton(i18nc("@option:radio", "Rejected Domain Name"), this);
     mRejectedDomain->setObjectName(QLatin1StringView("rejectdomainname"));
     radioButtonLayout->addWidget(mRejectedDomain);
 
