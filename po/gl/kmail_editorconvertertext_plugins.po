@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-29 08:54+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -24,12 +24,16 @@ msgid "Configure Markdown Plugin"
 msgstr "Configurar o complemento de Markdown"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable embedded LaTeX"
+msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr "Activar LaTeX incrustado"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable PHP Markdown Extra definition lists"
+msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "Activas as listas de definición adicionais de Markdown de PHP"
 
@@ -46,7 +50,9 @@ msgid "Add Image"
 msgstr "Engadir unha imaxe"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep original size"
+msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Manter o tamaño orixinal"
 

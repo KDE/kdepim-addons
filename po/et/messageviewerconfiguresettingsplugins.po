@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2020-02-06 14:58+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -18,12 +18,16 @@ msgstr ""
 "X-Generator: Lokalize 19.08.1\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Still verify the signature, if a domain is only testing DKIM"
+msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Allkirja kontroll isegi siis, kui domeen on ainult DKIM testimiseks"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr "Pealiskaudne parsimine autentimise tulemuste päise lugemisel"
 
@@ -129,17 +133,23 @@ msgid "Advanced"
 msgstr "Muu"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable DKIM Support"
+msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "DKIM toetuse lubamine"
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save DKIM Result"
+msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "Salvesta DKIM tulemus"
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Replace DKIM result by Authentication-Result header value"
+msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "DKIM tulemuse asendamine autentimise tulemuste päGoogleise väärtusega"
 
@@ -161,34 +171,46 @@ msgid "Save and Compare"
 msgstr "Salvesta ja võrdle"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check if e-mail should be signed"
+msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "Kontroll, kas e-kiri peab olema allkirjastatud"
 
 #: dkim-verify/dkimpolicywidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
 "DMARC'i kasutamine heuristiliseks tuvastamiseks, kas e-kiri peab olema "
 "allkirjastatud"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use default rule"
+msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "Vaikimisi reegli kasutamine"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autogenerate rule"
+msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "Reegli automaatne loomine"
 
 #: dkim-verify/dkimpolicywidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Read Authentication-Results header"
+msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "Autentimise tulemuste päise lugemine"
 
 #: dkim-verify/dkimpolicywidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autogenerate when Sender in SDID"
+msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "Automaatne loomine, kui saatja on SDID-s"
 
@@ -268,7 +290,9 @@ msgid "Configure Gravatar"
 msgstr "Gravatari seadistamine"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable Gravatar Support"
+msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "Gravatari toetuse lubamine"
 
@@ -285,7 +309,9 @@ msgid "Edit"
 msgstr ""
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Lubatud"
 

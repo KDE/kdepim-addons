@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-07-05 15:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,9 @@ msgid "Remove"
 msgstr "Премахване"
 
 #: delegateselector.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep me informed about status changes of this incidence."
+msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "Информиране при промяна в състоянието на това събитие."
 

@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2020-07-31 19:25+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-16 11:16+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
@@ -25,32 +26,32 @@ msgstr "Send til %1"
 #: itineraryurlhandler.cpp:126
 #, kde-format
 msgid "Show calendar at the time of this reservation."
-msgstr ""
+msgstr "Vis kalender på tidspunktet for denne reservation."
 
 #: itineraryurlhandler.cpp:129
 #, kde-format
 msgid "Add reservation to your calendar."
-msgstr ""
+msgstr "Tilføj reservation til din kalender."
 
 #: itineraryurlhandler.cpp:132
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
-msgstr ""
+msgstr "Importér reservation ind i KDE Itinerary."
 
 #: itineraryurlhandler.cpp:135
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
-msgstr ""
+msgstr "Send denne reservation til din enhed ved at bruge KDE Connect."
 
 #: itineraryurlhandler.cpp:206
 #, kde-format
 msgid "Boarding Pass"
-msgstr ""
+msgstr "Boardingpas"
 
 #: itineraryurlhandler.cpp:207
 #, kde-format
 msgid "Ticket"
-msgstr ""
+msgstr "Billet"
 
 #: templates/actions.html:4
 msgid "View"
@@ -75,7 +76,7 @@ msgstr "Tjek ind"
 #: templates/boatreservation.html:9 templates/busreservation.html:12
 #: templates/flightreservation.html:13 templates/trainreservation.html:12
 msgid "Reservation canceled."
-msgstr ""
+msgstr "Reservation annulleret."
 
 #: templates/busreservation.html:49 templates/busreservation.html:69
 #: templates/flightreservation.html:62 templates/flightreservation.html:79
@@ -113,13 +114,13 @@ msgstr "Antal mennesker: %1"
 #: templates/taxireservation.html:2
 #, kde-format
 msgid "Reservation Number: %1"
-msgstr ""
+msgstr "Reservationsnummer: %1"
 
 #: templates/foodestablishmentreservation.html:15
 #: templates/taxireservation.html:4
 #, kde-format
 msgid "Under Name: %1"
-msgstr ""
+msgstr "Under navnet: %1"
 
 #: templates/itinerary.html:66
 msgid "Show Calendar"
@@ -131,13 +132,11 @@ msgstr "Føj til kalender"
 
 #: templates/itinerary.html:72
 msgid "Add to KDE Itinerary"
-msgstr ""
+msgstr "Tilføj til KDE Itinerary"
 
 #: templates/itinerary.html:78
-#, fuzzy
-#| msgid "Send to Device..."
 msgid "Send to Device…"
-msgstr "Send til enhed..."
+msgstr "Send til enhed…"
 
 #: templates/location.html:4
 msgid "Show location on map"
@@ -149,7 +148,7 @@ msgstr "Søg efter adresse på kort"
 
 #: templates/lodgingreservation.html:10
 msgid "Reserved for: "
-msgstr ""
+msgstr "Reserveret for:"
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format

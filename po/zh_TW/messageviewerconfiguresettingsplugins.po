@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-20 02:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -19,12 +19,16 @@ msgstr ""
 "X-Generator: Lokalize 24.04.70\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Still verify the signature, if a domain is only testing DKIM"
+msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "網域只測試 DKIM 時還是檢查簽章"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
 "讀取 Authentication-Result（認證結果）標頭欄位數值時使用較放鬆的剖析模式"
@@ -125,17 +129,23 @@ msgid "Advanced"
 msgstr "進階"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable DKIM Support"
+msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "啟用 DKIM 支援"
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save DKIM Result"
+msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "儲存 DKIM 結果"
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Replace DKIM result by Authentication-Result header value"
+msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "用 Authentication-Result（認證結果）標頭欄位數值取代 DKIM 結果"
 
@@ -156,32 +166,44 @@ msgid "Save and Compare"
 msgstr "儲存並比對"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check if e-mail should be signed"
+msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "檢查郵件是否應該簽署"
 
 #: dkim-verify/dkimpolicywidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr "用 DMARC 來猜測郵件是否應該簽署"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use default rule"
+msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "使用預設規則"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autogenerate rule"
+msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "自動產生規則"
 
 #: dkim-verify/dkimpolicywidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Read Authentication-Results header"
+msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "讀取 Authentication-Results（認證結果）標頭"
 
 #: dkim-verify/dkimpolicywidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autogenerate when Sender in SDID"
+msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "寄件者在 SDID 當中時自動產生"
 
@@ -255,7 +277,9 @@ msgid "Configure Gravatar"
 msgstr "設定 Gravatar"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable Gravatar Support"
+msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "啟用 Gravatar 大頭貼支援"
 
@@ -272,7 +296,9 @@ msgid "Edit"
 msgstr "編輯"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check"
 msgid "Enabled"
 msgstr "已啟用"
 

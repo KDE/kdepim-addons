@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2017-08-02 21:42+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -44,7 +44,9 @@ msgid "Remove"
 msgstr "Odstrániť"
 
 #: delegateselector.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep me informed about status changes of this incidence."
+msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "Informujte ma o zmenách stavu tejto udalosti."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-07-05 13:43+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -44,7 +44,9 @@ msgid "Remove"
 msgstr "Remove"
 
 #: delegateselector.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep me informed about status changes of this incidence."
+msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "Keep me informed about status changes of this incidence."
 

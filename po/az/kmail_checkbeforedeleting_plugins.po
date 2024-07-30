@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2022-06-21 17:49+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -108,7 +108,9 @@ msgid "Confirm Delete Mail"
 msgstr "Poçtun silinməsini təsdiq edin"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply to All"
+msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "Hamısına tətbiq edin"
 

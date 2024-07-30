@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -19,11 +19,13 @@ msgstr ""
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
+msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr ""
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format
+msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
 
@@ -124,16 +126,19 @@ msgstr ""
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr ""
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
 #, kde-format
+msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr ""
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
 #, kde-format
+msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 
@@ -155,31 +160,37 @@ msgstr ""
 
 #: dkim-verify/dkimpolicywidget.cpp:18
 #, kde-format
+msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr ""
 
 #: dkim-verify/dkimpolicywidget.cpp:19
 #, kde-format
+msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
 
 #: dkim-verify/dkimpolicywidget.cpp:20
 #, kde-format
+msgctxt "@option:check"
 msgid "Use default rule"
 msgstr ""
 
 #: dkim-verify/dkimpolicywidget.cpp:21
 #, kde-format
+msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr ""
 
 #: dkim-verify/dkimpolicywidget.cpp:22
 #, kde-format
+msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr ""
 
 #: dkim-verify/dkimpolicywidget.cpp:23
 #, kde-format
+msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr ""
 
@@ -254,6 +265,7 @@ msgstr ""
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr ""
 
@@ -271,6 +283,7 @@ msgstr ""
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format
+msgctxt "@option:check"
 msgid "Enabled"
 msgstr ""
 

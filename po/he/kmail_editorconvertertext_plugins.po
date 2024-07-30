@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-07 11:30+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -25,12 +25,16 @@ msgid "Configure Markdown Plugin"
 msgstr "הגדרת תוסף Markdown"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable embedded LaTeX"
+msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr "הפעלת LaTeX משובץ"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable PHP Markdown Extra definition lists"
+msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "הפעלת רשימות הגדרות Markdown נוספות של PHP"
 
@@ -47,7 +51,9 @@ msgid "Add Image"
 msgstr "הוספת תמונה"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep original size"
+msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "שמירה על הגודל המקורי"
 

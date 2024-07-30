@@ -1,50 +1,50 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2020-07-31 19:23+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-16 11:39+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: gnupgwksurlhandler.cpp:85
 #, kde-format
 msgid "Display key details"
-msgstr ""
+msgstr "Vis nøgledetaljer"
 
 #: gnupgwksurlhandler.cpp:87
 #, kde-format
 msgid "Publish the key"
-msgstr ""
+msgstr "Udgiv nøglen"
 
 #: pgpkeyformatter.cpp:43
 #, kde-format
 msgid "No valid key data in file."
-msgstr ""
+msgstr "Ingen gyldig nøgledata i fil."
 
 #: pgpkeyurlhandler.cpp:46
 #, kde-format
 msgid "Import the key"
-msgstr ""
+msgstr "Importér nøglen"
 
 #: pgpkeyurlhandler.cpp:65
 #, kde-format
 msgid "An error occurred while importing the key."
-msgstr ""
+msgstr "En fejl opstod under importering af nøglen."
 
 #: pgpkeyurlhandler.cpp:67 pgpkeyurlhandler.cpp:69
-#, fuzzy, kde-format
-#| msgid "Import error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Importfejl"
@@ -52,23 +52,22 @@ msgstr "Importfejl"
 #: pgpkeyurlhandler.cpp:69
 #, kde-format
 msgid "No keys to import where found."
-msgstr ""
+msgstr "Ingen nøgler at importere hvor fundet."
 
 #: pgpkeyurlhandler.cpp:71
 #, kde-format
 msgid "The key has been successfully imported."
-msgstr ""
+msgstr "Nøglen er blevet importeret."
 
 #: pgpkeyurlhandler.cpp:71
-#, fuzzy, kde-format
-#| msgid "Import finished"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import finished"
 msgstr "Import gennemført"
 
 #: templates/gnupgwksmessagepart.html:26
 msgid "Register your OpenPGP key with your email provider. "
-msgstr ""
+msgstr "Registrér din OpenPGP-nøgle med din e-mail-udbyder"
 
 #: templates/gnupgwksmessagepart.html:29
 msgid ""
@@ -76,29 +75,34 @@ msgid ""
 "be able to retrieve the key and send you encrypted emails and verify "
 "authenticity of emails you send them."
 msgstr ""
+"Når du registrerer din nøgle med din e-mail-udbyder, kan andre folk hente "
+"den og sende dig krypteret e-mails og verificerer autenciteten af de e-"
+"mails, du sender dem."
 
 #: templates/gnupgwksmessagepart.html:33
 msgid "An error occurred while publishing the key. Please try again later."
-msgstr ""
+msgstr "En fejl opstod under udgivning af nøglen. Prøv venligst igen senere."
 
 #: templates/gnupgwksmessagepart.html:35
 msgid "Register the key"
-msgstr ""
+msgstr "Registrér nøglen"
 
 #: templates/gnupgwksmessagepart.html:37
 msgid ""
 "The email will be automatically deleted once you confirm the registration."
-msgstr ""
+msgstr "E-mailen vil automatisk blive slettet når du bekræfter registreringen."
 
 #: templates/gnupgwksmessagepart.html:40
 msgid "Show key details"
-msgstr ""
+msgstr "Vis nøgledetaljer"
 
 #: templates/gnupgwksmessagepart.html:44
 msgid ""
 "This is an automatically generated email. The purpose of this email is to "
 "register your OpenPGP key with your email provider."
 msgstr ""
+"Dette er en automatisk genereret e-mail. Formålet med denne e-mail er at "
+"registrere din OpenPGP-nøgle med din e-mail-udbyder."
 
 #: templates/gnupgwksmessagepart.html:47
 msgid ""
@@ -106,6 +110,9 @@ msgid ""
 "Other users will be able to retrieve the key and send you encrypted emails "
 "and verify authenticity of emails you send them."
 msgstr ""
+"Din OpenPGP-nøgle vil blive udgivet på din e-mail-udbyders server. Andre "
+"folk hente den og sende og krypteret e-mails og verificerer autenciteten af "
+"de e-mails, du sender dem."
 
 #: templates/pgpkeymessagepart.html:14
 msgid "OpenPGP Key"
@@ -114,10 +121,12 @@ msgstr "OpenPGP-nøgle"
 #: templates/pgpkeymessagepart.html:18
 msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
 msgstr ""
+"Dette er en OpenPGP-nøgle, der kan bruges til at signere eller krypterer e-"
+"mails."
 
 #: templates/pgpkeymessagepart.html:23
 msgid "Loading key details…"
-msgstr ""
+msgstr "Indlæser nøgledetaljer…"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -136,23 +145,25 @@ msgid ""
 "This key is unknown, it could not be found in your local keyring. You may "
 "want to import this key."
 msgstr ""
+"Nøglen er ukendt og kunne ikke findes i din lokale nøglering. Du bør måske "
+"importere denne nøgle."
 
 #: templates/pgpkeymessagepart.html:45
 #, kde-format
 msgid "Error while loading key: %1"
-msgstr ""
+msgstr "Fejl under indlæsning af nøgle: %1"
 
 #: templates/pgpkeymessagepart.html:47
 msgid "Hide key details"
-msgstr ""
+msgstr "Skjul nøgledetaljer"
 
 #: templates/pgpkeymessagepart.html:49
 msgid "Open in Kleopatra"
-msgstr ""
+msgstr "Åbn i Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
 msgid "Show key details …"
-msgstr ""
+msgstr "Vis nøgledetaljer…"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"

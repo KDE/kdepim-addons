@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-18 16:53+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -305,7 +305,9 @@ msgstr ""
 "</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Marca els missatges detectats com a correu brossa com a llegits"
 
@@ -317,7 +319,9 @@ msgstr ""
 "llegits."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Mou el correu brossa &segur a:"
 
@@ -331,7 +335,9 @@ msgstr ""
 "canviar-ho a la vista de carpetes inferior."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Mou el correu brossa &probable a:"
 
@@ -348,7 +354,9 @@ msgstr ""
 "carpeta.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Comprova els missatges usant les eines contra els virus"
 
@@ -366,7 +374,9 @@ msgstr ""
 "exemple, moure els missatges amb virus a una carpeta especial."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Mou els missatges amb virus detectats a la carpeta seleccionada"
 
@@ -382,7 +392,9 @@ msgstr ""
 "però podeu canviar-la a la vista de carpetes."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "A més a més, marca els missatges amb virus detectats com a llegits"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2023-11-06 01:00+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -25,11 +25,13 @@ msgstr ""
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr ""
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr ""
 
@@ -47,6 +49,7 @@ msgstr ""
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
 #, kde-format
+msgctxt "@option:check"
 msgid "Keep original size"
 msgstr ""
 

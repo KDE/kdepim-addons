@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-20 02:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -50,7 +50,9 @@ msgid "Add Address Book"
 msgstr "新增通訊錄"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Automatic Add Contacts"
+msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "自動新增聯絡人"
 
@@ -77,7 +79,9 @@ msgid "Send As HTML"
 msgstr "傳送 HTML"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Update SMTP server"
+msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "更新 SMTP 伺服器"
 
@@ -102,22 +106,30 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "設定「傳送郵件前檢查」外掛程式"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send as plain text"
+msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "用純文字傳送"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use SMTP server defined in identity"
+msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "使用身份中定義的 SMTP 伺服器"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check duplicated emails addresses"
+msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "檢查"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check send attachment"
+msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "檢查傳送附件"
 
@@ -158,12 +170,16 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "設定「確認電子郵件地址」外掛程式"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Accepted Domain Name"
+msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "已接受網域名稱"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rejected Domain Name"
+msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "已拒絕網域名稱"
 

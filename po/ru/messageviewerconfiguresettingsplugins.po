@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-02-12 10:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -20,12 +20,16 @@ msgstr ""
 "X-Generator: Lokalize 23.08.4\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Still verify the signature, if a domain is only testing DKIM"
+msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Проверять подпись для доменов, тестирующих DKIM"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr "Гибкий разбор заголовка «Authentication-Result»"
 
@@ -126,17 +130,23 @@ msgid "Advanced"
 msgstr "Дополнительно"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable DKIM Support"
+msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "Включить проверку DKIM"
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save DKIM Result"
+msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "Сохранять результаты проверки"
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Replace DKIM result by Authentication-Result header value"
+msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 "Заменять результаты проверки DKIM результатами проверки заголовка "
@@ -160,32 +170,44 @@ msgid "Save and Compare"
 msgstr "Сохранить и сравнить"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check if e-mail should be signed"
+msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "Проверять требования подписания писем"
 
 #: dkim-verify/dkimpolicywidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr "Использовать DMARC для определения требования подписания писем"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use default rule"
+msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "Использовать правило по умолчанию"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autogenerate rule"
+msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "Автоматически создавать правила"
 
 #: dkim-verify/dkimpolicywidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Read Authentication-Results header"
+msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "Использовать заголовок Authentication-Results"
 
 #: dkim-verify/dkimpolicywidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autogenerate when Sender in SDID"
+msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "Если отправитель указан в SDID"
 
@@ -262,7 +284,9 @@ msgid "Configure Gravatar"
 msgstr "Настройка Gravatar"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable Gravatar Support"
+msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "Включить поддержку Gravatar"
 
@@ -280,6 +304,7 @@ msgstr "Редактирование"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format
+msgctxt "@option:check"
 msgid "Enabled"
 msgstr ""
 

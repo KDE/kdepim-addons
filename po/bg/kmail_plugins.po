@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-25 17:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -303,7 +303,9 @@ msgstr ""
 "отидете на следващата страница.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Маркиране на откритите спам съобщения като прочетени"
 
@@ -314,7 +316,9 @@ msgstr ""
 "Маркиране на съобщенията, които са класифицирани като спам, като прочетени."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Преместване на &известен спам в:"
 
@@ -328,7 +332,9 @@ msgstr ""
 "можете да промените това в изгледа на папките по-долу."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Преместване на &вероятен спам в:"
 
@@ -345,7 +351,9 @@ msgstr ""
 "изберете и папка.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Проверяване на съобщенията с помощта на антивирусните инструменти"
 
@@ -363,7 +371,9 @@ msgstr ""
 "например да преместват вирусни съобщения в специална папка."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Преместване на откритите вирусни съобщения в избраната папка"
 
@@ -380,7 +390,9 @@ msgstr ""
 "изгледа на папката."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Освен това маркирайте откритите вирусни съобщения като прочетени"
 

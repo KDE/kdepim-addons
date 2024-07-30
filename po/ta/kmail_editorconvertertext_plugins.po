@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-16 22:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -24,12 +24,15 @@ msgid "Configure Markdown Plugin"
 msgstr "Markdown செருகுநிரலை அமை"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable embedded LaTeX"
+msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr "உட்பொதிந்த LaTeX தனை அமை"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr ""
 
@@ -46,7 +49,9 @@ msgid "Add Image"
 msgstr "படத்தை சேர்"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep original size"
+msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "உண்மையான அளவை வைத்திரு"
 

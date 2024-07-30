@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2017-02-04 11:09+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -298,7 +298,9 @@ msgstr ""
 "stranu.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "Označiť nájdené spa&mové správy ako prečítané"
 
@@ -308,7 +310,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Označí správy, ktoré sú považované za spam, ako prečítané."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Presunúť &známy spam do:"
 
@@ -322,7 +326,9 @@ msgstr ""
 "zmeniť v prehľade priečinkov dolu."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Presunúť &pravdepodobný spam do:"
 
@@ -339,7 +345,9 @@ msgstr ""
 "priečinok.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Kontrolova ť správy pomocou nástrojov pre hľadanie vírusov"
 
@@ -357,7 +365,9 @@ msgstr ""
 "špeciálneho priečinku."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Presunúť správy označené ako vírusy do vybraného priečinku"
 
@@ -373,7 +383,9 @@ msgstr ""
 "môžete to zmeniť v prehľade priečinkov."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Označiť správy s vírusmi ako prečítané"
 

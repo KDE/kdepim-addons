@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-18 16:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -22,12 +22,16 @@ msgstr ""
 "X-Generator: Lokalize 22.12.3\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Still verify the signature, if a domain is only testing DKIM"
+msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Encara verifica la signatura, si un domini només està provant amb DKIM"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
 "Usa una anàlisi relaxada en llegir la capçalera «Authentication-Results»"
@@ -128,17 +132,23 @@ msgid "Advanced"
 msgstr "Avançat"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable DKIM Support"
+msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "Activa el funcionament amb DKIM"
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save DKIM Result"
+msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "Desa el resultat del DKIM"
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Replace DKIM result by Authentication-Result header value"
+msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 "Substitueix el resultat DKIM pel valor de la capçalera «Authentication-"
@@ -161,34 +171,46 @@ msgid "Save and Compare"
 msgstr "Desa i compara"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check if e-mail should be signed"
+msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "Comprova si s'ha de signar el correu electrònic"
 
 #: dkim-verify/dkimpolicywidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
 "Usa DMARC per a determinar heurísticament si s'ha de signar un correu "
 "electrònic"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use default rule"
+msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "Usa la regla predeterminada"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autogenerate rule"
+msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "Regla generada automàticament"
 
 #: dkim-verify/dkimpolicywidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Read Authentication-Results header"
+msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "Llegeix la capçalera «Authentication-Results»"
 
 #: dkim-verify/dkimpolicywidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Autogenerate when Sender in SDID"
+msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "Genera automàticament quan el remitent estigui al SDID"
 
@@ -264,7 +286,9 @@ msgid "Configure Gravatar"
 msgstr "Configuració del Gravatar"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable Gravatar Support"
+msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "Activa el funcionament amb Gravatar"
 
@@ -281,7 +305,9 @@ msgid "Edit"
 msgstr "Edita"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Activat"
 

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2017-02-11 11:14+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -304,7 +304,9 @@ msgstr ""
 "следећу страницу.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Означи препознате спам поруке као прочитане"
 
@@ -314,7 +316,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Означава као прочитане поруке заведене као спам."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Премести &сигуран спам у:"
 
@@ -328,7 +332,9 @@ msgstr ""
 "приказу фасцикли испод."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Премести &могући спам у:"
 
@@ -344,7 +350,9 @@ msgstr ""
 "нисте изабрали алатку која то може, нећете моћи ни да изаберете фасциклу.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Проверавај поруке противвирусним алаткама"
 
@@ -362,7 +370,9 @@ msgstr ""
 "у посебну фасциклу."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Премести поруке препознате као заражене у изабрану фасциклу"
 
@@ -378,7 +388,9 @@ msgstr ""
 "променити у приказу фасцикли."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Додатно, означи прочитаним поруке препознате као заражене"
 

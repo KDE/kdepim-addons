@@ -2,109 +2,106 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2016, 2017, 2018, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2020-07-31 19:16+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"PO-Revision-Date: 2024-07-16 11:31+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Database Tool"
-msgstr ""
+msgstr "Akonadi databaseværktøj"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr ""
+msgstr "&Akonadi-vacuum…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
 msgid "Do you want to vacuum akonadi database?"
-msgstr ""
+msgstr "Vil du vacuum akonadi-database?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:31
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:78
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Vacuum"
-msgstr ""
+msgstr "Akonadi-vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
-msgstr ""
+msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr ""
+msgstr "&Akonadi Fsck…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
 msgid "Do you want to fsck akonadi database?"
-msgstr ""
+msgstr "Vil du fsck akonadi-database?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:51
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:75
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Fsck"
-msgstr ""
+msgstr "Akonadi Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
-msgstr ""
+msgstr "Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
 #, kde-format
 msgid "Finished."
-msgstr ""
+msgstr "Færdig."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
 msgid "Start…"
-msgstr ""
+msgstr "Start…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr "Anti-spam-guide"
+msgstr "&Anti-spam-guide…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr "Anti-virus guide"
+msgstr "&Anti-virus guide…"
 
 #: common/antispamwizard.cpp:88
-#, fuzzy, kde-format
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Anti-spam-guide"
 
 #: common/antispamwizard.cpp:88
-#, fuzzy, kde-format
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Anti-virus guide"
@@ -174,10 +171,9 @@ msgid "Ham"
 msgstr "Ikke spam"
 
 #: common/antispamwizard.cpp:456
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
-msgstr "Scanner efter %1..."
+msgstr "Scanner efter %1…"
 
 #: common/antispamwizard.cpp:500
 #, kde-format
@@ -300,7 +296,9 @@ msgid ""
 msgstr "<p>Vælg værktøjerne til detektering, og gå til den næste side.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Markér detekterede spam-breve som læste"
 
@@ -310,7 +308,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Markér breve, klassificeret som spam, som læste."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Flyt &kendt spam til:"
 
@@ -324,7 +324,9 @@ msgstr ""
 "mappevisningen nedenfor."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Flyt &formodet spam til:"
 
@@ -341,7 +343,9 @@ msgstr ""
 "en mappe.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Tjek breve med anti-virus værktøjer"
 
@@ -359,7 +363,9 @@ msgstr ""
 "mappe."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Flyt breve med detekteret virus til den valgte mappe"
 
@@ -375,7 +381,9 @@ msgstr ""
 "er mappen Papirkurv, men du kan ændre dette i mappevisningen."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Markér endvidere detekteret virus-breve som læst"
 
@@ -392,7 +400,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
-msgstr ""
+msgstr "Forhåndsvis"
 
 #: mailmergeplugin/mailmergedialog.cpp:22
 #, kde-format
@@ -401,8 +409,7 @@ msgid "Mail Merge"
 msgstr "Mailfletning"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Sti:"
@@ -415,8 +422,7 @@ msgid "Attachment"
 msgstr "Bilag"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Source:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Kilde:"
@@ -432,8 +438,7 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Bilag:"
@@ -441,7 +446,7 @@ msgstr "Bilag:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "T&ilføj…"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -454,8 +459,7 @@ msgid "Mod&ify..."
 msgstr "Æn&dr..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Vælg bilag:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-30 13:58+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -25,11 +25,13 @@ msgstr "Nastavit modul Markdown"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr ""
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
 #, kde-format
+msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr ""
 
@@ -46,7 +48,9 @@ msgid "Add Image"
 msgstr "Přidat obrázek"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep original size"
+msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Zachovat původní velikost"
 

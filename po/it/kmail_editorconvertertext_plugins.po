@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-28 22:50+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -24,12 +24,16 @@ msgid "Configure Markdown Plugin"
 msgstr "Configura l'estensione Markdown"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable embedded LaTeX"
+msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr "Abilita LaTeX integrato"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Enable PHP Markdown Extra definition lists"
+msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "Abilita gli elenchi di definizioni di PHP Markdown Extra"
 
@@ -46,7 +50,9 @@ msgid "Add Image"
 msgstr "Aggiungi immagine"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep original size"
+msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Mantieni dimensione originale"
 

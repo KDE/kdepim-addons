@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2020-07-31 19:16+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"PO-Revision-Date: 2024-07-16 11:02+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:14
 #, kde-format
@@ -24,16 +25,14 @@ msgid "Configure \"External Composer\" Plugin"
 msgstr "Indstil plugin for \"ekstern brevskriver\""
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use external editor instead of composer"
+msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Brug ekstern editor i stedet for brevskriveren"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:52
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
-#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
-#| "line number."
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "

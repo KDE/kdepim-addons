@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-18 14:51+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -302,7 +302,9 @@ msgstr ""
 "detection e vade al proxime pagina.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Marca messages de spam relevate como legite"
 
@@ -312,7 +314,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Marca messages que ha essite classificate como spam como legite."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Move spam &cognoscite a:"
 
@@ -326,7 +330,9 @@ msgstr ""
 "pote cambiar lo in le vista de dossier a basso."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Move &probabile spam a:"
 
@@ -343,7 +349,9 @@ msgstr ""
 "ille capacitate, tu etiam non pote seliger un dossier. </p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Verifica messages per usar le instrumentos de anti-virus"
 
@@ -361,7 +369,9 @@ msgstr ""
 "exemplo, mover messages de virus a un dossier special."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Move relevate messages viral al seligite dossier"
 
@@ -377,7 +387,9 @@ msgstr ""
 "le dossier de corbe, ma tu pote cambiar lo in le vista de dossier."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Additionalmente, marca messages relevate viral como legite"
 

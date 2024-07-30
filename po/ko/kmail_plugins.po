@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2023-10-08 22:59+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -301,7 +301,9 @@ msgid ""
 msgstr "<p>검사에 사용할 도구를 선택한 다음 다음 페이지로 진행하십시오.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "감지한 스팸 메시지를 읽은 것으로 표시(&M)"
 
@@ -311,7 +313,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "스팸으로 분류된 메시지를 읽은 것으로 표시합니다."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "알려진 스팸을 다음으로 이동(&K):"
 
@@ -325,7 +329,9 @@ msgstr ""
 "도 있습니다."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "가능성 있는 스팸을 다음으로 이동(&P):"
 
@@ -342,7 +348,9 @@ msgstr ""
 "p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "안티바이러스 도구로 메시지 검사"
 
@@ -359,7 +367,9 @@ msgstr ""
 "시에 반응하여 특정한 폴더로 메시지를 이동하는 등 작업을 수행합니다."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "감지된 바이러스 메시지를 선택한 폴더로 이동"
 
@@ -375,7 +385,9 @@ msgstr ""
 "기에서 변경할 수 있습니다."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "추가적으로 바이러스 메시지를 읽은 것으로 표시"
 

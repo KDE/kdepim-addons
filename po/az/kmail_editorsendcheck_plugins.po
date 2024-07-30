@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2022-07-20 11:37+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -52,7 +52,9 @@ msgid "Add Address Book"
 msgstr "Ünvan kitabçası əlavə edin"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Automatic Add Contacts"
+msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Əlaqələrin avtomatik əlavə edilməsi"
 
@@ -80,7 +82,9 @@ msgid "Send As HTML"
 msgstr "HTML kimi göndərin"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Update SMTP server"
+msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "SMTP serverini yeniləyin"
 
@@ -110,22 +114,30 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "\"Məktub göndərmədən öncə yoxlamaq\" qoşmasını tənzimləyin"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send as plain text"
+msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "Adi mətn kimi göndərin"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use SMTP server defined in identity"
+msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "Profildə təyin edilmiş SMTP serverini istifadə edin"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check duplicated emails addresses"
+msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "E-poçt ünvanlarının təkrarlarını yoxlayın"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check send attachment"
+msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Əlavə qoşma fayl göndərişini yoxlamaq"
 
@@ -168,12 +180,16 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "\"E-poçt ünvanlarını təsdiq etmək\" qoşmasını tənzimləyin"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Accepted Domain Name"
+msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Domen adı qəbul edildi"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rejected Domain Name"
+msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Domen adı qəbul edilmədi"
 

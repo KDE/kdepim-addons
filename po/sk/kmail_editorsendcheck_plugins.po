@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2017-11-01 11:09+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -53,7 +53,9 @@ msgid "Add Address Book"
 msgstr "Pridať adresár"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Automatic Add Contacts"
+msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Automaticky pridať kontakty"
 
@@ -81,7 +83,9 @@ msgid "Send As HTML"
 msgstr ""
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Update SMTP server"
+msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "Aktualizovať SMTP server"
 
@@ -112,22 +116,30 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "Nastaviť plugin \"Skontrolovať pred poslaním mailu\""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send as plain text"
+msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "Poslať ako čistý text"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use SMTP server defined in identity"
+msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "Použiť SMTP server definovaný v identite"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check duplicated emails addresses"
+msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "Skontrolovať duplicitné e-mailové adresy"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check send attachment"
+msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Skontrolovať poslanú prílohu"
 
@@ -173,12 +185,16 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Nastaviť plugin \"Potvrdiť e-mailovú adresu\" "
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Accepted Domain Name"
+msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Prijatý názov domény"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rejected Domain Name"
+msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Odmietnutý názov domény"
 

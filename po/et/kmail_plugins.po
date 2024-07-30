@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2019-12-18 19:30+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -299,7 +299,9 @@ msgstr ""
 "leheküljele.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "Tuvastatud rämpspost &märgitakse loetuks"
 
@@ -309,7 +311,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Rämpspostiks klassifitseeritud kirjad märgitakse loetuks."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "&Kindel rämpspost liigutatakse kausta:"
 
@@ -323,7 +327,9 @@ msgstr ""
 "valida ka mõne muu kausta."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Arvatav rämps&post liigutatakse kausta:"
 
@@ -340,7 +346,9 @@ msgstr ""
 "valinud, ei saa sa siin ka kausta valida.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Kirjad märgitakse viirusi sisaldavaks vastavate tööriistadega"
 
@@ -358,7 +366,9 @@ msgstr ""
 "sisaldavad kirjad mõnda spetsiaalsesse kausta."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Leitud viirusekirjad liigutatakse valitud kausta"
 
@@ -374,7 +384,9 @@ msgstr ""
 "sa võid seda vastavalt vajadusele ja soovile muuta."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Tuvastatud viirusi sisaldavad kirjad märgitakse loetuks"
 

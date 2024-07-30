@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:38+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -106,7 +106,9 @@ msgid "Confirm Delete Mail"
 msgstr "删前确认"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply to All"
+msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "应用到全部"
 

@@ -1,49 +1,49 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2020-07-31 19:21+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-16 11:24+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: emaillineedit/emaillineedit.cpp:34
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
-msgstr ""
+msgstr "Klik på knappen for at vælge kontakter…"
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
-msgstr ""
+msgstr "Vælg e-mails"
 
 #: emaillineedit/emaillineedit.cpp:87
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
-msgstr ""
+msgstr "Vælge-mails"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
 msgstr "Opret mappe"
@@ -51,43 +51,41 @@ msgstr "Opret mappe"
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #, kde-format
 msgid "Error during creating folder: %1"
-msgstr ""
+msgstr "Fejl under oprettelse af mappe: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Folder…"
-msgstr "Opret mappe"
+msgstr "Opret mappe…"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
-msgstr ""
+msgstr "Vælg IMAP-mappe"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:37
 #, kde-format
 msgid "Unable to load folder list"
-msgstr ""
+msgstr "Kunne ikke indlæse mappeliste"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
 #, kde-format
 msgid "Loading in progress…"
-msgstr ""
+msgstr "Indlæsning i gang…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Søg..."
+msgstr "Søg…"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
-msgstr ""
+msgstr "Genopfrisk IMAP-mappe-liste"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
@@ -103,36 +101,35 @@ msgstr "Mappenavn:"
 #: imapfoldercompletion/selectimapfolderwidget.cpp:114
 #, kde-format
 msgid "Slashes are not allowed in folder names."
-msgstr ""
+msgstr "Skråstreger er ikke tilladt i mappenavne."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:120
 #, kde-format
 msgid "Empty folder name is not supported."
-msgstr ""
+msgstr "Tomt mappenavn understøttes ikke."
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
 #, kde-format
 msgid "Error during loading folders: %1"
-msgstr ""
+msgstr "Fejl under indlæsning af mapper: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load Folders"
-msgstr "Opret mappe"
+msgstr "Indlæs mapper"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
-msgstr ""
+msgstr "Vælg IMAP-mappe"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
-msgstr ""
+msgstr "Klik på knappen for at vælge mapper…"
 
 #~ msgid "..."
 #~ msgstr "..."

@@ -3,19 +3,20 @@
 #
 # Erik Kjær Pedersen <erik@binghamton.edu>, 2004.
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2011, 2012, 2013, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:39+0000\n"
-"PO-Revision-Date: 2020-07-31 19:18+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-16 11:03+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: text_vcard.cpp:88
@@ -46,10 +47,9 @@ msgid "View Business Card"
 msgstr "Vedlagt visitskort"
 
 #: text_vcard.cpp:216
-#, fuzzy, kde-format
-#| msgid "Save Business Card As..."
+#, kde-format
 msgid "Save Business Card As…"
-msgstr "Gem visitkort som..."
+msgstr "Gem visitkort som…"
 
 #: text_vcard.cpp:233
 #, kde-format
@@ -82,10 +82,10 @@ msgid "The vCard's primary email address is not in addressbook."
 msgstr "vCardets primære e-mailadresse findes ikke i adressebogen."
 
 #: updatecontactjob.cpp:43
-#, fuzzy, kde-format
-#| msgid "[This contact is already in addressbook]"
+#, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
-msgstr "[Denne kontakt er allerede i adressebogen]"
+msgstr ""
+"Der er to eller flere kontakter med den samme e-mail gemt i adressebogen."
 
 #: updatecontactjob.cpp:65
 #, kde-format
@@ -93,11 +93,13 @@ msgid ""
 "The vCard was updated in your address book; you can add more information to "
 "this entry by opening the address book."
 msgstr ""
+"vCard'et blev opdateret i din adressebog; du kan tilføje mere information "
+"til denne bed at åbne adressebogen."
 
 #: updatecontactjob.cpp:76
 #, kde-format
 msgid "Email not specified"
-msgstr ""
+msgstr "E-mail ikke specificeret"
 
 #~ msgid "%1 already exists. Do you want to overwrite it?"
 #~ msgstr "%1 findes allerede. Vil du overskrive den?"

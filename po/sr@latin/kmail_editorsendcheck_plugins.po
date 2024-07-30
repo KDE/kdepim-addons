@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -59,7 +59,9 @@ msgid "Add Address Book"
 msgstr "Dodavanje adresara"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Automatic Add Contacts"
+msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Automatski dodaj kontakte"
 
@@ -89,7 +91,9 @@ msgid "Send As HTML"
 msgstr ""
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Update SMTP server"
+msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "Ažuriraj SMTP server"
 
@@ -125,23 +129,31 @@ msgstr "Podešavanje priključka za proveru pre slanja poruka"
 
 # >> @option:check
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send as plain text"
+msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "Šalji kao obični tekst"
 
 # >> @option:check
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use SMTP server defined in identity"
+msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "Koristi SMTP server definisan u identitetu"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check duplicated emails addresses"
+msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "Proveravaj duplikate adresa e‑pošte"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check send attachment"
+msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Proveravaj slanje priloga"
 
@@ -192,13 +204,17 @@ msgstr "Podešavanje priključka za potvrdu adresa e‑pošte"
 
 # >> @option:radio
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Accepted Domain Name"
+msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Prihvaćeno ime domena"
 
 # >> @option:radio
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rejected Domain Name"
+msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Odbijeno ime domena"
 

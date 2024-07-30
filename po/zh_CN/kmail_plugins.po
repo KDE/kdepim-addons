@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -286,7 +286,9 @@ msgid ""
 msgstr "<p>请选择要用于垃圾邮件检测的工具，然后前进到下一页。</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "将检测到的垃圾信件标为已读(&M)"
 
@@ -296,7 +298,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "将分类为垃圾邮件的信件标为已读。"
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "将已知垃圾邮件移动到(&K)："
 
@@ -308,7 +312,9 @@ msgid ""
 msgstr "垃圾邮件的默认文件夹是废件箱，但是您可以在下面的文件夹视图中更改。"
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "将可能的垃圾邮件移动到(&P)："
 
@@ -324,7 +330,9 @@ msgstr ""
 "p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "使用反病毒工具检查信件"
 
@@ -340,7 +348,9 @@ msgstr ""
 "记，再让过滤器起作用，最后采取操作，例如，将感染病毒的信件移到特殊的文件夹。"
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "将检测到的病毒信件移至选中的文件夹"
 
@@ -355,7 +365,9 @@ msgstr ""
 "默认的文件夹是废件夹，但您可以在文件夹视图中更改。"
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "另外将检测到的染毒邮件标为已读"
 

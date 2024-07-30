@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-20 21:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -272,6 +272,7 @@ msgstr ""
 
 #: common/antispamwizard.cpp:1056
 #, kde-format
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr ""
 
@@ -282,6 +283,7 @@ msgstr ""
 
 #: common/antispamwizard.cpp:1060
 #, kde-format
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr ""
 
@@ -294,6 +296,7 @@ msgstr ""
 
 #: common/antispamwizard.cpp:1075
 #, kde-format
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr ""
 
@@ -307,6 +310,7 @@ msgstr ""
 
 #: common/antispamwizard.cpp:1187
 #, kde-format
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr ""
 
@@ -321,6 +325,7 @@ msgstr ""
 
 #: common/antispamwizard.cpp:1195
 #, kde-format
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr ""
 
@@ -334,6 +339,7 @@ msgstr ""
 
 #: common/antispamwizard.cpp:1203
 #, kde-format
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr ""
 

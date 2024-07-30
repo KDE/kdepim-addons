@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2004-08-17 18:38+0500\n"
 "Last-Translator: Erkin Pulatov <erkin_pulatov@mail.ru>\n"
 "Language-Team: Tajik\n"
@@ -51,6 +51,7 @@ msgstr ""
 
 #: delegateselector.cpp:23
 #, kde-format
+msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr ""
 

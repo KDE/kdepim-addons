@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -51,6 +51,7 @@ msgstr ""
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
 #, kde-format
+msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr ""
 
@@ -78,6 +79,7 @@ msgstr ""
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
 #, kde-format
+msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr ""
 
@@ -103,21 +105,25 @@ msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
 #, kde-format
+msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
 #, kde-format
+msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format
+msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
 #, kde-format
+msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr ""
 
@@ -159,11 +165,13 @@ msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
 #, kde-format
+msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
 #, kde-format
+msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr ""
 

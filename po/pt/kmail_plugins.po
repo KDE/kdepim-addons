@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2022-10-19 09:34+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -306,7 +306,9 @@ msgstr ""
 "seguinte.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Marcar as mensagens de lixo detectadas como lidas"
 
@@ -316,7 +318,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Marca as mensagens que foram classificadas como lixo como lidas."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Mover o lixo &conhecido para:"
 
@@ -330,7 +334,9 @@ msgstr ""
 "alterar isso na área de pastas abaixo."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Mover o lixo &provável para:"
 
@@ -347,7 +353,9 @@ msgstr ""
 "poderá seleccionar qualquer pasta.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Classificar as mensagens com as ferramentas anti-vírus"
 
@@ -365,7 +373,9 @@ msgstr ""
 "e, por exemplo, possa mover as mensagens com vírus para uma pasta especial."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Mover as mensagens detectadas com vírus para a pasta seleccionada"
 
@@ -381,7 +391,9 @@ msgstr ""
 "isto na área das pastas."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Para além disso, marcar as mensagens com vírus como lidas"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-20 02:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -287,7 +287,9 @@ msgid ""
 msgstr "<p>請選擇用來偵測的工具，然後跳到下一頁。</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "將偵測到的垃圾信標記為已讀(&M)"
 
@@ -297,7 +299,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "將被分類為垃圾信的信件標記為已讀。"
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "將已知的垃圾信移動到(&K)："
 
@@ -311,7 +315,9 @@ msgstr ""
 "夾。"
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "將可能是垃圾信的信件移動到(&P)："
 
@@ -326,7 +332,9 @@ msgstr ""
 "「不確定」的分類。如果您未選取支援它的工具，您也會沒辦法選擇資料夾。</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "用防毒工具檢查信件"
 
@@ -342,7 +350,9 @@ msgstr ""
 "讓之後的過濾器可以對其進行反應，例如將有毒的信件移動到特別的資料夾。"
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "將偵測為有毒的信件移動到選取的資料夾"
 
@@ -357,7 +367,9 @@ msgstr ""
 "但您可以在資料夾檢視中變更它。"
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "另外，也將偵測為病毒的信件標記為已讀"
 

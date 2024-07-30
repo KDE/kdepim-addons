@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-19 22:33+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -298,7 +298,9 @@ msgstr ""
 "p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Marki detektitajn spam-mesaĝojn kiel legite"
 
@@ -308,7 +310,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Marku mesaĝojn kiuj estis klasifikitaj kiel spamo kiel legitaj."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Movi &konatan spamon al:"
 
@@ -322,7 +326,9 @@ msgstr ""
 "tion en la dosierujo sube."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Movi &probablan spamon al:"
 
@@ -338,7 +344,9 @@ msgstr ""
 "Se vi ne elektis kapablan ilon, vi ankaŭ ne povas elekti dosierujon.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Kontroli mesaĝojn uzante la kontraŭvirusajn ilojn"
 
@@ -356,7 +364,9 @@ msgstr ""
 "al speciala dosierujo."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Movi detektitajn virusajn mesaĝojn al la elektita dosierujo"
 
@@ -372,7 +382,9 @@ msgstr ""
 "dosierujo estas la rubujo, sed vi povas ŝanĝi tion en la dosierujo."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Aldone, marki detektitajn virusajn mesaĝojn kiel legite"
 

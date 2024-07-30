@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-19 10:57+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -302,7 +302,9 @@ msgstr ""
 "naar de volgende pagina.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "Gedetecteerde ongewenste berichten &markeren als gelezen"
 
@@ -312,7 +314,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Als ongewenst gekenmerkte berichten markeren als gelezen."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Be&kende spam verplaatsen naar:"
 
@@ -326,7 +330,9 @@ msgstr ""
 "wijzigen in de onderstaande mappenlijst."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Mogelijke s&pam verplaatsen naar:"
 
@@ -343,7 +349,9 @@ msgstr ""
 "selecteren.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Berichten kenmerken met behulp van antivirusprogramma's"
 
@@ -362,7 +370,9 @@ msgstr ""
 "verplaatsen."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Verplaats gevonden berichten met een virus naar de geselecteerde map"
 
@@ -379,7 +389,9 @@ msgstr ""
 "de mapweergave worden veranderd."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr ""
 "Markeer gevonden met een virus geïnfecteerde berichten bovendien als gelezen"

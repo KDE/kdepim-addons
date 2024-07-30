@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-16 16:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -51,6 +51,7 @@ msgstr "முகவரிப்புத்தகத்தை சேர்"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
 #, kde-format
+msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr ""
 
@@ -77,7 +78,9 @@ msgid "Send As HTML"
 msgstr "அஞ்சலை HTML-ஆக அனுப்பு"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Update SMTP server"
+msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "SMTP சேவையகத்தை மாற்று"
 
@@ -102,24 +105,33 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Send as plain text"
+msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "வெறும் உரையாக அனுப்பு"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
 #, kde-format
+msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Duplicated emails"
+msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
-msgstr ""
+msgstr "பலமுறையுள்ள முகவரிகள்"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Check Attachment"
+msgctxt "@option:check"
 msgid "Check send attachment"
-msgstr ""
+msgstr "உடனிணைப்பை சரிபார்க்கவும்"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
@@ -159,11 +171,13 @@ msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
 #, kde-format
+msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
 #, kde-format
+msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr ""
 

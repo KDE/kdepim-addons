@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-18 07:46+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -299,7 +299,9 @@ msgid ""
 msgstr "<p>Izberite orodja za zaznavo in se odpravite na naslednjo stran.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Mark detected spam messages as read"
+msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "Označi zaznano neželeno pošto kot prebrano"
 
@@ -309,7 +311,9 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Označi sporočila, ki so bila označena kot neželena tudi kot prebrana."
 
 #: common/antispamwizard.cpp:1060
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &known spam to:"
+msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Premakni znano neželeno pošto v:"
 
@@ -323,7 +327,9 @@ msgstr ""
 "kako drugo mapo iz spodnjega prikaza map."
 
 #: common/antispamwizard.cpp:1075
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move &probable spam to:"
+msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Premakni verjetno neželeno pošto v:"
 
@@ -339,7 +345,9 @@ msgstr ""
 "orodje tega ne podpira, ne morete izbrati mape.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check messages using the anti-virus tools"
+msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Preveri sporočila z uporabo orodij proti virusom"
 
@@ -357,7 +365,9 @@ msgstr ""
 "posebno mapo."
 
 #: common/antispamwizard.cpp:1195
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move detected viral messages to the selected folder"
+msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Premakni zaznana okužena sporočila v izbrano mapo"
 
@@ -373,7 +383,9 @@ msgstr ""
 "spremenite v prikazu map."
 
 #: common/antispamwizard.cpp:1203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Additionally, mark detected viral messages as read"
+msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Dodatno, označi zaznana okužena sporočila kot prebrana"
 
