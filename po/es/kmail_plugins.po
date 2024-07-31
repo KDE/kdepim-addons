@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 03:36+0200\n"
+"PO-Revision-Date: 2024-07-30 16:34+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -302,8 +302,7 @@ msgstr ""
 "siguiente página.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Marcar correo basura detectado como leído"
@@ -315,8 +314,7 @@ msgstr ""
 "Marcar los mensajes que han sido clasificados como correo basura como leídos."
 
 #: common/antispamwizard.cpp:1060
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Mover correo basura &conocido a:"
@@ -331,8 +329,7 @@ msgstr ""
 "cambiarla en la vista de carpetas que aparece más abajo."
 
 #: common/antispamwizard.cpp:1075
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Mover correo basura &probable a:"
@@ -351,8 +348,7 @@ msgstr ""
 "tampoco.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Comprobar los mensajes usando las herramientas antivirus"
@@ -371,8 +367,7 @@ msgstr ""
 "mensajes con virus a una carpeta especial."
 
 #: common/antispamwizard.cpp:1195
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Mover los mensajes con virus detectados a la carpeta seleccionada"
@@ -389,8 +384,7 @@ msgstr ""
 "defecto es la papelera, pero podrá cambiarla en la vista de carpetas."
 
 #: common/antispamwizard.cpp:1203
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Además, marcar mensajes detectados con virus como leídos"

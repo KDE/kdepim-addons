@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-29 08:54+0200\n"
+"PO-Revision-Date: 2024-07-30 17:28+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: markdown/markdownlib/markdownconfiguredialog.cpp:16
 #, kde-format
@@ -24,18 +24,16 @@ msgid "Configure Markdown Plugin"
 msgstr "Configurar o complemento de Markdown"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enable embedded LaTeX"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
-msgstr "Activar LaTeX incrustado"
+msgstr "Activar LaTeX incrustado."
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Enable PHP Markdown Extra definition lists"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
-msgstr "Activas as listas de definición adicionais de Markdown de PHP"
+msgstr "Activas as listas de definición adicionais de Markdown de PHP."
 
 #: markdown/markdownlib/markdownconverter.cpp:69
 #: markdown/markdownlib/markdownconverter.cpp:89
@@ -50,11 +48,10 @@ msgid "Add Image"
 msgstr "Engadir unha imaxe"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Keep original size"
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
-msgstr "Manter o tamaño orixinal"
+msgstr "Manter o tamaño orixinal."
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:20
 #, kde-format

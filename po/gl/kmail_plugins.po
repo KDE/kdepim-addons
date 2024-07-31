@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 19:51+0200\n"
+"PO-Revision-Date: 2024-07-30 17:32+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -302,8 +302,7 @@ msgstr ""
 "páxina seguinte.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Marcar como lidas as mensaxes detectadas como correo lixo."
@@ -314,8 +313,7 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Marcar como lidas as mensaxes clasificadas como correo lixo."
 
 #: common/antispamwizard.cpp:1060
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Mover o correo lixo &confirmado a:"
@@ -330,8 +328,7 @@ msgstr ""
 "poderá cambialo na vista de cartafoles de embaixo."
 
 #: common/antispamwizard.cpp:1075
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Mover o &posíbel correo lixo a:"
@@ -349,11 +346,10 @@ msgstr ""
 "capacidade, non pode seleccionar un cartafol.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
-msgstr "Comprobar as mensaxes usando as ferramentas anti-virus"
+msgstr "Comprobar as mensaxes usando as ferramentas anti-virus."
 
 #: common/antispamwizard.cpp:1189
 #, kde-format
@@ -369,12 +365,11 @@ msgstr ""
 "mover as mensaxes con virus a un cartafol especial."
 
 #: common/antispamwizard.cpp:1195
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr ""
-"Mover todas as mensaxes detectadas como virus para o cartafol seleccionado"
+"Mover todas as mensaxes detectadas como virus para o cartafol seleccionado."
 
 #: common/antispamwizard.cpp:1197
 #, kde-format
@@ -388,11 +383,10 @@ msgstr ""
 "lixo, pero pode cambiar isto na vista de cartafoles."
 
 #: common/antispamwizard.cpp:1203
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
-msgstr "Ademais, marcar as mensaxes detectadas como con virus como lidas"
+msgstr "Ademais, marcar as mensaxes detectadas como con virus como lidas."
 
 #: common/antispamwizard.cpp:1206
 #, kde-format

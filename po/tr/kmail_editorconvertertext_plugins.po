@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-29 12:40+0300\n"
+"PO-Revision-Date: 2024-07-30 17:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -24,18 +24,16 @@ msgid "Configure Markdown Plugin"
 msgstr "Markdown Eklentisini Yapılandır"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enable embedded LaTeX"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr "Gömülü LaTeX’i etkinleştir"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Enable PHP Markdown Extra definition lists"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
-msgstr "PHP Markdown Extra tanımlama listelerini etkinleştir"
+msgstr "PHP Markdown Extra tanım listelerini etkinleştir"
 
 #: markdown/markdownlib/markdownconverter.cpp:69
 #: markdown/markdownlib/markdownconverter.cpp:89
@@ -50,11 +48,10 @@ msgid "Add Image"
 msgstr "Görsel Ekle"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Keep original size"
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
-msgstr "Özgün boyutu koru"
+msgstr "Özgün boyutu tut"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:20
 #, kde-format

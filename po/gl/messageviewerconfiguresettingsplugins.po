@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 19:54+0200\n"
+"PO-Revision-Date: 2024-07-30 17:36+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, fuzzy, kde-format
@@ -25,8 +25,7 @@ msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Verificar a sinatura aínda que un dominio só probe DKIM"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr "Analizar a cabeceira «Authentication-Result» de maneira non estrita."
@@ -127,22 +126,19 @@ msgid "Advanced"
 msgstr "Avanzado"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Enable DKIM Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
-msgstr "Activar a compatibilidade con DKIM"
+msgstr "Activar a compatibilidade con DKIM."
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Save DKIM Result"
+#, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
-msgstr "Gardar o resultado de DKIM"
+msgstr "Gardar o resultado de DKIM."
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Replace DKIM result by Authentication-Result header value"
+#, kde-format
 msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
@@ -166,45 +162,39 @@ msgid "Save and Compare"
 msgstr "Gardar e comparar"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Check if e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
-msgstr "Comprobar se o correo electrónico debería asinarse"
+msgstr "Comprobar se o correo electrónico debería asinarse."
 
 #: dkim-verify/dkimpolicywidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
 "Usar DMARC para determinar mediante heurística se debería asinarse un correo "
-"electrónico"
+"electrónico."
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use default rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use default rule"
-msgstr "Usar a regra predeterminada"
+msgstr "Usar a regra predeterminada."
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Autogenerate rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate rule"
-msgstr "Xerar automaticamente unha regra"
+msgstr "Xerar automaticamente unha regra."
 
 #: dkim-verify/dkimpolicywidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Read Authentication-Results header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
-msgstr "Ler a cabeceira Authentication-Results"
+msgstr "Ler a cabeceira Authentication-Results."
 
 #: dkim-verify/dkimpolicywidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Autogenerate when Sender in SDID"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "Xerar automaticamente cando a remitente estea en SDID."
@@ -281,11 +271,10 @@ msgid "Configure Gravatar"
 msgstr "Configurar Gravatar"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable Gravatar Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Gravatar Support"
-msgstr "Activar a compatibilidade con Gravatar"
+msgstr "Activar a compatibilidade con Gravatar."
 
 #: openurlwith/openurlwithconfigurecreatedialog.cpp:16
 #, kde-format
@@ -300,11 +289,10 @@ msgid "Edit"
 msgstr "Editar"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
-msgstr "Activado"
+msgstr "Activado."
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format

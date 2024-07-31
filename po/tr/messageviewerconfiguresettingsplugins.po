@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 12:52+0300\n"
+"PO-Revision-Date: 2024-07-30 17:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,15 +18,13 @@ msgstr ""
 "X-Generator: Lokalize 24.07.70\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Still verify the signature, if a domain is only testing DKIM"
+#, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Bir etki alanı yalnızca DKIM sınaması yapıyorsa imzayı yine de doğrula"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
@@ -128,22 +126,19 @@ msgid "Advanced"
 msgstr "Gelişmiş"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Enable DKIM Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
-msgstr "DKIM Desteğini Etkinleştir"
+msgstr "DKIM desteğini etkinleştir"
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Save DKIM Result"
+#, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
-msgstr "DKIM Sonucunu Kaydet"
+msgstr "DKIM sonucunu kaydet"
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Replace DKIM result by Authentication-Result header value"
+#, kde-format
 msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "DKIM sonucunu Authentication-Result üstbilgisi değeriyle değiştir"
@@ -165,48 +160,42 @@ msgid "Save and Compare"
 msgstr "Kaydet ve Karşılaştır"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Check if e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
-msgstr "E-postaların imzalanıp imzalanmaması gerektiğini denetle"
+msgstr "E-postanın imzalanıp imzalanmaması gerektiğini denetle"
 
 #: dkim-verify/dkimpolicywidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
-"Bir e-postanın imzalanıp imzalanmaması gerektiğini akılli bir biçimde DMARC "
-"kullanarak algıla"
+"E-postanın imzalanıp imzalanmaması gerektiğini akıllıca DMARC kullanarak "
+"algıla"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use default rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "Öntanımlı kuralı kullan"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Autogenerate rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate rule"
-msgstr "Kuralı kendiliğinden oluştur"
+msgstr "Kuralı kendiliğinden üret"
 
 #: dkim-verify/dkimpolicywidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Read Authentication-Results header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "Authentication-Results üstbilgisini oku"
 
 #: dkim-verify/dkimpolicywidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Autogenerate when Sender in SDID"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
-msgstr "Gönderici SDID içindeyse kendiliğinden oluştur"
+msgstr "Gönderici SDID içindeyse kendiliğinden üret"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
 #, kde-format
@@ -279,11 +268,10 @@ msgid "Configure Gravatar"
 msgstr "Gravatar’ı Yapılandır"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable Gravatar Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Gravatar Support"
-msgstr "Gravatar Desteğini Etkinleştir"
+msgstr "Gravatar desteğini etkinleştir"
 
 #: openurlwith/openurlwithconfigurecreatedialog.cpp:16
 #, kde-format
@@ -298,8 +286,7 @@ msgid "Edit"
 msgstr "Düzenle"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Etkin"
