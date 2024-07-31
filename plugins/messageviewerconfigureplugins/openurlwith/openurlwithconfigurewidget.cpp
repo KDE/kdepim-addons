@@ -146,7 +146,7 @@ void OpenUrlWithConfigureWidget::slotAddRule()
     if (dlg->exec()) {
         const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
         if (MessageViewer::OpenUrlWithManager::self()->hosts().contains(info.url)) {
-            KMessageBox::information(this, i18n("A rule for host was already added."), i18n("Host already checked"));
+            KMessageBox::information(this, i18n("A rule for host was already added."), i18nc("@title:window", "Host already checked"));
         } else {
             if (info.isValid()) {
                 MessageViewer::OpenWithUrlInfo r;
@@ -159,7 +159,7 @@ void OpenUrlWithConfigureWidget::slotAddRule()
                     auto item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
                     const MessageViewer::OpenWithUrlInfo openInfo = item->info();
                     if (openInfo == r) {
-                        KMessageBox::information(this, i18n("Rule already exists."), i18n("Duplicate Rule"));
+                        KMessageBox::information(this, i18n("Rule already exists."), i18nc("@title:window", "Duplicate Rule"));
                         delete dlg;
                         return;
                     }

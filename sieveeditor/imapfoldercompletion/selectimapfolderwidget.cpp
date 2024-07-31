@@ -111,7 +111,7 @@ void SelectImapFolderWidget::createFolder()
         if (!name.trimmed().isEmpty()) {
             const QString currentPath = index.data(SelectImapLoadFoldersJob::PathRole).toString();
             if (name.contains(QLatin1Char('/'))) {
-                KMessageBox::error(this, i18n("Slashes are not allowed in folder names."), i18n("Create Folder"));
+                KMessageBox::error(this, i18n("Slashes are not allowed in folder names."), i18nc("@title:window", "Create Folder"));
                 return;
             }
             // TODO more check for folder name ?

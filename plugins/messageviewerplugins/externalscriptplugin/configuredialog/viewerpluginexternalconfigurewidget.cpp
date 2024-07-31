@@ -104,7 +104,7 @@ void ViewerPluginExternalConfigureWidget::slotRemoveScript()
     if (item) {
         const int answer = KMessageBox::warningTwoActions(this,
                                                           i18n("Do you want to remove this script \"%1\"?", item->text()),
-                                                          i18n("Remove External Script"),
+                                                          i18nc("@title:window", "Remove External Script"),
                                                           KStandardGuiItem::remove(),
                                                           KStandardGuiItem::cancel());
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {

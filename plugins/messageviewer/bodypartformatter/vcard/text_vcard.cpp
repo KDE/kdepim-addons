@@ -256,7 +256,7 @@ public:
             fileName = givenName + QLatin1Char('_') + a.familyName() + QStringLiteral(".vcf");
         }
         // get the saveas file name
-        QUrl saveAsUrl = QFileDialog::getSaveFileUrl(nullptr, i18n("Save Business Card"), QUrl::fromUserInput(fileName));
+        QUrl saveAsUrl = QFileDialog::getSaveFileUrl(nullptr, i18nc("@title:window", "Save Business Card"), QUrl::fromUserInput(fileName));
         if (saveAsUrl.isEmpty()) {
             return false;
         }

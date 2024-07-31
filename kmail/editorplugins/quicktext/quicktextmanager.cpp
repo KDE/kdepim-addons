@@ -75,7 +75,7 @@ QString QuicktextManager::selectedName() const
 
 void QuicktextManager::importQuickText()
 {
-    const QString filename = QFileDialog::getOpenFileName(mParent, i18n("Import QuickText"));
+    const QString filename = QFileDialog::getOpenFileName(mParent, i18nc("@title:window", "Import QuickText"));
     if (!filename.isEmpty()) {
         mModel->load(filename);
     }
@@ -83,7 +83,7 @@ void QuicktextManager::importQuickText()
 
 void QuicktextManager::exportQuickText()
 {
-    const QString filename = QFileDialog::getSaveFileName(mParent, i18n("Export QuickText"));
+    const QString filename = QFileDialog::getSaveFileName(mParent, i18nc("@title:window", "Export QuickText"));
     if (!filename.isEmpty()) {
         mModel->save(filename);
     }

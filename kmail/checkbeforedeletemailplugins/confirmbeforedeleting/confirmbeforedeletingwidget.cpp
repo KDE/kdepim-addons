@@ -164,7 +164,7 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
             currentRule.setPattern(item->text(1));
             currentRule.setRuleType(ConfirmBeforeDeletingRule::stringToRuleType(item->text(0)));
             if (currentRule == r) {
-                KMessageBox::information(this, i18n("Same rule already exists."), i18n("Create Rule"));
+                KMessageBox::information(this, i18n("Same rule already exists."), i18nc("@title:window", "Create Rule"));
                 ruleFound = true;
                 break;
             }

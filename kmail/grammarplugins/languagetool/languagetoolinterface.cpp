@@ -93,7 +93,7 @@ bool LanguageToolInterface::checkAgain()
             if (KMessageBox::warningTwoActions(parentWidget(),
                                                i18n("You do not use local instance.\nYour text will be sent to an external web site "
                                                     "(https://languagetool.org/).\nDo you want to continue?"),
-                                               i18n("Check Grammar with LanguageTool"),
+                                               i18nc("@title:window", "Check Grammar with LanguageTool"),
                                                KStandardGuiItem::cont(),
                                                KStandardGuiItem::cancel(),
                                                QStringLiteral("send_data_on_languagetool"))
