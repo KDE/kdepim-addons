@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2009-01-26 15:17+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@lists.kde.org>\n"
@@ -390,9 +390,11 @@ msgid "Delegation to organizer is not possible."
 msgstr ""
 
 #: text_calendar.cpp:1068
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Accept incidence"
+msgctxt "@title:window"
 msgid "Save Invitation Attachment"
-msgstr ""
+msgstr "Frecvența acceptării"
 
 #: text_calendar.cpp:1149
 #, kde-format

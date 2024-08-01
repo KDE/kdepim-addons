@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2022-06-21 17:59+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -129,12 +129,16 @@ msgid "Export…"
 msgstr "İxrac edin..."
 
 #: quicktext/quicktextmanager.cpp:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import QuickText"
+msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Sürətli mətni idxal edin"
 
 #: quicktext/quicktextmanager.cpp:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export QuickText"
+msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "Sürətli mətni ixrac edin"
 

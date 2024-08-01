@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-24 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2012-10-21 22:54+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -74,7 +74,9 @@ msgid "Update \"%1\" to the address book."
 msgstr "Ενημέρωση « %1 » στο βιβλίο διευθύνσεων."
 
 #: text_vcard.cpp:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Business Card"
+msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "Αποθήκευση επαγγελματικής κάρτας"
 

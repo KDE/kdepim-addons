@@ -306,8 +306,7 @@ msgstr ""
 "pàgina següent.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Marca els missatges detectats com a correu brossa com a llegits"
@@ -320,8 +319,7 @@ msgstr ""
 "llegits."
 
 #: common/antispamwizard.cpp:1060
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Mou el correu brossa &segur a:"
@@ -336,8 +334,7 @@ msgstr ""
 "podeu canviar-ho en la vista de carpetes inferior."
 
 #: common/antispamwizard.cpp:1075
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Mou el correu brossa &probable a:"
@@ -355,8 +352,7 @@ msgstr ""
 "carpeta.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Comprova els missatges utilitzant les eines contra els virus"
@@ -375,8 +371,7 @@ msgstr ""
 "exemple, moure els missatges amb virus a una carpeta especial."
 
 #: common/antispamwizard.cpp:1195
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Mou els missatges amb virus detectats cap a la carpeta seleccionada"
@@ -393,8 +388,7 @@ msgstr ""
 "paperera, però podeu canviar-la en la vista de carpetes."
 
 #: common/antispamwizard.cpp:1203
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "A més a més, marca els missatges amb virus detectats com a llegits"

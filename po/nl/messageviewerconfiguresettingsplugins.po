@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-07-30 12:57+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -355,7 +355,9 @@ msgid "A rule for host was already added."
 msgstr "Een regel voor host is al toegevoegd."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Host already checked"
+msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "Host is al gecontroleerd"
 
@@ -365,7 +367,9 @@ msgid "Rule already exists."
 msgstr "Regel bestaat al."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Rule"
+msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Regel dupliceren"
 

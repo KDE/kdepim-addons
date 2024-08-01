@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-07-30 09:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -189,7 +189,9 @@ msgid "Same rule already exists."
 msgstr "Таке правило вже існує."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Rule"
+msgctxt "@title:window"
 msgid "Create Rule"
 msgstr "Створити правило"
 

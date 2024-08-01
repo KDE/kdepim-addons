@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2022-05-15 23:57+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -192,7 +192,9 @@ msgid "Same rule already exists."
 msgstr "같은 규칙이 이미 존재합니다."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Rule"
+msgctxt "@title:window"
 msgid "Create Rule"
 msgstr "규칙 만들기"
 

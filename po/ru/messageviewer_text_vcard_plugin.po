@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-24 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2022-02-21 11:47+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -82,7 +82,9 @@ msgid "Update \"%1\" to the address book."
 msgstr "Добавить информацию для «%1» в адресной книге."
 
 #: text_vcard.cpp:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Business Card"
+msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "Сохранение визитной карточки"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -385,7 +385,9 @@ msgid "Delegation to organizer is not possible."
 msgstr "不能委托给组织者。"
 
 #: text_calendar.cpp:1068
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Invitation Attachment"
+msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "保存邀请附件"
 

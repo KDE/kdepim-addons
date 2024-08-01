@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-04-28 19:56+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -133,12 +133,16 @@ msgid "Export…"
 msgstr "Exportieren ..."
 
 #: quicktext/quicktextmanager.cpp:78
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import QuickText"
+msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Textbausteine importieren"
 
 #: quicktext/quicktextmanager.cpp:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Export QuickText"
+msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "Textbausteine exportieren"
 

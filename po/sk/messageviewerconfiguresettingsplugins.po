@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2019-11-11 16:12+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -370,6 +370,7 @@ msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
+msgctxt "@title:window"
 msgid "Host already checked"
 msgstr ""
 
@@ -381,6 +382,7 @@ msgstr ""
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, fuzzy, kde-format
 #| msgid "Delete Rule"
+msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Odstrániť pravidlo"
 

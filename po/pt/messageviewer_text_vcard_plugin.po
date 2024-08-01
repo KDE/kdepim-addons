@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-24 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2020-06-03 00:16+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -71,7 +71,9 @@ msgid "Update \"%1\" to the address book."
 msgstr "Adicionar o \"%1\" ao livro de endereços."
 
 #: text_vcard.cpp:259
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save Business Card"
+msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "Gravar o Cartão de Negócios"
 

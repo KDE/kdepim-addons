@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 05:54+0200\n"
+"PO-Revision-Date: 2024-07-31 05:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -52,8 +52,7 @@ msgid "Add Address Book"
 msgstr "მისამართების წიგნის დამატება"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Automatic Add Contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "კონტაქტების ავტომატური დამატება"
@@ -81,8 +80,7 @@ msgid "Send As HTML"
 msgstr "HTML-ად გაგზავნა"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Update SMTP server"
+#, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "SMTP სერვერის განახლება"
@@ -110,29 +108,25 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "\"გაგზავნამდე ელფოსტის შემოწმების\" დამატების მორგება"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Send as plain text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "ელფოსტის უბრალო ტექსტად გაგზავნა"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use SMTP server defined in identity"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "მიმდინარე ანგარიშში გაწერილი SMTP სერვერი"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Check duplicated emails addresses"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
-msgstr "ელფოსტის დუბლირებული მისამართების შემოწმება"
+msgstr "შემოწმება გამეორებულ ელფოსტის მისამართებზე"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Check send attachment"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "მიმაგრებული ფაილის შემოწმება"
@@ -174,18 +168,16 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "\"ელფოსტის მისამართის დადასტურების\" დამატების გამართვა"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Accepted Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
-msgstr "დომენის დადასტურებული სახელი"
+msgstr "მიღებული დომენის სახელი"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Rejected Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
-msgstr "დომენის უარყოფილი სახელი"
+msgstr "უარყოფილი დომენის სახელი"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64

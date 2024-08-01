@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-06-25 17:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -368,7 +368,9 @@ msgid "A rule for host was already added."
 msgstr "Правилото за хоста вече е добавено."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Host already checked"
+msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "Хостът вече е проверен"
 
@@ -378,7 +380,9 @@ msgid "Rule already exists."
 msgstr "Правилото вече съществува."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Duplicate Rule"
+msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Дублиране на правило"
 

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-24 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2007-01-01 09:07+0330\n"
 "Last-Translator: Nasim Daniarzadeh <daniarzadeh@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -80,6 +80,7 @@ msgstr "این تماس را به کتاب نشانی اضافه کنید."
 #: text_vcard.cpp:259
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
+msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "کارتهای تجاری پیوست‌شده"
 

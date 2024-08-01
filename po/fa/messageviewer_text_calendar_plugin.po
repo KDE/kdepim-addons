@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2007-06-30 10:58+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -384,9 +384,11 @@ msgid "Delegation to organizer is not possible."
 msgstr ""
 
 #: text_calendar.cpp:1068
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Accept incidence"
+msgctxt "@title:window"
 msgid "Save Invitation Attachment"
-msgstr ""
+msgstr "پذیرش رخداد"
 
 #: text_calendar.cpp:1149
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-05-30 11:04+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -185,6 +185,8 @@ msgid "Same rule already exists."
 msgstr "Подобно правило вече съществува."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Rule"
+msgctxt "@title:window"
 msgid "Create Rule"
 msgstr "Създаване на правило"

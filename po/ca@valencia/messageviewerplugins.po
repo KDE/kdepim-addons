@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-07-04 13:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -230,7 +230,9 @@ msgid "Do you want to remove this script \"%1\"?"
 msgstr "Voleu eliminar este script «%1»?"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove External Script"
+msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "Elimina l'script extern"
 

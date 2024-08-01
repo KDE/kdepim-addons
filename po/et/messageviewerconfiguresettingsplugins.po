@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2020-02-06 14:58+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -380,6 +380,7 @@ msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
+msgctxt "@title:window"
 msgid "Host already checked"
 msgstr ""
 
@@ -391,6 +392,7 @@ msgstr ""
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, fuzzy, kde-format
 #| msgid "Delete Rule"
+msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Kustuta reegel"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-13 01:43+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2023-07-03 01:16+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -42,7 +42,9 @@ msgstr ""
 "Deseja continuar?"
 
 #: languagetool/languagetoolinterface.cpp:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Grammar with LanguageTool"
+msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"
 msgstr "Verificar a Gramática com o LanguageTool"
 

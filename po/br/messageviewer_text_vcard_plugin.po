@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim/kmail_text_vcard_plugin.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-24 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: Breton <LL@li.org>\n"
@@ -76,6 +76,7 @@ msgstr "Ouzhpennañ an darempred-mañ er c'harned chomlec'hioù."
 
 #: text_vcard.cpp:259
 #, kde-format
+msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr ""
 
