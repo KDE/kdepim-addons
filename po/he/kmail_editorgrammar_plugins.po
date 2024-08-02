@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-07 10:14+0300\n"
+"PO-Revision-Date: 2024-08-01 08:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: grammalecte/grammalecteinterface.cpp:78
 #, kde-format
@@ -45,8 +45,7 @@ msgstr ""
 "להמשיך?"
 
 #: languagetool/languagetoolinterface.cpp:96
-#, fuzzy, kde-format
-#| msgid "Check Grammar with LanguageTool"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"
 msgstr "בדיקת דקדוק עם LanguageTool"

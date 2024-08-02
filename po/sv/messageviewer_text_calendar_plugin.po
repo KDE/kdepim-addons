@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-30 06:53+0200\n"
+"PO-Revision-Date: 2024-08-01 07:22+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -386,11 +386,10 @@ msgid "Delegation to organizer is not possible."
 msgstr "Det är inte möjligt att delegera till organisatören."
 
 #: text_calendar.cpp:1068
-#, fuzzy, kde-format
-#| msgid "Save Invitation Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
-msgstr "Spara bilaga till inbjudan"
+msgstr "Spara inbjudningsbilaga"
 
 #: text_calendar.cpp:1149
 #, kde-format

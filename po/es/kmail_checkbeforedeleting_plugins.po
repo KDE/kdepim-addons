@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kmail_checkbeforedeleting_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-30 16:32+0200\n"
+"PO-Revision-Date: 2024-08-01 04:40+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -186,8 +186,7 @@ msgid "Same rule already exists."
 msgstr "Ya existe una regla similar."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
-#, fuzzy, kde-format
-#| msgid "Create Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Rule"
 msgstr "Crear regla"

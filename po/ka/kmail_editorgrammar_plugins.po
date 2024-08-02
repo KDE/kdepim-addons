@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2023-06-27 09:34+0200\n"
+"PO-Revision-Date: 2024-08-01 05:56+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -45,11 +45,10 @@ msgstr ""
 "გნებავთ გააგრძელოთ?"
 
 #: languagetool/languagetoolinterface.cpp:96
-#, fuzzy, kde-format
-#| msgid "Check Grammar with LanguageTool"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"
-msgstr "გრამატიკის LanguageTool-ით შემოწმება"
+msgstr "გრამატიკის შემოწმება LanguageTool-ით"
 
 #: languagetool/languagetoolplugin.cpp:36
 #, kde-format

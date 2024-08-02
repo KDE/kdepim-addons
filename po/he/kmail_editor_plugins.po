@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 08:15+0300\n"
+"PO-Revision-Date: 2024-08-01 08:32+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -120,15 +120,13 @@ msgid "Export…"
 msgstr "ייצוא…"
 
 #: quicktext/quicktextmanager.cpp:78
-#, fuzzy, kde-format
-#| msgid "Import QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "ייבוא טקסט מהיר"
 
 #: quicktext/quicktextmanager.cpp:86
-#, fuzzy, kde-format
-#| msgid "Export QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "ייצוא טקסט מהיר"

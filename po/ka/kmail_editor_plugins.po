@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 05:54+0200\n"
+"PO-Revision-Date: 2024-08-01 05:56+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -120,15 +120,13 @@ msgid "Export…"
 msgstr "გატანა…"
 
 #: quicktext/quicktextmanager.cpp:78
-#, fuzzy, kde-format
-#| msgid "Import QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "სწრაფი ტექსტის შემოტანა"
 
 #: quicktext/quicktextmanager.cpp:86
-#, fuzzy, kde-format
-#| msgid "Export QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "სწრაფი ტექსტის გატანა"

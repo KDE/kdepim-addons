@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Javier Vinal <fjvinal@gmail.com>, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2023-06-26 12:11+0200\n"
+"PO-Revision-Date: 2024-08-01 04:41+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: grammalecte/grammalecteinterface.cpp:78
 #, kde-format
@@ -45,8 +45,7 @@ msgstr ""
 "¿Desea continuar?"
 
 #: languagetool/languagetoolinterface.cpp:96
-#, fuzzy, kde-format
-#| msgid "Check Grammar with LanguageTool"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"
 msgstr "Comprobar la gramática con LanguageTool"
