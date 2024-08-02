@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-07-30 16:36+0200\n"
+"PO-Revision-Date: 2024-08-01 04:41+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -393,7 +393,7 @@ msgstr "No es posible delegar en el organizador."
 #: text_calendar.cpp:1068
 #, kde-format
 msgid "Save Invitation Attachment"
-msgstr "Guardar el adjunto a la invitación"
+msgstr "Guardar el adjunto de la invitación"
 
 #: text_calendar.cpp:1149
 #, kde-format
