@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 17:46+0200\n"
+"PO-Revision-Date: 2024-07-31 22:28+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -302,8 +302,7 @@ msgstr ""
 "poi vai alla pagina successiva.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Segna i messaggi classificati spam come letti"
@@ -314,8 +313,7 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Segna i messaggi che sono stati classificati spam come letti."
 
 #: common/antispamwizard.cpp:1060
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Sposta lo spam &riconosciuto in:"
@@ -330,8 +328,7 @@ msgstr ""
 "modificarla qui sotto."
 
 #: common/antispamwizard.cpp:1075
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Sposta lo spam &probabile in:"
@@ -349,8 +346,7 @@ msgstr ""
 "selezionare la cartella.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Controlla i messaggi utilizzando gli strumenti anti-virus"
@@ -369,8 +365,7 @@ msgstr ""
 "esempio, spostare i messaggi considerati virus in una cartella particolare."
 
 #: common/antispamwizard.cpp:1195
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Sposta i messaggi considerati virus nella cartella selezionata"
@@ -387,8 +382,7 @@ msgstr ""
 "cestino, ma è possibile cambiarla."
 
 #: common/antispamwizard.cpp:1203
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Inoltre, segna i messaggi considerati virus come letti"

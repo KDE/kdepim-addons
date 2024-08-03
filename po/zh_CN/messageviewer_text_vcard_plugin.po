@@ -70,8 +70,7 @@ msgid "Update \"%1\" to the address book."
 msgstr "将“%1”更新到地址簿。"
 
 #: text_vcard.cpp:259
-#, fuzzy, kde-format
-#| msgid "Save Business Card"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "保存商务名片"

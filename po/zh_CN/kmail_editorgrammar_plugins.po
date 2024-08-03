@@ -42,8 +42,7 @@ msgid ""
 msgstr ""
 
 #: languagetool/languagetoolinterface.cpp:96
-#, fuzzy, kde-format
-#| msgid "Check Grammar with LanguageTool"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"
 msgstr "使用 LanguageTool 检查语法"

@@ -25,8 +25,7 @@ msgid "Configure \"External Composer\" Plugin"
 msgstr "配置“外部编辑器”插件"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Use external editor instead of composer"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "使用外部编辑器编辑"

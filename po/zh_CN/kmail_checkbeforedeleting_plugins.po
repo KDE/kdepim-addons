@@ -106,8 +106,7 @@ msgid "Confirm Delete Mail"
 msgstr "删前确认"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Apply to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "应用到全部"
@@ -184,8 +183,7 @@ msgid "Same rule already exists."
 msgstr "相同的规则已经存在。"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
-#, fuzzy, kde-format
-#| msgid "Create Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Rule"
 msgstr "创建规则"
