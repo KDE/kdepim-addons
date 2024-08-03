@@ -273,7 +273,7 @@ msgstr "编辑"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format
 msgid "Enabled"
-msgstr "已启用"
+msgstr ""
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
