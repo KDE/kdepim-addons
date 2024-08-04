@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-30 17:36+0200\n"
+"PO-Revision-Date: 2024-08-03 12:25+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -356,11 +356,10 @@ msgid "A rule for host was already added."
 msgstr "Xa se engadiu unha regra para o servidor."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
-#, fuzzy, kde-format
-#| msgid "Host already checked"
+#, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
-msgstr "Xa se comprobou o servidor."
+msgstr "Xa se comprobou o servidor"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
@@ -368,8 +367,7 @@ msgid "Rule already exists."
 msgstr "A regra xa existe."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
-#, fuzzy, kde-format
-#| msgid "Duplicate Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Regra duplicada"

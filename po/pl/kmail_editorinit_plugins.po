@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-30 11:09+0200\n"
+"PO-Revision-Date: 2024-08-03 11:42+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -25,8 +25,7 @@ msgid "Configure \"External Composer\" Plugin"
 msgstr "Ustawienia wtyczki \"Zewnętrznego edytora\""
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Use external editor instead of composer"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Użyj edytora zewnętrznego zamiast wbudowanego"

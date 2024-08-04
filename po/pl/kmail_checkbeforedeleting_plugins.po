@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-30 11:08+0200\n"
+"PO-Revision-Date: 2024-08-03 11:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -104,8 +104,7 @@ msgid "Confirm Delete Mail"
 msgstr "Potwierdzenie usunięcia wiadomości"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Apply to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "Zastosuj do wszystkich"
@@ -186,8 +185,7 @@ msgid "Same rule already exists."
 msgstr "Taka zasada już istnieje."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
-#, fuzzy, kde-format
-#| msgid "Create Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Rule"
 msgstr "Utwórz zasadę"

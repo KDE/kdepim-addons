@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 19:53+0200\n"
+"PO-Revision-Date: 2024-08-03 12:18+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -119,15 +119,13 @@ msgid "Export…"
 msgstr "Exportar…"
 
 #: quicktext/quicktextmanager.cpp:78
-#, fuzzy, kde-format
-#| msgid "Import QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Importar de QuickText"
 
 #: quicktext/quicktextmanager.cpp:86
-#, fuzzy, kde-format
-#| msgid "Export QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "Exportar a QuickText"
