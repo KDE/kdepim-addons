@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-16 11:15+0200\n"
+"PO-Revision-Date: 2024-08-04 09:52+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -108,11 +108,10 @@ msgid "Confirm Delete Mail"
 msgstr "Baieztatu posta ezabatzea"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Apply to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply to All"
-msgstr "Ezarri guztiei"
+msgstr "Aplikatu guztietan"
 
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
 #, kde-format
@@ -188,8 +187,7 @@ msgid "Same rule already exists."
 msgstr "Arau bera badago."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
-#, fuzzy, kde-format
-#| msgid "Create Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Rule"
 msgstr "Sortu araua"

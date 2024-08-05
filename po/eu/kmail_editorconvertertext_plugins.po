@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-16 11:23+0200\n"
+"PO-Revision-Date: 2024-08-04 09:59+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -27,18 +27,16 @@ msgid "Configure Markdown Plugin"
 msgstr "Konfiguratu  «Markdown» plugina"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enable embedded LaTeX"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr "Gaitu kapsulatutako LaTeX"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Enable PHP Markdown Extra definition lists"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
-msgstr "Gaitu PHP «Markdown» definizio-zerrenda gehigarriak"
+msgstr "Gaitu PHP Markdown definizio-zerrenda gehigarriak"
 
 #: markdown/markdownlib/markdownconverter.cpp:69
 #: markdown/markdownlib/markdownconverter.cpp:89
@@ -53,8 +51,7 @@ msgid "Add Image"
 msgstr "Gehitu irudia"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Keep original size"
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Mantendu jatorrizko neurria"

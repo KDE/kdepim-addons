@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-16 11:35+0200\n"
+"PO-Revision-Date: 2024-08-04 10:06+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -55,8 +55,7 @@ msgid "Add Address Book"
 msgstr "Gehitu helbide-liburua"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Automatic Add Contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Gehitu kontaktuak automatikoa"
@@ -84,8 +83,7 @@ msgid "Send As HTML"
 msgstr "Bidali HTML gisa"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Update SMTP server"
+#, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "Eguneratu SMTP zerbitzaria"
@@ -113,29 +111,25 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "Konfiguratu \" Egiaztatu posta bidali aurretik\" plugina"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Send as plain text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "Bidali testu arrunt gisa"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use SMTP server defined in identity"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "Erabili nortasunean definitutako SMTP zerbitzaria"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Check duplicated emails addresses"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "Egiaztatu bikoiztutako e-posta helbideak"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Check send attachment"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Egiaztatu eranskin bidalketa"
@@ -177,15 +171,13 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Konfiguratu \"Berretsi e-posta helbidea\" plugina"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Accepted Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Onartutako domeinu-izena"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Rejected Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Errefusatutako domeinu-izena"

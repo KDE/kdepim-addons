@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-16 11:58+0200\n"
+"PO-Revision-Date: 2024-08-04 10:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -21,15 +21,13 @@ msgstr ""
 "X-Generator: Lokalize 24.05.2\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Still verify the signature, if a domain is only testing DKIM"
+#, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Sinadura egiaztatu, baita domeinu bat DKIM probatzen ari bada ere"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
@@ -132,25 +130,22 @@ msgid "Advanced"
 msgstr "Aurreratua"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Enable DKIM Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
-msgstr "Gaitu DKIMen euskarria"
+msgstr "Gaitu DKIMerako euskarria"
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Save DKIM Result"
+#, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "Gorde DKIMen emaitza"
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Replace DKIM result by Authentication-Result header value"
+#, kde-format
 msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
-msgstr "Ordeztu DKIM emaitza autentifikazio-emaitzaren goiburuko balioagatik"
+msgstr "Ordeztu DKIMen emaitza autentifikazio-emaitzaren goiburuko balioagatik"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
 #, kde-format
@@ -169,43 +164,37 @@ msgid "Save and Compare"
 msgstr "Gorde eta konparatu"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Check if e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "Egiaztatu e-posta sinatu behar den"
 
 #: dkim-verify/dkimpolicywidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr "Erabili DMARC e-posta bat sinatu behar den heuristikoki erabakitzeko"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use default rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "Erabili arau lehenetsia"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Autogenerate rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "Araua automatikoki sortu"
 
 #: dkim-verify/dkimpolicywidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Read Authentication-Results header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "Irakurri autentifikazio-emaitzen goiburua"
 
 #: dkim-verify/dkimpolicywidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Autogenerate when Sender in SDID"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "Automatikoki sortu igorlea SDIDen dagoenean"
@@ -281,8 +270,7 @@ msgid "Configure Gravatar"
 msgstr "Konfiguratu Gravatar"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable Gravatar Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "Gaitu Gravatar-en euskarria"
@@ -300,8 +288,7 @@ msgid "Edit"
 msgstr "Editatu"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Gaituta"
@@ -368,8 +355,7 @@ msgid "A rule for host was already added."
 msgstr "Ostalarirako arau bat gehitu zen."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
-#, fuzzy, kde-format
-#| msgid "Host already checked"
+#, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "Ostalaria egiaztatuta dago"
@@ -380,8 +366,7 @@ msgid "Rule already exists."
 msgstr "Araua lehendik ere badago"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
-#, fuzzy, kde-format
-#| msgid "Duplicate Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Bikoiztu araua"
