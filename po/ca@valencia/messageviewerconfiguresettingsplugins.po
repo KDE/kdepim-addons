@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-18 16:54+0200\n"
+"PO-Revision-Date: 2024-08-01 10:48+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -358,8 +358,7 @@ msgid "A rule for host was already added."
 msgstr "Ja s'ha afegit una regla per al servidor."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
-#, fuzzy, kde-format
-#| msgid "Host already checked"
+#, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "El servidor ja s'ha verificat"
@@ -370,11 +369,10 @@ msgid "Rule already exists."
 msgstr "La regla ja existix."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
-#, fuzzy, kde-format
-#| msgid "Duplicate Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
-msgstr "Duplica la regla"
+msgstr "Duplicació de regla"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:206
 #, kde-format
