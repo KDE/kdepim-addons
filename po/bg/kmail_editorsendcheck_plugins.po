@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-25 17:54+0200\n"
+"PO-Revision-Date: 2024-08-07 20:10+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -54,8 +54,7 @@ msgid "Add Address Book"
 msgstr "Добавяне на адресна книга"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Automatic Add Contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Автоматично добавяне на контакти"
@@ -83,8 +82,7 @@ msgid "Send As HTML"
 msgstr "Изпращане като Html"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Update SMTP server"
+#, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "Актуализиране на SMTP сървъра"
@@ -112,32 +110,28 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "Конфигуриране на приставка \"Проверка преди изпращане на поща\""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Send as plain text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "Изпращане като обикновен текст"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use SMTP server defined in identity"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "Използване на SMTP сървър, дефиниран в идентичност"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Check duplicated emails addresses"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "Проверка на дублирани имейл адреси"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Check send attachment"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
-msgstr "Провеrяване на прикачения файл за изпращане"
+msgstr "Проверяване на прикачения файл за изпращане"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
@@ -176,15 +170,13 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Конфигуриране на приставка \"Потвърждаване на имейл адрес\""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Accepted Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Прието име на домейн"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Rejected Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Отхвърлено име на домейн"

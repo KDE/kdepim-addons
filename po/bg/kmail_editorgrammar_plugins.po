@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the kdepim-addons package.
 #
 # Automatically generated, 2022.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2023-06-29 14:50+0200\n"
+"PO-Revision-Date: 2024-08-07 20:09+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: grammalecte/grammalecteinterface.cpp:78
 #, kde-format
@@ -27,12 +27,12 @@ msgstr "&Граматическа проверка (Grammalecte)"
 #: grammalecte/grammalecteplugin.cpp:38
 #, kde-format
 msgid "Grammalecte Plugin"
-msgstr "Grammalecte приставка"
+msgstr "Приставка Grammalecte"
 
 #: languagetool/languagetoolinterface.cpp:81
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
-msgstr "&Граматическа проверка  (Езикови инструменти)"
+msgstr "&Граматическа проверка (LanguageTool)"
 
 #: languagetool/languagetoolinterface.cpp:94
 #, kde-format
@@ -47,11 +47,10 @@ msgstr ""
 "Искате ли да продължите?"
 
 #: languagetool/languagetoolinterface.cpp:96
-#, fuzzy, kde-format
-#| msgid "Check Grammar with LanguageTool"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"
-msgstr "Проверка на граматиката с Езикови инструменти"
+msgstr "Проверка на граматиката с LanguageTool"
 
 #: languagetool/languagetoolplugin.cpp:36
 #, kde-format

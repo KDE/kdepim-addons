@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-13 22:56+0200\n"
+"PO-Revision-Date: 2024-08-07 20:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: text_vcard.cpp:88
 #, kde-format
@@ -72,11 +72,10 @@ msgid "Update \"%1\" to the address book."
 msgstr "Обновяване на \"%1\" в адресника."
 
 #: text_vcard.cpp:259
-#, fuzzy, kde-format
-#| msgid "Save Business Card"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
-msgstr "Запис на визитката"
+msgstr "Запазване на визитката"
 
 #: updatecontactjob.cpp:37
 #, kde-format

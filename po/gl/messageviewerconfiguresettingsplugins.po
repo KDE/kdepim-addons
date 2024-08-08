@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-08-03 12:25+0200\n"
+"PO-Revision-Date: 2024-08-07 21:28+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -18,11 +18,10 @@ msgstr ""
 "X-Generator: Lokalize 24.05.2\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Still verify the signature, if a domain is only testing DKIM"
+#, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
-msgstr "Verificar a sinatura aínda que un dominio só probe DKIM"
+msgstr "Verificar a sinatura aínda que un dominio só probe DKIM."
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format

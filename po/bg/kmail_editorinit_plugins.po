@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-30 18:53+0200\n"
+"PO-Revision-Date: 2024-08-07 20:15+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:14
 #, kde-format
@@ -26,8 +26,7 @@ msgid "Configure \"External Composer\" Plugin"
 msgstr "Конфигуриране на външна програма за писане на съобщение"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Use external editor instead of composer"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Използване на външна програма за писане на съобщение"
