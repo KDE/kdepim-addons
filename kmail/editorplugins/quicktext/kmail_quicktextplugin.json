@@ -34,7 +34,7 @@
         "Description[x-test]": "xxThis plugin allows you to insert special text as attachment name, emails etc.xx",
         "Description[zh_CN]": "此插件可以让您插入特殊文本作为附件名称、电子邮件等。",
         "Description[zh_TW]": "這個外掛程式讓您輸入特殊字元到附件名稱或郵件等等當中。",
-        "EnabledByDefault": false,
+        "EnabledByDefault": true,
         "Name": "Snippet",
         "Name[ar]": "قصاصة",
         "Name[bg]": "Фрагмент",
