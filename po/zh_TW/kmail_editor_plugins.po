@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-20 02:39+0900\n"
+"PO-Revision-Date: 2024-08-09 03:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -120,15 +120,13 @@ msgid "Export…"
 msgstr "匯出…"
 
 #: quicktext/quicktextmanager.cpp:78
-#, fuzzy, kde-format
-#| msgid "Import QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "匯入快速文字"
 
 #: quicktext/quicktextmanager.cpp:86
-#, fuzzy, kde-format
-#| msgid "Export QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "匯出快速文字"

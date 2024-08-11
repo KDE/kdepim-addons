@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-05 15:41+0900\n"
+"PO-Revision-Date: 2024-08-09 03:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -220,8 +220,7 @@ msgid "Do you want to remove this script \"%1\"?"
 msgstr "您確定要移除此文稿 \"%1\" 嗎？"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
-#, fuzzy, kde-format
-#| msgid "Remove External Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "移除外部文稿"

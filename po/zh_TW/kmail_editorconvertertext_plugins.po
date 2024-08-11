@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-30 02:57+0900\n"
+"PO-Revision-Date: 2024-08-09 03:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -24,15 +24,13 @@ msgid "Configure Markdown Plugin"
 msgstr "設定 Markdown 外掛程式"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enable embedded LaTeX"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr "啟用內嵌 LaTeX"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Enable PHP Markdown Extra definition lists"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "啟用 PHP Markdown Extra 的定義清單"
@@ -50,8 +48,7 @@ msgid "Add Image"
 msgstr "新增影像"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Keep original size"
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "保持原始大小"

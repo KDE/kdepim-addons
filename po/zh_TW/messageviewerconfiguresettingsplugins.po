@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-20 02:39+0900\n"
+"PO-Revision-Date: 2024-08-09 03:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,15 +19,13 @@ msgstr ""
 "X-Generator: Lokalize 24.04.70\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Still verify the signature, if a domain is only testing DKIM"
+#, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "網域只測試 DKIM 時還是檢查簽章"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
@@ -129,22 +127,19 @@ msgid "Advanced"
 msgstr "進階"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Enable DKIM Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "啟用 DKIM 支援"
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Save DKIM Result"
+#, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "儲存 DKIM 結果"
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Replace DKIM result by Authentication-Result header value"
+#, kde-format
 msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "用 Authentication-Result（認證結果）標頭欄位數值取代 DKIM 結果"
@@ -166,43 +161,37 @@ msgid "Save and Compare"
 msgstr "儲存並比對"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Check if e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "檢查郵件是否應該簽署"
 
 #: dkim-verify/dkimpolicywidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr "用 DMARC 來猜測郵件是否應該簽署"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use default rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "使用預設規則"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Autogenerate rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "自動產生規則"
 
 #: dkim-verify/dkimpolicywidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Read Authentication-Results header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "讀取 Authentication-Results（認證結果）標頭"
 
 #: dkim-verify/dkimpolicywidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Autogenerate when Sender in SDID"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "寄件者在 SDID 當中時自動產生"
@@ -277,8 +266,7 @@ msgid "Configure Gravatar"
 msgstr "設定 Gravatar"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable Gravatar Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "啟用 Gravatar 大頭貼支援"
@@ -296,8 +284,7 @@ msgid "Edit"
 msgstr "編輯"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "已啟用"
@@ -362,8 +349,7 @@ msgid "A rule for host was already added."
 msgstr "主機的規則已經存在。"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
-#, fuzzy, kde-format
-#| msgid "Host already checked"
+#, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "已檢查主機"
@@ -374,8 +360,7 @@ msgid "Rule already exists."
 msgstr "規則已經存在。"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
-#, fuzzy, kde-format
-#| msgid "Duplicate Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "建立規則複本"
