@@ -11,7 +11,6 @@
 #include "settingschangenotifier.h"
 
 #include <Akonadi/AttributeFactory>
-#include <Akonadi/Collection>
 #include <Akonadi/CollectionColorAttribute>
 #include <Akonadi/CollectionModifyJob>
 

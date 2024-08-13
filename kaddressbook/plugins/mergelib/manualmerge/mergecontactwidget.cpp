@@ -10,7 +10,6 @@
 #include <KLocalizedString>
 #include <QSplitter>
 
-#include "job/mergecontacts.h"
 #include "job/mergecontactsjob.h"
 #include "widgets/mergecontactinfowidget.h"
 #include "widgets/mergecontactloseinformationwarning.h"
