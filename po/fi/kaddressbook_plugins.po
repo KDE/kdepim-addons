@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
 "PO-Revision-Date: 2023-11-15 18:25+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -101,21 +101,21 @@ msgctxt "@title:window"
 msgid "Select Contacts to merge"
 msgstr "Valitse yhdistettävät yhteystiedot"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:32
+#: mergelib/manualmerge/mergecontactwidget.cpp:31
 #, fuzzy, kde-format
 #| msgid "merge"
 msgctxt "@action:button"
 msgid "merge"
 msgstr "yhdistä"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:48
+#: mergelib/manualmerge/mergecontactwidget.cpp:47
 #, fuzzy, kde-format
 #| msgid "Select contacts that you really want to merge:"
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Valitse yhdistettävät yhteystiedot:"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:68
+#: mergelib/manualmerge/mergecontactwidget.cpp:67
 #, fuzzy, kde-format
 #| msgid "Select the addressbook in which to store merged contacts:"
 msgctxt "@label:textbox"

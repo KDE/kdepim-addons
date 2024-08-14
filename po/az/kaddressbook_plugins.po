@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
 "PO-Revision-Date: 2022-10-18 12:24+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -100,21 +100,21 @@ msgctxt "@title:window"
 msgid "Select Contacts to merge"
 msgstr "Birləşdiriləcək əlaqələri seçin"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:32
+#: mergelib/manualmerge/mergecontactwidget.cpp:31
 #, fuzzy, kde-format
 #| msgid "merge"
 msgctxt "@action:button"
 msgid "merge"
 msgstr "birləşdirin"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:48
+#: mergelib/manualmerge/mergecontactwidget.cpp:47
 #, fuzzy, kde-format
 #| msgid "Select contacts that you really want to merge:"
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Həqiqətən birləşdirmək istədiyiniz əlaqələri seçin:"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:68
+#: mergelib/manualmerge/mergecontactwidget.cpp:67
 #, fuzzy, kde-format
 #| msgid "Select the addressbook in which to store merged contacts:"
 msgctxt "@label:textbox"

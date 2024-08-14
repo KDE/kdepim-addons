@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-08-14 00:39+0000\n"
 "PO-Revision-Date: 2024-07-06 20:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -94,19 +94,19 @@ msgctxt "@title:window"
 msgid "Select Contacts to merge"
 msgstr "ஒன்றிணைக்க வேண்டிய தொடர்புகளைத் தேரந்தெடுப்பது"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:32
+#: mergelib/manualmerge/mergecontactwidget.cpp:31
 #, kde-format
 msgctxt "@action:button"
 msgid "merge"
 msgstr "ஒன்றிணை"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:48
+#: mergelib/manualmerge/mergecontactwidget.cpp:47
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "ஒன்றாக்க வேண்டிய தொடர்புகளைத் தேர்ந்தெடுக்கவும்:"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:68
+#: mergelib/manualmerge/mergecontactwidget.cpp:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
