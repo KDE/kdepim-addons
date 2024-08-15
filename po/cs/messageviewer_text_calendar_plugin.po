@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-04 14:38+0200\n"
+"PO-Revision-Date: 2024-08-14 11:32+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -385,8 +385,7 @@ msgid "Delegation to organizer is not possible."
 msgstr "Delegace na organizátora není možná."
 
 #: text_calendar.cpp:1068
-#, fuzzy, kde-format
-#| msgid "Save Invitation Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Uložit přílohu pozvánky"

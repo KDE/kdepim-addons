@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2016, 2017, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2016, 2017, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-30 13:55+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2024-08-14 11:31+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -297,8 +297,7 @@ msgstr ""
 "stránce.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "Označit detekovaný spa&m jako přečtený"
@@ -309,8 +308,7 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Označit zprávy klasifikované jako spam jako přečtené."
 
 #: common/antispamwizard.cpp:1060
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Přesunout z&námý spam do:"
@@ -325,8 +323,7 @@ msgstr ""
 "složku ze seznamu dole."
 
 #: common/antispamwizard.cpp:1075
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "&Přesunout pravděpodobný spam do:"
@@ -343,8 +340,7 @@ msgstr ""
 "jste nezvolili vhodný nástroj, nemůžete zvolit ani složku.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Překontrolovat zprávy pomocí antivirových nástrojů"
@@ -362,8 +358,7 @@ msgstr ""
 "filtrům reagovat a např. přesunout zavirované zprávy do zvláštní složky."
 
 #: common/antispamwizard.cpp:1195
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Všechny zavirované zprávy přesunout do zvolené složky"
@@ -379,8 +374,7 @@ msgstr ""
 "složky. Výchozí složka je koš, ale můžete jí změnit."
 
 #: common/antispamwizard.cpp:1203
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "A zároveň označit zavirované zprávy jako přečtené"
