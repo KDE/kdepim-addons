@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-30 07:11+0400\n"
+"PO-Revision-Date: 2024-08-15 11:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -105,8 +106,7 @@ msgid "Confirm Delete Mail"
 msgstr "أكّد حذف البريد"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Apply to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "طبّق على الكلّ"
@@ -193,8 +193,7 @@ msgid "Same rule already exists."
 msgstr "نفس القاعدة موجودة فعلاً"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
-#, fuzzy, kde-format
-#| msgid "Create Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Rule"
 msgstr "أنشئ قاعدة"
