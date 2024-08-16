@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-06-26 18:43+0400\n"
+"PO-Revision-Date: 2024-08-15 11:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -70,7 +70,7 @@ msgstr "أتريد إرسال البريد كَ‍ HTML؟"
 #: checkbeforesend/checkbeforesendinterface.cpp:36
 #, kde-format
 msgid "Send email as plain text"
-msgstr "أرسل البريد كنصّ صِرف"
+msgstr "لا"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
