@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2016, 2018, 2019, 2020, 2023.
+# SPDX-FileCopyrightText: 2016, 2018, 2019, 2020, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2023-10-08 22:59+0200\n"
+"PO-Revision-Date: 2024-08-19 22:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -23,39 +23,34 @@ msgid "Autocorrect Text"
 msgstr "텍스트 자동 고침"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:28
-#, fuzzy, kde-format
-#| msgid "Autocorrect Full Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "전체 텍스트 자동 고침"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Autocorrect Selected Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "선택한 텍스트 자동 고침"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
-msgstr "이메일 삽입..."
+msgstr "이메일 삽입…"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select Short URL server:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "단축 URL 서버 선택:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:61
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
-msgstr "단축 URL 삽입..."
+msgstr "단축 URL 삽입…"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:85
 #, kde-format
@@ -83,12 +78,10 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Insert Special Character"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
-msgstr "특수 문자 삽입"
+msgstr "특수 문자 추가…"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
 #, kde-format
@@ -102,8 +95,7 @@ msgid "Insert"
 msgstr "삽입"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
-#, fuzzy, kde-format
-#| msgid "Insert Non Breaking Space"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "비분리 공백 추가"
@@ -115,85 +107,73 @@ msgid "Configure quick text"
 msgstr "빠른 텍스트 설정"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Import…"
-msgstr "가져오기..."
+msgstr "가져오기…"
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Export…"
-msgstr "내보내기..."
+msgstr "내보내기…"
 
 #: quicktext/quicktextmanager.cpp:78
-#, fuzzy, kde-format
-#| msgid "Import QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "빠른 텍스트 가져오기"
 
 #: quicktext/quicktextmanager.cpp:86
-#, fuzzy, kde-format
-#| msgid "Export QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "빠른 텍스트 내보내기"
 
 #: quicktext/quicktextplugineditorinterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action"
 msgid "Variables"
 msgstr "변수"
 
 #: quicktext/quicktextplugineditorinterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "변수"
 
 #: quicktext/quicktexttreewidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add Snippet..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
-msgstr "스니펫 추가..."
+msgstr "스니펫 추가…"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Edit Snippet..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
-msgstr "스니펫 편집..."
+msgstr "스니펫 편집…"
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Remove Snippet"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "스니펫 삭제"
 
 #: quicktext/quicktexttreewidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Add Group..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Group…"
-msgstr "그룹 추가하기..."
+msgstr "그룹 추가…"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
-msgstr "그룹 이름 바꾸기..."
+msgstr "그룹 이름 바꾸기…"
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "그룹 삭제"
@@ -246,10 +226,9 @@ msgid "General"
 msgstr "일반"
 
 #: sharetext/sharetextplugineditorinterface.cpp:33
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
-msgstr "메일 텍스트 공유..."
+msgstr "메일 텍스트 공유…"
 
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
@@ -259,7 +238,7 @@ msgstr "크기 조정: %1%"
 #: zoomtext/zoomtextplugineditorinterface.cpp:25
 #, kde-format
 msgid "Zoom…"
-msgstr ""
+msgstr "크기 조정…"
 
 #~ msgid "Insert Special Character..."
 #~ msgstr "특수 문자 추가..."

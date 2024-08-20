@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2013, 2015, 2017, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2013, 2015, 2017, 2019, 2020, 2021, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2021-11-14 19:26+0100\n"
+"PO-Revision-Date: 2024-08-19 22:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -24,8 +24,7 @@ msgid "Select Attendees"
 msgstr "참석자 선택"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "새 참석자를 추가하려면 클릭하십시오"
@@ -43,8 +42,7 @@ msgid "Remove"
 msgstr "삭제"
 
 #: delegateselector.cpp:23
-#, fuzzy, kde-format
-#| msgid "Keep me informed about status changes of this incidence."
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "이 모임의 상태 변화에 대해서 계속 알려 줍니다."
@@ -56,15 +54,13 @@ msgid "Select delegate"
 msgstr "대리인 선택"
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "대리인:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "설명:"
@@ -389,8 +385,7 @@ msgid "Delegation to organizer is not possible."
 msgstr "주관자에게 위임할 수 없습니다."
 
 #: text_calendar.cpp:1068
-#, fuzzy, kde-format
-#| msgid "Save Invitation Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "초대장 첨부 저장"
@@ -443,15 +438,13 @@ msgid "Send Email to Organizer"
 msgstr "주관자에게 이메일 보내기"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "보내지 않음"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "이메일 보내기"
@@ -467,10 +460,9 @@ msgid "Open Attachment"
 msgstr "첨부 파일 열기"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "다른 이름으로 첨부 파일 저장..."
+msgstr "다른 이름으로 첨부 파일 저장…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -488,10 +480,9 @@ msgid "Accept counter proposal"
 msgstr "상대 제안 수락"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "상대 제안 만들기..."
+msgstr "상대 제안 만들기…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -514,10 +505,9 @@ msgid "Decline counter proposal"
 msgstr "상대 제안 거절"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "내 달력 확인하기..."
+msgstr "내 달력 확인하기…"
 
 #: text_calendar.cpp:1376
 #, kde-format

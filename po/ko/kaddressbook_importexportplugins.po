@@ -1,14 +1,14 @@
 # Korean messages for kaddressbook
 # Copyright (C) 2001, 2007 Free Software Foundation, Inc.
 # KIM HyoungSuk <mire@mizi.com>, 2001.
-# Shinjo Park <kde@peremen.name>, 2007, 2009, 2011, 2019, 2020, 2022.
+# SPDX-FileCopyrightText: 2007, 2009, 2011, 2019, 2020, 2022, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-05-06 00:21+0200\n"
+"PO-Revision-Date: 2024-08-19 22:49+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,13 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Export CSV file..."
+#, kde-format
 msgid "Export CSV file…"
-msgstr "CSV 파일 내보내기..."
+msgstr "CSV 파일 내보내기…"
 
 #: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
@@ -30,10 +29,9 @@ msgid "Export contacts to a file in comma separated value format."
 msgstr "연락처를 CSV 파일로 내보냅니다."
 
 #: csv/csvimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Import CSV file..."
+#, kde-format
 msgid "Import CSV file…"
-msgstr "CSV 파일 가져오기..."
+msgstr "CSV 파일 가져오기…"
 
 #: csv/csvimportexportplugininterface.cpp:43
 #, kde-format
@@ -357,20 +355,16 @@ msgstr ""
 "의 첫 줄은 파일의 데이터 필드를 나타내는 주석 항목입니다."
 
 #: csv/import/csvimportdialog.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Apply Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
-msgstr "템플릿 적용..."
+msgstr "템플릿 적용…"
 
 #: csv/import/csvimportdialog.cpp:449
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
-msgstr "템플릿 저장..."
+msgstr "템플릿 저장…"
 
 #: csv/import/csvimportdialog.cpp:470
 #, kde-format
@@ -461,10 +455,9 @@ msgid "GMX address book file (*.gmxa)"
 msgstr "GMX 주소록 파일 (*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Import GMX file..."
+#, kde-format
 msgid "Import GMX file…"
-msgstr "GMX 파일 가져오기..."
+msgstr "GMX 파일 가져오기…"
 
 #: gmx/gmximportexportplugininterface.cpp:41
 #, kde-format
@@ -472,10 +465,9 @@ msgid "Import contacts from a GMX address book file."
 msgstr "GMX 주소록 파일에서 연락처를 가져옵니다."
 
 #: gmx/gmximportexportplugininterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Export GMX file..."
+#, kde-format
 msgid "Export GMX file…"
-msgstr "GMX 파일 내보내기..."
+msgstr "GMX 파일 내보내기…"
 
 #: gmx/gmximportexportplugininterface.cpp:47
 #, kde-format
@@ -495,10 +487,9 @@ msgid "%1 is not a GMX address book file."
 msgstr "%1은(는) GMX 주소록 파일이 아닙니다."
 
 #: ldap/ldapimportexportplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import From LDAP server..."
+#, kde-format
 msgid "Import From LDAP server…"
-msgstr "LDAP 서버에서 가져오기..."
+msgstr "LDAP 서버에서 가져오기…"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
 #, kde-format
@@ -506,10 +497,9 @@ msgid "Import contacts from an LDAP server."
 msgstr "LDAP 서버에서 연락처를 가져옵니다."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Import LDIF file..."
+#, kde-format
 msgid "Import LDIF file…"
-msgstr "LDIF 파일 가져오기..."
+msgstr "LDIF 파일 가져오기…"
 
 #: ldif/ldifimportexportplugininterface.cpp:37
 #, kde-format
@@ -517,10 +507,9 @@ msgid "Import contacts from an LDIF file."
 msgstr "LDIF 파일에서 연락처를 가져옵니다."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Export LDIF file..."
+#, kde-format
 msgid "Export LDIF file…"
-msgstr "LDIF 파일 내보내기..."
+msgstr "LDIF 파일 내보내기…"
 
 #: ldif/ldifimportexportplugininterface.cpp:43
 #, kde-format
@@ -686,19 +675,15 @@ msgid "Do you want to import this contact into your address book?"
 msgstr "이 연락처를 주소록으로 가져오시겠습니까?"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Import All..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
-msgstr "모두 가져오기..."
+msgstr "모두 가져오기…"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import vCard"
+#, kde-format
 msgid "Import vCard…"
-msgstr "vCard 가져오기"
+msgstr "vCard 가져오기…"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -711,16 +696,14 @@ msgid "Export contacts to a vCard 4.0 file."
 msgstr "연락처를 vCard 4.0 파일로 내보냅니다."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0..."
+#, kde-format
 msgid "Export vCard 4.0…"
-msgstr "vCard 4.0 내보내기..."
+msgstr "vCard 4.0 내보내기…"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
+#, kde-format
 msgid "Export vCard 3.0…"
-msgstr "vCard 3.0 내보내기..."
+msgstr "vCard 3.0 내보내기…"
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -728,10 +711,9 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "연락처를 vCard 3.0 파일로 내보냅니다."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
+#, kde-format
 msgid "Export vCard 2.1…"
-msgstr "vCard 2.1 내보내기..."
+msgstr "vCard 2.1 내보내기…"
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
@@ -782,10 +764,9 @@ msgid "Export to Several Files"
 msgstr "여러 파일로 내보내기"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
-#, fuzzy, kde-format
-#| msgid "Import Windows Contact file..."
+#, kde-format
 msgid "Import Windows Contact file…"
-msgstr "Windows 연락처 파일 가져오기..."
+msgstr "Windows 연락처 파일 가져오기…"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
 #, kde-format
