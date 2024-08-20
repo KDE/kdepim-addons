@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2016, 2017, 2018, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2023-10-08 23:00+0200\n"
+"PO-Revision-Date: 2024-08-19 22:55+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -23,18 +23,16 @@ msgid "Current URL is not a shortened URL."
 msgstr "현재 URL이 단축 URL이 아닙니다."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, fuzzy, kde-format
-#| msgid "Expand URL"
+#, kde-format
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "URL 확장"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate..."
+#, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr "번역..."
+msgstr "번역…"
 
 #: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
@@ -42,15 +40,13 @@ msgid "&Save"
 msgstr "저장(&S)"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
-msgstr "편집기 열기(&E)..."
+msgstr "편집기 열기(&E)…"
 
 #: createeventplugin/eventedit.cpp:56
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "이벤트:"
@@ -61,15 +57,13 @@ msgid "Calendar where the new event will be stored."
 msgstr "이벤트를 저장할 캘린더입니다."
 
 #: createeventplugin/eventedit.cpp:76
-#, fuzzy, kde-format
-#| msgid "Calendar where the new event will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "이벤트를 저장할 캘린더"
 
 #: createeventplugin/eventedit.cpp:89
-#, fuzzy, kde-format
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "시작:"
@@ -80,8 +74,7 @@ msgid "Select start time for event."
 msgstr "이벤트 시작 시간을 선택하십시오."
 
 #: createeventplugin/eventedit.cpp:102
-#, fuzzy, kde-format
-#| msgid "End:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "끝:"
@@ -107,10 +100,9 @@ msgid "Close the widget for creating new events."
 msgstr "새 할 일 생성 위젯을 닫습니다."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Event…"
-msgstr "이벤트 만들기"
+msgstr "이벤트 만들기…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -123,8 +115,7 @@ msgid "Allows you to create a calendar Event"
 msgstr "이 메시지에서 캘린더에 이벤트 만들기"
 
 #: createtodoplugin/todoedit.cpp:61
-#, fuzzy, kde-format
-#| msgid "To-do:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "할 일:"
@@ -135,8 +126,7 @@ msgid "Todo list where the new task will be stored."
 msgstr "새 할 일을 저장할 할 일 목록입니다."
 
 #: createtodoplugin/todoedit.cpp:82
-#, fuzzy, kde-format
-#| msgid "Todo list where the new task will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "새 작업을 저장할 할 일 목록입니다"
@@ -201,29 +191,25 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "\"외부 스크립트\" 플러그인 설정"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
-msgstr "스크립트 추가..."
+msgstr "스크립트 추가…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "스크립트 삭제"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
-msgstr "스크립트 수정..."
+msgstr "스크립트 수정…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "External Script:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "외부 스크립트:"
@@ -255,11 +241,10 @@ msgid "Description:"
 msgstr "설명:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
-msgstr "명령행 인자 추가..."
+msgstr "명령행 인자 추가…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -267,11 +252,10 @@ msgid "Command Line:"
 msgstr "명령행:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">인자 형식 정보...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">인자 형식 정보…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -311,8 +295,7 @@ msgid "Impossible to start executable"
 msgstr "실행 파일을 시작할 수 없음"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "External Script"
+#, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "외부 스크립트"

@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2022-05-15 23:57+0200\n"
+"PO-Revision-Date: 2024-08-19 22:50+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -24,18 +24,16 @@ msgid "Configure Rule"
 msgstr "규칙 설정"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Type:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr "형식:"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Contains:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Contains:"
-msgstr "포함함"
+msgstr "포함함:"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:74
 #, kde-format
@@ -81,8 +79,7 @@ msgid "Configure Before Deleting Mail"
 msgstr "이메일을 삭제하기 전에 묻기 설정"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Confirm Before Deleting"
+#, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "이메일을 삭제하기 전에 묻기"
@@ -123,12 +120,10 @@ msgid "The message with subject '%1' is %2"
 msgstr "제목이 '%1'인 메시지가 %2"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "규칙 추가..."
+msgstr "규칙 추가…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
@@ -137,12 +132,10 @@ msgid "Remove Rule"
 msgstr "규칙 삭제"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "규칙 수정..."
+msgstr "규칙 수정…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
@@ -155,16 +148,14 @@ msgid "Pattern"
 msgstr "패턴"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "규칙 추가..."
+msgstr "규칙 추가…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "규칙 편집"
+msgstr "규칙 편집…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format

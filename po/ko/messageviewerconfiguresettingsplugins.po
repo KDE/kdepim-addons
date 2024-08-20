@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-02-17 12:43+0100\n"
+"PO-Revision-Date: 2024-08-19 22:55+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -54,8 +54,7 @@ msgid "Treat small Key as:"
 msgstr "작은 키 취급 방법:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "설정"
@@ -139,8 +138,7 @@ msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "DKIM 결과를 Authentication-Result 헤더 값으로 대체"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Save Record Key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "기록 키 저장:"
@@ -186,8 +184,7 @@ msgid "Autogenerate when Sender in SDID"
 msgstr "보낸 사람이 SDID에 있을 때 자동 생성"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Show Rules"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "규칙 표시"
@@ -238,15 +235,13 @@ msgid "Save Folder Settings"
 msgstr "폴더 설정 저장"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr "선택"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect"
 msgstr "선택 해제"
@@ -277,7 +272,7 @@ msgstr "편집"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "사용함"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
@@ -285,11 +280,10 @@ msgid "Server Name:"
 msgstr "서버 이름:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">인자 형식 정보...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">인자 형식 정보…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -317,12 +311,10 @@ msgid "Configure Open Url With Plugin"
 msgstr "다음으로 URL 열기 플러그인 설정"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "규칙 추가..."
+msgstr "규칙 추가…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
@@ -331,22 +323,20 @@ msgid "Remove Rule"
 msgstr "규칙 삭제"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "규칙 수정..."
+msgstr "규칙 수정…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr ""
+msgstr "호스트에 대한 규칙이 이미 추가되었습니다."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "Host already checked"
-msgstr ""
+msgstr "호스트가 이미 검사됨"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
@@ -371,16 +361,14 @@ msgid "Remove Rule"
 msgstr "규칙 삭제"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "규칙 추가..."
+msgstr "규칙 추가…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "규칙 편집..."
+msgstr "규칙 편집…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -397,7 +385,7 @@ msgstr "사기 설정 변경"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "추가…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
