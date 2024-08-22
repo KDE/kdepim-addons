@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-05 10:35+0200\n"
+"PO-Revision-Date: 2024-08-02 14:23+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -231,11 +231,10 @@ msgid "Do you want to remove this script \"%1\"?"
 msgstr "Voulez-vous supprimer ce script « %1 » ?"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
-#, fuzzy, kde-format
-#| msgid "Remove External Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove External Script"
-msgstr "Supprimer le script externe"
+msgstr "Supprimer un script externe"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
 #, kde-format

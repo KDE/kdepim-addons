@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-26 20:22+0200\n"
+"PO-Revision-Date: 2024-08-05 12:57+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -57,8 +57,7 @@ msgid "Add Address Book"
 msgstr "Ajouter un carnet d'adresses"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Automatic Add Contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Ajouter les contacts automatiquement"
@@ -87,11 +86,10 @@ msgid "Send As HTML"
 msgstr "Envoyer en HTML"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Update SMTP server"
+#, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
-msgstr "Mettre à jour le serveur SMTP"
+msgstr "Mettre à jour le serveur « SMTP »"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
 #, kde-format
@@ -116,32 +114,28 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "Configurer le module de « Vérification avant envoi »"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Send as plain text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "Envoyer en texte brut"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use SMTP server defined in identity"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
-msgstr "Utiliser le serveur SMTP défini dans l'identité"
+msgstr "Utiliser le serveur « SMTP » défini dans l'identité"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Check duplicated emails addresses"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "Vérifier les adresses de messagerie dupliquées"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Check send attachment"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
-msgstr "Vérifier l'envoi de pièce jointe"
+msgstr "Vérifier la pièce jointe envoyée"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
@@ -180,15 +174,13 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Configurer le module de « Confirmer l'adresse courriel »"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Accepted Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Nom de domaine accepté"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Rejected Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Nom de domaine rejeté"
