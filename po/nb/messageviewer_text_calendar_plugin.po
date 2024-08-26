@@ -30,7 +30,6 @@ msgstr ""
 
 #: attendeeselector.cpp:40
 #, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Trykk for å legge til en ny deltaker"
@@ -49,7 +48,6 @@ msgstr "Fjern"
 
 #: delegateselector.cpp:23
 #, fuzzy, kde-format
-#| msgid "Keep me informed about status changes of this incidence."
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "Hold meg informert om statusendringer for denne hendelsen."
@@ -62,14 +60,12 @@ msgstr ""
 
 #: delegateselector.cpp:28
 #, fuzzy, kde-format
-#| msgid "Delegate:"
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Delegat:"
 
 #: reactiontoinvitationdialog.cpp:30
 #, fuzzy, kde-format
-#| msgid "Comment:"
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Kommentar:"
@@ -392,7 +388,6 @@ msgstr "Delegering til arrangør er ikke mulig."
 
 #: text_calendar.cpp:1068
 #, fuzzy, kde-format
-#| msgid "Save Invitation Attachment"
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Lagre invitasjonsvedlegg"
@@ -447,14 +442,12 @@ msgstr "Send e-post til arrangør"
 
 #: text_calendar.cpp:1270
 #, fuzzy, kde-format
-#| msgid "Do Not Send"
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Ikke send"
 
 #: text_calendar.cpp:1271
 #, fuzzy, kde-format
-#| msgid "Send EMail"
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Send e-post"
@@ -471,7 +464,6 @@ msgstr "Åpne vedlegg"
 
 #: text_calendar.cpp:1342
 #, fuzzy, kde-format
-#| msgid "Save Attachment As..."
 msgid "Save Attachment As…"
 msgstr "Lagre vedlegg som …"
 
@@ -492,7 +484,6 @@ msgstr "Godta motforslag"
 
 #: text_calendar.cpp:1364
 #, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
 msgid "Create a counter proposal…"
 msgstr "Opprett et motforslag …"
 
@@ -518,7 +509,6 @@ msgstr "Avvis motforslag"
 
 #: text_calendar.cpp:1374
 #, fuzzy, kde-format
-#| msgid "Check my calendar..."
 msgid "Check my calendar…"
 msgstr "Sjekk min kalender …"
 

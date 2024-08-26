@@ -339,8 +339,6 @@ msgstr ""
 
 #: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Template..."
 msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "Vurke málle …"
@@ -658,7 +656,6 @@ msgstr ""
 
 #: vcards/vcardimportexportplugininterface.cpp:44
 #, fuzzy, kde-format
-#| msgid "Import vCard..."
 msgid "Import vCard…"
 msgstr "Sisafievrrit vCard …"
 
@@ -674,13 +671,11 @@ msgstr ""
 
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
 msgid "Export vCard 4.0…"
 msgstr "Olggosfievrrit vCard 3.0 …"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
 msgid "Export vCard 3.0…"
 msgstr "Olggosfievrrit vCard 3.0 …"
 
@@ -691,7 +686,6 @@ msgstr ""
 
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
 msgid "Export vCard 2.1…"
 msgstr "Olggosfievrrit vCard 2.1 …"
 
@@ -745,8 +739,6 @@ msgstr ""
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Importing contacts"
 msgid "Import Windows Contact file…"
 msgstr "Sisafievrrideamen oktavuođaid"
 

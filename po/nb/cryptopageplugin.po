@@ -26,14 +26,12 @@ msgstr "Tillatte protokoller"
 
 #: cryptopageplugin.cpp:52
 #, fuzzy, kde-format
-#| msgid "Preferred OpenPGP encryption key:"
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Foretrukket OpenPGP krypteringsnøkkel:"
 
 #: cryptopageplugin.cpp:57
 #, fuzzy, kde-format
-#| msgid "Preferred S/MIME encryption certificate:"
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Foretrukket S/MIME-krypteringssertifikat:"
@@ -45,14 +43,12 @@ msgstr "Meldingsinnstillinger"
 
 #: cryptopageplugin.cpp:71
 #, fuzzy, kde-format
-#| msgid "Sign:"
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Signer:"
 
 #: cryptopageplugin.cpp:88
 #, fuzzy, kde-format
-#| msgid "Encrypt:"
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Krypter:"
