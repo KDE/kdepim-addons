@@ -28,7 +28,6 @@ msgstr ""
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
-#| msgid "Export CSV file..."
 msgid "Export CSV file…"
 msgstr "Eksporter CSV-fil …"
 
@@ -39,7 +38,6 @@ msgstr "Eksporter kontakter til en fil i kommaseparert format."
 
 #: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
-#| msgid "Import CSV file..."
 msgid "Import CSV file…"
 msgstr "Importer CSV-fil …"
 
@@ -368,16 +366,12 @@ msgstr ""
 
 #: csv/import/csvimportdialog.cpp:448
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Apply Template..."
 msgctxt "@action:button"
 msgid "Apply Template…"
 msgstr "Bruk mal …"
 
 #: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Template..."
 msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "Lagre mal …"
@@ -472,7 +466,6 @@ msgstr "GMX adressebokfil (*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
 #, fuzzy, kde-format
-#| msgid "Import GMX file..."
 msgid "Import GMX file…"
 msgstr "Importer GMX-fil …"
 
@@ -483,7 +476,6 @@ msgstr "Importer kontakter fra en GMX adressebokfil."
 
 #: gmx/gmximportexportplugininterface.cpp:46
 #, fuzzy, kde-format
-#| msgid "Export GMX file..."
 msgid "Export GMX file…"
 msgstr "Eksporter GMX-fil"
 
@@ -506,7 +498,6 @@ msgstr "%1 er ikke en GMX adressebokfil."
 
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, fuzzy, kde-format
-#| msgid "Import From LDAP server..."
 msgid "Import From LDAP server…"
 msgstr "Importer fra LDAP-tjener …"
 
@@ -517,7 +508,6 @@ msgstr "Importer kontakter fra en LDAP-tjener."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
-#| msgid "Import LDIF file..."
 msgid "Import LDIF file…"
 msgstr "Importer LDIF-fil …"
 
@@ -528,7 +518,6 @@ msgstr "Importer kontakter fra en LDIF-fil."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
-#| msgid "Export LDIF file..."
 msgid "Export LDIF file…"
 msgstr "Eksporter LDIF-fil …"
 
@@ -703,16 +692,12 @@ msgstr "Vil du importere denne kontakten til adresseboka?"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
 #, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Import All..."
 msgctxt "@action:button"
 msgid "Import All…"
 msgstr "Importer alle …"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
 #, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import vCard"
 msgid "Import vCard…"
 msgstr "Importer vCard"
 
@@ -728,13 +713,11 @@ msgstr "Eksporter kontakter til en vCard 4.0-fil."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
-#| msgid "Export vCard 4.0..."
 msgid "Export vCard 4.0…"
 msgstr "Eksporter vCard 4.0 …"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
 msgid "Export vCard 3.0…"
 msgstr "Eksporter vCard 3.0 …"
 
@@ -745,7 +728,6 @@ msgstr "Eksporter kontakter til en vCard 3.0-fil."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
 msgid "Export vCard 2.1…"
 msgstr "Eksporter vCard 2.1 …"
 
@@ -800,8 +782,6 @@ msgstr "Eksporter til flere filer"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Importing contacts"
 msgid "Import Windows Contact file…"
 msgstr "Importerer kontakter"
 

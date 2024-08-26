@@ -50,7 +50,6 @@ msgstr "Vis visittkort"
 
 #: text_vcard.cpp:216
 #, fuzzy, kde-format
-#| msgid "Save Business Card As..."
 msgid "Save Business Card As…"
 msgstr "Lagre visittkort som …"
 
