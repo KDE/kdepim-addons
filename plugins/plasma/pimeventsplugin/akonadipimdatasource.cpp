@@ -66,7 +66,7 @@ QString AkonadiPimDataSource::calendarColorForIncidence(const KCalendarCore::Inc
         }
     }
 
-    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("korganizerrc"));
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("eventviewsrc"));
     KConfigGroup resourcesColorsConfig(config, QStringLiteral("Resources Colors"));
     const QStringList colorKeyList = resourcesColorsConfig.keyList();
 
