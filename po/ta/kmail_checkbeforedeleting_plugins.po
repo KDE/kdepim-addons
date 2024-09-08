@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-16 22:54+0530\n"
+"PO-Revision-Date: 2024-09-07 21:09+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -105,8 +105,7 @@ msgid "Confirm Delete Mail"
 msgstr "அஞ்சலை நீக்குவதை உறுதிப்படுத்துவது"
 
 #: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Apply to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "அனைத்துக்கும் செயல்படுத்து"
@@ -185,8 +184,7 @@ msgid "Same rule already exists."
 msgstr "இந்த விதி ஏற்கனவே உள்ளது."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
-#, fuzzy, kde-format
-#| msgid "Create Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Rule"
-msgstr "விதியை உருவாக்கு"
+msgstr "விதியை உருவாக்குவது"
