@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-06-16 16:54+0530\n"
+"PO-Revision-Date: 2024-09-07 21:08+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
-msgstr ""
+msgstr "\"தானாக தொடர்புகளை சேர்\" செருகுநிரலுக்கான அமைப்புகள்"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:97
 #, kde-format
@@ -29,7 +29,7 @@ msgctxt "@info"
 msgid ""
 "You must create an address book before adding a contact. Do you want to "
 "create an address book?"
-msgstr ""
+msgstr "தொடர்பை சேர்க்குமுன் முகவரிப்புத்தகத்தை உருவாக்க வேண்டும். அவ்வாறு செய்ய வேண்டுமா?"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:98
 #, kde-format
@@ -52,13 +52,13 @@ msgstr "முகவரிப்புத்தகத்தை சேர்"
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
 #, kde-format
 msgid "Automatic Add Contacts"
-msgstr ""
+msgstr "தானாக தொடர்புகளை சேர்"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
-msgstr ""
+msgstr "தொடர்புகளை சேமிக்க வேண்டிய முகவரிப்புத்தகத்தை தேர்ந்தெடுக்கவும்:"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
@@ -94,6 +94,8 @@ msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
 "the current identity?"
 msgstr ""
+"தற்போதைய அடையாளத்திற்கு அமைக்கப்பட்டுள்ளதைத் தவிர்த்து வேறு SMTP சேவையகத்தைப் பயன்படுத்த "
+"வேண்டுமா?"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
 #, kde-format
@@ -114,12 +116,12 @@ msgstr ""
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format
 msgid "Check duplicated emails addresses"
-msgstr ""
+msgstr "ஏதேனும் முகவரி பலமுறையுள்ளதா என சரிபார்"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
 #, kde-format
 msgid "Check send attachment"
-msgstr ""
+msgstr "உடனிணைப்பை இணைத்ததை சரிபார்"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
@@ -193,17 +195,17 @@ msgstr ""
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:50
 #, kde-format
 msgid "Do you want to remove this domain?"
-msgstr ""
+msgstr "இந்த ஆள்களத்தை நீக்க வேண்டுமா?"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:54
 #, kde-format
 msgid "Whitelist of Addresses"
-msgstr ""
+msgstr "முகவரிகளின் அனுமதிப்பட்டியல்"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "Enter new email address:"
-msgstr ""
+msgstr "புதிய மின்னஞ்சல் முகவரியை உள்ளிடவும்:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
@@ -214,13 +216,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
-msgstr ""
+msgstr "தேர்ந்தெடுத்த முகவரிகளை அனுமதிப்பட்டியலில் சேர்"
 
 #: confirm-address/confirmaddressdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
-msgstr ""
+msgstr "முகவரிகளை உறுதிப்படுத்தவும்"
 
 #: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
@@ -237,19 +239,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
-msgstr ""
+msgstr "புதிய ஆள்களத்தை உள்ளிடவும்:"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Value"
-msgstr ""
+msgstr "மதிப்பை சேர்ப்பது"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Value"
-msgstr ""
+msgstr "மதிப்பை மாற்றுவது"
 
 #: confirm-address/confirmaddresswidget.cpp:22
 #, kde-format
