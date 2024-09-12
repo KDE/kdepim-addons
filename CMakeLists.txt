@@ -103,6 +103,7 @@ find_package(KPim6AddressbookImportExport ${KADDRESSBOOK_IMPORTEXPORT_LIB_VERSIO
 find_package(KPim6Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6PimCommonActivities ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6TextGrammarCheck ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextTranslator ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
@@ -132,6 +133,32 @@ find_package(KPim6PkPass ${KPIMPKPASS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Itinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF6TextTemplate CONFIG REQUIRED)
+
+if(TARGET KPim6::PimCommonActivities)
+    option(OPTION_USE_PLASMA_ACTIVITIES "Activate plasma activities (experimental)" OFF)
+    if(OPTION_USE_PLASMA_ACTIVITIES)
+        if(NOT WIN32 AND NOT APPLE)
+            set(OPTION_USE_PLASMA_ACTIVITIES true)
+        else()
+            set(OPTION_USE_PLASMA_ACTIVITIES false)
+        endif()
+    endif()
+    if(OPTION_USE_PLASMA_ACTIVITIES)
+        if(NOT WIN32 AND NOT APPLE)
+            find_package(PlasmaActivities "6.1.0")
+            set_package_properties(PlasmaActivities PROPERTIES DESCRIPTION
+                "Allow to compile with plasma activities"
+                TYPE OPTIONAL
+            )
+        endif()
+
+        if(TARGET Plasma::Activities)
+            set(KDEPIM_ADDONS_HAVE_ACTIVITY_SUPPORT TRUE)
+        endif()
+    endif()
+endif()
+
+configure_file(config-kdepim-addons.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h)
 
 find_package(KLLMCore ${KLLMCORE_VERSION})
 set_package_properties(KLLMCore PROPERTIES

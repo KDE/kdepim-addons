@@ -43,3 +43,8 @@ Dependencies:
     'pim/kitinerary' : '@same'
     'pim/kaddressbook' : '@same'
     'libraries/ktextaddons': '@latest-kf6'
+
+- 'on': ['Linux', 'FreeBSD']
+  'require':
+    'plasma/plasma-activities': '@latest-kf6'
+
