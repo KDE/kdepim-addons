@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 # Thomas Diehl <thd@kde.org>, 2004.
 # Stephan Johach <hunsum@gmx.de>, 2004.
 # Matthias Kalle Dalheimer <kalle@kdab.net>, 2004.
@@ -10,15 +11,15 @@ msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2023-02-09 01:12+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2024-09-08 16:51+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -27,8 +28,7 @@ msgid "Select Attendees"
 msgstr "Teilnehmer auswählen"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Klicken Sie, um einen neuen Teilnehmer hinzuzufügen"
@@ -59,15 +59,13 @@ msgid "Select delegate"
 msgstr "Empfänger wählen"
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Delegieren:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Kommentar:"
@@ -450,15 +448,13 @@ msgid "Send Email to Organizer"
 msgstr "E-Mail an den Organisator senden"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Nicht senden"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "E-Mail senden"
@@ -474,10 +470,9 @@ msgid "Open Attachment"
 msgstr "Anhang öffnen"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "Anhang speichern &unter ..."
+msgstr "Anhang speichern &unter …"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -495,10 +490,9 @@ msgid "Accept counter proposal"
 msgstr "Gegenvorschlag annehmen"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "Gegenvorschlag machen ..."
+msgstr "Gegenvorschlag machen …"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -521,10 +515,9 @@ msgid "Decline counter proposal"
 msgstr "Gegenvorschlag ablehnen"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "Meinen Kalender überprüfen ..."
+msgstr "Meinen Kalender überprüfen …"
 
 #: text_calendar.cpp:1376
 #, kde-format
