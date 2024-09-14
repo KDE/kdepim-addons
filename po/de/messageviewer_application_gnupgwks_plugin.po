@@ -3,21 +3,22 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2016, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2017.
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-04-28 19:58+0200\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-08-31 16:02+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: gnupgwksurlhandler.cpp:85
 #, kde-format
@@ -132,10 +133,8 @@ msgstr ""
 "Mails verwendet werden kann."
 
 #: templates/pgpkeymessagepart.html:23
-#, fuzzy
-#| msgid "Loading key details..."
 msgid "Loading key details…"
-msgstr "Schlüsseldetails werden geladen ..."
+msgstr "Schlüsseldetails werden geladen …"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -171,10 +170,8 @@ msgid "Open in Kleopatra"
 msgstr "In Kleopatra öffnen"
 
 #: templates/pgpkeymessagepart.html:52
-#, fuzzy
-#| msgid "Show key details"
 msgid "Show key details …"
-msgstr "Schlüsseldetails anzeigen"
+msgstr "Schlüsseldetails anzeigen …"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"

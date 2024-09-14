@@ -3,37 +3,36 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2017, 2018, 2020.
 # Frederik Schwarzer <schwarzer@kde.org>, 2017, 2018.
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-21 17:52+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-09-08 16:57+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: emaillineedit/emaillineedit.cpp:34
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting contacts..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
-msgstr "Klicken Sie den Knopf, um Kontakte auszuwählen ..."
+msgstr "Klicken Sie auf den Knopf, um Kontakte auszuwählen …"
 
 #: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: emaillineedit/emaillineedit.cpp:40
-#, fuzzy, kde-format
-#| msgid "Select Emails"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "E-Mails auswählen"
@@ -57,11 +56,10 @@ msgid "Error during creating folder: %1"
 msgstr "Fehler beim Anlegen des Ordners: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Create Folder"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Folder…"
-msgstr "Ordner erstellen"
+msgstr "Ordner erstellen …"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -75,21 +73,18 @@ msgid "Unable to load folder list"
 msgstr "Ordnerliste kann nicht geladen werden"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
-#, fuzzy, kde-format
-#| msgid "Loading in progress..."
+#, kde-format
 msgid "Loading in progress…"
-msgstr "Wird geladen ..."
+msgstr "Wird geladen …"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Suchen ..."
+msgstr "Suchen …"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Refresh IMAP Folder List"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "IMAP-Ordnerliste aktualisieren"
@@ -127,18 +122,16 @@ msgid "Load Folders"
 msgstr "Ordner laden"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select IMAP folder"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "IMAP-Ordner auswählen"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Click on button for selecting folder..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
-msgstr "Klicken Sie den Knopf, um einen Ordner auszuwählen ..."
+msgstr "Klicken Sie auf den Knopf, um einen Ordner auszuwählen …"
 
 #~ msgid "..."
 #~ msgstr "..."

@@ -3,21 +3,22 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2015, 2016, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2017, 2020, 2021.
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-04-28 19:57+0200\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-09-08 16:50+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -26,11 +27,10 @@ msgid "Akonadi Database Tool"
 msgstr "Akonadi-Datenbank-Werkzeug"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr "Akonadi Vacuum"
+msgstr "&Akonadi Vacuum …"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -45,18 +45,16 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadi Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Vacuum"
+#, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgid "Akonadi Fsck"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr "Akonadi Fsck"
+msgstr "Akonadi Fsck …"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -71,8 +69,7 @@ msgid "Akonadi Fsck"
 msgstr "Akonadi Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Fsck"
+#, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck"
@@ -83,26 +80,21 @@ msgid "Finished."
 msgstr "Abgeschlossen."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, fuzzy, kde-format
-#| msgid "Start..."
+#, kde-format
 msgid "Start…"
-msgstr "Starten ..."
+msgstr "Starten …"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr "Anti-Spam-Assistent"
+msgstr "Assistent für &Spam-Filter …"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr "Anti-Virus-Assistent"
+msgstr "Assistent für &Anti-Virus …"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -184,10 +176,9 @@ msgid "Ham"
 msgstr "Ham"
 
 #: common/antispamwizard.cpp:456
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
-msgstr "Nach %1 scannen ..."
+msgstr "Nach %1 scannen …"
 
 #: common/antispamwizard.cpp:500
 #, kde-format
@@ -407,8 +398,7 @@ msgstr ""
 "verschiebt sie in den ausgewählten Ordner."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Vorschau"
@@ -420,8 +410,7 @@ msgid "Mail Merge"
 msgstr "Serienbriefe"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Pfad:"
@@ -434,8 +423,7 @@ msgid "Attachment"
 msgstr "Anhang"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Source:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Quelle:"
@@ -451,8 +439,7 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Anhang:"
@@ -460,7 +447,7 @@ msgstr "Anhang:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&Hinzufügen …"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -473,11 +460,10 @@ msgid "Mod&ify..."
 msgstr "Ä&ndern ..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
-msgstr "Anhang auswählen"
+msgstr "Anhang auswählen:"
 
 #~ msgid "&Akonadi Vacuum..."
 #~ msgstr "&Akonadi Vacuum ..."
