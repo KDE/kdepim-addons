@@ -22,10 +22,9 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Export CSV file..."
+#, kde-format
 msgid "Export CSV file…"
-msgstr "Εξαγωγή αρχείου CSV..."
+msgstr "Εξαγωγή αρχείου CSV…"
 
 #: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
@@ -33,10 +32,9 @@ msgid "Export contacts to a file in comma separated value format."
 msgstr "Εξαγωγή επαφών σε ένα αρχείο τιμών διαχωρισμένων με κόμματα."
 
 #: csv/csvimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Import CSV file..."
+#, kde-format
 msgid "Import CSV file…"
-msgstr "Εισαγωγή αρχείου CSV..."
+msgstr "Εισαγωγή αρχείου CSV…"
 
 #: csv/csvimportexportplugininterface.cpp:43
 #, kde-format
@@ -200,9 +198,7 @@ msgstr ""
 "χαρακτήρα για διαχωριστικό μεταξύ πεδίων."
 
 #: csv/import/csvimportdialog.cpp:346
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Custum field separator"
-#| msgid "Other"
+#, kde-format
 msgctxt "@option:radio Custom field separator"
 msgid "Other"
 msgstr "Άλλο"
@@ -269,9 +265,7 @@ msgstr ""
 "ορίζεται εδώ."
 
 #: csv/import/csvimportdialog.cpp:376
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Qoute character option"
-#| msgid "\""
+#, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr "\""
@@ -377,20 +371,16 @@ msgstr ""
 "δεδομένων που περιέχει το αρχείο."
 
 #: csv/import/csvimportdialog.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Apply Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
-msgstr "Εφαρμογή προτύπου..."
+msgstr "Εφαρμογή προτύπου…"
 
 #: csv/import/csvimportdialog.cpp:449
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
-msgstr "Αποθήκευση προτύπου..."
+msgstr "Αποθήκευση προτύπου…"
 
 #: csv/import/csvimportdialog.cpp:470
 #, kde-format
@@ -481,10 +471,9 @@ msgid "GMX address book file (*.gmxa)"
 msgstr "Αρχείο βιβλίου διευθύνσεων GMX (*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Import GMX file..."
+#, kde-format
 msgid "Import GMX file…"
-msgstr "Εισαγωγή αρχείου GMX..."
+msgstr "Εισαγωγή αρχείου GMX…"
 
 #: gmx/gmximportexportplugininterface.cpp:41
 #, kde-format
@@ -492,10 +481,9 @@ msgid "Import contacts from a GMX address book file."
 msgstr "Εισαγωγή επαφών από ένα GMX αρχείο βιβλίου διευθύνσεων."
 
 #: gmx/gmximportexportplugininterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Export GMX file..."
+#, kde-format
 msgid "Export GMX file…"
-msgstr "Εξαγωγή αρχείου GMX..."
+msgstr "Εξαγωγή αρχείου GMX…"
 
 #: gmx/gmximportexportplugininterface.cpp:47
 #, kde-format
@@ -515,10 +503,9 @@ msgid "%1 is not a GMX address book file."
 msgstr "To %1 δεν είναι αρχείο GMX."
 
 #: ldap/ldapimportexportplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import From LDAP server..."
+#, kde-format
 msgid "Import From LDAP server…"
-msgstr "Εισαγωγή από εξυπηρετητή LDAP..."
+msgstr "Εισαγωγή από εξυπηρετητή LDAP…"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
 #, kde-format
@@ -526,10 +513,9 @@ msgid "Import contacts from an LDAP server."
 msgstr "Εισαγωγή επαφών από έναν εξυπηρετητή LDAP."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Import LDIF file..."
+#, kde-format
 msgid "Import LDIF file…"
-msgstr "Εισαγωγή αρχείου LDIF..."
+msgstr "Εισαγωγή αρχείου LDIF…"
 
 #: ldif/ldifimportexportplugininterface.cpp:37
 #, kde-format
@@ -537,10 +523,9 @@ msgid "Import contacts from an LDIF file."
 msgstr "Εισαγωγή επαφών από αρχείο LDIF."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Export LDIF file..."
+#, kde-format
 msgid "Export LDIF file…"
-msgstr "Εξαγωγή αρχείου LDIF..."
+msgstr "Εξαγωγή αρχείου LDIF…"
 
 #: ldif/ldifimportexportplugininterface.cpp:43
 #, kde-format
@@ -716,19 +701,15 @@ msgid "Do you want to import this contact into your address book?"
 msgstr "Επιθυμείτε την εισαγωγή της επαφής αυτής στο βιβλίο διευθύνσεών σας;"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Import All..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
-msgstr "Εισαγωγή όλων..."
+msgstr "Εισαγωγή όλων…"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import vCard"
+#, kde-format
 msgid "Import vCard…"
-msgstr "Εισαγωγή vCard"
+msgstr "Εισαγωγή vCard…"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -748,10 +729,9 @@ msgid "Export vCard 4.0…"
 msgstr "Εξαγωγή vCard 3.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
+#, kde-format
 msgid "Export vCard 3.0…"
-msgstr "Εξαγωγή vCard 3.0..."
+msgstr "Εξαγωγή vCard 3.0…"
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -759,10 +739,9 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "Εξαγωγή επαφών σε ένα αρχείο vCard 3.0."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
+#, kde-format
 msgid "Export vCard 2.1…"
-msgstr "Εξαγωγή vCard 2.1..."
+msgstr "Εξαγωγή vCard 2.1…"
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format

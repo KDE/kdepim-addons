@@ -23,15 +23,13 @@ msgid "Allowed Protocols"
 msgstr "Επιτρεπόμενα πρωτόκολλα"
 
 #: cryptopageplugin.cpp:52
-#, fuzzy, kde-format
-#| msgid "Preferred OpenPGP encryption key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Προτιμώμενο OpenPGP κλειδί κρυπτογράφησης:"
 
 #: cryptopageplugin.cpp:57
-#, fuzzy, kde-format
-#| msgid "Preferred S/MIME encryption certificate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Προτιμώμενο S/MIME πιστοποιητικό κρυπτογράφησης:"
@@ -42,15 +40,13 @@ msgid "Message Preference"
 msgstr "Προτίμηση μηνύματος"
 
 #: cryptopageplugin.cpp:71
-#, fuzzy, kde-format
-#| msgid "Sign:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Υπογραφή:"
 
 #: cryptopageplugin.cpp:88
-#, fuzzy, kde-format
-#| msgid "Encrypt:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Κρυπτογράφηση:"

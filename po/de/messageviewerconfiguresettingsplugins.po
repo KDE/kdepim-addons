@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-04-28 20:16+0200\n"
+"PO-Revision-Date: 2024-09-14 14:32+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -50,16 +50,15 @@ msgstr "Fehler"
 #: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
-msgstr ""
+msgstr "RSA-SHA1-Signieralgorithmus behandeln als:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Treat small Key as:"
-msgstr ""
+msgstr "Kleine Schlüssel behandeln als:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "Einrichten"
@@ -115,7 +114,7 @@ msgstr "Allgemein"
 #: dkim-verify/dkimconfiguretab.cpp:40
 #, kde-format
 msgid "Record Keys"
-msgstr ""
+msgstr "Datensatzschlüssel"
 
 #: dkim-verify/dkimconfiguretab.cpp:42
 #, kde-format
@@ -128,15 +127,13 @@ msgid "Advanced"
 msgstr "Erweitert"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Enable DKIM Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "DKIM-Unterstützung aktivieren"
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Save DKIM Result"
+#, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "DKIM-Ergebnis speichern"
@@ -148,8 +145,7 @@ msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Save Record Key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Datensatzschlüssel speichern:"
@@ -165,8 +161,7 @@ msgid "Save and Compare"
 msgstr "Speichern und vergleichen"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Check if e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "Prüfen, ob E-Mail signiert werden soll"
@@ -179,15 +174,13 @@ msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr "Prüfen, ob E-Mail signiert werden soll"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use default rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "Standardregel verwenden"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Autogenerate rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "Regel automatisch generieren"
@@ -205,8 +198,7 @@ msgid "Autogenerate when Sender in SDID"
 msgstr ""
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Show Rules"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Regeln anzeigen"
@@ -257,15 +249,13 @@ msgid "Save Folder Settings"
 msgstr "Ordner-Einstellungen speichern"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr "Auswählen"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect"
 msgstr "Auswahl aufheben"
@@ -277,8 +267,7 @@ msgid "Configure Gravatar"
 msgstr "Gravatar einrichten"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable Gravatar Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "Gravatar-Unterstützung aktivieren"
@@ -296,8 +285,7 @@ msgid "Edit"
 msgstr "Bearbeiten"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Aktiviert"
@@ -308,11 +296,10 @@ msgid "Server Name:"
 msgstr "Servername:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">Information zum Argumentformat ...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">Information zum Argumentformat …</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -341,12 +328,10 @@ msgid "Configure Open Url With Plugin"
 msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "Regel hinzufügen ..."
+msgstr "Regel hinzufügen …"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
@@ -355,12 +340,10 @@ msgid "Remove Rule"
 msgstr "Regel entfernen"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "Regel ändern ..."
+msgstr "Regel ändern …"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
@@ -368,8 +351,7 @@ msgid "A rule for host was already added."
 msgstr ""
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
-#, fuzzy, kde-format
-#| msgid "Host already checked"
+#, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "Der Rechner wurde bereits überprüft"
@@ -380,8 +362,7 @@ msgid "Rule already exists."
 msgstr "Regel existiert bereits"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
-#, fuzzy, kde-format
-#| msgid "Duplicate Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Regel duplizieren"
@@ -400,16 +381,14 @@ msgid "Remove Rule"
 msgstr "Regel entfernen"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
-msgstr "Regel hinzufügen ..."
+msgstr "Regel hinzufügen …"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
-msgstr "Regel bearbeiten ..."
+msgstr "Regel bearbeiten …"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -419,17 +398,15 @@ msgstr[0] "Regel entfernen"
 msgstr[1] "Regeln löschen"
 
 #: scamsettings/scamconfiguresettingsdialog.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Folder Settings"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
-msgstr "Ordner-Einstellungen einrichten"
+msgstr "Betrugsversuche einrichten"
 
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Hinzufügen …"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

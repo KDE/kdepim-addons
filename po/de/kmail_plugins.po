@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-09-08 16:50+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2024-09-14 14:24+0200\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -308,8 +308,7 @@ msgstr ""
 "sollen, und gehen Sie dann zur nächsten Seite.</p> "
 
 #: common/antispamwizard.cpp:1056
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "Erkannte unerwünschte Nachrichten als gelesen &markieren"
@@ -320,8 +319,7 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Markiert Nachrichten, die als Spam erkannt wurden, als gelesen."
 
 #: common/antispamwizard.cpp:1060
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Erkannte unerwünschte Nachrichten &verschieben nach:"
@@ -336,8 +334,7 @@ msgstr ""
 "können unten jedoch auch einen anderen Ordner auswählen."
 
 #: common/antispamwizard.cpp:1075
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "&Eventuell unerwünschte Nachrichten verschieben nach:"
@@ -355,8 +352,7 @@ msgstr ""
 "verwenden, können Sie auch keinen Ordner auswählen.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Nachrichten mit Anti-Virus-Programmen prüfen"
@@ -376,8 +372,7 @@ msgstr ""
 "einen besonderen Ordner verschieben können."
 
 #: common/antispamwizard.cpp:1195
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Erkannte Viren-Nachrichten in den ausgewählten Ordner verschieben"
@@ -394,8 +389,7 @@ msgstr ""
 "den Ordner ist der Papierkorb. Dies können Sie in der Ordneransicht ändern."
 
 #: common/antispamwizard.cpp:1203
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Erkannte Viren-Nachrichten zusätzlich als gelesen markieren"

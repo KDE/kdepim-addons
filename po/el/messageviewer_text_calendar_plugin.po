@@ -15,19 +15,17 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.2\n"
 
 #: attendeeselector.cpp:21
-#, fuzzy, kde-format
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Επιλογή συμμετέχοντων"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Κλικ για να προσθέσετε ένα νέο συμμετέχοντα"
@@ -45,29 +43,25 @@ msgid "Remove"
 msgstr "Αφαίρεση"
 
 #: delegateselector.cpp:23
-#, fuzzy, kde-format
-#| msgid "Keep me informed about status changes of this incidence."
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "Κράτα με ενήμερο/η για την εξέλιξη αυτού του γεγονότος."
 
 #: delegateselector.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select delegate"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
 msgstr "Επιλογή εκπροσώπου"
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Εκπρόσωπος:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Σχόλιο:"
@@ -296,11 +290,10 @@ msgid "Do you still want to delegate this invitation?"
 msgstr "Επιθυμείτε πάντα την εκπροσώπηση σε αυτήν την πρόσκληση; "
 
 #: text_calendar.cpp:813
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
-msgstr "Εκπρόσωπος:"
+msgstr "Εκπρόσωπος"
 
 #: text_calendar.cpp:816
 #, kde-format
@@ -396,8 +389,7 @@ msgstr ""
 "%2"
 
 #: text_calendar.cpp:890
-#, fuzzy, kde-format
-#| msgid "Reaction to Invitation"
+#, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "Αντίδραση σε πρόσκληση"
@@ -413,15 +405,13 @@ msgid "Delegation to organizer is not possible."
 msgstr "Η εκπροσώπιση στο organizer δεν είναι δυνατή."
 
 #: text_calendar.cpp:1068
-#, fuzzy, kde-format
-#| msgid "Save Invitation Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Αποθήκευση συνημμένης πρόσκλησης"
 
 #: text_calendar.cpp:1149
-#, fuzzy, kde-format
-#| msgid "Decline Counter Proposal"
+#, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "Απόρριψη αντιπρότασης"
@@ -470,15 +460,13 @@ msgid "Send Email to Organizer"
 msgstr "Αποστολή ηλ. αλληλογραφίας στο διοργανωτή"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Να μην αποσταλεί"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Αποστολή ηλ. αλληλογραφίας"
@@ -494,10 +482,9 @@ msgid "Open Attachment"
 msgstr "Άνοιγμα συνημμένου"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
-msgstr "Αποθήκευση συνημμένου ως..."
+msgstr "Αποθήκευση συνημμένου ως…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -515,10 +502,9 @@ msgid "Accept counter proposal"
 msgstr "Αποδοχή αντιπρότασης"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
-msgstr "Δημιουργία αντιπρότασης..."
+msgstr "Δημιουργία αντιπρότασης…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -541,10 +527,9 @@ msgid "Decline counter proposal"
 msgstr "Απόρριψη αντιπρότασης"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
-msgstr "Έλεγχος του ημερολογίου μου..."
+msgstr "Έλεγχος του ημερολογίου μου…"
 
 #: text_calendar.cpp:1376
 #, kde-format
