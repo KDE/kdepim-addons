@@ -3,6 +3,7 @@
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2007.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2013, 2014, 2015, 2020.
 # Frederik Schwarzer <schwarzer@kde.org>, 2010, 2012.
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: text_vcard.cpp:88
 #, kde-format

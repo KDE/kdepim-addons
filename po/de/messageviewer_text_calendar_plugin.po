@@ -6,6 +6,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2008, 2010, 2012, 2013, 2015, 2017, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2010, 2013, 2023.
 # Torbjörn Klatt <torbjoern.k@googlemail.com>, 2011.
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
