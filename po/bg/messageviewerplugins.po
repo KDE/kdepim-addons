@@ -315,31 +315,3 @@ msgstr "Външен скрипт"
 #, kde-format
 msgid "Configure"
 msgstr "Настройване"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Note:"
-#~ msgstr "Бележка:"
-
-#~ msgid "Create new note and close this widget."
-#~ msgstr "Създаване на нова бележка и затваряне на уиджета."
-
-#~ msgid "Close the widget for creating new notes."
-#~ msgstr "Затваряне на уиджета за създаване на бележка."
-
-#~ msgctxt "edit a note on this message"
-#~ msgid "Edit Note"
-#~ msgstr "Редактиране на бележка"
-
-#~ msgctxt "create a new note out of this message"
-#~ msgid "Create Note"
-#~ msgstr "Създаване на бележка"
-
-#~ msgid "Allows you to create a note from this message"
-#~ msgstr "Позволява създаването на бележка от това съобщение"
-
-#~ msgid ""
-#~ "This option starts an editor to create a note. Then you can edit the note "
-#~ "to your liking before saving it."
-#~ msgstr ""
-#~ "Тази опция стартира редактор, за да създаде бележка. След това можете да "
-#~ "редактирате бележката по ваш вкус, преди да я запазите."
