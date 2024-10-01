@@ -25,7 +25,6 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
     setSortRole(Qt::DisplayRole);
     setSortCaseSensitivity(Qt::CaseInsensitive);
     setSortLocaleAware(true);
-    setDynamicSortFilter(true);
 
     auto cr = new Akonadi::Monitor(this);
     cr->setMimeTypeMonitored(KCalendarCore::Event::eventMimeType());
