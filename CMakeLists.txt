@@ -34,7 +34,33 @@ include(ECMGenerateHeaders)
 include(FeatureSummary)
 include(KDEGitCommitHooks)
 include(KDEClangFormat)
-file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.c)
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES 
+	examples/*.cpp 
+	examples/*.h 
+	examples/*.c
+	kmailtransport/*.cpp
+        kmailtransport/*.h
+        kmailtransport/*.c
+        plugins/*.cpp
+        plugins/*.h
+        plugins/*.c
+        sieveeditor/*.cpp
+        sieveeditor/*.h
+        sieveeditor/*.c
+        akonadi-import-wizard/*.cpp
+        akonadi-import-wizard/*.h
+        akonadi-import-wizard/*.c	
+        kaddressbook/*.cpp
+        kaddressbook/*.h
+        kaddressbook/*.c
+        kmail/*.cpp
+        kmail/*.h
+        kmail/*.c
+        korganizer/*.cpp
+        korganizer/*.h
+        korganizer/*.c
+)
+
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 include(CheckFunctionExists)
 
