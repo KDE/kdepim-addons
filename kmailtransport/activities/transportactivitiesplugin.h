@@ -20,4 +20,9 @@ public:
 
 private:
     PimCommonActivities::ConfigureActivitiesWidget *const mConfigureActivitiesWidget;
+
+    // TransportActivitiesAbstractPlugin interface
+public:
+    MailTransport::TransportActivitiesAbstractPlugin::ActivitySettings activitiesSettings() const override;
+    void setActivitiesSettings(const ActivitySettings &activitySettings) override;
 };

@@ -21,6 +21,24 @@ TransportActivitiesPlugin::TransportActivitiesPlugin(QWidget *widget, const QLis
 
 TransportActivitiesPlugin::~TransportActivitiesPlugin() = default;
 
-#include "transportactivitiesplugin.moc"
+MailTransport::TransportActivitiesAbstractPlugin::ActivitySettings TransportActivitiesPlugin::activitiesSettings() const
+{
+    const auto settings = mConfigureActivitiesWidget->activitiesSettings();
+    const MailTransport::TransportActivitiesAbstractPlugin::ActivitySettings mailtransportSettings{
+        settings.activities,
+        settings.enabled,
+    };
+    return mailtransportSettings;
+}
+
+void TransportActivitiesPlugin::setActivitiesSettings(const ActivitySettings &activitySettings)
+{
+    const PimCommonActivities::ActivitiesBaseManager::ActivitySettings mailtransportSettings{
+        activitySettings.activities,
+        activitySettings.enabled,
+    };
+    mConfigureActivitiesWidget->setActivitiesSettings(mailtransportSettings);
+}
 
 #include "moc_transportactivitiesplugin.cpp"
+#include "transportactivitiesplugin.moc"
