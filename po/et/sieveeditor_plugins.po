@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-10-08 00:40+0000\n"
 "PO-Revision-Date: 2019-12-18 20:06+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,26 +17,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: emaillineedit/emaillineedit.cpp:34
+#: emaillineedit/emaillineedit.cpp:33
 #, fuzzy, kde-format
 #| msgid "Click on button for selecting contacts..."
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Kontaktide valimiseks klõpsa nupule ..."
 
-#: emaillineedit/emaillineedit.cpp:38
+#: emaillineedit/emaillineedit.cpp:37
 #, kde-format
 msgid "…"
 msgstr ""
 
-#: emaillineedit/emaillineedit.cpp:40
+#: emaillineedit/emaillineedit.cpp:39
 #, fuzzy, kde-format
 #| msgid "Select Emails"
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Kirjade valimine"
 
-#: emaillineedit/emaillineedit.cpp:87
+#: emaillineedit/emaillineedit.cpp:86
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"

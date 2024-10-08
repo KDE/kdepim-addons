@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-10-08 00:40+0000\n"
 "PO-Revision-Date: 2024-07-05 15:41+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -19,24 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.04.70\n"
 
-#: emaillineedit/emaillineedit.cpp:34
+#: emaillineedit/emaillineedit.cpp:33
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "點擊按鈕以選取聯絡人…"
 
-#: emaillineedit/emaillineedit.cpp:38
+#: emaillineedit/emaillineedit.cpp:37
 #, kde-format
 msgid "…"
 msgstr "…"
 
-#: emaillineedit/emaillineedit.cpp:40
+#: emaillineedit/emaillineedit.cpp:39
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "選擇 Email"
 
-#: emaillineedit/emaillineedit.cpp:87
+#: emaillineedit/emaillineedit.cpp:86
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"

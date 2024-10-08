@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-10-08 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,24 +17,24 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/sieveeditor_plugins.pot\n"
 "X-Crowdin-File-ID: 45623\n"
 
-#: emaillineedit/emaillineedit.cpp:34
+#: emaillineedit/emaillineedit.cpp:33
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr ""
 
-#: emaillineedit/emaillineedit.cpp:38
+#: emaillineedit/emaillineedit.cpp:37
 #, kde-format
 msgid "…"
 msgstr ""
 
-#: emaillineedit/emaillineedit.cpp:40
+#: emaillineedit/emaillineedit.cpp:39
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "选择邮件"
 
-#: emaillineedit/emaillineedit.cpp:87
+#: emaillineedit/emaillineedit.cpp:86
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"

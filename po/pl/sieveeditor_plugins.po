@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-10-08 00:40+0000\n"
 "PO-Revision-Date: 2024-07-13 07:55+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -18,24 +18,24 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: emaillineedit/emaillineedit.cpp:34
+#: emaillineedit/emaillineedit.cpp:33
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Naciśnij na przycisku, aby zaznaczyć kontakty…"
 
-#: emaillineedit/emaillineedit.cpp:38
+#: emaillineedit/emaillineedit.cpp:37
 #, kde-format
 msgid "…"
 msgstr "…"
 
-#: emaillineedit/emaillineedit.cpp:40
+#: emaillineedit/emaillineedit.cpp:39
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Wybierz pocztę"
 
-#: emaillineedit/emaillineedit.cpp:87
+#: emaillineedit/emaillineedit.cpp:86
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
