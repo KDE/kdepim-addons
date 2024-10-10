@@ -18,11 +18,9 @@ public:
     explicit TransportActivitiesPlugin(QWidget *widget, const QList<QVariant> & = {});
     ~TransportActivitiesPlugin() override;
 
+    [[nodiscard]] MailTransport::TransportActivitiesAbstractPlugin::ActivitySettings activitiesSettings() const override;
+    void setActivitiesSettings(const ActivitySettings &activitySettings) override;
+
 private:
     PimCommonActivities::ConfigureActivitiesWidget *const mConfigureActivitiesWidget;
-
-    // TransportActivitiesAbstractPlugin interface
-public:
-    MailTransport::TransportActivitiesAbstractPlugin::ActivitySettings activitiesSettings() const override;
-    void setActivitiesSettings(const ActivitySettings &activitySettings) override;
 };
