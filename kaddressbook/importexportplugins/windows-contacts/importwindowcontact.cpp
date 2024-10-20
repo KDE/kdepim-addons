@@ -258,12 +258,10 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
 
 bool ImportWindowContact::loadDomElement(QDomDocument &doc, QFile *file)
 {
-    QString errorMsg;
-    int errorRow;
-    int errorCol;
-    if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
-        qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG)
-            << "Unable to load document.Parse error in line " << errorRow << ", col " << errorCol << ": " << errorMsg;
+    const QDomDocument::ParseResult parseResult = doc.setContent(file);
+    if (!parseResult) {
+        qCDebug(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "Unable to load document.Parse error in line " << parseResult.errorLine << ", col "
+                                                      << parseResult.errorColumn << ": " << qPrintable(parseResult.errorMessage);
         return false;
     }
     return true;
