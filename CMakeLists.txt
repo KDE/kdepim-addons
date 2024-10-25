@@ -214,7 +214,7 @@ else()
 endif()
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 # Extra package
-find_package(Gpgmepp 1.16.0 CONFIG)
+find_package(Gpgmepp 1.23.2 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "https://www.gnupg.org" TYPE REQUIRED)
 ecm_set_disabled_deprecation_versions(QT 6.8.0 KF 6.8.0)
 
