@@ -43,7 +43,7 @@ void EventModel::createMonitor()
         // This is super-ugly, but the only way how to insert into CalendarBase
         // without having direct access to CalendarBasePrivate.
         // changeId is luckily ignored by CalendarBase.
-        Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+        Q_EMIT incidenceChanger() -> createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
     });
     connect(mMonitor, &Akonadi::Monitor::itemChanged, this, [this](const Akonadi::Item &item) {
         if (!item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
@@ -65,14 +65,14 @@ void EventModel::createMonitor()
         // so we have to simulate via remove+add
         if (oldIncidence->allDay() != incidence->allDay() || oldIncidence->dtStart() != incidence->dtStart()
             || oldIncidence->dateTime(KCalendarCore::IncidenceBase::RoleEnd) != incidence->dateTime(KCalendarCore::IncidenceBase::RoleEnd)) {
-            Q_EMIT incidenceChanger()->deleteFinished(0, {item.id()}, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
-            Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+            Q_EMIT incidenceChanger() -> deleteFinished(0, {item.id()}, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+            Q_EMIT incidenceChanger() -> createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         } else {
-            Q_EMIT incidenceChanger()->modifyFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+            Q_EMIT incidenceChanger() -> modifyFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         }
     });
     connect(mMonitor, &Akonadi::Monitor::itemRemoved, this, [this](const Akonadi::Item &item) {
-        Q_EMIT incidenceChanger()->deleteFinished(0, {item.id()}, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+        Q_EMIT incidenceChanger() -> deleteFinished(0, {item.id()}, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
     });
     connect(mMonitor, &Akonadi::Monitor::collectionRemoved, this, &EventModel::removeCalendar);
 }
@@ -134,7 +134,7 @@ void EventModel::onItemsReceived(const Akonadi::Item::List &items)
     qCDebug(PIMEVENTSPLUGIN_LOG) << "Batch: received" << items.count() << "items";
     for (const auto &item : items) {
         if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
-            Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+            Q_EMIT incidenceChanger() -> createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         } else {
             qCDebug(PIMEVENTSPLUGIN_LOG) << "Item" << item.id() << "has no payload";
         }
@@ -158,7 +158,7 @@ void EventModel::removeCollection(const Akonadi::Collection &col)
     ids.reserve(items.size());
     std::transform(items.cbegin(), items.cend(), std::back_inserter(ids), std::mem_fn(&Akonadi::Item::id));
 
-    Q_EMIT incidenceChanger()->deleteFinished(0, ids, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+    Q_EMIT incidenceChanger() -> deleteFinished(0, ids, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
 }
 
 #include "moc_eventmodel.cpp"
