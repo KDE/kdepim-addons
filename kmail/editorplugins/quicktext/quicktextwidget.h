@@ -28,7 +28,7 @@ public:
     void exportQuickText();
 
 private:
-    enum class EditMode {
+    enum class EditMode : uint8_t {
         AddSnippet,
         EditSnippet,
         AddGroup,
