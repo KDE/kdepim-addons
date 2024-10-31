@@ -22,7 +22,7 @@ target_sources(emaillineeditplugin PRIVATE
 
 
 target_link_libraries(emaillineeditplugin
-        KF6::I18n KPim6::KSieveUi KPim6::AkonadiContactWidgets
+        KF6::I18n KF6::ColorScheme KPim6::KSieveUi KPim6::AkonadiContactWidgets
 )
 
 

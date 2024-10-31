@@ -8,6 +8,8 @@ Dependencies:
     'frameworks/kholidays' : '@latest-kf6'
     'frameworks/kio': '@latest-kf6'
     'frameworks/kconfig': '@latest-kf6'
+    'frameworks/kconfigwidgets': '@latest-kf6'
+    'frameworks/kcolorscheme': '@latest-kf6'
     'frameworks/kdbusaddons': '@latest-kf6'
     'frameworks/kxmlgui': '@latest-kf6'
     'frameworks/kiconthemes': '@latest-kf6'

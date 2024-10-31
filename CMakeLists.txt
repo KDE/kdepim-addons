@@ -80,6 +80,8 @@ option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branc
 find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngineWidgets Widgets Test)
 
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6ColorScheme ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Config ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6DBusAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6XmlGui ${KF_MIN_VERSION} CONFIG REQUIRED)
