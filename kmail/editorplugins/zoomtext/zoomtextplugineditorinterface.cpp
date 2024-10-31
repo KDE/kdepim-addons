@@ -25,16 +25,16 @@ void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
     auto zoomMenu = new KActionMenu(i18n("Zoom…"), this);
     ac->addAction(QStringLiteral("zoom_menu"), zoomMenu);
 
-    QAction *zoomInAction = KStandardAction::zoomIn(this, &ZoomTextPluginEditorInterface::slotZoomIn, this);
+    QAction *zoomInAction = KStandardActions::zoomIn(this, &ZoomTextPluginEditorInterface::slotZoomIn, this);
     zoomMenu->addAction(zoomInAction);
     ac->addAction(QStringLiteral("zoom_in"), zoomInAction);
 
-    QAction *zoomOutAction = KStandardAction::zoomOut(this, &ZoomTextPluginEditorInterface::slotZoomOut, this);
+    QAction *zoomOutAction = KStandardActions::zoomOut(this, &ZoomTextPluginEditorInterface::slotZoomOut, this);
     zoomMenu->addAction(zoomOutAction);
     ac->addAction(QStringLiteral("zoom_out"), zoomOutAction);
 
     zoomMenu->addSeparator();
-    QAction *zoomResetAction = KStandardAction::actualSize(this, &ZoomTextPluginEditorInterface::slotZoomReset, this);
+    QAction *zoomResetAction = KStandardActions::actualSize(this, &ZoomTextPluginEditorInterface::slotZoomReset, this);
     ac->addAction(QStringLiteral("zoom_reset"), zoomResetAction);
     zoomMenu->addAction(zoomResetAction);
 
