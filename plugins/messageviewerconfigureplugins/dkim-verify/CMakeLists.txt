@@ -51,6 +51,7 @@ target_link_libraries(dkimverifyconfigure
     KF6::ConfigCore
     KF6::WidgetsAddons
     KPim6::MessageViewer
+    KF6::ConfigWidgets
     KF6::ItemViews
 )
 
