@@ -45,6 +45,7 @@ Dependencies:
     'pim/kitinerary' : '@same'
     'pim/kaddressbook' : '@same'
     'libraries/ktextaddons': '@latest-kf6'
+    'frameworks/kcolorscheme': '@latest-kf6'
 
 - 'on': ['Linux', 'FreeBSD']
   'require':

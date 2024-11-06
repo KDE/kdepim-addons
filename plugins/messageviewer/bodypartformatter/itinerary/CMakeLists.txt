@@ -38,5 +38,6 @@ target_link_libraries(messageviewer_bodypartformatter_semantic
     KF6::Prison
     KPim6::Itinerary
     KPim6::PkPass
+    KF6::ColorScheme
 )
 install(TARGETS messageviewer_bodypartformatter_semantic DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)
