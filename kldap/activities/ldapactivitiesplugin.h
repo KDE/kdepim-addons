@@ -6,19 +6,19 @@
 
 #pragma once
 
-#include <MailTransport/TransportActivitiesAbstractPlugin>
+#include <KLDAPWidgets/LdapActivitiesAbstractPlugin>
 namespace PimCommonActivities
 {
 class ConfigureActivitiesWidget;
 }
-class LdapActivitiesPlugin : public MailTransport::TransportActivitiesAbstractPlugin
+class LdapActivitiesPlugin : public KLDAPWidgets::LdapActivitiesAbstractPlugin
 {
     Q_OBJECT
 public:
     explicit LdapActivitiesPlugin(QWidget *widget, const QList<QVariant> & = {});
     ~LdapActivitiesPlugin() override;
 
-    [[nodiscard]] MailTransport::TransportActivitiesAbstractPlugin::ActivitySettings activitiesSettings() const override;
+    [[nodiscard]] KLDAPWidgets::LdapActivitiesAbstractPlugin::ActivitySettings activitiesSettings() const override;
     void setActivitiesSettings(const ActivitySettings &activitySettings) override;
 
 private:

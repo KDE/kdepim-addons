@@ -8,10 +8,10 @@
 #include <KPluginFactory>
 #include <PimCommonActivities/ConfigureActivitiesWidget>
 #include <QVBoxLayout>
-K_PLUGIN_CLASS_WITH_JSON(LdapActivitiesPlugin, "kmailtransportactivities.json")
+K_PLUGIN_CLASS_WITH_JSON(LdapActivitiesPlugin, "ldapactivitiesplugin.json")
 
 LdapActivitiesPlugin::LdapActivitiesPlugin(QWidget *widget, const QList<QVariant> &)
-    : MailTransport::TransportActivitiesAbstractPlugin{widget}
+    : KLDAPWidgets::LdapActivitiesAbstractPlugin{widget}
     , mConfigureActivitiesWidget(new PimCommonActivities::ConfigureActivitiesWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
@@ -21,10 +21,10 @@ LdapActivitiesPlugin::LdapActivitiesPlugin(QWidget *widget, const QList<QVariant
 
 LdapActivitiesPlugin::~LdapActivitiesPlugin() = default;
 
-MailTransport::TransportActivitiesAbstractPlugin::ActivitySettings LdapActivitiesPlugin::activitiesSettings() const
+KLDAPWidgets::LdapActivitiesAbstractPlugin::ActivitySettings LdapActivitiesPlugin::activitiesSettings() const
 {
     const auto settings = mConfigureActivitiesWidget->activitiesSettings();
-    const MailTransport::TransportActivitiesAbstractPlugin::ActivitySettings mailtransportSettings{
+    const KLDAPWidgets::LdapActivitiesAbstractPlugin::ActivitySettings mailtransportSettings{
         settings.activities,
         settings.enabled,
     };
@@ -40,5 +40,5 @@ void LdapActivitiesPlugin::setActivitiesSettings(const ActivitySettings &activit
     mConfigureActivitiesWidget->setActivitiesSettings(mailtransportSettings);
 }
 
+#include "ldapactivitiesplugin.moc"
 #include "moc_ldapactivitiesplugin.cpp"
-#include "transportactivitiesplugin.moc"
