@@ -59,6 +59,8 @@ file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES
         korganizer/*.cpp
         korganizer/*.h
         korganizer/*.c
+	kldap/*.cpp
+	kldap/*.h
 )
 
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
@@ -118,6 +120,7 @@ set(MAILIMPORTER_LIB_VERSION "6.2.40")
 set(KPIMPKPASS_LIB_VERSION "6.2.40")
 set(KPIMITINERARY_LIB_VERSION "6.2.40")
 set(KPIM_MIME_VERSION "6.2.40")
+set(KLDAP_LIB_VERSION "6.2.44")
 
 set(KLLMCORE_VERSION "0.1.0")
 find_package(KPim6Mime ${KPIM_MIME_VERSION} CONFIG REQUIRED)
@@ -159,7 +162,7 @@ find_package(KPim6ImportWizard ${IMPORTWIZARD_LIB_VERSION} CONFIG)
 find_package(KPim6MailImporterAkonadi ${MAILIMPORTER_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6PkPass ${KPIMPKPASS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Itinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
-
+find_package(KPim6LdapWidgets ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6TextTemplate CONFIG REQUIRED)
 
 if(TARGET KPim6::PimCommonActivities)
@@ -257,6 +260,7 @@ add_subdirectory(kmail)
 add_subdirectory(kaddressbook)
 add_subdirectory(sieveeditor)
 add_subdirectory(kmailtransport)
+add_subdirectory(kldap)
 if(TARGET KPim6::ImportWizard)
   add_subdirectory(akonadi-import-wizard)
 endif()
