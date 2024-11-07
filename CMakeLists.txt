@@ -136,7 +136,7 @@ find_package(KPim6AddressbookImportExport ${KADDRESSBOOK_IMPORTEXPORT_LIB_VERSIO
 find_package(KPim6Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6PimCommonActivities ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6PimCommonActivities ${PIMCOMMON_LIB_VERSION} CONFIG)
 find_package(KF6TextGrammarCheck ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextTranslator ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
