@@ -13,7 +13,7 @@
 
 #include <QDir>
 
-K_PLUGIN_CLASS_WITH_JSON(TheBatImporterFactory, "thebatimporter.json")
+K_PLUGIN_CLASS_WITH_JSON(TheBatImportData, "thebatimporter.json")
 
 TheBatImportData::TheBatImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

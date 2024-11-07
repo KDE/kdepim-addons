@@ -12,7 +12,7 @@
 #include <KPluginFactory>
 #include <QDir>
 
-K_PLUGIN_CLASS_WITH_JSON(MailAppImporterFactory, "mailappimporter.json")
+K_PLUGIN_CLASS_WITH_JSON(MailAppImportData, "mailappimporter.json")
 
 MailAppImportData::MailAppImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

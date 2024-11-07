@@ -13,7 +13,7 @@
 #include <KPluginFactory>
 #include <QDir>
 
-K_PLUGIN_CLASS_WITH_JSON(PMailImporterFactory, "pmailimporter.json")
+K_PLUGIN_CLASS_WITH_JSON(PMailImportData, "pmailimporter.json")
 PMailImportData::PMailImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
 {
