@@ -10,7 +10,7 @@ kcoreaddons_add_plugin(thebatimporterplugin SOURCES
 
 
 target_link_libraries(thebatimporterplugin
-  KPim::ImportWizard
+  KPim6::ImportWizard
   KF6::XmlGui
   KF6::I18n
   KF6::Contacts

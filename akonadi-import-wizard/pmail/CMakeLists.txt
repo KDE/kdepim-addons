@@ -10,7 +10,7 @@ kcoreaddons_add_plugin(pmailimporterplugin SOURCES
 
 
 target_link_libraries(pmailimporterplugin
-  KPim::ImportWizard
+  KPim6::ImportWizard
   KF6::XmlGui
   KF6::I18n
   KF6::Contacts

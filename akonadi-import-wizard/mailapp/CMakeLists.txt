@@ -7,7 +7,7 @@ target_sources(mailappimporterplugin PRIVATE
 )
 
 target_link_libraries(mailappimporterplugin
-  KPim::ImportWizard
+  KPim6::ImportWizard
   KF6::XmlGui
   KF6::I18n
   KF6::Contacts
