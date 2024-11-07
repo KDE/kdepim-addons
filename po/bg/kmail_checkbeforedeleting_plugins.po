@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-05-30 11:04+0200\n"
+"PO-Revision-Date: 2024-11-06 23:59+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
@@ -112,12 +112,12 @@ msgstr "Прилагане за всички"
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
-msgstr "Това съобщение с тема \"%2\" съдържа \"%1\""
+msgstr "Това съобщение с тема „%2“ съдържа „%1“"
 
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:208
 #, kde-format
 msgid "The message with subject '%1' is %2"
-msgstr "Съобщението с тема \"%1\" е %2"
+msgstr "Съобщението с тема „%1“ е %2"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
 #, kde-format

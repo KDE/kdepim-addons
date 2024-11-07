@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-05-30 19:17+0200\n"
+"PO-Revision-Date: 2024-11-06 23:55+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
@@ -451,7 +451,7 @@ msgstr "Устройството не е отворено"
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to delete template '%1'?"
-msgstr "Наистина ли искате да премахнете шаблон \" %1 \"?"
+msgstr "Наистина ли искате да премахнете шаблон „%1“?"
 
 #: csv/import/templateselectiondialog.cpp:203
 #, kde-format

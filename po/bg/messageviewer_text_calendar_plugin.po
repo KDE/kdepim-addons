@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-07-05 15:55+0200\n"
+"PO-Revision-Date: 2024-11-06 23:19+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -68,7 +68,7 @@ msgstr "Коментар:"
 #: text_calendar.cpp:359
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
-msgstr "Няма прикачен файл, наречен \"%1\", намерен в поканата."
+msgstr "Няма прикачен файл, наречен „%1“, намерен в поканата."
 
 #: text_calendar.cpp:374
 #, kde-format
@@ -77,7 +77,7 @@ msgid ""
 "this computer. Please ask the event organizer to resend the invitation with "
 "this attachment stored inline instead of a link."
 msgstr ""
-"Приложението за покана \"%1\" е уеб връзка, която е недостъпна оттози "
+"Приложението за покана „%1“ е уеб връзка, която е недостъпна оттози "
 "компютър. Моля, помолете организатора на събитието да преиздаде поканатас "
 "вграден прикачен файл вместо връзка."
 
@@ -163,37 +163,37 @@ msgstr "Отказано контрапредложение: %1"
 #: text_calendar.cpp:728 text_calendar.cpp:734
 #, kde-format
 msgid "\"%1\" occurred already."
-msgstr "\"%1\" вече се случи."
+msgstr "„%1“ вече се случи."
 
 #: text_calendar.cpp:730 text_calendar.cpp:747
 #, kde-format
 msgid "\"%1\" is currently in-progress."
-msgstr "\"%1\" в момента протича."
+msgstr "„%1“ в момента протича."
 
 #: text_calendar.cpp:736
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
-msgstr "\"%1\", случва се през целия ден днес, в момента протича."
+msgstr "„%1“, случва се през целия ден днес, в момента протича."
 
 #: text_calendar.cpp:745 text_calendar.cpp:757
 #, kde-format
 msgid "\"%1\" is past due."
-msgstr "\"%1\" е просрочен."
+msgstr "„%1“ е просрочен."
 
 #: text_calendar.cpp:751
 #, kde-format
 msgid "\"%1\" has already started."
-msgstr "\"%1\" вече е започнало."
+msgstr "„%1“ вече е започнало."
 
 #: text_calendar.cpp:759
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
-msgstr "\"%1\", случва се целодневно днес, в момента протича."
+msgstr "„%1“, случва се целодневно днес, в момента протича."
 
 #: text_calendar.cpp:763
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
-msgstr "\"%1\", случва се през целия ден, вече е започнало."
+msgstr "„%1“, случва се през целия ден, вече е започнало."
 
 #: text_calendar.cpp:775
 #, kde-format
@@ -544,4 +544,4 @@ msgstr "Премахване на поканата от моя календар"
 #: text_calendar.cpp:1389
 #, kde-format
 msgid "Open attachment \"%1\""
-msgstr "Отваряне на прикачен файл \"%1\""
+msgstr "Отваряне на прикачен файл „%1“"
