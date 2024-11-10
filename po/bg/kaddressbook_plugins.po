@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:39+0000\n"
-"PO-Revision-Date: 2024-07-05 15:55+0200\n"
+"PO-Revision-Date: 2024-11-09 20:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
@@ -139,7 +139,7 @@ msgstr "Контакти"
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
 #, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
-msgstr "Дублиране на контакт \"%1\" (%2 пъти)"
+msgstr "Дублиране на контакт „%1“ (%2 пъти)"
 
 #: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
 #, kde-format
@@ -291,7 +291,7 @@ msgstr "Няма създадена vCard."
 #: sendvcards/sendvcardsjob.cpp:134
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
-msgstr "Не може да се създаде временен файл \"%1\""
+msgstr "Не може да се създаде временен файл „%1“"
 
 #: sendvcards/sendvcardsplugininterface.cpp:34
 #, kde-format
