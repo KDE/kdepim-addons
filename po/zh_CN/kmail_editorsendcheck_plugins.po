@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/"
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/"
 "kmail_editorsendcheck_plugins.pot\n"
-"X-Crowdin-File-ID: 45583\n"
+"X-Crowdin-File-ID: 53176\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
