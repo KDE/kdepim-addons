@@ -5,6 +5,7 @@
 */
 #include "akonadidatabasetoolsjob.h"
 #include "akonadidatasetools_debug.h"
+#include <PimCommon/PimUtil>
 #include <QProcess>
 #include <QStandardPaths>
 
@@ -22,7 +23,9 @@ bool AkonadiDatabaseToolsJob::canStart() const
 
 QString AkonadiDatabaseToolsJob::akonadiProcessPath() const
 {
-    return QStandardPaths::findExecutable(QStringLiteral("akonadictl"));
+    const QString exec = PimCommon::Util::findExecutable(QStringLiteral("akonadictl"));
+
+    return exec;
 }
 
 void AkonadiDatabaseToolsJob::setTool(AkonadiDatabaseToolsUtils::AkonadiDatabaseTool newTool)
