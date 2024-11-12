@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-06-07 11:35+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,12 +18,12 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: gnupgwksurlhandler.cpp:85
+#: gnupgwksurlhandler.cpp:86
 #, kde-format
 msgid "Display key details"
 msgstr "הצגת פרטי מפתח"
 
-#: gnupgwksurlhandler.cpp:87
+#: gnupgwksurlhandler.cpp:88
 #, kde-format
 msgid "Publish the key"
 msgstr "פרסום המפתח"

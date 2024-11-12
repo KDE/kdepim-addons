@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-05-12 07:44+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: gnupgwksurlhandler.cpp:85
+#: gnupgwksurlhandler.cpp:86
 #, kde-format
 msgid "Display key details"
 msgstr "Pokaži podrobnosti o ključu"
 
-#: gnupgwksurlhandler.cpp:87
+#: gnupgwksurlhandler.cpp:88
 #, kde-format
 msgid "Publish the key"
 msgstr "Objavi ključ"

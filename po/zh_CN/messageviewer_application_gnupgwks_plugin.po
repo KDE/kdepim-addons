@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,12 +18,12 @@ msgstr ""
 "messageviewer_application_gnupgwks_plugin.pot\n"
 "X-Crowdin-File-ID: 45579\n"
 
-#: gnupgwksurlhandler.cpp:85
+#: gnupgwksurlhandler.cpp:86
 #, kde-format
 msgid "Display key details"
 msgstr "显示密钥细节"
 
-#: gnupgwksurlhandler.cpp:87
+#: gnupgwksurlhandler.cpp:88
 #, kde-format
 msgid "Publish the key"
 msgstr "发布密钥"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-05-24 17:15+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: gnupgwksurlhandler.cpp:85
+#: gnupgwksurlhandler.cpp:86
 #, kde-format
 msgid "Display key details"
 msgstr "Display key details"
 
-#: gnupgwksurlhandler.cpp:87
+#: gnupgwksurlhandler.cpp:88
 #, kde-format
 msgid "Publish the key"
 msgstr "Publish the key"

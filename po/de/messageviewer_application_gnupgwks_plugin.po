@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-08-31 16:02+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -20,12 +20,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: gnupgwksurlhandler.cpp:85
+#: gnupgwksurlhandler.cpp:86
 #, kde-format
 msgid "Display key details"
 msgstr "Schüsseldetails anzeigen"
 
-#: gnupgwksurlhandler.cpp:87
+#: gnupgwksurlhandler.cpp:88
 #, kde-format
 msgid "Publish the key"
 msgstr "Den Schlüssel veröffentlichen"
