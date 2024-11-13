@@ -22,5 +22,5 @@ public:
     void setSieveImapAccountSettings(const KSieveCore::SieveImapAccountSettings &account);
 
 private:
-    QCompleter *mCompleter = nullptr;
+    // QCompleter *mCompleter = nullptr;
 };
