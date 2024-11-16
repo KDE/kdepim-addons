@@ -3,21 +3,22 @@
 #
 # Alexander Potashev <aspotashev@gmail.com>, 2017.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2020-05-10 11:08+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2024-11-15 17:33+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:14
 #, kde-format
@@ -26,23 +27,18 @@ msgid "Configure \"External Composer\" Plugin"
 msgstr "Модуль настройки внешнего редактора"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Use external editor instead of composer"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Использовать внешний редактор вместо встроенного"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:52
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
-#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
-#| "line number."
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
 "replaced with the window id.<br /><b>%l</b> will be replaced with the line "
 "number."
 msgstr ""
-"Используемые переменные: <b>%f</b> — имя файла;<br /> <b>%w</b> — "
-"идентификатор окна;<br /> <b>%l</b> — номер строки."
+"Используемые переменные: <b>%f</b> — имя файла;<br /><b>%w</b> — "
+"идентификатор окна;<br /><b>%l</b> — номер строки."
