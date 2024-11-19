@@ -3,35 +3,34 @@
 #
 # SPDX-FileCopyrightText: 2019, 2020, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Мария Шикунова <translation-team@basealt.ru>, 2022.
+# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-02-12 10:03+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2024-11-18 11:22+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Still verify the signature, if a domain is only testing DKIM"
+#, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Проверять подпись для доменов, тестирующих DKIM"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
-msgstr "Гибкий разбор заголовка «Authentication-Result»"
+msgstr "Гибкий разбор заголовка «Authentication-Results»"
 
 #: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #: dkim-verify/dkimgeneralwidget.cpp:42
@@ -60,8 +59,7 @@ msgid "Treat small Key as:"
 msgstr "Поведении при использовании ключей малого размера:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "Настроить"
@@ -75,7 +73,7 @@ msgstr "Подлинность сервера аутентификации по�
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
-msgstr "Настроить подтвеждённый сервер аутентификации"
+msgstr "Настройка подтверждённого сервера аутентификации"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
 #, kde-format
@@ -130,31 +128,27 @@ msgid "Advanced"
 msgstr "Дополнительно"
 
 #: dkim-verify/dkimgeneralwidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Enable DKIM Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "Включить проверку DKIM"
 
 #: dkim-verify/dkimgeneralwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Save DKIM Result"
+#, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "Сохранять результаты проверки"
 
 #: dkim-verify/dkimgeneralwidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Replace DKIM result by Authentication-Result header value"
+#, kde-format
 msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 "Заменять результаты проверки DKIM результатами проверки заголовка "
-"«Authentication-Result»"
+"«Authentication-Results»"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Save Record Key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Сохранение ключа записи:"
@@ -170,59 +164,52 @@ msgid "Save and Compare"
 msgstr "Сохранить и сравнить"
 
 #: dkim-verify/dkimpolicywidget.cpp:18
-#, fuzzy, kde-format
-#| msgid "Check if e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "Проверять требования подписания писем"
 
 #: dkim-verify/dkimpolicywidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr "Использовать DMARC для определения требования подписания писем"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use default rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "Использовать правило по умолчанию"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Autogenerate rule"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "Автоматически создавать правила"
 
 #: dkim-verify/dkimpolicywidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Read Authentication-Results header"
+#, kde-format
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
-msgstr "Использовать заголовок Authentication-Results"
+msgstr "Использовать заголовок «Authentication-Results»"
 
 #: dkim-verify/dkimpolicywidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Autogenerate when Sender in SDID"
+#, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "Если отправитель указан в SDID"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Show Rules"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"
-msgstr "Показать правила..."
+msgstr "Показать правила"
 
 #: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
-msgstr "Настроить корзину для устаревших учётных записей"
+msgstr "Настройка корзины для устаревших учётных записей"
 
 #: foldersettings/folderconfiguresettingsdialog.cpp:27
 #, kde-format
@@ -264,15 +251,13 @@ msgid "Save Folder Settings"
 msgstr "Сохранение параметров папки"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr "Выбрать"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect"
 msgstr "Снять выделение"
@@ -284,8 +269,7 @@ msgid "Configure Gravatar"
 msgstr "Настройка Gravatar"
 
 #: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Enable Gravatar Support"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "Включить поддержку Gravatar"
@@ -306,7 +290,7 @@ msgstr "Редактирование"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
-msgstr ""
+msgstr "Включено"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
@@ -314,11 +298,10 @@ msgid "Server Name:"
 msgstr "Имя сервера:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr "<qt><a href=\"whatsthis1\">Информация о формате аргумента...</a></qt>"
+msgstr "<qt><a href=\"whatsthis1\">Информация о формате аргумента…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -346,9 +329,7 @@ msgid "Configure Open Url With Plugin"
 msgstr "Настройка открытия URL с помощью модуля"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Добавить правило…"
@@ -360,9 +341,7 @@ msgid "Remove Rule"
 msgstr "Удалить правило"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Modify Rule..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Изменить правило…"
@@ -370,13 +349,13 @@ msgstr "Изменить правило…"
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr ""
+msgstr "Правило для хоста уже добавлено."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
-msgstr ""
+msgstr "Хост уже проверен"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
@@ -384,8 +363,7 @@ msgid "Rule already exists."
 msgstr "Правило уже существует."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
-#, fuzzy, kde-format
-#| msgid "Duplicate Rule"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Дубликат правила"
@@ -406,14 +384,12 @@ msgid "Remove Rule"
 msgstr "Удаление правила"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:224
-#, fuzzy, kde-format
-#| msgid "Add Rule..."
+#, kde-format
 msgid "Add Rule…"
 msgstr "Добавить правило…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
-#, fuzzy, kde-format
-#| msgid "Edit Rule..."
+#, kde-format
 msgid "Edit Rule…"
 msgstr "Изменить правило…"
 
@@ -430,12 +406,12 @@ msgstr[3] "Удалить правило"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
-msgstr "Настроить параметры вредоносных писем"
+msgstr "Настройка параметров вредоносных писем"
 
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Добавить…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
@@ -453,18 +429,16 @@ msgid "Has Ip"
 msgstr "Имеет IP"
 
 #: scamsettings/scamlistsmodel.cpp:57
-#, fuzzy, kde-format
-#| msgid "Domain"
+#, kde-format
 msgctxt "@title:column"
 msgid "Domain"
 msgstr "Домен"
 
 #: scamsettings/scamlistsmodel.cpp:59
-#, fuzzy, kde-format
-#| msgid "Check"
+#, kde-format
 msgctxt "@title:column"
 msgid "Check"
-msgstr "Проверить"
+msgstr "Проверка"
 
 #, fuzzy
 #~ msgctxt "@title:window"

@@ -14,19 +14,20 @@
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2020, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Мария Шикунова <translation-team@basealt.ru>, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-02-12 10:01+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2024-11-18 09:51+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -40,11 +41,10 @@ msgid "Akonadi Database Tool"
 msgstr "Средство для работы с базой данных Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr "Akonadi Vacuum"
+msgstr "&Akonadi Vacuum…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -59,18 +59,16 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadi Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Vacuum"
+#, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Vacuum"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgid "Akonadi Fsck"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr "Akonadi Fsck"
+msgstr "&Akonadi Fsck…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -85,8 +83,7 @@ msgid "Akonadi Fsck"
 msgstr "Akonadi Fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Fsck"
+#, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck"
@@ -97,26 +94,21 @@ msgid "Finished."
 msgstr "Готово."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, fuzzy, kde-format
-#| msgid "Start..."
+#, kde-format
 msgid "Start…"
 msgstr "Запуск…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr "Мастер антиспама"
+msgstr "&Мастер антиспама…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr "Мастер антивируса"
+msgstr "&Мастер антивируса…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -195,10 +187,9 @@ msgid "Ham"
 msgstr "Не спам"
 
 #: common/antispamwizard.cpp:456
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
-msgstr "Поиск %1..."
+msgstr "Поиск %1…"
 
 #: common/antispamwizard.cpp:500
 #, kde-format
@@ -316,8 +307,7 @@ msgstr ""
 "<p>Выберите программы определения спама и перейдите на следующий шаг.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "П&омечать нежелательную почту как прочитанную"
@@ -328,11 +318,10 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Отмечать письма, классифицированные как спам, как прочитанные."
 
 #: common/antispamwizard.cpp:1060
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
-msgstr "Перемещать 100% &спам в:"
+msgstr "Перемещать 100%-й &спам в:"
 
 #: common/antispamwizard.cpp:1062
 #, kde-format
@@ -344,8 +333,7 @@ msgstr ""
 "папку."
 
 #: common/antispamwizard.cpp:1075
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Перемещать &вероятный спам в:"
@@ -363,8 +351,7 @@ msgstr ""
 "папку для вероятного спама не удастся.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Проверять письма антивирусными средствами"
@@ -382,8 +369,7 @@ msgstr ""
 "письма, и фильтры будут перемещать их в специальную папку."
 
 #: common/antispamwizard.cpp:1195
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Перемещать почту с вирусами в указанную папку"
@@ -401,8 +387,7 @@ msgstr ""
 "представлении папок."
 
 #: common/antispamwizard.cpp:1203
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Также отмечать письма с вирусами как прочитанные"
@@ -417,8 +402,7 @@ msgstr ""
 "также перемещать их в указанную папку."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Предварительный просмотр"
@@ -430,8 +414,7 @@ msgid "Mail Merge"
 msgstr "Персонализированная рассылка"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Путь:"
@@ -444,8 +427,7 @@ msgid "Attachment"
 msgstr "Вложение"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Source:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Источник:"
@@ -462,8 +444,7 @@ msgstr "CSV"
 
 # BUGME: please change to "AttachmentS:" --aspotashev
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Вложения:"
@@ -471,7 +452,7 @@ msgstr "Вложения:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&Добавить…"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -484,11 +465,10 @@ msgid "Mod&ify..."
 msgstr "Из&менить..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
-msgstr "Выберите вложение:"
+msgstr "Вложение:"
 
 #~ msgid "&Akonadi Vacuum..."
 #~ msgstr "&Akonadi Vacuum..."
