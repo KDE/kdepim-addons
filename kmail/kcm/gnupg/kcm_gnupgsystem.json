@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "Configuration of GnuPG System options",
+        "Icon": "document-encrypt",
+        "Name": "GnuPG System"
+    },
+    "NoDisplay": "false"
+}

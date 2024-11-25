@@ -96,7 +96,9 @@ find_package(KF6Prison ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Holidays ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6GuiAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6ColorScheme ${KF_MIN_VERSION} CONFIG REQUIRED)
-
+if(NOT WIN32)
+   find_package(KF6KCMUtils ${KF_MIN_VERSION} CONFIG REQUIRED)
+endif()   
 
 set(MAILCOMMON_LIB_VERSION "6.3.40")
 set(GRAVATAR_LIB_VERSION "6.3.40")
