@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to check folders size.",
+        "EnabledByDefault": false,
+        "Name": "Folder Size Check",
+        "Version": "1.0"
+    }
+}
