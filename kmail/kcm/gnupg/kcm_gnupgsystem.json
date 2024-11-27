@@ -1,8 +1,24 @@
 {
     "KPlugin": {
         "Description": "Configuration of GnuPG System options",
+        "Description[ca]": "Configuració de les opcions del sistema GnuPG",
+        "Description[es]": "Configuración de las opciones del sistema GnuPG",
+        "Description[ia]": "Configuration de optiones de Systema GnuPG",
+        "Description[ka]": "GnuPG-ის სისტემის პარამეტრების გამართვა",
+        "Description[sv]": "Inställning av GnuPG-systemalternativ",
+        "Description[uk]": "Налаштування параметрів системи GnuPG",
+        "Description[x-test]": "xxConfiguration of GnuPG System optionsxx",
+        "Description[zh_TW]": "設定 GnuPG 系統選項",
         "Icon": "document-encrypt",
-        "Name": "GnuPG System"
+        "Name": "GnuPG System",
+        "Name[ca]": "Sistema GnuPG",
+        "Name[es]": "Sistema GnuPG",
+        "Name[ia]": "Systema GnuPG",
+        "Name[ka]": "GnuPG სისტემა",
+        "Name[sv]": "GnuPG-system",
+        "Name[uk]": "Система GnuPG",
+        "Name[x-test]": "xxGnuPG Systemxx",
+        "Name[zh_TW]": "GnuPG 系統"
     },
     "NoDisplay": "false"
 }
