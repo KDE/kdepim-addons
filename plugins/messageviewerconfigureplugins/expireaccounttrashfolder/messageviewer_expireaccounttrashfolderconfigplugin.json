@@ -27,7 +27,7 @@
         "Description[ru]": "Этот модуль позволяет настроить удаление устаревших файлов из корзины для каждой учётной записи.",
         "Description[sl]": "Ta vstavek omogoča, da nastavite mapo smeti za vsakega od računov.",
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa när papperskorgens innehåll utgår för varje konto.",
-        "Description[tr]": "Bu eklenti, her bir hesap için çöp klasörü süre geçimi yapılandırmanıza olanak verir.",
+        "Description[tr]": "Bu eklenti, her bir hesap için çöp klasörü süre geçimi yapılandırmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати вилучення застарілих повідомлень з теки смітника для кожного з облікових записів.",
         "Description[x-test]": "xxThis plugin allows you to configure expire trash folder for each accounts.xx",
         "Description[zh_CN]": "此插件能让您定时清空每个账户的已删除邮件文件夹。",

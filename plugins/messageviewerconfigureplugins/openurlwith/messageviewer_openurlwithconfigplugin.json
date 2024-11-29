@@ -28,7 +28,7 @@
         "Description[ru]": "Этот модуль позволяет настроить приложения, которые будут использоваться для определённого адреса.",
         "Description[sl]": "Ta vstavek omogoča, da nastavite aplikacije za uporabo pri določenem url.",
         "Description[sv]": "Insticksprogrammet gör det möjligt att ställa in vilka program som används för specifika webbadresser.",
-        "Description[tr]": "Bu eklenti, belirli URL’lerin hangi uygulamalar tarafından kullanılacağını yapılandırmanıza olanak verir.",
+        "Description[tr]": "Bu eklenti, belirli URL’lerin hangi uygulamalar tarafından kullanılacağını yapılandırmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати те, які програми буде використано для певної адреси.",
         "Description[x-test]": "xxThis plugin allows you to configure which apps used for specific url.xx",
         "Description[zh_CN]": "此插件用于指定特定 URL 用何种应用程序打开。",
