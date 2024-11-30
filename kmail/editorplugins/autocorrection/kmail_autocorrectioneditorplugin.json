@@ -33,7 +33,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava automatsko ispravljanje svog teksta u sastavljaču ili izabranog teksta",
         "Description[sr]": "Овај прикључак омогућава аутоматско исправљање свог текста у састављачу или изабраног текста",
         "Description[sv]": "Insticksprogrammet gör det möjligt att automatiskt korrigera all text, eller markerad text, i brevfönstret.",
-        "Description[tr]": "Bu eklenti, seçili metinde veya düzenleyicideki tüm metni kendiliğinden düzeltmenize olanak verir.",
+        "Description[tr]": "Bu eklenti, seçili metinde veya düzenleyicideki tüm metni kendiliğinden düzeltmenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна автоматично виправляти текст у редакторі повідомлень або позначений фрагмент тексту.",
         "Description[x-test]": "xxThis plugin allows you to autocorrect all text in composer or selected text.xx",
         "Description[zh_CN]": "此插件允许您自动更正编辑器中的所有文本或者选中文本。",

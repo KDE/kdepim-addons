@@ -28,7 +28,7 @@
         "Description[ru]": "Этот модуль позволяет проверить, следует ли удалять определённое письмо.",
         "Description[sl]": "Ta vstavek omogoča preverjanje, če želimo brisati določeno sporočilo",
         "Description[sv]": "Insticksprogrammet gör det möjligt att kontrollera om vi vill ta bort specifika brev",
-        "Description[tr]": "Bu eklenti, belirli bir e-postayı silmek isteyip istemediğinizi denetlemenize izin verir",
+        "Description[tr]": "Bu eklenti, belirli bir e-postayı silmek isteyip istemediğinizi denetlemenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна наказати програмі просити підтвердження щодо вилучення певних повідомлень",
         "Description[x-test]": "xxThis plugin allows you to check if we want to delete specific emailxx",
         "Description[zh_CN]": "此插件能让您确认删除特定邮件。",
