@@ -1,7 +1,7 @@
 # Translation of messageviewer_text_vcard_plugin.po into Finnish
 # Copyright © 2011, 2012 This_file_is_part_of_KDE
 # Ilpo Kantonen <ilpo@iki.fi>, 2004.
-# Tommi Nieminen <translator@legisign.org>, 2011, 2012, 2020.
+# SPDX-FileCopyrightText: 2011, 2012, 2020, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013, 2014, 2015.
 # Copyright (C) 2004 Free Software Foundation, Inc.
 #
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2020-06-26 18:37+0300\n"
+"PO-Revision-Date: 2024-10-20 17:27+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -19,8 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:25:15+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: text_vcard.cpp:88
 #, kde-format
@@ -50,8 +49,7 @@ msgid "View Business Card"
 msgstr "Näytä käyntikortti"
 
 #: text_vcard.cpp:216
-#, fuzzy, kde-format
-#| msgid "Save Business Card As..."
+#, kde-format
 msgid "Save Business Card As…"
 msgstr "Tallenna käyntikortti nimellä…"
 
@@ -76,8 +74,7 @@ msgid "Update \"%1\" to the address book."
 msgstr "Päivitä ”%1” osoitekirjassa."
 
 #: text_vcard.cpp:259
-#, fuzzy, kde-format
-#| msgid "Save Business Card"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "Tallenna käyntikortti"

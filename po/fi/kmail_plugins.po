@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2023-11-15 18:25+0200\n"
+"PO-Revision-Date: 2024-10-20 17:26+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -25,11 +25,10 @@ msgid "Akonadi Database Tool"
 msgstr "Akonadi-tietokantatyökalu"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr "Akonadin siivous"
+msgstr "Akona&din siivous"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -44,18 +43,16 @@ msgid "Akonadi Vacuum"
 msgstr "Akonadin siivous"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
-#, fuzzy, kde-format
-#| msgid "Vacuum"
+#, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Siivoa"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgid "Akonadi Fsck"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr "Akonadin fsck"
+msgstr "Akonadin &fsck…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -70,8 +67,7 @@ msgid "Akonadi Fsck"
 msgstr "Akonadin fsck"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Fsck"
+#, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck"
@@ -82,26 +78,21 @@ msgid "Finished."
 msgstr "Valmis."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
-#, fuzzy, kde-format
-#| msgid "Start..."
+#, kde-format
 msgid "Start…"
 msgstr "Aloita…"
 
 #: antispamplugin/antispamplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr "Opastettu roskapostin suodatus"
+msgstr "Opastettu &roskapostisuodatus…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr "Opastettu virusten suodatus"
+msgstr "Opastettu &virussuodatus…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -180,10 +171,9 @@ msgid "Ham"
 msgstr "Ei-roskaposti"
 
 #: common/antispamwizard.cpp:456
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
-msgstr "Etsitään %1…"
+msgstr "Tutkitaan: %1…"
 
 #: common/antispamwizard.cpp:500
 #, kde-format
@@ -307,11 +297,10 @@ msgstr ""
 "seuraavalle sivulle.</p>"
 
 #: common/antispamwizard.cpp:1056
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
-msgstr "&Merkitse tunnistetut roskapostiviestit luetuiksi"
+msgstr "&Merkitse tunnistettu roskaposti luetuksi"
 
 #: common/antispamwizard.cpp:1057
 #, kde-format
@@ -319,11 +308,10 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Merkitse roskapostiksi tunnistetut viestit luetuiksi."
 
 #: common/antispamwizard.cpp:1060
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
-msgstr "Siirrä tunnistetut ros&kapostiviestit kansioon"
+msgstr "&Siirrä tunnistettu roskapostiviesti kansioon:"
 
 #: common/antispamwizard.cpp:1062
 #, kde-format
@@ -335,11 +323,10 @@ msgstr ""
 "käytettävää kansiota alla."
 
 #: common/antispamwizard.cpp:1075
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
-msgstr "Siirrä todennäköiset roska&postiviestit kansioon"
+msgstr "Siirrä &oletettu roskaposti kansioon:"
 
 #: common/antispamwizard.cpp:1077
 #, kde-format
@@ -354,11 +341,10 @@ msgstr ""
 "valita kansiota sitä varten.</p>"
 
 #: common/antispamwizard.cpp:1187
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
-msgstr "Tarkista viestit virustorjuntaohjelmien avulla"
+msgstr "Tarkista viestit virustorjunnalla"
 
 #: common/antispamwizard.cpp:1189
 #, kde-format
@@ -374,11 +360,10 @@ msgstr ""
 "virusviestit tiettyyn kansioon."
 
 #: common/antispamwizard.cpp:1195
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
-msgstr "Siirrä viruksia sisältävät viestit valittuun kansioon"
+msgstr "Siirrä havaitut virusviestit valittuun kansioon"
 
 #: common/antispamwizard.cpp:1197
 #, kde-format
@@ -392,11 +377,10 @@ msgstr ""
 "mutta voit muuttaa tätä asetusta kansionäkymässä."
 
 #: common/antispamwizard.cpp:1203
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
-msgstr "Merkitse viruksia sisältävät viestit myös luetuiksi"
+msgstr "Merkitse lisäksi virusviestit myös luetuiksi"
 
 #: common/antispamwizard.cpp:1206
 #, kde-format
@@ -408,8 +392,7 @@ msgstr ""
 "kansioon."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Esikatselu"
@@ -421,11 +404,10 @@ msgid "Mail Merge"
 msgstr "Joukkokirje"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Path:"
-msgstr "Polku:"
+msgstr "Sijainti:"
 
 #: mailmergeplugin/widgets/mailmergepreviewdialog.cpp:16
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:19
@@ -435,8 +417,7 @@ msgid "Attachment"
 msgstr "Liite"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Source:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Lähde:"
@@ -452,8 +433,7 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Liite:"
@@ -461,7 +441,7 @@ msgstr "Liite:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "L&isää…"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -474,8 +454,7 @@ msgid "Mod&ify..."
 msgstr "&Muuta…"
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
-#, fuzzy, kde-format
-#| msgid "Select attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Valitse liite:"

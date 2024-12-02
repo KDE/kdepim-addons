@@ -3,9 +3,9 @@
 # KDE Finnish translation sprint participants:
 # Author: Artnay
 # Author: Lliehu
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2017, 2020, 2021, 2024 Tommi Nieminen <translator@legisign.org>
 # Ilpo Kantonen <ilpo@iki.fi>, 2004, 2005.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2011, 2012, 2017, 2020, 2021.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013, 2015.
 # Jiri Grönroos <jiri.gronroos+kde@iki.fi>, 2012.
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2021-12-07 14:26+0200\n"
+"PO-Revision-Date: 2024-10-20 17:27+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -21,8 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:25:15+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -31,8 +30,7 @@ msgid "Select Attendees"
 msgstr "Valitse osallistujat"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Lisää uusi osallistuja napsauttamalla"
@@ -50,11 +48,10 @@ msgid "Remove"
 msgstr "Poista"
 
 #: delegateselector.cpp:23
-#, fuzzy, kde-format
-#| msgid "Keep me informed about status changes of this incidence."
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
-msgstr "Pidä minut ajan tasalla tapahtuman tilan muutoksista."
+msgstr "Pidä minut ajan tasalla ilmentymän tilan muutoksista."
 
 #: delegateselector.cpp:25
 #, kde-format
@@ -64,15 +61,13 @@ msgstr "Valitse henkilö, jolle delegoida"
 
 # Periaatteessa tehtävä delegoidaan, ei henkilöä, mutta lienee kontekstissa selvä?
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Delegoi:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Huomautus:"
@@ -398,8 +393,7 @@ msgid "Delegation to organizer is not possible."
 msgstr "Ei voi delegoida järjestäjälle."
 
 #: text_calendar.cpp:1068
-#, fuzzy, kde-format
-#| msgid "Save Invitation Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Tallenna kutsun liite"
@@ -452,15 +446,13 @@ msgid "Send Email to Organizer"
 msgstr "Lähetä järjestäjälle sähköpostia"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Älä lähetä"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Lähetä sähköposti"
@@ -476,8 +468,7 @@ msgid "Open Attachment"
 msgstr "Avaa liite"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
 msgstr "Tallenna liite nimellä…"
 
@@ -497,8 +488,7 @@ msgid "Accept counter proposal"
 msgstr "Hyväksy vastaesitys"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
 msgstr "Luo vastaesitys…"
 
@@ -523,8 +513,7 @@ msgid "Decline counter proposal"
 msgstr "Hylkää vastaesitys"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
 msgstr "Tarkista kalenterini…"
 

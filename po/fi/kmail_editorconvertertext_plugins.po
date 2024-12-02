@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2020-01-01 13:03+0200\n"
+"PO-Revision-Date: 2024-10-20 17:21+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: markdown/markdownlib/markdownconfiguredialog.cpp:16
 #, kde-format
@@ -24,18 +24,16 @@ msgid "Configure Markdown Plugin"
 msgstr "Markdown-liitännäisen asetukset"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enable embedded LaTeX"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
-msgstr "Ota käyttöön upotteinen LaTeX"
+msgstr "Käytä upotettua LaTeXia"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Enable PHP Markdown Extra definition lists"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
-msgstr "Ota käyttöön PHP:n Markdown-määritelmäluettelot"
+msgstr "Käytä PHP:n Markdown Extra -määritelmäluetteloja"
 
 #: markdown/markdownlib/markdownconverter.cpp:69
 #: markdown/markdownlib/markdownconverter.cpp:89
@@ -50,22 +48,19 @@ msgid "Add Image"
 msgstr "Lisää kuva"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Keep original size"
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Säilytä alkuperäinen koko"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Width:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "Leveys:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Height:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Height:"
 msgstr "Korkeus:"
@@ -115,8 +110,7 @@ msgid "Converter Error"
 msgstr "Muunnosvirhe"
 
 #: markdown/plugin/markdowninterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Generate HTML from markdown language."
+#, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Luo Markdown-merkkauskielestä HTML:ää."
@@ -127,8 +121,7 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:55
-#, fuzzy, kde-format
-#| msgid "Markdown Action"
+#, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Markdown-toiminto"
