@@ -3,6 +3,7 @@
 # KDE Finnish translation sprint participants:
 # Author: Artnay
 # Author: Lliehu
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2013, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Tommi Nieminen <translator@legisign.org>
 # Kim Enkovaara <kim.enkovaara@iki.fi>, 2003, 2006.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2003, 2005.
 # Tapio Mattila <tapio.mattila@mbnet.fi>, 2003.
@@ -10,14 +11,13 @@
 # Tapio Kautto <eleknader@phnet.fi>, 2004.
 # Ilpo Kantonen <ilpo@iki.fi>, 2004, 2005, 2006.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011, 2012, 2013, 2016, 2017, 2018, 2020, 2022.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2013, 2014, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-07-20 22:05+0300\n"
+"PO-Revision-Date: 2024-10-20 16:52+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -25,12 +25,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:24:54+0000\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Export CSV file..."
+#, kde-format
 msgid "Export CSV file…"
 msgstr "Vie CSV-tiedosto…"
 
@@ -40,8 +38,7 @@ msgid "Export contacts to a file in comma separated value format."
 msgstr "Vie yhteystietoja pilkuin erotettuun tekstitiedostoon."
 
 #: csv/csvimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Import CSV file..."
+#, kde-format
 msgid "Import CSV file…"
 msgstr "Tuo CSV-tiedosto…"
 
@@ -375,17 +372,13 @@ msgstr ""
 "joka usein on kenttien järjestyksen kuvaava huomautusrivi."
 
 #: csv/import/csvimportdialog.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Apply Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
 msgstr "Käytä mallipohjaa…"
 
 #: csv/import/csvimportdialog.cpp:449
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "Tallenna mallipohja…"
@@ -479,8 +472,7 @@ msgid "GMX address book file (*.gmxa)"
 msgstr "GMX-osoitekirjatiedosto (*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Import GMX file..."
+#, kde-format
 msgid "Import GMX file…"
 msgstr "Tuo GMX-tiedosto…"
 
@@ -490,8 +482,7 @@ msgid "Import contacts from a GMX address book file."
 msgstr "Tuo yhteystietoja GMX-osoitekirjatiedostosta."
 
 #: gmx/gmximportexportplugininterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Export GMX file..."
+#, kde-format
 msgid "Export GMX file…"
 msgstr "Vie GMX-tiedosto…"
 
@@ -513,8 +504,7 @@ msgid "%1 is not a GMX address book file."
 msgstr "%1 ei ole GMX-osoitekirjatiedosto."
 
 #: ldap/ldapimportexportplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import From LDAP server..."
+#, kde-format
 msgid "Import From LDAP server…"
 msgstr "Tuo LDAP-palvelimelta…"
 
@@ -524,8 +514,7 @@ msgid "Import contacts from an LDAP server."
 msgstr "Tuo yhteystietoja LDAP-palvelimelta."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Import LDIF file..."
+#, kde-format
 msgid "Import LDIF file…"
 msgstr "Tuo LDIF-tiedosto…"
 
@@ -535,8 +524,7 @@ msgid "Import contacts from an LDIF file."
 msgstr "Tuo yhteystietoja LDIF-tiedostosta."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Export LDIF file..."
+#, kde-format
 msgid "Export LDIF file…"
 msgstr "Vie LDIF-tiedosto…"
 
@@ -714,19 +702,15 @@ msgid "Do you want to import this contact into your address book?"
 msgstr "Haluatko tuoda tämän yhteystiedon osoitekirjaasi?"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Import All..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
 msgstr "Tuo kaikki…"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import vCard"
+#, kde-format
 msgid "Import vCard…"
-msgstr "Tuo vCard"
+msgstr "Tuo vCard…"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -739,14 +723,12 @@ msgid "Export contacts to a vCard 4.0 file."
 msgstr "Vie yhteystietoja vCard 4.0 -tiedostoon."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0..."
+#, kde-format
 msgid "Export vCard 4.0…"
 msgstr "Vie vCard 4.0…"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
+#, kde-format
 msgid "Export vCard 3.0…"
 msgstr "Vie vCard 3.0…"
 
@@ -756,8 +738,7 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "Vie yhteystietoja vCard 3.0 -tiedostoon."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
+#, kde-format
 msgid "Export vCard 2.1…"
 msgstr "Vie vCard 2.1…"
 
@@ -811,8 +792,7 @@ msgid "Export to Several Files"
 msgstr "Vie useampaan tiedostoon"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
-#, fuzzy, kde-format
-#| msgid "Import Windows Contact file..."
+#, kde-format
 msgid "Import Windows Contact file…"
 msgstr "Tuo Windows Contact -tiedosto…"
 

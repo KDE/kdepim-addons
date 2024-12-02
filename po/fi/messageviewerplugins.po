@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2023-11-15 18:26+0200\n"
+"PO-Revision-Date: 2024-10-20 17:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -24,15 +24,13 @@ msgid "Current URL is not a shortened URL."
 msgstr "Nykyinen osoite ei ole lyhytosoite."
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
-#, fuzzy, kde-format
-#| msgid "Expand URL"
+#, kde-format
 msgctxt "@action"
 msgid "Expand URL"
-msgstr "Laajenna osoite"
+msgstr "Laajenna verkko-osoite"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
-#, fuzzy, kde-format
-#| msgid "Translate..."
+#, kde-format
 msgctxt "@action"
 msgid "Translate…"
 msgstr "Käännä…"
@@ -43,15 +41,13 @@ msgid "&Save"
 msgstr "&Tallenna"
 
 #: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
-#, fuzzy, kde-format
-#| msgid "Open &Editor..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Avaa &muokkain…"
 
 #: createeventplugin/eventedit.cpp:56
-#, fuzzy, kde-format
-#| msgid "Event:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Tapahtuma:"
@@ -62,15 +58,13 @@ msgid "Calendar where the new event will be stored."
 msgstr "Kalenteri, johon uusi tapahtuma tallennetaan."
 
 #: createeventplugin/eventedit.cpp:76
-#, fuzzy, kde-format
-#| msgid "Calendar where the new event will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
-msgstr "Kalenteri, johon uusi tapahtuma tallennetaan"
+msgstr "Kalenteri, johon uusi tapahtuma talletetaan"
 
 #: createeventplugin/eventedit.cpp:89
-#, fuzzy, kde-format
-#| msgid "Start:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Alkaa:"
@@ -81,8 +75,7 @@ msgid "Select start time for event."
 msgstr "Valitse tapahtuman alkoitusaika."
 
 #: createeventplugin/eventedit.cpp:102
-#, fuzzy, kde-format
-#| msgid "End:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "Päättyy:"
@@ -108,10 +101,9 @@ msgid "Close the widget for creating new events."
 msgstr "Sulje uusien tapahtumien luonnin kontrolli."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Event…"
-msgstr "Luo tapahtuma"
+msgstr "Luo tapahtuma…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -124,8 +116,7 @@ msgid "Allows you to create a calendar Event"
 msgstr "Antaa sinun luoda kalenteritapahtuman"
 
 #: createtodoplugin/todoedit.cpp:61
-#, fuzzy, kde-format
-#| msgid "To-do:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "Tehtävä:"
@@ -136,11 +127,10 @@ msgid "Todo list where the new task will be stored."
 msgstr "Tehtävälista, johon uusi tehtävä tallennetaan."
 
 #: createtodoplugin/todoedit.cpp:82
-#, fuzzy, kde-format
-#| msgid "Todo list where the new task will be stored"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
-msgstr "Tehtävälista, johon uusi tehtävä tallennetaan"
+msgstr "Tehtävälista, johon uusi tehtävä talletetaan"
 
 #: createtodoplugin/todoedit.cpp:96
 #, kde-format
@@ -203,29 +193,25 @@ msgid "Configure \"External Script\" Plugin"
 msgstr "Ulkoinen skripti -liitännäisen asetukset"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Lisää skripti…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "Remove Script"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Poista skripti"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Modify Script..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Muokkaa skriptiä…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
-#, fuzzy, kde-format
-#| msgid "External Script:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Ulkoinen skripti:"
@@ -236,8 +222,7 @@ msgid "Do you want to remove this script \"%1\"?"
 msgstr "Haluatko poistaa skriptin ”%1”?"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
-#, fuzzy, kde-format
-#| msgid "Remove External Script"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "Poista ulkoinen skripti"
@@ -259,8 +244,7 @@ msgid "Description:"
 msgstr "Kuvaus:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Add command arguments..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "Lisää komennon parametrit…"
@@ -271,8 +255,7 @@ msgid "Command Line:"
 msgstr "Komentorivi:"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Tietoa parametrin muodosta…</a></qt>"
@@ -316,8 +299,7 @@ msgid "Impossible to start executable"
 msgstr "Ohjelmatiedostoa on mahdotonta käynnistää."
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "External Script"
+#, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "Ulkoinen skripti"

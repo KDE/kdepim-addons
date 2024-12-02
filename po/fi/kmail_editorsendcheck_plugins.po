@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2016, 2017, 2020, 2021, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2023-11-15 18:25+0200\n"
+"PO-Revision-Date: 2024-10-20 17:24+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
@@ -52,18 +52,16 @@ msgid "Add Address Book"
 msgstr "Lisää osoitekirja"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Automatic Add Contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Lisää yhteystiedot automaattisesti"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
-msgstr "Valitse osoitekirja, johon yhteystiedot tallennetaan:"
+msgstr "Valitse osoitekirja, johon yhteystiedot talletetaan:"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
@@ -82,8 +80,7 @@ msgid "Send As HTML"
 msgstr "Lähetä HTML:nä"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Update SMTP server"
+#, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "Päivitä SMTP-palvelin"
@@ -95,10 +92,7 @@ msgid "Check SMTP server"
 msgstr "Tarkista SMTP-palvelin"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to send the email with a different SMTP than the one defined "
-#| "in the current identity?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
@@ -114,32 +108,28 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "Tarkista ennen lähetystä -liitännäisen asetukset"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Send as plain text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
-msgstr "Lähetä paljaana tekstinä"
+msgstr "Lähetä raakatekstinä"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use SMTP server defined in identity"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "Käytä henkilöydessä määritettyä SMTP-palvelinta"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Check duplicated emails addresses"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "Tarkista toistuvat sähköpostiosoitteet"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Check send attachment"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
-msgstr "Tarkista liitteen lähetys"
+msgstr "Tarkista liitteen lähettäminen"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
@@ -148,8 +138,7 @@ msgid "Duplicated emails"
 msgstr "Toistuvat viestit"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "These emails are duplicated. Do you want to send email?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Nämä viestit toistuvat. Haluatko lähettää viestin?"
@@ -167,8 +156,7 @@ msgid "Check Attachment"
 msgstr "Tarkista liite"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Do you want to send some attachment?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "Haluatko lähettää joitakin liitteitä?"
@@ -180,24 +168,22 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Varmista sähköpostiosoite -liitännäisen asetukset"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Accepted Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Hyväksytty aluenimi"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Rejected Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
-msgstr "Torjuttu aluenimi"
+msgstr "Hylätty aluenimi"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "L&isää…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
@@ -207,8 +193,7 @@ msgstr "P&oista"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mod&ify..."
+#, kde-format
 msgid "Mod&ify…"
 msgstr "&Muuta…"
 
@@ -238,11 +223,10 @@ msgid "Do you want to remove this email address?"
 msgstr "Haluatko poistaa tämän sähköpostiosoitteen?"
 
 #: confirm-address/confirmaddressdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add Selected Emails to WhiteList"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
-msgstr "Lisää valitut viestit hyväksyttyjen osoitteiden luetteloon"
+msgstr "Lisää valitut hyväksyttyjen osoitteiden luetteloon"
 
 #: confirm-address/confirmaddressdialog.cpp:28
 #, kde-format
@@ -262,8 +246,7 @@ msgid "Emails added to white list"
 msgstr "Viestit lisätty hyväksyttyjen osoitteiden luetteloon"
 
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
-#, fuzzy, kde-format
-#| msgid "Enter new domain name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
 msgstr "Anna uusi aluenimi:"
@@ -281,11 +264,10 @@ msgid "Change Value"
 msgstr "Muuta arvoa"
 
 #: confirm-address/confirmaddresswidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Potentially invalid emails are displayed in red:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
-msgstr "Mahdollisesti kelvottomat osoitteet merkitty punaisella:"
+msgstr "Mahdollisesti virheelliset osoitteet merkitty punaisella:"
 
 #~ msgid "A&dd..."
 #~ msgstr "&Lisää…"
