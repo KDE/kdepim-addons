@@ -10,6 +10,7 @@
         "Description[fr]": "Ce module externe vous permet de vérifier la taille du dossier.",
         "Description[he]": "התוסף הזה מאפשר לך לבדוק גודל של תיקיות.",
         "Description[ia]": "Iste plugin te permitte verificar le grandor de dossier.",
+        "Description[it]": "Questa estensione permette di controllare la dimensione delle cartelle.",
         "Description[ka]": "ეს დამატება საქაღალდის ზომის შემოწმების საშუალებას გაძლევთ.",
         "Description[nl]": "Deze plug-in biedt u het controleren op mapgrootte.",
         "Description[pl]": "Ta wtyczka umożliwia sprawdzanie rozmiarów katalogów.",
@@ -17,6 +18,7 @@
         "Description[tr]": "Bu eklenti, klasör boyutlarını denetlemenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти розмір тек.",
         "Description[x-test]": "xxThis plugin allows you to check folders size.xx",
+        "Description[zh_TW]": "這個外掛程式讓您查看資料夾大小。",
         "EnabledByDefault": false,
         "Name": "Folder Size Check",
         "Name[ar]": "التحقق من حجم المجلد",
@@ -28,6 +30,7 @@
         "Name[fr]": "Vérification de la taille du dossier",
         "Name[he]": "בדיקת גודל תיקיות",
         "Name[ia]": "Verifica grandor de dossier",
+        "Name[it]": "Controllo della dimensione delle cartelle",
         "Name[ka]": "საქაღალდის ზომის შემოწმება",
         "Name[nl]": "Controle op mapgrootte",
         "Name[pl]": "Sprawdzenie rozmiaru katalogu",
@@ -36,6 +39,7 @@
         "Name[tr]": "Klasör Boyutu Denetimi",
         "Name[uk]": "Перевірка розміру тек",
         "Name[x-test]": "xxFolder Size Checkxx",
+        "Name[zh_TW]": "資料夾大小確認",
         "Version": "1.0"
     }
 }
