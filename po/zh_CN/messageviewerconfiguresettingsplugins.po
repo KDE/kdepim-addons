@@ -44,7 +44,7 @@ msgstr "警告"
 #: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #, kde-format
 msgid "Error"
-msgstr "报错"
+msgstr "错误"
 
 #: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
