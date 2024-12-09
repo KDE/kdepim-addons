@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-08-03 12:17+0200\n"
+"PO-Revision-Date: 2024-12-08 11:10+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -192,7 +192,7 @@ msgstr "«%1» xa comezou."
 #: text_calendar.cpp:759
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
-msgstr "«%1», que dura todo o tía, está agora mesmo en progreso."
+msgstr "«%1», que dura todo o día, está agora mesmo en progreso."
 
 #: text_calendar.cpp:763
 #, kde-format
