@@ -1,0 +1,38 @@
+# Sanskrit translations for kdepim-addons package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: externalcomposer/externalcomposerconfiguredialog.cpp:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure \"External Composer\" Plugin"
+msgstr ""
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:23
+#, kde-format
+msgctxt "@option:check"
+msgid "Use external editor instead of composer"
+msgstr ""
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#, kde-format
+msgctxt "@label:textbox"
+msgid ""
+"<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
+"replaced with the window id.<br /><b>%l</b> will be replaced with the line "
+"number."
+msgstr ""
