@@ -3,23 +3,26 @@
 # This file is distributed under the same license as the kdepim-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:39+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
 msgid "Check Gravatar…"
-msgstr "चेक ग्रावतार..."
+msgstr "चेक ग्रावतार…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -46,31 +49,31 @@ msgstr "अत्यधिकाः सम्पर्काः चयनित�
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Image"
-msgstr ""
+msgstr "चित्रं रक्षतु"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Image URL"
-msgstr ""
+msgstr "चित्रस्य URL रक्षतु"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Check and update Gravatar"
-msgstr ""
+msgstr "ग्रावतारं पश्यन्तु अद्यतनं च कुर्वन्तु"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
 #, kde-format
 msgctxt "@action:button"
 msgid "Search"
-msgstr ""
+msgstr "अन्वेषण"
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
-msgstr ""
+msgstr "ईमेलः १."
 
 #: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:109
 #, kde-format
@@ -85,31 +88,31 @@ msgstr "न ग्रावतारं लब्धम्।"
 #: mergecontacts/mergecontactsplugininterface.cpp:25
 #, kde-format
 msgid "Merge Contacts…"
-msgstr "सम्पर्कविलयन..."
+msgstr "सम्पर्कविलयन…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Contacts to merge"
-msgstr ""
+msgstr "विलयार्थं Contacts इति चिनोतु"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:31
 #, kde-format
 msgctxt "@action:button"
 msgid "merge"
-msgstr ""
+msgstr "विलयः"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:47
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
-msgstr ""
+msgstr "ये सम्पर्काः भवान् वास्तवतः विलीनं कर्तुम् इच्छति तान् चिनोतु:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
-msgstr ""
+msgstr "विलीनसम्पर्काः यस्मिन् संगृहीताः भवेयुः तत् पतापुस्तकं चिनोतु:"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
@@ -142,26 +145,26 @@ msgstr "डुप्लिकेट् सम्पर्क \"%1\" (%2 बा�
 #, kde-format
 msgctxt "@title:window"
 msgid "Search and Select Duplicate Contacts to merge"
-msgstr ""
+msgstr "विलयनार्थं डुप्लिकेट् सम्पर्कं अन्वेष्टुम् चयनं च कुर्वन्तु"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result…"
-msgstr ""
+msgstr "परिणामे अन्वेषणं कुर्वन्तु…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
-msgstr ""
+msgstr "AddressBook इत्यस्य चयनं कुर्वन्तु:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Merge"
-msgstr ""
+msgstr "विलयः"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
 #, kde-format
@@ -201,13 +204,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Customize"
-msgstr ""
+msgstr "अनुकूलितं कुर्वन्तु"
 
 #: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
 #, kde-format
 msgctxt "@action"
 msgid "Automatic Merging"
-msgstr ""
+msgstr "स्वचालित विलय"
 
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
 #, kde-format
@@ -222,13 +225,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Missing Selected Information"
-msgstr ""
+msgstr "चयनितसूचना लुप्त"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:63
 #, kde-format
 msgctxt "The wedding anniversary of a contact"
 msgid "Anniversary"
-msgstr ""
+msgstr "वार्षिकी"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:72
 #, kde-format
@@ -268,7 +271,7 @@ msgstr "(अनिर्धारितम्) २."
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
 #, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "डुप्लिकेट सम्पर्कं अन्वेष्टुम्..."
+msgstr "डुप्लिकेट सम्पर्कं अन्वेष्टुम्…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -278,7 +281,7 @@ msgstr "चयनितसम्पर्कयोः ईमेल-पत्र�
 #: sendmail/sendmailplugininterface.cpp:26
 #, kde-format
 msgid "Send an email…"
-msgstr "ईमेल प्रेषयन्तु..."
+msgstr "ईमेल प्रेषयन्तु…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -293,4 +296,4 @@ msgstr "अस्थायी सञ्चिका '%1' निर्मात�
 #: sendvcards/sendvcardsplugininterface.cpp:34
 #, kde-format
 msgid "Send vCards…"
-msgstr "vCards प्रेषयन्तु..."
+msgstr "vCards प्रेषयन्तु…"

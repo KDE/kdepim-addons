@@ -20,4 +20,4 @@ msgstr ""
 #, kde-format
 msgctxt "TNEF attachment has no content"
 msgid "empty"
-msgstr ""
+msgstr "रिक्तम्‌"

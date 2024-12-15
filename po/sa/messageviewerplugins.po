@@ -3,18 +3,21 @@
 # This file is distributed under the same license as the kdepim-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -25,13 +28,13 @@ msgstr "वर्तमान URL लघुकृतं URL नास्ति �
 #, kde-format
 msgctxt "@action"
 msgid "Expand URL"
-msgstr ""
+msgstr "URL विस्तारयन्तु"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr ""
+msgstr "अनुवदति…"
 
 #: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
@@ -42,13 +45,13 @@ msgstr "&रक्ष्"
 #, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
-msgstr ""
+msgstr "&Editor उद्घाटयतु…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
-msgstr ""
+msgstr "घटना:"
 
 #: createeventplugin/eventedit.cpp:74
 #, kde-format
@@ -59,13 +62,13 @@ msgstr "पञ्चाङ्गं यत्र नूतनघटना सं
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
-msgstr ""
+msgstr "पञ्चाङ्गं यत्र नूतनघटना संगृहीता भविष्यति"
 
 #: createeventplugin/eventedit.cpp:89
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
-msgstr ""
+msgstr "प्रारंभः:"
 
 #: createeventplugin/eventedit.cpp:95
 #, kde-format
@@ -76,7 +79,7 @@ msgstr "इवेण्ट् कृते आरम्भसमयं चिन
 #, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
-msgstr ""
+msgstr "अंत:"
 
 #: createeventplugin/eventedit.cpp:107
 #, kde-format
@@ -101,7 +104,7 @@ msgstr "नूतनानि घटनानि निर्मातुं व
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
 #, kde-format
 msgid "Create Event…"
-msgstr "इवेण्ट् रचयन्तु..."
+msgstr "इवेण्ट् रचयन्तु…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -117,7 +120,7 @@ msgstr "भवन्तं कैलेण्डर् Event निर्मा�
 #, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
-msgstr ""
+msgstr "कार्यम् : १."
 
 #: createtodoplugin/todoedit.cpp:80
 #, kde-format
@@ -128,7 +131,7 @@ msgstr "नूतनं कार्यं कुत्र संगृहीत
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
-msgstr ""
+msgstr "नूतनं कार्यं कुत्र संगृहीतं भविष्यति इति टोडो सूची"
 
 #: createtodoplugin/todoedit.cpp:96
 #, kde-format
@@ -160,7 +163,7 @@ msgstr "\"%1\" प्रति उत्तरं ददातु।"
 msgctxt ""
 "%1 is summary of the todo, %2 is name of the folder in which it is stored"
 msgid "New todo '%1' was added to task list '%2'"
-msgstr ""
+msgstr "'%2' इति कार्यसूचौ नूतनं todo '%1' योजितम् ।"
 
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:68
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:69
@@ -187,31 +190,31 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Script\" Plugin"
-msgstr ""
+msgstr "\"बाह्यस्क्रिप्ट्\" प्लगिन् विन्यस्यताम्"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
-msgstr ""
+msgstr "स्क्रिप्ट् योजयतु…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
-msgstr ""
+msgstr "स्क्रिप्ट् निष्कासयन्तु"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
-msgstr ""
+msgstr "स्क्रिप्ट् परिवर्तनं कुर्वन्तु…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
-msgstr ""
+msgstr "बाह्यलिपिः : १."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
 #, kde-format
@@ -222,13 +225,13 @@ msgstr "किं भवान् एतां स्क्रिप्ट् \"
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove External Script"
-msgstr ""
+msgstr "बाह्यलिपिं निष्कासयन्तु"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"
-msgstr ""
+msgstr "बाह्यलिपिं योजयतु वा परिवर्तयतु वा"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:28
 #, kde-format
@@ -244,7 +247,7 @@ msgstr "वर्णनम्‌:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
-msgstr ""
+msgstr "आदेशतर्कं योजयन्तु…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -255,7 +258,7 @@ msgstr "आदेशपङ्क्तिः : १."
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"whatsthis1\">तर्कस्वरूपस्य सूचना…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -287,7 +290,7 @@ msgstr "'%1' न लब्धम्"
 #, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
-msgstr ""
+msgstr "निष्पादनीयं न लब्धम्।"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:85
 #, kde-format
@@ -298,7 +301,7 @@ msgstr "कार्यान्वयनीयं आरभ्यतुं अ�
 #, kde-format
 msgctxt "@action"
 msgid "External Script"
-msgstr ""
+msgstr "बाह्य लिपिः"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:129
 #, kde-format

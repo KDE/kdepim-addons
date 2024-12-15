@@ -46,7 +46,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"
-msgstr ""
+msgstr "LanguageTool इत्यनेन व्याकरणं पश्यन्तु"
 
 #: languagetool/languagetoolplugin.cpp:36
 #, kde-format

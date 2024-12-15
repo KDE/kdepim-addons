@@ -35,7 +35,7 @@ msgstr "प्रेषणपत्रम् असामान्यतया �
 #, kde-format
 msgctxt "@option sendmail transport"
 msgid "Sendmail"
-msgstr ""
+msgstr "मेल प्रेषयतु"
 
 #: sendmail/sendmailtransportplugin.cpp:27
 #, kde-format
@@ -46,4 +46,4 @@ msgstr "एकं स्थानीयं प्रेषणपत्रसं�
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
-msgstr ""
+msgstr "खातं विन्यस्तं कुर्वन्तु"

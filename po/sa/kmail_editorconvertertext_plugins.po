@@ -20,19 +20,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Markdown Plugin"
-msgstr ""
+msgstr "Markdown प्लगिन् विन्यस्तं कुर्वन्तु"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
-msgstr ""
+msgstr "एम्बेडेड् LaTeX सक्षमं कुर्वन्तु"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
-msgstr ""
+msgstr "PHP Markdown अतिरिक्तपरिभाषासूचिकाः सक्षमाः कुर्वन्तु"
 
 #: markdown/markdownlib/markdownconverter.cpp:69
 #: markdown/markdownlib/markdownconverter.cpp:89
@@ -50,19 +50,19 @@ msgstr "चित्रं योजयतु"
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
-msgstr ""
+msgstr "मूल आकारं रक्षन्तु"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:20
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Width:"
-msgstr ""
+msgstr "विस्तार:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Height:"
-msgstr ""
+msgstr "औनत्यम्‌:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:39
 #: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
@@ -101,7 +101,7 @@ msgstr "सम्बन्ध:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"
-msgstr ""
+msgstr "Markdown रेण्डरिंग पूर्वावलोकन"
 
 #: markdown/markdownlib/markdownpreviewwidget.cpp:75
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "मार्कडाउन"
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
-msgstr ""
+msgstr "मार्कडाउन एक्शन"
 
 #: markdown/plugin/markdowninterface.cpp:60
 #, kde-format

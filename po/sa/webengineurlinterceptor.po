@@ -3,36 +3,39 @@
 # This file is distributed under the same license as the kdepim-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: adblock/adblockfilterdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
-msgstr ""
+msgstr "Adblock List विन्यस्तं कुर्वन्तु"
 
 #: adblock/adblockfilterlistsmodel.cpp:95
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
-msgstr ""
+msgstr "नामः"
 
 #: adblock/adblockfilterlistsmodel.cpp:97
 #, kde-format
 msgctxt "@title:column"
 msgid "Url"
-msgstr ""
+msgstr "उर्ल्"
 
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
@@ -42,7 +45,7 @@ msgstr "संयोजयति…"
 #: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
 msgid "Modify…"
-msgstr "परिवर्तनं कुर्वन्तु..."
+msgstr "परिवर्तनं कुर्वन्तु…"
 
 #: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
@@ -68,19 +71,19 @@ msgstr "किं भवान् '%1' अपसारयितुम् इच�
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
-msgstr ""
+msgstr "सूचीं निष्कासयन्तु"
 
 #: adblock/adblockfilterwidget.cpp:26
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "अन्वेषण…"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr ""
+msgstr "Adblock List योजयन्तु"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:30
 #, kde-format
@@ -96,13 +99,13 @@ msgstr "Url: १."
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
-msgstr ""
+msgstr "AdBlock प्लगिन् विन्यस्तं कुर्वन्तु"
 
 #: adblock/adblockviewfilterdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
-msgstr ""
+msgstr "Adblock List दर्शयतु"
 
 #. i18n: ectx: label, entry (AdBlockEnabled), group (General)
 #: adblock/settings/webengineurlinterceptoradblock.kcfg:9

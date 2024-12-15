@@ -20,4 +20,4 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Search &Directory Service"
-msgstr ""
+msgstr "अन्वेषण &निर्देशिका सेवा"

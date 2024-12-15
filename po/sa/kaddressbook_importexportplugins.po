@@ -3,23 +3,26 @@
 # This file is distributed under the same license as the kdepim-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 09:12+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.5\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Export CSV file…"
-msgstr "CSV सञ्चिकां निर्यातयन्तु..."
+msgstr "CSV सञ्चिकां निर्यातयन्तु…"
 
 #: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
@@ -29,7 +32,7 @@ msgstr "अल्पविरामविभक्तमूल्यस्वर
 #: csv/csvimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Import CSV file…"
-msgstr "CSV सञ्चिकां आयातयन्तु..."
+msgstr "CSV सञ्चिकां आयातयन्तु…"
 
 #: csv/csvimportexportplugininterface.cpp:43
 #, kde-format
@@ -70,25 +73,25 @@ msgstr "<qt><b>%1</b> सञ्चिकां उद्घाटयितुं
 #, kde-format
 msgctxt "@title:window"
 msgid "CSV Import Dialog"
-msgstr ""
+msgstr "CSV आयात संवाद"
 
 #: csv/import/csvimportdialog.cpp:223
 #, kde-format
 msgctxt "@label"
 msgid "Importing contacts"
-msgstr ""
+msgstr "सम्पर्क आयात करना"
 
 #: csv/import/csvimportdialog.cpp:294
 #, kde-format
 msgctxt "@label"
 msgid "File to import:"
-msgstr ""
+msgstr "आयातार्थं सञ्चिका : १."
 
 #: csv/import/csvimportdialog.cpp:302
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select a csv file to import"
-msgstr ""
+msgstr "आयातार्थं csv सञ्चिकां चिनोतु"
 
 #: csv/import/csvimportdialog.cpp:304
 #, kde-format
@@ -96,25 +99,25 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Click this button to start a file chooser that will allow you to select a "
 "csv file to import."
-msgstr ""
+msgstr "सञ्चिकाचयनकं आरभ्यतुं एतत् बटन् नुदन्तु यत् आयातार्थं csv सञ्चिकां चिन्वितुं शक्नोति ।"
 
 #: csv/import/csvimportdialog.cpp:311
 #, kde-format
 msgctxt "@title:group"
 msgid "Delimiter"
-msgstr ""
+msgstr "परिसीमक"
 
 #: csv/import/csvimportdialog.cpp:321
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Comma"
-msgstr ""
+msgstr "अल्पविरामः"
 
 #: csv/import/csvimportdialog.cpp:322
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a comma"
-msgstr ""
+msgstr "क्षेत्रविभाजकं अल्पविरामस्थाने सेट् कुर्वन्तु"
 
 #: csv/import/csvimportdialog.cpp:323
 #, kde-format
@@ -122,18 +125,20 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the comma as a field separator."
 msgstr ""
+"यदि भवतः csv सञ्चिका अल्पविरामस्य उपयोगं क्षेत्रविभाजकरूपेण करोति तर्हि एतत् विकल्पं "
+"चिनोतु ।"
 
 #: csv/import/csvimportdialog.cpp:328
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Semicolon"
-msgstr ""
+msgstr "अर्धविराम"
 
 #: csv/import/csvimportdialog.cpp:329
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a semicolon"
-msgstr ""
+msgstr "क्षेत्रविभाजकं अर्धविरामस्थाने सेट् कुर्वन्तु"
 
 #: csv/import/csvimportdialog.cpp:330
 #, kde-format
@@ -141,18 +146,20 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the semicolon as a field separator."
 msgstr ""
+"यदि भवतः csv सञ्चिका अर्धविरामस्य उपयोगं क्षेत्रविभाजकरूपेण करोति तर्हि एतत् विकल्पं "
+"चिनोतु ।"
 
 #: csv/import/csvimportdialog.cpp:334
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Tabulator"
-msgstr ""
+msgstr "टब"
 
 #: csv/import/csvimportdialog.cpp:335
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a tab character"
-msgstr ""
+msgstr "क्षेत्रविभाजकं ट्याब् वर्णं प्रति सेट् कुर्वन्तु"
 
 #: csv/import/csvimportdialog.cpp:336
 #, kde-format
@@ -161,18 +168,20 @@ msgid ""
 "Select this option if your csv file uses the tab character as a field "
 "separator."
 msgstr ""
+"यदि भवतः csv सञ्चिका ट्याब् वर्णस्य उपयोगं क्षेत्रविभाजकरूपेण करोति तर्हि एतत् विकल्पं "
+"चिनोतु ।"
 
 #: csv/import/csvimportdialog.cpp:340
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Space"
-msgstr ""
+msgstr "स्थानं"
 
 #: csv/import/csvimportdialog.cpp:341
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a space character"
-msgstr ""
+msgstr "क्षेत्रविभाजकं अन्तरिक्षवर्णे सेट् कुर्वन्तु"
 
 #: csv/import/csvimportdialog.cpp:342
 #, kde-format
@@ -181,18 +190,20 @@ msgid ""
 "Select this option if your csv file uses the space character as a field "
 "separator."
 msgstr ""
+"यदि भवतः csv सञ्चिका अन्तरिक्षवर्णस्य उपयोगं क्षेत्रविभाजकरूपेण करोति तर्हि एतत् विकल्पं "
+"चिनोतु ।"
 
 #: csv/import/csvimportdialog.cpp:346
 #, kde-format
 msgctxt "@option:radio Custom field separator"
 msgid "Other"
-msgstr ""
+msgstr "इतर"
 
 #: csv/import/csvimportdialog.cpp:347
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a custom character"
-msgstr ""
+msgstr "क्षेत्रविभाजकं कस्टम् वर्णं प्रति सेट् कुर्वन्तु"
 
 #: csv/import/csvimportdialog.cpp:349
 #, kde-format
@@ -201,12 +212,14 @@ msgid ""
 "Select this option if to use some other character as the field delimiter for "
 "the data in your csv file."
 msgstr ""
+"यदि भवतां csv सञ्चिकायां दत्तांशस्य कृते क्षेत्रसीमकरूपेण अन्यं किमपि वर्णं उपयोक्तुं शक्यते तर्हि "
+"एतत् विकल्पं चिनोतु ।"
 
 #: csv/import/csvimportdialog.cpp:355
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the custom delimiter character"
-msgstr ""
+msgstr "कस्टम् सीमांककवर्णं सेट् कुर्वन्तु"
 
 #: csv/import/csvimportdialog.cpp:357
 #, kde-format
@@ -216,18 +229,20 @@ msgid ""
 "more than 1 character, only the first will be used and the remaining "
 "characters will be ignored."
 msgstr ""
+"परिसीमकवर्णरूपेण उपयोक्तुं कस्टम् वर्णं प्रविशन्तु । यदि भवान् १ वर्णात् अधिकं प्रविशति तर्हि "
+"केवलं प्रथमस्य एव उपयोगः भविष्यति शेषवर्णाः उपेक्षिताः भविष्यन्ति ।"
 
 #: csv/import/csvimportdialog.cpp:363
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text quote:"
-msgstr ""
+msgstr "पाठोद्धरणम् : १."
 
 #: csv/import/csvimportdialog.cpp:369
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the quote character"
-msgstr ""
+msgstr "उद्धरणवर्णं चिनोतु"
 
 #: csv/import/csvimportdialog.cpp:371
 #, kde-format
@@ -238,30 +253,33 @@ msgid ""
 "if the comma is the field delimiter, then any comma occurring with the data "
 "will be \"quoted\" by the character specified here."
 msgstr ""
+"यदि सः वर्णः दत्तांशस्य अन्तः भवति तर्हि क्षेत्रसीमाकं \"उद्धरणं\" कर्तुं भवतः csv दत्तांशः "
+"यत् वर्णं उपयुङ्क्ते तत् चिनोतु ।  यथा, यदि अल्पविरामः क्षेत्रसीमाकर्ता अस्ति तर्हि "
+"दत्तांशसहितं यत्किमपि अल्पविरामः भवति तत् अत्र निर्दिष्टेन वर्णेन \"उद्धृतं\" भविष्यति ।"
 
 #: csv/import/csvimportdialog.cpp:376
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
-msgstr ""
+msgstr "\" \" ."
 
 #: csv/import/csvimportdialog.cpp:377
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "'"
-msgstr ""
+msgstr "' ."
 
 #: csv/import/csvimportdialog.cpp:378
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "None"
-msgstr ""
+msgstr "न कश्चित्"
 
 #: csv/import/csvimportdialog.cpp:382
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
-msgstr ""
+msgstr "तिथिस्वरूपम् : १."
 
 #: csv/import/csvimportdialog.cpp:390
 #, kde-kuit-format
@@ -273,6 +291,11 @@ msgid ""
 "item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
 "item><item>S: seconds with 2 digits</item></list></para>"
 msgstr ""
+"<para><list><item>y: २ अङ्कयुक्तः वर्षः</item><item>Y: ४ अङ्कयुक्तः वर्षः</"
+"item><item>m: १ अथवा २ अङ्कयुक्तः मासः</item><item> म: २ अङ्कयुक्तः मासः</"
+"item><item>d: १ अथवा २ अङ्कयुक्तः दिवसः</item><item>D: २ अङ्कयुक्तः दिवसः</"
+"item><item>H: २ सह घण्टाः अङ्काः</item><item>I: २ अङ्कैः सह निमेषाः</"
+"item><item>S: २ अङ्कैः सह सेकेण्ड्</item></list></para>"
 
 #: csv/import/csvimportdialog.cpp:401
 #, kde-kuit-format
@@ -288,36 +311,44 @@ msgid ""
 "para><para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</"
 "para>"
 msgstr ""
+"<para>भवतः csv दत्तांशे समाविष्टानां तिथीनां कृते उपयोक्तुं प्रारूपं निर्दिशन्तु। प्रारूपं "
+"परिभाषितुं भवतः सहायार्थं निम्नलिखित क्रमानाम् उपयोगं कुर्वन्तु:</"
+"para><para><list><item>y: वर्षं २ अङ्कैः सह</item><item>Y: वर्षं ४ अङ्कैः सह</"
+"item><item>म: १ अथवा २ अङ्कयुक्तः मासः</item><item>M: २ अङ्कयुक्तः मासः</"
+"item><item>d: १ अथवा २ अङ्कयुक्तः दिवसः</item><item>D: २ सह दिवसः अङ्काः</"
+"item><item>H: २ अङ्कयुक्ताः घण्टाः</item><item>I: २ अङ्कयुक्ताः निमेषाः</"
+"item><item>S: २ अङ्कयुक्ताः सेकेण्ड्</item></list></para><para>उदाहरणम्: \"Y-M-D\" "
+"\"2012-01-04\" इत्यादि तिथिना सह सङ्गच्छते।</para>"
 
 #: csv/import/csvimportdialog.cpp:417
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text codec:"
-msgstr ""
+msgstr "पाठकोडेक् : १."
 
 #: csv/import/csvimportdialog.cpp:423
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
-msgstr ""
+msgstr "पाठकोडेक् चिनोतु"
 
 #: csv/import/csvimportdialog.cpp:424
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose the character encoding of the data in your csv file."
-msgstr ""
+msgstr "स्वस्य csv सञ्चिकायां दत्तांशस्य वर्णसङ्केतनं चिनोतु ।"
 
 #: csv/import/csvimportdialog.cpp:428
 #, kde-format
 msgctxt "@option:check"
 msgid "Skip first row of file"
-msgstr ""
+msgstr "सञ्चिकायाः प्रथमपङ्क्तिं त्यजन्तु"
 
 #: csv/import/csvimportdialog.cpp:430
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip first row of csv file when importing"
-msgstr ""
+msgstr "आयातकाले csv सञ्चिकायाः प्रथमपङ्क्तिं त्यजन्तु"
 
 #: csv/import/csvimportdialog.cpp:432
 #, kde-format
@@ -327,78 +358,81 @@ msgid ""
 "data. In many cases, the first line of a csv file will be a comment line "
 "describing the order of the data fields included in the file."
 msgstr ""
+"यदि भवान् इच्छति यत् आयातः csv दत्तांशस्य प्रथमपङ्क्तौ त्यक्तुम् इच्छति तर्हि एतत् पेटीम् "
+"चिनोतु । बहुषु सन्दर्भेषु csv सञ्चिकायाः प्रथमपङ्क्तिः सञ्चिकायां समाविष्टानां दत्तांशक्षेत्राणां "
+"क्रमं वर्णयति टिप्पणीपङ्क्तिः भविष्यति ।"
 
 #: csv/import/csvimportdialog.cpp:448
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
-msgstr ""
+msgstr "टेम्पलेट लागू करें…"
 
 #: csv/import/csvimportdialog.cpp:449
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
-msgstr ""
+msgstr "टेम्पलेट सहेजें…"
 
 #: csv/import/csvimportdialog.cpp:470
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Local (%1)"
-msgstr ""
+msgstr "स्थानीय (%1) ९."
 
 #: csv/import/csvimportdialog.cpp:471
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Latin1"
-msgstr ""
+msgstr "लैटिन१"
 
 #: csv/import/csvimportdialog.cpp:472
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Unicode"
-msgstr ""
+msgstr "यूनिकोड"
 
 #: csv/import/csvimportdialog.cpp:473
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Microsoft Unicode"
-msgstr ""
+msgstr "माइक्रोसॉफ्ट यूनिकोड"
 
 #: csv/import/csvimportdialog.cpp:574
 #, kde-format
 msgctxt "@info:status"
 msgid "You must assign at least one column."
-msgstr ""
+msgstr "भवता न्यूनातिन्यूनम् एकं स्तम्भं नियुक्तं कर्तव्यम् ।"
 
 #: csv/import/csvimportdialog.cpp:584
 #, kde-format
 msgctxt "@label"
 msgid "There are no templates available yet."
-msgstr ""
+msgstr "अद्यापि कोऽपि टेम्पलेट् उपलब्धः नास्ति ।"
 
 #: csv/import/csvimportdialog.cpp:584
 #, kde-format
 msgctxt "@title:window"
 msgid "No templates available"
-msgstr ""
+msgstr "न कोऽपि टेम्पलेट् उपलब्धः"
 
 #: csv/import/csvimportdialog.cpp:649
 #, kde-format
 msgctxt "@title:window"
 msgid "Template Name"
-msgstr ""
+msgstr "टेम्पलेट नाम"
 
 #: csv/import/csvimportdialog.cpp:649
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a name for the template:"
-msgstr ""
+msgstr "कृपया टेम्पलेट् इत्यस्य नाम प्रविष्टं कुर्वन्तु:"
 
 #: csv/import/csvimportdialog.cpp:699
 #, kde-format
 msgctxt "@info:status"
 msgid "Cannot open input file."
-msgstr ""
+msgstr "निवेशसञ्चिकां उद्घाटयितुं न शक्यते ।"
 
 #: csv/import/qcsvreader.cpp:92
 #, kde-format
@@ -409,19 +443,19 @@ msgstr "यन्त्रं उद्घाटितं नास्ति"
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to delete template '%1'?"
-msgstr ""
+msgstr "किं भवान् वास्तवमेव '%1' टेम्पलेट् विलोपयितुम् इच्छति?"
 
 #: csv/import/templateselectiondialog.cpp:203
 #, kde-format
 msgctxt "@title:window"
 msgid "Template Selection"
-msgstr ""
+msgstr "टेम्पलेट चयन"
 
 #: csv/import/templateselectiondialog.cpp:206
 #, kde-format
 msgctxt "@info"
 msgid "Please select a template, that matches the CSV file:"
-msgstr ""
+msgstr "कृपया एकं टेम्पलेट् चिनोतु, यत् CSV सञ्चिकायाः सङ्गतिं करोति:"
 
 #: gmx/gmximportexportplugininterface.cpp:25
 #, kde-format
@@ -431,7 +465,7 @@ msgstr "GMX पतापुस्तकसञ्चिका (*.gmxa)"
 #: gmx/gmximportexportplugininterface.cpp:40
 #, kde-format
 msgid "Import GMX file…"
-msgstr "GMX सञ्चिकां आयातयन्तु..."
+msgstr "GMX सञ्चिकां आयातयन्तु…"
 
 #: gmx/gmximportexportplugininterface.cpp:41
 #, kde-format
@@ -441,7 +475,7 @@ msgstr "GMX पतापुस्तकसञ्चिकातः सम्प�
 #: gmx/gmximportexportplugininterface.cpp:46
 #, kde-format
 msgid "Export GMX file…"
-msgstr "GMX सञ्चिकां निर्यातयन्तु..."
+msgstr "GMX सञ्चिकां निर्यातयन्तु…"
 
 #: gmx/gmximportexportplugininterface.cpp:47
 #, kde-format
@@ -463,7 +497,7 @@ msgstr "%1 GMX पतापुस्तकसञ्चिका नास्त�
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, kde-format
 msgid "Import From LDAP server…"
-msgstr "आयात LDAP सर्वरात्..."
+msgstr "आयात LDAP सर्वरात्…"
 
 #: ldap/ldapimportexportplugininterface.cpp:26
 #, kde-format
@@ -473,7 +507,7 @@ msgstr "LDAP सर्वरात् सम्पर्कं आयातय�
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Import LDIF file…"
-msgstr "LDIF सञ्चिकां आयातयन्तु..."
+msgstr "LDIF सञ्चिकां आयातयन्तु…"
 
 #: ldif/ldifimportexportplugininterface.cpp:37
 #, kde-format
@@ -483,7 +517,7 @@ msgstr "LDIF सञ्चिकातः सम्पर्कं आयात�
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Export LDIF file…"
-msgstr "LDIF सञ्चिकां निर्यातयन्तु..."
+msgstr "LDIF सञ्चिकां निर्यातयन्तु…"
 
 #: ldif/ldifimportexportplugininterface.cpp:43
 #, kde-format
@@ -504,19 +538,19 @@ msgstr "LDif सञ्चिकाः (*.ldif) ."
 #, kde-format
 msgctxt "@title:group"
 msgid "Fields to be exported"
-msgstr ""
+msgstr "निर्यातनीयाः क्षेत्राणि"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:29
 #, kde-format
 msgctxt "@option:check"
 msgid "Private fields"
-msgstr ""
+msgstr "निजीक्षेत्राणि"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:30
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export private fields"
-msgstr ""
+msgstr "निजीक्षेत्राणि निर्यातयन्तु"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:32
 #, kde-format
@@ -525,18 +559,20 @@ msgid ""
 "Check this box if you want to export the contact's private fields to the "
 "vCard output file."
 msgstr ""
+"यदि भवान् सम्पर्कस्य निजक्षेत्राणि vCard आउटपुट् सञ्चिकायां निर्यातयितुम् इच्छति तर्हि एतत् "
+"पेटीम् चिनोतु ।"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Business fields"
-msgstr ""
+msgstr "व्यापारिकक्षेत्राणि"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:37
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export business fields"
-msgstr ""
+msgstr "व्यापारक्षेत्राणि निर्यातयन्तु"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:39
 #, kde-format
@@ -545,18 +581,20 @@ msgid ""
 "Check this box if you want to export the contact's business fields to the "
 "vCard output file."
 msgstr ""
+"यदि भवान् सम्पर्कस्य व्यावसायिकक्षेत्राणि vCard आउटपुट् सञ्चिकायां निर्यातयितुम् इच्छति तर्हि "
+"एतत् पेटीम् चिनोतु ।"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:43
 #, kde-format
 msgctxt "@option:check"
 msgid "Other fields"
-msgstr ""
+msgstr "अन्यक्षेत्राणि"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:44
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export other fields"
-msgstr ""
+msgstr "अन्यक्षेत्राणि निर्यातयन्तु"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:46
 #, kde-format
@@ -565,18 +603,20 @@ msgid ""
 "Check this box if you want to export the contact's other fields to the vCard "
 "output file."
 msgstr ""
+"यदि भवान् सम्पर्कस्य अन्यक्षेत्राणि vCard आउटपुट् सञ्चिकायां निर्यातयितुम् इच्छति तर्हि एतत् "
+"पेटी चिनोतु ।"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:50
 #, kde-format
 msgctxt "@option:check"
 msgid "Encryption keys"
-msgstr ""
+msgstr "एन्क्रिप्शन कील"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export encryption keys"
-msgstr ""
+msgstr "एन्क्रिप्शन कुञ्जी निर्यातयन्तु"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:53
 #, kde-format
@@ -585,18 +625,20 @@ msgid ""
 "Check this box if you want to export the contact's encryption keys to the "
 "vCard output file."
 msgstr ""
+"यदि भवान् सम्पर्कस्य एन्क्रिप्शन-कुंजीः vCard आउटपुट् सञ्चिकायां निर्यातयितुम् इच्छति तर्हि "
+"एतत् पेटीम् चिनोतु ।"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:57
 #, kde-format
 msgctxt "@option:check"
 msgid "Pictures"
-msgstr ""
+msgstr "चित्रम्"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export pictures"
-msgstr ""
+msgstr "चित्राणि निर्यातयन्तु"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:60
 #, kde-format
@@ -605,24 +647,26 @@ msgid ""
 "Check this box if you want to export the contact's picture to the vCard "
 "output file."
 msgstr ""
+"यदि भवान् सम्पर्कस्य चित्रं vCard आउटपुट् सञ्चिकायां निर्यातयितुम् इच्छति तर्हि एतत् पेटीम् "
+"चिनोतु ।"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:64
 #, kde-format
 msgctxt "@title:group"
 msgid "Export options"
-msgstr ""
+msgstr "निर्यातविकल्पाः"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:70
 #, kde-format
 msgctxt "@option:check"
 msgid "Display name as full name"
-msgstr ""
+msgstr "पूर्णनामरूपेण नाम प्रदर्शयन्तु"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export display name as full name"
-msgstr ""
+msgstr "प्रदर्शननाम पूर्णनामरूपेण निर्यातयन्तु"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:73
 #, kde-format
@@ -632,29 +676,31 @@ msgid ""
 "vCard's full name field.  This may be required to get the name shown "
 "correctly in GMail or Android."
 msgstr ""
+"यदि भवान् vCard इत्यस्य पूर्णनामक्षेत्रे सम्पर्कस्य प्रदर्शननाम निर्यातयितुम् इच्छति तर्हि एतत् "
+"पेटीम् चिनोतु ।  GMail अथवा Android इत्यत्र नाम सम्यक् दर्शयितुं एतत् आवश्यकं भवेत्।"
 
 #: vcards/engine/vcardviewerdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
-msgstr ""
+msgstr "vCard आयात करें"
 
 #: vcards/engine/vcardviewerdialog.cpp:51
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
-msgstr ""
+msgstr "किं भवान् एतत् सम्पर्कं स्वस्य पतापुस्तिकायां आयातुम् इच्छति?"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
-msgstr ""
+msgstr "आयातं सर्वं…"
 
 #: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard…"
-msgstr "आयात vCard..."
+msgstr "आयात vCard…"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -669,12 +715,12 @@ msgstr "सम्पर्कं vCard 4.0 सञ्चिकायां नि
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
 msgid "Export vCard 4.0…"
-msgstr "निर्यातं vCard 4.0..."
+msgstr "निर्यातं vCard 4.0…"
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0…"
-msgstr "निर्यातं vCard 3.0..."
+msgstr "निर्यातं vCard 3.0…"
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -684,7 +730,7 @@ msgstr "सम्पर्कं vCard 3.0 सञ्चिकायां नि
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1…"
-msgstr "निर्यातं vCard 2.1..."
+msgstr "निर्यातं vCard 2.1…"
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
@@ -700,19 +746,19 @@ msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;सर्व सञ्चिका�
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
-msgstr ""
+msgstr "Import कर्तुं vCard इति चिनोतु"
 
 #: vcards/vcardimportexportplugininterface.cpp:120
 #, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
-msgstr ""
+msgstr "vCard आयातं विफलम्"
 
 #: vcards/vcardimportexportplugininterface.cpp:134
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
-msgstr ""
+msgstr "<para>vCard:</para><para>%1</para> अभिगन्तुं असमर्थम्"
 
 #: vcards/vcardimportexportplugininterface.cpp:436
 #, kde-format
@@ -720,24 +766,24 @@ msgctxt "@info"
 msgid ""
 "You have selected a list of contacts, shall they be exported to several "
 "files?"
-msgstr ""
+msgstr "भवता सम्पर्कसूची चयनिता, ते अनेकसञ्चिकासु निर्यातिताः भविष्यन्ति वा?"
 
 #: vcards/vcardimportexportplugininterface.cpp:439
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
-msgstr ""
+msgstr "One File मध्ये निर्यातं कुर्वन्तु"
 
 #: vcards/vcardimportexportplugininterface.cpp:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"
-msgstr ""
+msgstr "अनेकसञ्चिकासु निर्यातं कुर्वन्तु"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, kde-format
 msgid "Import Windows Contact file…"
-msgstr "विण्डोज सम्पर्कसञ्चिकां आयातयन्तु..."
+msgstr "विण्डोज सम्पर्कसञ्चिकां आयातयन्तु…"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
 #, kde-format

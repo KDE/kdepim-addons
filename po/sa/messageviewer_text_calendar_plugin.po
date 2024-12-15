@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 20:20+0530\n"
+"PO-Revision-Date: 2024-12-14 01:48+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -23,13 +23,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr ""
+msgstr "उपस्थितानां चयनं कुर्वन्तु"
 
 #: attendeeselector.cpp:40
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
-msgstr ""
+msgstr "नूतनं उपस्थितं योजयितुं क्लिक् कुर्वन्तु"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: attendeeselector.ui:24
@@ -47,25 +47,25 @@ msgstr "अपाकरोति"
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
-msgstr ""
+msgstr "अस्याः घटनायाः स्थितिपरिवर्तनस्य विषये मां सूचयन्तु।"
 
 #: delegateselector.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
-msgstr ""
+msgstr "प्रतिनिधिं चिनोतु"
 
 #: delegateselector.cpp:28
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
-msgstr ""
+msgstr "प्रतिनिधिः : १."
 
 #: reactiontoinvitationdialog.cpp:30
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
-msgstr ""
+msgstr "टिप्पणी:"
 
 #: text_calendar.cpp:359
 #, kde-format
@@ -116,19 +116,19 @@ msgstr "उत्तरम्‌: "
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
-msgstr ""
+msgstr "अङ्गीकृतम् : %1"
 
 #: text_calendar.cpp:513
 #, kde-format
 msgctxt "Unsure if it is possible to attend."
 msgid "Tentative: %1"
-msgstr ""
+msgstr "अस्थायी: %1"
 
 #: text_calendar.cpp:515
 #, kde-format
 msgctxt "Accepted the invitation."
 msgid "Accepted: %1"
-msgstr ""
+msgstr "स्वीकृतम् : %1"
 
 #: text_calendar.cpp:537 text_calendar.cpp:556
 #, kde-format
@@ -209,7 +209,7 @@ msgstr "किं भवन्तः अद्यापि आमन्त्र
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept"
-msgstr ""
+msgstr "स्वीकरोतु"
 
 #: text_calendar.cpp:783
 #, kde-format
@@ -225,7 +225,7 @@ msgstr "किं भवन्तः अद्यापि कार्यस्
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "प्रेषयतु"
 
 #: text_calendar.cpp:790
 #, kde-format
@@ -251,7 +251,7 @@ msgstr "किं भवन्तः अद्यापि प्रतिप्
 #, kde-format
 msgctxt "@action:button"
 msgid "Decline"
-msgstr ""
+msgstr "अस्वीकरोतु"
 
 #: text_calendar.cpp:805
 #, kde-format
@@ -262,7 +262,7 @@ msgstr "किं भवन्तः अद्यापि एतत् प्�
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
-msgstr ""
+msgstr "अभिलेख"
 
 #: text_calendar.cpp:809
 #, kde-format
@@ -278,7 +278,7 @@ msgstr "किं भवन्तः अद्यापि एतत् आम�
 #, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
-msgstr ""
+msgstr "प्रतिनिधिः"
 
 #: text_calendar.cpp:816
 #, kde-format
@@ -294,7 +294,7 @@ msgstr "किं भवन्तः अद्यापि एतत् आम�
 #, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr ""
+msgstr "अग्रतः"
 
 #: text_calendar.cpp:824
 #, kde-format
@@ -305,7 +305,7 @@ msgstr "किं भवन्तः अद्यापि एतत् का�
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
-msgstr ""
+msgstr "कार्य रद्द करें"
 
 #: text_calendar.cpp:827
 #, kde-format
@@ -316,13 +316,13 @@ msgstr "किं भवन्तः अद्यापि एतत् आम�
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
-msgstr ""
+msgstr "निमन्त्रणं रद्दं कुर्वन्तु"
 
 #: text_calendar.cpp:831 text_calendar.cpp:852
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr ""
+msgstr "रद्दं न कुर्वन्तु"
 
 #: text_calendar.cpp:834
 #, kde-format
@@ -333,7 +333,7 @@ msgstr "किं भवन्तः अद्यापि स्वस्य �
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
-msgstr ""
+msgstr "अनुशीलय"
 
 #: text_calendar.cpp:838
 #, kde-format
@@ -373,7 +373,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
-msgstr ""
+msgstr "आमन्त्रणस्य प्रतिक्रिया"
 
 #: text_calendar.cpp:901 text_calendar.cpp:1160
 #, kde-format
@@ -389,13 +389,13 @@ msgstr "आयोजकं प्रति प्रतिनिधित्व�
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
-msgstr ""
+msgstr "निमंत्रण संलग्नकं रक्षतु"
 
 #: text_calendar.cpp:1149
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
-msgstr ""
+msgstr "अवनति प्रतिप्रस्ताव"
 
 #: text_calendar.cpp:1191
 #, kde-format
@@ -426,24 +426,29 @@ msgid ""
 "Would you like to send the organizer a message regarding this invitation?\n"
 "Press the [Cancel] button to cancel the recording operation."
 msgstr ""
+"आयोजकः अस्य आमन्त्रणस्य उत्तरं न अपेक्षते किन्तु भवान् इच्छति चेत् तेभ्यः ईमेलसन्देशं प्रेषयितुं "
+"शक्नोति।\n"
+"\n"
+"अस्य आमन्त्रणस्य विषये आयोजकं सन्देशं प्रेषयितुम् इच्छति वा?\n"
+"रिकार्डिङ्ग्-कार्यक्रमं रद्दीकर्तुं [Cancel] बटनं नुदन्तु ।"
 
 #: text_calendar.cpp:1269
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
-msgstr ""
+msgstr "आयोजकं प्रति ईमेल प्रेषयन्तु"
 
 #: text_calendar.cpp:1270
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
-msgstr ""
+msgstr "मा प्रेषयतु"
 
 #: text_calendar.cpp:1271
 #, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
-msgstr ""
+msgstr "ईमेल प्रेषयन्तु"
 
 #: text_calendar.cpp:1279
 #, kde-format
@@ -458,7 +463,7 @@ msgstr "Open Attachment इति"
 #: text_calendar.cpp:1342
 #, kde-format
 msgid "Save Attachment As…"
-msgstr "संलग्नकं रक्षन्तु यथा..."
+msgstr "संलग्नकं रक्षन्तु यथा…"
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -478,7 +483,7 @@ msgstr "प्रतिप्रस्तावम् अङ्गीकुर�
 #: text_calendar.cpp:1364
 #, kde-format
 msgid "Create a counter proposal…"
-msgstr "एकं प्रतिप्रस्तावं रचयन्तु..."
+msgstr "एकं प्रतिप्रस्तावं रचयन्तु…"
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -503,7 +508,7 @@ msgstr "प्रतिप्रस्तावस्य अस्वीका�
 #: text_calendar.cpp:1374
 #, kde-format
 msgid "Check my calendar…"
-msgstr "मम पञ्चाङ्गं पश्यन्तु..."
+msgstr "मम पञ्चाङ्गं पश्यन्तु…"
 
 #: text_calendar.cpp:1376
 #, kde-format

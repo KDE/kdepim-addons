@@ -41,7 +41,7 @@ msgstr "बीसीसी : १. "
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Brief Headers"
-msgstr ""
+msgstr "&संक्षिप्त शीर्षकम्"
 
 #: briefheaderstyleplugin/briefheaderstyleinterface.cpp:25
 #, kde-format
@@ -63,7 +63,7 @@ msgstr "इत्यस्मै: "
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Enterprise Headers"
-msgstr ""
+msgstr "&उद्यम शीर्षक"
 
 #: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:24
 #, kde-format
@@ -110,7 +110,7 @@ msgstr "स्पैम स्थितिः : १."
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Fancy Headers"
-msgstr ""
+msgstr "&फैन्सी हेडर्स"
 
 #: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:25
 #, kde-format
@@ -126,7 +126,7 @@ msgstr "संलग्नकाः : १."
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Long Headers"
-msgstr ""
+msgstr "&दीर्घशीर्षकाः"
 
 #: longheaderstyleplugin/longheaderstyleinterface.cpp:25
 #, kde-format
@@ -137,7 +137,7 @@ msgstr "सन्देशशीर्षकाणां दीर्घसू�
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Standard Headers"
-msgstr ""
+msgstr "&मानक शीर्षक"
 
 #: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:25
 #, kde-format

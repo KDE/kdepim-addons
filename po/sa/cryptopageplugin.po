@@ -25,13 +25,13 @@ msgstr "अनुमत प्रोटोकॉल"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
-msgstr ""
+msgstr "प्राधान्यं OpenPGP एन्क्रिप्शन कुञ्जी:"
 
 #: cryptopageplugin.cpp:57
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
-msgstr ""
+msgstr "प्राधान्यं S/MIME एन्क्रिप्शन प्रमाणपत्रम्:"
 
 #: cryptopageplugin.cpp:62
 #, kde-format
@@ -42,13 +42,13 @@ msgstr "सन्देश प्राधान्यम्"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
-msgstr ""
+msgstr "चिह्नम्‌:"
 
 #: cryptopageplugin.cpp:88
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
-msgstr ""
+msgstr "एन्क्रिप्ट् : १."
 
 #: cryptopageplugin.cpp:106
 #, kde-format

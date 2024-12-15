@@ -20,13 +20,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
-msgstr ""
+msgstr "\"बाह्य रचनाकारः\" प्लगिन् विन्यस्यताम्"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:23
 #, kde-format
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
-msgstr ""
+msgstr "रचनाकारस्य स्थाने बाह्यसम्पादकस्य उपयोगं कुर्वन्तु"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:52
 #, kde-format
@@ -36,3 +36,6 @@ msgid ""
 "replaced with the window id.<br /><b>%l</b> will be replaced with the line "
 "number."
 msgstr ""
+"<b>%f इत्यस्य</b> स्थाने सम्पादनार्थं सञ्चिकानाम स्थापितं भविष्यति ।<br /> <b>%w इत्यस्य</"
+"b> स्थाने window id इति स्थापनं भविष्यति ।<br /> <b>%l इत्यस्य</b> स्थाने रेखासङ्ख्या "
+"भविष्यति ।"
