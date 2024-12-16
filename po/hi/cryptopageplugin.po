@@ -1,4 +1,4 @@
-# Sanskrit translations for kdepim-addons package.
+# Hindi translations for kdepim-addons package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
@@ -8,50 +8,49 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"PO-Revision-Date: 2024-12-15 15:58+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
-"Language: sa\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
 
 #: cryptopageplugin.cpp:37
 #, kde-format
 msgid "Allowed Protocols"
-msgstr "अनुमत प्रोटोकॉल"
+msgstr ""
 
 #: cryptopageplugin.cpp:52
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
-msgstr "प्राधान्यं OpenPGP एन्क्रिप्शन कुञ्जी:"
+msgstr ""
 
 #: cryptopageplugin.cpp:57
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
-msgstr "प्राधान्यं S/MIME एन्क्रिप्शन प्रमाणपत्रम्:"
+msgstr ""
 
 #: cryptopageplugin.cpp:62
 #, kde-format
 msgid "Message Preference"
-msgstr "सन्देश प्राधान्यम्"
+msgstr ""
 
 #: cryptopageplugin.cpp:71
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
-msgstr "चिह्नम्‌:"
+msgstr ""
 
 #: cryptopageplugin.cpp:88
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
-msgstr "एन्क्रिप्ट् : १."
+msgstr ""
 
 #: cryptopageplugin.cpp:106
 #, kde-format
 msgid "Crypto Settings"
-msgstr "क्रिप्टो सेटिंग्स्"
+msgstr ""

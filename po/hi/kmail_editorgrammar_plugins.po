@@ -1,4 +1,4 @@
-# Sanskrit translations for kdepim-addons package.
+# Hindi translations for kdepim-addons package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
@@ -8,29 +8,28 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"PO-Revision-Date: 2024-12-15 15:58+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
-"Language: sa\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
 
 #: grammalecte/grammalecteinterface.cpp:78
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
-msgstr "&व्याकरणस्य जाँच (Grammalecte) २."
+msgstr ""
 
 #: grammalecte/grammalecteplugin.cpp:38
 #, kde-format
 msgid "Grammalecte Plugin"
-msgstr "Grammalecte प्लगइन"
+msgstr ""
 
 #: languagetool/languagetoolinterface.cpp:81
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
-msgstr "&व्याकरणस्य जाँच (LanguageTool)"
+msgstr ""
 
 #: languagetool/languagetoolinterface.cpp:94
 #, kde-format
@@ -39,17 +38,14 @@ msgid ""
 "Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
-"भवान् स्थानीयदृष्टान्तस्य उपयोगं न करोति ।\n"
-"भवतः पाठः बाह्यजालस्थले (https://languagetool.org/) प्रेषितः भविष्यति ।\n"
-"किं त्वं निरन्तरं कर्तुम् इच्छसि ?"
 
 #: languagetool/languagetoolinterface.cpp:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"
-msgstr "LanguageTool इत्यनेन व्याकरणं पश्यन्तु"
+msgstr ""
 
 #: languagetool/languagetoolplugin.cpp:36
 #, kde-format
 msgid "LanguageTool Plugin"
-msgstr "भाषासाधन प्लगइन"
+msgstr ""

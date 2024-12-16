@@ -1,162 +1,159 @@
-# Sanskrit translations for kdepim-addons package.
+# Hindi translations for kdepim-addons package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
-# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-12-14 01:48+0530\n"
-"Last-Translator: kali <skkalwar999@gmail.com>\n"
-"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
-"Language: sa\n"
+"PO-Revision-Date: 2024-12-15 15:58+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Lokalize 24.08.2\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
 msgid "Send to %1"
-msgstr "%1 - मध्ये प्रेषयन्तु"
+msgstr ""
 
 #: itineraryurlhandler.cpp:126
 #, kde-format
 msgid "Show calendar at the time of this reservation."
-msgstr "अस्य आरक्षणसमये पञ्चाङ्गं दर्शयतु।"
+msgstr ""
 
 #: itineraryurlhandler.cpp:129
 #, kde-format
 msgid "Add reservation to your calendar."
-msgstr "आरक्षणं स्वस्य पञ्चाङ्गे योजयन्तु।"
+msgstr ""
 
 #: itineraryurlhandler.cpp:132
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
-msgstr "KDE यात्रासूचिकायां आरक्षणं आयातयन्तु ।"
+msgstr ""
 
 #: itineraryurlhandler.cpp:135
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
-msgstr "एतत् आरक्षणं KDE Connect इत्यस्य उपयोगेन यन्त्रे प्रेषयन्तु ।"
+msgstr ""
 
 #: itineraryurlhandler.cpp:206
 #, kde-format
 msgid "Boarding Pass"
-msgstr "बोर्डिंग पास"
+msgstr ""
 
 #: itineraryurlhandler.cpp:207
 #, kde-format
 msgid "Ticket"
-msgstr "टिकटम्"
+msgstr ""
 
 #: templates/actions.html:4
 msgid "View"
-msgstr "दृश्यं"
+msgstr ""
 
 #: templates/actions.html:6
 msgid "Download"
-msgstr "अवाहरन"
+msgstr ""
 
 #: templates/actions.html:8
 msgid "Modify"
-msgstr "परिवर्तनं कुर्वन्तु"
+msgstr ""
 
 #: templates/actions.html:10
 msgid "Cancel"
-msgstr "निरसयतु"
+msgstr ""
 
 #: templates/actions.html:12
 msgid "Check-In"
-msgstr "चेक-इन"
+msgstr ""
 
 #: templates/boatreservation.html:9 templates/busreservation.html:12
 #: templates/flightreservation.html:13 templates/trainreservation.html:12
 msgid "Reservation canceled."
-msgstr "आरक्षण रद्द।"
+msgstr ""
 
 #: templates/busreservation.html:49 templates/busreservation.html:69
 #: templates/flightreservation.html:62 templates/flightreservation.html:79
 #: templates/trainreservation.html:62 templates/trainreservation.html:90
 #, kde-format
 msgid "Seat: %1"
-msgstr "आसनम् : %1"
+msgstr ""
 
 #: templates/event.html:3 templates/foodestablishmentreservation.html:3
 #: templates/lodgingreservation.html:3
 msgid "Canceled:"
-msgstr "रद्दः : १."
+msgstr ""
 
 #: templates/flightreservation.html:50
 #, kde-format
 msgid "Gate: %1"
-msgstr "द्वारम् : %1"
+msgstr ""
 
 #: templates/flightreservation.html:54
 #, kde-format
 msgid "Boarding: %1"
-msgstr "बोर्डिंग् : %1"
+msgstr ""
 
 #: templates/flightreservation.html:58 templates/flightreservation.html:78
 #, kde-format
 msgid "Group: %1"
-msgstr "समूहः %1"
+msgstr ""
 
 #: templates/foodestablishmentreservation.html:9
 #, kde-format
 msgid "Number Of People: %1"
-msgstr "जनानां संख्या : %1"
+msgstr ""
 
 #: templates/foodestablishmentreservation.html:12
 #: templates/taxireservation.html:2
 #, kde-format
 msgid "Reservation Number: %1"
-msgstr "आरक्षणसङ्ख्या: %1"
+msgstr ""
 
 #: templates/foodestablishmentreservation.html:15
 #: templates/taxireservation.html:4
 #, kde-format
 msgid "Under Name: %1"
-msgstr "नामस्य अधः: %1"
+msgstr ""
 
 #: templates/itinerary.html:66
 msgid "Show Calendar"
-msgstr "पञ्चाङ्गं दर्शयतु"
+msgstr ""
 
 #: templates/itinerary.html:69
 msgid "Add to Calendar"
-msgstr "पञ्चाङ्गे योजयतु"
+msgstr ""
 
 #: templates/itinerary.html:72
 msgid "Add to KDE Itinerary"
-msgstr "KDE यात्रासूचिकायां योजयन्तु"
+msgstr ""
 
 #: templates/itinerary.html:78
 msgid "Send to Device…"
-msgstr "Device इत्यत्र प्रेषयन्तु…"
+msgstr ""
 
 #: templates/location.html:4
 msgid "Show location on map"
-msgstr "नक्शे स्थानं दर्शयतु"
+msgstr ""
 
 #: templates/location.html:10
 msgid "Search address on map"
-msgstr "नक्शे पतां अन्वेष्टुम्"
+msgstr ""
 
 #: templates/lodgingreservation.html:10
 msgid "Reserved for: "
-msgstr "कृते आरक्षितम् : १. "
+msgstr ""
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format
 msgid "Class: %1"
-msgstr "वर्गः %1"
+msgstr ""
 
 #: templates/trainreservation.html:58 templates/trainreservation.html:86
 #, kde-format
 msgid "Coach: %1"
-msgstr "प्रशिक्षकः %1"
+msgstr ""

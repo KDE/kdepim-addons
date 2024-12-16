@@ -1,4 +1,4 @@
-# Sanskrit translations for kdepim-addons package.
+# Hindi translations for kdepim-addons package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
@@ -8,26 +8,25 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"PO-Revision-Date: 2024-12-15 15:58+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
-"Language: sa\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
-msgstr "\"बाह्य रचनाकारः\" प्लगिन् विन्यस्यताम्"
+msgstr ""
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:23
 #, kde-format
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
-msgstr "रचनाकारस्य स्थाने बाह्यसम्पादकस्य उपयोगं कुर्वन्तु"
+msgstr ""
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:52
 #, kde-format
@@ -37,6 +36,3 @@ msgid ""
 "replaced with the window id.<br /><b>%l</b> will be replaced with the line "
 "number."
 msgstr ""
-"<b>%f इत्यस्य</b> स्थाने सम्पादनार्थं सञ्चिकानाम स्थापितं भविष्यति ।<br /> <b>%w इत्यस्य</"
-"b> स्थाने window id इति स्थापनं भविष्यति ।<br /> <b>%l इत्यस्य</b> स्थाने रेखासङ्ख्या "
-"भविष्यति ।"

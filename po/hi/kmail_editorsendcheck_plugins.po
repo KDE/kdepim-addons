@@ -1,29 +1,26 @@
-# Sanskrit translations for kdepim-addons package.
+# Hindi translations for kdepim-addons package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
-# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:48+0530\n"
-"Last-Translator: kali <skkalwar999@gmail.com>\n"
-"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
-"Language: sa\n"
+"PO-Revision-Date: 2024-12-15 15:58+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Lokalize 24.08.2\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
-msgstr "\"स्वचालितं सम्पर्कं योजयन्तु\" प्लगिन् विन्यस्यताम्"
+msgstr ""
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:97
 #, kde-format
@@ -32,65 +29,64 @@ msgid ""
 "You must create an address book before adding a contact. Do you want to "
 "create an address book?"
 msgstr ""
-"सम्पर्कं योजयितुं पूर्वं भवद्भिः पतापुस्तकं निर्मातव्यम् । किं भवन्तः पतापुस्तकं निर्मातुम् इच्छन्ति ?"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
-msgstr "पतापुस्तिका उपलब्धा नास्ति"
+msgstr ""
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:99
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
-msgstr "पतापुस्तिका रचयन्तु"
+msgstr ""
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
-msgstr "पतापुस्तकं योजयतु"
+msgstr ""
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
-msgstr "स्वचालितं सम्पर्कं योजयतु"
+msgstr ""
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
-msgstr "यस्मिन् पतापुस्तिकायां सम्पर्काः संग्रहीतुं शक्यन्ते तत् चिनोतु:"
+msgstr ""
 
 #: checkbeforesend/checkbeforesendinterface.cpp:35
 #, kde-format
 msgid "Do you want to send the email as HTML?"
-msgstr "किं भवान् ईमेलं HTML इति प्रेषयितुम् इच्छति?"
+msgstr ""
 
 #: checkbeforesend/checkbeforesendinterface.cpp:36
 #, kde-format
 msgid "Send email as plain text"
-msgstr "साधारणपाठरूपेण ईमेल प्रेषयन्तु"
+msgstr ""
 
 #: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
-msgstr "HTML इति रूपेण प्रेषयतु"
+msgstr ""
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
 #, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
-msgstr "SMTP सर्वरं अद्यतनं कुर्वन्तु"
+msgstr ""
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Check SMTP server"
-msgstr "SMTP सर्वरं पश्यन्तु"
+msgstr ""
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
 #, kde-format
@@ -99,172 +95,171 @@ msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
 "the current identity?"
 msgstr ""
-"वर्तमानपरिचये परिभाषितस्य अपेक्षया भिन्नेन SMTP इत्यनेन सह ईमेल प्रेषयितुम् इच्छति वा?"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
-msgstr "\"मेल प्रेषणात् पूर्वं जाँचयन्तु\" प्लगिन् विन्यस्यताम्"
+msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
 #, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
-msgstr "साधारणपाठरूपेण प्रेषयतु"
+msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
-msgstr "परिचये परिभाषितस्य SMTP सर्वरस्य उपयोगं कुर्वन्तु"
+msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
-msgstr "द्वितीयक-ईमेल-सङ्केताः पश्यन्तु"
+msgstr ""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
-msgstr "प्रेषण संलग्नकं पश्यन्तु"
+msgstr ""
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
-msgstr "डुप्लिकेट् ईमेल"
+msgstr ""
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
-msgstr "एते ईमेल-पत्राणि द्वितीयकं भवन्ति । किं भवान् ईमेल प्रेषयितुम् इच्छति ?"
+msgstr ""
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
-msgstr "%1 (%2) २."
+msgstr ""
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
-msgstr "संलग्नकं पश्यन्तु"
+msgstr ""
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
-msgstr "किं भवन्तः किञ्चित् आसक्तिं प्रेषयितुम् इच्छन्ति ?"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguredialog.cpp:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
-msgstr "\"ईमेल-पतेः पुष्टयन्तु\" प्लगिन् विन्यस्यताम्"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:32
 #, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
-msgstr "स्वीकृत डोमेन नाम"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:37
 #, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
-msgstr "अस्वीकृतं डोमेननाम"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:45
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:64
 #, kde-format
 msgid "A&dd…"
-msgstr "संयोजयति…"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:46
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:65
 #, kde-format
 msgid "Re&move"
-msgstr "अपाकरोति"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:47
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "Mod&ify…"
-msgstr "Mod&ify…"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #, kde-format
 msgid "Enter new domain name:"
-msgstr "नूतनं डोमेननाम प्रविष्टं कुर्वन्तु:"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:50
 #, kde-format
 msgid "Do you want to remove this domain?"
-msgstr "किं भवान् एतत् डोमेन् अपसारयितुम् इच्छति ?"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:54
 #, kde-format
 msgid "Whitelist of Addresses"
-msgstr "पतानां श्वेतसूची"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "Enter new email address:"
-msgstr "नूतनं ईमेल-सङ्केतं प्रविशतु:"
+msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Do you want to remove this email address?"
-msgstr "किं भवान् एतत् ईमेल-सङ्केतं हर्तुं इच्छति ?"
+msgstr ""
 
 #: confirm-address/confirmaddressdialog.cpp:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
-msgstr "WhiteList मध्ये चयनित-ईमेलं योजयन्तु"
+msgstr ""
 
 #: confirm-address/confirmaddressdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
-msgstr "सम्बोधनानि पुष्टयन्तु"
+msgstr ""
 
 #: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgid "All selected emails are added to white list"
-msgstr "सर्वाणि चयनित-ईमेल-पत्राणि श्वेतसूचौ योजिताः भवन्ति"
+msgstr ""
 
 #: confirm-address/confirmaddressdialog.cpp:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
-msgstr "श्वेतसूचौ ईमेल-पत्राणि योजितानि"
+msgstr ""
 
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
-msgstr "नूतनं डोमेननाम प्रविष्टं कुर्वन्तु:"
+msgstr ""
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Value"
-msgstr "मूल्यं योजयतु"
+msgstr ""
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Value"
-msgstr "मूल्यं परिवर्तयतु"
+msgstr ""
 
 #: confirm-address/confirmaddresswidget.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
-msgstr "सम्भाव्यमानानि ईमेलपत्राणि रक्तवर्णेन प्रदर्शितानि भवन्ति:"
+msgstr ""
