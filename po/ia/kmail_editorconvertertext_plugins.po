@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:41+0000\n"
-"PO-Revision-Date: 2024-07-31 10:13+0200\n"
+"PO-Revision-Date: 2024-12-18 17:54+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -144,22 +144,22 @@ msgstr "Regula horizontal"
 #: markdown/plugin/markdowninterface.cpp:69
 #, kde-format
 msgid "Change Selected Text as Bold"
-msgstr "Cambia texto selegite como Bold (Grasse)"
+msgstr "Cambia texto seligite como Bold (Grasse)"
 
 #: markdown/plugin/markdowninterface.cpp:71
 #, kde-format
 msgid "Change Selected Text as Italic"
-msgstr "Cambia texto selegite como Italic"
+msgstr "Cambia texto seligite como Italic"
 
 #: markdown/plugin/markdowninterface.cpp:73
 #, kde-format
 msgid "Change Selected Text as Code"
-msgstr "Cambia texto selegite como Codice"
+msgstr "Cambia texto seligite como Codice"
 
 #: markdown/plugin/markdowninterface.cpp:75
 #, kde-format
 msgid "Change Selected Text as Block Quote"
-msgstr "Cambia texto selegite como Citation de Bloco"
+msgstr "Cambia texto seligite como Citation de Bloco"
 
 #: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
