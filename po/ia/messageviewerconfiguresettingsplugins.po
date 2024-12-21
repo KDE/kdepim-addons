@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-08-02 09:18+0200\n"
+"PO-Revision-Date: 2024-12-20 14:49+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -417,7 +417,7 @@ msgstr "Adde..."
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
 msgid "Disable All Check"
-msgstr "Dishabilit omne verifica"
+msgstr "Dishabilita omne marca"
 
 #: scamsettings/scamconfigureutils.cpp:17
 #, kde-format

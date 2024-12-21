@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-12-14 09:12+0530\n"
+"PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
@@ -85,7 +85,7 @@ msgstr "सम्पर्क आयात करना"
 #, kde-format
 msgctxt "@label"
 msgid "File to import:"
-msgstr "आयातार्थं सञ्चिका : १."
+msgstr "आयातार्थं सञ्चिका :"
 
 #: csv/import/csvimportdialog.cpp:302
 #, kde-format
@@ -236,7 +236,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text quote:"
-msgstr "पाठोद्धरणम् : १."
+msgstr "पाठोद्धरणम् :"
 
 #: csv/import/csvimportdialog.cpp:369
 #, kde-format
@@ -279,7 +279,7 @@ msgstr "न कश्चित्"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
-msgstr "तिथिस्वरूपम् : १."
+msgstr "तिथिस्वरूपम् :"
 
 #: csv/import/csvimportdialog.cpp:390
 #, kde-kuit-format
@@ -324,7 +324,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text codec:"
-msgstr "पाठकोडेक् : १."
+msgstr "पाठकोडेक् :"
 
 #: csv/import/csvimportdialog.cpp:423
 #, kde-format
@@ -378,7 +378,7 @@ msgstr "टेम्पलेट सहेजें…"
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Local (%1)"
-msgstr "स्थानीय (%1) ९."
+msgstr "स्थानीय (%1)"
 
 #: csv/import/csvimportdialog.cpp:471
 #, kde-format

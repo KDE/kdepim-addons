@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -66,7 +66,7 @@ msgstr "विन्यस्तं कुर्वन्तु"
 #: dkim-verify/dkimadvancedwidget.cpp:43
 #, kde-format
 msgid "Authentication Server verified:"
-msgstr "प्रमाणीकरणसर्वरः सत्यापितः : १."
+msgstr "प्रमाणीकरणसर्वरः सत्यापितः :"
 
 #: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
 #, kde-format
@@ -77,7 +77,7 @@ msgstr "प्रमाणीकरणं सत्यापितं सर्�
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
 #, kde-format
 msgid "New Server:"
-msgstr "नूतनः सर्वरः : १."
+msgstr "नूतनः सर्वरः :"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
 #, kde-format
@@ -92,7 +92,7 @@ msgstr "सर्वर परिवर्तनं कुर्वन्तु"
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
 #, kde-format
 msgid "Server:"
-msgstr "सर्वरः : १."
+msgstr "सर्वरः :"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
 #, kde-format
@@ -293,7 +293,7 @@ msgstr "सक्षमम्"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
 msgid "Server Name:"
-msgstr "सर्वरनाम : १."
+msgstr "सर्वरनाम :"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, kde-format
@@ -313,12 +313,12 @@ msgstr ""
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:53
 #, kde-format
 msgid "Command line:"
-msgstr "आदेशपङ्क्तिः : १."
+msgstr "आदेशपङ्क्तिः :"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:63
 #, kde-format
 msgid "Executable:"
-msgstr "निष्पादनीयः : १."
+msgstr "निष्पादनीयः :"
 
 #: openurlwith/openurlwithconfiguredialog.cpp:25
 #, kde-format

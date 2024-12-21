@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-26 00:46+0000\n"
-"PO-Revision-Date: 2024-12-19 21:41+0530\n"
+"PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
 #, kde-format
 msgid "[vCard]"
-msgstr "[vCard] ९."
+msgstr "[vCard]"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:75
 #: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:164
@@ -107,7 +107,7 @@ msgstr "एमडीएन To: "
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:200
 #, kde-format
 msgid "Spam Status:"
-msgstr "स्पैम स्थितिः : १."
+msgstr "स्पैम स्थितिः :"
 
 #: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:22
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "शीर्षकस्य सूचीं आडम्बरपूर�
 #: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:190
 #, kde-format
 msgid "Attachments:"
-msgstr "संलग्नकाः : १."
+msgstr "संलग्नकाः :"
 
 #: longheaderstyleplugin/longheaderstyleinterface.cpp:22
 #, kde-format

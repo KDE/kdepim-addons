@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -120,7 +120,7 @@ msgstr "भवन्तं कैलेण्डर् Event निर्मा�
 #, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
-msgstr "कार्यम् : १."
+msgstr "कार्यम् :"
 
 #: createtodoplugin/todoedit.cpp:80
 #, kde-format
@@ -214,7 +214,7 @@ msgstr "स्क्रिप्ट् परिवर्तनं कुर्�
 #, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
-msgstr "बाह्यलिपिः : १."
+msgstr "बाह्यलिपिः :"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "आदेशतर्कं योजयन्तु…"
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
 msgid "Command Line:"
-msgstr "आदेशपङ्क्तिः : १."
+msgstr "आदेशपङ्क्तिः :"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
 #, kde-format
@@ -279,7 +279,7 @@ msgstr ""
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format
 msgid "Executable:"
-msgstr "निष्पादनीयः : १."
+msgstr "निष्पादनीयः :"
 
 #: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
 #, kde-format
