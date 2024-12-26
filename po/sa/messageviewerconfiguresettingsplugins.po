@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-12-20 21:52+0530\n"
-"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"PO-Revision-Date: 2024-12-25 19:45+0530\n"
+"Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
@@ -213,7 +213,7 @@ msgstr "Expiry Account Trash Folder विन्यस्यताम्"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Folder Settings"
-msgstr "फोल्डर् सेटिंग्स् विन्यस्तं कुर्वन्तु"
+msgstr "समुच्चय सेटिंग्स् विन्यस्तं कुर्वन्तु"
 
 #: foldersettings/folderconfiguresettingspagebase.cpp:17
 #, kde-format
@@ -246,7 +246,7 @@ msgstr "प्रत्येकस्य चयनितपुटस्य स�
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Folder Settings"
-msgstr "फोल्डर् सेटिंग्स् रक्षतु"
+msgstr "समुच्चय सेटिंग्स् रक्षतु"
 
 #: foldersettings/folderconfiguretreewidget.cpp:52
 #, kde-format

@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-08 00:40+0000\n"
-"PO-Revision-Date: 2024-12-20 21:52+0530\n"
-"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"PO-Revision-Date: 2024-12-25 19:45+0530\n"
+"Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
@@ -59,13 +59,13 @@ msgstr "पुटस्य निर्माणकाले त्रुटि�
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Folder…"
-msgstr "फोल्डर् रचयन्तु…"
+msgstr "समुच्चय रचयन्तु…"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
-msgstr "IMAP फोल्डर् चिनोतु"
+msgstr "IMAP समुच्चय चिनोतु"
 
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:37
 #, kde-format
@@ -118,16 +118,16 @@ msgstr "पुटं लोड् करणस्य समये त्रु�
 #, kde-format
 msgctxt "@title:window"
 msgid "Load Folders"
-msgstr "फोल्डर् लोड् कुर्वन्तु"
+msgstr "समुच्चय लोड् कुर्वन्तु"
 
 #: imapfoldercompletion/selectimapwidget.cpp:31
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
-msgstr "IMAP फोल्डर् चिनोतु"
+msgstr "IMAP समुच्चय चिनोतु"
 
 #: imapfoldercompletion/selectimapwidget.cpp:58
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
-msgstr "फोल्डर् चयनार्थं बटनं क्लिक् कुर्वन्तु…"
+msgstr "समुच्चय चयनार्थं बटनं क्लिक् कुर्वन्तु…"
