@@ -161,6 +161,6 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
     t->render(&s, &c);
     qobject_cast<GrantleeTheme::Engine *>(const_cast<KTextTemplate::Engine *>(t->engine()))
         ->localizer()
-        ->setApplicationDomain(QByteArrayLiteral("libmessageviewer"));
+        ->setApplicationDomain(QByteArrayLiteral("libmessageviewer6"));
     return false; // yes, false, we want the rest of the email rendered normally after this
 }
