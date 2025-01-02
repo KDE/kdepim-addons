@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2024 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2025 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 # convenience macro to add qtest unit tests
 add_definitions(-DHEADER_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")

@@ -4,7 +4,7 @@
   SPDX-FileCopyrightText: 2004 Cornelius Schumacher <schumacher@kde.org>
   SPDX-FileCopyrightText: 2007 Volker Krause <vkrause@kde.org>
   SPDX-FileCopyrightText: 2010 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.net>
-  SPDX-FileCopyrightText: 2017-2024 Laurent Montel <montel@kde.org>
+  SPDX-FileCopyrightText: 2017-2025 Laurent Montel <montel@kde.org>
 
   SPDX-License-Identifier: GPL-2.0-or-later
 */

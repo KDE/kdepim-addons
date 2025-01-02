@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2018-2024 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2018-2025 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
 set(markdown_gui_SRCS main.cpp markdowndemowidget.cpp markdowndemowidget.h markdown_gui.qrc)

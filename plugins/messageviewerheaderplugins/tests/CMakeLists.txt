@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2024 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2025 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 add_executable(headerstylemenu_gui headerstylemenu_gui.cpp)
 target_link_libraries(headerstylemenu_gui
