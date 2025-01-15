@@ -4,6 +4,8 @@ kcoreaddons_add_plugin(kmail_checkfoldersizeaccount INSTALL_NAMESPACE pim6/kmail
 target_sources(kmail_checkfoldersizeaccount PRIVATE
     checkfoldersizeaccountplugin.cpp
     checkfoldersizeaccountplugin.h
+    checkfoldersizeaccountplugininterface.h
+    checkfoldersizeaccountplugininterface.cpp
 )
 
 ecm_qt_declare_logging_category(kmail_checkfoldersizeaccount
