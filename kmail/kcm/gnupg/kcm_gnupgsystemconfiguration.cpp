@@ -55,3 +55,5 @@ void GnuPGSystemConfigurationModule::defaults()
 }
 
 #include "kcm_gnupgsystemconfiguration.moc"
+
+#include "moc_kcm_gnupgsystemconfiguration.cpp"
