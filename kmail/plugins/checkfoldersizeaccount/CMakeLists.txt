@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 kcoreaddons_add_plugin(kmail_checkfoldersizeaccount INSTALL_NAMESPACE pim6/kmail/mainview)
 target_sources(kmail_checkfoldersizeaccount PRIVATE
+    checkfoldersizeaccountplugin.cpp
+    checkfoldersizeaccountplugin.h
 )
 
 ecm_qt_declare_logging_category(kmail_checkfoldersizeaccount
