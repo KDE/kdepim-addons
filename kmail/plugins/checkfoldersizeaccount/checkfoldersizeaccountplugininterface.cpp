@@ -6,6 +6,10 @@
 
 #include "checkfoldersizeaccountplugininterface.h"
 
+#include <KActionCollection>
+#include <KLocalizedString>
+#include <QAction>
+
 CheckFolderSizeAccountPluginInterface::CheckFolderSizeAccountPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface{parent}
 {
@@ -20,5 +24,14 @@ void CheckFolderSizeAccountPluginInterface::exec()
 
 void CheckFolderSizeAccountPluginInterface::createAction(KActionCollection *ac)
 {
-    // TODO
+    auto action = new QAction(i18nc("@action", "&Show Folders Size…"), this);
+    ac->addAction(QStringLiteral("showfoldersize"), action);
+    connect(action, &QAction::triggered, this, &CheckFolderSizeAccountPluginInterface::slotActivated);
+    PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
+    addActionType(type);
+}
+
+void CheckFolderSizeAccountPluginInterface::slotActivated()
+{
+    Q_EMIT emitPluginActivated(this);
 }

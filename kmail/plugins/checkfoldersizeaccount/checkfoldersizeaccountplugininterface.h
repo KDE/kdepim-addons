@@ -16,4 +16,7 @@ public:
 
     void exec() override;
     void createAction(KActionCollection *ac) override;
+
+private:
+    void slotActivated();
 };
