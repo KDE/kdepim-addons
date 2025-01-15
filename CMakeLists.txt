@@ -194,7 +194,7 @@ endif()
 
 configure_file(config-kdepim-addons.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h)
 
-find_package(KLLMCore ${KLLMCORE_VERSION})
+find_package(KLLMCore ${KLLMCORE_VERSION} CONFIG)
 set_package_properties(KLLMCore PROPERTIES
     TYPE OPTIONAL
     PURPOSE "Required for building IA plugins support"
