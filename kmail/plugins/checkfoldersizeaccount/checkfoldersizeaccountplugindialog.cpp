@@ -5,6 +5,9 @@
 */
 
 #include "checkfoldersizeaccountplugindialog.h"
+#include <KLocalizedString>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
 CheckFolderSizeAccountPluginDialog::CheckFolderSizeAccountPluginDialog(QWidget *parent)
     : QDialog(parent)

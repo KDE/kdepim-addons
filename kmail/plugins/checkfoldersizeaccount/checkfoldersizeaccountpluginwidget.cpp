@@ -5,6 +5,8 @@
 */
 
 #include "checkfoldersizeaccountpluginwidget.h"
+#include <KLocalizedString>
+#include <QVBoxLayout>
 
 CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *parent)
     : QWidget{parent}
