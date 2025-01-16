@@ -12,3 +12,5 @@ CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *
 }
 
 CheckFolderSizeAccountPluginWidget::~CheckFolderSizeAccountPluginWidget() = default;
+
+#include "moc_checkfoldersizeaccountpluginwidget.cpp"
