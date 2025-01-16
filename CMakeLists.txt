@@ -239,7 +239,7 @@ set_package_properties("discount" PROPERTIES
         PURPOSE "Generate Markdown file.")
 
 if(discount_FOUND)
-   if(${PC_LIBMARKDOWN_VERSION})
+   if(DEFINED PC_LIBMARKDOWN_VERSION)
       if(${PC_LIBMARKDOWN_VERSION} VERSION_GREATER "2.2.5")
            set(DISCOUNT_HAS_HIGHLIGHTING_SUPPORT TRUE)
            message(STATUS "Discount ${PC_LIBMARKDOWN_VERSION}: has highlighting support")
