@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-01-16 00:41+0000\n"
 "PO-Revision-Date: 2017-02-04 11:09+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -92,6 +92,12 @@ msgstr "Sprievodca kontrolou spamu"
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Sprievodca nastavením antivirovej podpory"
+
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
+#, kde-format
+msgctxt "@action"
+msgid "&Show Folders Size…"
+msgstr ""
 
 #: common/antispamwizard.cpp:88
 #, fuzzy, kde-format

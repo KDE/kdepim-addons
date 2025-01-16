@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-01-16 00:41+0000\n"
 "PO-Revision-Date: 2024-07-31 10:14+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -93,6 +93,12 @@ msgstr "Assistente &Anti-Spam..."
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Assistente &Anti-Virus..."
+
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
+#, kde-format
+msgctxt "@action"
+msgid "&Show Folders Size…"
+msgstr ""
 
 #: common/antispamwizard.cpp:88
 #, kde-format

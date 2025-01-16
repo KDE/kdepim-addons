@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-01-16 00:41+0000\n"
 "PO-Revision-Date: 2022-11-11 11:18+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -99,6 +99,12 @@ msgstr "Antispam bələdçisi"
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Antivirus bələdçisi"
+
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
+#, kde-format
+msgctxt "@action"
+msgid "&Show Folders Size…"
+msgstr ""
 
 #: common/antispamwizard.cpp:88
 #, fuzzy, kde-format
