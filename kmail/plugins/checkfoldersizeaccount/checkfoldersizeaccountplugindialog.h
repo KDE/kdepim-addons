@@ -8,11 +8,14 @@
 
 #include <QDialog>
 #include <QObject>
-
+class CheckFolderSizeAccountPluginWidget;
 class CheckFolderSizeAccountPluginDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit CheckFolderSizeAccountPluginDialog(QWidget *parent = nullptr);
     ~CheckFolderSizeAccountPluginDialog() override;
+
+private:
+    CheckFolderSizeAccountPluginWidget *const mCheckFolderSizeAccountPluginWidget;
 };
