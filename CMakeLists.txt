@@ -203,7 +203,7 @@ set_package_properties(KLLMCore PROPERTIES
 )
 
 # For adblocker
-find_package(Corrosion)
+find_package(Corrosion CONFIG)
 set_package_properties(Corrosion PROPERTIES
     TYPE RECOMMENDED
     PURPOSE "Required to build the builtin adblocker"
@@ -231,7 +231,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 set(QTCREATOR_TEMPLATE_INSTALL_DIR ${KDE_INSTALL_DATADIR}/qtcreator/templates CACHE PATH "Define qtcreator template install path (default is /usr/share/qtcreator/templates)")
 
-find_package(Discount "2")
+find_package(Discount "2" MODULE)
 set_package_properties("discount" PROPERTIES
         DESCRIPTION "A library that gives you formatting functions suitable for marking down entire documents or lines of text"
         URL "https://www.pell.portland.or.us/~orc/Code/discount/"
