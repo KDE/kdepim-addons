@@ -15,7 +15,7 @@ CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    // TODO
+    // TODO a list of folder => show size (work only on imap and co)
 }
 
 CheckFolderSizeAccountPluginWidget::~CheckFolderSizeAccountPluginWidget() = default;

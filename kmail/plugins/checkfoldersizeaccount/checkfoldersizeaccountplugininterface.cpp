@@ -5,6 +5,7 @@
 */
 
 #include "checkfoldersizeaccountplugininterface.h"
+#include "checkfoldersizeaccountplugindialog.h"
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -19,7 +20,8 @@ CheckFolderSizeAccountPluginInterface::~CheckFolderSizeAccountPluginInterface() 
 
 void CheckFolderSizeAccountPluginInterface::exec()
 {
-    // TODO
+    CheckFolderSizeAccountPluginDialog dlg(parentWidget());
+    dlg.exec();
 }
 
 void CheckFolderSizeAccountPluginInterface::createAction(KActionCollection *ac)
