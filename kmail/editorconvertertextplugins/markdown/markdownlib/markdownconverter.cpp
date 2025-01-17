@@ -97,12 +97,6 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     const int size = mkd_document(markdownHandle, &htmlDocument);
 
     const QString html = QString::fromUtf8(htmlDocument, size);
-#if 0 // CSS ?
-    char *cssDocument;
-    const int cssSize = mkd_css(markdownHandle, &cssDocument);
-
-    const QString css = QString::fromUtf8(cssDocument, cssSize);
-#endif
 
     mkd_cleanup(markdownHandle);
     return html;
