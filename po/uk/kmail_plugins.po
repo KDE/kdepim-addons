@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2017, 2019, 2021, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2017, 2019, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:41+0000\n"
-"PO-Revision-Date: 2024-07-30 09:53+0300\n"
+"POT-Creation-Date: 2025-01-17 00:41+0000\n"
+"PO-Revision-Date: 2025-01-16 08:52+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -96,11 +96,19 @@ msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "М&айстер блокування вірусів…"
 
+#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:19
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "&Show Folders Size…"
+msgctxt "@title:window"
+msgid "Check Folder Size"
+msgstr "&Показати розмір тек…"
+
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
-msgstr ""
+msgstr "&Показати розмір тек…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format

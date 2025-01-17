@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2015.
-# Javier Vinal <fjvinal@gmail.com>, 2016, 2017.
-# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2015 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2016, 2017 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:41+0000\n"
-"PO-Revision-Date: 2024-07-30 16:34+0200\n"
+"POT-Creation-Date: 2025-01-17 00:41+0000\n"
+"PO-Revision-Date: 2025-01-16 07:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -95,11 +95,19 @@ msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "&Asistente antivirus..."
 
+#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:19
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "&Show Folders Size…"
+msgctxt "@title:window"
+msgid "Check Folder Size"
+msgstr "Mo&strar el tamaño de las carpetas..."
+
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
-msgstr ""
+msgstr "Mo&strar el tamaño de las carpetas..."
 
 #: common/antispamwizard.cpp:88
 #, kde-format

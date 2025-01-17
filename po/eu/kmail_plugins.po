@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:41+0000\n"
+"POT-Creation-Date: 2025-01-17 00:41+0000\n"
 "PO-Revision-Date: 2024-08-04 10:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -95,6 +95,12 @@ msgstr "Spamaren &aurkako morroia..."
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Birusen &aurkako morroia..."
+
+#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:19
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Folder Size"
+msgstr ""
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
 #, kde-format
