@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-30 10:09+0300\n"
+"POT-Creation-Date: 2025-01-18 00:42+0000\n"
+"PO-Revision-Date: 2025-01-17 09:49+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
 #, kde-format
@@ -98,13 +98,13 @@ msgstr "אשף מניעת &וירוסים…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
-msgstr ""
+msgstr "בדיקת גודל התיקייה"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:29
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
-msgstr ""
+msgstr "הצגת &גודלי התיקיות…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format

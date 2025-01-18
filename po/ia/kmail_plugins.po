@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2017, 2020, 2021, 2022, 2023, 2024 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2017, 2020, 2021, 2022, 2023, 2024, 2025 giovanni <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-31 10:14+0200\n"
+"POT-Creation-Date: 2025-01-18 00:42+0000\n"
+"PO-Revision-Date: 2025-01-17 12:20+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -98,13 +98,13 @@ msgstr "Assistente &Anti-Virus..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
-msgstr ""
+msgstr "Verifica grandor de dossier"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:29
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
-msgstr ""
+msgstr "Mon&stra Grandor de Dossieres..."
 
 #: common/antispamwizard.cpp:88
 #, kde-format

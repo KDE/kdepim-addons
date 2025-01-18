@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 00:41+0000\n"
-"PO-Revision-Date: 2025-01-16 08:52+0200\n"
+"POT-Creation-Date: 2025-01-18 00:42+0000\n"
+"PO-Revision-Date: 2025-01-17 09:57+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -97,14 +97,12 @@ msgid "&Anti-Virus Wizard…"
 msgstr "М&айстер блокування вірусів…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:19
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "&Show Folders Size…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
-msgstr "&Показати розмір тек…"
+msgstr "Перевірка розміру тек"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:29
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"

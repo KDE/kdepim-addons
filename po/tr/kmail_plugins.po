@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 00:41+0000\n"
-"PO-Revision-Date: 2025-01-16 15:53+0300\n"
+"POT-Creation-Date: 2025-01-18 00:42+0000\n"
+"PO-Revision-Date: 2025-01-17 14:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -95,14 +95,12 @@ msgid "&Anti-Virus Wizard…"
 msgstr "&Antivirüs Sihirbazı…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:19
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "&Show Folders Size…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
-msgstr "&Klasörlerin Boyutlarını Göster…"
+msgstr "Klasör Boyutunu Denetle"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:27
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:29
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
