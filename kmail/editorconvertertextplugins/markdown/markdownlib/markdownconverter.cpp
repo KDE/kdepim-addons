@@ -37,6 +37,12 @@ char *external_codefmt(const char *src, int, void *)
     return qstrdup(ba.data());
 }
 
+void callback_free(char *input, int size, void *ctx)
+{
+    if (input)
+        free(input);
+}
+
 #endif
 
 MarkdownConverter::MarkdownConverter(QObject *parent)
@@ -53,7 +59,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     }
     const QByteArray textArray = str.toUtf8();
 #if defined(MKD_NOLINKS)
-    // on discount 2 MKD_NOLINKS is a define
+    // Discount 2.x, MKD_NOLINKS is a define
     MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.size(), 0);
     mkd_flag_t flags = MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK | MKD_EXTRA_FOOTNOTE;
     if (mEnableEmbeddedLabel) {
@@ -71,8 +77,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
         return {};
     }
 #else
-    // on discount 2 MKD_NOLINKS is a define
-
+    // Discount 3.x
     MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.size(), nullptr);
     mkd_flag_t *flags = mkd_flags();
     mkd_set_flag_bitmap(flags, MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK);
@@ -83,7 +88,11 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
         mkd_set_flag_num(flags, MKD_DLEXTRA);
     }
 #if DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
+#if DISCOUNT_NEW_HIGHLIGHTING_SIGNATURE
+    mkd_e_code_format(markdownHandle, external_codefmt, callback_free, nullptr);
+#else
     mkd_e_code_format(markdownHandle, external_codefmt);
+#endif
 #endif
     if (!mkd_compile(markdownHandle, flags)) {
         Q_EMIT failed(i18n("Failed to compile the Markdown document."));
