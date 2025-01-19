@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-01-19 00:41+0000\n"
 "PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -37,8 +37,8 @@ msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "PHP Markdown अतिरिक्तपरिभाषासूचिकाः सक्षमाः कुर्वन्तु"
 
-#: markdown/markdownlib/markdownconverter.cpp:69
-#: markdown/markdownlib/markdownconverter.cpp:89
+#: markdown/markdownlib/markdownconverter.cpp:75
+#: markdown/markdownlib/markdownconverter.cpp:98
 #, kde-format
 msgid "Failed to compile the Markdown document."
 msgstr "Markdown दस्तावेजस्य संकलनं कर्तुं असफलम् ।"

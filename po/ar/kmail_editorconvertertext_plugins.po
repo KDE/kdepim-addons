@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-01-19 00:41+0000\n"
 "PO-Revision-Date: 2024-08-15 11:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -37,8 +37,8 @@ msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "مكن قوائم تعريف مارك‌داون بي اتش بي الإضافية"
 
-#: markdown/markdownlib/markdownconverter.cpp:69
-#: markdown/markdownlib/markdownconverter.cpp:89
+#: markdown/markdownlib/markdownconverter.cpp:75
+#: markdown/markdownlib/markdownconverter.cpp:98
 #, kde-format
 msgid "Failed to compile the Markdown document."
 msgstr "فشل في تصيير مستند مارك داون"

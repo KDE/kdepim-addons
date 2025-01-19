@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorconvertertext_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-01-19 00:41+0000\n"
 "PO-Revision-Date: 2024-08-01 16:09+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -37,8 +37,8 @@ msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "Activer les listes de définitions additionnelles pour « Markdown PHP »"
 
-#: markdown/markdownlib/markdownconverter.cpp:69
-#: markdown/markdownlib/markdownconverter.cpp:89
+#: markdown/markdownlib/markdownconverter.cpp:75
+#: markdown/markdownlib/markdownconverter.cpp:98
 #, kde-format
 msgid "Failed to compile the Markdown document."
 msgstr "Impossible de compiler le document Markdown."
