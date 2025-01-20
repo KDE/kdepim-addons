@@ -32,7 +32,7 @@ msgstr "展开 URL"
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr ""
+msgstr "翻译..."
 
 #: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "保存(&S)"
 #, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
-msgstr ""
+msgstr "打开编辑器...(&E)"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "关闭创建新事件的部件。"
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
 #, kde-format
 msgid "Create Event…"
-msgstr ""
+msgstr "创建事件..."
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -194,7 +194,7 @@ msgstr "配置“外部脚本”插件"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
-msgstr ""
+msgstr "添加脚本..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -206,7 +206,7 @@ msgstr "移除脚本"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
-msgstr ""
+msgstr "修改脚本..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -245,7 +245,7 @@ msgstr "描述："
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
-msgstr ""
+msgstr "添加命令参数..."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -256,7 +256,7 @@ msgstr "命令行："
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"whatsthis1\">参数格式信息...</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format

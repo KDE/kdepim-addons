@@ -458,7 +458,7 @@ msgstr "打开附件"
 #: text_calendar.cpp:1342
 #, kde-format
 msgid "Save Attachment As…"
-msgstr ""
+msgstr "将附件另存为..."
 
 #: text_calendar.cpp:1358
 #, kde-format
@@ -478,7 +478,7 @@ msgstr "接受反对意见"
 #: text_calendar.cpp:1364
 #, kde-format
 msgid "Create a counter proposal…"
-msgstr ""
+msgstr "创建反对意见..."
 
 #: text_calendar.cpp:1366
 #, kde-format
@@ -503,7 +503,7 @@ msgstr "拒绝反对意见"
 #: text_calendar.cpp:1374
 #, kde-format
 msgid "Check my calendar…"
-msgstr ""
+msgstr "检查我的日历..."
 
 #: text_calendar.cpp:1376
 #, kde-format

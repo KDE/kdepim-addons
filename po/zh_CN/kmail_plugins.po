@@ -27,7 +27,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr ""
+msgstr "Akonadi 清理..."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
 #, kde-format
@@ -51,7 +51,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr ""
+msgstr "Akonadi 文件系统检查..."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
 #, kde-format
@@ -79,19 +79,19 @@ msgstr ""
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
 msgid "Start…"
-msgstr ""
+msgstr "开始..."
 
 #: antispamplugin/antispamplugininterface.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr ""
+msgstr "反垃圾向导...(&A)"
 
 #: antivirusplugin/antivirusplugininterface.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr ""
+msgstr "反病毒向导...(&A)"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
@@ -172,7 +172,7 @@ msgstr "非垃圾邮件"
 #: common/antispamwizard.cpp:456
 #, kde-format
 msgid "Scanning for %1…"
-msgstr ""
+msgstr "正在扫描 %1 ..."
 
 #: common/antispamwizard.cpp:500
 #, kde-format
@@ -422,7 +422,7 @@ msgstr "附件："
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "添加...(&D)"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format

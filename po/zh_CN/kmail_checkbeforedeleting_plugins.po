@@ -125,7 +125,7 @@ msgstr "主题为“%1”的信件是“%2”"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr ""
+msgstr "新建规则..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
 #, kde-format
@@ -137,7 +137,7 @@ msgstr "删除规则"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr ""
+msgstr "修改规则..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
 #, kde-format
@@ -152,12 +152,12 @@ msgstr "表达式"
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
 #, kde-format
 msgid "Add Rule…"
-msgstr ""
+msgstr "新建规则..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
 #, kde-format
 msgid "Edit Rule…"
-msgstr ""
+msgstr "编辑规则..."
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
 #, kde-format

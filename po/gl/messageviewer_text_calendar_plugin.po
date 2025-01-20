@@ -1,6 +1,6 @@
 # translation of kmail_text_calendar_plugin.po to Galician
 #
-# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2024, 2025 Adrián Chaves (Gallaecio)
 # Xabi G. Feal <xabigf@gmx.net>, 2006, 2008.
 # mvillarino <mvillarino@users.sourceforge.net>, 2008.
 # Miguel Branco <mgl.branco@gmail.com>, 2008.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-12-08 11:10+0100\n"
+"PO-Revision-Date: 2025-01-19 12:35+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -491,6 +491,7 @@ msgstr "Aceptar a contraproposta"
 msgid "Create a counter proposal…"
 msgstr "Crear unha contraproposta…"
 
+# skip-rule: trasno-undo_reverse
 #: text_calendar.cpp:1366
 #, kde-format
 msgid "Throw mail away"
