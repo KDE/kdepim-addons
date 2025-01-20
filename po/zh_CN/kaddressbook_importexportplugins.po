@@ -21,7 +21,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Export CSV file…"
-msgstr ""
+msgstr "导出 CSV 文件..."
 
 #: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "导出联系人为以逗号分隔各条目的文件(CSV)。"
 #: csv/csvimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Import CSV file…"
-msgstr ""
+msgstr "导入 CSV 文件..."
 
 #: csv/csvimportexportplugininterface.cpp:43
 #, kde-format
@@ -352,13 +352,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
-msgstr ""
+msgstr "应用模板..."
 
 #: csv/import/csvimportdialog.cpp:449
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
-msgstr ""
+msgstr "保存模板..."
 
 #: csv/import/csvimportdialog.cpp:470
 #, kde-format
@@ -451,7 +451,7 @@ msgstr "GMX 地址簿文件(*.gmxa)"
 #: gmx/gmximportexportplugininterface.cpp:40
 #, kde-format
 msgid "Import GMX file…"
-msgstr ""
+msgstr "导入 GMX 文件..."
 
 #: gmx/gmximportexportplugininterface.cpp:41
 #, kde-format
@@ -461,7 +461,7 @@ msgstr "从 GMX 地址簿文件导入联系人。"
 #: gmx/gmximportexportplugininterface.cpp:46
 #, kde-format
 msgid "Export GMX file…"
-msgstr ""
+msgstr "导出 GMX 文件..."
 
 #: gmx/gmximportexportplugininterface.cpp:47
 #, kde-format
@@ -483,7 +483,7 @@ msgstr "%1 不是一个 GMX 地址簿文件。"
 #: ldap/ldapimportexportplugininterface.cpp:25
 #, kde-format
 msgid "Import From LDAP server…"
-msgstr ""
+msgstr "从 LDAP 服务器导入..."
 
 #: ldap/ldapimportexportplugininterface.cpp:26
 #, kde-format
@@ -493,7 +493,7 @@ msgstr "从 LDAP 服务器导入联系人。"
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Import LDIF file…"
-msgstr ""
+msgstr "导入 LDIF 文件..."
 
 #: ldif/ldifimportexportplugininterface.cpp:37
 #, kde-format
@@ -503,7 +503,7 @@ msgstr "从 LDIF 文件导入联系人。"
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Export LDIF file…"
-msgstr ""
+msgstr "导出 LDIF 文件..."
 
 #: ldif/ldifimportexportplugininterface.cpp:43
 #, kde-format
@@ -671,12 +671,12 @@ msgstr "您真的想要将此联系人导入到您的地址簿中吗？"
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
-msgstr ""
+msgstr "导入全部..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard…"
-msgstr ""
+msgstr "导入 vCard..."
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -691,12 +691,12 @@ msgstr "导出联系人为 vCard 4.0 文件。"
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
 msgid "Export vCard 4.0…"
-msgstr ""
+msgstr "导出 vCard 4.0 文件..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
 #, kde-format
 msgid "Export vCard 3.0…"
-msgstr ""
+msgstr "导出 vCard 3.0 文件..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
@@ -706,7 +706,7 @@ msgstr "导出联系人为 vCard 3.0 文件。"
 #: vcards/vcardimportexportplugininterface.cpp:64
 #, kde-format
 msgid "Export vCard 2.1…"
-msgstr ""
+msgstr "导出 vCard 2.1 文件..."
 
 #: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
@@ -759,7 +759,7 @@ msgstr "导出到若干文件"
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, kde-format
 msgid "Import Windows Contact file…"
-msgstr ""
+msgstr "导入 Windows Contact 文件..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
 #, kde-format

@@ -39,12 +39,12 @@ msgstr "URL"
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "添加..."
 
 #: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
 msgid "Modify…"
-msgstr ""
+msgstr "修改..."
 
 #: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
@@ -76,7 +76,7 @@ msgstr "移除列表"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "搜索..."
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format

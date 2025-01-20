@@ -136,7 +136,7 @@ msgstr "添加到 KDE 行程"
 
 #: templates/itinerary.html:78
 msgid "Send to Device…"
-msgstr ""
+msgstr "发送到设备..."
 
 #: templates/location.html:4
 msgid "Show location on map"

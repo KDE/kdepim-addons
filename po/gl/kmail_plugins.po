@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-18 00:42+0000\n"
-"PO-Revision-Date: 2025-01-17 07:24+0100\n"
+"PO-Revision-Date: 2025-01-19 11:12+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -101,7 +101,7 @@ msgstr "Asistente &anti-virus…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
-msgstr ""
+msgstr "Comprobar o tamaño do cartafol"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:29
 #, kde-format

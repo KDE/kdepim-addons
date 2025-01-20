@@ -286,7 +286,7 @@ msgstr "编辑"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
-msgstr ""
+msgstr "已启用"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
@@ -297,7 +297,7 @@ msgstr "服务器名："
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"whatsthis1\">参数格式信息...</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -328,7 +328,7 @@ msgstr "配置打开 URL 方式插件"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr ""
+msgstr "新建规则..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
@@ -340,18 +340,18 @@ msgstr "移除规则"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr ""
+msgstr "修改规则..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr ""
+msgstr "主机规则已添加。"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
-msgstr ""
+msgstr "主机已检查"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
@@ -379,12 +379,12 @@ msgstr "移除规则"
 #: openurlwith/openurlwithconfigurewidget.cpp:224
 #, kde-format
 msgid "Add Rule…"
-msgstr ""
+msgstr "新建规则..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
 #, kde-format
 msgid "Edit Rule…"
-msgstr ""
+msgstr "编辑规则..."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -401,7 +401,7 @@ msgstr "配置垃圾邮件设置"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "添加..."
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format

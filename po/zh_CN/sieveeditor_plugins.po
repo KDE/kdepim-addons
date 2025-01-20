@@ -21,12 +21,12 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
-msgstr ""
+msgstr "点击按钮选择联系人..."
 
 #: emaillineedit/emaillineedit.cpp:37
 #, kde-format
 msgid "…"
-msgstr ""
+msgstr "..."
 
 #: emaillineedit/emaillineedit.cpp:39
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "创建文件夹时出现错误：%1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Folder…"
-msgstr ""
+msgstr "创建文件夹..."
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
@@ -73,13 +73,13 @@ msgstr "无法加载文件夹列表"
 #: imapfoldercompletion/selectimapfoldertreeview.cpp:40
 #, kde-format
 msgid "Loading in progress…"
-msgstr ""
+msgstr "正在加载..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:42
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "搜索..."
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:48
 #, kde-format
@@ -128,4 +128,4 @@ msgstr "选择 IMAP 文件夹"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
-msgstr ""
+msgstr "点击按钮选择文件夹..."
