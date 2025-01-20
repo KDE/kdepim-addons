@@ -26,6 +26,7 @@
         "Description[tr]": "GnuPG Sistemi seçeneklerinin yapılandırması",
         "Description[uk]": "Налаштування параметрів системи GnuPG",
         "Description[x-test]": "xxConfiguration of GnuPG System optionsxx",
+        "Description[zh_CN]": "GnuPG 系统选项的配置",
         "Description[zh_TW]": "設定 GnuPG 系統選項",
         "Icon": "document-encrypt",
         "Name": "GnuPG System",
@@ -54,6 +55,7 @@
         "Name[tr]": "GnuPG Sistemi",
         "Name[uk]": "Система GnuPG",
         "Name[x-test]": "xxGnuPG Systemxx",
+        "Name[zh_CN]": "GnuPG 系统",
         "Name[zh_TW]": "GnuPG 系統"
     },
     "NoDisplay": "false"

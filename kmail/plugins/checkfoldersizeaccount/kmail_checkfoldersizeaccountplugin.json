@@ -25,6 +25,7 @@
         "Description[tr]": "Bu eklenti, klasör boyutlarını denetlemenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти розмір тек.",
         "Description[x-test]": "xxThis plugin allows you to check folders size.xx",
+        "Description[zh_CN]": "此插件能让您检查文件夹大小。",
         "Description[zh_TW]": "這個外掛程式讓您查看資料夾大小。",
         "EnabledByDefault": false,
         "Name": "Folder Size Check",
@@ -53,6 +54,7 @@
         "Name[tr]": "Klasör Boyutu Denetimi",
         "Name[uk]": "Перевірка розміру тек",
         "Name[x-test]": "xxFolder Size Checkxx",
+        "Name[zh_CN]": "文件夹大小检查",
         "Name[zh_TW]": "資料夾大小確認",
         "Version": "1.0"
     }
