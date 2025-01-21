@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-18 00:42+0000\n"
+"POT-Creation-Date: 2025-01-21 00:42+0000\n"
 "PO-Revision-Date: 2024-09-14 14:24+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -96,7 +96,7 @@ msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Assistent für &Anti-Virus …"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:19
+#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
