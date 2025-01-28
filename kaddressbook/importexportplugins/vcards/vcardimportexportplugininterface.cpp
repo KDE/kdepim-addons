@@ -70,21 +70,21 @@ void VCardImportExportPluginInterface::createAction(KActionCollection *ac)
 
 void VCardImportExportPluginInterface::slotExportVCard4()
 {
-    mImportExportAction = Export;
+    mImportExportAction = ImportExportAction::Export;
     mExportVCardType = VCard4;
     Q_EMIT emitPluginActivated(this);
 }
 
 void VCardImportExportPluginInterface::slotExportVCard3()
 {
-    mImportExportAction = Export;
+    mImportExportAction = ImportExportAction::Export;
     mExportVCardType = VCard3;
     Q_EMIT emitPluginActivated(this);
 }
 
 void VCardImportExportPluginInterface::slotExportVCard2()
 {
-    mImportExportAction = Export;
+    mImportExportAction = ImportExportAction::Export;
     mExportVCardType = VCard2_1;
     Q_EMIT emitPluginActivated(this);
 }
@@ -92,10 +92,10 @@ void VCardImportExportPluginInterface::slotExportVCard2()
 void VCardImportExportPluginInterface::exec()
 {
     switch (mImportExportAction) {
-    case Import:
+    case ImportExportAction::Import:
         importVCard();
         break;
-    case Export:
+    case ImportExportAction::Export:
         exportVCard();
         break;
     }
@@ -103,7 +103,7 @@ void VCardImportExportPluginInterface::exec()
 
 void VCardImportExportPluginInterface::slotImportVCard()
 {
-    mImportExportAction = Import;
+    mImportExportAction = ImportExportAction::Import;
     Q_EMIT emitPluginActivated(this);
 }
 

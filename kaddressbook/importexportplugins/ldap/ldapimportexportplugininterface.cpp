@@ -31,17 +31,17 @@ void LDapImportExportPluginInterface::createAction(KActionCollection *ac)
 void LDapImportExportPluginInterface::exec()
 {
     switch (mImportExportAction) {
-    case Import:
+    case ImportExportAction::Import:
         importLdap();
         break;
-    case Export:
+    case ImportExportAction::Export:
         break;
     }
 }
 
 void LDapImportExportPluginInterface::slotImportLdap()
 {
-    mImportExportAction = Import;
+    mImportExportAction = ImportExportAction::Import;
     Q_EMIT emitPluginActivated(this);
 }
 

@@ -48,10 +48,10 @@ void LDifImportExportPluginInterface::createAction(KActionCollection *ac)
 void LDifImportExportPluginInterface::exec()
 {
     switch (mImportExportAction) {
-    case Import:
+    case ImportExportAction::Import:
         importLdif();
         break;
-    case Export:
+    case ImportExportAction::Export:
         exportLdif();
         break;
     }
@@ -59,13 +59,13 @@ void LDifImportExportPluginInterface::exec()
 
 void LDifImportExportPluginInterface::slotImportLdif()
 {
-    mImportExportAction = Import;
+    mImportExportAction = ImportExportAction::Import;
     Q_EMIT emitPluginActivated(this);
 }
 
 void LDifImportExportPluginInterface::slotExportLdif()
 {
-    mImportExportAction = Export;
+    mImportExportAction = ImportExportAction::Export;
     Q_EMIT emitPluginActivated(this);
 }
 

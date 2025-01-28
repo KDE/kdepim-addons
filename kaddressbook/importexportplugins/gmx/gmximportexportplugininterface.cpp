@@ -52,10 +52,10 @@ void GMXImportExportPluginInterface::createAction(KActionCollection *ac)
 void GMXImportExportPluginInterface::exec()
 {
     switch (mImportExportAction) {
-    case Import:
+    case ImportExportAction::Import:
         importGMX();
         break;
-    case Export:
+    case ImportExportAction::Export:
         exportGMX();
         break;
     }
@@ -63,13 +63,13 @@ void GMXImportExportPluginInterface::exec()
 
 void GMXImportExportPluginInterface::slotImportGmx()
 {
-    mImportExportAction = Import;
+    mImportExportAction = ImportExportAction::Import;
     Q_EMIT emitPluginActivated(this);
 }
 
 void GMXImportExportPluginInterface::slotExportGmx()
 {
-    mImportExportAction = Export;
+    mImportExportAction = ImportExportAction::Export;
     Q_EMIT emitPluginActivated(this);
 }
 

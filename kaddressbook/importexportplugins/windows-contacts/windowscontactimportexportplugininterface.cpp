@@ -41,23 +41,23 @@ void WindowsContactImportExportPluginInterface::createAction(KActionCollection *
 
 void WindowsContactImportExportPluginInterface::slotExportWindowsContact()
 {
-    mImportExportAction = Export;
+    mImportExportAction = ImportExportAction::Export;
     Q_EMIT emitPluginActivated(this);
 }
 
 void WindowsContactImportExportPluginInterface::slotImportWindowsContact()
 {
-    mImportExportAction = Import;
+    mImportExportAction = ImportExportAction::Import;
     Q_EMIT emitPluginActivated(this);
 }
 
 void WindowsContactImportExportPluginInterface::exec()
 {
     switch (mImportExportAction) {
-    case Import:
+    case ImportExportAction::Import:
         importWindowsContact();
         break;
-    case Export:
+    case ImportExportAction::Export:
         exportWindowsContact();
         break;
     }
