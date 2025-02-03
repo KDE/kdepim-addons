@@ -89,7 +89,7 @@ BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData
         CalendarEvents::EventData copy = ed;
         QDateTime dt;
         if (incidence->allDay()) {
-            dt = QDateTime(rec.date(), QTime(0, 0, 0), Qt::LocalTime);
+            dt = QDateTime(rec.date(), QTime(0, 0, 0), QTimeZone::LocalTime);
         } else {
             dt = rec.toLocalTime();
         }

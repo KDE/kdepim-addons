@@ -66,12 +66,12 @@ void EventDataVisitorTest::testGenerateUID_data()
 
     auto incidence = KCalendarCore::Event::Ptr::create().staticCast<KCalendarCore::Incidence>();
     QTest::newRow("simple event") << incidence << QDateTime() << 1ll << QStringLiteral("Akonadi-1");
-    QTest::newRow("recurring event") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 47, 0), Qt::UTC) << 1ll
+    QTest::newRow("recurring event") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 47, 0), QTimeZone::UTC) << 1ll
                                      << QStringLiteral("Akonadi-1-20160529T154700UTC");
 
     incidence = KCalendarCore::Todo::Ptr::create().staticCast<KCalendarCore::Incidence>();
     QTest::newRow("simple todo") << incidence << QDateTime() << 42ll << QStringLiteral("Akonadi-42");
-    QTest::newRow("recurring todo") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 49, 5), Qt::UTC) << 42ll
+    QTest::newRow("recurring todo") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 49, 5), QTimeZone::UTC) << 42ll
                                     << QStringLiteral("Akonadi-42-20160529T154905UTC");
 }
 

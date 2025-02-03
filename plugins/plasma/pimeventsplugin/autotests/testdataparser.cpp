@@ -72,7 +72,7 @@ QDateTime TestDataParser::parseDateTime(const QJsonObject &dateTime)
     if (dateTime.contains(QLatin1StringView("tz"))) {
         return QDateTime(date, time, QTimeZone(dateTime[QStringLiteral("tz")].toString().toLatin1())).toLocalTime();
     } else {
-        return QDateTime(date, time, Qt::LocalTime);
+        return QDateTime(date, time, QTimeZone::LocalTime);
     }
 }
 
