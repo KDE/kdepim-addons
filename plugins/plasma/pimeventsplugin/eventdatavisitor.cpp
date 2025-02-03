@@ -7,7 +7,6 @@
 
 #include "eventdatavisitor.h"
 #include "pimdatasource.h"
-#include "pimeventsplugin_debug.h"
 
 BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource, QDate start, QDate end)
     : mDataSource(dataSource)
