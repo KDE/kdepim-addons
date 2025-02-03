@@ -37,7 +37,7 @@ char *external_codefmt(const char *src, int, void *)
     return qstrdup(ba.data());
 }
 
-void callback_free(char *input, int size, void *ctx)
+void callback_free(char *input, int, void *)
 {
     if (input)
         free(input);
