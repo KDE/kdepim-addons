@@ -125,7 +125,6 @@ set(KPIMITINERARY_LIB_VERSION "6.3.40")
 set(KPIM_MIME_VERSION "6.3.40")
 set(KLDAP_LIB_VERSION "6.3.40")
 
-set(KLLMCORE_VERSION "0.1.0")
 find_package(KPim6Mime ${KPIM_MIME_VERSION} CONFIG REQUIRED)
 find_package(KF6CalendarCore ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KPim6CalendarUtils ${CALENDAR_UTILS_VERSION} CONFIG REQUIRED)
@@ -193,14 +192,6 @@ if(TARGET KPim6::PimCommonActivities)
 endif()
 
 configure_file(config-kdepim-addons.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h)
-
-find_package(KLLMCore ${KLLMCORE_VERSION} CONFIG)
-set_package_properties(KLLMCore PROPERTIES
-    TYPE OPTIONAL
-    PURPOSE "Required for building IA plugins support"
-    DESCRIPTION "Use local IA plugin"
-    URL https://invent.kde.org/utilities/alpaka
-)
 
 # For adblocker
 find_package(Corrosion CONFIG)
