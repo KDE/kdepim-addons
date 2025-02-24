@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_checkbeforedeleting_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-02-24 09:37+0000\n"
 "PO-Revision-Date: 2024-08-01 04:40+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -150,42 +150,42 @@ msgstr "Tipo"
 msgid "Pattern"
 msgstr "Patrón"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:120
 #, kde-format
 msgid "Add Rule…"
 msgstr "Añadir regla..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:122
 #, kde-format
 msgid "Edit Rule…"
 msgstr "Editar regla..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:127
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Eliminar regla"
 msgstr[1] "Eliminar reglas"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "¿Desea eliminar esta regla?"
 msgstr[1] "¿Desea eliminar estas reglas?"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:140
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Eliminar regla"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:168
 #, kde-format
 msgid "Same rule already exists."
 msgstr "Ya existe una regla similar."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:168
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Rule"

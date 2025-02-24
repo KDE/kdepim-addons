@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-02-24 09:37+0000\n"
 "PO-Revision-Date: 2022-05-16 13:58+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -152,44 +152,44 @@ msgstr "Tipo"
 msgid "Pattern"
 msgstr "Padrão"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:119
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:120
 #, fuzzy, kde-format
 #| msgid "Add Rule..."
 msgid "Add Rule…"
 msgstr "Adicionar uma Regra..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:121
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:122
 #, fuzzy, kde-format
 #| msgid "Edit Rule..."
 msgid "Edit Rule…"
 msgstr "Editar a Regra..."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:126
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:127
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Remover a Regra"
 msgstr[1] "Remover as Regras"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:138
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Deseja remover esta regra?"
 msgstr[1] "Deseja remover estas regras?"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:140
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Remover a Regra"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:168
 #, kde-format
 msgid "Same rule already exists."
 msgstr "Já existe a mesma regra."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:167
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:168
 #, fuzzy, kde-format
 #| msgid "Create Rule"
 msgctxt "@title:window"
