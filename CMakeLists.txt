@@ -156,6 +156,14 @@ find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6KSieveUi ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
+find_package(KF6TextAutogenerateText ${KTEXTADDONS_MIN_VERSION} CONFIG)
+set_package_properties(KF6TextAutogenerateText PROPERTIES
+    TYPE OPTIONAL
+    PURPOSE "Required for building IA plugins support"
+    DESCRIPTION "Use IA plugin"
+)
+
+
 find_package(KPim6Tnef ${KTNEF_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
