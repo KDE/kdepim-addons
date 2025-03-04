@@ -19,9 +19,9 @@
 #ifndef Q_OS_WIN
 void initLocale()
 {
-    setenv("LC_ALL", "en_US.utf-8", 1);
+    setenv("LC_ALL", "C", 1);
     setenv("TZ", "UTC", 1);
-    QLocale::setDefault(QLocale(QStringLiteral("en_US")));
+    QLocale::setDefault(QLocale::c());
 }
 
 Q_CONSTRUCTOR_FUNCTION(initLocale)

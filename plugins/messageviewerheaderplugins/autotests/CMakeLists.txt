@@ -11,7 +11,7 @@ macro(add_messageviewer_header_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name})
     
     ecm_mark_as_test(messageviewer-header-${_name})
-    set_tests_properties(${_name} PROPERTIES ENVIRONMENT "LC_ALL=C;TZ=UTC")
+    set_tests_properties(${_name} PROPERTIES ENVIRONMENT "LC_ALL=C;LANG=C;LANGUAGE=C;TZ=UTC")
     target_link_libraries(${_name} KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime KPim6::AkonadiCore KF6::CalendarCore KPim6::GrantleeTheme KF6::XmlGui KF6::I18n)
 endmacro()
 
@@ -23,7 +23,7 @@ macro(add_messageviewer_header_class_unittest _source)
     add_test(NAME ${_name} COMMAND ${_name})
 
     ecm_mark_as_test(messageviewer-header-${_name})
-    set_tests_properties(${_name} PROPERTIES ENVIRONMENT "LC_ALL=C;TZ=UTC")
+    set_tests_properties(${_name} PROPERTIES ENVIRONMENT "LC_ALL=C;LANG=C;LANGUAGE=C;TZ=UTC")
     target_link_libraries(${_name} KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime KPim6::AkonadiCore KF6::CalendarCore KPim6::GrantleeTheme KF6::XmlGui)
 endmacro()
 
