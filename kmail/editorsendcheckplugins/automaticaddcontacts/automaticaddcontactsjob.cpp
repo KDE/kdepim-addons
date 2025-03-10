@@ -6,8 +6,10 @@
 
 #include "automaticaddcontactsjob.h"
 #include "automaticaddcontactsplugin_debug.h"
+#include <Akonadi/AgentConfigurationDialog>
 #include <Akonadi/AgentFilterProxyModel>
 #include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentManager>
 #include <Akonadi/AgentTypeDialog>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
@@ -111,7 +113,6 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
                 if (agentType.isValid()) {
                     auto createJob = new Akonadi::AgentInstanceCreateJob(agentType, this);
                     connect(createJob, &KJob::result, this, &AutomaticAddContactsJob::slotResourceCreationDone);
-                    createJob->configure();
                     createJob->start();
                     delete dlg;
                     return;
@@ -159,12 +160,28 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 
 void AutomaticAddContactsJob::slotResourceCreationDone(KJob *job)
 {
+    auto createJob = qobject_cast<Akonadi::AgentInstanceCreateJob *>(job);
+    Q_ASSERT(createJob);
+
     if (job->error()) {
         qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Unable to create resource:" << job->errorText();
         deleteLaterAndEmitSignal();
         return;
     }
-    addNextContact();
+
+    auto configureDialog = new Akonadi::AgentConfigurationDialog(createJob->instance(), nullptr);
+    configureDialog->setAttribute(Qt::WA_DeleteOnClose);
+
+    connect(configureDialog, &QDialog::accepted, this, [this]() {
+        addNextContact();
+        deleteLaterAndEmitSignal();
+    });
+
+    connect(configureDialog, &QDialog::rejected, this, [this, instance = createJob->instance()]() {
+        Akonadi::AgentManager::self()->removeInstance(instance);
+        deleteLaterAndEmitSignal();
+    });
+    configureDialog->show();
 }
 
 void AutomaticAddContactsJob::verifyContactExist()
