@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-03-12 00:42+0000\n"
 "PO-Revision-Date: 2024-08-04 10:06+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -26,7 +26,7 @@ msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "Konfiguratu \"Kontaktuak automatikoki gehitzea\" plugina"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:97
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -36,19 +36,19 @@ msgstr ""
 "Helbide-liburu bat sortu behar duzu kontaktu bat gehitu aurretik. Helbide-"
 "liburu bat sortu nahi duzu?"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:98
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:100
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Ez dago helbide-libururik erabilgarri"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Sortu helbide-liburua"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:105
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"

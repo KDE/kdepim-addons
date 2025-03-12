@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-03-12 00:42+0000\n"
 "PO-Revision-Date: 2024-11-15 18:25+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -27,7 +27,7 @@ msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "Настройка модуля «Автоматическое добавление контактов»"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:97
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -37,19 +37,19 @@ msgstr ""
 "Перед добавлением контакта необходимо создать адресную книгу. Сделать это "
 "сейчас?"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:98
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:100
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Нет доступных адресных книг"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Создать адресную книгу"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:105
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
