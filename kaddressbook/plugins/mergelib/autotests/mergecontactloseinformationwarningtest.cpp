@@ -14,6 +14,9 @@
 MergeContactLoseInformationWarningTest::MergeContactLoseInformationWarningTest(QObject *parent)
     : QObject(parent)
 {
+    if (qEnvironmentVariableIntValue("KDECI_CANNOT_CREATE_WINDOWS")) {
+        QSKIP("KDE CI can't create a window on this platform, skipping some gui tests");
+    }
 }
 
 void MergeContactLoseInformationWarningTest::shouldHaveDefaultValue()

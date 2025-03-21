@@ -28,6 +28,9 @@ extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_todoEditStubModel;
 
 TodoEditTest::TodoEditTest()
 {
+    if (qEnvironmentVariableIntValue("KDECI_CANNOT_CREATE_WINDOWS")) {
+        QSKIP("KDE CI can't create a window on this platform, skipping some gui tests");
+    }
     qRegisterMetaType<Akonadi::Collection>();
     qRegisterMetaType<KMime::Message::Ptr>();
     qRegisterMetaType<KCalendarCore::Todo::Ptr>();
