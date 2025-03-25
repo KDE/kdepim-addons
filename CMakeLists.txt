@@ -159,8 +159,8 @@ find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextAutogenerateText ${KTEXTADDONS_MIN_VERSION} CONFIG)
 set_package_properties(KF6TextAutogenerateText PROPERTIES
     TYPE OPTIONAL
-    PURPOSE "Required for building IA plugins support"
-    DESCRIPTION "Use IA plugin"
+    PURPOSE "Required for building AI plugins support"
+    DESCRIPTION "Use AI plugin"
 )
 
 
