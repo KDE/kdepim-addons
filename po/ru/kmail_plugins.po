@@ -14,13 +14,13 @@
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2020, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Мария Шикунова <translation-team@basealt.ru>, 2022, 2023.
-# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-21 00:42+0000\n"
-"PO-Revision-Date: 2024-11-18 09:51+0300\n"
+"PO-Revision-Date: 2025-04-01 14:25+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -114,13 +114,13 @@ msgstr "&Мастер антивируса…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
-msgstr ""
+msgstr "Проверка размера папок"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:29
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
-msgstr ""
+msgstr "&Показать размер папок…"
 
 #: common/antispamwizard.cpp:88
 #, kde-format
