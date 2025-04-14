@@ -74,6 +74,9 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 set(KTEXTADDONS_MIN_VERSION "1.5.4")
+set(KTEXTADDONS_MIN_VERSION "1.5.4")
+# Remove it when next 1.6.0 KTEXTADDONS_MIN_VERSION
+set(KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION "1.5.53")
 
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
 
@@ -156,7 +159,7 @@ find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6KSieveUi ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
-find_package(KF6TextAutogenerateText ${KTEXTADDONS_MIN_VERSION} CONFIG)
+find_package(KF6TextAutogenerateText ${KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION} CONFIG)
 set_package_properties(KF6TextAutogenerateText PROPERTIES
     TYPE OPTIONAL
     PURPOSE "Required for building AI plugins support"
