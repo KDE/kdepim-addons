@@ -5,9 +5,10 @@
 */
 
 #pragma once
+#include "pimautogeneratetext_private_export.h"
 #include <QDebug>
 #include <QString>
-class AutogenerateConfigureAskItem
+class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureAskItem
 {
 public:
     AutogenerateConfigureAskItem();
@@ -25,4 +26,4 @@ private:
 };
 Q_DECLARE_METATYPE(AutogenerateConfigureAskItem)
 Q_DECLARE_TYPEINFO(AutogenerateConfigureAskItem, Q_RELOCATABLE_TYPE);
-// IBRUQOLACORE_EXPORT QDebug operator<<(QDebug d, const AutogenerateConfigureAskItem &t);
+PIMAUTOGENERATETEXT_TESTS_EXPORT QDebug operator<<(QDebug d, const AutogenerateConfigureAskItem &t);

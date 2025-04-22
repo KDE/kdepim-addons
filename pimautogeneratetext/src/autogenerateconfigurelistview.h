@@ -4,10 +4,10 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
-
+#include "pimautogeneratetext_private_export.h"
 #include <QListView>
 
-class AutogenerateConfigureListView : public QListView
+class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureListView : public QListView
 {
     Q_OBJECT
 public:

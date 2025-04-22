@@ -29,3 +29,10 @@ void AutogenerateConfigureAskItem::setText(const QString &newText)
 {
     mText = newText;
 }
+
+QDebug operator<<(QDebug d, const AutogenerateConfigureAskItem &t)
+{
+    d.space() << "text:" << t.text();
+    d.space() << "enabled:" << t.enabled();
+    return d;
+}

@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 add_library(KPim6AutoGenerateText)
+generate_export_header(KPim6AutoGenerateText BASE_NAME PimAutoGenerateText)
 
 ecm_qt_declare_logging_category(KPim6AutoGenerateText HEADER pimautogeneratetext_debug.h IDENTIFIER PIMAUTOGENERATE_LOG CATEGORY_NAME org.kde.pim.pimautogeneratetext
     DESCRIPTION "kdepim-addons (pimautogeneratetext lib)"
@@ -16,6 +17,11 @@ target_sources(KPim6AutoGenerateText PRIVATE
 
     autogenerateconfigureaskitem.h
     autogenerateconfigureaskitem.cpp
+
+    autogenerateconfigureaskmodel.h
+    autogenerateconfigureaskmodel.cpp
+
+    pimautogeneratetext_private_export.h
 )
 
 target_link_libraries(KPim6AutoGenerateText
