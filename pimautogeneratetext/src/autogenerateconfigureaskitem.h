@@ -5,8 +5,8 @@
 */
 
 #pragma once
+#include <QDebug>
 #include <QString>
-
 class AutogenerateConfigureAskItem
 {
 public:
@@ -23,3 +23,6 @@ private:
     QString mText;
     bool mEnabled = true;
 };
+Q_DECLARE_METATYPE(AutogenerateConfigureAskItem)
+Q_DECLARE_TYPEINFO(AutogenerateConfigureAskItem, Q_RELOCATABLE_TYPE);
+// IBRUQOLACORE_EXPORT QDebug operator<<(QDebug d, const AutogenerateConfigureAskItem &t);
