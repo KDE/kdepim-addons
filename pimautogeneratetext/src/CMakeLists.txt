@@ -22,6 +22,9 @@ target_sources(KPim6AutoGenerateText PRIVATE
     autogenerateconfigureaskmodel.cpp
 
     pimautogeneratetext_private_export.h
+
+    autogenerateconfigureaskutils.h
+    autogenerateconfigureaskutils.cpp
 )
 
 target_link_libraries(KPim6AutoGenerateText
