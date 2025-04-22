@@ -6,9 +6,13 @@ add_library(KPim6AutoGenerateText)
 add_library(KPim6::AutoGenerateText ALIAS KPim6AutoGenerateText)
 
 target_sources(KPim6AutoGenerateText PRIVATE
+    autogenerateconfigurelistview.h
+    autogenerateconfigurelistview.cpp
 )
 
 target_link_libraries(KPim6AutoGenerateText
+    PUBLIC
+    Qt::Widgets
 )
 
 set_target_properties(KPim6AutoGenerateText PROPERTIES
