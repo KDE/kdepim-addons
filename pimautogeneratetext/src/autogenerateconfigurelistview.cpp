@@ -11,3 +11,5 @@ AutogenerateConfigureListView::AutogenerateConfigureListView(QWidget *parent)
 }
 
 AutogenerateConfigureListView::~AutogenerateConfigureListView() = default;
+
+#include "moc_autogenerateconfigurelistview.cpp"
