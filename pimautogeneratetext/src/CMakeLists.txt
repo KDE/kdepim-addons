@@ -1,7 +1,13 @@
 # SPDX-FileCopyrightText: 2025 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-add_library(KPim6AutoGenerateText)
+add_library(KPim6AutoGenerateText
+    autogenerateconfigureaskitem.h autogenerateconfigureaskitem.cpp)
+
+ecm_qt_declare_logging_category(KPim6AutoGenerateText HEADER pimautogeneratetext_debug.h IDENTIFIER PIMAUTOGENERATE_LOG CATEGORY_NAME org.kde.pim.pimautogeneratetext
+    DESCRIPTION "kdepim-addons (pimautogeneratetext lib)"
+    EXPORT KDEPIMADDONS
+)
 
 add_library(KPim6::AutoGenerateText ALIAS KPim6AutoGenerateText)
 
