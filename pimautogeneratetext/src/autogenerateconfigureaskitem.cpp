@@ -7,3 +7,25 @@
 #include "autogenerateconfigureaskitem.h"
 
 AutogenerateConfigureAskItem::AutogenerateConfigureAskItem() = default;
+
+AutogenerateConfigureAskItem::~AutogenerateConfigureAskItem() = default;
+
+bool AutogenerateConfigureAskItem::enabled() const
+{
+    return mEnabled;
+}
+
+void AutogenerateConfigureAskItem::setEnabled(bool newEnabled)
+{
+    mEnabled = newEnabled;
+}
+
+QString AutogenerateConfigureAskItem::text() const
+{
+    return mText;
+}
+
+void AutogenerateConfigureAskItem::setText(const QString &newText)
+{
+    mText = newText;
+}
