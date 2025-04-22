@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to ask AI.",
+        "EnabledByDefault": false,
+        "Name": "Zoom Text",
+        "Version": "1.0"
+    },
+    "X-KDE-KMailEditor-Order": "2"
+}
