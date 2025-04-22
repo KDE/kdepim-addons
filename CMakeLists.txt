@@ -279,6 +279,9 @@ add_subdirectory(kldap)
 if(TARGET KPim6::ImportWizard)
   add_subdirectory(akonadi-import-wizard)
 endif()
+if(TARGET KF6::TextAutogenerateText)
+  add_subdirectory(pimautogeneratetext)
+endif()
 
 ecm_qt_install_logging_categories(
     EXPORT KDEPIMADDONS
