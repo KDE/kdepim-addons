@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
@@ -41,6 +43,8 @@ KCMUtils.ScrollViewKCM {
             required property int collectionId
             required property string name
             required property string iconName
+            required property bool isChecked
+            required property bool isEnabled
 
             icon.name: iconName
             text: name
@@ -48,10 +52,10 @@ KCMUtils.ScrollViewKCM {
             contentItem: RowLayout {
                 QQC2.CheckBox {
                     id: checkbox
-                    visible: collection.enabled
-                    checked: collection.checked
+                    visible: collection.isEnabled
+                    checked: collection.isChecked
                     onCheckedChanged: {
-                        if (checked === collection.checked) {
+                        if (checked === collection.isChecked) {
                             return;
                         }
                         calendarModel.setChecked(collection.collectionId, checked);
