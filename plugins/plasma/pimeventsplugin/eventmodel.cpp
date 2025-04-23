@@ -12,6 +12,7 @@
 
 #include <Akonadi/AttributeFactory>
 #include <Akonadi/CollectionColorAttribute>
+#include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/EntityDisplayAttribute>
 #include <Akonadi/ItemFetchJob>
@@ -80,12 +81,20 @@ void EventModel::createMonitor()
 void EventModel::addCalendar(const Akonadi::Collection &col)
 {
     if (!mCols.contains(col)) {
-        mCols.push_back(col);
+        auto collectionFetchJob = new Akonadi::CollectionFetchJob(QList{col.id()});
+        collectionFetchJob->start();
+        connect(collectionFetchJob, &Akonadi::CollectionFetchJob::result, collectionFetchJob, [=](auto *job) {
+            auto fetchJob = dynamic_cast<Akonadi::CollectionFetchJob *>(job);
+            if (!fetchJob->collections().isEmpty()) {
+                auto collection = fetchJob->collections()[0];
+                mCols.push_back(collection);
 
-        createMonitor();
-        mMonitor->setCollectionMonitored(col, true);
+                createMonitor();
+                mMonitor->setCollectionMonitored(collection, true);
 
-        populateCollection(col);
+                populateCollection(collection);
+            }
+        });
     }
 }
 
