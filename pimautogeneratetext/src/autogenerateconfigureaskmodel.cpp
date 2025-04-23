@@ -31,3 +31,5 @@ bool AutogenerateConfigureAskModel::setData(const QModelIndex &index, const QVar
     // TODO
     return false;
 }
+
+#include "moc_autogenerateconfigureaskmodel.cpp"

@@ -12,3 +12,5 @@ AutogenerateConfigureAskMenu::AutogenerateConfigureAskMenu(QObject *parent)
 }
 
 AutogenerateConfigureAskMenu::~AutogenerateConfigureAskMenu() = default;
+
+#include "moc_autogenerateconfigureaskmenu.cpp"

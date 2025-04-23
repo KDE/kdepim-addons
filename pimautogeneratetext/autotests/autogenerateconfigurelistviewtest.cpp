@@ -17,3 +17,5 @@ void AutogenerateConfigureListViewTest::shouldHaveDefaultValues()
 {
     AutogenerateConfigureListView w;
 }
+
+#include "moc_autogenerateconfigurelistviewtest.cpp"

@@ -19,3 +19,5 @@ void AutogenerateConfigureAskManager::load()
 void AutogenerateConfigureAskManager::save()
 {
 }
+
+#include "moc_autogenerateconfigureaskmanager.cpp"
