@@ -19,6 +19,7 @@ void AutogenerateConfigureAskItemTest::shouldHaveDefaultValues()
     AutogenerateConfigureAskItem item;
     QVERIFY(item.enabled());
     QVERIFY(item.text().isEmpty());
+    QVERIFY(item.title().isEmpty());
 }
 
 #include "moc_autogenerateconfigureaskitemtest.cpp"

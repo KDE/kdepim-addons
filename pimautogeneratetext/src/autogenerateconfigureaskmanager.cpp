@@ -20,4 +20,14 @@ void AutogenerateConfigureAskManager::save()
 {
 }
 
+QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskManager::items() const
+{
+    return mItems;
+}
+
+void AutogenerateConfigureAskManager::setItems(const QList<AutogenerateConfigureAskItem> &newItems)
+{
+    mItems = newItems;
+}
+
 #include "moc_autogenerateconfigureaskmanager.cpp"

@@ -20,7 +20,11 @@ public:
     [[nodiscard]] QString text() const;
     void setText(const QString &newText);
 
+    [[nodiscard]] QString title() const;
+    void setTitle(const QString &newTitle);
+
 private:
+    QString mTitle;
     QString mText;
     bool mEnabled = true;
 };

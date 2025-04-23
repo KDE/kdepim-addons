@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
+#include "autogenerateconfigureaskitem.h"
 #include "pimautogeneratetext_private_export.h"
 #include <QObject>
 
@@ -16,4 +17,10 @@ public:
 
     void load();
     void save();
+
+    [[nodiscard]] QList<AutogenerateConfigureAskItem> items() const;
+    void setItems(const QList<AutogenerateConfigureAskItem> &newItems);
+
+private:
+    QList<AutogenerateConfigureAskItem> mItems;
 };
