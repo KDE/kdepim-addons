@@ -54,8 +54,8 @@ QHash<int, QByteArray> PimCalendarsModel::roleNames() const
     return {
         {CollectionIdRole, "collectionId"},
         {NameRole, "name"},
-        {EnabledRole, "enabled"},
-        {CheckedRole, "checked"},
+        {EnabledRole, "isEnabled"},
+        {CheckedRole, "isChecked"},
         {IconNameRole, "iconName"},
     };
 }
