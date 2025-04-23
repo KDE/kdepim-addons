@@ -15,6 +15,7 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     : QWidget{parent}
     , mSearchLineEdit(new QLineEdit(this))
     , mTextEdit(new QPlainTextEdit(this))
+    , mAutogenerateConfigureListView(new AutogenerateConfigureListView(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
@@ -25,6 +26,9 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
 
     mTextEdit->setObjectName(QStringLiteral("mTextEdit"));
     mainLayout->addWidget(mTextEdit);
+
+    mAutogenerateConfigureListView->setObjectName(QStringLiteral("mAutogenerateConfigureListView"));
+    mainLayout->addWidget(mAutogenerateConfigureListView);
 }
 
 AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;

@@ -9,6 +9,7 @@
 #include <QWidget>
 class QLineEdit;
 class QPlainTextEdit;
+class AutogenerateConfigureListView;
 class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureAskWidget : public QWidget
 {
     Q_OBJECT
@@ -19,4 +20,5 @@ public:
 private:
     QLineEdit *const mSearchLineEdit;
     QPlainTextEdit *const mTextEdit;
+    AutogenerateConfigureListView *const mAutogenerateConfigureListView;
 };
