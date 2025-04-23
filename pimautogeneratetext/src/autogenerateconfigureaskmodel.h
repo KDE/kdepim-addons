@@ -13,6 +13,12 @@ class AutogenerateConfigureAskModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
+    enum AskRoles : uint16_t {
+        TitleRole = Qt::UserRole + 1,
+        TextRole,
+        EnabledRole,
+    };
+
     explicit AutogenerateConfigureAskModel(QObject *parent = nullptr);
     ~AutogenerateConfigureAskModel() override;
 
