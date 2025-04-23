@@ -9,11 +9,11 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
-import org.kde.plasma.PimCalendars
 import org.kde.kirigamiaddons.delegates as Delegates
 import org.kde.kitemmodels
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCMUtils
+import org.kde.CalendarEventsPlugin
 
 KCMUtils.ScrollViewKCM {
     id: pimEventsConfig
