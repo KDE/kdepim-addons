@@ -15,6 +15,12 @@ public:
     explicit AutogenerateConfigureAskMenu(QObject *parent = nullptr);
     ~AutogenerateConfigureAskMenu() override;
 
+    [[nodiscard]] QWidget *parentWidget() const;
+    void setParentWidget(QWidget *newParentWidget);
+
 Q_SIGNALS:
     void askRequested(const QString &msg);
+
+private:
+    QWidget *mParentWidget = nullptr;
 };

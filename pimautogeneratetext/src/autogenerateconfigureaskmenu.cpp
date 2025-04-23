@@ -5,6 +5,7 @@
 */
 
 #include "autogenerateconfigureaskmenu.h"
+#include <QMenu>
 
 AutogenerateConfigureAskMenu::AutogenerateConfigureAskMenu(QObject *parent)
     : QObject{parent}
@@ -12,5 +13,15 @@ AutogenerateConfigureAskMenu::AutogenerateConfigureAskMenu(QObject *parent)
 }
 
 AutogenerateConfigureAskMenu::~AutogenerateConfigureAskMenu() = default;
+
+QWidget *AutogenerateConfigureAskMenu::parentWidget() const
+{
+    return mParentWidget;
+}
+
+void AutogenerateConfigureAskMenu::setParentWidget(QWidget *newParentWidget)
+{
+    mParentWidget = newParentWidget;
+}
 
 #include "moc_autogenerateconfigureaskmenu.cpp"
