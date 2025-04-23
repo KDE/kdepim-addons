@@ -5,10 +5,10 @@
 */
 
 #pragma once
-
+#include "pimautogeneratetext_export.h"
 #include <QObject>
 
-class AutogenerateConfigureAskMenu : public QObject
+class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskMenu : public QObject
 {
     Q_OBJECT
 public:
