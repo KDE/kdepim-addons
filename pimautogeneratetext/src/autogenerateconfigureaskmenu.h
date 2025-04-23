@@ -7,7 +7,7 @@
 #pragma once
 #include "pimautogeneratetext_export.h"
 #include <QObject>
-
+class QMenu;
 class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskMenu : public QObject
 {
     Q_OBJECT
@@ -17,6 +17,8 @@ public:
 
     [[nodiscard]] QWidget *parentWidget() const;
     void setParentWidget(QWidget *newParentWidget);
+
+    [[nodiscard]] QMenu *menu() const;
 
 Q_SIGNALS:
     void askRequested(const QString &msg);

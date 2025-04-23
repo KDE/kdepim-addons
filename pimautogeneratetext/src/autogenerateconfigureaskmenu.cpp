@@ -24,4 +24,10 @@ void AutogenerateConfigureAskMenu::setParentWidget(QWidget *newParentWidget)
     mParentWidget = newParentWidget;
 }
 
+QMenu *AutogenerateConfigureAskMenu::menu() const
+{
+    // TODO
+    return nullptr;
+}
+
 #include "moc_autogenerateconfigureaskmenu.cpp"
