@@ -48,38 +48,28 @@ target_link_libraries(
 
 ######################### NEXT TARGET #######################33
 
-add_library(pimcalendarsplugin SHARED)
-
-target_sources(
-    pimcalendarsplugin
-    PRIVATE
-        pimcalendarsplugin.cpp
+ecm_add_qml_module(pimcalendarsplugin URI org.kde.CalendarEventsPlugin
+    QML_FILES
+        PimEventsConfig.qml
+    SOURCES
         pimcalendarsmodel.cpp
         settingschangenotifier.cpp
         ${loggingcategory_SRCS}
         pimcalendarsmodel.h
         settingschangenotifier.h
+    GENERATE_PLUGIN_SOURCE
 )
-target_link_libraries(
-    pimcalendarsplugin
+
+target_link_libraries(pimcalendarsplugin PRIVATE
     Qt::Core
     Qt::Qml
     KPim6::AkonadiCore
     KF6::CalendarCore
     KF6::ConfigCore
 )
+
+ecm_finalize_qml_module(pimcalendarsplugin)
+
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(pimcalendarsplugin PROPERTIES UNITY_BUILD ON)
 endif()
-install(
-    TARGETS pimcalendarsplugin
-    DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
-)
-install(
-    FILES qmldir
-    DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
-)
-install(
-    FILES PimEventsConfig.qml
-    DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasmacalendarplugins/pimevents
-)

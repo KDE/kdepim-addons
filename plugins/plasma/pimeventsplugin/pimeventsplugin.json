@@ -106,5 +106,6 @@
         ],
         "Version": "1.0"
     },
-    "X-KDE-PlasmaCalendar-ConfigUi": "pimevents/PimEventsConfig.qml"
+    "X-KDE-PlasmaCalendar-ConfigUi-Module": "org.kde.CalendarEventsPlugin",
+    "X-KDE-PlasmaCalendar-ConfigUi-Component": "PimEventsConfig"
 }

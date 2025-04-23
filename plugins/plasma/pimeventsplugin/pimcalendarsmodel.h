@@ -9,6 +9,7 @@
 
 #include <QSet>
 #include <QSortFilterProxyModel>
+#include <qqmlintegration.h>
 
 namespace Akonadi
 {
@@ -18,6 +19,8 @@ class EntityTreeModel;
 class PimCalendarsModel : public QSortFilterProxyModel
 {
     Q_OBJECT
+    QML_ELEMENT
+
 public:
     enum Roles {
         CollectionIdRole = Qt::UserRole + 1,
