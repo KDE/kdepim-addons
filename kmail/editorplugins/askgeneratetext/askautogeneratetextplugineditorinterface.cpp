@@ -20,9 +20,11 @@ AskAutogenerateTextPluginEditorInterface::~AskAutogenerateTextPluginEditorInterf
 void AskAutogenerateTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     /*
+    // TODO
+    ac->addAction(QStringLiteral("ask_ai"), ChangeCaseMenu);
+
     auto ChangeCaseMenu = new PimCommon::KActionMenuChangeCase(this);
     ChangeCaseMenu->appendInActionCollection(ac);
-    ac->addAction(QStringLiteral("change_case_menu"), ChangeCaseMenu);
     connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::upperCase, this, &AskAutogenerateTextPluginEditorInterface::slotUpperCase);
     connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::lowerCase, this, &AskAutogenerateTextPluginEditorInterface::slotLowerCase);
     connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::sentenceCase, this, &AskAutogenerateTextPluginEditorInterface::slotSentenceCase);
