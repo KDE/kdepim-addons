@@ -37,3 +37,5 @@ void AutogenerateConfigureAskWidgetTest::shouldHaveDefaultValues()
     auto mAutogenerateConfigureListView = w.findChild<AutogenerateConfigureListView *>(QStringLiteral("mAutogenerateConfigureListView"));
     QVERIFY(mAutogenerateConfigureListView);
 }
+
+#include "moc_autogenerateconfigureaskwidgettest.cpp"
