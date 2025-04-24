@@ -22,7 +22,20 @@ int AutogenerateConfigureAskModel::rowCount(const QModelIndex &parent) const
 
 QVariant AutogenerateConfigureAskModel::data(const QModelIndex &index, int role) const
 {
-    // TODO
+    if (index.row() < 0 || index.row() >= mAskItems.count()) {
+        return {};
+    }
+
+    const auto &askItem = mAskItems[index.row()];
+    switch (role) {
+    case Qt::DisplayRole:
+    case TitleRole:
+        return askItem.title();
+    case TextRole:
+        return askItem.text();
+    case EnabledRole:
+        return askItem.enabled();
+    }
     return {};
 }
 
