@@ -6,6 +6,7 @@
 
 #include "autogenerateconfigureaskwidget.h"
 #include "autogenerateconfigurelistview.h"
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QLineEdit>
@@ -28,6 +29,10 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     mainLayout->addLayout(vbox);
 
     mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
+    mSearchLineEdit->setClearButtonEnabled(true);
+    mSearchLineEdit->addAction(QIcon::fromTheme(QStringLiteral("view-filter")), QLineEdit::LeadingPosition);
+    KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
+
     vbox->addWidget(mSearchLineEdit);
 
     mAutogenerateConfigureListView->setObjectName(QStringLiteral("mAutogenerateConfigureListView"));

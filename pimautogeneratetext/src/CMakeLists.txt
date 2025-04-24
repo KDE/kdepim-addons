@@ -39,6 +39,7 @@ target_link_libraries(KPim6AutoGenerateText
     PRIVATE
     KF6::I18n
     KF6::ConfigGui
+    KF6::WidgetsAddons
 )
 
 set_target_properties(KPim6AutoGenerateText PROPERTIES

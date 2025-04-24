@@ -5,6 +5,7 @@
 */
 
 #include "autogenerateconfigureaskmenu.h"
+#include "autogenerateconfigureaskmanager.h"
 #include <QMenu>
 
 AutogenerateConfigureAskMenu::AutogenerateConfigureAskMenu(QObject *parent)

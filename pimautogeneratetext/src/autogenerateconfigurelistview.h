@@ -6,11 +6,14 @@
 #pragma once
 #include "pimautogeneratetext_private_export.h"
 #include <QListView>
-
+class AutogenerateConfigureAskModel;
 class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureListView : public QListView
 {
     Q_OBJECT
 public:
     explicit AutogenerateConfigureListView(QWidget *parent = nullptr);
     ~AutogenerateConfigureListView() override;
+
+private:
+    AutogenerateConfigureAskModel *const mModel;
 };
