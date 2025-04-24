@@ -1,6 +1,15 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to ask AI.",
+        "Description[bg]": "Тази приставка ви позволява да отправите запитване на ИИ.",
+        "Description[ca@valencia]": "Este connector permet preguntar a la IA.",
+        "Description[ca]": "Aquest connector permet preguntar a la IA.",
+        "Description[es]": "Este complemento le permite preguntar a la IA.",
+        "Description[ka]": "ეს დამატება კითხვის ხი-სთვის დასმის საშუალებას გაძლევთ.",
+        "Description[nl]": "Deze plug-in biedt u het vragen aan AI.",
+        "Description[sl]": "Ta vtičnik vam omogoča, da vprašate umetno inteligenco.",
+        "Description[uk]": "За допомогою цього додатка можна надсилати запити до ШІ.",
+        "Description[x-test]": "xxThis plugin allows you to ask AI.xx",
         "EnabledByDefault": false,
         "Name": "Zoom Text",
         "Name[ar]": "تغيير مستوى تكبير النّصّ",
