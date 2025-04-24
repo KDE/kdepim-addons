@@ -7,6 +7,7 @@
 #include "autogenerateconfigureaskwidget.h"
 #include "autogenerateconfigurelistview.h"
 #include <KLocalizedString>
+#include <QHBoxLayout>
 #include <QLineEdit>
 #include <QPlainTextEdit>
 #include <QVBoxLayout>
@@ -17,18 +18,23 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     , mTextEdit(new QPlainTextEdit(this))
     , mAutogenerateConfigureListView(new AutogenerateConfigureListView(this))
 {
-    auto mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
+    auto vbox = new QVBoxLayout;
+    vbox->setObjectName(QStringLiteral("vbox"));
+    vbox->setContentsMargins({});
+    mainLayout->addLayout(vbox);
+
     mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
-    mainLayout->addWidget(mSearchLineEdit);
+    vbox->addWidget(mSearchLineEdit);
+
+    mAutogenerateConfigureListView->setObjectName(QStringLiteral("mAutogenerateConfigureListView"));
+    vbox->addWidget(mAutogenerateConfigureListView);
 
     mTextEdit->setObjectName(QStringLiteral("mTextEdit"));
     mainLayout->addWidget(mTextEdit);
-
-    mAutogenerateConfigureListView->setObjectName(QStringLiteral("mAutogenerateConfigureListView"));
-    mainLayout->addWidget(mAutogenerateConfigureListView);
 }
 
 AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;
