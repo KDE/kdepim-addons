@@ -9,12 +9,18 @@
 AutogenerateConfigureListView::AutogenerateConfigureListView(QWidget *parent)
     : QListView(parent)
     , mModel(new AutogenerateConfigureAskModel(this))
+    , mSortFilterProxyModel(new QSortFilterProxyModel(this))
 {
-    auto sortFilter = new QSortFilterProxyModel(this);
-    sortFilter->setSourceModel(mModel);
-    setModel(sortFilter);
+    mSortFilterProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    mSortFilterProxyModel->setSourceModel(mModel);
+    setModel(mSortFilterProxyModel);
 }
 
 AutogenerateConfigureListView::~AutogenerateConfigureListView() = default;
+
+void AutogenerateConfigureListView::setFilterText(const QString &str)
+{
+    mSortFilterProxyModel->setFilterFixedString(str);
+}
 
 #include "moc_autogenerateconfigurelistview.cpp"

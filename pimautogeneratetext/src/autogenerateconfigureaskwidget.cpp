@@ -32,6 +32,7 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     mSearchLineEdit->setClearButtonEnabled(true);
     mSearchLineEdit->addAction(QIcon::fromTheme(QStringLiteral("view-filter")), QLineEdit::LeadingPosition);
     KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
+    connect(mSearchLineEdit, &QLineEdit::textChanged, mAutogenerateConfigureListView, &AutogenerateConfigureListView::setFilterText);
 
     vbox->addWidget(mSearchLineEdit);
 
