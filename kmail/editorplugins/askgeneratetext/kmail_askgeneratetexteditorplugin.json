@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to ask AI.",
+        "Description[ar]": "تتيح لك هذه الملحقة سؤال برنامج الذكاء الاصطناعي.",
         "Description[bg]": "Тази приставка ви позволява да отправите запитване на ИИ.",
         "Description[ca@valencia]": "Este connector permet preguntar a la IA.",
         "Description[ca]": "Aquest connector permet preguntar a la IA.",
