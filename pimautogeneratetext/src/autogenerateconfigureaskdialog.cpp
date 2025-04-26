@@ -43,6 +43,16 @@ AutogenerateConfigureAskDialog::~AutogenerateConfigureAskDialog()
     writeConfig();
 }
 
+QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskDialog::askItems() const
+{
+    return mAutogenerateConfigureAskWidget->askItems();
+}
+
+void AutogenerateConfigureAskDialog::setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems)
+{
+    mAutogenerateConfigureAskWidget->setAskItems(newAskItems);
+}
+
 void AutogenerateConfigureAskDialog::readConfig()
 {
     create(); // ensure a window is created

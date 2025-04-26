@@ -23,4 +23,14 @@ void AutogenerateConfigureListView::setFilterText(const QString &str)
     mSortFilterProxyModel->setFilterFixedString(str);
 }
 
+QList<AutogenerateConfigureAskItem> AutogenerateConfigureListView::askItems() const
+{
+    return mModel->askItems();
+}
+
+void AutogenerateConfigureListView::setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems)
+{
+    mModel->setAskItems(newAskItems);
+}
+
 #include "moc_autogenerateconfigurelistview.cpp"

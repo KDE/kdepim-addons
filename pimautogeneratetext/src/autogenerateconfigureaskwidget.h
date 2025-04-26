@@ -5,6 +5,7 @@
 */
 
 #pragma once
+#include "autogenerateconfigureaskitem.h"
 #include "pimautogeneratetext_private_export.h"
 #include <QWidget>
 class QLineEdit;
@@ -16,6 +17,9 @@ class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureAskWidget : public Q
 public:
     explicit AutogenerateConfigureAskWidget(QWidget *parent = nullptr);
     ~AutogenerateConfigureAskWidget() override;
+
+    [[nodiscard]] QList<AutogenerateConfigureAskItem> askItems() const;
+    void setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems);
 
 private:
     QLineEdit *const mSearchLineEdit;

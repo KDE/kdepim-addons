@@ -43,6 +43,16 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     mainLayout->addWidget(mTextEdit);
 }
 
+QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskWidget::askItems() const
+{
+    return mAutogenerateConfigureListView->askItems();
+}
+
+void AutogenerateConfigureAskWidget::setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems)
+{
+    mAutogenerateConfigureListView->setAskItems(newAskItems);
+}
+
 AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;
 
 #include "moc_autogenerateconfigureaskwidget.cpp"

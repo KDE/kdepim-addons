@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
+#include "autogenerateconfigureaskitem.h"
 #include "pimautogeneratetext_private_export.h"
 #include <QListView>
 class AutogenerateConfigureAskModel;
@@ -16,6 +17,9 @@ public:
     ~AutogenerateConfigureListView() override;
 
     void setFilterText(const QString &str);
+
+    [[nodiscard]] QList<AutogenerateConfigureAskItem> askItems() const;
+    void setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems);
 
 private:
     AutogenerateConfigureAskModel *const mModel;
