@@ -23,6 +23,8 @@ public:
     [[nodiscard]] QString title() const;
     void setTitle(const QString &newTitle);
 
+    [[nodiscard]] bool operator==(const AutogenerateConfigureAskItem &other) const;
+
 private:
     QString mTitle;
     QString mText;

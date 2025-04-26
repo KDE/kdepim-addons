@@ -40,6 +40,11 @@ void AutogenerateConfigureAskItem::setTitle(const QString &newTitle)
     mTitle = newTitle;
 }
 
+bool AutogenerateConfigureAskItem::operator==(const AutogenerateConfigureAskItem &other) const
+{
+    return other.enabled() == enabled() && other.title() == title() && other.text() == text();
+}
+
 QDebug operator<<(QDebug d, const AutogenerateConfigureAskItem &t)
 {
     d.space() << "text:" << t.text();

@@ -27,7 +27,10 @@ QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskManager::items() con
 
 void AutogenerateConfigureAskManager::setItems(const QList<AutogenerateConfigureAskItem> &newItems)
 {
-    mItems = newItems;
+    if (mItems != newItems) {
+        mItems = newItems;
+        Q_EMIT changed();
+    }
 }
 
 #include "moc_autogenerateconfigureaskmanager.cpp"
