@@ -57,4 +57,11 @@ void AutogenerateConfigureAskModel::setAskItems(const QList<AutogenerateConfigur
     endResetModel();
 }
 
+void AutogenerateConfigureAskModel::addItem(const AutogenerateConfigureAskItem &msg)
+{
+    beginInsertRows(QModelIndex(), mAskItems.count(), mAskItems.count());
+    mAskItems.append(msg);
+    endInsertRows();
+}
+
 #include "moc_autogenerateconfigureaskmodel.cpp"

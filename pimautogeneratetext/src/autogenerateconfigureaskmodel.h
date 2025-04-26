@@ -29,6 +29,8 @@ public:
     [[nodiscard]] QList<AutogenerateConfigureAskItem> askItems() const;
     void setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems);
 
+    void addItem(const AutogenerateConfigureAskItem &msg);
+
 private:
     QList<AutogenerateConfigureAskItem> mAskItems;
 };
