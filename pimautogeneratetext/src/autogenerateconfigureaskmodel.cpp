@@ -45,4 +45,16 @@ bool AutogenerateConfigureAskModel::setData(const QModelIndex &index, const QVar
     return false;
 }
 
+QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskModel::askItems() const
+{
+    return mAskItems;
+}
+
+void AutogenerateConfigureAskModel::setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems)
+{
+    beginResetModel();
+    mAskItems = newAskItems;
+    endResetModel();
+}
+
 #include "moc_autogenerateconfigureaskmodel.cpp"
