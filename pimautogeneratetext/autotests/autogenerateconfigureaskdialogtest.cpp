@@ -6,8 +6,11 @@
 
 #include "autogenerateconfigureaskdialogtest.h"
 #include "autogenerateconfigureaskdialog.h"
+#include "autogenerateconfigureaskwidget.h"
+#include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(AutogenerateConfigureAskDialogTest)
 
 AutogenerateConfigureAskDialogTest::AutogenerateConfigureAskDialogTest(QObject *parent)
@@ -19,7 +22,16 @@ AutogenerateConfigureAskDialogTest::AutogenerateConfigureAskDialogTest(QObject *
 void AutogenerateConfigureAskDialogTest::shouldHaveDefaultValues()
 {
     AutogenerateConfigureAskDialog w;
-    // TODO
+
+    QVERIFY(!w.windowTitle().isEmpty());
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+
+    auto mAutogenerateConfigureAskWidget = w.findChild<AutogenerateConfigureAskWidget *>(QStringLiteral("mAutogenerateConfigureAskWidget"));
+    QVERIFY(mAutogenerateConfigureAskWidget);
+
+    auto button = w.findChild<QDialogButtonBox *>(QStringLiteral("button"));
+    QVERIFY(button);
 }
 
 #include "moc_autogenerateconfigureaskdialogtest.cpp"
