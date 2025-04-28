@@ -8,8 +8,9 @@
 #include "autogenerateconfigureaskmanager.h"
 #include <QMenu>
 
-AutogenerateConfigureAskMenu::AutogenerateConfigureAskMenu(QObject *parent)
+AutogenerateConfigureAskMenu::AutogenerateConfigureAskMenu(AutogenerateConfigureAskManager *manager, QObject *parent)
     : QObject{parent}
+    , mManager(manager)
 {
 }
 

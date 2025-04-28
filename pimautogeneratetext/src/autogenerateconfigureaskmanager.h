@@ -5,10 +5,10 @@
 */
 #pragma once
 #include "autogenerateconfigureaskitem.h"
-#include "pimautogeneratetext_private_export.h"
+#include "pimautogeneratetext_export.h"
 #include <QObject>
 
-class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureAskManager : public QObject
+class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskManager : public QObject
 {
     Q_OBJECT
 public:

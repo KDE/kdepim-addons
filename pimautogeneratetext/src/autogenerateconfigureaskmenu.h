@@ -8,11 +8,12 @@
 #include "pimautogeneratetext_export.h"
 #include <QObject>
 class QMenu;
+class AutogenerateConfigureAskManager;
 class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskMenu : public QObject
 {
     Q_OBJECT
 public:
-    explicit AutogenerateConfigureAskMenu(QObject *parent = nullptr);
+    explicit AutogenerateConfigureAskMenu(AutogenerateConfigureAskManager *manager, QObject *parent = nullptr);
     ~AutogenerateConfigureAskMenu() override;
 
     [[nodiscard]] QWidget *parentWidget() const;
@@ -25,4 +26,5 @@ Q_SIGNALS:
 
 private:
     QWidget *mParentWidget = nullptr;
+    AutogenerateConfigureAskManager *const mManager;
 };
