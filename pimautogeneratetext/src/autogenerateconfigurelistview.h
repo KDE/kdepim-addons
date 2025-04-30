@@ -21,6 +21,9 @@ public:
     [[nodiscard]] QList<AutogenerateConfigureAskItem> askItems() const;
     void setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems);
 
+protected:
+    void contextMenuEvent(QContextMenuEvent *event) override;
+
 private:
     AutogenerateConfigureAskModel *const mModel;
     QSortFilterProxyModel *const mSortFilterProxyModel;
