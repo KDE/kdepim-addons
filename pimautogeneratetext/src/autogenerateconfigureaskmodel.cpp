@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "autogenerateconfigureaskmodel.h"
+#include "pimautogeneratetext_debug.h"
 
 AutogenerateConfigureAskModel::AutogenerateConfigureAskModel(QObject *parent)
     : QAbstractListModel{parent}
@@ -33,16 +34,35 @@ QVariant AutogenerateConfigureAskModel::data(const QModelIndex &index, int role)
         return askItem.title();
     case TextRole:
         return askItem.text();
+    case Qt::CheckStateRole:
     case EnabledRole:
         return askItem.enabled();
     }
     return {};
 }
 
-bool AutogenerateConfigureAskModel::setData(const QModelIndex &index, const QVariant &value, int role)
+bool AutogenerateConfigureAskModel::setData(const QModelIndex &idx, const QVariant &value, int role)
 {
-    // TODO
-    return false;
+    if (!idx.isValid()) {
+        qCWarning(PIMAUTOGENERATE_LOG) << "ERROR: invalid index";
+        return false;
+    }
+    const int id = idx.row();
+    auto &info = mAskItems[id];
+    switch (role) {
+    case AskRoles::TitleRole: {
+        info.setTitle(value.toString());
+        const QModelIndex newIndex = index(idx.row(), AskRoles::TextRole);
+        Q_EMIT dataChanged(newIndex, newIndex);
+        return true;
+    }
+    case Qt::CheckStateRole:
+    case AskRoles::EnabledRole:
+        info.setEnabled(value.toBool());
+        Q_EMIT dataChanged(idx, idx, {AskRoles::EnabledRole});
+        return true;
+    }
+    return QAbstractListModel::setData(idx, value, role);
 }
 
 QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskModel::askItems() const

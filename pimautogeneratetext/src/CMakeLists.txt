@@ -4,7 +4,8 @@
 add_library(KPim6AutoGenerateText
     autogenerateconfigureaskmenu.h autogenerateconfigureaskmenu.cpp
     autogenerateconfigureaskdialog.h autogenerateconfigureaskdialog.cpp
-    autogenerateconfigureaskwidget.h autogenerateconfigureaskwidget.cpp)
+    autogenerateconfigureaskwidget.h autogenerateconfigureaskwidget.cpp
+    autogenerateconfigurelistviewdelegate.h autogenerateconfigurelistviewdelegate.cpp)
 generate_export_header(KPim6AutoGenerateText BASE_NAME PimAutoGenerateText)
 
 ecm_qt_declare_logging_category(KPim6AutoGenerateText HEADER pimautogeneratetext_debug.h IDENTIFIER PIMAUTOGENERATE_LOG CATEGORY_NAME org.kde.pim.pimautogeneratetext
