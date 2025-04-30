@@ -5,6 +5,7 @@
 */
 #include "autogenerateconfigurelistview.h"
 #include "autogenerateconfigureaskmodel.h"
+#include "autogenerateconfigurelistviewdelegate.h"
 #include <QSortFilterProxyModel>
 AutogenerateConfigureListView::AutogenerateConfigureListView(QWidget *parent)
     : QListView(parent)
@@ -14,6 +15,7 @@ AutogenerateConfigureListView::AutogenerateConfigureListView(QWidget *parent)
     mSortFilterProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     mSortFilterProxyModel->setSourceModel(mModel);
     setModel(mSortFilterProxyModel);
+    setItemDelegate(new AutogenerateConfigureListViewDelegate(this));
 }
 
 AutogenerateConfigureListView::~AutogenerateConfigureListView() = default;

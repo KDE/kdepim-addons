@@ -84,4 +84,12 @@ void AutogenerateConfigureAskModel::addItem(const AutogenerateConfigureAskItem &
     endInsertRows();
 }
 
+Qt::ItemFlags AutogenerateConfigureAskModel::flags(const QModelIndex &index) const
+{
+    if (!index.isValid())
+        return Qt::NoItemFlags;
+
+    return Qt::ItemIsEditable | Qt::ItemIsUserCheckable | QAbstractListModel::flags(index);
+}
+
 #include "moc_autogenerateconfigureaskmodel.cpp"
