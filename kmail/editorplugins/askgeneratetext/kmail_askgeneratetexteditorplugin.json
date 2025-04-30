@@ -14,6 +14,7 @@
         "Description[tr]": "Bu eklenti, yapay zekâya soru sormanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна надсилати запити до ШІ.",
         "Description[x-test]": "xxThis plugin allows you to ask AI.xx",
+        "Description[zh_TW]": "這個外掛程式讓您向 AI 進行詢問。",
         "EnabledByDefault": false,
         "Name": "Zoom Text",
         "Name[ar]": "تغيير مستوى تكبير النّصّ",
