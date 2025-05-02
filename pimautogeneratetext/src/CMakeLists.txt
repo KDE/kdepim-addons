@@ -1,11 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-add_library(KPim6AutoGenerateText
-    autogenerateconfigureaskmenu.h autogenerateconfigureaskmenu.cpp
-    autogenerateconfigureaskdialog.h autogenerateconfigureaskdialog.cpp
-    autogenerateconfigureaskwidget.h autogenerateconfigureaskwidget.cpp
-    autogenerateconfigurelistviewdelegate.h autogenerateconfigurelistviewdelegate.cpp)
+add_library(KPim6AutoGenerateText)
 generate_export_header(KPim6AutoGenerateText BASE_NAME PimAutoGenerateText)
 
 ecm_qt_declare_logging_category(KPim6AutoGenerateText HEADER pimautogeneratetext_debug.h IDENTIFIER PIMAUTOGENERATE_LOG CATEGORY_NAME org.kde.pim.pimautogeneratetext
@@ -32,6 +28,18 @@ target_sources(KPim6AutoGenerateText PRIVATE
 
     autogenerateconfigureaskmanager.h
     autogenerateconfigureaskmanager.cpp
+
+    autogenerateconfigureaskmenu.h
+    autogenerateconfigureaskmenu.cpp
+
+    autogenerateconfigureaskdialog.h
+    autogenerateconfigureaskdialog.cpp
+
+    autogenerateconfigureaskwidget.h
+    autogenerateconfigureaskwidget.cpp
+
+    autogenerateconfigurelistviewdelegate.h
+    autogenerateconfigurelistviewdelegate.cpp
 )
 
 target_link_libraries(KPim6AutoGenerateText
