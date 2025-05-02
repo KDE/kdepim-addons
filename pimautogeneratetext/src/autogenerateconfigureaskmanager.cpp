@@ -14,10 +14,12 @@ AutogenerateConfigureAskManager::~AutogenerateConfigureAskManager() = default;
 
 void AutogenerateConfigureAskManager::load()
 {
+    // TODO
 }
 
 void AutogenerateConfigureAskManager::save()
 {
+    // TODO
 }
 
 QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskManager::items() const
