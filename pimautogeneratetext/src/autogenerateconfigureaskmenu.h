@@ -25,6 +25,9 @@ Q_SIGNALS:
     void askRequested(const QString &msg);
 
 private:
+    PIMAUTOGENERATETEXT_NO_EXPORT void initializeMenu();
+    PIMAUTOGENERATETEXT_NO_EXPORT void slotConfigure();
     QWidget *mParentWidget = nullptr;
     AutogenerateConfigureAskManager *const mManager;
+    QMenu *const mMenu;
 };
