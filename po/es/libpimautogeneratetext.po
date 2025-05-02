@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libpimautogeneratetext\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:42+0000\n"
-"PO-Revision-Date: 2025-04-24 16:03+0100\n"
+"PO-Revision-Date: 2025-05-02 01:52+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -29,27 +29,27 @@ msgstr "Administrador"
 #, kde-format
 msgctxt "@action"
 msgid "Add…"
-msgstr ""
+msgstr "Añadir…"
 
 #: src/autogenerateconfigurelistview.cpp:56
 #, kde-format
 msgctxt "@action"
 msgid "Modify…"
-msgstr ""
+msgstr "Modificar…"
 
 #: src/autogenerateconfigurelistview.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Remove…"
-msgstr ""
+msgstr "Eliminar…"
 
 #: src/autogenerateconfigurelistview.cpp:66
 #, kde-format
 msgid "Do you want to remove it?"
-msgstr ""
+msgstr "¿Desea eliminarlo?"
 
 #: src/autogenerateconfigurelistview.cpp:67
 #, kde-format
 msgctxt "@title"
 msgid "Remove"
-msgstr ""
+msgstr "Eliminar"
