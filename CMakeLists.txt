@@ -227,7 +227,7 @@ add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 # Extra package
 find_package(Gpgmepp 1.23.2 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "https://www.gnupg.org" TYPE REQUIRED)
-ecm_set_disabled_deprecation_versions(QT 6.9.0 KF 6.12.0)
+ecm_set_disabled_deprecation_versions(QT 6.9.0 KF 6.13.0)
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
