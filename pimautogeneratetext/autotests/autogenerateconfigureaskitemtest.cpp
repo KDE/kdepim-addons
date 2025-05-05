@@ -5,7 +5,7 @@
 */
 
 #include "autogenerateconfigureaskitemtest.h"
-#include "autogenerateconfigureaskitem.h"
+#include "autogenerateconfigureaskinfo.h"
 #include <QTest>
 QTEST_GUILESS_MAIN(AutogenerateConfigureAskItemTest)
 
@@ -16,7 +16,7 @@ AutogenerateConfigureAskItemTest::AutogenerateConfigureAskItemTest(QObject *pare
 
 void AutogenerateConfigureAskItemTest::shouldHaveDefaultValues()
 {
-    AutogenerateConfigureAskItem item;
+    AutogenerateConfigureAskInfo item;
     QVERIFY(item.enabled());
     QVERIFY(item.text().isEmpty());
     QVERIFY(item.title().isEmpty());

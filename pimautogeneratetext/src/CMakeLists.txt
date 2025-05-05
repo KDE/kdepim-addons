@@ -15,8 +15,8 @@ target_sources(KPim6AutoGenerateText PRIVATE
     autogenerateconfigurelistview.h
     autogenerateconfigurelistview.cpp
 
-    autogenerateconfigureaskitem.h
-    autogenerateconfigureaskitem.cpp
+    autogenerateconfigureaskinfo.h
+    autogenerateconfigureaskinfo.cpp
 
     autogenerateconfigureaskmodel.h
     autogenerateconfigureaskmodel.cpp

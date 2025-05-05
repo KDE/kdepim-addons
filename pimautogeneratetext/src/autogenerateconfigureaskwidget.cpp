@@ -43,12 +43,12 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     mainLayout->addWidget(mTextEdit);
 }
 
-QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskWidget::askItems() const
+QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskWidget::askItems() const
 {
     return mAutogenerateConfigureListView->askItems();
 }
 
-void AutogenerateConfigureAskWidget::setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems)
+void AutogenerateConfigureAskWidget::setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems)
 {
     mAutogenerateConfigureListView->setAskItems(newAskItems);
 }

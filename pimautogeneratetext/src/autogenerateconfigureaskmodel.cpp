@@ -65,19 +65,19 @@ bool AutogenerateConfigureAskModel::setData(const QModelIndex &idx, const QVaria
     return QAbstractListModel::setData(idx, value, role);
 }
 
-QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskModel::askItems() const
+QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskModel::askItems() const
 {
     return mAskItems;
 }
 
-void AutogenerateConfigureAskModel::setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems)
+void AutogenerateConfigureAskModel::setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems)
 {
     beginResetModel();
     mAskItems = newAskItems;
     endResetModel();
 }
 
-void AutogenerateConfigureAskModel::addItem(const AutogenerateConfigureAskItem &msg)
+void AutogenerateConfigureAskModel::addItem(const AutogenerateConfigureAskInfo &msg)
 {
     beginInsertRows(QModelIndex(), mAskItems.count(), mAskItems.count());
     mAskItems.append(msg);

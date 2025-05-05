@@ -29,12 +29,12 @@ void AutogenerateConfigureListView::setFilterText(const QString &str)
     mSortFilterProxyModel->setFilterFixedString(str);
 }
 
-QList<AutogenerateConfigureAskItem> AutogenerateConfigureListView::askItems() const
+QList<AutogenerateConfigureAskInfo> AutogenerateConfigureListView::askItems() const
 {
     return mModel->askItems();
 }
 
-void AutogenerateConfigureListView::setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems)
+void AutogenerateConfigureListView::setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems)
 {
     mModel->setAskItems(newAskItems);
 }

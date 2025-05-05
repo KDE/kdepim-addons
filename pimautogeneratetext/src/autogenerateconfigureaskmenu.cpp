@@ -32,7 +32,7 @@ AutogenerateConfigureAskMenu::~AutogenerateConfigureAskMenu()
 void AutogenerateConfigureAskMenu::initializeMenu()
 {
     const auto infos = mManager->items();
-    for (const AutogenerateConfigureAskItem &info : infos) {
+    for (const AutogenerateConfigureAskInfo &info : infos) {
         if (info.enabled()) {
             const QString requestText = info.title();
             auto action = new QAction(requestText, mMenu);
@@ -56,10 +56,13 @@ void AutogenerateConfigureAskMenu::initializeMenu()
 void AutogenerateConfigureAskMenu::slotConfigure()
 {
     AutogenerateConfigureAskDialog dlg(mParentWidget);
+    dlg.setAskItems(mManager->items());
     if (dlg.exec()) {
-        // TODO
+        mManager->setItems(dlg.askItems());
+        mManager->save();
+        mMenu->clear();
+        initializeMenu();
     }
-    // TODO
 }
 
 QString AutogenerateConfigureAskMenu::selectedText() const

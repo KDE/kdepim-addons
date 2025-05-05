@@ -8,11 +8,11 @@
 #include "pimautogeneratetext_private_export.h"
 #include <QDebug>
 #include <QString>
-class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureAskItem
+class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureAskInfo
 {
 public:
-    AutogenerateConfigureAskItem();
-    ~AutogenerateConfigureAskItem();
+    AutogenerateConfigureAskInfo();
+    ~AutogenerateConfigureAskInfo();
 
     [[nodiscard]] bool enabled() const;
     void setEnabled(bool newEnabled);
@@ -23,13 +23,13 @@ public:
     [[nodiscard]] QString title() const;
     void setTitle(const QString &newTitle);
 
-    [[nodiscard]] bool operator==(const AutogenerateConfigureAskItem &other) const;
+    [[nodiscard]] bool operator==(const AutogenerateConfigureAskInfo &other) const;
 
 private:
     QString mTitle;
     QString mText;
     bool mEnabled = true;
 };
-Q_DECLARE_METATYPE(AutogenerateConfigureAskItem)
-Q_DECLARE_TYPEINFO(AutogenerateConfigureAskItem, Q_RELOCATABLE_TYPE);
-PIMAUTOGENERATETEXT_TESTS_EXPORT QDebug operator<<(QDebug d, const AutogenerateConfigureAskItem &t);
+Q_DECLARE_METATYPE(AutogenerateConfigureAskInfo)
+Q_DECLARE_TYPEINFO(AutogenerateConfigureAskInfo, Q_RELOCATABLE_TYPE);
+PIMAUTOGENERATETEXT_TESTS_EXPORT QDebug operator<<(QDebug d, const AutogenerateConfigureAskInfo &t);

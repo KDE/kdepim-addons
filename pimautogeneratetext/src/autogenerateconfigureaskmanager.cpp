@@ -22,12 +22,12 @@ void AutogenerateConfigureAskManager::save()
     // TODO
 }
 
-QList<AutogenerateConfigureAskItem> AutogenerateConfigureAskManager::items() const
+QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskManager::items() const
 {
     return mItems;
 }
 
-void AutogenerateConfigureAskManager::setItems(const QList<AutogenerateConfigureAskItem> &newItems)
+void AutogenerateConfigureAskManager::setItems(const QList<AutogenerateConfigureAskInfo> &newItems)
 {
     if (mItems != newItems) {
         mItems = newItems;

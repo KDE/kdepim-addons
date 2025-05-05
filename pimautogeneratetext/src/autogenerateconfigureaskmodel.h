@@ -5,7 +5,7 @@
 */
 #pragma once
 
-#include "autogenerateconfigureaskitem.h"
+#include "autogenerateconfigureaskinfo.h"
 
 #include <QAbstractListModel>
 
@@ -27,11 +27,11 @@ public:
     [[nodiscard]] bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    [[nodiscard]] QList<AutogenerateConfigureAskItem> askItems() const;
-    void setAskItems(const QList<AutogenerateConfigureAskItem> &newAskItems);
+    [[nodiscard]] QList<AutogenerateConfigureAskInfo> askItems() const;
+    void setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems);
 
-    void addItem(const AutogenerateConfigureAskItem &msg);
+    void addItem(const AutogenerateConfigureAskInfo &msg);
 
 private:
-    QList<AutogenerateConfigureAskItem> mAskItems;
+    QList<AutogenerateConfigureAskInfo> mAskItems;
 };
