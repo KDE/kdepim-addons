@@ -21,12 +21,16 @@ public:
 
     [[nodiscard]] QMenu *menu() const;
 
+    [[nodiscard]] QString selectedText() const;
+    void setSelectedText(const QString &newSelectedText);
+
 Q_SIGNALS:
     void askRequested(const QString &msg);
 
 private:
     PIMAUTOGENERATETEXT_NO_EXPORT void initializeMenu();
     PIMAUTOGENERATETEXT_NO_EXPORT void slotConfigure();
+    QString mSelectedText;
     QWidget *mParentWidget = nullptr;
     AutogenerateConfigureAskManager *const mManager;
     QMenu *const mMenu;
