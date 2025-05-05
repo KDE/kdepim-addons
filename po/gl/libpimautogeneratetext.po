@@ -1,65 +1,64 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# SPDX-FileCopyrightText: 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
+# SPDX-FileCopyrightText: 2025 Adrián Chaves (Gallaecio)
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-03 00:43+0000\n"
-"PO-Revision-Date: 2025-05-04 06:27+0400\n"
-"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
-"Language: ar\n"
+"PO-Revision-Date: 2025-05-04 13:39+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: src/autogenerateconfigureaskdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Administrator"
-msgstr "المسؤول"
+msgstr "Administración"
 
 #: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
 msgid "Ask AI…"
-msgstr "اسأل الذكاء الاصطناعي…"
+msgstr "Preguntar á IA…"
 
 #: src/autogenerateconfigureaskmenu.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"
-msgstr "اضبط…"
+msgstr "Configurar…"
 
 #: src/autogenerateconfigurelistview.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Add…"
-msgstr "أضف…"
+msgstr "Engadir…"
 
 #: src/autogenerateconfigurelistview.cpp:56
 #, kde-format
 msgctxt "@action"
 msgid "Modify…"
-msgstr "عدّل…"
+msgstr "Modificar…"
 
 #: src/autogenerateconfigurelistview.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Remove…"
-msgstr "أزل…"
+msgstr "Retirar…"
 
 #: src/autogenerateconfigurelistview.cpp:66
 #, kde-format
 msgid "Do you want to remove it?"
-msgstr "أتريد إزالته؟"
+msgstr "Seguro que quere retirala?"
 
 #: src/autogenerateconfigurelistview.cpp:67
 #, kde-format
 msgctxt "@title"
 msgid "Remove"
-msgstr "أزل"
+msgstr "Retirar"

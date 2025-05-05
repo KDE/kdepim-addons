@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-03 00:43+0000\n"
-"PO-Revision-Date: 2025-05-01 17:50+0200\n"
+"PO-Revision-Date: 2025-05-04 18:14+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -26,13 +26,13 @@ msgstr "Amministratore"
 #: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
 msgid "Ask AI…"
-msgstr ""
+msgstr "Chiedi all'IA…"
 
 #: src/autogenerateconfigureaskmenu.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"
-msgstr ""
+msgstr "Configura…"
 
 #: src/autogenerateconfigurelistview.cpp:45
 #, kde-format
