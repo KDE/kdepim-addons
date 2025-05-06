@@ -6,6 +6,7 @@
 
 #include "askautogeneratetextplugineditorinterface.h"
 #include <KActionCollection>
+#include <PimAutoGenerateText/AutogenerateConfigureAskMenu>
 #include <QAction>
 #include <TextCustomEditor/RichTextEditor>
 

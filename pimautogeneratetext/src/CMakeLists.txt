@@ -42,6 +42,13 @@ target_sources(KPim6AutoGenerateText PRIVATE
     autogenerateconfigurelistviewdelegate.cpp
 )
 
+ecm_generate_headers(PimAutoGenerateText_Camelcases_HEADERS
+    HEADER_NAMES
+    AutogenerateConfigureAskMenu
+    REQUIRED_HEADERS PimAutoGenerateText_HEADERS
+    PREFIX PimAutoGenerateText
+)
+
 target_link_libraries(KPim6AutoGenerateText
     PUBLIC
     Qt::Widgets
