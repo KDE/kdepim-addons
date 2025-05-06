@@ -45,6 +45,7 @@ target_sources(KPim6AutoGenerateText PRIVATE
 ecm_generate_headers(PimAutoGenerateText_Camelcases_HEADERS
     HEADER_NAMES
     AutogenerateConfigureAskMenu
+    AutogenerateConfigureAskManager
     REQUIRED_HEADERS PimAutoGenerateText_HEADERS
     PREFIX PimAutoGenerateText
 )
