@@ -5,6 +5,7 @@
 */
 
 #include "autogenerateconfigureaskwidget.h"
+#include "autogenerateconfigureaskmodel.h"
 #include "autogenerateconfigurelistview.h"
 #include <KLineEditEventHandler>
 #include <KLocalizedString>
@@ -38,10 +39,13 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
 
     mAutogenerateConfigureListView->setObjectName(QStringLiteral("mAutogenerateConfigureListView"));
     vbox->addWidget(mAutogenerateConfigureListView);
+    connect(mAutogenerateConfigureListView, &AutogenerateConfigureListView::clicked, this, &AutogenerateConfigureAskWidget::slotClicked);
 
     mTextEdit->setObjectName(QStringLiteral("mTextEdit"));
     mainLayout->addWidget(mTextEdit);
 }
+
+AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;
 
 QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskWidget::askItems() const
 {
@@ -53,6 +57,12 @@ void AutogenerateConfigureAskWidget::setAskItems(const QList<AutogenerateConfigu
     mAutogenerateConfigureListView->setAskItems(newAskItems);
 }
 
-AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;
+void AutogenerateConfigureAskWidget::slotClicked(const QModelIndex &index)
+{
+    if (!index.isValid()) {
+        return;
+    }
+    mTextEdit->setPlainText(index.data(AutogenerateConfigureAskModel::TextRole).toString());
+}
 
 #include "moc_autogenerateconfigureaskwidget.cpp"

@@ -22,6 +22,7 @@ public:
     void setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems);
 
 private:
+    void slotClicked(const QModelIndex &index);
     QLineEdit *const mSearchLineEdit;
     QPlainTextEdit *const mTextEdit;
     AutogenerateConfigureListView *const mAutogenerateConfigureListView;
