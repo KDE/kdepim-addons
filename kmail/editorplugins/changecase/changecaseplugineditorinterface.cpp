@@ -22,14 +22,14 @@ ChangeCasePluginEditorInterface::~ChangeCasePluginEditorInterface() = default;
 
 void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)
 {
-    auto ChangeCaseMenu = new PimCommon::KActionMenuChangeCase(this);
-    ChangeCaseMenu->appendInActionCollection(ac);
-    ac->addAction(QStringLiteral("change_case_menu"), ChangeCaseMenu);
-    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::upperCase, this, &ChangeCasePluginEditorInterface::slotUpperCase);
-    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::lowerCase, this, &ChangeCasePluginEditorInterface::slotLowerCase);
-    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::sentenceCase, this, &ChangeCasePluginEditorInterface::slotSentenceCase);
-    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::reverseCase, this, &ChangeCasePluginEditorInterface::slotReverseCase);
-    MessageComposer::PluginActionType type(ChangeCaseMenu, MessageComposer::PluginActionType::Edit);
+    auto changeCaseMenu = new PimCommon::KActionMenuChangeCase(this);
+    changeCaseMenu->appendInActionCollection(ac);
+    ac->addAction(QStringLiteral("change_case_menu"), changeCaseMenu);
+    connect(changeCaseMenu, &PimCommon::KActionMenuChangeCase::upperCase, this, &ChangeCasePluginEditorInterface::slotUpperCase);
+    connect(changeCaseMenu, &PimCommon::KActionMenuChangeCase::lowerCase, this, &ChangeCasePluginEditorInterface::slotLowerCase);
+    connect(changeCaseMenu, &PimCommon::KActionMenuChangeCase::sentenceCase, this, &ChangeCasePluginEditorInterface::slotSentenceCase);
+    connect(changeCaseMenu, &PimCommon::KActionMenuChangeCase::reverseCase, this, &ChangeCasePluginEditorInterface::slotReverseCase);
+    MessageComposer::PluginActionType type(changeCaseMenu, MessageComposer::PluginActionType::Edit);
     setActionType(type);
 }
 
