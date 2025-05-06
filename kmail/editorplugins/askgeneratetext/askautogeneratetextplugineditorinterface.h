@@ -7,7 +7,7 @@
 #pragma once
 
 #include <MessageComposer/PluginEditorInterface>
-
+class AutogenerateConfigureAskManager;
 class AskAutogenerateTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
@@ -17,4 +17,7 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
+
+private:
+    AutogenerateConfigureAskManager *const mAskManager;
 };

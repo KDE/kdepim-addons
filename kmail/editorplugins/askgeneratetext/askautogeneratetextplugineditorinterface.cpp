@@ -6,12 +6,14 @@
 
 #include "askautogeneratetextplugineditorinterface.h"
 #include <KActionCollection>
+#include <PimAutoGenerateText/AutogenerateConfigureAskManager>
 #include <PimAutoGenerateText/AutogenerateConfigureAskMenu>
 #include <QAction>
 #include <TextCustomEditor/RichTextEditor>
 
 AskAutogenerateTextPluginEditorInterface::AskAutogenerateTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
+    , mAskManager(new AutogenerateConfigureAskManager(this))
 {
     setNeedSelectedText(true);
 }
@@ -20,9 +22,10 @@ AskAutogenerateTextPluginEditorInterface::~AskAutogenerateTextPluginEditorInterf
 
 void AskAutogenerateTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
+    auto menu = new AutogenerateConfigureAskMenu(mAskManager, this);
+    // menu->appendInActionCollection(ac);
+    ac->addAction(QStringLiteral("change_case_menu"), menu);
     /*
-    // TODO
-    ac->addAction(QStringLiteral("ask_ai"), ChangeCaseMenu);
 
     auto ChangeCaseMenu = new PimCommon::KActionMenuChangeCase(this);
     ChangeCaseMenu->appendInActionCollection(ac);
