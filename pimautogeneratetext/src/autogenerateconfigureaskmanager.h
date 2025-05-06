@@ -6,6 +6,7 @@
 #pragma once
 #include "autogenerateconfigureaskinfo.h"
 #include "pimautogeneratetext_export.h"
+#include <KSharedConfig>
 #include <QObject>
 
 class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskManager : public QObject
@@ -25,5 +26,6 @@ Q_SIGNALS:
     void changed();
 
 private:
+    [[nodiscard]] QStringList keyRecorderList(KSharedConfig::Ptr &config) const;
     QList<AutogenerateConfigureAskInfo> mItems;
 };
