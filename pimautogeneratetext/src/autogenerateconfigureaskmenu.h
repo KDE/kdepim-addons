@@ -6,10 +6,9 @@
 
 #pragma once
 #include "pimautogeneratetext_export.h"
-#include <QObject>
-class QMenu;
+#include <KActionMenu>
 class AutogenerateConfigureAskManager;
-class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskMenu : public QObject
+class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskMenu : public KActionMenu
 {
     Q_OBJECT
 public:
@@ -18,8 +17,6 @@ public:
 
     [[nodiscard]] QWidget *parentWidget() const;
     void setParentWidget(QWidget *newParentWidget);
-
-    [[nodiscard]] QMenu *menu() const;
 
     [[nodiscard]] QString selectedText() const;
     void setSelectedText(const QString &newSelectedText);
@@ -33,5 +30,4 @@ private:
     QString mSelectedText;
     QWidget *mParentWidget = nullptr;
     AutogenerateConfigureAskManager *const mManager;
-    QMenu *const mMenu;
 };
