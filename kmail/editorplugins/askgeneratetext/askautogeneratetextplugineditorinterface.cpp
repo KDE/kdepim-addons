@@ -24,17 +24,10 @@ AskAutogenerateTextPluginEditorInterface::~AskAutogenerateTextPluginEditorInterf
 void AskAutogenerateTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto menu = new AutogenerateConfigureAskMenu(mAskManager, this);
-    ac->addAction(QStringLiteral("change_case_menu"), menu->menu());
+    ac->addAction(QStringLiteral("change_case_menu"), menu);
     // connect(menu, &AutogenerateConfigureAskMenu::askRequested,)
-    /*
-
-    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::upperCase, this, &AskAutogenerateTextPluginEditorInterface::slotUpperCase);
-    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::lowerCase, this, &AskAutogenerateTextPluginEditorInterface::slotLowerCase);
-    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::sentenceCase, this, &AskAutogenerateTextPluginEditorInterface::slotSentenceCase);
-    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::reverseCase, this, &AskAutogenerateTextPluginEditorInterface::slotReverseCase);
-    MessageComposer::PluginActionType type(menu->menu(), MessageComposer::PluginActionType::Edit);
+    MessageComposer::PluginActionType type(menu, MessageComposer::PluginActionType::Edit);
     setActionType(type);
-    */
 }
 
 void AskAutogenerateTextPluginEditorInterface::exec()
