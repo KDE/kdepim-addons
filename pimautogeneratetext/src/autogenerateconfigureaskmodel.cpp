@@ -31,7 +31,7 @@ QVariant AutogenerateConfigureAskModel::data(const QModelIndex &index, int role)
     switch (role) {
     case Qt::DisplayRole:
     case TitleRole:
-        return askItem.title();
+        return askItem.title().isEmpty() ? askItem.text() : askItem.title();
     case TextRole:
         return askItem.text();
     case Qt::CheckStateRole:
