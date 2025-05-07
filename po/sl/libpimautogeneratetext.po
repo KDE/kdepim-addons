@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-06 00:42+0000\n"
+"POT-Creation-Date: 2025-05-07 00:43+0000\n"
 "PO-Revision-Date: 2025-05-03 06:03+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -24,12 +24,12 @@ msgctxt "@title:window"
 msgid "Administrator"
 msgstr "Skrbnik"
 
-#: src/autogenerateconfigureaskmenu.cpp:21
+#: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
 msgid "Ask AI…"
 msgstr "Vprašaj umetno inteligenco…"
 
-#: src/autogenerateconfigureaskmenu.cpp:48
+#: src/autogenerateconfigureaskmenu.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"
