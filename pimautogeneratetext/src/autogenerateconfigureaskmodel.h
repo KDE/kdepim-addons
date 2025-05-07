@@ -31,6 +31,7 @@ public:
     void setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems);
 
     void addItem(const AutogenerateConfigureAskInfo &msg);
+    void removeInfo(int index);
 
 private:
     QList<AutogenerateConfigureAskInfo> mAskItems;

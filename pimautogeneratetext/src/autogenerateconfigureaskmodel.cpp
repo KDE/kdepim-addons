@@ -90,6 +90,12 @@ void AutogenerateConfigureAskModel::addItem(const AutogenerateConfigureAskInfo &
     endInsertRows();
 }
 
+void AutogenerateConfigureAskModel::removeInfo(int index)
+{
+    beginRemoveRows(QModelIndex(), index, index);
+    mAskItems.removeAt(index);
+    endRemoveRows();
+}
 Qt::ItemFlags AutogenerateConfigureAskModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid())

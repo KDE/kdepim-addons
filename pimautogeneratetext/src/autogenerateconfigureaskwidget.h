@@ -22,7 +22,8 @@ public:
     void setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems);
 
 private:
-    void slotClicked(const QModelIndex &index);
+    PIMAUTOGENERATETEXT_NO_EXPORT void slotClicked(const QModelIndex &index);
+    PIMAUTOGENERATETEXT_NO_EXPORT void slotItemChanged(const QModelIndex &current, const QModelIndex &previous);
     QLineEdit *const mSearchLineEdit;
     QPlainTextEdit *const mTextEdit;
     AutogenerateConfigureListView *const mAutogenerateConfigureListView;

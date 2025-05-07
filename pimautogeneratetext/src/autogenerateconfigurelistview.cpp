@@ -44,11 +44,9 @@ void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
     QMenu menu(this);
     auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action", "Add…"), &menu);
     connect(addAction, &QAction::triggered, this, [this]() {
-        /*
-        AiTextInfo info;
-        info.setRequestText(i18n("Ask to AI"));
+        AutogenerateConfigureAskInfo info;
+        info.setText(i18n("Ask to AI"));
         mModel->addItem(std::move(info));
-        */
     });
     menu.addAction(addAction);
     const QModelIndex index = indexAt(event->pos());
@@ -68,7 +66,7 @@ void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
                                                KStandardGuiItem::remove(),
                                                KStandardGuiItem::cancel())
                 == KMessageBox::PrimaryAction) {
-                // TODO mModel->removeInfo(index.row());
+                mModel->removeInfo(index.row());
             }
         });
         menu.addAction(removeAction);

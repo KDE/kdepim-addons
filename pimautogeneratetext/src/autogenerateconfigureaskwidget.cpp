@@ -40,12 +40,18 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     mAutogenerateConfigureListView->setObjectName(QStringLiteral("mAutogenerateConfigureListView"));
     vbox->addWidget(mAutogenerateConfigureListView);
     connect(mAutogenerateConfigureListView, &AutogenerateConfigureListView::clicked, this, &AutogenerateConfigureAskWidget::slotClicked);
+    connect(mAutogenerateConfigureListView->selectionModel(), &QItemSelectionModel::currentChanged, this, &AutogenerateConfigureAskWidget::slotItemChanged);
 
     mTextEdit->setObjectName(QStringLiteral("mTextEdit"));
     mainLayout->addWidget(mTextEdit);
 }
 
 AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;
+
+void AutogenerateConfigureAskWidget::slotItemChanged(const QModelIndex &current, const QModelIndex &previous)
+{
+    qDebug() << " change *****";
+}
 
 QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskWidget::askItems() const
 {
