@@ -18,8 +18,8 @@ public:
 
     void setFilterText(const QString &str);
 
-    [[nodiscard]] QList<AutogenerateConfigureAskInfo> askItems() const;
-    void setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems);
+    [[nodiscard]] QList<AutogenerateConfigureAskInfo> askInfos() const;
+    void setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems);
 
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;

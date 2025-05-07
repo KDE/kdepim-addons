@@ -29,7 +29,7 @@ void AutogenerateConfigureAskManager::load()
         info.setEnabled(group.readEntry(QStringLiteral("Enabled"), true));
         infos.append(std::move(info));
     }
-    setItems(infos);
+    setInfos(infos);
 }
 
 QStringList AutogenerateConfigureAskManager::keyRecorderList(KSharedConfig::Ptr &config) const
@@ -47,10 +47,10 @@ void AutogenerateConfigureAskManager::save()
     for (const QString &group : filterGroups) {
         config->deleteGroup(group);
     }
-    for (int i = 0, total = mItems.count(); i < total; ++i) {
+    for (int i = 0, total = mInfos.count(); i < total; ++i) {
         const QString groupName = QStringLiteral("AskIA #%1").arg(i);
         KConfigGroup group = config->group(groupName);
-        const AutogenerateConfigureAskInfo &info = mItems.at(i);
+        const AutogenerateConfigureAskInfo &info = mInfos.at(i);
         group.writeEntry(QStringLiteral("Text"), info.text());
         group.writeEntry(QStringLiteral("Title"), info.title());
         group.writeEntry(QStringLiteral("Enabled"), info.enabled());
@@ -58,15 +58,15 @@ void AutogenerateConfigureAskManager::save()
     config->sync();
 }
 
-QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskManager::items() const
+QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskManager::askInfos() const
 {
-    return mItems;
+    return mInfos;
 }
 
-void AutogenerateConfigureAskManager::setItems(const QList<AutogenerateConfigureAskInfo> &newItems)
+void AutogenerateConfigureAskManager::setInfos(const QList<AutogenerateConfigureAskInfo> &newItems)
 {
-    if (mItems != newItems) {
-        mItems = newItems;
+    if (mInfos != newItems) {
+        mInfos = newItems;
         Q_EMIT changed();
     }
 }

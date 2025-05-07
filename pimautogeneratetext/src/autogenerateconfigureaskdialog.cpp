@@ -43,14 +43,14 @@ AutogenerateConfigureAskDialog::~AutogenerateConfigureAskDialog()
     writeConfig();
 }
 
-QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskDialog::askItems() const
+QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskDialog::askInfos() const
 {
-    return mAutogenerateConfigureAskWidget->askItems();
+    return mAutogenerateConfigureAskWidget->askInfos();
 }
 
-void AutogenerateConfigureAskDialog::setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems)
+void AutogenerateConfigureAskDialog::setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems)
 {
-    mAutogenerateConfigureAskWidget->setAskItems(newAskItems);
+    mAutogenerateConfigureAskWidget->setAskInfos(newAskItems);
 }
 
 void AutogenerateConfigureAskDialog::readConfig()

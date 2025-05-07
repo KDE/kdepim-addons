@@ -27,12 +27,12 @@ public:
     [[nodiscard]] bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    [[nodiscard]] QList<AutogenerateConfigureAskInfo> askItems() const;
-    void setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems);
+    [[nodiscard]] QList<AutogenerateConfigureAskInfo> askInfos() const;
+    void setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems);
 
     void addItem(const AutogenerateConfigureAskInfo &msg);
-    void removeInfo(int index);
+    void removeItem(int index);
 
 private:
-    QList<AutogenerateConfigureAskInfo> mAskItems;
+    QList<AutogenerateConfigureAskInfo> mAskInfos;
 };

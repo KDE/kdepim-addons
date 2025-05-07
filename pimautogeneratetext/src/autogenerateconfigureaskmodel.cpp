@@ -18,16 +18,16 @@ int AutogenerateConfigureAskModel::rowCount(const QModelIndex &parent) const
     if (parent.isValid()) {
         return 0; // flat model
     }
-    return mAskItems.count();
+    return mAskInfos.count();
 }
 
 QVariant AutogenerateConfigureAskModel::data(const QModelIndex &index, int role) const
 {
-    if (index.row() < 0 || index.row() >= mAskItems.count()) {
+    if (index.row() < 0 || index.row() >= mAskInfos.count()) {
         return {};
     }
 
-    const auto &askItem = mAskItems[index.row()];
+    const auto &askItem = mAskInfos[index.row()];
     switch (role) {
     case Qt::DisplayRole:
     case TitleRole:
@@ -48,7 +48,7 @@ bool AutogenerateConfigureAskModel::setData(const QModelIndex &idx, const QVaria
         return false;
     }
     const int id = idx.row();
-    auto &info = mAskItems[id];
+    auto &info = mAskInfos[id];
     switch (role) {
     case AskRoles::TitleRole: {
         info.setTitle(value.toString());
@@ -71,29 +71,29 @@ bool AutogenerateConfigureAskModel::setData(const QModelIndex &idx, const QVaria
     return QAbstractListModel::setData(idx, value, role);
 }
 
-QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskModel::askItems() const
+QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskModel::askInfos() const
 {
-    return mAskItems;
+    return mAskInfos;
 }
 
-void AutogenerateConfigureAskModel::setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems)
+void AutogenerateConfigureAskModel::setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems)
 {
     beginResetModel();
-    mAskItems = newAskItems;
+    mAskInfos = newAskItems;
     endResetModel();
 }
 
 void AutogenerateConfigureAskModel::addItem(const AutogenerateConfigureAskInfo &msg)
 {
-    beginInsertRows(QModelIndex(), mAskItems.count(), mAskItems.count());
-    mAskItems.append(msg);
+    beginInsertRows(QModelIndex(), mAskInfos.count(), mAskInfos.count());
+    mAskInfos.append(msg);
     endInsertRows();
 }
 
-void AutogenerateConfigureAskModel::removeInfo(int index)
+void AutogenerateConfigureAskModel::removeItem(int index)
 {
     beginRemoveRows(QModelIndex(), index, index);
-    mAskItems.removeAt(index);
+    mAskInfos.removeAt(index);
     endRemoveRows();
 }
 Qt::ItemFlags AutogenerateConfigureAskModel::flags(const QModelIndex &index) const

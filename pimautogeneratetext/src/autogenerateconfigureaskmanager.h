@@ -19,13 +19,13 @@ public:
     void load();
     void save();
 
-    [[nodiscard]] QList<AutogenerateConfigureAskInfo> items() const;
-    void setItems(const QList<AutogenerateConfigureAskInfo> &newItems);
+    [[nodiscard]] QList<AutogenerateConfigureAskInfo> askInfos() const;
+    void setInfos(const QList<AutogenerateConfigureAskInfo> &newItems);
 
 Q_SIGNALS:
     void changed();
 
 private:
     [[nodiscard]] QStringList keyRecorderList(KSharedConfig::Ptr &config) const;
-    QList<AutogenerateConfigureAskInfo> mItems;
+    QList<AutogenerateConfigureAskInfo> mInfos;
 };

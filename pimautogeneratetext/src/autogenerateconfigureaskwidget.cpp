@@ -53,14 +53,14 @@ void AutogenerateConfigureAskWidget::slotItemChanged(const QModelIndex &current,
     qDebug() << " change *****";
 }
 
-QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskWidget::askItems() const
+QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskWidget::askInfos() const
 {
-    return mAutogenerateConfigureListView->askItems();
+    return mAutogenerateConfigureListView->askInfos();
 }
 
-void AutogenerateConfigureAskWidget::setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems)
+void AutogenerateConfigureAskWidget::setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems)
 {
-    mAutogenerateConfigureListView->setAskItems(newAskItems);
+    mAutogenerateConfigureListView->setAskInfos(newAskItems);
 }
 
 void AutogenerateConfigureAskWidget::slotClicked(const QModelIndex &index)

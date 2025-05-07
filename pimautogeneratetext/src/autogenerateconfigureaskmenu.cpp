@@ -26,7 +26,7 @@ AutogenerateConfigureAskMenu::~AutogenerateConfigureAskMenu() = default;
 
 void AutogenerateConfigureAskMenu::initializeMenu()
 {
-    const auto infos = mManager->items();
+    const auto infos = mManager->askInfos();
     for (const AutogenerateConfigureAskInfo &info : infos) {
         if (info.enabled()) {
             const QString requestText = info.title();
@@ -49,10 +49,10 @@ void AutogenerateConfigureAskMenu::initializeMenu()
 void AutogenerateConfigureAskMenu::slotConfigure()
 {
     AutogenerateConfigureAskDialog dlg(mParentWidget);
-    dlg.setAskItems(mManager->items());
+    dlg.setAskInfos(mManager->askInfos());
     if (dlg.exec()) {
         menu()->clear();
-        mManager->setItems(dlg.askItems());
+        mManager->setInfos(dlg.askInfos());
         mManager->save();
         initializeMenu();
     }

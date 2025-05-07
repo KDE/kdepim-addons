@@ -18,8 +18,8 @@ public:
     explicit AutogenerateConfigureAskWidget(QWidget *parent = nullptr);
     ~AutogenerateConfigureAskWidget() override;
 
-    [[nodiscard]] QList<AutogenerateConfigureAskInfo> askItems() const;
-    void setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems);
+    [[nodiscard]] QList<AutogenerateConfigureAskInfo> askInfos() const;
+    void setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems);
 
 private:
     PIMAUTOGENERATETEXT_NO_EXPORT void slotClicked(const QModelIndex &index);

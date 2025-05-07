@@ -29,14 +29,14 @@ void AutogenerateConfigureListView::setFilterText(const QString &str)
     mSortFilterProxyModel->setFilterFixedString(str);
 }
 
-QList<AutogenerateConfigureAskInfo> AutogenerateConfigureListView::askItems() const
+QList<AutogenerateConfigureAskInfo> AutogenerateConfigureListView::askInfos() const
 {
-    return mModel->askItems();
+    return mModel->askInfos();
 }
 
-void AutogenerateConfigureListView::setAskItems(const QList<AutogenerateConfigureAskInfo> &newAskItems)
+void AutogenerateConfigureListView::setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems)
 {
-    mModel->setAskItems(newAskItems);
+    mModel->setAskInfos(newAskItems);
 }
 
 void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
@@ -66,7 +66,7 @@ void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
                                                KStandardGuiItem::remove(),
                                                KStandardGuiItem::cancel())
                 == KMessageBox::PrimaryAction) {
-                mModel->removeInfo(index.row());
+                mModel->removeItem(index.row());
             }
         });
         menu.addAction(removeAction);
