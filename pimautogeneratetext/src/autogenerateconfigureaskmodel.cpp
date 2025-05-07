@@ -36,7 +36,7 @@ QVariant AutogenerateConfigureAskModel::data(const QModelIndex &index, int role)
         return askItem.text();
     case Qt::CheckStateRole:
     case EnabledRole:
-        return askItem.enabled();
+        return askItem.enabled() ? Qt::Checked : Qt::Unchecked;
     }
     return {};
 }
