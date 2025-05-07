@@ -51,6 +51,7 @@ void AutogenerateConfigureAskMenu::slotConfigure()
     AutogenerateConfigureAskDialog dlg(mParentWidget);
     dlg.setAskItems(mManager->items());
     if (dlg.exec()) {
+        menu()->clear();
         mManager->setItems(dlg.askItems());
         mManager->save();
         initializeMenu();
