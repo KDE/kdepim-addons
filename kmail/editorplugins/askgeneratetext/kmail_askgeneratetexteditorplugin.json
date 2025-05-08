@@ -20,6 +20,15 @@
         "Description[zh_TW]": "這個外掛程式讓您向 AI 進行詢問。",
         "EnabledByDefault": false,
         "Name": "Ask IA",
+        "Name[ar]": "اسأل الذكاء الاصطناعي",
+        "Name[ca@valencia]": "Pregunta a la IA",
+        "Name[ca]": "Pregunta a la IA",
+        "Name[es]": "Preguntar a la IA",
+        "Name[ka]": "კითხვა IA-სთვის",
+        "Name[nl]": "Aan AI vragen",
+        "Name[sl]": "Vprašaj umetno inteligenco",
+        "Name[uk]": "Запитати у ШІ",
+        "Name[x-test]": "xxAsk IAxx",
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"
