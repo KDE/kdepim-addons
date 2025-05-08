@@ -24,10 +24,15 @@ AskAutogenerateTextPluginEditorInterface::~AskAutogenerateTextPluginEditorInterf
 void AskAutogenerateTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto menu = new AutogenerateConfigureAskMenu(mAskManager, this);
-    ac->addAction(QStringLiteral("change_case_menu"), menu);
-    // connect(menu, &AutogenerateConfigureAskMenu::askRequested,)
+    ac->addAction(QStringLiteral("editor_ask_ia"), menu);
+    connect(menu, &AutogenerateConfigureAskMenu::askRequested, this, &AskAutogenerateTextPluginEditorInterface::slotAskRequested);
     MessageComposer::PluginActionType type(menu, MessageComposer::PluginActionType::Edit);
     setActionType(type);
+}
+
+void AskAutogenerateTextPluginEditorInterface::slotAskRequested(const QString &msg)
+{
+    // TODO
 }
 
 void AskAutogenerateTextPluginEditorInterface::exec()

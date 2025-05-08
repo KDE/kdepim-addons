@@ -19,5 +19,6 @@ public:
     void exec() override;
 
 private:
+    void slotAskRequested(const QString &msg);
     AutogenerateConfigureAskManager *const mAskManager;
 };
