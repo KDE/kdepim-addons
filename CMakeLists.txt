@@ -160,8 +160,8 @@ find_package(KPim6KSieveUi ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
 if(OPTION_ADD_AUTOGENERATETEXT)
-   find_package(KF6TextAutogenerateText ${KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION} CONFIG)
-   set_package_properties(KF6TextAutogenerateText PROPERTIES
+   find_package(KF6TextAutoGenerateText ${KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION} CONFIG)
+   set_package_properties(KF6TextAutoGenerateText PROPERTIES
        TYPE OPTIONAL
        PURPOSE "Required for building AI plugins support"
        DESCRIPTION "Use AI plugin"
@@ -279,7 +279,7 @@ add_subdirectory(kldap)
 if(TARGET KPim6::ImportWizard)
   add_subdirectory(akonadi-import-wizard)
 endif()
-if(TARGET KF6::TextAutogenerateText)
+if(TARGET KF6::TextAutoGenerateText)
   add_subdirectory(pimautogeneratetext)
 endif()
 
