@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-08 00:42+0000\n"
-"PO-Revision-Date: 2025-05-04 04:10+0200\n"
+"PO-Revision-Date: 2025-05-08 03:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -42,10 +42,9 @@ msgid "Add…"
 msgstr "დამატება…"
 
 #: src/autogenerateconfigurelistview.cpp:48
-#, fuzzy, kde-format
-#| msgid "Ask AI…"
+#, kde-format
 msgid "Ask to AI"
-msgstr "ხი-სთვის კითხვა…"
+msgstr "ხი-სთვის კითხვა"
 
 #: src/autogenerateconfigurelistview.cpp:54
 #, kde-format

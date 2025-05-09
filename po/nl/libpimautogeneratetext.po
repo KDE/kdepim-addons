@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-08 00:42+0000\n"
-"PO-Revision-Date: 2025-05-03 12:41+0200\n"
+"PO-Revision-Date: 2025-05-08 13:32+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -41,8 +41,7 @@ msgid "Add…"
 msgstr "Toevoegen…"
 
 #: src/autogenerateconfigurelistview.cpp:48
-#, fuzzy, kde-format
-#| msgid "Ask AI…"
+#, kde-format
 msgid "Ask to AI"
 msgstr "Aan AI vragen…"
 
