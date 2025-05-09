@@ -24,9 +24,11 @@
         "Name[ca@valencia]": "Pregunta a la IA",
         "Name[ca]": "Pregunta a la IA",
         "Name[es]": "Preguntar a la IA",
+        "Name[he]": "לשאול בינה מלאכותית",
         "Name[ka]": "კითხვა IA-სთვის",
         "Name[nl]": "Aan AI vragen",
         "Name[sl]": "Vprašaj umetno inteligenco",
+        "Name[tr]": "Yapay Zekâya Sor",
         "Name[uk]": "Запитати у ШІ",
         "Name[x-test]": "xxAsk IAxx",
         "Version": "1.0"
