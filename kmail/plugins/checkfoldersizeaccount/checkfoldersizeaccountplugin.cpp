@@ -5,6 +5,7 @@
 */
 
 #include "checkfoldersizeaccountplugin.h"
+#include "checkfoldersizeaccountplugininterface.h"
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(CheckFolderSizeAccountPlugin, "kmail_checkfoldersizeaccountplugin.json")
@@ -16,8 +17,7 @@ CheckFolderSizeAccountPlugin::CheckFolderSizeAccountPlugin(QObject *parent, cons
 
 PimCommon::GenericPluginInterface *CheckFolderSizeAccountPlugin::createInterface(QObject *parent)
 {
-    // TODO
-    return nullptr;
+    return new CheckFolderSizeAccountPluginInterface(parent);
 }
 
 CheckFolderSizeAccountPlugin::~CheckFolderSizeAccountPlugin() = default;
