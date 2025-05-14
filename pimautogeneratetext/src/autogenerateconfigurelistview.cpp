@@ -20,9 +20,15 @@ AutogenerateConfigureListView::AutogenerateConfigureListView(QWidget *parent)
     mSortFilterProxyModel->setSourceModel(mModel);
     setModel(mSortFilterProxyModel);
     setItemDelegate(new AutogenerateConfigureListViewDelegate(this));
+    connect(selectionModel(), &QItemSelectionModel::currentChanged, this, &AutogenerateConfigureListView::slotCurrentChanged);
 }
 
 AutogenerateConfigureListView::~AutogenerateConfigureListView() = default;
+
+void AutogenerateConfigureListView::slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous)
+{
+    // TODO
+}
 
 void AutogenerateConfigureListView::setFilterText(const QString &str)
 {
