@@ -7,9 +7,9 @@ project(kdepim-addons VERSION ${PIM_VERSION})
 
 set(KF_MIN_VERSION "6.12.0")
 set(QT_REQUIRED_VERSION "6.8.0")
+set(CMAKE_CXX_STANDARD 20)
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/ ${ECM_MODULE_PATH})
-
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
 
