@@ -23,9 +23,6 @@ target_sources(KPim6AutoGenerateText PRIVATE
 
     pimautogeneratetext_private_export.h
 
-    autogenerateconfigureaskutils.h
-    autogenerateconfigureaskutils.cpp
-
     autogenerateconfigureaskmanager.h
     autogenerateconfigureaskmanager.cpp
 
