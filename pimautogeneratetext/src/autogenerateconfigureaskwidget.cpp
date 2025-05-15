@@ -50,7 +50,6 @@ AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;
 
 void AutogenerateConfigureAskWidget::slotItemChanged(const QModelIndex &current, const QModelIndex &previous)
 {
-    qDebug() << " change *****";
     if (previous.isValid()) {
         const QString text = mTextEdit->toPlainText();
         mAutogenerateConfigureListView->setData(previous, mTextEdit->toPlainText());
