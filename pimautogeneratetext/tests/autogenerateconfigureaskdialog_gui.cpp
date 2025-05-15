@@ -5,6 +5,7 @@
 */
 
 #include "autogenerateconfigureaskdialog.h"
+#include "autogenerateconfigureaskmanager.h"
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>
@@ -19,6 +20,11 @@ int main(int argc, char **argv)
     parser.process(app);
 
     AutogenerateConfigureAskDialog dlg;
-    dlg.exec();
+    AutogenerateConfigureAskManager *manager = new AutogenerateConfigureAskManager(&dlg);
+    manager->load();
+    dlg.setAskInfos(manager->askInfos());
+    if (dlg.exec()) {
+        manager->save();
+    }
     return 0;
 }

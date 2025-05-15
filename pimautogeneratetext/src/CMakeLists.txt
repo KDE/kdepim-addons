@@ -50,9 +50,9 @@ ecm_generate_headers(PimAutoGenerateText_Camelcases_HEADERS
 target_link_libraries(KPim6AutoGenerateText
     PUBLIC
     Qt::Widgets
+    KF6::ConfigGui
     PRIVATE
     KF6::I18n
-    KF6::ConfigGui
     KF6::WidgetsAddons
     KF6::TextAutoGenerateText
 )
