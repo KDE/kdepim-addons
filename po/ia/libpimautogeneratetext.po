@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-08 00:42+0000\n"
+"POT-Creation-Date: 2025-05-15 00:43+0000\n"
 "PO-Revision-Date: 2025-05-09 16:43+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -34,35 +34,35 @@ msgctxt "@action"
 msgid "Configure…"
 msgstr "Configura…"
 
-#: src/autogenerateconfigurelistview.cpp:45
+#: src/autogenerateconfigurelistview.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Add…"
 msgstr "Adde…"
 
-#: src/autogenerateconfigurelistview.cpp:48
+#: src/autogenerateconfigurelistview.cpp:54
 #, kde-format
 msgid "Ask to AI"
 msgstr "Demanda a IA (AI) "
 
-#: src/autogenerateconfigurelistview.cpp:54
+#: src/autogenerateconfigurelistview.cpp:60
 #, kde-format
 msgctxt "@action"
 msgid "Modify…"
 msgstr "Modifica…"
 
-#: src/autogenerateconfigurelistview.cpp:61
+#: src/autogenerateconfigurelistview.cpp:67
 #, kde-format
 msgctxt "@action"
 msgid "Remove…"
 msgstr "Remove…"
 
-#: src/autogenerateconfigurelistview.cpp:64
+#: src/autogenerateconfigurelistview.cpp:70
 #, kde-format
 msgid "Do you want to remove it?"
 msgstr "Tu vole remover lo?"
 
-#: src/autogenerateconfigurelistview.cpp:65
+#: src/autogenerateconfigurelistview.cpp:71
 #, kde-format
 msgctxt "@title"
 msgid "Remove"
