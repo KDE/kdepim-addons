@@ -25,11 +25,6 @@ AutogenerateConfigureListView::AutogenerateConfigureListView(QWidget *parent)
 
 AutogenerateConfigureListView::~AutogenerateConfigureListView() = default;
 
-void AutogenerateConfigureListView::slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous)
-{
-    // TODO
-}
-
 void AutogenerateConfigureListView::setFilterText(const QString &str)
 {
     mSortFilterProxyModel->setFilterFixedString(str);

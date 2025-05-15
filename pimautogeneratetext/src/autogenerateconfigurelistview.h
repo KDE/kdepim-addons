@@ -25,7 +25,6 @@ protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
 
 private:
-    PIMAUTOGENERATETEXT_NO_EXPORT void slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous);
     AutogenerateConfigureAskModel *const mModel;
     QSortFilterProxyModel *const mSortFilterProxyModel;
 };
