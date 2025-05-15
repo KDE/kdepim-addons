@@ -51,12 +51,12 @@ AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;
 void AutogenerateConfigureAskWidget::slotItemChanged(const QModelIndex &current, const QModelIndex &previous)
 {
     qDebug() << " change *****";
-    if (current.isValid()) {
-        const QString text = mTextEdit->toPlainText();
-        mAutogenerateConfigureListView->setData(current, mTextEdit->toPlainText());
-    }
     if (previous.isValid()) {
-        mTextEdit->setPlainText(previous.data(AutogenerateConfigureAskModel::TextRole).toString());
+        const QString text = mTextEdit->toPlainText();
+        mAutogenerateConfigureListView->setData(previous, mTextEdit->toPlainText());
+    }
+    if (current.isValid()) {
+        mTextEdit->setPlainText(current.data(AutogenerateConfigureAskModel::TextRole).toString());
     } else {
         mTextEdit->setPlainText({});
     }
