@@ -22,6 +22,7 @@
         "EnabledByDefault": false,
         "Name": "Ask IA",
         "Name[ar]": "اسأل الذكاء الاصطناعي",
+        "Name[bg]": "Запитване ИИ",
         "Name[ca@valencia]": "Pregunta a la IA",
         "Name[ca]": "Pregunta a la IA",
         "Name[es]": "Preguntar a la IA",
