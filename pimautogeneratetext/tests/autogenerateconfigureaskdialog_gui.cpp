@@ -24,6 +24,8 @@ int main(int argc, char **argv)
     manager->load();
     dlg.setAskInfos(manager->askInfos());
     if (dlg.exec()) {
+        manager->setInfos(dlg.askInfos());
+        qDebug() << " XCCCCCCCCCCCCCCCCCCCCCCC;" << manager->askInfos();
         manager->save();
     }
     return 0;

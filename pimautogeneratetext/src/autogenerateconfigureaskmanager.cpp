@@ -35,7 +35,7 @@ void AutogenerateConfigureAskManager::load()
 QStringList AutogenerateConfigureAskManager::keyRecorderList(KSharedConfig::Ptr &config) const
 {
     config = KSharedConfig::openConfig();
-    const QStringList keyGroups = config->groupList().filter(QRegularExpression(QStringLiteral("AutoGenerate Text #\\d+")));
+    const QStringList keyGroups = config->groupList().filter(QRegularExpression(QStringLiteral("AskIA #\\d+")));
     return keyGroups;
 }
 
