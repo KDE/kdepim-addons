@@ -21,6 +21,8 @@ public:
     [[nodiscard]] QList<AutogenerateConfigureAskInfo> askInfos() const;
     void setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems);
 
+    void setData(const QModelIndex &current, const QString &text);
+
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
 

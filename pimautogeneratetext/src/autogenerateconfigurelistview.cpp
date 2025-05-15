@@ -39,6 +39,13 @@ void AutogenerateConfigureListView::setAskInfos(const QList<AutogenerateConfigur
     mModel->setAskInfos(newAskItems);
 }
 
+void AutogenerateConfigureListView::setData(const QModelIndex &current, const QString &text)
+{
+    if (!mModel->setData(current, text, AutogenerateConfigureAskModel::TextRole)) {
+        qWarning() << " Impossible to change text";
+    }
+}
+
 void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu(this);
