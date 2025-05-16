@@ -39,7 +39,6 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
 
     mAutogenerateConfigureListView->setObjectName(QStringLiteral("mAutogenerateConfigureListView"));
     vbox->addWidget(mAutogenerateConfigureListView);
-    connect(mAutogenerateConfigureListView, &AutogenerateConfigureListView::clicked, this, &AutogenerateConfigureAskWidget::slotClicked);
     connect(mAutogenerateConfigureListView->selectionModel(), &QItemSelectionModel::currentChanged, this, &AutogenerateConfigureAskWidget::slotItemChanged);
 
     mTextEdit->setObjectName(QStringLiteral("mTextEdit"));
@@ -50,6 +49,9 @@ AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;
 
 void AutogenerateConfigureAskWidget::slotItemChanged(const QModelIndex &current, const QModelIndex &previous)
 {
+    if (current == previous) {
+        return;
+    }
     if (previous.isValid()) {
         const QString text = mTextEdit->toPlainText();
         mAutogenerateConfigureListView->setData(previous, mTextEdit->toPlainText());
@@ -69,14 +71,6 @@ QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskWidget::askInfos() c
 void AutogenerateConfigureAskWidget::setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems)
 {
     mAutogenerateConfigureListView->setAskInfos(newAskItems);
-}
-
-void AutogenerateConfigureAskWidget::slotClicked(const QModelIndex &index)
-{
-    if (!index.isValid()) {
-        return;
-    }
-    mTextEdit->setPlainText(index.data(AutogenerateConfigureAskModel::TextRole).toString());
 }
 
 #include "moc_autogenerateconfigureaskwidget.cpp"
