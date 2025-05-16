@@ -17,6 +17,10 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
+    void slotRefreshMenu();
+
+Q_SIGNALS:
+    void refreshMenu();
 
 private:
     void slotAskRequested(const QString &msg);

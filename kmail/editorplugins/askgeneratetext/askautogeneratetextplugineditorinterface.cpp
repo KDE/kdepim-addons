@@ -24,6 +24,7 @@ AskAutogenerateTextPluginEditorInterface::~AskAutogenerateTextPluginEditorInterf
 void AskAutogenerateTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto menu = new AutogenerateConfigureAskMenu(mAskManager, this);
+    connect(this, &AskAutogenerateTextPluginEditorInterface::refreshMenu, menu, &AutogenerateConfigureAskMenu::slotRefreshMenu);
     ac->addAction(QStringLiteral("editor_ask_ia"), menu);
     connect(menu, &AutogenerateConfigureAskMenu::askRequested, this, &AskAutogenerateTextPluginEditorInterface::slotAskRequested);
     MessageComposer::PluginActionType type(menu, MessageComposer::PluginActionType::Edit);
@@ -38,6 +39,11 @@ void AskAutogenerateTextPluginEditorInterface::slotAskRequested(const QString &m
 void AskAutogenerateTextPluginEditorInterface::exec()
 {
     // TODO
+}
+
+void AskAutogenerateTextPluginEditorInterface::slotRefreshMenu()
+{
+    Q_EMIT refreshMenu();
 }
 
 #include "moc_askautogeneratetextplugineditorinterface.cpp"
