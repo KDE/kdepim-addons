@@ -10,6 +10,7 @@
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QPlainTextEdit>
+#include <QSplitter>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -27,6 +28,9 @@ void AutogenerateConfigureAskWidgetTest::shouldHaveDefaultValues()
     auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
+
+    auto mSplitter = w.findChild<QSplitter *>(QStringLiteral("mSplitter"));
+    QVERIFY(mSplitter);
 
     auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
     QVERIFY(mSearchLineEdit);

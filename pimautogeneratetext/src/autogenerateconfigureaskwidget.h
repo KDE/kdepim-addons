@@ -11,6 +11,7 @@
 class QLineEdit;
 class QPlainTextEdit;
 class AutogenerateConfigureListView;
+class QSplitter;
 class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureAskWidget : public QWidget
 {
     Q_OBJECT
@@ -25,5 +26,6 @@ private:
     PIMAUTOGENERATETEXT_NO_EXPORT void slotItemChanged(const QModelIndex &current, const QModelIndex &previous);
     QLineEdit *const mSearchLineEdit;
     QPlainTextEdit *const mTextEdit;
+    QSplitter *const mSplitter;
     AutogenerateConfigureListView *const mAutogenerateConfigureListView;
 };

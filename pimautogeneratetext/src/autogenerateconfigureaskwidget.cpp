@@ -12,22 +12,27 @@
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QPlainTextEdit>
+#include <QSplitter>
 #include <QVBoxLayout>
 
 AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     : QWidget{parent}
     , mSearchLineEdit(new QLineEdit(this))
     , mTextEdit(new QPlainTextEdit(this))
+    , mSplitter(new QSplitter(this))
     , mAutogenerateConfigureListView(new AutogenerateConfigureListView(this))
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    auto vbox = new QVBoxLayout;
+    mSplitter->setObjectName(QStringLiteral("mSplitter"));
+
+    auto widget = new QWidget(this);
+
+    auto vbox = new QVBoxLayout(widget);
     vbox->setObjectName(QStringLiteral("vbox"));
     vbox->setContentsMargins({});
-    mainLayout->addLayout(vbox);
 
     mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
     mSearchLineEdit->setClearButtonEnabled(true);
@@ -41,8 +46,11 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     vbox->addWidget(mAutogenerateConfigureListView);
     connect(mAutogenerateConfigureListView->selectionModel(), &QItemSelectionModel::currentChanged, this, &AutogenerateConfigureAskWidget::slotItemChanged);
 
+    mSplitter->addWidget(widget);
+
+    mSplitter->addWidget(mTextEdit);
     mTextEdit->setObjectName(QStringLiteral("mTextEdit"));
-    mainLayout->addWidget(mTextEdit);
+    mainLayout->addWidget(mSplitter);
 }
 
 AutogenerateConfigureAskWidget::~AutogenerateConfigureAskWidget() = default;
