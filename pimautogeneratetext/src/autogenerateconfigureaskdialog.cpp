@@ -22,7 +22,7 @@ AutogenerateConfigureAskDialog::AutogenerateConfigureAskDialog(QWidget *parent)
     : QDialog(parent)
     , mAutogenerateConfigureAskWidget(new AutogenerateConfigureAskWidget(this))
 {
-    setWindowTitle(i18nc("@title:window", "Administrator"));
+    setWindowTitle(i18nc("@title:window", "Configure Ask AI"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
