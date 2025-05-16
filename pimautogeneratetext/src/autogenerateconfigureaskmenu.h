@@ -21,6 +21,8 @@ public:
     [[nodiscard]] QString selectedText() const;
     void setSelectedText(const QString &newSelectedText);
 
+    void slotRefreshMenu();
+
 Q_SIGNALS:
     void askRequested(const QString &msg);
 

@@ -51,10 +51,9 @@ void AutogenerateConfigureAskMenu::slotConfigure()
     AutogenerateConfigureAskDialog dlg(mParentWidget);
     dlg.setAskInfos(mManager->askInfos());
     if (dlg.exec()) {
-        menu()->clear();
         mManager->setInfos(dlg.askInfos());
         mManager->save();
-        initializeMenu();
+        slotRefreshMenu();
     }
 }
 
@@ -66,6 +65,12 @@ QString AutogenerateConfigureAskMenu::selectedText() const
 void AutogenerateConfigureAskMenu::setSelectedText(const QString &newSelectedText)
 {
     mSelectedText = newSelectedText;
+}
+
+void AutogenerateConfigureAskMenu::slotRefreshMenu()
+{
+    menu()->clear();
+    initializeMenu();
 }
 
 QWidget *AutogenerateConfigureAskMenu::parentWidget() const
