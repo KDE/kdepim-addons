@@ -27,6 +27,7 @@
         "Name[ca]": "Pregunta a la IA",
         "Name[es]": "Preguntar a la IA",
         "Name[fr]": "Demander à l'IA",
+        "Name[gl]": "Preguntar á IA",
         "Name[he]": "לשאול בינה מלאכותית",
         "Name[ia]": "Demanda IA",
         "Name[it]": "Chiedi all'IA",
@@ -36,6 +37,7 @@
         "Name[tr]": "Yapay Zekâya Sor",
         "Name[uk]": "Запитати у ШІ",
         "Name[x-test]": "xxAsk IAxx",
+        "Name[zh_TW]": "詢問 IA",
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"
