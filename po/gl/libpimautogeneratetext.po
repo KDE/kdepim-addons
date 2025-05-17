@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 00:42+0000\n"
-"PO-Revision-Date: 2025-05-04 13:39+0200\n"
+"POT-Creation-Date: 2025-05-17 00:42+0000\n"
+"PO-Revision-Date: 2025-05-16 11:23+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -18,10 +18,12 @@ msgstr ""
 "X-Generator: Lokalize 25.04.0\n"
 
 #: src/autogenerateconfigureaskdialog.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Configure…"
 msgctxt "@title:window"
-msgid "Administrator"
-msgstr "Administración"
+msgid "Configure Ask AI"
+msgstr "Configurar…"
 
 #: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
@@ -41,10 +43,9 @@ msgid "Add…"
 msgstr "Engadir…"
 
 #: src/autogenerateconfigurelistview.cpp:55
-#, fuzzy, kde-format
-#| msgid "Ask AI…"
+#, kde-format
 msgid "Ask to AI"
-msgstr "Preguntar á IA…"
+msgstr "Preguntar á IA"
 
 #: src/autogenerateconfigurelistview.cpp:61
 #, kde-format
@@ -68,3 +69,7 @@ msgstr "Seguro que quere retirala?"
 msgctxt "@title"
 msgid "Remove"
 msgstr "Retirar"
+
+#~ msgctxt "@title:window"
+#~ msgid "Administrator"
+#~ msgstr "Administración"

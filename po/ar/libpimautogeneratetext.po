@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 00:42+0000\n"
+"POT-Creation-Date: 2025-05-17 00:42+0000\n"
 "PO-Revision-Date: 2025-05-10 12:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,10 +19,12 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: src/autogenerateconfigureaskdialog.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Configure…"
 msgctxt "@title:window"
-msgid "Administrator"
-msgstr "المسؤول"
+msgid "Configure Ask AI"
+msgstr "اضبط…"
 
 #: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
@@ -68,3 +70,7 @@ msgstr "أتريد إزالته؟"
 msgctxt "@title"
 msgid "Remove"
 msgstr "أزل"
+
+#~ msgctxt "@title:window"
+#~ msgid "Administrator"
+#~ msgstr "المسؤول"

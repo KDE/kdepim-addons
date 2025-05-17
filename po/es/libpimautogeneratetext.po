@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimautogeneratetext\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 00:42+0000\n"
+"POT-Creation-Date: 2025-05-17 00:42+0000\n"
 "PO-Revision-Date: 2025-05-08 21:36+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -20,10 +20,12 @@ msgstr ""
 "X-Generator: Lokalize 25.04.0\n"
 
 #: src/autogenerateconfigureaskdialog.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Configure…"
 msgctxt "@title:window"
-msgid "Administrator"
-msgstr "Administrador"
+msgid "Configure Ask AI"
+msgstr "Configurar…"
 
 #: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
@@ -69,3 +71,7 @@ msgstr "¿Desea eliminarlo?"
 msgctxt "@title"
 msgid "Remove"
 msgstr "Eliminar"
+
+#~ msgctxt "@title:window"
+#~ msgid "Administrator"
+#~ msgstr "Administrador"
