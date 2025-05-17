@@ -5,10 +5,10 @@
 */
 
 #pragma once
-#include "pimautogeneratetext_private_export.h"
+#include "pimautogeneratetext_export.h"
 #include <QDebug>
 #include <QString>
-class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureAskInfo
+class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskInfo
 {
 public:
     AutogenerateConfigureAskInfo();
@@ -32,4 +32,4 @@ private:
 };
 Q_DECLARE_METATYPE(AutogenerateConfigureAskInfo)
 Q_DECLARE_TYPEINFO(AutogenerateConfigureAskInfo, Q_RELOCATABLE_TYPE);
-PIMAUTOGENERATETEXT_TESTS_EXPORT QDebug operator<<(QDebug d, const AutogenerateConfigureAskInfo &t);
+PIMAUTOGENERATETEXT_EXPORT QDebug operator<<(QDebug d, const AutogenerateConfigureAskInfo &t);
