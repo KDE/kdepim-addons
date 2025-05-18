@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 00:42+0000\n"
+"POT-Creation-Date: 2025-05-17 00:42+0000\n"
 "PO-Revision-Date: 2025-05-16 15:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -18,10 +18,12 @@ msgstr ""
 "X-Generator: Lokalize 25.07.70\n"
 
 #: src/autogenerateconfigureaskdialog.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Configure…"
 msgctxt "@title:window"
-msgid "Administrator"
-msgstr "管理員"
+msgid "Configure Ask AI"
+msgstr "設定…"
 
 #: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
@@ -42,7 +44,6 @@ msgstr "新增…"
 
 #: src/autogenerateconfigurelistview.cpp:55
 #, kde-format
-#| msgid "Ask AI…"
 msgid "Ask to AI"
 msgstr "向 AI 詢問"
 
@@ -68,3 +69,7 @@ msgstr "您真的要移除它嗎？"
 msgctxt "@title"
 msgid "Remove"
 msgstr "移除"
+
+#~ msgctxt "@title:window"
+#~ msgid "Administrator"
+#~ msgstr "管理員"

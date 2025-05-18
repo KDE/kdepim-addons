@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-17 00:42+0000\n"
-"PO-Revision-Date: 2025-05-08 16:49+0300\n"
+"PO-Revision-Date: 2025-05-17 09:01+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -19,12 +19,10 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #: src/autogenerateconfigureaskdialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Ask AI"
-msgstr "Налаштувати…"
+msgstr "Налаштувати запит до ШІ"
 
 #: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
