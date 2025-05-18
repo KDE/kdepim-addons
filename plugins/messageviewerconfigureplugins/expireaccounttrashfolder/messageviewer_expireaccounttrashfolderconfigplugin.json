@@ -66,7 +66,7 @@
         "Name[uk]": "Вилучення застарілих повідомлення з теки смітника",
         "Name[x-test]": "xxExpire Trash Folderxx",
         "Name[zh_CN]": "定时清空已删除邮件文件夹",
-        "Name[zh_TW]": "垃圾桶資料夾過期",
+        "Name[zh_TW]": "將垃圾桶資料夾設為過期",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"
