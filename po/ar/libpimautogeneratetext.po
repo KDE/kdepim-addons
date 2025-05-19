@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-17 00:42+0000\n"
-"PO-Revision-Date: 2025-05-10 12:22+0400\n"
+"PO-Revision-Date: 2025-05-18 21:09+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -19,12 +19,10 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: src/autogenerateconfigureaskdialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Ask AI"
-msgstr "اضبط…"
+msgstr "اضبط اسأل الذكاء الاصطناعي"
 
 #: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
