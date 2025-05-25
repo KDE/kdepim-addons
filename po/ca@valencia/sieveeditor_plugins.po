@@ -24,7 +24,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
-msgstr "Feu clic en el botó per a seleccionar els contactes…"
+msgstr "Cliqueu damunt del botó per a seleccionar els contactes…"
 
 #: emaillineedit/emaillineedit.cpp:37
 #, kde-format
@@ -131,4 +131,4 @@ msgstr "Selecciona la carpeta IMAP"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"
-msgstr "Feu clic en el botó per a seleccionar la carpeta…"
+msgstr "Cliqueu damunt del botó per a seleccionar la carpeta…"
