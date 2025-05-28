@@ -25,4 +25,5 @@ Q_SIGNALS:
 private:
     void slotAskRequested(const QString &msg);
     AutogenerateConfigureAskManager *const mAskManager;
+    QString mAskMsg;
 };
