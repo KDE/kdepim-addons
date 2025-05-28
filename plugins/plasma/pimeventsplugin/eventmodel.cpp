@@ -83,7 +83,7 @@ void EventModel::addCalendar(const Akonadi::Collection &col)
     if (!mCols.contains(col)) {
         auto collectionFetchJob = new Akonadi::CollectionFetchJob(QList{col.id()});
         collectionFetchJob->start();
-        connect(collectionFetchJob, &Akonadi::CollectionFetchJob::result, collectionFetchJob, [=](auto *job) {
+        connect(collectionFetchJob, &Akonadi::CollectionFetchJob::result, collectionFetchJob, [this](auto *job) {
             auto fetchJob = dynamic_cast<Akonadi::CollectionFetchJob *>(job);
             if (!fetchJob->collections().isEmpty()) {
                 auto collection = fetchJob->collections()[0];
