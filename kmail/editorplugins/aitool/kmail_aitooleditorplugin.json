@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Description": "This plugin opens AI chat.",
+        "EnabledByDefault": false,
+        "Name": "AI Chat",
+        "Version": "1.0"
+    },
+    "X-KDE-KMailEditor-Order": "2"
+}
