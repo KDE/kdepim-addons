@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2020.
-# SPDX-FileCopyrightText: 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-29 00:43+0000\n"
-"PO-Revision-Date: 2024-08-13 17:57+0200\n"
+"PO-Revision-Date: 2025-05-30 17:38+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 25.04.1\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.5\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
-msgstr ""
+msgstr "Ouvrir la discussion avec IA"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
