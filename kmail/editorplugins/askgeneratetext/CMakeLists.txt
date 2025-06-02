@@ -11,7 +11,6 @@ target_sources(kmail_askautogeneratetexteditorplugin PRIVATE
 
 ecm_qt_declare_logging_category(kmail_askautogeneratetexteditorplugin HEADER askautogeneratetexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ASKAUTOGENERATETEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_askautogeneratetexteditorplugin
     DESCRIPTION "kdepim-addons (kmail AI editor plugins)"
-    OLD_CATEGORY_NAMES log_kmail_askautogeneratetexteditorplugin
     EXPORT KDEPIMADDONS
 )
 
