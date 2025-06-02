@@ -73,7 +73,7 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
-set(KTEXTADDONS_MIN_VERSION "1.5.4")
+set(KTEXTADDONS_MIN_VERSION "1.6.0")
 # Remove it when next 1.6.0 KTEXTADDONS_MIN_VERSION
 set(KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION "1.6.0")
 
