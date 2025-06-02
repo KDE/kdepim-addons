@@ -30,8 +30,7 @@ bool AutoGenerateAnswersEditor::hasConfigureDialog() const
 
 MessageComposer::PluginEditorInterface *AutoGenerateAnswersEditor::createInterface(QObject *parent)
 {
-    auto interface = new AutoGenerateAnswersEditorInterface(parent);
-    return interface;
+    return new AutoGenerateAnswersEditorInterface(parent);
 }
 
 #include "autogenerateanswerseditor.moc"
