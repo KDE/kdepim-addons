@@ -9,9 +9,8 @@ target_sources(kmail_aitooleditorplugin PRIVATE
     aitooltextplugineditorinterface.cpp
 )
 
-ecm_qt_declare_logging_category(kmail_aitooleditorplugin HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_AITOOL_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_aitooleditorplugin
+ecm_qt_declare_logging_category(kmail_aitooleditorplugin HEADER aitooleditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_AITOOL_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_aitooleditorplugin
     DESCRIPTION "kdepim-addons (kmail AI chat tool plugins)"
-    OLD_CATEGORY_NAMES log_kmail_aitooleditorplugin
     EXPORT KDEPIMADDONS
 )
 
