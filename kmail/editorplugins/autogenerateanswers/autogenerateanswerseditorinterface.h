@@ -18,5 +18,12 @@ public:
     void exec() override;
 
 private:
+    enum class AnswerType : uint8_t {
+        Unknown = 0,
+        SummaryText,
+        QuickAnswer,
+        FixTypo,
+    };
     void slotActivated();
+    AnswerType mAnswerType = AnswerType::Unknown;
 };

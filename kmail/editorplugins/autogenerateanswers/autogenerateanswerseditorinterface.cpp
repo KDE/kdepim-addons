@@ -20,8 +20,8 @@ AutoGenerateAnswersEditorInterface::~AutoGenerateAnswersEditorInterface() = defa
 void AutoGenerateAnswersEditorInterface::createAction(KActionCollection *ac)
 {
     // TODO create quick answer
-    auto action = new QAction(i18nc("@action", "Open AI Chat"), this);
-    ac->addAction(QStringLiteral("open_ai_chat"), action);
+    auto action = new QAction(i18nc("@action", "Autogenerate Answer"), this);
+    ac->addAction(QStringLiteral("quick_answer"), action);
     connect(action, &QAction::triggered, this, &AutoGenerateAnswersEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
     setActionType(type);
