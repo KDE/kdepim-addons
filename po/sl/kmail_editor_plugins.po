@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
 "PO-Revision-Date: 2025-05-29 06:50+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -42,6 +42,12 @@ msgstr "Samodejno popravi celotno besedilo"
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Samodejno popravi izbrano besedilo"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
+#, kde-format
+msgctxt "@action"
+msgid "Autogenerate Answer"
+msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format

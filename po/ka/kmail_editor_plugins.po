@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
 "PO-Revision-Date: 2025-05-29 04:38+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -40,6 +40,12 @@ msgstr "ტექსტის სრული ავტოკორექცი�
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "მონიშნული ტექსტის ავტოკორექცია"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
+#, kde-format
+msgctxt "@action"
+msgid "Autogenerate Answer"
+msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format

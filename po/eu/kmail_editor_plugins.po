@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
 "PO-Revision-Date: 2025-05-29 22:11+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -42,6 +42,12 @@ msgstr "Testu osoa automatikoki zuzendu"
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Hautatutako testua automatikoki zuzendu"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
+#, kde-format
+msgctxt "@action"
+msgid "Autogenerate Answer"
+msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format

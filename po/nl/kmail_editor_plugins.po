@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 00:43+0000\n"
 "PO-Revision-Date: 2025-05-29 10:27+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -39,6 +39,12 @@ msgstr "Volledige tekst automatisch corrigeren"
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Autocorrectie van geselecteerde tekst"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
+#, kde-format
+msgctxt "@action"
+msgid "Autogenerate Answer"
+msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
