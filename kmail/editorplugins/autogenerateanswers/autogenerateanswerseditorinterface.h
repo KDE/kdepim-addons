@@ -24,6 +24,5 @@ private:
         QuickAnswer,
         FixTypo,
     };
-    void slotActivated();
     AnswerType mAnswerType = AnswerType::Unknown;
 };
