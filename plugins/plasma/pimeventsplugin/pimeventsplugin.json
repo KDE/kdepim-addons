@@ -59,6 +59,7 @@
         "Description[tr]": "KDE takvim uygulamalarından ve çevrimiçi hesaplardan etkinliklerinizi gösterin",
         "Description[uk]": "Показати ваші події з програм календаря KDE та облікових записів інтернету",
         "Description[x-test]": "xxShow your events from KDE calendar applications and Online Accountsxx",
+        "Description[zh_TW]": "顯示來自各個 KDE 行事曆應用程式與線上帳號的活動",
         "Icon": "view-calendar",
         "Name": "Calendar Events",
         "Name[ar]": "أحداث التقويم",
