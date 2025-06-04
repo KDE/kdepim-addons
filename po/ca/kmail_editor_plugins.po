@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:43+0000\n"
-"PO-Revision-Date: 2025-05-29 09:39+0200\n"
+"POT-Creation-Date: 2025-06-04 00:43+0000\n"
+"PO-Revision-Date: 2025-06-03 11:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -47,10 +47,15 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Correcció automàtica del text seleccionat"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
+msgstr "Resposta generada automàticament"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:29
+#, kde-format
+msgid "Summary Text"
 msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
@@ -258,9 +263,3 @@ msgstr "Zoom: %1%"
 #, kde-format
 msgid "Zoom…"
 msgstr "Zoom…"
-
-#~ msgid "Insert Special Character..."
-#~ msgstr "Insereix un caràcter especial..."
-
-#~ msgid "Zoom..."
-#~ msgstr "Zoom..."

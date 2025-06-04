@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-03 00:43+0000\n"
+"POT-Creation-Date: 2025-06-04 00:43+0000\n"
 "PO-Revision-Date: 2024-06-20 21:25+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -40,10 +40,15 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "தேர்ந்தெடுத்த உரையை தானாக திருத்து"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
+msgstr ""
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:29
+#, kde-format
+msgid "Summary Text"
 msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
