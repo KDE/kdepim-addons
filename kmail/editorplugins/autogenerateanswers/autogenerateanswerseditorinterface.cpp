@@ -20,15 +20,26 @@ AutoGenerateAnswersEditorInterface::~AutoGenerateAnswersEditorInterface() = defa
 
 void AutoGenerateAnswersEditorInterface::createAction(KActionCollection *ac)
 {
-    // TODO create quick answer
     auto action = new QAction(i18nc("@action", "Autogenerate Answer"), this);
     ac->addAction(QStringLiteral("quick_answer"), action);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
     setActionType(type);
     auto menu = new QMenu(parentWidget());
-    auto act = menu->addAction(i18n("Summary Text"));
+    auto act = menu->addAction(i18nc("@action", "Summary Text"));
     connect(act, &QAction::triggered, this, [this]() {
         mAnswerType = AnswerType::SummaryText;
+        Q_EMIT emitPluginActivated(this);
+    });
+
+    act = menu->addAction(i18nc("@action", "Correct Text"));
+    connect(act, &QAction::triggered, this, [this]() {
+        mAnswerType = AnswerType::FixTypo;
+        Q_EMIT emitPluginActivated(this);
+    });
+
+    act = menu->addAction(i18nc("@action", "Quick Answer"));
+    connect(act, &QAction::triggered, this, [this]() {
+        mAnswerType = AnswerType::QuickAnswer;
         Q_EMIT emitPluginActivated(this);
     });
     action->setMenu(menu);
