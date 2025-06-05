@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 00:43+0000\n"
-"PO-Revision-Date: 2025-06-03 19:17+0100\n"
+"POT-Creation-Date: 2025-06-05 00:43+0000\n"
+"PO-Revision-Date: 2025-06-04 19:06+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -42,15 +42,30 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Corregir el texto seleccionado automáticamente"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:24
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "Generar respuesta automáticamente"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:29
-#, kde-format
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:28
+#, fuzzy, kde-format
+#| msgid "Summary Text"
+msgctxt "@action"
 msgid "Summary Text"
+msgstr "Texto de resumen"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
+#, fuzzy, kde-format
+#| msgid "Autocorrect Text"
+msgctxt "@action"
+msgid "Correct Text"
+msgstr "Corregir el texto automáticamente"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:40
+#, kde-format
+msgctxt "@action"
+msgid "Quick Answer"
 msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23

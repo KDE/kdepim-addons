@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 00:43+0000\n"
+"POT-Creation-Date: 2025-06-05 00:43+0000\n"
 "PO-Revision-Date: 2024-08-19 22:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -40,15 +40,29 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "선택한 텍스트 자동 고침"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:24
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:29
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:28
 #, kde-format
+msgctxt "@action"
 msgid "Summary Text"
+msgstr ""
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
+#, fuzzy, kde-format
+#| msgid "Autocorrect Text"
+msgctxt "@action"
+msgid "Correct Text"
+msgstr "텍스트 자동 고침"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:40
+#, kde-format
+msgctxt "@action"
+msgid "Quick Answer"
 msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
