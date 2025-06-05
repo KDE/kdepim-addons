@@ -5,6 +5,7 @@
 */
 
 #include "autogenerateanswerseditorinterface.h"
+#include "autogenerateanswerseditordialog.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
