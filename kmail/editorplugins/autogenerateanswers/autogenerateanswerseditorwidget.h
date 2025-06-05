@@ -6,11 +6,14 @@
 #pragma once
 
 #include <QWidget>
-
+class QPlainTextEdit;
 class AutoGenerateAnswersEditorWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit AutoGenerateAnswersEditorWidget(QWidget *parent = nullptr);
     ~AutoGenerateAnswersEditorWidget() override;
+
+private:
+    QPlainTextEdit *const mPlainTextEdit;
 };

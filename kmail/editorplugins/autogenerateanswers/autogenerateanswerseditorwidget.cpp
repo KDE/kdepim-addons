@@ -5,14 +5,22 @@
 */
 #include "autogenerateanswerseditorwidget.h"
 
+#include <QPlainTextEdit>
 #include <QVBoxLayout>
 
 AutoGenerateAnswersEditorWidget::AutoGenerateAnswersEditorWidget(QWidget *parent)
     : QWidget{parent}
+    , mPlainTextEdit(new QPlainTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+
+    mPlainTextEdit->setObjectName(QStringLiteral("mPlainTextEdit"));
+    mPlainTextEdit->setReadOnly(true);
+    mainLayout->addWidget(mPlainTextEdit);
 }
 
 AutoGenerateAnswersEditorWidget::~AutoGenerateAnswersEditorWidget() = default;
+
+#include "moc_autogenerateanswerseditorwidget.cpp"

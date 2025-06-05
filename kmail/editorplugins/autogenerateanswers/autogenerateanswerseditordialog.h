@@ -6,11 +6,16 @@
 #pragma once
 
 #include <QDialog>
-
+class AutoGenerateAnswersEditorWidget;
 class AutoGenerateAnswersEditorDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit AutoGenerateAnswersEditorDialog(QWidget *parent = nullptr);
     ~AutoGenerateAnswersEditorDialog() override;
+
+private:
+    void readConfig();
+    void writeConfig();
+    AutoGenerateAnswersEditorWidget *const mAutoGenerateAnswersEditorWidget;
 };
