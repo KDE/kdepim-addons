@@ -7,6 +7,10 @@ target_sources(kmail_autogenerateanswerseditorplugin PRIVATE
     autogenerateanswerseditor.h
     autogenerateanswerseditorinterface.h
     autogenerateanswerseditorinterface.cpp
+    autogenerateanswerseditordialog.h
+    autogenerateanswerseditordialog.cpp
+    autogenerateanswerseditorwidget.h
+    autogenerateanswerseditorwidget.cpp
 )
 
 ecm_qt_declare_logging_category(kmail_autogenerateanswerseditorplugin HEADER autogenerateanswerseditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_AUTOGENERATEANSWER_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_autogenerateanswerseditorplugin
