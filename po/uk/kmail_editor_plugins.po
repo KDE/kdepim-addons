@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 00:43+0000\n"
-"PO-Revision-Date: 2025-06-04 22:28+0300\n"
+"POT-Creation-Date: 2025-06-06 00:43+0000\n"
+"PO-Revision-Date: 2025-06-05 17:38+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -43,31 +43,29 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Автоматичне виправлення позначеного тексту"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "Автоматичне створення відповіді"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:28
-#, fuzzy, kde-format
-#| msgid "Summary Text"
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:29
+#, kde-format
 msgctxt "@action"
 msgid "Summary Text"
-msgstr "Текст резюме"
+msgstr "Резюме тексту"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Autocorrect Text"
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:35
+#, kde-format
 msgctxt "@action"
 msgid "Correct Text"
-msgstr "Автоматичне виправлення тексту"
+msgstr "Виправити текст"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:40
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:41
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
-msgstr ""
+msgstr "Швидка відповідь"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 00:43+0000\n"
+"POT-Creation-Date: 2025-06-06 00:43+0000\n"
 "PO-Revision-Date: 2025-05-30 17:38+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -45,26 +45,26 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Corriger automatiquement le texte sélectionné"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:23
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:28
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:29
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:35
 #, fuzzy, kde-format
 #| msgid "Autocorrect Text"
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Corriger automatiquement le texte"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:40
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:41
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
