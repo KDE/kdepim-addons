@@ -53,11 +53,10 @@ msgid "Summary Text"
 msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:35
-#, fuzzy, kde-format
-#| msgid "Autocorrect Text"
+#, kde-format
 msgctxt "@action"
 msgid "Correct Text"
-msgstr "自动更正文字"
+msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:41
 #, kde-format
