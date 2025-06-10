@@ -14,6 +14,8 @@ public:
     explicit AutoGenerateAnswersEditorWidget(QWidget *parent = nullptr);
     ~AutoGenerateAnswersEditorWidget() override;
 
+    void setAnswer(const QString &str);
+
 private:
     QPlainTextEdit *const mPlainTextEdit;
 };
