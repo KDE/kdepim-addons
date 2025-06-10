@@ -46,6 +46,7 @@
             }
         ],
         "Description": "Show your events from KDE calendar applications and Online Accounts",
+        "Description[ar]": "عرض أحداثك من تطبيقات تقويم كيدي والحسابات عبر الإنترنت",
         "Description[bg]": "Показване на събитията от приложенията за календар на KDE и онлайн акаунти",
         "Description[ca@valencia]": "Mostra els vostres esdeveniments des de les aplicacions de calendari de KDE i els comptes en línia",
         "Description[ca]": "Mostra els vostres esdeveniments des de les aplicacions de calendari de KDE i els comptes en línia",
