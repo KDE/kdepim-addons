@@ -18,6 +18,7 @@ public:
     void exec() override;
 
 private:
+    void slotGenerateTextInProgress(const QString &str);
     enum class AnswerType : uint8_t {
         Unknown = 0,
         SummaryText,
