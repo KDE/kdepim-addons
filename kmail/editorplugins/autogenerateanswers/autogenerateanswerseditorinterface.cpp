@@ -6,6 +6,7 @@
 
 #include "autogenerateanswerseditorinterface.h"
 #include "autogenerateanswerseditordialog.h"
+#include "autogenerateanswerseditorplugin_debug.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
@@ -50,7 +51,8 @@ void AutoGenerateAnswersEditorInterface::exec()
 {
     switch (mAnswerType) {
     case AnswerType::Unknown:
-        break;
+        qCWarning(KMAIL_EDITOR_AUTOGENERATEANSWER_PLUGIN_LOG) << "AnswerType::Unknown: it's a bug";
+        return;
     case AnswerType::SummaryText:
         break;
     case AnswerType::QuickAnswer:
