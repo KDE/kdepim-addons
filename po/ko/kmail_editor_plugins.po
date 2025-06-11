@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2016, 2018, 2019, 2020, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2016, 2018, 2019, 2020, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-06 00:43+0000\n"
-"PO-Revision-Date: 2024-08-19 22:52+0200\n"
+"POT-Creation-Date: 2025-06-11 00:43+0000\n"
+"PO-Revision-Date: 2025-06-10 23:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
-msgstr ""
+msgstr "AI 채팅 열기"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -40,30 +40,29 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "선택한 텍스트 자동 고침"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:24
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
-msgstr ""
+msgstr "답변 자동 생성"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:29
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
-msgstr ""
+msgstr "요약 텍스트"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:35
-#, fuzzy, kde-format
-#| msgid "Autocorrect Text"
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:37
+#, kde-format
 msgctxt "@action"
 msgid "Correct Text"
-msgstr "텍스트 자동 고침"
+msgstr "텍스트 고치기"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:41
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
-msgstr ""
+msgstr "빠른 답변"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
