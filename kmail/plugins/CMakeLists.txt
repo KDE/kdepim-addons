@@ -10,4 +10,7 @@ add_subdirectory(mailmergeplugin)
 add_subdirectory(akonadidatabasetools)
 add_subdirectory(checkfoldersizeaccount)
 
-install(FILES common/kmail.antispamrc common/kmail.antivirusrc   DESTINATION ${KDE_INSTALL_CONFDIR})
+install(
+    FILES common/kmail.antispamrc common/kmail.antivirusrc
+    DESTINATION ${KDE_INSTALL_CONFDIR}
+)

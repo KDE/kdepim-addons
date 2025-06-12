@@ -7,13 +7,19 @@ ecm_qt_declare_logging_category(sieveeditoremailinedit_gui HEADER sieveeditorema
     EXPORT KDEPIMADDONS
 )
 
-target_sources(sieveeditoremailinedit_gui PRIVATE
-   main.cpp
-   emaillineeditwidget.cpp
-   emaillineeditwidget.h
-   ../emaillineedit.cpp
+target_sources(
+    sieveeditoremailinedit_gui
+    PRIVATE
+        main.cpp
+        emaillineeditwidget.cpp
+        emaillineeditwidget.h
+        ../emaillineedit.cpp
 )
 
-target_link_libraries(sieveeditoremailinedit_gui
-        KF6::I18n KF6::ColorScheme KPim6::KSieveUi KPim6::AkonadiContactWidgets
+target_link_libraries(
+    sieveeditoremailinedit_gui
+    KF6::I18n
+    KF6::ColorScheme
+    KPim6::KSieveUi
+    KPim6::AkonadiContactWidgets
 )

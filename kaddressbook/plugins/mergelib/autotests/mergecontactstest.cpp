@@ -903,7 +903,7 @@ void MergeContactsTest::shouldMergeEmails_data()
     QStringList lst3;
     lst3 << QStringLiteral("foo2");
     lst3 << lst2;
-    // Identic => we will return merge between lst and lst2
+    // Identical => we will return merge between lst and lst2
     QTest::newRow("copyWithSomeIdenticEmail") << lst << lst3 << QStringList() << (QStringList() << lst << lst2);
 }
 

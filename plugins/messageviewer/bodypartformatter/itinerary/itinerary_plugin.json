@@ -1,10 +1,18 @@
 {
     "formatter": [
-        { "mimetype": "text/html" },
-        { "mimetype": "text/plain" },
-        { "mimetype": "application/octet-stream" }
+        {
+            "mimetype": "text/html"
+        },
+        {
+            "mimetype": "text/plain"
+        },
+        {
+            "mimetype": "application/octet-stream"
+        }
     ],
     "renderer": [
-        { "type": "MimeTreeParser::MessagePartList" }
+        {
+            "type": "MimeTreeParser::MessagePartList"
+        }
     ]
 }

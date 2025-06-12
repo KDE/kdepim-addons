@@ -9,13 +9,16 @@ set(KF_MIN_VERSION "6.14.0")
 set(QT_REQUIRED_VERSION "6.8.0")
 set(CMAKE_CXX_STANDARD 20)
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
-set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/ ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH
+    ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/
+    ${ECM_MODULE_PATH}
+)
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
-  set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
+    set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
 endif()
 
 set(KDEPIMADDONS_VERSION_NUMBER ${PIM_VERSION})
@@ -33,38 +36,38 @@ include(ECMGenerateHeaders)
 
 include(KDEGitCommitHooks)
 include(KDEClangFormat)
-file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES 
-	examples/*.cpp 
-	examples/*.h 
-	examples/*.c
-	kmailtransport/*.cpp
-        kmailtransport/*.h
-        kmailtransport/*.c
-        plugins/*.cpp
-        plugins/*.h
-        plugins/*.c
-        sieveeditor/*.cpp
-        sieveeditor/*.h
-        sieveeditor/*.c
-        akonadi-import-wizard/*.cpp
-        akonadi-import-wizard/*.h
-        akonadi-import-wizard/*.c	
-        kaddressbook/*.cpp
-        kaddressbook/*.h
-        kaddressbook/*.c
-        kmail/*.cpp
-        kmail/*.h
-        kmail/*.c
-        korganizer/*.cpp
-        korganizer/*.h
-        korganizer/*.c
-	kldap/*.cpp
-	kldap/*.h
+file(
+    GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES
+    examples/*.cpp
+    examples/*.h
+    examples/*.c
+    kmailtransport/*.cpp
+    kmailtransport/*.h
+    kmailtransport/*.c
+    plugins/*.cpp
+    plugins/*.h
+    plugins/*.c
+    sieveeditor/*.cpp
+    sieveeditor/*.h
+    sieveeditor/*.c
+    akonadi-import-wizard/*.cpp
+    akonadi-import-wizard/*.h
+    akonadi-import-wizard/*.c
+    kaddressbook/*.cpp
+    kaddressbook/*.h
+    kaddressbook/*.c
+    kmail/*.cpp
+    kmail/*.h
+    kmail/*.c
+    korganizer/*.cpp
+    korganizer/*.h
+    korganizer/*.c
+    kldap/*.cpp
+    kldap/*.h
 )
 
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 include(CheckFunctionExists)
-
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -77,11 +80,24 @@ set(KTEXTADDONS_MIN_VERSION "1.6.0")
 # Remove it when next 1.6.0 KTEXTADDONS_MIN_VERSION
 set(KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION "1.6.0")
 
-option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
+option(
+    KDEPIM_ENTERPRISE_BUILD
+    "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client."
+    FALSE
+)
 
-option(OPTION_ADD_AUTOGENERATETEXT "Add support for autogenerate text plugin" ON)
+option(
+    OPTION_ADD_AUTOGENERATETEXT
+    "Add support for autogenerate text plugin"
+    ON
+)
 
-find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngineWidgets Widgets Test)
+find_package(
+    Qt6
+    ${QT_REQUIRED_VERSION}
+    CONFIG
+    REQUIRED WebEngineWidgets Widgets Test
+)
 
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -99,8 +115,8 @@ find_package(KF6Holidays ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6GuiAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6ColorScheme ${KF_MIN_VERSION} CONFIG REQUIRED)
 if(NOT WIN32)
-   find_package(KF6KCMUtils ${KF_MIN_VERSION} CONFIG REQUIRED)
-endif()   
+    find_package(KF6KCMUtils ${KF_MIN_VERSION} CONFIG REQUIRED)
+endif()
 
 set(MAILCOMMON_LIB_VERSION "6.4.40")
 set(GRAVATAR_LIB_VERSION "6.4.40")
@@ -135,7 +151,12 @@ find_package(KPim6WebEngineViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6TemplateParser ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MailCommon ${MAILCOMMON_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MessageViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6AddressbookImportExport ${KADDRESSBOOK_IMPORTEXPORT_LIB_VERSION} CONFIG REQUIRED)
+find_package(
+    KPim6AddressbookImportExport
+    ${KADDRESSBOOK_IMPORTEXPORT_LIB_VERSION}
+    CONFIG
+    REQUIRED
+)
 find_package(KPim6Libkleo ${LIBKLEO_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6GrantleeTheme ${GRANTLEETHEME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6PimCommonAkonadi ${PIMCOMMON_LIB_VERSION} CONFIG REQUIRED)
@@ -145,35 +166,71 @@ find_package(KF6TextTranslator ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextUtils ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KPim6Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6IncidenceEditor ${INCIDENCEEDITOR_LIB_VERSION} CONFIG REQUIRED)
+find_package(
+    KPim6IncidenceEditor
+    ${INCIDENCEEDITOR_LIB_VERSION}
+    CONFIG
+    REQUIRED
+)
 find_package(KPim6MessageCore ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MessageComposer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MessageList ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6CalendarSupport ${CALENDARSUPPORT_LIB_VERSION} CONFIG REQUIRED)
+find_package(
+    KPim6CalendarSupport
+    ${CALENDARSUPPORT_LIB_VERSION}
+    CONFIG
+    REQUIRED
+)
 find_package(KPim6Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6AkonadiCalendar ${AKONADICALENDAR_LIB_VERSION} CONFIG REQUIRED)
+find_package(
+    KPim6AkonadiCalendar
+    ${AKONADICALENDAR_LIB_VERSION}
+    CONFIG
+    REQUIRED
+)
 find_package(KPim6Gravatar ${GRAVATAR_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6TextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6IdentityManagementCore ${KIDENTITYMANAGEMENT_LIB_VERSION} CONFIG REQUIRED)
+find_package(
+    KPim6IdentityManagementCore
+    ${KIDENTITYMANAGEMENT_LIB_VERSION}
+    CONFIG
+    REQUIRED
+)
 find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6KSieveUi ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
 if(OPTION_ADD_AUTOGENERATETEXT)
-   find_package(KF6TextAutoGenerateText ${KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION} CONFIG)
-   set_package_properties(KF6TextAutoGenerateText PROPERTIES
-       TYPE OPTIONAL
-       PURPOSE "Required for building AI plugins support"
-       DESCRIPTION "Use AI plugin"
-   )
+    find_package(
+        KF6TextAutoGenerateText
+        ${KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION}
+        CONFIG
+    )
+    set_package_properties(
+        KF6TextAutoGenerateText
+        PROPERTIES
+            TYPE OPTIONAL
+            PURPOSE "Required for building AI plugins support"
+            DESCRIPTION "Use AI plugin"
+    )
 endif()
 
 find_package(KPim6Tnef ${KTNEF_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KPim6AkonadiContactWidgets ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
+find_package(
+    KPim6AkonadiContactWidgets
+    ${AKONADICONTACT_LIB_VERSION}
+    CONFIG
+    REQUIRED
+)
 find_package(KPim6ImportWizard ${IMPORTWIZARD_LIB_VERSION} CONFIG)
-find_package(KPim6MailImporterAkonadi ${MAILIMPORTER_LIB_VERSION} CONFIG REQUIRED)
+find_package(
+    KPim6MailImporterAkonadi
+    ${MAILIMPORTER_LIB_VERSION}
+    CONFIG
+    REQUIRED
+)
 find_package(KPim6PkPass ${KPIMPKPASS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Itinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6LdapWidgets ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
@@ -191,9 +248,11 @@ if(TARGET KPim6::PimCommonActivities)
     if(OPTION_USE_PLASMA_ACTIVITIES)
         if(NOT WIN32 AND NOT APPLE)
             find_package(PlasmaActivities "6.3.0")
-            set_package_properties(PlasmaActivities PROPERTIES DESCRIPTION
-                "Allow to compile with plasma activities"
-                TYPE OPTIONAL
+            set_package_properties(
+                PlasmaActivities
+                PROPERTIES
+                    DESCRIPTION "Allow to compile with plasma activities"
+                    TYPE OPTIONAL
             )
         endif()
 
@@ -203,63 +262,90 @@ if(TARGET KPim6::PimCommonActivities)
     endif()
 endif()
 
-configure_file(config-kdepim-addons.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h)
+configure_file(
+    config-kdepim-addons.h.in
+    ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h
+)
 
 # For adblocker
 find_package(Corrosion CONFIG)
-set_package_properties(Corrosion PROPERTIES
-    TYPE RECOMMENDED
-    PURPOSE "Required to build the builtin adblocker"
-    DESCRIPTION "CMake scripts to seamlessly build and link to targets using cargo"
-    URL https://github.com/corrosion-rs/corrosion
+set_package_properties(
+    Corrosion
+    PROPERTIES
+        TYPE RECOMMENDED
+        PURPOSE "Required to build the builtin adblocker"
+        DESCRIPTION
+            "CMake scripts to seamlessly build and link to targets using cargo"
+        URL https://github.com/corrosion-rs/corrosion
 )
 
 if(BUILD_TESTING)
-   add_definitions(-DBUILD_TESTING)
+    add_definitions(-DBUILD_TESTING)
 endif()
 
 if(KDEPIM_ENTERPRISE_BUILD)
-  set(KDEPIM_ENTERPRISE_BUILD true)
+    set(KDEPIM_ENTERPRISE_BUILD true)
 else()
-  set(KDEPIM_ENTERPRISE_BUILD false)
+    set(KDEPIM_ENTERPRISE_BUILD false)
 endif()
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 # Extra package
 find_package(Gpgmepp 1.23.2 CONFIG)
-set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "https://www.gnupg.org" TYPE REQUIRED)
+set_package_properties(
+    Gpgmepp
+    PROPERTIES
+        DESCRIPTION "GpgME library"
+        URL "https://www.gnupg.org"
+        TYPE REQUIRED
+)
 ecm_set_disabled_deprecation_versions(QT 6.9.0 KF 6.15.0)
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-set(QTCREATOR_TEMPLATE_INSTALL_DIR ${KDE_INSTALL_DATADIR}/qtcreator/templates CACHE PATH "Define qtcreator template install path (default is /usr/share/qtcreator/templates)")
+set(QTCREATOR_TEMPLATE_INSTALL_DIR
+    ${KDE_INSTALL_DATADIR}/qtcreator/templates
+    CACHE PATH
+    "Define qtcreator template install path (default is /usr/share/qtcreator/templates)"
+)
 
 find_package(Discount "2" MODULE)
-set_package_properties("discount" PROPERTIES
-        DESCRIPTION "A library that gives you formatting functions suitable for marking down entire documents or lines of text"
+set_package_properties(
+    "discount"
+    PROPERTIES
+        DESCRIPTION
+            "A library that gives you formatting functions suitable for marking down entire documents or lines of text"
         URL "https://www.pell.portland.or.us/~orc/Code/discount/"
         TYPE RECOMMENDED
-        PURPOSE "Generate Markdown file.")
+        PURPOSE "Generate Markdown file."
+)
 
 if(discount_FOUND)
-   if(DEFINED PC_LIBMARKDOWN_VERSION)
-      if(${PC_LIBMARKDOWN_VERSION} VERSION_GREATER "2.2.5")
-           set(DISCOUNT_HAS_HIGHLIGHTING_SUPPORT TRUE)
-           message(STATUS "Discount ${PC_LIBMARKDOWN_VERSION}: has highlighting support")
+    if(DEFINED PC_LIBMARKDOWN_VERSION)
+        if(${PC_LIBMARKDOWN_VERSION} VERSION_GREATER "2.2.5")
+            set(DISCOUNT_HAS_HIGHLIGHTING_SUPPORT TRUE)
+            message(
+                STATUS
+                "Discount ${PC_LIBMARKDOWN_VERSION}: has highlighting support"
+            )
 
-           # in 3.0.0d, the signature for mkd_e_code_format changed
-           if(${PC_LIBMARKDOWN_VERSION} VERSION_GREATER_EQUAL "3.0.0")
-               if(${PC_LIBMARKDOWN_VERSION} MATCHES "[abc]$")
-                   set(DISCOUNT_NEW_HIGHLIGHTING_SIGNATURE FALSE)
-               else()
-                   set(DISCOUNT_NEW_HIGHLIGHTING_SIGNATURE TRUE)
-               endif()
-           endif()
-      endif()
-   endif()
+            # in 3.0.0d, the signature for mkd_e_code_format changed
+            if(${PC_LIBMARKDOWN_VERSION} VERSION_GREATER_EQUAL "3.0.0")
+                if(${PC_LIBMARKDOWN_VERSION} MATCHES "[abc]$")
+                    set(DISCOUNT_NEW_HIGHLIGHTING_SIGNATURE FALSE)
+                else()
+                    set(DISCOUNT_NEW_HIGHLIGHTING_SIGNATURE TRUE)
+                endif()
+            endif()
+        endif()
+    endif()
 endif()
 
-option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
+option(
+    USE_UNITY_CMAKE_SUPPORT
+    "Use UNITY cmake support (speedup compile time)"
+    OFF
+)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if(USE_UNITY_CMAKE_SUPPORT)
@@ -267,7 +353,11 @@ if(USE_UNITY_CMAKE_SUPPORT)
     add_definitions(-DCOMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
-option(BUILD_SCAM_SETTINGS_PLUGINS "Build scam settings plugins (In progress)" OFF)
+option(
+    BUILD_SCAM_SETTINGS_PLUGINS
+    "Build scam settings plugins (In progress)"
+    OFF
+)
 
 add_subdirectory(plugins)
 add_subdirectory(korganizer)
@@ -277,10 +367,10 @@ add_subdirectory(sieveeditor)
 add_subdirectory(kmailtransport)
 add_subdirectory(kldap)
 if(TARGET KPim6::ImportWizard)
-  add_subdirectory(akonadi-import-wizard)
+    add_subdirectory(akonadi-import-wizard)
 endif()
 if(TARGET KF6::TextAutoGenerateText)
-  add_subdirectory(pimautogeneratetext)
+    add_subdirectory(pimautogeneratetext)
 endif()
 
 ecm_qt_install_logging_categories(

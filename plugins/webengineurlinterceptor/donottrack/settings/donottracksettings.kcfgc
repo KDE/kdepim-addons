@@ -3,4 +3,3 @@ ClassName=DoNotTrackSettings
 Mutators=true
 Singleton=true
 ItemAccessors=true
-

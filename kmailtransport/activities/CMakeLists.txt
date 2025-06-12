@@ -10,11 +10,16 @@ ecm_qt_declare_logging_category(kmailtransportactivitiesplugin HEADER kmailtrans
     EXPORT KDEPIMADDONS
 )
 
-target_sources(kmailtransportactivitiesplugin PRIVATE
-    transportactivitiesplugin.h
-    transportactivitiesplugin.cpp
+target_sources(
+    kmailtransportactivitiesplugin
+    PRIVATE transportactivitiesplugin.h transportactivitiesplugin.cpp
 )
 
-target_link_libraries(kmailtransportactivitiesplugin
-        KF6::I18n KF6::CoreAddons KPim6::MailTransport Qt::Widgets KPim6::PimCommonActivities
+target_link_libraries(
+    kmailtransportactivitiesplugin
+    KF6::I18n
+    KF6::CoreAddons
+    KPim6::MailTransport
+    Qt::Widgets
+    KPim6::PimCommonActivities
 )

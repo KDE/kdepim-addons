@@ -20,10 +20,10 @@ function colorationSyntaxique() {
 
 Une image : ![logo de Markdown Here](http://adam-p.github.io/markdown-here/img/icon24.png)
 
-> Bloc de citation. 
+> Block de citation.
 > *Avec* **un peu de** `markdown`.
 
-Si le support des **formules mathématiques TeX** est activé, l'équation du second degré est la suivante : 
+Si le support des **formulas mathématiques TeX** est activé, l'équation du second degré est la suivante :
 $-b \pm \sqrt{b^2 - 4ac} \over 2a$
 
 # Titre 1
@@ -32,20 +32,18 @@ $-b \pm \sqrt{b^2 - 4ac} \over 2a$
 #### Titre 4
 ##### Titre 5
 ###### Titre 6
- 
+
 | Les tableaux | sont | intéressants |
 | ------------- |:-------------:| -----:|
 | la colonne 3 | est alignée à droite | 1600 $ |
 | la colonne 2 | est centrée | 12 $ |
 | les rayures | sont élégantes | 1 $ |
 
-Voici une ligne horizontale :
+Voici une ligne horizontal :
 
 ---
 
 ```
-bloc de code
+block de code
 sans coloration syntaxique
 ```
-
-

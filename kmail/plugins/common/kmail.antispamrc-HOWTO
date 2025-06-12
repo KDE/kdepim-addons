@@ -11,7 +11,7 @@ I gathered the information from several mails and comments by Andreas
 Gungl, the original developer of the antispam wizard for KMail, and
 Ingo Kloecker.
 
-When you have questions do not hesitate to ask me, Martin Steigerwald, 
+When you have questions do not hesitate to ask me, Martin Steigerwald,
 Andreas or Ingo.
 
 
@@ -22,8 +22,8 @@ The configuration file for the KMail antispam wizard "kmail.antispamrc"
 consists of one entry for each spamfilter that the antispam wizard
 shall support.
 
-At the beginning of the file in the section "General" the option "tools" 
-specifies the count of configured spam filters. Increase that by one 
+At the beginning of the file in the section "General" the option "tools"
+specifies the count of configured spam filters. Increase that by one
 when you add a new entry:
 
 [General]
@@ -70,9 +70,9 @@ These specify details about the spamfilter.
 
 - Executable: Specifies a test whether the executable of the spamfilter
   can be started. You should provide something which can be run on the
-  command line and returns [ $? -eq 0 ], i.e. it doesn't wait for any input 
+  command line and returns [ $? -eq 0 ], i.e. it doesn't wait for any input
   etc. It usually make sense to assume the program in the $PATH, so you
-  should better avoid /usr/bin. Set executable to "echo" for provider based 
+  should better avoid /usr/bin. Set executable to "echo" for provider based
   filters.
   Example: Executable=crm -v | grep "CRM114"
 
@@ -119,10 +119,10 @@ These specify how KMail shall detect whether a mail is spam, unsure or good.
 Spam score display
 ------------------
 
-Those regular expressions are used to extract the actual "spamicity" 
-score and the threshold (i.e. the upper bound for non-spam) from 
-SpamAssassin's ScoreHeader. The score and the threshold are then used 
-for showing the spam status in the message header, i.e. the small 
+Those regular expressions are used to extract the actual "spamicity"
+score and the threshold (i.e. the upper bound for non-spam) from
+SpamAssassin's ScoreHeader. The score and the threshold are then used
+for showing the spam status in the message header, i.e. the small
 colorbar.
 
 You need to specify the following values:
@@ -133,11 +133,11 @@ You need to specify the following values:
 
 - ScoreType: The type of the score, cf. below.
 
-- ScoreValueRegexp: A regular expression for extracting the score from 
+- ScoreValueRegexp: A regular expression for extracting the score from
   the ScoreHeader.
 
-- ScoreThresholdRegexp: A regular expression for extracting the threshold 
-  from the ScoreHeader; only needed for Adjusted type. Please set to 
+- ScoreThresholdRegexp: A regular expression for extracting the threshold
+  from the ScoreHeader; only needed for Adjusted type. Please set to
   nothing (ScoreThresholdRegexp=) if not needed.
 
 
@@ -151,4 +151,3 @@ KMail supports the following ScoreType values:
 
 - Adjusted: Use this when we need to compare against a threshold
   (SpamAssasssin)
-

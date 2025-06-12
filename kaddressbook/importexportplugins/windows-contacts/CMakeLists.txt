@@ -7,21 +7,27 @@ ecm_qt_declare_logging_category(kaddressbook_importexportwindowscontactplugin HE
     DESCRIPTION "kdepim-addons (Import/Export Windows Contact plugin)"
     EXPORT KDEPIMADDONS
 )
-target_sources(kaddressbook_importexportwindowscontactplugin PRIVATE
-    ${kaddressbook_importexport_windowscontact_debugfile_SRCS}
-    windowscontactimportexportplugin.cpp
-    windowscontactimportexportplugininterface.cpp
-    importwindowcontact.cpp
-    windowscontactimportexportplugin.h
-    windowscontactimportexportplugininterface.h
-    importwindowcontact.h
+target_sources(
+    kaddressbook_importexportwindowscontactplugin
+    PRIVATE
+        ${kaddressbook_importexport_windowscontact_debugfile_SRCS}
+        windowscontactimportexportplugin.cpp
+        windowscontactimportexportplugininterface.cpp
+        importwindowcontact.cpp
+        windowscontactimportexportplugin.h
+        windowscontactimportexportplugininterface.h
+        importwindowcontact.h
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(kaddressbook_importexportwindowscontactplugin PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        kaddressbook_importexportwindowscontactplugin
+        PROPERTIES UNITY_BUILD ON
+    )
 endif()
 
-target_link_libraries(kaddressbook_importexportwindowscontactplugin
+target_link_libraries(
+    kaddressbook_importexportwindowscontactplugin
     KPim6::AddressbookImportExport
     KPim6::PimCommon
     KF6::I18n

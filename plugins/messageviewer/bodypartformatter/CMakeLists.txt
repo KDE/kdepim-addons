@@ -11,7 +11,11 @@ add_subdirectory(gnupgwks)
 add_subdirectory(pkpass)
 add_subdirectory(itinerary)
 
-option(FORCE_DISCOUNT_LIB "Force using discount lib for markdown bodyformatter." TRUE)
+option(
+    FORCE_DISCOUNT_LIB
+    "Force using discount lib for markdown bodyformatter."
+    TRUE
+)
 if(FORCE_DISCOUNT_LIB AND discount_FOUND)
     set(USE_DISCOUNT_LIB TRUE)
     message(STATUS "build bodyparformatter mardown with discount support")

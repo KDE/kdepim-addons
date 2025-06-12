@@ -1,8 +1,13 @@
 {
     "formatter": [
-        { "mimetype": "text/vcard" }
+        {
+            "mimetype": "text/vcard"
+        }
     ],
     "renderer": [
-        { "type": "MimeTreeParser::AttachmentMessagePart", "mimetype": "text/vcard" }
+        {
+            "type": "MimeTreeParser::AttachmentMessagePart",
+            "mimetype": "text/vcard"
+        }
     ]
 }

@@ -8,12 +8,22 @@ qt_add_dbus_interfaces(messageviewer_bodypartformatter_text_calendar_PART_SRCS
     korganizer/org.kde.Korganizer.Calendar.xml
 )
 
-target_sources(messageviewer_bodypartformatter_text_calendar PRIVATE
-    text_calendar.cpp delegateselector.cpp attendeeselector.cpp memorycalendarmemento.cpp syncitiphandler.cpp
-    reactiontoinvitationdialog.cpp
-    delegateselector.h attendeeselector.h memorycalendarmemento.h syncitiphandler.h
-    reactiontoinvitationdialog.h
-    ${messageviewer_bodypartformatter_text_calendar_PART_SRCS})
+target_sources(
+    messageviewer_bodypartformatter_text_calendar
+    PRIVATE
+        text_calendar.cpp
+        delegateselector.cpp
+        attendeeselector.cpp
+        memorycalendarmemento.cpp
+        syncitiphandler.cpp
+        reactiontoinvitationdialog.cpp
+        delegateselector.h
+        attendeeselector.h
+        memorycalendarmemento.h
+        syncitiphandler.h
+        reactiontoinvitationdialog.h
+        ${messageviewer_bodypartformatter_text_calendar_PART_SRCS}
+)
 
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_calendar HEADER text_calendar_debug.h IDENTIFIER TEXT_CALENDAR_LOG CATEGORY_NAME org.kde.pim.text_calendar
     DESCRIPTION "kdepim-addons (messageviewer calendar plugins)"
@@ -21,15 +31,17 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_calendar HE
     EXPORT KDEPIMADDONS
 )
 
-
-
 ki18n_wrap_ui(messageviewer_bodypartformatter_text_calendar attendeeselector.ui)
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(messageviewer_bodypartformatter_text_calendar PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        messageviewer_bodypartformatter_text_calendar
+        PROPERTIES UNITY_BUILD ON
+    )
 endif()
 
-target_link_libraries(messageviewer_bodypartformatter_text_calendar
+target_link_libraries(
+    messageviewer_bodypartformatter_text_calendar
     KF6::Codecs
     Qt::Core
     KF6::CalendarCore
@@ -48,7 +60,10 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     Qt::DBus
 )
 
-install(TARGETS messageviewer_bodypartformatter_text_calendar  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)
+install(
+    TARGETS messageviewer_bodypartformatter_text_calendar
+    DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter
+)
 if(BUILD_TESTING)
     add_subdirectory(tests)
 endif()

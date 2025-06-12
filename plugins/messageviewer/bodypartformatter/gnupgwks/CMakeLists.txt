@@ -1,28 +1,30 @@
 # SPDX-FileCopyrightText: 2015-2025 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_application_gnupgwks_plugin\")
+add_definitions(
+    -DTRANSLATION_DOMAIN=\"messageviewer_application_gnupgwks_plugin\"
+)
 
 add_library(messageviewer_bodypartformatter_application_gnupgwks MODULE)
-target_sources(messageviewer_bodypartformatter_application_gnupgwks PRIVATE
-    plugin.cpp
-    gnupgwksformatter.cpp
-    gnupgwksurlhandler.cpp
-    gnupgwksmessagepart.cpp
-    pgpkeyformatter.cpp
-    pgpkeymemento.cpp
-    pgpkeymessagepart.cpp
-    pgpkeyurlhandler.cpp
-
-    plugin.h
-    gnupgwksformatter.h
-    gnupgwksurlhandler.h
-    gnupgwksmessagepart.h
-    pgpkeyformatter.h
-    pgpkeymemento.h
-    pgpkeymessagepart.h
-    pgpkeyurlhandler.h
-
-    templates.qrc
+target_sources(
+    messageviewer_bodypartformatter_application_gnupgwks
+    PRIVATE
+        plugin.cpp
+        gnupgwksformatter.cpp
+        gnupgwksurlhandler.cpp
+        gnupgwksmessagepart.cpp
+        pgpkeyformatter.cpp
+        pgpkeymemento.cpp
+        pgpkeymessagepart.cpp
+        pgpkeyurlhandler.cpp
+        plugin.h
+        gnupgwksformatter.h
+        gnupgwksurlhandler.h
+        gnupgwksmessagepart.h
+        pgpkeyformatter.h
+        pgpkeymemento.h
+        pgpkeymessagepart.h
+        pgpkeyurlhandler.h
+        templates.qrc
 )
 
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnupgwks
@@ -33,12 +35,15 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnup
     EXPORT KDEPIMADDONS
 )
 
-
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(messageviewer_bodypartformatter_application_gnupgwks PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        messageviewer_bodypartformatter_application_gnupgwks
+        PROPERTIES UNITY_BUILD ON
+    )
 endif()
 
-target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
+target_link_libraries(
+    messageviewer_bodypartformatter_application_gnupgwks
     Qt::Core
     KPim6::MessageCore
     KPim6::MessageViewer
@@ -51,4 +56,7 @@ target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     KF6::TextTemplate
     Gpgmepp
 )
-install(TARGETS messageviewer_bodypartformatter_application_gnupgwks DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter)
+install(
+    TARGETS messageviewer_bodypartformatter_application_gnupgwks
+    DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter
+)

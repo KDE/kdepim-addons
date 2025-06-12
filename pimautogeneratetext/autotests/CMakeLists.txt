@@ -10,7 +10,6 @@ macro(add_pimautogenerate_unittest _source)
     target_link_libraries(${_name} Qt::Widgets Qt::Test KPim6::AutoGenerateText)
 endmacro()
 
-
 add_pimautogenerate_unittest(autogenerateconfigureaskitemtest.cpp)
 add_pimautogenerate_unittest(autogenerateconfigurelistviewtest.cpp)
 add_pimautogenerate_unittest(autogenerateconfigureaskwidgettest.cpp)

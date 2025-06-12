@@ -9,21 +9,18 @@ ecm_qt_declare_logging_category(emaillineeditplugin HEADER sieveeditoremaillined
     EXPORT KDEPIMADDONS
 )
 
-
 if(BUILD_TESTING)
     add_subdirectory(tests)
     add_subdirectory(autotests)
 endif()
 
-target_sources(emaillineeditplugin PRIVATE
-    emaillineedit.cpp
-    emaillineedit.h
+target_sources(emaillineeditplugin PRIVATE emaillineedit.cpp emaillineedit.h)
+
+target_link_libraries(
+    emaillineeditplugin
+    KF6::I18n
+    KF6::ColorScheme
+    KPim6::KSieveUi
+    KPim6::AkonadiContactWidgets
+    KF6::ColorScheme
 )
-
-
-target_link_libraries(emaillineeditplugin
-	KF6::I18n KF6::ColorScheme KPim6::KSieveUi KPim6::AkonadiContactWidgets KF6::ColorScheme
-)
-
-
-

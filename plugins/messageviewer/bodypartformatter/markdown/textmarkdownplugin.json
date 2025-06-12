@@ -1,3 +1,8 @@
 {
-    "renderer": [ { "type": "MimeTreeParser::AttachmentMessagePart", "mimetype": "text/markdown" } ]
+    "renderer": [
+        {
+            "type": "MimeTreeParser::AttachmentMessagePart",
+            "mimetype": "text/markdown"
+        }
+    ]
 }

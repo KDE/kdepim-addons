@@ -10,11 +10,16 @@ ecm_qt_declare_logging_category(kldapactivitiesplugin HEADER kldapactivitiesplug
     EXPORT KDEPIMADDONS
 )
 
-target_sources(kldapactivitiesplugin PRIVATE
-    ldapactivitiesplugin.h
-    ldapactivitiesplugin.cpp
+target_sources(
+    kldapactivitiesplugin
+    PRIVATE ldapactivitiesplugin.h ldapactivitiesplugin.cpp
 )
 
-target_link_libraries(kldapactivitiesplugin
-        KF6::I18n KF6::CoreAddons Qt::Widgets KPim6::PimCommonActivities KPim6::LdapWidgets
+target_link_libraries(
+    kldapactivitiesplugin
+    KF6::I18n
+    KF6::CoreAddons
+    Qt::Widgets
+    KPim6::PimCommonActivities
+    KPim6::LdapWidgets
 )

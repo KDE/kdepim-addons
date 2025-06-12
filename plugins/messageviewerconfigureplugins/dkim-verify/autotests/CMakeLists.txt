@@ -6,7 +6,7 @@ macro(add_messageviewer_dkim_verify_unittest _source)
         TEST_NAME ${_name}
         NAME_PREFIX "messageviewer-"
         LINK_LIBRARIES KPim6::MessageViewer dkimverifyconfigure Qt::Test
-)
+    )
 endmacro()
 
 add_messageviewer_dkim_verify_unittest(dkimconfiguredialogtest.cpp)

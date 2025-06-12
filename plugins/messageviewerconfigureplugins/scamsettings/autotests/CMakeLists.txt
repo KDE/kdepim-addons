@@ -7,7 +7,13 @@ macro(add_scamconfigure_plugin_unittest _source)
     add_test(NAME ${_name} COMMAND ${_name})
 
     ecm_mark_as_test(scamplugin-${_name})
-    target_link_libraries(${_name} Qt::Test KF6::I18n KPim6::MessageViewer scamconfiguresettings)
+    target_link_libraries(
+        ${_name}
+        Qt::Test
+        KF6::I18n
+        KPim6::MessageViewer
+        scamconfiguresettings
+    )
 endmacro()
 
 add_scamconfigure_plugin_unittest(scamconfiguresettingswidgettest.cpp)

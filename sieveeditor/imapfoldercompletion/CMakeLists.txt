@@ -10,38 +10,46 @@ ecm_qt_declare_logging_category(sieveeditor_plugin_categories_SRCS HEADER imapfo
     EXPORT KDEPIMADDONS
 )
 
-
 if(BUILD_TESTING)
     add_subdirectory(tests)
     add_subdirectory(autotests)
 endif()
 
-
-target_sources(imapfoldercompletionplugin PRIVATE
-    selectimapfolderdialog.cpp
-    selectimapfolderwidget.cpp
-    selectimapwidget.cpp
-    selectimaploadfoldersjob.cpp
-    selectimapfoldermodel.cpp
-    selectimaplineedit.cpp
-    selectimaplineeditcompletermodel.cpp
-    selectimapcreatefolderjob.cpp
-    selectimapfoldertreeview.cpp
-    ${sieveeditor_plugin_categories_SRCS}
-    selectimapfolderdialog.h
-    selectimapfolderwidget.h
-    selectimapwidget.h
-    selectimaploadfoldersjob.h
-    selectimapfoldermodel.h
-    selectimaplineedit.h
-    selectimaplineeditcompletermodel.h
-    selectimapcreatefolderjob.h
-    selectimapfoldertreeview.h
+target_sources(
+    imapfoldercompletionplugin
+    PRIVATE
+        selectimapfolderdialog.cpp
+        selectimapfolderwidget.cpp
+        selectimapwidget.cpp
+        selectimaploadfoldersjob.cpp
+        selectimapfoldermodel.cpp
+        selectimaplineedit.cpp
+        selectimaplineeditcompletermodel.cpp
+        selectimapcreatefolderjob.cpp
+        selectimapfoldertreeview.cpp
+        ${sieveeditor_plugin_categories_SRCS}
+        selectimapfolderdialog.h
+        selectimapfolderwidget.h
+        selectimapwidget.h
+        selectimaploadfoldersjob.h
+        selectimapfoldermodel.h
+        selectimaplineedit.h
+        selectimaplineeditcompletermodel.h
+        selectimapcreatefolderjob.h
+        selectimapfoldertreeview.h
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(imapfoldercompletionplugin PROPERTIES UNITY_BUILD ON)
 endif()
-target_link_libraries(imapfoldercompletionplugin
-    KPim6::PimCommon KF6::Completion KF6::I18n KF6::KIOWidgets KPim6::KSieveUi KPim6::MailTransport KPim6::IMAP KF6::ItemModels
+target_link_libraries(
+    imapfoldercompletionplugin
+    KPim6::PimCommon
+    KF6::Completion
+    KF6::I18n
+    KF6::KIOWidgets
+    KPim6::KSieveUi
+    KPim6::MailTransport
+    KPim6::IMAP
+    KF6::ItemModels
 )

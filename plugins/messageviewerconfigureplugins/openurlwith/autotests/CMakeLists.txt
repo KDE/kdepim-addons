@@ -6,7 +6,7 @@ macro(add_messageviewer_openwithurl_unittest _source)
         TEST_NAME ${_name}
         NAME_PREFIX "messageviewer-"
         LINK_LIBRARIES KPim6::MessageViewer KPim6::Libkdepim openurlwithconfigure Qt::Test KF6::KIOWidgets
-)
+    )
 endmacro()
 
 add_messageviewer_openwithurl_unittest(openurlwithconfigurewidgettest.cpp)

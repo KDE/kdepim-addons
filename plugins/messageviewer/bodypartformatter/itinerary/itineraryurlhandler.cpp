@@ -214,8 +214,8 @@ void ItineraryUrlHandler::addToCalendar(ItineraryMemento *memento) const
     using namespace KCalendarCore;
 
     const auto calendar = CalendarSupport::calendarSingleton(true);
-    const auto datas = memento->data();
-    for (const auto &d : datas) {
+    const auto data = memento->data();
+    for (const auto &d : data) {
         auto event = d.event;
         if (!event) {
             event.reset(new KCalendarCore::Event);

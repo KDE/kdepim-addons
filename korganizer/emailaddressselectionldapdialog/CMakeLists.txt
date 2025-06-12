@@ -8,12 +8,16 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 #endif()
 
 kcoreaddons_add_plugin(emailaddressselectionldapdialogplugin INSTALL_NAMESPACE pim6/akonadi)
-target_sources(emailaddressselectionldapdialogplugin PRIVATE
-    emailaddressselectionldapdialog.cpp
-    emailaddressselectionldapdialog.h
+target_sources(
+    emailaddressselectionldapdialogplugin
+    PRIVATE
+        emailaddressselectionldapdialog.cpp
+        emailaddressselectionldapdialog.h
 )
 
-
-target_link_libraries(emailaddressselectionldapdialogplugin
-    KF6::I18n KPim6::AkonadiContactCore KPim6::PimCommonAkonadi
+target_link_libraries(
+    emailaddressselectionldapdialogplugin
+    KF6::I18n
+    KPim6::AkonadiContactCore
+    KPim6::PimCommonAkonadi
 )

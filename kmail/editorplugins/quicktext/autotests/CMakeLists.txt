@@ -8,7 +8,16 @@ macro(add_kmail_editorpluginquicktext_unittest _source)
     add_test(NAME ${_name} COMMAND ${_name})
 
     ecm_mark_as_test(kmail_editorpluginquicktext-${_name})
-    target_link_libraries(${_name} Qt::Test KF6::XmlGui KPim6::MessageComposer KF6::I18n KPim6::PimTextEdit kmailquicktextpluginprivate KPim6::MailCommon)
+    target_link_libraries(
+        ${_name}
+        Qt::Test
+        KF6::XmlGui
+        KPim6::MessageComposer
+        KF6::I18n
+        KPim6::PimTextEdit
+        kmailquicktextpluginprivate
+        KPim6::MailCommon
+    )
 endmacro()
 
 add_kmail_editorpluginquicktext_unittest(quicktextmenutest.cpp)

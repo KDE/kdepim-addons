@@ -7,7 +7,14 @@ macro(add_kmail_editorplugin_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name})
 
     ecm_mark_as_test(kmail_editorplugin-${_name})
-    target_link_libraries(${_name} Qt::Test KF6::XmlGui KPim6::MessageComposer KF6::I18n KF6::TextAddonsWidgets)
+    target_link_libraries(
+        ${_name}
+        Qt::Test
+        KF6::XmlGui
+        KPim6::MessageComposer
+        KF6::I18n
+        KF6::TextAddonsWidgets
+    )
 endmacro()
 
 add_kmail_editorplugin_unittest(insertspecialcharacterplugineditortest.cpp "../insertspecialcharacterplugineditor.cpp;../insertspecialcharacterplugineditorinterface.cpp")

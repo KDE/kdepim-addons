@@ -43,7 +43,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
     if (lst.isEmpty()) {
         return true;
     }
-    // not configurated => validate it.
+    // not configured => validate it.
     const ConfirmAddressSettings settings = mHashSettings.value(params.identity());
     if (settings.mDomains.isEmpty() && settings.mWhiteLists.isEmpty()) {
         return true;

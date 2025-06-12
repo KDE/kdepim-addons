@@ -1,9 +1,17 @@
 {
     "formatter": [
-        { "mimetype": "text/calendar" }
+        {
+            "mimetype": "text/calendar"
+        }
     ],
     "renderer": [
-        { "type": "MimeTreeParser::AttachmentMessagePart", "mimetype": "text/calendar" },
-        { "type": "MimeTreeParser::TextMessagePart", "mimetype": "text/calendar" }
+        {
+            "type": "MimeTreeParser::AttachmentMessagePart",
+            "mimetype": "text/calendar"
+        },
+        {
+            "type": "MimeTreeParser::TextMessagePart",
+            "mimetype": "text/calendar"
+        }
     ]
 }

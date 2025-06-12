@@ -11,32 +11,26 @@ ecm_qt_declare_logging_category(KPim6AutoGenerateText HEADER pimautogeneratetext
 
 add_library(KPim6::AutoGenerateText ALIAS KPim6AutoGenerateText)
 
-target_sources(KPim6AutoGenerateText PRIVATE
-    autogenerateconfigurelistview.h
-    autogenerateconfigurelistview.cpp
-
-    autogenerateconfigureaskinfo.h
-    autogenerateconfigureaskinfo.cpp
-
-    autogenerateconfigureaskmodel.h
-    autogenerateconfigureaskmodel.cpp
-
-    pimautogeneratetext_private_export.h
-
-    autogenerateconfigureaskmanager.h
-    autogenerateconfigureaskmanager.cpp
-
-    autogenerateconfigureaskmenu.h
-    autogenerateconfigureaskmenu.cpp
-
-    autogenerateconfigureaskdialog.h
-    autogenerateconfigureaskdialog.cpp
-
-    autogenerateconfigureaskwidget.h
-    autogenerateconfigureaskwidget.cpp
-
-    autogenerateconfigurelistviewdelegate.h
-    autogenerateconfigurelistviewdelegate.cpp
+target_sources(
+    KPim6AutoGenerateText
+    PRIVATE
+        autogenerateconfigurelistview.h
+        autogenerateconfigurelistview.cpp
+        autogenerateconfigureaskinfo.h
+        autogenerateconfigureaskinfo.cpp
+        autogenerateconfigureaskmodel.h
+        autogenerateconfigureaskmodel.cpp
+        pimautogeneratetext_private_export.h
+        autogenerateconfigureaskmanager.h
+        autogenerateconfigureaskmanager.cpp
+        autogenerateconfigureaskmenu.h
+        autogenerateconfigureaskmenu.cpp
+        autogenerateconfigureaskdialog.h
+        autogenerateconfigureaskdialog.cpp
+        autogenerateconfigureaskwidget.h
+        autogenerateconfigureaskwidget.cpp
+        autogenerateconfigurelistviewdelegate.h
+        autogenerateconfigurelistviewdelegate.cpp
 )
 
 ecm_generate_headers(PimAutoGenerateText_Camelcases_HEADERS
@@ -47,20 +41,20 @@ ecm_generate_headers(PimAutoGenerateText_Camelcases_HEADERS
     PREFIX PimAutoGenerateText
 )
 
-target_link_libraries(KPim6AutoGenerateText
-    PUBLIC
-    Qt::Widgets
-    KF6::ConfigGui
-    PRIVATE
-    KF6::I18n
-    KF6::WidgetsAddons
-    KF6::TextAutoGenerateText
+target_link_libraries(
+    KPim6AutoGenerateText
+    PUBLIC Qt::Widgets KF6::ConfigGui
+    PRIVATE KF6::I18n KF6::WidgetsAddons KF6::TextAutoGenerateText
 )
 
-set_target_properties(KPim6AutoGenerateText PROPERTIES
-    VERSION ${KDEPIMADDONS_LIB_VERSION}
-    SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+set_target_properties(
+    KPim6AutoGenerateText
+    PROPERTIES
+        VERSION ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
-install(TARGETS KPim6AutoGenerateText ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
-
+install(
+    TARGETS KPim6AutoGenerateText ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY NAMELINK_SKIP
+)

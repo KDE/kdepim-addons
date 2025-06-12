@@ -1,12 +1,12 @@
 # SPDX-FileCopyrightText: 2018-2025 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}/
-    ${CMAKE_CURRENT_BINARY_DIR}/
-)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ ${CMAKE_CURRENT_BINARY_DIR}/)
 
-configure_file(config-markdownplugin.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-markdownplugin.h)
+configure_file(
+    config-markdownplugin.h.in
+    ${CMAKE_CURRENT_BINARY_DIR}/config-markdownplugin.h
+)
 
 add_subdirectory(markdownlib)
 add_subdirectory(plugin)

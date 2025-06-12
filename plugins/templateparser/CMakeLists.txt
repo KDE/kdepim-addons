@@ -9,12 +9,15 @@ endif()
 
 kcoreaddons_add_plugin(templateparseraddressrequesterplugin INSTALL_NAMESPACE pim6/templateparser)
 
-target_sources(templateparseraddressrequesterplugin PRIVATE
-    templateparseremailaddressrequesterakonadi.cpp
-    templateparseremailaddressrequesterakonadi.h
+target_sources(
+    templateparseraddressrequesterplugin
+    PRIVATE
+        templateparseremailaddressrequesterakonadi.cpp
+        templateparseremailaddressrequesterakonadi.h
 )
 
-
-target_link_libraries(templateparseraddressrequesterplugin
-    KPim6::TemplateParser KPim6::AkonadiContactWidgets
+target_link_libraries(
+    templateparseraddressrequesterplugin
+    KPim6::TemplateParser
+    KPim6::AkonadiContactWidgets
 )

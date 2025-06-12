@@ -250,7 +250,7 @@ protected Q_SLOTS:
     void slotBuildSummary();
 
 private:
-    /* Check for the availability of an executible along the PATH */
+    /* Check for the availability of an executable along the PATH */
     [[nodiscard]] int checkForProgram(const QString &executable) const;
     /* generic checks if any option in a page is checked */
     [[nodiscard]] bool anyVirusOptionChecked() const;
