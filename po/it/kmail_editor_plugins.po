@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the its source package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2018, 2019, 2023, 2024.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2023, 2024, 2025 Luigi Toscano <luigi.toscano@tiscali.it>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-11 00:43+0000\n"
-"PO-Revision-Date: 2024-08-01 21:57+0200\n"
+"PO-Revision-Date: 2025-06-10 11:41+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:22
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
-msgstr ""
+msgstr "Apri chat IA"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:23
 #, kde-format
@@ -44,26 +44,25 @@ msgstr "Correggi automaticamente il testo selezionato"
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
-msgstr ""
+msgstr "Genera automaticamente risposta"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
-msgstr ""
+msgstr "Testo di riepilogo"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Autocorrect Text"
+#, kde-format
 msgctxt "@action"
 msgid "Correct Text"
-msgstr "Correggi automaticamente il testo"
+msgstr "Correggi il testo"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
-msgstr ""
+msgstr "Risposta rapida"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
