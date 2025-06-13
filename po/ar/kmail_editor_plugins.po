@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-11 00:43+0000\n"
-"PO-Revision-Date: 2025-05-31 10:54+0400\n"
+"PO-Revision-Date: 2025-06-12 12:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -46,26 +46,25 @@ msgstr "صحّح النّصّ المحدّد آليًّا"
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
-msgstr ""
+msgstr "أنشئ إجابة آليًا"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
-msgstr ""
+msgstr "لخّص النص"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Autocorrect Text"
+#, kde-format
 msgctxt "@action"
 msgid "Correct Text"
-msgstr "صحّح النّصّ آليًّا"
+msgstr "صحّح النّصّ"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
-msgstr ""
+msgstr "إجابة سريعة"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
