@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows to generate quick answer.",
+        "Description[ar]": "تتيح لك هذه الملحقة توليد إجابة آلية.",
         "Description[bg]": "Тази приставка ви позволява да генерирате бърз отговор.",
         "Description[ca@valencia]": "Este connector permet generar una resposta ràpida.",
         "Description[ca]": "Aquest connector permet generar una resposta ràpida.",
@@ -20,6 +21,7 @@
         "Description[zh_TW]": "這個外掛程式讓您產生快速回答。",
         "EnabledByDefault": false,
         "Name": "AutoGenerate Quick Answer",
+        "Name[ar]": "أنشئ إجابة سريعة آليًا",
         "Name[bg]": "Автоматично генериране на бърз отговор",
         "Name[ca@valencia]": "Resposta ràpida generada automàticament",
         "Name[ca]": "Resposta ràpida generada automàticament",
