@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-11 00:43+0000\n"
-"PO-Revision-Date: 2025-05-31 09:44+0200\n"
+"PO-Revision-Date: 2025-06-14 14:08+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -45,17 +45,16 @@ msgstr "Popraw zaznaczony tekst"
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
-msgstr ""
+msgstr "Sam stwórz odpowiedź"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
-msgstr ""
+msgstr "Tekst podsumowujący"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:37
-#, fuzzy, kde-format
-#| msgid "Autocorrect Text"
+#, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Popraw tekst"
@@ -64,7 +63,7 @@ msgstr "Popraw tekst"
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
-msgstr ""
+msgstr "Szybka odpowiedź"
 
 #: insertemail/insertemailplugineditorinterface.cpp:23
 #, kde-format
