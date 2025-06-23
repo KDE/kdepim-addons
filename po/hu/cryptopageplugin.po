@@ -2,19 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011.
+# SPDX-FileCopyrightText: 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:38+0000\n"
-"PO-Revision-Date: 2011-12-03 16:25+0100\n"
-"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"PO-Revision-Date: 2025-06-22 15:52+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: cryptopageplugin.cpp:37
@@ -23,18 +24,16 @@ msgid "Allowed Protocols"
 msgstr "Engedélyezett protokollok"
 
 #: cryptopageplugin.cpp:52
-#, fuzzy, kde-format
-#| msgid "Preferred OpenPGP encryption key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
-msgstr "Az előnyben részesített OpenPGP titkosítási kulcs:"
+msgstr "Előnyben részesített OpenPGP titkosítási kulcs:"
 
 #: cryptopageplugin.cpp:57
-#, fuzzy, kde-format
-#| msgid "Preferred S/MIME encryption certificate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
-msgstr "Az előnyben részesített S/MIME titkosítási tanúsítvány:"
+msgstr "Előnyben részesített S/MIME titkosítási tanúsítvány:"
 
 #: cryptopageplugin.cpp:62
 #, kde-format
@@ -42,15 +41,13 @@ msgid "Message Preference"
 msgstr "Üzenetbeállítások"
 
 #: cryptopageplugin.cpp:71
-#, fuzzy, kde-format
-#| msgid "Sign:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Aláírás:"
 
 #: cryptopageplugin.cpp:88
-#, fuzzy, kde-format
-#| msgid "Encrypt:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Titkosítás:"
