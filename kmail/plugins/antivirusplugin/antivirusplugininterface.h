@@ -10,6 +10,7 @@
 
 class AntiVirusPluginInterface : public PimCommon::GenericPluginInterface
 {
+    Q_OBJECT
 public:
     explicit AntiVirusPluginInterface(QObject *parent = nullptr);
     ~AntiVirusPluginInterface() override;

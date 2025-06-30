@@ -56,3 +56,5 @@ void MergeContactsPluginInterface::exec()
     dlg.setContacts(mListItems);
     dlg.exec();
 }
+
+#include "moc_mergecontactsplugininterface.cpp"

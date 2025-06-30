@@ -38,3 +38,5 @@ void AntiVirusPluginInterface::exec()
     KMail::AntiSpamWizard wiz(KMail::AntiSpamWizard::AntiVirus, parentWidget());
     wiz.exec();
 }
+
+#include "moc_antivirusplugininterface.cpp"

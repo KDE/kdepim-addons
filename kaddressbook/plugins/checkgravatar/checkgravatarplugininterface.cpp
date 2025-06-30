@@ -119,3 +119,5 @@ void CheckGravatarPluginInterface::slotModifyContactFinished(KJob *job)
         qCDebug(KADDRESSBOOK_CHECKGRAVATAR_LOG) << "Error while modifying items. " << job->error() << job->errorString();
     }
 }
+
+#include "moc_checkgravatarplugininterface.cpp"

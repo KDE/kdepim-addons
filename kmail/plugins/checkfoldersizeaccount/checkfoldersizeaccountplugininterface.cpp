@@ -39,3 +39,5 @@ void CheckFolderSizeAccountPluginInterface::slotActivated()
 {
     Q_EMIT emitPluginActivated(this);
 }
+
+#include "moc_checkfoldersizeaccountplugininterface.cpp"

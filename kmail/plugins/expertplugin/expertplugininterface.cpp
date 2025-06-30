@@ -37,3 +37,5 @@ void ExpertPluginInterface::slotActivated()
 void ExpertPluginInterface::exec()
 {
 }
+
+#include "moc_expertplugininterface.cpp"

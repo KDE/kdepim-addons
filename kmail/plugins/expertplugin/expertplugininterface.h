@@ -10,6 +10,7 @@
 
 class ExpertPluginInterface : public PimCommon::GenericPluginInterface
 {
+    Q_OBJECT
 public:
     explicit ExpertPluginInterface(QObject *parent = nullptr);
     ~ExpertPluginInterface() override;

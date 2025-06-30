@@ -38,3 +38,5 @@ void AntiSpamPluginInterface::exec()
     KMail::AntiSpamWizard wiz(KMail::AntiSpamWizard::AntiSpam, parentWidget());
     wiz.exec();
 }
+
+#include "moc_antispamplugininterface.cpp"

@@ -10,6 +10,7 @@
 
 class SearchDuplicatesPluginInterface : public PimCommon::GenericPluginInterface
 {
+    Q_OBJECT
 public:
     explicit SearchDuplicatesPluginInterface(QObject *parent = nullptr);
     ~SearchDuplicatesPluginInterface() override;

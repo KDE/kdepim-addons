@@ -10,6 +10,7 @@
 
 class CheckFolderSizeAccountPluginInterface : public PimCommon::GenericPluginInterface
 {
+    Q_OBJECT
 public:
     explicit CheckFolderSizeAccountPluginInterface(QObject *parent = nullptr);
     ~CheckFolderSizeAccountPluginInterface() override;

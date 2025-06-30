@@ -97,3 +97,5 @@ void AkonadiDatabaseToolsPluginInterface::exec()
     dlg->appendText(u"---------"_s);
     job->start();
 }
+
+#include "moc_akonadidatabasetoolsplugininterface.cpp"

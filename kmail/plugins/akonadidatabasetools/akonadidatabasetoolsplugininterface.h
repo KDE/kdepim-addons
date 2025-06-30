@@ -11,6 +11,7 @@
 #include <PimCommonAkonadi/GenericPluginInterface>
 class AKONADIDATASETOOLS_EXPORT AkonadiDatabaseToolsPluginInterface : public PimCommon::GenericPluginInterface
 {
+    Q_OBJECT
 public:
     explicit AkonadiDatabaseToolsPluginInterface(QObject *parent = nullptr);
     ~AkonadiDatabaseToolsPluginInterface() override;

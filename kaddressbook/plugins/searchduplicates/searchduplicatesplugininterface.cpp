@@ -55,3 +55,5 @@ PimCommon::GenericPluginInterface::RequireTypes SearchDuplicatesPluginInterface:
 {
     return PimCommon::GenericPluginInterface::Items;
 }
+
+#include "moc_searchduplicatesplugininterface.cpp"
