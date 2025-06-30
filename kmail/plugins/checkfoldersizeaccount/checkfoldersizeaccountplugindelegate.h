@@ -7,14 +7,17 @@
 #pragma once
 
 #include <QStyledItemDelegate>
-
+class QTreeView;
 class CheckFolderSizeAccountPluginDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    explicit CheckFolderSizeAccountPluginDelegate(QObject *parent = nullptr);
+    explicit CheckFolderSizeAccountPluginDelegate(QTreeView *view, QObject *parent = nullptr);
     ~CheckFolderSizeAccountPluginDelegate() override;
 
 protected:
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+
+private:
+    QTreeView *const mTreeView;
 };
