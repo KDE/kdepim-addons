@@ -5,6 +5,7 @@
 */
 
 #include "checkfoldersizeaccountpluginwidget.h"
+#include "checkfoldersizeaccountplugindelegate.h"
 #include <Akonadi/ChangeRecorder>
 #include <Akonadi/CollectionFilterProxyModel>
 #include <Akonadi/EntityTreeModel>
@@ -25,6 +26,7 @@ CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *
     mainLayout->setObjectName(u"mainLayout"_s);
     mainLayout->setContentsMargins({});
 
+    mFolderView->setItemDelegate(new CheckFolderSizeAccountPluginDelegate(mFolderView, this));
     // Create a new change recorder.
     mChangeRecorder->setMimeTypeMonitored(KMime::Message::mimeType());
     mChangeRecorder->fetchCollection(true);

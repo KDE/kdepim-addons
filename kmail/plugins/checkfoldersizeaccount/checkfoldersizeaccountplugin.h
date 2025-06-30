@@ -19,4 +19,6 @@ public:
     ~CheckFolderSizeAccountPlugin() override;
 
     [[nodiscard]] PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
+    [[nodiscard]] bool hasConfigureDialog() const override;
+    void showConfigureDialog(QWidget *parent = nullptr) override;
 };

@@ -15,12 +15,22 @@ CheckFolderSizeAccountPlugin::CheckFolderSizeAccountPlugin(QObject *parent, cons
 {
 }
 
+CheckFolderSizeAccountPlugin::~CheckFolderSizeAccountPlugin() = default;
+
 PimCommon::GenericPluginInterface *CheckFolderSizeAccountPlugin::createInterface(QObject *parent)
 {
     return new CheckFolderSizeAccountPluginInterface(parent);
 }
 
-CheckFolderSizeAccountPlugin::~CheckFolderSizeAccountPlugin() = default;
+bool CheckFolderSizeAccountPlugin::hasConfigureDialog() const
+{
+    return true;
+}
+
+void CheckFolderSizeAccountPlugin::showConfigureDialog(QWidget *parent)
+{
+    // TODO
+}
 
 #include "checkfoldersizeaccountplugin.moc"
 #include "moc_checkfoldersizeaccountplugin.cpp"
