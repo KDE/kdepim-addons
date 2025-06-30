@@ -12,4 +12,9 @@ CheckFolderSizeAccountPluginDelegate::CheckFolderSizeAccountPluginDelegate(QObje
 
 CheckFolderSizeAccountPluginDelegate::~CheckFolderSizeAccountPluginDelegate() = default;
 
+void CheckFolderSizeAccountPluginDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+    // TODO
+}
+
 #include "moc_checkfoldersizeaccountplugindelegate.cpp"
