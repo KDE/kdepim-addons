@@ -4,7 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "checkfoldersizeaccountplugindelegate.h"
-
+#include <Akonadi/CollectionStatistics>
 CheckFolderSizeAccountPluginDelegate::CheckFolderSizeAccountPluginDelegate(QObject *parent)
     : QStyledItemDelegate{parent}
 {
