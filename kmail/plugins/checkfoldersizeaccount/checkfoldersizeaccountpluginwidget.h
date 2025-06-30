@@ -6,7 +6,13 @@
 #pragma once
 
 #include <QWidget>
-class QTreeWidget;
+class QTreeView;
+namespace Akonadi
+{
+class EntityTreeModel;
+class ChangeRecorder;
+}
+class QSortFilterProxyModel;
 class CheckFolderSizeAccountPluginWidget : public QWidget
 {
     Q_OBJECT
@@ -15,5 +21,9 @@ public:
     ~CheckFolderSizeAccountPluginWidget() override;
 
 private:
-    QTreeWidget *const mTreeWidget;
+    void slotCollectionTreeFetched();
+    QTreeView *const mFolderView;
+    Akonadi::EntityTreeModel *mModel = nullptr;
+    Akonadi::ChangeRecorder *const mChangeRecorder;
+    QSortFilterProxyModel *const mCollectionFilter;
 };
