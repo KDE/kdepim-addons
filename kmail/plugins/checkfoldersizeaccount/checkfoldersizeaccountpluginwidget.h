@@ -6,11 +6,14 @@
 #pragma once
 
 #include <QWidget>
-
+class QTreeWidget;
 class CheckFolderSizeAccountPluginWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit CheckFolderSizeAccountPluginWidget(QWidget *parent = nullptr);
     ~CheckFolderSizeAccountPluginWidget() override;
+
+private:
+    QTreeWidget *const mTreeWidget;
 };

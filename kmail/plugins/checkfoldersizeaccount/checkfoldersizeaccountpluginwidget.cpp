@@ -6,16 +6,20 @@
 
 #include "checkfoldersizeaccountpluginwidget.h"
 #include <KLocalizedString>
+#include <QTreeWidget>
 #include <QVBoxLayout>
-
+using namespace Qt::Literals::StringLiterals;
 CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *parent)
     : QWidget{parent}
+    , mTreeWidget(new QTreeWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(u"mainLayout"_s);
     mainLayout->setContentsMargins({});
 
     // TODO a list of folder => show size (work only on imap and co)
+    mTreeWidget->setObjectName(u"mTreeWidget"_s);
+    mainLayout->addWidget(mTreeWidget);
 }
 
 CheckFolderSizeAccountPluginWidget::~CheckFolderSizeAccountPluginWidget() = default;
