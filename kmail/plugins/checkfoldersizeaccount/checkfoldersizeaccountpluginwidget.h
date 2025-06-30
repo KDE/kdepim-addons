@@ -21,6 +21,7 @@ public:
     ~CheckFolderSizeAccountPluginWidget() override;
 
 private:
+    void slotSetCollectionFilter(const QString &filter);
     void slotCollectionTreeFetched();
     QTreeView *const mFolderView;
     Akonadi::EntityTreeModel *mModel = nullptr;

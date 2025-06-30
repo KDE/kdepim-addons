@@ -8,8 +8,10 @@
 #include <Akonadi/ChangeRecorder>
 #include <Akonadi/CollectionFilterProxyModel>
 #include <Akonadi/EntityTreeModel>
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <KMime/Message>
+#include <QLineEdit>
 #include <QTreeView>
 #include <QVBoxLayout>
 using namespace Qt::Literals::StringLiterals;
@@ -38,8 +40,6 @@ CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *
     mimeTypeProxy->addMimeTypeFilters(QStringList() << KMime::Message::mimeType());
     mimeTypeProxy->setSourceModel(mModel);
 
-    // mNewMailNotifierProxyModel->setSourceModel(mimeTypeProxy);
-
     mCollectionFilter->setRecursiveFilteringEnabled(true);
     mCollectionFilter->setSourceModel(mimeTypeProxy);
     mCollectionFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);
@@ -47,9 +47,19 @@ CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *
     mCollectionFilter->setSortCaseSensitivity(Qt::CaseSensitive);
     mCollectionFilter->setSortLocaleAware(true);
 
+    auto searchLine = new QLineEdit(this);
+    KLineEditEventHandler::catchReturnKey(searchLine);
+    searchLine->setPlaceholderText(i18nc("@info:placeholder", "Search…"));
+    searchLine->setClearButtonEnabled(true);
+    connect(searchLine, &QLineEdit::textChanged, this, &CheckFolderSizeAccountPluginWidget::slotSetCollectionFilter);
+    mainLayout->addWidget(searchLine);
+
     // TODO a list of folder => show size (work only on imap and co)
     mFolderView->setObjectName(u"mFolderView"_s);
     mainLayout->addWidget(mFolderView);
+    mFolderView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    mFolderView->setAlternatingRowColors(true);
+    mFolderView->setModel(mCollectionFilter);
 }
 
 CheckFolderSizeAccountPluginWidget::~CheckFolderSizeAccountPluginWidget() = default;
@@ -57,6 +67,12 @@ CheckFolderSizeAccountPluginWidget::~CheckFolderSizeAccountPluginWidget() = defa
 void CheckFolderSizeAccountPluginWidget::slotCollectionTreeFetched()
 {
     mCollectionFilter->sort(0, Qt::AscendingOrder);
+    mFolderView->expandAll();
+}
+
+void CheckFolderSizeAccountPluginWidget::slotSetCollectionFilter(const QString &filter)
+{
+    mCollectionFilter->setFilterWildcard(filter);
     mFolderView->expandAll();
 }
 
