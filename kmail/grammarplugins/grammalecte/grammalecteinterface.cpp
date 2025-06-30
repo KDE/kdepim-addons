@@ -5,6 +5,8 @@
 */
 
 #include "grammalecteinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "grammalecteplugin_debug.h"
 #include <KPIMTextEdit/RichTextComposer>
 
@@ -78,7 +80,7 @@ void GrammalecteInterface::createAction(KActionCollection *ac)
     mAction = new KToggleAction(i18n("&Check Grammar (Grammalecte)"), this);
     connect(mAction, &KToggleAction::triggered, this, &GrammalecteInterface::slotActivateGrammalecte);
     if (ac) {
-        ac->addAction(QStringLiteral("checkgrammar-grammalecte"), mAction);
+        ac->addAction(u"checkgrammar-grammalecte"_s, mAction);
     }
     mAction->setChecked(false);
 }

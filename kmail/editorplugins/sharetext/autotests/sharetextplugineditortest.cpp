@@ -5,6 +5,8 @@
 */
 
 #include "sharetextplugineditortest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../sharetextplugineditor.h"
 #include <KActionCollection>
 #include <QTest>

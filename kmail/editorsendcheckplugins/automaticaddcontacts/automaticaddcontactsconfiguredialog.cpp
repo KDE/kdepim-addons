@@ -5,6 +5,8 @@
 */
 
 #include "automaticaddcontactsconfiguredialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "automaticaddcontactsconfigurewidget.h"
 #include <KLocalizedString>
 
@@ -40,7 +42,7 @@ void AutomaticAddContactsConfigureDialog::reset()
 
 void AutomaticAddContactsConfigureDialog::help()
 {
-    showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
+    showHelp(u"kmail2"_s, mConfigureWidget->helpAnchor());
 }
 
 #include "moc_automaticaddcontactsconfiguredialog.cpp"

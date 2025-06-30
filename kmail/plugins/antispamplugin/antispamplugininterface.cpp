@@ -5,6 +5,8 @@
 */
 
 #include "antispamplugininterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../common/antispamwizard.h"
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -20,7 +22,7 @@ AntiSpamPluginInterface::~AntiSpamPluginInterface() = default;
 void AntiSpamPluginInterface::createAction(KActionCollection *ac)
 {
     auto action = new QAction(i18nc("@action", "&Anti-Spam Wizard…"), this);
-    ac->addAction(QStringLiteral("antiSpamWizard"), action);
+    ac->addAction(u"antiSpamWizard"_s, action);
     connect(action, &QAction::triggered, this, &AntiSpamPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     addActionType(type);

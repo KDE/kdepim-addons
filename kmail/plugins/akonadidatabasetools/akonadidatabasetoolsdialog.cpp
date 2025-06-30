@@ -5,6 +5,8 @@
 */
 
 #include "akonadidatabasetoolsdialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "akonadidatabasetoolswidget.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -50,7 +52,7 @@ void AkonadiDatabaseToolsDialog::appendText(const QString &text)
 
 void AkonadiDatabaseToolsDialog::appendErrorText(const QString &text)
 {
-    mAkonadiDatabaseToolsWidget->appendText(QStringLiteral("<font color=#FF0000>%1</font>").arg(text));
+    mAkonadiDatabaseToolsWidget->appendText(u"<font color=#FF0000>%1</font>"_s.arg(text));
 }
 
 void AkonadiDatabaseToolsDialog::writeConfig()

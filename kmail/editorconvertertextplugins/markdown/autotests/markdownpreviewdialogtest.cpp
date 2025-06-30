@@ -5,6 +5,8 @@
 */
 
 #include "markdownpreviewdialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "markdownpreviewdialog.h"
 #include "markdownpreviewwidget.h"
 #include <QDialogButtonBox>
@@ -23,13 +25,13 @@ MarkdownPreviewDialogTest::MarkdownPreviewDialogTest(QObject *parent)
 void MarkdownPreviewDialogTest::shouldHaveDefaultValue()
 {
     MarkdownPreviewDialog dlg;
-    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = dlg.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mPreviewWidget = dlg.findChild<MarkdownPreviewWidget *>(QStringLiteral("previewwidget"));
+    auto mPreviewWidget = dlg.findChild<MarkdownPreviewWidget *>(u"previewwidget"_s);
     QVERIFY(mPreviewWidget);
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 }
 

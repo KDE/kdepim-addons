@@ -5,6 +5,8 @@
 */
 
 #include "zoomtextplugineditorinterfacetest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../zoomtextplugineditorinterface.h"
 #include <KActionCollection>
 #include <QTest>
@@ -24,10 +26,10 @@ void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()
     MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
     QCOMPARE(type.type(), MessageComposer::PluginActionType::View);
-    QVERIFY(ac->action(QStringLiteral("zoom_menu")));
-    QVERIFY(ac->action(QStringLiteral("zoom_in")));
-    QVERIFY(ac->action(QStringLiteral("zoom_out")));
-    QVERIFY(ac->action(QStringLiteral("zoom_reset")));
+    QVERIFY(ac->action(u"zoom_menu"_s));
+    QVERIFY(ac->action(u"zoom_in"_s));
+    QVERIFY(ac->action(u"zoom_out"_s));
+    QVERIFY(ac->action(u"zoom_reset"_s));
 }
 
 QTEST_MAIN(ZoomTextPluginEditorInterfaceTest)

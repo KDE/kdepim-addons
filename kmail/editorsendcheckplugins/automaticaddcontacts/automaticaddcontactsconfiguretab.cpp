@@ -5,6 +5,8 @@
 */
 
 #include "automaticaddcontactsconfiguretab.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "automaticaddcontactstabwidget.h"
 
 #include <KIdentityManagementCore/Identity>
@@ -34,7 +36,7 @@ void AutomaticAddContactsConfigureTab::initTab(KIdentityManagementCore::Identity
     for (KIdentityManagementCore::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         auto w = new AutomaticAddContactsTabWidget(this);
         connect(w, &AutomaticAddContactsTabWidget::configureChanged, this, &AutomaticAddContactsConfigureTab::configureChanged);
-        mTabWidget->addTab(w, QStringLiteral("%1 (%2)").arg((*it).identityName(), (*it).primaryEmailAddress()));
+        mTabWidget->addTab(w, u"%1 (%2)"_s.arg((*it).identityName(), (*it).primaryEmailAddress()));
         w->setIdentity((*it).uoid());
         mListTabWidget.append(w);
     }
@@ -51,7 +53,7 @@ void AutomaticAddContactsConfigureTab::saveSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     // first, delete all filter groups:
-    const QStringList filterGroups = config->groupList().filter(QRegularExpression(QStringLiteral("Automatic Add Contacts \\d+")));
+    const QStringList filterGroups = config->groupList().filter(QRegularExpression(u"Automatic Add Contacts \\d+"_s));
     for (const QString &group : filterGroups) {
         config->deleteGroup(group);
     }

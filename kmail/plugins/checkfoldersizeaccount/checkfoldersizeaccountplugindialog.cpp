@@ -5,6 +5,8 @@
 */
 
 #include "checkfoldersizeaccountplugindialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "checkfoldersizeaccountpluginwidget.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -23,10 +25,10 @@ CheckFolderSizeAccountPluginDialog::CheckFolderSizeAccountPluginDialog(QWidget *
     , mCheckFolderSizeAccountPluginWidget(new CheckFolderSizeAccountPluginWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(u"mainLayout"_s);
     setWindowTitle(i18nc("@title:window", "Check Folder Size"));
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
-    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    buttonBox->setObjectName(u"buttonBox"_s);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckFolderSizeAccountPluginDialog::reject);
 
     mCheckFolderSizeAccountPluginWidget->setObjectName(QLatin1StringView("mCheckFolderSizeAccountPluginWidget"));

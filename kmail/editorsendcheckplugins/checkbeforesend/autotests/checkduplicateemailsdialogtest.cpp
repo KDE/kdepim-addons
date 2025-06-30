@@ -5,6 +5,8 @@
 */
 
 #include "checkduplicateemailsdialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../duplicateemails/checkduplicateemailsdialog.h"
 #include <QDialogButtonBox>
 #include <QLabel>
@@ -23,14 +25,14 @@ CheckDuplicateEmailsDialogTest::~CheckDuplicateEmailsDialogTest() = default;
 void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()
 {
     CheckDuplicateEmailsDialog dlg;
-    auto mListWidget = dlg.findChild<QListWidget *>(QStringLiteral("listwidget"));
+    auto mListWidget = dlg.findChild<QListWidget *>(u"listwidget"_s);
     QVERIFY(mListWidget);
     QCOMPARE(mListWidget->count(), 0);
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
-    auto lab = dlg.findChild<QLabel *>(QStringLiteral("label"));
+    auto lab = dlg.findChild<QLabel *>(u"label"_s);
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 }
@@ -38,13 +40,13 @@ void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()
 void CheckDuplicateEmailsDialogTest::shouldAddEmails()
 {
     CheckDuplicateEmailsDialog dlg;
-    auto mListWidget = dlg.findChild<QListWidget *>(QStringLiteral("listwidget"));
+    auto mListWidget = dlg.findChild<QListWidget *>(u"listwidget"_s);
 
     QMap<QString, int> map;
-    map.insert(QStringLiteral("foo"), 5);
-    map.insert(QStringLiteral("bla"), 5);
-    map.insert(QStringLiteral("kde.org"), 7);
-    map.insert(QStringLiteral("linux.fr"), 2);
+    map.insert(u"foo"_s, 5);
+    map.insert(u"bla"_s, 5);
+    map.insert(u"kde.org"_s, 7);
+    map.insert(u"linux.fr"_s, 2);
     dlg.setDuplicatedEmails(map);
 
     QCOMPARE(mListWidget->count(), map.count());

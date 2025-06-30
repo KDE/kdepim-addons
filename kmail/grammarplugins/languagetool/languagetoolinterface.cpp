@@ -5,6 +5,8 @@
 */
 
 #include "languagetoolinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "languagetoolplugin_debug.h"
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -81,7 +83,7 @@ void LanguageToolInterface::createAction(KActionCollection *ac)
     mAction = new KToggleAction(i18n("&Check Grammar (LanguageTool)"), this);
     connect(mAction, &KToggleAction::triggered, this, &LanguageToolInterface::slotActivateGrammalecte);
     if (ac) {
-        ac->addAction(QStringLiteral("checkgrammar-languagetool"), mAction);
+        ac->addAction(u"checkgrammar-languagetool"_s, mAction);
     }
     mAction->setChecked(false);
 }
@@ -96,7 +98,7 @@ bool LanguageToolInterface::checkAgain()
                                                i18nc("@title:window", "Check Grammar with LanguageTool"),
                                                KStandardGuiItem::cont(),
                                                KStandardGuiItem::cancel(),
-                                               QStringLiteral("send_data_on_languagetool"))
+                                               u"send_data_on_languagetool"_s)
                 == KMessageBox::ButtonCode::SecondaryAction) {
                 return false;
             }

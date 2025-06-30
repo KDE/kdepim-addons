@@ -5,6 +5,8 @@
 */
 
 #include "automaticaddcontactsconfiguretabtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../automaticaddcontactsconfiguretab.h"
 #include <QHBoxLayout>
 #include <QStandardPaths>
@@ -22,10 +24,10 @@ AutomaticAddContactsConfigureTabTest::~AutomaticAddContactsConfigureTabTest() = 
 void AutomaticAddContactsConfigureTabTest::shouldHaveDefaultValue()
 {
     AutomaticAddContactsConfigureTab w(nullptr);
-    auto vboxlayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    auto vboxlayout = w.findChild<QHBoxLayout *>(u"mainlayout"_s);
     QVERIFY(vboxlayout);
     QCOMPARE(vboxlayout->contentsMargins(), QMargins());
-    auto mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    auto mTabWidget = w.findChild<QTabWidget *>(u"tabwidget"_s);
     QVERIFY(mTabWidget);
 }
 

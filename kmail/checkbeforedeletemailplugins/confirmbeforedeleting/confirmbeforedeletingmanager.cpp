@@ -5,6 +5,8 @@
 */
 
 #include "confirmbeforedeletingmanager.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KConfigGroup>
 #include <QRegularExpression>
 
@@ -24,7 +26,7 @@ ConfirmBeforeDeletingManager *ConfirmBeforeDeletingManager::self()
 
 QString ConfirmBeforeDeletingManager::defaultConfigFileName() const
 {
-    return QStringLiteral("confirmbeforedeletingrc");
+    return u"confirmbeforedeletingrc"_s;
 }
 
 void ConfirmBeforeDeletingManager::loadRules()
@@ -45,12 +47,12 @@ void ConfirmBeforeDeletingManager::loadRules()
 
 QString defaultGroupName()
 {
-    return QStringLiteral("Confirm Deleting Rule");
+    return u"Confirm Deleting Rule"_s;
 }
 
 QStringList ConfirmBeforeDeletingManager::ruleGroups(const KSharedConfig::Ptr &config) const
 {
-    return config->groupList().filter(QRegularExpression(defaultGroupName() + QStringLiteral(" #\\d+")));
+    return config->groupList().filter(QRegularExpression(defaultGroupName() + u" #\\d+"_s));
 }
 
 void ConfirmBeforeDeletingManager::setRules(const QList<ConfirmBeforeDeletingRule> &newRules)
@@ -72,7 +74,7 @@ void ConfirmBeforeDeletingManager::saveRules()
         config->deleteGroup(group);
     }
     for (int i = 0, total = mRules.count(); i < total; ++i) {
-        const QString groupName = defaultGroupName() + QStringLiteral(" #%1").arg(i);
+        const QString groupName = defaultGroupName() + u" #%1"_s.arg(i);
         KConfigGroup group = config->group(groupName);
         const ConfirmBeforeDeletingRule &rule = mRules.at(i);
         rule.save(group);

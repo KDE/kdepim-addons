@@ -5,6 +5,8 @@
 */
 
 #include "confirmaddressconfigurewidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmaddressconfiguretab.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -28,7 +30,7 @@ ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget() = default;
 
 void ConfirmAddressConfigureWidget::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QStringLiteral("Confirm Address"));
+    KConfigGroup grp(KSharedConfig::openConfig(), u"Confirm Address"_s);
     mConfirmAddressConfigureTab->loadSettings(grp);
 }
 
@@ -36,11 +38,11 @@ void ConfirmAddressConfigureWidget::saveSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     // first, delete all filter groups:
-    const QStringList filterGroups = config->groupList().filter(QRegularExpression(QStringLiteral("Confirm Address \\d+")));
+    const QStringList filterGroups = config->groupList().filter(QRegularExpression(u"Confirm Address \\d+"_s));
     for (const QString &group : filterGroups) {
         config->deleteGroup(group);
     }
-    KConfigGroup grp(config, QStringLiteral("Confirm Address"));
+    KConfigGroup grp(config, u"Confirm Address"_s);
     mConfirmAddressConfigureTab->saveSettings(grp);
 }
 

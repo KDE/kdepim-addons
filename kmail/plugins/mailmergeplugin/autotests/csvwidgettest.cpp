@@ -5,6 +5,8 @@
 */
 
 #include "csvwidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../widgets/csvwidget.h"
 #include <KUrlRequester>
 #include <QLabel>
@@ -20,10 +22,10 @@ void CsvWidgetTest::shouldHaveDefaultValue()
 {
     MailMerge::CsvWidget w;
 
-    auto lab = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto lab = w.findChild<QLabel *>(u"label"_s);
     QVERIFY(lab);
 
-    auto urlrequester = w.findChild<KUrlRequester *>(QStringLiteral("cvsurlrequester"));
+    auto urlrequester = w.findChild<KUrlRequester *>(u"cvsurlrequester"_s);
     QVERIFY(urlrequester);
     QVERIFY(urlrequester->url().isEmpty());
 }
@@ -32,9 +34,9 @@ void CsvWidgetTest::shouldChangePath()
 {
     MailMerge::CsvWidget w;
 
-    auto urlrequester = w.findChild<KUrlRequester *>(QStringLiteral("cvsurlrequester"));
+    auto urlrequester = w.findChild<KUrlRequester *>(u"cvsurlrequester"_s);
     QVERIFY(urlrequester->url().isEmpty());
-    QUrl url(QStringLiteral("file:///tmp/foo.txt"));
+    QUrl url(u"file:///tmp/foo.txt"_s);
     urlrequester->setUrl(url);
     QCOMPARE(urlrequester->url(), url);
 }

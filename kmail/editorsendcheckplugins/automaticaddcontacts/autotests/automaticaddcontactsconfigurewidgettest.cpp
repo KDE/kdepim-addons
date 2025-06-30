@@ -5,6 +5,8 @@
 */
 
 #include "automaticaddcontactsconfigurewidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../automaticaddcontactsconfiguretab.h"
 #include "../automaticaddcontactsconfigurewidget.h"
 
@@ -24,10 +26,10 @@ void AutomaticAddContactsConfigureWidgetTest::shouldHaveDefaultValue()
 {
     AutomaticAddContactsConfigureWidget w(nullptr);
 
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mConfigureTab = w.findChild<AutomaticAddContactsConfigureTab *>(QStringLiteral("configuretab"));
+    auto mConfigureTab = w.findChild<AutomaticAddContactsConfigureTab *>(u"configuretab"_s);
     QVERIFY(mConfigureTab);
 }
 

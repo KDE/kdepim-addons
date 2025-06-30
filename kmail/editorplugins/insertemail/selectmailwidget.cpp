@@ -5,6 +5,7 @@
 */
 
 #include "selectmailwidget.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <QHBoxLayout>
 #include <QTreeView>

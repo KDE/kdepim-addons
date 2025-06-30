@@ -5,6 +5,8 @@
 */
 
 #include "checkbeforesendinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "checkbeforesendupdatesmtpdialog.h"
 #include "duplicateemails/checkduplicateemailsdialog.h"
 #include "duplicateemails/checkduplicateemailsjob.h"
@@ -119,7 +121,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
 
 void CheckBeforeSendInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QStringLiteral("Check Before Send"));
+    KConfigGroup grp(KSharedConfig::openConfig(), u"Check Before Send"_s);
     mSendPlainText = grp.readEntry("SendPlainText", false);
     mCheckMailTransport = grp.readEntry("SmtpDefinedInIdentity", false);
     mCheckDuplicateEmails = grp.readEntry("CheckDuplicatedEmails", false);

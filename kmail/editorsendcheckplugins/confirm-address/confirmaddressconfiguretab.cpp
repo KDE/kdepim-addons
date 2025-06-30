@@ -5,6 +5,7 @@
 */
 
 #include "confirmaddressconfiguretab.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "confirmaddressconfiguretabwidget.h"
 #include <KIdentityManagementCore/Identity>
@@ -55,7 +56,7 @@ void ConfirmAddressConfigureTab::initTab(KIdentityManagementCore::IdentityManage
     for (KIdentityManagementCore::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         auto w = new ConfirmAddressConfigureTabWidget(this);
         connect(w, &ConfirmAddressConfigureTabWidget::configureChanged, this, &ConfirmAddressConfigureTab::configureChanged);
-        mTabWidget->addTab(w, QStringLiteral("%1 (%2)").arg((*it).identityName(), (*it).primaryEmailAddress()));
+        mTabWidget->addTab(w, u"%1 (%2)"_s.arg((*it).identityName(), (*it).primaryEmailAddress()));
         w->setIdentity((*it).uoid());
         mListTabWidget.append(w);
     }

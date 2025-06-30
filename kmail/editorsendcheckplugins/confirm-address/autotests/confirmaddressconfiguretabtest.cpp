@@ -5,6 +5,8 @@
 */
 
 #include "confirmaddressconfiguretabtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../confirmaddressconfiguretab.h"
 #include <QTabWidget>
 #include <QTest>
@@ -20,11 +22,11 @@ ConfirmAddressConfigureTabTest::~ConfirmAddressConfigureTabTest() = default;
 void ConfirmAddressConfigureTabTest::shouldHaveDefaultValue()
 {
     ConfirmAddressConfigureTab w(nullptr);
-    auto vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto vboxlayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(vboxlayout);
     QCOMPARE(vboxlayout->contentsMargins(), QMargins());
 
-    auto mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    auto mTabWidget = w.findChild<QTabWidget *>(u"tabwidget"_s);
     QVERIFY(mTabWidget);
 }
 

@@ -5,6 +5,8 @@
 */
 
 #include "selectmaildialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "selectmailwidget.h"
 #include <KConfigGroup>
 #include <KSharedConfig>

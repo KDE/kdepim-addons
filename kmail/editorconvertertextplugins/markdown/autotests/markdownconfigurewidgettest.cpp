@@ -5,6 +5,8 @@
 */
 
 #include "markdownconfigurewidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "markdownconfigurewidget.h"
 #include <QCheckBox>
 #include <QTest>
@@ -19,15 +21,15 @@ MarkdownConfigureWidgetTest::MarkdownConfigureWidgetTest(QObject *parent)
 void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
 {
     MarkdownConfigureWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mLatexSupport = w.findChild<QCheckBox *>(QStringLiteral("latex"));
+    auto mLatexSupport = w.findChild<QCheckBox *>(u"latex"_s);
     QVERIFY(mLatexSupport);
     QVERIFY(!mLatexSupport->text().isEmpty());
 
-    auto mExtraDefinitionLists = w.findChild<QCheckBox *>(QStringLiteral("extradefinitionlists"));
+    auto mExtraDefinitionLists = w.findChild<QCheckBox *>(u"extradefinitionlists"_s);
     QVERIFY(mExtraDefinitionLists);
     QVERIFY(!mExtraDefinitionLists->text().isEmpty());
 }

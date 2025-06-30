@@ -4,6 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "akonadidatabasetoolsjob.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "akonadidatasetools_debug.h"
 #include <PimCommon/PimUtil>
 #include <QProcess>
@@ -23,7 +25,7 @@ bool AkonadiDatabaseToolsJob::canStart() const
 
 QString AkonadiDatabaseToolsJob::akonadiProcessPath() const
 {
-    const QString exec = PimCommon::Util::findExecutable(QStringLiteral("akonadictl"));
+    const QString exec = PimCommon::Util::findExecutable(u"akonadictl"_s);
 
     return exec;
 }
@@ -46,7 +48,7 @@ void AkonadiDatabaseToolsJob::start()
     case AkonadiDatabaseToolsUtils::Vacuum: {
         mProcess = new QProcess(this);
         mProcess->setProgram(akonadiProcessPath());
-        mProcess->setArguments(QStringList() << QStringLiteral("vacuum"));
+        mProcess->setArguments(QStringList() << u"vacuum"_s);
         connect(mProcess, &QProcess::finished, this, [this]() {
             Q_EMIT finished();
             deleteLater();
@@ -63,7 +65,7 @@ void AkonadiDatabaseToolsJob::start()
     case AkonadiDatabaseToolsUtils::Fsck: {
         mProcess = new QProcess(this);
         mProcess->setProgram(akonadiProcessPath());
-        mProcess->setArguments(QStringList() << QStringLiteral("fsck"));
+        mProcess->setArguments(QStringList() << u"fsck"_s);
         connect(mProcess, &QProcess::finished, this, [this]() {
             Q_EMIT finished();
             deleteLater();

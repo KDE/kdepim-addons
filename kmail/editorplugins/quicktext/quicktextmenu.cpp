@@ -5,6 +5,8 @@
 */
 
 #include "quicktextmenu.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <MessageComposer/ConvertSnippetVariableMenu>
 #include <MessageComposer/PluginComposerInterface>
 #include <QMenu>
@@ -25,7 +27,7 @@ void QuickTextMenu::initializeMenu()
     connect(mMenu, &MessageComposer::ConvertSnippetVariableMenu::insertVariable, this, [this](MessageComposer::ConvertSnippetVariablesUtil::VariableType type) {
         const QString valueStr = mComposerInterface->convertVariable(type);
         if (!valueStr.isEmpty()) {
-            Q_EMIT insertText(valueStr + QLatin1Char(' '));
+            Q_EMIT insertText(valueStr + u' ');
         }
     });
 }

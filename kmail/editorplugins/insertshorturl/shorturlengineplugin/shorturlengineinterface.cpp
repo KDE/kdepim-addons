@@ -5,6 +5,8 @@
 */
 
 #include "shorturlengineinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "shorturlengineplugin.h"
 
 #include <KLocalizedString>

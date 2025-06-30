@@ -5,6 +5,8 @@
 */
 
 #include "checkattachmentjobtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../sendattachments/checkattachmentjob.h"
 
 #include <QTest>
@@ -32,17 +34,17 @@ void CheckAttachmentJobTest::shouldAssignEmails_data()
     QTest::addColumn<QStringList>("originalEmails");
     QTest::addColumn<QStringList>("result");
     QTest::newRow("emptylist") << QStringList() << QStringList();
-    QStringList emails{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
-    QStringList createdList{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
+    QStringList emails{u"foo@kde.org"_s, u"bla@kde.org"_s};
+    QStringList createdList{u"foo@kde.org"_s, u"bla@kde.org"_s};
     QTest::newRow("nonempty") << emails << createdList;
-    emails = QStringList{QStringLiteral("\"bla\" <foo@kde.org>"), QStringLiteral("bla@kde.org")};
+    emails = QStringList{u"\"bla\" <foo@kde.org>"_s, u"bla@kde.org"_s};
     QTest::newRow("potentialerrors") << emails << emails;
 
-    emails = QStringList{QStringLiteral("\"bla, foo\" <foo@kde.org>"), QStringLiteral("bla@kde.org")};
+    emails = QStringList{u"\"bla, foo\" <foo@kde.org>"_s, u"bla@kde.org"_s};
     QTest::newRow("emailswithquote") << emails << emails;
 
-    emails = QStringList{QStringLiteral("\"bla, foo\" <foo@kde.org>"), QStringLiteral("bla@kde.org"), QStringLiteral(" ")};
-    createdList = QStringList{QStringLiteral("\"bla, foo\" <foo@kde.org>"), QStringLiteral("bla@kde.org")};
+    emails = QStringList{u"\"bla, foo\" <foo@kde.org>"_s, u"bla@kde.org"_s, QStringLiteral(" ")};
+    createdList = QStringList{u"\"bla, foo\" <foo@kde.org>"_s, u"bla@kde.org"_s};
     QTest::newRow("emailswithemptystr") << emails << createdList;
 }
 
@@ -72,18 +74,17 @@ void CheckAttachmentJobTest::shouldRemoveDuplicatedEmails_data()
     QTest::addColumn<QStringList>("result");
     QTest::newRow("empty") << QStringList() << QStringList();
 
-    QStringList lst{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
+    QStringList lst{u"foo@kde.org"_s, u"bla@kde.org"_s};
     QTest::newRow("samelist") << lst << lst;
 
-    QStringList original{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org"), QStringLiteral("bla@kde.org")};
-    QStringList result{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
+    QStringList original{u"foo@kde.org"_s, u"bla@kde.org"_s, QStringLiteral("bla@kde.org")};
+    QStringList result{u"foo@kde.org"_s, u"bla@kde.org"_s};
     QTest::newRow("oneduplicate") << original << result;
 
-    original = QStringList() << QStringLiteral("lolo <foo@kde.org>") << QStringLiteral("lulu <bla@kde.org>") << QStringLiteral("bla <bla@kde.org>");
+    original = QStringList() << u"lolo <foo@kde.org>"_s << u"lulu <bla@kde.org>"_s << QStringLiteral("bla <bla@kde.org>");
     QTest::newRow("oneduplicatewithname") << original << result;
 
-    original = QStringList() << QStringLiteral("lolo <foo@kde.org>") << QStringLiteral("lulu <bla@kde.org>") << QStringLiteral("bla <bla@kde.org>")
-                             << QStringLiteral("bla");
+    original = QStringList() << u"lolo <foo@kde.org>"_s << u"lulu <bla@kde.org>"_s << QStringLiteral("bla <bla@kde.org>") << u"bla"_s;
     QTest::newRow("withinvalidemail") << original << result;
 }
 

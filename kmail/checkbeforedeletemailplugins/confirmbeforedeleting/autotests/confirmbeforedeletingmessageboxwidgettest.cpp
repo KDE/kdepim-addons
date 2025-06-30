@@ -5,6 +5,8 @@
 */
 
 #include "confirmbeforedeletingmessageboxwidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmbeforedeletingmessageboxwidget.h"
 #include <QCheckBox>
 #include <QLabel>
@@ -19,24 +21,24 @@ ConfirmBeforeDeletingMessageBoxWidgetTest::ConfirmBeforeDeletingMessageBoxWidget
 void ConfirmBeforeDeletingMessageBoxWidgetTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingMessageBoxWidget w;
-    auto mUseSameResultForOtherCheck = w.findChild<QCheckBox *>(QStringLiteral("mUseSameResultForOtherCheck"));
+    auto mUseSameResultForOtherCheck = w.findChild<QCheckBox *>(u"mUseSameResultForOtherCheck"_s);
     QVERIFY(mUseSameResultForOtherCheck);
     QVERIFY(!mUseSameResultForOtherCheck->text().isEmpty());
     QVERIFY(!mUseSameResultForOtherCheck->isChecked());
 
-    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto textLayout = w.findChild<QVBoxLayout *>(QStringLiteral("textLayout"));
+    auto textLayout = w.findChild<QVBoxLayout *>(u"textLayout"_s);
     QVERIFY(textLayout);
     QCOMPARE(textLayout->contentsMargins(), QMargins{});
 
-    auto iconLabel = w.findChild<QLabel *>(QStringLiteral("iconLabel"));
+    auto iconLabel = w.findChild<QLabel *>(u"iconLabel"_s);
     QVERIFY(iconLabel);
     QVERIFY(iconLabel->text().isEmpty());
 
-    auto mLabelInfo = w.findChild<QLabel *>(QStringLiteral("mLabelInfo"));
+    auto mLabelInfo = w.findChild<QLabel *>(u"mLabelInfo"_s);
     QVERIFY(mLabelInfo);
     QVERIFY(mLabelInfo->text().isEmpty());
     QVERIFY(mLabelInfo->wordWrap());

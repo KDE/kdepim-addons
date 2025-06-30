@@ -5,6 +5,8 @@
 */
 
 #include "confirmbeforedeletingdialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmbeforedeletingdialog.h"
 #include "confirmbeforedeletingwidget.h"
 #include <QDialogButtonBox>
@@ -22,13 +24,13 @@ void ConfirmBeforeDeletingDialogTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingDialog d;
     QVERIFY(!d.windowTitle().isEmpty());
-    auto mainLayout = d.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = d.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mConfirmBeforeDeletingWidget = d.findChild<ConfirmBeforeDeletingWidget *>(QStringLiteral("mConfirmBeforeDeletingWidget"));
+    auto mConfirmBeforeDeletingWidget = d.findChild<ConfirmBeforeDeletingWidget *>(u"mConfirmBeforeDeletingWidget"_s);
     QVERIFY(mConfirmBeforeDeletingWidget);
 
-    auto buttonBox = d.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    auto buttonBox = d.findChild<QDialogButtonBox *>(u"buttonBox"_s);
     QVERIFY(buttonBox);
 }
 

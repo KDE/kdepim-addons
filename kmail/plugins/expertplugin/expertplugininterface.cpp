@@ -5,6 +5,8 @@
 */
 
 #include "expertplugininterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "expertplugin_debug.h"
 #include <KActionCollection>
 #include <QAction>
@@ -18,7 +20,7 @@ ExpertPluginInterface::~ExpertPluginInterface() = default;
 
 void ExpertPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->action(QStringLiteral("toggle_mimeparttree"));
+    QAction *action = ac->action(u"toggle_mimeparttree"_s);
     if (action) {
         const PimCommon::ActionType type(action, PimCommon::ActionType::Message);
         addActionType(type);

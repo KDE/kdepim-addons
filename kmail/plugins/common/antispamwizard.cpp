@@ -6,6 +6,8 @@
 */
 
 #include "antispamwizard.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KCursorSaver>
 #include <MailCommon/FilterAction>
 #include <MailCommon/FilterActionDict>
@@ -137,12 +139,12 @@ void AntiSpamWizard::accept()
                 // (could get combined but so it's easier to understand for the user)
                 auto pipeFilter = new MailFilter();
                 QList<FilterAction *> *pipeFilterActions = pipeFilter->actions();
-                FilterAction *pipeFilterAction = dict.value(QStringLiteral("filter app"))->create();
+                FilterAction *pipeFilterAction = dict.value(u"filter app"_s)->create();
                 pipeFilterAction->argsFromString((*it).getDetectCmd());
                 pipeFilterActions->append(pipeFilterAction);
                 SearchPattern *pipeFilterPattern = pipeFilter->pattern();
                 pipeFilterPattern->setName(uniqueNameFor((*it).getFilterName()));
-                pipeFilterPattern->append(SearchRule::createInstance("<size>", SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
+                pipeFilterPattern->append(SearchRule::createInstance("<size>", SearchRule::FuncIsGreaterOrEqual, u"0"_s));
                 pipeFilter->setApplyOnOutbound(false);
                 pipeFilter->setApplyOnInbound(true);
                 pipeFilter->setApplyOnExplicit(true);
@@ -157,12 +159,12 @@ void AntiSpamWizard::accept()
             // Sort out viruses depending on header fields set by the tools
             auto virusFilter = new MailFilter();
             QList<FilterAction *> *virusFilterActions = virusFilter->actions();
-            FilterAction *virusFilterAction1 = dict.value(QStringLiteral("transfer"))->create();
+            FilterAction *virusFilterAction1 = dict.value(u"transfer"_s)->create();
             virusFilterAction1->argsFromString(mVirusRulesPage->selectedFolderName());
             virusFilterActions->append(virusFilterAction1);
             if (mVirusRulesPage->markReadRulesSelected()) {
-                FilterAction *virusFilterAction2 = dict.value(QStringLiteral("set status"))->create();
-                virusFilterAction2->argsFromString(QStringLiteral("R")); // Read
+                FilterAction *virusFilterAction2 = dict.value(u"set status"_s)->create();
+                virusFilterAction2->argsFromString(u"R"_s); // Read
                 virusFilterActions->append(virusFilterAction2);
             }
             SearchPattern *virusFilterPattern = virusFilter->pattern();
@@ -207,7 +209,7 @@ void AntiSpamWizard::accept()
                 // (could get combined but so it's easier to understand for the user)
                 auto pipeFilter = new MailFilter();
                 QList<FilterAction *> *pipeFilterActions = pipeFilter->actions();
-                FilterAction *pipeFilterAction = dict.value(QStringLiteral("filter app"))->create();
+                FilterAction *pipeFilterAction = dict.value(u"filter app"_s)->create();
                 pipeFilterAction->argsFromString((*it).getDetectCmd());
                 pipeFilterActions->append(pipeFilterAction);
                 SearchPattern *pipeFilterPattern = pipeFilter->pattern();
@@ -216,7 +218,7 @@ void AntiSpamWizard::accept()
                 } else {
                     pipeFilterPattern->setName(uniqueNameFor((*it).getFilterName()));
                 }
-                pipeFilterPattern->append(SearchRule::createInstance("<size>", SearchRule::FuncIsLessOrEqual, QStringLiteral("256000")));
+                pipeFilterPattern->append(SearchRule::createInstance("<size>", SearchRule::FuncIsLessOrEqual, u"256000"_s));
                 pipeFilter->setApplyOnOutbound(false);
                 pipeFilter->setApplyOnInbound(true);
                 pipeFilter->setApplyOnExplicit(true);
@@ -231,16 +233,16 @@ void AntiSpamWizard::accept()
         auto spamFilter = new MailFilter();
         QList<FilterAction *> *spamFilterActions = spamFilter->actions();
         if (mSpamRulesPage->moveSpamSelected()) {
-            FilterAction *spamFilterAction1 = dict.value(QStringLiteral("transfer"))->create();
+            FilterAction *spamFilterAction1 = dict.value(u"transfer"_s)->create();
             spamFilterAction1->argsFromString(mSpamRulesPage->selectedSpamCollectionId());
             spamFilterActions->append(spamFilterAction1);
         }
-        FilterAction *spamFilterAction2 = dict.value(QStringLiteral("set status"))->create();
-        spamFilterAction2->argsFromString(QStringLiteral("P")); // Spam
+        FilterAction *spamFilterAction2 = dict.value(u"set status"_s)->create();
+        spamFilterAction2->argsFromString(u"P"_s); // Spam
         spamFilterActions->append(spamFilterAction2);
         if (mSpamRulesPage->markAsReadSelected()) {
-            FilterAction *spamFilterAction3 = dict.value(QStringLiteral("set status"))->create();
-            spamFilterAction3->argsFromString(QStringLiteral("R")); // Read
+            FilterAction *spamFilterAction3 = dict.value(u"set status"_s)->create();
+            spamFilterAction3->argsFromString(u"R"_s); // Read
             spamFilterActions->append(spamFilterAction3);
         }
         SearchPattern *spamFilterPattern = spamFilter->pattern();
@@ -276,7 +278,7 @@ void AntiSpamWizard::accept()
             bool atLeastOneUnsurePattern = false;
             auto unsureFilter = new MailFilter();
             QList<FilterAction *> *unsureFilterActions = unsureFilter->actions();
-            FilterAction *unsureFilterAction1 = dict.value(QStringLiteral("transfer"))->create();
+            FilterAction *unsureFilterAction1 = dict.value(u"transfer"_s)->create();
             unsureFilterAction1->argsFromString(mSpamRulesPage->selectedUnsureCollectionId());
             unsureFilterActions->append(unsureFilterAction1);
             SearchPattern *unsureFilterPattern = unsureFilter->pattern();
@@ -316,21 +318,21 @@ void AntiSpamWizard::accept()
 
         // Classify messages manually as Spam
         auto classSpamFilter = new MailFilter();
-        classSpamFilter->setIcon(QStringLiteral("mail-mark-junk"));
+        classSpamFilter->setIcon(u"mail-mark-junk"_s);
         QList<FilterAction *> *classSpamFilterActions = classSpamFilter->actions();
-        FilterAction *classSpamFilterActionFirst = dict.value(QStringLiteral("set status"))->create();
-        classSpamFilterActionFirst->argsFromString(QStringLiteral("P"));
+        FilterAction *classSpamFilterActionFirst = dict.value(u"set status"_s)->create();
+        classSpamFilterActionFirst->argsFromString(u"P"_s);
         classSpamFilterActions->append(classSpamFilterActionFirst);
         QList<SpamToolConfig>::ConstIterator endToolList2(mToolList.constEnd());
         for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin(); it != endToolList2; ++it) {
             if (mInfoPage->isProgramSelected((*it).getVisibleName()) && (*it).useBayesFilter() && !(*it).isDetectionOnly()) {
-                FilterAction *classSpamFilterAction = dict.value(QStringLiteral("execute"))->create();
+                FilterAction *classSpamFilterAction = dict.value(u"execute"_s)->create();
                 classSpamFilterAction->argsFromString((*it).getSpamCmd());
                 classSpamFilterActions->append(classSpamFilterAction);
             }
         }
         if (mSpamRulesPage->moveSpamSelected()) {
-            FilterAction *classSpamFilterActionLast = dict.value(QStringLiteral("transfer"))->create();
+            FilterAction *classSpamFilterActionLast = dict.value(u"transfer"_s)->create();
             classSpamFilterActionLast->argsFromString(mSpamRulesPage->selectedSpamCollectionId());
             classSpamFilterActions->append(classSpamFilterActionLast);
         }
@@ -341,7 +343,7 @@ void AntiSpamWizard::accept()
         } else {
             classSpamFilterPattern->setName(uniqueNameFor(i18n("Classify as Spam")));
         }
-        classSpamFilterPattern->append(SearchRule::createInstance("<size>", SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
+        classSpamFilterPattern->append(SearchRule::createInstance("<size>", SearchRule::FuncIsGreaterOrEqual, u"0"_s));
         classSpamFilter->setApplyOnOutbound(false);
         classSpamFilter->setApplyOnInbound(false);
         classSpamFilter->setApplyOnExplicit(false);
@@ -353,15 +355,15 @@ void AntiSpamWizard::accept()
 
         // Classify messages manually as not Spam / as Ham
         auto classHamFilter = new MailFilter();
-        classHamFilter->setIcon(QStringLiteral("mail-mark-notjunk"));
+        classHamFilter->setIcon(u"mail-mark-notjunk"_s);
         QList<FilterAction *> *classHamFilterActions = classHamFilter->actions();
-        FilterAction *classHamFilterActionFirst = dict.value(QStringLiteral("set status"))->create();
-        classHamFilterActionFirst->argsFromString(QStringLiteral("H"));
+        FilterAction *classHamFilterActionFirst = dict.value(u"set status"_s)->create();
+        classHamFilterActionFirst->argsFromString(u"H"_s);
         classHamFilterActions->append(classHamFilterActionFirst);
         end = mToolList.constEnd();
         for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin(); it != end; ++it) {
             if (mInfoPage->isProgramSelected((*it).getVisibleName()) && (*it).useBayesFilter() && !(*it).isDetectionOnly()) {
-                FilterAction *classHamFilterAction = dict.value(QStringLiteral("execute"))->create();
+                FilterAction *classHamFilterAction = dict.value(u"execute"_s)->create();
                 classHamFilterAction->argsFromString((*it).getHamCmd());
                 classHamFilterActions->append(classHamFilterAction);
             }
@@ -369,7 +371,7 @@ void AntiSpamWizard::accept()
         end = mToolList.constEnd();
         for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin(); it != end; ++it) {
             if (mInfoPage->isProgramSelected((*it).getVisibleName()) && (*it).useBayesFilter() && !(*it).isDetectionOnly()) {
-                FilterAction *classHamFilterAction = dict.value(QStringLiteral("filter app"))->create();
+                FilterAction *classHamFilterAction = dict.value(u"filter app"_s)->create();
                 classHamFilterAction->argsFromString((*it).getNoSpamCmd());
                 classHamFilterActions->append(classHamFilterAction);
             }
@@ -380,7 +382,7 @@ void AntiSpamWizard::accept()
         } else {
             classHamFilterPattern->setName(uniqueNameFor(i18n("Classify as NOT Spam")));
         }
-        classHamFilterPattern->append(SearchRule::createInstance("<size>", SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
+        classHamFilterPattern->append(SearchRule::createInstance("<size>", SearchRule::FuncIsGreaterOrEqual, u"0"_s));
         classHamFilter->setApplyOnOutbound(false);
         classHamFilter->setApplyOnInbound(false);
         classHamFilter->setApplyOnExplicit(false);
@@ -467,9 +469,9 @@ void AntiSpamWizard::checkToolAvailability()
                 const QString typeIdentifier(type.identifier());
                 if (PimCommon::Util::isImapResource(typeIdentifier)) {
                     MailCommon::ResourceReadConfigFile resourceFile(typeIdentifier);
-                    const KConfigGroup grp = resourceFile.group(QStringLiteral("network"));
+                    const KConfigGroup grp = resourceFile.group(u"network"_s);
                     if (grp.isValid()) {
-                        const QString host = grp.readEntry(QStringLiteral("ImapServer"));
+                        const QString host = grp.readEntry(u"ImapServer"_s);
                         if (host.contains(pattern.toLower(), Qt::CaseInsensitive)) {
                             mInfoPage->addAvailableTool((*it).getVisibleName());
                             found = true;
@@ -477,9 +479,9 @@ void AntiSpamWizard::checkToolAvailability()
                     }
                 } else if (type.identifier().contains(POP3_RESOURCE_IDENTIFIER)) {
                     MailCommon::ResourceReadConfigFile resourceFile(typeIdentifier);
-                    const KConfigGroup grp = resourceFile.group(QStringLiteral("General"));
+                    const KConfigGroup grp = resourceFile.group(u"General"_s);
                     if (grp.isValid()) {
-                        const QString host = grp.readEntry(QStringLiteral("host"));
+                        const QString host = grp.readEntry(u"host"_s);
                         if (host.contains(pattern.toLower(), Qt::CaseInsensitive)) {
                             mInfoPage->addAvailableTool((*it).getVisibleName());
                             found = true;
@@ -509,7 +511,7 @@ void AntiSpamWizard::checkToolAvailability()
 
 void AntiSpamWizard::slotHelpClicked()
 {
-    PimCommon::Util::invokeHelp((mMode == AntiSpam) ? QStringLiteral("kmail2/the-anti-spam-wizard.html") : QStringLiteral("kmail2/the-anti-virus-wizard.html"));
+    PimCommon::Util::invokeHelp((mMode == AntiSpam) ? u"kmail2/the-anti-spam-wizard.html"_s : u"kmail2/the-anti-virus-wizard.html"_s);
 }
 
 void AntiSpamWizard::slotBuildSummary()
@@ -779,9 +781,9 @@ AntiSpamWizard::ConfigReader::ConfigReader(WizardMode mode, QList<SpamToolConfig
     , mMode(mode)
 {
     if (mMode == AntiSpam) {
-        mConfig = KSharedConfig::openConfig(QStringLiteral("kmail.antispamrc"));
+        mConfig = KSharedConfig::openConfig(u"kmail.antispamrc"_s);
     } else {
-        mConfig = KSharedConfig::openConfig(QStringLiteral("kmail.antivirusrc"));
+        mConfig = KSharedConfig::openConfig(u"kmail.antivirusrc"_s);
     }
 }
 
@@ -789,10 +791,10 @@ AntiSpamWizard::ConfigReader::~ConfigReader() = default;
 
 void AntiSpamWizard::ConfigReader::readAndMergeConfig()
 {
-    QString groupName = (mMode == AntiSpam) ? QStringLiteral("Spamtool #%1") : QStringLiteral("Virustool #%1");
+    QString groupName = (mMode == AntiSpam) ? u"Spamtool #%1"_s : u"Virustool #%1"_s;
     // read the configuration from the global config file
     mConfig->setReadDefaults(true);
-    KConfigGroup general(mConfig, QStringLiteral("General"));
+    KConfigGroup general(mConfig, u"General"_s);
     const int registeredTools = general.readEntry("tools", 0);
     for (int i = 1; i <= registeredTools; ++i) {
         KConfigGroup toolConfig(mConfig, groupName.arg(i));
@@ -804,7 +806,7 @@ void AntiSpamWizard::ConfigReader::readAndMergeConfig()
     // read the configuration from the user config file
     // and merge newer config data
     mConfig->setReadDefaults(false);
-    KConfigGroup user_general(mConfig, QStringLiteral("General"));
+    KConfigGroup user_general(mConfig, u"General"_s);
     const int user_registeredTools = user_general.readEntry("tools", 0);
     for (int i = 1; i <= user_registeredTools; ++i) {
         KConfigGroup toolConfig(mConfig, groupName.arg(i));
@@ -872,19 +874,19 @@ AntiSpamWizard::SpamToolConfig AntiSpamWizard::ConfigReader::readToolConfig(KCon
 
 AntiSpamWizard::SpamToolConfig AntiSpamWizard::ConfigReader::createDummyConfig()
 {
-    return SpamToolConfig(QStringLiteral("spamassassin"),
+    return SpamToolConfig(u"spamassassin"_s,
                           0,
                           1,
-                          QStringLiteral("SpamAssassin"),
-                          QStringLiteral("spamassassin -V"),
-                          QStringLiteral("https://spamassassin.apache.org/"),
-                          QStringLiteral("SpamAssassin Check"),
-                          QStringLiteral("spamassassin -L"),
-                          QStringLiteral("sa-learn -L --spam --no-sync --single"),
-                          QStringLiteral("sa-learn -L --ham --no-sync --single"),
-                          QStringLiteral("spamassassin -d"),
-                          QStringLiteral("X-Spam-Status"),
-                          QStringLiteral("yes"),
+                          u"SpamAssassin"_s,
+                          u"spamassassin -V"_s,
+                          u"https://spamassassin.apache.org/"_s,
+                          u"SpamAssassin Check"_s,
+                          u"spamassassin -L"_s,
+                          u"sa-learn -L --spam --no-sync --single"_s,
+                          u"sa-learn -L --ham --no-sync --single"_s,
+                          u"spamassassin -d"_s,
+                          u"X-Spam-Status"_s,
+                          u"yes"_s,
                           QString(),
                           QString(),
                           false,
@@ -957,7 +959,7 @@ ASWizPage::ASWizPage(QWidget *parent, const QString &name)
     mLayout->addItem(new QSpacerItem(5, 5, QSizePolicy::Minimum, QSizePolicy::Expanding));
 
     QPixmap banner;
-    banner.load(QStringLiteral(":/org/kde/kmail/pics/kmwizard.png"));
+    banner.load(u":/org/kde/kmail/pics/kmwizard.png"_s);
     auto bannerLabel = new QLabel(this);
     bannerLabel->setPixmap(banner);
     bannerLabel->setScaledContents(false);

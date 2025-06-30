@@ -5,6 +5,8 @@
 */
 
 #include "shorturlenginepluginmanager.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "shorturlengineplugin.h"
 #include <KPluginFactory>
 #include <KPluginMetaData>
@@ -37,7 +39,7 @@ public:
 
 void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 {
-    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/pimcommon/shorturlengine"));
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(u"pim6/pimcommon/shorturlengine"_s);
 
     QListIterator<KPluginMetaData> i(plugins);
     i.toBack();

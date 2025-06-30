@@ -5,6 +5,8 @@
 */
 
 #include "automaticaddcontactsinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "automaticaddcontactsjob.h"
 #include <KConfigGroup>
 #include <KIdentityManagementCore/Identity>
@@ -54,7 +56,7 @@ void AutomaticAddContactsInterface::reloadConfig()
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     for (KIdentityManagementCore::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {
         const uint identity = (*it).uoid();
-        KConfigGroup identityGroup = config->group(QStringLiteral("Automatic Add Contacts %1").arg(identity));
+        KConfigGroup identityGroup = config->group(u"Automatic Add Contacts %1"_s.arg(identity));
         AutomaticAddContactsSettings settings;
         settings.mEnabled = identityGroup.readEntry("Enabled", false);
         settings.mContactCollection = Akonadi::Collection(identityGroup.readEntry("Collection", -1));

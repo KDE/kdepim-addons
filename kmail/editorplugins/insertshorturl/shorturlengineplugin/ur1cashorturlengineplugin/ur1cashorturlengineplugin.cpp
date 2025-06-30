@@ -5,6 +5,8 @@
 */
 
 #include "ur1cashorturlengineplugin.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ur1cashorturlengineinterface.h"
 #include <KPluginFactory>
 
@@ -26,7 +28,7 @@ ShortUrlEngineInterface *Ur1CaShortUrlEnginePlugin::createInterface(QObject *par
 
 QString Ur1CaShortUrlEnginePlugin::engineName() const
 {
-    return QStringLiteral("urlcashorturl");
+    return u"urlcashorturl"_s;
 }
 
 #include "ur1cashorturlengineplugin.moc"

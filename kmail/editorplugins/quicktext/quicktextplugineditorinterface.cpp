@@ -5,6 +5,8 @@
 */
 
 #include "quicktextplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "quicktextmenu.h"
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -39,7 +41,7 @@ void QuickTextPluginEditorInterface::createAction(KActionCollection *ac)
     connect(quickTextMenu, &QuickTextMenu::insertText, this, &QuickTextPluginEditorInterface::insertText);
     auto action = new QAction(i18nc("@action", "Variables"), this);
     action->setMenu(quickTextMenu->menu());
-    ac->addAction(QStringLiteral("insert_variables"), action);
+    ac->addAction(u"insert_variables"_s, action);
     connect(action, &QAction::triggered, this, &QuickTextPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Insert);
     setActionType(type);
@@ -81,8 +83,8 @@ bool QuickTextPluginEditorInterface::processProcessKeyEvent(QKeyEvent *e)
             for (const MailCommon::SnippetsInfo &info : std::as_const(mSnippetsInfo)) {
                 // qDebug() << " info.keyword" << info.keyword;
                 QString infoKeyword = info.keyword;
-                if (!infoKeyword.startsWith(QLatin1Char('\\'))) {
-                    infoKeyword = QLatin1Char('\\') + infoKeyword;
+                if (!infoKeyword.startsWith(u'\\')) {
+                    infoKeyword = u'\\' + infoKeyword;
                 }
                 if (infoKeyword == selectedWord) {
                     qDebug() << "found snippetsinfo " << info.keyword;

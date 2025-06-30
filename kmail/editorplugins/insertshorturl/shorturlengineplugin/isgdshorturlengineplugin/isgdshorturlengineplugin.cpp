@@ -5,6 +5,8 @@
 */
 
 #include "isgdshorturlengineplugin.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "isgdshorturlengineinterface.h"
 #include <KPluginFactory>
 
@@ -24,7 +26,7 @@ ShortUrlEngineInterface *IsgdShortUrlEnginePlugin::createInterface(QObject *pare
 
 QString IsgdShortUrlEnginePlugin::engineName() const
 {
-    return QStringLiteral("isdgshorturl");
+    return u"isdgshorturl"_s;
 }
 
 #include "isgdshorturlengineplugin.moc"

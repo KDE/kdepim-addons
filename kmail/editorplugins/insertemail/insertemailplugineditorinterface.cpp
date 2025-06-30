@@ -5,6 +5,8 @@
 */
 
 #include "insertemailplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "selectmaildialog.h"
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -21,7 +23,7 @@ InsertEmailPluginEditorInterface::~InsertEmailPluginEditorInterface() = default;
 void InsertEmailPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto action = new QAction(i18nc("@action", "Insert Email…"), this);
-    ac->addAction(QStringLiteral("insert_email"), action);
+    ac->addAction(u"insert_email"_s, action);
     connect(action, &QAction::triggered, this, &InsertEmailPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Insert);
     setActionType(type);
@@ -43,7 +45,7 @@ void InsertEmailPluginEditorInterface::exec()
 
 void InsertEmailPluginEditorInterface::slotEmailSelected(const QStringList &lst)
 {
-    Q_EMIT insertText(lst.join(QLatin1Char(' ')));
+    Q_EMIT insertText(lst.join(u' '));
 }
 
 #include "moc_insertemailplugineditorinterface.cpp"

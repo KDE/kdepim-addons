@@ -5,6 +5,8 @@
 */
 
 #include "selectattachmentdialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../widgets/selectattachmentdialog.h"
 #include <KUrlRequester>
 #include <QLabel>
@@ -21,9 +23,9 @@ SelectAttachmentDialogTest::~SelectAttachmentDialogTest()
 void SelectAttachmentDialogTest::shouldHaveDefaultValue()
 {
     MailMerge::SelectAttachmentDialog dlg;
-    QLabel *lab = dlg.findChild<QLabel *>(QStringLiteral("selectattachment_label"));
+    QLabel *lab = dlg.findChild<QLabel *>(u"selectattachment_label"_s);
     QVERIFY(lab);
-    KUrlRequester *urlRequester = dlg.findChild<KUrlRequester *>(QStringLiteral("urlrequester"));
+    KUrlRequester *urlRequester = dlg.findChild<KUrlRequester *>(u"urlrequester"_s);
     QVERIFY(urlRequester);
 }
 

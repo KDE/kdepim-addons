@@ -5,6 +5,8 @@
 */
 
 #include "quicktextconfigurewidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "quicktextconfigurewidget.h"
 #include "quicktextwidget.h"
 #include <QTest>
@@ -20,11 +22,11 @@ void QuickTextConfigureWidgetTest::shouldHaveDefaultValues()
 {
     QuickTextConfigureWidget w;
 
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(w.contentsMargins(), QMargins());
 
-    auto mSnippetWidget = w.findChild<QuickTextWidget *>(QStringLiteral("snippetwidget"));
+    auto mSnippetWidget = w.findChild<QuickTextWidget *>(u"snippetwidget"_s);
     QVERIFY(mSnippetWidget);
 }
 

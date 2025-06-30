@@ -5,6 +5,8 @@
 */
 
 #include "changecaseplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "changecaseeditorplugin_debug.h"
 #include <KActionCollection>
 #include <PimCommon/KActionMenuChangeCase>
@@ -24,7 +26,7 @@ void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto changeCaseMenu = new PimCommon::KActionMenuChangeCase(this);
     changeCaseMenu->appendInActionCollection(ac);
-    ac->addAction(QStringLiteral("change_case_menu"), changeCaseMenu);
+    ac->addAction(u"change_case_menu"_s, changeCaseMenu);
     connect(changeCaseMenu, &PimCommon::KActionMenuChangeCase::upperCase, this, &ChangeCasePluginEditorInterface::slotUpperCase);
     connect(changeCaseMenu, &PimCommon::KActionMenuChangeCase::lowerCase, this, &ChangeCasePluginEditorInterface::slotLowerCase);
     connect(changeCaseMenu, &PimCommon::KActionMenuChangeCase::sentenceCase, this, &ChangeCasePluginEditorInterface::slotSentenceCase);

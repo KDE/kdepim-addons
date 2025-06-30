@@ -5,6 +5,8 @@
 */
 
 #include "automaticaddcontactsjob.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "automaticaddcontactsplugin_debug.h"
 #include <Akonadi/AgentConfigurationDialog>
 #include <Akonadi/AgentFilterProxyModel>
@@ -98,14 +100,14 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
         if (KMessageBox::questionTwoActions(nullptr,
                                             i18nc("@info", "You must create an address book before adding a contact. Do you want to create an address book?"),
                                             i18nc("@title:window", "No Address Book Available"),
-                                            KGuiItem(i18nc("@action:button", "Create Address Book"), QStringLiteral("address-book-new")),
+                                            KGuiItem(i18nc("@action:button", "Create Address Book"), u"address-book-new"_s),
                                             KStandardGuiItem::cancel())
             == KMessageBox::ButtonCode::PrimaryAction) {
             QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(nullptr);
             dlg->setWindowTitle(i18nc("@title:window", "Add Address Book"));
             dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
             dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::ContactGroup::mimeType());
-            dlg->agentFilterProxyModel()->addCapabilityFilter(QStringLiteral("Resource"));
+            dlg->agentFilterProxyModel()->addCapabilityFilter(u"Resource"_s);
 
             if (dlg->exec()) {
                 const Akonadi::AgentType agentType = dlg->agentType();

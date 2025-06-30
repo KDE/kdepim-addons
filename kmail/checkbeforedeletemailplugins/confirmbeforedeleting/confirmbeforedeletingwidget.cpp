@@ -5,6 +5,8 @@
 */
 
 #include "confirmbeforedeletingwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmbeforedeletingcreateruledialog.h"
 #include "confirmbeforedeletingmanager.h"
 #include <KLocalizedString>
@@ -117,13 +119,13 @@ void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p
     Q_UNUSED(p);
     QMenu menu(this);
     const auto selectedItemCount{mTreeWidget->selectedItems().count()};
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule…"), this, &ConfirmBeforeDeletingWidget::slotAddRule);
+    menu.addAction(QIcon::fromTheme(u"list-add"_s), i18n("Add Rule…"), this, &ConfirmBeforeDeletingWidget::slotAddRule);
     if (selectedItemCount == 1) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule…"), this, &ConfirmBeforeDeletingWidget::slotEditRule);
+        menu.addAction(QIcon::fromTheme(u"document-edit"_s), i18n("Edit Rule…"), this, &ConfirmBeforeDeletingWidget::slotEditRule);
     }
     if (selectedItemCount > 0) {
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")),
+        menu.addAction(QIcon::fromTheme(u"list-remove"_s),
                        i18np("Remove Rule", "Remove Rules", selectedItemCount),
                        this,
                        &ConfirmBeforeDeletingWidget::slotRemoveRule);

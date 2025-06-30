@@ -5,6 +5,8 @@
 */
 
 #include "quicktextwidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "quicktexttreewidget.h"
 #include "quicktextwidget.h"
 #include <MailCommon/SnippetWidget>
@@ -20,14 +22,14 @@ QuickTextWidgetTest::QuickTextWidgetTest(QObject *parent)
 void QuickTextWidgetTest::shouldHaveDefaultValues()
 {
     QuickTextWidget w;
-    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(w.contentsMargins(), QMargins());
 
-    auto mTreeWidget = w.findChild<QuicktextTreeWidget *>(QStringLiteral("treewidget"));
+    auto mTreeWidget = w.findChild<QuicktextTreeWidget *>(u"treewidget"_s);
     QVERIFY(mTreeWidget);
 
-    auto mStackedWidget = w.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    auto mStackedWidget = w.findChild<QStackedWidget *>(u"stackedwidget"_s);
     QVERIFY(mStackedWidget);
 }
 

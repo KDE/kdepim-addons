@@ -5,6 +5,8 @@
 */
 
 #include "automaticaddcontactstabwidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../automaticaddcontactstabwidget.h"
 #include <Akonadi/CollectionComboBox>
 #include <Akonadi/EntityTreeModel>
@@ -46,23 +48,23 @@ AutomaticAddContactsTabWidget *AutomaticAddContactsTabWidgetTest::createContactW
 void AutomaticAddContactsTabWidgetTest::shouldHaveDefaultValue()
 {
     auto w = new AutomaticAddContactsTabWidget(createContactWidget());
-    auto vboxlayout = w->findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto vboxlayout = w->findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(vboxlayout);
 
-    auto mEnabled = w->findChild<QCheckBox *>(QStringLiteral("enabled"));
+    auto mEnabled = w->findChild<QCheckBox *>(u"enabled"_s);
     QVERIFY(mEnabled);
     QVERIFY(!mEnabled->text().isEmpty());
     QVERIFY(!mEnabled->isChecked());
 
-    auto hlay = w->findChild<QHBoxLayout *>(QStringLiteral("folderlayout"));
+    auto hlay = w->findChild<QHBoxLayout *>(u"folderlayout"_s);
     QVERIFY(hlay);
     QCOMPARE(hlay->contentsMargins(), QMargins());
 
-    auto lab = w->findChild<QLabel *>(QStringLiteral("labelfolder"));
+    auto lab = w->findChild<QLabel *>(u"labelfolder"_s);
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 
-    auto mCollectionCombobox = w->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    auto mCollectionCombobox = w->findChild<Akonadi::CollectionComboBox *>(u"akonadicombobox"_s);
     QVERIFY(mCollectionCombobox);
     delete w;
 }
@@ -70,7 +72,7 @@ void AutomaticAddContactsTabWidgetTest::shouldHaveDefaultValue()
 void AutomaticAddContactsTabWidgetTest::shouldResetValue()
 {
     auto w = new AutomaticAddContactsTabWidget(createContactWidget());
-    auto mEnabled = w->findChild<QCheckBox *>(QStringLiteral("enabled"));
+    auto mEnabled = w->findChild<QCheckBox *>(u"enabled"_s);
     QVERIFY(!mEnabled->isChecked());
     mEnabled->setChecked(true);
     QVERIFY(mEnabled->isChecked());

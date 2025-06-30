@@ -5,6 +5,8 @@
 */
 
 #include "checkduplicateemailsjobtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../duplicateemails/checkduplicateemailsjob.h"
 #include <QStringList>
 #include <QTest>
@@ -38,58 +40,58 @@ void CheckDuplicateEmailsJobTest::shouldReturnEmails_data()
     QTest::newRow("empty") << QStringList() << QMap<QString, int>();
 
     QStringList lst;
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("bla@kde.org"));
-    lst.append(QStringLiteral("blo@kde.org"));
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"bla@kde.org"_s);
+    lst.append(u"blo@kde.org"_s);
     QTest::newRow("emptyresultbutnotemptylist") << lst << QMap<QString, int>();
 
     lst.clear();
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("blo@kde.org"));
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"blo@kde.org"_s);
     QMap<QString, int> result;
-    result.insert(QStringLiteral("foo@kde.org"), 2);
+    result.insert(u"foo@kde.org"_s, 2);
     QTest::newRow("oneduplicateemails") << lst << result;
 
     lst.clear();
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("blo@kde.org"));
-    lst.append(QStringLiteral("blo@kde.org"));
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"blo@kde.org"_s);
+    lst.append(u"blo@kde.org"_s);
     result.clear();
-    result.insert(QStringLiteral("foo@kde.org"), 2);
-    result.insert(QStringLiteral("blo@kde.org"), 2);
+    result.insert(u"foo@kde.org"_s, 2);
+    result.insert(u"blo@kde.org"_s, 2);
     QTest::newRow("twoduplicateemails") << lst << result;
 
     lst.clear();
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("blo@kde.org"));
-    lst.append(QStringLiteral("blo@kde.org"));
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"blo@kde.org"_s);
+    lst.append(u"blo@kde.org"_s);
     result.clear();
-    result.insert(QStringLiteral("foo@kde.org"), 3);
-    result.insert(QStringLiteral("blo@kde.org"), 2);
+    result.insert(u"foo@kde.org"_s, 3);
+    result.insert(u"blo@kde.org"_s, 2);
     QTest::newRow("twoduplicateemailswithdifferentvalue") << lst << result;
 
     lst.clear();
-    lst.append(QStringLiteral("foo <foo@kde.org>"));
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("foo@kde.org"));
-    lst.append(QStringLiteral("blo@kde.org"));
-    lst.append(QStringLiteral("blo@kde.org"));
+    lst.append(u"foo <foo@kde.org>"_s);
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"foo@kde.org"_s);
+    lst.append(u"blo@kde.org"_s);
+    lst.append(u"blo@kde.org"_s);
 
     result.clear();
-    result.insert(QStringLiteral("foo@kde.org"), 3);
-    result.insert(QStringLiteral("blo@kde.org"), 2);
+    result.insert(u"foo@kde.org"_s, 3);
+    result.insert(u"blo@kde.org"_s, 2);
     QTest::newRow("twoduplicateemailswithemailname") << lst << result;
 
     lst.clear();
-    lst.append(QStringLiteral("foo <foo@kde.org>, foo@kde.org, foo@kde.org"));
-    lst.append(QStringLiteral("foo@kde.org"));
+    lst.append(u"foo <foo@kde.org>, foo@kde.org, foo@kde.org"_s);
+    lst.append(u"foo@kde.org"_s);
 
     result.clear();
-    result.insert(QStringLiteral("foo@kde.org"), 4);
+    result.insert(u"foo@kde.org"_s, 4);
     QTest::newRow("emailseparatedbycommat") << lst << result;
 }
 

@@ -5,6 +5,8 @@
 */
 
 #include "externalcomposerconfigurewidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KConfigGroup>
 #include <KLineEdit>
 #include <KLineEditEventHandler>
@@ -32,15 +34,14 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
     mainLayout->addWidget(mExternalEditorCheck);
 
     auto hbox = new QHBoxLayout;
-    auto label = new QLabel(QStringLiteral("Specify editor:"), this);
+    auto label = new QLabel(u"Specify editor:"_s, this);
     label->setObjectName(QLatin1StringView("urlrequesterlabel"));
     hbox->addWidget(label);
 
     mEditorRequester->setObjectName(QLatin1StringView("mEditorRequester"));
     hbox->addWidget(mEditorRequester);
 
-    mEditorRequester->setMimeTypeFilters(
-        {QStringLiteral("application/x-executable"), QStringLiteral("application/x-shellscript"), QStringLiteral("application/x-desktop")});
+    mEditorRequester->setMimeTypeFilters({u"application/x-executable"_s, u"application/x-shellscript"_s, QStringLiteral("application/x-desktop")});
 
     mEditorRequester->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
     mEditorRequester->setEnabled(false);
@@ -71,7 +72,7 @@ void ExternalComposerConfigureWidget::loadSettings()
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     KConfigGroup group = config->group(QLatin1StringView(myExternalComposerGroupName));
     mExternalEditorCheck->setChecked(group.readEntry("Enabled", false));
-    mEditorRequester->setText(group.readEntry("ComposerPath", QStringLiteral("kwrite %f")));
+    mEditorRequester->setText(group.readEntry("ComposerPath", u"kwrite %f"_s));
 }
 
 void ExternalComposerConfigureWidget::saveSettings()
@@ -85,7 +86,7 @@ void ExternalComposerConfigureWidget::saveSettings()
 void ExternalComposerConfigureWidget::resetSettings()
 {
     mExternalEditorCheck->setChecked(false);
-    mEditorRequester->setText(QStringLiteral("kwrite %f"));
+    mEditorRequester->setText(u"kwrite %f"_s);
 }
 
 #include "moc_externalcomposerconfigurewidget.cpp"

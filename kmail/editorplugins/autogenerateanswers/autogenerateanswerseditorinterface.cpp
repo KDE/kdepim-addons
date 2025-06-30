@@ -5,6 +5,8 @@
 */
 
 #include "autogenerateanswerseditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "autogenerateanswerseditordialog.h"
 #include "autogenerateanswerseditorplugin_debug.h"
 #include <KActionCollection>
@@ -24,7 +26,7 @@ AutoGenerateAnswersEditorInterface::~AutoGenerateAnswersEditorInterface() = defa
 void AutoGenerateAnswersEditorInterface::createAction(KActionCollection *ac)
 {
     auto action = new QAction(i18nc("@action", "Autogenerate Answer"), this);
-    ac->addAction(QStringLiteral("quick_answer"), action);
+    ac->addAction(u"quick_answer"_s, action);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
     setActionType(type);
     auto menu = new QMenu(parentWidget());

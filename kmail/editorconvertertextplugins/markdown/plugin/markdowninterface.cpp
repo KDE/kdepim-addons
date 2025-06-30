@@ -5,6 +5,8 @@
 */
 
 #include "markdowninterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "markdownconverter.h"
 #include "markdowncreateimagedialog.h"
 #include "markdowncreatelinkdialog.h"
@@ -36,7 +38,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mAction = new QAction(i18nc("@action", "Generate HTML from markdown language."), this);
     mAction->setCheckable(true);
     mAction->setChecked(false);
-    ac->addAction(QStringLiteral("generate_markdown"), mAction);
+    ac->addAction(u"generate_markdown"_s, mAction);
     connect(mAction, &QAction::triggered, this, &MarkdownInterface::slotActivated);
     MessageComposer::PluginActionType type(mAction, MessageComposer::PluginActionType::Edit);
     addActionType(type);
@@ -93,14 +95,14 @@ void MarkdownInterface::slotSelectionChanged()
 
 void MarkdownInterface::addHorizontalRule()
 {
-    richTextEditor()->insertPlainText(QStringLiteral("\n---"));
+    richTextEditor()->insertPlainText(u"\n---"_s);
 }
 
 void MarkdownInterface::addBold()
 {
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
-        richTextEditor()->textCursor().insertText(QStringLiteral("**%1**").arg(selectedText));
+        richTextEditor()->textCursor().insertText(u"**%1**"_s.arg(selectedText));
     } else {
         qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
     }
@@ -110,7 +112,7 @@ void MarkdownInterface::addBlockQuote()
 {
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
-        richTextEditor()->composerControler()->addQuotes(QStringLiteral(">"));
+        richTextEditor()->composerControler()->addQuotes(u">"_s);
     } else {
         qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
     }
@@ -120,7 +122,7 @@ void MarkdownInterface::addCode()
 {
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
-        richTextEditor()->textCursor().insertText(QStringLiteral("`%1`").arg(selectedText));
+        richTextEditor()->textCursor().insertText(u"`%1`"_s.arg(selectedText));
     } else {
         qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
     }
@@ -130,7 +132,7 @@ void MarkdownInterface::addItalic()
 {
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
-        richTextEditor()->textCursor().insertText(QStringLiteral("_%1_").arg(selectedText));
+        richTextEditor()->textCursor().insertText(u"_%1_"_s.arg(selectedText));
     } else {
         qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
     }
@@ -162,15 +164,15 @@ void MarkdownInterface::addImage()
 
 void MarkdownInterface::addTitle(int index)
 {
-    QString tag = QStringLiteral("#");
+    QString tag = u"#"_s;
     for (int i = 1; i < index; ++i) {
-        tag += QLatin1Char('#');
+        tag += u'#';
     }
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.trimmed().isEmpty()) {
-        richTextEditor()->textCursor().insertText(QStringLiteral("%1 %2").arg(tag, selectedText));
+        richTextEditor()->textCursor().insertText(u"%1 %2"_s.arg(tag, selectedText));
     } else {
-        richTextEditor()->textCursor().insertText(QStringLiteral("%1 ").arg(tag));
+        richTextEditor()->textCursor().insertText(u"%1 "_s.arg(tag));
     }
 }
 
@@ -198,12 +200,12 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
                 continue;
             }
             const QFileInfo fi(urlImage);
-            const QString imageName = fi.baseName().isEmpty() ? QStringLiteral("image.png") : QString(fi.baseName() + QLatin1StringView(".png"));
+            const QString imageName = fi.baseName().isEmpty() ? u"image.png"_s : QString(fi.baseName() + QLatin1StringView(".png"));
 
             QString imageNameToAdd = imageName;
             int imageNumber = 1;
             while (imageNameAdded.contains(imageNameToAdd)) {
-                const int firstDot = imageName.indexOf(QLatin1Char('.'));
+                const int firstDot = imageName.indexOf(u'.');
                 if (firstDot == -1) {
                     imageNameToAdd = imageName + QString::number(imageNumber++);
                 } else {
@@ -216,7 +218,7 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
             lstEmbeddedImages.append(embeddedImage);
 
             const QString newImageName = QLatin1StringView("cid:") + embeddedImage->contentID;
-            const QString quote(QStringLiteral("\""));
+            const QString quote(u"\""_s);
             htmlVersion.replace(QString(quote + urlImage + quote), QString(quote + newImageName + quote));
             textVersion.replace(urlImage, newImageName);
             imageNameAdded << imageNameToAdd;
@@ -270,7 +272,7 @@ void MarkdownInterface::enableDisablePluginActions(bool richText)
 
 void MarkdownInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QStringLiteral("Markdown"));
+    KConfigGroup grp(KSharedConfig::openConfig(), u"Markdown"_s);
 
     mEnableEmbeddedLabel = grp.readEntry("Enable Embedded Latex", false);
     mEnableExtraDefinitionLists = grp.readEntry("Enable Extra Definition Lists", false);

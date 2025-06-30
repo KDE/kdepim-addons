@@ -5,6 +5,8 @@
 */
 
 #include "insertshorturlplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "kmail_insertshorturl_debug.h"
 #include "shorturlengineplugin/shorturlengineinterface.h"
 #include "shorturlengineplugin/shorturlengineplugin.h"
@@ -44,7 +46,7 @@ void InsertShorturlPluginEditorInterface::loadEngine()
         disconnect(mCurrentEngine, &ShortUrlEngineInterface::shortUrlFailed, this, &InsertShorturlPluginEditorInterface::slotShortUrlFailed);
     }
 
-    KConfigGroup grp(KSharedConfig::openConfig(), QStringLiteral("ShortUrl"));
+    KConfigGroup grp(KSharedConfig::openConfig(), u"ShortUrl"_s);
     const QString engineName = grp.readEntry("EngineName");
     mCurrentEngine = mLstInterface.value(engineName);
     if (!mCurrentEngine && !mLstInterface.isEmpty()) {
@@ -59,7 +61,7 @@ void InsertShorturlPluginEditorInterface::loadEngine()
 void InsertShorturlPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto action = new QAction(i18nc("@action", "Insert Short URL…"), this);
-    ac->addAction(QStringLiteral("insert_shortulr"), action);
+    ac->addAction(u"insert_shortulr"_s, action);
     connect(action, &QAction::triggered, this, &InsertShorturlPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::PopupMenu);
     setActionType(type);

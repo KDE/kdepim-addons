@@ -5,6 +5,8 @@
 */
 
 #include "aitooltextplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
@@ -20,7 +22,7 @@ AIToolTextPluginEditorInterface::~AIToolTextPluginEditorInterface() = default;
 void AIToolTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto action = new QAction(i18nc("@action", "Open AI Chat"), this);
-    ac->addAction(QStringLiteral("open_ai_chat"), action);
+    ac->addAction(u"open_ai_chat"_s, action);
     connect(action, &QAction::triggered, this, &AIToolTextPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Tools);
     setActionType(type);

@@ -5,6 +5,8 @@
 */
 
 #include "markdowndemowidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "markdownpreviewwidget.h"
 #include <QFile>
 #include <QHBoxLayout>
@@ -27,7 +29,7 @@ MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
         mPreview->slotUpdatePreview(mEdit->toPlainText());
     });
 
-    QFile defaultTextFile(QStringLiteral(":/test.txt"));
+    QFile defaultTextFile(u":/test.txt"_s);
     defaultTextFile.open(QIODevice::ReadOnly);
     mEdit->setPlainText(QString::fromUtf8(defaultTextFile.readAll()));
 }

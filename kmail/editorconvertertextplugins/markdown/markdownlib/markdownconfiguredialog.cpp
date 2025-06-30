@@ -5,6 +5,8 @@
 */
 
 #include "markdownconfiguredialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "markdownconfigurewidget.h"
 #include <KLocalizedString>
 #include <QDesktopServices>
@@ -43,7 +45,7 @@ void MarkdownConfigureDialog::reset()
 
 void MarkdownConfigureDialog::help()
 {
-    QDesktopServices::openUrl(QUrl(QStringLiteral("https://tools.ietf.org/html/rfc7763")));
+    QDesktopServices::openUrl(QUrl(u"https://tools.ietf.org/html/rfc7763"_s));
 }
 
 #include "moc_markdownconfiguredialog.cpp"

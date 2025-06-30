@@ -5,6 +5,8 @@
 */
 
 #include "confirmaddressinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmaddresscheckjob.h"
 #include "confirmaddressconfigurewidget.h"
 #include "confirmaddressdialog.h"
@@ -84,7 +86,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
 void ConfirmAddressInterface::slotAddWhiteListEmails(const QStringList &lst, uint currentIdentity)
 {
     KConfigGroup grp(KSharedConfig::openConfig(), QLatin1StringView(myConfigGroupName));
-    KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(currentIdentity));
+    KConfigGroup identityGroup = grp.group(u"Confirm Address %1"_s.arg(currentIdentity));
     QStringList oldWhiteList = identityGroup.readEntry("Emails", QStringList());
     for (const QString &email : lst) {
         if (!oldWhiteList.contains(email)) {
@@ -105,7 +107,7 @@ void ConfirmAddressInterface::reloadConfig()
     KIdentityManagementCore::IdentityManager::ConstIterator end = im->end();
     for (KIdentityManagementCore::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {
         const uint identity = (*it).uoid();
-        KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(identity));
+        KConfigGroup identityGroup = grp.group(u"Confirm Address %1"_s.arg(identity));
         ConfirmAddressSettings settings;
         settings.mDomains = identityGroup.readEntry("Domains", QStringList());
         settings.mWhiteLists = identityGroup.readEntry("Emails", QStringList());

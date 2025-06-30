@@ -4,6 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "autogenerateanswerseditordialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "autogenerateanswerseditorwidget.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -22,11 +24,11 @@ AutoGenerateAnswersEditorDialog::AutoGenerateAnswersEditorDialog(QWidget *parent
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));
-    mAutoGenerateAnswersEditorWidget->setObjectName(QStringLiteral("mAutoGenerateAnswersEditorWidget"));
+    mAutoGenerateAnswersEditorWidget->setObjectName(u"mAutoGenerateAnswersEditorWidget"_s);
     mainLayout->addWidget(mAutoGenerateAnswersEditorWidget);
 
     auto box = new QDialogButtonBox(QDialogButtonBox::Close, this);
-    box->setObjectName(QStringLiteral("box"));
+    box->setObjectName(u"box"_s);
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &AutoGenerateAnswersEditorDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &AutoGenerateAnswersEditorDialog::reject);

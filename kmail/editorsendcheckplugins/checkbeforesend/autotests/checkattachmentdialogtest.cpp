@@ -5,6 +5,8 @@
 */
 
 #include "checkattachmentdialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../sendattachments/checkattachmentdialog.h"
 #include <QDialogButtonBox>
 #include <QLabel>
@@ -23,14 +25,14 @@ CheckAttachmentDialogTest::~CheckAttachmentDialogTest() = default;
 void CheckAttachmentDialogTest::shouldHaveDefaultValue()
 {
     CheckAttachmentDialog w;
-    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
-    auto lab = w.findChild<QLabel *>(QStringLiteral("lab"));
+    auto lab = w.findChild<QLabel *>(u"lab"_s);
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 
-    auto mListWidget = w.findChild<QListWidget *>(QStringLiteral("listwidget"));
+    auto mListWidget = w.findChild<QListWidget *>(u"listwidget"_s);
     QVERIFY(mListWidget);
     QCOMPARE(mListWidget->count(), 0);
 }
@@ -39,8 +41,8 @@ void CheckAttachmentDialogTest::shouldAddEmails()
 {
     CheckAttachmentDialog w;
 
-    auto mListWidget = w.findChild<QListWidget *>(QStringLiteral("listwidget"));
-    w.setEmails(QStringList() << QStringLiteral("a") << QStringLiteral("b") << QStringLiteral("v"));
+    auto mListWidget = w.findChild<QListWidget *>(u"listwidget"_s);
+    w.setEmails(QStringList() << u"a"_s << u"b"_s << QStringLiteral("v"));
     QCOMPARE(mListWidget->count(), 3);
 }
 

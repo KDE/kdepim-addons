@@ -5,6 +5,8 @@
 */
 
 #include "markdownpreviewwidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "markdownpreviewwidget.h"
 #include <QLabel>
 #include <QTest>
@@ -21,15 +23,15 @@ MarkdownPreviewWidgetTest::MarkdownPreviewWidgetTest(QObject *parent)
 void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
 {
     MarkdownPreviewWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mWebView = w.findChild<QWebEngineView *>(QStringLiteral("webengine"));
+    auto mWebView = w.findChild<QWebEngineView *>(u"webengine"_s);
     QVERIFY(mWebView);
     QCOMPARE(mWebView->contextMenuPolicy(), Qt::NoContextMenu);
 
-    auto mHoverUrlLabel = w.findChild<QLabel *>(QStringLiteral("mHoverUrlLabel"));
+    auto mHoverUrlLabel = w.findChild<QLabel *>(u"mHoverUrlLabel"_s);
     QVERIFY(mHoverUrlLabel);
     QVERIFY(mHoverUrlLabel->text().isEmpty());
 }

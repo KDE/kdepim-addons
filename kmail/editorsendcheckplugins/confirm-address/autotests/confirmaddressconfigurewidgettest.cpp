@@ -5,6 +5,8 @@
 */
 
 #include "confirmaddressconfigurewidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../confirmaddressconfiguretab.h"
 #include "../confirmaddressconfigurewidget.h"
 
@@ -25,10 +27,10 @@ void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
 {
     ConfirmAddressConfigureWidget w;
 
-    auto vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto vboxlayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(vboxlayout);
 
-    auto mConfirmAddressConfigureTab = w.findChild<ConfirmAddressConfigureTab *>(QStringLiteral("confirmaddresstab"));
+    auto mConfirmAddressConfigureTab = w.findChild<ConfirmAddressConfigureTab *>(u"confirmaddresstab"_s);
     QVERIFY(mConfirmAddressConfigureTab);
 }
 

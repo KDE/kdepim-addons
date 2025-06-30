@@ -5,6 +5,8 @@
 */
 
 #include "markdowncreatelinkwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KLocalizedString>
 #include <QFormLayout>
 #include <QLineEdit>
@@ -42,7 +44,7 @@ QString MarkdownCreateLinkWidget::linkStr() const
     if (mTitle->text().trimmed().isEmpty() && mLink->text().trimmed().isEmpty()) {
         return {};
     }
-    return QStringLiteral("[%1](%2)").arg(mTitle->text().trimmed(), mLink->text().trimmed());
+    return u"[%1](%2)"_s.arg(mTitle->text().trimmed(), mLink->text().trimmed());
 }
 
 #include "moc_markdowncreatelinkwidget.cpp"

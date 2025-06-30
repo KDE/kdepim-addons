@@ -5,6 +5,8 @@
 */
 
 #include "askautogeneratetextplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KActionCollection>
 #include <PimAutoGenerateText/AutogenerateConfigureAskManager>
 #include <PimAutoGenerateText/AutogenerateConfigureAskMenu>
@@ -26,7 +28,7 @@ void AskAutogenerateTextPluginEditorInterface::createAction(KActionCollection *a
 {
     auto menu = new AutogenerateConfigureAskMenu(mAskManager, this);
     connect(this, &AskAutogenerateTextPluginEditorInterface::refreshMenu, menu, &AutogenerateConfigureAskMenu::slotRefreshMenu);
-    ac->addAction(QStringLiteral("editor_ask_ia"), menu);
+    ac->addAction(u"editor_ask_ia"_s, menu);
     connect(menu, &AutogenerateConfigureAskMenu::askRequested, this, &AskAutogenerateTextPluginEditorInterface::slotAskRequested);
     MessageComposer::PluginActionType type(menu, MessageComposer::PluginActionType::Edit);
     setActionType(type);
@@ -45,7 +47,7 @@ void AskAutogenerateTextPluginEditorInterface::exec()
     dlg->show();
     QTextCursor textCursor = richTextEditor()->textCursor();
     const QString selectedText = textCursor.selectedText();
-    dlg->ask(QStringLiteral("%1 %2").arg(mAskMsg, selectedText));
+    dlg->ask(u"%1 %2"_s.arg(mAskMsg, selectedText));
 }
 
 void AskAutogenerateTextPluginEditorInterface::slotRefreshMenu()

@@ -4,6 +4,8 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "confirmbeforedeletinginterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmbeforedeletingmanager.h"
 #include "confirmbeforedeletingmessageboxdialog.h"
 #include "confirmbeforedeletingplugin_debug.h"
@@ -31,7 +33,7 @@ void ConfirmBeforeDeletingInterface::createActions(KActionCollection *ac)
     if (ac) {
         auto mainMenu = new QAction(i18nc("@action", "Confirm Before Deleting"), this);
         auto menu = new QMenu;
-        auto act = new QAction(QIcon::fromTheme(QStringLiteral("settings-configure")), i18n("Configure"), menu);
+        auto act = new QAction(QIcon::fromTheme(u"settings-configure"_s), i18n("Configure"), menu);
         connect(act, &QAction::triggered, this, &ConfirmBeforeDeletingInterface::slotConfigure);
         menu->addAction(act);
         mainMenu->setMenu(menu);
@@ -64,7 +66,7 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
 
             QPointer<ConfirmBeforeDeletingMessageBoxDialog> dlg = new ConfirmBeforeDeletingMessageBoxDialog(parentWidget());
             if (checkFoundStr.length() > 200) {
-                checkFoundStr = checkFoundStr.left(200) + QStringLiteral("…");
+                checkFoundStr = checkFoundStr.left(200) + u"…"_s;
             }
             dlg->setInfo(i18n("Do you want to delete this email?\n%1", checkFoundStr));
             const int result = dlg->exec();

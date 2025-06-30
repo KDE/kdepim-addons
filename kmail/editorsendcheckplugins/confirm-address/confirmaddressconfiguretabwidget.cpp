@@ -5,6 +5,8 @@
 */
 
 #include "confirmaddressconfiguretabwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmaddresssimplestringlisteditor.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -81,7 +83,7 @@ void ConfirmAddressConfigureTabWidget::resetSettings()
 
 void ConfirmAddressConfigureTabWidget::loadSettings(const KConfigGroup &grp)
 {
-    KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(mIdentity));
+    KConfigGroup identityGroup = grp.group(u"Confirm Address %1"_s.arg(mIdentity));
     mDomainNameListEditor->setStringList(identityGroup.readEntry("Domains", QStringList()));
     mWhiteListEditor->setStringList(identityGroup.readEntry("Emails", QStringList()));
     const bool rejectedDomain = identityGroup.readEntry("RejectDomain", false);
@@ -94,7 +96,7 @@ void ConfirmAddressConfigureTabWidget::loadSettings(const KConfigGroup &grp)
 
 void ConfirmAddressConfigureTabWidget::saveSettings(KConfigGroup &grp)
 {
-    KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(mIdentity));
+    KConfigGroup identityGroup = grp.group(u"Confirm Address %1"_s.arg(mIdentity));
     identityGroup.writeEntry("Domains", mDomainNameListEditor->stringList());
     identityGroup.writeEntry("Emails", mWhiteListEditor->stringList());
     identityGroup.writeEntry("RejectDomain", mRejectedDomain->isChecked());

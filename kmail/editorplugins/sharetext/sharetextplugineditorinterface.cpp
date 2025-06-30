@@ -5,6 +5,8 @@
 */
 
 #include "sharetextplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "sharetexteditorplugin_debug.h"
 #include "sharetextpurposemenuwidget.h"
 #include <KActionCollection>
@@ -32,9 +34,9 @@ void ShareTextPluginEditorInterface::createAction(KActionCollection *ac)
 
     auto shareAction = new KActionMenu(i18n("Share Mail Text…"), this);
     shareAction->setMenu(purposeMenu->menu());
-    shareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
+    shareAction->setIcon(QIcon::fromTheme(u"document-share"_s));
     shareAction->setPopupMode(QToolButton::InstantPopup);
-    ac->addAction(QStringLiteral("share_text_menu"), shareAction);
+    ac->addAction(u"share_text_menu"_s, shareAction);
     purposeMenu->setEditorWidget(this);
     MessageComposer::PluginActionType type(shareAction, MessageComposer::PluginActionType::File);
     setActionType(type);

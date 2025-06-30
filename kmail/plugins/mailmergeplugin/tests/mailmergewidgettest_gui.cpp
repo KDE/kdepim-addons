@@ -5,6 +5,7 @@
 */
 
 #include "../widgets/mailmergewidget.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -16,7 +17,7 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("mailmergewidget_gui"), i18n("MailMergeWidgetTest_Gui"), QStringLiteral("1.0"));
+    KAboutData aboutData(u"mailmergewidget_gui"_s, i18n("MailMergeWidgetTest_Gui"), u"1.0"_s);
     aboutData.setShortDescription(i18n("Test for mailmerge widget"));
     QCommandLineParser parser;
     KAboutData::setApplicationData(aboutData);

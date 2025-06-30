@@ -5,6 +5,8 @@
 */
 
 #include "confirmbeforedeletingcreaterulewidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmbeforedeletingcreaterulewidget.h"
 #include <QComboBox>
 #include <QHBoxLayout>
@@ -20,22 +22,22 @@ ConfirmBeforeDeletingCreateRuleWidgetTest::ConfirmBeforeDeletingCreateRuleWidget
 void ConfirmBeforeDeletingCreateRuleWidgetTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingCreateRuleWidget w;
-    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mPatternLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mPatternLineEdit"));
+    auto mPatternLineEdit = w.findChild<QLineEdit *>(u"mPatternLineEdit"_s);
     QVERIFY(mPatternLineEdit);
     QVERIFY(mPatternLineEdit->text().isEmpty());
 
-    auto mRuleTypeComboBox = w.findChild<QComboBox *>(QStringLiteral("mRuleTypeComboBox"));
+    auto mRuleTypeComboBox = w.findChild<QComboBox *>(u"mRuleTypeComboBox"_s);
     QVERIFY(mRuleTypeComboBox);
     QVERIFY(mRuleTypeComboBox->count() > 0);
 
-    auto label = w.findChild<QLabel *>(QStringLiteral("typeLabel"));
+    auto label = w.findChild<QLabel *>(u"typeLabel"_s);
     QVERIFY(!label->text().isEmpty());
 
-    label = w.findChild<QLabel *>(QStringLiteral("containsLabel"));
+    label = w.findChild<QLabel *>(u"containsLabel"_s);
     QVERIFY(!label->text().isEmpty());
 }
 

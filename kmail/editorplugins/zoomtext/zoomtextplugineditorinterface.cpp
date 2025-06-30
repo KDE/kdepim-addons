@@ -5,6 +5,8 @@
 */
 
 #include "zoomtextplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "zoomlabel.h"
 #include "zoomtexteditorplugin_debug.h"
 #include <KActionCollection>
@@ -23,19 +25,19 @@ ZoomTextPluginEditorInterface::~ZoomTextPluginEditorInterface() = default;
 void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto zoomMenu = new KActionMenu(i18n("Zoom…"), this);
-    ac->addAction(QStringLiteral("zoom_menu"), zoomMenu);
+    ac->addAction(u"zoom_menu"_s, zoomMenu);
 
     QAction *zoomInAction = KStandardActions::zoomIn(this, &ZoomTextPluginEditorInterface::slotZoomIn, this);
     zoomMenu->addAction(zoomInAction);
-    ac->addAction(QStringLiteral("zoom_in"), zoomInAction);
+    ac->addAction(u"zoom_in"_s, zoomInAction);
 
     QAction *zoomOutAction = KStandardActions::zoomOut(this, &ZoomTextPluginEditorInterface::slotZoomOut, this);
     zoomMenu->addAction(zoomOutAction);
-    ac->addAction(QStringLiteral("zoom_out"), zoomOutAction);
+    ac->addAction(u"zoom_out"_s, zoomOutAction);
 
     zoomMenu->addSeparator();
     QAction *zoomResetAction = KStandardActions::actualSize(this, &ZoomTextPluginEditorInterface::slotZoomReset, this);
-    ac->addAction(QStringLiteral("zoom_reset"), zoomResetAction);
+    ac->addAction(u"zoom_reset"_s, zoomResetAction);
     zoomMenu->addAction(zoomResetAction);
 
     MessageComposer::PluginActionType type(zoomMenu, MessageComposer::PluginActionType::View);

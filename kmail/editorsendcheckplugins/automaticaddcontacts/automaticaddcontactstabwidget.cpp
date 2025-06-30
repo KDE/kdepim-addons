@@ -5,6 +5,8 @@
 */
 
 #include "automaticaddcontactstabwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionComboBox>
 #include <KConfigGroup>
@@ -19,7 +21,7 @@ namespace
 {
 QString configGroupName()
 {
-    return QStringLiteral("Automatic Add Contacts %1");
+    return u"Automatic Add Contacts %1"_s;
 }
 }
 AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QAbstractItemModel *model)

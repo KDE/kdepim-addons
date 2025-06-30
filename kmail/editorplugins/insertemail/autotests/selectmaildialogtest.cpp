@@ -5,6 +5,7 @@
 */
 
 #include "selectmaildialogtest.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <QTest>
 QTEST_MAIN(SelectMailDialogTest)

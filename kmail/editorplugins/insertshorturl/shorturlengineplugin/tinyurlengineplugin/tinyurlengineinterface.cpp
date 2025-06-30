@@ -5,6 +5,8 @@
 */
 
 #include "tinyurlengineinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../shorturlengineplugin.h"
 #include <KLocalizedString>
 
@@ -25,7 +27,7 @@ QString TinyUrlEngineInterface::engineName() const
 
 void TinyUrlEngineInterface::generateShortUrl()
 {
-    const QString requestUrl = QStringLiteral("https://tinyurl.com/api-create.php?url=%1").arg(mOriginalUrl);
+    const QString requestUrl = u"https://tinyurl.com/api-create.php?url=%1"_s.arg(mOriginalUrl);
     QNetworkReply *reply = mNetworkAccessManager->get(QNetworkRequest(QUrl(requestUrl)));
     connect(reply, &QNetworkReply::errorOccurred, this, &TinyUrlEngineInterface::slotErrorFound);
 }

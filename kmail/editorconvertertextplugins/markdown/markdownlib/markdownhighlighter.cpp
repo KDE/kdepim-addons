@@ -5,6 +5,7 @@
 */
 
 #include "markdownhighlighter.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KSyntaxHighlighting/Format>
 #include <KSyntaxHighlighting/State>
@@ -21,22 +22,22 @@ MarkdownHighlighter::~MarkdownHighlighter() = default;
 
 void MarkdownHighlighter::highlight(const QString &str)
 {
-    *mStream << QStringLiteral("<blockquote><pre>");
+    *mStream << u"<blockquote><pre>"_s;
 
     KSyntaxHighlighting::State state;
 
     int lineStart = 0;
-    int lineEnd = str.indexOf(QLatin1Char('\n'));
+    int lineEnd = str.indexOf(u'\n');
 
-    for (; lineEnd != -1; lineStart = lineEnd + 1, lineEnd = str.indexOf(QLatin1Char('\n'), lineStart)) {
+    for (; lineEnd != -1; lineStart = lineEnd + 1, lineEnd = str.indexOf(u'\n', lineStart)) {
         mCurrentLine = str.mid(lineStart, lineEnd - lineStart);
         state = highlightLine(mCurrentLine, state);
-        *mStream << QLatin1Char('\n');
+        *mStream << u'\n';
     }
     if (lineStart < str.size()) { // remaining content if str isn't ending with a newline
         mCurrentLine = str.mid(lineStart);
         state = highlightLine(mCurrentLine, state);
-        *mStream << QLatin1Char('\n');
+        *mStream << u'\n';
     }
     *mStream << QLatin1StringView("</pre></blockquote>\n");
 }
@@ -44,31 +45,31 @@ void MarkdownHighlighter::highlight(const QString &str)
 void MarkdownHighlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)
 {
     if (!format.isDefaultTextStyle(theme())) {
-        *mStream << QStringLiteral("<span style=\"");
+        *mStream << u"<span style=\""_s;
         if (format.hasTextColor(theme())) {
-            *mStream << QStringLiteral("color:") << format.textColor(theme()).name() << QLatin1Char(';');
+            *mStream << u"color:"_s << format.textColor(theme()).name() << u';';
         }
         if (format.hasBackgroundColor(theme())) {
-            *mStream << QStringLiteral("background-color:") << format.backgroundColor(theme()).name() << QLatin1Char(';');
+            *mStream << u"background-color:"_s << format.backgroundColor(theme()).name() << u';';
         }
         if (format.isBold(theme())) {
-            *mStream << QStringLiteral("font-weight:bold;");
+            *mStream << u"font-weight:bold;"_s;
         }
         if (format.isItalic(theme())) {
-            *mStream << QStringLiteral("font-style:italic;");
+            *mStream << u"font-style:italic;"_s;
         }
         if (format.isUnderline(theme())) {
-            *mStream << QStringLiteral("text-decoration:underline;");
+            *mStream << u"text-decoration:underline;"_s;
         }
         if (format.isStrikeThrough(theme())) {
-            *mStream << QStringLiteral("text-decoration:line-through;");
+            *mStream << u"text-decoration:line-through;"_s;
         }
-        *mStream << QStringLiteral("\">");
+        *mStream << u"\">"_s;
     }
 
     *mStream << mCurrentLine.mid(offset, length).toHtmlEscaped();
 
     if (!format.isDefaultTextStyle(theme())) {
-        *mStream << QStringLiteral("</span>");
+        *mStream << u"</span>"_s;
     }
 }

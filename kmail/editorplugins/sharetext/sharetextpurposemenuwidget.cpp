@@ -4,6 +4,8 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "sharetextpurposemenuwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "sharetextplugineditorinterface.h"
 #include <TextCustomEditor/RichTextEditor>
 SharetextPurposeMenuWidget::SharetextPurposeMenuWidget(QWidget *parentWidget, QObject *parent)

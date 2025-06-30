@@ -5,6 +5,8 @@
 */
 
 #include "confirmbeforedeletingcreateruledialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmbeforedeletingcreateruledialog.h"
 #include "confirmbeforedeletingcreaterulewidget.h"
 #include <QDialogButtonBox>
@@ -21,14 +23,13 @@ void ConfirmBeforeDeletingCreateRuleDialogTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingCreateRuleDialog w;
     QVERIFY(!w.windowTitle().isEmpty());
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mConfirmBeforeDeletingCreateRuleWidget =
-        w.findChild<ConfirmBeforeDeletingCreateRuleWidget *>(QStringLiteral("mConfirmBeforeDeletingCreateRuleWidget"));
+    auto mConfirmBeforeDeletingCreateRuleWidget = w.findChild<ConfirmBeforeDeletingCreateRuleWidget *>(u"mConfirmBeforeDeletingCreateRuleWidget"_s);
     mainLayout->addWidget(mConfirmBeforeDeletingCreateRuleWidget);
 
-    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonBox"_s);
     QVERIFY(buttonBox);
     auto okButton = buttonBox->button(QDialogButtonBox::Ok);
     QVERIFY(!okButton->isEnabled());

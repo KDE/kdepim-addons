@@ -5,6 +5,8 @@
 */
 
 #include "autocorrectionplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KActionCollection>
 #include <KActionMenu>
 #include <KLocalizedString>
@@ -21,7 +23,7 @@ AutoCorrectionPluginEditorInterface::~AutoCorrectionPluginEditorInterface() = de
 void AutoCorrectionPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto menu = new KActionMenu(i18n("Autocorrect Text"), this);
-    ac->addAction(QStringLiteral("autocorrect_tool"), menu);
+    ac->addAction(u"autocorrect_tool"_s, menu);
     MessageComposer::PluginActionType type(menu, MessageComposer::PluginActionType::Tools);
     setActionType(type);
 

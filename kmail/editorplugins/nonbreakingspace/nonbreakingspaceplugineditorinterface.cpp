@@ -5,6 +5,8 @@
 */
 
 #include "nonbreakingspaceplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
@@ -20,7 +22,7 @@ NonBreakingSpacePluginEditorInterface::~NonBreakingSpacePluginEditorInterface() 
 void NonBreakingSpacePluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto action = new QAction(i18nc("@action", "Insert Non Breaking Space"), this);
-    ac->addAction(QStringLiteral("insert_non_breaking_space"), action);
+    ac->addAction(u"insert_non_breaking_space"_s, action);
     ac->setDefaultShortcut(action, Qt::CTRL | Qt::Key_Space);
     connect(action, &QAction::triggered, this, &NonBreakingSpacePluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Insert);

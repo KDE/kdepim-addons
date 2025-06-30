@@ -5,6 +5,7 @@
 */
 
 #include "shorturlengineplugin.h"
+using namespace Qt::Literals::StringLiterals;
 
 ShortUrlEnginePlugin::ShortUrlEnginePlugin(QObject *parent)
     : QObject(parent)

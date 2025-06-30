@@ -5,6 +5,8 @@
 */
 
 #include "isgdshorturlengineinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "isgdshorturlengineplugin_debug.h"
 
 #include <QJsonDocument>
@@ -28,10 +30,10 @@ QString IsgdShortUrlEngineInterface::engineName() const
 
 void IsgdShortUrlEngineInterface::generateShortUrl()
 {
-    const QString requestUrl = QStringLiteral("https://is.gd/create.php?%1&url=%2").arg(QStringLiteral("format=json"), mOriginalUrl);
+    const QString requestUrl = u"https://is.gd/create.php?%1&url=%2"_s.arg(u"format=json"_s, mOriginalUrl);
     QNetworkRequest request = QNetworkRequest(QUrl(requestUrl));
 
-    request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/json"));
+    request.setHeader(QNetworkRequest::ContentTypeHeader, u"application/json"_s);
     QNetworkReply *reply = mNetworkAccessManager->get(request);
     connect(reply, &QNetworkReply::errorOccurred, this, &IsgdShortUrlEngineInterface::slotErrorFound);
 }
@@ -61,7 +63,7 @@ void IsgdShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
     }
     const QMap<QString, QVariant> map = json.toVariant().toMap();
 
-    const QVariant var = map.value(QStringLiteral("shorturl"));
+    const QVariant var = map.value(u"shorturl"_s);
     if (var.isValid()) {
         mTextCursor.insertText(var.toString());
     }

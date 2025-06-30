@@ -5,6 +5,7 @@
 */
 
 #include "googleshorturlengineinterface.h"
+using namespace Qt::Literals::StringLiterals;
 
 GoogleShortUrlEngineInterface::GoogleShortUrlEngineInterface(QObject *parent)
     : ShortUrlEngineInterface(parent)
@@ -21,5 +22,5 @@ void GoogleShortUrlEngineInterface::generateShortUrl()
 
 QString GoogleShortUrlEngineInterface::engineName() const
 {
-    return QStringLiteral("googleshorturl");
+    return u"googleshorturl"_s;
 }

@@ -5,6 +5,8 @@
 */
 
 #include "externalcomposerconfiguredialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "externalcomposerconfigurewidget.h"
 #include <KLocalizedString>
 
@@ -41,7 +43,7 @@ void ExternalComposerConfigureDialog::reset()
 
 void ExternalComposerConfigureDialog::help()
 {
-    showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
+    showHelp(u"kmail2"_s, mConfigureWidget->helpAnchor());
 }
 
 #include "moc_externalcomposerconfiguredialog.cpp"

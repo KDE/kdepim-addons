@@ -5,6 +5,8 @@
 */
 
 #include "quicktextconfiguredialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "quicktextconfiguredialog.h"
 #include "quicktextconfigurewidget.h"
 #include <QVBoxLayout>
@@ -24,13 +26,13 @@ void QuickTextConfigureDialogTest::shouldHaveDefaultValues()
 {
     QuickTextConfigureDialog dlg;
 
-    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = dlg.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mQuickTextConfigureWidget = dlg.findChild<QuickTextConfigureWidget *>(QStringLiteral("quicktextconfigurewidget"));
+    auto mQuickTextConfigureWidget = dlg.findChild<QuickTextConfigureWidget *>(u"quicktextconfigurewidget"_s);
     QVERIFY(mQuickTextConfigureWidget);
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 }
 

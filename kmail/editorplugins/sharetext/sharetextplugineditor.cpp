@@ -5,6 +5,8 @@
 */
 
 #include "sharetextplugineditor.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "sharetextplugineditorinterface.h"
 #include <KPluginFactory>
 

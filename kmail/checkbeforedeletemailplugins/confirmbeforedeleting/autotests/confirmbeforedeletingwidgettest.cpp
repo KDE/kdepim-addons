@@ -5,6 +5,8 @@
 */
 
 #include "confirmbeforedeletingwidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmbeforedeletingwidget.h"
 #include <QPushButton>
 #include <QTest>
@@ -21,24 +23,24 @@ void ConfirmBeforeDeletingWidgetTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingWidget w;
 
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mTreeWidget = w.findChild<QTreeWidget *>(QStringLiteral("mTreeWidget"));
+    auto mTreeWidget = w.findChild<QTreeWidget *>(u"mTreeWidget"_s);
     QVERIFY(mTreeWidget->alternatingRowColors());
     QVERIFY(!mTreeWidget->rootIsDecorated());
     QCOMPARE(mTreeWidget->contextMenuPolicy(), Qt::CustomContextMenu);
 
-    auto mAddRule = w.findChild<QPushButton *>(QStringLiteral("mAddRule"));
+    auto mAddRule = w.findChild<QPushButton *>(u"mAddRule"_s);
     QVERIFY(mAddRule);
     QVERIFY(!mAddRule->text().isEmpty());
 
-    auto mRemoveRule = w.findChild<QPushButton *>(QStringLiteral("mRemoveRule"));
+    auto mRemoveRule = w.findChild<QPushButton *>(u"mRemoveRule"_s);
     QVERIFY(mRemoveRule);
     QVERIFY(!mRemoveRule->text().isEmpty());
 
-    auto mModifyRule = w.findChild<QPushButton *>(QStringLiteral("mModifyRule"));
+    auto mModifyRule = w.findChild<QPushButton *>(u"mModifyRule"_s);
     QVERIFY(mModifyRule);
     QVERIFY(!mModifyRule->text().isEmpty());
 }

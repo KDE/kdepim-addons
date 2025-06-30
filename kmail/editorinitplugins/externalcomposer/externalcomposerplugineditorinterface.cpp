@@ -5,6 +5,8 @@
 */
 
 #include "externalcomposerplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KConfigGroup>
 #include <KPIMTextEdit/RichTextComposer>
 #include <KSharedConfig>
@@ -28,7 +30,7 @@ bool ExternalComposerPluginEditorInterface::exec()
 void ExternalComposerPluginEditorInterface::reloadConfig()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group = config->group(QStringLiteral("External Composer"));
+    KConfigGroup group = config->group(u"External Composer"_s);
     mEnabled = group.readEntry("Enabled", false);
     mExternalComposerPath = group.readEntry("ComposerPath", QString());
 }

@@ -5,6 +5,8 @@
 */
 
 #include "checkbeforesendupdatesmtpdialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "checkbeforesendupdatesmtpdialog.h"
 #include <QCheckBox>
 #include <QDialogButtonBox>
@@ -21,18 +23,18 @@ CheckBeforeSendUpdateSmtpDialogTest::CheckBeforeSendUpdateSmtpDialogTest(QObject
 void CheckBeforeSendUpdateSmtpDialogTest::shouldHaveDefaultValue()
 {
     CheckBeforeSendUpdateSmtpDialog w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto lab = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto lab = w.findChild<QLabel *>(u"label"_s);
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 
-    auto mChangeSmtp = w.findChild<QCheckBox *>(QStringLiteral("changesmtp"));
+    auto mChangeSmtp = w.findChild<QCheckBox *>(u"changesmtp"_s);
     QVERIFY(mChangeSmtp);
     QVERIFY(!mChangeSmtp->isChecked());
 
-    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
     QVERIFY(!w.windowTitle().isEmpty());

@@ -5,6 +5,8 @@
 */
 
 #include "triopabshorturlengineinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../shorturlengineplugin.h"
 
 #include <QNetworkReply>
@@ -25,7 +27,7 @@ QString TripAbShortUrlEngineInterface::engineName() const
 
 void TripAbShortUrlEngineInterface::generateShortUrl()
 {
-    const QString requestUrl = QStringLiteral("https://to.ly/api.php?longurl=%1").arg(mOriginalUrl);
+    const QString requestUrl = u"https://to.ly/api.php?longurl=%1"_s.arg(mOriginalUrl);
     QNetworkReply *reply = mNetworkAccessManager->get(QNetworkRequest(QUrl(requestUrl)));
     connect(reply, &QNetworkReply::errorOccurred, this, &TripAbShortUrlEngineInterface::slotErrorFound);
 }

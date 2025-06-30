@@ -5,6 +5,8 @@
 */
 
 #include "confirmaddresswidgettest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../confirmaddresswidget.h"
 #include <QLabel>
 #include <QListWidget>
@@ -23,15 +25,15 @@ ConfirmAddressWidgetTest::~ConfirmAddressWidgetTest() = default;
 void ConfirmAddressWidgetTest::shouldHaveDefaultValue()
 {
     ConfirmAddressWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
+    auto listEmails = w.findChild<QListWidget *>(u"listemails"_s);
     QVERIFY(listEmails);
     QCOMPARE(listEmails->count(), 0);
 
-    auto lab = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto lab = w.findChild<QLabel *>(u"label"_s);
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 }
@@ -39,8 +41,8 @@ void ConfirmAddressWidgetTest::shouldHaveDefaultValue()
 void ConfirmAddressWidgetTest::shouldAddAddress()
 {
     ConfirmAddressWidget w;
-    auto listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
-    const QStringList lst{QStringLiteral("foo"), QStringLiteral("bla"), QStringLiteral("blo")};
+    auto listEmails = w.findChild<QListWidget *>(u"listemails"_s);
+    const QStringList lst{u"foo"_s, u"bla"_s, QStringLiteral("blo")};
     w.setValidAddresses(lst);
     QCOMPARE(listEmails->count(), lst.count());
 }
@@ -48,8 +50,8 @@ void ConfirmAddressWidgetTest::shouldAddAddress()
 void ConfirmAddressWidgetTest::shouldAddValidAndInvalidAddresses()
 {
     ConfirmAddressWidget w;
-    auto listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
-    const QStringList lst{QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
+    auto listEmails = w.findChild<QListWidget *>(u"listemails"_s);
+    const QStringList lst{u"foo"_s, u"foo"_s, QStringLiteral("foo")};
     w.setValidAddresses(lst);
     w.setInvalidAddresses(lst);
     QCOMPARE(listEmails->count(), lst.count() * 2);
@@ -58,8 +60,8 @@ void ConfirmAddressWidgetTest::shouldAddValidAndInvalidAddresses()
 void ConfirmAddressWidgetTest::shouldHaveCheckableItem()
 {
     ConfirmAddressWidget w;
-    auto listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
-    const QStringList lst{QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
+    auto listEmails = w.findChild<QListWidget *>(u"listemails"_s);
+    const QStringList lst{u"foo"_s, u"foo"_s, QStringLiteral("foo")};
     w.setValidAddresses(lst);
     for (int i = 0; i < listEmails->count(); ++i) {
         QListWidgetItem *item = listEmails->item(i);
@@ -76,9 +78,9 @@ void ConfirmAddressWidgetTest::shouldHaveCheckableItem()
 void ConfirmAddressWidgetTest::shouldGetWhileListEmails()
 {
     ConfirmAddressWidget w;
-    auto listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
-    const QStringList validLst{QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
-    const QStringList invalidLst{QStringLiteral("boo"), QStringLiteral("boo2"), QStringLiteral("boo3")};
+    auto listEmails = w.findChild<QListWidget *>(u"listemails"_s);
+    const QStringList validLst{u"foo"_s, u"foo"_s, QStringLiteral("foo")};
+    const QStringList invalidLst{u"boo"_s, u"boo2"_s, QStringLiteral("boo3")};
     w.setValidAddresses(validLst);
     w.setInvalidAddresses(invalidLst);
     for (int i = 0; i < listEmails->count(); ++i) {

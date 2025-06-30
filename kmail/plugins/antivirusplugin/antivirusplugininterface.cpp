@@ -5,6 +5,8 @@
 */
 
 #include "antivirusplugininterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../common/antispamwizard.h"
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -20,7 +22,7 @@ AntiVirusPluginInterface::~AntiVirusPluginInterface() = default;
 void AntiVirusPluginInterface::createAction(KActionCollection *ac)
 {
     auto action = new QAction(i18nc("@action", "&Anti-Virus Wizard…"), this);
-    ac->addAction(QStringLiteral("antiVirusWizard"), action);
+    ac->addAction(u"antiVirusWizard"_s, action);
     connect(action, &QAction::triggered, this, &AntiVirusPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     addActionType(type);

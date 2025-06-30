@@ -5,6 +5,8 @@
 */
 
 #include "markdowncreateimagedialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "markdowncreateimagedialog.h"
 #include "markdowncreateimagewidget.h"
 
@@ -25,12 +27,12 @@ void MarkdownCreateImageDialogTest::shouldHaveDefaultValue()
 {
     MarkdownCreateImageDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
-    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = dlg.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mMarkdownCreateImageWidget = dlg.findChild<MarkdownCreateImageWidget *>(QStringLiteral("markdowncreateimagewidget"));
+    auto mMarkdownCreateImageWidget = dlg.findChild<MarkdownCreateImageWidget *>(u"markdowncreateimagewidget"_s);
     QVERIFY(mMarkdownCreateImageWidget);
-    auto box = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto box = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(box);
     QVERIFY(dlg.linkStr().isEmpty());
 

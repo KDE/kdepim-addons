@@ -5,6 +5,8 @@
 */
 
 #include "confirmbeforedeletingrule.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmbeforedeletingplugin_debug.h"
 #include <Akonadi/MessageStatus>
 #include <KLocalizedString>
@@ -35,8 +37,8 @@ void ConfirmBeforeDeletingRule::setRuleType(RuleType newRuleType)
 
 void ConfirmBeforeDeletingRule::load(const KConfigGroup &group)
 {
-    const QString pattern = group.readEntry(QStringLiteral("Pattern"), QString());
-    const QString checkType = group.readEntry(QStringLiteral("Type"), QString());
+    const QString pattern = group.readEntry(u"Pattern"_s, QString());
+    const QString checkType = group.readEntry(u"Type"_s, QString());
     setPattern(pattern);
     setRuleType(stringToRuleType(checkType));
 }
@@ -48,8 +50,8 @@ bool ConfirmBeforeDeletingRule::isValid() const
 
 void ConfirmBeforeDeletingRule::save(KConfigGroup &group) const
 {
-    group.writeEntry(QStringLiteral("Pattern"), mPattern);
-    group.writeEntry(QStringLiteral("Type"), ruleTypeToString(mRuleType));
+    group.writeEntry(u"Pattern"_s, mPattern);
+    group.writeEntry(u"Type"_s, ruleTypeToString(mRuleType));
 }
 
 ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(const QString &str)
@@ -84,25 +86,25 @@ QString ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::R
     case Unknown:
         break;
     case Body:
-        tmp = QStringLiteral("body");
+        tmp = u"body"_s;
         break;
     case Subject:
-        tmp = QStringLiteral("subject");
+        tmp = u"subject"_s;
         break;
     case To:
-        tmp = QStringLiteral("to");
+        tmp = u"to"_s;
         break;
     case Cc:
-        tmp = QStringLiteral("cc");
+        tmp = u"cc"_s;
         break;
     case Bcc:
-        tmp = QStringLiteral("bcc");
+        tmp = u"bcc"_s;
         break;
     case Unread:
-        tmp = QStringLiteral("unread");
+        tmp = u"unread"_s;
         break;
     case Important:
-        tmp = QStringLiteral("important");
+        tmp = u"important"_s;
         break;
     }
     return tmp;

@@ -5,6 +5,8 @@
 */
 
 #include "triopabshorturlengineplugin.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "triopabshorturlengineinterface.h"
 #include <KPluginFactory>
 
@@ -24,7 +26,7 @@ ShortUrlEngineInterface *TriopAbShortUrlEnginePlugin::createInterface(QObject *p
 
 QString TriopAbShortUrlEnginePlugin::engineName() const
 {
-    return QStringLiteral("triopabshorturl");
+    return u"triopabshorturl"_s;
 }
 
 #include "triopabshorturlengineplugin.moc"

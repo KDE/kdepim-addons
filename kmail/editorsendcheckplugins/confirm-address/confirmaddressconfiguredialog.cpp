@@ -5,6 +5,8 @@
 */
 
 #include "confirmaddressconfiguredialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "confirmaddressconfigurewidget.h"
 #include <KLocalizedString>
 
@@ -40,7 +42,7 @@ void ConfirmAddressConfigureDialog::reset()
 
 void ConfirmAddressConfigureDialog::help()
 {
-    showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
+    showHelp(u"kmail2"_s, mConfigureWidget->helpAnchor());
 }
 
 #include "moc_confirmaddressconfiguredialog.cpp"

@@ -5,6 +5,8 @@
 */
 
 #include "insertspecialcharacterplugineditorinterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
@@ -19,7 +21,7 @@ InsertSpecialCharacterPluginEditorInterface::~InsertSpecialCharacterPluginEditor
 void InsertSpecialCharacterPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto action = new QAction(i18nc("@action", "Insert Special Character…"), this);
-    ac->addAction(QStringLiteral("insert_special_character"), action);
+    ac->addAction(u"insert_special_character"_s, action);
     connect(action, &QAction::triggered, this, &InsertSpecialCharacterPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Insert);
     setActionType(type);

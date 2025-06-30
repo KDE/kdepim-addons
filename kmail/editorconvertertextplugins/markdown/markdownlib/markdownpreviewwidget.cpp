@@ -5,6 +5,8 @@
 */
 
 #include "markdownpreviewwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "markdownconverter.h"
 #include "markdownenginepage.h"
 #include <KLocalizedString>
@@ -64,7 +66,7 @@ void MarkdownPreviewWidget::slotLinkHovered(const QString &url)
     QString truncateUrl = url;
     if (truncateUrl.length() > 80) {
         truncateUrl.truncate(80);
-        truncateUrl += QStringLiteral("…");
+        truncateUrl += u"…"_s;
     }
     mHoverUrlLabel->setText(truncateUrl);
     mHoverUrlLabel->setToolTip(url);
@@ -83,7 +85,7 @@ void MarkdownPreviewWidget::setConverterSettings(bool enableEmbeddedLabel, bool 
 
 void MarkdownPreviewWidget::slotUpdatePreview(const QString &text)
 {
-    mWebView->setHtml(mConverter->convertTextToMarkdown(text), QUrl(QStringLiteral("file://")));
+    mWebView->setHtml(mConverter->convertTextToMarkdown(text), QUrl(u"file://"_s));
 }
 
 #include "moc_markdownpreviewwidget.cpp"

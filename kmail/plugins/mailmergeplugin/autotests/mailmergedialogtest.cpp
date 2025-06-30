@@ -5,6 +5,8 @@
 */
 
 #include "mailmergedialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "../mailmergedialog.h"
 #include "../widgets/mailmergewidget.h"
 #include <QDialogButtonBox>
@@ -21,10 +23,10 @@ void MailMergeDialogTest::shouldHaveDefaultValue()
 {
     MailMerge::MailMergeDialog dlg;
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
-    auto mailMergeWidget = dlg.findChild<MailMerge::MailMergeWidget *>(QStringLiteral("mailmergewidget"));
+    auto mailMergeWidget = dlg.findChild<MailMerge::MailMergeWidget *>(u"mailmergewidget"_s);
     QVERIFY(mailMergeWidget);
 }
 

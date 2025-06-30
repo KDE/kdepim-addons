@@ -5,6 +5,8 @@
 */
 
 #include "markdowncreatelinkdialogtest.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "markdowncreatelinkdialog.h"
 #include "markdowncreatelinkwidget.h"
 
@@ -24,12 +26,12 @@ void MarkdownCreateLinkDialogTest::shouldHaveDefaultValue()
 {
     MarkdownCreateLinkDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
-    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = dlg.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mMarkdownCreateLinkWidget = dlg.findChild<MarkdownCreateLinkWidget *>(QStringLiteral("markdowncreatelinkwidget"));
+    auto mMarkdownCreateLinkWidget = dlg.findChild<MarkdownCreateLinkWidget *>(u"markdowncreatelinkwidget"_s);
     QVERIFY(mMarkdownCreateLinkWidget);
-    auto box = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto box = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(box);
     QVERIFY(dlg.linkStr().isEmpty());
 }

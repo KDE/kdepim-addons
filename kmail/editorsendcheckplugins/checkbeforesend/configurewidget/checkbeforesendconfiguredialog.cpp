@@ -5,6 +5,8 @@
 */
 
 #include "checkbeforesendconfiguredialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "checkbeforesendconfigurewidget.h"
 #include <KLocalizedString>
 
@@ -40,7 +42,7 @@ void CheckBeforeSendConfigureDialog::reset()
 
 void CheckBeforeSendConfigureDialog::help()
 {
-    showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
+    showHelp(u"kmail2"_s, mConfigureWidget->helpAnchor());
 }
 
 #include "moc_checkbeforesendconfiguredialog.cpp"

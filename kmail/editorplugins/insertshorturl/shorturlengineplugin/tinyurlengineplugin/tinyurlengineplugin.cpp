@@ -5,6 +5,8 @@
 */
 
 #include "tinyurlengineplugin.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "tinyurlengineinterface.h"
 #include <KPluginFactory>
 
@@ -24,7 +26,7 @@ ShortUrlEngineInterface *TinyUrlEnginePlugin::createInterface(QObject *parent)
 
 QString TinyUrlEnginePlugin::engineName() const
 {
-    return QStringLiteral("tinyurl");
+    return u"tinyurl"_s;
 }
 
 #include "tinyurlengineplugin.moc"

@@ -5,6 +5,8 @@
 */
 
 #include "akonadidatabasetoolsplugininterface.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "akonadidatabasetoolsdialog.h"
 #include "akonadidatabasetoolsjob.h"
 #include "akonadidatasetools_debug.h"
@@ -24,7 +26,7 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
 {
     {
         auto action = new QAction(i18nc("@action", "&Akonadi Vacuum…"), this);
-        ac->addAction(QStringLiteral("akonadivacuum"), action);
+        ac->addAction(u"akonadivacuum"_s, action);
         connect(action, &QAction::triggered, this, [this]() {
             if (KMessageBox::warningTwoActions(parentWidget(),
                                                i18n("Do you want to vacuum akonadi database?"),
@@ -42,7 +44,7 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
     }
     {
         auto action = new QAction(i18nc("@action", "&Akonadi Fsck…"), this);
-        ac->addAction(QStringLiteral("akonadifsck"), action);
+        ac->addAction(u"akonadifsck"_s, action);
         connect(action, &QAction::triggered, this, [this]() {
             if (KMessageBox::warningTwoActions(
 
@@ -88,10 +90,10 @@ void AkonadiDatabaseToolsPluginInterface::exec()
     connect(job, &AkonadiDatabaseToolsJob::receivedStandardError, dlg, &AkonadiDatabaseToolsDialog::appendErrorText);
     connect(job, &AkonadiDatabaseToolsJob::receivedStandardOutput, dlg, &AkonadiDatabaseToolsDialog::appendText);
     connect(job, &AkonadiDatabaseToolsJob::finished, dlg, [dlg]() {
-        dlg->appendText(QStringLiteral("---------"));
+        dlg->appendText(u"---------"_s);
         dlg->appendText(i18n("Finished."));
     });
     dlg->appendText(i18n("Start…"));
-    dlg->appendText(QStringLiteral("---------"));
+    dlg->appendText(u"---------"_s);
     job->start();
 }
