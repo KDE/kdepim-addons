@@ -36,7 +36,7 @@ void CheckFolderSizeAccountPluginDelegate::paint(QPainter *painter, const QStyle
     // When checking if the item is expanded, we need to check that for the first
     // column, as Qt only recognizes the index as expanded for the first column
     const QModelIndex firstColumn = index.sibling(index.row(), 0);
-    auto collection = firstColumn.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+    const auto collection = firstColumn.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
 
     if (!collection.isValid()) {
         qCritical() << "Invalid collection at index" << firstColumn << firstColumn.data().toString() << "sibling of" << index
