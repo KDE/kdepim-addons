@@ -68,6 +68,10 @@ CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *
     mFolderView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     mFolderView->setAlternatingRowColors(true);
     mFolderView->setModel(mCollectionFilter);
+
+    connect(combobox, &CheckFolderSizeAccountComboBox::activated, this, [this, combobox]() {
+        mCollectionFilter->setFolderSize(combobox->currentFolderSize());
+    });
 }
 
 CheckFolderSizeAccountPluginWidget::~CheckFolderSizeAccountPluginWidget() = default;
