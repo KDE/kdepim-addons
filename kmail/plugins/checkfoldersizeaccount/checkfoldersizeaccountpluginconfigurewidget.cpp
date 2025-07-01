@@ -5,10 +5,15 @@
 */
 
 #include "checkfoldersizeaccountpluginconfigurewidget.h"
+#include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 CheckFolderSizeAccountPluginConfigureWidget::CheckFolderSizeAccountPluginConfigureWidget(QWidget *parent)
     : QWidget{parent}
 {
+    auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(u"mainLayout"_s);
+    mainLayout->setContentsMargins({});
 }
 
 CheckFolderSizeAccountPluginConfigureWidget::~CheckFolderSizeAccountPluginConfigureWidget() = default;

@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "checkfoldersizeaccountpluginconfiguredialog.h"
+#include "checkfoldersizeaccountpluginconfigurewidget.h"
 
 #include <KLocalizedString>
 #include <QDialogButtonBox>
@@ -12,18 +13,18 @@
 using namespace Qt::Literals::StringLiterals;
 CheckFolderSizeAccountPluginConfigureDialog::CheckFolderSizeAccountPluginConfigureDialog(QWidget *parent)
     : QDialog(parent)
+    , mCheckFolderSizeAccountPluginConfigureWidget(new CheckFolderSizeAccountPluginConfigureWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(u"mainLayout"_s);
     setWindowTitle(i18nc("@title:window", "Check Folder Size"));
-    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(u"buttonBox"_s);
-    /*
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckFolderSizeAccountPluginDialog::reject);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckFolderSizeAccountPluginConfigureDialog::reject);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckFolderSizeAccountPluginConfigureDialog::accept);
 
-    mCheckFolderSizeAccountPluginWidget->setObjectName(QLatin1StringView("mCheckFolderSizeAccountPluginWidget"));
-    mainLayout->addWidget(mCheckFolderSizeAccountPluginWidget);
-    */
+    mCheckFolderSizeAccountPluginConfigureWidget->setObjectName(QLatin1StringView("mCheckFolderSizeAccountPluginConfigureWidget"));
+    mainLayout->addWidget(mCheckFolderSizeAccountPluginConfigureWidget);
     mainLayout->addWidget(buttonBox);
 }
 

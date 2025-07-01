@@ -6,11 +6,14 @@
 #pragma once
 
 #include <QDialog>
-
+class CheckFolderSizeAccountPluginConfigureWidget;
 class CheckFolderSizeAccountPluginConfigureDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit CheckFolderSizeAccountPluginConfigureDialog(QWidget *parent = nullptr);
     ~CheckFolderSizeAccountPluginConfigureDialog() override;
+
+private:
+    CheckFolderSizeAccountPluginConfigureWidget *const mCheckFolderSizeAccountPluginConfigureWidget;
 };
