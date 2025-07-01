@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "checkfoldersizeaccountfilterproxymodel.h"
+
 #include <QComboBox>
 
 class CheckFolderSizeAccountComboBox : public QComboBox
@@ -14,4 +16,9 @@ class CheckFolderSizeAccountComboBox : public QComboBox
 public:
     explicit CheckFolderSizeAccountComboBox(QWidget *parent = nullptr);
     ~CheckFolderSizeAccountComboBox() override;
+
+    [[nodiscard]] CheckFolderSizeAccountFilterProxyModel::FolderSize currentFolderSize() const;
+
+private:
+    void fill();
 };

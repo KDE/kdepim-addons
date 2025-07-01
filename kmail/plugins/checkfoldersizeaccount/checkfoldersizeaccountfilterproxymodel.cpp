@@ -17,4 +17,22 @@ CheckFolderSizeAccountFilterProxyModel::CheckFolderSizeAccountFilterProxyModel(Q
 
 CheckFolderSizeAccountFilterProxyModel::~CheckFolderSizeAccountFilterProxyModel() = default;
 
+bool CheckFolderSizeAccountFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
+{
+    return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
+}
+
+CheckFolderSizeAccountFilterProxyModel::FolderSize CheckFolderSizeAccountFilterProxyModel::folderSize() const
+{
+    return mFolderSize;
+}
+
+void CheckFolderSizeAccountFilterProxyModel::setFolderSize(const FolderSize &newFolderSize)
+{
+    if (mFolderSize != newFolderSize) {
+        mFolderSize = newFolderSize;
+        invalidateFilter();
+    }
+}
+
 #include "moc_checkfoldersizeaccountfilterproxymodel.cpp"
