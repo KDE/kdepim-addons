@@ -22,6 +22,30 @@ CheckFolderSizeAccountFilterProxyModel::~CheckFolderSizeAccountFilterProxyModel(
 
 bool CheckFolderSizeAccountFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
+    const auto collection = source_parent.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+    const Akonadi::CollectionStatistics statistics = collection.statistics();
+    // qDebug() << " SSSSSSSSSS " << statistics.size();
+    switch (mFolderSize) {
+    case FolderSize::All:
+    case FolderSize::MoreThan100K:
+        if (statistics.size() < 100000) {
+            return false;
+        }
+        break;
+    case FolderSize::MoreThan1M:
+        if (statistics.size() < 1000000) {
+            return false;
+        }
+        break;
+    case FolderSize::MoreThan10M:
+        if (statistics.size() < 10000000) {
+            return false;
+        }
+        break;
+    case FolderSize::Unknown:
+        break;
+    }
+
     return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
 }
 
