@@ -10,6 +10,7 @@
 #include <KFormat>
 #include <QPainter>
 #include <QTreeView>
+
 CheckFolderSizeAccountPluginDelegate::CheckFolderSizeAccountPluginDelegate(QTreeView *view, QObject *parent)
     : QStyledItemDelegate{parent}
     , mTreeView(view)
@@ -46,8 +47,16 @@ void CheckFolderSizeAccountPluginDelegate::paint(QPainter *painter, const QStyle
 
     const Akonadi::CollectionStatistics statistics = collection.statistics();
 
-    KFormat format;
-    painter->drawText(textRect, Qt::AlignRight | Qt::AlignVCenter, QStringLiteral("%1").arg(format.formatByteSize(qMax(0LL, statistics.size()))));
+    const auto size = statistics.size();
+    if (size > -1 && index.parent().isValid()) {
+        painter->save();
+        if (size > 10000000) {
+            painter->setPen(QPen(Qt::red));
+        }
+        KFormat format;
+        painter->drawText(textRect, Qt::AlignRight | Qt::AlignVCenter, QStringLiteral("%1").arg(format.formatByteSize(qMax(0LL, size))));
+        painter->restore();
+    }
 }
 
 #include "moc_checkfoldersizeaccountplugindelegate.cpp"
