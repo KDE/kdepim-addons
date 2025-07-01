@@ -32,7 +32,7 @@ void CheckFolderSizeAccountPluginDelegate::paint(QPainter *painter, const QStyle
     // Now calculate the rectangle for the text
     QStyle *s = mTreeView->style();
     const QWidget *widget = option4.widget;
-    const QRect textRect = s->subElementRect(QStyle::SE_ItemViewItemText, &option4, widget);
+    const QRect textRect = s->subElementRect(QStyle::SE_ItemViewItemText, &option4, widget).adjusted(0, 0, -10, 0);
 
     // When checking if the item is expanded, we need to check that for the first
     // column, as Qt only recognizes the index as expanded for the first column
