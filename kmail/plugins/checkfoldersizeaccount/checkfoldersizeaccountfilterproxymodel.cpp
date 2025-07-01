@@ -4,6 +4,9 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "checkfoldersizeaccountfilterproxymodel.h"
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionStatistics>
+#include <Akonadi/EntityTreeModel>
 
 CheckFolderSizeAccountFilterProxyModel::CheckFolderSizeAccountFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel{parent}
