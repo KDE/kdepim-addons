@@ -12,7 +12,7 @@ namespace Akonadi
 class EntityTreeModel;
 class ChangeRecorder;
 }
-class QSortFilterProxyModel;
+class CheckFolderSizeAccountFilterProxyModel;
 class CheckFolderSizeAccountPluginWidget : public QWidget
 {
     Q_OBJECT
@@ -26,5 +26,5 @@ private:
     QTreeView *const mFolderView;
     Akonadi::EntityTreeModel *mModel = nullptr;
     Akonadi::ChangeRecorder *const mChangeRecorder;
-    QSortFilterProxyModel *const mCollectionFilter;
+    CheckFolderSizeAccountFilterProxyModel *const mCollectionFilter;
 };

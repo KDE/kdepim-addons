@@ -18,6 +18,7 @@ target_sources(
         checkfoldersizeaccountpluginconfiguredialog.cpp
         checkfoldersizeaccountpluginconfigurewidget.h
         checkfoldersizeaccountpluginconfigurewidget.cpp
+        checkfoldersizeaccountfilterproxymodel.h checkfoldersizeaccountfilterproxymodel.cpp
 )
 
 ecm_qt_declare_logging_category(kmail_checkfoldersizeaccount

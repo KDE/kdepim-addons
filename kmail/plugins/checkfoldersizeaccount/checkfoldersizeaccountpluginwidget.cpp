@@ -15,12 +15,13 @@
 #include <QLineEdit>
 #include <QTreeView>
 #include <QVBoxLayout>
+#include <checkfoldersizeaccountfilterproxymodel.h>
 using namespace Qt::Literals::StringLiterals;
 CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *parent)
     : QWidget{parent}
     , mFolderView(new QTreeView(this))
     , mChangeRecorder(new Akonadi::ChangeRecorder(this))
-    , mCollectionFilter(new QSortFilterProxyModel(this))
+    , mCollectionFilter(new CheckFolderSizeAccountFilterProxyModel(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(u"mainLayout"_s);
@@ -42,12 +43,7 @@ CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *
     mimeTypeProxy->addMimeTypeFilters(QStringList() << KMime::Message::mimeType());
     mimeTypeProxy->setSourceModel(mModel);
 
-    mCollectionFilter->setRecursiveFilteringEnabled(true);
     mCollectionFilter->setSourceModel(mimeTypeProxy);
-    mCollectionFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);
-    mCollectionFilter->setSortRole(Qt::DisplayRole);
-    mCollectionFilter->setSortCaseSensitivity(Qt::CaseSensitive);
-    mCollectionFilter->setSortLocaleAware(true);
 
     auto searchLine = new QLineEdit(this);
     KLineEditEventHandler::catchReturnKey(searchLine);
