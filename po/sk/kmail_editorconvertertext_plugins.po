@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorconvertertext_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-19 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2019-08-05 11:53+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Lokalize 19.07.90\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: markdown/markdownlib/markdownconfiguredialog.cpp:16
+#: markdown/markdownlib/markdownconfiguredialog.cpp:18
 #, fuzzy, kde-format
 #| msgid "Configure Markdown Plugin"
 msgctxt "@title:window"
@@ -72,7 +72,7 @@ msgid "Height:"
 msgstr "Výška:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:39
-#: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:31
 #, kde-format
 msgid "Title:"
 msgstr "Titulok:"
@@ -100,7 +100,7 @@ msgctxt "@title:window"
 msgid "Add Link"
 msgstr "Pridať odkaz"
 
-#: markdown/markdownlib/markdowncreatelinkwidget.cpp:30
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:32
 #, kde-format
 msgid "Link:"
 msgstr "Odkaz:"
@@ -112,72 +112,72 @@ msgctxt "@title:window"
 msgid "Markdown Rendering Preview"
 msgstr "Ukážka vykreslenia markdown"
 
-#: markdown/markdownlib/markdownpreviewwidget.cpp:75
+#: markdown/markdownlib/markdownpreviewwidget.cpp:77
 #, kde-format
 msgid "Converter Error"
 msgstr "Chyba prevodníka"
 
-#: markdown/plugin/markdowninterface.cpp:36
+#: markdown/plugin/markdowninterface.cpp:38
 #, fuzzy, kde-format
 #| msgid "Generate HTML from markdown language."
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Vygenerovať HTML zo značkovacieho jazyka."
 
-#: markdown/plugin/markdowninterface.cpp:53
+#: markdown/plugin/markdowninterface.cpp:55
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:55
+#: markdown/plugin/markdowninterface.cpp:57
 #, fuzzy, kde-format
 #| msgid "Markdown Action"
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Akcia Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:60
+#: markdown/plugin/markdowninterface.cpp:62
 #, kde-format
 msgid "Add Title"
 msgstr "Pridať titulok"
 
-#: markdown/plugin/markdowninterface.cpp:63
+#: markdown/plugin/markdowninterface.cpp:65
 #, kde-format
 msgid "Level %1"
 msgstr "Úroveň %1"
 
-#: markdown/plugin/markdowninterface.cpp:67
+#: markdown/plugin/markdowninterface.cpp:69
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "Horizontálne pravidlo"
 
-#: markdown/plugin/markdowninterface.cpp:69
+#: markdown/plugin/markdowninterface.cpp:71
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "Zmeniť vybratý text na tučné"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:73
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "Zmeniť vybratý text na kurzívu"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:75
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "Zmeniť vybratý text na kód"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:77
 #, fuzzy, kde-format
 #| msgid "Change Selected Text as Bold"
 msgid "Change Selected Text as Block Quote"
 msgstr "Zmeniť vybratý text na tučné"
 
-#: markdown/plugin/markdowninterface.cpp:78
+#: markdown/plugin/markdowninterface.cpp:80
 #, kde-format
 msgid "Add Link"
 msgstr "Pridať odkaz"
 
-#: markdown/plugin/markdowninterface.cpp:79
+#: markdown/plugin/markdowninterface.cpp:81
 #, kde-format
 msgid "Add Image"
 msgstr "Pridať obrázok"

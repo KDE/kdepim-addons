@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-19 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-08-09 03:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.04.70\n"
 
-#: markdown/markdownlib/markdownconfiguredialog.cpp:16
+#: markdown/markdownlib/markdownconfiguredialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Markdown Plugin"
@@ -66,7 +66,7 @@ msgid "Height:"
 msgstr "高度："
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:39
-#: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:31
 #, kde-format
 msgid "Title:"
 msgstr "標題："
@@ -93,7 +93,7 @@ msgctxt "@title:window"
 msgid "Add Link"
 msgstr "新增連結"
 
-#: markdown/markdownlib/markdowncreatelinkwidget.cpp:30
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:32
 #, kde-format
 msgid "Link:"
 msgstr "連結："
@@ -104,69 +104,69 @@ msgctxt "@title:window"
 msgid "Markdown Rendering Preview"
 msgstr "Markdown 渲染預覽"
 
-#: markdown/markdownlib/markdownpreviewwidget.cpp:75
+#: markdown/markdownlib/markdownpreviewwidget.cpp:77
 #, kde-format
 msgid "Converter Error"
 msgstr "轉換器錯誤"
 
-#: markdown/plugin/markdowninterface.cpp:36
+#: markdown/plugin/markdowninterface.cpp:38
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "從 Markdown 語言產生 HTML。"
 
-#: markdown/plugin/markdowninterface.cpp:53
+#: markdown/plugin/markdowninterface.cpp:55
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:55
+#: markdown/plugin/markdowninterface.cpp:57
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Markdown 動作"
 
-#: markdown/plugin/markdowninterface.cpp:60
+#: markdown/plugin/markdowninterface.cpp:62
 #, kde-format
 msgid "Add Title"
 msgstr "新增標題"
 
-#: markdown/plugin/markdowninterface.cpp:63
+#: markdown/plugin/markdowninterface.cpp:65
 #, kde-format
 msgid "Level %1"
 msgstr "等級 %1"
 
-#: markdown/plugin/markdowninterface.cpp:67
+#: markdown/plugin/markdowninterface.cpp:69
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "橫線"
 
-#: markdown/plugin/markdowninterface.cpp:69
+#: markdown/plugin/markdowninterface.cpp:71
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "將選取文字變更為粗體"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:73
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "將選取文字變更為斜體"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:75
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "將選取文字變更為程式碼"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:77
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "將選取文字變更為區塊引言"
 
-#: markdown/plugin/markdowninterface.cpp:78
+#: markdown/plugin/markdowninterface.cpp:80
 #, kde-format
 msgid "Add Link"
 msgstr "新增連結"
 
-#: markdown/plugin/markdowninterface.cpp:79
+#: markdown/plugin/markdowninterface.cpp:81
 #, kde-format
 msgid "Add Image"
 msgstr "新增影像"

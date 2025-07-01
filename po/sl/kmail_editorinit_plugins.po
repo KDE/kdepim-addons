@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-07-30 09:18+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -19,19 +19,19 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: externalcomposer/externalcomposerconfiguredialog.cpp:14
+#: externalcomposer/externalcomposerconfiguredialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
 msgstr "Nastavi vstavek \"Zunanji urejevalnik\""
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:23
+#: externalcomposer/externalcomposerconfigurewidget.cpp:25
 #, kde-format
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Uporabi zunanji urejevalnik namesto sestavljalnika"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid ""

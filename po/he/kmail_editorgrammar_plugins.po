@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-08-01 08:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,7 +18,7 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: grammalecte/grammalecteinterface.cpp:78
+#: grammalecte/grammalecteinterface.cpp:80
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "בדיקת &דקדוק (Grammalecte)"
@@ -28,12 +28,12 @@ msgstr "בדיקת &דקדוק (Grammalecte)"
 msgid "Grammalecte Plugin"
 msgstr "תוסף Grammalecte"
 
-#: languagetool/languagetoolinterface.cpp:81
+#: languagetool/languagetoolinterface.cpp:83
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&בדיקת דקדוק (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:94
+#: languagetool/languagetoolinterface.cpp:96
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -44,7 +44,7 @@ msgstr ""
 "הבקשות שלך תישלחנה לאתר חיצוני (https://languagetool.org/‎).\n"
 "להמשיך?"
 
-#: languagetool/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"

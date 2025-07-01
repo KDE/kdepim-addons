@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:42+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,14 +19,14 @@ msgstr ""
 "X-Environment: kde\n"
 
 # >> @title:window
-#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
+#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:16
 #, fuzzy, kde-format
 #| msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "Подешавање прикључка за аутоматско додавање контаката"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:101
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -36,14 +36,14 @@ msgstr ""
 "Морате да направите адресар пре додавања неког контакта. Желите ли да "
 "направите адресар?"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:100
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:102
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Нема адресара"
 
 # >> @title:window
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:101
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, fuzzy, kde-format
 #| msgid "Add Address Book"
 msgctxt "@action:button"
@@ -51,21 +51,21 @@ msgid "Create Address Book"
 msgstr "Додавање адресара"
 
 # >> @title:window
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:105
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:107
 #, fuzzy, kde-format
 #| msgid "Add Address Book"
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Додавање адресара"
 
-#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:29
 #, fuzzy, kde-format
 #| msgid "Automatic Add Contacts"
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Аутоматски додај контакте"
 
-#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:43
 #, fuzzy, kde-format
 #| msgid "Select the addressbook in which to store contacts:"
 msgctxt "@label:textbox"
@@ -73,18 +73,18 @@ msgid "Select the addressbook in which to store contacts:"
 msgstr "Адресар у који треба складиштити контакте:"
 
 # rewrite-msgid: /email/message/
-#: checkbeforesend/checkbeforesendinterface.cpp:35
+#: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
 msgid "Do you want to send the email as HTML?"
 msgstr "Желите ли да пошаљете поруку као ХТМЛ?"
 
 # rewrite-msgid: /email/message/
-#: checkbeforesend/checkbeforesendinterface.cpp:36
+#: checkbeforesend/checkbeforesendinterface.cpp:38
 #, kde-format
 msgid "Send email as plain text"
 msgstr "Слање поруке као обични текст"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:37
+#: checkbeforesend/checkbeforesendinterface.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
@@ -120,7 +120,7 @@ msgstr ""
 "текућим идентитетом?"
 
 # >> @title:window
-#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:16
 #, fuzzy, kde-format
 #| msgid "Configure \"Check Before Send Mail\" Plugin"
 msgctxt "@title:window"
@@ -195,7 +195,7 @@ msgid "Do you want to send some attachment?"
 msgstr "Желите ли да пошаљете неки прилог?"
 
 # >> @title:window
-#: confirm-address/confirmaddressconfiguredialog.cpp:14
+#: confirm-address/confirmaddressconfiguredialog.cpp:16
 #, fuzzy, kde-format
 #| msgid "Configure \"Confirm Email Address\" Plugin"
 msgctxt "@title:window"
@@ -203,7 +203,7 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Подешавање прикључка за потврду адреса е‑поште"
 
 # >> @option:radio
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:32
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:34
 #, fuzzy, kde-format
 #| msgid "Accepted Domain Name"
 msgctxt "@option:radio"
@@ -211,55 +211,55 @@ msgid "Accepted Domain Name"
 msgstr "Прихваћено име домена"
 
 # >> @option:radio
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:37
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:39
 #, fuzzy, kde-format
 #| msgid "Rejected Domain Name"
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Одбијено име домена"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:45
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:64
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "A&dd…"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:46
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:65
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "Re&move"
 msgstr "&Уклони"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:49
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:68
 #, fuzzy, kde-format
 #| msgid "Mod&ify..."
 msgid "Mod&ify…"
 msgstr "&Измени..."
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
 #, kde-format
 msgid "Enter new domain name:"
 msgstr "Унесите ново име домена:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:52
 #, fuzzy, kde-format
 #| msgid "Do you want to send some attachment?"
 msgid "Do you want to remove this domain?"
 msgstr "Желите ли да пошаљете неки прилог?"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:54
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:56
 #, kde-format
 msgid "Whitelist of Addresses"
 msgstr "Бела листа адреса"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Enter new email address:"
 msgstr "Унесите нову адресу е‑поште:"
 
 # rewrite-msgid: /email/message/
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:71
 #, fuzzy, kde-format
 #| msgid "Do you want to send the email as HTML?"
 msgid "Do you want to remove this email address?"

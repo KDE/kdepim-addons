@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorgrammar_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-08-01 20:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: grammalecte/grammalecteinterface.cpp:78
+#: grammalecte/grammalecteinterface.cpp:80
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "&Перевірити граматику (Grammalecte)"
@@ -30,12 +30,12 @@ msgstr "&Перевірити граматику (Grammalecte)"
 msgid "Grammalecte Plugin"
 msgstr "Додаток Grammalecte"
 
-#: languagetool/languagetoolinterface.cpp:81
+#: languagetool/languagetoolinterface.cpp:83
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&Перевірити граматику (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:94
+#: languagetool/languagetoolinterface.cpp:96
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -46,7 +46,7 @@ msgstr ""
 "Ваш текст буде надіслано на зовнішній сайт (https://languagetool.org/).\n"
 "Хочете виконати цю дію?"
 
-#: languagetool/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-07-16 11:02+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -18,20 +18,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: externalcomposer/externalcomposerconfiguredialog.cpp:14
+#: externalcomposer/externalcomposerconfiguredialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
 msgstr "Indstil plugin for \"ekstern brevskriver\""
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:23
+#: externalcomposer/externalcomposerconfigurewidget.cpp:25
 #, fuzzy, kde-format
 #| msgid "Use external editor instead of composer"
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Brug ekstern editor i stedet for brevskriveren"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid ""

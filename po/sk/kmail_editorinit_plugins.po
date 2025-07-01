@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorinit_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2017-05-08 17:08+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,21 +15,21 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: externalcomposer/externalcomposerconfiguredialog.cpp:14
+#: externalcomposer/externalcomposerconfiguredialog.cpp:16
 #, fuzzy, kde-format
 #| msgid "Configure \"External Composer\" Plugin"
 msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
 msgstr "Nastaviť plugin \"Externý editor\""
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:23
+#: externalcomposer/externalcomposerconfigurewidget.cpp:25
 #, fuzzy, kde-format
 #| msgid "Use external editor instead of composer"
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Použiť externý editor namiesto composera"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, fuzzy, kde-format
 #| msgid ""
 #| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "

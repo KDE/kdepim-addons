@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-19 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: markdown/markdownlib/markdownconfiguredialog.cpp:16
+#: markdown/markdownlib/markdownconfiguredialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Markdown Plugin"
@@ -68,7 +68,7 @@ msgid "Height:"
 msgstr "औनत्यम्‌:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:39
-#: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:31
 #, kde-format
 msgid "Title:"
 msgstr "शीर्षक:"
@@ -95,7 +95,7 @@ msgctxt "@title:window"
 msgid "Add Link"
 msgstr "लिङ्कं योजयतु"
 
-#: markdown/markdownlib/markdowncreatelinkwidget.cpp:30
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:32
 #, kde-format
 msgid "Link:"
 msgstr "सम्बन्ध:"
@@ -106,69 +106,69 @@ msgctxt "@title:window"
 msgid "Markdown Rendering Preview"
 msgstr "Markdown रेण्डरिंग पूर्वावलोकन"
 
-#: markdown/markdownlib/markdownpreviewwidget.cpp:75
+#: markdown/markdownlib/markdownpreviewwidget.cpp:77
 #, kde-format
 msgid "Converter Error"
 msgstr "परिवर्तक त्रुटि"
 
-#: markdown/plugin/markdowninterface.cpp:36
+#: markdown/plugin/markdowninterface.cpp:38
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "markdown भाषातः HTML जनयन्तु ।"
 
-#: markdown/plugin/markdowninterface.cpp:53
+#: markdown/plugin/markdowninterface.cpp:55
 #, kde-format
 msgid "Markdown"
 msgstr "मार्कडाउन"
 
-#: markdown/plugin/markdowninterface.cpp:55
+#: markdown/plugin/markdowninterface.cpp:57
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "मार्कडाउन एक्शन"
 
-#: markdown/plugin/markdowninterface.cpp:60
+#: markdown/plugin/markdowninterface.cpp:62
 #, kde-format
 msgid "Add Title"
 msgstr "शीर्षकं योजयतु"
 
-#: markdown/plugin/markdowninterface.cpp:63
+#: markdown/plugin/markdowninterface.cpp:65
 #, kde-format
 msgid "Level %1"
 msgstr "स्तरः %1"
 
-#: markdown/plugin/markdowninterface.cpp:67
+#: markdown/plugin/markdowninterface.cpp:69
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "क्षैतिज नियम"
 
-#: markdown/plugin/markdowninterface.cpp:69
+#: markdown/plugin/markdowninterface.cpp:71
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "चयनितं पाठं Bold इति परिवर्तयन्तु"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:73
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "चयनितं पाठं इटालिकरूपेण परिवर्तयन्तु"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:75
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "चयनितं पाठं Code इति परिवर्तयन्तु"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:77
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "चयनितं पाठं Block Quote इति परिवर्तयन्तु"
 
-#: markdown/plugin/markdowninterface.cpp:78
+#: markdown/plugin/markdowninterface.cpp:80
 #, kde-format
 msgid "Add Link"
 msgstr "लिङ्कं योजयतु"
 
-#: markdown/plugin/markdowninterface.cpp:79
+#: markdown/plugin/markdowninterface.cpp:81
 #, kde-format
 msgid "Add Image"
 msgstr "चित्रं योजयतु"

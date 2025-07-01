@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorgrammar_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-09-14 14:22+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.11.70\n"
 
-#: grammalecte/grammalecteinterface.cpp:78
+#: grammalecte/grammalecteinterface.cpp:80
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "&Grammatikprüfung (Grammalecte)"
@@ -29,12 +29,12 @@ msgstr "&Grammatikprüfung (Grammalecte)"
 msgid "Grammalecte Plugin"
 msgstr "Grammalecte-Modul"
 
-#: languagetool/languagetoolinterface.cpp:81
+#: languagetool/languagetoolinterface.cpp:83
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&Grammatikprüfung (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:94
+#: languagetool/languagetoolinterface.cpp:96
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -45,7 +45,7 @@ msgstr ""
 "Ihr Text wird an die externe Webseite https://languagetool.org gesendet.\n"
 "Möchten Sie fortfahren?"
 
-#: languagetool/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"

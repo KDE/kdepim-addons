@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorconvertertext_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-19 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2019-12-20 11:14-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 19.08.2\n"
 
-#: markdown/markdownlib/markdownconfiguredialog.cpp:16
+#: markdown/markdownlib/markdownconfiguredialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Markdown Plugin"
@@ -73,7 +73,7 @@ msgid "Height:"
 msgstr "Altura:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:39
-#: markdown/markdownlib/markdowncreatelinkwidget.cpp:29
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:31
 #, kde-format
 msgid "Title:"
 msgstr "Título:"
@@ -100,7 +100,7 @@ msgctxt "@title:window"
 msgid "Add Link"
 msgstr "Adicionar link"
 
-#: markdown/markdownlib/markdowncreatelinkwidget.cpp:30
+#: markdown/markdownlib/markdowncreatelinkwidget.cpp:32
 #, kde-format
 msgid "Link:"
 msgstr "Link:"
@@ -111,71 +111,71 @@ msgctxt "@title:window"
 msgid "Markdown Rendering Preview"
 msgstr "Visualização da renderização do Markdown"
 
-#: markdown/markdownlib/markdownpreviewwidget.cpp:75
+#: markdown/markdownlib/markdownpreviewwidget.cpp:77
 #, kde-format
 msgid "Converter Error"
 msgstr "Erro no conversor"
 
-#: markdown/plugin/markdowninterface.cpp:36
+#: markdown/plugin/markdowninterface.cpp:38
 #, fuzzy, kde-format
 #| msgid "Generate HTML from markdown language."
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Gerar HTML a partir da linguagem Markdown."
 
-#: markdown/plugin/markdowninterface.cpp:53
+#: markdown/plugin/markdowninterface.cpp:55
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:55
+#: markdown/plugin/markdowninterface.cpp:57
 #, fuzzy, kde-format
 #| msgid "Markdown Action"
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Ação Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:60
+#: markdown/plugin/markdowninterface.cpp:62
 #, kde-format
 msgid "Add Title"
 msgstr "Adicionar título"
 
-#: markdown/plugin/markdowninterface.cpp:63
+#: markdown/plugin/markdowninterface.cpp:65
 #, kde-format
 msgid "Level %1"
 msgstr "Nível %1"
 
-#: markdown/plugin/markdowninterface.cpp:67
+#: markdown/plugin/markdowninterface.cpp:69
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "Régua horizontal"
 
-#: markdown/plugin/markdowninterface.cpp:69
+#: markdown/plugin/markdowninterface.cpp:71
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "Alterar o texto selecionado para negrito"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:73
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "Alterar o texto selecionado para itálico"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:75
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "Alterar o texto selecionado para código"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:77
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "Alterar o texto selecionado para citação em bloco"
 
-#: markdown/plugin/markdowninterface.cpp:78
+#: markdown/plugin/markdowninterface.cpp:80
 #, kde-format
 msgid "Add Link"
 msgstr "Adicionar link"
 
-#: markdown/plugin/markdowninterface.cpp:79
+#: markdown/plugin/markdowninterface.cpp:81
 #, kde-format
 msgid "Add Image"
 msgstr "Adicionar imagem"

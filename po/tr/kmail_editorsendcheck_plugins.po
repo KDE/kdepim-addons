@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:42+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-07-30 17:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 24.07.70\n"
 
-#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
+#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "“Kişileri kendiliğinden ekle” Eklentisini Yapılandır"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:101
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -34,47 +34,47 @@ msgstr ""
 "Yeni kişi eklemeden önce bir adres defteri oluşturmalısınız. Bir adres "
 "defteri oluşturmak istiyor musunuz?"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:100
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:102
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Kullanılabilir Adres Defteri Yok"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:101
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Adres Defteri Oluştur"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:105
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:107
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Adres Defteri Ekle"
 
-#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:29
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Kişileri kendiliğinden ekle"
 
-#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:43
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "Kişilerin depolanacağı adres defterini seç:"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:35
+#: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
 msgid "Do you want to send the email as HTML?"
 msgstr "E-postayı HTML olarak göndermek istiyor musunuz?"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:36
+#: checkbeforesend/checkbeforesendinterface.cpp:38
 #, kde-format
 msgid "Send email as plain text"
 msgstr "E-postayı düz metin olarak gönder"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:37
+#: checkbeforesend/checkbeforesendinterface.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
@@ -102,7 +102,7 @@ msgstr ""
 "E-postayı geçerli kimlikte tanımlı olan yerine başka bir SMTP ile mi "
 "göndermek istiyorsunuz?"
 
-#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
@@ -162,63 +162,63 @@ msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "Birkaç ek göndermek istiyor musunuz?"
 
-#: confirm-address/confirmaddressconfiguredialog.cpp:14
+#: confirm-address/confirmaddressconfiguredialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "“E-posta Adresini Doğrula” Eklentisini Yapılandır"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:32
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:34
 #, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Kabul edilen alan adları"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:37
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:39
 #, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Reddedilen alan adları"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:45
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:64
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "A&dd…"
 msgstr "E&kle…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:46
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:65
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "Re&move"
 msgstr "&Kaldır"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:49
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:68
 #, kde-format
 msgid "Mod&ify…"
 msgstr "&Değiştir…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
 #, kde-format
 msgid "Enter new domain name:"
 msgstr "Yeni bir alan adı girin:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:52
 #, kde-format
 msgid "Do you want to remove this domain?"
 msgstr "Bu alan adını kaldırmak istiyor musunuz?"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:54
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:56
 #, kde-format
 msgid "Whitelist of Addresses"
 msgstr "Adres Beyaz Listesi"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Enter new email address:"
 msgstr "Yeni e-posta adresi girin:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:71
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgstr "Bu e-posta adresini kaldırmak istiyor musunuz?"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:42+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-09-07 21:08+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.0\n"
 
-#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:14
+#: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "\"தானாக தொடர்புகளை சேர்\" செருகுநிரலுக்கான அமைப்புகள்"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:99
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:101
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -31,47 +31,47 @@ msgid ""
 "create an address book?"
 msgstr "தொடர்பை சேர்க்குமுன் முகவரிப்புத்தகத்தை உருவாக்க வேண்டும். அவ்வாறு செய்ய வேண்டுமா?"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:100
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:102
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "எந்த முகவரிப்புத்தகமும் இல்லை"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:101
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "முகவரிப்புத்தகத்தை உருவாக்கு"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:105
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:107
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "முகவரிப்புத்தகத்தை சேர்"
 
-#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:27
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:29
 #, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "தானாக தொடர்புகளை சேர்"
 
-#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:41
+#: automaticaddcontacts/automaticaddcontactstabwidget.cpp:43
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "தொடர்புகளை சேமிக்க வேண்டிய முகவரிப்புத்தகத்தை தேர்ந்தெடுக்கவும்:"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:35
+#: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
 msgid "Do you want to send the email as HTML?"
 msgstr "அஞ்சலை HTML-ஆக அனுப்ப வேண்டுமா?"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:36
+#: checkbeforesend/checkbeforesendinterface.cpp:38
 #, kde-format
 msgid "Send email as plain text"
 msgstr "அஞ்சலை வெறும் உரையாக அனுப்பு"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:37
+#: checkbeforesend/checkbeforesendinterface.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
@@ -99,7 +99,7 @@ msgstr ""
 "தற்போதைய அடையாளத்திற்கு அமைக்கப்பட்டுள்ளதைத் தவிர்த்து வேறு SMTP சேவையகத்தைப் பயன்படுத்த "
 "வேண்டுமா?"
 
-#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:14
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
@@ -160,63 +160,63 @@ msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "எதையாவது உடனிணைப்பாக அனுப்ப வேண்டுமா?"
 
-#: confirm-address/confirmaddressconfiguredialog.cpp:14
+#: confirm-address/confirmaddressconfiguredialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:32
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:34
 #, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:37
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:39
 #, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:45
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:64
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "A&dd…"
 msgstr "&சேர்…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:46
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:65
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "Re&move"
 msgstr "&நீக்கு..."
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:49
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:68
 #, kde-format
 msgid "Mod&ify…"
 msgstr "&மாற்று…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
 #, kde-format
 msgid "Enter new domain name:"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:52
 #, kde-format
 msgid "Do you want to remove this domain?"
 msgstr "இந்த ஆள்களத்தை நீக்க வேண்டுமா?"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:54
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:56
 #, kde-format
 msgid "Whitelist of Addresses"
 msgstr "முகவரிகளின் அனுமதிப்பட்டியல்"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Enter new email address:"
 msgstr "புதிய மின்னஞ்சல் முகவரியை உள்ளிடவும்:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:71
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgstr ""

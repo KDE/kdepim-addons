@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-11 00:43+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2025-06-05 06:00+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,54 +18,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.6\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:22
+#: aitool/aitooltextplugineditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
 msgstr "ხი-ის ჩატის გახსნა"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:23
+#: autocorrection/autocorrectionplugineditorinterface.cpp:25
 #, kde-format
 msgid "Autocorrect Text"
 msgstr "ტექსტის ავტოკორექცია"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:28
+#: autocorrection/autocorrectionplugineditorinterface.cpp:30
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "ტექსტის სრული ავტოკორექცია"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:32
+#: autocorrection/autocorrectionplugineditorinterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "მონიშნული ტექსტის ავტოკორექცია"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:26
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "პასუხის ავტოგენერაცია"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:31
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "შეჯამების ტექსტი"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:37
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "ტექსტის კორექცია"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:43
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "სწრაფი პასუხი"
 
-#: insertemail/insertemailplugineditorinterface.cpp:23
+#: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
@@ -77,29 +77,29 @@ msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "აირჩიეთ მოკლე URL-ის სერვერი:"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:61
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "მოკლე URL-ის ჩასმა…"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:85
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:87
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
 msgstr "ქსელთან მიერთების პრობლემა. URL-ს ვერ შევამოკლებ."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:92
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:94
 #, kde-format
 msgid "String doesn't seem to be a URL"
 msgstr "სტრიქონი URL-ს არ ჰგავს"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:98
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:100
 #, kde-format
 msgid "An error occurred: \"%1\""
 msgstr "შეცდომა: %1"
 
-#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
-#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:32
+#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:50
 #, kde-format
 msgid ""
 "Error reported by server:\n"
@@ -108,24 +108,24 @@ msgstr ""
 "სერვერის შეცდომა:\n"
 "'%1'"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:23
 #, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "სპეციალური სიმბოლოს ჩასმა…"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "სპეციალური სიმბოლოს ჩასმა"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:40
 #, kde-format
 msgid "Insert"
 msgstr "ჩასმა"
 
-#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
@@ -161,60 +161,60 @@ msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "სწრაფი ტექსტის გატანა"
 
-#: quicktext/quicktextplugineditorinterface.cpp:40
+#: quicktext/quicktextplugineditorinterface.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Variables"
 msgstr "ცვლადები"
 
-#: quicktext/quicktextplugineditorinterface.cpp:46
+#: quicktext/quicktextplugineditorinterface.cpp:48
 #, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "ცვლადები"
 
-#: quicktext/quicktexttreewidget.cpp:37
+#: quicktext/quicktexttreewidget.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "ნაწყვეტის დამატება…"
 
-#: quicktext/quicktexttreewidget.cpp:39
+#: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "ნაწყვეტის ჩასწორება…"
 
-#: quicktext/quicktexttreewidget.cpp:41
+#: quicktext/quicktexttreewidget.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "ნაწყვეტის წაშლა"
 
-#: quicktext/quicktexttreewidget.cpp:44
+#: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
 msgctxt "@action"
 msgid "Add Group…"
 msgstr "ჯგუფის დამატება…"
 
-#: quicktext/quicktexttreewidget.cpp:46
+#: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "ჯგუფის სახელის გადარქმევა…"
 
-#: quicktext/quicktexttreewidget.cpp:48
+#: quicktext/quicktexttreewidget.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "ჯგუფის წაშლა"
 
-#: quicktext/quicktexttreewidget.cpp:85
+#: quicktext/quicktexttreewidget.cpp:87
 #, kde-format
 msgid "Text Snippets"
 msgstr "ტექსტური ნაწყვეტები"
 
-#: quicktext/quicktexttreewidget.cpp:142
+#: quicktext/quicktexttreewidget.cpp:144
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -224,7 +224,7 @@ msgstr ""
 "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ მითითებული ნაჭერი (\"%1\")?<nl/"
 "><warning>წაშლას ვერ დააბრუნებთ..</warning>"
 
-#: quicktext/quicktexttreewidget.cpp:167
+#: quicktext/quicktexttreewidget.cpp:169
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -234,7 +234,7 @@ msgstr ""
 "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ მითითებული ჯგუფი (\"%1\") მის "
 "ყველა ნაჭერთან ერთად?<nl/><warning>წაშლას ვერ დააბრუნებთ..</warning>"
 
-#: quicktext/quicktexttreewidget.cpp:177
+#: quicktext/quicktexttreewidget.cpp:179
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
@@ -256,7 +256,7 @@ msgstr "შენახვა"
 msgid "General"
 msgstr "მთავარი"
 
-#: sharetext/sharetextplugineditorinterface.cpp:33
+#: sharetext/sharetextplugineditorinterface.cpp:35
 #, kde-format
 msgid "Share Mail Text…"
 msgstr "გააზიარეთ ფოსტის ტექსტი…"
@@ -266,7 +266,7 @@ msgstr "გააზიარეთ ფოსტის ტექსტი…"
 msgid "Zoom: %1%"
 msgstr "გადიდება: %1%"
 
-#: zoomtext/zoomtextplugineditorinterface.cpp:25
+#: zoomtext/zoomtextplugineditorinterface.cpp:27
 #, kde-format
 msgid "Zoom…"
 msgstr "გადიდება…"

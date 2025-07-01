@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-11 00:43+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2025-06-08 23:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -18,54 +18,54 @@ msgstr ""
 "X-Generator: Lokalize 25.07.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:22
+#: aitool/aitooltextplugineditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
 msgstr "開啟 AI 聊天"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:23
+#: autocorrection/autocorrectionplugineditorinterface.cpp:25
 #, kde-format
 msgid "Autocorrect Text"
 msgstr "自動修正文字"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:28
+#: autocorrection/autocorrectionplugineditorinterface.cpp:30
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "自動修正全部文字"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:32
+#: autocorrection/autocorrectionplugineditorinterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "自動修正選取的文字"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:26
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "自動生成回答"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:31
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "產生文字摘要"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:37
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "修正文字"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:43
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "快速回答"
 
-#: insertemail/insertemailplugineditorinterface.cpp:23
+#: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
@@ -77,29 +77,29 @@ msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "選取短網址伺服器："
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:61
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:63
 #, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "插入短網址…"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:85
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:87
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
 msgstr "未偵測到網路連線，所以我們無法縮短網址。"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:92
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:94
 #, kde-format
 msgid "String doesn't seem to be a URL"
 msgstr "這字串看起來不像個連結"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:98
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:100
 #, kde-format
 msgid "An error occurred: \"%1\""
 msgstr "一個錯誤發生了：「%1」"
 
-#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:30
-#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:48
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:32
+#: insertshorturl/shorturlengineplugin/tinyurlengineplugin/tinyurlengineinterface.cpp:50
 #, kde-format
 msgid ""
 "Error reported by server:\n"
@@ -108,24 +108,24 @@ msgstr ""
 "來自伺服器的錯誤回報：\n"
 "「%1」"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:21
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:23
 #, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "插入特殊符號…"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:37
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "插入特殊符號"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:38
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:40
 #, kde-format
 msgid "Insert"
 msgstr "插入"
 
-#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:22
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
@@ -161,60 +161,60 @@ msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "匯出快速文字"
 
-#: quicktext/quicktextplugineditorinterface.cpp:40
+#: quicktext/quicktextplugineditorinterface.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Variables"
 msgstr "變數"
 
-#: quicktext/quicktextplugineditorinterface.cpp:46
+#: quicktext/quicktextplugineditorinterface.cpp:48
 #, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "變數"
 
-#: quicktext/quicktexttreewidget.cpp:37
+#: quicktext/quicktexttreewidget.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "新增片段…"
 
-#: quicktext/quicktexttreewidget.cpp:39
+#: quicktext/quicktexttreewidget.cpp:41
 #, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "編輯片段…"
 
-#: quicktext/quicktexttreewidget.cpp:41
+#: quicktext/quicktexttreewidget.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "移除片段"
 
-#: quicktext/quicktexttreewidget.cpp:44
+#: quicktext/quicktexttreewidget.cpp:46
 #, kde-format
 msgctxt "@action"
 msgid "Add Group…"
 msgstr "新增群組…"
 
-#: quicktext/quicktexttreewidget.cpp:46
+#: quicktext/quicktexttreewidget.cpp:48
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "重新命名群組…"
 
-#: quicktext/quicktexttreewidget.cpp:48
+#: quicktext/quicktexttreewidget.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "移除群組"
 
-#: quicktext/quicktexttreewidget.cpp:85
+#: quicktext/quicktexttreewidget.cpp:87
 #, kde-format
 msgid "Text Snippets"
 msgstr "文字片段"
 
-#: quicktext/quicktexttreewidget.cpp:142
+#: quicktext/quicktexttreewidget.cpp:144
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -222,7 +222,7 @@ msgid ""
 "undo the removal.</warning>"
 msgstr "您確定要移除片段 %1 嗎？<nl/><warning>此移除沒有辦法回復。</warning>"
 
-#: quicktext/quicktexttreewidget.cpp:167
+#: quicktext/quicktexttreewidget.cpp:169
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -232,7 +232,7 @@ msgstr ""
 "您確定要移除群組 %1 與它所有的片段嗎？<nl/><warning>此移除沒有辦法回復。</"
 "warning>"
 
-#: quicktext/quicktexttreewidget.cpp:177
+#: quicktext/quicktexttreewidget.cpp:179
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
@@ -254,7 +254,7 @@ msgstr "另存為"
 msgid "General"
 msgstr "一般"
 
-#: sharetext/sharetextplugineditorinterface.cpp:33
+#: sharetext/sharetextplugineditorinterface.cpp:35
 #, kde-format
 msgid "Share Mail Text…"
 msgstr "分享信件文字…"
@@ -264,7 +264,7 @@ msgstr "分享信件文字…"
 msgid "Zoom: %1%"
 msgstr "縮放：%1%"
 
-#: zoomtext/zoomtextplugineditorinterface.cpp:25
+#: zoomtext/zoomtextplugineditorinterface.cpp:27
 #, kde-format
 msgid "Zoom…"
 msgstr "縮放…"

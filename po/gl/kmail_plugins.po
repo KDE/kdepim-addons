@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-21 00:42+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2025-01-19 11:12+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -18,189 +18,196 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.12.0\n"
 
-#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
+#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Database Tool"
 msgstr "Ferramenta da base de datos de Akonadi"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "Aspiradora de &Akonadi…"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
 msgid "Do you want to vacuum akonadi database?"
 msgstr "Quere aspirar a base de datos de Akonadi?"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:31
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:78
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:33
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Vacuum"
 msgstr "Aspiradora de Akonadi"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Aspiradora"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:46
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "Fsck de &Akonadi…"
 
 # skip-rule: trasno-file_reverse, trasno-file-system_reverse
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
 msgid "Do you want to fsck akonadi database?"
 msgstr ""
 "Quere executar fsck (comprobación do sistema de ficheiros) coa base de datos "
 "de Akonadi?"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:51
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:75
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:53
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Fsck"
 msgstr "Fsck de Akonadi"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
 #, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
 msgid "Finished."
 msgstr "Rematado."
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:96
 #, kde-format
 msgid "Start…"
 msgstr "Iniciar…"
 
-#: antispamplugin/antispamplugininterface.cpp:22
+#: antispamplugin/antispamplugininterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "&Asistente contra correo lixo…"
 
-#: antivirusplugin/antivirusplugininterface.cpp:22
+#: antivirusplugin/antivirusplugininterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Asistente &anti-virus…"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:27
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:18
+#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
 msgstr "Comprobar o tamaño do cartafol"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:29
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
 msgstr "Amo&sar o tamaño dos cartafoles…"
 
-#: common/antispamwizard.cpp:88
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:54
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search…"
+msgstr ""
+
+#: common/antispamwizard.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Asistente contra correo lixo"
 
-#: common/antispamwizard.cpp:88
+#: common/antispamwizard.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Asistente anti-virus"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:92
 #, kde-format
 msgid "Welcome to the KMail Anti-Spam Wizard"
 msgstr "Benvida ao asistente contra correo lixo"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:92
 #, kde-format
 msgid "Welcome to the KMail Anti-Virus Wizard"
 msgstr "Benvida ao asistente anti-virus de KMail"
 
-#: common/antispamwizard.cpp:95
+#: common/antispamwizard.cpp:97
 #, kde-format
 msgid "Options to fine-tune the handling of spam messages"
 msgstr "Opcións para optimizar o tratamento do correo lixo"
 
-#: common/antispamwizard.cpp:99
+#: common/antispamwizard.cpp:101
 #, kde-format
 msgid "Summary of changes to be made by this wizard"
 msgstr "Resumo de cambios para seren feitos por este asistente"
 
-#: common/antispamwizard.cpp:102
+#: common/antispamwizard.cpp:104
 #, kde-format
 msgid "Options to fine-tune the handling of virus messages"
 msgstr "Opcións para optimizar o tratamento das mensaxes con virus"
 
-#: common/antispamwizard.cpp:169
+#: common/antispamwizard.cpp:171
 #, kde-format
 msgid "Virus handling"
 msgstr "Tratamento dos virus"
 
-#: common/antispamwizard.cpp:248 common/antispamwizard.cpp:250
-#: common/antispamwizard.cpp:553
+#: common/antispamwizard.cpp:250 common/antispamwizard.cpp:252
+#: common/antispamwizard.cpp:555
 #, kde-format
 msgid "Spam Handling"
 msgstr "Tratamento do correo lixo"
 
-#: common/antispamwizard.cpp:284 common/antispamwizard.cpp:286
-#: common/antispamwizard.cpp:568
+#: common/antispamwizard.cpp:286 common/antispamwizard.cpp:288
+#: common/antispamwizard.cpp:570
 #, kde-format
 msgid "Semi spam (unsure) handling"
 msgstr "Tratamento do posíbel correo lixo"
 
-#: common/antispamwizard.cpp:340 common/antispamwizard.cpp:342
-#: common/antispamwizard.cpp:575
+#: common/antispamwizard.cpp:342 common/antispamwizard.cpp:344
+#: common/antispamwizard.cpp:577
 #, kde-format
 msgid "Classify as Spam"
 msgstr "Clasificar como correo lixo"
 
-#: common/antispamwizard.cpp:351
+#: common/antispamwizard.cpp:353
 #, kde-format
 msgid "Spam"
 msgstr "Correo lixo"
 
-#: common/antispamwizard.cpp:379 common/antispamwizard.cpp:381
-#: common/antispamwizard.cpp:576
+#: common/antispamwizard.cpp:381 common/antispamwizard.cpp:383
+#: common/antispamwizard.cpp:578
 #, kde-format
 msgid "Classify as NOT Spam"
 msgstr "Clasificar como NON correo lixo"
 
-#: common/antispamwizard.cpp:390
+#: common/antispamwizard.cpp:392
 #, kde-format
 msgid "Ham"
 msgstr "Ham"
 
-#: common/antispamwizard.cpp:456
+#: common/antispamwizard.cpp:458
 #, kde-format
 msgid "Scanning for %1…"
 msgstr "Buscando %1…"
 
-#: common/antispamwizard.cpp:500
+#: common/antispamwizard.cpp:502
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
 msgstr "Rematou a busca de filtros anti-correo lixo."
 
-#: common/antispamwizard.cpp:500
+#: common/antispamwizard.cpp:502
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
 msgstr "Rematou a busca de ferramentas anti-virus."
 
-#: common/antispamwizard.cpp:502
+#: common/antispamwizard.cpp:504
 #, kde-format
 msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
@@ -209,12 +216,12 @@ msgstr ""
 "<p>Non se atoparon ferramentas de detección de correo lixo. Instale os seus "
 "programas contra o correo lixo e volva executar este asistente.</p>"
 
-#: common/antispamwizard.cpp:505
+#: common/antispamwizard.cpp:507
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
 msgstr "Análise completa. Non se atoparon ferramentas anti-virus."
 
-#: common/antispamwizard.cpp:527
+#: common/antispamwizard.cpp:529
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -223,7 +230,7 @@ msgstr ""
 "<p>As mensaxes clasificadas como correo lixo márcanse como lidas.<br /> As "
 "mensaxes de correo lixo móvense ao cartafol chamado <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:532
+#: common/antispamwizard.cpp:534
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -232,7 +239,7 @@ msgstr ""
 "<p>As mensaxes clasificadas como lixo márcanse como lidas.<br />As mensaxes "
 "de correo lixo non se moven para ningún cartafol específico.</p>"
 
-#: common/antispamwizard.cpp:538
+#: common/antispamwizard.cpp:540
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -241,7 +248,7 @@ msgstr ""
 "<p>As mensaxes clasificadas como lixo non se marcan como lidas.<br />As "
 "mensaxes de correo lixo móvense para o cartafol chamado <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:543
+#: common/antispamwizard.cpp:545
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -250,7 +257,7 @@ msgstr ""
 "<p>As mensaxes clasificadas como correo lixo non se marcan como lidas.<br /"
 ">As mensaxes de correo lixo non se moven a ningún cartafol específico.</p>"
 
-#: common/antispamwizard.cpp:570
+#: common/antispamwizard.cpp:572
 #, kde-format
 msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
@@ -259,17 +266,17 @@ msgstr ""
 "<p>O cartafol para as mensaxes clasificadas como inseguras (probabelmente "
 "correo lixo) é <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:580
+#: common/antispamwizard.cpp:582
 #, kde-format
 msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
 msgstr "<p>O asistente creará os filtros seguintes:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:583
+#: common/antispamwizard.cpp:585
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
 msgstr "<p>O asistente substituirá os filtros seguintes:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:980
+#: common/antispamwizard.cpp:982
 #, kde-format
 msgid ""
 "The wizard will search for any tools to do spam detection\n"
@@ -278,7 +285,7 @@ msgstr ""
 "O asistente buscará calquera ferramenta de detección de correo lixo\n"
 "e configurará KMail para que funcione con ela."
 
-#: common/antispamwizard.cpp:982
+#: common/antispamwizard.cpp:984
 #, kde-format
 msgid ""
 "<p>Here you can get some assistance in setting up KMail's filter rules to "
@@ -304,7 +311,7 @@ msgstr ""
 "tempo; considere eliminar as regras de filtrado se quere volver ao "
 "comportamento anterior.</p>"
 
-#: common/antispamwizard.cpp:1032
+#: common/antispamwizard.cpp:1034
 #, kde-format
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
@@ -313,24 +320,24 @@ msgstr ""
 "<p>Escolla as ferramentas a usar para a detección de correo lixo e vaia á "
 "páxina seguinte.</p>"
 
-#: common/antispamwizard.cpp:1056
+#: common/antispamwizard.cpp:1058
 #, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Marcar como lidas as mensaxes detectadas como correo lixo."
 
-#: common/antispamwizard.cpp:1057
+#: common/antispamwizard.cpp:1059
 #, kde-format
 msgid "Mark messages which have been classified as spam as read."
 msgstr "Marcar como lidas as mensaxes clasificadas como correo lixo."
 
-#: common/antispamwizard.cpp:1060
+#: common/antispamwizard.cpp:1062
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Mover o correo lixo &confirmado a:"
 
-#: common/antispamwizard.cpp:1062
+#: common/antispamwizard.cpp:1064
 #, kde-format
 msgid ""
 "The default folder for spam messages is the trash folder, but you may change "
@@ -339,13 +346,13 @@ msgstr ""
 "O cartafol predeterminado para o correo lixo é o cartafol do lixo, pero "
 "poderá cambialo na vista de cartafoles de embaixo."
 
-#: common/antispamwizard.cpp:1075
+#: common/antispamwizard.cpp:1077
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Mover o &posíbel correo lixo a:"
 
-#: common/antispamwizard.cpp:1077
+#: common/antispamwizard.cpp:1079
 #, kde-format
 msgid ""
 "The default folder is the inbox folder, but you may change that in the "
@@ -357,13 +364,13 @@ msgstr ""
 "clasificar como inseguro. Se non escolleu unha ferramenta con esta "
 "capacidade, non pode seleccionar un cartafol.</p>"
 
-#: common/antispamwizard.cpp:1187
+#: common/antispamwizard.cpp:1189
 #, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Comprobar as mensaxes usando as ferramentas anti-virus."
 
-#: common/antispamwizard.cpp:1189
+#: common/antispamwizard.cpp:1191
 #, kde-format
 msgid ""
 "Let the anti-virus tools check your messages. The wizard will create "
@@ -376,14 +383,14 @@ msgstr ""
 "de xeito que os seguintes filtros poidan reaccionar a isto e, por exemplo, "
 "mover as mensaxes con virus a un cartafol especial."
 
-#: common/antispamwizard.cpp:1195
+#: common/antispamwizard.cpp:1197
 #, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr ""
 "Mover todas as mensaxes detectadas como virus para o cartafol seleccionado."
 
-#: common/antispamwizard.cpp:1197
+#: common/antispamwizard.cpp:1199
 #, kde-format
 msgid ""
 "A filter to detect messages classified as virus-infected and to move those "
@@ -394,13 +401,13 @@ msgstr ""
 "virus e movelas a un cartafol predefinido. O cartafol predeterminado é o do "
 "lixo, pero pode cambiar isto na vista de cartafoles."
 
-#: common/antispamwizard.cpp:1203
+#: common/antispamwizard.cpp:1205
 #, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Ademais, marcar as mensaxes detectadas como con virus como lidas."
 
-#: common/antispamwizard.cpp:1206
+#: common/antispamwizard.cpp:1208
 #, kde-format
 msgid ""
 "Mark messages which have been classified as virus-infected as read, as well "
@@ -428,7 +435,7 @@ msgid "Path:"
 msgstr "Ruta:"
 
 #: mailmergeplugin/widgets/mailmergepreviewdialog.cpp:16
-#: mailmergeplugin/widgets/selectattachmentdialog.cpp:19
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Attachment"
@@ -471,7 +478,7 @@ msgstr "Re&tirar"
 msgid "Mod&ify..."
 msgstr "Mod&ificar…"
 
-#: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:33
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"

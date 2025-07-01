@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-21 00:42+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2025-01-24 22:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -18,186 +18,193 @@ msgstr ""
 "X-Generator: Lokalize 25.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:26
+#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Database Tool"
 msgstr "Akonadi 資料庫工具"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:26
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
 msgstr "&Akonadi 資料庫清理…"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:30
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
 msgid "Do you want to vacuum akonadi database?"
 msgstr "您確定要清理 (vacuum) Akonadi 的資料庫嗎？"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:31
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:78
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:33
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Vacuum"
 msgstr "Akonadi 資料庫清理"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "資料庫清理"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:44
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:46
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
 msgstr "&Akonadi Fsck…"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:50
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
 msgid "Do you want to fsck akonadi database?"
 msgstr "您確定要檢查並修正 (fsck) akonadi 資料庫嗎？"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:51
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:75
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:53
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Fsck"
 msgstr "Akonadi Fsck"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
 #, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:92
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
 msgid "Finished."
 msgstr "已完成。"
 
-#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
+#: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:96
 #, kde-format
 msgid "Start…"
 msgstr "開始…"
 
-#: antispamplugin/antispamplugininterface.cpp:22
+#: antispamplugin/antispamplugininterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "防垃圾信精靈(&A)…"
 
-#: antivirusplugin/antivirusplugininterface.cpp:22
+#: antivirusplugin/antivirusplugininterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "防毒精靈(&A)…"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:27
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:18
+#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
 msgstr "檢查資料夾大小"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:29
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
 msgstr "顯示資料夾大小(&S)…"
 
-#: common/antispamwizard.cpp:88
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:54
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search…"
+msgstr ""
+
+#: common/antispamwizard.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "防垃圾信精靈"
 
-#: common/antispamwizard.cpp:88
+#: common/antispamwizard.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "防毒精靈"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:92
 #, kde-format
 msgid "Welcome to the KMail Anti-Spam Wizard"
 msgstr "歡迎來到 KMail 防垃圾信精靈"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:92
 #, kde-format
 msgid "Welcome to the KMail Anti-Virus Wizard"
 msgstr "歡迎來到 KMail 防毒精靈"
 
-#: common/antispamwizard.cpp:95
+#: common/antispamwizard.cpp:97
 #, kde-format
 msgid "Options to fine-tune the handling of spam messages"
 msgstr "用來微調垃圾信件處理的選項"
 
-#: common/antispamwizard.cpp:99
+#: common/antispamwizard.cpp:101
 #, kde-format
 msgid "Summary of changes to be made by this wizard"
 msgstr "此精靈將進行的變更摘要"
 
-#: common/antispamwizard.cpp:102
+#: common/antispamwizard.cpp:104
 #, kde-format
 msgid "Options to fine-tune the handling of virus messages"
 msgstr "用來微調病毒信件處理的選項"
 
-#: common/antispamwizard.cpp:169
+#: common/antispamwizard.cpp:171
 #, kde-format
 msgid "Virus handling"
 msgstr "病毒處理"
 
-#: common/antispamwizard.cpp:248 common/antispamwizard.cpp:250
-#: common/antispamwizard.cpp:553
+#: common/antispamwizard.cpp:250 common/antispamwizard.cpp:252
+#: common/antispamwizard.cpp:555
 #, kde-format
 msgid "Spam Handling"
 msgstr "垃圾信處理"
 
-#: common/antispamwizard.cpp:284 common/antispamwizard.cpp:286
-#: common/antispamwizard.cpp:568
+#: common/antispamwizard.cpp:286 common/antispamwizard.cpp:288
+#: common/antispamwizard.cpp:570
 #, kde-format
 msgid "Semi spam (unsure) handling"
 msgstr "不確定是否為垃圾信的處理"
 
-#: common/antispamwizard.cpp:340 common/antispamwizard.cpp:342
-#: common/antispamwizard.cpp:575
+#: common/antispamwizard.cpp:342 common/antispamwizard.cpp:344
+#: common/antispamwizard.cpp:577
 #, kde-format
 msgid "Classify as Spam"
 msgstr "分類為垃圾信"
 
-#: common/antispamwizard.cpp:351
+#: common/antispamwizard.cpp:353
 #, kde-format
 msgid "Spam"
 msgstr "垃圾信"
 
-#: common/antispamwizard.cpp:379 common/antispamwizard.cpp:381
-#: common/antispamwizard.cpp:576
+#: common/antispamwizard.cpp:381 common/antispamwizard.cpp:383
+#: common/antispamwizard.cpp:578
 #, kde-format
 msgid "Classify as NOT Spam"
 msgstr "分類為不是垃圾信"
 
-#: common/antispamwizard.cpp:390
+#: common/antispamwizard.cpp:392
 #, kde-format
 msgid "Ham"
 msgstr "正常信件"
 
-#: common/antispamwizard.cpp:456
+#: common/antispamwizard.cpp:458
 #, kde-format
 msgid "Scanning for %1…"
 msgstr "正在掃描 %1…"
 
-#: common/antispamwizard.cpp:500
+#: common/antispamwizard.cpp:502
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
 msgstr "防垃圾信工具掃描完成。"
 
-#: common/antispamwizard.cpp:500
+#: common/antispamwizard.cpp:502
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
 msgstr "防毒工具掃描完成。"
 
-#: common/antispamwizard.cpp:502
+#: common/antispamwizard.cpp:504
 #, kde-format
 msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
@@ -206,12 +213,12 @@ msgstr ""
 "<p>抱歉，沒有找到任何垃圾信偵測工具。請安裝您的垃圾信偵測軟體之後重新執行這個"
 "精靈。</p>"
 
-#: common/antispamwizard.cpp:505
+#: common/antispamwizard.cpp:507
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
 msgstr "掃描完成。未找到防毒工具。"
 
-#: common/antispamwizard.cpp:527
+#: common/antispamwizard.cpp:529
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -220,7 +227,7 @@ msgstr ""
 "<p>分類為垃圾信的信件會被標記為已讀。<br />垃圾信件會移動到名為 <i>%1</i> 的"
 "資料夾。</p>"
 
-#: common/antispamwizard.cpp:532
+#: common/antispamwizard.cpp:534
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -228,7 +235,7 @@ msgid ""
 msgstr ""
 "<p>分類為垃圾信的信件會被標記為已讀。<br />垃圾信件不會被移動到某資料夾。</p>"
 
-#: common/antispamwizard.cpp:538
+#: common/antispamwizard.cpp:540
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -237,7 +244,7 @@ msgstr ""
 "<p>分類為垃圾信的信件不會被標記為已讀。<br />垃圾信件會移動到名為 <i>%1</i> "
 "的資料夾。</p>"
 
-#: common/antispamwizard.cpp:543
+#: common/antispamwizard.cpp:545
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -246,31 +253,31 @@ msgstr ""
 "<p>分類為垃圾信的信件不會被標記為已讀。<br />垃圾信件不會被移動到某資料夾。</"
 "p>"
 
-#: common/antispamwizard.cpp:570
+#: common/antispamwizard.cpp:572
 #, kde-format
 msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
 "</p>"
 msgstr "<p>分類為不確定（可能是垃圾信）的信件用的資料夾是 <i>%1</i>。</p>"
 
-#: common/antispamwizard.cpp:580
+#: common/antispamwizard.cpp:582
 #, kde-format
 msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
 msgstr "<p>精靈將會建立以下過濾器：<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:583
+#: common/antispamwizard.cpp:585
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
 msgstr "<p>精靈將會取代以下過濾器：<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:980
+#: common/antispamwizard.cpp:982
 #, kde-format
 msgid ""
 "The wizard will search for any tools to do spam detection\n"
 "and setup KMail to work with them."
 msgstr "精靈將會搜尋垃圾信偵測工具，並設定 KMail 來使用它們。"
 
-#: common/antispamwizard.cpp:982
+#: common/antispamwizard.cpp:984
 #, kde-format
 msgid ""
 "<p>Here you can get some assistance in setting up KMail's filter rules to "
@@ -291,31 +298,31 @@ msgstr ""
 "花一些時間，KMail 會看起來有當機的情形，而您可能會遇到 KMail 的反應不佳的問"
 "題。要回到原先的行為方式，您可以將精靈所建立的過濾器規則刪除。</p>"
 
-#: common/antispamwizard.cpp:1032
+#: common/antispamwizard.cpp:1034
 #, kde-format
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
 "page.</p>"
 msgstr "<p>請選擇用來偵測的工具，然後跳到下一頁。</p>"
 
-#: common/antispamwizard.cpp:1056
+#: common/antispamwizard.cpp:1058
 #, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "將偵測到的垃圾信標記為已讀(&M)"
 
-#: common/antispamwizard.cpp:1057
+#: common/antispamwizard.cpp:1059
 #, kde-format
 msgid "Mark messages which have been classified as spam as read."
 msgstr "將被分類為垃圾信的信件標記為已讀。"
 
-#: common/antispamwizard.cpp:1060
+#: common/antispamwizard.cpp:1062
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "將已知的垃圾信移動到(&K)："
 
-#: common/antispamwizard.cpp:1062
+#: common/antispamwizard.cpp:1064
 #, kde-format
 msgid ""
 "The default folder for spam messages is the trash folder, but you may change "
@@ -324,13 +331,13 @@ msgstr ""
 "垃圾信的預設資料夾是垃圾桶資料夾，但您也可以在以下資料夾檢視中改為另一個資料"
 "夾。"
 
-#: common/antispamwizard.cpp:1075
+#: common/antispamwizard.cpp:1077
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "將可能是垃圾信的信件移動到(&P)："
 
-#: common/antispamwizard.cpp:1077
+#: common/antispamwizard.cpp:1079
 #, kde-format
 msgid ""
 "The default folder is the inbox folder, but you may change that in the "
@@ -340,13 +347,13 @@ msgstr ""
 "預設資料夾是收件匣，但您可以在下方的資料夾檢視變更它。<p>不是所有工具都支援"
 "「不確定」的分類。如果您未選取支援它的工具，您也會沒辦法選擇資料夾。</p>"
 
-#: common/antispamwizard.cpp:1187
+#: common/antispamwizard.cpp:1189
 #, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "用防毒工具檢查信件"
 
-#: common/antispamwizard.cpp:1189
+#: common/antispamwizard.cpp:1191
 #, kde-format
 msgid ""
 "Let the anti-virus tools check your messages. The wizard will create "
@@ -357,13 +364,13 @@ msgstr ""
 "讓防毒工具檢查您的信件。本精靈將會建立合適的過濾器。通常防毒工具會標記信件，"
 "讓之後的過濾器可以對其進行反應，例如將有毒的信件移動到特別的資料夾。"
 
-#: common/antispamwizard.cpp:1195
+#: common/antispamwizard.cpp:1197
 #, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "將偵測為有毒的信件移動到選取的資料夾"
 
-#: common/antispamwizard.cpp:1197
+#: common/antispamwizard.cpp:1199
 #, kde-format
 msgid ""
 "A filter to detect messages classified as virus-infected and to move those "
@@ -373,13 +380,13 @@ msgstr ""
 "已建立過濾器來將分類為中毒的信件移動至預先定義的資料夾。預設資料夾是垃圾桶，"
 "但您可以在資料夾檢視中變更它。"
 
-#: common/antispamwizard.cpp:1203
+#: common/antispamwizard.cpp:1205
 #, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "另外，也將偵測為病毒的信件標記為已讀"
 
-#: common/antispamwizard.cpp:1206
+#: common/antispamwizard.cpp:1208
 #, kde-format
 msgid ""
 "Mark messages which have been classified as virus-infected as read, as well "
@@ -405,7 +412,7 @@ msgid "Path:"
 msgstr "路徑："
 
 #: mailmergeplugin/widgets/mailmergepreviewdialog.cpp:16
-#: mailmergeplugin/widgets/selectattachmentdialog.cpp:19
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Attachment"
@@ -448,7 +455,7 @@ msgstr "移除(&M)"
 msgid "Mod&ify..."
 msgstr "修改(&I)…"
 
-#: mailmergeplugin/widgets/selectattachmentdialog.cpp:31
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:33
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"

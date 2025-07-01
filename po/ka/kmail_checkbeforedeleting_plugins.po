@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-24 09:37+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-08-01 05:56+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -62,13 +62,13 @@ msgid "Bcc"
 msgstr "ფარულიასლი"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:170
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:172
 #, kde-format
 msgid "Unread"
 msgstr "წაუკითხავი"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:179
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:181
 #, kde-format
 msgid "Important"
 msgstr "მნიშვნელოვანი"
@@ -79,18 +79,18 @@ msgctxt "@title:window"
 msgid "Configure Before Deleting Mail"
 msgstr "კონფიგურაცია ფოსტის წაშლამდე"
 
-#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "დადასტურება წაშლამდე"
 
-#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:36
 #, kde-format
 msgid "Configure"
 msgstr "მორგება"
 
-#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:69
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:71
 #, kde-format
 msgid ""
 "Do you want to delete this email?\n"
@@ -111,80 +111,80 @@ msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "ყველაზე გადატარება"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:201
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
 msgstr "შეტყობინება სათაურით '%2-ს' შეიცავს '%1-ს'"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:208
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:210
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "შეტყობინება სათაურით '%1' %2-ა"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "წესის დამატება…"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "წესის წაშლა"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:27
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "წესის შეცვლა…"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:44
 #, kde-format
 msgid "Type"
 msgstr "ტიპი"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:44
 #, kde-format
 msgid "Pattern"
 msgstr "ნიმუში"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:120
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:122
 #, kde-format
 msgid "Add Rule…"
 msgstr "წესის დამატება…"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:122
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:124
 #, kde-format
 msgid "Edit Rule…"
 msgstr "წესის ჩასწორება…"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:127
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:129
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "წესის წაშლა"
 msgstr[1] "წესების წაშლა"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:141
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "გსურთ ამ წესის წაშლა?"
 msgstr[1] "გსურთ ამ წესების წაშლა?"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:140
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:142
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "წესის წაშლა"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:168
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:170
 #, kde-format
 msgid "Same rule already exists."
 msgstr "იგივე წესი უკვე არსებობს."
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:168
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:170
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Rule"

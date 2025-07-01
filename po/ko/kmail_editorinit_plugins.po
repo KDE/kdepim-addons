@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:41+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-08-19 22:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: externalcomposer/externalcomposerconfiguredialog.cpp:14
+#: externalcomposer/externalcomposerconfiguredialog.cpp:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
 msgstr "\"외부 편집기\" 플러그인 설정"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:23
+#: externalcomposer/externalcomposerconfigurewidget.cpp:25
 #, kde-format
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "내부 편집기 대신에 외부 편집기 사용"
 
-#: externalcomposer/externalcomposerconfigurewidget.cpp:52
+#: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid ""

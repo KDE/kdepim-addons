@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_checkbeforedeleting_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-24 09:37+0000\n"
+"POT-Creation-Date: 2025-07-01 00:42+0000\n"
 "PO-Revision-Date: 2024-09-14 14:21+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -66,13 +66,13 @@ msgid "Bcc"
 msgstr "Blindkopie"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:170
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:172
 #, kde-format
 msgid "Unread"
 msgstr "Ungelesen"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:179
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:181
 #, kde-format
 msgid "Important"
 msgstr "Wichtig"
@@ -83,18 +83,18 @@ msgctxt "@title:window"
 msgid "Configure Before Deleting Mail"
 msgstr "„Vor dem Löschen der E-Mail“ einrichten"
 
-#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:32
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
 msgstr "Vor dem Löschen bestätigen"
 
-#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:34
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:36
 #, kde-format
 msgid "Configure"
 msgstr "Einrichten"
 
-#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:69
+#: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:71
 #, kde-format
 msgid ""
 "Do you want to delete this email?\n"
@@ -115,80 +115,80 @@ msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "Bei allen anwenden"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:201
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
 msgstr "Die Nachricht mit dem Betreff „%2“ enthält „%1“"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:208
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:210
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "Die Nachricht mit dem Betreff „%1“ ist %2 "
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:23
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Regel hinzufügen …"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:24
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "Regel entfernen"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:25
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:27
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Regel ändern …"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:44
 #, kde-format
 msgid "Type"
 msgstr "Typ"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:42
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:44
 #, kde-format
 msgid "Pattern"
 msgstr "Muster"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:120
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:122
 #, kde-format
 msgid "Add Rule…"
 msgstr "Regel hinzufügen …"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:122
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:124
 #, kde-format
 msgid "Edit Rule…"
 msgstr "Regel bearbeiten …"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:127
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:129
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Regel entfernen"
 msgstr[1] "Regeln entfernen"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:139
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:141
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Möchten Sie diese Regel entfernen?"
 msgstr[1] "Möchten Sie diese Regeln entfernen?"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:140
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:142
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Regel entfernen"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:168
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:170
 #, kde-format
 msgid "Same rule already exists."
 msgstr "Regel existiert bereits"
 
-#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:168
+#: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:170
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Rule"
