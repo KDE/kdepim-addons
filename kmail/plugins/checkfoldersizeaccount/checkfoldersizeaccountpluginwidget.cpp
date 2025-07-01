@@ -52,7 +52,6 @@ CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *
     connect(searchLine, &QLineEdit::textChanged, this, &CheckFolderSizeAccountPluginWidget::slotSetCollectionFilter);
     mainLayout->addWidget(searchLine);
 
-    // TODO a list of folder => show size (work only on imap and co)
     mFolderView->setObjectName(u"mFolderView"_s);
     mainLayout->addWidget(mFolderView);
     mFolderView->setEditTriggers(QAbstractItemView::NoEditTriggers);
