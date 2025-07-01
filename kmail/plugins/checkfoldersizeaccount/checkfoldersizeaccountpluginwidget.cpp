@@ -5,6 +5,8 @@
 */
 
 #include "checkfoldersizeaccountpluginwidget.h"
+#include "checkfoldersizeaccountcombobox.h"
+#include "checkfoldersizeaccountfilterproxymodel.h"
 #include "checkfoldersizeaccountplugindelegate.h"
 #include <Akonadi/ChangeRecorder>
 #include <Akonadi/CollectionFilterProxyModel>
@@ -15,7 +17,6 @@
 #include <QLineEdit>
 #include <QTreeView>
 #include <QVBoxLayout>
-#include <checkfoldersizeaccountfilterproxymodel.h>
 using namespace Qt::Literals::StringLiterals;
 CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *parent)
     : QWidget{parent}
@@ -45,12 +46,22 @@ CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *
 
     mCollectionFilter->setSourceModel(mimeTypeProxy);
 
+    auto hboxlayout = new QHBoxLayout;
+    hboxlayout->setObjectName(u"hboxlayout"_s);
+    hboxlayout->setContentsMargins({});
+    hboxlayout->setSpacing(0);
+    mainLayout->addLayout(hboxlayout);
+
     auto searchLine = new QLineEdit(this);
     KLineEditEventHandler::catchReturnKey(searchLine);
     searchLine->setPlaceholderText(i18nc("@info:placeholder", "Search…"));
     searchLine->setClearButtonEnabled(true);
     connect(searchLine, &QLineEdit::textChanged, this, &CheckFolderSizeAccountPluginWidget::slotSetCollectionFilter);
-    mainLayout->addWidget(searchLine);
+    hboxlayout->addWidget(searchLine);
+
+    auto combobox = new CheckFolderSizeAccountComboBox(this);
+    combobox->setObjectName(u"combobox"_s);
+    hboxlayout->addWidget(combobox);
 
     mFolderView->setObjectName(u"mFolderView"_s);
     mainLayout->addWidget(mFolderView);
