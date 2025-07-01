@@ -5,6 +5,7 @@
 */
 
 #include "checkfoldersizeaccountplugin.h"
+#include "checkfoldersizeaccountpluginconfiguredialog.h"
 #include "checkfoldersizeaccountplugininterface.h"
 #include <KPluginFactory>
 
@@ -29,7 +30,8 @@ bool CheckFolderSizeAccountPlugin::hasConfigureDialog() const
 
 void CheckFolderSizeAccountPlugin::showConfigureDialog(QWidget *parent)
 {
-    // TODO
+    CheckFolderSizeAccountPluginConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "checkfoldersizeaccountplugin.moc"
