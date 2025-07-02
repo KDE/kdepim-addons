@@ -1,15 +1,16 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for kmail_plugins.po package.
+# Copyright (C) 2015-2025 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
 #
 # SPDX-FileCopyrightText: 2015 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
 # SPDX-FileCopyrightText: 2016, 2017 Javier Vinal <fjvinal@gmail.com>
 # SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:42+0000\n"
-"PO-Revision-Date: 2025-01-17 23:34+0100\n"
+"PO-Revision-Date: 2025-07-01 12:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
@@ -29,7 +30,7 @@ msgstr "Herramienta de la base de datos de Akonadi"
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr "&Akonadi Vacuum..."
+msgstr "&Akonadi Vacuum…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
@@ -53,7 +54,7 @@ msgstr "Vacuum"
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr "&Akonadi Fsck..."
+msgstr "&Akonadi Fsck…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
@@ -81,19 +82,19 @@ msgstr "Terminado."
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:96
 #, kde-format
 msgid "Start…"
-msgstr "Iniciar..."
+msgstr "Iniciar…"
 
 #: antispamplugin/antispamplugininterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr "&Asistente anti correo basura..."
+msgstr "&Asistente anti correo basura…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr "&Asistente antivirus..."
+msgstr "&Asistente antivirus…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:18
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:29
@@ -106,13 +107,13 @@ msgstr "Comprobar el tamaño de las carpetas"
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
-msgstr "Mo&strar el tamaño de las carpetas..."
+msgstr "Mo&strar el tamaño de las carpetas…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:54
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Buscar…"
 
 #: common/antispamwizard.cpp:90
 #, kde-format
@@ -194,7 +195,7 @@ msgstr "No es correo basura"
 #: common/antispamwizard.cpp:458
 #, kde-format
 msgid "Scanning for %1…"
-msgstr "Explorando %1..."
+msgstr "Explorando %1…"
 
 #: common/antispamwizard.cpp:502
 #, kde-format
@@ -467,7 +468,7 @@ msgstr "Adjunto:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr "Aña&dir..."
+msgstr "Aña&dir…"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -477,28 +478,10 @@ msgstr "Eli&minar"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "Mod&ify..."
-msgstr "Modif&icar..."
+msgstr "Modif&icar…"
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:33
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Seleccionar adjunto:"
-
-#~ msgid "&Akonadi Vacuum..."
-#~ msgstr "&Akonadi Vacuum..."
-
-#~ msgid "&Akonadi Fsck..."
-#~ msgstr "&Akonadi Fsck..."
-
-#~ msgid "&Anti-Spam Wizard..."
-#~ msgstr "Asistente &anti correo basura..."
-
-#~ msgid "&Anti-Virus Wizard..."
-#~ msgstr "Asistente &antivirus..."
-
-#~ msgid "A&dd..."
-#~ msgstr "&Añadir..."
-
-#~ msgid "&Log Activities..."
-#~ msgstr "&Registrar actividades..."
