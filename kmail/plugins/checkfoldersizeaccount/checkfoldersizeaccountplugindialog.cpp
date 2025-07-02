@@ -24,6 +24,7 @@ CheckFolderSizeAccountPluginDialog::CheckFolderSizeAccountPluginDialog(QWidget *
     : QDialog(parent)
     , mCheckFolderSizeAccountPluginWidget(new CheckFolderSizeAccountPluginWidget(this))
 {
+    setAttribute(Qt::WA_DeleteOnClose);
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(u"mainLayout"_s);
     setWindowTitle(i18nc("@title:window", "Check Folder Size"));

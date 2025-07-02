@@ -6,7 +6,11 @@
 
 #pragma once
 
+#include "checkfoldersizeaccountplugindialog.h"
+
 #include <PimCommonAkonadi/GenericPluginInterface>
+
+#include <QPointer>
 
 class CheckFolderSizeAccountPluginInterface : public PimCommon::GenericPluginInterface
 {
@@ -20,4 +24,5 @@ public:
 
 private:
     void slotActivated();
+    QPointer<CheckFolderSizeAccountPluginDialog> mCheckFolderSizeDialog;
 };

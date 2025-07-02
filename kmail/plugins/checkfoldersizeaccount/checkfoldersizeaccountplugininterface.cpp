@@ -7,8 +7,6 @@
 #include "checkfoldersizeaccountplugininterface.h"
 using namespace Qt::Literals::StringLiterals;
 
-#include "checkfoldersizeaccountplugindialog.h"
-
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
@@ -22,8 +20,11 @@ CheckFolderSizeAccountPluginInterface::~CheckFolderSizeAccountPluginInterface() 
 
 void CheckFolderSizeAccountPluginInterface::exec()
 {
-    CheckFolderSizeAccountPluginDialog dlg(parentWidget());
-    dlg.exec();
+    if (mCheckFolderSizeDialog) {
+        return;
+    }
+    mCheckFolderSizeDialog = new CheckFolderSizeAccountPluginDialog(parentWidget());
+    mCheckFolderSizeDialog->show();
 }
 
 void CheckFolderSizeAccountPluginInterface::createAction(KActionCollection *ac)
