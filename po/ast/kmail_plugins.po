@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:42+0000\n"
+"POT-Creation-Date: 2025-07-02 07:06+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -93,20 +93,50 @@ msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr ""
 
-#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:18
-#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:29
+#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:19
+#, kde-format
+msgid "All"
+msgstr ""
+
+#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
+#, kde-format
+msgid "More Than 100Ko"
+msgstr ""
+
+#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
+#, kde-format
+msgid "More Than 1Mo"
+msgstr ""
+
+#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
+#, kde-format
+msgid "More Than 10Mo"
+msgstr ""
+
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
+#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
 msgstr ""
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:31
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:22
+#, kde-format
+msgid "Display Colored Folder when size is too expensive."
+msgstr ""
+
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
 msgstr ""
 
-#: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:54
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
