@@ -15,5 +15,6 @@ public:
     ~CheckFolderSizeAccountPluginConfigureDialog() override;
 
 private:
+    void slotAccept();
     CheckFolderSizeAccountPluginConfigureWidget *const mCheckFolderSizeAccountPluginConfigureWidget;
 };

@@ -19,15 +19,16 @@ CheckFolderSizeAccountPluginConfigureWidget::CheckFolderSizeAccountPluginConfigu
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(u"mainLayout"_s);
     mainLayout->setContentsMargins({});
-    mainLayout->addWidget(new QLabel(i18n("Display Colored Folder when size is too expensive."), this));
+    mainLayout->addWidget(new QLabel(i18nc("@label:textbox", "Display Colored Folder when size is too expensive."), this));
     auto hboxLayout = new QHBoxLayout;
     hboxLayout->setContentsMargins({});
     hboxLayout->setObjectName(u"hboxLayout"_s);
     mainLayout->addLayout(hboxLayout);
 
     // TODO add size
-    hboxLayout->addWidget(new QLabel(i18n("Size:"), this));
+    hboxLayout->addWidget(new QLabel(i18nc("@label:textbox", "Size:"), this));
     hboxLayout->addWidget(mWarningSpinBox);
+    load();
 }
 
 CheckFolderSizeAccountPluginConfigureWidget::~CheckFolderSizeAccountPluginConfigureWidget() = default;
