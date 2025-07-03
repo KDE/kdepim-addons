@@ -5,6 +5,7 @@
 */
 
 #include "checkfoldersizeaccountpluginconfigurewidget.h"
+#include "checkfoldersizeaccount.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -25,8 +26,9 @@ CheckFolderSizeAccountPluginConfigureWidget::CheckFolderSizeAccountPluginConfigu
     hboxLayout->setObjectName(u"hboxLayout"_s);
     mainLayout->addLayout(hboxLayout);
 
-    // TODO add size
     hboxLayout->addWidget(new QLabel(i18nc("@label:textbox", "Size:"), this));
+    mWarningSpinBox->setMaximum(999999999);
+    mWarningSpinBox->setSingleStep(100000);
     hboxLayout->addWidget(mWarningSpinBox);
     load();
 }
@@ -35,10 +37,12 @@ CheckFolderSizeAccountPluginConfigureWidget::~CheckFolderSizeAccountPluginConfig
 
 void CheckFolderSizeAccountPluginConfigureWidget::load()
 {
+    mWarningSpinBox->setValue(CheckFolderSizeAccountSettings::self()->warningSize());
 }
 
 void CheckFolderSizeAccountPluginConfigureWidget::save()
 {
+    CheckFolderSizeAccountSettings::self()->setWarningSize(mWarningSpinBox->value());
 }
 
 #include "moc_checkfoldersizeaccountpluginconfigurewidget.cpp"

@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "checkfoldersizeaccountplugindelegate.h"
+#include "checkfoldersizeaccount.h"
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionStatistics>
 #include <Akonadi/EntityTreeModel>
@@ -50,7 +51,7 @@ void CheckFolderSizeAccountPluginDelegate::paint(QPainter *painter, const QStyle
     const auto size = statistics.size();
     if (size > -1 && index.parent().isValid()) {
         painter->save();
-        if (size > 10000000) {
+        if (size > CheckFolderSizeAccountSettings::self()->warningSize()) {
             painter->setPen(QPen(Qt::red));
         }
         KFormat format;
