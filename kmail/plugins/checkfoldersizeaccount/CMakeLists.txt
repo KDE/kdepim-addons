@@ -18,9 +18,17 @@ target_sources(
         checkfoldersizeaccountpluginconfiguredialog.cpp
         checkfoldersizeaccountpluginconfigurewidget.h
         checkfoldersizeaccountpluginconfigurewidget.cpp
-        checkfoldersizeaccountfilterproxymodel.h checkfoldersizeaccountfilterproxymodel.cpp
-        checkfoldersizeaccountcombobox.h checkfoldersizeaccountcombobox.cpp
+        checkfoldersizeaccountfilterproxymodel.h 
+	checkfoldersizeaccountfilterproxymodel.cpp
+        checkfoldersizeaccountcombobox.h 
+	checkfoldersizeaccountcombobox.cpp
 )
+
+kconfig_add_kcfg_files(kmail_checkfoldersizeaccount
+    checkfoldersizeaccount.kcfgc
+)
+
+
 
 ecm_qt_declare_logging_category(kmail_checkfoldersizeaccount
     HEADER checkfoldersizeaccount_debug.h

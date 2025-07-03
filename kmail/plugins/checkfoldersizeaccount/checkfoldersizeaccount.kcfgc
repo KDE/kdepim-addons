@@ -1,0 +1,5 @@
+File=checkfoldersizeaccount.kcfg
+ClassName=CheckFolderSizeAccountSettings
+Mutators=true
+Singleton=true
+ItemAccessors=true
