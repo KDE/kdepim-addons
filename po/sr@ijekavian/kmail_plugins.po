@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 07:06+0000\n"
+"POT-Creation-Date: 2025-07-03 06:57+0000\n"
 "PO-Revision-Date: 2017-02-11 11:14+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -98,22 +98,26 @@ msgstr "Чаробњак против вируса"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:19
 #, kde-format
+msgctxt "@label:combobox, All folders"
 msgid "All"
 msgstr ""
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
 #, kde-format
-msgid "More Than 100Ko"
+msgctxt "@label:combobox, Folders bigger than the specified size"
+msgid "More Than 100 kB"
 msgstr ""
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
 #, kde-format
-msgid "More Than 1Mo"
+msgctxt "@label:combobox, Folders bigger than the specified size"
+msgid "More Than 1 MB"
 msgstr ""
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
-msgid "More Than 10Mo"
+msgctxt "@label:combobox, Folders bigger than the specified size"
+msgid "More Than 10 MB"
 msgstr ""
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
@@ -123,13 +127,15 @@ msgctxt "@title:window"
 msgid "Check Folder Size"
 msgstr ""
 
-#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:22
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:23
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
 msgstr ""
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Size:"
 msgstr ""
 

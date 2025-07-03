@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 07:06+0000\n"
+"POT-Creation-Date: 2025-07-03 06:57+0000\n"
 "PO-Revision-Date: 2025-07-02 11:53+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -102,23 +102,31 @@ msgid "&Anti-Virus Wizard…"
 msgstr "Assistent contra els &virus…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@label:combobox, All folders"
 msgid "All"
 msgstr "Tot"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
-#, kde-format
-msgid "More Than 100Ko"
+#, fuzzy, kde-format
+#| msgid "More Than 100Ko"
+msgctxt "@label:combobox, Folders bigger than the specified size"
+msgid "More Than 100 kB"
 msgstr "Més de 100Ko"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
-#, kde-format
-msgid "More Than 1Mo"
+#, fuzzy, kde-format
+#| msgid "More Than 1Mo"
+msgctxt "@label:combobox, Folders bigger than the specified size"
+msgid "More Than 1 MB"
 msgstr "Més de 1Mo"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
-#, kde-format
-msgid "More Than 10Mo"
+#, fuzzy, kde-format
+#| msgid "More Than 10Mo"
+msgctxt "@label:combobox, Folders bigger than the specified size"
+msgid "More Than 10 MB"
 msgstr "Més de 10Mo"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
@@ -128,13 +136,17 @@ msgctxt "@title:window"
 msgid "Check Folder Size"
 msgstr "Comprovació de la mida de les carpetes"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:22
-#, kde-format
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:23
+#, fuzzy, kde-format
+#| msgid "Display Colored Folder when size is too expensive."
+msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
 msgstr "Mostra una carpeta acolorida quan la mida sigui massa costosa."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:textbox"
 msgid "Size:"
 msgstr "Mida:"
 

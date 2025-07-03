@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 07:06+0000\n"
-"PO-Revision-Date: 2025-07-01 16:02+0300\n"
+"POT-Creation-Date: 2025-07-03 06:57+0000\n"
+"PO-Revision-Date: 2025-07-03 08:42+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -97,24 +97,32 @@ msgid "&Anti-Virus Wizard…"
 msgstr "М&айстер блокування вірусів…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@label:combobox, All folders"
 msgid "All"
-msgstr ""
+msgstr "Усі"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
-#, kde-format
-msgid "More Than 100Ko"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "More Than 100Ko"
+msgctxt "@label:combobox, Folders bigger than the specified size"
+msgid "More Than 100 kB"
+msgstr "Понад 100Ko"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
-#, kde-format
-msgid "More Than 1Mo"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "More Than 1Mo"
+msgctxt "@label:combobox, Folders bigger than the specified size"
+msgid "More Than 1 MB"
+msgstr "Понад 1Mo"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
-#, kde-format
-msgid "More Than 10Mo"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "More Than 10Mo"
+msgctxt "@label:combobox, Folders bigger than the specified size"
+msgid "More Than 10 MB"
+msgstr "Понад 10Mo"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
@@ -123,15 +131,19 @@ msgctxt "@title:window"
 msgid "Check Folder Size"
 msgstr "Перевірка розміру тек"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:22
-#, kde-format
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:23
+#, fuzzy, kde-format
+#| msgid "Display Colored Folder when size is too expensive."
+msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr ""
+msgstr "Показувати теку кольором, якщо розмір є надто великим."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:textbox"
 msgid "Size:"
-msgstr ""
+msgstr "Розмір:"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
 #, kde-format
