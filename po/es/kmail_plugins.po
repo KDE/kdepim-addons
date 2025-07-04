@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:57+0000\n"
-"PO-Revision-Date: 2025-07-02 12:37+0100\n"
+"PO-Revision-Date: 2025-07-03 12:19+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -97,32 +97,28 @@ msgid "&Anti-Virus Wizard…"
 msgstr "&Asistente antivirus…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:19
-#, fuzzy, kde-format
-#| msgid "All"
+#, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
-msgstr "Todos"
+msgstr "Todas"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
-#, fuzzy, kde-format
-#| msgid "More Than 100Ko"
+#, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr "Más de 100 Kb"
+msgstr "Más de 100 kB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
-#, fuzzy, kde-format
-#| msgid "More Than 1Mo"
+#, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr "Más de 1 Mb"
+msgstr "Más de 1 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
-#, fuzzy, kde-format
-#| msgid "More Than 10Mo"
+#, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr "Más de 10 Mb"
+msgstr "Más de 10 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
@@ -132,15 +128,13 @@ msgid "Check Folder Size"
 msgstr "Comprobar el tamaño de las carpetas"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Display Colored Folder when size is too expensive."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr "Mostrar carpeta coloreada cuando el tamaño sea demasiado costoso."
+msgstr "Mostrar carpeta coloreada cuando el tamaño sea demasiado grande."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
 msgstr "Tamaño:"

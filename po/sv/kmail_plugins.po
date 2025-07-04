@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:57+0000\n"
-"PO-Revision-Date: 2025-01-17 08:10+0100\n"
+"PO-Revision-Date: 2025-07-03 15:42+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
@@ -97,25 +97,25 @@ msgstr "Guide för eliminering &av virus…"
 #, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
-msgstr ""
+msgstr "Alla"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr ""
+msgstr "Mer än 100 kB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr ""
+msgstr "Mer än 1 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr ""
+msgstr "Mer än 10 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
@@ -128,13 +128,13 @@ msgstr "Kontrollera korgstorlek"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr ""
+msgstr "Visa färglagd korg när storleken är för dyr."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
-msgstr ""
+msgstr "Storlek:"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
 #, kde-format
@@ -146,7 +146,7 @@ msgstr "Vi&sa korgstorlekar…"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Sök…"
 
 #: common/antispamwizard.cpp:90
 #, kde-format

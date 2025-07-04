@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:57+0000\n"
-"PO-Revision-Date: 2025-07-01 07:22+0200\n"
+"PO-Revision-Date: 2025-07-03 10:05+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -99,25 +99,25 @@ msgstr "Čarovnik proti virusom…"
 #, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
-msgstr ""
+msgstr "Vse"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr ""
+msgstr "Več kot 100 kB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr ""
+msgstr "Več kot 1 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr ""
+msgstr "Več kot 10 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
@@ -130,13 +130,13 @@ msgstr "Preveri velikost mape"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr ""
+msgstr "Prikaži barvno mapo, ko je velikost predraga."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
-msgstr ""
+msgstr "Velikost:"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
 #, kde-format
