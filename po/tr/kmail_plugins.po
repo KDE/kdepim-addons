@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:57+0000\n"
-"PO-Revision-Date: 2025-07-02 16:57+0300\n"
+"PO-Revision-Date: 2025-07-04 15:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -95,32 +95,28 @@ msgid "&Anti-Virus Wizard…"
 msgstr "&Antivirüs Sihirbazı…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:19
-#, fuzzy, kde-format
-#| msgid "All"
+#, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
 msgstr "Tümü"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
-#, fuzzy, kde-format
-#| msgid "More Than 100Ko"
+#, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr "100 Ko’dan büyük"
+msgstr "100 kB’den büyük"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
-#, fuzzy, kde-format
-#| msgid "More Than 1Mo"
+#, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr "1 Mo'dan büyük"
+msgstr "1 MB’dan büyük"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
-#, fuzzy, kde-format
-#| msgid "More Than 10Mo"
+#, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr "10 Mo’dan büyük"
+msgstr "10 MB’dan büyük"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
@@ -130,15 +126,13 @@ msgid "Check Folder Size"
 msgstr "Klasör Boyutunu Denetle"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Display Colored Folder when size is too expensive."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
 msgstr "Boyut çok maliyetliyse renkli klasör görüntüle"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
 msgstr "Boyut:"

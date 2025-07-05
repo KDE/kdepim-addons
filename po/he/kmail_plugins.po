@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:57+0000\n"
-"PO-Revision-Date: 2025-07-02 14:18+0300\n"
+"PO-Revision-Date: 2025-07-04 13:37+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -95,8 +95,7 @@ msgid "&Anti-Virus Wizard…"
 msgstr "אשף מניעת &וירוסים…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:19
-#, fuzzy, kde-format
-#| msgid "All"
+#, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
 msgstr "הכול"
@@ -105,19 +104,19 @@ msgstr "הכול"
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr ""
+msgstr "יותר מ־100 ק״ב"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr ""
+msgstr "יותר ממגה בית"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr ""
+msgstr "יותר מ־10 מ״ב"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
@@ -127,15 +126,13 @@ msgid "Check Folder Size"
 msgstr "בדיקת גודל התיקייה"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:23
-#, fuzzy, kde-format
-#| msgid "Display Colored Folder when size is too expensive."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
 msgstr "להציג תיקייה בצבע כשהגודל יקר מדי."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Size:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
 msgstr "גודל:"
