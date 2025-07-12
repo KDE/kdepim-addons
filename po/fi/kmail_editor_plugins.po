@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2016.
-# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:42+0000\n"
-"PO-Revision-Date: 2024-10-20 17:21+0300\n"
+"PO-Revision-Date: 2025-07-07 20:59+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
-msgstr ""
+msgstr "Avaa tekoälykeskustelu"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:25
 #, kde-format
@@ -45,26 +45,25 @@ msgstr "Korjaa valittu teksti automaattisesti"
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
-msgstr ""
+msgstr "Generoi pikavastaus automaattisesti"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
-msgstr ""
+msgstr "Yhteenvetoteksti"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
-#, fuzzy, kde-format
-#| msgid "Autocorrect Text"
+#, kde-format
 msgctxt "@action"
 msgid "Correct Text"
-msgstr "Korjaa teksti automaattisesti"
+msgstr "Korjaa teksti"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
-msgstr ""
+msgstr "Pikavastaus"
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format

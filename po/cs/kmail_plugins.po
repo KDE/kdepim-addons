@@ -147,7 +147,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Hledat…"
 
 #: common/antispamwizard.cpp:90
 #, kde-format
