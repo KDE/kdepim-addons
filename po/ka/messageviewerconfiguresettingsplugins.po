@@ -178,7 +178,7 @@ msgstr "ელფოსტაზე ხელმოწერის დასმ�
 #, kde-format
 msgctxt "@option:check"
 msgid "Use default rule"
-msgstr "ნაგულისხმები წესის გამოყენება"
+msgstr "ნაგულისხმევი წესის გამოყენება"
 
 #: dkim-verify/dkimpolicywidget.cpp:21
 #, kde-format
