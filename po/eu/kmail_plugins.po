@@ -1,7 +1,7 @@
 # Translation for kmail_plugins.po to Euskara/Basque (eu).
 # Copyright (C) 2022-2025 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2023, 2024, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:57+0000\n"
-"PO-Revision-Date: 2025-01-17 06:01+0100\n"
+"PO-Revision-Date: 2025-07-16 21:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Database Tool"
-msgstr "Akonadi-ren datu-baserako tresna"
+msgstr "Akonadiren datu-base tresna"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:28
 #, kde-format
@@ -100,25 +100,25 @@ msgstr "Birusen &aurkako morroia..."
 #, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
-msgstr ""
+msgstr "Dena"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr ""
+msgstr "100 kB baino gehiago"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr ""
+msgstr "1 MB baino gehiago"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr ""
+msgstr "10 MB baino gehiago"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
@@ -131,13 +131,13 @@ msgstr "Egiaztatu karpetaren neurria"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr ""
+msgstr "Azaldu karpeta koloreduna neurria garestiegia denean."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
-msgstr ""
+msgstr "Neurria:"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
 #, kde-format
@@ -149,7 +149,7 @@ msgstr "Erakut&si karpetaren neurria..."
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Bilatu..."
 
 #: common/antispamwizard.cpp:90
 #, kde-format
