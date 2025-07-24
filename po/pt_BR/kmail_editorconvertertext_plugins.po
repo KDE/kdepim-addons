@@ -4,20 +4,21 @@
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2018, 2019.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019.
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorconvertertext_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:42+0000\n"
-"PO-Revision-Date: 2019-12-20 11:14-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2025-07-23 19:36-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 19.08.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: markdown/markdownlib/markdownconfiguredialog.cpp:18
 #, kde-format
@@ -26,18 +27,16 @@ msgid "Configure Markdown Plugin"
 msgstr "Configurar o plugin Markdown"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enable embedded LaTeX"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
-msgstr "Habilitar LaTeX embutido"
+msgstr "Ativar LaTeX embutido"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Enable PHP Markdown Extra definition lists"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
-msgstr "Habilitar listas de definição extras do PHP Markdown"
+msgstr "Ativar listas de definição extras do PHP Markdown"
 
 #: markdown/markdownlib/markdownconverter.cpp:75
 #: markdown/markdownlib/markdownconverter.cpp:98
@@ -52,22 +51,19 @@ msgid "Add Image"
 msgstr "Adicionar imagem"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Keep original size"
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Manter tamanho original"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Width:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "Largura:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Height:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Height:"
 msgstr "Altura:"
@@ -117,8 +113,7 @@ msgid "Converter Error"
 msgstr "Erro no conversor"
 
 #: markdown/plugin/markdowninterface.cpp:38
-#, fuzzy, kde-format
-#| msgid "Generate HTML from markdown language."
+#, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Gerar HTML a partir da linguagem Markdown."
@@ -129,8 +124,7 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:57
-#, fuzzy, kde-format
-#| msgid "Markdown Action"
+#, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Ação Markdown"

@@ -4,20 +4,21 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2019, 2020, 2021, 2023.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2018.
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:42+0000\n"
-"PO-Revision-Date: 2023-11-14 13:38-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2025-07-23 19:38-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:16
 #, kde-format
@@ -54,15 +55,13 @@ msgid "Add Address Book"
 msgstr "Adicionar livro de endereços"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Automatic Add Contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Adicionar os contatos automaticamente"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:43
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "Selecione o livro de endereços onde armazenar os contatos:"
@@ -84,8 +83,7 @@ msgid "Send As HTML"
 msgstr "Enviar como HTML"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Update SMTP server"
+#, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "Atualizar servidor SMTP"
@@ -97,10 +95,7 @@ msgid "Check SMTP server"
 msgstr "Verificar servidor SMTP"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to send the email with a different SMTP than the one defined "
-#| "in the current identity?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
@@ -116,29 +111,25 @@ msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "Configurar o plugin \"Verificar antes de enviar o e-mail\""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Send as plain text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "Enviar como texto simples"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use SMTP server defined in identity"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "Usar o servidor SMTP definido na identidade"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Check duplicated emails addresses"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "Verificar endereços de e-mail duplicados"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Check send attachment"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Verificar o envio de anexos"
@@ -150,8 +141,7 @@ msgid "Duplicated emails"
 msgstr "E-mails duplicados"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "These emails are duplicated. Do you want to send email?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Estes e-mails estão duplicados. Deseja enviar o e-mail?"
@@ -169,8 +159,7 @@ msgid "Check Attachment"
 msgstr "Verificar anexo"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Do you want to send some attachment?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "Deseja enviar algum anexo?"
@@ -182,15 +171,13 @@ msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Configurar o plugin \"Confirmar endereço de e-mail\""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Accepted Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Nome de domínio aceito"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Rejected Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Nome de domínio rejeitado"
@@ -199,7 +186,7 @@ msgstr "Nome de domínio rejeitado"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "A&dicionar..."
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:67
@@ -209,8 +196,7 @@ msgstr "Re&mover"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:49
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Mod&ify..."
+#, kde-format
 msgid "Mod&ify…"
 msgstr "Mod&ificar..."
 
@@ -240,8 +226,7 @@ msgid "Do you want to remove this email address?"
 msgstr "Deseja remover este endereço de e-mail?"
 
 #: confirm-address/confirmaddressdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add Selected Emails to WhiteList"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Adicionar os e-mails selecionados à lista de permissões"
@@ -264,11 +249,10 @@ msgid "Emails added to white list"
 msgstr "E-mails adicionados à lista de permissões"
 
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
-#, fuzzy, kde-format
-#| msgid "Enter new domain name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
-msgstr "Digite o nome do novo domínio:"
+msgstr "Digite o novo nome de domínio:"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format
@@ -283,8 +267,7 @@ msgid "Change Value"
 msgstr "Alterar valor"
 
 #: confirm-address/confirmaddresswidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Potentially invalid emails are displayed in red:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Os e-mails potencialmente inválidos são apresentados em vermelho:"

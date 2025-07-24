@@ -4,25 +4,24 @@
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010, 2012, 2018, 2019, 2020, 2022.
-# Marcus Gama <marcus.gama@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2012, 2025 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_importexportplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2022-05-03 13:18-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2025-07-23 19:28-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: csv/csvimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Export CSV file..."
+#, kde-format
 msgid "Export CSV file…"
 msgstr "Exportar arquivo CSV..."
 
@@ -32,8 +31,7 @@ msgid "Export contacts to a file in comma separated value format."
 msgstr "Exportar contatos para um arquivo no formato separado por vírgulas."
 
 #: csv/csvimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Import CSV file..."
+#, kde-format
 msgid "Import CSV file…"
 msgstr "Importar arquivo CSV..."
 
@@ -372,17 +370,13 @@ msgstr ""
 "no arquivo."
 
 #: csv/import/csvimportdialog.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Apply Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
 msgstr "Aplicar modelo..."
 
 #: csv/import/csvimportdialog.cpp:449
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "Salvar modelo..."
@@ -476,8 +470,7 @@ msgid "GMX address book file (*.gmxa)"
 msgstr "Arquivo de livro de endereços do GMX (*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Import GMX file..."
+#, kde-format
 msgid "Import GMX file…"
 msgstr "Importar arquivo do GMX..."
 
@@ -487,8 +480,7 @@ msgid "Import contacts from a GMX address book file."
 msgstr "Importar contatos de um arquivo de livro de endereços do GMX."
 
 #: gmx/gmximportexportplugininterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Export GMX file..."
+#, kde-format
 msgid "Export GMX file…"
 msgstr "Exportar arquivo do GMX..."
 
@@ -510,8 +502,7 @@ msgid "%1 is not a GMX address book file."
 msgstr "%1 não é um arquivo de livro de endereços do GMX."
 
 #: ldap/ldapimportexportplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import From LDAP server..."
+#, kde-format
 msgid "Import From LDAP server…"
 msgstr "Importar de servidor LDAP..."
 
@@ -521,8 +512,7 @@ msgid "Import contacts from an LDAP server."
 msgstr "Importar contatos de um servidor LDAP."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Import LDIF file..."
+#, kde-format
 msgid "Import LDIF file…"
 msgstr "Importar arquivo LDIF..."
 
@@ -532,8 +522,7 @@ msgid "Import contacts from an LDIF file."
 msgstr "Importar contatos de um arquivo LDIF."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Export LDIF file..."
+#, kde-format
 msgid "Export LDIF file…"
 msgstr "Exportar arquivo LDIF..."
 
@@ -711,17 +700,13 @@ msgid "Do you want to import this contact into your address book?"
 msgstr "Deseja importar este contato para o seu livro de endereços?"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Import All..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
 msgstr "Importar todos..."
 
 #: vcards/vcardimportexportplugininterface.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import vCard"
+#, kde-format
 msgid "Import vCard…"
 msgstr "Importar vCard"
 
@@ -736,14 +721,12 @@ msgid "Export contacts to a vCard 4.0 file."
 msgstr "Exportar contatos para um arquivo vCard 4.0."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0..."
+#, kde-format
 msgid "Export vCard 4.0…"
 msgstr "Exportar vCard 4.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:58
-#, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
+#, kde-format
 msgid "Export vCard 3.0…"
 msgstr "Exportar vCard 3.0..."
 
@@ -753,8 +736,7 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "Exportar contatos para um arquivo vCard 3.0."
 
 #: vcards/vcardimportexportplugininterface.cpp:64
-#, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
+#, kde-format
 msgid "Export vCard 2.1…"
 msgstr "Exportar vCard 2.1..."
 
@@ -809,8 +791,7 @@ msgid "Export to Several Files"
 msgstr "Exportar para vários arquivos"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
-#, fuzzy, kde-format
-#| msgid "Import Windows Contact file..."
+#, kde-format
 msgid "Import Windows Contact file…"
 msgstr "Importar arquivo de contatos do Windows..."
 
