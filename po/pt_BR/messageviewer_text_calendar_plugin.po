@@ -6,20 +6,21 @@
 # Henrique Pinto <henrique.pinto@kdemail.net>, 2005.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2015, 2018.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2021.
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2021-11-09 16:23-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2025-07-23 19:44-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -28,8 +29,7 @@ msgid "Select Attendees"
 msgstr "Selecionar participantes"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Clique para adicionar um novo participante"
@@ -47,8 +47,7 @@ msgid "Remove"
 msgstr "Remover"
 
 #: delegateselector.cpp:23
-#, fuzzy, kde-format
-#| msgid "Keep me informed about status changes of this incidence."
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "Mantenha-me informado sobre as alterações do status desta incidência."
@@ -60,15 +59,13 @@ msgid "Select delegate"
 msgstr "Selecionar delegado"
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Delegado:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Comentário:"
@@ -394,8 +391,7 @@ msgid "Delegation to organizer is not possible."
 msgstr "Não é permitida a delegação ao organizador."
 
 #: text_calendar.cpp:1068
-#, fuzzy, kde-format
-#| msgid "Save Invitation Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Salvar o anexo do convite"
@@ -450,15 +446,13 @@ msgid "Send Email to Organizer"
 msgstr "Enviar e-mail para o organizador"
 
 #: text_calendar.cpp:1270
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Não enviar"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Enviar e-mail"
@@ -474,8 +468,7 @@ msgid "Open Attachment"
 msgstr "Abrir anexo"
 
 #: text_calendar.cpp:1342
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
 msgstr "Salvar anexo como..."
 
@@ -495,8 +488,7 @@ msgid "Accept counter proposal"
 msgstr "Aceitar a contraproposta"
 
 #: text_calendar.cpp:1364
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
 msgstr "Criar uma contraproposta..."
 
@@ -521,8 +513,7 @@ msgid "Decline counter proposal"
 msgstr "Recusar a contraproposta"
 
 #: text_calendar.cpp:1374
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
 msgstr "Verificar meu calendário..."
 

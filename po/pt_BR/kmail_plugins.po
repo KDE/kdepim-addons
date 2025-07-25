@@ -5,20 +5,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2015, 2016, 2018.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2021, 2022, 2023.
 # Geraldo Simiao <geraldosimiao@fedoraproject.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:57+0000\n"
-"PO-Revision-Date: 2023-11-14 13:37-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2025-07-23 19:42-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
@@ -27,11 +28,10 @@ msgid "Akonadi Database Tool"
 msgstr "Ferramenta de banco de dados do Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:28
-#, fuzzy, kde-format
-#| msgid "Akonadi Vacuum"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr "Limpar o Akonadi"
+msgstr "Limpar o &Akonadi..."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
@@ -46,18 +46,16 @@ msgid "Akonadi Vacuum"
 msgstr "Limpar o Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Vacuum"
+#, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
 msgstr "Limpar"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Akonadi Fsck"
+#, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr "Fsck no Akonadi"
+msgstr "Fsck no &Akonadi..."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
@@ -72,8 +70,7 @@ msgid "Akonadi Fsck"
 msgstr "Fsck no Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
-#, fuzzy, kde-format
-#| msgid "Fsck"
+#, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
 msgstr "Fsck (checar e reparar)"
@@ -84,81 +81,76 @@ msgid "Finished."
 msgstr "Concluído."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:96
-#, fuzzy, kde-format
-#| msgid "Start..."
+#, kde-format
 msgid "Start…"
 msgstr "Iniciar..."
 
 #: antispamplugin/antispamplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr "Assistente de anti-spam"
+msgstr "Assistente &anti-spam..."
 
 #: antivirusplugin/antivirusplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr "Assistente de antivírus"
+msgstr "Assistente &antivírus..."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:19
 #, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr ""
+msgstr "Mais de 100 kB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr ""
+msgstr "Mias de 1 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr ""
+msgstr "Mais de 10 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
-msgstr ""
+msgstr "Verifique o tamanho da pasta"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr ""
+msgstr "Mostrar pasta em cores quando o tamanho for muito grande."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
-msgstr ""
+msgstr "Tamanho:"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
-msgstr ""
+msgstr "&Mostrar tamanho das pastas..."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Pesquisar..."
 
 #: common/antispamwizard.cpp:90
 #, kde-format
@@ -237,8 +229,7 @@ msgid "Ham"
 msgstr "Não-spam"
 
 #: common/antispamwizard.cpp:458
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
 msgstr "Procurando por %1..."
 
@@ -369,8 +360,7 @@ msgstr ""
 "seguinte.</p>"
 
 #: common/antispamwizard.cpp:1058
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Marcar como lidas as mensagens de spam detectadas"
@@ -381,8 +371,7 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Marca como lidas as mensagens que foram classificadas como spam."
 
 #: common/antispamwizard.cpp:1062
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Mover spam &conhecido para:"
@@ -397,8 +386,7 @@ msgstr ""
 "poderá ser alterado na visão de pastas abaixo."
 
 #: common/antispamwizard.cpp:1077
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Mover &provável spam para:"
@@ -416,11 +404,10 @@ msgstr ""
 "também não poderá selecionar qualquer pasta.</p>"
 
 #: common/antispamwizard.cpp:1189
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
-msgstr "Classificar mensagens usando as ferramentas antivírus"
+msgstr "Verificar mensagens usando as ferramentas de antivírus"
 
 #: common/antispamwizard.cpp:1191
 #, kde-format
@@ -437,8 +424,7 @@ msgstr ""
 "especial."
 
 #: common/antispamwizard.cpp:1197
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Mover mensagens que contenham vírus para a pasta selecionada"
@@ -455,8 +441,7 @@ msgstr ""
 "a lixo, mas você pode modificá-la na visão de pastas."
 
 #: common/antispamwizard.cpp:1205
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Adicionalmente, marcar como lidas as mensagens infectadas com vírus"
@@ -471,8 +456,7 @@ msgstr ""
 "como move-as para a pasta selecionada."
 
 #: mailmergeplugin/mailmergedialog.cpp:19
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Visualização"
@@ -484,8 +468,7 @@ msgid "Mail Merge"
 msgstr "Mesclar mensagem"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Caminho:"
@@ -498,8 +481,7 @@ msgid "Attachment"
 msgstr "Anexo"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Source:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Origem:"
@@ -515,8 +497,7 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Anexo:"
@@ -524,7 +505,7 @@ msgstr "Anexo:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "A&dicionar..."
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -537,8 +518,7 @@ msgid "Mod&ify..."
 msgstr "Mod&ificar..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Select attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Selecionar anexo:"
