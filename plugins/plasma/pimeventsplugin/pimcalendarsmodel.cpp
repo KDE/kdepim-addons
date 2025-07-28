@@ -88,6 +88,7 @@ QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
     case IconNameRole: {
         const auto attr = col.attribute<Akonadi::EntityDisplayAttribute>();
         const QString icon = attr ? attr->iconName() : QString();
+        return icon;
     }
     default:
         return {};
