@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:42+0000\n"
+"POT-Creation-Date: 2025-07-29 02:37+0000\n"
 "PO-Revision-Date: 2019-12-18 19:26+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:24
+#: aitool/aitooltextplugineditorinterface.cpp:30
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"

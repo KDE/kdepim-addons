@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:42+0000\n"
+"POT-Creation-Date: 2025-07-29 02:37+0000\n"
 "PO-Revision-Date: 2024-11-15 17:18+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:24
+#: aitool/aitooltextplugineditorinterface.cpp:30
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
