@@ -7,6 +7,7 @@
 #pragma once
 
 #include <MessageComposer/PluginEditorInterface>
+#include <TextAutoGenerateText/TextAutoGenerateManager>
 class AutoGenerateAnswersEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
@@ -16,6 +17,9 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
+
+    [[nodiscard]] TextAutoGenerateText::TextAutoGenerateManager *manager() const;
+    void setManager(TextAutoGenerateText::TextAutoGenerateManager *newManager);
 
 private:
     void slotGenerateTextInProgress(const QString &str);
@@ -27,4 +31,5 @@ private:
         FixTypo,
     };
     AnswerType mAnswerType = AnswerType::Unknown;
+    TextAutoGenerateText::TextAutoGenerateManager *mManager = nullptr;
 };

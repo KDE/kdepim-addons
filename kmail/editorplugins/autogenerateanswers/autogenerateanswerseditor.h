@@ -10,7 +10,10 @@
 
 #include <MessageComposer/PluginEditorInterface>
 #include <QVariant>
-
+namespace TextAutoGenerateText
+{
+class TextAutoGenerateManager;
+}
 class AutoGenerateAnswersEditor : public MessageComposer::PluginEditor
 {
     Q_OBJECT
@@ -23,4 +26,7 @@ public:
     [[nodiscard]] bool hasConfigureDialog() const override;
 Q_SIGNALS:
     void configChanged();
+
+private:
+    TextAutoGenerateText::TextAutoGenerateManager *const mManager;
 };

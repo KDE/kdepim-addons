@@ -8,11 +8,13 @@
 #include "autogenerateanswerseditorinterface.h"
 #include <KPluginFactory>
 #include <QPointer>
+#include <TextAutoGenerateText/TextAutoGenerateManager>
 
 K_PLUGIN_CLASS_WITH_JSON(AutoGenerateAnswersEditor, "kmail_autogenerateanswerseditorplugin.json")
 
 AutoGenerateAnswersEditor::AutoGenerateAnswersEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
+    , mManager(new TextAutoGenerateText::TextAutoGenerateManager(this))
 {
 }
 
@@ -30,7 +32,9 @@ bool AutoGenerateAnswersEditor::hasConfigureDialog() const
 
 MessageComposer::PluginEditorInterface *AutoGenerateAnswersEditor::createInterface(QObject *parent)
 {
-    return new AutoGenerateAnswersEditorInterface(parent);
+    auto interface = new AutoGenerateAnswersEditorInterface(parent);
+    interface->setManager(mManager);
+    return interface;
 }
 
 #include "autogenerateanswerseditor.moc"
