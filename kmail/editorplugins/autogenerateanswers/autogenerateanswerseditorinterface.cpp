@@ -66,6 +66,7 @@ void AutoGenerateAnswersEditorInterface::exec()
     auto job = new TextAutoGenerateText::TextAutoGenerateAskJob(this);
     // TODO add manager
     connect(job, &TextAutoGenerateText::TextAutoGenerateAskJob::generateTextInProgress, this, &AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress);
+    connect(job, &TextAutoGenerateText::TextAutoGenerateAskJob::errorOccured, this, &AutoGenerateAnswersEditorInterface::slotGenerateTextErrorOccured);
     job->start();
 }
 
@@ -74,6 +75,11 @@ void AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress(const QStrin
     AutoGenerateAnswersEditorDialog w(parentWidget());
     w.setAnswer(str);
     w.exec();
+}
+
+void AutoGenerateAnswersEditorInterface::slotGenerateTextErrorOccured(const QString &errorStr)
+{
+    qCWarning(KMAIL_EDITOR_AUTOGENERATEANSWER_PLUGIN_LOG) << "Error occured: " << errorStr;
 }
 
 #include "moc_autogenerateanswerseditorinterface.cpp"
