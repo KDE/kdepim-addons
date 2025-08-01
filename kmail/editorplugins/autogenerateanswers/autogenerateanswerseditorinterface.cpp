@@ -71,7 +71,9 @@ void AutoGenerateAnswersEditorInterface::exec()
 
 void AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress(const QString &str)
 {
-    // TODO
+    AutoGenerateAnswersEditorDialog w(parentWidget());
+    w.setAnswer(str);
+    w.exec();
 }
 
 #include "moc_autogenerateanswerseditorinterface.cpp"
