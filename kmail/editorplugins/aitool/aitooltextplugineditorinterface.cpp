@@ -7,6 +7,7 @@
 #include "aitooltextplugineditorinterface.h"
 using namespace Qt::Literals::StringLiterals;
 
+#include "textautogeneratetext_version.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>

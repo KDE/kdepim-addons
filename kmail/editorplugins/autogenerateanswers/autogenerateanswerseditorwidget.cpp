@@ -22,11 +22,11 @@ AutoGenerateAnswersEditorWidget::AutoGenerateAnswersEditorWidget(QWidget *parent
     mainLayout->addWidget(mPlainTextEdit);
 }
 
+AutoGenerateAnswersEditorWidget::~AutoGenerateAnswersEditorWidget() = default;
+
 void AutoGenerateAnswersEditorWidget::setAnswer(const QString &str)
 {
     mPlainTextEdit->setPlainText(str);
 }
-
-AutoGenerateAnswersEditorWidget::~AutoGenerateAnswersEditorWidget() = default;
 
 #include "moc_autogenerateanswerseditorwidget.cpp"

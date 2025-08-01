@@ -14,6 +14,8 @@ public:
     explicit AutoGenerateAnswersEditorDialog(QWidget *parent = nullptr);
     ~AutoGenerateAnswersEditorDialog() override;
 
+    void setAnswer(const QString &str);
+
 private:
     void readConfig();
     void writeConfig();

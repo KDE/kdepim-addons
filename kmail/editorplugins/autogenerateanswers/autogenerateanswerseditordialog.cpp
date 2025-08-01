@@ -4,7 +4,6 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "autogenerateanswerseditordialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "autogenerateanswerseditorwidget.h"
 #include <KConfigGroup>
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myAutoGenerateAnswersEditorDialogGroupName[] = "AutoGenerateAnswersEditorDialog";
@@ -53,6 +53,11 @@ void AutoGenerateAnswersEditorDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myAutoGenerateAnswersEditorDialogGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
+}
+
+void AutoGenerateAnswersEditorDialog::setAnswer(const QString &str)
+{
+    mAutoGenerateAnswersEditorWidget->setAnswer(str);
 }
 
 #include "moc_autogenerateanswerseditordialog.cpp"

@@ -19,6 +19,7 @@ public:
 
 private:
     void slotGenerateTextInProgress(const QString &str);
+    void slotGenerateTextErrorOccured(const QString &errorStr);
     enum class AnswerType : uint8_t {
         Unknown = 0,
         SummaryText,
