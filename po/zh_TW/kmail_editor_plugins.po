@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-29 00:42+0000\n"
+"POT-Creation-Date: 2025-08-02 00:44+0000\n"
 "PO-Revision-Date: 2025-06-08 23:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 25.07.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:30
+#: aitool/aitooltextplugineditorinterface.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
@@ -41,25 +41,25 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "自動修正選取的文字"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:28
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "自動生成回答"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "產生文字摘要"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "修正文字"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:48
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"

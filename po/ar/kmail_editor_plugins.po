@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-29 00:42+0000\n"
+"POT-Creation-Date: 2025-08-02 00:44+0000\n"
 "PO-Revision-Date: 2025-06-12 12:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,7 +19,7 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:30
+#: aitool/aitooltextplugineditorinterface.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
@@ -42,25 +42,25 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "صحّح النّصّ المحدّد آليًّا"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:28
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "أنشئ إجابة آليًا"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "لخّص النص"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "صحّح النّصّ"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:48
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
