@@ -7,7 +7,9 @@
 #pragma once
 
 #include <MessageComposer/PluginEditorInterface>
+#include <QPointer>
 #include <TextAutoGenerateText/TextAutoGenerateManager>
+class AutoGenerateAnswersEditorDialog;
 class AutoGenerateAnswersEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
@@ -32,4 +34,5 @@ private:
     };
     AnswerType mAnswerType = AnswerType::Unknown;
     TextAutoGenerateText::TextAutoGenerateManager *mManager = nullptr;
+    QPointer<AutoGenerateAnswersEditorDialog> mAnswersEditorDialog = nullptr;
 };
