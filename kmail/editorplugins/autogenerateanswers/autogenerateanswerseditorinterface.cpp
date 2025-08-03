@@ -86,9 +86,12 @@ void AutoGenerateAnswersEditorInterface::exec()
 
 void AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress(const QString &str)
 {
-    AutoGenerateAnswersEditorDialog w(parentWidget());
-    w.setAnswer(str);
-    w.exec();
+    if (!mAnswersEditorDialog) {
+        mAnswersEditorDialog = new AutoGenerateAnswersEditorDialog(parentWidget());
+        mAnswersEditorDialog->setAttribute(Qt::WA_DeleteOnClose);
+        mAnswersEditorDialog->show();
+    }
+    mAnswersEditorDialog->setAnswer(str);
 }
 
 void AutoGenerateAnswersEditorInterface::slotGenerateTextErrorOccured(const QString &errorStr)
