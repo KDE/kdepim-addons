@@ -92,6 +92,7 @@ void AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress(const QStrin
 {
     if (!mAnswersEditorDialog) {
         mAnswersEditorDialog = new AutoGenerateAnswersEditorDialog(parentWidget());
+        connect(mAnswersEditorDialog, &AutoGenerateAnswersEditorDialog::insertText, this, &AutoGenerateAnswersEditorInterface::insertText);
         mAnswersEditorDialog->setAttribute(Qt::WA_DeleteOnClose);
         mAnswersEditorDialog->show();
     }
