@@ -16,6 +16,9 @@ public:
 
     void setAnswer(const QString &str);
 
+Q_SIGNALS:
+    void insertText(const QString &str);
+
 private:
     QTextEdit *const mTextEdit;
 };
