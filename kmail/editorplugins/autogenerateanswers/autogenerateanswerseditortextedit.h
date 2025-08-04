@@ -13,4 +13,10 @@ class AutoGenerateAnswersEditorTextEdit : public QTextEdit
 public:
     explicit AutoGenerateAnswersEditorTextEdit(QWidget *parent = nullptr);
     ~AutoGenerateAnswersEditorTextEdit() override;
+
+Q_SIGNALS:
+    void insertText(const QString &str);
+
+protected:
+    void contextMenuEvent(QContextMenuEvent *event) override;
 };

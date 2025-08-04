@@ -21,6 +21,8 @@ AutoGenerateAnswersEditorWidget::AutoGenerateAnswersEditorWidget(QWidget *parent
     mTextEdit->setObjectName(u"mTextEdit"_s);
     mTextEdit->setReadOnly(true);
     mainLayout->addWidget(mTextEdit);
+
+    connect(mTextEdit, &AutoGenerateAnswersEditorTextEdit::insertText, this, &AutoGenerateAnswersEditorWidget::insertText);
 }
 
 AutoGenerateAnswersEditorWidget::~AutoGenerateAnswersEditorWidget() = default;
