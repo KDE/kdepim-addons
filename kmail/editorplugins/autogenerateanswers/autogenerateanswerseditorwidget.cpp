@@ -4,29 +4,29 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "autogenerateanswerseditorwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QPlainTextEdit>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 AutoGenerateAnswersEditorWidget::AutoGenerateAnswersEditorWidget(QWidget *parent)
     : QWidget{parent}
-    , mPlainTextEdit(new QPlainTextEdit(this))
+    , mTextEdit(new QTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));
 
-    mPlainTextEdit->setObjectName(u"mPlainTextEdit"_s);
-    mPlainTextEdit->setReadOnly(true);
-    mainLayout->addWidget(mPlainTextEdit);
+    mTextEdit->setObjectName(u"mTextEdit"_s);
+    mTextEdit->setReadOnly(true);
+    mainLayout->addWidget(mTextEdit);
 }
 
 AutoGenerateAnswersEditorWidget::~AutoGenerateAnswersEditorWidget() = default;
 
 void AutoGenerateAnswersEditorWidget::setAnswer(const QString &str)
 {
-    mPlainTextEdit->setPlainText(str);
+    mTextEdit->setText(str);
 }
 
 #include "moc_autogenerateanswerseditorwidget.cpp"

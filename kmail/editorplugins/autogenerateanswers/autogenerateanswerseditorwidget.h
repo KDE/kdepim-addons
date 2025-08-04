@@ -6,7 +6,7 @@
 #pragma once
 
 #include <QWidget>
-class QPlainTextEdit;
+class QTextEdit;
 class AutoGenerateAnswersEditorWidget : public QWidget
 {
     Q_OBJECT
@@ -17,5 +17,5 @@ public:
     void setAnswer(const QString &str);
 
 private:
-    QPlainTextEdit *const mPlainTextEdit;
+    QTextEdit *const mTextEdit;
 };
