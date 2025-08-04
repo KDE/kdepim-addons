@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "autogenerateanswerseditorwidget.h"
+#include "autogenerateanswerseditortextedit.h"
 
 #include <QPlainTextEdit>
 #include <QVBoxLayout>
@@ -11,7 +12,7 @@
 using namespace Qt::Literals::StringLiterals;
 AutoGenerateAnswersEditorWidget::AutoGenerateAnswersEditorWidget(QWidget *parent)
     : QWidget{parent}
-    , mTextEdit(new QTextEdit(this))
+    , mTextEdit(new AutoGenerateAnswersEditorTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
