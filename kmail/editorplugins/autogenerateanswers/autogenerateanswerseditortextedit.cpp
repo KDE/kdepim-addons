@@ -31,3 +31,5 @@ void AutoGenerateAnswersEditorTextEdit::contextMenuEvent(QContextMenuEvent *even
         delete popup;
     }
 }
+
+#include "moc_autogenerateanswerseditortextedit.cpp"
