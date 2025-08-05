@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:44+0000\n"
+"POT-Creation-Date: 2025-08-05 00:44+0000\n"
 "PO-Revision-Date: 2025-06-05 20:46+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -43,29 +43,36 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Samodejno popravi izbrano besedilo"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:31
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "Samodejno ustvari odgovor"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:40
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "Besedilo povzetka"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:42
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:46
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Popravi besedilo"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:48
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:52
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "Hitri odgovor"
+
+#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
+#, fuzzy, kde-format
+#| msgid "Insert"
+msgctxt "@action"
+msgid "Insert Text"
+msgstr "Vstavi"
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format
