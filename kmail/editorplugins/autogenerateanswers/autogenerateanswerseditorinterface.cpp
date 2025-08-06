@@ -21,6 +21,7 @@
 #if TEXTAUTOGENERATETEXT_VERSION >= QT_VERSION_CHECK(1, 7, 1)
 #include <TextAutoGenerateText/TextAutoGenerateMessageUtils>
 #endif
+#include <KMessageBox>
 
 using namespace Qt::Literals::StringLiterals;
 AutoGenerateAnswersEditorInterface::AutoGenerateAnswersEditorInterface(QObject *parent)
@@ -106,6 +107,7 @@ void AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress(const QStrin
 void AutoGenerateAnswersEditorInterface::slotGenerateTextErrorOccured(const QString &errorStr)
 {
     qCWarning(KMAIL_EDITOR_AUTOGENERATEANSWER_PLUGIN_LOG) << "Error occured: " << errorStr;
+    KMessageBox::error(parentWidget(), i18n("An error occured: %1", errorStr), i18n("Error"));
 }
 
 TextAutoGenerateText::TextAutoGenerateManager *AutoGenerateAnswersEditorInterface::manager() const
