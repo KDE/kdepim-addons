@@ -65,11 +65,10 @@ msgid "Quick Answer"
 msgstr "快速回复"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
-#, fuzzy, kde-format
-#| msgid "Insert"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Text"
-msgstr "插入"
+msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format
