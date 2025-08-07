@@ -22,6 +22,7 @@ AutoGenerateAnswersEditorDialog::AutoGenerateAnswersEditorDialog(QWidget *parent
     : QDialog(parent)
     , mAutoGenerateAnswersEditorWidget(new AutoGenerateAnswersEditorWidget(this))
 {
+    setWindowTitle(i18nc("@title:window", "Auto Generate Answer"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mAutoGenerateAnswersEditorWidget->setObjectName(u"mAutoGenerateAnswersEditorWidget"_s);
