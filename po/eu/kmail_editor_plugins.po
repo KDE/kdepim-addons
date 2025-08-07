@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-05 00:44+0000\n"
+"POT-Creation-Date: 2025-08-07 00:43+0000\n"
 "PO-Revision-Date: 2025-08-05 13:16+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -43,29 +43,40 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Hautatutako testua automatikoki zuzendu"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:35
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "Automatikoki sortu erantzuna"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:40
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:41
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "Laburpen testua"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:46
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:47
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Zuzendu testua"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:52
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:53
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "Erantzun azkarra"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
+#, fuzzy, kde-format
+#| msgid "An error occurred: \"%1\""
+msgid "An error occured: %1"
+msgstr "Errore bat gertatu da: \"%1\""
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
+#, kde-format
+msgid "Error"
+msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
 #, kde-format
