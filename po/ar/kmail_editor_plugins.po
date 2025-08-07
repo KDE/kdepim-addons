@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
 "PO-Revision-Date: 2025-06-12 12:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -41,6 +41,14 @@ msgstr "صحّح كامل النّصّ آليًّا"
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "صحّح النّصّ المحدّد آليًّا"
+
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Autogenerate Answer"
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
+msgstr "أنشئ إجابة آليًّا"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format

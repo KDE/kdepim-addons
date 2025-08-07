@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
-"PO-Revision-Date: 2025-06-08 23:59+0900\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
+"PO-Revision-Date: 2025-08-08 01:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: Traditional Chinese\n"
@@ -41,6 +41,14 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "自動修正選取的文字"
 
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Autogenerate Answer"
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
+msgstr "自動生成回答"
+
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
@@ -66,22 +74,20 @@ msgid "Quick Answer"
 msgstr "快速回答"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "一個錯誤發生了：「%1」"
+msgstr "發生了一個錯誤：%1"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "錯誤"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
-#, fuzzy, kde-format
-#| msgid "Insert"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Text"
-msgstr "插入"
+msgstr "插入文字"
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format

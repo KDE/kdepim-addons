@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
-"PO-Revision-Date: 2025-08-05 14:19+0300\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
+"PO-Revision-Date: 2025-08-07 08:21+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -43,6 +43,14 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Автоматичне виправлення позначеного тексту"
 
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Autogenerate Answer"
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
+msgstr "Автоматичне створення відповіді"
+
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
@@ -68,15 +76,14 @@ msgid "Quick Answer"
 msgstr "Швидка відповідь"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "Сталася помилка: «%1»"
+msgstr "Сталася помилка: %1"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Помилка"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
 #, kde-format

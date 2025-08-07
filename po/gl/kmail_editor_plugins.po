@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
 "PO-Revision-Date: 2025-06-19 09:52+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -40,6 +40,14 @@ msgstr "Corrixir o texto completo automaticamente"
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Corrixir o texto seleccionado automaticamente"
+
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Autogenerate Answer"
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
+msgstr "Xerar a resposta automaticamente"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
 "PO-Revision-Date: 2025-08-06 22:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -40,6 +40,14 @@ msgstr "Tüm Metni Kendiliğinden Düzelt"
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Seçili Metni Kendiliğinden Düzelt"
+
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Autogenerate Answer"
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
+msgstr "Yanıtı Kendiliğinden Üret"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -38,6 +38,12 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
+msgstr ""
+
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
 msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36

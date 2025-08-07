@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
 "PO-Revision-Date: 2024-11-15 17:18+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -42,6 +42,12 @@ msgstr "Автоматически исправить весь текст"
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Автоматически исправить выделенный текст"
+
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
+msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format

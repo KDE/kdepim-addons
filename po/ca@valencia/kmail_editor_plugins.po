@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
-"PO-Revision-Date: 2025-08-05 08:39+0200\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
+"PO-Revision-Date: 2025-08-07 08:39+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -47,6 +47,14 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Correcció automàtica del text seleccionat"
 
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Autogenerate Answer"
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
+msgstr "Resposta generada automàticament"
+
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
@@ -72,15 +80,14 @@ msgid "Quick Answer"
 msgstr "Resposta ràpida"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "S'ha detectat un error: «%1»"
+msgstr "S'ha detectat un error: %1"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "S'ha produït un error"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
 #, kde-format

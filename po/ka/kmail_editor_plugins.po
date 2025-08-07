@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
-"PO-Revision-Date: 2025-08-05 05:41+0200\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
+"PO-Revision-Date: 2025-08-07 04:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -41,6 +41,14 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "მონიშნული ტექსტის ავტოკორექცია"
 
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Autogenerate Answer"
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
+msgstr "პასუხის ავტოგენერაცია"
+
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
@@ -66,15 +74,14 @@ msgid "Quick Answer"
 msgstr "სწრაფი პასუხი"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "შეცდომა: %1"
+msgstr "აღმოჩენილია შეცდომა: %1"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "შეცდომა"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
 #, kde-format

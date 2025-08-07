@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 00:43+0000\n"
-"PO-Revision-Date: 2025-08-05 14:36+0200\n"
+"POT-Creation-Date: 2025-08-07 18:30+0000\n"
+"PO-Revision-Date: 2025-08-07 09:17+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -40,6 +40,14 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Autocorrectie van geselecteerde tekst"
 
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Autogenerate Answer"
+msgctxt "@title:window"
+msgid "Auto Generate Answer"
+msgstr "AutoGenerate antwoord"
+
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
@@ -65,15 +73,14 @@ msgid "Quick Answer"
 msgstr "Snel antwoord"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "Er is een fout opgetreden: \"%1\""
+msgstr "Er is een fout opgetreden: %1"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Fout"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
 #, kde-format
