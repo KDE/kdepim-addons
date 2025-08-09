@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-07 18:30+0000\n"
-"PO-Revision-Date: 2025-08-07 08:21+0300\n"
+"PO-Revision-Date: 2025-08-08 21:43+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -44,12 +44,10 @@ msgid "Autocorrect Selected Text"
 msgstr "Автоматичне виправлення позначеного тексту"
 
 #: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Autogenerate Answer"
+#, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
-msgstr "Автоматичне створення відповіді"
+msgstr "Автоматично створена відповідь"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
 #, kde-format
