@@ -61,7 +61,6 @@ void AutogenerateConfigureAskWidget::slotItemChanged(const QModelIndex &current,
         return;
     }
     if (previous.isValid()) {
-        const QString text = mTextEdit->toPlainText();
         mAutogenerateConfigureListView->setData(previous, mTextEdit->toPlainText());
     }
     if (current.isValid()) {
