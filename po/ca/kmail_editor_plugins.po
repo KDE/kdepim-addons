@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:30+0000\n"
+"POT-Creation-Date: 2025-08-10 00:43+0000\n"
 "PO-Revision-Date: 2025-08-08 08:42+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -53,36 +53,36 @@ msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "Resposta generada automàticament"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "Resposta generada automàticament"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:41
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "Resumeix el text"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:47
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Corregeix el text"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:53
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "Resposta ràpida"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, kde-format
 msgid "An error occured: %1"
 msgstr "S'ha detectat un error: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, kde-format
 msgid "Error"
 msgstr "Error"

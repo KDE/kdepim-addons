@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:30+0000\n"
+"POT-Creation-Date: 2025-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-07-16 11:45+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -47,38 +47,38 @@ msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:41
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:47
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
 #, fuzzy, kde-format
 #| msgid "Autocorrect Text"
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Autokorrektur af tekst"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:53
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, fuzzy, kde-format
 #| msgid "An error occurred: \"%1\""
 msgid "An error occured: %1"
 msgstr "En fejl opstod: \"%1\""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, kde-format
 msgid "Error"
 msgstr ""

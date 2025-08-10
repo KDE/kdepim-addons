@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:30+0000\n"
-"PO-Revision-Date: 2025-08-05 09:08+0200\n"
+"POT-Creation-Date: 2025-08-10 00:43+0000\n"
+"PO-Revision-Date: 2025-08-09 22:26+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -41,47 +41,44 @@ msgid "Autocorrect Selected Text"
 msgstr "Korrigera markerad text automatiskt"
 
 #: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Autogenerate Answer"
+#, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "Generera svar automatiskt"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "Generera svar automatiskt"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:41
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "Sammanfatta text"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:47
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Korrigera text"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:53
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "Snabbsvar"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
+#, kde-format
 msgid "An error occured: %1"
-msgstr "Ett fel uppstod: \"%1\""
+msgstr "Ett fel uppstod: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Fel"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
 #, kde-format

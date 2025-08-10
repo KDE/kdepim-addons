@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:30+0000\n"
+"POT-Creation-Date: 2025-08-10 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -48,37 +48,37 @@ msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "自动生成回复"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:36
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "自动生成回复"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:41
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "摘要文本"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:47
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "更正文本"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:53
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "快速回复"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, fuzzy, kde-format
 #| msgid "An error occurred: \"%1\""
 msgid "An error occured: %1"
 msgstr "发生错误：“%1”"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:110
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, kde-format
 msgid "Error"
 msgstr ""
