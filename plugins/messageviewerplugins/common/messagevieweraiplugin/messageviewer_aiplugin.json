@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows using AI.",
+        "EnabledByDefault": false,
+        "Name": "AI",
+        "Version": "2.0"
+    }
+}
