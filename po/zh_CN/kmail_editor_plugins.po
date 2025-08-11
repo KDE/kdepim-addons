@@ -41,12 +41,10 @@ msgid "Autocorrect Selected Text"
 msgstr "自动更正选中文字"
 
 #: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Autogenerate Answer"
+#, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
-msgstr "自动生成回复"
+msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
 #, kde-format
@@ -73,10 +71,9 @@ msgid "Quick Answer"
 msgstr "快速回复"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "发生错误：“%1”"
+msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, kde-format
@@ -87,7 +84,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Insert Text"
-msgstr ""
+msgstr "插入文本"
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format

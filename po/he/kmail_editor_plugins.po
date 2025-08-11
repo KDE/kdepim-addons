@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-10 00:43+0000\n"
-"PO-Revision-Date: 2025-08-07 09:33+0300\n"
+"PO-Revision-Date: 2025-08-10 09:25+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -42,9 +42,7 @@ msgid "Autocorrect Selected Text"
 msgstr "תיקון הטקסט הנבחר אוטומטית"
 
 #: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Autogenerate Answer"
+#, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "יצירת תשובה אוטומטית"
