@@ -12,7 +12,7 @@
 
 namespace
 {
-static const char myDKIMKeyRecordWidgetGroupName[] = "DKIMKeyRecordWidget";
+const char myDKIMKeyRecordWidgetGroupName[] = "DKIMKeyRecordWidget";
 }
 
 DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)

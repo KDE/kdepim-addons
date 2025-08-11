@@ -24,7 +24,7 @@
 using namespace KABMergeContacts;
 namespace
 {
-static const char myConfigGroupName[] = "MergeContactsDialog";
+const char myConfigGroupName[] = "MergeContactsDialog";
 }
 MergeContactsDialog::MergeContactsDialog(QWidget *parent)
     : QDialog(parent)

@@ -15,7 +15,7 @@
 #include <QWindow>
 namespace
 {
-static const char myConfigCheckAttachmentDialog[] = "CheckAttachmentDialog";
+const char myConfigCheckAttachmentDialog[] = "CheckAttachmentDialog";
 }
 CheckAttachmentDialog::CheckAttachmentDialog(QWidget *parent)
     : QDialog(parent)

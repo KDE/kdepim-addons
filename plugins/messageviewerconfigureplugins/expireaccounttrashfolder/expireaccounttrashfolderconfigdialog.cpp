@@ -15,7 +15,7 @@
 #include <QWindow>
 namespace
 {
-static const char myConfigGroupName[] = "ExpireAccountTrashFolderConfigDialog";
+const char myConfigGroupName[] = "ExpireAccountTrashFolderConfigDialog";
 }
 
 ExpireAccountTrashFolderConfigDialog::ExpireAccountTrashFolderConfigDialog(QWidget *parent)

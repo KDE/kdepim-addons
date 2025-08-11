@@ -12,7 +12,7 @@
 #include <QVBoxLayout>
 namespace
 {
-static const char myConfigGroupName[] = "Markdown";
+const char myConfigGroupName[] = "Markdown";
 }
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConfigureBaseWidget(parent)

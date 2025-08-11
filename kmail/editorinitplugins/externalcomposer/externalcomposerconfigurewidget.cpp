@@ -18,7 +18,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QVBoxLayout>
 namespace
 {
-static const char myExternalComposerGroupName[] = "External Composer";
+const char myExternalComposerGroupName[] = "External Composer";
 }
 ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConfigureBaseWidget(parent)

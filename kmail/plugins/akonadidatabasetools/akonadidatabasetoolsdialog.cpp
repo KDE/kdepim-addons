@@ -17,7 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QWindow>
 namespace
 {
-static const char myConfigGroupName[] = "AkonadiDatabaseToolsDialog";
+const char myConfigGroupName[] = "AkonadiDatabaseToolsDialog";
 }
 
 AkonadiDatabaseToolsDialog::AkonadiDatabaseToolsDialog(QWidget *parent)

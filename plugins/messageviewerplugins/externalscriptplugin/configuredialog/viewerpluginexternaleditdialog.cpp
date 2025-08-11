@@ -16,7 +16,7 @@
 #include <QWindow>
 namespace
 {
-static const char myViewerPluginExternalEditDialog[] = "ViewerPluginExternalEditDialog";
+const char myViewerPluginExternalEditDialog[] = "ViewerPluginExternalEditDialog";
 }
 ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     : QDialog(parent)

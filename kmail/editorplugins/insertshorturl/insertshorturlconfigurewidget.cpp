@@ -16,7 +16,7 @@
 #include <QVBoxLayout>
 namespace
 {
-static const char myConfigGroupName[] = "ShortUrl";
+const char myConfigGroupName[] = "ShortUrl";
 }
 InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
     : QWidget(parent)

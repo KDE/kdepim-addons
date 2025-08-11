@@ -16,7 +16,7 @@
 #include <QWindow>
 namespace
 {
-static const char myConfigGroupName[] = "DKIMConfigureDialog";
+const char myConfigGroupName[] = "DKIMConfigureDialog";
 }
 
 DKIMConfigureDialog::DKIMConfigureDialog(QWidget *parent)

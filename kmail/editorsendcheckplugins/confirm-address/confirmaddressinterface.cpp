@@ -21,7 +21,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <PimCommon/PimUtil>
 namespace
 {
-static const char myConfigGroupName[] = "Confirm Address";
+const char myConfigGroupName[] = "Confirm Address";
 }
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)

@@ -13,7 +13,7 @@
 #include <QSplitter>
 namespace
 {
-static const char myFolderConfigureSettingsWidgetGroupName[] = "FolderConfigureSettingsWidget";
+const char myFolderConfigureSettingsWidgetGroupName[] = "FolderConfigureSettingsWidget";
 }
 FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     : QWidget(parent)

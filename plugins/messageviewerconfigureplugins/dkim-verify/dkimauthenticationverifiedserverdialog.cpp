@@ -15,7 +15,7 @@
 #include <QWindow>
 namespace
 {
-static const char myConfigGroupName[] = "DKIMAuthenticationVerifiedServerDialog";
+const char myConfigGroupName[] = "DKIMAuthenticationVerifiedServerDialog";
 }
 
 DKIMAuthenticationVerifiedServerDialog::DKIMAuthenticationVerifiedServerDialog(QWidget *parent)

@@ -16,7 +16,7 @@
 
 namespace
 {
-static const char myConfirmBeforeDeletingConfigGroupName[] = "ConfirmBeforeDeletingDialog";
+const char myConfirmBeforeDeletingConfigGroupName[] = "ConfirmBeforeDeletingDialog";
 }
 ConfirmBeforeDeletingDialog::ConfirmBeforeDeletingDialog(QWidget *parent)
     : QDialog(parent)

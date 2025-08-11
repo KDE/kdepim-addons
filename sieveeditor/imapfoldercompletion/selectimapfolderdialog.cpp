@@ -18,7 +18,7 @@
 #include <QWindow>
 namespace
 {
-static const char myConfigSelectImapFolderDialog[] = "SelectImapFolderDialog";
+const char myConfigSelectImapFolderDialog[] = "SelectImapFolderDialog";
 }
 
 SelectImapFolderDialog::SelectImapFolderDialog(const KSieveCore::SieveImapAccountSettings &account, QWidget *parent)

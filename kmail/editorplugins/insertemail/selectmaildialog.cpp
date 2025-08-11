@@ -17,7 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
-static const char myConfigGroupName[] = "SelectMailDialog";
+const char myConfigGroupName[] = "SelectMailDialog";
 }
 SelectMailDialog::SelectMailDialog(QWidget *parent)
     : QDialog(parent)

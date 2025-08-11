@@ -19,7 +19,7 @@
 
 namespace
 {
-static const char myConfigVCardViewerDialog[] = "VCardViewerDialog";
+const char myConfigVCardViewerDialog[] = "VCardViewerDialog";
 }
 VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWidget *parent)
     : QDialog(parent)

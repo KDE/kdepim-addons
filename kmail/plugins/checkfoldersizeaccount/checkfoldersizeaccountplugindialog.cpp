@@ -17,7 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QWindow>
 namespace
 {
-static const char myConfigGroupName[] = "CheckFolderSizeAccountPluginDialog";
+const char myConfigGroupName[] = "CheckFolderSizeAccountPluginDialog";
 }
 
 CheckFolderSizeAccountPluginDialog::CheckFolderSizeAccountPluginDialog(QWidget *parent)

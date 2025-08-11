@@ -18,7 +18,7 @@
 
 namespace
 {
-static const char myConfigConfirmAddressDialog[] = "ConfirmAddressDialog";
+const char myConfigConfirmAddressDialog[] = "ConfirmAddressDialog";
 }
 ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     : QDialog(parent)

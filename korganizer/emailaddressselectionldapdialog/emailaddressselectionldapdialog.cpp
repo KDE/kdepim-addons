@@ -20,7 +20,7 @@
 #include <QWindow>
 namespace
 {
-static const char myConfigEmailAddressSelectionLdapDialog[] = "EmailAddressSelectionLdapDialog";
+const char myConfigEmailAddressSelectionLdapDialog[] = "EmailAddressSelectionLdapDialog";
 }
 K_PLUGIN_CLASS_WITH_JSON(EmailAddressSelectionLdapDialog, "emailaddressselectionldapdialog.json")
 

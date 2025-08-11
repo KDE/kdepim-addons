@@ -15,7 +15,7 @@
 #include <QWindow>
 namespace
 {
-static const char myConfigGroupName[] = "FolderConfigureSettingsDialog";
+const char myConfigGroupName[] = "FolderConfigureSettingsDialog";
 }
 
 FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)

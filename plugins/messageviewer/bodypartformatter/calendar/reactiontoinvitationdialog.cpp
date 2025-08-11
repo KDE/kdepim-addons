@@ -18,7 +18,7 @@
 #include <TextCustomEditor/PlainTextEditorWidget>
 namespace
 {
-static const char myConfigReactionToInvitationDialog[] = "ReactionToInvitationDialog";
+const char myConfigReactionToInvitationDialog[] = "ReactionToInvitationDialog";
 }
 ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     : QDialog(parent)

@@ -18,7 +18,7 @@
 
 namespace
 {
-static const char myConfigGroupName[] = "QuickTextConfigureDialog";
+const char myConfigGroupName[] = "QuickTextConfigureDialog";
 }
 QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
     : QDialog(parent)

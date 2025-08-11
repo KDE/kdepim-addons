@@ -12,7 +12,7 @@
 #include <QVBoxLayout>
 namespace
 {
-static const char myConfigGroupName[] = "Check Before Send";
+const char myConfigGroupName[] = "Check Before Send";
 }
 CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConfigureBaseWidget(parent)

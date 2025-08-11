@@ -18,7 +18,7 @@
 using namespace KABGravatar;
 namespace
 {
-static const char myConfigGroupName[] = "GravatarUpdateDialog";
+const char myConfigGroupName[] = "GravatarUpdateDialog";
 }
 GravatarUpdateDialog::GravatarUpdateDialog(QWidget *parent)
     : QDialog(parent)

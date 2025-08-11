@@ -17,7 +17,7 @@
 
 namespace
 {
-static const char myMarkdownCreateLinkDialogGroupName[] = "MarkdownCreateLinkDialog";
+const char myMarkdownCreateLinkDialogGroupName[] = "MarkdownCreateLinkDialog";
 }
 MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
     : QDialog(parent)

@@ -15,7 +15,7 @@
 #include <QWindow>
 namespace
 {
-static const char myOpenUrlWithConfigureConfigGroupName[] = "OpenUrlWithConfigureDialog";
+const char myOpenUrlWithConfigureConfigGroupName[] = "OpenUrlWithConfigureDialog";
 }
 
 OpenUrlWithConfigureDialog::OpenUrlWithConfigureDialog(QWidget *parent)

@@ -17,7 +17,7 @@
 #include <QWindow>
 namespace
 {
-static const char myConfigCheckDuplicateEmailsDialog[] = "CheckDuplicateEmailsDialog";
+const char myConfigCheckDuplicateEmailsDialog[] = "CheckDuplicateEmailsDialog";
 }
 CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
     : QDialog(parent)
