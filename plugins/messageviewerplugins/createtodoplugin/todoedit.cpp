@@ -229,8 +229,8 @@ void TodoEdit::slotReturnPressed()
         qCDebug(CREATETODOPLUGIN_LOG) << " Message is null";
         return;
     }
-    const Akonadi::Collection collection = mCollectionCombobox->currentCollection();
-    if (!collection.isValid()) {
+    const Akonadi::Collection currentCollection = mCollectionCombobox->currentCollection();
+    if (!currentCollection.isValid()) {
         qCDebug(CREATETODOPLUGIN_LOG) << " Collection is not valid";
         return;
     }
@@ -239,11 +239,11 @@ void TodoEdit::slotReturnPressed()
         mMsgWidget->setText(i18nc("%1 is summary of the todo, %2 is name of the folder in which it is stored",
                                   "New todo '%1' was added to task list '%2'",
                                   mNoteEdit->text(),
-                                  collection.displayName()));
+                                  currentCollection.displayName()));
         KCalendarCore::Todo::Ptr todo = createTodoItem();
 
         // We don't hide the widget here, so that multiple todo's can be added
-        Q_EMIT createTodo(todo, collection);
+        Q_EMIT createTodo(todo, currentCollection);
 
         mMsgWidget->animatedShow();
     }

@@ -37,9 +37,9 @@ void ConfirmBeforeDeletingRule::setRuleType(RuleType newRuleType)
 
 void ConfirmBeforeDeletingRule::load(const KConfigGroup &group)
 {
-    const QString pattern = group.readEntry(u"Pattern"_s, QString());
+    const QString patternValue = group.readEntry(u"Pattern"_s, QString());
     const QString checkType = group.readEntry(u"Type"_s, QString());
-    setPattern(pattern);
+    setPattern(patternValue);
     setRuleType(stringToRuleType(checkType));
 }
 

@@ -184,10 +184,10 @@ bool MarkdownInterface::reformatText()
 void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, QString &textVersion, QString &htmlVersion) const
 {
     QStringList listImage = MarkdownUtil::imagePaths(textVersion);
-    QList<QSharedPointer<KPIMTextEdit::EmbeddedImage>> lstEmbeddedImages;
     if (!listImage.isEmpty()) {
         listImage.removeDuplicates();
         QStringList imageNameAdded;
+        QList<QSharedPointer<KPIMTextEdit::EmbeddedImage>> lstEmbeddedImages;
         for (const QString &urlImage : std::as_const(listImage)) {
             const QUrl url = QUrl::fromUserInput(urlImage);
             if (!url.isLocalFile()) {
@@ -212,7 +212,6 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
                     imageNameToAdd = imageName.left(firstDot) + QString::number(imageNumber++) + imageName.mid(firstDot);
                 }
             }
-
             QSharedPointer<KPIMTextEdit::EmbeddedImage> embeddedImage =
                 richTextEditor()->composerControler()->composerImages()->createEmbeddedImage(image, imageNameToAdd);
             lstEmbeddedImages.append(embeddedImage);
