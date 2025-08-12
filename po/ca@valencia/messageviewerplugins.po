@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-08-12 00:44+0000\n"
 "PO-Revision-Date: 2024-08-01 10:48+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -35,6 +35,7 @@ msgctxt "@action"
 msgid "Expand URL"
 msgstr "Expandix l'URL"
 
+#: common/messagevieweraiplugin/viewerpluginaiinterface.cpp:49
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
 msgctxt "@action"

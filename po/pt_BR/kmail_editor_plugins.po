@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-10 00:43+0000\n"
+"POT-Creation-Date: 2025-08-12 00:44+0000\n"
 "PO-Revision-Date: 2025-08-08 10:33-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 25.04.3\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:26
+#: aitool/aitooltextplugineditorinterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
