@@ -1,8 +1,30 @@
 {
     "KPlugin": {
         "Description": "This plugin allows using AI.",
+        "Description[ca@valencia]": "Este connector permet utilitzar la IA.",
+        "Description[ca]": "Aquest connector permet utilitzar la IA.",
+        "Description[es]": "Este complemento permite usar IA.",
+        "Description[he]": "התוסף הזה מאפשר לך להשתמש בבינה מלאכותית.",
+        "Description[ka]": "ეს დამატება კითხვის ხი-ისთვის გამოყენების საშუალებას გაძლევთ.",
+        "Description[nl]": "Deze plug-in biedt u het gebruiken van AI.",
+        "Description[sl]": "Ta vtičnik vam omogoča uporabo umetne inteligence.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att använda AI.",
+        "Description[tr]": "Bu eklenti, yapay zekâ kullanmanıza olanak tanır.",
+        "Description[uk]": "За допомогою цього додатка можна користуватися ШІ.",
+        "Description[x-test]": "xxThis plugin allows using AI.xx",
         "EnabledByDefault": false,
         "Name": "AI",
+        "Name[ca@valencia]": "IA",
+        "Name[ca]": "IA",
+        "Name[es]": "IA",
+        "Name[he]": "בינה מלאכותית",
+        "Name[ka]": "AI",
+        "Name[nl]": "AI",
+        "Name[sl]": "Umetna inteligenca",
+        "Name[sv]": "AI",
+        "Name[tr]": "Yapay Zekâ",
+        "Name[uk]": "ШІ",
+        "Name[x-test]": "xxAIxx",
         "Version": "2.0"
     }
 }
