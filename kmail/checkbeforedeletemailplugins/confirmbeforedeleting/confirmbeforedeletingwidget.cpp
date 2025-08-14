@@ -71,7 +71,7 @@ ConfirmBeforeDeletingWidget::~ConfirmBeforeDeletingWidget() = default;
 
 void ConfirmBeforeDeletingWidget::updateButtons()
 {
-    QTreeWidgetItem *item = mTreeWidget->currentItem();
+    const QTreeWidgetItem *item = mTreeWidget->currentItem();
     if (item) {
         mRemoveRule->setEnabled(true);
         mModifyRule->setEnabled(true);

@@ -369,7 +369,7 @@ void VCardImportExportPluginInterface::exportVCard()
     QPointer<ContactSelectionDialog> dlg = new ContactSelectionDialog(itemSelectionModel(), true, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
-    if (!dlg->exec() || !dlg) {
+    if (!dlg->exec()) {
         delete dlg;
         return;
     }

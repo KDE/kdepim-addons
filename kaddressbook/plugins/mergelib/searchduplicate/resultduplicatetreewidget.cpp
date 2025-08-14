@@ -72,7 +72,6 @@ void ResultDuplicateTreeWidget::slotItemSelectionChanged()
 void ResultDuplicateTreeWidget::setContacts(const QList<Akonadi::Item::List> &lstItem)
 {
     clear();
-    int i = 1;
     for (const Akonadi::Item::List &lst : lstItem) {
         auto topLevelItem = new ResultDuplicateTreeWidgetItem(this);
         topLevelItem->setText(
@@ -83,7 +82,6 @@ void ResultDuplicateTreeWidget::setContacts(const QList<Akonadi::Item::List> &ls
             topLevelItem->addChild(childItem);
             childItem->setItem(item);
         }
-        ++i;
     }
     expandAll();
 }
