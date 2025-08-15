@@ -163,7 +163,7 @@ msgstr "ارفض الاقتراح البديل: %1"
 #: text_calendar.cpp:728 text_calendar.cpp:734
 #, kde-format
 msgid "\"%1\" occurred already."
-msgstr "حدث ”%1“ بالفعل."
+msgstr "حدث ”%1“ فعلًا."
 
 #: text_calendar.cpp:730 text_calendar.cpp:747
 #, kde-format
@@ -183,7 +183,7 @@ msgstr "فاتت \"%1\""
 #: text_calendar.cpp:751
 #, kde-format
 msgid "\"%1\" has already started."
-msgstr "بدأت ”%1“ بالفعل."
+msgstr "بدأت ”%1“ فعلًا."
 
 #: text_calendar.cpp:759
 #, kde-format

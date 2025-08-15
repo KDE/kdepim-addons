@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2025-08-15 00:46+0000\n"
 "PO-Revision-Date: 2024-07-04 10:35+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -136,7 +136,7 @@ msgstr "Podvoji stik %1"
 msgid "Contacts"
 msgstr "Stiki"
 
-#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:79
 #, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "Podvoji stik \"%1\" (%2 krat)"

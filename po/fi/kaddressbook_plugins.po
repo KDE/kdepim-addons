@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2025-08-15 00:46+0000\n"
 "PO-Revision-Date: 2024-10-20 16:53+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -135,7 +135,7 @@ msgstr "Toistuva yhteystieto %1"
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:79
 #, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "Yhteystieto ”%1” toistuu (%2 kertaa)"

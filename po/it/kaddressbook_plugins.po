@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2025-08-15 00:46+0000\n"
 "PO-Revision-Date: 2024-07-14 15:53+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -134,7 +134,7 @@ msgstr "Contatto duplicato %1"
 msgid "Contacts"
 msgstr "Contatti"
 
-#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:79
 #, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "Contatto duplicato «%1» (%2 volte)"

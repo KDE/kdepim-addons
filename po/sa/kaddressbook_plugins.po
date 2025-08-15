@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2025-08-15 00:46+0000\n"
 "PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -136,7 +136,7 @@ msgstr "डुप्लिकेट् सम्पर्क %1"
 msgid "Contacts"
 msgstr "सम्पर्क"
 
-#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:79
 #, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "डुप्लिकेट् सम्पर्क \"%1\" (%2 बार)"

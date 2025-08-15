@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-14 00:39+0000\n"
+"POT-Creation-Date: 2025-08-15 00:46+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -149,7 +149,7 @@ msgstr "Duplikat kontakta %1"
 msgid "Contacts"
 msgstr "Kontakti"
 
-#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:80
+#: mergelib/searchduplicate/resultduplicatetreewidget.cpp:79
 #, fuzzy, kde-format
 #| msgid "Duplicate contact %1"
 msgid "Duplicate contact \"%1\" (%2 times)"

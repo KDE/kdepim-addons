@@ -261,7 +261,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
-msgstr "هل ترغب بالفعل بإزالة هذه المجموعة \"%1\" ؟"
+msgstr "هل ترغب فعلًا بإزالة هذه المجموعة \"%1\" ؟"
 
 #: quicktext/quicktextwidget.cpp:68
 #, kde-format
