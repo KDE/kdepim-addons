@@ -43,7 +43,7 @@ msgstr "[حدّث هذا المتراسل في دفتر العناوين]"
 #: text_vcard.cpp:141
 #, kde-format
 msgid "[This contact is already in addressbook]"
-msgstr "[هذا المتراسل في دفتر العناوين بالفعل]"
+msgstr "[هذا المتراسل في دفتر العناوين فعلًا]"
 
 #: text_vcard.cpp:215
 #, kde-format
