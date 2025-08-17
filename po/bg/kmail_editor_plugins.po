@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:44+0000\n"
-"PO-Revision-Date: 2025-06-07 22:18+0200\n"
+"PO-Revision-Date: 2025-08-16 22:34+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -43,9 +43,7 @@ msgid "Autocorrect Selected Text"
 msgstr "Автокорекция на избрания текст"
 
 #: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Autogenerate Answer"
+#, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "Автоматично генериране на отговор"
@@ -75,22 +73,20 @@ msgid "Quick Answer"
 msgstr "Бърз отговор"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
 msgstr "Възникна грешка: „%1“"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Грешка"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
-#, fuzzy, kde-format
-#| msgid "Insert"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Text"
-msgstr "Вмъкване"
+msgstr "Вмъкване на текст"
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format
