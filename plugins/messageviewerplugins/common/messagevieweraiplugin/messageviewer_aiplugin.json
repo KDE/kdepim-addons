@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows using AI.",
+        "Description[bg]": "Тази приставка ви позволява да използвате ИИ.",
         "Description[ca@valencia]": "Este connector permet utilitzar la IA.",
         "Description[ca]": "Aquest connector permet utilitzar la IA.",
         "Description[es]": "Este complemento permite usar IA.",
@@ -17,6 +18,7 @@
         "Description[x-test]": "xxThis plugin allows using AI.xx",
         "EnabledByDefault": false,
         "Name": "AI",
+        "Name[bg]": "ИИ",
         "Name[ca@valencia]": "IA",
         "Name[ca]": "IA",
         "Name[es]": "IA",
