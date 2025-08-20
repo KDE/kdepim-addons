@@ -8,6 +8,7 @@ project(kdepim-addons VERSION ${PIM_VERSION})
 set(KF_MIN_VERSION "6.15.0")
 set(QT_REQUIRED_VERSION "6.8.0")
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH
     ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/
@@ -231,7 +232,14 @@ find_package(
     REQUIRED
 )
 find_package(KPim6PkPass ${KPIMPKPASS_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6Itinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
+find_package(KPim6Itinerary ${KPIMITINERARY_LIB_VERSION} CONFIG)
+set_package_properties(
+                KPim6Itinerary
+                PROPERTIES
+		DESCRIPTION "Allow to build itinerary plugins"
+                    TYPE OPTIONAL
+            )
+
 find_package(KPim6LdapWidgets ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6TextTemplate CONFIG REQUIRED)
 

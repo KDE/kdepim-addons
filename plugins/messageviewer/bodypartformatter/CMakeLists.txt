@@ -9,7 +9,9 @@ add_subdirectory(highlighter)
 add_subdirectory(calendar)
 add_subdirectory(gnupgwks)
 add_subdirectory(pkpass)
-add_subdirectory(itinerary)
+if (TARGET KPim6::Itinerary)
+   add_subdirectory(itinerary)
+endif()
 
 option(
     FORCE_DISCOUNT_LIB
