@@ -10,7 +10,7 @@
 #include <KPluginFactory>
 
 using namespace MessageViewer;
-K_PLUGIN_CLASS_WITH_JSON(ViewerPluginAI, "messageviewer_translatorplugin.json")
+K_PLUGIN_CLASS_WITH_JSON(ViewerPluginAI, "messageviewer_aiplugin.json")
 
 ViewerPluginAI::ViewerPluginAI(QObject *parent, const QList<QVariant> &)
     : MessageViewer::ViewerPlugin(parent)

@@ -25,7 +25,7 @@ ViewerPluginAIInterface::~ViewerPluginAIInterface() = default;
 
 void ViewerPluginAIInterface::setText(const QString &text)
 {
-    widget()->setTextToTranslate(text);
+    // widget()->setTextToTranslate(text);
 }
 
 QList<QAction *> ViewerPluginAIInterface::actions() const
@@ -35,7 +35,7 @@ QList<QAction *> ViewerPluginAIInterface::actions() const
 
 void ViewerPluginAIInterface::showWidget()
 {
-    widget()->show();
+    // widget()->show();
 }
 
 ViewerPluginInterface::SpecificFeatureTypes ViewerPluginAIInterface::featureTypes() const
@@ -45,6 +45,7 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginAIInterface::featureType
 
 void ViewerPluginAIInterface::createAction(KActionCollection *ac)
 {
+#if 0
     if (ac) {
         auto act = new QAction(i18nc("@action", "Translate…"), this);
         ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_T));
@@ -53,8 +54,10 @@ void ViewerPluginAIInterface::createAction(KActionCollection *ac)
         connect(act, &QAction::triggered, this, &ViewerPluginAIInterface::slotActivatePlugin);
         mAction.append(act);
     }
+#endif
 }
 
+#if 0
 TextTranslator::TranslatorWidget *ViewerPluginAIInterface::widget()
 {
     if (!mTranslatorWidget) {
@@ -67,4 +70,5 @@ TextTranslator::TranslatorWidget *ViewerPluginAIInterface::widget()
     return mTranslatorWidget;
 }
 
+#endif
 #include "moc_viewerpluginaiinterface.cpp"
