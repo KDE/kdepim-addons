@@ -38,7 +38,7 @@ void MessageViewer::ViewerPluginAI::showConfigureDialog(QWidget *parent)
 
 bool MessageViewer::ViewerPluginAI::hasConfigureDialog() const
 {
-    return true;
+    return false;
 }
 
 #include "viewerpluginai.moc"

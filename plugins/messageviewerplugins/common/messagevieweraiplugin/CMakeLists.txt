@@ -9,6 +9,8 @@ target_sources(
     viewerpluginai.h
     viewerpluginaiinterface.cpp
     viewerpluginaiinterface.h
+    viewerpluginaiwidget.h
+    viewerpluginaiwidget.cpp
 )
 
 ecm_qt_declare_logging_category(messageviewer_aiplugin HEADER expandurlplugin_debug.h IDENTIFIER EXPANDURLPLUGIN_LOG CATEGORY_NAME org.kde.pim.expandurlplugin
