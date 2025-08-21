@@ -5,7 +5,7 @@
 */
 
 #include "viewerpluginaiinterface.h"
-// #include <TextTranslator/TranslatorWidget>
+#include "viewerpluginaiwidget.h"
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -35,7 +35,7 @@ QList<QAction *> ViewerPluginAIInterface::actions() const
 
 void ViewerPluginAIInterface::showWidget()
 {
-    // widget()->show();
+    widget()->show();
 }
 
 ViewerPluginInterface::SpecificFeatureTypes ViewerPluginAIInterface::featureTypes() const
@@ -45,30 +45,25 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginAIInterface::featureType
 
 void ViewerPluginAIInterface::createAction(KActionCollection *ac)
 {
-#if 0
     if (ac) {
-        auto act = new QAction(i18nc("@action", "Translate…"), this);
-        ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_T));
-        act->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
-        ac->addAction(QStringLiteral("translate_text"), act);
+        auto act = new QAction(i18nc("@action", "Ask AI…"), this);
+        // ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_T));
+        ac->addAction(QStringLiteral("ask_ai_text"), act);
         connect(act, &QAction::triggered, this, &ViewerPluginAIInterface::slotActivatePlugin);
         mAction.append(act);
     }
-#endif
 }
 
-#if 0
-TextTranslator::TranslatorWidget *ViewerPluginAIInterface::widget()
+ViewerPluginAIWidget *ViewerPluginAIInterface::widget()
 {
-    if (!mTranslatorWidget) {
+    if (!mAiWidget) {
         auto parentWidget = static_cast<QWidget *>(parent());
-        mTranslatorWidget = new TextTranslator::TranslatorWidget(parentWidget);
-        mTranslatorWidget->setObjectName(QLatin1StringView("translatorwidget"));
-        parentWidget->layout()->addWidget(mTranslatorWidget);
-        mTranslatorWidget->hide();
+        mAiWidget = new ViewerPluginAIWidget(parentWidget);
+        mAiWidget->setObjectName(QLatin1StringView("mAiWidget"));
+        parentWidget->layout()->addWidget(mAiWidget);
+        mAiWidget->hide();
     }
-    return mTranslatorWidget;
+    return mAiWidget;
 }
 
-#endif
 #include "moc_viewerpluginaiinterface.cpp"

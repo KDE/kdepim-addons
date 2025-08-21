@@ -8,6 +8,7 @@
 
 #include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
+class ViewerPluginAIWidget;
 namespace MessageViewer
 {
 class ViewerPluginAIInterface : public ViewerPluginInterface
@@ -23,9 +24,9 @@ public:
     [[nodiscard]] ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
 private:
-    // [[nodiscard]] TextTranslator::TranslatorWidget *widget();
+    [[nodiscard]] ViewerPluginAIWidget *widget();
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
-    // TextTranslator::TranslatorWidget *mTranslatorWidget = nullptr;
+    ViewerPluginAIWidget *mAiWidget = nullptr;
 };
 }

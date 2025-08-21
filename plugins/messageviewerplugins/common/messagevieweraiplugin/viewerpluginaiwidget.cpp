@@ -5,10 +5,12 @@
 */
 
 #include "viewerpluginaiwidget.h"
-
+#include <QVBoxLayout>
 ViewerPluginAIWidget::ViewerPluginAIWidget(QWidget *parent)
     : QWidget{parent}
 {
 }
 
 ViewerPluginAIWidget::~ViewerPluginAIWidget() = default;
+
+#include "moc_viewerpluginaiwidget.cpp"
