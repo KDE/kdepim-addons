@@ -83,13 +83,13 @@ msgstr "أرسل كـHTML"
 #, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
-msgstr "حدّث خادوم SMTP"
+msgstr "حدّث خادم SMTP"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Check SMTP server"
-msgstr "افحص خادوم SMTP"
+msgstr "افحص خادم SMTP"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
 #, kde-format
@@ -97,7 +97,7 @@ msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
 "the current identity?"
-msgstr "أتريد إرسال البريد بخادوم SMTP مختلف عن المحدّد في الهويّة الحاليّة؟"
+msgstr "أتريد إرسال البريد بخادم SMTP مختلف عن المحدّد في الهويّة الحاليّة؟"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:16
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "أرسله كنصّ صِرف"
 #, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
-msgstr "استخدم خادوم SMTP المحدّد في الهويّة"
+msgstr "استخدم خادم SMTP المحدّد في الهويّة"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format

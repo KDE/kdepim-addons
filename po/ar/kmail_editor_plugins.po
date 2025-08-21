@@ -76,7 +76,7 @@ msgstr "أدرِج بريدًا…"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
-msgstr "اختر خادوم تقصير العناوين:"
+msgstr "اختر خادم تقصير العناوين:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:63
 #, kde-format
@@ -106,7 +106,7 @@ msgid ""
 "Error reported by server:\n"
 "'%1'"
 msgstr ""
-"الخطأ الذي أخبر عنه الخادوم:\n"
+"الخطأ الذي أخبر عنه الخادم:\n"
 "‏’%1‘"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:23
