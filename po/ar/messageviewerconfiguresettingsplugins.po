@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2025-08-03 23:26+0400\n"
+"PO-Revision-Date: 2025-08-20 20:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -22,13 +22,13 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
-msgstr "تَثَبّت من التوقع إذا كان المجال اختباري فقط في مفاتيح تعريف البريد DKIM"
+msgstr "تَثَبّت من التوقيع إذا كان المجال اختباري فقط في مفاتيح تعريف البريد DKIM"
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
-msgstr "استخدم تحليلًا مرناً عند قراءة رأس \"نتيجة-المصادقة\""
+msgstr "استخدم تحليلًا مرناً عند قراءة رأس \"نتيجة-الاستيثاق\""
 
 #: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #: dkim-verify/dkimgeneralwidget.cpp:42
@@ -170,7 +170,7 @@ msgstr "تأكد إذا ما كان يجب توقيع البريد الإلكت�
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
-"استخدم DMARC (ميفاق مصادقة الرسائل المستندة إلى المجال والإبلاغ عنها "
+"استخدم DMARC (ميفاق استيثاق الرسائل المستندة إلى المجال والإبلاغ عنها "
 "والمطابقة) لتحديد ما إذا كان ينبغي توقيع بريد إلكتروني"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
@@ -293,7 +293,7 @@ msgstr "ممكّن"
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:32
 #, kde-format
 msgid "Server Name:"
-msgstr "اسم الخادوم:"
+msgstr "اسم الخادم:"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:36
 #, kde-format

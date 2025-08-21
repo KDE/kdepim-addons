@@ -107,7 +107,7 @@ msgid ""
 "Other users will be able to retrieve the key and send you encrypted emails "
 "and verify authenticity of emails you send them."
 msgstr ""
-"سيُنشر مفتاح OpenPGP في خادوم مفاتيح مزوّد بريدك. سيمكن للمستخدمين الآخرين "
+"سيُنشر مفتاح OpenPGP في خادم مفاتيح مزوّد بريدك. سيمكن للمستخدمين الآخرين "
 "تنزيل المفتاح وإرسال بريد معمًّى كما وتأكيد موثوقيّة رسائل البريد التي ترسلها "
 "لهم."
 
