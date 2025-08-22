@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-21 00:43+0000\n"
+"POT-Creation-Date: 2025-08-22 00:43+0000\n"
 "PO-Revision-Date: 2024-09-14 14:32+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -31,7 +31,12 @@ msgctxt "@action"
 msgid "Expand URL"
 msgstr "Adresse erweitern"
 
-#: common/messagevieweraiplugin/viewerpluginaiinterface.cpp:50
+#: common/messagevieweraiplugin/viewerpluginaiinterface.cpp:49
+#, kde-format
+msgctxt "@action"
+msgid "Ask AI…"
+msgstr ""
+
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
 msgctxt "@action"
