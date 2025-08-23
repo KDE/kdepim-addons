@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:43+0000\n"
-"PO-Revision-Date: 2024-08-01 20:26+0300\n"
+"PO-Revision-Date: 2025-08-22 22:01+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -35,7 +35,7 @@ msgstr "Розгорнути адресу"
 #, kde-format
 msgctxt "@action"
 msgid "Ask AI…"
-msgstr ""
+msgstr "Запитати у ШІ…"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format

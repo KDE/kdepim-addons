@@ -1,16 +1,16 @@
 # Translation for messageviewerplugins.po to Euskara/Basque (eu).
-# Copyright (C) 2023-2024 This file is copyright:
+# Copyright (C) 2023-2025 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:43+0000\n"
-"PO-Revision-Date: 2024-08-04 09:51+0200\n"
+"PO-Revision-Date: 2025-08-22 11:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -35,13 +35,13 @@ msgstr "Zabaldu URLa"
 #, kde-format
 msgctxt "@action"
 msgid "Ask AI…"
-msgstr ""
+msgstr "Galdetu AAri…"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr "Itzuli..."
+msgstr "Itzuli…"
 
 #: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "&Gorde"
 #, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
-msgstr "Ireki &editorea..."
+msgstr "Ireki &editorea…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -111,7 +111,7 @@ msgstr "Itxi ekitaldi berriak sortzeko trepeta."
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
 #, kde-format
 msgid "Create Event…"
-msgstr "Sortu ekitaldia..."
+msgstr "Sortu ekitaldia…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -206,7 +206,7 @@ msgstr "Konfiguratu «Kanpoko gidoia» plugina"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
-msgstr "Gehitu gidoia..."
+msgstr "Gehitu gidoia…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -218,7 +218,7 @@ msgstr "Kendu gidoia"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
-msgstr "Aldatu gidoia..."
+msgstr "Aldatu gidoia…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -257,7 +257,7 @@ msgstr "Azalpena:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
-msgstr "Gehitu komando-argumentuak..."
+msgstr "Gehitu komando-argumentuak…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -269,8 +269,7 @@ msgstr "Komando-lerroa:"
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
-"<qt><a href=\"whatsthis1\">Argumentu-formatuari buruzko informazioa...</a></"
-"qt>"
+"<qt><a href=\"whatsthis1\">Argumentu-formatuari buruzko informazioa…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
