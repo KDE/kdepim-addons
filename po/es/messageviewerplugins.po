@@ -1,15 +1,16 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for messageviewerplugins.po package.
+# Copyright (C) 2015-2025 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
 #
-# Víctor Rodrigo Córdoba <vrcordoba@gmail.com>, 2015.
-# Javier Vinal <fjvinal@gmail.com>, 2016, 2017, 2018.
-# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2015 Víctor Rodrigo Córdoba <vrcordoba@gmail.com>
+# SPDX-FileCopyrightText: 2016, 2017, 2018 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:43+0000\n"
-"PO-Revision-Date: 2024-08-01 04:43+0200\n"
+"PO-Revision-Date: 2025-08-23 01:35+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -34,13 +35,13 @@ msgstr "Expandir URL"
 #, kde-format
 msgctxt "@action"
 msgid "Ask AI…"
-msgstr ""
+msgstr "Preguntar a la IA…"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr "Traducir..."
+msgstr "Traducir…"
 
 #: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
@@ -51,7 +52,7 @@ msgstr "&Guardar"
 #, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
-msgstr "Abrir &editor..."
+msgstr "Abrir &editor…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -110,7 +111,7 @@ msgstr "Cerrar el control para crear eventos nuevos."
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
 #, kde-format
 msgid "Create Event…"
-msgstr "Crear evento..."
+msgstr "Crear evento…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -207,7 +208,7 @@ msgstr "Configurar complemento «Guion externo»"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
-msgstr "Añadir guion..."
+msgstr "Añadir guion…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -219,7 +220,7 @@ msgstr "Eliminar guion"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
-msgstr "Modificar guion..."
+msgstr "Modificar guion…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -258,7 +259,7 @@ msgstr "Descripción:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
-msgstr "Añadir argumentos de la orden..."
+msgstr "Añadir argumentos de la orden…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -270,8 +271,8 @@ msgstr "Línea de ordenes:"
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
-"<qt><a href=\"whatsthis1\">Información sobre el formato de los argumentos..."
-"</a></qt>"
+"<qt><a href=\"whatsthis1\">Información sobre el formato de los argumentos…</"
+"a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format
@@ -322,43 +323,3 @@ msgstr "Guion externo"
 #, kde-format
 msgid "Configure"
 msgstr "Configurar"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Note:"
-#~ msgstr "Nota:"
-
-#~ msgid "Create new note and close this widget."
-#~ msgstr "Crear una nota nueva y cerrar este control."
-
-#~ msgid "Close the widget for creating new notes."
-#~ msgstr "Cerrar el control para crear notas nuevas."
-
-#~ msgctxt "edit a note on this message"
-#~ msgid "Edit Note"
-#~ msgstr "Editar nota"
-
-#~ msgctxt "create a new note out of this message"
-#~ msgid "Create Note"
-#~ msgstr "Crear nota"
-
-#~ msgid "Allows you to create a note from this message"
-#~ msgstr "Le permite crear una nota a partir de este mensaje"
-
-#~ msgid ""
-#~ "This option starts an editor to create a note. Then you can edit the note "
-#~ "to your liking before saving it."
-#~ msgstr ""
-#~ "Esta opción inicia un editor para crear una nota. A continuación puede "
-#~ "editar la nota a su gusto antes de guardarla."
-
-#~ msgid "Create Event..."
-#~ msgstr "Crear evento..."
-
-#~ msgid "Todo:"
-#~ msgstr "Tarea pendiente:"
-
-#~ msgid "Create Todo"
-#~ msgstr "Crear tarea pendiente"
-
-#~ msgid "Open &editor..."
-#~ msgstr "Abrir &editor..."
