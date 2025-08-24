@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
-# SPDX-FileCopyrightText: 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2016, 2018.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-08-15 11:50+0400\n"
+"PO-Revision-Date: 2025-08-23 09:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -226,7 +226,7 @@ msgstr "أتريد إزالة السّكربت ”%1“ هذا؟"
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove External Script"
-msgstr "إزالة سكربت خارجيّ"
+msgstr "أزِل سكربت خارجيّ"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
 #, kde-format
