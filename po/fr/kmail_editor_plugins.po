@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:44+0000\n"
-"PO-Revision-Date: 2025-06-10 08:20+0200\n"
+"PO-Revision-Date: 2025-08-09 16:29+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.07.90\n"
 "X-Text-Markup: kde4\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:25
@@ -46,12 +46,10 @@ msgid "Autocorrect Selected Text"
 msgstr "Corriger automatiquement le texte sélectionné"
 
 #: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Autogenerate Answer"
+#, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
-msgstr "Générer automatiquement une réponse"
+msgstr "Générer automatiquement la réponse"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
 #, kde-format
@@ -78,22 +76,20 @@ msgid "Quick Answer"
 msgstr "Réponse rapide"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "Une erreur est survenue : « %1 »"
+msgstr "Une erreur est survenue : %1"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Erreur"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
-#, fuzzy, kde-format
-#| msgid "Insert"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Text"
-msgstr "Insérer"
+msgstr "Insérer du texte"
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format
