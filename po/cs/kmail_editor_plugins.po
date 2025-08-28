@@ -60,11 +60,10 @@ msgid "Summary Text"
 msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
-#, fuzzy, kde-format
-#| msgid "Autocorrect Text"
+#, kde-format
 msgctxt "@action"
 msgid "Correct Text"
-msgstr "Automaticky opravit text"
+msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:51
 #, kde-format
@@ -73,22 +72,20 @@ msgid "Quick Answer"
 msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "Vyskytla se chyba: \"%1\""
+msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Chyba"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
-#, fuzzy, kde-format
-#| msgid "Insert"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Text"
-msgstr "Vložit"
+msgstr ""
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format
