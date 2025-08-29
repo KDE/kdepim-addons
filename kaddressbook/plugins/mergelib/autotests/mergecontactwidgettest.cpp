@@ -27,9 +27,6 @@ extern KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_mergeStubModel;
 
 MergeContactWidgetTest::MergeContactWidgetTest()
 {
-    if (qEnvironmentVariableIntValue("KDECI_CANNOT_CREATE_WINDOWS")) {
-        QSKIP("KDE CI can't create a window on this platform, skipping some gui tests");
-    }
     qRegisterMetaType<Akonadi::Item::List>();
     qRegisterMetaType<Akonadi::Item>();
     qRegisterMetaType<Akonadi::Collection>();
