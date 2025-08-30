@@ -8,7 +8,6 @@
 
 #include "autogenerateanswerseditordialog.h"
 #include "autogenerateanswerseditorplugin_debug.h"
-#include "textautogeneratetext_version.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
