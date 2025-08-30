@@ -28,6 +28,7 @@
 
 #include <QGpgME/DecryptJob>
 #include <QGpgME/Protocol>
+#include <gpgme.h>
 
 using namespace MimeTreeParser;
 using namespace MimeTreeParser::Interface;
@@ -61,7 +62,11 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
                 QByteArray plainText;
                 auto result = decrypt->exec(part.content()->decodedContent(), plainText);
                 if (result.error()) {
+#if GPGME_VERSION_NUMBER >= 0x011800 // 1.24.0
+                    qCWarning(GNUPGWKS_LOG) << "Decryption failed!" << result.error().asStdString();
+#else
                     qCWarning(GNUPGWKS_LOG) << "Decryption failed!" << result.error().asString();
+#endif
                     return {};
                 }
                 part.content()->setBody(plainText);
