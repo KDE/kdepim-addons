@@ -78,6 +78,8 @@ void AutoGenerateAnswersEditorInterface::exec()
         str = richTextEditor()->toPlainText();
     }
 
+    qCDebug(KMAIL_EDITOR_AUTOGENERATEANSWER_PLUGIN_LOG) << "add text: " << str;
+
     auto job = new TextAutoGenerateText::TextAutoGenerateAskJob(this);
     job->setManager(mManager);
     job->setText(QStringLiteral("%1: \"%2\"").arg(actionStr, str));
