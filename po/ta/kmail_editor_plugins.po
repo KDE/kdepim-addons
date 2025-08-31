@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-12 00:44+0000\n"
+"POT-Creation-Date: 2025-08-31 00:43+0000\n"
 "PO-Revision-Date: 2025-08-10 19:12+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -70,12 +70,20 @@ msgctxt "@action"
 msgid "Quick Answer"
 msgstr "விரை பதில்"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure quick text"
+msgctxt "@action"
+msgid "Configure AI"
+msgstr "விரை உரையை அமை"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
 #, kde-format
 msgid "An error occured: %1"
 msgstr "சிக்கல் ஏற்பட்டது: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
 #, kde-format
 msgid "Error"
 msgstr "சிக்கல்"

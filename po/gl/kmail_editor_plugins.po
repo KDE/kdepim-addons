@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-12 00:44+0000\n"
+"POT-Creation-Date: 2025-08-31 00:43+0000\n"
 "PO-Revision-Date: 2025-06-19 09:52+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -73,13 +73,21 @@ msgctxt "@action"
 msgid "Quick Answer"
 msgstr "Resposta rápida"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure quick text"
+msgctxt "@action"
+msgid "Configure AI"
+msgstr "Configurar o texto rápido"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
 #, fuzzy, kde-format
 #| msgid "An error occurred: \"%1\""
 msgid "An error occured: %1"
 msgstr "Produciuse un erro: «%1»."
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
 #, kde-format
 msgid "Error"
 msgstr ""

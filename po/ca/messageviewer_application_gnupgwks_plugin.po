@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 00:41+0000\n"
+"POT-Creation-Date: 2025-08-31 00:43+0000\n"
 "PO-Revision-Date: 2024-07-31 11:59+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -35,33 +35,33 @@ msgstr "Publica la clau"
 msgid "No valid key data in file."
 msgstr "En aquest fitxer no hi ha dades vàlides de clau."
 
-#: pgpkeyurlhandler.cpp:46
+#: pgpkeyurlhandler.cpp:47
 #, kde-format
 msgid "Import the key"
 msgstr "Importa la clau"
 
-#: pgpkeyurlhandler.cpp:65
+#: pgpkeyurlhandler.cpp:66
 #, kde-format
 msgid "An error occurred while importing the key."
 msgstr "S'ha produït un error en importar la clau."
 
-#: pgpkeyurlhandler.cpp:67 pgpkeyurlhandler.cpp:69
+#: pgpkeyurlhandler.cpp:72 pgpkeyurlhandler.cpp:74
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Error d'importació"
 
-#: pgpkeyurlhandler.cpp:69
+#: pgpkeyurlhandler.cpp:74
 #, kde-format
 msgid "No keys to import where found."
 msgstr "No s'ha trobat cap clau a importar."
 
-#: pgpkeyurlhandler.cpp:71
+#: pgpkeyurlhandler.cpp:76
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "La clau ha estat importada amb èxit."
 
-#: pgpkeyurlhandler.cpp:71
+#: pgpkeyurlhandler.cpp:76
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"

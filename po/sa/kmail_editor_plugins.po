@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-12 00:44+0000\n"
+"POT-Creation-Date: 2025-08-31 00:43+0000\n"
 "PO-Revision-Date: 2024-12-14 01:48+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -73,13 +73,21 @@ msgctxt "@action"
 msgid "Quick Answer"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure quick text"
+msgctxt "@action"
+msgid "Configure AI"
+msgstr "द्रुतपाठं विन्यस्यताम्"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
 #, fuzzy, kde-format
 #| msgid "An error occurred: \"%1\""
 msgid "An error occured: %1"
 msgstr "त्रुटिः अभवत्: \"%1\" ।"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
 #, kde-format
 msgid "Error"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_importexportplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2025-08-31 00:43+0000\n"
 "PO-Revision-Date: 2024-05-12 09:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -46,7 +46,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:148
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:370
+#: vcards/vcardimportexportplugininterface.cpp:375
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Який запис контакту ви бажаєте експортувати?"
@@ -54,7 +54,7 @@ msgstr "Який запис контакту ви бажаєте експорт�
 #: csv/csvimportexportplugininterface.cpp:158
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:382
+#: vcards/vcardimportexportplugininterface.cpp:387
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Ви не позначили жодного запису контакту для експортування."
@@ -705,70 +705,70 @@ msgctxt "@action:button"
 msgid "Import All…"
 msgstr "Імпортувати все…"
 
-#: vcards/vcardimportexportplugininterface.cpp:44
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
 msgid "Import vCard…"
 msgstr "Імпортувати vCard…"
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:46
 #, kde-format
 msgid "Import contacts from a vCard file."
 msgstr "Імпортувати контакти з файла vCard."
 
-#: vcards/vcardimportexportplugininterface.cpp:52
+#: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
 msgid "Export contacts to a vCard 4.0 file."
 msgstr "Експортувати контакти до файла vCard 4.0."
 
-#: vcards/vcardimportexportplugininterface.cpp:53
+#: vcards/vcardimportexportplugininterface.cpp:54
 #, kde-format
 msgid "Export vCard 4.0…"
 msgstr "Експортувати до vCard 4.0…"
 
-#: vcards/vcardimportexportplugininterface.cpp:58
+#: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
 msgid "Export vCard 3.0…"
 msgstr "Експортувати до vCard 3.0…"
 
-#: vcards/vcardimportexportplugininterface.cpp:59
+#: vcards/vcardimportexportplugininterface.cpp:60
 #, kde-format
 msgid "Export contacts to a vCard 3.0 file."
 msgstr "Експортувати контакти до файла vCard 3.0."
 
-#: vcards/vcardimportexportplugininterface.cpp:64
+#: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
 msgid "Export vCard 2.1…"
 msgstr "Експортувати до vCard 2.1…"
 
-#: vcards/vcardimportexportplugininterface.cpp:65
+#: vcards/vcardimportexportplugininterface.cpp:66
 #, kde-format
 msgid "Export contacts to a vCard 2.1 file."
 msgstr "Експортувати контакти до файла vCard 2.1."
 
-#: vcards/vcardimportexportplugininterface.cpp:113
+#: vcards/vcardimportexportplugininterface.cpp:114
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr "візитівки (*.vcf *.vcard *.vct *.gcrd);;усі файли (*)"
 
-#: vcards/vcardimportexportplugininterface.cpp:114
+#: vcards/vcardimportexportplugininterface.cpp:115
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "Вибір vCard для імпортування"
 
-#: vcards/vcardimportexportplugininterface.cpp:120
+#: vcards/vcardimportexportplugininterface.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "Не вдалося імпортувати візитівку"
 
-#: vcards/vcardimportexportplugininterface.cpp:134
+#: vcards/vcardimportexportplugininterface.cpp:135
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<para>Не вдається отримати доступ до vCard:</para><para>%1</para>"
 
-#: vcards/vcardimportexportplugininterface.cpp:436
+#: vcards/vcardimportexportplugininterface.cpp:441
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -776,13 +776,13 @@ msgid ""
 "files?"
 msgstr "Ви вибрали список контактів, експортувати їх у декілька файлів?"
 
-#: vcards/vcardimportexportplugininterface.cpp:439
+#: vcards/vcardimportexportplugininterface.cpp:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Експортувати до одного файла"
 
-#: vcards/vcardimportexportplugininterface.cpp:440
+#: vcards/vcardimportexportplugininterface.cpp:445
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-12 00:44+0000\n"
+"POT-Creation-Date: 2025-08-31 00:43+0000\n"
 "PO-Revision-Date: 2024-08-14 11:31+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -71,12 +71,20 @@ msgctxt "@action"
 msgid "Quick Answer"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure quick text"
+msgctxt "@action"
+msgid "Configure AI"
+msgstr "Nastavit rychlý text"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
 #, kde-format
 msgid "An error occured: %1"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:104
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
 #, kde-format
 msgid "Error"
 msgstr "Chyba"

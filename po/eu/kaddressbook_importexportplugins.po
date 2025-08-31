@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:39+0000\n"
+"POT-Creation-Date: 2025-08-31 00:43+0000\n"
 "PO-Revision-Date: 2024-07-16 11:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:148
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:370
+#: vcards/vcardimportexportplugininterface.cpp:375
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Zein kontaktu esportatu nahi duzu?"
@@ -58,7 +58,7 @@ msgstr "Zein kontaktu esportatu nahi duzu?"
 #: csv/csvimportexportplugininterface.cpp:158
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:382
+#: vcards/vcardimportexportplugininterface.cpp:387
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Ez duzu hautatu esportatu beharreko kontakturik."
@@ -712,70 +712,70 @@ msgctxt "@action:button"
 msgid "Import All…"
 msgstr "Inportatu dena..."
 
-#: vcards/vcardimportexportplugininterface.cpp:44
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
 msgid "Import vCard…"
 msgstr "Inportatu vCard..."
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:46
 #, kde-format
 msgid "Import contacts from a vCard file."
 msgstr "Inportatu Kontaktuak vCard fitxategi batetik."
 
-#: vcards/vcardimportexportplugininterface.cpp:52
+#: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
 msgid "Export contacts to a vCard 4.0 file."
 msgstr "Esportatu kontaktuak vCard 4.0 fitxategi batera."
 
-#: vcards/vcardimportexportplugininterface.cpp:53
+#: vcards/vcardimportexportplugininterface.cpp:54
 #, kde-format
 msgid "Export vCard 4.0…"
 msgstr "Esportatu vCard 4.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:58
+#: vcards/vcardimportexportplugininterface.cpp:59
 #, kde-format
 msgid "Export vCard 3.0…"
 msgstr "Esportatu vCard 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:59
+#: vcards/vcardimportexportplugininterface.cpp:60
 #, kde-format
 msgid "Export contacts to a vCard 3.0 file."
 msgstr "Esportatu kontaktuak vCard 3.0 fitxategi batera."
 
-#: vcards/vcardimportexportplugininterface.cpp:64
+#: vcards/vcardimportexportplugininterface.cpp:65
 #, kde-format
 msgid "Export vCard 2.1…"
 msgstr "Esportatu vCard 2.1..."
 
-#: vcards/vcardimportexportplugininterface.cpp:65
+#: vcards/vcardimportexportplugininterface.cpp:66
 #, kde-format
 msgid "Export contacts to a vCard 2.1 file."
 msgstr "Esportatu kontaktuak vCard 2.1 fitxategi batera."
 
-#: vcards/vcardimportexportplugininterface.cpp:113
+#: vcards/vcardimportexportplugininterface.cpp:114
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;Fitxategi guztiak (*)"
 
-#: vcards/vcardimportexportplugininterface.cpp:114
+#: vcards/vcardimportexportplugininterface.cpp:115
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "Hautatu inportatu beharreko vCard"
 
-#: vcards/vcardimportexportplugininterface.cpp:120
+#: vcards/vcardimportexportplugininterface.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "vCard inportatzea huts egin du"
 
-#: vcards/vcardimportexportplugininterface.cpp:134
+#: vcards/vcardimportexportplugininterface.cpp:135
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<para>Ez da vCard atzitzeko gai:</para><para>%1</para>"
 
-#: vcards/vcardimportexportplugininterface.cpp:436
+#: vcards/vcardimportexportplugininterface.cpp:441
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -785,13 +785,13 @@ msgstr ""
 "Kontaktu-zerrenda bat hautatu duzu, hainbat fitxategitara esportatu beharko "
 "lirateke?"
 
-#: vcards/vcardimportexportplugininterface.cpp:439
+#: vcards/vcardimportexportplugininterface.cpp:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Esportatu fitxategi batera"
 
-#: vcards/vcardimportexportplugininterface.cpp:440
+#: vcards/vcardimportexportplugininterface.cpp:445
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"
