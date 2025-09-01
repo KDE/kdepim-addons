@@ -78,7 +78,7 @@ msgstr "Inici:"
 #: createeventplugin/eventedit.cpp:95
 #, kde-format
 msgid "Select start time for event."
-msgstr "Seleccioneu l'hora d'inici per a l'esdeveniment."
+msgstr "Trieu l'hora d'inici per a l'esdeveniment."
 
 #: createeventplugin/eventedit.cpp:102
 #, kde-format
@@ -89,7 +89,7 @@ msgstr "Final:"
 #: createeventplugin/eventedit.cpp:107
 #, kde-format
 msgid "Select end time for event."
-msgstr "Seleccioneu l'hora de finalització per a l'esdeveniment."
+msgstr "Trieu l'hora de finalització per a l'esdeveniment."
 
 #: createeventplugin/eventedit.cpp:125
 #, kde-format

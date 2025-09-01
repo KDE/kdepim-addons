@@ -65,8 +65,7 @@ msgstr "Afig automàticament als contactes"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
-msgstr ""
-"Seleccioneu la llibreta d'adreces a on s'han d'emmagatzemar els contactes:"
+msgstr "Trieu la llibreta d'adreces a on s'han d'emmagatzemar els contactes:"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format

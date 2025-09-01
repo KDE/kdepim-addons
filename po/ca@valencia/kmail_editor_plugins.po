@@ -81,7 +81,7 @@ msgstr "Inserix un correu electrònic…"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
-msgstr "Seleccioneu el servidor d'URL curt:"
+msgstr "Trieu el servidor d'URL curt:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:63
 #, kde-format
