@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:43+0000\n"
-"PO-Revision-Date: 2025-08-08 13:37+0200\n"
+"PO-Revision-Date: 2025-08-31 21:14+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:25
 #, kde-format
@@ -71,12 +71,10 @@ msgid "Quick Answer"
 msgstr "Snel antwoord"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:60
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure quick text"
+#, kde-format
 msgctxt "@action"
 msgid "Configure AI"
-msgstr "Snelle tekst configureren"
+msgstr "AI configureren"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
 #, kde-format
