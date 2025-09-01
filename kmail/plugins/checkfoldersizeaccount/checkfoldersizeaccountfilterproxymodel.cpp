@@ -24,9 +24,7 @@ bool CheckFolderSizeAccountFilterProxyModel::filterAcceptsRow(int source_row, co
 {
     const auto collection = source_parent.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
     const Akonadi::CollectionStatistics statistics = collection.statistics();
-    // qDebug() << " SSSSSSSSSS " << statistics.size();
     switch (mFolderSize) {
-    case FolderSize::All:
     case FolderSize::MoreThan100K:
         if (statistics.size() < 100000) {
             return false;
@@ -42,6 +40,7 @@ bool CheckFolderSizeAccountFilterProxyModel::filterAcceptsRow(int source_row, co
             return false;
         }
         break;
+    case FolderSize::All:
     case FolderSize::Unknown:
         break;
     }

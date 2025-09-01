@@ -5,7 +5,6 @@
 */
 
 #include "checkfoldersizeaccountplugindialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "checkfoldersizeaccountpluginwidget.h"
 #include <KConfigGroup>
@@ -20,6 +19,7 @@ namespace
 const char myConfigGroupName[] = "CheckFolderSizeAccountPluginDialog";
 }
 
+using namespace Qt::Literals::StringLiterals;
 CheckFolderSizeAccountPluginDialog::CheckFolderSizeAccountPluginDialog(QWidget *parent)
     : QDialog(parent)
     , mCheckFolderSizeAccountPluginWidget(new CheckFolderSizeAccountPluginWidget(this))

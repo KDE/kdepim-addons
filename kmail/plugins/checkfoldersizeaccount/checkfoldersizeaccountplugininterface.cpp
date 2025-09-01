@@ -5,12 +5,12 @@
 */
 
 #include "checkfoldersizeaccountplugininterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
 
+using namespace Qt::Literals::StringLiterals;
 CheckFolderSizeAccountPluginInterface::CheckFolderSizeAccountPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface{parent}
 {
