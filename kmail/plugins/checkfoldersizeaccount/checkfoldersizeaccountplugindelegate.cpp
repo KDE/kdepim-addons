@@ -28,7 +28,7 @@ void CheckFolderSizeAccountPluginDelegate::paint(QPainter *painter, const QStyle
     // the superclass.
     QStyleOptionViewItem option4 = option;
     QStyledItemDelegate::initStyleOption(&option4, index);
-    QString text = option4.text;
+    // QString text = option4.text;
 
     // Now calculate the rectangle for the text
     QStyle *s = mTreeView->style();
