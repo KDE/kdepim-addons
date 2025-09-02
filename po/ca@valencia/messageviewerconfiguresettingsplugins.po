@@ -259,7 +259,7 @@ msgstr "Guarda la configuració de les carpetes"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
-msgstr "Selecciona"
+msgstr "Tria"
 
 #: foldersettings/folderconfiguretreewidget.cpp:60
 #, kde-format

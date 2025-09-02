@@ -26,7 +26,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr "Seleccioneu els assistents"
+msgstr "Trieu els assistents"
 
 #: attendeeselector.cpp:40
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "Informa'm quant als canvis d'estat d'esta incidència."
 #, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
-msgstr "Seleccioneu un delegat"
+msgstr "Trieu un delegat"
 
 #: delegateselector.cpp:28
 #, kde-format
@@ -96,8 +96,7 @@ msgid ""
 msgstr ""
 "<qt>Cap de les vostres identitats coincidix amb el receptor d'este missatge,"
 "<br/> seleccioneu quina de les següents adreces és la vostra,<br/> si hi és, "
-"o seleccioneu una de les vostres identitats per a utilitzar-la en la "
-"resposta:</qt>"
+"o trieu una de les vostres identitats per a utilitzar-la en la resposta:</qt>"
 
 #: text_calendar.cpp:432
 #, kde-format
@@ -111,7 +110,7 @@ msgstr ""
 #: text_calendar.cpp:447
 #, kde-format
 msgid "Select Address"
-msgstr "Seleccioneu una adreça"
+msgstr "Trieu una adreça"
 
 #: text_calendar.cpp:509
 #, kde-format

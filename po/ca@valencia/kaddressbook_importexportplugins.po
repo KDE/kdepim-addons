@@ -97,7 +97,7 @@ msgstr "Fitxer que s'ha d'importar:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select a csv file to import"
-msgstr "Selecciona un fitxer «csv» per a importar"
+msgstr "Tria un fitxer «csv» per a importar"
 
 #: csv/import/csvimportdialog.cpp:304
 #, kde-format
@@ -133,8 +133,8 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the comma as a field separator."
 msgstr ""
-"Seleccioneu esta opció si el fitxer «csv» utilitza la coma com a separador "
-"de camps."
+"Trieu esta opció si el fitxer «csv» utilitza la coma com a separador de "
+"camps."
 
 #: csv/import/csvimportdialog.cpp:328
 #, kde-format
@@ -154,8 +154,8 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the semicolon as a field separator."
 msgstr ""
-"Seleccioneu esta opció si el fitxer «csv» utilitza el punt i coma com a "
-"separador de camps."
+"Trieu esta opció si el fitxer «csv» utilitza el punt i coma com a separador "
+"de camps."
 
 #: csv/import/csvimportdialog.cpp:334
 #, kde-format
@@ -176,8 +176,8 @@ msgid ""
 "Select this option if your csv file uses the tab character as a field "
 "separator."
 msgstr ""
-"Seleccioneu esta opció si el fitxer «csv» utilitza el caràcter de tabulació "
-"com a separador de camps."
+"Trieu esta opció si el fitxer «csv» utilitza el caràcter de tabulació com a "
+"separador de camps."
 
 #: csv/import/csvimportdialog.cpp:340
 #, kde-format
@@ -198,7 +198,7 @@ msgid ""
 "Select this option if your csv file uses the space character as a field "
 "separator."
 msgstr ""
-"Seleccioneu esta opció si el fitxer «csv» utilitza el caràcter d'espai com a "
+"Trieu esta opció si el fitxer «csv» utilitza el caràcter d'espai com a "
 "separador de camps."
 
 #: csv/import/csvimportdialog.cpp:346
@@ -220,7 +220,7 @@ msgid ""
 "Select this option if to use some other character as the field delimiter for "
 "the data in your csv file."
 msgstr ""
-"Seleccioneu esta opció si el fitxer «csv» utilitza altres caràcters com a "
+"Trieu esta opció si el fitxer «csv» utilitza altres caràcters com a "
 "delimitador de camps."
 
 #: csv/import/csvimportdialog.cpp:355
@@ -251,7 +251,7 @@ msgstr "Cita de text:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the quote character"
-msgstr "Selecciona el caràcter de citació"
+msgstr "Tria el caràcter de citació"
 
 #: csv/import/csvimportdialog.cpp:371
 #, kde-format
@@ -262,10 +262,10 @@ msgid ""
 "if the comma is the field delimiter, then any comma occurring with the data "
 "will be \"quoted\" by the character specified here."
 msgstr ""
-"Seleccioneu el caràcter que les dades de «csv» utilitzen per a «citar» el "
-"camp delimitador si este caràcter existix en les dades. Per exemple, si el "
-"camp delimitador és la coma, llavors qualsevol coma continguda en les dades "
-"se «citarà» amb el caràcter especificat ací."
+"Trieu el caràcter que les dades de «csv» utilitzen per a «citar» el camp "
+"delimitador si este caràcter existix en les dades. Per exemple, si el camp "
+"delimitador és la coma, llavors qualsevol coma continguda en les dades se "
+"«citarà» amb el caràcter especificat ací."
 
 #: csv/import/csvimportdialog.cpp:376
 #, kde-format
@@ -323,7 +323,7 @@ msgid ""
 "para>"
 msgstr ""
 "<para>Especifica un format per a utilitzar les dates contingudes en les "
-"dades de «csv». Utilitzeu les seqüències següents per a ajudar a definir el "
+"dades de «csv». Utilitzeu les seqüències següents per ajudar a definir el "
 "format:</para><para><list><item>y: any amb 2 dígits</item><item>Y: any amb 4 "
 "dígits</item><item>m: mes amb 1 o 2 dígits</item><item>M: mes amb 2 dígits</"
 "item><item>d: dia amb 1 o 2 dígits</item><item>D: dia amb 2 dígits</"
@@ -341,13 +341,13 @@ msgstr "Codificació del text:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
-msgstr "Selecciona la codificació del text"
+msgstr "Tria la codificació del text"
 
 #: csv/import/csvimportdialog.cpp:424
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose the character encoding of the data in your csv file."
-msgstr "Seleccioneu la codificació de caràcters de les dades del fitxer «csv»."
+msgstr "Trieu la codificació de caràcters de les dades del fitxer «csv»."
 
 #: csv/import/csvimportdialog.cpp:428
 #, kde-format
@@ -460,13 +460,13 @@ msgstr "Segur que voleu suprimir la plantilla «%1»?"
 #, kde-format
 msgctxt "@title:window"
 msgid "Template Selection"
-msgstr "Seleccioneu la plantilla"
+msgstr "Trieu la plantilla"
 
 #: csv/import/templateselectiondialog.cpp:206
 #, kde-format
 msgctxt "@info"
 msgid "Please select a template, that matches the CSV file:"
-msgstr "Seleccioneu una plantilla, que case amb el fitxer CSV:"
+msgstr "Trieu una plantilla, que case amb el fitxer CSV:"
 
 #: gmx/gmximportexportplugininterface.cpp:25
 #, kde-format
@@ -758,7 +758,7 @@ msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;Tots els fitxers (*)"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
-msgstr "Seleccioneu la vCard que s'ha d'importar"
+msgstr "Trieu la vCard que s'ha d'importar"
 
 #: vcards/vcardimportexportplugininterface.cpp:121
 #, kde-format

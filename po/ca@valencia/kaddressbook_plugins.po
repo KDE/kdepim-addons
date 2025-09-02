@@ -97,7 +97,7 @@ msgstr "Fusiona els contactes…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Contacts to merge"
-msgstr "Seleccioneu els contactes que s'han de fusionar"
+msgstr "Trieu els contactes que s'han de fusionar"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:31
 #, kde-format
@@ -109,14 +109,14 @@ msgstr "fusiona"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
-msgstr "Seleccioneu els contactes que segur que voleu fusionar:"
+msgstr "Trieu els contactes que segur que voleu fusionar:"
 
 #: mergelib/manualmerge/mergecontactwidget.cpp:67
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
 msgstr ""
-"Seleccioneu la llibreta d'adreces a on s'han d'emmagatzemar els contactes "
+"Trieu la llibreta d'adreces a on s'han d'emmagatzemar els contactes "
 "fusionats:"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
@@ -162,7 +162,7 @@ msgstr "Busca en el resultat…"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
-msgstr "Selecciona la llibreta d'adreces:"
+msgstr "Tria la llibreta d'adreces:"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
 #: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
