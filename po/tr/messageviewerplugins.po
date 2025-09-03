@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:43+0000\n"
+"POT-Creation-Date: 2025-09-03 00:44+0000\n"
 "PO-Revision-Date: 2025-08-23 17:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -33,6 +33,17 @@ msgstr "URL’yi Genişlet"
 msgctxt "@action"
 msgid "Ask AI…"
 msgstr "Yapay Zekâya Sor…"
+
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Close"
+msgstr ""
+
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
+#, kde-format
+msgid "Close"
+msgstr ""
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format

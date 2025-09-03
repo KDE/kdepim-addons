@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:43+0000\n"
+"POT-Creation-Date: 2025-09-03 00:44+0000\n"
 "PO-Revision-Date: 2025-08-23 09:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -36,6 +36,17 @@ msgstr "وسّع المسار"
 msgctxt "@action"
 msgid "Ask AI…"
 msgstr "اسأل الذكاء الاصطناعي…"
+
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:30
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Close"
+msgstr ""
+
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
+#, kde-format
+msgid "Close"
+msgstr ""
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
