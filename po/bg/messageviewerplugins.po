@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-03 00:44+0000\n"
-"PO-Revision-Date: 2025-08-31 23:55+0200\n"
+"PO-Revision-Date: 2025-09-03 19:50+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -40,12 +40,12 @@ msgstr "Запитване към ИИ…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close"
-msgstr ""
+msgstr "Затваряне"
 
 #: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Затваряне"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format

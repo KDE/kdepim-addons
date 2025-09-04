@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-03 00:44+0000\n"
-"PO-Revision-Date: 2025-08-22 22:01+0300\n"
+"PO-Revision-Date: 2025-09-03 18:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -41,12 +41,12 @@ msgstr "Запитати у ШІ…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close"
-msgstr ""
+msgstr "Закрити"
 
 #: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Закрити"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format

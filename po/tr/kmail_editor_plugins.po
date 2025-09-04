@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-04 00:43+0000\n"
 "PO-Revision-Date: 2025-08-31 17:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -47,42 +47,42 @@ msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "Kendiliğinden Yanıt Üret"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "Yanıtı Kendiliğinden Üret"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:38
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "Metni Özetle"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Metni Düzelt"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:51
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "Tez Yanıtla"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:60
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
 #, kde-format
 msgctxt "@action"
 msgid "Configure AI"
 msgstr "Yapay Zekâyı Yapılandır"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:120
 #, kde-format
 msgid "An error occured: %1"
 msgstr "Bir hata oluştu: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:120
 #, kde-format
 msgid "Error"
 msgstr "Hata"

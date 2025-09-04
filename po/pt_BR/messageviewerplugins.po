@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-03 00:44+0000\n"
-"PO-Revision-Date: 2025-08-22 12:24-0300\n"
+"PO-Revision-Date: 2025-09-03 07:29-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -41,12 +41,12 @@ msgstr "Pergunte à IA..."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format

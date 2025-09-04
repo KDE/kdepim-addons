@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-04 00:43+0000\n"
 "PO-Revision-Date: 2025-08-19 02:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -47,31 +47,31 @@ msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "自動生成回答"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "自動生成回答"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:38
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "產生文字摘要"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "修正文字"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:51
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "快速回答"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:60
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Configure quick text"
@@ -79,12 +79,12 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "設定快速文字"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:120
 #, kde-format
 msgid "An error occured: %1"
 msgstr "發生了一個錯誤：%1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:121
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:120
 #, kde-format
 msgid "Error"
 msgstr "錯誤"
