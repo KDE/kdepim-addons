@@ -305,7 +305,7 @@ set_package_properties(
         URL "https://www.gnupg.org"
         TYPE REQUIRED
 )
-ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.17.0)
+ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.18.0)
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
