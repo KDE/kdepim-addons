@@ -7,15 +7,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-03 06:57+0000\n"
-"PO-Revision-Date: 2025-01-18 12:04+0100\n"
+"PO-Revision-Date: 2025-09-06 05:54+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
@@ -97,25 +98,25 @@ msgstr "Pomocnik &antywirusowy…"
 #, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
-msgstr ""
+msgstr "Wszystkie"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr ""
+msgstr "Większe niż 100 kB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr ""
+msgstr "Większe niż 1 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr ""
+msgstr "Większe niż 10 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
@@ -128,13 +129,13 @@ msgstr "Sprawdź rozmiar katalogu"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr ""
+msgstr "Zabarw katalog, gdy obliczenie jego rozmiaru jest zbyt kosztowne"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
-msgstr ""
+msgstr "Rozmiar:"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
 #, kde-format
@@ -146,7 +147,7 @@ msgstr "&Pokaż rozmiary katalogów…"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Poszukaj…"
 
 #: common/antispamwizard.cpp:90
 #, kde-format
