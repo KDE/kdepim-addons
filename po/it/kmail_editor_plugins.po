@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:43+0000\n"
-"PO-Revision-Date: 2025-08-11 14:32+0200\n"
+"PO-Revision-Date: 2025-08-31 16:17+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -71,12 +71,10 @@ msgid "Quick Answer"
 msgstr "Risposta rapida"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure quick text"
+#, kde-format
 msgctxt "@action"
 msgid "Configure AI"
-msgstr "Configura testo rapido"
+msgstr "Configura IA"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:120
 #, kde-format
