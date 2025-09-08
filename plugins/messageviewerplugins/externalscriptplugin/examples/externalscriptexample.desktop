@@ -36,7 +36,6 @@ Name[sr@latin]=Potraži temu na Webu
 Name[sv]=Sök ämne på webben
 Name[tr]=Web üzerinde Arama Başlığı
 Name[uk]=Пошук теми у інтернеті
-Name[x-test]=xxSearch Subject on Webxx
 Name[zh_CN]=在网上搜索主题
 Name[zh_TW]=在網路上搜尋主旨
 Executable=firefox
@@ -79,7 +78,6 @@ Description[sr@latin]=Potraži temu na Webu
 Description[sv]=Sök ämne på webben
 Description[tr]=Web üzerinde arama başlığı
 Description[uk]=Пошук теми у інтернеті
-Description[x-test]=xxSearch subject on webxx
 Description[zh_CN]=在网上搜索主题
 Description[zh_TW]=在網路上搜尋主旨
 
