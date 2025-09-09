@@ -37,7 +37,6 @@
         "Name[sv]": "SendMail e-postöverföring",
         "Name[tr]": "SendMail Posta İletimi",
         "Name[uk]": "Надсилання пошти SendMail",
-        "Name[x-test]": "xxSendMail Mail Transportxx",
         "Name[zh_CN]": "SendMail 邮件传输",
         "Name[zh_TW]": "SendMail 郵件傳輸",
         "Version": "1.0"

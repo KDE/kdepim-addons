@@ -30,7 +30,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa bedrägeri-inställningar.",
         "Description[tr]": "Bu eklenti, aldatma ayarlarını yapılandırmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати параметри скаму.",
-        "Description[x-test]": "xxThis plugin allows you to configure scam settings.xx",
         "Description[zh_CN]": "此插件能让您调整垃圾邮件设置。",
         "Description[zh_TW]": "這個外掛程式讓您設定垃圾信選項。",
         "Name": "Scam Settings",
@@ -64,7 +63,6 @@
         "Name[ta]": "மோசடி எச்சரிக்கை",
         "Name[tr]": "Aldatma Ayarları",
         "Name[uk]": "Параметри скаму",
-        "Name[x-test]": "xxScam Settingsxx",
         "Name[zh_CN]": "垃圾邮件设置",
         "Name[zh_TW]": "垃圾信設定",
         "Version": "1.0"

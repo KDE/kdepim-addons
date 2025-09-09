@@ -36,7 +36,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att visa alla huvuden från brev.",
         "Description[tr]": "Bu eklenti, postadaki tüm üstbilgiyi görmenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна переглянути усі заголовки повідомлення.",
-        "Description[x-test]": "xxThis plugin allows you to show all headers from mail.xx",
         "Description[zh_CN]": "此插件允许您显示邮件的所有头部。",
         "Description[zh_TW]": "這個外掛程式讓您顯示郵件中的所有標頭。",
         "EnabledByDefault": false,
@@ -77,7 +76,6 @@
         "Name[sv]": "Lång rubrikstil",
         "Name[tr]": "Uzun Üstbilgi Biçimi",
         "Name[uk]": "Довгий стиль заголовків",
-        "Name[x-test]": "xxLong Header Stylexx",
         "Name[zh_CN]": "长信头风格",
         "Name[zh_TW]": "長標頭風格",
         "Version": "1.0"

@@ -36,7 +36,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att infoga specialtecken i brevfönstret.",
         "Description[tr]": "Bu eklenti, düzenleyicide özel karakter eklemenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна вставити спеціальний символ до вікна редактора повідомлень.",
-        "Description[x-test]": "xxThis plugin allows you to insert special character in composer.xx",
         "Description[zh_CN]": "此插件允许您在编辑器中插入特殊字符。",
         "Description[zh_TW]": "這個外掛程式讓您在撰寫工具中插入特殊字元。",
         "EnabledByDefault": false,
@@ -78,7 +77,6 @@
         "Name[ta]": "வேறுபட்ட எழுத்தை நுழை",
         "Name[tr]": "Özel Karakter Ekle",
         "Name[uk]": "Вставлення спеціального символу",
-        "Name[x-test]": "xxInsert Special Characterxx",
         "Name[zh_CN]": "插入特殊字符",
         "Name[zh_TW]": "插入特殊字元",
         "Version": "1.0"

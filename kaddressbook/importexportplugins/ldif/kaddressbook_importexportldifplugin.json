@@ -37,7 +37,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera LDIF.",
         "Description[tr]": "Bu eklenti, LDIF içe/dışa aktarmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі LDIF.",
-        "Description[x-test]": "xxThis plugin allows you to import/export LDIF.xx",
         "Description[zh_CN]": "此插件能让您导入或导出 LDIF。",
         "Description[zh_TW]": "這個外掛程式讓您匯入/匯出 LDIF。",
         "EnabledByDefault": false,
@@ -79,7 +78,6 @@
         "Name[ta]": "LDIF தனை ஏற்றுமதி/இறக்குமதி செய்வது",
         "Name[tr]": "LDIF İçe/Dışa Aktar",
         "Name[uk]": "Імпортування та експортування LDIF",
-        "Name[x-test]": "xxImport/Export LDIFxx",
         "Name[zh_CN]": "导入/导出 LDIF",
         "Name[zh_TW]": "匯入/匯出 LDIF",
         "Version": "1.0"

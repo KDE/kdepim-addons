@@ -37,7 +37,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera LDAP-kontakter.",
         "Description[tr]": "Bu eklenti, LDAP kişilerini içe/dışa aktarmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі записів контактів LDAP.",
-        "Description[x-test]": "xxThis plugin allows you to import/export LDAP contacts.xx",
         "Description[zh_CN]": "此插件能让您导入或导出 LDAP 联系人。",
         "Description[zh_TW]": "這個外掛程式讓您匯入/匯出 LDAP 聯絡人。",
         "EnabledByDefault": false,
@@ -79,7 +78,6 @@
         "Name[ta]": "LDAP தொடர்புகளை ஏற்றுமதி/இறக்குமதி செய்வது",
         "Name[tr]": "LDAP Kişilerini İçe/Dışa Aktar",
         "Name[uk]": "Імпортування та експортування записів контактів LDAP",
-        "Name[x-test]": "xxImport/Export LDAP Contactsxx",
         "Name[zh_CN]": "导入/导出 LDAP 联系人",
         "Name[zh_TW]": "匯入/匯出 LDAP 聯絡人",
         "Version": "1.0"

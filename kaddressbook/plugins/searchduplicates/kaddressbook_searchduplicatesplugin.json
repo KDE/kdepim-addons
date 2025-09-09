@@ -37,7 +37,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att söka efter duplicerade kontakter.",
         "Description[tr]": "Bu eklenti, yinelenen kişileri aramanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна виявляти дублікати записів контактів.",
-        "Description[x-test]": "xxThis plugin allows you to search duplicate contacts.xx",
         "Description[zh_CN]": "此茶碗见允许您搜索重复的联系人。",
         "Description[zh_TW]": "這個外掛程式讓您搜尋重複的聯絡人。",
         "EnabledByDefault": true,
@@ -79,7 +78,6 @@
         "Name[ta]": "நகலாயுள்ள தொடர்புகளைக் கண்டுபிடிப்பது",
         "Name[tr]": "Yinelenen Kişileri Ara",
         "Name[uk]": "Пошук дублікатів записів контактів",
-        "Name[x-test]": "xxSearch Duplicate Contactsxx",
         "Name[zh_CN]": "搜索重复的联系人",
         "Name[zh_TW]": "尋找重複聯絡人",
         "Version": "1.0"

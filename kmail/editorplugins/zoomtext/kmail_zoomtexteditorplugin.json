@@ -36,7 +36,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att ändra zoomfaktor i brevfönstret.",
         "Description[tr]": "Bu eklenti, düzenleyicideki yakınlaştırma katsayısını değiştirmenize olanak verir.",
         "Description[uk]": "За допомогою цього додатка можна змінювати масштаб у редакторі повідомлень.",
-        "Description[x-test]": "xxThis plugin allows you to change zoom factor in composer.xx",
         "Description[zh_CN]": "此插件允许您更改编辑器的缩放倍数。",
         "Description[zh_TW]": "這個外掛程式讓您變更撰寫工具的縮放係數。",
         "EnabledByDefault": false,
@@ -78,7 +77,6 @@
         "Name[ta]": "உரையை பெரிதாக்கு",
         "Name[tr]": "Metni Yakınlaştır/Uzaklaştır",
         "Name[uk]": "Масштабування тексту",
-        "Name[x-test]": "xxZoom Textxx",
         "Name[zh_CN]": "缩放文本",
         "Name[zh_TW]": "縮放文字",
         "Version": "1.0"

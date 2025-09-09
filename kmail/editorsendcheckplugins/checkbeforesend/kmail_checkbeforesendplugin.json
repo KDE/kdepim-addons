@@ -36,7 +36,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att kontrollera inställningarna för brev innan de skickas.",
         "Description[tr]": "Bu eklenti, gönderimden önce ileti ayarlarınızı denetlemenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти параметри повідомлення перед надсиланням.",
-        "Description[x-test]": "xxThis plugin allows you to check message settings before sending.xx",
         "Description[zh_CN]": "此插件允许您在发送前检查信件设置。",
         "Description[zh_TW]": "這個外掛程式讓您在送出信件之前檢查信件設定。",
         "EnabledByDefault": true,
@@ -78,7 +77,6 @@
         "Name[ta]": "அனுப்புமுன் சரிபார்ப்பது",
         "Name[tr]": "Göndermeden Önce Denetle",
         "Name[uk]": "Перевірка перед надсиланням",
-        "Name[x-test]": "xxCheck Before Sendxx",
         "Name[zh_CN]": "发送前检查",
         "Name[zh_TW]": "送出前檢查",
         "Version": "1.0"

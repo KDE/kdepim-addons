@@ -37,7 +37,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att skicka e-post direkt till markerade kontakter.",
         "Description[tr]": "Bu eklenti, seçili kişilere doğrudan eposta göndermenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна безпосередньо надсилати повідомлення вибраним контактам.",
-        "Description[x-test]": "xxThis plugin allows you to send email directly to selected contacts.xx",
         "Description[zh_CN]": "此插件允许您直接发送邮件给选中的联系人。",
         "Description[zh_TW]": "這個外掛程式讓您直接傳送郵件給選取的聯絡人。",
         "EnabledByDefault": true,
@@ -79,7 +78,6 @@
         "Name[ta]": "அஞ்சல் அனுப்புவது",
         "Name[tr]": "Posta Gönder",
         "Name[uk]": "Надіслати пошту",
-        "Name[x-test]": "xxSend Mailxx",
         "Name[zh_CN]": "发送邮件",
         "Name[zh_TW]": "傳送郵件",
         "Version": "1.0"

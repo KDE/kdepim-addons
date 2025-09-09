@@ -37,7 +37,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att använda ett externt brevfönster.",
         "Description[tr]": "Bu eklenti, harici bir düzenleyici kullanmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна використовувати зовнішні редактори повідомлень.",
-        "Description[x-test]": "xxThis plugin allows you to use an external composer.xx",
         "Description[zh_CN]": "此插件允许您使用外部编辑器。",
         "Description[zh_TW]": "這個外掛程式讓您使用外部撰寫工具。",
         "EnabledByDefault": false,
@@ -73,7 +72,6 @@
         "Name[ta]": "வெளி திருத்தியை திற",
         "Name[tr]": "Dış Düzenleyiciyi Aç",
         "Name[uk]": "Відкрити зовнішній редактор",
-        "Name[x-test]": "xxOpen External Composerxx",
         "Name[zh_CN]": "打开外部编辑器",
         "Name[zh_TW]": "開啟外部撰寫工具",
         "Version": "1.0"

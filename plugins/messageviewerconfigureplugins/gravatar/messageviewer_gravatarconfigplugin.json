@@ -33,7 +33,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa Gravatar-stöd",
         "Description[tr]": "Bu eklenti, Gravatar desteğini yapılandırmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати підтримку Gravatar.",
-        "Description[x-test]": "xxThis plugin allows you to configure gravatar support.xx",
         "Description[zh_CN]": "此插件允许您配置 Gravatar 支持。",
         "Description[zh_TW]": "這個外掛程式讓您設定 Gravatar 支援。",
         "Name": "Gravatar",
@@ -69,7 +68,6 @@
         "Name[sv]": "Gravatar",
         "Name[tr]": "Gravatar",
         "Name[uk]": "Gravatar",
-        "Name[x-test]": "xxGravatarxx",
         "Name[zh_CN]": "Gravatar",
         "Name[zh_TW]": "Gravatar",
         "Version": "1.0"

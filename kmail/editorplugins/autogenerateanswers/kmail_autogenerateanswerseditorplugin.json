@@ -23,7 +23,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att generera snabbsvar.",
         "Description[tr]": "Bu eklenti, tez bir yanıt üretmenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна автоматично створювати короткі відповіді.",
-        "Description[x-test]": "xxThis plugin allows to generate quick answer.xx",
         "Description[zh_CN]": "此插件允许您生成快速回复。",
         "Description[zh_TW]": "這個外掛程式讓您產生快速回答。",
         "EnabledByDefault": false,
@@ -50,7 +49,6 @@
         "Name[sv]": "Generera snabbsvar automatiskt",
         "Name[tr]": "Tez Yanıtı Kendiliğinden Üret",
         "Name[uk]": "Автоматичне створення короткої відповіді",
-        "Name[x-test]": "xxAutoGenerate Quick Answerxx",
         "Name[zh_CN]": "自动生成快速回复",
         "Name[zh_TW]": "自動產生快速回答",
         "Version": "1.0"

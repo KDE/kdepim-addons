@@ -36,7 +36,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa virushantering i Kmail.",
         "Description[tr]": "Bu eklenti, K Posta içinde Anti Virüs yapılandırmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати антивірус у KMail.",
-        "Description[x-test]": "xxThis plugin allows you to configure Anti Virus in KMail.xx",
         "Description[zh_CN]": "此插件允许您配置 KMail 防病毒机制。",
         "Description[zh_TW]": "這個外掛程式讓您設定 KMail 中的防毒。",
         "EnabledByDefault": false,
@@ -77,7 +76,6 @@
         "Name[sv]": "Antivirus",
         "Name[tr]": "Antivirüs",
         "Name[uk]": "Антивірус",
-        "Name[x-test]": "xxAntivirusxx",
         "Name[zh_CN]": "病毒防御",
         "Name[zh_TW]": "防毒",
         "Version": "1.0"

@@ -33,7 +33,6 @@
         "Description[sv]": "Insticksprogrammet låter dig kontrollera grammatik med användning av LanguageTool.",
         "Description[tr]": "Bu eklenti, LanguageTool kullanarak gramer denetlemesi yapmanıza olanak verir.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти граматику за допомогою LanguageTool.",
-        "Description[x-test]": "xxThis plugin allows you to check grammar using LanguageTool.xx",
         "Description[zh_CN]": "此插件可以让您使用语言工具检查语法。",
         "Description[zh_TW]": "這個外掛程式讓您用 LanguageTool 檢查文法。",
         "EnabledByDefault": false,
@@ -71,7 +70,6 @@
         "Name[ta]": "இலக்கண சரிபார்ப்பு (LanguageTool)",
         "Name[tr]": "Gramer Denetleyicisi (LanguageTool)",
         "Name[uk]": "Перевірка граматики (LanguageTool)",
-        "Name[x-test]": "xxGrammar Checker (LanguageTool)xx",
         "Name[zh_CN]": "语法检查器 (语言工具)",
         "Name[zh_TW]": "文法檢查工具 (LanguageTool)",
         "Version": "1.0"

@@ -37,7 +37,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt kontrollera Gravatar-bilder.",
         "Description[tr]": "Bu eklenti, Gravatar görsellerini denetlemenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна визначати зображення gravatar.",
-        "Description[x-test]": "xxThis plugin allows you to check the Gravatar images.xx",
         "Description[zh_CN]": "此插件允许您检查 Gravatar 头像。",
         "Description[zh_TW]": "這個外掛程式讓您檢查 Gravatar 影像。",
         "EnabledByDefault": false,
@@ -78,7 +77,6 @@
         "Name[sv]": "Kontrollera Gravatar",
         "Name[tr]": "Gravatar Denetle",
         "Name[uk]": "Перевірити gravatar",
-        "Name[x-test]": "xxCheck Gravatarxx",
         "Name[zh_CN]": "检查 Gravatar 头像",
         "Name[zh_TW]": "檢查 Gravatar",
         "Version": "1.0"
