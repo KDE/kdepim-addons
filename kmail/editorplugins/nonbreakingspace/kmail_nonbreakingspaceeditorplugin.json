@@ -36,7 +36,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att lägga till mellanslag utan radbrytning. Det är användbart för franska språket.",
         "Description[tr]": "Bu eklenti, boşluksuz boşluk karakteri koymanıza olanak tanır. Fransız dilinde kullanışlıdır.",
         "Description[uk]": "За допомогою цього додатка можна вставити нерозривний пробіл. Корисний для повідомлень французькою мовою.",
-        "Description[x-test]": "xxThis plugin allows you to add non breaking space. It's useful in french language.xx",
         "Description[zh_CN]": "此插件允许您添加不换行空格。它在法语中非常有用。",
         "Description[zh_TW]": "這個外掛程式讓您插入不中斷空白。它在法語很好用。",
         "EnabledByDefault": false,
@@ -78,7 +77,6 @@
         "Name[ta]": "உடைக்கமுடியா இடைவெளியை நுழை",
         "Name[tr]": "Aralıksız Boşluk Ekle",
         "Name[uk]": "Вставлення нерозривного пробілу",
-        "Name[x-test]": "xxInsert Non Breaking Spacexx",
         "Name[zh_CN]": "插入不换行空格",
         "Name[zh_TW]": "插入不中斷空白",
         "Version": "1.0"

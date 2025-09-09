@@ -36,7 +36,6 @@
         "Description[sv]": "Insticksprogrammet definierar standardstilen för brevhuvuden.",
         "Description[tr]": "Bu eklenti, standart posta üstbilgisi biçimi tanımlar.",
         "Description[uk]": "Цим додатком визначається стандартний стиль заголовка повідомлення.",
-        "Description[x-test]": "xxThis plugin defines the standard mail header style.xx",
         "Description[zh_CN]": "此插件定义了标注邮件头部样式。",
         "Description[zh_TW]": "這個外掛程式定義標準的郵件標頭風格。",
         "EnabledByDefault": false,
@@ -77,7 +76,6 @@
         "Name[sv]": "Vanlig rubrikstil",
         "Name[tr]": "Standartlar Üstbilgi Biçimi",
         "Name[uk]": "Стандартний стиль заголовків",
-        "Name[x-test]": "xxStandards Header Stylexx",
         "Name[zh_CN]": "标准信头风格",
         "Name[zh_TW]": "標準標頭風格",
         "Version": "1.0"

@@ -23,7 +23,6 @@
         "Description[sv]": "Insticksprogrammet öppnar en AI-chatt.",
         "Description[tr]": "Bu eklenti, yapay zekâ sohbetini açar.",
         "Description[uk]": "Цей додаток відкриває вікно спілкування з ШІ.",
-        "Description[x-test]": "xxThis plugin opens AI chat.xx",
         "Description[zh_CN]": "此插件将开启 AI 对话。",
         "Description[zh_TW]": "這個外掛程式會開啟 AI 聊天。",
         "EnabledByDefault": false,
@@ -50,7 +49,6 @@
         "Name[sv]": "AI-chatt",
         "Name[tr]": "Yapay Zekâ Sohbeti",
         "Name[uk]": "Спілкування з ШІ",
-        "Name[x-test]": "xxAI Chatxx",
         "Name[zh_CN]": "AI 对话",
         "Name[zh_TW]": "AI 聊天",
         "Version": "1.0"

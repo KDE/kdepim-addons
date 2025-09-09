@@ -37,7 +37,6 @@
         "Description[ta]": "இச்செருகுநிரல் உரையை மொழிபெயர்க்கும்.",
         "Description[tr]": "Bu eklenti, metni çevirmenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна перекладати тексти.",
-        "Description[x-test]": "xxThis plugin allows you to translate text.xx",
         "Description[zh_CN]": "此插件允许您翻译文本。",
         "Description[zh_TW]": "這個外掛程式讓您翻譯文字。",
         "EnabledByDefault": true,
@@ -79,7 +78,6 @@
         "Name[ta]": "மொழிபெயர்ப்பி",
         "Name[tr]": "Çeviren",
         "Name[uk]": "Перекладач",
-        "Name[x-test]": "xxTranslatorxx",
         "Name[zh_CN]": "翻译服务",
         "Name[zh_TW]": "翻譯器",
         "Version": "1.0"

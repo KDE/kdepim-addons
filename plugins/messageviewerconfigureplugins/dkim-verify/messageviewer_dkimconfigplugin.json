@@ -33,7 +33,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa DKIM-stöd",
         "Description[tr]": "Bu eklenti, DKIM desteğini yapılandırmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати підтримку DKIM.",
-        "Description[x-test]": "xxThis plugin allows you to configure dkim support.xx",
         "Description[zh_CN]": "此插件可以让您配置 dkim 支持。",
         "Description[zh_TW]": "這個外掛程式讓您設定 DKIM 支援。",
         "Name": "DKIM Checker",
@@ -70,7 +69,6 @@
         "Name[ta]": "DKIM சரிபார்ப்பு",
         "Name[tr]": "DKIM Denetleyicisi",
         "Name[uk]": "Засіб перевірки DKIM",
-        "Name[x-test]": "xxDKIM Checkerxx",
         "Name[zh_CN]": "DKIM 检查器",
         "Name[zh_TW]": "DKIM 檢查工具",
         "Version": "1.0"

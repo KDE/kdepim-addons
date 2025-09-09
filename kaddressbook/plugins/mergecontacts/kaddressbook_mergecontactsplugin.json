@@ -37,7 +37,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att sammanfoga kontakter.",
         "Description[tr]": "Bu eklenti, kişileri birleştirmenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна об’єднувати записи контактів.",
-        "Description[x-test]": "xxThis plugin allows you to merge contacts.xx",
         "Description[zh_CN]": "此插件允许您合并联系人。",
         "Description[zh_TW]": "這個外掛程式讓您合併聯絡人。",
         "EnabledByDefault": true,
@@ -79,7 +78,6 @@
         "Name[ta]": "தொடர்புகளை ஒருங்கிணைப்பது",
         "Name[tr]": "Kişileri Birleştir",
         "Name[uk]": "Об’єднання записів контактів",
-        "Name[x-test]": "xxMerge Contactsxx",
         "Name[zh_CN]": "合并联系人",
         "Name[zh_TW]": "合併聯絡人",
         "Version": "1.0"

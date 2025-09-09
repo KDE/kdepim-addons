@@ -36,7 +36,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att skapa en uppgift från ett brev.",
         "Description[tr]": "Bu eklenti, bir iletiden yapılacak ögesi oluşturmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна створювати записи завдань на основі повідомлення.",
-        "Description[x-test]": "xxThis plugin allows you to create a todo from a message.xx",
         "Description[zh_CN]": "此插件允许您从信件创建待办事项。",
         "Description[zh_TW]": "這個外掛程式讓您從信件建立代辦事項。",
         "EnabledByDefault": false,
@@ -75,9 +74,9 @@
         "Name[sr@latin]": "Napravi obavezu",
         "Name[sr]": "Направи обавезу",
         "Name[sv]": "Skapa uppgift",
+        "Name[ta]": "செய்யவேண்டியதை உருவாக்கு",
         "Name[tr]": "Yapılacak Ögesi Oluştur",
         "Name[uk]": "Створення запису завдання",
-        "Name[x-test]": "xxCreate Todoxx",
         "Name[zh_CN]": "创建待办事项",
         "Name[zh_TW]": "建立待辦事項",
         "Version": "2.0"

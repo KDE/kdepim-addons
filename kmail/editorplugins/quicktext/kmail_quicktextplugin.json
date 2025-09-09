@@ -33,7 +33,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att infoga specialtext som namn på bilagor, e-post, etc.",
         "Description[tr]": "Bu eklenti, özel bir metni ek adı, e-postası olarak eklemenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна вставити спеціальний текст, зокрема назву долучення, повідомлення електронної пошти тощо.",
-        "Description[x-test]": "xxThis plugin allows you to insert special text as attachment name, emails etc.xx",
         "Description[zh_CN]": "此插件可以让您插入特殊文本作为附件名称、电子邮件等。",
         "Description[zh_TW]": "這個外掛程式讓您輸入特殊字元到附件名稱或郵件等等當中。",
         "EnabledByDefault": true,
@@ -66,7 +65,6 @@
         "Name[sv]": "Textsnutt",
         "Name[tr]": "Parçacık",
         "Name[uk]": "Фрагмент",
-        "Name[x-test]": "xxSnippetxx",
         "Name[zh_CN]": "片段",
         "Name[zh_TW]": "文字片段",
         "Version": "1.0"

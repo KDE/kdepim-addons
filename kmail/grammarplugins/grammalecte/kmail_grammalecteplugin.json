@@ -33,7 +33,6 @@
         "Description[sv]": "Insticksprogrammet låter dig kontrollera grammatik enbart för franska.",
         "Description[tr]": "Bu eklenti, Fransızca gramer denetlemesi yapmanıza izin verir.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти граматику французькою мовою.",
-        "Description[x-test]": "xxThis plugin allows you to check grammar in french only.xx",
         "Description[zh_CN]": "此插件可以让您只检查法语语法。",
         "Description[zh_TW]": "這個外掛程式讓您檢查文法（僅法文）。",
         "EnabledByDefault": false,
@@ -71,7 +70,6 @@
         "Name[ta]": "ஃபிரெஞ்சு இலக்கண சரிபார்ப்பு",
         "Name[tr]": "Fransızca Gramer Denetleyicisi",
         "Name[uk]": "Перевірка граматики французькою",
-        "Name[x-test]": "xxFrench Grammar Checkerxx",
         "Name[zh_CN]": "法语语法检查器",
         "Name[zh_TW]": "法語文法檢查工具",
         "Version": "1.0"

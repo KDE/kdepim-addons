@@ -40,7 +40,6 @@
                 "Name[sv]": "Daniel Vrátil",
                 "Name[tr]": "Daniel Vrátil",
                 "Name[uk]": "Daniel Vrátil",
-                "Name[x-test]": "xxDaniel Vrátilxx",
                 "Name[zh_CN]": "Daniel Vrátil",
                 "Name[zh_TW]": "Daniel Vrátil"
             }
@@ -67,7 +66,6 @@
         "Description[sv]": "Visa händelser från KDE:s kalenderprogram och nätkonton",
         "Description[tr]": "KDE takvim uygulamalarından ve çevrimiçi hesaplardan etkinliklerinizi gösterin",
         "Description[uk]": "Показати ваші події з програм календаря KDE та облікових записів інтернету",
-        "Description[x-test]": "xxShow your events from KDE calendar applications and Online Accountsxx",
         "Description[zh_CN]": "在 KDE 日历应用程序和在线账户中显示您的活动",
         "Description[zh_TW]": "顯示來自各個 KDE 行事曆應用程式與線上帳號的活動",
         "Icon": "view-calendar",
@@ -101,7 +99,6 @@
         "Name[ta]": "நாள்காட்டி நிகழ்வுகள்",
         "Name[tr]": "Takvim Etkinlikleri",
         "Name[uk]": "Календарні події",
-        "Name[x-test]": "xxCalendar Eventsxx",
         "Name[zh_CN]": "日历事件",
         "Name[zh_TW]": "行事曆事件",
         "ServiceTypes": [

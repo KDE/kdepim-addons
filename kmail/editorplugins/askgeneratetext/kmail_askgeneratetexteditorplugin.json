@@ -23,7 +23,6 @@
         "Description[sv]": "Insticksprogrammet låter dig fråga en AI.",
         "Description[tr]": "Bu eklenti, yapay zekâya soru sormanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна надсилати запити до ШІ.",
-        "Description[x-test]": "xxThis plugin allows you to ask AI.xx",
         "Description[zh_CN]": "此插件允许您询问AI。",
         "Description[zh_TW]": "這個外掛程式讓您向 AI 進行詢問。",
         "EnabledByDefault": false,
@@ -50,7 +49,6 @@
         "Name[sv]": "Fråga AI",
         "Name[tr]": "Yapay Zekâya Sor",
         "Name[uk]": "Запитати у ШІ",
-        "Name[x-test]": "xxAsk IAxx",
         "Name[zh_CN]": "Ask IA",
         "Name[zh_TW]": "詢問 IA",
         "Version": "1.0"

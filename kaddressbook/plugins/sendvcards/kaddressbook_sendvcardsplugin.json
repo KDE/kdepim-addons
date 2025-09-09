@@ -36,7 +36,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att skicka visitkort från markerade kontakter.",
         "Description[tr]": "Bu eklenti, seçili kişilerden vCard yollamanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна надсилати ваші візитівки вибраним контактам.",
-        "Description[x-test]": "xxThis plugin allows you to send vCard from selected contacts.xx",
         "Description[zh_CN]": "此插件允许您发送选定联系人的 vCard 名片。",
         "Description[zh_TW]": "這個外掛程式讓您傳送已選聯絡人的 vCard。",
         "EnabledByDefault": true,
@@ -77,7 +76,6 @@
         "Name[sv]": "Skicka visitkort",
         "Name[tr]": "VCard Gönder",
         "Name[uk]": "Надсилання візитівок",
-        "Name[x-test]": "xxSend vCardsxx",
         "Name[zh_CN]": "发送 vCard 名片",
         "Name[zh_TW]": "傳送 vCard",
         "Version": "1.0"

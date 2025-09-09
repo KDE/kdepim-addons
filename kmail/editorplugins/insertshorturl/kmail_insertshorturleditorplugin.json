@@ -37,7 +37,6 @@
         "Description[ta]": "இச்செருகுநிரல் முகவரிகளை சுருக்க உதவும்.",
         "Description[tr]": "Bu eklenti, daha kısa bir URL üretmenize olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна створювати скорочені адреси.",
-        "Description[x-test]": "xxThis plugin allows you to generate a shorter URL.xx",
         "Description[zh_CN]": "此插件允许您生成较短的 URL。",
         "Description[zh_TW]": "這個外掛程式讓您產生一個短網址。",
         "EnabledByDefault": false,
@@ -79,7 +78,6 @@
         "Name[ta]": "குறும் முகவரியை நுழை",
         "Name[tr]": "Kısa URL Ekle",
         "Name[uk]": "Вставлення скороченої адреси",
-        "Name[x-test]": "xxInsert Short URLxx",
         "Name[zh_CN]": "插入短链接",
         "Name[zh_TW]": "插入短網址",
         "Version": "1.0"
