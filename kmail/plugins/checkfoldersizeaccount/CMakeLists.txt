@@ -22,6 +22,10 @@ target_sources(
 	checkfoldersizeaccountfilterproxymodel.cpp
         checkfoldersizeaccountcombobox.h 
 	checkfoldersizeaccountcombobox.cpp
+	checkfoldersizeaccountpluginopenfolderjob.cpp
+	checkfoldersizeaccountpluginopenfolderjob.h
+        checkfoldersizeaccounttreeview.h
+        checkfoldersizeaccounttreeview.cpp
 )
 
 kconfig_add_kcfg_files(kmail_checkfoldersizeaccount
