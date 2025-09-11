@@ -8,6 +8,7 @@
 #include "checkfoldersizeaccountcombobox.h"
 #include "checkfoldersizeaccountfilterproxymodel.h"
 #include "checkfoldersizeaccountplugindelegate.h"
+#include "checkfoldersizeaccounttreeview.h"
 #include <Akonadi/ChangeRecorder>
 #include <Akonadi/CollectionFilterProxyModel>
 #include <Akonadi/EntityTreeModel>
@@ -15,12 +16,11 @@
 #include <KLocalizedString>
 #include <KMime/Message>
 #include <QLineEdit>
-#include <QTreeView>
 #include <QVBoxLayout>
 using namespace Qt::Literals::StringLiterals;
 CheckFolderSizeAccountPluginWidget::CheckFolderSizeAccountPluginWidget(QWidget *parent)
     : QWidget{parent}
-    , mFolderView(new QTreeView(this))
+    , mFolderView(new CheckFolderSizeAccountTreeView(this))
     , mChangeRecorder(new Akonadi::ChangeRecorder(this))
     , mCollectionFilter(new CheckFolderSizeAccountFilterProxyModel(this))
 {
