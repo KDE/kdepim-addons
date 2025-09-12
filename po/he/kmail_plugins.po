@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-03 06:57+0000\n"
+"POT-Creation-Date: 2025-09-12 00:44+0000\n"
 "PO-Revision-Date: 2025-07-04 13:37+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -142,6 +142,11 @@ msgstr "גודל:"
 msgctxt "@action"
 msgid "&Show Folders Size…"
 msgstr "הצגת &גודלי התיקיות…"
+
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:37
+#, kde-format
+msgid "Unable to start KMail application."
+msgstr ""
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format
