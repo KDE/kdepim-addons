@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-12 00:44+0000\n"
-"PO-Revision-Date: 2025-07-03 14:07+0200\n"
+"PO-Revision-Date: 2025-09-12 12:18+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
@@ -145,7 +145,7 @@ msgstr "Mappengrootte &tonen…"
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:37
 #, kde-format
 msgid "Unable to start KMail application."
-msgstr ""
+msgstr "Opstarten van KMail toepassing lukt niet."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format
