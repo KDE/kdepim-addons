@@ -53,7 +53,7 @@ msgstr "Mostra les targetes de negoci"
 #: text_vcard.cpp:216
 #, kde-format
 msgid "Save Business Card As…"
-msgstr "Guarda les targetes de negoci com a…"
+msgstr "Anomena i guarda les targetes de negoci…"
 
 #: text_vcard.cpp:233
 #, kde-format
