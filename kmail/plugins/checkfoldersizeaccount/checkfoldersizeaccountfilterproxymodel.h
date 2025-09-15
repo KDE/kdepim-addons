@@ -18,7 +18,7 @@ public:
         MoreThan10M,
         Unknown,
     };
-    Q_ENUM(FolderSize);
+    Q_ENUM(FolderSize)
 
     explicit CheckFolderSizeAccountFilterProxyModel(QObject *parent = nullptr);
     ~CheckFolderSizeAccountFilterProxyModel() override;
