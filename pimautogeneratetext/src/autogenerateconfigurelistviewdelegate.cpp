@@ -44,3 +44,5 @@ void AutogenerateConfigureListViewDelegate::updateEditorGeometry(QWidget *editor
     Q_UNUSED(index);
     editor->setGeometry(option.rect);
 }
+
+#include "moc_autogenerateconfigurelistviewdelegate.cpp"

@@ -11,3 +11,5 @@ CheckFolderSizeAccountTreeView::CheckFolderSizeAccountTreeView(QWidget *parent)
 }
 
 CheckFolderSizeAccountTreeView::~CheckFolderSizeAccountTreeView() = default;
+
+#include "moc_checkfoldersizeaccounttreeview.cpp"
