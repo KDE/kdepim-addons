@@ -12,4 +12,7 @@ class CheckFolderSizeAccountTreeView : public QTreeView
 public:
     explicit CheckFolderSizeAccountTreeView(QWidget *parent = nullptr);
     ~CheckFolderSizeAccountTreeView() override;
+
+private:
+    void slotCustomContextMenuRequested(const QPoint &pos);
 };
