@@ -5,12 +5,14 @@
 */
 #include "checkfoldersizeaccounttreeview.h"
 #include "checkfoldersizeaccountpluginopenfolderjob.h"
+#include <Akonadi/EntityTreeModel>
 #include <KLocalizedString>
 #include <QMenu>
 using namespace Qt::Literals::StringLiterals;
 CheckFolderSizeAccountTreeView::CheckFolderSizeAccountTreeView(QWidget *parent)
     : QTreeView(parent)
 {
+    setContextMenuPolicy(Qt::CustomContextMenu);
     connect(this, &CheckFolderSizeAccountTreeView::customContextMenuRequested, this, &CheckFolderSizeAccountTreeView::slotCustomContextMenuRequested);
 }
 
@@ -22,8 +24,10 @@ void CheckFolderSizeAccountTreeView::slotCustomContextMenuRequested(const QPoint
     if (index.isValid()) {
         QMenu menu(this);
         menu.addAction(i18nc("@action", "Open Folder"), this, [this, index]() {
-            // TODO const QModelIndex modelIndex = model()->index(index.row(), AdminInviteModel::Identifier);
-            auto job = CheckFolderSizeAccountPluginOpenFolderJob(u""_s, this);
+            qDebug() << " ssssssssssss index " << index;
+            const QModelIndex modelIndex = model()->index(index.row(), Akonadi::EntityTreeModel::CollectionIdRole);
+            qDebug() << " modelIndex " << modelIndex;
+            auto job = CheckFolderSizeAccountPluginOpenFolderJob(modelIndex.data().toString(), this);
             job.start();
         });
 
