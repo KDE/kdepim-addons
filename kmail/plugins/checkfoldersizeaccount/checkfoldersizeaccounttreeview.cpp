@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "checkfoldersizeaccounttreeview.h"
+#include "checkfoldersizeaccountpluginopenfolderjob.h"
 #include <KLocalizedString>
 #include <QMenu>
 using namespace Qt::Literals::StringLiterals;
@@ -20,12 +21,12 @@ void CheckFolderSizeAccountTreeView::slotCustomContextMenuRequested(const QPoint
     const QModelIndex index = indexAt(pos);
     if (index.isValid()) {
         QMenu menu(this);
-        /*
-        menu.addAction(QIcon::fromTheme(u"list-remove"_s), i18nc("@action", "Remove"), this, [this, index]() {
-            const QModelIndex modelIndex = model()->index(index.row(), AdminInviteModel::Identifier);
-            removeClicked(modelIndex.data().toByteArray());
+        menu.addAction(i18nc("@action", "Open Folder"), this, [this, index]() {
+            // TODO const QModelIndex modelIndex = model()->index(index.row(), AdminInviteModel::Identifier);
+            auto job = CheckFolderSizeAccountPluginOpenFolderJob(u""_s, this);
+            job.start();
         });
-        */
+
         menu.exec(viewport()->mapToGlobal(pos));
     }
 }
