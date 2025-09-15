@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-12 00:44+0000\n"
-"PO-Revision-Date: 2025-01-26 17:39+0530\n"
+"PO-Revision-Date: 2025-09-14 14:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
@@ -97,25 +97,25 @@ msgstr ""
 #, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
-msgstr ""
+msgstr "அனைத்தும்"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr ""
+msgstr "10 கி.பை.-க்கு மேல்"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr ""
+msgstr "1 மெ.பை.-க்கு மேல்"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr ""
+msgstr "10 மெ.பை.-க்கு மேல்"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
@@ -128,13 +128,13 @@ msgstr "அடைவின் அளவை சரிபார்ப்பது"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr ""
+msgstr "பெரிய அடைவுகளின் நிறத்தை மாற்றிக் காட்டு"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
-msgstr ""
+msgstr "அளவு:"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
 #, kde-format
@@ -145,13 +145,13 @@ msgstr "அடைவுகளின் அளவுகளை காட்டு�
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:37
 #, kde-format
 msgid "Unable to start KMail application."
-msgstr ""
+msgstr "கேமெயில் தனைத் துவக்க முடியவில்லை."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "தேடு…"
 
 #: common/antispamwizard.cpp:90
 #, kde-format
@@ -334,7 +334,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
-msgstr ""
+msgstr "ஸ்பேம் ஆஞ்சல்களைக் படித்ததாகக் குறி"
 
 #: common/antispamwizard.cpp:1059
 #, kde-format
@@ -345,7 +345,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
-msgstr ""
+msgstr "உறுதியாக ஸ்பேமாக உள்ள அஞ்சல்களை இங்கு நகர்த்து:"
 
 #: common/antispamwizard.cpp:1064
 #, kde-format
@@ -358,7 +358,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
-msgstr ""
+msgstr "ஸ்பேமாக இருக்கக்கூடிய அஞ்சல்களை இங்கு நகர்த்து:"
 
 #: common/antispamwizard.cpp:1079
 #, kde-format
