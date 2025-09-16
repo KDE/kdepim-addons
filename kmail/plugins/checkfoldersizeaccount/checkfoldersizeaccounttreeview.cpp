@@ -24,10 +24,9 @@ void CheckFolderSizeAccountTreeView::slotCustomContextMenuRequested(const QPoint
     if (index.isValid()) {
         QMenu menu(this);
         menu.addAction(i18nc("@action", "Open Folder"), this, [this, index]() {
-            qDebug() << " ssssssssssss index " << index;
-            const QModelIndex modelIndex = model()->index(index.row(), Akonadi::EntityTreeModel::CollectionIdRole);
-            qDebug() << " modelIndex " << modelIndex;
-            auto job = CheckFolderSizeAccountPluginOpenFolderJob(modelIndex.data().toString(), this);
+            const auto collectionId = index.data(Akonadi::EntityTreeModel::CollectionIdRole).toLongLong();
+            // qDebug() << "collectionId " << collectionId;
+            auto job = CheckFolderSizeAccountPluginOpenFolderJob(QString::number(collectionId), this);
             job.start();
         });
 
