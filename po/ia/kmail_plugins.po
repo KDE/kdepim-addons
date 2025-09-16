@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-12 00:44+0000\n"
+"POT-Creation-Date: 2025-09-16 00:42+0000\n"
 "PO-Revision-Date: 2025-01-17 12:20+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -152,6 +152,12 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
+msgstr ""
+
+#: checkfoldersizeaccount/checkfoldersizeaccounttreeview.cpp:26
+#, kde-format
+msgctxt "@action"
+msgid "Open Folder"
 msgstr ""
 
 #: common/antispamwizard.cpp:90

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-12 00:44+0000\n"
+"POT-Creation-Date: 2025-09-16 00:42+0000\n"
 "PO-Revision-Date: 2017-02-04 11:09+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -151,6 +151,12 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
+msgstr ""
+
+#: checkfoldersizeaccount/checkfoldersizeaccounttreeview.cpp:26
+#, kde-format
+msgctxt "@action"
+msgid "Open Folder"
 msgstr ""
 
 #: common/antispamwizard.cpp:90

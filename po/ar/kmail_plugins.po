@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-12 00:44+0000\n"
-"PO-Revision-Date: 2025-07-14 20:21+0400\n"
+"POT-Creation-Date: 2025-09-16 00:42+0000\n"
+"PO-Revision-Date: 2025-09-15 12:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -147,13 +147,19 @@ msgstr "اعرض حجم المجلّدات…"
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:37
 #, kde-format
 msgid "Unable to start KMail application."
-msgstr ""
+msgstr "تعذّر بدء تطبيق «بريدك»."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "ابحث…"
+
+#: checkfoldersizeaccount/checkfoldersizeaccounttreeview.cpp:26
+#, kde-format
+msgctxt "@action"
+msgid "Open Folder"
+msgstr ""
 
 #: common/antispamwizard.cpp:90
 #, kde-format
