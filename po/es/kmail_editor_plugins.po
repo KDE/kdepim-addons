@@ -265,7 +265,7 @@ msgstr "Compartir texto del correo…"
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
 msgid "Zoom: %1%"
-msgstr "Ampliación: %1%"
+msgstr "Ampliación: %1 %"
 
 #: zoomtext/zoomtextplugineditorinterface.cpp:27
 #, kde-format
