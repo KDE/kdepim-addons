@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-16 00:42+0000\n"
-"PO-Revision-Date: 2025-09-12 16:35+0300\n"
+"PO-Revision-Date: 2025-09-16 10:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -160,7 +160,7 @@ msgstr "Шукати…"
 #, kde-format
 msgctxt "@action"
 msgid "Open Folder"
-msgstr ""
+msgstr "Відкрити теку"
 
 #: common/antispamwizard.cpp:90
 #, kde-format

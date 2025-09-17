@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-16 00:42+0000\n"
-"PO-Revision-Date: 2025-09-12 05:24+0200\n"
+"PO-Revision-Date: 2025-09-16 03:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -158,7 +158,7 @@ msgstr "ძებნა…"
 #, kde-format
 msgctxt "@action"
 msgid "Open Folder"
-msgstr ""
+msgstr "საქაღალდის გახსნა"
 
 #: common/antispamwizard.cpp:90
 #, kde-format
