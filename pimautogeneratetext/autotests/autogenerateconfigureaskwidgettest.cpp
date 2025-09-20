@@ -12,7 +12,6 @@
 #include <QPlainTextEdit>
 #include <QSplitter>
 #include <QTest>
-#include <QVBoxLayout>
 
 QTEST_MAIN(AutogenerateConfigureAskWidgetTest)
 

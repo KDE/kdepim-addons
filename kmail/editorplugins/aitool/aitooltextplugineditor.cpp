@@ -7,7 +7,6 @@
 #include "aitooltextplugineditor.h"
 #include "aitooltextplugineditorinterface.h"
 #include <KPluginFactory>
-#include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(AIToolTextPluginEditor, "kmail_aitooleditorplugin.json")
 

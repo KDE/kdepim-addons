@@ -10,7 +10,6 @@
 #include <KSharedConfig>
 #include <MessageViewer/ScamDetectionWhiteListSettingsManager>
 #include <QHeaderView>
-#include <QTreeWidget>
 #include <QVBoxLayout>
 
 ScamConfigureSettingsWidget::ScamConfigureSettingsWidget(QWidget *parent)

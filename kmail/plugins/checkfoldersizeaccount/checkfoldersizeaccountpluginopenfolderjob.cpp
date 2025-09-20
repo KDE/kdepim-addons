@@ -11,7 +11,6 @@
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
-#include <QDBusReply>
 
 CheckFolderSizeAccountPluginOpenFolderJob::CheckFolderSizeAccountPluginOpenFolderJob(const QString &identifier, QObject *parent)
     : KJob{parent}

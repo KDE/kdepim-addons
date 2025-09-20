@@ -10,7 +10,6 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
-#include <QIcon>
 #include <QLayout>
 
 using namespace MessageViewer;

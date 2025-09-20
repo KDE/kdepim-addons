@@ -7,7 +7,6 @@
 #include "autogenerateanswerseditor.h"
 #include "autogenerateanswerseditorinterface.h"
 #include <KPluginFactory>
-#include <QPointer>
 #include <TextAutoGenerateText/TextAutoGenerateManager>
 
 K_PLUGIN_CLASS_WITH_JSON(AutoGenerateAnswersEditor, "kmail_autogenerateanswerseditorplugin.json")

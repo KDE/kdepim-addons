@@ -6,8 +6,6 @@
 #pragma once
 
 #include "adblockfilter.h"
-#include <KConfigGroup>
-#include <QAbstractTableModel>
 
 class AdblockFilterListsModel : public QAbstractListModel
 {

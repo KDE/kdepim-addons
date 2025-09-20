@@ -8,7 +8,6 @@
 #include "../emaillineedit.h"
 #include <QCheckBox>
 #include <QVBoxLayout>
-#include <QVariant>
 
 EmailLineEditWidget::EmailLineEditWidget(QWidget *parent)
     : QWidget(parent)

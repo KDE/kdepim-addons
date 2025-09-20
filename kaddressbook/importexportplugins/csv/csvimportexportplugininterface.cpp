@@ -17,7 +17,6 @@
 #include <QFileInfo>
 #include <QPointer>
 #include <QTemporaryFile>
-#include <QTextCodec>
 #include <QTextStream>
 
 #include <KAddressBookImportExport/ContactSelectionDialog>

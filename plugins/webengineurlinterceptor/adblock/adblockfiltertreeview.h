@@ -7,7 +7,6 @@
 
 #include "adblockplugin_private_export.h"
 
-#include <KConfigGroup>
 #include <QTreeView>
 
 class AdblockFilterListsModel;

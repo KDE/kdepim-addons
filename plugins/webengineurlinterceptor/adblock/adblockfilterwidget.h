@@ -7,7 +7,6 @@
 #pragma once
 
 #include "adblockplugin_private_export.h"
-#include <KConfigGroup>
 #include <QWidget>
 
 class AdblockFilterTreeView;

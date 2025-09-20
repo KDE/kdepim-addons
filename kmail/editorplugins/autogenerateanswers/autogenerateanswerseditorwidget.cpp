@@ -6,7 +6,6 @@
 #include "autogenerateanswerseditorwidget.h"
 #include "autogenerateanswerseditortextedit.h"
 
-#include <QPlainTextEdit>
 #include <QVBoxLayout>
 
 using namespace Qt::Literals::StringLiterals;

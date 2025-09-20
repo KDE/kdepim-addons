@@ -7,7 +7,6 @@
 #pragma once
 
 #include <QDialog>
-#include <QObject>
 class CheckFolderSizeAccountPluginWidget;
 class CheckFolderSizeAccountPluginDialog : public QDialog
 {
