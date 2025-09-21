@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2024-07-31 11:58+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -22,30 +22,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: csv/csvimportexportplugininterface.cpp:36
+#: csv/csvimportexportplugininterface.cpp:35
 #, kde-format
 msgid "Export CSV file…"
 msgstr "Exporta a un fitxer CSV…"
 
-#: csv/csvimportexportplugininterface.cpp:37
+#: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Export contacts to a file in comma separated value format."
 msgstr ""
 "Exporta els contactes a un fitxer amb format de valors separats per comes."
 
-#: csv/csvimportexportplugininterface.cpp:42
+#: csv/csvimportexportplugininterface.cpp:41
 #, kde-format
 msgid "Import CSV file…"
 msgstr "Importa un fitxer CSV…"
 
-#: csv/csvimportexportplugininterface.cpp:43
+#: csv/csvimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Import contacts from a file in comma separated value format."
 msgstr ""
 "Importa els contactes des d'un fitxer amb format de valors separats per "
 "comes."
 
-#: csv/csvimportexportplugininterface.cpp:148
+#: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
 #: vcards/vcardimportexportplugininterface.cpp:375
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Which contact do you want to export?"
 msgstr "Quins contactes voleu exportar?"
 
-#: csv/csvimportexportplugininterface.cpp:158
+#: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
 #: vcards/vcardimportexportplugininterface.cpp:387
@@ -61,14 +61,14 @@ msgstr "Quins contactes voleu exportar?"
 msgid "You have not selected any contacts to export."
 msgstr "No heu seleccionat cap contacte a exportar."
 
-#: csv/csvimportexportplugininterface.cpp:187
+#: csv/csvimportexportplugininterface.cpp:186
 #: gmx/gmximportexportplugininterface.cpp:124
 #: ldif/ldifimportexportplugininterface.cpp:154
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>No es pot obrir el fitxer <b>%1</b></qt>"
 
-#: csv/csvimportexportplugininterface.cpp:199
+#: csv/csvimportexportplugininterface.cpp:198
 #: gmx/gmximportexportplugininterface.cpp:139
 #: ldif/ldifimportexportplugininterface.cpp:184
 #, kde-format

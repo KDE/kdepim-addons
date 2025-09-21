@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2019-12-18 18:42+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -18,29 +18,29 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: csv/csvimportexportplugininterface.cpp:36
+#: csv/csvimportexportplugininterface.cpp:35
 #, fuzzy, kde-format
 #| msgid "Export CSV file..."
 msgid "Export CSV file…"
 msgstr "Ekspordi CSV-fail..."
 
-#: csv/csvimportexportplugininterface.cpp:37
+#: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Export contacts to a file in comma separated value format."
 msgstr "Kontaktide eksport faili komadega eraldatud väärtuste vormingus."
 
-#: csv/csvimportexportplugininterface.cpp:42
+#: csv/csvimportexportplugininterface.cpp:41
 #, fuzzy, kde-format
 #| msgid "Import CSV file..."
 msgid "Import CSV file…"
 msgstr "Impordi CSV-fail..."
 
-#: csv/csvimportexportplugininterface.cpp:43
+#: csv/csvimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Import contacts from a file in comma separated value format."
 msgstr "Kontaktide import failist komadega eraldatud väärtuste vormingus."
 
-#: csv/csvimportexportplugininterface.cpp:148
+#: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
 #: vcards/vcardimportexportplugininterface.cpp:375
@@ -48,7 +48,7 @@ msgstr "Kontaktide import failist komadega eraldatud väärtuste vormingus."
 msgid "Which contact do you want to export?"
 msgstr "Millised kontaktid soovid eksportida?"
 
-#: csv/csvimportexportplugininterface.cpp:158
+#: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
 #: vcards/vcardimportexportplugininterface.cpp:387
@@ -56,14 +56,14 @@ msgstr "Millised kontaktid soovid eksportida?"
 msgid "You have not selected any contacts to export."
 msgstr "Sa pole valinud eksportimiseks ühtegi kontakti."
 
-#: csv/csvimportexportplugininterface.cpp:187
+#: csv/csvimportexportplugininterface.cpp:186
 #: gmx/gmximportexportplugininterface.cpp:124
 #: ldif/ldifimportexportplugininterface.cpp:154
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>Faili <b>%1</b> avamine nurjus</qt>"
 
-#: csv/csvimportexportplugininterface.cpp:199
+#: csv/csvimportexportplugininterface.cpp:198
 #: gmx/gmximportexportplugininterface.cpp:139
 #: ldif/ldifimportexportplugininterface.cpp:184
 #, kde-format

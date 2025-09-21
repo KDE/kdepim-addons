@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2007-09-07 10:35+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -17,29 +17,29 @@ msgstr ""
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: csv/csvimportexportplugininterface.cpp:36
+#: csv/csvimportexportplugininterface.cpp:35
 #, fuzzy, kde-format
 #| msgid "Export CSV List..."
 msgid "Export CSV file…"
 msgstr "CSV सूची निर्यात गर्नुहोस्..."
 
-#: csv/csvimportexportplugininterface.cpp:37
+#: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Export contacts to a file in comma separated value format."
 msgstr ""
 
-#: csv/csvimportexportplugininterface.cpp:42
+#: csv/csvimportexportplugininterface.cpp:41
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
 msgid "Import CSV file…"
 msgstr "CSV सूची आयात गर्नुहोस्..."
 
-#: csv/csvimportexportplugininterface.cpp:43
+#: csv/csvimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Import contacts from a file in comma separated value format."
 msgstr ""
 
-#: csv/csvimportexportplugininterface.cpp:148
+#: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
 #: vcards/vcardimportexportplugininterface.cpp:375
@@ -48,7 +48,7 @@ msgstr ""
 msgid "Which contact do you want to export?"
 msgstr "तपाईँ कुन सम्पर्क निर्यात गर्न चाहनुहुन्छ ?"
 
-#: csv/csvimportexportplugininterface.cpp:158
+#: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
 #: vcards/vcardimportexportplugininterface.cpp:387
@@ -60,14 +60,14 @@ msgid "You have not selected any contacts to export."
 msgstr ""
 "भिकार्ड ढाँचाको प्रणाली क्लिपबोर्डमा हालै चयन गरिएका सम्पर्क(हरू) प्रतिलिपि गर्नुहोस् ।"
 
-#: csv/csvimportexportplugininterface.cpp:187
+#: csv/csvimportexportplugininterface.cpp:186
 #: gmx/gmximportexportplugininterface.cpp:124
 #: ldif/ldifimportexportplugininterface.cpp:154
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>फाइल <b>%1</b> खोल्न अक्षम</qt>"
 
-#: csv/csvimportexportplugininterface.cpp:199
+#: csv/csvimportexportplugininterface.cpp:198
 #: gmx/gmximportexportplugininterface.cpp:139
 #: ldif/ldifimportexportplugininterface.cpp:184
 #, kde-format

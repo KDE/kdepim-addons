@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2014-01-31 19:16+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -19,29 +19,29 @@ msgstr ""
 "X-Generator: Launchpad (build 16820)\n"
 "X-Launchpad-Export-Date: 2013-11-04 05:58+0000\n"
 
-#: csv/csvimportexportplugininterface.cpp:36
+#: csv/csvimportexportplugininterface.cpp:35
 #, fuzzy, kde-format
 #| msgid "Export CSV file..."
 msgid "Export CSV file…"
 msgstr "Izvezi CSV datoteku..."
 
-#: csv/csvimportexportplugininterface.cpp:37
+#: csv/csvimportexportplugininterface.cpp:36
 #, kde-format
 msgid "Export contacts to a file in comma separated value format."
 msgstr "Izvezite kontakte u datoteku u formatu zarezom odvojenih vrijednosti."
 
-#: csv/csvimportexportplugininterface.cpp:42
+#: csv/csvimportexportplugininterface.cpp:41
 #, fuzzy, kde-format
 #| msgid "Import CSV file..."
 msgid "Import CSV file…"
 msgstr "Uvezi CSV datoteku..."
 
-#: csv/csvimportexportplugininterface.cpp:43
+#: csv/csvimportexportplugininterface.cpp:42
 #, kde-format
 msgid "Import contacts from a file in comma separated value format."
 msgstr "Uvezite kontakte iz datoteke u formatu zarezom odvojenih vrijednosti."
 
-#: csv/csvimportexportplugininterface.cpp:148
+#: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
 #: vcards/vcardimportexportplugininterface.cpp:375
@@ -49,7 +49,7 @@ msgstr "Uvezite kontakte iz datoteke u formatu zarezom odvojenih vrijednosti."
 msgid "Which contact do you want to export?"
 msgstr "Koji kontakt želite da izvezete?"
 
-#: csv/csvimportexportplugininterface.cpp:158
+#: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
 #: vcards/vcardimportexportplugininterface.cpp:387
@@ -57,14 +57,14 @@ msgstr "Koji kontakt želite da izvezete?"
 msgid "You have not selected any contacts to export."
 msgstr "Niste označili nijedan kontakt za izvoz."
 
-#: csv/csvimportexportplugininterface.cpp:187
+#: csv/csvimportexportplugininterface.cpp:186
 #: gmx/gmximportexportplugininterface.cpp:124
 #: ldif/ldifimportexportplugininterface.cpp:154
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>Nije moguće otvoriti datoteku <b>%1</b></qt>"
 
-#: csv/csvimportexportplugininterface.cpp:199
+#: csv/csvimportexportplugininterface.cpp:198
 #: gmx/gmximportexportplugininterface.cpp:139
 #: ldif/ldifimportexportplugininterface.cpp:184
 #, kde-format

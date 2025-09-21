@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-16 00:42+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2025-09-17 08:44+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -149,7 +149,7 @@ msgctxt "@action"
 msgid "&Show Folders Size…"
 msgstr "Afficher la taille de&s dossiers…"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:37
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:36
 #, kde-format
 msgid "Unable to start KMail application."
 msgstr "Impossible de démarrer l'application KMail."
