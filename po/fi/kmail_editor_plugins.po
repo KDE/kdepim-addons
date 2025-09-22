@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:43+0000\n"
-"PO-Revision-Date: 2025-07-07 20:59+0300\n"
+"PO-Revision-Date: 2025-09-19 18:20+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:25
 #, kde-format
@@ -42,12 +42,10 @@ msgid "Autocorrect Selected Text"
 msgstr "Korjaa valittu teksti automaattisesti"
 
 #: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Autogenerate Answer"
+#, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
-msgstr "Generoi pikavastaus automaattisesti"
+msgstr "Tuota vastaus automaattisesti"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
 #, kde-format
@@ -74,30 +72,26 @@ msgid "Quick Answer"
 msgstr "Pikavastaus"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure quick text"
+#, kde-format
 msgctxt "@action"
 msgid "Configure AI"
-msgstr "Pikatekstiasetukset"
+msgstr "Tekoälyasetukset"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:120
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "Sattui virhe: ”%1”"
+msgstr "Tapahtui virhe: %1"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:120
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Virhe"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
-#, fuzzy, kde-format
-#| msgid "Insert"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Text"
-msgstr "Lisää"
+msgstr "Lisää tekstiä"
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format
