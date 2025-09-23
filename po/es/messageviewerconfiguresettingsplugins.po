@@ -1,14 +1,15 @@
-# Copyright (C) 2023 This file is copyright:
+# Spanish translations for messageviewerconfiguresettingsplugins.po package.
+# Copyright (C) 2018-2025 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# Javier Vinal <fjvinal@gmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2018, 2019 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdepim-addons\n"
+"Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-08-01 04:42+0200\n"
+"PO-Revision-Date: 2025-09-23 01:20+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -303,8 +304,8 @@ msgstr "Nombre del servidor:"
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
-"<qt><a href=\"whatsthis1\">Información sobre el formato de los argumentos..."
-"</a></qt>"
+"<qt><a href=\"whatsthis1\">Información sobre el formato de los argumentos…</"
+"a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
 #, kde-format
@@ -335,7 +336,7 @@ msgstr "Configurar el complemento «Abrir URL con»"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "Añadir regla..."
+msgstr "Añadir regla…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
@@ -347,7 +348,7 @@ msgstr "Eliminar regla"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "Modificar regla..."
+msgstr "Modificar regla…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
@@ -387,12 +388,12 @@ msgstr "Eliminar regla"
 #: openurlwith/openurlwithconfigurewidget.cpp:224
 #, kde-format
 msgid "Add Rule…"
-msgstr "Añadir regla..."
+msgstr "Añadir regla…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:226
 #, kde-format
 msgid "Edit Rule…"
-msgstr "Editar regla..."
+msgstr "Editar regla…"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
@@ -410,7 +411,7 @@ msgstr "Configurar las propiedades contra estafas"
 #: scamsettings/scamconfiguresettingstreeview.cpp:32
 #, kde-format
 msgid "Add…"
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: scamsettings/scamconfigureutils.cpp:15
 #, kde-format
@@ -438,83 +439,3 @@ msgstr "Dominio"
 msgctxt "@title:column"
 msgid "Check"
 msgstr "Comprobar"
-
-#~ msgid "Add..."
-#~ msgstr "Añadir..."
-
-#~ msgid "Command:"
-#~ msgstr "Orden:"
-
-#~| msgid "Save Folder Settings"
-#~ msgid "Modify Settings"
-#~ msgstr "Modificar preferencias"
-
-#, fuzzy
-#~| msgctxt "@title:window"
-#~| msgid "Configure Gravatar"
-#~ msgctxt "@title:window"
-#~ msgid "Check and update Gravatar"
-#~ msgstr "Configurar Gravatar"
-
-#~ msgid "Must be signed"
-#~ msgstr "Se debe firmar"
-
-#~ msgid "Can be signed"
-#~ msgstr "Se puede firmar"
-
-#~ msgid "Ignore if not signed"
-#~ msgstr "Ignorar si no está firmado"
-
-#~ msgid "Active"
-#~ msgstr "Activa"
-
-#~ msgid "List-ID"
-#~ msgstr "ID de la lista"
-
-#~ msgid "From"
-#~ msgstr "De"
-
-#~ msgid "SDID"
-#~ msgstr "SDID"
-
-#~ msgid "Rule type"
-#~ msgstr "Tipo de regla"
-
-#~ msgid "Delete All"
-#~ msgstr "Borrar todo"
-
-#~ msgid "Do you want to all rules?"
-#~ msgstr "¿Desea borrar todas las reglas?"
-
-#~ msgid "Delete Rules"
-#~ msgstr "Borrar reglas"
-
-#~ msgid "Import..."
-#~ msgstr "Importar..."
-
-#~ msgid "Export..."
-#~ msgstr "Exportar..."
-
-#~ msgid "Export Rules"
-#~ msgstr "Exportar reglas"
-
-#~ msgid "Import Rules"
-#~ msgstr "Importar reglas"
-
-#~ msgid "Domain:"
-#~ msgstr "Dominio:"
-
-#~ msgid "List-Id:"
-#~ msgstr "Identificador de la lista:"
-
-#~ msgid "From:"
-#~ msgstr "De:"
-
-#~ msgid "Use '*' for specify all email from domain"
-#~ msgstr "Usar «*» para indicar todos los correos del dominio"
-
-#~ msgid "SDID:"
-#~ msgstr "SDID:"
-
-#~ msgid "Rule:"
-#~ msgstr "Regla:"

@@ -1,15 +1,16 @@
-# translation of kmail_text_vcard_plugin.po to Spanish
-# Copyright (C) 2004, 2007 Free Software Foundation, Inc.
+# Spanish translations for messageviewer_text_vcard_plugin.po package.
+# Copyright (C) 2004-2025 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
 #
-# Juan Manuel Garcia Molina <juanma@superiodico.net>, 2004, 2007.
-# SPDX-FileCopyrightText: 2009, 2020, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Javier Vinal <fjvinal@gmail.com>, 2010, 2012, 2014, 2015.
+# SPDX-FileCopyrightText: 2004, 2007 Juan Manuel Garcia Molina <juanma@superiodico.net>
+# SPDX-FileCopyrightText: 2009, 2020, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010, 2012, 2014, 2015 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kmail_text_vcard_plugin\n"
+"Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-08-01 04:42+0200\n"
+"PO-Revision-Date: 2025-09-23 01:19+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -49,7 +50,7 @@ msgstr "Ver tarjeta de negocios"
 #: text_vcard.cpp:216
 #, kde-format
 msgid "Save Business Card As…"
-msgstr "Guardar tarjeta de negocios como..."
+msgstr "Guardar tarjeta de negocios como…"
 
 #: text_vcard.cpp:233
 #, kde-format

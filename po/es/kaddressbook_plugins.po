@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for kaddressbook_plugins.po package.
+# Copyright (C) 2015-2025 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
 #
-# Javier Vinal <fjvinal@gmail.com>, 2015, 2016.
-# SPDX-FileCopyrightText: 2019, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2015, 2016 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-14 00:39+0000\n"
-"PO-Revision-Date: 2024-07-05 02:09+0200\n"
+"PO-Revision-Date: 2025-09-23 01:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -21,7 +22,7 @@ msgstr ""
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
 msgid "Check Gravatar…"
-msgstr "Comprobar Gravatar..."
+msgstr "Comprobar Gravatar…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:59
@@ -87,7 +88,7 @@ msgstr "Gravatar no encontrado."
 #: mergecontacts/mergecontactsplugininterface.cpp:25
 #, kde-format
 msgid "Merge Contacts…"
-msgstr "Fusionar contactos..."
+msgstr "Fusionar contactos…"
 
 #: mergelib/manualmerge/mergecontactsdialog.cpp:39
 #, kde-format
@@ -152,7 +153,7 @@ msgstr "Buscar y seleccionar contactos duplicados para fusionarlos"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result…"
-msgstr "Buscar en el resultado..."
+msgstr "Buscar en el resultado…"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
 #, kde-format
@@ -272,7 +273,7 @@ msgstr "(no definido)"
 #: searchduplicates/searchduplicatesplugininterface.cpp:24
 #, kde-format
 msgid "Search Duplicate Contacts…"
-msgstr "Buscar contactos duplicados..."
+msgstr "Buscar contactos duplicados…"
 
 #: sendmail/mailsenderjob.cpp:127
 #, kde-format
@@ -282,7 +283,7 @@ msgstr "No se han encontrado correos en los contactos seleccionados."
 #: sendmail/sendmailplugininterface.cpp:26
 #, kde-format
 msgid "Send an email…"
-msgstr "Enviar un correo..."
+msgstr "Enviar un correo…"
 
 #: sendvcards/sendvcardsjob.cpp:96
 #, kde-format
@@ -297,10 +298,4 @@ msgstr "No se puede crear el archivo temporal «%1»"
 #: sendvcards/sendvcardsplugininterface.cpp:34
 #, kde-format
 msgid "Send vCards…"
-msgstr "Enviar vCards..."
-
-#~ msgid "Use Libravatar"
-#~ msgstr "Usar Libravatar"
-
-#~ msgid "Fallback to Gravatar"
-#~ msgstr "Predeterminado a Gravatar"
+msgstr "Enviar vCards…"

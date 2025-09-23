@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for messageviewer_semantic_plugin.po package.
+# Copyright (C) 2017-2025 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
 #
-# Javier Vinal <fjvinal²gmail.com>, 2017, 2018, 2019.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2017, 2018, 2019 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: messageviewer_semantic_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 12:06+0200\n"
+"PO-Revision-Date: 2025-09-23 01:18+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -136,7 +137,7 @@ msgstr "Añadir a KDE Itinerary"
 
 #: templates/itinerary.html:78
 msgid "Send to Device…"
-msgstr "Enviar a dispositivo..."
+msgstr "Enviar a dispositivo…"
 
 #: templates/location.html:4
 msgid "Show location on map"
@@ -159,51 +160,3 @@ msgstr "Clase: %1"
 #, kde-format
 msgid "Coach: %1"
 msgstr "Coche: %1"
-
-#~ msgid "Show '%1' On Map"
-#~ msgstr "Mostrar «%1» en el mapa"
-
-#~ msgid "Flight %1 from %2 to %3"
-#~ msgstr "Vuelo %1 desde %2 a %3"
-
-#~ msgid "Boarding for flight %1"
-#~ msgstr "Embarque para vuelo %1"
-
-#~ msgid "Boarding for flight %1 at gate %2"
-#~ msgstr "Embarque para vuelo %1 en puerta %2"
-
-#~ msgid "Boarding time: %1"
-#~ msgstr "Hora de embarque: %1"
-
-#~ msgid "Departure gate: %1"
-#~ msgstr "Puerta de salida: %1"
-
-#~ msgid "Boarding group: %1"
-#~ msgstr "Grupo de embarque: %1"
-
-#~ msgid "Booking reference: %1"
-#~ msgstr "Referencia de embarque: %1"
-
-#~ msgid "Departure platform: %1"
-#~ msgstr "Andén de salida: %1"
-
-#~ msgid "Arrival platform: %1"
-#~ msgstr "Andén de llegada: %1"
-
-#~ msgid "Train %1 from %2 to %3"
-#~ msgstr "Tren %1 desde %2 a %3"
-
-#~ msgid "Bus %1 from %2 to %3"
-#~ msgstr "Bus %1 desde %2 a %3"
-
-#~ msgid "%1, %2 %3, %4"
-#~ msgstr "%1, %2 %3, %4"
-
-#~ msgid ""
-#~ "Check-in: %1\n"
-#~ "Check-out: %2\n"
-#~ "Booking reference: %3"
-#~ msgstr ""
-#~ "Registrarse: %1\n"
-#~ "Salida: %2\n"
-#~ "Referencia de reserva: %3"

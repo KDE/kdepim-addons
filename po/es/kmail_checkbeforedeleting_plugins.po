@@ -1,15 +1,15 @@
 # Spanish translations for kmail_checkbeforedeleting_plugins.po package.
-# Copyright (C) 2021 This file is copyright:
+# Copyright (C) 2021-2025 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-#
 # Automatically generated, 2021.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_checkbeforedeleting_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:42+0000\n"
-"PO-Revision-Date: 2024-08-01 04:40+0200\n"
+"PO-Revision-Date: 2025-09-23 01:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -126,7 +126,7 @@ msgstr "El mensaje con el asunto «%1» es %2"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
-msgstr "Añadir regla..."
+msgstr "Añadir regla…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:26
 #, kde-format
@@ -138,7 +138,7 @@ msgstr "Eliminar regla"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
-msgstr "Modificar regla..."
+msgstr "Modificar regla…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:44
 #, kde-format
@@ -153,12 +153,12 @@ msgstr "Patrón"
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:122
 #, kde-format
 msgid "Add Rule…"
-msgstr "Añadir regla..."
+msgstr "Añadir regla…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:124
 #, kde-format
 msgid "Edit Rule…"
-msgstr "Editar regla..."
+msgstr "Editar regla…"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:129
 #, kde-format
@@ -190,22 +190,3 @@ msgstr "Ya existe una regla similar."
 msgctxt "@title:window"
 msgid "Create Rule"
 msgstr "Crear regla"
-
-#~ msgid "External Script"
-#~ msgstr "Guion externo"
-
-#~| msgid "Add Rule..."
-#~ msgid "Reuse..."
-#~ msgstr "Volver a usar..."
-
-#~ msgid "Confirm Delete Mail"
-#~ msgstr "Confirmar el borrado del correo"
-
-#~ msgid "Name"
-#~ msgstr "Nombre"
-
-#~ msgid "Open"
-#~ msgstr "Abrir"
-
-#~ msgid "Remove filter"
-#~ msgstr "Eliminar filtro"

@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for webengineurlinterceptor.po package.
+# Copyright (C) 2016-2025 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
 #
-# Javier Vinal <fjvinal@gmail.com>, 2016, 2017.
-# SPDX-FileCopyrightText: 2019, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2016, 2017 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-07-05 02:11+0200\n"
+"PO-Revision-Date: 2025-09-23 01:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -39,12 +40,12 @@ msgstr "URL"
 #: adblock/adblockfiltertreeview.cpp:64
 #, kde-format
 msgid "Add…"
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: adblock/adblockfiltertreeview.cpp:71
 #, kde-format
 msgid "Modify…"
-msgstr "Modificar..."
+msgstr "Modificar…"
 
 #: adblock/adblockfiltertreeview.cpp:77
 #, kde-format
@@ -76,7 +77,7 @@ msgstr "Eliminar lista"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistdialog.cpp:16
 #, kde-format
@@ -111,256 +112,3 @@ msgstr "Añadir lista de Adblock"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "Bloqueo publicitario activado"
-
-#~ msgid "Add..."
-#~ msgstr "Añadir..."
-
-#~ msgid "Search..."
-#~ msgstr "Buscar..."
-
-#~ msgid "Remove"
-#~ msgstr "Eliminar"
-
-#~ msgctxt "@title:window"
-#~ msgid "Remove"
-#~ msgstr "Eliminar"
-
-#~ msgid "Open Blockable Items..."
-#~ msgstr "Abrir elementos bloqueables..."
-
-#~ msgid "Block Image"
-#~ msgstr "Bloquear imagen"
-
-#~ msgid "Cannot load subscription!"
-#~ msgstr "¡No se puede cargar la suscripción!"
-
-#~ msgid "Custom Rules"
-#~ msgstr "Reglas personalizadas"
-
-#~ msgid "Hide advertisement enabled"
-#~ msgstr "Activada la ocultación de anuncios"
-
-#~ msgid "Update interval list of adblock"
-#~ msgstr "Actualizar lista de intervalos de bloqueo de anuncios"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add subscription"
-#~ msgstr "Añadir suscripción"
-
-#~ msgid "Select List:"
-#~ msgstr "Seleccionar lista:"
-
-#~ msgctxt "@title:window"
-#~ msgid "Blockable Items"
-#~ msgstr "Elementos bloqueables"
-
-#~ msgid "No blockable element found."
-#~ msgstr "No se encontró ningún elemento bloqueable."
-
-#~ msgid "Filter"
-#~ msgstr "Filtro"
-
-#~ msgid "Address"
-#~ msgstr "Dirección"
-
-#~ msgid "Type"
-#~ msgstr "Tipo"
-
-#~ msgid "Copy URL"
-#~ msgstr "Copiar URL"
-
-#~ msgid "Copy filter"
-#~ msgstr "Copiar filtro"
-
-#~ msgid "Block item..."
-#~ msgstr "Bloquear elemento..."
-
-#~ msgid "Open"
-#~ msgstr "Abrir"
-
-#~ msgid "Image"
-#~ msgstr "Imagen"
-
-#~ msgid "Script"
-#~ msgstr "Guion"
-
-#~ msgid "Stylesheet"
-#~ msgstr "Hoja de estilo"
-
-#~ msgid "Font"
-#~ msgstr "Tipo de letra"
-
-#~ msgid "Frame"
-#~ msgstr "Marco"
-
-#~ msgid "XML Request"
-#~ msgstr "Solicitud XML"
-
-#~ msgid "Object"
-#~ msgstr "Objeto"
-
-#~ msgid "Audio/Video"
-#~ msgstr "Audio/Video"
-
-#~ msgid "Popup window"
-#~ msgstr "Ventana emergente"
-
-#~ msgid "Unknown"
-#~ msgstr "Desconocido"
-
-#~ msgctxt "@title:window"
-#~ msgid "Create Filter"
-#~ msgstr "Crear filtro"
-
-#~ msgid "Use default"
-#~ msgstr "Usar el predeterminado"
-
-#~ msgid "Yes"
-#~ msgstr "Sí"
-
-#~ msgid "Not"
-#~ msgstr "No"
-
-#~ msgid "No subscription added"
-#~ msgstr "Ninguna suscripción añadida"
-
-#~ msgid ""
-#~ "<qt>Filter expression (e.g. <tt>http://www.example.com/ad/*</tt>, <a href="
-#~ "\"filterhelp\">more information</a>):"
-#~ msgstr ""
-#~ "<qt>Filtrar expresión (p. ej. <tt>http://www.ejemplo.com/ad/*</tt>, <a "
-#~ "href=\"filterhelp\">más información</a>):"
-
-#~ msgid " day"
-#~ msgid_plural " days"
-#~ msgstr[0] " día"
-#~ msgstr[1] " días"
-
-#~ msgid ""
-#~ "<qt><p>Enter an expression to filter. Filters can be defined as either:"
-#~ "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</"
-#~ "tt>, the wildcards <tt>*?[]</tt> may be used</li><li>a full regular "
-#~ "expression by surrounding the string with '<tt>/</tt>', e.g. <tt>/\\/(ad|"
-#~ "banner)\\./</tt></li></ul><p>Any filter string can be preceded by "
-#~ "'<tt>@@</tt>' to whitelist (allow) any matching URL, which takes priority "
-#~ "over any blacklist (blocking) filter.<br><a href='%1'>%2</a></qt>"
-#~ msgstr ""
-#~ "<qt><p>Introduzca una expresión a filtrar. Los filtros se pueden definir "
-#~ "bien como:<ul><li>un comodín estilo shell, p. ej. <tt>http://www.ejemplo."
-#~ "com/ads*</tt>, los comodines <tt>*?[]</tt> se pueden usar</li><li>una "
-#~ "expresión regular completa encerrando la cadena entre «<tt>/</tt>», p. "
-#~ "ej. <tt>/\\/(ad|banner)\\./</tt></li></ul><p>Cualquier cadena de filtro "
-#~ "puede estar precedida por «<tt>@@</tt>» para poner en la lista blanca "
-#~ "(permitir) cualquier URL coincidente, que tiene prioridad sobres "
-#~ "cualquier filtro de lista negra (bloqueo).<br><a href='%1'>%2</a></qt>"
-
-#~ msgid "More information"
-#~ msgstr "Más información"
-
-#~ msgid "Do you want to delete list \"%1\"?"
-#~ msgstr "¿Quiere usted borrar la lista «%1»?"
-
-#~ msgid "Delete current list"
-#~ msgstr "Borrar la lista actual"
-
-#~ msgid "All Files (*)"
-#~ msgstr "Todos los archivos (*)"
-
-#~ msgid "Import Filters"
-#~ msgstr "Importar filtros"
-
-#~ msgid "Export Filters"
-#~ msgstr "Exportar filtros"
-
-#~ msgid "Download..."
-#~ msgstr "Descargar..."
-
-#~ msgid "An error occurred while downloading the list: \"%1\""
-#~ msgstr "Ha ocurrido un error al descargar la lista: «%1»"
-
-#~ msgid "Filters:"
-#~ msgstr "Filtros:"
-
-#~ msgid "&Blocking filter"
-#~ msgstr "Filtro de &bloqueo"
-
-#~ msgid "Exception Filter"
-#~ msgstr "Filtro de excepción"
-
-#~ msgid "Pattern"
-#~ msgstr "Patrón"
-
-#~ msgid "custom"
-#~ msgstr "personalizado"
-
-#~ msgid "Accept pattern only"
-#~ msgstr "Aceptar patrón solo"
-
-#~ msgid "At the beginning of the address"
-#~ msgstr "Al principio de la dirección"
-
-#~ msgid "At the end of address"
-#~ msgstr "Al final de la dirección"
-
-#~ msgid "Options"
-#~ msgstr "Opciones"
-
-#~ msgid "First-part only"
-#~ msgstr "Solo primera parte"
-
-#~ msgid "Match case"
-#~ msgstr "Concordar mayúsculas/minúsculas"
-
-#~ msgid "Restrict to domain"
-#~ msgstr "Restringir al dominio"
-
-#~ msgid "Apply to:"
-#~ msgstr "Aplicar a:"
-
-#~ msgid "Collapse blocked:"
-#~ msgstr "Contraer bloqueado:"
-
-#~ msgid "&Enable Ad Block"
-#~ msgstr "Acti&var Ad Block"
-
-#~ msgid "&Hide filtered elements"
-#~ msgstr "Oc&ultar elementos filtrados"
-
-#~ msgid "Automatic Filters"
-#~ msgstr "Filtros automáticos"
-
-#~ msgid "Add Filters subscriptions..."
-#~ msgstr "Añadir suscripciones de filtros..."
-
-#~ msgid "Remove subscription"
-#~ msgstr "Eliminar suscripción"
-
-#~ msgid "Update enabled automatic filters every:"
-#~ msgstr "Actualizar filtros automáticos activados cada:"
-
-#~ msgid "Show List..."
-#~ msgstr "Mostrar lista..."
-
-#~ msgid "Manual Filters"
-#~ msgstr "Filtros manuales"
-
-#~ msgid "Add filter expression"
-#~ msgstr "Añadir expresión de filtro"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Import Filters..."
-#~ msgstr "Importar filtros..."
-
-#~ msgid "Export filters..."
-#~ msgstr "Exportar filtros..."
-
-#~ msgid "Edit"
-#~ msgstr "Editar"
-
-#~ msgid "Remove filter expression"
-#~ msgstr "Eliminar expresión de filtro"
-
-#~ msgid "Remove Filter"
-#~ msgstr "Eliminar filtro"

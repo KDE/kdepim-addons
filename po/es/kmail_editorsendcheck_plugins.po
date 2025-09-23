@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for kmail_editorsendcheck_plugins.po package.
+# Copyright (C) 2016-2025 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
 #
-# Javier Vinal <fjvinal@gmail.com>, 2016, 2017.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2016, 2017 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:42+0000\n"
-"PO-Revision-Date: 2024-07-30 16:34+0200\n"
+"PO-Revision-Date: 2025-09-23 01:17+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -184,7 +185,7 @@ msgstr "Nombre de dominio rechazado"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "A&dd…"
-msgstr "Aña&dir..."
+msgstr "Aña&dir…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:67
@@ -196,7 +197,7 @@ msgstr "Eli&minar"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:68
 #, kde-format
 msgid "Mod&ify…"
-msgstr "Modif&icar..."
+msgstr "Modif&icar…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:50
 #, kde-format
@@ -270,6 +271,3 @@ msgstr "Cambiar valor"
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Las posibles direcciones de correo no válidas se muestran en rojo:"
-
-#~ msgid "A&dd..."
-#~ msgstr "&Añadir..."
