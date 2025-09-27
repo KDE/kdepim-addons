@@ -60,7 +60,7 @@ bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v, BodyPart
     const QUrlQuery q = decodePath(path);
     if (q.queryItemValue(QStringLiteral("action")) == QLatin1StringView("import")) {
         auto job = QGpgME::openpgp()->importJob();
-        auto res = job->exec(part->content()->decodedContent());
+        auto res = job->exec(part->content()->decodedBody());
         if (res.error()) {
             KMessageBox::detailedError(v,
                                        i18n("An error occurred while importing the key."),

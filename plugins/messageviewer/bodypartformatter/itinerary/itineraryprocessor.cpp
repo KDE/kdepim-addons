@@ -122,7 +122,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     engine.setUseSeparateProcess(true);
     engine.setContext(QVariant::fromValue<KMime::Content *>(contextIsToplevel ? part.topLevelContent() : part.content()), u"message/rfc822");
     if (isPkPassContent(part.content())) {
-        pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
+        pass.reset(KPkPass::Pass::fromData(part.content()->decodedBody()));
         engine.setContent(QVariant::fromValue<KPkPass::Pass *>(pass.get()), u"application/vnd.apple.pkpass");
     } else if (part.content()->contentType()->isHTMLText()) {
         engine.setContent(part.content()->decodedText(), u"text/html");
@@ -136,7 +136,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
                     continue;
                 }
                 if (ct->mimeType() == QByteArrayLiteral("image/png") || ct->mimeType() == QByteArrayLiteral("image/gif")) {
-                    auto pngNode = engine.documentNodeFactory()->createNode(node->decodedContent(), {}, QString::fromUtf8(ct->mimeType()));
+                    auto pngNode = engine.documentNodeFactory()->createNode(node->decodedBody(), {}, QString::fromUtf8(ct->mimeType()));
                     engine.rootDocumentNode().appendChild(pngNode);
                 }
             }
@@ -144,9 +144,9 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     } else if (part.content()->contentType()->mimeType() == "application/pdf"
                || part.content()->contentType()->name().endsWith(QLatin1StringView(".pdf"), Qt::CaseInsensitive)) {
         isPdf = true;
-        engine.setData(part.content()->decodedContent());
+        engine.setData(part.content()->decodedBody());
     } else if (isCalendarContent(part.content())) {
-        engine.setData(part.content()->decodedContent());
+        engine.setData(part.content()->decodedBody());
     } else if (part.content()->contentType()->isPlainText()) {
         engine.setContent(part.content()->decodedText(), u"text/plain");
     } else {
@@ -167,7 +167,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
 
     if (!decodedData.isEmpty()) {
         if (isPdf) {
-            const auto docData = part.content()->decodedContent();
+            const auto docData = part.content()->decodedBody();
             const auto docId = DocumentUtil::idForContent(docData);
             DigitalDocument docInfo;
             docInfo.setEncodingFormat(QStringLiteral("application/pdf"));
@@ -183,7 +183,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     }
 
     if (pass) {
-        memento->addPass(pass.get(), part.content()->decodedContent());
+        memento->addPass(pass.get(), part.content()->decodedBody());
     }
 
     qCDebug(ITINERARY_LOG) << "-------------------------------------------- END ITINERARY PARSING";

@@ -56,11 +56,11 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
         }
 
         if (ct->isMimeType("application/vnd.gnupg.wks")) {
-            const auto content = part.content()->decodedContent();
+            const auto content = part.content()->decodedBody();
             if (content.startsWith("-----BEGIN PGP MESSAGE")) {
                 auto decrypt = QGpgME::openpgp()->decryptJob();
                 QByteArray plainText;
-                auto result = decrypt->exec(part.content()->decodedContent(), plainText);
+                auto result = decrypt->exec(part.content()->decodedBody(), plainText);
                 if (result.error()) {
 #if GPGME_VERSION_NUMBER >= 0x011800 // 1.24.0
                     qCWarning(GNUPGWKS_LOG) << "Decryption failed!" << result.error().asStdString();

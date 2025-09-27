@@ -198,7 +198,7 @@ public:
                 // If the bodypart does not have a charset specified, we need to fall back to utf8,
                 // not the KMail fallback encoding, so get the contents as binary and decode explicitly.
                 if (msgPart->content()->contentType()->parameter("charset").isEmpty()) {
-                    const QByteArray &ba = msgPart->content()->decodedContent();
+                    const QByteArray &ba = msgPart->content()->decodedBody();
                     source = QString::fromUtf8(ba);
                 } else {
                     source = msgPart->text();
@@ -1198,7 +1198,7 @@ public:
         // not the KMail fallback encoding, so get the contents as binary and decode explicitly.
         QString iCal;
         if (!part->content()->contentType()->hasParameter("charset")) {
-            const QByteArray &ba = part->content()->decodedContent();
+            const QByteArray &ba = part->content()->decodedBody();
             iCal = QString::fromUtf8(ba);
         } else {
             iCal = part->content()->decodedText();
@@ -1331,7 +1331,7 @@ public:
 
         QString iCal;
         if (!part->content()->contentType()->hasParameter("charset")) {
-            const QByteArray &ba = part->content()->decodedContent();
+            const QByteArray &ba = part->content()->decodedBody();
             iCal = QString::fromUtf8(ba);
         } else {
             iCal = part->content()->decodedText();

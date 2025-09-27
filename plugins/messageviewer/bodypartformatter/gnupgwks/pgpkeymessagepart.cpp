@@ -60,7 +60,7 @@ void PgpKeyMessagePart::setError(const QString &error)
 
 QByteArray PgpKeyMessagePart::rawKey() const
 {
-    return content()->decodedContent();
+    return content()->decodedBody();
 }
 
 void PgpKeyMessagePart::setSearchRunning(bool searchRunning)
@@ -79,13 +79,13 @@ void PgpKeyMessagePart::parseContent(KMime::Content *node)
     // GpgME::Data::toKeys
     //
     // something like:
-    // QGpgME::QByteArrayDataProvider dp(node->decodedContent());
+    // QGpgME::QByteArrayDataProvider dp(node->decodedBody());
     // Data data(&dp);
     // std::vector <Key> keys = data.toKeys();
     QProcess p;
     p.start(QStringLiteral("gpg"), {QStringLiteral("--with-colons"), QStringLiteral("--fixed-list-mode"), QStringLiteral("--with-fingerprint")});
     p.waitForStarted();
-    p.write(node->decodedContent());
+    p.write(node->decodedBody());
     p.closeWriteChannel();
     p.waitForReadyRead();
     const QByteArray result = p.readAllStandardOutput();

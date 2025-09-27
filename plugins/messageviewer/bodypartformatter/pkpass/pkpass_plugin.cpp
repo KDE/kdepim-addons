@@ -53,7 +53,7 @@ public:
             return false;
         }
 
-        std::unique_ptr<KPkPass::Pass> pass(KPkPass::Pass::fromData(msgPart->content()->decodedContent()));
+        std::unique_ptr<KPkPass::Pass> pass(KPkPass::Pass::fromData(msgPart->content()->decodedBody()));
         if (!pass) {
             return false;
         }
