@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:43+0000\n"
+"POT-Creation-Date: 2025-09-28 00:44+0000\n"
 "PO-Revision-Date: 2025-08-22 18:50+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -49,31 +49,31 @@ msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "Автоматически создать ответ"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:38
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "Резюмировать текст"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:44
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Исправить текст"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:50
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "Быстрый ответ"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:60
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Configure quick text"
@@ -81,13 +81,13 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "Настройка шаблонов"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:120
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:130
 #, fuzzy, kde-format
 #| msgid "An error occurred: \"%1\""
 msgid "An error occured: %1"
 msgstr "Произошла ошибка: «%1»"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:120
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:130
 #, kde-format
 msgid "Error"
 msgstr ""
