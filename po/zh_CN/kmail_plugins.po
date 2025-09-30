@@ -145,7 +145,7 @@ msgstr "展示文件夹大小(&S)"
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:36
 #, kde-format
 msgid "Unable to start KMail application."
-msgstr ""
+msgstr "无法启动 KMail 应用程序。"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format

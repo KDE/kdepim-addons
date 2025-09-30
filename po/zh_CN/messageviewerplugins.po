@@ -32,18 +32,18 @@ msgstr "展开 URL"
 #, kde-format
 msgctxt "@action"
 msgid "Ask AI…"
-msgstr ""
+msgstr "询问 AI..."
 
 #: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:30
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
