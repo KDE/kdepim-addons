@@ -24,24 +24,25 @@
 
 using namespace KItinerary;
 
-static bool isPkPassContent(KMime::Content *content)
+static bool isPkPassContent(const KMime::Content *content)
 {
-    const auto ct = content->contentType();
-    const QByteArray mimetype = ct->mimeType();
-    if (mimetype == QByteArrayLiteral("application/vnd.apple.pkpass")) {
-        return true;
+    if (const auto ct = content->contentType(); ct) {
+        const QByteArray mimetype = ct->mimeType();
+        if (mimetype == QByteArrayLiteral("application/vnd.apple.pkpass")) {
+            return true;
+        }
+        if (mimetype != QByteArrayLiteral("application/octet-stream") && mimetype != QByteArrayLiteral("application/zip")) {
+            return false;
+        }
+        if (ct->name().endsWith(QLatin1StringView("pkpass"))) {
+            return true;
+        }
     }
-    if (mimetype != QByteArrayLiteral("application/octet-stream") && mimetype != QByteArrayLiteral("application/zip")) {
-        return false;
-    }
-    if (ct->name().endsWith(QLatin1StringView("pkpass"))) {
-        return true;
-    }
-    const auto cd = content->contentDisposition(false);
+    const auto cd = content->contentDisposition();
     return cd && cd->filename().endsWith(QLatin1StringView("pkpass"));
 }
 
-static bool isCalendarContent(KMime::Content *content)
+static bool isCalendarContent(const KMime::Content *content)
 {
     const auto ct = content->contentType();
     const QByteArray mimetype = ct ? ct->mimeType() : QByteArray();
@@ -54,14 +55,14 @@ static bool isCalendarContent(KMime::Content *content)
     if (ct && ct->name().endsWith(QLatin1StringView(".ics"))) {
         return true;
     }
-    const auto cd = content->contentDisposition(false);
+    const auto cd = content->contentDisposition();
     return cd && cd->filename().endsWith(QLatin1StringView(".ics"));
 }
 
-static KMime::Content *findMultipartRelatedParent(KMime::Content *node)
+static const KMime::Content *findMultipartRelatedParent(const KMime::Content *node)
 {
     while (node) {
-        if (node->contentType()->mimeType() == QByteArrayLiteral("multipart/related")) {
+        if (const auto ct = node->contentType(); ct && ct->mimeType() == QByteArrayLiteral("multipart/related")) {
             return node;
         }
         node = node->parent();
@@ -82,7 +83,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     // determine sender date of the current part (differs from topLevel()->date() for forwarded mails
     bool contextIsToplevel = false;
     QDateTime senderDateTime;
-    auto node = part.content();
+    const KMime::Content *node = part.content();
     auto dateHdr = node->header<KMime::Headers::Date>();
     while (!dateHdr && node->parent()) {
         node = node->parent();
@@ -121,18 +122,20 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     ExtractorEngine engine;
     engine.setUseSeparateProcess(true);
     engine.setContext(QVariant::fromValue<KMime::Content *>(contextIsToplevel ? part.topLevelContent() : part.content()), u"message/rfc822");
-    if (isPkPassContent(part.content())) {
-        pass.reset(KPkPass::Pass::fromData(part.content()->decodedBody()));
+
+    const KMime::Content *content = part.content();
+    if (isPkPassContent(content)) {
+        pass.reset(KPkPass::Pass::fromData(content->decodedBody()));
         engine.setContent(QVariant::fromValue<KPkPass::Pass *>(pass.get()), u"application/vnd.apple.pkpass");
-    } else if (part.content()->contentType()->isHTMLText()) {
-        engine.setContent(part.content()->decodedText(), u"text/html");
+    } else if (const auto ct = content->contentType(); ct && ct->isHTMLText()) {
+        engine.setContent(content->decodedText(), u"text/html");
         // find embedded images that belong to this HTML part, and create child-nodes for those
         // this is needed for finding barcodes in those images
-        if (const auto rootNode = findMultipartRelatedParent(part.content())) {
+        if (const KMime::Content *rootNode = findMultipartRelatedParent(content)) {
             const auto children = rootNode->contents();
             for (const auto node : children) {
-                const auto ct = node->contentType(false);
-                if (!ct || !node->contentID(false)) {
+                const auto ct = node->contentType();
+                if (!ct || !node->contentID()) {
                     continue;
                 }
                 if (ct->mimeType() == QByteArrayLiteral("image/png") || ct->mimeType() == QByteArrayLiteral("image/gif")) {
@@ -141,14 +144,14 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
                 }
             }
         }
-    } else if (part.content()->contentType()->mimeType() == "application/pdf"
-               || part.content()->contentType()->name().endsWith(QLatin1StringView(".pdf"), Qt::CaseInsensitive)) {
+    } else if (const auto ct = content->contentType();
+               ct && (ct->mimeType() == "application/pdf" || ct->name().endsWith(QLatin1StringView(".pdf"), Qt::CaseInsensitive))) {
         isPdf = true;
-        engine.setData(part.content()->decodedBody());
-    } else if (isCalendarContent(part.content())) {
-        engine.setData(part.content()->decodedBody());
-    } else if (part.content()->contentType()->isPlainText()) {
-        engine.setContent(part.content()->decodedText(), u"text/plain");
+        engine.setData(content->decodedBody());
+    } else if (isCalendarContent(content)) {
+        engine.setData(content->decodedBody());
+    } else if (const auto ct = content->contentType(); ct && ct->isPlainText()) {
+        engine.setContent(content->decodedText(), u"text/plain");
     } else {
         return {};
     }
@@ -167,11 +170,11 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
 
     if (!decodedData.isEmpty()) {
         if (isPdf) {
-            const auto docData = part.content()->decodedBody();
+            const auto docData = content->decodedBody();
             const auto docId = DocumentUtil::idForContent(docData);
             DigitalDocument docInfo;
             docInfo.setEncodingFormat(QStringLiteral("application/pdf"));
-            docInfo.setName(MimeTreeParser::NodeHelper::fileName(part.content()));
+            docInfo.setName(MimeTreeParser::NodeHelper::fileName(content));
             memento->addDocument(docId, docInfo, docData);
 
             for (auto &res : decodedData) {
@@ -183,7 +186,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     }
 
     if (pass) {
-        memento->addPass(pass.get(), part.content()->decodedBody());
+        memento->addPass(pass.get(), content->decodedBody());
     }
 
     qCDebug(ITINERARY_LOG) << "-------------------------------------------- END ITINERARY PARSING";
