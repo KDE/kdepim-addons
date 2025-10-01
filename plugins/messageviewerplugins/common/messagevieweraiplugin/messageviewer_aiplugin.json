@@ -19,6 +19,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att använda AI.",
         "Description[tr]": "Bu eklenti, yapay zekâ kullanmanıza olanak tanır.",
         "Description[uk]": "За допомогою цього додатка можна користуватися ШІ.",
+        "Description[zh_CN]": "该插件支持使用 AI。",
         "Description[zh_TW]": "這個外掛程式讓您利用 AI。",
         "EnabledByDefault": false,
         "Name": "AI",
@@ -42,6 +43,7 @@
         "Name[ta]": "செயற்கை நுண்ணறிவு",
         "Name[tr]": "Yapay Zekâ",
         "Name[uk]": "ШІ",
+        "Name[zh_CN]": "AI",
         "Name[zh_TW]": "AI",
         "Version": "2.0"
     }
