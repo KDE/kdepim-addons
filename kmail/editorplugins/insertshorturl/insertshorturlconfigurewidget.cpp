@@ -33,7 +33,7 @@ InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
     mShortUrlServer->setObjectName(QLatin1StringView("shorturlserver"));
     mainLayout->addWidget(mShortUrlServer);
     const QList<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
-    for (ShortUrlEnginePlugin *plugin : lstPlugin) {
+    for (const ShortUrlEnginePlugin *plugin : lstPlugin) {
         mShortUrlServer->addItem(plugin->pluginName(), plugin->engineName());
     }
 
