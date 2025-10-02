@@ -126,7 +126,7 @@ public:
             }
             writer->write(htmlStr);
 
-            if (!memento || (memento && !memento->finished()) || (memento && memento->finished() && !memento->vcardExist(count))) {
+            if (!memento || !memento->finished() || (memento->finished() && !memento->vcardExist(count))) {
                 const QString addToLinkText = i18n("[Add this contact to the address book]");
                 QString op = QStringLiteral("addToAddressBook:%1").arg(count);
                 writer->write(QStringLiteral("<div align=\"center\"><a href=\"") + msgPart->makeLink(op) + QStringLiteral("\">") + addToLinkText
