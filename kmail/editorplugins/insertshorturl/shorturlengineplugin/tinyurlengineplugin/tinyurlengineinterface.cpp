@@ -43,11 +43,4 @@ void TinyUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
     reply->deleteLater();
 }
 
-void TinyUrlEngineInterface::slotErrorFound(QNetworkReply::NetworkError error)
-{
-    mErrorFound = true;
-    auto reply = qobject_cast<QNetworkReply *>(sender());
-    Q_EMIT shortUrlFailed(i18n("Error reported by server:\n\'%1\'", (reply ? reply->errorString() : QString::number(error))));
-}
-
 #include "moc_tinyurlengineinterface.cpp"
