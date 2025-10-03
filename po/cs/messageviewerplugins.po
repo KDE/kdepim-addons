@@ -39,12 +39,12 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 #: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
 #, kde-format
