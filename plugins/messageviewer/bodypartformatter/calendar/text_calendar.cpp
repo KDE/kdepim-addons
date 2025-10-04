@@ -159,8 +159,9 @@ private:
 
 static QString getSender(const MimeTreeParser::MessagePart *msgPart)
 {
-    if (auto msg = dynamic_cast<KMime::Message *>(msgPart->content()->topLevel()); msg != nullptr) {
-        return msg->sender()->asUnicodeString();
+    if (auto msg = dynamic_cast<const KMime::Message *>(msgPart->content()->topLevel()); msg != nullptr) {
+        const auto s = msg->sender();
+        return s ? s->asUnicodeString() : QString();
     }
     return {};
 }
@@ -382,7 +383,7 @@ public:
         return attachment;
     }
 
-    static QString findReceiver(KMime::Content *node)
+    static QString findReceiver(const KMime::Content *node)
     {
         if (!node || !node->topLevel()) {
             return {};
