@@ -19,7 +19,6 @@
 #include <TextAutoGenerateText/TextAutoGenerateMessageUtils>
 #include <TextAutoGenerateText/TextAutoGenerateTextInstancesManagerDialog>
 #include <TextCustomEditor/RichTextEditor>
-#include <textautogeneratetext_version.h>
 
 using namespace Qt::Literals::StringLiterals;
 AutoGenerateAnswersEditorInterface::AutoGenerateAnswersEditorInterface(QObject *parent)
@@ -99,16 +98,12 @@ void AutoGenerateAnswersEditorInterface::exec()
     auto job = new TextAutoGenerateText::TextAutoGenerateAskJob(this);
     job->setManager(mManager);
     job->setText(QStringLiteral("%1: \"%2\"").arg(actionStr, str));
-#if TEXTAUTOGENERATETEXT_VERSION >= QT_VERSION_CHECK(1, 7, 84)
     connect(job,
             &TextAutoGenerateText::TextAutoGenerateAskJob::generateTextInProgress,
             this,
             [this](const TextAutoGenerateText::TextAutoGenerateReply::Response &response) {
                 slotGenerateTextInProgress(response.response);
             });
-#else
-    connect(job, &TextAutoGenerateText::TextAutoGenerateAskJob::generateTextInProgress, this, &AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress);
-#endif
     connect(job, &TextAutoGenerateText::TextAutoGenerateAskJob::errorOccured, this, &AutoGenerateAnswersEditorInterface::slotGenerateTextErrorOccured);
     job->start();
 }
