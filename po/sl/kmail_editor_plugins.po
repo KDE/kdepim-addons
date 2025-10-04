@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 00:44+0000\n"
+"POT-Creation-Date: 2025-10-04 14:15+0000\n"
 "PO-Revision-Date: 2025-08-31 08:48+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -49,42 +49,42 @@ msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "Samodejno generiraj odgovor"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:34
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "Samodejno ustvari odgovor"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:39
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:38
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "Besedilo povzetka"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:45
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Popravi besedilo"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:51
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "Hitri odgovor"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:60
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
 #, kde-format
 msgctxt "@action"
 msgid "Configure AI"
 msgstr "Konfiguriraj umetno inteligenco"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:130
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
 #, kde-format
 msgid "An error occured: %1"
 msgstr "Prišlo je do napake: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:130
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
 #, kde-format
 msgid "Error"
 msgstr "Napaka"
