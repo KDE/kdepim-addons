@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-04 14:15+0000\n"
-"PO-Revision-Date: 2025-06-10 23:52+0200\n"
+"PO-Revision-Date: 2025-10-09 00:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -41,9 +41,7 @@ msgid "Autocorrect Selected Text"
 msgstr "선택한 텍스트 자동 고침"
 
 #: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Autogenerate Answer"
+#, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "답변 자동 생성"
@@ -73,30 +71,26 @@ msgid "Quick Answer"
 msgstr "빠른 답변"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure quick text"
+#, kde-format
 msgctxt "@action"
 msgid "Configure AI"
-msgstr "빠른 텍스트 설정"
+msgstr "AI 설정"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
-msgstr "오류 발생: \"%1\""
+msgstr "오류 발생: %1"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "오류"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
-#, fuzzy, kde-format
-#| msgid "Insert"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Text"
-msgstr "삽입"
+msgstr "텍스트 삽입"
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
 #, kde-format

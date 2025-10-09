@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-21 00:43+0000\n"
-"PO-Revision-Date: 2025-07-21 01:01+0200\n"
+"PO-Revision-Date: 2025-10-09 00:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -145,7 +145,7 @@ msgstr "폴더 크기 표시(&S)…"
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:36
 #, kde-format
 msgid "Unable to start KMail application."
-msgstr ""
+msgstr "KMail 앱을 시작할 수 없습니다."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format
@@ -157,7 +157,7 @@ msgstr "검색…"
 #, kde-format
 msgctxt "@action"
 msgid "Open Folder"
-msgstr ""
+msgstr "폴더 열기"
 
 #: common/antispamwizard.cpp:90
 #, kde-format
