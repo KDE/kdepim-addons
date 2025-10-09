@@ -5,9 +5,9 @@
 */
 
 #include "autogenerateanswerseditorinterface.h"
-
 #include "autogenerateanswerseditordialog.h"
 #include "autogenerateanswerseditorplugin_debug.h"
+#include "config-kdepim-addons.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -116,7 +116,11 @@ void AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress(const QStrin
         mAnswersEditorDialog->setAttribute(Qt::WA_DeleteOnClose);
         mAnswersEditorDialog->show();
     }
+#if HAVE_TEXTUTILS_SYNTAXHIGHLIGTHER_SUPPORT
+    mAnswersEditorDialog->setAnswer(TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str, {}));
+#else
     mAnswersEditorDialog->setAnswer(TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str));
+#endif
 }
 
 void AutoGenerateAnswersEditorInterface::slotGenerateTextErrorOccured(const QString &errorStr)

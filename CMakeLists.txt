@@ -79,6 +79,8 @@ include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 set(KTEXTADDONS_MIN_VERSION "1.8.0")
 set(KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION "1.8.0")
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
 
 option(
     KDEPIM_ENTERPRISE_BUILD
@@ -267,6 +269,10 @@ if(TARGET KPim6::PimCommonActivities)
             set(KDEPIM_ADDONS_HAVE_ACTIVITY_SUPPORT TRUE)
         endif()
     endif()
+endif()
+
+if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.41)
+    set(HAVE_TEXTUTILS_SYNTAXHIGHLIGTHER_SUPPORT TRUE)
 endif()
 
 configure_file(
