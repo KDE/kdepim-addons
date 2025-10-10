@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 14:15+0000\n"
+"POT-Creation-Date: 2025-10-10 00:42+0000\n"
 "PO-Revision-Date: 2025-09-05 17:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -77,12 +77,12 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "設定 AI"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:129
 #, kde-format
 msgid "An error occured: %1"
 msgstr "發生了一個錯誤：%1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:129
 #, kde-format
 msgid "Error"
 msgstr "錯誤"

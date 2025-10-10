@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 14:15+0000\n"
+"POT-Creation-Date: 2025-10-10 00:42+0000\n"
 "PO-Revision-Date: 2025-09-06 05:53+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -77,12 +77,12 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "Ustawienia AI"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:129
 #, kde-format
 msgid "An error occured: %1"
 msgstr "Wystąpił błąd: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:129
 #, kde-format
 msgid "Error"
 msgstr "Błąd"

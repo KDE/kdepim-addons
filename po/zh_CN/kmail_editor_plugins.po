@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 14:15+0000\n"
+"POT-Creation-Date: 2025-10-10 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -76,12 +76,12 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "配置 AI"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:129
 #, kde-format
 msgid "An error occured: %1"
 msgstr "发生错误：%1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:129
 #, kde-format
 msgid "Error"
 msgstr "错误"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 14:15+0000\n"
+"POT-Creation-Date: 2025-10-10 00:42+0000\n"
 "PO-Revision-Date: 2022-06-21 17:59+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -81,13 +81,13 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "Sürətli mətni tənzimləyin"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:129
 #, fuzzy, kde-format
 #| msgid "An error occurred: \"%1\""
 msgid "An error occured: %1"
 msgstr "Xəta baş verdi: \"%1\""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:125
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:129
 #, kde-format
 msgid "Error"
 msgstr ""
