@@ -1,4 +1,4 @@
-# Burkhard Lück <lueck@hube-lueck.de>, 2011.
+# SPDX-FileCopyrightText: 2011 Burkhard Lück <lueck@hube-lueck.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_mstnef_plugin\n"
