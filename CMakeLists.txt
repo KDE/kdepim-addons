@@ -275,6 +275,10 @@ if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.41)
     set(HAVE_TEXTUTILS_SYNTAXHIGHLIGTHER_SUPPORT TRUE)
 endif()
 
+if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.48)
+    set(HAVE_TEXTUTILS_QUICKSEARCH_SUPPORT TRUE)
+endif()
+
 configure_file(
     config-kdepim-addons.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h
@@ -311,7 +315,7 @@ set_package_properties(
         URL "https://www.gnupg.org"
         TYPE REQUIRED
 )
-ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.18.0)
+ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.19.0)
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
