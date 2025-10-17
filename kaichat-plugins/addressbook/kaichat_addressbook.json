@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "This tool plugin allows to get info from addressbook.",
+        "EnabledByDefault": true,
+        "Name": "AddressBook",
+        "Version": "1.0"
+    }
+}

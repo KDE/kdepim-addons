@@ -388,6 +388,7 @@ if(TARGET KPim6::ImportWizard)
 endif()
 if(TARGET KF6::TextAutoGenerateText)
     add_subdirectory(pimautogeneratetext)
+    add_subdirectory(kaichat-plugins)
 endif()
 
 ecm_qt_install_logging_categories(
