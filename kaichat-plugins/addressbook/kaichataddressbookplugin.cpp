@@ -17,8 +17,8 @@ using namespace Qt::Literals::StringLiterals;
 KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVariantList &)
     : TextAutoGenerateTextToolPlugin{parent}
 {
+    mToolNameId = "addressbook_plugin"_ba;
 #if 0	
-    mToolNameId = "current_date_time_tool"_ba;
     {
         TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
         prop.setDescription(kli18n("The Current Date Time"));
@@ -35,12 +35,12 @@ KAIChatAddressBookPlugin::~KAIChatAddressBookPlugin() = default;
 
 QString KAIChatAddressBookPlugin::displayName() const
 {
-    return i18n("Get Current Date Time");
+    return i18n("Get email address");
 }
 
 QString KAIChatAddressBookPlugin::description() const
 {
-    return i18n("Use this tool to get current date time");
+    return i18n("Use this tool to get email from akonadi database");
 }
 
 void KAIChatAddressBookPlugin::showConfigureDialog(QWidget *parent)
