@@ -14,6 +14,9 @@ target_sources(
     PRIVATE
     kaichataddressbookplugin.cpp
     kaichataddressbookplugin.h
-
+    kaichataddressbookplugindialog.cpp
+    kaichataddressbookplugindialog.h
+    kaichataddressbookpluginwidget.cpp
+    kaichataddressbookpluginwidget.h
 )
 target_link_libraries(kaichat_addressbookplugin KF6::TextAutoGenerateText)

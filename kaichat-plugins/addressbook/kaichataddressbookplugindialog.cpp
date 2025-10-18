@@ -4,22 +4,22 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "kaichataddressbookplugindialog.h"
-#include "currentdatetimetoolpluginwidget.h"
+#include "kaichataddressbookpluginwidget.h"
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <TextAutoGenerateText/TextAutoGenerateTextToolPlugin>
 using namespace Qt::Literals::StringLiterals;
 KAIChatAddressBookPluginDialog::KAIChatAddressBookPluginDialog(TextAutoGenerateText::TextAutoGenerateTextToolPlugin *plugin, QWidget *parent)
     : QDialog(parent)
-    , mCurrentDateTimeToolPluginWidget(new CurrentDateTimeToolPluginWidget(plugin, this))
+    , mAddressbookToolPluginWidget(new KAIChatAddressBookPluginWidget(plugin, this))
 {
-    setWindowTitle(plugin ? plugin->displayName() : i18n("Configure Date Time Tool"));
+    setWindowTitle(plugin ? plugin->displayName() : i18n("Configure Addressbool Tool Plugin"));
 
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(u"mainLayout"_s);
 
-    mCurrentDateTimeToolPluginWidget->setObjectName(u"mCurrentDateTimeToolPluginWidget"_s);
-    mainLayout->addWidget(mCurrentDateTimeToolPluginWidget);
+    mAddressbookToolPluginWidget->setObjectName(u"mCurrentDateTimeToolPluginWidget"_s);
+    mainLayout->addWidget(mAddressbookToolPluginWidget);
 
     auto button = new QDialogButtonBox(QDialogButtonBox::Close, this);
     button->setObjectName(u"button"_s);

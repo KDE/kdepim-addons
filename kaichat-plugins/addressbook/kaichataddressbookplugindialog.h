@@ -9,7 +9,7 @@ namespace TextAutoGenerateText
 {
 class TextAutoGenerateTextToolPlugin;
 }
-class CurrentDateTimeToolPluginWidget;
+class KAIChatAddressBookPluginWidget;
 class KAIChatAddressBookPluginDialog : public QDialog
 {
     Q_OBJECT
@@ -18,5 +18,5 @@ public:
     ~KAIChatAddressBookPluginDialog() override;
 
 private:
-    CurrentDateTimeToolPluginWidget *const mCurrentDateTimeToolPluginWidget;
+    KAIChatAddressBookPluginWidget *const mAddressbookToolPluginWidget;
 };
