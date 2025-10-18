@@ -12,6 +12,8 @@ ecm_qt_declare_logging_category(kaichat_addressbookplugin HEADER kaichat_address
 target_sources(
     kaichat_addressbookplugin
     PRIVATE
+    kaichataddressbookplugin.cpp
+    kaichataddressbookplugin.h
 
 )
 target_link_libraries(kaichat_addressbookplugin KF6::TextAutoGenerateText)
