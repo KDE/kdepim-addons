@@ -5,9 +5,7 @@
 */
 
 #include "kaichataddressbookplugin.h"
-// #include "currentdatetimetoolplugindialog.h"
-// #include "currentdatetimetoolpluginjob.h"
-// #include "currentdatetimetoolpluginutils.h"
+#include "kaichataddressbookplugindialog.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QPointer>
@@ -45,10 +43,8 @@ QString KAIChatAddressBookPlugin::description() const
 
 void KAIChatAddressBookPlugin::showConfigureDialog(QWidget *parent)
 {
-#if 0
     auto dlg = KAIChatAddressBookPluginDialog(this, parent);
     dlg.exec();
-#endif
 }
 
 void KAIChatAddressBookPlugin::callTools(const QByteArray &chatId,
