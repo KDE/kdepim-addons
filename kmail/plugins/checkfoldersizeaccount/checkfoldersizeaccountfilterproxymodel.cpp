@@ -56,8 +56,15 @@ CheckFolderSizeAccountFilterProxyModel::FolderSize CheckFolderSizeAccountFilterP
 void CheckFolderSizeAccountFilterProxyModel::setFolderSize(const FolderSize &newFolderSize)
 {
     if (mFolderSize != newFolderSize) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        beginFilterChange();
+#endif
         mFolderSize = newFolderSize;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 }
 
