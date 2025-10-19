@@ -13,7 +13,7 @@ KAIChatAddressBookPluginDialog::KAIChatAddressBookPluginDialog(TextAutoGenerateT
     : QDialog(parent)
     , mAddressbookToolPluginWidget(new KAIChatAddressBookPluginWidget(plugin, this))
 {
-    setWindowTitle(plugin ? plugin->displayName() : i18n("Configure Addressbool Tool Plugin"));
+    setWindowTitle(plugin ? plugin->displayName() : i18n("Configure Addressbook Tool Plugin"));
 
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(u"mainLayout"_s);
