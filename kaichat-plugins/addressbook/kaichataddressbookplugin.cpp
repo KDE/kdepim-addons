@@ -6,6 +6,8 @@
 
 #include "kaichataddressbookplugin.h"
 #include "kaichataddressbookplugindialog.h"
+#include "kaichataddressbookpluginjob.h"
+#include "kaichataddressbookpluginutils.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QPointer>
@@ -16,17 +18,13 @@ KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVaria
     : TextAutoGenerateTextToolPlugin{parent}
 {
     mToolNameId = "addressbook_plugin"_ba;
-#if 0	
     {
         TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
-        prop.setDescription(kli18n("The Current Date Time"));
-        prop.setName(u"currentdatetime"_s);
-        prop.setTypeElements({KAIChatAddressBookPluginUtils::convertDateTimeEnumToString(KAIChatAddressBookPluginUtils::Date),
-                              KAIChatAddressBookPluginUtils::convertDateTimeEnumToString(KAIChatAddressBookPluginUtils::Time),
-                              KAIChatAddressBookPluginUtils::convertDateTimeEnumToString(KAIChatAddressBookPluginUtils::DateTime)});
+        prop.setDescription(kli18n("AddressBook info"));
+        prop.setName(u"addressbookinfo"_s);
+        prop.setTypeElements({KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Email)});
         mProperties.append(prop);
     }
-#endif
 }
 
 KAIChatAddressBookPlugin::~KAIChatAddressBookPlugin() = default;
@@ -51,13 +49,11 @@ void KAIChatAddressBookPlugin::callTools(const QByteArray &chatId,
                                          const QByteArray &uuid,
                                          const QList<TextAutoGenerateText::TextAutoGenerateReply::ToolCallArgumentInfo> &info)
 {
-#if 0	
     for (const auto &i : info) {
         auto job = new KAIChatAddressBookPluginJob(this);
         initializeJob(job, chatId, uuid, i);
         job->start();
     }
-#endif
 }
 
 #include "kaichataddressbookplugin.moc"
