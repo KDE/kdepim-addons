@@ -1,8 +1,28 @@
 {
     "KPlugin": {
         "Description": "This tool plugin allows to get info from addressbook.",
+        "Description[ca@valencia]": "Este connector d'eina permet obtindre informació de la llibreta d'adreces.",
+        "Description[ca]": "Aquest connector d'eina permet obtenir informació de la llibreta d'adreces.",
+        "Description[es]": "Este complemento de herramienta permite obtener información de la libreta de direcciones.",
+        "Description[eu]": "Tresna-plugin honek helbide-liburuko informazioa lortzeko aukera ematen du.",
+        "Description[he]": "התוסף הזה מאפשר לך לקבל מידע מפנקס הכתובות.",
+        "Description[ka]": "ეს დამატება მისამართების წიგნიდან ინფორმაციის მიღების საშუალებას გაძლევთ.",
+        "Description[pt_BR]": "Este plugin permite obter informações do livro de endereços.",
+        "Description[sl]": "Ta vstavek vam omogoča dobiti informacije iz adresarja.",
+        "Description[tr]": "Bu eklenti, bir adres defterinden bilgi almanıza olanak tanır.",
+        "Description[uk]": "Цей додаток інструменту надає змогу отримувати відомості з адресної книги.",
         "EnabledByDefault": true,
         "Name": "AddressBook",
+        "Name[ca@valencia]": "Llibreta d'adreces",
+        "Name[ca]": "Llibreta d'adreces",
+        "Name[es]": "Libreta de direcciones",
+        "Name[eu]": "Helbide-liburua",
+        "Name[he]": "פנקס הכתובות",
+        "Name[ka]": "მისამართების წიგნი",
+        "Name[pt_BR]": "Livro de endereços",
+        "Name[sl]": "Adresar",
+        "Name[tr]": "Adres Defteri",
+        "Name[uk]": "Адресна книга",
         "Version": "1.0"
     }
 }
