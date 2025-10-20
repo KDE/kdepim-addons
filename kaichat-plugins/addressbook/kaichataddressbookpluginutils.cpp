@@ -12,12 +12,6 @@ QString KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(AddressBoo
     switch (type) {
     case Email:
         return u"email"_s;
-#if 0
-    case Date:
-        return u"date"_s;
-    case DateTime:
-        return u"date and time"_s;
-#endif
     case Unknown:
         break;
     }
@@ -29,15 +23,9 @@ KAIChatAddressBookPluginUtils::AddressBookEnum KAIChatAddressBookPluginUtils::co
 {
     if (str == "email"_L1) {
         return KAIChatAddressBookPluginUtils::AddressBookEnum::Email;
-#if 0
-    } else if (str == "date"_L1) {
-        return KAIChatAddressBookPluginUtils::AddressBookEnum::Date;
-    } else if (str == "date and time"_L1) {
-        return KAIChatAddressBookPluginUtils::AddressBookEnum::DateTime;
     } else {
-        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid date time type:" << str;
+        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid AddressBook type:" << str;
         return KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
-#endif
     }
     return KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
 }
