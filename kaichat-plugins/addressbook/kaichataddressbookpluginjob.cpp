@@ -11,3 +11,5 @@ KAIChatAddressBookPluginJob::KAIChatAddressBookPluginJob(QObject *parent)
 }
 
 KAIChatAddressBookPluginJob::~KAIChatAddressBookPluginJob() = default;
+
+#include "moc_kaichataddressbookpluginjob.cpp"
