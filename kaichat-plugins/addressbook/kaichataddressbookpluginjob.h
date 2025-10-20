@@ -4,13 +4,13 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
+#include <TextAutoGenerateText/TextAutoGenerateTextToolPluginJob>
 
-#include <QObject>
-
-class KAIChatAddressBookPluginJob : public QObject
+class KAIChatAddressBookPluginJob : public TextAutoGenerateText::TextAutoGenerateTextToolPluginJob
 {
     Q_OBJECT
 public:
     explicit KAIChatAddressBookPluginJob(QObject *parent = nullptr);
     ~KAIChatAddressBookPluginJob() override;
+    void start() override;
 };
