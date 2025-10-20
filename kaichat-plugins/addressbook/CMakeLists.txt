@@ -20,5 +20,7 @@ target_sources(
     kaichataddressbookpluginwidget.h
     kaichataddressbookpluginjob.h
     kaichataddressbookpluginjob.cpp
+    kaichataddressbookpluginutils.cpp
+    kaichataddressbookpluginutils.h
 )
 target_link_libraries(kaichat_addressbookplugin KF6::TextAutoGenerateText)
