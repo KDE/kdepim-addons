@@ -92,6 +92,11 @@ public:
         const QString defaultPixmapPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("user-identity"), KIconLoader::Desktop);
         const QString defaultMapIconPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("map-symbolic"), KIconLoader::Small);
         const QString defaultSmsIconPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("message-new"), KIconLoader::Small);
+        QMap<QString, QString> mapImppIcons;
+        for (const auto &imppService : KContacts::Impp::serviceTypes()) {
+            const QString iconName = KContacts::Impp::serviceIcon(imppService);
+            mapImppIcons.insert(iconName, MessageViewer::IconNameCache::instance()->iconPath(iconName, KIconLoader::Small));
+        }
         if (!memento) {
             memento = new MessageViewer::VcardMemento(lst);
             msgPart->setMemento(memento);
@@ -113,6 +118,12 @@ public:
             const KContacts::Picture photo = a.photo();
             htmlStr.replace(QStringLiteral("<img src=\"map_icon\""), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(defaultMapIconPath));
             htmlStr.replace(QStringLiteral("<img src=\"sms_icon\""), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(defaultSmsIconPath));
+            QMapIterator<QString, QString> iconsMap(mapImppIcons);
+            while (iconsMap.hasNext()) {
+                iconsMap.next();
+                htmlStr.replace(QStringLiteral("<img src=\"%1\"").arg(iconsMap.key()),
+                                QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(iconsMap.value()));
+            }
             if (photo.isEmpty()) {
                 htmlStr.replace(QStringLiteral("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(defaultPixmapPath));
             } else {
