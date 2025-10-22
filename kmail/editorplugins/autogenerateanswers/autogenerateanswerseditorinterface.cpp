@@ -5,9 +5,9 @@
 */
 
 #include "autogenerateanswerseditorinterface.h"
-
 #include "autogenerateanswerseditordialog.h"
 #include "autogenerateanswerseditorplugin_debug.h"
+#include "config-kdepim-addons.h"
 #include "textautogeneratetext_version.h"
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -105,7 +105,18 @@ void AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress(const QStrin
         mAnswersEditorDialog->show();
     }
 #if TEXTAUTOGENERATETEXT_VERSION >= QT_VERSION_CHECK(1, 7, 1)
+#if HAVE_TEXTUTILS_QUICKSEARCH_SUPPORT
+    int numberOfTextSearched = 0;
+    int hightLightStringIndex = 0;
+    mAnswersEditorDialog->setAnswer(
+        TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str, {}, {}, numberOfTextSearched, hightLightStringIndex));
+#else
+#if HAVE_TEXTUTILS_SYNTAXHIGHLIGTHER_SUPPORT
+    mAnswersEditorDialog->setAnswer(TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str, {}));
+#else
     mAnswersEditorDialog->setAnswer(TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str));
+#endif
+#endif
 #else
     mAnswersEditorDialog->setAnswer(str);
 #endif
