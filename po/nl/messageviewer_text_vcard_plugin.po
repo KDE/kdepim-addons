@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:44+0000\n"
 "PO-Revision-Date: 2024-08-01 12:48+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -24,52 +24,52 @@ msgid_plural "Attached business cards"
 msgstr[0] "Bijgevoegd visitekaartje"
 msgstr[1] "Bijgevoegde visitekaartjes"
 
-#: text_vcard.cpp:130
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Deze contactpersoon toevoegen aan het adresboek]"
 
-#: text_vcard.cpp:136
+#: text_vcard.cpp:147
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Deze contactpersoon bijwerken in het adresboek]"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:152
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Deze contactpersoon zit al in het adresboek]"
 
-#: text_vcard.cpp:215
+#: text_vcard.cpp:226
 #, kde-format
 msgid "View Business Card"
 msgstr "Visitekaartje bekijken"
 
-#: text_vcard.cpp:216
+#: text_vcard.cpp:227
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Visitekaartje opslaan als…"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Deze contactpersoon aan het adresboek toevoegen."
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Deze contactpersoon bijwerken in het adresboek."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "\"%1\" aan het adresboek toevoegen."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "\"%1\" in het adresboek bijwerken."
 
-#: text_vcard.cpp:259
+#: text_vcard.cpp:270
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"

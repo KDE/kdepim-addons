@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:44+0000\n"
 "PO-Revision-Date: 2022-07-21 15:57+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -24,53 +24,53 @@ msgid_plural "Attached business cards"
 msgstr[0] "Əlavə edilmiş vizit kartı"
 msgstr[1] "Əlavə edilmiş vizit kartları"
 
-#: text_vcard.cpp:130
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Bu əlaqəni ünvan kitabçasına əlavə edin]"
 
-#: text_vcard.cpp:136
+#: text_vcard.cpp:147
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Ünvan kitabçasındakı bu əlaqəni yeniləyin]"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:152
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Bu əlaqə artıq ünvan kitabçasındadır]"
 
-#: text_vcard.cpp:215
+#: text_vcard.cpp:226
 #, kde-format
 msgid "View Business Card"
 msgstr "Vizit kartına baxın"
 
-#: text_vcard.cpp:216
+#: text_vcard.cpp:227
 #, fuzzy, kde-format
 #| msgid "Save Business Card As..."
 msgid "Save Business Card As…"
 msgstr "Vizit kartını belə saxlayın..."
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Bu əlaqəni ünvan kitabçasına əlavə edin."
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Ünvan kitabçasındakı bu əlaqəni yeniləyin."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "\"%1\" ünvan kitabçasına əlavə edin."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Ünvan kitabçasındakı \"%1\" yeniləyin."
 
-#: text_vcard.cpp:259
+#: text_vcard.cpp:270
 #, fuzzy, kde-format
 #| msgid "Save Business Card"
 msgctxt "@title:window"

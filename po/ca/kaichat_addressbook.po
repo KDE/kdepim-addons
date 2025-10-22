@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-21 00:43+0000\n"
-"PO-Revision-Date: 2025-10-20 09:09+0200\n"
+"PO-Revision-Date: 2025-10-21 09:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: kaichataddressbookplugin.cpp:23
 msgid "AddressBook info"
-msgstr ""
+msgstr "Informació de la llibreta d'adreces"
 
 #: kaichataddressbookplugin.cpp:34
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "Configura el connector de l'eina de la llibreta d'adreces"
 #: kaichataddressbookpluginjob.cpp:24
 #, kde-format
 msgid "Get Email..."
-msgstr ""
+msgstr "Obtén un correu electrònic..."
 
 #~ msgid "The Current Date Time"
 #~ msgstr "La data i hora actual"

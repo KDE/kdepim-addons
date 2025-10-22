@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-21 00:43+0000\n"
-"PO-Revision-Date: 2025-10-20 11:16-0300\n"
+"PO-Revision-Date: 2025-10-21 07:41-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: kaichataddressbookplugin.cpp:23
 msgid "AddressBook info"
-msgstr ""
+msgstr "Informações do livro de endereços"
 
 #: kaichataddressbookplugin.cpp:34
 #, kde-format
@@ -39,7 +39,7 @@ msgstr "Configurar o plugin da ferramenta de livro de endereços"
 #: kaichataddressbookpluginjob.cpp:24
 #, kde-format
 msgid "Get Email..."
-msgstr ""
+msgstr "Obter e-mail..."
 
 #~ msgid "The Current Date Time"
 #~ msgstr "A data e hora atual"

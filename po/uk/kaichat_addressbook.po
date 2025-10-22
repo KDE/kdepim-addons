@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-21 00:43+0000\n"
-"PO-Revision-Date: 2025-10-20 17:09+0300\n"
+"PO-Revision-Date: 2025-10-21 22:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: kaichataddressbookplugin.cpp:23
 msgid "AddressBook info"
-msgstr ""
+msgstr "Відомості щодо адресної книги"
 
 #: kaichataddressbookplugin.cpp:34
 #, kde-format
@@ -42,7 +42,7 @@ msgstr "Налаштувати додаток адресної книги"
 #: kaichataddressbookpluginjob.cpp:24
 #, kde-format
 msgid "Get Email..."
-msgstr ""
+msgstr "Отримати адресу ел. пошти…"
 
 #~ msgid "The Current Date Time"
 #~ msgstr "Поточна дата і час"

@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-10-21 00:43+0000\n"
+"PO-Revision-Date: 2025-10-21 16:26+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: kaichataddressbookplugin.cpp:23
+msgid "AddressBook info"
+msgstr "ინფორმაცია მისამართების წიგნის შესახებ"
+
+#: kaichataddressbookplugin.cpp:34
+#, kde-format
+msgid "Get email address"
+msgstr "ელფოსტის მისამართის მიღება"
+
+#: kaichataddressbookplugin.cpp:39
+#, kde-format
+msgid "Use this tool to get email from akonadi database"
+msgstr "გამოიყენეთ ეს ხელსაწყო ელფოსტის მისაღებად akonadi-ის მონაცემთა ბაზიდან"
+
+#: kaichataddressbookplugindialog.cpp:16
+#, kde-format
+msgid "Configure Addressbook Tool Plugin"
+msgstr "მისამართების წიგნის ხელსაწყოს დამატების მორგება"
+
+#: kaichataddressbookpluginjob.cpp:24
+#, kde-format
+msgid "Get Email..."
+msgstr "ელფოსტის მიღება..."

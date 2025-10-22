@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:44+0000\n"
 "PO-Revision-Date: 2025-07-23 19:44-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -27,52 +27,52 @@ msgid_plural "Attached business cards"
 msgstr[0] "Cartão de visita anexado"
 msgstr[1] "Cartões de visita anexados"
 
-#: text_vcard.cpp:130
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Adicionar este contato ao livro de endereços]"
 
-#: text_vcard.cpp:136
+#: text_vcard.cpp:147
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Atualizar este contato no livro de endereços]"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:152
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Este contato já está no livro de endereços]"
 
-#: text_vcard.cpp:215
+#: text_vcard.cpp:226
 #, kde-format
 msgid "View Business Card"
 msgstr "Exibir cartão de visita"
 
-#: text_vcard.cpp:216
+#: text_vcard.cpp:227
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Salvar cartão de visita como..."
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Adicionar este contato ao livro de endereços."
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Atualizar este contato no livro de endereços."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Adicionar \"%1\" ao livro de endereços."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Atualizar \"%1\" no livro de endereços."
 
-#: text_vcard.cpp:259
+#: text_vcard.cpp:270
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:44+0000\n"
 "PO-Revision-Date: 2012-06-20 10:19+0700\n"
 "Last-Translator: Sophea <sophea@khmeros.info>\n"
 "Language-Team: Khmer <>\n"
@@ -25,57 +25,57 @@ msgid "Attached business card"
 msgid_plural "Attached business cards"
 msgstr[0] "នាម​ប័ណ្ណ​ដែល​បាន​ភ្ជាប់"
 
-#: text_vcard.cpp:130
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[បន្ថែម​ទំនាក់​ទំនង​នេះ​ទៅ​សៀវភៅ​អាសយដ្ឋាន]"
 
-#: text_vcard.cpp:136
+#: text_vcard.cpp:147
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the address book]"
 msgid "[Update this contact in the address book]"
 msgstr "[បន្ថែម​ទំនាក់​ទំនង​នេះ​ទៅ​សៀវភៅ​អាសយដ្ឋាន]"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:152
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the address book]"
 msgid "[This contact is already in addressbook]"
 msgstr "[បន្ថែម​ទំនាក់​ទំនង​នេះ​ទៅ​សៀវភៅ​អាសយដ្ឋាន]"
 
-#: text_vcard.cpp:215
+#: text_vcard.cpp:226
 #, kde-format
 msgid "View Business Card"
 msgstr "មើល​នាមប័ណ្ណ​​"
 
-#: text_vcard.cpp:216
+#: text_vcard.cpp:227
 #, fuzzy, kde-format
 #| msgid "Save Business Card As..."
 msgid "Save Business Card As…"
 msgstr "រក្សាទុក​នាម​ប័ណ្ណ​ជា​​..."
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "បន្ថែម​ទំនាក់​ទំនង​នេះ​ទៅ​សៀវភៅ​អាសយដ្ឋាន ។"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the address book]"
 msgid "Update this contact to the address book."
 msgstr "[បន្ថែម​ទំនាក់​ទំនង​នេះ​ទៅ​សៀវភៅ​អាសយដ្ឋាន]"
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "បន្ថែម​​ \"%1\" ​​ទៅកាន់​សៀវភៅ​អាសយដ្ឋាន​ ។"
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, fuzzy, kde-format
 #| msgid "Add \"%1\" to the address book."
 msgid "Update \"%1\" to the address book."
 msgstr "បន្ថែម​​ \"%1\" ​​ទៅកាន់​សៀវភៅ​អាសយដ្ឋាន​ ។"
 
-#: text_vcard.cpp:259
+#: text_vcard.cpp:270
 #, fuzzy, kde-format
 #| msgid "Save Business Card"
 msgctxt "@title:window"

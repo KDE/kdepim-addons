@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:44+0000\n"
 "PO-Revision-Date: 2024-08-01 13:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -31,52 +31,52 @@ msgid_plural "Attached business cards"
 msgstr[0] "Ekteki kartvizit"
 msgstr[1] "Ekteki kartvizitler"
 
-#: text_vcard.cpp:130
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Bu kişiyi adres defterine ekle]"
 
-#: text_vcard.cpp:136
+#: text_vcard.cpp:147
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Bu kişiyi adres defterinde güncelle]"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:152
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Bu kişiyi zaten adres defterinde]"
 
-#: text_vcard.cpp:215
+#: text_vcard.cpp:226
 #, kde-format
 msgid "View Business Card"
 msgstr "Kartviziti Göster"
 
-#: text_vcard.cpp:216
+#: text_vcard.cpp:227
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Kartviziti Farklı Kaydet…"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Bu kişiyi adres defterine ekle."
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Bu kişiyi adres defterinde güncelle."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "“%1” kişisini adres defterine ekleyin."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "“%1” kişisini adres defterinde güncelleyin."
 
-#: text_vcard.cpp:259
+#: text_vcard.cpp:270
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"

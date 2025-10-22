@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:44+0000\n"
 "PO-Revision-Date: 2020-06-03 00:16+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -24,53 +24,53 @@ msgid_plural "Attached business cards"
 msgstr[0] "Cartão de negócio anexado"
 msgstr[1] "Cartões de negócios anexados"
 
-#: text_vcard.cpp:130
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Adicionar este contacto ao livro de endereços]"
 
-#: text_vcard.cpp:136
+#: text_vcard.cpp:147
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Actualizar este contacto no livro de endereços]"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:152
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Este contacto já está no livro de endereços]"
 
-#: text_vcard.cpp:215
+#: text_vcard.cpp:226
 #, kde-format
 msgid "View Business Card"
 msgstr "Ver o Cartão de Negócio"
 
-#: text_vcard.cpp:216
+#: text_vcard.cpp:227
 #, fuzzy, kde-format
 #| msgid "Save Business Card As..."
 msgid "Save Business Card As…"
 msgstr "Gravar o Cartão de Negócio Como..."
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Adicionar este contacto ao livro de endereços."
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Actualizar este contacto no livro de endereços."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Adicionar o \"%1\" ao livro de endereços."
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Adicionar o \"%1\" ao livro de endereços."
 
-#: text_vcard.cpp:259
+#: text_vcard.cpp:270
 #, fuzzy, kde-format
 #| msgid "Save Business Card"
 msgctxt "@title:window"

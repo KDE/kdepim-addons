@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2025-10-22 00:44+0000\n"
 "PO-Revision-Date: 2024-12-14 01:48+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -26,52 +26,52 @@ msgid_plural "Attached business cards"
 msgstr[0] "संलग्नं व्यापारपत्रम्"
 msgstr[1] "संलग्नव्यापारपत्राणि"
 
-#: text_vcard.cpp:130
+#: text_vcard.cpp:141
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[एतत् सम्पर्कं पतापुस्तके योजयन्तु]।"
 
-#: text_vcard.cpp:136
+#: text_vcard.cpp:147
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[एतत् सम्पर्कं पतापुस्तके अद्यतनं कुर्वन्तु]।"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:152
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[एषः सम्पर्कः सम्बोधनपुस्तिकायां पूर्वमेव अस्ति]।"
 
-#: text_vcard.cpp:215
+#: text_vcard.cpp:226
 #, kde-format
 msgid "View Business Card"
 msgstr "व्यवसायपत्रं पश्यन्तु"
 
-#: text_vcard.cpp:216
+#: text_vcard.cpp:227
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "व्यवसायपत्रं रक्षतु यथा…"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "एतत् सम्पर्कं पतापुस्तके योजयन्तु।"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:244
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "एतत् सम्पर्कं पतापुस्तके अद्यतनं कुर्वन्तु।"
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "पतापुस्तके \"%1\" योजयन्तु ।"
 
-#: text_vcard.cpp:235
+#: text_vcard.cpp:246
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "\"%1\" इत्येतत् पतापुस्तके अद्यतनं कुर्वन्तु ।"
 
-#: text_vcard.cpp:259
+#: text_vcard.cpp:270
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
