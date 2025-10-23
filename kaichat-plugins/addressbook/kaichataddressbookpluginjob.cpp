@@ -25,6 +25,8 @@ void KAIChatAddressBookPluginJob::start()
 
     deleteLater();
     // TODO
+    Q_EMIT finished({}, {}, {}, {});
+    // TODO
 }
 
 #include "moc_kaichataddressbookpluginjob.cpp"
