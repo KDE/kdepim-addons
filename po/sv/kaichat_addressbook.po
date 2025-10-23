@@ -1,46 +1,42 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-21 00:43+0000\n"
-"PO-Revision-Date: 2025-10-21 14:40+0300\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: צוות התרגום של KDE ישראל\n"
-"Language: he\n"
+"PO-Revision-Date: 2025-10-22 20:14+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.08.1\n"
 
 #: kaichataddressbookplugin.cpp:23
 msgid "AddressBook info"
-msgstr "פרטי פנקס כתובות"
+msgstr "Adressboksinformation"
 
 #: kaichataddressbookplugin.cpp:34
 #, kde-format
 msgid "Get email address"
-msgstr "קבלת כתובת דוא״ל"
+msgstr "Hämta e-postadress"
 
 #: kaichataddressbookplugin.cpp:39
 #, kde-format
 msgid "Use this tool to get email from akonadi database"
-msgstr "אפשר להשתמש בכלי הזה כדי לקבל הודעות דוא״ל ממסד הנתונים של Akonadi"
+msgstr "Använd verktyget för att hämta e-post från akonadi-databasen"
 
 #: kaichataddressbookplugindialog.cpp:16
 #, kde-format
 msgid "Configure Addressbook Tool Plugin"
-msgstr "הגדרת תוסף כלי ספר כתובות"
+msgstr "Anpassa verktygsinsticksprogrammet adressbok"
 
 #: kaichataddressbookpluginjob.cpp:24
 #, kde-format
 msgid "Get Email..."
-msgstr "קבלת דוא״ל…"
-
-#~ msgid "The Current Date Time"
-#~ msgstr "התאריך והשעה הנוכחיים"
+msgstr "Hämta e-post..."

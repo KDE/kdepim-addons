@@ -1,7 +1,7 @@
 # Translation for kaichat_addressbook.po to Euskara/Basque (eu).
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-21 00:43+0000\n"
-"PO-Revision-Date: 2025-10-19 23:41+0200\n"
+"PO-Revision-Date: 2025-10-23 00:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: kaichataddressbookplugin.cpp:23
 msgid "AddressBook info"
-msgstr ""
+msgstr "Helbide-liburuaren informazioa"
 
 #: kaichataddressbookplugin.cpp:34
 #, kde-format
@@ -35,15 +35,14 @@ msgid "Use this tool to get email from akonadi database"
 msgstr "Erabili tresna hau akonadi datu-basetik e-posta lortzeko"
 
 #: kaichataddressbookplugindialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Configure Addressbool Tool Plugin"
+#, kde-format
 msgid "Configure Addressbook Tool Plugin"
-msgstr "Konfiguratu Addressbook tresna plugina"
+msgstr "Konfiguratu Helbide-liburua tresnaren plugina"
 
 #: kaichataddressbookpluginjob.cpp:24
 #, kde-format
 msgid "Get Email..."
-msgstr ""
+msgstr "Lortu e-posta..."
 
 #~ msgid "The Current Date Time"
 #~ msgstr "Uneko data ordua"
