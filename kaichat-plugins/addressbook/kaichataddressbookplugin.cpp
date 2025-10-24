@@ -25,6 +25,12 @@ KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVaria
         prop.setTypeElements({KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Email)});
         mProperties.append(prop);
     }
+    {
+        TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
+        prop.setDescription(kli18n("Name of user"));
+        prop.setName(u"username"_s);
+        mProperties.append(prop);
+    }
 }
 
 KAIChatAddressBookPlugin::~KAIChatAddressBookPlugin() = default;
