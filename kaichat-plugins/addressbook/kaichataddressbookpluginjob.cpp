@@ -35,9 +35,11 @@ void KAIChatAddressBookPluginJob::start()
                 if (arg == "addressbookinfo"_L1) {
                     const KAIChatAddressBookPluginUtils::AddressBookEnum typeAddressBook = KAIChatAddressBookPluginUtils::convertStringToAddressBookEnum(value);
                     switch (typeAddressBook) {
-                    case KAIChatAddressBookPluginUtils::AddressBookEnum::Email:
+                    case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
+                        auto job = new Akonadi::ContactSearchJob(this);
+                        // TODO
                         // TODO result = i18n("Current time is %1", QLocale().toString(QTime::currentTime()));
-                        break;
+                    } break;
                     case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
                         qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid addressbook argument" << value;
                         break;
