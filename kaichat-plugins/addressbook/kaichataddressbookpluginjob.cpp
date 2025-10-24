@@ -6,6 +6,7 @@
 #include "kaichataddressbookpluginjob.h"
 #include "kaichat_addressbookplugin_debug.h"
 #include "kaichataddressbookpluginutils.h"
+#include <Akonadi/ContactSearchJob>
 #include <KLocalizedString>
 
 using namespace Qt::Literals::StringLiterals;

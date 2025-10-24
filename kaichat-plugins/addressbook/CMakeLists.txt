@@ -23,4 +23,4 @@ target_sources(
     kaichataddressbookpluginutils.cpp
     kaichataddressbookpluginutils.h
 )
-target_link_libraries(kaichat_addressbookplugin KF6::TextAutoGenerateText)
+target_link_libraries(kaichat_addressbookplugin KF6::TextAutoGenerateText KPim6::AkonadiContactCore)
