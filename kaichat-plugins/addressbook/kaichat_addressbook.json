@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This tool plugin allows to get info from addressbook.",
+        "Description[ar]": "تتيح لك هذه الملحقة الحصول على المعلومات من دفتر العناوين",
         "Description[bg]": "Този инструмент плъгин позволява да се получи информация от адресната книга.",
         "Description[ca@valencia]": "Este connector d'eina permet obtindre informació de la llibreta d'adreces.",
         "Description[ca]": "Aquest connector d'eina permet obtenir informació de la llibreta d'adreces.",
@@ -11,10 +12,12 @@
         "Description[nl]": "Deze hulpmiddelplug-in stelt u in staat informatie te halen uit het adresboek.",
         "Description[pt_BR]": "Este plugin permite obter informações do livro de endereços.",
         "Description[sl]": "Ta vstavek vam omogoča dobiti informacije iz adresarja.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att hämta information från adressboken.",
         "Description[tr]": "Bu eklenti, bir adres defterinden bilgi almanıza olanak tanır.",
         "Description[uk]": "Цей додаток інструменту надає змогу отримувати відомості з адресної книги.",
         "EnabledByDefault": true,
         "Name": "AddressBook",
+        "Name[ar]": "دفتر العناوين",
         "Name[bg]": "Адресна книга",
         "Name[ca@valencia]": "Llibreta d'adreces",
         "Name[ca]": "Llibreta d'adreces",
@@ -25,6 +28,7 @@
         "Name[nl]": "Adresboek",
         "Name[pt_BR]": "Livro de endereços",
         "Name[sl]": "Adresar",
+        "Name[sv]": "Adressbok",
         "Name[tr]": "Adres Defteri",
         "Name[uk]": "Адресна книга",
         "Version": "1.0"
