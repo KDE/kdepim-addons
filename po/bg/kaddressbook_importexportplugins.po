@@ -3,13 +3,13 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Krasimir Aranudov <krasi.arnaudov@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-21 00:43+0000\n"
-"PO-Revision-Date: 2024-05-30 19:17+0200\n"
+"PO-Revision-Date: 2025-10-24 22:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: csv/csvimportexportplugininterface.cpp:35
 #, kde-format
@@ -260,10 +260,10 @@ msgid ""
 "if the comma is the field delimiter, then any comma occurring with the data "
 "will be \"quoted\" by the character specified here."
 msgstr ""
-"Избиране на символа, който вашите csv данни използват, за да  \"цитират \" "
-"разделителя на полето, ако този знак се появи в данните. Например, ако "
+"Избиране на символа, който вашите csv данни използват, за да  \"цитират  "
+"„разделителя на полето, ако този знак се появи в данните. Например, ако "
 "запетаята е разделител на полето, тогава всяка запетая, срещаща се с "
-"данните, ще бъде \"цитиран \" от посочения тук знак."
+"данните, ще бъде \"цитиран  „от посочения тук знак."
 
 #: csv/import/csvimportdialog.cpp:376
 #, kde-format
@@ -326,7 +326,7 @@ msgstr ""
 "<item> M: месец с 2 цифри </item><item> d: ден с 1 или 2 цифри </item> "
 "<item> D: ден с 2 цифри </item><item> H: часове с 2 цифри </item><item> I: "
 "минути с 2 цифри </item><item> S : секунди с 2 цифри </item></list></"
-"para><para> Пример: \"YMD \" съответства на дата като \\2012-01-04 \" </para>"
+"para><para> Пример: \"YMD  „съответства на дата като \\2012-01-04  „</para>"
 
 #: csv/import/csvimportdialog.cpp:417
 #, kde-format
@@ -451,7 +451,7 @@ msgstr "Устройството не е отворено"
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to delete template '%1'?"
-msgstr "Наистина ли искате да премахнете шаблон \" %1 \"?"
+msgstr "Наистина ли искате да премахнете шаблон  „%1 \"?"
 
 #: csv/import/templateselectiondialog.cpp:203
 #, kde-format

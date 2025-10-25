@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-21 00:43+0000\n"
+"POT-Creation-Date: 2025-10-25 00:42+0000\n"
 "PO-Revision-Date: 2025-10-21 09:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -23,12 +23,16 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "Informació de la llibreta d'adreces"
 
-#: kaichataddressbookplugin.cpp:34
+#: kaichataddressbookplugin.cpp:30
+msgid "Name of user"
+msgstr ""
+
+#: kaichataddressbookplugin.cpp:40
 #, kde-format
 msgid "Get email address"
 msgstr "Obtén una adreça de correu electrònic"
 
-#: kaichataddressbookplugin.cpp:39
+#: kaichataddressbookplugin.cpp:45
 #, kde-format
 msgid "Use this tool to get email from akonadi database"
 msgstr ""
@@ -40,7 +44,7 @@ msgstr ""
 msgid "Configure Addressbook Tool Plugin"
 msgstr "Configura el connector de l'eina de la llibreta d'adreces"
 
-#: kaichataddressbookpluginjob.cpp:24
+#: kaichataddressbookpluginjob.cpp:28
 #, kde-format
 msgid "Get Email..."
 msgstr "Obtén un correu electrònic..."
