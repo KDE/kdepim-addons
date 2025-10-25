@@ -25,6 +25,7 @@ void KAIChatAddressBookPluginJob::start()
         return;
     }
 
+    qDebug() << " toolArguments " << toolArguments();
     Q_EMIT toolInProgress(i18n("Get Email..."));
     QString result;
     QString userName;
@@ -36,7 +37,6 @@ void KAIChatAddressBookPluginJob::start()
                 const QString value = resultTool.value;
                 if (arg == "addressbookinfo"_L1) {
                     typeAddressBook = KAIChatAddressBookPluginUtils::convertStringToAddressBookEnum(value);
-
                 } else if (arg == "username"_L1) {
                     userName = value;
                 } else {
@@ -56,7 +56,6 @@ void KAIChatAddressBookPluginJob::start()
         break;
     }
 
-    qDebug() << " toolArguments " << toolArguments();
     Q_EMIT finished(result, mMessageUuid, mChatId, mToolIdentifier);
     deleteLater();
 }
