@@ -27,26 +27,33 @@ void KAIChatAddressBookPluginJob::start()
 
     Q_EMIT toolInProgress(i18n("Get Email..."));
     QString result;
+    QString userName;
     const QStringList lst = requiredArguments();
+    KAIChatAddressBookPluginUtils::AddressBookEnum typeAddressBook = KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
     for (const auto &arg : lst) {
         for (const auto &resultTool : std::as_const(mToolArguments)) {
             if (resultTool.keyTool == arg) {
                 const QString value = resultTool.value;
                 if (arg == "addressbookinfo"_L1) {
-                    const KAIChatAddressBookPluginUtils::AddressBookEnum typeAddressBook = KAIChatAddressBookPluginUtils::convertStringToAddressBookEnum(value);
-                    switch (typeAddressBook) {
-                    case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
-                        auto job = new Akonadi::ContactSearchJob(this);
-                        // TODO
-                        // TODO result = i18n("Current time is %1", QLocale().toString(QTime::currentTime()));
-                    } break;
-                    case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
-                        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid addressbook argument" << value;
-                        break;
-                    }
+                    typeAddressBook = KAIChatAddressBookPluginUtils::convertStringToAddressBookEnum(value);
+
+                } else if (arg == "username"_L1) {
+                    userName = value;
+                } else {
+                    qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid argument : " << value;
                 }
             }
         }
+    }
+    switch (typeAddressBook) {
+    case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
+        auto job = new Akonadi::ContactSearchJob(this);
+        // TODO
+        // TODO result = i18n("Current time is %1", QLocale().toString(QTime::currentTime()));
+    } break;
+    case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
+        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid addressbook argument";
+        break;
     }
 
     qDebug() << " toolArguments " << toolArguments();
