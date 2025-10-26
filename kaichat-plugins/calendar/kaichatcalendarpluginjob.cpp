@@ -4,8 +4,8 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "kaichatcalendarpluginjob.h"
-#include "kaichat_addressbookplugin_debug.h"
-#include "kaichataddressbookpluginutils.h"
+#include "kaichat_calendarplugin_debug.h"
+#include "kaichatcalendarpluginutils.h"
 #include <Akonadi/ContactSearchJob>
 #include <KJob>
 #include <KLocalizedString>
@@ -21,7 +21,7 @@ KAIChatCalendarPluginJob::~KAIChatCalendarPluginJob() = default;
 void KAIChatCalendarPluginJob::start()
 {
     if (!canStart()) {
-        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << " Impossible to start KAIChatCalendarPluginJob" << *this;
+        qCWarning(KAICHAT_CALENDAR_LOG) << " Impossible to start KAIChatCalendarPluginJob" << *this;
         deleteLater();
         return;
     }
@@ -30,36 +30,36 @@ void KAIChatCalendarPluginJob::start()
     Q_EMIT toolInProgress(i18n("Get Email..."));
     QString userName;
     const QStringList lst = requiredArguments();
-    KAIChatAddressBookPluginUtils::AddressBookEnum typeAddressBook = KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
+    KAIChatCalendarPluginUtils::CalendarEnum typecalendar = KAIChatCalendarPluginUtils::CalendarEnum::Unknown;
     for (const auto &arg : lst) {
         for (const auto &resultTool : std::as_const(mToolArguments)) {
             if (resultTool.keyTool == arg) {
                 const QString value = resultTool.value;
-                if (arg == "addressbookinfo"_L1) {
-                    typeAddressBook = KAIChatAddressBookPluginUtils::convertStringToAddressBookEnum(value);
+                if (arg == "calendarinfo"_L1) {
+                    typecalendar = KAIChatCalendarPluginUtils::convertStringToCalendarEnum(value);
                 } else if (arg == "username"_L1) {
                     userName = value;
                 } else {
-                    qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid argument : " << value;
+                    qCWarning(KAICHAT_CALENDAR_LOG) << "Invalid argument : " << value;
                 }
             }
         }
     }
-    switch (typeAddressBook) {
-    case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
+    switch (typecalendar) {
+    case KAIChatCalendarPluginUtils::CalendarEnum::Email: {
         auto job = new Akonadi::ContactSearchJob(this);
         job->setProperty("userName", userName.toUtf8());
         job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
         connect(job, &KJob::result, this, &KAIChatCalendarPluginJob::slotContactEmailSearchDone);
     } break;
-    case KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday: {
+    case KAIChatCalendarPluginUtils::CalendarEnum::Birthday: {
         auto job = new Akonadi::ContactSearchJob(this);
         job->setProperty("userName", userName.toUtf8());
         job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
         connect(job, &KJob::result, this, &KAIChatCalendarPluginJob::slotContactBirthdaySearchDone);
     } break;
-    case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
-        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid addressbook argument";
+    case KAIChatCalendarPluginUtils::CalendarEnum::Unknown:
+        qCWarning(KAICHAT_CALENDAR_LOG) << "Invalid calendar argument";
         deleteLater();
         break;
     }
@@ -69,7 +69,7 @@ void KAIChatCalendarPluginJob::slotContactBirthdaySearchDone(KJob *job)
 {
     const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
     if (searchJob->contacts().isEmpty()) {
-        Q_EMIT finished(i18n("No Contact found in addressbook for %1", job->property("userName").toString()), mMessageUuid, mChatId, mToolIdentifier);
+        Q_EMIT finished(i18n("No Contact found in calendar for %1", job->property("userName").toString()), mMessageUuid, mChatId, mToolIdentifier);
     } else {
         const KContacts::Addressee contact = searchJob->contacts().constFirst();
         qDebug() << " contact " << contact.toString();
@@ -83,7 +83,7 @@ void KAIChatCalendarPluginJob::slotContactEmailSearchDone(KJob *job)
 {
     const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
     if (searchJob->contacts().isEmpty()) {
-        Q_EMIT finished(i18n("No Contact found in addressbook for %1", job->property("userName").toString()), mMessageUuid, mChatId, mToolIdentifier);
+        Q_EMIT finished(i18n("No Contact found in calendar for %1", job->property("userName").toString()), mMessageUuid, mChatId, mToolIdentifier);
     } else {
         const KContacts::Addressee contact = searchJob->contacts().constFirst();
         qDebug() << " contact " << contact.toString();

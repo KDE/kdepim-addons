@@ -4,10 +4,10 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "kaichatcalendarpluginutils.h"
-#include "kaichat_addressbookplugin_debug.h"
+#include "kaichat_calendarplugin_debug.h"
 
 using namespace Qt::Literals::StringLiterals;
-QString KAIChatCalendarPluginUtils::convertAddressBookEnumToString(AddressBookEnum type)
+QString KAIChatCalendarPluginUtils::convertCalendarEnumToString(CalendarEnum type)
 {
     switch (type) {
     case Email:
@@ -21,15 +21,15 @@ QString KAIChatCalendarPluginUtils::convertAddressBookEnumToString(AddressBookEn
     return {};
 }
 
-KAIChatCalendarPluginUtils::AddressBookEnum KAIChatCalendarPluginUtils::convertStringToAddressBookEnum(const QString &str)
+KAIChatCalendarPluginUtils::CalendarEnum KAIChatCalendarPluginUtils::convertStringToCalendarEnum(const QString &str)
 {
     if (str == "email"_L1) {
-        return KAIChatCalendarPluginUtils::AddressBookEnum::Email;
+        return KAIChatCalendarPluginUtils::CalendarEnum::Email;
     } else if (str == "birthday"_L1) {
-        return KAIChatCalendarPluginUtils::AddressBookEnum::Birthday;
+        return KAIChatCalendarPluginUtils::CalendarEnum::Birthday;
     } else {
-        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid AddressBook type:" << str;
-        return KAIChatCalendarPluginUtils::AddressBookEnum::Unknown;
+        qCWarning(KAICHAT_CALENDAR_LOG) << "Invalid calendar type:" << str;
+        return KAIChatCalendarPluginUtils::CalendarEnum::Unknown;
     }
-    return KAIChatCalendarPluginUtils::AddressBookEnum::Unknown;
+    return KAIChatCalendarPluginUtils::CalendarEnum::Unknown;
 }

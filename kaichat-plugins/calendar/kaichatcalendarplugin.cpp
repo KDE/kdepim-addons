@@ -5,25 +5,25 @@
 */
 
 #include "kaichatcalendarplugin.h"
-#include "kaichataddressbookplugindialog.h"
-#include "kaichataddressbookpluginjob.h"
-#include "kaichataddressbookpluginutils.h"
+#include "kaichatcalendarplugindialog.h"
+#include "kaichatcalendarpluginjob.h"
+#include "kaichatcalendarpluginutils.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QPointer>
-K_PLUGIN_CLASS_WITH_JSON(KAIChatCalendarPlugin, "kaichat_addressbook.json")
+K_PLUGIN_CLASS_WITH_JSON(KAIChatCalendarPlugin, "kaichat_calendar.json")
 
 using namespace Qt::Literals::StringLiterals;
 KAIChatCalendarPlugin::KAIChatCalendarPlugin(QObject *parent, const QVariantList &)
     : TextAutoGenerateTextToolPlugin{parent}
 {
-    mToolNameId = "addressbook_plugin"_ba;
+    mToolNameId = "calendar_plugin"_ba;
     {
         TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
-        prop.setDescription(kli18n("AddressBook info"));
-        prop.setName(u"addressbookinfo"_s);
-        prop.setTypeElements({KAIChatCalendarPluginUtils::convertAddressBookEnumToString(KAIChatCalendarPluginUtils::Email),
-                              KAIChatCalendarPluginUtils::convertAddressBookEnumToString(KAIChatCalendarPluginUtils::Birthday)});
+        prop.setDescription(kli18n("calendar info"));
+        prop.setName(u"calendarinfo"_s);
+        prop.setTypeElements({KAIChatCalendarPluginUtils::convertCalendarEnumToString(KAIChatCalendarPluginUtils::Email),
+                              KAIChatCalendarPluginUtils::convertCalendarEnumToString(KAIChatCalendarPluginUtils::Birthday)});
         mProperties.append(prop);
     }
     {
@@ -38,7 +38,7 @@ KAIChatCalendarPlugin::~KAIChatCalendarPlugin() = default;
 
 QString KAIChatCalendarPlugin::displayName() const
 {
-    return i18n("Get Info From AddressBook");
+    return i18n("Get Info From calendar");
 }
 
 QString KAIChatCalendarPlugin::description() const
@@ -63,5 +63,5 @@ void KAIChatCalendarPlugin::callTools(const QByteArray &chatId,
     }
 }
 
-#include "kaichataddressbookplugin.moc"
+#include "kaichatcalendarplugin.moc"
 #include "moc_kaichatcalendarplugin.cpp"

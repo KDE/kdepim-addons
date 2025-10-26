@@ -4,22 +4,22 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "kaichatcalendarplugindialog.h"
-#include "kaichataddressbookpluginwidget.h"
+#include "kaichatcalendarpluginwidget.h"
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <TextAutoGenerateText/TextAutoGenerateTextToolPlugin>
 using namespace Qt::Literals::StringLiterals;
 KAIChatCalendarPluginDialog::KAIChatCalendarPluginDialog(TextAutoGenerateText::TextAutoGenerateTextToolPlugin *plugin, QWidget *parent)
     : QDialog(parent)
-    , mAddressbookToolPluginWidget(new KAIChatAddressBookPluginWidget(plugin, this))
+    , mCalendarToolPluginWidget(new KAIChatCalendarPluginWidget(plugin, this))
 {
-    setWindowTitle(plugin ? plugin->displayName() : i18n("Configure Addressbook Tool Plugin"));
+    setWindowTitle(plugin ? plugin->displayName() : i18n("Configure Calendar Tool Plugin"));
 
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(u"mainLayout"_s);
 
-    mAddressbookToolPluginWidget->setObjectName(u"mCurrentDateTimeToolPluginWidget"_s);
-    mainLayout->addWidget(mAddressbookToolPluginWidget);
+    mCalendarToolPluginWidget->setObjectName(u"mCurrentDateTimeToolPluginWidget"_s);
+    mainLayout->addWidget(mCalendarToolPluginWidget);
 
     auto button = new QDialogButtonBox(QDialogButtonBox::Close, this);
     button->setObjectName(u"button"_s);

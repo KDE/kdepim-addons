@@ -9,7 +9,7 @@ namespace TextAutoGenerateText
 {
 class TextAutoGenerateTextToolPlugin;
 }
-class KAIChatAddressBookPluginWidget;
+class KAIChatCalendarPluginWidget;
 class KAIChatCalendarPluginDialog : public QDialog
 {
     Q_OBJECT
@@ -18,5 +18,5 @@ public:
     ~KAIChatCalendarPluginDialog() override;
 
 private:
-    KAIChatAddressBookPluginWidget *const mAddressbookToolPluginWidget;
+    KAIChatCalendarPluginWidget *const mCalendarToolPluginWidget;
 };

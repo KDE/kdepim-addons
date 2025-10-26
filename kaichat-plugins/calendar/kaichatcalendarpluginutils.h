@@ -7,12 +7,12 @@
 #include <QString>
 namespace KAIChatCalendarPluginUtils
 {
-enum AddressBookEnum : int8_t {
+enum CalendarEnum : int8_t {
     Unknown = 0,
     Email,
     Birthday
     // TODO add more
 };
-[[nodiscard]] QString convertAddressBookEnumToString(KAIChatCalendarPluginUtils::AddressBookEnum type);
-[[nodiscard]] KAIChatCalendarPluginUtils::AddressBookEnum convertStringToAddressBookEnum(const QString &str);
+[[nodiscard]] QString convertCalendarEnumToString(KAIChatCalendarPluginUtils::CalendarEnum type);
+[[nodiscard]] KAIChatCalendarPluginUtils::CalendarEnum convertStringToCalendarEnum(const QString &str);
 };
