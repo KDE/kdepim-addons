@@ -4,17 +4,17 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "kaichataddressbookplugin.h"
+#include "kaichatcalendarplugin.h"
 #include "kaichataddressbookplugindialog.h"
 #include "kaichataddressbookpluginjob.h"
 #include "kaichataddressbookpluginutils.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QPointer>
-K_PLUGIN_CLASS_WITH_JSON(KAIChatAddressBookPlugin, "kaichat_addressbook.json")
+K_PLUGIN_CLASS_WITH_JSON(KAIChatCalendarPlugin, "kaichat_addressbook.json")
 
 using namespace Qt::Literals::StringLiterals;
-KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVariantList &)
+KAIChatCalendarPlugin::KAIChatCalendarPlugin(QObject *parent, const QVariantList &)
     : TextAutoGenerateTextToolPlugin{parent}
 {
     mToolNameId = "addressbook_plugin"_ba;
@@ -22,8 +22,8 @@ KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVaria
         TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
         prop.setDescription(kli18n("AddressBook info"));
         prop.setName(u"addressbookinfo"_s);
-        prop.setTypeElements({KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Email),
-                              KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Birthday)});
+        prop.setTypeElements({KAIChatCalendarPluginUtils::convertAddressBookEnumToString(KAIChatCalendarPluginUtils::Email),
+                              KAIChatCalendarPluginUtils::convertAddressBookEnumToString(KAIChatCalendarPluginUtils::Birthday)});
         mProperties.append(prop);
     }
     {
@@ -34,34 +34,34 @@ KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVaria
     }
 }
 
-KAIChatAddressBookPlugin::~KAIChatAddressBookPlugin() = default;
+KAIChatCalendarPlugin::~KAIChatCalendarPlugin() = default;
 
-QString KAIChatAddressBookPlugin::displayName() const
+QString KAIChatCalendarPlugin::displayName() const
 {
     return i18n("Get Info From AddressBook");
 }
 
-QString KAIChatAddressBookPlugin::description() const
+QString KAIChatCalendarPlugin::description() const
 {
     return i18n("Use this tool to get user info from akonadi database");
 }
 
-void KAIChatAddressBookPlugin::showConfigureDialog(QWidget *parent)
+void KAIChatCalendarPlugin::showConfigureDialog(QWidget *parent)
 {
-    auto dlg = KAIChatAddressBookPluginDialog(this, parent);
+    auto dlg = KAIChatCalendarPluginDialog(this, parent);
     dlg.exec();
 }
 
-void KAIChatAddressBookPlugin::callTools(const QByteArray &chatId,
-                                         const QByteArray &uuid,
-                                         const QList<TextAutoGenerateText::TextAutoGenerateReply::ToolCallArgumentInfo> &info)
+void KAIChatCalendarPlugin::callTools(const QByteArray &chatId,
+                                      const QByteArray &uuid,
+                                      const QList<TextAutoGenerateText::TextAutoGenerateReply::ToolCallArgumentInfo> &info)
 {
     for (const auto &i : info) {
-        auto job = new KAIChatAddressBookPluginJob(this);
+        auto job = new KAIChatCalendarPluginJob(this);
         initializeJob(job, chatId, uuid, i);
         job->start();
     }
 }
 
 #include "kaichataddressbookplugin.moc"
-#include "moc_kaichataddressbookplugin.cpp"
+#include "moc_kaichatcalendarplugin.cpp"

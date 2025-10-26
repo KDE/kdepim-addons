@@ -3,13 +3,13 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later
 */
-#include "kaichataddressbookplugindialog.h"
+#include "kaichatcalendarplugindialog.h"
 #include "kaichataddressbookpluginwidget.h"
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <TextAutoGenerateText/TextAutoGenerateTextToolPlugin>
 using namespace Qt::Literals::StringLiterals;
-KAIChatAddressBookPluginDialog::KAIChatAddressBookPluginDialog(TextAutoGenerateText::TextAutoGenerateTextToolPlugin *plugin, QWidget *parent)
+KAIChatCalendarPluginDialog::KAIChatCalendarPluginDialog(TextAutoGenerateText::TextAutoGenerateTextToolPlugin *plugin, QWidget *parent)
     : QDialog(parent)
     , mAddressbookToolPluginWidget(new KAIChatAddressBookPluginWidget(plugin, this))
 {
@@ -24,9 +24,9 @@ KAIChatAddressBookPluginDialog::KAIChatAddressBookPluginDialog(TextAutoGenerateT
     auto button = new QDialogButtonBox(QDialogButtonBox::Close, this);
     button->setObjectName(u"button"_s);
     mainLayout->addWidget(button);
-    connect(button, &QDialogButtonBox::rejected, this, &KAIChatAddressBookPluginDialog::reject);
+    connect(button, &QDialogButtonBox::rejected, this, &KAIChatCalendarPluginDialog::reject);
 }
 
-KAIChatAddressBookPluginDialog::~KAIChatAddressBookPluginDialog() = default;
+KAIChatCalendarPluginDialog::~KAIChatCalendarPluginDialog() = default;
 
-#include "moc_kaichataddressbookplugindialog.cpp"
+#include "moc_kaichatcalendarplugindialog.cpp"

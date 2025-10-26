@@ -3,11 +3,11 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later
 */
-#include "kaichataddressbookpluginwidget.h"
+#include "kaichatcalendarpluginwidget.h"
 #include <QVBoxLayout>
 #include <TextAutoGenerateText/TextAutoGenerateToolPluginConfigureWidget>
 using namespace Qt::Literals::StringLiterals;
-KAIChatAddressBookPluginWidget::KAIChatAddressBookPluginWidget(TextAutoGenerateText::TextAutoGenerateTextToolPlugin *plugin, QWidget *parent)
+KAIChatCalendarPluginWidget::KAIChatCalendarPluginWidget(TextAutoGenerateText::TextAutoGenerateTextToolPlugin *plugin, QWidget *parent)
     : QWidget{parent}
     , mConfigureWidget(new TextAutoGenerateText::TextAutoGenerateToolPluginConfigureWidget(plugin, this))
 {
@@ -20,6 +20,6 @@ KAIChatAddressBookPluginWidget::KAIChatAddressBookPluginWidget(TextAutoGenerateT
     mainLayout->addStretch(1);
 }
 
-KAIChatAddressBookPluginWidget::~KAIChatAddressBookPluginWidget() = default;
+KAIChatCalendarPluginWidget::~KAIChatCalendarPluginWidget() = default;
 
-#include "moc_kaichataddressbookpluginwidget.cpp"
+#include "moc_kaichatcalendarpluginwidget.cpp"

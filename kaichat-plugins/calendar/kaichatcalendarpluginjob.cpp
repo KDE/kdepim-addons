@@ -3,7 +3,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later
 */
-#include "kaichataddressbookpluginjob.h"
+#include "kaichatcalendarpluginjob.h"
 #include "kaichat_addressbookplugin_debug.h"
 #include "kaichataddressbookpluginutils.h"
 #include <Akonadi/ContactSearchJob>
@@ -11,17 +11,17 @@
 #include <KLocalizedString>
 
 using namespace Qt::Literals::StringLiterals;
-KAIChatAddressBookPluginJob::KAIChatAddressBookPluginJob(QObject *parent)
+KAIChatCalendarPluginJob::KAIChatCalendarPluginJob(QObject *parent)
     : TextAutoGenerateText::TextAutoGenerateTextToolPluginJob{parent}
 {
 }
 
-KAIChatAddressBookPluginJob::~KAIChatAddressBookPluginJob() = default;
+KAIChatCalendarPluginJob::~KAIChatCalendarPluginJob() = default;
 
-void KAIChatAddressBookPluginJob::start()
+void KAIChatCalendarPluginJob::start()
 {
     if (!canStart()) {
-        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << " Impossible to start KAIChatAddressBookPluginJob" << *this;
+        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << " Impossible to start KAIChatCalendarPluginJob" << *this;
         deleteLater();
         return;
     }
@@ -50,13 +50,13 @@ void KAIChatAddressBookPluginJob::start()
         auto job = new Akonadi::ContactSearchJob(this);
         job->setProperty("userName", userName.toUtf8());
         job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
-        connect(job, &KJob::result, this, &KAIChatAddressBookPluginJob::slotContactEmailSearchDone);
+        connect(job, &KJob::result, this, &KAIChatCalendarPluginJob::slotContactEmailSearchDone);
     } break;
     case KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday: {
         auto job = new Akonadi::ContactSearchJob(this);
         job->setProperty("userName", userName.toUtf8());
         job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
-        connect(job, &KJob::result, this, &KAIChatAddressBookPluginJob::slotContactBirthdaySearchDone);
+        connect(job, &KJob::result, this, &KAIChatCalendarPluginJob::slotContactBirthdaySearchDone);
     } break;
     case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
         qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid addressbook argument";
@@ -65,7 +65,7 @@ void KAIChatAddressBookPluginJob::start()
     }
 }
 
-void KAIChatAddressBookPluginJob::slotContactBirthdaySearchDone(KJob *job)
+void KAIChatCalendarPluginJob::slotContactBirthdaySearchDone(KJob *job)
 {
     const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
     if (searchJob->contacts().isEmpty()) {
@@ -79,7 +79,7 @@ void KAIChatAddressBookPluginJob::slotContactBirthdaySearchDone(KJob *job)
     deleteLater();
 }
 
-void KAIChatAddressBookPluginJob::slotContactEmailSearchDone(KJob *job)
+void KAIChatCalendarPluginJob::slotContactEmailSearchDone(KJob *job)
 {
     const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
     if (searchJob->contacts().isEmpty()) {
@@ -93,4 +93,4 @@ void KAIChatAddressBookPluginJob::slotContactEmailSearchDone(KJob *job)
     deleteLater();
 }
 
-#include "moc_kaichataddressbookpluginjob.cpp"
+#include "moc_kaichatcalendarpluginjob.cpp"

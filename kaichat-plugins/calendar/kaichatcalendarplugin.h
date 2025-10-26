@@ -8,12 +8,12 @@
 
 #include <QVariant>
 #include <TextAutoGenerateText/TextAutoGenerateTextToolPlugin>
-class KAIChatAddressBookPlugin : public TextAutoGenerateText::TextAutoGenerateTextToolPlugin
+class KAIChatCalendarPlugin : public TextAutoGenerateText::TextAutoGenerateTextToolPlugin
 {
     Q_OBJECT
 public:
-    explicit KAIChatAddressBookPlugin(QObject *parent = nullptr, const QVariantList & = {});
-    ~KAIChatAddressBookPlugin() override;
+    explicit KAIChatCalendarPlugin(QObject *parent = nullptr, const QVariantList & = {});
+    ~KAIChatCalendarPlugin() override;
 
     [[nodiscard]] QString displayName() const override;
     [[nodiscard]] QString description() const override;

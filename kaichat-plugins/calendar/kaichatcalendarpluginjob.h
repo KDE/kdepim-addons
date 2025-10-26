@@ -6,12 +6,12 @@
 #pragma once
 #include <TextAutoGenerateText/TextAutoGenerateTextToolPluginJob>
 class KJob;
-class KAIChatAddressBookPluginJob : public TextAutoGenerateText::TextAutoGenerateTextToolPluginJob
+class KAIChatCalendarPluginJob : public TextAutoGenerateText::TextAutoGenerateTextToolPluginJob
 {
     Q_OBJECT
 public:
-    explicit KAIChatAddressBookPluginJob(QObject *parent = nullptr);
-    ~KAIChatAddressBookPluginJob() override;
+    explicit KAIChatCalendarPluginJob(QObject *parent = nullptr);
+    ~KAIChatCalendarPluginJob() override;
     void start() override;
 
 private:

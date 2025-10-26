@@ -10,12 +10,12 @@ namespace TextAutoGenerateText
 class TextAutoGenerateTextToolPlugin;
 }
 class KAIChatAddressBookPluginWidget;
-class KAIChatAddressBookPluginDialog : public QDialog
+class KAIChatCalendarPluginDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit KAIChatAddressBookPluginDialog(TextAutoGenerateText::TextAutoGenerateTextToolPlugin *plugin, QWidget *parent = nullptr);
-    ~KAIChatAddressBookPluginDialog() override;
+    explicit KAIChatCalendarPluginDialog(TextAutoGenerateText::TextAutoGenerateTextToolPlugin *plugin, QWidget *parent = nullptr);
+    ~KAIChatCalendarPluginDialog() override;
 
 private:
     KAIChatAddressBookPluginWidget *const mAddressbookToolPluginWidget;
