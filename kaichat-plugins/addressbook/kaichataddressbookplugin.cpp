@@ -38,12 +38,12 @@ KAIChatAddressBookPlugin::~KAIChatAddressBookPlugin() = default;
 
 QString KAIChatAddressBookPlugin::displayName() const
 {
-    return i18n("Get email address");
+    return i18n("Get Info From AddressBook");
 }
 
 QString KAIChatAddressBookPlugin::description() const
 {
-    return i18n("Use this tool to get email from akonadi database");
+    return i18n("Use this tool to get user info from akonadi database");
 }
 
 void KAIChatAddressBookPlugin::showConfigureDialog(QWidget *parent)
