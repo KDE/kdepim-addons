@@ -7,6 +7,7 @@
 #include "kaichat_addressbookplugin_debug.h"
 #include "kaichataddressbookpluginutils.h"
 #include <Akonadi/ContactSearchJob>
+#include <KJob>
 #include <KLocalizedString>
 
 using namespace Qt::Literals::StringLiterals;
@@ -48,15 +49,32 @@ void KAIChatAddressBookPluginJob::start()
     switch (typeAddressBook) {
     case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
         auto job = new Akonadi::ContactSearchJob(this);
-        // TODO
-        // TODO result = i18n("Current time is %1", QLocale().toString(QTime::currentTime()));
+        job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
+        connect(job, &KJob::result, this, &KAIChatAddressBookPluginJob::slotContactSearchDone);
     } break;
     case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
         qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid addressbook argument";
+        deleteLater();
         break;
     }
-
+#if 0
     Q_EMIT finished(result, mMessageUuid, mChatId, mToolIdentifier);
+    deleteLater();
+#endif
+}
+
+void KAIChatAddressBookPluginJob::slotContactSearchDone(KJob *job)
+{
+    const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
+
+    if (searchJob->contacts().isEmpty()) {
+        // TODO
+        Q_EMIT finished(i18n("No Contact found in addressbook for <username>"), mMessageUuid, mChatId, mToolIdentifier);
+    } else {
+        const KContacts::Addressee contact = searchJob->contacts().constFirst();
+        // TODO
+        // TODO Q_EMIT finished(result, mMessageUuid, mChatId, mToolIdentifier);
+    }
     deleteLater();
 }
 

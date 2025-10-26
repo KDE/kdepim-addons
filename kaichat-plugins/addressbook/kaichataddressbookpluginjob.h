@@ -5,7 +5,7 @@
 */
 #pragma once
 #include <TextAutoGenerateText/TextAutoGenerateTextToolPluginJob>
-
+class KJob;
 class KAIChatAddressBookPluginJob : public TextAutoGenerateText::TextAutoGenerateTextToolPluginJob
 {
     Q_OBJECT
@@ -13,4 +13,7 @@ public:
     explicit KAIChatAddressBookPluginJob(QObject *parent = nullptr);
     ~KAIChatAddressBookPluginJob() override;
     void start() override;
+
+private:
+    void slotContactSearchDone(KJob *job);
 };
