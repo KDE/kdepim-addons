@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "This tool plugin allows to get information from calendar.",
+        "EnabledByDefault": true,
+        "Name": "Calendar",
+        "Version": "1.0"
+    }
+}

@@ -1,0 +1,35 @@
+/*
+  SPDX-FileCopyrightText: 2025 Laurent Montel <montel@kde.org>
+
+  SPDX-License-Identifier: GPL-2.0-or-later
+*/
+#include "kaichataddressbookpluginutils.h"
+#include "kaichat_addressbookplugin_debug.h"
+
+using namespace Qt::Literals::StringLiterals;
+QString KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(AddressBookEnum type)
+{
+    switch (type) {
+    case Email:
+        return u"email"_s;
+    case Birthday:
+        return u"birthday"_s;
+    case Unknown:
+        break;
+    }
+    Q_UNREACHABLE();
+    return {};
+}
+
+KAIChatAddressBookPluginUtils::AddressBookEnum KAIChatAddressBookPluginUtils::convertStringToAddressBookEnum(const QString &str)
+{
+    if (str == "email"_L1) {
+        return KAIChatAddressBookPluginUtils::AddressBookEnum::Email;
+    } else if (str == "birthday"_L1) {
+        return KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday;
+    } else {
+        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid AddressBook type:" << str;
+        return KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
+    }
+    return KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
+}
