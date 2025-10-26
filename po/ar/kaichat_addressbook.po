@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-25 00:42+0000\n"
-"PO-Revision-Date: 2025-10-23 09:19+0400\n"
+"POT-Creation-Date: 2025-10-26 00:42+0000\n"
+"PO-Revision-Date: 2025-10-25 16:54+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -24,7 +24,7 @@ msgstr "معلومات دفتر العناوين"
 
 #: kaichataddressbookplugin.cpp:30
 msgid "Name of user"
-msgstr ""
+msgstr "اسم المستخدم"
 
 #: kaichataddressbookplugin.cpp:40
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "استخدم هذه الأداة للحصول على البريد الإ
 msgid "Configure Addressbook Tool Plugin"
 msgstr "اضبط محلقة دفتر العناوين"
 
-#: kaichataddressbookpluginjob.cpp:28
+#: kaichataddressbookpluginjob.cpp:29
 #, kde-format
 msgid "Get Email..."
 msgstr "احصل على البريد الإلكترونيّ…"

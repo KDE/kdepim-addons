@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-25 00:42+0000\n"
-"PO-Revision-Date: 2025-10-24 23:21+0200\n"
+"POT-Creation-Date: 2025-10-26 00:42+0000\n"
+"PO-Revision-Date: 2025-10-25 14:30+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -23,7 +23,7 @@ msgstr "Adresboekinformatie"
 
 #: kaichataddressbookplugin.cpp:30
 msgid "Name of user"
-msgstr ""
+msgstr "Naam van gebruiker"
 
 #: kaichataddressbookplugin.cpp:40
 #, kde-format
@@ -40,7 +40,7 @@ msgstr "Gebruik dit hulpmiddel om e-mail uit de akonadi-database op te halen"
 msgid "Configure Addressbook Tool Plugin"
 msgstr "Hulpmiddelplug-in van adresboek configureren"
 
-#: kaichataddressbookpluginjob.cpp:28
+#: kaichataddressbookpluginjob.cpp:29
 #, kde-format
 msgid "Get Email..."
 msgstr "Haal e-mail op..."

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-25 00:42+0000\n"
-"PO-Revision-Date: 2025-10-21 14:40+0300\n"
+"POT-Creation-Date: 2025-10-26 00:42+0000\n"
+"PO-Revision-Date: 2025-10-25 08:12+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -24,7 +24,7 @@ msgstr "פרטי פנקס כתובות"
 
 #: kaichataddressbookplugin.cpp:30
 msgid "Name of user"
-msgstr ""
+msgstr "שם המשתמש"
 
 #: kaichataddressbookplugin.cpp:40
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "אפשר להשתמש בכלי הזה כדי לקבל הודעות דו�
 msgid "Configure Addressbook Tool Plugin"
 msgstr "הגדרת תוסף כלי ספר כתובות"
 
-#: kaichataddressbookpluginjob.cpp:28
+#: kaichataddressbookpluginjob.cpp:29
 #, kde-format
 msgid "Get Email..."
 msgstr "קבלת דוא״ל…"

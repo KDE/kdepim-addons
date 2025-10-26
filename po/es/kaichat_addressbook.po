@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaichat_addressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-25 00:42+0000\n"
-"PO-Revision-Date: 2025-10-22 01:38+0100\n"
+"POT-Creation-Date: 2025-10-26 00:42+0000\n"
+"PO-Revision-Date: 2025-10-25 03:55+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -25,7 +25,7 @@ msgstr "Información de la libreta de direcciones"
 
 #: kaichataddressbookplugin.cpp:30
 msgid "Name of user"
-msgstr ""
+msgstr "Nombre de usuario"
 
 #: kaichataddressbookplugin.cpp:40
 #, kde-format
@@ -44,7 +44,7 @@ msgstr ""
 msgid "Configure Addressbook Tool Plugin"
 msgstr "Configurar el complemento de la herramienta de libreta de direcciones"
 
-#: kaichataddressbookpluginjob.cpp:28
+#: kaichataddressbookpluginjob.cpp:29
 #, kde-format
 msgid "Get Email..."
 msgstr "Obtener dirección de correo electrónico…"
