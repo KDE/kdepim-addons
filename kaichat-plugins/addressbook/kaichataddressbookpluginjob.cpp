@@ -28,7 +28,6 @@ void KAIChatAddressBookPluginJob::start()
 
     qDebug() << " toolArguments " << toolArguments();
     Q_EMIT toolInProgress(i18n("Get Email..."));
-    QString result;
     QString userName;
     const QStringList lst = requiredArguments();
     KAIChatAddressBookPluginUtils::AddressBookEnum typeAddressBook = KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
@@ -58,10 +57,6 @@ void KAIChatAddressBookPluginJob::start()
         deleteLater();
         break;
     }
-#if 0
-    Q_EMIT finished(result, mMessageUuid, mChatId, mToolIdentifier);
-    deleteLater();
-#endif
 }
 
 void KAIChatAddressBookPluginJob::slotContactSearchDone(KJob *job)
