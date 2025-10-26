@@ -51,13 +51,8 @@ void KAIChatCalendarPluginJob::start()
         job->setProperty("userName", userName.toUtf8());
         job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
         connect(job, &KJob::result, this, &KAIChatCalendarPluginJob::slotContactEmailSearchDone);
-    } break;
-    case KAIChatCalendarPluginUtils::CalendarEnum::Birthday: {
-        auto job = new Akonadi::ContactSearchJob(this);
-        job->setProperty("userName", userName.toUtf8());
-        job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
-        connect(job, &KJob::result, this, &KAIChatCalendarPluginJob::slotContactBirthdaySearchDone);
-    } break;
+        break;
+    }
     case KAIChatCalendarPluginUtils::CalendarEnum::Unknown:
         qCWarning(KAICHAT_CALENDAR_LOG) << "Invalid calendar argument";
         deleteLater();

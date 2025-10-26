@@ -12,8 +12,6 @@ QString KAIChatCalendarPluginUtils::convertCalendarEnumToString(CalendarEnum typ
     switch (type) {
     case Email:
         return u"email"_s;
-    case Birthday:
-        return u"birthday"_s;
     case Unknown:
         break;
     }
@@ -25,8 +23,6 @@ KAIChatCalendarPluginUtils::CalendarEnum KAIChatCalendarPluginUtils::convertStri
 {
     if (str == "email"_L1) {
         return KAIChatCalendarPluginUtils::CalendarEnum::Email;
-    } else if (str == "birthday"_L1) {
-        return KAIChatCalendarPluginUtils::CalendarEnum::Birthday;
     } else {
         qCWarning(KAICHAT_CALENDAR_LOG) << "Invalid calendar type:" << str;
         return KAIChatCalendarPluginUtils::CalendarEnum::Unknown;

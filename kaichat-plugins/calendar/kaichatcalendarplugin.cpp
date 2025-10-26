@@ -22,8 +22,7 @@ KAIChatCalendarPlugin::KAIChatCalendarPlugin(QObject *parent, const QVariantList
         TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
         prop.setDescription(kli18n("calendar info"));
         prop.setName(u"calendarinfo"_s);
-        prop.setTypeElements({KAIChatCalendarPluginUtils::convertCalendarEnumToString(KAIChatCalendarPluginUtils::Email),
-                              KAIChatCalendarPluginUtils::convertCalendarEnumToString(KAIChatCalendarPluginUtils::Birthday)});
+        prop.setTypeElements({KAIChatCalendarPluginUtils::convertCalendarEnumToString(KAIChatCalendarPluginUtils::Email)});
         mProperties.append(prop);
     }
     {
