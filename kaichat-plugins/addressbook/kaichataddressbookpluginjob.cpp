@@ -51,13 +51,15 @@ void KAIChatAddressBookPluginJob::start()
         job->setProperty("userName", userName.toUtf8());
         job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
         connect(job, &KJob::result, this, &KAIChatAddressBookPluginJob::slotContactEmailSearchDone);
-    } break;
+        break;
+    }
     case KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday: {
         auto job = new Akonadi::ContactSearchJob(this);
         job->setProperty("userName", userName.toUtf8());
         job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
         connect(job, &KJob::result, this, &KAIChatAddressBookPluginJob::slotContactBirthdaySearchDone);
-    } break;
+        break;
+    }
     case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
         qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid addressbook argument";
         deleteLater();
