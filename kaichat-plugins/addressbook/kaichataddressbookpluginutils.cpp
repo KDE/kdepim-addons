@@ -12,6 +12,8 @@ QString KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(AddressBoo
     switch (type) {
     case Email:
         return u"email"_s;
+    case Birthday:
+        return u"birthday"_s;
     case Unknown:
         break;
     }
@@ -23,6 +25,8 @@ KAIChatAddressBookPluginUtils::AddressBookEnum KAIChatAddressBookPluginUtils::co
 {
     if (str == "email"_L1) {
         return KAIChatAddressBookPluginUtils::AddressBookEnum::Email;
+    } else if (str == "birthday"_L1) {
+        return KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday;
     } else {
         qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid AddressBook type:" << str;
         return KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;

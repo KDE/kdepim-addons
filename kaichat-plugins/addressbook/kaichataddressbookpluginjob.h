@@ -15,5 +15,6 @@ public:
     void start() override;
 
 private:
-    void slotContactSearchDone(KJob *job);
+    void slotContactEmailSearchDone(KJob *job);
+    void slotContactBirthdaySearchDone(KJob *job);
 };

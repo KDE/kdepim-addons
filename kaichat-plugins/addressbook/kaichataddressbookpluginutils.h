@@ -10,6 +10,7 @@ namespace KAIChatAddressBookPluginUtils
 enum AddressBookEnum : int8_t {
     Unknown = 0,
     Email,
+    Birthday
     // TODO add more
 };
 [[nodiscard]] QString convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::AddressBookEnum type);
