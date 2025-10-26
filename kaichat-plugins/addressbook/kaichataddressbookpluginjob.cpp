@@ -49,6 +49,7 @@ void KAIChatAddressBookPluginJob::start()
     switch (typeAddressBook) {
     case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
         auto job = new Akonadi::ContactSearchJob(this);
+        job->setProperty("userName", userName.toUtf8());
         job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
         connect(job, &KJob::result, this, &KAIChatAddressBookPluginJob::slotContactSearchDone);
     } break;
@@ -66,14 +67,13 @@ void KAIChatAddressBookPluginJob::start()
 void KAIChatAddressBookPluginJob::slotContactSearchDone(KJob *job)
 {
     const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
-
     if (searchJob->contacts().isEmpty()) {
-        // TODO
-        Q_EMIT finished(i18n("No Contact found in addressbook for <username>"), mMessageUuid, mChatId, mToolIdentifier);
+        Q_EMIT finished(i18n("No Contact found in addressbook for <username>", job->property("userName").toString()), mMessageUuid, mChatId, mToolIdentifier);
     } else {
         const KContacts::Addressee contact = searchJob->contacts().constFirst();
-        // TODO
-        // TODO Q_EMIT finished(result, mMessageUuid, mChatId, mToolIdentifier);
+        qDebug() << " contact " << contact.toString();
+        const QString result = i18n("The preferred email is %1", contact.preferredEmail());
+        Q_EMIT finished(result, mMessageUuid, mChatId, mToolIdentifier);
     }
     deleteLater();
 }
