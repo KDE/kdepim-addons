@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-26 00:42+0000\n"
+"POT-Creation-Date: 2025-10-27 00:43+0000\n"
 "PO-Revision-Date: 2025-10-25 07:02+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -22,18 +22,19 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "Informacije adresarja"
 
-#: kaichataddressbookplugin.cpp:30
+#: kaichataddressbookplugin.cpp:31
 msgid "Name of user"
 msgstr "Ime uporabnika"
 
-#: kaichataddressbookplugin.cpp:40
+#: kaichataddressbookplugin.cpp:41
 #, kde-format
-msgid "Get email address"
-msgstr "Dobi naslov e-pošte"
+msgid "Get Info From AddressBook"
+msgstr ""
 
-#: kaichataddressbookplugin.cpp:45
-#, kde-format
-msgid "Use this tool to get email from akonadi database"
+#: kaichataddressbookplugin.cpp:46
+#, fuzzy, kde-format
+#| msgid "Use this tool to get email from akonadi database"
+msgid "Use this tool to get user info from akonadi database"
 msgstr ""
 "Uporabi to orodje za pridobitev naslova e-pošte iz podatkovne zbirke akonadi"
 
@@ -42,10 +43,28 @@ msgstr ""
 msgid "Configure Addressbook Tool Plugin"
 msgstr "Konfiguriraj vtičnik orodja Addressbook"
 
-#: kaichataddressbookpluginjob.cpp:29
+#: kaichataddressbookpluginjob.cpp:30
 #, kde-format
 msgid "Get Email..."
 msgstr "Dobi naslov e-pošte..."
+
+#: kaichataddressbookpluginjob.cpp:72 kaichataddressbookpluginjob.cpp:86
+#, kde-format
+msgid "No Contact found in addressbook for %1"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:76
+#, kde-format
+msgid "Birthday for %1 is %2"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:90
+#, kde-format
+msgid "The preferred email is %1"
+msgstr ""
+
+#~ msgid "Get email address"
+#~ msgstr "Dobi naslov e-pošte"
 
 #~ msgid "The Current Date Time"
 #~ msgstr "Trenutni datum n čas"

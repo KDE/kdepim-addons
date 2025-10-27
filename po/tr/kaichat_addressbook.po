@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-26 00:42+0000\n"
+"POT-Creation-Date: 2025-10-27 00:43+0000\n"
 "PO-Revision-Date: 2025-10-25 21:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -21,18 +21,19 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "Adres Defteri Bilgisi"
 
-#: kaichataddressbookplugin.cpp:30
+#: kaichataddressbookplugin.cpp:31
 msgid "Name of user"
 msgstr "Kullanıcının adı"
 
-#: kaichataddressbookplugin.cpp:40
+#: kaichataddressbookplugin.cpp:41
 #, kde-format
-msgid "Get email address"
-msgstr "E-posta Adresini Al"
+msgid "Get Info From AddressBook"
+msgstr ""
 
-#: kaichataddressbookplugin.cpp:45
-#, kde-format
-msgid "Use this tool to get email from akonadi database"
+#: kaichataddressbookplugin.cpp:46
+#, fuzzy, kde-format
+#| msgid "Use this tool to get email from akonadi database"
+msgid "Use this tool to get user info from akonadi database"
 msgstr "Akonadi veritabanından e-posta bilgisi almak için bu aracı kullanın"
 
 #: kaichataddressbookplugindialog.cpp:16
@@ -40,10 +41,28 @@ msgstr "Akonadi veritabanından e-posta bilgisi almak için bu aracı kullanın"
 msgid "Configure Addressbook Tool Plugin"
 msgstr "Adres Defteri Aracı Eklentisini Yapılandır"
 
-#: kaichataddressbookpluginjob.cpp:29
+#: kaichataddressbookpluginjob.cpp:30
 #, kde-format
 msgid "Get Email..."
 msgstr "E-postayı Al…"
+
+#: kaichataddressbookpluginjob.cpp:72 kaichataddressbookpluginjob.cpp:86
+#, kde-format
+msgid "No Contact found in addressbook for %1"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:76
+#, kde-format
+msgid "Birthday for %1 is %2"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:90
+#, kde-format
+msgid "The preferred email is %1"
+msgstr ""
+
+#~ msgid "Get email address"
+#~ msgstr "E-posta Adresini Al"
 
 #~ msgid "The Current Date Time"
 #~ msgstr "Geçerli Tarih/Zaman"

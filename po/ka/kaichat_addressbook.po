@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-26 00:42+0000\n"
+"POT-Creation-Date: 2025-10-27 00:43+0000\n"
 "PO-Revision-Date: 2025-10-25 06:33+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -22,18 +22,19 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "ინფორმაცია მისამართების წიგნის შესახებ"
 
-#: kaichataddressbookplugin.cpp:30
+#: kaichataddressbookplugin.cpp:31
 msgid "Name of user"
 msgstr "მომხმარებლის სახელი"
 
-#: kaichataddressbookplugin.cpp:40
+#: kaichataddressbookplugin.cpp:41
 #, kde-format
-msgid "Get email address"
-msgstr "ელფოსტის მისამართის მიღება"
+msgid "Get Info From AddressBook"
+msgstr ""
 
-#: kaichataddressbookplugin.cpp:45
-#, kde-format
-msgid "Use this tool to get email from akonadi database"
+#: kaichataddressbookplugin.cpp:46
+#, fuzzy, kde-format
+#| msgid "Use this tool to get email from akonadi database"
+msgid "Use this tool to get user info from akonadi database"
 msgstr "გამოიყენეთ ეს ხელსაწყო ელფოსტის მისაღებად akonadi-ის მონაცემთა ბაზიდან"
 
 #: kaichataddressbookplugindialog.cpp:16
@@ -41,7 +42,25 @@ msgstr "გამოიყენეთ ეს ხელსაწყო ელფ
 msgid "Configure Addressbook Tool Plugin"
 msgstr "მისამართების წიგნის ხელსაწყოს დამატების მორგება"
 
-#: kaichataddressbookpluginjob.cpp:29
+#: kaichataddressbookpluginjob.cpp:30
 #, kde-format
 msgid "Get Email..."
 msgstr "ელფოსტის მიღება..."
+
+#: kaichataddressbookpluginjob.cpp:72 kaichataddressbookpluginjob.cpp:86
+#, kde-format
+msgid "No Contact found in addressbook for %1"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:76
+#, kde-format
+msgid "Birthday for %1 is %2"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:90
+#, kde-format
+msgid "The preferred email is %1"
+msgstr ""
+
+#~ msgid "Get email address"
+#~ msgstr "ელფოსტის მისამართის მიღება"

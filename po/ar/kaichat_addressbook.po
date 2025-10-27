@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-26 00:42+0000\n"
+"POT-Creation-Date: 2025-10-27 00:43+0000\n"
 "PO-Revision-Date: 2025-10-25 16:54+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -22,18 +22,19 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "معلومات دفتر العناوين"
 
-#: kaichataddressbookplugin.cpp:30
+#: kaichataddressbookplugin.cpp:31
 msgid "Name of user"
 msgstr "اسم المستخدم"
 
-#: kaichataddressbookplugin.cpp:40
+#: kaichataddressbookplugin.cpp:41
 #, kde-format
-msgid "Get email address"
-msgstr "احصل على عنوان البريد الإلكترونيّ"
+msgid "Get Info From AddressBook"
+msgstr ""
 
-#: kaichataddressbookplugin.cpp:45
-#, kde-format
-msgid "Use this tool to get email from akonadi database"
+#: kaichataddressbookplugin.cpp:46
+#, fuzzy, kde-format
+#| msgid "Use this tool to get email from akonadi database"
+msgid "Use this tool to get user info from akonadi database"
 msgstr "استخدم هذه الأداة للحصول على البريد الإلكتروني من قاعدة بيانات أكونادي"
 
 #: kaichataddressbookplugindialog.cpp:16
@@ -41,7 +42,25 @@ msgstr "استخدم هذه الأداة للحصول على البريد الإ
 msgid "Configure Addressbook Tool Plugin"
 msgstr "اضبط محلقة دفتر العناوين"
 
-#: kaichataddressbookpluginjob.cpp:29
+#: kaichataddressbookpluginjob.cpp:30
 #, kde-format
 msgid "Get Email..."
 msgstr "احصل على البريد الإلكترونيّ…"
+
+#: kaichataddressbookpluginjob.cpp:72 kaichataddressbookpluginjob.cpp:86
+#, kde-format
+msgid "No Contact found in addressbook for %1"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:76
+#, kde-format
+msgid "Birthday for %1 is %2"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:90
+#, kde-format
+msgid "The preferred email is %1"
+msgstr ""
+
+#~ msgid "Get email address"
+#~ msgstr "احصل على عنوان البريد الإلكترونيّ"
