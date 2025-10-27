@@ -64,11 +64,25 @@ void KAIChatAddressBookPluginJob::start()
             qDebug() << " contact " << contact.toString();
             switch (typeAddressBook) {
             case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
-                result = i18n("The preferred email for %1 is %2", job->property("userName").toString(), contact.preferredEmail());
+                const QString preferedEmail = contact.preferredEmail();
+                if (preferedEmail.isEmpty()) {
+                    result = i18n("No preferred email found for %1", job->property("userName").toString());
+                } else {
+                    result = i18n("The preferred email for %1 is %2", job->property("userName").toString(), preferedEmail);
+                }
                 break;
             }
             case KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday: {
-                result = i18n("Birthday for %1 is %2", job->property("userName").toString(), contact.birthday().toString());
+                const QString birthday = contact.birthday().toString();
+                if (birthday.isEmpty()) {
+                    result = i18n("No Birthday found for %1", job->property("userName").toString());
+                } else {
+                    result = i18n("Birthday for %1 is %2", job->property("userName").toString(), birthday);
+                }
+                break;
+            }
+            case KAIChatAddressBookPluginUtils::AddressBookEnum::Address: {
+                /* TODO */
                 break;
             }
             case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
