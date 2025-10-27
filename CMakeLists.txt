@@ -279,6 +279,10 @@ if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.48)
     set(HAVE_TEXTUTILS_QUICKSEARCH_SUPPORT TRUE)
 endif()
 
+if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 1.8.53)
+	set(HAVE_NEW_TOOLS_PLUGINS_SUPPORT TRUE)
+endif()
+
 configure_file(
     config-kdepim-addons.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h
@@ -388,7 +392,9 @@ if(TARGET KPim6::ImportWizard)
 endif()
 if(TARGET KF6::TextAutoGenerateText)
     add_subdirectory(pimautogeneratetext)
-    add_subdirectory(kaichat-plugins)
+    if(HAVE_NEW_TOOLS_PLUGINS_SUPPORT)
+        add_subdirectory(kaichat-plugins)
+    endif()
 endif()
 
 ecm_qt_install_logging_categories(
