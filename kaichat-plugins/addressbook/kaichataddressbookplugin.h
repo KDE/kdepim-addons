@@ -20,6 +20,5 @@ public:
 
     void showConfigureDialog(QWidget *parent) override;
 
-    void
-    callTools(const QByteArray &chatId, const QByteArray &uuid, const QList<TextAutoGenerateText::TextAutoGenerateReply::ToolCallArgumentInfo> &info) override;
+    [[nodiscard]] TextAutoGenerateText::TextAutoGenerateTextToolPluginJob *callTool() override;
 };

@@ -51,15 +51,9 @@ void KAIChatCalendarPlugin::showConfigureDialog(QWidget *parent)
     dlg.exec();
 }
 
-void KAIChatCalendarPlugin::callTools(const QByteArray &chatId,
-                                      const QByteArray &uuid,
-                                      const QList<TextAutoGenerateText::TextAutoGenerateReply::ToolCallArgumentInfo> &info)
+TextAutoGenerateText::TextAutoGenerateTextToolPluginJob *KAIChatCalendarPlugin::callTool()
 {
-    for (const auto &i : info) {
-        auto job = new KAIChatCalendarPluginJob(this);
-        initializeJob(job, chatId, uuid, i);
-        job->start();
-    }
+    return new KAIChatCalendarPluginJob(this);
 }
 
 #include "kaichatcalendarplugin.moc"

@@ -45,54 +45,39 @@ void KAIChatAddressBookPluginJob::start()
             }
         }
     }
-    switch (typeAddressBook) {
-    case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
-        auto job = new Akonadi::ContactSearchJob(this);
-        job->setProperty("userName", userName.toUtf8());
-        job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
-        connect(job, &KJob::result, this, &KAIChatAddressBookPluginJob::slotContactEmailSearchDone);
-        break;
-    }
-    case KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday: {
-        auto job = new Akonadi::ContactSearchJob(this);
-        job->setProperty("userName", userName.toUtf8());
-        job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
-        connect(job, &KJob::result, this, &KAIChatAddressBookPluginJob::slotContactBirthdaySearchDone);
-        break;
-    }
-    case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
+    if (typeAddressBook == KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown) {
         qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid addressbook argument";
         deleteLater();
-        break;
+        return;
     }
-}
 
-void KAIChatAddressBookPluginJob::slotContactBirthdaySearchDone(KJob *job)
-{
-    const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
-    if (searchJob->contacts().isEmpty()) {
-        Q_EMIT finished(i18n("No Contact found in addressbook for %1", job->property("userName").toString()), mMessageUuid, mChatId, mToolIdentifier);
-    } else {
-        const KContacts::Addressee contact = searchJob->contacts().constFirst();
-        qDebug() << " contact " << contact.toString();
-        const QString result = i18n("Birthday for %1 is %2", job->property("userName").toString(), contact.birthday().toString());
+    auto job = new Akonadi::ContactSearchJob(this);
+    job->setProperty("userName", userName.toUtf8());
+    job->setQuery(Akonadi::ContactSearchJob::Email, userName, Akonadi::ContactSearchJob::ExactMatch);
+    connect(job, &KJob::result, this, [this, typeAddressBook](KJob *job) {
+        const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
+        QString result;
+        if (searchJob->contacts().isEmpty()) {
+            result = i18n("No Contact found in addressbook for %1", job->property("userName").toString());
+        } else {
+            const KContacts::Addressee contact = searchJob->contacts().constFirst();
+            qDebug() << " contact " << contact.toString();
+            switch (typeAddressBook) {
+            case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
+                result = i18n("The preferred email for %1 is %2", job->property("userName").toString(), contact.preferredEmail());
+                break;
+            }
+            case KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday: {
+                result = i18n("Birthday for %1 is %2", job->property("userName").toString(), contact.birthday().toString());
+                break;
+            }
+            case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
+                break;
+            }
+        }
         Q_EMIT finished(result, mMessageUuid, mChatId, mToolIdentifier);
-    }
-    deleteLater();
-}
-
-void KAIChatAddressBookPluginJob::slotContactEmailSearchDone(KJob *job)
-{
-    const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
-    if (searchJob->contacts().isEmpty()) {
-        Q_EMIT finished(i18n("No Contact found in addressbook for %1", job->property("userName").toString()), mMessageUuid, mChatId, mToolIdentifier);
-    } else {
-        const KContacts::Addressee contact = searchJob->contacts().constFirst();
-        qDebug() << " contact " << contact.toString();
-        const QString result = i18n("The preferred email is %1", contact.preferredEmail());
-        Q_EMIT finished(result, mMessageUuid, mChatId, mToolIdentifier);
-    }
-    deleteLater();
+        deleteLater();
+    });
 }
 
 #include "moc_kaichataddressbookpluginjob.cpp"

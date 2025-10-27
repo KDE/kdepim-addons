@@ -13,8 +13,4 @@ public:
     explicit KAIChatAddressBookPluginJob(QObject *parent = nullptr);
     ~KAIChatAddressBookPluginJob() override;
     void start() override;
-
-private:
-    void slotContactEmailSearchDone(KJob *job);
-    void slotContactBirthdaySearchDone(KJob *job);
 };

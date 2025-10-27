@@ -52,15 +52,9 @@ void KAIChatAddressBookPlugin::showConfigureDialog(QWidget *parent)
     dlg.exec();
 }
 
-void KAIChatAddressBookPlugin::callTools(const QByteArray &chatId,
-                                         const QByteArray &uuid,
-                                         const QList<TextAutoGenerateText::TextAutoGenerateReply::ToolCallArgumentInfo> &info)
+TextAutoGenerateText::TextAutoGenerateTextToolPluginJob *KAIChatAddressBookPlugin::callTool()
 {
-    for (const auto &i : info) {
-        auto job = new KAIChatAddressBookPluginJob(this);
-        initializeJob(job, chatId, uuid, i);
-        job->start();
-    }
+    return new KAIChatAddressBookPluginJob(this);
 }
 
 #include "kaichataddressbookplugin.moc"
