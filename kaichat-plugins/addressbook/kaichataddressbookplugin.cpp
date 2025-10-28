@@ -23,7 +23,8 @@ KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVaria
         prop.setDescription(kli18n("AddressBook info"));
         prop.setName(u"addressbookinfo"_s);
         prop.setTypeElements({KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Email),
-                              KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Birthday)});
+                              KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Birthday),
+                              KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Address)});
         mProperties.append(prop);
     }
     {

@@ -82,7 +82,16 @@ void KAIChatAddressBookPluginJob::start()
                 break;
             }
             case KAIChatAddressBookPluginUtils::AddressBookEnum::Address: {
-                /* TODO */
+                const KContacts::Address::List addresses = contact.addresses();
+                QStringList lst;
+                for (const auto &addr : addresses) {
+                    lst << addr.formatted(KContacts::AddressFormatStyle::Postal);
+                }
+                if (lst.isEmpty()) {
+                    result = i18n("No Address found for %1", job->property("userName").toString());
+                } else {
+                    result = i18n("Address found for %1 is %2", job->property("userName").toString(), lst.join(u'\n'));
+                }
                 break;
             }
             case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
