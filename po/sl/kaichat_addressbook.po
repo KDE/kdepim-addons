@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-27 00:43+0000\n"
-"PO-Revision-Date: 2025-10-25 07:02+0200\n"
+"POT-Creation-Date: 2025-10-28 00:43+0000\n"
+"PO-Revision-Date: 2025-10-27 06:47+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -29,14 +29,14 @@ msgstr "Ime uporabnika"
 #: kaichataddressbookplugin.cpp:41
 #, kde-format
 msgid "Get Info From AddressBook"
-msgstr ""
+msgstr "Dobi informacije iz adresarja"
 
 #: kaichataddressbookplugin.cpp:46
-#, fuzzy, kde-format
-#| msgid "Use this tool to get email from akonadi database"
+#, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
-"Uporabi to orodje za pridobitev naslova e-pošte iz podatkovne zbirke akonadi"
+"Uporabi to orodje za pridobitev informacij o uporabniku iz podatkovne zbirke "
+"akonadi"
 
 #: kaichataddressbookplugindialog.cpp:16
 #, kde-format
@@ -48,20 +48,33 @@ msgstr "Konfiguriraj vtičnik orodja Addressbook"
 msgid "Get Email..."
 msgstr "Dobi naslov e-pošte..."
 
-#: kaichataddressbookpluginjob.cpp:72 kaichataddressbookpluginjob.cpp:86
+#: kaichataddressbookpluginjob.cpp:61
 #, kde-format
 msgid "No Contact found in addressbook for %1"
-msgstr ""
+msgstr "Ni najdenih stikov v adresarju za %1"
 
-#: kaichataddressbookpluginjob.cpp:76
+#: kaichataddressbookpluginjob.cpp:69
+#, fuzzy, kde-format
+#| msgid "The preferred email is %1"
+msgid "No preferred email found for %1"
+msgstr "Prednostni e-poštni naslov je %1"
+
+#: kaichataddressbookpluginjob.cpp:71
+#, fuzzy, kde-format
+#| msgid "The preferred email is %1"
+msgid "The preferred email for %1 is %2"
+msgstr "Prednostni e-poštni naslov je %1"
+
+#: kaichataddressbookpluginjob.cpp:78
+#, fuzzy, kde-format
+#| msgid "Birthday for %1 is %2"
+msgid "No Birthday found for %1"
+msgstr "Rojstni dan za %1 je %2"
+
+#: kaichataddressbookpluginjob.cpp:80
 #, kde-format
 msgid "Birthday for %1 is %2"
-msgstr ""
-
-#: kaichataddressbookpluginjob.cpp:90
-#, kde-format
-msgid "The preferred email is %1"
-msgstr ""
+msgstr "Rojstni dan za %1 je %2"
 
 #~ msgid "Get email address"
 #~ msgstr "Dobi naslov e-pošte"

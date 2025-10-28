@@ -1,0 +1,62 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# SPDX-FileCopyrightText: 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-10-28 00:43+0000\n"
+"PO-Revision-Date: 2025-10-27 10:43+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.08.2\n"
+
+#: kaichatcalendarplugin.cpp:23
+msgid "calendar info"
+msgstr "agenda-informatie"
+
+#: kaichatcalendarplugin.cpp:30
+msgid "Name of user"
+msgstr "Naam van gebruiker"
+
+#: kaichatcalendarplugin.cpp:40
+#, kde-format
+msgid "Get Info From calendar"
+msgstr "Informatie uit agenda ophalen"
+
+#: kaichatcalendarplugin.cpp:45
+#, kde-format
+msgid "Use this tool to get user info from akonadi database"
+msgstr ""
+"Gebruik dit hulpmiddel om informatie uit de akonadi-database op te halen"
+
+#: kaichatcalendarplugindialog.cpp:16
+#, kde-format
+msgid "Configure Calendar Tool Plugin"
+msgstr "Plugin voor agendahulpmiddel configureren"
+
+#: kaichatcalendarpluginjob.cpp:30
+#, kde-format
+msgid "Get Email..."
+msgstr "Haal e-mail op..."
+
+#: kaichatcalendarpluginjob.cpp:67 kaichatcalendarpluginjob.cpp:81
+#, kde-format
+msgid "No Contact found in calendar for %1"
+msgstr "Geen contactpersoon gevonden in agenda voor %1"
+
+#: kaichatcalendarpluginjob.cpp:71
+#, kde-format
+msgid "Birthday for %1 is %2"
+msgstr "Verjaardag voor %1 is %2"
+
+#: kaichatcalendarpluginjob.cpp:85
+#, kde-format
+msgid "The preferred email is %1"
+msgstr "Het e-mailadres met voorkeur is %1"
