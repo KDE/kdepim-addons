@@ -118,11 +118,8 @@ public:
             const KContacts::Picture photo = a.photo();
             htmlStr.replace(QStringLiteral("<img src=\"map_icon\""), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(defaultMapIconPath));
             htmlStr.replace(QStringLiteral("<img src=\"sms_icon\""), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(defaultSmsIconPath));
-            QMapIterator<QString, QString> iconsMap(mapImppIcons);
-            while (iconsMap.hasNext()) {
-                iconsMap.next();
-                htmlStr.replace(QStringLiteral("<img src=\"%1\"").arg(iconsMap.key()),
-                                QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(iconsMap.value()));
+            for (const auto &[key, value] : mapImppIcons.asKeyValueRange()) {
+                htmlStr.replace(QStringLiteral("<img src=\"%1\"").arg(key), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(value));
             }
             if (photo.isEmpty()) {
                 htmlStr.replace(QStringLiteral("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(defaultPixmapPath));

@@ -33,11 +33,9 @@ void CheckDuplicateEmailsJob::start()
             }
         }
     }
-    QMapIterator<QString, int> i(results);
-    while (i.hasNext()) {
-        i.next();
-        if (i.value() > 1) {
-            mResult.insert(i.key(), i.value());
+    for (const auto &[key, value] : results.asKeyValueRange()) {
+        if (value > 1) {
+            mResult.insert(key, value);
         }
     }
 }
