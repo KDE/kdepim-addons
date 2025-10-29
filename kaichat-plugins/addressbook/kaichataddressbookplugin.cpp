@@ -47,6 +47,11 @@ QString KAIChatAddressBookPlugin::description() const
     return i18n("Use this tool to get user info from akonadi database");
 }
 
+QString KAIChatAddressBookPlugin::iconName() const
+{
+    return u"office-address-book"_s;
+}
+
 void KAIChatAddressBookPlugin::showConfigureDialog(QWidget *parent)
 {
     auto dlg = KAIChatAddressBookPluginDialog(this, parent);

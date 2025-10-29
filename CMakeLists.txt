@@ -216,7 +216,7 @@ if(OPTION_ADD_AUTOGENERATETEXT)
             DESCRIPTION "Use AI plugin"
     )
 
-    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 1.8.53)
+    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 1.8.54)
         set(HAVE_NEW_TOOLS_PLUGINS_SUPPORT TRUE)
     endif()
 endif()
