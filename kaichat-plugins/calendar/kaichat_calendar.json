@@ -1,8 +1,26 @@
 {
     "KPlugin": {
         "Description": "This tool plugin allows to get information from calendar.",
+        "Description[ca]": "Aquest connector d'eina permet obtenir informació d'un calendari.",
+        "Description[es]": "Este complemento de herramienta permite obtener información del calendario.",
+        "Description[he]": "תוסף הכלי הזה מאפשר לך לקבל מידע מלוח שנה.",
+        "Description[ka]": "ეს ხელსაწყო კალენდრიდან ინფორმაციის მიღების საშუალებას გაძლევთ.",
+        "Description[nl]": "Deze hulpmiddelplug-in stelt u in staat informatie te halen uit agenda.",
+        "Description[pt_BR]": "Este plugin permite obter informações do calendário.",
+        "Description[sl]": "Ta vstavek vam omogoča dobiti informacije iz koledarja.",
+        "Description[tr]": "Bu eklenti, bir takvimden bilgi almanıza olanak tanır.",
+        "Description[uk]": "Цей додаток інструменту надає змогу отримувати відомості з календаря.",
         "EnabledByDefault": true,
         "Name": "Calendar",
+        "Name[ca]": "Calendari",
+        "Name[es]": "Calendario",
+        "Name[he]": "לוח שנה",
+        "Name[ka]": "კალენდარი",
+        "Name[nl]": "Agenda",
+        "Name[pt_BR]": "Calendário",
+        "Name[sl]": "Koledar",
+        "Name[tr]": "Takvim",
+        "Name[uk]": "Календар",
         "Version": "1.0"
     }
 }
