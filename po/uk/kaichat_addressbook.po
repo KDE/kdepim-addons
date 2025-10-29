@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:43+0000\n"
-"PO-Revision-Date: 2025-10-27 16:22+0200\n"
+"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"PO-Revision-Date: 2025-10-28 17:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -22,16 +22,16 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "Відомості щодо адресної книги"
 
-#: kaichataddressbookplugin.cpp:31
+#: kaichataddressbookplugin.cpp:32
 msgid "Name of user"
 msgstr "Ім'я користувача"
 
-#: kaichataddressbookplugin.cpp:41
+#: kaichataddressbookplugin.cpp:42
 #, kde-format
 msgid "Get Info From AddressBook"
 msgstr "Отримати дані з адресної книги"
 
-#: kaichataddressbookplugin.cpp:46
+#: kaichataddressbookplugin.cpp:47
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
@@ -54,26 +54,35 @@ msgid "No Contact found in addressbook for %1"
 msgstr "В адресній книзі не знайдено запису контакту для %1"
 
 #: kaichataddressbookpluginjob.cpp:69
-#, fuzzy, kde-format
-#| msgid "The preferred email is %1"
+#, kde-format
 msgid "No preferred email found for %1"
-msgstr "Бажаною адресою електронної пошти є %1"
+msgstr "Не знайдено бажаної адреси електронної пошти для %1"
 
 #: kaichataddressbookpluginjob.cpp:71
-#, fuzzy, kde-format
-#| msgid "The preferred email is %1"
+#, kde-format
 msgid "The preferred email for %1 is %2"
-msgstr "Бажаною адресою електронної пошти є %1"
+msgstr "Бажаною адресою електронної пошти для %1 є %2"
 
 #: kaichataddressbookpluginjob.cpp:78
-#, fuzzy, kde-format
-#| msgid "Birthday for %1 is %2"
+#, kde-format
 msgid "No Birthday found for %1"
-msgstr "День народження для %1 — %2"
+msgstr "Не знайдено дати народження для %1"
 
 #: kaichataddressbookpluginjob.cpp:80
 #, kde-format
 msgid "Birthday for %1 is %2"
+msgstr "День народження для %1 — %2"
+
+#: kaichataddressbookpluginjob.cpp:91
+#, fuzzy, kde-format
+#| msgid "No Birthday found for %1"
+msgid "No Address found for %1"
+msgstr "Не знайдено дати народження для %1"
+
+#: kaichataddressbookpluginjob.cpp:93
+#, fuzzy, kde-format
+#| msgid "Birthday for %1 is %2"
+msgid "Address found for %1 is %2"
 msgstr "День народження для %1 — %2"
 
 #~ msgid "Get email address"

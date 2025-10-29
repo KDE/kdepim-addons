@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:43+0000\n"
+"POT-Creation-Date: 2025-10-29 00:44+0000\n"
 "PO-Revision-Date: 2025-10-26 20:50+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -21,16 +21,16 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "Adressboksinformation"
 
-#: kaichataddressbookplugin.cpp:31
+#: kaichataddressbookplugin.cpp:32
 msgid "Name of user"
 msgstr "Användarens namn"
 
-#: kaichataddressbookplugin.cpp:41
+#: kaichataddressbookplugin.cpp:42
 #, kde-format
 msgid "Get Info From AddressBook"
 msgstr ""
 
-#: kaichataddressbookplugin.cpp:46
+#: kaichataddressbookplugin.cpp:47
 #, fuzzy, kde-format
 #| msgid "Use this tool to get email from akonadi database"
 msgid "Use this tool to get user info from akonadi database"
@@ -69,6 +69,16 @@ msgstr ""
 #: kaichataddressbookpluginjob.cpp:80
 #, kde-format
 msgid "Birthday for %1 is %2"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:91
+#, kde-format
+msgid "No Address found for %1"
+msgstr ""
+
+#: kaichataddressbookpluginjob.cpp:93
+#, kde-format
+msgid "Address found for %1 is %2"
 msgstr ""
 
 #~ msgid "Get email address"
