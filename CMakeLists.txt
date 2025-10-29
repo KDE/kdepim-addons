@@ -215,6 +215,10 @@ if(OPTION_ADD_AUTOGENERATETEXT)
             PURPOSE "Required for building AI plugins support"
             DESCRIPTION "Use AI plugin"
     )
+
+    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 1.8.53)
+        set(HAVE_NEW_TOOLS_PLUGINS_SUPPORT TRUE)
+    endif()
 endif()
 
 find_package(KPim6Tnef ${KTNEF_LIB_VERSION} CONFIG REQUIRED)
@@ -279,9 +283,6 @@ if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.48)
     set(HAVE_TEXTUTILS_QUICKSEARCH_SUPPORT TRUE)
 endif()
 
-if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 1.8.53)
-	set(HAVE_NEW_TOOLS_PLUGINS_SUPPORT TRUE)
-endif()
 
 configure_file(
     config-kdepim-addons.h.in
