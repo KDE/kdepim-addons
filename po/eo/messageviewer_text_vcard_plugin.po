@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:44+0000\n"
+"POT-Creation-Date: 2025-10-30 00:43+0000\n"
 "PO-Revision-Date: 2024-08-02 22:29+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -27,52 +27,52 @@ msgid_plural "Attached business cards"
 msgstr[0] "Alkroĉita komerca karto"
 msgstr[1] "Alkroĉitaj komercaj kartoj"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:138
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Aldoni ĉi tiun kontakton al adresaro]"
 
-#: text_vcard.cpp:147
+#: text_vcard.cpp:144
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Ĝisdatigi ĉi tiun kontakton en la adresaro]"
 
-#: text_vcard.cpp:152
+#: text_vcard.cpp:149
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Ĉi tiu kontakto jam estas en la adresaro]"
 
-#: text_vcard.cpp:226
+#: text_vcard.cpp:223
 #, kde-format
 msgid "View Business Card"
 msgstr "Vidi komercan karton"
 
-#: text_vcard.cpp:227
+#: text_vcard.cpp:224
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Konservi komercan karton kiel…"
 
-#: text_vcard.cpp:244
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Aldoni ĉi tiun kontakton al adresaro."
 
-#: text_vcard.cpp:244
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Ĝisdatigi ĉi tiun kontakton al adresaro."
 
-#: text_vcard.cpp:246
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Aldoni \"%1\" al adresaro."
 
-#: text_vcard.cpp:246
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Ĝisdatigi\"%1\" al la adresaro."
 
-#: text_vcard.cpp:270
+#: text_vcard.cpp:267
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"

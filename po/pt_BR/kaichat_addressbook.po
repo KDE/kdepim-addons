@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-29 00:44+0000\n"
-"PO-Revision-Date: 2025-10-28 06:58-0300\n"
+"PO-Revision-Date: 2025-10-29 07:25-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -73,16 +73,14 @@ msgid "Birthday for %1 is %2"
 msgstr "O aniversário de %1 é %2"
 
 #: kaichataddressbookpluginjob.cpp:91
-#, fuzzy, kde-format
-#| msgid "No Birthday found for %1"
+#, kde-format
 msgid "No Address found for %1"
-msgstr "Nenhum aniversário encontrado para %1"
+msgstr "Nenhum endereço encontrado para %1"
 
 #: kaichataddressbookpluginjob.cpp:93
-#, fuzzy, kde-format
-#| msgid "Birthday for %1 is %2"
+#, kde-format
 msgid "Address found for %1 is %2"
-msgstr "O aniversário de %1 é %2"
+msgstr "O endereço encontrado para %1 é %2"
 
 #~ msgid "Get email address"
 #~ msgstr "Obter endereço de e-mail"

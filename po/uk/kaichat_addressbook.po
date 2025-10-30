@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-29 00:44+0000\n"
-"PO-Revision-Date: 2025-10-28 17:36+0200\n"
+"PO-Revision-Date: 2025-10-29 11:11+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -74,16 +74,14 @@ msgid "Birthday for %1 is %2"
 msgstr "День народження для %1 — %2"
 
 #: kaichataddressbookpluginjob.cpp:91
-#, fuzzy, kde-format
-#| msgid "No Birthday found for %1"
+#, kde-format
 msgid "No Address found for %1"
-msgstr "Не знайдено дати народження для %1"
+msgstr "Не знайдено адреси для %1"
 
 #: kaichataddressbookpluginjob.cpp:93
-#, fuzzy, kde-format
-#| msgid "Birthday for %1 is %2"
+#, kde-format
 msgid "Address found for %1 is %2"
-msgstr "День народження для %1 — %2"
+msgstr "Знайдена адреса для %1 — %2"
 
 #~ msgid "Get email address"
 #~ msgstr "Отримати адресу ел. пошти"

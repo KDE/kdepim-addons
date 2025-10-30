@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:44+0000\n"
+"POT-Creation-Date: 2025-10-30 00:43+0000\n"
 "PO-Revision-Date: 2013-03-12 17:50+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -24,52 +24,52 @@ msgid_plural "Attached business cards"
 msgstr[0] ""
 msgstr[1] ""
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:138
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr ""
 
-#: text_vcard.cpp:147
+#: text_vcard.cpp:144
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr ""
 
-#: text_vcard.cpp:152
+#: text_vcard.cpp:149
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr ""
 
-#: text_vcard.cpp:226
+#: text_vcard.cpp:223
 #, kde-format
 msgid "View Business Card"
 msgstr ""
 
-#: text_vcard.cpp:227
+#: text_vcard.cpp:224
 #, kde-format
 msgid "Save Business Card As…"
 msgstr ""
 
-#: text_vcard.cpp:244
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr ""
 
-#: text_vcard.cpp:244
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr ""
 
-#: text_vcard.cpp:246
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr ""
 
-#: text_vcard.cpp:246
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr ""
 
-#: text_vcard.cpp:270
+#: text_vcard.cpp:267
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:44+0000\n"
+"POT-Creation-Date: 2025-10-30 00:43+0000\n"
 "PO-Revision-Date: 2015-04-24 13:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -30,55 +30,55 @@ msgstr[1] "Priložene poslovne kartice"
 msgstr[2] "Priložene poslovne kartice"
 msgstr[3] "Priložena poslovna kartica"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:138
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Dodaj ovaj kontakt u adresar]"
 
-#: text_vcard.cpp:147
+#: text_vcard.cpp:144
 #, fuzzy, kde-format
 #| msgid "[Update this contact to the address book]"
 msgid "[Update this contact in the address book]"
 msgstr "[Ažuriraj ovaj kontakt u adresaru]"
 
-#: text_vcard.cpp:152
+#: text_vcard.cpp:149
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Ovaj kontakt je već u adresaru]"
 
-#: text_vcard.cpp:226
+#: text_vcard.cpp:223
 #, kde-format
 msgid "View Business Card"
 msgstr "Prikaži poslovnu karticu"
 
-#: text_vcard.cpp:227
+#: text_vcard.cpp:224
 #, fuzzy, kde-format
 #| msgid "Save Business Card As..."
 msgid "Save Business Card As…"
 msgstr "Sačuvaj poslovnu karticu kao..."
 
-#: text_vcard.cpp:244
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Dodaj ovaj kontakt u adresar"
 
-#: text_vcard.cpp:244
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Ažuriraj ovaj kontakt u adresaru"
 
-#: text_vcard.cpp:246
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Dodaj „%1“ u adresar"
 
-#: text_vcard.cpp:246
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Ažuriraj „%1“ u adresaru"
 
 # >> @title:window
-#: text_vcard.cpp:270
+#: text_vcard.cpp:267
 #, fuzzy, kde-format
 #| msgid "Save Business Card"
 msgctxt "@title:window"

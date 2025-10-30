@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:44+0000\n"
+"POT-Creation-Date: 2025-10-30 00:43+0000\n"
 "PO-Revision-Date: 2024-08-01 06:21+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -31,52 +31,52 @@ msgstr[1] "Priloženi vizitki"
 msgstr[2] "Priložene vizitke"
 msgstr[3] "Priložene vizitke"
 
-#: text_vcard.cpp:141
+#: text_vcard.cpp:138
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Dodaj ta stik v imenik]"
 
-#: text_vcard.cpp:147
+#: text_vcard.cpp:144
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Posodobi ta stik v imeniku]"
 
-#: text_vcard.cpp:152
+#: text_vcard.cpp:149
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Ta stik je že v imeniku]"
 
-#: text_vcard.cpp:226
+#: text_vcard.cpp:223
 #, kde-format
 msgid "View Business Card"
 msgstr "Pokaži vizitko"
 
-#: text_vcard.cpp:227
+#: text_vcard.cpp:224
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Shrani vizitko kot…"
 
-#: text_vcard.cpp:244
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Dodaj ta stik v imenik."
 
-#: text_vcard.cpp:244
+#: text_vcard.cpp:241
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Posodobi ta stik v imeniku."
 
-#: text_vcard.cpp:246
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Dodaj \"%1\" v imenik."
 
-#: text_vcard.cpp:246
+#: text_vcard.cpp:243
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Posodobi \"%1\" v imeniku."
 
-#: text_vcard.cpp:270
+#: text_vcard.cpp:267
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
