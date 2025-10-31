@@ -21,4 +21,6 @@ public:
     void showConfigureDialog(QWidget *parent) override;
 
     [[nodiscard]] TextAutoGenerateText::TextAutoGenerateTextToolPluginJob *callTool() override;
+
+    [[nodiscard]] int order() const override;
 };

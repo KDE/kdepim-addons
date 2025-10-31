@@ -52,6 +52,11 @@ QString KAIChatAddressBookPlugin::iconName() const
     return u"office-address-book"_s;
 }
 
+int KAIChatAddressBookPlugin::order() const
+{
+    return 25;
+}
+
 void KAIChatAddressBookPlugin::showConfigureDialog(QWidget *parent)
 {
     auto dlg = KAIChatAddressBookPluginDialog(this, parent);

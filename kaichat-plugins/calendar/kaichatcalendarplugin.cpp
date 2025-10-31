@@ -56,5 +56,10 @@ TextAutoGenerateText::TextAutoGenerateTextToolPluginJob *KAIChatCalendarPlugin::
     return new KAIChatCalendarPluginJob(this);
 }
 
+int KAIChatCalendarPlugin::order() const
+{
+    return 30;
+}
+
 #include "kaichatcalendarplugin.moc"
 #include "moc_kaichatcalendarplugin.cpp"
