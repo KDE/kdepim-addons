@@ -91,7 +91,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
 #if DISCOUNT_NEW_HIGHLIGHTING_SIGNATURE
     mkd_e_code_format(markdownHandle, external_codefmt, callback_free, nullptr);
 #else
-    // mkd_e_code_format(markdownHandle, external_codefmt);
+    mkd_e_code_format(markdownHandle, external_codefmt);
 #endif
 #endif
     if (!mkd_compile(markdownHandle, flags)) {
