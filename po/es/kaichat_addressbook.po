@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kaichat_addressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-29 00:44+0000\n"
-"PO-Revision-Date: 2025-10-27 21:09+0100\n"
+"PO-Revision-Date: 2025-10-30 12:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -56,22 +56,20 @@ msgstr ""
 "No se ha encontrado ningún contacto en la libreta de direcciones para %1"
 
 #: kaichataddressbookpluginjob.cpp:69
-#, fuzzy, kde-format
-#| msgid "The preferred email is %1"
+#, kde-format
 msgid "No preferred email found for %1"
-msgstr "La dirección de correo electrónico preferida es %1"
+msgstr ""
+"No se ha encontrado una dirección de correo electrónico preferida para %1"
 
 #: kaichataddressbookpluginjob.cpp:71
-#, fuzzy, kde-format
-#| msgid "The preferred email is %1"
+#, kde-format
 msgid "The preferred email for %1 is %2"
-msgstr "La dirección de correo electrónico preferida es %1"
+msgstr "La dirección de correo electrónico preferida para %1 es %2"
 
 #: kaichataddressbookpluginjob.cpp:78
-#, fuzzy, kde-format
-#| msgid "Birthday for %1 is %2"
+#, kde-format
 msgid "No Birthday found for %1"
-msgstr "El cumpleaños de %1 es el %2"
+msgstr "No se ha encontrado el cumpleaños de %1"
 
 #: kaichataddressbookpluginjob.cpp:80
 #, kde-format
@@ -79,13 +77,11 @@ msgid "Birthday for %1 is %2"
 msgstr "El cumpleaños de %1 es el %2"
 
 #: kaichataddressbookpluginjob.cpp:91
-#, fuzzy, kde-format
-#| msgid "Birthday for %1 is %2"
+#, kde-format
 msgid "No Address found for %1"
-msgstr "El cumpleaños de %1 es el %2"
+msgstr "No se ha encontrado ninguna dirección para %1"
 
 #: kaichataddressbookpluginjob.cpp:93
-#, fuzzy, kde-format
-#| msgid "Birthday for %1 is %2"
+#, kde-format
 msgid "Address found for %1 is %2"
-msgstr "El cumpleaños de %1 es el %2"
+msgstr "La dirección encontrada para %1 es %2"
