@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This tool plugin allows to get information from calendar.",
+        "Description[ar]": "تتيح لك هذه الملحقة الحصول على المعلومات من التقويم",
         "Description[bg]": "Този плъгин инструмент позволява да се получи информация от календар.",
         "Description[ca@valencia]": "Este connector d'eina permet obtindre informació des d'un calendari.",
         "Description[ca]": "Aquest connector d'eina permet obtenir informació d'un calendari.",
@@ -15,6 +16,7 @@
         "Description[uk]": "Цей додаток інструменту надає змогу отримувати відомості з календаря.",
         "EnabledByDefault": true,
         "Name": "Calendar",
+        "Name[ar]": "التقويم",
         "Name[bg]": "Календар",
         "Name[ca@valencia]": "Calendari",
         "Name[ca]": "Calendari",
