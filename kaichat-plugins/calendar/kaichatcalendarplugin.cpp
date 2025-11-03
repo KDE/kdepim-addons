@@ -61,5 +61,10 @@ int KAIChatCalendarPlugin::order() const
     return 30;
 }
 
+QString KAIChatCalendarPlugin::iconName() const
+{
+    return u"office-calendar"_s;
+}
+
 #include "kaichatcalendarplugin.moc"
 #include "moc_kaichatcalendarplugin.cpp"
