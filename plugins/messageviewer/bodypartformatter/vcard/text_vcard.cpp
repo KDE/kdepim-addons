@@ -271,7 +271,10 @@ public:
 
         // put the attachment in a temporary file and save it
         QTemporaryFile tmpFile;
-        tmpFile.open();
+        if (!tmpFile.open()) {
+            qCWarning(VCARD_LOG) << "Impossible to create temporary file";
+            return false;
+        }
 
         QByteArray data = vCard.toUtf8();
         tmpFile.write(data);
