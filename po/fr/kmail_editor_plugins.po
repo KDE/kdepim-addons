@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-05 03:04+0000\n"
-"PO-Revision-Date: 2025-06-10 08:20+0200\n"
+"PO-Revision-Date: 2025-09-01 08:27+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -96,7 +96,7 @@ msgstr ""
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:94
 #, kde-format
 msgid "String doesn't seem to be a URL"
-msgstr "La chaîne ne semble pas être une URL"
+msgstr "La chaine ne semble pas être une URL"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:100
 #, kde-format
