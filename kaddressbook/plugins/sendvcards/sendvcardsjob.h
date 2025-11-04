@@ -39,7 +39,7 @@ private:
     const Akonadi::Item::List mListItem;
     MimeTreeParser::AttachmentTemporaryFilesDirs *mAttachmentTemporary = nullptr;
     QTemporaryDir *mTempDir = nullptr;
-    KContacts::VCardConverter::Version mVersion = KContacts::VCardConverter::v3_0;
+    KContacts::VCardConverter::Version mVersion = KContacts::VCardConverter::v4_0;
     int mExpandGroupJobCount = 0;
 };
 }
