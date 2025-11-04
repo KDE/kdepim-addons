@@ -269,7 +269,7 @@ msgid ""
 "will be \"quoted\" by the character specified here."
 msgstr ""
 "Choisir le caractère que vos données CSV utilisent pour « citer » le "
-"délimiteur de champ si ce caractère apparaît dans les données. Par exemple, "
+"délimiteur de champ si ce caractère apparait dans les données. Par exemple, "
 "si la virgule est le délimiteur de champ, alors toute virgule apparaissant "
 "dans les données sera « citée » par le caractère spécifié ici."
 

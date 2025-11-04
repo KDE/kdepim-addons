@@ -124,7 +124,7 @@ msgstr ""
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:94
 #, kde-format
 msgid "String doesn't seem to be a URL"
-msgstr "La chaîne ne semble pas être une URL"
+msgstr "La chaine ne semble pas être une URL"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:100
 #, kde-format
