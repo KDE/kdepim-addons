@@ -28,15 +28,15 @@ void SendVcardsJobTest::shouldHasDefaultValue()
 {
     Akonadi::Item::List lst;
     KABSendVCards::SendVcardsJob job(lst);
-    QCOMPARE(job.version(), KContacts::VCardConverter::v3_0);
+    QCOMPARE(job.version(), KContacts::VCardConverter::v4_0);
 }
 
 void SendVcardsJobTest::shouldChangeExportVersion()
 {
     Akonadi::Item::List lst;
     KABSendVCards::SendVcardsJob job(lst);
-    job.setVersion(KContacts::VCardConverter::v4_0);
-    QCOMPARE(job.version(), KContacts::VCardConverter::v4_0);
+    job.setVersion(KContacts::VCardConverter::v3_0);
+    QCOMPARE(job.version(), KContacts::VCardConverter::v3_0);
 }
 
 QTEST_MAIN(SendVcardsJobTest)
