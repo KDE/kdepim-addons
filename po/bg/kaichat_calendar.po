@@ -1,0 +1,63 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# SPDX-FileCopyrightText: 2025 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-10-28 00:43+0000\n"
+"PO-Revision-Date: 2025-11-07 18:45+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.08.2\n"
+
+#: kaichatcalendarplugin.cpp:23
+msgid "calendar info"
+msgstr "информация за календар"
+
+#: kaichatcalendarplugin.cpp:30
+msgid "Name of user"
+msgstr "Име на потребителя"
+
+#: kaichatcalendarplugin.cpp:40
+#, kde-format
+msgid "Get Info From calendar"
+msgstr "Получаване на информация от календара"
+
+#: kaichatcalendarplugin.cpp:45
+#, kde-format
+msgid "Use this tool to get user info from akonadi database"
+msgstr ""
+" Използване на този инструмент за получаване на потребителска информация от "
+"базата данни на akonadi"
+
+#: kaichatcalendarplugindialog.cpp:16
+#, kde-format
+msgid "Configure Calendar Tool Plugin"
+msgstr "Конфигуриране на плъгина за инструмент за календар"
+
+#: kaichatcalendarpluginjob.cpp:30
+#, kde-format
+msgid "Get Email..."
+msgstr " Получаване на имейл..."
+
+#: kaichatcalendarpluginjob.cpp:67 kaichatcalendarpluginjob.cpp:81
+#, kde-format
+msgid "No Contact found in calendar for %1"
+msgstr "Няма намерен контакт в календара за %1"
+
+#: kaichatcalendarpluginjob.cpp:71
+#, kde-format
+msgid "Birthday for %1 is %2"
+msgstr " Рожденият ден на %1 е %2"
+
+#: kaichatcalendarpluginjob.cpp:85
+#, kde-format
+msgid "The preferred email is %1"
+msgstr "Предпочитаният имейл е %1"
