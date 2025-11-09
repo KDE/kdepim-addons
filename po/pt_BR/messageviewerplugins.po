@@ -5,20 +5,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2015, 2016, 2018.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2021, 2022, 2023.
 # SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-21 00:43+0000\n"
-"PO-Revision-Date: 2025-09-03 07:29-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2025-11-08 21:10-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
 #, kde-format
@@ -35,7 +36,7 @@ msgstr "Expandir URL"
 #, kde-format
 msgctxt "@action"
 msgid "Ask AI…"
-msgstr "Pergunte à IA..."
+msgstr "Pergunte à IA…"
 
 #: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:30
 #, kde-format
@@ -52,7 +53,7 @@ msgstr "Fechar"
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
-msgstr "Traduzir..."
+msgstr "Traduzir…"
 
 #: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
 #, kde-format
@@ -63,7 +64,7 @@ msgstr "&Salvar"
 #, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
-msgstr "Abrir o &editor..."
+msgstr "Abrir o &editor…"
 
 #: createeventplugin/eventedit.cpp:56
 #, kde-format
@@ -122,7 +123,7 @@ msgstr "Fecha a janela para criar os novos eventos."
 #: createeventplugin/viewerplugincreateeventinterface.cpp:68
 #, kde-format
 msgid "Create Event…"
-msgstr "Criar evento..."
+msgstr "Criar evento…"
 
 #: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
@@ -216,7 +217,7 @@ msgstr "Configurar o plugin \"Script externo\""
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
-msgstr "Adicionar script..."
+msgstr "Adicionar script…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
@@ -228,7 +229,7 @@ msgstr "Remover script"
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
-msgstr "Modificar script..."
+msgstr "Modificar script…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
 #, kde-format
@@ -267,7 +268,7 @@ msgstr "Descrição:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
-msgstr "Adicionar argumentos do comando..."
+msgstr "Adicionar argumentos do comando…"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
@@ -279,7 +280,7 @@ msgstr "Linha de comando:"
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
-"<qt><a href=\"whatsthis1\">Informação do formato do argumento...</a></qt>"
+"<qt><a href=\"whatsthis1\">Informação do formato do argumento…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
 #, kde-format

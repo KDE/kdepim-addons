@@ -3,20 +3,21 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2023.
 # SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:43+0000\n"
-"PO-Revision-Date: 2025-07-23 19:43-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2025-11-08 21:10-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: gnupgwksurlhandler.cpp:86
 #, kde-format
@@ -127,7 +128,7 @@ msgstr ""
 
 #: templates/pgpkeymessagepart.html:23
 msgid "Loading key details…"
-msgstr "Carregando detalhes da chave..."
+msgstr "Carregando detalhes da chave…"
 
 #: templates/pgpkeymessagepart.html:28
 msgid "Owner:"
@@ -164,7 +165,7 @@ msgstr "Abrir no Kleopatra"
 
 #: templates/pgpkeymessagepart.html:52
 msgid "Show key details …"
-msgstr "Exibir detalhes da chave..."
+msgstr "Exibir detalhes da chave…"
 
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"

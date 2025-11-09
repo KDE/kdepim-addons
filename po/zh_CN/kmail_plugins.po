@@ -157,7 +157,7 @@ msgstr "搜索..."
 #, kde-format
 msgctxt "@action"
 msgid "Open Folder"
-msgstr ""
+msgstr "打开文件夹"
 
 #: common/antispamwizard.cpp:90
 #, kde-format

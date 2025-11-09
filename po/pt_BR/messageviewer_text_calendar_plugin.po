@@ -7,20 +7,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2015, 2018.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2021.
 # SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-04 14:15+0000\n"
-"PO-Revision-Date: 2025-07-23 19:44-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2025-11-08 21:10-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -470,7 +471,7 @@ msgstr "Abrir anexo"
 #: text_calendar.cpp:1343
 #, kde-format
 msgid "Save Attachment As…"
-msgstr "Salvar anexo como..."
+msgstr "Salvar anexo como…"
 
 #: text_calendar.cpp:1359
 #, kde-format
@@ -490,7 +491,7 @@ msgstr "Aceitar a contraproposta"
 #: text_calendar.cpp:1365
 #, kde-format
 msgid "Create a counter proposal…"
-msgstr "Criar uma contraproposta..."
+msgstr "Criar uma contraproposta…"
 
 #: text_calendar.cpp:1367
 #, kde-format
@@ -515,7 +516,7 @@ msgstr "Recusar a contraproposta"
 #: text_calendar.cpp:1375
 #, kde-format
 msgid "Check my calendar…"
-msgstr "Verificar meu calendário..."
+msgstr "Verificar meu calendário…"
 
 #: text_calendar.cpp:1377
 #, kde-format
