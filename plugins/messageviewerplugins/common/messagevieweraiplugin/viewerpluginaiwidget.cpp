@@ -37,6 +37,8 @@ ViewerPluginAIWidget::ViewerPluginAIWidget(QWidget *parent)
 #endif
     mCloseButton->setAutoRaise(true);
     hboxLayout->addWidget(mCloseButton);
+    hboxLayout->addStretch(1);
+    layout->addLayout(hboxLayout);
     layout->addWidget(mTextAutoGenerateQuickAskWidget);
     connect(mCloseButton, &QToolButton::clicked, this, &ViewerPluginAIWidget::slotCloseWidget);
 }
