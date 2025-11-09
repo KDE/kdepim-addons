@@ -9,11 +9,13 @@
 #include <QStyle>
 #include <QToolButton>
 #include <QVBoxLayout>
+#include <TextAutoGenerateText/TextAutoGenerateManager>
 #include <TextAutoGenerateText/TextAutoGenerateQuickAskWidget>
 using namespace Qt::Literals::StringLiterals;
 ViewerPluginAIWidget::ViewerPluginAIWidget(QWidget *parent)
     : QWidget{parent}
     , mCloseButton(new QToolButton(this))
+    , mTextAutoGenerateQuickAskWidget(new TextAutoGenerateText::TextAutoGenerateQuickAskWidget(new TextAutoGenerateText::TextAutoGenerateManager(this)))
 {
     auto layout = new QVBoxLayout(this);
     layout->setSpacing(0);
@@ -35,6 +37,7 @@ ViewerPluginAIWidget::ViewerPluginAIWidget(QWidget *parent)
 #endif
     mCloseButton->setAutoRaise(true);
     hboxLayout->addWidget(mCloseButton);
+    layout->addWidget(mTextAutoGenerateQuickAskWidget);
     connect(mCloseButton, &QToolButton::clicked, this, &ViewerPluginAIWidget::slotCloseWidget);
 }
 
