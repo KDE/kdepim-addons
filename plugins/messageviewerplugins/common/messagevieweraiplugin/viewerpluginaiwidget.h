@@ -8,6 +8,10 @@
 
 #include <QWidget>
 class QToolButton;
+namespace TextAutoGenerateText
+{
+class TextAutoGenerateQuickAskWidget;
+}
 class ViewerPluginAIWidget : public QWidget
 {
     Q_OBJECT
@@ -18,4 +22,5 @@ public:
 private:
     void slotCloseWidget();
     QToolButton *const mCloseButton;
+    TextAutoGenerateText::TextAutoGenerateQuickAskWidget *const mTextAutoGenerateQuickAskWidget;
 };
