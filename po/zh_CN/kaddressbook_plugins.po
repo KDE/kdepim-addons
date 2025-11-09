@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/kaddressbook_plugins.pot\n"
-"X-Crowdin-File-ID: 45403\n"
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/kaddressbook_plugins.pot\n"
+"X-Crowdin-File-ID: 50510\n"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format

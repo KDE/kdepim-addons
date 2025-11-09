@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/messageviewerheaderplugins."
-"pot\n"
-"X-Crowdin-File-ID: 45333\n"
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/"
+"messageviewerheaderplugins.pot\n"
+"X-Crowdin-File-ID: 50840\n"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:67
 #: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:126

@@ -6,20 +6,21 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2021, 2022, 2023.
 # Geraldo Simiao <geraldosimiao@fedoraproject.org>, 2023.
 # SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-21 00:43+0000\n"
-"PO-Revision-Date: 2025-09-16 09:26-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2025-11-08 21:16-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
@@ -31,7 +32,7 @@ msgstr "Ferramenta de banco de dados do Akonadi"
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr "Limpar o &Akonadi..."
+msgstr "Limpar o &Akonadi…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
@@ -55,7 +56,7 @@ msgstr "Limpar"
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr "Fsck no &Akonadi..."
+msgstr "Fsck no &Akonadi…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
@@ -83,19 +84,19 @@ msgstr "Concluído."
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:96
 #, kde-format
 msgid "Start…"
-msgstr "Iniciar..."
+msgstr "Iniciar…"
 
 #: antispamplugin/antispamplugininterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
-msgstr "Assistente &anti-spam..."
+msgstr "Assistente &anti-spam…"
 
 #: antivirusplugin/antivirusplugininterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
-msgstr "Assistente &antivírus..."
+msgstr "Assistente &antivírus…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:19
 #, kde-format
@@ -144,7 +145,7 @@ msgstr "Tamanho:"
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
-msgstr "&Mostrar tamanho das pastas..."
+msgstr "&Mostrar tamanho das pastas…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:36
 #, kde-format
@@ -155,7 +156,7 @@ msgstr "Não foi possível iniciar o aplicativo KMail."
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr "Pesquisar..."
+msgstr "Pesquisar…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccounttreeview.cpp:26
 #, kde-format
@@ -242,7 +243,7 @@ msgstr "Não-spam"
 #: common/antispamwizard.cpp:458
 #, kde-format
 msgid "Scanning for %1…"
-msgstr "Procurando por %1..."
+msgstr "Procurando por %1…"
 
 #: common/antispamwizard.cpp:502
 #, kde-format
@@ -516,7 +517,7 @@ msgstr "Anexo:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr "A&dicionar..."
+msgstr "A&dicionar…"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format

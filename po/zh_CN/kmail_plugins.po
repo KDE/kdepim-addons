@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/kmail_plugins.pot\n"
-"X-Crowdin-File-ID: 45685\n"
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/kmail_plugins.pot\n"
+"X-Crowdin-File-ID: 52748\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
@@ -157,7 +157,7 @@ msgstr "搜索..."
 #, kde-format
 msgctxt "@action"
 msgid "Open Folder"
-msgstr ""
+msgstr "打开文件夹"
 
 #: common/antispamwizard.cpp:90
 #, kde-format
