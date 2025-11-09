@@ -24,10 +24,12 @@ if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
         PROPERTIES UNITY_BUILD ON
     )
 endif()
+
 target_link_libraries(
     messageviewer_aiplugin
     KPim6::MessageViewer
     KF6::XmlGui
     KPim6::Libkdepim
     KF6::I18n
+    KF6::TextAutoGenerateText
 )

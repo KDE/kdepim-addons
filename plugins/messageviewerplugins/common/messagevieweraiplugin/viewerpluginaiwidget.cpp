@@ -9,6 +9,7 @@
 #include <QStyle>
 #include <QToolButton>
 #include <QVBoxLayout>
+#include <TextAutoGenerateText/TextAutoGenerateQuickAskWidget>
 using namespace Qt::Literals::StringLiterals;
 ViewerPluginAIWidget::ViewerPluginAIWidget(QWidget *parent)
     : QWidget{parent}
