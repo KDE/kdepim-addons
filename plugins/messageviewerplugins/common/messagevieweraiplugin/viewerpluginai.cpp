@@ -19,21 +19,13 @@ ViewerPluginAI::ViewerPluginAI(QObject *parent, const QList<QVariant> &)
 
 ViewerPluginInterface *ViewerPluginAI::createView(QWidget *parent, KActionCollection *ac)
 {
-    MessageViewer::ViewerPluginInterface *view = new MessageViewer::ViewerPluginAIInterface(ac, parent);
+    auto view = new MessageViewer::ViewerPluginAIInterface(ac, parent);
     return view;
 }
 
 QString ViewerPluginAI::viewerPluginName() const
 {
     return QStringLiteral("translator");
-}
-
-void MessageViewer::ViewerPluginAI::showConfigureDialog(QWidget *parent)
-{
-    /*
-    TextTranslator::TranslatorConfigureDialog dialog(parent);
-    dialog.exec();
-    */
 }
 
 bool MessageViewer::ViewerPluginAI::hasConfigureDialog() const
