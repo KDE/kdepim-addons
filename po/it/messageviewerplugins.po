@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-21 00:43+0000\n"
+"POT-Creation-Date: 2025-11-10 00:44+0000\n"
 "PO-Revision-Date: 2025-09-03 17:19+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -34,13 +34,13 @@ msgctxt "@action"
 msgid "Ask AI…"
 msgstr "Chiedi ad un'IA…"
 
-#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:30
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close"
 msgstr "Chiudi"
 
-#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:36
 #, kde-format
 msgid "Close"
 msgstr "Chiudi"
