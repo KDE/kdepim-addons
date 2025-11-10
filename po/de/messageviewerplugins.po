@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-21 00:43+0000\n"
+"POT-Creation-Date: 2025-11-10 02:43+0000\n"
 "PO-Revision-Date: 2024-09-14 14:32+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -36,13 +36,13 @@ msgctxt "@action"
 msgid "Ask AI…"
 msgstr ""
 
-#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:30
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close"
 msgstr ""
 
-#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:36
 #, kde-format
 msgid "Close"
 msgstr ""

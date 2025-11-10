@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-21 00:43+0000\n"
+"POT-Creation-Date: 2025-11-10 02:43+0000\n"
 "PO-Revision-Date: 2025-09-05 17:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -34,13 +34,13 @@ msgctxt "@action"
 msgid "Ask AI…"
 msgstr "詢問 AI…"
 
-#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:30
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close"
 msgstr "關閉"
 
-#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:33
+#: common/messagevieweraiplugin/viewerpluginaiwidget.cpp:36
 #, kde-format
 msgid "Close"
 msgstr "關閉"

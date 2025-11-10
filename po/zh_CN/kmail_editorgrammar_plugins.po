@@ -40,6 +40,9 @@ msgid ""
 "Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
+"您并没有使用本地实例。\n"
+"您的文本将发送到外部网站进行处理 (https://languagetool.org/)。\n"
+"您想要继续吗？"
 
 #: languagetool/languagetoolinterface.cpp:98
 #, kde-format
