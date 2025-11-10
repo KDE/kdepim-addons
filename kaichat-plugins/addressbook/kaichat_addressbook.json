@@ -18,6 +18,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att hämta information från adressboken.",
         "Description[tr]": "Bu eklenti, bir adres defterinden bilgi almanıza olanak tanır.",
         "Description[uk]": "Цей додаток інструменту надає змогу отримувати відомості з адресної книги.",
+        "Description[zh_CN]": "此工具插件允许从 addressbook 获取信息。",
         "EnabledByDefault": true,
         "Name": "AddressBook",
         "Name[ar]": "دفتر العناوين",
@@ -37,6 +38,7 @@
         "Name[sv]": "Adressbok",
         "Name[tr]": "Adres Defteri",
         "Name[uk]": "Адресна книга",
+        "Name[zh_CN]": "地址簿",
         "Version": "1.0"
     }
 }
