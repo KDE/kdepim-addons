@@ -15,6 +15,7 @@
         "Description[sl]": "Ta vstavek vam omogoča dobiti informacije iz koledarja.",
         "Description[tr]": "Bu eklenti, bir takvimden bilgi almanıza olanak tanır.",
         "Description[uk]": "Цей додаток інструменту надає змогу отримувати відомості з календаря.",
+        "Description[zh_CN]": "此工具插件允许从日历获取信息。",
         "EnabledByDefault": true,
         "Name": "Calendar",
         "Name[ar]": "التقويم",
@@ -31,6 +32,7 @@
         "Name[sl]": "Koledar",
         "Name[tr]": "Takvim",
         "Name[uk]": "Календар",
+        "Name[zh_CN]": "日历",
         "Version": "1.0"
     }
 }
