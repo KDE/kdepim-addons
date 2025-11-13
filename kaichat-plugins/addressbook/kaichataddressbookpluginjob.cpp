@@ -98,7 +98,13 @@ void KAIChatAddressBookPluginJob::start()
                 break;
             }
         }
-        Q_EMIT finished(result, mMessageUuid, mChatId, mToolIdentifier);
+        const TextAutoGenerateText::TextAutoGenerateTextToolPlugin::TextToolPluginInfo info{
+            .content = result,
+            .messageUuid = mMessageUuid,
+            .chatId = mChatId,
+            .toolIdentifier = mToolIdentifier,
+        };
+        Q_EMIT finished(info);
         deleteLater();
     });
 }
