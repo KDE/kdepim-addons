@@ -1,65 +1,61 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-14 00:43+0000\n"
-"PO-Revision-Date: 2025-10-28 07:28+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
-"Language-Team: Slovenian <kde-i18n-doc@kde.org>\n"
-"Language: sl\n"
+"PO-Revision-Date: 2025-11-13 22:42+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.8\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #: kaichatcalendarplugin.cpp:23
 msgid "calendar info"
-msgstr "informacije o koledarju"
+msgstr "行事曆資訊"
 
 #: kaichatcalendarplugin.cpp:30
 msgid "Name of user"
-msgstr "Ime uporabnika"
+msgstr "使用者名稱"
 
 #: kaichatcalendarplugin.cpp:40
 #, kde-format
 msgid "Get Info From calendar"
-msgstr "Pridobi informacije iz koledarja"
+msgstr "從行事曆取得資訊"
 
 #: kaichatcalendarplugin.cpp:45
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
-msgstr ""
-"Uporabite to orodje za pridobivanje uporabniških podatkov iz baze podatkov "
-"akonadi"
+msgstr "使用這個工具來從 Akonadi 資料庫取得使用者資訊"
 
 #: kaichatcalendarplugindialog.cpp:16
 #, kde-format
 msgid "Configure Calendar Tool Plugin"
-msgstr "Konfiguriraj vtičnik orodja za koledar"
+msgstr "設定行事曆工具外掛程式"
 
 #: kaichatcalendarpluginjob.cpp:30
 #, kde-format
 msgid "Get Email..."
-msgstr "Pridobi e-pošto..."
+msgstr "取得電子郵件…"
 
 #: kaichatcalendarpluginjob.cpp:68 kaichatcalendarpluginjob.cpp:94
 #, kde-format
 msgid "No Contact found in calendar for %1"
-msgstr "Ni najdenega stika v koledarju za %1"
+msgstr "在行事曆找不到 %1 的聯絡人"
 
 #: kaichatcalendarpluginjob.cpp:77
 #, kde-format
 msgid "Birthday for %1 is %2"
-msgstr "Rojstni dan za %1 je %2"
+msgstr "%1 的生日是 %2"
 
 #: kaichatcalendarpluginjob.cpp:104
 #, kde-format
 msgid "The preferred email is %1"
-msgstr "Prednostni e-poštni naslov je %1"
+msgstr "偏好的電子郵件是 %1"

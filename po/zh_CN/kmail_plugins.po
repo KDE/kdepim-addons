@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Database Tool"
-msgstr ""
+msgstr "Akonadi 数据库工具"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:28
 #, kde-format
@@ -32,20 +32,20 @@ msgstr "Akonadi 清理..."
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
 msgid "Do you want to vacuum akonadi database?"
-msgstr ""
+msgstr "是否要对 Akonadi 数据库执行清理（Vacuum）操作？"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:33
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Vacuum"
-msgstr ""
+msgstr "Akonadi 数据库清理"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
-msgstr ""
+msgstr "清理"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:46
 #, kde-format
@@ -56,20 +56,20 @@ msgstr "Akonadi 文件系统检查..."
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
 msgid "Do you want to fsck akonadi database?"
-msgstr ""
+msgstr "是否要对 Akonadi 数据库执行一致性检查（fsck）？"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:53
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Fsck"
-msgstr ""
+msgstr "Akonadi 一致性检查"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
 #, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
-msgstr ""
+msgstr "一致性检查"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
