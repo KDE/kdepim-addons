@@ -77,7 +77,7 @@ include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
-set(KTEXTADDONS_MIN_VERSION "1.8.44")
+set(KTEXTADDONS_MIN_VERSION "1.8.64")
 set(KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION "1.8.44")
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
