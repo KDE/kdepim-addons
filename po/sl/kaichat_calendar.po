@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:43+0000\n"
+"POT-Creation-Date: 2025-11-14 02:39+0000\n"
 "PO-Revision-Date: 2025-10-28 07:28+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <kde-i18n-doc@kde.org>\n"
@@ -49,17 +49,17 @@ msgstr "Konfiguriraj vtičnik orodja za koledar"
 msgid "Get Email..."
 msgstr "Pridobi e-pošto..."
 
-#: kaichatcalendarpluginjob.cpp:67 kaichatcalendarpluginjob.cpp:81
+#: kaichatcalendarpluginjob.cpp:68 kaichatcalendarpluginjob.cpp:94
 #, kde-format
 msgid "No Contact found in calendar for %1"
 msgstr "Ni najdenega stika v koledarju za %1"
 
-#: kaichatcalendarpluginjob.cpp:71
+#: kaichatcalendarpluginjob.cpp:77
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "Rojstni dan za %1 je %2"
 
-#: kaichatcalendarpluginjob.cpp:85
+#: kaichatcalendarpluginjob.cpp:104
 #, kde-format
 msgid "The preferred email is %1"
 msgstr "Prednostni e-poštni naslov je %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:43+0000\n"
+"POT-Creation-Date: 2025-11-14 02:39+0000\n"
 "PO-Revision-Date: 2025-10-30 11:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -46,17 +46,17 @@ msgstr "اضبط محلقة أداة التّقويم"
 msgid "Get Email..."
 msgstr "احصل على البريد الإلكترونيّ…"
 
-#: kaichatcalendarpluginjob.cpp:67 kaichatcalendarpluginjob.cpp:81
+#: kaichatcalendarpluginjob.cpp:68 kaichatcalendarpluginjob.cpp:94
 #, kde-format
 msgid "No Contact found in calendar for %1"
 msgstr "لم يُعثر على متراسلين لـ%1"
 
-#: kaichatcalendarpluginjob.cpp:71
+#: kaichatcalendarpluginjob.cpp:77
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "عيد ميلاد  %1 هو %2"
 
-#: kaichatcalendarpluginjob.cpp:85
+#: kaichatcalendarpluginjob.cpp:104
 #, kde-format
 msgid "The preferred email is %1"
 msgstr "البريد الإلكترونيّ المفضّل هو %1"
