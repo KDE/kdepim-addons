@@ -116,18 +116,10 @@ void AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress(const QStrin
         mAnswersEditorDialog->setAttribute(Qt::WA_DeleteOnClose);
         mAnswersEditorDialog->show();
     }
-#if HAVE_TEXTUTILS_QUICKSEARCH_SUPPORT
     int numberOfTextSearched = 0;
     int hightLightStringIndex = 0;
     mAnswersEditorDialog->setAnswer(
         TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str, {}, {}, numberOfTextSearched, hightLightStringIndex));
-#else
-#if HAVE_TEXTUTILS_SYNTAXHIGHLIGTHER_SUPPORT
-    mAnswersEditorDialog->setAnswer(TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str, {}));
-#else
-    mAnswersEditorDialog->setAnswer(TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str));
-#endif
-#endif
 }
 
 void AutoGenerateAnswersEditorInterface::slotGenerateTextErrorOccured(const QString &errorStr)

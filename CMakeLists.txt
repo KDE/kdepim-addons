@@ -275,15 +275,6 @@ if(TARGET KPim6::PimCommonActivities)
     endif()
 endif()
 
-if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.41)
-    set(HAVE_TEXTUTILS_SYNTAXHIGHLIGTHER_SUPPORT TRUE)
-endif()
-
-if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.48)
-    set(HAVE_TEXTUTILS_QUICKSEARCH_SUPPORT TRUE)
-endif()
-
-
 configure_file(
     config-kdepim-addons.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h
