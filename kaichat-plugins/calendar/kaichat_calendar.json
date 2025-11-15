@@ -16,6 +16,7 @@
         "Description[tr]": "Bu eklenti, bir takvimden bilgi almanıza olanak tanır.",
         "Description[uk]": "Цей додаток інструменту надає змогу отримувати відомості з календаря.",
         "Description[zh_CN]": "此工具插件允许从日历获取信息。",
+        "Description[zh_TW]": "這個外掛程式允許從行事曆取得資訊。",
         "EnabledByDefault": true,
         "Name": "Calendar",
         "Name[ar]": "التقويم",
@@ -34,6 +35,7 @@
         "Name[tr]": "Takvim",
         "Name[uk]": "Календар",
         "Name[zh_CN]": "日历",
+        "Name[zh_TW]": "行事曆",
         "Version": "1.0"
     }
 }
