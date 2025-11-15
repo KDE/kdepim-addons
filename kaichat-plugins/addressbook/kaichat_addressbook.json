@@ -19,6 +19,7 @@
         "Description[tr]": "Bu eklenti, bir adres defterinden bilgi almanıza olanak tanır.",
         "Description[uk]": "Цей додаток інструменту надає змогу отримувати відомості з адресної книги.",
         "Description[zh_CN]": "此工具插件允许从 addressbook 获取信息。",
+        "Description[zh_TW]": "這個外掛程式允許從通訊錄取得資訊。",
         "EnabledByDefault": true,
         "Name": "AddressBook",
         "Name[ar]": "دفتر العناوين",
@@ -39,6 +40,7 @@
         "Name[tr]": "Adres Defteri",
         "Name[uk]": "Адресна книга",
         "Name[zh_CN]": "地址簿",
+        "Name[zh_TW]": "通訊錄",
         "Version": "1.0"
     }
 }
