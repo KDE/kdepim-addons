@@ -7,21 +7,21 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-04 14:15+0000\n"
-"PO-Revision-Date: 2024-08-01 13:06+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-11-15 21:26+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 
 #: attendeeselector.cpp:21
@@ -75,7 +75,7 @@ msgstr "Açıklama:"
 #: text_calendar.cpp:360
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
-msgstr "Davetiyede “%1” adlı bir ek bulunamadı."
+msgstr "Davette “%1” adlı bir ek bulunamadı."
 
 #: text_calendar.cpp:375
 #, kde-format
@@ -85,7 +85,7 @@ msgid ""
 "this attachment stored inline instead of a link."
 msgstr ""
 "“%1” daveti eki, bu bilgisayardan erişilemeyen bir web bağlantısıdır. Lütfen "
-"düzenleyiciden bu eki bir bağlantı yerine kaydedilmiş şekilde yeniden "
+"organizatörden bu eki bir bağlantı yerine kaydedilmiş şekilde yeniden "
 "göndermesini isteyin."
 
 #: text_calendar.cpp:427
@@ -389,7 +389,7 @@ msgstr "Bir teklif eklemeyi unuttunuz. Lütfen ekleyin. Teşekkürler."
 #: text_calendar.cpp:935
 #, kde-format
 msgid "Delegation to organizer is not possible."
-msgstr "Düzenleyiciyi yetkilendirme olanaklı değil."
+msgstr "Organizatörü yetkilendirme olanaklı değil."
 
 #: text_calendar.cpp:1069
 #, kde-format
@@ -410,7 +410,7 @@ msgid ""
 "a response will not be possible.\n"
 "Please create at least 1 writable events calendar and re-sync."
 msgstr ""
-"Davetiyeler için yazılabilir bir takvim klasörünüz yok, bu yüzden yanıtların "
+"Davetler için yazılabilir bir takvim klasörünüz yok, bu yüzden yanıtların "
 "depolanması ve kaydedilmesi olanaklı olmayacak.\n"
 "Lütfen en az 1 yazılabilir olay takvimi oluşturun ve yeniden eşzamanlayın."
 
@@ -433,17 +433,17 @@ msgid ""
 "Would you like to send the organizer a message regarding this invitation?\n"
 "Press the [Cancel] button to cancel the recording operation."
 msgstr ""
-"Düzenleyici bu davete bir yanıt beklemiyor ancak isterseniz bir e-posta "
+"Organizatör bu davete bir yanıt beklemiyor; ancak isterseniz bir e-posta "
 "iletisi gönderebilirsiniz.\n"
 "\n"
-"Düzenleyiciye bu davetiye hakkında bir ileti göndermek ister misiniz?\n"
+"Organizatöre bu davet hakkında bir ileti göndermek ister misiniz?\n"
 "Kayıt işlemini iptal etmek için [İptal] düğmesine basın."
 
 #: text_calendar.cpp:1270
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
-msgstr "Düzenleyiciye E-posta Gönder"
+msgstr "Organizatöre E-posta Gönder"
 
 #: text_calendar.cpp:1271
 #, kde-format
