@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-16 00:43+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2025-08-31 20:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -78,12 +78,12 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "اضبط الذكاء الاصطناعي"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:136
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:128
 #, kde-format
 msgid "An error occured: %1"
 msgstr "حدث خطأ: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:136
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:128
 #, kde-format
 msgid "Error"
 msgstr "خطأ"

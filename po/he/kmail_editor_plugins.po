@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-16 00:43+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2025-08-31 07:38+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -77,12 +77,12 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "הגדרת בינה מלאכותית"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:136
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:128
 #, kde-format
 msgid "An error occured: %1"
 msgstr "אירעה שגיאה: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:136
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:128
 #, kde-format
 msgid "Error"
 msgstr "שגיאה"

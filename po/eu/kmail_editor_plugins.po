@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-16 00:43+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2025-08-31 12:26+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -79,12 +79,12 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "Konfiguratu AA"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:136
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:128
 #, kde-format
 msgid "An error occured: %1"
 msgstr "Errore bat gertatu da: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:136
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:128
 #, kde-format
 msgid "Error"
 msgstr "Errorea"

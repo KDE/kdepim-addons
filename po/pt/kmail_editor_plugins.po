@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-16 00:43+0000\n"
+"POT-Creation-Date: 2025-11-16 00:42+0000\n"
 "PO-Revision-Date: 2019-12-17 11:53+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -77,13 +77,13 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "Configurar o texto rápido"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:136
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:128
 #, fuzzy, kde-format
 #| msgid "An error occurred: \"%1\""
 msgid "An error occured: %1"
 msgstr "Ocorreu um erro: \"%1\""
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:136
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:128
 #, kde-format
 msgid "Error"
 msgstr ""
