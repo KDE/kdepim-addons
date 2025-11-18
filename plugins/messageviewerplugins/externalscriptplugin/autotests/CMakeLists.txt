@@ -17,7 +17,6 @@ macro(
     endif()
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
-                 NAME_PREFIX "messageviewerplugins-"
                  LINK_LIBRARIES KPim6::MessageViewer Qt::Test KF6::KIOCore KPim6::Mime KPim6::AkonadiCore KF6::I18n KF6::XmlGui KPim6::PimCommon KF6::KIOWidgets KPim6::Libkdepim
     )
 endmacro()

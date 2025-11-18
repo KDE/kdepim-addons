@@ -31,7 +31,6 @@ macro(add_messageviewer_bodyformatter_class_unittest _source _additional)
 
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
-                 NAME_PREFIX "messageviewerplugins-"
 		 LINK_LIBRARIES KPim6::MessageViewer Qt::Test KPim6::PimTextEdit KF6::I18n KF6::Completion KPim6::PimCommonAkonadi
     )
 endmacro()
@@ -44,7 +43,6 @@ macro(add_diff_bodyformatter_class_unittest _source _additional)
 
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
-                 NAME_PREFIX "messageviewerplugins-"
                  LINK_LIBRARIES KPim6::MessageViewer Qt::Test KPim6::PimTextEdit KF6::I18n KF6::SyntaxHighlighting
     )
 endmacro()

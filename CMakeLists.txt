@@ -14,6 +14,13 @@ set(CMAKE_MODULE_PATH
     ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/
     ${ECM_MODULE_PATH}
 )
+# setup use of ECMAddTest copy with newer features
+if(ECM_VERSION VERSION_LESS 7.21) # change to 6.21 once ECM MR is merged
+    list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/ecmcopy")
+elseif(NOT KF_MIN_VERSION VERSION_LESS 6.21)
+    message(WARNING "Remove copy of ECMAddTest, min. required ECM now provides it.")
+endif()
+
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION beta)
 
@@ -293,6 +300,8 @@ set_package_properties(
 )
 
 if(BUILD_TESTING)
+    set(ECM_TEST_NAME_PREFIX_STRATEGY "PATH")
+    list(APPEND ECM_TEST_NAME_PREFIX_IGNORE_DIRS "plugins")
     add_definitions(-DBUILD_TESTING)
 endif()
 

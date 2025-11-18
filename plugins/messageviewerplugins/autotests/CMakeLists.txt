@@ -9,7 +9,6 @@ macro(add_kdepim_addons_viewerplugin_unittest _source _additional)
     get_filename_component(_name ${_source} NAME_WE)
     ecm_add_test(${_test} ${_name}.h
                  TEST_NAME ${_name}
-                 NAME_PREFIX "kdepim-addons-"
                  LINK_LIBRARIES KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime
                  KPim6::AkonadiCore KF6::CalendarCore KPim6::GrantleeTheme KPim6::IncidenceEditor
                  KPim6::AkonadiWidgets KF6::XmlGui KPim6::CalendarSupport KF6::TextTranslator
@@ -22,7 +21,6 @@ macro(add_kdepim_addons_viewerplugin_class_unittest _source)
 
     ecm_add_test(${_test} ${_name}.h
         TEST_NAME ${_name}
-        NAME_PREFIX "kdepim-addons-"
         LINK_LIBRARIES
             Qt::Test
             KF6::KIOCore
@@ -42,7 +40,6 @@ macro(add_kdepim_addons_viewerplugin_widget_unittest _source _additional)
     get_filename_component(_name ${_source} NAME_WE)
     ecm_add_test(${_test} ${_name}.h
         TEST_NAME ${_name}
-        NAME_PREFIX "kdepim-addons-"
         LINK_LIBRARIES
             Qt::Test
             KF6::KIOCore
@@ -61,7 +58,7 @@ endmacro()
 add_kdepim_addons_viewerplugin_class_unittest(viewerpluginmanagertest.cpp)
 add_kdepim_addons_viewerplugin_widget_unittest(todoedittest.cpp "../createtodoplugin/todoedit.cpp")
 set_tests_properties(
-    kdepim-addons-todoedittest
+    messageviewerplugins-todoedittest
     PROPERTIES ENVIRONMENT "LC_ALL=C"
 )
 
