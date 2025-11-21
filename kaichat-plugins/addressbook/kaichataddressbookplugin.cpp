@@ -21,7 +21,8 @@ KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVaria
     {
         TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
         prop.setDescription(kli18n("AddressBook info"));
-        prop.setName(u"addressbookinfo"_s);
+        prop.setName(KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(
+            KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::AddressBookInfo));
         prop.setTypeElements({KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Email),
                               KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Birthday),
                               KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Address)});
@@ -30,7 +31,8 @@ KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVaria
     {
         TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
         prop.setDescription(kli18n("Name of user"));
-        prop.setName(u"username"_s);
+        prop.setName(
+            KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::UserName));
         mProperties.append(prop);
     }
 }

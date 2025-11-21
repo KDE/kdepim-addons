@@ -30,14 +30,18 @@ void KAIChatAddressBookPluginJob::start()
     Q_EMIT toolInProgress(i18n("Get Email..."));
     QString userName;
     const QStringList lst = requiredArguments();
-    KAIChatAddressBookPluginUtils::AddressBookEnum typeAddressBook = KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
+    KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum typeAddressBook = KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Unknown;
     for (const auto &arg : lst) {
         for (const auto &resultTool : std::as_const(mToolArguments)) {
             if (resultTool.keyTool == arg) {
                 const QString value = resultTool.value;
-                if (arg == "addressbookinfo"_L1) {
+                if (arg
+                    == KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(
+                        KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::UserName)) {
                     typeAddressBook = KAIChatAddressBookPluginUtils::convertStringToAddressBookEnum(value);
-                } else if (arg == "username"_L1) {
+                } else if (arg
+                           == KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(
+                               KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::UserName)) {
                     userName = value;
                 } else {
                     qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid argument : " << value;
@@ -45,7 +49,7 @@ void KAIChatAddressBookPluginJob::start()
             }
         }
     }
-    if (typeAddressBook == KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown) {
+    if (typeAddressBook == KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Unknown) {
         qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid addressbook argument";
         deleteLater();
         return;
@@ -63,7 +67,7 @@ void KAIChatAddressBookPluginJob::start()
             const KContacts::Addressee contact = searchJob->contacts().constFirst();
             qDebug() << " contact " << contact.toString();
             switch (typeAddressBook) {
-            case KAIChatAddressBookPluginUtils::AddressBookEnum::Email: {
+            case KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Email: {
                 const QString preferedEmail = contact.preferredEmail();
                 if (preferedEmail.isEmpty()) {
                     result = i18n("No preferred email found for %1", job->property("userName").toString());
@@ -72,7 +76,7 @@ void KAIChatAddressBookPluginJob::start()
                 }
                 break;
             }
-            case KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday: {
+            case KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Birthday: {
                 const QString birthday = contact.birthday().toString();
                 if (birthday.isEmpty()) {
                     result = i18n("No Birthday found for %1", job->property("userName").toString());
@@ -81,7 +85,7 @@ void KAIChatAddressBookPluginJob::start()
                 }
                 break;
             }
-            case KAIChatAddressBookPluginUtils::AddressBookEnum::Address: {
+            case KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Address: {
                 const KContacts::Address::List addresses = contact.addresses();
                 QStringList lst;
                 for (const auto &addr : addresses) {
@@ -94,7 +98,7 @@ void KAIChatAddressBookPluginJob::start()
                 }
                 break;
             }
-            case KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown:
+            case KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Unknown:
                 break;
             }
         }
