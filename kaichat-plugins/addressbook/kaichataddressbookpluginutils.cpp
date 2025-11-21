@@ -7,7 +7,7 @@
 #include "kaichat_addressbookplugin_debug.h"
 
 using namespace Qt::Literals::StringLiterals;
-QString KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(AddressBookEnum type)
+QString KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(AddressBookInformationTypeEnum type)
 {
     switch (type) {
     case Email:
@@ -23,17 +23,42 @@ QString KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(AddressBoo
     return {};
 }
 
-KAIChatAddressBookPluginUtils::AddressBookEnum KAIChatAddressBookPluginUtils::convertStringToAddressBookEnum(const QString &str)
+KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum KAIChatAddressBookPluginUtils::convertStringToAddressBookEnum(const QString &str)
 {
     if (str == "email"_L1) {
-        return KAIChatAddressBookPluginUtils::AddressBookEnum::Email;
+        return KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Email;
     } else if (str == "birthday"_L1) {
-        return KAIChatAddressBookPluginUtils::AddressBookEnum::Birthday;
+        return KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Birthday;
     } else if (str == "address"_L1) {
-        return KAIChatAddressBookPluginUtils::AddressBookEnum::Address;
+        return KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Address;
     } else {
         qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid AddressBook type:" << str;
-        return KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
+        return KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Unknown;
     }
-    return KAIChatAddressBookPluginUtils::AddressBookEnum::Unknown;
+    return KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Unknown;
+}
+
+QString KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum type)
+{
+    switch (type) {
+    case UserName:
+        return u"username"_s;
+    case AddressBookInfo:
+        return u"addressbookinfo"_s;
+    }
+    Q_UNREACHABLE();
+    return {};
+}
+
+KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum KAIChatAddressBookPluginUtils::convertStringToAddressBookPropertyNameEnum(const QString &str)
+{
+    if (str == "username"_L1) {
+        return KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::UserName;
+    } else if (str == "addressbookinfo"_L1) {
+        return KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::AddressBookInfo;
+    } else {
+        qCWarning(KAICHAT_ADDRESSBOOK_LOG) << "Invalid AddressBook type:" << str;
+        return KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::UserName;
+    }
+    return KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::UserName;
 }

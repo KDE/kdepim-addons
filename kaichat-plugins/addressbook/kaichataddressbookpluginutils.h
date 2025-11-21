@@ -7,13 +7,20 @@
 #include <QString>
 namespace KAIChatAddressBookPluginUtils
 {
-enum AddressBookEnum : int8_t {
+enum AddressBookInformationTypeEnum : int8_t {
     Unknown = 0,
     Email,
     Birthday,
     Address,
     // TODO add more
 };
-[[nodiscard]] QString convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::AddressBookEnum type);
-[[nodiscard]] KAIChatAddressBookPluginUtils::AddressBookEnum convertStringToAddressBookEnum(const QString &str);
+[[nodiscard]] QString convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum type);
+[[nodiscard]] KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum convertStringToAddressBookEnum(const QString &str);
+
+enum AddressBookPropertyNameEnum : int8_t {
+    UserName = 0,
+    AddressBookInfo,
+};
+[[nodiscard]] QString convertAddressBookPropertyNameEnumToString(KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum type);
+[[nodiscard]] KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum convertStringToAddressBookPropertyNameEnum(const QString &str);
 };
