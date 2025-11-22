@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:41+0000\n"
+"POT-Creation-Date: 2025-11-22 02:33+0000\n"
 "PO-Revision-Date: 2025-10-31 20:28+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -21,16 +21,16 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "Osoitekirjatietoa"
 
-#: kaichataddressbookplugin.cpp:32
+#: kaichataddressbookplugin.cpp:33
 msgid "Name of user"
 msgstr "Käyttäjän nimi"
 
-#: kaichataddressbookplugin.cpp:42
+#: kaichataddressbookplugin.cpp:44
 #, kde-format
 msgid "Get Info From AddressBook"
 msgstr "Nouda osoitekirjasta tietoa"
 
-#: kaichataddressbookplugin.cpp:47
+#: kaichataddressbookplugin.cpp:49
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr "Nouda Akonadi-tietokannasta tällä työkalulla käyttäjätietoa"
@@ -45,37 +45,37 @@ msgstr "Osoitekirjatyökaluliitännäisen asetukset"
 msgid "Get Email..."
 msgstr "Nouda sähköposti…"
 
-#: kaichataddressbookpluginjob.cpp:61
+#: kaichataddressbookpluginjob.cpp:65
 #, kde-format
 msgid "No Contact found in addressbook for %1"
 msgstr "Osoitekirjasta ei löytynyt yhteystietoa: %1"
 
-#: kaichataddressbookpluginjob.cpp:69
+#: kaichataddressbookpluginjob.cpp:73
 #, kde-format
 msgid "No preferred email found for %1"
 msgstr "Ensisijaista sähköpostiosoitetta ei löytynyt: %1"
 
-#: kaichataddressbookpluginjob.cpp:71
+#: kaichataddressbookpluginjob.cpp:75
 #, kde-format
 msgid "The preferred email for %1 is %2"
 msgstr "Henkilön %1 ensisijainen sähköpostiosoite on %2"
 
-#: kaichataddressbookpluginjob.cpp:78
+#: kaichataddressbookpluginjob.cpp:82
 #, kde-format
 msgid "No Birthday found for %1"
 msgstr "Henkilölle %1 ei löytynyt syntymäpäivää"
 
-#: kaichataddressbookpluginjob.cpp:80
+#: kaichataddressbookpluginjob.cpp:84
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "Henkilön %1 syntymäpäivä on %2"
 
-#: kaichataddressbookpluginjob.cpp:91
+#: kaichataddressbookpluginjob.cpp:95
 #, kde-format
 msgid "No Address found for %1"
 msgstr "Osoitetta ei löytynyt: %1"
 
-#: kaichataddressbookpluginjob.cpp:93
+#: kaichataddressbookpluginjob.cpp:97
 #, kde-format
 msgid "Address found for %1 is %2"
 msgstr "Henkilölle %1 löytyi osoite %2"
