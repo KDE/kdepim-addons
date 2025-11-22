@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaichat_addressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-22 00:43+0000\n"
 "PO-Revision-Date: 2025-10-30 12:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -23,16 +23,16 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "Información de la libreta de direcciones"
 
-#: kaichataddressbookplugin.cpp:32
+#: kaichataddressbookplugin.cpp:33
 msgid "Name of user"
 msgstr "Nombre de usuario"
 
-#: kaichataddressbookplugin.cpp:42
+#: kaichataddressbookplugin.cpp:44
 #, kde-format
 msgid "Get Info From AddressBook"
 msgstr "Obtener información de la libreta de direcciones"
 
-#: kaichataddressbookplugin.cpp:47
+#: kaichataddressbookplugin.cpp:49
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
@@ -49,39 +49,39 @@ msgstr "Configurar el complemento de la herramienta de libreta de direcciones"
 msgid "Get Email..."
 msgstr "Obtener dirección de correo electrónico…"
 
-#: kaichataddressbookpluginjob.cpp:61
+#: kaichataddressbookpluginjob.cpp:65
 #, kde-format
 msgid "No Contact found in addressbook for %1"
 msgstr ""
 "No se ha encontrado ningún contacto en la libreta de direcciones para %1"
 
-#: kaichataddressbookpluginjob.cpp:69
+#: kaichataddressbookpluginjob.cpp:73
 #, kde-format
 msgid "No preferred email found for %1"
 msgstr ""
 "No se ha encontrado una dirección de correo electrónico preferida para %1"
 
-#: kaichataddressbookpluginjob.cpp:71
+#: kaichataddressbookpluginjob.cpp:75
 #, kde-format
 msgid "The preferred email for %1 is %2"
 msgstr "La dirección de correo electrónico preferida para %1 es %2"
 
-#: kaichataddressbookpluginjob.cpp:78
+#: kaichataddressbookpluginjob.cpp:82
 #, kde-format
 msgid "No Birthday found for %1"
 msgstr "No se ha encontrado el cumpleaños de %1"
 
-#: kaichataddressbookpluginjob.cpp:80
+#: kaichataddressbookpluginjob.cpp:84
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "El cumpleaños de %1 es el %2"
 
-#: kaichataddressbookpluginjob.cpp:91
+#: kaichataddressbookpluginjob.cpp:95
 #, kde-format
 msgid "No Address found for %1"
 msgstr "No se ha encontrado ninguna dirección para %1"
 
-#: kaichataddressbookpluginjob.cpp:93
+#: kaichataddressbookpluginjob.cpp:97
 #, kde-format
 msgid "Address found for %1 is %2"
 msgstr "La dirección encontrada para %1 es %2"

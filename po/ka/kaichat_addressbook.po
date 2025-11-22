@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-22 00:43+0000\n"
 "PO-Revision-Date: 2025-10-29 04:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -22,16 +22,16 @@ msgstr ""
 msgid "AddressBook info"
 msgstr "ინფორმაცია მისამართების წიგნის შესახებ"
 
-#: kaichataddressbookplugin.cpp:32
+#: kaichataddressbookplugin.cpp:33
 msgid "Name of user"
 msgstr "მომხმარებლის სახელი"
 
-#: kaichataddressbookplugin.cpp:42
+#: kaichataddressbookplugin.cpp:44
 #, kde-format
 msgid "Get Info From AddressBook"
 msgstr "ინფორმაციის მიღება მისამართების წიგნიდან"
 
-#: kaichataddressbookplugin.cpp:47
+#: kaichataddressbookplugin.cpp:49
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
@@ -48,37 +48,37 @@ msgstr "მისამართების წიგნის ხელსა�
 msgid "Get Email..."
 msgstr "ელფოსტის მიღება..."
 
-#: kaichataddressbookpluginjob.cpp:61
+#: kaichataddressbookpluginjob.cpp:65
 #, kde-format
 msgid "No Contact found in addressbook for %1"
 msgstr "%1-ისთვის მისამართების წიგნში კონტაქტი არ არსებობს"
 
-#: kaichataddressbookpluginjob.cpp:69
+#: kaichataddressbookpluginjob.cpp:73
 #, kde-format
 msgid "No preferred email found for %1"
 msgstr "%1-ისთვის სასურველი ელფოსტა აღმოჩენილი არაა"
 
-#: kaichataddressbookpluginjob.cpp:71
+#: kaichataddressbookpluginjob.cpp:75
 #, kde-format
 msgid "The preferred email for %1 is %2"
 msgstr "%1-ისთვის სასურველი ელფოსტაა %2"
 
-#: kaichataddressbookpluginjob.cpp:78
+#: kaichataddressbookpluginjob.cpp:82
 #, kde-format
 msgid "No Birthday found for %1"
 msgstr "%1-ის დაბადების დღე აღმოჩენილი არაა"
 
-#: kaichataddressbookpluginjob.cpp:80
+#: kaichataddressbookpluginjob.cpp:84
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "%1-ის დაბადების დღეა %2"
 
-#: kaichataddressbookpluginjob.cpp:91
+#: kaichataddressbookpluginjob.cpp:95
 #, kde-format
 msgid "No Address found for %1"
 msgstr "%1-ის მისამართი ვერ მოიძებნა"
 
-#: kaichataddressbookpluginjob.cpp:93
+#: kaichataddressbookpluginjob.cpp:97
 #, kde-format
 msgid "Address found for %1 is %2"
 msgstr "%1-ისთვის ნაპოვნი მისამართია %2"
