@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimautogeneratetext\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:41+0000\n"
+"POT-Creation-Date: 2025-11-26 02:33+0000\n"
 "PO-Revision-Date: 2025-05-17 11:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Configurar «Preguntar a la IA»"
 msgid "Ask AI…"
 msgstr "Preguntar a la IA…"
 
-#: src/autogenerateconfigureaskmenu.cpp:43
+#: src/autogenerateconfigureaskmenu.cpp:46
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"

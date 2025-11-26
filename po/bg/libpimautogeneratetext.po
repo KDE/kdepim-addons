@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:41+0000\n"
+"POT-Creation-Date: 2025-11-26 02:33+0000\n"
 "PO-Revision-Date: 2025-07-11 23:56+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Конфигуриране на  запитване към ИИ"
 msgid "Ask AI…"
 msgstr "Запитване към ИИ…"
 
-#: src/autogenerateconfigureaskmenu.cpp:43
+#: src/autogenerateconfigureaskmenu.cpp:46
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"
