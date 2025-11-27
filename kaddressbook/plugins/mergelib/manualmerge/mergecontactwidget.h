@@ -31,7 +31,8 @@ public:
     void setContacts(const Akonadi::Item::List &items);
 
 Q_SIGNALS:
-    void customizeMergeContact(const Akonadi::Item::List &lst, MergeContacts::ConflictInformations conflictType, const Akonadi::Collection &col);
+    void
+    customizeMergeContact(const Akonadi::Item::List &lst, KABMergeContacts::MergeContacts::ConflictInformations conflictType, const Akonadi::Collection &col);
     void contactMerged(const Akonadi::Item &item);
 
 private:

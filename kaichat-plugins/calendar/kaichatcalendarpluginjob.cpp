@@ -69,6 +69,8 @@ void KAIChatCalendarPluginJob::slotContactBirthdaySearchDone(KJob *job)
             .messageUuid = mMessageUuid,
             .chatId = mChatId,
             .toolIdentifier = mToolIdentifier,
+            .attachementInfoList = {},
+
         };
         Q_EMIT finished(info);
     } else {
@@ -80,6 +82,8 @@ void KAIChatCalendarPluginJob::slotContactBirthdaySearchDone(KJob *job)
             .messageUuid = mMessageUuid,
             .chatId = mChatId,
             .toolIdentifier = mToolIdentifier,
+            .attachementInfoList = {},
+
         };
         Q_EMIT finished(info);
     }
@@ -95,6 +99,8 @@ void KAIChatCalendarPluginJob::slotContactEmailSearchDone(KJob *job)
             .messageUuid = mMessageUuid,
             .chatId = mChatId,
             .toolIdentifier = mToolIdentifier,
+            .attachementInfoList = {},
+
         };
         Q_EMIT finished(info);
 
@@ -107,6 +113,8 @@ void KAIChatCalendarPluginJob::slotContactEmailSearchDone(KJob *job)
             .messageUuid = mMessageUuid,
             .chatId = mChatId,
             .toolIdentifier = mToolIdentifier,
+            .attachementInfoList = {},
+
         };
         Q_EMIT finished(info);
     }

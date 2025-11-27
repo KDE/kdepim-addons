@@ -23,6 +23,4 @@ public:
     [[nodiscard]] bool hasPopupMenuSupport() const override;
     [[nodiscard]] bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent = nullptr) override;
-Q_SIGNALS:
-    void configChanged();
 };

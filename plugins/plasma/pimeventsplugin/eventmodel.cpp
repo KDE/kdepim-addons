@@ -86,7 +86,7 @@ void EventModel::addCalendar(const Akonadi::Collection &col)
         connect(collectionFetchJob, &Akonadi::CollectionFetchJob::result, collectionFetchJob, [this](auto *job) {
             auto fetchJob = dynamic_cast<Akonadi::CollectionFetchJob *>(job);
             if (!fetchJob->collections().isEmpty()) {
-                auto collection = fetchJob->collections()[0];
+                auto collection = fetchJob->collections().at(0);
                 mCols.push_back(collection);
 
                 createMonitor();

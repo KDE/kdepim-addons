@@ -24,8 +24,6 @@ public:
     [[nodiscard]] MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
     [[nodiscard]] bool hasPopupMenuSupport() const override;
     [[nodiscard]] bool hasConfigureDialog() const override;
-Q_SIGNALS:
-    void configChanged();
 
 private:
     TextAutoGenerateText::TextAutoGenerateManager *const mManager;
