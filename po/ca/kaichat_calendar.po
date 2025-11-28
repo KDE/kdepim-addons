@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2025-10-27 09:39+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -49,17 +49,17 @@ msgstr "Configuració del connector de l'eina de calendari"
 msgid "Get Email..."
 msgstr "Obtén un correu electrònic..."
 
-#: kaichatcalendarpluginjob.cpp:68 kaichatcalendarpluginjob.cpp:94
+#: kaichatcalendarpluginjob.cpp:68 kaichatcalendarpluginjob.cpp:98
 #, kde-format
 msgid "No Contact found in calendar for %1"
 msgstr "No s'ha trobat cap contacte al calendari sobre %1"
 
-#: kaichatcalendarpluginjob.cpp:77
+#: kaichatcalendarpluginjob.cpp:79
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "La data de naixement de %1 és %2"
 
-#: kaichatcalendarpluginjob.cpp:104
+#: kaichatcalendarpluginjob.cpp:110
 #, kde-format
 msgid "The preferred email is %1"
 msgstr "El correu electrònic preferit és %1"
