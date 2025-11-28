@@ -49,9 +49,9 @@ void AskAutogenerateTextPluginEditorInterface::exec()
     QTextCursor textCursor = richTextEditor()->textCursor();
     const QString selectedText = textCursor.selectedText();
 #if TEXTAUTOGENERATETEXT_VERSION <= QT_VERSION_CHECK(1, 8, 0)
-    dlg->ask(QStringLiteral("%1 %2").arg(requestText, selectedText));
+    dlg->ask(QStringLiteral("%1 %2").arg(mAskMsg, selectedText));
 #else
-    const TextAutoGenerateText::TextAutoGenerateManager::AskMessageInfo info{.message = QStringLiteral("%1 %2").arg(requestText, selectedText),
+    const TextAutoGenerateText::TextAutoGenerateManager::AskMessageInfo info{.message = QStringLiteral("%1 %2").arg(mAskMsg, selectedText),
                                                                              .attachments = {},
                                                                              .tools = {}};
     dlg->ask(info);
