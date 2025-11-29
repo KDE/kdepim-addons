@@ -16,10 +16,18 @@ corrosion_import_crate(MANIFEST_PATH ${CMAKE_CURRENT_SOURCE_DIR}/rs/adblock/Carg
 
 add_library(adblockplugin)
 
+if(Corrosion_VERSION VERSION_LESS 0.6.0)
+    set(corrosion_build_dir "build")
+else()
+    string(SHA1 cargo_path_hash ${CMAKE_CURRENT_SOURCE_DIR}/rs/adblock/Cargo.toml)
+    string(SUBSTRING "${cargo_path_hash}" 0 5 cargo_path_hash)
+    set(corrosion_build_dir "adblock_${cargo_path_hash}")
+endif()
+
 target_include_directories(
     adblockplugin
     PRIVATE
-        ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/
+        ${CMAKE_BINARY_DIR}/cargo/${corrosion_build_dir}/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/
 )
 
 target_sources(
@@ -124,7 +132,7 @@ target_link_libraries(
 target_include_directories(
     webengineviewer_adblockplugin
     PRIVATE
-        ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/
+        ${CMAKE_BINARY_DIR}/cargo/${corrosion_build_dir}/${Rust_CARGO_TARGET}/cxxbridge/webengineviewer-adblock/src/
 )
 
 if(BUILD_TESTING)
