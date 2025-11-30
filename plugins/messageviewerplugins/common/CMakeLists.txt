@@ -4,8 +4,6 @@ add_subdirectory(translatorplugin)
 add_subdirectory(expandurlplugin)
 
 if(TARGET KF6::TextAutoGenerateText)
-    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 1.8.59)
-        add_subdirectory(messagevieweraiplugin)
-    endif()
+    add_subdirectory(messagevieweraiplugin)
 endif()
 

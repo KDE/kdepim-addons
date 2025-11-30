@@ -215,10 +215,6 @@ if(OPTION_ADD_AUTOGENERATETEXT)
             PURPOSE "Required for building AI plugins support"
             DESCRIPTION "Use AI plugin"
     )
-
-    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 1.8.63)
-        set(HAVE_NEW_TOOLS_PLUGINS_SUPPORT TRUE)
-    endif()
 endif()
 
 find_package(KPim6Tnef ${KTNEF_LIB_VERSION} CONFIG REQUIRED)
@@ -384,9 +380,7 @@ if(TARGET KPim6::ImportWizard)
 endif()
 if(TARGET KF6::TextAutoGenerateText)
     add_subdirectory(pimautogeneratetext)
-    if(HAVE_NEW_TOOLS_PLUGINS_SUPPORT)
-        add_subdirectory(kaichat-plugins)
-    endif()
+    add_subdirectory(kaichat-plugins)
 endif()
 
 ecm_qt_install_logging_categories(
