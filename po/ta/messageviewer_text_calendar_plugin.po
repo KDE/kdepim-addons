@@ -1,18 +1,18 @@
-# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2024-07-06 21:31+0530\n"
+"PO-Revision-Date: 2025-11-30 15:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -283,7 +283,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr ""
+msgstr "முன்ன‍னுப்பு"
 
 #: text_calendar.cpp:825
 #, fuzzy, kde-format
@@ -295,7 +295,7 @@ msgstr "என் நாட்காட்டியில் இருந்த�
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
-msgstr ""
+msgstr "பணியை ரத்து செய்"
 
 #: text_calendar.cpp:828
 #, fuzzy, kde-format
@@ -304,17 +304,16 @@ msgid "Do you still want to cancel this invitation?"
 msgstr "என் நாட்காட்டியில் இருந்து நிகழ்வை நீக்கு"
 
 #: text_calendar.cpp:829 text_calendar.cpp:850
-#, fuzzy, kde-format
-#| msgid "Accept incidence"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
-msgstr "நிகழ்வை ஒப்புக்கொள்"
+msgstr "அழைப்பிதழை ரத்து செய்"
 
 #: text_calendar.cpp:832 text_calendar.cpp:853
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr ""
+msgstr "ரத்து செய்யாதே"
 
 #: text_calendar.cpp:835
 #, kde-format
