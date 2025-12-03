@@ -43,7 +43,7 @@ msgstr "Importa la clau"
 #: pgpkeyurlhandler.cpp:66
 #, kde-format
 msgid "An error occurred while importing the key."
-msgstr "S'ha produït un error en importar la clau."
+msgstr "S'ha produït un error mentre s'importava la clau."
 
 #: pgpkeyurlhandler.cpp:72 pgpkeyurlhandler.cpp:74
 #, kde-format
@@ -85,7 +85,8 @@ msgstr ""
 
 #: templates/gnupgwksmessagepart.html:33
 msgid "An error occurred while publishing the key. Please try again later."
-msgstr "S'ha produït un error en publicar la clau. Intenteu-ho més tard."
+msgstr ""
+"S'ha produït un error mentre es publicava la clau. Intenteu-ho més tard."
 
 #: templates/gnupgwksmessagepart.html:35
 msgid "Register the key"
@@ -159,7 +160,7 @@ msgstr ""
 #: templates/pgpkeymessagepart.html:45
 #, kde-format
 msgid "Error while loading key: %1"
-msgstr "S'ha produït un error en carregar la clau: %1"
+msgstr "S'ha produït un error mentre es carregava la clau: %1"
 
 #: templates/pgpkeymessagepart.html:47
 msgid "Hide key details"

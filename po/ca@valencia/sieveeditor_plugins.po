@@ -54,7 +54,7 @@ msgstr "Crea una carpeta"
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
 #, kde-format
 msgid "Error during creating folder: %1"
-msgstr "Error durant la creació de la carpeta: %1"
+msgstr "S'ha produït un error durant la creació de la carpeta: %1"
 
 #: imapfoldercompletion/selectimapfolderdialog.cpp:27
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "No es permet un nom buit en la carpeta."
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
 #, kde-format
 msgid "Error during loading folders: %1"
-msgstr "Error durant la càrrega de les carpetes: %1"
+msgstr "S'ha produït un error durant la càrrega de les carpetes: %1"
 
 #: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
 #, kde-format
