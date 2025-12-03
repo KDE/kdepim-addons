@@ -531,9 +531,9 @@ public:
             ct->setName(QStringLiteral("cal.ics"));
             ct->setParameter(QByteArrayLiteral("method"), QStringLiteral("reply"));
 
-            auto disposition = new KMime::Headers::ContentDisposition;
+            auto disposition = std::unique_ptr<KMime::Headers::ContentDisposition>(new KMime::Headers::ContentDisposition);
             disposition->setDisposition(KMime::Headers::CDinline);
-            msg->setHeader(disposition);
+            msg->setHeader(std::move(disposition));
             msg->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             const QString answer = i18n("Invitation answer attached.");
             msg->setBody(answer.toUtf8());
@@ -547,8 +547,8 @@ public:
             ct->setBoundary(KMime::multiPartBoundary());
 
             // Set the first multipart, the body message.
-            auto bodyMessage = new KMime::Content;
-            auto bodyDisposition = new KMime::Headers::ContentDisposition;
+            auto bodyMessage = std::unique_ptr<KMime::Content>(new KMime::Content);
+            auto bodyDisposition = std::unique_ptr<KMime::Headers::ContentDisposition>(new KMime::Headers::ContentDisposition);
             bodyDisposition->setDisposition(KMime::Headers::CDinline);
             auto bodyMessageCt = bodyMessage->contentType();
             bodyMessageCt->setMimeType("text/plain");
@@ -556,22 +556,22 @@ public:
             bodyMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             const QString answer = i18n("Invitation answer attached.");
             bodyMessage->setBody(answer.toUtf8());
-            bodyMessage->setHeader(bodyDisposition);
-            msg->appendContent(bodyMessage);
+            bodyMessage->setHeader(std::move(bodyDisposition));
+            msg->appendContent(std::move(bodyMessage));
 
             // Set the second multipart, the attachment.
-            auto attachMessage = new KMime::Content;
-            auto attachDisposition = new KMime::Headers::ContentDisposition;
+            auto attachMessage = std::unique_ptr<KMime::Content>(new KMime::Content);
+            auto attachDisposition = std::unique_ptr<KMime::Headers::ContentDisposition>(new KMime::Headers::ContentDisposition);
             attachDisposition->setDisposition(KMime::Headers::CDattachment);
             auto attachCt = attachMessage->contentType();
             attachCt->setMimeType("text/calendar");
             attachCt->setCharset("utf-8");
             attachCt->setName(QStringLiteral("cal.ics"));
             attachCt->setParameter(QByteArrayLiteral("method"), QStringLiteral("reply"));
-            attachMessage->setHeader(attachDisposition);
+            attachMessage->setHeader(std::move(attachDisposition));
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             attachMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
-            msg->appendContent(attachMessage);
+            msg->appendContent(std::move(attachMessage));
         }
 
         // Try and match the receiver with an identity.
@@ -583,9 +583,9 @@ public:
         const bool nullIdentity = (identity == KIdentityManagementCore::Identity::null());
 
         if (!nullIdentity) {
-            auto x_header = new KMime::Headers::Generic("X-KMail-Identity");
+            auto x_header = std::unique_ptr<KMime::Headers::Generic>(new KMime::Headers::Generic("X-KMail-Identity"));
             x_header->from7BitString(QByteArray::number(identity.uoid()));
-            msg->setHeader(x_header);
+            msg->setHeader(std::move(x_header));
         }
 
         const bool identityHasTransport = !identity.transport().isEmpty();
@@ -601,9 +601,9 @@ public:
             }
             transportId = TransportManager::self()->defaultTransportId();
         }
-        auto header = new KMime::Headers::Generic("X-KMail-Transport");
+        auto header = std::unique_ptr<KMime::Headers::Generic>(new KMime::Headers::Generic("X-KMail-Transport"));
         header->fromUnicodeString(QString::number(transportId));
-        msg->setHeader(header);
+        msg->setHeader(std::move(header));
 
         // Outlook will only understand the reply if the From: header is the
         // same as the To: header of the invitation message.

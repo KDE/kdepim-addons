@@ -126,9 +126,9 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
     const auto identity = KIdentityManagementCore::IdentityManager::self()->identityForAddress(mp.address());
     const bool nullIdentity = (identity == KIdentityManagementCore::Identity::null());
     if (!nullIdentity) {
-        auto x_header = new KMime::Headers::Generic("X-KMail-Identity");
+        auto x_header = std::unique_ptr<KMime::Headers::Generic>(new KMime::Headers::Generic("X-KMail-Identity"));
         x_header->from7BitString(QByteArray::number(identity.uoid()));
-        msg->setHeader(x_header);
+        msg->setHeader(std::move(x_header));
     }
 
     // Find transport set in the identity, fallback to default transport
@@ -147,9 +147,9 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
         }
         transportId = transportMgr->defaultTransportId();
     }
-    auto header = new KMime::Headers::Generic("X-KMail-Transport");
+    auto header = std::unique_ptr<KMime::Headers::Generic>(new KMime::Headers::Generic("X-KMail-Transport"));
     header->fromUnicodeString(QString::number(transportId));
-    msg->setHeader(header);
+    msg->setHeader(std::move(header));
 
     // Build the message
     msg->assemble();
