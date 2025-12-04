@@ -8,6 +8,7 @@
 
 #include <KIMAP/ListJob>
 #include <KSieveCore/SieveImapAccountSettings>
+#include <QMap>
 #include <QObject>
 namespace KIMAP
 {
