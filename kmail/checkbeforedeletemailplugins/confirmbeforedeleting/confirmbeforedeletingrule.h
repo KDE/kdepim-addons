@@ -9,8 +9,8 @@
 #include <Akonadi/Item>
 #include <KConfigGroup>
 #include <KMime/Message>
-#include <QDebug>
 #include <QString>
+class QDebug;
 class KMAILCONFIRMBEFOREDELETING_EXPORT ConfirmBeforeDeletingRule
 {
     Q_GADGET

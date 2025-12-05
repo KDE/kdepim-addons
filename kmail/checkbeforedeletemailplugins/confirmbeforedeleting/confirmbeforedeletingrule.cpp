@@ -11,6 +11,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <Akonadi/MessageStatus>
 #include <KLocalizedString>
 
+#include <QDebug>
+
 ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule() = default;
 
 ConfirmBeforeDeletingRule::~ConfirmBeforeDeletingRule() = default;

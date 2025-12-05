@@ -6,8 +6,9 @@
 
 #pragma once
 #include "pimautogeneratetext_export.h"
-#include <QDebug>
+#include <QMetaType>
 #include <QString>
+class QDebug;
 class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskInfo
 {
 public:

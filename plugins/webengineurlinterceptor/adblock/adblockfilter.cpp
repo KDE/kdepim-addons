@@ -5,10 +5,8 @@
 */
 
 #include "adblockfilter.h"
-
-AdblockFilter::AdblockFilter()
-{
-}
+#include <QDebug>
+AdblockFilter::AdblockFilter() = default;
 
 AdblockFilter::~AdblockFilter() = default;
 

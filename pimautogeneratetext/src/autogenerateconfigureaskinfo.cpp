@@ -5,6 +5,7 @@
 */
 
 #include "autogenerateconfigureaskinfo.h"
+#include <QDebug>
 
 AutogenerateConfigureAskInfo::AutogenerateConfigureAskInfo() = default;
 

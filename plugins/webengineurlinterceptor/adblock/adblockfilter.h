@@ -6,9 +6,9 @@
 
 #pragma once
 #include "adblockplugin_private_export.h"
-#include <QDebug>
+#include <QMetaType>
 #include <QString>
-
+class QDebug;
 class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockFilter
 {
 public:
