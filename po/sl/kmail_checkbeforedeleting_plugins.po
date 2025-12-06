@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-12-06 00:43+0000\n"
 "PO-Revision-Date: 2024-08-01 06:23+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -62,13 +62,13 @@ msgid "Bcc"
 msgstr "Skp"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:172
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:174
 #, kde-format
 msgid "Unread"
 msgstr "Neprebrano"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:181
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:183
 #, kde-format
 msgid "Important"
 msgstr "Pomembno"
@@ -111,12 +111,12 @@ msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "Uveljavi za vse"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:201
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:203
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
 msgstr "To sporočilo s predmetom '%2' vsebuje '%1'"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:210
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:212
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "Sporočilo s predmetom '%1' je %2"

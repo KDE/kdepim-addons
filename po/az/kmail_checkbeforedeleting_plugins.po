@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-12-06 00:43+0000\n"
 "PO-Revision-Date: 2022-06-21 17:49+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -63,13 +63,13 @@ msgid "Bcc"
 msgstr "Gizli surəti"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:172
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:174
 #, kde-format
 msgid "Unread"
 msgstr "Oxunmamış"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:181
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:183
 #, kde-format
 msgid "Important"
 msgstr "Vacib"
@@ -114,12 +114,12 @@ msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "Hamısına tətbiq edin"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:201
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:203
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
 msgstr "\"%2\" mövzulu məktubda \"%1\" var"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:210
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:212
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "\"%1\" mövzulu məktub %2-dir"

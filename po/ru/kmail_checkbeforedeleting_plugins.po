@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-12-06 00:43+0000\n"
 "PO-Revision-Date: 2024-11-15 16:54+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -63,13 +63,13 @@ msgid "Bcc"
 msgstr "Скрытая копия"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:172
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:174
 #, kde-format
 msgid "Unread"
 msgstr "Не прочитано"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:181
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:183
 #, kde-format
 msgid "Important"
 msgstr "Важное"
@@ -112,12 +112,12 @@ msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "Применить ко всем"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:201
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:203
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
 msgstr "Сообщение с темой «%2» содержит «%1»"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:210
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:212
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "Сообщение с темой «%1» %2"

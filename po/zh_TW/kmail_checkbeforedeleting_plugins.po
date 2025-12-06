@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-12-06 00:43+0000\n"
 "PO-Revision-Date: 2024-08-09 03:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -64,13 +64,13 @@ msgid "Bcc"
 msgstr "密件副本"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:172
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:174
 #, kde-format
 msgid "Unread"
 msgstr "未讀"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:181
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:183
 #, kde-format
 msgid "Important"
 msgstr "重要"
@@ -113,12 +113,12 @@ msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "全部套用"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:201
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:203
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
 msgstr "主旨為 '%2' 的信件包含 '%1'"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:210
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:212
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "主旨為 '%1' 的信件是%2的"
