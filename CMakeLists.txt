@@ -14,7 +14,7 @@ set(CMAKE_MODULE_PATH
     ${ECM_MODULE_PATH}
 )
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta)
+set(KDEPIM_DEV_VERSION alpha)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
