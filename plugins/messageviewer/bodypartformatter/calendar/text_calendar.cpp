@@ -392,7 +392,7 @@ public:
         QString receiver;
         KIdentityManagementCore::IdentityManager *im = KIdentityManagementCore::IdentityManager::self();
 
-        KMime::Types::Mailbox::List addrs;
+        QList<KMime::Types::Mailbox> addrs;
         if (auto header = node->topLevel()->header<KMime::Headers::To>()) {
             addrs = header->mailboxes();
         }
@@ -406,7 +406,7 @@ public:
             }
         }
 
-        KMime::Types::Mailbox::List ccaddrs;
+        QList<KMime::Types::Mailbox> ccaddrs;
         if (auto header = node->topLevel()->header<KMime::Headers::Cc>()) {
             ccaddrs = header->mailboxes();
         }
