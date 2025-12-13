@@ -3,22 +3,22 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2016, 2017, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2016, 2017, 2020, 2025 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2017, 2020, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2024-07-31 11:59+0200\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"PO-Revision-Date: 2025-12-12 18:21+0100\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: gnupgwksurlhandler.cpp:86
 #, kde-format
@@ -117,10 +117,10 @@ msgid ""
 "Other users will be able to retrieve the key and send you encrypted emails "
 "and verify authenticity of emails you send them."
 msgstr ""
-"La vostra clau OpenPGP serà publicada al vostre proveïdor de correu "
-"electrònic. Els altres seran capaços de rebre la clau i enviar-vos correu "
-"electrònic encriptat, així com verificar l'autenticitat dels missatges que "
-"els envieu."
+"La vostra clau OpenPGP serà publicada al servidor de claus del vostre "
+"proveïdor de correu electrònic. Els altres seran capaços de rebre la clau i "
+"enviar-vos correu electrònic encriptat, així com verificar l'autenticitat "
+"dels missatges que els envieu."
 
 #: templates/pgpkeymessagepart.html:14
 msgid "OpenPGP Key"
