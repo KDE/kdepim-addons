@@ -22,7 +22,7 @@
 #include <Akonadi/MessageQueueJob>
 #include <MailTransport/Transport>
 #include <MailTransport/TransportManager>
-#include <PimCommon/PimUtil>
+#include <TextAddonsWidgets/ExecutableUtils>
 
 #include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
@@ -55,7 +55,7 @@ bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerIns
 
     const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
     if (q.queryItemValue(QStringLiteral("action")) == QLatin1StringView("show")) {
-        const QString progFullPath = PimCommon::Util::findExecutable(QStringLiteral("kleopatra"));
+        const QString progFullPath = TextAddonsWidgets::ExecutableUtils::findExecutable(QStringLiteral("kleopatra"));
         if (progFullPath.isEmpty()
             || !QProcess::startDetached(QStringLiteral("kleopatra"), {QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr"))})) {
             return false;

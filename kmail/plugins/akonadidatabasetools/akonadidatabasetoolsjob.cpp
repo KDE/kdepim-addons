@@ -4,13 +4,13 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "akonadidatabasetoolsjob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadidatasetools_debug.h"
-#include <PimCommon/PimUtil>
 #include <QProcess>
 #include <QStandardPaths>
+#include <TextAddonsWidgets/ExecutableUtils>
 
+using namespace Qt::Literals::StringLiterals;
 AkonadiDatabaseToolsJob::AkonadiDatabaseToolsJob(QObject *parent)
     : QObject{parent}
 {
@@ -25,7 +25,7 @@ bool AkonadiDatabaseToolsJob::canStart() const
 
 QString AkonadiDatabaseToolsJob::akonadiProcessPath() const
 {
-    const QString exec = PimCommon::Util::findExecutable(u"akonadictl"_s);
+    const QString exec = TextAddonsWidgets::ExecutableUtils::findExecutable(u"akonadictl"_s);
 
     return exec;
 }
