@@ -43,7 +43,7 @@ void testHeaderFile(const QString &data, const QString &name, const QString &dir
 
     {
         QFile f(outName);
-        f.open(QIODevice::WriteOnly);
+        Q_VERIFY(f.open(QIODevice::WriteOnly));
         f.write(header.toUtf8());
         f.close();
     }
