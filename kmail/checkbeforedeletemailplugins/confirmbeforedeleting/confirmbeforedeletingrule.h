@@ -48,9 +48,9 @@ public:
     [[nodiscard]] bool operator==(const ConfirmBeforeDeletingRule &other) const;
 
 private:
-    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void generateConfirmMessageInfo(const KMime::Message::Ptr &msg, QString &checkFoundInfo) const;
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void generateConfirmMessageInfo(const std::shared_ptr<KMime::Message> &msg, QString &checkFoundInfo) const;
     KMAILCONFIRMBEFOREDELETING_NO_EXPORT void
-    generateConfirmMessageInfoFromStatus(const KMime::Message::Ptr &msg, QString &checkFoundInfo, const QString &statusStr) const;
+    generateConfirmMessageInfoFromStatus(const std::shared_ptr<KMime::Message> &msg, QString &checkFoundInfo, const QString &statusStr) const;
     QString mPattern;
     RuleType mRuleType = RuleType::Unknown;
 };

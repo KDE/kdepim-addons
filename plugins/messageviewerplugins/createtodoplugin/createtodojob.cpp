@@ -55,7 +55,7 @@ void CreateTodoJob::slotFetchDone(KJob *job)
 
 void CreateTodoJob::createTodo()
 {
-    if (!mItem.hasPayload<KMime::Message::Ptr>()) {
+    if (!mItem.hasPayload<std::shared_ptr<KMime::Message>>()) {
         qCDebug(CREATETODOPLUGIN_LOG) << " item has not payload";
         emitResult();
         return;

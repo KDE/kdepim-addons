@@ -90,7 +90,7 @@ QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart *part, const QS
     return {};
 }
 
-QByteArray ApplicationGnuPGWKSUrlHandler::createConfirmation(const KMime::Message::Ptr &msg) const
+QByteArray ApplicationGnuPGWKSUrlHandler::createConfirmation(const std::shared_ptr<KMime::Message> &msg) const
 {
     auto job = QGpgME::openpgp()->wksPublishJob();
     QEventLoop el;
@@ -118,7 +118,7 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
         return false;
     }
 
-    auto msg = KMime::Message::Ptr::create();
+    auto msg = std::make_shared<KMime::Message>();
     msg->setContent(KMime::CRLFtoLF(data));
     msg->parse();
 

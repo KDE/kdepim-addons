@@ -40,7 +40,7 @@ QList<QAction *> ViewerPluginCreateEventInterface::actions() const
     return mAction;
 }
 
-void ViewerPluginCreateEventInterface::setMessage(const KMime::Message::Ptr &value)
+void ViewerPluginCreateEventInterface::setMessage(const std::shared_ptr<KMime::Message> &value)
 {
     widget()->setMessage(value);
 }

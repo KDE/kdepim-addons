@@ -80,7 +80,7 @@ private Q_SLOTS:
         QVERIFY(mailFile.open(QIODevice::ReadOnly));
         const QByteArray mailData = KMime::CRLFtoLF(mailFile.readAll());
         QVERIFY(!mailData.isEmpty());
-        KMime::Message::Ptr msg(new KMime::Message);
+        std::shared_ptr<KMime::Message> msg(new KMime::Message);
         msg->setContent(mailData);
         msg->parse();
 
@@ -92,7 +92,7 @@ private Q_SLOTS:
         TestObjectTreeSource testSource(&fileWriter, &cssHelper);
         MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
 
-        otp.parseObjectTree(msg.data());
+        otp.parseObjectTree(msg.get());
 
         fileWriter.begin();
         fileWriter.write(

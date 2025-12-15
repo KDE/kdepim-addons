@@ -213,12 +213,12 @@ void EventEdit::setCollection(const Akonadi::Collection &value)
     }
 }
 
-KMime::Message::Ptr EventEdit::message() const
+std::shared_ptr<KMime::Message> EventEdit::message() const
 {
     return mMessage;
 }
 
-void EventEdit::setMessage(const KMime::Message::Ptr &value)
+void EventEdit::setMessage(const std::shared_ptr<KMime::Message> &value)
 {
     if (mMessage != value) {
         mMessage = value;
@@ -239,7 +239,7 @@ void EventEdit::slotCloseWidget()
     if (isVisible()) {
         writeConfig();
         mEventEdit->clear();
-        mMessage = KMime::Message::Ptr();
+        mMessage = std::shared_ptr<KMime::Message>();
         hide();
     }
 }

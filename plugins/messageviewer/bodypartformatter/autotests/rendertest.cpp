@@ -78,7 +78,7 @@ void RenderTest::testRender()
     QVERIFY(mailFile.open(QIODevice::ReadOnly));
     const QByteArray mailData = KMime::CRLFtoLF(mailFile.readAll());
     QVERIFY(!mailData.isEmpty());
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     msg->setContent(mailData);
     msg->parse();
 
@@ -90,7 +90,7 @@ void RenderTest::testRender()
     TestObjectTreeSource testSource(&fileWriter, &cssHelper);
     MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
 
-    otp.parseObjectTree(msg.data());
+    otp.parseObjectTree(msg.get());
 
     fileWriter.begin();
     fileWriter.write(
@@ -123,7 +123,7 @@ void RenderTest::testRenderKeyDetails()
     QVERIFY(mailFile.open(QIODevice::ReadOnly));
     const QByteArray mailData = KMime::CRLFtoLF(mailFile.readAll());
     QVERIFY(!mailData.isEmpty());
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     msg->setContent(mailData);
     msg->parse();
 
@@ -138,7 +138,7 @@ void RenderTest::testRenderKeyDetails()
     MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
 
     connect(&nodeHelper, &MimeTreeParser::NodeHelper::update, &loop, &QEventLoop::quit);
-    otp.parseObjectTree(msg.data());
+    otp.parseObjectTree(msg.get());
 
     fileWriter.begin();
     fileWriter.write(
@@ -154,7 +154,7 @@ void RenderTest::testRenderKeyDetails()
 
     {
         MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
-        otp.parseObjectTree(msg.data());
+        otp.parseObjectTree(msg.get());
 
         fileWriter.begin();
         fileWriter.write(

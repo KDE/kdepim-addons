@@ -25,7 +25,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnOriginalStringList
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSubject()
 {
     ViewerPluginExternalScriptParseArgument parser;
-    KMime::Message::Ptr message(new KMime::Message);
+    std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
     const QStringList lst = {QStringLiteral("%s")};
@@ -36,7 +36,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSubject()
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSameListIfNotTransform()
 {
     ViewerPluginExternalScriptParseArgument parser;
-    KMime::Message::Ptr message(new KMime::Message);
+    std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
     const QStringList lst = {QStringLiteral("cc"), QStringLiteral("vv"), QStringLiteral("ff")};
@@ -46,7 +46,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSameListIfNotTrans
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTwiceSubject()
 {
     ViewerPluginExternalScriptParseArgument parser;
-    KMime::Message::Ptr message(new KMime::Message);
+    std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
     const QStringList lst = {QStringLiteral("%s"), QStringLiteral("vv"), QStringLiteral("%s")};
@@ -57,7 +57,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTwiceSubject()
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTo()
 {
     ViewerPluginExternalScriptParseArgument parser;
-    KMime::Message::Ptr message(new KMime::Message);
+    std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
     const QStringList lst = {QStringLiteral("%to")};
@@ -68,7 +68,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTo()
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnEmptyStrWhenArgumentIsNotDefined()
 {
     ViewerPluginExternalScriptParseArgument parser;
-    KMime::Message::Ptr message(new KMime::Message);
+    std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
     const QStringList lst = {QStringLiteral("%cc")};
@@ -79,7 +79,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnEmptyStrWhenArgume
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBody()
 {
     ViewerPluginExternalScriptParseArgument parser;
-    KMime::Message::Ptr message(new KMime::Message);
+    std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
     const QStringList lst = {QStringLiteral("%body")};
@@ -90,7 +90,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBody()
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBcc()
 {
     ViewerPluginExternalScriptParseArgument parser;
-    KMime::Message::Ptr message(new KMime::Message);
+    std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
     const QStringList lst = {QStringLiteral("%bcc")};
@@ -98,7 +98,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBcc()
     QCOMPARE(parser.parse(lst), result);
 }
 
-void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const KMime::Message::Ptr &msg)
+void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const std::shared_ptr<KMime::Message> &msg)
 {
     QByteArray mail =
         "From: dfaure@example.com\n"

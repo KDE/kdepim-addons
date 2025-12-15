@@ -7,7 +7,7 @@
 #include "viewerpluginexternalscriptparseargument.h"
 ViewerPluginExternalScriptParseArgument::ViewerPluginExternalScriptParseArgument() = default;
 
-void ViewerPluginExternalScriptParseArgument::setMessage(const KMime::Message::Ptr &msg)
+void ViewerPluginExternalScriptParseArgument::setMessage(const std::shared_ptr<KMime::Message> &msg)
 {
     mMessage = msg;
 }
@@ -19,7 +19,7 @@ void ViewerPluginExternalScriptParseArgument::setAkonadiUrl(const QString &akona
 
 QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &scriptArguments)
 {
-    if (mMessage.isNull()) {
+    if (mMessage == nullptr) {
         return scriptArguments;
     }
 

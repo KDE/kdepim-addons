@@ -115,8 +115,8 @@ QString ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::R
 bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFoundInfo) const
 {
     bool needToConfirm = false;
-    if (item.hasPayload<KMime::Message::Ptr>()) {
-        auto msg = item.payload<KMime::Message::Ptr>();
+    if (item.hasPayload<std::shared_ptr<KMime::Message>>()) {
+        auto msg = item.payload<std::shared_ptr<KMime::Message>>();
         switch (mRuleType) {
         case Body: {
             const auto ba = msg->body();
@@ -194,7 +194,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
     return needToConfirm;
 }
 
-void ConfirmBeforeDeletingRule::generateConfirmMessageInfo(const KMime::Message::Ptr &msg, QString &checkFoundInfo) const
+void ConfirmBeforeDeletingRule::generateConfirmMessageInfo(const std::shared_ptr<KMime::Message> &msg, QString &checkFoundInfo) const
 {
     QString subjectStr;
     if (auto subject = msg->subject(false)) {
@@ -203,7 +203,9 @@ void ConfirmBeforeDeletingRule::generateConfirmMessageInfo(const KMime::Message:
     checkFoundInfo = i18n("The message with subject \'%2\' contains \'%1\'", pattern(), subjectStr);
 }
 
-void ConfirmBeforeDeletingRule::generateConfirmMessageInfoFromStatus(const KMime::Message::Ptr &msg, QString &checkFoundInfo, const QString &statusStr) const
+void ConfirmBeforeDeletingRule::generateConfirmMessageInfoFromStatus(const std::shared_ptr<KMime::Message> &msg,
+                                                                     QString &checkFoundInfo,
+                                                                     const QString &statusStr) const
 {
     QString subjectStr;
     if (auto subject = msg->subject(false)) {

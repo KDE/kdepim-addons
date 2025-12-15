@@ -50,7 +50,7 @@ void ViewerPluginExternalscriptInterface::setMessageItem(const Akonadi::Item &it
     mAkonadiUrl = item.url(Akonadi::Item::UrlWithMimeType).toString();
 }
 
-void ViewerPluginExternalscriptInterface::setMessage(const KMime::Message::Ptr &msg)
+void ViewerPluginExternalscriptInterface::setMessage(const std::shared_ptr<KMime::Message> &msg)
 {
     mMessage = msg;
 }
@@ -95,7 +95,7 @@ void ViewerPluginExternalscriptInterface::clear()
 {
     mText.clear();
     mCurrentInfo.clear();
-    mMessage.clear();
+    mMessage.reset();
 }
 
 void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)

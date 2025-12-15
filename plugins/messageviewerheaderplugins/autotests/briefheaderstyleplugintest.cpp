@@ -74,7 +74,7 @@ void BriefHeaderStylePluginTest::testFormat()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
-    testHeaderFile(style->format(aMsg.data()), mailbox + QStringLiteral(".brief"));
+    testHeaderFile(style->format(aMsg.get()), mailbox + QStringLiteral(".brief"));
 }
 
 QTEST_MAIN(BriefHeaderStylePluginTest)

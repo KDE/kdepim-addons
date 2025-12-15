@@ -86,7 +86,7 @@ void FancyHeaderStylePluginTest::testFormat()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
-    testHeaderFile(style->format(aMsg.data()), mailbox + QStringLiteral(".fancy"));
+    testHeaderFile(style->format(aMsg.get()), mailbox + QStringLiteral(".fancy"));
 }
 
 QTEST_MAIN(FancyHeaderStylePluginTest)

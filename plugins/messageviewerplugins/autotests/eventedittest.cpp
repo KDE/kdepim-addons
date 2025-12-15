@@ -33,7 +33,7 @@ EventEditTest::EventEditTest(QObject *parent)
     : QObject(parent)
 {
     qRegisterMetaType<Akonadi::Collection>();
-    qRegisterMetaType<KMime::Message::Ptr>();
+    qRegisterMetaType<std::shared_ptr<KMime::Message>>();
     qRegisterMetaType<KCalendarCore::Event::Ptr>();
     QStandardPaths::setTestModeEnabled(true);
 
@@ -100,10 +100,10 @@ void EventEditTest::shouldEmitMessageChanged()
 {
     MessageViewer::EventEdit edit;
     QSignalSpy spy(&edit, &MessageViewer::EventEdit::messageChanged);
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     edit.setMessage(msg);
     QCOMPARE(spy.count(), 1);
-    QCOMPARE(spy.at(0).at(0).value<KMime::Message::Ptr>(), msg);
+    QCOMPARE(spy.at(0).at(0).value<std::shared_ptr<KMime::Message>>(), msg);
 }
 
 void EventEditTest::shouldNotEmitWhenCollectionIsNotChanged()
@@ -118,7 +118,7 @@ void EventEditTest::shouldNotEmitWhenCollectionIsNotChanged()
 void EventEditTest::shouldNotEmitWhenMessageIsNotChanged()
 {
     MessageViewer::EventEdit edit;
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     edit.setMessage(msg);
     QSignalSpy spy(&edit, &MessageViewer::EventEdit::messageChanged);
     edit.setMessage(msg);
@@ -134,7 +134,7 @@ void EventEditTest::shouldEmitEventWhenPressEnter()
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QVERIFY(edit.isVisible());
 
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     const QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject);
     msg->subject(false)->setRFC2047Charset("us-ascii");
@@ -153,7 +153,7 @@ void EventEditTest::shouldHideWidgetWhenPressEnter()
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QVERIFY(edit.isVisible());
 
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     const QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject);
     msg->subject(false)->setRFC2047Charset("us-ascii");
@@ -183,7 +183,7 @@ void EventEditTest::shouldHideWidgetWhenSaveClicked()
     edit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test Note"));
     msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
@@ -230,7 +230,7 @@ void EventEditTest::shouldSaveCollectionSettingsWhenDeleteWidget()
 void EventEditTest::shouldNotEmitCreateEventWhenDateIsInvalid()
 {
     MessageViewer::EventEdit edit;
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
 
     auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
     startDateTime->setDateTime(QDateTime());
@@ -251,7 +251,7 @@ void EventEditTest::shouldNotEmitCreateEventWhenDateIsInvalid()
 void EventEditTest::shouldEventHasCorrectSubject()
 {
     MessageViewer::EventEdit edit;
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject);
     msg->subject(false)->setRFC2047Charset("us-ascii");
@@ -269,7 +269,7 @@ void EventEditTest::shouldEventHasCorrectSubject()
 void EventEditTest::shouldSelectLineWhenPutMessage()
 {
     MessageViewer::EventEdit edit;
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject);
     msg->subject(false)->setRFC2047Charset("us-ascii");
@@ -284,7 +284,7 @@ void EventEditTest::shouldSelectLineWhenPutMessage()
 void EventEditTest::shouldHaveCorrectStartEndDateTime()
 {
     MessageViewer::EventEdit edit;
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject);
     msg->subject(false)->setRFC2047Charset("us-ascii");
@@ -352,7 +352,7 @@ void EventEditTest::shouldEnsureEndDateIsNotBeforeStartDate()
 void EventEditTest::shouldEnabledSaveOpenEditorButton()
 {
     MessageViewer::EventEdit edit;
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"));
     msg->subject(false)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
@@ -380,7 +380,7 @@ void EventEditTest::shouldEnabledSaveOpenEditorButton()
 void EventEditTest::shouldUpdateStartEndDateWhenReopenIt()
 {
     MessageViewer::EventEdit edit;
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     const QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject);
     msg->subject(false)->setRFC2047Charset("us-ascii");
@@ -429,7 +429,7 @@ void EventEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEm
     auto akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     // Create an empty combobox
     akonadicombobox->setModel(new QStandardItemModel());
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     const QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject);
     msg->subject(false)->setRFC2047Charset("us-ascii");

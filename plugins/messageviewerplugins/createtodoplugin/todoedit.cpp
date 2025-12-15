@@ -199,12 +199,12 @@ void TodoEdit::setCollection(const Akonadi::Collection &value)
     }
 }
 
-KMime::Message::Ptr TodoEdit::message() const
+std::shared_ptr<KMime::Message> TodoEdit::message() const
 {
     return mMessage;
 }
 
-void TodoEdit::setMessage(const KMime::Message::Ptr &value)
+void TodoEdit::setMessage(const std::shared_ptr<KMime::Message> &value)
 {
     if (mMessage != value) {
         mMessage = value;
@@ -217,7 +217,7 @@ void TodoEdit::slotCloseWidget()
     if (isVisible()) {
         writeConfig();
         mNoteEdit->clear();
-        mMessage = KMime::Message::Ptr();
+        mMessage = std::shared_ptr<KMime::Message>();
         mMsgWidget->hide();
         hide();
     }

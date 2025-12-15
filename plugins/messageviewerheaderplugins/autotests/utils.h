@@ -10,4 +10,4 @@
 #include <QString>
 
 void testHeaderFile(const QString &data, const QString &name, const QString &dir = QString());
-KMime::Message::Ptr readAndParseMail(const QString &mailFile);
+std::shared_ptr<KMime::Message> readAndParseMail(const QString &mailFile);

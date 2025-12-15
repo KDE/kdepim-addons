@@ -16,7 +16,7 @@ public:
     ~ViewerPluginExternalScriptParseArgumentTest() override;
 
 private:
-    void initializeMessage(const KMime::Message::Ptr &msg);
+    void initializeMessage(const std::shared_ptr<KMime::Message> &msg);
 
 private Q_SLOTS:
     void shouldReturnOriginalStringListWhenMessageIsNotSetting();

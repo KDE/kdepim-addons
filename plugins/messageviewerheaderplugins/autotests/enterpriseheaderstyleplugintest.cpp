@@ -76,7 +76,7 @@ void EnterpriseHeaderStylePluginTest::testFormat()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
-    QString closedDiv = style->format(aMsg.data()) + QStringLiteral("</div>");
+    QString closedDiv = style->format(aMsg.get()) + QStringLiteral("</div>");
     testHeaderFile(closedDiv, mailbox + QStringLiteral(".enterprise"));
 }
 

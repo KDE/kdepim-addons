@@ -23,7 +23,7 @@ public:
     void execute() override;
 
     void setText(const QString &text) override;
-    void setMessage(const KMime::Message::Ptr &msg) override;
+    void setMessage(const std::shared_ptr<KMime::Message> &msg) override;
     void refreshActionList(KActionCollection *ac) override;
     void setMessageItem(const Akonadi::Item &item) override;
 private Q_SLOTS:
@@ -41,7 +41,7 @@ private:
     QStringList mCurrentInfo;
     QString mText;
     QString mAkonadiUrl;
-    KMime::Message::Ptr mMessage;
+    std::shared_ptr<KMime::Message> mMessage;
     QActionGroup *mActionGroup = nullptr;
 };
 }

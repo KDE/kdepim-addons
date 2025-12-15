@@ -51,7 +51,7 @@ void CreateEventJob::slotFetchDone(KJob *job)
 
 void CreateEventJob::createEvent()
 {
-    if (!mItem.hasPayload<KMime::Message::Ptr>()) {
+    if (!mItem.hasPayload<std::shared_ptr<KMime::Message>>()) {
         qCDebug(CREATEEVENTPLUGIN_LOG) << " item has not payload";
         emitResult();
         return;

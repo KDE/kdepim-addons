@@ -13,7 +13,7 @@ class ViewerPluginExternalScriptParseArgument
 public:
     ViewerPluginExternalScriptParseArgument();
 
-    void setMessage(const KMime::Message::Ptr &msg);
+    void setMessage(const std::shared_ptr<KMime::Message> &msg);
 
     [[nodiscard]] QStringList parse(const QStringList &lst);
 
@@ -21,5 +21,5 @@ public:
 
 private:
     QString mAkonadiUrl;
-    KMime::Message::Ptr mMessage;
+    std::shared_ptr<KMime::Message> mMessage;
 };

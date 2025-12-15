@@ -31,8 +31,8 @@ public:
     [[nodiscard]] Akonadi::Collection collection() const;
     void setCollection(const Akonadi::Collection &value);
 
-    [[nodiscard]] KMime::Message::Ptr message() const;
-    void setMessage(const KMime::Message::Ptr &value);
+    [[nodiscard]] std::shared_ptr<KMime::Message> message() const;
+    void setMessage(const std::shared_ptr<KMime::Message> &value);
 
     void writeConfig();
 
@@ -44,7 +44,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void createTodo(const KCalendarCore::Todo::Ptr &todo, const Akonadi::Collection &collection);
     void collectionChanged(const Akonadi::Collection &col);
-    void messageChanged(const KMime::Message::Ptr &msg);
+    void messageChanged(const std::shared_ptr<KMime::Message> &msg);
 
 protected:
     bool eventFilter(QObject *object, QEvent *e) override;
@@ -60,7 +60,7 @@ private:
     void readConfig();
     Akonadi::Collection mCollection;
     Akonadi::Collection mCurrentCollection;
-    KMime::Message::Ptr mMessage;
+    std::shared_ptr<KMime::Message> mMessage;
     QLineEdit *mNoteEdit = nullptr;
     Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
     KMessageWidget *const mMsgWidget;

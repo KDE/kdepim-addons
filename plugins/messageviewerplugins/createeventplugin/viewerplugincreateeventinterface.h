@@ -21,7 +21,7 @@ public:
 
     void setText(const QString &text) override;
     [[nodiscard]] QList<QAction *> actions() const override;
-    void setMessage(const KMime::Message::Ptr &value) override;
+    void setMessage(const std::shared_ptr<KMime::Message> &value) override;
     void closePlugin() override;
     void showWidget() override;
     void setMessageItem(const Akonadi::Item &item) override;

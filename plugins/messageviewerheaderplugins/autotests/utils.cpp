@@ -66,14 +66,14 @@ void testHeaderFile(const QString &data, const QString &name, const QString &dir
     }
 }
 
-KMime::Message::Ptr readAndParseMail(const QString &mailFile)
+std::shared_ptr<KMime::Message> readAndParseMail(const QString &mailFile)
 {
     QFile file(QStringLiteral(HEADER_DATA_DIR) + QLatin1Char('/') + mailFile);
     bool openFile = file.open(QIODevice::ReadOnly);
     Q_ASSERT(openFile);
     const QByteArray data = KMime::CRLFtoLF(file.readAll());
     Q_ASSERT(!data.isEmpty());
-    KMime::Message::Ptr msg(new KMime::Message);
+    std::shared_ptr<KMime::Message> msg(new KMime::Message);
     msg->setContent(data);
     msg->parse();
     return msg;

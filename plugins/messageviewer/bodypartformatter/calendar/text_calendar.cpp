@@ -503,7 +503,7 @@ public:
     {
         qCDebug(TEXT_CALENDAR_LOG) << "Mailing message:" << iCal;
 
-        KMime::Message::Ptr msg(new KMime::Message);
+        std::shared_ptr<KMime::Message> msg(new KMime::Message);
         if (MessageViewer::MessageViewerSettings::self()->exchangeCompatibleInvitations()) {
             msg->subject()->fromUnicodeString(status);
             QString tsubject = subject;
@@ -578,7 +578,7 @@ public:
         // Setting the identity here is important, as that is used to select the correct
         // transport later
         KIdentityManagementCore::IdentityManager *im = KIdentityManagementCore::IdentityManager::self();
-        const KIdentityManagementCore::Identity identity = im->identityForAddress(findReceiver(viewerInstance->message().data()));
+        const KIdentityManagementCore::Identity identity = im->identityForAddress(findReceiver(viewerInstance->message().get()));
 
         const bool nullIdentity = (identity == KIdentityManagementCore::Identity::null());
 
@@ -679,7 +679,7 @@ public:
         if (incidence->organizer().isEmpty()) {
             QString tname;
             QString temail;
-            KMime::Message::Ptr message = viewerInstance->message();
+            std::shared_ptr<KMime::Message> message = viewerInstance->message();
             KEmailAddress::extractEmailAddressAndName(message->sender()->asUnicodeString(), temail, tname);
             incidence->setOrganizer(Person(tname, temail));
         }

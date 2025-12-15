@@ -182,7 +182,7 @@ void GrantleeHeaderStylePluginTest::testThemeRender()
     // Make sure, that we do not load the same file from a different location.
     QVERIFY(style->theme().absolutePath().startsWith(expectedDataLocation));
 
-    const QString data = style->format(aMsg.data());
+    const QString data = style->format(aMsg.get());
     testHeaderFile(data, mailFileName, themeName);
 }
 

@@ -35,7 +35,7 @@ QList<QAction *> ViewerPluginCreateTodoInterface::actions() const
     return mAction;
 }
 
-void ViewerPluginCreateTodoInterface::setMessage(const KMime::Message::Ptr &value)
+void ViewerPluginCreateTodoInterface::setMessage(const std::shared_ptr<KMime::Message> &value)
 {
     widget()->setMessage(value);
 }
