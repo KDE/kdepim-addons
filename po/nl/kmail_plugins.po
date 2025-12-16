@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-12-16 13:25+0000\n"
 "PO-Revision-Date: 2025-09-16 15:33+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -159,100 +159,100 @@ msgctxt "@action"
 msgid "Open Folder"
 msgstr "Map openen"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Antispam-assistent"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Antivirus-assistent"
 
-#: common/antispamwizard.cpp:92
+#: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Spam Wizard"
 msgstr "Welkom bij de KMail Antispam-assistent"
 
-#: common/antispamwizard.cpp:92
+#: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Virus Wizard"
 msgstr "Welkom bij de KMail Antivirus-assistent"
 
-#: common/antispamwizard.cpp:97
+#: common/antispamwizard.cpp:96
 #, kde-format
 msgid "Options to fine-tune the handling of spam messages"
 msgstr "Opties om de afhandeling van ongewenste e-mailberichten te verfijnen"
 
-#: common/antispamwizard.cpp:101
+#: common/antispamwizard.cpp:100
 #, kde-format
 msgid "Summary of changes to be made by this wizard"
 msgstr ""
 "Overzicht van de wijzigingen die aangebracht zullen worden door deze "
 "assistent"
 
-#: common/antispamwizard.cpp:104
+#: common/antispamwizard.cpp:103
 #, kde-format
 msgid "Options to fine-tune the handling of virus messages"
 msgstr "Opties om de afhandeling van virusberichten te verfijnen"
 
-#: common/antispamwizard.cpp:171
+#: common/antispamwizard.cpp:170
 #, kde-format
 msgid "Virus handling"
 msgstr "Afhandeling van virussen"
 
-#: common/antispamwizard.cpp:250 common/antispamwizard.cpp:252
-#: common/antispamwizard.cpp:555
+#: common/antispamwizard.cpp:249 common/antispamwizard.cpp:251
+#: common/antispamwizard.cpp:554
 #, kde-format
 msgid "Spam Handling"
 msgstr "Afhandeling van ongewenste post"
 
-#: common/antispamwizard.cpp:286 common/antispamwizard.cpp:288
-#: common/antispamwizard.cpp:570
+#: common/antispamwizard.cpp:285 common/antispamwizard.cpp:287
+#: common/antispamwizard.cpp:569
 #, kde-format
 msgid "Semi spam (unsure) handling"
 msgstr "Afhandeling van mogelijk ongewenste post"
 
-#: common/antispamwizard.cpp:342 common/antispamwizard.cpp:344
-#: common/antispamwizard.cpp:577
+#: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
+#: common/antispamwizard.cpp:576
 #, kde-format
 msgid "Classify as Spam"
 msgstr "Beschouwen als spam"
 
-#: common/antispamwizard.cpp:353
+#: common/antispamwizard.cpp:352
 #, kde-format
 msgid "Spam"
 msgstr "Spam"
 
-#: common/antispamwizard.cpp:381 common/antispamwizard.cpp:383
-#: common/antispamwizard.cpp:578
+#: common/antispamwizard.cpp:380 common/antispamwizard.cpp:382
+#: common/antispamwizard.cpp:577
 #, kde-format
 msgid "Classify as NOT Spam"
 msgstr "Beschouwen als gewenste post"
 
-#: common/antispamwizard.cpp:392
+#: common/antispamwizard.cpp:391
 #, kde-format
 msgid "Ham"
 msgstr "Gewenste email"
 
-#: common/antispamwizard.cpp:458
+#: common/antispamwizard.cpp:457
 #, kde-format
 msgid "Scanning for %1…"
 msgstr "Zoeken naar %1…"
 
-#: common/antispamwizard.cpp:502
+#: common/antispamwizard.cpp:501
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
 msgstr "Het zoeken naar antispam-hulpprogramma's is voltooid."
 
-#: common/antispamwizard.cpp:502
+#: common/antispamwizard.cpp:501
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
 msgstr "Het zoeken naar antivirusprogramma's is voltooid."
 
-#: common/antispamwizard.cpp:504
+#: common/antispamwizard.cpp:503
 #, kde-format
 msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
@@ -261,12 +261,12 @@ msgstr ""
 "<p>Er zijn geen spamdetectie-hulpmiddelen gevonden. Installeer zo'n "
 "hulpmiddel en start deze assistent opnieuw.</p>"
 
-#: common/antispamwizard.cpp:507
+#: common/antispamwizard.cpp:506
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
 msgstr "Zoeken voltooid. Geen antivirus-hulpprogramma's gevonden."
 
-#: common/antispamwizard.cpp:529
+#: common/antispamwizard.cpp:528
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -275,7 +275,7 @@ msgstr ""
 "<p>Berichten gekenmerkt als ongewenste post worden als gelezen gemarkeerd."
 "<br />Ongewenste post wordt in de volgende map geplaatst: <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:534
+#: common/antispamwizard.cpp:533
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -284,7 +284,7 @@ msgstr ""
 "<p>Berichten gekenmerkt als ongewenste post worden als gelezen gemarkeerd."
 "<br />Ongewenste post wordt niet naar een aparte map verplaatst.</p>"
 
-#: common/antispamwizard.cpp:540
+#: common/antispamwizard.cpp:539
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -294,7 +294,7 @@ msgstr ""
 "gemarkeerd.<br />Ongewenste post wordt in de volgende map geplaatst: <i>%1</"
 "i>.</p>"
 
-#: common/antispamwizard.cpp:545
+#: common/antispamwizard.cpp:544
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -303,7 +303,7 @@ msgstr ""
 "<p>Berichten geclassificeerd als ongewenste post worden niet als gelezen "
 "gemarkeerd.<br />Ongewenste post wordt niet in een aparte map geplaatst.</p>"
 
-#: common/antispamwizard.cpp:572
+#: common/antispamwizard.cpp:571
 #, kde-format
 msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
@@ -312,17 +312,17 @@ msgstr ""
 "<p>De map voor berichten gekenmerkt als mogelijk ongewenste post is <i>%1</"
 "i>.</p>"
 
-#: common/antispamwizard.cpp:582
+#: common/antispamwizard.cpp:581
 #, kde-format
 msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
 msgstr "<p>De assistent zal de volgende filters aanmaken:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:585
+#: common/antispamwizard.cpp:584
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
 msgstr "<p>De assistent zal de volgende filters vervangen:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:982
+#: common/antispamwizard.cpp:981
 #, kde-format
 msgid ""
 "The wizard will search for any tools to do spam detection\n"
@@ -331,7 +331,7 @@ msgstr ""
 "De assistent zal naar hulpprogramma's zoeken voor herkenning\n"
 "van ongewenste e-mail, en KMail instellen om ermee te werken."
 
-#: common/antispamwizard.cpp:984
+#: common/antispamwizard.cpp:983
 #, kde-format
 msgid ""
 "<p>Here you can get some assistance in setting up KMail's filter rules to "
@@ -358,7 +358,7 @@ msgstr ""
 "filterregels weer te verwijderen, en zo het oude gedrag van KMail weer te "
 "herstellen.</p>"
 
-#: common/antispamwizard.cpp:1034
+#: common/antispamwizard.cpp:1033
 #, kde-format
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
@@ -367,24 +367,24 @@ msgstr ""
 "<p>Selecteer de hulpprogramma's die u wilt gebruiken voor de detectie en ga "
 "naar de volgende pagina.</p>"
 
-#: common/antispamwizard.cpp:1058
+#: common/antispamwizard.cpp:1057
 #, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "Gedetecteerde ongewenste berichten &markeren als gelezen"
 
-#: common/antispamwizard.cpp:1059
+#: common/antispamwizard.cpp:1058
 #, kde-format
 msgid "Mark messages which have been classified as spam as read."
 msgstr "Als ongewenst gekenmerkte berichten markeren als gelezen."
 
-#: common/antispamwizard.cpp:1062
+#: common/antispamwizard.cpp:1061
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Be&kende spam verplaatsen naar:"
 
-#: common/antispamwizard.cpp:1064
+#: common/antispamwizard.cpp:1063
 #, kde-format
 msgid ""
 "The default folder for spam messages is the trash folder, but you may change "
@@ -393,13 +393,13 @@ msgstr ""
 "De standaard map voor spamberichten is de prullenbak, maar u kunt dat "
 "wijzigen in de onderstaande mappenlijst."
 
-#: common/antispamwizard.cpp:1077
+#: common/antispamwizard.cpp:1076
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Mogelijke s&pam verplaatsen naar:"
 
-#: common/antispamwizard.cpp:1079
+#: common/antispamwizard.cpp:1078
 #, kde-format
 msgid ""
 "The default folder is the inbox folder, but you may change that in the "
@@ -411,13 +411,13 @@ msgstr ""
 "bestempelen. Zonder geselecteerd geschikt hulpmiddel kunt u geen map "
 "selecteren.</p>"
 
-#: common/antispamwizard.cpp:1189
+#: common/antispamwizard.cpp:1188
 #, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Berichten kenmerken met behulp van antivirusprogramma's"
 
-#: common/antispamwizard.cpp:1191
+#: common/antispamwizard.cpp:1190
 #, kde-format
 msgid ""
 "Let the anti-virus tools check your messages. The wizard will create "
@@ -431,13 +431,13 @@ msgstr ""
 "kunnen reageren en de virusberichten bijvoorbeeld naar een bepaalde map kunt "
 "verplaatsen."
 
-#: common/antispamwizard.cpp:1197
+#: common/antispamwizard.cpp:1196
 #, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Verplaats gevonden berichten met een virus naar de geselecteerde map"
 
-#: common/antispamwizard.cpp:1199
+#: common/antispamwizard.cpp:1198
 #, kde-format
 msgid ""
 "A filter to detect messages classified as virus-infected and to move those "
@@ -449,14 +449,14 @@ msgstr ""
 "bestemde map te plaatsen. De standaard map is de prullenbak, maar dat kan in "
 "de mapweergave worden veranderd."
 
-#: common/antispamwizard.cpp:1205
+#: common/antispamwizard.cpp:1204
 #, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr ""
 "Markeer gevonden met een virus geïnfecteerde berichten bovendien als gelezen"
 
-#: common/antispamwizard.cpp:1208
+#: common/antispamwizard.cpp:1207
 #, kde-format
 msgid ""
 "Mark messages which have been classified as virus-infected as read, as well "

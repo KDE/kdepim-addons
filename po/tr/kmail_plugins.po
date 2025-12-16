@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-12-16 13:25+0000\n"
 "PO-Revision-Date: 2025-09-16 17:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -160,98 +160,98 @@ msgctxt "@action"
 msgid "Open Folder"
 msgstr "Klasörü Aç"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "İstenmeyen Posta Sihirbazı"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Antivirüs Sihirbazı"
 
-#: common/antispamwizard.cpp:92
+#: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Spam Wizard"
 msgstr "K Posta İstenmeyen Posta Sihirbazı’na Hoş Geldiniz"
 
-#: common/antispamwizard.cpp:92
+#: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Virus Wizard"
 msgstr "K Posta Antivirüs Sihirbazı’na Hoş Geldiniz"
 
-#: common/antispamwizard.cpp:97
+#: common/antispamwizard.cpp:96
 #, kde-format
 msgid "Options to fine-tune the handling of spam messages"
 msgstr "İstenmeyen iletilerinin ele alınması için ince ayar seçenekleri"
 
-#: common/antispamwizard.cpp:101
+#: common/antispamwizard.cpp:100
 #, kde-format
 msgid "Summary of changes to be made by this wizard"
 msgstr "Bu sihirbaz tarafından yapılacak değişikliklerin özeti"
 
-#: common/antispamwizard.cpp:104
+#: common/antispamwizard.cpp:103
 #, kde-format
 msgid "Options to fine-tune the handling of virus messages"
 msgstr "Virüslü iletilerin ele alınması için ince ayar seçenekleri"
 
-#: common/antispamwizard.cpp:171
+#: common/antispamwizard.cpp:170
 #, kde-format
 msgid "Virus handling"
 msgstr "Virüs İşlemleri"
 
-#: common/antispamwizard.cpp:250 common/antispamwizard.cpp:252
-#: common/antispamwizard.cpp:555
+#: common/antispamwizard.cpp:249 common/antispamwizard.cpp:251
+#: common/antispamwizard.cpp:554
 #, kde-format
 msgid "Spam Handling"
 msgstr "İstenmeyen Posta İşlemleri"
 
-#: common/antispamwizard.cpp:286 common/antispamwizard.cpp:288
-#: common/antispamwizard.cpp:570
+#: common/antispamwizard.cpp:285 common/antispamwizard.cpp:287
+#: common/antispamwizard.cpp:569
 #, kde-format
 msgid "Semi spam (unsure) handling"
 msgstr "Emin olunmayan istenmeyen posta işlemesi"
 
-#: common/antispamwizard.cpp:342 common/antispamwizard.cpp:344
-#: common/antispamwizard.cpp:577
+#: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
+#: common/antispamwizard.cpp:576
 #, kde-format
 msgid "Classify as Spam"
 msgstr "İstenmeyen Olarak Sınıflandır"
 
-#: common/antispamwizard.cpp:353
+#: common/antispamwizard.cpp:352
 #, kde-format
 msgid "Spam"
 msgstr "İstenmeyen"
 
-#: common/antispamwizard.cpp:381 common/antispamwizard.cpp:383
-#: common/antispamwizard.cpp:578
+#: common/antispamwizard.cpp:380 common/antispamwizard.cpp:382
+#: common/antispamwizard.cpp:577
 #, kde-format
 msgid "Classify as NOT Spam"
 msgstr "İstenmeyen DEĞİL Olarak Sınıflandır"
 
-#: common/antispamwizard.cpp:392
+#: common/antispamwizard.cpp:391
 #, kde-format
 msgid "Ham"
 msgstr "İşlenmemiş"
 
-#: common/antispamwizard.cpp:458
+#: common/antispamwizard.cpp:457
 #, kde-format
 msgid "Scanning for %1…"
 msgstr "%1 taranıyor…"
 
-#: common/antispamwizard.cpp:502
+#: common/antispamwizard.cpp:501
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
 msgstr "Antispam araç taraması bitti."
 
-#: common/antispamwizard.cpp:502
+#: common/antispamwizard.cpp:501
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
 msgstr "Antivirüs araç taraması bitti."
 
-#: common/antispamwizard.cpp:504
+#: common/antispamwizard.cpp:503
 #, kde-format
 msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
@@ -260,12 +260,12 @@ msgstr ""
 "<p>Üzgünüz, istenmeyen posta tespit aracı bulunamadı. İstenmeyen posta "
 "tespit yazılımı kurun ve bu sihirbazı yeniden çalıştırın.</p>"
 
-#: common/antispamwizard.cpp:507
+#: common/antispamwizard.cpp:506
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
 msgstr "Tarama tamamlandı. Antivirüs aracı bulunamadı."
 
-#: common/antispamwizard.cpp:529
+#: common/antispamwizard.cpp:528
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -274,7 +274,7 @@ msgstr ""
 "<p>İstenmeyen olarak sınıflandırılmış iletiler okundu işaretlenir.<br /"
 ">İstenmeyen iletiler <i>%1</i> klasörüne taşınır.</p>"
 
-#: common/antispamwizard.cpp:534
+#: common/antispamwizard.cpp:533
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -283,7 +283,7 @@ msgstr ""
 "<p>İstenmeyen olarak sınıflandırılmış iletiler okundu işaretlenir.<br /"
 ">İstenmeyen iletiler özel bir klasöre taşınmaz.</p>"
 
-#: common/antispamwizard.cpp:540
+#: common/antispamwizard.cpp:539
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -292,7 +292,7 @@ msgstr ""
 "<p>İstenmeyen olarak sınıflandırılmış iletiler okundu işaretlenmez.<br /"
 ">İstenmeyen iletiler <i>%1</i> klasörüne taşınır.</p>"
 
-#: common/antispamwizard.cpp:545
+#: common/antispamwizard.cpp:544
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -301,7 +301,7 @@ msgstr ""
 "<p>İstenmeyen olarak sınıflandırılmış iletiler okundu işaretlenmez.<br /"
 ">İstenmeyen iletiler özel bir klasöre taşınmaz.</p>"
 
-#: common/antispamwizard.cpp:572
+#: common/antispamwizard.cpp:571
 #, kde-format
 msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
@@ -310,17 +310,17 @@ msgstr ""
 "<p>Emin olunmayan olarak sınıflandırılmış iletiler (büyük olasılıkla "
 "istenmeyen) için klasör <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:582
+#: common/antispamwizard.cpp:581
 #, kde-format
 msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
 msgstr "<p>Sihirbaz aşağıdaki süzgeçleri oluşturacak:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:585
+#: common/antispamwizard.cpp:584
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
 msgstr "<p>Sihirbaz aşağıdaki süzgeçleri değiştirecek:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:982
+#: common/antispamwizard.cpp:981
 #, kde-format
 msgid ""
 "The wizard will search for any tools to do spam detection\n"
@@ -329,7 +329,7 @@ msgstr ""
 "Sihirbaz, istenmeyen posta tespiti için araçları arayacak\n"
 "ve K Posta’nın onlarla çalışabilmesi için yapılandıracak."
 
-#: common/antispamwizard.cpp:984
+#: common/antispamwizard.cpp:983
 #, kde-format
 msgid ""
 "<p>Here you can get some assistance in setting up KMail's filter rules to "
@@ -354,7 +354,7 @@ msgstr ""
 "genellikle zaman gerektirmesindendir. Önceki davranışına dönmek için "
 "sihirbaz tarafından oluşturulmuş süzgeçleri silebilirsiniz.</p>"
 
-#: common/antispamwizard.cpp:1034
+#: common/antispamwizard.cpp:1033
 #, kde-format
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
@@ -363,24 +363,24 @@ msgstr ""
 "<p>Lütfen tespit için kullanılacak araçları seçin ve sonraki sayfaya gidin.</"
 "p>"
 
-#: common/antispamwizard.cpp:1058
+#: common/antispamwizard.cpp:1057
 #, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "Algılanan istenmeyen iletileri okundu olarak &imle"
 
-#: common/antispamwizard.cpp:1059
+#: common/antispamwizard.cpp:1058
 #, kde-format
 msgid "Mark messages which have been classified as spam as read."
 msgstr "İstenmeyen olarak sınıflandırılmış iletileri okundu işaretle."
 
-#: common/antispamwizard.cpp:1062
+#: common/antispamwizard.cpp:1061
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Bilinen istenmeyen postayı şuraya &taşı:"
 
-#: common/antispamwizard.cpp:1064
+#: common/antispamwizard.cpp:1063
 #, kde-format
 msgid ""
 "The default folder for spam messages is the trash folder, but you may change "
@@ -389,13 +389,13 @@ msgstr ""
 "İstenmeyen iletiler için öntanımlı klasör çöp klasörüdür, ancak aşağıdaki "
 "klasör görünümünden bunu değiştirebilirsiniz."
 
-#: common/antispamwizard.cpp:1077
+#: common/antispamwizard.cpp:1076
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "&Olası istenmeyen postayı şuraya taşı:"
 
-#: common/antispamwizard.cpp:1079
+#: common/antispamwizard.cpp:1078
 #, kde-format
 msgid ""
 "The default folder is the inbox folder, but you may change that in the "
@@ -407,13 +407,13 @@ msgstr ""
 "desteklemez. Bunu yapabilen bir araç seçmemişseniz, bir klasör de "
 "seçemezsiniz.</p>"
 
-#: common/antispamwizard.cpp:1189
+#: common/antispamwizard.cpp:1188
 #, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "İletileri antivirüs araçlarıyla denetle"
 
-#: common/antispamwizard.cpp:1191
+#: common/antispamwizard.cpp:1190
 #, kde-format
 msgid ""
 "Let the anti-virus tools check your messages. The wizard will create "
@@ -426,13 +426,13 @@ msgstr ""
 "işaretlenir ve aşağıdaki süzgeçler bu etiketlere göre davranabilir. Örn. "
 "virüslü iletiyi özel bir klasöre taşıma."
 
-#: common/antispamwizard.cpp:1197
+#: common/antispamwizard.cpp:1196
 #, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Algılanan virüslü iletileri seçilen klasöre taşı"
 
-#: common/antispamwizard.cpp:1199
+#: common/antispamwizard.cpp:1198
 #, kde-format
 msgid ""
 "A filter to detect messages classified as virus-infected and to move those "
@@ -443,13 +443,13 @@ msgstr ""
 "oluşturulmuş öntanımlı bir klasöre taşımak için süzgeç. Öntanımlı klasör çöp "
 "klasörüdür; ancak bunu aşağıdaki klasör görünümünden değiştirebilirsiniz."
 
-#: common/antispamwizard.cpp:1205
+#: common/antispamwizard.cpp:1204
 #, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Ek olarak, virüslü iletileri okundu olarak imle"
 
-#: common/antispamwizard.cpp:1208
+#: common/antispamwizard.cpp:1207
 #, kde-format
 msgid ""
 "Mark messages which have been classified as virus-infected as read, as well "

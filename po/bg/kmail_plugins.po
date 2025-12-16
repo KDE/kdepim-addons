@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-12-16 13:25+0000\n"
 "PO-Revision-Date: 2025-09-18 11:14+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -161,99 +161,99 @@ msgctxt "@action"
 msgid "Open Folder"
 msgstr "Отваряне на папка"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Съветник за борба със спама"
 
-#: common/antispamwizard.cpp:90
+#: common/antispamwizard.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Антивирусен съветник"
 
-#: common/antispamwizard.cpp:92
+#: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Spam Wizard"
 msgstr "Добре дошли в съветника за борба със спама на KMail"
 
-#: common/antispamwizard.cpp:92
+#: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Virus Wizard"
 msgstr "Добре дошли в съветника за антивирусна програма KMail"
 
-#: common/antispamwizard.cpp:97
+#: common/antispamwizard.cpp:96
 #, kde-format
 msgid "Options to fine-tune the handling of spam messages"
 msgstr "Опции за фина настройка на обработката на спам съобщения"
 
-#: common/antispamwizard.cpp:101
+#: common/antispamwizard.cpp:100
 #, kde-format
 msgid "Summary of changes to be made by this wizard"
 msgstr ""
 "Обобщение на промените, които трябва да бъдат направени от този съветник"
 
-#: common/antispamwizard.cpp:104
+#: common/antispamwizard.cpp:103
 #, kde-format
 msgid "Options to fine-tune the handling of virus messages"
 msgstr "Опции за фина настройка на обработката на вирусни съобщения"
 
-#: common/antispamwizard.cpp:171
+#: common/antispamwizard.cpp:170
 #, kde-format
 msgid "Virus handling"
 msgstr "Работа с вируси"
 
-#: common/antispamwizard.cpp:250 common/antispamwizard.cpp:252
-#: common/antispamwizard.cpp:555
+#: common/antispamwizard.cpp:249 common/antispamwizard.cpp:251
+#: common/antispamwizard.cpp:554
 #, kde-format
 msgid "Spam Handling"
 msgstr "Спам обработка"
 
-#: common/antispamwizard.cpp:286 common/antispamwizard.cpp:288
-#: common/antispamwizard.cpp:570
+#: common/antispamwizard.cpp:285 common/antispamwizard.cpp:287
+#: common/antispamwizard.cpp:569
 #, kde-format
 msgid "Semi spam (unsure) handling"
 msgstr "Работа с полуспам (несигурен)"
 
-#: common/antispamwizard.cpp:342 common/antispamwizard.cpp:344
-#: common/antispamwizard.cpp:577
+#: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
+#: common/antispamwizard.cpp:576
 #, kde-format
 msgid "Classify as Spam"
 msgstr "Класифициране като спам"
 
-#: common/antispamwizard.cpp:353
+#: common/antispamwizard.cpp:352
 #, kde-format
 msgid "Spam"
 msgstr "Спам"
 
-#: common/antispamwizard.cpp:381 common/antispamwizard.cpp:383
-#: common/antispamwizard.cpp:578
+#: common/antispamwizard.cpp:380 common/antispamwizard.cpp:382
+#: common/antispamwizard.cpp:577
 #, kde-format
 msgid "Classify as NOT Spam"
 msgstr "Класифициране като НЕ Спам"
 
-#: common/antispamwizard.cpp:392
+#: common/antispamwizard.cpp:391
 #, kde-format
 msgid "Ham"
 msgstr "Желана поща"
 
-#: common/antispamwizard.cpp:458
+#: common/antispamwizard.cpp:457
 #, kde-format
 msgid "Scanning for %1…"
 msgstr "Сканиране за %1…"
 
-#: common/antispamwizard.cpp:502
+#: common/antispamwizard.cpp:501
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
 msgstr "Сканирането за инструменти против спам приключи."
 
-#: common/antispamwizard.cpp:502
+#: common/antispamwizard.cpp:501
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
 msgstr "Сканирането за антивирусни инструменти приключи."
 
-#: common/antispamwizard.cpp:504
+#: common/antispamwizard.cpp:503
 #, kde-format
 msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
@@ -263,12 +263,12 @@ msgstr ""
 "Инсталирайте софтуера си за откриване на нежелана поща и стартирайте отново "
 "този съветник.</p>"
 
-#: common/antispamwizard.cpp:507
+#: common/antispamwizard.cpp:506
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
 msgstr "Сканирането завърши. Не бяха намерени антивирусни инструменти."
 
-#: common/antispamwizard.cpp:529
+#: common/antispamwizard.cpp:528
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -277,7 +277,7 @@ msgstr ""
 "<p> Съобщенията, класифицирани като спам, се маркират като прочетени. <br /> "
 "Спам съобщенията се преместват в папката с име <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:534
+#: common/antispamwizard.cpp:533
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -286,7 +286,7 @@ msgstr ""
 "<p> Съобщенията, класифицирани като спам, се маркират като прочетени. <br /> "
 "Спам съобщенията не се преместват в определена папка.</p>"
 
-#: common/antispamwizard.cpp:540
+#: common/antispamwizard.cpp:539
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -295,7 +295,7 @@ msgstr ""
 "<p> Съобщенията, класифицирани като спам, не се маркират като прочетени. "
 "<br /> Спам съобщенията се преместват в папката с име <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:545
+#: common/antispamwizard.cpp:544
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -304,7 +304,7 @@ msgstr ""
 "<p> Съобщенията, класифицирани като спам, не се маркират като прочетени. "
 "<br /> Спам съобщенията не се преместват в определена папка.</p>"
 
-#: common/antispamwizard.cpp:572
+#: common/antispamwizard.cpp:571
 #, kde-format
 msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
@@ -313,17 +313,17 @@ msgstr ""
 "<p> Папката за съобщения, класифицирани като несигурни (вероятно спам), е <i>"
 "%1</i>.</p>"
 
-#: common/antispamwizard.cpp:582
+#: common/antispamwizard.cpp:581
 #, kde-format
 msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
 msgstr "<p> Съветникът ще създаде следните филтри: <ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:585
+#: common/antispamwizard.cpp:584
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
 msgstr "<p> Съветникът ще замени следните филтри: <ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:982
+#: common/antispamwizard.cpp:981
 #, kde-format
 msgid ""
 "The wizard will search for any tools to do spam detection\n"
@@ -332,7 +332,7 @@ msgstr ""
 "Съветникът ще търси всички инструменти за откриване на спам\n"
 "и ще настрои KMail да работи с тях."
 
-#: common/antispamwizard.cpp:984
+#: common/antispamwizard.cpp:983
 #, kde-format
 msgid ""
 "<p>Here you can get some assistance in setting up KMail's filter rules to "
@@ -359,7 +359,7 @@ msgstr ""
 "помислете за изтриване на правилата за филтриране, създадени от съветника, "
 "за да се върнете към предишното поведение .</p>"
 
-#: common/antispamwizard.cpp:1034
+#: common/antispamwizard.cpp:1033
 #, kde-format
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
@@ -368,25 +368,25 @@ msgstr ""
 "<p> Моля, изберете инструментите, които ще се използват за откриване и "
 "отидете на следващата страница.</p>"
 
-#: common/antispamwizard.cpp:1058
+#: common/antispamwizard.cpp:1057
 #, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Маркиране на откритите спам съобщения като прочетени"
 
-#: common/antispamwizard.cpp:1059
+#: common/antispamwizard.cpp:1058
 #, kde-format
 msgid "Mark messages which have been classified as spam as read."
 msgstr ""
 "Маркиране на съобщенията, които са класифицирани като спам, като прочетени."
 
-#: common/antispamwizard.cpp:1062
+#: common/antispamwizard.cpp:1061
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Преместване на &известен спам в:"
 
-#: common/antispamwizard.cpp:1064
+#: common/antispamwizard.cpp:1063
 #, kde-format
 msgid ""
 "The default folder for spam messages is the trash folder, but you may change "
@@ -395,13 +395,13 @@ msgstr ""
 "Папката по подразбиране за нежелани съобщения е папката на кошчето, но "
 "можете да промените това в изгледа на папките по-долу."
 
-#: common/antispamwizard.cpp:1077
+#: common/antispamwizard.cpp:1076
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Преместване на &вероятен спам в:"
 
-#: common/antispamwizard.cpp:1079
+#: common/antispamwizard.cpp:1078
 #, kde-format
 msgid ""
 "The default folder is the inbox folder, but you may change that in the "
@@ -413,13 +413,13 @@ msgstr ""
 "като несигурни. Ако не сте избрали способен инструмент, не можете да "
 "изберете и папка.</p>"
 
-#: common/antispamwizard.cpp:1189
+#: common/antispamwizard.cpp:1188
 #, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Проверяване на съобщенията с помощта на антивирусните инструменти"
 
-#: common/antispamwizard.cpp:1191
+#: common/antispamwizard.cpp:1190
 #, kde-format
 msgid ""
 "Let the anti-virus tools check your messages. The wizard will create "
@@ -432,13 +432,13 @@ msgstr ""
 "инструментите, така че следните филтри да могат да реагират на това и "
 "например да преместват вирусни съобщения в специална папка."
 
-#: common/antispamwizard.cpp:1197
+#: common/antispamwizard.cpp:1196
 #, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Преместване на откритите вирусни съобщения в избраната папка"
 
-#: common/antispamwizard.cpp:1199
+#: common/antispamwizard.cpp:1198
 #, kde-format
 msgid ""
 "A filter to detect messages classified as virus-infected and to move those "
@@ -450,13 +450,13 @@ msgstr ""
 "Папката по подразбиране е папката за боклук, но можете да промените това в "
 "изгледа на папката."
 
-#: common/antispamwizard.cpp:1205
+#: common/antispamwizard.cpp:1204
 #, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Освен това маркиране на откритите вирусни съобщения като прочетени"
 
-#: common/antispamwizard.cpp:1208
+#: common/antispamwizard.cpp:1207
 #, kde-format
 msgid ""
 "Mark messages which have been classified as virus-infected as read, as well "
