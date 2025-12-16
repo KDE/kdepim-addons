@@ -24,7 +24,6 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/AgentInstance>
 
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KProcess>
 #include <QDialog>
