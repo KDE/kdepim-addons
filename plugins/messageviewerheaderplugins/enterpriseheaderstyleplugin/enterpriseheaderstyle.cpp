@@ -157,7 +157,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     }
 
     // cc line, if any
-    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
+    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(KMime::CreatePolicy::DontCreate)) {
         headerStr += QStringLiteral(
                          "     <tr> "
                          "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ")
@@ -172,7 +172,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     }
 
     // bcc line, if any
-    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(false)) {
+    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(KMime::CreatePolicy::DontCreate)) {
         headerStr += QStringLiteral(
                          "     <tr> "
                          "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ")

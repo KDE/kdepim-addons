@@ -141,7 +141,7 @@ void TodoEdit::updateButtons(const QString &subject)
 
 void TodoEdit::showToDoWidget()
 {
-    const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : nullptr;
+    const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(KMime::CreatePolicy::DontCreate) : nullptr;
     if (subject) {
         bool isSentFolder = false;
         if (mCurrentCollection.isValid()) {
@@ -255,7 +255,7 @@ KCalendarCore::Todo::Ptr TodoEdit::createTodoItem()
         KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
         todo->setSummary(mNoteEdit->text());
         KCalendarCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
-        const KMime::Headers::Subject *const subject = mMessage->subject(false);
+        const KMime::Headers::Subject *const subject = mMessage->subject(KMime::CreatePolicy::DontCreate);
         if (subject) {
             attachment.setLabel(subject->asUnicodeString());
         }

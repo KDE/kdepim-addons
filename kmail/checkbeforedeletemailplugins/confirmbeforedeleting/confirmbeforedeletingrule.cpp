@@ -127,7 +127,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
             break;
         }
         case Subject: {
-            if (auto subject = msg->subject(false)) {
+            if (auto subject = msg->subject(KMime::CreatePolicy::DontCreate)) {
                 const QString subjectStr = subject->asUnicodeString();
                 if (subjectStr.contains(pattern())) {
                     needToConfirm = true;
@@ -137,7 +137,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
             break;
         }
         case To: {
-            if (auto to = msg->to(false)) {
+            if (auto to = msg->to(KMime::CreatePolicy::DontCreate)) {
                 const QString toStr = to->asUnicodeString();
                 if (toStr.contains(pattern())) {
                     needToConfirm = true;
@@ -147,7 +147,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
             break;
         }
         case Cc: {
-            if (auto cc = msg->cc(false)) {
+            if (auto cc = msg->cc(KMime::CreatePolicy::DontCreate)) {
                 const QString ccStr = cc->asUnicodeString();
                 if (ccStr.contains(pattern())) {
                     needToConfirm = true;
@@ -157,7 +157,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
             break;
         }
         case Bcc: {
-            if (auto bcc = msg->bcc(false)) {
+            if (auto bcc = msg->bcc(KMime::CreatePolicy::DontCreate)) {
                 const QString bccStr = bcc->asUnicodeString();
                 if (bccStr.contains(pattern())) {
                     needToConfirm = true;
@@ -197,7 +197,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
 void ConfirmBeforeDeletingRule::generateConfirmMessageInfo(const std::shared_ptr<KMime::Message> &msg, QString &checkFoundInfo) const
 {
     QString subjectStr;
-    if (auto subject = msg->subject(false)) {
+    if (auto subject = msg->subject(KMime::CreatePolicy::DontCreate)) {
         subjectStr = subject->asUnicodeString();
     }
     checkFoundInfo = i18n("The message with subject \'%2\' contains \'%1\'", pattern(), subjectStr);
@@ -208,7 +208,7 @@ void ConfirmBeforeDeletingRule::generateConfirmMessageInfoFromStatus(const std::
                                                                      const QString &statusStr) const
 {
     QString subjectStr;
-    if (auto subject = msg->subject(false)) {
+    if (auto subject = msg->subject(KMime::CreatePolicy::DontCreate)) {
         subjectStr = subject->asUnicodeString();
     }
     checkFoundInfo = i18n("The message with subject \'%1\' is %2", subjectStr, statusStr);

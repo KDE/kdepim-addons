@@ -69,14 +69,14 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
         headerParts << fromPart;
     }
 
-    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
+    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(KMime::CreatePolicy::DontCreate)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayFullAddress);
         if (!str.isEmpty()) {
             headerParts << i18n("CC: ") + str;
         }
     }
 
-    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(false)) {
+    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(KMime::CreatePolicy::DontCreate)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayFullAddress);
         if (!str.isEmpty()) {
             headerParts << i18n("BCC: ") + str;

@@ -25,7 +25,7 @@
 
 static bool isPkPassContent(KMime::Content *content)
 {
-    const auto ct = content->contentType(false);
+    const auto ct = content->contentType(KMime::CreatePolicy::DontCreate);
     const QByteArray mimetype = ct ? ct->mimeType() : QByteArray();
     if (mimetype == "application/vnd.apple.pkpass") {
         return true;
@@ -36,7 +36,7 @@ static bool isPkPassContent(KMime::Content *content)
     if (ct && ct->name().endsWith(QLatin1StringView("pkpass"))) {
         return true;
     }
-    const auto cd = content->contentDisposition(false);
+    const auto cd = content->contentDisposition(KMime::CreatePolicy::DontCreate);
     return cd && cd->filename().endsWith(QLatin1StringView("pkpass"));
 }
 

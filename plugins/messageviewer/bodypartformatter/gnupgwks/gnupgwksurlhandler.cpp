@@ -157,9 +157,9 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
     // Move to outbox
     auto transport = transportMgr->transportById(transportId);
     auto job = new Akonadi::MessageQueueJob;
-    job->addressAttribute().setTo({msg->to(false)->asUnicodeString()});
+    job->addressAttribute().setTo({msg->to(KMime::CreatePolicy::DontCreate)->asUnicodeString()});
     job->transportAttribute().setTransportId(transport->id());
-    job->addressAttribute().setFrom(msg->from(false)->asUnicodeString());
+    job->addressAttribute().setFrom(msg->from(KMime::CreatePolicy::DontCreate)->asUnicodeString());
     job->sentBehaviourAttribute().setSentBehaviour(Akonadi::SentBehaviourAttribute::Delete);
     job->sentBehaviourAttribute().setSendSilently(true);
     job->setMessage(msg);

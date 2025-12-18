@@ -222,7 +222,7 @@ void EventEdit::setMessage(const std::shared_ptr<KMime::Message> &value)
 {
     if (mMessage != value) {
         mMessage = value;
-        const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : nullptr;
+        const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(KMime::CreatePolicy::DontCreate) : nullptr;
         if (subject) {
             mEventEdit->setText(subject->asUnicodeString());
             mEventEdit->selectAll();
@@ -327,7 +327,7 @@ KCalendarCore::Event::Ptr EventEdit::createEventItem()
 {
     if (mMessage) {
         KCalendarCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
-        const KMime::Headers::Subject *const subject = mMessage->subject(false);
+        const KMime::Headers::Subject *const subject = mMessage->subject(KMime::CreatePolicy::DontCreate);
         if (subject) {
             attachment.setLabel(subject->asUnicodeString());
         }

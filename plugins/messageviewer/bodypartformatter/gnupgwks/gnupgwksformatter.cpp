@@ -37,14 +37,14 @@ namespace
 {
 bool partHasMimeType(KMime::Content *part, const char *mt)
 {
-    const auto ct = part->contentType(false);
+    const auto ct = part->contentType(KMime::CreatePolicy::DontCreate);
     return ct && ct->isMimeType(mt);
 }
 }
 
 MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
 {
-    const auto ct = part.content()->contentType(false);
+    const auto ct = part.content()->contentType(KMime::CreatePolicy::DontCreate);
     if (ct) {
         if (ct->isMimeType("multipart/mixed")) {
             const auto subParts = part.content()->contents();

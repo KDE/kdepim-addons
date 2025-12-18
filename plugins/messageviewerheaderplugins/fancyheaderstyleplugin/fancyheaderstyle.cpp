@@ -97,7 +97,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
             + (!vCardName().isEmpty()
                    ? QStringLiteral("&nbsp;&nbsp;<a href=\"") + vCardName() + QStringLiteral("\">") + i18n("[vCard]") + QStringLiteral("</a>")
                    : QString())
-            + (!message->organization(false)
+            + (!message->organization(KMime::CreatePolicy::DontCreate)
                    ? QString()
                    : QStringLiteral("&nbsp;&nbsp;(") + mHeaderStyleUtil.strToHtml(message->organization()->asUnicodeString()) + QLatin1Char(')'))
             + QStringLiteral("</td></tr>\n");
@@ -131,7 +131,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     }
 
     // cc line, if an
-    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
+    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(KMime::CreatePolicy::DontCreate)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->cc(),
                                                           StringUtil::DisplayFullAddress,
                                                           QString(),
@@ -146,7 +146,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     }
 
     // Bcc line, if any
-    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(false)) {
+    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(KMime::CreatePolicy::DontCreate)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayFullAddress);
         if (!str.isEmpty()) {
             headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
