@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:44+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -117,7 +117,7 @@ msgstr "Aplicar a todos"
 msgid "The message with subject '%2' contains '%1'"
 msgstr "A mensagem com o assunto '%2' contém '%1'"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:212
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:214
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "A mensagem com o assunto '%1 é %2"

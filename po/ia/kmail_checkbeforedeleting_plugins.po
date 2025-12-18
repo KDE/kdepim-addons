@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:44+0000\n"
 "PO-Revision-Date: 2024-08-02 09:16+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -115,7 +115,7 @@ msgstr "Applica a Toto"
 msgid "The message with subject '%2' contains '%1'"
 msgstr "Le message con subjecto '%2' contine '%1'"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:212
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:214
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "Le message con subjecto '%1' es '%2'"

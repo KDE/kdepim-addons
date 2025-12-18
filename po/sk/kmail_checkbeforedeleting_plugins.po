@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_checkbeforedeleting_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:44+0000\n"
 "PO-Revision-Date: 2021-07-02 20:48+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -117,7 +117,7 @@ msgstr ""
 msgid "The message with subject '%2' contains '%1'"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:212
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:214
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr ""

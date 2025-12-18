@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -116,7 +116,7 @@ msgstr "应用到全部"
 msgid "The message with subject '%2' contains '%1'"
 msgstr "主题为“%2”的信件中含有关键字“%1”"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:212
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:214
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "主题为“%1”的信件是“%2”"

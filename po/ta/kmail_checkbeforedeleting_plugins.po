@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:43+0000\n"
+"POT-Creation-Date: 2025-12-18 00:44+0000\n"
 "PO-Revision-Date: 2024-09-07 21:09+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -115,7 +115,7 @@ msgstr "அனைத்துக்கும் செயல்படுத்�
 msgid "The message with subject '%2' contains '%1'"
 msgstr "'%2' எனும் தலைப்பையுடைய அஞ்சலில் '%1' உள்ளது"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:212
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:214
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "'%1' எனும் தலைப்பையுடைய அஞ்சல் %2"
