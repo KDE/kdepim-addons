@@ -306,6 +306,11 @@ set_package_properties(
         URL "https://www.gnupg.org"
         TYPE REQUIRED
 )
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    # Not setting for GNU due to too many warnings related to private members of base classes or around lambdas
+    # see e.g. https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56556 or https://gcc.gnu.org/bugzilla/show_bug.cgi?id=79328
+    string(APPEND CMAKE_CXX_FLAGS " -Wshadow")
+endif()
 ecm_set_disabled_deprecation_versions(QT 6.11.0 KF 6.21.0 KMIME 6.7.0)
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
