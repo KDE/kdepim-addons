@@ -1,7 +1,7 @@
 /*
   This file is part of KAddressBook.
 
-  SPDX-FileCopyrightText: 2014-2025 Laurent Montel <montel@kde.org>
+  SPDX-FileCopyrightText: 2014-2026 Laurent Montel <montel@kde.org>
   based on code from SPDX-FileCopyrightText: 2014 Clément Vannier <clement.vannier@free.fr>
 
   SPDX-License-Identifier: GPL-2.0-or-later

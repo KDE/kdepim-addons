@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2015-2025 Laurent Montel <montel@kde.org>
+# SPDX-FileCopyrightText: 2015-2026 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 kcoreaddons_add_plugin(mailtransport_sendplugin INSTALL_NAMESPACE "pim6/mailtransport")
 
