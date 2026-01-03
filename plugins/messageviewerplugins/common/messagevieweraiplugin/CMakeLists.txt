@@ -13,7 +13,7 @@ target_sources(
     viewerpluginaiwidget.cpp
 )
 
-ecm_qt_declare_logging_category(messageviewer_aiplugin HEADER expandurlplugin_debug.h IDENTIFIER EXPANDURLPLUGIN_LOG CATEGORY_NAME org.kde.pim.expandurlplugin
+ecm_qt_declare_logging_category(messageviewer_aiplugin HEADER aiplugin_debug.h IDENTIFIER AIPLUGIN_LOG CATEGORY_NAME org.kde.pim.aiplugin
     DESCRIPTION "kdepim-addons (AI Plugin)"
     EXPORT KDEPIMADDONS
 )
