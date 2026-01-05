@@ -5,6 +5,8 @@
 */
 
 #include "viewerpluginexternalscriptparseargument.h"
+#include <QTextDocument>
+
 ViewerPluginExternalScriptParseArgument::ViewerPluginExternalScriptParseArgument() = default;
 
 void ViewerPluginExternalScriptParseArgument::setMessage(const std::shared_ptr<KMime::Message> &msg)
@@ -42,8 +44,12 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
             const KMime::Headers::Bcc *const bcc = mMessage->bcc(KMime::CreatePolicy::DontCreate);
             newArguments << QStringLiteral("\"%1\"").arg(bcc ? bcc->asUnicodeString() : QString());
         } else if (arg == QLatin1StringView("%body")) {
-            const QByteArray body = mMessage->body();
-            newArguments << QStringLiteral("\"%1\"").arg(QLatin1StringView(body));
+            // const QByteArray body = mMessage->body();
+            // qDebug() << " BODY ************" << mMessage->encodedBody();
+            QTextDocument doc;
+            doc.setHtml(QString::fromLatin1(mMessage->encodedBody()));
+            // qDebug() << " AFTYER BODY ************" << doc.toPlainText();
+            newArguments << QStringLiteral("\"%1\"").arg(doc.toPlainText());
         } else if (arg == QLatin1StringView("%inreplyto")) {
             KMime::Headers::InReplyTo *inReplyTo = mMessage->inReplyTo(KMime::CreatePolicy::DontCreate);
             newArguments << QStringLiteral("\"%1\"").arg(inReplyTo ? inReplyTo->asUnicodeString() : QString());
