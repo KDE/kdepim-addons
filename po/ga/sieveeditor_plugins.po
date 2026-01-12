@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 14:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: emaillineedit/emaillineedit.cpp:33
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Click on button for selecting contacts…"
+msgstr ""
+
+#: emaillineedit/emaillineedit.cpp:37
+#, kde-format
+msgid "…"
+msgstr ""
+
+#: emaillineedit/emaillineedit.cpp:39
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select Emails"
+msgstr ""
+
+#: emaillineedit/emaillineedit.cpp:86
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Emails"
+msgstr ""
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgctxt "@title:window"
+msgid "Create Folder"
+msgstr ""
+
+#: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
+#, kde-format
+msgid "Error during creating folder: %1"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:27
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Folder…"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
+#, kde-format
+msgctxt "@title:window"
+msgid "Select IMAP folder"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:37
+#, kde-format
+msgid "Unable to load folder list"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfoldertreeview.cpp:40
+#, kde-format
+msgid "Loading in progress…"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search…"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Refresh IMAP Folder List"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#, kde-format
+msgid "Create Folder"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#, kde-format
+msgid "Folder Name:"
+msgstr ""
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#, kde-format
+msgid "Slashes are not allowed in folder names."
+msgstr ""
+
+#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#, kde-format
+msgid "Empty folder name is not supported."
+msgstr ""
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgid "Error during loading folders: %1"
+msgstr ""
+
+#: imapfoldercompletion/selectimaploadfoldersjob.cpp:137
+#, kde-format
+msgctxt "@title:window"
+msgid "Load Folders"
+msgstr ""
+
+#: imapfoldercompletion/selectimapwidget.cpp:31
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Select IMAP folder"
+msgstr ""
+
+#: imapfoldercompletion/selectimapwidget.cpp:58
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Click on button for selecting folder…"
+msgstr ""

@@ -355,13 +355,13 @@ msgstr "Modifica la regla…"
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr "Ja s'ha afegit una regla per al servidor."
+msgstr "Ja s'ha afegit una regla per a l'amfitrió."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
-msgstr "El servidor ja s'ha verificat"
+msgstr "L'amfitrió ja s'ha verificat"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
