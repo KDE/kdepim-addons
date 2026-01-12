@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: kaichatcalendarplugin.cpp:23
+msgid "calendar info"
+msgstr ""
+
+#: kaichatcalendarplugin.cpp:30
+msgid "Name of user"
+msgstr ""
+
+#: kaichatcalendarplugin.cpp:40
+#, kde-format
+msgid "Get Info From calendar"
+msgstr ""
+
+#: kaichatcalendarplugin.cpp:45
+#, kde-format
+msgid "Use this tool to get user info from akonadi database"
+msgstr ""
+
+#: kaichatcalendarplugindialog.cpp:16
+#, kde-format
+msgid "Configure Calendar Tool Plugin"
+msgstr ""
+
+#: kaichatcalendarpluginjob.cpp:30
+#, kde-format
+msgid "Get Email..."
+msgstr ""
+
+#: kaichatcalendarpluginjob.cpp:68 kaichatcalendarpluginjob.cpp:98
+#, kde-format
+msgid "No Contact found in calendar for %1"
+msgstr ""
+
+#: kaichatcalendarpluginjob.cpp:79
+#, kde-format
+msgid "Birthday for %1 is %2"
+msgstr ""
+
+#: kaichatcalendarpluginjob.cpp:110
+#, kde-format
+msgid "The preferred email is %1"
+msgstr ""
