@@ -80,13 +80,6 @@ set(KTEXTADDONS_MIN_VERSION "1.9.1")
 set(KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION "${KTEXTADDONS_MIN_VERSION}")
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-
-option(
-    KDEPIM_ENTERPRISE_BUILD
-    "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client."
-    FALSE
-)
-
 option(
     OPTION_ADD_AUTOGENERATETEXT
     "Add support for autogenerate text plugin"
@@ -291,11 +284,6 @@ if(BUILD_TESTING)
     add_definitions(-DBUILD_TESTING)
 endif()
 
-if(KDEPIM_ENTERPRISE_BUILD)
-    set(KDEPIM_ENTERPRISE_BUILD true)
-else()
-    set(KDEPIM_ENTERPRISE_BUILD false)
-endif()
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 # Extra package
 find_package(Gpgmepp 1.23.2 CONFIG)
