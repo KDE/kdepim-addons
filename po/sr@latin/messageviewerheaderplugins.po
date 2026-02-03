@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerheaderplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-02-03 00:47+0000\n"
 "PO-Revision-Date: 2015-12-26 20:17+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -19,21 +19,18 @@ msgstr ""
 "X-Environment: kde\n"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:67
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:126
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
 #, kde-format
 msgid "[vCard]"
 msgstr "[vCard]"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:75
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:164
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
 #, kde-format
 msgid "CC: "
 msgstr "CC: "
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:82
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:179
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
 #, kde-format
 msgid "BCC: "
@@ -50,27 +47,10 @@ msgstr "Saže&ta zaglavlja"
 msgid "Show brief list of message headers"
 msgstr "Prikaži sažet spisak zaglavlja poruke"
 
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:134
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:92
 #, kde-format
 msgid "From: "
 msgstr "Od: "
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:149
-#, kde-format
-msgid "To: "
-msgstr "Za: "
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:21
-#, kde-format
-msgctxt "View->headers->"
-msgid "&Enterprise Headers"
-msgstr "&Poslovna zaglavlja"
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:24
-#, kde-format
-msgid "Show the list of headers in Enterprise style"
-msgstr "Prikaži spisak zaglavlja u poslovnom stilu"
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
 #, kde-format
@@ -146,3 +126,13 @@ msgstr "&Standardna zaglavlja"
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "Prikaži standardni spisak zaglavlja poruke"
+
+#~ msgid "To: "
+#~ msgstr "Za: "
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Enterprise Headers"
+#~ msgstr "&Poslovna zaglavlja"
+
+#~ msgid "Show the list of headers in Enterprise style"
+#~ msgstr "Prikaži spisak zaglavlja u poslovnom stilu"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-02-03 00:47+0000\n"
 "PO-Revision-Date: 2019-12-27 22:15+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -18,21 +18,18 @@ msgstr ""
 "X-Generator: Lokalize 19.04.3\n"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:67
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:126
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
 #, kde-format
 msgid "[vCard]"
 msgstr "[vCard]"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:75
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:164
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
 #, kde-format
 msgid "CC: "
 msgstr "Kopia: "
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:82
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:179
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
 #, kde-format
 msgid "BCC: "
@@ -49,27 +46,10 @@ msgstr "&Korta huvuden"
 msgid "Show brief list of message headers"
 msgstr "Visa kort lista över brevhuvuden"
 
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:134
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:92
 #, kde-format
 msgid "From: "
 msgstr "Från: "
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:149
-#, kde-format
-msgid "To: "
-msgstr "Till: "
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:21
-#, kde-format
-msgctxt "View->headers->"
-msgid "&Enterprise Headers"
-msgstr "&Företagshuvuden"
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:24
-#, kde-format
-msgid "Show the list of headers in Enterprise style"
-msgstr "Visa listan över brevhuvuden med företagsformat"
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
 #, kde-format
@@ -144,6 +124,16 @@ msgstr "&Standardhuvuden"
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "Visa standardlista över brevhuvuden"
+
+#~ msgid "To: "
+#~ msgstr "Till: "
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Enterprise Headers"
+#~ msgstr "&Företagshuvuden"
+
+#~ msgid "Show the list of headers in Enterprise style"
+#~ msgstr "Visa listan över brevhuvuden med företagsformat"
 
 #~ msgctxt "View->headers->"
 #~ msgid "&All Headers"

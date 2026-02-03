@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerheaderplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-02-03 00:47+0000\n"
 "PO-Revision-Date: 2023-12-25 17:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -18,21 +18,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:67
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:126
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
 #, kde-format
 msgid "[vCard]"
 msgstr "[vCard]"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:75
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:164
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
 #, kde-format
 msgid "CC: "
 msgstr "副本："
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:82
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:179
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
 #, kde-format
 msgid "BCC: "
@@ -49,27 +46,10 @@ msgstr "簡要標頭(&B)"
 msgid "Show brief list of message headers"
 msgstr "顯示信件標頭的簡要列表"
 
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:134
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:92
 #, kde-format
 msgid "From: "
 msgstr "寄件者："
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:149
-#, kde-format
-msgid "To: "
-msgstr "收件者："
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:21
-#, kde-format
-msgctxt "View->headers->"
-msgid "&Enterprise Headers"
-msgstr "企業標頭(&E)"
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:24
-#, kde-format
-msgid "Show the list of headers in Enterprise style"
-msgstr "以企業風格顯示標頭列表"
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
 #, kde-format
@@ -144,3 +124,13 @@ msgstr "標準標頭(&S)"
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "顯示標準的信件標頭列表"
+
+#~ msgid "To: "
+#~ msgstr "收件者："
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Enterprise Headers"
+#~ msgstr "企業標頭(&E)"
+
+#~ msgid "Show the list of headers in Enterprise style"
+#~ msgstr "以企業風格顯示標頭列表"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-02-03 00:47+0000\n"
 "PO-Revision-Date: 2023-09-20 02:20+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -20,21 +20,18 @@ msgstr ""
 "X-Generator: Lokalize 23.08.1\n"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:67
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:126
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
 #, kde-format
 msgid "[vCard]"
 msgstr "[vCard]"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:75
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:164
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
 #, kde-format
 msgid "CC: "
 msgstr "Cc: "
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:82
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:179
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
 #, kde-format
 msgid "BCC: "
@@ -51,27 +48,10 @@ msgstr "A&breviar cabeceras"
 msgid "Show brief list of message headers"
 msgstr "Mostrar lista abreviada de cabeceras de los mensajes"
 
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:134
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:92
 #, kde-format
 msgid "From: "
 msgstr "De: "
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:149
-#, kde-format
-msgid "To: "
-msgstr "Para: "
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:21
-#, kde-format
-msgctxt "View->headers->"
-msgid "&Enterprise Headers"
-msgstr "Cabeceras &empresariales"
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:24
-#, kde-format
-msgid "Show the list of headers in Enterprise style"
-msgstr "Mostrar la lista de cabeceras siguiendo un estilo empresarial"
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
 #, kde-format
@@ -146,6 +126,16 @@ msgstr "Encabezados e&stándar"
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "Mostrar lista estándar de encabezados de mensajes"
+
+#~ msgid "To: "
+#~ msgstr "Para: "
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Enterprise Headers"
+#~ msgstr "Cabeceras &empresariales"
+
+#~ msgid "Show the list of headers in Enterprise style"
+#~ msgstr "Mostrar la lista de cabeceras siguiendo un estilo empresarial"
 
 #~ msgctxt "View->headers->"
 #~ msgid "&All Headers"

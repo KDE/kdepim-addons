@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerheaderplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-02-03 00:47+0000\n"
 "PO-Revision-Date: 2019-12-21 09:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -21,21 +21,18 @@ msgstr ""
 "X-Generator: Lokalize 20.03.70\n"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:67
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:126
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
 #, kde-format
 msgid "[vCard]"
 msgstr "[vCard]"
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:75
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:164
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
 #, kde-format
 msgid "CC: "
 msgstr "Копія: "
 
 #: briefheaderstyleplugin/briefheaderstyle.cpp:82
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:179
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
 #, kde-format
 msgid "BCC: "
@@ -52,27 +49,10 @@ msgstr "&Короткі заголовки"
 msgid "Show brief list of message headers"
 msgstr "Показувати скорочений набір заголовків повідомлення"
 
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:134
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:92
 #, kde-format
 msgid "From: "
 msgstr "Від:"
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:149
-#, kde-format
-msgid "To: "
-msgstr "Кому: "
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:21
-#, kde-format
-msgctxt "View->headers->"
-msgid "&Enterprise Headers"
-msgstr "&Бізнес-заголовки"
-
-#: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:24
-#, kde-format
-msgid "Show the list of headers in Enterprise style"
-msgstr "Показати список заголовків у бізнес-стилі"
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
 #, kde-format
@@ -147,6 +127,16 @@ msgstr "&Стандартні заголовки"
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "Показувати стандартний набір заголовків повідомлення"
+
+#~ msgid "To: "
+#~ msgstr "Кому: "
+
+#~ msgctxt "View->headers->"
+#~ msgid "&Enterprise Headers"
+#~ msgstr "&Бізнес-заголовки"
+
+#~ msgid "Show the list of headers in Enterprise style"
+#~ msgstr "Показати список заголовків у бізнес-стилі"
 
 #~ msgctxt "View->headers->"
 #~ msgid "&All Headers"
