@@ -299,7 +299,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     # see e.g. https://gcc.gnu.org/bugzilla/show_bug.cgi?id=56556 or https://gcc.gnu.org/bugzilla/show_bug.cgi?id=79328
     string(APPEND CMAKE_CXX_FLAGS " -Wshadow")
 endif()
-ecm_set_disabled_deprecation_versions(QT 6.11.0 KF 6.22.0 KMIME 6.7.0)
+ecm_set_disabled_deprecation_versions(QT 6.11.0 KF 6.23.0 KMIME 6.7.0)
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
