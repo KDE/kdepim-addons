@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2026 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010, 2011.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
 # SPDX-FileCopyrightText: 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2024-05-30 13:54+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2026-02-03 15:43+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: csv/csvimportexportplugininterface.cpp:35
 #, kde-format
@@ -101,6 +101,8 @@ msgid ""
 "Click this button to start a file chooser that will allow you to select a "
 "csv file to import."
 msgstr ""
+"Kliknutím na toto tlačítko spustíte výběr souboru, který vám umožní vybrat "
+"si soubor CSV k importu."
 
 #: csv/import/csvimportdialog.cpp:311
 #, kde-format
@@ -118,7 +120,7 @@ msgstr "Čárka"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a comma"
-msgstr ""
+msgstr "Nastavit oddělovač polí na čárku"
 
 #: csv/import/csvimportdialog.cpp:323
 #, kde-format
@@ -126,6 +128,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the comma as a field separator."
 msgstr ""
+"Tuto možnost vyberte, pokud váš soubor CSV používá čárku jako oddělovač polí."
 
 #: csv/import/csvimportdialog.cpp:328
 #, kde-format
@@ -137,7 +140,7 @@ msgstr "Středník"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a semicolon"
-msgstr ""
+msgstr "Nastavit oddělovač polí na středník"
 
 #: csv/import/csvimportdialog.cpp:330
 #, kde-format
@@ -145,6 +148,8 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the semicolon as a field separator."
 msgstr ""
+"Tuto možnost vyberte, pokud váš soubor CSV používá středník jako oddělovač "
+"polí."
 
 #: csv/import/csvimportdialog.cpp:334
 #, kde-format
@@ -156,7 +161,7 @@ msgstr "Tabulátor"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a tab character"
-msgstr ""
+msgstr "Nastavit oddělovač polí na znak tabulátoru"
 
 #: csv/import/csvimportdialog.cpp:336
 #, kde-format
@@ -165,6 +170,8 @@ msgid ""
 "Select this option if your csv file uses the tab character as a field "
 "separator."
 msgstr ""
+"Tuto možnost vyberte, pokud váš soubor CSV používá znak tabulátoru jako "
+"oddělovač polí."
 
 #: csv/import/csvimportdialog.cpp:340
 #, kde-format
@@ -176,7 +183,7 @@ msgstr "Mezera"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a space character"
-msgstr ""
+msgstr "Nastavit oddělovač polí na mezeru"
 
 #: csv/import/csvimportdialog.cpp:342
 #, kde-format
@@ -185,6 +192,8 @@ msgid ""
 "Select this option if your csv file uses the space character as a field "
 "separator."
 msgstr ""
+"Tuto možnost vyberte, pokud váš soubor CSV používá jako oddělovač polí "
+"mezeru."
 
 #: csv/import/csvimportdialog.cpp:346
 #, kde-format
@@ -196,7 +205,7 @@ msgstr "Jiné"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a custom character"
-msgstr ""
+msgstr "Nastavit oddělovač polí na vlastní znak"
 
 #: csv/import/csvimportdialog.cpp:349
 #, kde-format
@@ -205,12 +214,14 @@ msgid ""
 "Select this option if to use some other character as the field delimiter for "
 "the data in your csv file."
 msgstr ""
+"Tuto možnost vyberte, pokud chcete jako oddělovač polí pro data ve vašem "
+"souboru CSV použít jiný znak."
 
 #: csv/import/csvimportdialog.cpp:355
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the custom delimiter character"
-msgstr ""
+msgstr "Nastavit vlastní oddělovací znak"
 
 #: csv/import/csvimportdialog.cpp:357
 #, kde-format
@@ -220,6 +231,8 @@ msgid ""
 "more than 1 character, only the first will be used and the remaining "
 "characters will be ignored."
 msgstr ""
+"Zadejte vlastní znak, který chcete použít jako oddělovací znak. Pokud zadáte "
+"více než 1 znak, bude použit pouze první a zbývající znaky budou ignorovány."
 
 #: csv/import/csvimportdialog.cpp:363
 #, kde-format
@@ -231,7 +244,7 @@ msgstr "Uvozovky:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the quote character"
-msgstr ""
+msgstr "Vybrat uvozovací znak"
 
 #: csv/import/csvimportdialog.cpp:371
 #, kde-format
@@ -242,6 +255,10 @@ msgid ""
 "if the comma is the field delimiter, then any comma occurring with the data "
 "will be \"quoted\" by the character specified here."
 msgstr ""
+"Vyberte znak, který vaše data CSV používají k „uvozování“ oddělovače polí, "
+"pokud se tento znak vyskytuje v datech.  Například pokud je oddělovačem polí "
+"čárka, pak každá čárka vyskytující se v datech bude \"uvozena\" znakem zde "
+"zadaným."
 
 #: csv/import/csvimportdialog.cpp:376
 #, kde-format
@@ -315,13 +332,13 @@ msgstr "Kodek textu:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
-msgstr ""
+msgstr "Vybrat kodek textu"
 
 #: csv/import/csvimportdialog.cpp:424
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose the character encoding of the data in your csv file."
-msgstr ""
+msgstr "Vyberte kódování znaků dat ve vašem souboru CSV."
 
 #: csv/import/csvimportdialog.cpp:428
 #, kde-format
@@ -343,6 +360,9 @@ msgid ""
 "data. In many cases, the first line of a csv file will be a comment line "
 "describing the order of the data fields included in the file."
 msgstr ""
+"Zaškrtněte toto políčko, pokud chcete, aby import přeskočil první řádek dat "
+"CSV. V mnoha případech je první řádek souboru CSV komentářem popisujícím "
+"pořadí datových polí obsažených v souboru."
 
 #: csv/import/csvimportdialog.cpp:448
 #, kde-format
@@ -642,13 +662,13 @@ msgstr "Možnosti exportu"
 #, kde-format
 msgctxt "@option:check"
 msgid "Display name as full name"
-msgstr "Zobrazit jméno jako celé jméno"
+msgstr "Zobrazované jméno jako celé jméno"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export display name as full name"
-msgstr ""
+msgstr "Exportovat zobrazované jméno jako celé jméno"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:73
 #, kde-format
@@ -658,6 +678,9 @@ msgid ""
 "vCard's full name field.  This may be required to get the name shown "
 "correctly in GMail or Android."
 msgstr ""
+"Zaškrtněte toto políčko, pokud chcete exportovat zobrazované jméno kontaktu "
+"do pole pro celé jméno v kartě vCard.  To může být nutné, aby se jméno "
+"správně zobrazovalo v GMailu nebo Androidu."
 
 #: vcards/engine/vcardviewerdialog.cpp:28
 #, kde-format
@@ -774,4 +797,4 @@ msgstr "Importovat kontakty ze souboru kontaktů Windows."
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:68
 #, kde-format
 msgid "Windows Contact file (*.contact)"
-msgstr ""
+msgstr "Soubor kontaktů systému Windows (*.contact)"

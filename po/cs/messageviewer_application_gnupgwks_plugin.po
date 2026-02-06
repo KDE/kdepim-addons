@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2016, 2018, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2016, 2018, 2023, 2026 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2024-05-30 13:58+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2026-02-04 10:54+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: gnupgwksurlhandler.cpp:86
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "Importovat klíč"
 #: pgpkeyurlhandler.cpp:66
 #, kde-format
 msgid "An error occurred while importing the key."
-msgstr ""
+msgstr "Při importu klíče došlo k chybě."
 
 #: pgpkeyurlhandler.cpp:72 pgpkeyurlhandler.cpp:74
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "Nebyly nalezeny žádné klíče pro import."
 #: pgpkeyurlhandler.cpp:76
 #, kde-format
 msgid "The key has been successfully imported."
-msgstr ""
+msgstr "Klíč byl úspěšně importován."
 
 #: pgpkeyurlhandler.cpp:76
 #, kde-format
@@ -68,6 +68,7 @@ msgstr "Import dokončen"
 #: templates/gnupgwksmessagepart.html:26
 msgid "Register your OpenPGP key with your email provider. "
 msgstr ""
+"Zaregistrujte svůj klíč OpenPGP u svého poskytovatele e-mailových služeb. "
 
 #: templates/gnupgwksmessagepart.html:29
 msgid ""
@@ -75,10 +76,13 @@ msgid ""
 "be able to retrieve the key and send you encrypted emails and verify "
 "authenticity of emails you send them."
 msgstr ""
+"Když zaregistrujete svůj klíč u svého poskytovatele e-mailových služeb, "
+"ostatní lidé budou moci tento klíč získat a posílat vám šifrované e-maily a "
+"ověřovat autentičnost e-mailů, které jim posíláte."
 
 #: templates/gnupgwksmessagepart.html:33
 msgid "An error occurred while publishing the key. Please try again later."
-msgstr ""
+msgstr "Při publikování klíče došlo k chybě. Zkuste to prosím později znovu."
 
 #: templates/gnupgwksmessagepart.html:35
 msgid "Register the key"
@@ -87,7 +91,7 @@ msgstr "Registrovat klíč"
 #: templates/gnupgwksmessagepart.html:37
 msgid ""
 "The email will be automatically deleted once you confirm the registration."
-msgstr ""
+msgstr "E-mail bude automaticky smazán, jakmile potvrdíte registraci."
 
 #: templates/gnupgwksmessagepart.html:40
 msgid "Show key details"
@@ -98,6 +102,8 @@ msgid ""
 "This is an automatically generated email. The purpose of this email is to "
 "register your OpenPGP key with your email provider."
 msgstr ""
+"Toto je automaticky generovaný e-mail. Účelem tohoto e-mailu je "
+"zaregistrovat váš klíč OpenPGP u vašeho poskytovatele e-mailových služeb."
 
 #: templates/gnupgwksmessagepart.html:47
 msgid ""
@@ -105,6 +111,9 @@ msgid ""
 "Other users will be able to retrieve the key and send you encrypted emails "
 "and verify authenticity of emails you send them."
 msgstr ""
+"Váš klíč OpenPGP bude zveřejněn na klíčovém serveru vašeho poskytovatele e-"
+"mailových služeb. Ostatní uživatelé budou moci klíč získat a posílat vám "
+"šifrované e-maily a ověřovat pravost e-mailů, které jim posíláte."
 
 #: templates/pgpkeymessagepart.html:14
 msgid "OpenPGP Key"
@@ -113,6 +122,7 @@ msgstr "Klíč OpenPGP"
 #: templates/pgpkeymessagepart.html:18
 msgid "This is an OpenPGP key, which can be used to sign or encrypt emails."
 msgstr ""
+"Toto je klíč OpenPGP, který lze použít k podepisování nebo šifrování e-mailů."
 
 #: templates/pgpkeymessagepart.html:23
 msgid "Loading key details…"
@@ -135,6 +145,8 @@ msgid ""
 "This key is unknown, it could not be found in your local keyring. You may "
 "want to import this key."
 msgstr ""
+"Tento klíč není známý, nebyl nalezen ve vašem místním klíčovém svazku. Možná "
+"budete chtít tento klíč importovat."
 
 #: templates/pgpkeymessagepart.html:45
 #, kde-format

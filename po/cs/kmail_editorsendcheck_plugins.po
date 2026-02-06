@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2016, 2017, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2016, 2017, 2020, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2024-08-14 11:31+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-02-04 10:53+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:16
 #, kde-format
@@ -67,12 +67,12 @@ msgstr "Vyberte knihu adres kde chcete ukládat kontakty:"
 #: checkbeforesend/checkbeforesendinterface.cpp:37
 #, kde-format
 msgid "Do you want to send the email as HTML?"
-msgstr ""
+msgstr "Chcete odeslat e-mail ve formátu HTML?"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:38
 #, kde-format
 msgid "Send email as plain text"
-msgstr ""
+msgstr "Odeslat e-mail jako prostý text"
 
 #: checkbeforesend/checkbeforesendinterface.cpp:39
 #, kde-format
@@ -99,6 +99,8 @@ msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
 "the current identity?"
 msgstr ""
+"Chcete odeslat e-mail s jiným SMTP než tím, který je definován v aktuální "
+"identitě?"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:16
 #, kde-format
@@ -116,7 +118,7 @@ msgstr "Poslat jako prostý text"
 #, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
-msgstr ""
+msgstr "Použít SMTP server definovaný v identitě"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format
@@ -128,7 +130,7 @@ msgstr "Zkontrolovat duplicitní adresy e-mailů"
 #, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
-msgstr ""
+msgstr "Zkontrolovat odeslání přílohy"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
 #, kde-format
@@ -140,7 +142,7 @@ msgstr "Duplikované e-maily"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
-msgstr ""
+msgstr "Tyto e-maily jsou duplicitní. Chcete jej odeslat?"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:51
 #, kde-format
@@ -158,7 +160,7 @@ msgstr "Zkontrolovat přílohu"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
-msgstr ""
+msgstr "Chcete poslat nějakou přílohu?"
 
 #: confirm-address/confirmaddressconfiguredialog.cpp:16
 #, kde-format
@@ -170,7 +172,7 @@ msgstr "Nastavit modul \"Potvrdit e-mailovou adresu\""
 #, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
-msgstr ""
+msgstr "Název povolené domény"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:39
 #, kde-format
@@ -199,7 +201,7 @@ msgstr "Změn&it…"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:50
 #, kde-format
 msgid "Enter new domain name:"
-msgstr ""
+msgstr "Zadat nový název domény:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:52
 #, kde-format
@@ -214,7 +216,7 @@ msgstr "Bílá listina adres"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Enter new email address:"
-msgstr ""
+msgstr "Zadat novou e-mailovou adresu:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:71
 #, kde-format
@@ -248,7 +250,7 @@ msgstr "E-maily jsou přidány na bílou listinu"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
-msgstr ""
+msgstr "Zadat název nové domény:"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
 #, kde-format
@@ -266,4 +268,4 @@ msgstr "Změnit hodnotu"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
-msgstr ""
+msgstr "Potenciálně neplatné e-mailové adresy jsou zobrazeny červeně:"

@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2014, 2017, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2014, 2017, 2020, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <lukas@kde.org>, 2012.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2024 Vit Pelcak <vit@pelcak.org>
@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2024-08-14 11:32+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-02-04 10:55+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -48,7 +48,7 @@ msgstr "Odstranit"
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
-msgstr ""
+msgstr "Informovat mě o změnách stavu této události."
 
 #: delegateselector.cpp:25
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "Komentář:"
 #: text_calendar.cpp:360
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
-msgstr ""
+msgstr "V pozvánce nebyla nalezena žádná příloha s názvem \"%1\"."
 
 #: text_calendar.cpp:375
 #, kde-format
@@ -80,6 +80,9 @@ msgid ""
 "this computer. Please ask the event organizer to resend the invitation with "
 "this attachment stored inline instead of a link."
 msgstr ""
+"Příloha pozvánky \"%1\" je webový odkaz, který není z tohoto počítače "
+"přístupný. Požádejte organizátora akce, aby pozvánku znovu odeslal s touto "
+"přílohou uloženou přímo v e-mailu namísto odkazu."
 
 #: text_calendar.cpp:427
 #, kde-format
@@ -162,37 +165,37 @@ msgstr "Zamítnutý protinávrh: %1"
 #: text_calendar.cpp:729 text_calendar.cpp:735
 #, kde-format
 msgid "\"%1\" occurred already."
-msgstr ""
+msgstr "\"%1\" již nastala."
 
 #: text_calendar.cpp:731 text_calendar.cpp:748
 #, kde-format
 msgid "\"%1\" is currently in-progress."
-msgstr ""
+msgstr "\"%1\" momentálně probíhá."
 
 #: text_calendar.cpp:737
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
-msgstr ""
+msgstr "\"%1\" momentálně probíhá celý dnešní den."
 
 #: text_calendar.cpp:746 text_calendar.cpp:758
 #, kde-format
 msgid "\"%1\" is past due."
-msgstr ""
+msgstr "\"%1\" již skončila."
 
 #: text_calendar.cpp:752
 #, kde-format
 msgid "\"%1\" has already started."
-msgstr ""
+msgstr "\"%1\" již začala."
 
 #: text_calendar.cpp:760
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
-msgstr ""
+msgstr "\"%1\" momentálně probíhá celý dnešní den."
 
 #: text_calendar.cpp:764
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
-msgstr ""
+msgstr "\"%1\" probíhající dnešní den již začala."
 
 #: text_calendar.cpp:776
 #, kde-format
@@ -377,7 +380,7 @@ msgstr "Reakce na pozvánku"
 #: text_calendar.cpp:902 text_calendar.cpp:1161
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
-msgstr ""
+msgstr "Zapomněli jste přidat návrh. Prosím, přidejte ho. Děkuji."
 
 #: text_calendar.cpp:935
 #, kde-format
@@ -403,6 +406,10 @@ msgid ""
 "a response will not be possible.\n"
 "Please create at least 1 writable events calendar and re-sync."
 msgstr ""
+"Nemáte žádné zapisovatelné složky kalendáře pro pozvánky, takže uložení nebo "
+"zachování odpovědi nebude možné.\n"
+"Vytvořte alespoň 1 zapisovatelný kalendář událostí a proveďte novou "
+"synchronizaci."
 
 #: text_calendar.cpp:1211
 #, kde-format
@@ -410,6 +417,8 @@ msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
 "Unable to continue."
 msgstr ""
+"Pozvánka v kalendáři uložená v této e-mailové zprávě je nějakým způsobem "
+"poškozená. Nelze pokračovat."
 
 #: text_calendar.cpp:1266
 #, kde-format
@@ -421,6 +430,11 @@ msgid ""
 "Would you like to send the organizer a message regarding this invitation?\n"
 "Press the [Cancel] button to cancel the recording operation."
 msgstr ""
+"Organizátor neočekává odpověď na tuto pozvánku, ale pokud chcete, můžete mu "
+"poslat e-mailovou zprávu.\n"
+"\n"
+"Chcete organizátorovi poslat zprávu týkající se této pozvánky?\n"
+"Stisknutím tlačítka [Zrušit] zrušíte nahrávání."
 
 #: text_calendar.cpp:1270
 #, kde-format
