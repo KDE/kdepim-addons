@@ -1,33 +1,33 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2023, 2024, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2024-08-14 11:31+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-02-04 10:55+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
-msgstr ""
+msgstr "I tak ověřit podpis, pokud doména pouze testuje DKIM."
 
 #: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
-msgstr ""
+msgstr "Při čtení hlavičky \"Authentication-Result\" použít uvolněné parsování"
 
 #: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #: dkim-verify/dkimgeneralwidget.cpp:42
@@ -48,12 +48,12 @@ msgstr "Chyba"
 #: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
-msgstr ""
+msgstr "Algoritmus podpisu RSA-SHA1 považovat za:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Treat small Key as:"
-msgstr ""
+msgstr "Zacházet s malým klíčem jako s:"
 
 #: dkim-verify/dkimadvancedwidget.cpp:40
 #, kde-format
@@ -64,13 +64,13 @@ msgstr "Nastavit"
 #: dkim-verify/dkimadvancedwidget.cpp:43
 #, kde-format
 msgid "Authentication Server verified:"
-msgstr ""
+msgstr "Autentizační server ověřen:"
 
 #: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
-msgstr ""
+msgstr "Nastavit autentizační server pro ověřování"
 
 #: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
 #, kde-format
@@ -140,7 +140,7 @@ msgstr "Uložit výsledek DKIM"
 #, kde-format
 msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
-msgstr ""
+msgstr "Nahradit výsledek DKIM hodnotou záhlaví Authentication-Result"
 
 #: dkim-verify/dkimgeneralwidget.cpp:37
 #, kde-format
@@ -168,7 +168,7 @@ msgstr "Zaškrtněte pokud má být e-mail podepsán"
 #, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
-msgstr ""
+msgstr "Pomocí DMARC heuristicky určit, zda by měl být e-mail podepsán"
 
 #: dkim-verify/dkimpolicywidget.cpp:20
 #, kde-format
@@ -192,7 +192,7 @@ msgstr "Přečíst hlavičku výsledků ověření"
 #, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
-msgstr ""
+msgstr "Automaticky generovat, když je odesílatel v SDID"
 
 #: dkim-verify/dkimpolicywidget.cpp:24
 #, kde-format
@@ -204,7 +204,7 @@ msgstr "Zobrazit pravítka"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
-msgstr ""
+msgstr "Nastavit složku koše pro vypršené účty"
 
 #: foldersettings/folderconfiguresettingsdialog.cpp:27
 #, kde-format
@@ -305,6 +305,8 @@ msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
 msgstr ""
+"<qt><p><strong>Pro argumenty lze použít tyto výrazy:</strong></p> <ul><li>%u "
+"– adresa URL použitá příkazem</li></ul></strong></p></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:53
 #, kde-format
@@ -343,13 +345,13 @@ msgstr "Upravit pravidlo…"
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgid "A rule for host was already added."
-msgstr ""
+msgstr "Pravidlo pro hostitele bylo již přidáno."
 
 #: openurlwith/openurlwithconfigurewidget.cpp:149
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
-msgstr ""
+msgstr "Hostitel byl již zkontrolován"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
@@ -418,7 +420,7 @@ msgstr "Přesměrovat URL"
 #: scamsettings/scamconfigureutils.cpp:19
 #, kde-format
 msgid "Has Ip"
-msgstr ""
+msgstr "Má IP adresu"
 
 #: scamsettings/scamlistsmodel.cpp:57
 #, kde-format
