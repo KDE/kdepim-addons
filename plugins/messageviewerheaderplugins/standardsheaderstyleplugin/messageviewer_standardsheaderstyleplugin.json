@@ -6,6 +6,7 @@
         "Description[bg]": "Тази приставка определя стандартния стил на заглавието на пощата.",
         "Description[ca@valencia]": "Este connector definix l'estil de capçalera de correu estàndard.",
         "Description[ca]": "Aquest connector defineix l'estil de capçalera de correu estàndard.",
+        "Description[cs]": "Tento modul definuje standardní styl hlavičky e-mailu.",
         "Description[da]": "Dette plugin definerer standard mail-header stilen.",
         "Description[de]": "Dieses Modul definiert das Standarddesign des E-Mail-Vorspanns.",
         "Description[en_GB]": "This plugin defines the standard mail header style.",

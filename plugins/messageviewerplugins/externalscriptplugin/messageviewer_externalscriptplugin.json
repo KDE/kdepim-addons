@@ -6,6 +6,7 @@
         "Description[bg]": "Тази приставка ви позволява да използвате външен скрипт срещу програмата за преглед на съобщения.",
         "Description[ca@valencia]": "Este connector permet utilitzar un script extern contra el visor de missatges.",
         "Description[ca]": "Aquest connector permet usar un script extern contra el visualitzador de missatges.",
+        "Description[cs]": "Tento modul umožňuje použít externí skript pro prohlížeč zpráv.",
         "Description[da]": "Dette plugin tillader dig at bruge et eksternt script mod beskedviseren.",
         "Description[de]": "Mit diesem Modul können Sie ein externes Skript für die Anzeige von E-Mails verwenden.",
         "Description[en_GB]": "This plugin allows you to use an external script against the message viewer.",

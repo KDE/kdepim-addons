@@ -6,6 +6,7 @@
         "Description[bg]": "Тази приставка ви позволява да генерирате html от език markdown",
         "Description[ca@valencia]": "Este connector permet generar HTML a partir del llenguatge Markdown",
         "Description[ca]": "Aquest connector permet generar HTML a partir del llenguatge Markdown",
+        "Description[cs]": "Tento modul umožňuje generovat html z jazyku Markdown.",
         "Description[da]": "Dette plugin tillader dig at genererer html fra markdown-sprog",
         "Description[de]": "Mit diesem Modul können Sie HTML aus der Sprache Markdown erstellen.",
         "Description[en_GB]": "This plugin allows you to generate html from markdown language",

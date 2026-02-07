@@ -6,6 +6,7 @@
         "Description[bg]": "Тази приставка ви позволява да създавате задачи от съобщение.",
         "Description[ca@valencia]": "Este connector permet crear una tasca pendent a partir d'un missatge.",
         "Description[ca]": "Aquest connector permet crear una tasca pendent a partir d'un missatge.",
+        "Description[cs]": "Tento modul umožňuje vytvořit úkol ze zprávy.",
         "Description[da]": "Dette plugin tillader dig at oprette en todo fra en besked.",
         "Description[de]": "Mit diesem Modul können Sie eine Aufgabe aus einer Nachricht erstellen.",
         "Description[en_GB]": "This plugin allows you to create a todo from a message.",

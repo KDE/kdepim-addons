@@ -6,6 +6,7 @@
         "Description[bg]": "Тази приставка ви позволява да проверявате настройките на съобщението преди изпращането му.",
         "Description[ca@valencia]": "Este connector permet comprovar les opcions de configuració del missatge abans d'enviar-lo.",
         "Description[ca]": "Aquest connector permet comprovar les opcions de configuració del missatge abans d'enviar-lo.",
+        "Description[cs]": "Tento modul vám umožňuje zkontrolovat nastavení zprávy před odesláním.",
         "Description[da]": "Dette plugin tillader dig at tjekke beskedindstillinger, inden der sendes.",
         "Description[de]": "Mit diesem Modul können Sie E-Mail-Einstellungen vor dem Senden überprüfen.",
         "Description[en_GB]": "This plugin allows you to check message settings before sending.",

@@ -6,6 +6,7 @@
         "Description[bg]": "Тази приставка ви позволява да създавате събитие от съобщение.",
         "Description[ca@valencia]": "Este connector permet crear un esdeveniment a partir d'un missatge.",
         "Description[ca]": "Aquest connector permet crear un esdeveniment a partir d'un missatge.",
+        "Description[cs]": "Tento modul umožňuje vytvořit událost ze zprávy.",
         "Description[da]": "Dette plugin tillader dig at oprette en begivenhed fra en besked.",
         "Description[de]": "Mit diesem Modul können Sie einen Termin aus einer Nachricht erstellen.",
         "Description[en_GB]": "This plugin allows you to create an event from a message.",
