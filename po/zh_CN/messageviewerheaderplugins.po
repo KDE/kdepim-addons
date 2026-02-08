@@ -125,13 +125,3 @@ msgstr "标准信头(&S)"
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "显示信头的标准列表"
-
-#~ msgid "To: "
-#~ msgstr "收件人： "
-
-#~ msgctxt "View->headers->"
-#~ msgid "&Enterprise Headers"
-#~ msgstr "企业信头(&E)"
-
-#~ msgid "Show the list of headers in Enterprise style"
-#~ msgstr "使用企业风格显示信头列表"
