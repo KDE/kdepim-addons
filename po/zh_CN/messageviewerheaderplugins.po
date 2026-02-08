@@ -59,7 +59,7 @@ msgstr "发件人："
 #: enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp:149
 #, kde-format
 msgid "To: "
-msgstr "收件人： "
+msgstr "收件人："
 
 #: enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp:21
 #, kde-format
