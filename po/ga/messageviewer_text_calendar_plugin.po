@@ -18,11 +18,10 @@ msgstr ""
 "3 : 4\n"
 
 #: attendeeselector.cpp:21
-#, fuzzy, kde-format
-#| msgid "Select Address"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
-msgstr "Roghnaigh Seoladh"
+msgstr ""
 
 #: attendeeselector.cpp:40
 #, kde-format
@@ -49,25 +48,22 @@ msgid "Keep me informed about status changes of this incidence."
 msgstr ""
 
 #: delegateselector.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select Address"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
-msgstr "Roghnaigh Seoladh"
+msgstr ""
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
-msgstr "Tarmlig:"
+msgstr ""
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
-msgstr "Nóta:"
+msgstr ""
 
 #: text_calendar.cpp:360
 #, kde-format
@@ -201,12 +197,10 @@ msgid "Do you still want to accept the invitation?"
 msgstr ""
 
 #: text_calendar.cpp:780 text_calendar.cpp:792
-#, fuzzy, kde-format
-#| msgctxt "Accepted the invitation."
-#| msgid "Accepted: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Accept"
-msgstr "Glactha: %1"
+msgstr ""
 
 #: text_calendar.cpp:784
 #, kde-format
@@ -272,11 +266,10 @@ msgid "Do you still want to delegate this invitation?"
 msgstr ""
 
 #: text_calendar.cpp:814
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
-msgstr "Tarmlig:"
+msgstr ""
 
 #: text_calendar.cpp:817
 #, kde-format
@@ -289,11 +282,10 @@ msgid "Do you still want to forward this invitation?"
 msgstr ""
 
 #: text_calendar.cpp:821
-#, fuzzy, kde-format
-#| msgid "Forwarded: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr "Curtha ar aghaidh: %1"
+msgstr ""
 
 #: text_calendar.cpp:825
 #, kde-format
@@ -318,11 +310,10 @@ msgid "Cancel Invitation"
 msgstr ""
 
 #: text_calendar.cpp:832 text_calendar.cpp:853
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "Ná Seol"
+msgstr ""
 
 #: text_calendar.cpp:835
 #, kde-format
@@ -428,18 +419,16 @@ msgid "Send Email to Organizer"
 msgstr ""
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
-msgstr "Ná Seol"
+msgstr ""
 
 #: text_calendar.cpp:1272
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
-msgstr "Seol Ríomhphost"
+msgstr ""
 
 #: text_calendar.cpp:1280
 #, kde-format

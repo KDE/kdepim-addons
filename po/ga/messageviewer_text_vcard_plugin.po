@@ -33,10 +33,9 @@ msgid "[Add this contact to the address book]"
 msgstr "[Cuir an teagmháil seo leis an leabhar seoltaí]"
 
 #: text_vcard.cpp:144
-#, fuzzy, kde-format
-#| msgid "[Update this contact to the address book]"
+#, kde-format
 msgid "[Update this contact in the address book]"
-msgstr "[Nuashonraigh an teagmháil seo sa leabhar seoltaí]"
+msgstr ""
 
 #: text_vcard.cpp:149
 #, kde-format
@@ -49,10 +48,9 @@ msgid "View Business Card"
 msgstr "Féach ar Chárta Gnó"
 
 #: text_vcard.cpp:224
-#, fuzzy, kde-format
-#| msgid "Save Business Card As..."
+#, kde-format
 msgid "Save Business Card As…"
-msgstr "Sábháil an Cárta Gnó Mar..."
+msgstr ""
 
 #: text_vcard.cpp:241
 #, kde-format
@@ -75,23 +73,20 @@ msgid "Update \"%1\" to the address book."
 msgstr "Nuashonraigh \"%1\" sa leabhar seoltaí."
 
 #: text_vcard.cpp:267
-#, fuzzy, kde-format
-#| msgid "Save Business Card"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
-msgstr "Sábháil an Cárta Gnó"
+msgstr ""
 
 #: updatecontactjob.cpp:37
-#, fuzzy, kde-format
-#| msgid "[This contact is already in addressbook]"
+#, kde-format
 msgid "The vCard's primary email address is not in addressbook."
-msgstr "[Tá an teagmháil seo sa leabhar seoltaí cheana]"
+msgstr ""
 
 #: updatecontactjob.cpp:43
-#, fuzzy, kde-format
-#| msgid "[This contact is already in addressbook]"
+#, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
-msgstr "[Tá an teagmháil seo sa leabhar seoltaí cheana]"
+msgstr ""
 
 #: updatecontactjob.cpp:65
 #, kde-format
@@ -104,12 +99,3 @@ msgstr ""
 #, kde-format
 msgid "Email not specified"
 msgstr ""
-
-#~ msgid "%1 already exists. Do you want to overwrite it?"
-#~ msgstr "Tá %1 ann cheana. An bhfuil fonn ort é a fhorscríobh?"
-
-#~ msgid "Add"
-#~ msgstr "Cuir Leis"
-
-#~ msgid "Remove"
-#~ msgstr "Bain"
