@@ -23,18 +23,16 @@ msgid "Allowed Protocols"
 msgstr "Prótacail atá ceadaithe"
 
 #: cryptopageplugin.cpp:52
-#, fuzzy, kde-format
-#| msgid "Preferred OpenPGP encryption key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
-msgstr "Do rogha eochair criptithe OpenPGP:"
+msgstr ""
 
 #: cryptopageplugin.cpp:57
-#, fuzzy, kde-format
-#| msgid "Preferred S/MIME encryption certificate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
-msgstr "Do rogha teastas criptithe S/MIME:"
+msgstr ""
 
 #: cryptopageplugin.cpp:62
 #, kde-format
@@ -42,18 +40,16 @@ msgid "Message Preference"
 msgstr "Sainrogha Theachtaireachta"
 
 #: cryptopageplugin.cpp:71
-#, fuzzy, kde-format
-#| msgid "Sign:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
-msgstr "Sínigh:"
+msgstr ""
 
 #: cryptopageplugin.cpp:88
-#, fuzzy, kde-format
-#| msgid "Encrypt:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
-msgstr "Criptigh:"
+msgstr ""
 
 #: cryptopageplugin.cpp:106
 #, kde-format
