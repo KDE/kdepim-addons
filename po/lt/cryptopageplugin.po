@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: cryptopageplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2020-04-01 23:20+0300\n"
+"PO-Revision-Date: 2026-02-22 02:03+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: cryptopageplugin.cpp:37
 #, kde-format
@@ -26,15 +26,13 @@ msgid "Allowed Protocols"
 msgstr "Leidžiami protokolai"
 
 #: cryptopageplugin.cpp:52
-#, fuzzy, kde-format
-#| msgid "Preferred OpenPGP encryption key:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Pageidaujamas OpenPGP šifravimo raktas:"
 
 #: cryptopageplugin.cpp:57
-#, fuzzy, kde-format
-#| msgid "Preferred S/MIME encryption certificate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Pageidaujamas S/MIME šifravimo liudijimas:"
@@ -42,21 +40,19 @@ msgstr "Pageidaujamas S/MIME šifravimo liudijimas:"
 #: cryptopageplugin.cpp:62
 #, kde-format
 msgid "Message Preference"
-msgstr "Žinutės nuostatos"
+msgstr "Žinutės nuostata"
 
 #: cryptopageplugin.cpp:71
-#, fuzzy, kde-format
-#| msgid "Sign:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
-msgstr "Pasirašymas:"
+msgstr "Pasirašyti:"
 
 #: cryptopageplugin.cpp:88
-#, fuzzy, kde-format
-#| msgid "Encrypt:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
-msgstr "Šifravimas:"
+msgstr "Šifruoti:"
 
 #: cryptopageplugin.cpp:106
 #, kde-format
