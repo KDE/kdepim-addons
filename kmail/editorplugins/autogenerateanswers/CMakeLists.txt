@@ -13,8 +13,6 @@ target_sources(
         autogenerateanswerseditordialog.cpp
         autogenerateanswerseditorwidget.h
         autogenerateanswerseditorwidget.cpp
-        autogenerateanswerseditorutils.h
-        autogenerateanswerseditorutils.cpp
         autogenerateanswerseditortextedit.h
         autogenerateanswerseditortextedit.cpp
 )
