@@ -6,6 +6,7 @@
 #include "autogenerateconfigurelistview.h"
 #include "autogenerateconfigureaskmodel.h"
 #include "autogenerateconfigurelistviewdelegate.h"
+#include "pimautogeneratetext_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QContextMenuEvent>
@@ -42,7 +43,7 @@ void AutogenerateConfigureListView::setAskInfos(const QList<AutogenerateConfigur
 void AutogenerateConfigureListView::setData(const QModelIndex &current, const QString &text)
 {
     if (!mModel->setData(current, text, AutogenerateConfigureAskModel::TextRole)) {
-        qWarning() << " Impossible to change text";
+        qCWarning(PIMAUTOGENERATE_LOG) << " Impossible to change text";
     }
 }
 
