@@ -35,7 +35,10 @@ void AutogenerateConfigureListViewDelegate::setModelData(QWidget *editor, QAbstr
 {
     QLineEdit *lineEdit = qobject_cast<QLineEdit *>(editor);
     if (lineEdit) {
-        model->setData(index, lineEdit->text(), AutogenerateConfigureAskModel::TitleRole);
+        const QString newText = lineEdit->text();
+        if (!newText.trimmed().isEmpty()) {
+            model->setData(index, lineEdit->text(), AutogenerateConfigureAskModel::TitleRole);
+        }
     }
 }
 
