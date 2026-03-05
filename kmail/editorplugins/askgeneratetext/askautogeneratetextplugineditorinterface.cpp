@@ -46,7 +46,9 @@ void AskAutogenerateTextPluginEditorInterface::exec()
     dlg->show();
     QTextCursor textCursor = richTextEditor()->textCursor();
     const QString selectedText = textCursor.selectedText();
-    const TextAutoGenerateText::TextAutoGenerateManager::AskMessageInfo info{.message = u"%1 %2"_s.arg(mAskMsg, selectedText), .attachments = {}, .tools = {}};
+    const TextAutoGenerateText::TextAutoGenerateManager::AskMessageInfo info{.message = u"%1: \"%2\""_s.arg(mAskMsg, selectedText),
+                                                                             .attachments = {},
+                                                                             .tools = {}};
     dlg->ask(info);
 }
 
