@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2025-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -49,7 +49,7 @@ void AutogenerateConfigureListView::setData(const QModelIndex &current, const QS
 void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu(this);
-    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action", "Add…"), &menu);
+    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("document-new")), i18nc("@action", "Add…"), &menu);
     connect(addAction, &QAction::triggered, this, [this]() {
         AutogenerateConfigureAskInfo info;
         info.setTitle(i18n("Ask to AI"));
