@@ -286,7 +286,7 @@ endif()
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 # Extra package
-find_package(Gpgmepp 1.23.2 CONFIG)
+find_package(Gpgmepp 2.0.0 CONFIG)
 set_package_properties(
     Gpgmepp
     PROPERTIES
