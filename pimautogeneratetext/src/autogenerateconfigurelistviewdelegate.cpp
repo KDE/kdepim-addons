@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2025-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -14,10 +14,10 @@ AutogenerateConfigureListViewDelegate::AutogenerateConfigureListViewDelegate(QOb
 
 AutogenerateConfigureListViewDelegate::~AutogenerateConfigureListViewDelegate() = default;
 
-QWidget *AutogenerateConfigureListViewDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
+QWidget *AutogenerateConfigureListViewDelegate::createEditor(QWidget *parent,
+                                                             [[maybe_unused]] const QStyleOptionViewItem &option,
+                                                             [[maybe_unused]] const QModelIndex &index) const
 {
-    Q_UNUSED(option);
-    Q_UNUSED(index);
     QLineEdit *editor = new QLineEdit(parent);
     return editor;
 }
@@ -39,9 +39,10 @@ void AutogenerateConfigureListViewDelegate::setModelData(QWidget *editor, QAbstr
     }
 }
 
-void AutogenerateConfigureListViewDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &index) const
+void AutogenerateConfigureListViewDelegate::updateEditorGeometry(QWidget *editor,
+                                                                 const QStyleOptionViewItem &option,
+                                                                 [[maybe_unused]] const QModelIndex &index) const
 {
-    Q_UNUSED(index);
     editor->setGeometry(option.rect);
 }
 
