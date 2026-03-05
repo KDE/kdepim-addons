@@ -1,11 +1,10 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2019-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "grammalecteinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "grammalecteplugin_debug.h"
 #include <KPIMTextEdit/RichTextComposer>
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QHBoxLayout>
 #include <QTextBlock>
 
+using namespace Qt::Literals::StringLiterals;
 GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
     , mGrammarResultWidget(new TextGrammarCheck::GrammalecteResultWidget(this))

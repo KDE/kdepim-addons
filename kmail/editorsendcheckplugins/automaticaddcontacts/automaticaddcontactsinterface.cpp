@@ -1,11 +1,10 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2016-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "automaticaddcontactsinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "automaticaddcontactsjob.h"
 #include <KConfigGroup>
@@ -13,6 +12,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KIdentityManagementCore/IdentityManager>
 #include <KSharedConfig>
 
+using namespace Qt::Literals::StringLiterals;
 AutomaticAddContactsInterface::AutomaticAddContactsInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
 {

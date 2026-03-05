@@ -1,11 +1,10 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2022-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "akonadidatabasetoolsplugininterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadidatabasetoolsdialog.h"
 #include "akonadidatabasetoolsjob.h"
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KMessageBox>
 #include <QAction>
 
+using namespace Qt::Literals::StringLiterals;
 AkonadiDatabaseToolsPluginInterface::AkonadiDatabaseToolsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
 {

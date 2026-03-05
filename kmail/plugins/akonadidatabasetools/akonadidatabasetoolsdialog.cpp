@@ -1,11 +1,10 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2022-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "akonadidatabasetoolsdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadidatabasetoolswidget.h"
 #include <KConfigGroup>
@@ -20,6 +19,7 @@ namespace
 const char myConfigGroupName[] = "AkonadiDatabaseToolsDialog";
 }
 
+using namespace Qt::Literals::StringLiterals;
 AkonadiDatabaseToolsDialog::AkonadiDatabaseToolsDialog(QWidget *parent)
     : QDialog(parent)
     , mAkonadiDatabaseToolsWidget(new AkonadiDatabaseToolsWidget(this))
@@ -65,7 +65,7 @@ void AkonadiDatabaseToolsDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigGroupName));
+    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

@@ -1,11 +1,10 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2016-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "automaticaddcontactstabwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionComboBox>
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QLabel>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 QString configGroupName()
@@ -65,8 +65,8 @@ void AutomaticAddContactsTabWidget::resetSettings()
 
 void AutomaticAddContactsTabWidget::loadSettings()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup grp = config->group(configGroupName().arg(mIdentity));
+    const KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    const KConfigGroup grp = config->group(configGroupName().arg(mIdentity));
     mEnabled->setChecked(grp.readEntry("Enabled", false));
     mCollectionCombobox->setDefaultCollection(Akonadi::Collection(grp.readEntry("Collection", -1)));
 }

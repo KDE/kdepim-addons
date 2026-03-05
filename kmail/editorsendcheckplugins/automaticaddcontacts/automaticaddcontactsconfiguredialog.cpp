@@ -1,15 +1,15 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2016-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "automaticaddcontactsconfiguredialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "automaticaddcontactsconfigurewidget.h"
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
 AutomaticAddContactsConfigureDialog::AutomaticAddContactsConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {

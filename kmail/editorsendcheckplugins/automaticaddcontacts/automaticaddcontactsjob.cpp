@@ -1,11 +1,10 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2016-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "automaticaddcontactsjob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "automaticaddcontactsplugin_debug.h"
 #include <Akonadi/AgentConfigurationDialog>
@@ -26,6 +25,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <PimCommon/PimUtil>
 #include <QPointer>
 
+using namespace Qt::Literals::StringLiterals;
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent)
 {
