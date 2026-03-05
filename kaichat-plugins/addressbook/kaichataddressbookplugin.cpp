@@ -1,4 +1,4 @@
-/*
+﻿/*
   SPDX-FileCopyrightText: 2025-2026 Laurent Montel <montel@kde.org>
 
   SPDX-License-Identifier: GPL-2.0-or-later
@@ -61,7 +61,7 @@ int KAIChatAddressBookPlugin::order() const
 
 void KAIChatAddressBookPlugin::showConfigureDialog(QWidget *parent)
 {
-    auto dlg = KAIChatAddressBookPluginDialog(this, parent);
+    KAIChatAddressBookPluginDialog dlg(this, parent);
     dlg.exec();
 }
 
