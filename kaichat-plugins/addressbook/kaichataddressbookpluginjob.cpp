@@ -1,4 +1,4 @@
-/*
+﻿/*
   SPDX-FileCopyrightText: 2025-2026 Laurent Montel <montel@kde.org>
 
   SPDX-License-Identifier: GPL-2.0-or-later
@@ -26,7 +26,7 @@ void KAIChatAddressBookPluginJob::start()
         return;
     }
 
-    qDebug() << " toolArguments " << toolArguments();
+    // qDebug() << " toolArguments " << toolArguments();
     Q_EMIT toolInProgress(i18n("Get Email..."));
     QString userName;
     const QStringList lst = requiredArguments();
