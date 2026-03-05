@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2017-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -46,7 +46,7 @@ void InsertShorturlPluginEditorInterface::loadEngine()
         disconnect(mCurrentEngine, &ShortUrlEngineInterface::shortUrlFailed, this, &InsertShorturlPluginEditorInterface::slotShortUrlFailed);
     }
 
-    KConfigGroup grp(KSharedConfig::openConfig(), u"ShortUrl"_s);
+    const KConfigGroup grp(KSharedConfig::openConfig(), u"ShortUrl"_s);
     const QString engineName = grp.readEntry("EngineName");
     mCurrentEngine = mLstInterface.value(engineName);
     if (!mCurrentEngine && !mLstInterface.isEmpty()) {

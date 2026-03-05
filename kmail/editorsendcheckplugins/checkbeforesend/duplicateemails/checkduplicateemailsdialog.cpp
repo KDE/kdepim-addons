@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2016-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -62,7 +62,7 @@ void CheckDuplicateEmailsDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigCheckDuplicateEmailsDialog));
+    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigCheckDuplicateEmailsDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

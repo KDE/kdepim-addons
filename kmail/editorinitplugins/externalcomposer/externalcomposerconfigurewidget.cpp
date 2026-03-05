@@ -1,11 +1,10 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2017-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "externalcomposerconfigurewidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigGroup>
 #include <KLineEdit>
@@ -16,6 +15,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QCheckBox>
 #include <QLabel>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myExternalComposerGroupName[] = "External Composer";
@@ -69,8 +69,8 @@ ExternalComposerConfigureWidget::~ExternalComposerConfigureWidget() = default;
 
 void ExternalComposerConfigureWidget::loadSettings()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group = config->group(QLatin1StringView(myExternalComposerGroupName));
+    const KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    const KConfigGroup group = config->group(QLatin1StringView(myExternalComposerGroupName));
     mExternalEditorCheck->setChecked(group.readEntry("Enabled", false));
     mEditorRequester->setText(group.readEntry("ComposerPath", u"kwrite %f"_s));
 }

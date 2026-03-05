@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2017-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -50,7 +50,7 @@ void InsertShorturlConfigureWidget::slotChanged()
 
 void InsertShorturlConfigureWidget::loadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), QLatin1StringView(myConfigGroupName));
+    const KConfigGroup grp(KSharedConfig::openConfig(), QLatin1StringView(myConfigGroupName));
     const QString engineName = grp.readEntry("EngineName");
     int index = mShortUrlServer->findData(engineName);
     if (index < 0) {

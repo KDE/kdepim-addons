@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2025-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -46,7 +46,7 @@ void AutoGenerateAnswersEditorDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(400, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myAutoGenerateAnswersEditorDialogGroupName));
+    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myAutoGenerateAnswersEditorDialogGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

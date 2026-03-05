@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2016-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -121,7 +121,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
 
 void CheckBeforeSendInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), u"Check Before Send"_s);
+    const KConfigGroup grp(KSharedConfig::openConfig(), u"Check Before Send"_s);
     mSendPlainText = grp.readEntry("SendPlainText", false);
     mCheckMailTransport = grp.readEntry("SmtpDefinedInIdentity", false);
     mCheckDuplicateEmails = grp.readEntry("CheckDuplicatedEmails", false);

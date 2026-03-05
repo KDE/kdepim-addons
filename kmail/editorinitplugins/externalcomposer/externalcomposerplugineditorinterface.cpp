@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2017-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -29,8 +29,8 @@ bool ExternalComposerPluginEditorInterface::exec()
 
 void ExternalComposerPluginEditorInterface::reloadConfig()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup group = config->group(u"External Composer"_s);
+    const KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    const KConfigGroup group = config->group(u"External Composer"_s);
     mEnabled = group.readEntry("Enabled", false);
     mExternalComposerPath = group.readEntry("ComposerPath", QString());
 }

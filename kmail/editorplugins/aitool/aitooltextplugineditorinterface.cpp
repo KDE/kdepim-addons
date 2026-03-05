@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2025-2026 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -36,7 +36,7 @@ void AIToolTextPluginEditorInterface::slotActivated()
 
 void AIToolTextPluginEditorInterface::exec()
 {
-    auto *manager = new TextAutoGenerateText::TextAutoGenerateManager(this);
+    auto manager = new TextAutoGenerateText::TextAutoGenerateManager(this);
     auto d = new TextAutoGenerateText::TextAutoGenerateQuickAskDialog(manager, parentWidget());
     d->setAttribute(Qt::WA_DeleteOnClose);
     d->show();
