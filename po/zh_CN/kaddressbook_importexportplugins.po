@@ -311,13 +311,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text codec:"
-msgstr "文字编码："
+msgstr "文本编码："
 
 #: csv/import/csvimportdialog.cpp:423
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
-msgstr "选择文字编码"
+msgstr "选择文本编码"
 
 #: csv/import/csvimportdialog.cpp:424
 #, kde-format
@@ -346,7 +346,7 @@ msgid ""
 "describing the order of the data fields included in the file."
 msgstr ""
 "如果您希望跳过导入 CSV 文件的第一行，请选择此项。在许多案例中，CSV 文件的首行"
-"是一行用于描述文件包含数据的顺序的注释文字。"
+"是一行用于描述文件包含数据的顺序的注释文本。"
 
 #: csv/import/csvimportdialog.cpp:448
 #, kde-format
