@@ -26,19 +26,19 @@ msgstr "打开 AI 对话"
 #: autocorrection/autocorrectionplugineditorinterface.cpp:25
 #, kde-format
 msgid "Autocorrect Text"
-msgstr "自动更正文字"
+msgstr "自动更正文本"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:30
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
-msgstr "自动更正全文文字"
+msgstr "自动更正全文文本"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
-msgstr "自动更正选中文字"
+msgstr "自动更正选中文本"
 
 #: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
 #, kde-format
