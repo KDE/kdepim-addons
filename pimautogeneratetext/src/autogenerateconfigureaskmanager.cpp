@@ -29,6 +29,9 @@ void AutogenerateConfigureAskManager::load()
         info.setEnabled(group.readEntry(QStringLiteral("Enabled"), true));
         infos.append(std::move(info));
     }
+    std::sort(infos.begin(), infos.end(), [&](const auto &firstItem, const auto &secondItem) {
+        return firstItem.title() < secondItem.title();
+    });
     setInfos(infos);
 }
 
