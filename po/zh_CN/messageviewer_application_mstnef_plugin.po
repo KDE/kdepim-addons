@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/"
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/"
 "messageviewer_application_mstnef_plugin.pot\n"
-"X-Crowdin-File-ID: 45205\n"
+"X-Crowdin-File-ID: 50422\n"
 
 #: application_ms-tnef.cpp:94
 #, kde-format

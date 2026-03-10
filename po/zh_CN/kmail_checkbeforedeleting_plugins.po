@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/"
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/"
 "kmail_checkbeforedeleting_plugins.pot\n"
-"X-Crowdin-File-ID: 45239\n"
+"X-Crowdin-File-ID: 49750\n"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
 #, kde-format
