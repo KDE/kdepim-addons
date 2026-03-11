@@ -176,6 +176,3 @@ msgstr "Mostra els detalls de la clau…"
 #: templates/pgpkeymessagepart.html:54
 msgid "Import key"
 msgstr "Importa la clau"
-
-#~ msgid "Show key details ..."
-#~ msgstr "Mostra els detalls de la clau..."

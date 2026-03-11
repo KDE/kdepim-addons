@@ -117,6 +117,3 @@ msgstr "Mostra una llista de bloqueig publicitari"
 #, kde-format
 msgid "Enabled ad block"
 msgstr "El bloqueig publicitari està permès"
-
-#~ msgid "Add..."
-#~ msgstr "Afegeix..."

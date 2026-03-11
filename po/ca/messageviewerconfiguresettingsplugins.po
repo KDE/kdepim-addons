@@ -442,6 +442,3 @@ msgstr "Domini"
 msgctxt "@title:column"
 msgid "Check"
 msgstr "Comprovació"
-
-#~ msgid "Add..."
-#~ msgstr "Afegeix..."

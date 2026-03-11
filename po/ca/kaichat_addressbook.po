@@ -83,9 +83,3 @@ msgstr "No s'ha trobat cap adreça de %1"
 #, kde-format
 msgid "Address found for %1 is %2"
 msgstr "L'adreça trobada de %1 és %2"
-
-#~ msgid "Get email address"
-#~ msgstr "Obtén una adreça de correu electrònic"
-
-#~ msgid "The Current Date Time"
-#~ msgstr "La data i hora actual"
