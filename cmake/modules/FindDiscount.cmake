@@ -35,7 +35,7 @@ else ()
   set(discount_INCLUDE_DIRS ${discount_INCLUDE_DIR})
   
   include (FindPackageHandleStandardArgs)
-  find_package_handle_standard_args (discount DEFAULT_MSG discount_LIBRARIES discount_INCLUDE_DIR)
+  find_package_handle_standard_args (Discount DEFAULT_MSG discount_LIBRARIES discount_INCLUDE_DIR)
 
 endif()
 
