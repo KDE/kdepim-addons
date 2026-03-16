@@ -26,7 +26,7 @@ if(KDEPIM_RUN_AKONADI_TEST)
 endif()
 
 macro(add_messageviewer_bodyformatter_class_unittest _source _additional)
-    set(_test ${_source} ${common_SRCS} ${_additional})
+    set(_test ${_source} ${_additional})
     get_filename_component(_name ${_source} NAME_WE)
 
     ecm_add_test(${_test}
@@ -39,7 +39,7 @@ add_messageviewer_bodyformatter_class_unittest(reactiontoinvitationdialogtest.cp
 add_messageviewer_bodyformatter_class_unittest(delegateselectortest.cpp "../calendar/delegateselector.cpp")
 
 macro(add_diff_bodyformatter_class_unittest _source _additional)
-    set(_test ${_source} ${common_SRCS} ${_additional})
+    set(_test ${_source} ${_additional})
     get_filename_component(_name ${_source} NAME_WE)
 
     ecm_add_test(${_test}

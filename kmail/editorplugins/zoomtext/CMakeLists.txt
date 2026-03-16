@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2015-2026 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
+set(kmail_zoomtexteditorplugin_SRCS)
 kcoreaddons_add_plugin(kmail_zoomtexteditorplugin SOURCES
     ${kmail_zoomtexteditorplugin_SRCS} INSTALL_NAMESPACE pim6/kmail/plugineditor
 )

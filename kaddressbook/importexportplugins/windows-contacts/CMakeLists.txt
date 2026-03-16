@@ -10,7 +10,6 @@ ecm_qt_declare_logging_category(kaddressbook_importexportwindowscontactplugin HE
 target_sources(
     kaddressbook_importexportwindowscontactplugin
     PRIVATE
-        ${kaddressbook_importexport_windowscontact_debugfile_SRCS}
         windowscontactimportexportplugin.cpp
         windowscontactimportexportplugininterface.cpp
         importwindowcontact.cpp
