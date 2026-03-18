@@ -27,10 +27,16 @@ void AutogenerateConfigureAskManager::load()
         info.setText(group.readEntry(QStringLiteral("Text")));
         info.setTitle(group.readEntry(QStringLiteral("Title")));
         info.setEnabled(group.readEntry(QStringLiteral("Enabled"), true));
+        info.setOrder(group.readEntry(QStringLiteral("Order"), 0));
         infos.append(std::move(info));
     }
     std::sort(infos.begin(), infos.end(), [&](const auto &firstItem, const auto &secondItem) {
-        return firstItem.title() < secondItem.title();
+        const int firstOrder = firstItem.order();
+        const int secondOrder = secondItem.order();
+        if (firstOrder == secondOrder) {
+            return firstItem.title() < secondItem.title();
+        }
+        return firstOrder < secondOrder;
     });
     setInfos(infos);
 }
@@ -57,6 +63,7 @@ void AutogenerateConfigureAskManager::save()
         group.writeEntry(QStringLiteral("Text"), info.text());
         group.writeEntry(QStringLiteral("Title"), info.title());
         group.writeEntry(QStringLiteral("Enabled"), info.enabled());
+        group.writeEntry(QStringLiteral("Order"), i);
     }
     config->sync();
 }

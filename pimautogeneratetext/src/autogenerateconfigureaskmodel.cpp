@@ -34,6 +34,8 @@ QVariant AutogenerateConfigureAskModel::data(const QModelIndex &index, int role)
         return askItem.title().isEmpty() ? askItem.text() : askItem.title();
     case TextRole:
         return askItem.text();
+    case OrderRole:
+        return askItem.order();
     case Qt::CheckStateRole:
     case EnabledRole:
         return askItem.enabled() ? Qt::Checked : Qt::Unchecked;

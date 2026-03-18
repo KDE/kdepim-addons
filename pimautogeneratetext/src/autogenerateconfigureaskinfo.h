@@ -26,10 +26,14 @@ public:
 
     [[nodiscard]] bool operator==(const AutogenerateConfigureAskInfo &other) const;
 
+    int order() const;
+    void setOrder(int newOrder);
+
 private:
     QString mTitle;
     QString mText;
     bool mEnabled = true;
+    int mOrder = 0;
 };
 Q_DECLARE_METATYPE(AutogenerateConfigureAskInfo)
 Q_DECLARE_TYPEINFO(AutogenerateConfigureAskInfo, Q_RELOCATABLE_TYPE);

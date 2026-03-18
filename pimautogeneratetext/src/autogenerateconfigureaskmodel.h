@@ -17,6 +17,7 @@ public:
         TitleRole = Qt::UserRole + 1,
         TextRole,
         EnabledRole,
+        OrderRole,
     };
 
     explicit AutogenerateConfigureAskModel(QObject *parent = nullptr);

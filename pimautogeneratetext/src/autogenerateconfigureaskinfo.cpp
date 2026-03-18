@@ -43,7 +43,17 @@ void AutogenerateConfigureAskInfo::setTitle(const QString &newTitle)
 
 bool AutogenerateConfigureAskInfo::operator==(const AutogenerateConfigureAskInfo &other) const
 {
-    return other.enabled() == enabled() && other.title() == title() && other.text() == text();
+    return other.enabled() == enabled() && other.title() == title() && other.text() == text() && other.order() == order();
+}
+
+int AutogenerateConfigureAskInfo::order() const
+{
+    return mOrder;
+}
+
+void AutogenerateConfigureAskInfo::setOrder(int newOrder)
+{
+    mOrder = newOrder;
 }
 
 QDebug operator<<(QDebug d, const AutogenerateConfigureAskInfo &t)
@@ -51,5 +61,6 @@ QDebug operator<<(QDebug d, const AutogenerateConfigureAskInfo &t)
     d.space() << "text:" << t.text();
     d.space() << "title:" << t.title();
     d.space() << "enabled:" << t.enabled();
+    d.space() << "order:" << t.order();
     return d;
 }
