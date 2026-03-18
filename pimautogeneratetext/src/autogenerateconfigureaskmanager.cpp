@@ -63,7 +63,7 @@ void AutogenerateConfigureAskManager::save()
         group.writeEntry(QStringLiteral("Text"), info.text());
         group.writeEntry(QStringLiteral("Title"), info.title());
         group.writeEntry(QStringLiteral("Enabled"), info.enabled());
-        group.writeEntry(QStringLiteral("Order"), i);
+        group.writeEntry(QStringLiteral("Order"), info.order());
     }
     config->sync();
 }

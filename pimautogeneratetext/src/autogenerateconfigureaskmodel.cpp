@@ -73,6 +73,26 @@ bool AutogenerateConfigureAskModel::setData(const QModelIndex &idx, const QVaria
     return QAbstractListModel::setData(idx, value, role);
 }
 
+bool AutogenerateConfigureAskModel::moveRows(const QModelIndex &sourceParent,
+                                             int sourceRow,
+                                             int count,
+                                             const QModelIndex &destinationParent,
+                                             int destinationChild)
+{
+    if (!beginMoveRows(sourceParent, sourceRow, sourceRow + count - 1, destinationParent, destinationChild)) {
+        return false; // invalid move, e.g. no-op (move row 2 to row 2 or to row 3)
+    }
+
+    for (int i = 0; i < count; ++i) {
+        mAskInfos.move(sourceRow + i, destinationChild + (sourceRow > destinationChild ? 0 : -1));
+    }
+    for (int i = 0; i < mAskInfos.count(); ++i) {
+        mAskInfos[i].setOrder(i);
+    }
+    endMoveRows();
+    return true;
+}
+
 QList<AutogenerateConfigureAskInfo> AutogenerateConfigureAskModel::askInfos() const
 {
     return mAskInfos;
@@ -100,10 +120,25 @@ void AutogenerateConfigureAskModel::removeItem(int index)
 }
 Qt::ItemFlags AutogenerateConfigureAskModel::flags(const QModelIndex &index) const
 {
-    if (!index.isValid())
-        return Qt::NoItemFlags;
+    if (!index.isValid()) {
+        return Qt::ItemIsDropEnabled; // allow dropping between items
+    }
+    return Qt::ItemIsEditable | Qt::ItemIsUserCheckable | Qt::ItemIsDragEnabled | QAbstractListModel::flags(index);
+}
 
-    return Qt::ItemIsEditable | Qt::ItemIsUserCheckable | QAbstractListModel::flags(index);
+Qt::DropActions AutogenerateConfigureAskModel::supportedDropActions() const
+{
+    return Qt::MoveAction;
+}
+
+Qt::DropActions AutogenerateConfigureAskModel::supportedDragActions() const
+{
+    return Qt::MoveAction;
+}
+
+QStringList AutogenerateConfigureAskModel::mimeTypes() const
+{
+    return {QString::fromLatin1("application/x-autogenerate-menu")};
 }
 
 #include "moc_autogenerateconfigureaskmodel.cpp"

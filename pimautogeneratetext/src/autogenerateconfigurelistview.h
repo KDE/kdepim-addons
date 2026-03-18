@@ -8,7 +8,7 @@
 #include "pimautogeneratetext_private_export.h"
 #include <QListView>
 class AutogenerateConfigureAskModel;
-class QSortFilterProxyModel;
+class AutogenerateConfigureAskFilterProxyModel;
 class PIMAUTOGENERATETEXT_TESTS_EXPORT AutogenerateConfigureListView : public QListView
 {
     Q_OBJECT
@@ -28,5 +28,5 @@ protected:
 
 private:
     AutogenerateConfigureAskModel *const mModel;
-    QSortFilterProxyModel *const mSortFilterProxyModel;
+    AutogenerateConfigureAskFilterProxyModel *const mSortFilterProxyModel;
 };

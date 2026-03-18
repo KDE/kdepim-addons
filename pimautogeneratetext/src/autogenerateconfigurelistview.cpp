@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "autogenerateconfigurelistview.h"
+#include "autogenerateconfigureaskfilterproxymodel.h"
 #include "autogenerateconfigureaskmodel.h"
 #include "autogenerateconfigurelistviewdelegate.h"
 #include "pimautogeneratetext_debug.h"
@@ -15,9 +16,9 @@
 AutogenerateConfigureListView::AutogenerateConfigureListView(QWidget *parent)
     : QListView(parent)
     , mModel(new AutogenerateConfigureAskModel(this))
-    , mSortFilterProxyModel(new QSortFilterProxyModel(this))
+    , mSortFilterProxyModel(new AutogenerateConfigureAskFilterProxyModel(this))
 {
-    mSortFilterProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
+    setDragDropMode(QAbstractItemView::InternalMove);
     mSortFilterProxyModel->setSourceModel(mModel);
     setModel(mSortFilterProxyModel);
     setItemDelegate(new AutogenerateConfigureListViewDelegate(this));

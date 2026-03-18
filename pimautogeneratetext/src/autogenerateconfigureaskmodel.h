@@ -26,7 +26,12 @@ public:
     [[nodiscard]] int rowCount(const QModelIndex & = {}) const override;
     [[nodiscard]] QVariant data(const QModelIndex &index, int role) const override;
     [[nodiscard]] bool setData(const QModelIndex &index, const QVariant &value, int role) override;
+    [[nodiscard]] bool moveRows(const QModelIndex &sourceParent, int sourceRow, int count, const QModelIndex &destinationParent, int destinationChild) override;
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
+    [[nodiscard]] Qt::DropActions supportedDropActions() const override;
+    [[nodiscard]] Qt::DropActions supportedDragActions() const override;
+
+    [[nodiscard]] QStringList mimeTypes() const override;
 
     [[nodiscard]] QList<AutogenerateConfigureAskInfo> askInfos() const;
     void setAskInfos(const QList<AutogenerateConfigureAskInfo> &newAskItems);
