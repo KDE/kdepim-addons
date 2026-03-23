@@ -65,9 +65,8 @@ void AutoGenerateAnswersEditorInterface::createAction(KActionCollection *ac)
 void AutoGenerateAnswersEditorInterface::slotConfigure()
 {
     TextAutoGenerateText::TextAutoGenerateTextInstancesManagerDialog dlg(mManager, parentWidget());
-    if (dlg.exec()) {
-        // TODO
-    }
+    mManager->loadEngine();
+    dlg.exec();
 }
 
 void AutoGenerateAnswersEditorInterface::exec()
