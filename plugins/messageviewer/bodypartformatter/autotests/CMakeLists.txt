@@ -4,7 +4,8 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
 add_definitions(-DMAIL_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
 add_definitions(-DDIFF_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/diffdata")
 
-include(${CMAKE_SOURCE_DIR}/cmake/modules/kdepim_add_gpg_crypto_test.cmake)
+set(GNUPGHOME ${CMAKE_BINARY_DIR}/plugins/pim6/messageviewer/bodypartformatter/autotests/gnupg_home)
+include(${LIBKLEO_TEST_MODULE_PATH}/KleoAddGpgCryptoTest.cmake)
 add_subdirectory(gnupg_home)
 
 macro(add_kdepimaddons_crypto_unittest _source)
