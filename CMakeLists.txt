@@ -263,6 +263,13 @@ if(TARGET KPim6::PimCommonActivities)
     endif()
 endif()
 
+if(TARGET KF6::TextAutoGenerateText)
+    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 2.0.50)
+            set(HAVE_KDEPIMADDONS_TEXTAUTOGENERATE_INTERNAL_TOOLS TRUE)
+    endif()
+endif()
+
+
 configure_file(
     config-kdepim-addons.h.in
     ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h
@@ -371,6 +378,11 @@ if(TARGET KPim6::ImportWizard)
     add_subdirectory(akonadi-import-wizard)
 endif()
 if(TARGET KF6::TextAutoGenerateText)
+    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 2.0.50)
+        if(OPTION_ADD_INTERNAL_PLUGIN)
+            set(HAVE_KDEPIMADDONS_TEXTAUTOGENERATE_INTERNAL_TOOLS TRUE)
+        endif()
+    endif()
     add_subdirectory(pimautogeneratetext)
     add_subdirectory(kaichat-plugins)
 endif()

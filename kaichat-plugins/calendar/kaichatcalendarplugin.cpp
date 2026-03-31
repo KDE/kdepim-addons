@@ -5,12 +5,14 @@
 */
 
 #include "kaichatcalendarplugin.h"
+#include "config-kdepim-addons.h"
 #include "kaichatcalendarplugindialog.h"
 #include "kaichatcalendarpluginjob.h"
 #include "kaichatcalendarpluginutils.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QPointer>
+
 K_PLUGIN_CLASS_WITH_JSON(KAIChatCalendarPlugin, "kaichat_calendar.json")
 
 using namespace Qt::Literals::StringLiterals;
@@ -31,6 +33,9 @@ KAIChatCalendarPlugin::KAIChatCalendarPlugin(QObject *parent, const QVariantList
         prop.setName(u"username"_s);
         mProperties.append(prop);
     }
+#if HAVE_KDEPIMADDONS_TEXTAUTOGENERATE_INTERNAL_TOOLS
+    mRequired = {u"username"_s, u"calendarinfo"_s};
+#endif
 }
 
 KAIChatCalendarPlugin::~KAIChatCalendarPlugin() = default;
