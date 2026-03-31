@@ -65,7 +65,7 @@ void KAIChatAddressBookPluginJob::start()
             result = i18n("No Contact found in addressbook for %1", job->property("userName").toString());
         } else {
             const KContacts::Addressee contact = searchJob->contacts().constFirst();
-            qDebug() << " contact " << contact.toString();
+            qCDebug(KAICHAT_ADDRESSBOOK_LOG) << " contact " << contact.toString();
             switch (typeAddressBook) {
             case KAIChatAddressBookPluginUtils::AddressBookInformationTypeEnum::Email: {
                 const QString preferedEmail = contact.preferredEmail();

@@ -75,7 +75,7 @@ void KAIChatCalendarPluginJob::slotContactBirthdaySearchDone(KJob *job)
         Q_EMIT finished(info);
     } else {
         const KContacts::Addressee contact = searchJob->contacts().constFirst();
-        qDebug() << " contact " << contact.toString();
+        qCDebug(KAICHAT_CALENDAR_LOG) << " contact " << contact.toString();
         const QString result = i18n("Birthday for %1 is %2", job->property("userName").toString(), contact.birthday().toString());
         const TextAutoGenerateText::TextAutoGenerateTextToolPlugin::TextToolPluginInfo info{
             .content = result,
@@ -106,7 +106,7 @@ void KAIChatCalendarPluginJob::slotContactEmailSearchDone(KJob *job)
 
     } else {
         const KContacts::Addressee contact = searchJob->contacts().constFirst();
-        qDebug() << " contact " << contact.toString();
+        qCDebug(KAICHAT_CALENDAR_LOG) << " contact " << contact.toString();
         const QString result = i18n("The preferred email is %1", contact.preferredEmail());
         const TextAutoGenerateText::TextAutoGenerateTextToolPlugin::TextToolPluginInfo info{
             .content = result,
