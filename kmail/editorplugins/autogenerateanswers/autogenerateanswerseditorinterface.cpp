@@ -117,8 +117,14 @@ void AutoGenerateAnswersEditorInterface::slotGenerateTextInProgress(const QStrin
     }
     int numberOfTextSearched = 0;
     int hightLightStringIndex = 0;
+#if HAVE_KDEPIMADDONS_TEXTAUTOGENERATE_INTERNAL_TOOLS
+    mAnswersEditorDialog->setAnswer(
+        TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str, {}, {}, numberOfTextSearched, hightLightStringIndex, false));
+#else
     mAnswersEditorDialog->setAnswer(
         TextAutoGenerateText::TextAutoGenerateMessageUtils::convertTextToHtml(str, {}, {}, numberOfTextSearched, hightLightStringIndex));
+
+#endif
 }
 
 void AutoGenerateAnswersEditorInterface::slotGenerateTextErrorOccured(const QString &errorStr)
