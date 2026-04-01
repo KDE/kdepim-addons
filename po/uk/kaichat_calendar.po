@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:43+0000\n"
+"POT-Creation-Date: 2026-04-01 00:46+0000\n"
 "PO-Revision-Date: 2025-10-27 16:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -18,20 +18,20 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: kaichatcalendarplugin.cpp:23
+#: kaichatcalendarplugin.cpp:25
 msgid "calendar info"
 msgstr "дані календаря"
 
-#: kaichatcalendarplugin.cpp:30
+#: kaichatcalendarplugin.cpp:32
 msgid "Name of user"
 msgstr "Ім'я користувача"
 
-#: kaichatcalendarplugin.cpp:40
+#: kaichatcalendarplugin.cpp:45
 #, kde-format
 msgid "Get Info From calendar"
 msgstr "Отримати дані з календаря"
 
-#: kaichatcalendarplugin.cpp:45
+#: kaichatcalendarplugin.cpp:50
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
