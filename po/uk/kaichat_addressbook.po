@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:43+0000\n"
+"POT-Creation-Date: 2026-04-01 02:41+0000\n"
 "PO-Revision-Date: 2025-10-29 11:11+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -18,20 +18,20 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: kaichataddressbookplugin.cpp:23
+#: kaichataddressbookplugin.cpp:24
 msgid "AddressBook info"
 msgstr "Відомості щодо адресної книги"
 
-#: kaichataddressbookplugin.cpp:33
+#: kaichataddressbookplugin.cpp:34
 msgid "Name of user"
 msgstr "Ім'я користувача"
 
-#: kaichataddressbookplugin.cpp:44
+#: kaichataddressbookplugin.cpp:50
 #, kde-format
 msgid "Get Info From AddressBook"
 msgstr "Отримати дані з адресної книги"
 
-#: kaichataddressbookplugin.cpp:49
+#: kaichataddressbookplugin.cpp:55
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:43+0000\n"
+"POT-Creation-Date: 2026-04-01 02:41+0000\n"
 "PO-Revision-Date: 2025-11-08 11:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,20 +17,20 @@ msgstr ""
 "X-Crowdin-File: /kf6-stable/messages/kdepim-addons/kaichat_calendar.pot\n"
 "X-Crowdin-File-ID: 58688\n"
 
-#: kaichatcalendarplugin.cpp:23
+#: kaichatcalendarplugin.cpp:25
 msgid "calendar info"
 msgstr "日历信息"
 
-#: kaichatcalendarplugin.cpp:30
+#: kaichatcalendarplugin.cpp:32
 msgid "Name of user"
 msgstr "用户名称"
 
-#: kaichatcalendarplugin.cpp:40
+#: kaichatcalendarplugin.cpp:45
 #, kde-format
 msgid "Get Info From calendar"
 msgstr "从日历获取信息"
 
-#: kaichatcalendarplugin.cpp:45
+#: kaichatcalendarplugin.cpp:50
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr "使用此工具获取来自 akonadi 数据库的用户信息"

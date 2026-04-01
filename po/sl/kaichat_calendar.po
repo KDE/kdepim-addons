@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:43+0000\n"
+"POT-Creation-Date: 2026-04-01 02:41+0000\n"
 "PO-Revision-Date: 2025-10-28 07:28+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <kde-i18n-doc@kde.org>\n"
@@ -19,20 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
-#: kaichatcalendarplugin.cpp:23
+#: kaichatcalendarplugin.cpp:25
 msgid "calendar info"
 msgstr "informacije o koledarju"
 
-#: kaichatcalendarplugin.cpp:30
+#: kaichatcalendarplugin.cpp:32
 msgid "Name of user"
 msgstr "Ime uporabnika"
 
-#: kaichatcalendarplugin.cpp:40
+#: kaichatcalendarplugin.cpp:45
 #, kde-format
 msgid "Get Info From calendar"
 msgstr "Pridobi informacije iz koledarja"
 
-#: kaichatcalendarplugin.cpp:45
+#: kaichatcalendarplugin.cpp:50
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
