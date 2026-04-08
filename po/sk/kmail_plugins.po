@@ -12,83 +12,81 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Database Tool"
-msgstr ""
+msgstr "Nástroj databázy Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Vacuum…"
-msgstr ""
+msgstr "&Vysávanie Akonadi…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:32
 #, kde-format
 msgid "Do you want to vacuum akonadi database?"
-msgstr ""
+msgstr "Chcete vysať databázu Akonadi?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:33
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Vacuum"
-msgstr ""
+msgstr "Vysávanie Akonadi"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Vacuum"
-msgstr ""
+msgstr "Vysať"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:46
 #, kde-format
 msgctxt "@action"
 msgid "&Akonadi Fsck…"
-msgstr ""
+msgstr "&Kontrola Akonadi (Fsck)…"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:52
 #, kde-format
 msgid "Do you want to fsck akonadi database?"
-msgstr ""
+msgstr "Chcete skontrolovať databázu Akonadi?"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:53
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:77
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Fsck"
-msgstr ""
+msgstr "Kontrola Akonadi (Fsck)"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:54
 #, kde-format
 msgctxt "@action:button"
 msgid "Fsck"
-msgstr ""
+msgstr "Skontrolovať"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
 msgid "Finished."
-msgstr ""
+msgstr "Dokončené."
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:96
 #, kde-format
 msgid "Start…"
-msgstr ""
+msgstr "Spustiť…"
 
 #: antispamplugin/antispamplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Sprievodca kontrolou spamu"
 
 #: antivirusplugin/antivirusplugininterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"
 msgstr "Sprievodca nastavením antivirovej podpory"
@@ -97,78 +95,76 @@ msgstr "Sprievodca nastavením antivirovej podpory"
 #, kde-format
 msgctxt "@label:combobox, All folders"
 msgid "All"
-msgstr ""
+msgstr "Všetky"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:20
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
-msgstr ""
+msgstr "Viac ako 100 kB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
-msgstr ""
+msgstr "Viac ako 1 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
-msgstr ""
+msgstr "Viac ako 10 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
 #: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
-msgstr ""
+msgstr "Kontrola veľkosti priečinka"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr ""
+msgstr "Zobraziť farebný priečinok, keď je veľkosť príliš veľká."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Size:"
-msgstr ""
+msgstr "Veľkosť:"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
-msgstr ""
+msgstr "&Zobraziť veľkosť priečinkov…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:36
 #, kde-format
 msgid "Unable to start KMail application."
-msgstr ""
+msgstr "Nie je možné spustiť aplikáciu KMail."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Hľadať…"
 
 #: checkfoldersizeaccount/checkfoldersizeaccounttreeview.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "Open Folder"
-msgstr ""
+msgstr "Otvoriť priečinok"
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Spam Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Sprievodca kontrolou spamu"
 
 #: common/antispamwizard.cpp:89
-#, fuzzy, kde-format
-#| msgid "Anti-Virus Wizard"
+#, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Sprievodca nastavením antivirovej podpory"
@@ -238,8 +234,7 @@ msgid "Ham"
 msgstr "Ham"
 
 #: common/antispamwizard.cpp:457
-#, fuzzy, kde-format
-#| msgid "Scanning for %1..."
+#, kde-format
 msgid "Scanning for %1…"
 msgstr "Hľadám %1..."
 
@@ -364,8 +359,7 @@ msgstr ""
 "stranu.</p>"
 
 #: common/antispamwizard.cpp:1057
-#, fuzzy, kde-format
-#| msgid "&Mark detected spam messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "Označiť nájdené spa&mové správy ako prečítané"
@@ -376,8 +370,7 @@ msgid "Mark messages which have been classified as spam as read."
 msgstr "Označí správy, ktoré sú považované za spam, ako prečítané."
 
 #: common/antispamwizard.cpp:1061
-#, fuzzy, kde-format
-#| msgid "Move &known spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Presunúť &známy spam do:"
@@ -392,8 +385,7 @@ msgstr ""
 "zmeniť v prehľade priečinkov dolu."
 
 #: common/antispamwizard.cpp:1076
-#, fuzzy, kde-format
-#| msgid "Move &probable spam to:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Presunúť &pravdepodobný spam do:"
@@ -411,8 +403,7 @@ msgstr ""
 "priečinok.</p>"
 
 #: common/antispamwizard.cpp:1188
-#, fuzzy, kde-format
-#| msgid "Check messages using the anti-virus tools"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Kontrolova ť správy pomocou nástrojov pre hľadanie vírusov"
@@ -431,8 +422,7 @@ msgstr ""
 "špeciálneho priečinku."
 
 #: common/antispamwizard.cpp:1196
-#, fuzzy, kde-format
-#| msgid "Move detected viral messages to the selected folder"
+#, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Presunúť správy označené ako vírusy do vybraného priečinku"
@@ -449,8 +439,7 @@ msgstr ""
 "môžete to zmeniť v prehľade priečinkov."
 
 #: common/antispamwizard.cpp:1204
-#, fuzzy, kde-format
-#| msgid "Additionally, mark detected viral messages as read"
+#, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Označiť správy s vírusmi ako prečítané"
@@ -468,33 +457,29 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
-msgstr ""
+msgstr "Náhľad"
 
 #: mailmergeplugin/mailmergedialog.cpp:22
-#, fuzzy, kde-format
-#| msgid "Mail Merge"
+#, kde-format
 msgctxt "@title:window"
 msgid "Mail Merge"
 msgstr "Hromadná korešpondencia"
 
 #: mailmergeplugin/widgets/csvwidget.cpp:24
-#, fuzzy, kde-format
-#| msgid "Path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Cesta:"
 
 #: mailmergeplugin/widgets/mailmergepreviewdialog.cpp:16
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:21
-#, fuzzy, kde-format
-#| msgid "Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Attachment"
 msgstr "Príloha"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Source:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Source:"
 msgstr "Zdroj:"
@@ -510,8 +495,7 @@ msgid "CSV"
 msgstr "CSV"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "Attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Príloha:"
@@ -519,7 +503,7 @@ msgstr "Príloha:"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Pri&dať…"
 
 #: mailmergeplugin/widgets/mailmergewidget.cpp:63
 #, kde-format
@@ -532,8 +516,7 @@ msgid "Mod&ify..."
 msgstr "&Upraviť..."
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Select attachment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"
 msgstr "Vybrať prílohu:"

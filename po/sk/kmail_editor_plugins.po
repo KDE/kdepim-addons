@@ -13,14 +13,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.08.2\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
-msgstr ""
+msgstr "Otvoriť AI chat"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:25
 #, kde-format
@@ -28,15 +28,13 @@ msgid "Autocorrect Text"
 msgstr "Automaticky opraviť text"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:30
-#, fuzzy, kde-format
-#| msgid "Autocorrect Full Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Automaticky opraviť plný text"
 
 #: autocorrection/autocorrectionplugineditorinterface.cpp:34
-#, fuzzy, kde-format
-#| msgid "Autocorrect Selected Text"
+#, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Automaticky opraviť vybraný text"
@@ -45,23 +43,22 @@ msgstr "Automaticky opraviť vybraný text"
 #, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
-msgstr ""
+msgstr "Automaticky vygenerovať odpoveď"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
-msgstr ""
+msgstr "Automaticky vygenerovať odpoveď"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:38
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
-msgstr ""
+msgstr "Súhrnný text"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:44
-#, fuzzy, kde-format
-#| msgid "Autocorrect Text"
+#, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "Automaticky opraviť text"
@@ -70,50 +67,44 @@ msgstr "Automaticky opraviť text"
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
-msgstr ""
+msgstr "Rýchla odpoveď"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
-#, fuzzy, kde-format
-#| msgid "Configure quick text"
+#, kde-format
 msgctxt "@action"
 msgid "Configure AI"
 msgstr "Nastaviť rýchly text"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:133
-#, fuzzy, kde-format
-#| msgid "An error occurred: \"%1\""
+#, kde-format
 msgid "An error occured: %1"
 msgstr "Došlo k chybe: \"%1\""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:133
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Chyba"
 
 #: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
-#, fuzzy, kde-format
-#| msgid "Insert"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Text"
 msgstr "Vložiť"
 
 #: insertemail/insertemailplugineditorinterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Insert Email..."
+#, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
 msgstr "Vložiť Email..."
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Select Short URL server:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "Vybrať server pre krátke URL adresy:"
 
 #: insertshorturl/insertshorturlplugineditorinterface.cpp:63
-#, fuzzy, kde-format
-#| msgid "Insert Short URL..."
+#, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Vložiť krátku URL..."
@@ -143,15 +134,13 @@ msgstr ""
 "'%1'"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:23
-#, fuzzy, kde-format
-#| msgid "Insert Special Character"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Vložiť špeciálny znak"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
-#, fuzzy, kde-format
-#| msgid "Insert Special Character"
+#, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "Vložiť špeciálny znak"
@@ -162,99 +151,85 @@ msgid "Insert"
 msgstr "Vložiť"
 
 #: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:24
-#, fuzzy, kde-format
-#| msgid "Insert Non Breaking Space"
+#, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Vložiť nedeliteľnú medzeru"
 
 #: quicktext/quicktextconfiguredialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Configure quick text"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure quick text"
 msgstr "Nastaviť rýchly text"
 
 #: quicktext/quicktextconfiguredialog.cpp:38
-#, fuzzy, kde-format
-#| msgid "Import..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Import…"
 msgstr "Importovať..."
 
 #: quicktext/quicktextconfiguredialog.cpp:41
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Export…"
 msgstr "Exportovať..."
 
 #: quicktext/quicktextmanager.cpp:78
-#, fuzzy, kde-format
-#| msgid "Import QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Importovať Rýchly Text"
 
 #: quicktext/quicktextmanager.cpp:86
-#, fuzzy, kde-format
-#| msgid "Export QuickText"
+#, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "Exportovať Rýchly Text"
 
 #: quicktext/quicktextplugineditorinterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action"
 msgid "Variables"
 msgstr "Premenné"
 
 #: quicktext/quicktextplugineditorinterface.cpp:48
-#, fuzzy, kde-format
-#| msgid "Variables"
+#, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "Premenné"
 
 #: quicktext/quicktexttreewidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Add Snippet..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Pridať úryvok..."
 
 #: quicktext/quicktexttreewidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Edit Snippet..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Upraviť úryvok..."
 
 #: quicktext/quicktexttreewidget.cpp:43
-#, fuzzy, kde-format
-#| msgid "Remove Snippet"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Odstrániť úryvok"
 
 #: quicktext/quicktexttreewidget.cpp:46
-#, fuzzy, kde-format
-#| msgid "Add Group..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Group…"
 msgstr "Pridať skupinu..."
 
 #: quicktext/quicktexttreewidget.cpp:48
-#, fuzzy, kde-format
-#| msgid "Rename Group..."
+#, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Premenovať skupinu..."
 
 #: quicktext/quicktexttreewidget.cpp:50
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "Odstrániť skupinu"
@@ -296,8 +271,7 @@ msgid "QuickText was changed. Do you want to save it?"
 msgstr "Rýchly Text bol zmenený. Chcete ho uložiť?"
 
 #: quicktext/quicktextwidget.cpp:69
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save"
 msgstr "Uložiť"
@@ -308,8 +282,7 @@ msgid "General"
 msgstr "Všeobecné"
 
 #: sharetext/sharetextplugineditorinterface.cpp:35
-#, fuzzy, kde-format
-#| msgid "Share Mail Text..."
+#, kde-format
 msgid "Share Mail Text…"
 msgstr "Zdieľať text správy"
 
@@ -321,7 +294,7 @@ msgstr "Priblíženie: %1%"
 #: zoomtext/zoomtextplugineditorinterface.cpp:27
 #, kde-format
 msgid "Zoom…"
-msgstr ""
+msgstr "Lupa…"
 
 #~ msgid "Insert Special Character..."
 #~ msgstr "Vložiť špeciálny &znak..."

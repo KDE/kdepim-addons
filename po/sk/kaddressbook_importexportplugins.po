@@ -13,12 +13,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: csv/csvimportexportplugininterface.cpp:35
-#, fuzzy, kde-format
-#| msgid "Export CSV file..."
+#, kde-format
 msgid "Export CSV file…"
 msgstr "Exportovať CSV súbor..."
 
@@ -29,8 +28,7 @@ msgstr ""
 "Exportovať kontakty do súboru vo formáte s hodnotami oddelenými čiarkami."
 
 #: csv/csvimportexportplugininterface.cpp:41
-#, fuzzy, kde-format
-#| msgid "Import CSV file..."
+#, kde-format
 msgid "Import CSV file…"
 msgstr "Importovať CSV súboru..."
 
@@ -194,9 +192,7 @@ msgstr ""
 "Vyberte túto voľbu, ak váš csv súbor používa znak medzery ako oddeľovač polí."
 
 #: csv/import/csvimportdialog.cpp:346
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Custum field separator"
-#| msgid "Other"
+#, kde-format
 msgctxt "@option:radio Custom field separator"
 msgid "Other"
 msgstr "Iné"
@@ -261,9 +257,7 @@ msgstr ""
 "\"vyznačená\" tu zadaným znakom."
 
 #: csv/import/csvimportdialog.cpp:376
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Qoute character option"
-#| msgid "\""
+#, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr "\""
@@ -368,17 +362,13 @@ msgstr ""
 "popisujúcim poradie dátových polí obsiahnutých v súbore."
 
 #: csv/import/csvimportdialog.cpp:448
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Apply Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
 msgstr "Použiť šablónu..."
 
 #: csv/import/csvimportdialog.cpp:449
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Template..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "Uložiť šablónu..."
@@ -472,8 +462,7 @@ msgid "GMX address book file (*.gmxa)"
 msgstr "Súbor adresára GMX (*.gmxa)"
 
 #: gmx/gmximportexportplugininterface.cpp:40
-#, fuzzy, kde-format
-#| msgid "Import GMX file..."
+#, kde-format
 msgid "Import GMX file…"
 msgstr "Importovať GMX súboru..."
 
@@ -483,8 +472,7 @@ msgid "Import contacts from a GMX address book file."
 msgstr "Importovať kontakty zo súboru adresára GMX."
 
 #: gmx/gmximportexportplugininterface.cpp:46
-#, fuzzy, kde-format
-#| msgid "Export GMX file..."
+#, kde-format
 msgid "Export GMX file…"
 msgstr "Exportovať GMX súbor..."
 
@@ -506,8 +494,7 @@ msgid "%1 is not a GMX address book file."
 msgstr "%1 nie je súbor adresára GMX."
 
 #: ldap/ldapimportexportplugininterface.cpp:25
-#, fuzzy, kde-format
-#| msgid "Import From LDAP server..."
+#, kde-format
 msgid "Import From LDAP server…"
 msgstr "Importovať zo servera LDAP..."
 
@@ -517,8 +504,7 @@ msgid "Import contacts from an LDAP server."
 msgstr "Importovať kontakty zo servera LDAP."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
-#, fuzzy, kde-format
-#| msgid "Import LDIF file..."
+#, kde-format
 msgid "Import LDIF file…"
 msgstr "Importovať LDIF súboru..."
 
@@ -528,8 +514,7 @@ msgid "Import contacts from an LDIF file."
 msgstr "Importovať kontakty z LDIF súboru."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
-#, fuzzy, kde-format
-#| msgid "Export LDIF file..."
+#, kde-format
 msgid "Export LDIF file…"
 msgstr "Exporovaťt LDIF súbor..."
 
@@ -539,8 +524,7 @@ msgid "Export contacts to an LDIF file."
 msgstr "Exportovať kontakty do LDIF súboru."
 
 #: ldif/ldifimportexportplugininterface.cpp:106
-#, fuzzy, kde-format
-#| msgid "LDif Files (*.ldif)"
+#, kde-format
 msgid "LDif Files"
 msgstr "Súbory LDif (*.ldif)"
 
@@ -708,17 +692,13 @@ msgid "Do you want to import this contact into your address book?"
 msgstr "Chcete importovať tento kontakt do vášho adresára?"
 
 #: vcards/engine/vcardviewerdialog.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Import All..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
 msgstr "Importovať všetko..."
 
 #: vcards/vcardimportexportplugininterface.cpp:45
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Import vCard"
+#, kde-format
 msgid "Import vCard…"
 msgstr "Importovať vCard"
 
@@ -733,14 +713,12 @@ msgid "Export contacts to a vCard 4.0 file."
 msgstr "Exportovať kontakty do súboru vCard 4.0. "
 
 #: vcards/vcardimportexportplugininterface.cpp:54
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0..."
+#, kde-format
 msgid "Export vCard 4.0…"
 msgstr "Exportovať vCard 4.0..."
 
 #: vcards/vcardimportexportplugininterface.cpp:59
-#, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
+#, kde-format
 msgid "Export vCard 3.0…"
 msgstr "Exportovať vCard 3.0..."
 
@@ -750,8 +728,7 @@ msgid "Export contacts to a vCard 3.0 file."
 msgstr "Exportovať kontakty do súboru vCard 3.0. "
 
 #: vcards/vcardimportexportplugininterface.cpp:65
-#, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
+#, kde-format
 msgid "Export vCard 2.1…"
 msgstr "Exportovať vCard 2.1..."
 
@@ -761,10 +738,7 @@ msgid "Export contacts to a vCard 2.1 file."
 msgstr "Exportovať kontakty do súboru vCard 2.1."
 
 #: vcards/vcardimportexportplugininterface.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "*.vcf|vCard (*.vcf)\n"
-#| "*|all files (*)"
+#, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr ""
 "*.vcf|Vcard (*.vcf)\n"
@@ -809,27 +783,24 @@ msgid "Export to Several Files"
 msgstr "Exportovať do viacerých súborov"
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:29
-#, fuzzy, kde-format
-#| msgid "Import CSV file..."
+#, kde-format
 msgid "Import Windows Contact file…"
 msgstr "Importovať CSV súboru..."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
-#, fuzzy, kde-format
-#| msgid "Import contacts from an LDIF file."
+#, kde-format
 msgid "Import contacts from windows contact file."
 msgstr "Importovať kontakty z LDIF súboru."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:68
 #, kde-format
 msgid "Windows Contact file (*.contact)"
-msgstr ""
+msgstr "Súbor kontaktu Windows (*.contact)"
 
 #~ msgid "Import vCard..."
 #~ msgstr "Importovať vCard..."
 
 #, fuzzy
-#~| msgid "Select Address Book"
 #~ msgctxt "@title:window"
 #~ msgid "Select Address Book"
 #~ msgstr "Vybrať knihu adries"
@@ -838,7 +809,6 @@ msgstr ""
 #~ msgstr "Vyberte adresár, kam sa majú uložiť importované kontakty:"
 
 #, fuzzy
-#~| msgid "Import Contacts"
 #~ msgctxt "@title:window"
 #~ msgid "Import Contacts"
 #~ msgstr "Importovať kontakty"

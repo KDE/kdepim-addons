@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: text_vcard.cpp:88
 #, kde-format
@@ -31,8 +31,7 @@ msgid "[Add this contact to the address book]"
 msgstr "[Pridať tento kontakt do adresára]"
 
 #: text_vcard.cpp:144
-#, fuzzy, kde-format
-#| msgid "[Update this contact to the address book]"
+#, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Aktualizovať tento kontakt do adresára]"
 
@@ -47,8 +46,7 @@ msgid "View Business Card"
 msgstr "Zobraziť vizitku"
 
 #: text_vcard.cpp:224
-#, fuzzy, kde-format
-#| msgid "Save Business Card As..."
+#, kde-format
 msgid "Save Business Card As…"
 msgstr "Uložiť vizitku ako..."
 
@@ -73,8 +71,7 @@ msgid "Update \"%1\" to the address book."
 msgstr "Aktualizovať \"%1\" do adresára."
 
 #: text_vcard.cpp:267
-#, fuzzy, kde-format
-#| msgid "Save Business Card"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "Uložiť vizitku"
@@ -91,10 +88,7 @@ msgstr ""
 "Už sú dva alebo viac kontaktov s rovnakým e-mailom v adresári kontaktov."
 
 #: updatecontactjob.cpp:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "The vCard was updated to your address book; you can add more information "
-#| "to this entry by opening the address book."
+#, kde-format
 msgid ""
 "The vCard was updated in your address book; you can add more information to "
 "this entry by opening the address book."

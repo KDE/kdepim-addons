@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.08.3\n"
 
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
@@ -50,7 +50,7 @@ msgstr "Palubný lístok"
 #: itineraryurlhandler.cpp:207
 #, kde-format
 msgid "Ticket"
-msgstr ""
+msgstr "Lístok"
 
 #: templates/actions.html:4
 msgid "View"
@@ -74,8 +74,6 @@ msgstr "Check-In"
 
 #: templates/boatreservation.html:9 templates/busreservation.html:12
 #: templates/flightreservation.html:13 templates/trainreservation.html:12
-#, fuzzy
-#| msgid "Add reservation to calendar."
 msgid "Reservation canceled."
 msgstr "Pridať rezerváciu do kalendára."
 
@@ -88,8 +86,6 @@ msgstr "Sedadlo: %1"
 
 #: templates/event.html:3 templates/foodestablishmentreservation.html:3
 #: templates/lodgingreservation.html:3
-#, fuzzy
-#| msgid "Cancel"
 msgid "Canceled:"
 msgstr "Zrušiť"
 
@@ -99,7 +95,7 @@ msgid "Gate: %1"
 msgstr "Brána: %1"
 
 #: templates/flightreservation.html:54
-#, fuzzy, kde-format
+#, kde-format
 msgid "Boarding: %1"
 msgstr "Naloďovanie: %1"
 
@@ -138,8 +134,6 @@ msgid "Add to KDE Itinerary"
 msgstr "Pridať do itinerára KDE"
 
 #: templates/itinerary.html:78
-#, fuzzy
-#| msgid "Send to Device..."
 msgid "Send to Device…"
 msgstr "Odoslať do zariadenia..."
 
@@ -153,7 +147,7 @@ msgstr "Hľadať adresu na mape"
 
 #: templates/lodgingreservation.html:10
 msgid "Reserved for: "
-msgstr ""
+msgstr "Rezervované pre: "
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format
@@ -169,7 +163,6 @@ msgstr "Tréner: %1"
 #~ msgstr "Zobraziť '%1' na mape"
 
 #, fuzzy
-#~| msgid "Flight %1 %2 from %3 to %4"
 #~ msgid "Flight %1 from %2 to %3"
 #~ msgstr "Let %1 %2 od %3 do %4"
 
@@ -177,12 +170,10 @@ msgstr "Tréner: %1"
 #~ msgstr "Referencia rezervácie: %1"
 
 #, fuzzy
-#~| msgid "Flight %1 %2 from %3 to %4"
 #~ msgid "Train %1 from %2 to %3"
 #~ msgstr "Let %1 %2 od %3 do %4"
 
 #, fuzzy
-#~| msgid "Flight %1 %2 from %3 to %4"
 #~ msgid "Bus %1 from %2 to %3"
 #~ msgstr "Let %1 %2 od %3 do %4"
 
