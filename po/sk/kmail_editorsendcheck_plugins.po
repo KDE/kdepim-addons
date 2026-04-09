@@ -12,12 +12,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: automaticaddcontacts/automaticaddcontactsconfiguredialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Configure \"Automatic Add Contacts\" Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "Nastaviť plugin \"Automaticky pridať kontakty\""
@@ -39,29 +38,25 @@ msgid "No Address Book Available"
 msgstr "Žiadny adresár kontaktov nie je dostupný"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:103
-#, fuzzy, kde-format
-#| msgid "Add Address Book"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Pridať adresár"
 
 #: automaticaddcontacts/automaticaddcontactsjob.cpp:107
-#, fuzzy, kde-format
-#| msgid "Add Address Book"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"
 msgstr "Pridať adresár"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Automatic Add Contacts"
+#, kde-format
 msgctxt "@option:check"
 msgid "Automatic Add Contacts"
 msgstr "Automaticky pridať kontakty"
 
 #: automaticaddcontacts/automaticaddcontactstabwidget.cpp:43
-#, fuzzy, kde-format
-#| msgid "Select the addressbook in which to store contacts:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "Vyberte adresár, kam uložiť kontakty:"
@@ -80,27 +75,22 @@ msgstr "Poslať e-mail ako čistý text"
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
-msgstr ""
+msgstr "Odoslať ako HTML"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Update SMTP server"
+#, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "Aktualizovať SMTP server"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
-#, fuzzy, kde-format
-#| msgid "Check SMTP server"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check SMTP server"
 msgstr "Skontrolovať SMTP server"
 
 #: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you want to send the email with a different SMTP than the one defined "
-#| "in the current identity?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "Do you want to send the email with a different SMTP than the one defined in "
@@ -109,50 +99,43 @@ msgstr ""
 "Chcete poslať e-mail s iným SMTP, ako je definovaný v aktuálnej identite?"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Configure \"Check Before Send Mail\" Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "Nastaviť plugin \"Skontrolovať pred poslaním mailu\""
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Send as plain text"
+#, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "Poslať ako čistý text"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use SMTP server defined in identity"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "Použiť SMTP server definovaný v identite"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Check duplicated emails addresses"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "Skontrolovať duplicitné e-mailové adresy"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Check send attachment"
+#, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Skontrolovať poslanú prílohu"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Duplicated emails"
+#, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "Duplicitné e-maily"
 
 #: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "These emails are duplicated. Do you want to send email?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Tieto e-maily sú duplicitné. Chcete poslať e-mail?"
@@ -164,36 +147,31 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Check Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
 msgstr "Skontrolovať prílohu"
 
 #: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Do you want to send some attachment?"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "Chcete poslať nejakú prílohu?"
 
 #: confirm-address/confirmaddressconfiguredialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Configure \"Confirm Email Address\" Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Nastaviť plugin \"Potvrdiť e-mailovú adresu\" "
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:34
-#, fuzzy, kde-format
-#| msgid "Accepted Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Prijatý názov domény"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Rejected Domain Name"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Odmietnutý názov domény"
@@ -202,7 +180,7 @@ msgstr "Odmietnutý názov domény"
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:66
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Pri&dať…"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:67
@@ -212,8 +190,7 @@ msgstr "O&dstrániť"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:49
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:68
-#, fuzzy, kde-format
-#| msgid "Mod&ify..."
+#, kde-format
 msgid "Mod&ify…"
 msgstr "&Upraviť..."
 
@@ -223,8 +200,7 @@ msgid "Enter new domain name:"
 msgstr "Zadajte nový názov domény:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Do you want to send some attachment?"
+#, kde-format
 msgid "Do you want to remove this domain?"
 msgstr "Chcete poslať nejakú prílohu?"
 
@@ -239,21 +215,18 @@ msgid "Enter new email address:"
 msgstr "Zadajte novú e-mailovú adresu:"
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:71
-#, fuzzy, kde-format
-#| msgid "Do you want to send the email as HTML?"
+#, kde-format
 msgid "Do you want to remove this email address?"
 msgstr "Chcete poslať e-mail ako HTML?"
 
 #: confirm-address/confirmaddressdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add Selected Emails to WhiteList"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Pridať vybrané e-maily do whitelistu"
 
 #: confirm-address/confirmaddressdialog.cpp:28
-#, fuzzy, kde-format
-#| msgid "Confirm Addresses"
+#, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr "Potvrdiť adresu"
@@ -264,36 +237,31 @@ msgid "All selected emails are added to white list"
 msgstr "Všetky vybrané e-maily sú pridané do zoznamu výnimiek"
 
 #: confirm-address/confirmaddressdialog.cpp:91
-#, fuzzy, kde-format
-#| msgid "Emails added to white list"
+#, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "E-maily pridané do zoznamu výnimiek"
 
 #: confirm-address/confirmaddressemailentrydialog.cpp:21
-#, fuzzy, kde-format
-#| msgid "Enter new domain name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
 msgstr "Zadajte nový názov domény:"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add Value"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Value"
 msgstr "Pridať hodnotu"
 
 #: confirm-address/confirmaddresssimplestringlisteditor.cpp:37
-#, fuzzy, kde-format
-#| msgid "Change Value"
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Value"
 msgstr "Zmeniť hodnotu"
 
 #: confirm-address/confirmaddresswidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Potentially invalid emails are displayed in red:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"
 msgstr "Potenciálne neplatné e-maily sú zobrazené červenou:"

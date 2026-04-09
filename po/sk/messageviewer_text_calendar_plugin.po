@@ -14,19 +14,17 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: attendeeselector.cpp:21
-#, fuzzy, kde-format
-#| msgid "Select Attendees"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Attendees"
 msgstr "Vybrať účastníkov"
 
 #: attendeeselector.cpp:40
-#, fuzzy, kde-format
-#| msgid "Click to add a new attendee"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Click to add a new attendee"
 msgstr "Kliknite na pridanie nového účastníka"
@@ -44,29 +42,25 @@ msgid "Remove"
 msgstr "Odstrániť"
 
 #: delegateselector.cpp:23
-#, fuzzy, kde-format
-#| msgid "Keep me informed about status changes of this incidence."
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "Informujte ma o zmenách stavu tejto udalosti."
 
 #: delegateselector.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select delegate"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
 msgstr "Vybrať delegáta"
 
 #: delegateselector.cpp:28
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Delegát:"
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Komentár:"
@@ -211,12 +205,10 @@ msgid "Do you still want to accept the invitation?"
 msgstr "Stále chcete prijať túto pozvánku?"
 
 #: text_calendar.cpp:780 text_calendar.cpp:792
-#, fuzzy, kde-format
-#| msgctxt "Accepted the invitation."
-#| msgid "Accepted: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Accept"
-msgstr "Akceptované: %1"
+msgstr "Prijať"
 
 #: text_calendar.cpp:784
 #, kde-format
@@ -232,7 +224,7 @@ msgstr "Stále chcete poslať podmienené prijatie úlohy?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "Odoslať"
 
 #: text_calendar.cpp:791
 #, kde-format
@@ -255,12 +247,10 @@ msgid "Do you still want to decline the counter proposal?"
 msgstr "Stále chcete odmietnuť protinávrh?"
 
 #: text_calendar.cpp:804
-#, fuzzy, kde-format
-#| msgctxt "Not able to attend."
-#| msgid "Declined: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Decline"
-msgstr "Zamietnuté: %1"
+msgstr "Odmietnuť"
 
 #: text_calendar.cpp:806
 #, kde-format
@@ -271,7 +261,7 @@ msgstr "Stále chcete zaznamenať túto odpoveď vo vašom kalendári?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
-msgstr ""
+msgstr "Record"
 
 #: text_calendar.cpp:810
 #, kde-format
@@ -284,8 +274,7 @@ msgid "Do you still want to delegate this invitation?"
 msgstr "Stále chcete delegovať túto pozvánku?"
 
 #: text_calendar.cpp:814
-#, fuzzy, kde-format
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
 msgstr "Delegát:"
@@ -301,11 +290,10 @@ msgid "Do you still want to forward this invitation?"
 msgstr "Stále chcete preposlať túto pozvánku?"
 
 #: text_calendar.cpp:821
-#, fuzzy, kde-format
-#| msgid "Forwarded: %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr "Preposlané:  %1"
+msgstr "Dopredu"
 
 #: text_calendar.cpp:825
 #, kde-format
@@ -316,7 +304,7 @@ msgstr "Stále chcete zrušiť túto úlohu?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
-msgstr ""
+msgstr "Cancel Task"
 
 #: text_calendar.cpp:828
 #, kde-format
@@ -324,15 +312,13 @@ msgid "Do you still want to cancel this invitation?"
 msgstr "Stále chcete zrušiť túto pozvánku?"
 
 #: text_calendar.cpp:829 text_calendar.cpp:850
-#, fuzzy, kde-format
-#| msgid "Accept invitation"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
 msgstr "Prijať pozvánku"
 
 #: text_calendar.cpp:832 text_calendar.cpp:853
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Neposielať"
@@ -346,7 +332,7 @@ msgstr "Stále chcete skontrolovať váš kalendár?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
-msgstr ""
+msgstr "Check"
 
 #: text_calendar.cpp:839
 #, kde-format
@@ -383,8 +369,7 @@ msgstr ""
 "%2"
 
 #: text_calendar.cpp:891
-#, fuzzy, kde-format
-#| msgid "Reaction to Invitation"
+#, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "Reakcia na pozvánku"
@@ -400,15 +385,13 @@ msgid "Delegation to organizer is not possible."
 msgstr "Preradenie na organizátora nie je možné."
 
 #: text_calendar.cpp:1069
-#, fuzzy, kde-format
-#| msgid "Save Invitation Attachment"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Uložiť prílohu pozvánky"
 
 #: text_calendar.cpp:1150
-#, fuzzy, kde-format
-#| msgid "Decline Counter Proposal"
+#, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "Odmietnuť protinávrh"
@@ -457,15 +440,13 @@ msgid "Send Email to Organizer"
 msgstr "Poslať e-mail organizátorovi"
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Neposielať"
 
 #: text_calendar.cpp:1272
-#, fuzzy, kde-format
-#| msgid "Send EMail"
+#, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Poslať e-mail"
@@ -481,8 +462,7 @@ msgid "Open Attachment"
 msgstr "Otvoriť prílohu"
 
 #: text_calendar.cpp:1343
-#, fuzzy, kde-format
-#| msgid "Save Attachment As..."
+#, kde-format
 msgid "Save Attachment As…"
 msgstr "Uložiť prílohu ako..."
 
@@ -502,8 +482,7 @@ msgid "Accept counter proposal"
 msgstr "Prijať protinávrh"
 
 #: text_calendar.cpp:1365
-#, fuzzy, kde-format
-#| msgid "Create a counter proposal..."
+#, kde-format
 msgid "Create a counter proposal…"
 msgstr "Vytvoriť protinávrh..."
 
@@ -528,8 +507,7 @@ msgid "Decline counter proposal"
 msgstr "Odmietnuť protinávrh"
 
 #: text_calendar.cpp:1375
-#, fuzzy, kde-format
-#| msgid "Check my calendar..."
+#, kde-format
 msgid "Check my calendar…"
 msgstr "Skontrolovať kalendár..."
 

@@ -13,8 +13,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.08.2\n"
 
 #: grammalecte/grammalecteinterface.cpp:80
 #, kde-format
@@ -32,11 +32,7 @@ msgid "&Check Grammar (LanguageTool)"
 msgstr "Skontrolovať Pravopis (LanguageTool)"
 
 #: languagetool/languagetoolinterface.cpp:96
-#, fuzzy, kde-format
-#| msgid ""
-#| "You do not use local instance.\n"
-#| "Your text will send on a external web site (https://languagetool.org/).\n"
-#| "Do you want to continue?"
+#, kde-format
 msgid ""
 "You do not use local instance.\n"
 "Your text will be sent to an external web site (https://languagetool.org/).\n"
@@ -47,8 +43,7 @@ msgstr ""
 "Chcete pokračovať?"
 
 #: languagetool/languagetoolinterface.cpp:98
-#, fuzzy, kde-format
-#| msgid "Check Grammar with LanguageTool"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"
 msgstr "Skontrolovať pravopis s LanguageTool"
@@ -59,7 +54,6 @@ msgid "LanguageTool Plugin"
 msgstr "Doplnok LanguageTool"
 
 #, fuzzy
-#~| msgid "Configure Grammalecte"
 #~ msgctxt "@title:window"
 #~ msgid "Configure Grammalecte"
 #~ msgstr "Nastaviť Grammalecte"
@@ -93,17 +87,14 @@ msgstr "Doplnok LanguageTool"
 #~ msgstr "Cesta k Grammalecte:"
 
 #, fuzzy
-#~| msgid "Grammalecte Path:"
 #~ msgid "Grammalecte path not found."
 #~ msgstr "Cesta k Grammalecte:"
 
 #, fuzzy
-#~| msgid "Grammalecte Plugin"
 #~ msgid "Grammalecte cli file not found."
 #~ msgstr "Doplnok Grammalecte"
 
 #, fuzzy
-#~| msgid "Grammalecte Path:"
 #~ msgid "Grammalecte error"
 #~ msgstr "Cesta k Grammalecte:"
 
@@ -216,7 +207,6 @@ msgstr "Doplnok LanguageTool"
 #~ msgstr "Ukrajinčina"
 
 #, fuzzy
-#~| msgid "Configure LanguageTool"
 #~ msgctxt "@title:window"
 #~ msgid "Configure LanguageTool"
 #~ msgstr "Nastaviť LanguageTool"
@@ -240,7 +230,6 @@ msgstr "Doplnok LanguageTool"
 #~ msgstr "Nepodarilo sa skontrolovať pravopis."
 
 #, fuzzy
-#~| msgid "Check Again"
 #~ msgid "Check"
 #~ msgstr "Znovu skontrolovať"
 

@@ -13,26 +13,23 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.07.90\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.07.90\n"
 
 #: markdown/markdownlib/markdownconfiguredialog.cpp:18
-#, fuzzy, kde-format
-#| msgid "Configure Markdown Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Markdown Plugin"
 msgstr "Nastaviť doplnok Markdown"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Enable embedded LaTeX"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr "Povoliť zabudovaný LaTeX"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Enable PHP Markdown Extra definition lists"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "Povoliť zoznamy definícií PHP Markdown Extra"
@@ -44,29 +41,25 @@ msgid "Failed to compile the Markdown document."
 msgstr "Zlyhala kompilácia Markdown dokumentu."
 
 #: markdown/markdownlib/markdowncreateimagedialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Add Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Image"
 msgstr "Pridať obrázok"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Keep original size"
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Ponechať pôvodnú veľkosť"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:20
-#, fuzzy, kde-format
-#| msgid "Width:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "Šírka:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Height:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Height:"
 msgstr "Výška:"
@@ -94,8 +87,7 @@ msgid " px"
 msgstr " px"
 
 #: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Add Link"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Link"
 msgstr "Pridať odkaz"
@@ -106,8 +98,7 @@ msgid "Link:"
 msgstr "Odkaz:"
 
 #: markdown/markdownlib/markdownpreviewdialog.cpp:25
-#, fuzzy, kde-format
-#| msgid "Markdown Rendering Preview"
+#, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"
 msgstr "Ukážka vykreslenia markdown"
@@ -118,8 +109,7 @@ msgid "Converter Error"
 msgstr "Chyba prevodníka"
 
 #: markdown/plugin/markdowninterface.cpp:38
-#, fuzzy, kde-format
-#| msgid "Generate HTML from markdown language."
+#, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Vygenerovať HTML zo značkovacieho jazyka."
@@ -130,8 +120,7 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: markdown/plugin/markdowninterface.cpp:57
-#, fuzzy, kde-format
-#| msgid "Markdown Action"
+#, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Akcia Markdown"
@@ -167,8 +156,7 @@ msgid "Change Selected Text as Code"
 msgstr "Zmeniť vybratý text na kód"
 
 #: markdown/plugin/markdowninterface.cpp:77
-#, fuzzy, kde-format
-#| msgid "Change Selected Text as Bold"
+#, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "Zmeniť vybratý text na tučné"
 
@@ -191,7 +179,6 @@ msgstr "Vygenerovať HTML zo značkovacieho jazyka."
 #~ msgstr "Vložiť príkaz šablóny..."
 
 #, fuzzy
-#~| msgid "Generate HTML from markdown language."
 #~ msgid "Convert Markdown Language"
 #~ msgstr "Vygenerovať HTML zo značkovacieho jazyka."
 

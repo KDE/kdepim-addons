@@ -12,29 +12,23 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:16
-#, fuzzy, kde-format
-#| msgid "Configure \"External Composer\" Plugin"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Composer\" Plugin"
 msgstr "Nastaviť plugin \"Externý editor\""
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Use external editor instead of composer"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Použiť externý editor namiesto composera"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:53
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will "
-#| "be replaced with the window id.<br /><b>%l</b> will be replaced with the "
-#| "line number."
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "<b>%f</b> will be replaced with the filename to edit.<br /><b>%w</b> will be "
