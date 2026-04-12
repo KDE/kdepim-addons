@@ -1,0 +1,69 @@
+# Slovak translations for kdepim-addons package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# Roman Paholik <wizzardsk@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-03-06 00:45+0000\n"
+"PO-Revision-Date: 2026-04-11 12:00+0200\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: src/autogenerateconfigureaskdialog.cpp:25
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Ask AI"
+msgstr "Nastaviť Opýtať sa AI"
+
+#: src/autogenerateconfigureaskmenu.cpp:19
+#, kde-format
+msgid "Ask AI…"
+msgstr "Opýtať sa AI…"
+
+#: src/autogenerateconfigureaskmenu.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Configure…"
+msgstr "Nastaviť…"
+
+#: src/autogenerateconfigurelistview.cpp:53
+#, kde-format
+msgctxt "@action"
+msgid "Add…"
+msgstr "Pridať…"
+
+#: src/autogenerateconfigurelistview.cpp:56
+#, kde-format
+msgid "Ask to AI"
+msgstr "Opýtať sa AI"
+
+#: src/autogenerateconfigurelistview.cpp:62
+#, kde-format
+msgctxt "@action"
+msgid "Modify…"
+msgstr "Upraviť…"
+
+#: src/autogenerateconfigurelistview.cpp:69
+#, kde-format
+msgctxt "@action"
+msgid "Remove…"
+msgstr "Odstrániť…"
+
+#: src/autogenerateconfigurelistview.cpp:72
+#, kde-format
+msgid "Do you want to remove it?"
+msgstr "Chcete to odstrániť?"
+
+#: src/autogenerateconfigurelistview.cpp:73
+#, kde-format
+msgctxt "@title"
+msgid "Remove"
+msgstr "Odstrániť"
