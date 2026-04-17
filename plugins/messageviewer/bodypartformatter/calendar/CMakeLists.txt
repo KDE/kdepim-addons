@@ -46,7 +46,7 @@ target_link_libraries(
     Qt::Core
     KF6::CalendarCore
     KPim6::CalendarUtils
-    KPim6::Mime
+    KF6::Mime
     KPim6::IdentityManagementCore
     KPim6::AkonadiMime
     KPim6::MailTransport

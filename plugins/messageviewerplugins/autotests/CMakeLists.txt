@@ -10,7 +10,7 @@ macro(add_kdepim_addons_viewerplugin_unittest _source _additional)
     ecm_add_test(${_test} ${_name}.h
                  TEST_NAME ${_name}
                  NAME_PREFIX "kdepim-addons-"
-                 LINK_LIBRARIES KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KPim6::Mime
+                 LINK_LIBRARIES KPim6::MessageViewer KPim6::Libkleo Qt::Test KF6::KIOCore KF6::Mime
                  KPim6::AkonadiCore KF6::CalendarCore KPim6::GrantleeTheme KPim6::IncidenceEditor
                  KPim6::AkonadiWidgets KF6::XmlGui KPim6::CalendarSupport KF6::TextTranslator
     )
@@ -29,7 +29,7 @@ macro(add_kdepim_addons_viewerplugin_class_unittest _source)
             KF6::CalendarCore
             KPim6::MessageViewer
             KPim6::Libkleo
-            KPim6::Mime
+            KF6::Mime
             KPim6::AkonadiCore
             KPim6::GrantleeTheme
             KPim6::AkonadiWidgets
@@ -49,7 +49,7 @@ macro(add_kdepim_addons_viewerplugin_widget_unittest _source _additional)
             KF6::CalendarCore
             KPim6::MessageViewer
             KPim6::Libkleo
-            KPim6::Mime
+            KF6::Mime
             KPim6::AkonadiCore
             KPim6::GrantleeTheme
             KPim6::IncidenceEditor

@@ -23,7 +23,7 @@ macro(add_messageviewer_header_unittest _source _additional)
         KPim6::Libkleo
         Qt::Test
         KF6::KIOCore
-        KPim6::Mime
+        KF6::Mime
         KPim6::AkonadiCore
         KF6::CalendarCore
         KPim6::GrantleeTheme
@@ -49,7 +49,7 @@ macro(add_messageviewer_header_class_unittest _source)
         KPim6::Libkleo
         Qt::Test
         KF6::KIOCore
-        KPim6::Mime
+        KF6::Mime
         KPim6::AkonadiCore
         KF6::CalendarCore
         KPim6::GrantleeTheme

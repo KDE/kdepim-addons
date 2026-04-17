@@ -51,7 +51,7 @@ target_link_libraries(
     KPim6::MailTransport
     KPim6::GrantleeTheme
     KF6::I18n
-    KPim6::Mime
+    KF6::Mime
     KPim6::IdentityManagementCore
     KF6::TextTemplate
     Gpgmepp
