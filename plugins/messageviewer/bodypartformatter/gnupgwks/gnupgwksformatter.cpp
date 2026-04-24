@@ -10,7 +10,7 @@
 
 #include <QObject>
 #include <QPalette>
-#include <QUrl>
+
 #include <QUrlQuery>
 #include <QVariant>
 
