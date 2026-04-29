@@ -196,9 +196,9 @@ msgid ""
 "from the currently selected message. Then you can edit the to-do to your "
 "liking before saving it to your calendar."
 msgstr ""
-"Táto možnosť spustí KOrganizer editor to-do s počiatočnými hodnotami "
-"zobranými z aktuálne vybranej správy. Potom môžete ľubovoľne upraviť to-do "
-"pred uložením do vášho kalendára."
+"Táto možnosť spustí editor to-do aplikácie KOrganizer s počiatočnými "
+"hodnotami zobrazenými z aktuálne vybranej správy. Potom môžete ľubovoľne "
+"upraviť to-do pred uložením do vášho kalendára."
 
 #: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:16
 #, kde-format
