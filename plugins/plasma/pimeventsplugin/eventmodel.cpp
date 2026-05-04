@@ -22,7 +22,6 @@
 EventModel::EventModel(QObject *parent)
     : Akonadi::CalendarBase(parent)
 {
-    Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
 
 EventModel::~EventModel() = default;

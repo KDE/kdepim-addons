@@ -26,8 +26,6 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     : QObject(parent)
     , mCalendar(new EventModel(this))
 {
-    Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
-
     connect(SettingsChangeNotifier::self(), &SettingsChangeNotifier::settingsChanged, this, &AkonadiPimDataSource::onSettingsChanged);
 
     onSettingsChanged();
