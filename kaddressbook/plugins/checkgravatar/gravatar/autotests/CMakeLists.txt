@@ -15,5 +15,4 @@ if(KDEPIM_RUN_AKONADI_TEST)
     add_akonadi_isolated_test_advanced( gravatarupdatedialogtest.cpp "../widgets/gravatarupdatedialog.cpp;../widgets/gravatarupdatewidget.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KPim6::PimCommon;KPim6::Gravatar;KF6::I18n")
     add_akonadi_isolated_test_advanced( gravatarupdatewidgettest.cpp "../widgets/gravatarupdatewidget.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KPim6::PimCommon;KPim6::Gravatar;KF6::I18n")
 
-    #add_akonadi_isolated_test_advanced( checkgravatarplugintest.cpp "../../checkgravatarplugin.cpp;../../checkgravatarplugininterface.cpp" "KPim6::PimCommon;KF6::I18n;KF6::XmlGui;KF6::Contacts;KPim6::Gravatar;${kaddressbook_checkgravatarplugin_SRCS};${kaddressbook_checkgravatarplugin_test_SRCS}")
 endif()
