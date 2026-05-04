@@ -28,10 +28,57 @@ if(KDEPIM_RUN_AKONADI_TEST)
     set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
     set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 
-    add_akonadi_isolated_test_advanced(automaticaddcontactsplugintest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfiguredialog.cpp;../automaticaddcontactsconfigurewidget.cpp;../automaticaddcontactsconfiguretab.cpp;../automaticaddcontactstabwidget.cpp;../automaticaddcontactsjob.cpp;../automaticaddcontactsplugin.cpp;../automaticaddcontactsinterface.cpp;../automaticaddcontactsconfigurewidget.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::AkonadiContactWidgets;KF6::Codecs")
-    add_akonadi_isolated_test_advanced(automaticaddcontactsconfigurewidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfiguretab.cpp;../automaticaddcontactstabwidget.cpp;../automaticaddcontactsconfigurewidget.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::AkonadiContactCore")
-    add_akonadi_isolated_test_advanced(automaticaddcontactstabwidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactstabwidget.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::AkonadiContactCore")
-    add_akonadi_isolated_test_advanced(automaticaddcontactsconfiguretabtest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactstabwidget.cpp;../automaticaddcontactsconfiguretab.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::AkonadiContactCore")
+    add_akonadi_isolated_test(SOURCE automaticaddcontactsplugintest.cpp
+        ADDITIONAL_SOURCES
+            ${automaticaddcontacts_common_SRCS}
+            ../automaticaddcontactsconfiguredialog.cpp
+            ../automaticaddcontactsconfigurewidget.cpp
+            ../automaticaddcontactsconfiguretab.cpp
+            ../automaticaddcontactstabwidget.cpp
+            ../automaticaddcontactsjob.cpp
+            ../automaticaddcontactsplugin.cpp
+            ../automaticaddcontactsinterface.cpp
+            ../automaticaddcontactsconfigurewidget.cpp
+        LINK_LIBRARIES
+            KPim6::MessageComposer
+            KF6::I18n
+            KPim6::PimCommon
+            KPim6::AkonadiContactWidgets
+            KF6::Codecs
+    )
+    add_akonadi_isolated_test(SOURCE automaticaddcontactsconfigurewidgettest.cpp
+        ADDITIONAL_SOURCES
+            ${automaticaddcontacts_common_SRCS}
+            ../automaticaddcontactsconfiguretab.cpp
+            ../automaticaddcontactstabwidget.cpp
+            ../automaticaddcontactsconfigurewidget.cpp
+        LINK_LIBRARIES
+            KPim6::MessageComposer
+            KF6::I18n
+            KPim6::PimCommon
+            KPim6::AkonadiContactCore
+    )
+    add_akonadi_isolated_test(SOURCE automaticaddcontactstabwidgettest.cpp
+        ADDITIONAL_SOURCES
+            ${automaticaddcontacts_common_SRCS}
+            ../automaticaddcontactstabwidget.cpp
+        LINK_LIBRARIES
+            KPim6::MessageComposer
+            KF6::I18n
+            KPim6::PimCommon
+            KPim6::AkonadiContactCore
+    )
+    add_akonadi_isolated_test(SOURCE automaticaddcontactsconfiguretabtest.cpp
+        ADDITIONAL_SOURCES
+            ${automaticaddcontacts_common_SRCS}
+            ../automaticaddcontactstabwidget.cpp
+            ../automaticaddcontactsconfiguretab.cpp
+        LINK_LIBRARIES
+            KPim6::MessageComposer
+            KF6::I18n
+            KPim6::PimCommon
+            KPim6::AkonadiContactCore
+    )
 endif()
 
 add_kmail_automaticaddscontacts_unittest(automaticaddcontactsjobtest.cpp "../automaticaddcontactsjob.cpp" "KPim6::MessageComposer;KF6::I18n;KPim6::PimCommon;KPim6::AkonadiContactCore;KF6::Codecs")
