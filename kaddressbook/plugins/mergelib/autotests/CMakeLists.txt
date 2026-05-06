@@ -33,9 +33,6 @@ endmacro()
 kaddressbook_merge(mergecontactstest.cpp "../job/mergecontacts.cpp;../kaddressbookmergelibprivate_debug.cpp" "")
 
 if(KDEPIM_RUN_AKONADI_TEST)
-    set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
-    set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
-
     add_akonadi_isolated_test(SOURCE mergecontactinfowidgettest.cpp
         ADDITIONAL_SOURCES
             ../widgets/mergecontactinfowidget.cpp

@@ -25,9 +25,6 @@ macro(add_kmail_automaticaddscontacts_unittest _source _additional)
 endmacro()
 
 if(KDEPIM_RUN_AKONADI_TEST)
-    set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
-    set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
-
     add_akonadi_isolated_test(SOURCE automaticaddcontactsplugintest.cpp
         ADDITIONAL_SOURCES
             ${automaticaddcontacts_common_SRCS}

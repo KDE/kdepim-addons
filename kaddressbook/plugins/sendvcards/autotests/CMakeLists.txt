@@ -8,9 +8,6 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/../..
 )
 if(KDEPIM_RUN_AKONADI_TEST)
-    set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
-    set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
-
     add_akonadi_isolated_test(SOURCE sendvcardsjobtest.cpp
         ADDITIONAL_SOURCES
             ../sendvcardsjob.cpp
