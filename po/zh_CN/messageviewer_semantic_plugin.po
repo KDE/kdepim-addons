@@ -148,7 +148,7 @@ msgstr "在地图中搜索地址"
 
 #: templates/lodgingreservation.html:10
 msgid "Reserved for: "
-msgstr ""
+msgstr "预留给： "
 
 #: templates/trainreservation.html:54 templates/trainreservation.html:82
 #, kde-format
