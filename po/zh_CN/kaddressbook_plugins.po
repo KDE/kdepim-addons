@@ -137,7 +137,7 @@ msgstr "联系人"
 #: mergelib/searchduplicate/resultduplicatetreewidget.cpp:79
 #, kde-format
 msgid "Duplicate contact \"%1\" (%2 times)"
-msgstr ""
+msgstr "复制联系人 \"%1\" (%2 次)"
 
 #: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
 #, kde-format
@@ -167,12 +167,12 @@ msgstr "合并"
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
 #, kde-format
 msgid "Expand All"
-msgstr ""
+msgstr "展开全部"
 
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
 #, kde-format
 msgid "Collapse All"
-msgstr ""
+msgstr "折叠全部"
 
 #: mergelib/widgets/mergecontacterrorlabel.cpp:18
 #, kde-format
