@@ -32,7 +32,7 @@ bool AutogenerateConfigureAskFilterProxyModel::lessThan(const QModelIndex &left,
     if (!sourceModel()) {
         return false;
     }
-    if (left.parent().isValid() && right.parent().isValid()) {
+    if (!left.parent().isValid() && !right.parent().isValid()) {
         const qint64 leftOrder = sourceModel()->data(left, AutogenerateConfigureAskModel::OrderRole).toInt();
         const qint64 rightOrder = sourceModel()->data(right, AutogenerateConfigureAskModel::OrderRole).toInt();
         return leftOrder < rightOrder;
