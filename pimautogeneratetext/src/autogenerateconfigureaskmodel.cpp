@@ -54,13 +54,13 @@ bool AutogenerateConfigureAskModel::setData(const QModelIndex &idx, const QVaria
     switch (role) {
     case AskRoles::TitleRole: {
         info.setTitle(value.toString());
-        const QModelIndex newIndex = index(idx.row(), AskRoles::TitleRole);
+        const QModelIndex newIndex = index(idx.row(), 0);
         Q_EMIT dataChanged(newIndex, newIndex);
         return true;
     }
     case AskRoles::TextRole: {
         info.setText(value.toString());
-        const QModelIndex newIndex = index(idx.row(), AskRoles::TextRole);
+        const QModelIndex newIndex = index(idx.row(), 0);
         Q_EMIT dataChanged(newIndex, newIndex);
         return true;
     }
