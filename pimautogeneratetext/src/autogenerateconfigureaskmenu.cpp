@@ -28,10 +28,10 @@ void AutogenerateConfigureAskMenu::initializeMenu()
     const auto infos = mManager->askInfos();
     for (const AutogenerateConfigureAskInfo &info : infos) {
         if (info.enabled()) {
-            const QString requestText = info.title();
-            auto action = new QAction(requestText, this);
-            connect(action, &QAction::triggered, this, [requestText, this]() {
-                Q_EMIT askRequested(requestText);
+            auto action = new QAction(info.title(), this);
+            const QString promptText = info.text();
+            connect(action, &QAction::triggered, this, [promptText, this]() {
+                Q_EMIT askRequested(promptText);
             });
             addAction(action);
         }
