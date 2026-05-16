@@ -43,7 +43,7 @@ void AutogenerateConfigureListView::setAskInfos(const QList<AutogenerateConfigur
 
 void AutogenerateConfigureListView::setData(const QModelIndex &current, const QString &text)
 {
-    if (!mModel->setData(current, text, AutogenerateConfigureAskModel::TextRole)) {
+    if (!mModel->setData(mSortFilterProxyModel->mapToSource(current), text, AutogenerateConfigureAskModel::TextRole)) {
         qCWarning(PIMAUTOGENERATE_LOG) << " Impossible to change text";
     }
 }
