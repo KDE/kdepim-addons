@@ -126,13 +126,3 @@ msgstr "&Стандартни заглавни части"
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "Показване на стандартен списък със заглавна част на съобщения"
-
-#~ msgid "To: "
-#~ msgstr "До: "
-
-#~ msgctxt "View->headers->"
-#~ msgid "&Enterprise Headers"
-#~ msgstr "&Корпоративни  заглавни части"
-
-#~ msgid "Show the list of headers in Enterprise style"
-#~ msgstr "Показване на списъка със заглавна част в корпоративен стил"
