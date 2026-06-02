@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-05-30 17:25-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -60,8 +61,7 @@ msgid "Delegate:"
 msgstr ""
 
 #: reactiontoinvitationdialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Comment:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "ئىزاھات:"
@@ -201,7 +201,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept"
-msgstr ""
+msgstr "قوشۇل"
 
 #: text_calendar.cpp:784
 #, kde-format
@@ -217,7 +217,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "يوللا"
 
 #: text_calendar.cpp:791
 #, kde-format
@@ -243,7 +243,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Decline"
-msgstr ""
+msgstr "قوشۇلما"
 
 #: text_calendar.cpp:806
 #, kde-format
@@ -254,7 +254,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
-msgstr ""
+msgstr "خاتىرە"
 
 #: text_calendar.cpp:810
 #, kde-format
@@ -286,7 +286,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr ""
+msgstr "ئالدىغا"
 
 #: text_calendar.cpp:825
 #, kde-format
@@ -311,11 +311,10 @@ msgid "Cancel Invitation"
 msgstr ""
 
 #: text_calendar.cpp:832 text_calendar.cpp:853
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
-msgstr "يوللىما"
+msgstr ""
 
 #: text_calendar.cpp:835
 #, kde-format
@@ -326,7 +325,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
-msgstr ""
+msgstr "تەكشۈر"
 
 #: text_calendar.cpp:839
 #, kde-format
@@ -423,8 +422,7 @@ msgid "Send Email to Organizer"
 msgstr ""
 
 #: text_calendar.cpp:1271
-#, fuzzy, kde-format
-#| msgid "Do Not Send"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "يوللىما"

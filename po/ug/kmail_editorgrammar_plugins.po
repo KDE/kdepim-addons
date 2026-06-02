@@ -1,0 +1,52 @@
+# Uyghur translation for kmail_editorgrammar_plugins.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"PO-Revision-Date: 2026-05-30 17:24-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: grammalecte/grammalecteinterface.cpp:80
+#, kde-format
+msgid "&Check Grammar (Grammalecte)"
+msgstr "گىرامماتىكا تەكشۈر(Grammale&cte)"
+
+#: grammalecte/grammalecteplugin.cpp:38
+#, kde-format
+msgid "Grammalecte Plugin"
+msgstr "Grammalecte قىستۇرمىسى"
+
+#: languagetool/languagetoolinterface.cpp:83
+#, kde-format
+msgid "&Check Grammar (LanguageTool)"
+msgstr ""
+
+#: languagetool/languagetoolinterface.cpp:96
+#, kde-format
+msgid ""
+"You do not use local instance.\n"
+"Your text will be sent to an external web site (https://languagetool.org/).\n"
+"Do you want to continue?"
+msgstr ""
+
+#: languagetool/languagetoolinterface.cpp:98
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Grammar with LanguageTool"
+msgstr ""
+
+#: languagetool/languagetoolplugin.cpp:36
+#, kde-format
+msgid "LanguageTool Plugin"
+msgstr ""
