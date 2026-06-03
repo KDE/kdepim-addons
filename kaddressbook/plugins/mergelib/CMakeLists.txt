@@ -46,12 +46,14 @@ ecm_qt_declare_logging_category(kaddressbookmergelibprivate HEADER kaddressbookm
     EXPORT KDEPIMADDONS
 )
 
-generate_export_header(
-    kaddressbookmergelibprivate
-    BASE_NAME kaddressbookmergelib
-)
+generate_export_header(kaddressbookmergelibprivate BASE_NAME kaddressbookmergelib)
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(kaddressbookmergelibprivate PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        kaddressbookmergelibprivate
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 target_link_libraries(
@@ -71,13 +73,18 @@ target_link_libraries(
 set_target_properties(
     kaddressbookmergelibprivate
     PROPERTIES
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS kaddressbookmergelibprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        kaddressbookmergelibprivate
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 
 if(BUILD_TESTING)

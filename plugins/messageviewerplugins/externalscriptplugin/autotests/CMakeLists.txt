@@ -4,13 +4,12 @@ add_definitions(-DTEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/externaldatas")
 
 ecm_qt_declare_logging_category(common_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin)
 
-macro(
-    add_messageviewer_viewerplugin_external_plugin_unittest
-    _source
-    _additional
-    _jsonfile
-)
-    set(_test ${_source} ${_additional} ${common_SRCS})
+macro(add_messageviewer_viewerplugin_external_plugin_unittest _source _additional _jsonfile)
+    set(_test
+        ${_source}
+        ${_additional}
+        ${common_SRCS}
+    )
     get_filename_component(_name ${_source} NAME_WE)
     if(${_jsonfile})
         kcoreaddons_desktop_to_json(${_name} ${_jsonfile})

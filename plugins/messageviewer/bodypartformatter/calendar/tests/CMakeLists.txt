@@ -1,6 +1,9 @@
 # SPDX-FileCopyrightText: 2015-2026 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-set(attendeeselector_SRCS ../attendeeselector.cpp main.cpp)
+set(attendeeselector_SRCS
+    ../attendeeselector.cpp
+    main.cpp
+)
 
 ki18n_wrap_ui(attendeeselector_SRCS ../attendeeselector.ui)
 

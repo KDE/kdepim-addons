@@ -29,6 +29,7 @@ target_link_libraries(
     KPim6::AkonadiContactWidgets
 )
 install(
-    TARGETS messageviewer_bodypartformatter_text_vcard
+    TARGETS
+        messageviewer_bodypartformatter_text_vcard
     DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter
 )

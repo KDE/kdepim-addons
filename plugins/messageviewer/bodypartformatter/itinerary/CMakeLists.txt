@@ -26,13 +26,16 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_semantic HEADER 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         messageviewer_bodypartformatter_semantic
-        PROPERTIES UNITY_BUILD ON
+        PROPERTIES
+            UNITY_BUILD
+                ON
     )
 endif()
 
 target_compile_definitions(
     messageviewer_bodypartformatter_semantic
-    PRIVATE -DTRANSLATION_DOMAIN=\"messageviewer_semantic_plugin\"
+    PRIVATE
+        -DTRANSLATION_DOMAIN=\"messageviewer_semantic_plugin\"
 )
 target_link_libraries(
     messageviewer_bodypartformatter_semantic
@@ -49,6 +52,7 @@ target_link_libraries(
     KF6::ColorScheme
 )
 install(
-    TARGETS messageviewer_bodypartformatter_semantic
+    TARGETS
+        messageviewer_bodypartformatter_semantic
     DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter
 )

@@ -23,7 +23,12 @@ ecm_qt_declare_logging_category(kmail_zoomtexteditorplugin HEADER zoomtexteditor
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(kmail_zoomtexteditorplugin PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        kmail_zoomtexteditorplugin
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 target_link_libraries(

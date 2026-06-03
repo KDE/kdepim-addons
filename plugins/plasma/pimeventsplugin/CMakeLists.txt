@@ -32,7 +32,12 @@ target_sources(
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(pimevents PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        pimevents
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 target_link_libraries(
@@ -69,17 +74,13 @@ target_link_libraries(
     KF6::ConfigCore
 )
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(pimcalendarsplugin PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        pimcalendarsplugin
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
-install(
-    TARGETS pimcalendarsplugin
-    DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
-)
-install(
-    FILES qmldir
-    DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
-)
-install(
-    FILES PimEventsConfig.qml
-    DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasmacalendarplugins/pimevents
-)
+install(TARGETS pimcalendarsplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars)
+install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars)
+install(FILES PimEventsConfig.qml DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasmacalendarplugins/pimevents)

@@ -1,8 +1,6 @@
 # SPDX-FileCopyrightText: 2015-2026 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-add_definitions(
-    -DTRANSLATION_DOMAIN=\"messageviewer_application_gnupgwks_plugin\"
-)
+add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_application_gnupgwks_plugin\")
 
 add_library(messageviewer_bodypartformatter_application_gnupgwks MODULE)
 target_sources(
@@ -38,7 +36,9 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnup
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         messageviewer_bodypartformatter_application_gnupgwks
-        PROPERTIES UNITY_BUILD ON
+        PROPERTIES
+            UNITY_BUILD
+                ON
     )
 endif()
 
@@ -57,6 +57,7 @@ target_link_libraries(
     Gpgmepp
 )
 install(
-    TARGETS messageviewer_bodypartformatter_application_gnupgwks
+    TARGETS
+        messageviewer_bodypartformatter_application_gnupgwks
     DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter
 )

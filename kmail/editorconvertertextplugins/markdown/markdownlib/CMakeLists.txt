@@ -33,7 +33,12 @@ target_sources(
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(kmailmarkdown PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        kmailmarkdown
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 generate_export_header(kmailmarkdown BASE_NAME libkmailmarkdown)
 target_link_libraries(
@@ -48,12 +53,18 @@ target_link_libraries(
 set_target_properties(
     kmailmarkdown
     PROPERTIES
-        OUTPUT_NAME kmailmarkdown
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        OUTPUT_NAME
+            kmailmarkdown
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS kmailmarkdown ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        kmailmarkdown
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )

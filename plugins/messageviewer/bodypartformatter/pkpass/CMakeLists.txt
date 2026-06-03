@@ -5,7 +5,9 @@ add_library(messageviewer_bodypartformatter_pkpass MODULE)
 
 target_sources(
     messageviewer_bodypartformatter_pkpass
-    PRIVATE pkpass_plugin.cpp templates.qrc
+    PRIVATE
+        pkpass_plugin.cpp
+        templates.qrc
 )
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_pkpass HEADER pkpass_debug.h IDENTIFIER PKPASS_LOG CATEGORY_NAME org.kde.pim.pkpass
     DESCRIPTION "kdepim-addons (pkpass formatter)"
@@ -21,6 +23,7 @@ target_link_libraries(
     KPim6::PkPass
 )
 install(
-    TARGETS messageviewer_bodypartformatter_pkpass
+    TARGETS
+        messageviewer_bodypartformatter_pkpass
     DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter
 )

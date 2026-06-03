@@ -20,7 +20,12 @@ if(Corrosion_VERSION VERSION_LESS 0.6.0)
     set(corrosion_build_dir "build")
 else()
     string(SHA1 cargo_path_hash ${CMAKE_CURRENT_SOURCE_DIR}/rs/adblock/Cargo.toml)
-    string(SUBSTRING "${cargo_path_hash}" 0 5 cargo_path_hash)
+    string(
+        SUBSTRING "${cargo_path_hash}"
+        0
+        5
+        cargo_path_hash
+    )
     set(corrosion_build_dir "adblock_${cargo_path_hash}")
 endif()
 
@@ -75,7 +80,12 @@ ecm_qt_declare_logging_category(adblockplugin HEADER libadblockplugin_debug.h ID
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(adblockplugin PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        adblockplugin
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 generate_export_header(adblockplugin BASE_NAME libadblockplugin)
@@ -95,14 +105,20 @@ endif()
 set_target_properties(
     adblockplugin
     PROPERTIES
-        OUTPUT_NAME adblockplugin
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        OUTPUT_NAME
+            adblockplugin
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS adblockplugin ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        adblockplugin
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 
 kcoreaddons_add_plugin(webengineviewer_adblockplugin INSTALL_NAMESPACE pim6/webengineviewer/urlinterceptor)

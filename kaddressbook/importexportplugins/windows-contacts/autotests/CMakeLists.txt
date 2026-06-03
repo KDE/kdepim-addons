@@ -13,7 +13,11 @@ macro(add_windowscontact_unittest _source _additional)
         ${kaddressbook_importexport_windowscontact_debugfile_autotest_SRCS}
     )
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable(${_name} ${_test} ${_name}.h)
+    add_executable(
+        ${_name}
+        ${_test}
+        ${_name}.h
+    )
     add_test(NAME ${_name} COMMAND ${_name})
 
     ecm_mark_as_test(${_name})

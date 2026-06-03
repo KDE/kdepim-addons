@@ -15,24 +15,38 @@ target_sources(
 
 generate_export_header(shorturlpluginprivate BASE_NAME shorturl)
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(shorturlpluginprivate PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        shorturlpluginprivate
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 target_link_libraries(
     shorturlpluginprivate
-    PRIVATE Qt::Network KF6::I18n KF6::CoreAddons Qt::Gui
+    PRIVATE
+        Qt::Network
+        KF6::I18n
+        KF6::CoreAddons
+        Qt::Gui
 )
 
 set_target_properties(
     shorturlpluginprivate
     PROPERTIES
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS shorturlpluginprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        shorturlpluginprivate
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 
 add_subdirectory(shorturlengineplugin)

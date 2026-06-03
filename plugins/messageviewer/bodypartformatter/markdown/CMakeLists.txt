@@ -7,29 +7,35 @@ if(USE_DISCOUNT_LIB)
     add_definitions(-DUSE_DISCOUNT_LIB)
     target_sources(
         messageviewer_bodypartformatter_text_markdown
-        PRIVATE markdowndiscount.cpp markdowndiscount.h
+        PRIVATE
+            markdowndiscount.cpp
+            markdowndiscount.h
     )
-    target_link_libraries(
-        messageviewer_bodypartformatter_text_markdown
-        discount::Lib
-    )
+    target_link_libraries(messageviewer_bodypartformatter_text_markdown discount::Lib)
 else()
     target_sources(
         messageviewer_bodypartformatter_text_markdown
-        PRIVATE markdownqtextdocument.cpp markdownqtextdocument.h
+        PRIVATE
+            markdownqtextdocument.cpp
+            markdownqtextdocument.h
     )
 endif()
 
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_text_markdown_plugin\")
 target_sources(
     messageviewer_bodypartformatter_text_markdown
-    PRIVATE textmarkdownplugin.cpp markdownabstract.cpp markdownabstract.h
+    PRIVATE
+        textmarkdownplugin.cpp
+        markdownabstract.cpp
+        markdownabstract.h
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         messageviewer_bodypartformatter_text_markdown
-        PROPERTIES UNITY_BUILD ON
+        PROPERTIES
+            UNITY_BUILD
+                ON
     )
 endif()
 
@@ -40,6 +46,7 @@ target_link_libraries(
     KF6::TextTemplate
 )
 install(
-    TARGETS messageviewer_bodypartformatter_text_markdown
+    TARGETS
+        messageviewer_bodypartformatter_text_markdown
     DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter
 )

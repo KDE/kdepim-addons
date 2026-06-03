@@ -14,7 +14,12 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-target_sources(emaillineeditplugin PRIVATE emaillineedit.cpp emaillineedit.h)
+target_sources(
+    emaillineeditplugin
+    PRIVATE
+        emaillineedit.cpp
+        emaillineedit.h
+)
 
 target_link_libraries(
     emaillineeditplugin

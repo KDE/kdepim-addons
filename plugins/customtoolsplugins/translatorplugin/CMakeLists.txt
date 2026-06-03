@@ -11,7 +11,12 @@ target_sources(
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(pimcommon_translatorplugin PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        pimcommon_translatorplugin
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 target_link_libraries(

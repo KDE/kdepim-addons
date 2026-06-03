@@ -27,7 +27,9 @@ ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin HEADER kaddress
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         kaddressbook_checkgravatarplugin
-        PROPERTIES UNITY_BUILD ON
+        PROPERTIES
+            UNITY_BUILD
+                ON
     )
 endif()
 

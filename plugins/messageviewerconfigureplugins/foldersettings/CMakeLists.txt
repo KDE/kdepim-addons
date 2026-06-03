@@ -35,13 +35,15 @@ ecm_qt_declare_logging_category(folderconfiguresettings HEADER libfolderconfigur
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(folderconfiguresettings PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        folderconfiguresettings
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
-generate_export_header(
-    folderconfiguresettings
-    BASE_NAME libfolderconfiguresettings
-)
+generate_export_header(folderconfiguresettings BASE_NAME libfolderconfiguresettings)
 target_link_libraries(
     folderconfiguresettings
     KPim6::MessageViewer
@@ -52,14 +54,20 @@ target_link_libraries(
 set_target_properties(
     folderconfiguresettings
     PROPERTIES
-        OUTPUT_NAME folderconfiguresettings
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        OUTPUT_NAME
+            folderconfiguresettings
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS folderconfiguresettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        folderconfiguresettings
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 
 #####
@@ -67,7 +75,9 @@ kcoreaddons_add_plugin(messageviewer_folderconfiguresettingsplugin INSTALL_NAMES
 
 target_sources(
     messageviewer_folderconfiguresettingsplugin
-    PRIVATE folderconfiguresettingsplugin.cpp folderconfiguresettingsplugin.h
+    PRIVATE
+        folderconfiguresettingsplugin.cpp
+        folderconfiguresettingsplugin.h
 )
 
 target_link_libraries(

@@ -8,14 +8,8 @@ set(donottrackpluginurlinterceptortest_SRCS
 kconfig_add_kcfg_files(donottrackpluginurlinterceptortest_SRCS
   ../settings/donottracksettings.kcfgc
 )
-add_executable(
-    donottrackpluginurlinterceptortest
-    ${donottrackpluginurlinterceptortest_SRCS}
-)
-add_test(
-    NAME donottrackpluginurlinterceptortest
-    COMMAND donottrackpluginurlinterceptortest
-)
+add_executable(donottrackpluginurlinterceptortest ${donottrackpluginurlinterceptortest_SRCS})
+add_test(NAME donottrackpluginurlinterceptortest COMMAND donottrackpluginurlinterceptortest)
 ecm_mark_as_test(donottrackpluginurlinterceptortest)
 target_link_libraries(
     donottrackpluginurlinterceptortest

@@ -24,23 +24,38 @@ ecm_qt_declare_logging_category(scamconfiguresettings HEADER libscamconfigureset
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(scamconfiguresettings PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        scamconfiguresettings
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 generate_export_header(scamconfiguresettings BASE_NAME libscamconfiguresettings)
-target_link_libraries(scamconfiguresettings KPim6::MessageViewer KF6::I18n)
+target_link_libraries(
+    scamconfiguresettings
+    KPim6::MessageViewer
+    KF6::I18n
+)
 
 set_target_properties(
     scamconfiguresettings
     PROPERTIES
-        OUTPUT_NAME scamconfiguresettings
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        OUTPUT_NAME
+            scamconfiguresettings
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS scamconfiguresettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        scamconfiguresettings
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 
 ######
@@ -48,7 +63,9 @@ kcoreaddons_add_plugin(messageviewer_scamconfiguresettingsplugin INSTALL_NAMESPA
 
 target_sources(
     messageviewer_scamconfiguresettingsplugin
-    PRIVATE scamconfiguresettingsplugin.cpp scamconfiguresettingsplugin.h
+    PRIVATE
+        scamconfiguresettingsplugin.cpp
+        scamconfiguresettingsplugin.h
 )
 
 target_link_libraries(

@@ -12,15 +12,19 @@ ecm_qt_declare_logging_category(kaichat_calendarplugin HEADER kaichat_calendarpl
 target_sources(
     kaichat_calendarplugin
     PRIVATE
-    kaichatcalendarplugin.cpp
-    kaichatcalendarplugin.h
-    kaichatcalendarplugindialog.cpp
-    kaichatcalendarplugindialog.h
-    kaichatcalendarpluginwidget.cpp
-    kaichatcalendarpluginwidget.h
-    kaichatcalendarpluginjob.h
-    kaichatcalendarpluginjob.cpp
-    kaichatcalendarpluginutils.cpp
-    kaichatcalendarpluginutils.h
+        kaichatcalendarplugin.cpp
+        kaichatcalendarplugin.h
+        kaichatcalendarplugindialog.cpp
+        kaichatcalendarplugindialog.h
+        kaichatcalendarpluginwidget.cpp
+        kaichatcalendarpluginwidget.h
+        kaichatcalendarpluginjob.h
+        kaichatcalendarpluginjob.cpp
+        kaichatcalendarpluginutils.cpp
+        kaichatcalendarpluginutils.h
 )
-target_link_libraries(kaichat_calendarplugin KF6::TextAutoGenerateText KPim6::AkonadiContactCore)
+target_link_libraries(
+    kaichat_calendarplugin
+    KF6::TextAutoGenerateText
+    KPim6::AkonadiContactCore
+)

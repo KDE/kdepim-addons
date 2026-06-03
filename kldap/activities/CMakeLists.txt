@@ -12,7 +12,9 @@ ecm_qt_declare_logging_category(kldapactivitiesplugin HEADER kldapactivitiesplug
 
 target_sources(
     kldapactivitiesplugin
-    PRIVATE ldapactivitiesplugin.h ldapactivitiesplugin.cpp
+    PRIVATE
+        ldapactivitiesplugin.h
+        ldapactivitiesplugin.cpp
 )
 
 target_link_libraries(

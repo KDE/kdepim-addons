@@ -19,7 +19,9 @@ ecm_qt_declare_logging_category(kaddressbook_importexportgmxplugin HEADER kaddre
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         kaddressbook_importexportgmxplugin
-        PROPERTIES UNITY_BUILD ON
+        PROPERTIES
+            UNITY_BUILD
+                ON
     )
 endif()
 target_link_libraries(

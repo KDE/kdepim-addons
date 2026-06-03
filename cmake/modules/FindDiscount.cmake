@@ -12,35 +12,49 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
+if(discount_INCLUDE_DIRS AND discount_LIBRARIES)
+    # Already in cache
+    set(discount_FOUND TRUE)
+else()
+    if(NOT WIN32)
+        find_package(PkgConfig QUIET)
+        pkg_check_modules(PC_LIBMARKDOWN QUIET libmarkdown)
+        set(PC_LIBMARKDOWN_VERSION_STRING ${PC_LIBMARKDOWN_VERSION})
+        message(STATUS "LIBDISCOUNT VERSION found: ${PC_LIBMARKDOWN_VERSION_STRING}")
+    endif()
+    find_library(
+        discount_LIBRARY
+        NAMES
+            markdown
+            libmarkdown
+    )
 
-if (discount_INCLUDE_DIRS AND discount_LIBRARIES)
-  # Already in cache
-  set (discount_FOUND TRUE)
-else ()
-  if (NOT WIN32)
-      find_package(PkgConfig QUIET)
-      PKG_CHECK_MODULES(PC_LIBMARKDOWN QUIET libmarkdown)
-      set(PC_LIBMARKDOWN_VERSION_STRING ${PC_LIBMARKDOWN_VERSION})
-      MESSAGE(STATUS "LIBDISCOUNT VERSION found: ${PC_LIBMARKDOWN_VERSION_STRING}")
-  endif ()	
-  find_library (discount_LIBRARY
-    NAMES markdown libmarkdown
-  )
+    find_path(discount_INCLUDE_DIR NAMES mkdio.h)
 
-  find_path (discount_INCLUDE_DIR
-    NAMES mkdio.h
-  )
+    set(discount_LIBRARIES ${discount_LIBRARY})
+    set(discount_INCLUDE_DIRS ${discount_INCLUDE_DIR})
 
-  set(discount_LIBRARIES ${discount_LIBRARY})
-  set(discount_INCLUDE_DIRS ${discount_INCLUDE_DIR})
-  
-  include (FindPackageHandleStandardArgs)
-  find_package_handle_standard_args (Discount DEFAULT_MSG discount_LIBRARIES discount_INCLUDE_DIR)
-
+    include(FindPackageHandleStandardArgs)
+    find_package_handle_standard_args(
+        Discount
+        DEFAULT_MSG
+        discount_LIBRARIES
+        discount_INCLUDE_DIR
+    )
 endif()
 
-mark_as_advanced(discount_INCLUDE_DIRS discount_LIBRARIES)
-if (discount_FOUND)
-   add_library(discount::Lib UNKNOWN IMPORTED)
-   set_target_properties(discount::Lib PROPERTIES INTERFACE_INCLUDE_DIRECTORIES ${discount_INCLUDE_DIRS} IMPORTED_LOCATION ${discount_LIBRARIES})
+mark_as_advanced(
+    discount_INCLUDE_DIRS
+    discount_LIBRARIES
+)
+if(discount_FOUND)
+    add_library(discount::Lib UNKNOWN IMPORTED)
+    set_target_properties(
+        discount::Lib
+        PROPERTIES
+            INTERFACE_INCLUDE_DIRECTORIES
+                ${discount_INCLUDE_DIRS}
+            IMPORTED_LOCATION
+                ${discount_LIBRARIES}
+    )
 endif()

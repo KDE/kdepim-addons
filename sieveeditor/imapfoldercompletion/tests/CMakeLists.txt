@@ -3,7 +3,9 @@
 add_executable(sieveeditorimapfoldercompletion_gui)
 target_sources(
     sieveeditorimapfoldercompletion_gui
-    PRIVATE main.cpp selectimapwidgettest.cpp
+    PRIVATE
+        main.cpp
+        selectimapwidgettest.cpp
 )
 
 target_link_libraries(

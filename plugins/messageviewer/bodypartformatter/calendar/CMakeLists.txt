@@ -36,7 +36,9 @@ ki18n_wrap_ui(messageviewer_bodypartformatter_text_calendar attendeeselector.ui)
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         messageviewer_bodypartformatter_text_calendar
-        PROPERTIES UNITY_BUILD ON
+        PROPERTIES
+            UNITY_BUILD
+                ON
     )
 endif()
 
@@ -61,7 +63,8 @@ target_link_libraries(
 )
 
 install(
-    TARGETS messageviewer_bodypartformatter_text_calendar
+    TARGETS
+        messageviewer_bodypartformatter_text_calendar
     DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/bodypartformatter
 )
 if(BUILD_TESTING)

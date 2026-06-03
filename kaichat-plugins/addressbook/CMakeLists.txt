@@ -12,15 +12,19 @@ ecm_qt_declare_logging_category(kaichat_addressbookplugin HEADER kaichat_address
 target_sources(
     kaichat_addressbookplugin
     PRIVATE
-    kaichataddressbookplugin.cpp
-    kaichataddressbookplugin.h
-    kaichataddressbookplugindialog.cpp
-    kaichataddressbookplugindialog.h
-    kaichataddressbookpluginwidget.cpp
-    kaichataddressbookpluginwidget.h
-    kaichataddressbookpluginjob.h
-    kaichataddressbookpluginjob.cpp
-    kaichataddressbookpluginutils.cpp
-    kaichataddressbookpluginutils.h
+        kaichataddressbookplugin.cpp
+        kaichataddressbookplugin.h
+        kaichataddressbookplugindialog.cpp
+        kaichataddressbookplugindialog.h
+        kaichataddressbookpluginwidget.cpp
+        kaichataddressbookpluginwidget.h
+        kaichataddressbookpluginjob.h
+        kaichataddressbookpluginjob.cpp
+        kaichataddressbookpluginutils.cpp
+        kaichataddressbookpluginutils.h
 )
-target_link_libraries(kaichat_addressbookplugin KF6::TextAutoGenerateText KPim6::AkonadiContactCore)
+target_link_libraries(
+    kaichat_addressbookplugin
+    KF6::TextAutoGenerateText
+    KPim6::AkonadiContactCore
+)

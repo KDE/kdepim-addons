@@ -3,7 +3,9 @@
 kcoreaddons_add_plugin(messageviewer_dkimconfigplugin INSTALL_NAMESPACE pim6/messageviewer/configuresettings)
 target_sources(
     messageviewer_dkimconfigplugin
-    PRIVATE dkimconfiguresettingsplugin.cpp dkimconfiguresettingsplugin.h
+    PRIVATE
+        dkimconfiguresettingsplugin.cpp
+        dkimconfiguresettingsplugin.h
 )
 
 target_link_libraries(
@@ -43,7 +45,12 @@ ecm_qt_declare_logging_category(dkimverifyconfigure HEADER libdkimverifyconfigur
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(dkimverifyconfigure PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        dkimverifyconfigure
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 generate_export_header(dkimverifyconfigure BASE_NAME libdkimverifyconfigure)
@@ -60,14 +67,20 @@ target_link_libraries(
 set_target_properties(
     dkimverifyconfigure
     PROPERTIES
-        OUTPUT_NAME dkimverifyconfigure
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        OUTPUT_NAME
+            dkimverifyconfigure
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS dkimverifyconfigure ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        dkimverifyconfigure
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 if(BUILD_TESTING)
     add_subdirectory(autotests)

@@ -3,7 +3,9 @@
 kcoreaddons_add_plugin(messageviewer_openurlwithconfigplugin INSTALL_NAMESPACE pim6/messageviewer/configuresettings)
 target_sources(
     messageviewer_openurlwithconfigplugin
-    PRIVATE openurlwithconfigplugin.cpp openurlwithconfigplugin.h
+    PRIVATE
+        openurlwithconfigplugin.cpp
+        openurlwithconfigplugin.h
 )
 
 target_link_libraries(
@@ -36,7 +38,12 @@ ecm_qt_declare_logging_category(openurlwithconfigure HEADER libopenurlwithconfig
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(openurlwithconfigure PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        openurlwithconfigure
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 generate_export_header(openurlwithconfigure BASE_NAME libopenurlwithconfigure)
@@ -52,14 +59,20 @@ target_link_libraries(
 set_target_properties(
     openurlwithconfigure
     PROPERTIES
-        OUTPUT_NAME openurlwithconfigure
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        OUTPUT_NAME
+            openurlwithconfigure
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS openurlwithconfigure ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        openurlwithconfigure
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 if(BUILD_TESTING)
     add_subdirectory(autotests)

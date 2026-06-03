@@ -13,6 +13,7 @@ target_link_libraries(
     KF6::TextTemplate
 )
 install(
-    TARGETS kitinerary_ktexttemplate_extension
+    TARGETS
+        kitinerary_ktexttemplate_extension
     DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/messageviewer/kf6/ktexttemplate
 )

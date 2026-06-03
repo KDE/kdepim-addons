@@ -14,7 +14,4 @@ target_link_libraries(
     KPim6::Libkleo
 )
 
-install(
-    TARGETS kcm_kmail_gnupgsystem
-    DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/kcms/kleopatra/
-)
+install(TARGETS kcm_kmail_gnupgsystem DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/kcms/kleopatra/)

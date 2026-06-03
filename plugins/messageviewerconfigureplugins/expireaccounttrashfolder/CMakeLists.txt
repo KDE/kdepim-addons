@@ -18,14 +18,13 @@ ecm_qt_declare_logging_category(expireaccounttrashfolderconfig HEADER libexpirea
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         expireaccounttrashfolderconfig
-        PROPERTIES UNITY_BUILD ON
+        PROPERTIES
+            UNITY_BUILD
+                ON
     )
 endif()
 
-generate_export_header(
-    expireaccounttrashfolderconfig
-    BASE_NAME libexpireaccounttrashfolderconfig
-)
+generate_export_header(expireaccounttrashfolderconfig BASE_NAME libexpireaccounttrashfolderconfig)
 target_link_libraries(
     expireaccounttrashfolderconfig
     KPim6::MessageViewer
@@ -36,14 +35,20 @@ target_link_libraries(
 set_target_properties(
     expireaccounttrashfolderconfig
     PROPERTIES
-        OUTPUT_NAME expireaccounttrashfolderconfig
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        OUTPUT_NAME
+            expireaccounttrashfolderconfig
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS expireaccounttrashfolderconfig ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        expireaccounttrashfolderconfig
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )
 
 kcoreaddons_add_plugin(messageviewer_expireaccounttrashfolderconfigplugin INSTALL_NAMESPACE pim6/messageviewer/configuresettings)

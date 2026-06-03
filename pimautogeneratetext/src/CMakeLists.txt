@@ -31,8 +31,8 @@ target_sources(
         autogenerateconfigureaskwidget.cpp
         autogenerateconfigurelistviewdelegate.h
         autogenerateconfigurelistviewdelegate.cpp
-	autogenerateconfigureaskfilterproxymodel.h
-	autogenerateconfigureaskfilterproxymodel.cpp
+        autogenerateconfigureaskfilterproxymodel.h
+        autogenerateconfigureaskfilterproxymodel.cpp
 )
 
 ecm_generate_headers(PimAutoGenerateText_Camelcases_HEADERS
@@ -45,18 +45,28 @@ ecm_generate_headers(PimAutoGenerateText_Camelcases_HEADERS
 
 target_link_libraries(
     KPim6AutoGenerateText
-    PUBLIC Qt::Widgets KF6::ConfigGui
-    PRIVATE KF6::I18n KF6::WidgetsAddons KF6::TextAutoGenerateText
+    PUBLIC
+        Qt::Widgets
+        KF6::ConfigGui
+    PRIVATE
+        KF6::I18n
+        KF6::WidgetsAddons
+        KF6::TextAutoGenerateText
 )
 
 set_target_properties(
     KPim6AutoGenerateText
     PROPERTIES
-        VERSION ${KDEPIMADDONS_LIB_VERSION}
-        SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+        VERSION
+            ${KDEPIMADDONS_LIB_VERSION}
+        SOVERSION
+            ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 install(
-    TARGETS KPim6AutoGenerateText ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    LIBRARY NAMELINK_SKIP
+    TARGETS
+        KPim6AutoGenerateText
+        ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    LIBRARY
+        NAMELINK_SKIP
 )

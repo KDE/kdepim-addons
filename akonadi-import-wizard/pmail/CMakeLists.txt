@@ -1,6 +1,9 @@
 # SPDX-FileCopyrightText: 2019-2026 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-set(pmailimporter_SRCS pmailimportdata.cpp pmailsettings.cpp)
+set(pmailimporter_SRCS
+    pmailimportdata.cpp
+    pmailsettings.cpp
+)
 
 kcoreaddons_add_plugin(pmailimporterplugin SOURCES
     ${pmailimporter_SRCS} INSTALL_NAMESPACE importwizard

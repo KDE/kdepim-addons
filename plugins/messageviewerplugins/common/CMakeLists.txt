@@ -6,4 +6,3 @@ add_subdirectory(expandurlplugin)
 if(TARGET KF6::TextAutoGenerateText)
     add_subdirectory(messagevieweraiplugin)
 endif()
-

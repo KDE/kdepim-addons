@@ -5,7 +5,12 @@ add_definitions(-DTRANSLATION_DOMAIN=\"cryptopageplugin\")
 
 ########### next target ###############
 add_library(cryptopageplugin MODULE)
-target_sources(cryptopageplugin PRIVATE cryptopageplugin.cpp cryptopageplugin.h)
+target_sources(
+    cryptopageplugin
+    PRIVATE
+        cryptopageplugin.cpp
+        cryptopageplugin.h
+)
 
 target_link_libraries(
     cryptopageplugin
@@ -18,7 +23,4 @@ target_link_libraries(
     Gpgmepp
 )
 
-install(
-    TARGETS cryptopageplugin
-    DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/contacteditor/editorpageplugins/
-)
+install(TARGETS cryptopageplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/contacteditor/editorpageplugins/)

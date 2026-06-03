@@ -18,12 +18,12 @@ target_sources(
         checkfoldersizeaccountpluginconfiguredialog.cpp
         checkfoldersizeaccountpluginconfigurewidget.h
         checkfoldersizeaccountpluginconfigurewidget.cpp
-        checkfoldersizeaccountfilterproxymodel.h 
-	checkfoldersizeaccountfilterproxymodel.cpp
-        checkfoldersizeaccountcombobox.h 
-	checkfoldersizeaccountcombobox.cpp
-	checkfoldersizeaccountpluginopenfolderjob.cpp
-	checkfoldersizeaccountpluginopenfolderjob.h
+        checkfoldersizeaccountfilterproxymodel.h
+        checkfoldersizeaccountfilterproxymodel.cpp
+        checkfoldersizeaccountcombobox.h
+        checkfoldersizeaccountcombobox.cpp
+        checkfoldersizeaccountpluginopenfolderjob.cpp
+        checkfoldersizeaccountpluginopenfolderjob.h
         checkfoldersizeaccounttreeview.h
         checkfoldersizeaccounttreeview.cpp
 )
@@ -31,8 +31,6 @@ target_sources(
 kconfig_add_kcfg_files(kmail_checkfoldersizeaccount
     checkfoldersizeaccount.kcfgc
 )
-
-
 
 ecm_qt_declare_logging_category(kmail_checkfoldersizeaccount
     HEADER checkfoldersizeaccount_debug.h
@@ -45,7 +43,9 @@ ecm_qt_declare_logging_category(kmail_checkfoldersizeaccount
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         kmail_checkfoldersizeaccount
-        PROPERTIES UNITY_BUILD ON
+        PROPERTIES
+            UNITY_BUILD
+                ON
     )
 endif()
 

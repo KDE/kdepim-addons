@@ -24,7 +24,12 @@ ki18n_wrap_ui(mailtransport_sendplugin
     sendmailsettings.ui
 )
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(mailtransport_sendplugin PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        mailtransport_sendplugin
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 
 target_link_libraries(

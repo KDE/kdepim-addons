@@ -12,7 +12,9 @@ ecm_qt_declare_logging_category(kmailtransportactivitiesplugin HEADER kmailtrans
 
 target_sources(
     kmailtransportactivitiesplugin
-    PRIVATE transportactivitiesplugin.h transportactivitiesplugin.cpp
+    PRIVATE
+        transportactivitiesplugin.h
+        transportactivitiesplugin.cpp
 )
 
 target_link_libraries(

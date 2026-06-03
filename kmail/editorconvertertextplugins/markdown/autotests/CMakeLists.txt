@@ -5,9 +5,17 @@ set(kmail_markdownplugin_debug_SRCS)
 ecm_qt_declare_logging_category(kmail_markdownplugin_debug_SRCS HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin)
 
 macro(add_kmail_converttext_unittest _source _additional)
-    set(_test ${_source} ${_additional} ${kmail_markdownplugin_debug_SRCS})
+    set(_test
+        ${_source}
+        ${_additional}
+        ${kmail_markdownplugin_debug_SRCS}
+    )
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable(${_name} ${_test} ${_name}.h)
+    add_executable(
+        ${_name}
+        ${_test}
+        ${_name}.h
+    )
     add_test(NAME ${_name} COMMAND ${_name})
 
     ecm_mark_as_test(kmail_converttext-${_name})

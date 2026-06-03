@@ -24,7 +24,9 @@ target_sources(
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         kaddressbook_importexportcsvplugin
-        PROPERTIES UNITY_BUILD ON
+        PROPERTIES
+            UNITY_BUILD
+                ON
     )
 endif()
 target_link_libraries(
