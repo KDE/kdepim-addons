@@ -268,11 +268,6 @@ if(TARGET KPim6::PimCommonActivities)
     endif()
 endif()
 
-configure_file(
-    config-kdepim-addons.h.in
-    ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h
-)
-
 # For adblocker
 find_package(Corrosion CONFIG)
 set_package_properties(
@@ -284,10 +279,6 @@ set_package_properties(
             "CMake scripts to seamlessly build and link to targets using cargo"
         URL https://github.com/corrosion-rs/corrosion
 )
-
-if(BUILD_TESTING)
-    add_definitions(-DBUILD_TESTING)
-endif()
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 # Extra package
@@ -365,6 +356,24 @@ option(
     OFF
 )
 
+if(BUILD_TESTING)
+    add_definitions(-DBUILD_TESTING)
+endif()
+
+
+if(TARGET KF6::TextAutoGenerateText)
+    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 2.0.50)
+       set(HAVE_KDEPIMADDONS_TEXTAUTOGENERATE_INTERNAL_TOOLS TRUE)
+    endif()
+    add_subdirectory(pimautogeneratetext)
+    add_subdirectory(kaichat-plugins)
+endif()
+
+configure_file(
+    config-kdepim-addons.h.in
+    ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h
+)
+
 add_subdirectory(plugins)
 add_subdirectory(korganizer)
 add_subdirectory(kmail)
@@ -374,15 +383,6 @@ add_subdirectory(kmailtransport)
 add_subdirectory(kldap)
 if(TARGET KPim6::ImportWizard)
     add_subdirectory(akonadi-import-wizard)
-endif()
-if(TARGET KF6::TextAutoGenerateText)
-    if(${KF6TextAutoGenerateText_VERSION} VERSION_GREATER_EQUAL 2.0.50)
-        if(OPTION_ADD_INTERNAL_PLUGIN)
-            set(HAVE_KDEPIMADDONS_TEXTAUTOGENERATE_INTERNAL_TOOLS TRUE)
-        endif()
-    endif()
-    add_subdirectory(pimautogeneratetext)
-    add_subdirectory(kaichat-plugins)
 endif()
 
 ecm_qt_install_logging_categories(
