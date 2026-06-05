@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 13:25+0000\n"
+"POT-Creation-Date: 2026-06-05 00:45+0000\n"
 "PO-Revision-Date: 2019-04-18 03:40+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -106,13 +106,13 @@ msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
 msgstr ""
 
-#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
+#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
 msgstr ""
 
-#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
+#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:23
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"

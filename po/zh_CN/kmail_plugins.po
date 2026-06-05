@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 13:25+0000\n"
+"POT-Creation-Date: 2026-06-05 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -105,13 +105,13 @@ msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 100 kB"
 msgstr "大于 100 kB"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:21
+#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 1 MB"
 msgstr "大于 1 MB"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:22
+#: checkfoldersizeaccount/checkfoldersizeaccountcombobox.cpp:23
 #, kde-format
 msgctxt "@label:combobox, Folders bigger than the specified size"
 msgid "More Than 10 MB"
@@ -388,8 +388,8 @@ msgid ""
 "folder view below.<p>Not all tools support a classification as unsure. If "
 "you have not selected a capable tool, you cannot select a folder as well.</p>"
 msgstr ""
-"默认文件夹是收件夹，但您可以在下面的文件夹视图中更改。<p>并非所有的工具都支持"
-"分类未不确定。如果您没有选择有这样的功能的工具，您就无法选择此处的文件夹。</"
+"默认文件夹是收件箱文件夹，您可以在下面的文件夹视图中更改此设置。<p>并非所有的"
+"工具都支持“不确定”分类。如果您选择的工具不支持此功能，您将无法选择文件夹。</"
 "p>"
 
 #: common/antispamwizard.cpp:1188
