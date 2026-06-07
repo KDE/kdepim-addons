@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2018, 2019, 2020, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2024, 2026 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2024-08-19 22:52+0200\n"
+"PO-Revision-Date: 2026-05-26 21:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: markdown/markdownlib/markdownconfiguredialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Markdown Plugin"
-msgstr "Markdown 플러그인 설정"
+msgstr "마크다운 플러그인 설정"
 
 #: markdown/markdownlib/markdownconfigurewidget.cpp:19
 #, kde-format
@@ -34,13 +34,13 @@ msgstr "내장된 LaTeX 사용"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
-msgstr "PHP Markdown 추가 정의 목록 사용"
+msgstr "PHP 마크다운 추가 정의 목록 사용"
 
 #: markdown/markdownlib/markdownconverter.cpp:75
 #: markdown/markdownlib/markdownconverter.cpp:98
 #, kde-format
 msgid "Failed to compile the Markdown document."
-msgstr "Markdown 문서를 컴파일할 수 없습니다."
+msgstr "마크다운 문서를 컴파일할 수 없습니다."
 
 #: markdown/markdownlib/markdowncreateimagedialog.cpp:27
 #, kde-format
@@ -103,7 +103,7 @@ msgstr "링크:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"
-msgstr "Markdown 렌더링 미리 보기"
+msgstr "마크다운 렌더링 미리 보기"
 
 #: markdown/markdownlib/markdownpreviewwidget.cpp:77
 #, kde-format
@@ -114,18 +114,18 @@ msgstr "변환기 오류"
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
-msgstr "Markdown 언어에서 HTML을 생성합니다."
+msgstr "마크다운 언어에서 HTML을 생성합니다."
 
 #: markdown/plugin/markdowninterface.cpp:55
 #, kde-format
 msgid "Markdown"
-msgstr "Markdown"
+msgstr "마크다운"
 
 #: markdown/plugin/markdowninterface.cpp:57
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
-msgstr "Markdown 동작"
+msgstr "마크다운 동작"
 
 #: markdown/plugin/markdowninterface.cpp:62
 #, kde-format
@@ -175,7 +175,7 @@ msgstr "이미지 추가"
 #: markdown/plugin/markdownplugin.cpp:48
 #, kde-format
 msgid "Generate HTML from markdown language."
-msgstr "Markdown 언어에서 HTML을 생성합니다."
+msgstr "마크다운 언어에서 HTML을 생성합니다."
 
 #~ msgid "Insert Template Command..."
 #~ msgstr "템플릿 명령 삽입..."
