@@ -66,11 +66,7 @@ void PgpKeyMemento::exec(const QString &fingerprint)
     std::vector<GpgME::Key> outKeys;
     auto result = job->exec({fingerprint}, false, outKeys);
     if (result.error()) {
-#if GPGME_VERSION_NUMBER >= 0x011800 // 1.24.0
         mError = QString::fromStdString(result.error().asStdString());
-#else
-        mError = QString::fromStdString(result.error().asString());
-#endif
     } else if (!outKeys.empty()) {
         mKey = outKeys[0];
     }
@@ -84,11 +80,7 @@ void PgpKeyMemento::onKeyReceived(const GpgME::Key &key)
 void PgpKeyMemento::onListJobFinished(const GpgME::KeyListResult &result)
 {
     if (result.error()) {
-#if GPGME_VERSION_NUMBER >= 0x011800 // 1.24.0
         mError = QString::fromStdString(result.error().asStdString());
-#else
-        mError = QString::fromStdString(result.error().asString());
-#endif
     }
 
     setRunning(false);

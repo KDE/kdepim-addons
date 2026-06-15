@@ -64,11 +64,7 @@ bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v, BodyPart
         if (res.error()) {
             KMessageBox::detailedError(v,
                                        i18n("An error occurred while importing the key."),
-#if GPGME_VERSION_NUMBER >= 0x011800 // 1.24.0
                                        QString::fromUtf8(res.error().asStdString()),
-#else
-                                       QString::fromUtf8(res.error().asString()),
-#endif
                                        i18nc("@title:window", "Import error"));
         } else if (res.numConsidered() == 0) {
             KMessageBox::error(v, i18n("No keys to import where found."), i18nc("@title:window", "Import error"));

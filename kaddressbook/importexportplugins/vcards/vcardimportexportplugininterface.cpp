@@ -325,11 +325,7 @@ void VCardImportExportPluginInterface::addKey(KContacts::Addressee &addr, KConta
     delete context;
 
     if (error) {
-#if GPGME_VERSION_NUMBER >= 0x011800 // 1.24.0
         qCritical() << error.asStdString();
-#else
-        qCritical() << error.asString();
-#endif
         return;
     }
 
