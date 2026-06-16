@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-06-16 00:46+0000\n"
 "PO-Revision-Date: 2024-05-12 17:53+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -42,23 +42,23 @@ msgstr "Importa la chiave"
 msgid "An error occurred while importing the key."
 msgstr "Si è verificato un errore durante l'importazione della chiave."
 
-#: pgpkeyurlhandler.cpp:72 pgpkeyurlhandler.cpp:74
+#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Errore di importazione"
 
-#: pgpkeyurlhandler.cpp:74
+#: pgpkeyurlhandler.cpp:70
 #, kde-format
 msgid "No keys to import where found."
 msgstr "Nessuna chiave da importare trovata."
 
-#: pgpkeyurlhandler.cpp:76
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "La chiave è stata importata con successo."
 
-#: pgpkeyurlhandler.cpp:76
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-06-16 00:46+0000\n"
 "PO-Revision-Date: 2024-11-15 16:29+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -53,7 +53,7 @@ msgstr "Импорт контактов из текстового файла с 
 #: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:375
+#: vcards/vcardimportexportplugininterface.cpp:371
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Выберите контакты для экспорта."
@@ -61,7 +61,7 @@ msgstr "Выберите контакты для экспорта."
 #: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:387
+#: vcards/vcardimportexportplugininterface.cpp:383
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Не выбраны контакты для экспорта."
@@ -767,7 +767,7 @@ msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<para>Не удалось получить доступ к vCard:</para><para>%1</para>"
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:437
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -775,13 +775,13 @@ msgid ""
 "files?"
 msgstr "Выделен список контактов. Экспортировать его в несколько файлов?"
 
-#: vcards/vcardimportexportplugininterface.cpp:444
+#: vcards/vcardimportexportplugininterface.cpp:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Экспорт в один файл"
 
-#: vcards/vcardimportexportplugininterface.cpp:445
+#: vcards/vcardimportexportplugininterface.cpp:441
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

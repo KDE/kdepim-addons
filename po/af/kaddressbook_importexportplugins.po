@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-06-16 00:46+0000\n"
 "PO-Revision-Date: 2002-11-07 11:37+0200\n"
 "Last-Translator: WEB-Translator <http://kde.af.org.za>\n"
 "Language-Team: AFRIKAANS <AF@lia.org.za>\n"
@@ -39,7 +39,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:375
+#: vcards/vcardimportexportplugininterface.cpp:371
 #, fuzzy, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Uitvee Kontak"
@@ -47,7 +47,7 @@ msgstr "Uitvee Kontak"
 #: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:387
+#: vcards/vcardimportexportplugininterface.cpp:383
 #, fuzzy, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Uitvee Kontak"
@@ -722,7 +722,7 @@ msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "Verspreiding Lys"
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:437
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -730,13 +730,13 @@ msgid ""
 "files?"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:444
+#: vcards/vcardimportexportplugininterface.cpp:440
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Voer uit Vkaart 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:445
+#: vcards/vcardimportexportplugininterface.cpp:441
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

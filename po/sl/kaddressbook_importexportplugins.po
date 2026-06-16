@@ -2,7 +2,7 @@
 # Translation of kaddressbook.po to Slovenian
 # SLOVENIAN TRANSLATION OF KADDRESSBOOK.
 # Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-# $Id: kaddressbook_importexportplugins.po 1723087 2025-11-17 12:44:32Z scripty $
+# $Id: kaddressbook_importexportplugins.po 1739199 2026-06-16 01:29:37Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-06-16 00:46+0000\n"
 "PO-Revision-Date: 2024-05-12 07:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -51,7 +51,7 @@ msgstr "Uvozi stike iz datoteke z vrednostmi, ločenimi z vejico."
 #: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:375
+#: vcards/vcardimportexportplugininterface.cpp:371
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Kateri stik želite izvoziti?"
@@ -59,7 +59,7 @@ msgstr "Kateri stik želite izvoziti?"
 #: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:387
+#: vcards/vcardimportexportplugininterface.cpp:383
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Za izvoz niste izbrali nobenega stika."
@@ -770,7 +770,7 @@ msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<para>Ni mogoče dostopati do vCarda:</para><para>%1</para>"
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:437
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -778,13 +778,13 @@ msgid ""
 "files?"
 msgstr "Izbrali ste seznam stikov. Ali naj bodo izvoženi v več datotek?"
 
-#: vcards/vcardimportexportplugininterface.cpp:444
+#: vcards/vcardimportexportplugininterface.cpp:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Izvozi v eno datoteko"
 
-#: vcards/vcardimportexportplugininterface.cpp:445
+#: vcards/vcardimportexportplugininterface.cpp:441
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

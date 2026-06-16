@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_importexportplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-06-16 00:46+0000\n"
 "PO-Revision-Date: 2017-09-29 18:09+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "Uvezite kontakte iz fajla u formatu vrednosti razdvojenih zapetom."
 #: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:375
+#: vcards/vcardimportexportplugininterface.cpp:371
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Koji kontakt želite da izvezete?"
@@ -53,7 +53,7 @@ msgstr "Koji kontakt želite da izvezete?"
 #: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:387
+#: vcards/vcardimportexportplugininterface.cpp:383
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Niste izabrali nijedan kontakt za izvoz."
@@ -792,7 +792,7 @@ msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<para>Ne mogu da pristupim vCardu:</para><para>%1</para>"
 
 # rewrite-msgid: /list/several/
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:437
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -800,13 +800,13 @@ msgid ""
 "files?"
 msgstr "Izabrali ste više kontakata, treba li ih izvesti u više fajlova?"
 
-#: vcards/vcardimportexportplugininterface.cpp:444
+#: vcards/vcardimportexportplugininterface.cpp:440
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Izvezi u jedan fajl"
 
-#: vcards/vcardimportexportplugininterface.cpp:445
+#: vcards/vcardimportexportplugininterface.cpp:441
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

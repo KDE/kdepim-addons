@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-06-16 00:46+0000\n"
 "PO-Revision-Date: 2024-07-16 11:39+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -43,23 +43,23 @@ msgstr "Importér nøglen"
 msgid "An error occurred while importing the key."
 msgstr "En fejl opstod under importering af nøglen."
 
-#: pgpkeyurlhandler.cpp:72 pgpkeyurlhandler.cpp:74
+#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Importfejl"
 
-#: pgpkeyurlhandler.cpp:74
+#: pgpkeyurlhandler.cpp:70
 #, kde-format
 msgid "No keys to import where found."
 msgstr "Ingen nøgler at importere hvor fundet."
 
-#: pgpkeyurlhandler.cpp:76
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "Nøglen er blevet importeret."
 
-#: pgpkeyurlhandler.cpp:76
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"

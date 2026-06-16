@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-06-16 00:46+0000\n"
 "PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -44,23 +44,23 @@ msgstr "कीलम् आयातयन्तु"
 msgid "An error occurred while importing the key."
 msgstr "कीलस्य आयातकाले त्रुटिः अभवत् ।"
 
-#: pgpkeyurlhandler.cpp:72 pgpkeyurlhandler.cpp:74
+#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "आयातदोषः"
 
-#: pgpkeyurlhandler.cpp:74
+#: pgpkeyurlhandler.cpp:70
 #, kde-format
 msgid "No keys to import where found."
 msgstr "यत्र प्राप्तं तत्र आयातयितुं कुञ्जिकाः नास्ति।"
 
-#: pgpkeyurlhandler.cpp:76
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "कुञ्जी सफलतया आयातिता अस्ति।"
 
-#: pgpkeyurlhandler.cpp:76
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"

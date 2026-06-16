@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-06-16 00:46+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -43,24 +43,24 @@ msgstr "Увези кључ"
 msgid "An error occurred while importing the key."
 msgstr "Грешка при увожењу кључа."
 
-#: pgpkeyurlhandler.cpp:72 pgpkeyurlhandler.cpp:74
+#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
 #, fuzzy, kde-format
 #| msgid "Import error"
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Грешка увоза"
 
-#: pgpkeyurlhandler.cpp:74
+#: pgpkeyurlhandler.cpp:70
 #, kde-format
 msgid "No keys to import where found."
 msgstr ""
 
-#: pgpkeyurlhandler.cpp:76
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "Кључ је успешно увезен."
 
-#: pgpkeyurlhandler.cpp:76
+#: pgpkeyurlhandler.cpp:72
 #, fuzzy, kde-format
 #| msgid "Import finished"
 msgctxt "@title:window"
