@@ -58,11 +58,20 @@ void MarkdownHighlighter::applyFormat(int offset, int length, const KSyntaxHighl
         if (format.isItalic(theme())) {
             *mStream << u"font-style:italic;"_s;
         }
-        if (format.isUnderline(theme())) {
-            *mStream << u"text-decoration:underline;"_s;
-        }
-        if (format.isStrikeThrough(theme())) {
-            *mStream << u"text-decoration:line-through;"_s;
+        const bool hasUnderline = format.isUnderline(theme());
+        const bool hasStrikeThrough = format.isStrikeThrough(theme());
+        if (hasUnderline || hasStrikeThrough) {
+            *mStream << u"text-decoration:"_s;
+            if (hasUnderline) {
+                *mStream << u"underline"_s;
+            }
+            if (hasUnderline && hasStrikeThrough) {
+                *mStream << u' ';
+            }
+            if (hasStrikeThrough) {
+                *mStream << u"line-through"_s;
+            }
+            *mStream << u';';
         }
         *mStream << u"\">"_s;
     }
