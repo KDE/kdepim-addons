@@ -93,6 +93,13 @@ void CheckDuplicateEmailsJobTest::shouldReturnEmails_data()
     result.clear();
     result.insert(u"foo@kde.org"_s, 4);
     QTest::newRow("emailseparatedbycommat") << lst << result;
+
+    lst.clear();
+    lst.append(u"Foo@KDE.org"_s);
+    lst.append(u"foo@kde.org"_s);
+    result.clear();
+    result.insert(u"foo@kde.org"_s, 2);
+    QTest::newRow("duplicateemailswithdifferentcase") << lst << result;
 }
 
 void CheckDuplicateEmailsJobTest::shouldReturnEmails()

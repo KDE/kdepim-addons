@@ -23,6 +23,7 @@ void CheckDuplicateEmailsJob::start()
         QString tname;
         QString temail;
         KEmailAddress::extractEmailAddressAndName(email, temail, tname); // ignore return value
+        temail = temail.toLower();
 
         if (!temail.isEmpty()) {
             const int val = results.value(temail, 0);
