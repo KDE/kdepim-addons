@@ -31,11 +31,11 @@ SendmailJob::~SendmailJob() = default;
 
 void SendmailJob::doStart()
 {
-    QStringList arguments = QStringList() << QStringLiteral("-i") << QStringLiteral("-f") << sender() << to() << cc() << bcc();
+    QStringList arguments;
     if (!transport()->options().isEmpty()) {
-        const QStringList arg = KShell::splitArgs(transport()->options().trimmed());
-        arguments << arg;
+        arguments << KShell::splitArgs(transport()->options().trimmed());
     }
+    arguments << QStringLiteral("-i") << QStringLiteral("-f") << sender() << to() << cc() << bcc();
     qCDebug(MAILTRANSPORT_PLUGIN_LOG) << "Sendmail arguments " << arguments;
     mProcess->start(transport()->host(), arguments);
 
