@@ -79,6 +79,7 @@ void ConfirmBeforeDeletingManager::saveRules()
         const ConfirmBeforeDeletingRule &rule = mRules.at(i);
         rule.save(group);
     }
+    config->sync();
 }
 
 bool ConfirmBeforeDeletingManager::deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFound, ConfirmBeforeDeletingRule &rule) const
