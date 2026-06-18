@@ -133,6 +133,34 @@ void ConfirmAddressCheckJobTest::shouldNotDuplicateValue()
     QCOMPARE(job.invalidEmails(), emails);
 }
 
+void ConfirmAddressCheckJobTest::shouldNotMatchDomainInLocalPart()
+{
+    ConfirmAddressCheckJob job;
+    const QStringList domains{u"foo.com"_s};
+    const QStringList whiteList;
+    const QStringList emails{u"foo.com@example.org"_s, u"user@foo.com"_s};
+    job.setCheckSettings(domains, whiteList, false);
+    job.setAddressList(emails);
+    job.start();
+
+    QCOMPARE(job.validEmails(), QStringList() << u"user@foo.com"_s);
+    QCOMPARE(job.invalidEmails(), QStringList() << u"foo.com@example.org"_s);
+}
+
+void ConfirmAddressCheckJobTest::shouldMatchWhitelistCaseInsensitiveButExact()
+{
+    ConfirmAddressCheckJob job;
+    const QStringList domains;
+    const QStringList whiteList{u"Foo@Kde.org"_s};
+    const QStringList emails{u"foo@kde.org"_s, u"prefixfoo@kde.org.bad"_s};
+    job.setCheckSettings(domains, whiteList, false);
+    job.setAddressList(emails);
+    job.start();
+
+    QCOMPARE(job.validEmails(), QStringList() << u"foo@kde.org"_s);
+    QCOMPARE(job.invalidEmails(), QStringList() << u"prefixfoo@kde.org.bad"_s);
+}
+
 QTEST_MAIN(ConfirmAddressCheckJobTest)
 
 #include "moc_confirmaddresscheckjobtest.cpp"

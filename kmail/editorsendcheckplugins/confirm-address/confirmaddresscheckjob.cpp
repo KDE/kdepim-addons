@@ -6,6 +6,35 @@
 
 #include "confirmaddresscheckjob.h"
 
+namespace
+{
+bool matchWhitelistEmail(const QString &email, const QString &whitelistEmail)
+{
+    return email.compare(whitelistEmail, Qt::CaseInsensitive) == 0;
+}
+
+bool matchDomain(const QString &email, const QString &domain)
+{
+    const int atPos = email.lastIndexOf(QLatin1Char('@'));
+    if (atPos == -1 || atPos == (email.length() - 1)) {
+        return false;
+    }
+
+    const QStringView domainPart = QStringView{email}.mid(atPos + 1);
+    const QString normalizedDomain = domain.trimmed().startsWith(QLatin1Char('@')) ? domain.trimmed().mid(1) : domain.trimmed();
+    if (normalizedDomain.isEmpty()) {
+        return false;
+    }
+
+    if (domainPart.compare(normalizedDomain, Qt::CaseInsensitive) == 0) {
+        return true;
+    }
+
+    const QString suffix = QLatin1Char('.') + normalizedDomain;
+    return domainPart.endsWith(suffix, Qt::CaseInsensitive);
+}
+}
+
 ConfirmAddressCheckJob::ConfirmAddressCheckJob() = default;
 
 ConfirmAddressCheckJob::~ConfirmAddressCheckJob() = default;
@@ -22,7 +51,7 @@ void ConfirmAddressCheckJob::start()
         foundValidEmail = false;
         if (mRejectedDomain) {
             for (const QString &whiteEmail : std::as_const(mWhiteEmails)) {
-                if (email.contains(whiteEmail)) {
+                if (matchWhitelistEmail(email, whiteEmail)) {
                     if (!mValidEmails.contains(email)) {
                         mValidEmails.append(email);
                     }
@@ -33,7 +62,7 @@ void ConfirmAddressCheckJob::start()
             if (!foundValidEmail) {
                 bool foundRejectedDomain = false;
                 for (const QString &domain : std::as_const(mDomains)) {
-                    if (email.contains(domain)) {
+                    if (matchDomain(email, domain)) {
                         if (!mInvalidEmails.contains(email)) {
                             mInvalidEmails.append(email);
                         }
@@ -49,7 +78,7 @@ void ConfirmAddressCheckJob::start()
             }
         } else {
             for (const QString &domain : std::as_const(mDomains)) {
-                if (email.contains(domain)) {
+                if (matchDomain(email, domain)) {
                     if (!mValidEmails.contains(email)) {
                         mValidEmails.append(email);
                     }
@@ -59,7 +88,7 @@ void ConfirmAddressCheckJob::start()
             }
             if (!foundValidEmail) {
                 for (const QString &whiteEmail : std::as_const(mWhiteEmails)) {
-                    if (email.contains(whiteEmail)) {
+                    if (matchWhitelistEmail(email, whiteEmail)) {
                         if (!mValidEmails.contains(email)) {
                             mValidEmails.append(email);
                         }

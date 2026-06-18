@@ -23,4 +23,6 @@ private Q_SLOTS:
     void shouldNotDuplicateValue();
     void shouldReturnAllValidEmailsDomainRejectedDomain();
     void shouldReturnAllInValidEmailsDomainReject();
+    void shouldNotMatchDomainInLocalPart();
+    void shouldMatchWhitelistCaseInsensitiveButExact();
 };
