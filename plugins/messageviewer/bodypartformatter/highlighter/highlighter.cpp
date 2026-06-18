@@ -11,7 +11,7 @@
 #include <KSyntaxHighlighting/Theme>
 
 #include <QTextStream>
-
+using namespace Qt::Literals::StringLiterals;
 Highlighter::Highlighter(QTextStream *stream)
     : mStream(stream)
 {
@@ -57,11 +57,20 @@ void Highlighter::applyFormat(int offset, int length, const KSyntaxHighlighting:
         if (format.isItalic(theme())) {
             *mStream << QStringLiteral("font-style:italic;");
         }
-        if (format.isUnderline(theme())) {
-            *mStream << QStringLiteral("text-decoration:underline;");
-        }
-        if (format.isStrikeThrough(theme())) {
-            *mStream << QStringLiteral("text-decoration:line-through;");
+        const bool hasUnderline = format.isUnderline(theme());
+        const bool hasStrikeThrough = format.isStrikeThrough(theme());
+        if (hasUnderline || hasStrikeThrough) {
+            *mStream << u"text-decoration:"_s;
+            if (hasUnderline) {
+                *mStream << u"underline"_s;
+            }
+            if (hasUnderline && hasStrikeThrough) {
+                *mStream << u' ';
+            }
+            if (hasStrikeThrough) {
+                *mStream << u"line-through"_s;
+            }
+            *mStream << u';';
         }
         *mStream << QStringLiteral("\">");
     }
