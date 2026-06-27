@@ -1,21 +1,22 @@
 # Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 # SPDX-FileCopyrightText: 2026 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-01 02:41+0000\n"
-"PO-Revision-Date: 2026-03-17 10:00+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-06-26 23:25+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: kaichataddressbookplugin.cpp:24
 msgid "AddressBook info"
@@ -28,54 +29,55 @@ msgstr "Jméno uživatele"
 #: kaichataddressbookplugin.cpp:50
 #, kde-format
 msgid "Get Info From AddressBook"
-msgstr ""
+msgstr "Získat informace z knihy adres"
 
 #: kaichataddressbookplugin.cpp:55
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
+"Tento nástroj použijte k získání informací o uživateli z databáze Akonadi"
 
 #: kaichataddressbookplugindialog.cpp:16
 #, kde-format
 msgid "Configure Addressbook Tool Plugin"
-msgstr ""
+msgstr "Nastavení modulu Addressbook Tool"
 
 #: kaichataddressbookpluginjob.cpp:30
 #, kde-format
 msgid "Get Email..."
-msgstr ""
+msgstr "Získat e-mail..."
 
 #: kaichataddressbookpluginjob.cpp:65
 #, kde-format
 msgid "No Contact found in addressbook for %1"
-msgstr ""
+msgstr "V knize adres nebyl nalezen žádný kontakt pro %1"
 
 #: kaichataddressbookpluginjob.cpp:73
 #, kde-format
 msgid "No preferred email found for %1"
-msgstr ""
+msgstr "Pro %1 nebyl nalezen žádný preferovaný e-mail"
 
 #: kaichataddressbookpluginjob.cpp:75
 #, kde-format
 msgid "The preferred email for %1 is %2"
-msgstr ""
+msgstr "Preferovaný e-mail pro %1 je %2"
 
 #: kaichataddressbookpluginjob.cpp:82
 #, kde-format
 msgid "No Birthday found for %1"
-msgstr ""
+msgstr "Pro %1 nebyly nalezeny žádné narozeniny"
 
 #: kaichataddressbookpluginjob.cpp:84
 #, kde-format
 msgid "Birthday for %1 is %2"
-msgstr ""
+msgstr "Narozeniny %1 jsou %2"
 
 #: kaichataddressbookpluginjob.cpp:95
 #, kde-format
 msgid "No Address found for %1"
-msgstr ""
+msgstr "Pro %1 nebyla nalezena žádná adresa"
 
 #: kaichataddressbookpluginjob.cpp:97
 #, kde-format
 msgid "Address found for %1 is %2"
-msgstr ""
+msgstr "Adresa nalezená pro %1 je %2"
