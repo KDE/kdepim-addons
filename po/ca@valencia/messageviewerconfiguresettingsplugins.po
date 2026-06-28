@@ -316,7 +316,7 @@ msgid ""
 "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
 msgstr ""
 "<qt><p><strong>Estes expressions es poden utilitzar per als arguments:</"
-"strong></p><ul><li>%u - URL emprat per l'ordre</li></ul></strong></p></qt>"
+"strong></p><ul><li>%u – URL emprat per l'ordre</li></ul></strong></p></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:53
 #, kde-format
