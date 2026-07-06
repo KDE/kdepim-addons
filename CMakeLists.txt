@@ -5,7 +5,7 @@ set(PIM_VERSION "6.8.40")
 
 project(kdepim-addons VERSION ${PIM_VERSION})
 
-set(KF_MIN_VERSION "6.25.0")
+set(KF_MIN_VERSION "6.26.0")
 set(QT_REQUIRED_VERSION "6.9.0")
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH
