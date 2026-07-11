@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/kmail_editorinit_plugins."
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/kmail_editorinit_plugins."
 "pot\n"
-"X-Crowdin-File-ID: 45545\n"
+"X-Crowdin-File-ID: 52744\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:16
 #, kde-format
