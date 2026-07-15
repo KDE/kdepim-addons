@@ -29,6 +29,7 @@ CheckFolderSizeAccountPluginConfigureWidget::CheckFolderSizeAccountPluginConfigu
     hboxLayout->addWidget(new QLabel(i18nc("@label:textbox", "Size:"), this));
     mWarningSpinBox->setMaximum(999999999);
     mWarningSpinBox->setSingleStep(100000);
+    mWarningSpinBox->setMinimum(1000);
     hboxLayout->addWidget(mWarningSpinBox);
     load();
 }
