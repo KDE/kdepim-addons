@@ -99,7 +99,19 @@ target_link_libraries(
 if(Corrosion_VERSION VERSION_LESS 0.5.0)
     target_link_libraries(adblockplugin webengineviewer-adblock)
 else()
-    target_link_libraries(adblockplugin webengineviewer_adblock)
+    if(CMAKE_LINKER MATCHES "ld\\.bfd$")
+        # GNU ld.bfd may not resolve circular references inside the Rust staticlib
+        # unless it is linked as a whole archive.
+        target_link_libraries(
+            adblockplugin
+            PRIVATE
+                "-Wl,--whole-archive"
+                webengineviewer_adblock
+                "-Wl,--no-whole-archive"
+        )
+    else()
+        target_link_libraries(adblockplugin webengineviewer_adblock)
+    endif()
 endif()
 
 set_target_properties(
