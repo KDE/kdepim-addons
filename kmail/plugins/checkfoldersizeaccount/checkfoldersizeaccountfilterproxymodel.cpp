@@ -9,7 +9,11 @@
 #include <Akonadi/EntityTreeModel>
 
 CheckFolderSizeAccountFilterProxyModel::CheckFolderSizeAccountFilterProxyModel(QObject *parent)
+#if HAVE_SORTFILTERPROXYMODELBASE
+    : TextAddonsWidgets::SortFilterProxyModelBase{parent}
+#else
     : QSortFilterProxyModel{parent}
+#endif
 {
     setRecursiveFilteringEnabled(true);
     setFilterCaseSensitivity(Qt::CaseInsensitive);
@@ -44,8 +48,16 @@ bool CheckFolderSizeAccountFilterProxyModel::filterAcceptsRow(int source_row, co
     case FolderSize::Unknown:
         break;
     }
-
+#if HAVE_SORTFILTERPROXYMODELBASE
+    const QModelIndex sourceIndex = sourceModel()->index(source_row, 0, source_parent);
+    const QString name = sourceIndex.data().toString();
+    if (contains(name)) {
+        return true;
+    }
+    return false;
+#else
     return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
+#endif
 }
 
 CheckFolderSizeAccountFilterProxyModel::FolderSize CheckFolderSizeAccountFilterProxyModel::folderSize() const

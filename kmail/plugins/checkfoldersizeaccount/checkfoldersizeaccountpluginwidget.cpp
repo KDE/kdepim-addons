@@ -84,7 +84,11 @@ void CheckFolderSizeAccountPluginWidget::slotCollectionTreeFetched()
 
 void CheckFolderSizeAccountPluginWidget::slotSetCollectionFilter(const QString &filter)
 {
+#if HAVE_SORTFILTERPROXYMODELBASE
+    mCollectionFilter->setFilterString(filter);
+#else
     mCollectionFilter->setFilterWildcard(filter);
+#endif
     mFolderView->expandAll();
 }
 
