@@ -5,7 +5,6 @@
 */
 
 #include "kaichataddressbookplugin.h"
-#include "config-kdepim-addons.h"
 #include "kaichataddressbookplugindialog.h"
 #include "kaichataddressbookpluginjob.h"
 #include "kaichataddressbookpluginutils.h"
@@ -36,11 +35,9 @@ KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVaria
             KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::UserName));
         mProperties.append(prop);
     }
-#if HAVE_KDEPIMADDONS_TEXTAUTOGENERATE_INTERNAL_TOOLS
     mRequired = {
         KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::AddressBookInfo),
         KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::UserName)};
-#endif
 }
 
 KAIChatAddressBookPlugin::~KAIChatAddressBookPlugin() = default;
