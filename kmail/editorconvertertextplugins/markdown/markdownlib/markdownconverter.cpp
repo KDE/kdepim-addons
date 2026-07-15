@@ -6,7 +6,7 @@
 
 #include "markdownconverter.h"
 #include "config-markdownplugin.h"
-#ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
+#if DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
 #include "markdownhighlighter.h"
 
 #include <KSyntaxHighlighting/Definition>
@@ -22,7 +22,7 @@ extern "C" {
 #include <mkdio.h>
 }
 
-#ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
+#if DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
 char *external_codefmt(const char *src, int, void *)
 {
     KSyntaxHighlighting::Repository repo;
