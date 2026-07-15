@@ -4,19 +4,9 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
-#include "config-kdepim-addons.h"
-#if HAVE_SORTFILTERPROXYMODELBASE
 #include <TextAddonsWidgets/SortFilterProxyModelBase>
-#else
-#include <QSortFilterProxyModel>
-#endif
 
-class CheckFolderSizeAccountFilterProxyModel :
-#if HAVE_SORTFILTERPROXYMODELBASE
-    public TextAddonsWidgets::SortFilterProxyModelBase
-#else
-    public QSortFilterProxyModel
-#endif
+class CheckFolderSizeAccountFilterProxyModel : public TextAddonsWidgets::SortFilterProxyModelBase
 {
     Q_OBJECT
 public:
