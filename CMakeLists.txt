@@ -63,6 +63,22 @@ file(
     kldap/*.h
 )
 
+set(_all_clang_format_source_files_normalized)
+foreach(_file IN LISTS ALL_CLANG_FORMAT_SOURCE_FILES)
+    get_filename_component(_full_file_path "${_file}" REALPATH)
+    string(
+        FIND "${_full_file_path}"
+        "${CMAKE_SOURCE_DIR}"
+        _source_idx
+    )
+    if(_source_idx EQUAL 0)
+        list(APPEND _all_clang_format_source_files_normalized "${_full_file_path}")
+    endif()
+endforeach()
+list(REMOVE_DUPLICATES _all_clang_format_source_files_normalized)
+set(ALL_CLANG_FORMAT_SOURCE_FILES ${_all_clang_format_source_files_normalized})
+unset(_all_clang_format_source_files_normalized)
+
 include(CheckFunctionExists)
 
 include(KDEInstallDirs)
