@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -46,42 +46,42 @@ msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "自动生成回复"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:32
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "自动生成回复"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:38
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:37
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "摘要文本"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:44
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "更正文本"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:50
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "快速回复"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:58
 #, kde-format
 msgctxt "@action"
 msgid "Configure AI"
 msgstr "配置 AI"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:133
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:126
 #, kde-format
 msgid "An error occured: %1"
 msgstr "发生错误：%1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:133
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:126
 #, kde-format
 msgid "Error"
 msgstr "错误"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-01 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:44+0000\n"
 "PO-Revision-Date: 2025-10-09 00:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -46,42 +46,42 @@ msgctxt "@title:window"
 msgid "Auto Generate Answer"
 msgstr "답변 자동 생성"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:33
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:32
 #, kde-format
 msgctxt "@action"
 msgid "Autogenerate Answer"
 msgstr "답변 자동 생성"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:38
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:37
 #, kde-format
 msgctxt "@action"
 msgid "Summary Text"
 msgstr "요약 텍스트"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:44
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Correct Text"
 msgstr "텍스트 고치기"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:50
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Quick Answer"
 msgstr "빠른 답변"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:59
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:58
 #, kde-format
 msgctxt "@action"
 msgid "Configure AI"
 msgstr "AI 설정"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:133
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:126
 #, kde-format
 msgid "An error occured: %1"
 msgstr "오류 발생: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:133
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:126
 #, kde-format
 msgid "Error"
 msgstr "오류"
