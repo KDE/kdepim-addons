@@ -336,7 +336,7 @@ set(QTCREATOR_TEMPLATE_INSTALL_DIR
 
 find_package(Discount "2" MODULE)
 set_package_properties(
-    "discount"
+    "Discount"
     PROPERTIES
         DESCRIPTION
             "A library that gives you formatting functions suitable for marking down entire documents or lines of text"
@@ -348,7 +348,7 @@ set_package_properties(
             "Generate Markdown file."
 )
 
-if(discount_FOUND)
+if(Discount_FOUND)
     if(DEFINED PC_LIBMARKDOWN_VERSION)
         if(${PC_LIBMARKDOWN_VERSION} VERSION_GREATER "2.2.5")
             set(DISCOUNT_HAS_HIGHLIGHTING_SUPPORT TRUE)

@@ -14,7 +14,7 @@
 
 if(discount_INCLUDE_DIRS AND discount_LIBRARIES)
     # Already in cache
-    set(discount_FOUND TRUE)
+    set(Discount_FOUND TRUE)
 else()
     if(NOT WIN32)
         find_package(PkgConfig QUIET)
@@ -47,7 +47,7 @@ mark_as_advanced(
     discount_INCLUDE_DIRS
     discount_LIBRARIES
 )
-if(discount_FOUND)
+if(Discount_FOUND)
     add_library(discount::Lib UNKNOWN IMPORTED)
     set_target_properties(
         discount::Lib
