@@ -14,7 +14,7 @@ if(TARGET KPim6::Itinerary)
 endif()
 
 option(FORCE_DISCOUNT_LIB "Force using discount lib for markdown bodyformatter." TRUE)
-if(FORCE_DISCOUNT_LIB AND discount_FOUND)
+if(FORCE_DISCOUNT_LIB AND Discount_FOUND)
     set(USE_DISCOUNT_LIB TRUE)
     message(STATUS "build bodyparformatter mardown with discount support")
     add_subdirectory(markdown)
