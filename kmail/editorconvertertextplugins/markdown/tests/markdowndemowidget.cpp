@@ -30,8 +30,11 @@ MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
     });
 
     QFile defaultTextFile(u":/test.txt"_s);
-    defaultTextFile.open(QIODevice::ReadOnly);
-    mEdit->setPlainText(QString::fromUtf8(defaultTextFile.readAll()));
+    if (!defaultTextFile.open(QIODevice::ReadOnly)) {
+        qWarning() << "impossible to find test.txt file";
+    } else {
+        mEdit->setPlainText(QString::fromUtf8(defaultTextFile.readAll()));
+    }
 }
 
 #include "moc_markdowndemowidget.cpp"
