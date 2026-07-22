@@ -80,7 +80,7 @@ public:
             const KCalendarCore::Event::Ptr event = inc.dynamicCast<KCalendarCore::Event>();
             if (event && event->hasEndDate()) {
                 // no enddate => not a valid invitation
-                inviteStr = KCalUtils::IncidenceFormatter::extensiveDisplayStr(cl, inc);
+                inviteStr = KCalUtils::IncidenceFormatter::extensiveDisplayStr(QString(), inc);
             }
         }
 
