@@ -13,17 +13,17 @@ xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/sta
 
   <!-- Store adblock lists -->
   <group name="Adblock">
-    <entry key="adblockFilterUrls" type="urlList">
+    <entry key="adblockFilterUrls" type="UrlList">
       <default code="true">
         AdblockListsUtil::adblockFilterUrlsDefaultList()
       </default>
     </entry>
-    <entry key="adblockFilterNames" type="stringList">
+    <entry key="adblockFilterNames" type="StringList">
      <default code="true">
         AdblockListsUtil::adblockFilterNamesDefaultList()
      </default>
     </entry>
-    <entry key="adblockFilterDownloadDismissed" type="bool">
+    <entry key="adblockFilterDownloadDismissed" type="Bool">
       <default>false</default>
     </entry>
   </group>
