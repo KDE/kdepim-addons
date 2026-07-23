@@ -155,3 +155,5 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(tests)
 endif()
+
+install(FILES settings/webengineurlinterceptoradblock.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
