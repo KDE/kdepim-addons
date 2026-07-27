@@ -1,5 +1,5 @@
-# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2009 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: cryptopageplugin\n"

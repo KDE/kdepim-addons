@@ -1,8 +1,8 @@
-# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2017-2020 Burkhard Lück <lueck@hube-lueck.de>
 # This file is distributed under the same license as the kdepim-addons package.
 # SPDX-FileCopyrightText: 2018, 2023 Frederik Schwarzer <schwarzer@kde.org>
-# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
