@@ -40,7 +40,7 @@ msgid ""
 "Your text will be sent to an external web site (https://languagetool.org/).\n"
 "Do you want to continue?"
 msgstr ""
-"Sie benutzen keine lokale Instanz.\n"
+"Sie verwenden keine lokale Instanz.\n"
 "Ihr Text wird an die externe Webseite https://languagetool.org gesendet.\n"
 "Möchten Sie fortfahren?"
 
