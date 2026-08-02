@@ -63,24 +63,15 @@ public:
 
         // Look for an invitation
         QString inviteStr;
-        QFile f(fileName);
-        QByteArray buf;
-        if (!f.open(QIODevice::ReadOnly)) {
-            qCWarning(MS_TNEF_LOG) << "Failed to read attachment part: " << f.errorString();
-        } else {
-            buf = f.readAll();
-            f.close();
-        }
-        if (!buf.isEmpty()) {
+        if (const auto ical = KTnef::messageToIcal(parser.message()); !ical.isEmpty()) {
             const KCalendarCore::MemoryCalendar::Ptr cl(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
             KCalUtils::InvitationFormatterHelper helper;
-            const QString invite = KTnef::formatTNEFInvitation(buf, cl, &helper);
-            KCalendarCore::ICalFormat format;
-            const KCalendarCore::Incidence::Ptr inc = format.fromString(invite);
-            const KCalendarCore::Event::Ptr event = inc.dynamicCast<KCalendarCore::Event>();
-            if (event && event->hasEndDate()) {
-                // no enddate => not a valid invitation
-                inviteStr = KCalUtils::IncidenceFormatter::extensiveDisplayStr(QString(), inc);
+            inviteStr = KCalUtils::IncidenceFormatter::formatICalInvitation(ical, cl, &helper);
+            if (inviteStr.isEmpty()) {
+                KCalendarCore::ICalFormat format;
+                if (const auto inc = format.fromString(ical); inc) {
+                    inviteStr = KCalUtils::IncidenceFormatter::extensiveDisplayStr(QString(), inc);
+                }
             }
         }
 
