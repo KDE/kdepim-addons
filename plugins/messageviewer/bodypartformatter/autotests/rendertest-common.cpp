@@ -10,6 +10,8 @@
 #include <QRegularExpression>
 #include <QTest>
 
+using namespace Qt::Literals;
+
 static void compareFile(const QString &outFile, const QString &referenceFile)
 {
     QVERIFY(QFile::exists(outFile));
@@ -45,6 +47,7 @@ static void compareFile(const QString &outFile, const QString &referenceFile)
         QString content = QString::fromUtf8(f.readAll());
         f.close();
         content.replace(QRegularExpression(QStringLiteral("\"file:[^\"]*[/(?:%2F)]([^\"/(?:%2F)]*)\"")), QStringLiteral("\"file:\\1\""));
+        content.replace(QRegularExpression(u"src=\"/[^\"]*/([^\"/(?:%2F)]*)\""_s), u"src=\"file:\\1\""_s);
         content.replace(QLatin1StringView("NBSP_ENTITY_PLACEHOLDER"), QLatin1StringView("&nbsp;")); // undo above transformation for xmllint
         content.replace(QRegularExpression(QStringLiteral("/bodypart/\\d+/")), QStringLiteral("/bodypart/0/"));
         QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));

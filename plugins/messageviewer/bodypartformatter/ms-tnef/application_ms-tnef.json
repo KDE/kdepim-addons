@@ -1,7 +1,15 @@
 {
+    "formatter": [
+        {
+            "mimetype": "application/vnd.ms-tnef"
+        },
+        {
+            "mimetype": "application/ms-tnef"
+        }
+    ],
     "renderer": [
         {
-            "type": "MimeTreeParser::AttachmentMessagePart"
+            "type": "MimeTreeParser::TextMessagePart"
         }
     ]
 }

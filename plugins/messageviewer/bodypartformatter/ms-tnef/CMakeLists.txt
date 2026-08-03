@@ -14,13 +14,9 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_mstn
 target_link_libraries(
     messageviewer_bodypartformatter_application_mstnef
     Qt::Core
-    KF6::CalendarCore
-    KPim6::CalendarUtils
     KPim6::Tnef
     KPim6::MessageCore
     KPim6::MessageViewer
-    KF6::IconThemes
-    KF6::I18n
     KF6::TextTemplate
 )
 install(
