@@ -166,6 +166,25 @@ static QString getSender(const MimeTreeParser::MessagePart *msgPart)
     return {};
 }
 
+static ScheduleMessage::Ptr stringToInvitation(const QString &iCal)
+{
+    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
+    ICalFormat format;
+    ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, iCal);
+    if (!message) {
+        // TODO: Error message?
+        qCWarning(TEXT_CALENDAR_LOG) << "Can't parse this ical string: " << iCal;
+    }
+
+    return message;
+}
+
+static Incidence::Ptr stringToIncidence(const QString &iCal)
+{
+    const auto message = stringToInvitation(iCal);
+    return message ? message->event().dynamicCast<Incidence>() : nullptr;
+}
+
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
@@ -206,9 +225,13 @@ public:
                 }
 
                 MemoryCalendar::Ptr cl(new MemoryCalendar(QTimeZone::systemTimeZone()));
+                const auto msg = stringToInvitation(source);
+                if (!msg) {
+                    return false;
+                }
 
                 const auto sender = getSender(msgPart.get());
-                const QString html = KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(source, cl, &helper, sender);
+                const QString html = KCalUtils::IncidenceFormatter::formatICalInvitation(msg, &helper, sender);
 
                 if (html.isEmpty()) {
                     return false;
@@ -248,20 +271,6 @@ static QString directoryForStatus(Attendee::PartStat status)
         break;
     }
     return dir;
-}
-
-static Incidence::Ptr stringToIncidence(const QString &iCal)
-{
-    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
-    ICalFormat format;
-    ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, iCal);
-    if (!message) {
-        // TODO: Error message?
-        qCWarning(TEXT_CALENDAR_LOG) << "Can't parse this ical string: " << iCal;
-        return {};
-    }
-
-    return message->event().dynamicCast<Incidence>();
 }
 
 class UrlHandler : public MessageViewer::Interface::BodyPartURLHandler
