@@ -166,9 +166,8 @@ static QString getSender(const MimeTreeParser::MessagePart *msgPart)
     return {};
 }
 
-static ScheduleMessage::Ptr stringToInvitation(const QString &iCal)
+static ScheduleMessage::Ptr stringToInvitation(const QString &iCal, const KCalendarCore::Calendar::Ptr &calendar)
 {
-    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
     ICalFormat format;
     ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, iCal);
     if (!message) {
@@ -179,9 +178,9 @@ static ScheduleMessage::Ptr stringToInvitation(const QString &iCal)
     return message;
 }
 
-static Incidence::Ptr stringToIncidence(const QString &iCal)
+static Incidence::Ptr stringToIncidence(const QString &iCal, const KCalendarCore::Calendar::Ptr &calendar)
 {
-    const auto message = stringToInvitation(iCal);
+    const auto message = stringToInvitation(iCal, calendar);
     return message ? message->event().dynamicCast<Incidence>() : nullptr;
 }
 
@@ -224,8 +223,7 @@ public:
                     source = msgPart->text();
                 }
 
-                MemoryCalendar::Ptr cl(new MemoryCalendar(QTimeZone::systemTimeZone()));
-                const auto msg = stringToInvitation(source);
+                const auto msg = stringToInvitation(source, memento->calendar());
                 if (!msg) {
                     return false;
                 }
@@ -350,10 +348,8 @@ public:
         return role;
     }
 
-    static Attachment findAttachment(const QString &name, const QString &iCal)
+    static Attachment findAttachment(const QString &name, const KCalendarCore::Incidence::Ptr &incidence)
     {
-        Incidence::Ptr incidence = stringToIncidence(iCal);
-
         // get the attachment by name from the incidence
         Attachment::List attachments = incidence->attachments();
         Attachment attachment;
@@ -700,12 +696,15 @@ public:
         return mailICal(receiver, recv, msg, subject, status, type != Forward, viewerInstance);
     }
 
-    bool saveFile(const QString &receiver, const QString &iCal, const QString &type, MimeTreeParser::Interface::BodyPart *bodyPart) const
+    bool saveFile(const QString &receiver,
+                  const KCalendarCore::ScheduleMessage::Ptr &message,
+                  const QString &type,
+                  MimeTreeParser::Interface::BodyPart *bodyPart) const
     {
         auto memento = dynamic_cast<MemoryCalendarMemento *>(bodyPart->memento());
         // This will block. There's no way to make it async without refactoring the memento mechanism
 
-        auto itipHandler = new SyncItipHandler(receiver, iCal, type, memento->calendar());
+        auto itipHandler = new SyncItipHandler(receiver, message, type, memento->calendar());
 
         // If result is ResultCancelled, then we don't show the message box and return false so kmail
         // doesn't delete the e-mail.
@@ -879,7 +878,10 @@ public:
         return false;
     }
 
-    bool handleInvitation(const QString &iCal, Attendee::PartStat status, MimeTreeParser::Interface::BodyPart *part, Viewer *viewerInstance) const
+    bool handleInvitation(const KCalendarCore::ScheduleMessage::Ptr &message,
+                          Attendee::PartStat status,
+                          MimeTreeParser::Interface::BodyPart *part,
+                          Viewer *viewerInstance) const
     {
         bool ok = true;
         const QString receiver = findReceiver(part->content());
@@ -890,7 +892,8 @@ public:
             return true;
         }
 
-        Incidence::Ptr incidence = stringToIncidence(iCal);
+        const auto memento = dynamic_cast<MemoryCalendarMemento *>(part->memento());
+        const Incidence::Ptr incidence = message->event().dynamicCast<Incidence>();
         qCDebug(TEXT_CALENDAR_LOG) << "Handling invitation: uid is : " << incidence->uid() << "; schedulingId is:" << incidence->schedulingID()
                                    << "; Attendee::PartStat = " << status;
 
@@ -923,7 +926,7 @@ public:
         }
         if (status != Attendee::Delegated) {
             // we do that below for delegated incidences
-            if (!saveFile(receiver, iCal, dir, part)) {
+            if (!saveFile(receiver, message, dir, part)) {
                 return false;
             }
         }
@@ -1007,7 +1010,6 @@ public:
         // with the delegate as additional attendee), we also use that for updating
         // our calendar
         if (status == Attendee::Delegated) {
-            incidence = stringToIncidence(iCal);
             auto attendees = incidence->attendees();
             const int myselfIdx = findMyself(attendees, receiver);
             if (myselfIdx >= 0) {
@@ -1025,7 +1027,7 @@ public:
             ICalFormat format;
             format.setTimeZone(QTimeZone::systemTimeZone());
             const QString iCal = format.createScheduleMessage(incidence, iTIPRequest);
-            if (!saveFile(receiver, iCal, dir, part)) {
+            if (!saveFile(receiver, stringToInvitation(iCal, memento->calendar()), dir, part)) {
                 return false;
             }
 
@@ -1034,9 +1036,9 @@ public:
         return ok;
     }
 
-    void openAttachment(const QString &name, const QString &iCal) const
+    void openAttachment(const QString &name, const KCalendarCore::Incidence::Ptr &incidence) const
     {
-        Attachment attachment(findAttachment(name, iCal));
+        Attachment attachment(findAttachment(name, incidence));
         if (attachment.isEmpty()) {
             return;
         }
@@ -1067,9 +1069,9 @@ public:
         }
     }
 
-    [[nodiscard]] bool saveAsAttachment(const QString &name, const QString &iCal) const
+    [[nodiscard]] bool saveAsAttachment(const QString &name, const KCalendarCore::Incidence::Ptr &incidence) const
     {
-        Attachment a(findAttachment(name, iCal));
+        Attachment a(findAttachment(name, incidence));
         if (a.isEmpty()) {
             return false;
         }
@@ -1147,13 +1149,12 @@ public:
         return true;
     }
 
-    bool handleDeclineCounter(const QString &iCal, MimeTreeParser::Interface::BodyPart *part, Viewer *viewerInstance) const
+    bool handleDeclineCounter(const KCalendarCore::Incidence::Ptr &incidence, MimeTreeParser::Interface::BodyPart *part, Viewer *viewerInstance) const
     {
         const QString receiver(findReceiver(part->content()));
         if (receiver.isEmpty()) {
             return true;
         }
-        Incidence::Ptr incidence(stringToIncidence(iCal));
         if (askForComment(Attendee::Declined)) {
             QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(nullptr);
             dlg->setWindowTitle(i18nc("@title:window", "Decline Counter Proposal"));
@@ -1176,7 +1177,7 @@ public:
         return mail(viewerInstance, incidence, QStringLiteral("declinecounter"), KCalendarCore::iTIPDeclineCounter, receiver, QString(), DeclineCounter);
     }
 
-    bool counterProposal(const QString &iCal, MimeTreeParser::Interface::BodyPart *part) const
+    bool counterProposal(const KCalendarCore::ScheduleMessage::Ptr &message, MimeTreeParser::Interface::BodyPart *part) const
     {
         const QString receiver = findReceiver(part->content());
         if (receiver.isEmpty()) {
@@ -1185,7 +1186,7 @@ public:
 
         // Don't delete the invitation here in any case, if the counter proposal
         // is declined you might need it again.
-        return saveFile(receiver, iCal, QStringLiteral("counter"), part);
+        return saveFile(receiver, message, QStringLiteral("counter"), part);
     }
 
     bool handleClick(Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override
@@ -1214,7 +1215,9 @@ public:
             iCal = part->content()->decodedText();
         }
 
-        Incidence::Ptr incidence = stringToIncidence(iCal);
+        const auto memento = dynamic_cast<MemoryCalendarMemento *>(part->memento());
+        const auto message = stringToInvitation(iCal, memento->calendar());
+        Incidence::Ptr incidence = message ? message->event().dynamicCast<Incidence>() : nullptr;
         if (!incidence) {
             KMessageBox::error(nullptr,
                                i18n("The calendar invitation stored in this email message is broken in some way. "
@@ -1228,21 +1231,21 @@ public:
         }
 
         if (path == QLatin1StringView("accept")) {
-            result = handleInvitation(iCal, Attendee::Accepted, part, viewerInstance);
+            result = handleInvitation(message, Attendee::Accepted, part, viewerInstance);
         } else if (path == QLatin1StringView("accept_conditionally")) {
-            result = handleInvitation(iCal, Attendee::Tentative, part, viewerInstance);
+            result = handleInvitation(message, Attendee::Tentative, part, viewerInstance);
         } else if (path == QLatin1StringView("counter")) {
-            result = counterProposal(iCal, part);
+            result = counterProposal(message, part);
         } else if (path == QLatin1StringView("ignore")) {
             result = handleIgnore(viewerInstance);
         } else if (path == QLatin1StringView("decline")) {
-            result = handleInvitation(iCal, Attendee::Declined, part, viewerInstance);
+            result = handleInvitation(message, Attendee::Declined, part, viewerInstance);
         } else if (path == QLatin1StringView("decline_counter")) {
-            result = handleDeclineCounter(iCal, part, viewerInstance);
+            result = handleDeclineCounter(incidence, part, viewerInstance);
         } else if (path == QLatin1StringView("postpone")) {
-            result = handleInvitation(iCal, Attendee::NeedsAction, part, viewerInstance);
+            result = handleInvitation(message, Attendee::NeedsAction, part, viewerInstance);
         } else if (path == QLatin1StringView("delegate")) {
-            result = handleInvitation(iCal, Attendee::Delegated, part, viewerInstance);
+            result = handleInvitation(message, Attendee::Delegated, part, viewerInstance);
         } else if (path == QLatin1StringView("forward")) {
             AttendeeSelector dlg;
             if (dlg.exec() == QDialog::Rejected) {
@@ -1255,20 +1258,18 @@ public:
             const QString receiver = findReceiver(part->content());
             result = mail(viewerInstance, incidence, QStringLiteral("forward"), iTIPRequest, receiver, fwdTo, Forward);
         } else if (path == QLatin1StringView("check_calendar")) {
-            incidence = stringToIncidence(iCal);
             showCalendar(incidence->dtStart().date());
             return true;
         } else if (path == QLatin1StringView("reply") || path == QLatin1StringView("cancel") || path == QLatin1StringView("accept_counter")) {
             // These should just be saved with their type as the dir
             const QString p = (path == QLatin1StringView("accept_counter") ? QStringLiteral("reply") : path);
-            if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, p, part)) {
+            if (saveFile(QStringLiteral("Receiver Not Searched"), message, p, part)) {
                 if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                     viewerInstance->deleteMessage();
                 }
                 result = true;
             }
         } else if (path == QLatin1StringView("record")) {
-            incidence = stringToIncidence(iCal);
             QString summary;
             int response = KMessageBox::questionTwoActionsCancel(nullptr,
                                                                  i18nc("@info",
@@ -1299,7 +1300,7 @@ public:
             }
             // fall through
             case KMessageBox::ButtonCode::PrimaryAction: // means "do not send"
-                if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, QStringLiteral("reply"), part)) {
+                if (saveFile(QStringLiteral("Receiver Not Searched"), message, QStringLiteral("reply"), part)) {
                     if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                         viewerInstance->deleteMessage();
                         result = true;
@@ -1315,7 +1316,7 @@ public:
 
         if (path.startsWith(QLatin1StringView("ATTACH:"))) {
             const QString name = QString::fromUtf8(QByteArray::fromBase64(path.mid(7).toUtf8()));
-            openAttachment(name, iCal);
+            openAttachment(name, incidence);
         }
 
         if (result) {
@@ -1346,6 +1347,8 @@ public:
         } else {
             iCal = part->content()->decodedText();
         }
+        const auto memento = dynamic_cast<MemoryCalendarMemento *>(part->memento());
+        const auto incidence = stringToIncidence(iCal, memento->calendar());
 
         auto menu = new QMenu();
         QAction *open = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
@@ -1353,9 +1356,9 @@ public:
 
         QAction *a = menu->exec(point, nullptr);
         if (a == open) {
-            openAttachment(name, iCal);
+            openAttachment(name, incidence);
         } else if (a == saveas) {
-            saveAsAttachment(name, iCal);
+            saveAsAttachment(name, incidence);
         }
         delete menu;
         return true;

@@ -12,7 +12,11 @@
 
 using namespace Akonadi;
 
-SyncItipHandler::SyncItipHandler(const QString &receiver, const QString &iCal, const QString &type, const Akonadi::CalendarBase::Ptr &calendar, QObject *parent)
+SyncItipHandler::SyncItipHandler(const QString &receiver,
+                                 const KCalendarCore::ScheduleMessage::Ptr &message,
+                                 const QString &type,
+                                 const Akonadi::CalendarBase::Ptr &calendar,
+                                 QObject *parent)
     : QObject(parent)
     , m_counterProposalEditorDelegate(new IncidenceEditorNG::GroupwareUiDelegate())
 {
@@ -24,7 +28,7 @@ SyncItipHandler::SyncItipHandler(const QString &receiver, const QString &iCal, c
     handler->setGroupwareUiDelegate(m_counterProposalEditorDelegate);
     handler->setCalendar(calendar);
 
-    handler->processiTIPMessage(receiver, iCal, type);
+    handler->processiTIPMessage(receiver, message, type);
 
     m_eventLoop.exec();
 }
