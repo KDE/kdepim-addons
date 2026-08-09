@@ -19,7 +19,11 @@ class SyncItipHandler : public QObject
 {
     Q_OBJECT
 public:
-    SyncItipHandler(const QString &receiver, const QString &iCal, const QString &type, const Akonadi::CalendarBase::Ptr &calendar, QObject *parent = nullptr);
+    SyncItipHandler(const QString &receiver,
+                    const KCalendarCore::ScheduleMessage::Ptr &message,
+                    const QString &type,
+                    const Akonadi::CalendarBase::Ptr &calendar,
+                    QObject *parent = nullptr);
     ~SyncItipHandler() override;
 
 public Q_SLOTS:
