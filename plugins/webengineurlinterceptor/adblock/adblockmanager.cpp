@@ -92,8 +92,21 @@ void copyStream(QIODevice &input, QIODevice &output)
 
 AdblockManager *AdblockManager::self()
 {
-    static AdblockManager s_self = AdblockManager();
-    return &s_self;
+    static std::unique_ptr<AdblockManager> s_self;
+    if (QCoreApplication::closingDown()) {
+        return nullptr;
+    }
+    if (!s_self) {
+        s_self = std::make_unique<AdblockManager>();
+        connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, s_self.get(), [&]() {
+            s_self.reset();
+        });
+        // for QTest, we dont get aboutToQuit there
+        connect(QCoreApplication::instance(), &QObject::destroyed, s_self.get(), [&]() {
+            s_self.reset();
+        });
+    }
+    return s_self.get();
 }
 
 void AdblockManager::reloadConfig()
@@ -197,7 +210,8 @@ void AdblockManager::refreshLists()
 
     for (const auto &list : std::as_const(mAdblockFilterLists)) {
         m_runningRequests++;
-        m_networkManager.get(QNetworkRequest(QUrl(list.url())));
+        auto reply = m_networkManager.get(QNetworkRequest(QUrl(list.url())));
+        reply->setParent(this);
     }
 }
 
