@@ -6,6 +6,9 @@
 
 #include "externalcomposerplugineditortest.h"
 #include "../externalcomposerplugineditor.h"
+
+#include <MessageComposer/PluginEditorInitInterface>
+
 #include <QTest>
 
 ExternalComposerPluginEditorTest::ExternalComposerPluginEditorTest(QObject *parent)

@@ -86,7 +86,7 @@ void GrantleeHeaderStylePluginTest::shouldCreateInterface()
     auto menu = new KActionMenu(this);
     auto act = new QActionGroup(this);
 
-    MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
+    std::unique_ptr<MessageViewer::HeaderStyleInterface> interface(plugin.createView(menu, act, new KActionCollection(this)));
     QVERIFY(interface);
     // QVERIFY(!interface->action().isEmpty());
 }
@@ -111,8 +111,8 @@ void GrantleeHeaderStylePluginTest::testThemeActivation()
     auto menu = new KActionMenu(this);
     auto act = new QActionGroup(this);
 
-    MessageViewer::GrantleeHeaderStyleInterface *interface =
-        static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this)));
+    std::unique_ptr<MessageViewer::GrantleeHeaderStyleInterface> interface(
+        static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this))));
     QVERIFY(interface);
 
     QVERIFY(interface->mThemeManager->themes().contains(themeName));
@@ -161,8 +161,8 @@ void GrantleeHeaderStylePluginTest::testThemeRender()
     auto menu = new KActionMenu(this);
     auto act = new QActionGroup(this);
 
-    MessageViewer::GrantleeHeaderStyleInterface *interface =
-        static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this)));
+    std::unique_ptr<MessageViewer::GrantleeHeaderStyleInterface> interface(
+        static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this))));
     QVERIFY(interface);
 
     QVERIFY(interface->mThemeManager->themes().contains(themeName));
