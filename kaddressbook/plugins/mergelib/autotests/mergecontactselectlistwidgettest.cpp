@@ -27,7 +27,7 @@ void MergeContactSelectListWidgetTest::shouldHaveDefaultValue()
     auto listWidget = selectListWidget.findChild<QListWidget *>(QStringLiteral("listwidget"));
     QVERIFY(listWidget);
     QCOMPARE(selectListWidget.selectedContact(), -1);
-    QCOMPARE(selectListWidget.conflictType(), KABMergeContacts::MergeContacts::None);
+    QCOMPARE((int)selectListWidget.conflictType(), (int)KABMergeContacts::MergeContacts::None);
 }
 
 QTEST_MAIN(MergeContactSelectListWidgetTest)

@@ -354,3 +354,5 @@ void MergeContacts::checkCustomValue(const KContacts::Addressee &address,
         }
     }
 }
+
+#include "moc_mergecontacts.cpp"
