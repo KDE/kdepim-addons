@@ -88,7 +88,7 @@ void MarkdownCreateImageWidgetTest::shouldGenerateLink()
     QCOMPARE(w.linkStr(), u"![TITLE](http://www.kde.org)"_s);
 
     mAlternateText->setText(u"alternate"_s);
-    QCOMPARE(w.linkStr(), u"![TITLE](http://www.kde.org \"alternate\"_s");
+    QCOMPARE(w.linkStr(), u"![TITLE](http://www.kde.org \"alternate\")"_s);
 }
 
 void MarkdownCreateImageWidgetTest::shouldChangeState()
@@ -130,7 +130,7 @@ void MarkdownCreateImageWidgetTest::shouldAddSize()
     mWidth->setValue(45);
     mHeight->setValue(70);
 
-    QCOMPARE(w.linkStr(), u"![TITLE](http://www.kde.org =45x70 \"alternate\"_s");
+    QCOMPARE(w.linkStr(), u"![TITLE](http://www.kde.org =45x70 \"alternate\")"_s);
     mAlternateText->setText(QString());
     QCOMPARE(w.linkStr(), u"![TITLE](http://www.kde.org =45x70)"_s);
 }
