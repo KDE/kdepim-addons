@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-07 00:47+0000\n"
+"POT-Creation-Date: 2026-08-10 00:46+0000\n"
 "PO-Revision-Date: 2024-08-09 03:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -68,12 +68,12 @@ msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "註解："
 
-#: text_calendar.cpp:369
+#: text_calendar.cpp:365
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
 msgstr "在邀請中找不到名為 %1 的附件"
 
-#: text_calendar.cpp:384
+#: text_calendar.cpp:380
 #, kde-format
 msgid ""
 "The invitation attachment \"%1\" is a web link that is inaccessible from "
@@ -83,7 +83,7 @@ msgstr ""
 "邀請附件 %1 是網頁連結，從此電腦無法連上。請要求此事件的發起者重新傳送邀請，"
 "並將附件以內含方式而不要用連結方式傳送。"
 
-#: text_calendar.cpp:436
+#: text_calendar.cpp:432
 #, kde-format
 msgid ""
 "<qt>None of your identities match the receiver of this message,<br/>please "
@@ -93,7 +93,7 @@ msgstr ""
 "<qt>您沒有任何身份符合這個信件的收件人，<br/>請選擇以下哪個地址是您的（如果有"
 "的話），<br/>或是選擇一個回覆用的身份：</qt>"
 
-#: text_calendar.cpp:442
+#: text_calendar.cpp:438
 #, kde-format
 msgid ""
 "<qt>Several of your identities match the receiver of this message,<br/"
@@ -102,265 +102,265 @@ msgstr ""
 "<qt>有一個以上的收件人符合您所設定的身份。<br/>請從以下的地址中選擇您的電子郵"
 "件地址：</qt>"
 
-#: text_calendar.cpp:457
+#: text_calendar.cpp:453
 #, kde-format
 msgid "Select Address"
 msgstr "選擇電子郵件地址"
 
-#: text_calendar.cpp:519
+#: text_calendar.cpp:515
 #, kde-format
 msgid "Answer: "
 msgstr "答案："
 
-#: text_calendar.cpp:521
+#: text_calendar.cpp:517
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
 msgstr "拒絕：%1"
 
-#: text_calendar.cpp:523
+#: text_calendar.cpp:519
 #, kde-format
 msgctxt "Unsure if it is possible to attend."
 msgid "Tentative: %1"
 msgstr "暫時：%1"
 
-#: text_calendar.cpp:525
+#: text_calendar.cpp:521
 #, kde-format
 msgctxt "Accepted the invitation."
 msgid "Accepted: %1"
 msgstr "接受：%1"
 
-#: text_calendar.cpp:547 text_calendar.cpp:566
+#: text_calendar.cpp:543 text_calendar.cpp:562
 #, kde-format
 msgid "Invitation answer attached."
 msgstr "已附加邀請回答。"
 
-#: text_calendar.cpp:669
+#: text_calendar.cpp:665
 #, kde-format
 msgid "Incidence with no summary"
 msgstr "沒有摘要的事件"
 
-#: text_calendar.cpp:674
+#: text_calendar.cpp:670
 #, kde-format
 msgid "Answer: %1"
 msgstr "答案：%1"
 
-#: text_calendar.cpp:677
+#: text_calendar.cpp:673
 #, kde-format
 msgid "Delegated: %1"
 msgstr "授權：%1"
 
-#: text_calendar.cpp:680
+#: text_calendar.cpp:676
 #, kde-format
 msgid "Forwarded: %1"
 msgstr "轉寄：%1"
 
-#: text_calendar.cpp:683
+#: text_calendar.cpp:679
 #, kde-format
 msgid "Declined Counter Proposal: %1"
 msgstr "拒絕的反提案：%1"
 
-#: text_calendar.cpp:738 text_calendar.cpp:744
+#: text_calendar.cpp:737 text_calendar.cpp:743
 #, kde-format
 msgid "\"%1\" occurred already."
 msgstr "%1 已發生。"
 
-#: text_calendar.cpp:740 text_calendar.cpp:757
+#: text_calendar.cpp:739 text_calendar.cpp:756
 #, kde-format
 msgid "\"%1\" is currently in-progress."
 msgstr "%1 已在進行中。"
 
-#: text_calendar.cpp:746
+#: text_calendar.cpp:745
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
 msgstr "%1 已在進行中，將持續今天一整天。"
 
-#: text_calendar.cpp:755 text_calendar.cpp:767
+#: text_calendar.cpp:754 text_calendar.cpp:766
 #, kde-format
 msgid "\"%1\" is past due."
 msgstr "%1 已過期。"
 
-#: text_calendar.cpp:761
+#: text_calendar.cpp:760
 #, kde-format
 msgid "\"%1\" has already started."
 msgstr "%1 已開始"
 
-#: text_calendar.cpp:769
+#: text_calendar.cpp:768
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
 msgstr "%1 已在進行中，將持續今天一整天"
 
-#: text_calendar.cpp:773
+#: text_calendar.cpp:772
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
 msgstr "%1 已開始，將持續整天"
 
-#: text_calendar.cpp:785
+#: text_calendar.cpp:784
 #, kde-format
 msgid "Do you still want to accept the task?"
 msgstr "您仍然要接受此工作嗎？"
 
-#: text_calendar.cpp:787
+#: text_calendar.cpp:786
 #, kde-format
 msgid "Do you still want to accept the invitation?"
 msgstr "您仍然要接受此邀請嗎？"
 
-#: text_calendar.cpp:789 text_calendar.cpp:801
+#: text_calendar.cpp:788 text_calendar.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept"
 msgstr "接受"
 
-#: text_calendar.cpp:793
+#: text_calendar.cpp:792
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
 msgstr "您仍然要傳送有條件接受此邀請的訊息嗎？"
 
-#: text_calendar.cpp:795
+#: text_calendar.cpp:794
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the task?"
 msgstr "您仍然要傳送有條件接受此工作的訊息嗎？"
 
-#: text_calendar.cpp:797 text_calendar.cpp:805 text_calendar.cpp:809
+#: text_calendar.cpp:796 text_calendar.cpp:804 text_calendar.cpp:808
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
 msgstr "傳送"
 
-#: text_calendar.cpp:800
+#: text_calendar.cpp:799
 #, kde-format
 msgid "Do you still want to accept the counter proposal?"
 msgstr "您仍然要接受此反提案嗎？"
 
-#: text_calendar.cpp:804
+#: text_calendar.cpp:803
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
 msgstr "您仍然要傳送此反提案嗎？"
 
-#: text_calendar.cpp:808
+#: text_calendar.cpp:807
 #, kde-format
 msgid "Do you still want to send a decline response?"
 msgstr "您仍然要傳送拒絕的回應嗎？"
 
-#: text_calendar.cpp:812
+#: text_calendar.cpp:811
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
 msgstr "您仍然要拒絕此反提案嗎？"
 
-#: text_calendar.cpp:813
+#: text_calendar.cpp:812
 #, kde-format
 msgctxt "@action:button"
 msgid "Decline"
 msgstr "拒絕"
 
-#: text_calendar.cpp:815
+#: text_calendar.cpp:814
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
 msgstr "您仍然要在行事曆中紀錄此回應嗎？"
 
-#: text_calendar.cpp:816 text_calendar.cpp:852
+#: text_calendar.cpp:815 text_calendar.cpp:851
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
 msgstr "紀錄"
 
-#: text_calendar.cpp:819
+#: text_calendar.cpp:818
 #, kde-format
 msgid "Do you still want to delegate this task?"
 msgstr "您仍然要授權此工作嗎？"
 
-#: text_calendar.cpp:821
+#: text_calendar.cpp:820
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
 msgstr "您仍然要授權此邀請嗎？"
 
-#: text_calendar.cpp:823
+#: text_calendar.cpp:822
 #, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
 msgstr "委託"
 
-#: text_calendar.cpp:826
+#: text_calendar.cpp:825
 #, kde-format
 msgid "Do you still want to forward this task?"
 msgstr "您仍然要轉寄此工作嗎？"
 
-#: text_calendar.cpp:828
+#: text_calendar.cpp:827
 #, kde-format
 msgid "Do you still want to forward this invitation?"
 msgstr "您仍然要轉寄此邀請嗎？"
 
-#: text_calendar.cpp:830
+#: text_calendar.cpp:829
 #, kde-format
 msgctxt "@action:button"
 msgid "Forward"
 msgstr "轉寄"
 
-#: text_calendar.cpp:834
+#: text_calendar.cpp:833
 #, kde-format
 msgid "Do you still want to cancel this task?"
 msgstr "您確定要取消此工作？"
 
-#: text_calendar.cpp:835 text_calendar.cpp:856
+#: text_calendar.cpp:834 text_calendar.cpp:855
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
 msgstr "取消工作"
 
-#: text_calendar.cpp:837
+#: text_calendar.cpp:836
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
 msgstr "您確定要取消此邀請？"
 
-#: text_calendar.cpp:838 text_calendar.cpp:859
+#: text_calendar.cpp:837 text_calendar.cpp:858
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
 msgstr "取消邀請"
 
-#: text_calendar.cpp:841 text_calendar.cpp:862
+#: text_calendar.cpp:840 text_calendar.cpp:861
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "不要取消"
 
-#: text_calendar.cpp:844
+#: text_calendar.cpp:843
 #, kde-format
 msgid "Do you still want to check your calendar?"
 msgstr "您仍然要檢查您的行事曆嗎？"
 
-#: text_calendar.cpp:845
+#: text_calendar.cpp:844
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
 msgstr "檢查"
 
-#: text_calendar.cpp:848
+#: text_calendar.cpp:847
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
 msgstr "您仍然要在行事曆中紀錄此工作嗎？"
 
-#: text_calendar.cpp:850
+#: text_calendar.cpp:849
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
 msgstr "您仍然要在行事曆中紀錄此邀請嗎？"
 
-#: text_calendar.cpp:855
+#: text_calendar.cpp:854
 #, kde-format
 msgid "Do you really want to cancel this task?"
 msgstr "您確定要取消此工作？"
 
-#: text_calendar.cpp:858
+#: text_calendar.cpp:857
 #, kde-format
 msgid "Do you really want to cancel this invitation?"
 msgstr "您確定要取消此邀請？"
 
-#: text_calendar.cpp:867
+#: text_calendar.cpp:866
 #, kde-format
 msgid "%1?"
 msgstr "%1？"
 
-#: text_calendar.cpp:874
+#: text_calendar.cpp:873
 #, kde-format
 msgid ""
 "%1\n"
@@ -369,35 +369,35 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: text_calendar.cpp:900
+#: text_calendar.cpp:903
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "邀請的反應"
 
-#: text_calendar.cpp:911 text_calendar.cpp:1170
+#: text_calendar.cpp:914 text_calendar.cpp:1171
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
 msgstr "您忘了加入提案。請將它加入。"
 
-#: text_calendar.cpp:944
+#: text_calendar.cpp:947
 #, kde-format
 msgid "Delegation to organizer is not possible."
 msgstr "組織者不能委派代表。"
 
-#: text_calendar.cpp:1078
+#: text_calendar.cpp:1080
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "儲存邀請附加檔"
 
-#: text_calendar.cpp:1159
+#: text_calendar.cpp:1160
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "拒絕反提案"
 
-#: text_calendar.cpp:1201
+#: text_calendar.cpp:1202
 #, kde-format
 msgid ""
 "You have no writable calendar folders for invitations, so storing or saving "
@@ -407,14 +407,14 @@ msgstr ""
 "您沒有可寫入的行事曆資料夾，所以無法寫入邀請，也無法儲存回覆。\n"
 "請建立至少一個可寫入的事件行事曆，然後重新同步。"
 
-#: text_calendar.cpp:1220
+#: text_calendar.cpp:1223
 #, kde-format
 msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
 "Unable to continue."
 msgstr "儲存在此電子郵件中的行事曆邀請因某種原因而損毀。無法繼續。"
 
-#: text_calendar.cpp:1275
+#: text_calendar.cpp:1276
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -429,115 +429,115 @@ msgstr ""
 "您要傳送此邀請的回覆給發起者嗎？\n"
 "按下「取消」則會取消此紀錄操作。"
 
-#: text_calendar.cpp:1279
+#: text_calendar.cpp:1280
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
 msgstr "傳送電子郵件到 KOrganizer"
 
-#: text_calendar.cpp:1280
+#: text_calendar.cpp:1281
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "不要傳送"
 
-#: text_calendar.cpp:1281
+#: text_calendar.cpp:1282
 #, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "傳送電子郵件"
 
-#: text_calendar.cpp:1289
+#: text_calendar.cpp:1290
 #, kde-format
 msgid "Re: %1"
 msgstr "重做：%1"
 
-#: text_calendar.cpp:1351
+#: text_calendar.cpp:1354
 #, kde-format
 msgid "Open Attachment"
 msgstr "開啟附件"
 
-#: text_calendar.cpp:1352
+#: text_calendar.cpp:1355
 #, kde-format
 msgid "Save Attachment As…"
 msgstr "另存附件…"
 
-#: text_calendar.cpp:1368
+#: text_calendar.cpp:1371
 #, kde-format
 msgid "Accept invitation"
 msgstr "接受邀請"
 
-#: text_calendar.cpp:1370
+#: text_calendar.cpp:1373
 #, kde-format
 msgid "Accept invitation conditionally"
 msgstr "有條件接受邀請"
 
-#: text_calendar.cpp:1372
+#: text_calendar.cpp:1375
 #, kde-format
 msgid "Accept counter proposal"
 msgstr "接受反提案"
 
-#: text_calendar.cpp:1374
+#: text_calendar.cpp:1377
 #, kde-format
 msgid "Create a counter proposal…"
 msgstr "建立反提案…"
 
-#: text_calendar.cpp:1376
+#: text_calendar.cpp:1379
 #, kde-format
 msgid "Throw mail away"
 msgstr "丟棄信件"
 
-#: text_calendar.cpp:1378
+#: text_calendar.cpp:1381
 #, kde-format
 msgid "Decline invitation"
 msgstr "拒絕邀請"
 
-#: text_calendar.cpp:1380
+#: text_calendar.cpp:1383
 #, kde-format
 msgid "Postpone"
 msgstr "延遲"
 
-#: text_calendar.cpp:1382
+#: text_calendar.cpp:1385
 #, kde-format
 msgid "Decline counter proposal"
 msgstr "拒絕反提案"
 
-#: text_calendar.cpp:1384
+#: text_calendar.cpp:1387
 #, kde-format
 msgid "Check my calendar…"
 msgstr "檢查我的日曆…"
 
-#: text_calendar.cpp:1386
+#: text_calendar.cpp:1389
 #, kde-format
 msgid "Record response into my calendar"
 msgstr "在我的行事曆中紀錄回覆"
 
-#: text_calendar.cpp:1388
+#: text_calendar.cpp:1391
 #, kde-format
 msgid "Record invitation into my calendar"
 msgstr "在我的行事曆中紀錄邀請"
 
-#: text_calendar.cpp:1390
+#: text_calendar.cpp:1393
 #, kde-format
 msgid "Move this invitation to my trash folder"
 msgstr "將此邀請移到我的垃圾桶"
 
-#: text_calendar.cpp:1392
+#: text_calendar.cpp:1395
 #, kde-format
 msgid "Delegate invitation"
 msgstr "授權邀請"
 
-#: text_calendar.cpp:1394
+#: text_calendar.cpp:1397
 #, kde-format
 msgid "Forward invitation"
 msgstr "轉寄邀請"
 
-#: text_calendar.cpp:1396
+#: text_calendar.cpp:1399
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "從我的行事曆中移除邀請"
 
-#: text_calendar.cpp:1399
+#: text_calendar.cpp:1402
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "開啟附件 %1"

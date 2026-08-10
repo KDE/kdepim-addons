@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-07 00:47+0000\n"
+"POT-Creation-Date: 2026-08-10 00:46+0000\n"
 "PO-Revision-Date: 2024-08-03 11:42+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -66,12 +66,12 @@ msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Komentarz:"
 
-#: text_calendar.cpp:369
+#: text_calendar.cpp:365
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
 msgstr "Nie znaleziono w zaproszeniu załącznika \"%1\"."
 
-#: text_calendar.cpp:384
+#: text_calendar.cpp:380
 #, kde-format
 msgid ""
 "The invitation attachment \"%1\" is a web link that is inaccessible from "
@@ -82,7 +82,7 @@ msgstr ""
 "tego komputera. Proszę poprosić organizatora o ponowne przesłanie "
 "zaproszenia razem z pełnym załącznikiem zamiast linka."
 
-#: text_calendar.cpp:436
+#: text_calendar.cpp:432
 #, kde-format
 msgid ""
 "<qt>None of your identities match the receiver of this message,<br/>please "
@@ -94,7 +94,7 @@ msgstr ""
 "jakikolwiek należy, lub wybrać jedną ze swoich tożsamości, aby wykorzystać "
 "ją w odpowiedzi:</qt>"
 
-#: text_calendar.cpp:442
+#: text_calendar.cpp:438
 #, kde-format
 msgid ""
 "<qt>Several of your identities match the receiver of this message,<br/"
@@ -103,265 +103,265 @@ msgstr ""
 "<qt>Kilka z twoich tożsamości pasuje do adresata tej wiadomości,<br/>proszę "
 "wybrać, który z następujących adresów należy do ciebie:</qt>"
 
-#: text_calendar.cpp:457
+#: text_calendar.cpp:453
 #, kde-format
 msgid "Select Address"
 msgstr "Wybierz adres"
 
-#: text_calendar.cpp:519
+#: text_calendar.cpp:515
 #, kde-format
 msgid "Answer: "
 msgstr "Odpowiedż: "
 
-#: text_calendar.cpp:521
+#: text_calendar.cpp:517
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
 msgstr "Odrzucone: %1"
 
-#: text_calendar.cpp:523
+#: text_calendar.cpp:519
 #, kde-format
 msgctxt "Unsure if it is possible to attend."
 msgid "Tentative: %1"
 msgstr "Wstępnie zaakceptowane: %1"
 
-#: text_calendar.cpp:525
+#: text_calendar.cpp:521
 #, kde-format
 msgctxt "Accepted the invitation."
 msgid "Accepted: %1"
 msgstr "Zaakceptowane: %1"
 
-#: text_calendar.cpp:547 text_calendar.cpp:566
+#: text_calendar.cpp:543 text_calendar.cpp:562
 #, kde-format
 msgid "Invitation answer attached."
 msgstr "Załączono odpowiedź na zaproszenie."
 
-#: text_calendar.cpp:669
+#: text_calendar.cpp:665
 #, kde-format
 msgid "Incidence with no summary"
 msgstr "Zdarzenie bez podsumowania"
 
-#: text_calendar.cpp:674
+#: text_calendar.cpp:670
 #, kde-format
 msgid "Answer: %1"
 msgstr "Odpowiedź: %1"
 
-#: text_calendar.cpp:677
+#: text_calendar.cpp:673
 #, kde-format
 msgid "Delegated: %1"
 msgstr "Delegowanie: %1"
 
-#: text_calendar.cpp:680
+#: text_calendar.cpp:676
 #, kde-format
 msgid "Forwarded: %1"
 msgstr "Przekazane: %1"
 
-#: text_calendar.cpp:683
+#: text_calendar.cpp:679
 #, kde-format
 msgid "Declined Counter Proposal: %1"
 msgstr "Odrzucona kontrpropozycja: %1"
 
-#: text_calendar.cpp:738 text_calendar.cpp:744
+#: text_calendar.cpp:737 text_calendar.cpp:743
 #, kde-format
 msgid "\"%1\" occurred already."
 msgstr "\"%1\" już wystąpił."
 
-#: text_calendar.cpp:740 text_calendar.cpp:757
+#: text_calendar.cpp:739 text_calendar.cpp:756
 #, kde-format
 msgid "\"%1\" is currently in-progress."
 msgstr "\"%1\" jest obecnie w realizacji."
 
-#: text_calendar.cpp:746
+#: text_calendar.cpp:745
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
 msgstr "\"%1\", trwa cały dzisiejszy dzień, jest obecnie w realizacji."
 
-#: text_calendar.cpp:755 text_calendar.cpp:767
+#: text_calendar.cpp:754 text_calendar.cpp:766
 #, kde-format
 msgid "\"%1\" is past due."
 msgstr "\"%1\" jest po terminie."
 
-#: text_calendar.cpp:761
+#: text_calendar.cpp:760
 #, kde-format
 msgid "\"%1\" has already started."
 msgstr "\"%1\" już rozpoczął."
 
-#: text_calendar.cpp:769
+#: text_calendar.cpp:768
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
 msgstr "\"%1\", trwa cały dzisiejszy dzień, jest obecnie w realizacji."
 
-#: text_calendar.cpp:773
+#: text_calendar.cpp:772
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
 msgstr "\"%1\", trwa cały dzień, już rozpoczął."
 
-#: text_calendar.cpp:785
+#: text_calendar.cpp:784
 #, kde-format
 msgid "Do you still want to accept the task?"
 msgstr "Czy nadal chcesz zaakceptować zadanie?"
 
-#: text_calendar.cpp:787
+#: text_calendar.cpp:786
 #, kde-format
 msgid "Do you still want to accept the invitation?"
 msgstr "Czy nadal chcesz zaakceptować zaproszenie?"
 
-#: text_calendar.cpp:789 text_calendar.cpp:801
+#: text_calendar.cpp:788 text_calendar.cpp:800
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept"
 msgstr "Przyjmij"
 
-#: text_calendar.cpp:793
+#: text_calendar.cpp:792
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
 msgstr "Czy nadal chcesz wysłać warunkową akceptację zaproszenia?"
 
-#: text_calendar.cpp:795
+#: text_calendar.cpp:794
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the task?"
 msgstr "Czy nadal chcesz wysłać warunkową akceptację zadania?"
 
-#: text_calendar.cpp:797 text_calendar.cpp:805 text_calendar.cpp:809
+#: text_calendar.cpp:796 text_calendar.cpp:804 text_calendar.cpp:808
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Wyślij"
 
-#: text_calendar.cpp:800
+#: text_calendar.cpp:799
 #, kde-format
 msgid "Do you still want to accept the counter proposal?"
 msgstr "Czy nadal chcesz zaakceptować przeciw propozycję?"
 
-#: text_calendar.cpp:804
+#: text_calendar.cpp:803
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
 msgstr "Czy nadal chcesz wysłać przeciw propozycję?"
 
-#: text_calendar.cpp:808
+#: text_calendar.cpp:807
 #, kde-format
 msgid "Do you still want to send a decline response?"
 msgstr "Czy nadal chcesz wysłać odmowną odpowiedź?"
 
-#: text_calendar.cpp:812
+#: text_calendar.cpp:811
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
 msgstr "Czy nadal chcesz odrzucić przeciw propozycję?"
 
-#: text_calendar.cpp:813
+#: text_calendar.cpp:812
 #, kde-format
 msgctxt "@action:button"
 msgid "Decline"
 msgstr "Odrzuć"
 
-#: text_calendar.cpp:815
+#: text_calendar.cpp:814
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
 msgstr "Czy nadal chcesz zapisać tą odpowiedź w swoim kalendarzu?"
 
-#: text_calendar.cpp:816 text_calendar.cpp:852
+#: text_calendar.cpp:815 text_calendar.cpp:851
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
 msgstr "Nagraj"
 
-#: text_calendar.cpp:819
+#: text_calendar.cpp:818
 #, kde-format
 msgid "Do you still want to delegate this task?"
 msgstr "Czy nadal chcesz oddelegować to zadanie?"
 
-#: text_calendar.cpp:821
+#: text_calendar.cpp:820
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
 msgstr "Czy nadal chcesz oddelegować to zaproszenie?"
 
-#: text_calendar.cpp:823
+#: text_calendar.cpp:822
 #, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
 msgstr "Deleguj"
 
-#: text_calendar.cpp:826
+#: text_calendar.cpp:825
 #, kde-format
 msgid "Do you still want to forward this task?"
 msgstr "Czy nadal chcesz przekierować to zadanie?"
 
-#: text_calendar.cpp:828
+#: text_calendar.cpp:827
 #, kde-format
 msgid "Do you still want to forward this invitation?"
 msgstr "Czy nadal chcesz przekierować to zaproszenie?"
 
-#: text_calendar.cpp:830
+#: text_calendar.cpp:829
 #, kde-format
 msgctxt "@action:button"
 msgid "Forward"
 msgstr "Naprzód"
 
-#: text_calendar.cpp:834
+#: text_calendar.cpp:833
 #, kde-format
 msgid "Do you still want to cancel this task?"
 msgstr "Czy nadal chcesz porzucić to zadanie?"
 
-#: text_calendar.cpp:835 text_calendar.cpp:856
+#: text_calendar.cpp:834 text_calendar.cpp:855
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
 msgstr "Anuluj zadanie"
 
-#: text_calendar.cpp:837
+#: text_calendar.cpp:836
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
 msgstr "Czy nadal chcesz porzucić to zaproszenie?"
 
-#: text_calendar.cpp:838 text_calendar.cpp:859
+#: text_calendar.cpp:837 text_calendar.cpp:858
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
 msgstr "Odrzuć zaproszenie"
 
-#: text_calendar.cpp:841 text_calendar.cpp:862
+#: text_calendar.cpp:840 text_calendar.cpp:861
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Nie odrzucaj"
 
-#: text_calendar.cpp:844
+#: text_calendar.cpp:843
 #, kde-format
 msgid "Do you still want to check your calendar?"
 msgstr "Czy nadal chcesz sprawdzić swój kalendarz?"
 
-#: text_calendar.cpp:845
+#: text_calendar.cpp:844
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
 msgstr "Sprawdź"
 
-#: text_calendar.cpp:848
+#: text_calendar.cpp:847
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
 msgstr "Czy nadal chcesz zapisać to zadanie w swoim kalendarzu?"
 
-#: text_calendar.cpp:850
+#: text_calendar.cpp:849
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
 msgstr "Czy nadal chcesz zapisać to zaproszenie w swoim kalendarzu?"
 
-#: text_calendar.cpp:855
+#: text_calendar.cpp:854
 #, kde-format
 msgid "Do you really want to cancel this task?"
 msgstr "Czy na pewno chcesz porzucić to zadanie?"
 
-#: text_calendar.cpp:858
+#: text_calendar.cpp:857
 #, kde-format
 msgid "Do you really want to cancel this invitation?"
 msgstr "Czy na pewno chcesz porzucić to zaproszenie?"
 
-#: text_calendar.cpp:867
+#: text_calendar.cpp:866
 #, kde-format
 msgid "%1?"
 msgstr "%1?"
 
-#: text_calendar.cpp:874
+#: text_calendar.cpp:873
 #, kde-format
 msgid ""
 "%1\n"
@@ -370,35 +370,35 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: text_calendar.cpp:900
+#: text_calendar.cpp:903
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "Reakcja na zaproszenie"
 
-#: text_calendar.cpp:911 text_calendar.cpp:1170
+#: text_calendar.cpp:914 text_calendar.cpp:1171
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
 msgstr "Zapomniałeś dodać propozycji. Proszę ją dodać. Dziękujemy"
 
-#: text_calendar.cpp:944
+#: text_calendar.cpp:947
 #, kde-format
 msgid "Delegation to organizer is not possible."
 msgstr "Delegowanie do organizatora nie jest możliwe."
 
-#: text_calendar.cpp:1078
+#: text_calendar.cpp:1080
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Zapisz załącznik z zaproszenia"
 
-#: text_calendar.cpp:1159
+#: text_calendar.cpp:1160
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "Odrzuć kontrpropozycję"
 
-#: text_calendar.cpp:1201
+#: text_calendar.cpp:1202
 #, kde-format
 msgid ""
 "You have no writable calendar folders for invitations, so storing or saving "
@@ -410,7 +410,7 @@ msgstr ""
 "Proszę utworzyć co najmniej 1 zapisywalny kalendarz zdarzeń i "
 "zsynchronizować ponownie."
 
-#: text_calendar.cpp:1220
+#: text_calendar.cpp:1223
 #, kde-format
 msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
@@ -419,7 +419,7 @@ msgstr ""
 "Zaproszenie kalendarza przechowywane w tej wiadomości e-mail jest w jakiś "
 "sposób popsute. Nie można kontynuować."
 
-#: text_calendar.cpp:1275
+#: text_calendar.cpp:1276
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -435,115 +435,115 @@ msgstr ""
 "Czy chcesz wysłać organizatorowi wiadomość odnośnie tego zaproszenia?\n"
 "Naciśnij przycisk [Anuluj], aby porzucić zapisywanie ."
 
-#: text_calendar.cpp:1279
+#: text_calendar.cpp:1280
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
 msgstr "Wyślij e-maila do organizatora"
 
-#: text_calendar.cpp:1280
+#: text_calendar.cpp:1281
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Nie wysyłaj"
 
-#: text_calendar.cpp:1281
+#: text_calendar.cpp:1282
 #, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Wyślij e-mail"
 
-#: text_calendar.cpp:1289
+#: text_calendar.cpp:1290
 #, kde-format
 msgid "Re: %1"
 msgstr "Odp: %1"
 
-#: text_calendar.cpp:1351
+#: text_calendar.cpp:1354
 #, kde-format
 msgid "Open Attachment"
 msgstr "Otwórz załącznik"
 
-#: text_calendar.cpp:1352
+#: text_calendar.cpp:1355
 #, kde-format
 msgid "Save Attachment As…"
 msgstr "Zapisz załącznik jako…"
 
-#: text_calendar.cpp:1368
+#: text_calendar.cpp:1371
 #, kde-format
 msgid "Accept invitation"
 msgstr "Przyjmij zaproszenie"
 
-#: text_calendar.cpp:1370
+#: text_calendar.cpp:1373
 #, kde-format
 msgid "Accept invitation conditionally"
 msgstr "Warunkowo akceptuj zaproszenie"
 
-#: text_calendar.cpp:1372
+#: text_calendar.cpp:1375
 #, kde-format
 msgid "Accept counter proposal"
 msgstr "Akceptuj kontrpropozycję"
 
-#: text_calendar.cpp:1374
+#: text_calendar.cpp:1377
 #, kde-format
 msgid "Create a counter proposal…"
 msgstr "Utwórz kontrpropozycję…"
 
-#: text_calendar.cpp:1376
+#: text_calendar.cpp:1379
 #, kde-format
 msgid "Throw mail away"
 msgstr "Odrzuć e-mail"
 
-#: text_calendar.cpp:1378
+#: text_calendar.cpp:1381
 #, kde-format
 msgid "Decline invitation"
 msgstr "Odrzuć zaproszenie"
 
-#: text_calendar.cpp:1380
+#: text_calendar.cpp:1383
 #, kde-format
 msgid "Postpone"
 msgstr "Odłóż"
 
-#: text_calendar.cpp:1382
+#: text_calendar.cpp:1385
 #, kde-format
 msgid "Decline counter proposal"
 msgstr "Odrzuć kontrpropozycję"
 
-#: text_calendar.cpp:1384
+#: text_calendar.cpp:1387
 #, kde-format
 msgid "Check my calendar…"
 msgstr "Sprawdź mój kalendarz…"
 
-#: text_calendar.cpp:1386
+#: text_calendar.cpp:1389
 #, kde-format
 msgid "Record response into my calendar"
 msgstr "Zapisz odpowiedź w moim kalendarzu"
 
-#: text_calendar.cpp:1388
+#: text_calendar.cpp:1391
 #, kde-format
 msgid "Record invitation into my calendar"
 msgstr "Zapisz zaproszenie w moim kalendarzu"
 
-#: text_calendar.cpp:1390
+#: text_calendar.cpp:1393
 #, kde-format
 msgid "Move this invitation to my trash folder"
 msgstr "Przenieś to zaproszenie do mojego katalogu kosza"
 
-#: text_calendar.cpp:1392
+#: text_calendar.cpp:1395
 #, kde-format
 msgid "Delegate invitation"
 msgstr "Deleguj zaproszenie"
 
-#: text_calendar.cpp:1394
+#: text_calendar.cpp:1397
 #, kde-format
 msgid "Forward invitation"
 msgstr "Przekaż zaproszenie"
 
-#: text_calendar.cpp:1396
+#: text_calendar.cpp:1399
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "Usuń zaproszenie z mojego kalendarza"
 
-#: text_calendar.cpp:1399
+#: text_calendar.cpp:1402
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "Otwórz załącznik \"%1\""
