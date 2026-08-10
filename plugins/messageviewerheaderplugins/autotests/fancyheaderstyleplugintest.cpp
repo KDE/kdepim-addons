@@ -16,16 +16,18 @@
 #include <QActionGroup>
 #include <QTest>
 
-#ifndef Q_OS_WIN
+using namespace Qt::Literals;
+
 void initLocale()
 {
-    setenv("LC_ALL", "C", 1);
+#ifndef Q_OS_WIN
+    setenv("LC_ALL", "en_US", 1);
     setenv("TZ", "UTC", 1);
-    QLocale::setDefault(QLocale::c());
+#endif
+    QLocale::setDefault(QLocale("en_US"_L1));
 }
 
 Q_CONSTRUCTOR_FUNCTION(initLocale)
-#endif
 
 FancyHeaderStylePluginTest::FancyHeaderStylePluginTest(QObject *parent)
     : QObject(parent)

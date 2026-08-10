@@ -23,7 +23,7 @@ macro(add_messageviewer_header_unittest _source _additional)
         ${_name}
         PROPERTIES
             ENVIRONMENT
-                "LC_ALL=C;LANG=C;LANGUAGE=C;TZ=UTC"
+                "LC_ALL=en_US;LANG=en_US;LANGUAGE=en_US;TZ=UTC"
     )
     target_link_libraries(
         ${_name}
@@ -55,7 +55,7 @@ macro(add_messageviewer_header_class_unittest _source)
         ${_name}
         PROPERTIES
             ENVIRONMENT
-                "LC_ALL=C;LANG=C;LANGUAGE=C;TZ=UTC"
+                "LC_ALL=en_US;LANG=en_US;LANGUAGE=en_US;TZ=UTC"
     )
     target_link_libraries(
         ${_name}
