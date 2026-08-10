@@ -428,7 +428,7 @@ void EventEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEm
     MessageViewer::EventEdit edit;
     auto akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     // Create an empty combobox
-    akonadicombobox->setModel(new QStandardItemModel());
+    akonadicombobox->setModel(new QStandardItemModel(&edit));
     std::shared_ptr<KMime::Message> msg(new KMime::Message);
     const QString subject = QStringLiteral("Test Note");
     msg->subject(KMime::CreatePolicy::Create)->fromUnicodeString(subject);

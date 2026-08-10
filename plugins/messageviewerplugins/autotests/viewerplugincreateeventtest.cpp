@@ -30,9 +30,9 @@ void ViewerPluginCreateeventTest::shouldCreateAction()
 {
     auto event = new MessageViewer::ViewerPluginCreateevent(this);
     QVERIFY(!event->viewerPluginName().isEmpty());
-    auto parent = new QWidget(nullptr);
+    auto parent = std::make_unique<QWidget>(nullptr);
     parent->setLayout(new QHBoxLayout);
-    MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
+    std::unique_ptr<MessageViewer::ViewerPluginInterface> interface(event->createView(parent.get(), new KActionCollection(this)));
     QVERIFY(interface);
     QVERIFY(!interface->actions().isEmpty());
 }
@@ -40,9 +40,9 @@ void ViewerPluginCreateeventTest::shouldCreateAction()
 void ViewerPluginCreateeventTest::shouldShowWidget()
 {
     auto event = new MessageViewer::ViewerPluginCreateevent(this);
-    auto parent = new QWidget(nullptr);
+    auto parent = std::make_unique<QWidget>(nullptr);
     parent->setLayout(new QHBoxLayout);
-    MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
+    std::unique_ptr<MessageViewer::ViewerPluginInterface> interface(event->createView(parent.get(), new KActionCollection(this)));
     interface->execute();
     auto createeventwidget = parent->findChild<QWidget *>(QStringLiteral("eventedit"));
     QVERIFY(createeventwidget);
