@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "kaddressbookmergelib_export.h"
+
 #include <Akonadi/Item>
 #include <KContacts/Addressee>
 
@@ -13,6 +15,7 @@ namespace KABMergeContacts
 {
 class MergeContacts
 {
+    Q_GADGET
 public:
     explicit MergeContacts(const Akonadi::Item::List &items = Akonadi::Item::List());
     ~MergeContacts();
@@ -40,7 +43,7 @@ public:
         PartnerName = 262144,
         Keys = 524288,
     };
-    Q_ENUMS(ConflictInformation)
+    Q_ENUM(ConflictInformation)
     Q_DECLARE_FLAGS(ConflictInformations, ConflictInformation)
 
     [[nodiscard]] KContacts::Addressee mergedContact(bool excludeConflictPart = false);
