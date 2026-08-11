@@ -37,16 +37,9 @@ void AutogenerateConfigureListViewDelegate::setModelData(QWidget *editor, QAbstr
     if (lineEdit) {
         const QString newText = lineEdit->text();
         if (!newText.trimmed().isEmpty()) {
-            model->setData(index, lineEdit->text(), AutogenerateConfigureAskModel::TitleRole);
+            model->setData(index, newText, AutogenerateConfigureAskModel::TitleRole);
         }
     }
-}
-
-void AutogenerateConfigureListViewDelegate::updateEditorGeometry(QWidget *editor,
-                                                                 const QStyleOptionViewItem &option,
-                                                                 [[maybe_unused]] const QModelIndex &index) const
-{
-    editor->setGeometry(option.rect);
 }
 
 #include "moc_autogenerateconfigurelistviewdelegate.cpp"
