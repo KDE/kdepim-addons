@@ -68,7 +68,8 @@ msgstr "<qt>Ne mogu otvoriti datoteku <b>%1</b>.</qt>"
 #: csv/csvimportexportplugininterface.cpp:198
 #: gmx/gmximportexportplugininterface.cpp:139
 #: ldif/ldifimportexportplugininterface.cpp:184
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>Ne mogu otvoriti datoteku <b>%1</b>.</qt>"
 
