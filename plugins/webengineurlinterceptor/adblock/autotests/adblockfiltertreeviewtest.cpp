@@ -6,11 +6,14 @@
 
 #include "adblockfiltertreeviewtest.h"
 #include "adblockfiltertreeview.h"
+#include <QStandardPaths>
 #include <QTest>
+
 QTEST_MAIN(AdblockFilterTreeViewTest)
 AdblockFilterTreeViewTest::AdblockFilterTreeViewTest(QObject *parent)
     : QObject{parent}
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void AdblockFilterTreeViewTest::shouldHaveDefaultValues()

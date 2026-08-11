@@ -8,6 +8,7 @@
 #include "adblockfiltertreeview.h"
 #include "adblockfilterwidget.h"
 #include <QLineEdit>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(AdblockFilterWidgetTest)
@@ -15,6 +16,7 @@ QTEST_MAIN(AdblockFilterWidgetTest)
 AdblockFilterWidgetTest::AdblockFilterWidgetTest(QObject *parent)
     : QObject{parent}
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void AdblockFilterWidgetTest::shouldHaveDefaultValues()

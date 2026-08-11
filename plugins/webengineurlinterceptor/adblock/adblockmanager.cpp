@@ -41,7 +41,7 @@ AdblockManager::AdblockManager(QObject *parent)
     connect(&m_networkManager, &QNetworkAccessManager::finished, this, &AdblockManager::handleListFetched);
     m_networkManager.setRedirectPolicy(QNetworkRequest::SameOriginRedirectPolicy);
 
-    if (QDir(filterListPath()).isEmpty()) {
+    if (QDir(filterListPath()).isEmpty() && !QStandardPaths::isTestModeEnabled()) {
         refreshLists();
     }
 }
