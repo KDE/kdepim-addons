@@ -235,7 +235,7 @@ msgstr "أما زلت تريد قَبُول الاقتراح البديل؟"
 #: text_calendar.cpp:795
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
-msgstr "أما زلت تريد إرسال اقتراحاً بديلاً؟"
+msgstr "أما زلت تريد إرسال اقتراحًا بديلًا؟"
 
 #: text_calendar.cpp:799
 #, kde-format
@@ -406,7 +406,7 @@ msgid ""
 msgstr ""
 "ليس لديك مجلدات تقويم قابلة للكتابة للدعوات، لذا فإن تخزين أو حفظ الاستجابة "
 "لن يكون ممكنًا. \n"
-"يرجى إنشاء تقويما قابلاً للكتابة واحداً على الأقل وإعادة المزامنة."
+"يرجى إنشاء تقويما قابلًا للكتابة واحدًا على الأقل وإعادة المزامنة."
 
 #: text_calendar.cpp:1211
 #, kde-format
@@ -484,7 +484,7 @@ msgstr "اقبل الاقتراح البديل"
 #: text_calendar.cpp:1365
 #, kde-format
 msgid "Create a counter proposal…"
-msgstr "أنشى اقتراحاً بديلاً…"
+msgstr "أنشى اقتراحًا بديلًا…"
 
 #: text_calendar.cpp:1367
 #, kde-format
