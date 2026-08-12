@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-12 00:47+0000\n"
 "PO-Revision-Date: 2018-08-16 09:12+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: lt\n"
@@ -18,17 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 
-#: sendmail/sendmailjob.cpp:44
+#: sendmail/sendmailjob.cpp:40
+#, kde-format
+msgid "Invalid options for the mailer program: %1"
+msgstr ""
+
+#: sendmail/sendmailjob.cpp:58
 #, kde-format
 msgid "Failed to execute mailer program %1"
 msgstr ""
 
-#: sendmail/sendmailjob.cpp:57
+#: sendmail/sendmailjob.cpp:60
+#, kde-format
+msgid "Failed to execute mailer program %1: %2"
+msgstr ""
+
+#: sendmail/sendmailjob.cpp:74
 #, kde-format
 msgid "Sendmail exited abnormally."
 msgstr ""
 
-#: sendmail/sendmailjob.cpp:59
+#: sendmail/sendmailjob.cpp:76
 #, kde-format
 msgid "Sendmail exited abnormally: %1"
 msgstr ""

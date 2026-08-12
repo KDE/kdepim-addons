@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-12 00:47+0000\n"
 "PO-Revision-Date: 2017-07-01 20:14-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -14,17 +14,27 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: sendmail/sendmailjob.cpp:44
+#: sendmail/sendmailjob.cpp:40
+#, kde-format
+msgid "Invalid options for the mailer program: %1"
+msgstr ""
+
+#: sendmail/sendmailjob.cpp:58
 #, kde-format
 msgid "Failed to execute mailer program %1"
 msgstr ""
 
-#: sendmail/sendmailjob.cpp:57
+#: sendmail/sendmailjob.cpp:60
+#, kde-format
+msgid "Failed to execute mailer program %1: %2"
+msgstr ""
+
+#: sendmail/sendmailjob.cpp:74
 #, kde-format
 msgid "Sendmail exited abnormally."
 msgstr ""
 
-#: sendmail/sendmailjob.cpp:59
+#: sendmail/sendmailjob.cpp:76
 #, kde-format
 msgid "Sendmail exited abnormally: %1"
 msgstr ""

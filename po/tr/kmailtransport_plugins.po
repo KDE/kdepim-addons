@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-12 00:47+0000\n"
 "PO-Revision-Date: 2022-04-05 12:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -18,17 +18,29 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 "X-POOTLE-MTIME: 1502202964.000000\n"
 
-#: sendmail/sendmailjob.cpp:44
+#: sendmail/sendmailjob.cpp:40
+#, fuzzy, kde-format
+#| msgid "Failed to execute mailer program %1"
+msgid "Invalid options for the mailer program: %1"
+msgstr "%1 e-posta gönderme uygulaması çalıştırılamadı"
+
+#: sendmail/sendmailjob.cpp:58
 #, kde-format
 msgid "Failed to execute mailer program %1"
 msgstr "%1 e-posta gönderme uygulaması çalıştırılamadı"
 
-#: sendmail/sendmailjob.cpp:57
+#: sendmail/sendmailjob.cpp:60
+#, fuzzy, kde-format
+#| msgid "Failed to execute mailer program %1"
+msgid "Failed to execute mailer program %1: %2"
+msgstr "%1 e-posta gönderme uygulaması çalıştırılamadı"
+
+#: sendmail/sendmailjob.cpp:74
 #, kde-format
 msgid "Sendmail exited abnormally."
 msgstr "Sendmail uygulamasından normal olmayan şekilde çıkıldı."
 
-#: sendmail/sendmailjob.cpp:59
+#: sendmail/sendmailjob.cpp:76
 #, kde-format
 msgid "Sendmail exited abnormally: %1"
 msgstr "Sendmail uygulamasından normal olmayan şekilde çıkıldı: %1"

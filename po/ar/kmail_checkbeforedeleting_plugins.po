@@ -190,7 +190,7 @@ msgstr "أزِل القاعدة"
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:170
 #, kde-format
 msgid "Same rule already exists."
-msgstr "نفس القاعدة موجودة فعلاً"
+msgstr "نفس القاعدة موجودة فعلًا"
 
 #: confirmbeforedeleting/confirmbeforedeletingwidget.cpp:170
 #, kde-format

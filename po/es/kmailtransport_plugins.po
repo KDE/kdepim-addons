@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-12 00:47+0000\n"
 "PO-Revision-Date: 2019-12-26 22:23+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -18,17 +18,29 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.12.0\n"
 
-#: sendmail/sendmailjob.cpp:44
+#: sendmail/sendmailjob.cpp:40
+#, fuzzy, kde-format
+#| msgid "Failed to execute mailer program %1"
+msgid "Invalid options for the mailer program: %1"
+msgstr "Ha fallado al ejecutar el programa de envío de correo %1"
+
+#: sendmail/sendmailjob.cpp:58
 #, kde-format
 msgid "Failed to execute mailer program %1"
 msgstr "Ha fallado al ejecutar el programa de envío de correo %1"
 
-#: sendmail/sendmailjob.cpp:57
+#: sendmail/sendmailjob.cpp:60
+#, fuzzy, kde-format
+#| msgid "Failed to execute mailer program %1"
+msgid "Failed to execute mailer program %1: %2"
+msgstr "Ha fallado al ejecutar el programa de envío de correo %1"
+
+#: sendmail/sendmailjob.cpp:74
 #, kde-format
 msgid "Sendmail exited abnormally."
 msgstr "Sendmail terminó anormalmente"
 
-#: sendmail/sendmailjob.cpp:59
+#: sendmail/sendmailjob.cpp:76
 #, kde-format
 msgid "Sendmail exited abnormally: %1"
 msgstr "Sendmail terminó anormalmente: %1"

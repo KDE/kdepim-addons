@@ -146,7 +146,7 @@ msgstr "أدرِج محرفًا خاصًّا…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
-msgstr "أدرِج محرفًا خاصاً"
+msgstr "أدرِج محرفًا خاصًا"
 
 #: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:40
 #, kde-format

@@ -130,7 +130,7 @@ msgstr "تحقق من حجم المجلّد…"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Display Colored Folder when size is too expensive."
-msgstr "اعرض المجلد الملون عندما يكون حجم المجلد الملون مكلفاً للغاية."
+msgstr "اعرض المجلد الملون عندما يكون حجم المجلد الملون مكلفًا للغاية."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfigurewidget.cpp:29
 #, kde-format

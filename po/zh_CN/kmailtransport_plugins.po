@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-12 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,17 +18,29 @@ msgstr ""
 "pot\n"
 "X-Crowdin-File-ID: 45423\n"
 
-#: sendmail/sendmailjob.cpp:44
+#: sendmail/sendmailjob.cpp:40
+#, fuzzy, kde-format
+#| msgid "Failed to execute mailer program %1"
+msgid "Invalid options for the mailer program: %1"
+msgstr "执行邮件发送程序 %1 失败"
+
+#: sendmail/sendmailjob.cpp:58
 #, kde-format
 msgid "Failed to execute mailer program %1"
 msgstr "执行邮件发送程序 %1 失败"
 
-#: sendmail/sendmailjob.cpp:57
+#: sendmail/sendmailjob.cpp:60
+#, fuzzy, kde-format
+#| msgid "Failed to execute mailer program %1"
+msgid "Failed to execute mailer program %1: %2"
+msgstr "执行邮件发送程序 %1 失败"
+
+#: sendmail/sendmailjob.cpp:74
 #, kde-format
 msgid "Sendmail exited abnormally."
 msgstr "Sendmail 异常退出。"
 
-#: sendmail/sendmailjob.cpp:59
+#: sendmail/sendmailjob.cpp:76
 #, kde-format
 msgid "Sendmail exited abnormally: %1"
 msgstr "Sendmail 异常退出：%1"

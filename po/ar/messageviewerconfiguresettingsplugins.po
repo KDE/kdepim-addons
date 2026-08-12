@@ -28,7 +28,7 @@ msgstr "تَثَبّت من التوقيع إذا كان المجال اختبا
 #, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
-msgstr "استخدم تحليلًا مرناً عند قراءة رأس \"نتيجة-الاستيثاق\""
+msgstr "استخدم تحليلًا مرنًا عند قراءة رأس \"نتيجة-الاستيثاق\""
 
 #: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
 #: dkim-verify/dkimgeneralwidget.cpp:42
@@ -353,12 +353,12 @@ msgstr "أضيفت قاعدة للمضيف فعلا."
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
-msgstr "فحص المضيف فعلاً"
+msgstr "فحص المضيف فعلًا"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
 msgid "Rule already exists."
-msgstr "القاعدة موجودة فعلاً"
+msgstr "القاعدة موجودة فعلًا"
 
 #: openurlwith/openurlwithconfigurewidget.cpp:162
 #, kde-format
