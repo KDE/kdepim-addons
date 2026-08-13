@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:47+0000\n"
-"PO-Revision-Date: 2024-06-07 10:05+0300\n"
+"PO-Revision-Date: 2026-08-12 08:30+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,13 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: sendmail/sendmailjob.cpp:40
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Invalid options for the mailer program: %1"
-msgstr "הפעלת תוכנית הדוא״ל %1 נכשלה"
+msgstr "אפשרויות שגויות לתוכנית הדוא״ל: %1"
 
 #: sendmail/sendmailjob.cpp:58
 #, kde-format
@@ -30,10 +29,9 @@ msgid "Failed to execute mailer program %1"
 msgstr "הפעלת תוכנית הדוא״ל %1 נכשלה"
 
 #: sendmail/sendmailjob.cpp:60
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Failed to execute mailer program %1: %2"
-msgstr "הפעלת תוכנית הדוא״ל %1 נכשלה"
+msgstr "הפעלת תוכנית הדוא״ל %1 נכשלה: %2"
 
 #: sendmail/sendmailjob.cpp:74
 #, kde-format
