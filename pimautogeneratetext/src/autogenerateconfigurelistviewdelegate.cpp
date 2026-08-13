@@ -14,14 +14,6 @@ AutogenerateConfigureListViewDelegate::AutogenerateConfigureListViewDelegate(QOb
 
 AutogenerateConfigureListViewDelegate::~AutogenerateConfigureListViewDelegate() = default;
 
-QWidget *AutogenerateConfigureListViewDelegate::createEditor(QWidget *parent,
-                                                             [[maybe_unused]] const QStyleOptionViewItem &option,
-                                                             [[maybe_unused]] const QModelIndex &index) const
-{
-    QLineEdit *editor = new QLineEdit(parent);
-    return editor;
-}
-
 void AutogenerateConfigureListViewDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
     QLineEdit *lineEdit = qobject_cast<QLineEdit *>(editor);
