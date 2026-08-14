@@ -52,7 +52,6 @@ Dependencies:
     'frameworks/kcmutils': '@latest-kf6'
 
 Options:
- # Rust build disabled as that's failing to link on the Qt 6.12 CI image for unknown reasons
- cmake-options: "-DAKONADI_RUN_MYSQL_ISOLATED_TESTS=FALSE -DAKONADI_RUN_PGSQL_ISOLATED_TESTS=FALSE -DAKONADI_RUN_SQLITE_ISOLATED_TESTS=FALSE -DCMAKE_DISABLE_FIND_PACKAGE_Corrosion=True"
+ cmake-options: "-DAKONADI_RUN_MYSQL_ISOLATED_TESTS=FALSE -DAKONADI_RUN_PGSQL_ISOLATED_TESTS=FALSE -DAKONADI_RUN_SQLITE_ISOLATED_TESTS=FALSE"
  use-ccache: True
  enable-lsan: True
