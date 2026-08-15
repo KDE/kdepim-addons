@@ -238,8 +238,8 @@ void TodoEdit::slotReturnPressed()
     if (!mNoteEdit->text().trimmed().isEmpty()) {
         mMsgWidget->setText(i18nc("%1 is summary of the todo, %2 is name of the folder in which it is stored",
                                   "New todo '%1' was added to task list '%2'",
-                                  mNoteEdit->text(),
-                                  currentCollection.displayName()));
+                                  mNoteEdit->text().toHtmlEscaped(),
+                                  currentCollection.displayName().toHtmlEscaped()));
         KCalendarCore::Todo::Ptr todo = createTodoItem();
 
         // We don't hide the widget here, so that multiple todo's can be added
