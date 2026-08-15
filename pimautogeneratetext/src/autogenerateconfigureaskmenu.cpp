@@ -25,6 +25,7 @@ AutogenerateConfigureAskMenu::~AutogenerateConfigureAskMenu() = default;
 
 void AutogenerateConfigureAskMenu::initializeMenu()
 {
+    qDeleteAll(menu()->actions());
     const auto infos = mManager->askInfos();
     for (const AutogenerateConfigureAskInfo &info : infos) {
         if (info.enabled()) {
@@ -65,7 +66,6 @@ void AutogenerateConfigureAskMenu::setSelectedText(const QString &newSelectedTex
 
 void AutogenerateConfigureAskMenu::slotRefreshMenu()
 {
-    menu()->clear();
     initializeMenu();
 }
 
