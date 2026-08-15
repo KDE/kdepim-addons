@@ -79,6 +79,7 @@ void ConfirmAddressConfigureTabWidget::resetSettings()
 {
     mDomainNameListEditor->setStringList({});
     mWhiteListEditor->setStringList({});
+    mAcceptedDomain->setChecked(true);
 }
 
 void ConfirmAddressConfigureTabWidget::loadSettings(const KConfigGroup &grp)
