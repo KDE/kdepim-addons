@@ -54,6 +54,7 @@ void AskAutogenerateTextPluginEditorInterface::exec()
 
 void AskAutogenerateTextPluginEditorInterface::slotRefreshMenu()
 {
+    mAskManager->load();
     Q_EMIT refreshMenu();
 }
 
