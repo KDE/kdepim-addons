@@ -77,7 +77,7 @@ void copyStream(QIODevice &input, QIODevice &output)
     constexpr auto BUFFER_SIZE = 1024;
 
     QByteArray buffer;
-    buffer.reserve(BUFFER_SIZE);
+    buffer.resize(BUFFER_SIZE);
 
     while (true) {
         int64_t read = input.read(buffer.data(), BUFFER_SIZE);
