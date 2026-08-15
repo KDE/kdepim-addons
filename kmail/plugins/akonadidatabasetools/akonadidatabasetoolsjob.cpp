@@ -49,15 +49,20 @@ void AkonadiDatabaseToolsJob::start()
         mProcess = new QProcess(this);
         mProcess->setProgram(akonadiProcessPath());
         mProcess->setArguments(QStringList() << u"vacuum"_s);
+        connect(mProcess, &QProcess::errorOccurred, this, [this]([[maybe_unused]] QProcess::ProcessError error) {
+            Q_EMIT receivedStandardError(mProcess->errorString());
+            Q_EMIT finished();
+            deleteLater();
+        });
         connect(mProcess, &QProcess::finished, this, [this]() {
             Q_EMIT finished();
             deleteLater();
         });
         connect(mProcess, &QProcess::readyReadStandardError, this, [this]() {
-            Q_EMIT receivedStandardError(QLatin1StringView(mProcess->readAllStandardError()));
+            Q_EMIT receivedStandardError(QString::fromUtf8(mProcess->readAllStandardError()));
         });
         connect(mProcess, &QProcess::readyReadStandardOutput, this, [this]() {
-            Q_EMIT receivedStandardOutput(QLatin1StringView(mProcess->readAllStandardOutput()));
+            Q_EMIT receivedStandardOutput(QString::fromUtf8(mProcess->readAllStandardOutput()));
         });
         mProcess->start();
         break;
@@ -71,10 +76,15 @@ void AkonadiDatabaseToolsJob::start()
             deleteLater();
         });
         connect(mProcess, &QProcess::readyReadStandardError, this, [this]() {
-            Q_EMIT receivedStandardError(QLatin1StringView(mProcess->readAllStandardError()));
+            Q_EMIT receivedStandardError(QString::fromUtf8(mProcess->readAllStandardError()));
         });
         connect(mProcess, &QProcess::readyReadStandardOutput, this, [this]() {
-            Q_EMIT receivedStandardOutput(QLatin1StringView(mProcess->readAllStandardOutput()));
+            Q_EMIT receivedStandardOutput(QString::fromUtf8(mProcess->readAllStandardOutput()));
+        });
+        connect(mProcess, &QProcess::errorOccurred, this, [this]([[maybe_unused]] QProcess::ProcessError error) {
+            Q_EMIT receivedStandardError(mProcess->errorString());
+            Q_EMIT finished();
+            deleteLater();
         });
         mProcess->start();
         break;
