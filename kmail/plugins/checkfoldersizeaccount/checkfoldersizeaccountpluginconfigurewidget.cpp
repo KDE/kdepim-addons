@@ -44,6 +44,7 @@ void CheckFolderSizeAccountPluginConfigureWidget::load()
 void CheckFolderSizeAccountPluginConfigureWidget::save()
 {
     CheckFolderSizeAccountSettings::self()->setWarningSize(mWarningSpinBox->value());
+    CheckFolderSizeAccountSettings::self()->save();
 }
 
 #include "moc_checkfoldersizeaccountpluginconfigurewidget.cpp"
