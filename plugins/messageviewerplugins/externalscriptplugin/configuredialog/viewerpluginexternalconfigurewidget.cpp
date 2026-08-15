@@ -186,6 +186,7 @@ void ViewerPluginExternalConfigureWidget::save()
         desktopFile.desktopGroup().writeEntry(QStringLiteral("Description"), scriptInfo.description());
         desktopFile.desktopGroup().writeEntry(QStringLiteral("Executable"), scriptInfo.executable());
         desktopFile.desktopGroup().writeEntry(QStringLiteral("CommandLine"), scriptInfo.commandLine());
+        desktopFile.desktopGroup().writeEntry(QStringLiteral("Icon"), scriptInfo.icon());
         desktopFile.desktopGroup().sync();
     }
 }
