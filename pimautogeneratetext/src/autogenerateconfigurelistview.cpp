@@ -75,7 +75,7 @@ void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
                                                KStandardGuiItem::remove(),
                                                KStandardGuiItem::cancel())
                 == KMessageBox::PrimaryAction) {
-                mModel->removeItem(index.row());
+                mModel->removeItem(mSortFilterProxyModel->mapToSource(index).row());
             }
         });
         menu.addAction(removeAction);
