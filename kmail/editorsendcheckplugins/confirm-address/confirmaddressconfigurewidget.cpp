@@ -37,12 +37,14 @@ void ConfirmAddressConfigureWidget::loadSettings()
 void ConfirmAddressConfigureWidget::saveSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    // first, delete all filter groups:
-    const QStringList filterGroups = config->groupList().filter(QRegularExpression(u"Confirm Address \\d+"_s));
-    for (const QString &group : filterGroups) {
-        config->deleteGroup(group);
-    }
     KConfigGroup grp(config, u"Confirm Address"_s);
+    // The per-identity settings are subgroups of "Confirm Address", so they must be looked up there:
+    // KConfig::groupList() only returns top-level groups. Delete them all first, so that settings
+    // belonging to identities which don't exist anymore don't survive.
+    const QStringList identityGroups = grp.groupList().filter(QRegularExpression(u"^Confirm Address \\d+$"_s));
+    for (const QString &group : identityGroups) {
+        grp.group(group).deleteGroup();
+    }
     mConfirmAddressConfigureTab->saveSettings(grp);
 }
 

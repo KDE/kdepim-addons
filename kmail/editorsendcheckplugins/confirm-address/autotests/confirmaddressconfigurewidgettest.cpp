@@ -5,16 +5,18 @@
 */
 
 #include "confirmaddressconfigurewidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../confirmaddressconfiguretab.h"
 #include "../confirmaddressconfigurewidget.h"
 
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QCheckBox>
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 ConfirmAddressConfigureWidgetTest::ConfirmAddressConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
@@ -25,7 +27,7 @@ ConfirmAddressConfigureWidgetTest::~ConfirmAddressConfigureWidgetTest() = defaul
 
 void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
 {
-    ConfirmAddressConfigureWidget w;
+    const ConfirmAddressConfigureWidget w;
 
     auto vboxlayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(vboxlayout);
@@ -40,6 +42,23 @@ void ConfirmAddressConfigureWidgetTest::shouldLoadSaveResetValue()
     w.loadSettings();
     w.saveSettings();
     w.resetSettings();
+}
+
+void ConfirmAddressConfigureWidgetTest::shouldRemoveSettingsFromUnknownIdentity()
+{
+    // 4242 is not a known identity uoid, so saving must drop its leftover settings.
+    const QString staleGroupName = u"Confirm Address 4242"_s;
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    KConfigGroup grp(config, u"Confirm Address"_s);
+    KConfigGroup staleGroup = grp.group(staleGroupName);
+    staleGroup.writeEntry("Domains", QStringList() << u"foo.com"_s);
+    staleGroup.sync();
+    QVERIFY(grp.groupList().contains(staleGroupName));
+
+    ConfirmAddressConfigureWidget w;
+    w.saveSettings();
+
+    QVERIFY(!grp.groupList().contains(staleGroupName));
 }
 
 QTEST_MAIN(ConfirmAddressConfigureWidgetTest)
