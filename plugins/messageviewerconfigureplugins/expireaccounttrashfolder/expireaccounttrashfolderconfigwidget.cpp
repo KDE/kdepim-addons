@@ -25,6 +25,17 @@ ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidg
             this,
             &ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested);
     mainLayout->addWidget(mCollectionExpiryWidget);
+    const Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
+    for (const Akonadi::AgentInstance &agent : agents) {
+        Akonadi::Collection trashCol = Akonadi::SpecialMailCollections::self()->collection(Akonadi::SpecialMailCollections::Trash, agent);
+        if (trashCol.isValid()) {
+            qCDebug(LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG) << "Trash collection found " << trashCol;
+            MailCommon::CollectionExpirySettings settings;
+            settings.convertFromExpireCollectionAttribute(trashCol.attribute<MailCommon::ExpireCollectionAttribute>());
+            mCollectionExpiryWidget->load(settings);
+            break;
+        }
+    }
 }
 
 ExpireAccountTrashFolderConfigWidget::~ExpireAccountTrashFolderConfigWidget() = default;
