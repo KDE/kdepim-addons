@@ -19,5 +19,5 @@ public:
     void start() override;
 
 private:
-    const QString mIdentifer;
+    const QString mIdentifier;
 };

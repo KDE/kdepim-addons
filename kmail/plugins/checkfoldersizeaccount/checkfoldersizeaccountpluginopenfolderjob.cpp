@@ -14,7 +14,7 @@
 
 CheckFolderSizeAccountPluginOpenFolderJob::CheckFolderSizeAccountPluginOpenFolderJob(const QString &identifier, QObject *parent)
     : KJob{parent}
-    , mIdentifer(identifier)
+    , mIdentifier(identifier)
 {
 }
 
@@ -22,7 +22,7 @@ CheckFolderSizeAccountPluginOpenFolderJob::~CheckFolderSizeAccountPluginOpenFold
 
 void CheckFolderSizeAccountPluginOpenFolderJob::start()
 {
-    const qint64 identifier = mIdentifer.toLong();
+    const qint64 identifier = mIdentifier.toLong();
     if (identifier < 0) {
         emitResult();
         return;
@@ -40,7 +40,7 @@ void CheckFolderSizeAccountPluginOpenFolderJob::start()
 
     QDBusInterface kmail(kmailInterface, QStringLiteral("/KMail"), QStringLiteral("org.kde.kmail.kmail"));
     if (kmail.isValid()) {
-        kmail.call(QStringLiteral("selectFolder"), mIdentifer);
+        kmail.call(QStringLiteral("selectFolder"), mIdentifier);
     } else {
         qCWarning(KMAIL_CHECKFOLDERSIZEACCOUNT_PLUGIN_LOG) << "Impossible to access the DBus interface";
     }
