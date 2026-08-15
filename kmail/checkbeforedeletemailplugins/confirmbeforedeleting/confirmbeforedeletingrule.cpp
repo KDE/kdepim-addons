@@ -119,7 +119,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
         auto msg = item.payload<std::shared_ptr<KMime::Message>>();
         switch (mRuleType) {
         case Body: {
-            const auto ba = msg->body();
+            const auto ba = msg->decodedText().toUtf8();
             if (QString::fromUtf8(ba).contains(pattern())) {
                 needToConfirm = true;
                 generateConfirmMessageInfo(msg, checkFoundInfo);
