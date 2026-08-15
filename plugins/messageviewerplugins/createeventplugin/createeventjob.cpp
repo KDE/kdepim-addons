@@ -39,8 +39,15 @@ void CreateEventJob::start()
 
 void CreateEventJob::slotFetchDone(KJob *job)
 {
+    if (job->error()) {
+        setError(job->error());
+        setErrorText(job->errorText());
+        emitResult();
+        return;
+    }
+
     auto fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
-    if (fetchJob->items().count() == 1) {
+    if (fetchJob && fetchJob->items().count() == 1) {
         mItem = fetchJob->items().at(0);
     } else {
         emitResult();
