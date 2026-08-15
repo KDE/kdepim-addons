@@ -88,10 +88,20 @@ void AutoGenerateAnswersEditorInterface::exec()
     }
     QTextCursor textCursor = richTextEditor()->textCursor();
     QString str = textCursor.selectedText();
+
     if (str.isEmpty()) {
         str = richTextEditor()->toPlainText();
     }
-
+    if (str.isEmpty()) {
+        KMessageBox::information(parentWidget(), i18n("No text selected or no text in the editor."), i18nc("@title:window", "No Text"));
+        return;
+    }
+    str.replace(QChar::ParagraphSeparator, u'\n');
+    qCDebug(KMAIL_EDITOR_AUTOGENERATEANSWER_PLUGIN_LOG) << "Selected text: " << str;
+    if (!mManager) {
+        KMessageBox::information(parentWidget(), i18n("No AI engine configured."), i18nc("@title:window", "No AI Engine"));
+        return;
+    }
     qCDebug(KMAIL_EDITOR_AUTOGENERATEANSWER_PLUGIN_LOG) << "add text: " << str;
 
     auto job = new TextAutoGenerateText::TextAutoGenerateAskJob(this);
