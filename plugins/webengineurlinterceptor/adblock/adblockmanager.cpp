@@ -154,7 +154,7 @@ QString AdblockManager::adblockListText(const QString &url)
         qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Impossible to open file " << file.fileName();
         return {};
     }
-    const QString list = QString::fromLatin1(file.readAll());
+    const QString list = QString::fromUtf8(file.readAll());
     return list;
 }
 
