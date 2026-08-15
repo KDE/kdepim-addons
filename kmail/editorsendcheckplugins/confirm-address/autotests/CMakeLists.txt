@@ -27,6 +27,7 @@ macro(add_kmail_confirmaddress_unittest _source _additional)
         KPim6::PimCommon
         KPim6::Libkdepim
         KF6::Completion
+        KF6::Codecs
     )
 endmacro()
 

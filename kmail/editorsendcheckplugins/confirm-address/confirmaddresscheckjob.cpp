@@ -5,7 +5,7 @@
 */
 
 #include "confirmaddresscheckjob.h"
-
+#include <KEmailAddress>
 namespace
 {
 bool matchWhitelistEmail(const QString &email, const QString &whitelistEmail)
@@ -48,12 +48,17 @@ void ConfirmAddressCheckJob::start()
         if (email.isEmpty()) {
             continue;
         }
+        // The composer hands us full mailboxes ("Name <foo@kde.org>"). Store the bare address:
+        // it's what the whitelist is compared against when it's written back to the config.
+        const QString extractedAddress = KEmailAddress::extractEmailAddress(email);
+        // Keep the original text when nothing could be extracted, so the user still sees what was typed.
+        const QString addr = extractedAddress.isEmpty() ? email.trimmed() : extractedAddress;
         foundValidEmail = false;
         if (mRejectedDomain) {
             for (const QString &whiteEmail : std::as_const(mWhiteEmails)) {
-                if (matchWhitelistEmail(email, whiteEmail)) {
-                    if (!mValidEmails.contains(email)) {
-                        mValidEmails.append(email);
+                if (matchWhitelistEmail(addr, whiteEmail)) {
+                    if (!mValidEmails.contains(addr)) {
+                        mValidEmails.append(addr);
                     }
                     foundValidEmail = true;
                     break;
@@ -62,25 +67,25 @@ void ConfirmAddressCheckJob::start()
             if (!foundValidEmail) {
                 bool foundRejectedDomain = false;
                 for (const QString &domain : std::as_const(mDomains)) {
-                    if (matchDomain(email, domain)) {
-                        if (!mInvalidEmails.contains(email)) {
-                            mInvalidEmails.append(email);
+                    if (matchDomain(addr, domain)) {
+                        if (!mInvalidEmails.contains(addr)) {
+                            mInvalidEmails.append(addr);
                         }
                         foundRejectedDomain = true;
                         break;
                     }
                 }
                 if (!foundRejectedDomain) {
-                    if (!mValidEmails.contains(email)) {
-                        mValidEmails.append(email);
+                    if (!mValidEmails.contains(addr)) {
+                        mValidEmails.append(addr);
                     }
                 }
             }
         } else {
             for (const QString &domain : std::as_const(mDomains)) {
-                if (matchDomain(email, domain)) {
-                    if (!mValidEmails.contains(email)) {
-                        mValidEmails.append(email);
+                if (matchDomain(addr, domain)) {
+                    if (!mValidEmails.contains(addr)) {
+                        mValidEmails.append(addr);
                     }
                     foundValidEmail = true;
                     break;
@@ -88,9 +93,9 @@ void ConfirmAddressCheckJob::start()
             }
             if (!foundValidEmail) {
                 for (const QString &whiteEmail : std::as_const(mWhiteEmails)) {
-                    if (matchWhitelistEmail(email, whiteEmail)) {
-                        if (!mValidEmails.contains(email)) {
-                            mValidEmails.append(email);
+                    if (matchWhitelistEmail(addr, whiteEmail)) {
+                        if (!mValidEmails.contains(addr)) {
+                            mValidEmails.append(addr);
                         }
                         foundValidEmail = true;
                         break;
@@ -98,8 +103,8 @@ void ConfirmAddressCheckJob::start()
                 }
             }
             if (!foundValidEmail) {
-                if (!mInvalidEmails.contains(email)) {
-                    mInvalidEmails.append(email);
+                if (!mInvalidEmails.contains(addr)) {
+                    mInvalidEmails.append(addr);
                 }
             }
         }

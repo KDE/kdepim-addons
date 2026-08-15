@@ -117,20 +117,20 @@ void ConfirmAddressCheckJobTest::shouldNotDuplicateValue()
     ConfirmAddressCheckJob job;
     const QStringList domains{u"foo.com"_s, u"bla.com"_s};
     const QStringList whiteList{u"foo@kde.org"_s, u"bla@kde.org"_s};
-    const QStringList emails{u"toto@foo.com"_s, u"blabla@foo.com"_s};
+    const QStringList emails{u"toto@foo.com"_s, u"blabla@foo.com"_s, u"bla <user@foo.com>"_s};
+    // The job reports bare addresses, so the mailbox with a display name is reduced to its address.
+    const QStringList expected{u"toto@foo.com"_s, u"blabla@foo.com"_s, u"user@foo.com"_s};
     job.setCheckSettings(domains, whiteList, false);
     job.setAddressList(QStringList() << emails << emails);
     job.start();
     QVERIFY(job.invalidEmails().isEmpty());
-    QVERIFY(!job.validEmails().isEmpty());
-    QCOMPARE(job.validEmails(), emails);
+    QCOMPARE(job.validEmails(), expected);
 
     job.setCheckSettings(domains, whiteList, true);
     job.setAddressList(QStringList() << emails << emails);
     job.start();
-    QVERIFY(!job.invalidEmails().isEmpty());
     QVERIFY(job.validEmails().isEmpty());
-    QCOMPARE(job.invalidEmails(), emails);
+    QCOMPARE(job.invalidEmails(), expected);
 }
 
 void ConfirmAddressCheckJobTest::shouldNotMatchDomainInLocalPart()
@@ -138,7 +138,7 @@ void ConfirmAddressCheckJobTest::shouldNotMatchDomainInLocalPart()
     ConfirmAddressCheckJob job;
     const QStringList domains{u"foo.com"_s};
     const QStringList whiteList;
-    const QStringList emails{u"foo.com@example.org"_s, u"user@foo.com"_s};
+    const QStringList emails{u"foo.com@example.org"_s, u"user@foo.com"_s, u"bla <user@foo.com>"_s};
     job.setCheckSettings(domains, whiteList, false);
     job.setAddressList(emails);
     job.start();
@@ -159,6 +159,34 @@ void ConfirmAddressCheckJobTest::shouldMatchWhitelistCaseInsensitiveButExact()
 
     QCOMPARE(job.validEmails(), QStringList() << u"foo@kde.org"_s);
     QCOMPARE(job.invalidEmails(), QStringList() << u"prefixfoo@kde.org.bad"_s);
+}
+
+void ConfirmAddressCheckJobTest::shouldMatchMailboxWithDisplayName()
+{
+    // The composer passes full mailboxes, so the domain must be looked up in the address, not in the whole string.
+    const QStringList emails{u"Foo Bar <user@foo.com>"_s, u"\"Bar, Foo\" <user@other.com>"_s};
+
+    ConfirmAddressCheckJob acceptedJob;
+    acceptedJob.setCheckSettings({u"foo.com"_s}, {}, false);
+    acceptedJob.setAddressList(emails);
+    acceptedJob.start();
+    QCOMPARE(acceptedJob.validEmails(), QStringList() << u"user@foo.com"_s);
+    QCOMPARE(acceptedJob.invalidEmails(), QStringList() << u"user@other.com"_s);
+
+    ConfirmAddressCheckJob rejectedJob;
+    rejectedJob.setCheckSettings({u"foo.com"_s}, {}, true);
+    rejectedJob.setAddressList(emails);
+    rejectedJob.start();
+    QCOMPARE(rejectedJob.validEmails(), QStringList() << u"user@other.com"_s);
+    QCOMPARE(rejectedJob.invalidEmails(), QStringList() << u"user@foo.com"_s);
+
+    // A whitelist entry stores a bare address, it must still match a mailbox with a display name.
+    ConfirmAddressCheckJob whiteListJob;
+    whiteListJob.setCheckSettings({u"foo.com"_s}, {u"user@other.com"_s}, false);
+    whiteListJob.setAddressList(emails);
+    whiteListJob.start();
+    QCOMPARE(whiteListJob.validEmails(), QStringList() << u"user@foo.com"_s << u"user@other.com"_s);
+    QVERIFY(whiteListJob.invalidEmails().isEmpty());
 }
 
 QTEST_MAIN(ConfirmAddressCheckJobTest)

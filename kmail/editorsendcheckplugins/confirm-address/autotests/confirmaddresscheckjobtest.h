@@ -25,4 +25,5 @@ private Q_SLOTS:
     void shouldReturnAllInValidEmailsDomainReject();
     void shouldNotMatchDomainInLocalPart();
     void shouldMatchWhitelistCaseInsensitiveButExact();
+    void shouldMatchMailboxWithDisplayName();
 };
