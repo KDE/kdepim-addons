@@ -16,10 +16,9 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 
 #: sendmail/sendmailjob.cpp:40
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Invalid options for the mailer program: %1"
-msgstr "Zlyhalo spustenie programu mailera %1"
+msgstr "Neplatné voľby pre poštový program: %1"
 
 #: sendmail/sendmailjob.cpp:58
 #, kde-format
@@ -27,10 +26,9 @@ msgid "Failed to execute mailer program %1"
 msgstr "Zlyhalo spustenie programu mailera %1"
 
 #: sendmail/sendmailjob.cpp:60
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Failed to execute mailer program %1: %2"
-msgstr "Zlyhalo spustenie programu mailera %1"
+msgstr "Zlyhalo spustenie poštového programu %1: %2"
 
 #: sendmail/sendmailjob.cpp:74
 #, kde-format
