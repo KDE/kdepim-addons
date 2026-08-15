@@ -33,17 +33,17 @@ void ExpireAccountTrashFolderConfigWidget::save(bool saveSettings, bool expireNo
 {
     const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
     const Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
-    QList<Akonadi::Collection::Id> mListCollection;
+    QList<Akonadi::Collection::Id> listCollection;
     for (const Akonadi::AgentInstance &agent : agents) {
         Akonadi::Collection trashCol = Akonadi::SpecialMailCollections::self()->collection(Akonadi::SpecialMailCollections::Trash, agent);
         const auto trashColId = trashCol.id();
         // qCDebug(LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG) << "Trash collection found " << trashCol;
         if (trashCol.isValid()) {
             qCDebug(LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG) << "Trash collection valid found " << trashCol;
-            if (mListCollection.contains(trashColId)) {
+            if (listCollection.contains(trashColId)) {
                 continue;
             }
-            mListCollection.append(trashColId);
+            listCollection.append(trashColId);
             mCollectionExpiryWidget->save(settings, trashCol, saveSettings, expireNow);
         }
     }
