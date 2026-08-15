@@ -50,6 +50,10 @@ bool AutogenerateConfigureAskModel::setData(const QModelIndex &idx, const QVaria
         return false;
     }
     const int id = idx.row();
+    if (id < 0 || id >= mAskInfos.count()) {
+        qCWarning(PIMAUTOGENERATE_LOG) << "ERROR: invalid index" << id;
+        return false;
+    }
     auto &info = mAskInfos[id];
     switch (role) {
     case AskRoles::TitleRole: {
