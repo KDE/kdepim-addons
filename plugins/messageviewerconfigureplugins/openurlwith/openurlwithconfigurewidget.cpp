@@ -185,12 +185,12 @@ void OpenUrlWithConfigureWidget::slotEditRule()
         info.enabled = r.enabled();
         dlg->setInfo(info);
         if (dlg->exec()) {
-            const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
-            if (info.isValid()) {
-                r.setCommand(info.command);
-                r.setCommandLine(info.commandLines);
-                r.setUrl(info.url);
-                r.setEnabled(info.enabled);
+            const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo newInfo = dlg->info();
+            if (newInfo.isValid()) {
+                r.setCommand(newInfo.command);
+                r.setCommandLine(newInfo.commandLines);
+                r.setUrl(newInfo.url);
+                r.setEnabled(newInfo.enabled);
                 displayText(r, item);
             }
         }
