@@ -26,7 +26,7 @@ public:
 
     [[nodiscard]] bool operator==(const AutogenerateConfigureAskInfo &other) const;
 
-    int order() const;
+    [[nodiscard]] int order() const;
     void setOrder(int newOrder);
 
 private:
