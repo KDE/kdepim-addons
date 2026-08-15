@@ -116,7 +116,11 @@ void OpenUrlWithConfigureWidget::displayText(const MessageViewer::OpenWithUrlInf
     if (r.isLocalOpenWithInfo()) {
         item->setCheckState(r.enabled() ? Qt::Checked : Qt::Unchecked);
     }
-    item->setText(QStringLiteral("%1 (%2)").arg(r.command() + QLatin1Char(' ') + r.commandLine(), r.url()));
+    QString commandLine = r.command();
+    if (!r.commandLine().isEmpty()) {
+        commandLine += QLatin1Char(' ') + r.commandLine();
+    }
+    item->setText(QStringLiteral("%1 (%2)").arg(commandLine, r.url()));
 }
 
 void OpenUrlWithConfigureWidget::loadSettings()
