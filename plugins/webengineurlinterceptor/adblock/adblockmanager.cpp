@@ -267,14 +267,20 @@ bool AdblockManager::interceptRequest(QWebEngineUrlRequestInfo &info)
 
     const auto &redirect = result.redirect;
     const auto &rewrittenUrl = result.rewrittenUrl;
+    // Returning true tells the caller to block the request, so only report it for
+    // requests we really want to block: a redirected request must go through.
     if (!redirect.empty()) {
         info.redirect(QUrl(QString::fromStdString(std::string(redirect))));
-    } else if (result.matched) {
-        info.block(result.matched);
-    } else if (!rewrittenUrl.empty()) {
+        return false;
+    }
+    if (result.matched) {
+        info.block(true);
+        return true;
+    }
+    if (!rewrittenUrl.empty()) {
         info.redirect(QUrl(QString::fromStdString(std::string(rewrittenUrl))));
     }
-    return true;
+    return false;
 }
 
 void q_cdebug_adblock(const char *message)
