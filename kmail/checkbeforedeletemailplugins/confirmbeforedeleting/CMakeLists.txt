@@ -42,6 +42,7 @@ target_link_libraries(
     kmailconfirmbeforedeleting
     KPim6::MessageViewer
     KF6::I18n
+    KF6::XmlGui
 )
 
 set_target_properties(
