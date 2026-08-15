@@ -19,5 +19,6 @@ public:
 private:
     LIBEXPIREACCOUNTTRASHFOLDERCONFIG_NO_EXPORT void writeConfig();
     LIBEXPIREACCOUNTTRASHFOLDERCONFIG_NO_EXPORT void readConfig();
+    LIBEXPIREACCOUNTTRASHFOLDERCONFIG_NO_EXPORT void slotAccepted();
     ExpireAccountTrashFolderConfigWidget *const mExpireAccountTrashFolderConfig;
 };

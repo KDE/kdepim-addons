@@ -32,15 +32,20 @@ ExpireAccountTrashFolderConfigDialog::ExpireAccountTrashFolderConfigDialog(QWidg
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel | QDialogButtonBox::Ok, this);
     buttonBox->setObjectName(QLatin1StringView("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ExpireAccountTrashFolderConfigDialog::reject);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &ExpireAccountTrashFolderConfigDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &ExpireAccountTrashFolderConfigDialog::slotAccepted);
     mainLayout->addWidget(buttonBox);
     readConfig();
 }
 
 ExpireAccountTrashFolderConfigDialog::~ExpireAccountTrashFolderConfigDialog()
 {
-    mExpireAccountTrashFolderConfig->save();
     writeConfig();
+}
+
+void ExpireAccountTrashFolderConfigDialog::slotAccepted()
+{
+    mExpireAccountTrashFolderConfig->save();
+    accept();
 }
 
 void ExpireAccountTrashFolderConfigDialog::readConfig()
