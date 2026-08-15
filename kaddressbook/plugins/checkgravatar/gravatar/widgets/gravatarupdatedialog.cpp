@@ -14,6 +14,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 using namespace KABGravatar;
 namespace
@@ -102,10 +103,7 @@ void GravatarUpdateDialog::setOriginalPixmap(const QPixmap &pix)
 void GravatarUpdateDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myConfigGroupName), 300, 200);
 }
 
 void GravatarUpdateDialog::writeConfig()

@@ -13,6 +13,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 namespace
 {
@@ -56,10 +57,7 @@ void AutogenerateConfigureAskDialog::setAskInfos(const QList<AutogenerateConfigu
 void AutogenerateConfigureAskDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(400, 300));
-    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myAutogenerateConfigureAskDialogGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myAutogenerateConfigureAskDialogGroupName), 400, 300);
 }
 
 void AutogenerateConfigureAskDialog::writeConfig()

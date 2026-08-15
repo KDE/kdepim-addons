@@ -15,6 +15,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 namespace
 {
@@ -52,10 +53,7 @@ void AdblockViewFilterDialog::setFilterText(const QString &str)
 void AdblockViewFilterDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myAdblockViewFilterDialogGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myAdblockViewFilterDialogGroupName), 600, 400);
 }
 
 void AdblockViewFilterDialog::writeConfig()

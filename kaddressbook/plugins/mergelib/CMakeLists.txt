@@ -68,6 +68,7 @@ target_link_libraries(
         KPim6::AkonadiWidgets
         KF6::ItemViews
         KF6::ConfigGui
+        KF6::TextAddonsWidgets
 )
 
 set_target_properties(

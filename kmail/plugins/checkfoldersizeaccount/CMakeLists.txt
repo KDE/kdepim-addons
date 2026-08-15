@@ -56,6 +56,7 @@ target_link_libraries(
     KF6::XmlGui
     KPim6::Libkdepim
     KF6::I18n
+    KF6::TextAddonsWidgets
 )
 if(BUILD_TESTING)
     #add_subdirectory(autotests)

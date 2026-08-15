@@ -51,6 +51,7 @@ target_link_libraries(
     KPim6::PimCommon
     KF6::KIOWidgets
     KPim6::Libkdepim
+    KF6::TextAddonsWidgets
 )
 
 if(KDEPIMADDONS_BUILD_EXAMPLES)

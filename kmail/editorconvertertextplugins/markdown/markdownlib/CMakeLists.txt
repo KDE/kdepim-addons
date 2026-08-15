@@ -48,6 +48,7 @@ target_link_libraries(
     Qt::WebEngineWidgets
     discount::Lib
     KF6::SyntaxHighlighting
+    KF6::TextAddonsWidgets
 )
 
 set_target_properties(

@@ -13,6 +13,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 using namespace Qt::Literals::StringLiterals;
 namespace
 {
@@ -45,10 +46,7 @@ AutoGenerateAnswersEditorDialog::~AutoGenerateAnswersEditorDialog()
 void AutoGenerateAnswersEditorDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(400, 300));
-    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myAutoGenerateAnswersEditorDialogGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myAutoGenerateAnswersEditorDialogGroupName), 400, 300);
 }
 
 void AutoGenerateAnswersEditorDialog::writeConfig()

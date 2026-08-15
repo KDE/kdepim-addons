@@ -21,6 +21,7 @@ target_link_libraries(
     KF6::XmlGui
     KF6::I18n
     KPim6::AkonadiContactCore
+    KF6::TextAddonsWidgets
 )
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(

@@ -13,6 +13,7 @@
 #include <QListWidget>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 namespace
 {
 const char myConfigCheckAttachmentDialog[] = "CheckAttachmentDialog";
@@ -59,10 +60,7 @@ void CheckAttachmentDialog::writeConfig()
 void CheckAttachmentDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(500, 300));
-    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigCheckAttachmentDialog));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myConfigCheckAttachmentDialog), 500, 300);
 }
 
 #include "moc_checkattachmentdialog.cpp"

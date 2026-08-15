@@ -14,6 +14,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 namespace
 {
@@ -68,10 +69,7 @@ void MarkdownCreateImageDialog::writeConfig()
 void MarkdownCreateImageDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myMarkdownCreateImageDialogGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myMarkdownCreateImageDialogGroupName), 300, 200);
 }
 
 #include "moc_markdowncreateimagedialog.cpp"

@@ -13,6 +13,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 namespace
 {
 const char myOpenUrlWithConfigureConfigGroupName[] = "OpenUrlWithConfigureDialog";
@@ -53,10 +54,7 @@ void OpenUrlWithConfigureDialog::slotAccepted()
 void OpenUrlWithConfigureDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myOpenUrlWithConfigureConfigGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myOpenUrlWithConfigureConfigGroupName), 300, 200);
 }
 
 void OpenUrlWithConfigureDialog::writeConfig()

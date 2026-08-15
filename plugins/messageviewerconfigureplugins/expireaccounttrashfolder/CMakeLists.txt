@@ -30,6 +30,7 @@ target_link_libraries(
     KPim6::MessageViewer
     KF6::I18n
     KPim6::MailCommon
+    KF6::TextAddonsWidgets
 )
 
 set_target_properties(

@@ -16,6 +16,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 namespace
 {
 const char myConfigSelectImapFolderDialog[] = "SelectImapFolderDialog";
@@ -61,10 +62,7 @@ QString SelectImapFolderDialog::selectedFolderName() const
 void SelectImapFolderDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigSelectImapFolderDialog));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myConfigSelectImapFolderDialog), 500, 300);
 }
 
 void SelectImapFolderDialog::writeConfig()

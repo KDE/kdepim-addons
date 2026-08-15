@@ -37,6 +37,7 @@ target_link_libraries(
     KPim6::MessageComposer
     KF6::KIOWidgets
     KF6::XmlGui
+    KF6::TextAddonsWidgets
 )
 
 set_target_properties(

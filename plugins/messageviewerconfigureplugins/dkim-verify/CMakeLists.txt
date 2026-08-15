@@ -62,6 +62,7 @@ target_link_libraries(
     KPim6::MessageViewer
     KF6::ConfigWidgets
     KF6::ItemViews
+    KF6::TextAddonsWidgets
 )
 
 set_target_properties(

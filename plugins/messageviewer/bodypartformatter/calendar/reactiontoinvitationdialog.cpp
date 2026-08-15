@@ -14,6 +14,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 #include <TextCustomEditor/PlainTextEditor>
 #include <TextCustomEditor/PlainTextEditorWidget>
 namespace
@@ -63,10 +64,7 @@ QString ReactionToInvitationDialog::comment() const
 void ReactionToInvitationDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigReactionToInvitationDialog));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myConfigReactionToInvitationDialog), 600, 400);
 }
 
 void ReactionToInvitationDialog::writeConfig()

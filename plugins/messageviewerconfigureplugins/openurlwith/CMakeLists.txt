@@ -54,6 +54,7 @@ target_link_libraries(
     KF6::KIOWidgets
     KF6::ItemViews
     KPim6::Libkdepim
+    KF6::TextAddonsWidgets
 )
 
 set_target_properties(

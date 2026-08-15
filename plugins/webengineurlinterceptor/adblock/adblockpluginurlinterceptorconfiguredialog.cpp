@@ -12,6 +12,7 @@
 #include <KSharedConfig>
 #include <KWindowConfig>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 namespace
 {
@@ -60,10 +61,7 @@ void AdblockPluginUrlInterceptorConfigureDialog::help()
 void AdblockPluginUrlInterceptorConfigureDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myConfigGroupName), 600, 400);
 }
 
 void AdblockPluginUrlInterceptorConfigureDialog::writeConfig()

@@ -37,6 +37,7 @@ target_link_libraries(
     scamconfiguresettings
     KPim6::MessageViewer
     KF6::I18n
+    KF6::TextAddonsWidgets
 )
 
 set_target_properties(

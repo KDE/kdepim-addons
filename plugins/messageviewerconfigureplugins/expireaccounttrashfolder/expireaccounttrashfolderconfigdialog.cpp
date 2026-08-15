@@ -13,6 +13,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 namespace
 {
 const char myConfigGroupName[] = "ExpireAccountTrashFolderConfigDialog";
@@ -51,10 +52,7 @@ void ExpireAccountTrashFolderConfigDialog::slotAccepted()
 void ExpireAccountTrashFolderConfigDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myConfigGroupName), 300, 200);
 }
 
 void ExpireAccountTrashFolderConfigDialog::writeConfig()

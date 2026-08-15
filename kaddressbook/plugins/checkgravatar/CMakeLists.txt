@@ -42,6 +42,7 @@ target_link_libraries(
     KPim6::Gravatar
     KF6::I18n
     KF6::Contacts
+    KF6::TextAddonsWidgets
 )
 
 if(BUILD_TESTING)

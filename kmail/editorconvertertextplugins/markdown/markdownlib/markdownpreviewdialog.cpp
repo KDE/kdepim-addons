@@ -13,6 +13,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 namespace
 {
@@ -52,10 +53,7 @@ void MarkdownPreviewDialog::writeConfig()
 void MarkdownPreviewDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(500, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myMarkdownPreviewDialogGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myMarkdownPreviewDialogGroupName), 500, 300);
 }
 
 void MarkdownPreviewDialog::setText(const QString &str)

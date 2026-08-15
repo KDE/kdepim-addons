@@ -52,6 +52,7 @@ target_link_libraries(
     KPim6::Libkdepim
     KF6::Completion
     KF6::Codecs
+    KF6::TextAddonsWidgets
 )
 
 if(BUILD_TESTING)

@@ -14,6 +14,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 namespace
 {
 const char myConfigGroupName[] = "AkonadiDatabaseToolsDialog";
@@ -64,10 +65,7 @@ void AkonadiDatabaseToolsDialog::writeConfig()
 void AkonadiDatabaseToolsDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(500, 300));
-    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myConfigGroupName), 500, 300);
 }
 
 #include "moc_akonadidatabasetoolsdialog.cpp"

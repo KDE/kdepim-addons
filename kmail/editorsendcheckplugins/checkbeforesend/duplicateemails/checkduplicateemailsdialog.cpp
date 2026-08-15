@@ -15,6 +15,7 @@
 #include <QListWidget>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 namespace
 {
 const char myConfigCheckDuplicateEmailsDialog[] = "CheckDuplicateEmailsDialog";
@@ -62,10 +63,7 @@ void CheckDuplicateEmailsDialog::writeConfig()
 void CheckDuplicateEmailsDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(500, 300));
-    const KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigCheckDuplicateEmailsDialog));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myConfigCheckDuplicateEmailsDialog), 500, 300);
 }
 
 #include "moc_checkduplicateemailsdialog.cpp"

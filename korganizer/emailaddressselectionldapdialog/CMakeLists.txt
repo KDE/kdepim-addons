@@ -20,4 +20,5 @@ target_link_libraries(
     KF6::I18n
     KPim6::AkonadiContactCore
     KPim6::PimCommonAkonadi
+    KF6::TextAddonsWidgets
 )

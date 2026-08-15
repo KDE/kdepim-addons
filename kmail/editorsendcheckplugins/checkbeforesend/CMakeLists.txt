@@ -46,6 +46,7 @@ target_link_libraries(
     KPim6::MessageComposer
     KF6::I18n
     KF6::Codecs
+    KF6::TextAddonsWidgets
 )
 
 if(BUILD_TESTING)

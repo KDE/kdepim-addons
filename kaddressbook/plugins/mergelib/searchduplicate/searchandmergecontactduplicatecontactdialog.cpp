@@ -22,6 +22,7 @@
 #include <QStackedWidget>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 using namespace KABMergeContacts;
 namespace
@@ -95,10 +96,7 @@ void SearchAndMergeContactDuplicateContactDialog::searchPotentialDuplicateContac
 void SearchAndMergeContactDuplicateContactDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(mySearchAndMergeContactDuplicateContactDialogGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(mySearchAndMergeContactDuplicateContactDialogGroupName), 300, 200);
 }
 
 void SearchAndMergeContactDuplicateContactDialog::writeConfig()

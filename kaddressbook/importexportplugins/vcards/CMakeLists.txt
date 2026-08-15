@@ -36,5 +36,6 @@ target_link_libraries(
     KPim6::AkonadiContactCore
     KPim6::AkonadiContactWidgets
     Gpgmepp
+    KF6::TextAddonsWidgets
 )
 target_link_libraries(kaddressbook_importexportvcardplugin QGpgmeQt6)

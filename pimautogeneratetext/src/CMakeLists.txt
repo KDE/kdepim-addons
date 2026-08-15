@@ -52,6 +52,7 @@ target_link_libraries(
         KF6::I18n
         KF6::WidgetsAddons
         KF6::TextAutoGenerateText
+        KF6::TextAddonsWidgets
 )
 
 set_target_properties(

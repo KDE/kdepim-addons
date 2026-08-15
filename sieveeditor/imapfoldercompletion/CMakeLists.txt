@@ -57,4 +57,5 @@ target_link_libraries(
     KPim6::MailTransport
     KPim6::IMAP
     KF6::ItemModels
+    KF6::TextAddonsWidgets
 )

@@ -38,4 +38,5 @@ target_link_libraries(
     KF6::I18n
     KPim6::AutoGenerateText
     KF6::TextAutoGenerateText
+    KF6::TextAddonsWidgets
 )

@@ -14,6 +14,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 namespace
 {
 const char myViewerPluginExternalEditDialog[] = "ViewerPluginExternalEditDialog";
@@ -59,10 +60,7 @@ void ViewerPluginExternalEditDialog::saveConfig()
 void ViewerPluginExternalEditDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(350, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myViewerPluginExternalEditDialog));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myViewerPluginExternalEditDialog), 350, 200);
 }
 
 void ViewerPluginExternalEditDialog::slotAccepted()

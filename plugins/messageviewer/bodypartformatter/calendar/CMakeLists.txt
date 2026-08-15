@@ -60,6 +60,7 @@ target_link_libraries(
     KPim6::PimTextEdit
     KF6::KIOWidgets
     Qt::DBus
+    KF6::TextAddonsWidgets
 )
 
 install(
