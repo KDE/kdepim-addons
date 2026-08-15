@@ -40,6 +40,7 @@ void ViewerPluginExternalscriptInterface::refreshActionList(KActionCollection *a
     for (QAction *act : std::as_const(mAction)) {
         ac->removeAction(act);
     }
+
     mAction.clear();
     mActionGroup = new QActionGroup(this);
     createAction(ac);

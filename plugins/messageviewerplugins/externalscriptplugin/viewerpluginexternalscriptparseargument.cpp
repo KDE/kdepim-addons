@@ -47,7 +47,7 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
             // const QByteArray body = mMessage->body();
             // qDebug() << " BODY ************" << mMessage->encodedBody();
             QTextDocument doc;
-            doc.setHtml(QString::fromLatin1(mMessage->encodedBody()));
+            doc.setHtml(mMessage->decodedText());
             // qDebug() << " AFTYER BODY ************" << doc.toPlainText();
             newArguments << QStringLiteral("\"%1\"").arg(doc.toPlainText());
         } else if (arg == QLatin1StringView("%inreplyto")) {
