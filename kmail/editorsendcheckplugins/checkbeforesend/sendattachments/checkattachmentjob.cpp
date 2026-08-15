@@ -21,6 +21,7 @@ void CheckAttachmentJob::start()
         QString tname;
         QString temail;
         KEmailAddress::extractEmailAddressAndName(email, temail, tname); // ignore return value
+        temail = temail.toLower();
         if (!temail.isEmpty()) {
             if (!mResultList.contains(temail)) {
                 mResultList.append(temail);
