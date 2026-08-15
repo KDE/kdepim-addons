@@ -38,14 +38,14 @@ AdblockManager::AdblockManager(QObject *parent)
 {
     reloadConfig();
 
-    qDebug() << " AdblockManager::AdblockManager: filterListPath()=" << filterListPath();
+    qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << " AdblockManager::AdblockManager: filterListPath()=" << filterListPath();
     connect(&m_networkManager, &QNetworkAccessManager::finished, this, &AdblockManager::handleListFetched);
     m_networkManager.setRedirectPolicy(QNetworkRequest::SameOriginRedirectPolicy);
 
     if (QDir(filterListPath()).isEmpty() && !QStandardPaths::isTestModeEnabled()) {
         refreshLists();
     }
-    qDebug() << " AdblockManager::AdblockManager: mAdblockInitFuture.valid()=" << mAdblockInitFuture.valid();
+    qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << " AdblockManager::AdblockManager: mAdblockInitFuture.valid()=" << mAdblockInitFuture.valid();
 }
 
 AdblockManager::~AdblockManager()
@@ -280,7 +280,7 @@ bool AdblockManager::interceptRequest(QWebEngineUrlRequestInfo &info)
     }
     if (result.matched) {
         info.block(true);
-        qDebug() << " Intercepted request to " << info.requestUrl() << " matched adblock filter, blocking it";
+        qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << " Intercepted request to " << info.requestUrl() << " matched adblock filter, blocking it";
         return true;
     }
     if (!rewrittenUrl.empty()) {
