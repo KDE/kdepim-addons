@@ -5,7 +5,6 @@
 */
 
 #include "confirmbeforedeletingwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmbeforedeletingwidget.h"
 #include <QPushButton>
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QVBoxLayout>
 QTEST_MAIN(ConfirmBeforeDeletingWidgetTest)
 
+using namespace Qt::Literals::StringLiterals;
 ConfirmBeforeDeletingWidgetTest::ConfirmBeforeDeletingWidgetTest(QObject *parent)
     : QObject(parent)
 {
@@ -21,7 +21,7 @@ ConfirmBeforeDeletingWidgetTest::ConfirmBeforeDeletingWidgetTest(QObject *parent
 
 void ConfirmBeforeDeletingWidgetTest::shouldHaveDefaultValues()
 {
-    ConfirmBeforeDeletingWidget w;
+    const ConfirmBeforeDeletingWidget w;
 
     auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
