@@ -253,8 +253,12 @@ bool AdblockManager::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
     // Only wait for the adblock initialization if it isn't ready on first use
     if (!mAdblock) {
-        qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Adblock not yet initialized, blindly allowing request";
-        return false;
+        if (!mAdblockInitFuture.valid()) {
+            qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Adblock initialization failed, blindly allowing request";
+            return false;
+        }
+        qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Adblock not initialized yet, waiting for it";
+        mAdblock = mAdblockInitFuture.get();
     }
 
     const std::string url = info.requestUrl().toString().toStdString();
