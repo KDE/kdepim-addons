@@ -21,6 +21,8 @@ CheckFolderSizeAccountPluginInterface::~CheckFolderSizeAccountPluginInterface() 
 void CheckFolderSizeAccountPluginInterface::exec()
 {
     if (mCheckFolderSizeDialog) {
+        mCheckFolderSizeDialog->raise();
+        mCheckFolderSizeDialog->activateWindow();
         return;
     }
     mCheckFolderSizeDialog = new CheckFolderSizeAccountPluginDialog(parentWidget());
