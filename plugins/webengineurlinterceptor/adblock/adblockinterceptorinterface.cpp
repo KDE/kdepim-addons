@@ -7,24 +7,20 @@
 #include "adblockinterceptorinterface.h"
 #include "adblockinterceptor_debug.h"
 #include "adblockmanager.h"
-#include "globalsettings_webengineurlinterceptoradblock.h"
 #include <QAction>
+#include <QDebug>
 #include <QWebEngineView>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent)
 {
+    qDebug(ADBLOCKINTERCEPTOR_LOG) << "AdblockInterceptorInterface::AdblockInterceptorInterface";
 }
 
 AdblockInterceptorInterface::~AdblockInterceptorInterface() = default;
 
 bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
-    if (!AdBlockSettings::self()->adBlockEnabled()) {
-        qDebug(ADBLOCKINTERCEPTOR_LOG) << "Disable at the moment";
-        return false;
-    }
-    qDebug(ADBLOCKINTERCEPTOR_LOG) << "Enabled at the moment";
     return AdblockManager::self()->interceptRequest(info);
 }
 

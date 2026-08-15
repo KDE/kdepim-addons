@@ -40,7 +40,6 @@ public:
     [[nodiscard]] QString adblockListText(const QString &url);
 
 Q_SIGNALS:
-    void enabledChanged(bool enabled);
     void adblockInitialized();
     void refreshFinished();
 

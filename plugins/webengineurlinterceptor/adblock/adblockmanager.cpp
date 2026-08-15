@@ -100,9 +100,6 @@ AdblockManager *AdblockManager::self()
 
 void AdblockManager::reloadConfig()
 {
-    const bool enabled = AdBlockSettings::self()->adBlockEnabled();
-    Q_EMIT enabledChanged(enabled);
-
     mAdblockFilterLists.clear();
 
     const auto filterUrls = AdBlockSettings::self()->adblockFilterUrls();
