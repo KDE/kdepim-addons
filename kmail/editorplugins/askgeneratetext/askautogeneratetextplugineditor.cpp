@@ -37,7 +37,7 @@ void AskAutogenerateTextPluginEditor::showConfigureDialog(QWidget *parent)
     AutogenerateConfigureAskManager *manager = new AutogenerateConfigureAskManager(dialog);
     manager->load();
     dialog->setAskInfos(manager->askInfos());
-    if (dialog->exec()) {
+    if (dialog->exec() && dialog) {
         manager->setInfos(dialog->askInfos());
         manager->save();
         Q_EMIT configChanged();
