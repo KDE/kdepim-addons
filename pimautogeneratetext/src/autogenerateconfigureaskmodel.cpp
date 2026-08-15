@@ -71,7 +71,7 @@ bool AutogenerateConfigureAskModel::setData(const QModelIndex &idx, const QVaria
     case Qt::CheckStateRole:
     case AskRoles::EnabledRole:
         info.setEnabled(value.toBool());
-        Q_EMIT dataChanged(idx, idx, {AskRoles::EnabledRole});
+        Q_EMIT dataChanged(idx, idx, {AskRoles::EnabledRole, Qt::CheckStateRole});
         return true;
     }
     return QAbstractListModel::setData(idx, value, role);
