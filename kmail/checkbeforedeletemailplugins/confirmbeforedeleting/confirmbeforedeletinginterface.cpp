@@ -9,6 +9,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "confirmbeforedeletingmanager.h"
 #include "confirmbeforedeletingmessageboxdialog.h"
 #include "confirmbeforedeletingplugin_debug.h"
+#include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
 #include <QDialogButtonBox>
@@ -35,6 +36,8 @@ void ConfirmBeforeDeletingInterface::createActions(KActionCollection *ac)
         auto menu = new QMenu;
         auto act = new QAction(QIcon::fromTheme(u"settings-configure"_s), i18n("Configure"), menu);
         connect(act, &QAction::triggered, this, &ConfirmBeforeDeletingInterface::slotConfigure);
+        ac->addAction(QStringLiteral("confirm_before_deleting_configure"), act);
+
         menu->addAction(act);
         mainMenu->setMenu(menu);
         mAction << mainMenu;
@@ -76,19 +79,18 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
                 if (dlg->useSameResult()) {
                     ruleDelete.append(r);
                 }
-                delete dlg;
             } else if (button == QDialogButtonBox::StandardButton::No) {
                 if (dlg->useSameResult()) {
                     ruleNotDelete.append(r);
                 }
-                delete dlg;
             } else if (button == QDialogButtonBox::StandardButton::Cancel) {
                 lst.clear();
-                delete dlg;
                 break;
             } else {
-                qCWarning(KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG) << " StandardButton is invalid " << button << " .It's a bug!";
+                lst.clear();
+                break;
             }
+            delete dlg;
         } else {
             lst << item;
         }
