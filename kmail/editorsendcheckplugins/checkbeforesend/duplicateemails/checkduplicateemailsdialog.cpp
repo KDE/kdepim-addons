@@ -47,6 +47,7 @@ CheckDuplicateEmailsDialog::~CheckDuplicateEmailsDialog()
 
 void CheckDuplicateEmailsDialog::setDuplicatedEmails(const QMap<QString, int> &emails)
 {
+    mListWidget->clear();
     for (const auto &[key, value] : emails.asKeyValueRange()) {
         mListWidget->addItem(i18nc("emails (number of emails)", "%1 (%2)", key, value));
     }
