@@ -52,7 +52,6 @@ void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool v
             item->setCheckState(Qt::Unchecked);
             item->setForeground(Qt::red);
         }
-        mListEmails->addItem(item);
     }
 }
 
