@@ -21,7 +21,7 @@ void AutoGenerateAnswersEditorTextEdit::contextMenuEvent(QContextMenuEvent *even
     QMenu *popup = createStandardContextMenu();
     if (popup) {
         popup->addSeparator();
-        auto action = new QAction(i18nc("@action", "Insert Text"), this);
+        auto action = new QAction(i18nc("@action", "Insert Text"), popup);
         popup->addAction(action);
         connect(action, &QAction::triggered, this, [this]() {
             Q_EMIT insertText(toPlainText());
