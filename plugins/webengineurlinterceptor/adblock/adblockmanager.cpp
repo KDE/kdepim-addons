@@ -168,7 +168,13 @@ void AdblockManager::handleListFetched(QNetworkReply *reply)
         Q_EMIT refreshFinished();
     }
 
-    const auto id = filterListIdFromUrl(reply->url().toString());
+    if (reply->error() != QNetworkReply::NoError) {
+        qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Impossible to fetch list from " << reply->request().url().toString() << " Error: " << reply->errorString();
+        reply->deleteLater();
+        return;
+    }
+
+    const auto id = filterListIdFromUrl(reply->request().url().toString());
 
     QFile file(filterListPath() + id);
     if (!file.open(QIODevice::WriteOnly)) {
