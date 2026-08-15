@@ -53,7 +53,7 @@ void AkonadiDatabaseToolsDialog::appendText(const QString &text)
 
 void AkonadiDatabaseToolsDialog::appendErrorText(const QString &text)
 {
-    mAkonadiDatabaseToolsWidget->appendText(u"<font color=#FF0000>%1</font>"_s.arg(text));
+    mAkonadiDatabaseToolsWidget->appendText(u"<font color=#FF0000>%1</font>"_s.arg(text.toHtmlEscaped()));
 }
 
 void AkonadiDatabaseToolsDialog::writeConfig()

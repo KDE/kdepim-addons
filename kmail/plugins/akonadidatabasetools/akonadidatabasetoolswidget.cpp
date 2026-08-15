@@ -24,7 +24,7 @@ AkonadiDatabaseToolsWidget::~AkonadiDatabaseToolsWidget() = default;
 
 void AkonadiDatabaseToolsWidget::appendText(const QString &text)
 {
-    mPlainTextEdit->appendHtml(text);
+    mPlainTextEdit->appendHtml(text.toHtmlEscaped());
 }
 
 #include "moc_akonadidatabasetoolswidget.cpp"
