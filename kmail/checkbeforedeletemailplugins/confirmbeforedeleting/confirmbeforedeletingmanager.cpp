@@ -52,7 +52,7 @@ QString defaultGroupName()
 
 QStringList ConfirmBeforeDeletingManager::ruleGroups(const KSharedConfig::Ptr &config) const
 {
-    return config->groupList().filter(QRegularExpression(defaultGroupName() + u" #\\d+"_s));
+    return config->groupList().filter(QRegularExpression(defaultGroupName() + u" #\\d+$"_s));
 }
 
 void ConfirmBeforeDeletingManager::setRules(const QList<ConfirmBeforeDeletingRule> &newRules)
