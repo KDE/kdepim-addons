@@ -82,7 +82,7 @@ void ConfirmBeforeDeletingCreateRuleWidget::fillComboBox()
 
 bool ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo::operator==(const ConfirmBeforeDeletingInfo &other) const
 {
-    return other.pattern != pattern && other.ruleType != ruleType;
+    return other.pattern == pattern && other.ruleType == ruleType;
 }
 
 bool ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo::operator!=(const ConfirmBeforeDeletingInfo &other) const
