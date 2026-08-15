@@ -5,7 +5,6 @@
 */
 
 #include "confirmaddressconfigurewidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmaddressconfiguretab.h"
 #include <KConfigGroup>
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QRegularExpression>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConfigureBaseWidget(parent)
     , mConfirmAddressConfigureTab(new ConfirmAddressConfigureTab(this))
