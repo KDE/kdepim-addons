@@ -9,6 +9,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "selectmailwidget.h"
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <KWindowConfig>
 #include <QDialogButtonBox>
@@ -24,6 +25,7 @@ SelectMailDialog::SelectMailDialog(QWidget *parent)
     : QDialog(parent)
     , mSelectMailWidget(new SelectMailWidget(this))
 {
+    setWindowTitle(i18nc("@title:window", "Select Email Address"));
     auto mainLayout = new QVBoxLayout(this);
 
     mSelectMailWidget->setObjectName(QLatin1StringView("selectmailwidget"));
