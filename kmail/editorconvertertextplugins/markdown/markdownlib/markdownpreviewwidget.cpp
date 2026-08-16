@@ -74,7 +74,7 @@ void MarkdownPreviewWidget::slotLinkHovered(const QString &url)
 
 void MarkdownPreviewWidget::converterFailed(const QString &msg)
 {
-    KMessageBox::error(this, i18n("Converter Error"), msg);
+    KMessageBox::error(this, msg, i18n("Converter Error"));
 }
 
 void MarkdownPreviewWidget::setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists)
