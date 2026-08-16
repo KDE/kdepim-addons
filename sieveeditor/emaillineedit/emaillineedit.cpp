@@ -67,7 +67,9 @@ void EmailLineEdit::insertAddresses(const KContacts::Addressee::List &list)
         } else {
             firstElement = false;
         }
-        currentText.append(contact.preferredEmail());
+        if (const auto preferredEmail = contact.preferredEmail(); !preferredEmail.isEmpty()) {
+            currentText.append(preferredEmail);
+        }
     }
     mLineEdit->setText(currentText);
 }
