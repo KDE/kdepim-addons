@@ -6,6 +6,7 @@
 
 #include "markdownconverter.h"
 #include "config-markdownplugin.h"
+#include <QDebug>
 #if DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
 #include "markdownhighlighter.h"
 
