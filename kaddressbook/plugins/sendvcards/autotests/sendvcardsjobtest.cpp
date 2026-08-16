@@ -42,7 +42,7 @@ void SendVcardsJobTest::shouldChangeExportVersion()
     QCOMPARE(job.version(), KContacts::VCardConverter::v3_0);
 }
 
-void SendVcardsJobTest::shouldGenerageUniqueFileName()
+void SendVcardsJobTest::shouldGenerateUniqueFileName()
 {
     {
         QStringList existingVcard;
@@ -73,6 +73,16 @@ void SendVcardsJobTest::shouldGenerageUniqueFileName()
         QStringList existingVcard = QStringList() << u"bla"_s << u"bla_1"_s << u"vcard"_s;
         QString contactRealName;
         QCOMPARE(KABSendVCards::SendVcardsJob::createUniqueAttachmentName(contactRealName, existingVcard), u"vcard_1"_s);
+    }
+    {
+        QStringList existingVcard = QStringList() << u"bla"_s << u"bla_1"_s << u"Vcard"_s;
+        QString contactRealName;
+        QCOMPARE(KABSendVCards::SendVcardsJob::createUniqueAttachmentName(contactRealName, existingVcard), u"vcard_1"_s);
+    }
+    {
+        QStringList existingVcard = QStringList() << u"bla"_s;
+        QString contactRealName = u"Bla"_s;
+        QCOMPARE(KABSendVCards::SendVcardsJob::createUniqueAttachmentName(contactRealName, existingVcard), u"Bla_1"_s);
     }
 }
 

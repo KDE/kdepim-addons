@@ -40,12 +40,12 @@ QString SendVcardsJob::createUniqueAttachmentName(const QString &contactRealName
     if (newContactRealName.isEmpty()) {
         newContactRealName = QStringLiteral("vcard");
     }
-    if (existingVcard.contains(newContactRealName)) {
+    if (existingVcard.contains(newContactRealName, Qt::CaseInsensitive)) {
         int index = 0;
         QString uniqueContactRealName = newContactRealName;
         do {
             index++;
-            uniqueContactRealName = u"%1_%2"_s.arg(newContactRealName).arg(QString::number(index));
+            uniqueContactRealName = u"%1_%2"_s.arg(newContactRealName).arg(index);
         } while (existingVcard.contains(uniqueContactRealName));
         newContactRealName = uniqueContactRealName;
     }

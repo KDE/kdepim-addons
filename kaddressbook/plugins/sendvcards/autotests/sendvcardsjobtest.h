@@ -20,5 +20,5 @@ private Q_SLOTS:
     void shouldNotStartWhenListAddressIsEmpty();
     void shouldHasDefaultValue();
     void shouldChangeExportVersion();
-    void shouldGenerageUniqueFileName();
+    void shouldGenerateUniqueFileName();
 };
