@@ -62,7 +62,7 @@ bool SendVcardsJob::start()
         return false;
     }
 
-    QStringList realNameLst;
+    QStringList attachmentNameLst;
     for (const Akonadi::Item &item : std::as_const(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const auto contact = item.payload<KContacts::Addressee>();
@@ -71,16 +71,17 @@ bool SendVcardsJob::start()
             KContacts::adaptIMAttributes(data);
             createTemporaryDir();
             const QString contactRealName(contact.realName());
-            const QString generatedUniqueAttachmentName = createUniqueAttachmentName(contactRealName, realNameLst);
+            const QString generatedUniqueAttachmentName = createUniqueAttachmentName(contactRealName, attachmentNameLst);
             const QString attachmentName = generatedUniqueAttachmentName + QStringLiteral(".vcf");
-            realNameLst.append(generatedUniqueAttachmentName);
+            attachmentNameLst.append(generatedUniqueAttachmentName);
             createTemporaryFile(data, attachmentName);
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
             ++mExpandGroupJobCount;
             const auto group = item.payload<KContacts::ContactGroup>();
-            const QString groupName(group.name());
-            const QString attachmentName = (groupName.isEmpty() ? QStringLiteral("vcard") : groupName) + QStringLiteral(".vcf");
+            const QString uniqueName = createUniqueAttachmentName(group.name(), attachmentNameLst);
+            attachmentNameLst.append(uniqueName);
             auto expandJob = new Akonadi::ContactGroupExpandJob(group, this);
+            const QString attachmentName = uniqueName + QStringLiteral(".vcf");
             expandJob->setProperty("groupName", attachmentName);
             connect(expandJob, &KJob::result, this, &SendVcardsJob::slotExpandGroupResult);
             expandJob->start();
