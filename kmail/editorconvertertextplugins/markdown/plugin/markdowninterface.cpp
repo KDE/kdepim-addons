@@ -61,7 +61,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mPopupMenuAction->setEnabled(false);
     auto titleMenu = new QMenu(i18n("Add Title"), mardownMenu);
     mardownMenu->addMenu(titleMenu);
-    for (int i = 1; i < 5; ++i) {
+    for (int i = 1; i < 6; ++i) {
         titleMenu->addAction(i18n("Level %1", QString::number(i)), this, [this, i]() {
             addTitle(i);
         });
