@@ -281,6 +281,7 @@ bool AdblockManager::interceptRequest(QWebEngineUrlRequestInfo &info)
     if (result.matched) {
         info.block(true);
         qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << " Intercepted request to " << info.requestUrl() << " matched adblock filter, blocking it";
+        mInterceptUrls.append(info.requestUrl().toString());
         return true;
     }
     if (!rewrittenUrl.empty()) {

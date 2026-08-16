@@ -61,6 +61,7 @@ private:
     QList<AdblockFilter> mAdblockFilterLists;
     QNetworkAccessManager m_networkManager;
     int m_runningRequests = 0;
+    QStringList mInterceptUrls;
 };
 
 extern "C" {
