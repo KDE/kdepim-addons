@@ -53,11 +53,15 @@ QStringList SelectMailDialog::selectedEmails() const
 void SelectMailDialog::slotInsertEmails()
 {
     Q_EMIT emailSelected(selectedEmails());
+    accept();
 }
 
 void SelectMailDialog::accept()
 {
-    Q_EMIT emailSelected(selectedEmails());
+    const QStringList emails = selectedEmails();
+    if (!emails.isEmpty()) {
+        Q_EMIT emailSelected(emails);
+    }
     QDialog::accept();
 }
 
