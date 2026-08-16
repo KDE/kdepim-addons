@@ -5,14 +5,13 @@
 */
 
 #include "insertemailplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "selectmaildialog.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
-#include <TextCustomEditor/RichTextEditor>
 
+using namespace Qt::Literals::StringLiterals;
 InsertEmailPluginEditorInterface::InsertEmailPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
