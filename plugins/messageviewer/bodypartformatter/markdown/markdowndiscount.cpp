@@ -33,7 +33,12 @@ QString MarkdownDiscount::toHtml() const
     // on discount 3 MKD_NOLINKS is an enum value
     MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.size(), nullptr);
     mkd_flag_t *flags = mkd_flags();
-    mkd_set_flag_bitmap(flags, MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK | MKD_TOC | MKD_IDANCHOR);
+    // These flags aren't bitflags, so they can't be | together
+    mkd_set_flag_num(flags, MKD_FENCEDCODE);
+    mkd_set_flag_num(flags, MKD_GITHUBTAGS);
+    mkd_set_flag_num(flags, MKD_AUTOLINK);
+    mkd_set_flag_num(flags, MKD_TOC);
+    mkd_set_flag_num(flags, MKD_IDANCHOR);
     if (!mkd_compile(markdownHandle, flags)) {
         qWarning() << "Failed to compile the Markdown document.";
         mkd_cleanup(markdownHandle);
