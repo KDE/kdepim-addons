@@ -72,7 +72,13 @@ void AutomaticAddContactsJob::slotSelectedCollectionFetched(KJob *job)
         return;
     }
     const Akonadi::CollectionFetchJob *addressBookJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
-    mCollection = addressBookJob->collections().at(0);
+    if (const Akonadi::Collection::List collections = addressBookJob->collections(); !collections.isEmpty()) {
+        mCollection = collections.at(0);
+    } else {
+        qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Collection not found";
+        deleteLaterAndEmitSignal();
+        return;
+    }
     addNextContact();
 }
 
