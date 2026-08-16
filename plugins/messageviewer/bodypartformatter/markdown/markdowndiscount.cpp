@@ -48,8 +48,13 @@ QString MarkdownDiscount::toHtml() const
     mkd_free_flags(flags);
 #endif
 
-    char *htmlDocument;
+    char *htmlDocument = nullptr;
     const int size = mkd_document(markdownHandle, &htmlDocument);
+    if (size < 0 || !htmlDocument) {
+        qWarning() << "Failed to generate the Markdown document.";
+        mkd_cleanup(markdownHandle);
+        return {};
+    }
 
     const QString html = QString::fromUtf8(htmlDocument, size);
     mkd_cleanup(markdownHandle);
