@@ -30,8 +30,11 @@ SendVcardsJob::~SendVcardsJob()
 {
     delete mTempDir;
     mTempDir = nullptr;
-    // Don't delete it.
-    mAttachmentTemporary = nullptr;
+    // Don't delete it immediately, it might still have pending work in queued connections
+    if (mAttachmentTemporary) {
+        mAttachmentTemporary->deleteLater();
+        mAttachmentTemporary = nullptr;
+    }
 }
 
 QString SendVcardsJob::createUniqueAttachmentName(const QString &contactRealName, const QStringList &existingVcard)
