@@ -17,7 +17,7 @@
 #include <QTemporaryDir>
 
 using namespace KABSendVCards;
-
+using namespace Qt::Literals::StringLiterals;
 SendVcardsJob::SendVcardsJob(const Akonadi::Item::List &listItem, QObject *parent)
     : QObject(parent)
     , mListItem(listItem)
@@ -34,6 +34,24 @@ SendVcardsJob::~SendVcardsJob()
     mAttachmentTemporary = nullptr;
 }
 
+QString SendVcardsJob::createUniqueAttachmentName(const QString &contactRealName, const QStringList &existingVcard)
+{
+    QString newContactRealName = contactRealName;
+    if (newContactRealName.isEmpty()) {
+        newContactRealName = QStringLiteral("vcard");
+    }
+    if (existingVcard.contains(newContactRealName)) {
+        int index = 0;
+        QString uniqueContactRealName = newContactRealName;
+        do {
+            index++;
+            uniqueContactRealName = u"%1_%2"_s.arg(newContactRealName).arg(QString::number(index));
+        } while (existingVcard.contains(uniqueContactRealName));
+        newContactRealName = uniqueContactRealName;
+    }
+    return newContactRealName;
+}
+
 bool SendVcardsJob::start()
 {
     if (mListItem.isEmpty()) {
@@ -44,6 +62,7 @@ bool SendVcardsJob::start()
         return false;
     }
 
+    QStringList realNameLst;
     for (const Akonadi::Item &item : std::as_const(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const auto contact = item.payload<KContacts::Addressee>();
@@ -52,7 +71,9 @@ bool SendVcardsJob::start()
             KContacts::adaptIMAttributes(data);
             createTemporaryDir();
             const QString contactRealName(contact.realName());
-            const QString attachmentName = (contactRealName.isEmpty() ? QStringLiteral("vcard") : contactRealName) + QStringLiteral(".vcf");
+            const QString generatedUniqueAttachmentName = createUniqueAttachmentName(contactRealName, realNameLst);
+            const QString attachmentName = generatedUniqueAttachmentName + QStringLiteral(".vcf");
+            realNameLst.append(generatedUniqueAttachmentName);
             createTemporaryFile(data, attachmentName);
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
             ++mExpandGroupJobCount;

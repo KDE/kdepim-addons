@@ -10,6 +10,9 @@
 #include "sendvcards/sendvcardsjob.h"
 #include <Akonadi/Item>
 #include <QTest>
+
+QTEST_MAIN(SendVcardsJobTest)
+using namespace Qt::Literals::StringLiterals;
 SendVcardsJobTest::SendVcardsJobTest(QObject *parent)
     : QObject(parent)
 {
@@ -39,6 +42,38 @@ void SendVcardsJobTest::shouldChangeExportVersion()
     QCOMPARE(job.version(), KContacts::VCardConverter::v3_0);
 }
 
-QTEST_MAIN(SendVcardsJobTest)
+void SendVcardsJobTest::shouldGenerageUniqueFileName()
+{
+    {
+        QStringList existingVcard;
+        QString contactRealName = u"bla"_s;
+        QCOMPARE(KABSendVCards::SendVcardsJob::createUniqueAttachmentName(contactRealName, existingVcard), u"bla"_s);
+    }
+    {
+        QStringList existingVcard;
+        QString contactRealName;
+        QCOMPARE(KABSendVCards::SendVcardsJob::createUniqueAttachmentName(contactRealName, existingVcard), u"vcard"_s);
+    }
+    {
+        QStringList existingVcard = QStringList() << u"bla"_s;
+        QString contactRealName = u"bla"_s;
+        QCOMPARE(KABSendVCards::SendVcardsJob::createUniqueAttachmentName(contactRealName, existingVcard), u"bla_1"_s);
+    }
+    {
+        QStringList existingVcard = QStringList() << u"bla"_s << u"bla_1"_s;
+        QString contactRealName = u"bla"_s;
+        QCOMPARE(KABSendVCards::SendVcardsJob::createUniqueAttachmentName(contactRealName, existingVcard), u"bla_2"_s);
+    }
+    {
+        QStringList existingVcard = QStringList() << u"bla"_s << u"bla_1"_s;
+        QString contactRealName;
+        QCOMPARE(KABSendVCards::SendVcardsJob::createUniqueAttachmentName(contactRealName, existingVcard), u"vcard"_s);
+    }
+    {
+        QStringList existingVcard = QStringList() << u"bla"_s << u"bla_1"_s << u"vcard"_s;
+        QString contactRealName;
+        QCOMPARE(KABSendVCards::SendVcardsJob::createUniqueAttachmentName(contactRealName, existingVcard), u"vcard_1"_s);
+    }
+}
 
 #include "moc_sendvcardsjobtest.cpp"

@@ -28,6 +28,7 @@ public:
     [[nodiscard]] KContacts::VCardConverter::Version version() const;
     void setVersion(KContacts::VCardConverter::Version version);
 
+    [[nodiscard]] static QString createUniqueAttachmentName(const QString &contactRealName, const QStringList &existingVcard);
 Q_SIGNALS:
     void sendVCardsError(const QString &error);
 
