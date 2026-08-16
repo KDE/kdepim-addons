@@ -8,7 +8,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/../..
 )
 if(KDEPIM_RUN_AKONADI_TEST)
-    add_akonadi_isolated_test(SOURCE sendvcardsjobtest.cpp
+    add_akonadi_isolated_test(SOURCE sendvcardsjobtest.cpp  sendvcardsjobtest.h
         ADDITIONAL_SOURCES
             ../sendvcardsjob.cpp
             ../kaddressbook_sendvcardsplugin_debug.cpp
