@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-05-12 14:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,7 +18,7 @@ msgstr ""
 "pot\n"
 "X-Crowdin-File-ID: 57380\n"
 
-#: src/autogenerateconfigureaskdialog.cpp:25
+#: src/autogenerateconfigureaskdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Ask AI"
@@ -29,7 +29,7 @@ msgstr "配置 Ask AI"
 msgid "Ask AI…"
 msgstr "Ask AI…"
 
-#: src/autogenerateconfigureaskmenu.cpp:39
+#: src/autogenerateconfigureaskmenu.cpp:40
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"

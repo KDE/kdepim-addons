@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -45,14 +45,14 @@ msgstr "Изабрана је група контаката."
 msgid "Too many contacts selected."
 msgstr "Превише изабраних контаката."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
 #, fuzzy, kde-format
 #| msgid "Save Image"
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Сачувај слику"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Save Image URL"
 msgctxt "@action:button"
@@ -60,7 +60,7 @@ msgid "Save Image URL"
 msgstr "Сачувај УРЛ слике"
 
 # >> @title:window
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:30
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:31
 #, fuzzy, kde-format
 #| msgid "Check and update Gravatar"
 msgctxt "@title:window"
@@ -98,7 +98,7 @@ msgid "Merge Contacts…"
 msgstr "Стопи контакте..."
 
 # >> @title:window
-#: mergelib/manualmerge/mergecontactsdialog.cpp:39
+#: mergelib/manualmerge/mergecontactsdialog.cpp:40
 #, fuzzy, kde-format
 #| msgid "Select Contacts to merge"
 msgctxt "@title:window"
@@ -156,7 +156,7 @@ msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "Дупликат контакта %1"
 
 # >> @title:window
-#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
+#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:42
 #, fuzzy, kde-format
 #| msgid "Search and Select Duplicate Contacts to merge"
 msgctxt "@title:window"

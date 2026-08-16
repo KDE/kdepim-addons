@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-10-24 22:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -688,19 +688,19 @@ msgstr ""
 "име на контакта в полето за пълно име на vCard. Това може да е необходимо, "
 "за да се покаже правилно името в GMail или Android."
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "Импортиране на vCard"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "Искате ли да импортирате този контакт във вашата адресна книга?"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All…"

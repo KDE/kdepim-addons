@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-10-20 17:29+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "Asetukset"
 msgid "Authentication Server verified:"
 msgstr "Todennuspalvelimen varmentama:"
 
-#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
@@ -98,7 +98,7 @@ msgstr "Palvelin:"
 msgid "Do you want to delete selected server(s) name?"
 msgstr "Haluatko poistaa valittujen palvelinten nimet?"
 
-#: dkim-verify/dkimconfiguredialog.cpp:26
+#: dkim-verify/dkimconfiguredialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure DKIM"
@@ -201,13 +201,13 @@ msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Näytä säännöt"
 
-#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:27
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
 msgstr "Tilin roskakorikansion vanheneminen"
 
-#: foldersettings/folderconfiguresettingsdialog.cpp:27
+#: foldersettings/folderconfiguresettingsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Folder Settings"
@@ -300,10 +300,13 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Tietoa parametrin muodosta…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
+#| "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+"p><ul><li>%u - url used by command</li></ul></p></qt>"
 msgstr ""
 "<qt><p><strong>Parametreissa voi käyttää seuraavia lausekkeita:</strong></"
 "p><ul><li>%u – komennon käyttämä verkko-osoite</li></ul></strong></p></qt>"
@@ -318,7 +321,7 @@ msgstr "Komentorivi:"
 msgid "Executable:"
 msgstr "Ohjelmatiedosto:"
 
-#: openurlwith/openurlwithconfiguredialog.cpp:25
+#: openurlwith/openurlwithconfiguredialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
@@ -342,59 +345,59 @@ msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Muokkaa sääntöä…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:149
+#: openurlwith/openurlwithconfigurewidget.cpp:153
 #, kde-format
 msgid "A rule for host was already added."
 msgstr "Koneelle on jo lisätty sääntö."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:149
+#: openurlwith/openurlwithconfigurewidget.cpp:153
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "Kone on jo tarkistettu"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:162
+#: openurlwith/openurlwithconfigurewidget.cpp:166
 #, kde-format
 msgid "Rule already exists."
 msgstr "Sääntö on jo olemassa."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:162
+#: openurlwith/openurlwithconfigurewidget.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Toistuva sääntö"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:206
+#: openurlwith/openurlwithconfigurewidget.cpp:210
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Haluatko poistaa tämän säännön?"
 msgstr[1] "Haluatko poistaa nämä säännöt?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:207
+#: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Poista sääntö"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:224
+#: openurlwith/openurlwithconfigurewidget.cpp:228
 #, kde-format
 msgid "Add Rule…"
 msgstr "Lisää sääntö…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:226
+#: openurlwith/openurlwithconfigurewidget.cpp:230
 #, kde-format
 msgid "Edit Rule…"
 msgstr "Muokkaa sääntöä…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:231
+#: openurlwith/openurlwithconfigurewidget.cpp:235
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Poista sääntö"
 msgstr[1] "Poista säännöt"
 
-#: scamsettings/scamconfiguresettingsdialog.cpp:26
+#: scamsettings/scamconfiguresettingsdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"

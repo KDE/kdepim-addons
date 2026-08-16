@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -679,19 +679,19 @@ msgstr ""
 "यदि भवान् vCard इत्यस्य पूर्णनामक्षेत्रे सम्पर्कस्य प्रदर्शननाम निर्यातयितुम् इच्छति तर्हि एतत् "
 "पेटीम् चिनोतु ।  GMail अथवा Android इत्यत्र नाम सम्यक् दर्शयितुं एतत् आवश्यकं भवेत्।"
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "vCard आयात करें"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "किं भवान् एतत् सम्पर्कं स्वस्य पतापुस्तिकायां आयातुम् इच्छति?"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All…"

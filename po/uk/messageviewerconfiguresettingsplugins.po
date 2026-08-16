@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-08-01 20:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -71,7 +71,7 @@ msgstr "Налаштувати"
 msgid "Authentication Server verified:"
 msgstr "Надійний сервер розпізнавання:"
 
-#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
@@ -102,7 +102,7 @@ msgstr "Сервер:"
 msgid "Do you want to delete selected server(s) name?"
 msgstr "Хочете вилучити записи сервера із позначеною назвою?"
 
-#: dkim-verify/dkimconfiguredialog.cpp:26
+#: dkim-verify/dkimconfiguredialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure DKIM"
@@ -207,13 +207,13 @@ msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Показати правила"
 
-#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:27
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
 msgstr "Налаштовування теки смітника для застарілих записів"
 
-#: foldersettings/folderconfiguresettingsdialog.cpp:27
+#: foldersettings/folderconfiguresettingsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Folder Settings"
@@ -308,10 +308,13 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Відомості щодо формату аргументу…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
+#| "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+"p><ul><li>%u - url used by command</li></ul></p></qt>"
 msgstr ""
 "<qt><p><strong>У аргументах можна використовувати такі вирази-замінники:</"
 "strong></p><ul><li>%u — адреса, яку використовує команда</li></ul></strong></"
@@ -327,7 +330,7 @@ msgstr "Командний рядок:"
 msgid "Executable:"
 msgstr "Виконуваний файл:"
 
-#: openurlwith/openurlwithconfiguredialog.cpp:25
+#: openurlwith/openurlwithconfiguredialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
@@ -351,29 +354,29 @@ msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Змінити правило…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:149
+#: openurlwith/openurlwithconfigurewidget.cpp:153
 #, kde-format
 msgid "A rule for host was already added."
 msgstr "Правило для вузла вже додано."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:149
+#: openurlwith/openurlwithconfigurewidget.cpp:153
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "Вузол вже перевірено"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:162
+#: openurlwith/openurlwithconfigurewidget.cpp:166
 #, kde-format
 msgid "Rule already exists."
 msgstr "Правило вже існує."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:162
+#: openurlwith/openurlwithconfigurewidget.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Дублювання правила"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:206
+#: openurlwith/openurlwithconfigurewidget.cpp:210
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
@@ -382,23 +385,23 @@ msgstr[1] "Хочете вилучити правило ці правила?"
 msgstr[2] "Хочете вилучити правило ці правила?"
 msgstr[3] "Хочете вилучити це правило?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:207
+#: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Вилучення правила"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:224
+#: openurlwith/openurlwithconfigurewidget.cpp:228
 #, kde-format
 msgid "Add Rule…"
 msgstr "Додати правило…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:226
+#: openurlwith/openurlwithconfigurewidget.cpp:230
 #, kde-format
 msgid "Edit Rule…"
 msgstr "Змінити правило…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:231
+#: openurlwith/openurlwithconfigurewidget.cpp:235
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
@@ -407,7 +410,7 @@ msgstr[1] "Вилучити правила"
 msgstr[2] "Вилучити правила"
 msgstr[3] "Вилучити правило"
 
-#: scamsettings/scamconfiguresettingsdialog.cpp:26
+#: scamsettings/scamconfiguresettingsdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"

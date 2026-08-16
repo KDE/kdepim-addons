@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-08-07 21:28+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -66,7 +66,7 @@ msgstr "Configurar"
 msgid "Authentication Server verified:"
 msgstr "Verificouse o servidor de autenticación:"
 
-#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:25
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
@@ -97,7 +97,7 @@ msgstr "Servidor:"
 msgid "Do you want to delete selected server(s) name?"
 msgstr "Quere eliminar o nome dos servidores seleccionados?"
 
-#: dkim-verify/dkimconfiguredialog.cpp:26
+#: dkim-verify/dkimconfiguredialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure DKIM"
@@ -204,13 +204,13 @@ msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Amosar as regras"
 
-#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:27
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
 msgstr "Configurar o cartafol do lixo para contas caducadas"
 
-#: foldersettings/folderconfiguresettingsdialog.cpp:27
+#: foldersettings/folderconfiguresettingsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Folder Settings"
@@ -307,10 +307,13 @@ msgstr ""
 "qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
+#| "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-"p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+"p><ul><li>%u - url used by command</li></ul></p></qt>"
 msgstr ""
 "<qt><p><strong>Pode usar as seguintes expresións nos argumentos:</strong></"
 "p><ul><li>%u: URL usado pola orde.</li></ul></strong></p></qt>"
@@ -325,7 +328,7 @@ msgstr "Liña de ordes:"
 msgid "Executable:"
 msgstr "Executábel:"
 
-#: openurlwith/openurlwithconfiguredialog.cpp:25
+#: openurlwith/openurlwithconfiguredialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
@@ -349,59 +352,59 @@ msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Modificar a regra…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:149
+#: openurlwith/openurlwithconfigurewidget.cpp:153
 #, kde-format
 msgid "A rule for host was already added."
 msgstr "Xa se engadiu unha regra para o servidor."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:149
+#: openurlwith/openurlwithconfigurewidget.cpp:153
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "Xa se comprobou o servidor"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:162
+#: openurlwith/openurlwithconfigurewidget.cpp:166
 #, kde-format
 msgid "Rule already exists."
 msgstr "A regra xa existe."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:162
+#: openurlwith/openurlwithconfigurewidget.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Regra duplicada"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:206
+#: openurlwith/openurlwithconfigurewidget.cpp:210
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Quere eliminar a regra?"
 msgstr[1] "Quere eliminar estas regras?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:207
+#: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Eliminar a regra"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:224
+#: openurlwith/openurlwithconfigurewidget.cpp:228
 #, kde-format
 msgid "Add Rule…"
 msgstr "Engadir unha regra…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:226
+#: openurlwith/openurlwithconfigurewidget.cpp:230
 #, kde-format
 msgid "Edit Rule…"
 msgstr "Editar a regra…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:231
+#: openurlwith/openurlwithconfigurewidget.cpp:235
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Eliminar a regra"
 msgstr[1] "Eliminar as regras"
 
-#: scamsettings/scamconfiguresettingsdialog.cpp:26
+#: scamsettings/scamconfiguresettingsdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"

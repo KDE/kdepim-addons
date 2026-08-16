@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2019-12-18 20:04+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -257,7 +257,7 @@ msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "Välise skripti eemaldamine"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"
@@ -306,31 +306,31 @@ msgstr ""
 msgid "Executable:"
 msgstr "Täitmisfail:"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
 #, kde-format
 msgid "'%1' not found"
 msgstr "\"%1\" ei leitud"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
 #, fuzzy, kde-format
 #| msgid "Executable not found."
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "Täitmisfaili ei leitud."
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:85
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:86
 #, kde-format
 msgid "Impossible to start executable"
 msgstr "Täitmisfaili pole võimalik käivitada"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:105
 #, fuzzy, kde-format
 #| msgid "External Script:"
 msgctxt "@action"
 msgid "External Script"
 msgstr "Väline skript:"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:129
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:130
 #, kde-format
 msgid "Configure"
 msgstr ""

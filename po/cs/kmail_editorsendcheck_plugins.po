@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2026-02-04 10:53+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: \n"
@@ -133,31 +133,31 @@ msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Zkontrolovat odeslání přílohy"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "Duplikované e-maily"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Tyto e-maily jsou duplicitní. Chcete jej odeslat?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:51
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
 msgstr "Zkontrolovat přílohu"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:28
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
@@ -224,24 +224,24 @@ msgstr "Zadat novou e-mailovou adresu:"
 msgid "Do you want to remove this email address?"
 msgstr "Chcete odstranit tuto e-mailovou adresu?"
 
-#: confirm-address/confirmaddressdialog.cpp:26
+#: confirm-address/confirmaddressdialog.cpp:27
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Přidat všechny vybrané e-maily na bílou listinu"
 
-#: confirm-address/confirmaddressdialog.cpp:28
+#: confirm-address/confirmaddressdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr "Potvrdit adresy"
 
-#: confirm-address/confirmaddressdialog.cpp:91
+#: confirm-address/confirmaddressdialog.cpp:89
 #, kde-format
 msgid "All selected emails are added to white list"
 msgstr "Všechny vybrané e-maily jsou přidány na bílou listinu"
 
-#: confirm-address/confirmaddressdialog.cpp:91
+#: confirm-address/confirmaddressdialog.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-10 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2013-03-11 16:07+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -60,7 +60,7 @@ msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "प्रतिनिधित्व : %1"
 
-#: reactiontoinvitationdialog.cpp:30
+#: reactiontoinvitationdialog.cpp:31
 #, fuzzy, kde-format
 #| msgid "Comment:"
 msgctxt "@label:textbox"

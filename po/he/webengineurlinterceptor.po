@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-07-04 06:46+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,7 +18,7 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.05.1\n"
 
-#: adblock/adblockfilterdialog.cpp:26
+#: adblock/adblockfilterdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
@@ -94,20 +94,17 @@ msgstr "שם:"
 msgid "Url:"
 msgstr "כתובת:"
 
-#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "הגדרת תוסף חסימת פרסומות (AdBlock)"
 
-#: adblock/adblockviewfilterdialog.cpp:27
+#: adblock/adblockviewfilterdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "הצגת רשימת חסימת פרסומות (Adblock)"
 
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
-#, kde-format
-msgid "Enabled ad block"
-msgstr "הפעלת חסימת פרסומות"
+#~ msgid "Enabled ad block"
+#~ msgstr "הפעלת חסימת פרסומות"

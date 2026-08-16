@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-12-18 17:54+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -41,7 +41,7 @@ msgstr "Habilita listas de EXTRA definition de  PHP Markdown"
 msgid "Failed to compile the Markdown document."
 msgstr "Falleva compilar le documento de Markdown."
 
-#: markdown/markdownlib/markdowncreateimagedialog.cpp:27
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Image"
@@ -87,7 +87,7 @@ msgstr "Texto alternative:"
 msgid " px"
 msgstr "px"
 
-#: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Link"
@@ -98,7 +98,7 @@ msgstr "Adde ligamine"
 msgid "Link:"
 msgstr "Ligamine"
 
-#: markdown/markdownlib/markdownpreviewdialog.cpp:25
+#: markdown/markdownlib/markdownpreviewdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"

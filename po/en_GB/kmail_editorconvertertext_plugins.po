@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-08-03 12:48+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -41,7 +41,7 @@ msgstr "Enable PHP Markdown Extra definition lists"
 msgid "Failed to compile the Markdown document."
 msgstr "Failed to compile the Markdown document."
 
-#: markdown/markdownlib/markdowncreateimagedialog.cpp:27
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Image"
@@ -87,7 +87,7 @@ msgstr "Alternate text:"
 msgid " px"
 msgstr " px"
 
-#: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Link"
@@ -98,7 +98,7 @@ msgstr "Add Link"
 msgid "Link:"
 msgstr "Link:"
 
-#: markdown/markdownlib/markdownpreviewdialog.cpp:25
+#: markdown/markdownlib/markdownpreviewdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-07-06 20:09+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -43,19 +43,19 @@ msgstr "தொடர்புக்குழு தேர்ந்தெடு�
 msgid "Too many contacts selected."
 msgstr "கூடுதலான தொடர்புகள் தேர்ந்தெடுக்கப்பட்டுள்ளன."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "படத்தை சேமி"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:28
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "படத்தின் முகவரியை சேமி"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:30
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Check and update Gravatar"
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Merge Contacts…"
 msgstr "தொடர்புகளை ஒன்றிணை…"
 
-#: mergelib/manualmerge/mergecontactsdialog.cpp:39
+#: mergelib/manualmerge/mergecontactsdialog.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Contacts to merge"
@@ -139,7 +139,7 @@ msgstr "தொடர்புகள்"
 msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "நகல் தொடர்பு \"%1\" (%2 முறை)"
 
-#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
+#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Search and Select Duplicate Contacts to merge"

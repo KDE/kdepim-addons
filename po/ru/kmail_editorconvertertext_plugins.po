@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-11-15 17:31+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -44,7 +44,7 @@ msgstr "Включить дополнительные списки PHP Markdown"
 msgid "Failed to compile the Markdown document."
 msgstr "Не удалось скомпилировать документ Markdown."
 
-#: markdown/markdownlib/markdowncreateimagedialog.cpp:27
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Image"
@@ -90,7 +90,7 @@ msgstr "Текст, заменяющий изображение"
 msgid " px"
 msgstr " пикс."
 
-#: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Link"
@@ -101,7 +101,7 @@ msgstr "Добавление ссылки"
 msgid "Link:"
 msgstr "Ссылка:"
 
-#: markdown/markdownlib/markdownpreviewdialog.cpp:25
+#: markdown/markdownlib/markdownpreviewdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"

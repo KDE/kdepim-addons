@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-08-15 11:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -43,7 +43,7 @@ msgstr "مكن قوائم تعريف مارك‌داون بي اتش بي الإ
 msgid "Failed to compile the Markdown document."
 msgstr "فشل في تصيير مستند مارك داون"
 
-#: markdown/markdownlib/markdowncreateimagedialog.cpp:27
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Image"
@@ -89,7 +89,7 @@ msgstr "النص البديل:"
 msgid " px"
 msgstr " بكسل"
 
-#: markdown/markdownlib/markdowncreatelinkdialog.cpp:26
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Link"
@@ -100,7 +100,7 @@ msgstr "أضف رابط"
 msgid "Link:"
 msgstr "الرابط:"
 
-#: markdown/markdownlib/markdownpreviewdialog.cpp:25
+#: markdown/markdownlib/markdownpreviewdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"

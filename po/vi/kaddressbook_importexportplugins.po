@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2002-04-26 01:03GMT+0900\n"
 "Last-Translator: Nguyen Hung Vu <vuhung@feduDOTuecDOTacDOTjp>\n"
 "Language-Team: VIETNAMESE <vi@i18n.kde.org>\n"
@@ -636,19 +636,19 @@ msgid ""
 "correctly in GMail or Android."
 msgstr ""
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "Danh sách &nhập vào"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, fuzzy, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "Xin lỗi, contact không tìm thấy trong sổ địa chỉ"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Import All…"

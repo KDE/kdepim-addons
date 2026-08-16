@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -47,19 +47,19 @@ msgstr "Um grupo de contatos foi selecionado."
 msgid "Too many contacts selected."
 msgstr "Muitos contatos selecionados."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:26
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Salvar imagem"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:28
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "Salvar URL da imagem"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:30
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Check and update Gravatar"
@@ -92,7 +92,7 @@ msgstr "Nenhum Gravatar encontrado."
 msgid "Merge Contacts…"
 msgstr "Mesclar contatos…"
 
-#: mergelib/manualmerge/mergecontactsdialog.cpp:39
+#: mergelib/manualmerge/mergecontactsdialog.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Contacts to merge"
@@ -144,7 +144,7 @@ msgstr "Contatos"
 msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "Contato duplicado \"%1\" (%2 vezes)"
 
-#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:41
+#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:42
 #, kde-format
 msgctxt "@title:window"
 msgid "Search and Select Duplicate Contacts to merge"

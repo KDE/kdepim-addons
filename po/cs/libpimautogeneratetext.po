@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2026-06-26 23:28+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 26.04.2\n"
 
-#: src/autogenerateconfigureaskdialog.cpp:25
+#: src/autogenerateconfigureaskdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Ask AI"
@@ -29,7 +29,7 @@ msgstr "Nastavit Zeptat se AI"
 msgid "Ask AI…"
 msgstr "Zeptat se AI..."
 
-#: src/autogenerateconfigureaskmenu.cpp:39
+#: src/autogenerateconfigureaskmenu.cpp:40
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"

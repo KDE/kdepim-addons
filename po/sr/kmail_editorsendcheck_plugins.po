@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -158,7 +158,7 @@ msgid "Check send attachment"
 msgstr "Проверавај слање прилога"
 
 # rewrite-msgid: /emails/messages/
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
 #, fuzzy, kde-format
 #| msgid "Duplicated emails"
 msgctxt "@title:window"
@@ -166,28 +166,28 @@ msgid "Duplicated emails"
 msgstr "Дупликати порука"
 
 # rewrite-msgid: /email/message/
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "These emails are duplicated. Do you want to send email?"
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Ове поруке су дупликати. Желите ли да их пошаљете?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:51
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 # >> @title:window
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:25
 #, fuzzy, kde-format
 #| msgid "Check Attachment"
 msgctxt "@title:window"
 msgid "Check Attachment"
 msgstr "Провера прилога"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Do you want to send some attachment?"
 msgctxt "@label:textbox"
@@ -265,26 +265,26 @@ msgstr "Унесите нову адресу е‑поште:"
 msgid "Do you want to remove this email address?"
 msgstr "Желите ли да пошаљете поруку као ХТМЛ?"
 
-#: confirm-address/confirmaddressdialog.cpp:26
+#: confirm-address/confirmaddressdialog.cpp:27
 #, fuzzy, kde-format
 #| msgid "Add Selected Emails to WhiteList"
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Додај изабране адресе е‑поште на белу листу"
 
-#: confirm-address/confirmaddressdialog.cpp:28
+#: confirm-address/confirmaddressdialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Confirm Addresses"
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr "Потврди адресе"
 
-#: confirm-address/confirmaddressdialog.cpp:91
+#: confirm-address/confirmaddressdialog.cpp:89
 #, kde-format
 msgid "All selected emails are added to white list"
 msgstr "Све изабране адресе е‑поште додате су на белу листу."
 
-#: confirm-address/confirmaddressdialog.cpp:91
+#: confirm-address/confirmaddressdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid "Emails added to white list"
 msgctxt "@title:window"

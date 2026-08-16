@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-05-18 17:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -656,19 +656,19 @@ msgstr ""
 "勾選此選項的話，在匯出檔案時，會將聯絡人的顯示名稱放入全名欄位。如果要在 "
 "GMail 或 Android 中正確顯示名稱的話就需要如此。"
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "匯入 vCard"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "您要將這個聯絡人匯入您的通訊錄？"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All…"

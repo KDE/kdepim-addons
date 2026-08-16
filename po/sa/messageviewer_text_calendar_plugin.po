@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-10 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -61,7 +61,7 @@ msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "प्रतिनिधिः :"
 
-#: reactiontoinvitationdialog.cpp:30
+#: reactiontoinvitationdialog.cpp:31
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"

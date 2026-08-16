@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-07-04 14:43+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.1\n"
 
-#: adblock/adblockfilterdialog.cpp:26
+#: adblock/adblockfilterdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
@@ -94,23 +94,20 @@ msgstr "Nome:"
 msgid "Url:"
 msgstr "URL:"
 
-#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Configurar o complemento AdBlock"
 
-#: adblock/adblockviewfilterdialog.cpp:27
+#: adblock/adblockviewfilterdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "Amosar a lista de bloqueo de publicidade"
 
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
-#, kde-format
-msgid "Enabled ad block"
-msgstr "Activar o filtro de publicidade"
+#~ msgid "Enabled ad block"
+#~ msgstr "Activar o filtro de publicidade"
 
 #~ msgid "Add..."
 #~ msgstr "Engadir…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-08-19 22:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: adblock/adblockfilterdialog.cpp:26
+#: adblock/adblockfilterdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
@@ -93,23 +93,20 @@ msgstr "이름:"
 msgid "Url:"
 msgstr "URL:"
 
-#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "AdBlock 플러그인 설정"
 
-#: adblock/adblockviewfilterdialog.cpp:27
+#: adblock/adblockviewfilterdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "광고 차단 목록 표시"
 
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
-#, kde-format
-msgid "Enabled ad block"
-msgstr "광고 차단 활성화"
+#~ msgid "Enabled ad block"
+#~ msgstr "광고 차단 활성화"
 
 #~ msgid "Add..."
 #~ msgstr "추가..."

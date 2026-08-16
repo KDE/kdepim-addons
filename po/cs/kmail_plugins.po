@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:45+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2026-02-04 10:54+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: \n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
+#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Database Tool"
@@ -120,7 +120,7 @@ msgid "More Than 10 MB"
 msgstr "Více než 10 MB"
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
-#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
+#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
@@ -138,7 +138,7 @@ msgctxt "@label:textbox"
 msgid "Size:"
 msgstr "Velikost:"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-05-12 15:35+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -688,19 +688,19 @@ msgstr ""
 "en el campo de nombre completo de la vCard. Esto puede ser necesario para "
 "que el nombre se muestre correctamente en GMail o Android."
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "Importar vCard"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "¿Quiere importar este contacto en su libreta de direcciones?"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All…"

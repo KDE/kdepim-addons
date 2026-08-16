@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-09-03 19:50+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -251,7 +251,7 @@ msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "Премахване на външен скрипт"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"
@@ -306,29 +306,29 @@ msgstr ""
 msgid "Executable:"
 msgstr "Изпълним файл:"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
 #, kde-format
 msgid "'%1' not found"
 msgstr "„%1“ не е открит"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "Изпълнимият файл не е намерен."
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:85
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:86
 #, kde-format
 msgid "Impossible to start executable"
 msgstr "Невъзможно е стартиране на изпълнимия файл"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:105
 #, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "Външен скрипт"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:129
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:130
 #, kde-format
 msgid "Configure"
 msgstr "Настройване"

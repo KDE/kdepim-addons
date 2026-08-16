@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-07-16 12:13+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: adblock/adblockfilterdialog.cpp:26
+#: adblock/adblockfilterdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
@@ -96,23 +96,20 @@ msgstr "Izena:"
 msgid "Url:"
 msgstr "URL:"
 
-#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Konfiguratu iragazkiak oztopatzeko «AdBlock» plugina"
 
-#: adblock/adblockviewfilterdialog.cpp:27
+#: adblock/adblockviewfilterdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "Gehitu oztopatu beharreko iragazkien zerrenda"
 
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
-#, kde-format
-msgid "Enabled ad block"
-msgstr "Iragarkiak oztopatzea gaituta"
+#~ msgid "Enabled ad block"
+#~ msgstr "Iragarkiak oztopatzea gaituta"
 
 #~ msgid "Add..."
 #~ msgstr "Gehitu..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-10 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-08-01 08:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -60,7 +60,7 @@ msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "מיופה כוח:"
 
-#: reactiontoinvitationdialog.cpp:30
+#: reactiontoinvitationdialog.cpp:31
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"

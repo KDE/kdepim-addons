@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-09-04 11:39+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -253,7 +253,7 @@ msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "Supprimer un script externe"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:25
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"
@@ -311,29 +311,29 @@ msgstr ""
 msgid "Executable:"
 msgstr "Exécutable :"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
 #, kde-format
 msgid "'%1' not found"
 msgstr "Impossible de trouver « %1 »"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:79
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "Impossible de trouver l'exécutable."
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:85
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:86
 #, kde-format
 msgid "Impossible to start executable"
 msgstr "Impossible de lancer l'exécutable."
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:104
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:105
 #, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "Script externe"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:129
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:130
 #, kde-format
 msgid "Configure"
 msgstr "Configurer"

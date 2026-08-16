@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: adblock/adblockfilterdialog.cpp:26
+#: adblock/adblockfilterdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Adblock List"
@@ -95,20 +95,17 @@ msgstr "नामः:"
 msgid "Url:"
 msgstr "Url:"
 
-#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "AdBlock प्लगिन् विन्यस्तं कुर्वन्तु"
 
-#: adblock/adblockviewfilterdialog.cpp:27
+#: adblock/adblockviewfilterdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "Adblock List दर्शयतु"
 
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
-#, kde-format
-msgid "Enabled ad block"
-msgstr "विज्ञापनखण्डं सक्षमम्"
+#~ msgid "Enabled ad block"
+#~ msgstr "विज्ञापनखण्डं सक्षमम्"

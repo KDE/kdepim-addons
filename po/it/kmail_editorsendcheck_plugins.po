@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-07-31 22:28+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -132,31 +132,31 @@ msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Verifica invio allegato"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:26
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "Messaggi di posta duplicati"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Questi messaggi sono duplicati. Vuoi inviare il messaggio?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:51
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:24
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
 msgstr "Verifica allegato"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:27
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:28
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
@@ -223,24 +223,24 @@ msgstr "Inserisci un nuovo indirizzo di posta:"
 msgid "Do you want to remove this email address?"
 msgstr "Vuoi rimuovere questo indirizzo di posta elettronica?"
 
-#: confirm-address/confirmaddressdialog.cpp:26
+#: confirm-address/confirmaddressdialog.cpp:27
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Aggiungi i messaggi selezionati alla lista bianca"
 
-#: confirm-address/confirmaddressdialog.cpp:28
+#: confirm-address/confirmaddressdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr "Conferma indirizzi"
 
-#: confirm-address/confirmaddressdialog.cpp:91
+#: confirm-address/confirmaddressdialog.cpp:89
 #, kde-format
 msgid "All selected emails are added to white list"
 msgstr "Tutti i messaggi selezionati sono aggiunti alla lista bianca"
 
-#: confirm-address/confirmaddressdialog.cpp:91
+#: confirm-address/confirmaddressdialog.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"

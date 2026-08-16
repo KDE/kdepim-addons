@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2022-04-20 18:00+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -711,19 +711,19 @@ msgstr ""
 "do nome completo no vCard. Isto poderá ser necessário para mostrar o nome "
 "correctamente no GMail ou no Android."
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "Importar um vCard"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "Deseja importar este contacto para o seu livro de endereços?"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Import All..."

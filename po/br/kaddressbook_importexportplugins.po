@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2005-03-04 00:29+0100\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: Breton <LL@li.org>\n"
@@ -689,14 +689,14 @@ msgid ""
 "correctly in GMail or Android."
 msgstr ""
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Importing contacts"
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "Emaon oc'h enporzh ar zarempredoù"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, fuzzy, kde-format
 #| msgid "Do you want to import this contact in your address book?"
 msgctxt "@info"
@@ -705,7 +705,7 @@ msgstr ""
 "C'hoant ho peus da enporzhañ an darempred-mañ e-barzh ho c'harned "
 "chomlec'hioù ?"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, fuzzy, kde-format
 #| msgid "Import All..."
 msgctxt "@action:button"

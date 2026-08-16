@@ -1,28 +1,27 @@
-# SPDX-FileCopyrightText: 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2024, 2026 Xavier Besnard <xavier.besnard@kde.org>
 # Simon Depiets <sdepiets@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:47+0000\n"
-"PO-Revision-Date: 2019-11-11 07:40+0800\n"
-"Last-Translator: Simon Depiets <sdepiets@gmail.com>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"PO-Revision-Date: 2026-08-13 14:00+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.07.90\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: sendmail/sendmailjob.cpp:40
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Invalid options for the mailer program: %1"
-msgstr "Échec de l'exécution du programme de courrier électronique %1"
+msgstr "Options non valables pour le programme de courrier électronique : %1"
 
 #: sendmail/sendmailjob.cpp:58
 #, kde-format
@@ -30,10 +29,9 @@ msgid "Failed to execute mailer program %1"
 msgstr "Échec de l'exécution du programme de courrier électronique %1"
 
 #: sendmail/sendmailjob.cpp:60
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Failed to execute mailer program %1: %2"
-msgstr "Échec de l'exécution du programme de courrier électronique %1"
+msgstr "Échec de l'exécution du programme de courrier électronique %1 : %2"
 
 #: sendmail/sendmailjob.cpp:74
 #, kde-format

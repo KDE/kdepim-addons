@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2010-02-01 21:44+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -690,21 +690,21 @@ msgid ""
 "correctly in GMail or Android."
 msgstr ""
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Import vCard"
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "vCard ਇੰਪੋਰਟ"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, fuzzy, kde-format
 #| msgid "Do you want to import this contact in your address book?"
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "ਕੀ ਤੁਸੀਂ ਆਪਣੀ ਐਡਰੈੱਸ ਬੁੱਕ ਵਿੱਚ ਇਹ ਸੰਪਰਕ ਇੰਪੋਰਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, fuzzy, kde-format
 #| msgid "Import All..."
 msgctxt "@action:button"

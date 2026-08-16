@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2019-12-17 11:55+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-POFile-SpellExtra: AdBlock pub\n"
 "X-POFile-IgnoreConsistency: Type\n"
 
-#: adblock/adblockfilterdialog.cpp:26
+#: adblock/adblockfilterdialog.cpp:27
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Configure AdBlock Plugin"
@@ -101,13 +101,13 @@ msgstr ""
 msgid "Url:"
 msgstr ""
 
-#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Configurar o 'Plugin' do AdBlock"
 
-#: adblock/adblockviewfilterdialog.cpp:27
+#: adblock/adblockviewfilterdialog.cpp:28
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Show adblock list"
@@ -115,11 +115,8 @@ msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "Mostrar a lista do AdBlock"
 
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
-#, kde-format
-msgid "Enabled ad block"
-msgstr "Bloqueio de anúncios activo"
+#~ msgid "Enabled ad block"
+#~ msgstr "Bloqueio de anúncios activo"
 
 #~ msgid "Search..."
 #~ msgstr "Procurar..."

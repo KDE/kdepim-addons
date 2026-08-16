@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2013-04-15 10:09+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -698,19 +698,19 @@ msgstr ""
 "संपर्काचे प्रदर्शित केलेले पूर्ण नाव vCard च्या पूर्ण नावांच्या प्रक्षेत्राकडे पाठवायचे असल्यास ही "
 "पेटी तपासा. यासाठी Gmail वा Android मध्ये नाव तंतीतांत/बिनचूक दाखविलेले असले पाहिजे"
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "vcard आयात करा"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "तुम्हाला हा संपर्क तुमच्या पत्ते नोंदवहीत आयात करावयाचा आहे का?"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Import All..."

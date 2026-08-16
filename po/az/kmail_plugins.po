@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-05 00:45+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2022-11-11 11:18+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.3\n"
 
-#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:28
+#: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Akonadi Database Tool"
@@ -125,7 +125,7 @@ msgid "More Than 10 MB"
 msgstr ""
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginconfiguredialog.cpp:20
-#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:30
+#: checkfoldersizeaccount/checkfoldersizeaccountplugindialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Folder Size"
@@ -143,7 +143,7 @@ msgctxt "@label:textbox"
 msgid "Size:"
 msgstr ""
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:32
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"

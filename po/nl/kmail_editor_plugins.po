@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-08-31 21:14+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -40,7 +40,7 @@ msgctxt "@action"
 msgid "Autocorrect Selected Text"
 msgstr "Autocorrectie van geselecteerde tekst"
 
-#: autogenerateanswers/autogenerateanswerseditordialog.cpp:25
+#: autogenerateanswers/autogenerateanswerseditordialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Auto Generate Answer"
@@ -76,12 +76,36 @@ msgctxt "@action"
 msgid "Configure AI"
 msgstr "AI configureren"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:126
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
+#, kde-format
+msgid "No text selected or no text in the editor."
+msgstr ""
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Correct Text"
+msgctxt "@title:window"
+msgid "No Text"
+msgstr "Correctietekst"
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
+#, kde-format
+msgid "No AI engine configured."
+msgstr ""
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
+#, kde-format
+msgctxt "@title:window"
+msgid "No AI Engine"
+msgstr ""
+
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:137
 #, kde-format
 msgid "An error occured: %1"
 msgstr "Er is een fout opgetreden: %1"
 
-#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:126
+#: autogenerateanswers/autogenerateanswerseditorinterface.cpp:137
 #, kde-format
 msgid "Error"
 msgstr "Fout"
@@ -157,19 +181,19 @@ msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Vaste witruimte invoegen"
 
-#: quicktext/quicktextconfiguredialog.cpp:27
+#: quicktext/quicktextconfiguredialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure quick text"
 msgstr "Snelle tekst configureren"
 
-#: quicktext/quicktextconfiguredialog.cpp:38
+#: quicktext/quicktextconfiguredialog.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Import…"
 msgstr "Importeren…"
 
-#: quicktext/quicktextconfiguredialog.cpp:41
+#: quicktext/quicktextconfiguredialog.cpp:42
 #, kde-format
 msgctxt "@action:button"
 msgid "Export…"

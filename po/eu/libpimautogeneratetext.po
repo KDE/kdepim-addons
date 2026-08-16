@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-05-26 16:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.1\n"
 
-#: src/autogenerateconfigureaskdialog.cpp:25
+#: src/autogenerateconfigureaskdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Ask AI"
@@ -31,7 +31,7 @@ msgstr "Konfiguratu Galdetu AAri"
 msgid "Ask AI…"
 msgstr "Galdetu AAri..."
 
-#: src/autogenerateconfigureaskmenu.cpp:39
+#: src/autogenerateconfigureaskmenu.cpp:40
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"

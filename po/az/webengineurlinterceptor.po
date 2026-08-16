@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2022-07-22 17:19+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.3\n"
 
-#: adblock/adblockfilterdialog.cpp:26
+#: adblock/adblockfilterdialog.cpp:27
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Configure AdBlock Plugin"
@@ -103,13 +103,13 @@ msgstr ""
 msgid "Url:"
 msgstr ""
 
-#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:23
+#: adblock/adblockpluginurlinterceptorconfiguredialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure AdBlock Plugin"
 msgstr "Reklam əngəlləmə qoşmasını tənzimləyin"
 
-#: adblock/adblockviewfilterdialog.cpp:27
+#: adblock/adblockviewfilterdialog.cpp:28
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Show adblock list"
@@ -117,11 +117,8 @@ msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "Reklam əngəlləmə siyahısını göstərin"
 
-#. i18n: ectx: label, entry (AdBlockEnabled), group (General)
-#: adblock/settings/webengineurlinterceptoradblock.kcfg:9
-#, kde-format
-msgid "Enabled ad block"
-msgstr "İşə salınmış reklam əngəlləyici"
+#~ msgid "Enabled ad block"
+#~ msgstr "İşə salınmış reklam əngəlləyici"
 
 #~ msgid "Search..."
 #~ msgstr "Axtarış..."

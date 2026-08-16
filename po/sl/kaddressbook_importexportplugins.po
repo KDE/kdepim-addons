@@ -2,7 +2,7 @@
 # Translation of kaddressbook.po to Slovenian
 # SLOVENIAN TRANSLATION OF KADDRESSBOOK.
 # Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-# $Id: kaddressbook_importexportplugins.po 1739199 2026-06-16 01:29:37Z scripty $
+# $Id: kaddressbook_importexportplugins.po 1743922 2026-08-16 01:29:20Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-05-12 07:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -689,19 +689,19 @@ msgstr ""
 "Označite to polje, če želite v polje s polnim imenom izvoziti ime za prikaz. "
 "To je včasih potrebno za pravilen prikaz imena v GMailu in na Androidu."
 
-#: vcards/engine/vcardviewerdialog.cpp:28
+#: vcards/engine/vcardviewerdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "Uvozi vCard"
 
-#: vcards/engine/vcardviewerdialog.cpp:51
+#: vcards/engine/vcardviewerdialog.cpp:52
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "Ali želite uvoziti ta stik v vaš imenik?"
 
-#: vcards/engine/vcardviewerdialog.cpp:61
+#: vcards/engine/vcardviewerdialog.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
