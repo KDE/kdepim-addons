@@ -6,7 +6,6 @@
 
 #include "emaillineeditwidget.h"
 #include "../emaillineedit.h"
-#include <QCheckBox>
 #include <QVBoxLayout>
 
 EmailLineEditWidget::EmailLineEditWidget(QWidget *parent)
