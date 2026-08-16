@@ -60,7 +60,7 @@ AutomaticAddContactsTabWidget::~AutomaticAddContactsTabWidget() = default;
 
 void AutomaticAddContactsTabWidget::resetSettings()
 {
-    mEnabled->setChecked(false);
+    loadSettings();
 }
 
 void AutomaticAddContactsTabWidget::loadSettings()
