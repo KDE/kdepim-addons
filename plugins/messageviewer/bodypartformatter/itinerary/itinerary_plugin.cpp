@@ -27,18 +27,18 @@ public:
     {
     }
 
-    [[nodiscard]] const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
+    [[nodiscard]] std::unique_ptr<const MimeTreeParser::Interface::BodyPartFormatter> bodyPartFormatter(int idx) const override
     {
         if (idx < 3) {
-            return new ItineraryProcessor();
+            return std::make_unique<ItineraryProcessor>();
         }
         return nullptr;
     }
 
-    MessageViewer::MessagePartRendererBase *renderer(int idx) override
+    [[nodiscard]] std::unique_ptr<MessageViewer::MessagePartRendererBase> renderer(int idx) override
     {
         if (idx == 0) {
-            auto renderer = new ItineraryRenderer();
+            auto renderer = std::make_unique<ItineraryRenderer>();
             renderer->setKDEConnectHandler(m_kdeConnect);
             return renderer;
         }

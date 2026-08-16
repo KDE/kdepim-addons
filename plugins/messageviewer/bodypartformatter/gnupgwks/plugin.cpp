@@ -20,27 +20,27 @@ enum Index {
 };
 }
 
-const MimeTreeParser::Interface::BodyPartFormatter *ApplicationGnuPGWKSPlugin::bodyPartFormatter(int idx) const
+std::unique_ptr<const MimeTreeParser::Interface::BodyPartFormatter> ApplicationGnuPGWKSPlugin::bodyPartFormatter(int idx) const
 {
     switch (idx) {
     case multipart_mixed:
     case application_vnd_gnupg_keys:
-        return new ApplicationGnuPGWKSFormatter();
+        return std::make_unique<ApplicationGnuPGWKSFormatter>();
     case application_pgp_keys:
-        return new ApplicationPGPKeyFormatter();
+        return std::make_unique<ApplicationPGPKeyFormatter>();
     default:
         return nullptr;
     }
 }
 
-MessageViewer::MessagePartRendererBase *ApplicationGnuPGWKSPlugin::renderer(int idx)
+std::unique_ptr<MessageViewer::MessagePartRendererBase> ApplicationGnuPGWKSPlugin::renderer(int idx)
 {
     switch (idx) {
     case multipart_mixed:
     case application_vnd_gnupg_keys:
-        return new ApplicationGnuPGWKSFormatter();
+        return std::make_unique<ApplicationGnuPGWKSFormatter>();
     case application_pgp_keys:
-        return new ApplicationPGPKeyFormatter();
+        return std::make_unique<ApplicationPGPKeyFormatter>();
     default:
         return nullptr;
     }

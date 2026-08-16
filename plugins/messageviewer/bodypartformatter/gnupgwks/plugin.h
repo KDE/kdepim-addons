@@ -18,7 +18,7 @@ class ApplicationGnuPGWKSPlugin : public QObject, public MimeTreeParser::Interfa
 public:
     ApplicationGnuPGWKSPlugin() = default;
 
-    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override;
-    MessageViewer::MessagePartRendererBase *renderer(int index) override;
+    [[nodiscard]] std::unique_ptr<const MimeTreeParser::Interface::BodyPartFormatter> bodyPartFormatter(int idx) const override;
+    [[nodiscard]] std::unique_ptr<MessageViewer::MessagePartRendererBase> renderer(int index) override;
     const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override;
 };

@@ -81,10 +81,10 @@ class Plugin : public QObject, public MessageViewer::MessagePartRenderPlugin
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "texthighlighterplugin.json")
 public:
-    MessageViewer::MessagePartRendererBase *renderer(int index) override
+    [[nodiscard]] std::unique_ptr<MessageViewer::MessagePartRendererBase> renderer(int index) override
     {
         if (index == 0) {
-            return new Formatter();
+            return std::make_unique<Formatter>();
         }
         return nullptr;
     }

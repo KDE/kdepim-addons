@@ -135,14 +135,14 @@ class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatt
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "application_ms-tnef.json")
 public:
-    [[nodiscard]] const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
+    [[nodiscard]] std::unique_ptr<const MimeTreeParser::Interface::BodyPartFormatter> bodyPartFormatter(int idx) const override
     {
-        return idx < 2 ? new TNEFProcessor() : nullptr;
+        return idx < 2 ? std::make_unique<TNEFProcessor>() : nullptr;
     }
 
-    MessageViewer::MessagePartRendererBase *renderer(int index) override
+    [[nodiscard]] std::unique_ptr<MessageViewer::MessagePartRendererBase> renderer(int index) override
     {
-        return index == 0 ? new Formatter() : nullptr;
+        return index == 0 ? std::make_unique<Formatter>() : nullptr;
     }
 };
 }

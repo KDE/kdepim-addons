@@ -1426,10 +1426,10 @@ class Plugin : public QObject, public MessageViewer::MessagePartRenderPlugin
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_calendar.json")
 public:
-    MessageViewer::MessagePartRendererBase *renderer(int idx) override
+    [[nodiscard]] std::unique_ptr<MessageViewer::MessagePartRendererBase> renderer(int idx) override
     {
         if (idx < 2) {
-            return new Formatter();
+            return std::make_unique<Formatter>();
         } else {
             return nullptr;
         }

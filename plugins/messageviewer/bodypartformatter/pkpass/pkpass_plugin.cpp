@@ -180,9 +180,9 @@ public:
     {
     }
 
-    MessageViewer::MessagePartRendererBase *renderer(int index) override
+    [[nodiscard]] std::unique_ptr<MessageViewer::MessagePartRendererBase> renderer(int index) override
     {
-        return index == 0 ? new Formatter() : nullptr;
+        return index == 0 ? std::make_unique<Formatter>() : nullptr;
     }
 };
 }
