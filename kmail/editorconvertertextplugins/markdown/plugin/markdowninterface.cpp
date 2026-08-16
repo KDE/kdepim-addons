@@ -82,6 +82,11 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     MessageComposer::PluginActionType typePopup(mPopupMenuAction, MessageComposer::PluginActionType::PopupMenu);
     addActionType(typePopup);
     connect(richTextEditor(), &KPIMTextEdit::RichTextComposer::selectionChanged, this, &MarkdownInterface::slotSelectionChanged);
+    connect(richTextEditor(), &TextCustomEditor::RichTextEditor::textChanged, this, [this]() {
+        if (mDialog) {
+            mDialog->setText(richTextEditor()->toPlainText());
+        }
+    });
 }
 
 void MarkdownInterface::slotSelectionChanged()
@@ -282,11 +287,6 @@ void MarkdownInterface::slotActivated(bool checked)
     if (mDialog.isNull()) {
         mDialog = new MarkdownPreviewDialog(parentWidget());
         mDialog->setText(richTextEditor()->toPlainText());
-        connect(richTextEditor(), &TextCustomEditor::RichTextEditor::textChanged, this, [this]() {
-            if (mDialog) {
-                mDialog->setText(richTextEditor()->toPlainText());
-            }
-        });
     }
     mStatusBarLabel->setToggleMode(checked);
     if (checked) {
