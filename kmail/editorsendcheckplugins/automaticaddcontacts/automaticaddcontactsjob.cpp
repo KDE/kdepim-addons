@@ -201,12 +201,12 @@ void AutomaticAddContactsJob::verifyContactExist()
     if (temail.isEmpty()) {
         addNextContact();
     } else {
-        if (mProcessedEmails.contains(email)) {
+        if (mProcessedEmails.contains(temail, Qt::CaseInsensitive)) {
             addNextContact();
         } else {
-            mProcessEmail = email;
+            mProcessEmail = temail;
             mName = tname;
-            mProcessedEmails.append(email);
+            mProcessedEmails.append(temail);
             auto searchJob = new Akonadi::ContactSearchJob(this);
             searchJob->setLimit(1);
             searchJob->setQuery(Akonadi::ContactSearchJob::Email, mProcessEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
