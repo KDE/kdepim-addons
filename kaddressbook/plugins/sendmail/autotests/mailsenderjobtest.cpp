@@ -121,7 +121,7 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
     address2.setName(QStringLiteral("foo2"));
     KContacts::Email email2(QStringLiteral("foo2@kde.org"));
     email2.setPreferred(true);
-    address2.addEmail(email);
+    address2.addEmail(email2);
     item2.setPayload<KContacts::Addressee>(address2);
     lst << item2;
 
@@ -130,7 +130,7 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
     address3.setName(QStringLiteral("foo3"));
     KContacts::Email email3(QStringLiteral("foo3@"));
     email3.setPreferred(true);
-    address3.addEmail(email);
+    address3.addEmail(email3);
     item3.setPayload<KContacts::Addressee>(address3);
     lst << item3;
 
@@ -139,7 +139,7 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
     address4.setName(QStringLiteral("foo4"));
     KContacts::Email email4(QStringLiteral("foo4@kde.org"));
     email4.setPreferred(true);
-    address4.addEmail(email);
+    address4.addEmail(email4);
     item4.setPayload<KContacts::Addressee>(address4);
     lst << item4;
 
