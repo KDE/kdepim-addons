@@ -32,8 +32,8 @@ char *external_codefmt(const char *src, int, void *)
     highLighter.setDefinition(repo.definitionForName(QStringLiteral("SystemC")));
     highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128 ? repo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
                                                                                             : repo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
-    highLighter.highlight(QString::fromLatin1(src));
-    QByteArray ba = result.toLatin1();
+    highLighter.highlight(QString::fromUtf8(src));
+    QByteArray ba = result.toUtf8();
     return qstrdup(ba.data());
 }
 
