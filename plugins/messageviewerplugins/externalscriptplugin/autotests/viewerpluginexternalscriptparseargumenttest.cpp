@@ -83,7 +83,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBody()
     initializeMessage(message);
     parser.setMessage(message);
     const QStringList lst = {QStringLiteral("%body")};
-    const QStringList result = {QStringLiteral("\"Hello this is a test mail \"")};
+    const QStringList result = {QStringLiteral("\"Hello this is a test mail\"")};
     QCOMPARE(parser.parse(lst), result);
 }
 
