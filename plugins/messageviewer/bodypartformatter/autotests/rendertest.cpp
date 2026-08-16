@@ -128,7 +128,6 @@ void RenderTest::testRenderKeyDetails()
     msg->parse();
 
     // render the mail
-    QEventLoop loop;
     MessageViewer::FileHtmlWriter fileWriter(outFileName);
     QImage paintDevice;
     MessageViewer::CSSHelperBase cssHelper(&paintDevice);
@@ -137,7 +136,6 @@ void RenderTest::testRenderKeyDetails()
     testSource.setShowSignatureDetails(true);
     MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
 
-    connect(&nodeHelper, &MimeTreeParser::NodeHelper::update, &loop, &QEventLoop::quit);
     otp.parseObjectTree(msg.get());
 
     fileWriter.begin();
@@ -150,7 +148,6 @@ void RenderTest::testRenderKeyDetails()
     fileWriter.end();
 
     compareFile(outFileName, referenceFileName + QStringLiteral(".running"));
-    loop.exec();
 
     {
         MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);

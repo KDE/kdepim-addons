@@ -29,7 +29,7 @@ table .keyB {
           </tr>
           <tr class="keyb">
             <td>
-              <div style="padding: 10pt;"><p>This is an OpenPGP key, which can be used to sign or encrypt emails.</p><table border="0" cellspacing="1" cellpadding="1"><tr><td><b>Owner:&nbsp;</b></td><td>Sandro Knauß &lt;sknauss@kde.org&gt;</td></tr><tr><td><b>Created:&nbsp;</b></td><td>8/15/13 8:07 PM</td></tr><tr><td><b>Fingerprint:&nbsp;</b></td><td>39EC11A02016B72926491A06E3ADB00850605636</td></tr></table><a href="kmail:hideSignatureDetails">Hide key details</a>| <a href="kmail:showCertificate#GpgME ### gpgme ### E3ADB00850605636">Open in Kleopatra</a>| <a href="x-kmail:/bodypart/0/2/pgpkey?action=import">Import key</a></div>
+              <div style="padding: 10pt;"><p>This is an OpenPGP key, which can be used to sign or encrypt emails.</p><p>Loading key details…</p><table border="0" cellspacing="1" cellpadding="1"><tr><td><b>Owner:&nbsp;</b></td><td>Sandro Knauß &lt;sknauss@kde.org&gt;</td></tr><tr><td><b>Created:&nbsp;</b></td><td>8/15/13 8:07 PM</td></tr><tr><td><b>Fingerprint:&nbsp;</b></td><td>39EC11A02016B72926491A06E3ADB00850605636</td></tr></table><a href="kmail:hideSignatureDetails">Hide key details</a>| <a href="x-kmail:/bodypart/0/attachment:2/pgpkey?action=import">Import key</a></div>
             </td>
           </tr>
           <tr class="keyH">
@@ -52,7 +52,7 @@ table .keyB {
           </tr>
           <tr class="keyb">
             <td>
-              <div style="padding: 10pt;"><p>This is an OpenPGP key, which can be used to sign or encrypt emails.</p><p class="error">Error while loading key: No valid key data in file.</p><a href="kmail:hideSignatureDetails">Hide key details</a>| <a href="x-kmail:/bodypart/0/3/pgpkey?action=import">Import key</a></div>
+              <div style="padding: 10pt;"><p>This is an OpenPGP key, which can be used to sign or encrypt emails.</p><p class="error">Error while loading key: No valid key data in file.</p><a href="kmail:hideSignatureDetails">Hide key details</a>| <a href="x-kmail:/bodypart/0/attachment:3/pgpkey?action=import">Import key</a></div>
             </td>
           </tr>
           <tr class="keyH">
