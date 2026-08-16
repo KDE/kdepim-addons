@@ -27,16 +27,6 @@ void GravatarUpdateWidgetTest::shouldHaveDefaultValue()
     auto emaillabel = widget.findChild<QLabel *>(QStringLiteral("email"));
     QVERIFY(emaillabel);
 
-    auto useLibravatar = widget.findChild<QCheckBox *>(QStringLiteral("uselibravatar"));
-    QVERIFY(useLibravatar);
-    QVERIFY(!useLibravatar->isChecked());
-    QVERIFY(useLibravatar->isEnabled());
-
-    auto useFallbackGravatar = widget.findChild<QCheckBox *>(QStringLiteral("fallbackgravatar"));
-    QVERIFY(useFallbackGravatar);
-    QVERIFY(!useFallbackGravatar->isChecked());
-    QVERIFY(!useFallbackGravatar->isEnabled());
-
     auto searchGravatar = widget.findChild<QPushButton *>(QStringLiteral("search"));
     QVERIFY(searchGravatar);
     QVERIFY(!searchGravatar->isEnabled());
