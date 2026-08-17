@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2026-02-04 10:50+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -36,8 +36,8 @@ msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "Povolit seznamy definic PHP Markdown Extra"
 
-#: markdown/markdownlib/markdownconverter.cpp:75
-#: markdown/markdownlib/markdownconverter.cpp:98
+#: markdown/markdownlib/markdownconverter.cpp:76
+#: markdown/markdownlib/markdownconverter.cpp:104
 #, kde-format
 msgid "Failed to compile the Markdown document."
 msgstr "Dokument Markdown se nepovedlo přeložit."

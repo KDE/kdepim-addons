@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2025-08-31 07:38+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -117,11 +117,17 @@ msgctxt "@action"
 msgid "Insert Text"
 msgstr "הוספת טקסט"
 
-#: insertemail/insertemailplugineditorinterface.cpp:25
+#: insertemail/insertemailplugineditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
 msgstr "הוספת דוא״ל…"
+
+#: insertemail/selectmaildialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Email Address"
+msgstr ""
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format

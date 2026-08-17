@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -36,7 +36,7 @@ msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "ईमेल चयनं कुर्वन्तु"
 
-#: emaillineedit/emaillineedit.cpp:86
+#: emaillineedit/emaillineedit.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"

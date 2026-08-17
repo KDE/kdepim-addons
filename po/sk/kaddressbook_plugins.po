@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2016-06-02 18:36+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -279,12 +279,12 @@ msgstr "Nenašiel sa žiadny e-mail vo vybraných kontaktoch."
 msgid "Send an email…"
 msgstr "Poslať e-mail..."
 
-#: sendvcards/sendvcardsjob.cpp:96
+#: sendvcards/sendvcardsjob.cpp:118
 #, kde-format
 msgid "No vCard created."
 msgstr "Nevytvoril sa žiadny vCard."
 
-#: sendvcards/sendvcardsjob.cpp:134
+#: sendvcards/sendvcardsjob.cpp:156
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "Dočasný súbor '%1' nie je možné vytvoriť"

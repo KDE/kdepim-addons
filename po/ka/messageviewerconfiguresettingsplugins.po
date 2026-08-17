@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-16 00:45+0000\n"
-"PO-Revision-Date: 2024-08-01 05:57+0200\n"
+"PO-Revision-Date: 2026-08-16 08:09+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:19
 #, kde-format
@@ -305,16 +305,13 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">არგუმენტის ფორმატის ინფორმაცია…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:42
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%u - url used by command</li></ul></p></qt>"
 msgstr ""
-"<qt><p><strong>ეს გამოსახულებების შეგიძლიათ გამოიყენოთ, როგორც არგუმენტი::</"
-"strong></p><ul><li>%u - URL გამოყენებული ბრძანების მიერ</li></ul></strong></"
+"<qt><p><strong>ეს გამოსახულებების შეგიძლიათ გამოიყენოთ არგუმენტებისთვის:</"
+"strong></p><ul><li>%u - ბრძანების მიერ გამოყენებული URL</li></ul></strong></"
 "p></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:53

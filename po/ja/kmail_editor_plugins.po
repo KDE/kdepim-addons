@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2016-06-20 21:04-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -111,10 +111,16 @@ msgctxt "@action"
 msgid "Insert Text"
 msgstr ""
 
-#: insertemail/insertemailplugineditorinterface.cpp:25
+#: insertemail/insertemailplugineditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Insert Email…"
+msgstr ""
+
+#: insertemail/selectmaildialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Email Address"
 msgstr ""
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29

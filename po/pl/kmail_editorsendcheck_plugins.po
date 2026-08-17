@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2024-08-03 11:42+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgctxt "@title:window"
 msgid "Configure \"Automatic Add Contacts\" Plugin"
 msgstr "Ustawienia wtyczki \"Samoczynne dodawanie kontaktów\""
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:101
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:107
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -32,19 +32,19 @@ msgid ""
 msgstr ""
 "Aby dodać kontakt, należy utworzyć książkę adresową. Czy zrobić to teraz?"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:102
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:108
 #, kde-format
 msgctxt "@title:window"
 msgid "No Address Book Available"
 msgstr "Brak książki adresowej"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:103
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:109
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Address Book"
 msgstr "Utwórz książkę adresową"
 
-#: automaticaddcontacts/automaticaddcontactsjob.cpp:107
+#: automaticaddcontacts/automaticaddcontactsjob.cpp:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Address Book"

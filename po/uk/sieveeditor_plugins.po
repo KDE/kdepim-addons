@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2024-07-04 22:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -37,7 +37,7 @@ msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Виберіть повідомлення"
 
-#: emaillineedit/emaillineedit.cpp:86
+#: emaillineedit/emaillineedit.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"

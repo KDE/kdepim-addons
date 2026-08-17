@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2024-08-31 16:16+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -285,12 +285,12 @@ msgstr "Es wurden keine E-Mails in den ausgewählten Kontakten gefunden."
 msgid "Send an email…"
 msgstr "Eine E-Mail senden …"
 
-#: sendvcards/sendvcardsjob.cpp:96
+#: sendvcards/sendvcardsjob.cpp:118
 #, kde-format
 msgid "No vCard created."
 msgstr "Es wurde keine vCard erstellt."
 
-#: sendvcards/sendvcardsjob.cpp:134
+#: sendvcards/sendvcardsjob.cpp:156
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "Die temporäre Datei '%1 kann nicht erstellt werden"

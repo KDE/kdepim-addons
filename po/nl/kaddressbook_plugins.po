@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2024-07-04 17:42+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -282,12 +282,12 @@ msgstr "Geen e-mailadressen gevonden in de geselecteerde contactpersonen."
 msgid "Send an email…"
 msgstr "Een e-mail sturen…"
 
-#: sendvcards/sendvcardsjob.cpp:96
+#: sendvcards/sendvcardsjob.cpp:118
 #, kde-format
 msgid "No vCard created."
 msgstr "Geen vCard aangemaakt."
 
-#: sendvcards/sendvcardsjob.cpp:134
+#: sendvcards/sendvcardsjob.cpp:156
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "Het tijdelijk bestand '%1 kan niet worden aangemaakt"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2024-07-04 17:43+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -34,7 +34,7 @@ msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "E-mailberichten selecteren"
 
-#: emaillineedit/emaillineedit.cpp:86
+#: emaillineedit/emaillineedit.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"

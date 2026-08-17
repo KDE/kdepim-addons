@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2024-07-04 05:47+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -283,12 +283,12 @@ msgstr "მონიშნულ კონტაქტებს ელფოს�
 msgid "Send an email…"
 msgstr "ელფოსტის გაგზავნა…"
 
-#: sendvcards/sendvcardsjob.cpp:96
+#: sendvcards/sendvcardsjob.cpp:118
 #, kde-format
 msgid "No vCard created."
 msgstr "VCARD არ შექმნილა."
 
-#: sendvcards/sendvcardsjob.cpp:134
+#: sendvcards/sendvcardsjob.cpp:156
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "დროებითი ფაილის (%1) შექმნის შეცდომა"

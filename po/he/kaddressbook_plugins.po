@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-17 00:47+0000\n"
 "PO-Revision-Date: 2024-07-04 06:45+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -278,12 +278,12 @@ msgstr "לא נמצאו כתובות דוא״ל לאנשי הקשר הנבחרי
 msgid "Send an email…"
 msgstr "שליחת דוא״ל…"
 
-#: sendvcards/sendvcardsjob.cpp:96
+#: sendvcards/sendvcardsjob.cpp:118
 #, kde-format
 msgid "No vCard created."
 msgstr "לא נוצר כרטיס ביקור (vCard)."
 
-#: sendvcards/sendvcardsjob.cpp:134
+#: sendvcards/sendvcardsjob.cpp:156
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "אי אפשר ליצור את הקובץ הזמני ‚%1’"
