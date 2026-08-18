@@ -45,15 +45,8 @@ macro(add_kdepim_addons_viewerplugin_class_unittest _source)
 endmacro()
 
 macro(add_kdepim_addons_viewerplugin_widget_unittest _source _additional)
-    set(_test
-        ${_source}
-        ${_additional}
-        ${common_SRCS}
-    )
     get_filename_component(_name ${_source} NAME_WE)
-    ecm_add_test(${_test} ${_name}.h
-        TEST_NAME ${_name}
-        NAME_PREFIX "kdepim-addons-"
+    add_akonadi_isolated_test(SOURCE ${_source}
         LINK_LIBRARIES
             Qt::Test
             KF6::KIOCore
@@ -67,16 +60,16 @@ macro(add_kdepim_addons_viewerplugin_widget_unittest _source _additional)
             KPim6::AkonadiWidgets
             KPim6::CalendarSupport
     )
+    target_sources(
+        ${_name}
+        PRIVATE
+            ${_additional}
+            ${common_SRCS}
+    )
 endmacro()
 
 add_kdepim_addons_viewerplugin_class_unittest(viewerpluginmanagertest.cpp)
 add_kdepim_addons_viewerplugin_widget_unittest(todoedittest.cpp "../createtodoplugin/todoedit.cpp")
-set_tests_properties(
-    kdepim-addons-todoedittest
-    PROPERTIES
-        ENVIRONMENT
-            "LC_ALL=C"
-)
 
 add_kdepim_addons_viewerplugin_widget_unittest(eventedittest.cpp "../createeventplugin/eventedit.cpp;../createeventplugin/eventdatetimewidget.cpp")
 add_kdepim_addons_viewerplugin_widget_unittest(eventdatetimewidgettest.cpp "../createeventplugin/eventdatetimewidget.cpp")
