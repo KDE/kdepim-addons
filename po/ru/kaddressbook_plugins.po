@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-18 00:46+0000\n"
 "PO-Revision-Date: 2024-11-15 16:43+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -296,12 +296,12 @@ msgstr ""
 msgid "Send an email…"
 msgstr "Отправить письмо…"
 
-#: sendvcards/sendvcardsjob.cpp:118
+#: sendvcards/sendvcardsjob.cpp:121
 #, kde-format
 msgid "No vCard created."
 msgstr "Не удалось создать ни одной электронной визитки в формате vCard."
 
-#: sendvcards/sendvcardsjob.cpp:156
+#: sendvcards/sendvcardsjob.cpp:159
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "Не удалось создать временный файл «%1»."

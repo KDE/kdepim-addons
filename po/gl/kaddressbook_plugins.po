@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-18 00:46+0000\n"
 "PO-Revision-Date: 2024-07-04 14:43+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -284,12 +284,12 @@ msgstr "Non se atoparon correos electrónicos nos contactos seleccionados."
 msgid "Send an email…"
 msgstr "Enviar unha mensaxe de correo…"
 
-#: sendvcards/sendvcardsjob.cpp:118
+#: sendvcards/sendvcardsjob.cpp:121
 #, kde-format
 msgid "No vCard created."
 msgstr "Non se creou unha vCard."
 
-#: sendvcards/sendvcardsjob.cpp:156
+#: sendvcards/sendvcardsjob.cpp:159
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "Non é posíbel crear o ficheiro temporal «%1»."

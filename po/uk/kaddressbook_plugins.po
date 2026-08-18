@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-18 00:46+0000\n"
 "PO-Revision-Date: 2024-07-04 21:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -285,12 +285,12 @@ msgstr "У позначених записах контактів не вияв�
 msgid "Send an email…"
 msgstr "Надіслати повідомлення…"
 
-#: sendvcards/sendvcardsjob.cpp:118
+#: sendvcards/sendvcardsjob.cpp:121
 #, kde-format
 msgid "No vCard created."
 msgstr "Візитівки не створено."
 
-#: sendvcards/sendvcardsjob.cpp:156
+#: sendvcards/sendvcardsjob.cpp:159
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "Не вдалося створити тимчасовий файл «%1»"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-17 00:47+0000\n"
-"PO-Revision-Date: 2026-08-16 08:07+0200\n"
+"PO-Revision-Date: 2026-08-17 07:33+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -125,7 +125,7 @@ msgstr "ელფოსტის ჩასმა…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Email Address"
-msgstr ""
+msgstr "აირჩიეთ ელფოსტის მისამართები"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:29
 #, kde-format

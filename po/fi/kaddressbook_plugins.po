@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-18 00:46+0000\n"
 "PO-Revision-Date: 2024-10-20 16:53+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -282,12 +282,12 @@ msgstr "Valituista yhteystiedoista ei löytynyt sähköpostiosoitteita."
 msgid "Send an email…"
 msgstr "Lähetä sähköposti…"
 
-#: sendvcards/sendvcardsjob.cpp:118
+#: sendvcards/sendvcardsjob.cpp:121
 #, kde-format
 msgid "No vCard created."
 msgstr "vCardia ei luotu."
 
-#: sendvcards/sendvcardsjob.cpp:156
+#: sendvcards/sendvcardsjob.cpp:159
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "Väliaikaistiedostoa ”%1” ei voida luoda"

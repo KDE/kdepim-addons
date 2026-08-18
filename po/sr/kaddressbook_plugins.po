@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-18 00:46+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -315,12 +315,12 @@ msgstr "Нема адреса е‑поште у изабраним контак
 msgid "Send an email…"
 msgstr "Пошаљи е‑пошту..."
 
-#: sendvcards/sendvcardsjob.cpp:118
+#: sendvcards/sendvcardsjob.cpp:121
 #, kde-format
 msgid "No vCard created."
 msgstr "В‑кард није направљен."
 
-#: sendvcards/sendvcardsjob.cpp:156
+#: sendvcards/sendvcardsjob.cpp:159
 #, kde-format
 msgid "Temporary file '%1' cannot be created"
 msgstr "Привремени фајл „%1“ не може да се направи."
