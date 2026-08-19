@@ -2,16 +2,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2020.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2023-2026 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-17 00:47+0000\n"
-"PO-Revision-Date: 2025-09-01 08:27+0200\n"
+"PO-Revision-Date: 2026-08-17 09:57+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 26.07.90\n"
 "X-Text-Markup: kde4\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:25
@@ -84,26 +84,24 @@ msgstr "Configurer l'IA"
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
 #, kde-format
 msgid "No text selected or no text in the editor."
-msgstr ""
+msgstr "Aucun texte sélectionné ou aucun texte dans l'éditeur."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Correct Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Text"
-msgstr "Corriger le texte"
+msgstr "Aucun texte"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgid "No AI engine configured."
-msgstr ""
+msgstr "Aucun moteur IA n'est configuré."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgctxt "@title:window"
 msgid "No AI Engine"
-msgstr ""
+msgstr "Aucun moteur d'IA"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:137
 #, kde-format
