@@ -110,14 +110,18 @@ void VCardImportExportPluginInterface::slotImportVCard()
 
 void VCardImportExportPluginInterface::importVCard()
 {
-    KContacts::Addressee::List addrList;
     const QString filter = i18n("vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)");
     const QList<QUrl> urls = QFileDialog::getOpenFileUrls(parentWidget(), i18nc("@title:window", "Select vCard to Import"), QUrl(), filter);
 
     if (urls.isEmpty()) {
         return;
     }
+    return importVCards(urls);
+}
 
+void VCardImportExportPluginInterface::importVCards(const QList<QUrl> &urls)
+{
+    KContacts::Addressee::List addrList;
     const QString caption(i18nc("@title:window", "vCard Import Failed"));
 
     const int numberOfUrl(urls.count());
@@ -499,6 +503,11 @@ void VCardImportExportPluginInterface::exportVCard()
 bool VCardImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
     return url.path().endsWith(QLatin1StringView(".vcf"));
+}
+
+void VCardImportExportPluginInterface::importFile(const QUrl &url)
+{
+    importVCards({url});
 }
 
 QString VCardImportExportPluginInterface::contactFileName(const KContacts::Addressee &contact) const

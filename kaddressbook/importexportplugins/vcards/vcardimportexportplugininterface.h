@@ -20,6 +20,7 @@ public:
     void createAction(KActionCollection *ac) override;
     void exec() override;
     [[nodiscard]] bool canImportFileType(const QUrl &url) override;
+    void importFile(const QUrl &url) override;
 
 private:
     enum ExportVCardType {
@@ -34,6 +35,7 @@ private:
 
     void exportVCard();
     void importVCard();
+    void importVCards(const QList<QUrl> &urls);
     void slotImportVCard();
     void slotExportVCard4();
     void slotExportVCard3();
