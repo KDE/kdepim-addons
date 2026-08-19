@@ -52,7 +52,7 @@ msgstr "导入错误"
 #: pgpkeyurlhandler.cpp:70
 #, kde-format
 msgid "No keys to import where found."
-msgstr ""
+msgstr "没有找到要导入的密钥。"
 
 #: pgpkeyurlhandler.cpp:72
 #, kde-format

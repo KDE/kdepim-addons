@@ -74,7 +74,7 @@ msgstr "一致性检查"
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:94
 #, kde-format
 msgid "Finished."
-msgstr ""
+msgstr "已完成。"
 
 #: akonadidatabasetools/akonadidatabasetoolsplugininterface.cpp:96
 #, kde-format

@@ -82,12 +82,10 @@ msgid "No text selected or no text in the editor."
 msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Correct Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Text"
-msgstr "更正文本"
+msgstr ""
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format

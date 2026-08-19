@@ -19,10 +19,9 @@ msgstr ""
 "X-Crowdin-File-ID: 45423\n"
 
 #: sendmail/sendmailjob.cpp:40
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Invalid options for the mailer program: %1"
-msgstr "执行邮件发送程序 %1 失败"
+msgstr "无效的邮件程序选项：%1"
 
 #: sendmail/sendmailjob.cpp:58
 #, kde-format
@@ -30,10 +29,9 @@ msgid "Failed to execute mailer program %1"
 msgstr "执行邮件发送程序 %1 失败"
 
 #: sendmail/sendmailjob.cpp:60
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Failed to execute mailer program %1: %2"
-msgstr "执行邮件发送程序 %1 失败"
+msgstr "执行邮件程序 %1 失败：%2"
 
 #: sendmail/sendmailjob.cpp:74
 #, kde-format

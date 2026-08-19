@@ -105,6 +105,3 @@ msgstr "配置广告屏蔽插件"
 msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "显示 Adblock 列表"
-
-#~ msgid "Enabled ad block"
-#~ msgstr "已启用广告屏蔽"
