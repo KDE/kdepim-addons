@@ -13,7 +13,6 @@ target_sources(
 
 target_link_libraries(
     kldapactivitiesplugin
-    KF6::I18n
     KF6::CoreAddons
     Qt::Widgets
     KPim6::PimCommonActivities
