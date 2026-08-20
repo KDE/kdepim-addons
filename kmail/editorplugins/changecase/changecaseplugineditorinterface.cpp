@@ -47,7 +47,7 @@ void ChangeCasePluginEditorInterface::exec()
     case LowerCase:
         lowerCase();
         break;
-    case SentenseCase:
+    case SentenceCase:
         sentenceCase();
         break;
     case ReverseCase:
@@ -57,28 +57,44 @@ void ChangeCasePluginEditorInterface::exec()
     mType = Unknown;
 }
 
+void ChangeCasePluginEditorInterface::applyChangeCase(void (*convert)(QTextCursor &))
+{
+    auto editor = richTextEditor();
+    if (!editor) {
+        qCWarning(KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG) << "Editor is null, we can't apply change case";
+        return;
+    }
+    QTextCursor textCursor = editor->textCursor();
+    if (!textCursor.hasSelection()) {
+        qCWarning(KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG) << "No text selected, we can't apply change case";
+        return;
+    }
+    const int start = textCursor.selectionStart();
+    convert(textCursor);
+    const int end = textCursor.position();
+    textCursor.setPosition(start);
+    textCursor.setPosition(end, QTextCursor::KeepAnchor);
+    editor->setTextCursor(textCursor);
+}
+
 void ChangeCasePluginEditorInterface::sentenceCase()
 {
-    QTextCursor textCursor = richTextEditor()->textCursor();
-    TextUtils::ConvertText::sentenceCase(textCursor);
+    applyChangeCase(&TextUtils::ConvertText::sentenceCase);
 }
 
 void ChangeCasePluginEditorInterface::upperCase()
 {
-    QTextCursor textCursor = richTextEditor()->textCursor();
-    TextUtils::ConvertText::upperCase(textCursor);
+    applyChangeCase(&TextUtils::ConvertText::upperCase);
 }
 
 void ChangeCasePluginEditorInterface::lowerCase()
 {
-    QTextCursor textCursor = richTextEditor()->textCursor();
-    TextUtils::ConvertText::lowerCase(textCursor);
+    applyChangeCase(&TextUtils::ConvertText::lowerCase);
 }
 
 void ChangeCasePluginEditorInterface::reverseCase()
 {
-    QTextCursor textCursor = richTextEditor()->textCursor();
-    TextUtils::ConvertText::reverseCase(textCursor);
+    applyChangeCase(&TextUtils::ConvertText::reverseCase);
 }
 
 void ChangeCasePluginEditorInterface::slotUpperCase()
@@ -95,7 +111,7 @@ void ChangeCasePluginEditorInterface::slotLowerCase()
 
 void ChangeCasePluginEditorInterface::slotSentenceCase()
 {
-    mType = SentenseCase;
+    mType = SentenceCase;
     Q_EMIT emitPluginActivated(this);
 }
 

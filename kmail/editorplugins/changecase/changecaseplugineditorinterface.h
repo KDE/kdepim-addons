@@ -7,7 +7,7 @@
 #pragma once
 
 #include <MessageComposer/PluginEditorInterface>
-
+class QTextCursor;
 class ChangeCasePluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
@@ -32,8 +32,9 @@ private:
         Unknown = -1,
         UpperCase = 0,
         LowerCase,
-        SentenseCase,
+        SentenceCase,
         ReverseCase,
     };
+    void applyChangeCase(void (*convert)(QTextCursor &));
     ChangeCaseType mType = Unknown;
 };
