@@ -33,7 +33,6 @@ using namespace KAddressBookImportExport;
 
 VCardImportExportPluginInterface::VCardImportExportPluginInterface(QObject *parent)
     : PluginInterface(parent)
-    , mExportVCardType(VCard3)
 {
 }
 
@@ -50,43 +49,16 @@ void VCardImportExportPluginInterface::createAction(KActionCollection *ac)
     QList<QAction *> exportActionList;
 
     action = ac->addAction(QStringLiteral("file_export_vcard40"));
-    action->setWhatsThis(i18n("Export contacts to a vCard 4.0 file."));
-    action->setText(i18n("Export vCard 4.0…"));
-    connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotExportVCard4);
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_vcard30"));
-    action->setText(i18n("Export vCard 3.0…"));
-    action->setWhatsThis(i18n("Export contacts to a vCard 3.0 file."));
-    connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotExportVCard3);
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_vcard21"));
-    action->setText(i18n("Export vCard 2.1…"));
-    action->setWhatsThis(i18n("Export contacts to a vCard 2.1 file."));
-    connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotExportVCard2);
+    action->setWhatsThis(i18n("Export contacts to a vCard file."));
+    action->setText(i18n("Export vCard…"));
+    connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotExportVCard);
     exportActionList << action;
     setExportActions(exportActionList);
 }
 
-void VCardImportExportPluginInterface::slotExportVCard4()
+void VCardImportExportPluginInterface::slotExportVCard()
 {
     mImportExportAction = ImportExportAction::Export;
-    mExportVCardType = VCard4;
-    Q_EMIT emitPluginActivated(this);
-}
-
-void VCardImportExportPluginInterface::slotExportVCard3()
-{
-    mImportExportAction = ImportExportAction::Export;
-    mExportVCardType = VCard3;
-    Q_EMIT emitPluginActivated(this);
-}
-
-void VCardImportExportPluginInterface::slotExportVCard2()
-{
-    mImportExportAction = ImportExportAction::Export;
-    mExportVCardType = VCard2_1;
     Q_EMIT emitPluginActivated(this);
 }
 
@@ -423,18 +395,7 @@ void VCardImportExportPluginInterface::exportVCard()
         if (url.isEmpty()) { // user canceled export
             return;
         }
-
-        switch (mExportVCardType) {
-        case VCard2_1:
-            ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v2_1));
-            break;
-        case VCard3:
-            ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v3_0));
-            break;
-        case VCard4:
-            ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v4_0));
-            break;
-        }
+        ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v4_0));
     } else {
         const int answer = KMessageBox::questionTwoActionsCancel(parentWidget(),
                                                                  i18nc("@info",
@@ -456,19 +417,7 @@ void VCardImportExportPluginInterface::exportVCard()
 
                 url = QUrl::fromLocalFile(baseUrl.path() + QLatin1Char('/') + contactFileName(contact) + QStringLiteral(".vcf"));
 
-                bool tmpOk = false;
-
-                switch (mExportVCardType) {
-                case VCard2_1:
-                    tmpOk = doExport(url, converter.exportVCard(contact, KContacts::VCardConverter::v2_1));
-                    break;
-                case VCard3:
-                    tmpOk = doExport(url, converter.exportVCard(contact, KContacts::VCardConverter::v3_0));
-                    break;
-                case VCard4:
-                    tmpOk = doExport(url, converter.exportVCard(contact, KContacts::VCardConverter::v4_0));
-                    break;
-                }
+                bool tmpOk = doExport(url, converter.exportVCard(contact, KContacts::VCardConverter::v4_0));
                 ok = ok && tmpOk;
             }
             break;
@@ -479,18 +428,7 @@ void VCardImportExportPluginInterface::exportVCard()
             if (url.isEmpty()) {
                 return; // user canceled export
             }
-
-            switch (mExportVCardType) {
-            case VCard2_1:
-                ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v2_1));
-                break;
-            case VCard3:
-                ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v3_0));
-                break;
-            case VCard4:
-                ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v4_0));
-                break;
-            }
+            ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v4_0));
             break;
         }
         case KMessageBox::Cancel:
