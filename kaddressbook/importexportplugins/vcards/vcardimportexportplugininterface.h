@@ -23,11 +23,6 @@ public:
     void importFile(const QUrl &url) override;
 
 private:
-    enum ExportVCardType {
-        VCard2_1 = 0,
-        VCard3,
-        VCard4,
-    };
     KContacts::Addressee::List parseVCard(const QByteArray &data) const;
     KContacts::Addressee::List filterContacts(const KContacts::Addressee::List &addrList,
                                               KAddressBookImportExport::ExportSelectionWidget::ExportFields exportFieldType) const;
@@ -37,11 +32,7 @@ private:
     void importVCard();
     void importVCards(const QList<QUrl> &urls);
     void slotImportVCard();
-    void slotExportVCard4();
-    void slotExportVCard3();
+    void slotExportVCard();
     [[nodiscard]] QString contactFileName(const KContacts::Addressee &contact) const;
-    void slotExportVCard2();
     [[nodiscard]] bool doExport(const QUrl &url, const QByteArray &data) const;
-
-    ExportVCardType mExportVCardType;
 };
