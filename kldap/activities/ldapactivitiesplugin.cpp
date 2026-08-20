@@ -24,20 +24,20 @@ LdapActivitiesPlugin::~LdapActivitiesPlugin() = default;
 KLDAPWidgets::LdapActivitiesAbstractPlugin::ActivitySettings LdapActivitiesPlugin::activitiesSettings() const
 {
     const auto settings = mConfigureActivitiesWidget->activitiesSettings();
-    const KLDAPWidgets::LdapActivitiesAbstractPlugin::ActivitySettings mailtransportSettings{
+    const KLDAPWidgets::LdapActivitiesAbstractPlugin::ActivitySettings ldapActivitySettings{
         settings.activities,
         settings.enabled,
     };
-    return mailtransportSettings;
+    return ldapActivitySettings;
 }
 
 void LdapActivitiesPlugin::setActivitiesSettings(const ActivitySettings &activitySettings)
 {
-    const PimCommonActivities::ActivitiesBaseManager::ActivitySettings mailtransportSettings{
+    const PimCommonActivities::ActivitiesBaseManager::ActivitySettings ldapActivitySettings{
         activitySettings.activities,
         activitySettings.enabled,
     };
-    mConfigureActivitiesWidget->setActivitiesSettings(mailtransportSettings);
+    mConfigureActivitiesWidget->setActivitiesSettings(ldapActivitySettings);
 }
 
 #include "ldapactivitiesplugin.moc"
