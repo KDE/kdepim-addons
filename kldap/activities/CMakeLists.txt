@@ -4,12 +4,6 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 kcoreaddons_add_plugin(kldapactivitiesplugin INSTALL_NAMESPACE "pim6/ldapactivities")
 
-ecm_qt_declare_logging_category(kldapactivitiesplugin HEADER kldapactivitiesplugin_debug.h IDENTIFIER
-    KMAILTRANSPORTACTIVITIES_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kldapactivitiesplugin
-    DESCRIPTION "kdepim-addons (KLDap activities support)"
-    EXPORT KDEPIMADDONS
-)
-
 target_sources(
     kldapactivitiesplugin
     PRIVATE
