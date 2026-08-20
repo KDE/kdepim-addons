@@ -6,7 +6,7 @@ macro(add_foldersettings_plugin_unittest _source)
     add_executable(${_name} ${_test})
     add_test(NAME ${_name} COMMAND ${_name})
 
-    ecm_mark_as_test(foldersettings-${_name})
+    ecm_mark_as_test(${_name})
     target_link_libraries(
         ${_name}
         KPim6::PimCommon

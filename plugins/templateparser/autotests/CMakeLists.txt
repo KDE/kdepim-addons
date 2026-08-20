@@ -12,7 +12,7 @@ macro(add_templateparserplugin_unittest _source _extrasources)
         ${_name}.h
     )
     add_test(NAME ${_name} COMMAND ${_name})
-    ecm_mark_as_test(templateparserplugin-${_name})
+    ecm_mark_as_test(${_name})
     target_link_libraries(
         ${_name}
         KPim6::TemplateParser

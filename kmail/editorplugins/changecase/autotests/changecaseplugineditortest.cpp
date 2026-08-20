@@ -9,6 +9,7 @@
 #include <KActionCollection>
 #include <QTest>
 
+QTEST_MAIN(ChangeCasePluginEditorTest)
 ChangeCasePluginEditorTest::ChangeCasePluginEditorTest(QObject *parent)
     : QObject(parent)
 {
@@ -24,7 +25,5 @@ void ChangeCasePluginEditorTest::shouldHaveDefaultValue()
     QVERIFY(!plugin.hasConfigureDialog());
     QVERIFY(!plugin.hasToolBarSupport());
 }
-
-QTEST_MAIN(ChangeCasePluginEditorTest)
 
 #include "moc_changecaseplugineditortest.cpp"

@@ -18,7 +18,7 @@ macro(add_kdepimaddons_crypto_unittest _source)
         Qt::Test
     )
     add_gpg_crypto_test(${_name} messageviewerplugins-${_name})
-    ecm_mark_as_test(messageviewerplugins-${_name})
+    ecm_mark_as_test(${_name})
 endmacro()
 add_kdepimaddons_crypto_unittest(rendertest.cpp)
 

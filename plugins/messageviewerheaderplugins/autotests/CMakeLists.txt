@@ -18,7 +18,7 @@ macro(add_messageviewer_header_unittest _source _additional)
     )
     add_test(NAME ${_name} COMMAND ${_name})
 
-    ecm_mark_as_test(messageviewer-header-${_name})
+    ecm_mark_as_test(${_name})
     set_tests_properties(
         ${_name}
         PROPERTIES
@@ -50,7 +50,7 @@ macro(add_messageviewer_header_class_unittest _source)
     )
     add_test(NAME ${_name} COMMAND ${_name})
 
-    ecm_mark_as_test(messageviewer-header-${_name})
+    ecm_mark_as_test(${_name})
     set_tests_properties(
         ${_name}
         PROPERTIES

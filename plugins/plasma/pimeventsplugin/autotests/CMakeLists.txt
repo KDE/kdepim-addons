@@ -16,7 +16,7 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
         ${_name}.h
     )
     add_test(NAME ${_name} COMMAND ${_name})
-    ecm_mark_as_test(plasma-pimeventsplugin-${_name})
+    ecm_mark_as_test(${_name})
     add_definitions(-DPIMEVENT_DATADIR=\"${CMAKE_CURRENT_SOURCE_DIR}\")
     target_link_libraries(
         ${_name}

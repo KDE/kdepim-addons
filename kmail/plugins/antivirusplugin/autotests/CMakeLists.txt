@@ -13,7 +13,7 @@ macro(add_kmail_antivirusplugin_unittest _source _additional)
     )
     add_test(NAME ${_name} COMMAND ${_name})
 
-    ecm_mark_as_test(kmail_antivirusplugin-${_name})
+    ecm_mark_as_test(${_name})
     target_link_libraries(
         ${_name}
         KPim6::PimCommon
