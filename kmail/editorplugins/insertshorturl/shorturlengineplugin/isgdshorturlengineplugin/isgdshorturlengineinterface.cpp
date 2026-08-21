@@ -46,6 +46,7 @@ void IsgdShortUrlEngineInterface::slotSslErrors(QNetworkReply *reply, const QLis
 void IsgdShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
 {
     if (mErrorFound) {
+        reply->deleteLater();
         return;
     }
 
