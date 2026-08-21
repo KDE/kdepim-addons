@@ -6,6 +6,7 @@
 #include "scamconfiguresettingswidgettest.h"
 #include "../scamconfiguresettingswidget.h"
 #include <QHeaderView>
+#include <QStandardPaths>
 #include <QTest>
 #include <QTreeWidget>
 #include <QVBoxLayout>
@@ -13,6 +14,7 @@ QTEST_MAIN(ScamConfigureSettingsWidgetTest)
 ScamConfigureSettingsWidgetTest::ScamConfigureSettingsWidgetTest(QObject *parent)
     : QObject{parent}
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void ScamConfigureSettingsWidgetTest::shouldHaveDefaultValues()

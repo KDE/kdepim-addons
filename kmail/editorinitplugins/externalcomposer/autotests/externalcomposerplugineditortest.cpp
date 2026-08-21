@@ -9,11 +9,13 @@
 
 #include <MessageComposer/PluginEditorInitInterface>
 
+#include <QStandardPaths>
 #include <QTest>
 
 ExternalComposerPluginEditorTest::ExternalComposerPluginEditorTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void ExternalComposerPluginEditorTest::shouldHaveDefaultValue()

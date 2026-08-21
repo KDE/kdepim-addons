@@ -9,6 +9,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "markdownconfigurewidget.h"
 #include <QCheckBox>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -16,6 +17,7 @@ QTEST_MAIN(MarkdownConfigureWidgetTest)
 MarkdownConfigureWidgetTest::MarkdownConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()

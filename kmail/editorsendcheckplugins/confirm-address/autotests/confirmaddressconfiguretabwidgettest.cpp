@@ -11,12 +11,14 @@ using namespace Qt::Literals::StringLiterals;
 #include <PimCommon/SimpleStringListEditor>
 #include <QGroupBox>
 #include <QRadioButton>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 
 ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ConfirmAddressConfigureTabWidgetTest::~ConfirmAddressConfigureTabWidgetTest() = default;

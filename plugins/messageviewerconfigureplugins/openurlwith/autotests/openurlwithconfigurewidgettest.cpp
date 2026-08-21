@@ -8,12 +8,14 @@
 #include "openurlwithconfigurewidget.h"
 #include <QListWidget>
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(OpenUrlWithConfigureWidgetTest)
 OpenUrlWithConfigureWidgetTest::OpenUrlWithConfigureWidgetTest(QObject *parent)
     : QObject{parent}
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void OpenUrlWithConfigureWidgetTest::shouldHaveDefaultValues()

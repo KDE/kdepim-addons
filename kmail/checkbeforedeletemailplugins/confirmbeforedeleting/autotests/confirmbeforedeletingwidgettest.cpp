@@ -8,6 +8,7 @@
 
 #include "confirmbeforedeletingwidget.h"
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QTest>
 #include <QTreeWidget>
 #include <QVBoxLayout>
@@ -17,6 +18,7 @@ using namespace Qt::Literals::StringLiterals;
 ConfirmBeforeDeletingWidgetTest::ConfirmBeforeDeletingWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void ConfirmBeforeDeletingWidgetTest::shouldHaveDefaultValues()

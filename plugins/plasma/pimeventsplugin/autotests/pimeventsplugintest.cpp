@@ -12,6 +12,7 @@
 #include "testutils.h"
 
 #include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTest>
 
 Q_DECLARE_METATYPE(DateEventDataHash)
@@ -19,6 +20,7 @@ Q_DECLARE_METATYPE(CalendarEvents::EventData)
 
 void PimEventsPluginTest::initTestCase()
 {
+    QStandardPaths::setTestModeEnabled(true);
     qputenv("TZ", "Europe/Berlin");
     qRegisterMetaType<DateEventDataHash>("QMultiHash<QDate, CalendarEvents::EventData>");
     qRegisterMetaType<CalendarEvents::EventData>("CalendarEvents::EventData");

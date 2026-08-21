@@ -8,11 +8,13 @@
 #include "../antivirusplugininterface.h"
 #include <KActionCollection>
 #include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTest>
 
 AntiVirusPluginInterfaceTest::AntiVirusPluginInterfaceTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 AntiVirusPluginInterfaceTest::~AntiVirusPluginInterfaceTest() = default;

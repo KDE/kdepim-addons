@@ -6,12 +6,14 @@
 
 #include "markdowninterfacetest.h"
 #include "../plugin/markdowninterface.h"
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(MarkdownInterfaceTest)
 
 MarkdownInterfaceTest::MarkdownInterfaceTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void MarkdownInterfaceTest::shouldHaveDefaultValue()

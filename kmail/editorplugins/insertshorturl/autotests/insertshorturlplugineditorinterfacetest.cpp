@@ -7,11 +7,13 @@
 #include "insertshorturlplugineditorinterfacetest.h"
 #include "../insertshorturlplugineditorinterface.h"
 #include <KActionCollection>
+#include <QStandardPaths>
 #include <QTest>
 
 InsertShorturlPluginEditorInterfaceTest::InsertShorturlPluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 InsertShorturlPluginEditorInterfaceTest::~InsertShorturlPluginEditorInterfaceTest() = default;

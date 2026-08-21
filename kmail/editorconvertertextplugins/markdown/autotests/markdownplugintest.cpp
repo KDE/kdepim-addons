@@ -7,12 +7,14 @@
 #include "markdownplugintest.h"
 #include "../plugin/markdowninterface.h"
 #include "../plugin/markdownplugin.h"
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(MarkdownPluginTest)
 
 MarkdownPluginTest::MarkdownPluginTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void MarkdownPluginTest::shouldCreateInterface()

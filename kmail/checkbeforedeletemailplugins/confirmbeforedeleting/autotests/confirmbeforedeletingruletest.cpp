@@ -6,12 +6,14 @@
 
 #include "confirmbeforedeletingruletest.h"
 #include "confirmbeforedeletingrule.h"
+#include <QStandardPaths>
 #include <QTest>
 QTEST_GUILESS_MAIN(ConfirmBeforeDeletingRuleTest)
 using namespace Qt::Literals::StringLiterals;
 ConfirmBeforeDeletingRuleTest::ConfirmBeforeDeletingRuleTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void ConfirmBeforeDeletingRuleTest::shouldHaveDefaultValues()

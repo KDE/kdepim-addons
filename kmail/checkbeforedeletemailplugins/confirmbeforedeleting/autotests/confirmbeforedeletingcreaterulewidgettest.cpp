@@ -12,11 +12,13 @@ using namespace Qt::Literals::StringLiterals;
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(ConfirmBeforeDeletingCreateRuleWidgetTest)
 ConfirmBeforeDeletingCreateRuleWidgetTest::ConfirmBeforeDeletingCreateRuleWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void ConfirmBeforeDeletingCreateRuleWidgetTest::shouldHaveDefaultValues()

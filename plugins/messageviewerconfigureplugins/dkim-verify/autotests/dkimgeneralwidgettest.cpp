@@ -8,12 +8,14 @@
 #include "dkimgeneralwidget.h"
 #include <QCheckBox>
 #include <QComboBox>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(DKIMGeneralWidgetTest)
 DKIMGeneralWidgetTest::DKIMGeneralWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void DKIMGeneralWidgetTest::shouldHaveDefaultValues()

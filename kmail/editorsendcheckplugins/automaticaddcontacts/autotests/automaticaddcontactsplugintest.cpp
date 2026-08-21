@@ -6,11 +6,13 @@
 #include "automaticaddcontactsplugintest.h"
 #include "../automaticaddcontactsplugin.h"
 
+#include <QStandardPaths>
 #include <QTest>
 
 AutomaticAddContactsPluginTest::AutomaticAddContactsPluginTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 AutomaticAddContactsPluginTest::~AutomaticAddContactsPluginTest() = default;

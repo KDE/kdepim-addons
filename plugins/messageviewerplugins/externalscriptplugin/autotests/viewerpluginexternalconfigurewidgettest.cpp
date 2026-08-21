@@ -9,12 +9,14 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 
 ViewerPluginExternalConfigureWidgetTest::ViewerPluginExternalConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ViewerPluginExternalConfigureWidgetTest::~ViewerPluginExternalConfigureWidgetTest() = default;

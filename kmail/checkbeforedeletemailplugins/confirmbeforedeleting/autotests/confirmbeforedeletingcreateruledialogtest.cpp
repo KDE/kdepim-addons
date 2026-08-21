@@ -11,12 +11,14 @@ using namespace Qt::Literals::StringLiterals;
 #include "confirmbeforedeletingcreaterulewidget.h"
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(ConfirmBeforeDeletingCreateRuleDialogTest)
 ConfirmBeforeDeletingCreateRuleDialogTest::ConfirmBeforeDeletingCreateRuleDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void ConfirmBeforeDeletingCreateRuleDialogTest::shouldHaveDefaultValues()

@@ -7,11 +7,13 @@
 #include "insertemailplugineditorinterfacetest.h"
 #include "../insertemailplugineditorinterface.h"
 #include <KActionCollection>
+#include <QStandardPaths>
 #include <QTest>
 
 InsertEmailPluginEditorInterfaceTest::InsertEmailPluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 InsertEmailPluginEditorInterfaceTest::~InsertEmailPluginEditorInterfaceTest() = default;

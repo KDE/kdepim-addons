@@ -11,6 +11,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QComboBox>
 #include <QLabel>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -19,6 +20,7 @@ QTEST_MAIN(InsertShorturlConfigureWidgetTest)
 InsertShorturlConfigureWidgetTest::InsertShorturlConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void InsertShorturlConfigureWidgetTest::shouldHaveDefaultValues()

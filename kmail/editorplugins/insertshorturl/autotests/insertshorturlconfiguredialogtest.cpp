@@ -11,6 +11,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "../insertshorturlconfigurewidget.h"
 
 #include <QDialogButtonBox>
+#include <QStandardPaths>
 #include <QTest>
 
 QTEST_MAIN(InsertShorturlConfigureDialogTest)
@@ -18,6 +19,7 @@ QTEST_MAIN(InsertShorturlConfigureDialogTest)
 InsertShorturlConfigureDialogTest::InsertShorturlConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void InsertShorturlConfigureDialogTest::shouldHaveDefaultValues()

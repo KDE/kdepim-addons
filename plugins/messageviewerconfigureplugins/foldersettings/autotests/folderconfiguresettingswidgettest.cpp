@@ -6,11 +6,13 @@
 
 #include "folderconfiguresettingswidgettest.h"
 #include "../folderconfiguresettingswidget.h"
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(FolderConfigureSettingsWidgetTest)
 FolderConfigureSettingsWidgetTest::FolderConfigureSettingsWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void FolderConfigureSettingsWidgetTest::shouldHaveDefaultValues()

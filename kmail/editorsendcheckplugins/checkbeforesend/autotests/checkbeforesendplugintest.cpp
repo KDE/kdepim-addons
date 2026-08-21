@@ -6,11 +6,13 @@
 
 #include "checkbeforesendplugintest.h"
 #include "../checkbeforesendplugin.h"
+#include <QStandardPaths>
 #include <QTest>
 
 CheckBeforeSendPluginTest::CheckBeforeSendPluginTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 CheckBeforeSendPluginTest::~CheckBeforeSendPluginTest() = default;

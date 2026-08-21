@@ -8,11 +8,13 @@
 #include "../antispamplugininterface.h"
 #include <KActionCollection>
 #include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTest>
 
 AntiSpamPluginInterfaceTest::AntiSpamPluginInterfaceTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 AntiSpamPluginInterfaceTest::~AntiSpamPluginInterfaceTest() = default;

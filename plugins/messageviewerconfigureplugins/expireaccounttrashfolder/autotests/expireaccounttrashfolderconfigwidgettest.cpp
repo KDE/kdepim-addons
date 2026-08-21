@@ -6,11 +6,13 @@
 
 #include "expireaccounttrashfolderconfigwidgettest.h"
 #include "../expireaccounttrashfolderconfigwidget.h"
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(ExpireAccountTrashFolderConfigWidgetTest)
 ExpireAccountTrashFolderConfigWidgetTest::ExpireAccountTrashFolderConfigWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void ExpireAccountTrashFolderConfigWidgetTest::shouldHaveDefaultValues()

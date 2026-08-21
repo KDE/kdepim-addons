@@ -8,6 +8,7 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include "../confirmaddressconfiguretab.h"
+#include <QStandardPaths>
 #include <QTabWidget>
 #include <QTest>
 #include <QVBoxLayout>
@@ -15,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 ConfirmAddressConfigureTabTest::ConfirmAddressConfigureTabTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ConfirmAddressConfigureTabTest::~ConfirmAddressConfigureTabTest() = default;

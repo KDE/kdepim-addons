@@ -6,6 +6,7 @@
 
 #include "dkimauthenticationverifiedserverwidgettest.h"
 #include "dkimauthenticationverifiedserverwidget.h"
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -13,6 +14,7 @@ QTEST_MAIN(DKIMAuthenticationVerifiedServerWidgetTest)
 DKIMAuthenticationVerifiedServerWidgetTest::DKIMAuthenticationVerifiedServerWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void DKIMAuthenticationVerifiedServerWidgetTest::shouldHaveDefaultValues()

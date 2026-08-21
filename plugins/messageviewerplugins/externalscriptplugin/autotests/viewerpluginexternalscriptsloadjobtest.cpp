@@ -7,11 +7,13 @@
 #include "viewerpluginexternalscriptsloadjobtest.h"
 #include "../viewerpluginexternalscriptsloadjob.h"
 
+#include <QStandardPaths>
 #include <QTest>
 
 ViewerPluginExternalScriptsLoadJobTest::ViewerPluginExternalScriptsLoadJobTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ViewerPluginExternalScriptsLoadJobTest::~ViewerPluginExternalScriptsLoadJobTest() = default;

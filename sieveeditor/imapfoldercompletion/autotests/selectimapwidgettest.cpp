@@ -9,12 +9,14 @@
 
 #include <QHBoxLayout>
 #include <QLineEdit>
+#include <QStandardPaths>
 #include <QTest>
 #include <QToolButton>
 
 SelectImapWidgetTest::SelectImapWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 SelectImapWidgetTest::~SelectImapWidgetTest() = default;

@@ -8,6 +8,7 @@
 #include "../gravatarconfiguresettingspluginwidget.h"
 #include <Gravatar/GravatarConfigureSettingsWidget>
 #include <QCheckBox>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -16,6 +17,7 @@ QTEST_MAIN(GravatarConfigureSettingsPluginWidgetTest)
 GravatarConfigureSettingsPluginWidgetTest::GravatarConfigureSettingsPluginWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void GravatarConfigureSettingsPluginWidgetTest::shouldHaveDefaultValue()

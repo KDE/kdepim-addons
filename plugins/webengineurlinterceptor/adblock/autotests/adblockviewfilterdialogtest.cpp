@@ -8,6 +8,7 @@
 #include "adblockviewfilterdialog.h"
 #include "adblockviewfilterwidget.h"
 #include <QDialogButtonBox>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -15,6 +16,7 @@ QTEST_MAIN(AdblockViewFilterDialogTest)
 AdblockViewFilterDialogTest::AdblockViewFilterDialogTest(QObject *parent)
     : QObject{parent}
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void AdblockViewFilterDialogTest::shouldHaveDefaultValues()

@@ -12,11 +12,13 @@ using namespace Qt::Literals::StringLiterals;
 #include <MailCommon/SnippetWidget>
 #include <QHBoxLayout>
 #include <QStackedWidget>
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(QuickTextWidgetTest)
 QuickTextWidgetTest::QuickTextWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void QuickTextWidgetTest::shouldHaveDefaultValues()

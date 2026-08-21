@@ -8,12 +8,14 @@
 #include "../akonadidatabasetoolsplugininterface.h"
 #include <KActionCollection>
 #include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTest>
 
 QTEST_MAIN(AkonadiDatabaseToolsPluginInterfaceTest)
 AkonadiDatabaseToolsPluginInterfaceTest::AkonadiDatabaseToolsPluginInterfaceTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 AkonadiDatabaseToolsPluginInterfaceTest::~AkonadiDatabaseToolsPluginInterfaceTest() = default;

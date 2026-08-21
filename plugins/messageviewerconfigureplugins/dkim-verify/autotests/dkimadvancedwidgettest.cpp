@@ -9,12 +9,14 @@
 #include <QCheckBox>
 #include <QComboBox>
 #include <QFormLayout>
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(DKIMAdvancedWidgetTest)
 
 DKIMAdvancedWidgetTest::DKIMAdvancedWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void DKIMAdvancedWidgetTest::shouldHaveDefaultValues()

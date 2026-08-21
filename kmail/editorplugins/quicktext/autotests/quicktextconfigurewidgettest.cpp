@@ -9,6 +9,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "quicktextconfigurewidget.h"
 #include "quicktextwidget.h"
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(QuickTextConfigureWidgetTest)
@@ -16,6 +17,7 @@ QTEST_MAIN(QuickTextConfigureWidgetTest)
 QuickTextConfigureWidgetTest::QuickTextConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void QuickTextConfigureWidgetTest::shouldHaveDefaultValues()
