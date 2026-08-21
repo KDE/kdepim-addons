@@ -789,9 +789,9 @@ public:
                 yesItem.setIconName(QStringLiteral("dialog-ok"));
             } else if (path == QLatin1StringView("accept_conditionally")) {
                 if (type == Incidence::TypeTodo) {
-                    queryStr = i18n("Do you still want to send conditional acceptance of the invitation?");
-                } else {
                     queryStr = i18n("Do you still want to send conditional acceptance of the task?");
+                } else {
+                    queryStr = i18n("Do you still want to send conditional acceptance of the invitation?");
                 }
                 yesItem.setText(i18nc("@action:button", "Send"));
                 yesItem.setIconName(QStringLiteral("mail-send"));
