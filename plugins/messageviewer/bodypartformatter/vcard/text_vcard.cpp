@@ -187,7 +187,11 @@ public:
             auto job = new Akonadi::AddContactJob(a, nullptr);
             job->start();
         } else if (path.startsWith(QLatin1StringView("updateToAddressBook"))) {
-            auto job = new UpdateContactJob(a.emails().constFirst(), a, nullptr);
+            const QStringList emails = a.emails();
+            if (emails.isEmpty()) {
+                return true;
+            }
+            auto job = new UpdateContactJob(emails.constFirst(), a, nullptr);
             job->start();
         }
 
