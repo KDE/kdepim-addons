@@ -890,6 +890,10 @@ public:
         qCDebug(TEXT_CALENDAR_LOG) << "Handling invitation: uid is : " << incidence->uid() << "; schedulingId is:" << incidence->schedulingID()
                                    << "; Attendee::PartStat = " << status;
 
+        if (!incidence) {
+            return false;
+        }
+
         // get comment for tentative acceptance
         if (askForComment(status)) {
             QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(nullptr);
@@ -940,10 +944,6 @@ public:
                 KMessageBox::error(nullptr, i18n("Delegation to organizer is not possible."));
                 return true;
             }
-        }
-
-        if (!incidence) {
-            return false;
         }
 
         const Attendee myself = findMyself(incidence, receiver);
