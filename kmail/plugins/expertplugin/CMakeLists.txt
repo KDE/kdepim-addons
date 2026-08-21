@@ -33,7 +33,6 @@ target_link_libraries(
     KPim6::PimCommonAkonadi
     KF6::XmlGui
     KPim6::Libkdepim
-    KF6::I18n
 )
 if(BUILD_TESTING)
     add_subdirectory(autotests)

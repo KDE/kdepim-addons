@@ -27,7 +27,6 @@ target_link_libraries(
     gearyimporterplugin
     KPim6::ImportWizard
     KF6::XmlGui
-    KF6::I18n
     KF6::Contacts
     KPim6::MailImporterAkonadi
     KPim6::MailTransport

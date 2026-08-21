@@ -19,7 +19,6 @@ target_sources(
 
 target_link_libraries(
     kmailtransportactivitiesplugin
-    KF6::I18n
     KF6::CoreAddons
     KPim6::MailTransport
     Qt::Widgets

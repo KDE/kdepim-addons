@@ -11,7 +11,6 @@ add_executable(markdown_gui ${markdown_gui_SRCS})
 target_link_libraries(
     markdown_gui
     KPim6::MessageComposer
-    KF6::I18n
     KF6::XmlGui
     Qt::WebEngineWidgets
     discount::Lib

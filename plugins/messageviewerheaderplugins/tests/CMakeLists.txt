@@ -6,5 +6,4 @@ target_link_libraries(
     KPim6::MessageViewer
     KF6::XmlGui
     KPim6::GrantleeTheme
-    KF6::I18n
 )

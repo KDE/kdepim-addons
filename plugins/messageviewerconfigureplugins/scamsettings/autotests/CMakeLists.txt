@@ -14,7 +14,6 @@ macro(add_scamconfigure_plugin_unittest _source)
     target_link_libraries(
         ${_name}
         Qt::Test
-        KF6::I18n
         KPim6::MessageViewer
         scamconfiguresettings
     )

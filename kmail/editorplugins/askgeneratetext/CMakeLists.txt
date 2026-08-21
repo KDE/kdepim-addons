@@ -29,7 +29,6 @@ target_link_libraries(
     kmail_askautogeneratetexteditorplugin
     KPim6::MessageComposer
     KF6::XmlGui
-    KF6::I18n
     KPim6::AutoGenerateText
     KF6::TextAutoGenerateText
 )

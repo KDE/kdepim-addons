@@ -24,7 +24,6 @@ macro(add_kmail_editorplugin_unittest _source _additional)
         Qt::Test
         KF6::XmlGui
         KPim6::MessageComposer
-        KF6::I18n
         KF6::TextUtils
     )
 endmacro()

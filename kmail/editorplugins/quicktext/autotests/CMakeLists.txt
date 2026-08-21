@@ -13,7 +13,6 @@ macro(add_kmail_editorpluginquicktext_unittest _source)
         Qt::Test
         KF6::XmlGui
         KPim6::MessageComposer
-        KF6::I18n
         KPim6::PimTextEdit
         kmailquicktextpluginprivate
         KPim6::MailCommon

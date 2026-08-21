@@ -20,7 +20,6 @@ macro(add_kmail_akonadidatabasetoolsplugin_unittest _source)
         KPim6::AkonadiWidgets
         KPim6::MailCommon
         KPim6::Libkdepim
-        KF6::I18n
         KF6::GuiAddons
         akonadidatasetools
     )

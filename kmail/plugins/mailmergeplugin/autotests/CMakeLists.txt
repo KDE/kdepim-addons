@@ -17,7 +17,6 @@ macro(add_kmail_mailmergeunittest _source)
         Qt::Test
         KF6::KIOCore
         KF6::KIOWidgets
-        KF6::I18n
         mailmerge
     )
 endmacro()

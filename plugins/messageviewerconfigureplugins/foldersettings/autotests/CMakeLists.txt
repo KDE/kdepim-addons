@@ -11,7 +11,6 @@ macro(add_foldersettings_plugin_unittest _source)
         ${_name}
         KPim6::PimCommon
         Qt::Test
-        KF6::I18n
         KPim6::MessageViewer
         folderconfiguresettings
     )

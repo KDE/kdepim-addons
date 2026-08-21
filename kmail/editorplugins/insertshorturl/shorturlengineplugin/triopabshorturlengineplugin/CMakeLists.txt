@@ -12,7 +12,6 @@ kcoreaddons_add_plugin(pimcommon_triopabshorturlengineplugin SOURCES
 target_link_libraries(
     pimcommon_triopabshorturlengineplugin
     KF6::Service
-    KF6::I18n
     Qt::Network
     KF6::CoreAddons
     shorturlpluginprivate

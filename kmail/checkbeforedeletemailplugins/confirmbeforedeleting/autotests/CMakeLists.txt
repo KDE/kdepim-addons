@@ -16,7 +16,6 @@ macro(add_kmail_checkbeforedeleting_unittest _source)
         Qt::Test
         KF6::XmlGui
         KPim6::MessageViewer
-        KF6::I18n
         kmailconfirmbeforedeleting
     )
 endmacro()

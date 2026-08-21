@@ -12,6 +12,5 @@ target_link_libraries(
     sieveeditorimapfoldercompletion_gui
     KPim6::PimCommon
     KF6::Completion
-    KF6::I18n
     KPim6::KSieveUi
 )
