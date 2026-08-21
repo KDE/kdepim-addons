@@ -61,7 +61,7 @@ void InsertShorturlPluginEditorInterface::loadEngine()
 void InsertShorturlPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto action = new QAction(i18nc("@action", "Insert Short URL…"), this);
-    ac->addAction(u"insert_shortulr"_s, action);
+    ac->addAction(u"insert_shorturl"_s, action);
     connect(action, &QAction::triggered, this, &InsertShorturlPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::PopupMenu);
     setActionType(type);

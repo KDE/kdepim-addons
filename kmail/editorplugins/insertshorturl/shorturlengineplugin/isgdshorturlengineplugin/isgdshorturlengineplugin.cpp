@@ -26,7 +26,7 @@ ShortUrlEngineInterface *IsgdShortUrlEnginePlugin::createInterface(QObject *pare
 
 QString IsgdShortUrlEnginePlugin::engineName() const
 {
-    return u"isdgshorturl"_s;
+    return u"isgdshorturl"_s;
 }
 
 #include "isgdshorturlengineplugin.moc"
