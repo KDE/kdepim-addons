@@ -721,9 +721,11 @@ public:
                 KMessageBox::error(nullptr, errorMessage);
             }
             return false;
+        } else if (res == Akonadi::ITIPHandler::ResultCancelled) {
+            return false;
         }
 
-        return res;
+        return true;
     }
 
     [[nodiscard]] bool cancelPastInvites(const Incidence::Ptr incidence, const QString &path) const
