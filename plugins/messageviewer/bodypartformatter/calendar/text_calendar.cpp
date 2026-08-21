@@ -622,6 +622,10 @@ public:
 
         msg->assemble();
         MailTransport::Transport *transport = MailTransport::TransportManager::self()->transportById(transportId);
+        if (!transport) {
+            qCWarning(TEXT_CALENDAR_LOG) << "No transport found for id" << transportId;
+            return false;
+        }
 
         auto job = new Akonadi::MessageQueueJob;
 
