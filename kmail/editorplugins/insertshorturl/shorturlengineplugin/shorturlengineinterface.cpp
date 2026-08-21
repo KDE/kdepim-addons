@@ -12,6 +12,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 
 #include <QNetworkAccessManager>
+#include <QUrl>
 
 ShortUrlEngineInterface::ShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
     : QObject(parent)
@@ -35,11 +36,12 @@ void ShortUrlEngineInterface::slotErrorFound(QNetworkReply::NetworkError error)
 void ShortUrlEngineInterface::setShortUrl(const QString &url)
 {
     mErrorFound = false;
-    if (!url.trimmed().startsWith(QLatin1StringView("http://")) && !url.trimmed().startsWith(QLatin1StringView("https://"))
-        && !url.trimmed().startsWith(QLatin1StringView("ftp://")) && !url.trimmed().startsWith(QLatin1StringView("ftps://"))) {
-        mOriginalUrl = QLatin1StringView("http://") + url;
+    const QString trimmedUrl = url.trimmed();
+    if (!trimmedUrl.startsWith(QLatin1StringView("http://")) && !trimmedUrl.startsWith(QLatin1StringView("https://"))
+        && !trimmedUrl.startsWith(QLatin1StringView("ftp://")) && !trimmedUrl.startsWith(QLatin1StringView("ftps://"))) {
+        mOriginalUrl = QLatin1StringView("http://") + trimmedUrl;
     } else {
-        mOriginalUrl = url;
+        mOriginalUrl = trimmedUrl;
     }
 }
 
@@ -51,6 +53,11 @@ QString ShortUrlEngineInterface::pluginName() const
 void ShortUrlEngineInterface::setTextCursor(const QTextCursor &cursor)
 {
     mTextCursor = cursor;
+}
+
+QString ShortUrlEngineInterface::encodedOriginalUrl() const
+{
+    return QString::fromLatin1(QUrl::toPercentEncoding(mOriginalUrl));
 }
 
 #include "moc_shorturlengineinterface.cpp"

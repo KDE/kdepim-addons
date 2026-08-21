@@ -32,6 +32,7 @@ Q_SIGNALS:
     void shortUrlFailed(const QString &error);
 
 protected:
+    [[nodiscard]] QString encodedOriginalUrl() const;
     QString mOriginalUrl;
     QTextCursor mTextCursor;
     bool mErrorFound = false;

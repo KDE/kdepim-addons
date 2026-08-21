@@ -27,7 +27,7 @@ QString TinyUrlEngineInterface::engineName() const
 
 void TinyUrlEngineInterface::generateShortUrl()
 {
-    const QString requestUrl = u"https://tinyurl.com/api-create.php?url=%1"_s.arg(mOriginalUrl);
+    const QString requestUrl = u"https://tinyurl.com/api-create.php?url=%1"_s.arg(encodedOriginalUrl());
     QNetworkReply *reply = mNetworkAccessManager->get(QNetworkRequest(QUrl(requestUrl)));
     connect(reply, &QNetworkReply::errorOccurred, this, &TinyUrlEngineInterface::slotErrorFound);
 }

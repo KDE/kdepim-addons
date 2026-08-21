@@ -27,7 +27,7 @@ QString TripAbShortUrlEngineInterface::engineName() const
 
 void TripAbShortUrlEngineInterface::generateShortUrl()
 {
-    const QString requestUrl = u"https://to.ly/api.php?longurl=%1"_s.arg(mOriginalUrl);
+    const QString requestUrl = u"https://to.ly/api.php?longurl=%1"_s.arg(encodedOriginalUrl());
     QNetworkReply *reply = mNetworkAccessManager->get(QNetworkRequest(QUrl(requestUrl)));
     connect(reply, &QNetworkReply::errorOccurred, this, &TripAbShortUrlEngineInterface::slotErrorFound);
 }
