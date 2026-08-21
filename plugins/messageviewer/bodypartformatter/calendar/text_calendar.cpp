@@ -849,17 +849,6 @@ public:
                     queryStr = i18n("Do you still want to record this invitation in your calendar?");
                 }
                 yesItem.setText(i18nc("@action:button", "Record"));
-            } else if (path == QLatin1StringView("cancel")) {
-                if (type == Incidence::TypeTodo) {
-                    queryStr = i18n("Do you really want to cancel this task?");
-                    yesItem.setText(i18nc("@action:button", "Cancel Task"));
-                } else {
-                    queryStr = i18n("Do you really want to cancel this invitation?");
-                    yesItem.setText(i18nc("@action:button", "Cancel Invitation"));
-                }
-                yesItem.setIconName(QStringLiteral("dialog-ok"));
-                noItem.setText(i18nc("@action:button", "Do Not Cancel"));
-                noItem.setIconName(QStringLiteral("dialog-cancel"));
             } else if (path.startsWith(QLatin1StringView("ATTACH:"))) {
                 return false;
             } else {
