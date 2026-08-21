@@ -248,6 +248,7 @@ public:
     {
         Q_UNUSED(vCard)
         auto view = new Akonadi::ContactViewer(nullptr);
+        view->setAttribute(Qt::WA_DeleteOnClose);
         view->setRawContact(a);
         view->setMinimumSize(300, 400);
         view->show();
