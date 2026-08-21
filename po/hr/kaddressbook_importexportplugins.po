@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-21 00:45+0000\n"
 "PO-Revision-Date: 2009-06-22 16:49+0200\n"
 "Last-Translator: ivan <admin@linuxzasve.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -44,7 +44,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:371
+#: vcards/vcardimportexportplugininterface.cpp:375
 #, fuzzy, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Koje kontakte želite da izvezete?"
@@ -52,7 +52,7 @@ msgstr "Koje kontakte želite da izvezete?"
 #: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:383
+#: vcards/vcardimportexportplugininterface.cpp:387
 #, fuzzy, kde-format
 #| msgid "Select a filter to decide which contacts to export."
 msgid "You have not selected any contacts to export."
@@ -723,30 +723,30 @@ msgstr "Izvezi vCard 2.1..."
 msgid "Export contacts to a vCard 2.1 file."
 msgstr "Izvezi vCard 2.1..."
 
-#: vcards/vcardimportexportplugininterface.cpp:114
+#: vcards/vcardimportexportplugininterface.cpp:113
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:115
+#: vcards/vcardimportexportplugininterface.cpp:114
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "Odaberite vCard za uvoz:"
 
-#: vcards/vcardimportexportplugininterface.cpp:121
+#: vcards/vcardimportexportplugininterface.cpp:125
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "Uvoz vCard-a nije uspio"
 
-#: vcards/vcardimportexportplugininterface.cpp:135
+#: vcards/vcardimportexportplugininterface.cpp:139
 #, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<qt>Ne mogu da pristupim <b>%1</b>."
 
-#: vcards/vcardimportexportplugininterface.cpp:437
+#: vcards/vcardimportexportplugininterface.cpp:441
 #, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
@@ -754,13 +754,13 @@ msgid ""
 "files?"
 msgstr "Odabrali ste popis kontakata, treba li ih izvesti u više datotekaova?"
 
-#: vcards/vcardimportexportplugininterface.cpp:440
+#: vcards/vcardimportexportplugininterface.cpp:444
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Izvezi u mobilni telefon"
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:445
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

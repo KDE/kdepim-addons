@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-21 00:45+0000\n"
 "PO-Revision-Date: 2014-04-19 15:08+0200\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@free.fr>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Εισαγωγή από ένα αρχείο τιμών διαχωρισ�
 #: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:371
+#: vcards/vcardimportexportplugininterface.cpp:375
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Ποια επαφή θέλετε να εξάγετε;"
@@ -52,7 +52,7 @@ msgstr "Ποια επαφή θέλετε να εξάγετε;"
 #: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:383
+#: vcards/vcardimportexportplugininterface.cpp:387
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Επιλέξτε τουλάχιστον μία επαφή προς εξαγωγή."
@@ -748,7 +748,7 @@ msgstr "Εξαγωγή vCard 2.1…"
 msgid "Export contacts to a vCard 2.1 file."
 msgstr "Εξαγωγή επαφών σε ένα αρχείο vCard 2.1."
 
-#: vcards/vcardimportexportplugininterface.cpp:114
+#: vcards/vcardimportexportplugininterface.cpp:113
 #, fuzzy, kde-format
 #| msgid ""
 #| "*.vcf|Vcard (*.vcf)\n"
@@ -758,25 +758,25 @@ msgstr ""
 "*.vcf|Vcard (*.vcf)\n"
 "*|όλα τα αρχεία (*)"
 
-#: vcards/vcardimportexportplugininterface.cpp:115
+#: vcards/vcardimportexportplugininterface.cpp:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "Επιλογή vCard για εισαγωγή"
 
-#: vcards/vcardimportexportplugininterface.cpp:121
+#: vcards/vcardimportexportplugininterface.cpp:125
 #, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "Η εισαγωγή vCard απέτυχε"
 
-#: vcards/vcardimportexportplugininterface.cpp:135
+#: vcards/vcardimportexportplugininterface.cpp:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<para>Αδύνατη η πρόσβαση στη vCard:</para><para>%1</para>"
 
-#: vcards/vcardimportexportplugininterface.cpp:437
+#: vcards/vcardimportexportplugininterface.cpp:441
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -784,13 +784,13 @@ msgid ""
 "files?"
 msgstr "Έχετε επιλέξει μια λίστα επαφών, να εξαχθούν σε πολλά αρχεία;"
 
-#: vcards/vcardimportexportplugininterface.cpp:440
+#: vcards/vcardimportexportplugininterface.cpp:444
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Εξαγωγή σε ένα αρχείο"
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:445
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"

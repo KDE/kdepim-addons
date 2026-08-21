@@ -106,6 +106,3 @@ msgstr "Конфигуриране на приставки на AdBlock"
 msgctxt "@title:window"
 msgid "Show Adblock List"
 msgstr "Показване на списък на Adblock"
-
-#~ msgid "Enabled ad block"
-#~ msgstr "Блокирането на реклами е активирано"

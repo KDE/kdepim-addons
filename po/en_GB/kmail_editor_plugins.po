@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-21 00:45+0000\n"
 "PO-Revision-Date: 2024-08-03 12:53+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -34,7 +34,7 @@ msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Autocorrect Full Text"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:34
+#: autocorrection/autocorrectionplugineditorinterface.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"

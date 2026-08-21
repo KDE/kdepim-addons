@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-21 00:45+0000\n"
 "PO-Revision-Date: 2025-08-10 19:12+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -34,7 +34,7 @@ msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "முழு உரையையும் தானாக திருத்து"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:34
+#: autocorrection/autocorrectionplugineditorinterface.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
