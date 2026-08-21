@@ -24,7 +24,9 @@ DiffHighlighterTest::DiffHighlighterTest(QObject *parent)
 QString readDiffFile(const QString &diffFile)
 {
     QFile file(diffFile);
-    Q_ASSERT(file.open(QIODevice::ReadOnly));
+    if (!file.open(QIODevice::ReadOnly)) {
+        return {};
+    }
     Q_ASSERT(file.isOpen());
     const QString data = QString::fromUtf8(file.readAll());
     return data;
