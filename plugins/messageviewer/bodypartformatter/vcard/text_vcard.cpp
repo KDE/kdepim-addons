@@ -23,6 +23,7 @@
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/MessagePart>
 #include <MimeTreeParser/NodeHelper>
+#include <qnamespace.h>
 using MimeTreeParser::Interface::BodyPart;
 
 #include <Akonadi/AddContactJob>
@@ -65,30 +66,35 @@ public:
         KContacts::VCardConverter vcc;
 
         auto memento = dynamic_cast<MessageViewer::VcardMemento *>(msgPart->memento());
-        QStringList lst;
 
-        // Pre-count the number of non-empty addressees
-        int count = 0;
         const KContacts::Addressee::List al = vcc.parseVCards(vCard.toUtf8());
+        // The email list is indexed by the position in the addressee list: an addressee without
+        // email keeps its slot, so that the memento stays in sync with the vcards rendered below
+        // and with the indexes used in the generated links.
+        QStringList lst;
+        lst.reserve(al.count());
+        // Number of non-empty addressees, and of those which can be looked up in the address book
+        int count = 0;
+        int emailCount = 0;
         for (const KContacts::Addressee &a : al) {
             if (a.isEmpty()) {
+                lst.append(QString());
                 continue;
             }
-            if (!memento) {
-                if (!a.emails().isEmpty()) {
-                    lst.append(a.emails().constFirst());
-                    count++;
-                }
+            const QStringList emails = a.emails();
+            lst.append(emails.isEmpty() ? QString() : emails.constFirst());
+            if (!emails.isEmpty()) {
+                emailCount++;
             }
+            count++;
         }
-        if (!count && !memento) {
+        if (!emailCount) {
             return false;
         }
 
         writer->write(QStringLiteral("<div align=\"center\"><h2>") + i18np("Attached business card", "Attached business cards", count)
                       + QStringLiteral("</h2></div>"));
 
-        count = 0;
         const QString defaultPixmapPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("user-identity"), KIconLoader::Desktop);
         const QString defaultMapIconPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("map-symbolic"), KIconLoader::Small);
         const QString defaultSmsIconPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("message-new"), KIconLoader::Small);
@@ -107,7 +113,8 @@ public:
             }
         }
 
-        for (const KContacts::Addressee &a : al) {
+        for (int index = 0, total = al.count(); index < total; ++index) {
+            const KContacts::Addressee &a = al.at(index);
             if (a.isEmpty()) {
                 continue;
             }
@@ -134,15 +141,15 @@ public:
             }
             writer->write(htmlStr);
 
-            if (!memento || !memento->finished() || (memento->finished() && !memento->vcardExist(count))) {
+            if (!memento || !memento->finished() || (memento->finished() && !memento->vcardExist(index))) {
                 const QString addToLinkText = i18n("[Add this contact to the address book]");
-                QString op = QStringLiteral("addToAddressBook:%1").arg(count);
+                QString op = QStringLiteral("addToAddressBook:%1").arg(index);
                 writer->write(QStringLiteral("<div align=\"center\"><a href=\"") + msgPart->makeLink(op) + QStringLiteral("\">") + addToLinkText
                               + QStringLiteral("</a></div><br/><br/>"));
             } else {
-                if (memento->address(count) != a) {
+                if (memento->address(index) != a) {
                     const QString addToLinkText = i18n("[Update this contact in the address book]");
-                    const QString op = QStringLiteral("updateToAddressBook:%1").arg(count);
+                    const QString op = QStringLiteral("updateToAddressBook:%1").arg(index);
                     writer->write(QStringLiteral("<div align=\"center\"><a href=\"") + msgPart->makeLink(op) + QStringLiteral("\">") + addToLinkText
                                   + QStringLiteral("</a></div><br><br>"));
                 } else {
@@ -150,7 +157,6 @@ public:
                     writer->write(QStringLiteral("<div align=\"center\">") + addToLinkText + QStringLiteral("</a></div><br><br>"));
                 }
             }
-            count++;
         }
 
         return true;

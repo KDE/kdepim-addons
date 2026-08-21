@@ -24,8 +24,18 @@ VcardMemento::~VcardMemento() = default;
 
 void VcardMemento::checkEmail()
 {
+    if (mIndex >= mVCardList.count()) {
+        return;
+    }
+    const QString email = mVCardList.at(mIndex).email;
+    // Slots without email are placeholders keeping the list in sync with the vcards, nothing to look up.
+    if (email.isEmpty()) {
+        mIndex++;
+        continueToCheckEmail();
+        return;
+    }
     auto searchJob = new Akonadi::ContactSearchJob();
-    searchJob->setQuery(Akonadi::ContactSearchJob::Email, mVCardList.at(mIndex).email.toLower());
+    searchJob->setQuery(Akonadi::ContactSearchJob::Email, email.toLower());
     connect(searchJob, &Akonadi::ContactSearchJob::result, this, &VcardMemento::slotSearchJobFinished);
 }
 
@@ -56,7 +66,7 @@ void VcardMemento::slotSearchJobFinished(KJob *job)
 
 void VcardMemento::continueToCheckEmail()
 {
-    if (mIndex == mVCardList.count()) {
+    if (mIndex >= mVCardList.count()) {
         mFinished = true;
         Q_EMIT update(MimeTreeParser::Delayed);
     } else {
