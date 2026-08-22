@@ -55,7 +55,7 @@ void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
     connect(addAction, &QAction::triggered, this, [this]() {
         AutogenerateConfigureAskInfo info;
         info.setTitle(i18n("Ask to AI"));
-        mModel->addItem(std::move(info));
+        mModel->addItem(info);
     });
     menu.addAction(addAction);
     const QModelIndex index = indexAt(event->pos());

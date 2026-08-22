@@ -120,7 +120,7 @@ void AdblockFilterTreeView::slotAddAdblock()
     if (dlg->exec()) {
         const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info = dlg->info();
         if (info.isValid()) {
-            if (mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)))) {
+            if (mAdblockFilterListsModel->insertList(convertToAdblockFilter(info))) {
                 mSettingsChanged = true;
             }
         }
@@ -146,7 +146,7 @@ void AdblockFilterTreeView::slotModifyAdblock(const QModelIndex &index)
         if (info != originalInfo) {
             if (info.isValid()) {
                 mAdblockFilterListsModel->removeList(listName);
-                (void)mAdblockFilterListsModel->insertList(std::move(convertToAdblockFilter(info)));
+                (void)mAdblockFilterListsModel->insertList(convertToAdblockFilter(info));
                 mSettingsChanged = true;
             }
         }
