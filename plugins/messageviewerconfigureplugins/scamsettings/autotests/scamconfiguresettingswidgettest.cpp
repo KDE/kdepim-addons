@@ -20,11 +20,11 @@ ScamConfigureSettingsWidgetTest::ScamConfigureSettingsWidgetTest(QObject *parent
 void ScamConfigureSettingsWidgetTest::shouldHaveDefaultValues()
 {
     ScamConfigureSettingsWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mTreeWidget = w.findChild<QTreeWidget *>(QStringLiteral("mTreeWidget"));
+    const auto mTreeWidget = w.findChild<QTreeWidget *>(QStringLiteral("mTreeWidget"));
     QVERIFY(mTreeWidget);
     QVERIFY(!mTreeWidget->rootIsDecorated());
     QVERIFY(!mTreeWidget->header()->sectionsMovable());

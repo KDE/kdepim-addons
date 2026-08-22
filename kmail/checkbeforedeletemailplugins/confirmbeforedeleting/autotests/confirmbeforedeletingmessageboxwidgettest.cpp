@@ -21,24 +21,24 @@ ConfirmBeforeDeletingMessageBoxWidgetTest::ConfirmBeforeDeletingMessageBoxWidget
 void ConfirmBeforeDeletingMessageBoxWidgetTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingMessageBoxWidget w;
-    auto mUseSameResultForOtherCheck = w.findChild<QCheckBox *>(u"mUseSameResultForOtherCheck"_s);
+    const auto mUseSameResultForOtherCheck = w.findChild<QCheckBox *>(u"mUseSameResultForOtherCheck"_s);
     QVERIFY(mUseSameResultForOtherCheck);
     QVERIFY(!mUseSameResultForOtherCheck->text().isEmpty());
     QVERIFY(!mUseSameResultForOtherCheck->isChecked());
 
-    auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
+    const auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto textLayout = w.findChild<QVBoxLayout *>(u"textLayout"_s);
+    const auto textLayout = w.findChild<QVBoxLayout *>(u"textLayout"_s);
     QVERIFY(textLayout);
     QCOMPARE(textLayout->contentsMargins(), QMargins{});
 
-    auto iconLabel = w.findChild<QLabel *>(u"iconLabel"_s);
+    const auto iconLabel = w.findChild<QLabel *>(u"iconLabel"_s);
     QVERIFY(iconLabel);
     QVERIFY(iconLabel->text().isEmpty());
 
-    auto mLabelInfo = w.findChild<QLabel *>(u"mLabelInfo"_s);
+    const auto mLabelInfo = w.findChild<QLabel *>(u"mLabelInfo"_s);
     QVERIFY(mLabelInfo);
     QVERIFY(mLabelInfo->text().isEmpty());
     QVERIFY(mLabelInfo->wordWrap());

@@ -23,15 +23,15 @@ MarkdownPreviewWidgetTest::MarkdownPreviewWidgetTest(QObject *parent)
 void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
 {
     MarkdownPreviewWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mWebView = w.findChild<QWebEngineView *>(u"webengine"_s);
+    const auto mWebView = w.findChild<QWebEngineView *>(u"webengine"_s);
     QVERIFY(mWebView);
     QCOMPARE(mWebView->contextMenuPolicy(), Qt::NoContextMenu);
 
-    auto mHoverUrlLabel = w.findChild<QLabel *>(u"mHoverUrlLabel"_s);
+    const auto mHoverUrlLabel = w.findChild<QLabel *>(u"mHoverUrlLabel"_s);
     QVERIFY(mHoverUrlLabel);
     QVERIFY(mHoverUrlLabel->text().isEmpty());
 }

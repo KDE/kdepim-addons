@@ -21,10 +21,10 @@ DKIMKeyRecordWidgetTest::DKIMKeyRecordWidgetTest(QObject *parent)
 void DKIMKeyRecordWidgetTest::shouldHaveDefaultValues()
 {
     DKIMKeyRecordWidget w;
-    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
-    auto mManagerKeyWidget = w.findChild<MessageViewer::DKIMManagerKeyWidget *>(QStringLiteral("mManagerKeyWidget"));
+    const auto mManagerKeyWidget = w.findChild<MessageViewer::DKIMManagerKeyWidget *>(QStringLiteral("mManagerKeyWidget"));
     QVERIFY(mManagerKeyWidget);
 }
 

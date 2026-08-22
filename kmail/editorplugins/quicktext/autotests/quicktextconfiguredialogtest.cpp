@@ -26,13 +26,13 @@ void QuickTextConfigureDialogTest::shouldHaveDefaultValues()
 {
     QuickTextConfigureDialog dlg;
 
-    auto mainLayout = dlg.findChild<QVBoxLayout *>(u"mainlayout"_s);
+    const auto mainLayout = dlg.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mQuickTextConfigureWidget = dlg.findChild<QuickTextConfigureWidget *>(u"quicktextconfigurewidget"_s);
+    const auto mQuickTextConfigureWidget = dlg.findChild<QuickTextConfigureWidget *>(u"quicktextconfigurewidget"_s);
     QVERIFY(mQuickTextConfigureWidget);
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 }
 

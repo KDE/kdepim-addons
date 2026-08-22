@@ -24,20 +24,20 @@ void AutogenerateConfigureAskWidgetTest::shouldHaveDefaultValues()
 {
     AutogenerateConfigureAskWidget w;
 
-    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mSplitter = w.findChild<QSplitter *>(QStringLiteral("mSplitter"));
+    const auto mSplitter = w.findChild<QSplitter *>(QStringLiteral("mSplitter"));
     QVERIFY(mSplitter);
 
-    auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
+    const auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
     QVERIFY(mSearchLineEdit);
 
-    auto mTextEdit = w.findChild<QPlainTextEdit *>(QStringLiteral("mTextEdit"));
+    const auto mTextEdit = w.findChild<QPlainTextEdit *>(QStringLiteral("mTextEdit"));
     QVERIFY(mTextEdit);
 
-    auto mAutogenerateConfigureListView = w.findChild<AutogenerateConfigureListView *>(QStringLiteral("mAutogenerateConfigureListView"));
+    const auto mAutogenerateConfigureListView = w.findChild<AutogenerateConfigureListView *>(QStringLiteral("mAutogenerateConfigureListView"));
     QVERIFY(mAutogenerateConfigureListView);
 }
 

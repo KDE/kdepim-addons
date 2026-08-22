@@ -24,14 +24,14 @@ QuickTextWidgetTest::QuickTextWidgetTest(QObject *parent)
 void QuickTextWidgetTest::shouldHaveDefaultValues()
 {
     QuickTextWidget w;
-    auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
+    const auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(w.contentsMargins(), QMargins());
 
-    auto mTreeWidget = w.findChild<QuicktextTreeWidget *>(u"treewidget"_s);
+    const auto mTreeWidget = w.findChild<QuicktextTreeWidget *>(u"treewidget"_s);
     QVERIFY(mTreeWidget);
 
-    auto mStackedWidget = w.findChild<QStackedWidget *>(u"stackedwidget"_s);
+    const auto mStackedWidget = w.findChild<QStackedWidget *>(u"stackedwidget"_s);
     QVERIFY(mStackedWidget);
 }
 

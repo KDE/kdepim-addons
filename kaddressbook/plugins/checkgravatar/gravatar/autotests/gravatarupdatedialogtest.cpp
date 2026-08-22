@@ -22,10 +22,10 @@ GravatarUpdateDialogTest::~GravatarUpdateDialogTest() = default;
 void GravatarUpdateDialogTest::shouldHaveDefaultValue()
 {
     KABGravatar::GravatarUpdateDialog dlg;
-    auto w = dlg.findChild<KABGravatar::GravatarUpdateWidget *>(QStringLiteral("gravatarupdatewidget"));
+    const auto w = dlg.findChild<KABGravatar::GravatarUpdateWidget *>(QStringLiteral("gravatarupdatewidget"));
     QVERIFY(w);
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
     QVERIFY(!dlg.saveUrl());

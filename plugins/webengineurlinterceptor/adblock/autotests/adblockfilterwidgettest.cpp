@@ -22,17 +22,17 @@ AdblockFilterWidgetTest::AdblockFilterWidgetTest(QObject *parent)
 void AdblockFilterWidgetTest::shouldHaveDefaultValues()
 {
     AdblockFilterWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
+    const auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->text().isEmpty());
     QVERIFY(!mSearchLineEdit->placeholderText().isEmpty());
     QVERIFY(mSearchLineEdit->isClearButtonEnabled());
 
-    auto mAdblockFilterListView = w.findChild<AdblockFilterTreeView *>(QStringLiteral("mAdblockFilterListView"));
+    const auto mAdblockFilterListView = w.findChild<AdblockFilterTreeView *>(QStringLiteral("mAdblockFilterListView"));
     QVERIFY(mAdblockFilterListView);
 }
 

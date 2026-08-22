@@ -21,14 +21,14 @@ ScamConfigureSettingsDialogTest::ScamConfigureSettingsDialogTest(QObject *parent
 void ScamConfigureSettingsDialogTest::shouldHaveDefaultValues()
 {
     ScamConfigureSettingsDialog d;
-    auto mScamConfigureSettingsWidget = d.findChild<ScamConfigureSettingsWidget *>(QStringLiteral("mScamConfigureSettingsWidget"));
+    const auto mScamConfigureSettingsWidget = d.findChild<ScamConfigureSettingsWidget *>(QStringLiteral("mScamConfigureSettingsWidget"));
     QVERIFY(mScamConfigureSettingsWidget);
 
-    auto mainLayout = d.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = d.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QVERIFY(!d.windowTitle().isEmpty());
 
-    auto buttonBox = d.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    const auto buttonBox = d.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 }

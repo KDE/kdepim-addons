@@ -25,14 +25,14 @@ CheckAttachmentDialogTest::~CheckAttachmentDialogTest() = default;
 void CheckAttachmentDialogTest::shouldHaveDefaultValue()
 {
     CheckAttachmentDialog w;
-    auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonbox"_s);
+    const auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
-    auto lab = w.findChild<QLabel *>(u"lab"_s);
+    const auto lab = w.findChild<QLabel *>(u"lab"_s);
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 
-    auto mListWidget = w.findChild<QListWidget *>(u"listwidget"_s);
+    const auto mListWidget = w.findChild<QListWidget *>(u"listwidget"_s);
     QVERIFY(mListWidget);
     QCOMPARE(mListWidget->count(), 0);
 }
@@ -41,7 +41,7 @@ void CheckAttachmentDialogTest::shouldAddEmails()
 {
     CheckAttachmentDialog w;
 
-    auto mListWidget = w.findChild<QListWidget *>(u"listwidget"_s);
+    const auto mListWidget = w.findChild<QListWidget *>(u"listwidget"_s);
     w.setEmails(QStringList() << u"a"_s << u"b"_s << QStringLiteral("v"));
     QCOMPARE(mListWidget->count(), 3);
 }

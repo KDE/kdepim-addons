@@ -22,28 +22,28 @@ void OpenUrlWithConfigureCreateWidgetTest::shouldHaveDefaultValues()
 {
     OpenUrlWithConfigureCreateWidget w;
 
-    auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
+    const auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mServerName = w.findChild<QLineEdit *>(QStringLiteral("mServerName"));
+    const auto mServerName = w.findChild<QLineEdit *>(QStringLiteral("mServerName"));
     QVERIFY(mServerName);
     QVERIFY(mServerName->text().isEmpty());
     QVERIFY(mServerName->isClearButtonEnabled());
 
-    auto mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("mCommandLine"));
+    const auto mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("mCommandLine"));
     QVERIFY(mCommandLine);
     QVERIFY(mCommandLine->text().isEmpty());
     QVERIFY(mCommandLine->isClearButtonEnabled());
 
-    auto formatHelp = w.findChild<QLabel *>(QStringLiteral("formatHelp"));
+    const auto formatHelp = w.findChild<QLabel *>(QStringLiteral("formatHelp"));
     QVERIFY(formatHelp);
     QCOMPARE(formatHelp->contextMenuPolicy(), Qt::NoContextMenu);
 
-    auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
+    const auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
     QVERIFY(mExecutable);
 
-    auto mEnabled = w.findChild<QCheckBox *>(QStringLiteral("mEnabled"));
+    const auto mEnabled = w.findChild<QCheckBox *>(QStringLiteral("mEnabled"));
     QVERIFY(mEnabled);
 }
 

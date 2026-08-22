@@ -29,10 +29,10 @@ void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
 {
     const ConfirmAddressConfigureWidget w;
 
-    auto vboxlayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
+    const auto vboxlayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(vboxlayout);
 
-    auto mConfirmAddressConfigureTab = w.findChild<ConfirmAddressConfigureTab *>(u"confirmaddresstab"_s);
+    const auto mConfirmAddressConfigureTab = w.findChild<ConfirmAddressConfigureTab *>(u"confirmaddresstab"_s);
     QVERIFY(mConfirmAddressConfigureTab);
 }
 

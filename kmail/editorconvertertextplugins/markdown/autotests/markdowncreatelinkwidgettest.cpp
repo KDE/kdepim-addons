@@ -23,16 +23,16 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
 {
     MarkdownCreateLinkWidget w;
 
-    auto mainLayout = w.findChild<QFormLayout *>(u"mainlayout"_s);
+    const auto mainLayout = w.findChild<QFormLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mTitle = w.findChild<QLineEdit *>(u"title"_s);
+    const auto mTitle = w.findChild<QLineEdit *>(u"title"_s);
     QVERIFY(mTitle);
     QVERIFY(mTitle->text().isEmpty());
     QVERIFY(mTitle->isClearButtonEnabled());
 
-    auto mLink = w.findChild<QLineEdit *>(u"link"_s);
+    const auto mLink = w.findChild<QLineEdit *>(u"link"_s);
     QVERIFY(mLink);
     QVERIFY(mLink->text().isEmpty());
     QVERIFY(mLink->isClearButtonEnabled());
@@ -41,8 +41,8 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
 void MarkdownCreateLinkWidgetTest::shouldGenerateLink()
 {
     MarkdownCreateLinkWidget w;
-    auto mTitle = w.findChild<QLineEdit *>(u"title"_s);
-    auto mLink = w.findChild<QLineEdit *>(u"link"_s);
+    const auto mTitle = w.findChild<QLineEdit *>(u"title"_s);
+    const auto mLink = w.findChild<QLineEdit *>(u"link"_s);
     mLink->setText(u"http://www.kde.org"_s);
     mTitle->setText(u"TITLE"_s);
     QCOMPARE(w.linkStr(), u"[TITLE](http://www.kde.org)"_s);
@@ -52,8 +52,8 @@ void MarkdownCreateLinkWidgetTest::shouldEmitSignal()
 {
     MarkdownCreateLinkWidget w;
     QSignalSpy spy(&w, &MarkdownCreateLinkWidget::enabledOkButton);
-    auto mTitle = w.findChild<QLineEdit *>(u"title"_s);
-    auto mLink = w.findChild<QLineEdit *>(u"link"_s);
+    const auto mTitle = w.findChild<QLineEdit *>(u"title"_s);
+    const auto mLink = w.findChild<QLineEdit *>(u"link"_s);
     mTitle->setText(u"foo"_s);
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(0).value<bool>(), false);

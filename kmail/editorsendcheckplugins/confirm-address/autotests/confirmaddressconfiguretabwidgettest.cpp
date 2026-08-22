@@ -26,27 +26,27 @@ ConfirmAddressConfigureTabWidgetTest::~ConfirmAddressConfigureTabWidgetTest() = 
 void ConfirmAddressConfigureTabWidgetTest::shouldHaveDefaultValue()
 {
     ConfirmAddressConfigureTabWidget w;
-    auto groupBoxDomainName = w.findChild<QGroupBox *>(u"groupboxdomainname"_s);
+    const auto groupBoxDomainName = w.findChild<QGroupBox *>(u"groupboxdomainname"_s);
     QVERIFY(groupBoxDomainName);
-    auto layoutDomainName = w.findChild<QVBoxLayout *>(u"layoutdomainname"_s);
+    const auto layoutDomainName = w.findChild<QVBoxLayout *>(u"layoutdomainname"_s);
     QVERIFY(layoutDomainName);
 
-    auto mAcceptedDomain = w.findChild<QRadioButton *>(u"acceptdomainname"_s);
+    const auto mAcceptedDomain = w.findChild<QRadioButton *>(u"acceptdomainname"_s);
     QVERIFY(mAcceptedDomain);
     QVERIFY(!mAcceptedDomain->text().isEmpty());
 
-    auto mRejectedDomain = w.findChild<QRadioButton *>(u"rejectdomainname"_s);
+    const auto mRejectedDomain = w.findChild<QRadioButton *>(u"rejectdomainname"_s);
     QVERIFY(mRejectedDomain);
     QVERIFY(!mRejectedDomain->text().isEmpty());
 
-    auto mDomainNameListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(u"domainnamelisteditor"_s);
+    const auto mDomainNameListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(u"domainnamelisteditor"_s);
     QVERIFY(mDomainNameListEditor);
 
-    auto groupBoxWhiteList = w.findChild<QGroupBox *>(u"groupboxwhitelist"_s);
+    const auto groupBoxWhiteList = w.findChild<QGroupBox *>(u"groupboxwhitelist"_s);
     QVERIFY(groupBoxWhiteList);
-    auto layoutWhiteList = w.findChild<QVBoxLayout *>(u"layoutwhitelist"_s);
+    const auto layoutWhiteList = w.findChild<QVBoxLayout *>(u"layoutwhitelist"_s);
     QVERIFY(layoutWhiteList);
-    auto mWhiteListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(u"whitelisteditor"_s);
+    const auto mWhiteListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(u"whitelisteditor"_s);
     QVERIFY(mWhiteListEditor);
 }
 

@@ -25,13 +25,13 @@ void ConfirmBeforeDeletingMessageBoxDialogTest::shouldHaveDefaultValues()
     QVERIFY(!d.windowTitle().isEmpty());
     QVERIFY(!d.useSameResult());
 
-    auto mainLayout = d.findChild<QVBoxLayout *>(u"mainLayout"_s);
+    const auto mainLayout = d.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
 
-    auto mConfirmBeforeDeletingWidget = d.findChild<ConfirmBeforeDeletingMessageBoxWidget *>(u"mConfirmBeforeDeletingWidget"_s);
+    const auto mConfirmBeforeDeletingWidget = d.findChild<ConfirmBeforeDeletingMessageBoxWidget *>(u"mConfirmBeforeDeletingWidget"_s);
     QVERIFY(mConfirmBeforeDeletingWidget);
 
-    auto buttonBox = d.findChild<QDialogButtonBox *>(u"buttonBox"_s);
+    const auto buttonBox = d.findChild<QDialogButtonBox *>(u"buttonBox"_s);
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::Yes | QDialogButtonBox::Cancel | QDialogButtonBox::No);
 }

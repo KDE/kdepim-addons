@@ -23,15 +23,15 @@ MarkdownConfigureWidgetTest::MarkdownConfigureWidgetTest(QObject *parent)
 void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
 {
     MarkdownConfigureWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mLatexSupport = w.findChild<QCheckBox *>(u"latex"_s);
+    const auto mLatexSupport = w.findChild<QCheckBox *>(u"latex"_s);
     QVERIFY(mLatexSupport);
     QVERIFY(!mLatexSupport->text().isEmpty());
 
-    auto mExtraDefinitionLists = w.findChild<QCheckBox *>(u"extradefinitionlists"_s);
+    const auto mExtraDefinitionLists = w.findChild<QCheckBox *>(u"extradefinitionlists"_s);
     QVERIFY(mExtraDefinitionLists);
     QVERIFY(!mExtraDefinitionLists->text().isEmpty());
 }

@@ -20,11 +20,11 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldHaveDefaultValues()
 {
     TemplateParserEmailAddressRequesterAkonadi w;
 
-    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
+    const auto mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
     QVERIFY(mLineEdit);
     QVERIFY(mLineEdit->text().isEmpty());
 }
@@ -32,7 +32,7 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldHaveDefaultValues()
 void TemplateParserEmailAddressRequesterAkonadiTest::shouldAssignValue()
 {
     TemplateParserEmailAddressRequesterAkonadi w;
-    auto mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
+    const auto mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
     const QString str{QStringLiteral("foo")};
     w.setText(str);
     QCOMPARE(w.text(), str);
@@ -42,7 +42,7 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldAssignValue()
 void TemplateParserEmailAddressRequesterAkonadiTest::shouldClearValue()
 {
     TemplateParserEmailAddressRequesterAkonadi w;
-    auto mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
+    const auto mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
     const QString str{QStringLiteral("foo")};
     w.setText(str);
     QCOMPARE(w.text(), str);

@@ -25,13 +25,13 @@ void ConfirmBeforeDeletingCreateRuleDialogTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingCreateRuleDialog w;
     QVERIFY(!w.windowTitle().isEmpty());
-    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mConfirmBeforeDeletingCreateRuleWidget = w.findChild<ConfirmBeforeDeletingCreateRuleWidget *>(u"mConfirmBeforeDeletingCreateRuleWidget"_s);
+    const auto mConfirmBeforeDeletingCreateRuleWidget = w.findChild<ConfirmBeforeDeletingCreateRuleWidget *>(u"mConfirmBeforeDeletingCreateRuleWidget"_s);
     mainLayout->addWidget(mConfirmBeforeDeletingCreateRuleWidget);
 
-    auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonBox"_s);
+    const auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonBox"_s);
     QVERIFY(buttonBox);
     auto okButton = buttonBox->button(QDialogButtonBox::Ok);
     QVERIFY(!okButton->isEnabled());

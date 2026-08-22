@@ -21,9 +21,9 @@ EventDateTimeWidgetTest::~EventDateTimeWidgetTest() = default;
 void EventDateTimeWidgetTest::shouldHaveDefaultValue()
 {
     MessageViewer::EventDateTimeWidget edit;
-    auto datecombobox = edit.findChild<KDateComboBox *>(QStringLiteral("eventdatecombobox"));
+    const auto datecombobox = edit.findChild<KDateComboBox *>(QStringLiteral("eventdatecombobox"));
     QVERIFY(datecombobox);
-    auto timecombobox = edit.findChild<KTimeComboBox *>(QStringLiteral("eventtimecombobox"));
+    const auto timecombobox = edit.findChild<KTimeComboBox *>(QStringLiteral("eventtimecombobox"));
     QVERIFY(timecombobox);
 }
 

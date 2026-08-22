@@ -21,13 +21,13 @@ void AdblockFilterDialogTest::shouldHaveDefaultValues()
 {
     AdblockFilterDialog w;
     QVERIFY(!w.windowTitle().isEmpty());
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
-    auto mAdblockFilterWidget = w.findChild<AdblockFilterWidget *>(QStringLiteral("mAdblockFilterWidget"));
+    const auto mAdblockFilterWidget = w.findChild<AdblockFilterWidget *>(QStringLiteral("mAdblockFilterWidget"));
     QVERIFY(mAdblockFilterWidget);
 
-    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    const auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
 }
 

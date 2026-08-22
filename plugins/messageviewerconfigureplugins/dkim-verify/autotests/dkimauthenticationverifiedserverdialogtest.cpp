@@ -24,13 +24,13 @@ void DKIMAuthenticationVerifiedServerDialogTest::shouldHaveDefaultValues()
     DKIMAuthenticationVerifiedServerDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
 
-    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    const auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    auto mConfigureWidget = dlg.findChild<DKIMAuthenticationVerifiedServerWidget *>(QStringLiteral("mAuthenticationVerifiedWidget"));
+    const auto mConfigureWidget = dlg.findChild<DKIMAuthenticationVerifiedServerWidget *>(QStringLiteral("mAuthenticationVerifiedWidget"));
     QVERIFY(mConfigureWidget);
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::StandardButtons{QDialogButtonBox::Ok | QDialogButtonBox::Cancel});
 }

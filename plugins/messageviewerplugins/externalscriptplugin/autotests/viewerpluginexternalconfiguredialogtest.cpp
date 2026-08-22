@@ -23,7 +23,7 @@ void ViewerPluginExternalConfigureDialogTest::shouldHaveDefaultValue()
 {
     ViewerPluginExternalConfigureDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
     QVERIFY(buttonBox->button(QDialogButtonBox::RestoreDefaults)->isHidden());
 }

@@ -22,11 +22,11 @@ DKIMConfigureWidgetTest::DKIMConfigureWidgetTest(QObject *parent)
 void DKIMConfigureWidgetTest::shouldHaveDefaultValue()
 {
     DKIMConfigureWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mTabWidget = w.findChild<DKIMConfigureTab *>(QStringLiteral("tabwidget"));
+    const auto mTabWidget = w.findChild<DKIMConfigureTab *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
 }
 

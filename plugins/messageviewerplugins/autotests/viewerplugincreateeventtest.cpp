@@ -44,7 +44,7 @@ void ViewerPluginCreateeventTest::shouldShowWidget()
     parent->setLayout(new QHBoxLayout);
     std::unique_ptr<MessageViewer::ViewerPluginInterface> interface(event->createView(parent.get(), new KActionCollection(this)));
     interface->execute();
-    auto createeventwidget = parent->findChild<QWidget *>(QStringLiteral("eventedit"));
+    const auto createeventwidget = parent->findChild<QWidget *>(QStringLiteral("eventedit"));
     QVERIFY(createeventwidget);
     QCOMPARE(createeventwidget->isHidden(), false);
 }

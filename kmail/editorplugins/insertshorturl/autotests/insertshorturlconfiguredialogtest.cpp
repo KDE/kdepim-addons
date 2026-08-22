@@ -26,10 +26,10 @@ void InsertShorturlConfigureDialogTest::shouldHaveDefaultValues()
 {
     InsertShorturlConfigureDialog dlg;
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
-    auto mInsertShortUrlWidget = dlg.findChild<InsertShorturlConfigureWidget *>(u"insertshorturlwidget"_s);
+    const auto mInsertShortUrlWidget = dlg.findChild<InsertShorturlConfigureWidget *>(u"insertshorturlwidget"_s);
     QVERIFY(mInsertShortUrlWidget);
 }
 

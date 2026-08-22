@@ -24,13 +24,13 @@ void AutogenerateConfigureAskDialogTest::shouldHaveDefaultValues()
     AutogenerateConfigureAskDialog w;
 
     QVERIFY(!w.windowTitle().isEmpty());
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
-    auto mAutogenerateConfigureAskWidget = w.findChild<AutogenerateConfigureAskWidget *>(QStringLiteral("mAutogenerateConfigureAskWidget"));
+    const auto mAutogenerateConfigureAskWidget = w.findChild<AutogenerateConfigureAskWidget *>(QStringLiteral("mAutogenerateConfigureAskWidget"));
     QVERIFY(mAutogenerateConfigureAskWidget);
 
-    auto button = w.findChild<QDialogButtonBox *>(QStringLiteral("button"));
+    const auto button = w.findChild<QDialogButtonBox *>(QStringLiteral("button"));
     QVERIFY(button);
 }
 

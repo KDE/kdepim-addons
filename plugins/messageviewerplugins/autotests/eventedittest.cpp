@@ -61,25 +61,25 @@ void EventEditTest::shouldHaveDefaultValuesOnCreation()
     MessageViewer::EventEdit edit;
     QVERIFY(edit.collection().isValid());
     QVERIFY(!edit.message());
-    auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(eventedit);
     QCOMPARE(eventedit->text(), QString());
 
-    auto openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
-    auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
+    const auto openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
+    const auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QVERIFY(openEditor);
     QVERIFY(save);
     QCOMPARE(openEditor->isEnabled(), false);
     QCOMPARE(save->isEnabled(), false);
 
     QDateTime currentDateTime = QDateTime::currentDateTime();
-    auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
+    const auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
     QVERIFY(startDateTime);
     QCOMPARE(startDateTime->dateTime().date(), currentDateTime.date());
     QCOMPARE(startDateTime->dateTime().time().hour(), currentDateTime.time().hour());
     QCOMPARE(startDateTime->dateTime().time().minute(), currentDateTime.time().minute());
 
-    auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
+    const auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
     QVERIFY(endDateTime);
     currentDateTime = currentDateTime.addSecs(3600); // +1hour
     QCOMPARE(endDateTime->dateTime().date(), currentDateTime.date());
@@ -139,7 +139,7 @@ void EventEditTest::shouldEmitEventWhenPressEnter()
     msg->subject(KMime::CreatePolicy::Create)->fromUnicodeString(subject);
     msg->subject(KMime::CreatePolicy::DontCreate)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
-    auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     eventedit->setFocus();
     QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(eventedit, Qt::Key_Enter);
@@ -158,7 +158,7 @@ void EventEditTest::shouldHideWidgetWhenPressEnter()
     msg->subject(KMime::CreatePolicy::Create)->fromUnicodeString(subject);
     msg->subject(KMime::CreatePolicy::DontCreate)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
-    auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QTest::keyClick(eventedit, Qt::Key_Enter);
     QCOMPARE(edit.isVisible(), false);
 }
@@ -170,7 +170,7 @@ void EventEditTest::shouldHideWidgetWhenPressEscape()
     // make sure the window is active so we can test for focus
     edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
-    auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     eventedit->setFocus();
     QVERIFY(eventedit->hasFocus());
     QTest::keyPress(&edit, Qt::Key_Escape);
@@ -187,7 +187,7 @@ void EventEditTest::shouldHideWidgetWhenSaveClicked()
     msg->subject(KMime::CreatePolicy::Create)->fromUnicodeString(QStringLiteral("Test Note"));
     msg->subject(KMime::CreatePolicy::DontCreate)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
-    auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
+    const auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QTest::mouseClick(save, Qt::LeftButton);
     QCOMPARE(edit.isVisible(), false);
 }
@@ -197,10 +197,10 @@ void EventEditTest::shouldSaveCollectionSettings()
     MessageViewer::EventEdit edit;
     edit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
-    auto akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    const auto akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(3);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();
-    auto close = edit.findChild<QPushButton *>(QStringLiteral("close-button"));
+    const auto close = edit.findChild<QPushButton *>(QStringLiteral("close-button"));
     QTest::mouseClick(close, Qt::LeftButton);
     QCOMPARE(MessageViewer::MessageViewerSettingsBase::self()->lastEventSelectedFolder(), id);
 }
@@ -210,7 +210,7 @@ void EventEditTest::shouldSaveCollectionSettingsWhenCloseWidget()
     MessageViewer::EventEdit edit;
     edit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
-    auto akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    const auto akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(4);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();
     edit.writeConfig();
@@ -220,7 +220,7 @@ void EventEditTest::shouldSaveCollectionSettingsWhenCloseWidget()
 void EventEditTest::shouldSaveCollectionSettingsWhenDeleteWidget()
 {
     auto edit = new MessageViewer::EventEdit;
-    auto akonadicombobox = edit->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    const auto akonadicombobox = edit->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(5);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();
     delete edit;
@@ -232,17 +232,17 @@ void EventEditTest::shouldNotEmitCreateEventWhenDateIsInvalid()
     MessageViewer::EventEdit edit;
     std::shared_ptr<KMime::Message> msg(new KMime::Message);
 
-    auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
+    const auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
     startDateTime->setDateTime(QDateTime());
 
-    auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
+    const auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
     endDateTime->setDateTime(QDateTime());
 
     QString subject = QStringLiteral("Test Note");
     msg->subject(KMime::CreatePolicy::Create)->fromUnicodeString(subject);
     msg->subject(KMime::CreatePolicy::DontCreate)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
-    auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(eventedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 0);
@@ -256,7 +256,7 @@ void EventEditTest::shouldEventHasCorrectSubject()
     msg->subject(KMime::CreatePolicy::Create)->fromUnicodeString(subject);
     msg->subject(KMime::CreatePolicy::DontCreate)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
-    auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
     QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(noteedit, Qt::Key_Enter);
@@ -274,7 +274,7 @@ void EventEditTest::shouldSelectLineWhenPutMessage()
     msg->subject(KMime::CreatePolicy::Create)->fromUnicodeString(subject);
     msg->subject(KMime::CreatePolicy::DontCreate)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
-    auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
     QVERIFY(noteedit->hasSelectedText());
     const QString selectedText = noteedit->selectedText();
@@ -291,14 +291,14 @@ void EventEditTest::shouldHaveCorrectStartEndDateTime()
     edit.setMessage(msg);
 
     QDateTime currentDateTime = QDateTime::currentDateTime();
-    auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
+    const auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
     startDateTime->setDateTime(currentDateTime);
 
     QDateTime endDt = currentDateTime.addDays(1);
-    auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
+    const auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
     endDateTime->setDateTime(endDt);
 
-    auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
     QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(noteedit, Qt::Key_Enter);
@@ -321,7 +321,7 @@ void EventEditTest::shouldSetFocusWhenWeCallTodoEdit()
     // make sure the window is active so we can test for focus
     edit.activateWindow();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
-    auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
     edit.setFocus();
     edit.showEventEdit();
@@ -331,8 +331,8 @@ void EventEditTest::shouldSetFocusWhenWeCallTodoEdit()
 void EventEditTest::shouldEnsureEndDateIsNotBeforeStartDate()
 {
     MessageViewer::EventEdit edit;
-    auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
-    auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
+    const auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
+    const auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
 
     QDateTime startDt = startDateTime->dateTime();
     QVERIFY(startDt < endDateTime->dateTime());
@@ -357,10 +357,10 @@ void EventEditTest::shouldEnabledSaveOpenEditorButton()
     msg->subject(KMime::CreatePolicy::DontCreate)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
 
-    auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
+    const auto noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
-    auto openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
-    auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
+    const auto openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
+    const auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QCOMPARE(openEditor->isEnabled(), true);
     QCOMPARE(save->isEnabled(), true);
     noteedit->clear();
@@ -387,12 +387,12 @@ void EventEditTest::shouldUpdateStartEndDateWhenReopenIt()
     edit.setMessage(msg);
 
     QDateTime currentDateTime = QDateTime::currentDateTime();
-    auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
+    const auto startDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("startdatetimeedit"));
     QCOMPARE(startDateTime->dateTime().date(), currentDateTime.date());
     QCOMPARE(startDateTime->dateTime().time().hour(), currentDateTime.time().hour());
     QCOMPARE(startDateTime->dateTime().time().minute(), currentDateTime.time().minute());
 
-    auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
+    const auto endDateTime = edit.findChild<MessageViewer::EventDateTimeWidget *>(QStringLiteral("enddatetimeedit"));
     auto endTime = currentDateTime.addSecs(3600);
     QCOMPARE(endDateTime->dateTime().date(), endTime.date());
     QCOMPARE(endDateTime->dateTime().time().hour(), endTime.time().hour());
@@ -426,7 +426,7 @@ void EventEditTest::shouldUpdateStartEndDateWhenReopenIt()
 void EventEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmpty()
 {
     MessageViewer::EventEdit edit;
-    auto akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    const auto akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     // Create an empty combobox
     akonadicombobox->setModel(new QStandardItemModel(&edit));
     std::shared_ptr<KMime::Message> msg(new KMime::Message);
@@ -435,8 +435,8 @@ void EventEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEm
     msg->subject(KMime::CreatePolicy::DontCreate)->setRFC2047Charset("us-ascii");
     edit.setMessage(msg);
 
-    auto openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
-    auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
+    const auto openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
+    const auto save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QCOMPARE(openEditor->isEnabled(), false);
     QCOMPARE(save->isEnabled(), false);
 }

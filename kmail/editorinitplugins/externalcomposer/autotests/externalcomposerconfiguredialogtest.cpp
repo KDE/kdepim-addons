@@ -22,7 +22,7 @@ void ExternalComposerConfigureDialogTest::shouldHaveDefaultValues()
 {
     ExternalComposerConfigureDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
-    auto w = dlg.findChild<ExternalComposerConfigureWidget *>(u"configurewidget"_s);
+    const auto w = dlg.findChild<ExternalComposerConfigureWidget *>(u"configurewidget"_s);
     QVERIFY(w);
 }
 

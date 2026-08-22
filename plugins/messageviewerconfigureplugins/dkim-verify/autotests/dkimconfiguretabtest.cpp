@@ -22,11 +22,11 @@ void DKIMConfigureTabTest::shouldHaveDefaultValue()
 {
     DKIMConfigureTab w;
 
-    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    const auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    const auto mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
 }
 

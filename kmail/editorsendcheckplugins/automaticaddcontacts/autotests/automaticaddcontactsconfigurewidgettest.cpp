@@ -26,10 +26,10 @@ void AutomaticAddContactsConfigureWidgetTest::shouldHaveDefaultValue()
 {
     AutomaticAddContactsConfigureWidget w(nullptr);
 
-    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto mConfigureTab = w.findChild<AutomaticAddContactsConfigureTab *>(u"configuretab"_s);
+    const auto mConfigureTab = w.findChild<AutomaticAddContactsConfigureTab *>(u"configuretab"_s);
     QVERIFY(mConfigureTab);
 }
 

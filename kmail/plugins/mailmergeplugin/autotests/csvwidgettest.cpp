@@ -22,10 +22,10 @@ void CsvWidgetTest::shouldHaveDefaultValue()
 {
     MailMerge::CsvWidget w;
 
-    auto lab = w.findChild<QLabel *>(u"label"_s);
+    const auto lab = w.findChild<QLabel *>(u"label"_s);
     QVERIFY(lab);
 
-    auto urlrequester = w.findChild<KUrlRequester *>(u"cvsurlrequester"_s);
+    const auto urlrequester = w.findChild<KUrlRequester *>(u"cvsurlrequester"_s);
     QVERIFY(urlrequester);
     QVERIFY(urlrequester->url().isEmpty());
 }
@@ -34,7 +34,7 @@ void CsvWidgetTest::shouldChangePath()
 {
     MailMerge::CsvWidget w;
 
-    auto urlrequester = w.findChild<KUrlRequester *>(u"cvsurlrequester"_s);
+    const auto urlrequester = w.findChild<KUrlRequester *>(u"cvsurlrequester"_s);
     QVERIFY(urlrequester->url().isEmpty());
     QUrl url(u"file:///tmp/foo.txt"_s);
     urlrequester->setUrl(url);

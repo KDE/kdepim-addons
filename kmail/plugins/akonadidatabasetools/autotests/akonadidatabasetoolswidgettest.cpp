@@ -19,11 +19,11 @@ AkonadiDatabaseToolsWidgetTest::AkonadiDatabaseToolsWidgetTest(QObject *parent)
 void AkonadiDatabaseToolsWidgetTest::shouldHaveDefaultValues()
 {
     AkonadiDatabaseToolsWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mPlainTextEdit = w.findChild<QPlainTextEdit *>(u"mPlainTextEdit"_s);
+    const auto mPlainTextEdit = w.findChild<QPlainTextEdit *>(u"mPlainTextEdit"_s);
     QVERIFY(mPlainTextEdit);
     QVERIFY(mPlainTextEdit->toPlainText().isEmpty());
     QVERIFY(mPlainTextEdit->isReadOnly());

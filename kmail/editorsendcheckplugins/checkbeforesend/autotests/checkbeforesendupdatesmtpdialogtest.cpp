@@ -23,18 +23,18 @@ CheckBeforeSendUpdateSmtpDialogTest::CheckBeforeSendUpdateSmtpDialogTest(QObject
 void CheckBeforeSendUpdateSmtpDialogTest::shouldHaveDefaultValue()
 {
     CheckBeforeSendUpdateSmtpDialog w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
 
-    auto lab = w.findChild<QLabel *>(u"label"_s);
+    const auto lab = w.findChild<QLabel *>(u"label"_s);
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 
-    auto mChangeSmtp = w.findChild<QCheckBox *>(u"changesmtp"_s);
+    const auto mChangeSmtp = w.findChild<QCheckBox *>(u"changesmtp"_s);
     QVERIFY(mChangeSmtp);
     QVERIFY(!mChangeSmtp->isChecked());
 
-    auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonbox"_s);
+    const auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
     QVERIFY(!w.windowTitle().isEmpty());

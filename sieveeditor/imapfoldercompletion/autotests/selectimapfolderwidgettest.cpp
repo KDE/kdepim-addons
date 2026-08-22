@@ -23,19 +23,19 @@ void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
 {
     KSieveCore::SieveImapAccountSettings account;
     SelectImapFolderWidget w(account);
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mTreeView = w.findChild<QTreeView *>(QStringLiteral("treeview"));
+    const auto mTreeView = w.findChild<QTreeView *>(QStringLiteral("treeview"));
     QVERIFY(mTreeView);
 
-    auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("searchline"));
+    const auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("searchline"));
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->isClearButtonEnabled());
     QVERIFY(mSearchLineEdit->text().isEmpty());
 
-    auto refreshImap = w.findChild<QToolButton *>(QStringLiteral("refreshimap"));
+    const auto refreshImap = w.findChild<QToolButton *>(QStringLiteral("refreshimap"));
     QVERIFY(refreshImap);
     QVERIFY(!refreshImap->toolTip().isEmpty());
 }

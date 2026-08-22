@@ -23,10 +23,10 @@ void MailMergeDialogTest::shouldHaveDefaultValue()
 {
     MailMerge::MailMergeDialog dlg;
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
-    auto mailMergeWidget = dlg.findChild<MailMerge::MailMergeWidget *>(u"mailmergewidget"_s);
+    const auto mailMergeWidget = dlg.findChild<MailMerge::MailMergeWidget *>(u"mailmergewidget"_s);
     QVERIFY(mailMergeWidget);
 }
 

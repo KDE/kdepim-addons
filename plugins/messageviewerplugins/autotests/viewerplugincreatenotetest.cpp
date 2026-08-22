@@ -44,7 +44,7 @@ void ViewerPluginCreateNoteTest::shouldShowWidget()
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = note->createView(parent, new KActionCollection(this));
     interface->execute();
-    auto createnotewidget = parent->findChild<QWidget *>(QStringLiteral("noteedit"));
+    const auto createnotewidget = parent->findChild<QWidget *>(QStringLiteral("noteedit"));
     QVERIFY(createnotewidget);
     QCOMPARE(createnotewidget->isHidden(), false);
 }

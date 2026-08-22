@@ -19,15 +19,15 @@ void AdblockPluginUrlInterceptorAddAdblockListWidgetTest::shouldHaveDefaultValue
 {
     AdblockPluginUrlInterceptorAddAdblockListWidget w;
 
-    auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mName = w.findChild<QLineEdit *>(QStringLiteral("mName"));
+    const auto mName = w.findChild<QLineEdit *>(QStringLiteral("mName"));
     QVERIFY(mName);
     QVERIFY(mName->text().isEmpty());
 
-    auto mUrl = w.findChild<QLineEdit *>(QStringLiteral("mUrl"));
+    const auto mUrl = w.findChild<QLineEdit *>(QStringLiteral("mUrl"));
     QVERIFY(mUrl);
     QVERIFY(mUrl->text().isEmpty());
 }

@@ -22,23 +22,23 @@ ViewerPluginExternalEditWidgetTest::~ViewerPluginExternalEditWidgetTest() = defa
 void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
 {
     ViewerPluginExternalEditWidget w;
-    auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
+    const auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mName = w.findChild<QLineEdit *>(QStringLiteral("name"));
+    const auto mName = w.findChild<QLineEdit *>(QStringLiteral("name"));
     QVERIFY(mName);
 
-    auto mDescription = w.findChild<QLineEdit *>(QStringLiteral("description"));
+    const auto mDescription = w.findChild<QLineEdit *>(QStringLiteral("description"));
     QVERIFY(mDescription);
 
-    auto mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("commandline"));
+    const auto mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("commandline"));
     QVERIFY(mCommandLine);
 
-    auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
+    const auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
     QVERIFY(mExecutable);
 
-    auto formatHelp = w.findChild<QLabel *>(QStringLiteral("formatHelp"));
+    const auto formatHelp = w.findChild<QLabel *>(QStringLiteral("formatHelp"));
     QVERIFY(formatHelp);
 }
 

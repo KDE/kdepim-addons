@@ -20,13 +20,13 @@ void OpenUrlWithConfigureCreateDialogTest::shouldHaveDefaultValues()
     OpenUrlWithConfigureCreateDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
 
-    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    const auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    auto mOpenUrlWithCreateWidget = dlg.findChild<OpenUrlWithConfigureCreateWidget *>(QStringLiteral("mOpenUrlWithCreateWidget"));
+    const auto mOpenUrlWithCreateWidget = dlg.findChild<OpenUrlWithConfigureCreateWidget *>(QStringLiteral("mOpenUrlWithCreateWidget"));
     QVERIFY(mOpenUrlWithCreateWidget);
 
-    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::StandardButtons{QDialogButtonBox::Ok | QDialogButtonBox::Cancel});
 }

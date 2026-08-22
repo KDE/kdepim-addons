@@ -18,10 +18,10 @@ AdblockViewFilterWidgetTest::AdblockViewFilterWidgetTest(QObject *parent)
 void AdblockViewFilterWidgetTest::shouldHaveDefaultValues()
 {
     AdblockViewFilterWidget w;
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
-    auto mRichTextBrowser = w.findChild<TextCustomEditor::RichTextBrowser *>(QStringLiteral("mRichTextBrowser"));
+    const auto mRichTextBrowser = w.findChild<TextCustomEditor::RichTextBrowser *>(QStringLiteral("mRichTextBrowser"));
     QVERIFY(mRichTextBrowser);
 }
 

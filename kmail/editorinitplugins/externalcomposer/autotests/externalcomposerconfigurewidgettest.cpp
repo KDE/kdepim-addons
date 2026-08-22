@@ -24,25 +24,25 @@ ExternalComposerConfigureWidgetTest::ExternalComposerConfigureWidgetTest(QObject
 void ExternalComposerConfigureWidgetTest::shouldHaveDefaultValues()
 {
     ExternalComposerConfigureWidget w(nullptr);
-    auto vboxlayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
+    const auto vboxlayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(vboxlayout);
     QCOMPARE(vboxlayout->contentsMargins(), QMargins());
 
-    auto mExternalEditorCheck = w.findChild<QCheckBox *>(u"enabled"_s);
+    const auto mExternalEditorCheck = w.findChild<QCheckBox *>(u"enabled"_s);
     QVERIFY(mExternalEditorCheck);
     QVERIFY(!mExternalEditorCheck->text().isEmpty());
     QVERIFY(!mExternalEditorCheck->isChecked());
 
-    auto urlrequesterlabel = w.findChild<QLabel *>(u"urlrequesterlabel"_s);
+    const auto urlrequesterlabel = w.findChild<QLabel *>(u"urlrequesterlabel"_s);
     QVERIFY(urlrequesterlabel);
     QVERIFY(!urlrequesterlabel->text().isEmpty());
 
-    auto explanationlabel = w.findChild<QLabel *>(u"explanationlabel"_s);
+    const auto explanationlabel = w.findChild<QLabel *>(u"explanationlabel"_s);
     QVERIFY(explanationlabel);
     QVERIFY(!explanationlabel->text().isEmpty());
     QVERIFY(!explanationlabel->isEnabled());
 
-    auto mEditorRequester = w.findChild<KUrlRequester *>(u"mEditorRequester"_s);
+    const auto mEditorRequester = w.findChild<KUrlRequester *>(u"mEditorRequester"_s);
     QVERIFY(mEditorRequester);
     QVERIFY(!mEditorRequester->isEnabled());
 }
@@ -51,19 +51,19 @@ void ExternalComposerConfigureWidgetTest::shouldEnableDisableElements()
 {
     ExternalComposerConfigureWidget w(nullptr);
 
-    auto mExternalEditorCheck = w.findChild<QCheckBox *>(u"enabled"_s);
+    const auto mExternalEditorCheck = w.findChild<QCheckBox *>(u"enabled"_s);
     QVERIFY(mExternalEditorCheck);
     QVERIFY(!mExternalEditorCheck->isChecked());
 
-    auto mEditorRequester = w.findChild<KUrlRequester *>(u"mEditorRequester"_s);
+    const auto mEditorRequester = w.findChild<KUrlRequester *>(u"mEditorRequester"_s);
     QVERIFY(mEditorRequester);
     QVERIFY(!mEditorRequester->isEnabled());
 
-    auto urlrequesterlabel = w.findChild<QLabel *>(u"urlrequesterlabel"_s);
+    const auto urlrequesterlabel = w.findChild<QLabel *>(u"urlrequesterlabel"_s);
     QVERIFY(urlrequesterlabel);
     QVERIFY(urlrequesterlabel->isEnabled());
 
-    auto explanationlabel = w.findChild<QLabel *>(u"explanationlabel"_s);
+    const auto explanationlabel = w.findChild<QLabel *>(u"explanationlabel"_s);
     QVERIFY(!explanationlabel->isEnabled());
 
     mExternalEditorCheck->toggle();

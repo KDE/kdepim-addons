@@ -23,15 +23,15 @@ MergeContactSelectInformationScrollAreaTest::~MergeContactSelectInformationScrol
 void MergeContactSelectInformationScrollAreaTest::shouldHaveDefaultValue()
 {
     KABMergeContacts::MergeContactSelectInformationScrollArea w;
-    auto area = w.findChild<QScrollArea *>(QStringLiteral("scrollarea"));
+    const auto area = w.findChild<QScrollArea *>(QStringLiteral("scrollarea"));
     QVERIFY(area);
-    auto mergeButton = w.findChild<QPushButton *>(QStringLiteral("merge"));
+    const auto mergeButton = w.findChild<QPushButton *>(QStringLiteral("merge"));
     QVERIFY(mergeButton);
 
-    auto stackedwidget = w.findChild<QStackedWidget *>(QStringLiteral("stackwidget"));
+    const auto stackedwidget = w.findChild<QStackedWidget *>(QStringLiteral("stackwidget"));
     QVERIFY(stackedwidget);
 
-    auto widget = w.findChild<KABMergeContacts::MergeContactSelectInformationWidget *>(QStringLiteral("selectinformationwidget"));
+    const auto widget = w.findChild<KABMergeContacts::MergeContactSelectInformationWidget *>(QStringLiteral("selectinformationwidget"));
     QVERIFY(widget);
 
     for (int i = 0; i < stackedwidget->count(); ++i) {

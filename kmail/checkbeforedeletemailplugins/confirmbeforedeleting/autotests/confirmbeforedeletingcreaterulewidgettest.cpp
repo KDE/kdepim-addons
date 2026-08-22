@@ -24,15 +24,15 @@ ConfirmBeforeDeletingCreateRuleWidgetTest::ConfirmBeforeDeletingCreateRuleWidget
 void ConfirmBeforeDeletingCreateRuleWidgetTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingCreateRuleWidget w;
-    auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
+    const auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    auto mPatternLineEdit = w.findChild<QLineEdit *>(u"mPatternLineEdit"_s);
+    const auto mPatternLineEdit = w.findChild<QLineEdit *>(u"mPatternLineEdit"_s);
     QVERIFY(mPatternLineEdit);
     QVERIFY(mPatternLineEdit->text().isEmpty());
 
-    auto mRuleTypeComboBox = w.findChild<QComboBox *>(u"mRuleTypeComboBox"_s);
+    const auto mRuleTypeComboBox = w.findChild<QComboBox *>(u"mRuleTypeComboBox"_s);
     QVERIFY(mRuleTypeComboBox);
     QVERIFY(mRuleTypeComboBox->count() > 0);
 
