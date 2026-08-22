@@ -19,7 +19,7 @@ public:
     explicit ConfirmBeforeDeletingWidget(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingWidget() override;
 
-    void save();
+    void save() const;
 
 private:
     KMAILCONFIRMBEFOREDELETING_NO_EXPORT void slotCustomContextMenuRequested(const QPoint &p);
@@ -28,7 +28,7 @@ private:
     KMAILCONFIRMBEFOREDELETING_NO_EXPORT void fillRules();
     KMAILCONFIRMBEFOREDELETING_NO_EXPORT void slotEditRule();
     KMAILCONFIRMBEFOREDELETING_NO_EXPORT void initializeItem(QTreeWidgetItem *item,
-                                                             const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info);
+                                                             const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info) const;
     KMAILCONFIRMBEFOREDELETING_NO_EXPORT void updateButtons();
     QTreeWidget *const mTreeWidget;
     QPushButton *const mAddRule;

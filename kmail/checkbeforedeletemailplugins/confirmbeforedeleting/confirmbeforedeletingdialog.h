@@ -17,7 +17,7 @@ public:
 
 private:
     KMAILCONFIRMBEFOREDELETING_NO_EXPORT void slotSave();
-    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void writeConfig();
+    KMAILCONFIRMBEFOREDELETING_NO_EXPORT void writeConfig() const;
     KMAILCONFIRMBEFOREDELETING_NO_EXPORT void readConfig();
     ConfirmBeforeDeletingWidget *const mConfirmBeforeDeletingWidget;
 };

@@ -49,7 +49,7 @@ void ConfirmBeforeDeletingDialog::slotSave()
     accept();
 }
 
-void ConfirmBeforeDeletingDialog::writeConfig()
+void ConfirmBeforeDeletingDialog::writeConfig() const
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfirmBeforeDeletingConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);

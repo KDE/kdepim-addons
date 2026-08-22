@@ -23,7 +23,7 @@ public:
     static ConfirmBeforeDeletingManager *self();
 
     void loadRules();
-    void saveRules();
+    void saveRules() const;
 
     [[nodiscard]] bool deletingNeedToConfirm(const Akonadi::Item &list, QString &checkFound, ConfirmBeforeDeletingRule &rule) const;
 

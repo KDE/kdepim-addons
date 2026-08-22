@@ -65,7 +65,7 @@ const QList<ConfirmBeforeDeletingRule> &ConfirmBeforeDeletingManager::rules() co
     return mRules;
 }
 
-void ConfirmBeforeDeletingManager::saveRules()
+void ConfirmBeforeDeletingManager::saveRules() const
 {
     const KSharedConfig::Ptr &config = KSharedConfig::openConfig(defaultConfigFileName(), KConfig::NoGlobals);
     const QStringList rulesGroups = ruleGroups(config);

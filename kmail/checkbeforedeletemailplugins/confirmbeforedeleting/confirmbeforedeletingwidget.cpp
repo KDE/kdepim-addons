@@ -108,7 +108,7 @@ void ConfirmBeforeDeletingWidget::slotEditRule()
     }
 }
 
-void ConfirmBeforeDeletingWidget::initializeItem(QTreeWidgetItem *item, const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info)
+void ConfirmBeforeDeletingWidget::initializeItem(QTreeWidgetItem *item, const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info) const
 {
     item->setText(1, info.pattern);
     item->setText(0, info.ruleType);
@@ -180,7 +180,7 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
     delete dlg;
 }
 
-void ConfirmBeforeDeletingWidget::save()
+void ConfirmBeforeDeletingWidget::save() const
 {
     QList<ConfirmBeforeDeletingRule> rules;
     for (int i = 0, total = mTreeWidget->topLevelItemCount(); i < total; ++i) {
