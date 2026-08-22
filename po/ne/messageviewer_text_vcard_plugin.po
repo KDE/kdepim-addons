@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-22 00:46+0000\n"
 "PO-Revision-Date: 2007-09-11 12:15+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: text_vcard.cpp:88
+#: text_vcard.cpp:95
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "Attached business card"
@@ -25,60 +25,60 @@ msgid_plural "Attached business cards"
 msgstr[0] "सङ्लग्न गरिएका व्यवसायिक कार्ड"
 msgstr[1] "सङ्लग्न गरिएका व्यवसायिक कार्ड"
 
-#: text_vcard.cpp:138
+#: text_vcard.cpp:145
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "[Add this contact to the address book]"
 msgstr "[ठेगाना पुस्तिकामा यो सम्पर्क थप्नुहोस्]"
 
-#: text_vcard.cpp:144
+#: text_vcard.cpp:151
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "[Update this contact in the address book]"
 msgstr "[ठेगाना पुस्तिकामा यो सम्पर्क थप्नुहोस्]"
 
-#: text_vcard.cpp:149
+#: text_vcard.cpp:156
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "[This contact is already in addressbook]"
 msgstr "[ठेगाना पुस्तिकामा यो सम्पर्क थप्नुहोस्]"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:233
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "View Business Card"
 msgstr "सङ्लग्न गरिएका व्यवसायिक कार्ड"
 
-#: text_vcard.cpp:224
+#: text_vcard.cpp:234
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "Save Business Card As…"
 msgstr "सङ्लग्न गरिएका व्यवसायिक कार्ड"
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "ठेगाना पुस्तिकामा यो सम्पर्क थप्नुहोस् ।"
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:251
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "Update this contact to the address book."
 msgstr "[ठेगाना पुस्तिकामा यो सम्पर्क थप्नुहोस्]"
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:253
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Add \"%1\" to the address book."
 msgstr "ठेगाना पुस्तिकामा यो सम्पर्क थप्नुहोस् ।"
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:253
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Update \"%1\" to the address book."
 msgstr "ठेगाना पुस्तिकामा यो सम्पर्क थप्नुहोस् ।"
 
-#: text_vcard.cpp:267
+#: text_vcard.cpp:278
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgctxt "@title:window"

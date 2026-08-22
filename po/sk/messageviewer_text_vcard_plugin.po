@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-22 00:46+0000\n"
 "PO-Revision-Date: 2015-04-22 21:22+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: text_vcard.cpp:88
+#: text_vcard.cpp:95
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
@@ -25,52 +25,52 @@ msgstr[0] "Priložená vizitka"
 msgstr[1] "Priložená vizitka"
 msgstr[2] "Priložená vizitka"
 
-#: text_vcard.cpp:138
+#: text_vcard.cpp:145
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Pridať tento kontakt do adresára]"
 
-#: text_vcard.cpp:144
+#: text_vcard.cpp:151
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Aktualizovať tento kontakt do adresára]"
 
-#: text_vcard.cpp:149
+#: text_vcard.cpp:156
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Tento kontakt je už v adresári]"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:233
 #, kde-format
 msgid "View Business Card"
 msgstr "Zobraziť vizitku"
 
-#: text_vcard.cpp:224
+#: text_vcard.cpp:234
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Uložiť vizitku ako..."
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Pridať tento kontakt do adresára."
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Aktualizovať tento kontakt do adresára."
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:253
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Pridať \"%1\" do adresára."
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:253
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Aktualizovať \"%1\" do adresára."
 
-#: text_vcard.cpp:267
+#: text_vcard.cpp:278
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"

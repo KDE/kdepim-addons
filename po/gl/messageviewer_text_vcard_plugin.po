@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-22 00:46+0000\n"
 "PO-Revision-Date: 2024-08-03 12:17+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -20,59 +20,59 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: text_vcard.cpp:88
+#: text_vcard.cpp:95
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
 msgstr[0] "Tarxeta de visita anexa"
 msgstr[1] "Tarxetas de visita anexas"
 
-#: text_vcard.cpp:138
+#: text_vcard.cpp:145
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Engadir este contacto á axenda de enderezos]"
 
-#: text_vcard.cpp:144
+#: text_vcard.cpp:151
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Actualizar este contacto na axenda de enderezos]"
 
-#: text_vcard.cpp:149
+#: text_vcard.cpp:156
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Este contacto xa está na axenda de enderezos]"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:233
 #, kde-format
 msgid "View Business Card"
 msgstr "Ver a tarxetas de visita"
 
-#: text_vcard.cpp:224
+#: text_vcard.cpp:234
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Gardar a tarxeta de visita como…"
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Engadir este contacto á axenda de enderezos."
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Actualizar este contacto na axenda de enderezos."
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:253
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Engadir «%1» á axenda de enderezos."
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:253
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Actualizar «%1» na axenda de enderezos."
 
-#: text_vcard.cpp:267
+#: text_vcard.cpp:278
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim/kmail_text_vcard_plugin.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-22 00:46+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: text_vcard.cpp:88
+#: text_vcard.cpp:95
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
@@ -27,52 +27,52 @@ msgstr[2] "Cártaí gnó ceangailte"
 msgstr[3] "Cártaí gnó ceangailte"
 msgstr[4] "Cártaí gnó ceangailte"
 
-#: text_vcard.cpp:138
+#: text_vcard.cpp:145
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Cuir an teagmháil seo leis an leabhar seoltaí]"
 
-#: text_vcard.cpp:144
+#: text_vcard.cpp:151
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr ""
 
-#: text_vcard.cpp:149
+#: text_vcard.cpp:156
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Tá an teagmháil seo sa leabhar seoltaí cheana]"
 
-#: text_vcard.cpp:223
+#: text_vcard.cpp:233
 #, kde-format
 msgid "View Business Card"
 msgstr "Féach ar Chárta Gnó"
 
-#: text_vcard.cpp:224
+#: text_vcard.cpp:234
 #, kde-format
 msgid "Save Business Card As…"
 msgstr ""
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Cuir an teagmháil seo leis an leabhar seoltaí."
 
-#: text_vcard.cpp:241
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Nuashonraigh an teagmháil seo sa leabhar seoltaí."
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:253
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Cuir \"%1\" leis an leabhar seoltaí."
 
-#: text_vcard.cpp:243
+#: text_vcard.cpp:253
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Nuashonraigh \"%1\" sa leabhar seoltaí."
 
-#: text_vcard.cpp:267
+#: text_vcard.cpp:278
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
