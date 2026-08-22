@@ -15,7 +15,7 @@ VcardMemento::VcardMemento(const QStringList &emails)
     mVCardList.reserve(emails.count());
     for (const QString &str : emails) {
         VCard vcard(str, false);
-        mVCardList.append(vcard);
+        mVCardList.append(std::move(vcard));
     }
     checkEmail();
 }

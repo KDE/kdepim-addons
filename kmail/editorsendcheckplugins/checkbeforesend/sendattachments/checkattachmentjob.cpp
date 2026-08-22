@@ -24,7 +24,7 @@ void CheckAttachmentJob::start()
         temail = temail.toLower();
         if (!temail.isEmpty()) {
             if (!mResultList.contains(temail)) {
-                mResultList.append(temail);
+                mResultList.append(std::move(temail));
             }
         }
     }

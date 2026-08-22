@@ -258,7 +258,7 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
         progressDialog.setValue(progressDialog.value() + 1);
 
         if (!emptyRow && !contact.isEmpty()) {
-            contacts.append(contact);
+            contacts.append(std::move(contact));
         }
     }
 

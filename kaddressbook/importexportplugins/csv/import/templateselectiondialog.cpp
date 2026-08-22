@@ -124,7 +124,7 @@ public:
                 const QFileInfo fileInfo(info.fileName);
                 info.isDeletable = QFileInfo(fileInfo.absolutePath()).isWritable();
 
-                mTemplates.append(info);
+                mTemplates.append(std::move(info));
             }
         }
         endResetModel();

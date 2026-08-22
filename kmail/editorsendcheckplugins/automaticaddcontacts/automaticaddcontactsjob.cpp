@@ -205,8 +205,8 @@ void AutomaticAddContactsJob::verifyContactExist()
             addNextContact();
         } else {
             mProcessEmail = temail;
-            mName = tname;
-            mProcessedEmails.append(temail);
+            mName = std::move(tname);
+            mProcessedEmails.append(std::move(temail));
             auto searchJob = new Akonadi::ContactSearchJob(this);
             searchJob->setLimit(1);
             searchJob->setQuery(Akonadi::ContactSearchJob::Email, mProcessEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);

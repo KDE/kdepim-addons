@@ -45,7 +45,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
                         info.setIsReadOnly(!list.at(i).isWritable());
                         info.setFileName(filePath);
                         if (info.isValid()) {
-                            mScriptInfos.append(info);
+                            mScriptInfos.append(std::move(info));
                             if (!scriptNames.contains(name)) {
                                 scriptNames.append(name);
                             }

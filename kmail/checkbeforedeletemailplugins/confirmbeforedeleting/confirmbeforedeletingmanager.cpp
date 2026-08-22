@@ -40,7 +40,7 @@ void ConfirmBeforeDeletingManager::loadRules()
         KConfigGroup group = config->group(groupName);
         r.load(group);
         if (r.isValid()) {
-            mRules.append(r);
+            mRules.append(std::move(r));
         }
     }
 }

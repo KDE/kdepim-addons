@@ -48,7 +48,7 @@ void SearchDuplicatesPluginInterface::setItems(const Akonadi::Item::List &items)
         }
     }
 
-    mListItems = onlyContactList;
+    mListItems = std::move(onlyContactList);
 }
 
 PimCommon::GenericPluginInterface::RequireTypes SearchDuplicatesPluginInterface::requiresFeatures() const

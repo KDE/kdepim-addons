@@ -26,14 +26,14 @@ KAIChatAddressBookPlugin::KAIChatAddressBookPlugin(QObject *parent, const QVaria
         prop.setTypeElements({KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Email),
                               KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Birthday),
                               KAIChatAddressBookPluginUtils::convertAddressBookEnumToString(KAIChatAddressBookPluginUtils::Address)});
-        mProperties.append(prop);
+        mProperties.append(std::move(prop));
     }
     {
         TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
         prop.setDescription(kli18n("Name of user"));
         prop.setName(
             KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::UserName));
-        mProperties.append(prop);
+        mProperties.append(std::move(prop));
     }
     mRequired = {
         KAIChatAddressBookPluginUtils::convertAddressBookPropertyNameEnumToString(KAIChatAddressBookPluginUtils::AddressBookPropertyNameEnum::AddressBookInfo),

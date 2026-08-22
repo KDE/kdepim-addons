@@ -24,13 +24,13 @@ KAIChatCalendarPlugin::KAIChatCalendarPlugin(QObject *parent, const QVariantList
         prop.setDescription(kli18n("calendar info"));
         prop.setName(u"calendarinfo"_s);
         prop.setTypeElements({KAIChatCalendarPluginUtils::convertCalendarEnumToString(KAIChatCalendarPluginUtils::Email)});
-        mProperties.append(prop);
+        mProperties.append(std::move(prop));
     }
     {
         TextAutoGenerateText::TextAutoGenerateTextToolPluginProperty prop;
         prop.setDescription(kli18n("Name of user"));
         prop.setName(u"username"_s);
-        mProperties.append(prop);
+        mProperties.append(std::move(prop));
     }
     mRequired = {u"username"_s, u"calendarinfo"_s};
 }

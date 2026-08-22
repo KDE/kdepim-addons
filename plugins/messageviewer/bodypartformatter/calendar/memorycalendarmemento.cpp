@@ -18,7 +18,7 @@ MemoryCalendarMemento::MemoryCalendarMemento()
     Akonadi::ETMCalendar::Ptr etmCalendar = CalendarSupport::calendarSingleton(/*createIfNull=*/false);
     if (etmCalendar && !etmCalendar->isLoading()) {
         // Good, either korganizer or kontact summary view are already running, so reuse ETM to save memory
-        mCalendar = etmCalendar;
+        mCalendar = std::move(etmCalendar);
         QMetaObject::invokeMethod(this, "finalize", Qt::QueuedConnection);
     } else {
         FetchJobCalendar::Ptr calendar = FetchJobCalendar::Ptr(new FetchJobCalendar(this));

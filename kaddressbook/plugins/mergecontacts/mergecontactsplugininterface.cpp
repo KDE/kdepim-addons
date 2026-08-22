@@ -42,7 +42,7 @@ void MergeContactsPluginInterface::setCurrentItems(const Akonadi::Item::List &it
         }
     }
 
-    mListItems = onlyContactList;
+    mListItems = std::move(onlyContactList);
 }
 
 PimCommon::GenericPluginInterface::RequireTypes MergeContactsPluginInterface::requiresFeatures() const

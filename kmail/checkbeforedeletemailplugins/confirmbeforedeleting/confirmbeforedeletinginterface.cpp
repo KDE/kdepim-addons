@@ -77,11 +77,11 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
             if (button == QDialogButtonBox::StandardButton::Yes) {
                 lst << item;
                 if (dlg->useSameResult()) {
-                    ruleDelete.append(r);
+                    ruleDelete.append(std::move(r));
                 }
             } else if (button == QDialogButtonBox::StandardButton::No) {
                 if (dlg->useSameResult()) {
-                    ruleNotDelete.append(r);
+                    ruleNotDelete.append(std::move(r));
                 }
             } else if (button == QDialogButtonBox::StandardButton::Cancel) {
                 lst.clear();

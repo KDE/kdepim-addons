@@ -97,7 +97,7 @@ BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData
         copy.setEndDateTime(dt.addSecs(duration));
         copy.setUid(generateUid(incidence, rec));
 
-        results.push_back(copy);
+        results.push_back(std::move(copy));
 
         rec = incidence->recurrence()->getNextDateTime(rec);
     }

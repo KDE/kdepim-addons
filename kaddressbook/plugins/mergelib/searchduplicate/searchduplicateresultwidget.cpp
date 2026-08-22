@@ -145,7 +145,7 @@ void SearchDuplicateResultWidget::slotMergeContact()
             MergeConflictResult result;
             result.list = lst;
             result.conflictInformation = conflicts;
-            mResultConflictList.append(result);
+            mResultConflictList.append(std::move(result));
         }
 
         mMergeContact->setEnabled(false);

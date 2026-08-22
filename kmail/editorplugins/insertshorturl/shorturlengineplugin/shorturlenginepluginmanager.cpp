@@ -51,7 +51,7 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
         info.data = data;
 
         info.plugin = nullptr;
-        mPluginList.push_back(info);
+        mPluginList.push_back(std::move(info));
     }
     const QList<ShortUrlEnginePluginInfo>::iterator end(mPluginList.end());
     for (QList<ShortUrlEnginePluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {

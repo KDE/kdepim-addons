@@ -188,7 +188,7 @@ void ConfirmBeforeDeletingWidget::save()
         ConfirmBeforeDeletingRule r;
         r.setPattern(item->text(1));
         r.setRuleType(ConfirmBeforeDeletingRule::stringToRuleType(item->text(0)));
-        rules.append(r);
+        rules.append(std::move(r));
     }
     ConfirmBeforeDeletingManager::self()->setRules(rules);
     ConfirmBeforeDeletingManager::self()->saveRules();

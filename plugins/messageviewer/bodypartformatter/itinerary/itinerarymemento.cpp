@@ -146,7 +146,7 @@ QList<ItineraryMemento::TripData> ItineraryMemento::data()
                 }
             }
 
-            m_data.push_back(data);
+            m_data.push_back(std::move(data));
         }
     }
 
