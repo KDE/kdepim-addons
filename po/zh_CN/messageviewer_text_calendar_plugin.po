@@ -529,9 +529,3 @@ msgstr "从我的日历中删除邀请"
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "打开附件“%1”"
-
-#~ msgid "Do you really want to cancel this task?"
-#~ msgstr "您是否真地想取消此任务？"
-
-#~ msgid "Do you really want to cancel this invitation?"
-#~ msgstr "您是否真地想取消此邀请？"
