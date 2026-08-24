@@ -53,6 +53,8 @@ GravatarUpdateWidget::~GravatarUpdateWidget() = default;
 void GravatarUpdateWidget::setEmail(const QString &email)
 {
     mEmail = email;
+    mCurrentUrl.clear();
+    mPixmap = QPixmap();
     mEmailLab->setText(mEmail);
     mResultGravatar->setText(QString());
     mSearchGravatar->setEnabled(!mEmail.trimmed().isEmpty());
