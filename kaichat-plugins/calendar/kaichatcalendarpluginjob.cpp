@@ -29,7 +29,11 @@ void KAIChatCalendarPluginJob::start()
     qDebug() << " toolArguments " << toolArguments();
     Q_EMIT toolInProgress(i18n("Get Email..."));
     QString userName;
+#if TEXTAUTOGENERATETEXT_VERSION >= QT_VERSION_CHECK(2, 1, 44)
+    const QStringList lst = required();
+#else
     const QStringList lst = requiredArguments();
+#endif
     KAIChatCalendarPluginUtils::CalendarEnum typecalendar = KAIChatCalendarPluginUtils::CalendarEnum::Unknown;
     for (const auto &arg : lst) {
         for (const auto &resultTool : std::as_const(mToolArguments)) {
