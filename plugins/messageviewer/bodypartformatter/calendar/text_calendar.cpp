@@ -706,6 +706,10 @@ public:
                   MimeTreeParser::Interface::BodyPart *bodyPart) const
     {
         auto memento = dynamic_cast<MemoryCalendarMemento *>(bodyPart->memento());
+        if (!memento) {
+            qCWarning(TEXT_CALENDAR_LOG) << "No memento found for body part";
+            return false;
+        }
         // This will block. There's no way to make it async without refactoring the memento mechanism
 
         auto itipHandler = new SyncItipHandler(receiver, message, type, memento->calendar());
@@ -1211,6 +1215,12 @@ public:
         }
 
         const auto memento = dynamic_cast<MemoryCalendarMemento *>(part->memento());
+        if (!memento) {
+            KMessageBox::error(nullptr,
+                               i18n("The calendar invitation stored in this email message is broken in some way. "
+                                    "Unable to continue."));
+            return false;
+        }
         const auto message = stringToInvitation(iCal, memento->calendar());
         Incidence::Ptr incidence = message ? message->event().dynamicCast<Incidence>() : nullptr;
         if (!incidence) {
@@ -1343,7 +1353,15 @@ public:
             iCal = part->content()->decodedText();
         }
         const auto memento = dynamic_cast<MemoryCalendarMemento *>(part->memento());
+        if (!memento) {
+            qCWarning(TEXT_CALENDAR_LOG) << "No memento found for body part, cannot handle context menu request";
+            return false;
+        }
         const auto incidence = stringToIncidence(iCal, memento->calendar());
+        if (!incidence) {
+            qCWarning(TEXT_CALENDAR_LOG) << "No incidence found for body part, cannot handle context menu request";
+            return false;
+        }
 
         auto menu = new QMenu();
         QAction *open = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
