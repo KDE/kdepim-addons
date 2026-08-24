@@ -7,6 +7,7 @@
 
 #include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 class KActionCollection;
+class KToggleAction;
 namespace TextGrammarCheck
 {
 class GrammalecteResultWidget;
@@ -26,7 +27,7 @@ private:
     void slotReplaceText(const TextGrammarCheck::GrammarAction &act);
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);
-    void checkAgain();
+    [[nodiscard]] bool checkAgain();
     void closeChecker();
     TextGrammarCheck::GrammalecteResultWidget *const mGrammarResultWidget;
     KToggleAction *mAction = nullptr;

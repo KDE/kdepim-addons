@@ -56,8 +56,11 @@ void GrammalecteInterface::slotReplaceText(const TextGrammarCheck::GrammarAction
 void GrammalecteInterface::slotActivateGrammalecte(bool state)
 {
     if (state) {
+        if (!checkAgain()) {
+            mAction->setChecked(false);
+            return;
+        }
         mGrammarResultWidget->show();
-        checkAgain();
         Q_EMIT activateView(this);
     } else {
         closeChecker();
@@ -85,13 +88,15 @@ void GrammalecteInterface::createAction(KActionCollection *ac)
     mAction->setChecked(false);
 }
 
-void GrammalecteInterface::checkAgain()
+bool GrammalecteInterface::checkAgain()
 {
     if (richTextEditor()) {
         mGrammarResultWidget->setText(richTextEditor()->toPlainText());
         mGrammarResultWidget->checkGrammar();
+        return true;
     } else {
         qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not set, it's a bug";
+        return false;
     }
 }
 
