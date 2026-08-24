@@ -70,12 +70,13 @@ void CheckGravatarPluginInterface::exec()
                 }
                 QPointer<KABGravatar::GravatarUpdateDialog> dlg = new KABGravatar::GravatarUpdateDialog(parentWidget());
                 dlg->setEmail(email);
-                if (!address.photo().isEmpty()) {
-                    if (address.photo().isIntern()) {
-                        const QPixmap pix = QPixmap::fromImage(address.photo().data());
+                const auto photo = address.photo();
+                if (!photo.isEmpty()) {
+                    if (photo.isIntern()) {
+                        const QPixmap pix = QPixmap::fromImage(photo.data());
                         dlg->setOriginalPixmap(pix);
                     } else {
-                        dlg->setOriginalUrl(QUrl(address.photo().url()));
+                        dlg->setOriginalUrl(QUrl(photo.url()));
                     }
                 }
                 if (dlg->exec()) {
