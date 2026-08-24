@@ -24,7 +24,6 @@ DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
 
     mManagerKeyWidget->setObjectName(QLatin1StringView("mManagerKeyWidget"));
     mainLayout->addWidget(mManagerKeyWidget);
-    readConfig();
 }
 
 DKIMKeyRecordWidget::~DKIMKeyRecordWidget()
@@ -48,6 +47,7 @@ void DKIMKeyRecordWidget::writeConfig()
 void DKIMKeyRecordWidget::loadSettings()
 {
     mManagerKeyWidget->loadKeys();
+    readConfig();
 }
 
 void DKIMKeyRecordWidget::saveSettings()
