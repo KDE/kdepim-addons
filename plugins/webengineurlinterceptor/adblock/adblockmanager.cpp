@@ -9,6 +9,7 @@
 
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include "libadblockplugin_debug.h"
+#include "libadblockplugin_intercept_url_debug.h"
 
 #include <QDir>
 #include <QFile>
@@ -280,7 +281,7 @@ bool AdblockManager::interceptRequest(QWebEngineUrlRequestInfo &info)
     }
     if (result.matched) {
         info.block(true);
-        qCDebug(LIBADBLOCKPLUGIN_PLUGIN_LOG) << " Intercepted request to " << info.requestUrl() << " matched adblock filter, blocking it";
+        qCDebug(LIBADBLOCKPLUGIN_INTERCEPT_URL_PLUGIN_LOG) << " Intercepted request to " << info.requestUrl() << " matched adblock filter, blocking it";
         mInterceptUrls.append(info.requestUrl().toString());
         return true;
     }

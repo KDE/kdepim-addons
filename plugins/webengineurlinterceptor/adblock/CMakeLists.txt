@@ -79,6 +79,12 @@ ecm_qt_declare_logging_category(adblockplugin HEADER libadblockplugin_debug.h ID
     EXPORT KDEPIMADDONS
 )
 
+ecm_qt_declare_logging_category(adblockplugin HEADER libadblockplugin_intercept_url_debug.h IDENTIFIER LIBADBLOCKPLUGIN_INTERCEPT_URL_PLUGIN_LOG
+    CATEGORY_NAME org.kde.pim.libadblockplugin
+    DESCRIPTION "kdepim-addons (adblockplugin intercept url)"
+    EXPORT KDEPIMADDONS
+)
+
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         adblockplugin
