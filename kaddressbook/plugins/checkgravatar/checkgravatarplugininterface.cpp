@@ -23,11 +23,10 @@ CheckGravatarPluginInterface::CheckGravatarPluginInterface(QObject *parent)
 
 CheckGravatarPluginInterface::~CheckGravatarPluginInterface() = default;
 
-void CheckGravatarPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
+void CheckGravatarPluginInterface::updateActions(int numberOfSelectedItems, [[maybe_unused]] int numberOfSelectedCollections)
 {
-    Q_UNUSED(numberOfSelectedCollections)
     if (mAction) {
-        mAction->setEnabled(numberOfSelectedItems > 0);
+        mAction->setEnabled(numberOfSelectedItems == 1);
     }
 }
 
