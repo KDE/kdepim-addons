@@ -7,8 +7,8 @@
 #include "gravatarupdatewidget.h"
 
 #include <KLocalizedString>
-#include <QCheckBox>
 #include <QGridLayout>
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
 
@@ -105,7 +105,6 @@ void GravatarUpdateWidget::slotSearchGravatar()
             mSearchGravatar->setEnabled(false);
             Q_EMIT activateDialogButton(false);
             mPixmap = QPixmap();
-            mCurrentUrl.clear();
             job->start();
         } else {
             mResultGravatar->setText(i18n("Search is impossible."));
