@@ -20,6 +20,15 @@ ecm_qt_declare_logging_category(kmail_grammalecteplugin HEADER grammalecteplugin
     EXPORT KDEPIMADDONS
 )
 
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(
+        kmail_grammalecteplugin
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
+endif()
+
 target_link_libraries(
     kmail_grammalecteplugin
     KPim6::MessageComposer
