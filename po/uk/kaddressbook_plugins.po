@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-18 00:46+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2024-07-04 21:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -20,18 +20,18 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:37
+#: checkgravatar/checkgravatarplugininterface.cpp:36
 #, kde-format
 msgid "Check Gravatar…"
 msgstr "Перевірити Gravatar…"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:61
+#: checkgravatar/checkgravatarplugininterface.cpp:60
 #: sendmail/sendmailplugininterface.cpp:59
 #, kde-format
 msgid "You have not selected any contacts."
 msgstr "Ви не позначили жодного запису контакту."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:69
+#: checkgravatar/checkgravatarplugininterface.cpp:68
 #, kde-format
 msgid "No email found for this contact."
 msgstr "Для цього запису контакту не знайдено адреси електронної пошти."
@@ -76,12 +76,12 @@ msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "Ел. пошта:"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:109
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:110
 #, kde-format
 msgid "Search is impossible."
 msgstr "Пошук неможливий."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:128
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:129
 #, kde-format
 msgid "No Gravatar Found."
 msgstr "Gravatar не знайдено."

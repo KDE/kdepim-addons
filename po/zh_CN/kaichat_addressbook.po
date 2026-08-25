@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2025-11-08 11:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -45,37 +45,37 @@ msgstr "配置地址簿工具插件"
 msgid "Get Email..."
 msgstr "获取电子邮件..."
 
-#: kaichataddressbookpluginjob.cpp:65
+#: kaichataddressbookpluginjob.cpp:69
 #, kde-format
 msgid "No Contact found in addressbook for %1"
 msgstr "在地址簿中未找到 %1 的联系人"
 
-#: kaichataddressbookpluginjob.cpp:73
+#: kaichataddressbookpluginjob.cpp:77
 #, kde-format
 msgid "No preferred email found for %1"
 msgstr "没有找到 %1 的首选电子邮件"
 
-#: kaichataddressbookpluginjob.cpp:75
+#: kaichataddressbookpluginjob.cpp:79
 #, kde-format
 msgid "The preferred email for %1 is %2"
 msgstr "%1 首选的电子邮件是 %2"
 
-#: kaichataddressbookpluginjob.cpp:82
+#: kaichataddressbookpluginjob.cpp:86
 #, kde-format
 msgid "No Birthday found for %1"
 msgstr "未找到 %1 的生日"
 
-#: kaichataddressbookpluginjob.cpp:84
+#: kaichataddressbookpluginjob.cpp:88
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "%1 的生日是 %2"
 
-#: kaichataddressbookpluginjob.cpp:95
+#: kaichataddressbookpluginjob.cpp:99
 #, kde-format
 msgid "No Address found for %1"
 msgstr "未找到 %1 的地址信息"
 
-#: kaichataddressbookpluginjob.cpp:97
+#: kaichataddressbookpluginjob.cpp:101
 #, kde-format
 msgid "Address found for %1 is %2"
 msgstr "找到 %1 的地址： %2"

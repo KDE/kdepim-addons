@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2026-05-30 17:24-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -46,37 +46,37 @@ msgstr ""
 msgid "Get Email..."
 msgstr "ئېلخەتكە ئېرىش…"
 
-#: kaichataddressbookpluginjob.cpp:65
+#: kaichataddressbookpluginjob.cpp:69
 #, kde-format
 msgid "No Contact found in addressbook for %1"
 msgstr ""
 
-#: kaichataddressbookpluginjob.cpp:73
+#: kaichataddressbookpluginjob.cpp:77
 #, kde-format
 msgid "No preferred email found for %1"
 msgstr ""
 
-#: kaichataddressbookpluginjob.cpp:75
+#: kaichataddressbookpluginjob.cpp:79
 #, kde-format
 msgid "The preferred email for %1 is %2"
 msgstr ""
 
-#: kaichataddressbookpluginjob.cpp:82
+#: kaichataddressbookpluginjob.cpp:86
 #, kde-format
 msgid "No Birthday found for %1"
 msgstr ""
 
-#: kaichataddressbookpluginjob.cpp:84
+#: kaichataddressbookpluginjob.cpp:88
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "%1 نىڭ تۇغۇلغان كۈنى %2"
 
-#: kaichataddressbookpluginjob.cpp:95
+#: kaichataddressbookpluginjob.cpp:99
 #, kde-format
 msgid "No Address found for %1"
 msgstr ""
 
-#: kaichataddressbookpluginjob.cpp:97
+#: kaichataddressbookpluginjob.cpp:101
 #, kde-format
 msgid "Address found for %1 is %2"
 msgstr ""

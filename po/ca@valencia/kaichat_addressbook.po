@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2025-10-29 10:30+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -49,37 +49,37 @@ msgstr "Configura el connector de l'eina de la llibreta d'adreces"
 msgid "Get Email..."
 msgstr "Obtín un correu electrònic…"
 
-#: kaichataddressbookpluginjob.cpp:65
+#: kaichataddressbookpluginjob.cpp:69
 #, kde-format
 msgid "No Contact found in addressbook for %1"
 msgstr "No s'ha trobat cap contacte a la llibreta d'adreces sobre %1"
 
-#: kaichataddressbookpluginjob.cpp:73
+#: kaichataddressbookpluginjob.cpp:77
 #, kde-format
 msgid "No preferred email found for %1"
 msgstr "No s'ha trobat cap correu electrònic preferit de %1"
 
-#: kaichataddressbookpluginjob.cpp:75
+#: kaichataddressbookpluginjob.cpp:79
 #, kde-format
 msgid "The preferred email for %1 is %2"
 msgstr "El correu electrònic preferit de %1 és %2"
 
-#: kaichataddressbookpluginjob.cpp:82
+#: kaichataddressbookpluginjob.cpp:86
 #, kde-format
 msgid "No Birthday found for %1"
 msgstr "No s'ha trobat cap data de naixement de %1"
 
-#: kaichataddressbookpluginjob.cpp:84
+#: kaichataddressbookpluginjob.cpp:88
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "La data de naixement de %1 és %2"
 
-#: kaichataddressbookpluginjob.cpp:95
+#: kaichataddressbookpluginjob.cpp:99
 #, kde-format
 msgid "No Address found for %1"
 msgstr "No s'ha trobat cap adreça de %1"
 
-#: kaichataddressbookpluginjob.cpp:97
+#: kaichataddressbookpluginjob.cpp:101
 #, kde-format
 msgid "Address found for %1 is %2"
 msgstr "L'adreça trobada de %1 és %2"

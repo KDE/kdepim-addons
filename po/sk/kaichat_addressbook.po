@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2026-04-11 12:00+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -47,37 +47,37 @@ msgstr "Nastaviť modul nástroja adresára"
 msgid "Get Email..."
 msgstr "Získať e-mail..."
 
-#: kaichataddressbookpluginjob.cpp:65
+#: kaichataddressbookpluginjob.cpp:69
 #, kde-format
 msgid "No Contact found in addressbook for %1"
 msgstr "V adresári sa nenašiel žiadny kontakt pre %1"
 
-#: kaichataddressbookpluginjob.cpp:73
+#: kaichataddressbookpluginjob.cpp:77
 #, kde-format
 msgid "No preferred email found for %1"
 msgstr "Pre %1 sa nenašiel žiadny preferovaný e-mail"
 
-#: kaichataddressbookpluginjob.cpp:75
+#: kaichataddressbookpluginjob.cpp:79
 #, kde-format
 msgid "The preferred email for %1 is %2"
 msgstr "Preferovaný e-mail pre %1 je %2"
 
-#: kaichataddressbookpluginjob.cpp:82
+#: kaichataddressbookpluginjob.cpp:86
 #, kde-format
 msgid "No Birthday found for %1"
 msgstr "Pre %1 sa nenašiel žiadny dátum narodenín"
 
-#: kaichataddressbookpluginjob.cpp:84
+#: kaichataddressbookpluginjob.cpp:88
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "Dátum narodenín pre %1 je %2"
 
-#: kaichataddressbookpluginjob.cpp:95
+#: kaichataddressbookpluginjob.cpp:99
 #, kde-format
 msgid "No Address found for %1"
 msgstr "Pre %1 sa nenašla žiadna adresa"
 
-#: kaichataddressbookpluginjob.cpp:97
+#: kaichataddressbookpluginjob.cpp:101
 #, kde-format
 msgid "Address found for %1 is %2"
 msgstr "Adresa nájdená pre %1 je %2"

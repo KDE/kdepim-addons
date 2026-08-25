@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:44+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2025-12-07 20:16+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -49,37 +49,37 @@ msgstr "Konfiguratu Helbide-liburu tresnaren plugina"
 msgid "Get Email..."
 msgstr "Lortu e-posta..."
 
-#: kaichataddressbookpluginjob.cpp:65
+#: kaichataddressbookpluginjob.cpp:69
 #, kde-format
 msgid "No Contact found in addressbook for %1"
 msgstr "Helbide-liburuan ez da %1(e)ren kontakturik aurkitu"
 
-#: kaichataddressbookpluginjob.cpp:73
+#: kaichataddressbookpluginjob.cpp:77
 #, kde-format
 msgid "No preferred email found for %1"
 msgstr "Ez da %1(e)ren hobetsitako e-postarik aurkitu"
 
-#: kaichataddressbookpluginjob.cpp:75
+#: kaichataddressbookpluginjob.cpp:79
 #, kde-format
 msgid "The preferred email for %1 is %2"
 msgstr "%1(e)ren hobetsitako e-posta %2 da"
 
-#: kaichataddressbookpluginjob.cpp:82
+#: kaichataddressbookpluginjob.cpp:86
 #, kde-format
 msgid "No Birthday found for %1"
 msgstr "Ez da %1(e)ren urtebetetzerik aurkitu"
 
-#: kaichataddressbookpluginjob.cpp:84
+#: kaichataddressbookpluginjob.cpp:88
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "%1(e)ren urtebetetzea %2 da"
 
-#: kaichataddressbookpluginjob.cpp:95
+#: kaichataddressbookpluginjob.cpp:99
 #, kde-format
 msgid "No Address found for %1"
 msgstr "Ez da %1(e)ren helbiderik aurkitu"
 
-#: kaichataddressbookpluginjob.cpp:97
+#: kaichataddressbookpluginjob.cpp:101
 #, kde-format
 msgid "Address found for %1 is %2"
 msgstr "Aurkitu den %1(e)ren helbidea %2 da"

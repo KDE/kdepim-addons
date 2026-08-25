@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2024-08-02 14:22+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: grammalecte/grammalecteinterface.cpp:80
+#: grammalecte/grammalecteinterface.cpp:83
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "&Vérifier la grammaire (Grammalecte)"

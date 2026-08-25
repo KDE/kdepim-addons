@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2024-12-20 12:25+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: grammalecte/grammalecteinterface.cpp:80
+#: grammalecte/grammalecteinterface.cpp:83
 #, kde-format
 msgid "&Check Grammar (Grammalecte)"
 msgstr "&व्याकरणस्य जाँच (Grammalecte)"

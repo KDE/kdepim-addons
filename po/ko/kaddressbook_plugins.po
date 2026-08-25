@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-18 00:46+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2024-08-19 22:49+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:37
+#: checkgravatar/checkgravatarplugininterface.cpp:36
 #, kde-format
 msgid "Check Gravatar…"
 msgstr "Gravatar 확인…"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:61
+#: checkgravatar/checkgravatarplugininterface.cpp:60
 #: sendmail/sendmailplugininterface.cpp:59
 #, kde-format
 msgid "You have not selected any contacts."
 msgstr "연락처를 선택하지 않았습니다."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:69
+#: checkgravatar/checkgravatarplugininterface.cpp:68
 #, kde-format
 msgid "No email found for this contact."
 msgstr "이 연락처의 이메일을 찾을 수 없습니다."
@@ -73,12 +73,12 @@ msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "이메일:"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:109
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:110
 #, kde-format
 msgid "Search is impossible."
 msgstr "검색할 수 없습니다."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:128
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:129
 #, kde-format
 msgid "No Gravatar Found."
 msgstr "Gravatar를 찾을 수 없습니다."

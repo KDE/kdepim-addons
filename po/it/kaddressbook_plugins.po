@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-18 00:46+0000\n"
+"POT-Creation-Date: 2026-08-25 00:46+0000\n"
 "PO-Revision-Date: 2024-07-14 15:53+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:37
+#: checkgravatar/checkgravatarplugininterface.cpp:36
 #, kde-format
 msgid "Check Gravatar…"
 msgstr "Controlla il Gravatar…"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:61
+#: checkgravatar/checkgravatarplugininterface.cpp:60
 #: sendmail/sendmailplugininterface.cpp:59
 #, kde-format
 msgid "You have not selected any contacts."
 msgstr "Non hai selezionato alcun contatto."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:69
+#: checkgravatar/checkgravatarplugininterface.cpp:68
 #, kde-format
 msgid "No email found for this contact."
 msgstr "Nessun indirizzo di posta trovato per questo contatto."
@@ -73,12 +73,12 @@ msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "Indirizzo di posta elettronica:"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:109
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:110
 #, kde-format
 msgid "Search is impossible."
 msgstr "Impossibile eseguire la ricerca."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:128
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:129
 #, kde-format
 msgid "No Gravatar Found."
 msgstr "Nessun Gravatar trovato."
