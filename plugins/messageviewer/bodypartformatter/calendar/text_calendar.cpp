@@ -28,6 +28,7 @@
 #include <MimeTreeParser/MessagePart>
 using namespace MessageViewer;
 
+#include <KCalendarCore/Exceptions>
 #include <KCalendarCore/ICalFormat>
 using namespace KCalendarCore;
 
@@ -166,22 +167,31 @@ static QString getSender(const MimeTreeParser::MessagePart *msgPart)
     return {};
 }
 
-static ScheduleMessage::Ptr stringToInvitation(const QString &iCal, const KCalendarCore::Calendar::Ptr &calendar)
+static ScheduleMessage::Ptr stringToInvitation(const QByteArray &iCal, const KCalendarCore::Calendar::Ptr &calendar)
 {
     ICalFormat format;
+#if KCALENDARCORE_VERSION >= QT_VERSION_CHECK(6, 30, 0)
     ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, iCal);
+#else
+    ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, QString::fromUtf8(iCal));
+#endif
+
+    // consider single incidence plain iCal attachments as publish itip messages as well
+    // this happens frequently as attachments of booking or reservation emails of some sort,
+    // and then results in proper UI to adding those to the calendar as expected
+    if (!message && format.exception()->code() == KCalendarCore::Exception::ParseErrorMethodProperty) {
+        auto inci = format.readIncidence(iCal);
+        if (inci) {
+            message = ScheduleMessage::Ptr(new ScheduleMessage(inci, KCalendarCore::iTIPPublish, ScheduleMessage::Unknown));
+        }
+    }
+
     if (!message) {
         // TODO: Error message?
         qCWarning(TEXT_CALENDAR_LOG) << "Can't parse this ical string: " << iCal;
     }
 
     return message;
-}
-
-static Incidence::Ptr stringToIncidence(const QString &iCal, const KCalendarCore::Calendar::Ptr &calendar)
-{
-    const auto message = stringToInvitation(iCal, calendar);
-    return message ? message->event().dynamicCast<Incidence>() : nullptr;
 }
 
 class Formatter : public MessageViewer::MessagePartRendererBase
@@ -213,14 +223,13 @@ public:
         if (memento) {
             if (memento->finished()) {
                 KMInvitationFormatterHelper helper(msgPart, memento->calendar());
-                QString source;
+                QByteArray source;
                 // If the bodypart does not have a charset specified, we need to fall back to utf8,
                 // not the KMail fallback encoding, so get the contents as binary and decode explicitly.
                 if (msgPart->content()->contentType()->parameter("charset").isEmpty()) {
-                    const QByteArray &ba = msgPart->content()->decodedBody();
-                    source = QString::fromUtf8(ba);
+                    source = msgPart->content()->decodedBody();
                 } else {
-                    source = msgPart->text();
+                    source = msgPart->text().toUtf8();
                 }
 
                 const auto msg = stringToInvitation(source, memento->calendar());
@@ -1025,7 +1034,7 @@ public:
 
             ICalFormat format;
             format.setTimeZone(QTimeZone::systemTimeZone());
-            const QString iCal = format.createScheduleMessage(incidence, iTIPRequest);
+            const auto iCal = format.createScheduleMessage(incidence, iTIPRequest).toUtf8();
             if (!saveFile(receiver, stringToInvitation(iCal, memento->calendar()), dir, part)) {
                 return false;
             }
@@ -1206,12 +1215,11 @@ public:
 
         // If the bodypart does not have a charset specified, we need to fall back to utf8,
         // not the KMail fallback encoding, so get the contents as binary and decode explicitly.
-        QString iCal;
+        QByteArray iCal;
         if (!part->content()->contentType()->hasParameter("charset")) {
-            const QByteArray &ba = part->content()->decodedBody();
-            iCal = QString::fromUtf8(ba);
+            iCal = part->content()->decodedBody();
         } else {
-            iCal = part->content()->decodedText();
+            iCal = part->content()->decodedText().toUtf8();
         }
 
         const auto memento = dynamic_cast<MemoryCalendarMemento *>(part->memento());
@@ -1345,19 +1353,19 @@ public:
             return false; // because it isn't an attachment invitation
         }
 
-        QString iCal;
+        QByteArray iCal;
         if (!part->content()->contentType()->hasParameter("charset")) {
-            const QByteArray &ba = part->content()->decodedBody();
-            iCal = QString::fromUtf8(ba);
+            iCal = part->content()->decodedBody();
         } else {
-            iCal = part->content()->decodedText();
+            iCal = part->content()->decodedText().toUtf8();
         }
         const auto memento = dynamic_cast<MemoryCalendarMemento *>(part->memento());
         if (!memento) {
             qCWarning(TEXT_CALENDAR_LOG) << "No memento found for body part, cannot handle context menu request";
             return false;
         }
-        const auto incidence = stringToIncidence(iCal, memento->calendar());
+        const auto message = stringToInvitation(iCal, memento->calendar());
+        const auto incidence = message ? message->event().dynamicCast<Incidence>() : nullptr;
         if (!incidence) {
             qCWarning(TEXT_CALENDAR_LOG) << "No incidence found for body part, cannot handle context menu request";
             return false;
