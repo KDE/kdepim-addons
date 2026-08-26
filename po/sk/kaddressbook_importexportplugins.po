@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-21 00:45+0000\n"
+"POT-Creation-Date: 2026-08-26 00:49+0000\n"
 "PO-Revision-Date: 2016-09-15 15:49+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:375
+#: vcards/vcardimportexportplugininterface.cpp:347
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Ktorý kontakt chcete exportovať?"
@@ -49,7 +49,7 @@ msgstr "Ktorý kontakt chcete exportovať?"
 #: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:387
+#: vcards/vcardimportexportplugininterface.cpp:359
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Nevybrali ste žiadne kontakty na exportovanie."
@@ -697,72 +697,54 @@ msgctxt "@action:button"
 msgid "Import All…"
 msgstr "Importovať všetko..."
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard…"
 msgstr "Importovať vCard"
 
-#: vcards/vcardimportexportplugininterface.cpp:46
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
 msgid "Import contacts from a vCard file."
 msgstr "Importovať kontakty zo súboru vCard."
 
-#: vcards/vcardimportexportplugininterface.cpp:53
-#, kde-format
-msgid "Export contacts to a vCard 4.0 file."
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, fuzzy, kde-format
+#| msgid "Export contacts to a vCard 4.0 file."
+msgid "Export contacts to a vCard file."
 msgstr "Exportovať kontakty do súboru vCard 4.0. "
 
-#: vcards/vcardimportexportplugininterface.cpp:54
-#, kde-format
-msgid "Export vCard 4.0…"
+#: vcards/vcardimportexportplugininterface.cpp:53
+#, fuzzy, kde-format
+#| msgid "Export vCard 4.0…"
+msgid "Export vCard…"
 msgstr "Exportovať vCard 4.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:59
-#, kde-format
-msgid "Export vCard 3.0…"
-msgstr "Exportovať vCard 3.0..."
-
-#: vcards/vcardimportexportplugininterface.cpp:60
-#, kde-format
-msgid "Export contacts to a vCard 3.0 file."
-msgstr "Exportovať kontakty do súboru vCard 3.0. "
-
-#: vcards/vcardimportexportplugininterface.cpp:65
-#, kde-format
-msgid "Export vCard 2.1…"
-msgstr "Exportovať vCard 2.1..."
-
-#: vcards/vcardimportexportplugininterface.cpp:66
-#, kde-format
-msgid "Export contacts to a vCard 2.1 file."
-msgstr "Exportovať kontakty do súboru vCard 2.1."
-
-#: vcards/vcardimportexportplugininterface.cpp:113
+#: vcards/vcardimportexportplugininterface.cpp:85
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr ""
 "*.vcf|Vcard (*.vcf)\n"
 "*|všetky súbory (*)"
 
-#: vcards/vcardimportexportplugininterface.cpp:114
+#: vcards/vcardimportexportplugininterface.cpp:86
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "Vybrať vCard na import"
 
-#: vcards/vcardimportexportplugininterface.cpp:125
+#: vcards/vcardimportexportplugininterface.cpp:97
 #, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "Import vCard zlyhal"
 
-#: vcards/vcardimportexportplugininterface.cpp:139
+#: vcards/vcardimportexportplugininterface.cpp:111
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<para>Nepodarilo sa získať prístup k vCard:</para><para>%1</para>"
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:402
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -770,13 +752,13 @@ msgid ""
 "files?"
 msgstr "Vybrali ste zoznam kontaktov, majú sa exportovať do viacerých súborov?"
 
-#: vcards/vcardimportexportplugininterface.cpp:444
+#: vcards/vcardimportexportplugininterface.cpp:405
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Exportovať do jedného súboru"
 
-#: vcards/vcardimportexportplugininterface.cpp:445
+#: vcards/vcardimportexportplugininterface.cpp:406
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"
@@ -796,6 +778,18 @@ msgstr "Importovať kontakty z LDIF súboru."
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr "Súbor kontaktu Windows (*.contact)"
+
+#~ msgid "Export vCard 3.0…"
+#~ msgstr "Exportovať vCard 3.0..."
+
+#~ msgid "Export contacts to a vCard 3.0 file."
+#~ msgstr "Exportovať kontakty do súboru vCard 3.0. "
+
+#~ msgid "Export vCard 2.1…"
+#~ msgstr "Exportovať vCard 2.1..."
+
+#~ msgid "Export contacts to a vCard 2.1 file."
+#~ msgstr "Exportovať kontakty do súboru vCard 2.1."
 
 #~ msgid "Import vCard..."
 #~ msgstr "Importovať vCard..."

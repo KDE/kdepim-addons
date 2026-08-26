@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-21 00:45+0000\n"
+"POT-Creation-Date: 2026-08-26 00:49+0000\n"
 "PO-Revision-Date: 2007-09-07 10:35+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -42,7 +42,7 @@ msgstr ""
 #: csv/csvimportexportplugininterface.cpp:147
 #: gmx/gmximportexportplugininterface.cpp:80
 #: ldif/ldifimportexportplugininterface.cpp:123
-#: vcards/vcardimportexportplugininterface.cpp:375
+#: vcards/vcardimportexportplugininterface.cpp:347
 #, fuzzy, kde-format
 #| msgid "Which contacts do you want to export?"
 msgid "Which contact do you want to export?"
@@ -51,7 +51,7 @@ msgstr "तपाईँ कुन सम्पर्क निर्यात �
 #: csv/csvimportexportplugininterface.cpp:157
 #: gmx/gmximportexportplugininterface.cpp:90
 #: ldif/ldifimportexportplugininterface.cpp:133
-#: vcards/vcardimportexportplugininterface.cpp:387
+#: vcards/vcardimportexportplugininterface.cpp:359
 #, fuzzy, kde-format
 #| msgid ""
 #| "Copy the currently selected contact(s) to system clipboard in vCard "
@@ -738,81 +738,57 @@ msgctxt "@action:button"
 msgid "Import All…"
 msgstr "सबै आयात गर्नुहोस्..."
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:44
 #, fuzzy, kde-format
 #| msgid "Import vCard"
 msgid "Import vCard…"
 msgstr "भी कार्ड आयात गर्नुहोस्"
 
-#: vcards/vcardimportexportplugininterface.cpp:46
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
 #| msgid "Import Contacts?"
 msgid "Import contacts from a vCard file."
 msgstr "सम्पर्क आयात गर्नुहुन्छ ?"
 
+#: vcards/vcardimportexportplugininterface.cpp:52
+#, fuzzy, kde-format
+#| msgid "Export vCard 3.0..."
+msgid "Export contacts to a vCard file."
+msgstr "भी कार्ड ३.० निर्यात गर्नुहोस्..."
+
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
-msgid "Export contacts to a vCard 4.0 file."
+msgid "Export vCard…"
 msgstr "भी कार्ड ३.० निर्यात गर्नुहोस्..."
 
-#: vcards/vcardimportexportplugininterface.cpp:54
-#, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
-msgid "Export vCard 4.0…"
-msgstr "भी कार्ड ३.० निर्यात गर्नुहोस्..."
-
-#: vcards/vcardimportexportplugininterface.cpp:59
-#, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
-msgid "Export vCard 3.0…"
-msgstr "भी कार्ड ३.० निर्यात गर्नुहोस्..."
-
-#: vcards/vcardimportexportplugininterface.cpp:60
-#, fuzzy, kde-format
-#| msgid "Export vCard 3.0..."
-msgid "Export contacts to a vCard 3.0 file."
-msgstr "भी कार्ड ३.० निर्यात गर्नुहोस्..."
-
-#: vcards/vcardimportexportplugininterface.cpp:65
-#, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
-msgid "Export vCard 2.1…"
-msgstr "भी कार्ड २.१ निर्यात गर्नुहोस्..."
-
-#: vcards/vcardimportexportplugininterface.cpp:66
-#, fuzzy, kde-format
-#| msgid "Export vCard 2.1..."
-msgid "Export contacts to a vCard 2.1 file."
-msgstr "भी कार्ड २.१ निर्यात गर्नुहोस्..."
-
-#: vcards/vcardimportexportplugininterface.cpp:113
+#: vcards/vcardimportexportplugininterface.cpp:85
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:114
+#: vcards/vcardimportexportplugininterface.cpp:86
 #, fuzzy, kde-format
 #| msgid "Select vCard to Import"
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "आयात गर्नका लागि भी कार्ड चयन गर्नुहोस्"
 
-#: vcards/vcardimportexportplugininterface.cpp:125
+#: vcards/vcardimportexportplugininterface.cpp:97
 #, fuzzy, kde-format
 #| msgid "vCard Import Failed"
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "भी कार्ड आयात गर्न असफल"
 
-#: vcards/vcardimportexportplugininterface.cpp:139
+#: vcards/vcardimportexportplugininterface.cpp:111
 #, fuzzy, kde-kuit-format
 #| msgid "<qt>Unable to access vCard: %1</qt>"
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<qt>भी कार्डमा पहुँच गर्न असमर्थ: %1</qt>"
 
-#: vcards/vcardimportexportplugininterface.cpp:441
+#: vcards/vcardimportexportplugininterface.cpp:402
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have selected a list of contacts, shall they be exported to several "
@@ -823,14 +799,14 @@ msgid ""
 "files?"
 msgstr "तपाईँले सम्पर्कका सूची चयन गर्नुभएको छ, के तीनिहरू विभिन्न फाइलमा निर्यात हुन्छन् ?"
 
-#: vcards/vcardimportexportplugininterface.cpp:444
+#: vcards/vcardimportexportplugininterface.cpp:405
 #, fuzzy, kde-format
 #| msgid "Export to One File"
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "एउटा फाइलमा निर्यात गर्नुहोस्"
 
-#: vcards/vcardimportexportplugininterface.cpp:445
+#: vcards/vcardimportexportplugininterface.cpp:406
 #, fuzzy, kde-format
 #| msgid "Export to Several Files"
 msgctxt "@action:button"
@@ -853,6 +829,26 @@ msgstr "सम्पर्क आयात गर्नुहुन्छ ?"
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Export vCard 3.0..."
+#~ msgid "Export vCard 3.0…"
+#~ msgstr "भी कार्ड ३.० निर्यात गर्नुहोस्..."
+
+#, fuzzy
+#~| msgid "Export vCard 3.0..."
+#~ msgid "Export contacts to a vCard 3.0 file."
+#~ msgstr "भी कार्ड ३.० निर्यात गर्नुहोस्..."
+
+#, fuzzy
+#~| msgid "Export vCard 2.1..."
+#~ msgid "Export vCard 2.1…"
+#~ msgstr "भी कार्ड २.१ निर्यात गर्नुहोस्..."
+
+#, fuzzy
+#~| msgid "Export vCard 2.1..."
+#~ msgid "Export contacts to a vCard 2.1 file."
+#~ msgstr "भी कार्ड २.१ निर्यात गर्नुहोस्..."
 
 #~ msgid "Import vCard..."
 #~ msgstr "भी कार्ड आयात गर्नुहोस्..."
