@@ -7,13 +7,13 @@
 # ozer kavak <info@nestingo.com>, 2012, 2013.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2024, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-16 00:46+0000\n"
-"PO-Revision-Date: 2024-05-12 14:32+0300\n"
+"PO-Revision-Date: 2026-08-26 13:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 26.08.0\n"
 "X-POOTLE-MTIME: 1413102213.000000\n"
 
 #: csv/csvimportexportplugininterface.cpp:35
@@ -413,7 +413,7 @@ msgstr "En az bir sütun seçilmelidir."
 #, kde-format
 msgctxt "@label"
 msgid "There are no templates available yet."
-msgstr "Kullanıma hazır şablon yok."
+msgstr "Kullanıma hazır şablon yok"
 
 #: csv/import/csvimportdialog.cpp:584
 #, kde-format
@@ -475,7 +475,7 @@ msgstr "GMX Dosyası İçe Aktar…"
 #: gmx/gmximportexportplugininterface.cpp:41
 #, kde-format
 msgid "Import contacts from a GMX address book file."
-msgstr "Kişileri GMX adres defteri dosyasından içe aktar."
+msgstr "Kişileri GMX adres defteri dosyasından içe aktarın."
 
 #: gmx/gmximportexportplugininterface.cpp:46
 #, kde-format
@@ -485,7 +485,7 @@ msgstr "GMX Dosyası Olarak Dışa Aktar…"
 #: gmx/gmximportexportplugininterface.cpp:47
 #, kde-format
 msgid "Export contacts to a GMX address book file."
-msgstr "Kişileri bir GMX adres defteri dosyasına aktar."
+msgstr "Kişileri bir GMX adres defteri dosyasına aktarın."
 
 #: gmx/gmximportexportplugininterface.cpp:434
 #: ldif/ldifimportexportplugininterface.cpp:80
@@ -507,7 +507,7 @@ msgstr "LDAP Sunucusundan İçe Aktar…"
 #: ldap/ldapimportexportplugininterface.cpp:26
 #, kde-format
 msgid "Import contacts from an LDAP server."
-msgstr "Kişileri bir LDAP sunucusundan içe aktar."
+msgstr "Kişileri bir LDAP sunucusundan içe aktarın."
 
 #: ldif/ldifimportexportplugininterface.cpp:36
 #, kde-format
@@ -517,7 +517,7 @@ msgstr "LDIF Dosyası İçe Aktar…"
 #: ldif/ldifimportexportplugininterface.cpp:37
 #, kde-format
 msgid "Import contacts from an LDIF file."
-msgstr "Kişileri bir LDIF dosyasından içe aktar."
+msgstr "Kişileri bir LDIF dosyasından içe aktarın."
 
 #: ldif/ldifimportexportplugininterface.cpp:42
 #, kde-format
@@ -527,7 +527,7 @@ msgstr "LDIF Dosyası Olarak Dışa Aktar…"
 #: ldif/ldifimportexportplugininterface.cpp:43
 #, kde-format
 msgid "Export contacts to an LDIF file."
-msgstr "Kişileri bir LDIF dosyasına aktar."
+msgstr "Kişileri bir LDIF dosyasına aktarın."
 
 #: ldif/ldifimportexportplugininterface.cpp:106
 #, kde-format
@@ -711,7 +711,7 @@ msgstr "vCard İçe Aktar…"
 #: vcards/vcardimportexportplugininterface.cpp:46
 #, kde-format
 msgid "Import contacts from a vCard file."
-msgstr "Kişileri bir vCard dosyasından içe aktar."
+msgstr "Kişileri bir vCard dosyasından içe aktarın."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
@@ -795,7 +795,7 @@ msgstr "Windows Kişiler Dosyası İçe Aktar…"
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:30
 #, kde-format
 msgid "Import contacts from windows contact file."
-msgstr "Kişileri bir Windows kişiler dosyasından içe aktar."
+msgstr "Kişileri bir Windows kişiler dosyasından içe aktarın."
 
 #: windows-contacts/windowscontactimportexportplugininterface.cpp:68
 #, kde-format
