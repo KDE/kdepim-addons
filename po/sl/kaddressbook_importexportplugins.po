@@ -2,7 +2,7 @@
 # Translation of kaddressbook.po to Slovenian
 # SLOVENIAN TRANSLATION OF KADDRESSBOOK.
 # Copyright (C) 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
-# $Id: kaddressbook_importexportplugins.po 1744785 2026-08-26 01:34:49Z scripty $
+# $Id: kaddressbook_importexportplugins.po 1744853 2026-08-27 01:31:08Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:49+0000\n"
-"PO-Revision-Date: 2024-05-12 07:52+0200\n"
+"PO-Revision-Date: 2026-08-26 07:22+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #: csv/csvimportexportplugininterface.cpp:35
 #, kde-format
@@ -718,16 +718,14 @@ msgid "Import contacts from a vCard file."
 msgstr "Uvozi stike iz datoteke vCard."
 
 #: vcards/vcardimportexportplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Export contacts to a vCard 4.0 file."
+#, kde-format
 msgid "Export contacts to a vCard file."
-msgstr "Izvozi stike v datoteko vCard 4.0."
+msgstr "Izvozi stike v datoteko vCard."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0…"
+#, kde-format
 msgid "Export vCard…"
-msgstr "Izvozi vCard 4.0…"
+msgstr "Izvozi vCard…"
 
 #: vcards/vcardimportexportplugininterface.cpp:85
 #, kde-format

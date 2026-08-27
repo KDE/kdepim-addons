@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:49+0000\n"
-"PO-Revision-Date: 2024-05-12 03:43+0200\n"
+"PO-Revision-Date: 2026-08-26 06:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #: csv/csvimportexportplugininterface.cpp:35
 #, kde-format
@@ -708,16 +708,14 @@ msgid "Import contacts from a vCard file."
 msgstr "კონტაქტების შემოტანა vCard ფაილიდან."
 
 #: vcards/vcardimportexportplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Export contacts to a vCard 4.0 file."
+#, kde-format
 msgid "Export contacts to a vCard file."
-msgstr "კონტაქტების გატანა vCard 4.0 ფაილში."
+msgstr "კონტაქტების გატანა vCard ფაილში."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0…"
+#, kde-format
 msgid "Export vCard…"
-msgstr "გატანა vCard 4.0-ში…"
+msgstr "vCard-ის გატანა…"
 
 #: vcards/vcardimportexportplugininterface.cpp:85
 #, kde-format

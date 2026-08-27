@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-26 00:49+0000\n"
-"PO-Revision-Date: 2026-02-03 15:43+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-08-26 11:07+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: csv/csvimportexportplugininterface.cpp:35
 #, kde-format
@@ -712,16 +712,14 @@ msgid "Import contacts from a vCard file."
 msgstr "Importovat kontakty ze souboru vCard."
 
 #: vcards/vcardimportexportplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Export contacts to a vCard 4.0 file."
+#, kde-format
 msgid "Export contacts to a vCard file."
-msgstr "Exportovat kontakty do souboru vCard 4.0."
+msgstr "Exportovat kontakty do souboru vCard."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0…"
+#, kde-format
 msgid "Export vCard…"
-msgstr "Exportovat vCard 4.0…"
+msgstr "Exportovat vCard…"
 
 #: vcards/vcardimportexportplugininterface.cpp:85
 #, kde-format
