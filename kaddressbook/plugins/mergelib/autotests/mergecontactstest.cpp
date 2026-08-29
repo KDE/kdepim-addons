@@ -1120,7 +1120,7 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday_data()
     QTest::newRow("conflict") << QStringLiteral("20150606") << QStringLiteral("20150608") << QStringLiteral("20150606") << true;
     QTest::newRow("conflict1") << QString() << QStringLiteral("20150606") << QStringLiteral("20150608") << true;
     QTest::newRow("conflict2") << QStringLiteral("20150606") << QString() << QStringLiteral("20150608") << true;
-    QTest::newRow("conflict2") << QStringLiteral("20150606") << QStringLiteral("20150608") << QString() << true;
+    QTest::newRow("conflict3") << QStringLiteral("20150606") << QStringLiteral("20150608") << QString() << true;
     QTest::newRow("conflict4") << QStringLiteral("20180606") << QStringLiteral("20150608") << QStringLiteral("20150606") << true;
 }
 
