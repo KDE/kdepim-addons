@@ -684,16 +684,14 @@ msgid "Import contacts from a vCard file."
 msgstr "从 vCard 文件导入联系人。"
 
 #: vcards/vcardimportexportplugininterface.cpp:52
-#, fuzzy, kde-format
-#| msgid "Export contacts to a vCard 4.0 file."
+#, kde-format
 msgid "Export contacts to a vCard file."
-msgstr "导出联系人为 vCard 4.0 文件。"
+msgstr ""
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0…"
+#, kde-format
 msgid "Export vCard…"
-msgstr "导出 vCard 4.0 文件..."
+msgstr ""
 
 #: vcards/vcardimportexportplugininterface.cpp:85
 #, kde-format
@@ -752,15 +750,3 @@ msgstr "从 Windows Contact 文件导入联系人。"
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr "Windows Contact 文件 (*.contact)"
-
-#~ msgid "Export vCard 3.0…"
-#~ msgstr "导出 vCard 3.0 文件..."
-
-#~ msgid "Export contacts to a vCard 3.0 file."
-#~ msgstr "导出联系人为 vCard 3.0 文件。"
-
-#~ msgid "Export vCard 2.1…"
-#~ msgstr "导出 vCard 2.1 文件..."
-
-#~ msgid "Export contacts to a vCard 2.1 file."
-#~ msgstr "导出联系人为 vCard 2.1 文件。"

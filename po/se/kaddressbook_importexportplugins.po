@@ -731,11 +731,3 @@ msgstr ""
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Export vCard 3.0…"
-#~ msgstr "Olggosfievrrit vCard 3.0 …"
-
-#, fuzzy
-#~ msgid "Export vCard 2.1…"
-#~ msgstr "Olggosfievrrit vCard 2.1 …"
