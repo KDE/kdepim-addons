@@ -140,7 +140,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
             newContact.setUrl(fromContact.url());
         }
         // Merge geo
-        if (newContact.geo().isValid() && !fromContact.geo().isValid()) {
+        if (!newContact.geo().isValid() && fromContact.geo().isValid()) {
             newContact.setGeo(fromContact.geo());
         }
         // Merge Photo
@@ -149,7 +149,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
         }
 
         // Merge Birthday
-        if (!newContact.birthday().isValid() && !fromContact.birthday().isValid()) {
+        if (!newContact.birthday().isValid() && fromContact.birthday().isValid()) {
             newContact.setBirthday(fromContact.birthday());
         }
 
