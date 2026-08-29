@@ -15,13 +15,13 @@ ScamConfigureSettingsTreeView::ScamConfigureSettingsTreeView(QWidget *parent)
     : QTreeView(parent)
     , mScamListsModel(new ScamListsModel(this))
 {
+    setModel(mScamListsModel);
     setContextMenuPolicy(Qt::DefaultContextMenu);
     for (int c = 0, total = header()->count(); c < total; ++c) {
         header()->setSectionResizeMode(c, QHeaderView::Stretch);
     }
     setRootIsDecorated(false);
     setSortingEnabled(true);
-    setModel(mScamListsModel);
 }
 
 ScamConfigureSettingsTreeView::~ScamConfigureSettingsTreeView() = default;
