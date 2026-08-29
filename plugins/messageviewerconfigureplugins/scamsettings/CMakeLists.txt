@@ -18,7 +18,7 @@ target_sources(
         scamlistsmodel.cpp
 )
 
-ecm_qt_declare_logging_category(scamconfiguresettings HEADER libscamconfiguresettings_debug.h IDENTIFIER LIBSCAMCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libfolderconfiguresettingsplugin
+ecm_qt_declare_logging_category(scamconfiguresettings HEADER libscamconfiguresettings_debug.h IDENTIFIER LIBSCAMCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libscamconfiguresettingsplugin
     DESCRIPTION "kdepim-addons (scamettings-configure)"
     EXPORT KDEPIMADDONS
 )
