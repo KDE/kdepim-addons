@@ -12,6 +12,7 @@
 #include <QDBusReply>
 #include <QList>
 #include <QUrl>
+using namespace Qt::Literals::StringLiterals;
 
 ItineraryKDEConnectHandler::ItineraryKDEConnectHandler(QObject *parent)
     : QObject(parent)
@@ -22,10 +23,7 @@ QList<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices() 
 {
     // TODO we might want to do all this asynchronously by watching change signals and cache the device list
 
-    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"),
-                                              QStringLiteral("/modules/kdeconnect"),
-                                              QStringLiteral("org.kde.kdeconnect.daemon"),
-                                              QStringLiteral("devices"));
+    auto msg = QDBusMessage::createMethodCall(u"org.kde.kdeconnect"_s, u"/modules/kdeconnect"_s, u"org.kde.kdeconnect.daemon"_s, u"devices"_s);
     msg.setArguments({true, true});
     QDBusPendingReply<QStringList> reply = QDBusConnection::sessionBus().asyncCall(msg);
     reply.waitForFinished();
@@ -37,10 +35,8 @@ QList<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices() 
     QList<Device> devices;
     const auto values = reply.value();
     for (const QString &deviceId : values) {
-        QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"),
-                                   QStringLiteral("/modules/kdeconnect/devices/") + deviceId,
-                                   QStringLiteral("org.kde.kdeconnect.device"));
-        QDBusReply<bool> pluginReply = deviceIface.call(QStringLiteral("hasPlugin"), QLatin1StringView("kdeconnect_share"));
+        QDBusInterface deviceIface(u"org.kde.kdeconnect"_s, u"/modules/kdeconnect/devices/"_s + deviceId, u"org.kde.kdeconnect.device"_s);
+        QDBusReply<bool> pluginReply = deviceIface.call(u"hasPlugin"_s, QLatin1StringView("kdeconnect_share"));
 
         if (pluginReply.value()) {
             devices.push_back({deviceId, deviceIface.property("name").toString()});
@@ -52,11 +48,11 @@ QList<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices() 
 
 void ItineraryKDEConnectHandler::sendToDevice(const QString &fileName, const QString &deviceId)
 {
-    const QString method = QStringLiteral("openFile");
+    const QString method = u"openFile"_s;
 
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"),
-                                                      QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"),
-                                                      QStringLiteral("org.kde.kdeconnect.device.share"),
+    QDBusMessage msg = QDBusMessage::createMethodCall(u"org.kde.kdeconnect"_s,
+                                                      u"/modules/kdeconnect/devices/"_s + deviceId + u"/share"_s,
+                                                      u"org.kde.kdeconnect.device.share"_s,
                                                       method);
     msg.setArguments({QUrl::fromLocalFile(fileName).toString()});
 

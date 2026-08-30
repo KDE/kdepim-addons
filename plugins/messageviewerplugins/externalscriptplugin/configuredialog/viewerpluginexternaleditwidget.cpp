@@ -12,6 +12,7 @@
 #include <QFormLayout>
 #include <QLabel>
 #include <QWhatsThis>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     : QWidget(parent)
@@ -62,8 +63,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
     mExecutable->setObjectName(QLatin1StringView("mEditorRequester"));
 
-    mExecutable->setMimeTypeFilters(
-        {QStringLiteral("application/x-executable"), QStringLiteral("application/x-shellscript"), QStringLiteral("application/x-desktop")});
+    mExecutable->setMimeTypeFilters({u"application/x-executable"_s, u"application/x-shellscript"_s, u"application/x-desktop"_s});
 
     mExecutable->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
     mExecutable->lineEdit()->setClearButtonEnabled(true);

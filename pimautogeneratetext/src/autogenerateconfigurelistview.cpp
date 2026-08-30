@@ -13,6 +13,7 @@
 #include <QContextMenuEvent>
 #include <QMenu>
 #include <QSortFilterProxyModel>
+using namespace Qt::Literals::StringLiterals;
 AutogenerateConfigureListView::AutogenerateConfigureListView(QWidget *parent)
     : QListView(parent)
     , mModel(new AutogenerateConfigureAskModel(this))
@@ -51,7 +52,7 @@ void AutogenerateConfigureListView::setData(const QModelIndex &current, const QS
 void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu menu(this);
-    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("document-new")), i18nc("@action", "Add…"), &menu);
+    auto addAction = new QAction(QIcon::fromTheme(u"document-new"_s), i18nc("@action", "Add…"), &menu);
     connect(addAction, &QAction::triggered, this, [this]() {
         AutogenerateConfigureAskInfo info;
         info.setTitle(i18n("Ask to AI"));
@@ -60,14 +61,14 @@ void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
     menu.addAction(addAction);
     const QModelIndex index = indexAt(event->pos());
     if (index.isValid()) {
-        auto editAction = new QAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action", "Modify…"), &menu);
+        auto editAction = new QAction(QIcon::fromTheme(u"document-edit"_s), i18nc("@action", "Modify…"), &menu);
         connect(editAction, &QAction::triggered, this, [index, this]() {
             edit(index);
         });
         menu.addAction(editAction);
 
         menu.addSeparator();
-        auto removeAction = new QAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18nc("@action", "Remove…"), &menu);
+        auto removeAction = new QAction(QIcon::fromTheme(u"list-remove"_s), i18nc("@action", "Remove…"), &menu);
         connect(removeAction, &QAction::triggered, this, [index, this]() {
             if (KMessageBox::warningTwoActions(this,
                                                i18n("Do you want to remove it?"),

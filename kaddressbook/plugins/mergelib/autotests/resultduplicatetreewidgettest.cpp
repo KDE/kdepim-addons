@@ -8,6 +8,7 @@
 #include "../searchduplicate/resultduplicatetreewidget.h"
 #include <KContacts/Addressee>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KContacts;
 
@@ -31,7 +32,7 @@ void ResultDuplicateTreeWidgetTest::shouldFillList()
     for (int i = 0; i < 5; ++i) {
         Akonadi::Item item(42 + i);
         Addressee address;
-        address.setName(QStringLiteral("foo1"));
+        address.setName(u"foo1"_s);
         item.setPayload<Addressee>(address);
         lst << item;
     }
@@ -48,7 +49,7 @@ void ResultDuplicateTreeWidgetTest::shouldClearList()
     for (int i = 0; i < 5; ++i) {
         Akonadi::Item item(42 + i);
         Addressee address;
-        address.setName(QStringLiteral("foo1"));
+        address.setName(u"foo1"_s);
         item.setPayload<Addressee>(address);
         lst << item;
     }
@@ -58,7 +59,7 @@ void ResultDuplicateTreeWidgetTest::shouldClearList()
 
     Akonadi::Item item(45);
     Addressee address;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     item.setPayload<Addressee>(address);
     lst << item;
     itemLst.clear();
@@ -74,14 +75,14 @@ void ResultDuplicateTreeWidgetTest::shouldEmptyListIfNotContactSelected()
     for (int i = 0; i < 5; ++i) {
         Akonadi::Item item(42 + i);
         Addressee address;
-        address.setName(QStringLiteral("foo1"));
+        address.setName(u"foo1"_s);
         item.setPayload<Addressee>(address);
         lst << item;
     }
     QList<Akonadi::Item::List> itemLst;
     Akonadi::Item item(45);
     Addressee address;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     item.setPayload<Addressee>(address);
     lst << item;
     itemLst << lst;
@@ -96,7 +97,7 @@ void ResultDuplicateTreeWidgetTest::shouldReturnNotEmptyContactList()
     for (int i = 0; i < 5; ++i) {
         Akonadi::Item item(42 + i);
         Addressee address;
-        address.setName(QStringLiteral("foo1"));
+        address.setName(u"foo1"_s);
         item.setPayload<Addressee>(address);
         lst << item;
     }
@@ -124,7 +125,7 @@ void ResultDuplicateTreeWidgetTest::shouldNotReturnListWhenJustOneChildSelected(
     for (int i = 0; i < 5; ++i) {
         Akonadi::Item item(42 + i);
         Addressee address;
-        address.setName(QStringLiteral("foo1"));
+        address.setName(u"foo1"_s);
         item.setPayload<Addressee>(address);
         lst << item;
     }
@@ -152,7 +153,7 @@ void ResultDuplicateTreeWidgetTest::shouldReturnTwoLists()
     for (int i = 0; i < 5; ++i) {
         Akonadi::Item item(42 + i);
         Addressee address;
-        address.setName(QStringLiteral("foo1"));
+        address.setName(u"foo1"_s);
         item.setPayload<Addressee>(address);
         lst << item;
     }
@@ -182,7 +183,7 @@ void ResultDuplicateTreeWidgetTest::shouldReturnJustOnList()
     for (int i = 0; i < 5; ++i) {
         Akonadi::Item item(42 + i);
         Addressee address;
-        address.setName(QStringLiteral("foo1"));
+        address.setName(u"foo1"_s);
         item.setPayload<Addressee>(address);
         lst << item;
     }

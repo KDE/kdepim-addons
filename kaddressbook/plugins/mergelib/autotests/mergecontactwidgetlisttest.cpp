@@ -8,6 +8,7 @@
 #include "../manualmerge/mergecontactwidgetlist.h"
 #include <Akonadi/Item>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 using namespace KContacts;
 
 MergeContactWidgetListTest::MergeContactWidgetListTest(QObject *parent)
@@ -35,7 +36,7 @@ void MergeContactWidgetListTest::shouldCleanListWhenSetItems()
 
     Addressee address;
     Akonadi::Item item;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     item.setPayload<Addressee>(address);
     lst << item;
     w.fillListContact(lst);

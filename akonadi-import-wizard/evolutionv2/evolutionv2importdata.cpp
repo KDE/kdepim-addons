@@ -12,6 +12,7 @@
 #include <KPluginFactory>
 
 #include <QDir>
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(Evolutionv2ImportData, "evolutionv2importer.json")
 
@@ -34,7 +35,7 @@ bool Evolutionv2ImportData::foundMailer() const
 
 QString Evolutionv2ImportData::name() const
 {
-    return QStringLiteral("Evolution 2.x");
+    return u"Evolution 2.x"_s;
 }
 
 bool Evolutionv2ImportData::importMails()

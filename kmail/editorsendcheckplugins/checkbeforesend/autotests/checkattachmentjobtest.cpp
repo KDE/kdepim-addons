@@ -43,7 +43,7 @@ void CheckAttachmentJobTest::shouldAssignEmails_data()
     emails = QStringList{u"\"bla, foo\" <foo@kde.org>"_s, u"bla@kde.org"_s};
     QTest::newRow("emailswithquote") << emails << emails;
 
-    emails = QStringList{u"\"bla, foo\" <foo@kde.org>"_s, u"bla@kde.org"_s, QStringLiteral(" ")};
+    emails = QStringList{u"\"bla, foo\" <foo@kde.org>"_s, u"bla@kde.org"_s, u" "_s};
     createdList = QStringList{u"\"bla, foo\" <foo@kde.org>"_s, u"bla@kde.org"_s};
     QTest::newRow("emailswithemptystr") << emails << createdList;
 }
@@ -77,14 +77,14 @@ void CheckAttachmentJobTest::shouldRemoveDuplicatedEmails_data()
     QStringList lst{u"foo@kde.org"_s, u"bla@kde.org"_s};
     QTest::newRow("samelist") << lst << lst;
 
-    QStringList original{u"foo@kde.org"_s, u"bla@kde.org"_s, QStringLiteral("bla@kde.org")};
+    QStringList original{u"foo@kde.org"_s, u"bla@kde.org"_s, u"bla@kde.org"_s};
     QStringList result{u"foo@kde.org"_s, u"bla@kde.org"_s};
     QTest::newRow("oneduplicate") << original << result;
 
-    original = QStringList() << u"lolo <foo@kde.org>"_s << u"lulu <bla@kde.org>"_s << QStringLiteral("bla <bla@kde.org>");
+    original = QStringList() << u"lolo <foo@kde.org>"_s << u"lulu <bla@kde.org>"_s << u"bla <bla@kde.org>"_s;
     QTest::newRow("oneduplicatewithname") << original << result;
 
-    original = QStringList() << u"lolo <foo@kde.org>"_s << u"lulu <bla@kde.org>"_s << QStringLiteral("bla <bla@kde.org>") << u"bla"_s;
+    original = QStringList() << u"lolo <foo@kde.org>"_s << u"lulu <bla@kde.org>"_s << u"bla <bla@kde.org>"_s << u"bla"_s;
     QTest::newRow("withinvalidemail") << original << result;
 }
 

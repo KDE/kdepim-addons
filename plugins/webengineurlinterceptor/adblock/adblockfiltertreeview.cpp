@@ -18,6 +18,7 @@
 #include <QMenu>
 #include <QPointer>
 #include <QSortFilterProxyModel>
+using namespace Qt::Literals::StringLiterals;
 
 AdblockFilterTreeView::AdblockFilterTreeView(QWidget *parent)
     : QTreeView(parent)
@@ -61,20 +62,20 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
 
     const QModelIndexList itemSelected = selectionModel()->selectedRows();
 
-    auto addAction = new QAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add…"), &menu);
+    auto addAction = new QAction(QIcon::fromTheme(u"list-add"_s), i18n("Add…"), &menu);
     connect(addAction, &QAction::triggered, this, &AdblockFilterTreeView::slotAddAdblock);
     menu.addAction(addAction);
 
     const int selectedItemsNumber = itemSelected.count();
     // qDebug() <<" selectedItemsNumber " << selectedItemsNumber;
     if (selectedItemsNumber == 1) { // Edit only one element
-        auto modifyAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18n("Modify…"), &menu);
+        auto modifyAction = new QAction(QIcon::fromTheme(u"edit-rename"_s), i18n("Modify…"), &menu);
         connect(modifyAction, &QAction::triggered, this, [this, itemSelected]() {
             slotModifyAdblock(itemSelected.at(0));
         });
         menu.addAction(modifyAction);
         menu.addSeparator();
-        auto deleteAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Delete"), &menu);
+        auto deleteAction = new QAction(QIcon::fromTheme(u"edit-delete"_s), i18n("Delete"), &menu);
         connect(deleteAction, &QAction::triggered, this, [this, itemSelected]() {
             // For the moment remove only one element
             slotDeleteAdblock(itemSelected.at(0));
@@ -82,7 +83,7 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
         menu.addAction(deleteAction);
 
         menu.addSeparator();
-        auto showAdblockAction = new QAction(QIcon::fromTheme(QStringLiteral("document-preview")), i18n("Show"), &menu);
+        auto showAdblockAction = new QAction(QIcon::fromTheme(u"document-preview"_s), i18n("Show"), &menu);
         connect(showAdblockAction, &QAction::triggered, this, [this, itemSelected]() {
             const QModelIndex modelIndexUrl = mAdblockFilterListsModel->index(itemSelected.at(0).row(), AdblockFilterListsModel::Url);
             const QString filterText = AdblockManager::self()->adblockListText(modelIndexUrl.data().toString());
@@ -97,7 +98,7 @@ void AdblockFilterTreeView::contextMenuEvent(QContextMenuEvent *event)
         menu.addAction(showAdblockAction);
     }
     menu.addSeparator();
-    auto updateListsAction = new QAction(QIcon::fromTheme(QStringLiteral("view-refresh")), i18n("Update Lists"), &menu);
+    auto updateListsAction = new QAction(QIcon::fromTheme(u"view-refresh"_s), i18n("Update Lists"), &menu);
     connect(updateListsAction, &QAction::triggered, this, []() {
         AdblockManager::self()->refreshLists();
     });

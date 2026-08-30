@@ -13,6 +13,7 @@
 #include "gearyplugin_debug.h"
 #include <KPluginFactory>
 #include <QDir>
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(GearyImportData, "gearyimporter.json")
 
@@ -35,7 +36,7 @@ bool GearyImportData::foundMailer() const
 
 QString GearyImportData::name() const
 {
-    return QStringLiteral("Geary");
+    return u"Geary"_s;
 }
 
 bool GearyImportData::importMails()
@@ -48,7 +49,7 @@ bool GearyImportData::importSettings()
     QDir directory(mPath);
     const QStringList lstDir = directory.entryList(QDir::AllDirs);
     qCDebug(GEARYPLUGIN_LOG) << "Number of directory " << lstDir.count();
-    const QString configName = QStringLiteral("geary.ini");
+    const QString configName = u"geary.ini"_s;
     for (int i = 0; i < lstDir.count(); ++i) {
         const QString fullPath = lstDir.at(i) + QLatin1Char('/') + configName;
         if (QFileInfo::exists(fullPath)) {

@@ -8,6 +8,7 @@
 #include "viewerpluginaiinterface.h"
 #include <KActionCollection>
 #include <KPluginFactory>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginAI, "messageviewer_aiplugin.json")
@@ -25,7 +26,7 @@ ViewerPluginInterface *ViewerPluginAI::createView(QWidget *parent, KActionCollec
 
 QString ViewerPluginAI::viewerPluginName() const
 {
-    return QStringLiteral("translator");
+    return u"translator"_s;
 }
 
 bool MessageViewer::ViewerPluginAI::hasConfigureDialog() const

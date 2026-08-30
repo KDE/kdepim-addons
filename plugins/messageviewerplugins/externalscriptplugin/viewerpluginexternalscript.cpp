@@ -10,6 +10,7 @@
 #include <KActionCollection>
 #include <KPluginFactory>
 #include <QPointer>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginExternalscript, "messageviewer_externalscriptplugin.json")
@@ -28,7 +29,7 @@ ViewerPluginInterface *ViewerPluginExternalscript::createView(QWidget *parent, K
 
 QString ViewerPluginExternalscript::viewerPluginName() const
 {
-    return QStringLiteral("external script");
+    return u"external script"_s;
 }
 
 void ViewerPluginExternalscript::showConfigureDialog(QWidget *parent)

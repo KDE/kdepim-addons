@@ -21,6 +21,7 @@
 #include <QMenu>
 
 #include "configuredialog/viewerpluginexternalconfiguredialog.h"
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -118,7 +119,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                 if (!icon.isEmpty()) {
                     act->setIcon(QIcon::fromTheme(icon));
                 }
-                ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
+                ac->addAction(u"externalscript_%1"_s.arg(info.name()), act);
                 const QStringList actionInfo{info.commandLine(), info.executable()};
 
                 act->setData(actionInfo);
@@ -127,7 +128,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
             }
             menu->addSeparator();
         }
-        auto act = new QAction(QIcon::fromTheme(QStringLiteral("settings-configure")), i18n("Configure"), menu);
+        auto act = new QAction(QIcon::fromTheme(u"settings-configure"_s), i18n("Configure"), menu);
         connect(act, &QAction::triggered, this, &ViewerPluginExternalscriptInterface::slotConfigure);
         menu->addAction(act);
         mainMenu->setMenu(menu);

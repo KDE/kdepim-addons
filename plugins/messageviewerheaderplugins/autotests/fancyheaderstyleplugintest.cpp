@@ -15,6 +15,7 @@
 #include <KActionMenu>
 #include <QActionGroup>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace Qt::Literals;
 
@@ -63,7 +64,7 @@ void FancyHeaderStylePluginTest::testFormatEmpty()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = new KMime::Message();
-    testHeaderFile(style->format(aMsg), QStringLiteral("empty.fancy"));
+    testHeaderFile(style->format(aMsg), u"empty.fancy"_s);
     delete aMsg;
 }
 
@@ -72,7 +73,7 @@ void FancyHeaderStylePluginTest::testFormat_data()
     QTest::addColumn<QString>("mailbox");
 
     QDir dir(QStringLiteral(HEADER_DATA_DIR));
-    const auto l = dir.entryList(QStringList(QStringLiteral("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    const auto l = dir.entryList(QStringList(u"*.mbox"_s), QDir::Files | QDir::Readable | QDir::NoSymLinks);
     for (const QString &file : l) {
         QTest::newRow(file.toLatin1().constData()) << file;
     }
@@ -88,7 +89,7 @@ void FancyHeaderStylePluginTest::testFormat()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
-    testHeaderFile(style->format(aMsg.get()), mailbox + QStringLiteral(".fancy"));
+    testHeaderFile(style->format(aMsg.get()), mailbox + u".fancy"_s);
 }
 
 QTEST_MAIN(FancyHeaderStylePluginTest)

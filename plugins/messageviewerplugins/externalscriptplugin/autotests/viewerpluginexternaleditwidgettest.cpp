@@ -11,6 +11,7 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalEditWidgetTest::ViewerPluginExternalEditWidgetTest(QObject *parent)
     : QObject(parent)
@@ -22,23 +23,23 @@ ViewerPluginExternalEditWidgetTest::~ViewerPluginExternalEditWidgetTest() = defa
 void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
 {
     ViewerPluginExternalEditWidget w;
-    const auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
+    const auto mainLayout = w.findChild<QFormLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    const auto mName = w.findChild<QLineEdit *>(QStringLiteral("name"));
+    const auto mName = w.findChild<QLineEdit *>(u"name"_s);
     QVERIFY(mName);
 
-    const auto mDescription = w.findChild<QLineEdit *>(QStringLiteral("description"));
+    const auto mDescription = w.findChild<QLineEdit *>(u"description"_s);
     QVERIFY(mDescription);
 
-    const auto mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("commandline"));
+    const auto mCommandLine = w.findChild<QLineEdit *>(u"commandline"_s);
     QVERIFY(mCommandLine);
 
-    const auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
+    const auto mExecutable = w.findChild<KUrlRequester *>(u"mEditorRequester"_s);
     QVERIFY(mExecutable);
 
-    const auto formatHelp = w.findChild<QLabel *>(QStringLiteral("formatHelp"));
+    const auto formatHelp = w.findChild<QLabel *>(u"formatHelp"_s);
     QVERIFY(formatHelp);
 }
 
@@ -46,16 +47,16 @@ void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo_data()
 {
     QTest::addColumn<ViewerPluginExternalScriptInfo>("scriptinfo");
     ViewerPluginExternalScriptInfo info;
-    info.setCommandLine(QStringLiteral("foo"));
-    info.setDescription(QStringLiteral("blo"));
-    info.setExecutable(QStringLiteral("voo"));
-    info.setName(QStringLiteral("bla"));
+    info.setCommandLine(u"foo"_s);
+    info.setDescription(u"blo"_s);
+    info.setExecutable(u"voo"_s);
+    info.setName(u"bla"_s);
     QTest::newRow("test1") << info;
 
     info.setIsReadOnly(true);
     QTest::newRow("test2") << info;
 
-    info.setFileName(QStringLiteral("lili"));
+    info.setFileName(u"lili"_s);
     QTest::newRow("test3") << info;
 }
 

@@ -8,6 +8,7 @@
 #include "viewerplugincreateeventinterface.h"
 #include <KActionCollection>
 #include <KPluginFactory>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginCreateevent, "messageviewer_createeventplugin.json")
@@ -25,7 +26,7 @@ ViewerPluginInterface *ViewerPluginCreateevent::createView(QWidget *parent, KAct
 
 QString ViewerPluginCreateevent::viewerPluginName() const
 {
-    return QStringLiteral("create-task");
+    return u"create-task"_s;
 }
 
 #include "viewerplugincreateevent.moc"

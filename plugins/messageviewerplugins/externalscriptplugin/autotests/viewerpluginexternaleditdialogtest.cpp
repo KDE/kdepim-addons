@@ -13,6 +13,7 @@
 #include <QPushButton>
 #include <QStandardPaths>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalEditDialogTest::ViewerPluginExternalEditDialogTest(QObject *parent)
     : QObject(parent)
@@ -26,10 +27,10 @@ void ViewerPluginExternalEditDialogTest::shouldHaveDefaultValue()
 {
     ViewerPluginExternalEditDialog dlg;
 
-    const auto mEditWidget = dlg.findChild<ViewerPluginExternalEditWidget *>(QStringLiteral("editwidget"));
+    const auto mEditWidget = dlg.findChild<ViewerPluginExternalEditWidget *>(u"editwidget"_s);
     QVERIFY(mEditWidget);
 
-    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 }
 

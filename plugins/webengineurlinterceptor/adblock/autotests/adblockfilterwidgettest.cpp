@@ -11,6 +11,7 @@
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(AdblockFilterWidgetTest)
 
 AdblockFilterWidgetTest::AdblockFilterWidgetTest(QObject *parent)
@@ -22,17 +23,17 @@ AdblockFilterWidgetTest::AdblockFilterWidgetTest(QObject *parent)
 void AdblockFilterWidgetTest::shouldHaveDefaultValues()
 {
     AdblockFilterWidget w;
-    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    const auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
+    const auto mSearchLineEdit = w.findChild<QLineEdit *>(u"mSearchLineEdit"_s);
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->text().isEmpty());
     QVERIFY(!mSearchLineEdit->placeholderText().isEmpty());
     QVERIFY(mSearchLineEdit->isClearButtonEnabled());
 
-    const auto mAdblockFilterListView = w.findChild<AdblockFilterTreeView *>(QStringLiteral("mAdblockFilterListView"));
+    const auto mAdblockFilterListView = w.findChild<AdblockFilterTreeView *>(u"mAdblockFilterListView"_s);
     QVERIFY(mAdblockFilterListView);
 }
 

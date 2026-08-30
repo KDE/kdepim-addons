@@ -15,6 +15,7 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <PimCommon/BroadcastStatus>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -54,7 +55,7 @@ void ViewerPluginExpandurlInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
         auto act = new QAction(i18nc("@action", "Expand URL"), this);
-        ac->addAction(QStringLiteral("expand_short_url"), act);
+        ac->addAction(u"expand_short_url"_s, act);
         ac->setShortcutsConfigurable(act, false);
         connect(act, &QAction::triggered, this, &ViewerPluginExpandurlInterface::slotActivatePlugin);
         mAction.append(act);

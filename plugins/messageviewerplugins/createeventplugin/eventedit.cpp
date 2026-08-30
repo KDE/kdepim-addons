@@ -28,6 +28,7 @@
 #include <IncidenceEditor/IncidenceDialogFactory>
 #include <KGuiItem>
 #include <KStandardGuiItem>
+using namespace Qt::Literals::StringLiterals;
 
 namespace MessageViewer
 {
@@ -41,7 +42,7 @@ EventEdit::EventEdit(QWidget *parent)
     , mEventEdit(new QLineEdit(this))
     , mStartDateTimeEdit(new EventDateTimeWidget(this))
     , mEndDateTimeEdit(new EventDateTimeWidget(this))
-    , mSaveButton(new QPushButton(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("&Save"), this))
+    , mSaveButton(new QPushButton(QIcon::fromTheme(u"appointment-new"_s), i18n("&Save"), this))
     , mOpenEditorButton(new QPushButton(i18nc("@action:button", "Open &Editor…"), this))
 {
     auto vbox = new QVBoxLayout(this);

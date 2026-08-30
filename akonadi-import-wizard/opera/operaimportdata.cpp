@@ -13,6 +13,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QDir>
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(OperaImportData, "operaimporter.json")
 
@@ -35,7 +36,7 @@ bool OperaImportData::foundMailer() const
 
 QString OperaImportData::name() const
 {
-    return QStringLiteral("Opera");
+    return u"Opera"_s;
 }
 
 bool OperaImportData::importMails()
@@ -43,7 +44,7 @@ bool OperaImportData::importMails()
     MailImporter::FilterOpera opera;
     initializeFilter(opera);
     opera.filterInfo()->setStatusMessage(i18n("Import in progress"));
-    const QString mailPath(mPath + QStringLiteral("mail/store/"));
+    const QString mailPath(mPath + u"mail/store/"_s);
     QDir directory(mailPath);
     if (directory.exists()) {
         opera.importMails(mailPath);
@@ -56,7 +57,7 @@ bool OperaImportData::importMails()
 
 bool OperaImportData::importAddressBook()
 {
-    const QString addressbookFile(mPath + QStringLiteral("bookmarks.adr"));
+    const QString addressbookFile(mPath + u"bookmarks.adr"_s);
     OperaAddressBook addressbook(addressbookFile);
     addressbook.setAbstractDisplayInfo(mAbstractDisplayInfo);
     addressbook.importAddressBook();
@@ -65,7 +66,7 @@ bool OperaImportData::importAddressBook()
 
 bool OperaImportData::importSettings()
 {
-    const QString settingFile(mPath + QStringLiteral("mail/accounts.ini"));
+    const QString settingFile(mPath + u"mail/accounts.ini"_s);
     OperaSettings settings(settingFile);
     settings.setAbstractDisplayInfo(mAbstractDisplayInfo);
     settings.importSettings();

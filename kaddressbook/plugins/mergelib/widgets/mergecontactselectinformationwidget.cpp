@@ -8,6 +8,7 @@
 #include "widgets/mergecontactselectlistwidget.h"
 
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KABMergeContacts;
 MergeContactSelectInformationWidget::MergeContactSelectInformationWidget(QWidget *parent)
@@ -140,8 +141,8 @@ void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &ad
                 addr.setNickName(mAddressList.at(selectedContactIndex).nickName());
                 break;
             case MergeContacts::Blog: {
-                const QString newBlog = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"));
-                addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"), newBlog);
+                const QString newBlog = mAddressList.at(selectedContactIndex).custom(u"KADDRESSBOOK"_s, u"BlogFeed"_s);
+                addr.insertCustom(u"KADDRESSBOOK"_s, u"BlogFeed"_s, newBlog);
                 break;
             }
             case MergeContacts::HomePage:
@@ -151,8 +152,8 @@ void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &ad
                 addr.setOrganization(mAddressList.at(selectedContactIndex).organization());
                 break;
             case MergeContacts::Profession: {
-                const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"));
-                addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"), newValue);
+                const QString newValue = mAddressList.at(selectedContactIndex).custom(u"KADDRESSBOOK"_s, u"X-Profession"_s);
+                addr.insertCustom(u"KADDRESSBOOK"_s, u"X-Profession"_s, newValue);
                 break;
             }
             case MergeContacts::Title:
@@ -162,18 +163,18 @@ void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &ad
                 addr.setDepartment(mAddressList.at(selectedContactIndex).department());
                 break;
             case MergeContacts::Office: {
-                const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"));
-                addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"), newValue);
+                const QString newValue = mAddressList.at(selectedContactIndex).custom(u"KADDRESSBOOK"_s, u"X-Office"_s);
+                addr.insertCustom(u"KADDRESSBOOK"_s, u"X-Office"_s, newValue);
                 break;
             }
             case MergeContacts::ManagerName: {
-                const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"));
-                addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"), newValue);
+                const QString newValue = mAddressList.at(selectedContactIndex).custom(u"KADDRESSBOOK"_s, u"X-ManagersName"_s);
+                addr.insertCustom(u"KADDRESSBOOK"_s, u"X-ManagersName"_s, newValue);
                 break;
             }
             case MergeContacts::Assistant: {
-                const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"));
-                addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"), newValue);
+                const QString newValue = mAddressList.at(selectedContactIndex).custom(u"KADDRESSBOOK"_s, u"X-AssistantsName"_s);
+                addr.insertCustom(u"KADDRESSBOOK"_s, u"X-AssistantsName"_s, newValue);
                 break;
             }
             case MergeContacts::FreeBusy:
@@ -183,8 +184,8 @@ void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &ad
                 addr.setFamilyName(mAddressList.at(selectedContactIndex).familyName());
                 break;
             case MergeContacts::PartnerName: {
-                const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"));
-                addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"), newValue);
+                const QString newValue = mAddressList.at(selectedContactIndex).custom(u"KADDRESSBOOK"_s, u"X-SpousesName"_s);
+                addr.insertCustom(u"KADDRESSBOOK"_s, u"X-SpousesName"_s, newValue);
                 break;
             }
             case MergeContacts::Keys:

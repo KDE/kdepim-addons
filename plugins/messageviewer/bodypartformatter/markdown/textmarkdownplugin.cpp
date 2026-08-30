@@ -20,6 +20,7 @@
 #include <KTextTemplate/Template>
 #include <QMimeDatabase>
 #include <QTextDocument>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -43,9 +44,9 @@ public:
         }
 
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
-        c.insert(QStringLiteral("block"), msgPart.data());
-        c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
-        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::KTextTemplateCallback>([=](KTextTemplate::OutputStream *) {
+        c.insert(u"block"_s, msgPart.data());
+        c.insert(u"showOnlyOneMimePart"_s, context->showOnlyOneMimePart());
+        c.insert(u"content"_s, QVariant::fromValue<MessageViewer::KTextTemplateCallback>([=](KTextTemplate::OutputStream *) {
                      QString result;
 #ifdef USE_DISCOUNT_LIB
                      MarkdownDiscount engine;
@@ -58,7 +59,7 @@ public:
 #endif
                      (*htmlWriter->stream()) << result;
                  }));
-        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
+        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(u"textmessagepart.html"_s);
         KTextTemplate::OutputStream s(htmlWriter->stream());
         t->render(&s, &c);
         return true;

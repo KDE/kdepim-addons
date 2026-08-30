@@ -13,6 +13,7 @@
 #include <QCheckBox>
 #include <QGridLayout>
 #include <QGroupBox>
+using namespace Qt::Literals::StringLiterals;
 
 VCardExportSelectionWidget::VCardExportSelectionWidget(QWidget *parent)
     : QWidget(parent)
@@ -85,8 +86,8 @@ VCardExportSelectionWidget::~VCardExportSelectionWidget()
 
 void VCardExportSelectionWidget::readSettings()
 {
-    KConfig config(QStringLiteral("kaddressbookrc"));
-    const KConfigGroup group(&config, QStringLiteral("XXPortVCard"));
+    KConfig config(u"kaddressbookrc"_s);
+    const KConfigGroup group(&config, u"XXPortVCard"_s);
 
     mPrivateBox->setChecked(group.readEntry("ExportPrivateFields", true));
     mBusinessBox->setChecked(group.readEntry("ExportBusinessFields", true));
@@ -98,8 +99,8 @@ void VCardExportSelectionWidget::readSettings()
 
 void VCardExportSelectionWidget::writeSettings()
 {
-    KConfig config(QStringLiteral("kaddressbookrc"));
-    KConfigGroup group(&config, QStringLiteral("XXPortVCard"));
+    KConfig config(u"kaddressbookrc"_s);
+    KConfigGroup group(&config, u"XXPortVCard"_s);
 
     group.writeEntry("ExportPrivateFields", mPrivateBox->isChecked());
     group.writeEntry("ExportBusinessFields", mBusinessBox->isChecked());

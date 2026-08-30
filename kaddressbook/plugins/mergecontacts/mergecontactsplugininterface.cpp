@@ -11,6 +11,7 @@
 #include <QAction>
 
 #include "manualmerge/mergecontactsdialog.h"
+using namespace Qt::Literals::StringLiterals;
 
 MergeContactsPluginInterface::MergeContactsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -21,7 +22,7 @@ MergeContactsPluginInterface::~MergeContactsPluginInterface() = default;
 
 void MergeContactsPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("merge_contacts"));
+    QAction *action = ac->addAction(u"merge_contacts"_s);
     action->setText(i18n("Merge Contacts…"));
     connect(action, &QAction::triggered, this, &MergeContactsPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);

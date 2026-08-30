@@ -11,6 +11,7 @@
 #include <QHBoxLayout>
 #include <QStandardItemModel>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 namespace MessageViewer
 {
@@ -44,7 +45,7 @@ void ViewerPluginCreateeventTest::shouldShowWidget()
     parent->setLayout(new QHBoxLayout);
     std::unique_ptr<MessageViewer::ViewerPluginInterface> interface(event->createView(parent.get(), new KActionCollection(this)));
     interface->execute();
-    const auto createeventwidget = parent->findChild<QWidget *>(QStringLiteral("eventedit"));
+    const auto createeventwidget = parent->findChild<QWidget *>(u"eventedit"_s);
     QVERIFY(createeventwidget);
     QCOMPARE(createeventwidget->isHidden(), false);
 }

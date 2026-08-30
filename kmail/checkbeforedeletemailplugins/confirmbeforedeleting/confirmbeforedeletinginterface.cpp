@@ -36,7 +36,7 @@ void ConfirmBeforeDeletingInterface::createActions(KActionCollection *ac)
         auto menu = new QMenu;
         auto act = new QAction(QIcon::fromTheme(u"settings-configure"_s), i18n("Configure"), menu);
         connect(act, &QAction::triggered, this, &ConfirmBeforeDeletingInterface::slotConfigure);
-        ac->addAction(QStringLiteral("confirm_before_deleting_configure"), act);
+        ac->addAction(u"confirm_before_deleting_configure"_s, act);
 
         menu->addAction(act);
         mainMenu->setMenu(menu);

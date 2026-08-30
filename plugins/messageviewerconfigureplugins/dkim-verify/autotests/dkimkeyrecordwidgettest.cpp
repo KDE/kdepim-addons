@@ -10,6 +10,7 @@
 #include <QHBoxLayout>
 #include <QStandardPaths>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(DKIMKeyRecordWidgetTest)
 
 DKIMKeyRecordWidgetTest::DKIMKeyRecordWidgetTest(QObject *parent)
@@ -21,10 +22,10 @@ DKIMKeyRecordWidgetTest::DKIMKeyRecordWidgetTest(QObject *parent)
 void DKIMKeyRecordWidgetTest::shouldHaveDefaultValues()
 {
     DKIMKeyRecordWidget w;
-    const auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
 
-    const auto mManagerKeyWidget = w.findChild<MessageViewer::DKIMManagerKeyWidget *>(QStringLiteral("mManagerKeyWidget"));
+    const auto mManagerKeyWidget = w.findChild<MessageViewer::DKIMManagerKeyWidget *>(u"mManagerKeyWidget"_s);
     QVERIFY(mManagerKeyWidget);
 }
 

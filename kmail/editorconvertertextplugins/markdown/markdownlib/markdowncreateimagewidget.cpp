@@ -11,6 +11,7 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QSpinBox>
+using namespace Qt::Literals::StringLiterals;
 MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     : QWidget(parent)
     , mTitle(new QLineEdit(this))
@@ -99,7 +100,7 @@ QString MarkdownCreateImageWidget::linkStr() const
     }
     QString defineSize;
     if (!mKeepOriginalSize->isChecked()) {
-        defineSize = QStringLiteral(" =%1x%2").arg(mWidth->value()).arg(mHeight->value());
+        defineSize = u" =%1x%2"_s.arg(mWidth->value()).arg(mHeight->value());
     }
 
     QString imageText = mImageUrl->text();
@@ -107,9 +108,9 @@ QString MarkdownCreateImageWidget::linkStr() const
         imageText += defineSize;
     }
     if (!mAlternateText->text().trimmed().isEmpty()) {
-        return QStringLiteral("![%3](%2 \"%1\")").arg(mTitle->text().trimmed(), imageText, mAlternateText->text().trimmed());
+        return u"![%3](%2 \"%1\")"_s.arg(mTitle->text().trimmed(), imageText, mAlternateText->text().trimmed());
     } else {
-        return QStringLiteral("![%1](%2)").arg(mTitle->text().trimmed(), imageText);
+        return u"![%1](%2)"_s.arg(mTitle->text().trimmed(), imageText);
     }
 }
 

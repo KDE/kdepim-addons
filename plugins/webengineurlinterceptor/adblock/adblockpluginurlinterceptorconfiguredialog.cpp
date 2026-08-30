@@ -13,6 +13,7 @@
 #include <KWindowConfig>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -55,7 +56,7 @@ void AdblockPluginUrlInterceptorConfigureDialog::reset()
 void AdblockPluginUrlInterceptorConfigureDialog::help()
 {
     // TODO we can use in akregator too. We need a specific doc.
-    showHelp(QStringLiteral("kmail2"), mAdblockConfigureWidget->helpAnchor());
+    showHelp(u"kmail2"_s, mAdblockConfigureWidget->helpAnchor());
 }
 
 void AdblockPluginUrlInterceptorConfigureDialog::readConfig()

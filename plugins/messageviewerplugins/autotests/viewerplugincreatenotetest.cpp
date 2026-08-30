@@ -11,6 +11,7 @@
 #include <QHBoxLayout>
 #include <QStandardItemModel>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 namespace MessageViewer
 {
@@ -44,7 +45,7 @@ void ViewerPluginCreateNoteTest::shouldShowWidget()
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = note->createView(parent, new KActionCollection(this));
     interface->execute();
-    const auto createnotewidget = parent->findChild<QWidget *>(QStringLiteral("noteedit"));
+    const auto createnotewidget = parent->findChild<QWidget *>(u"noteedit"_s);
     QVERIFY(createnotewidget);
     QCOMPARE(createnotewidget->isHidden(), false);
 }

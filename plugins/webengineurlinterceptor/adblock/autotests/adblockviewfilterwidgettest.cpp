@@ -8,6 +8,7 @@
 #include <QTest>
 #include <QVBoxLayout>
 #include <TextCustomEditor/RichTextBrowser>
+using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(AdblockViewFilterWidgetTest)
 AdblockViewFilterWidgetTest::AdblockViewFilterWidgetTest(QObject *parent)
@@ -18,10 +19,10 @@ AdblockViewFilterWidgetTest::AdblockViewFilterWidgetTest(QObject *parent)
 void AdblockViewFilterWidgetTest::shouldHaveDefaultValues()
 {
     AdblockViewFilterWidget w;
-    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
 
-    const auto mRichTextBrowser = w.findChild<TextCustomEditor::RichTextBrowser *>(QStringLiteral("mRichTextBrowser"));
+    const auto mRichTextBrowser = w.findChild<TextCustomEditor::RichTextBrowser *>(u"mRichTextBrowser"_s);
     QVERIFY(mRichTextBrowser);
 }
 

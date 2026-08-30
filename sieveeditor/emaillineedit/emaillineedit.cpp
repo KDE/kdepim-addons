@@ -16,6 +16,7 @@
 #include <QToolButton>
 #include <QTreeView>
 #include <memory>
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(EmailLineEdit, "emaillineedit.json")
 
@@ -77,7 +78,7 @@ void EmailLineEdit::insertAddresses(const KContacts::Addressee::List &list)
 void EmailLineEdit::slotSelectEmail()
 {
     std::unique_ptr<Akonadi::AbstractEmailAddressSelectionDialog> dlg;
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim6/akonadi/emailaddressselectionldapdialogplugin"));
+    const KPluginMetaData editWidgetPlugin(u"pim6/akonadi/emailaddressselectionldapdialogplugin"_s);
 
     const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin);
     if (result) {
@@ -135,7 +136,7 @@ void EmailLineEdit::verifyAddress()
     mEmailIsValid = lineEditText.contains(QLatin1Char('@'));
     if (mNegativeBackground.isEmpty()) {
         KStatefulBrush bgBrush = KStatefulBrush(KColorScheme::View, KColorScheme::NegativeText);
-        mNegativeBackground = QStringLiteral("QLineEdit{ background-color:%1 }").arg(bgBrush.brush(palette()).color().name());
+        mNegativeBackground = u"QLineEdit{ background-color:%1 }"_s.arg(bgBrush.brush(palette()).color().name());
     }
     if (!mEmailIsValid) {
         styleSheet = mNegativeBackground;

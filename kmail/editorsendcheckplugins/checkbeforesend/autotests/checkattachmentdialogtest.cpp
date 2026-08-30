@@ -42,7 +42,7 @@ void CheckAttachmentDialogTest::shouldAddEmails()
     CheckAttachmentDialog w;
 
     const auto mListWidget = w.findChild<QListWidget *>(u"listwidget"_s);
-    w.setEmails(QStringList() << u"a"_s << u"b"_s << QStringLiteral("v"));
+    w.setEmails(QStringList() << u"a"_s << u"b"_s << u"v"_s);
     QCOMPARE(mListWidget->count(), 3);
 }
 

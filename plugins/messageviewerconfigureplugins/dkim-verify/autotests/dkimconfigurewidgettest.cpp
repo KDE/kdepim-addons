@@ -10,6 +10,7 @@
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(DKIMConfigureWidgetTest)
 
@@ -22,11 +23,11 @@ DKIMConfigureWidgetTest::DKIMConfigureWidgetTest(QObject *parent)
 void DKIMConfigureWidgetTest::shouldHaveDefaultValue()
 {
     DKIMConfigureWidget w;
-    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    const auto mTabWidget = w.findChild<DKIMConfigureTab *>(QStringLiteral("tabwidget"));
+    const auto mTabWidget = w.findChild<DKIMConfigureTab *>(u"tabwidget"_s);
     QVERIFY(mTabWidget);
 }
 

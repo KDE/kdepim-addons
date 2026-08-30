@@ -26,6 +26,7 @@
 #include <KTextTemplate/Template>
 
 #include <QBuffer>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -109,10 +110,9 @@ public:
             return false;
         }
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
-        c.insert(QStringLiteral("block"), msgPart.data());
-        c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
-        c.insert(QStringLiteral("content"),
-                 QVariant::fromValue<MessageViewer::KTextTemplateCallback>([&]([[maybe_unused]] KTextTemplate::OutputStream *stream) {
+        c.insert(u"block"_s, msgPart.data());
+        c.insert(u"showOnlyOneMimePart"_s, context->showOnlyOneMimePart());
+        c.insert(u"content"_s, QVariant::fromValue<MessageViewer::KTextTemplateCallback>([&]([[maybe_unused]] KTextTemplate::OutputStream *stream) {
                      const auto parts = msgPart->subParts();
                      for (const auto &part : parts) {
                          if (part.dynamicCast<MimeTreeParser::AttachmentMessagePart>()) { // don't render the TNEF data itself
@@ -121,7 +121,7 @@ public:
                      }
                  }));
 
-        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
+        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(u"textmessagepart.html"_s);
         KTextTemplate::OutputStream s(htmlWriter->stream());
         t->render(&s, &c);
         return true;

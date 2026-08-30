@@ -10,6 +10,7 @@
 #include <KTimeComboBox>
 #include <QSignalSpy>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 EventDateTimeWidgetTest::EventDateTimeWidgetTest(QObject *parent)
     : QObject(parent)
@@ -21,9 +22,9 @@ EventDateTimeWidgetTest::~EventDateTimeWidgetTest() = default;
 void EventDateTimeWidgetTest::shouldHaveDefaultValue()
 {
     MessageViewer::EventDateTimeWidget edit;
-    const auto datecombobox = edit.findChild<KDateComboBox *>(QStringLiteral("eventdatecombobox"));
+    const auto datecombobox = edit.findChild<KDateComboBox *>(u"eventdatecombobox"_s);
     QVERIFY(datecombobox);
-    const auto timecombobox = edit.findChild<KTimeComboBox *>(QStringLiteral("eventtimecombobox"));
+    const auto timecombobox = edit.findChild<KTimeComboBox *>(u"eventtimecombobox"_s);
     QVERIFY(timecombobox);
 }
 

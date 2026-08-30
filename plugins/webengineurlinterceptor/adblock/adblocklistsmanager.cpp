@@ -8,10 +8,11 @@
 #include "libadblockplugin_debug.h"
 #include <QDir>
 #include <QStandardPaths>
+using namespace Qt::Literals::StringLiterals;
 
 AdblockListsManager::AdblockListsManager(QObject *parent)
     : QObject{parent}
-    , mFilterListsPath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QStringLiteral("/filterlists/"))
+    , mFilterListsPath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + u"/filterlists/"_s)
 {
     if (!QDir().mkpath(mFilterListsPath)) {
         qCWarning(LIBADBLOCKPLUGIN_PLUGIN_LOG) << "Impossible to create " << mFilterListsPath;

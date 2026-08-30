@@ -19,6 +19,7 @@
 #include <GrantleeTheme/GrantleeThemeEngine>
 
 #include <KLocalizedString>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MimeTreeParser::Interface;
 
@@ -70,9 +71,9 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
     engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
 
     auto loader = QSharedPointer<KTextTemplate::FileSystemTemplateLoader>::create();
-    loader->setTemplateDirs({QStringLiteral(":/")});
+    loader->setTemplateDirs({u":/"_s});
     engine.addTemplateLoader(loader);
-    KTextTemplate::Template tpl = engine.loadByName(QStringLiteral("pgpkeymessagepart.html"));
+    KTextTemplate::Template tpl = engine.loadByName(u"pgpkeymessagepart.html"_s);
     if (tpl->error()) {
         qWarning() << tpl->errorString();
     }
@@ -83,7 +84,7 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
 
     block.setProperty("showKeyDetails", context->showSignatureDetails());
     block.setProperty("error", mp->error());
-    block.setProperty("importUrl", QString(mp->makeLink(QStringLiteral("pgpkey")) + QStringLiteral("?action=import")));
+    block.setProperty("importUrl", QString(mp->makeLink(u"pgpkey"_s) + u"?action=import"_s));
     block.setProperty("searchRunning", mp->searchRunning());
     const auto key = mp->key();
     block.setProperty("uid", mp->userID());
@@ -91,7 +92,7 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
     QLocale l;
     block.setProperty("created", l.toString(mp->keyDate(), QLocale::ShortFormat));
     if (!key.isNull()) {
-        block.setProperty("keyUrl", QStringLiteral("kmail:showCertificate#GpgME ### gpgme ### %1").arg(QString::fromLatin1(key.keyID())));
+        block.setProperty("keyUrl", u"kmail:showCertificate#GpgME ### gpgme ### %1"_s.arg(QString::fromLatin1(key.keyID())));
     }
 
     QObject style;
@@ -104,8 +105,8 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
         style.setProperty("frameTextColor", QColor(Qt::white).name());
     }
 
-    ctx.insert(QStringLiteral("block"), &block);
-    ctx.insert(QStringLiteral("style"), &style);
+    ctx.insert(u"block"_s, &block);
+    ctx.insert(u"style"_s, &style);
     KTextTemplate::OutputStream s(htmlWriter->stream());
     tpl->render(&s, &ctx);
     return true;

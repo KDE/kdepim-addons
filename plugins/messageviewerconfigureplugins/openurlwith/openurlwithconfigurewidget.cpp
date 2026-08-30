@@ -15,6 +15,7 @@
 #include <QPointer>
 #include <QPushButton>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 class OpenUrlWithConfigureItem : public QListWidgetItem
 {
@@ -120,7 +121,7 @@ void OpenUrlWithConfigureWidget::displayText(const MessageViewer::OpenWithUrlInf
     if (!r.commandLine().isEmpty()) {
         commandLine += QLatin1Char(' ') + r.commandLine();
     }
-    item->setText(QStringLiteral("%1 (%2)").arg(commandLine, r.url()));
+    item->setText(u"%1 (%2)"_s.arg(commandLine, r.url()));
 }
 
 void OpenUrlWithConfigureWidget::loadSettings()
@@ -225,13 +226,13 @@ void OpenUrlWithConfigureWidget::slotCustomContextMenuRequested(const QPoint &p)
     Q_UNUSED(p);
     QMenu menu(this);
     const auto selectedItemCount{mListWidget->selectedItems().count()};
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule…"), this, &OpenUrlWithConfigureWidget::slotAddRule);
+    menu.addAction(QIcon::fromTheme(u"list-add"_s), i18n("Add Rule…"), this, &OpenUrlWithConfigureWidget::slotAddRule);
     if (selectedItemCount == 1) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule…"), this, &OpenUrlWithConfigureWidget::slotEditRule);
+        menu.addAction(QIcon::fromTheme(u"document-edit"_s), i18n("Edit Rule…"), this, &OpenUrlWithConfigureWidget::slotEditRule);
     }
     if (selectedItemCount > 0) {
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")),
+        menu.addAction(QIcon::fromTheme(u"list-remove"_s),
                        i18np("Remove Rule", "Remove Rules", selectedItemCount),
                        this,
                        &OpenUrlWithConfigureWidget::slotRemoveRule);

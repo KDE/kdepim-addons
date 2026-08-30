@@ -7,6 +7,7 @@
 
 #include "eventdatavisitor.h"
 #include "pimdatasource.h"
+using namespace Qt::Literals::StringLiterals;
 
 BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource, QDate start, QDate end)
     : mDataSource(dataSource)
@@ -69,9 +70,9 @@ QString BaseEventDataVisitor::generateUid(const KCalendarCore::Incidence::Ptr &i
     }
 
     if (recurrenceId.isValid()) {
-        return QStringLiteral("Akonadi-%1-%2").arg(itemId).arg(recurrenceId.toString(QStringLiteral("yyyyMMddThhmmsst")));
+        return u"Akonadi-%1-%2"_s.arg(itemId).arg(recurrenceId.toString(u"yyyyMMddThhmmsst"_s));
     } else {
-        return QStringLiteral("Akonadi-%1").arg(itemId);
+        return u"Akonadi-%1"_s.arg(itemId);
     }
 }
 

@@ -42,6 +42,7 @@ using MimeTreeParser::Interface::BodyPart;
 #include <QMenu>
 #include <QMimeDatabase>
 #include <QTemporaryFile>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -92,12 +93,11 @@ public:
             return false;
         }
 
-        writer->write(QStringLiteral("<div align=\"center\"><h2>") + i18np("Attached business card", "Attached business cards", count)
-                      + QStringLiteral("</h2></div>"));
+        writer->write(u"<div align=\"center\"><h2>"_s + i18np("Attached business card", "Attached business cards", count) + u"</h2></div>"_s);
 
-        const QString defaultPixmapPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("user-identity"), KIconLoader::Desktop);
-        const QString defaultMapIconPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("map-symbolic"), KIconLoader::Small);
-        const QString defaultSmsIconPath = MessageViewer::IconNameCache::instance()->iconPath(QStringLiteral("message-new"), KIconLoader::Small);
+        const QString defaultPixmapPath = MessageViewer::IconNameCache::instance()->iconPath(u"user-identity"_s, KIconLoader::Desktop);
+        const QString defaultMapIconPath = MessageViewer::IconNameCache::instance()->iconPath(u"map-symbolic"_s, KIconLoader::Small);
+        const QString defaultSmsIconPath = MessageViewer::IconNameCache::instance()->iconPath(u"message-new"_s, KIconLoader::Small);
         QMap<QString, QString> mapImppIcons;
         for (const auto &imppService : KContacts::Impp::serviceTypes()) {
             const QString iconName = KContacts::Impp::serviceIcon(imppService);
@@ -123,13 +123,13 @@ public:
             formatter.setDisplayQRCode(false);
             QString htmlStr = formatter.toHtml(Akonadi::StandardContactFormatter::EmbeddableForm);
             const KContacts::Picture photo = a.photo();
-            htmlStr.replace(QStringLiteral("<img src=\"map_icon\""), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(defaultMapIconPath));
-            htmlStr.replace(QStringLiteral("<img src=\"sms_icon\""), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(defaultSmsIconPath));
+            htmlStr.replace(u"<img src=\"map_icon\""_s, u"<img src=\"%1\" width=\"16\" height=\"16\""_s.arg(defaultMapIconPath));
+            htmlStr.replace(u"<img src=\"sms_icon\""_s, u"<img src=\"%1\" width=\"16\" height=\"16\""_s.arg(defaultSmsIconPath));
             for (const auto &[key, value] : mapImppIcons.asKeyValueRange()) {
-                htmlStr.replace(QStringLiteral("<img src=\"%1\"").arg(key), QStringLiteral("<img src=\"%1\" width=\"16\" height=\"16\"").arg(value));
+                htmlStr.replace(u"<img src=\"%1\""_s.arg(key), u"<img src=\"%1\" width=\"16\" height=\"16\""_s.arg(value));
             }
             if (photo.isEmpty()) {
-                htmlStr.replace(QStringLiteral("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(defaultPixmapPath));
+                htmlStr.replace(u"img src=\"contact_photo\""_s, u"img src=\"%1\""_s.arg(defaultPixmapPath));
             } else {
                 QImage img = a.photo().data();
                 const QString dir = msgPart->nodeHelper()->createTempDir(QLatin1StringView("vcard-") + a.uid());
@@ -137,24 +137,22 @@ public:
                 img.save(filename, "PNG");
                 msgPart->nodeHelper()->addTempFile(filename);
                 const QString href = QLatin1StringView("file:") + QLatin1StringView(QUrl::toPercentEncoding(filename));
-                htmlStr.replace(QLatin1StringView("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(href));
+                htmlStr.replace(QLatin1StringView("img src=\"contact_photo\""), u"img src=\"%1\""_s.arg(href));
             }
             writer->write(htmlStr);
 
             if (!memento || !memento->finished() || (memento->finished() && !memento->vcardExist(index))) {
                 const QString addToLinkText = i18n("[Add this contact to the address book]");
-                QString op = QStringLiteral("addToAddressBook:%1").arg(index);
-                writer->write(QStringLiteral("<div align=\"center\"><a href=\"") + msgPart->makeLink(op) + QStringLiteral("\">") + addToLinkText
-                              + QStringLiteral("</a></div><br/><br/>"));
+                QString op = u"addToAddressBook:%1"_s.arg(index);
+                writer->write(u"<div align=\"center\"><a href=\""_s + msgPart->makeLink(op) + u"\">"_s + addToLinkText + u"</a></div><br/><br/>"_s);
             } else {
                 if (memento->address(index) != a) {
                     const QString addToLinkText = i18n("[Update this contact in the address book]");
-                    const QString op = QStringLiteral("updateToAddressBook:%1").arg(index);
-                    writer->write(QStringLiteral("<div align=\"center\"><a href=\"") + msgPart->makeLink(op) + QStringLiteral("\">") + addToLinkText
-                                  + QStringLiteral("</a></div><br><br>"));
+                    const QString op = u"updateToAddressBook:%1"_s.arg(index);
+                    writer->write(u"<div align=\"center\"><a href=\""_s + msgPart->makeLink(op) + u"\">"_s + addToLinkText + u"</a></div><br><br>"_s);
                 } else {
                     const QString addToLinkText = i18n("[This contact is already in addressbook]");
-                    writer->write(QStringLiteral("<div align=\"center\">") + addToLinkText + QStringLiteral("</a></div><br><br>"));
+                    writer->write(u"<div align=\"center\">"_s + addToLinkText + u"</a></div><br><br>"_s);
                 }
             }
         }
@@ -168,7 +166,7 @@ class UrlHandler : public MessageViewer::Interface::BodyPartURLHandler
 public:
     [[nodiscard]] QString name() const override
     {
-        return QStringLiteral("vcardhandler");
+        return u"vcardhandler"_s;
     }
 
     bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart, const QString &path) const override
@@ -230,8 +228,8 @@ public:
         }
 
         auto menu = new QMenu();
-        QAction *open = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("View Business Card"));
-        QAction *saveas = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Business Card As…"));
+        QAction *open = menu->addAction(QIcon::fromTheme(u"document-open"_s), i18n("View Business Card"));
+        QAction *saveas = menu->addAction(QIcon::fromTheme(u"document-save-as"_s), i18n("Save Business Card As…"));
 
         QAction *action = menu->exec(point, nullptr);
         if (action == open) {
@@ -270,9 +268,9 @@ public:
         QString fileName;
         const QString givenName(a.givenName());
         if (givenName.isEmpty()) {
-            fileName = a.familyName() + QStringLiteral(".vcf");
+            fileName = a.familyName() + u".vcf"_s;
         } else {
-            fileName = givenName + QLatin1Char('_') + a.familyName() + QStringLiteral(".vcf");
+            fileName = givenName + QLatin1Char('_') + a.familyName() + u".vcf"_s;
         }
         // get the saveas file name
         QUrl saveAsUrl = QFileDialog::getSaveFileUrl(nullptr, i18nc("@title:window", "Save Business Card"), QUrl::fromUserInput(fileName));

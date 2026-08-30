@@ -10,6 +10,7 @@
 #include <QSignalSpy>
 #include <QTest>
 #include <qtestmouse.h>
+using namespace Qt::Literals::StringLiterals;
 
 MergeContactLoseInformationWarningTest::MergeContactLoseInformationWarningTest(QObject *parent)
     : QObject(parent)
@@ -21,9 +22,9 @@ void MergeContactLoseInformationWarningTest::shouldHaveDefaultValue()
     KABMergeContacts::MergeContactLoseInformationWarning w;
     QVERIFY(!w.isCloseButtonVisible());
     QVERIFY(!w.isVisible());
-    const auto customize = w.findChild<QAction *>(QStringLiteral("customize"));
+    const auto customize = w.findChild<QAction *>(u"customize"_s);
     QVERIFY(customize);
-    const auto automatic = w.findChild<QAction *>(QStringLiteral("automatic"));
+    const auto automatic = w.findChild<QAction *>(u"automatic"_s);
     QVERIFY(automatic);
 }
 
@@ -33,8 +34,8 @@ void MergeContactLoseInformationWarningTest::shouldEmitSignals()
     w.show();
     QVERIFY(QTest::qWaitForWindowExposed(&w));
     QVERIFY(w.isVisible());
-    const auto customize = w.findChild<QAction *>(QStringLiteral("customize"));
-    const auto automatic = w.findChild<QAction *>(QStringLiteral("automatic"));
+    const auto customize = w.findChild<QAction *>(u"customize"_s);
+    const auto automatic = w.findChild<QAction *>(u"automatic"_s);
     QSignalSpy spy1(&w, &KABMergeContacts::MergeContactLoseInformationWarning::continueMerging);
     QSignalSpy spy2(&w, &KABMergeContacts::MergeContactLoseInformationWarning::customizeMergingContacts);
     customize->trigger();

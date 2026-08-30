@@ -13,6 +13,7 @@
 #include <KIdentityManagementCore/Signature>
 
 #include <QSettings>
+using namespace Qt::Literals::StringLiterals;
 
 GearySettings::GearySettings(const QString &filename)
     : settings(new QSettings(filename, QSettings::IniFormat, this))
@@ -36,34 +37,34 @@ void GearySettings::readImapAccount()
 {
     QMap<QString, QVariant> newSettings;
 
-    QString name = settings->value(QStringLiteral("imap_host")).toString();
+    QString name = settings->value(u"imap_host"_s).toString();
     if (!name.isEmpty()) {
-        newSettings.insert(QStringLiteral("ImapServer"), name);
+        newSettings.insert(u"ImapServer"_s, name);
     }
 
-    const QString username = settings->value(QStringLiteral("imap_username")).toString();
-    newSettings.insert(QStringLiteral("UserName"), username);
+    const QString username = settings->value(u"imap_username"_s).toString();
+    newSettings.insert(u"UserName"_s, username);
 
-    const int port = settings->value(QStringLiteral("imap_port"), -1).toInt();
+    const int port = settings->value(u"imap_port"_s, -1).toInt();
     if (port > -1) {
-        newSettings.insert(QStringLiteral("ImapPort"), port);
+        newSettings.insert(u"ImapPort"_s, port);
     }
 
-    if (settings->contains(QStringLiteral("imap_starttls"))) {
-        const bool useTLS = settings->value(QStringLiteral("imap_starttls")).toBool();
+    if (settings->contains(u"imap_starttls"_s)) {
+        const bool useTLS = settings->value(u"imap_starttls"_s).toBool();
         if (useTLS) {
-            newSettings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
+            newSettings.insert(u"Safety"_s, u"STARTTLS"_s);
         }
     }
-    if (settings->contains(QStringLiteral("imap_ssl"))) {
-        const bool useSSL = settings->value(QStringLiteral("imap_ssl")).toBool();
+    if (settings->contains(u"imap_ssl"_s)) {
+        const bool useSSL = settings->value(u"imap_ssl"_s).toBool();
         if (useSSL) {
-            newSettings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
+            newSettings.insert(u"Safety"_s, u"SSL"_s);
         }
     }
 
     if (!name.isEmpty()) {
-        const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, newSettings);
+        const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(u"akonadi_imap_resource"_s, name, newSettings);
         // Check by default
         addCheckMailOnStartup(agentIdentifyName, true);
     }
@@ -71,25 +72,25 @@ void GearySettings::readImapAccount()
 
 void GearySettings::readTransport()
 {
-    const QString host = settings->value(QStringLiteral("smtp_host")).toString();
+    const QString host = settings->value(u"smtp_host"_s).toString();
     if (!host.isEmpty()) {
         MailTransport::Transport *mt = createTransport();
-        mt->setIdentifier(QStringLiteral("SMTP"));
+        mt->setIdentifier(u"SMTP"_s);
         mt->setHost(host);
-        const int port = settings->value(QStringLiteral("smtp_port"), -1).toInt();
+        const int port = settings->value(u"smtp_port"_s, -1).toInt();
         if (port != -1) {
             mt->setPort(port);
         }
 
-        if (!settings->value(QStringLiteral("smtp_noauth"), true).toBool()) {
+        if (!settings->value(u"smtp_noauth"_s, true).toBool()) {
             mt->setEncryption(MailTransport::Transport::EnumEncryption::None);
-        } else if (settings->value(QStringLiteral("smtp_ssl"), true).toBool()) {
+        } else if (settings->value(u"smtp_ssl"_s, true).toBool()) {
             mt->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
-        } else if (settings->value(QStringLiteral("smtp_starttls"), true).toBool()) {
+        } else if (settings->value(u"smtp_starttls"_s, true).toBool()) {
             mt->setEncryption(MailTransport::Transport::EnumEncryption::TLS);
         }
 
-        if (settings->value(QStringLiteral("smtp_use_imap_credentials"), true).toBool()) {
+        if (settings->value(u"smtp_use_imap_credentials"_s, true).toBool()) {
             // TODO store value
         }
 
@@ -100,23 +101,23 @@ void GearySettings::readTransport()
 
 void GearySettings::readIdentity()
 {
-    QString realName = settings->value(QStringLiteral("realName")).toString();
+    QString realName = settings->value(u"realName"_s).toString();
     if (!realName.isEmpty()) {
         KIdentityManagementCore::Identity *identity = createIdentity(realName);
         identity->setFullName(realName);
         identity->setIdentityName(realName);
-        const QString address = settings->value(QStringLiteral("primary_email")).toString();
+        const QString address = settings->value(u"primary_email"_s).toString();
         identity->setPrimaryEmailAddress(address);
-        const QString alias = settings->value(QStringLiteral("alternate_emails")).toString();
+        const QString alias = settings->value(u"alternate_emails"_s).toString();
         if (!alias.isEmpty()) {
             identity->setEmailAliases(alias.split(QLatin1Char(';'), Qt::SkipEmptyParts));
         }
-        const QString signatureStr = settings->value(QStringLiteral("email_signature")).toString();
+        const QString signatureStr = settings->value(u"email_signature"_s).toString();
         if (!signatureStr.isEmpty()) {
             KIdentityManagementCore::Signature signature;
             signature.setType(KIdentityManagementCore::Signature::Inlined);
             signature.setText(signatureStr);
-            const bool useSignature = settings->value(QStringLiteral("use_email_signature"), true).toBool();
+            const bool useSignature = settings->value(u"use_email_signature"_s, true).toBool();
             signature.setEnabledSignature(useSignature);
             identity->setSignature(signature);
         }

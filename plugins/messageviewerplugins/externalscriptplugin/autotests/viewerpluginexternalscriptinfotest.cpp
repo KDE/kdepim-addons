@@ -8,6 +8,7 @@
 #include "../viewerpluginexternalscriptinfo.h"
 
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalScriptInfoTest::ViewerPluginExternalScriptInfoTest(QObject *parent)
     : QObject(parent)
@@ -33,13 +34,13 @@ void ViewerPluginExternalScriptInfoTest::shouldHaveValid()
     ViewerPluginExternalScriptInfo info;
     info.setName(QString());
     QVERIFY(!info.isValid());
-    info.setName(QStringLiteral("foo"));
-    info.setExecutable(QStringLiteral("bla"));
+    info.setName(u"foo"_s);
+    info.setExecutable(u"bla"_s);
     QVERIFY(info.isValid());
-    info.setName(QStringLiteral(" "));
+    info.setName(u" "_s);
     QVERIFY(!info.isValid());
-    info.setName(QStringLiteral("foo"));
-    info.setExecutable(QStringLiteral(" "));
+    info.setName(u"foo"_s);
+    info.setExecutable(u" "_s);
     QVERIFY(!info.isValid());
 }
 
@@ -49,13 +50,13 @@ void ViewerPluginExternalScriptInfoTest::shouldBeEqual_data()
     QTest::newRow("empty") << ViewerPluginExternalScriptInfo();
 
     ViewerPluginExternalScriptInfo f;
-    f.setCommandLine(QStringLiteral("dd"));
-    f.setDescription(QStringLiteral("bla"));
+    f.setCommandLine(u"dd"_s);
+    f.setDescription(u"bla"_s);
     f.setIsReadOnly(true);
     QTest::newRow("not-empty-1") << f;
-    f.setExecutable(QStringLiteral("ssss"));
+    f.setExecutable(u"ssss"_s);
     QTest::newRow("not-empty-2") << f;
-    f.setIcon(QStringLiteral("bloblo"));
+    f.setIcon(u"bloblo"_s);
     QTest::newRow("not-empty-3") << f;
 }
 

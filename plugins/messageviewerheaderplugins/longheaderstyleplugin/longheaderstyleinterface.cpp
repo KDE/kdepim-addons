@@ -8,6 +8,7 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KToggleAction>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 LongHeaderStyleInterface::LongHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
@@ -20,7 +21,7 @@ LongHeaderStyleInterface::~LongHeaderStyleInterface() = default;
 void LongHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {
     auto act = new KToggleAction(i18nc("View->headers->", "&Long Headers"), this);
-    ac->addAction(QStringLiteral("view_headers_long"), act);
+    ac->addAction(u"view_headers_long"_s, act);
     connect(act, &KToggleAction::triggered, this, &LongHeaderStyleInterface::slotStyleChanged);
     addHelpTextAction(act, i18n("Show long list of message headers"));
     mAction.append(act);

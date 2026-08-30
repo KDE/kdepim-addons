@@ -19,6 +19,7 @@
 #endif
 
 #include <KLocalizedString>
+using namespace Qt::Literals::StringLiterals;
 extern "C" {
 #include <mkdio.h>
 }
@@ -30,7 +31,7 @@ char *external_codefmt(const char *src, int, void *)
     QString result;
     QTextStream stream(&result);
     MarkdownHighlighter highLighter(&stream);
-    highLighter.setDefinition(repo.definitionForName(QStringLiteral("SystemC")));
+    highLighter.setDefinition(repo.definitionForName(u"SystemC"_s));
     highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128 ? repo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
                                                                                             : repo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
     highLighter.highlight(QString::fromUtf8(src));

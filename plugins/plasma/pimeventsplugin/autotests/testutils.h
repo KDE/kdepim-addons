@@ -10,11 +10,12 @@
 #include <CalendarEvents/CalendarEventsPlugin>
 #include <QDebug>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 QDebug operator<<(QDebug dbg, const CalendarEvents::EventData &data)
 {
-    dbg.nospace() << data.title() << " (UID " << data.uid() << "), " << data.startDateTime().toString(QStringLiteral("yyyy-MM-dd HH:mm:ss t")) << " - "
-                  << data.endDateTime().toString(QStringLiteral("yyyy-MM-dd HH:mm:ss t"));
+    dbg.nospace() << data.title() << " (UID " << data.uid() << "), " << data.startDateTime().toString(u"yyyy-MM-dd HH:mm:ss t"_s) << " - "
+                  << data.endDateTime().toString(u"yyyy-MM-dd HH:mm:ss t"_s);
     return dbg;
 }
 

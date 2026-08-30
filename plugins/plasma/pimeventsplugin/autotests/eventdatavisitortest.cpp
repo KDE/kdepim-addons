@@ -17,6 +17,7 @@
 #include <KCalendarCore/Todo>
 
 #include <CalendarEvents/CalendarEventsPlugin>
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(CalendarEvents::EventData)
 Q_DECLARE_METATYPE(KCalendarCore::Incidence::Ptr)
@@ -65,14 +66,14 @@ void EventDataVisitorTest::testGenerateUID_data()
     QTest::addColumn<QString>("expectedUID");
 
     auto incidence = KCalendarCore::Event::Ptr::create().staticCast<KCalendarCore::Incidence>();
-    QTest::newRow("simple event") << incidence << QDateTime() << 1ll << QStringLiteral("Akonadi-1");
+    QTest::newRow("simple event") << incidence << QDateTime() << 1ll << u"Akonadi-1"_s;
     QTest::newRow("recurring event") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 47, 0), QTimeZone::UTC) << 1ll
-                                     << QStringLiteral("Akonadi-1-20160529T154700UTC");
+                                     << u"Akonadi-1-20160529T154700UTC"_s;
 
     incidence = KCalendarCore::Todo::Ptr::create().staticCast<KCalendarCore::Incidence>();
-    QTest::newRow("simple todo") << incidence << QDateTime() << 42ll << QStringLiteral("Akonadi-42");
+    QTest::newRow("simple todo") << incidence << QDateTime() << 42ll << u"Akonadi-42"_s;
     QTest::newRow("recurring todo") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 49, 5), QTimeZone::UTC) << 42ll
-                                    << QStringLiteral("Akonadi-42-20160529T154905UTC");
+                                    << u"Akonadi-42-20160529T154905UTC"_s;
 }
 
 void EventDataVisitorTest::testGenerateUID()

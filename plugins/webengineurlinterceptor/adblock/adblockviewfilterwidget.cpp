@@ -8,18 +8,19 @@
 #include <QVBoxLayout>
 #include <TextCustomEditor/RichTextBrowser>
 #include <TextCustomEditor/RichTextBrowserWidget>
+using namespace Qt::Literals::StringLiterals;
 
 AdblockViewFilterWidget::AdblockViewFilterWidget(QWidget *parent)
     : QWidget{parent}
     , mRichTextBrowser(new TextCustomEditor::RichTextBrowser(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(u"mainLayout"_s);
     mainLayout->setContentsMargins({});
 
     auto richTextBrowerWidget = new TextCustomEditor::RichTextBrowserWidget(mRichTextBrowser, this);
-    richTextBrowerWidget->setObjectName(QStringLiteral("richTextBrowerWidget"));
-    mRichTextBrowser->setObjectName(QStringLiteral("mRichTextBrowser"));
+    richTextBrowerWidget->setObjectName(u"richTextBrowerWidget"_s);
+    mRichTextBrowser->setObjectName(u"mRichTextBrowser"_s);
     mainLayout->addWidget(richTextBrowerWidget);
 }
 

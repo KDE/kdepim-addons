@@ -12,6 +12,7 @@
 #include <KMessageBox>
 #include <QAction>
 #include <QDesktopServices>
+using namespace Qt::Literals::StringLiterals;
 
 SendMailPluginInterface::SendMailPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -22,9 +23,9 @@ SendMailPluginInterface::~SendMailPluginInterface() = default;
 
 void SendMailPluginInterface::createAction(KActionCollection *ac)
 {
-    mAction = ac->addAction(QStringLiteral("send_mail"));
+    mAction = ac->addAction(u"send_mail"_s);
     mAction->setText(i18n("Send an email…"));
-    mAction->setIcon(QIcon::fromTheme(QStringLiteral("mail-message-new")));
+    mAction->setIcon(QIcon::fromTheme(u"mail-message-new"_s));
     connect(mAction, &QAction::triggered, this, &SendMailPluginInterface::slotActivated);
     const PimCommon::ActionType type(mAction, PimCommon::ActionType::Action);
     addActionType(type);
@@ -74,7 +75,7 @@ void SendMailPluginInterface::slotSendMails(const QStringList &emails)
 {
     if (!emails.isEmpty()) {
         QUrl url;
-        url.setScheme(QStringLiteral("mailto"));
+        url.setScheme(u"mailto"_s);
         url.setPath(emails.join(QLatin1Char(';')));
         QDesktopServices::openUrl(url);
     }

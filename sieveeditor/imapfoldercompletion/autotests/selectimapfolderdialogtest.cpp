@@ -11,6 +11,7 @@
 #include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 SelectImapFolderDialogTest::SelectImapFolderDialogTest(QObject *parent)
     : QObject(parent)
@@ -25,10 +26,10 @@ void SelectImapFolderDialogTest::shouldHaveDefaultValue()
     KSieveCore::SieveImapAccountSettings account;
     SelectImapFolderDialog w(account);
 
-    const auto mSelectImapFolderWidget = w.findChild<SelectImapFolderWidget *>(QStringLiteral("selectimapfolderwidget"));
+    const auto mSelectImapFolderWidget = w.findChild<SelectImapFolderWidget *>(u"selectimapfolderwidget"_s);
     QVERIFY(mSelectImapFolderWidget);
 
-    const auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    const auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
     const QList<QAbstractButton *> lst = buttonBox->buttons();

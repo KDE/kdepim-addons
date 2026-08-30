@@ -11,6 +11,7 @@
 
 #include <QSignalSpy>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 MailSenderJobTest::MailSenderJobTest() = default;
 
@@ -39,7 +40,7 @@ void MailSenderJobTest::shouldNotSendSignalWhenNoEmails()
     Akonadi::Item::List lst;
     Akonadi::Item item;
     KContacts::Addressee address;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     item.setPayload<KContacts::Addressee>(address);
     lst << item;
     KABMailSender::MailSenderJob mailsender(lst);
@@ -53,8 +54,8 @@ void MailSenderJobTest::shouldSendSignalWhenOneEmail()
     Akonadi::Item::List lst;
     Akonadi::Item item;
     KContacts::Addressee address;
-    address.setName(QStringLiteral("foo1"));
-    KContacts::Email email(QStringLiteral("foo@kde.org"));
+    address.setName(u"foo1"_s);
+    KContacts::Email email(u"foo@kde.org"_s);
     email.setPreferred(true);
     address.addEmail(email);
     item.setPayload<KContacts::Addressee>(address);
@@ -72,8 +73,8 @@ void MailSenderJobTest::shouldNotSendTwiceEmails()
     Akonadi::Item::List lst;
     Akonadi::Item item;
     KContacts::Addressee address;
-    address.setName(QStringLiteral("foo1"));
-    KContacts::Email email(QStringLiteral("foo@kde.org"));
+    address.setName(u"foo1"_s);
+    KContacts::Email email(u"foo@kde.org"_s);
     email.setPreferred(true);
     address.addEmail(email);
     item.setPayload<KContacts::Addressee>(address);
@@ -90,9 +91,9 @@ void MailSenderJobTest::shouldNotAddInvalidEmail()
     Akonadi::Item::List lst;
     Akonadi::Item item;
     KContacts::Addressee address;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     // Invalid email
-    KContacts::Email email(QStringLiteral("foo2"));
+    KContacts::Email email(u"foo2"_s);
     email.setPreferred(true);
     address.addEmail(email);
     item.setPayload<KContacts::Addressee>(address);
@@ -108,9 +109,9 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
     Akonadi::Item::List lst;
     Akonadi::Item item;
     KContacts::Addressee address;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     // Invalid email
-    KContacts::Email email(QStringLiteral("foo2"));
+    KContacts::Email email(u"foo2"_s);
     email.setPreferred(true);
     address.addEmail(email);
     item.setPayload<KContacts::Addressee>(address);
@@ -118,8 +119,8 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
 
     Akonadi::Item item2;
     KContacts::Addressee address2;
-    address2.setName(QStringLiteral("foo2"));
-    KContacts::Email email2(QStringLiteral("foo2@kde.org"));
+    address2.setName(u"foo2"_s);
+    KContacts::Email email2(u"foo2@kde.org"_s);
     email2.setPreferred(true);
     address2.addEmail(email2);
     item2.setPayload<KContacts::Addressee>(address2);
@@ -127,8 +128,8 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
 
     Akonadi::Item item3;
     KContacts::Addressee address3;
-    address3.setName(QStringLiteral("foo3"));
-    KContacts::Email email3(QStringLiteral("foo3@"));
+    address3.setName(u"foo3"_s);
+    KContacts::Email email3(u"foo3@"_s);
     email3.setPreferred(true);
     address3.addEmail(email3);
     item3.setPayload<KContacts::Addressee>(address3);
@@ -136,8 +137,8 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
 
     Akonadi::Item item4;
     KContacts::Addressee address4;
-    address4.setName(QStringLiteral("foo4"));
-    KContacts::Email email4(QStringLiteral("foo4@kde.org"));
+    address4.setName(u"foo4"_s);
+    KContacts::Email email4(u"foo4@kde.org"_s);
     email4.setPreferred(true);
     address4.addEmail(email4);
     item4.setPayload<KContacts::Addressee>(address4);

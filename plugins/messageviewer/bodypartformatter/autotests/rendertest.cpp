@@ -22,6 +22,7 @@
 #include <QStyle>
 #include <QStyleFactory>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 #ifndef Q_OS_WIN
 void initLocale()
@@ -31,7 +32,7 @@ void initLocale()
     setenv("TZ", "UTC", 1);
     setenv("BPF_ITINERARY_TESTMODE", "1", 1); // avoid itinerary plugin doing calendar lookups or D-Bus calls etc
     QStandardPaths::setTestModeEnabled(true);
-    QLocale::setDefault(QLocale(QStringLiteral("en_US")));
+    QLocale::setDefault(QLocale(u"en_US"_s));
 }
 
 Q_CONSTRUCTOR_FUNCTION(initLocale)
@@ -39,8 +40,8 @@ Q_CONSTRUCTOR_FUNCTION(initLocale)
 
 void RenderTest::initTestCase()
 {
-    QIcon::setThemeName(QStringLiteral("breeze"));
-    QApplication::setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
+    QIcon::setThemeName(u"breeze"_s);
+    QApplication::setStyle(QStyleFactory::create(u"Fusion"_s));
     QPalette p(QApplication::style()->standardPalette());
     p.setCurrentColorGroup(QPalette::Normal);
     p.setColor(QPalette::Button, QColor::fromRgb(0xef, 0xeb, 0xe7));
@@ -56,14 +57,13 @@ void RenderTest::testRender_data()
     QTest::addColumn<QString>("outFileName");
 
     QDir dir(QStringLiteral(MAIL_DATA_DIR));
-    const QStringList lst = dir.entryList(QStringList(QStringLiteral("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    const QStringList lst = dir.entryList(QStringList(u"*.mbox"_s), QDir::Files | QDir::Readable | QDir::NoSymLinks);
     for (const QString &file : lst) {
-        if (!QFile::exists(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))) {
+        if (!QFile::exists(dir.path() + QLatin1Char('/') + file + u".html"_s)) {
             continue;
         }
         QTest::newRow(file.toLatin1().constData()) << QString(dir.path() + QLatin1Char('/') + file)
-                                                   << QString(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))
-                                                   << QString(file + QStringLiteral(".out"));
+                                                   << QString(dir.path() + QLatin1Char('/') + file + u".html"_s) << QString(file + u".out"_s);
     }
 }
 
@@ -94,11 +94,11 @@ void RenderTest::testRender()
 
     fileWriter.begin();
     fileWriter.write(
-        QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
-                       "<html>\n"
-                       "<body>\n"));
+        u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
+        "<html>\n"
+        "<body>\n"_s);
     testSource.render(otp.parsedPart(), false);
-    fileWriter.write(QStringLiteral("</body></html>"));
+    fileWriter.write(u"</body></html>"_s);
     fileWriter.end();
 
     compareFile(outFileName, referenceFileName);
@@ -107,16 +107,16 @@ void RenderTest::testRender()
 void RenderTest::testRenderKeyDetails_data()
 {
     QTest::addColumn<QString>("basename");
-    QTest::newRow("message-with-openpgp-key.mbox") << QStringLiteral("message-with-openpgp-key.mbox");
-    QTest::newRow("message-with-two-openpgp-key.mbox") << QStringLiteral("message-with-two-openpgp-key.mbox");
+    QTest::newRow("message-with-openpgp-key.mbox") << u"message-with-openpgp-key.mbox"_s;
+    QTest::newRow("message-with-two-openpgp-key.mbox") << u"message-with-two-openpgp-key.mbox"_s;
 }
 
 void RenderTest::testRenderKeyDetails()
 {
     QFETCH(QString, basename);
     QString mailFileName = QStringLiteral(MAIL_DATA_DIR) + QLatin1Char('/') + basename;
-    QString referenceFileName = QStringLiteral(MAIL_DATA_DIR) + QLatin1Char('/') + basename + QStringLiteral(".html");
-    QString outFileName = basename + QStringLiteral(".out");
+    QString referenceFileName = QStringLiteral(MAIL_DATA_DIR) + QLatin1Char('/') + basename + u".html"_s;
+    QString outFileName = basename + u".out"_s;
 
     // load input mail
     QFile mailFile(mailFileName);
@@ -140,14 +140,14 @@ void RenderTest::testRenderKeyDetails()
 
     fileWriter.begin();
     fileWriter.write(
-        QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
-                       "<html>\n"
-                       "<body>\n"));
+        u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
+        "<html>\n"
+        "<body>\n"_s);
     testSource.render(otp.parsedPart(), false);
-    fileWriter.write(QStringLiteral("</body></html>"));
+    fileWriter.write(u"</body></html>"_s);
     fileWriter.end();
 
-    compareFile(outFileName, referenceFileName + QStringLiteral(".running"));
+    compareFile(outFileName, referenceFileName + u".running"_s);
 
     {
         MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
@@ -155,14 +155,14 @@ void RenderTest::testRenderKeyDetails()
 
         fileWriter.begin();
         fileWriter.write(
-            QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
-                           "<html>\n"
-                           "<body>\n"));
+            u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
+            "<html>\n"
+            "<body>\n"_s);
         testSource.render(otp.parsedPart(), false);
-        fileWriter.write(QStringLiteral("</body></html>"));
+        fileWriter.write(u"</body></html>"_s);
         fileWriter.end();
 
-        compareFile(outFileName, referenceFileName + QStringLiteral(".details"));
+        compareFile(outFileName, referenceFileName + u".details"_s);
     }
 }
 

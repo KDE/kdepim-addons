@@ -11,6 +11,7 @@
 #include <KLocalizedString>
 #include <KToggleAction>
 #include <QHBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
     : PimCommon::CustomToolsViewInterface(parent)
@@ -52,7 +53,7 @@ void TranslatorView::createAction(KActionCollection *ac)
     mAction = new KToggleAction(i18n("&Translator"), this);
     connect(mAction, &KToggleAction::triggered, this, &TranslatorView::slotActivateTranslator);
     if (ac) {
-        ac->addAction(QStringLiteral("translator"), mAction);
+        ac->addAction(u"translator"_s, mAction);
         ac->setDefaultShortcut(mAction, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_T));
     }
     mAction->setChecked(false);

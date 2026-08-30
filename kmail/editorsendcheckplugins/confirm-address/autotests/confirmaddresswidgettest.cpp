@@ -42,7 +42,7 @@ void ConfirmAddressWidgetTest::shouldAddAddress()
 {
     ConfirmAddressWidget w;
     const auto listEmails = w.findChild<QListWidget *>(u"listemails"_s);
-    const QStringList lst{u"foo"_s, u"bla"_s, QStringLiteral("blo")};
+    const QStringList lst{u"foo"_s, u"bla"_s, u"blo"_s};
     w.setValidAddresses(lst);
     QCOMPARE(listEmails->count(), lst.count());
 }
@@ -51,7 +51,7 @@ void ConfirmAddressWidgetTest::shouldAddValidAndInvalidAddresses()
 {
     ConfirmAddressWidget w;
     const auto listEmails = w.findChild<QListWidget *>(u"listemails"_s);
-    const QStringList lst{u"foo"_s, u"foo"_s, QStringLiteral("foo")};
+    const QStringList lst{u"foo"_s, u"foo"_s, u"foo"_s};
     w.setValidAddresses(lst);
     w.setInvalidAddresses(lst);
     QCOMPARE(listEmails->count(), lst.count() * 2);
@@ -61,7 +61,7 @@ void ConfirmAddressWidgetTest::shouldHaveCheckableItem()
 {
     ConfirmAddressWidget w;
     const auto listEmails = w.findChild<QListWidget *>(u"listemails"_s);
-    const QStringList lst{u"foo"_s, u"foo"_s, QStringLiteral("foo")};
+    const QStringList lst{u"foo"_s, u"foo"_s, u"foo"_s};
     w.setValidAddresses(lst);
     for (int i = 0; i < listEmails->count(); ++i) {
         QListWidgetItem *item = listEmails->item(i);
@@ -79,8 +79,8 @@ void ConfirmAddressWidgetTest::shouldGetWhileListEmails()
 {
     ConfirmAddressWidget w;
     const auto listEmails = w.findChild<QListWidget *>(u"listemails"_s);
-    const QStringList validLst{u"foo"_s, u"foo"_s, QStringLiteral("foo")};
-    const QStringList invalidLst{u"boo"_s, u"boo2"_s, QStringLiteral("boo3")};
+    const QStringList validLst{u"foo"_s, u"foo"_s, u"foo"_s};
+    const QStringList invalidLst{u"boo"_s, u"boo2"_s, u"boo3"_s};
     w.setValidAddresses(validLst);
     w.setInvalidAddresses(invalidLst);
     for (int i = 0; i < listEmails->count(); ++i) {

@@ -11,6 +11,7 @@
 #include <QToolButton>
 #include <QTreeView>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 SelectImapFolderWidgetTest::SelectImapFolderWidgetTest(QObject *parent)
     : QObject(parent)
@@ -23,19 +24,19 @@ void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
 {
     KSieveCore::SieveImapAccountSettings account;
     SelectImapFolderWidget w(account);
-    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    const auto mTreeView = w.findChild<QTreeView *>(QStringLiteral("treeview"));
+    const auto mTreeView = w.findChild<QTreeView *>(u"treeview"_s);
     QVERIFY(mTreeView);
 
-    const auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("searchline"));
+    const auto mSearchLineEdit = w.findChild<QLineEdit *>(u"searchline"_s);
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->isClearButtonEnabled());
     QVERIFY(mSearchLineEdit->text().isEmpty());
 
-    const auto refreshImap = w.findChild<QToolButton *>(QStringLiteral("refreshimap"));
+    const auto refreshImap = w.findChild<QToolButton *>(u"refreshimap"_s);
     QVERIFY(refreshImap);
     QVERIFY(!refreshImap->toolTip().isEmpty());
 }

@@ -6,6 +6,7 @@
 
 #include "viewerpluginexternalscriptparseargument.h"
 #include <QTextDocument>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalScriptParseArgument::ViewerPluginExternalScriptParseArgument() = default;
 
@@ -30,29 +31,29 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
     for (const QString &arg : scriptArguments) {
         if (arg == QLatin1StringView("%s")) {
             const KMime::Headers::Subject *const subject = mMessage->subject(KMime::CreatePolicy::DontCreate);
-            newArguments << QStringLiteral("\"%1\"").arg(subject ? subject->asUnicodeString() : QString());
+            newArguments << u"\"%1\""_s.arg(subject ? subject->asUnicodeString() : QString());
         } else if (arg == QLatin1StringView("%from")) {
             const KMime::Headers::From *const from = mMessage->from(KMime::CreatePolicy::DontCreate);
-            newArguments << QStringLiteral("\"%1\"").arg(from ? from->asUnicodeString() : QString());
+            newArguments << u"\"%1\""_s.arg(from ? from->asUnicodeString() : QString());
         } else if (arg == QLatin1StringView("%to")) {
             const KMime::Headers::To *const to = mMessage->to(KMime::CreatePolicy::DontCreate);
-            newArguments << QStringLiteral("\"%1\"").arg(to ? to->asUnicodeString() : QString());
+            newArguments << u"\"%1\""_s.arg(to ? to->asUnicodeString() : QString());
         } else if (arg == QLatin1StringView("%cc")) {
             const KMime::Headers::Cc *const cc = mMessage->cc(KMime::CreatePolicy::DontCreate);
-            newArguments << QStringLiteral("\"%1\"").arg(cc ? cc->asUnicodeString() : QString());
+            newArguments << u"\"%1\""_s.arg(cc ? cc->asUnicodeString() : QString());
         } else if (arg == QLatin1StringView("%bcc")) {
             const KMime::Headers::Bcc *const bcc = mMessage->bcc(KMime::CreatePolicy::DontCreate);
-            newArguments << QStringLiteral("\"%1\"").arg(bcc ? bcc->asUnicodeString() : QString());
+            newArguments << u"\"%1\""_s.arg(bcc ? bcc->asUnicodeString() : QString());
         } else if (arg == QLatin1StringView("%body")) {
             // const QByteArray body = mMessage->body();
             // qDebug() << " BODY ************" << mMessage->encodedBody();
             QTextDocument doc;
             doc.setHtml(mMessage->decodedText());
             // qDebug() << " AFTYER BODY ************" << doc.toPlainText();
-            newArguments << QStringLiteral("\"%1\"").arg(doc.toPlainText());
+            newArguments << u"\"%1\""_s.arg(doc.toPlainText());
         } else if (arg == QLatin1StringView("%inreplyto")) {
             KMime::Headers::InReplyTo *inReplyTo = mMessage->inReplyTo(KMime::CreatePolicy::DontCreate);
-            newArguments << QStringLiteral("\"%1\"").arg(inReplyTo ? inReplyTo->asUnicodeString() : QString());
+            newArguments << u"\"%1\""_s.arg(inReplyTo ? inReplyTo->asUnicodeString() : QString());
         } else if (arg == QLatin1StringView("%akonadiUrl")) {
             newArguments << mAkonadiUrl;
         } else {

@@ -14,6 +14,7 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QWhatsThis>
+using namespace Qt::Literals::StringLiterals;
 OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *parent)
     : QWidget{parent}
     , mEnabled(new QCheckBox(i18nc("@option:check", "Enabled"), this))
@@ -25,7 +26,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins(QMargins());
 
-    mEnabled->setObjectName(QStringLiteral("mEnabled"));
+    mEnabled->setObjectName(u"mEnabled"_s);
     mainLayout->addWidget(mEnabled);
 
     mServerName->setObjectName(QLatin1StringView("mServerName"));
@@ -55,8 +56,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
 
     mExecutable->setObjectName(QLatin1StringView("mEditorRequester"));
 
-    mExecutable->setMimeTypeFilters(
-        {QStringLiteral("application/x-executable"), QStringLiteral("application/x-shellscript"), QStringLiteral("application/x-desktop")});
+    mExecutable->setMimeTypeFilters({u"application/x-executable"_s, u"application/x-shellscript"_s, u"application/x-desktop"_s});
 
     mExecutable->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
     mExecutable->lineEdit()->setClearButtonEnabled(true);

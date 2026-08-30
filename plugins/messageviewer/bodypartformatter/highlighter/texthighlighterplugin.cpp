@@ -24,6 +24,7 @@
 #include <QGuiApplication>
 #include <QMimeDatabase>
 #include <QPalette>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -52,10 +53,9 @@ public:
         }
 
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
-        c.insert(QStringLiteral("block"), msgPart.data());
-        c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
-        c.insert(QStringLiteral("content"),
-                 QVariant::fromValue<MessageViewer::KTextTemplateCallback>([this, htmlWriter, def, msgPart](KTextTemplate::OutputStream *) {
+        c.insert(u"block"_s, msgPart.data());
+        c.insert(u"showOnlyOneMimePart"_s, context->showOnlyOneMimePart());
+        c.insert(u"content"_s, QVariant::fromValue<MessageViewer::KTextTemplateCallback>([this, htmlWriter, def, msgPart](KTextTemplate::OutputStream *) {
                      Highlighter highLighter(htmlWriter->stream());
                      highLighter.setDefinition(def);
                      highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
@@ -64,7 +64,7 @@ public:
                      highLighter.highlight(msgPart->text());
                  }));
 
-        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
+        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(u"textmessagepart.html"_s);
         KTextTemplate::OutputStream s(htmlWriter->stream());
         t->render(&s, &c);
         return true;

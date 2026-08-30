@@ -8,6 +8,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>
+using namespace Qt::Literals::StringLiterals;
 
 int main(int argc, char **argv)
 {
@@ -16,12 +17,12 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("email"), QStringLiteral("Email address"), QStringLiteral("emailaddress")));
+    parser.addOption(QCommandLineOption(QStringList() << u"email"_s, u"Email address"_s, u"emailaddress"_s));
 
     parser.process(app);
     QString email;
-    if (!parser.value(QStringLiteral("email")).isEmpty()) {
-        email = parser.value(QStringLiteral("email"));
+    if (!parser.value(u"email"_s).isEmpty()) {
+        email = parser.value(u"email"_s);
     }
 
     KABGravatar::GravatarUpdateDialog dlg;

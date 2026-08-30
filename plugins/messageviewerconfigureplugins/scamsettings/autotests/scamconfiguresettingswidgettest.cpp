@@ -10,6 +10,7 @@
 #include <QTest>
 #include <QTreeWidget>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(ScamConfigureSettingsWidgetTest)
 ScamConfigureSettingsWidgetTest::ScamConfigureSettingsWidgetTest(QObject *parent)
     : QObject{parent}
@@ -20,11 +21,11 @@ ScamConfigureSettingsWidgetTest::ScamConfigureSettingsWidgetTest(QObject *parent
 void ScamConfigureSettingsWidgetTest::shouldHaveDefaultValues()
 {
     ScamConfigureSettingsWidget w;
-    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    const auto mTreeWidget = w.findChild<QTreeWidget *>(QStringLiteral("mTreeWidget"));
+    const auto mTreeWidget = w.findChild<QTreeWidget *>(u"mTreeWidget"_s);
     QVERIFY(mTreeWidget);
     QVERIFY(!mTreeWidget->rootIsDecorated());
     QVERIFY(!mTreeWidget->header()->sectionsMovable());

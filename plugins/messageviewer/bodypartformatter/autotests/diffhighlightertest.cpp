@@ -14,6 +14,7 @@
 #include <QProcess>
 #include <QStandardPaths>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 DiffHighlighterTest::DiffHighlighterTest(QObject *parent)
     : QObject(parent)
@@ -35,18 +36,18 @@ QString readDiffFile(const QString &diffFile)
 void DiffHighlighterTest::shouldGenerateDiff_data()
 {
     QTest::addColumn<QString>("input");
-    QTest::newRow("test1") << QStringLiteral("test1");
-    QTest::newRow("kcontact1") << QStringLiteral("kcontact1");
-    QTest::newRow("diff-akonadiconsole-16.12-master") << QStringLiteral("diff-akonadiconsole-16.12-master");
+    QTest::newRow("test1") << u"test1"_s;
+    QTest::newRow("kcontact1") << u"kcontact1"_s;
+    QTest::newRow("diff-akonadiconsole-16.12-master") << u"diff-akonadiconsole-16.12-master"_s;
 }
 
 void DiffHighlighterTest::shouldGenerateDiff()
 {
     QFETCH(QString, input);
 
-    const QString originalFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral(".diff");
-    const QString refFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-ref.diff");
-    const QString generatedFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-generated.diff");
+    const QString originalFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + u".diff"_s;
+    const QString refFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + u"-ref.diff"_s;
+    const QString generatedFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + u"-generated.diff"_s;
     QString diff = readDiffFile(originalFile);
 
     // Create generated file
@@ -56,7 +57,7 @@ void DiffHighlighterTest::shouldGenerateDiff()
 
     KSyntaxHighlighting::Repository repo;
     Highlighter highLighter(&s);
-    highLighter.setDefinition(repo.definitionForName(QStringLiteral("Diff")));
+    highLighter.setDefinition(repo.definitionForName(u"Diff"_s));
     highLighter.setTheme(repo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
     highLighter.highlight(diff);
 
@@ -64,10 +65,10 @@ void DiffHighlighterTest::shouldGenerateDiff()
     f.close();
 
     // compare to reference file
-    QStringList args = QStringList() << QStringLiteral("-u") << refFile << generatedFile;
+    QStringList args = QStringList() << u"-u"_s << refFile << generatedFile;
     QProcess proc;
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
-    proc.start(QStringLiteral("diff"), args);
+    proc.start(u"diff"_s, args);
     QVERIFY(proc.waitForFinished());
 
     QCOMPARE(proc.exitCode(), 0);

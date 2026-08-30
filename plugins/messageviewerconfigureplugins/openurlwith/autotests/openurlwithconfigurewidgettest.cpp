@@ -11,6 +11,7 @@
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(OpenUrlWithConfigureWidgetTest)
 OpenUrlWithConfigureWidgetTest::OpenUrlWithConfigureWidgetTest(QObject *parent)
     : QObject{parent}
@@ -22,26 +23,26 @@ void OpenUrlWithConfigureWidgetTest::shouldHaveDefaultValues()
 {
     OpenUrlWithConfigureWidget w;
 
-    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    const auto mListWidget = w.findChild<QListWidget *>(QStringLiteral("mListWidget"));
+    const auto mListWidget = w.findChild<QListWidget *>(u"mListWidget"_s);
     QVERIFY(mListWidget);
     QVERIFY(mListWidget->alternatingRowColors());
     QVERIFY(mListWidget->isSortingEnabled());
     QCOMPARE(mListWidget->contextMenuPolicy(), Qt::CustomContextMenu);
     QCOMPARE(mListWidget->selectionMode(), QAbstractItemView::ExtendedSelection);
 
-    const auto mAddRule = w.findChild<QPushButton *>(QStringLiteral("mAddRule"));
+    const auto mAddRule = w.findChild<QPushButton *>(u"mAddRule"_s);
     QVERIFY(mAddRule);
     QVERIFY(!mAddRule->text().isEmpty());
 
-    const auto mRemoveRule = w.findChild<QPushButton *>(QStringLiteral("mRemoveRule"));
+    const auto mRemoveRule = w.findChild<QPushButton *>(u"mRemoveRule"_s);
     QVERIFY(mRemoveRule);
     QVERIFY(!mRemoveRule->text().isEmpty());
 
-    const auto mModifyRule = w.findChild<QPushButton *>(QStringLiteral("mModifyRule"));
+    const auto mModifyRule = w.findChild<QPushButton *>(u"mModifyRule"_s);
     QVERIFY(mModifyRule);
     QVERIFY(!mModifyRule->text().isEmpty());
 }

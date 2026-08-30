@@ -9,6 +9,7 @@
 #include "qcsvreader.h"
 #include <QIODevice>
 #include <QPair>
+using namespace Qt::Literals::StringLiterals;
 
 CsvParser::CsvParser(QObject *parent)
     : QThread(parent)
@@ -84,7 +85,7 @@ void QCsvModel::columnCountChanged(int columns)
 {
     mColumnCount = columns;
     mFieldIdentifiers.resize(columns);
-    mFieldIdentifiers[columns - 1] = QStringLiteral("0");
+    mFieldIdentifiers[columns - 1] = u"0"_s;
     Q_EMIT layoutChanged();
 }
 

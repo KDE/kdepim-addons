@@ -11,6 +11,7 @@
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(AdblockViewFilterDialogTest)
 AdblockViewFilterDialogTest::AdblockViewFilterDialogTest(QObject *parent)
@@ -23,13 +24,13 @@ void AdblockViewFilterDialogTest::shouldHaveDefaultValues()
 {
     AdblockViewFilterDialog w;
     QVERIFY(!w.windowTitle().isEmpty());
-    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
 
-    const auto mAdblockViewFilterWidget = w.findChild<AdblockViewFilterWidget *>(QStringLiteral("mAdblockViewFilterWidget"));
+    const auto mAdblockViewFilterWidget = w.findChild<AdblockViewFilterWidget *>(u"mAdblockViewFilterWidget"_s);
     QVERIFY(mAdblockViewFilterWidget);
 
-    const auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    const auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonBox"_s);
     QVERIFY(buttonBox);
 }
 

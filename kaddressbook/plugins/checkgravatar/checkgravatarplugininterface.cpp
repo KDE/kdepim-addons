@@ -15,6 +15,7 @@
 #include <QPointer>
 
 #include <KContacts/Addressee>
+using namespace Qt::Literals::StringLiterals;
 
 CheckGravatarPluginInterface::CheckGravatarPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -32,7 +33,7 @@ void CheckGravatarPluginInterface::updateActions(int numberOfSelectedItems, [[ma
 
 void CheckGravatarPluginInterface::createAction(KActionCollection *ac)
 {
-    mAction = ac->addAction(QStringLiteral("search_gravatar"));
+    mAction = ac->addAction(u"search_gravatar"_s);
     mAction->setText(i18n("Check Gravatar…"));
     connect(mAction, &QAction::triggered, this, &CheckGravatarPluginInterface::slotActivated);
     PimCommon::ActionType type(mAction, PimCommon::ActionType::Tools);

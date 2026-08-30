@@ -9,6 +9,7 @@
 #include <Akonadi/ItemModifyJob>
 #include <KLocalizedString>
 #include <KMessageBox>
+using namespace Qt::Literals::StringLiterals;
 
 UpdateContactJob::UpdateContactJob(const QString &email, const KContacts::Addressee &contact, QWidget *parentWidget, QObject *parent)
     : KJob(parent)
@@ -65,7 +66,7 @@ void UpdateContactJob::slotUpdateContactDone(KJob *job)
         "The vCard was updated in your address book; "
         "you can add more information to this "
         "entry by opening the address book.");
-    KMessageBox::information(mParentWidget, text, QString(), QStringLiteral("updatedtokabc"));
+    KMessageBox::information(mParentWidget, text, QString(), u"updatedtokabc"_s);
 
     emitResult();
 }

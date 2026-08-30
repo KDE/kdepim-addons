@@ -14,6 +14,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -25,13 +26,13 @@ AutogenerateConfigureAskDialog::AutogenerateConfigureAskDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Ask AI"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(u"mainLayout"_s);
 
-    mAutogenerateConfigureAskWidget->setObjectName(QStringLiteral("mAutogenerateConfigureAskWidget"));
+    mAutogenerateConfigureAskWidget->setObjectName(u"mAutogenerateConfigureAskWidget"_s);
     mainLayout->addWidget(mAutogenerateConfigureAskWidget);
 
     auto button = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    button->setObjectName(QStringLiteral("button"));
+    button->setObjectName(u"button"_s);
     mainLayout->addWidget(button);
     connect(button, &QDialogButtonBox::rejected, this, &AutogenerateConfigureAskDialog::reject);
     connect(button, &QDialogButtonBox::accepted, this, &AutogenerateConfigureAskDialog::accept);

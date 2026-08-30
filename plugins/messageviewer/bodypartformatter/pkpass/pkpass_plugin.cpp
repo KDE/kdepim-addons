@@ -22,6 +22,7 @@
 #include <QGuiApplication>
 #include <QImage>
 #include <QUrl>
+using namespace Qt::Literals::StringLiterals;
 
 static bool isPkPassContent(KMime::Content *content)
 {
@@ -57,38 +58,38 @@ public:
         if (!pass) {
             return false;
         }
-        const auto dir = mp->nodeHelper()->createTempDir(QStringLiteral("pkpass"));
+        const auto dir = mp->nodeHelper()->createTempDir(u"pkpass"_s);
         const auto logo = pass->logo();
         if (!logo.isNull()) {
-            const QString fileName = dir + QStringLiteral("/logo.png");
+            const QString fileName = dir + u"/logo.png"_s;
             logo.save(fileName);
             pass->setProperty("logoUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
         const auto strip = pass->strip();
         if (!strip.isNull()) {
-            const QString fileName = dir + QStringLiteral("/strip.png");
+            const QString fileName = dir + u"/strip.png"_s;
             strip.save(fileName);
             pass->setProperty("stripUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
         const auto background = pass->background();
         if (!background.isNull()) {
-            const QString fileName = dir + QStringLiteral("/background.png");
+            const QString fileName = dir + u"/background.png"_s;
             background.save(fileName);
             pass->setProperty("backgroundUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
         const auto footer = pass->footer();
         if (!footer.isNull()) {
-            const QString fileName = dir + QStringLiteral("/footer.png");
+            const QString fileName = dir + u"/footer.png"_s;
             footer.save(fileName);
             pass->setProperty("footerUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
         const auto thumbnail = pass->thumbnail();
         if (!thumbnail.isNull()) {
-            const QString fileName = dir + QStringLiteral("/thumbnail.png");
+            const QString fileName = dir + u"/thumbnail.png"_s;
             thumbnail.save(fileName);
             pass->setProperty("thumbnailUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
@@ -118,7 +119,7 @@ public:
             if (code) {
                 code->setData(barcode.message());
 
-                const QString fileName = dir + QStringLiteral("/barcode.png");
+                const QString fileName = dir + u"/barcode.png"_s;
 
                 // determine the closest to preferred barcode size that fits
                 // within the pass and is an integer scale of the minimum size
@@ -150,15 +151,15 @@ public:
         }
 
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
-        c.insert(QStringLiteral("block"), mp.data());
-        c.insert(QStringLiteral("pass"), pass.get());
+        c.insert(u"block"_s, mp.data());
+        c.insert(u"pass"_s, pass.get());
         KTextTemplate::Template t;
         if (qobject_cast<KPkPass::BoardingPass *>(pass.get())) {
-            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/boardingpass.html"));
+            t = MessageViewer::MessagePartRendererManager::self()->loadByName(u"org.kde.messageviewer/pkpass/boardingpass.html"_s);
         } else if (pass->type() == KPkPass::Pass::EventTicket) {
-            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/eventticket.html"));
+            t = MessageViewer::MessagePartRendererManager::self()->loadByName(u"org.kde.messageviewer/pkpass/eventticket.html"_s);
         } else if (pass->type() == KPkPass::Pass::Generic) {
-            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/generic.html"));
+            t = MessageViewer::MessagePartRendererManager::self()->loadByName(u"org.kde.messageviewer/pkpass/generic.html"_s);
         } else {
             // unknown pass type we have no template for
             return false;

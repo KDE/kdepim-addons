@@ -9,6 +9,7 @@
 #include <QProcess>
 #include <QRegularExpression>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace Qt::Literals;
 
@@ -16,18 +17,18 @@ static void compareFile(const QString &outFile, const QString &referenceFile)
 {
     QVERIFY(QFile::exists(outFile));
 
-    const QString htmlFile = outFile + QStringLiteral(".html");
+    const QString htmlFile = outFile + u".html"_s;
     // remove tailing newlines and spaces and make htmlmore uniform (breaks pre tags)
     {
         QFile f(outFile);
         QVERIFY(f.open(QIODevice::ReadOnly));
         QString content = QString::fromUtf8(f.readAll());
         f.close();
-        content.replace(QRegularExpression(QStringLiteral("[\t ]+")), QStringLiteral(" "));
-        content.replace(QRegularExpression(QStringLiteral("[\t ]*\n+[\t ]*")), QStringLiteral("\n"));
-        content.replace(QRegularExpression(QStringLiteral("([\n\t ])\\1+")), QStringLiteral("\\1"));
-        content.replace(QRegularExpression(QStringLiteral(">\n+[\t ]*")), QStringLiteral(">"));
-        content.replace(QRegularExpression(QStringLiteral("[\t ]*\n+[\t ]*<")), QStringLiteral("<"));
+        content.replace(QRegularExpression(u"[\t ]+"_s), u" "_s);
+        content.replace(QRegularExpression(u"[\t ]*\n+[\t ]*"_s), u"\n"_s);
+        content.replace(QRegularExpression(u"([\n\t ])\\1+"_s), u"\\1"_s);
+        content.replace(QRegularExpression(u">\n+[\t ]*"_s), u">"_s);
+        content.replace(QRegularExpression(u"[\t ]*\n+[\t ]*<"_s), u"<"_s);
         content.replace(QLatin1StringView("&nbsp;"), QLatin1StringView("NBSP_ENTITY_PLACEHOLDER")); // xmlling chokes on &nbsp;
         QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
         f.write(content.toUtf8());
@@ -36,9 +37,8 @@ static void compareFile(const QString &outFile, const QString &referenceFile)
 
     // validate xml and pretty-print for comparison
     // TODO add proper cmake check for xmllint and diff
-    QStringList args = QStringList() << QStringLiteral("--format") << QStringLiteral("--encode") << QStringLiteral("UTF8") << QStringLiteral("--output")
-                                     << htmlFile << outFile;
-    QCOMPARE(QProcess::execute(QStringLiteral("xmllint"), args), 0);
+    QStringList args = QStringList() << u"--format"_s << u"--encode"_s << u"UTF8"_s << u"--output"_s << htmlFile << outFile;
+    QCOMPARE(QProcess::execute(u"xmllint"_s, args), 0);
 
     // get rid of system dependent or random paths
     {
@@ -46,20 +46,20 @@ static void compareFile(const QString &outFile, const QString &referenceFile)
         QVERIFY(f.open(QIODevice::ReadOnly));
         QString content = QString::fromUtf8(f.readAll());
         f.close();
-        content.replace(QRegularExpression(QStringLiteral("\"file:[^\"]*[/(?:%2F)]([^\"/(?:%2F)]*)\"")), QStringLiteral("\"file:\\1\""));
+        content.replace(QRegularExpression(u"\"file:[^\"]*[/(?:%2F)]([^\"/(?:%2F)]*)\""_s), u"\"file:\\1\""_s);
         content.replace(QRegularExpression(u"src=\"/[^\"]*/([^\"/(?:%2F)]*)\""_s), u"src=\"file:\\1\""_s);
         content.replace(QLatin1StringView("NBSP_ENTITY_PLACEHOLDER"), QLatin1StringView("&nbsp;")); // undo above transformation for xmllint
-        content.replace(QRegularExpression(QStringLiteral("/bodypart/\\d+/")), QStringLiteral("/bodypart/0/"));
+        content.replace(QRegularExpression(u"/bodypart/\\d+/"_s), u"/bodypart/0/"_s);
         QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
         f.write(content.toUtf8());
         f.close();
     }
 
     // compare to reference file
-    args = QStringList() << QStringLiteral("-u") << referenceFile << htmlFile;
+    args = QStringList() << u"-u"_s << referenceFile << htmlFile;
     QProcess proc;
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
-    proc.start(QStringLiteral("diff"), args);
+    proc.start(u"diff"_s, args);
     QVERIFY(proc.waitForFinished());
 
     QCOMPARE(proc.exitCode(), 0);

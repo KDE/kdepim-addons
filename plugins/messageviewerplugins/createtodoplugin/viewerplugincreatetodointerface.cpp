@@ -13,6 +13,7 @@
 #include <KActionCollection>
 #include <QAction>
 #include <QLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -65,13 +66,13 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginCreateTodoInterface::fea
 void ViewerPluginCreateTodoInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        auto act = new QAction(QIcon::fromTheme(QStringLiteral("task-new")), i18n("Create To-do"), this);
+        auto act = new QAction(QIcon::fromTheme(u"task-new"_s), i18n("Create To-do"), this);
         act->setIconText(i18n("Create To-do"));
         addHelpTextAction(act, i18n("Allows you to create a calendar to-do or reminder from this message"));
         act->setWhatsThis(
             i18n("This option starts the KOrganizer to-do editor with initial values taken from the currently selected message. Then you can edit the to-do to "
                  "your liking before saving it to your calendar."));
-        ac->addAction(QStringLiteral("create_todo"), act);
+        ac->addAction(u"create_todo"_s, act);
         ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL | Qt::Key_T));
         connect(act, &QAction::triggered, this, &ViewerPluginCreateTodoInterface::slotActivatePlugin);
         mAction.append(act);

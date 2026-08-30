@@ -10,6 +10,7 @@
 #include <QStackedWidget>
 #include <QStandardPaths>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 using namespace KABMergeContacts;
 
 MergeContactInfoWidgetTest::MergeContactInfoWidgetTest() = default;
@@ -22,9 +23,9 @@ void MergeContactInfoWidgetTest::initTestCase()
 void MergeContactInfoWidgetTest::shouldHaveDefaultValueOnCreation()
 {
     MergeContactInfoWidget infoWidget;
-    const auto stackedWidget = infoWidget.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    const auto stackedWidget = infoWidget.findChild<QStackedWidget *>(u"stackedwidget"_s);
     QVERIFY(stackedWidget);
-    QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("nocontact"));
+    QCOMPARE(stackedWidget->currentWidget()->objectName(), u"nocontact"_s);
 }
 
 void MergeContactInfoWidgetTest::shouldHaveActivateDisplayWidgetWhenSelectOneContact()
@@ -32,8 +33,8 @@ void MergeContactInfoWidgetTest::shouldHaveActivateDisplayWidgetWhenSelectOneCon
     MergeContactInfoWidget infoWidget;
     Akonadi::Item item(4);
     infoWidget.setContact(item);
-    const auto stackedWidget = infoWidget.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
-    QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("contactwidget"));
+    const auto stackedWidget = infoWidget.findChild<QStackedWidget *>(u"stackedwidget"_s);
+    QCOMPARE(stackedWidget->currentWidget()->objectName(), u"contactwidget"_s);
 }
 
 void MergeContactInfoWidgetTest::shouldHaveActivateNoWidgetWhenSelectNoContact()
@@ -41,10 +42,10 @@ void MergeContactInfoWidgetTest::shouldHaveActivateNoWidgetWhenSelectNoContact()
     MergeContactInfoWidget infoWidget;
     Akonadi::Item item(4);
     infoWidget.setContact(item);
-    const auto stackedWidget = infoWidget.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
-    QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("contactwidget"));
+    const auto stackedWidget = infoWidget.findChild<QStackedWidget *>(u"stackedwidget"_s);
+    QCOMPARE(stackedWidget->currentWidget()->objectName(), u"contactwidget"_s);
     infoWidget.setContact(Akonadi::Item());
-    QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("nocontact"));
+    QCOMPARE(stackedWidget->currentWidget()->objectName(), u"nocontact"_s);
 }
 
 QTEST_MAIN(MergeContactInfoWidgetTest)

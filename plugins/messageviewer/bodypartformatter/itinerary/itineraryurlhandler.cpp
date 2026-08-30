@@ -33,6 +33,7 @@
 
 #include <memory>
 #include <type_traits>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KItinerary;
 
@@ -109,7 +110,7 @@ bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bo
     QAction *action = nullptr;
     const auto devices = m_kdeConnect->devices();
     for (const auto &device : devices) {
-        action = menu.addAction(QIcon::fromTheme(QStringLiteral("kdeconnect")), i18n("Send to %1", device.name));
+        action = menu.addAction(QIcon::fromTheme(u"kdeconnect"_s), i18n("Send to %1", device.name));
         QObject::connect(action, &QAction::triggered, this, [this, part, device]() {
             openWithKDEConnect(part, device.deviceId);
         });
@@ -139,7 +140,7 @@ QString ItineraryUrlHandler::statusBarMessage(MimeTreeParser::Interface::BodyPar
 
 bool ItineraryUrlHandler::hasItineraryApp()
 {
-    return KService::serviceByDesktopName(QStringLiteral("org.kde.itinerary"));
+    return KService::serviceByDesktopName(u"org.kde.itinerary"_s);
 }
 
 ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPart *part) const
@@ -155,7 +156,7 @@ ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPa
 void ItineraryUrlHandler::showCalendar(QDate date) const
 {
     // Start or activate KOrganizer. When Kontact is running it will switch to KOrganizer view
-    const auto korgaService = KService::serviceByDesktopName(QStringLiteral("org.kde.korganizer"));
+    const auto korgaService = KService::serviceByDesktopName(u"org.kde.korganizer"_s);
 
     if (!korgaService) {
         qCWarning(ITINERARY_LOG) << "Could not find KOrganizer";
@@ -172,16 +173,13 @@ void ItineraryUrlHandler::showCalendar(QDate date) const
         }
 
         // select the date of the reservation
-        QDBusInterface korgIface(QStringLiteral("org.kde.korganizer"),
-                                 QStringLiteral("/Calendar"),
-                                 QStringLiteral("org.kde.Korganizer.Calendar"),
-                                 QDBusConnection::sessionBus());
+        QDBusInterface korgIface(u"org.kde.korganizer"_s, u"/Calendar"_s, u"org.kde.Korganizer.Calendar"_s, QDBusConnection::sessionBus());
         if (!korgIface.isValid()) {
             qCWarning(ITINERARY_LOG) << "Calendar interface is not valid! " << korgIface.lastError().message();
             return;
         }
-        korgIface.call(QStringLiteral("showEventView"));
-        korgIface.call(QStringLiteral("showDate"), date);
+        korgIface.call(u"showEventView"_s);
+        korgIface.call(u"showDate"_s, date);
     });
 
     job->start();
@@ -200,9 +198,9 @@ static void attachPass(const KCalendarCore::Event::Ptr &event, const QList<QVari
             return;
         }
 
-        event->deleteAttachments(QStringLiteral("application/vnd.apple.pkpass"));
+        event->deleteAttachments(u"application/vnd.apple.pkpass"_s);
         using namespace KCalendarCore;
-        Attachment att(data.toBase64(), QStringLiteral("application/vnd.apple.pkpass"));
+        Attachment att(data.toBase64(), u"application/vnd.apple.pkpass"_s);
         att.setLabel(JsonLd::canConvert<FlightReservation>(reservation) ? i18n("Boarding Pass")
                                                                         : i18n("Ticket")); // TODO add passenger name after string freeze is lifted
         event->addAttachment(att);
@@ -238,7 +236,7 @@ void ItineraryUrlHandler::addToCalendar(ItineraryMemento *memento) const
 void ItineraryUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) const
 {
     const auto fileName = createItineraryFile(part);
-    auto job = new KIO::ApplicationLauncherJob(KService::serviceByDesktopName(QStringLiteral("org.kde.itinerary")));
+    auto job = new KIO::ApplicationLauncherJob(KService::serviceByDesktopName(u"org.kde.itinerary"_s));
     job->setUrls({QUrl::fromLocalFile(fileName)});
     job->start();
 }
@@ -251,7 +249,7 @@ void ItineraryUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart
 
 QString ItineraryUrlHandler::createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const
 {
-    QTemporaryFile f(QStringLiteral("XXXXXX.itinerary"));
+    QTemporaryFile f(u"XXXXXX.itinerary"_s);
     if (!f.open()) {
         qCWarning(ITINERARY_LOG) << "Failed to open temporary file:" << f.errorString();
         return {};

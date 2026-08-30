@@ -27,6 +27,7 @@
 #include <gpgme++/key.h>
 #include <gpgme.h>
 #include <qgpgme/dataprovider.h>
+using namespace Qt::Literals::StringLiterals;
 #endif // QGPGME_FOUND
 
 using namespace KAddressBookImportExport;
@@ -40,7 +41,7 @@ VCardImportExportPluginInterface::~VCardImportExportPluginInterface() = default;
 
 void VCardImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("file_import_vcard"));
+    QAction *action = ac->addAction(u"file_import_vcard"_s);
     action->setText(i18n("Import vCard…"));
     action->setWhatsThis(i18n("Import contacts from a vCard file."));
     connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotImportVCard);
@@ -48,7 +49,7 @@ void VCardImportExportPluginInterface::createAction(KActionCollection *ac)
 
     QList<QAction *> exportActionList;
 
-    action = ac->addAction(QStringLiteral("file_export_vcard40"));
+    action = ac->addAction(u"file_export_vcard40"_s);
     action->setWhatsThis(i18n("Export contacts to a vCard file."));
     action->setText(i18n("Export vCard…"));
     connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotExportVCard);
@@ -280,8 +281,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
 void VCardImportExportPluginInterface::addKey(KContacts::Addressee &addr, KContacts::Key::Type type) const
 {
 #ifdef QGPGME_FOUND
-    const QString fingerprint =
-        addr.custom(QStringLiteral("KADDRESSBOOK"), (type == KContacts::Key::PGP ? QStringLiteral("OPENPGPFP") : QStringLiteral("SMIMEFP")));
+    const QString fingerprint = addr.custom(u"KADDRESSBOOK"_s, (type == KContacts::Key::PGP ? u"OPENPGPFP"_s : u"SMIMEFP"_s));
     if (fingerprint.isEmpty()) {
         return;
     }
@@ -387,10 +387,10 @@ void VCardImportExportPluginInterface::exportVCard()
             if (!addr.emailList().isEmpty()) {
                 filename = addr.emailList().at(0).mail();
             } else {
-                filename = QStringLiteral("contact");
+                filename = u"contact"_s;
             }
         }
-        filename += QStringLiteral(".vcf");
+        filename += u".vcf"_s;
         url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(filename), QString(), nullptr, options);
         if (url.isEmpty()) { // user canceled export
             return;
@@ -415,7 +415,7 @@ void VCardImportExportPluginInterface::exportVCard()
             for (int i = 0; i < list.count(); ++i) {
                 const KContacts::Addressee contact = list.at(i);
 
-                url = QUrl::fromLocalFile(baseUrl.path() + QLatin1Char('/') + contactFileName(contact) + QStringLiteral(".vcf"));
+                url = QUrl::fromLocalFile(baseUrl.path() + QLatin1Char('/') + contactFileName(contact) + u".vcf"_s);
 
                 bool tmpOk = doExport(url, converter.exportVCard(contact, KContacts::VCardConverter::v4_0));
                 ok = ok && tmpOk;
@@ -424,7 +424,7 @@ void VCardImportExportPluginInterface::exportVCard()
         }
         case KMessageBox::ButtonCode::PrimaryAction: {
             QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
-            url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.vcf")), QString(), nullptr, options);
+            url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(u"addressbook.vcf"_s), QString(), nullptr, options);
             if (url.isEmpty()) {
                 return; // user canceled export
             }
@@ -451,7 +451,7 @@ void VCardImportExportPluginInterface::importFile(const QUrl &url)
 QString VCardImportExportPluginInterface::contactFileName(const KContacts::Addressee &contact) const
 {
     if (!contact.givenName().isEmpty() && !contact.familyName().isEmpty()) {
-        return QStringLiteral("%1_%2").arg(contact.givenName(), contact.familyName());
+        return u"%1_%2"_s.arg(contact.givenName(), contact.familyName());
     }
 
     if (!contact.familyName().isEmpty()) {

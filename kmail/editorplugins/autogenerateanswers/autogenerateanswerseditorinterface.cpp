@@ -77,13 +77,13 @@ void AutoGenerateAnswersEditorInterface::exec()
         qCWarning(KMAIL_EDITOR_AUTOGENERATEANSWER_PLUGIN_LOG) << "AnswerType::Unknown: it's a bug";
         return;
     case AnswerType::SummaryText:
-        actionStr = QStringLiteral("Summary Text");
+        actionStr = u"Summary Text"_s;
         break;
     case AnswerType::QuickAnswer:
-        actionStr = QStringLiteral("Quick Answer");
+        actionStr = u"Quick Answer"_s;
         break;
     case AnswerType::FixTypo:
-        actionStr = QStringLiteral("Correct Text");
+        actionStr = u"Correct Text"_s;
         break;
     }
     QTextCursor textCursor = richTextEditor()->textCursor();
@@ -106,7 +106,7 @@ void AutoGenerateAnswersEditorInterface::exec()
 
     auto job = new TextAutoGenerateText::TextAutoGenerateAskJob(this);
     job->setManager(mManager);
-    job->setText(QStringLiteral("%1: \"%2\"").arg(actionStr, str));
+    job->setText(u"%1: \"%2\""_s.arg(actionStr, str));
     connect(job,
             &TextAutoGenerateText::TextAutoGenerateAskJob::generateTextInProgress,
             this,

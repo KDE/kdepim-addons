@@ -9,6 +9,7 @@
 #include <KActionCollection>
 #include <KPluginFactory>
 #include <TextTranslator/TranslatorConfigureDialog>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginTranslator, "messageviewer_translatorplugin.json")
@@ -26,7 +27,7 @@ ViewerPluginInterface *ViewerPluginTranslator::createView(QWidget *parent, KActi
 
 QString ViewerPluginTranslator::viewerPluginName() const
 {
-    return QStringLiteral("translator");
+    return u"translator"_s;
 }
 
 void MessageViewer::ViewerPluginTranslator::showConfigureDialog(QWidget *parent)

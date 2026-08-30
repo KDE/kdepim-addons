@@ -10,6 +10,7 @@
 #include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 GravatarUpdateDialogTest::GravatarUpdateDialogTest(QObject *parent)
     : QObject(parent)
@@ -22,10 +23,10 @@ GravatarUpdateDialogTest::~GravatarUpdateDialogTest() = default;
 void GravatarUpdateDialogTest::shouldHaveDefaultValue()
 {
     KABGravatar::GravatarUpdateDialog dlg;
-    const auto w = dlg.findChild<KABGravatar::GravatarUpdateWidget *>(QStringLiteral("gravatarupdatewidget"));
+    const auto w = dlg.findChild<KABGravatar::GravatarUpdateWidget *>(u"gravatarupdatewidget"_s);
     QVERIFY(w);
 
-    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
     QVERIFY(!dlg.saveUrl());

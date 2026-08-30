@@ -11,6 +11,7 @@
 #include <QHBoxLayout>
 #include <QStandardItemModel>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 namespace MessageViewer
 {
@@ -44,7 +45,7 @@ void ViewerPluginCreateTodoTest::shouldShowWidget()
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = todo->createView(parent, new KActionCollection(this));
     interface->execute();
-    const auto createtodowidget = parent->findChild<QWidget *>(QStringLiteral("todoedit"));
+    const auto createtodowidget = parent->findChild<QWidget *>(u"todoedit"_s);
     QVERIFY(createtodowidget);
     QCOMPARE(createtodowidget->isHidden(), false);
 }

@@ -22,6 +22,7 @@
 #include <KAddressBookImportExport/ContactList>
 #include <KAddressBookImportExport/ContactSelectionDialog>
 #include <KAddressBookImportExport/ImportExportEngine>
+using namespace Qt::Literals::StringLiterals;
 
 LDifImportExportPluginInterface::LDifImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::PluginInterface(parent)
@@ -32,13 +33,13 @@ LDifImportExportPluginInterface::~LDifImportExportPluginInterface() = default;
 
 void LDifImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("file_import_ldif"));
+    QAction *action = ac->addAction(u"file_import_ldif"_s);
     action->setText(i18n("Import LDIF file…"));
     action->setWhatsThis(i18n("Import contacts from an LDIF file."));
     connect(action, &QAction::triggered, this, &LDifImportExportPluginInterface::slotImportLdif);
     setImportActions(QList<QAction *>() << action);
 
-    action = ac->addAction(QStringLiteral("file_export_ldif"));
+    action = ac->addAction(u"file_export_ldif"_s);
     action->setText(i18n("Export LDIF file…"));
     action->setWhatsThis(i18n("Export contacts to an LDIF file."));
     connect(action, &QAction::triggered, this, &LDifImportExportPluginInterface::slotExportLdif);
@@ -103,7 +104,7 @@ void LDifImportExportPluginInterface::importLdifFile(const QString &fileName)
 
 void LDifImportExportPluginInterface::importLdif()
 {
-    const QString fileName = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), QStringLiteral("%1 (*.ldif)").arg(i18n("LDif Files")));
+    const QString fileName = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), u"%1 (*.ldif)"_s.arg(i18n("LDif Files")));
     importLdifFile(fileName);
 }
 
@@ -140,7 +141,7 @@ void LDifImportExportPluginInterface::exportLdif()
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
     const QUrl url = QFileDialog::getSaveFileUrl(parentWidget(),
                                                  QString(),
-                                                 QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/addressbook.ldif")),
+                                                 QUrl::fromLocalFile(QDir::homePath() + u"/addressbook.ldif"_s),
                                                  i18n("LDif Files (*.ldif)"),
                                                  nullptr,
                                                  options);

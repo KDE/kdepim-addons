@@ -20,6 +20,7 @@
 
 #include <KLocalizedString>
 #include <QToolButton>
+using namespace Qt::Literals::StringLiterals;
 
 SelectImapFolderWidget::SelectImapFolderWidget(const KSieveCore::SieveImapAccountSettings &account, QWidget *parent)
     : QWidget(parent)
@@ -44,7 +45,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveCore::SieveImapAccoun
 
     auto refreshImap = new QToolButton(this);
     refreshImap->setObjectName(QLatin1StringView("refreshimap"));
-    refreshImap->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
+    refreshImap->setIcon(QIcon::fromTheme(u"view-refresh"_s));
     refreshImap->setToolTip(i18nc("@info:tooltip", "Refresh IMAP Folder List"));
     connect(refreshImap, &QToolButton::clicked, this, &SelectImapFolderWidget::slotRefreshImap);
     topLayout->addWidget(refreshImap);

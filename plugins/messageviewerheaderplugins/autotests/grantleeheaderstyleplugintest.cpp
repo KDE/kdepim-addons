@@ -19,6 +19,7 @@
 
 #include <KActionCollection>
 #include <KActionMenu>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace Qt::Literals;
 
@@ -44,7 +45,7 @@ void GrantleeHeaderStylePluginTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
     expectedDataLocation = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-    expectedDataLocation += QStringLiteral("/messageviewer/themes");
+    expectedDataLocation += u"/messageviewer/themes"_s;
     QDir targetDir(expectedDataLocation);
     QDir sourceDir(QStringLiteral(GRANTLEETHEME_DATA_DIR));
     const auto themeDirs = sourceDir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
@@ -137,15 +138,15 @@ void GrantleeHeaderStylePluginTest::testThemeRender_data()
 
     QDir dir(QStringLiteral(HEADER_DATA_DIR));
     const auto themeDirs = dir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot);
-    const auto l = dir.entryList(QStringList(QStringLiteral("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    const auto l = dir.entryList(QStringList(u"*.mbox"_s), QDir::Files | QDir::Readable | QDir::NoSymLinks);
 
     for (const QFileInfo &t : themeDirs) {
         const QDir themeDir(t.absoluteFilePath());
         for (const QString &file : l) {
-            if (!themeDir.exists(file + QStringLiteral(".html"))) {
+            if (!themeDir.exists(file + u".html"_s)) {
                 continue;
             }
-            QTest::newRow(QString(themeDir.dirName() + QStringLiteral("-") + file).toLatin1().constData()) << themeDir.dirName() << file;
+            QTest::newRow(QString(themeDir.dirName() + u"-"_s + file).toLatin1().constData()) << themeDir.dirName() << file;
         }
     }
 }

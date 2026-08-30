@@ -10,6 +10,7 @@
 #include <KContacts/Addressee>
 #include <QFile>
 #include <QUrl>
+using namespace Qt::Literals::StringLiterals;
 
 OperaAddressBook::OperaAddressBook(const QString &filename)
     : mFileName(filename)
@@ -44,17 +45,17 @@ void OperaAddressBook::importAddressBook()
             if (line.startsWith(QLatin1StringView("ID"))) {
                 // Nothing
             } else if (line.startsWith(QLatin1StringView("NAME"))) {
-                contact->setName(line.remove(QStringLiteral("NAME=")));
+                contact->setName(line.remove(u"NAME="_s));
             } else if (line.startsWith(QLatin1StringView("URL"))) {
                 KContacts::ResourceLocatorUrl url;
-                url.setUrl(QUrl(line.remove(QStringLiteral("URL="))));
+                url.setUrl(QUrl(line.remove(u"URL="_s)));
                 contact->setUrl(url);
             } else if (line.startsWith(QLatin1StringView("DESCRIPTION"))) {
-                contact->setNote(line.remove(QStringLiteral("DESCRIPTION=")));
+                contact->setNote(line.remove(u"DESCRIPTION="_s));
             } else if (line.startsWith(QLatin1StringView("PHONE"))) {
-                contact->insertPhoneNumber(KContacts::PhoneNumber(line.remove(QStringLiteral("PHONE=")), KContacts::PhoneNumber::Home));
+                contact->insertPhoneNumber(KContacts::PhoneNumber(line.remove(u"PHONE="_s), KContacts::PhoneNumber::Home));
             } else if (line.startsWith(QLatin1StringView("FAX"))) {
-                contact->insertPhoneNumber(KContacts::PhoneNumber(line.remove(QStringLiteral("FAX=")), KContacts::PhoneNumber::Fax));
+                contact->insertPhoneNumber(KContacts::PhoneNumber(line.remove(u"FAX="_s), KContacts::PhoneNumber::Fax));
             } else if (line.startsWith(QLatin1StringView("POSTALADDRESS"))) {
                 // TODO
             } else if (line.startsWith(QLatin1StringView("PICTUREURL"))) {
@@ -62,7 +63,7 @@ void OperaAddressBook::importAddressBook()
             } else if (line.startsWith(QLatin1StringView("ICON"))) {
                 // TODO
             } else if (line.startsWith(QLatin1StringView("SHORT NAME"))) {
-                contact->setNickName(line.remove(QStringLiteral("SHORT NAME=")));
+                contact->setNickName(line.remove(u"SHORT NAME="_s));
             }
         }
     }
@@ -74,7 +75,7 @@ OperaAddressBook::~OperaAddressBook() = default;
 void OperaAddressBook::appendContact(KContacts::Addressee *contact)
 {
     if (contact) {
-        addImportContactNote(*contact, QStringLiteral("Opera"));
+        addImportContactNote(*contact, u"Opera"_s);
         createContact(*contact);
         delete contact;
     }

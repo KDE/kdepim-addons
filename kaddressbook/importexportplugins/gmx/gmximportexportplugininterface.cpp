@@ -21,6 +21,7 @@
 #include <kio/filecopyjob.h>
 
 #include <KAddressBookImportExport/ContactSelectionDialog>
+using namespace Qt::Literals::StringLiterals;
 
 #define GMX_FILESELECTION_STRING i18n("GMX address book file (*.gmxa)")
 const int typeHome = 0;
@@ -36,13 +37,13 @@ GMXImportExportPluginInterface::~GMXImportExportPluginInterface() = default;
 
 void GMXImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("file_import_gmx"));
+    QAction *action = ac->addAction(u"file_import_gmx"_s);
     action->setText(i18n("Import GMX file…"));
     action->setWhatsThis(i18n("Import contacts from a GMX address book file."));
     setImportActions(QList<QAction *>() << action);
     connect(action, &QAction::triggered, this, &GMXImportExportPluginInterface::slotImportGmx);
 
-    action = ac->addAction(QStringLiteral("file_export_gmx"));
+    action = ac->addAction(u"file_export_gmx"_s);
     action->setText(i18n("Export GMX file…"));
     action->setWhatsThis(i18n("Export contacts to a GMX address book file."));
     setExportActions(QList<QAction *>() << action);
@@ -96,7 +97,7 @@ void GMXImportExportPluginInterface::exportGMX()
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
     QUrl url = QFileDialog::getSaveFileUrl(parentWidget(),
                                            QString(),
-                                           QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/addressbook.gmx")),
+                                           QUrl::fromLocalFile(QDir::homePath() + u"/addressbook.gmx"_s),
                                            GMX_FILESELECTION_STRING,
                                            nullptr,
                                            options);
@@ -164,7 +165,7 @@ static bool checkDateTime(const QString &dateStr, QDateTime &dt)
 static const QString dateString(const QDateTime &dt)
 {
     if (!dt.isValid()) {
-        return QStringLiteral("1000-01-01 00:00:00");
+        return u"1000-01-01 00:00:00"_s;
     }
     QString d(dt.toString(Qt::ISODate));
     d[10] = QLatin1Char(' '); // remove the "T" in the middle of the string
@@ -384,7 +385,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 
                   << ((recId == typeWork) ? addressee->role() : QString()) << DELIM // Position
 
-                  << ((recId == typeHome) ? addressee->custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName")) : QString()) << DELIM // Comments
+                  << ((recId == typeHome) ? addressee->custom(u"KADDRESSBOOK"_s, u"X-SpousesName"_s) : QString()) << DELIM // Comments
 
                   << recId << DELIM // Record_type_id (0,1,2)
 
@@ -392,8 +393,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 
                   << ((recId == typeWork) ? addressee->organization() : QString()) << DELIM // Company
 
-                  << ((recId == typeWork) ? addressee->custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Department")) : QString())
-                  << DELIM // Department
+                  << ((recId == typeWork) ? addressee->custom(u"KADDRESSBOOK"_s, u"X-Department"_s) : QString()) << DELIM // Department
 
                   << dateString(addressee->revision()) << DELIM // Change_date
 
@@ -472,7 +472,7 @@ void GMXImportExportPluginInterface::importGMX()
         addressee->setNickName(itemList.at(1));
         addressee->setGivenName(itemList.at(2));
         addressee->setFamilyName(itemList.at(3));
-        addressee->setFormattedName(itemList.at(3) + QStringLiteral(", ") + itemList.at(2));
+        addressee->setFormattedName(itemList.at(3) + u", "_s + itemList.at(2));
         addressee->setPrefix(itemList.at(4));
         if (checkDateTime(itemList.at(5), dt)) {
             addressee->setBirthday(dt);
@@ -571,7 +571,7 @@ void GMXImportExportPluginInterface::importGMX()
                 addressee->setOrganization(itemList[16]); // Company
             }
             if (!itemList[17].isEmpty()) {
-                addressee->insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Department"), itemList[17]); // Department
+                addressee->insertCustom(u"KADDRESSBOOK"_s, u"X-Department"_s, itemList[17]); // Department
             }
             if (checkDateTime(itemList[18], dt)) {
                 addressee->setRevision(dt); // Change_date

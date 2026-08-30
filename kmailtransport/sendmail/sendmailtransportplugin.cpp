@@ -9,6 +9,7 @@
 #include "sendmailjob.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(SendMailTransportPlugin, "sendmailtransport.json")
 
@@ -23,7 +24,7 @@ QList<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::names
 {
     MailTransport::TransportAbstractPluginInfo info;
     info.name = i18nc("@option sendmail transport", "Sendmail");
-    info.identifier = QStringLiteral("sendmail");
+    info.identifier = u"sendmail"_s;
     info.description = i18n("A local sendmail installation");
     info.isAkonadi = false;
     return QList<MailTransport::TransportAbstractPluginInfo>() << info;

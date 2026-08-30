@@ -15,6 +15,7 @@
 #include <KActionMenu>
 #include <QActionGroup>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 BriefHeaderStylePluginTest::BriefHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
@@ -49,7 +50,7 @@ void BriefHeaderStylePluginTest::testFormatEmpty()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = new KMime::Message();
-    testHeaderFile(style->format(aMsg), QStringLiteral("empty.brief"));
+    testHeaderFile(style->format(aMsg), u"empty.brief"_s);
     delete aMsg;
 }
 
@@ -58,7 +59,7 @@ void BriefHeaderStylePluginTest::testFormat_data()
     QTest::addColumn<QString>("mailbox");
 
     QDir dir(QStringLiteral(HEADER_DATA_DIR));
-    const auto l = dir.entryList(QStringList(QStringLiteral("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    const auto l = dir.entryList(QStringList(u"*.mbox"_s), QDir::Files | QDir::Readable | QDir::NoSymLinks);
     for (const QString &file : l) {
         QTest::newRow(file.toLatin1().constData()) << file;
     }
@@ -74,7 +75,7 @@ void BriefHeaderStylePluginTest::testFormat()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
-    testHeaderFile(style->format(aMsg.get()), mailbox + QStringLiteral(".brief"));
+    testHeaderFile(style->format(aMsg.get()), mailbox + u".brief"_s);
 }
 
 QTEST_MAIN(BriefHeaderStylePluginTest)

@@ -16,12 +16,13 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QStandardPaths>
+using namespace Qt::Literals::StringLiterals;
 
 [[nodiscard]] QString filterListPath()
 {
     static const auto path = []() -> QString {
-        QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QStringLiteral("/filterlists/");
-        QDir(path).mkpath(QStringLiteral("."));
+        QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + u"/filterlists/"_s;
+        QDir(path).mkpath(u"."_s);
         return path;
     }();
     return path;
@@ -58,7 +59,7 @@ AdblockManager::~AdblockManager()
 
 QString AdblockManager::adblockCacheLocation() const
 {
-    return QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/adblockCache");
+    return QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + u"/adblockCache"_s;
 }
 
 rust::Box<Adblock> AdblockManager::createOrRestoreAdblock()

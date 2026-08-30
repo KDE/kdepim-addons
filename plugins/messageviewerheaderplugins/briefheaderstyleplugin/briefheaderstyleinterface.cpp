@@ -8,6 +8,7 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KToggleAction>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 BriefHeaderStyleInterface::BriefHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
@@ -20,7 +21,7 @@ BriefHeaderStyleInterface::~BriefHeaderStyleInterface() = default;
 void BriefHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {
     auto act = new KToggleAction(i18nc("View->headers->", "&Brief Headers"), this);
-    ac->addAction(QStringLiteral("view_headers_brief"), act);
+    ac->addAction(u"view_headers_brief"_s, act);
     connect(act, &KToggleAction::triggered, this, &BriefHeaderStyleInterface::slotStyleChanged);
     addHelpTextAction(act, i18n("Show brief list of message headers"));
     mAction.append(act);

@@ -7,6 +7,7 @@
 #include "mergecontactselectinformationtabwidgettest.h"
 #include "../searchduplicate/mergecontactselectinformationtabwidget.h"
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 MergeContactSelectInformationTabWidgetTest::MergeContactSelectInformationTabWidgetTest(QObject *parent)
     : QObject(parent)
@@ -31,12 +32,12 @@ void MergeContactSelectInformationTabWidgetTest::shouldAddTab()
     Akonadi::Item::List listItem;
     KContacts::Addressee address1;
     Akonadi::Item item1;
-    address1.setName(QStringLiteral("foo1"));
+    address1.setName(u"foo1"_s);
     item1.setPayload<KContacts::Addressee>(address1);
 
     KContacts::Addressee address2;
     Akonadi::Item item2;
-    address2.setName(QStringLiteral("foo2"));
+    address2.setName(u"foo2"_s);
     item2.setPayload<KContacts::Addressee>(address2);
 
     listItem << item1;

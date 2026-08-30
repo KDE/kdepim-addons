@@ -15,6 +15,7 @@
 #include <KLocalizedString>
 #include <KShell>
 #include <QBuffer>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MailTransport;
 
@@ -44,7 +45,7 @@ void SendmailJob::doStart()
         arguments << options;
     }
     // "--" makes sure that a recipient starting with '-' is not treated as an option.
-    arguments << QStringLiteral("-i") << QStringLiteral("-f") << sender() << QStringLiteral("--") << to() << cc() << bcc();
+    arguments << u"-i"_s << u"-f"_s << sender() << u"--"_s << to() << cc() << bcc();
     qCDebug(MAILTRANSPORT_PLUGIN_LOG) << "Sendmail arguments " << arguments;
     mProcess->start(transport()->host(), arguments);
 

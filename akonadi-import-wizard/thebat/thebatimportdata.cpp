@@ -12,6 +12,7 @@
 #include <KPluginFactory>
 
 #include <QDir>
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(TheBatImportData, "thebatimporter.json")
 
@@ -37,7 +38,7 @@ bool TheBatImportData::foundMailer() const
 
 QString TheBatImportData::name() const
 {
-    return QStringLiteral("TheBat");
+    return u"TheBat"_s;
 }
 
 bool TheBatImportData::importMails()

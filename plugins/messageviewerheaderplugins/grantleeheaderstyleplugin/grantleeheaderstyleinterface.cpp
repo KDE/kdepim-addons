@@ -9,6 +9,7 @@
 #include <KToggleAction>
 #include <MessageViewer/HeaderStyle>
 #include <MessageViewer/HeaderStylePlugin>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 GrantleeHeaderStyleInterface::GrantleeHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
@@ -26,12 +27,8 @@ GrantleeHeaderStyleInterface::~GrantleeHeaderStyleInterface()
 
 void GrantleeHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {
-    mThemeManager = new GrantleeTheme::ThemeManager(QStringLiteral("mail"),
-                                                    QStringLiteral("header.desktop"),
-                                                    ac,
-                                                    QStringLiteral("messageviewer/themes/"),
-                                                    QStringLiteral("messageviewer_header_themes.knsrc"),
-                                                    this);
+    mThemeManager =
+        new GrantleeTheme::ThemeManager(u"mail"_s, u"header.desktop"_s, ac, u"messageviewer/themes/"_s, u"messageviewer_header_themes.knsrc"_s, this);
     connect(mThemeManager, &GrantleeTheme::ThemeManager::grantleeThemeSelected, this, &GrantleeHeaderStyleInterface::slotGrantleeHeaders);
     connect(mThemeManager, &GrantleeTheme::ThemeManager::updateThemes, this, &HeaderStyleInterface::styleUpdated);
 

@@ -10,6 +10,7 @@
 
 #include <KMime/Content>
 #include <MimeTreeParser/BodyPart>
+using namespace Qt::Literals::StringLiterals;
 
 PgpKeyMessagePart::PgpKeyMessagePart(MimeTreeParser::Interface::BodyPart *part)
     : MimeTreeParser::MessagePart(part->objectTreeParser(), QString())
@@ -83,7 +84,7 @@ void PgpKeyMessagePart::parseContent(KMime::Content *node)
     // Data data(&dp);
     // std::vector <Key> keys = data.toKeys();
     QProcess p;
-    p.start(QStringLiteral("gpg"), {QStringLiteral("--with-colons"), QStringLiteral("--fixed-list-mode"), QStringLiteral("--with-fingerprint")});
+    p.start(u"gpg"_s, {u"--with-colons"_s, u"--fixed-list-mode"_s, u"--with-fingerprint"_s});
     p.waitForStarted();
     p.write(node->decodedBody());
     p.closeWriteChannel();

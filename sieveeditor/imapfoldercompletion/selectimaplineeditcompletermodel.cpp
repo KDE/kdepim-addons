@@ -9,13 +9,14 @@
 
 #include <KDescendantsProxyModel>
 #include <QStandardItemModel>
+using namespace Qt::Literals::StringLiterals;
 
 SelectImapLineEditCompleterModel::SelectImapLineEditCompleterModel(const KSieveCore::SieveImapAccountSettings &account, QObject *parent)
     : QObject(parent)
     , mFlatProxy(new KDescendantsProxyModel(this))
 {
     mFlatProxy->setDisplayAncestorData(true);
-    mFlatProxy->setAncestorSeparator(QStringLiteral("/"));
+    mFlatProxy->setAncestorSeparator(u"/"_s);
     bool modelIsInitalized = false;
     mFlatProxy->setSourceModel(SelectImapFolderModel::self()->folderModel(account, modelIsInitalized));
 }

@@ -10,6 +10,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 GravatarUpdateWidgetTest::GravatarUpdateWidgetTest(QObject *parent)
     : QObject(parent)
 {
@@ -21,17 +22,17 @@ void GravatarUpdateWidgetTest::shouldHaveDefaultValue()
 {
     KABGravatar::GravatarUpdateWidget widget;
     widget.show();
-    const auto lab = widget.findChild<QLabel *>(QStringLiteral("emaillabel"));
+    const auto lab = widget.findChild<QLabel *>(u"emaillabel"_s);
     QVERIFY(lab);
 
-    const auto emaillabel = widget.findChild<QLabel *>(QStringLiteral("email"));
+    const auto emaillabel = widget.findChild<QLabel *>(u"email"_s);
     QVERIFY(emaillabel);
 
-    const auto searchGravatar = widget.findChild<QPushButton *>(QStringLiteral("search"));
+    const auto searchGravatar = widget.findChild<QPushButton *>(u"search"_s);
     QVERIFY(searchGravatar);
     QVERIFY(!searchGravatar->isEnabled());
 
-    const auto resultGravatar = widget.findChild<QLabel *>(QStringLiteral("result"));
+    const auto resultGravatar = widget.findChild<QLabel *>(u"result"_s);
     QVERIFY(resultGravatar);
 
     QVERIFY(widget.pixmap().isNull());
@@ -42,11 +43,11 @@ void GravatarUpdateWidgetTest::shouldAffectEmail()
 {
     KABGravatar::GravatarUpdateWidget widget;
 
-    const auto emaillabel = widget.findChild<QLabel *>(QStringLiteral("email"));
+    const auto emaillabel = widget.findChild<QLabel *>(u"email"_s);
 
-    const auto searchGravatar = widget.findChild<QPushButton *>(QStringLiteral("search"));
+    const auto searchGravatar = widget.findChild<QPushButton *>(u"search"_s);
 
-    const QString newEmail(QStringLiteral("foo@kde.org"));
+    const QString newEmail(u"foo@kde.org"_s);
     widget.setEmail(newEmail);
 
     QCOMPARE(emaillabel->text(), newEmail);

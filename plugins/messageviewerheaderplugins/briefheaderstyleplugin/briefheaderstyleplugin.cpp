@@ -9,6 +9,7 @@
 #include "briefheaderstyle.h"
 #include "briefheaderstyleinterface.h"
 #include <KPluginFactory>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -48,7 +49,7 @@ MessageViewer::HeaderStyleInterface *BriefHeaderStylePlugin::createView(KActionM
 
 QString BriefHeaderStylePlugin::name() const
 {
-    return QStringLiteral("brief");
+    return u"brief"_s;
 }
 
 #include "briefheaderstyleplugin.moc"

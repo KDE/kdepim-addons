@@ -12,6 +12,7 @@
 #include <QStandardPaths>
 #include <QTest>
 #include <QToolButton>
+using namespace Qt::Literals::StringLiterals;
 
 SelectImapWidgetTest::SelectImapWidgetTest(QObject *parent)
     : QObject(parent)
@@ -24,15 +25,15 @@ SelectImapWidgetTest::~SelectImapWidgetTest() = default;
 void SelectImapWidgetTest::shouldHaveDefaultValue()
 {
     SelectImapWidget w;
-    const auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    const auto mainLayout = w.findChild<QHBoxLayout *>(u"mainlayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    const auto mLineEdit = w.findChild<QLineEdit *>(QStringLiteral("lineedit"));
+    const auto mLineEdit = w.findChild<QLineEdit *>(u"lineedit"_s);
     QVERIFY(mLineEdit);
     QVERIFY(mLineEdit->text().isEmpty());
 
-    const auto mToolButton = w.findChild<QToolButton *>(QStringLiteral("toolbutton"));
+    const auto mToolButton = w.findChild<QToolButton *>(u"toolbutton"_s);
     QVERIFY(mToolButton);
     QVERIFY(!mToolButton->text().isEmpty());
 }
@@ -40,8 +41,8 @@ void SelectImapWidgetTest::shouldHaveDefaultValue()
 void SelectImapWidgetTest::shouldAssignText()
 {
     SelectImapWidget w;
-    const auto mLineEdit = w.findChild<QLineEdit *>(QStringLiteral("lineedit"));
-    QString text = QStringLiteral("foo");
+    const auto mLineEdit = w.findChild<QLineEdit *>(u"lineedit"_s);
+    QString text = u"foo"_s;
     w.setText(text);
     QCOMPARE(w.text(), text);
     QCOMPARE(mLineEdit->text(), text);

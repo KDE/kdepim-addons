@@ -27,6 +27,7 @@
 #include <IncidenceEditor/IncidenceDialogFactory>
 #include <KGuiItem>
 #include <KStandardGuiItem>
+using namespace Qt::Literals::StringLiterals;
 
 namespace MessageViewer
 {
@@ -39,7 +40,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     : QWidget(parent)
     , mNoteEdit(new QLineEdit(this))
     , mMsgWidget(new KMessageWidget(this))
-    , mSaveButton(new QPushButton(QIcon::fromTheme(QStringLiteral("task-new")), i18n("&Save"), this))
+    , mSaveButton(new QPushButton(QIcon::fromTheme(u"task-new"_s), i18n("&Save"), this))
     , mOpenEditorButton(new QPushButton(i18nc("@action:button", "Open &Editor…"), this))
 {
     auto vbox = new QVBoxLayout(this);

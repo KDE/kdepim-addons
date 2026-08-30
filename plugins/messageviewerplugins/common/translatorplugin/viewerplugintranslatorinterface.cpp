@@ -12,6 +12,7 @@
 #include <QAction>
 #include <QIcon>
 #include <QLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -48,8 +49,8 @@ void ViewerPluginTranslatorInterface::createAction(KActionCollection *ac)
     if (ac) {
         auto act = new QAction(i18nc("@action", "Translate…"), this);
         ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_T));
-        act->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
-        ac->addAction(QStringLiteral("translate_text"), act);
+        act->setIcon(QIcon::fromTheme(u"preferences-desktop-locale"_s));
+        ac->addAction(u"translate_text"_s, act);
         connect(act, &QAction::triggered, this, &ViewerPluginTranslatorInterface::slotActivatePlugin);
         mAction.append(act);
     }

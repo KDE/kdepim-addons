@@ -12,6 +12,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QAction>
+using namespace Qt::Literals::StringLiterals;
 
 SendVcardsPluginInterface::SendVcardsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -30,9 +31,9 @@ void SendVcardsPluginInterface::updateActions(int numberOfSelectedItems, int num
 
 void SendVcardsPluginInterface::createAction(KActionCollection *ac)
 {
-    mAction = ac->addAction(QStringLiteral("send_vcards"));
+    mAction = ac->addAction(u"send_vcards"_s);
     mAction->setText(i18n("Send vCards…"));
-    mAction->setIcon(QIcon::fromTheme(QStringLiteral("mail-message-new")));
+    mAction->setIcon(QIcon::fromTheme(u"mail-message-new"_s));
     connect(mAction, &QAction::triggered, this, &SendVcardsPluginInterface::slotActivated);
     const PimCommon::ActionType type(mAction, PimCommon::ActionType::Action);
     addActionType(type);

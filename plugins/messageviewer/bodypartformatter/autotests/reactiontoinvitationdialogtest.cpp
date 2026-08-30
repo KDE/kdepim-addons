@@ -11,6 +11,7 @@
 #include <QStandardPaths>
 #include <QTest>
 #include <TextCustomEditor/PlainTextEditorWidget>
+using namespace Qt::Literals::StringLiterals;
 
 ReactionToInvitationDialogTest::ReactionToInvitationDialogTest(QObject *parent)
     : QObject(parent)
@@ -24,14 +25,14 @@ void ReactionToInvitationDialogTest::shouldHaveDefaultValue()
 {
     ReactionToInvitationDialog w;
 
-    const auto label = w.findChild<QLabel *>(QStringLiteral("label"));
+    const auto label = w.findChild<QLabel *>(u"label"_s);
     QVERIFY(label);
 
-    const auto mPlainTextEditor = w.findChild<TextCustomEditor::PlainTextEditorWidget *>(QStringLiteral("plaintexteditor"));
+    const auto mPlainTextEditor = w.findChild<TextCustomEditor::PlainTextEditorWidget *>(u"plaintexteditor"_s);
     QVERIFY(mPlainTextEditor);
     QVERIFY(mPlainTextEditor->toPlainText().isEmpty());
 
-    const auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    const auto buttonBox = w.findChild<QDialogButtonBox *>(u"buttonbox"_s);
     QVERIFY(buttonBox);
 
     QVERIFY(w.comment().isEmpty());

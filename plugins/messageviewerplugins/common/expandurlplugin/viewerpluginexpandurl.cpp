@@ -8,6 +8,7 @@
 #include "viewerpluginexpandurlinterface.h"
 #include <KActionCollection>
 #include <KPluginFactory>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginExpandurl, "messageviewer_expandurlplugin.json")
@@ -25,7 +26,7 @@ ViewerPluginInterface *ViewerPluginExpandurl::createView(QWidget *parent, KActio
 
 QString ViewerPluginExpandurl::viewerPluginName() const
 {
-    return QStringLiteral("expandurl");
+    return u"expandurl"_s;
 }
 
 #include "viewerpluginexpandurl.moc"

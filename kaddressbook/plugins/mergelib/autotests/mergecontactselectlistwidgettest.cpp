@@ -10,6 +10,7 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 MergeContactSelectListWidgetTest::MergeContactSelectListWidgetTest(QObject *parent)
     : QObject(parent)
@@ -22,9 +23,9 @@ void MergeContactSelectListWidgetTest::shouldHaveDefaultValue()
 {
     KABMergeContacts::MergeContactSelectListWidget selectListWidget;
 
-    const auto title = selectListWidget.findChild<QLabel *>(QStringLiteral("title"));
+    const auto title = selectListWidget.findChild<QLabel *>(u"title"_s);
     QVERIFY(title);
-    const auto listWidget = selectListWidget.findChild<QListWidget *>(QStringLiteral("listwidget"));
+    const auto listWidget = selectListWidget.findChild<QListWidget *>(u"listwidget"_s);
     QVERIFY(listWidget);
     QCOMPARE(selectListWidget.selectedContact(), -1);
     QCOMPARE((int)selectListWidget.conflictType(), (int)KABMergeContacts::MergeContacts::None);

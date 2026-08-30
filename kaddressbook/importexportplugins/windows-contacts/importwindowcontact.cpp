@@ -10,6 +10,7 @@
 #include <KMessageBox>
 #include <QDomDocument>
 #include <QFile>
+using namespace Qt::Literals::StringLiterals;
 
 // https://docs.microsoft.com/en-us/previous-versions//ms735869(v=vs.85)
 
@@ -38,7 +39,7 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
         } else {
             KContacts::Addressee contact;
             if (mAutoTest) {
-                contact.setUid(QStringLiteral("foo"));
+                contact.setUid(u"foo"_s);
             }
             for (QDomElement e = list.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
                 const QString tag = e.tagName();
@@ -142,7 +143,7 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             for (QDomElement photoInfo = photo.firstChildElement(); !photoInfo.isNull(); photoInfo = photoInfo.nextSiblingElement()) {
                                 const QString photoInfoTag = photoInfo.tagName();
                                 if (photoInfoTag == QLatin1StringView("c:Value")) {
-                                    const QString contentType = photoInfo.attribute(QStringLiteral("c:ContentType"));
+                                    const QString contentType = photoInfo.attribute(u"c:ContentType"_s);
                                     picture.setRawData(photoInfo.text().toUtf8(), contentType);
                                 } else if (photoInfoTag == QLatin1StringView("c:Url")) {
                                     picture.setUrl(photoInfo.text());
@@ -218,9 +219,9 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                     KContacts::Gender gender;
                     const QString genderStr = e.text();
                     if (genderStr == QLatin1StringView("Male")) {
-                        gender.setGender(QStringLiteral("H"));
+                        gender.setGender(u"H"_s);
                     } else if (genderStr == QLatin1StringView("Female")) {
-                        gender.setGender(QStringLiteral("F"));
+                        gender.setGender(u"F"_s);
                     } else {
                         // Don't provide gender
                         continue;

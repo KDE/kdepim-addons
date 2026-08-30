@@ -11,6 +11,7 @@
 #include <KContacts/Addressee>
 #include <QSignalSpy>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KABMergeContacts;
 SearchPotentialDuplicateContactJobTest::SearchPotentialDuplicateContactJobTest()
@@ -47,7 +48,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnListWhenTwoItemsAreDupl
     Akonadi::Item::List lst;
     Akonadi::Item itemA;
     KContacts::Addressee address;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     itemA.setPayload<KContacts::Addressee>(address);
     itemA.setMimeType(KContacts::Addressee::mimeType());
 
@@ -66,7 +67,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnListWhenThreeItemsAreDu
     Akonadi::Item::List lst;
     Akonadi::Item itemA;
     KContacts::Addressee address;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     itemA.setPayload<KContacts::Addressee>(address);
     itemA.setMimeType(KContacts::Addressee::mimeType());
 
@@ -85,14 +86,14 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnTwoList()
     Akonadi::Item::List lst;
     Akonadi::Item item;
     KContacts::Addressee addressA;
-    addressA.setName(QStringLiteral("foo1"));
+    addressA.setName(u"foo1"_s);
     item.setPayload<KContacts::Addressee>(addressA);
     item.setMimeType(KContacts::Addressee::mimeType());
 
     lst << item << item << item;
 
     KContacts::Addressee addressB;
-    addressB.setName(QStringLiteral("foo2"));
+    addressB.setName(u"foo2"_s);
     item.setPayload<KContacts::Addressee>(addressB);
     item.setMimeType(KContacts::Addressee::mimeType());
 
@@ -113,14 +114,14 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnList_data()
     QTest::newRow("noList") << Akonadi::Item::List() << 0;
     Akonadi::Item itemA;
     KContacts::Addressee addressA;
-    addressA.setName(QStringLiteral("foo1"));
+    addressA.setName(u"foo1"_s);
     itemA.setPayload<KContacts::Addressee>(addressA);
     itemA.setMimeType(KContacts::Addressee::mimeType());
 
     Akonadi::Item itemB;
 
     KContacts::Addressee addressB;
-    addressB.setName(QStringLiteral("foo2"));
+    addressB.setName(u"foo2"_s);
     itemB.setPayload<KContacts::Addressee>(addressB);
     itemB.setMimeType(KContacts::Addressee::mimeType());
 
@@ -147,7 +148,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnList_data()
     Akonadi::Item itemC;
 
     KContacts::Addressee addressC;
-    addressC.setName(QStringLiteral("foo3"));
+    addressC.setName(u"foo3"_s);
     itemC.setPayload<KContacts::Addressee>(addressC);
     itemC.setMimeType(KContacts::Addressee::mimeType());
 

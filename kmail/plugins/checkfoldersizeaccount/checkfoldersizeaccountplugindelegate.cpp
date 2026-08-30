@@ -11,6 +11,7 @@
 #include <KFormat>
 #include <QPainter>
 #include <QTreeView>
+using namespace Qt::Literals::StringLiterals;
 
 CheckFolderSizeAccountPluginDelegate::CheckFolderSizeAccountPluginDelegate(QTreeView *view, QObject *parent)
     : QStyledItemDelegate{parent}
@@ -55,7 +56,7 @@ void CheckFolderSizeAccountPluginDelegate::paint(QPainter *painter, const QStyle
             painter->setPen(QPen(Qt::red));
         }
         KFormat format;
-        painter->drawText(textRect, Qt::AlignRight | Qt::AlignVCenter, QStringLiteral("%1").arg(format.formatByteSize(qMax(0LL, size))));
+        painter->drawText(textRect, Qt::AlignRight | Qt::AlignVCenter, u"%1"_s.arg(format.formatByteSize(qMax(0LL, size))));
         painter->restore();
     }
 }

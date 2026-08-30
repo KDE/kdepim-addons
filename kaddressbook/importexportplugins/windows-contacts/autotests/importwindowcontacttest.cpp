@@ -8,6 +8,7 @@
 #include "../importwindowcontact.h"
 #include <KContacts/Addressee>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(ImportWindowContactTest)
 ImportWindowContactTest::ImportWindowContactTest(QObject *parent)
     : QObject(parent)
@@ -22,49 +23,49 @@ void ImportWindowContactTest::shouldImportWindowContact_data()
     {
         KContacts::Addressee::List result;
         KContacts::Addressee address;
-        address.setName(QStringLiteral("John Doe"));
-        address.setUid(QStringLiteral("foo"));
+        address.setName(u"John Doe"_s);
+        address.setUid(u"foo"_s);
         KContacts::Email email;
-        email.setEmail(QStringLiteral("sample-email@kde.org"));
+        email.setEmail(u"sample-email@kde.org"_s);
         address.setEmailList({email});
 
         result << address;
 
-        QTest::newRow("test1") << QStringLiteral("test1.contact") << result;
+        QTest::newRow("test1") << u"test1.contact"_s << result;
     }
     {
         KContacts::Addressee::List result;
         KContacts::Addressee address;
-        address.setName(QStringLiteral("John Anon"));
-        address.setFamilyName(QStringLiteral("Anon"));
-        address.setGivenName(QStringLiteral("John"));
-        address.setUid(QStringLiteral("foo"));
+        address.setName(u"John Anon"_s);
+        address.setFamilyName(u"Anon"_s);
+        address.setGivenName(u"John"_s);
+        address.setUid(u"foo"_s);
         KContacts::Email email;
-        email.setEmail(QStringLiteral("sampleaddress@yahoo.com"));
+        email.setEmail(u"sampleaddress@yahoo.com"_s);
         address.setEmailList({email});
 
         result << address;
 
-        QTest::newRow("sample2") << QStringLiteral("sample2.contact") << result;
+        QTest::newRow("sample2") << u"sample2.contact"_s << result;
     }
     {
         KContacts::Addressee::List result;
         KContacts::Addressee address;
-        address.setName(QStringLiteral("dialup.email@juno.com"));
-        address.setUid(QStringLiteral("foo"));
+        address.setName(u"dialup.email@juno.com"_s);
+        address.setUid(u"foo"_s);
         KContacts::Email email;
-        email.setEmail(QStringLiteral("dialup.email@juno.com"));
+        email.setEmail(u"dialup.email@juno.com"_s);
         address.setEmailList({email});
 
         result << address;
 
-        QTest::newRow("sample3") << QStringLiteral("sample3.contact") << result;
+        QTest::newRow("sample3") << u"sample3.contact"_s << result;
     }
     {
         KContacts::Addressee::List result;
         KContacts::Addressee address;
-        address.setName(QStringLiteral("RandomPhoto"));
-        address.setUid(QStringLiteral("foo"));
+        address.setName(u"RandomPhoto"_s);
+        address.setUid(u"foo"_s);
         KContacts::Picture picture;
         picture.setRawData(
             QByteArray(
@@ -472,12 +473,12 @@ void ImportWindowContactTest::shouldImportWindowContact_data()
                 "FSbHBHWXNaaWhtckdZc1ppaGxwRVlrWmFSbHAKR1VrWlNSa3BHVWtaU0JscEdXa1phaGxxR2FzaGlobUtHVWtSYVJtS0dhc2hxaG1yR2N3aDdDSExHZXdockJuTkdRMGlMaUx0R1E0YQpU"
                 "aUlPR3UwWmJ5cHVLazRpTFJydEdld2hEU0xzR2V3aDdCbnRHUTBhRFJvdEdtNGlMU0tzR2N3WnpDSE1JUzBxN0NHckdhc1p5eUdyCkdhc1ppaEdyR2FvWnF4bUtHWW9aYVJGcEdXa1ppaG"
                 "xwRWFzWmlobUxHV29SaWhscEdZb2hpU0dxSVlrWmFobEpFVWtaYWhHTEdZb1oKaWhscUdZb1phUkZwR1lrWnFpR3FJYW9oaVJscEdXZ1p5aWs9"),
-            QStringLiteral("image/bmp"));
+            u"image/bmp"_s);
         address.setPhoto(picture);
 
         result << address;
 
-        QTest::newRow("sample4") << QStringLiteral("sample4.contact") << result;
+        QTest::newRow("sample4") << u"sample4.contact"_s << result;
     }
 }
 

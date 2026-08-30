@@ -16,6 +16,7 @@
 #include <KLocalizedString>
 
 #include <QApplication>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageCore;
 
@@ -47,8 +48,8 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     // The direction of the header is determined according to the direction
     // of the application layout.
 
-    const QString dir = QApplication::isRightToLeft() ? QStringLiteral("rtl") : QStringLiteral("ltr");
-    QString headerStr = QStringLiteral("<div class=\"fancy header\" dir=\"%1\">\n").arg(dir);
+    const QString dir = QApplication::isRightToLeft() ? u"rtl"_s : u"ltr"_s;
+    QString headerStr = u"<div class=\"fancy header\" dir=\"%1\">\n"_s.arg(dir);
 
     // However, the direction of the message subject within the header is
     // determined according to the contents of the subject itself. Since
@@ -69,41 +70,38 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     MessageViewer::HeaderStyleUtil::xfaceSettings xface = mHeaderStyleUtil.xface(this, message);
     if (!xface.photoURL.isEmpty()) {
         // qCDebug(MESSAGEVIEWER_LOG) << "Got a photo:" << xface.photoURL;
-        userHTML = QStringLiteral("<img src=\"%1\" width=\"%2\" height=\"%3\"/>").arg(xface.photoURL).arg(xface.photoWidth).arg(xface.photoHeight);
+        userHTML = u"<img src=\"%1\" width=\"%2\" height=\"%3\"/>"_s.arg(xface.photoURL).arg(xface.photoWidth).arg(xface.photoHeight);
         userHTML = QLatin1StringView("<div class=\"senderpic\">") + userHTML + QLatin1StringView("</div>");
     }
 
     // the subject line and box below for details
-    if (strategy->showHeader(QStringLiteral("subject"))) {
+    if (strategy->showHeader(u"subject"_s)) {
         const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
-        headerStr += QStringLiteral("<div dir=\"%1\">%2</div>\n").arg(subjectDir, mHeaderStyleUtil.subjectString(message, flags));
+        headerStr += u"<div dir=\"%1\">%2</div>\n"_s.arg(subjectDir, mHeaderStyleUtil.subjectString(message, flags));
     }
     headerStr += QLatin1StringView("<table class=\"outer\"><tr><td width=\"100%\"><table>\n");
     // headerStr += "<table>\n";
     // from line
     // the mailto: URLs can contain %3 etc., therefore usage of multiple
     // QString::arg is not possible
-    if (strategy->showHeader(QStringLiteral("from"))) {
+    if (strategy->showHeader(u"from"_s)) {
         const auto resentFrom = mHeaderStyleUtil.resentFromList(message);
-        headerStr += QStringLiteral(
-                         "<tr><th>%1</th>\n"
-                         "<td>")
-                         .arg(i18n("From: "))
+        headerStr +=
+            u"<tr><th>%1</th>\n"
+            "<td>"_s.arg(i18n("From: "))
             + StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayFullAddress)
             + (message->headerByType("Resent-From")
-                   ? QStringLiteral("&nbsp;") + i18n("(resent from %1)", StringUtil::emailAddrAsAnchor(resentFrom.data(), StringUtil::DisplayFullAddress))
+                   ? u"&nbsp;"_s + i18n("(resent from %1)", StringUtil::emailAddrAsAnchor(resentFrom.data(), StringUtil::DisplayFullAddress))
                    : QString())
-            + (!vCardName().isEmpty()
-                   ? QStringLiteral("&nbsp;&nbsp;<a href=\"") + vCardName() + QStringLiteral("\">") + i18n("[vCard]") + QStringLiteral("</a>")
-                   : QString())
+            + (!vCardName().isEmpty() ? u"&nbsp;&nbsp;<a href=\""_s + vCardName() + u"\">"_s + i18n("[vCard]") + u"</a>"_s : QString())
             + (!message->organization(KMime::CreatePolicy::DontCreate)
                    ? QString()
-                   : QStringLiteral("&nbsp;&nbsp;(") + mHeaderStyleUtil.strToHtml(message->organization()->asUnicodeString()) + QLatin1Char(')'))
-            + QStringLiteral("</td></tr>\n");
+                   : u"&nbsp;&nbsp;("_s + mHeaderStyleUtil.strToHtml(message->organization()->asUnicodeString()) + QLatin1Char(')'))
+            + u"</td></tr>\n"_s;
     }
     // to line
-    if (strategy->showHeader(QStringLiteral("to"))) {
+    if (strategy->showHeader(u"to"_s)) {
         const auto resentTo = mHeaderStyleUtil.resentToList(message);
 
         QString to;
@@ -115,55 +113,56 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                                                      QString(),
                                                      StringUtil::ShowLink,
                                                      StringUtil::ExpandableAddresses,
-                                                     QStringLiteral("FullToAddressList")));
+                                                     u"FullToAddressList"_s));
         } else {
             to = StringUtil::emailAddrAsAnchor(message->to(),
                                                StringUtil::DisplayFullAddress,
                                                QString(),
                                                StringUtil::ShowLink,
                                                StringUtil::ExpandableAddresses,
-                                               QStringLiteral("FullToAddressList"));
+                                               u"FullToAddressList"_s);
         }
 
-        headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                        "<td>%2</td></tr>\n")
-                             .arg(i18nc("To-field of the mail header.", "To: "), to));
+        headerStr.append(
+            u"<tr><th>%1</th>\n"
+            "<td>%2</td></tr>\n"_s.arg(i18nc("To-field of the mail header.", "To: "), to));
     }
 
     // cc line, if an
-    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(KMime::CreatePolicy::DontCreate)) {
+    if (strategy->showHeader(u"cc"_s) && message->cc(KMime::CreatePolicy::DontCreate)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->cc(),
                                                           StringUtil::DisplayFullAddress,
                                                           QString(),
                                                           StringUtil::ShowLink,
                                                           StringUtil::ExpandableAddresses,
-                                                          QStringLiteral("FullCcAddressList"));
+                                                          u"FullCcAddressList"_s);
         if (!str.isEmpty()) {
-            headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                            "<td>%2</td></tr>\n")
-                                 .arg(i18n("CC: "), str));
+            headerStr.append(
+                u"<tr><th>%1</th>\n"
+                "<td>%2</td></tr>\n"_s.arg(i18n("CC: "), str));
         }
     }
 
     // Bcc line, if any
-    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(KMime::CreatePolicy::DontCreate)) {
+    if (strategy->showHeader(u"bcc"_s) && message->bcc(KMime::CreatePolicy::DontCreate)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayFullAddress);
         if (!str.isEmpty()) {
-            headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                            "<td>%2</td></tr>\n")
-                                 .arg(i18n("BCC: "), str));
+            headerStr.append(
+                u"<tr><th>%1</th>\n"
+                "<td>%2</td></tr>\n"_s.arg(i18n("BCC: "), str));
         }
     }
 
-    if (strategy->showHeader(QStringLiteral("date"))) {
-        headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                        "<td dir=\"%2\">%3</td></tr>\n")
-                             .arg(i18n("Date: "),
-                                  mHeaderStyleUtil.directionOf(HeaderStyleUtil::dateStr(message->date()->dateTime())),
-                                  mHeaderStyleUtil.strToHtml(HeaderStyleUtil::dateString(message, /* short = */ MessageViewer::HeaderStyleUtil::CustomDate))));
+    if (strategy->showHeader(u"date"_s)) {
+        headerStr.append(
+            u"<tr><th>%1</th>\n"
+            "<td dir=\"%2\">%3</td></tr>\n"_s.arg(
+                i18n("Date: "),
+                mHeaderStyleUtil.directionOf(HeaderStyleUtil::dateStr(message->date()->dateTime())),
+                mHeaderStyleUtil.strToHtml(HeaderStyleUtil::dateString(message, /* short = */ MessageViewer::HeaderStyleUtil::CustomDate))));
     }
 
-    if (strategy->showHeader(QStringLiteral("x-bugzilla-url"))) {
+    if (strategy->showHeader(u"x-bugzilla-url"_s)) {
         if (message->hasHeader("X-Bugzilla-URL")) {
             QString product;
             if (auto hrd = message->headerByType("X-Bugzilla-Product")) {
@@ -178,31 +177,30 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                 status = hrd->asUnicodeString();
             }
             headerStr.append(
-                QStringLiteral("<tr><th>%1</th>\n"
-                               "<td>%2/%3, <strong>%4</strong></td></tr>\n")
+                u"<tr><th>%1</th>\n"
+                "<td>%2/%3, <strong>%4</strong></td></tr>\n"_s
                     .arg(i18n("Bugzilla: "), mHeaderStyleUtil.strToHtml(product), mHeaderStyleUtil.strToHtml(component), mHeaderStyleUtil.strToHtml(status)));
         }
     }
 
-    if (strategy->showHeader(QStringLiteral("disposition-notification-to"))) {
+    if (strategy->showHeader(u"disposition-notification-to"_s)) {
         if (auto hrd = message->headerByType("Disposition-Notification-To")) {
             const QString to = hrd->asUnicodeString();
-            headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                            "<td>%2</tr>\n")
-                                 .arg(i18n("MDN To: "), mHeaderStyleUtil.strToHtml(to)));
+            headerStr.append(
+                u"<tr><th>%1</th>\n"
+                "<td>%2</tr>\n"_s.arg(i18n("MDN To: "), mHeaderStyleUtil.strToHtml(to)));
         }
     }
 
     if (!spamHTML.isEmpty()) {
         headerStr.append(
-            QStringLiteral(
-                "<tr><td colspan=\"2\"><div class=\"spamheader\" dir=\"%1\"><b>%2</b>&nbsp;<span style=\"padding-left: 20px;\">%3</span></div></td></tr>\n")
+            u"<tr><td colspan=\"2\"><div class=\"spamheader\" dir=\"%1\"><b>%2</b>&nbsp;<span style=\"padding-left: 20px;\">%3</span></div></td></tr>\n"_s
                 .arg(subjectDir, i18n("Spam Status:"), spamHTML));
     }
 
-    headerStr.append(QStringLiteral("<tr><td colspan=\"2\"><div>%1</div></td></tr>").arg(attachmentHtml()));
+    headerStr.append(u"<tr><td colspan=\"2\"><div>%1</div></td></tr>"_s.arg(attachmentHtml()));
 
-    headerStr.append(QStringLiteral("</table></td><td align=\"center\">%1</td></tr></table>\n").arg(userHTML));
+    headerStr.append(u"</table></td><td align=\"center\">%1</td></tr></table>\n"_s.arg(userHTML));
 
     headerStr += QLatin1StringView("</div>\n\n");
     return headerStr;

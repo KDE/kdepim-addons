@@ -11,6 +11,7 @@
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
+using namespace Qt::Literals::StringLiterals;
 
 CheckFolderSizeAccountPluginOpenFolderJob::CheckFolderSizeAccountPluginOpenFolderJob(const QString &identifier, QObject *parent)
     : KJob{parent}
@@ -28,7 +29,7 @@ void CheckFolderSizeAccountPluginOpenFolderJob::start()
         return;
     }
 
-    const QString kmailInterface = QStringLiteral("org.kde.kmail");
+    const QString kmailInterface = u"org.kde.kmail"_s;
     auto startReply = QDBusConnection::sessionBus().interface()->startService(kmailInterface);
     if (!startReply.isValid()) {
         qCDebug(KMAIL_CHECKFOLDERSIZEACCOUNT_PLUGIN_LOG) << "Can not start kmail";
@@ -38,9 +39,9 @@ void CheckFolderSizeAccountPluginOpenFolderJob::start()
         return;
     }
 
-    QDBusInterface kmail(kmailInterface, QStringLiteral("/KMail"), QStringLiteral("org.kde.kmail.kmail"));
+    QDBusInterface kmail(kmailInterface, u"/KMail"_s, u"org.kde.kmail.kmail"_s);
     if (kmail.isValid()) {
-        kmail.call(QStringLiteral("selectFolder"), mIdentifier);
+        kmail.call(u"selectFolder"_s, mIdentifier);
     } else {
         qCWarning(KMAIL_CHECKFOLDERSIZEACCOUNT_PLUGIN_LOG) << "Impossible to access the DBus interface";
     }

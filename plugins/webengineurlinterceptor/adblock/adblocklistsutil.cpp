@@ -5,27 +5,28 @@
 */
 
 #include "adblocklistsutil.h"
+using namespace Qt::Literals::StringLiterals;
 
 QStringList AdblockListsUtil::adblockFilterNamesDefaultList()
 {
-    return {QStringLiteral("uBlock filters"),
-            QStringLiteral("uBlock filters – Privacy"),
-            QStringLiteral("uBlock filters – Resource abuse"),
-            QStringLiteral("uBlock filters – Unbreak"),
-            QStringLiteral("EasyPrivacy"),
-            QStringLiteral("Easylist"),
-            QStringLiteral("AdGuard Annoyances"),
-            QStringLiteral("Adblock Warning Removal List")};
+    return {u"uBlock filters"_s,
+            u"uBlock filters – Privacy"_s,
+            u"uBlock filters – Resource abuse"_s,
+            u"uBlock filters – Unbreak"_s,
+            u"EasyPrivacy"_s,
+            u"Easylist"_s,
+            u"AdGuard Annoyances"_s,
+            u"Adblock Warning Removal List"_s};
 }
 
 QList<QUrl> AdblockListsUtil::adblockFilterUrlsDefaultList()
 {
-    return {QUrl(QStringLiteral("https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt")),
-            QUrl(QStringLiteral("https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt")),
-            QUrl(QStringLiteral("https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt")),
-            QUrl(QStringLiteral("https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt")),
-            QUrl(QStringLiteral("https://easylist.to/easylist/easyprivacy.txt")),
-            QUrl(QStringLiteral("https://easylist.to/easylist/easylist.txt")),
-            QUrl(QStringLiteral("https://filters.adtidy.org/extension/ublock/filters/14.txt")),
-            QUrl(QStringLiteral("https://easylist-downloads.adblockplus.org/antiadblockfilters.txt"))};
+    return {QUrl(u"https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt"_s),
+            QUrl(u"https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt"_s),
+            QUrl(u"https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt"_s),
+            QUrl(u"https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt"_s),
+            QUrl(u"https://easylist.to/easylist/easyprivacy.txt"_s),
+            QUrl(u"https://easylist.to/easylist/easylist.txt"_s),
+            QUrl(u"https://filters.adtidy.org/extension/ublock/filters/14.txt"_s),
+            QUrl(u"https://easylist-downloads.adblockplus.org/antiadblockfilters.txt"_s)};
 }

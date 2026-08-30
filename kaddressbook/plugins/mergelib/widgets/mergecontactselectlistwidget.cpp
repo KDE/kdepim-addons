@@ -11,6 +11,7 @@
 #include <QListWidget>
 #include <QLocale>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 using namespace KABMergeContacts;
 using namespace KContacts;
 
@@ -72,7 +73,7 @@ void MergeContactSelectListWidget::updateTitle()
         title = i18n("Blog Feed");
         break;
     case MergeContacts::HomePage:
-        title = QStringLiteral("HomePage");
+        title = u"HomePage"_s;
         break;
     case MergeContacts::Organization:
         title = Addressee::organizationLabel();
@@ -96,7 +97,7 @@ void MergeContactSelectListWidget::updateTitle()
         title = i18n("Assistant");
         break;
     case MergeContacts::FreeBusy:
-        title = QStringLiteral("FreeBusy");
+        title = u"FreeBusy"_s;
         break;
     case MergeContacts::FamilyName:
         title = Addressee::familyNameLabel();
@@ -105,7 +106,7 @@ void MergeContactSelectListWidget::updateTitle()
         title = i18n("Spouse");
         break;
     case MergeContacts::Keys:
-        title = QStringLiteral("Keys");
+        title = u"Keys"_s;
         break;
     }
 
@@ -149,7 +150,7 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         }
         case MergeContacts::Geo: {
             const Geo geo = addr.geo();
-            const QString str = QStringLiteral("%1-%2").arg(geo.latitude()).arg(geo.longitude());
+            const QString str = u"%1-%2"_s.arg(geo.latitude()).arg(geo.longitude());
             addItem(str);
             break;
         }
@@ -163,7 +164,7 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
             break;
         case MergeContacts::Anniversary: {
             QString anniversary;
-            const QDate anniversaryDt = QDate::fromString(addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Anniversary")), Qt::ISODate);
+            const QDate anniversaryDt = QDate::fromString(addr.custom(u"KADDRESSBOOK"_s, u"X-Anniversary"_s), Qt::ISODate);
             if (anniversaryDt.isValid()) {
                 anniversary = QLocale().toString(anniversaryDt);
             }
@@ -177,7 +178,7 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
             addItem(addr.nickName());
             break;
         case MergeContacts::Blog: {
-            const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"));
+            const QString newBlog = addr.custom(u"KADDRESSBOOK"_s, u"BlogFeed"_s);
             addItem(newBlog);
             break;
         }
@@ -188,7 +189,7 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
             addItem(addr.organization());
             break;
         case MergeContacts::Profession: {
-            const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"));
+            const QString newBlog = addr.custom(u"KADDRESSBOOK"_s, u"X-Profession"_s);
             addItem(newBlog);
             break;
         }
@@ -199,17 +200,17 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
             addItem(addr.department());
             break;
         case MergeContacts::Office: {
-            const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"));
+            const QString newBlog = addr.custom(u"KADDRESSBOOK"_s, u"X-Office"_s);
             addItem(newBlog);
             break;
         }
         case MergeContacts::ManagerName: {
-            const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"));
+            const QString newBlog = addr.custom(u"KADDRESSBOOK"_s, u"X-ManagersName"_s);
             addItem(newBlog);
             break;
         }
         case MergeContacts::Assistant: {
-            const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"));
+            const QString newBlog = addr.custom(u"KADDRESSBOOK"_s, u"X-AssistantsName"_s);
             addItem(newBlog);
             break;
         }
@@ -220,7 +221,7 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
             addItem(addr.familyName());
             break;
         case MergeContacts::PartnerName: {
-            const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"));
+            const QString newBlog = addr.custom(u"KADDRESSBOOK"_s, u"X-SpousesName"_s);
             addItem(newBlog);
             break;
         }

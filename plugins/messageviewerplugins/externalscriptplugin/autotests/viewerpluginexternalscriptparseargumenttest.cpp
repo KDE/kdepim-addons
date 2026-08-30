@@ -7,6 +7,7 @@
 #include "viewerpluginexternalscriptparseargumenttest.h"
 #include "../viewerpluginexternalscriptparseargument.h"
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalScriptParseArgumentTest::ViewerPluginExternalScriptParseArgumentTest(QObject *parent)
     : QObject(parent)
@@ -18,7 +19,7 @@ ViewerPluginExternalScriptParseArgumentTest::~ViewerPluginExternalScriptParseArg
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnOriginalStringListWhenMessageIsNotSetting()
 {
     ViewerPluginExternalScriptParseArgument parser;
-    const QStringList lst = {QStringLiteral("foo"), QStringLiteral("bla")};
+    const QStringList lst = {u"foo"_s, u"bla"_s};
     QCOMPARE(parser.parse(lst), lst);
 }
 
@@ -28,8 +29,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSubject()
     std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = {QStringLiteral("%s")};
-    const QStringList result = {QStringLiteral("\"Akademy\"")};
+    const QStringList lst = {u"%s"_s};
+    const QStringList result = {u"\"Akademy\""_s};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -39,7 +40,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSameListIfNotTrans
     std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = {QStringLiteral("cc"), QStringLiteral("vv"), QStringLiteral("ff")};
+    const QStringList lst = {u"cc"_s, u"vv"_s, u"ff"_s};
     QCOMPARE(parser.parse(lst), lst);
 }
 
@@ -49,8 +50,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTwiceSubject()
     std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = {QStringLiteral("%s"), QStringLiteral("vv"), QStringLiteral("%s")};
-    const QStringList result = {QStringLiteral("\"Akademy\""), QStringLiteral("vv"), QStringLiteral("\"Akademy\"")};
+    const QStringList lst = {u"%s"_s, u"vv"_s, u"%s"_s};
+    const QStringList result = {u"\"Akademy\""_s, u"vv"_s, u"\"Akademy\""_s};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -60,8 +61,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTo()
     std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = {QStringLiteral("%to")};
-    const QStringList result = {QStringLiteral("\"kde@example.com\"")};
+    const QStringList lst = {u"%to"_s};
+    const QStringList result = {u"\"kde@example.com\""_s};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -71,8 +72,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnEmptyStrWhenArgume
     std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = {QStringLiteral("%cc")};
-    const QStringList result = {QStringLiteral("\"\"")};
+    const QStringList lst = {u"%cc"_s};
+    const QStringList result = {u"\"\""_s};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -82,8 +83,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBody()
     std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = {QStringLiteral("%body")};
-    const QStringList result = {QStringLiteral("\"Hello this is a test mail\"")};
+    const QStringList lst = {u"%body"_s};
+    const QStringList result = {u"\"Hello this is a test mail\""_s};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -93,8 +94,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBcc()
     std::shared_ptr<KMime::Message> message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = {QStringLiteral("%bcc")};
-    const QStringList result = {QStringLiteral("\"kde1@example.com\"")};
+    const QStringList lst = {u"%bcc"_s};
+    const QStringList result = {u"\"kde1@example.com\""_s};
     QCOMPARE(parser.parse(lst), result);
 }
 

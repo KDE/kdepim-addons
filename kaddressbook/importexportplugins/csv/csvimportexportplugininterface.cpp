@@ -21,6 +21,7 @@
 
 #include <KAddressBookImportExport/ContactSelectionDialog>
 #include <KAddressBookImportExport/ImportExportEngine>
+using namespace Qt::Literals::StringLiterals;
 
 CSVImportExportPluginInterface::CSVImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::PluginInterface(parent)
@@ -31,13 +32,13 @@ CSVImportExportPluginInterface::~CSVImportExportPluginInterface() = default;
 
 void CSVImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("file_export_csv"));
+    QAction *action = ac->addAction(u"file_export_csv"_s);
     action->setText(i18n("Export CSV file…"));
     action->setWhatsThis(i18n("Export contacts to a file in comma separated value format."));
     setExportActions(QList<QAction *>() << action);
     connect(action, &QAction::triggered, this, &CSVImportExportPluginInterface::slotExportCVS);
 
-    action = ac->addAction(QStringLiteral("file_import_csv"));
+    action = ac->addAction(u"file_import_csv"_s);
     action->setText(i18n("Import CSV file…"));
     action->setWhatsThis(i18n("Import contacts from a file in comma separated value format."));
     setImportActions(QList<QAction *>() << action);
@@ -102,7 +103,7 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
 
         // add quoting as defined in RFC 4180
         QString label = KAddressBookImportExport::ContactFields::label(fields.at(i));
-        label.replace(QLatin1Char('"'), QStringLiteral("\"\""));
+        label.replace(QLatin1Char('"'), u"\"\""_s);
 
         stream << "\"" << label << "\"";
         first = false;
@@ -126,11 +127,11 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
                     content = dateTime.date().toString(Qt::ISODate);
                 }
             } else {
-                content = KAddressBookImportExport::ContactFields::value(fields.at(j), contact).replace(QLatin1Char('\n'), QStringLiteral("\\n"));
+                content = KAddressBookImportExport::ContactFields::value(fields.at(j), contact).replace(QLatin1Char('\n'), u"\\n"_s);
             }
 
             // add quoting as defined in RFC 4180
-            content.replace(QLatin1Char('"'), QStringLiteral("\"\""));
+            content.replace(QLatin1Char('"'), u"\"\""_s);
 
             stream << '\"' << content << '\"';
             first = false;
@@ -161,7 +162,7 @@ void CSVImportExportPluginInterface::exportCSV()
     KAddressBookImportExport::ContactList contactLists;
     contactLists.setAddressList(contacts);
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
-    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.csv")), QString(), nullptr, options);
+    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(u"addressbook.csv"_s), QString(), nullptr, options);
     if (url.isEmpty()) {
         return;
     }

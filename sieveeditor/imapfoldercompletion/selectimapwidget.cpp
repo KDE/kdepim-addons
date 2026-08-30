@@ -13,6 +13,7 @@
 #include <QToolButton>
 
 #include <KPluginFactory>
+using namespace Qt::Literals::StringLiterals;
 K_PLUGIN_CLASS_WITH_JSON(SelectImapWidget, "imapfoldercompletion.json")
 
 SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
@@ -26,7 +27,7 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     mLineEdit->setObjectName(QLatin1StringView("lineedit"));
     layout->addWidget(mLineEdit);
 
-    mToolButton->setText(QStringLiteral("…"));
+    mToolButton->setText(u"…"_s);
     mToolButton->setObjectName(QLatin1StringView("toolbutton"));
     mToolButton->setToolTip(i18nc("@info:tooltip", "Select IMAP folder"));
     mToolButton->hide();

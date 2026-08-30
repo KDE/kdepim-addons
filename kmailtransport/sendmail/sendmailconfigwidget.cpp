@@ -18,6 +18,7 @@
 
 #include <KLineEdit>
 #include <QStandardPaths>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MailTransport;
 
@@ -53,7 +54,7 @@ void SendmailConfigWidget::init()
         // Locate sendmail.
         // This is imperfect, because it shows the standard path if an empty path
         // is saved in the config.
-        d->ui.kcfg_host->setText(QStandardPaths::findExecutable(QStringLiteral("sendmail")));
+        d->ui.kcfg_host->setText(QStandardPaths::findExecutable(u"sendmail"_s));
     }
     connect(d->ui.kcfg_host->lineEdit(), &QLineEdit::textChanged, this, &SendmailConfigWidget::slotTextChanged);
     slotTextChanged(d->ui.kcfg_host->text());

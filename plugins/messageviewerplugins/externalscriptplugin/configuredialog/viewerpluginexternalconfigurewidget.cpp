@@ -19,6 +19,7 @@
 #include <QPushButton>
 #include <QStandardPaths>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 class ViewerPluginExternalScriptItem : public QListWidgetItem
 {
@@ -45,7 +46,7 @@ void ViewerPluginExternalScriptItem::setScriptInfo(const ViewerPluginExternalScr
     if (!mScriptInfo.commandLine().isEmpty()) {
         commandLine += QLatin1Char(' ') + mScriptInfo.commandLine();
     }
-    setToolTip(mScriptInfo.description() + QStringLiteral(" (%1)").arg(commandLine));
+    setToolTip(mScriptInfo.description() + u" (%1)"_s.arg(commandLine));
 }
 
 ViewerPluginExternalScriptInfo ViewerPluginExternalScriptItem::scriptInfo() const
@@ -143,8 +144,7 @@ void ViewerPluginExternalConfigureWidget::slotAddScript()
 void ViewerPluginExternalConfigureWidget::load()
 {
     ViewerPluginExternalScriptsLoadJob job;
-    const QStringList lst =
-        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewerplugins/"), QStandardPaths::LocateDirectory);
+    const QStringList lst = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, u"messageviewerplugins/"_s, QStandardPaths::LocateDirectory);
     job.setExternalScriptsDirectories(lst);
     job.start();
     const QList<ViewerPluginExternalScriptInfo> scriptInfos = job.scriptInfos();
@@ -167,26 +167,26 @@ void ViewerPluginExternalConfigureWidget::save()
             qCWarning(EXTERNALSCRIPTPLUGIN_LOG) << " Impossible to delete " << path;
         }
     }
-    const QString writablePath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/messageviewerplugins/");
+    const QString writablePath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/messageviewerplugins/"_s;
     const int numberOfElement(mListExternal->count());
     for (int i = 0; i < numberOfElement; ++i) {
         auto item = static_cast<ViewerPluginExternalScriptItem *>(mListExternal->item(i));
         const ViewerPluginExternalScriptInfo &scriptInfo = item->scriptInfo();
         QString filenamepath = scriptInfo.fileName();
         if (filenamepath.isEmpty()) {
-            filenamepath = writablePath + QStringLiteral("%1.desktop").arg(scriptInfo.name());
+            filenamepath = writablePath + u"%1.desktop"_s.arg(scriptInfo.name());
             int fileIndex = 1;
             while (QFileInfo::exists(filenamepath)) {
-                filenamepath = writablePath + QStringLiteral("%1-%2.desktop").arg(scriptInfo.name()).arg(fileIndex);
+                filenamepath = writablePath + u"%1-%2.desktop"_s.arg(scriptInfo.name()).arg(fileIndex);
                 fileIndex++;
             }
         }
         KDesktopFile desktopFile(filenamepath);
-        desktopFile.desktopGroup().writeEntry(QStringLiteral("Name"), scriptInfo.name());
-        desktopFile.desktopGroup().writeEntry(QStringLiteral("Description"), scriptInfo.description());
-        desktopFile.desktopGroup().writeEntry(QStringLiteral("Executable"), scriptInfo.executable());
-        desktopFile.desktopGroup().writeEntry(QStringLiteral("CommandLine"), scriptInfo.commandLine());
-        desktopFile.desktopGroup().writeEntry(QStringLiteral("Icon"), scriptInfo.icon());
+        desktopFile.desktopGroup().writeEntry(u"Name"_s, scriptInfo.name());
+        desktopFile.desktopGroup().writeEntry(u"Description"_s, scriptInfo.description());
+        desktopFile.desktopGroup().writeEntry(u"Executable"_s, scriptInfo.executable());
+        desktopFile.desktopGroup().writeEntry(u"CommandLine"_s, scriptInfo.commandLine());
+        desktopFile.desktopGroup().writeEntry(u"Icon"_s, scriptInfo.icon());
         desktopFile.desktopGroup().sync();
     }
 }

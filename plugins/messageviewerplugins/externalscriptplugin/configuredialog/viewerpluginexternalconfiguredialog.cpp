@@ -9,6 +9,7 @@
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QPushButton>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalConfigureDialog::ViewerPluginExternalConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
@@ -39,7 +40,7 @@ void ViewerPluginExternalConfigureDialog::load()
 
 void ViewerPluginExternalConfigureDialog::help()
 {
-    showHelp(QStringLiteral("kmail2"), QString());
+    showHelp(u"kmail2"_s, QString());
 }
 
 #include "moc_viewerpluginexternalconfiguredialog.cpp"

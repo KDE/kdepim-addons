@@ -12,6 +12,7 @@
 #include <QScrollArea>
 #include <QStackedWidget>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 MergeContactSelectInformationScrollAreaTest::MergeContactSelectInformationScrollAreaTest(QObject *parent)
     : QObject(parent)
@@ -23,15 +24,15 @@ MergeContactSelectInformationScrollAreaTest::~MergeContactSelectInformationScrol
 void MergeContactSelectInformationScrollAreaTest::shouldHaveDefaultValue()
 {
     KABMergeContacts::MergeContactSelectInformationScrollArea w;
-    const auto area = w.findChild<QScrollArea *>(QStringLiteral("scrollarea"));
+    const auto area = w.findChild<QScrollArea *>(u"scrollarea"_s);
     QVERIFY(area);
-    const auto mergeButton = w.findChild<QPushButton *>(QStringLiteral("merge"));
+    const auto mergeButton = w.findChild<QPushButton *>(u"merge"_s);
     QVERIFY(mergeButton);
 
-    const auto stackedwidget = w.findChild<QStackedWidget *>(QStringLiteral("stackwidget"));
+    const auto stackedwidget = w.findChild<QStackedWidget *>(u"stackwidget"_s);
     QVERIFY(stackedwidget);
 
-    const auto widget = w.findChild<KABMergeContacts::MergeContactSelectInformationWidget *>(QStringLiteral("selectinformationwidget"));
+    const auto widget = w.findChild<KABMergeContacts::MergeContactSelectInformationWidget *>(u"selectinformationwidget"_s);
     QVERIFY(widget);
 
     for (int i = 0; i < stackedwidget->count(); ++i) {
@@ -40,7 +41,7 @@ void MergeContactSelectInformationScrollAreaTest::shouldHaveDefaultValue()
         bool hasCorrectName = (objName == QLatin1StringView("mergedcontactwidget")) || (objName == QLatin1StringView("selectwidget"));
         QVERIFY(hasCorrectName);
     }
-    QCOMPARE(stackedwidget->currentWidget()->objectName(), QStringLiteral("selectwidget"));
+    QCOMPARE(stackedwidget->currentWidget()->objectName(), u"selectwidget"_s);
 }
 
 QTEST_MAIN(MergeContactSelectInformationScrollAreaTest)

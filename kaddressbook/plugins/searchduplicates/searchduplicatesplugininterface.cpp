@@ -10,6 +10,7 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
+using namespace Qt::Literals::StringLiterals;
 
 SearchDuplicatesPluginInterface::SearchDuplicatesPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -20,7 +21,7 @@ SearchDuplicatesPluginInterface::~SearchDuplicatesPluginInterface() = default;
 
 void SearchDuplicatesPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("search_duplicate_contacts"));
+    QAction *action = ac->addAction(u"search_duplicate_contacts"_s);
     action->setText(i18n("Search Duplicate Contacts…"));
     connect(action, &QAction::triggered, this, &SearchDuplicatesPluginInterface::slotActivated);
     const PimCommon::ActionType type(action, PimCommon::ActionType::Tools);

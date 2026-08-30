@@ -22,6 +22,7 @@
 #include <gpgme.h>
 
 #include <KMessageBox>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MimeTreeParser::Interface;
 
@@ -43,7 +44,7 @@ QString ApplicationPgpKeyUrlHandler::statusBarMessage(BodyPart *part, const QStr
 {
     Q_UNUSED(part)
     const QUrlQuery q = decodePath(path);
-    if (q.queryItemValue(QStringLiteral("action")) == QLatin1StringView("import")) {
+    if (q.queryItemValue(u"action"_s) == QLatin1StringView("import")) {
         return i18n("Import the key");
     }
 
@@ -52,13 +53,13 @@ QString ApplicationPgpKeyUrlHandler::statusBarMessage(BodyPart *part, const QStr
 
 QString ApplicationPgpKeyUrlHandler::name() const
 {
-    return QStringLiteral("ApplicationPgpKeyUrlHandler");
+    return u"ApplicationPgpKeyUrlHandler"_s;
 }
 
 bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v, BodyPart *part, const QString &path) const
 {
     const QUrlQuery q = decodePath(path);
-    if (q.queryItemValue(QStringLiteral("action")) == QLatin1StringView("import")) {
+    if (q.queryItemValue(u"action"_s) == QLatin1StringView("import")) {
         auto job = QGpgME::openpgp()->importJob();
         auto res = job->exec(part->content()->decodedBody());
         if (res.error()) {

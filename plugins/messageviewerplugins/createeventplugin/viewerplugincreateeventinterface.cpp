@@ -13,6 +13,7 @@
 #include <QAction>
 #include <QIcon>
 #include <QLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -65,10 +66,10 @@ void ViewerPluginCreateEventInterface::setMessageItem(const Akonadi::Item &item)
 void ViewerPluginCreateEventInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        auto act = new QAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Create Event…"), this);
+        auto act = new QAction(QIcon::fromTheme(u"appointment-new"_s), i18n("Create Event…"), this);
         act->setIconText(i18n("Create Event"));
         addHelpTextAction(act, i18n("Allows you to create a calendar Event"));
-        ac->addAction(QStringLiteral("create_event"), act);
+        ac->addAction(u"create_event"_s, act);
         ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL | Qt::Key_E));
         connect(act, &QAction::triggered, this, &ViewerPluginCreateEventInterface::slotActivatePlugin);
         mAction.append(act);

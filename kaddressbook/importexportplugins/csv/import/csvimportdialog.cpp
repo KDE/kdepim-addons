@@ -41,6 +41,7 @@
 #include <QThread>
 #include <QUuid>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 enum {
     Local = 0,
@@ -203,7 +204,7 @@ CSVImportDialog::CSVImportDialog(QWidget *parent)
     connect(mModel, &QCsvModel::finishedLoading, this, &CSVImportDialog::modelFinishedLoading);
 
     delimiterClicked(0);
-    textQuoteChanged(QStringLiteral("\""));
+    textQuoteChanged(u"\""_s);
     skipFirstRowChanged(false);
 }
 
@@ -243,7 +244,7 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
                     value = dateParser.parse(value).toString(Qt::ISODate);
                 }
 
-                value.replace(QLatin1StringView("\\n"), QStringLiteral("\n"));
+                value.replace(QLatin1StringView("\\n"), u"\n"_s);
 
                 KAddressBookImportExport::ContactFields::setValue(field, value, contact);
             }
@@ -297,7 +298,7 @@ void CSVImportDialog::initGUI()
 
     mUrlRequester = new KUrlRequester(page);
     mainLayout->addWidget(mUrlRequester);
-    mUrlRequester->setMimeTypeFilters({QStringLiteral("text/csv")});
+    mUrlRequester->setMimeTypeFilters({u"text/csv"_s});
     mUrlRequester->lineEdit()->setTrapReturnKey(true);
     mUrlRequester->setToolTip(i18nc("@info:tooltip", "Select a csv file to import"));
     mUrlRequester->setWhatsThis(i18nc("@info:whatsthis",
@@ -385,7 +386,7 @@ void CSVImportDialog::initGUI()
 
     mDatePatternEdit = new QLineEdit(page);
     mainLayout->addWidget(mDatePatternEdit);
-    mDatePatternEdit->setText(QStringLiteral("Y-M-D")); // ISO 8601 date format as default
+    mDatePatternEdit->setText(u"Y-M-D"_s); // ISO 8601 date format as default
     mDatePatternEdit->setToolTip(xi18nc("@info:tooltip",
                                         "<para><list><item>y: year with 2 digits</item>"
                                         "<item>Y: year with 4 digits</item>"
@@ -657,14 +658,14 @@ void CSVImportDialog::saveTemplate()
         return;
     }
 
-    const QString fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kaddressbook/csv-templates/")
-        + QUuid::createUuid().toString() + QStringLiteral(".desktop");
+    const QString fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/kaddressbook/csv-templates/"_s
+        + QUuid::createUuid().toString() + u".desktop"_s;
 
     QFileInfo fileInfo(fileName);
     QDir().mkpath(fileInfo.absolutePath());
 
     KConfig config(fileName);
-    KConfigGroup generalGroup(&config, QStringLiteral("General"));
+    KConfigGroup generalGroup(&config, u"General"_s);
     generalGroup.writeEntry("DatePattern", mDatePatternEdit->text());
     generalGroup.writeEntry("Columns", mModel->columnCount());
     generalGroup.writeEntry("DelimiterType", mDelimiterGroup->checkedId());
@@ -672,10 +673,10 @@ void CSVImportDialog::saveTemplate()
     generalGroup.writeEntry("SkipFirstRow", mSkipFirstRow->isChecked());
     generalGroup.writeEntry("QuoteType", mComboQuote->currentIndex());
 
-    KConfigGroup miscGroup(&config, QStringLiteral("Misc"));
+    KConfigGroup miscGroup(&config, u"Misc"_s);
     miscGroup.writeEntry("Name", name);
 
-    KConfigGroup columnMapGroup(&config, QStringLiteral("csv column map"));
+    KConfigGroup columnMapGroup(&config, u"csv column map"_s);
     for (int column = 0; column < numberOfColumn; ++column) {
         columnMapGroup.writeEntry(QString::number(column), mModel->data(mModel->index(0, column), Qt::DisplayRole).toUInt());
     }

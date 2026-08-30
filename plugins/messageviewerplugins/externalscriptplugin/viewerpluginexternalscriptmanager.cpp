@@ -8,6 +8,7 @@
 #include "viewerpluginexternalscriptsloadjob.h"
 
 #include <QStandardPaths>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalScriptManager::ViewerPluginExternalScriptManager(QObject *parent)
     : QObject(parent)
@@ -26,8 +27,7 @@ ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()
 void ViewerPluginExternalScriptManager::readExternalScriptInfo()
 {
     ViewerPluginExternalScriptsLoadJob job;
-    const QStringList lst =
-        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewerplugins/"), QStandardPaths::LocateDirectory);
+    const QStringList lst = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, u"messageviewerplugins/"_s, QStandardPaths::LocateDirectory);
     job.setExternalScriptsDirectories(lst);
     job.start();
     mScriptInfos = job.scriptInfos();

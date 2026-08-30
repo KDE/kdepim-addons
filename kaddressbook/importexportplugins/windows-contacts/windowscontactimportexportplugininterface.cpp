@@ -15,6 +15,7 @@
 #include <QFileDialog>
 
 #include <KAddressBookImportExport/ImportExportEngine>
+using namespace Qt::Literals::StringLiterals;
 
 WindowsContactImportExportPluginInterface::WindowsContactImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::PluginInterface(parent)
@@ -25,7 +26,7 @@ WindowsContactImportExportPluginInterface::~WindowsContactImportExportPluginInte
 
 void WindowsContactImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("file_import_windows_contact"));
+    QAction *action = ac->addAction(u"file_import_windows_contact"_s);
     action->setText(i18n("Import Windows Contact file…"));
     action->setWhatsThis(i18n("Import contacts from windows contact file."));
     setImportActions(QList<QAction *>() << action);

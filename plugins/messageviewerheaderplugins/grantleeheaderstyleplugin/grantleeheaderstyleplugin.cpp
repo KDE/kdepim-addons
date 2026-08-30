@@ -10,6 +10,7 @@
 #include <MessageViewer/GrantleeHeaderStyle>
 
 #include <KPluginFactory>
+using namespace Qt::Literals::StringLiterals;
 using namespace MessageViewer;
 
 K_PLUGIN_CLASS_WITH_JSON(GrantleeHeaderStylePlugin, "messageviewer_grantleeheaderstyleplugin.json")
@@ -48,7 +49,7 @@ HeaderStyleInterface *GrantleeHeaderStylePlugin::createView(KActionMenu *menu, Q
 
 QString GrantleeHeaderStylePlugin::name() const
 {
-    return QStringLiteral("grantlee");
+    return u"grantlee"_s;
 }
 
 #include "grantleeheaderstyleplugin.moc"

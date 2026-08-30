@@ -9,6 +9,7 @@
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(DKIMAuthenticationVerifiedServerWidgetTest)
 DKIMAuthenticationVerifiedServerWidgetTest::DKIMAuthenticationVerifiedServerWidgetTest(QObject *parent)
@@ -20,11 +21,11 @@ DKIMAuthenticationVerifiedServerWidgetTest::DKIMAuthenticationVerifiedServerWidg
 void DKIMAuthenticationVerifiedServerWidgetTest::shouldHaveDefaultValues()
 {
     DKIMAuthenticationVerifiedServerWidget w;
-    const auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    const auto mSelector = w.findChild<DKIMAuthenticationVerifiedServerSelectorWidget *>(QStringLiteral("mSelector"));
+    const auto mSelector = w.findChild<DKIMAuthenticationVerifiedServerSelectorWidget *>(u"mSelector"_s);
     QVERIFY(mSelector);
 }
 

@@ -28,6 +28,7 @@
 
 #include <QGuiApplication>
 #include <QPalette>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KItinerary;
 
@@ -63,32 +64,30 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
         return false;
     }
 
-    const auto dir = nodeHelper->createTempDir(QStringLiteral("semantic"));
+    const auto dir = nodeHelper->createTempDir(u"semantic"_s);
     auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
 
     QVariantMap style;
-    style.insert(QStringLiteral("expandIcon"),
-                 QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png"))));
-    style.insert(QStringLiteral("collapseIcon"),
-                 QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png"))));
-    style.insert(QStringLiteral("palette"), QGuiApplication::palette());
-    style.insert(QStringLiteral("viewScheme"), QVariant::fromValue(KColorScheme(QPalette::Normal, KColorScheme::View)));
-    c.insert(QStringLiteral("style"), style);
+    style.insert(u"expandIcon"_s, QString(u"file://"_s + MessageViewer::IconNameCache::instance()->iconPathFromLocal(u"quoteexpand.png"_s)));
+    style.insert(u"collapseIcon"_s, QString(u"file://"_s + MessageViewer::IconNameCache::instance()->iconPathFromLocal(u"quotecollapse.png"_s)));
+    style.insert(u"palette"_s, QGuiApplication::palette());
+    style.insert(u"viewScheme"_s, QVariant::fromValue(KColorScheme(QPalette::Normal, KColorScheme::View)));
+    c.insert(u"style"_s, style);
 
     const bool testMode = qEnvironmentVariableIsSet("BPF_ITINERARY_TESTMODE"); // ensure deterministic results for unit tests
     QVariantMap actionState;
-    actionState.insert(QStringLiteral("canShowCalendar"), memento->startDate().isValid());
-    actionState.insert(QStringLiteral("canAddToCalendar"), memento->canAddToCalendar());
-    actionState.insert(QStringLiteral("hasItineraryApp"), ItineraryUrlHandler::hasItineraryApp() || testMode);
+    actionState.insert(u"canShowCalendar"_s, memento->startDate().isValid());
+    actionState.insert(u"canAddToCalendar"_s, memento->canAddToCalendar());
+    actionState.insert(u"hasItineraryApp"_s, ItineraryUrlHandler::hasItineraryApp() || testMode);
     if (!testMode) {
         const auto devices = m_kdeConnect->devices();
-        actionState.insert(QStringLiteral("canSendToDevice"), !devices.isEmpty());
+        actionState.insert(u"canSendToDevice"_s, !devices.isEmpty());
         if (devices.size() == 1) {
-            actionState.insert(QStringLiteral("defaultDeviceName"), devices[0].name);
-            actionState.insert(QStringLiteral("defaultDeviceId"), devices[0].deviceId);
+            actionState.insert(u"defaultDeviceName"_s, devices[0].name);
+            actionState.insert(u"defaultDeviceId"_s, devices[0].deviceId);
         }
     }
-    c.insert(QStringLiteral("actionState"), actionState);
+    c.insert(u"actionState"_s, actionState);
 
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
     QVariantList elems;
@@ -98,15 +97,15 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
         QVariantMap data;
         QVariantMap state;
         const auto d = extractedData.at(i);
-        state.insert(QStringLiteral("expanded"), d.expanded);
-        data.insert(QStringLiteral("state"), state);
-        data.insert(QStringLiteral("groupId"), i);
+        state.insert(u"expanded"_s, d.expanded);
+        data.insert(u"state"_s, state);
+        data.insert(u"groupId"_s, i);
 
         QList<QVariant> reservations;
         reservations.reserve(d.reservations.count());
         for (const auto &r : d.reservations) {
             QVariantMap m;
-            m.insert(QStringLiteral("reservation"), r);
+            m.insert(u"reservation"_s, r);
 
             // generate ticket barcodes
             const auto ticket = JsonLd::convert<Reservation>(r).reservedTicket().value<Ticket>();
@@ -141,19 +140,19 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
                 const auto img = barcode->toImage(barcode->preferredSize(qGuiApp->devicePixelRatio()));
                 const QString fileName = dir + QLatin1StringView("/ticketToken") + QString::number(ticketTokenId++) + QLatin1StringView(".png");
                 img.save(fileName);
-                m.insert(QStringLiteral("ticketToken"), fileName);
+                m.insert(u"ticketToken"_s, fileName);
                 nodeHelper->addTempFile(fileName);
             }
 
             reservations.push_back(m);
         }
-        data.insert(QStringLiteral("reservations"), QVariant::fromValue(reservations));
+        data.insert(u"reservations"_s, QVariant::fromValue(reservations));
         elems.push_back(data);
     }
-    c.insert(QStringLiteral("data"), elems);
+    c.insert(u"data"_s, elems);
 
-    auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/itinerary/itinerary.html"));
-    const_cast<KTextTemplate::Engine *>(t->engine())->addDefaultLibrary(QStringLiteral("kitinerary_ktexttemplate_extension"));
+    auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(u"org.kde.messageviewer/itinerary/itinerary.html"_s);
+    const_cast<KTextTemplate::Engine *>(t->engine())->addDefaultLibrary(u"kitinerary_ktexttemplate_extension"_s);
     dynamic_cast<GrantleeTheme::Engine *>(const_cast<KTextTemplate::Engine *>(t->engine()))
         ->localizer()
         ->setApplicationDomain(QByteArrayLiteral("messageviewer_semantic_plugin"));

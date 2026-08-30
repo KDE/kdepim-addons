@@ -12,6 +12,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QDir>
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(PMailImportData, "pmailimporter.json")
 PMailImportData::PMailImportData(QObject *parent, const QList<QVariant> &)
@@ -38,7 +39,7 @@ bool PMailImportData::foundMailer() const
 
 QString PMailImportData::name() const
 {
-    return QStringLiteral("Pegasus Mail");
+    return u"Pegasus Mail"_s;
 }
 
 bool PMailImportData::importMails()

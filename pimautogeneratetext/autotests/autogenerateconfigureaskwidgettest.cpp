@@ -12,6 +12,7 @@
 #include <QPlainTextEdit>
 #include <QSplitter>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(AutogenerateConfigureAskWidgetTest)
 
@@ -24,20 +25,20 @@ void AutogenerateConfigureAskWidgetTest::shouldHaveDefaultValues()
 {
     AutogenerateConfigureAskWidget w;
 
-    const auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QHBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    const auto mSplitter = w.findChild<QSplitter *>(QStringLiteral("mSplitter"));
+    const auto mSplitter = w.findChild<QSplitter *>(u"mSplitter"_s);
     QVERIFY(mSplitter);
 
-    const auto mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mSearchLineEdit"));
+    const auto mSearchLineEdit = w.findChild<QLineEdit *>(u"mSearchLineEdit"_s);
     QVERIFY(mSearchLineEdit);
 
-    const auto mTextEdit = w.findChild<QPlainTextEdit *>(QStringLiteral("mTextEdit"));
+    const auto mTextEdit = w.findChild<QPlainTextEdit *>(u"mTextEdit"_s);
     QVERIFY(mTextEdit);
 
-    const auto mAutogenerateConfigureListView = w.findChild<AutogenerateConfigureListView *>(QStringLiteral("mAutogenerateConfigureListView"));
+    const auto mAutogenerateConfigureListView = w.findChild<AutogenerateConfigureListView *>(u"mAutogenerateConfigureListView"_s);
     QVERIFY(mAutogenerateConfigureListView);
 }
 

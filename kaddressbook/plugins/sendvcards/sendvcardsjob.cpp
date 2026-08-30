@@ -41,7 +41,7 @@ QString SendVcardsJob::createUniqueAttachmentName(const QString &contactRealName
 {
     QString newContactRealName = contactRealName;
     if (newContactRealName.isEmpty()) {
-        newContactRealName = QStringLiteral("vcard");
+        newContactRealName = u"vcard"_s;
     }
     if (existingVcard.contains(newContactRealName, Qt::CaseInsensitive)) {
         int index = 0;
@@ -75,7 +75,7 @@ bool SendVcardsJob::start()
             createTemporaryDir();
             const QString contactRealName(contact.realName());
             const QString generatedUniqueAttachmentName = createUniqueAttachmentName(contactRealName, attachmentNameLst);
-            const QString attachmentName = generatedUniqueAttachmentName + QStringLiteral(".vcf");
+            const QString attachmentName = generatedUniqueAttachmentName + u".vcf"_s;
             attachmentNameLst.append(generatedUniqueAttachmentName);
             createTemporaryFile(data, attachmentName);
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
@@ -84,7 +84,7 @@ bool SendVcardsJob::start()
             const QString uniqueName = createUniqueAttachmentName(group.name(), attachmentNameLst);
             attachmentNameLst.append(uniqueName);
             auto expandJob = new Akonadi::ContactGroupExpandJob(group, this);
-            const QString attachmentName = uniqueName + QStringLiteral(".vcf");
+            const QString attachmentName = uniqueName + u".vcf"_s;
             expandJob->setProperty("groupName", attachmentName);
             connect(expandJob, &KJob::result, this, &SendVcardsJob::slotExpandGroupResult);
             expandJob->start();
@@ -100,7 +100,7 @@ bool SendVcardsJob::start()
 void SendVcardsJob::createTemporaryDir()
 {
     if (!mTempDir) {
-        mTempDir = new QTemporaryDir(QDir::tempPath() + QLatin1Char('/') + QStringLiteral("sendvcards"));
+        mTempDir = new QTemporaryDir(QDir::tempPath() + QLatin1Char('/') + u"sendvcards"_s);
         mTempDir->setAutoRemove(false);
         mAttachmentTemporary->addTempDir(mTempDir->path());
     }

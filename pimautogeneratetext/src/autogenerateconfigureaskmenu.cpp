@@ -10,6 +10,7 @@
 
 #include <KLocalizedString>
 #include <QMenu>
+using namespace Qt::Literals::StringLiterals;
 
 AutogenerateConfigureAskMenu::AutogenerateConfigureAskMenu(AutogenerateConfigureAskManager *manager, QObject *parent)
     : KActionMenu{parent}
@@ -37,7 +38,7 @@ void AutogenerateConfigureAskMenu::initializeMenu()
             addAction(action);
         }
     }
-    auto configureAction = new QAction(QIcon::fromTheme(QStringLiteral("configure")), i18nc("@action", "Configure…"), this);
+    auto configureAction = new QAction(QIcon::fromTheme(u"configure"_s), i18nc("@action", "Configure…"), this);
     connect(configureAction, &QAction::triggered, this, &AutogenerateConfigureAskMenu::slotConfigure);
     addSeparator();
     addAction(configureAction);

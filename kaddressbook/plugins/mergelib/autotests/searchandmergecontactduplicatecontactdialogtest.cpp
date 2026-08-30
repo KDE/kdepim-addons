@@ -12,6 +12,7 @@
 #include <QTest>
 
 #include <QStackedWidget>
+using namespace Qt::Literals::StringLiterals;
 using namespace KABMergeContacts;
 
 SearchAndMergeContactDuplicateContactDialogTest::SearchAndMergeContactDuplicateContactDialogTest(QObject *parent)
@@ -28,9 +29,9 @@ void SearchAndMergeContactDuplicateContactDialogTest::shouldHaveDefaultValueOnCr
 {
     SearchAndMergeContactDuplicateContactDialog dlg;
     dlg.show();
-    const auto stackedWidget = dlg.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    const auto stackedWidget = dlg.findChild<QStackedWidget *>(u"stackedwidget"_s);
     QVERIFY(stackedWidget);
-    QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("nocontactselected"));
+    QCOMPARE(stackedWidget->currentWidget()->objectName(), u"nocontactselected"_s);
 
     for (int i = 0; i < stackedWidget->count(); ++i) {
         QWidget *w = stackedWidget->widget(i);
@@ -49,9 +50,9 @@ void SearchAndMergeContactDuplicateContactDialogTest::shouldShowNoEnoughPageWhen
     lst << Akonadi::Item(42);
     dlg.searchPotentialDuplicateContacts(lst);
     dlg.show();
-    const auto stackedWidget = dlg.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    const auto stackedWidget = dlg.findChild<QStackedWidget *>(u"stackedwidget"_s);
     QVERIFY(stackedWidget);
-    QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("noenoughcontactselected"));
+    QCOMPARE(stackedWidget->currentWidget()->objectName(), u"noenoughcontactselected"_s);
 }
 
 void SearchAndMergeContactDuplicateContactDialogTest::shouldShowNoContactWhenListIsEmpty()
@@ -60,9 +61,9 @@ void SearchAndMergeContactDuplicateContactDialogTest::shouldShowNoContactWhenLis
     Akonadi::Item::List lst;
     dlg.searchPotentialDuplicateContacts(lst);
     dlg.show();
-    const auto stackedWidget = dlg.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    const auto stackedWidget = dlg.findChild<QStackedWidget *>(u"stackedwidget"_s);
     QVERIFY(stackedWidget);
-    QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("nocontactselected"));
+    QCOMPARE(stackedWidget->currentWidget()->objectName(), u"nocontactselected"_s);
 }
 
 QTEST_MAIN(SearchAndMergeContactDuplicateContactDialogTest)

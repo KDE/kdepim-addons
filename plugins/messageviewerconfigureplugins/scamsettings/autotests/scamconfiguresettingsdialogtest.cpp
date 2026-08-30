@@ -11,6 +11,7 @@
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(ScamConfigureSettingsDialogTest)
 ScamConfigureSettingsDialogTest::ScamConfigureSettingsDialogTest(QObject *parent)
     : QObject{parent}
@@ -21,14 +22,14 @@ ScamConfigureSettingsDialogTest::ScamConfigureSettingsDialogTest(QObject *parent
 void ScamConfigureSettingsDialogTest::shouldHaveDefaultValues()
 {
     ScamConfigureSettingsDialog d;
-    const auto mScamConfigureSettingsWidget = d.findChild<ScamConfigureSettingsWidget *>(QStringLiteral("mScamConfigureSettingsWidget"));
+    const auto mScamConfigureSettingsWidget = d.findChild<ScamConfigureSettingsWidget *>(u"mScamConfigureSettingsWidget"_s);
     QVERIFY(mScamConfigureSettingsWidget);
 
-    const auto mainLayout = d.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = d.findChild<QVBoxLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QVERIFY(!d.windowTitle().isEmpty());
 
-    const auto buttonBox = d.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    const auto buttonBox = d.findChild<QDialogButtonBox *>(u"buttonBox"_s);
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 }

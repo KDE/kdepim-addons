@@ -14,6 +14,7 @@
 
 #include <QDateTime>
 #include <QTimeZone>
+using namespace Qt::Literals::StringLiterals;
 
 QVariant AddressFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const
 {
@@ -96,10 +97,10 @@ QHash<QString, KTextTemplate::Filter *> TagLibrary::filters(const QString &name)
 {
     Q_UNUSED(name)
     QHash<QString, KTextTemplate::Filter *> filters;
-    filters.insert(QStringLiteral("formatAddress"), new AddressFormatter());
-    filters.insert(QStringLiteral("formatDate"), new DateFormatter());
-    filters.insert(QStringLiteral("formatDateTime"), new DateTimeFormatter());
-    filters.insert(QStringLiteral("formatTime"), new TimeFormatter());
+    filters.insert(u"formatAddress"_s, new AddressFormatter());
+    filters.insert(u"formatDate"_s, new DateFormatter());
+    filters.insert(u"formatDateTime"_s, new DateTimeFormatter());
+    filters.insert(u"formatTime"_s, new TimeFormatter());
     return filters;
 }
 

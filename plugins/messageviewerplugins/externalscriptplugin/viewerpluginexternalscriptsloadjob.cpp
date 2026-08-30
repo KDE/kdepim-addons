@@ -10,6 +10,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <QDir>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalScriptsLoadJob::ViewerPluginExternalScriptsLoadJob() = default;
 
@@ -25,7 +26,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
             QDir dir(directory);
             if (dir.exists()) {
                 const QDir::Filters filters = QDir::Files | QDir::Hidden | QDir::NoSymLinks;
-                const QFileInfoList list = dir.entryInfoList(QStringList() << QStringLiteral("*.desktop"), filters);
+                const QFileInfoList list = dir.entryInfoList(QStringList() << u"*.desktop"_s, filters);
                 const int listSize(list.size());
                 QStringList scriptNames;
                 for (int i = 0; i < listSize; ++i) {
@@ -33,7 +34,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
 
                     KConfig config(filePath);
                     qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "load file " << filePath;
-                    KConfigGroup group(&config, QStringLiteral("Desktop Entry"));
+                    KConfigGroup group(&config, u"Desktop Entry"_s);
                     if (group.isValid()) {
                         ViewerPluginExternalScriptInfo info;
                         const QString name = group.readEntry("Name", QString());

@@ -29,6 +29,7 @@
 #include <QGpgME/DecryptJob>
 #include <QGpgME/Protocol>
 #include <gpgme.h>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MimeTreeParser;
 using namespace MimeTreeParser::Interface;
@@ -92,9 +93,9 @@ bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &
     GrantleeTheme::Engine engine;
     engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
     auto loader = QSharedPointer<KTextTemplate::FileSystemTemplateLoader>::create();
-    loader->setTemplateDirs({QStringLiteral(":/")});
+    loader->setTemplateDirs({u":/"_s});
     engine.addTemplateLoader(loader);
-    KTextTemplate::Template tpl = engine.loadByName(QStringLiteral("gnupgwksmessagepart.html"));
+    KTextTemplate::Template tpl = engine.loadByName(u"gnupgwksmessagepart.html"_s);
     if (tpl->error()) {
         qCWarning(GNUPGWKS_LOG) << tpl->errorString();
     }
@@ -103,19 +104,19 @@ bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &
 
     QObject block;
 
-    const auto baseUrl = QStringLiteral("gnupgwks?%1");
+    const auto baseUrl = u"gnupgwks?%1"_s;
     block.setProperty("isRequest", mp->confirmationType() == GnuPGWKSMessagePart::ConfirmationRequest);
     block.setProperty("isResponse", mp->confirmationType() == GnuPGWKSMessagePart::ConfirmationResponse);
     QUrlQuery confirmQuery;
-    confirmQuery.addQueryItem(QStringLiteral("action"), QStringLiteral("confirm"));
-    confirmQuery.addQueryItem(QStringLiteral("fpr"), mp->fingerprint());
+    confirmQuery.addQueryItem(u"action"_s, u"confirm"_s);
+    confirmQuery.addQueryItem(u"fpr"_s, mp->fingerprint());
     block.setProperty("confirmUrl", mp->makeLink(baseUrl.arg(confirmQuery.toString(QUrl::FullyDecoded))));
     QUrlQuery keyQuery;
-    keyQuery.addQueryItem(QStringLiteral("action"), QStringLiteral("show"));
-    keyQuery.addQueryItem(QStringLiteral("fpr"), mp->fingerprint());
+    keyQuery.addQueryItem(u"action"_s, u"show"_s);
+    keyQuery.addQueryItem(u"fpr"_s, mp->fingerprint());
     block.setProperty("keyUrl", mp->makeLink(baseUrl.arg(keyQuery.toString(QUrl::FullyDecoded))));
     block.setProperty("hasError", hasError);
-    ctx.insert(QStringLiteral("block"), &block);
+    ctx.insert(u"block"_s, &block);
 
     QObject style;
     QPalette p;
@@ -127,7 +128,7 @@ bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &
     p.setCurrentColorGroup(QPalette::Normal);
     style.setProperty("buttonFg", p.color(QPalette::ButtonText).name());
     style.setProperty("errorFg", MessageCore::ColorUtil::self()->pgpSignedBadTextColor().name());
-    ctx.insert(QStringLiteral("style"), &style);
+    ctx.insert(u"style"_s, &style);
     KTextTemplate::OutputStream s(htmlWriter->stream());
     tpl->render(&s, &ctx);
     return true;

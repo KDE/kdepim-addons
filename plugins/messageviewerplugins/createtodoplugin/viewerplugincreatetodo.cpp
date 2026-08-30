@@ -8,6 +8,7 @@
 #include "viewerplugincreatetodointerface.h"
 #include <KActionCollection>
 #include <KPluginFactory>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginCreatetodo, "messageviewer_createtodoplugin.json")
@@ -25,7 +26,7 @@ ViewerPluginInterface *ViewerPluginCreatetodo::createView(QWidget *parent, KActi
 
 QString ViewerPluginCreatetodo::viewerPluginName() const
 {
-    return QStringLiteral("create-todo");
+    return u"create-todo"_s;
 }
 
 #include "viewerplugincreatetodo.moc"

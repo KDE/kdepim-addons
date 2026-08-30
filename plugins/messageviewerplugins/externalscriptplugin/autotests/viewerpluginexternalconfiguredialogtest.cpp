@@ -10,6 +10,7 @@
 #include <QPushButton>
 #include <QStandardPaths>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 ViewerPluginExternalConfigureDialogTest::ViewerPluginExternalConfigureDialogTest(QObject *parent)
     : QObject(parent)
@@ -23,7 +24,7 @@ void ViewerPluginExternalConfigureDialogTest::shouldHaveDefaultValue()
 {
     ViewerPluginExternalConfigureDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
-    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    const auto buttonBox = dlg.findChild<QDialogButtonBox *>(u"buttonBox"_s);
     QVERIFY(buttonBox);
     QVERIFY(buttonBox->button(QDialogButtonBox::RestoreDefaults)->isHidden());
 }

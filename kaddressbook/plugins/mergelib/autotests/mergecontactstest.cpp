@@ -7,6 +7,7 @@
 #include "mergecontactstest.h"
 #include "../job/mergecontacts.h"
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KABMergeContacts;
 using namespace KContacts;
@@ -27,7 +28,7 @@ void MergeContactsTest::shouldReturnDefaultAddressWhenOneItem()
     Akonadi::Item::List lst;
     Akonadi::Item item;
     KContacts::Addressee address;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     item.setPayload<KContacts::Addressee>(address);
     lst << item;
 
@@ -48,7 +49,7 @@ void MergeContactsTest::noNeedManualSelectionCheckWhenOneItem()
     Akonadi::Item::List lst;
     KContacts::Addressee address;
     Akonadi::Item item;
-    address.setName(QStringLiteral("foo1"));
+    address.setName(u"foo1"_s);
     item.setPayload<KContacts::Addressee>(address);
     lst << item;
     MergeContacts contacts(lst);
@@ -63,13 +64,13 @@ void MergeContactsTest::checkNeedManualSelectionWithName_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithName()
@@ -111,13 +112,13 @@ void MergeContactsTest::checkNeedManualSelectionWithNickName_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithNickName()
@@ -159,13 +160,13 @@ void MergeContactsTest::checkNeedManualSelectionWithOrganization_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithOrganization()
@@ -207,13 +208,13 @@ void MergeContactsTest::checkNeedManualSelectionWithTitle_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithTitle()
@@ -255,13 +256,13 @@ void MergeContactsTest::checkNeedManualSelectionWithFamilyName_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithFamilyName()
@@ -303,13 +304,13 @@ void MergeContactsTest::checkNeedManualSelectionWithDepartement_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithDepartement()
@@ -351,13 +352,13 @@ void MergeContactsTest::checkNeedManualSelectionWithProfession_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithProfession()
@@ -370,19 +371,19 @@ void MergeContactsTest::checkNeedManualSelectionWithProfession()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    addressA.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"), nameItemA);
+    addressA.insertCustom(u"KADDRESSBOOK"_s, u"X-Profession"_s, nameItemA);
     itemA.setPayload<KContacts::Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"), nameItemB);
+    addressB.insertCustom(u"KADDRESSBOOK"_s, u"X-Profession"_s, nameItemB);
     itemB.setPayload<KContacts::Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"), nameItemC);
+    addressC.insertCustom(u"KADDRESSBOOK"_s, u"X-Profession"_s, nameItemC);
     itemC.setPayload<KContacts::Addressee>(addressC);
     lst << itemC;
 
@@ -399,13 +400,13 @@ void MergeContactsTest::checkNeedManualSelectionWithOffice_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithOffice()
@@ -418,19 +419,19 @@ void MergeContactsTest::checkNeedManualSelectionWithOffice()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    addressA.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"), nameItemA);
+    addressA.insertCustom(u"KADDRESSBOOK"_s, u"X-Office"_s, nameItemA);
     itemA.setPayload<KContacts::Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"), nameItemB);
+    addressB.insertCustom(u"KADDRESSBOOK"_s, u"X-Office"_s, nameItemB);
     itemB.setPayload<KContacts::Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"), nameItemC);
+    addressC.insertCustom(u"KADDRESSBOOK"_s, u"X-Office"_s, nameItemC);
     itemC.setPayload<KContacts::Addressee>(addressC);
     lst << itemC;
 
@@ -447,13 +448,13 @@ void MergeContactsTest::checkNeedManualSelectionWithManagerName_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithManagerName()
@@ -466,19 +467,19 @@ void MergeContactsTest::checkNeedManualSelectionWithManagerName()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    addressA.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"), nameItemA);
+    addressA.insertCustom(u"KADDRESSBOOK"_s, u"X-ManagersName"_s, nameItemA);
     itemA.setPayload<KContacts::Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"), nameItemB);
+    addressB.insertCustom(u"KADDRESSBOOK"_s, u"X-ManagersName"_s, nameItemB);
     itemB.setPayload<KContacts::Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"), nameItemC);
+    addressC.insertCustom(u"KADDRESSBOOK"_s, u"X-ManagersName"_s, nameItemC);
     itemC.setPayload<KContacts::Addressee>(addressC);
     lst << itemC;
 
@@ -495,13 +496,13 @@ void MergeContactsTest::checkNeedManualSelectionWithAssistantName_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithAssistantName()
@@ -514,19 +515,19 @@ void MergeContactsTest::checkNeedManualSelectionWithAssistantName()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    addressA.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"), nameItemA);
+    addressA.insertCustom(u"KADDRESSBOOK"_s, u"X-AssistantsName"_s, nameItemA);
     itemA.setPayload<KContacts::Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"), nameItemB);
+    addressB.insertCustom(u"KADDRESSBOOK"_s, u"X-AssistantsName"_s, nameItemB);
     itemB.setPayload<KContacts::Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"), nameItemC);
+    addressC.insertCustom(u"KADDRESSBOOK"_s, u"X-AssistantsName"_s, nameItemC);
     itemC.setPayload<KContacts::Addressee>(addressC);
     lst << itemC;
 
@@ -543,13 +544,13 @@ void MergeContactsTest::checkNeedManualSelectionWithAnniversary_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithAnniversary()
@@ -562,19 +563,19 @@ void MergeContactsTest::checkNeedManualSelectionWithAnniversary()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    addressA.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Anniversary"), nameItemA);
+    addressA.insertCustom(u"KADDRESSBOOK"_s, u"X-Anniversary"_s, nameItemA);
     itemA.setPayload<KContacts::Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Anniversary"), nameItemB);
+    addressB.insertCustom(u"KADDRESSBOOK"_s, u"X-Anniversary"_s, nameItemB);
     itemB.setPayload<KContacts::Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Anniversary"), nameItemC);
+    addressC.insertCustom(u"KADDRESSBOOK"_s, u"X-Anniversary"_s, nameItemC);
     itemC.setPayload<KContacts::Addressee>(addressC);
     lst << itemC;
 
@@ -592,13 +593,13 @@ void MergeContactsTest::shouldMergeTitle_data()
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QString>("result");
     QTest::newRow("empty") << QString() << QString() << QString() << true << QString();
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << false << QStringLiteral("foo1");
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false << u"foo"_s;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false << u"foo"_s;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false << u"foo"_s;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << false << u"foo1"_s;
 }
 
 void MergeContactsTest::shouldMergeTitle()
@@ -642,13 +643,13 @@ void MergeContactsTest::shouldMergeDepartement_data()
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QString>("result");
     QTest::newRow("empty") << QString() << QString() << QString() << true << QString();
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << false << QStringLiteral("foo1");
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false << u"foo"_s;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false << u"foo"_s;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false << u"foo"_s;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << false << u"foo1"_s;
 }
 
 void MergeContactsTest::shouldMergeDepartement()
@@ -691,13 +692,13 @@ void MergeContactsTest::checkNeedManualSelectionWithPartnersName_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithPartnersName()
@@ -710,19 +711,19 @@ void MergeContactsTest::checkNeedManualSelectionWithPartnersName()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    addressA.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"), nameItemA);
+    addressA.insertCustom(u"KADDRESSBOOK"_s, u"X-SpousesName"_s, nameItemA);
     itemA.setPayload<KContacts::Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"), nameItemB);
+    addressB.insertCustom(u"KADDRESSBOOK"_s, u"X-SpousesName"_s, nameItemB);
     itemB.setPayload<KContacts::Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"), nameItemC);
+    addressC.insertCustom(u"KADDRESSBOOK"_s, u"X-SpousesName"_s, nameItemC);
     itemC.setPayload<KContacts::Addressee>(addressC);
     lst << itemC;
 
@@ -739,13 +740,13 @@ void MergeContactsTest::checkNeedManualSelectionWithBlog_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false;
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << true;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithBlog()
@@ -758,19 +759,19 @@ void MergeContactsTest::checkNeedManualSelectionWithBlog()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    addressA.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"), nameItemA);
+    addressA.insertCustom(u"KADDRESSBOOK"_s, u"BlogFeed"_s, nameItemA);
     itemA.setPayload<KContacts::Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"), nameItemB);
+    addressB.insertCustom(u"KADDRESSBOOK"_s, u"BlogFeed"_s, nameItemB);
     itemB.setPayload<KContacts::Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"), nameItemC);
+    addressC.insertCustom(u"KADDRESSBOOK"_s, u"BlogFeed"_s, nameItemC);
     itemC.setPayload<KContacts::Addressee>(addressC);
     lst << itemC;
 
@@ -787,15 +788,13 @@ void MergeContactsTest::checkNeedManualSelectionWithHomePage_data()
     QTest::addColumn<QUrl>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QUrl() << QUrl() << QUrl() << false;
-    QTest::newRow("noWithOneNameConflict") << QUrl() << QUrl() << QUrl(QStringLiteral("http://www.kde.org")) << false;
-    QTest::newRow("noWithOneNameConflict1") << QUrl() << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << false;
-    QTest::newRow("noWithOneNameConflict2") << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << QUrl() << false;
-    QTest::newRow("noConflictWithSameName") << QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << false;
-    QTest::newRow("noConflictWithSameName2") << QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org"))
-                                             << QUrl(QStringLiteral("http://www.kde.org")) << false;
-    QTest::newRow("conflictUrl") << QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org1"))
-                                 << QUrl(QStringLiteral("http://www.kde.org")) << true;
-    QTest::newRow("conflict1") << QUrl() << QUrl(QStringLiteral("http://www.kde.org1")) << QUrl(QStringLiteral("http://www.kde.org")) << true;
+    QTest::newRow("noWithOneNameConflict") << QUrl() << QUrl() << QUrl(u"http://www.kde.org"_s) << false;
+    QTest::newRow("noWithOneNameConflict1") << QUrl() << QUrl(u"http://www.kde.org"_s) << QUrl() << false;
+    QTest::newRow("noWithOneNameConflict2") << QUrl(u"http://www.kde.org"_s) << QUrl() << QUrl() << false;
+    QTest::newRow("noConflictWithSameName") << QUrl(u"http://www.kde.org"_s) << QUrl(u"http://www.kde.org"_s) << QUrl() << false;
+    QTest::newRow("noConflictWithSameName2") << QUrl(u"http://www.kde.org"_s) << QUrl(u"http://www.kde.org"_s) << QUrl(u"http://www.kde.org"_s) << false;
+    QTest::newRow("conflictUrl") << QUrl(u"http://www.kde.org"_s) << QUrl(u"http://www.kde.org1"_s) << QUrl(u"http://www.kde.org"_s) << true;
+    QTest::newRow("conflict1") << QUrl() << QUrl(u"http://www.kde.org1"_s) << QUrl(u"http://www.kde.org"_s) << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithHomePage()
@@ -841,9 +840,9 @@ void MergeContactsTest::shouldMergeNotes_data()
     QTest::addColumn<QString>("noteItemC");
     QTest::addColumn<QString>("note");
     QTest::newRow("noNotes") << QString() << QString() << QString() << QString();
-    QTest::newRow("oneNotes") << QStringLiteral("one") << QString() << QString() << QStringLiteral("one");
-    QTest::newRow("twoNotes") << QString() << QStringLiteral("one") << QStringLiteral("one") << QStringLiteral("one\none");
-    QTest::newRow("threeNotes") << QStringLiteral("one") << QStringLiteral("one") << QStringLiteral("one") << QStringLiteral("one\none\none");
+    QTest::newRow("oneNotes") << u"one"_s << QString() << QString() << u"one"_s;
+    QTest::newRow("twoNotes") << QString() << u"one"_s << u"one"_s << u"one\none"_s;
+    QTest::newRow("threeNotes") << u"one"_s << u"one"_s << u"one"_s << u"one\none\none"_s;
 }
 
 void MergeContactsTest::shouldMergeNotes()
@@ -856,21 +855,21 @@ void MergeContactsTest::shouldMergeNotes()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    addressA.setName(QStringLiteral("foo1"));
+    addressA.setName(u"foo1"_s);
     addressA.setNote(noteItemA);
     itemA.setPayload<Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.setName(QStringLiteral("foo1"));
+    addressB.setName(u"foo1"_s);
     addressB.setNote(noteItemB);
     itemB.setPayload<Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.setName(QStringLiteral("foo1"));
+    addressC.setName(u"foo1"_s);
     addressC.setNote(noteItemC);
     itemC.setPayload<Addressee>(addressC);
     lst << itemC;
@@ -889,19 +888,19 @@ void MergeContactsTest::shouldMergeEmails_data()
     QTest::addColumn<QStringList>("emails");
     QTest::newRow("noEmails") << QStringList() << QStringList() << QStringList() << QStringList();
     QStringList lst;
-    lst << QStringLiteral("foo");
-    lst << QStringLiteral("foo1");
-    lst << QStringLiteral("foo2");
+    lst << u"foo"_s;
+    lst << u"foo1"_s;
+    lst << u"foo2"_s;
     QTest::newRow("copyFromOnContact") << lst << QStringList() << QStringList() << lst;
     QTest::newRow("copyFromTwoIdenticContact") << lst << lst << QStringList() << lst;
     QStringList lst2;
-    lst2 << QStringLiteral("foo5");
-    lst2 << QStringLiteral("foo6");
-    lst2 << QStringLiteral("foo7");
+    lst2 << u"foo5"_s;
+    lst2 << u"foo6"_s;
+    lst2 << u"foo7"_s;
 
     QTest::newRow("copyFromTwoDifferentContact") << lst << lst2 << QStringList() << (QStringList() << lst << lst2);
     QStringList lst3;
-    lst3 << QStringLiteral("foo2");
+    lst3 << u"foo2"_s;
     lst3 << lst2;
     // Identical => we will return merge between lst and lst2
     QTest::newRow("copyWithSomeIdenticEmail") << lst << lst3 << QStringList() << (QStringList() << lst << lst2);
@@ -917,21 +916,21 @@ void MergeContactsTest::shouldMergeEmails()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    addressA.setName(QStringLiteral("foo1"));
+    addressA.setName(u"foo1"_s);
     addressA.setEmails(emailsItemA);
     itemA.setPayload<Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.setName(QStringLiteral("foo1"));
+    addressB.setName(u"foo1"_s);
     addressB.setEmails(emailsItemB);
     itemB.setPayload<Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.setName(QStringLiteral("foo1"));
+    addressC.setName(u"foo1"_s);
     addressC.setEmails(emailsItemC);
     itemC.setPayload<Addressee>(addressC);
     lst << itemC;
@@ -950,13 +949,13 @@ void MergeContactsTest::shouldMergeFamilyname_data()
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QString>("result");
     QTest::newRow("empty") << QString() << QString() << QString() << true << QString();
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << false << QStringLiteral("foo1");
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false << u"foo"_s;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false << u"foo"_s;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false << u"foo"_s;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << false << u"foo1"_s;
 }
 
 void MergeContactsTest::shouldMergeFamilyname()
@@ -1000,13 +999,13 @@ void MergeContactsTest::shouldMergeBlogFeed_data()
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QString>("result");
     QTest::newRow("empty") << QString() << QString() << QString() << true << QString();
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noConflictWithSameName") << QStringLiteral("foo") << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
-    QTest::newRow("noConflictWithSameName2") << QStringLiteral("foo") << QStringLiteral("foo") << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("conflict") << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo") << false << QStringLiteral("foo");
-    QTest::newRow("conflict1") << QString() << QStringLiteral("foo1") << QStringLiteral("foo") << false << QStringLiteral("foo1");
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"foo"_s << QString() << false << u"foo"_s;
+    QTest::newRow("noWithOneNameConflict2") << u"foo"_s << QString() << QString() << false << u"foo"_s;
+    QTest::newRow("noConflictWithSameName") << u"foo"_s << u"foo"_s << QString() << false << u"foo"_s;
+    QTest::newRow("noConflictWithSameName2") << u"foo"_s << u"foo"_s << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("conflict") << u"foo"_s << u"foo1"_s << u"foo"_s << false << u"foo"_s;
+    QTest::newRow("conflict1") << QString() << u"foo1"_s << u"foo"_s << false << u"foo1"_s;
 }
 
 void MergeContactsTest::shouldMergeBlogFeed()
@@ -1017,30 +1016,30 @@ void MergeContactsTest::shouldMergeBlogFeed()
     QFETCH(bool, isEmpty);
     QFETCH(QString, result);
 
-    const QString valueCustomStr = QStringLiteral("BlogFeed");
+    const QString valueCustomStr = u"BlogFeed"_s;
     Akonadi::Item::List lst;
     Addressee addressA;
-    addressA.insertCustom(QStringLiteral("KADDRESSBOOK"), valueCustomStr, nameItemA);
+    addressA.insertCustom(u"KADDRESSBOOK"_s, valueCustomStr, nameItemA);
     Akonadi::Item itemA;
     itemA.setPayload<Addressee>(addressA);
     lst << itemA;
 
     Addressee addressB;
     Akonadi::Item itemB;
-    addressB.insertCustom(QStringLiteral("KADDRESSBOOK"), valueCustomStr, nameItemB);
+    addressB.insertCustom(u"KADDRESSBOOK"_s, valueCustomStr, nameItemB);
     itemB.setPayload<Addressee>(addressB);
     lst << itemB;
 
     Addressee addressC;
     Akonadi::Item itemC;
-    addressC.insertCustom(QStringLiteral("KADDRESSBOOK"), valueCustomStr, nameItemC);
+    addressC.insertCustom(u"KADDRESSBOOK"_s, valueCustomStr, nameItemC);
     itemC.setPayload<Addressee>(addressC);
     lst << itemC;
 
     MergeContacts contacts(lst);
     Addressee resultAddr = contacts.mergedContact();
     QCOMPARE(resultAddr.isEmpty(), isEmpty);
-    const QString resultStr = resultAddr.custom(QStringLiteral("KADDRESSBOOK"), valueCustomStr);
+    const QString resultStr = resultAddr.custom(u"KADDRESSBOOK"_s, valueCustomStr);
     QCOMPARE(resultStr, result);
 }
 
@@ -1052,20 +1051,16 @@ void MergeContactsTest::shouldMergeHomePage_data()
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QUrl>("result");
     QTest::newRow("noConflict") << QUrl() << QUrl() << QUrl() << true << QUrl();
-    QTest::newRow("noWithOneNameConflict") << QUrl() << QUrl() << QUrl(QStringLiteral("http://www.kde.org")) << false
-                                           << QUrl(QStringLiteral("http://www.kde.org"));
-    QTest::newRow("noWithOneNameConflict1") << QUrl() << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << false
-                                            << QUrl(QStringLiteral("http://www.kde.org"));
-    QTest::newRow("noWithOneNameConflict2") << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << QUrl() << false
-                                            << QUrl(QStringLiteral("http://www.kde.org"));
-    QTest::newRow("noConflictWithSameName") << QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << false
-                                            << QUrl(QStringLiteral("http://www.kde.org"));
-    QTest::newRow("noConflictWithSameName2") << QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org"))
-                                             << QUrl(QStringLiteral("http://www.kde.org")) << false << QUrl(QStringLiteral("http://www.kde.org"));
-    QTest::newRow("conflictUrl") << QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org1"))
-                                 << QUrl(QStringLiteral("http://www.kde.org")) << false << QUrl(QStringLiteral("http://www.kde.org"));
-    QTest::newRow("conflict1") << QUrl() << QUrl(QStringLiteral("http://www.kde.org1")) << QUrl(QStringLiteral("http://www.kde.org")) << false
-                               << QUrl(QStringLiteral("http://www.kde.org1"));
+    QTest::newRow("noWithOneNameConflict") << QUrl() << QUrl() << QUrl(u"http://www.kde.org"_s) << false << QUrl(u"http://www.kde.org"_s);
+    QTest::newRow("noWithOneNameConflict1") << QUrl() << QUrl(u"http://www.kde.org"_s) << QUrl() << false << QUrl(u"http://www.kde.org"_s);
+    QTest::newRow("noWithOneNameConflict2") << QUrl(u"http://www.kde.org"_s) << QUrl() << QUrl() << false << QUrl(u"http://www.kde.org"_s);
+    QTest::newRow("noConflictWithSameName") << QUrl(u"http://www.kde.org"_s) << QUrl(u"http://www.kde.org"_s) << QUrl() << false
+                                            << QUrl(u"http://www.kde.org"_s);
+    QTest::newRow("noConflictWithSameName2") << QUrl(u"http://www.kde.org"_s) << QUrl(u"http://www.kde.org"_s) << QUrl(u"http://www.kde.org"_s) << false
+                                             << QUrl(u"http://www.kde.org"_s);
+    QTest::newRow("conflictUrl") << QUrl(u"http://www.kde.org"_s) << QUrl(u"http://www.kde.org1"_s) << QUrl(u"http://www.kde.org"_s) << false
+                                 << QUrl(u"http://www.kde.org"_s);
+    QTest::newRow("conflict1") << QUrl() << QUrl(u"http://www.kde.org1"_s) << QUrl(u"http://www.kde.org"_s) << false << QUrl(u"http://www.kde.org1"_s);
 }
 
 void MergeContactsTest::shouldMergeHomePage()
@@ -1112,16 +1107,16 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("needManualCheck");
     QTest::newRow("noConflict") << QString() << QString() << QString() << false;
-    QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("20150606") << false;
-    QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("20150606") << QString() << false;
-    QTest::newRow("noWithOneNameConflict2") << QStringLiteral("20150606") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameBirthday") << QStringLiteral("20150606") << QStringLiteral("20150606") << QString() << false;
-    QTest::newRow("noConflictWithSameBirthday2") << QStringLiteral("20150606") << QStringLiteral("20150606") << QStringLiteral("20150606") << false;
-    QTest::newRow("conflict") << QStringLiteral("20150606") << QStringLiteral("20150608") << QStringLiteral("20150606") << true;
-    QTest::newRow("conflict1") << QString() << QStringLiteral("20150606") << QStringLiteral("20150608") << true;
-    QTest::newRow("conflict2") << QStringLiteral("20150606") << QString() << QStringLiteral("20150608") << true;
-    QTest::newRow("conflict3") << QStringLiteral("20150606") << QStringLiteral("20150608") << QString() << true;
-    QTest::newRow("conflict4") << QStringLiteral("20180606") << QStringLiteral("20150608") << QStringLiteral("20150606") << true;
+    QTest::newRow("noWithOneNameConflict") << QString() << QString() << u"20150606"_s << false;
+    QTest::newRow("noWithOneNameConflict1") << QString() << u"20150606"_s << QString() << false;
+    QTest::newRow("noWithOneNameConflict2") << u"20150606"_s << QString() << QString() << false;
+    QTest::newRow("noConflictWithSameBirthday") << u"20150606"_s << u"20150606"_s << QString() << false;
+    QTest::newRow("noConflictWithSameBirthday2") << u"20150606"_s << u"20150606"_s << u"20150606"_s << false;
+    QTest::newRow("conflict") << u"20150606"_s << u"20150608"_s << u"20150606"_s << true;
+    QTest::newRow("conflict1") << QString() << u"20150606"_s << u"20150608"_s << true;
+    QTest::newRow("conflict2") << u"20150606"_s << QString() << u"20150608"_s << true;
+    QTest::newRow("conflict3") << u"20150606"_s << u"20150608"_s << QString() << true;
+    QTest::newRow("conflict4") << u"20180606"_s << u"20150608"_s << u"20150606"_s << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithBirthday()
@@ -1134,7 +1129,7 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday()
     Akonadi::Item::List lst;
     Addressee addressA;
     Akonadi::Item itemA;
-    QDate date = QDate::fromString(nameItemA, QStringLiteral("yyyyMMdd"));
+    QDate date = QDate::fromString(nameItemA, u"yyyyMMdd"_s);
     QDateTime dt(date.startOfDay());
     addressA.setBirthday(dt);
     itemA.setPayload<Addressee>(addressA);
@@ -1142,7 +1137,7 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday()
 
     Addressee addressB;
     Akonadi::Item itemB;
-    date = QDate::fromString(nameItemB, QStringLiteral("yyyyMMdd"));
+    date = QDate::fromString(nameItemB, u"yyyyMMdd"_s);
     dt = QDateTime(date.startOfDay());
 
     addressB.setBirthday(dt);
@@ -1151,7 +1146,7 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday()
 
     Addressee addressC;
     Akonadi::Item itemC;
-    date = QDate::fromString(nameItemC, QStringLiteral("yyyyMMdd"));
+    date = QDate::fromString(nameItemC, u"yyyyMMdd"_s);
     dt = QDateTime(date.startOfDay());
     addressC.setBirthday(dt);
     itemC.setPayload<Addressee>(addressC);

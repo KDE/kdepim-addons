@@ -11,6 +11,7 @@
 #include <KLocalizedString>
 #include <QAction>
 #include <QLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -47,7 +48,7 @@ void ViewerPluginAIInterface::createAction(KActionCollection *ac)
     if (ac) {
         auto act = new QAction(i18nc("@action", "Ask AI…"), this);
         // ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_T));
-        ac->addAction(QStringLiteral("ask_ai_text"), act);
+        ac->addAction(u"ask_ai_text"_s, act);
         connect(act, &QAction::triggered, this, &ViewerPluginAIInterface::slotActivatePlugin);
         mAction.append(act);
     }

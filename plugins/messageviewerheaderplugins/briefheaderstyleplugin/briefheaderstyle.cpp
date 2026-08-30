@@ -18,6 +18,7 @@
 
 #include <QApplication>
 #include <QRegularExpression>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageCore;
 using namespace MessageViewer;
@@ -36,7 +37,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     // The direction of the header is determined according to the direction
     // of the application layout.
 
-    const QString dir = QApplication::isRightToLeft() ? QStringLiteral("rtl") : QStringLiteral("ltr");
+    const QString dir = QApplication::isRightToLeft() ? u"rtl"_s : u"ltr"_s;
 
     // However, the direction of the message subject within the header is
     // determined according to the contents of the subject itself. Since
@@ -48,16 +49,16 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
 
     QString headerStr = QLatin1StringView(R"(<div class="header" dir=")") + dir + QLatin1StringView("\">\n");
 
-    if (strategy->showHeader(QStringLiteral("subject"))) {
+    if (strategy->showHeader(u"subject"_s)) {
         const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
-        headerStr += QLatin1StringView("<div dir=\"") + subjectDir + QLatin1StringView("\">\n") + QStringLiteral("<b style=\"font-size:130%\">");
+        headerStr += QLatin1StringView("<div dir=\"") + subjectDir + QLatin1StringView("\">\n") + u"<b style=\"font-size:130%\">"_s;
 
-        headerStr += mHeaderStyleUtil.subjectString(message, flags) + QStringLiteral("</b></div>\n");
+        headerStr += mHeaderStyleUtil.subjectString(message, flags) + u"</b></div>\n"_s;
     }
     QStringList headerParts;
 
-    if (strategy->showHeader(QStringLiteral("from"))) {
+    if (strategy->showHeader(u"from"_s)) {
         /*TODO(Andras) review if it can happen or not
         if ( fromStr.isEmpty() ) // no valid email in from, maybe just a name
         fromStr = message->fromStrip(); // let's use that
@@ -69,26 +70,26 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
         headerParts << fromPart;
     }
 
-    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(KMime::CreatePolicy::DontCreate)) {
+    if (strategy->showHeader(u"cc"_s) && message->cc(KMime::CreatePolicy::DontCreate)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayFullAddress);
         if (!str.isEmpty()) {
             headerParts << i18n("CC: ") + str;
         }
     }
 
-    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(KMime::CreatePolicy::DontCreate)) {
+    if (strategy->showHeader(u"bcc"_s) && message->bcc(KMime::CreatePolicy::DontCreate)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayFullAddress);
         if (!str.isEmpty()) {
             headerParts << i18n("BCC: ") + str;
         }
     }
 
-    if (strategy->showHeader(QStringLiteral("date"))) {
+    if (strategy->showHeader(u"date"_s)) {
         headerParts << mHeaderStyleUtil.strToHtml(HeaderStyleUtil::dateString(message, /* shortDate = */ MessageViewer::HeaderStyleUtil::ShortDate));
     }
 
     // remove all empty (modulo whitespace) entries and joins them via ", \n"
-    headerStr += QLatin1StringView(" (") + headerParts.filter(QRegularExpression(QStringLiteral("\\S"))).join(QLatin1StringView(",\n")) + QLatin1Char(')');
+    headerStr += QLatin1StringView(" (") + headerParts.filter(QRegularExpression(u"\\S"_s)).join(QLatin1StringView(",\n")) + QLatin1Char(')');
 
     headerStr += QLatin1StringView("</div>\n");
 

@@ -10,6 +10,7 @@
 
 #include <KPluginFactory>
 #include <MessageViewer/RichHeaderStrategy>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -49,7 +50,7 @@ HeaderStyleInterface *LongHeaderStylePlugin::createView(KActionMenu *menu, QActi
 
 QString LongHeaderStylePlugin::name() const
 {
-    return QStringLiteral("long-header");
+    return u"long-header"_s;
 }
 
 #include "longheaderstyleplugin.moc"

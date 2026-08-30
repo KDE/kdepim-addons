@@ -25,6 +25,7 @@
 #include <QMouseEvent>
 #include <QPushButton>
 #include <QStyledItemDelegate>
+using namespace Qt::Literals::StringLiterals;
 
 using TemplateInfo = struct TemplateInfo {
     QString displayName;
@@ -104,9 +105,9 @@ public:
         beginResetModel();
         mTemplates.clear();
         const QStringList dirs =
-            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("/kaddressbook/csv-templates/"), QStandardPaths::LocateDirectory);
+            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, u"/kaddressbook/csv-templates/"_s, QStandardPaths::LocateDirectory);
         for (const QString &dir : dirs) {
-            const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.desktop"));
+            const QStringList fileNames = QDir(dir).entryList(QStringList() << u"*.desktop"_s);
             for (const QString &file : fileNames) {
                 const QString fileName = dir + QLatin1Char('/') + file;
 
@@ -116,7 +117,7 @@ public:
                     continue;
                 }
 
-                KConfigGroup group(&config, QStringLiteral("Misc"));
+                KConfigGroup group(&config, u"Misc"_s);
                 TemplateInfo info;
                 info.displayName = group.readEntry("Name");
                 info.fileName = fileName;
@@ -145,7 +146,7 @@ class TemplateSelectionDelegate : public QStyledItemDelegate
 public:
     explicit TemplateSelectionDelegate(QObject *parent = nullptr)
         : QStyledItemDelegate(parent)
-        , mIcon(QIcon::fromTheme(QStringLiteral("list-remove")))
+        , mIcon(QIcon::fromTheme(u"list-remove"_s))
     {
     }
 

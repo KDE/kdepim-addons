@@ -14,6 +14,7 @@
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(DateEventDataHash)
 Q_DECLARE_METATYPE(CalendarEvents::EventData)
@@ -158,11 +159,11 @@ void PimEventsPluginTest::testEventModified()
     // Non-recurring event
     {
         QVERIFY(eventModifiedSpy.isEmpty());
-        KCalendarCore::Event::Ptr event = source.calendar()->event(QStringLiteral("4d7fdd2c-2d3a-4ecf-8964-00eb92225209"));
+        KCalendarCore::Event::Ptr event = source.calendar()->event(u"4d7fdd2c-2d3a-4ecf-8964-00eb92225209"_s);
         QVERIFY(event);
         const auto expectedData = findEventData(event, allData);
         QCOMPARE(expectedData.size(), 1);
-        event->setSummary(QStringLiteral("TEST"));
+        event->setSummary(u"TEST"_s);
 
         QVERIFY(source.calendar()->addEvent(event));
 
@@ -176,10 +177,10 @@ void PimEventsPluginTest::testEventModified()
     // Recurring event
     {
         QVERIFY(eventModifiedSpy.isEmpty());
-        KCalendarCore::Event::Ptr event = source.calendar()->event(QStringLiteral("69971015-fe9c-4800-a20e-d46bafa24e41"));
+        KCalendarCore::Event::Ptr event = source.calendar()->event(u"69971015-fe9c-4800-a20e-d46bafa24e41"_s);
         QVERIFY(event);
         auto expectedData = findEventData(event, allData);
-        event->setSummary(QStringLiteral("TEST2"));
+        event->setSummary(u"TEST2"_s);
         QVERIFY(source.calendar()->addEvent(event));
 
         QCOMPARE(eventModifiedSpy.size(), expectedData.size());
@@ -214,7 +215,7 @@ void PimEventsPluginTest::testEventRemoved()
     // Non-recurring event
     {
         QVERIFY(eventRemovedSpy.isEmpty());
-        const KCalendarCore::Event::Ptr event = source.calendar()->event(QStringLiteral("4d7fdd2c-2d3a-4ecf-8964-00eb92225209"));
+        const KCalendarCore::Event::Ptr event = source.calendar()->event(u"4d7fdd2c-2d3a-4ecf-8964-00eb92225209"_s);
         QVERIFY(event);
         const auto expectedData = findEventData(event, allData);
         QCOMPARE(expectedData.size(), 1);
@@ -229,7 +230,7 @@ void PimEventsPluginTest::testEventRemoved()
     // Recurring event
     {
         QVERIFY(eventRemovedSpy.isEmpty());
-        KCalendarCore::Event::Ptr event = source.calendar()->event(QStringLiteral("69971015-fe9c-4800-a20e-d46bafa24e41"));
+        KCalendarCore::Event::Ptr event = source.calendar()->event(u"69971015-fe9c-4800-a20e-d46bafa24e41"_s);
         QVERIFY(event);
         auto expectedData = findEventData(event, allData);
 

@@ -18,6 +18,7 @@
 #include <QSplitter>
 #include <QStandardItemModel>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KContacts;
 namespace KABMergeContacts
@@ -51,31 +52,31 @@ void SearchDuplicateResultWidgetTest::shouldHaveDefaultValue()
     KABMergeContacts::SearchDuplicateResultWidget w;
     QCOMPARE(w.layout()->contentsMargins(), QMargins());
 
-    const auto tree = w.findChild<KABMergeContacts::ResultDuplicateTreeWidget *>(QStringLiteral("result_treewidget"));
+    const auto tree = w.findChild<KABMergeContacts::ResultDuplicateTreeWidget *>(u"result_treewidget"_s);
     QVERIFY(tree);
     QCOMPARE(tree->topLevelItemCount(), 0);
-    const auto splitter = w.findChild<QSplitter *>(QStringLiteral("splitter"));
+    const auto splitter = w.findChild<QSplitter *>(u"splitter"_s);
     QVERIFY(splitter);
     QVERIFY(!splitter->childrenCollapsible());
-    const auto viewer = w.findChild<KAddressBookGrantlee::GrantleeContactViewer *>(QStringLiteral("contact_viewer"));
+    const auto viewer = w.findChild<KAddressBookGrantlee::GrantleeContactViewer *>(u"contact_viewer"_s);
     QVERIFY(viewer);
-    const auto lab = w.findChild<QLabel *>(QStringLiteral("select_addressbook_label"));
+    const auto lab = w.findChild<QLabel *>(u"select_addressbook_label"_s);
     lab->setObjectName(QLatin1StringView("select_addressbook_label"));
-    const auto pushButton = w.findChild<QPushButton *>(QStringLiteral("merge_contact_button"));
+    const auto pushButton = w.findChild<QPushButton *>(u"merge_contact_button"_s);
     QVERIFY(pushButton);
     QVERIFY(!pushButton->isEnabled());
 
-    const auto warning = w.findChild<KABMergeContacts::MergeContactLoseInformationWarning *>(QStringLiteral("mergecontactwarning"));
+    const auto warning = w.findChild<KABMergeContacts::MergeContactLoseInformationWarning *>(u"mergecontactwarning"_s);
     QVERIFY(warning);
 
-    const auto combobox = w.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    const auto combobox = w.findChild<Akonadi::CollectionComboBox *>(u"akonadicombobox"_s);
     QVERIFY(combobox);
 }
 
 void SearchDuplicateResultWidgetTest::shouldHaveMergeButtonEnabled()
 {
     KABMergeContacts::SearchDuplicateResultWidget w;
-    const auto tree = w.findChild<KABMergeContacts::ResultDuplicateTreeWidget *>(QStringLiteral("result_treewidget"));
+    const auto tree = w.findChild<KABMergeContacts::ResultDuplicateTreeWidget *>(u"result_treewidget"_s);
     QVERIFY(tree);
     QCOMPARE(tree->topLevelItemCount(), 0);
     Akonadi::Item::List lst;
@@ -87,11 +88,11 @@ void SearchDuplicateResultWidgetTest::shouldHaveMergeButtonEnabled()
     tree->setContacts(itemLst);
     QVERIFY(tree->topLevelItemCount() > 0);
 
-    QPushButton *pushButton = w.findChild<QPushButton *>(QStringLiteral("merge_contact_button"));
+    QPushButton *pushButton = w.findChild<QPushButton *>(u"merge_contact_button"_s);
     QVERIFY(pushButton);
     QVERIFY(!pushButton->isEnabled());
 
-    Akonadi::CollectionComboBox *combobox = w.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    Akonadi::CollectionComboBox *combobox = w.findChild<Akonadi::CollectionComboBox *>(u"akonadicombobox"_s);
     QVERIFY(combobox);
 #endif
 }

@@ -12,6 +12,7 @@
 #include <KPluginFactory>
 
 #include <QDir>
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(OeImportData, "oeimporter.json")
 
@@ -39,7 +40,7 @@ bool OeImportData::foundMailer() const
 
 QString OeImportData::name() const
 {
-    return QStringLiteral("Outlook Express");
+    return u"Outlook Express"_s;
 }
 
 bool OeImportData::importMails()

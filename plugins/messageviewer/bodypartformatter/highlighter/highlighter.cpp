@@ -21,7 +21,7 @@ Highlighter::~Highlighter() = default;
 
 void Highlighter::highlight(const QString &str)
 {
-    *mStream << QStringLiteral("<pre class=\"highlightattachment\">");
+    *mStream << u"<pre class=\"highlightattachment\">"_s;
 
     KSyntaxHighlighting::State state;
 
@@ -44,18 +44,18 @@ void Highlighter::highlight(const QString &str)
 void Highlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)
 {
     if (!format.isDefaultTextStyle(theme())) {
-        *mStream << QStringLiteral("<span style=\"");
+        *mStream << u"<span style=\""_s;
         if (format.hasTextColor(theme())) {
-            *mStream << QStringLiteral("color:") << format.textColor(theme()).name() << QLatin1Char(';');
+            *mStream << u"color:"_s << format.textColor(theme()).name() << QLatin1Char(';');
         }
         if (format.hasBackgroundColor(theme())) {
-            *mStream << QStringLiteral("background-color:") << format.backgroundColor(theme()).name() << QLatin1Char(';');
+            *mStream << u"background-color:"_s << format.backgroundColor(theme()).name() << QLatin1Char(';');
         }
         if (format.isBold(theme())) {
-            *mStream << QStringLiteral("font-weight:bold;");
+            *mStream << u"font-weight:bold;"_s;
         }
         if (format.isItalic(theme())) {
-            *mStream << QStringLiteral("font-style:italic;");
+            *mStream << u"font-style:italic;"_s;
         }
         const bool hasUnderline = format.isUnderline(theme());
         const bool hasStrikeThrough = format.isStrikeThrough(theme());
@@ -72,12 +72,12 @@ void Highlighter::applyFormat(int offset, int length, const KSyntaxHighlighting:
             }
             *mStream << u';';
         }
-        *mStream << QStringLiteral("\">");
+        *mStream << u"\">"_s;
     }
 
     *mStream << mCurrentLine.mid(offset, length).toHtmlEscaped();
 
     if (!format.isDefaultTextStyle(theme())) {
-        *mStream << QStringLiteral("</span>");
+        *mStream << u"</span>"_s;
     }
 }

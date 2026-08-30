@@ -11,6 +11,7 @@
 #include <PimCommonAkonadi/LdapSearchDialog>
 #include <QAction>
 #include <QPointer>
+using namespace Qt::Literals::StringLiterals;
 
 LDapImportExportPluginInterface::LDapImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::PluginInterface(parent)
@@ -21,7 +22,7 @@ LDapImportExportPluginInterface::~LDapImportExportPluginInterface() = default;
 
 void LDapImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("file_import_ldap"));
+    QAction *action = ac->addAction(u"file_import_ldap"_s);
     action->setText(i18n("Import From LDAP server…"));
     action->setWhatsThis(i18n("Import contacts from an LDAP server."));
     setImportActions({action});

@@ -19,6 +19,7 @@
 #include <KCoreConfigSkeleton>
 #include <KSharedConfig>
 #include <QRandomGenerator>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace std::placeholders;
 
@@ -31,7 +32,7 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     onSettingsChanged();
 
     // Would be nice to have a proper API to read KOrganizer calendar colors...
-    const auto korganizerrc = KSharedConfig::openConfig(QStringLiteral("korganizerrc"));
+    const auto korganizerrc = KSharedConfig::openConfig(u"korganizerrc"_s);
     const auto skel = new KCoreConfigSkeleton(korganizerrc);
 }
 
@@ -64,8 +65,8 @@ QString AkonadiPimDataSource::calendarColorForIncidence(const KCalendarCore::Inc
         }
     }
 
-    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("eventviewsrc"));
-    KConfigGroup resourcesColorsConfig(config, QStringLiteral("Resources Colors"));
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(u"eventviewsrc"_s);
+    KConfigGroup resourcesColorsConfig(config, u"Resources Colors"_s);
     const QStringList colorKeyList = resourcesColorsConfig.keyList();
 
     QColor color;
@@ -103,8 +104,8 @@ void AkonadiPimDataSource::onSettingsChanged()
     }
 
     const auto config = KSharedConfig::openConfig();
-    const auto group = config->group(QStringLiteral("PIMEventsPlugin"));
-    const QList<qint64> calendars = group.readEntry(QStringLiteral("calendars"), QList<qint64>());
+    const auto group = config->group(u"PIMEventsPlugin"_s);
+    const QList<qint64> calendars = group.readEntry(u"calendars"_s, QList<qint64>());
     QSet<Akonadi::Collection> configured;
     for (const auto colId : calendars) {
         configured.insert(Akonadi::Collection(colId));

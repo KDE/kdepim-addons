@@ -7,6 +7,7 @@
 
 #include <KConfigGroup>
 #include <QRegularExpression>
+using namespace Qt::Literals::StringLiterals;
 
 AutogenerateConfigureAskManager::AutogenerateConfigureAskManager(QObject *parent)
     : QObject{parent}
@@ -24,10 +25,10 @@ void AutogenerateConfigureAskManager::load()
     for (const QString &groupName : keyGroups) {
         KConfigGroup group = config->group(groupName);
         AutogenerateConfigureAskInfo info;
-        info.setText(group.readEntry(QStringLiteral("Text")));
-        info.setTitle(group.readEntry(QStringLiteral("Title")));
-        info.setEnabled(group.readEntry(QStringLiteral("Enabled"), true));
-        info.setOrder(group.readEntry(QStringLiteral("Order"), 0));
+        info.setText(group.readEntry(u"Text"_s));
+        info.setTitle(group.readEntry(u"Title"_s));
+        info.setEnabled(group.readEntry(u"Enabled"_s, true));
+        info.setOrder(group.readEntry(u"Order"_s, 0));
         infos.append(std::move(info));
     }
     std::sort(infos.begin(), infos.end(), [&](const auto &firstItem, const auto &secondItem) {
@@ -44,7 +45,7 @@ void AutogenerateConfigureAskManager::load()
 QStringList AutogenerateConfigureAskManager::keyRecorderList(KSharedConfig::Ptr &config) const
 {
     config = KSharedConfig::openConfig();
-    const QStringList keyGroups = config->groupList().filter(QRegularExpression(QStringLiteral("AskIA #\\d+$")));
+    const QStringList keyGroups = config->groupList().filter(QRegularExpression(u"AskIA #\\d+$"_s));
     return keyGroups;
 }
 
@@ -57,13 +58,13 @@ void AutogenerateConfigureAskManager::save()
         config->deleteGroup(group);
     }
     for (int i = 0, total = mInfos.count(); i < total; ++i) {
-        const QString groupName = QStringLiteral("AskIA #%1").arg(i);
+        const QString groupName = u"AskIA #%1"_s.arg(i);
         KConfigGroup group = config->group(groupName);
         const AutogenerateConfigureAskInfo &info = mInfos.at(i);
-        group.writeEntry(QStringLiteral("Text"), info.text());
-        group.writeEntry(QStringLiteral("Title"), info.title());
-        group.writeEntry(QStringLiteral("Enabled"), info.enabled());
-        group.writeEntry(QStringLiteral("Order"), info.order());
+        group.writeEntry(u"Text"_s, info.text());
+        group.writeEntry(u"Title"_s, info.title());
+        group.writeEntry(u"Enabled"_s, info.enabled());
+        group.writeEntry(u"Order"_s, info.order());
     }
     config->sync();
 }

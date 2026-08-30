@@ -11,31 +11,32 @@
 #include <QRegularExpression>
 #include <QStandardPaths>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 
 void testHeaderFile(const QString &data, const QString &name, const QString &dir)
 {
-    QString header = QStringLiteral(
-        "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
+    QString header =
+        u"<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
         "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
-        "<body>\n");
+        "<body>\n"_s;
     header += data;
-    header += QStringLiteral("\n</body>\n</html>\n");
+    header += u"\n</body>\n</html>\n"_s;
 
-    QString imagePath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("libmessageviewer/pics"), QStandardPaths::LocateDirectory));
-    header.replace(QStringLiteral("file://") + imagePath, QStringLiteral("file://PATHTOIMAGES"));
-    header.replace(QRegularExpression(QStringLiteral("[\t ]+")), QStringLiteral(" "));
-    header.replace(QRegularExpression(QStringLiteral("[\t ]*\n+[\t ]*")), QStringLiteral("\n"));
-    header.replace(QRegularExpression(QStringLiteral("([\n\t ])\\1+")), QStringLiteral("\\1"));
-    header.replace(QRegularExpression(QStringLiteral(">\n+[\t ]*")), QStringLiteral(">"));
-    header.replace(QRegularExpression(QStringLiteral("[\t ]*\n+[\t ]*<")), QStringLiteral("<"));
+    QString imagePath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"libmessageviewer/pics"_s, QStandardPaths::LocateDirectory));
+    header.replace(u"file://"_s + imagePath, u"file://PATHTOIMAGES"_s);
+    header.replace(QRegularExpression(u"[\t ]+"_s), u" "_s);
+    header.replace(QRegularExpression(u"[\t ]*\n+[\t ]*"_s), u"\n"_s);
+    header.replace(QRegularExpression(u"([\n\t ])\\1+"_s), u"\\1"_s);
+    header.replace(QRegularExpression(u">\n+[\t ]*"_s), u">"_s);
+    header.replace(QRegularExpression(u"[\t ]*\n+[\t ]*<"_s), u"<"_s);
     header.replace(QLatin1StringView("&nbsp;"), QLatin1StringView("NBSP_ENTITY_PLACEHOLDER")); // xmlling chokes on &nbsp;
 
-    QString outName = name + QStringLiteral(".out.html");
-    QString fName = name + QStringLiteral(".html");
+    QString outName = name + u".out.html"_s;
+    QString fName = name + u".html"_s;
 
     QString referenceFile = QStringLiteral(HEADER_DATA_DIR "/");
     if (!dir.isEmpty()) {
-        referenceFile += dir + QStringLiteral("/");
+        referenceFile += dir + u"/"_s;
     }
     referenceFile += fName;
 
@@ -49,17 +50,16 @@ void testHeaderFile(const QString &data, const QString &name, const QString &dir
     }
     // TODO add proper cmake check for xmllint and diff
     {
-        const QStringList args = QStringList() << QStringLiteral("--format") << QStringLiteral("--encode") << QStringLiteral("UTF8")
-                                               << QStringLiteral("--output") << fName << outName;
-        QCOMPARE(QProcess::execute(QStringLiteral("xmllint"), args), 0);
+        const QStringList args = QStringList() << u"--format"_s << u"--encode"_s << u"UTF8"_s << u"--output"_s << fName << outName;
+        QCOMPARE(QProcess::execute(u"xmllint"_s, args), 0);
     }
 
     {
         // compare to reference file
-        const QStringList args = QStringList() << QStringLiteral("-u") << fName << referenceFile;
+        const QStringList args = QStringList() << u"-u"_s << fName << referenceFile;
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
-        proc.start(QStringLiteral("diff"), args);
+        proc.start(u"diff"_s, args);
         QVERIFY(proc.waitForFinished());
 
         QCOMPARE(proc.exitCode(), 0);

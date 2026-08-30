@@ -18,6 +18,7 @@
 #include <KCalendarCore/MemoryCalendar>
 
 #include <CalendarEvents/CalendarEventsPlugin>
+using namespace Qt::Literals::StringLiterals;
 
 TestDataParser::TestDataParser(const QString &testData, bool uniqueEventData)
     : mTestData(testData)
@@ -31,7 +32,7 @@ TestDataParser::~TestDataParser() = default;
 QStringList TestDataParser::allTestData()
 {
     QDir testdir(QStringLiteral(PIMEVENT_DATADIR "/data"));
-    const auto data = testdir.entryInfoList({QStringLiteral("*.json")}, QDir::Files);
+    const auto data = testdir.entryInfoList({u"*.json"_s}, QDir::Files);
     QStringList testcases;
     testcases.reserve(data.count());
     for (const auto &fi : data) {
@@ -67,10 +68,10 @@ KCalendarCore::Incidence::Ptr TestDataParser::incidence() const
 
 QDateTime TestDataParser::parseDateTime(const QJsonObject &dateTime)
 {
-    const auto date = QDate::fromString(dateTime[QStringLiteral("date")].toString(), Qt::ISODate);
-    const auto time = QTime::fromString(dateTime[QStringLiteral("time")].toString(), Qt::ISODate);
+    const auto date = QDate::fromString(dateTime[u"date"_s].toString(), Qt::ISODate);
+    const auto time = QTime::fromString(dateTime[u"time"_s].toString(), Qt::ISODate);
     if (dateTime.contains(QLatin1StringView("tz"))) {
-        return QDateTime(date, time, QTimeZone(dateTime[QStringLiteral("tz")].toString().toLatin1())).toLocalTime();
+        return QDateTime(date, time, QTimeZone(dateTime[u"tz"_s].toString().toLatin1())).toLocalTime();
     } else {
         return QDateTime(date, time, QTimeZone::LocalTime);
     }
@@ -96,35 +97,35 @@ void TestDataParser::parse()
     const QByteArray json = jsonFile.readAll();
     const QJsonDocument jsonDoc = QJsonDocument::fromJson(json);
     const QJsonObject doc = jsonDoc.object();
-    mRangeStart = QDate::fromString(doc[QStringLiteral("rangeStart")].toString(), Qt::ISODate);
-    mRangeEnd = QDate::fromString(doc[QStringLiteral("rangeEnd")].toString(), Qt::ISODate);
-    mAkonadiId = doc[QStringLiteral("akonadiId")].toInt();
+    mRangeStart = QDate::fromString(doc[u"rangeStart"_s].toString(), Qt::ISODate);
+    mRangeEnd = QDate::fromString(doc[u"rangeEnd"_s].toString(), Qt::ISODate);
+    mAkonadiId = doc[u"akonadiId"_s].toInt();
 
-    const QJsonArray array = doc[QStringLiteral("eventData")].toArray();
+    const QJsonArray array = doc[u"eventData"_s].toArray();
     for (auto iter = array.constBegin(), end = array.constEnd(); iter != end; ++iter) {
         CalendarEvents::EventData eventData;
         const QJsonObject obj = iter->toObject();
-        eventData.setTitle(obj[QStringLiteral("summary")].toString());
-        eventData.setDescription(obj[QStringLiteral("description")].toString());
-        const QString type = obj[QStringLiteral("type")].toString();
+        eventData.setTitle(obj[u"summary"_s].toString());
+        eventData.setDescription(obj[u"description"_s].toString());
+        const QString type = obj[u"type"_s].toString();
         if (type == QLatin1StringView("Event")) {
             eventData.setEventType(CalendarEvents::EventData::Event);
         } else {
             eventData.setEventType(CalendarEvents::EventData::Todo);
         }
-        eventData.setIsAllDay(obj[QStringLiteral("allDay")].toBool());
-        eventData.setIsMinor(obj[QStringLiteral("isMinor")].toBool());
-        QDateTime startDateTime = parseDateTime(obj[QStringLiteral("startDateTime")].toObject());
+        eventData.setIsAllDay(obj[u"allDay"_s].toBool());
+        eventData.setIsMinor(obj[u"isMinor"_s].toBool());
+        QDateTime startDateTime = parseDateTime(obj[u"startDateTime"_s].toObject());
         if (eventData.isAllDay()) {
             startDateTime.setTime(QTime(0, 0, 0, Qt::LocalTime));
         }
         eventData.setStartDateTime(startDateTime);
-        QDateTime endDateTime = parseDateTime(obj[QStringLiteral("endDateTime")].toObject());
+        QDateTime endDateTime = parseDateTime(obj[u"endDateTime"_s].toObject());
         if (eventData.isAllDay()) {
             endDateTime.setTime(QTime(0, 0, 0, Qt::LocalTime));
         }
         eventData.setEndDateTime(endDateTime);
-        eventData.setUid(obj[QStringLiteral("uid")].toString());
+        eventData.setUid(obj[u"uid"_s].toString());
 
         if (mUniqueEventData) {
             mEventData.push_back(eventData);

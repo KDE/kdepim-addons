@@ -9,15 +9,16 @@
 #include <QDebug>
 #include <QHBoxLayout>
 #include <QLabel>
+using namespace Qt::Literals::StringLiterals;
 
 SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
     : QWidget(parent)
 {
-    setWindowTitle(QStringLiteral("Test AbstractMoveImapFolderWidget plugin"));
+    setWindowTitle(u"Test AbstractMoveImapFolderWidget plugin"_s);
     auto mainLayout = new QHBoxLayout(this);
 
     KSieveUi::AbstractMoveImapFolderWidget *lineEdit = nullptr;
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim6/libksieve/imapfoldercompletionplugin"));
+    const KPluginMetaData editWidgetPlugin(u"pim6/libksieve/imapfoldercompletionplugin"_s);
 
     const auto result = KPluginFactory::instantiatePlugin<KSieveUi::AbstractMoveImapFolderWidget>(editWidgetPlugin);
     if (result) {
@@ -35,7 +36,7 @@ DefaultMoveImapFolderWidget::DefaultMoveImapFolderWidget(QWidget *parent)
     : KSieveUi::AbstractMoveImapFolderWidget(parent)
 {
     auto mainLayout = new QHBoxLayout(this);
-    auto label = new QLabel(QStringLiteral("Problem during loading plugin! Please verify your installation."));
+    auto label = new QLabel(u"Problem during loading plugin! Please verify your installation."_s);
     mainLayout->addWidget(label);
 }
 

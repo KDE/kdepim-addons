@@ -62,6 +62,7 @@ using namespace KCalendarCore;
 #include <QPointer>
 #include <QTemporaryFile>
 #include <QUrl>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MailTransport;
 
@@ -73,7 +74,7 @@ static bool hasMyWritableEventsFolders(const QString &family)
 #if 0 // TODO port to Akonadi
     QString myfamily = family;
     if (family.isEmpty()) {
-        myfamily = QStringLiteral("calendar");
+        myfamily = u"calendar"_s;
     }
 
 #ifndef KDEPIM_NO_KRESOURCES
@@ -260,19 +261,19 @@ static QString directoryForStatus(Attendee::PartStat status)
     QString dir;
     switch (status) {
     case Attendee::Accepted:
-        dir = QStringLiteral("accepted");
+        dir = u"accepted"_s;
         break;
     case Attendee::Tentative:
-        dir = QStringLiteral("tentative");
+        dir = u"tentative"_s;
         break;
     case Attendee::Declined:
-        dir = QStringLiteral("cancel");
+        dir = u"cancel"_s;
         break;
     case Attendee::Delegated:
-        dir = QStringLiteral("delegated");
+        dir = u"delegated"_s;
         break;
     case Attendee::NeedsAction:
-        dir = QStringLiteral("request");
+        dir = u"request"_s;
         break;
     default:
         break;
@@ -290,7 +291,7 @@ public:
 
     [[nodiscard]] QString name() const override
     {
-        return QStringLiteral("calendar handler");
+        return u"calendar handler"_s;
     }
 
     [[nodiscard]] Attendee findMyself(const Incidence::Ptr &incidence, const QString &receiver) const
@@ -542,8 +543,8 @@ public:
             auto ct = msg->contentType(); // create
             ct->setMimeType("text/calendar");
             ct->setCharset("utf-8");
-            ct->setName(QStringLiteral("cal.ics"));
-            ct->setParameter(QByteArrayLiteral("method"), QStringLiteral("reply"));
+            ct->setName(u"cal.ics"_s);
+            ct->setParameter(QByteArrayLiteral("method"), u"reply"_s);
 
             auto disposition = std::unique_ptr<KMime::Headers::ContentDisposition>(new KMime::Headers::ContentDisposition);
             disposition->setDisposition(KMime::Headers::CDinline);
@@ -580,8 +581,8 @@ public:
             auto attachCt = attachMessage->contentType();
             attachCt->setMimeType("text/calendar");
             attachCt->setCharset("utf-8");
-            attachCt->setName(QStringLiteral("cal.ics"));
-            attachCt->setParameter(QByteArrayLiteral("method"), QStringLiteral("reply"));
+            attachCt->setName(u"cal.ics"_s);
+            attachCt->setParameter(QByteArrayLiteral("method"), u"reply"_s);
             attachMessage->setHeader(std::move(attachDisposition));
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             attachMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
@@ -805,7 +806,7 @@ public:
                     queryStr = i18n("Do you still want to accept the invitation?");
                 }
                 yesItem.setText(i18nc("@action:button", "Accept"));
-                yesItem.setIconName(QStringLiteral("dialog-ok"));
+                yesItem.setIconName(u"dialog-ok"_s);
             } else if (path == QLatin1StringView("accept_conditionally")) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to send conditional acceptance of the task?");
@@ -813,19 +814,19 @@ public:
                     queryStr = i18n("Do you still want to send conditional acceptance of the invitation?");
                 }
                 yesItem.setText(i18nc("@action:button", "Send"));
-                yesItem.setIconName(QStringLiteral("mail-send"));
+                yesItem.setIconName(u"mail-send"_s);
             } else if (path == QLatin1StringView("accept_counter")) {
                 queryStr = i18n("Do you still want to accept the counter proposal?");
                 yesItem.setText(i18nc("@action:button", "Accept"));
-                yesItem.setIconName(QStringLiteral("dialog-ok"));
+                yesItem.setIconName(u"dialog-ok"_s);
             } else if (path == QLatin1StringView("counter")) {
                 queryStr = i18n("Do you still want to send a counter proposal?");
                 yesItem.setText(i18nc("@action:button", "Send"));
-                yesItem.setIconName(QStringLiteral("mail-send"));
+                yesItem.setIconName(u"mail-send"_s);
             } else if (path == QLatin1StringView("decline")) {
                 queryStr = i18n("Do you still want to send a decline response?");
                 yesItem.setText(i18nc("@action:button", "Send"));
-                yesItem.setIconName(QStringLiteral("mail-send"));
+                yesItem.setIconName(u"mail-send"_s);
             } else if (path == QLatin1StringView("decline_counter")) {
                 queryStr = i18n("Do you still want to decline the counter proposal?");
                 yesItem.setText(i18nc("@action:button", "Decline"));
@@ -846,7 +847,7 @@ public:
                     queryStr = i18n("Do you still want to forward this invitation?");
                 }
                 yesItem.setText(i18nc("@action:button", "Forward"));
-                yesItem.setIconName(QStringLiteral("mail-forward"));
+                yesItem.setIconName(u"mail-forward"_s);
             } else if (path == QLatin1StringView("cancel")) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to cancel this task?");
@@ -855,9 +856,9 @@ public:
                     queryStr = i18n("Do you still want to cancel this invitation?");
                     yesItem.setText(i18nc("@action:button", "Cancel Invitation"));
                 }
-                yesItem.setIconName(QStringLiteral("dialog-ok"));
+                yesItem.setIconName(u"dialog-ok"_s);
                 noItem.setText(i18nc("@action:button", "Do Not Cancel"));
-                noItem.setIconName(QStringLiteral("dialog-cancel"));
+                noItem.setIconName(u"dialog-cancel"_s);
             } else if (path == QLatin1StringView("check_calendar")) {
                 queryStr = i18n("Do you still want to check your calendar?");
                 yesItem.setText(i18nc("@action:button", "Check"));
@@ -1124,7 +1125,7 @@ public:
     void showCalendar(QDate date) const
     {
         // Start or activate KOrganizer. When Kontact is running it will switch to KOrganizer view
-        const auto korgaService = KService::serviceByDesktopName(QStringLiteral("org.kde.korganizer"));
+        const auto korgaService = KService::serviceByDesktopName(u"org.kde.korganizer"_s);
 
         if (!korgaService) {
             qCWarning(TEXT_CALENDAR_LOG) << "Could not find KOrganizer";
@@ -1138,7 +1139,7 @@ public:
                 return;
             }
 
-            OrgKdeKorganizerCalendarInterface iface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"), QDBusConnection::sessionBus(), nullptr);
+            OrgKdeKorganizerCalendarInterface iface(u"org.kde.korganizer"_s, u"/Calendar"_s, QDBusConnection::sessionBus(), nullptr);
             if (!iface.isValid()) {
                 qCDebug(TEXT_CALENDAR_LOG) << "Calendar interface is not valid! " << iface.lastError().message();
                 return;
@@ -1182,7 +1183,7 @@ public:
                 incidence->addComment(comment);
             }
         }
-        return mail(viewerInstance, incidence, QStringLiteral("declinecounter"), KCalendarCore::iTIPDeclineCounter, receiver, QString(), DeclineCounter);
+        return mail(viewerInstance, incidence, u"declinecounter"_s, KCalendarCore::iTIPDeclineCounter, receiver, QString(), DeclineCounter);
     }
 
     bool counterProposal(const KCalendarCore::ScheduleMessage::Ptr &message, MimeTreeParser::Interface::BodyPart *part) const
@@ -1194,7 +1195,7 @@ public:
 
         // Don't delete the invitation here in any case, if the counter proposal
         // is declined you might need it again.
-        return saveFile(receiver, message, QStringLiteral("counter"), part);
+        return saveFile(receiver, message, u"counter"_s, part);
     }
 
     bool handleClick(Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override
@@ -1205,7 +1206,7 @@ public:
             return false;
         }
 
-        if (!hasMyWritableEventsFolders(QStringLiteral("calendar"))) {
+        if (!hasMyWritableEventsFolders(u"calendar"_s)) {
             KMessageBox::error(nullptr,
                                i18n("You have no writable calendar folders for invitations, "
                                     "so storing or saving a response will not be possible.\n"
@@ -1269,14 +1270,14 @@ public:
                 return true;
             }
             const QString receiver = findReceiver(part->content());
-            result = mail(viewerInstance, incidence, QStringLiteral("forward"), iTIPRequest, receiver, fwdTo, Forward);
+            result = mail(viewerInstance, incidence, u"forward"_s, iTIPRequest, receiver, fwdTo, Forward);
         } else if (path == QLatin1StringView("check_calendar")) {
             showCalendar(incidence->dtStart().date());
             return true;
         } else if (path == QLatin1StringView("reply") || path == QLatin1StringView("cancel") || path == QLatin1StringView("accept_counter")) {
             // These should just be saved with their type as the dir
-            const QString p = (path == QLatin1StringView("accept_counter") ? QStringLiteral("reply") : path);
-            if (saveFile(QStringLiteral("Receiver Not Searched"), message, p, part)) {
+            const QString p = (path == QLatin1StringView("accept_counter") ? u"reply"_s : path);
+            if (saveFile(u"Receiver Not Searched"_s, message, p, part)) {
                 if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                     viewerInstance->deleteMessage();
                 }
@@ -1304,16 +1305,16 @@ public:
                 }
 
                 QUrlQuery query;
-                query.addQueryItem(QStringLiteral("to"), incidence->organizer().email());
-                query.addQueryItem(QStringLiteral("subject"), summary);
+                query.addQueryItem(u"to"_s, incidence->organizer().email());
+                query.addQueryItem(u"subject"_s, summary);
                 QUrl url;
-                url.setScheme(QStringLiteral("mailto"));
+                url.setScheme(u"mailto"_s);
                 url.setQuery(query);
                 QDesktopServices::openUrl(url);
             }
             // fall through
             case KMessageBox::ButtonCode::PrimaryAction: // means "do not send"
-                if (saveFile(QStringLiteral("Receiver Not Searched"), message, QStringLiteral("reply"), part)) {
+                if (saveFile(u"Receiver Not Searched"_s, message, u"reply"_s, part)) {
                     if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                         viewerInstance->deleteMessage();
                         result = true;
@@ -1372,8 +1373,8 @@ public:
         }
 
         auto menu = new QMenu();
-        QAction *open = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
-        QAction *saveas = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Attachment As…"));
+        QAction *open = menu->addAction(QIcon::fromTheme(u"document-open"_s), i18n("Open Attachment"));
+        QAction *saveas = menu->addAction(QIcon::fromTheme(u"document-save-as"_s), i18n("Save Attachment As…"));
 
         QAction *a = menu->exec(point, nullptr);
         if (a == open) {

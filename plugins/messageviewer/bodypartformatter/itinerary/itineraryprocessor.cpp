@@ -21,6 +21,7 @@
 
 #include <QJsonArray>
 #include <QJsonDocument>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KItinerary;
 
@@ -173,7 +174,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
             const auto docData = content->decodedBody();
             const auto docId = DocumentUtil::idForContent(docData);
             DigitalDocument docInfo;
-            docInfo.setEncodingFormat(QStringLiteral("application/pdf"));
+            docInfo.setEncodingFormat(u"application/pdf"_s);
             docInfo.setName(MimeTreeParser::NodeHelper::fileName(content));
             memento->addDocument(docId, docInfo, docData);
 

@@ -6,10 +6,11 @@
 
 #include "markdownutil.h"
 #include <QRegularExpression>
+using namespace Qt::Literals::StringLiterals;
 
 QStringList MarkdownUtil::imagePaths(const QString &str)
 {
-    static QRegularExpression imageRegular(QStringLiteral("!\\[.*\\]\\((.*)([\\s]*=.*x.*)*\\s*([\\s]*\".*\")*\\s*\\)"));
+    static QRegularExpression imageRegular(u"!\\[.*\\]\\((.*)([\\s]*=.*x.*)*\\s*([\\s]*\".*\")*\\s*\\)"_s);
 
     imageRegular.setPatternOptions(QRegularExpression::InvertedGreedinessOption);
     QRegularExpressionMatchIterator i = imageRegular.globalMatchView(str);

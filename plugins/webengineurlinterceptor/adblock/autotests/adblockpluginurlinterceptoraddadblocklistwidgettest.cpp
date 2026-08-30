@@ -8,6 +8,7 @@
 #include <QFormLayout>
 #include <QLineEdit>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 QTEST_MAIN(AdblockPluginUrlInterceptorAddAdblockListWidgetTest)
 
 AdblockPluginUrlInterceptorAddAdblockListWidgetTest::AdblockPluginUrlInterceptorAddAdblockListWidgetTest(QObject *parent)
@@ -19,15 +20,15 @@ void AdblockPluginUrlInterceptorAddAdblockListWidgetTest::shouldHaveDefaultValue
 {
     AdblockPluginUrlInterceptorAddAdblockListWidget w;
 
-    const auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainLayout"));
+    const auto mainLayout = w.findChild<QFormLayout *>(u"mainLayout"_s);
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
-    const auto mName = w.findChild<QLineEdit *>(QStringLiteral("mName"));
+    const auto mName = w.findChild<QLineEdit *>(u"mName"_s);
     QVERIFY(mName);
     QVERIFY(mName->text().isEmpty());
 
-    const auto mUrl = w.findChild<QLineEdit *>(QStringLiteral("mUrl"));
+    const auto mUrl = w.findChild<QLineEdit *>(u"mUrl"_s);
     QVERIFY(mUrl);
     QVERIFY(mUrl->text().isEmpty());
 }
@@ -37,10 +38,10 @@ void AdblockPluginUrlInterceptorAddAdblockListWidgetTest::shouldVerifyAdBlockLis
     AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo info;
     QVERIFY(!info.isValid());
 
-    info.name = QStringLiteral("bla");
+    info.name = u"bla"_s;
     QVERIFY(!info.isValid());
 
-    info.url = QStringLiteral("bli");
+    info.url = u"bli"_s;
     QVERIFY(info.isValid());
 
     info.name.clear();

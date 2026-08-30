@@ -19,6 +19,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigEmailAddressSelectionLdapDialog[] = "EmailAddressSelectionLdapDialog";
@@ -37,8 +38,8 @@ EmailAddressSelectionLdapDialog::EmailAddressSelectionLdapDialog(QWidget *parent
     connect(searchLDAPButton, &QPushButton::clicked, this, &EmailAddressSelectionLdapDialog::slotSearchLDAP);
     mainLayout->addWidget(searchLDAPButton);
 
-    KConfig config(QStringLiteral("kabldaprc"));
-    KConfigGroup group = config.group(QStringLiteral("LDAP"));
+    KConfig config(u"kabldaprc"_s);
+    KConfigGroup group = config.group(u"LDAP"_s);
     int numHosts = group.readEntry("NumSelectedHosts", 0);
     if (!numHosts) {
         searchLDAPButton->setVisible(false);

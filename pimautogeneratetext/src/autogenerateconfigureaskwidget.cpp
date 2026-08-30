@@ -14,6 +14,7 @@
 #include <QPlainTextEdit>
 #include <QSplitter>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     : QWidget{parent}
@@ -23,33 +24,33 @@ AutogenerateConfigureAskWidget::AutogenerateConfigureAskWidget(QWidget *parent)
     , mAutogenerateConfigureListView(new AutogenerateConfigureListView(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setObjectName(u"mainLayout"_s);
     mainLayout->setContentsMargins({});
 
-    mSplitter->setObjectName(QStringLiteral("mSplitter"));
+    mSplitter->setObjectName(u"mSplitter"_s);
 
     auto widget = new QWidget(this);
 
     auto vbox = new QVBoxLayout(widget);
-    vbox->setObjectName(QStringLiteral("vbox"));
+    vbox->setObjectName(u"vbox"_s);
     vbox->setContentsMargins({});
 
-    mSearchLineEdit->setObjectName(QStringLiteral("mSearchLineEdit"));
+    mSearchLineEdit->setObjectName(u"mSearchLineEdit"_s);
     mSearchLineEdit->setClearButtonEnabled(true);
-    mSearchLineEdit->addAction(QIcon::fromTheme(QStringLiteral("view-filter")), QLineEdit::LeadingPosition);
+    mSearchLineEdit->addAction(QIcon::fromTheme(u"view-filter"_s), QLineEdit::LeadingPosition);
     KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
     connect(mSearchLineEdit, &QLineEdit::textChanged, mAutogenerateConfigureListView, &AutogenerateConfigureListView::setFilterText);
 
     vbox->addWidget(mSearchLineEdit);
 
-    mAutogenerateConfigureListView->setObjectName(QStringLiteral("mAutogenerateConfigureListView"));
+    mAutogenerateConfigureListView->setObjectName(u"mAutogenerateConfigureListView"_s);
     vbox->addWidget(mAutogenerateConfigureListView);
     connect(mAutogenerateConfigureListView->selectionModel(), &QItemSelectionModel::currentChanged, this, &AutogenerateConfigureAskWidget::slotItemChanged);
 
     mSplitter->addWidget(widget);
 
     mSplitter->addWidget(mTextEdit);
-    mTextEdit->setObjectName(QStringLiteral("mTextEdit"));
+    mTextEdit->setObjectName(u"mTextEdit"_s);
     mainLayout->addWidget(mSplitter);
 }
 

@@ -9,6 +9,7 @@
 #include "standardsheaderstyleinterface.h"
 #include <KPluginFactory>
 #include <MessageViewer/PlainHeaderStyle>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -48,7 +49,7 @@ HeaderStyleInterface *StandardsHeaderStylePlugin::createView(KActionMenu *menu, 
 
 QString StandardsHeaderStylePlugin::name() const
 {
-    return QStringLiteral("standards-header");
+    return u"standards-header"_s;
 }
 
 #include "standardsheaderstyleplugin.moc"
