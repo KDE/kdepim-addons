@@ -14,6 +14,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigGroupName[] = "ExpireAccountTrashFolderConfigDialog";
@@ -24,14 +25,14 @@ ExpireAccountTrashFolderConfigDialog::ExpireAccountTrashFolderConfigDialog(QWidg
     , mExpireAccountTrashFolderConfig(new ExpireAccountTrashFolderConfigWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     setWindowTitle(i18nc("@title:window", "Configure Expiry Account Trash Folder"));
 
-    mExpireAccountTrashFolderConfig->setObjectName(QLatin1StringView("mExpireAccountTrashFolderConfig"));
+    mExpireAccountTrashFolderConfig->setObjectName("mExpireAccountTrashFolderConfig"_L1);
     mainLayout->addWidget(mExpireAccountTrashFolderConfig);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel | QDialogButtonBox::Ok, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ExpireAccountTrashFolderConfigDialog::reject);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ExpireAccountTrashFolderConfigDialog::slotAccepted);
     mainLayout->addWidget(buttonBox);

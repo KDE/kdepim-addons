@@ -22,25 +22,25 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     , mExecutable(new KUrlRequester(this))
 {
     auto mainLayout = new QFormLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mName->setObjectName(QLatin1StringView("name"));
+    mName->setObjectName("name"_L1);
     mainLayout->addRow(i18n("Name:"), mName);
     KLineEditEventHandler::catchReturnKey(mName);
 
-    mDescription->setObjectName(QLatin1StringView("description"));
+    mDescription->setObjectName("description"_L1);
     mainLayout->addRow(i18n("Description:"), mDescription);
     KLineEditEventHandler::catchReturnKey(mDescription);
 
     mCommandLine->setClearButtonEnabled(true);
-    mCommandLine->setObjectName(QLatin1StringView("commandline"));
+    mCommandLine->setObjectName("commandline"_L1);
     mCommandLine->setPlaceholderText(i18nc("@info:placeholder", "Add command arguments…"));
     mainLayout->addRow(i18n("Command Line:"), mCommandLine);
     KLineEditEventHandler::catchReturnKey(mCommandLine);
 
     auto formatHelp = new QLabel(i18nc("@label:textbox", "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"), this);
-    formatHelp->setObjectName(QLatin1StringView("formatHelp"));
+    formatHelp->setObjectName("formatHelp"_L1);
     formatHelp->setContextMenuPolicy(Qt::NoContextMenu);
     connect(formatHelp, &QLabel::linkActivated, this, &ViewerPluginExternalEditWidget::slotLinkClicked);
 
@@ -61,7 +61,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
     mainLayout->addWidget(formatHelp);
 
-    mExecutable->setObjectName(QLatin1StringView("mEditorRequester"));
+    mExecutable->setObjectName("mEditorRequester"_L1);
 
     mExecutable->setMimeTypeFilters({u"application/x-executable"_s, u"application/x-shellscript"_s, u"application/x-desktop"_s});
 
@@ -76,7 +76,7 @@ ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget() = default;
 
 void ViewerPluginExternalEditWidget::slotLinkClicked(const QString &link)
 {
-    if (link == QLatin1StringView("whatsthis1")) {
+    if (link == "whatsthis1"_L1) {
         QWhatsThis::showText(QCursor::pos(), mCommandWhatsThis);
     }
 }

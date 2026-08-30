@@ -15,6 +15,7 @@
 #include <KWindowConfig>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -26,13 +27,13 @@ AdblockFilterDialog::AdblockFilterDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Adblock List"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
-    mAdblockFilterWidget->setObjectName(QLatin1StringView("mAdblockFilterWidget"));
+    mAdblockFilterWidget->setObjectName("mAdblockFilterWidget"_L1);
     mainLayout->addWidget(mAdblockFilterWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AdblockFilterDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdblockFilterDialog::reject);

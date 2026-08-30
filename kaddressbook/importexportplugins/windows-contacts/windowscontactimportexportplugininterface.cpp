@@ -96,7 +96,7 @@ void WindowsContactImportExportPluginInterface::exportWindowsContact()
 
 bool WindowsContactImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
-    return url.path().endsWith(QLatin1StringView(".contact"));
+    return url.path().endsWith(".contact"_L1);
 }
 
 void WindowsContactImportExportPluginInterface::importFile(const QUrl &url)

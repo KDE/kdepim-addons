@@ -52,7 +52,7 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
     Q_UNUSED(viewerInstance)
     const auto m = memento(part);
 
-    if (path.startsWith(QLatin1StringView("semanticExpand?"))) {
+    if (path.startsWith("semanticExpand?"_L1)) {
         const auto idx = QStringView(path).mid(15).toInt();
         m->toggleExpanded(idx);
         const auto nodeHelper = part->nodeHelper();
@@ -60,27 +60,27 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
         return true;
     }
 
-    if (path == QLatin1StringView("showCalendar")) {
+    if (path == "showCalendar"_L1) {
         showCalendar(m->startDate());
         return true;
     }
 
-    if (path == QLatin1StringView("addToCalendar")) {
+    if (path == "addToCalendar"_L1) {
         addToCalendar(m);
         return true;
     }
 
-    if (path == QLatin1StringView("import")) {
+    if (path == "import"_L1) {
         openInApp(part);
         return true;
     }
 
-    if (path == QLatin1StringView("sendToDeviceList")) {
+    if (path == "sendToDeviceList"_L1) {
         handleContextMenuRequest(part, path, QCursor::pos());
         return true;
     }
 
-    if (path.startsWith(QLatin1StringView("sendToDevice-"))) {
+    if (path.startsWith("sendToDevice-"_L1)) {
         openWithKDEConnect(part, path.mid(13));
         return true;
     }
@@ -91,13 +91,12 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
 bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
     Q_UNUSED(part)
-    if (path == QLatin1StringView("showCalendar") || path == QLatin1StringView("addToCalendar") || path == QLatin1StringView("import")
-        || path.startsWith(QLatin1StringView("sendToDevice-"))) {
+    if (path == "showCalendar"_L1 || path == "addToCalendar"_L1 || path == "import"_L1 || path.startsWith("sendToDevice-"_L1)) {
         // suppress default context menus for our buttons
         return true;
     }
 
-    if (path != QLatin1StringView("sendToDeviceList")) {
+    if (path != "sendToDeviceList"_L1) {
         return false;
     }
 
@@ -123,16 +122,16 @@ bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bo
 QString ItineraryUrlHandler::statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
     Q_UNUSED(part)
-    if (path == QLatin1StringView("showCalendar")) {
+    if (path == "showCalendar"_L1) {
         return i18n("Show calendar at the time of this reservation.");
     }
-    if (path == QLatin1StringView("addToCalendar")) {
+    if (path == "addToCalendar"_L1) {
         return i18n("Add reservation to your calendar.");
     }
-    if (path == QLatin1StringView("import")) {
+    if (path == "import"_L1) {
         return i18n("Import reservation into KDE Itinerary.");
     }
-    if (path.startsWith(QLatin1StringView("sendToDevice"))) {
+    if (path.startsWith("sendToDevice"_L1)) {
         return i18n("Send this reservation to a device using KDE Connect.");
     }
     return {};

@@ -22,13 +22,13 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     , mLineEdit(new SelectImapLineEdit(this))
 {
     auto layout = new QHBoxLayout(this);
-    layout->setObjectName(QLatin1StringView("mainlayout"));
+    layout->setObjectName("mainlayout"_L1);
     layout->setContentsMargins({});
-    mLineEdit->setObjectName(QLatin1StringView("lineedit"));
+    mLineEdit->setObjectName("lineedit"_L1);
     layout->addWidget(mLineEdit);
 
     mToolButton->setText(u"…"_s);
-    mToolButton->setObjectName(QLatin1StringView("toolbutton"));
+    mToolButton->setObjectName("toolbutton"_L1);
     mToolButton->setToolTip(i18nc("@info:tooltip", "Select IMAP folder"));
     mToolButton->hide();
     layout->addWidget(mToolButton);

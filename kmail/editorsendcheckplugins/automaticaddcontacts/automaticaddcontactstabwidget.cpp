@@ -30,24 +30,24 @@ AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QA
     , mCollectionCombobox(new Akonadi::CollectionComboBox(model, this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
-    mEnabled->setObjectName(QLatin1StringView("enabled"));
+    mainLayout->setObjectName("mainlayout"_L1);
+    mEnabled->setObjectName("enabled"_L1);
     connect(mEnabled, &QCheckBox::clicked, this, &AutomaticAddContactsTabWidget::configureChanged);
     mainLayout->addWidget(mEnabled);
 
     auto hlay = new QHBoxLayout;
     hlay->setContentsMargins({});
-    hlay->setObjectName(QLatin1StringView("folderlayout"));
+    hlay->setObjectName("folderlayout"_L1);
     mainLayout->addLayout(hlay);
 
     auto lab = new QLabel(i18nc("@label:textbox", "Select the addressbook in which to store contacts:"), this);
-    lab->setObjectName(QLatin1StringView("labelfolder"));
+    lab->setObjectName("labelfolder"_L1);
     hlay->addWidget(lab);
 
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
-    mCollectionCombobox->setObjectName(QLatin1StringView("akonadicombobox"));
+    mCollectionCombobox->setObjectName("akonadicombobox"_L1);
     hlay->addWidget(mCollectionCombobox);
     hlay->addStretch(1);
     connect(mCollectionCombobox, &Akonadi::CollectionComboBox::currentIndexChanged, this, &AutomaticAddContactsTabWidget::configureChanged);

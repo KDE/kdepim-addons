@@ -12,26 +12,27 @@
 #include <MailCommon/SnippetsModel>
 #include <QHBoxLayout>
 #include <QStackedWidget>
+using namespace Qt::Literals::StringLiterals;
 
 QuickTextWidget::QuickTextWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
 
     mSnippetsManager = new QuicktextManager(this, this);
 
     mTreeWidget = new QuicktextTreeWidget(mSnippetsManager, this);
-    mTreeWidget->setObjectName(QLatin1StringView("treewidget"));
+    mTreeWidget->setObjectName("treewidget"_L1);
     mainLayout->addWidget(mTreeWidget);
 
     mStackedWidget = new QStackedWidget(this);
-    mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
+    mStackedWidget->setObjectName("stackedwidget"_L1);
     mainLayout->addWidget(mStackedWidget);
 
     mSnippetWidget = new MailCommon::SnippetWidget(this);
-    mSnippetWidget->setObjectName(QLatin1StringView("snippetwidget"));
+    mSnippetWidget->setObjectName("snippetwidget"_L1);
     mStackedWidget->addWidget(mSnippetWidget);
 
     mEmptyWidget = new QWidget(this);

@@ -18,6 +18,7 @@
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Monitor>
+using namespace Qt::Literals::StringLiterals;
 
 EventModel::EventModel(QObject *parent)
     : Akonadi::CalendarBase(parent)
@@ -33,7 +34,7 @@ void EventModel::createMonitor()
     }
 
     mMonitor = new Akonadi::Monitor(this);
-    mMonitor->setObjectName(QLatin1StringView("PlasmaEventModelMonitor"));
+    mMonitor->setObjectName("PlasmaEventModelMonitor"_L1);
     mMonitor->itemFetchScope().fetchFullPayload(true);
     mMonitor->collectionFetchScope().fetchAttribute<Akonadi::EntityDisplayAttribute>();
     mMonitor->collectionFetchScope().fetchAttribute<Akonadi::CollectionColorAttribute>();

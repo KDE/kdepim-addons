@@ -205,7 +205,7 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
                 continue;
             }
             const QFileInfo fi(urlImage);
-            const QString imageName = fi.baseName().isEmpty() ? u"image.png"_s : QString(fi.baseName() + QLatin1StringView(".png"));
+            const QString imageName = fi.baseName().isEmpty() ? u"image.png"_s : QString(fi.baseName() + ".png"_L1);
 
             QString imageNameToAdd = imageName;
             int imageNumber = 1;
@@ -221,7 +221,7 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
                 richTextEditor()->composerControler()->composerImages()->createEmbeddedImage(image, imageNameToAdd);
             lstEmbeddedImages.append(embeddedImage);
 
-            const QString newImageName = QLatin1StringView("cid:") + embeddedImage->contentID;
+            const QString newImageName = "cid:"_L1 + embeddedImage->contentID;
             const QString quote(u"\""_s);
             htmlVersion.replace(QString(quote + urlImage + quote), QString(quote + newImageName + quote));
             textVersion.replace(urlImage, newImageName);

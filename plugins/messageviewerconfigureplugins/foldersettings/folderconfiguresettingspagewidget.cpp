@@ -15,6 +15,7 @@
 #include <MailCommon/CollectionExpiryWidget>
 #include <QTabWidget>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *parent)
     : QWidget(parent)
@@ -24,27 +25,27 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     , mFolderConfigureSettingsViewWidget(new FolderConfigureSettingsViewWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
 
     auto tab = new QTabWidget(this);
-    tab->setObjectName(QLatin1StringView("tab"));
+    tab->setObjectName("tab"_L1);
     mainLayout->addWidget(tab);
 
     // General
-    mFolderConfigureSettingsGeneralWidget->setObjectName(QLatin1StringView("mFolderConfigureSettingsGeneralWidget"));
+    mFolderConfigureSettingsGeneralWidget->setObjectName("mFolderConfigureSettingsGeneralWidget"_L1);
     tab->addTab(mFolderConfigureSettingsGeneralWidget, i18n("General"));
 
     // View
-    mFolderConfigureSettingsViewWidget->setObjectName(QLatin1StringView("mFolderConfigureSettingsViewWidget"));
+    mFolderConfigureSettingsViewWidget->setObjectName("mFolderConfigureSettingsViewWidget"_L1);
     tab->addTab(mFolderConfigureSettingsViewWidget, i18n("View"));
 
     // Expiry => add Tab
-    mCollectionExpiryWidget->setObjectName(QLatin1StringView("mCollectionExpiryWidget"));
+    mCollectionExpiryWidget->setObjectName("mCollectionExpiryWidget"_L1);
     tab->addTab(mCollectionExpiryWidget, i18n("Expiry"));
 
     // Template
-    mCollectionTemplateWidget->setObjectName(QLatin1StringView("mCollectionTemplateWidget"));
+    mCollectionTemplateWidget->setObjectName("mCollectionTemplateWidget"_L1);
     tab->addTab(mCollectionTemplateWidget, i18n("Template"));
 }
 

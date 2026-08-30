@@ -61,7 +61,7 @@ void SearchDuplicateResultWidgetTest::shouldHaveDefaultValue()
     const auto viewer = w.findChild<KAddressBookGrantlee::GrantleeContactViewer *>(u"contact_viewer"_s);
     QVERIFY(viewer);
     const auto lab = w.findChild<QLabel *>(u"select_addressbook_label"_s);
-    lab->setObjectName(QLatin1StringView("select_addressbook_label"));
+    lab->setObjectName("select_addressbook_label"_L1);
     const auto pushButton = w.findChild<QPushButton *>(u"merge_contact_button"_s);
     QVERIFY(pushButton);
     QVERIFY(!pushButton->isEnabled());

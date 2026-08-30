@@ -14,6 +14,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigGroupName[] = "DKIMAuthenticationVerifiedServerDialog";
@@ -25,13 +26,13 @@ DKIMAuthenticationVerifiedServerDialog::DKIMAuthenticationVerifiedServerDialog(Q
 {
     setWindowTitle(i18nc("@title:window", "Configure Authentication Verified Server"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mAuthenticationVerifiedWidget->setObjectName(QLatin1StringView("mAuthenticationVerifiedWidget"));
+    mAuthenticationVerifiedWidget->setObjectName("mAuthenticationVerifiedWidget"_L1);
     mainLayout->addWidget(mAuthenticationVerifiedWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &DKIMAuthenticationVerifiedServerDialog::slotAccepted);

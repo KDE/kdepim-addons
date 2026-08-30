@@ -26,7 +26,7 @@ using namespace Qt::Literals::StringLiterals;
 #ifndef Q_OS_WIN
 void initLocale()
 {
-    setenv("KDEHOME", QFile::encodeName(QDir::homePath() + QLatin1StringView("/.qttest")).constData(), 1);
+    setenv("KDEHOME", QFile::encodeName(QDir::homePath() + "/.qttest"_L1).constData(), 1);
     setenv("LC_ALL", "en_US.utf-8", 1);
     setenv("TZ", "UTC", 1);
     QStandardPaths::setTestModeEnabled(true);
@@ -61,11 +61,11 @@ private Q_SLOTS:
         QDir dir(QStringLiteral(DATA_DIR));
         const QStringList lst = dir.entryList(QStringList(u"*.mbox"_s), QDir::Files | QDir::Readable | QDir::NoSymLinks);
         for (const QString &file : lst) {
-            if (!QFile::exists(dir.path() + QLatin1Char('/') + file + u".html"_s)) {
+            if (!QFile::exists(dir.path() + u'/' + file + u".html"_s)) {
                 continue;
             }
             QTest::newRow(file.toLatin1().constData())
-                << QString(dir.path() + QLatin1Char('/') + file) << QString(dir.path() + QLatin1Char('/') + file + u".html"_s) << QString(file + u".out"_s);
+                << QString(dir.path() + u'/' + file) << QString(dir.path() + u'/' + file + u".html"_s) << QString(file + u".out"_s);
         }
     }
 

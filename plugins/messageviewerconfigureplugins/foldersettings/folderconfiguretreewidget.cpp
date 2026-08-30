@@ -12,6 +12,7 @@
 #include <MailCommon/FolderTreeWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     : QWidget(parent)
@@ -23,9 +24,9 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
                                                                                                        | MailCommon::FolderTreeWidget::HideHeaderViewMenu)))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
-    mFolderTreeWidget->setObjectName(QLatin1StringView("foldertreewidget"));
+    mFolderTreeWidget->setObjectName("foldertreewidget"_L1);
     mFolderTreeWidget->folderTreeView()->setDragEnabled(false);
     mFolderTreeWidget->folderTreeView()->setSelectionMode(QAbstractItemView::ExtendedSelection);
 
@@ -34,11 +35,11 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     auto selectionModel = mFolderTreeWidget->selectionModel();
 
     auto checkable = new KCheckableProxyModel(this);
-    checkable->setObjectName(QLatin1StringView("checkable"));
+    checkable->setObjectName("checkable"_L1);
     checkable->setSourceModel(sourceModel);
     checkable->setSelectionModel(selectionModel);
 
-    mFolderSettingFilterProxyModel->setObjectName(QLatin1StringView("folderSettingFilterProxyModel"));
+    mFolderSettingFilterProxyModel->setObjectName("folderSettingFilterProxyModel"_L1);
     mFolderSettingFilterProxyModel->setSourceModel(checkable);
 
     ftv->setModel(mFolderSettingFilterProxyModel);
@@ -46,11 +47,11 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     mainLayout->addWidget(mFolderTreeWidget);
 
     auto buttonLayout = new QHBoxLayout;
-    buttonLayout->setObjectName(QLatin1StringView("buttonLayout"));
+    buttonLayout->setObjectName("buttonLayout"_L1);
     mainLayout->addLayout(buttonLayout);
 
     mSelectFolder = new QPushButton(i18nc("@action:button", "Select"), this);
-    mSelectFolder->setObjectName(QLatin1StringView("selectFolder"));
+    mSelectFolder->setObjectName("selectFolder"_L1);
     buttonLayout->addWidget(mSelectFolder);
     mSelectFolder->setEnabled(false);
     connect(mSelectFolder, &QPushButton::clicked, this, [this]() {
@@ -58,7 +59,7 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     });
 
     mUnSelectFolder = new QPushButton(i18nc("@action:button", "Unselect"), this);
-    mUnSelectFolder->setObjectName(QLatin1StringView("unSelectFolder"));
+    mUnSelectFolder->setObjectName("unSelectFolder"_L1);
     mUnSelectFolder->setEnabled(false);
     buttonLayout->addWidget(mUnSelectFolder);
     connect(mUnSelectFolder, &QPushButton::clicked, this, [this]() {

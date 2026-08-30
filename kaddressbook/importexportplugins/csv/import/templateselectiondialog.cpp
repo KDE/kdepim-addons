@@ -109,11 +109,11 @@ public:
         for (const QString &dir : dirs) {
             const QStringList fileNames = QDir(dir).entryList(QStringList() << u"*.desktop"_s);
             for (const QString &file : fileNames) {
-                const QString fileName = dir + QLatin1Char('/') + file;
+                const QString fileName = dir + u'/' + file;
 
                 KConfig config(fileName, KConfig::SimpleConfig);
 
-                if (!config.hasGroup(QLatin1StringView("csv column map"))) {
+                if (!config.hasGroup("csv column map"_L1)) {
                     continue;
                 }
 

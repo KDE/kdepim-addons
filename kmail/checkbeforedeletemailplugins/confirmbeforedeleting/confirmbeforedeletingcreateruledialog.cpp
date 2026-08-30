@@ -9,6 +9,7 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmBeforeDeletingCreateRuleDialog::ConfirmBeforeDeletingCreateRuleDialog(QWidget *parent)
     : QDialog(parent)
@@ -16,13 +17,13 @@ ConfirmBeforeDeletingCreateRuleDialog::ConfirmBeforeDeletingCreateRuleDialog(QWi
 {
     setWindowTitle(i18nc("@title:window", "Configure Rule"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mConfirmBeforeDeletingCreateRuleWidget->setObjectName(QLatin1StringView("mConfirmBeforeDeletingCreateRuleWidget"));
+    mConfirmBeforeDeletingCreateRuleWidget->setObjectName("mConfirmBeforeDeletingCreateRuleWidget"_L1);
     mainLayout->addWidget(mConfirmBeforeDeletingCreateRuleWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmBeforeDeletingCreateRuleDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmBeforeDeletingCreateRuleDialog::reject);

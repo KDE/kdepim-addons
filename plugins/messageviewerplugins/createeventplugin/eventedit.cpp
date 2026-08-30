@@ -58,7 +58,7 @@ EventEdit::EventEdit(QWidget *parent)
     hbox->addWidget(lab);
 
     mEventEdit->setClearButtonEnabled(true);
-    mEventEdit->setObjectName(QLatin1StringView("eventedit"));
+    mEventEdit->setObjectName("eventedit"_L1);
     mEventEdit->setFocus();
     connect(mEventEdit, &QLineEdit::returnPressed, this, &EventEdit::slotReturnPressed);
     connect(mEventEdit, &QLineEdit::textChanged, this, &EventEdit::slotUpdateButtons);
@@ -70,7 +70,7 @@ EventEdit::EventEdit(QWidget *parent)
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KCalendarCore::Event::eventMimeType());
-    mCollectionCombobox->setObjectName(QLatin1StringView("akonadicombobox"));
+    mCollectionCombobox->setObjectName("akonadicombobox"_L1);
 #ifndef QT_NO_ACCESSIBILITY
     mCollectionCombobox->setAccessibleDescription(i18n("Calendar where the new event will be stored."));
 #endif
@@ -90,7 +90,7 @@ EventEdit::EventEdit(QWidget *parent)
     lab = new QLabel(i18nc("@label:textbox", "Start:"), this);
     hbox->addWidget(lab);
     QDateTime currentDateTime = QDateTime::currentDateTime();
-    mStartDateTimeEdit->setObjectName(QLatin1StringView("startdatetimeedit"));
+    mStartDateTimeEdit->setObjectName("startdatetimeedit"_L1);
     mStartDateTimeEdit->setDateTime(currentDateTime);
 #ifndef QT_NO_ACCESSIBILITY
     mStartDateTimeEdit->setAccessibleDescription(i18n("Select start time for event."));
@@ -102,7 +102,7 @@ EventEdit::EventEdit(QWidget *parent)
 
     lab = new QLabel(i18nc("@label:textbox", "End:"), this);
     hbox->addWidget(lab);
-    mEndDateTimeEdit->setObjectName(QLatin1StringView("enddatetimeedit"));
+    mEndDateTimeEdit->setObjectName("enddatetimeedit"_L1);
     mEndDateTimeEdit->setDateTime(currentDateTime.addSecs(3600));
 #ifndef QT_NO_ACCESSIBILITY
     mEndDateTimeEdit->setAccessibleDescription(i18n("Select end time for event."));
@@ -120,7 +120,7 @@ EventEdit::EventEdit(QWidget *parent)
 
     hbox->addStretch(1);
 
-    mSaveButton->setObjectName(QLatin1StringView("save-button"));
+    mSaveButton->setObjectName("save-button"_L1);
     mSaveButton->setEnabled(false);
 #ifndef QT_NO_ACCESSIBILITY
     mSaveButton->setAccessibleDescription(i18n("Create new event and close this widget."));
@@ -131,14 +131,14 @@ EventEdit::EventEdit(QWidget *parent)
 #ifndef QT_NO_ACCESSIBILITY
     mOpenEditorButton->setAccessibleDescription(i18n("Open event editor, where more details can be changed."));
 #endif
-    mOpenEditorButton->setObjectName(QLatin1StringView("open-editor-button"));
+    mOpenEditorButton->setObjectName("open-editor-button"_L1);
     mOpenEditorButton->setEnabled(false);
     connect(mOpenEditorButton, &QPushButton::clicked, this, &EventEdit::slotOpenEditor);
     hbox->addWidget(mOpenEditorButton);
 
     auto btn = new QPushButton(this);
     KGuiItem::assign(btn, KStandardGuiItem::cancel());
-    btn->setObjectName(QLatin1StringView("close-button"));
+    btn->setObjectName("close-button"_L1);
 #ifndef QT_NO_ACCESSIBILITY
     btn->setAccessibleDescription(i18n("Close the widget for creating new events."));
 #endif

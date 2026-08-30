@@ -13,6 +13,7 @@
 #include <KSharedConfig>
 #include <QHBoxLayout>
 #include <QTabWidget>
+using namespace Qt::Literals::StringLiterals;
 
 DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     : QWidget(parent)
@@ -23,10 +24,10 @@ DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     , mTabWidget(new QTabWidget(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mTabWidget->setObjectName(QLatin1StringView("tabwidget"));
+    mTabWidget->setObjectName("tabwidget"_L1);
     mainLayout->addWidget(mTabWidget);
     initTab();
 }

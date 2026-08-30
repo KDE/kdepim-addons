@@ -14,6 +14,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myOpenUrlWithConfigureConfigGroupName[] = "OpenUrlWithConfigureDialog";
@@ -25,13 +26,13 @@ OpenUrlWithConfigureDialog::OpenUrlWithConfigureDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Open Url With Plugin"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mOpenUrlWithWidget->setObjectName(QLatin1StringView("mOpenUrlWithWidget"));
+    mOpenUrlWithWidget->setObjectName("mOpenUrlWithWidget"_L1);
     mainLayout->addWidget(mOpenUrlWithWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &OpenUrlWithConfigureDialog::slotAccepted);

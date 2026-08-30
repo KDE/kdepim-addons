@@ -11,25 +11,26 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
     : QDialog(parent)
     , mLineEdit(new QLineEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     auto label = new QLabel(i18nc("@label:textbox", "Enter new domain name:"), this);
-    label->setObjectName(QLatin1StringView("label"));
+    label->setObjectName("label"_L1);
     mainLayout->addWidget(label);
 
-    mLineEdit->setObjectName(QLatin1StringView("lineedit"));
+    mLineEdit->setObjectName("lineedit"_L1);
     mainLayout->addWidget(mLineEdit);
 
     auto emailValidator = new KEmailValidator(this);
     mLineEdit->setValidator(emailValidator);
 
     auto buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttons->setObjectName(QLatin1StringView("buttons"));
+    buttons->setObjectName("buttons"_L1);
     mainLayout->addWidget(buttons);
     connect(buttons, &QDialogButtonBox::accepted, this, &ConfirmAddressEmailEntryDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, this, &ConfirmAddressEmailEntryDialog::reject);

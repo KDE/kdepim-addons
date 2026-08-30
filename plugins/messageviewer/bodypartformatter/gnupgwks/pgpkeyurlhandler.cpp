@@ -28,7 +28,7 @@ using namespace MimeTreeParser::Interface;
 
 QUrlQuery ApplicationPgpKeyUrlHandler::decodePath(const QString &path) const
 {
-    if (!path.startsWith(QLatin1StringView("pgpkey?"))) {
+    if (!path.startsWith("pgpkey?"_L1)) {
         return {};
     }
 
@@ -44,7 +44,7 @@ QString ApplicationPgpKeyUrlHandler::statusBarMessage(BodyPart *part, const QStr
 {
     Q_UNUSED(part)
     const QUrlQuery q = decodePath(path);
-    if (q.queryItemValue(u"action"_s) == QLatin1StringView("import")) {
+    if (q.queryItemValue(u"action"_s) == "import"_L1) {
         return i18n("Import the key");
     }
 
@@ -59,7 +59,7 @@ QString ApplicationPgpKeyUrlHandler::name() const
 bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v, BodyPart *part, const QString &path) const
 {
     const QUrlQuery q = decodePath(path);
-    if (q.queryItemValue(u"action"_s) == QLatin1StringView("import")) {
+    if (q.queryItemValue(u"action"_s) == "import"_L1) {
         auto job = QGpgME::openpgp()->importJob();
         auto res = job->exec(part->content()->decodedBody());
         if (res.error()) {

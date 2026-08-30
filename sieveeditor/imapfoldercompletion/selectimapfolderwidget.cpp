@@ -32,25 +32,25 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveCore::SieveImapAccoun
     mModel = SelectImapFolderModel::self()->folderModel(mAccount, modelIsInitialized);
     connect(SelectImapFolderModel::self(), &SelectImapFolderModel::modelLoaded, this, &SelectImapFolderWidget::slotModelLoaded);
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
     auto topLayout = new QHBoxLayout;
     topLayout->setContentsMargins({});
     mainLayout->addLayout(topLayout);
-    mSearchLineEdit->setObjectName(QLatin1StringView("searchline"));
+    mSearchLineEdit->setObjectName("searchline"_L1);
     mSearchLineEdit->setClearButtonEnabled(true);
     mSearchLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Search…"));
     topLayout->addWidget(mSearchLineEdit);
 
     auto refreshImap = new QToolButton(this);
-    refreshImap->setObjectName(QLatin1StringView("refreshimap"));
+    refreshImap->setObjectName("refreshimap"_L1);
     refreshImap->setIcon(QIcon::fromTheme(u"view-refresh"_s));
     refreshImap->setToolTip(i18nc("@info:tooltip", "Refresh IMAP Folder List"));
     connect(refreshImap, &QToolButton::clicked, this, &SelectImapFolderWidget::slotRefreshImap);
     topLayout->addWidget(refreshImap);
 
-    mTreeView->setObjectName(QLatin1StringView("treeview"));
+    mTreeView->setObjectName("treeview"_L1);
     mTreeView->header()->hide();
     mFilter = new QSortFilterProxyModel(this);
     mFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);
@@ -111,12 +111,12 @@ void SelectImapFolderWidget::createFolder()
         }
         if (!name.trimmed().isEmpty()) {
             const QString currentPath = index.data(SelectImapLoadFoldersJob::PathRole).toString();
-            if (name.contains(QLatin1Char('/'))) {
+            if (name.contains(u'/')) {
                 KMessageBox::error(this, i18n("Slashes are not allowed in folder names."), i18nc("@title:window", "Create Folder"));
                 return;
             }
             // TODO more check for folder name ?
-            SelectImapFolderModel::self()->createNewFolder(mAccount, currentPath + QLatin1Char('/') + name);
+            SelectImapFolderModel::self()->createNewFolder(mAccount, currentPath + u'/' + name);
         } else {
             KMessageBox::error(this, i18n("Empty folder name is not supported."), i18nc("@title:window", "Create Folder"));
         }

@@ -67,7 +67,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
     Q_UNUSED(markAsSeen)
 
     QMap<QString, QVariant> settings;
-    if (incomingProtocol == QLatin1StringView("IMAP")) {
+    if (incomingProtocol == "IMAP"_L1) {
         settings.insert(u"ImapServer"_s, serverName);
         settings.insert(u"UserName"_s, userName);
         if (port != -1) {
@@ -90,7 +90,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
         addToManualCheck(agentIdentifyName, enableManualCheck);
         // We have not settings for it => same than manual check
         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
-    } else if (incomingProtocol == QLatin1StringView("POP")) {
+    } else if (incomingProtocol == "POP"_L1) {
         settings.insert(u"Host"_s, serverName);
         settings.insert(u"Login"_s, userName);
 
@@ -164,7 +164,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
 void OperaSettings::readTransport(const KConfigGroup &grp)
 {
     const QString outgoingProtocol = grp.readEntry(u"Outgoing Protocol"_s);
-    if (outgoingProtocol == QLatin1StringView("SMTP")) {
+    if (outgoingProtocol == "SMTP"_L1) {
         const int authMethod = grp.readEntry(u"Outgoing Authentication Method"_s, -1);
         MailTransport::Transport *mt = createTransport();
         const int port = grp.readEntry(u"Outgoing Port"_s, -1);
@@ -241,7 +241,7 @@ void OperaSettings::readIdentity(const KConfigGroup &grp)
     if (!signatureFile.isEmpty()) {
         KIdentityManagementCore::Signature signature;
         const int signatureHtml = grp.readEntry(u"Signature is HTML"_s, -1);
-        if (signatureFile.contains(QLatin1StringView("{Preferences}"))) {
+        if (signatureFile.contains("{Preferences}"_L1)) {
             signatureFile.replace(u"{Preferences}"_s, MailImporter::FilterOpera::defaultSettingsPath() + u"/"_s);
         }
 

@@ -23,7 +23,7 @@ CheckFolderSizeAccountPluginConfigureDialog::CheckFolderSizeAccountPluginConfigu
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckFolderSizeAccountPluginConfigureDialog::reject);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckFolderSizeAccountPluginConfigureDialog::slotAccept);
 
-    mCheckFolderSizeAccountPluginConfigureWidget->setObjectName(QLatin1StringView("mCheckFolderSizeAccountPluginConfigureWidget"));
+    mCheckFolderSizeAccountPluginConfigureWidget->setObjectName("mCheckFolderSizeAccountPluginConfigureWidget"_L1);
     mainLayout->addWidget(mCheckFolderSizeAccountPluginConfigureWidget);
     mainLayout->addWidget(buttonBox);
 }

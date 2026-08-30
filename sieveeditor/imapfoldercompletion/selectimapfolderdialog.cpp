@@ -17,6 +17,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigSelectImapFolderDialog[] = "SelectImapFolderDialog";
@@ -30,15 +31,15 @@ SelectImapFolderDialog::SelectImapFolderDialog(const KSieveCore::SieveImapAccoun
     setWindowTitle(i18nc("@title:window", "Select IMAP folder"));
     auto layout = new QVBoxLayout(this);
 
-    mSelectImapFolderWidget->setObjectName(QLatin1StringView("selectimapfolderwidget"));
+    mSelectImapFolderWidget->setObjectName("selectimapfolderwidget"_L1);
     layout->addWidget(mSelectImapFolderWidget);
     connect(mSelectImapFolderWidget, &SelectImapFolderWidget::folderSelected, this, &SelectImapFolderDialog::accept);
     connect(mSelectImapFolderWidget, &SelectImapFolderWidget::folderIsSelected, this, &SelectImapFolderDialog::slotEnabledNewFolder);
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     layout->addWidget(buttonBox);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
 
-    mNewFolder->setObjectName(QLatin1StringView("createfolder"));
+    mNewFolder->setObjectName("createfolder"_L1);
     mNewFolder->setEnabled(false);
     buttonBox->addButton(mNewFolder, QDialogButtonBox::ActionRole);
     connect(mNewFolder, &QPushButton::clicked, this, &SelectImapFolderDialog::slotCreateFolder);

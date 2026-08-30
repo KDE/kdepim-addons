@@ -12,6 +12,7 @@
 #include <QComboBox>
 #include <QFormLayout>
 #include <QPushButton>
+using namespace Qt::Literals::StringLiterals;
 
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     : QWidget(parent)
@@ -21,24 +22,24 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     , mSmallKeyPolicy(new QComboBox(this))
 {
     auto mainLayout = new QFormLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
-    mCheckDKIMWhenOnlyTesting->setObjectName(QLatin1StringView("kcfg_VerifySignatureWhenOnlyTest"));
+    mCheckDKIMWhenOnlyTesting->setObjectName("kcfg_VerifySignatureWhenOnlyTest"_L1);
     mainLayout->addRow(mCheckDKIMWhenOnlyTesting);
 
-    mUseAuthenticationResultRelaxedParser->setObjectName(QLatin1StringView("kcfg_UseRelaxedParsingAuthenticationResults"));
+    mUseAuthenticationResultRelaxedParser->setObjectName("kcfg_UseRelaxedParsingAuthenticationResults"_L1);
     mainLayout->addRow(mUseAuthenticationResultRelaxedParser);
 
-    mSha1Policy->setObjectName(QLatin1StringView("kcfg_PolicyRsaSha1"));
+    mSha1Policy->setObjectName("kcfg_PolicyRsaSha1"_L1);
     mSha1Policy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
     mainLayout->addRow(i18n("Treat RSA-SHA1 sign algorithm as:"), mSha1Policy);
 
-    mSmallKeyPolicy->setObjectName(QLatin1StringView("kcfg_PublicRsaTooSmall"));
+    mSmallKeyPolicy->setObjectName("kcfg_PublicRsaTooSmall"_L1);
     mSmallKeyPolicy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
     mainLayout->addRow(i18n("Treat small Key as:"), mSmallKeyPolicy);
 
     auto configureServer = new QPushButton(i18nc("@action:button", "Configure"), this);
-    configureServer->setObjectName(QLatin1StringView("configure_button"));
+    configureServer->setObjectName("configure_button"_L1);
     connect(configureServer, &QPushButton::clicked, this, &DKIMAdvancedWidget::slotConfigureAuthenticationServer);
     mainLayout->addRow(i18n("Authentication Server verified:"), configureServer);
 }

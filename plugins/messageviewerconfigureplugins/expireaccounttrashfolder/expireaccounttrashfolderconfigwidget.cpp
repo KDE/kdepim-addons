@@ -10,16 +10,17 @@
 #include <Akonadi/SpecialMailCollections>
 #include <MailCommon/CollectionExpiryWidget>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidget *parent)
     : QWidget(parent)
     , mCollectionExpiryWidget(new MailCommon::CollectionExpiryWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mCollectionExpiryWidget->setObjectName(QLatin1StringView("mCollectionExpiryWidget"));
+    mCollectionExpiryWidget->setObjectName("mCollectionExpiryWidget"_L1);
     connect(mCollectionExpiryWidget,
             &MailCommon::CollectionExpiryWidget::saveAndExpireRequested,
             this,

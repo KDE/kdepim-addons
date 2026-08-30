@@ -9,6 +9,7 @@
 #include <KLocalizedString>
 #include <QFormLayout>
 #include <QLineEdit>
+using namespace Qt::Literals::StringLiterals;
 
 AdblockPluginUrlInterceptorAddAdblockListWidget::AdblockPluginUrlInterceptorAddAdblockListWidget(QWidget *parent)
     : QWidget{parent}
@@ -17,10 +18,10 @@ AdblockPluginUrlInterceptorAddAdblockListWidget::AdblockPluginUrlInterceptorAddA
 {
     auto mainLayout = new QFormLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
-    mName->setObjectName(QLatin1StringView("mName"));
-    mUrl->setObjectName(QLatin1StringView("mUrl"));
+    mName->setObjectName("mName"_L1);
+    mUrl->setObjectName("mUrl"_L1);
 
     mName->setClearButtonEnabled(true);
     mUrl->setClearButtonEnabled(true);

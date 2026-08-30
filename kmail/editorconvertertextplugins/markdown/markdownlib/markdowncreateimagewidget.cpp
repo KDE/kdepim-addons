@@ -24,38 +24,38 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     , mHeight(new QSpinBox(this))
 {
     auto mainLayout = new QFormLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mTitle->setObjectName(QLatin1StringView("title"));
+    mTitle->setObjectName("title"_L1);
     mTitle->setClearButtonEnabled(true);
     connect(mTitle, &QLineEdit::textChanged, this, &MarkdownCreateImageWidget::slotEnableButton);
-    mImageUrl->setObjectName(QLatin1StringView("image"));
+    mImageUrl->setObjectName("image"_L1);
     mImageUrl->setClearButtonEnabled(true);
     connect(mImageUrl, &QLineEdit::textChanged, this, &MarkdownCreateImageWidget::slotEnableButton);
 
-    mAlternateText->setObjectName(QLatin1StringView("alternatetext"));
+    mAlternateText->setObjectName("alternatetext"_L1);
     mAlternateText->setClearButtonEnabled(true);
 
     mainLayout->addRow(i18n("Title:"), mTitle);
     mainLayout->addRow(i18n("Image Link:"), mImageUrl);
     mainLayout->addRow(i18n("Alternate text:"), mAlternateText);
 
-    mKeepOriginalSize->setObjectName(QLatin1StringView("keeporiginalsize"));
+    mKeepOriginalSize->setObjectName("keeporiginalsize"_L1);
     mKeepOriginalSize->setChecked(true);
     mainLayout->addRow(mKeepOriginalSize);
     connect(mKeepOriginalSize, &QCheckBox::checkStateChanged, this, &MarkdownCreateImageWidget::slotKeepOriginalSizeChanged);
 
     auto sizeWidget = new QWidget;
-    sizeWidget->setObjectName(QLatin1StringView("sizeWidget"));
+    sizeWidget->setObjectName("sizeWidget"_L1);
     auto sizeWidgetLayout = new QHBoxLayout(sizeWidget);
-    sizeWidgetLayout->setObjectName(QLatin1StringView("sizeWidgetLayout"));
+    sizeWidgetLayout->setObjectName("sizeWidgetLayout"_L1);
     sizeWidgetLayout->setContentsMargins({});
     mainLayout->addRow(sizeWidget);
 
-    mLabWidth->setObjectName(QLatin1StringView("labwidth"));
+    mLabWidth->setObjectName("labwidth"_L1);
     mLabWidth->setEnabled(false);
-    mWidth->setObjectName(QLatin1StringView("mwidth"));
+    mWidth->setObjectName("mwidth"_L1);
     mWidth->setMinimum(1);
     mWidth->setMaximum(999);
     mWidth->setValue(50);
@@ -64,9 +64,9 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     sizeWidgetLayout->addWidget(mLabWidth);
     sizeWidgetLayout->addWidget(mWidth);
 
-    mLabHeight->setObjectName(QLatin1StringView("labheight"));
+    mLabHeight->setObjectName("labheight"_L1);
     mLabHeight->setEnabled(false);
-    mHeight->setObjectName(QLatin1StringView("mheight"));
+    mHeight->setObjectName("mheight"_L1);
     mHeight->setMinimum(1);
     mHeight->setMaximum(999);
     mHeight->setValue(50);

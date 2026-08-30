@@ -30,8 +30,8 @@ public:
 
     QCsvBuilderInterface *const mBuilder;
     QTextCodec *mCodec = nullptr;
-    QChar mTextQuote = QLatin1Char('"');
-    QChar mDelimiter = QLatin1Char(' ');
+    QChar mTextQuote = u'"';
+    QChar mDelimiter = u' ';
 
     uint mStartRow = 0;
     bool mNotTerminated = true;
@@ -134,7 +134,7 @@ bool QCsvReader::read(QIODevice *device)
 
         switch (currentState) {
         case StartLine:
-            if (input == QLatin1Char('\r') || input == QLatin1Char('\n')) {
+            if (input == u'\r' || input == u'\n') {
                 currentState = StartLine;
             } else if (input == d->mTextQuote) {
                 d->emitBeginLine(row);
@@ -151,7 +151,7 @@ bool QCsvReader::read(QIODevice *device)
             }
             break;
         case QuotedField:
-            if (input == QLatin1Char('\r') || input == QLatin1Char('\n')) {
+            if (input == u'\r' || input == u'\n') {
                 field.append(input);
                 currentState = QuotedField;
             } else if (input == d->mTextQuote) {
@@ -165,7 +165,7 @@ bool QCsvReader::read(QIODevice *device)
             }
             break;
         case QuotedFieldEnd:
-            if (input == QLatin1Char('\r') || input == QLatin1Char('\n')) {
+            if (input == u'\r' || input == u'\n') {
                 d->emitField(field, row, column);
                 field.clear();
                 d->emitEndLine(row);
@@ -189,7 +189,7 @@ bool QCsvReader::read(QIODevice *device)
             }
             break;
         case NormalField:
-            if (input == QLatin1Char('\r') || input == QLatin1Char('\n')) {
+            if (input == u'\r' || input == u'\n') {
                 d->emitField(field, row, column);
                 field.clear();
                 d->emitEndLine(row);
@@ -210,7 +210,7 @@ bool QCsvReader::read(QIODevice *device)
             }
             break;
         case EmptyField:
-            if (input == QLatin1Char('\r') || input == QLatin1Char('\n')) {
+            if (input == u'\r' || input == u'\n') {
                 d->emitField(QString(), row, column);
                 field.clear();
                 d->emitEndLine(row);

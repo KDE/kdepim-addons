@@ -7,12 +7,13 @@
 #include "folderconfiguresettingsexperywidget.h"
 
 #include <MailCommon/CollectionExpiryWidget>
+using namespace Qt::Literals::StringLiterals;
 
 FolderConfigureSettingsExperyWidget::FolderConfigureSettingsExperyWidget(QWidget *parent)
     : FolderConfigureSettingsPageBase(parent)
     , mCollectionExpiryWidget(new MailCommon::CollectionExpiryWidget(this))
 {
-    mCollectionExpiryWidget->setObjectName(QLatin1StringView("mCollectionExpiryWidget"));
+    mCollectionExpiryWidget->setObjectName("mCollectionExpiryWidget"_L1);
     mCollectionExpiryWidget->hideExpireNowButton();
     addMainWidget(mCollectionExpiryWidget);
 }

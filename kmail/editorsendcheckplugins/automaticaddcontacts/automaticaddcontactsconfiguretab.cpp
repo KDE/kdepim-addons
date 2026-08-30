@@ -21,9 +21,9 @@ AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *pare
     , mTabWidget(new QTabWidget(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
-    mTabWidget->setObjectName(QLatin1StringView("tabwidget"));
+    mTabWidget->setObjectName("tabwidget"_L1);
     mainLayout->addWidget(mTabWidget);
     initTab(KIdentityManagementCore::IdentityManager::self());
 }

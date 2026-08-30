@@ -26,17 +26,17 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     , mEmailButton(new QToolButton(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mLineEdit->setObjectName(QLatin1StringView("lineedit"));
+    mLineEdit->setObjectName("lineedit"_L1);
     mLineEdit->setClearButtonEnabled(true);
     mLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Click on button for selecting contacts…"));
     connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::slotTextChanged);
     mainLayout->addWidget(mLineEdit);
 
     mEmailButton->setText(i18n("…"));
-    mEmailButton->setObjectName(QLatin1StringView("emailbutton"));
+    mEmailButton->setObjectName("emailbutton"_L1);
     mEmailButton->setToolTip(i18nc("@info:tooltip", "Select Emails"));
     mainLayout->addWidget(mEmailButton);
     connect(mEmailButton, &QToolButton::clicked, this, &EmailLineEdit::slotSelectEmail);
@@ -64,7 +64,7 @@ void EmailLineEdit::insertAddresses(const KContacts::Addressee::List &list)
     bool firstElement = currentText.isEmpty();
     for (const KContacts::Addressee &contact : list) {
         if (!firstElement) {
-            currentText.append(QLatin1Char(';'));
+            currentText.append(u';');
         } else {
             firstElement = false;
         }
@@ -96,7 +96,7 @@ void EmailLineEdit::slotSelectEmail()
             QString result;
             for (const Akonadi::EmailAddressSelection &value : lstAddress) {
                 if (!firstElement) {
-                    result.append(QLatin1Char(';'));
+                    result.append(u';');
                 } else {
                     firstElement = false;
                 }
@@ -133,7 +133,7 @@ void EmailLineEdit::verifyAddress()
 #ifndef QT_NO_STYLE_STYLESHEET
     QString styleSheet;
     const QString lineEditText = text();
-    mEmailIsValid = lineEditText.contains(QLatin1Char('@'));
+    mEmailIsValid = lineEditText.contains(u'@');
     if (mNegativeBackground.isEmpty()) {
         KStatefulBrush bgBrush = KStatefulBrush(KColorScheme::View, KColorScheme::NegativeText);
         mNegativeBackground = u"QLineEdit{ background-color:%1 }"_s.arg(bgBrush.brush(palette()).color().name());

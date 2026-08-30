@@ -7,15 +7,16 @@
 #include "akonadidatabasetoolswidget.h"
 #include <QPlainTextEdit>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 AkonadiDatabaseToolsWidget::AkonadiDatabaseToolsWidget(QWidget *parent)
     : QWidget{parent}
     , mPlainTextEdit(new QPlainTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins(QMargins{});
-    mPlainTextEdit->setObjectName(QLatin1StringView("mPlainTextEdit"));
+    mPlainTextEdit->setObjectName("mPlainTextEdit"_L1);
     mPlainTextEdit->setReadOnly(true);
     mainLayout->addWidget(mPlainTextEdit);
 }

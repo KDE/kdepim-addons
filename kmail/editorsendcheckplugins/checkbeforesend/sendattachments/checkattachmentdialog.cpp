@@ -14,6 +14,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigCheckAttachmentDialog[] = "CheckAttachmentDialog";
@@ -26,14 +27,14 @@ CheckAttachmentDialog::CheckAttachmentDialog(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
 
     auto lab = new QLabel(i18nc("@label:textbox", "Do you want to send some attachment?"), this);
-    lab->setObjectName(QLatin1StringView("lab"));
+    lab->setObjectName("lab"_L1);
     mainLayout->addWidget(lab);
 
-    mListWidget->setObjectName(QLatin1StringView("listwidget"));
+    mListWidget->setObjectName("listwidget"_L1);
     mainLayout->addWidget(mListWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckAttachmentDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckAttachmentDialog::reject);
     mainLayout->addWidget(buttonBox);

@@ -27,18 +27,18 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mExternalEditorCheck->setObjectName(QLatin1StringView("enabled"));
+    mExternalEditorCheck->setObjectName("enabled"_L1);
     mExternalEditorCheck->setChecked(false);
     mainLayout->addWidget(mExternalEditorCheck);
 
     auto hbox = new QHBoxLayout;
     auto label = new QLabel(u"Specify editor:"_s, this);
-    label->setObjectName(QLatin1StringView("urlrequesterlabel"));
+    label->setObjectName("urlrequesterlabel"_L1);
     hbox->addWidget(label);
 
-    mEditorRequester->setObjectName(QLatin1StringView("mEditorRequester"));
+    mEditorRequester->setObjectName("mEditorRequester"_L1);
     hbox->addWidget(mEditorRequester);
 
     mEditorRequester->setMimeTypeFilters({u"application/x-executable"_s, u"application/x-shellscript"_s, u"application/x-desktop"_s});
@@ -55,7 +55,7 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
                              "<b>%w</b> will be replaced with the window id.<br />"
                              "<b>%l</b> will be replaced with the line number."),
                        this);
-    label->setObjectName(QLatin1StringView("explanationlabel"));
+    label->setObjectName("explanationlabel"_L1);
     label->setEnabled(false); // see above
     mainLayout->addWidget(label);
 

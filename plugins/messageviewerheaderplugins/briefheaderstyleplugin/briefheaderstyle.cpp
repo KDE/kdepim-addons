@@ -47,12 +47,12 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
 
     const QString subjectDir = mHeaderStyleUtil.subjectDirectionString(message);
 
-    QString headerStr = QLatin1StringView(R"(<div class="header" dir=")") + dir + QLatin1StringView("\">\n");
+    QString headerStr = R"(<div class="header" dir=")"_L1 + dir + "\">\n"_L1;
 
     if (strategy->showHeader(u"subject"_s)) {
         const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
-        headerStr += QLatin1StringView("<div dir=\"") + subjectDir + QLatin1StringView("\">\n") + u"<b style=\"font-size:130%\">"_s;
+        headerStr += "<div dir=\""_L1 + subjectDir + "\">\n"_L1 + u"<b style=\"font-size:130%\">"_s;
 
         headerStr += mHeaderStyleUtil.subjectString(message, flags) + u"</b></div>\n"_s;
     }
@@ -65,7 +65,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
         */
         QString fromPart = StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayFullAddress);
         if (!vCardName().isEmpty()) {
-            fromPart += QLatin1StringView("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1StringView("\">") + i18n("[vCard]") + QLatin1StringView("</a>");
+            fromPart += "&nbsp;&nbsp;<a href=\""_L1 + vCardName() + "\">"_L1 + i18n("[vCard]") + "</a>"_L1;
         }
         headerParts << fromPart;
     }
@@ -89,9 +89,9 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     }
 
     // remove all empty (modulo whitespace) entries and joins them via ", \n"
-    headerStr += QLatin1StringView(" (") + headerParts.filter(QRegularExpression(u"\\S"_s)).join(QLatin1StringView(",\n")) + QLatin1Char(')');
+    headerStr += " ("_L1 + headerParts.filter(QRegularExpression(u"\\S"_s)).join(",\n"_L1) + u')';
 
-    headerStr += QLatin1StringView("</div>\n");
+    headerStr += "</div>\n"_L1;
 
     // ### iterate over the rest of strategy->headerToDisplay() (or
     // ### all headers if DefaultPolicy == Display) (elsewhere, too)

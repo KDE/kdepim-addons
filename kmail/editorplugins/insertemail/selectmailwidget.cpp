@@ -17,10 +17,10 @@ SelectMailWidget::SelectMailWidget(QWidget *parent)
     , mView(new Akonadi::EmailAddressSelectionWidget(true, nullptr, this))
 {
     auto layout = new QHBoxLayout(this);
-    layout->setObjectName(QLatin1StringView("mainlayout"));
+    layout->setObjectName("mainlayout"_L1);
     layout->setContentsMargins({});
 
-    mView->setObjectName(QLatin1StringView("emailaddressselectionwidget"));
+    mView->setObjectName("emailaddressselectionwidget"_L1);
     layout->addWidget(mView);
     mView->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mView->view()->setAlternatingRowColors(true);

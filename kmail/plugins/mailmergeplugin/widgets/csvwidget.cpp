@@ -10,6 +10,7 @@
 #include <KUrlRequester>
 #include <QLabel>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MailMerge;
 
@@ -18,13 +19,13 @@ CsvWidget::CsvWidget(QWidget *parent)
     , mCvsUrlRequester(new KUrlRequester(this))
 {
     auto csvWidgetLayout = new QVBoxLayout(this);
-    csvWidgetLayout->setObjectName(QLatin1StringView("csvWidgetLayout"));
+    csvWidgetLayout->setObjectName("csvWidgetLayout"_L1);
     csvWidgetLayout->setContentsMargins({});
 
     auto lab = new QLabel(i18nc("@label:textbox", "Path:"), this);
-    lab->setObjectName(QLatin1StringView("label"));
+    lab->setObjectName("label"_L1);
     csvWidgetLayout->addWidget(lab);
-    mCvsUrlRequester->setObjectName(QLatin1StringView("cvsurlrequester"));
+    mCvsUrlRequester->setObjectName("cvsurlrequester"_L1);
     csvWidgetLayout->addWidget(mCvsUrlRequester);
 }
 

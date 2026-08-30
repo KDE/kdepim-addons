@@ -11,6 +11,7 @@
 
 #include <KSharedConfig>
 #include <QHBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget(parent)
@@ -18,7 +19,7 @@ AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigure
 {
     auto hbox = new QHBoxLayout(this);
     hbox->setContentsMargins({});
-    mAdblockFilterWidget->setObjectName(QLatin1StringView("mAdblockFilterWidget"));
+    mAdblockFilterWidget->setObjectName("mAdblockFilterWidget"_L1);
     hbox->addWidget(mAdblockFilterWidget);
     connect(mAdblockFilterWidget, &AdblockFilterWidget::settingsChanged, this, [this]() {
         AdblockManager::self()->refreshLists();

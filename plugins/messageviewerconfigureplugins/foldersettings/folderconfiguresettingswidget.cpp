@@ -11,6 +11,7 @@
 #include <KSharedConfig>
 #include <QHBoxLayout>
 #include <QSplitter>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myFolderConfigureSettingsWidgetGroupName[] = "FolderConfigureSettingsWidget";
@@ -22,19 +23,19 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     , mSplitter(new QSplitter(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
 
     // TODO add label ?
 
-    mSplitter->setObjectName(QLatin1StringView("splitter"));
+    mSplitter->setObjectName("splitter"_L1);
     mSplitter->setChildrenCollapsible(false);
     mainLayout->addWidget(mSplitter);
 
-    mFolderConfigureTreeWidget->setObjectName(QLatin1StringView("mFolderConfigureTreeWidget"));
+    mFolderConfigureTreeWidget->setObjectName("mFolderConfigureTreeWidget"_L1);
     mSplitter->addWidget(mFolderConfigureTreeWidget);
 
-    mFolderConfigureSettingsPageWidget->setObjectName(QLatin1StringView("mFolderConfigureSettingsPageWidget"));
+    mFolderConfigureSettingsPageWidget->setObjectName("mFolderConfigureSettingsPageWidget"_L1);
     mSplitter->addWidget(mFolderConfigureSettingsPageWidget);
     readConfig();
 }

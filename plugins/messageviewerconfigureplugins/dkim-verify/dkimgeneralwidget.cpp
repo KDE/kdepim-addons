@@ -12,6 +12,7 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     : QWidget(parent)
@@ -21,13 +22,13 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     , mUseOnlyAuthenticationResult(new QCheckBox(i18nc("@option:check", "Replace DKIM result by Authentication-Result header value"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
-    mEnableDkimSupport->setObjectName(QLatin1StringView("kcfg_EnabledDkim"));
+    mEnableDkimSupport->setObjectName("kcfg_EnabledDkim"_L1);
     mEnableDkimSupport->setChecked(false);
     mainLayout->addWidget(mEnableDkimSupport);
 
-    mSaveResult->setObjectName(QLatin1StringView("kcfg_SaveDkimResult"));
+    mSaveResult->setObjectName("kcfg_SaveDkimResult"_L1);
     mSaveResult->setChecked(false);
     mainLayout->addWidget(mSaveResult);
 
@@ -35,15 +36,15 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     saveKeyLayout->setContentsMargins({});
     mainLayout->addLayout(saveKeyLayout);
     auto saveKeyLabel = new QLabel(i18nc("@label:textbox", "Save Record Key:"), this);
-    saveKeyLabel->setObjectName(QLatin1StringView("saveKeyLabel"));
+    saveKeyLabel->setObjectName("saveKeyLabel"_L1);
     saveKeyLayout->addWidget(saveKeyLabel);
 
-    mSaveKey->setObjectName(QLatin1StringView("kcfg_SaveKey"));
+    mSaveKey->setObjectName("kcfg_SaveKey"_L1);
     mSaveKey->addItems({i18n("Nothing"), i18n("Save"), i18n("Save and Compare")});
     saveKeyLayout->addWidget(mSaveKey);
     saveKeyLayout->addStretch(1);
 
-    mUseOnlyAuthenticationResult->setObjectName(QLatin1StringView("kcfg_UseOnlyAuthenticationResults"));
+    mUseOnlyAuthenticationResult->setObjectName("kcfg_UseOnlyAuthenticationResults"_L1);
     mUseOnlyAuthenticationResult->setChecked(false);
     mainLayout->addWidget(mUseOnlyAuthenticationResult);
 

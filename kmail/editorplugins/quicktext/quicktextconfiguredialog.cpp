@@ -16,6 +16,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -27,12 +28,12 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure quick text"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
-    mQuickTextConfigureWidget->setObjectName(QLatin1StringView("quicktextconfigurewidget"));
+    mainLayout->setObjectName("mainlayout"_L1);
+    mQuickTextConfigureWidget->setObjectName("quicktextconfigurewidget"_L1);
     mainLayout->addWidget(mQuickTextConfigureWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QuickTextConfigureDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QuickTextConfigureDialog::reject);
 

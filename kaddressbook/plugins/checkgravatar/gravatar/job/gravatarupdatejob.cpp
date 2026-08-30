@@ -39,7 +39,7 @@ void GravatarUpdateJob::start()
 
 bool GravatarUpdateJob::canStart() const
 {
-    return !mEmail.trimmed().isEmpty() && (mEmail.contains(QLatin1Char('@')));
+    return !mEmail.trimmed().isEmpty() && (mEmail.contains(u'@'));
 }
 
 QString GravatarUpdateJob::email() const

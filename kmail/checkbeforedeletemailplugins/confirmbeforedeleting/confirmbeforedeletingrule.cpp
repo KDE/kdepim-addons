@@ -58,19 +58,19 @@ void ConfirmBeforeDeletingRule::save(KConfigGroup &group) const
 
 ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(const QString &str)
 {
-    if (str == QLatin1StringView("body")) {
+    if (str == "body"_L1) {
         return Body;
-    } else if (str == QLatin1StringView("subject")) {
+    } else if (str == "subject"_L1) {
         return Subject;
-    } else if (str == QLatin1StringView("to")) {
+    } else if (str == "to"_L1) {
         return To;
-    } else if (str == QLatin1StringView("cc")) {
+    } else if (str == "cc"_L1) {
         return Cc;
-    } else if (str == QLatin1StringView("bcc")) {
+    } else if (str == "bcc"_L1) {
         return Bcc;
-    } else if (str == QLatin1StringView("unread")) {
+    } else if (str == "unread"_L1) {
         return Unread;
-    } else if (str == QLatin1StringView("important")) {
+    } else if (str == "important"_L1) {
         return Important;
     }
     return Unknown;

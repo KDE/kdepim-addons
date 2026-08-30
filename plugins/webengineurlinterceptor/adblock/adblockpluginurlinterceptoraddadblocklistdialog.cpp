@@ -8,6 +8,7 @@
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 AdblockPluginUrlInterceptorAddAdblockListDialog::AdblockPluginUrlInterceptorAddAdblockListDialog(QWidget *parent)
     : QDialog(parent)
@@ -15,13 +16,13 @@ AdblockPluginUrlInterceptorAddAdblockListDialog::AdblockPluginUrlInterceptorAddA
 {
     setWindowTitle(i18nc("@title:window", "Add Adblock List"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
-    mAddAdblockListWidget->setObjectName(QLatin1StringView("mAddAdblockListWidget"));
+    mAddAdblockListWidget->setObjectName("mAddAdblockListWidget"_L1);
     mainLayout->addWidget(mAddAdblockListWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AdblockPluginUrlInterceptorAddAdblockListDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdblockPluginUrlInterceptorAddAdblockListDialog::reject);

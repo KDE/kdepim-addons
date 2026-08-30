@@ -50,7 +50,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
     if (!fromContactNote.isEmpty()) {
         QString newContactNote = newContact.note();
         if (!newContactNote.isEmpty()) {
-            newContactNote += QLatin1Char('\n');
+            newContactNote += u'\n';
         }
         newContactNote += fromContactNote;
         newContact.setNote(newContactNote);

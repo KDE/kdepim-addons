@@ -36,9 +36,8 @@ void SearchAndMergeContactDuplicateContactDialogTest::shouldHaveDefaultValueOnCr
     for (int i = 0; i < stackedWidget->count(); ++i) {
         QWidget *w = stackedWidget->widget(i);
         const QString objName = w->objectName();
-        const bool hasGoodNamePage = (objName == QLatin1StringView("mergecontact") || objName == QLatin1StringView("nocontactselected")
-                                      || objName == QLatin1StringView("nocontactduplicatesfound") || objName == QLatin1StringView("noenoughcontactselected")
-                                      || objName == QLatin1StringView("mergecontactresult") || objName == QLatin1StringView("selectioninformation"));
+        const bool hasGoodNamePage = (objName == "mergecontact"_L1 || objName == "nocontactselected"_L1 || objName == "nocontactduplicatesfound"_L1
+                                      || objName == "noenoughcontactselected"_L1 || objName == "mergecontactresult"_L1 || objName == "selectioninformation"_L1);
         QVERIFY(hasGoodNamePage);
     }
 }

@@ -40,7 +40,7 @@ void OpenUrlWithConfigureItem::setInfo(const MessageViewer::OpenWithUrlInfo &scr
     setText(mScriptInfo.command());
     QString commandLine = mScriptInfo.command();
     if (!mScriptInfo.commandLine().isEmpty()) {
-        commandLine += QLatin1Char(' ') + mScriptInfo.commandLine();
+        commandLine += u' ' + mScriptInfo.commandLine();
     }
     if (!scriptInfo.isLocalOpenWithInfo()) {
         setFlags(flags() & ~Qt::ItemIsEnabled);
@@ -62,13 +62,13 @@ OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     , mModifyRule(new QPushButton(i18nc("@action:button", "Modify Rule…"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins(QMargins());
 
     auto listLayout = new QHBoxLayout;
     mainLayout->addLayout(listLayout);
 
-    mListWidget->setObjectName(QLatin1StringView("mListWidget"));
+    mListWidget->setObjectName("mListWidget"_L1);
     listLayout->addWidget(mListWidget);
     mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
@@ -82,15 +82,15 @@ OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     listLayout->addLayout(buttonLayout);
 
     connect(mAddRule, &QPushButton::clicked, this, &OpenUrlWithConfigureWidget::slotAddRule);
-    mAddRule->setObjectName(QLatin1StringView("mAddRule"));
+    mAddRule->setObjectName("mAddRule"_L1);
     buttonLayout->addWidget(mAddRule);
 
     connect(mModifyRule, &QPushButton::clicked, this, &OpenUrlWithConfigureWidget::slotEditRule);
-    mModifyRule->setObjectName(QLatin1StringView("mModifyRule"));
+    mModifyRule->setObjectName("mModifyRule"_L1);
     buttonLayout->addWidget(mModifyRule);
 
     connect(mRemoveRule, &QPushButton::clicked, this, &OpenUrlWithConfigureWidget::slotRemoveRule);
-    mRemoveRule->setObjectName(QLatin1StringView("mRemoveRule"));
+    mRemoveRule->setObjectName("mRemoveRule"_L1);
     buttonLayout->addWidget(mRemoveRule);
     buttonLayout->addStretch(1);
     updateButtons();
@@ -119,7 +119,7 @@ void OpenUrlWithConfigureWidget::displayText(const MessageViewer::OpenWithUrlInf
     }
     QString commandLine = r.command();
     if (!r.commandLine().isEmpty()) {
-        commandLine += QLatin1Char(' ') + r.commandLine();
+        commandLine += u' ' + r.commandLine();
     }
     item->setText(u"%1 (%2)"_s.arg(commandLine, r.url()));
 }

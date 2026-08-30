@@ -11,6 +11,7 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MailMerge;
 MailMergeDialog::MailMergeDialog(QWidget *parent)
@@ -23,10 +24,10 @@ MailMergeDialog::MailMergeDialog(QWidget *parent)
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
 
-    mMailMergeWidget->setObjectName(QLatin1StringView("mailmergewidget"));
+    mMailMergeWidget->setObjectName("mailmergewidget"_L1);
     mainLayout->addWidget(mMailMergeWidget);
 
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &MailMergeDialog::accept);

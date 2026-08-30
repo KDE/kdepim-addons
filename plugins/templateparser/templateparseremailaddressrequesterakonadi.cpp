@@ -8,6 +8,7 @@
 #include <Akonadi/EmailAddressRequester>
 #include <KPluginFactory>
 #include <QHBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(TemplateParserEmailAddressRequesterAkonadi, "templateparseremailaddressrequesterakonadi.json")
 
@@ -16,9 +17,9 @@ TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterA
     , mEmailAddressRequester(new Akonadi::EmailAddressRequester(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
-    mEmailAddressRequester->setObjectName(QLatin1StringView("EmailAddressRequester"));
+    mEmailAddressRequester->setObjectName("EmailAddressRequester"_L1);
     mainLayout->addWidget(mEmailAddressRequester);
     connect(mEmailAddressRequester, &Akonadi::EmailAddressRequester::textChanged, this, &TemplateParser::TemplateParserEmailAddressRequesterBase::textChanged);
 }

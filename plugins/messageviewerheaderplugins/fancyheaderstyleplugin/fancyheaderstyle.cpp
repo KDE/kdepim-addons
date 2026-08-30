@@ -71,7 +71,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     if (!xface.photoURL.isEmpty()) {
         // qCDebug(MESSAGEVIEWER_LOG) << "Got a photo:" << xface.photoURL;
         userHTML = u"<img src=\"%1\" width=\"%2\" height=\"%3\"/>"_s.arg(xface.photoURL).arg(xface.photoWidth).arg(xface.photoHeight);
-        userHTML = QLatin1StringView("<div class=\"senderpic\">") + userHTML + QLatin1StringView("</div>");
+        userHTML = "<div class=\"senderpic\">"_L1 + userHTML + "</div>"_L1;
     }
 
     // the subject line and box below for details
@@ -80,7 +80,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
 
         headerStr += u"<div dir=\"%1\">%2</div>\n"_s.arg(subjectDir, mHeaderStyleUtil.subjectString(message, flags));
     }
-    headerStr += QLatin1StringView("<table class=\"outer\"><tr><td width=\"100%\"><table>\n");
+    headerStr += "<table class=\"outer\"><tr><td width=\"100%\"><table>\n"_L1;
     // headerStr += "<table>\n";
     // from line
     // the mailto: URLs can contain %3 etc., therefore usage of multiple
@@ -97,7 +97,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
             + (!vCardName().isEmpty() ? u"&nbsp;&nbsp;<a href=\""_s + vCardName() + u"\">"_s + i18n("[vCard]") + u"</a>"_s : QString())
             + (!message->organization(KMime::CreatePolicy::DontCreate)
                    ? QString()
-                   : u"&nbsp;&nbsp;("_s + mHeaderStyleUtil.strToHtml(message->organization()->asUnicodeString()) + QLatin1Char(')'))
+                   : u"&nbsp;&nbsp;("_s + mHeaderStyleUtil.strToHtml(message->organization()->asUnicodeString()) + u')')
             + u"</td></tr>\n"_s;
     }
     // to line
@@ -106,7 +106,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
 
         QString to;
         if (resentTo.data()) {
-            to = StringUtil::emailAddrAsAnchor(resentTo.data(), StringUtil::DisplayFullAddress) + QLatin1Char(' ')
+            to = StringUtil::emailAddrAsAnchor(resentTo.data(), StringUtil::DisplayFullAddress) + u' '
                 + i18n("(receiver was %1)",
                        StringUtil::emailAddrAsAnchor(message->to(),
                                                      StringUtil::DisplayFullAddress,
@@ -202,6 +202,6 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
 
     headerStr.append(u"</table></td><td align=\"center\">%1</td></tr></table>\n"_s.arg(userHTML));
 
-    headerStr += QLatin1StringView("</div>\n\n");
+    headerStr += "</div>\n\n"_L1;
     return headerStr;
 }

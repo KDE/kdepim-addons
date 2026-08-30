@@ -7,6 +7,7 @@
 #include "mergecontactloseinformationwarning.h"
 #include <KLocalizedString>
 #include <QAction>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KABMergeContacts;
 MergeContactLoseInformationWarning::MergeContactLoseInformationWarning(QWidget *parent)
@@ -20,12 +21,12 @@ MergeContactLoseInformationWarning::MergeContactLoseInformationWarning(QWidget *
     setText(i18n("Some information can be lost. Do you want to continue, or customize what you want to merge?"));
 
     auto action = new QAction(i18nc("@action", "Customize"), this);
-    action->setObjectName(QLatin1StringView("customize"));
+    action->setObjectName("customize"_L1);
     connect(action, &QAction::triggered, this, &MergeContactLoseInformationWarning::slotCustomizeMerge);
     addAction(action);
 
     action = new QAction(i18nc("@action", "Automatic Merging"), this);
-    action->setObjectName(QLatin1StringView("automatic"));
+    action->setObjectName("automatic"_L1);
     connect(action, &QAction::triggered, this, &MergeContactLoseInformationWarning::slotAutomaticMerging);
     addAction(action);
 }

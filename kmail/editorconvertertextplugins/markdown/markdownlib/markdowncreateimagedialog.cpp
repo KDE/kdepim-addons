@@ -15,6 +15,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -27,16 +28,16 @@ MarkdownCreateImageDialog::MarkdownCreateImageDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Add Image"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mMarkdownCreateImageWidget->setObjectName(QLatin1StringView("markdowncreateimagewidget"));
+    mMarkdownCreateImageWidget->setObjectName("markdowncreateimagewidget"_L1);
 
     mainLayout->addWidget(mMarkdownCreateImageWidget);
 
     auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    box->setObjectName(QLatin1StringView("buttonbox"));
+    box->setObjectName("buttonbox"_L1);
     mOkButton = box->button(QDialogButtonBox::Ok);
-    mOkButton->setObjectName(QLatin1StringView("okbutton"));
+    mOkButton->setObjectName("okbutton"_L1);
     mOkButton->setEnabled(false);
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateImageDialog::accept);

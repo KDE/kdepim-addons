@@ -17,6 +17,7 @@
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
 #include <TextCustomEditor/PlainTextEditor>
 #include <TextCustomEditor/PlainTextEditorWidget>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigReactionToInvitationDialog[] = "ReactionToInvitationDialog";
@@ -26,18 +27,18 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     , mPlainTextEditor(new TextCustomEditor::PlainTextEditorWidget(this))
 {
     auto layout = new QVBoxLayout(this);
-    layout->setObjectName(QLatin1StringView("layout"));
+    layout->setObjectName("layout"_L1);
 
     auto label = new QLabel(i18nc("@label:textbox", "Comment:"), this);
-    label->setObjectName(QLatin1StringView("label"));
+    label->setObjectName("label"_L1);
     layout->addWidget(label);
 
-    mPlainTextEditor->setObjectName(QLatin1StringView("plaintexteditor"));
+    mPlainTextEditor->setObjectName("plaintexteditor"_L1);
     layout->addWidget(mPlainTextEditor);
     connect(mPlainTextEditor->editor(), &TextCustomEditor::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     layout->addWidget(buttonBox);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ReactionToInvitationDialog::accept);

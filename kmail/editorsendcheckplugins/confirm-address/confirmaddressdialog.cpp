@@ -16,6 +16,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -28,17 +29,17 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Confirm Addresses"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mConfirmWidget->setObjectName(QLatin1StringView("confirmwidget"));
+    mConfirmWidget->setObjectName("confirmwidget"_L1);
     mainLayout->addWidget(mConfirmWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmAddressDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmAddressDialog::reject);
 
-    mWhiteListEmailsButton->setObjectName(QLatin1StringView("whiteListEmailsButton"));
+    mWhiteListEmailsButton->setObjectName("whiteListEmailsButton"_L1);
     mWhiteListEmailsButton->setEnabled(false);
     buttonBox->addButton(mWhiteListEmailsButton, QDialogButtonBox::ActionRole);
     connect(mWhiteListEmailsButton, &QPushButton::clicked, this, &ConfirmAddressDialog::slotWhiteListSelectedEmails);

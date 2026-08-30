@@ -28,13 +28,13 @@ AkonadiDatabaseToolsDialog::AkonadiDatabaseToolsDialog(QWidget *parent)
     setAttribute(Qt::WA_DeleteOnClose);
     setWindowTitle(i18nc("@title:window", "Akonadi Database Tool"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
-    mAkonadiDatabaseToolsWidget->setObjectName(QLatin1StringView("mAkonadiDatabaseToolsWidget"));
+    mAkonadiDatabaseToolsWidget->setObjectName("mAkonadiDatabaseToolsWidget"_L1);
     mainLayout->addWidget(mAkonadiDatabaseToolsWidget);
 
     auto box = new QDialogButtonBox(QDialogButtonBox::Close, this);
-    box->setObjectName(QLatin1StringView("box"));
+    box->setObjectName("box"_L1);
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &AkonadiDatabaseToolsDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &AkonadiDatabaseToolsDialog::reject);

@@ -15,6 +15,7 @@
 #include <QScrollArea>
 #include <QStackedWidget>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 using namespace KABMergeContacts;
 
 MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea(QWidget *parent)
@@ -25,31 +26,31 @@ MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea
 {
     auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins({});
-    mStackWidget->setObjectName(QLatin1StringView("stackwidget"));
+    mStackWidget->setObjectName("stackwidget"_L1);
     vbox->addWidget(mStackWidget);
 
     auto selectMergeWidget = new QWidget;
-    selectMergeWidget->setObjectName(QLatin1StringView("selectwidget"));
+    selectMergeWidget->setObjectName("selectwidget"_L1);
     auto layout = new QVBoxLayout;
     selectMergeWidget->setLayout(layout);
     auto area = new QScrollArea(this);
     area->setWidgetResizable(true);
-    area->setObjectName(QLatin1StringView("scrollarea"));
+    area->setObjectName("scrollarea"_L1);
     layout->addWidget(area);
-    mSelectInformationWidget->setObjectName(QLatin1StringView("selectinformationwidget"));
+    mSelectInformationWidget->setObjectName("selectinformationwidget"_L1);
     area->setWidget(mSelectInformationWidget);
 
     auto hbox = new QHBoxLayout;
     hbox->addStretch();
     auto mergeButton = new QPushButton(i18nc("@action:button", "Merge"), this);
-    mergeButton->setObjectName(QLatin1StringView("merge"));
+    mergeButton->setObjectName("merge"_L1);
     hbox->addWidget(mergeButton);
     layout->addLayout(hbox);
     connect(mergeButton, &QPushButton::clicked, this, &MergeContactSelectInformationScrollArea::slotMergeContacts);
 
     mStackWidget->addWidget(selectMergeWidget);
 
-    mMergedContactWidget->setObjectName(QLatin1StringView("mergedcontactwidget"));
+    mMergedContactWidget->setObjectName("mergedcontactwidget"_L1);
     mStackWidget->addWidget(mMergedContactWidget);
     mStackWidget->setCurrentWidget(selectMergeWidget);
 }

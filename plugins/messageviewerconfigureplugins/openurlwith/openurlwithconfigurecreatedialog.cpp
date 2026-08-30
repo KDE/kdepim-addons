@@ -8,6 +8,7 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 OpenUrlWithConfigureCreateDialog::OpenUrlWithConfigureCreateDialog(QWidget *parent)
     : QDialog(parent)
@@ -15,13 +16,13 @@ OpenUrlWithConfigureCreateDialog::OpenUrlWithConfigureCreateDialog(QWidget *pare
 {
     setWindowTitle(i18nc("@title:window", "Create"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mOpenUrlWithCreateWidget->setObjectName(QLatin1StringView("mOpenUrlWithCreateWidget"));
+    mOpenUrlWithCreateWidget->setObjectName("mOpenUrlWithCreateWidget"_L1);
     mainLayout->addWidget(mOpenUrlWithCreateWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &OpenUrlWithConfigureCreateDialog::accept);

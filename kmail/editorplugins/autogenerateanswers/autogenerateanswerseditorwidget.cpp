@@ -15,7 +15,7 @@ AutoGenerateAnswersEditorWidget::AutoGenerateAnswersEditorWidget(QWidget *parent
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
     mTextEdit->setObjectName(u"mTextEdit"_s);
     mTextEdit->setReadOnly(true);

@@ -17,12 +17,12 @@ MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
     , mLink(new QLineEdit(this))
 {
     auto mainLayout = new QFormLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mTitle->setObjectName(QLatin1StringView("title"));
+    mTitle->setObjectName("title"_L1);
     mTitle->setClearButtonEnabled(true);
-    mLink->setObjectName(QLatin1StringView("link"));
+    mLink->setObjectName("link"_L1);
     mLink->setClearButtonEnabled(true);
 
     connect(mTitle, &QLineEdit::textChanged, this, &MarkdownCreateLinkWidget::slotEnableButton);

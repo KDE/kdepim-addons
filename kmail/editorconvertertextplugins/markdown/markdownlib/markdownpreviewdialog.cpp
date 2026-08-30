@@ -14,6 +14,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -27,13 +28,13 @@ MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     setAttribute(Qt::WA_DeleteOnClose);
 
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mPreviewWidget->setObjectName(QLatin1StringView("previewwidget"));
+    mPreviewWidget->setObjectName("previewwidget"_L1);
     mainLayout->addWidget(mPreviewWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &MarkdownPreviewDialog::reject);
     readConfig();

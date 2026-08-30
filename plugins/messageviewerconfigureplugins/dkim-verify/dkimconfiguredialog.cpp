@@ -15,6 +15,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigGroupName[] = "DKIMConfigureDialog";
@@ -26,13 +27,13 @@ DKIMConfigureDialog::DKIMConfigureDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure DKIM"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mConfigureWidget->setObjectName(QLatin1StringView("mConfigureWidget"));
+    mConfigureWidget->setObjectName("mConfigureWidget"_L1);
     mainLayout->addWidget(mConfigureWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &DKIMConfigureDialog::slotAccepted);

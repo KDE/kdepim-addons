@@ -60,7 +60,7 @@ bool PMailImportData::importMails()
 bool PMailImportData::importSettings()
 {
     // TODO verify path
-    const QString settingFile(mPath + QLatin1StringView("pmail.ini"));
+    const QString settingFile(mPath + "pmail.ini"_L1);
     PMailSettings settings(settingFile);
     settings.setAbstractDisplayInfo(mAbstractDisplayInfo);
     settings.importSettings();

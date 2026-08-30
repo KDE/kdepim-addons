@@ -15,6 +15,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -26,20 +27,20 @@ MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Add Link"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mMarkdownCreateLinkWidget->setObjectName(QLatin1StringView("markdowncreatelinkwidget"));
+    mMarkdownCreateLinkWidget->setObjectName("markdowncreatelinkwidget"_L1);
 
     mainLayout->addWidget(mMarkdownCreateLinkWidget);
 
     auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    box->setObjectName(QLatin1StringView("buttonbox"));
+    box->setObjectName("buttonbox"_L1);
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateLinkDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &MarkdownCreateLinkDialog::reject);
 
     mOkButton = box->button(QDialogButtonBox::Ok);
-    mOkButton->setObjectName(QLatin1StringView("okbutton"));
+    mOkButton->setObjectName("okbutton"_L1);
     mOkButton->setEnabled(false);
     connect(mMarkdownCreateLinkWidget, &MarkdownCreateLinkWidget::enabledOkButton, this, &MarkdownCreateLinkDialog::slotEnabledOkButton);
     readConfig();

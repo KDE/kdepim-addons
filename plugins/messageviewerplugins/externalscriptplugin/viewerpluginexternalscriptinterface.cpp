@@ -81,7 +81,7 @@ void ViewerPluginExternalscriptInterface::execute()
             KMessageBox::error(nullptr, i18n("\'%1\' not found", executable), i18nc("@title:window", "Executable not found."));
         } else {
             QProcess proc;
-            const QStringList newCommandLine = mCurrentInfo.at(0).split(QLatin1Char(' '), Qt::SkipEmptyParts);
+            const QStringList newCommandLine = mCurrentInfo.at(0).split(u' ', Qt::SkipEmptyParts);
             const QStringList splitArguments = adaptArguments(newCommandLine);
             if (!proc.startDetached(executablePath, splitArguments)) {
                 KMessageBox::error(nullptr, i18n("Impossible to start executable"));

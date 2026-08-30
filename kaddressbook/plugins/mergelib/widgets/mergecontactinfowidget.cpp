@@ -10,6 +10,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QStackedWidget>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KABMergeContacts;
 
@@ -20,14 +21,14 @@ MergeContactInfoWidget::MergeContactInfoWidget(QWidget *parent)
     , mContactViewer(new KAddressBookGrantlee::GrantleeContactViewer(this))
 {
     auto lay = new QHBoxLayout(this);
-    mStackWidget->setObjectName(QLatin1StringView("stackedwidget"));
+    mStackWidget->setObjectName("stackedwidget"_L1);
 
-    mContactViewer->setObjectName(QLatin1StringView("contactwidget"));
+    mContactViewer->setObjectName("contactwidget"_L1);
     mContactViewer->setForceDisableQRCode(true);
 
     mStackWidget->addWidget(mContactViewer);
 
-    mNoContactSelected->setObjectName(QLatin1StringView("nocontact"));
+    mNoContactSelected->setObjectName("nocontact"_L1);
     mStackWidget->addWidget(mNoContactSelected);
 
     lay->addWidget(mStackWidget);

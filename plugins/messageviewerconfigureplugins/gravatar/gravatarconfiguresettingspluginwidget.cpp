@@ -15,6 +15,7 @@
 
 #include <QCheckBox>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 GravatarConfigureSettingsPluginWidget::GravatarConfigureSettingsPluginWidget(QWidget *parent)
@@ -23,14 +24,14 @@ GravatarConfigureSettingsPluginWidget::GravatarConfigureSettingsPluginWidget(QWi
     , mEnableGravatarSupport(new QCheckBox(i18nc("@option:check", "Enable Gravatar Support"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mEnableGravatarSupport->setObjectName(QLatin1StringView("gravatarcheckbox"));
+    mEnableGravatarSupport->setObjectName("gravatarcheckbox"_L1);
     mEnableGravatarSupport->setChecked(false);
     mainLayout->addWidget(mEnableGravatarSupport);
 
-    mGravatarConfigWidget->setObjectName(QLatin1StringView("gravatarconfigwidget"));
+    mGravatarConfigWidget->setObjectName("gravatarconfigwidget"_L1);
     mainLayout->addWidget(mGravatarConfigWidget);
     connect(mEnableGravatarSupport, &QCheckBox::clicked, mGravatarConfigWidget, &Gravatar::GravatarConfigureSettingsWidget::setEnabled);
 }

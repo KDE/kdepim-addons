@@ -24,7 +24,7 @@ MarkdownConfigureDialog::~MarkdownConfigureDialog() = default;
 QWidget *MarkdownConfigureDialog::createLayout()
 {
     mConfigureWidget = new MarkdownConfigureWidget(this);
-    mConfigureWidget->setObjectName(QLatin1StringView("configurewidget"));
+    mConfigureWidget->setObjectName("configurewidget"_L1);
     return mConfigureWidget;
 }
 

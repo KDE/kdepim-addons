@@ -14,6 +14,7 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigGroupName[] = "ShortUrl";
@@ -23,14 +24,14 @@ InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
     , mShortUrlServer(new QComboBox(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
     auto lab = new QLabel(i18nc("@label:textbox", "Select Short URL server:"), this);
-    lab->setObjectName(QLatin1StringView("label"));
+    lab->setObjectName("label"_L1);
     mainLayout->addWidget(lab);
 
-    mShortUrlServer->setObjectName(QLatin1StringView("shorturlserver"));
+    mShortUrlServer->setObjectName("shorturlserver"_L1);
     mainLayout->addWidget(mShortUrlServer);
     const QList<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
     for (const ShortUrlEnginePlugin *plugin : lstPlugin) {

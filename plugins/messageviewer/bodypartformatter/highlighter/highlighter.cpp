@@ -26,19 +26,19 @@ void Highlighter::highlight(const QString &str)
     KSyntaxHighlighting::State state;
 
     int lineStart = 0;
-    int lineEnd = str.indexOf(QLatin1Char('\n'));
+    int lineEnd = str.indexOf(u'\n');
 
-    for (; lineEnd != -1; lineStart = lineEnd + 1, lineEnd = str.indexOf(QLatin1Char('\n'), lineStart)) {
+    for (; lineEnd != -1; lineStart = lineEnd + 1, lineEnd = str.indexOf(u'\n', lineStart)) {
         mCurrentLine = str.mid(lineStart, lineEnd - lineStart);
         state = highlightLine(mCurrentLine, state);
-        *mStream << QLatin1Char('\n');
+        *mStream << u'\n';
     }
     if (lineStart < str.size()) { // remaining content if str isn't ending with a newline
         mCurrentLine = str.mid(lineStart);
         state = highlightLine(mCurrentLine, state);
-        *mStream << QLatin1Char('\n');
+        *mStream << u'\n';
     }
-    *mStream << QLatin1StringView("</pre>\n");
+    *mStream << "</pre>\n"_L1;
 }
 
 void Highlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)
@@ -46,10 +46,10 @@ void Highlighter::applyFormat(int offset, int length, const KSyntaxHighlighting:
     if (!format.isDefaultTextStyle(theme())) {
         *mStream << u"<span style=\""_s;
         if (format.hasTextColor(theme())) {
-            *mStream << u"color:"_s << format.textColor(theme()).name() << QLatin1Char(';');
+            *mStream << u"color:"_s << format.textColor(theme()).name() << u';';
         }
         if (format.hasBackgroundColor(theme())) {
-            *mStream << u"background-color:"_s << format.backgroundColor(theme()).name() << QLatin1Char(';');
+            *mStream << u"background-color:"_s << format.backgroundColor(theme()).name() << u';';
         }
         if (format.isBold(theme())) {
             *mStream << u"font-weight:bold;"_s;

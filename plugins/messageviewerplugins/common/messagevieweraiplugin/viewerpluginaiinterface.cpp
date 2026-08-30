@@ -59,7 +59,7 @@ ViewerPluginAIWidget *ViewerPluginAIInterface::widget()
     if (!mAiWidget) {
         auto parentWidget = static_cast<QWidget *>(parent());
         mAiWidget = new ViewerPluginAIWidget(parentWidget);
-        mAiWidget->setObjectName(QLatin1StringView("mAiWidget"));
+        mAiWidget->setObjectName("mAiWidget"_L1);
         parentWidget->layout()->addWidget(mAiWidget);
         mAiWidget->hide();
     }

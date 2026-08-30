@@ -11,16 +11,17 @@
 #include <MessageViewer/ScamDetectionWhiteListSettingsManager>
 #include <QHeaderView>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 ScamConfigureSettingsWidget::ScamConfigureSettingsWidget(QWidget *parent)
     : QWidget{parent}
     , mTreeWidget(new ScamConfigureSettingsTreeView(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mTreeWidget->setObjectName(QLatin1StringView("mTreeWidget"));
+    mTreeWidget->setObjectName("mTreeWidget"_L1);
     mainLayout->addWidget(mTreeWidget);
     mTreeWidget->setRootIsDecorated(false);
     mTreeWidget->header()->setSectionsMovable(false);

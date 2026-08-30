@@ -7,13 +7,14 @@
 #include "folderconfiguresettingsviewwidget.h"
 #include <MailCommon/CollectionViewWidget>
 #include <QHBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 FolderConfigureSettingsViewWidget::FolderConfigureSettingsViewWidget(QWidget *parent)
     : FolderConfigureSettingsPageBase(parent)
     , mCollectionViewWidget(new MailCommon::CollectionViewWidget(this))
 {
     auto mainWidget = new QWidget(this);
     auto mainLayout = new QHBoxLayout(mainWidget);
-    mCollectionViewWidget->setObjectName(QLatin1StringView("mCollectionTemplateWidget"));
+    mCollectionViewWidget->setObjectName("mCollectionTemplateWidget"_L1);
     mainLayout->addWidget(mCollectionViewWidget);
     addMainWidget(mainWidget);
     mMainLayout->addStretch();

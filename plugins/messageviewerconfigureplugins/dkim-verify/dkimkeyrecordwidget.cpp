@@ -9,6 +9,7 @@
 #include <KSharedConfig>
 #include <MessageViewer/DKIMManagerKeyWidget>
 #include <QHBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -20,9 +21,9 @@ DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
     , mManagerKeyWidget(new MessageViewer::DKIMManagerKeyWidget(this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
-    mManagerKeyWidget->setObjectName(QLatin1StringView("mManagerKeyWidget"));
+    mManagerKeyWidget->setObjectName("mManagerKeyWidget"_L1);
     mainLayout->addWidget(mManagerKeyWidget);
 }
 

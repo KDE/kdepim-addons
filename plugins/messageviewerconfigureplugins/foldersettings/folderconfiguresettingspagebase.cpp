@@ -10,6 +10,7 @@
 
 #include <QGroupBox>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent)
     : QWidget(parent)
@@ -17,11 +18,11 @@ FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent
     , mGroupBox(new QGroupBox(i18n("Modify"), this))
 {
     auto topLayout = new QVBoxLayout(this);
-    topLayout->setObjectName(QLatin1StringView("topLayout"));
+    topLayout->setObjectName("topLayout"_L1);
 
-    mMainLayout->setObjectName(QLatin1StringView("mMainLayout"));
+    mMainLayout->setObjectName("mMainLayout"_L1);
 
-    mGroupBox->setObjectName(QLatin1StringView("mGroupBox"));
+    mGroupBox->setObjectName("mGroupBox"_L1);
     mGroupBox->setCheckable(true);
     mGroupBox->setChecked(false);
 

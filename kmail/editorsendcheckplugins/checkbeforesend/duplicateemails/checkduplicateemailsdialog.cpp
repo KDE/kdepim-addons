@@ -16,6 +16,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigCheckDuplicateEmailsDialog[] = "CheckDuplicateEmailsDialog";
@@ -27,14 +28,14 @@ CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Duplicated emails"));
     auto mainLayout = new QVBoxLayout(this);
     auto lab = new QLabel(i18nc("@label:textbox", "These emails are duplicated. Do you want to send email?"), this);
-    lab->setObjectName(QLatin1StringView("label"));
+    lab->setObjectName("label"_L1);
     mainLayout->addWidget(lab);
 
-    mListWidget->setObjectName(QLatin1StringView("listwidget"));
+    mListWidget->setObjectName("listwidget"_L1);
     mainLayout->addWidget(mListWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckDuplicateEmailsDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckDuplicateEmailsDialog::reject);
     mainLayout->addWidget(buttonBox);

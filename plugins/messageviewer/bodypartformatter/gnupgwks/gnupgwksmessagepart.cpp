@@ -8,6 +8,7 @@
 
 #include <KMime/Content>
 #include <MimeTreeParser/BodyPart>
+using namespace Qt::Literals::StringLiterals;
 
 GnuPGWKSMessagePart::GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part)
     : MimeTreeParser::MessagePart(part->objectTreeParser(), QString())
@@ -43,9 +44,9 @@ QString GnuPGWKSMessagePart::nonce() const
 
 GnuPGWKSMessagePart::ConfirmationType GnuPGWKSMessagePart::stringToType(const QStringView &str)
 {
-    if (str == QLatin1StringView("confirmation-request")) {
+    if (str == "confirmation-request"_L1) {
         return ConfirmationRequest;
-    } else if (str == QLatin1StringView("confirmation-response")) {
+    } else if (str == "confirmation-response"_L1) {
         return ConfirmationResponse;
     } else {
         return UnknownType;
@@ -55,19 +56,19 @@ GnuPGWKSMessagePart::ConfirmationType GnuPGWKSMessagePart::stringToType(const QS
 void GnuPGWKSMessagePart::parseContent(KMime::Content *node)
 {
     const auto text = QString::fromUtf8(node->decodedBody());
-    const auto lines = text.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+    const auto lines = text.split(u'\n', Qt::SkipEmptyParts);
     // https://tools.ietf.org/id/draft-koch-openpgp-webkey-service-02.txt
     // sections 4.3 and 4.4
     for (const auto &line : lines) {
-        if (line.startsWith(QLatin1StringView("type:"))) {
+        if (line.startsWith("type:"_L1)) {
             mType = stringToType(QStringView(line).mid(sizeof("type:") - 1).trimmed());
-        } else if (line.startsWith(QLatin1StringView("sender:"))) {
+        } else if (line.startsWith("sender:"_L1)) {
             mSender = QStringView(line).mid(sizeof("sender:") - 1).trimmed().toString();
-        } else if (line.startsWith(QLatin1StringView("address:"))) {
+        } else if (line.startsWith("address:"_L1)) {
             mAddress = QStringView(line).mid(sizeof("address:") - 1).trimmed().toString();
-        } else if (line.startsWith(QLatin1StringView("fingerprint:"))) {
+        } else if (line.startsWith("fingerprint:"_L1)) {
             mFingerprint = QStringView(line).mid(sizeof("fingerprint:") - 1).trimmed().toString();
-        } else if (line.startsWith(QLatin1StringView("nonce:"))) {
+        } else if (line.startsWith("nonce:"_L1)) {
             mNonce = QStringView(line).mid(sizeof("nonce:") - 1).trimmed().toString();
         }
     }

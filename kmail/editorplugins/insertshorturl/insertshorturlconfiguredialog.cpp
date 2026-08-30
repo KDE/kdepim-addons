@@ -8,6 +8,7 @@
 #include "insertshorturlconfigurewidget.h"
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 InsertShorturlConfigureDialog::InsertShorturlConfigureDialog(QWidget *parent)
     : QDialog(parent)
@@ -15,11 +16,11 @@ InsertShorturlConfigureDialog::InsertShorturlConfigureDialog(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
 
-    mInsertShortUrlWidget->setObjectName(QLatin1StringView("insertshorturlwidget"));
+    mInsertShortUrlWidget->setObjectName("insertshorturlwidget"_L1);
     mainLayout->addWidget(mInsertShortUrlWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &InsertShorturlConfigureDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &InsertShorturlConfigureDialog::reject);
     mainLayout->addWidget(buttonBox);

@@ -52,7 +52,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
     }
     const QStringList emails = PimCommon::Util::generateEmailList(lst);
 #if 0
-    MessageComposer::AliasesExpandJob job(params.addresses().join(QLatin1StringView(", ")), params.defaultDomain(), this);
+    MessageComposer::AliasesExpandJob job(params.addresses().join(", "_L1), params.defaultDomain(), this);
     if (job.exec()) {
         emails = job.emailAddressOnly();
     }

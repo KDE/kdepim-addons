@@ -103,7 +103,7 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
 
         // add quoting as defined in RFC 4180
         QString label = KAddressBookImportExport::ContactFields::label(fields.at(i));
-        label.replace(QLatin1Char('"'), u"\"\""_s);
+        label.replace(u'"', u"\"\""_s);
 
         stream << "\"" << label << "\"";
         first = false;
@@ -127,11 +127,11 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
                     content = dateTime.date().toString(Qt::ISODate);
                 }
             } else {
-                content = KAddressBookImportExport::ContactFields::value(fields.at(j), contact).replace(QLatin1Char('\n'), u"\\n"_s);
+                content = KAddressBookImportExport::ContactFields::value(fields.at(j), contact).replace(u'\n', u"\\n"_s);
             }
 
             // add quoting as defined in RFC 4180
-            content.replace(QLatin1Char('"'), u"\"\""_s);
+            content.replace(u'"', u"\"\""_s);
 
             stream << '\"' << content << '\"';
             first = false;
@@ -208,7 +208,7 @@ void CSVImportExportPluginInterface::exportCSV()
 
 bool CSVImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
-    return url.path().endsWith(QLatin1StringView(".csv"));
+    return url.path().endsWith(".csv"_L1);
 }
 
 void CSVImportExportPluginInterface::importFile(const QUrl &url)

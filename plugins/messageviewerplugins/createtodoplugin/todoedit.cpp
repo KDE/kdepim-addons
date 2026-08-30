@@ -49,7 +49,7 @@ TodoEdit::TodoEdit(QWidget *parent)
 
     mMsgWidget->setCloseButtonVisible(true);
     mMsgWidget->setMessageType(KMessageWidget::Positive);
-    mMsgWidget->setObjectName(QLatin1StringView("msgwidget"));
+    mMsgWidget->setObjectName("msgwidget"_L1);
     mMsgWidget->setWordWrap(true);
     mMsgWidget->setVisible(false);
     vbox->addWidget(mMsgWidget);
@@ -63,7 +63,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     hbox->addWidget(lab);
 
     mNoteEdit->setClearButtonEnabled(true);
-    mNoteEdit->setObjectName(QLatin1StringView("noteedit"));
+    mNoteEdit->setObjectName("noteedit"_L1);
     mNoteEdit->setFocus();
     connect(mNoteEdit, &QLineEdit::textChanged, this, &TodoEdit::slotTextEdited);
     connect(mNoteEdit, &QLineEdit::returnPressed, this, &TodoEdit::slotReturnPressed);
@@ -75,7 +75,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KCalendarCore::Todo::todoMimeType());
-    mCollectionCombobox->setObjectName(QLatin1StringView("akonadicombobox"));
+    mCollectionCombobox->setObjectName("akonadicombobox"_L1);
     connect(mCollectionCombobox->model(), &QAbstractItemModel::rowsInserted, this, &TodoEdit::comboboxRowInserted);
 #ifndef QT_NO_ACCESSIBILITY
     mCollectionCombobox->setAccessibleDescription(i18n("Todo list where the new task will be stored."));
@@ -91,7 +91,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     vbox->addLayout(hbox);
 
     hbox->addStretch(1);
-    mSaveButton->setObjectName(QLatin1StringView("save-button"));
+    mSaveButton->setObjectName("save-button"_L1);
     mSaveButton->setEnabled(false);
 #ifndef QT_NO_ACCESSIBILITY
     mSaveButton->setAccessibleDescription(i18n("Create new todo and close this widget."));
@@ -99,7 +99,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     connect(mSaveButton, &QPushButton::clicked, this, &TodoEdit::slotReturnPressed);
     hbox->addWidget(mSaveButton);
 
-    mOpenEditorButton->setObjectName(QLatin1StringView("open-editor-button"));
+    mOpenEditorButton->setObjectName("open-editor-button"_L1);
 #ifndef QT_NO_ACCESSIBILITY
     mOpenEditorButton->setAccessibleDescription(i18n("Open todo editor, where more details can be changed."));
 #endif
@@ -109,7 +109,7 @@ TodoEdit::TodoEdit(QWidget *parent)
 
     auto btn = new QPushButton(this);
     KGuiItem::assign(btn, KStandardGuiItem::cancel());
-    btn->setObjectName(QLatin1StringView("close-button"));
+    btn->setObjectName("close-button"_L1);
 #ifndef QT_NO_ACCESSIBILITY
     btn->setAccessibleDescription(i18n("Close the widget for creating new todos."));
 #endif

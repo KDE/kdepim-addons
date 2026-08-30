@@ -10,6 +10,7 @@
 #include <KSharedConfig>
 #include <QCheckBox>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigGroupName[] = "Markdown";
@@ -20,13 +21,13 @@ MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     , mExtraDefinitionLists(new QCheckBox(i18nc("@option:check", "Enable PHP Markdown Extra definition lists"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mLatexSupport->setObjectName(QLatin1StringView("latex"));
+    mLatexSupport->setObjectName("latex"_L1);
     mainLayout->addWidget(mLatexSupport);
 
-    mExtraDefinitionLists->setObjectName(QLatin1StringView("extradefinitionlists"));
+    mExtraDefinitionLists->setObjectName("extradefinitionlists"_L1);
     mainLayout->addWidget(mExtraDefinitionLists);
     mainLayout->addStretch(1);
 }

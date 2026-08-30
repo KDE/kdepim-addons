@@ -244,7 +244,7 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
                     value = dateParser.parse(value).toString(Qt::ISODate);
                 }
 
-                value.replace(QLatin1StringView("\\n"), u"\n"_s);
+                value.replace("\\n"_L1, u"\n"_s);
 
                 KAddressBookImportExport::ContactFields::setValue(field, value, contact);
             }
@@ -495,7 +495,7 @@ void CSVImportDialog::delimiterClicked(int id, bool reload)
 {
     switch (id) {
     case 0: // comma
-        mModel->setDelimiter(QLatin1Char(','));
+        mModel->setDelimiter(u',');
         break;
     case 4: // other
         mDelimiterEdit->setFocus(Qt::OtherFocusReason);
@@ -504,13 +504,13 @@ void CSVImportDialog::delimiterClicked(int id, bool reload)
         }
         break;
     case 2: // tab
-        mModel->setDelimiter(QLatin1Char('\t'));
+        mModel->setDelimiter(u'\t');
         break;
     case 3: // space
-        mModel->setDelimiter(QLatin1Char(' '));
+        mModel->setDelimiter(u' ');
         break;
     case 1: // semicolon
-        mModel->setDelimiter(QLatin1Char(';'));
+        mModel->setDelimiter(u';');
         break;
     }
 

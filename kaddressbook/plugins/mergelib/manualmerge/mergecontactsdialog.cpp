@@ -21,6 +21,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KABMergeContacts;
 namespace
@@ -38,30 +39,30 @@ MergeContactsDialog::MergeContactsDialog(QWidget *parent)
     , mMergeContactInfo(new KABMergeContacts::MergeContactInfoWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Select Contacts to merge"));
-    mButtonBox->setObjectName(QLatin1StringView("buttonbox"));
+    mButtonBox->setObjectName("buttonbox"_L1);
     auto mainLayout = new QVBoxLayout(this);
     connect(mButtonBox, &QDialogButtonBox::rejected, this, &MergeContactsDialog::reject);
     readConfig();
 
-    mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
+    mStackedWidget->setObjectName("stackedwidget"_L1);
     mainLayout->addWidget(mStackedWidget);
     mainLayout->addWidget(mButtonBox);
 
-    mNoEnoughContactSelected->setObjectName(QLatin1StringView("notenoughcontactselected"));
+    mNoEnoughContactSelected->setObjectName("notenoughcontactselected"_L1);
     mStackedWidget->addWidget(mNoEnoughContactSelected);
 
-    mNoContactSelected->setObjectName(QLatin1StringView("nocontactselected"));
+    mNoContactSelected->setObjectName("nocontactselected"_L1);
     mStackedWidget->addWidget(mNoContactSelected);
 
-    mManualMergeResultWidget->setObjectName(QLatin1StringView("manualmergeresultwidget"));
+    mManualMergeResultWidget->setObjectName("manualmergeresultwidget"_L1);
     mStackedWidget->addWidget(mManualMergeResultWidget);
     connect(mManualMergeResultWidget, &MergeContactWidget::customizeMergeContact, this, &MergeContactsDialog::slotCustomizeMergeContact);
     connect(mManualMergeResultWidget, &MergeContactWidget::contactMerged, this, &MergeContactsDialog::slotContactMerged);
 
-    mSelectInformation->setObjectName(QLatin1StringView("selectioninformation"));
+    mSelectInformation->setObjectName("selectioninformation"_L1);
     mStackedWidget->addWidget(mSelectInformation);
 
-    mMergeContactInfo->setObjectName(QLatin1StringView("mergecontactinfowidget"));
+    mMergeContactInfo->setObjectName("mergecontactinfowidget"_L1);
     mStackedWidget->addWidget(mMergeContactInfo);
 
     mStackedWidget->setCurrentWidget(mNoContactSelected);

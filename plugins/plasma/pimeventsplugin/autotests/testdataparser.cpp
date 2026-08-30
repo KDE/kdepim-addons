@@ -70,7 +70,7 @@ QDateTime TestDataParser::parseDateTime(const QJsonObject &dateTime)
 {
     const auto date = QDate::fromString(dateTime[u"date"_s].toString(), Qt::ISODate);
     const auto time = QTime::fromString(dateTime[u"time"_s].toString(), Qt::ISODate);
-    if (dateTime.contains(QLatin1StringView("tz"))) {
+    if (dateTime.contains("tz"_L1)) {
         return QDateTime(date, time, QTimeZone(dateTime[u"tz"_s].toString().toLatin1())).toLocalTime();
     } else {
         return QDateTime(date, time, QTimeZone::LocalTime);
@@ -108,7 +108,7 @@ void TestDataParser::parse()
         eventData.setTitle(obj[u"summary"_s].toString());
         eventData.setDescription(obj[u"description"_s].toString());
         const QString type = obj[u"type"_s].toString();
-        if (type == QLatin1StringView("Event")) {
+        if (type == "Event"_L1) {
             eventData.setEventType(CalendarEvents::EventData::Event);
         } else {
             eventData.setEventType(CalendarEvents::EventData::Todo);

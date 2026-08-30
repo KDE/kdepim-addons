@@ -76,7 +76,7 @@ void SendMailPluginInterface::slotSendMails(const QStringList &emails)
     if (!emails.isEmpty()) {
         QUrl url;
         url.setScheme(u"mailto"_s);
-        url.setPath(emails.join(QLatin1Char(';')));
+        url.setPath(emails.join(u';'));
         QDesktopServices::openUrl(url);
     }
 }

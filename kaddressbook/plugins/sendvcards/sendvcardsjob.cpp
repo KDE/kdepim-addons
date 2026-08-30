@@ -100,7 +100,7 @@ bool SendVcardsJob::start()
 void SendVcardsJob::createTemporaryDir()
 {
     if (!mTempDir) {
-        mTempDir = new QTemporaryDir(QDir::tempPath() + QLatin1Char('/') + u"sendvcards"_s);
+        mTempDir = new QTemporaryDir(QDir::tempPath() + u'/' + u"sendvcards"_s);
         mTempDir->setAutoRemove(false);
         mAttachmentTemporary->addTempDir(mTempDir->path());
     }
@@ -153,7 +153,7 @@ void SendVcardsJob::slotExpandGroupResult(KJob *job)
 
 void SendVcardsJob::createTemporaryFile(const QByteArray &data, const QString &filename)
 {
-    QFile file(mTempDir->path() + QLatin1Char('/') + filename);
+    QFile file(mTempDir->path() + u'/' + filename);
     if (!file.open(QIODevice::WriteOnly)) {
         qCDebug(KADDRESSBOOK_SENDVCARDS_LOG) << "Cannot write vcard filename :" << filename;
         Q_EMIT sendVCardsError(i18n("Temporary file \'%1\' cannot be created", filename));

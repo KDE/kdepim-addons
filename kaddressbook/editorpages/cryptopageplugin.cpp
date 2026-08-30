@@ -109,7 +109,7 @@ QString CryptoPagePlugin::title() const
 
 void CryptoPagePlugin::loadContact(const KContacts::Addressee &contact)
 {
-    const QStringList protocolPrefs = contact.custom(u"KADDRESSBOOK"_s, u"CRYPTOPROTOPREF"_s).split(QLatin1Char(','), Qt::SkipEmptyParts);
+    const QStringList protocolPrefs = contact.custom(u"KADDRESSBOOK"_s, u"CRYPTOPROTOPREF"_s).split(u',', Qt::SkipEmptyParts);
     const uint cryptoFormats = Kleo::stringListToCryptoMessageFormats(protocolPrefs);
 
     uint msgFormat = 1;
@@ -123,8 +123,8 @@ void CryptoPagePlugin::loadContact(const KContacts::Addressee &contact)
     // We don't use the contents of addr->key(...) because we want just a ref.
     // to the key/cert. stored elsewhere.
 
-    mPgpKey->setFingerprints(contact.custom(u"KADDRESSBOOK"_s, u"OPENPGPFP"_s).split(QLatin1Char(','), Qt::SkipEmptyParts));
-    mSmimeCert->setFingerprints(contact.custom(u"KADDRESSBOOK"_s, u"SMIMEFP"_s).split(QLatin1Char(','), Qt::SkipEmptyParts));
+    mPgpKey->setFingerprints(contact.custom(u"KADDRESSBOOK"_s, u"OPENPGPFP"_s).split(u',', Qt::SkipEmptyParts));
+    mSmimeCert->setFingerprints(contact.custom(u"KADDRESSBOOK"_s, u"SMIMEFP"_s).split(u',', Qt::SkipEmptyParts));
 }
 
 void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
@@ -139,7 +139,7 @@ void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
 
     const QStringList protocolPref = Kleo::cryptoMessageFormatsToStringList(cryptoFormats);
     if (!protocolPref.isEmpty()) {
-        contact.insertCustom(u"KADDRESSBOOK"_s, u"CRYPTOPROTOPREF"_s, protocolPref.join(QLatin1Char(',')));
+        contact.insertCustom(u"KADDRESSBOOK"_s, u"CRYPTOPROTOPREF"_s, protocolPref.join(u','));
     } else {
         contact.removeCustom(u"KADDRESSBOOK"_s, u"CRYPTOPROTOPREF"_s);
     }
@@ -162,13 +162,13 @@ void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
     const QStringList sfp = mSmimeCert->fingerprints();
 
     if (!pfp.isEmpty()) {
-        contact.insertCustom(u"KADDRESSBOOK"_s, u"OPENPGPFP"_s, pfp.join(QLatin1Char(',')));
+        contact.insertCustom(u"KADDRESSBOOK"_s, u"OPENPGPFP"_s, pfp.join(u','));
     } else {
         contact.removeCustom(u"KADDRESSBOOK"_s, u"OPENPGPFP"_s);
     }
 
     if (!sfp.isEmpty()) {
-        contact.insertCustom(u"KADDRESSBOOK"_s, u"SMIMEFP"_s, sfp.join(QLatin1Char(',')));
+        contact.insertCustom(u"KADDRESSBOOK"_s, u"SMIMEFP"_s, sfp.join(u','));
     } else {
         contact.removeCustom(u"KADDRESSBOOK"_s, u"SMIMEFP"_s);
     }

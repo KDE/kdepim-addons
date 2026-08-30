@@ -15,6 +15,7 @@
 #include <Gravatar/GravatarResolvUrlJob>
 
 #include <KIO/TransferJob>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KABGravatar;
 GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
@@ -29,22 +30,22 @@ GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     auto hboxEmail = new QHBoxLayout;
 
     auto lab = new QLabel(i18nc("@label:textbox", "Email:"), this);
-    lab->setObjectName(QLatin1StringView("emaillabel"));
+    lab->setObjectName("emaillabel"_L1);
     hboxEmail->addWidget(lab);
 
-    mEmailLab->setObjectName(QLatin1StringView("email"));
+    mEmailLab->setObjectName("email"_L1);
     hboxEmail->addWidget(mEmailLab);
     mainLayout->addLayout(hboxEmail, 0, 0);
 
     mSearchGravatar->setEnabled(false);
-    mSearchGravatar->setObjectName(QLatin1StringView("search"));
+    mSearchGravatar->setObjectName("search"_L1);
     mainLayout->addWidget(mSearchGravatar, 4, 0);
     connect(mSearchGravatar, &QAbstractButton::clicked, this, &GravatarUpdateWidget::slotSearchGravatar);
     QFont font = mResultGravatar->font();
     font.setBold(true);
     mResultGravatar->setFont(font);
 
-    mResultGravatar->setObjectName(QLatin1StringView("result"));
+    mResultGravatar->setObjectName("result"_L1);
     mainLayout->addWidget(mResultGravatar, 0, 2, 4, 1, Qt::AlignCenter);
 }
 

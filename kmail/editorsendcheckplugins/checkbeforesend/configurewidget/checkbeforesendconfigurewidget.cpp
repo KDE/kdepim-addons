@@ -10,6 +10,7 @@
 #include <KSharedConfig>
 #include <QCheckBox>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigGroupName[] = "Check Before Send";
@@ -23,21 +24,21 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mCheckPlainTextMail->setObjectName(QLatin1StringView("checkplaintext"));
+    mCheckPlainTextMail->setObjectName("checkplaintext"_L1);
     connect(mCheckPlainTextMail, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckPlainTextMail);
 
-    mCheckMailTransport->setObjectName(QLatin1StringView("smtpdefinedinidentity"));
+    mCheckMailTransport->setObjectName("smtpdefinedinidentity"_L1);
     connect(mCheckMailTransport, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckMailTransport);
 
-    mCheckDuplicateEmailsAddresses->setObjectName(QLatin1StringView("checkduplicatedemailsaddresses"));
+    mCheckDuplicateEmailsAddresses->setObjectName("checkduplicatedemailsaddresses"_L1);
     connect(mCheckDuplicateEmailsAddresses, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckDuplicateEmailsAddresses);
 
-    mCheckSendAttachments->setObjectName(QLatin1StringView("checksendattachment"));
+    mCheckSendAttachments->setObjectName("checksendattachment"_L1);
     connect(mCheckSendAttachments, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckSendAttachments);
 

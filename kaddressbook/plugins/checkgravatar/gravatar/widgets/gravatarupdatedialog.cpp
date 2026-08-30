@@ -15,6 +15,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace KABGravatar;
 namespace
@@ -30,10 +31,10 @@ GravatarUpdateDialog::GravatarUpdateDialog(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("@title:window", "Check and update Gravatar"));
     connect(mGravatarUpdateWidget, &GravatarUpdateWidget::activateDialogButton, this, &GravatarUpdateDialog::slotActivateButton);
-    mGravatarUpdateWidget->setObjectName(QLatin1StringView("gravatarupdatewidget"));
+    mGravatarUpdateWidget->setObjectName("gravatarupdatewidget"_L1);
     mainLayout->addWidget(mGravatarUpdateWidget);
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     mSaveImageButton->setEnabled(false);
     buttonBox->addButton(mSaveImageButton, QDialogButtonBox::ActionRole);
     connect(mSaveImageButton, &QPushButton::clicked, this, &GravatarUpdateDialog::slotSaveImage);

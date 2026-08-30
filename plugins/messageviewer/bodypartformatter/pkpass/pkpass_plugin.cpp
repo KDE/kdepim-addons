@@ -34,11 +34,11 @@ static bool isPkPassContent(KMime::Content *content)
     if (mimetype != "application/octet-stream" && mimetype != "application/zip") {
         return false;
     }
-    if (ct && ct->name().endsWith(QLatin1StringView("pkpass"))) {
+    if (ct && ct->name().endsWith("pkpass"_L1)) {
         return true;
     }
     const auto cd = content->contentDisposition(KMime::CreatePolicy::DontCreate);
-    return cd && cd->filename().endsWith(QLatin1StringView("pkpass"));
+    return cd && cd->filename().endsWith("pkpass"_L1);
 }
 
 namespace

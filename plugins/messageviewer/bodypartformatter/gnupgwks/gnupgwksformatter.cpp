@@ -86,7 +86,7 @@ bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &
     }
 
     const QByteArray propertyName = "_GnuPGWKS" + mp->fingerprint().toLatin1();
-    const bool hasError = (mp->nodeHelper()->property(propertyName.constData()).toString() == QLatin1StringView("error"));
+    const bool hasError = (mp->nodeHelper()->property(propertyName.constData()).toString() == "error"_L1);
     if (hasError) {
         mp->nodeHelper()->setProperty(propertyName.constData(), QVariant());
     }

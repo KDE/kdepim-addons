@@ -8,16 +8,17 @@
 #include <KLocalizedString>
 #include <MessageViewer/DKIMManagerAuthenticationServer>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 DKIMAuthenticationVerifiedServerWidget::DKIMAuthenticationVerifiedServerWidget(QWidget *parent)
     : QWidget(parent)
     , mSelector(new DKIMAuthenticationVerifiedServerSelectorWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mSelector->setObjectName(QLatin1StringView("mSelector"));
+    mSelector->setObjectName("mSelector"_L1);
     mainLayout->addWidget(mSelector);
 }
 

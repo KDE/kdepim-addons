@@ -147,12 +147,12 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         bool addrDone = false;
         if (exportFieldType & ExportSelectionWidget::DiplayName) { // output display name as N field
             QString fmtName = (*it).formattedName();
-            QStringList splitNames = fmtName.split(QLatin1Char(' '), Qt::SkipEmptyParts);
+            QStringList splitNames = fmtName.split(u' ', Qt::SkipEmptyParts);
             if (splitNames.count() >= 2) {
                 addr.setPrefix(QString());
                 addr.setGivenName(splitNames.takeFirst());
                 addr.setFamilyName(splitNames.takeLast());
-                addr.setAdditionalName(splitNames.join(QLatin1Char(' ')));
+                addr.setAdditionalName(splitNames.join(u' '));
                 addr.setSuffix(QString());
                 addrDone = true;
             }
@@ -260,7 +260,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
             QStringList exportFields;
             const QStringList customs = (*it).customs();
             for (const QString &customStr : customs) {
-                if (!customStr.startsWith(QLatin1StringView("X-GCALENDAR-groupMembershipInfo"))) {
+                if (!customStr.startsWith("X-GCALENDAR-groupMembershipInfo"_L1)) {
                     exportFields.append(customStr);
                 }
             }
@@ -380,7 +380,7 @@ void VCardImportExportPluginInterface::exportVCard()
             if (filename.isEmpty()) {
                 filename = addr.familyName();
             } else {
-                filename += QLatin1Char('_') + addr.familyName();
+                filename += u'_' + addr.familyName();
             }
         }
         if (filename.isEmpty()) {
@@ -415,7 +415,7 @@ void VCardImportExportPluginInterface::exportVCard()
             for (int i = 0; i < list.count(); ++i) {
                 const KContacts::Addressee contact = list.at(i);
 
-                url = QUrl::fromLocalFile(baseUrl.path() + QLatin1Char('/') + contactFileName(contact) + u".vcf"_s);
+                url = QUrl::fromLocalFile(baseUrl.path() + u'/' + contactFileName(contact) + u".vcf"_s);
 
                 bool tmpOk = doExport(url, converter.exportVCard(contact, KContacts::VCardConverter::v4_0));
                 ok = ok && tmpOk;
@@ -440,7 +440,7 @@ void VCardImportExportPluginInterface::exportVCard()
 
 bool VCardImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
-    return url.path().endsWith(QLatin1StringView(".vcf"));
+    return url.path().endsWith(".vcf"_L1);
 }
 
 void VCardImportExportPluginInterface::importFile(const QUrl &url)

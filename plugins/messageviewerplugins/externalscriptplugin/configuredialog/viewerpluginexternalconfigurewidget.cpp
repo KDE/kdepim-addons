@@ -44,7 +44,7 @@ void ViewerPluginExternalScriptItem::setScriptInfo(const ViewerPluginExternalScr
     setText(mScriptInfo.name());
     QString commandLine = mScriptInfo.executable();
     if (!mScriptInfo.commandLine().isEmpty()) {
-        commandLine += QLatin1Char(' ') + mScriptInfo.commandLine();
+        commandLine += u' ' + mScriptInfo.commandLine();
     }
     setToolTip(mScriptInfo.description() + u" (%1)"_s.arg(commandLine));
 }
@@ -62,17 +62,17 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     , mModifyScript(new QPushButton(i18nc("@action:button", "Modify Script…"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("layout"));
+    mainLayout->setObjectName("layout"_L1);
     mainLayout->setContentsMargins({});
 
     auto lab = new QLabel(i18nc("@label:textbox", "External Script:"), this);
-    lab->setObjectName(QLatin1StringView("lab"));
+    lab->setObjectName("lab"_L1);
     mainLayout->addWidget(lab);
 
     auto listLayout = new QHBoxLayout;
     mainLayout->addLayout(listLayout);
 
-    mListExternal->setObjectName(QLatin1StringView("listexternal"));
+    mListExternal->setObjectName("listexternal"_L1);
     mListExternal->setSelectionMode(QAbstractItemView::SingleSelection);
     mListExternal->setAlternatingRowColors(true);
     listLayout->addWidget(mListExternal);
@@ -83,15 +83,15 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     listLayout->addLayout(buttonLayout);
 
     connect(mAddScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotAddScript);
-    mAddScript->setObjectName(QLatin1StringView("addscript"));
+    mAddScript->setObjectName("addscript"_L1);
     buttonLayout->addWidget(mAddScript);
 
     connect(mModifyScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotModifyScript);
-    mModifyScript->setObjectName(QLatin1StringView("modifyscript"));
+    mModifyScript->setObjectName("modifyscript"_L1);
     buttonLayout->addWidget(mModifyScript);
 
     connect(mRemoveScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotRemoveScript);
-    mRemoveScript->setObjectName(QLatin1StringView("removescript"));
+    mRemoveScript->setObjectName("removescript"_L1);
     buttonLayout->addWidget(mRemoveScript);
     buttonLayout->addStretch(1);
     updateButtons();

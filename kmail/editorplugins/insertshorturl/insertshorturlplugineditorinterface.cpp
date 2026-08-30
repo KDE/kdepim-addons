@@ -77,8 +77,7 @@ void InsertShorturlPluginEditorInterface::exec()
     QTextCursor textCursor = richTextEditor()->textCursor();
     const QString urlStr = textCursor.selectedText();
 
-    if (urlStr.startsWith(QLatin1StringView("http:")) || urlStr.startsWith(QLatin1StringView("https:")) || urlStr.startsWith(QLatin1StringView("ftp:"))
-        || urlStr.startsWith(QLatin1StringView("ftps:"))) {
+    if (urlStr.startsWith("http:"_L1) || urlStr.startsWith("https:"_L1) || urlStr.startsWith("ftp:"_L1) || urlStr.startsWith("ftps:"_L1)) {
         if (!mCurrentEngine) {
             qCWarning(KMAIL_INSERTSHORTURL_LOG) << "Current Engine not defined";
             return;

@@ -16,6 +16,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 DelegateSelector::DelegateSelector(QWidget *parent)
     : QDialog(parent)
@@ -26,22 +27,22 @@ DelegateSelector::DelegateSelector(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
 
     auto label = new QLabel(i18nc("@label:textbox", "Delegate:"), this);
-    label->setObjectName(QLatin1StringView("label"));
+    label->setObjectName("label"_L1);
     mainLayout->addWidget(label);
 
-    mDelegate->setObjectName(QLatin1StringView("delegate"));
+    mDelegate->setObjectName("delegate"_L1);
     mainLayout->addWidget(mDelegate);
 
     connect(mDelegate, &PimCommon::AddresseeLineEdit::textChanged, this, &DelegateSelector::slotTextChanged);
-    mRsvp->setObjectName(QLatin1StringView("informcheckbox"));
+    mRsvp->setObjectName("informcheckbox"_L1);
 
     mRsvp->setChecked(true);
     mainLayout->addWidget(mRsvp);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
-    mOkButton->setObjectName(QLatin1StringView("okbutton"));
+    mOkButton->setObjectName("okbutton"_L1);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &DelegateSelector::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &DelegateSelector::reject);

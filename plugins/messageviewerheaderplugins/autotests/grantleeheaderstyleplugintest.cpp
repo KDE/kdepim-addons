@@ -60,7 +60,7 @@ void GrantleeHeaderStylePluginTest::initTestCase()
         const auto files = QDir(themeDir.absoluteFilePath()).entryInfoList(QDir::Files | QDir::Readable | QDir::NoSymLinks);
         qDebug() << dirName << files;
         for (const auto &file : files) {
-            const QString &newPath = dirName + QLatin1Char('/') + file.fileName();
+            const QString &newPath = dirName + u'/' + file.fileName();
             qDebug() << file << newPath;
             QVERIFY(QFile(file.absoluteFilePath()).copy(newPath));
         }

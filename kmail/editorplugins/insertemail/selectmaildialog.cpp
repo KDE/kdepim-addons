@@ -28,12 +28,12 @@ SelectMailDialog::SelectMailDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Select Email Address"));
     auto mainLayout = new QVBoxLayout(this);
 
-    mSelectMailWidget->setObjectName(QLatin1StringView("selectmailwidget"));
+    mSelectMailWidget->setObjectName("selectmailwidget"_L1);
     mainLayout->addWidget(mSelectMailWidget);
     connect(mSelectMailWidget, &SelectMailWidget::doubleClicked, this, &SelectMailDialog::slotInsertEmails);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SelectMailDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SelectMailDialog::reject);
     mainLayout->addWidget(buttonBox);

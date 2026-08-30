@@ -11,6 +11,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWidget *parent)
     : QWidget(parent)
@@ -19,20 +20,20 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWi
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 
     auto label = new QLabel(i18nc("@label:textbox", "Type:"), this);
-    label->setObjectName(QLatin1StringView("typeLabel"));
+    label->setObjectName("typeLabel"_L1);
     mainLayout->addWidget(label);
 
-    mRuleTypeComboBox->setObjectName(QLatin1StringView("mRuleTypeComboBox"));
+    mRuleTypeComboBox->setObjectName("mRuleTypeComboBox"_L1);
     mainLayout->addWidget(mRuleTypeComboBox);
 
     label = new QLabel(i18nc("@label:textbox", "Contains:"), this);
-    label->setObjectName(QLatin1StringView("containsLabel"));
+    label->setObjectName("containsLabel"_L1);
     mainLayout->addWidget(label);
 
-    mPatternLineEdit->setObjectName(QLatin1StringView("mPatternLineEdit"));
+    mPatternLineEdit->setObjectName("mPatternLineEdit"_L1);
     mPatternLineEdit->setClearButtonEnabled(true);
     mainLayout->addWidget(mPatternLineEdit);
     fillComboBox();
@@ -53,7 +54,7 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDe
 void ConfirmBeforeDeletingCreateRuleWidget::slotRuleTypeChanged(int index)
 {
     const QString str = mRuleTypeComboBox->itemData(index).toString();
-    const bool isAStatus = (str == QLatin1StringView("unread") || str == QLatin1StringView("important"));
+    const bool isAStatus = (str == "unread"_L1 || str == "important"_L1);
     mPatternLineEdit->setEnabled(!isAStatus);
     if (isAStatus) {
         mPatternLineEdit->clear();

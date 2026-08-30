@@ -8,6 +8,7 @@
 #include <KDateComboBox>
 #include <KTimeComboBox>
 #include <QHBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
 
@@ -19,9 +20,9 @@ EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setSpacing(0);
     mainLayout->setContentsMargins({});
-    mDateEdit->setObjectName(QLatin1StringView("eventdatecombobox"));
+    mDateEdit->setObjectName("eventdatecombobox"_L1);
     mainLayout->addWidget(mDateEdit);
-    mTimeEdit->setObjectName(QLatin1StringView("eventtimecombobox"));
+    mTimeEdit->setObjectName("eventtimecombobox"_L1);
     mainLayout->addWidget(mTimeEdit);
     const QDateTime currentDateTime = QDateTime::currentDateTime();
     setDateTime(currentDateTime);

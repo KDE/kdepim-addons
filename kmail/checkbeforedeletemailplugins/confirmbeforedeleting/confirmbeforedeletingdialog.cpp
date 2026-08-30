@@ -14,6 +14,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
@@ -25,13 +26,13 @@ ConfirmBeforeDeletingDialog::ConfirmBeforeDeletingDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Before Deleting Mail"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mConfirmBeforeDeletingWidget->setObjectName(QLatin1StringView("mConfirmBeforeDeletingWidget"));
+    mConfirmBeforeDeletingWidget->setObjectName("mConfirmBeforeDeletingWidget"_L1);
     mainLayout->addWidget(mConfirmBeforeDeletingWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmBeforeDeletingDialog::slotSave);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmBeforeDeletingDialog::reject);

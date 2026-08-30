@@ -10,6 +10,7 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     : QWidget(parent)
@@ -17,13 +18,13 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
     auto lab = new QLabel(i18nc("@label:textbox", "Potentially invalid emails are displayed in red:"), this);
-    lab->setObjectName(QLatin1StringView("label"));
+    lab->setObjectName("label"_L1);
     mainLayout->addWidget(lab);
 
-    mListEmails->setObjectName(QLatin1StringView("listemails"));
+    mListEmails->setObjectName("listemails"_L1);
     connect(mListEmails, &QListWidget::itemChanged, this, &ConfirmAddressWidget::slotItemChanged);
     mainLayout->addWidget(mListEmails);
 }

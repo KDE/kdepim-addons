@@ -5,6 +5,7 @@
 */
 #include "addressbookwidget.h"
 #include <QHBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MailMerge;
 
@@ -12,7 +13,7 @@ AddressBookWidget::AddressBookWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
 }
 
 AddressBookWidget::~AddressBookWidget() = default;

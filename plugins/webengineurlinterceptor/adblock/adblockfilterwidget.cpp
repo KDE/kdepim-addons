@@ -11,6 +11,7 @@
 #include <KLocalizedString>
 #include <QLineEdit>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
     : QWidget{parent}
@@ -18,16 +19,16 @@ AdblockFilterWidget::AdblockFilterWidget(QWidget *parent)
     , mSearchLineEdit(new QLineEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mSearchLineEdit->setObjectName(QLatin1StringView("mSearchLineEdit"));
+    mSearchLineEdit->setObjectName("mSearchLineEdit"_L1);
     mainLayout->addWidget(mSearchLineEdit);
     mSearchLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Search…"));
     mSearchLineEdit->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
 
-    mAdblockFilterListView->setObjectName(QLatin1StringView("mAdblockFilterListView"));
+    mAdblockFilterListView->setObjectName("mAdblockFilterListView"_L1);
     mainLayout->addWidget(mAdblockFilterListView);
     connect(mSearchLineEdit, &QLineEdit::textChanged, mAdblockFilterListView, &AdblockFilterTreeView::setFilterString);
     connect(mAdblockFilterListView, &AdblockFilterTreeView::settingsChanged, this, &AdblockFilterWidget::settingsChanged);

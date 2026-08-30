@@ -12,6 +12,7 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 using namespace MailTransport;
 
@@ -22,10 +23,10 @@ SendMailConfigDialog::SendMailConfigDialog(MailTransport::Transport *transport, 
 {
     Q_ASSERT(transport);
     auto mainLayout = new QVBoxLayout(this);
-    mConfigWidget->setObjectName(QLatin1StringView("sendmailconfigwidget"));
+    mConfigWidget->setObjectName("sendmailconfigwidget"_L1);
     mainLayout->addWidget(mConfigWidget);
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setEnabled(false);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);

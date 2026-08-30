@@ -29,7 +29,7 @@ void testHeaderFile(const QString &data, const QString &name, const QString &dir
     header.replace(QRegularExpression(u"([\n\t ])\\1+"_s), u"\\1"_s);
     header.replace(QRegularExpression(u">\n+[\t ]*"_s), u">"_s);
     header.replace(QRegularExpression(u"[\t ]*\n+[\t ]*<"_s), u"<"_s);
-    header.replace(QLatin1StringView("&nbsp;"), QLatin1StringView("NBSP_ENTITY_PLACEHOLDER")); // xmlling chokes on &nbsp;
+    header.replace("&nbsp;"_L1, "NBSP_ENTITY_PLACEHOLDER"_L1); // xmlling chokes on &nbsp;
 
     QString outName = name + u".out.html"_s;
     QString fName = name + u".html"_s;
@@ -68,7 +68,7 @@ void testHeaderFile(const QString &data, const QString &name, const QString &dir
 
 std::shared_ptr<KMime::Message> readAndParseMail(const QString &mailFile)
 {
-    QFile file(QStringLiteral(HEADER_DATA_DIR) + QLatin1Char('/') + mailFile);
+    QFile file(QStringLiteral(HEADER_DATA_DIR) + u'/' + mailFile);
     bool openFile = file.open(QIODevice::ReadOnly);
     Q_ASSERT(openFile);
     const QByteArray data = KMime::CRLFtoLF(file.readAll());

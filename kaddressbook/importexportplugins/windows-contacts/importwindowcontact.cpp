@@ -43,16 +43,16 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
             }
             for (QDomElement e = list.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
                 const QString tag = e.tagName();
-                if (tag == QLatin1StringView("c:EmailAddressCollection")) {
+                if (tag == "c:EmailAddressCollection"_L1) {
                     KContacts::Email::List lstEmails;
                     for (QDomElement emails = e.firstChildElement(); !emails.isNull(); emails = emails.nextSiblingElement()) {
                         const QString emailsTag = emails.tagName();
-                        if (emailsTag == QLatin1StringView("c:EmailAddress")) {
+                        if (emailsTag == "c:EmailAddress"_L1) {
                             KContacts::Email email;
                             for (QDomElement addresses = emails.firstChildElement(); !addresses.isNull(); addresses = addresses.nextSiblingElement()) {
                                 const QString addressesTag = addresses.tagName();
-                                if (addressesTag == QLatin1StringView("c:Type")) {
-                                } else if (addressesTag == QLatin1StringView("c:Address")) {
+                                if (addressesTag == "c:Type"_L1) {
+                                } else if (addressesTag == "c:Address"_L1) {
                                     email.setEmail(addresses.text());
                                 } else {
                                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " address tag not supported yet " << addressesTag;
@@ -64,27 +64,27 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                         }
                         contact.setEmailList(lstEmails);
                     }
-                } else if (tag == QLatin1StringView("c:NameCollection")) {
+                } else if (tag == "c:NameCollection"_L1) {
                     for (QDomElement name = e.firstChildElement(); !name.isNull(); name = name.nextSiblingElement()) {
                         const QString nameTag = name.tagName();
-                        if (nameTag == QLatin1StringView("c:Name")) {
+                        if (nameTag == "c:Name"_L1) {
                             for (QDomElement nameInfo = name.firstChildElement(); !nameInfo.isNull(); nameInfo = nameInfo.nextSiblingElement()) {
                                 const QString nameInfoTag = nameInfo.tagName();
-                                if (nameInfoTag == QLatin1StringView("c:FormattedName")) {
+                                if (nameInfoTag == "c:FormattedName"_L1) {
                                     contact.setName(nameInfo.text());
-                                } else if (nameInfoTag == QLatin1StringView("c:GivenName")) {
+                                } else if (nameInfoTag == "c:GivenName"_L1) {
                                     contact.setGivenName(nameInfo.text());
-                                } else if (nameInfoTag == QLatin1StringView("c:FamilyName")) {
+                                } else if (nameInfoTag == "c:FamilyName"_L1) {
                                     contact.setFamilyName(nameInfo.text());
-                                } else if (nameInfoTag == QLatin1StringView("c:FormattedName")) {
+                                } else if (nameInfoTag == "c:FormattedName"_L1) {
                                     contact.setFormattedName(nameInfo.text());
-                                } else if (nameInfoTag == QLatin1StringView("c:Title")) {
+                                } else if (nameInfoTag == "c:Title"_L1) {
                                     contact.setTitle(nameInfo.text());
-                                } else if (nameInfoTag == QLatin1StringView("c:NickName")) {
+                                } else if (nameInfoTag == "c:NickName"_L1) {
                                     contact.setNickName(nameInfo.text());
-                                } else if (nameInfoTag == QLatin1StringView("c:Prefix")) {
+                                } else if (nameInfoTag == "c:Prefix"_L1) {
                                     contact.setPrefix(nameInfo.text());
-                                } else if (nameInfoTag == QLatin1StringView("c:Suffix")) {
+                                } else if (nameInfoTag == "c:Suffix"_L1) {
                                     contact.setSuffix(nameInfo.text());
                                 } else {
                                     // TODO middlename/generation
@@ -95,14 +95,14 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " name tag unknown:" << nameTag;
                         }
                     }
-                } else if (tag == QLatin1StringView("c:PhoneNumberCollection")) {
+                } else if (tag == "c:PhoneNumberCollection"_L1) {
                     for (QDomElement number = e.firstChildElement(); !number.isNull(); number = number.nextSiblingElement()) {
                         const QString numberTag = number.tagName();
-                        if (numberTag == QLatin1StringView("c:PhoneNumber")) {
+                        if (numberTag == "c:PhoneNumber"_L1) {
                             KContacts::PhoneNumber phoneNumber;
                             for (QDomElement numberInfo = number.firstChildElement(); !numberInfo.isNull(); numberInfo = numberInfo.nextSiblingElement()) {
                                 const QString numberInfoTag = numberInfo.tagName();
-                                if (numberInfoTag == QLatin1StringView("c:Number")) {
+                                if (numberInfoTag == "c:Number"_L1) {
                                     phoneNumber.setNumber(numberInfo.text());
                                 } else {
                                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " number info tag not supported yet:" << numberInfoTag;
@@ -115,14 +115,14 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " number tag unknown:" << numberTag;
                         }
                     }
-                } else if (tag == QLatin1StringView("c:IMAddressCollection")) {
+                } else if (tag == "c:IMAddressCollection"_L1) {
                     for (QDomElement im = e.firstChildElement(); !im.isNull(); im = im.nextSiblingElement()) {
                         const QString imTag = im.tagName();
-                        if (imTag == QLatin1StringView("c:IMAddress")) {
+                        if (imTag == "c:IMAddress"_L1) {
                             KContacts::Impp impp;
                             for (QDomElement imInfo = im.firstChildElement(); !imInfo.isNull(); imInfo = imInfo.nextSiblingElement()) {
                                 const QString imInfoTag = imInfo.tagName();
-                                if (imInfoTag == QLatin1StringView("c:Value")) {
+                                if (imInfoTag == "c:Value"_L1) {
                                     impp.setAddress(QUrl(imInfo.text()));
                                 } else {
                                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " im info tag not supported yet " << imInfoTag;
@@ -135,17 +135,17 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " im tag unknown:" << imTag;
                         }
                     }
-                } else if (tag == QLatin1StringView("c:PhotoCollection")) {
+                } else if (tag == "c:PhotoCollection"_L1) {
                     for (QDomElement photo = e.firstChildElement(); !photo.isNull(); photo = photo.nextSiblingElement()) {
                         const QString photoTag = photo.tagName();
-                        if (photoTag == QLatin1StringView("c:Photo")) {
+                        if (photoTag == "c:Photo"_L1) {
                             KContacts::Picture picture;
                             for (QDomElement photoInfo = photo.firstChildElement(); !photoInfo.isNull(); photoInfo = photoInfo.nextSiblingElement()) {
                                 const QString photoInfoTag = photoInfo.tagName();
-                                if (photoInfoTag == QLatin1StringView("c:Value")) {
+                                if (photoInfoTag == "c:Value"_L1) {
                                     const QString contentType = photoInfo.attribute(u"c:ContentType"_s);
                                     picture.setRawData(photoInfo.text().toUtf8(), contentType);
-                                } else if (photoInfoTag == QLatin1StringView("c:Url")) {
+                                } else if (photoInfoTag == "c:Url"_L1) {
                                     picture.setUrl(photoInfo.text());
                                 } else {
                                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " photo info tag not supported yet " << photoInfoTag;
@@ -158,26 +158,26 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " photo tag unknown:" << photoTag;
                         }
                     }
-                } else if (tag == QLatin1StringView("c:PhysicalAddressCollection")) {
+                } else if (tag == "c:PhysicalAddressCollection"_L1) {
                     for (QDomElement address = e.firstChildElement(); !address.isNull(); address = address.nextSiblingElement()) {
                         const QString addressTag = address.tagName();
-                        if (addressTag == QLatin1StringView("c:PhysicalAddress")) {
+                        if (addressTag == "c:PhysicalAddress"_L1) {
                             KContacts::Address addressType;
                             for (QDomElement addressInfo = address.firstChildElement(); !addressInfo.isNull(); addressInfo = addressInfo.nextSiblingElement()) {
                                 const QString addressInfoTag = addressInfo.tagName();
-                                if (addressInfoTag == QLatin1StringView("c:AddressLabel")) {
+                                if (addressInfoTag == "c:AddressLabel"_L1) {
                                     addressType.setLabel(addressInfo.text());
-                                } else if (addressInfoTag == QLatin1StringView("c:Street")) {
+                                } else if (addressInfoTag == "c:Street"_L1) {
                                     addressType.setStreet(addressInfo.text());
-                                } else if (addressInfoTag == QLatin1StringView("c:Locality")) {
+                                } else if (addressInfoTag == "c:Locality"_L1) {
                                     addressType.setLocality(addressInfo.text());
-                                } else if (addressInfoTag == QLatin1StringView("c:Region")) {
+                                } else if (addressInfoTag == "c:Region"_L1) {
                                     addressType.setRegion(addressInfo.text());
-                                } else if (addressInfoTag == QLatin1StringView("c:Country")) {
+                                } else if (addressInfoTag == "c:Country"_L1) {
                                     addressType.setCountry(addressInfo.text());
-                                } else if (addressInfoTag == QLatin1StringView("c:PostalCode")) {
+                                } else if (addressInfoTag == "c:PostalCode"_L1) {
                                     addressType.setPostalCode(addressInfo.text());
-                                } else if (addressInfoTag == QLatin1StringView("c:POBox")) {
+                                } else if (addressInfoTag == "c:POBox"_L1) {
                                     addressType.setPostOfficeBox(addressInfo.text());
                                 } else {
                                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " address info tag not supported yet " << addressInfoTag;
@@ -190,22 +190,22 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " address tag unknown:" << addressTag;
                         }
                     }
-                } else if (tag == QLatin1StringView("c:PositionCollection")) {
+                } else if (tag == "c:PositionCollection"_L1) {
                     for (QDomElement position = e.firstChildElement(); !position.isNull(); position = position.nextSiblingElement()) {
                         const QString positionTag = position.tagName();
-                        if (positionTag == QLatin1StringView("c:Position")) {
+                        if (positionTag == "c:Position"_L1) {
                             for (QDomElement positionInfo = position.firstChildElement(); !positionInfo.isNull();
                                  positionInfo = positionInfo.nextSiblingElement()) {
                                 const QString positionInfoTag = positionInfo.tagName();
-                                if (positionInfoTag == QLatin1StringView("c:Organization")) {
+                                if (positionInfoTag == "c:Organization"_L1) {
                                     contact.setOrganization(positionInfo.text());
-                                } else if (positionInfoTag == QLatin1StringView("c:Department")) {
+                                } else if (positionInfoTag == "c:Department"_L1) {
                                     contact.setDepartment(positionInfo.text());
-                                } else if (positionInfoTag == QLatin1StringView("c:Office")) {
+                                } else if (positionInfoTag == "c:Office"_L1) {
                                     contact.setOffice(positionInfo.text());
-                                } else if (positionInfoTag == QLatin1StringView("c:Profession")) {
+                                } else if (positionInfoTag == "c:Profession"_L1) {
                                     contact.setProfession(positionInfo.text());
-                                } else if (positionInfoTag == QLatin1StringView("c:Role")) {
+                                } else if (positionInfoTag == "c:Role"_L1) {
                                     contact.setRole(positionInfo.text());
                                 } else {
                                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " position info tag not supported yet " << positionInfoTag;
@@ -215,27 +215,27 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " position tag unknown:" << positionTag;
                         }
                     }
-                } else if (tag == QLatin1StringView("c:Gender")) { // TODO verify it
+                } else if (tag == "c:Gender"_L1) { // TODO verify it
                     KContacts::Gender gender;
                     const QString genderStr = e.text();
-                    if (genderStr == QLatin1StringView("Male")) {
+                    if (genderStr == "Male"_L1) {
                         gender.setGender(u"H"_s);
-                    } else if (genderStr == QLatin1StringView("Female")) {
+                    } else if (genderStr == "Female"_L1) {
                         gender.setGender(u"F"_s);
                     } else {
                         // Don't provide gender
                         continue;
                     }
                     contact.setGender(gender);
-                } else if (tag == QLatin1StringView("c:Notes")) { // TODO verify it
+                } else if (tag == "c:Notes"_L1) { // TODO verify it
                     contact.setNote(e.text());
-                } else if (tag == QLatin1StringView("c:UrlCollection")) { // TODO verify it
+                } else if (tag == "c:UrlCollection"_L1) { // TODO verify it
                     for (QDomElement url = e.firstChildElement(); !url.isNull(); url = url.nextSiblingElement()) {
                         const QString urlTag = url.tagName();
-                        if (urlTag == QLatin1StringView("c:Url")) {
+                        if (urlTag == "c:Url"_L1) {
                             for (QDomElement urlInfo = url.firstChildElement(); !urlInfo.isNull(); urlInfo = urlInfo.nextSiblingElement()) {
                                 const QString urlInfoTag = urlInfo.tagName();
-                                if (urlInfoTag == QLatin1StringView("c:Value")) {
+                                if (urlInfoTag == "c:Value"_L1) {
                                     KContacts::ResourceLocatorUrl resourceLocalUrl;
                                     resourceLocalUrl.setUrl(QUrl::fromUserInput(urlInfo.text()));
                                     contact.insertExtraUrl(resourceLocalUrl);

@@ -7,6 +7,7 @@
 #include "folderconfiguresettingsgeneralwidget.h"
 #include <MailCommon/CollectionGeneralWidget>
 #include <QHBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 FolderConfigureSettingsGeneralWidget::FolderConfigureSettingsGeneralWidget(QWidget *parent)
     : FolderConfigureSettingsPageBase(parent)
@@ -14,7 +15,7 @@ FolderConfigureSettingsGeneralWidget::FolderConfigureSettingsGeneralWidget(QWidg
 {
     auto mainWidget = new QWidget(this);
     auto mainLayout = new QHBoxLayout(mainWidget);
-    mCollectionGeneralWidget->setObjectName(QLatin1StringView("mCollectionGeneralWidget"));
+    mCollectionGeneralWidget->setObjectName("mCollectionGeneralWidget"_L1);
     mainLayout->addWidget(mCollectionGeneralWidget);
     addMainWidget(mainWidget);
     mMainLayout->addStretch();

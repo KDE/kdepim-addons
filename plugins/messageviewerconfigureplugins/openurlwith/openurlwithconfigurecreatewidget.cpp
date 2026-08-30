@@ -23,19 +23,19 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     , mExecutable(new KUrlRequester(this))
 {
     auto mainLayout = new QFormLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins(QMargins());
 
     mEnabled->setObjectName(u"mEnabled"_s);
     mainLayout->addWidget(mEnabled);
 
-    mServerName->setObjectName(QLatin1StringView("mServerName"));
+    mServerName->setObjectName("mServerName"_L1);
     mainLayout->addRow(i18n("Server Name:"), mServerName);
     mServerName->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mServerName);
 
     auto formatHelp = new QLabel(i18nc("@label:textbox", "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"), this);
-    formatHelp->setObjectName(QLatin1StringView("formatHelp"));
+    formatHelp->setObjectName("formatHelp"_L1);
     formatHelp->setContextMenuPolicy(Qt::NoContextMenu);
     connect(formatHelp, &QLabel::linkActivated, this, &OpenUrlWithConfigureCreateWidget::slotLinkClicked);
 
@@ -49,12 +49,12 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     formatHelp->setWhatsThis(mCommandWhatsThis);
     mainLayout->addWidget(formatHelp);
 
-    mCommandLine->setObjectName(QLatin1StringView("mCommandLine"));
+    mCommandLine->setObjectName("mCommandLine"_L1);
     mCommandLine->setClearButtonEnabled(true);
     mainLayout->addRow(i18n("Command line:"), mCommandLine);
     KLineEditEventHandler::catchReturnKey(mCommandLine);
 
-    mExecutable->setObjectName(QLatin1StringView("mEditorRequester"));
+    mExecutable->setObjectName("mEditorRequester"_L1);
 
     mExecutable->setMimeTypeFilters({u"application/x-executable"_s, u"application/x-shellscript"_s, u"application/x-desktop"_s});
 
@@ -69,7 +69,7 @@ OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget() = default;
 
 void OpenUrlWithConfigureCreateWidget::slotLinkClicked(const QString &link)
 {
-    if (link == QLatin1StringView("whatsthis1")) {
+    if (link == "whatsthis1"_L1) {
         QWhatsThis::showText(QCursor::pos(), mCommandWhatsThis);
     }
 }

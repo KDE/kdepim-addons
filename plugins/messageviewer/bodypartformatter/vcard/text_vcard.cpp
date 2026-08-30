@@ -55,7 +55,7 @@ public:
     {
         QMimeDatabase db;
         auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));
-        if (!mt.isValid() || mt.name() != QLatin1StringView("text/vcard")) {
+        if (!mt.isValid() || mt.name() != "text/vcard"_L1) {
             return false;
         }
 
@@ -132,12 +132,12 @@ public:
                 htmlStr.replace(u"img src=\"contact_photo\""_s, u"img src=\"%1\""_s.arg(defaultPixmapPath));
             } else {
                 QImage img = a.photo().data();
-                const QString dir = msgPart->nodeHelper()->createTempDir(QLatin1StringView("vcard-") + a.uid());
-                const QString filename = dir + QLatin1Char('/') + a.uid();
+                const QString dir = msgPart->nodeHelper()->createTempDir("vcard-"_L1 + a.uid());
+                const QString filename = dir + u'/' + a.uid();
                 img.save(filename, "PNG");
                 msgPart->nodeHelper()->addTempFile(filename);
-                const QString href = QLatin1StringView("file:") + QLatin1StringView(QUrl::toPercentEncoding(filename));
-                htmlStr.replace(QLatin1StringView("img src=\"contact_photo\""), u"img src=\"%1\""_s.arg(href));
+                const QString href = "file:"_L1 + QLatin1StringView(QUrl::toPercentEncoding(filename));
+                htmlStr.replace("img src=\"contact_photo\""_L1, u"img src=\"%1\""_s.arg(href));
             }
             writer->write(htmlStr);
 
@@ -178,7 +178,7 @@ public:
         }
         KContacts::VCardConverter vcc;
         const KContacts::Addressee::List al = vcc.parseVCards(vCard.toUtf8());
-        const int index = QStringView(path).right(path.length() - path.lastIndexOf(QLatin1Char(':')) - 1).toInt();
+        const int index = QStringView(path).right(path.length() - path.lastIndexOf(u':') - 1).toInt();
         if (index == -1 || index >= al.count()) {
             return true;
         }
@@ -187,10 +187,10 @@ public:
             return true;
         }
 
-        if (path.startsWith(QLatin1StringView("addToAddressBook"))) {
+        if (path.startsWith("addToAddressBook"_L1)) {
             auto job = new Akonadi::AddContactJob(a, nullptr);
             job->start();
-        } else if (path.startsWith(QLatin1StringView("updateToAddressBook"))) {
+        } else if (path.startsWith("updateToAddressBook"_L1)) {
             const QStringList emails = a.emails();
             if (emails.isEmpty()) {
                 return true;
@@ -208,7 +208,7 @@ public:
         if (!vCard.isEmpty()) {
             KContacts::VCardConverter vcc;
             const KContacts::Addressee::List al = vcc.parseVCards(vCard.toUtf8());
-            const int index = QStringView(path).right(path.length() - path.lastIndexOf(QLatin1Char(':')) - 1).toInt();
+            const int index = QStringView(path).right(path.length() - path.lastIndexOf(u':') - 1).toInt();
             if (index >= 0 && index < al.count()) {
                 return al.at(index);
             }
@@ -244,7 +244,7 @@ public:
     QString statusBarMessage(BodyPart *part, const QString &path) const override
     {
         KContacts::Addressee a = findAddressee(part, path);
-        const bool addToAddressBook = path.startsWith(QLatin1StringView("addToAddressBook"));
+        const bool addToAddressBook = path.startsWith("addToAddressBook"_L1);
         if (a.realName().isEmpty()) {
             return addToAddressBook ? i18n("Add this contact to the address book.") : i18n("Update this contact to the address book.");
         } else {
@@ -270,7 +270,7 @@ public:
         if (givenName.isEmpty()) {
             fileName = a.familyName() + u".vcf"_s;
         } else {
-            fileName = givenName + QLatin1Char('_') + a.familyName() + u".vcf"_s;
+            fileName = givenName + u'_' + a.familyName() + u".vcf"_s;
         }
         // get the saveas file name
         QUrl saveAsUrl = QFileDialog::getSaveFileUrl(nullptr, i18nc("@title:window", "Save Business Card"), QUrl::fromUserInput(fileName));

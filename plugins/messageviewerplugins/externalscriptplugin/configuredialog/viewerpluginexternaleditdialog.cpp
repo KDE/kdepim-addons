@@ -15,6 +15,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myViewerPluginExternalEditDialog[] = "ViewerPluginExternalEditDialog";
@@ -26,12 +27,12 @@ ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Add or Modify External Script"));
     auto mainLayout = new QVBoxLayout(this);
 
-    mEditWidget->setObjectName(QLatin1StringView("editwidget"));
+    mEditWidget->setObjectName("editwidget"_L1);
     mainLayout->addWidget(mEditWidget);
     connect(mEditWidget, &ViewerPluginExternalEditWidget::scriptIsValid, this, &ViewerPluginExternalEditDialog::slotScriptIsValid);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ViewerPluginExternalEditDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ViewerPluginExternalEditDialog::reject);
     mainLayout->addWidget(buttonBox);

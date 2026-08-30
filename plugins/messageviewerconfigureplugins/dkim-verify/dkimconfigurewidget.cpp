@@ -11,16 +11,17 @@
 
 #include <KConfigDialogManager>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 DKIMConfigureWidget::DKIMConfigureWidget(QWidget *parent)
     : QWidget(parent)
     , mTabWidget(new DKIMConfigureTab(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mTabWidget->setObjectName(QLatin1StringView("tabwidget"));
+    mTabWidget->setObjectName("tabwidget"_L1);
     mainLayout->addWidget(mTabWidget);
 
     m_configDialogManager = new KConfigDialogManager(this, MessageViewer::MessageViewerSettings::self());

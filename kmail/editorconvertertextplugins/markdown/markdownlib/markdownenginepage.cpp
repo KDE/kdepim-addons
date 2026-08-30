@@ -7,6 +7,7 @@
 #include "markdownenginepage.h"
 #include <QWebEngineProfile>
 #include <QWebEngineSettings>
+using namespace Qt::Literals::StringLiterals;
 
 MarkdownEnginePage::MarkdownEnginePage(QObject *parent)
     : QWebEnginePage(parent)
@@ -44,7 +45,7 @@ bool MarkdownEnginePage::acceptNavigationRequest(const QUrl &url, NavigationType
 {
     Q_UNUSED(type)
     Q_UNUSED(isMainFrame)
-    if (url.scheme() == QLatin1StringView("data")) {
+    if (url.scheme() == "data"_L1) {
         return true;
     }
     return false;

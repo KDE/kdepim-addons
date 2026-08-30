@@ -11,6 +11,7 @@
 #include <KSharedConfig>
 #include <QCheckBox>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 
 AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConfigureBaseWidget(parent)
@@ -18,9 +19,9 @@ AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
-    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
+    mainLayout->setObjectName("mainlayout"_L1);
 
-    mConfigureTab->setObjectName(QLatin1StringView("configuretab"));
+    mConfigureTab->setObjectName("configuretab"_L1);
     mainLayout->addWidget(mConfigureTab);
     connect(mConfigureTab, &AutomaticAddContactsConfigureTab::configureChanged, this, &AutomaticAddContactsConfigureWidget::configureChanged);
 }

@@ -6,12 +6,13 @@
 
 #include "folderconfiguresettingstemplatewidget.h"
 #include <MailCommon/CollectionTemplatesWidget>
+using namespace Qt::Literals::StringLiterals;
 
 FolderConfigureSettingsTemplateWidget::FolderConfigureSettingsTemplateWidget(QWidget *parent)
     : FolderConfigureSettingsPageBase(parent)
     , mCollectionTemplateWidget(new MailCommon::CollectionTemplatesWidget(this))
 {
-    mCollectionTemplateWidget->setObjectName(QLatin1StringView("mCollectionTemplateWidget"));
+    mCollectionTemplateWidget->setObjectName("mCollectionTemplateWidget"_L1);
     addMainWidget(mCollectionTemplateWidget);
 }
 

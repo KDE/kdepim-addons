@@ -14,6 +14,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 static const char myScamConfigureSettingsDialogConfigGroupName[] = "ScamConfigureSettingsDialog";
@@ -23,14 +24,14 @@ ScamConfigureSettingsDialog::ScamConfigureSettingsDialog(QWidget *parent)
     , mScamConfigureSettingsWidget(new ScamConfigureSettingsWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     setWindowTitle(i18nc("@title:window", "Configure Scam Settings"));
 
-    mScamConfigureSettingsWidget->setObjectName(QLatin1StringView("mScamConfigureSettingsWidget"));
+    mScamConfigureSettingsWidget->setObjectName("mScamConfigureSettingsWidget"_L1);
     mainLayout->addWidget(mScamConfigureSettingsWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonBox"));
+    buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ScamConfigureSettingsDialog::slotAccepted);

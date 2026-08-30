@@ -39,7 +39,7 @@ public:
         if (!mt.isValid()) {
             return false;
         }
-        if (mt.name() != QLatin1StringView("text/markdown") && !mt.allAncestors().contains(QLatin1StringView("text/markdown"))) {
+        if (mt.name() != "text/markdown"_L1 && !mt.allAncestors().contains("text/markdown"_L1)) {
             return false;
         }
 

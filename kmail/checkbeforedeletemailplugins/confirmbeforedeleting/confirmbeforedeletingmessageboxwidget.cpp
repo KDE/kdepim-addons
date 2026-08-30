@@ -12,6 +12,7 @@
 #include <KLocalizedString>
 #include <QStyle>
 #include <QStyleOption>
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWidget *parent)
     : QWidget(parent)
@@ -19,12 +20,12 @@ ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWi
     , mUseSameResultForOtherCheck(new QCheckBox(i18nc("@option:check", "Apply to All"), this))
 {
     auto mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     mainLayout->setContentsMargins({});
 
     const QIcon tmpIcon = style()->standardIcon(QStyle::SP_MessageBoxQuestion, nullptr, this);
     auto iconLabel = new QLabel(this);
-    iconLabel->setObjectName(QLatin1StringView("iconLabel"));
+    iconLabel->setObjectName("iconLabel"_L1);
     if (!tmpIcon.isNull()) {
         QStyleOption option;
         option.initFrom(this);
@@ -33,16 +34,16 @@ ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWi
     mainLayout->addWidget(iconLabel);
 
     auto textLayout = new QVBoxLayout;
-    textLayout->setObjectName(QLatin1StringView("textLayout"));
+    textLayout->setObjectName("textLayout"_L1);
     textLayout->setContentsMargins({});
 
     mainLayout->addLayout(textLayout);
 
-    mLabelInfo->setObjectName(QLatin1StringView("mLabelInfo"));
+    mLabelInfo->setObjectName("mLabelInfo"_L1);
     mLabelInfo->setWordWrap(true);
     textLayout->addWidget(mLabelInfo, 0, Qt::AlignTop);
 
-    mUseSameResultForOtherCheck->setObjectName(QLatin1StringView("mUseSameResultForOtherCheck"));
+    mUseSameResultForOtherCheck->setObjectName("mUseSameResultForOtherCheck"_L1);
     textLayout->addWidget(mUseSameResultForOtherCheck);
 
     mUseSameResultForOtherCheck->setChecked(false);

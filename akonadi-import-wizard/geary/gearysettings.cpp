@@ -110,7 +110,7 @@ void GearySettings::readIdentity()
         identity->setPrimaryEmailAddress(address);
         const QString alias = settings->value(u"alternate_emails"_s).toString();
         if (!alias.isEmpty()) {
-            identity->setEmailAliases(alias.split(QLatin1Char(';'), Qt::SkipEmptyParts));
+            identity->setEmailAliases(alias.split(u';', Qt::SkipEmptyParts));
         }
         const QString signatureStr = settings->value(u"email_signature"_s).toString();
         if (!signatureStr.isEmpty()) {

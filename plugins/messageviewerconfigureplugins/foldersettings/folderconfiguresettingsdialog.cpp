@@ -14,6 +14,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+using namespace Qt::Literals::StringLiterals;
 namespace
 {
 const char myConfigGroupName[] = "FolderConfigureSettingsDialog";
@@ -24,14 +25,14 @@ FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)
     , mFolderConfigureSettingsWidget(new FolderConfigureSettingsWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QLatin1StringView("mainLayout"));
+    mainLayout->setObjectName("mainLayout"_L1);
     setWindowTitle(i18nc("@title:window", "Configure Folder Settings"));
 
-    mFolderConfigureSettingsWidget->setObjectName(QLatin1StringView("mFolderConfigureSettingsWidget"));
+    mFolderConfigureSettingsWidget->setObjectName("mFolderConfigureSettingsWidget"_L1);
     mainLayout->addWidget(mFolderConfigureSettingsWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel | QDialogButtonBox::Ok, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &FolderConfigureSettingsDialog::reject);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &FolderConfigureSettingsDialog::slotSave);
     mainLayout->addWidget(buttonBox);

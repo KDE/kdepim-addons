@@ -202,7 +202,7 @@ public:
     {
         QMimeDatabase db;
         auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));
-        if (!mt.isValid() || mt.name() != QLatin1StringView("text/calendar")) {
+        if (!mt.isValid() || mt.name() != "text/calendar"_L1) {
             return false;
         }
 
@@ -523,11 +523,11 @@ public:
             msg->subject()->fromUnicodeString(status);
             QString tsubject = subject;
             tsubject.remove(i18n("Answer: "));
-            if (status == QLatin1StringView("cancel")) {
+            if (status == "cancel"_L1) {
                 msg->subject()->fromUnicodeString(i18nc("Not able to attend.", "Declined: %1", tsubject));
-            } else if (status == QLatin1StringView("tentative")) {
+            } else if (status == "tentative"_L1) {
                 msg->subject()->fromUnicodeString(i18nc("Unsure if it is possible to attend.", "Tentative: %1", tsubject));
-            } else if (status == QLatin1StringView("accepted")) {
+            } else if (status == "accepted"_L1) {
                 msg->subject()->fromUnicodeString(i18nc("Accepted the invitation.", "Accepted: %1", tsubject));
             } else {
                 msg->subject()->fromUnicodeString(subject);
@@ -799,7 +799,7 @@ public:
             QString queryStr;
             KGuiItem yesItem;
             KGuiItem noItem;
-            if (path == QLatin1StringView("accept")) {
+            if (path == "accept"_L1) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to accept the task?");
                 } else {
@@ -807,7 +807,7 @@ public:
                 }
                 yesItem.setText(i18nc("@action:button", "Accept"));
                 yesItem.setIconName(u"dialog-ok"_s);
-            } else if (path == QLatin1StringView("accept_conditionally")) {
+            } else if (path == "accept_conditionally"_L1) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to send conditional acceptance of the task?");
                 } else {
@@ -815,32 +815,32 @@ public:
                 }
                 yesItem.setText(i18nc("@action:button", "Send"));
                 yesItem.setIconName(u"mail-send"_s);
-            } else if (path == QLatin1StringView("accept_counter")) {
+            } else if (path == "accept_counter"_L1) {
                 queryStr = i18n("Do you still want to accept the counter proposal?");
                 yesItem.setText(i18nc("@action:button", "Accept"));
                 yesItem.setIconName(u"dialog-ok"_s);
-            } else if (path == QLatin1StringView("counter")) {
+            } else if (path == "counter"_L1) {
                 queryStr = i18n("Do you still want to send a counter proposal?");
                 yesItem.setText(i18nc("@action:button", "Send"));
                 yesItem.setIconName(u"mail-send"_s);
-            } else if (path == QLatin1StringView("decline")) {
+            } else if (path == "decline"_L1) {
                 queryStr = i18n("Do you still want to send a decline response?");
                 yesItem.setText(i18nc("@action:button", "Send"));
                 yesItem.setIconName(u"mail-send"_s);
-            } else if (path == QLatin1StringView("decline_counter")) {
+            } else if (path == "decline_counter"_L1) {
                 queryStr = i18n("Do you still want to decline the counter proposal?");
                 yesItem.setText(i18nc("@action:button", "Decline"));
-            } else if (path == QLatin1StringView("reply")) {
+            } else if (path == "reply"_L1) {
                 queryStr = i18n("Do you still want to record this response in your calendar?");
                 yesItem.setText(i18nc("@action:button", "Record"));
-            } else if (path == QLatin1StringView("delegate")) {
+            } else if (path == "delegate"_L1) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to delegate this task?");
                 } else {
                     queryStr = i18n("Do you still want to delegate this invitation?");
                 }
                 yesItem.setText(i18nc("@action:button", "Delegate"));
-            } else if (path == QLatin1StringView("forward")) {
+            } else if (path == "forward"_L1) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to forward this task?");
                 } else {
@@ -848,7 +848,7 @@ public:
                 }
                 yesItem.setText(i18nc("@action:button", "Forward"));
                 yesItem.setIconName(u"mail-forward"_s);
-            } else if (path == QLatin1StringView("cancel")) {
+            } else if (path == "cancel"_L1) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to cancel this task?");
                     yesItem.setText(i18nc("@action:button", "Cancel Task"));
@@ -859,17 +859,17 @@ public:
                 yesItem.setIconName(u"dialog-ok"_s);
                 noItem.setText(i18nc("@action:button", "Do Not Cancel"));
                 noItem.setIconName(u"dialog-cancel"_s);
-            } else if (path == QLatin1StringView("check_calendar")) {
+            } else if (path == "check_calendar"_L1) {
                 queryStr = i18n("Do you still want to check your calendar?");
                 yesItem.setText(i18nc("@action:button", "Check"));
-            } else if (path == QLatin1StringView("record")) {
+            } else if (path == "record"_L1) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to record this task in your calendar?");
                 } else {
                     queryStr = i18n("Do you still want to record this invitation in your calendar?");
                 }
                 yesItem.setText(i18nc("@action:button", "Record"));
-            } else if (path.startsWith(QLatin1StringView("ATTACH:"))) {
+            } else if (path.startsWith("ATTACH:"_L1)) {
                 return false;
             } else {
                 queryStr = i18n("%1?", path);
@@ -1061,7 +1061,7 @@ public:
             QStringList patterns = db.mimeTypeForName(attachment.mimeType()).globPatterns();
             if (!patterns.empty()) {
                 QString pattern = patterns.at(0);
-                file = new QTemporaryFile(QDir::tempPath() + QLatin1StringView("/messageviewer_XXXXXX") + pattern.remove(QLatin1Char('*')));
+                file = new QTemporaryFile(QDir::tempPath() + "/messageviewer_XXXXXX"_L1 + pattern.remove(u'*'));
             } else {
                 file = new QTemporaryFile();
             }
@@ -1104,7 +1104,7 @@ public:
             QStringList patterns = db.mimeTypeForName(a.mimeType()).globPatterns();
             if (!patterns.empty()) {
                 QString pattern = patterns.at(0);
-                file = new QTemporaryFile(QDir::tempPath() + QLatin1StringView("/messageviewer_XXXXXX") + pattern.remove(QLatin1Char('*')));
+                file = new QTemporaryFile(QDir::tempPath() + "/messageviewer_XXXXXX"_L1 + pattern.remove(u'*'));
             } else {
                 file = new QTemporaryFile();
             }
@@ -1202,7 +1202,7 @@ public:
     {
         // filter out known paths that don't belong to this type of urlmanager.
         // kolab/issue4054 msg27201
-        if (path.contains(QLatin1StringView("addToAddressBook:")) || path.contains(QLatin1StringView("updateToAddressBook"))) {
+        if (path.contains("addToAddressBook:"_L1) || path.contains("updateToAddressBook"_L1)) {
             return false;
         }
 
@@ -1244,46 +1244,46 @@ public:
             return result;
         }
 
-        if (path == QLatin1StringView("accept")) {
+        if (path == "accept"_L1) {
             result = handleInvitation(message, Attendee::Accepted, part, viewerInstance);
-        } else if (path == QLatin1StringView("accept_conditionally")) {
+        } else if (path == "accept_conditionally"_L1) {
             result = handleInvitation(message, Attendee::Tentative, part, viewerInstance);
-        } else if (path == QLatin1StringView("counter")) {
+        } else if (path == "counter"_L1) {
             result = counterProposal(message, part);
-        } else if (path == QLatin1StringView("ignore")) {
+        } else if (path == "ignore"_L1) {
             result = handleIgnore(viewerInstance);
-        } else if (path == QLatin1StringView("decline")) {
+        } else if (path == "decline"_L1) {
             result = handleInvitation(message, Attendee::Declined, part, viewerInstance);
-        } else if (path == QLatin1StringView("decline_counter")) {
+        } else if (path == "decline_counter"_L1) {
             result = handleDeclineCounter(incidence, part, viewerInstance);
-        } else if (path == QLatin1StringView("postpone")) {
+        } else if (path == "postpone"_L1) {
             result = handleInvitation(message, Attendee::NeedsAction, part, viewerInstance);
-        } else if (path == QLatin1StringView("delegate")) {
+        } else if (path == "delegate"_L1) {
             result = handleInvitation(message, Attendee::Delegated, part, viewerInstance);
-        } else if (path == QLatin1StringView("forward")) {
+        } else if (path == "forward"_L1) {
             AttendeeSelector dlg;
             if (dlg.exec() == QDialog::Rejected) {
                 return true;
             }
-            QString fwdTo = dlg.attendees().join(QLatin1StringView(", "));
+            QString fwdTo = dlg.attendees().join(", "_L1);
             if (fwdTo.isEmpty()) {
                 return true;
             }
             const QString receiver = findReceiver(part->content());
             result = mail(viewerInstance, incidence, u"forward"_s, iTIPRequest, receiver, fwdTo, Forward);
-        } else if (path == QLatin1StringView("check_calendar")) {
+        } else if (path == "check_calendar"_L1) {
             showCalendar(incidence->dtStart().date());
             return true;
-        } else if (path == QLatin1StringView("reply") || path == QLatin1StringView("cancel") || path == QLatin1StringView("accept_counter")) {
+        } else if (path == "reply"_L1 || path == "cancel"_L1 || path == "accept_counter"_L1) {
             // These should just be saved with their type as the dir
-            const QString p = (path == QLatin1StringView("accept_counter") ? u"reply"_s : path);
+            const QString p = (path == "accept_counter"_L1 ? u"reply"_s : path);
             if (saveFile(u"Receiver Not Searched"_s, message, p, part)) {
                 if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                     viewerInstance->deleteMessage();
                 }
                 result = true;
             }
-        } else if (path == QLatin1StringView("record")) {
+        } else if (path == "record"_L1) {
             QString summary;
             int response = KMessageBox::questionTwoActionsCancel(nullptr,
                                                                  i18nc("@info",
@@ -1323,19 +1323,19 @@ public:
                 showCalendar(incidence->dtStart().date());
                 break;
             }
-        } else if (path == QLatin1StringView("delete")) {
+        } else if (path == "delete"_L1) {
             viewerInstance->deleteMessage();
             result = true;
         }
 
-        if (path.startsWith(QLatin1StringView("ATTACH:"))) {
+        if (path.startsWith("ATTACH:"_L1)) {
             const QString name = QString::fromUtf8(QByteArray::fromBase64(path.mid(7).toUtf8()));
             openAttachment(name, incidence);
         }
 
         if (result) {
             // do not close the secondary window if an attachment was opened (kolab/issue4317)
-            if (!path.startsWith(QLatin1StringView("ATTACH:"))) {
+            if (!path.startsWith("ATTACH:"_L1)) {
                 qCDebug(TEXT_CALENDAR_LOG) << "AKONADI PORT: Disabled code in " << Q_FUNC_INFO << "about closing if in a secondary window";
 #if 0 // TODO port to Akonadi
                 c.closeIfSecondaryWindow();
@@ -1348,7 +1348,7 @@ public:
     bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &point) const override
     {
         QString name = path;
-        if (path.startsWith(QLatin1StringView("ATTACH:"))) {
+        if (path.startsWith("ATTACH:"_L1)) {
             name = QString::fromUtf8(QByteArray::fromBase64(path.mid(7).toUtf8()));
         } else {
             return false; // because it isn't an attachment invitation
@@ -1389,37 +1389,37 @@ public:
     QString statusBarMessage(MimeTreeParser::Interface::BodyPart *, const QString &path) const override
     {
         if (!path.isEmpty()) {
-            if (path == QLatin1StringView("accept")) {
+            if (path == "accept"_L1) {
                 return i18n("Accept invitation");
-            } else if (path == QLatin1StringView("accept_conditionally")) {
+            } else if (path == "accept_conditionally"_L1) {
                 return i18n("Accept invitation conditionally");
-            } else if (path == QLatin1StringView("accept_counter")) {
+            } else if (path == "accept_counter"_L1) {
                 return i18n("Accept counter proposal");
-            } else if (path == QLatin1StringView("counter")) {
+            } else if (path == "counter"_L1) {
                 return i18n("Create a counter proposal…");
-            } else if (path == QLatin1StringView("ignore")) {
+            } else if (path == "ignore"_L1) {
                 return i18n("Throw mail away");
-            } else if (path == QLatin1StringView("decline")) {
+            } else if (path == "decline"_L1) {
                 return i18n("Decline invitation");
-            } else if (path == QLatin1StringView("postpone")) {
+            } else if (path == "postpone"_L1) {
                 return i18n("Postpone");
-            } else if (path == QLatin1StringView("decline_counter")) {
+            } else if (path == "decline_counter"_L1) {
                 return i18n("Decline counter proposal");
-            } else if (path == QLatin1StringView("check_calendar")) {
+            } else if (path == "check_calendar"_L1) {
                 return i18n("Check my calendar…");
-            } else if (path == QLatin1StringView("reply")) {
+            } else if (path == "reply"_L1) {
                 return i18n("Record response into my calendar");
-            } else if (path == QLatin1StringView("record")) {
+            } else if (path == "record"_L1) {
                 return i18n("Record invitation into my calendar");
-            } else if (path == QLatin1StringView("delete")) {
+            } else if (path == "delete"_L1) {
                 return i18n("Move this invitation to my trash folder");
-            } else if (path == QLatin1StringView("delegate")) {
+            } else if (path == "delegate"_L1) {
                 return i18n("Delegate invitation");
-            } else if (path == QLatin1StringView("forward")) {
+            } else if (path == "forward"_L1) {
                 return i18n("Forward invitation");
-            } else if (path == QLatin1StringView("cancel")) {
+            } else if (path == "cancel"_L1) {
                 return i18n("Remove invitation from my calendar");
-            } else if (path.startsWith(QLatin1StringView("ATTACH:"))) {
+            } else if (path.startsWith("ATTACH:"_L1)) {
                 const QString name = QString::fromUtf8(QByteArray::fromBase64(path.mid(7).toUtf8()));
                 return i18n("Open attachment \"%1\"", name);
             }

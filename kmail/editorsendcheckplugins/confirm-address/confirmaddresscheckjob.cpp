@@ -15,13 +15,13 @@ bool matchWhitelistEmail(const QString &email, const QString &whitelistEmail)
 
 bool matchDomain(const QString &email, const QString &domain)
 {
-    const int atPos = email.lastIndexOf(QLatin1Char('@'));
+    const int atPos = email.lastIndexOf(u'@');
     if (atPos == -1 || atPos == (email.length() - 1)) {
         return false;
     }
 
     const QStringView domainPart = QStringView{email}.mid(atPos + 1);
-    const QString normalizedDomain = domain.trimmed().startsWith(QLatin1Char('@')) ? domain.trimmed().mid(1) : domain.trimmed();
+    const QString normalizedDomain = domain.trimmed().startsWith(u'@') ? domain.trimmed().mid(1) : domain.trimmed();
     if (normalizedDomain.isEmpty()) {
         return false;
     }
@@ -30,7 +30,7 @@ bool matchDomain(const QString &email, const QString &domain)
         return true;
     }
 
-    const QString suffix = QLatin1Char('.') + normalizedDomain;
+    const QString suffix = u'.' + normalizedDomain;
     return domainPart.endsWith(suffix, Qt::CaseInsensitive);
 }
 }
