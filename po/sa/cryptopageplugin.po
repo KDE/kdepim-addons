@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,41 +19,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: cryptopageplugin.cpp:37
+#: cryptopageplugin.cpp:38
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "अनुमत प्रोटोकॉल"
 
-#: cryptopageplugin.cpp:52
+#: cryptopageplugin.cpp:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "प्राधान्यं OpenPGP एन्क्रिप्शन कुञ्जी:"
 
-#: cryptopageplugin.cpp:57
+#: cryptopageplugin.cpp:58
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "प्राधान्यं S/MIME एन्क्रिप्शन प्रमाणपत्रम्:"
 
-#: cryptopageplugin.cpp:62
+#: cryptopageplugin.cpp:63
 #, kde-format
 msgid "Message Preference"
 msgstr "सन्देश प्राधान्यम्"
 
-#: cryptopageplugin.cpp:71
+#: cryptopageplugin.cpp:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "चिह्नम्‌:"
 
-#: cryptopageplugin.cpp:88
+#: cryptopageplugin.cpp:89
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "एन्क्रिप्ट् :"
 
-#: cryptopageplugin.cpp:106
+#: cryptopageplugin.cpp:107
 #, kde-format
 msgid "Crypto Settings"
 msgstr "क्रिप्टो सेटिंग्स्"

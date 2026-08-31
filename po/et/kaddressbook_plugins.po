@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2019-12-18 18:42+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,104 +17,104 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:36
+#: checkgravatar/checkgravatarplugininterface.cpp:37
 #, fuzzy, kde-format
 #| msgid "Check Gravatar..."
 msgid "Check Gravatar…"
 msgstr "Kontrolli gravatari..."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:60
-#: sendmail/sendmailplugininterface.cpp:59
+#: checkgravatar/checkgravatarplugininterface.cpp:61
+#: sendmail/sendmailplugininterface.cpp:60
 #, kde-format
 msgid "You have not selected any contacts."
 msgstr "Sa pole valinud ühtegi kontakti."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:68
+#: checkgravatar/checkgravatarplugininterface.cpp:69
 #, kde-format
 msgid "No email found for this contact."
 msgstr "Ei leitud ühtegi selle kontakti kirja."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:108
+#: checkgravatar/checkgravatarplugininterface.cpp:109
 #, kde-format
 msgid "A contact group was selected."
 msgstr "Valiti kontaktirühm."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:111
+#: checkgravatar/checkgravatarplugininterface.cpp:112
 #, kde-format
 msgid "Too many contacts selected."
 msgstr "Valiti liiga palju kontakte."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Save Image"
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Salvesta pilt"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:28
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Save Image URL"
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "Salvesta pildi URL"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:31
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Check and update Gravatar"
 msgstr "Gravatari kontrollimine ja uuendamine"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:24
 #, fuzzy, kde-format
 #| msgid "Search"
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Otsi"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:32
 #, fuzzy, kde-format
 #| msgid "Email:"
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-post:"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:110
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:111
 #, kde-format
 msgid "Search is impossible."
 msgstr "Otsing on võimatu."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:129
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:130
 #, kde-format
 msgid "No Gravatar Found."
 msgstr "Ühtegi gravatari ei leitud."
 
-#: mergecontacts/mergecontactsplugininterface.cpp:25
+#: mergecontacts/mergecontactsplugininterface.cpp:26
 #, fuzzy, kde-format
 #| msgid "Merge Contacts..."
 msgid "Merge Contacts…"
 msgstr "Ühenda kontaktid..."
 
-#: mergelib/manualmerge/mergecontactsdialog.cpp:40
+#: mergelib/manualmerge/mergecontactsdialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Contacts to merge"
 msgstr "Ühendatavate kontaktide valimine"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:31
+#: mergelib/manualmerge/mergecontactwidget.cpp:32
 #, fuzzy, kde-format
 #| msgid "merge"
 msgctxt "@action:button"
 msgid "merge"
 msgstr "Ühenda"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:47
+#: mergelib/manualmerge/mergecontactwidget.cpp:48
 #, fuzzy, kde-format
 #| msgid "Select contacts that you really want to merge:"
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Ühendatavad kontaktid:"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:67
+#: mergelib/manualmerge/mergecontactwidget.cpp:68
 #, fuzzy, kde-format
 #| msgid "Select the addressbook in which to store merged contacts:"
 msgctxt "@label:textbox"
@@ -122,13 +122,13 @@ msgid "Select the addressbook in which to store merged contacts:"
 msgstr "Aadressiraamat, kuhu salvestada ühendatud kontaktid:"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
 #, kde-format
 msgid "Select All"
 msgstr ""
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:103
 #, kde-format
 msgid "Deselect All"
 msgstr ""
@@ -149,40 +149,40 @@ msgstr "Kontaktid"
 msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "Topeltkontakt %1"
 
-#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:42
+#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Ühendatavate topeltkontaktide otsimine ja valimine"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:49
 #, fuzzy, kde-format
 #| msgid "Search is impossible."
 msgctxt "@info:placeholder"
 msgid "Search in result…"
 msgstr "Otsing on võimatu."
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:73
 #, fuzzy, kde-format
 #| msgid "Select AddressBook:"
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
 msgstr "Aadressiraamat:"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:86
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:45
 #, fuzzy, kde-format
 #| msgid "Merge"
 msgctxt "@action:button"
 msgid "Merge"
 msgstr "Ühenda"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
 #, kde-format
 msgid "Expand All"
 msgstr ""
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:100
 #, kde-format
 msgid "Collapse All"
 msgstr ""
@@ -202,7 +202,7 @@ msgstr "Ühtegi topeltkontakti ei leitud."
 msgid "No contacts selected."
 msgstr "Ühtegi kontakti pole valitud."
 
-#: mergelib/widgets/mergecontactloseinformationwarning.cpp:20
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:21
 #, kde-format
 msgid ""
 "Some information can be lost. Do you want to continue, or customize what you "
@@ -211,21 +211,21 @@ msgstr ""
 "Osa teavet võib kaotsi minna. Kas jätkata või soovid kohandada, mida täpselt "
 "ühendada?"
 
-#: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:23
 #, fuzzy, kde-format
 #| msgid "Customize"
 msgctxt "@action"
 msgid "Customize"
 msgstr "Kohandamine"
 
-#: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:28
 #, fuzzy, kde-format
 #| msgid "Automatic Merging"
 msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "Automaatne ühendamine"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
 msgid ""
 "Some information was not selected. You can lose this information. Do you "
@@ -234,55 +234,55 @@ msgstr ""
 "Osa teavet jäi valimata. See võib kaotsi minna. Kas tõesti ühendamisega "
 "jätkata?"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:90
 #, fuzzy, kde-format
 #| msgid "Missing Selected Information"
 msgctxt "@title:window"
 msgid "Missing Selected Information"
 msgstr "Osa teavet puudub"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:63
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:64
 #, kde-format
 msgctxt "The wedding anniversary of a contact"
 msgid "Anniversary"
 msgstr "Aastapäev"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:72
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:73
 #, kde-format
 msgid "Blog Feed"
 msgstr "Veebipäeviku voog"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:81
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:82
 #, kde-format
 msgid "Profession"
 msgstr "Elukutse"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:90
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:91
 #, kde-format
 msgid "Office"
 msgstr "Kontor"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:93
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:94
 #, kde-format
 msgid "Manager"
 msgstr "Juht"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:96
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:97
 #, kde-format
 msgid "Assistant"
 msgstr "Assistent"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:105
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:106
 #, kde-format
 msgid "Spouse"
 msgstr "Abikaasa"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:120
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:121
 #, kde-format
 msgid "(Undefined)"
 msgstr "(Määramata)"
 
-#: searchduplicates/searchduplicatesplugininterface.cpp:24
+#: searchduplicates/searchduplicatesplugininterface.cpp:25
 #, fuzzy, kde-format
 #| msgid "Search Duplicate Contacts..."
 msgid "Search Duplicate Contacts…"
@@ -293,7 +293,7 @@ msgstr "Otsi topeltkontakte..."
 msgid "No emails found in selected contacts."
 msgstr "Valitud kontaktide seas ei leitud ühtegi e-posti aadressi."
 
-#: sendmail/sendmailplugininterface.cpp:26
+#: sendmail/sendmailplugininterface.cpp:27
 #, fuzzy, kde-format
 #| msgid "Send an email..."
 msgid "Send an email…"
@@ -309,7 +309,7 @@ msgstr "Ühtegi vCardi ei loodud."
 msgid "Temporary file '%1' cannot be created"
 msgstr "Ajutise faili \"%1\" loomine nurjus"
 
-#: sendvcards/sendvcardsplugininterface.cpp:34
+#: sendvcards/sendvcardsplugininterface.cpp:35
 #, fuzzy, kde-format
 #| msgid "Send vCards..."
 msgid "Send vCards…"

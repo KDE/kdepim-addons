@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2026-08-16 08:04+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,154 +18,154 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 26.04.3\n"
 
-#: dkim-verify/dkimadvancedwidget.cpp:19
+#: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "עדיין לאמת את החתימה, אם שם התחום רק בודק DKIM"
 
-#: dkim-verify/dkimadvancedwidget.cpp:20
+#: dkim-verify/dkimadvancedwidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr "להשתמש בפיענוח נינוח בעת קריאת הכותרת „Authentication-Result”"
 
-#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
-#: dkim-verify/dkimgeneralwidget.cpp:42
+#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:43
 #, kde-format
 msgid "Nothing"
 msgstr "כלום"
 
-#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Warning"
 msgstr "אזהרה"
 
-#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Error"
 msgstr "שגיאה"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34
+#: dkim-verify/dkimadvancedwidget.cpp:35
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
 msgstr "להתייחס לאלגוריתם חתימה RSA-SHA1 בתור:"
 
-#: dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimadvancedwidget.cpp:39
 #, kde-format
 msgid "Treat small Key as:"
 msgstr "להתייחס למפתח קטן בתור:"
 
-#: dkim-verify/dkimadvancedwidget.cpp:40
+#: dkim-verify/dkimadvancedwidget.cpp:41
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "הגדרה"
 
-#: dkim-verify/dkimadvancedwidget.cpp:43
+#: dkim-verify/dkimadvancedwidget.cpp:44
 #, kde-format
 msgid "Authentication Server verified:"
 msgstr "שרת אימות הזהות אומת:"
 
-#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:26
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
 msgstr "הגדרת שרת אימות עם זהות מאומתת"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
 #, kde-format
 msgid "New Server:"
 msgstr "שרת חדש:"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
 #, kde-format
 msgid "New Server"
 msgstr "שרת חדש"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
 #, kde-format
 msgid "Modify Server"
 msgstr "החלפת שרת"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
 #, kde-format
 msgid "Server:"
 msgstr "שרת:"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:45
 #, kde-format
 msgid "Do you want to delete selected server(s) name?"
 msgstr "למחוק את שמות השרתים הנבחרים?"
 
-#: dkim-verify/dkimconfiguredialog.cpp:27
+#: dkim-verify/dkimconfiguredialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure DKIM"
 msgstr "הגדרת DKIM"
 
-#: dkim-verify/dkimconfiguretab.cpp:38
-#: foldersettings/folderconfiguresettingspagewidget.cpp:36
+#: dkim-verify/dkimconfiguretab.cpp:39
+#: foldersettings/folderconfiguresettingspagewidget.cpp:37
 #, kde-format
 msgid "General"
 msgstr "כללי"
 
-#: dkim-verify/dkimconfiguretab.cpp:40
+#: dkim-verify/dkimconfiguretab.cpp:41
 #, kde-format
 msgid "Record Keys"
 msgstr "מפתחות רשומות"
 
-#: dkim-verify/dkimconfiguretab.cpp:42
+#: dkim-verify/dkimconfiguretab.cpp:43
 #, kde-format
 msgid "Policy"
 msgstr "מדיניות"
 
-#: dkim-verify/dkimconfiguretab.cpp:44
+#: dkim-verify/dkimconfiguretab.cpp:45
 #, kde-format
 msgid "Advanced"
 msgstr "מתקדם"
 
-#: dkim-verify/dkimgeneralwidget.cpp:18
+#: dkim-verify/dkimgeneralwidget.cpp:19
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "הפעלת תמיכה ב־DKIM"
 
-#: dkim-verify/dkimgeneralwidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "שמירת תוצאת DKIM"
 
-#: dkim-verify/dkimgeneralwidget.cpp:21
+#: dkim-verify/dkimgeneralwidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr "החלפת תוצאת DKIM בערך הכותרת Authentication-Result"
 
-#: dkim-verify/dkimgeneralwidget.cpp:37
+#: dkim-verify/dkimgeneralwidget.cpp:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "שמירת מפתח רשומה:"
 
-#: dkim-verify/dkimgeneralwidget.cpp:42
+#: dkim-verify/dkimgeneralwidget.cpp:43
 #, kde-format
 msgid "Save"
 msgstr "שמירה"
 
-#: dkim-verify/dkimgeneralwidget.cpp:42
+#: dkim-verify/dkimgeneralwidget.cpp:43
 #, kde-format
 msgid "Save and Compare"
 msgstr "שמירה והשוואה"
 
-#: dkim-verify/dkimpolicywidget.cpp:18
+#: dkim-verify/dkimpolicywidget.cpp:19
 #, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "לבדוק האם לחתום על הודעת הדוא״ל"
 
-#: dkim-verify/dkimpolicywidget.cpp:19
+#: dkim-verify/dkimpolicywidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
@@ -173,88 +173,88 @@ msgstr ""
 "להשתמש ב־DMARC כדי לזהות באופן היוריסטי כדי לקבוע האם צריך לחתום על הודעת "
 "הדוא״ל"
 
-#: dkim-verify/dkimpolicywidget.cpp:20
+#: dkim-verify/dkimpolicywidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "להשתמש בכלל ברירת המחדל"
 
-#: dkim-verify/dkimpolicywidget.cpp:21
+#: dkim-verify/dkimpolicywidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "יצירת כלל אוטומטית"
 
-#: dkim-verify/dkimpolicywidget.cpp:22
+#: dkim-verify/dkimpolicywidget.cpp:23
 #, kde-format
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "קריאת כותרת Authentication-Result"
 
-#: dkim-verify/dkimpolicywidget.cpp:23
+#: dkim-verify/dkimpolicywidget.cpp:24
 #, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "לייצר אוטומטית כאשר המוען ב־SDID"
 
-#: dkim-verify/dkimpolicywidget.cpp:24
+#: dkim-verify/dkimpolicywidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "הצגת כללים"
 
-#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:28
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
 msgstr "הגדרת תיקיית אשפה לחשבון תפוגה"
 
-#: foldersettings/folderconfiguresettingsdialog.cpp:28
+#: foldersettings/folderconfiguresettingsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Folder Settings"
 msgstr "הגדרת תצורת תיקייה"
 
-#: foldersettings/folderconfiguresettingspagebase.cpp:17
+#: foldersettings/folderconfiguresettingspagebase.cpp:18
 #, kde-format
 msgid "Modify"
 msgstr "שינוי"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:40
+#: foldersettings/folderconfiguresettingspagewidget.cpp:41
 #, kde-format
 msgid "View"
 msgstr "צפייה"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:44
+#: foldersettings/folderconfiguresettingspagewidget.cpp:45
 #, kde-format
 msgid "Expiry"
 msgstr "תפוגה"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:48
+#: foldersettings/folderconfiguresettingspagewidget.cpp:49
 #, kde-format
 msgid "Template"
 msgstr "תבנית"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:57
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
 #, kde-format
 msgid ""
 "It will override all settings for each selected folder. Do you want to "
 "continue?"
 msgstr "כל ההגדרות לכל אחת מהתיקיות שנבחרו תידרסנה. להמשיך?"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#: foldersettings/folderconfiguresettingspagewidget.cpp:59
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "הגדרות תיקיית שמירה"
 
-#: foldersettings/folderconfiguretreewidget.cpp:52
+#: foldersettings/folderconfiguretreewidget.cpp:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr "בחירה"
 
-#: foldersettings/folderconfiguretreewidget.cpp:60
+#: foldersettings/folderconfiguretreewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect"
@@ -266,42 +266,42 @@ msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr "הגדרת Gravatar"
 
-#: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
+#: gravatar/gravatarconfiguresettingspluginwidget.cpp:24
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "הפעלת תמיכה ב־Gravatar"
 
-#: openurlwith/openurlwithconfigurecreatedialog.cpp:16
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Create"
 msgstr "יצירה"
 
-#: openurlwith/openurlwithconfigurecreatedialog.cpp:45
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:46
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit"
 msgstr "עריכה"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:19
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "פעיל"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:32
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:33
 #, kde-format
 msgid "Server Name:"
 msgstr "שם השרת:"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:36
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">פרטי תבנית ארגומנטים…</a></qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:42
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:43
 #, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
@@ -310,7 +310,7 @@ msgstr ""
 "<qt><p><strong>אפשר להשתמש בביטויים האלה לארגומנטים:</strong></p><ul><li>%u "
 "- הכתובת לשימוש הפקודה</li></ul></p></qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:53
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:54
 #, kde-format
 msgid "Command line:"
 msgstr "שורת פקודות:"
@@ -320,53 +320,53 @@ msgstr "שורת פקודות:"
 msgid "Executable:"
 msgstr "קובץ הפעלה:"
 
-#: openurlwith/openurlwithconfiguredialog.cpp:26
+#: openurlwith/openurlwithconfiguredialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
 msgstr "הגדרת פתיחת כתובת עם תוסף"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:59
+#: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "הוספת כלל…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:60
+#: openurlwith/openurlwithconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "הסרת כלל"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:61
+#: openurlwith/openurlwithconfigurewidget.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "שינוי כלל…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:153
+#: openurlwith/openurlwithconfigurewidget.cpp:154
 #, kde-format
 msgid "A rule for host was already added."
 msgstr "כבר נוסף כלל למארח."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:153
+#: openurlwith/openurlwithconfigurewidget.cpp:154
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "המארח כבר נבדק"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:166
+#: openurlwith/openurlwithconfigurewidget.cpp:167
 #, kde-format
 msgid "Rule already exists."
 msgstr "הכלל כבר קיים."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:166
+#: openurlwith/openurlwithconfigurewidget.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "שכפול כלל"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:210
+#: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
@@ -375,23 +375,23 @@ msgstr[1] "להסיר את הכללים האלה?"
 msgstr[2] "להסיר את הכללים האלה?"
 msgstr[3] "להסיר את הכללים האלה?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:211
+#: openurlwith/openurlwithconfigurewidget.cpp:212
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "הסרת כלל"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:228
+#: openurlwith/openurlwithconfigurewidget.cpp:229
 #, kde-format
 msgid "Add Rule…"
 msgstr "הוספת כלל…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:230
+#: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
 msgid "Edit Rule…"
 msgstr "עריכת כלל…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:235
+#: openurlwith/openurlwithconfigurewidget.cpp:236
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
@@ -400,13 +400,13 @@ msgstr[1] "הסרת כללים"
 msgstr[2] "הסרת כללים"
 msgstr[3] "הסרת כללים"
 
-#: scamsettings/scamconfiguresettingsdialog.cpp:27
+#: scamsettings/scamconfiguresettingsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "הגדרת תצורת הונאה"
 
-#: scamsettings/scamconfiguresettingstreeview.cpp:32
+#: scamsettings/scamconfiguresettingstreeview.cpp:33
 #, kde-format
 msgid "Add…"
 msgstr "הוספה…"

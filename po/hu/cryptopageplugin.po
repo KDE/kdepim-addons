@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-06-22 15:52+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,41 +18,41 @@ msgstr ""
 "X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: cryptopageplugin.cpp:37
+#: cryptopageplugin.cpp:38
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Engedélyezett protokollok"
 
-#: cryptopageplugin.cpp:52
+#: cryptopageplugin.cpp:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Előnyben részesített OpenPGP titkosítási kulcs:"
 
-#: cryptopageplugin.cpp:57
+#: cryptopageplugin.cpp:58
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Előnyben részesített S/MIME titkosítási tanúsítvány:"
 
-#: cryptopageplugin.cpp:62
+#: cryptopageplugin.cpp:63
 #, kde-format
 msgid "Message Preference"
 msgstr "Üzenetbeállítások"
 
-#: cryptopageplugin.cpp:71
+#: cryptopageplugin.cpp:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Aláírás:"
 
-#: cryptopageplugin.cpp:88
+#: cryptopageplugin.cpp:89
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Titkosítás:"
 
-#: cryptopageplugin.cpp:106
+#: cryptopageplugin.cpp:107
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Titkosítási beállítások"

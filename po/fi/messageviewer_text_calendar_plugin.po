@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-29 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-10-20 17:27+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -47,37 +47,37 @@ msgstr "Lisää"
 msgid "Remove"
 msgstr "Poista"
 
-#: delegateselector.cpp:23
+#: delegateselector.cpp:24
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "Pidä minut ajan tasalla ilmentymän tilan muutoksista."
 
-#: delegateselector.cpp:25
+#: delegateselector.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
 msgstr "Valitse henkilö, jolle delegoida"
 
 # Periaatteessa tehtävä delegoidaan, ei henkilöä, mutta lienee kontekstissa selvä?
-#: delegateselector.cpp:28
+#: delegateselector.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Delegoi:"
 
-#: reactiontoinvitationdialog.cpp:31
+#: reactiontoinvitationdialog.cpp:32
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Huomautus:"
 
-#: text_calendar.cpp:374
+#: text_calendar.cpp:375
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
 msgstr "Liitettä ”%1” ei löydy kutsusta."
 
-#: text_calendar.cpp:389
+#: text_calendar.cpp:390
 #, kde-format
 msgid ""
 "The invitation attachment \"%1\" is a web link that is inaccessible from "
@@ -88,7 +88,7 @@ msgstr ""
 "tapahtuman järjestäjää lähettämään kutsu uudelleen niin, että siihen on "
 "tallennettu liite linkin sijaan."
 
-#: text_calendar.cpp:441
+#: text_calendar.cpp:442
 #, kde-format
 msgid ""
 "<qt>None of your identities match the receiver of this message,<br/>please "
@@ -99,7 +99,7 @@ msgstr ""
 ">Valitse, mikä seuraavista osoitteista on sinun, jos mikään,<br/> tai mitä "
 "henkilöyksistäsi käytetään vastattaessa:</qt>"
 
-#: text_calendar.cpp:447
+#: text_calendar.cpp:448
 #, kde-format
 msgid ""
 "<qt>Several of your identities match the receiver of this message,<br/"
@@ -108,256 +108,256 @@ msgstr ""
 "<qt>Useampi henkilöyksistäsi vastaa viestin vastaanottajaa.<br/> Valitse, "
 "mikä seuraavista osoitteista on sinun:</qt>"
 
-#: text_calendar.cpp:462
+#: text_calendar.cpp:463
 #, kde-format
 msgid "Select Address"
 msgstr "Valitse osoite"
 
-#: text_calendar.cpp:524
+#: text_calendar.cpp:525
 #, kde-format
 msgid "Answer: "
 msgstr "Vastaus: "
 
-#: text_calendar.cpp:526
+#: text_calendar.cpp:527
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
 msgstr "Hylätty: %1"
 
-#: text_calendar.cpp:528
+#: text_calendar.cpp:529
 #, kde-format
 msgctxt "Unsure if it is possible to attend."
 msgid "Tentative: %1"
 msgstr "Alustava: %1"
 
-#: text_calendar.cpp:530
+#: text_calendar.cpp:531
 #, kde-format
 msgctxt "Accepted the invitation."
 msgid "Accepted: %1"
 msgstr "Hyväksytty: %1"
 
-#: text_calendar.cpp:552 text_calendar.cpp:571
+#: text_calendar.cpp:553 text_calendar.cpp:572
 #, kde-format
 msgid "Invitation answer attached."
 msgstr "Vastaus kutsuun liitteenä."
 
-#: text_calendar.cpp:678
+#: text_calendar.cpp:679
 #, kde-format
 msgid "Incidence with no summary"
 msgstr "Yhteenvedoton tapahtuma"
 
-#: text_calendar.cpp:683
+#: text_calendar.cpp:684
 #, kde-format
 msgid "Answer: %1"
 msgstr "Vastaus: %1"
 
-#: text_calendar.cpp:686
+#: text_calendar.cpp:687
 #, kde-format
 msgid "Delegated: %1"
 msgstr "Delegoitu: %1"
 
-#: text_calendar.cpp:689
+#: text_calendar.cpp:690
 #, kde-format
 msgid "Forwarded: %1"
 msgstr "Välitetty: %1"
 
-#: text_calendar.cpp:692
+#: text_calendar.cpp:693
 #, kde-format
 msgid "Declined Counter Proposal: %1"
 msgstr "Hylätty vastaesitys: %1"
 
-#: text_calendar.cpp:756 text_calendar.cpp:762
+#: text_calendar.cpp:757 text_calendar.cpp:763
 #, kde-format
 msgid "\"%1\" occurred already."
 msgstr "”%1” tapahtui jo."
 
-#: text_calendar.cpp:758 text_calendar.cpp:775
+#: text_calendar.cpp:759 text_calendar.cpp:776
 #, kde-format
 msgid "\"%1\" is currently in-progress."
 msgstr "”%1” on paraikaa käynnissä."
 
-#: text_calendar.cpp:764
+#: text_calendar.cpp:765
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
 msgstr "”%1”, joka vie koko tämän päivän, on paraikaa käynnissä."
 
-#: text_calendar.cpp:773 text_calendar.cpp:785
+#: text_calendar.cpp:774 text_calendar.cpp:786
 #, kde-format
 msgid "\"%1\" is past due."
 msgstr "”%1” on ohi määräajan."
 
-#: text_calendar.cpp:779
+#: text_calendar.cpp:780
 #, kde-format
 msgid "\"%1\" has already started."
 msgstr "”%1” on jo alkanut."
 
-#: text_calendar.cpp:787
+#: text_calendar.cpp:788
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
 msgstr "”%1”, joka vie koko tämän päivän, on paraikaa käynnissä."
 
-#: text_calendar.cpp:791
+#: text_calendar.cpp:792
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
 msgstr "”%1”, joka vie koko tämän päivän, on jo alkanut."
 
-#: text_calendar.cpp:803
+#: text_calendar.cpp:804
 #, kde-format
 msgid "Do you still want to accept the task?"
 msgstr "Haluatko silti hyväksyä tehtävän?"
 
-#: text_calendar.cpp:805
+#: text_calendar.cpp:806
 #, kde-format
 msgid "Do you still want to accept the invitation?"
 msgstr "Haluatko silti hyväksyä kutsun?"
 
-#: text_calendar.cpp:807 text_calendar.cpp:819
+#: text_calendar.cpp:808 text_calendar.cpp:820
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept"
 msgstr "Hyväksy"
 
-#: text_calendar.cpp:811
+#: text_calendar.cpp:812
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the task?"
 msgstr "Haluatko silti ehdollisesti hyväksyä tehtävän?"
 
-#: text_calendar.cpp:813
+#: text_calendar.cpp:814
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
 msgstr "Haluatko silti alustavasti hyväksyä kutsun?"
 
-#: text_calendar.cpp:815 text_calendar.cpp:823 text_calendar.cpp:827
+#: text_calendar.cpp:816 text_calendar.cpp:824 text_calendar.cpp:828
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Lähetä"
 
-#: text_calendar.cpp:818
+#: text_calendar.cpp:819
 #, kde-format
 msgid "Do you still want to accept the counter proposal?"
 msgstr "Haluatko silti hyväksyä vastaesityksen?"
 
-#: text_calendar.cpp:822
+#: text_calendar.cpp:823
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
 msgstr "Haluatko silti tehdä vastaesityksen?"
 
-#: text_calendar.cpp:826
+#: text_calendar.cpp:827
 #, kde-format
 msgid "Do you still want to send a decline response?"
 msgstr "Haluatko kieltäytyä?"
 
-#: text_calendar.cpp:830
+#: text_calendar.cpp:831
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
 msgstr "Haluatko silti torjua vastaesityksen?"
 
-#: text_calendar.cpp:831
+#: text_calendar.cpp:832
 #, kde-format
 msgctxt "@action:button"
 msgid "Decline"
 msgstr "Hylkää"
 
-#: text_calendar.cpp:833
+#: text_calendar.cpp:834
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
 msgstr "Haluatko silti tallentaa tämän vastauksen kalenteriisi?"
 
-#: text_calendar.cpp:834 text_calendar.cpp:870
+#: text_calendar.cpp:835 text_calendar.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
 msgstr "Tallenna"
 
-#: text_calendar.cpp:837
+#: text_calendar.cpp:838
 #, kde-format
 msgid "Do you still want to delegate this task?"
 msgstr "Haluatko silti delegoida tämän tehtävän?"
 
-#: text_calendar.cpp:839
+#: text_calendar.cpp:840
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
 msgstr "Haluatko silti delegoida tämän kutsun?"
 
 # Periaatteessa tehtävä delegoidaan, ei henkilöä, mutta lienee kontekstissa selvä?
-#: text_calendar.cpp:841
+#: text_calendar.cpp:842
 #, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
 msgstr "Delegoi"
 
-#: text_calendar.cpp:844
+#: text_calendar.cpp:845
 #, kde-format
 msgid "Do you still want to forward this task?"
 msgstr "Haluatko silti välittää tämän tehtävän?"
 
-#: text_calendar.cpp:846
+#: text_calendar.cpp:847
 #, kde-format
 msgid "Do you still want to forward this invitation?"
 msgstr "Haluatko silti välittää tämän kutsun?"
 
-#: text_calendar.cpp:848
+#: text_calendar.cpp:849
 #, kde-format
 msgctxt "@action:button"
 msgid "Forward"
 msgstr "Edennä"
 
-#: text_calendar.cpp:852
+#: text_calendar.cpp:853
 #, kde-format
 msgid "Do you still want to cancel this task?"
 msgstr "Haluatko silti perua tämän tehtävän?"
 
-#: text_calendar.cpp:853
+#: text_calendar.cpp:854
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
 msgstr "Peru tehtävä"
 
-#: text_calendar.cpp:855
+#: text_calendar.cpp:856
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
 msgstr "Haluatko silti perua tämän kutsun?"
 
-#: text_calendar.cpp:856
+#: text_calendar.cpp:857
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
 msgstr "Peru kutsu"
 
-#: text_calendar.cpp:859
+#: text_calendar.cpp:860
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Älä peru"
 
-#: text_calendar.cpp:862
+#: text_calendar.cpp:863
 #, kde-format
 msgid "Do you still want to check your calendar?"
 msgstr "Haluatko silti tarkistaa kalenterisi?"
 
-#: text_calendar.cpp:863
+#: text_calendar.cpp:864
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
 msgstr "Tarkista"
 
-#: text_calendar.cpp:866
+#: text_calendar.cpp:867
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
 msgstr "Haluatko silti tallentaa tämän tehtävän kalenteriisi?"
 
-#: text_calendar.cpp:868
+#: text_calendar.cpp:869
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
 msgstr "Haluatko silti tallentaa tämän kutsun kalenteriisi?"
 
-#: text_calendar.cpp:874
+#: text_calendar.cpp:875
 #, kde-format
 msgid "%1?"
 msgstr "%1?"
 
-#: text_calendar.cpp:881
+#: text_calendar.cpp:882
 #, kde-format
 msgid ""
 "%1\n"
@@ -366,35 +366,35 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: text_calendar.cpp:915
+#: text_calendar.cpp:916
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "Vastine kutsuun"
 
-#: text_calendar.cpp:926 text_calendar.cpp:1179
+#: text_calendar.cpp:927 text_calendar.cpp:1180
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
 msgstr "Unohdit lisätä ehdotuksen, lisää sellainen."
 
-#: text_calendar.cpp:959
+#: text_calendar.cpp:960
 #, kde-format
 msgid "Delegation to organizer is not possible."
 msgstr "Ei voi delegoida järjestäjälle."
 
-#: text_calendar.cpp:1088
+#: text_calendar.cpp:1089
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Tallenna kutsun liite"
 
-#: text_calendar.cpp:1168
+#: text_calendar.cpp:1169
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "Hylkää vastaesitys"
 
-#: text_calendar.cpp:1210
+#: text_calendar.cpp:1211
 #, kde-format
 msgid ""
 "You have no writable calendar folders for invitations, so storing or saving "
@@ -405,7 +405,7 @@ msgstr ""
 "vastineen tallentaminen ei ole mahdollista.\n"
 "Luo vähintään yksi kirjoitettavissa oleva tapahtumakalenteri ja synkronoi."
 
-#: text_calendar.cpp:1228 text_calendar.cpp:1236
+#: text_calendar.cpp:1229 text_calendar.cpp:1237
 #, kde-format
 msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
@@ -413,7 +413,7 @@ msgid ""
 msgstr ""
 "Viestiin tallennettu kalenterikutsu on jollakin tapaa rikki. Ei voida jatkaa."
 
-#: text_calendar.cpp:1289
+#: text_calendar.cpp:1290
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -429,115 +429,115 @@ msgstr ""
 "Haluatko lähettää järjestäjälle kutsua koskevan viestin?\n"
 "Peru tallennus painamalla [Peru]."
 
-#: text_calendar.cpp:1293
+#: text_calendar.cpp:1294
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
 msgstr "Lähetä järjestäjälle sähköpostia"
 
-#: text_calendar.cpp:1294
+#: text_calendar.cpp:1295
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Älä lähetä"
 
-#: text_calendar.cpp:1295
+#: text_calendar.cpp:1296
 #, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Lähetä sähköposti"
 
-#: text_calendar.cpp:1303
+#: text_calendar.cpp:1304
 #, kde-format
 msgid "Re: %1"
 msgstr "Re: %1"
 
-#: text_calendar.cpp:1375
+#: text_calendar.cpp:1376
 #, kde-format
 msgid "Open Attachment"
 msgstr "Avaa liite"
 
-#: text_calendar.cpp:1376
+#: text_calendar.cpp:1377
 #, kde-format
 msgid "Save Attachment As…"
 msgstr "Tallenna liite nimellä…"
 
-#: text_calendar.cpp:1392
+#: text_calendar.cpp:1393
 #, kde-format
 msgid "Accept invitation"
 msgstr "Hyväksy kutsu"
 
-#: text_calendar.cpp:1394
+#: text_calendar.cpp:1395
 #, kde-format
 msgid "Accept invitation conditionally"
 msgstr "Hyväksy kutsu ehdollisesti"
 
-#: text_calendar.cpp:1396
+#: text_calendar.cpp:1397
 #, kde-format
 msgid "Accept counter proposal"
 msgstr "Hyväksy vastaesitys"
 
-#: text_calendar.cpp:1398
+#: text_calendar.cpp:1399
 #, kde-format
 msgid "Create a counter proposal…"
 msgstr "Luo vastaesitys…"
 
-#: text_calendar.cpp:1400
+#: text_calendar.cpp:1401
 #, kde-format
 msgid "Throw mail away"
 msgstr "Heitä sähköposti pois"
 
-#: text_calendar.cpp:1402
+#: text_calendar.cpp:1403
 #, kde-format
 msgid "Decline invitation"
 msgstr "Hylkää kutsu"
 
-#: text_calendar.cpp:1404
+#: text_calendar.cpp:1405
 #, kde-format
 msgid "Postpone"
 msgstr "Lykkää"
 
-#: text_calendar.cpp:1406
+#: text_calendar.cpp:1407
 #, kde-format
 msgid "Decline counter proposal"
 msgstr "Hylkää vastaesitys"
 
-#: text_calendar.cpp:1408
+#: text_calendar.cpp:1409
 #, kde-format
 msgid "Check my calendar…"
 msgstr "Tarkista kalenterini…"
 
-#: text_calendar.cpp:1410
+#: text_calendar.cpp:1411
 #, kde-format
 msgid "Record response into my calendar"
 msgstr "Tallenna vastaus kalenteriini"
 
-#: text_calendar.cpp:1412
+#: text_calendar.cpp:1413
 #, kde-format
 msgid "Record invitation into my calendar"
 msgstr "Kirjaa kutsu kalenteriini"
 
-#: text_calendar.cpp:1414
+#: text_calendar.cpp:1415
 #, kde-format
 msgid "Move this invitation to my trash folder"
 msgstr "Siirrä tämä kutsu roskakoriini"
 
-#: text_calendar.cpp:1416
+#: text_calendar.cpp:1417
 #, kde-format
 msgid "Delegate invitation"
 msgstr "Delegoi kutsu"
 
-#: text_calendar.cpp:1418
+#: text_calendar.cpp:1419
 #, kde-format
 msgid "Forward invitation"
 msgstr "Välitä kutsu"
 
-#: text_calendar.cpp:1420
+#: text_calendar.cpp:1421
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "Poista kutsu kalenteristani"
 
-#: text_calendar.cpp:1423
+#: text_calendar.cpp:1424
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "Avaa liite ”%1”"

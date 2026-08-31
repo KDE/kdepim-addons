@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorconvertertext_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-09-14 14:21+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -25,71 +25,71 @@ msgctxt "@title:window"
 msgid "Configure Markdown Plugin"
 msgstr "Markdown-Modul einrichten"
 
-#: markdown/markdownlib/markdownconfigurewidget.cpp:19
+#: markdown/markdownlib/markdownconfigurewidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable embedded LaTeX"
 msgstr "Eingebettetes LaTeX aktivieren"
 
-#: markdown/markdownlib/markdownconfigurewidget.cpp:20
+#: markdown/markdownlib/markdownconfigurewidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable PHP Markdown Extra definition lists"
 msgstr "Zusätzliche Definitionslisten für PHP-Markdown aktivieren"
 
-#: markdown/markdownlib/markdownconverter.cpp:76
-#: markdown/markdownlib/markdownconverter.cpp:104
+#: markdown/markdownlib/markdownconverter.cpp:77
+#: markdown/markdownlib/markdownconverter.cpp:105
 #, kde-format
 msgid "Failed to compile the Markdown document."
 msgstr "Das Markdown-Dokument kann nicht kompiliert werden."
 
-#: markdown/markdownlib/markdowncreateimagedialog.cpp:28
+#: markdown/markdownlib/markdowncreateimagedialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Image"
 msgstr "Bild hinzufügen"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:19
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Originalgröße beibehalten"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:21
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "Breite:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Height:"
 msgstr "Höhe:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:39
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
 #: markdown/markdownlib/markdowncreatelinkwidget.cpp:31
 #, kde-format
 msgid "Title:"
 msgstr "Titel:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
 #, kde-format
 msgid "Image Link:"
 msgstr "Bildverknüpfung"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:42
 #, kde-format
 msgid "Alternate text:"
 msgstr "Alternativtext:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:62
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:73
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:63
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:74
 #, kde-format
 msgid " px"
 msgstr " px"
 
-#: markdown/markdownlib/markdowncreatelinkdialog.cpp:27
+#: markdown/markdownlib/markdowncreatelinkdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Link"
@@ -100,7 +100,7 @@ msgstr "Verknüpfung hinzufügen"
 msgid "Link:"
 msgstr "Verknüpfung:"
 
-#: markdown/markdownlib/markdownpreviewdialog.cpp:26
+#: markdown/markdownlib/markdownpreviewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Markdown Rendering Preview"

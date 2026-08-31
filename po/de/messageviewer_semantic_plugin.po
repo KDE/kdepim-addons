@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_semantic_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-08-07 22:20+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -44,12 +44,12 @@ msgstr "Reservierung in KDE Itinerary importieren."
 msgid "Send this reservation to a device using KDE Connect."
 msgstr "Diese Reservierung zu einem Gerät mit KDE Connect versenden."
 
-#: itineraryurlhandler.cpp:206
+#: itineraryurlhandler.cpp:203
 #, kde-format
 msgid "Boarding Pass"
 msgstr "Bordkarte"
 
-#: itineraryurlhandler.cpp:207
+#: itineraryurlhandler.cpp:204
 #, kde-format
 msgid "Ticket"
 msgstr "Fahrkarte"

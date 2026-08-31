@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim/kmail_text_vcard_plugin.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-22 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: text_vcard.cpp:95
+#: text_vcard.cpp:96
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
@@ -32,70 +32,70 @@ msgstr[4] "Cártaí gnó ceangailte"
 msgid "[Add this contact to the address book]"
 msgstr "[Cuir an teagmháil seo leis an leabhar seoltaí]"
 
-#: text_vcard.cpp:151
+#: text_vcard.cpp:150
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr ""
 
-#: text_vcard.cpp:156
+#: text_vcard.cpp:154
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Tá an teagmháil seo sa leabhar seoltaí cheana]"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:231
 #, kde-format
 msgid "View Business Card"
 msgstr "Féach ar Chárta Gnó"
 
-#: text_vcard.cpp:234
+#: text_vcard.cpp:232
 #, kde-format
 msgid "Save Business Card As…"
 msgstr ""
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Cuir an teagmháil seo leis an leabhar seoltaí."
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Nuashonraigh an teagmháil seo sa leabhar seoltaí."
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Cuir \"%1\" leis an leabhar seoltaí."
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Nuashonraigh \"%1\" sa leabhar seoltaí."
 
-#: text_vcard.cpp:278
+#: text_vcard.cpp:276
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr ""
 
-#: updatecontactjob.cpp:37
+#: updatecontactjob.cpp:38
 #, kde-format
 msgid "The vCard's primary email address is not in addressbook."
 msgstr ""
 
-#: updatecontactjob.cpp:43
+#: updatecontactjob.cpp:44
 #, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
 msgstr ""
 
-#: updatecontactjob.cpp:65
+#: updatecontactjob.cpp:66
 #, kde-format
 msgid ""
 "The vCard was updated in your address book; you can add more information to "
 "this entry by opening the address book."
 msgstr ""
 
-#: updatecontactjob.cpp:76
+#: updatecontactjob.cpp:77
 #, kde-format
 msgid "Email not specified"
 msgstr ""

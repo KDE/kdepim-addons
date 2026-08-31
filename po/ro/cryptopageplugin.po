@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2011-01-08 02:27+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -17,45 +17,45 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 
-#: cryptopageplugin.cpp:37
+#: cryptopageplugin.cpp:38
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Protocoale permise"
 
-#: cryptopageplugin.cpp:52
+#: cryptopageplugin.cpp:53
 #, fuzzy, kde-format
 #| msgid "Preferred OpenPGP encryption key:"
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Cheia de criptare OpenPGP preferată:"
 
-#: cryptopageplugin.cpp:57
+#: cryptopageplugin.cpp:58
 #, fuzzy, kde-format
 #| msgid "Preferred S/MIME encryption certificate:"
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Certificatul de criptare S/MIME preferat:"
 
-#: cryptopageplugin.cpp:62
+#: cryptopageplugin.cpp:63
 #, kde-format
 msgid "Message Preference"
 msgstr "Preferință mesaj"
 
-#: cryptopageplugin.cpp:71
+#: cryptopageplugin.cpp:72
 #, fuzzy, kde-format
 #| msgid "Sign:"
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Semnează:"
 
-#: cryptopageplugin.cpp:88
+#: cryptopageplugin.cpp:89
 #, fuzzy, kde-format
 #| msgid "Encrypt:"
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Criptează:"
 
-#: cryptopageplugin.cpp:106
+#: cryptopageplugin.cpp:107
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Configurări criptografice"

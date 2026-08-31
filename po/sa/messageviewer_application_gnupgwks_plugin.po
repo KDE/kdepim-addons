@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,38 +29,38 @@ msgstr "मुख्यविवरणं प्रदर्शयन्तु"
 msgid "Publish the key"
 msgstr "कुञ्जी प्रकाशयतु"
 
-#: pgpkeyformatter.cpp:43
+#: pgpkeyformatter.cpp:44
 #, kde-format
 msgid "No valid key data in file."
 msgstr "सञ्चिकायां वैधः कीलदत्तांशः नास्ति ।"
 
-#: pgpkeyurlhandler.cpp:47
+#: pgpkeyurlhandler.cpp:48
 #, kde-format
 msgid "Import the key"
 msgstr "कीलम् आयातयन्तु"
 
-#: pgpkeyurlhandler.cpp:66
+#: pgpkeyurlhandler.cpp:67
 #, kde-format
 msgid "An error occurred while importing the key."
 msgstr "कीलस्य आयातकाले त्रुटिः अभवत् ।"
 
-#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
+#: pgpkeyurlhandler.cpp:69 pgpkeyurlhandler.cpp:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "आयातदोषः"
 
-#: pgpkeyurlhandler.cpp:70
+#: pgpkeyurlhandler.cpp:71
 #, kde-format
 msgid "No keys to import where found."
 msgstr "यत्र प्राप्तं तत्र आयातयितुं कुञ्जिकाः नास्ति।"
 
-#: pgpkeyurlhandler.cpp:72
+#: pgpkeyurlhandler.cpp:73
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "कुञ्जी सफलतया आयातिता अस्ति।"
 
-#: pgpkeyurlhandler.cpp:72
+#: pgpkeyurlhandler.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"

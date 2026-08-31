@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-09-02 00:23+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,38 +30,38 @@ msgstr "Azaldu gakoaren xehetasunak"
 msgid "Publish the key"
 msgstr "Argitaratu gakoa"
 
-#: pgpkeyformatter.cpp:43
+#: pgpkeyformatter.cpp:44
 #, kde-format
 msgid "No valid key data in file."
 msgstr "Fitxategian ez dago balio duen gako-daturik."
 
-#: pgpkeyurlhandler.cpp:47
+#: pgpkeyurlhandler.cpp:48
 #, kde-format
 msgid "Import the key"
 msgstr "Inportatu gakoa"
 
-#: pgpkeyurlhandler.cpp:66
+#: pgpkeyurlhandler.cpp:67
 #, kde-format
 msgid "An error occurred while importing the key."
 msgstr "Errore bat gertatu da gakoa inportatzean."
 
-#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
+#: pgpkeyurlhandler.cpp:69 pgpkeyurlhandler.cpp:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Inportatzeko errorea"
 
-#: pgpkeyurlhandler.cpp:70
+#: pgpkeyurlhandler.cpp:71
 #, kde-format
 msgid "No keys to import where found."
 msgstr "Ez da inportatzeko gakorik aurkitu."
 
-#: pgpkeyurlhandler.cpp:72
+#: pgpkeyurlhandler.cpp:73
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "Gakoa ondo inportatu da."
 
-#: pgpkeyurlhandler.cpp:72
+#: pgpkeyurlhandler.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"

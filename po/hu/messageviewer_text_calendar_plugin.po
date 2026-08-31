@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-29 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-01-29 09:39+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -43,39 +43,39 @@ msgstr "Hozzáadás"
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: delegateselector.cpp:23
+#: delegateselector.cpp:24
 #, fuzzy, kde-format
 #| msgid "Keep me informed about status changes of this incidence."
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
 msgstr "Értesítést kérek az esemény változásairól."
 
-#: delegateselector.cpp:25
+#: delegateselector.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Select delegate"
 msgstr "Meghatalmazott kiválasztása"
 
-#: delegateselector.cpp:28
+#: delegateselector.cpp:29
 #, fuzzy, kde-format
 #| msgid "Delegate:"
 msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Meghatalmazott:"
 
-#: reactiontoinvitationdialog.cpp:31
+#: reactiontoinvitationdialog.cpp:32
 #, fuzzy, kde-format
 #| msgid "Comment:"
 msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Megjegyzés:"
 
-#: text_calendar.cpp:374
+#: text_calendar.cpp:375
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
 msgstr "Nem található „%1” nevű melléklet a meghívóban."
 
-#: text_calendar.cpp:389
+#: text_calendar.cpp:390
 #, kde-format
 msgid ""
 "The invitation attachment \"%1\" is a web link that is inaccessible from "
@@ -86,7 +86,7 @@ msgstr ""
 "számítógépről nem érhető el. Kérje meg az esemény szervezőjét a meghívó "
 "hivatkozás helyett fájlként való újraküldésére."
 
-#: text_calendar.cpp:441
+#: text_calendar.cpp:442
 #, kde-format
 msgid ""
 "<qt>None of your identities match the receiver of this message,<br/>please "
@@ -97,7 +97,7 @@ msgstr ""
 ">válassza ki, melyik az Ön címe,<br/>vagy válassza ki személyazonosságai "
 "közül a válaszhoz használandót:</qt>"
 
-#: text_calendar.cpp:447
+#: text_calendar.cpp:448
 #, kde-format
 msgid ""
 "<qt>Several of your identities match the receiver of this message,<br/"
@@ -106,255 +106,255 @@ msgstr ""
 "<qt>Több személyazonossága is egyezik a levél címzettjeivel,<br/>válassza ki "
 "az alábbiak közül az Ön címét:</qt>"
 
-#: text_calendar.cpp:462
+#: text_calendar.cpp:463
 #, kde-format
 msgid "Select Address"
 msgstr "Cím kiválasztása"
 
-#: text_calendar.cpp:524
+#: text_calendar.cpp:525
 #, kde-format
 msgid "Answer: "
 msgstr "Válasz: "
 
-#: text_calendar.cpp:526
+#: text_calendar.cpp:527
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
 msgstr "Elutasítva: %1"
 
-#: text_calendar.cpp:528
+#: text_calendar.cpp:529
 #, kde-format
 msgctxt "Unsure if it is possible to attend."
 msgid "Tentative: %1"
 msgstr "Nem végleges: %1"
 
-#: text_calendar.cpp:530
+#: text_calendar.cpp:531
 #, kde-format
 msgctxt "Accepted the invitation."
 msgid "Accepted: %1"
 msgstr "Elfogadva: %1"
 
-#: text_calendar.cpp:552 text_calendar.cpp:571
+#: text_calendar.cpp:553 text_calendar.cpp:572
 #, kde-format
 msgid "Invitation answer attached."
 msgstr "A meghívóra adott válasz mellékelve."
 
-#: text_calendar.cpp:678
+#: text_calendar.cpp:679
 #, kde-format
 msgid "Incidence with no summary"
 msgstr "Előfordulás összegzés nélkül"
 
-#: text_calendar.cpp:683
+#: text_calendar.cpp:684
 #, kde-format
 msgid "Answer: %1"
 msgstr "Válasz: %1"
 
-#: text_calendar.cpp:686
+#: text_calendar.cpp:687
 #, kde-format
 msgid "Delegated: %1"
 msgstr "Delegálva: %1"
 
-#: text_calendar.cpp:689
+#: text_calendar.cpp:690
 #, kde-format
 msgid "Forwarded: %1"
 msgstr "Továbbítva: %1"
 
-#: text_calendar.cpp:692
+#: text_calendar.cpp:693
 #, kde-format
 msgid "Declined Counter Proposal: %1"
 msgstr "Elutasított ellenjavaslat: %1"
 
-#: text_calendar.cpp:756 text_calendar.cpp:762
+#: text_calendar.cpp:757 text_calendar.cpp:763
 #, kde-format
 msgid "\"%1\" occurred already."
 msgstr "„%1” már előfordult."
 
-#: text_calendar.cpp:758 text_calendar.cpp:775
+#: text_calendar.cpp:759 text_calendar.cpp:776
 #, kde-format
 msgid "\"%1\" is currently in-progress."
 msgstr "„%1” éppen folyamatban."
 
-#: text_calendar.cpp:764
+#: text_calendar.cpp:765
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
 msgstr "„%1” egész napos esemény ma, éppen folyamatban."
 
-#: text_calendar.cpp:773 text_calendar.cpp:785
+#: text_calendar.cpp:774 text_calendar.cpp:786
 #, kde-format
 msgid "\"%1\" is past due."
 msgstr "„%1” lejárt."
 
-#: text_calendar.cpp:779
+#: text_calendar.cpp:780
 #, kde-format
 msgid "\"%1\" has already started."
 msgstr "„%1” már elkezdődött."
 
-#: text_calendar.cpp:787
+#: text_calendar.cpp:788
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
 msgstr "„%1” egész napos esemény ma, éppen folyamatban."
 
-#: text_calendar.cpp:791
+#: text_calendar.cpp:792
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
 msgstr "„%1” egész napos esemény, már elkezdődött."
 
-#: text_calendar.cpp:803
+#: text_calendar.cpp:804
 #, kde-format
 msgid "Do you still want to accept the task?"
 msgstr "Még mindig el szeretné fogadni a feladatot?"
 
-#: text_calendar.cpp:805
+#: text_calendar.cpp:806
 #, kde-format
 msgid "Do you still want to accept the invitation?"
 msgstr "Még mindig el szeretné fogadni a meghívót?"
 
-#: text_calendar.cpp:807 text_calendar.cpp:819
+#: text_calendar.cpp:808 text_calendar.cpp:820
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept"
 msgstr "Elfogadás"
 
-#: text_calendar.cpp:811
+#: text_calendar.cpp:812
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the task?"
 msgstr "Még mindig el szeretné küldeni a feladat feltételes elfogadását?"
 
-#: text_calendar.cpp:813
+#: text_calendar.cpp:814
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
 msgstr "Még mindig el szeretné küldeni a meghívó feltételes elfogadását?"
 
-#: text_calendar.cpp:815 text_calendar.cpp:823 text_calendar.cpp:827
+#: text_calendar.cpp:816 text_calendar.cpp:824 text_calendar.cpp:828
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Küldés"
 
-#: text_calendar.cpp:818
+#: text_calendar.cpp:819
 #, kde-format
 msgid "Do you still want to accept the counter proposal?"
 msgstr "Még mindig el szeretné fogadni az ellenjavaslatot?"
 
-#: text_calendar.cpp:822
+#: text_calendar.cpp:823
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
 msgstr "Még mindig el szeretné küldeni az ellenjavaslatot?"
 
-#: text_calendar.cpp:826
+#: text_calendar.cpp:827
 #, kde-format
 msgid "Do you still want to send a decline response?"
 msgstr "Még mindig el szeretné küldeni a visszautasítást?"
 
-#: text_calendar.cpp:830
+#: text_calendar.cpp:831
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
 msgstr "Még mindig el szeretné utasítani az ellenjavaslatot?"
 
-#: text_calendar.cpp:831
+#: text_calendar.cpp:832
 #, kde-format
 msgctxt "@action:button"
 msgid "Decline"
 msgstr "Elutasítás"
 
-#: text_calendar.cpp:833
+#: text_calendar.cpp:834
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
 msgstr "Még mindig föl szeretné venni ezt a visszajelzést a naptárába?"
 
-#: text_calendar.cpp:834 text_calendar.cpp:870
+#: text_calendar.cpp:835 text_calendar.cpp:871
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
 msgstr "Rögzítés"
 
-#: text_calendar.cpp:837
+#: text_calendar.cpp:838
 #, kde-format
 msgid "Do you still want to delegate this task?"
 msgstr "Még mindig át szeretné ruházni ezt a feladatot?"
 
-#: text_calendar.cpp:839
+#: text_calendar.cpp:840
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
 msgstr "Még mindig át szeretné ruházni ezt a meghívót?"
 
-#: text_calendar.cpp:841
+#: text_calendar.cpp:842
 #, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
 msgstr "Meghatalmazás"
 
-#: text_calendar.cpp:844
+#: text_calendar.cpp:845
 #, kde-format
 msgid "Do you still want to forward this task?"
 msgstr "Még mindig tovább szeretné küldeni ezt a feladatot?"
 
-#: text_calendar.cpp:846
+#: text_calendar.cpp:847
 #, kde-format
 msgid "Do you still want to forward this invitation?"
 msgstr "Még mindig tovább szeretné küldeni ezt a meghívót?"
 
-#: text_calendar.cpp:848
+#: text_calendar.cpp:849
 #, kde-format
 msgctxt "@action:button"
 msgid "Forward"
 msgstr "Továbbítás"
 
-#: text_calendar.cpp:852
+#: text_calendar.cpp:853
 #, kde-format
 msgid "Do you still want to cancel this task?"
 msgstr "Még mindig vissza szeretné mondani ezt a feladatot?"
 
-#: text_calendar.cpp:853
+#: text_calendar.cpp:854
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
 msgstr "Feladat visszamondása"
 
-#: text_calendar.cpp:855
+#: text_calendar.cpp:856
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
 msgstr "Még mindig vissza szeretné mondani ezt a meghívót?"
 
-#: text_calendar.cpp:856
+#: text_calendar.cpp:857
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
 msgstr "Meghívás visszamondása"
 
-#: text_calendar.cpp:859
+#: text_calendar.cpp:860
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Ne mondja vissza"
 
-#: text_calendar.cpp:862
+#: text_calendar.cpp:863
 #, kde-format
 msgid "Do you still want to check your calendar?"
 msgstr "Még mindig szeretné ellenőrizni a naptárát?"
 
-#: text_calendar.cpp:863
+#: text_calendar.cpp:864
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
 msgstr "Ellenőrzés"
 
-#: text_calendar.cpp:866
+#: text_calendar.cpp:867
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
 msgstr "Még mindig föl szeretné venni ezt a feladatot naptárába?"
 
-#: text_calendar.cpp:868
+#: text_calendar.cpp:869
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
 msgstr "Még mindig föl szeretné venni ezt a meghívót naptárába?"
 
-#: text_calendar.cpp:874
+#: text_calendar.cpp:875
 #, kde-format
 msgid "%1?"
 msgstr "%1?"
 
-#: text_calendar.cpp:881
+#: text_calendar.cpp:882
 #, kde-format
 msgid ""
 "%1\n"
@@ -363,36 +363,36 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: text_calendar.cpp:915
+#: text_calendar.cpp:916
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "Reagálás a meghívóra"
 
-#: text_calendar.cpp:926 text_calendar.cpp:1179
+#: text_calendar.cpp:927 text_calendar.cpp:1180
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
 msgstr "Elfelejtett javaslatot hozzáadni. Kérjük adja hozzá. Köszönjük."
 
-#: text_calendar.cpp:959
+#: text_calendar.cpp:960
 #, kde-format
 msgid "Delegation to organizer is not possible."
 msgstr "Nem lehet delegálni a szervezőnek."
 
-#: text_calendar.cpp:1088
+#: text_calendar.cpp:1089
 #, fuzzy, kde-format
 #| msgid "Save Invitation Attachment"
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Mellékelt meghívó mentése"
 
-#: text_calendar.cpp:1168
+#: text_calendar.cpp:1169
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "Az ellenjavaslat elutasítása"
 
-#: text_calendar.cpp:1210
+#: text_calendar.cpp:1211
 #, kde-format
 msgid ""
 "You have no writable calendar folders for invitations, so storing or saving "
@@ -403,7 +403,7 @@ msgstr ""
 "vagy mentése nem lehetséges.\n"
 "Hozzon létre legalább egy írható eseménynaptárt, és szinkronizáljon újra."
 
-#: text_calendar.cpp:1228 text_calendar.cpp:1236
+#: text_calendar.cpp:1229 text_calendar.cpp:1237
 #, kde-format
 msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
@@ -412,7 +412,7 @@ msgstr ""
 "Ebben az e-mailben tárolt naptármeghívó valamilyen módon megsérült. Nem "
 "lehetséges a folytatás."
 
-#: text_calendar.cpp:1289
+#: text_calendar.cpp:1290
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -428,120 +428,120 @@ msgstr ""
 "Szeretne üzenetet küldeni a szervezőnek a meghívóval kapcsolatban?\n"
 "Nyomja meg a [Mégse] gombot a felvételi művelet megszakításához."
 
-#: text_calendar.cpp:1293
+#: text_calendar.cpp:1294
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
 msgstr "E-mail küldése a szervezőnek"
 
-#: text_calendar.cpp:1294
+#: text_calendar.cpp:1295
 #, fuzzy, kde-format
 #| msgid "Do Not Send"
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Nincs küldés"
 
-#: text_calendar.cpp:1295
+#: text_calendar.cpp:1296
 #, fuzzy, kde-format
 #| msgid "Send EMail"
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "E-mail küldése"
 
-#: text_calendar.cpp:1303
+#: text_calendar.cpp:1304
 #, kde-format
 msgid "Re: %1"
 msgstr "Válasz: %1"
 
-#: text_calendar.cpp:1375
+#: text_calendar.cpp:1376
 #, kde-format
 msgid "Open Attachment"
 msgstr "Melléklet megnyitása"
 
-#: text_calendar.cpp:1376
+#: text_calendar.cpp:1377
 #, fuzzy, kde-format
 #| msgid "Save Attachment As..."
 msgid "Save Attachment As…"
 msgstr "Melléklet mentése másként…"
 
-#: text_calendar.cpp:1392
+#: text_calendar.cpp:1393
 #, kde-format
 msgid "Accept invitation"
 msgstr "Meghívó elfogadása"
 
-#: text_calendar.cpp:1394
+#: text_calendar.cpp:1395
 #, kde-format
 msgid "Accept invitation conditionally"
 msgstr "Meghívó elfogadása feltételesen"
 
-#: text_calendar.cpp:1396
+#: text_calendar.cpp:1397
 #, kde-format
 msgid "Accept counter proposal"
 msgstr "Az ellenjavaslat elfogadása"
 
-#: text_calendar.cpp:1398
+#: text_calendar.cpp:1399
 #, fuzzy, kde-format
 #| msgid "Create a counter proposal..."
 msgid "Create a counter proposal…"
 msgstr "Új ellenjavaslat..."
 
-#: text_calendar.cpp:1400
+#: text_calendar.cpp:1401
 #, kde-format
 msgid "Throw mail away"
 msgstr "A levél eldobása"
 
-#: text_calendar.cpp:1402
+#: text_calendar.cpp:1403
 #, kde-format
 msgid "Decline invitation"
 msgstr "Meghívó elutasítása"
 
-#: text_calendar.cpp:1404
+#: text_calendar.cpp:1405
 #, kde-format
 msgid "Postpone"
 msgstr "Elhalasztás"
 
-#: text_calendar.cpp:1406
+#: text_calendar.cpp:1407
 #, kde-format
 msgid "Decline counter proposal"
 msgstr "Az ellenjavaslat elutasítása"
 
-#: text_calendar.cpp:1408
+#: text_calendar.cpp:1409
 #, fuzzy, kde-format
 #| msgid "Check my calendar..."
 msgid "Check my calendar…"
 msgstr "A naptár ellenőrzése..."
 
-#: text_calendar.cpp:1410
+#: text_calendar.cpp:1411
 #, kde-format
 msgid "Record response into my calendar"
 msgstr "Válasz felvétele a naptáramba"
 
-#: text_calendar.cpp:1412
+#: text_calendar.cpp:1413
 #, kde-format
 msgid "Record invitation into my calendar"
 msgstr "Meghívó felvétele a naptáramba"
 
-#: text_calendar.cpp:1414
+#: text_calendar.cpp:1415
 #, kde-format
 msgid "Move this invitation to my trash folder"
 msgstr "Meghívó áthelyezése a Kukába"
 
-#: text_calendar.cpp:1416
+#: text_calendar.cpp:1417
 #, kde-format
 msgid "Delegate invitation"
 msgstr "Meghívó átruházása"
 
-#: text_calendar.cpp:1418
+#: text_calendar.cpp:1419
 #, kde-format
 msgid "Forward invitation"
 msgstr "Meghívó továbbítása"
 
-#: text_calendar.cpp:1420
+#: text_calendar.cpp:1421
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "Meghívó eltávolítása a naptáramból"
 
-#: text_calendar.cpp:1423
+#: text_calendar.cpp:1424
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "„%1” melléklet megnyitása"

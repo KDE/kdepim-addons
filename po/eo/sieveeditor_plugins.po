@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-07-04 21:35+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -18,32 +18,32 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: emaillineedit/emaillineedit.cpp:33
+#: emaillineedit/emaillineedit.cpp:34
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Alklaki la butonon por elekti kontaktojn…"
 
-#: emaillineedit/emaillineedit.cpp:37
+#: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
 msgstr "…"
 
-#: emaillineedit/emaillineedit.cpp:39
+#: emaillineedit/emaillineedit.cpp:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Elekti Retpoŝtojn"
 
-#: emaillineedit/emaillineedit.cpp:88
+#: emaillineedit/emaillineedit.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
 msgstr "Elektu Retpoŝtojn"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
@@ -54,13 +54,13 @@ msgstr "Krei Dosierujon"
 msgid "Error during creating folder: %1"
 msgstr "Eraro dum kreado de dosierujo: %1"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:28
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Folder…"
 msgstr "Krei Dosierujon…"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:30
+#: imapfoldercompletion/selectimapfolderdialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
@@ -76,34 +76,34 @@ msgstr "Ne eblas ŝargi dosierujon"
 msgid "Loading in progress…"
 msgstr "Ŝargo en progreso…"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#: imapfoldercompletion/selectimapfolderwidget.cpp:43
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Serĉi…"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#: imapfoldercompletion/selectimapfolderwidget.cpp:49
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Refreŝigi IMAP-dosierujon"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Create Folder"
 msgstr "Krei Dosierujon"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Folder Name:"
 msgstr "Nomo de dosierujo:"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
 #, kde-format
 msgid "Slashes are not allowed in folder names."
 msgstr "Oblikvoj ne estas permesitaj en dosierujoj."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, kde-format
 msgid "Empty folder name is not supported."
 msgstr "Malplena dosierujo ne estas subtenata."
@@ -119,13 +119,13 @@ msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "Ŝargi Dosierujojn"
 
-#: imapfoldercompletion/selectimapwidget.cpp:31
+#: imapfoldercompletion/selectimapwidget.cpp:32
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Elekti IMAP-dosierujon"
 
-#: imapfoldercompletion/selectimapwidget.cpp:58
+#: imapfoldercompletion/selectimapwidget.cpp:59
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"

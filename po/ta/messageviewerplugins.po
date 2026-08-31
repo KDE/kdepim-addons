@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-09-07 18:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.08.0\n"
 
-#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:42
 #, kde-format
 msgid "Current URL is not a shortened URL."
 msgstr "தற்போதைய முகவரி சுருக்கப்பட்டுள்ள முகவரி அல்ல"
 
-#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:57
 #, kde-format
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "முகவரியை விரிவுபடுத்து"
 
-#: common/messagevieweraiplugin/viewerpluginaiinterface.cpp:48
+#: common/messagevieweraiplugin/viewerpluginaiinterface.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Ask AI…"
@@ -45,153 +45,153 @@ msgstr "மூடு"
 msgid "Close"
 msgstr "மூடு"
 
-#: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
 msgstr "மொழிபெயர்…"
 
-#: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
+#: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, kde-format
 msgid "&Save"
 msgstr "&சேமி"
 
-#: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
+#: createeventplugin/eventedit.cpp:46 createtodoplugin/todoedit.cpp:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "&உரைத்திருத்தியை திற…"
 
-#: createeventplugin/eventedit.cpp:56
+#: createeventplugin/eventedit.cpp:57
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "நிகழ்வு:"
 
-#: createeventplugin/eventedit.cpp:74
+#: createeventplugin/eventedit.cpp:75
 #, kde-format
 msgid "Calendar where the new event will be stored."
 msgstr "புதிய நிகழ்வை சேமிக்க வேண்டிய நாள்காட்டி."
 
-#: createeventplugin/eventedit.cpp:76
+#: createeventplugin/eventedit.cpp:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "புதிய நிகழ்வை எந்த நாள்காட்டியில் சேமிக்க வேண்டும்"
 
-#: createeventplugin/eventedit.cpp:89
+#: createeventplugin/eventedit.cpp:90
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "துவக்கம்:"
 
-#: createeventplugin/eventedit.cpp:95
+#: createeventplugin/eventedit.cpp:96
 #, kde-format
 msgid "Select start time for event."
 msgstr "நிகழ்வின் தொடக்க நேரத்தைத் தேர்ந்தெடுக்கவும்."
 
-#: createeventplugin/eventedit.cpp:102
+#: createeventplugin/eventedit.cpp:103
 #, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "முடிவு:"
 
-#: createeventplugin/eventedit.cpp:107
+#: createeventplugin/eventedit.cpp:108
 #, kde-format
 msgid "Select end time for event."
 msgstr "நிகழ்வின் முடிவு நேரத்தைத் தேர்ந்தெடுக்கவும்."
 
-#: createeventplugin/eventedit.cpp:125
+#: createeventplugin/eventedit.cpp:126
 #, kde-format
 msgid "Create new event and close this widget."
 msgstr "புதிய நிகழ்வை உருவாக்கி இந்த சாளரத்தை மூடு."
 
-#: createeventplugin/eventedit.cpp:131
+#: createeventplugin/eventedit.cpp:132
 #, kde-format
 msgid "Open event editor, where more details can be changed."
 msgstr "மேலும் விவரங்களை மாற்ற விடும் நிகழ்வு திருத்தியைத் திறக்கும்."
 
-#: createeventplugin/eventedit.cpp:142
+#: createeventplugin/eventedit.cpp:143
 #, kde-format
 msgid "Close the widget for creating new events."
 msgstr "புதிய நிகழ்வுகளை உருவாக்குவதற்கான சாளரத்தை மூடு."
 
-#: createeventplugin/viewerplugincreateeventinterface.cpp:68
+#: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
 msgid "Create Event…"
 msgstr "நிகழ்வை உருவாக்கு…"
 
-#: createeventplugin/viewerplugincreateeventinterface.cpp:69
+#: createeventplugin/viewerplugincreateeventinterface.cpp:70
 #, kde-format
 msgid "Create Event"
 msgstr "நிகழ்வை உருவாக்கு"
 
-#: createeventplugin/viewerplugincreateeventinterface.cpp:70
+#: createeventplugin/viewerplugincreateeventinterface.cpp:71
 #, kde-format
 msgid "Allows you to create a calendar Event"
 msgstr "நாள்காட்டி நிகழ்வை உருவாக்க விடும்"
 
-#: createtodoplugin/todoedit.cpp:61
+#: createtodoplugin/todoedit.cpp:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "செய்யவேண்டியது:"
 
-#: createtodoplugin/todoedit.cpp:80
+#: createtodoplugin/todoedit.cpp:81
 #, kde-format
 msgid "Todo list where the new task will be stored."
 msgstr "புதயி பணியை எந்த பட்டியலில் சேமிக்க வேண்டும்."
 
-#: createtodoplugin/todoedit.cpp:82
+#: createtodoplugin/todoedit.cpp:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "புதிய பணியை எந்த பட்டியலில் சேமிக்க வேண்டும்"
 
-#: createtodoplugin/todoedit.cpp:96
+#: createtodoplugin/todoedit.cpp:97
 #, kde-format
 msgid "Create new todo and close this widget."
 msgstr "புதிய செய்யவேண்டியதை உருவாக்கி அந்த சாளரத்தை மூடு."
 
-#: createtodoplugin/todoedit.cpp:103
+#: createtodoplugin/todoedit.cpp:104
 #, kde-format
 msgid "Open todo editor, where more details can be changed."
 msgstr "மேலும் விவரங்களை மாற்ற விடும் செய்யவேண்டியவை திருத்தியைத் திறக்கும்."
 
-#: createtodoplugin/todoedit.cpp:113
+#: createtodoplugin/todoedit.cpp:114
 #, kde-format
 msgid "Close the widget for creating new todos."
 msgstr "புதிய செய்யவேண்டியவற்றை உருவாக்குவதற்கான சாளரத்தை மூடும்."
 
-#: createtodoplugin/todoedit.cpp:150
+#: createtodoplugin/todoedit.cpp:151
 #, kde-format
 msgid "Check I received a reply about \"%1\""
 msgstr "\"%1\" பற்றி பதில் வந்ததா என சரிபார்"
 
-#: createtodoplugin/todoedit.cpp:151
+#: createtodoplugin/todoedit.cpp:152
 #, kde-format
 msgid "Reply to \"%1\""
 msgstr "\"%1\"-க்கு பதிலளி"
 
-#: createtodoplugin/todoedit.cpp:240
+#: createtodoplugin/todoedit.cpp:241
 #, kde-format
 msgctxt ""
 "%1 is summary of the todo, %2 is name of the folder in which it is stored"
 msgid "New todo '%1' was added to task list '%2'"
 msgstr "'%2' எனும் பட்டியலில் '%1' எனும் செய்யவேண்டியது புதிதாக சேர்க்கப்பட்டது"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:68
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:69
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:70
 #, kde-format
 msgid "Create To-do"
 msgstr "செய்யவேண்டியதை உருவாக்கு"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:70
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:71
 #, kde-format
 msgid "Allows you to create a calendar to-do or reminder from this message"
 msgstr "இவ்வஞ்சலிலிருந்து செய்யவேண்டியதையோ நினைவூட்டலையோ உருவாக்க உதவும்"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:72
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:73
 #, kde-format
 msgid ""
 "This option starts the KOrganizer to-do editor with initial values taken "
@@ -202,81 +202,81 @@ msgstr ""
 "கேமெயில் சாளரத்தை இது திறக்கும். நீங்கள் விரும்பும் விதத்தில் அதை மாற்றிய பின் உங்கள் "
 "நாள்காட்டியில் சேமிக்கலாம்."
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:16
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Script\" Plugin"
 msgstr "\"வெளி சிறுநிரல்\" சிறுநிரலை அமைப்பது"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "சிறுநிரலை சேர்…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "சிறுநிரலை நீக்கு"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "சிறுநிரலை திருத்து…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:68
 #, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "வெளி சிறுநிரல்:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
 #, kde-format
 msgid "Do you want to remove this script \"%1\"?"
 msgstr "\"%1\" எனும் இந்த சிறுநிரலை உறுதியாக நீக்க வேண்டுமா?"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:108
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "வெளி சிறுநிரலை நீக்குவது"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:26
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"
 msgstr "வெளி சிறுநிரலை சேர்ப்பது அல்லது மாற்றுவது"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:28
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:29
 #, kde-format
 msgid "Name:"
 msgstr "பெயர்:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:32
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:33
 #, kde-format
 msgid "Description:"
 msgstr "விவரணம்:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "கட்டளைக்கான தருமதிப்புகளை உள்ளிடவும்…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:39
 #, kde-format
 msgid "Command Line:"
 msgstr "கட்டளை வரி:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:42
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">தருமதிப்பு வடிவ விவரங்கள்…</a></qt>"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
 #, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
@@ -298,29 +298,29 @@ msgstr ""
 msgid "Executable:"
 msgstr "நிரல்:"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:81
 #, kde-format
 msgid "'%1' not found"
 msgstr "'%1' கண்டுபிடிக்கப்படவில்லை"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "நிரல் கண்டுபிடிக்கப்படவில்லை."
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:86
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:87
 #, kde-format
 msgid "Impossible to start executable"
 msgstr "நிரலைத் துவக்க முடியவில்லை"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:105
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:106
 #, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "வெளி சிறுநிரல்"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:130
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:131
 #, kde-format
 msgid "Configure"
 msgstr "அமை"

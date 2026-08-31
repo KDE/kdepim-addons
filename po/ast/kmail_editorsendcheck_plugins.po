@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2023-11-07 21:26+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -77,19 +77,19 @@ msgctxt "@action:button"
 msgid "Send As HTML"
 msgstr ""
 
-#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:17
 #, kde-format
 msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr ""
 
-#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Check SMTP server"
 msgstr ""
 
-#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid ""
@@ -103,55 +103,55 @@ msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr ""
 
-#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr ""
 
-#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr ""
 
-#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr ""
 
-#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:23
 #, kde-format
 msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr ""
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr ""
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:30
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr ""
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:54
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
 msgstr ""
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:25
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
 msgstr ""
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:28
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
@@ -218,30 +218,30 @@ msgstr ""
 msgid "Do you want to remove this email address?"
 msgstr ""
 
-#: confirm-address/confirmaddressdialog.cpp:27
+#: confirm-address/confirmaddressdialog.cpp:28
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr ""
 
-#: confirm-address/confirmaddressdialog.cpp:29
+#: confirm-address/confirmaddressdialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr ""
 
-#: confirm-address/confirmaddressdialog.cpp:89
+#: confirm-address/confirmaddressdialog.cpp:90
 #, kde-format
 msgid "All selected emails are added to white list"
 msgstr ""
 
-#: confirm-address/confirmaddressdialog.cpp:89
+#: confirm-address/confirmaddressdialog.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr ""
 
-#: confirm-address/confirmaddressemailentrydialog.cpp:21
+#: confirm-address/confirmaddressemailentrydialog.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Enter new domain name:"
@@ -259,7 +259,7 @@ msgctxt "@title:window"
 msgid "Change Value"
 msgstr ""
 
-#: confirm-address/confirmaddresswidget.cpp:22
+#: confirm-address/confirmaddresswidget.cpp:23
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Potentially invalid emails are displayed in red:"

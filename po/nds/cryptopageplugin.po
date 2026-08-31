@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cryptopageplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2010-01-19 04:38+0100\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -18,45 +18,45 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: cryptopageplugin.cpp:37
+#: cryptopageplugin.cpp:38
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Tolaten Protokollen"
 
-#: cryptopageplugin.cpp:52
+#: cryptopageplugin.cpp:53
 #, fuzzy, kde-format
 #| msgid "Preferred OpenPGP encryption key:"
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Vörtrocken OpenPGP-Verslötelnslötel:"
 
-#: cryptopageplugin.cpp:57
+#: cryptopageplugin.cpp:58
 #, fuzzy, kde-format
 #| msgid "Preferred S/MIME encryption certificate:"
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Vörtrocken S/MIME-Verslötelnzertifikaat:"
 
-#: cryptopageplugin.cpp:62
+#: cryptopageplugin.cpp:63
 #, kde-format
 msgid "Message Preference"
 msgstr "Narichtenvörinstellen"
 
-#: cryptopageplugin.cpp:71
+#: cryptopageplugin.cpp:72
 #, fuzzy, kde-format
 #| msgid "Sign:"
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Ünnerschrieven:"
 
-#: cryptopageplugin.cpp:88
+#: cryptopageplugin.cpp:89
 #, fuzzy, kde-format
 #| msgid "Encrypt:"
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Verslöteln:"
 
-#: cryptopageplugin.cpp:106
+#: cryptopageplugin.cpp:107
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Verslötelninstellen"

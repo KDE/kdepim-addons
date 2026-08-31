@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-09-05 17:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "X-Generator: Lokalize 25.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:42
 #, kde-format
 msgid "Current URL is not a shortened URL."
 msgstr "目前網址不是一個縮短的網址。"
 
-#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:57
 #, kde-format
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "展開網址"
 
-#: common/messagevieweraiplugin/viewerpluginaiinterface.cpp:48
+#: common/messagevieweraiplugin/viewerpluginaiinterface.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Ask AI…"
@@ -45,153 +45,153 @@ msgstr "關閉"
 msgid "Close"
 msgstr "關閉"
 
-#: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
 msgstr "翻譯…"
 
-#: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
+#: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, kde-format
 msgid "&Save"
 msgstr "儲存(&S)"
 
-#: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
+#: createeventplugin/eventedit.cpp:46 createtodoplugin/todoedit.cpp:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "開啟編輯器(&E)…"
 
-#: createeventplugin/eventedit.cpp:56
+#: createeventplugin/eventedit.cpp:57
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "事件："
 
-#: createeventplugin/eventedit.cpp:74
+#: createeventplugin/eventedit.cpp:75
 #, kde-format
 msgid "Calendar where the new event will be stored."
 msgstr "選擇新事件要儲存在哪個行事曆。"
 
-#: createeventplugin/eventedit.cpp:76
+#: createeventplugin/eventedit.cpp:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "選擇新事件要儲存在哪個行事曆"
 
-#: createeventplugin/eventedit.cpp:89
+#: createeventplugin/eventedit.cpp:90
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "開始："
 
-#: createeventplugin/eventedit.cpp:95
+#: createeventplugin/eventedit.cpp:96
 #, kde-format
 msgid "Select start time for event."
 msgstr "選擇事件開始時間。"
 
-#: createeventplugin/eventedit.cpp:102
+#: createeventplugin/eventedit.cpp:103
 #, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "結束："
 
-#: createeventplugin/eventedit.cpp:107
+#: createeventplugin/eventedit.cpp:108
 #, kde-format
 msgid "Select end time for event."
 msgstr "選擇事件結束時間。"
 
-#: createeventplugin/eventedit.cpp:125
+#: createeventplugin/eventedit.cpp:126
 #, kde-format
 msgid "Create new event and close this widget."
 msgstr "建立新事件並關閉此元件。"
 
-#: createeventplugin/eventedit.cpp:131
+#: createeventplugin/eventedit.cpp:132
 #, kde-format
 msgid "Open event editor, where more details can be changed."
 msgstr "開啟事件編輯器，在那裡可以變更更多細節。"
 
-#: createeventplugin/eventedit.cpp:142
+#: createeventplugin/eventedit.cpp:143
 #, kde-format
 msgid "Close the widget for creating new events."
 msgstr "關閉建立新事件的元件。"
 
-#: createeventplugin/viewerplugincreateeventinterface.cpp:68
+#: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
 msgid "Create Event…"
 msgstr "建立事件…"
 
-#: createeventplugin/viewerplugincreateeventinterface.cpp:69
+#: createeventplugin/viewerplugincreateeventinterface.cpp:70
 #, kde-format
 msgid "Create Event"
 msgstr "建立事件"
 
-#: createeventplugin/viewerplugincreateeventinterface.cpp:70
+#: createeventplugin/viewerplugincreateeventinterface.cpp:71
 #, kde-format
 msgid "Allows you to create a calendar Event"
 msgstr "讓您建立新的行事曆事件"
 
-#: createtodoplugin/todoedit.cpp:61
+#: createtodoplugin/todoedit.cpp:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "待辦："
 
-#: createtodoplugin/todoedit.cpp:80
+#: createtodoplugin/todoedit.cpp:81
 #, kde-format
 msgid "Todo list where the new task will be stored."
 msgstr "新工作項目要儲存在的待辦事項清單。"
 
-#: createtodoplugin/todoedit.cpp:82
+#: createtodoplugin/todoedit.cpp:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "新工作項目要儲存在的待辦事項清單"
 
-#: createtodoplugin/todoedit.cpp:96
+#: createtodoplugin/todoedit.cpp:97
 #, kde-format
 msgid "Create new todo and close this widget."
 msgstr "建立新待辦並關閉此元件。"
 
-#: createtodoplugin/todoedit.cpp:103
+#: createtodoplugin/todoedit.cpp:104
 #, kde-format
 msgid "Open todo editor, where more details can be changed."
 msgstr "開啟待辦編輯器，其中可以變更更多細節。"
 
-#: createtodoplugin/todoedit.cpp:113
+#: createtodoplugin/todoedit.cpp:114
 #, kde-format
 msgid "Close the widget for creating new todos."
 msgstr "關閉建立新待辦的元件。"
 
-#: createtodoplugin/todoedit.cpp:150
+#: createtodoplugin/todoedit.cpp:151
 #, kde-format
 msgid "Check I received a reply about \"%1\""
 msgstr "檢查我是不是收到了關於「%1」的回覆"
 
-#: createtodoplugin/todoedit.cpp:151
+#: createtodoplugin/todoedit.cpp:152
 #, kde-format
 msgid "Reply to \"%1\""
 msgstr "回覆給「%1」"
 
-#: createtodoplugin/todoedit.cpp:240
+#: createtodoplugin/todoedit.cpp:241
 #, kde-format
 msgctxt ""
 "%1 is summary of the todo, %2 is name of the folder in which it is stored"
 msgid "New todo '%1' was added to task list '%2'"
 msgstr "新待辦事項 '%1' 已加入待辦清單 '%2'"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:68
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:69
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:70
 #, kde-format
 msgid "Create To-do"
 msgstr "建立待辦事項"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:70
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:71
 #, kde-format
 msgid "Allows you to create a calendar to-do or reminder from this message"
 msgstr "讓您從這個信件建立行事曆待辦事項或是提醒"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:72
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:73
 #, kde-format
 msgid ""
 "This option starts the KOrganizer to-do editor with initial values taken "
@@ -201,81 +201,81 @@ msgstr ""
 "這個選項會開啟 KOrganizer 待辦事項編輯器，並填入從目前選取的信件取出的資訊。"
 "在那裡您可以隨意編輯該待辦事項，然後將它儲存至行事曆中。"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:16
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Script\" Plugin"
 msgstr "設定「外部文稿」外掛程式"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "新增文稿…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "移除文稿"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "修改文稿…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:68
 #, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "外部文稿："
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
 #, kde-format
 msgid "Do you want to remove this script \"%1\"?"
 msgstr "您確定要移除此文稿 \"%1\" 嗎？"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:108
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "移除外部文稿"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:26
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"
 msgstr "新增或修改外部文稿"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:28
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:29
 #, kde-format
 msgid "Name:"
 msgstr "名稱："
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:32
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:33
 #, kde-format
 msgid "Description:"
 msgstr "描述："
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "新增命令列參數…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:39
 #, kde-format
 msgid "Command Line:"
 msgstr "命令列："
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:42
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">引數格式資訊…</a></qt>"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
 #, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
@@ -296,29 +296,29 @@ msgstr ""
 msgid "Executable:"
 msgstr "執行檔："
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:81
 #, kde-format
 msgid "'%1' not found"
 msgstr "找不到 '%1'"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "找不到執行檔。"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:86
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:87
 #, kde-format
 msgid "Impossible to start executable"
 msgstr "無法啟動執行檔"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:105
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:106
 #, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "外部文稿"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:130
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:131
 #, kde-format
 msgid "Configure"
 msgstr "設定"

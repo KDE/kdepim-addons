@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2026-08-21 22:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,43 +20,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 26.04.3\n"
 
-#: sendmail/sendmailjob.cpp:40
+#: sendmail/sendmailjob.cpp:41
 #, kde-format
 msgid "Invalid options for the mailer program: %1"
 msgstr "Posta-programaren aukera baliogabeak: %1"
 
-#: sendmail/sendmailjob.cpp:58
+#: sendmail/sendmailjob.cpp:59
 #, kde-format
 msgid "Failed to execute mailer program %1"
 msgstr "%1 posta-programa exekutatzeak huts egin du"
 
-#: sendmail/sendmailjob.cpp:60
+#: sendmail/sendmailjob.cpp:61
 #, kde-format
 msgid "Failed to execute mailer program %1: %2"
 msgstr "%1 posta-programa exekutatzeak huts egin du: %2"
 
-#: sendmail/sendmailjob.cpp:74
+#: sendmail/sendmailjob.cpp:75
 #, kde-format
 msgid "Sendmail exited abnormally."
 msgstr "«Sendmail» ezohiko moduan amaitu da."
 
-#: sendmail/sendmailjob.cpp:76
+#: sendmail/sendmailjob.cpp:77
 #, kde-format
 msgid "Sendmail exited abnormally: %1"
 msgstr "«Sendmail» ezohiko moduan amaitu da: %1"
 
-#: sendmail/sendmailtransportplugin.cpp:25
+#: sendmail/sendmailtransportplugin.cpp:26
 #, kde-format
 msgctxt "@option sendmail transport"
 msgid "Sendmail"
 msgstr "Sendmail"
 
-#: sendmail/sendmailtransportplugin.cpp:27
+#: sendmail/sendmailtransportplugin.cpp:28
 #, kde-format
 msgid "A local sendmail installation"
 msgstr "«sendmail» instalazio lokal bat"
 
-#: sendmail/sendmailtransportplugin.cpp:36
+#: sendmail/sendmailtransportplugin.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

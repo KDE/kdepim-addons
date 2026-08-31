@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2026-05-30 17:23-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -18,18 +18,18 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: evolutionv1/evolutionv1importdata.cpp:44
-#: evolutionv2/evolutionv2importdata.cpp:44 mailapp/mailappimportdata.cpp:48
-#: oe/oeimportdata.cpp:49 opera/operaimportdata.cpp:45
-#: pmail/pmailimportdata.cpp:48 thebat/thebatimportdata.cpp:47
+#: evolutionv1/evolutionv1importdata.cpp:45
+#: evolutionv2/evolutionv2importdata.cpp:45 mailapp/mailappimportdata.cpp:49
+#: oe/oeimportdata.cpp:50 opera/operaimportdata.cpp:46
+#: pmail/pmailimportdata.cpp:49 thebat/thebatimportdata.cpp:48
 #, kde-format
 msgid "Import in progress"
 msgstr "ئەكىرىۋاتىدۇ"
 
-#: evolutionv1/evolutionv1importdata.cpp:52
-#: evolutionv2/evolutionv2importdata.cpp:52 mailapp/mailappimportdata.cpp:55
-#: oe/oeimportdata.cpp:56 opera/operaimportdata.cpp:53
-#: pmail/pmailimportdata.cpp:55 thebat/thebatimportdata.cpp:54
+#: evolutionv1/evolutionv1importdata.cpp:53
+#: evolutionv2/evolutionv2importdata.cpp:53 mailapp/mailappimportdata.cpp:56
+#: oe/oeimportdata.cpp:57 opera/operaimportdata.cpp:54
+#: pmail/pmailimportdata.cpp:56 thebat/thebatimportdata.cpp:55
 #, kde-format
 msgid "Import finished"
 msgstr "ئەكىرىش تاماملاندى"

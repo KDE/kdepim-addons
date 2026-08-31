@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-07-04 11:58+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -18,32 +18,32 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: emaillineedit/emaillineedit.cpp:33
+#: emaillineedit/emaillineedit.cpp:34
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Pulsa sur button per seliger contactos..."
 
-#: emaillineedit/emaillineedit.cpp:37
+#: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
 msgstr "…"
 
-#: emaillineedit/emaillineedit.cpp:39
+#: emaillineedit/emaillineedit.cpp:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Selige messages de e-posta"
 
-#: emaillineedit/emaillineedit.cpp:88
+#: emaillineedit/emaillineedit.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
 msgstr "Selige messages de e-posta"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
@@ -54,13 +54,13 @@ msgstr "Crea dossier"
 msgid "Error during creating folder: %1"
 msgstr "Error durante que on creava dossier: %1"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:28
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Folder…"
 msgstr "Crea dossier ..."
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:30
+#: imapfoldercompletion/selectimapfolderdialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
@@ -76,34 +76,34 @@ msgstr "Il non pote cargar lista de dossier"
 msgid "Loading in progress…"
 msgstr "Cargar in progresso..."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#: imapfoldercompletion/selectimapfolderwidget.cpp:43
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Cerca…"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#: imapfoldercompletion/selectimapfolderwidget.cpp:49
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Refresca lista de dossier de IMAP"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Create Folder"
 msgstr "Crea dossier"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Folder Name:"
 msgstr "Nomine de dossier:"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
 #, kde-format
 msgid "Slashes are not allowed in folder names."
 msgstr "Nos non pote usar \"/\" al nomines de dossier."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, kde-format
 msgid "Empty folder name is not supported."
 msgstr "VAcue nomine de dossier non es supportate."
@@ -119,13 +119,13 @@ msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "Carga dossieres"
 
-#: imapfoldercompletion/selectimapwidget.cpp:31
+#: imapfoldercompletion/selectimapwidget.cpp:32
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Selige dossierde IMAP"
 
-#: imapfoldercompletion/selectimapwidget.cpp:58
+#: imapfoldercompletion/selectimapwidget.cpp:59
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"

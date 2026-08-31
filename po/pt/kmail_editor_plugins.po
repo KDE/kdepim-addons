@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-22 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2019-12-17 11:53+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -131,7 +131,7 @@ msgctxt "@title:window"
 msgid "Select Email Address"
 msgstr ""
 
-#: insertshorturl/insertshorturlconfigurewidget.cpp:29
+#: insertshorturl/insertshorturlconfigurewidget.cpp:30
 #, fuzzy, kde-format
 #| msgid "Select Short URL server:"
 msgctxt "@label:textbox"
@@ -145,19 +145,19 @@ msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Inserir um URL Curto..."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:87
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:86
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
 msgstr ""
 "Não foi detectada nenhuma ligação à rede, pelo que não é possível reduzir o "
 "URL."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:94
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:93
 #, kde-format
 msgid "String doesn't seem to be a URL"
 msgstr "O texto não parece ser um URL"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:100
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:99
 #, kde-format
 msgid "An error occurred: \"%1\""
 msgstr "Ocorreu um erro: \"%1\""
@@ -197,20 +197,20 @@ msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "Inserir um Espaço Inquebrável"
 
-#: quicktext/quicktextconfiguredialog.cpp:28
+#: quicktext/quicktextconfiguredialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure quick text"
 msgstr "Configurar o texto rápido"
 
-#: quicktext/quicktextconfiguredialog.cpp:39
+#: quicktext/quicktextconfiguredialog.cpp:40
 #, fuzzy, kde-format
 #| msgid "Import..."
 msgctxt "@action:button"
 msgid "Import…"
 msgstr "Importar..."
 
-#: quicktext/quicktextconfiguredialog.cpp:42
+#: quicktext/quicktextconfiguredialog.cpp:43
 #, fuzzy, kde-format
 #| msgid "Export..."
 msgctxt "@action:button"
@@ -318,19 +318,19 @@ msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
 msgstr "Deseja remover o grupo \"%1\"?"
 
-#: quicktext/quicktextwidget.cpp:68
+#: quicktext/quicktextwidget.cpp:69
 #, kde-format
 msgid "QuickText was changed. Do you want to save it?"
 msgstr "O Texto Rápido foi alterado. Deseja gravá-lo?"
 
-#: quicktext/quicktextwidget.cpp:69
+#: quicktext/quicktextwidget.cpp:70
 #, fuzzy, kde-format
 #| msgid "Save"
 msgctxt "@title:window"
 msgid "Save"
 msgstr "Gravar"
 
-#: quicktext/quicktextwidget.cpp:111
+#: quicktext/quicktextwidget.cpp:112
 #, kde-format
 msgid "General"
 msgstr "Geral"

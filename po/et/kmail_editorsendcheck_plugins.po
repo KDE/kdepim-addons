@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2019-12-18 19:29+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -82,20 +82,20 @@ msgctxt "@action:button"
 msgid "Send As HTML"
 msgstr ""
 
-#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:16
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:17
 #, fuzzy, kde-format
 #| msgid "Update SMTP server"
 msgctxt "@option:check"
 msgid "Update SMTP server"
 msgstr "Uuenda SMTP-serverit"
 
-#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:18
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Check SMTP server"
 msgstr "SMTP-serveri kontrollimine"
 
-#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:22
+#: checkbeforesend/checkbeforesendupdatesmtpdialog.cpp:23
 #, fuzzy, kde-format
 #| msgid ""
 #| "Do you want to send the email with a different SMTP than the one defined "
@@ -114,60 +114,60 @@ msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
 msgstr "Enne kirja saatmist kontrollimise plugina seadistamine"
 
-#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:19
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
 #, fuzzy, kde-format
 #| msgid "Send as plain text"
 msgctxt "@option:check"
 msgid "Send as plain text"
 msgstr "Saatmine lihttekstina"
 
-#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:20
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, fuzzy, kde-format
 #| msgid "Use SMTP server defined in identity"
 msgctxt "@option:check"
 msgid "Use SMTP server defined in identity"
 msgstr "Identiteedile määratud SMTP-serveri kasutamine"
 
-#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
 #, fuzzy, kde-format
 #| msgid "Check duplicated emails addresses"
 msgctxt "@option:check"
 msgid "Check duplicated emails addresses"
 msgstr "Topeltaadresside kontroll"
 
-#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:22
+#: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:23
 #, fuzzy, kde-format
 #| msgid "Check send attachment"
 msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Manuse saatmise kontroll"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:27
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "Topeltkirjad"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:30
 #, fuzzy, kde-format
 #| msgid "These emails are duplicated. Do you want to send email?"
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Need kirjad on topelt. Kas saata kiri?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:53
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:54
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:25
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Attachment"
 msgstr "Manuse kontroll"
 
-#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:28
+#: checkbeforesend/sendattachments/checkattachmentdialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Do you want to send some attachment?"
 msgctxt "@label:textbox"
@@ -240,32 +240,32 @@ msgstr "Uus e-posti aadress:"
 msgid "Do you want to remove this email address?"
 msgstr "Kas saata kiri HTML-vormingus?"
 
-#: confirm-address/confirmaddressdialog.cpp:27
+#: confirm-address/confirmaddressdialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Add Selected Emails to WhiteList"
 msgctxt "@action:button"
 msgid "Add Selected Emails to WhiteList"
 msgstr "Lisa valitud kirjad valgesse nimekirja"
 
-#: confirm-address/confirmaddressdialog.cpp:29
+#: confirm-address/confirmaddressdialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Addresses"
 msgstr "Aadresside kinnitamine"
 
-#: confirm-address/confirmaddressdialog.cpp:89
+#: confirm-address/confirmaddressdialog.cpp:90
 #, kde-format
 msgid "All selected emails are added to white list"
 msgstr "Kõik valitud kirjad lisatakse valgesse nimekirja"
 
-#: confirm-address/confirmaddressdialog.cpp:89
+#: confirm-address/confirmaddressdialog.cpp:90
 #, fuzzy, kde-format
 #| msgid "Emails added to white list"
 msgctxt "@title:window"
 msgid "Emails added to white list"
 msgstr "Kirjad lisati valgesse nimekirja"
 
-#: confirm-address/confirmaddressemailentrydialog.cpp:21
+#: confirm-address/confirmaddressemailentrydialog.cpp:22
 #, fuzzy, kde-format
 #| msgid "Enter new domain name:"
 msgctxt "@label:textbox"
@@ -284,7 +284,7 @@ msgctxt "@title:window"
 msgid "Change Value"
 msgstr "Väärtuse muutmine"
 
-#: confirm-address/confirmaddresswidget.cpp:22
+#: confirm-address/confirmaddresswidget.cpp:23
 #, fuzzy, kde-format
 #| msgid "Potentially invalid emails are displayed in red:"
 msgctxt "@label:textbox"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_semantic_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -44,13 +44,13 @@ msgstr "Dodaj rezervaciju u kalendar"
 msgid "Send this reservation to a device using KDE Connect."
 msgstr ""
 
-#: itineraryurlhandler.cpp:206
+#: itineraryurlhandler.cpp:203
 #, fuzzy, kde-format
 #| msgid "Boarding: %1"
 msgid "Boarding Pass"
 msgstr "Ukrcavanje: %1"
 
-#: itineraryurlhandler.cpp:207
+#: itineraryurlhandler.cpp:204
 #, kde-format
 msgid "Ticket"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2026-04-11 12:00+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -17,52 +17,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/autogenerateconfigureaskdialog.cpp:26
+#: src/autogenerateconfigureaskdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Ask AI"
 msgstr "Nastaviť Opýtať sa AI"
 
-#: src/autogenerateconfigureaskmenu.cpp:19
+#: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
 msgid "Ask AI…"
 msgstr "Opýtať sa AI…"
 
-#: src/autogenerateconfigureaskmenu.cpp:40
+#: src/autogenerateconfigureaskmenu.cpp:41
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"
 msgstr "Nastaviť…"
 
-#: src/autogenerateconfigurelistview.cpp:54
+#: src/autogenerateconfigurelistview.cpp:55
 #, kde-format
 msgctxt "@action"
 msgid "Add…"
 msgstr "Pridať…"
 
-#: src/autogenerateconfigurelistview.cpp:57
+#: src/autogenerateconfigurelistview.cpp:58
 #, kde-format
 msgid "Ask to AI"
 msgstr "Opýtať sa AI"
 
-#: src/autogenerateconfigurelistview.cpp:63
+#: src/autogenerateconfigurelistview.cpp:64
 #, kde-format
 msgctxt "@action"
 msgid "Modify…"
 msgstr "Upraviť…"
 
-#: src/autogenerateconfigurelistview.cpp:70
+#: src/autogenerateconfigurelistview.cpp:71
 #, kde-format
 msgctxt "@action"
 msgid "Remove…"
 msgstr "Odstrániť…"
 
-#: src/autogenerateconfigurelistview.cpp:73
+#: src/autogenerateconfigurelistview.cpp:74
 #, kde-format
 msgid "Do you want to remove it?"
 msgstr "Chcete to odstrániť?"
 
-#: src/autogenerateconfigurelistview.cpp:74
+#: src/autogenerateconfigurelistview.cpp:75
 #, kde-format
 msgctxt "@title"
 msgid "Remove"

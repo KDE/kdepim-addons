@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-22 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-08-10 19:12+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -130,7 +130,7 @@ msgctxt "@title:window"
 msgid "Select Email Address"
 msgstr ""
 
-#: insertshorturl/insertshorturlconfigurewidget.cpp:29
+#: insertshorturl/insertshorturlconfigurewidget.cpp:30
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
@@ -142,17 +142,17 @@ msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "குறும் முகவரியை நுழை…"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:87
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:86
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
 msgstr "இணைய இணைப்பு இல்லாததால் முகவரியை சுருக்க முடியவில்லை."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:94
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:93
 #, kde-format
 msgid "String doesn't seem to be a URL"
 msgstr "சரம் ஓர் முகவரிபோல் தெரியவில்லை"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:100
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:99
 #, kde-format
 msgid "An error occurred: \"%1\""
 msgstr "சிக்கல் ஏற்பட்டது: \"%1\""
@@ -189,19 +189,19 @@ msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "உடைக்கமுடியா இடைவெளியை நுழை"
 
-#: quicktext/quicktextconfiguredialog.cpp:28
+#: quicktext/quicktextconfiguredialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure quick text"
 msgstr "விரை உரையை அமை"
 
-#: quicktext/quicktextconfiguredialog.cpp:39
+#: quicktext/quicktextconfiguredialog.cpp:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Import…"
 msgstr "இறக்குமதி செய்…"
 
-#: quicktext/quicktextconfiguredialog.cpp:42
+#: quicktext/quicktextconfiguredialog.cpp:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Export…"
@@ -294,18 +294,18 @@ msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
 msgstr ""
 
-#: quicktext/quicktextwidget.cpp:68
+#: quicktext/quicktextwidget.cpp:69
 #, kde-format
 msgid "QuickText was changed. Do you want to save it?"
 msgstr ""
 
-#: quicktext/quicktextwidget.cpp:69
+#: quicktext/quicktextwidget.cpp:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Save"
 msgstr "சேமி"
 
-#: quicktext/quicktextwidget.cpp:111
+#: quicktext/quicktextwidget.cpp:112
 #, kde-format
 msgid "General"
 msgstr "பொதுவானவை"

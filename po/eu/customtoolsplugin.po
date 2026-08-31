@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2023-01-30 22:37+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Translator"
 msgstr "Itzultzailea"
 
-#: translatorplugin/translatorview.cpp:52
+#: translatorplugin/translatorview.cpp:53
 #, kde-format
 msgid "&Translator"
 msgstr "I&tzultzailea"

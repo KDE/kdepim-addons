@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-08-19 22:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,41 +17,41 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: cryptopageplugin.cpp:37
+#: cryptopageplugin.cpp:38
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "사용 가능한 프로토콜"
 
-#: cryptopageplugin.cpp:52
+#: cryptopageplugin.cpp:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "선호하는 OpenPGP 암호화 키:"
 
-#: cryptopageplugin.cpp:57
+#: cryptopageplugin.cpp:58
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "선호하는 S/MIME 암호화 인증서:"
 
-#: cryptopageplugin.cpp:62
+#: cryptopageplugin.cpp:63
 #, kde-format
 msgid "Message Preference"
 msgstr "메시지 설정"
 
-#: cryptopageplugin.cpp:71
+#: cryptopageplugin.cpp:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "서명:"
 
-#: cryptopageplugin.cpp:88
+#: cryptopageplugin.cpp:89
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "암호화:"
 
-#: cryptopageplugin.cpp:106
+#: cryptopageplugin.cpp:107
 #, kde-format
 msgid "Crypto Settings"
 msgstr "암호화 설정"

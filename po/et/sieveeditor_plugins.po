@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2019-12-18 20:06+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,34 +17,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: emaillineedit/emaillineedit.cpp:33
+#: emaillineedit/emaillineedit.cpp:34
 #, fuzzy, kde-format
 #| msgid "Click on button for selecting contacts..."
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Kontaktide valimiseks klõpsa nupule ..."
 
-#: emaillineedit/emaillineedit.cpp:37
+#: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
 msgstr ""
 
-#: emaillineedit/emaillineedit.cpp:39
+#: emaillineedit/emaillineedit.cpp:40
 #, fuzzy, kde-format
 #| msgid "Select Emails"
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Kirjade valimine"
 
-#: emaillineedit/emaillineedit.cpp:88
+#: emaillineedit/emaillineedit.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
 msgstr "Kirjade valimine"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, fuzzy, kde-format
 #| msgid "Create Folder"
 msgctxt "@title:window"
@@ -56,14 +56,14 @@ msgstr "Kausta loomine"
 msgid "Error during creating folder: %1"
 msgstr "Tõrge kausta loomisel: %1"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:28
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Create Folder"
 msgctxt "@action:button"
 msgid "Create Folder…"
 msgstr "Kausta loomine"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:30
+#: imapfoldercompletion/selectimapfolderdialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
@@ -80,36 +80,36 @@ msgstr "Kaustaloendi laadimine nurjus"
 msgid "Loading in progress…"
 msgstr "Laadimine käib ..."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#: imapfoldercompletion/selectimapfolderwidget.cpp:43
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Otsi ..."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#: imapfoldercompletion/selectimapfolderwidget.cpp:49
 #, fuzzy, kde-format
 #| msgid "Refresh IMAP Folder List"
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Värskenda IMAP kaustaloendit"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Create Folder"
 msgstr "Kausta loomine"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Folder Name:"
 msgstr "Kausta nimi:"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
 #, kde-format
 msgid "Slashes are not allowed in folder names."
 msgstr "Kaustanimes ei ole kaldkriipsud lubatud."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, kde-format
 msgid "Empty folder name is not supported."
 msgstr "Kaustanime andmata jätmine ei ole toetatud."
@@ -126,14 +126,14 @@ msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "Kaustade laadimine"
 
-#: imapfoldercompletion/selectimapwidget.cpp:31
+#: imapfoldercompletion/selectimapwidget.cpp:32
 #, fuzzy, kde-format
 #| msgid "Select IMAP folder"
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "IMAP kausta valimine"
 
-#: imapfoldercompletion/selectimapwidget.cpp:58
+#: imapfoldercompletion/selectimapwidget.cpp:59
 #, fuzzy, kde-format
 #| msgid "Click on button for selecting folder..."
 msgctxt "@info:placeholder"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-06-07 11:35+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,38 +28,38 @@ msgstr "הצגת פרטי מפתח"
 msgid "Publish the key"
 msgstr "פרסום המפתח"
 
-#: pgpkeyformatter.cpp:43
+#: pgpkeyformatter.cpp:44
 #, kde-format
 msgid "No valid key data in file."
 msgstr "אין נתוני מפתח תקפים בקובץ."
 
-#: pgpkeyurlhandler.cpp:47
+#: pgpkeyurlhandler.cpp:48
 #, kde-format
 msgid "Import the key"
 msgstr "ייבוא המפתח"
 
-#: pgpkeyurlhandler.cpp:66
+#: pgpkeyurlhandler.cpp:67
 #, kde-format
 msgid "An error occurred while importing the key."
 msgstr "אירעה שגיאה בייבוא המפתח."
 
-#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
+#: pgpkeyurlhandler.cpp:69 pgpkeyurlhandler.cpp:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "שגיאת ייבוא"
 
-#: pgpkeyurlhandler.cpp:70
+#: pgpkeyurlhandler.cpp:71
 #, kde-format
 msgid "No keys to import where found."
 msgstr "לא נמצאו מפתחות לייבוא."
 
-#: pgpkeyurlhandler.cpp:72
+#: pgpkeyurlhandler.cpp:73
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "המפתח יובא בהצלחה."
 
-#: pgpkeyurlhandler.cpp:72
+#: pgpkeyurlhandler.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"

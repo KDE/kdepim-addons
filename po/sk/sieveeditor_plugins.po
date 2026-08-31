@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sieveeditor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2019-08-04 11:15+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,32 +16,32 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.07.90\n"
 
-#: emaillineedit/emaillineedit.cpp:33
+#: emaillineedit/emaillineedit.cpp:34
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "Kliknutím na tlačidlo vyberiete kontakty..."
 
-#: emaillineedit/emaillineedit.cpp:37
+#: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
 msgstr "…"
 
-#: emaillineedit/emaillineedit.cpp:39
+#: emaillineedit/emaillineedit.cpp:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "Vyberte E-maily"
 
-#: emaillineedit/emaillineedit.cpp:88
+#: emaillineedit/emaillineedit.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
 msgstr "Vyberte E-maily"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
@@ -52,13 +52,13 @@ msgstr "Vytvoriť priečinok"
 msgid "Error during creating folder: %1"
 msgstr "Chyba počas vytvárania priečinka: %1"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:28
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Folder…"
 msgstr "Vytvoriť priečinok"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:30
+#: imapfoldercompletion/selectimapfolderdialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
@@ -74,34 +74,34 @@ msgstr "Nemôžem načítať zoznam priečinkov"
 msgid "Loading in progress…"
 msgstr "Načítavanie..."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#: imapfoldercompletion/selectimapfolderwidget.cpp:43
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "Hľadať…"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#: imapfoldercompletion/selectimapfolderwidget.cpp:49
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "Obnoviť zoznam priečinkov IMAP"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Create Folder"
 msgstr "Vytvoriť priečinok"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Folder Name:"
 msgstr "Názov priečinka:"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
 #, kde-format
 msgid "Slashes are not allowed in folder names."
 msgstr "Lomky nie sú povolené v názve priečinka."
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, kde-format
 msgid "Empty folder name is not supported."
 msgstr "Prázdny názov priečinka nie je podporovaný."
@@ -117,13 +117,13 @@ msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "Načítať priečinky"
 
-#: imapfoldercompletion/selectimapwidget.cpp:31
+#: imapfoldercompletion/selectimapwidget.cpp:32
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Vybrať priečinok IMAP"
 
-#: imapfoldercompletion/selectimapwidget.cpp:58
+#: imapfoldercompletion/selectimapwidget.cpp:59
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"

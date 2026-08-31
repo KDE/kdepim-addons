@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -46,12 +46,12 @@ msgstr "Importar reserva para o KDE Itinerary."
 msgid "Send this reservation to a device using KDE Connect."
 msgstr "Envia esta reserva para um dispositivo com o KDE Connect."
 
-#: itineraryurlhandler.cpp:206
+#: itineraryurlhandler.cpp:203
 #, kde-format
 msgid "Boarding Pass"
 msgstr "Cartão de embarque"
 
-#: itineraryurlhandler.cpp:207
+#: itineraryurlhandler.cpp:204
 #, kde-format
 msgid "Ticket"
 msgstr "Ingresso"

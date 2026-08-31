@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-22 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-08-01 13:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 "X-POOTLE-MTIME: 1413102215.000000\n"
 
-#: text_vcard.cpp:95
+#: text_vcard.cpp:96
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
@@ -36,63 +36,63 @@ msgstr[1] "Ekteki kartvizitler"
 msgid "[Add this contact to the address book]"
 msgstr "[Bu kişiyi adres defterine ekle]"
 
-#: text_vcard.cpp:151
+#: text_vcard.cpp:150
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Bu kişiyi adres defterinde güncelle]"
 
-#: text_vcard.cpp:156
+#: text_vcard.cpp:154
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Bu kişiyi zaten adres defterinde]"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:231
 #, kde-format
 msgid "View Business Card"
 msgstr "Kartviziti Göster"
 
-#: text_vcard.cpp:234
+#: text_vcard.cpp:232
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Kartviziti Farklı Kaydet…"
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Bu kişiyi adres defterine ekle."
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Bu kişiyi adres defterinde güncelle."
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "“%1” kişisini adres defterine ekleyin."
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "“%1” kişisini adres defterinde güncelleyin."
 
-#: text_vcard.cpp:278
+#: text_vcard.cpp:276
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "Kartviziti Kaydet"
 
-#: updatecontactjob.cpp:37
+#: updatecontactjob.cpp:38
 #, kde-format
 msgid "The vCard's primary email address is not in addressbook."
 msgstr "vCard’ın birincil e-posta adresi adres defterinde bulunmuyor."
 
-#: updatecontactjob.cpp:43
+#: updatecontactjob.cpp:44
 #, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
 msgstr "Adres defterindeki iki veya daha fazla kişinin e-posta adresi aynı."
 
-#: updatecontactjob.cpp:65
+#: updatecontactjob.cpp:66
 #, kde-format
 msgid ""
 "The vCard was updated in your address book; you can add more information to "
@@ -101,7 +101,7 @@ msgstr ""
 "Bu vCard adres defterinizde güncellenmişti; bu girdi ile ilgili daha fazla "
 "bilgiyi adres defterini açarak ekleyebilirsiniz."
 
-#: updatecontactjob.cpp:76
+#: updatecontactjob.cpp:77
 #, kde-format
 msgid "Email not specified"
 msgstr "E-posta belirtilmemiş"

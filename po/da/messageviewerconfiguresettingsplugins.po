@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-07-16 19:20+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -18,14 +18,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: dkim-verify/dkimadvancedwidget.cpp:19
+#: dkim-verify/dkimadvancedwidget.cpp:20
 #, fuzzy, kde-format
 #| msgid "Still verify the signature, if a domain is only testing DKIM"
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "Signér stadig domæne, selvom det kun tester DKIM"
 
-#: dkim-verify/dkimadvancedwidget.cpp:20
+#: dkim-verify/dkimadvancedwidget.cpp:21
 #, fuzzy, kde-format
 #| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgctxt "@option:check"
@@ -33,116 +33,116 @@ msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
 "Brug afslappet fortolkning når \"Autencificeringsresultat\"-overskrift læses"
 
-#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
-#: dkim-verify/dkimgeneralwidget.cpp:42
+#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:43
 #, kde-format
 msgid "Nothing"
 msgstr "Intet"
 
-#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Warning"
 msgstr "Advarsel"
 
-#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Error"
 msgstr "Fejl"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34
+#: dkim-verify/dkimadvancedwidget.cpp:35
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
 msgstr "Behandl RSA-SHA1 signeringsalgoritme som:"
 
-#: dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimadvancedwidget.cpp:39
 #, kde-format
 msgid "Treat small Key as:"
 msgstr "Behandl lille nøgle som:"
 
-#: dkim-verify/dkimadvancedwidget.cpp:40
+#: dkim-verify/dkimadvancedwidget.cpp:41
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "Indstil"
 
-#: dkim-verify/dkimadvancedwidget.cpp:43
+#: dkim-verify/dkimadvancedwidget.cpp:44
 #, kde-format
 msgid "Authentication Server verified:"
 msgstr "Autencificeringsserver verificeret:"
 
-#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:26
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
 msgstr "Konfigurér verificeret autencificeringsserver"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
 #, kde-format
 msgid "New Server:"
 msgstr "Ny server:"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
 #, kde-format
 msgid "New Server"
 msgstr "Ny server"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
 #, kde-format
 msgid "Modify Server"
 msgstr "Modificér server"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
 #, kde-format
 msgid "Server:"
 msgstr "Server:"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:45
 #, kde-format
 msgid "Do you want to delete selected server(s) name?"
 msgstr "Vil du slette de valgte servernavne?"
 
-#: dkim-verify/dkimconfiguredialog.cpp:27
+#: dkim-verify/dkimconfiguredialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure DKIM"
 msgstr "Konfigurér DKIM"
 
-#: dkim-verify/dkimconfiguretab.cpp:38
-#: foldersettings/folderconfiguresettingspagewidget.cpp:36
+#: dkim-verify/dkimconfiguretab.cpp:39
+#: foldersettings/folderconfiguresettingspagewidget.cpp:37
 #, kde-format
 msgid "General"
 msgstr "Generelt"
 
-#: dkim-verify/dkimconfiguretab.cpp:40
+#: dkim-verify/dkimconfiguretab.cpp:41
 #, kde-format
 msgid "Record Keys"
 msgstr "Optegnelsesnøgler"
 
-#: dkim-verify/dkimconfiguretab.cpp:42
+#: dkim-verify/dkimconfiguretab.cpp:43
 #, kde-format
 msgid "Policy"
 msgstr "Politik"
 
-#: dkim-verify/dkimconfiguretab.cpp:44
+#: dkim-verify/dkimconfiguretab.cpp:45
 #, kde-format
 msgid "Advanced"
 msgstr "Avanceret"
 
-#: dkim-verify/dkimgeneralwidget.cpp:18
+#: dkim-verify/dkimgeneralwidget.cpp:19
 #, fuzzy, kde-format
 #| msgid "Enable DKIM Support"
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "Aktiver DKIM-understøttelse"
 
-#: dkim-verify/dkimgeneralwidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:20
 #, fuzzy, kde-format
 #| msgid "Save DKIM Result"
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "Gem DKIM-resultat"
 
-#: dkim-verify/dkimgeneralwidget.cpp:21
+#: dkim-verify/dkimgeneralwidget.cpp:22
 #, fuzzy, kde-format
 #| msgid "Replace DKIM result by Authentication-Result header value"
 msgctxt "@option:check"
@@ -150,30 +150,30 @@ msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 "Erstat DKIM-resultat med værdien af autencificeringsresultatsoverskrift"
 
-#: dkim-verify/dkimgeneralwidget.cpp:37
+#: dkim-verify/dkimgeneralwidget.cpp:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "Gem optegnelsesnøgle:"
 
-#: dkim-verify/dkimgeneralwidget.cpp:42
+#: dkim-verify/dkimgeneralwidget.cpp:43
 #, kde-format
 msgid "Save"
 msgstr "Gem"
 
-#: dkim-verify/dkimgeneralwidget.cpp:42
+#: dkim-verify/dkimgeneralwidget.cpp:43
 #, kde-format
 msgid "Save and Compare"
 msgstr "Gem og sammenlign"
 
-#: dkim-verify/dkimpolicywidget.cpp:18
+#: dkim-verify/dkimpolicywidget.cpp:19
 #, fuzzy, kde-format
 #| msgid "Check if e-mail should be signed"
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "Tjek om e-mail burde være signeret"
 
-#: dkim-verify/dkimpolicywidget.cpp:19
+#: dkim-verify/dkimpolicywidget.cpp:20
 #, fuzzy, kde-format
 #| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgctxt "@option:check"
@@ -181,73 +181,73 @@ msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
 "Brug DMARC til heuristisk at beslutte, om en e-mail burde blive signeret"
 
-#: dkim-verify/dkimpolicywidget.cpp:20
+#: dkim-verify/dkimpolicywidget.cpp:21
 #, fuzzy, kde-format
 #| msgid "Use default rule"
 msgctxt "@option:check"
 msgid "Use default rule"
 msgstr "Brug standardregel"
 
-#: dkim-verify/dkimpolicywidget.cpp:21
+#: dkim-verify/dkimpolicywidget.cpp:22
 #, fuzzy, kde-format
 #| msgid "Autogenerate rule"
 msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr "Autogenerér regel"
 
-#: dkim-verify/dkimpolicywidget.cpp:22
+#: dkim-verify/dkimpolicywidget.cpp:23
 #, fuzzy, kde-format
 #| msgid "Read Authentication-Results header"
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "Læs autencificeringsresultatsoverskrift"
 
-#: dkim-verify/dkimpolicywidget.cpp:23
+#: dkim-verify/dkimpolicywidget.cpp:24
 #, fuzzy, kde-format
 #| msgid "Autogenerate when Sender in SDID"
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "Autogenerér når afsender i SDID"
 
-#: dkim-verify/dkimpolicywidget.cpp:24
+#: dkim-verify/dkimpolicywidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"
 msgstr "Vis regler"
 
-#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:28
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
 msgstr "Konfigurér papirkurvsmappen for udløbskonto"
 
-#: foldersettings/folderconfiguresettingsdialog.cpp:28
+#: foldersettings/folderconfiguresettingsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Folder Settings"
 msgstr "Konfigurér mappeindstillinger"
 
-#: foldersettings/folderconfiguresettingspagebase.cpp:17
+#: foldersettings/folderconfiguresettingspagebase.cpp:18
 #, kde-format
 msgid "Modify"
 msgstr "Ændr"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:40
+#: foldersettings/folderconfiguresettingspagewidget.cpp:41
 #, kde-format
 msgid "View"
 msgstr "Vis"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:44
+#: foldersettings/folderconfiguresettingspagewidget.cpp:45
 #, kde-format
 msgid "Expiry"
 msgstr "Udløbstid"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:48
+#: foldersettings/folderconfiguresettingspagewidget.cpp:49
 #, kde-format
 msgid "Template"
 msgstr "Skabelon"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:57
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
 #, kde-format
 msgid ""
 "It will override all settings for each selected folder. Do you want to "
@@ -256,19 +256,19 @@ msgstr ""
 "Dette vil tilsidesætte alle indstillinger for hver valgt mappe. Vil du "
 "fortsætte?"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#: foldersettings/folderconfiguresettingspagewidget.cpp:59
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr "Gem mappeindstillinger"
 
-#: foldersettings/folderconfiguretreewidget.cpp:52
+#: foldersettings/folderconfiguretreewidget.cpp:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr "Vælg"
 
-#: foldersettings/folderconfiguretreewidget.cpp:60
+#: foldersettings/folderconfiguretreewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect"
@@ -280,44 +280,44 @@ msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr "Indstil gravatar"
 
-#: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
+#: gravatar/gravatarconfiguresettingspluginwidget.cpp:24
 #, fuzzy, kde-format
 #| msgid "Enable Gravatar Support"
 msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr "Aktiver understøttelse af Gravatar"
 
-#: openurlwith/openurlwithconfigurecreatedialog.cpp:16
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Create"
 msgstr "Opret"
 
-#: openurlwith/openurlwithconfigurecreatedialog.cpp:45
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:46
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit"
 msgstr "Redigér"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:19
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:20
 #, fuzzy, kde-format
 #| msgid "Enabled"
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Aktiveret"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:32
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:33
 #, kde-format
 msgid "Server Name:"
 msgstr "Servernavn:"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:36
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Information om argumenterformat…</a></qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:42
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:43
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
@@ -329,7 +329,7 @@ msgstr ""
 "<qt><p><strong>Disse udtryk kan bruges til argumenterne:</strong></p><ul><li>"
 "%u - URL brugt af kommando</li></ul></strong></p></qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:53
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:54
 #, kde-format
 msgid "Command line:"
 msgstr "Kommandolinje:"
@@ -339,91 +339,91 @@ msgstr "Kommandolinje:"
 msgid "Executable:"
 msgstr "Kørbar fil:"
 
-#: openurlwith/openurlwithconfiguredialog.cpp:26
+#: openurlwith/openurlwithconfiguredialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
 msgstr "Konfigurér åbn URL med-plugin"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:59
+#: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Tilføj regel…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:60
+#: openurlwith/openurlwithconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "Fjern regel"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:61
+#: openurlwith/openurlwithconfigurewidget.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Ændr regel…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:153
+#: openurlwith/openurlwithconfigurewidget.cpp:154
 #, kde-format
 msgid "A rule for host was already added."
 msgstr "En regle for vært var allerede tilføjet."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:153
+#: openurlwith/openurlwithconfigurewidget.cpp:154
 #, fuzzy, kde-format
 #| msgid "Host already checked"
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "Vært allerede tjekket"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:166
+#: openurlwith/openurlwithconfigurewidget.cpp:167
 #, kde-format
 msgid "Rule already exists."
 msgstr "Regel findes allerede."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:166
+#: openurlwith/openurlwithconfigurewidget.cpp:167
 #, fuzzy, kde-format
 #| msgid "Duplicate Rule"
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Duplikér regel"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:210
+#: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Vil du fjerne denne regel?"
 msgstr[1] "VIl du fjerne disse regler?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:211
+#: openurlwith/openurlwithconfigurewidget.cpp:212
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Fjern regel"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:228
+#: openurlwith/openurlwithconfigurewidget.cpp:229
 #, kde-format
 msgid "Add Rule…"
 msgstr "Tilføj regel…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:230
+#: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
 msgid "Edit Rule…"
 msgstr "Redigér regel…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:235
+#: openurlwith/openurlwithconfigurewidget.cpp:236
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] "Fjern regel"
 msgstr[1] "Fjern regler"
 
-#: scamsettings/scamconfiguresettingsdialog.cpp:27
+#: scamsettings/scamconfiguresettingsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr "Konfigurér spamindstillinger"
 
-#: scamsettings/scamconfiguresettingstreeview.cpp:32
+#: scamsettings/scamconfiguresettingstreeview.cpp:33
 #, kde-format
 msgid "Add…"
 msgstr "Tilføj…"

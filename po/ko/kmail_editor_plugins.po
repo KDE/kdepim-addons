@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-22 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-10-09 00:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -128,7 +128,7 @@ msgctxt "@title:window"
 msgid "Select Email Address"
 msgstr ""
 
-#: insertshorturl/insertshorturlconfigurewidget.cpp:29
+#: insertshorturl/insertshorturlconfigurewidget.cpp:30
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select Short URL server:"
@@ -140,17 +140,17 @@ msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "단축 URL 삽입…"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:87
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:86
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
 msgstr "네트워크에 연결되어 있지 않아서 단축 URL을 추가할 수 없습니다."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:94
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:93
 #, kde-format
 msgid "String doesn't seem to be a URL"
 msgstr "문자열이 URL이 아닌 것 같습니다"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:100
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:99
 #, kde-format
 msgid "An error occurred: \"%1\""
 msgstr "오류 발생: \"%1\""
@@ -187,19 +187,19 @@ msgctxt "@action"
 msgid "Insert Non Breaking Space"
 msgstr "비분리 공백 추가"
 
-#: quicktext/quicktextconfiguredialog.cpp:28
+#: quicktext/quicktextconfiguredialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure quick text"
 msgstr "빠른 텍스트 설정"
 
-#: quicktext/quicktextconfiguredialog.cpp:39
+#: quicktext/quicktextconfiguredialog.cpp:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Import…"
 msgstr "가져오기…"
 
-#: quicktext/quicktextconfiguredialog.cpp:42
+#: quicktext/quicktextconfiguredialog.cpp:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Export…"
@@ -296,18 +296,18 @@ msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
 msgstr "그룹 \"%1\"을(를) 삭제하시겠습니까?"
 
-#: quicktext/quicktextwidget.cpp:68
+#: quicktext/quicktextwidget.cpp:69
 #, kde-format
 msgid "QuickText was changed. Do you want to save it?"
 msgstr "빠른 텍스트가 변경되었습니다. 저장하시겠습니까?"
 
-#: quicktext/quicktextwidget.cpp:69
+#: quicktext/quicktextwidget.cpp:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Save"
 msgstr "저장"
 
-#: quicktext/quicktextwidget.cpp:111
+#: quicktext/quicktextwidget.cpp:112
 #, kde-format
 msgid "General"
 msgstr "일반"

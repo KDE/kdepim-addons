@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-17 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,32 +19,32 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: emaillineedit/emaillineedit.cpp:33
+#: emaillineedit/emaillineedit.cpp:34
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting contacts…"
 msgstr "सम्पर्कस्य चयनार्थं बटनं क्लिक् कुर्वन्तु…"
 
-#: emaillineedit/emaillineedit.cpp:37
+#: emaillineedit/emaillineedit.cpp:38
 #, kde-format
 msgid "…"
 msgstr "…"
 
-#: emaillineedit/emaillineedit.cpp:39
+#: emaillineedit/emaillineedit.cpp:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select Emails"
 msgstr "ईमेल चयनं कुर्वन्तु"
 
-#: emaillineedit/emaillineedit.cpp:88
+#: emaillineedit/emaillineedit.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Emails"
 msgstr "ईमेल चयनं कुर्वन्तु"
 
 #: imapfoldercompletion/selectimapcreatefolderjob.cpp:90
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Folder"
@@ -55,13 +55,13 @@ msgstr "Folder रचयन्तु"
 msgid "Error during creating folder: %1"
 msgstr "पुटस्य निर्माणकाले त्रुटिः: %1"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:28
+#: imapfoldercompletion/selectimapfolderdialog.cpp:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Folder…"
 msgstr "समुच्चय रचयन्तु…"
 
-#: imapfoldercompletion/selectimapfolderdialog.cpp:30
+#: imapfoldercompletion/selectimapfolderdialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Select IMAP folder"
@@ -77,34 +77,34 @@ msgstr "पुटसूचीं लोड् कर्तुं असमर्
 msgid "Loading in progress…"
 msgstr "लोडिंग् प्रचलति…"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:42
+#: imapfoldercompletion/selectimapfolderwidget.cpp:43
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search…"
 msgstr "अन्वेषण…"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:48
+#: imapfoldercompletion/selectimapfolderwidget.cpp:49
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
 msgstr "IMAP पुटसूचीं ताजगीं कुर्वन्तु"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Create Folder"
 msgstr "Folder रचयन्तु"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:107
+#: imapfoldercompletion/selectimapfolderwidget.cpp:108
 #, kde-format
 msgid "Folder Name:"
 msgstr "पुटस्य नाम :"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:114
+#: imapfoldercompletion/selectimapfolderwidget.cpp:115
 #, kde-format
 msgid "Slashes are not allowed in folder names."
 msgstr "पुटनामेषु स्लैशस्य अनुमतिः नास्ति ।"
 
-#: imapfoldercompletion/selectimapfolderwidget.cpp:120
+#: imapfoldercompletion/selectimapfolderwidget.cpp:121
 #, kde-format
 msgid "Empty folder name is not supported."
 msgstr "रिक्तपुटनाम समर्थितं नास्ति ।"
@@ -120,13 +120,13 @@ msgctxt "@title:window"
 msgid "Load Folders"
 msgstr "समुच्चय लोड् कुर्वन्तु"
 
-#: imapfoldercompletion/selectimapwidget.cpp:31
+#: imapfoldercompletion/selectimapwidget.cpp:32
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "IMAP समुच्चय चिनोतु"
 
-#: imapfoldercompletion/selectimapwidget.cpp:58
+#: imapfoldercompletion/selectimapwidget.cpp:59
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"

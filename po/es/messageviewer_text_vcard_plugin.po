@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-22 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-08-01 04:42+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: text_vcard.cpp:95
+#: text_vcard.cpp:96
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
@@ -31,66 +31,66 @@ msgstr[1] "Tarjetas de visita adjuntas"
 msgid "[Add this contact to the address book]"
 msgstr "[Añadir este contacto a la libreta de direcciones]"
 
-#: text_vcard.cpp:151
+#: text_vcard.cpp:150
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Actualizar este contacto en la libreta de direcciones]"
 
-#: text_vcard.cpp:156
+#: text_vcard.cpp:154
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Este contacto ya está en la libreta de direcciones]"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:231
 #, kde-format
 msgid "View Business Card"
 msgstr "Ver tarjeta de negocios"
 
-#: text_vcard.cpp:234
+#: text_vcard.cpp:232
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Guardar tarjeta de negocios como..."
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Añadir este contacto a la libreta de direcciones."
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Actualizar este contacto a la libreta de direcciones."
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Añadir «%1» a la libreta de direcciones."
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Actualizar «%1» a la libreta de direcciones."
 
-#: text_vcard.cpp:278
+#: text_vcard.cpp:276
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "Guardar tarjeta de negocios"
 
-#: updatecontactjob.cpp:37
+#: updatecontactjob.cpp:38
 #, kde-format
 msgid "The vCard's primary email address is not in addressbook."
 msgstr ""
 "La dirección de correo vCard primaria no está en la libreta de direcciones."
 
-#: updatecontactjob.cpp:43
+#: updatecontactjob.cpp:44
 #, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
 msgstr ""
 "Hay dos o más contactos con el mismo correo almacenado en la libreta de "
 "direcciones."
 
-#: updatecontactjob.cpp:65
+#: updatecontactjob.cpp:66
 #, kde-format
 msgid ""
 "The vCard was updated in your address book; you can add more information to "
@@ -99,7 +99,7 @@ msgstr ""
 "La vCard se ha actualizado en su libreta de direcciones; puede añadir más "
 "información a esta entrada abriendo la libreta de direcciones."
 
-#: updatecontactjob.cpp:76
+#: updatecontactjob.cpp:77
 #, kde-format
 msgid "Email not specified"
 msgstr "Correo no especificado"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-06-16 16:57+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,41 +17,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.1\n"
 
-#: cryptopageplugin.cpp:37
+#: cryptopageplugin.cpp:38
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "அனுமதிக்கப்படும் நெறிமுறைகள்"
 
-#: cryptopageplugin.cpp:52
+#: cryptopageplugin.cpp:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "முதன்மையான OpenPGP மறையாக்க சாவி:"
 
-#: cryptopageplugin.cpp:57
+#: cryptopageplugin.cpp:58
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "முதன்மையான S/MIME மறையாக்க சான்றிதழ்:"
 
-#: cryptopageplugin.cpp:62
+#: cryptopageplugin.cpp:63
 #, kde-format
 msgid "Message Preference"
 msgstr "அஞ்சல் விருப்பங்கள்"
 
-#: cryptopageplugin.cpp:71
+#: cryptopageplugin.cpp:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "கையொப்பம்:"
 
-#: cryptopageplugin.cpp:88
+#: cryptopageplugin.cpp:89
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "மறையாக்கம்:"
 
-#: cryptopageplugin.cpp:106
+#: cryptopageplugin.cpp:107
 #, kde-format
 msgid "Crypto Settings"
 msgstr "கமுக்கவியல் அமைப்புகள்"

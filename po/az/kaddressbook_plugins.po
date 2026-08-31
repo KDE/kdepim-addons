@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2022-10-18 12:24+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,104 +17,104 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.2\n"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:36
+#: checkgravatar/checkgravatarplugininterface.cpp:37
 #, fuzzy, kde-format
 #| msgid "Check Gravatar..."
 msgid "Check Gravatar…"
 msgstr "Gravatarı yoxlayın..."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:60
-#: sendmail/sendmailplugininterface.cpp:59
+#: checkgravatar/checkgravatarplugininterface.cpp:61
+#: sendmail/sendmailplugininterface.cpp:60
 #, kde-format
 msgid "You have not selected any contacts."
 msgstr "Sizin heç bir seçilmiş əlaqəniz yoxdur."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:68
+#: checkgravatar/checkgravatarplugininterface.cpp:69
 #, kde-format
 msgid "No email found for this contact."
 msgstr "Bu əlaqə üçün e-poçt ünvanı tapılmadı."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:108
+#: checkgravatar/checkgravatarplugininterface.cpp:109
 #, kde-format
 msgid "A contact group was selected."
 msgstr "Əlaqə qrupu seçilib."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:111
+#: checkgravatar/checkgravatarplugininterface.cpp:112
 #, kde-format
 msgid "Too many contacts selected."
 msgstr "Həddindən çox əlaqə seçilib."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:28
 #, fuzzy, kde-format
 #| msgid "Save Image"
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Şəkili saxlayın"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:28
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:29
 #, fuzzy, kde-format
 #| msgid "Save Image URL"
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "Şəkili URL kimi saxlayın"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:31
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Check and update Gravatar"
 msgstr "Gravatarı yoxlayın və yeniləyin"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:24
 #, fuzzy, kde-format
 #| msgid "Search"
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Axtarış"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:32
 #, fuzzy, kde-format
 #| msgid "Email:"
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "E-Poçt:"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:110
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:111
 #, kde-format
 msgid "Search is impossible."
 msgstr "Axtarış mümkün deyil."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:129
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:130
 #, kde-format
 msgid "No Gravatar Found."
 msgstr "Gravatar tapılmadı."
 
-#: mergecontacts/mergecontactsplugininterface.cpp:25
+#: mergecontacts/mergecontactsplugininterface.cpp:26
 #, fuzzy, kde-format
 #| msgid "Merge Contacts..."
 msgid "Merge Contacts…"
 msgstr "Əlaqələri birləşdirin..."
 
-#: mergelib/manualmerge/mergecontactsdialog.cpp:40
+#: mergelib/manualmerge/mergecontactsdialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Contacts to merge"
 msgstr "Birləşdiriləcək əlaqələri seçin"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:31
+#: mergelib/manualmerge/mergecontactwidget.cpp:32
 #, fuzzy, kde-format
 #| msgid "merge"
 msgctxt "@action:button"
 msgid "merge"
 msgstr "birləşdirin"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:47
+#: mergelib/manualmerge/mergecontactwidget.cpp:48
 #, fuzzy, kde-format
 #| msgid "Select contacts that you really want to merge:"
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Həqiqətən birləşdirmək istədiyiniz əlaqələri seçin:"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:67
+#: mergelib/manualmerge/mergecontactwidget.cpp:68
 #, fuzzy, kde-format
 #| msgid "Select the addressbook in which to store merged contacts:"
 msgctxt "@label:textbox"
@@ -122,13 +122,13 @@ msgid "Select the addressbook in which to store merged contacts:"
 msgstr "Birləşdirilmiş əlqələr saxlanılacaq ünvan kitabçasını seçin:"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
 #, kde-format
 msgid "Select All"
 msgstr "Hamısını seç"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:103
 #, kde-format
 msgid "Deselect All"
 msgstr "Seçimləri ləğv et"
@@ -148,40 +148,40 @@ msgstr "Əlaqələr"
 msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "%1 əlaqəsinin təkrarını yarat (%2 element)"
 
-#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:42
+#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Birləşdiriləcək təkrarlanan əlaqələri axtarın və seçin"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:49
 #, fuzzy, kde-format
 #| msgid "Search in result..."
 msgctxt "@info:placeholder"
 msgid "Search in result…"
 msgstr "Nəticələrdə axtar..."
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:73
 #, fuzzy, kde-format
 #| msgid "Select AddressBook:"
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
 msgstr "Ünvan kitabçasını seçin:"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:86
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:45
 #, fuzzy, kde-format
 #| msgid "Merge"
 msgctxt "@action:button"
 msgid "Merge"
 msgstr "Birləşdirin"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
 #, kde-format
 msgid "Expand All"
 msgstr "Hamısını aç"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:100
 #, kde-format
 msgid "Collapse All"
 msgstr "Hamısını yığ"
@@ -201,7 +201,7 @@ msgstr "Təkrarlanan əlaqə tapılmadı."
 msgid "No contacts selected."
 msgstr "Heç bir əlaqə seçilməyib."
 
-#: mergelib/widgets/mergecontactloseinformationwarning.cpp:20
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:21
 #, kde-format
 msgid ""
 "Some information can be lost. Do you want to continue, or customize what you "
@@ -210,21 +210,21 @@ msgstr ""
 "Bəzi çəlumatlar itirilə bilər. Davam etmək yoxsa nəyin birləşdiriləcəyini "
 "ayarlamaq istəyirsiniz?"
 
-#: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:23
 #, fuzzy, kde-format
 #| msgid "Customize"
 msgctxt "@action"
 msgid "Customize"
 msgstr "Ayarlayın"
 
-#: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:28
 #, fuzzy, kde-format
 #| msgid "Automatic Merging"
 msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "Avtomatik birləşdirmə"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
 msgid ""
 "Some information was not selected. You can lose this information. Do you "
@@ -233,55 +233,55 @@ msgstr ""
 "Bəzi məlumatlar seçilmədi. Siz bu məlumatları itirə bilərsiniz. "
 "Birləşdirməyə davam etmək istəyirsiniz?"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:90
 #, fuzzy, kde-format
 #| msgid "Missing Selected Information"
 msgctxt "@title:window"
 msgid "Missing Selected Information"
 msgstr "heç bir məlumat seçilməyib"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:63
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:64
 #, kde-format
 msgctxt "The wedding anniversary of a contact"
 msgid "Anniversary"
 msgstr "İldönümü"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:72
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:73
 #, kde-format
 msgid "Blog Feed"
 msgstr "Bloq Lenti"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:81
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:82
 #, kde-format
 msgid "Profession"
 msgstr "Peşəsi"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:90
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:91
 #, kde-format
 msgid "Office"
 msgstr "Ofis"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:93
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:94
 #, kde-format
 msgid "Manager"
 msgstr "Menecer"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:96
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:97
 #, kde-format
 msgid "Assistant"
 msgstr "Katib(ə)"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:105
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:106
 #, kde-format
 msgid "Spouse"
 msgstr "Həyat yoldaşı"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:120
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:121
 #, kde-format
 msgid "(Undefined)"
 msgstr "(Təyin olunmamış)"
 
-#: searchduplicates/searchduplicatesplugininterface.cpp:24
+#: searchduplicates/searchduplicatesplugininterface.cpp:25
 #, fuzzy, kde-format
 #| msgid "Search Duplicate Contacts..."
 msgid "Search Duplicate Contacts…"
@@ -292,7 +292,7 @@ msgstr "Təkrarlanan əlaqələri axtarın..."
 msgid "No emails found in selected contacts."
 msgstr "Seçilmiş əlaqələrdə e-poçt ünvanları taoılmadı."
 
-#: sendmail/sendmailplugininterface.cpp:26
+#: sendmail/sendmailplugininterface.cpp:27
 #, fuzzy, kde-format
 #| msgid "Send an email..."
 msgid "Send an email…"
@@ -308,7 +308,7 @@ msgstr "Heç bir vCard seçilməyib."
 msgid "Temporary file '%1' cannot be created"
 msgstr "\"%1\" müvəqqəti faylı yaradıla bilmədi"
 
-#: sendvcards/sendvcardsplugininterface.cpp:34
+#: sendvcards/sendvcardsplugininterface.cpp:35
 #, fuzzy, kde-format
 #| msgid "Send vCards..."
 msgid "Send vCards…"

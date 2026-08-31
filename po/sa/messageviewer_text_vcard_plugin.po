@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-22 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-12-14 01:48+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: text_vcard.cpp:95
+#: text_vcard.cpp:96
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
@@ -31,63 +31,63 @@ msgstr[1] "संलग्नव्यापारपत्राणि"
 msgid "[Add this contact to the address book]"
 msgstr "[एतत् सम्पर्कं पतापुस्तके योजयन्तु]।"
 
-#: text_vcard.cpp:151
+#: text_vcard.cpp:150
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[एतत् सम्पर्कं पतापुस्तके अद्यतनं कुर्वन्तु]।"
 
-#: text_vcard.cpp:156
+#: text_vcard.cpp:154
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[एषः सम्पर्कः सम्बोधनपुस्तिकायां पूर्वमेव अस्ति]।"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:231
 #, kde-format
 msgid "View Business Card"
 msgstr "व्यवसायपत्रं पश्यन्तु"
 
-#: text_vcard.cpp:234
+#: text_vcard.cpp:232
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "व्यवसायपत्रं रक्षतु यथा…"
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "एतत् सम्पर्कं पतापुस्तके योजयन्तु।"
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "एतत् सम्पर्कं पतापुस्तके अद्यतनं कुर्वन्तु।"
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "पतापुस्तके \"%1\" योजयन्तु ।"
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "\"%1\" इत्येतत् पतापुस्तके अद्यतनं कुर्वन्तु ।"
 
-#: text_vcard.cpp:278
+#: text_vcard.cpp:276
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "व्यवसायपत्रं रक्षतु"
 
-#: updatecontactjob.cpp:37
+#: updatecontactjob.cpp:38
 #, kde-format
 msgid "The vCard's primary email address is not in addressbook."
 msgstr "vCard इत्यस्य प्राथमिकं ईमेल-सङ्केतं पतापुस्तिकायां नास्ति ।"
 
-#: updatecontactjob.cpp:43
+#: updatecontactjob.cpp:44
 #, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
 msgstr "पतापुस्तिकायां संगृहीताः समाने ईमेलयुक्ते द्वौ वा अधिकौ सम्पर्कौ स्तः ।"
 
-#: updatecontactjob.cpp:65
+#: updatecontactjob.cpp:66
 #, kde-format
 msgid ""
 "The vCard was updated in your address book; you can add more information to "
@@ -96,7 +96,7 @@ msgstr ""
 "vCard भवतः पतापुस्तके अद्यतनं कृतम् आसीत्; पतापुस्तकं उद्घाट्य अस्मिन् प्रविष्टौ अधिकानि "
 "सूचनानि योजयितुं शक्नुवन्ति ।"
 
-#: updatecontactjob.cpp:76
+#: updatecontactjob.cpp:77
 #, kde-format
 msgid "Email not specified"
 msgstr "ईमेल निर्दिष्टं नास्ति"

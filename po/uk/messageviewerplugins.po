@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-09-03 18:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,18 +20,18 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:41
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:42
 #, kde-format
 msgid "Current URL is not a shortened URL."
 msgstr "Поточна адреса не є скороченою адресою."
 
-#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:56
+#: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:57
 #, kde-format
 msgctxt "@action"
 msgid "Expand URL"
 msgstr "Розгорнути адресу"
 
-#: common/messagevieweraiplugin/viewerpluginaiinterface.cpp:48
+#: common/messagevieweraiplugin/viewerpluginaiinterface.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Ask AI…"
@@ -48,155 +48,155 @@ msgstr "Закрити"
 msgid "Close"
 msgstr "Закрити"
 
-#: common/translatorplugin/viewerplugintranslatorinterface.cpp:49
+#: common/translatorplugin/viewerplugintranslatorinterface.cpp:50
 #, kde-format
 msgctxt "@action"
 msgid "Translate…"
 msgstr "Перекласти…"
 
-#: createeventplugin/eventedit.cpp:44 createtodoplugin/todoedit.cpp:42
+#: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
 #, kde-format
 msgid "&Save"
 msgstr "&Зберегти"
 
-#: createeventplugin/eventedit.cpp:45 createtodoplugin/todoedit.cpp:43
+#: createeventplugin/eventedit.cpp:46 createtodoplugin/todoedit.cpp:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Open &Editor…"
 msgstr "Відкрити &редактор…"
 
-#: createeventplugin/eventedit.cpp:56
+#: createeventplugin/eventedit.cpp:57
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Event:"
 msgstr "Подія:"
 
-#: createeventplugin/eventedit.cpp:74
+#: createeventplugin/eventedit.cpp:75
 #, kde-format
 msgid "Calendar where the new event will be stored."
 msgstr "Календар, до якого слід зберігати нові записи подій."
 
-#: createeventplugin/eventedit.cpp:76
+#: createeventplugin/eventedit.cpp:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calendar where the new event will be stored"
 msgstr "Календар, до якого слід зберігати нові записи подій"
 
-#: createeventplugin/eventedit.cpp:89
+#: createeventplugin/eventedit.cpp:90
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Start:"
 msgstr "Початок:"
 
-#: createeventplugin/eventedit.cpp:95
+#: createeventplugin/eventedit.cpp:96
 #, kde-format
 msgid "Select start time for event."
 msgstr "Виберіть час початку події."
 
-#: createeventplugin/eventedit.cpp:102
+#: createeventplugin/eventedit.cpp:103
 #, kde-format
 msgctxt "@label:textbox"
 msgid "End:"
 msgstr "Завершення:"
 
-#: createeventplugin/eventedit.cpp:107
+#: createeventplugin/eventedit.cpp:108
 #, kde-format
 msgid "Select end time for event."
 msgstr "Виберіть час завершення події."
 
-#: createeventplugin/eventedit.cpp:125
+#: createeventplugin/eventedit.cpp:126
 #, kde-format
 msgid "Create new event and close this widget."
 msgstr "Створити завдання і закрити цей віджет."
 
-#: createeventplugin/eventedit.cpp:131
+#: createeventplugin/eventedit.cpp:132
 #, kde-format
 msgid "Open event editor, where more details can be changed."
 msgstr "Відкрити редактор завдань для внесення змін до параметрів."
 
-#: createeventplugin/eventedit.cpp:142
+#: createeventplugin/eventedit.cpp:143
 #, kde-format
 msgid "Close the widget for creating new events."
 msgstr "Закрити віджет для створення нових записів подій."
 
-#: createeventplugin/viewerplugincreateeventinterface.cpp:68
+#: createeventplugin/viewerplugincreateeventinterface.cpp:69
 #, kde-format
 msgid "Create Event…"
 msgstr "Створити запис події…"
 
-#: createeventplugin/viewerplugincreateeventinterface.cpp:69
+#: createeventplugin/viewerplugincreateeventinterface.cpp:70
 #, kde-format
 msgid "Create Event"
 msgstr "Створити запис події"
 
-#: createeventplugin/viewerplugincreateeventinterface.cpp:70
+#: createeventplugin/viewerplugincreateeventinterface.cpp:71
 #, kde-format
 msgid "Allows you to create a calendar Event"
 msgstr "Надає вам змогу створити запис завдання у календарі"
 
-#: createtodoplugin/todoedit.cpp:61
+#: createtodoplugin/todoedit.cpp:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid "To-do:"
 msgstr "Завдання:"
 
-#: createtodoplugin/todoedit.cpp:80
+#: createtodoplugin/todoedit.cpp:81
 #, kde-format
 msgid "Todo list where the new task will be stored."
 msgstr "Список завдань, до якого слід зберегти новий запис завдання."
 
-#: createtodoplugin/todoedit.cpp:82
+#: createtodoplugin/todoedit.cpp:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Todo list where the new task will be stored"
 msgstr "Список завдань, до якого слід зберегти новий запис завдання"
 
-#: createtodoplugin/todoedit.cpp:96
+#: createtodoplugin/todoedit.cpp:97
 #, kde-format
 msgid "Create new todo and close this widget."
 msgstr "Створити новий запис завдання і закрити цей віджет."
 
-#: createtodoplugin/todoedit.cpp:103
+#: createtodoplugin/todoedit.cpp:104
 #, kde-format
 msgid "Open todo editor, where more details can be changed."
 msgstr "Відкрити редактор завдань для внесення змін до параметрів."
 
-#: createtodoplugin/todoedit.cpp:113
+#: createtodoplugin/todoedit.cpp:114
 #, kde-format
 msgid "Close the widget for creating new todos."
 msgstr "Закрити віджет для створення нових записів завдань."
 
-#: createtodoplugin/todoedit.cpp:150
+#: createtodoplugin/todoedit.cpp:151
 #, kde-format
 msgid "Check I received a reply about \"%1\""
 msgstr "Перевірити отримання відповіді щодо «%1»"
 
-#: createtodoplugin/todoedit.cpp:151
+#: createtodoplugin/todoedit.cpp:152
 #, kde-format
 msgid "Reply to \"%1\""
 msgstr "Відповідь «%1»"
 
-#: createtodoplugin/todoedit.cpp:240
+#: createtodoplugin/todoedit.cpp:241
 #, kde-format
 msgctxt ""
 "%1 is summary of the todo, %2 is name of the folder in which it is stored"
 msgid "New todo '%1' was added to task list '%2'"
 msgstr "Новий запис завдання, «%1», було додано до списку завдань «%2»"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:68
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:69
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:70
 #, kde-format
 msgid "Create To-do"
 msgstr "Створити запис завдання"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:70
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:71
 #, kde-format
 msgid "Allows you to create a calendar to-do or reminder from this message"
 msgstr ""
 "Надає вам змогу створити запис завдання у календарі або нагадування на "
 "основі цього повідомлення"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:72
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:73
 #, kde-format
 msgid ""
 "This option starts the KOrganizer to-do editor with initial values taken "
@@ -208,81 +208,81 @@ msgstr ""
 "повідомлення. Після цього ви можете редагувати запис, а потім зберегти його "
 "до вашого календаря."
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:16
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfiguredialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"External Script\" Plugin"
 msgstr "Налаштовування додатка «Зовнішній скрипт»"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:59
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Додати скрипт…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Вилучити скрипт"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Змінити скрипт…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:67
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:68
 #, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Зовнішній скрипт:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:106
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
 #, kde-format
 msgid "Do you want to remove this script \"%1\"?"
 msgstr "Хочете вилучити скрипт «%1»?"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:108
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "Вилучення зовнішнього скрипту"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:26
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"
 msgstr "Додавання або зміна зовнішнього скрипту"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:28
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:29
 #, kde-format
 msgid "Name:"
 msgstr "Назва:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:32
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:33
 #, kde-format
 msgid "Description:"
 msgstr "Опис:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:37
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "Додати аргументи команди…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:39
 #, kde-format
 msgid "Command Line:"
 msgstr "Рядок команди:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:41
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:42
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Відомості щодо формату аргументу…</a></qt>"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:47
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
 #, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
@@ -304,29 +304,29 @@ msgstr ""
 msgid "Executable:"
 msgstr "Виконуваний файл:"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:81
 #, kde-format
 msgid "'%1' not found"
 msgstr "«%1» не знайдено"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:80
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Executable not found."
 msgstr "Не знайдено виконуваного файла."
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:86
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:87
 #, kde-format
 msgid "Impossible to start executable"
 msgstr "Не вдалося запустити виконуваний файл"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:105
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:106
 #, kde-format
 msgctxt "@action"
 msgid "External Script"
 msgstr "Зовнішній скрипт"
 
-#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:130
+#: externalscriptplugin/viewerpluginexternalscriptinterface.cpp:131
 #, kde-format
 msgid "Configure"
 msgstr "Налаштувати"

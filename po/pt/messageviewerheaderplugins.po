@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerheaderplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2015-12-08 12:14+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -18,31 +18,31 @@ msgstr ""
 "X-POFile-SpellExtra: Bugzilla MDN BCC\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:67
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
+#: briefheaderstyleplugin/briefheaderstyle.cpp:68
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:97
 #, kde-format
 msgid "[vCard]"
 msgstr "[vCard]"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:75
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
+#: briefheaderstyleplugin/briefheaderstyle.cpp:76
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:142
 #, kde-format
 msgid "CC: "
 msgstr "CC: "
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:82
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
+#: briefheaderstyleplugin/briefheaderstyle.cpp:83
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:152
 #, kde-format
 msgid "BCC: "
 msgstr "BCC: "
 
-#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:22
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Brief Headers"
 msgstr "Cabeçalhos &Resumidos"
 
-#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:25
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show brief list of message headers"
 msgstr "Mostra uma lista breve dos cabeçalhos das mensagens"
@@ -57,71 +57,71 @@ msgstr "De: "
 msgid "(resent from %1)"
 msgstr "(enviado de novo de %1)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:112
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:110
 #, kde-format
 msgid "(receiver was %1)"
 msgstr "(o destinatário foi %1)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:130
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:128
 #, kde-format
 msgctxt "To-field of the mail header."
 msgid "To: "
 msgstr "Para: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:161
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:160
 #, kde-format
 msgid "Date: "
 msgstr "Data: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:183
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:182
 #, kde-format
 msgid "Bugzilla: "
 msgstr "Bugzilla: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:192
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:191
 #, kde-format
 msgid "MDN To: "
 msgstr "MDN Para: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:200
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:198
 #, kde-format
 msgid "Spam Status:"
 msgstr "Estado de Lixo:"
 
-#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:22
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Fancy Headers"
 msgstr "Cabeçalhos &Bonitos"
 
-#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:25
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show the list of headers in a fancy format"
 msgstr "Mostra a lista de cabeçalhos num formato mais agradável"
 
-#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:190
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:188
 #, kde-format
 msgid "Attachments:"
 msgstr "Anexos:"
 
-#: longheaderstyleplugin/longheaderstyleinterface.cpp:22
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Long Headers"
 msgstr "Cabeçalhos &Longos"
 
-#: longheaderstyleplugin/longheaderstyleinterface.cpp:25
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show long list of message headers"
 msgstr "Mostra uma lista extensa com os cabeçalhos das mensagens"
 
-#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:22
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Standard Headers"
 msgstr "Cabeçalho&s-Padrão"
 
-#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:25
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "Mostra uma lista normal com os cabeçalhos das mensagens"

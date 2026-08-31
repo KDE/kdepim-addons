@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2026-08-17 21:33+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,43 +19,43 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: sendmail/sendmailjob.cpp:40
+#: sendmail/sendmailjob.cpp:41
 #, kde-format
 msgid "Invalid options for the mailer program: %1"
 msgstr "خيارات غير صالحة لبرنامج البريد الإلكتروني: %1"
 
-#: sendmail/sendmailjob.cpp:58
+#: sendmail/sendmailjob.cpp:59
 #, kde-format
 msgid "Failed to execute mailer program %1"
 msgstr "فشل تنفيذ برنامج البريد %1"
 
-#: sendmail/sendmailjob.cpp:60
+#: sendmail/sendmailjob.cpp:61
 #, kde-format
 msgid "Failed to execute mailer program %1: %2"
 msgstr "فشل تنفيذ برنامج البريد %1: %2"
 
-#: sendmail/sendmailjob.cpp:74
+#: sendmail/sendmailjob.cpp:75
 #, kde-format
 msgid "Sendmail exited abnormally."
 msgstr "خرج Sendmail بطريقة غير طبيعيّة."
 
-#: sendmail/sendmailjob.cpp:76
+#: sendmail/sendmailjob.cpp:77
 #, kde-format
 msgid "Sendmail exited abnormally: %1"
 msgstr "خرج Sendmail بطريقة غير طبيعيّة: %1"
 
-#: sendmail/sendmailtransportplugin.cpp:25
+#: sendmail/sendmailtransportplugin.cpp:26
 #, kde-format
 msgctxt "@option sendmail transport"
 msgid "Sendmail"
 msgstr "Sendmail"
 
-#: sendmail/sendmailtransportplugin.cpp:27
+#: sendmail/sendmailtransportplugin.cpp:28
 #, kde-format
 msgid "A local sendmail installation"
 msgstr "تثبيت Sendmail محليّ"
 
-#: sendmail/sendmailtransportplugin.cpp:36
+#: sendmail/sendmailtransportplugin.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

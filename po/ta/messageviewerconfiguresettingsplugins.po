@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-06-20 21:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,241 +17,241 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.1\n"
 
-#: dkim-verify/dkimadvancedwidget.cpp:19
+#: dkim-verify/dkimadvancedwidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr ""
 
-#: dkim-verify/dkimadvancedwidget.cpp:20
+#: dkim-verify/dkimadvancedwidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr ""
 
-#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
-#: dkim-verify/dkimgeneralwidget.cpp:42
+#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:43
 #, kde-format
 msgid "Nothing"
 msgstr ""
 
-#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Warning"
 msgstr "எச்சரிக்கை"
 
-#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:37
+#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Error"
 msgstr "சிக்கல்"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34
+#: dkim-verify/dkimadvancedwidget.cpp:35
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
 msgstr ""
 
-#: dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimadvancedwidget.cpp:39
 #, kde-format
 msgid "Treat small Key as:"
 msgstr ""
 
-#: dkim-verify/dkimadvancedwidget.cpp:40
+#: dkim-verify/dkimadvancedwidget.cpp:41
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure"
 msgstr "அமை"
 
-#: dkim-verify/dkimadvancedwidget.cpp:43
+#: dkim-verify/dkimadvancedwidget.cpp:44
 #, kde-format
 msgid "Authentication Server verified:"
 msgstr ""
 
-#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:26
+#: dkim-verify/dkimauthenticationverifiedserverdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Authentication Verified Server"
 msgstr ""
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:40
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
 #, kde-format
 msgid "New Server:"
 msgstr "புதிய சேவையகம்:"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:41
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
 #, kde-format
 msgid "New Server"
 msgstr "புதிய சேவையகம்"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:42
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
 #, kde-format
 msgid "Modify Server"
 msgstr "சேவையகத்தை திருத்து"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:43
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
 #, kde-format
 msgid "Server:"
 msgstr "சேவையகம்"
 
-#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:44
+#: dkim-verify/dkimauthenticationverifiedserverwidget.cpp:45
 #, kde-format
 msgid "Do you want to delete selected server(s) name?"
 msgstr ""
 
-#: dkim-verify/dkimconfiguredialog.cpp:27
+#: dkim-verify/dkimconfiguredialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure DKIM"
 msgstr ""
 
-#: dkim-verify/dkimconfiguretab.cpp:38
-#: foldersettings/folderconfiguresettingspagewidget.cpp:36
+#: dkim-verify/dkimconfiguretab.cpp:39
+#: foldersettings/folderconfiguresettingspagewidget.cpp:37
 #, kde-format
 msgid "General"
 msgstr "பொதுவானவை"
 
-#: dkim-verify/dkimconfiguretab.cpp:40
+#: dkim-verify/dkimconfiguretab.cpp:41
 #, kde-format
 msgid "Record Keys"
 msgstr ""
 
-#: dkim-verify/dkimconfiguretab.cpp:42
+#: dkim-verify/dkimconfiguretab.cpp:43
 #, kde-format
 msgid "Policy"
 msgstr "கொள்கை"
 
-#: dkim-verify/dkimconfiguretab.cpp:44
+#: dkim-verify/dkimconfiguretab.cpp:45
 #, kde-format
 msgid "Advanced"
 msgstr "மேம்பட்டவை"
 
-#: dkim-verify/dkimgeneralwidget.cpp:18
+#: dkim-verify/dkimgeneralwidget.cpp:19
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr ""
 
-#: dkim-verify/dkimgeneralwidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr ""
 
-#: dkim-verify/dkimgeneralwidget.cpp:21
+#: dkim-verify/dkimgeneralwidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 
-#: dkim-verify/dkimgeneralwidget.cpp:37
+#: dkim-verify/dkimgeneralwidget.cpp:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr ""
 
-#: dkim-verify/dkimgeneralwidget.cpp:42
+#: dkim-verify/dkimgeneralwidget.cpp:43
 #, kde-format
 msgid "Save"
 msgstr "சேமி"
 
-#: dkim-verify/dkimgeneralwidget.cpp:42
+#: dkim-verify/dkimgeneralwidget.cpp:43
 #, kde-format
 msgid "Save and Compare"
 msgstr "சேமித்து ஒப்பிடு"
 
-#: dkim-verify/dkimpolicywidget.cpp:18
+#: dkim-verify/dkimpolicywidget.cpp:19
 #, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr ""
 
-#: dkim-verify/dkimpolicywidget.cpp:19
+#: dkim-verify/dkimpolicywidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
 
-#: dkim-verify/dkimpolicywidget.cpp:20
+#: dkim-verify/dkimpolicywidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Use default rule"
 msgstr ""
 
-#: dkim-verify/dkimpolicywidget.cpp:21
+#: dkim-verify/dkimpolicywidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate rule"
 msgstr ""
 
-#: dkim-verify/dkimpolicywidget.cpp:22
+#: dkim-verify/dkimpolicywidget.cpp:23
 #, kde-format
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr ""
 
-#: dkim-verify/dkimpolicywidget.cpp:23
+#: dkim-verify/dkimpolicywidget.cpp:24
 #, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr ""
 
-#: dkim-verify/dkimpolicywidget.cpp:24
+#: dkim-verify/dkimpolicywidget.cpp:25
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"
 msgstr ""
 
-#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:28
+#: expireaccounttrashfolder/expireaccounttrashfolderconfigdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Expiry Account Trash Folder"
 msgstr ""
 
-#: foldersettings/folderconfiguresettingsdialog.cpp:28
+#: foldersettings/folderconfiguresettingsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Folder Settings"
 msgstr ""
 
-#: foldersettings/folderconfiguresettingspagebase.cpp:17
+#: foldersettings/folderconfiguresettingspagebase.cpp:18
 #, kde-format
 msgid "Modify"
 msgstr "திருத்து"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:40
+#: foldersettings/folderconfiguresettingspagewidget.cpp:41
 #, kde-format
 msgid "View"
 msgstr "காட்டு"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:44
+#: foldersettings/folderconfiguresettingspagewidget.cpp:45
 #, kde-format
 msgid "Expiry"
 msgstr "காலாவதி"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:48
+#: foldersettings/folderconfiguresettingspagewidget.cpp:49
 #, kde-format
 msgid "Template"
 msgstr "வார்ப்புரு"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:57
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
 #, kde-format
 msgid ""
 "It will override all settings for each selected folder. Do you want to "
 "continue?"
 msgstr ""
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#: foldersettings/folderconfiguresettingspagewidget.cpp:59
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Folder Settings"
 msgstr ""
 
-#: foldersettings/folderconfiguretreewidget.cpp:52
+#: foldersettings/folderconfiguretreewidget.cpp:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Select"
 msgstr ""
 
-#: foldersettings/folderconfiguretreewidget.cpp:60
+#: foldersettings/folderconfiguretreewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect"
@@ -263,49 +263,49 @@ msgctxt "@title:window"
 msgid "Configure Gravatar"
 msgstr ""
 
-#: gravatar/gravatarconfiguresettingspluginwidget.cpp:23
+#: gravatar/gravatarconfiguresettingspluginwidget.cpp:24
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Gravatar Support"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurecreatedialog.cpp:16
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Create"
 msgstr "உருவாக்கு"
 
-#: openurlwith/openurlwithconfigurecreatedialog.cpp:45
+#: openurlwith/openurlwithconfigurecreatedialog.cpp:46
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit"
 msgstr "திருத்து"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:19
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:32
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:33
 #, kde-format
 msgid "Server Name:"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:36
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:42
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:43
 #, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%u - url used by command</li></ul></p></qt>"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:53
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:54
 #, kde-format
 msgid "Command line:"
 msgstr ""
@@ -315,89 +315,89 @@ msgstr ""
 msgid "Executable:"
 msgstr ""
 
-#: openurlwith/openurlwithconfiguredialog.cpp:26
+#: openurlwith/openurlwithconfiguredialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:59
+#: openurlwith/openurlwithconfigurewidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:60
+#: openurlwith/openurlwithconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:61
+#: openurlwith/openurlwithconfigurewidget.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:153
+#: openurlwith/openurlwithconfigurewidget.cpp:154
 #, kde-format
 msgid "A rule for host was already added."
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:153
+#: openurlwith/openurlwithconfigurewidget.cpp:154
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:166
+#: openurlwith/openurlwithconfigurewidget.cpp:167
 #, kde-format
 msgid "Rule already exists."
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:166
+#: openurlwith/openurlwithconfigurewidget.cpp:167
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:210
+#: openurlwith/openurlwithconfigurewidget.cpp:211
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:211
+#: openurlwith/openurlwithconfigurewidget.cpp:212
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:228
+#: openurlwith/openurlwithconfigurewidget.cpp:229
 #, kde-format
 msgid "Add Rule…"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:230
+#: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
 msgid "Edit Rule…"
 msgstr ""
 
-#: openurlwith/openurlwithconfigurewidget.cpp:235
+#: openurlwith/openurlwithconfigurewidget.cpp:236
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"
 msgstr[0] ""
 msgstr[1] ""
 
-#: scamsettings/scamconfiguresettingsdialog.cpp:27
+#: scamsettings/scamconfiguresettingsdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Scam Settings"
 msgstr ""
 
-#: scamsettings/scamconfiguresettingstreeview.cpp:32
+#: scamsettings/scamconfiguresettingstreeview.cpp:33
 #, kde-format
 msgid "Add…"
 msgstr ""

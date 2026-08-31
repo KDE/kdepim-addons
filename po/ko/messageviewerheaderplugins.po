@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2020-04-21 00:38+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,31 +17,31 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:67
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
+#: briefheaderstyleplugin/briefheaderstyle.cpp:68
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:97
 #, kde-format
 msgid "[vCard]"
 msgstr "[vCard]"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:75
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
+#: briefheaderstyleplugin/briefheaderstyle.cpp:76
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:142
 #, kde-format
 msgid "CC: "
 msgstr "참조:"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:82
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
+#: briefheaderstyleplugin/briefheaderstyle.cpp:83
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:152
 #, kde-format
 msgid "BCC: "
 msgstr "숨은 참조:"
 
-#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:22
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Brief Headers"
 msgstr "간단한 헤더(&B)"
 
-#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:25
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show brief list of message headers"
 msgstr "메시지 헤더의 간단한 목록 표시"
@@ -56,71 +56,71 @@ msgstr "보낸 사람:"
 msgid "(resent from %1)"
 msgstr "(%1의 최근 항목)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:112
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:110
 #, kde-format
 msgid "(receiver was %1)"
 msgstr "(수신자가 %1임)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:130
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:128
 #, kde-format
 msgctxt "To-field of the mail header."
 msgid "To: "
 msgstr "받는 사람:"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:161
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:160
 #, kde-format
 msgid "Date: "
 msgstr "날짜: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:183
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:182
 #, kde-format
 msgid "Bugzilla: "
 msgstr "Bugzilla: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:192
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:191
 #, kde-format
 msgid "MDN To: "
 msgstr "MDN 받는 사람: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:200
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:198
 #, kde-format
 msgid "Spam Status:"
 msgstr "스팸 상태:"
 
-#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:22
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Fancy Headers"
 msgstr "보기 좋은 헤더(&F)"
 
-#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:25
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show the list of headers in a fancy format"
 msgstr "메시지 헤더를 보기 좋게 나타내기"
 
-#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:190
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:188
 #, kde-format
 msgid "Attachments:"
 msgstr "첨부:"
 
-#: longheaderstyleplugin/longheaderstyleinterface.cpp:22
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Long Headers"
 msgstr "긴 헤더(&L)"
 
-#: longheaderstyleplugin/longheaderstyleinterface.cpp:25
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show long list of message headers"
 msgstr "메시지 헤더의 긴 목록 표시"
 
-#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:22
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Standard Headers"
 msgstr "표준 헤더(&S)"
 
-#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:25
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "메시지 헤더의 표준 목록 표시"

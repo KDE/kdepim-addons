@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-05-26 16:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,52 +20,52 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.1\n"
 
-#: src/autogenerateconfigureaskdialog.cpp:26
+#: src/autogenerateconfigureaskdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Ask AI"
 msgstr "Konfiguratu Galdetu AAri"
 
-#: src/autogenerateconfigureaskmenu.cpp:19
+#: src/autogenerateconfigureaskmenu.cpp:20
 #, kde-format
 msgid "Ask AI…"
 msgstr "Galdetu AAri..."
 
-#: src/autogenerateconfigureaskmenu.cpp:40
+#: src/autogenerateconfigureaskmenu.cpp:41
 #, kde-format
 msgctxt "@action"
 msgid "Configure…"
 msgstr "Konfiguratu..."
 
-#: src/autogenerateconfigurelistview.cpp:54
+#: src/autogenerateconfigurelistview.cpp:55
 #, kde-format
 msgctxt "@action"
 msgid "Add…"
 msgstr "Gehitu…"
 
-#: src/autogenerateconfigurelistview.cpp:57
+#: src/autogenerateconfigurelistview.cpp:58
 #, kde-format
 msgid "Ask to AI"
 msgstr "Galdetu AAri"
 
-#: src/autogenerateconfigurelistview.cpp:63
+#: src/autogenerateconfigurelistview.cpp:64
 #, kde-format
 msgctxt "@action"
 msgid "Modify…"
 msgstr "Aldatu..."
 
-#: src/autogenerateconfigurelistview.cpp:70
+#: src/autogenerateconfigurelistview.cpp:71
 #, kde-format
 msgctxt "@action"
 msgid "Remove…"
 msgstr "Kendu..."
 
-#: src/autogenerateconfigurelistview.cpp:73
+#: src/autogenerateconfigurelistview.cpp:74
 #, kde-format
 msgid "Do you want to remove it?"
 msgstr "Kendu nahi duzu?"
 
-#: src/autogenerateconfigurelistview.cpp:74
+#: src/autogenerateconfigurelistview.cpp:75
 #, kde-format
 msgctxt "@title"
 msgid "Remove"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2017-02-11 11:14+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -145,7 +145,7 @@ msgctxt "@action"
 msgid "&Show Folders Size…"
 msgstr ""
 
-#: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:36
+#: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:37
 #, kde-format
 msgid "Unable to start KMail application."
 msgstr ""
@@ -469,27 +469,27 @@ msgstr ""
 "Означава поруке препознате као заражене прочитаним и премешта их у изабрану "
 "фасциклу."
 
-#: mailmergeplugin/mailmergedialog.cpp:19
+#: mailmergeplugin/mailmergedialog.cpp:20
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr ""
 
-#: mailmergeplugin/mailmergedialog.cpp:22
+#: mailmergeplugin/mailmergedialog.cpp:23
 #, fuzzy, kde-format
 #| msgid "Mail Merge"
 msgctxt "@title:window"
 msgid "Mail Merge"
 msgstr "Стапање поште"
 
-#: mailmergeplugin/widgets/csvwidget.cpp:24
+#: mailmergeplugin/widgets/csvwidget.cpp:25
 #, fuzzy, kde-format
 #| msgid "Path:"
 msgctxt "@label:textbox"
 msgid "Path:"
 msgstr "Путања:"
 
-#: mailmergeplugin/widgets/mailmergepreviewdialog.cpp:16
+#: mailmergeplugin/widgets/mailmergepreviewdialog.cpp:17
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:21
 #, fuzzy, kde-format
 #| msgid "Attachment"
@@ -497,7 +497,7 @@ msgctxt "@title:window"
 msgid "Attachment"
 msgstr "Прилог"
 
-#: mailmergeplugin/widgets/mailmergewidget.cpp:36
+#: mailmergeplugin/widgets/mailmergewidget.cpp:37
 #, fuzzy, kde-format
 #| msgid "Source:"
 msgctxt "@label:textbox"
@@ -505,35 +505,35 @@ msgid "Source:"
 msgstr "Извор:"
 
 # >> @item:inlistbox Source:
-#: mailmergeplugin/widgets/mailmergewidget.cpp:41
+#: mailmergeplugin/widgets/mailmergewidget.cpp:42
 #, kde-format
 msgid "Address Book"
 msgstr "адресар"
 
 # >> @item:inlistbox Source:
-#: mailmergeplugin/widgets/mailmergewidget.cpp:42
+#: mailmergeplugin/widgets/mailmergewidget.cpp:43
 #, kde-format
 msgid "CSV"
 msgstr "ЦСВ"
 
-#: mailmergeplugin/widgets/mailmergewidget.cpp:58
+#: mailmergeplugin/widgets/mailmergewidget.cpp:59
 #, fuzzy, kde-format
 #| msgid "Attachment:"
 msgctxt "@label:textbox"
 msgid "Attachment:"
 msgstr "Прилог:"
 
-#: mailmergeplugin/widgets/mailmergewidget.cpp:63
+#: mailmergeplugin/widgets/mailmergewidget.cpp:64
 #, kde-format
 msgid "A&dd…"
 msgstr ""
 
-#: mailmergeplugin/widgets/mailmergewidget.cpp:63
+#: mailmergeplugin/widgets/mailmergewidget.cpp:64
 #, kde-format
 msgid "Re&move"
 msgstr "&Уклони"
 
-#: mailmergeplugin/widgets/mailmergewidget.cpp:63
+#: mailmergeplugin/widgets/mailmergewidget.cpp:64
 #, kde-format
 msgid "Mod&ify..."
 msgstr "&Измени..."

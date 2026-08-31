@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:49+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2007-02-28 13:59+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -18,40 +18,40 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
 "2;\n"
 
-#: csv/csvimportexportplugininterface.cpp:35
+#: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Export CSV List..."
 msgid "Export CSV file…"
 msgstr "Изнеси CSV-листа..."
 
-#: csv/csvimportexportplugininterface.cpp:36
+#: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
 msgid "Export contacts to a file in comma separated value format."
 msgstr ""
 
-#: csv/csvimportexportplugininterface.cpp:41
+#: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
 msgid "Import CSV file…"
 msgstr "Внеси CSV-листа..."
 
-#: csv/csvimportexportplugininterface.cpp:42
+#: csv/csvimportexportplugininterface.cpp:43
 #, kde-format
 msgid "Import contacts from a file in comma separated value format."
 msgstr ""
 
-#: csv/csvimportexportplugininterface.cpp:147
-#: gmx/gmximportexportplugininterface.cpp:80
-#: ldif/ldifimportexportplugininterface.cpp:123
+#: csv/csvimportexportplugininterface.cpp:148
+#: gmx/gmximportexportplugininterface.cpp:81
+#: ldif/ldifimportexportplugininterface.cpp:124
 #: vcards/vcardimportexportplugininterface.cpp:347
 #, fuzzy, kde-format
 #| msgid "Which contacts do you want to export?"
 msgid "Which contact do you want to export?"
 msgstr "Кои контакти сакате да ги изнесете?"
 
-#: csv/csvimportexportplugininterface.cpp:157
-#: gmx/gmximportexportplugininterface.cpp:90
-#: ldif/ldifimportexportplugininterface.cpp:133
+#: csv/csvimportexportplugininterface.cpp:158
+#: gmx/gmximportexportplugininterface.cpp:91
+#: ldif/ldifimportexportplugininterface.cpp:134
 #: vcards/vcardimportexportplugininterface.cpp:359
 #, fuzzy, kde-format
 #| msgid ""
@@ -62,49 +62,49 @@ msgstr ""
 "Ги копира тековно избраните контакти на системската табла со исечоци во "
 "форматот vCard."
 
-#: csv/csvimportexportplugininterface.cpp:186
-#: gmx/gmximportexportplugininterface.cpp:124
-#: ldif/ldifimportexportplugininterface.cpp:154
+#: csv/csvimportexportplugininterface.cpp:187
+#: gmx/gmximportexportplugininterface.cpp:125
+#: ldif/ldifimportexportplugininterface.cpp:155
 #, fuzzy, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>Не можам да ја отворам датотеката <b>%1</b>.</qt>"
 
-#: csv/csvimportexportplugininterface.cpp:198
-#: gmx/gmximportexportplugininterface.cpp:139
-#: ldif/ldifimportexportplugininterface.cpp:184
+#: csv/csvimportexportplugininterface.cpp:199
+#: gmx/gmximportexportplugininterface.cpp:140
+#: ldif/ldifimportexportplugininterface.cpp:185
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>Не можам да ја отворам датотеката <b>%1</b>.</qt>"
 
-#: csv/import/csvimportdialog.cpp:168
+#: csv/import/csvimportdialog.cpp:169
 #, fuzzy, kde-format
 #| msgid "CSV Import Dialog"
 msgctxt "@title:window"
 msgid "CSV Import Dialog"
 msgstr "Дијалог за внес на CSV"
 
-#: csv/import/csvimportdialog.cpp:223
+#: csv/import/csvimportdialog.cpp:224
 #, fuzzy, kde-format
 #| msgid "Importing contacts"
 msgctxt "@label"
 msgid "Importing contacts"
 msgstr "Внесувам контакти"
 
-#: csv/import/csvimportdialog.cpp:294
+#: csv/import/csvimportdialog.cpp:295
 #, fuzzy, kde-format
 #| msgid "File to import:"
 msgctxt "@label"
 msgid "File to import:"
 msgstr "Датотека за внесување:"
 
-#: csv/import/csvimportdialog.cpp:302
+#: csv/import/csvimportdialog.cpp:303
 #, fuzzy, kde-format
 #| msgid "Select vCard to Import"
 msgctxt "@info:tooltip"
 msgid "Select a csv file to import"
 msgstr "Изберете vCard-картичка за внесување"
 
-#: csv/import/csvimportdialog.cpp:304
+#: csv/import/csvimportdialog.cpp:305
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -112,70 +112,70 @@ msgid ""
 "csv file to import."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:311
+#: csv/import/csvimportdialog.cpp:312
 #, fuzzy, kde-format
 #| msgid "Delimiter"
 msgctxt "@title:group"
 msgid "Delimiter"
 msgstr "Разграничувач"
 
-#: csv/import/csvimportdialog.cpp:321
+#: csv/import/csvimportdialog.cpp:322
 #, fuzzy, kde-format
 #| msgid "Comma"
 msgctxt "@option:radio Field separator"
 msgid "Comma"
 msgstr "Запирка"
 
-#: csv/import/csvimportdialog.cpp:322
+#: csv/import/csvimportdialog.cpp:323
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a comma"
 msgstr "Изберете го полето што сакате да го отстраните:"
 
-#: csv/import/csvimportdialog.cpp:323
+#: csv/import/csvimportdialog.cpp:324
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the comma as a field separator."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:328
+#: csv/import/csvimportdialog.cpp:329
 #, fuzzy, kde-format
 #| msgid "Semicolon"
 msgctxt "@option:radio Field separator"
 msgid "Semicolon"
 msgstr "Точказапирка"
 
-#: csv/import/csvimportdialog.cpp:329
+#: csv/import/csvimportdialog.cpp:330
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a semicolon"
 msgstr "Изберете го полето што сакате да го отстраните:"
 
-#: csv/import/csvimportdialog.cpp:330
+#: csv/import/csvimportdialog.cpp:331
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the semicolon as a field separator."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:334
+#: csv/import/csvimportdialog.cpp:335
 #, fuzzy, kde-format
 #| msgid "Tabulator"
 msgctxt "@option:radio Field separator"
 msgid "Tabulator"
 msgstr "Табулатор"
 
-#: csv/import/csvimportdialog.cpp:335
+#: csv/import/csvimportdialog.cpp:336
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a tab character"
 msgstr "Изберете го полето што сакате да го отстраните:"
 
-#: csv/import/csvimportdialog.cpp:336
+#: csv/import/csvimportdialog.cpp:337
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -183,21 +183,21 @@ msgid ""
 "separator."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:340
+#: csv/import/csvimportdialog.cpp:341
 #, fuzzy, kde-format
 #| msgid "Space"
 msgctxt "@option:radio Field separator"
 msgid "Space"
 msgstr "Празно место"
 
-#: csv/import/csvimportdialog.cpp:341
+#: csv/import/csvimportdialog.cpp:342
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a space character"
 msgstr "Изберете го полето што сакате да го отстраните:"
 
-#: csv/import/csvimportdialog.cpp:342
+#: csv/import/csvimportdialog.cpp:343
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -205,21 +205,21 @@ msgid ""
 "separator."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:346
+#: csv/import/csvimportdialog.cpp:347
 #, fuzzy, kde-format
 #| msgid "Other"
 msgctxt "@option:radio Custom field separator"
 msgid "Other"
 msgstr "Друго"
 
-#: csv/import/csvimportdialog.cpp:347
+#: csv/import/csvimportdialog.cpp:348
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a custom character"
 msgstr "Изберете го полето што сакате да го отстраните:"
 
-#: csv/import/csvimportdialog.cpp:349
+#: csv/import/csvimportdialog.cpp:350
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -227,14 +227,14 @@ msgid ""
 "the data in your csv file."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:355
+#: csv/import/csvimportdialog.cpp:356
 #, fuzzy, kde-format
 #| msgid "Select the key type:"
 msgctxt "@info:tooltip"
 msgid "Set the custom delimiter character"
 msgstr "Изберете го типот на клуч:"
 
-#: csv/import/csvimportdialog.cpp:357
+#: csv/import/csvimportdialog.cpp:358
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -243,21 +243,21 @@ msgid ""
 "characters will be ignored."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:363
+#: csv/import/csvimportdialog.cpp:364
 #, fuzzy, kde-format
 #| msgid "Textquote:"
 msgctxt "@label:listbox"
 msgid "Text quote:"
 msgstr "Цитат на текст:"
 
-#: csv/import/csvimportdialog.cpp:369
+#: csv/import/csvimportdialog.cpp:370
 #, fuzzy, kde-format
 #| msgid "Select the key type:"
 msgctxt "@info:tooltip"
 msgid "Select the quote character"
 msgstr "Изберете го типот на клуч:"
 
-#: csv/import/csvimportdialog.cpp:371
+#: csv/import/csvimportdialog.cpp:372
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -267,35 +267,35 @@ msgid ""
 "will be \"quoted\" by the character specified here."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:376
+#: csv/import/csvimportdialog.cpp:377
 #, fuzzy, kde-format
 #| msgid "\""
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr "\""
 
-#: csv/import/csvimportdialog.cpp:377
+#: csv/import/csvimportdialog.cpp:378
 #, fuzzy, kde-format
 #| msgid "'"
 msgctxt "@item:inlistbox Quote character option"
 msgid "'"
 msgstr "'"
 
-#: csv/import/csvimportdialog.cpp:378
+#: csv/import/csvimportdialog.cpp:379
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "@item:inlistbox Quote character option"
 msgid "None"
 msgstr "Нема"
 
-#: csv/import/csvimportdialog.cpp:382
+#: csv/import/csvimportdialog.cpp:383
 #, fuzzy, kde-format
 #| msgid "Date format:"
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Формат на датум:"
 
-#: csv/import/csvimportdialog.cpp:390
+#: csv/import/csvimportdialog.cpp:391
 #, fuzzy, kde-kuit-format
 #| msgid ""
 #| "<ul><li>y: year with 2 digits</li><li>Y: year with 4 digits</li><li>m: "
@@ -313,7 +313,7 @@ msgstr ""
 "месецот со 1 или 2 цифри</li><li>M: месецот со 2 цифри</li><li>d: денот со 1 "
 "или 2 цифри</li><li>D: денот со 2 цифри</li></ul>"
 
-#: csv/import/csvimportdialog.cpp:401
+#: csv/import/csvimportdialog.cpp:402
 #, fuzzy, kde-kuit-format
 #| msgid ""
 #| "<ul><li>y: year with 2 digits</li><li>Y: year with 4 digits</li><li>m: "
@@ -335,39 +335,39 @@ msgstr ""
 "месецот со 1 или 2 цифри</li><li>M: месецот со 2 цифри</li><li>d: денот со 1 "
 "или 2 цифри</li><li>D: денот со 2 цифри</li></ul>"
 
-#: csv/import/csvimportdialog.cpp:417
+#: csv/import/csvimportdialog.cpp:418
 #, fuzzy, kde-format
 #| msgid "Textquote:"
 msgctxt "@label:listbox"
 msgid "Text codec:"
 msgstr "Цитат на текст:"
 
-#: csv/import/csvimportdialog.cpp:423
+#: csv/import/csvimportdialog.cpp:424
 #, fuzzy, kde-format
 #| msgid "Select the key type:"
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
 msgstr "Изберете го типот на клуч:"
 
-#: csv/import/csvimportdialog.cpp:424
+#: csv/import/csvimportdialog.cpp:425
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose the character encoding of the data in your csv file."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:428
+#: csv/import/csvimportdialog.cpp:429
 #, kde-format
 msgctxt "@option:check"
 msgid "Skip first row of file"
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:430
+#: csv/import/csvimportdialog.cpp:431
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip first row of csv file when importing"
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:432
+#: csv/import/csvimportdialog.cpp:433
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -376,84 +376,84 @@ msgid ""
 "describing the order of the data fields included in the file."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:448
+#: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
 #| msgid "Apply Template..."
 msgctxt "@action:button"
 msgid "Apply Template…"
 msgstr "Примени образец..."
 
-#: csv/import/csvimportdialog.cpp:449
+#: csv/import/csvimportdialog.cpp:450
 #, fuzzy, kde-format
 #| msgid "Save Template..."
 msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "Зачувај образец..."
 
-#: csv/import/csvimportdialog.cpp:470
+#: csv/import/csvimportdialog.cpp:471
 #, fuzzy, kde-format
 #| msgid "Local (%1)"
 msgctxt "@item:inlistbox Codec setting"
 msgid "Local (%1)"
 msgstr "Локално (%1)"
 
-#: csv/import/csvimportdialog.cpp:471
+#: csv/import/csvimportdialog.cpp:472
 #, fuzzy, kde-format
 #| msgid "Latin1"
 msgctxt "@item:inlistbox Codec setting"
 msgid "Latin1"
 msgstr "Latin1"
 
-#: csv/import/csvimportdialog.cpp:472
+#: csv/import/csvimportdialog.cpp:473
 #, fuzzy, kde-format
 #| msgid "Unicode"
 msgctxt "@item:inlistbox Codec setting"
 msgid "Unicode"
 msgstr "Уникод"
 
-#: csv/import/csvimportdialog.cpp:473
+#: csv/import/csvimportdialog.cpp:474
 #, fuzzy, kde-format
 #| msgid "Microsoft Unicode"
 msgctxt "@item:inlistbox Codec setting"
 msgid "Microsoft Unicode"
 msgstr "Мајкрософт Уникод"
 
-#: csv/import/csvimportdialog.cpp:574
+#: csv/import/csvimportdialog.cpp:575
 #, fuzzy, kde-format
 #| msgid "You have to assign at least one column."
 msgctxt "@info:status"
 msgid "You must assign at least one column."
 msgstr "Треба да одберете барем една колона."
 
-#: csv/import/csvimportdialog.cpp:584
+#: csv/import/csvimportdialog.cpp:585
 #, fuzzy, kde-format
 #| msgid "(No preview available.)"
 msgctxt "@label"
 msgid "There are no templates available yet."
 msgstr "(Нема достапен преглед.)"
 
-#: csv/import/csvimportdialog.cpp:584
+#: csv/import/csvimportdialog.cpp:585
 #, fuzzy, kde-format
 #| msgid "(No preview available.)"
 msgctxt "@title:window"
 msgid "No templates available"
 msgstr "(Нема достапен преглед.)"
 
-#: csv/import/csvimportdialog.cpp:649
+#: csv/import/csvimportdialog.cpp:650
 #, fuzzy, kde-format
 #| msgid "Template Name"
 msgctxt "@title:window"
 msgid "Template Name"
 msgstr "Име на образец"
 
-#: csv/import/csvimportdialog.cpp:649
+#: csv/import/csvimportdialog.cpp:650
 #, fuzzy, kde-format
 #| msgid "Please enter a name for the template:"
 msgctxt "@info"
 msgid "Please enter a name for the template:"
 msgstr "Внесете име за образецот:"
 
-#: csv/import/csvimportdialog.cpp:699
+#: csv/import/csvimportdialog.cpp:700
 #, fuzzy, kde-format
 #| msgid "Cannot open input file."
 msgctxt "@info:status"
@@ -465,56 +465,56 @@ msgstr "Не можам да ја отворам влезната датотек
 msgid "Device is not open"
 msgstr ""
 
-#: csv/import/templateselectiondialog.cpp:182
+#: csv/import/templateselectiondialog.cpp:183
 #, fuzzy, kde-format
 #| msgid "<qt>Do you really want to remove the address book <b>%1</b>?</qt>"
 msgctxt "@label"
 msgid "Do you really want to delete template '%1'?"
 msgstr "<qt>Дали навистина сакате да го отстраните адресарот <b>%1</b>?</qt>"
 
-#: csv/import/templateselectiondialog.cpp:203
+#: csv/import/templateselectiondialog.cpp:204
 #, fuzzy, kde-format
 #| msgid "Template Selection"
 msgctxt "@title:window"
 msgid "Template Selection"
 msgstr "Избор на образци"
 
-#: csv/import/templateselectiondialog.cpp:206
+#: csv/import/templateselectiondialog.cpp:207
 #, fuzzy, kde-format
 #| msgid "Please select a template, that matches the CSV file:"
 msgctxt "@info"
 msgid "Please select a template, that matches the CSV file:"
 msgstr "Изберете образец што одговара на CSV-датотеката:"
 
-#: gmx/gmximportexportplugininterface.cpp:25
+#: gmx/gmximportexportplugininterface.cpp:26
 #, fuzzy, kde-format
 msgid "GMX address book file (*.gmxa)"
 msgstr "%1-адресар"
 
-#: gmx/gmximportexportplugininterface.cpp:40
+#: gmx/gmximportexportplugininterface.cpp:41
 #, fuzzy, kde-format
 #| msgid "Import All..."
 msgid "Import GMX file…"
 msgstr "Внеси ги сите..."
 
-#: gmx/gmximportexportplugininterface.cpp:41
+#: gmx/gmximportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 msgid "Import contacts from a GMX address book file."
 msgstr "%1-адресар"
 
-#: gmx/gmximportexportplugininterface.cpp:46
+#: gmx/gmximportexportplugininterface.cpp:47
 #, fuzzy, kde-format
 msgid "Export GMX file…"
 msgstr "Изнеси LDIF-адресар..."
 
-#: gmx/gmximportexportplugininterface.cpp:47
+#: gmx/gmximportexportplugininterface.cpp:48
 #, fuzzy, kde-format
 msgid "Export contacts to a GMX address book file."
 msgstr "%1-адресар"
 
 #: gmx/gmximportexportplugininterface.cpp:434
-#: ldif/ldifimportexportplugininterface.cpp:80
-#: windows-contacts/importwindowcontact.cpp:26
+#: ldif/ldifimportexportplugininterface.cpp:81
+#: windows-contacts/importwindowcontact.cpp:27
 #, kde-format
 msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
 msgstr "<qt>Не можам да ја отворам <b>%1</b> за читање.</qt>"
@@ -524,74 +524,74 @@ msgstr "<qt>Не можам да ја отворам <b>%1</b> за читање
 msgid "%1 is not a GMX address book file."
 msgstr "%1-адресар"
 
-#: ldap/ldapimportexportplugininterface.cpp:25
+#: ldap/ldapimportexportplugininterface.cpp:26
 #, fuzzy, kde-format
 #| msgid "Import From Mobile Phone..."
 msgid "Import From LDAP server…"
 msgstr "Внеси од мобилен телефон..."
 
-#: ldap/ldapimportexportplugininterface.cpp:26
+#: ldap/ldapimportexportplugininterface.cpp:27
 #, fuzzy, kde-format
 #| msgid "Import Contacts?"
 msgid "Import contacts from an LDAP server."
 msgstr "Внесувате контакти?"
 
-#: ldif/ldifimportexportplugininterface.cpp:36
+#: ldif/ldifimportexportplugininterface.cpp:37
 #, fuzzy, kde-format
 #| msgid "Import LDIF Addressbook..."
 msgid "Import LDIF file…"
 msgstr "Внеси LDIF-адресар..."
 
-#: ldif/ldifimportexportplugininterface.cpp:37
+#: ldif/ldifimportexportplugininterface.cpp:38
 #, fuzzy, kde-format
 #| msgid "Import Contacts?"
 msgid "Import contacts from an LDIF file."
 msgstr "Внесувате контакти?"
 
-#: ldif/ldifimportexportplugininterface.cpp:42
+#: ldif/ldifimportexportplugininterface.cpp:43
 #, fuzzy, kde-format
 #| msgid "Export LDIF Addressbook..."
 msgid "Export LDIF file…"
 msgstr "Изнеси LDIF-адресар..."
 
-#: ldif/ldifimportexportplugininterface.cpp:43
+#: ldif/ldifimportexportplugininterface.cpp:44
 #, fuzzy, kde-format
 #| msgid "Export LDIF Addressbook..."
 msgid "Export contacts to an LDIF file."
 msgstr "Изнеси LDIF-адресар..."
 
-#: ldif/ldifimportexportplugininterface.cpp:106
+#: ldif/ldifimportexportplugininterface.cpp:107
 #, kde-format
 msgid "LDif Files"
 msgstr ""
 
-#: ldif/ldifimportexportplugininterface.cpp:144
+#: ldif/ldifimportexportplugininterface.cpp:145
 #, kde-format
 msgid "LDif Files (*.ldif)"
 msgstr ""
 
-#: vcards/engine/vcardexportselectionwidget.cpp:22
+#: vcards/engine/vcardexportselectionwidget.cpp:23
 #, fuzzy, kde-format
 #| msgid "File to import:"
 msgctxt "@title:group"
 msgid "Fields to be exported"
 msgstr "Датотека за внесување:"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:29
+#: vcards/engine/vcardexportselectionwidget.cpp:30
 #, fuzzy, kde-format
 #| msgid "Private fields"
 msgctxt "@option:check"
 msgid "Private fields"
 msgstr "Приватни полиња"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:30
+#: vcards/engine/vcardexportselectionwidget.cpp:31
 #, fuzzy, kde-format
 #| msgid "Private fields"
 msgctxt "@info:tooltip"
 msgid "Export private fields"
 msgstr "Приватни полиња"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:32
+#: vcards/engine/vcardexportselectionwidget.cpp:33
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -599,21 +599,21 @@ msgid ""
 "vCard output file."
 msgstr ""
 
-#: vcards/engine/vcardexportselectionwidget.cpp:36
+#: vcards/engine/vcardexportselectionwidget.cpp:37
 #, fuzzy, kde-format
 #| msgid "Business fields"
 msgctxt "@option:check"
 msgid "Business fields"
 msgstr "Бизнис полиња"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:37
+#: vcards/engine/vcardexportselectionwidget.cpp:38
 #, fuzzy, kde-format
 #| msgid "Business fields"
 msgctxt "@info:tooltip"
 msgid "Export business fields"
 msgstr "Бизнис полиња"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:39
+#: vcards/engine/vcardexportselectionwidget.cpp:40
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -621,21 +621,21 @@ msgid ""
 "vCard output file."
 msgstr ""
 
-#: vcards/engine/vcardexportselectionwidget.cpp:43
+#: vcards/engine/vcardexportselectionwidget.cpp:44
 #, fuzzy, kde-format
 #| msgid "Other fields"
 msgctxt "@option:check"
 msgid "Other fields"
 msgstr "Други полиња"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:44
+#: vcards/engine/vcardexportselectionwidget.cpp:45
 #, fuzzy, kde-format
 #| msgid "Other fields"
 msgctxt "@info:tooltip"
 msgid "Export other fields"
 msgstr "Други полиња"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:46
+#: vcards/engine/vcardexportselectionwidget.cpp:47
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -643,21 +643,21 @@ msgid ""
 "output file."
 msgstr ""
 
-#: vcards/engine/vcardexportselectionwidget.cpp:50
+#: vcards/engine/vcardexportselectionwidget.cpp:51
 #, fuzzy, kde-format
 #| msgid "Encryption keys"
 msgctxt "@option:check"
 msgid "Encryption keys"
 msgstr "Клучеви за криптирање"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:51
+#: vcards/engine/vcardexportselectionwidget.cpp:52
 #, fuzzy, kde-format
 #| msgid "Encryption keys"
 msgctxt "@info:tooltip"
 msgid "Export encryption keys"
 msgstr "Клучеви за криптирање"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:53
+#: vcards/engine/vcardexportselectionwidget.cpp:54
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -665,21 +665,21 @@ msgid ""
 "vCard output file."
 msgstr ""
 
-#: vcards/engine/vcardexportselectionwidget.cpp:57
+#: vcards/engine/vcardexportselectionwidget.cpp:58
 #, fuzzy, kde-format
 #| msgid "Picture"
 msgctxt "@option:check"
 msgid "Pictures"
 msgstr "Слика"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:58
+#: vcards/engine/vcardexportselectionwidget.cpp:59
 #, fuzzy, kde-format
 #| msgid "Picture"
 msgctxt "@info:tooltip"
 msgid "Export pictures"
 msgstr "Слика"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:60
+#: vcards/engine/vcardexportselectionwidget.cpp:61
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -687,26 +687,26 @@ msgid ""
 "output file."
 msgstr ""
 
-#: vcards/engine/vcardexportselectionwidget.cpp:64
+#: vcards/engine/vcardexportselectionwidget.cpp:65
 #, fuzzy, kde-format
 #| msgid "Export to One File"
 msgctxt "@title:group"
 msgid "Export options"
 msgstr "Изнеси во една датотека"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:70
+#: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
 msgctxt "@option:check"
 msgid "Display name as full name"
 msgstr ""
 
-#: vcards/engine/vcardexportselectionwidget.cpp:71
+#: vcards/engine/vcardexportselectionwidget.cpp:72
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export display name as full name"
 msgstr ""
 
-#: vcards/engine/vcardexportselectionwidget.cpp:73
+#: vcards/engine/vcardexportselectionwidget.cpp:74
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -736,50 +736,50 @@ msgctxt "@action:button"
 msgid "Import All…"
 msgstr "Внеси ги сите..."
 
-#: vcards/vcardimportexportplugininterface.cpp:44
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
 #| msgid "Import vCard"
 msgid "Import vCard…"
 msgstr "Внесете vCard-картичка"
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:46
 #, fuzzy, kde-format
 #| msgid "Import Contacts?"
 msgid "Import contacts from a vCard file."
 msgstr "Внесувате контакти?"
 
-#: vcards/vcardimportexportplugininterface.cpp:52
+#: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
 msgid "Export contacts to a vCard file."
 msgstr "Изнеси vCard-картичка 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:53
+#: vcards/vcardimportexportplugininterface.cpp:54
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
 msgid "Export vCard…"
 msgstr "Изнеси vCard-картичка 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:85
+#: vcards/vcardimportexportplugininterface.cpp:86
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:86
+#: vcards/vcardimportexportplugininterface.cpp:87
 #, fuzzy, kde-format
 #| msgid "Select vCard to Import"
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "Изберете vCard-картичка за внесување"
 
-#: vcards/vcardimportexportplugininterface.cpp:97
+#: vcards/vcardimportexportplugininterface.cpp:98
 #, fuzzy, kde-format
 #| msgid "vCard Import Failed"
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "Внесувањето на vCard-картичката не успеа"
 
-#: vcards/vcardimportexportplugininterface.cpp:111
+#: vcards/vcardimportexportplugininterface.cpp:112
 #, fuzzy, kde-kuit-format
 #| msgid "<qt>Unable to access vCard: %1</qt>"
 msgctxt "@info"
@@ -812,19 +812,19 @@ msgctxt "@action:button"
 msgid "Export to Several Files"
 msgstr "Изнеси во повеќе датотеки"
 
-#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
 #, fuzzy, kde-format
 #| msgid "Import CSV List..."
 msgid "Import Windows Contact file…"
 msgstr "Внеси CSV-листа..."
 
-#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:31
 #, fuzzy, kde-format
 #| msgid "Import Contacts?"
 msgid "Import contacts from windows contact file."
 msgstr "Внесувате контакти?"
 
-#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:69
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""

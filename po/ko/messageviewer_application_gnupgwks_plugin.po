@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-08-19 22:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,38 +27,38 @@ msgstr "키 정보 표시"
 msgid "Publish the key"
 msgstr "키 공개"
 
-#: pgpkeyformatter.cpp:43
+#: pgpkeyformatter.cpp:44
 #, kde-format
 msgid "No valid key data in file."
 msgstr "파일에 올바른 키 데이터가 없습니다."
 
-#: pgpkeyurlhandler.cpp:47
+#: pgpkeyurlhandler.cpp:48
 #, kde-format
 msgid "Import the key"
 msgstr "키 가져오기"
 
-#: pgpkeyurlhandler.cpp:66
+#: pgpkeyurlhandler.cpp:67
 #, kde-format
 msgid "An error occurred while importing the key."
 msgstr "키를 가져오는 중 오류가 발생했습니다."
 
-#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
+#: pgpkeyurlhandler.cpp:69 pgpkeyurlhandler.cpp:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "가져오기 오류"
 
-#: pgpkeyurlhandler.cpp:70
+#: pgpkeyurlhandler.cpp:71
 #, kde-format
 msgid "No keys to import where found."
 msgstr "가져올 키를 찾을 수 없습니다."
 
-#: pgpkeyurlhandler.cpp:72
+#: pgpkeyurlhandler.cpp:73
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "키를 가져왔습니다."
 
-#: pgpkeyurlhandler.cpp:72
+#: pgpkeyurlhandler.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:45+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2022-11-18 00:45+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,62 +18,62 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 
-#: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:17
+#: confirmbeforedeleting/confirmbeforedeletingcreateruledialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Rule"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:24
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:25
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Type:"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:31
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:32
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Contains:"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:74
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:75
 #, kde-format
 msgid "Body"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:75
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:76
 #, kde-format
 msgid "Subject"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:76
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:77
 #, kde-format
 msgid "To"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:77
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:78
 #, kde-format
 msgid "Cc"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:78
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
 #, kde-format
 msgid "Bcc"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:79
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:174
 #, kde-format
 msgid "Unread"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
+#: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:81
 #: confirmbeforedeleting/confirmbeforedeletingrule.cpp:183
 #, kde-format
 msgid "Important"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingdialog.cpp:26
+#: confirmbeforedeleting/confirmbeforedeletingdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Before Deleting Mail"
@@ -97,13 +97,13 @@ msgid ""
 "%1"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingmessageboxdialog.cpp:18
+#: confirmbeforedeleting/confirmbeforedeletingmessageboxdialog.cpp:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Delete Mail"
 msgstr ""
 
-#: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:19
+#: confirmbeforedeleting/confirmbeforedeletingmessageboxwidget.cpp:20
 #, kde-format
 msgctxt "@option:check"
 msgid "Apply to All"

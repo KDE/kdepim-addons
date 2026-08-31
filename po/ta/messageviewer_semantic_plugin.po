@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-11-30 15:21+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -42,12 +42,12 @@ msgstr "முன்பதிவை KDE Itinerary-யில் இறக்க�
 msgid "Send this reservation to a device using KDE Connect."
 msgstr "கே.டீ.யீ. கனெக்ட் மூலம் இம்முன்பதிவை சாதனத்திற்கு அனுப்பு."
 
-#: itineraryurlhandler.cpp:206
+#: itineraryurlhandler.cpp:203
 #, kde-format
 msgid "Boarding Pass"
 msgstr ""
 
-#: itineraryurlhandler.cpp:207
+#: itineraryurlhandler.cpp:204
 #, kde-format
 msgid "Ticket"
 msgstr "பயணச்சீட்டு"

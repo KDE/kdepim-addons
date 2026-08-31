@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-07-04 21:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -20,96 +20,96 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:36
+#: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
 msgid "Check Gravatar…"
 msgstr "Перевірити Gravatar…"
 
-#: checkgravatar/checkgravatarplugininterface.cpp:60
-#: sendmail/sendmailplugininterface.cpp:59
+#: checkgravatar/checkgravatarplugininterface.cpp:61
+#: sendmail/sendmailplugininterface.cpp:60
 #, kde-format
 msgid "You have not selected any contacts."
 msgstr "Ви не позначили жодного запису контакту."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:68
+#: checkgravatar/checkgravatarplugininterface.cpp:69
 #, kde-format
 msgid "No email found for this contact."
 msgstr "Для цього запису контакту не знайдено адреси електронної пошти."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:108
+#: checkgravatar/checkgravatarplugininterface.cpp:109
 #, kde-format
 msgid "A contact group was selected."
 msgstr "Позначено групу контактів."
 
-#: checkgravatar/checkgravatarplugininterface.cpp:111
+#: checkgravatar/checkgravatarplugininterface.cpp:112
 #, kde-format
 msgid "Too many contacts selected."
 msgstr "Позначено надто багато записів контактів."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:27
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:28
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Image"
 msgstr "Зберегти зображення"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:28
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Image URL"
 msgstr "Зберегти адресу зображення"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:31
+#: checkgravatar/gravatar/widgets/gravatarupdatedialog.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Check and update Gravatar"
 msgstr "Перевірка і оновлення Gravatar"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:23
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:24
 #, kde-format
 msgctxt "@action:button"
 msgid "Search"
 msgstr "Пошук"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:31
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:32
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Email:"
 msgstr "Ел. пошта:"
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:110
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:111
 #, kde-format
 msgid "Search is impossible."
 msgstr "Пошук неможливий."
 
-#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:129
+#: checkgravatar/gravatar/widgets/gravatarupdatewidget.cpp:130
 #, kde-format
 msgid "No Gravatar Found."
 msgstr "Gravatar не знайдено."
 
-#: mergecontacts/mergecontactsplugininterface.cpp:25
+#: mergecontacts/mergecontactsplugininterface.cpp:26
 #, kde-format
 msgid "Merge Contacts…"
 msgstr "Об’єднати контакти…"
 
-#: mergelib/manualmerge/mergecontactsdialog.cpp:40
+#: mergelib/manualmerge/mergecontactsdialog.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Contacts to merge"
 msgstr "Виберіть записи контактів для об’єднання"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:31
+#: mergelib/manualmerge/mergecontactwidget.cpp:32
 #, kde-format
 msgctxt "@action:button"
 msgid "merge"
 msgstr "об’єднати"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:47
+#: mergelib/manualmerge/mergecontactwidget.cpp:48
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select contacts that you really want to merge:"
 msgstr "Виберіть записи контактів, які слід об’єднати:"
 
-#: mergelib/manualmerge/mergecontactwidget.cpp:67
+#: mergelib/manualmerge/mergecontactwidget.cpp:68
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store merged contacts:"
@@ -117,13 +117,13 @@ msgstr ""
 "Виберіть адресну книгу, у якій буде збережено об’єднаний запис контакту:"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:38
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:101
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
 #, kde-format
 msgid "Select All"
 msgstr "Позначити усе"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:103
 #, kde-format
 msgid "Deselect All"
 msgstr "Зняти позначення з усього"
@@ -143,37 +143,37 @@ msgstr "Контакти"
 msgid "Duplicate contact \"%1\" (%2 times)"
 msgstr "Дублікат запису контакту «%1» (%2 повторень)"
 
-#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:42
+#: mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Search and Select Duplicate Contacts to merge"
 msgstr "Пошук і позначення записів контактів для об'єднання"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:48
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:49
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result…"
 msgstr "Шукати у результатах…"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:72
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:73
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select AddressBook:"
 msgstr "Виберіть адресну книгу:"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:85
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:44
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:86
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:45
 #, kde-format
 msgctxt "@action:button"
 msgid "Merge"
 msgstr "Об’єднати"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:98
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
 #, kde-format
 msgid "Expand All"
 msgstr "Розгорнути усе"
 
-#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:99
+#: mergelib/searchduplicate/searchduplicateresultwidget.cpp:100
 #, kde-format
 msgid "Collapse All"
 msgstr "Згорнути усе"
@@ -193,7 +193,7 @@ msgstr "Дублікатів записів контактів не знайде
 msgid "No contacts selected."
 msgstr "Не позначено жодного запису контакту."
 
-#: mergelib/widgets/mergecontactloseinformationwarning.cpp:20
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:21
 #, kde-format
 msgid ""
 "Some information can be lost. Do you want to continue, or customize what you "
@@ -202,19 +202,19 @@ msgstr ""
 "Частину інформації може бути втрачено. Хочете продовжити чи налаштувати дані "
 "для об’єднання?"
 
-#: mergelib/widgets/mergecontactloseinformationwarning.cpp:22
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:23
 #, kde-format
 msgctxt "@action"
 msgid "Customize"
 msgstr "Налаштувати"
 
-#: mergelib/widgets/mergecontactloseinformationwarning.cpp:27
+#: mergelib/widgets/mergecontactloseinformationwarning.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "Automatic Merging"
 msgstr "Автоматичне об’єднання"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:88
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
 #, kde-format
 msgid ""
 "Some information was not selected. You can lose this information. Do you "
@@ -223,54 +223,54 @@ msgstr ""
 "Частину даних не було позначено. Ви можете втратити ці дані. Хочете "
 "продовжити об’єднання?"
 
-#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:89
+#: mergelib/widgets/mergecontactselectinformationscrollarea.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Missing Selected Information"
 msgstr "Частину даних не позначено"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:63
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:64
 #, kde-format
 msgctxt "The wedding anniversary of a contact"
 msgid "Anniversary"
 msgstr "Річниця весілля"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:72
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:73
 #, kde-format
 msgid "Blog Feed"
 msgstr "Подача вебжурналу"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:81
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:82
 #, kde-format
 msgid "Profession"
 msgstr "Професія"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:90
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:91
 #, kde-format
 msgid "Office"
 msgstr "Офіс"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:93
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:94
 #, kde-format
 msgid "Manager"
 msgstr "Менеджер"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:96
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:97
 #, kde-format
 msgid "Assistant"
 msgstr "Асистент"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:105
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:106
 #, kde-format
 msgid "Spouse"
 msgstr "Чоловік/дружина"
 
-#: mergelib/widgets/mergecontactselectlistwidget.cpp:120
+#: mergelib/widgets/mergecontactselectlistwidget.cpp:121
 #, kde-format
 msgid "(Undefined)"
 msgstr "(Не визначено)"
 
-#: searchduplicates/searchduplicatesplugininterface.cpp:24
+#: searchduplicates/searchduplicatesplugininterface.cpp:25
 #, kde-format
 msgid "Search Duplicate Contacts…"
 msgstr "Шукати дублікати записів контактів…"
@@ -280,7 +280,7 @@ msgstr "Шукати дублікати записів контактів…"
 msgid "No emails found in selected contacts."
 msgstr "У позначених записах контактів не виявлено адрес електронної пошти."
 
-#: sendmail/sendmailplugininterface.cpp:26
+#: sendmail/sendmailplugininterface.cpp:27
 #, kde-format
 msgid "Send an email…"
 msgstr "Надіслати повідомлення…"
@@ -295,7 +295,7 @@ msgstr "Візитівки не створено."
 msgid "Temporary file '%1' cannot be created"
 msgstr "Не вдалося створити тимчасовий файл «%1»"
 
-#: sendvcards/sendvcardsplugininterface.cpp:34
+#: sendvcards/sendvcardsplugininterface.cpp:35
 #, kde-format
 msgid "Send vCards…"
 msgstr "Надіслати візитівки…"

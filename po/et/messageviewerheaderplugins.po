@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-03 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2019-12-21 18:59+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,31 +17,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:67
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:98
+#: briefheaderstyleplugin/briefheaderstyle.cpp:68
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:97
 #, kde-format
 msgid "[vCard]"
 msgstr "[vCard]"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:75
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:144
+#: briefheaderstyleplugin/briefheaderstyle.cpp:76
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:142
 #, kde-format
 msgid "CC: "
 msgstr "CC: "
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:82
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:154
+#: briefheaderstyleplugin/briefheaderstyle.cpp:83
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:152
 #, kde-format
 msgid "BCC: "
 msgstr "BCC: "
 
-#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:22
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Brief Headers"
 msgstr "&Lühipäised"
 
-#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:25
+#: briefheaderstyleplugin/briefheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show brief list of message headers"
 msgstr "Näita kirjapäiseid lühikestena"
@@ -56,71 +56,71 @@ msgstr "Saatja: "
 msgid "(resent from %1)"
 msgstr "(ümber suunatud aadressilt %1)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:112
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:110
 #, kde-format
 msgid "(receiver was %1)"
 msgstr "(saaja oli %1)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:130
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:128
 #, kde-format
 msgctxt "To-field of the mail header."
 msgid "To: "
 msgstr "Saaja: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:161
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:160
 #, kde-format
 msgid "Date: "
 msgstr "Kuupäev: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:183
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:182
 #, kde-format
 msgid "Bugzilla: "
 msgstr "Bugzilla: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:192
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:191
 #, kde-format
 msgid "MDN To: "
 msgstr "Vastuvõtmise kinnituse saaja: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:200
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:198
 #, kde-format
 msgid "Spam Status:"
 msgstr "Rämpsposti staatus: "
 
-#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:22
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Fancy Headers"
 msgstr "&Uhked päised"
 
-#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:25
+#: fancyheaderstyleplugin/fancyheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show the list of headers in a fancy format"
 msgstr "Näita päiste nimekirja uhkes vormingus"
 
-#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:190
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:188
 #, kde-format
 msgid "Attachments:"
 msgstr "Manused:"
 
-#: longheaderstyleplugin/longheaderstyleinterface.cpp:22
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Long Headers"
 msgstr "P&ikad päised"
 
-#: longheaderstyleplugin/longheaderstyleinterface.cpp:25
+#: longheaderstyleplugin/longheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show long list of message headers"
 msgstr "Näita kirjapäiseid pikal kujul"
 
-#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:22
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:23
 #, kde-format
 msgctxt "View->headers->"
 msgid "&Standard Headers"
 msgstr "S&tandardsed päised"
 
-#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:25
+#: standardsheaderstyleplugin/standardsheaderstyleinterface.cpp:26
 #, kde-format
 msgid "Show standard list of message headers"
 msgstr "Näita standardseid kirjapäiseid"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2019-07-11 11:49+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt\n"
@@ -19,18 +19,18 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: evolutionv1/evolutionv1importdata.cpp:44
-#: evolutionv2/evolutionv2importdata.cpp:44 mailapp/mailappimportdata.cpp:48
-#: oe/oeimportdata.cpp:49 opera/operaimportdata.cpp:45
-#: pmail/pmailimportdata.cpp:48 thebat/thebatimportdata.cpp:47
+#: evolutionv1/evolutionv1importdata.cpp:45
+#: evolutionv2/evolutionv2importdata.cpp:45 mailapp/mailappimportdata.cpp:49
+#: oe/oeimportdata.cpp:50 opera/operaimportdata.cpp:46
+#: pmail/pmailimportdata.cpp:49 thebat/thebatimportdata.cpp:48
 #, kde-format
 msgid "Import in progress"
 msgstr "Vyksta importavimas"
 
-#: evolutionv1/evolutionv1importdata.cpp:52
-#: evolutionv2/evolutionv2importdata.cpp:52 mailapp/mailappimportdata.cpp:55
-#: oe/oeimportdata.cpp:56 opera/operaimportdata.cpp:53
-#: pmail/pmailimportdata.cpp:55 thebat/thebatimportdata.cpp:54
+#: evolutionv1/evolutionv1importdata.cpp:53
+#: evolutionv2/evolutionv2importdata.cpp:53 mailapp/mailappimportdata.cpp:56
+#: oe/oeimportdata.cpp:57 opera/operaimportdata.cpp:54
+#: pmail/pmailimportdata.cpp:56 thebat/thebatimportdata.cpp:55
 #, kde-format
 msgid "Import finished"
 msgstr "Importavimas užbaigtas"

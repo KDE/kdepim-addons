@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2010-12-24 04:21+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan(at)computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -17,45 +17,45 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: cryptopageplugin.cpp:37
+#: cryptopageplugin.cpp:38
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Рұқсат етілген протоколдары"
 
-#: cryptopageplugin.cpp:52
+#: cryptopageplugin.cpp:53
 #, fuzzy, kde-format
 #| msgid "Preferred OpenPGP encryption key:"
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Артық көретін OpenPGP шифрлау кілті:"
 
-#: cryptopageplugin.cpp:57
+#: cryptopageplugin.cpp:58
 #, fuzzy, kde-format
 #| msgid "Preferred S/MIME encryption certificate:"
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Артық көретін S/MIME шифрау куәлігі:"
 
-#: cryptopageplugin.cpp:62
+#: cryptopageplugin.cpp:63
 #, kde-format
 msgid "Message Preference"
 msgstr "Артықшылығы"
 
-#: cryptopageplugin.cpp:71
+#: cryptopageplugin.cpp:72
 #, fuzzy, kde-format
 #| msgid "Sign:"
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Қолтаңбалау"
 
-#: cryptopageplugin.cpp:88
+#: cryptopageplugin.cpp:89
 #, fuzzy, kde-format
 #| msgid "Encrypt:"
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Шифрлау"
 
-#: cryptopageplugin.cpp:106
+#: cryptopageplugin.cpp:107
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Шифлау параметрлері"

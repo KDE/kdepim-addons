@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:47+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2026-08-12 12:31+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -19,43 +19,43 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.9\n"
 
-#: sendmail/sendmailjob.cpp:40
+#: sendmail/sendmailjob.cpp:41
 #, kde-format
 msgid "Invalid options for the mailer program: %1"
 msgstr "Neveljavne možnosti poštnega programa: %1"
 
-#: sendmail/sendmailjob.cpp:58
+#: sendmail/sendmailjob.cpp:59
 #, kde-format
 msgid "Failed to execute mailer program %1"
 msgstr "Izvajanje poštnega programa %1 ni uspelo"
 
-#: sendmail/sendmailjob.cpp:60
+#: sendmail/sendmailjob.cpp:61
 #, kde-format
 msgid "Failed to execute mailer program %1: %2"
 msgstr "Neuspelo izvajanje poštnega programa %1: %2"
 
-#: sendmail/sendmailjob.cpp:74
+#: sendmail/sendmailjob.cpp:75
 #, kde-format
 msgid "Sendmail exited abnormally."
 msgstr "Sendmail se ni končal normalno."
 
-#: sendmail/sendmailjob.cpp:76
+#: sendmail/sendmailjob.cpp:77
 #, kde-format
 msgid "Sendmail exited abnormally: %1"
 msgstr "Sendmail se ni končal normalno: %1"
 
-#: sendmail/sendmailtransportplugin.cpp:25
+#: sendmail/sendmailtransportplugin.cpp:26
 #, kde-format
 msgctxt "@option sendmail transport"
 msgid "Sendmail"
 msgstr "Sendmail"
 
-#: sendmail/sendmailtransportplugin.cpp:27
+#: sendmail/sendmailtransportplugin.cpp:28
 #, kde-format
 msgid "A local sendmail installation"
 msgstr "Krajevna namestitev programa sendmail"
 
-#: sendmail/sendmailtransportplugin.cpp:36
+#: sendmail/sendmailtransportplugin.cpp:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

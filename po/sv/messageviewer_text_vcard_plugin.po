@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-22 00:46+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2024-08-01 07:23+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: text_vcard.cpp:95
+#: text_vcard.cpp:96
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
@@ -29,66 +29,66 @@ msgstr[1] "Bifogade visitkort"
 msgid "[Add this contact to the address book]"
 msgstr "[Lägg till kontakten i adressboken]"
 
-#: text_vcard.cpp:151
+#: text_vcard.cpp:150
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Uppdatera kontakten i adressboken]"
 
-#: text_vcard.cpp:156
+#: text_vcard.cpp:154
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Kontakten finns redan i adressboken]"
 
-#: text_vcard.cpp:233
+#: text_vcard.cpp:231
 #, kde-format
 msgid "View Business Card"
 msgstr "Visa visitkort"
 
-#: text_vcard.cpp:234
+#: text_vcard.cpp:232
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "Spara visitkort som…"
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Lägg till kontakten i adressboken."
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "Uppdatera kontakten i adressboken."
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "Lägg till \"%1\" i adressboken."
 
-#: text_vcard.cpp:253
+#: text_vcard.cpp:251
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "Uppdatera \"%1\" i adressboken."
 
-#: text_vcard.cpp:278
+#: text_vcard.cpp:276
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"
 msgstr "Spara visitkort"
 
-#: updatecontactjob.cpp:37
+#: updatecontactjob.cpp:38
 #, kde-format
 msgid "The vCard's primary email address is not in addressbook."
 msgstr ""
 "Den primära e-postadressen på detta visitkort finns inte i adressboken."
 
-#: updatecontactjob.cpp:43
+#: updatecontactjob.cpp:44
 #, kde-format
 msgid "There are two or more contacts with same email stored in addressbook."
 msgstr ""
 "Det finns två eller flera kontakter med samma e-postadress lagrade i "
 "adressboken."
 
-#: updatecontactjob.cpp:65
+#: updatecontactjob.cpp:66
 #, kde-format
 msgid ""
 "The vCard was updated in your address book; you can add more information to "
@@ -97,7 +97,7 @@ msgstr ""
 "Detta visitkort uppdaterades i adressboken. Det går att lägga till mer "
 "information i posten genom att öppna adressboken."
 
-#: updatecontactjob.cpp:76
+#: updatecontactjob.cpp:77
 #, kde-format
 msgid "Email not specified"
 msgstr "E-post ej angiven"

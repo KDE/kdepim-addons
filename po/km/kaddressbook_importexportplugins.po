@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:49+0000\n"
+"POT-Creation-Date: 2026-08-31 00:44+0000\n"
 "PO-Revision-Date: 2012-12-26 08:41+0700\n"
 "Last-Translator: sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros>\n"
@@ -18,83 +18,83 @@ msgstr ""
 "X-Generator: WordForge 0.8 RC1\n"
 "X-Language: km-KH\n"
 
-#: csv/csvimportexportplugininterface.cpp:35
+#: csv/csvimportexportplugininterface.cpp:36
 #, fuzzy, kde-format
 #| msgid "Export CSV file..."
 msgid "Export CSV file…"
 msgstr "នាំចេញ​ឯកសារ CSV..."
 
-#: csv/csvimportexportplugininterface.cpp:36
+#: csv/csvimportexportplugininterface.cpp:37
 #, kde-format
 msgid "Export contacts to a file in comma separated value format."
 msgstr "នាំចេញ​ទំនាក់ទំនង​​ទៅកាន់​ឯកសារ​ជា​ទ្រង់ទ្រាយ​តម្លៃ​ដែល​បំបែក​ដោយ​សញ្ញា(,) ។"
 
-#: csv/csvimportexportplugininterface.cpp:41
+#: csv/csvimportexportplugininterface.cpp:42
 #, fuzzy, kde-format
 #| msgid "Import CSV file..."
 msgid "Import CSV file…"
 msgstr "នាំចូល​ឯកសារ CSV..."
 
-#: csv/csvimportexportplugininterface.cpp:42
+#: csv/csvimportexportplugininterface.cpp:43
 #, kde-format
 msgid "Import contacts from a file in comma separated value format."
 msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ​ក្នុងទ្រង់ទ្រាយ​តម្លៃ​ដែល​បំបែក​ដោយ​សញ្ញា​(,) ។"
 
-#: csv/csvimportexportplugininterface.cpp:147
-#: gmx/gmximportexportplugininterface.cpp:80
-#: ldif/ldifimportexportplugininterface.cpp:123
+#: csv/csvimportexportplugininterface.cpp:148
+#: gmx/gmximportexportplugininterface.cpp:81
+#: ldif/ldifimportexportplugininterface.cpp:124
 #: vcards/vcardimportexportplugininterface.cpp:347
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "តើ​ទំនាក់ទំនង​ណាមួយ​ដែល​អ្នក​ចង់​នាំចេញ ?"
 
-#: csv/csvimportexportplugininterface.cpp:157
-#: gmx/gmximportexportplugininterface.cpp:90
-#: ldif/ldifimportexportplugininterface.cpp:133
+#: csv/csvimportexportplugininterface.cpp:158
+#: gmx/gmximportexportplugininterface.cpp:91
+#: ldif/ldifimportexportplugininterface.cpp:134
 #: vcards/vcardimportexportplugininterface.cpp:359
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "អ្នក​មិនបាន​ជ្រើស​ទំនាក់ទំនង​ដើម្បីនាំចេញ​ទេ ។"
 
-#: csv/csvimportexportplugininterface.cpp:186
-#: gmx/gmximportexportplugininterface.cpp:124
-#: ldif/ldifimportexportplugininterface.cpp:154
+#: csv/csvimportexportplugininterface.cpp:187
+#: gmx/gmximportexportplugininterface.cpp:125
+#: ldif/ldifimportexportplugininterface.cpp:155
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>មិនអាច​បើក​ឯកសារ <b>%1</b></qt> បាន​ទេ"
 
-#: csv/csvimportexportplugininterface.cpp:198
-#: gmx/gmximportexportplugininterface.cpp:139
-#: ldif/ldifimportexportplugininterface.cpp:184
+#: csv/csvimportexportplugininterface.cpp:199
+#: gmx/gmximportexportplugininterface.cpp:140
+#: ldif/ldifimportexportplugininterface.cpp:185
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>មិន​អាច​បើក​ឯកសារ <b>%1</b>បាន​ទេ ។</qt>"
 
-#: csv/import/csvimportdialog.cpp:168
+#: csv/import/csvimportdialog.cpp:169
 #, kde-format
 msgctxt "@title:window"
 msgid "CSV Import Dialog"
 msgstr "ប្រអប់នាំចូល CSV"
 
-#: csv/import/csvimportdialog.cpp:223
+#: csv/import/csvimportdialog.cpp:224
 #, kde-format
 msgctxt "@label"
 msgid "Importing contacts"
 msgstr "នាំចូល​ទំនាក់ទំនង"
 
-#: csv/import/csvimportdialog.cpp:294
+#: csv/import/csvimportdialog.cpp:295
 #, kde-format
 msgctxt "@label"
 msgid "File to import:"
 msgstr "ឯកសារ​ត្រូវ​នាំចូល ៖"
 
-#: csv/import/csvimportdialog.cpp:302
+#: csv/import/csvimportdialog.cpp:303
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select a csv file to import"
 msgstr "ជ្រើស​ឯកសារ csv ដើម្បី​នាំចូល"
 
-#: csv/import/csvimportdialog.cpp:304
+#: csv/import/csvimportdialog.cpp:305
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -103,63 +103,63 @@ msgid ""
 msgstr ""
 "ចុច​ប៊ូតុង​នេះ​ដើម្បី​ចាប់ផ្ដើម​កម្មវិធី​ជ្រើសរើស​ឯកសារ ដែល​អនុញ្ញាត​ឲ្យ​អ្នក​ជ្រើស​ឯកសារ csv ដើម្បី​នាំចូល ។"
 
-#: csv/import/csvimportdialog.cpp:311
+#: csv/import/csvimportdialog.cpp:312
 #, kde-format
 msgctxt "@title:group"
 msgid "Delimiter"
 msgstr "ឧបករណ៍​កំណត់ព្រំដែន"
 
-#: csv/import/csvimportdialog.cpp:321
+#: csv/import/csvimportdialog.cpp:322
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Comma"
 msgstr "សញ្ញា(,)"
 
-#: csv/import/csvimportdialog.cpp:322
+#: csv/import/csvimportdialog.cpp:323
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a comma"
 msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​សញ្ញា​ក្បៀស (,)"
 
-#: csv/import/csvimportdialog.cpp:323
+#: csv/import/csvimportdialog.cpp:324
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the comma as a field separator."
 msgstr "ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​ឯកសារ csv របស់​អ្នក​ប្រើ​សញ្ញា​ក្បៀស (,) ជា​សញ្ញា​បំបែក​វាល ។"
 
-#: csv/import/csvimportdialog.cpp:328
+#: csv/import/csvimportdialog.cpp:329
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Semicolon"
 msgstr "សញ្ញា(;)"
 
-#: csv/import/csvimportdialog.cpp:329
+#: csv/import/csvimportdialog.cpp:330
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a semicolon"
 msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​សញ្ញា​ចំណុច​ក្បៀស (;)"
 
-#: csv/import/csvimportdialog.cpp:330
+#: csv/import/csvimportdialog.cpp:331
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the semicolon as a field separator."
 msgstr "ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​ឯកសារ csv របស់​អ្នក​ប្រើ​សញ្ញា​ចំណុច​ក្បៀស (;) ជា​សញ្ញា​បំបែក​វាល ។"
 
-#: csv/import/csvimportdialog.cpp:334
+#: csv/import/csvimportdialog.cpp:335
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Tabulator"
 msgstr "រាងជា​តារាង"
 
-#: csv/import/csvimportdialog.cpp:335
+#: csv/import/csvimportdialog.cpp:336
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a tab character"
 msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​តួអក្សរ​ថេប"
 
-#: csv/import/csvimportdialog.cpp:336
+#: csv/import/csvimportdialog.cpp:337
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -167,19 +167,19 @@ msgid ""
 "separator."
 msgstr "ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​ឯកសារ csv របស់​អ្នក​ប្រើ​តួអក្សរ​ថេប ជា​សញ្ញា​បំបែក​វាល ។"
 
-#: csv/import/csvimportdialog.cpp:340
+#: csv/import/csvimportdialog.cpp:341
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Space"
 msgstr "ចន្លោះ"
 
-#: csv/import/csvimportdialog.cpp:341
+#: csv/import/csvimportdialog.cpp:342
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a space character"
 msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​តួអក្សរ​ដកឃ្លា"
 
-#: csv/import/csvimportdialog.cpp:342
+#: csv/import/csvimportdialog.cpp:343
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -187,7 +187,7 @@ msgid ""
 "separator."
 msgstr "ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​ឯកសារ csv របស់​អ្នក​ប្រើ​តួអក្សរ​ដកឃ្លា ជា​សញ្ញា​បំបែក​វាល ។"
 
-#: csv/import/csvimportdialog.cpp:346
+#: csv/import/csvimportdialog.cpp:347
 #, fuzzy, kde-format
 #| msgctxt "@option:radio Custum field separator"
 #| msgid "Other"
@@ -195,13 +195,13 @@ msgctxt "@option:radio Custom field separator"
 msgid "Other"
 msgstr "ផ្សេងៗ"
 
-#: csv/import/csvimportdialog.cpp:347
+#: csv/import/csvimportdialog.cpp:348
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a custom character"
 msgstr "កំណត់​សញ្ញា​បំបែក​វាល​ទៅ​តួអក្សរ​ផ្ទាល់ខ្លួន"
 
-#: csv/import/csvimportdialog.cpp:349
+#: csv/import/csvimportdialog.cpp:350
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -211,13 +211,13 @@ msgstr ""
 "ជ្រើស​ជម្រើស​នេះ​ប្រសិនបើ​នៅ​ក្នុង​ឯកសារ csv របស់​អ្នក​​ប្រើ​តួអក្សរ​ផ្សេងទៀត​ជា​សញ្ញា​កំណត់​ព្រំដែន​វាល​សម្រាប់​"
 "ទិន្នន័យ ។"
 
-#: csv/import/csvimportdialog.cpp:355
+#: csv/import/csvimportdialog.cpp:356
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the custom delimiter character"
 msgstr "កំណត់​តួអក្សរ​សញ្ញា​កំណត់​ព្រំដែន​ផ្ទាល់ខ្លួន"
 
-#: csv/import/csvimportdialog.cpp:357
+#: csv/import/csvimportdialog.cpp:358
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -228,19 +228,19 @@ msgstr ""
 "បញ្ចូល​តួអក្សរ​ផ្ទាល់ខ្លួន​ដែល​ត្រូវ​ប្រើ​ជា​តួអក្សរ​សញ្ញា​កំណត់​ព្រំដែន​ ។ ប្រសិនបើ​អ្នក​បញ្ចូល​ច្រើន​ជាង​មួយ​តួអក្សរ "
 "មានតែ​តួអក្សរ​ដំបូង​ប៉ុណ្ណោះ​ដែល​នឹង​ត្រូវ​បាន​ប្រើ ហើយ​តួអក្សរ​ដែល​នៅសល់​នឹង​ត្រូវ​បាន​មិន​អើពើ ។"
 
-#: csv/import/csvimportdialog.cpp:363
+#: csv/import/csvimportdialog.cpp:364
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text quote:"
 msgstr "សម្រង់​អត្ថបទ ៖"
 
-#: csv/import/csvimportdialog.cpp:369
+#: csv/import/csvimportdialog.cpp:370
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the quote character"
 msgstr "ជ្រើស​តួអក្សរ​សម្រង់"
 
-#: csv/import/csvimportdialog.cpp:371
+#: csv/import/csvimportdialog.cpp:372
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -253,7 +253,7 @@ msgstr ""
 "ត្រូវ​បាន​ប្រើ​នៅ​ក្នុង​អត្ថបទ ។ ឧទាហរណ៍ ប្រសិនបើ​សញ្ញា​ក្បៀស (,) ជា​សញ្ញា​កំណត់​ព្រំដែន​វាល នោះ​សញ្ញា​ក្បៀស​"
 "ដែល​ប្រើ​នៅ​ក្នុង​អត្ថបទ​នឹង​ត្រូវ​បាន \"ដកស្រង់\" ដោយ​តួអក្សរ​ដែល​បាន​បញ្ជាក់​នៅ​ទីនេះ ។"
 
-#: csv/import/csvimportdialog.cpp:376
+#: csv/import/csvimportdialog.cpp:377
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox Qoute character option"
 #| msgid "\""
@@ -261,25 +261,25 @@ msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr "\""
 
-#: csv/import/csvimportdialog.cpp:377
+#: csv/import/csvimportdialog.cpp:378
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "'"
 msgstr "'"
 
-#: csv/import/csvimportdialog.cpp:378
+#: csv/import/csvimportdialog.cpp:379
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "None"
 msgstr "គ្មាន"
 
-#: csv/import/csvimportdialog.cpp:382
+#: csv/import/csvimportdialog.cpp:383
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "ទ្រង់ទ្រាយ​កាលបរិច្ឆេទ ៖"
 
-#: csv/import/csvimportdialog.cpp:390
+#: csv/import/csvimportdialog.cpp:391
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -295,7 +295,7 @@ msgstr ""
 "តួលេខ</item><item>I ៖ នាទី​មាន ២ តួលេខ</item><item>S ៖ វិនាទី​មាន ២ តួលេខ</item></"
 "list></para>"
 
-#: csv/import/csvimportdialog.cpp:401
+#: csv/import/csvimportdialog.cpp:402
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -317,37 +317,37 @@ msgstr ""
 "item><item>I ៖ នាទី​ដែល​មាន ២ តួលេខ</item><item>S ៖ វិនាទី​ដែល​មាន ២ តួលេខ</item></"
 "list></para><para>ឧទាហរណ៍ ៖ \"Y-M-D\" ត្រូវគ្នា​ជាមួយ​ទម្រង់ \"២០១២-០១-០៤\"</para>"
 
-#: csv/import/csvimportdialog.cpp:417
+#: csv/import/csvimportdialog.cpp:418
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text codec:"
 msgstr "កូឌិក​អត្ថបទ ៖"
 
-#: csv/import/csvimportdialog.cpp:423
+#: csv/import/csvimportdialog.cpp:424
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
 msgstr "ជ្រើស​អត្ថបទ​កូដិក"
 
-#: csv/import/csvimportdialog.cpp:424
+#: csv/import/csvimportdialog.cpp:425
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose the character encoding of the data in your csv file."
 msgstr "ជ្រើស​ការ​អ៊ិនកូដ​តួអក្សរ​សម្រាប់​ទិន្នន័យ​នៅ​ក្នុង​ឯកសារ csv របស់​អ្នក ។"
 
-#: csv/import/csvimportdialog.cpp:428
+#: csv/import/csvimportdialog.cpp:429
 #, kde-format
 msgctxt "@option:check"
 msgid "Skip first row of file"
 msgstr "រំលង​ជួរដេកទីមួយ​របស់ឯកសារ"
 
-#: csv/import/csvimportdialog.cpp:430
+#: csv/import/csvimportdialog.cpp:431
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip first row of csv file when importing"
 msgstr "ពេល​នាំចូល​រំលង​ជួរដេក​ទី​មួយ​របស់​ឯកសារ csv"
 
-#: csv/import/csvimportdialog.cpp:432
+#: csv/import/csvimportdialog.cpp:433
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -358,7 +358,7 @@ msgstr ""
 "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​ឲ្យ​កម្មវិធី​នាំចូល​រំលង​ជួរដេក​ទី​មួយ​នៃ​ឯកសារ csv របស់​អ្នក ។ ជាទូទៅ​ជួរ​ទី​មួយ​របស់​"
 "ឯកសារ csv គឺជា​ជួរ​មតិយោបល់​ដែល​ពណ៌នា​ពី​លំដាប់​វាល​ទិន្នន័យ​នៅ​ក្នុង​ឯកសារ ។"
 
-#: csv/import/csvimportdialog.cpp:448
+#: csv/import/csvimportdialog.cpp:449
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Apply Template..."
@@ -366,7 +366,7 @@ msgctxt "@action:button"
 msgid "Apply Template…"
 msgstr "អនុវត្ត​ពុម្ព..."
 
-#: csv/import/csvimportdialog.cpp:449
+#: csv/import/csvimportdialog.cpp:450
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Save Template..."
@@ -374,61 +374,61 @@ msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "រក្សាទុក​ពុម្ព..."
 
-#: csv/import/csvimportdialog.cpp:470
+#: csv/import/csvimportdialog.cpp:471
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Local (%1)"
 msgstr "មូលដ្ឋាន (%1)"
 
-#: csv/import/csvimportdialog.cpp:471
+#: csv/import/csvimportdialog.cpp:472
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Latin1"
 msgstr "ឡាតាំង ១"
 
-#: csv/import/csvimportdialog.cpp:472
+#: csv/import/csvimportdialog.cpp:473
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Unicode"
 msgstr "យូនីកូដ"
 
-#: csv/import/csvimportdialog.cpp:473
+#: csv/import/csvimportdialog.cpp:474
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Microsoft Unicode"
 msgstr "យូនីកូដ Microsoft"
 
-#: csv/import/csvimportdialog.cpp:574
+#: csv/import/csvimportdialog.cpp:575
 #, kde-format
 msgctxt "@info:status"
 msgid "You must assign at least one column."
 msgstr "អ្នក​ត្រូវ​តែ​ផ្ដល់​យ៉ាងហោចណាស់​មួយ​ជួរឈរ ។"
 
-#: csv/import/csvimportdialog.cpp:584
+#: csv/import/csvimportdialog.cpp:585
 #, kde-format
 msgctxt "@label"
 msgid "There are no templates available yet."
 msgstr "មិនទាន់​មាន​ពុម្ព​នៅ​ឡើយ​ទេ ។"
 
-#: csv/import/csvimportdialog.cpp:584
+#: csv/import/csvimportdialog.cpp:585
 #, kde-format
 msgctxt "@title:window"
 msgid "No templates available"
 msgstr "មិនមាន​ពុម្ព​នោះ​ទេ"
 
-#: csv/import/csvimportdialog.cpp:649
+#: csv/import/csvimportdialog.cpp:650
 #, kde-format
 msgctxt "@title:window"
 msgid "Template Name"
 msgstr "ឈ្មោះ​ពុម្ព"
 
-#: csv/import/csvimportdialog.cpp:649
+#: csv/import/csvimportdialog.cpp:650
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a name for the template:"
 msgstr "សូម​បញ្ចូល​ឈ្មោះ​សម្រាប់ពុម្ព ៖"
 
-#: csv/import/csvimportdialog.cpp:699
+#: csv/import/csvimportdialog.cpp:700
 #, kde-format
 msgctxt "@info:status"
 msgid "Cannot open input file."
@@ -439,54 +439,54 @@ msgstr "មិនអាច​បើក​ឯកសារ​បញ្ចូលប
 msgid "Device is not open"
 msgstr ""
 
-#: csv/import/templateselectiondialog.cpp:182
+#: csv/import/templateselectiondialog.cpp:183
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to delete template '%1'?"
 msgstr "តើ​អ្នក​ពិត​ជា​ចង់​លុប​ពុម្ព '%1' មែន​ឬ ?"
 
-#: csv/import/templateselectiondialog.cpp:203
+#: csv/import/templateselectiondialog.cpp:204
 #, kde-format
 msgctxt "@title:window"
 msgid "Template Selection"
 msgstr "ការ​ជ្រើស​ពុម្ព"
 
-#: csv/import/templateselectiondialog.cpp:206
+#: csv/import/templateselectiondialog.cpp:207
 #, kde-format
 msgctxt "@info"
 msgid "Please select a template, that matches the CSV file:"
 msgstr "សូម​ជ្រើស​ពុម្ព ដែល​ផ្គូផ្គង​នឹងឯកសារ CSV ៖"
 
-#: gmx/gmximportexportplugininterface.cpp:25
+#: gmx/gmximportexportplugininterface.cpp:26
 #, kde-format
 msgid "GMX address book file (*.gmxa)"
 msgstr "ឯកសារ​សៀវភៅ​អាសយដ្ឋាន GMX (*.gmxa)"
 
-#: gmx/gmximportexportplugininterface.cpp:40
+#: gmx/gmximportexportplugininterface.cpp:41
 #, fuzzy, kde-format
 #| msgid "Import GMX file..."
 msgid "Import GMX file…"
 msgstr "នាំចូល​ឯកសារ GMX..."
 
-#: gmx/gmximportexportplugininterface.cpp:41
+#: gmx/gmximportexportplugininterface.cpp:42
 #, kde-format
 msgid "Import contacts from a GMX address book file."
 msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ​សៀវភៅ​អាសយដ្ឋាន GMX ។"
 
-#: gmx/gmximportexportplugininterface.cpp:46
+#: gmx/gmximportexportplugininterface.cpp:47
 #, fuzzy, kde-format
 #| msgid "Export GMX file..."
 msgid "Export GMX file…"
 msgstr "នាំចេញ​ឯកសារ GMX..."
 
-#: gmx/gmximportexportplugininterface.cpp:47
+#: gmx/gmximportexportplugininterface.cpp:48
 #, kde-format
 msgid "Export contacts to a GMX address book file."
 msgstr "នាំចេញ​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​សៀវភៅ​អាសយដ្ឋាន GMX ។"
 
 #: gmx/gmximportexportplugininterface.cpp:434
-#: ldif/ldifimportexportplugininterface.cpp:80
-#: windows-contacts/importwindowcontact.cpp:26
+#: ldif/ldifimportexportplugininterface.cpp:81
+#: windows-contacts/importwindowcontact.cpp:27
 #, kde-format
 msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
 msgstr "<qt>មិនអាច​បើក <b>%1</b> ដើម្បី​អាន​បានទេ ។</qt>"
@@ -496,68 +496,68 @@ msgstr "<qt>មិនអាច​បើក <b>%1</b> ដើម្បី​អា
 msgid "%1 is not a GMX address book file."
 msgstr "%1 មិនមែន​ជា​ឯកសារ​សៀវភៅ​អាសយដ្ឋាន​របស់ GMX ។"
 
-#: ldap/ldapimportexportplugininterface.cpp:25
+#: ldap/ldapimportexportplugininterface.cpp:26
 #, fuzzy, kde-format
 #| msgid "Import from LDAP server..."
 msgid "Import From LDAP server…"
 msgstr "នាំចូល​ពី​ម៉ាស៊ីន​បម្រើ LDAP..."
 
-#: ldap/ldapimportexportplugininterface.cpp:26
+#: ldap/ldapimportexportplugininterface.cpp:27
 #, kde-format
 msgid "Import contacts from an LDAP server."
 msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ម៉ាស៊ីនបម្រើ LDAP ។"
 
-#: ldif/ldifimportexportplugininterface.cpp:36
+#: ldif/ldifimportexportplugininterface.cpp:37
 #, fuzzy, kde-format
 #| msgid "Import LDIF file..."
 msgid "Import LDIF file…"
 msgstr "នាំចូល​ឯកសារ LDIF..."
 
-#: ldif/ldifimportexportplugininterface.cpp:37
+#: ldif/ldifimportexportplugininterface.cpp:38
 #, kde-format
 msgid "Import contacts from an LDIF file."
 msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ LDIF ។"
 
-#: ldif/ldifimportexportplugininterface.cpp:42
+#: ldif/ldifimportexportplugininterface.cpp:43
 #, fuzzy, kde-format
 #| msgid "Export LDIF file..."
 msgid "Export LDIF file…"
 msgstr "នាំចេញ​ឯកសារ LDIF..."
 
-#: ldif/ldifimportexportplugininterface.cpp:43
+#: ldif/ldifimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Export contacts to an LDIF file."
 msgstr "នាំចេញ​ទំនាក់ទំនង​ទៅ​កាន់​ឯកសារ LDIF ។"
 
-#: ldif/ldifimportexportplugininterface.cpp:106
+#: ldif/ldifimportexportplugininterface.cpp:107
 #, kde-format
 msgid "LDif Files"
 msgstr ""
 
-#: ldif/ldifimportexportplugininterface.cpp:144
+#: ldif/ldifimportexportplugininterface.cpp:145
 #, kde-format
 msgid "LDif Files (*.ldif)"
 msgstr ""
 
-#: vcards/engine/vcardexportselectionwidget.cpp:22
+#: vcards/engine/vcardexportselectionwidget.cpp:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Fields to be exported"
 msgstr "ឯកសារ​ដែល​ត្រូវ​នាំចេញ ៖"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:29
+#: vcards/engine/vcardexportselectionwidget.cpp:30
 #, kde-format
 msgctxt "@option:check"
 msgid "Private fields"
 msgstr "វាល​ឯកជន"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:30
+#: vcards/engine/vcardexportselectionwidget.cpp:31
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export private fields"
 msgstr "នាំចេញ​វាល​ឯកជន"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:32
+#: vcards/engine/vcardexportselectionwidget.cpp:33
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -565,19 +565,19 @@ msgid ""
 "vCard output file."
 msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​វាល​ឯកជន​របស់​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:36
+#: vcards/engine/vcardexportselectionwidget.cpp:37
 #, kde-format
 msgctxt "@option:check"
 msgid "Business fields"
 msgstr "វាល​ពាណិជ្ជកម្ម"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:37
+#: vcards/engine/vcardexportselectionwidget.cpp:38
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export business fields"
 msgstr "នាំចេញ​វាល​ពាណិជ្ជកម្ម"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:39
+#: vcards/engine/vcardexportselectionwidget.cpp:40
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -585,19 +585,19 @@ msgid ""
 "vCard output file."
 msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​វាល​ជំនួញ​របស់​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:43
+#: vcards/engine/vcardexportselectionwidget.cpp:44
 #, kde-format
 msgctxt "@option:check"
 msgid "Other fields"
 msgstr "វាល​ផ្សេងៗ"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:44
+#: vcards/engine/vcardexportselectionwidget.cpp:45
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export other fields"
 msgstr "នាំចេញ​វាល​ផ្សេងៗ"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:46
+#: vcards/engine/vcardexportselectionwidget.cpp:47
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -605,19 +605,19 @@ msgid ""
 "output file."
 msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​វាល​ផ្សេងទៀត​របស់​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:50
+#: vcards/engine/vcardexportselectionwidget.cpp:51
 #, kde-format
 msgctxt "@option:check"
 msgid "Encryption keys"
 msgstr "ការ​អ៊ីនគ្រីប​សោ"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:51
+#: vcards/engine/vcardexportselectionwidget.cpp:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export encryption keys"
 msgstr "នាំចេញ​ការ​អ៊ិនគ្រីប​សោ"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:53
+#: vcards/engine/vcardexportselectionwidget.cpp:54
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -625,19 +625,19 @@ msgid ""
 "vCard output file."
 msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​កូនសោ​ការ​អ៊ិនគ្រីប​របស់​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:57
+#: vcards/engine/vcardexportselectionwidget.cpp:58
 #, kde-format
 msgctxt "@option:check"
 msgid "Pictures"
 msgstr "រូបភាព"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:58
+#: vcards/engine/vcardexportselectionwidget.cpp:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export pictures"
 msgstr "នាំចេញ​រូបភាព"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:60
+#: vcards/engine/vcardexportselectionwidget.cpp:61
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -645,25 +645,25 @@ msgid ""
 "output file."
 msgstr "ធីក​ប្រអប់​នេះ​ប្រសិនបើ​អ្នក​ចង់​នាំចេញ​រូបភាព​ទំនាក់ទំនង​ទៅកាន់​ឯកសារ​លទ្ធផល vCard ។"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:64
+#: vcards/engine/vcardexportselectionwidget.cpp:65
 #, kde-format
 msgctxt "@title:group"
 msgid "Export options"
 msgstr "ជម្រើស​នាំចេញ"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:70
+#: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
 msgctxt "@option:check"
 msgid "Display name as full name"
 msgstr "បង្ហាញ​ឈ្មោះ​ជា​ឈ្មោះ​ពេញ"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:71
+#: vcards/engine/vcardexportselectionwidget.cpp:72
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export display name as full name"
 msgstr "នាំចេញ​ឈ្មោះ​បង្ហាញ​ជា​ឈ្មោះ​ពេញ"
 
-#: vcards/engine/vcardexportselectionwidget.cpp:73
+#: vcards/engine/vcardexportselectionwidget.cpp:74
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -694,48 +694,48 @@ msgctxt "@action:button"
 msgid "Import All…"
 msgstr "នាំចូល​ទាំងអស់..."
 
-#: vcards/vcardimportexportplugininterface.cpp:44
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Import vCard"
 msgid "Import vCard…"
 msgstr "នាំចូល vCard"
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:46
 #, kde-format
 msgid "Import contacts from a vCard file."
 msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ vCard ។"
 
-#: vcards/vcardimportexportplugininterface.cpp:52
+#: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export contacts to a vCard 3.0 file."
 msgid "Export contacts to a vCard file."
 msgstr "នាំចេញ​ទំនាក់ទំនង​ទៅ​កាន់ឯកសារ vCard 3.0 ។"
 
-#: vcards/vcardimportexportplugininterface.cpp:53
+#: vcards/vcardimportexportplugininterface.cpp:54
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
 msgid "Export vCard…"
 msgstr "នាំចេញ vCard 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:85
+#: vcards/vcardimportexportplugininterface.cpp:86
 #, kde-format
 msgid "vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)"
 msgstr ""
 
-#: vcards/vcardimportexportplugininterface.cpp:86
+#: vcards/vcardimportexportplugininterface.cpp:87
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "ជ្រើស vCard ដែល​ត្រូវ​នាំចូល"
 
-#: vcards/vcardimportexportplugininterface.cpp:97
+#: vcards/vcardimportexportplugininterface.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "បាន​បរាជ័យ​ក្នុង​ការ​នាំចូល vCard"
 
-#: vcards/vcardimportexportplugininterface.cpp:111
+#: vcards/vcardimportexportplugininterface.cpp:112
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
@@ -761,19 +761,19 @@ msgctxt "@action:button"
 msgid "Export to Several Files"
 msgstr "នាំចេញ​ទៅ​កាន់​ឯកសារ​ជា​ច្រើន"
 
-#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
 #, fuzzy, kde-format
 #| msgid "Import CSV file..."
 msgid "Import Windows Contact file…"
 msgstr "នាំចូល​ឯកសារ CSV..."
 
-#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:31
 #, fuzzy, kde-format
 #| msgid "Import contacts from an LDIF file."
 msgid "Import contacts from windows contact file."
 msgstr "នាំចូល​ទំនាក់ទំនង​ពី​ឯកសារ LDIF ។"
 
-#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:69
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""
