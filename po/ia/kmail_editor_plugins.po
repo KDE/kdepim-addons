@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:44+0000\n"
-"PO-Revision-Date: 2026-01-20 11:43+0100\n"
+"PO-Revision-Date: 2026-08-31 17:01+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:25
 #, kde-format
@@ -80,26 +80,24 @@ msgstr "Configura IA (AI)"
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
 #, kde-format
 msgid "No text selected or no text in the editor."
-msgstr ""
+msgstr "Nulle texto seligite o nulle texto in le editor."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Correct Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Text"
-msgstr "Corrige texto"
+msgstr "Nulle texto"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgid "No AI engine configured."
-msgstr ""
+msgstr "Nulle motor de AI configurate."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgctxt "@title:window"
 msgid "No AI Engine"
-msgstr ""
+msgstr "Nulle motor de AI"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:137
 #, kde-format
@@ -127,7 +125,7 @@ msgstr "Inserta ePosta..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Email Address"
-msgstr ""
+msgstr "Selige adresses de e-posta"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:30
 #, kde-format
