@@ -9,8 +9,6 @@
 
 AutogenerateConfigureAskInfo::AutogenerateConfigureAskInfo() = default;
 
-AutogenerateConfigureAskInfo::~AutogenerateConfigureAskInfo() = default;
-
 bool AutogenerateConfigureAskInfo::enabled() const
 {
     return mEnabled;

@@ -13,7 +13,6 @@ class PIMAUTOGENERATETEXT_EXPORT AutogenerateConfigureAskInfo
 {
 public:
     AutogenerateConfigureAskInfo();
-    ~AutogenerateConfigureAskInfo();
 
     [[nodiscard]] bool enabled() const;
     void setEnabled(bool newEnabled);
