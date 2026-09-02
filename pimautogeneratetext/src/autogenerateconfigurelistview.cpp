@@ -81,9 +81,7 @@ void AutogenerateConfigureListView::contextMenuEvent(QContextMenuEvent *event)
         });
         menu.addAction(removeAction);
     }
-    if (!menu.actions().isEmpty()) {
-        menu.exec(event->globalPos());
-    }
+    menu.exec(event->globalPos());
 }
 
 #include "moc_autogenerateconfigurelistview.cpp"
