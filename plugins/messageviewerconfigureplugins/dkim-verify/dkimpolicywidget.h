@@ -8,21 +8,10 @@
 
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
-class QCheckBox;
-class QPushButton;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMPolicyWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit DKIMPolicyWidget(QWidget *parent = nullptr);
     ~DKIMPolicyWidget() override;
-
-private:
-    QCheckBox *const mVerifyIfEmailMustBeSigned;
-    QCheckBox *const mUseDMARC;
-    QCheckBox *const mUseDefaultRules;
-    QCheckBox *const mAutoGenerateRule;
-    QCheckBox *const mReadAuthResultHeader;
-    QCheckBox *const mAutoGenerateOnlyIfSenderInSDID;
-    QPushButton *const mRulesButton;
 };

@@ -8,8 +8,6 @@
 
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
-class QComboBox;
-class QCheckBox;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAdvancedWidget : public QWidget
 {
     Q_OBJECT
@@ -19,8 +17,4 @@ public:
 
 private:
     LIBDKIMVERIFYCONFIGURE_NO_EXPORT void slotConfigureAuthenticationServer();
-    QComboBox *const mSha1Policy;
-    QCheckBox *const mCheckDKIMWhenOnlyTesting;
-    QCheckBox *const mUseAuthenticationResultRelaxedParser;
-    QComboBox *const mSmallKeyPolicy;
 };

@@ -16,9 +16,6 @@ using namespace Qt::Literals::StringLiterals;
 DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     : QWidget(parent)
     , mEnableDkimSupport(new QCheckBox(i18nc("@option:check", "Enable DKIM Support"), this))
-    , mSaveResult(new QCheckBox(i18nc("@option:check", "Save DKIM Result"), this))
-    , mSaveKey(new QComboBox(this))
-    , mUseOnlyAuthenticationResult(new QCheckBox(i18nc("@option:check", "Replace DKIM result by Authentication-Result header value"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName("mainLayout"_L1);
@@ -27,9 +24,10 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     mEnableDkimSupport->setChecked(false);
     mainLayout->addWidget(mEnableDkimSupport);
 
-    mSaveResult->setObjectName("kcfg_SaveDkimResult"_L1);
-    mSaveResult->setChecked(false);
-    mainLayout->addWidget(mSaveResult);
+    auto saveResult = new QCheckBox(i18nc("@option:check", "Save DKIM Result"), this);
+    saveResult->setObjectName("kcfg_SaveDkimResult"_L1);
+    saveResult->setChecked(false);
+    mainLayout->addWidget(saveResult);
 
     auto saveKeyLayout = new QHBoxLayout;
     saveKeyLayout->setContentsMargins({});
@@ -38,14 +36,16 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     saveKeyLabel->setObjectName("saveKeyLabel"_L1);
     saveKeyLayout->addWidget(saveKeyLabel);
 
-    mSaveKey->setObjectName("kcfg_SaveKey"_L1);
-    mSaveKey->addItems({i18n("Nothing"), i18n("Save"), i18n("Save and Compare")});
-    saveKeyLayout->addWidget(mSaveKey);
+    auto saveKey = new QComboBox(this);
+    saveKey->setObjectName("kcfg_SaveKey"_L1);
+    saveKey->addItems({i18n("Nothing"), i18n("Save"), i18n("Save and Compare")});
+    saveKeyLayout->addWidget(saveKey);
     saveKeyLayout->addStretch(1);
 
-    mUseOnlyAuthenticationResult->setObjectName("kcfg_UseOnlyAuthenticationResults"_L1);
-    mUseOnlyAuthenticationResult->setChecked(false);
-    mainLayout->addWidget(mUseOnlyAuthenticationResult);
+    auto useOnlyAuthenticationResult = new QCheckBox(i18nc("@option:check", "Replace DKIM result by Authentication-Result header value"), this);
+    useOnlyAuthenticationResult->setObjectName("kcfg_UseOnlyAuthenticationResults"_L1);
+    useOnlyAuthenticationResult->setChecked(false);
+    mainLayout->addWidget(useOnlyAuthenticationResult);
 
     mainLayout->addStretch(1);
 }

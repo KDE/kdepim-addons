@@ -18,31 +18,22 @@ DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     : QWidget(parent)
     , mGeneralWidget(new DKIMGeneralWidget(this))
     , mRecordWidget(new DKIMKeyRecordWidget(this))
-    , mAdvancedWidget(new DKIMAdvancedWidget(this))
-    , mPolicyWidget(new DKIMPolicyWidget(this))
-    , mTabWidget(new QTabWidget(this))
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName("mainlayout"_L1);
     mainLayout->setContentsMargins({});
 
-    mTabWidget->setObjectName("tabwidget"_L1);
-    mainLayout->addWidget(mTabWidget);
-    initTab();
+    auto tabWidget = new QTabWidget(this);
+    tabWidget->setObjectName("tabwidget"_L1);
+    mainLayout->addWidget(tabWidget);
+
+    tabWidget->addTab(mGeneralWidget, i18n("General"));
+    tabWidget->addTab(mRecordWidget, i18n("Record Keys"));
+    tabWidget->addTab(new DKIMPolicyWidget(this), i18n("Policy"));
+    tabWidget->addTab(new DKIMAdvancedWidget(this), i18n("Advanced"));
 }
 
 DKIMConfigureTab::~DKIMConfigureTab() = default;
-
-void DKIMConfigureTab::initTab()
-{
-    mTabWidget->addTab(mGeneralWidget, i18n("General"));
-
-    mTabWidget->addTab(mRecordWidget, i18n("Record Keys"));
-
-    mTabWidget->addTab(mPolicyWidget, i18n("Policy"));
-
-    mTabWidget->addTab(mAdvancedWidget, i18n("Advanced"));
-}
 
 void DKIMConfigureTab::loadSettings()
 {

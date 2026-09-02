@@ -9,7 +9,6 @@
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
 class QCheckBox;
-class QComboBox;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMGeneralWidget : public QWidget
 {
     Q_OBJECT
@@ -20,7 +19,4 @@ public:
 
 private:
     QCheckBox *const mEnableDkimSupport;
-    QCheckBox *const mSaveResult;
-    QComboBox *const mSaveKey;
-    QCheckBox *const mUseOnlyAuthenticationResult;
 };

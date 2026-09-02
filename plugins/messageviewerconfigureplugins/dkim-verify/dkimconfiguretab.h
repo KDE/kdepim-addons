@@ -9,11 +9,8 @@
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
 
-class QTabWidget;
 class DKIMGeneralWidget;
 class DKIMKeyRecordWidget;
-class DKIMAdvancedWidget;
-class DKIMPolicyWidget;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureTab : public QWidget
 {
     Q_OBJECT
@@ -26,10 +23,6 @@ public:
     void resetSettings();
 
 private:
-    LIBDKIMVERIFYCONFIGURE_NO_EXPORT void initTab();
     DKIMGeneralWidget *const mGeneralWidget;
     DKIMKeyRecordWidget *const mRecordWidget;
-    DKIMAdvancedWidget *const mAdvancedWidget;
-    DKIMPolicyWidget *const mPolicyWidget;
-    QTabWidget *const mTabWidget;
 };

@@ -15,27 +15,28 @@ using namespace Qt::Literals::StringLiterals;
 
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     : QWidget(parent)
-    , mSha1Policy(new QComboBox(this))
-    , mCheckDKIMWhenOnlyTesting(new QCheckBox(i18nc("@option:check", "Still verify the signature, if a domain is only testing DKIM"), this))
-    , mUseAuthenticationResultRelaxedParser(new QCheckBox(i18nc("@option:check", "Use relaxed parsing when reading \"Authentication-Result\" header"), this))
-    , mSmallKeyPolicy(new QComboBox(this))
 {
     auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName("mainLayout"_L1);
 
-    mCheckDKIMWhenOnlyTesting->setObjectName("kcfg_VerifySignatureWhenOnlyTest"_L1);
-    mainLayout->addRow(mCheckDKIMWhenOnlyTesting);
+    auto checkDKIMWhenOnlyTesting = new QCheckBox(i18nc("@option:check", "Still verify the signature, if a domain is only testing DKIM"), this);
+    checkDKIMWhenOnlyTesting->setObjectName("kcfg_VerifySignatureWhenOnlyTest"_L1);
+    mainLayout->addRow(checkDKIMWhenOnlyTesting);
 
-    mUseAuthenticationResultRelaxedParser->setObjectName("kcfg_UseRelaxedParsingAuthenticationResults"_L1);
-    mainLayout->addRow(mUseAuthenticationResultRelaxedParser);
+    auto useAuthenticationResultRelaxedParser =
+        new QCheckBox(i18nc("@option:check", "Use relaxed parsing when reading \"Authentication-Result\" header"), this);
+    useAuthenticationResultRelaxedParser->setObjectName("kcfg_UseRelaxedParsingAuthenticationResults"_L1);
+    mainLayout->addRow(useAuthenticationResultRelaxedParser);
 
-    mSha1Policy->setObjectName("kcfg_PolicyRsaSha1"_L1);
-    mSha1Policy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
-    mainLayout->addRow(i18n("Treat RSA-SHA1 sign algorithm as:"), mSha1Policy);
+    auto sha1Policy = new QComboBox(this);
+    sha1Policy->setObjectName("kcfg_PolicyRsaSha1"_L1);
+    sha1Policy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
+    mainLayout->addRow(i18n("Treat RSA-SHA1 sign algorithm as:"), sha1Policy);
 
-    mSmallKeyPolicy->setObjectName("kcfg_PublicRsaTooSmall"_L1);
-    mSmallKeyPolicy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
-    mainLayout->addRow(i18n("Treat small Key as:"), mSmallKeyPolicy);
+    auto smallKeyPolicy = new QComboBox(this);
+    smallKeyPolicy->setObjectName("kcfg_PublicRsaTooSmall"_L1);
+    smallKeyPolicy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
+    mainLayout->addRow(i18n("Treat small Key as:"), smallKeyPolicy);
 
     auto configureServer = new QPushButton(i18nc("@action:button", "Configure"), this);
     configureServer->setObjectName("configure_button"_L1);
