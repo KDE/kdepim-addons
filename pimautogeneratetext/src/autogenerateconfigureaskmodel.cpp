@@ -118,6 +118,10 @@ void AutogenerateConfigureAskModel::addItem(const AutogenerateConfigureAskInfo &
 
 void AutogenerateConfigureAskModel::removeItem(int index)
 {
+    if (index < 0) {
+        qCWarning(PIMAUTOGENERATE_LOG) << "Invalid index";
+        return;
+    }
     beginRemoveRows(QModelIndex(), index, index);
     mAskInfos.removeAt(index);
     endRemoveRows();
