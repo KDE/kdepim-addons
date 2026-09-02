@@ -25,6 +25,7 @@ DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
 
     mManagerKeyWidget->setObjectName("mManagerKeyWidget"_L1);
     mainLayout->addWidget(mManagerKeyWidget);
+    readConfig();
 }
 
 DKIMKeyRecordWidget::~DKIMKeyRecordWidget()
