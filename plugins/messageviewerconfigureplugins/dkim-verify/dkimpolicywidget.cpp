@@ -7,7 +7,6 @@
 #include "dkimpolicywidget.h"
 #include <KLocalizedString>
 #include <MessageViewer/DKIMManageRulesDialog>
-#include <MessageViewer/MessageViewerSettings>
 #include <QCheckBox>
 #include <QPushButton>
 #include <QSpacerItem>

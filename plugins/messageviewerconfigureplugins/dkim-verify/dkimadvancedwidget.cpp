@@ -7,7 +7,6 @@
 #include "dkimadvancedwidget.h"
 #include "dkimauthenticationverifiedserverdialog.h"
 #include <KLocalizedString>
-#include <MessageViewer/MessageViewerSettings>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QFormLayout>

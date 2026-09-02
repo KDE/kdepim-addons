@@ -10,7 +10,6 @@
 #include "dkimkeyrecordwidget.h"
 #include "dkimpolicywidget.h"
 #include <KLocalizedString>
-#include <KSharedConfig>
 #include <QHBoxLayout>
 #include <QTabWidget>
 using namespace Qt::Literals::StringLiterals;
