@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-03 00:44+0000\n"
 "PO-Revision-Date: 2026-08-16 08:09+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.9\n"
 
-#: dkim-verify/dkimadvancedwidget.cpp:20
+#: dkim-verify/dkimadvancedwidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "ხელმოწერა მაინც შემოწმდება, თუ დომენი მხოლოდ DKIM-ს ამოწმებს"
 
-#: dkim-verify/dkimadvancedwidget.cpp:21
+#: dkim-verify/dkimadvancedwidget.cpp:27
 #, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
@@ -32,23 +32,23 @@ msgstr ""
 "\"Authentication-Results\" თავსართის დამუშავებისას ნაკლები სიმკაცრის "
 "გამოყენება"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:41
 #, kde-format
 msgid "Nothing"
 msgstr "არაფერი"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Warning"
 msgstr "შეტყობინება"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Error"
 msgstr "შეცდომა"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35
+#: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
 msgstr "RSA-SHA1 ხელმოწერის ალგორითმი მიიღება, როგორც:"
@@ -106,99 +106,99 @@ msgctxt "@title:window"
 msgid "Configure DKIM"
 msgstr "DKIM-ის მორგება"
 
-#: dkim-verify/dkimconfiguretab.cpp:39
+#: dkim-verify/dkimconfiguretab.cpp:30
 #: foldersettings/folderconfiguresettingspagewidget.cpp:37
 #, kde-format
 msgid "General"
 msgstr "ძირითადი"
 
-#: dkim-verify/dkimconfiguretab.cpp:41
+#: dkim-verify/dkimconfiguretab.cpp:31
 #, kde-format
 msgid "Record Keys"
 msgstr "ჩანაწერის გასაღებები"
 
-#: dkim-verify/dkimconfiguretab.cpp:43
+#: dkim-verify/dkimconfiguretab.cpp:32
 #, kde-format
 msgid "Policy"
 msgstr "წესები"
 
-#: dkim-verify/dkimconfiguretab.cpp:45
+#: dkim-verify/dkimconfiguretab.cpp:33
 #, kde-format
 msgid "Advanced"
 msgstr "დამატებით"
 
-#: dkim-verify/dkimgeneralwidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:18
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "DKIM-ის მხარდაჭერის ჩართვა"
 
-#: dkim-verify/dkimgeneralwidget.cpp:20
+#: dkim-verify/dkimgeneralwidget.cpp:27
 #, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "DKIM-ის შედეგის შენახვა"
 
-#: dkim-verify/dkimgeneralwidget.cpp:22
+#: dkim-verify/dkimgeneralwidget.cpp:35
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Save Record Key:"
+msgstr "ჩანაწერის გასაღების შენახვა:"
+
+#: dkim-verify/dkimgeneralwidget.cpp:41
+#, kde-format
+msgid "Save"
+msgstr "შენახვა"
+
+#: dkim-verify/dkimgeneralwidget.cpp:41
+#, kde-format
+msgid "Save and Compare"
+msgstr "შენახვა და შედარება"
+
+#: dkim-verify/dkimgeneralwidget.cpp:45
 #, kde-format
 msgctxt "@option:check"
 msgid "Replace DKIM result by Authentication-Result header value"
 msgstr ""
 "DKIM-ის პასუხის Authentication-Result თავსართის მნიშნველობით ჩანაცვლება"
 
-#: dkim-verify/dkimgeneralwidget.cpp:38
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Save Record Key:"
-msgstr "ჩანაწერის გასაღების შენახვა:"
-
-#: dkim-verify/dkimgeneralwidget.cpp:43
-#, kde-format
-msgid "Save"
-msgstr "შენახვა"
-
-#: dkim-verify/dkimgeneralwidget.cpp:43
-#, kde-format
-msgid "Save and Compare"
-msgstr "შენახვა და შედარება"
-
-#: dkim-verify/dkimpolicywidget.cpp:19
+#: dkim-verify/dkimpolicywidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "შემოწმება, ელფოსტას ხელმოწერა უნდა ჰქონდეს, თუ არა"
 
-#: dkim-verify/dkimpolicywidget.cpp:20
+#: dkim-verify/dkimpolicywidget.cpp:26
 #, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr "ელფოსტაზე ხელმოწერის დასმის გადასაწყვეტად DMARC-ის გამოყენება"
 
-#: dkim-verify/dkimpolicywidget.cpp:21
-#, kde-format
-msgctxt "@option:check"
-msgid "Use default rule"
-msgstr "ნაგულისხმევი წესის გამოყენება"
-
-#: dkim-verify/dkimpolicywidget.cpp:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Autogenerate rule"
-msgstr "წესების ავტომატური გენერაცია"
-
-#: dkim-verify/dkimpolicywidget.cpp:23
+#: dkim-verify/dkimpolicywidget.cpp:31
 #, kde-format
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "Authentication-Results თავსართის წაკითხვა"
 
-#: dkim-verify/dkimpolicywidget.cpp:24
+#: dkim-verify/dkimpolicywidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Use default rule"
+msgstr "ნაგულისხმევი წესის გამოყენება"
+
+#: dkim-verify/dkimpolicywidget.cpp:41
+#, kde-format
+msgctxt "@option:check"
+msgid "Autogenerate rule"
+msgstr "წესების ავტომატური გენერაცია"
+
+#: dkim-verify/dkimpolicywidget.cpp:53
 #, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "ავტომატური გენერაცია, როცა გამგზავნი SDID-შია"
 
-#: dkim-verify/dkimpolicywidget.cpp:25
+#: dkim-verify/dkimpolicywidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"

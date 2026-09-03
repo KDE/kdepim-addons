@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-03 00:44+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,35 +19,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: dkim-verify/dkimadvancedwidget.cpp:20
+#: dkim-verify/dkimadvancedwidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Still verify the signature, if a domain is only testing DKIM"
 msgstr "अद्यापि हस्ताक्षरं सत्यापयन्तु, यदि डोमेन् केवलं DKIM परीक्षणं करोति"
 
-#: dkim-verify/dkimadvancedwidget.cpp:21
+#: dkim-verify/dkimadvancedwidget.cpp:27
 #, kde-format
 msgctxt "@option:check"
 msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgstr "\"Authentication-Result\" शीर्षकं पठन् शिथिलपार्सिंग् इत्यस्य उपयोगं कुर्वन्तु"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:41
 #, kde-format
 msgid "Nothing"
 msgstr "किमपि न"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Warning"
 msgstr "चेतवानी"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Error"
 msgstr "त्रुटि"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35
+#: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
 msgstr "RSA-SHA1 चिह्न एल्गोरिदम् इत्यस्य व्यवहारं यथा भवति:"
@@ -105,99 +105,99 @@ msgctxt "@title:window"
 msgid "Configure DKIM"
 msgstr "DKIM विन्यस्तं कुर्वन्तु"
 
-#: dkim-verify/dkimconfiguretab.cpp:39
+#: dkim-verify/dkimconfiguretab.cpp:30
 #: foldersettings/folderconfiguresettingspagewidget.cpp:37
 #, kde-format
 msgid "General"
 msgstr "सामान्य"
 
-#: dkim-verify/dkimconfiguretab.cpp:41
+#: dkim-verify/dkimconfiguretab.cpp:31
 #, kde-format
 msgid "Record Keys"
 msgstr "अभिलेख कुञ्जी"
 
-#: dkim-verify/dkimconfiguretab.cpp:43
+#: dkim-verify/dkimconfiguretab.cpp:32
 #, kde-format
 msgid "Policy"
 msgstr "नीति"
 
-#: dkim-verify/dkimconfiguretab.cpp:45
+#: dkim-verify/dkimconfiguretab.cpp:33
 #, kde-format
 msgid "Advanced"
 msgstr "उन्नतं"
 
-#: dkim-verify/dkimgeneralwidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:18
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "DKIM समर्थनं सक्षमं कुर्वन्तु"
 
-#: dkim-verify/dkimgeneralwidget.cpp:20
+#: dkim-verify/dkimgeneralwidget.cpp:27
 #, kde-format
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "DKIM परिणामं रक्षन्तु"
 
-#: dkim-verify/dkimgeneralwidget.cpp:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Replace DKIM result by Authentication-Result header value"
-msgstr "DKIM परिणामस्य स्थाने Authentication-Result शीर्षकमूल्येन स्थापयन्तु"
-
-#: dkim-verify/dkimgeneralwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:35
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Save Record Key:"
 msgstr "अभिलेखकुंजी रक्षतु:"
 
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimgeneralwidget.cpp:41
 #, kde-format
 msgid "Save"
 msgstr "रक्ष्"
 
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimgeneralwidget.cpp:41
 #, kde-format
 msgid "Save and Compare"
 msgstr "रक्षन्तु तुलनां च कुर्वन्तु"
 
-#: dkim-verify/dkimpolicywidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:45
+#, kde-format
+msgctxt "@option:check"
+msgid "Replace DKIM result by Authentication-Result header value"
+msgstr "DKIM परिणामस्य स्थाने Authentication-Result शीर्षकमूल्येन स्थापयन्तु"
+
+#: dkim-verify/dkimpolicywidget.cpp:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "ई-मेल-पत्रे हस्ताक्षरं कर्तव्यं वा इति पश्यन्तु"
 
-#: dkim-verify/dkimpolicywidget.cpp:20
+#: dkim-verify/dkimpolicywidget.cpp:26
 #, kde-format
 msgctxt "@option:check"
 msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
 "ई-मेलस्य हस्ताक्षरं कर्तव्यं वा इति अनुमानात्मकरूपेण निर्धारयितुं DMARC इत्यस्य उपयोगं कुर्वन्तु"
 
-#: dkim-verify/dkimpolicywidget.cpp:21
-#, kde-format
-msgctxt "@option:check"
-msgid "Use default rule"
-msgstr "पूर्वनिर्धारितनियमस्य उपयोगं कुर्वन्तु"
-
-#: dkim-verify/dkimpolicywidget.cpp:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Autogenerate rule"
-msgstr "स्वतः उत्पन्नं नियमः"
-
-#: dkim-verify/dkimpolicywidget.cpp:23
+#: dkim-verify/dkimpolicywidget.cpp:31
 #, kde-format
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "प्रमाणीकरण-परिणामशीर्षकं पठन्तु"
 
-#: dkim-verify/dkimpolicywidget.cpp:24
+#: dkim-verify/dkimpolicywidget.cpp:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Use default rule"
+msgstr "पूर्वनिर्धारितनियमस्य उपयोगं कुर्वन्तु"
+
+#: dkim-verify/dkimpolicywidget.cpp:41
+#, kde-format
+msgctxt "@option:check"
+msgid "Autogenerate rule"
+msgstr "स्वतः उत्पन्नं नियमः"
+
+#: dkim-verify/dkimpolicywidget.cpp:53
 #, kde-format
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "यदा प्रेषकः SDID मध्ये स्वयमेव जनयति"
 
-#: dkim-verify/dkimpolicywidget.cpp:25
+#: dkim-verify/dkimpolicywidget.cpp:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Rules"

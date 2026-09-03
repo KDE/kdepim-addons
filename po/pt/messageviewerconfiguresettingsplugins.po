@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-03 00:44+0000\n"
 "PO-Revision-Date: 2022-05-16 13:58+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-POFile-SpellExtra: Gravatar DKIM DMARC heuristicamente SHA RSA SDID\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: dkim-verify/dkimadvancedwidget.cpp:20
+#: dkim-verify/dkimadvancedwidget.cpp:22
 #, fuzzy, kde-format
 #| msgid "Still verify the signature, if a domain is only testing DKIM"
 msgctxt "@option:check"
@@ -27,7 +27,7 @@ msgstr ""
 "Verifique à mesma a assinatura, mesmo que um domínio só esteja a testar o "
 "DKIM"
 
-#: dkim-verify/dkimadvancedwidget.cpp:21
+#: dkim-verify/dkimadvancedwidget.cpp:27
 #, fuzzy, kde-format
 #| msgid "Use relaxed parsing when reading \"Authentication-Result\" header"
 msgctxt "@option:check"
@@ -36,23 +36,23 @@ msgstr ""
 "Usar um processamento relaxado ao ler o cabeçalho de resultados da "
 "autenticação"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
-#: dkim-verify/dkimgeneralwidget.cpp:43
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimgeneralwidget.cpp:41
 #, kde-format
 msgid "Nothing"
 msgstr "Nada"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Warning"
 msgstr "Aviso"
 
-#: dkim-verify/dkimadvancedwidget.cpp:34 dkim-verify/dkimadvancedwidget.cpp:38
+#: dkim-verify/dkimadvancedwidget.cpp:33 dkim-verify/dkimadvancedwidget.cpp:38
 #, kde-format
 msgid "Error"
 msgstr "Erro"
 
-#: dkim-verify/dkimadvancedwidget.cpp:35
+#: dkim-verify/dkimadvancedwidget.cpp:34
 #, kde-format
 msgid "Treat RSA-SHA1 sign algorithm as:"
 msgstr "Tratar o algoritmo de assinatura RSA-SHA1 como:"
@@ -111,42 +111,59 @@ msgctxt "@title:window"
 msgid "Configure DKIM"
 msgstr "Configurar o DKIM"
 
-#: dkim-verify/dkimconfiguretab.cpp:39
+#: dkim-verify/dkimconfiguretab.cpp:30
 #: foldersettings/folderconfiguresettingspagewidget.cpp:37
 #, kde-format
 msgid "General"
 msgstr "Geral"
 
-#: dkim-verify/dkimconfiguretab.cpp:41
+#: dkim-verify/dkimconfiguretab.cpp:31
 #, kde-format
 msgid "Record Keys"
 msgstr "Chaves do Registo"
 
-#: dkim-verify/dkimconfiguretab.cpp:43
+#: dkim-verify/dkimconfiguretab.cpp:32
 #, kde-format
 msgid "Policy"
 msgstr "Política"
 
-#: dkim-verify/dkimconfiguretab.cpp:45
+#: dkim-verify/dkimconfiguretab.cpp:33
 #, kde-format
 msgid "Advanced"
 msgstr "Avançado"
 
-#: dkim-verify/dkimgeneralwidget.cpp:19
+#: dkim-verify/dkimgeneralwidget.cpp:18
 #, fuzzy, kde-format
 #| msgid "Enable DKIM Support"
 msgctxt "@option:check"
 msgid "Enable DKIM Support"
 msgstr "Activar o Suporte para o DKIM"
 
-#: dkim-verify/dkimgeneralwidget.cpp:20
+#: dkim-verify/dkimgeneralwidget.cpp:27
 #, fuzzy, kde-format
 #| msgid "Save DKIM Result"
 msgctxt "@option:check"
 msgid "Save DKIM Result"
 msgstr "Gravar o Resultado do DKIM"
 
-#: dkim-verify/dkimgeneralwidget.cpp:22
+#: dkim-verify/dkimgeneralwidget.cpp:35
+#, fuzzy, kde-format
+#| msgid "Save Record Key:"
+msgctxt "@label:textbox"
+msgid "Save Record Key:"
+msgstr "Gravar a Chave do Registo:"
+
+#: dkim-verify/dkimgeneralwidget.cpp:41
+#, kde-format
+msgid "Save"
+msgstr "Gravar"
+
+#: dkim-verify/dkimgeneralwidget.cpp:41
+#, kde-format
+msgid "Save and Compare"
+msgstr "Gravar e Comparar"
+
+#: dkim-verify/dkimgeneralwidget.cpp:45
 #, fuzzy, kde-format
 #| msgid "Replace DKIM result by Authentication-Result header value"
 msgctxt "@option:check"
@@ -155,31 +172,14 @@ msgstr ""
 "Substitui o resultado do DKIM pelo valor do cabeçalho de resultados da "
 "autenticação"
 
-#: dkim-verify/dkimgeneralwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "Save Record Key:"
-msgctxt "@label:textbox"
-msgid "Save Record Key:"
-msgstr "Gravar a Chave do Registo:"
-
-#: dkim-verify/dkimgeneralwidget.cpp:43
-#, kde-format
-msgid "Save"
-msgstr "Gravar"
-
-#: dkim-verify/dkimgeneralwidget.cpp:43
-#, kde-format
-msgid "Save and Compare"
-msgstr "Gravar e Comparar"
-
-#: dkim-verify/dkimpolicywidget.cpp:19
+#: dkim-verify/dkimpolicywidget.cpp:22
 #, fuzzy, kde-format
 #| msgid "Check if e-mail should be signed"
 msgctxt "@option:check"
 msgid "Check if e-mail should be signed"
 msgstr "Verificar se deve assinar o e-mail"
 
-#: dkim-verify/dkimpolicywidget.cpp:20
+#: dkim-verify/dkimpolicywidget.cpp:26
 #, fuzzy, kde-format
 #| msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgctxt "@option:check"
@@ -187,35 +187,35 @@ msgid "Use DMARC to heuristically determine if an e-mail should be signed"
 msgstr ""
 "Usar o DMARC para determinar heuristicamente se um e-mail deve ser assinado"
 
-#: dkim-verify/dkimpolicywidget.cpp:21
-#, fuzzy, kde-format
-#| msgid "Use default rule"
-msgctxt "@option:check"
-msgid "Use default rule"
-msgstr "Usar a regra predefinida"
-
-#: dkim-verify/dkimpolicywidget.cpp:22
-#, fuzzy, kde-format
-#| msgid "Autogenerate rule"
-msgctxt "@option:check"
-msgid "Autogenerate rule"
-msgstr "Gerar automaticamente a regra"
-
-#: dkim-verify/dkimpolicywidget.cpp:23
+#: dkim-verify/dkimpolicywidget.cpp:31
 #, fuzzy, kde-format
 #| msgid "Read Authentication-Results header"
 msgctxt "@option:check"
 msgid "Read Authentication-Results header"
 msgstr "Ler o cabeçalho de resultados da autenticação"
 
-#: dkim-verify/dkimpolicywidget.cpp:24
+#: dkim-verify/dkimpolicywidget.cpp:36
+#, fuzzy, kde-format
+#| msgid "Use default rule"
+msgctxt "@option:check"
+msgid "Use default rule"
+msgstr "Usar a regra predefinida"
+
+#: dkim-verify/dkimpolicywidget.cpp:41
+#, fuzzy, kde-format
+#| msgid "Autogenerate rule"
+msgctxt "@option:check"
+msgid "Autogenerate rule"
+msgstr "Gerar automaticamente a regra"
+
+#: dkim-verify/dkimpolicywidget.cpp:53
 #, fuzzy, kde-format
 #| msgid "Autogenerate when Sender in SDID"
 msgctxt "@option:check"
 msgid "Autogenerate when Sender in SDID"
 msgstr "Auto-Gerar Quando o Emissor Estiver na SDID"
 
-#: dkim-verify/dkimpolicywidget.cpp:25
+#: dkim-verify/dkimpolicywidget.cpp:60
 #, fuzzy, kde-format
 #| msgid "Show Rules"
 msgctxt "@action:button"
