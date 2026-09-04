@@ -686,12 +686,12 @@ msgstr "从 vCard 文件导入联系人。"
 #: vcards/vcardimportexportplugininterface.cpp:53
 #, kde-format
 msgid "Export contacts to a vCard file."
-msgstr ""
+msgstr "导出联系人为 vCard  文件。"
 
 #: vcards/vcardimportexportplugininterface.cpp:54
 #, kde-format
 msgid "Export vCard…"
-msgstr ""
+msgstr "导出 vCard 文件…"
 
 #: vcards/vcardimportexportplugininterface.cpp:86
 #, kde-format
