@@ -20,6 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KPIMTextEdit/RichTextComposerControler>
 #include <KSharedConfig>
 #include <QAction>
+#include <QFileInfo>
 #include <QMenu>
 
 #include <MessageComposer/TextPart>
