@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2026-05-30 17:24-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -110,64 +110,64 @@ msgstr ""
 msgid "Converter Error"
 msgstr ""
 
-#: markdown/plugin/markdowninterface.cpp:38
+#: markdown/plugin/markdowninterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr ""
 
-#: markdown/plugin/markdowninterface.cpp:55
+#: markdown/plugin/markdowninterface.cpp:56
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:57
+#: markdown/plugin/markdowninterface.cpp:58
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr ""
 
-#: markdown/plugin/markdowninterface.cpp:62
+#: markdown/plugin/markdowninterface.cpp:63
 #, kde-format
 msgid "Add Title"
 msgstr ""
 
-#: markdown/plugin/markdowninterface.cpp:65
+#: markdown/plugin/markdowninterface.cpp:66
 #, kde-format
 msgid "Level %1"
 msgstr "دەرىجە %1"
 
-#: markdown/plugin/markdowninterface.cpp:69
+#: markdown/plugin/markdowninterface.cpp:70
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "توغرا سىزغۇچ"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:72
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr ""
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:74
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr ""
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:76
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr ""
 
-#: markdown/plugin/markdowninterface.cpp:77
+#: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr ""
 
-#: markdown/plugin/markdowninterface.cpp:80
+#: markdown/plugin/markdowninterface.cpp:81
 #, kde-format
 msgid "Add Link"
 msgstr ""
 
-#: markdown/plugin/markdowninterface.cpp:81
+#: markdown/plugin/markdowninterface.cpp:82
 #, kde-format
 msgid "Add Image"
 msgstr "سۈرەت قوش"

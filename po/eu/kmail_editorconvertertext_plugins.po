@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2024-08-04 09:59+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -112,64 +112,64 @@ msgstr "«Markdown» errendatze aurreikuspegia"
 msgid "Converter Error"
 msgstr "Bihurtzailearen errorea"
 
-#: markdown/plugin/markdowninterface.cpp:38
+#: markdown/plugin/markdowninterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Sortu HTML «markdown» lengoaiatik."
 
-#: markdown/plugin/markdowninterface.cpp:55
+#: markdown/plugin/markdowninterface.cpp:56
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:57
+#: markdown/plugin/markdowninterface.cpp:58
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "«Markdown» ekintza"
 
-#: markdown/plugin/markdowninterface.cpp:62
+#: markdown/plugin/markdowninterface.cpp:63
 #, kde-format
 msgid "Add Title"
 msgstr "Gehitu titulua"
 
-#: markdown/plugin/markdowninterface.cpp:65
+#: markdown/plugin/markdowninterface.cpp:66
 #, kde-format
 msgid "Level %1"
 msgstr "%1. maila"
 
-#: markdown/plugin/markdowninterface.cpp:69
+#: markdown/plugin/markdowninterface.cpp:70
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "Zuzen horizontala"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:72
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "Aldatu hautatutako testua Lodira"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:74
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "Aldatu hautatutako testua Etzanera"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:76
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "Aldatu hautatutako testua Kodera"
 
-#: markdown/plugin/markdowninterface.cpp:77
+#: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "Aldatu hautatutako testua Aipu-blokera"
 
-#: markdown/plugin/markdowninterface.cpp:80
+#: markdown/plugin/markdowninterface.cpp:81
 #, kde-format
 msgid "Add Link"
 msgstr "Gehitu esteka"
 
-#: markdown/plugin/markdowninterface.cpp:81
+#: markdown/plugin/markdowninterface.cpp:82
 #, kde-format
 msgid "Add Image"
 msgstr "Gehitu irudia"

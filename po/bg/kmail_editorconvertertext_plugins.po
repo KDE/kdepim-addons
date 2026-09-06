@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2024-08-07 20:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -111,64 +111,64 @@ msgstr "Предварителен преглед на Markdown рендерир
 msgid "Converter Error"
 msgstr "Грешка при конвертиране"
 
-#: markdown/plugin/markdowninterface.cpp:38
+#: markdown/plugin/markdowninterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Генериране на HTML от Мarkdown."
 
-#: markdown/plugin/markdowninterface.cpp:55
+#: markdown/plugin/markdowninterface.cpp:56
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:57
+#: markdown/plugin/markdowninterface.cpp:58
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Markdown действие"
 
-#: markdown/plugin/markdowninterface.cpp:62
+#: markdown/plugin/markdowninterface.cpp:63
 #, kde-format
 msgid "Add Title"
 msgstr "Добавяне на заглавие"
 
-#: markdown/plugin/markdowninterface.cpp:65
+#: markdown/plugin/markdowninterface.cpp:66
 #, kde-format
 msgid "Level %1"
 msgstr "Ниво %1"
 
-#: markdown/plugin/markdowninterface.cpp:69
+#: markdown/plugin/markdowninterface.cpp:70
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "Хоризонтално правило"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:72
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "Промяна на избрания текст като получер"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:74
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "Промяна на избрания текст като курсивен"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:76
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "Промяна на избрания текст като код"
 
-#: markdown/plugin/markdowninterface.cpp:77
+#: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "Промяна на избрания текст като блок цитат"
 
-#: markdown/plugin/markdowninterface.cpp:80
+#: markdown/plugin/markdowninterface.cpp:81
 #, kde-format
 msgid "Add Link"
 msgstr "Добавяне на връзка"
 
-#: markdown/plugin/markdowninterface.cpp:81
+#: markdown/plugin/markdowninterface.cpp:82
 #, kde-format
 msgid "Add Image"
 msgstr "Добавяне на изображение"

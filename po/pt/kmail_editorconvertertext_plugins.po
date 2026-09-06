@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorconvertertext_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2019-12-17 11:55+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -110,66 +110,66 @@ msgstr "Antevisão da Formatação do Markdown"
 msgid "Converter Error"
 msgstr "Erro de Conversão"
 
-#: markdown/plugin/markdowninterface.cpp:38
+#: markdown/plugin/markdowninterface.cpp:39
 #, fuzzy, kde-format
 #| msgid "Generate HTML from markdown language."
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Gerar HTML a partir da linguagem Markdown."
 
-#: markdown/plugin/markdowninterface.cpp:55
+#: markdown/plugin/markdowninterface.cpp:56
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:57
+#: markdown/plugin/markdowninterface.cpp:58
 #, fuzzy, kde-format
 #| msgid "Markdown Action"
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Acção de Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:62
+#: markdown/plugin/markdowninterface.cpp:63
 #, kde-format
 msgid "Add Title"
 msgstr "Adicionar um Título"
 
-#: markdown/plugin/markdowninterface.cpp:65
+#: markdown/plugin/markdowninterface.cpp:66
 #, kde-format
 msgid "Level %1"
 msgstr "Nível %1"
 
-#: markdown/plugin/markdowninterface.cpp:69
+#: markdown/plugin/markdowninterface.cpp:70
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "Régua Horizontal"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:72
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "Mudar o Texto Seleccionado para Negrito"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:74
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "Mudar o Texto Seleccionado para Itálico"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:76
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "Mudar o Texto Seleccionado para Código"
 
-#: markdown/plugin/markdowninterface.cpp:77
+#: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "Mudar o Texto Seleccionado para Citação em Bloco"
 
-#: markdown/plugin/markdowninterface.cpp:80
+#: markdown/plugin/markdowninterface.cpp:81
 #, kde-format
 msgid "Add Link"
 msgstr "Adicionar uma Ligação"
 
-#: markdown/plugin/markdowninterface.cpp:81
+#: markdown/plugin/markdowninterface.cpp:82
 #, kde-format
 msgid "Add Image"
 msgstr "Adicionar uma Imagem"

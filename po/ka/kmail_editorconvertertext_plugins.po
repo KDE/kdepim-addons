@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2024-07-30 06:34+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -110,64 +110,64 @@ msgstr "მარკდაუნის რენდერის მინია�
 msgid "Converter Error"
 msgstr "გადამყვანის შეცდომა"
 
-#: markdown/plugin/markdowninterface.cpp:38
+#: markdown/plugin/markdowninterface.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "მარკდაუნის ენიდან HTML-ის გენერაცია."
 
-#: markdown/plugin/markdowninterface.cpp:55
+#: markdown/plugin/markdowninterface.cpp:56
 #, kde-format
 msgid "Markdown"
 msgstr "მარკდაუნი"
 
-#: markdown/plugin/markdowninterface.cpp:57
+#: markdown/plugin/markdowninterface.cpp:58
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "მარკდაუნის ქმედება"
 
-#: markdown/plugin/markdowninterface.cpp:62
+#: markdown/plugin/markdowninterface.cpp:63
 #, kde-format
 msgid "Add Title"
 msgstr "სათაურის დამატება"
 
-#: markdown/plugin/markdowninterface.cpp:65
+#: markdown/plugin/markdowninterface.cpp:66
 #, kde-format
 msgid "Level %1"
 msgstr "დონე %1"
 
-#: markdown/plugin/markdowninterface.cpp:69
+#: markdown/plugin/markdowninterface.cpp:70
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "ჰორიზონტალური წესი"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:72
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "მონიშნული ტექსტის გასქელება"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:74
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "მონიშნული ტექსტის კურსივი"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:76
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "მონიშნული ტექსტის კოდად შეცვლა"
 
-#: markdown/plugin/markdowninterface.cpp:77
+#: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "მონიშნული ტექსტის ბლოკურ ციტატად შეცვლა"
 
-#: markdown/plugin/markdowninterface.cpp:80
+#: markdown/plugin/markdowninterface.cpp:81
 #, kde-format
 msgid "Add Link"
 msgstr "ბმულის დამატება"
 
-#: markdown/plugin/markdowninterface.cpp:81
+#: markdown/plugin/markdowninterface.cpp:82
 #, kde-format
 msgid "Add Image"
 msgstr "გამოსახულების დამატება"
