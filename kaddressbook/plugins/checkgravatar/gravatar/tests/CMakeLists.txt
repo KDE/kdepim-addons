@@ -18,4 +18,5 @@ target_link_libraries(
     KF6::I18n
     KPim6::AkonadiCore
     KF6::Contacts
+    KF6::ConfigGui
 )

@@ -28,6 +28,7 @@ if(KDEPIM_RUN_AKONADI_TEST)
             KPim6::PimCommon
             KPim6::Gravatar
             KF6::I18n
+            KF6::ConfigGui
     )
     add_akonadi_isolated_test(SOURCE gravatarupdatewidgettest.cpp
         ADDITIONAL_SOURCES
