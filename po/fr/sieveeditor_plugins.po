@@ -87,7 +87,7 @@ msgstr "Rechercher…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Refresh IMAP Folder List"
-msgstr "Rafraîchir la liste du dossier « IMAP »"
+msgstr "Rafraichir la liste du dossier « IMAP »"
 
 #: imapfoldercompletion/selectimapfolderwidget.cpp:107
 #, kde-format
