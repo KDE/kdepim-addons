@@ -1,0 +1,65 @@
+{% extends "org.kde.messageviewer/calendar/itip.html" %}
+
+{% block incidenceDetail %}
+  <tr>
+    {% if incidence.recurs %}
+    <th valign="top">{% i18n "First event:" %}</th>
+    {% else %}
+    <th valign="top">{% i18n "When:" %}</th>
+    {% endif %}
+    <td>{{ incidence.dateTime|safe }}</td>
+  </tr>
+
+  {% if incidence.location %}
+  <tr>
+    <th valign="top">{% i18n "Where:" %}</th>
+    <td>{{ incidence.location|safe }}</td>
+  </tr>
+  {% endif %}
+
+  {% if incidence.recurs %}
+  <tr>
+    <th valign="top">{% i18n "Recurrence:" %}</th>
+    <td>{{ incidence.recurrence|safe }}</td>
+  </tr>
+  {% endif %}
+
+  {% if incidence.description %}
+  <tr>
+    <th valign="top">{% i18n "Description:" %}</th>
+    <td>{{ incidence.description|safe }}</td>
+  </tr>
+  {% endif %}
+
+{% endblock incidenceDetail %}
+
+
+
+{% block incidenceEnd %}
+  <!-- Events on the same day //-->
+  <span class="leftColumn">
+    {% if incidence.isMultiDay %}
+      {% i18n "Events on these days:" %}
+    {% else %}
+      {% i18n "Events on this day:" %}
+    {% endif %}
+
+    {% with incidence.checkCalendarButton as button %}
+    <a class="button" href="{{ button.uri }}">{% icon button.icon %}{{ button.label }}</a>
+    {% endwith %}
+
+    <ul>
+      {% for event in incidence.eventsOnSameDays %}
+      {% ifequal forloop.counter0 50 %}
+      <li>...</li>
+      {% else %}
+        <li>{{ event.summary }}: {{ event.dateTime }}
+            {% if event.calendar %}
+            <small>({{ event.calendar }})</small>
+            {% endif %}
+        </li>
+      {% endifequal %}
+      {% endfor %}
+    </ul>
+  </span>
+{% endblock incidenceEnd %}

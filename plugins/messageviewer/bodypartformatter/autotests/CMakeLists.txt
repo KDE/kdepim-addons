@@ -58,3 +58,15 @@ macro(add_diff_bodyformatter_class_unittest _source _additional)
 endmacro()
 
 add_diff_bodyformatter_class_unittest(diffhighlightertest.cpp "../highlighter/highlighter.cpp")
+
+ecm_add_test(itipformattertest.cpp ../calendar/templates.qrc ../calendar/itipformatter.cpp TEST_NAME itipformattertest
+    LINK_LIBRARIES
+        Qt6::Test
+        KPim6::MessageViewer
+        KPim6::GrantleeTheme
+        KPim6::CalendarUtils # remove after depending on KF 6.30
+        KF6::TextTemplate
+        KF6::CalendarCore
+        KF6::Codecs
+)
+target_compile_definitions(itipformattertest PRIVATE TRANSLATION_DOMAIN="messageviewer_text_calendar_plugin")

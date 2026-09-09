@@ -1,0 +1,43 @@
+{% extends "org.kde.messageviewer/calendar/itip.html" %}
+
+{% block incidenceDetail %}
+  <tr>
+    <th>{% i18n "Person:" %}</th>
+    <td>{{ incidence.organizer }}</td>
+  </tr>
+
+  <tr>
+    <th>{% i18n "Start date:" %}</th>
+    <td>{{ incidence.dtStart|date:"DATETIME_FORMAT" }}</td>
+  </tr>
+
+  <tr>
+    <th>{% i18n "End date:" %}</th>
+    <td>{{ incidence.dtEnd|date:"DATETIME_FORMAT" }}</td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><hr></td>
+  </tr>
+  <tr>
+    <td colspan="2">{% i18n "Busy periods given in this free/busy object:" %}</td>
+  </tr>
+
+  {% for period in incidence.periods %}
+  <tr>
+    <td></td>
+    <td>
+    {% if period.hasDuration %}
+      {% i18nc "<startDate> for <duration>" "%1 for %2" period.start|date:"DATETIME_FORMAT" period.duration %}
+    {% else %}
+      {% if period.isMultiDay %}
+        {% i18nc "<startDate> - <endDate>" "%1 - %2" period.start|date:"DATETIME_FORMAT" period.end|date:"DATETIME_FORMAT" %}
+      {% else %}
+        {% i18nc "<date>, <startTime> - <endTime>" "%1, %2 - %3" period.start|date period.start|time period.end|time %}
+      {% endif %}
+    {% endif %}
+    </td>
+  <tr>
+  {% endfor %}
+
+{% endblock incidenceDetail %}

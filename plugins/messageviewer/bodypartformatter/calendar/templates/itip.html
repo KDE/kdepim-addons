@@ -1,0 +1,143 @@
+{% extends "org.kde.messageviewer/calendar/template_base.html" %}
+
+{% block style %}
+#invitation {
+    font-size: %1px !important;
+}
+#invitation h2 {
+    margin: 5px 0 0 0 !important;
+}
+#invitation table {
+    line-height: 140% !important;
+    border-spacing: 0 !important;
+}
+#invitation th {
+    padding: 5px 0 5px 0 !important;
+}
+#invitation td {
+    padding: 5px 10px 5px 5px !important;
+}
+#invitation small {
+    color: #555 !important;
+}
+#invitation hr {
+    border: 1px solid #678db2 !important;
+}
+#invitation .button {
+    display: inline-block !important;
+    font-weight: bold !important;
+    padding: 4px 8px !important;
+    margin-bottom: 4px !important;
+    border: 1px solid {{ incidence.style.buttonBorder }} !important;
+    border-radius: 3px !important;
+    background: {{ incidence.style.buttonBg }} !important;
+    vertical-align: middle !important;
+}
+#invitation a.button {
+    color: {{ incidence.style.buttonFg }} !important;
+}
+#invitation .button img{
+    vertical-align: middle !important;
+    padding-right: 3px !important;
+}
+#invitation th {
+    font-weight: bold !important;
+}
+#invitation .summary img {
+    padding-right: 10px !important;
+    width: 48px !important;
+    vertical-align: middle !important;
+}
+{% endblock style %}
+
+{% block body %}
+
+<div id="invitation">
+
+<p>{{ incidence.head|safe }}</p>
+
+<p><i>{{ incidence.eventInfo|safe }}</i></p>
+
+{% if incidence.myStatus %}
+<p><i>{{ incidence.myStatus|safe }}</i></p>
+{% endif %}
+
+<!-- Response buttons/groupware links -->
+{% for button in incidence.buttons %}
+    <a class="button"
+    {% if button.uri %}
+       href="{{ button.uri }}"
+
+    {% endif %}
+    >{% if button.icon %}{% icon button.icon %}{% endif %}{{ button.label|safe }}</a>
+{% endfor %}
+
+<!-- Comments -->
+{% if incidence.comments %}
+<table border="0" cellspacing="0" cellpadding="4">
+   <tr>
+     {% ifequal incidence.comments|length 1 %}
+     <th valign="top">{% i18n "Comment:" %}</th>
+     <td>{{ incidence.comments|first }}</td>
+     {% else %}
+     <th valign="top">{% i18n "Comments:" %}</th>
+     <td><ul>
+     {% for comment in incidence.comments %}
+        <li>{{ comment }}</li>
+     {% endfor %}
+     </ul></td>
+     {% endifequal %}
+  </tr>
+</table>
+{% endif %}
+
+<hr/>
+
+<div dir="{{ incidence.ltr }}">
+
+<h2 class="summary">
+{% if incidence.iconName %}{% icon incidence.iconName desktop %} {% endif %}{{ incidence.summary|safe }}</h2>
+
+<table border="0">
+
+  {% block incidenceDetail %}
+  {% endblock %}
+
+  <!-- RSVP/attadees -->
+  {% if incidence.attendees %}
+  <tr>
+    <th valign="top">{{ incidence.attendeesTitle }}</th>
+    <td>
+    {% for attendee in incidence.attendees %}
+        {% include "org.kde.messageviewer/calendar/attendee_row.html" %}
+        {% if not forloop.last %}<br/>{% endif %}
+    {% endfor %}
+    </td>
+  </tr>
+  {% endif %}
+
+  <!-- Attachments //-->
+  {% if incidence.attachments %}
+  <tr>
+    <th valign="top">{% i18n "Attachments:" %}</th>
+    <td>
+    {% for attachment in incidence.attachments %}
+        {% icon attachment.icon Small %}
+        <a href="{{ attachment.uri }}"><font size="-1">{{ attachment.name }}</font></a>
+        {% if not forloop.last %}<br/>{% endif %}
+    {% endfor %}
+    </td>
+  </tr>
+  {% endif %}
+</table>
+
+<hr/>
+
+{% block incidenceEnd %}
+{% endblock %}
+
+</div>
+
+</div>
+
+{% endblock body %}

@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/org.kde.messageviewer/calendar/">
+        <file alias="template_base.html">templates/template_base.html</file>
+        <file alias="attendee_row.html">templates/attendee_row.html</file>
+        <file alias="itip_freebusy.html">templates/itip_freebusy.html</file>
+        <file alias="itip_journal.html">templates/itip_journal.html</file>
+        <file alias="itip_todo.html">templates/itip_todo.html</file>
+        <file alias="itip.html">templates/itip.html</file>
+        <file alias="itip_event.html">templates/itip_event.html</file>
+    </qresource>
+</RCC>

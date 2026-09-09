@@ -1,0 +1,58 @@
+{% extends "org.kde.messageviewer/calendar/itip.html" %}
+
+{% block incidenceDetail %}
+  {% if incidence.location %}
+  <tr>
+    <th valign="top">{% i18n "Where:" %}</th>
+    <td>{{ incidence.location|safe }}</td>
+  </tr>
+  {% endif %}
+
+  <tr>
+    {% if incidence.hasStartDate %}
+    <th valign="top">{% i18n "When:" %}</th>
+      {% if incidence.isAllDay %}
+        {% if incidence.isMultiDay %}
+        <td>{% i18nc "<beginDate> - <endDate>" "%1 - %2" incidence.dtStartStr|safe incidence.dtDueStr|safe %}</td>
+        {% else %}
+        <td>{{ incidence.dtStartStr|safe }}</td>
+        {% endif %}
+      {% else %}
+        {% if incidence.isMultiDay %}
+        <td>{% i18nc "<beginDateTime> - <endDateTime>" "%1 - %2" incidence.dtStartStr|safe incidence.dtDueStr|safe %}</td>
+        {% else %}
+        <td>{% i18nc "<beginDateTime> - <endTime>" "%1 - %2" incidence.dtStartStr|safe incidence.dtDueStr|safe %}</td>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  </tr>
+
+  {% if incidence.percentComplete %}
+  <tr>
+    <th valign="top">{% i18n "Percent Done:" %}</th>
+    <td>{{ incidence.percentComplete|safe }}</td>
+  </tr>
+  {% endif %}
+
+  {% if not incidence.hasStartDate %}
+  <tr>
+    <th valign="top">{% i18n "Due:" %}</th>
+    <td>{{ incidence.dtDueStr|safe }}</td>
+  </tr>
+  {% endif %}
+
+  {% if incidence.recurs %}
+  <tr>
+    <th valign="top">{% i18n "Recurrence:" %}</th>
+    <td>{{ incidence.recurrence|safe }}</td>
+  </tr>
+  {% endif %}
+
+  {% if incidence.description %}
+  <tr>
+    <th valign="top">{% i18n "Description:" %}</th>
+    <td>{{ incidence.description|safe }}</td>
+  </tr>
+  {% endif %}
+
+{% endblock incidenceDetail %}

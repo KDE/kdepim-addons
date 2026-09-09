@@ -12,6 +12,7 @@
 #include "attendeeselector.h"
 #include "calendarinterface.h"
 #include "delegateselector.h"
+#include "itipformatter.h"
 #include "memorycalendarmemento.h"
 #include "reactiontoinvitationdialog.h"
 #include "syncitiphandler.h"
@@ -31,8 +32,6 @@ using namespace MessageViewer;
 #include <KCalendarCore/Exceptions>
 #include <KCalendarCore/ICalFormat>
 using namespace KCalendarCore;
-
-#include <KCalUtils/IncidenceFormatter>
 
 #include <KMime/Message>
 
@@ -135,7 +134,7 @@ static bool occurredAlready(const Incidence::Ptr &incidence)
     return false;
 }
 
-class KMInvitationFormatterHelper : public KCalUtils::InvitationFormatterHelper
+class KMInvitationFormatterHelper : public InvitationFormatterHelper
 {
 public:
     KMInvitationFormatterHelper(const MimeTreeParser::MessagePartPtr &bodyPart, const KCalendarCore::MemoryCalendar::Ptr &calendar)
@@ -239,7 +238,7 @@ public:
                 }
 
                 const auto sender = getSender(msgPart.get());
-                const QString html = KCalUtils::IncidenceFormatter::formatICalInvitation(msg, &helper, sender);
+                const QString html = ItipFormatter::formatICalInvitation(msg, &helper, sender);
 
                 if (html.isEmpty()) {
                     return false;

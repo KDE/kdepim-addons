@@ -22,6 +22,8 @@ target_sources(
         memorycalendarmemento.h
         syncitiphandler.h
         reactiontoinvitationdialog.h
+        itipformatter.cpp
+        templates.qrc
         ${messageviewer_bodypartformatter_text_calendar_PART_SRCS}
 )
 
@@ -47,7 +49,7 @@ target_link_libraries(
     KF6::Codecs
     Qt::Core
     KF6::CalendarCore
-    KPim6::CalendarUtils
+    KPim6::CalendarUtils # remove after depending on KF 6.30
     KF6::Mime
     KPim6::IdentityManagementCore
     KPim6::AkonadiMime
@@ -56,11 +58,13 @@ target_link_libraries(
     KPim6::CalendarSupport
     KPim6::PimCommonAkonadi
     KPim6::MessageViewer
+    KPim6::GrantleeTheme
     KPim6::IncidenceEditor
     KPim6::PimTextEdit
     KF6::KIOWidgets
     Qt::DBus
     KF6::TextAddonsWidgets
+    KF6::Codecs
 )
 
 install(

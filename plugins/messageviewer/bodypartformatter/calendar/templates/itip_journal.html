@@ -1,0 +1,16 @@
+{% extends "org.kde.messageviewer/calendar/itip.html" %}
+
+{% block incidenceDetail %}
+  <tr>
+    <th valign="top">{% i18n "Date:" %}</th>
+    <td>{{ incidence.dateStr }}</td>
+  </tr>
+
+  {% if incidence.description %}
+  <tr>
+    <th valign="top">{% i18n "Description:" %}</th>
+    <td>{{ incidence.description|safe }}</td>
+  </tr>
+  {% endif %}
+
+{% endblock incidenceDetail %}
