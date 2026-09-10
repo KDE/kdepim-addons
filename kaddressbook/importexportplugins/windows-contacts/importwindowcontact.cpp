@@ -219,7 +219,7 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                     KContacts::Gender gender;
                     const QString genderStr = e.text();
                     if (genderStr == "Male"_L1) {
-                        gender.setGender(u"H"_s);
+                        gender.setGender(u"M"_s);
                     } else if (genderStr == "Female"_L1) {
                         gender.setGender(u"F"_s);
                     } else {
