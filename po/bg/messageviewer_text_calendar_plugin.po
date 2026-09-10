@@ -537,9 +537,3 @@ msgstr "Премахване на поканата от моя календар"
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "Отваряне на прикачен файл „%1“"
-
-#~ msgid "Do you really want to cancel this task?"
-#~ msgstr "Наистина ли искате да отмените тази задача?"
-
-#~ msgid "Do you really want to cancel this invitation?"
-#~ msgstr "Наистина ли искате да отмените тази покана?"
