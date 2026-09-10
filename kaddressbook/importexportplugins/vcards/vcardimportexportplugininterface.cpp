@@ -27,9 +27,9 @@
 #include <gpgme++/key.h>
 #include <gpgme.h>
 #include <qgpgme/dataprovider.h>
-using namespace Qt::Literals::StringLiterals;
 #endif // QGPGME_FOUND
 
+using namespace Qt::Literals::StringLiterals;
 using namespace KAddressBookImportExport;
 
 VCardImportExportPluginInterface::VCardImportExportPluginInterface(QObject *parent)
