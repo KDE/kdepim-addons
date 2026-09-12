@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-12 00:45+0000\n"
 "PO-Revision-Date: 2019-12-18 20:02+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -62,6 +62,654 @@ msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Esindaja:"
 
+#: itipformatter.cpp:138
+#, kde-format
+msgid "Organizer Unknown"
+msgstr ""
+
+#: itipformatter.cpp:160 itipformatter.cpp:838
+#, kde-format
+msgid "Sender"
+msgstr ""
+
+#: itipformatter.cpp:218
+#, kde-format
+msgid "Summary unspecified"
+msgstr "Kokkuvõte määramata"
+
+#: itipformatter.cpp:230
+#, kde-format
+msgid "Location unspecified"
+msgstr "Asukoht määramata"
+
+#: itipformatter.cpp:354
+#, kde-format
+msgid "Your response is requested."
+msgstr ""
+
+#: itipformatter.cpp:356
+#, kde-format
+msgid "Your response as <b>%1</b> is requested."
+msgstr ""
+
+#: itipformatter.cpp:360
+#, kde-format
+msgid "No response is necessary."
+msgstr ""
+
+#: itipformatter.cpp:362
+#, kde-format
+msgid "No response as <b>%1</b> is necessary."
+msgstr ""
+
+#: itipformatter.cpp:373 itipformatter.cpp:375
+#, kde-format
+msgid "(<b>Note</b>: the Organizer preset your response to <b>%1</b>)"
+msgstr ""
+
+#: itipformatter.cpp:517 itipformatter.cpp:578
+#, fuzzy, kde-format
+#| msgid "Check my calendar..."
+msgid "Check my calendar"
+msgstr "Kontrolli kalendrit..."
+
+#: itipformatter.cpp:559 itipformatter.cpp:636
+#, kde-format
+msgid "Please respond again to the original proposal."
+msgstr ""
+
+#: itipformatter.cpp:613 itipformatter.cpp:647
+#, fuzzy, kde-format
+#| msgid ""
+#| "%1\n"
+#| "%2"
+msgid "%1%"
+msgstr ""
+"%1\n"
+"%2"
+
+#: itipformatter.cpp:737
+#, fuzzy, kde-format
+#| msgid "<h2>This task has been published</h2>"
+msgid "This invitation has been published."
+msgstr "<h2>See ülesanne on avaldatud</h2>"
+
+#: itipformatter.cpp:742
+#, kde-format
+msgid "This invitation has been updated by the organizer %1."
+msgstr ""
+
+#: itipformatter.cpp:744
+#, kde-format
+msgid "This invitation has been updated by %1 as a representative of %2."
+msgstr ""
+
+#: itipformatter.cpp:748
+#, fuzzy, kde-format
+#| msgid "Delegate invitation"
+msgid "I created this invitation."
+msgstr "Delegeeri kutse"
+
+#: itipformatter.cpp:752
+#, kde-format
+msgid "You received an invitation from %1."
+msgstr ""
+
+#: itipformatter.cpp:754
+#, kde-format
+msgid "You received an invitation from %1 as a representative of %2."
+msgstr ""
+
+#: itipformatter.cpp:758
+#, fuzzy, kde-format
+#| msgid "Invitation answer attached."
+msgid "This invitation was refreshed."
+msgstr "Kutse vastus manuses."
+
+#: itipformatter.cpp:761
+#, fuzzy, kde-format
+#| msgid "<h2>This meeting has been canceled</h2>"
+msgid "This invitation has been canceled."
+msgstr "<h2>See kohtumine jäeti ära</h2>"
+
+#: itipformatter.cpp:763
+#, kde-format
+msgid "The organizer has revoked the invitation."
+msgstr ""
+
+#: itipformatter.cpp:766
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Reaction to Invitation"
+msgid "Addition to the invitation."
+msgstr "Vastus kutsele"
+
+#: itipformatter.cpp:788
+#, kde-format
+msgid "%1 indicates this invitation still needs some action."
+msgstr ""
+
+#: itipformatter.cpp:792
+#, kde-format
+msgid "This invitation has been updated by attendee %1."
+msgstr ""
+
+#: itipformatter.cpp:794
+#, kde-format
+msgid "This invitation has been updated by an attendee."
+msgstr ""
+
+#: itipformatter.cpp:798
+#, fuzzy, kde-format
+#| msgid "Accept invitation"
+msgid "%1 accepts this invitation."
+msgstr "Võta kutse vastu"
+
+#: itipformatter.cpp:800
+#, kde-format
+msgid "%1 accepts this invitation on behalf of %2."
+msgstr ""
+
+#: itipformatter.cpp:805
+#, fuzzy, kde-format
+#| msgid "<h2>Sender tentatively accepts this meeting invitation</h2>"
+msgid "%1 tentatively accepts this invitation."
+msgstr "<h2>Saatja võtab tingimustega vastu kutse sellele kohtumisele</h2>"
+
+#: itipformatter.cpp:807
+#, fuzzy, kde-format
+#| msgid "<h2>Sender tentatively accepts this meeting invitation</h2>"
+msgid "%1 tentatively accepts this invitation on behalf of %2."
+msgstr "<h2>Saatja võtab tingimustega vastu kutse sellele kohtumisele</h2>"
+
+#: itipformatter.cpp:811
+#, fuzzy, kde-format
+#| msgid "Decline invitation"
+msgid "%1 declines this invitation."
+msgstr "Lükka kutse tagasi"
+
+#: itipformatter.cpp:813
+#, kde-format
+msgid "%1 declines this invitation on behalf of %2."
+msgstr ""
+
+#: itipformatter.cpp:823
+#, fuzzy, kde-format
+#| msgid "Do you still want to delegate this invitation?"
+msgid "%1 has delegated this invitation to %2."
+msgstr "Kas ikkagi delegeerida see kutse?"
+
+#: itipformatter.cpp:825
+#, fuzzy, kde-format
+#| msgid "Delegate invitation"
+msgid "%1 has delegated this invitation."
+msgstr "Delegeeri kutse"
+
+#: itipformatter.cpp:829
+#, kde-format
+msgid "This invitation is now completed."
+msgstr ""
+
+#: itipformatter.cpp:831
+#, fuzzy, kde-format
+#| msgid "Do you still want to accept the invitation?"
+msgid "%1 is still processing the invitation."
+msgstr "Kas ikka võtta kutse vastu?"
+
+#: itipformatter.cpp:833
+#, fuzzy, kde-format
+#| msgid "<h2>Unknown response to this meeting invitation</h2>"
+msgid "Unknown response to this invitation."
+msgstr "<h2>Tundmatu vastus selle kohtumise kutsele</h2>"
+
+#: itipformatter.cpp:838 itipformatter.cpp:975
+#, fuzzy, kde-format
+#| msgid "Accept counter proposal"
+msgid "%1 makes this counter proposal."
+msgstr "Võta vastuettepanek vastu"
+
+#: itipformatter.cpp:843
+#, fuzzy, kde-format
+#| msgid "Decline counter proposal"
+msgid "%1 declines your counter proposal."
+msgstr "Lükka vastuettepanek tagasi"
+
+#: itipformatter.cpp:845
+#, fuzzy, kde-format
+#| msgid "Decline counter proposal"
+msgid "%1 declines your counter proposal on behalf of %2."
+msgstr "Lükka vastuettepanek tagasi"
+
+#: itipformatter.cpp:850
+#, fuzzy, kde-format
+#| msgid "Error: iMIP message with unknown method: '%1'"
+msgid "Error: Event iTIP message with unknown method."
+msgstr "Viga: iMIP kiri tundmatu meetodiga: '%1'"
+
+#: itipformatter.cpp:865
+#, fuzzy, kde-format
+#| msgid "<h2>This task has been published</h2>"
+msgid "This to-do has been published."
+msgstr "<h2>See ülesanne on avaldatud</h2>"
+
+#: itipformatter.cpp:870
+#, kde-format
+msgid "This to-do has been updated by the organizer %1."
+msgstr ""
+
+#: itipformatter.cpp:872
+#, kde-format
+msgid "This to-do has been updated by %1 as a representative of %2."
+msgstr ""
+
+#: itipformatter.cpp:876
+#, kde-format
+msgid "I created this to-do."
+msgstr ""
+
+#: itipformatter.cpp:880
+#, fuzzy, kde-format
+#| msgid "<h2>You have been assigned this task</h2>"
+msgid "You have been assigned this to-do by %1."
+msgstr "<h2>Sulle on antud see ülesanne</h2>"
+
+#: itipformatter.cpp:882
+#, kde-format
+msgid "You have been assigned this to-do by %1 as a representative of %2."
+msgstr ""
+
+#: itipformatter.cpp:887
+#, kde-format
+msgid "This to-do was refreshed."
+msgstr ""
+
+#: itipformatter.cpp:890
+#, fuzzy, kde-format
+#| msgid "<h2>This task was canceled</h2>"
+msgid "This to-do was canceled."
+msgstr "<h2>See ülesanne jäeti ära</h2>"
+
+#: itipformatter.cpp:892
+#, kde-format
+msgid "The organizer has revoked this to-do."
+msgstr ""
+
+#: itipformatter.cpp:895
+#, kde-format
+msgid "Addition to the to-do."
+msgstr ""
+
+#: itipformatter.cpp:917
+#, kde-format
+msgid "%1 indicates this to-do assignment still needs some action."
+msgstr ""
+
+#: itipformatter.cpp:922
+#, kde-format
+msgid "This to-do has been completed by assignee %1."
+msgstr ""
+
+#: itipformatter.cpp:924
+#, kde-format
+msgid "This to-do has been updated by assignee %1."
+msgstr ""
+
+#: itipformatter.cpp:928
+#, kde-format
+msgid "This to-do has been completed by an assignee."
+msgstr ""
+
+#: itipformatter.cpp:930
+#, kde-format
+msgid "This to-do has been updated by an assignee."
+msgstr ""
+
+#: itipformatter.cpp:935
+#, kde-format
+msgid "%1 accepts this to-do."
+msgstr ""
+
+#: itipformatter.cpp:937
+#, kde-format
+msgid "%1 accepts this to-do on behalf of %2."
+msgstr ""
+
+#: itipformatter.cpp:942
+#, fuzzy, kde-format
+#| msgid "<h2>Sender tentatively accepts this task</h2>"
+msgid "%1 tentatively accepts this to-do."
+msgstr "<h2>Saatja võtab tingimustega vastu selle ülesande</h2>"
+
+#: itipformatter.cpp:944
+#, fuzzy, kde-format
+#| msgid "<h2>Sender tentatively accepts this task</h2>"
+msgid "%1 tentatively accepts this to-do on behalf of %2."
+msgstr "<h2>Saatja võtab tingimustega vastu selle ülesande</h2>"
+
+#: itipformatter.cpp:948
+#, kde-format
+msgid "%1 declines this to-do."
+msgstr ""
+
+#: itipformatter.cpp:950
+#, kde-format
+msgid "%1 declines this to-do on behalf of %2."
+msgstr ""
+
+#: itipformatter.cpp:960
+#, kde-format
+msgid "%1 has delegated this to-do to %2."
+msgstr ""
+
+#: itipformatter.cpp:962
+#, fuzzy, kde-format
+#| msgid "\"%1\" has already started."
+msgid "%1 has delegated this to-do."
+msgstr "\"%1\" on juba alanud."
+
+#: itipformatter.cpp:966
+#, kde-format
+msgid "The request for this to-do is now completed."
+msgstr ""
+
+#: itipformatter.cpp:968
+#, kde-format
+msgid "%1 is still processing the to-do."
+msgstr ""
+
+#: itipformatter.cpp:970
+#, fuzzy, kde-format
+#| msgid "<h2>Unknown response to this task</h2>"
+msgid "Unknown response to this to-do."
+msgstr "<h2>Tundmatu vastus sellele ülesandele</h2>"
+
+#: itipformatter.cpp:980
+#, fuzzy, kde-format
+#| msgid "Decline counter proposal"
+msgid "%1 declines the counter proposal."
+msgstr "Lükka vastuettepanek tagasi"
+
+#: itipformatter.cpp:982
+#, fuzzy, kde-format
+#| msgid "Decline counter proposal"
+msgid "%1 declines the counter proposal on behalf of %2."
+msgstr "Lükka vastuettepanek tagasi"
+
+#: itipformatter.cpp:987
+#, fuzzy, kde-format
+#| msgid "Error: iMIP message with unknown method: '%1'"
+msgid "Error: To-do iTIP message with unknown method."
+msgstr "Viga: iMIP kiri tundmatu meetodiga: '%1'"
+
+#: itipformatter.cpp:1001
+#, fuzzy, kde-format
+#| msgid "<h2>This task has been published</h2>"
+msgid "This journal has been published."
+msgstr "<h2>See ülesanne on avaldatud</h2>"
+
+#: itipformatter.cpp:1003
+#, fuzzy, kde-format
+#| msgid "<h2>You have been assigned this task</h2>"
+msgid "You have been assigned this journal."
+msgstr "<h2>Sulle on antud see ülesanne</h2>"
+
+#: itipformatter.cpp:1005
+#, kde-format
+msgid "This journal was refreshed."
+msgstr ""
+
+#: itipformatter.cpp:1007
+#, fuzzy, kde-format
+#| msgid "<h2>This task was canceled</h2>"
+msgid "This journal was canceled."
+msgstr "<h2>See ülesanne jäeti ära</h2>"
+
+#: itipformatter.cpp:1009
+#, kde-format
+msgid "Addition to the journal."
+msgstr ""
+
+#: itipformatter.cpp:1023
+#, kde-format
+msgid "Sender indicates this journal assignment still needs some action."
+msgstr ""
+
+#: itipformatter.cpp:1025
+#, fuzzy, kde-format
+#| msgid "<h2>Sender accepts this task</h2>"
+msgid "Sender accepts this journal."
+msgstr "<h2>Saatja võtab selle ülesande vastu</h2>"
+
+#: itipformatter.cpp:1027
+#, fuzzy, kde-format
+#| msgid "<h2>Sender tentatively accepts this task</h2>"
+msgid "Sender tentatively accepts this journal."
+msgstr "<h2>Saatja võtab tingimustega vastu selle ülesande</h2>"
+
+#: itipformatter.cpp:1029
+#, fuzzy, kde-format
+#| msgid "<h2>Sender declines this task</h2>"
+msgid "Sender declines this journal."
+msgstr "<h2>Saatja lükkab tagasi selle ülesande</h2>"
+
+#: itipformatter.cpp:1031
+#, kde-format
+msgid "Sender has delegated this request for the journal."
+msgstr ""
+
+#: itipformatter.cpp:1033
+#, kde-format
+msgid "The request for this journal is now completed."
+msgstr ""
+
+#: itipformatter.cpp:1035
+#, fuzzy, kde-format
+#| msgid "<h2>Sender declines this meeting invitation</h2>"
+msgid "Sender is still processing the invitation."
+msgstr "<h2>Saatja lükkab tagasi kutse sellele kohtumisele</h2>"
+
+#: itipformatter.cpp:1037
+#, fuzzy, kde-format
+#| msgid "<h2>Unknown response to this task</h2>"
+msgid "Unknown response to this journal."
+msgstr "<h2>Tundmatu vastus sellele ülesandele</h2>"
+
+#: itipformatter.cpp:1042 itipformatter.cpp:1072
+#, fuzzy, kde-format
+#| msgid "Decline counter proposal"
+msgid "Sender makes this counter proposal."
+msgstr "Lükka vastuettepanek tagasi"
+
+#: itipformatter.cpp:1044 itipformatter.cpp:1074
+#, fuzzy, kde-format
+#| msgid "Decline counter proposal"
+msgid "Sender declines the counter proposal."
+msgstr "Lükka vastuettepanek tagasi"
+
+#: itipformatter.cpp:1046
+#, fuzzy, kde-format
+#| msgid "Error: iMIP message with unknown method: '%1'"
+msgid "Error: Journal iTIP message with unknown method."
+msgstr "Viga: iMIP kiri tundmatu meetodiga: '%1'"
+
+#: itipformatter.cpp:1060
+#, fuzzy, kde-format
+#| msgid "<h2>This event has been published</h2>"
+msgid "This free/busy list has been published."
+msgstr "<h2>See sündmus on avaldatud</h2>"
+
+#: itipformatter.cpp:1062
+#, kde-format
+msgid "The free/busy list has been requested."
+msgstr ""
+
+#: itipformatter.cpp:1064
+#, kde-format
+msgid "This free/busy list was refreshed."
+msgstr ""
+
+#: itipformatter.cpp:1066
+#, kde-format
+msgid "This free/busy list was canceled."
+msgstr ""
+
+#: itipformatter.cpp:1068
+#, kde-format
+msgid "Addition to the free/busy list."
+msgstr ""
+
+#: itipformatter.cpp:1070
+#, kde-format
+msgid "Reply to the free/busy list."
+msgstr ""
+
+#: itipformatter.cpp:1076
+#, fuzzy, kde-format
+#| msgid "Error: iMIP message with unknown method: '%1'"
+msgid "Error: Free/Busy iTIP message with unknown method."
+msgstr "Viga: iMIP kiri tundmatu meetodiga: '%1'"
+
+#: itipformatter.cpp:1140 itipformatter.cpp:1142
+#, kde-format
+msgid "%1 (<i>unrecorded</i>)"
+msgstr ""
+
+#: itipformatter.cpp:1359
+#, kde-format
+msgid "Record"
+msgstr ""
+
+#: itipformatter.cpp:1362
+#, kde-format
+msgid "Move to Trash"
+msgstr ""
+
+#: itipformatter.cpp:1366
+#, fuzzy, kde-format
+#| msgid "[Accept]"
+msgctxt "accept invitation"
+msgid "Accept"
+msgstr "[Võta vastu]"
+
+#: itipformatter.cpp:1372
+#, fuzzy, kde-format
+#| msgctxt "Unsure if it is possible to attend."
+#| msgid "Tentative: %1"
+msgctxt "Accept invitation conditionally"
+msgid "Tentative"
+msgstr "Kõhklemine: %1"
+
+#: itipformatter.cpp:1379
+#, fuzzy, kde-format
+#| msgid "[Decline]"
+msgctxt "decline invitation"
+msgid "Decline"
+msgstr "[Lükka tagasi]"
+
+#: itipformatter.cpp:1383
+#, fuzzy, kde-format
+#| msgid "Accept counter proposal"
+msgctxt "invitation counter proposal"
+msgid "Counter proposal ..."
+msgstr "Võta vastuettepanek vastu"
+
+#: itipformatter.cpp:1388
+#, fuzzy, kde-format
+#| msgid "Delegate:"
+msgctxt "delegate invitation to another"
+msgid "Delegate ..."
+msgstr "Esindaja:"
+
+#: itipformatter.cpp:1398
+#, fuzzy, kde-format
+#| msgid "[Accept]"
+msgid "Accept"
+msgstr "[Võta vastu]"
+
+#: itipformatter.cpp:1401
+#, fuzzy, kde-format
+#| msgid "[Decline]"
+msgid "Decline"
+msgstr "[Lükka tagasi]"
+
+#: itipformatter.cpp:1411
+#, fuzzy, kde-format
+#| msgid "Record invitation into my calendar"
+msgid "Record invitation in my to-do list"
+msgstr "Salvesta kutse minu kalendrisse"
+
+#: itipformatter.cpp:1412
+#, fuzzy, kde-format
+#| msgid "Record invitation into my calendar"
+msgid "Record invitation in my calendar"
+msgstr "Salvesta kutse minu kalendrisse"
+
+#: itipformatter.cpp:1425
+#, fuzzy, kde-format
+#| msgid "Record response into my calendar"
+msgid "Record response in my to-do list"
+msgstr "Sisesta vastus oma kalendrisse"
+
+#: itipformatter.cpp:1425
+#, fuzzy, kde-format
+#| msgid "Record response into my calendar"
+msgid "Record response in my calendar"
+msgstr "Sisesta vastus oma kalendrisse"
+
+#: itipformatter.cpp:1439
+#, fuzzy, kde-format
+#| msgid "Remove invitation from my calendar"
+msgid "Remove invitation from my to-do list"
+msgstr "Eemalda kutse oma kalendrist"
+
+#: itipformatter.cpp:1440 text_calendar.cpp:1420
+#, kde-format
+msgid "Remove invitation from my calendar"
+msgstr "Eemalda kutse oma kalendrist"
+
+#: itipformatter.cpp:1577 itipformatter.cpp:1581
+#, kde-format
+msgid "Your <b>%1</b> response has been recorded."
+msgstr ""
+
+#: itipformatter.cpp:1579 itipformatter.cpp:1583
+#, fuzzy, kde-format
+#| msgid "Do you still want to forward this invitation?"
+msgid "Your status for this invitation is <b>%1</b>."
+msgstr "Kas ikkagi edastada see kutse?"
+
+#: itipformatter.cpp:1588
+#, fuzzy, kde-format
+#| msgid "<h2>This task was canceled</h2>"
+msgid "This invitation was canceled."
+msgstr "<h2>See ülesanne jäeti ära</h2>"
+
+#: itipformatter.cpp:1590
+#, fuzzy, kde-format
+#| msgid "Invitation answer attached."
+msgid "This invitation was accepted."
+msgstr "Kutse vastus manuses."
+
+#: itipformatter.cpp:1598
+#, kde-format
+msgid "Awaiting delegation response."
+msgstr ""
+
+#: itipformatter.cpp:1665 itipformatter.cpp:1667
+#, kde-format
+msgid "The <b>%1</b> response has been recorded"
+msgstr ""
+
+#: itipformatter.cpp:1695
+#, kde-format
+msgid "Assignees:"
+msgstr ""
+
+#: itipformatter.cpp:1697
+#, kde-format
+msgid "Participants:"
+msgstr ""
+
 #: reactiontoinvitationdialog.cpp:32
 #, fuzzy, kde-format
 #| msgid "Comment:"
@@ -69,12 +717,155 @@ msgctxt "@label:textbox"
 msgid "Comment:"
 msgstr "Kommentaar"
 
-#: text_calendar.cpp:375
+#: templates/attendee_row.html:17
+msgid "organizer"
+msgstr ""
+
+#: templates/attendee_row.html:21
+msgid "myself"
+msgstr ""
+
+#: templates/attendee_row.html:25
+#, fuzzy, kde-format
+#| msgid "Delegated: %1"
+msgid "delegated by %1)"
+msgstr "Delegeeritud: %1"
+
+#: templates/attendee_row.html:29
+#, fuzzy, kde-format
+#| msgid "Delegated: %1"
+msgid "delegated to %1)"
+msgstr "Delegeeritud: %1"
+
+#: templates/attendee_row.html:36
+#, fuzzy
+#| msgid "Send EMail"
+msgid "Send email"
+msgstr "Saada kiri"
+
+#: templates/itip.html:80
+#, fuzzy
+#| msgid "Comment:"
+msgid "Comment:"
+msgstr "Kommentaar"
+
+#: templates/itip.html:83
+#, fuzzy
+#| msgid "Comment:"
+msgid "Comments:"
+msgstr "Kommentaar"
+
+#: templates/itip.html:122
+#, fuzzy
+#| msgid "Open Attachment"
+msgid "Attachments:"
+msgstr "Ava manus"
+
+#: templates/itip_event.html:6
+msgid "First event:"
+msgstr ""
+
+#: templates/itip_event.html:8 templates/itip_todo.html:13
+msgid "When:"
+msgstr ""
+
+#: templates/itip_event.html:15 templates/itip_todo.html:6
+msgid "Where:"
+msgstr "Kus:"
+
+#: templates/itip_event.html:22 templates/itip_todo.html:46
+msgid "Recurrence:"
+msgstr ""
+
+#: templates/itip_event.html:29 templates/itip_journal.html:11
+#: templates/itip_todo.html:53
+msgid "Description:"
+msgstr "Kirjeldus:"
+
+#: templates/itip_event.html:42
+msgid "Events on these days:"
+msgstr ""
+
+#: templates/itip_event.html:44
+msgid "Events on this day:"
+msgstr ""
+
+#: templates/itip_freebusy.html:5
+msgid "Person:"
+msgstr ""
+
+#: templates/itip_freebusy.html:10
+#, fuzzy
+#| msgid "Start Time:"
+msgid "Start date:"
+msgstr "Algusaeg:"
+
+#: templates/itip_freebusy.html:15
+#, fuzzy
+#| msgid "End Time:"
+msgid "End date:"
+msgstr "Lõpuaeg:"
+
+#: templates/itip_freebusy.html:23
+msgid "Busy periods given in this free/busy object:"
+msgstr ""
+
+#: templates/itip_freebusy.html:31
+#, kde-format
+msgctxt "<startDate> for <duration>"
+msgid "%1 for %2"
+msgstr ""
+
+#: templates/itip_freebusy.html:34
+#, kde-format
+msgctxt "<startDate> - <endDate>"
+msgid "%1 - %2"
+msgstr ""
+
+#: templates/itip_freebusy.html:36
+#, kde-format
+msgctxt "<date>, <startTime> - <endTime>"
+msgid "%1, %2 - %3"
+msgstr ""
+
+#: templates/itip_journal.html:5
+#, fuzzy
+#| msgid "Delegate:"
+msgid "Date:"
+msgstr "Esindaja:"
+
+#: templates/itip_todo.html:16
+#, kde-format
+msgctxt "<beginDate> - <endDate>"
+msgid "%1 - %2"
+msgstr ""
+
+#: templates/itip_todo.html:22
+#, kde-format
+msgctxt "<beginDateTime> - <endDateTime>"
+msgid "%1 - %2"
+msgstr ""
+
+#: templates/itip_todo.html:24
+#, kde-format
+msgctxt "<beginDateTime> - <endTime>"
+msgid "%1 - %2"
+msgstr ""
+
+#: templates/itip_todo.html:32
+msgid "Percent Done:"
+msgstr ""
+
+#: templates/itip_todo.html:39
+msgid "Due:"
+msgstr ""
+
+#: text_calendar.cpp:374
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
 msgstr "Kutses ei leitud manust nimega \"%1\"."
 
-#: text_calendar.cpp:390
+#: text_calendar.cpp:389
 #, kde-format
 msgid ""
 "The invitation attachment \"%1\" is a web link that is inaccessible from "
@@ -85,7 +876,7 @@ msgstr ""
 "sündmuse korraldajal saata kutse uuesti, nii et manus oleks lingi asemel "
 "otse kirjaga kaasas."
 
-#: text_calendar.cpp:442
+#: text_calendar.cpp:441
 #, kde-format
 msgid ""
 "<qt>None of your identities match the receiver of this message,<br/>please "
@@ -96,7 +887,7 @@ msgstr ""
 "milline neist aadressidest on sinu oma,<br/> või vali identiteet, mida "
 "soovid vastamisel kasutada:</qt>"
 
-#: text_calendar.cpp:448
+#: text_calendar.cpp:447
 #, kde-format
 msgid ""
 "<qt>Several of your identities match the receiver of this message,<br/"
@@ -105,261 +896,261 @@ msgstr ""
 "<qt>Mitu sinu identiteeti sobivad selle kirja saajaga,<br/>palun vali, "
 "milline neist aadressidest on sinu oma:</qt>"
 
-#: text_calendar.cpp:463
+#: text_calendar.cpp:462
 #, kde-format
 msgid "Select Address"
 msgstr "Aadressi valimine"
 
-#: text_calendar.cpp:525
+#: text_calendar.cpp:524
 #, kde-format
 msgid "Answer: "
 msgstr "Vastus: "
 
-#: text_calendar.cpp:527
+#: text_calendar.cpp:526
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
 msgstr "Tagasi lükatud: %1"
 
-#: text_calendar.cpp:529
+#: text_calendar.cpp:528
 #, kde-format
 msgctxt "Unsure if it is possible to attend."
 msgid "Tentative: %1"
 msgstr "Kõhklemine: %1"
 
-#: text_calendar.cpp:531
+#: text_calendar.cpp:530
 #, kde-format
 msgctxt "Accepted the invitation."
 msgid "Accepted: %1"
 msgstr "Nõus: %1"
 
-#: text_calendar.cpp:553 text_calendar.cpp:572
+#: text_calendar.cpp:552 text_calendar.cpp:571
 #, kde-format
 msgid "Invitation answer attached."
 msgstr "Kutse vastus manuses."
 
-#: text_calendar.cpp:679
+#: text_calendar.cpp:678
 #, kde-format
 msgid "Incidence with no summary"
 msgstr "Sündmus ilma kokkuvõtteta"
 
-#: text_calendar.cpp:684
+#: text_calendar.cpp:683
 #, kde-format
 msgid "Answer: %1"
 msgstr "Vastus: %1"
 
-#: text_calendar.cpp:687
+#: text_calendar.cpp:686
 #, kde-format
 msgid "Delegated: %1"
 msgstr "Delegeeritud: %1"
 
-#: text_calendar.cpp:690
+#: text_calendar.cpp:689
 #, kde-format
 msgid "Forwarded: %1"
 msgstr "Edastatud: %1"
 
-#: text_calendar.cpp:693
+#: text_calendar.cpp:692
 #, kde-format
 msgid "Declined Counter Proposal: %1"
 msgstr "Tagasilükatud vastuettepanek: %1"
 
-#: text_calendar.cpp:757 text_calendar.cpp:763
+#: text_calendar.cpp:756 text_calendar.cpp:762
 #, kde-format
 msgid "\"%1\" occurred already."
 msgstr "\"%1\" on juba toimunud."
 
-#: text_calendar.cpp:759 text_calendar.cpp:776
+#: text_calendar.cpp:758 text_calendar.cpp:775
 #, kde-format
 msgid "\"%1\" is currently in-progress."
 msgstr "\"%1\" parajasti toimub."
 
-#: text_calendar.cpp:765
+#: text_calendar.cpp:764
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
 msgstr "\"%1\", mis hõlmab kogu tänase, parajasti toimub."
 
-#: text_calendar.cpp:774 text_calendar.cpp:786
+#: text_calendar.cpp:773 text_calendar.cpp:785
 #, kde-format
 msgid "\"%1\" is past due."
 msgstr "\"%1\" tähtaeg on möödas."
 
-#: text_calendar.cpp:780
+#: text_calendar.cpp:779
 #, kde-format
 msgid "\"%1\" has already started."
 msgstr "\"%1\" on juba alanud."
 
-#: text_calendar.cpp:788
+#: text_calendar.cpp:787
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
 msgstr "\"%1\", mis hõlmab kogu tänase, parajasti toimub."
 
-#: text_calendar.cpp:792
+#: text_calendar.cpp:791
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
 msgstr "\"%1\", mis hõlmab kogu päeva, on juba alanud."
 
-#: text_calendar.cpp:804
+#: text_calendar.cpp:803
 #, kde-format
 msgid "Do you still want to accept the task?"
 msgstr "Kas ikkagi võtta ülesanne vastu?"
 
-#: text_calendar.cpp:806
+#: text_calendar.cpp:805
 #, kde-format
 msgid "Do you still want to accept the invitation?"
 msgstr "Kas ikka võtta kutse vastu?"
 
-#: text_calendar.cpp:808 text_calendar.cpp:820
+#: text_calendar.cpp:807 text_calendar.cpp:819
 #, fuzzy, kde-format
 #| msgid "[Accept]"
 msgctxt "@action:button"
 msgid "Accept"
 msgstr "[Võta vastu]"
 
-#: text_calendar.cpp:812
+#: text_calendar.cpp:811
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the task?"
 msgstr "Kas ikkagi saata kõhklev nõusolek sellele ülesandele?"
 
-#: text_calendar.cpp:814
+#: text_calendar.cpp:813
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
 msgstr "Kas ikkagi saata kõhklev nõusolek sellele kutsele?"
 
-#: text_calendar.cpp:816 text_calendar.cpp:824 text_calendar.cpp:828
+#: text_calendar.cpp:815 text_calendar.cpp:823 text_calendar.cpp:827
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
 msgstr ""
 
-#: text_calendar.cpp:819
+#: text_calendar.cpp:818
 #, kde-format
 msgid "Do you still want to accept the counter proposal?"
 msgstr "Kas ikkagi võtta vastuettepanek vastu?"
 
-#: text_calendar.cpp:823
+#: text_calendar.cpp:822
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
 msgstr "Kas ikkagi saata vastuettepanek?"
 
-#: text_calendar.cpp:827
+#: text_calendar.cpp:826
 #, kde-format
 msgid "Do you still want to send a decline response?"
 msgstr "Kas ikkagi saata äraütlev vastus?"
 
-#: text_calendar.cpp:831
+#: text_calendar.cpp:830
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
 msgstr "Kas ikkagi lükata vastuettepanek tagasi?"
 
-#: text_calendar.cpp:832
+#: text_calendar.cpp:831
 #, fuzzy, kde-format
 #| msgid "[Decline]"
 msgctxt "@action:button"
 msgid "Decline"
 msgstr "[Lükka tagasi]"
 
-#: text_calendar.cpp:834
+#: text_calendar.cpp:833
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
 msgstr "Kas ikkagi sisestada see vastus oma kalendrisse?"
 
-#: text_calendar.cpp:835 text_calendar.cpp:871
+#: text_calendar.cpp:834 text_calendar.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
 msgstr ""
 
-#: text_calendar.cpp:838
+#: text_calendar.cpp:837
 #, kde-format
 msgid "Do you still want to delegate this task?"
 msgstr "Kas ikkagi delegeerida see ülesanne?"
 
-#: text_calendar.cpp:840
+#: text_calendar.cpp:839
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
 msgstr "Kas ikkagi delegeerida see kutse?"
 
-#: text_calendar.cpp:842
+#: text_calendar.cpp:841
 #, fuzzy, kde-format
 #| msgid "Delegate:"
 msgctxt "@action:button"
 msgid "Delegate"
 msgstr "Esindaja:"
 
-#: text_calendar.cpp:845
+#: text_calendar.cpp:844
 #, kde-format
 msgid "Do you still want to forward this task?"
 msgstr "Kas ikkagi edastada see ülesanne?"
 
-#: text_calendar.cpp:847
+#: text_calendar.cpp:846
 #, kde-format
 msgid "Do you still want to forward this invitation?"
 msgstr "Kas ikkagi edastada see kutse?"
 
-#: text_calendar.cpp:849
+#: text_calendar.cpp:848
 #, fuzzy, kde-format
 #| msgid "Forwarded: %1"
 msgctxt "@action:button"
 msgid "Forward"
 msgstr "Edastatud: %1"
 
-#: text_calendar.cpp:853
+#: text_calendar.cpp:852
 #, kde-format
 msgid "Do you still want to cancel this task?"
 msgstr "Kas ikkagi tühistada see ülesanne?"
 
-#: text_calendar.cpp:854
+#: text_calendar.cpp:853
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
 msgstr ""
 
-#: text_calendar.cpp:856
+#: text_calendar.cpp:855
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
 msgstr "Kas ikkagi tühistada see kutse?"
 
-#: text_calendar.cpp:857
+#: text_calendar.cpp:856
 #, fuzzy, kde-format
 #| msgid "Accept invitation"
 msgctxt "@action:button"
 msgid "Cancel Invitation"
 msgstr "Võta kutse vastu"
 
-#: text_calendar.cpp:860
+#: text_calendar.cpp:859
 #, fuzzy, kde-format
 #| msgid "Do Not Send"
 msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Ära saada"
 
-#: text_calendar.cpp:863
+#: text_calendar.cpp:862
 #, kde-format
 msgid "Do you still want to check your calendar?"
 msgstr "Kas ikkagi kontrollida kalendrit?"
 
-#: text_calendar.cpp:864
+#: text_calendar.cpp:863
 #, kde-format
 msgctxt "@action:button"
 msgid "Check"
 msgstr ""
 
-#: text_calendar.cpp:867
+#: text_calendar.cpp:866
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
 msgstr "Kas ikkagi sisestada see ülesanne oma kalendrisse?"
 
-#: text_calendar.cpp:869
+#: text_calendar.cpp:868
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
 msgstr "Kas ikkagi sisestada see kutse oma kalendrisse?"
 
-#: text_calendar.cpp:875
+#: text_calendar.cpp:874
 #, kde-format
 msgid "%1?"
 msgstr "%1?"
 
-#: text_calendar.cpp:882
+#: text_calendar.cpp:881
 #, kde-format
 msgid ""
 "%1\n"
@@ -368,36 +1159,36 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: text_calendar.cpp:916
+#: text_calendar.cpp:915
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "Vastus kutsele"
 
-#: text_calendar.cpp:927 text_calendar.cpp:1180
+#: text_calendar.cpp:926 text_calendar.cpp:1179
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
 msgstr "Unustasid ettepaneku lisamast. Palun lisa see. Aitäh"
 
-#: text_calendar.cpp:960
+#: text_calendar.cpp:959
 #, kde-format
 msgid "Delegation to organizer is not possible."
 msgstr "Delegeerimine korraldajale ei ole võimalik."
 
-#: text_calendar.cpp:1089
+#: text_calendar.cpp:1088
 #, fuzzy, kde-format
 #| msgid "Save Invitation Attachment"
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Salvesta kutse manus"
 
-#: text_calendar.cpp:1169
+#: text_calendar.cpp:1168
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "Vastuettepaneku tagasilükkamine"
 
-#: text_calendar.cpp:1211
+#: text_calendar.cpp:1210
 #, kde-format
 msgid ""
 "You have no writable calendar folders for invitations, so storing or saving "
@@ -409,7 +1200,7 @@ msgstr ""
 " Palun loo vähemalt üks kirjutamisõigusega sündmuste kalender ja sünkrooni "
 "uuesti."
 
-#: text_calendar.cpp:1229 text_calendar.cpp:1237
+#: text_calendar.cpp:1228 text_calendar.cpp:1236
 #, kde-format
 msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
@@ -418,7 +1209,7 @@ msgstr ""
 "Sellesse kirja salvestatud kalendrikutse on kuidagi vigane. Jätkamine ei ole "
 "võimalik."
 
-#: text_calendar.cpp:1290
+#: text_calendar.cpp:1289
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -434,120 +1225,115 @@ msgstr ""
 "Kas soovid saata korraldajale selle kutse kohta kirja?\n"
 "Salvestamisest loobumiseks klõpsa nupule Loobu."
 
-#: text_calendar.cpp:1294
+#: text_calendar.cpp:1293
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
 msgstr "Kirja saatmine korraldajale"
 
-#: text_calendar.cpp:1295
+#: text_calendar.cpp:1294
 #, fuzzy, kde-format
 #| msgid "Do Not Send"
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Ära saada"
 
-#: text_calendar.cpp:1296
+#: text_calendar.cpp:1295
 #, fuzzy, kde-format
 #| msgid "Send EMail"
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Saada kiri"
 
-#: text_calendar.cpp:1304
+#: text_calendar.cpp:1303
 #, kde-format
 msgid "Re: %1"
 msgstr "Vastuseks: %1"
 
-#: text_calendar.cpp:1376
+#: text_calendar.cpp:1375
 #, kde-format
 msgid "Open Attachment"
 msgstr "Ava manus"
 
-#: text_calendar.cpp:1377
+#: text_calendar.cpp:1376
 #, fuzzy, kde-format
 #| msgid "Save Attachment As..."
 msgid "Save Attachment As…"
 msgstr "Salvesta manus kui..."
 
-#: text_calendar.cpp:1393
+#: text_calendar.cpp:1392
 #, kde-format
 msgid "Accept invitation"
 msgstr "Võta kutse vastu"
 
-#: text_calendar.cpp:1395
+#: text_calendar.cpp:1394
 #, kde-format
 msgid "Accept invitation conditionally"
 msgstr "Võta kutse vastu tingimustega"
 
-#: text_calendar.cpp:1397
+#: text_calendar.cpp:1396
 #, kde-format
 msgid "Accept counter proposal"
 msgstr "Võta vastuettepanek vastu"
 
-#: text_calendar.cpp:1399
+#: text_calendar.cpp:1398
 #, fuzzy, kde-format
 #| msgid "Create a counter proposal..."
 msgid "Create a counter proposal…"
 msgstr "Loo vastuettepanek..."
 
-#: text_calendar.cpp:1401
+#: text_calendar.cpp:1400
 #, kde-format
 msgid "Throw mail away"
 msgstr "Viska kiri minema"
 
-#: text_calendar.cpp:1403
+#: text_calendar.cpp:1402
 #, kde-format
 msgid "Decline invitation"
 msgstr "Lükka kutse tagasi"
 
-#: text_calendar.cpp:1405
+#: text_calendar.cpp:1404
 #, kde-format
 msgid "Postpone"
 msgstr "Lükka edasi"
 
-#: text_calendar.cpp:1407
+#: text_calendar.cpp:1406
 #, kde-format
 msgid "Decline counter proposal"
 msgstr "Lükka vastuettepanek tagasi"
 
-#: text_calendar.cpp:1409
+#: text_calendar.cpp:1408
 #, fuzzy, kde-format
 #| msgid "Check my calendar..."
 msgid "Check my calendar…"
 msgstr "Kontrolli kalendrit..."
 
-#: text_calendar.cpp:1411
+#: text_calendar.cpp:1410
 #, kde-format
 msgid "Record response into my calendar"
 msgstr "Sisesta vastus oma kalendrisse"
 
-#: text_calendar.cpp:1413
+#: text_calendar.cpp:1412
 #, kde-format
 msgid "Record invitation into my calendar"
 msgstr "Salvesta kutse minu kalendrisse"
 
-#: text_calendar.cpp:1415
+#: text_calendar.cpp:1414
 #, kde-format
 msgid "Move this invitation to my trash folder"
 msgstr "Viska kutse prügikasti"
 
-#: text_calendar.cpp:1417
+#: text_calendar.cpp:1416
 #, kde-format
 msgid "Delegate invitation"
 msgstr "Delegeeri kutse"
 
-#: text_calendar.cpp:1419
+#: text_calendar.cpp:1418
 #, kde-format
 msgid "Forward invitation"
 msgstr "Edasta kutse"
 
-#: text_calendar.cpp:1421
-#, kde-format
-msgid "Remove invitation from my calendar"
-msgstr "Eemalda kutse oma kalendrist"
-
-#: text_calendar.cpp:1424
+#: text_calendar.cpp:1423
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "Ava manus \"%1\""
@@ -568,20 +1354,8 @@ msgstr "Ava manus \"%1\""
 #~ msgid "Decline incidence"
 #~ msgstr "Lükka tagasi"
 
-#~ msgid "Summary unspecified"
-#~ msgstr "Kokkuvõte määramata"
-
-#~ msgid "Location unspecified"
-#~ msgstr "Asukoht määramata"
-
 #~ msgid "What:"
 #~ msgstr "Mis:"
-
-#~ msgid "Where:"
-#~ msgstr "Kus:"
-
-#~ msgid "Start Time:"
-#~ msgstr "Algusaeg:"
 
 #~ msgid ""
 #~ "_: %1: Start Date, %2: Start Time\n"
@@ -592,9 +1366,6 @@ msgstr "Ava manus \"%1\""
 #~ "_: %1: Start Date\n"
 #~ "%1 (time unspecified)"
 #~ msgstr "%1 (kellaaeg määramata)"
-
-#~ msgid "End Time:"
-#~ msgstr "Lõpuaeg:"
 
 #~ msgid ""
 #~ "_: %1: End Date, %2: End Time\n"
@@ -632,53 +1403,11 @@ msgstr "Ava manus \"%1\""
 #~ msgid "Summary:"
 #~ msgstr "Kokkuvõte:"
 
-#~ msgid "Description:"
-#~ msgstr "Kirjeldus:"
-
 #~ msgid "<h2>You have been invited to this meeting</h2>"
 #~ msgstr "<h2>Sind kutsutakse sellele kohtumisele</h2>"
 
-#~ msgid "<h2>You have been assigned this task</h2>"
-#~ msgstr "<h2>Sulle on antud see ülesanne</h2>"
-
 #~ msgid "<h2>Sender accepts this meeting invitation</h2>"
 #~ msgstr "<h2>Saatja võtab vastu kutse sellele kohtumisele</h2>"
-
-#~ msgid "<h2>Sender accepts this task</h2>"
-#~ msgstr "<h2>Saatja võtab selle ülesande vastu</h2>"
-
-#~ msgid "<h2>Sender tentatively accepts this meeting invitation</h2>"
-#~ msgstr "<h2>Saatja võtab tingimustega vastu kutse sellele kohtumisele</h2>"
-
-#~ msgid "<h2>Sender tentatively accepts this task</h2>"
-#~ msgstr "<h2>Saatja võtab tingimustega vastu selle ülesande</h2>"
-
-#~ msgid "<h2>Sender declines this meeting invitation</h2>"
-#~ msgstr "<h2>Saatja lükkab tagasi kutse sellele kohtumisele</h2>"
-
-#~ msgid "<h2>Sender declines this task</h2>"
-#~ msgstr "<h2>Saatja lükkab tagasi selle ülesande</h2>"
-
-#~ msgid "<h2>Unknown response to this meeting invitation</h2>"
-#~ msgstr "<h2>Tundmatu vastus selle kohtumise kutsele</h2>"
-
-#~ msgid "<h2>Unknown response to this task</h2>"
-#~ msgstr "<h2>Tundmatu vastus sellele ülesandele</h2>"
-
-#~ msgid "<h2>This meeting has been canceled</h2>"
-#~ msgstr "<h2>See kohtumine jäeti ära</h2>"
-
-#~ msgid "<h2>This task was canceled</h2>"
-#~ msgstr "<h2>See ülesanne jäeti ära</h2>"
-
-#~ msgid "<h2>This event has been published</h2>"
-#~ msgstr "<h2>See sündmus on avaldatud</h2>"
-
-#~ msgid "<h2>This task has been published</h2>"
-#~ msgstr "<h2>See ülesanne on avaldatud</h2>"
-
-#~ msgid "Error: iMIP message with unknown method: '%1'"
-#~ msgstr "Viga: iMIP kiri tundmatu meetodiga: '%1'"
 
 #~ msgid "[Enter this into my calendar]"
 #~ msgstr "[Sisesta kalendrisse]"
