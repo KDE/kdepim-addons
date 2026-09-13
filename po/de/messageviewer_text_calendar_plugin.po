@@ -734,9 +734,6 @@ msgid "Send email"
 msgstr "E-Mail senden"
 
 #: templates/itip.html:80
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Comment:"
 msgid "Comment:"
 msgstr "Kommentar:"
 

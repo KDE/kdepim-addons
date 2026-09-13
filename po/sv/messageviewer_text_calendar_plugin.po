@@ -1,21 +1,21 @@
 # translation of kmail_text_calendar_plugin.po to Swedish
 # Copyright (C) 2004, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
-# SPDX-FileCopyrightText: 2004, 2007, 2008, 2009, 2010, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2004, 2007-2010, 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2011, 2012, 2015, 2017, 2019, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-12 00:45+0000\n"
-"PO-Revision-Date: 2024-08-01 07:22+0200\n"
+"PO-Revision-Date: 2026-09-12 09:37+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: attendeeselector.cpp:21
@@ -63,590 +63,544 @@ msgstr "Representant:"
 #: itipformatter.cpp:138
 #, kde-format
 msgid "Organizer Unknown"
-msgstr ""
+msgstr "Okänd organisatör"
 
 #: itipformatter.cpp:160 itipformatter.cpp:838
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Send"
+#, kde-format
 msgid "Sender"
-msgstr "Skicka"
+msgstr "Avsändare"
 
 #: itipformatter.cpp:218
 #, kde-format
 msgid "Summary unspecified"
-msgstr ""
+msgstr "Ospecificerad sammanfattning"
 
 #: itipformatter.cpp:230
 #, kde-format
 msgid "Location unspecified"
-msgstr ""
+msgstr "Ospecificerad plats"
 
 #: itipformatter.cpp:354
 #, kde-format
 msgid "Your response is requested."
-msgstr ""
+msgstr "Ditt svar ombeds."
 
 #: itipformatter.cpp:356
 #, kde-format
 msgid "Your response as <b>%1</b> is requested."
-msgstr ""
+msgstr "Ditt svar som <b>%1</b> ombeds."
 
 #: itipformatter.cpp:360
 #, kde-format
 msgid "No response is necessary."
-msgstr ""
+msgstr "Inget svar är nödvändigt."
 
 #: itipformatter.cpp:362
 #, kde-format
 msgid "No response as <b>%1</b> is necessary."
-msgstr ""
+msgstr "Inget svar som <b>%1</b> är nödvändigt."
 
 #: itipformatter.cpp:373 itipformatter.cpp:375
 #, kde-format
 msgid "(<b>Note</b>: the Organizer preset your response to <b>%1</b>)"
 msgstr ""
+"(<b>Observera</b>: organisatören har förinställt ditt svar till <b>%1</b>)"
 
 #: itipformatter.cpp:517 itipformatter.cpp:578
-#, fuzzy, kde-format
-#| msgid "Check my calendar…"
+#, kde-format
 msgid "Check my calendar"
-msgstr "Kontrollera min kalender…"
+msgstr "Kontrollera min kalender"
 
 #: itipformatter.cpp:559 itipformatter.cpp:636
 #, kde-format
 msgid "Please respond again to the original proposal."
-msgstr ""
+msgstr "Svara igen på det ursprungliga förslaget."
 
 #: itipformatter.cpp:613 itipformatter.cpp:647
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "%2"
+#, kde-format
 msgid "%1%"
-msgstr ""
-"%1\n"
-"%2"
+msgstr "%1 %"
 
 #: itipformatter.cpp:737
 #, kde-format
 msgid "This invitation has been published."
-msgstr ""
+msgstr "Inbjudan har publicerats."
 
 #: itipformatter.cpp:742
 #, kde-format
 msgid "This invitation has been updated by the organizer %1."
-msgstr ""
+msgstr "Inbjudan har uppdaterats av organisatören %1."
 
 #: itipformatter.cpp:744
 #, kde-format
 msgid "This invitation has been updated by %1 as a representative of %2."
-msgstr ""
+msgstr "Inbjudan har uppdaterats av %1 som representant för %2."
 
 #: itipformatter.cpp:748
-#, fuzzy, kde-format
-#| msgid "Delegate invitation"
+#, kde-format
 msgid "I created this invitation."
-msgstr "Delegera inbjudan"
+msgstr "Jag skapade inbjudan."
 
 #: itipformatter.cpp:752
 #, kde-format
 msgid "You received an invitation from %1."
-msgstr ""
+msgstr "Du tog emot en inbjudan från %1."
 
 #: itipformatter.cpp:754
 #, kde-format
 msgid "You received an invitation from %1 as a representative of %2."
-msgstr ""
+msgstr "Du tog emot en inbjudan från %1 som representant för %2."
 
 #: itipformatter.cpp:758
-#, fuzzy, kde-format
-#| msgid "Invitation answer attached."
+#, kde-format
 msgid "This invitation was refreshed."
-msgstr "Svar på inbjudan bilagd."
+msgstr "Inbjudan har uppdaterats."
 
 #: itipformatter.cpp:761
-#, fuzzy, kde-format
-#| msgid "Invitation answer attached."
+#, kde-format
 msgid "This invitation has been canceled."
-msgstr "Svar på inbjudan bilagd."
+msgstr "Inbjudan har avbokats."
 
 #: itipformatter.cpp:763
 #, kde-format
 msgid "The organizer has revoked the invitation."
-msgstr ""
+msgstr "Organisatören har återkallat inbjudan."
 
 #: itipformatter.cpp:766
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Reaction to Invitation"
+#, kde-format
 msgid "Addition to the invitation."
-msgstr "Reaktion på inbjudan"
+msgstr "Tillägg till inbjudan."
 
 #: itipformatter.cpp:788
 #, kde-format
 msgid "%1 indicates this invitation still needs some action."
-msgstr ""
+msgstr "%1 anger att inbjudan fortfarande behöver någon åtgärd."
 
 #: itipformatter.cpp:792
 #, kde-format
 msgid "This invitation has been updated by attendee %1."
-msgstr ""
+msgstr "Inbjudan har uppdaterats av deltagaren %1."
 
 #: itipformatter.cpp:794
 #, kde-format
 msgid "This invitation has been updated by an attendee."
-msgstr ""
+msgstr "Inbjudan har uppdaterats av en deltagare."
 
 #: itipformatter.cpp:798
-#, fuzzy, kde-format
-#| msgid "Accept invitation"
+#, kde-format
 msgid "%1 accepts this invitation."
-msgstr "Acceptera inbjudan"
+msgstr "%1 accepterar inbjudan."
 
 #: itipformatter.cpp:800
 #, kde-format
 msgid "%1 accepts this invitation on behalf of %2."
-msgstr ""
+msgstr "%1 accepterar inbjudan på uppdrag av %2."
 
 #: itipformatter.cpp:805
-#, fuzzy, kde-format
-#| msgid "Do you still want to accept the invitation?"
+#, kde-format
 msgid "%1 tentatively accepts this invitation."
-msgstr "Vill du ändå acceptera inbjudan?"
+msgstr "%1 accepterar preliminärt inbjudan."
 
 #: itipformatter.cpp:807
 #, kde-format
 msgid "%1 tentatively accepts this invitation on behalf of %2."
-msgstr ""
+msgstr "%1 accepterar preliminärt inbjudan på uppdrag av %2."
 
 #: itipformatter.cpp:811
-#, fuzzy, kde-format
-#| msgid "Decline invitation"
+#, kde-format
 msgid "%1 declines this invitation."
-msgstr "Neka till inbjudan"
+msgstr "%1 nekar till inbjudan."
 
 #: itipformatter.cpp:813
 #, kde-format
 msgid "%1 declines this invitation on behalf of %2."
-msgstr ""
+msgstr "%1 nekar till inbjudan på uppdrag av %2."
 
 #: itipformatter.cpp:823
-#, fuzzy, kde-format
-#| msgid "Do you still want to delegate this invitation?"
+#, kde-format
 msgid "%1 has delegated this invitation to %2."
-msgstr "Vill du ändå delegera inbjudan?"
+msgstr "%1 har delegerat inbjudan till %2."
 
 #: itipformatter.cpp:825
-#, fuzzy, kde-format
-#| msgid "Delegate invitation"
+#, kde-format
 msgid "%1 has delegated this invitation."
-msgstr "Delegera inbjudan"
+msgstr "%1 har delegerat inbjudan."
 
 #: itipformatter.cpp:829
 #, kde-format
 msgid "This invitation is now completed."
-msgstr ""
+msgstr "Inbjudan är nu slutförd."
 
 #: itipformatter.cpp:831
-#, fuzzy, kde-format
-#| msgid "Do you still want to accept the invitation?"
+#, kde-format
 msgid "%1 is still processing the invitation."
-msgstr "Vill du ändå acceptera inbjudan?"
+msgstr "%1 behandlar fortfarande inbjudan."
 
 #: itipformatter.cpp:833
 #, kde-format
 msgid "Unknown response to this invitation."
-msgstr ""
+msgstr "Okänt svar på inbjudan."
 
 #: itipformatter.cpp:838 itipformatter.cpp:975
-#, fuzzy, kde-format
-#| msgid "Accept counter proposal"
+#, kde-format
 msgid "%1 makes this counter proposal."
-msgstr "Acceptera motförslag"
+msgstr "%1 ger motförslaget."
 
 #: itipformatter.cpp:843
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "%1 declines your counter proposal."
-msgstr "Neka till motförslag"
+msgstr "%1 nekar till ditt motförslag."
 
 #: itipformatter.cpp:845
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "%1 declines your counter proposal on behalf of %2."
-msgstr "Neka till motförslag"
+msgstr "%1 nekar till ditt motförslag på uppdrag av %2."
 
 #: itipformatter.cpp:850
 #, kde-format
 msgid "Error: Event iTIP message with unknown method."
-msgstr ""
+msgstr "Fel: Händelse iTIP-meddelande med okänd metod."
 
 #: itipformatter.cpp:865
 #, kde-format
 msgid "This to-do has been published."
-msgstr ""
+msgstr "Uppgiften har publicerats."
 
 #: itipformatter.cpp:870
 #, kde-format
 msgid "This to-do has been updated by the organizer %1."
-msgstr ""
+msgstr "Uppgiften har uppdaterats av organisatören %1."
 
 #: itipformatter.cpp:872
 #, kde-format
 msgid "This to-do has been updated by %1 as a representative of %2."
-msgstr ""
+msgstr "Uppgiften har uppdaterats av %1 som representant för %2."
 
 #: itipformatter.cpp:876
 #, kde-format
 msgid "I created this to-do."
-msgstr ""
+msgstr "Jag skapade uppgiften."
 
 #: itipformatter.cpp:880
 #, kde-format
 msgid "You have been assigned this to-do by %1."
-msgstr ""
+msgstr "Du har blivit tilldelad uppgiften av %1."
 
 #: itipformatter.cpp:882
 #, kde-format
 msgid "You have been assigned this to-do by %1 as a representative of %2."
-msgstr ""
+msgstr "Du har blivit tilldelad uppgiften av %1 som representant för %2."
 
 #: itipformatter.cpp:887
 #, kde-format
 msgid "This to-do was refreshed."
-msgstr ""
+msgstr "Uppgiften uppdaterades."
 
 #: itipformatter.cpp:890
 #, kde-format
 msgid "This to-do was canceled."
-msgstr ""
+msgstr "Uppgiften avbokades."
 
 #: itipformatter.cpp:892
 #, kde-format
 msgid "The organizer has revoked this to-do."
-msgstr ""
+msgstr "Organisatören har återkallat uppgiften."
 
 #: itipformatter.cpp:895
 #, kde-format
 msgid "Addition to the to-do."
-msgstr ""
+msgstr "Tillägg till uppgiften."
 
 #: itipformatter.cpp:917
 #, kde-format
 msgid "%1 indicates this to-do assignment still needs some action."
-msgstr ""
+msgstr "%1 anger att uppgiftstilldelningen fortfarande behöver någon åtgärd."
 
 #: itipformatter.cpp:922
 #, kde-format
 msgid "This to-do has been completed by assignee %1."
-msgstr ""
+msgstr "Uppgiften har slutförts av ansvarig %1."
 
 #: itipformatter.cpp:924
 #, kde-format
 msgid "This to-do has been updated by assignee %1."
-msgstr ""
+msgstr "Uppgiften har uppdaterats av ansvarig %1."
 
 #: itipformatter.cpp:928
 #, kde-format
 msgid "This to-do has been completed by an assignee."
-msgstr ""
+msgstr "Uppgiften har slutförts av en ansvarig."
 
 #: itipformatter.cpp:930
 #, kde-format
 msgid "This to-do has been updated by an assignee."
-msgstr ""
+msgstr "Uppgiften har uppdaterats av en ansvarig."
 
 #: itipformatter.cpp:935
 #, kde-format
 msgid "%1 accepts this to-do."
-msgstr ""
+msgstr "%1 accepterar uppgiften."
 
 #: itipformatter.cpp:937
 #, kde-format
 msgid "%1 accepts this to-do on behalf of %2."
-msgstr ""
+msgstr "%1 accepterar uppgiften på uppdrag av %2."
 
 #: itipformatter.cpp:942
 #, kde-format
 msgid "%1 tentatively accepts this to-do."
-msgstr ""
+msgstr "%1 accepterar preliminärt uppgiften."
 
 #: itipformatter.cpp:944
 #, kde-format
 msgid "%1 tentatively accepts this to-do on behalf of %2."
-msgstr ""
+msgstr "%1 accepterar preliminärt uppgiften på uppdrag av %2."
 
 #: itipformatter.cpp:948
 #, kde-format
 msgid "%1 declines this to-do."
-msgstr ""
+msgstr "%1 nekar till uppgiften."
 
 #: itipformatter.cpp:950
 #, kde-format
 msgid "%1 declines this to-do on behalf of %2."
-msgstr ""
+msgstr "%1 nekar till uppgiften på uppdrag av %2."
 
 #: itipformatter.cpp:960
 #, kde-format
 msgid "%1 has delegated this to-do to %2."
-msgstr ""
+msgstr "%1 har delegerat uppgiften till %2."
 
 #: itipformatter.cpp:962
-#, fuzzy, kde-format
-#| msgid "\"%1\" has already started."
+#, kde-format
 msgid "%1 has delegated this to-do."
-msgstr "\"%1\" har redan börjat."
+msgstr "%1 har delegerat uppgiften."
 
 #: itipformatter.cpp:966
 #, kde-format
 msgid "The request for this to-do is now completed."
-msgstr ""
+msgstr "Uppgiftsbegäran är nu slutförd."
 
 #: itipformatter.cpp:968
 #, kde-format
 msgid "%1 is still processing the to-do."
-msgstr ""
+msgstr "%1 behandlar fortfarande uppgiften."
 
 #: itipformatter.cpp:970
 #, kde-format
 msgid "Unknown response to this to-do."
-msgstr ""
+msgstr "Okänt svar på uppgiften."
 
 #: itipformatter.cpp:980
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "%1 declines the counter proposal."
-msgstr "Neka till motförslag"
+msgstr "%1 nekar till motförslaget."
 
 #: itipformatter.cpp:982
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "%1 declines the counter proposal on behalf of %2."
-msgstr "Neka till motförslag"
+msgstr "%1 nekar till motförslaget på uppdrag av %2."
 
 #: itipformatter.cpp:987
 #, kde-format
 msgid "Error: To-do iTIP message with unknown method."
-msgstr ""
+msgstr "Fel: Uppgift iTIP-meddelande med okänd metod."
 
 #: itipformatter.cpp:1001
 #, kde-format
 msgid "This journal has been published."
-msgstr ""
+msgstr "Journalanteckningen har publicerats."
 
 #: itipformatter.cpp:1003
 #, kde-format
 msgid "You have been assigned this journal."
-msgstr ""
+msgstr "Du har blivit tilldelad journalanteckningen."
 
 #: itipformatter.cpp:1005
 #, kde-format
 msgid "This journal was refreshed."
-msgstr ""
+msgstr "Journalanteckningen uppdaterades."
 
 #: itipformatter.cpp:1007
 #, kde-format
 msgid "This journal was canceled."
-msgstr ""
+msgstr "Journalanteckningen avbröts."
 
 #: itipformatter.cpp:1009
 #, kde-format
 msgid "Addition to the journal."
-msgstr ""
+msgstr "Tillägg till journalanteckningen."
 
 #: itipformatter.cpp:1023
 #, kde-format
 msgid "Sender indicates this journal assignment still needs some action."
 msgstr ""
+"Avsändaren anger att uppgiftstilldelningen fortfarande behöver någon åtgärd."
 
 #: itipformatter.cpp:1025
 #, kde-format
 msgid "Sender accepts this journal."
-msgstr ""
+msgstr "Avsändaren accepterar journalanteckningen."
 
 #: itipformatter.cpp:1027
 #, kde-format
 msgid "Sender tentatively accepts this journal."
-msgstr ""
+msgstr "Avsändaren accepterar preliminärt journalanteckningen."
 
 #: itipformatter.cpp:1029
 #, kde-format
 msgid "Sender declines this journal."
-msgstr ""
+msgstr "Avsändaren nekar till journalanteckningen."
 
 #: itipformatter.cpp:1031
 #, kde-format
 msgid "Sender has delegated this request for the journal."
-msgstr ""
+msgstr "Avsändaren har delegerat begäran om journalanteckningen."
 
 #: itipformatter.cpp:1033
 #, kde-format
 msgid "The request for this journal is now completed."
-msgstr ""
+msgstr "Begäran om journalanteckningen är nu slutförd."
 
 #: itipformatter.cpp:1035
-#, fuzzy, kde-format
-#| msgid "Do you still want to accept the invitation?"
+#, kde-format
 msgid "Sender is still processing the invitation."
-msgstr "Vill du ändå acceptera inbjudan?"
+msgstr "Avsändaren behandlar fortfarande inbjudan."
 
 #: itipformatter.cpp:1037
 #, kde-format
 msgid "Unknown response to this journal."
-msgstr ""
+msgstr "Okänt svar på journalanteckningen."
 
 #: itipformatter.cpp:1042 itipformatter.cpp:1072
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "Sender makes this counter proposal."
-msgstr "Neka till motförslag"
+msgstr "Avsändaren ger motförslaget."
 
 #: itipformatter.cpp:1044 itipformatter.cpp:1074
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "Sender declines the counter proposal."
-msgstr "Neka till motförslag"
+msgstr "Avsändaren nekar till motförslaget."
 
 #: itipformatter.cpp:1046
 #, kde-format
 msgid "Error: Journal iTIP message with unknown method."
-msgstr ""
+msgstr "Fel: Journalanteckning iTIP-meddelande med okänd metod."
 
 #: itipformatter.cpp:1060
 #, kde-format
 msgid "This free/busy list has been published."
-msgstr ""
+msgstr "Ledig-upptagen-listan har publicerats."
 
 #: itipformatter.cpp:1062
 #, kde-format
 msgid "The free/busy list has been requested."
-msgstr ""
+msgstr "Ledig-upptagen-listan har begärts."
 
 #: itipformatter.cpp:1064
 #, kde-format
 msgid "This free/busy list was refreshed."
-msgstr ""
+msgstr "Ledig-upptagen-listan uppdaterades."
 
 #: itipformatter.cpp:1066
 #, kde-format
 msgid "This free/busy list was canceled."
-msgstr ""
+msgstr "Ledig-upptagen-listan avbröts."
 
 #: itipformatter.cpp:1068
 #, kde-format
 msgid "Addition to the free/busy list."
-msgstr ""
+msgstr "Tillägg till ledig-upptagen-listan."
 
 #: itipformatter.cpp:1070
 #, kde-format
 msgid "Reply to the free/busy list."
-msgstr ""
+msgstr "Svar till ledig-upptagen-listan."
 
 #: itipformatter.cpp:1076
 #, kde-format
 msgid "Error: Free/Busy iTIP message with unknown method."
-msgstr ""
+msgstr "Fel: Ledig-upptagen iTIP-meddelande med okänd metod."
 
 #: itipformatter.cpp:1140 itipformatter.cpp:1142
 #, kde-format
 msgid "%1 (<i>unrecorded</i>)"
-msgstr ""
+msgstr "%1 (<i>oregistrerat</i>)"
 
 #: itipformatter.cpp:1359
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Record"
+#, kde-format
 msgid "Record"
-msgstr "Skriv in"
+msgstr "Registrera"
 
 #: itipformatter.cpp:1362
 #, kde-format
 msgid "Move to Trash"
-msgstr ""
+msgstr "Flytta till papperskorgen"
 
 #: itipformatter.cpp:1366
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Accept"
+#, kde-format
 msgctxt "accept invitation"
 msgid "Accept"
 msgstr "Acceptera"
 
 #: itipformatter.cpp:1372
-#, fuzzy, kde-format
-#| msgctxt "Unsure if it is possible to attend."
-#| msgid "Tentative: %1"
+#, kde-format
 msgctxt "Accept invitation conditionally"
 msgid "Tentative"
-msgstr "Preliminära: %1"
+msgstr "Preliminärt"
 
 #: itipformatter.cpp:1379
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Decline"
+#, kde-format
 msgctxt "decline invitation"
 msgid "Decline"
 msgstr "Neka"
 
 #: itipformatter.cpp:1383
-#, fuzzy, kde-format
-#| msgid "Accept counter proposal"
+#, kde-format
 msgctxt "invitation counter proposal"
 msgid "Counter proposal ..."
-msgstr "Acceptera motförslag"
+msgstr "Motförslag..."
 
 #: itipformatter.cpp:1388
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delegate"
+#, kde-format
 msgctxt "delegate invitation to another"
 msgid "Delegate ..."
-msgstr "Delegera"
+msgstr "Delegera..."
 
 #: itipformatter.cpp:1398
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Accept"
+#, kde-format
 msgid "Accept"
 msgstr "Acceptera"
 
 #: itipformatter.cpp:1401
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Decline"
+#, kde-format
 msgid "Decline"
 msgstr "Neka"
 
 #: itipformatter.cpp:1411
-#, fuzzy, kde-format
-#| msgid "Record invitation into my calendar"
+#, kde-format
 msgid "Record invitation in my to-do list"
-msgstr "Skriv in inbjudan i min kalender"
+msgstr "Registrera inbjudan i min uppgiftslista"
 
 #: itipformatter.cpp:1412
-#, fuzzy, kde-format
-#| msgid "Record invitation into my calendar"
+#, kde-format
 msgid "Record invitation in my calendar"
-msgstr "Skriv in inbjudan i min kalender"
+msgstr "Registrera inbjudan i min kalender"
 
 #: itipformatter.cpp:1425
-#, fuzzy, kde-format
-#| msgid "Record response into my calendar"
+#, kde-format
 msgid "Record response in my to-do list"
-msgstr "Skriv in svar i min kalender"
+msgstr "Registrera svar i min uppgiftslista"
 
 #: itipformatter.cpp:1425
-#, fuzzy, kde-format
-#| msgid "Record response into my calendar"
+#, kde-format
 msgid "Record response in my calendar"
-msgstr "Skriv in svar i min kalender"
+msgstr "Registrera svar i min kalender"
 
 #: itipformatter.cpp:1439
-#, fuzzy, kde-format
-#| msgid "Remove invitation from my calendar"
+#, kde-format
 msgid "Remove invitation from my to-do list"
-msgstr "Ta bort inbjudan från min kalender"
+msgstr "Ta bort inbjudan från min uppgiftslista"
 
 #: itipformatter.cpp:1440 text_calendar.cpp:1420
 #, kde-format
@@ -656,45 +610,42 @@ msgstr "Ta bort inbjudan från min kalender"
 #: itipformatter.cpp:1577 itipformatter.cpp:1581
 #, kde-format
 msgid "Your <b>%1</b> response has been recorded."
-msgstr ""
+msgstr "Ditt <b>%1</b> svar har registrerats."
 
 #: itipformatter.cpp:1579 itipformatter.cpp:1583
-#, fuzzy, kde-format
-#| msgid "Do you still want to forward this invitation?"
+#, kde-format
 msgid "Your status for this invitation is <b>%1</b>."
-msgstr "Vill du ändå vidarebefordra inbjudan?"
+msgstr "Din status för inbjudan är <b>%1</b>."
 
 #: itipformatter.cpp:1588
-#, fuzzy, kde-format
-#| msgid "Invitation answer attached."
+#, kde-format
 msgid "This invitation was canceled."
-msgstr "Svar på inbjudan bilagd."
+msgstr "Inbjudan avbokades."
 
 #: itipformatter.cpp:1590
-#, fuzzy, kde-format
-#| msgid "Invitation answer attached."
+#, kde-format
 msgid "This invitation was accepted."
-msgstr "Svar på inbjudan bilagd."
+msgstr "Inbjudan accepterades."
 
 #: itipformatter.cpp:1598
 #, kde-format
 msgid "Awaiting delegation response."
-msgstr ""
+msgstr "Väntar på delegerat svar."
 
 #: itipformatter.cpp:1665 itipformatter.cpp:1667
 #, kde-format
 msgid "The <b>%1</b> response has been recorded"
-msgstr ""
+msgstr "Svaret <b>%1</b> har registrerats"
 
 #: itipformatter.cpp:1695
 #, kde-format
 msgid "Assignees:"
-msgstr ""
+msgstr "Ansvariga:"
 
 #: itipformatter.cpp:1697
 #, kde-format
 msgid "Participants:"
-msgstr ""
+msgstr "Deltagare:"
 
 #: reactiontoinvitationdialog.cpp:32
 #, kde-format
@@ -704,146 +655,130 @@ msgstr "Kommentar:"
 
 #: templates/attendee_row.html:17
 msgid "organizer"
-msgstr ""
+msgstr "organisatör"
 
 #: templates/attendee_row.html:21
 msgid "myself"
-msgstr ""
+msgstr "mig"
 
 #: templates/attendee_row.html:25
-#, fuzzy, kde-format
-#| msgid "Delegated: %1"
+#, kde-format
 msgid "delegated by %1)"
-msgstr "Delegerad: %1"
+msgstr "delegerad av %1)"
 
 #: templates/attendee_row.html:29
-#, fuzzy, kde-format
-#| msgid "Delegated: %1"
+#, kde-format
 msgid "delegated to %1)"
-msgstr "Delegerad: %1"
+msgstr "delegerad till %1)"
 
 #: templates/attendee_row.html:36
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Send EMail"
 msgid "Send email"
 msgstr "Skicka e-post"
 
 #: templates/itip.html:80
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Comment:"
 msgid "Comment:"
 msgstr "Kommentar:"
 
 #: templates/itip.html:83
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Comment:"
 msgid "Comments:"
-msgstr "Kommentar:"
+msgstr "Kommentarer:"
 
 #: templates/itip.html:122
-#, fuzzy
-#| msgid "Open Attachment"
 msgid "Attachments:"
-msgstr "Öppna bilaga"
+msgstr "Bilagor:"
 
 #: templates/itip_event.html:6
 msgid "First event:"
-msgstr ""
+msgstr "Första händelse:"
 
 #: templates/itip_event.html:8 templates/itip_todo.html:13
 msgid "When:"
-msgstr ""
+msgstr "När:"
 
 #: templates/itip_event.html:15 templates/itip_todo.html:6
 msgid "Where:"
-msgstr ""
+msgstr "Var:"
 
 #: templates/itip_event.html:22 templates/itip_todo.html:46
 msgid "Recurrence:"
-msgstr ""
+msgstr "Upprepning:"
 
 #: templates/itip_event.html:29 templates/itip_journal.html:11
 #: templates/itip_todo.html:53
 msgid "Description:"
-msgstr ""
+msgstr "Beskrivning:"
 
 #: templates/itip_event.html:42
 msgid "Events on these days:"
-msgstr ""
+msgstr "Händelser dessa dagar:"
 
 #: templates/itip_event.html:44
 msgid "Events on this day:"
-msgstr ""
+msgstr "Dagens händelser:"
 
 #: templates/itip_freebusy.html:5
 msgid "Person:"
-msgstr ""
+msgstr "Person:"
 
 #: templates/itip_freebusy.html:10
 msgid "Start date:"
-msgstr ""
+msgstr "Startdatum:"
 
 #: templates/itip_freebusy.html:15
 msgid "End date:"
-msgstr ""
+msgstr "Slutdatum:"
 
 #: templates/itip_freebusy.html:23
 msgid "Busy periods given in this free/busy object:"
-msgstr ""
+msgstr "Upptagna perioder angivna i ledig-upptagen-objektet:"
 
 #: templates/itip_freebusy.html:31
 #, kde-format
 msgctxt "<startDate> for <duration>"
 msgid "%1 for %2"
-msgstr ""
+msgstr "%1 under %2"
 
 #: templates/itip_freebusy.html:34
 #, kde-format
 msgctxt "<startDate> - <endDate>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_freebusy.html:36
 #, kde-format
 msgctxt "<date>, <startTime> - <endTime>"
 msgid "%1, %2 - %3"
-msgstr ""
+msgstr "%1, %2 - %3"
 
 #: templates/itip_journal.html:5
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Delegate:"
 msgid "Date:"
-msgstr "Representant:"
+msgstr "Datum:"
 
 #: templates/itip_todo.html:16
 #, kde-format
 msgctxt "<beginDate> - <endDate>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_todo.html:22
 #, kde-format
 msgctxt "<beginDateTime> - <endDateTime>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_todo.html:24
 #, kde-format
 msgctxt "<beginDateTime> - <endTime>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_todo.html:32
 msgid "Percent Done:"
-msgstr ""
+msgstr "Procent klar:"
 
 #: templates/itip_todo.html:39
 msgid "Due:"
-msgstr ""
+msgstr "Färdig:"
 
 #: text_calendar.cpp:374
 #, kde-format
@@ -1035,13 +970,13 @@ msgstr "Neka"
 #: text_calendar.cpp:833
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
-msgstr "Vill du ändå skriva in svaret i din kalender?"
+msgstr "Vill du ändå registrera svaret i din kalender?"
 
 #: text_calendar.cpp:834 text_calendar.cpp:870
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
-msgstr "Skriv in"
+msgstr "Registrera"
 
 #: text_calendar.cpp:837
 #, kde-format
@@ -1117,12 +1052,12 @@ msgstr "Kontrollera"
 #: text_calendar.cpp:866
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
-msgstr "Vill du ändå skriva in uppgiften i din kalender?"
+msgstr "Vill du ändå registrera uppgiften i din kalender?"
 
 #: text_calendar.cpp:868
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
-msgstr "Vill du ändå skriva in inbjudan i din kalender?"
+msgstr "Vill du ändå registrera inbjudan i din kalender?"
 
 #: text_calendar.cpp:874
 #, kde-format
@@ -1200,7 +1135,7 @@ msgstr ""
 "post om du så önskar.\n"
 "\n"
 "Vill du skicka organisatören ett brev angående den här inbjudan?\n"
-"Tryck på knappen [Avbryt] för att avbryta inskrivningen."
+"Tryck på knappen [Avbryt] för att avbryta registreringsåtgärden."
 
 #: text_calendar.cpp:1293
 #, kde-format
@@ -1283,12 +1218,12 @@ msgstr "Kontrollera min kalender…"
 #: text_calendar.cpp:1410
 #, kde-format
 msgid "Record response into my calendar"
-msgstr "Skriv in svar i min kalender"
+msgstr "Registrera svar i min kalender"
 
 #: text_calendar.cpp:1412
 #, kde-format
 msgid "Record invitation into my calendar"
-msgstr "Skriv in inbjudan i min kalender"
+msgstr "Registrera inbjudan i min kalender"
 
 #: text_calendar.cpp:1414
 #, kde-format
