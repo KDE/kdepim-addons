@@ -1,27 +1,28 @@
-# translation of kmail_text_calendar_plugin.po to Spanish
+# Spanish translations for messageviewer_text_calendar_plugin.po package.
 # Translation of kmail_text_calendar_plugin to Spanish
-# Copyright (C) 2004, 2007, 2008, 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the kdepim-addons package.
+# Copyright (C) 2004-2026 This file is copyright:
 #
-# Juan Manuel Garcia Molina <juanma@superiodico.net>, 2004, 2007.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2008, 2009, 2019, 2021, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Franco Mariluis <fmariluis@gmail.com>, 2008.
-# Enrique Matias Sanchez (Quique) <cronopios@gmail.com>, 2009.
-# Javier Vinal <fjvinal@gmail.com>, 2009, 2010, 2011, 2017.
-# Javier Viñal <fjvinal@gmail.com>, 2010, 2012, 2013, 2014, 2015.
+# SPDX-FileCopyrightText: 2004, 2007 Juan Manuel Garcia Molina <juanma@superiodico.net>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2008-2009, 2019, 2021, 2024, 2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2008 Franco Mariluis <fmariluis@gmail.com>
+# SPDX-FileCopyrightText: 2009 Enrique Matias Sanchez (Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2009-2011, 2017 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2012-2015 Javier Viñal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kmail_text_calendar_plugin\n"
+"Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2024-08-01 04:41+0200\n"
+"PO-Revision-Date: 2026-09-13 00:46+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: attendeeselector.cpp:21
@@ -122,7 +123,7 @@ msgstr "Respuesta: "
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
-msgstr "Declinada: %1"
+msgstr "Rechazada: %1"
 
 #: text_calendar.cpp:514
 #, kde-format
@@ -251,13 +252,13 @@ msgstr "¿Aún quiere enviar una respuesta de rechazo?"
 #: text_calendar.cpp:803
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
-msgstr "¿Aún quiere declinar la contrapropuesta?"
+msgstr "¿Aún quiere rechazar la contrapropuesta?"
 
 #: text_calendar.cpp:804
 #, kde-format
 msgctxt "@action:button"
 msgid "Decline"
-msgstr "Declinar"
+msgstr "Rechazar"
 
 #: text_calendar.cpp:806
 #, kde-format
@@ -471,7 +472,7 @@ msgstr "Abrir adjunto"
 #: text_calendar.cpp:1343
 #, kde-format
 msgid "Save Attachment As…"
-msgstr "Guardar adjunto como..."
+msgstr "Guardar adjunto como…"
 
 #: text_calendar.cpp:1359
 #, kde-format
@@ -491,7 +492,7 @@ msgstr "Aceptar la contrapropuesta"
 #: text_calendar.cpp:1365
 #, kde-format
 msgid "Create a counter proposal…"
-msgstr "Crear una contrapropuesta..."
+msgstr "Crear una contrapropuesta…"
 
 #: text_calendar.cpp:1367
 #, kde-format
@@ -501,7 +502,7 @@ msgstr "Descartar el correo"
 #: text_calendar.cpp:1369
 #, kde-format
 msgid "Decline invitation"
-msgstr "Declinar la invitación"
+msgstr "Rechazar la invitación"
 
 #: text_calendar.cpp:1371
 #, kde-format
@@ -511,12 +512,12 @@ msgstr "Posponer"
 #: text_calendar.cpp:1373
 #, kde-format
 msgid "Decline counter proposal"
-msgstr "Declinar la contrapropuesta"
+msgstr "Rechazar la contrapropuesta"
 
 #: text_calendar.cpp:1375
 #, kde-format
 msgid "Check my calendar…"
-msgstr "Comprobar mi calendario..."
+msgstr "Comprobar mi calendario…"
 
 #: text_calendar.cpp:1377
 #, kde-format

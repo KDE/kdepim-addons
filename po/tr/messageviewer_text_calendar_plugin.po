@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009.
 # Volkan Gezer <volkangezer@gmail.com>, 2013.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:52+0000\n"
-"PO-Revision-Date: 2026-05-02 18:52+0300\n"
+"PO-Revision-Date: 2026-09-12 20:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 
 #: attendeeselector.cpp:21
@@ -75,7 +75,7 @@ msgstr "Açıklama:"
 #: text_calendar.cpp:360
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
-msgstr "Davette “%1” adlı bir ek bulunamadı."
+msgstr "Dâvette “%1” adlı bir ek bulunamadı."
 
 #: text_calendar.cpp:375
 #, kde-format
@@ -84,7 +84,7 @@ msgid ""
 "this computer. Please ask the event organizer to resend the invitation with "
 "this attachment stored inline instead of a link."
 msgstr ""
-"“%1” daveti eki, bu bilgisayardan erişilemeyen bir web bağlantısıdır. Lütfen "
+"“%1” dâveti eki, bu bilgisayardan erişilemeyen bir web bağlantısıdır. Lütfen "
 "organizatörden bu eki bir bağlantı yerine kaydedilmiş şekilde yeniden "
 "göndermesini isteyin."
 
@@ -139,7 +139,7 @@ msgstr "Kabul edildi: %1"
 #: text_calendar.cpp:538 text_calendar.cpp:557
 #, kde-format
 msgid "Invitation answer attached."
-msgstr "Davet yanıtı eklendi."
+msgstr "Dâvet yanıtı iliştirildi."
 
 #: text_calendar.cpp:660
 #, kde-format
@@ -154,7 +154,7 @@ msgstr "Yanıt: %1"
 #: text_calendar.cpp:668
 #, kde-format
 msgid "Delegated: %1"
-msgstr "Devredildi: %1"
+msgstr "Delege edildi: %1"
 
 #: text_calendar.cpp:671
 #, kde-format
@@ -209,7 +209,7 @@ msgstr "Görevi hâlâ kabul etmek mi istiyorsunuz?"
 #: text_calendar.cpp:778
 #, kde-format
 msgid "Do you still want to accept the invitation?"
-msgstr "Daveti hâlâ kabul etmek mi istiyorsunuz?"
+msgstr "Dâveti kabul etmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:780 text_calendar.cpp:792
 #, kde-format
@@ -220,7 +220,7 @@ msgstr "Kabul Et"
 #: text_calendar.cpp:784
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
-msgstr "Davetin şartlı kabulünü göndermeyi hâlâ istiyor musunuz?"
+msgstr "Dâvetin şartlı kabulünü göndermeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:786
 #, kde-format
@@ -236,12 +236,12 @@ msgstr "Gönder"
 #: text_calendar.cpp:791
 #, kde-format
 msgid "Do you still want to accept the counter proposal?"
-msgstr "Sayaç önerisini hâlâ kabul etmek mi istiyorsunuz?"
+msgstr "Karşı teklifi yine de kabul etmek mi istiyorsunuz?"
 
 #: text_calendar.cpp:795
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
-msgstr "Hâlâ sayaç önerisi göndermek mi istiyorsunuz?"
+msgstr "Yine de bir karşı teklifte bulunmak mı istiyorsunuz?"
 
 #: text_calendar.cpp:799
 #, kde-format
@@ -251,7 +251,7 @@ msgstr "Red yanıtı göndermeyi hâlâ istiyor musunuz?"
 #: text_calendar.cpp:803
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
-msgstr "Sayaç önerisini hâlâ reddetmek mi istiyorsunuz?"
+msgstr "Karşı teklifi yine de reddetmek mi istiyorsunuz?"
 
 #: text_calendar.cpp:804
 #, kde-format
@@ -273,18 +273,18 @@ msgstr "Kayıt Yap"
 #: text_calendar.cpp:810
 #, kde-format
 msgid "Do you still want to delegate this task?"
-msgstr "Bu görevi temsil etmeyi hâlâ istiyor musunuz?"
+msgstr "Bu görevi delege etmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:812
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
-msgstr "Bu daveti temsil etmeyi hâlâ istiyor musunuz?"
+msgstr "Bu dâveti delege etmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:814
 #, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
-msgstr "Temsil Et"
+msgstr "Delege Et"
 
 #: text_calendar.cpp:817
 #, kde-format
@@ -294,7 +294,7 @@ msgstr "Bu görevi yönlendirmeyi hâlâ istiyor musunuz?"
 #: text_calendar.cpp:819
 #, kde-format
 msgid "Do you still want to forward this invitation?"
-msgstr "Bu daveti yönlendirmeyi hâlâ istiyor musunuz?"
+msgstr "Bu dâveti yönlendirmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:821
 #, kde-format
@@ -316,13 +316,13 @@ msgstr "Görevi İptal Et"
 #: text_calendar.cpp:828
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
-msgstr "Bu daveti iptal etmeyi hâlâ istiyor musunuz?"
+msgstr "Bu dâveti iptal etmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:829 text_calendar.cpp:850
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Invitation"
-msgstr "Daveti İptal Et"
+msgstr "Dâveti İptal Et"
 
 #: text_calendar.cpp:832 text_calendar.cpp:853
 #, kde-format
@@ -349,7 +349,7 @@ msgstr "Bu görevi takviminize kaydetmeyi hâlâ istiyor musunuz?"
 #: text_calendar.cpp:841
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
-msgstr "Bu daveti takviminize kaydetmeyi hâlâ istiyor musunuz?"
+msgstr "Bu dâveti takviminize kaydetmeyi hâlâ istiyor musunuz?"
 
 #: text_calendar.cpp:846
 #, kde-format
@@ -379,7 +379,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
-msgstr "Davet Tepkisi"
+msgstr "Dâvet Tepkisi"
 
 #: text_calendar.cpp:902 text_calendar.cpp:1161
 #, kde-format
@@ -395,13 +395,13 @@ msgstr "Organizatörü yetkilendirme olanaklı değil."
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
-msgstr "Davet Ekini Kaydet"
+msgstr "Dâvet Ekini Kaydet"
 
 #: text_calendar.cpp:1150
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
-msgstr "Sayaç Önerisini Kabul Etme"
+msgstr "Karşı Teklifi Reddet"
 
 #: text_calendar.cpp:1192
 #, kde-format
@@ -410,7 +410,7 @@ msgid ""
 "a response will not be possible.\n"
 "Please create at least 1 writable events calendar and re-sync."
 msgstr ""
-"Davetler için yazılabilir bir takvim klasörünüz yok, bu yüzden yanıtların "
+"Dâvetler için yazılabilir bir takvim klasörünüz yok, bu yüzden yanıtların "
 "depolanması ve kaydedilmesi olanaklı olmayacak.\n"
 "Lütfen en az 1 yazılabilir olay takvimi oluşturun ve yeniden eşzamanlayın."
 
@@ -420,7 +420,7 @@ msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
 "Unable to continue."
 msgstr ""
-"Bu e-posta iletisinde depolanmış takvim daveti bir şekilde bozulmuş ve "
+"Bu e-posta iletisinde depolanmış takvim dâveti bir şekilde bozulmuş ve "
 "sürdürülemiyor."
 
 #: text_calendar.cpp:1266
@@ -433,10 +433,10 @@ msgid ""
 "Would you like to send the organizer a message regarding this invitation?\n"
 "Press the [Cancel] button to cancel the recording operation."
 msgstr ""
-"Organizatör bu davete bir yanıt beklemiyor; ancak isterseniz bir e-posta "
+"Organizatör bu dâvete bir yanıt beklemiyor; ancak isterseniz bir e-posta "
 "iletisi gönderebilirsiniz.\n"
 "\n"
-"Organizatöre bu davet hakkında bir ileti göndermek ister misiniz?\n"
+"Organizatöre bu dâvet hakkında bir ileti göndermek ister misiniz?\n"
 "Kayıt işlemini iptal etmek için [İptal] düğmesine basın."
 
 #: text_calendar.cpp:1270
@@ -475,22 +475,22 @@ msgstr "Eki Farklı Kaydet…"
 #: text_calendar.cpp:1359
 #, kde-format
 msgid "Accept invitation"
-msgstr "Daveti kabul et"
+msgstr "Dâveti kabul et"
 
 #: text_calendar.cpp:1361
 #, kde-format
 msgid "Accept invitation conditionally"
-msgstr "Daveti koşullu olarak kabul et"
+msgstr "Dâveti koşullu olarak kabul et"
 
 #: text_calendar.cpp:1363
 #, kde-format
 msgid "Accept counter proposal"
-msgstr "Sayaç önerisini kabul et"
+msgstr "Karşı teklifi kabul et"
 
 #: text_calendar.cpp:1365
 #, kde-format
 msgid "Create a counter proposal…"
-msgstr "Bir Karşı Öneri Oluştur…"
+msgstr "Karşı teklif oluştur…"
 
 #: text_calendar.cpp:1367
 #, kde-format
@@ -500,7 +500,7 @@ msgstr "E-postayı sil"
 #: text_calendar.cpp:1369
 #, kde-format
 msgid "Decline invitation"
-msgstr "Daveti reddet"
+msgstr "Dâveti reddet"
 
 #: text_calendar.cpp:1371
 #, kde-format
@@ -510,7 +510,7 @@ msgstr "Ertele"
 #: text_calendar.cpp:1373
 #, kde-format
 msgid "Decline counter proposal"
-msgstr "Sayaç önerisini kabul etme"
+msgstr "Karşı teklifi reddet"
 
 #: text_calendar.cpp:1375
 #, kde-format
@@ -525,27 +525,27 @@ msgstr "Yanıtı takvimime kaydet"
 #: text_calendar.cpp:1379
 #, kde-format
 msgid "Record invitation into my calendar"
-msgstr "Daveti takvimime kaydet"
+msgstr "Dâveti takvimime kaydet"
 
 #: text_calendar.cpp:1381
 #, kde-format
 msgid "Move this invitation to my trash folder"
-msgstr "Bu daveti çöp klasörüme taşı"
+msgstr "Dâveti çöp klasörüme taşı"
 
 #: text_calendar.cpp:1383
 #, kde-format
 msgid "Delegate invitation"
-msgstr "Davete temsilci gönder"
+msgstr "Dâveti delege et"
 
 #: text_calendar.cpp:1385
 #, kde-format
 msgid "Forward invitation"
-msgstr "Daveti yönlendir"
+msgstr "Dâveti ilet"
 
 #: text_calendar.cpp:1387
 #, kde-format
 msgid "Remove invitation from my calendar"
-msgstr "Daveti takvimimden sil"
+msgstr "Dâveti takvimimden kaldır"
 
 #: text_calendar.cpp:1390
 #, kde-format

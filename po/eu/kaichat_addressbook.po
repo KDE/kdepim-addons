@@ -1,16 +1,24 @@
 # Translation for kaichat_addressbook.po to Euskara/Basque (eu).
-# Copyright (C) 2025 This file is copyright:
+# Copyright (C) 2025-2026 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2025-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: Iñigo Salvador Azurmendi <xalba@ni.eus>, 2025, 2026.
+#
+# Egoera:
+# KAIChat-ekin lotutako kdepim-addons katalogoen berrikuspen integrala: 2026-09-12
+# Azken berrikuspena: 2026-09-12.
+# Terminologia, estiloa, ortotipografia, kohesioa eta koherentzia berrikusi dira.
+# Erreferentzia-gida: kde-aa-eta-hizkuntza-ereduen_eu_itzulpen_gida.md
+# Bigarren erreferentzia: kde-pim-aplikazioen_eu_itzulpen-gida.md
+# Ikus, halaber: KDE-eu-berrikuspen-integralen-erregistroa.md
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 02:42+0000\n"
-"PO-Revision-Date: 2025-12-07 20:16+0100\n"
+"PO-Revision-Date: 2026-09-12 23:30+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: kaichataddressbookplugin.cpp:24
 msgid "AddressBook info"
@@ -31,23 +39,23 @@ msgstr "Erabiltzailearen izena"
 #: kaichataddressbookplugin.cpp:50
 #, kde-format
 msgid "Get Info From AddressBook"
-msgstr "Lortu helbide-liburuko informazioa"
+msgstr "Helbide-liburuko informazioa lortu"
 
 #: kaichataddressbookplugin.cpp:55
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
-"Erabili tresna hau akonadi datu-basetik erabiltzaileen informazioa lortzeko"
+"Tresna hau Akonadi datu-basetik erabiltzailearen informazioa lortzeko erabili"
 
 #: kaichataddressbookplugindialog.cpp:16
 #, kde-format
 msgid "Configure Addressbook Tool Plugin"
-msgstr "Konfiguratu Helbide-liburu tresnaren plugina"
+msgstr "Helbide-libururako tresna-plugina konfiguratu"
 
 #: kaichataddressbookpluginjob.cpp:30
 #, kde-format
 msgid "Get Email..."
-msgstr "Lortu e-posta..."
+msgstr "E-posta lortu…"
 
 #: kaichataddressbookpluginjob.cpp:69
 #, kde-format
@@ -82,10 +90,10 @@ msgstr "Ez da %1(e)ren helbiderik aurkitu"
 #: kaichataddressbookpluginjob.cpp:101
 #, kde-format
 msgid "Address found for %1 is %2"
-msgstr "Aurkitu den %1(e)ren helbidea %2 da"
+msgstr "%1(e)rentzat aurkitutako helbidea %2 da"
 
 #~ msgid "Get email address"
-#~ msgstr "Lortu e-posta helbidea"
+#~ msgstr "E-posta helbidea lortu"
 
 #~ msgid "The Current Date Time"
-#~ msgstr "Uneko data ordua"
+#~ msgstr "Uneko data-ordua"
