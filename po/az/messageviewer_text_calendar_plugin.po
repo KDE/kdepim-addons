@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-12 00:45+0000\n"
+"POT-Creation-Date: 2026-09-14 00:44+0000\n"
 "PO-Revision-Date: 2022-07-21 15:24+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "İstiqamət:"
 msgid "Organizer Unknown"
 msgstr ""
 
-#: itipformatter.cpp:160 itipformatter.cpp:838
+#: itipformatter.cpp:160 itipformatter.cpp:839
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Send"
@@ -109,18 +109,18 @@ msgstr ""
 msgid "(<b>Note</b>: the Organizer preset your response to <b>%1</b>)"
 msgstr ""
 
-#: itipformatter.cpp:517 itipformatter.cpp:578
+#: itipformatter.cpp:518 itipformatter.cpp:579
 #, fuzzy, kde-format
 #| msgid "Check my calendar..."
 msgid "Check my calendar"
 msgstr "Təqvimi yoxlayın..."
 
-#: itipformatter.cpp:559 itipformatter.cpp:636
+#: itipformatter.cpp:560 itipformatter.cpp:637
 #, kde-format
 msgid "Please respond again to the original proposal."
 msgstr ""
 
-#: itipformatter.cpp:613 itipformatter.cpp:647
+#: itipformatter.cpp:614 itipformatter.cpp:648
 #, fuzzy, kde-format
 #| msgid ""
 #| "%1\n"
@@ -130,444 +130,444 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: itipformatter.cpp:737
+#: itipformatter.cpp:738
 #, kde-format
 msgid "This invitation has been published."
 msgstr ""
 
-#: itipformatter.cpp:742
+#: itipformatter.cpp:743
 #, kde-format
 msgid "This invitation has been updated by the organizer %1."
 msgstr ""
 
-#: itipformatter.cpp:744
+#: itipformatter.cpp:745
 #, kde-format
 msgid "This invitation has been updated by %1 as a representative of %2."
 msgstr ""
 
-#: itipformatter.cpp:748
+#: itipformatter.cpp:749
 #, fuzzy, kde-format
 #| msgid "Delegate invitation"
 msgid "I created this invitation."
 msgstr "Dəvəti həvalə edin"
 
-#: itipformatter.cpp:752
+#: itipformatter.cpp:753
 #, kde-format
 msgid "You received an invitation from %1."
 msgstr ""
 
-#: itipformatter.cpp:754
+#: itipformatter.cpp:755
 #, kde-format
 msgid "You received an invitation from %1 as a representative of %2."
 msgstr ""
 
-#: itipformatter.cpp:758
+#: itipformatter.cpp:759
 #, fuzzy, kde-format
 #| msgid "Invitation answer attached."
 msgid "This invitation was refreshed."
 msgstr "Dəvətə cavab əlavə olundu."
 
-#: itipformatter.cpp:761
+#: itipformatter.cpp:762
 #, fuzzy, kde-format
 #| msgid "Invitation answer attached."
 msgid "This invitation has been canceled."
 msgstr "Dəvətə cavab əlavə olundu."
 
-#: itipformatter.cpp:763
+#: itipformatter.cpp:764
 #, kde-format
 msgid "The organizer has revoked the invitation."
 msgstr ""
 
-#: itipformatter.cpp:766
+#: itipformatter.cpp:767
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Reaction to Invitation"
 msgid "Addition to the invitation."
 msgstr "Dəvətə cavab"
 
-#: itipformatter.cpp:788
+#: itipformatter.cpp:789
 #, kde-format
 msgid "%1 indicates this invitation still needs some action."
 msgstr ""
 
-#: itipformatter.cpp:792
+#: itipformatter.cpp:793
 #, kde-format
 msgid "This invitation has been updated by attendee %1."
 msgstr ""
 
-#: itipformatter.cpp:794
+#: itipformatter.cpp:795
 #, kde-format
 msgid "This invitation has been updated by an attendee."
 msgstr ""
 
-#: itipformatter.cpp:798
+#: itipformatter.cpp:799
 #, fuzzy, kde-format
 #| msgid "Accept invitation"
 msgid "%1 accepts this invitation."
 msgstr "Dəvəti qəbul edin"
 
-#: itipformatter.cpp:800
+#: itipformatter.cpp:801
 #, kde-format
 msgid "%1 accepts this invitation on behalf of %2."
 msgstr ""
 
-#: itipformatter.cpp:805
+#: itipformatter.cpp:806
 #, fuzzy, kde-format
 #| msgid "Do you still want to accept the invitation?"
 msgid "%1 tentatively accepts this invitation."
 msgstr "Siz hələ də bu dəvəti qəbul etmək istəyirsiniz?"
 
-#: itipformatter.cpp:807
+#: itipformatter.cpp:808
 #, kde-format
 msgid "%1 tentatively accepts this invitation on behalf of %2."
 msgstr ""
 
-#: itipformatter.cpp:811
+#: itipformatter.cpp:812
 #, fuzzy, kde-format
 #| msgid "Decline invitation"
 msgid "%1 declines this invitation."
 msgstr "Dəvəti qəbul etməyin"
 
-#: itipformatter.cpp:813
+#: itipformatter.cpp:814
 #, kde-format
 msgid "%1 declines this invitation on behalf of %2."
 msgstr ""
 
-#: itipformatter.cpp:823
+#: itipformatter.cpp:824
 #, fuzzy, kde-format
 #| msgid "Do you still want to delegate this invitation?"
 msgid "%1 has delegated this invitation to %2."
 msgstr "Bu dəvəti həvalə etmək istəyirsiniz?"
 
-#: itipformatter.cpp:825
+#: itipformatter.cpp:826
 #, fuzzy, kde-format
 #| msgid "Delegate invitation"
 msgid "%1 has delegated this invitation."
 msgstr "Dəvəti həvalə edin"
 
-#: itipformatter.cpp:829
+#: itipformatter.cpp:830
 #, kde-format
 msgid "This invitation is now completed."
 msgstr ""
 
-#: itipformatter.cpp:831
+#: itipformatter.cpp:832
 #, fuzzy, kde-format
 #| msgid "Do you still want to accept the invitation?"
 msgid "%1 is still processing the invitation."
 msgstr "Siz hələ də bu dəvəti qəbul etmək istəyirsiniz?"
 
-#: itipformatter.cpp:833
+#: itipformatter.cpp:834
 #, kde-format
 msgid "Unknown response to this invitation."
 msgstr ""
 
-#: itipformatter.cpp:838 itipformatter.cpp:975
+#: itipformatter.cpp:839 itipformatter.cpp:976
 #, fuzzy, kde-format
 #| msgid "Accept counter proposal"
 msgid "%1 makes this counter proposal."
 msgstr "Əks dəvəti qəbul edin"
 
-#: itipformatter.cpp:843
+#: itipformatter.cpp:844
 #, fuzzy, kde-format
 #| msgid "Decline counter proposal"
 msgid "%1 declines your counter proposal."
 msgstr "Əks dəvəti qəbul etməyin"
 
-#: itipformatter.cpp:845
+#: itipformatter.cpp:846
 #, fuzzy, kde-format
 #| msgid "Decline counter proposal"
 msgid "%1 declines your counter proposal on behalf of %2."
 msgstr "Əks dəvəti qəbul etməyin"
 
-#: itipformatter.cpp:850
+#: itipformatter.cpp:851
 #, kde-format
 msgid "Error: Event iTIP message with unknown method."
 msgstr ""
 
-#: itipformatter.cpp:865
+#: itipformatter.cpp:866
 #, kde-format
 msgid "This to-do has been published."
 msgstr ""
 
-#: itipformatter.cpp:870
+#: itipformatter.cpp:871
 #, kde-format
 msgid "This to-do has been updated by the organizer %1."
 msgstr ""
 
-#: itipformatter.cpp:872
+#: itipformatter.cpp:873
 #, kde-format
 msgid "This to-do has been updated by %1 as a representative of %2."
 msgstr ""
 
-#: itipformatter.cpp:876
+#: itipformatter.cpp:877
 #, kde-format
 msgid "I created this to-do."
 msgstr ""
 
-#: itipformatter.cpp:880
+#: itipformatter.cpp:881
 #, kde-format
 msgid "You have been assigned this to-do by %1."
 msgstr ""
 
-#: itipformatter.cpp:882
+#: itipformatter.cpp:883
 #, kde-format
 msgid "You have been assigned this to-do by %1 as a representative of %2."
 msgstr ""
 
-#: itipformatter.cpp:887
+#: itipformatter.cpp:888
 #, kde-format
 msgid "This to-do was refreshed."
 msgstr ""
 
-#: itipformatter.cpp:890
+#: itipformatter.cpp:891
 #, kde-format
 msgid "This to-do was canceled."
 msgstr ""
 
-#: itipformatter.cpp:892
+#: itipformatter.cpp:893
 #, kde-format
 msgid "The organizer has revoked this to-do."
 msgstr ""
 
-#: itipformatter.cpp:895
+#: itipformatter.cpp:896
 #, kde-format
 msgid "Addition to the to-do."
 msgstr ""
 
-#: itipformatter.cpp:917
+#: itipformatter.cpp:918
 #, kde-format
 msgid "%1 indicates this to-do assignment still needs some action."
 msgstr ""
 
-#: itipformatter.cpp:922
+#: itipformatter.cpp:923
 #, kde-format
 msgid "This to-do has been completed by assignee %1."
 msgstr ""
 
-#: itipformatter.cpp:924
+#: itipformatter.cpp:925
 #, kde-format
 msgid "This to-do has been updated by assignee %1."
 msgstr ""
 
-#: itipformatter.cpp:928
+#: itipformatter.cpp:929
 #, kde-format
 msgid "This to-do has been completed by an assignee."
 msgstr ""
 
-#: itipformatter.cpp:930
+#: itipformatter.cpp:931
 #, kde-format
 msgid "This to-do has been updated by an assignee."
 msgstr ""
 
-#: itipformatter.cpp:935
+#: itipformatter.cpp:936
 #, kde-format
 msgid "%1 accepts this to-do."
 msgstr ""
 
-#: itipformatter.cpp:937
+#: itipformatter.cpp:938
 #, kde-format
 msgid "%1 accepts this to-do on behalf of %2."
 msgstr ""
 
-#: itipformatter.cpp:942
+#: itipformatter.cpp:943
 #, kde-format
 msgid "%1 tentatively accepts this to-do."
 msgstr ""
 
-#: itipformatter.cpp:944
+#: itipformatter.cpp:945
 #, kde-format
 msgid "%1 tentatively accepts this to-do on behalf of %2."
 msgstr ""
 
-#: itipformatter.cpp:948
+#: itipformatter.cpp:949
 #, kde-format
 msgid "%1 declines this to-do."
 msgstr ""
 
-#: itipformatter.cpp:950
+#: itipformatter.cpp:951
 #, kde-format
 msgid "%1 declines this to-do on behalf of %2."
 msgstr ""
 
-#: itipformatter.cpp:960
+#: itipformatter.cpp:961
 #, kde-format
 msgid "%1 has delegated this to-do to %2."
 msgstr ""
 
-#: itipformatter.cpp:962
+#: itipformatter.cpp:963
 #, fuzzy, kde-format
 #| msgid "\"%1\" has already started."
 msgid "%1 has delegated this to-do."
 msgstr "\"%1\" artıq başlayıb."
 
-#: itipformatter.cpp:966
+#: itipformatter.cpp:967
 #, kde-format
 msgid "The request for this to-do is now completed."
 msgstr ""
 
-#: itipformatter.cpp:968
+#: itipformatter.cpp:969
 #, kde-format
 msgid "%1 is still processing the to-do."
 msgstr ""
 
-#: itipformatter.cpp:970
+#: itipformatter.cpp:971
 #, kde-format
 msgid "Unknown response to this to-do."
 msgstr ""
 
-#: itipformatter.cpp:980
+#: itipformatter.cpp:981
 #, fuzzy, kde-format
 #| msgid "Decline counter proposal"
 msgid "%1 declines the counter proposal."
 msgstr "Əks dəvəti qəbul etməyin"
 
-#: itipformatter.cpp:982
+#: itipformatter.cpp:983
 #, fuzzy, kde-format
 #| msgid "Decline counter proposal"
 msgid "%1 declines the counter proposal on behalf of %2."
 msgstr "Əks dəvəti qəbul etməyin"
 
-#: itipformatter.cpp:987
+#: itipformatter.cpp:988
 #, kde-format
 msgid "Error: To-do iTIP message with unknown method."
 msgstr ""
 
-#: itipformatter.cpp:1001
+#: itipformatter.cpp:1002
 #, kde-format
 msgid "This journal has been published."
 msgstr ""
 
-#: itipformatter.cpp:1003
+#: itipformatter.cpp:1004
 #, kde-format
 msgid "You have been assigned this journal."
 msgstr ""
 
-#: itipformatter.cpp:1005
+#: itipformatter.cpp:1006
 #, kde-format
 msgid "This journal was refreshed."
 msgstr ""
 
-#: itipformatter.cpp:1007
+#: itipformatter.cpp:1008
 #, kde-format
 msgid "This journal was canceled."
 msgstr ""
 
-#: itipformatter.cpp:1009
+#: itipformatter.cpp:1010
 #, kde-format
 msgid "Addition to the journal."
 msgstr ""
 
-#: itipformatter.cpp:1023
+#: itipformatter.cpp:1024
 #, kde-format
 msgid "Sender indicates this journal assignment still needs some action."
 msgstr ""
 
-#: itipformatter.cpp:1025
+#: itipformatter.cpp:1026
 #, kde-format
 msgid "Sender accepts this journal."
 msgstr ""
 
-#: itipformatter.cpp:1027
+#: itipformatter.cpp:1028
 #, kde-format
 msgid "Sender tentatively accepts this journal."
 msgstr ""
 
-#: itipformatter.cpp:1029
+#: itipformatter.cpp:1030
 #, kde-format
 msgid "Sender declines this journal."
 msgstr ""
 
-#: itipformatter.cpp:1031
+#: itipformatter.cpp:1032
 #, kde-format
 msgid "Sender has delegated this request for the journal."
 msgstr ""
 
-#: itipformatter.cpp:1033
+#: itipformatter.cpp:1034
 #, kde-format
 msgid "The request for this journal is now completed."
 msgstr ""
 
-#: itipformatter.cpp:1035
+#: itipformatter.cpp:1036
 #, fuzzy, kde-format
 #| msgid "Do you still want to accept the invitation?"
 msgid "Sender is still processing the invitation."
 msgstr "Siz hələ də bu dəvəti qəbul etmək istəyirsiniz?"
 
-#: itipformatter.cpp:1037
+#: itipformatter.cpp:1038
 #, kde-format
 msgid "Unknown response to this journal."
 msgstr ""
 
-#: itipformatter.cpp:1042 itipformatter.cpp:1072
+#: itipformatter.cpp:1043 itipformatter.cpp:1073
 #, fuzzy, kde-format
 #| msgid "Decline counter proposal"
 msgid "Sender makes this counter proposal."
 msgstr "Əks dəvəti qəbul etməyin"
 
-#: itipformatter.cpp:1044 itipformatter.cpp:1074
+#: itipformatter.cpp:1045 itipformatter.cpp:1075
 #, fuzzy, kde-format
 #| msgid "Decline counter proposal"
 msgid "Sender declines the counter proposal."
 msgstr "Əks dəvəti qəbul etməyin"
 
-#: itipformatter.cpp:1046
+#: itipformatter.cpp:1047
 #, kde-format
 msgid "Error: Journal iTIP message with unknown method."
 msgstr ""
 
-#: itipformatter.cpp:1060
+#: itipformatter.cpp:1061
 #, kde-format
 msgid "This free/busy list has been published."
 msgstr ""
 
-#: itipformatter.cpp:1062
+#: itipformatter.cpp:1063
 #, kde-format
 msgid "The free/busy list has been requested."
 msgstr ""
 
-#: itipformatter.cpp:1064
+#: itipformatter.cpp:1065
 #, kde-format
 msgid "This free/busy list was refreshed."
 msgstr ""
 
-#: itipformatter.cpp:1066
+#: itipformatter.cpp:1067
 #, kde-format
 msgid "This free/busy list was canceled."
 msgstr ""
 
-#: itipformatter.cpp:1068
+#: itipformatter.cpp:1069
 #, kde-format
 msgid "Addition to the free/busy list."
 msgstr ""
 
-#: itipformatter.cpp:1070
+#: itipformatter.cpp:1071
 #, kde-format
 msgid "Reply to the free/busy list."
 msgstr ""
 
-#: itipformatter.cpp:1076
+#: itipformatter.cpp:1077
 #, kde-format
 msgid "Error: Free/Busy iTIP message with unknown method."
 msgstr ""
 
-#: itipformatter.cpp:1140 itipformatter.cpp:1142
+#: itipformatter.cpp:1142 itipformatter.cpp:1144
 #, kde-format
 msgid "%1 (<i>unrecorded</i>)"
 msgstr ""
 
-#: itipformatter.cpp:1359
+#: itipformatter.cpp:1361
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Record"
 msgid "Record"
 msgstr "Yazın"
 
-#: itipformatter.cpp:1362
+#: itipformatter.cpp:1364
 #, kde-format
 msgid "Move to Trash"
 msgstr ""
 
-#: itipformatter.cpp:1366
+#: itipformatter.cpp:1368
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Accept"
@@ -575,7 +575,7 @@ msgctxt "accept invitation"
 msgid "Accept"
 msgstr "Qəbul edin"
 
-#: itipformatter.cpp:1372
+#: itipformatter.cpp:1374
 #, fuzzy, kde-format
 #| msgctxt "Unsure if it is possible to attend."
 #| msgid "Tentative: %1"
@@ -583,7 +583,7 @@ msgctxt "Accept invitation conditionally"
 msgid "Tentative"
 msgstr "Şərti: %1"
 
-#: itipformatter.cpp:1379
+#: itipformatter.cpp:1381
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Decline"
@@ -591,14 +591,14 @@ msgctxt "decline invitation"
 msgid "Decline"
 msgstr "İmtina edin"
 
-#: itipformatter.cpp:1383
+#: itipformatter.cpp:1385
 #, fuzzy, kde-format
 #| msgid "Accept counter proposal"
 msgctxt "invitation counter proposal"
 msgid "Counter proposal ..."
 msgstr "Əks dəvəti qəbul edin"
 
-#: itipformatter.cpp:1388
+#: itipformatter.cpp:1390
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Delegate"
@@ -606,94 +606,94 @@ msgctxt "delegate invitation to another"
 msgid "Delegate ..."
 msgstr "Həvalə edin"
 
-#: itipformatter.cpp:1398
+#: itipformatter.cpp:1400
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Accept"
 msgid "Accept"
 msgstr "Qəbul edin"
 
-#: itipformatter.cpp:1401
+#: itipformatter.cpp:1403
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Decline"
 msgid "Decline"
 msgstr "İmtina edin"
 
-#: itipformatter.cpp:1411
+#: itipformatter.cpp:1413
 #, fuzzy, kde-format
 #| msgid "Record invitation into my calendar"
 msgid "Record invitation in my to-do list"
 msgstr "Dəvəti təqvimimə əlavə olunsun"
 
-#: itipformatter.cpp:1412
+#: itipformatter.cpp:1414
 #, fuzzy, kde-format
 #| msgid "Record invitation into my calendar"
 msgid "Record invitation in my calendar"
 msgstr "Dəvəti təqvimimə əlavə olunsun"
 
-#: itipformatter.cpp:1425
+#: itipformatter.cpp:1427
 #, fuzzy, kde-format
 #| msgid "Record response into my calendar"
 msgid "Record response in my to-do list"
 msgstr "Cavabı təqvimimə əlavə olunsun"
 
-#: itipformatter.cpp:1425
+#: itipformatter.cpp:1427
 #, fuzzy, kde-format
 #| msgid "Record response into my calendar"
 msgid "Record response in my calendar"
 msgstr "Cavabı təqvimimə əlavə olunsun"
 
-#: itipformatter.cpp:1439
+#: itipformatter.cpp:1441
 #, fuzzy, kde-format
 #| msgid "Remove invitation from my calendar"
 msgid "Remove invitation from my to-do list"
 msgstr "Dəvət təqvimimdən silinsin"
 
-#: itipformatter.cpp:1440 text_calendar.cpp:1420
+#: itipformatter.cpp:1442 text_calendar.cpp:1420
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "Dəvət təqvimimdən silinsin"
 
-#: itipformatter.cpp:1577 itipformatter.cpp:1581
+#: itipformatter.cpp:1579 itipformatter.cpp:1583
 #, kde-format
 msgid "Your <b>%1</b> response has been recorded."
 msgstr ""
 
-#: itipformatter.cpp:1579 itipformatter.cpp:1583
+#: itipformatter.cpp:1581 itipformatter.cpp:1585
 #, fuzzy, kde-format
 #| msgid "Do you still want to forward this invitation?"
 msgid "Your status for this invitation is <b>%1</b>."
 msgstr "Bu dəvəti yönləndirmək istəyirsiniz?"
 
-#: itipformatter.cpp:1588
+#: itipformatter.cpp:1590
 #, fuzzy, kde-format
 #| msgid "Invitation answer attached."
 msgid "This invitation was canceled."
 msgstr "Dəvətə cavab əlavə olundu."
 
-#: itipformatter.cpp:1590
+#: itipformatter.cpp:1592
 #, fuzzy, kde-format
 #| msgid "Invitation answer attached."
 msgid "This invitation was accepted."
 msgstr "Dəvətə cavab əlavə olundu."
 
-#: itipformatter.cpp:1598
+#: itipformatter.cpp:1600
 #, kde-format
 msgid "Awaiting delegation response."
 msgstr ""
 
-#: itipformatter.cpp:1665 itipformatter.cpp:1667
+#: itipformatter.cpp:1667 itipformatter.cpp:1669
 #, kde-format
 msgid "The <b>%1</b> response has been recorded"
 msgstr ""
 
-#: itipformatter.cpp:1695
+#: itipformatter.cpp:1697
 #, kde-format
 msgid "Assignees:"
 msgstr ""
 
-#: itipformatter.cpp:1697
+#: itipformatter.cpp:1699
 #, kde-format
 msgid "Participants:"
 msgstr ""
