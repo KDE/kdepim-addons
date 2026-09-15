@@ -858,9 +858,6 @@ public:
                 yesItem.setIconName(u"dialog-ok"_s);
                 noItem.setText(i18nc("@action:button", "Do Not Cancel"));
                 noItem.setIconName(u"dialog-cancel"_s);
-            } else if (path == "check_calendar"_L1) {
-                queryStr = i18n("Do you still want to check your calendar?");
-                yesItem.setText(i18nc("@action:button", "Check"));
             } else if (path == "record"_L1) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to record this task in your calendar?");
@@ -868,11 +865,9 @@ public:
                     queryStr = i18n("Do you still want to record this invitation in your calendar?");
                 }
                 yesItem.setText(i18nc("@action:button", "Record"));
-            } else if (path.startsWith("ATTACH:"_L1)) {
-                return false;
             } else {
-                queryStr = i18n("%1?", path);
-                yesItem = KStandardGuiItem::ok();
+                // attachments and all unhandled actions (e.g. delete, show calendar)
+                return false;
             }
 
             if (noItem.text().isEmpty()) {
