@@ -13,10 +13,6 @@
 
 #include <QDate>
 
-#include <memory>
-
-class InvitationFormatterHelperPrivate;
-
 /*!
  * \class InvitationFormatterHelper
  *
@@ -40,13 +36,6 @@ public:
      */
     [[nodiscard]] virtual QString generateLinkURL(const QString &id);
     /*!
-      Make a formatted link with the specified ID and text.
-      \param id the identifier for the link
-      \param text the text to display for the link
-      \return the formatted link
-     */
-    [[nodiscard]] virtual QString makeLink(const QString &id, const QString &text);
-    /*!
       Get the calendar associated with this formatter helper.
       \return a pointer to the calendar
      */
@@ -54,7 +43,6 @@ public:
 
 private:
     Q_DISABLE_COPY(InvitationFormatterHelper)
-    std::unique_ptr<InvitationFormatterHelperPrivate> const d;
 };
 
 /*!

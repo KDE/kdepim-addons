@@ -1288,34 +1288,12 @@ private:
 };
 //@endcond
 
-class InvitationFormatterHelperPrivate
-{
-};
-
-InvitationFormatterHelper::InvitationFormatterHelper()
-    : d(nullptr)
-{
-}
-
-InvitationFormatterHelper::~InvitationFormatterHelper()
-{
-}
+InvitationFormatterHelper::InvitationFormatterHelper() = default;
+InvitationFormatterHelper::~InvitationFormatterHelper() = default;
 
 QString InvitationFormatterHelper::generateLinkURL(const QString &id)
 {
     return id;
-}
-
-QString InvitationFormatterHelper::makeLink(const QString &id, const QString &text)
-{
-    if (!id.startsWith(QLatin1StringView("ATTACH:"))) {
-        const QString res = QStringLiteral("<a href=\"%1\"><font size=\"-1\"><b>%2</b></font></a>").arg(generateLinkURL(id), text);
-        return res;
-    } else {
-        // draw the attachment links in non-bold face
-        const QString res = QStringLiteral("<a href=\"%1\">%2</a>").arg(generateLinkURL(id), text);
-        return res;
-    }
 }
 
 // Check if the given incidence is likely one that we own instead one from
