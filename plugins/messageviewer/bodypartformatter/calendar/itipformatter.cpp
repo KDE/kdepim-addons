@@ -1361,7 +1361,7 @@ static QVariantList responseButtons(const Incidence::Ptr &incidence,
         buttons << inviteButton(QStringLiteral("record"), i18n("Record"), QStringLiteral("dialog-ok"), helper);
 
         // Move to trash
-        buttons << inviteButton(QStringLiteral("delete"), i18n("Move to Trash"), QStringLiteral("edittrash"), helper);
+        buttons << inviteButton(QStringLiteral("delete"), i18n("Move to Trash"), QStringLiteral("user-trash"), helper);
     } else {
         // Accept
         if (!hideAccept) {
