@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:44+0000\n"
-"PO-Revision-Date: 2019-11-05 19:51+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -78,26 +78,24 @@ msgstr "Nastaviť rýchly text"
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
 #, kde-format
 msgid "No text selected or no text in the editor."
-msgstr ""
+msgstr "Nie je vybraný žiadny text alebo editor neobsahuje text."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Correct Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Text"
-msgstr "Automaticky opraviť text"
+msgstr "Žiadny text"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgid "No AI engine configured."
-msgstr ""
+msgstr "Nie je nastavený žiadny mechanizmus AI."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgctxt "@title:window"
 msgid "No AI Engine"
-msgstr ""
+msgstr "Žiadny mechanizmus AI"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:137
 #, kde-format
@@ -125,7 +123,7 @@ msgstr "Vložiť Email..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Email Address"
-msgstr ""
+msgstr "Zvoľte emailovú adresu"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:30
 #, kde-format

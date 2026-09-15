@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: messageviewerconfiguresettingsplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:44+0000\n"
-"PO-Revision-Date: 2019-11-11 16:12+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -299,16 +299,13 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Informácie o formáte argumentov…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:43
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%u - url used by command</li></ul></p></qt>"
 msgstr ""
 "<qt><p><strong>Tieto výrazy sa môžu použiť pre argumenty:</strong></"
-"p><ul><li>%u - url použitá príkazom</li></ul></strong></p></qt>"
+"p><ul><li>%u - url použitá príkazom</li></ul></p></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:54
 #, kde-format

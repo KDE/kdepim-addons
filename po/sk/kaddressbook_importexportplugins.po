@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:44+0000\n"
-"PO-Revision-Date: 2016-09-15 15:49+0100\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -708,16 +708,14 @@ msgid "Import contacts from a vCard file."
 msgstr "Importovať kontakty zo súboru vCard."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export contacts to a vCard 4.0 file."
+#, kde-format
 msgid "Export contacts to a vCard file."
-msgstr "Exportovať kontakty do súboru vCard 4.0. "
+msgstr "Exportovať kontakty do súboru vCard."
 
 #: vcards/vcardimportexportplugininterface.cpp:54
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0…"
+#, kde-format
 msgid "Export vCard…"
-msgstr "Exportovať vCard 4.0..."
+msgstr "Exportovať vCard…"
 
 #: vcards/vcardimportexportplugininterface.cpp:86
 #, kde-format

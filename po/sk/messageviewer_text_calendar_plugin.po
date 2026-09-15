@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-14 00:44+0000\n"
-"PO-Revision-Date: 2017-08-02 21:42+0100\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -62,590 +62,542 @@ msgstr "Delegát:"
 #: itipformatter.cpp:138
 #, kde-format
 msgid "Organizer Unknown"
-msgstr ""
+msgstr "Neznámy organizátor"
 
 #: itipformatter.cpp:160 itipformatter.cpp:839
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Send"
+#, kde-format
 msgid "Sender"
-msgstr "Odoslať"
+msgstr "Odosielateľ"
 
 #: itipformatter.cpp:218
 #, kde-format
 msgid "Summary unspecified"
-msgstr ""
+msgstr "Súhrn nešpecifikovaný"
 
 #: itipformatter.cpp:230
 #, kde-format
 msgid "Location unspecified"
-msgstr ""
+msgstr "Poloha nešpecifikovaná"
 
 #: itipformatter.cpp:354
 #, kde-format
 msgid "Your response is requested."
-msgstr ""
+msgstr "Vyžaduje sa vaša odpoveď."
 
 #: itipformatter.cpp:356
 #, kde-format
 msgid "Your response as <b>%1</b> is requested."
-msgstr ""
+msgstr "Vyžaduje sa vaša odpoveď ako <b>%1</b>."
 
 #: itipformatter.cpp:360
 #, kde-format
 msgid "No response is necessary."
-msgstr ""
+msgstr "Nie je potrebná odpoveď."
 
 #: itipformatter.cpp:362
 #, kde-format
 msgid "No response as <b>%1</b> is necessary."
-msgstr ""
+msgstr "Nevyžaduje sa odpoveď ako <b>%1</b>."
 
 #: itipformatter.cpp:373 itipformatter.cpp:375
 #, kde-format
 msgid "(<b>Note</b>: the Organizer preset your response to <b>%1</b>)"
-msgstr ""
+msgstr "(<b>Poznámka</b>: organizátor nastavil vašu odpoveď na <b>%1</b>)"
 
 #: itipformatter.cpp:518 itipformatter.cpp:579
-#, fuzzy, kde-format
-#| msgid "Check my calendar…"
+#, kde-format
 msgid "Check my calendar"
-msgstr "Skontrolovať kalendár..."
+msgstr "Skontrolovať kalendár"
 
 #: itipformatter.cpp:560 itipformatter.cpp:637
 #, kde-format
 msgid "Please respond again to the original proposal."
-msgstr ""
+msgstr "Prosím odpovedzte znova na pôvodný návrh."
 
 #: itipformatter.cpp:614 itipformatter.cpp:648
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "%2"
+#, kde-format
 msgid "%1%"
-msgstr ""
-"%1\n"
-"%2"
+msgstr "%1%"
 
 #: itipformatter.cpp:738
 #, kde-format
 msgid "This invitation has been published."
-msgstr ""
+msgstr "Táto pozvánka bola zverejnená."
 
 #: itipformatter.cpp:743
 #, kde-format
 msgid "This invitation has been updated by the organizer %1."
-msgstr ""
+msgstr "Táto pozvánka bola aktualizovaná organizátorom %1."
 
 #: itipformatter.cpp:745
 #, kde-format
 msgid "This invitation has been updated by %1 as a representative of %2."
-msgstr ""
+msgstr "Túto pozvánku aktualizoval %1 ako zástupca %2."
 
 #: itipformatter.cpp:749
-#, fuzzy, kde-format
-#| msgid "Delegate invitation"
+#, kde-format
 msgid "I created this invitation."
-msgstr "Delegovať pozvánku"
+msgstr "Vytvoril som túto pozvánku."
 
 #: itipformatter.cpp:753
 #, kde-format
 msgid "You received an invitation from %1."
-msgstr ""
+msgstr "Dostali ste pozvánku od %1."
 
 #: itipformatter.cpp:755
 #, kde-format
 msgid "You received an invitation from %1 as a representative of %2."
-msgstr ""
+msgstr "Dostali ste pozvánku od %1 ako zástupca %2."
 
 #: itipformatter.cpp:759
-#, fuzzy, kde-format
-#| msgid "Invitation answer attached."
+#, kde-format
 msgid "This invitation was refreshed."
-msgstr "Priložená odpoveď na pozvánku."
+msgstr "Toto pozvanie bolo obnovené."
 
 #: itipformatter.cpp:762
-#, fuzzy, kde-format
-#| msgid "Invitation answer attached."
+#, kde-format
 msgid "This invitation has been canceled."
-msgstr "Priložená odpoveď na pozvánku."
+msgstr "Táto pozvánka bola zrušená."
 
 #: itipformatter.cpp:764
 #, kde-format
 msgid "The organizer has revoked the invitation."
-msgstr ""
+msgstr "Organizátor odvolal túto pozvánku."
 
 #: itipformatter.cpp:767
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Reaction to Invitation"
+#, kde-format
 msgid "Addition to the invitation."
-msgstr "Reakcia na pozvánku"
+msgstr "Dodatok k pozvánke."
 
 #: itipformatter.cpp:789
 #, kde-format
 msgid "%1 indicates this invitation still needs some action."
-msgstr ""
+msgstr "%1 oznamuje, že toto pozvanie stále potrebuje nejakú činnosť."
 
 #: itipformatter.cpp:793
 #, kde-format
 msgid "This invitation has been updated by attendee %1."
-msgstr ""
+msgstr "Táto pozvánka bola aktualizovaná účastníkom %1."
 
 #: itipformatter.cpp:795
 #, kde-format
 msgid "This invitation has been updated by an attendee."
-msgstr ""
+msgstr "Táto pozvánka bola aktualizovaná účastníkom."
 
 #: itipformatter.cpp:799
-#, fuzzy, kde-format
-#| msgid "Accept invitation"
+#, kde-format
 msgid "%1 accepts this invitation."
-msgstr "Prijať pozvánku"
+msgstr "%1 prijal túto pozvánku."
 
 #: itipformatter.cpp:801
 #, kde-format
 msgid "%1 accepts this invitation on behalf of %2."
-msgstr ""
+msgstr "%1 prijal túto pozvánku menom %2."
 
 #: itipformatter.cpp:806
-#, fuzzy, kde-format
-#| msgid "Do you still want to accept the invitation?"
+#, kde-format
 msgid "%1 tentatively accepts this invitation."
-msgstr "Stále chcete prijať túto pozvánku?"
+msgstr "%1 nezáväzne prijal túto pozvánku."
 
 #: itipformatter.cpp:808
 #, kde-format
 msgid "%1 tentatively accepts this invitation on behalf of %2."
-msgstr ""
+msgstr "%1 nezáväzne prijal túto pozvánku menom %2."
 
 #: itipformatter.cpp:812
-#, fuzzy, kde-format
-#| msgid "Decline invitation"
+#, kde-format
 msgid "%1 declines this invitation."
-msgstr "Odmietnuť pozvánku"
+msgstr "%1 odmietol túto pozvánku."
 
 #: itipformatter.cpp:814
 #, kde-format
 msgid "%1 declines this invitation on behalf of %2."
-msgstr ""
+msgstr "%1 odmietol túto pozvánku menom %2."
 
 #: itipformatter.cpp:824
-#, fuzzy, kde-format
-#| msgid "Do you still want to delegate this invitation?"
+#, kde-format
 msgid "%1 has delegated this invitation to %2."
-msgstr "Stále chcete delegovať túto pozvánku?"
+msgstr "%1 delegoval túto pozvánku na %2."
 
 #: itipformatter.cpp:826
-#, fuzzy, kde-format
-#| msgid "Delegate invitation"
+#, kde-format
 msgid "%1 has delegated this invitation."
-msgstr "Delegovať pozvánku"
+msgstr "%1 delegoval túto pozvánku."
 
 #: itipformatter.cpp:830
 #, kde-format
 msgid "This invitation is now completed."
-msgstr ""
+msgstr "Táto pozvánka je teraz kompletná."
 
 #: itipformatter.cpp:832
-#, fuzzy, kde-format
-#| msgid "Do you still want to accept the invitation?"
+#, kde-format
 msgid "%1 is still processing the invitation."
-msgstr "Stále chcete prijať túto pozvánku?"
+msgstr "%1 stále spracováva pozvánku."
 
 #: itipformatter.cpp:834
 #, kde-format
 msgid "Unknown response to this invitation."
-msgstr ""
+msgstr "Neznáma odpoveď na túto pozvánku."
 
 #: itipformatter.cpp:839 itipformatter.cpp:976
-#, fuzzy, kde-format
-#| msgid "Accept counter proposal"
+#, kde-format
 msgid "%1 makes this counter proposal."
-msgstr "Prijať protinávrh"
+msgstr "%1 urobil tento protinávrh."
 
 #: itipformatter.cpp:844
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "%1 declines your counter proposal."
-msgstr "Odmietnuť protinávrh"
+msgstr "%1 odmietol váš protinávrh."
 
 #: itipformatter.cpp:846
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "%1 declines your counter proposal on behalf of %2."
-msgstr "Odmietnuť protinávrh"
+msgstr "%1 zamietol váš protinávrh menom %2."
 
 #: itipformatter.cpp:851
 #, kde-format
 msgid "Error: Event iTIP message with unknown method."
-msgstr ""
+msgstr "Chyba: Udalosť iTIP správa s neznámou metódou."
 
 #: itipformatter.cpp:866
 #, kde-format
 msgid "This to-do has been published."
-msgstr ""
+msgstr "Táto úloha bola zverejnená."
 
 #: itipformatter.cpp:871
 #, kde-format
 msgid "This to-do has been updated by the organizer %1."
-msgstr ""
+msgstr "Táto úloha bola aktualizovaná organizátorom %1."
 
 #: itipformatter.cpp:873
 #, kde-format
 msgid "This to-do has been updated by %1 as a representative of %2."
-msgstr ""
+msgstr "Túto úlohu aktualizoval %1 ako zástupca %2."
 
 #: itipformatter.cpp:877
 #, kde-format
 msgid "I created this to-do."
-msgstr ""
+msgstr "Vytvoril som túto úlohu."
 
 #: itipformatter.cpp:881
 #, kde-format
 msgid "You have been assigned this to-do by %1."
-msgstr ""
+msgstr "%1 vás priradil na túto úlohu."
 
 #: itipformatter.cpp:883
 #, kde-format
 msgid "You have been assigned this to-do by %1 as a representative of %2."
-msgstr ""
+msgstr "%1 vás priradil na túto úlohu ako zástupca %2."
 
 #: itipformatter.cpp:888
 #, kde-format
 msgid "This to-do was refreshed."
-msgstr ""
+msgstr "Táto úloha bola obnovená."
 
 #: itipformatter.cpp:891
 #, kde-format
 msgid "This to-do was canceled."
-msgstr ""
+msgstr "Táto úloha bola zrušená."
 
 #: itipformatter.cpp:893
 #, kde-format
 msgid "The organizer has revoked this to-do."
-msgstr ""
+msgstr "Organizátor odvolal túto úlohu."
 
 #: itipformatter.cpp:896
 #, kde-format
 msgid "Addition to the to-do."
-msgstr ""
+msgstr "Dodatok k úlohe."
 
 #: itipformatter.cpp:918
 #, kde-format
 msgid "%1 indicates this to-do assignment still needs some action."
-msgstr ""
+msgstr "%1 oznamuje, že toto priradenie úlohy potrebuje nejakú činnosť."
 
 #: itipformatter.cpp:923
 #, kde-format
 msgid "This to-do has been completed by assignee %1."
-msgstr ""
+msgstr "Táto úloha bola ukončená nadobúdateľom %1."
 
 #: itipformatter.cpp:925
 #, kde-format
 msgid "This to-do has been updated by assignee %1."
-msgstr ""
+msgstr "Táto úloha bola aktualizovaná nadobúdateľom %1."
 
 #: itipformatter.cpp:929
 #, kde-format
 msgid "This to-do has been completed by an assignee."
-msgstr ""
+msgstr "Táto úloha bola ukončená nadobúdateľom."
 
 #: itipformatter.cpp:931
 #, kde-format
 msgid "This to-do has been updated by an assignee."
-msgstr ""
+msgstr "Táto úloha bola aktualizovaná nadobúdateľom."
 
 #: itipformatter.cpp:936
 #, kde-format
 msgid "%1 accepts this to-do."
-msgstr ""
+msgstr "%1 prijal túto úlohu."
 
 #: itipformatter.cpp:938
 #, kde-format
 msgid "%1 accepts this to-do on behalf of %2."
-msgstr ""
+msgstr "%1 prijal túto úlohu menom %2."
 
 #: itipformatter.cpp:943
 #, kde-format
 msgid "%1 tentatively accepts this to-do."
-msgstr ""
+msgstr "%1 nezáväzne prijal túto úlohu."
 
 #: itipformatter.cpp:945
 #, kde-format
 msgid "%1 tentatively accepts this to-do on behalf of %2."
-msgstr ""
+msgstr "%1 nezáväzne prijal túto úlohu menom %2."
 
 #: itipformatter.cpp:949
 #, kde-format
 msgid "%1 declines this to-do."
-msgstr ""
+msgstr "%1 odmietol túto úlohu."
 
 #: itipformatter.cpp:951
 #, kde-format
 msgid "%1 declines this to-do on behalf of %2."
-msgstr ""
+msgstr "%1 odmietol túto úlohu menom %2."
 
 #: itipformatter.cpp:961
 #, kde-format
 msgid "%1 has delegated this to-do to %2."
-msgstr ""
+msgstr "%1 delegoval túto úlohu na %2."
 
 #: itipformatter.cpp:963
-#, fuzzy, kde-format
-#| msgid "\"%1\" has already started."
+#, kde-format
 msgid "%1 has delegated this to-do."
-msgstr "\"%1\" sa už začalo."
+msgstr "%1 delegoval túto úlohu."
 
 #: itipformatter.cpp:967
 #, kde-format
 msgid "The request for this to-do is now completed."
-msgstr ""
+msgstr "Požiadavka pre túto úlohu je teraz hotová."
 
 #: itipformatter.cpp:969
 #, kde-format
 msgid "%1 is still processing the to-do."
-msgstr ""
+msgstr "%1 stále spracúva úlohu."
 
 #: itipformatter.cpp:971
 #, kde-format
 msgid "Unknown response to this to-do."
-msgstr ""
+msgstr "Neznáma odpoveď na túto úlohu."
 
 #: itipformatter.cpp:981
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "%1 declines the counter proposal."
-msgstr "Odmietnuť protinávrh"
+msgstr "%1 odmietol protinávrh."
 
 #: itipformatter.cpp:983
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "%1 declines the counter proposal on behalf of %2."
-msgstr "Odmietnuť protinávrh"
+msgstr "%1 odmietol tento protinávrh menom %2."
 
 #: itipformatter.cpp:988
 #, kde-format
 msgid "Error: To-do iTIP message with unknown method."
-msgstr ""
+msgstr "Chyba: Úloha Voľný/Zaneprázdnený iTIP správa s neznámou metódou."
 
 #: itipformatter.cpp:1002
 #, kde-format
 msgid "This journal has been published."
-msgstr ""
+msgstr "Tento žurnál bol zverejnený."
 
 #: itipformatter.cpp:1004
 #, kde-format
 msgid "You have been assigned this journal."
-msgstr ""
+msgstr "Boli ste pridaný do tohto žurnálu."
 
 #: itipformatter.cpp:1006
 #, kde-format
 msgid "This journal was refreshed."
-msgstr ""
+msgstr "Tento žurnál bol obnovený."
 
 #: itipformatter.cpp:1008
 #, kde-format
 msgid "This journal was canceled."
-msgstr ""
+msgstr "Tento žurnál bol zrušený."
 
 #: itipformatter.cpp:1010
 #, kde-format
 msgid "Addition to the journal."
-msgstr ""
+msgstr "Dodatok k žurnálu."
 
 #: itipformatter.cpp:1024
 #, kde-format
 msgid "Sender indicates this journal assignment still needs some action."
-msgstr ""
+msgstr "Odosielateľ oznamuje, že tento žurnál stále potrebuje nejakú činnosť."
 
 #: itipformatter.cpp:1026
 #, kde-format
 msgid "Sender accepts this journal."
-msgstr ""
+msgstr "Odosielateľ prijal tento žurnál."
 
 #: itipformatter.cpp:1028
 #, kde-format
 msgid "Sender tentatively accepts this journal."
-msgstr ""
+msgstr "Odosielateľ nezáväzne prijal tento žurnál."
 
 #: itipformatter.cpp:1030
 #, kde-format
 msgid "Sender declines this journal."
-msgstr ""
+msgstr "Odosielateľ odmietol tento žurnál."
 
 #: itipformatter.cpp:1032
 #, kde-format
 msgid "Sender has delegated this request for the journal."
-msgstr ""
+msgstr "Odosielateľ postúpil tento žurnál."
 
 #: itipformatter.cpp:1034
 #, kde-format
 msgid "The request for this journal is now completed."
-msgstr ""
+msgstr "Požiadavka na tento žurnál je teraz hotová."
 
 #: itipformatter.cpp:1036
-#, fuzzy, kde-format
-#| msgid "Do you still want to accept the invitation?"
+#, kde-format
 msgid "Sender is still processing the invitation."
-msgstr "Stále chcete prijať túto pozvánku?"
+msgstr "Odosielateľ stále spracováva pozvánku."
 
 #: itipformatter.cpp:1038
 #, kde-format
 msgid "Unknown response to this journal."
-msgstr ""
+msgstr "Neznáma odpoveď na tento žurnál."
 
 #: itipformatter.cpp:1043 itipformatter.cpp:1073
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "Sender makes this counter proposal."
-msgstr "Odmietnuť protinávrh"
+msgstr "Odosielateľ urobil tento protinávrh."
 
 #: itipformatter.cpp:1045 itipformatter.cpp:1075
-#, fuzzy, kde-format
-#| msgid "Decline counter proposal"
+#, kde-format
 msgid "Sender declines the counter proposal."
-msgstr "Odmietnuť protinávrh"
+msgstr "Odosielateľ odmietol tento protinávrh."
 
 #: itipformatter.cpp:1047
 #, kde-format
 msgid "Error: Journal iTIP message with unknown method."
-msgstr ""
+msgstr "Chyba: Žurnál iTIP správa s neznámou metódou."
 
 #: itipformatter.cpp:1061
 #, kde-format
 msgid "This free/busy list has been published."
-msgstr ""
+msgstr "Tento Voľný/Zaneprázdnený zoznam bol zverejnený."
 
 #: itipformatter.cpp:1063
 #, kde-format
 msgid "The free/busy list has been requested."
-msgstr ""
+msgstr "Bol vyžiadaný Voľný/Zaneprázdnený zoznam."
 
 #: itipformatter.cpp:1065
 #, kde-format
 msgid "This free/busy list was refreshed."
-msgstr ""
+msgstr "Tento Voľný/Zaneprázdnený zoznam bol obnovený."
 
 #: itipformatter.cpp:1067
 #, kde-format
 msgid "This free/busy list was canceled."
-msgstr ""
+msgstr "Tento Voľný/Zaneprázdnený zoznam bol zrušený."
 
 #: itipformatter.cpp:1069
 #, kde-format
 msgid "Addition to the free/busy list."
-msgstr ""
+msgstr "Dodatok k Voľný/Zaneprázdnený zoznamu."
 
 #: itipformatter.cpp:1071
 #, kde-format
 msgid "Reply to the free/busy list."
-msgstr ""
+msgstr "Odpoveď na Voľný/Zaneprázdnený zoznam."
 
 #: itipformatter.cpp:1077
 #, kde-format
 msgid "Error: Free/Busy iTIP message with unknown method."
-msgstr ""
+msgstr "Chyba: Voľný/Zaneprázdnený iTIP správa s neznámou metódou."
 
 #: itipformatter.cpp:1142 itipformatter.cpp:1144
 #, kde-format
 msgid "%1 (<i>unrecorded</i>)"
-msgstr ""
+msgstr "%1 (<i>nezaznamenané</i>)"
 
 #: itipformatter.cpp:1361
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Record"
+#, kde-format
 msgid "Record"
-msgstr "Record"
+msgstr "Nahrať"
 
 #: itipformatter.cpp:1364
 #, kde-format
 msgid "Move to Trash"
-msgstr ""
+msgstr "Presunúť do koša"
 
 #: itipformatter.cpp:1368
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Accept"
+#, kde-format
 msgctxt "accept invitation"
 msgid "Accept"
-msgstr "Prijať"
+msgstr "Akceptovať"
 
 #: itipformatter.cpp:1374
-#, fuzzy, kde-format
-#| msgctxt "Unsure if it is possible to attend."
-#| msgid "Tentative: %1"
+#, kde-format
 msgctxt "Accept invitation conditionally"
 msgid "Tentative"
-msgstr "Nezáväzné: %1"
+msgstr "Nezáväzný"
 
 #: itipformatter.cpp:1381
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Decline"
+#, kde-format
 msgctxt "decline invitation"
 msgid "Decline"
 msgstr "Odmietnuť"
 
 #: itipformatter.cpp:1385
-#, fuzzy, kde-format
-#| msgid "Accept counter proposal"
+#, kde-format
 msgctxt "invitation counter proposal"
 msgid "Counter proposal ..."
-msgstr "Prijať protinávrh"
+msgstr "Protinávrh..."
 
 #: itipformatter.cpp:1390
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delegate"
+#, kde-format
 msgctxt "delegate invitation to another"
 msgid "Delegate ..."
-msgstr "Delegát:"
+msgstr "Delegovať ..."
 
 #: itipformatter.cpp:1400
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Accept"
+#, kde-format
 msgid "Accept"
 msgstr "Prijať"
 
 #: itipformatter.cpp:1403
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Decline"
+#, kde-format
 msgid "Decline"
 msgstr "Odmietnuť"
 
 #: itipformatter.cpp:1413
-#, fuzzy, kde-format
-#| msgid "Record invitation into my calendar"
+#, kde-format
 msgid "Record invitation in my to-do list"
-msgstr "Zaznamenať pozvánku do môjho kalendára"
+msgstr "Zaznamenať pozvánku do môjho zoznamu úloh"
 
 #: itipformatter.cpp:1414
-#, fuzzy, kde-format
-#| msgid "Record invitation into my calendar"
+#, kde-format
 msgid "Record invitation in my calendar"
 msgstr "Zaznamenať pozvánku do môjho kalendára"
 
 #: itipformatter.cpp:1427
-#, fuzzy, kde-format
-#| msgid "Record response into my calendar"
+#, kde-format
 msgid "Record response in my to-do list"
-msgstr "Zaznamenať odpoveď do môjho kalendára"
+msgstr "Zaznamenať odpoveď do môjho zoznamu úloh"
 
 #: itipformatter.cpp:1427
-#, fuzzy, kde-format
-#| msgid "Record response into my calendar"
+#, kde-format
 msgid "Record response in my calendar"
 msgstr "Zaznamenať odpoveď do môjho kalendára"
 
 #: itipformatter.cpp:1441
-#, fuzzy, kde-format
-#| msgid "Remove invitation from my calendar"
+#, kde-format
 msgid "Remove invitation from my to-do list"
-msgstr "Odstrániť pozvánku z môjho kalendára"
+msgstr "Odstrániť pozvánku z môjho zoznamu úloh"
 
 #: itipformatter.cpp:1442 text_calendar.cpp:1420
 #, kde-format
@@ -655,45 +607,42 @@ msgstr "Odstrániť pozvánku z môjho kalendára"
 #: itipformatter.cpp:1579 itipformatter.cpp:1583
 #, kde-format
 msgid "Your <b>%1</b> response has been recorded."
-msgstr ""
+msgstr "Vaša odpoveď <b>%1</b> bola už zaznamenaná."
 
 #: itipformatter.cpp:1581 itipformatter.cpp:1585
-#, fuzzy, kde-format
-#| msgid "Do you still want to forward this invitation?"
+#, kde-format
 msgid "Your status for this invitation is <b>%1</b>."
-msgstr "Stále chcete preposlať túto pozvánku?"
+msgstr "Váš stav pre túto pozvánku je <b>%1</b>."
 
 #: itipformatter.cpp:1590
-#, fuzzy, kde-format
-#| msgid "Invitation answer attached."
+#, kde-format
 msgid "This invitation was canceled."
-msgstr "Priložená odpoveď na pozvánku."
+msgstr "Táto pozvánka bola zrušená."
 
 #: itipformatter.cpp:1592
-#, fuzzy, kde-format
-#| msgid "Invitation answer attached."
+#, kde-format
 msgid "This invitation was accepted."
-msgstr "Priložená odpoveď na pozvánku."
+msgstr "Toto pozvanie bolo prijaté."
 
 #: itipformatter.cpp:1600
 #, kde-format
 msgid "Awaiting delegation response."
-msgstr ""
+msgstr "Čaká sa odpoveď delegovania."
 
 #: itipformatter.cpp:1667 itipformatter.cpp:1669
 #, kde-format
 msgid "The <b>%1</b> response has been recorded"
-msgstr ""
+msgstr "Odpoveď <b>%1</b> bola už zaznamenaná"
 
 #: itipformatter.cpp:1697
 #, kde-format
 msgid "Assignees:"
-msgstr ""
+msgstr "Asignatári:"
 
 #: itipformatter.cpp:1699
 #, kde-format
 msgid "Participants:"
-msgstr ""
+msgstr "Účastníci:"
 
 #: reactiontoinvitationdialog.cpp:32
 #, kde-format
@@ -703,146 +652,130 @@ msgstr "Komentár:"
 
 #: templates/attendee_row.html:17
 msgid "organizer"
-msgstr ""
+msgstr "organizátor"
 
 #: templates/attendee_row.html:21
 msgid "myself"
-msgstr ""
+msgstr "ja"
 
 #: templates/attendee_row.html:25
-#, fuzzy, kde-format
-#| msgid "Delegated: %1"
+#, kde-format
 msgid "delegated by %1)"
-msgstr "Zastúpený:  %1"
+msgstr "delegovaný od %1)"
 
 #: templates/attendee_row.html:29
-#, fuzzy, kde-format
-#| msgid "Delegated: %1"
+#, kde-format
 msgid "delegated to %1)"
-msgstr "Zastúpený:  %1"
+msgstr "delegovaný na %1)"
 
 #: templates/attendee_row.html:36
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Send EMail"
 msgid "Send email"
-msgstr "Poslať e-mail"
+msgstr "Odoslať e-mail"
 
 #: templates/itip.html:80
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Comment:"
 msgid "Comment:"
 msgstr "Komentár:"
 
 #: templates/itip.html:83
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Comment:"
 msgid "Comments:"
-msgstr "Komentár:"
+msgstr "Komentáre:"
 
 #: templates/itip.html:122
-#, fuzzy
-#| msgid "Open Attachment"
 msgid "Attachments:"
-msgstr "Otvoriť prílohu"
+msgstr "Prílohy:"
 
 #: templates/itip_event.html:6
 msgid "First event:"
-msgstr ""
+msgstr "Prvá udalosť:"
 
 #: templates/itip_event.html:8 templates/itip_todo.html:13
 msgid "When:"
-msgstr ""
+msgstr "Kedy:"
 
 #: templates/itip_event.html:15 templates/itip_todo.html:6
 msgid "Where:"
-msgstr ""
+msgstr "Kde:"
 
 #: templates/itip_event.html:22 templates/itip_todo.html:46
 msgid "Recurrence:"
-msgstr ""
+msgstr "Opakovanie:"
 
 #: templates/itip_event.html:29 templates/itip_journal.html:11
 #: templates/itip_todo.html:53
 msgid "Description:"
-msgstr ""
+msgstr "Popis:"
 
 #: templates/itip_event.html:42
 msgid "Events on these days:"
-msgstr ""
+msgstr "Udalosti tieto dni:"
 
 #: templates/itip_event.html:44
 msgid "Events on this day:"
-msgstr ""
+msgstr "Udalosti dnes:"
 
 #: templates/itip_freebusy.html:5
 msgid "Person:"
-msgstr ""
+msgstr "Osoba:"
 
 #: templates/itip_freebusy.html:10
 msgid "Start date:"
-msgstr ""
+msgstr "Dátum začiatku:"
 
 #: templates/itip_freebusy.html:15
 msgid "End date:"
-msgstr ""
+msgstr "Dátum konca:"
 
 #: templates/itip_freebusy.html:23
 msgid "Busy periods given in this free/busy object:"
-msgstr ""
+msgstr "Obdobia zaneprázdnenosti v tomto objekte:"
 
 #: templates/itip_freebusy.html:31
 #, kde-format
 msgctxt "<startDate> for <duration>"
 msgid "%1 for %2"
-msgstr ""
+msgstr "%1 pre %2"
 
 #: templates/itip_freebusy.html:34
 #, kde-format
 msgctxt "<startDate> - <endDate>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_freebusy.html:36
 #, kde-format
 msgctxt "<date>, <startTime> - <endTime>"
 msgid "%1, %2 - %3"
-msgstr ""
+msgstr "%1, %2 - %3"
 
 #: templates/itip_journal.html:5
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Delegate:"
 msgid "Date:"
-msgstr "Delegát:"
+msgstr "Dátum:"
 
 #: templates/itip_todo.html:16
 #, kde-format
 msgctxt "<beginDate> - <endDate>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_todo.html:22
 #, kde-format
 msgctxt "<beginDateTime> - <endDateTime>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_todo.html:24
 #, kde-format
 msgctxt "<beginDateTime> - <endTime>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_todo.html:32
 msgid "Percent Done:"
-msgstr ""
+msgstr "Percent hotovo:"
 
 #: templates/itip_todo.html:39
 msgid "Due:"
-msgstr ""
+msgstr "Termín:"
 
 #: text_calendar.cpp:374
 #, kde-format
