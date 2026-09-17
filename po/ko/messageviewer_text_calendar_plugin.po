@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-14 00:44+0000\n"
+"POT-Creation-Date: 2026-09-17 00:45+0000\n"
 "PO-Revision-Date: 2024-08-19 22:56+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -552,19 +552,19 @@ msgstr ""
 msgid "%1 (<i>unrecorded</i>)"
 msgstr ""
 
-#: itipformatter.cpp:1361
+#: itipformatter.cpp:1339
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Record"
 msgid "Record"
 msgstr "기록"
 
-#: itipformatter.cpp:1364
+#: itipformatter.cpp:1342
 #, kde-format
 msgid "Move to Trash"
 msgstr ""
 
-#: itipformatter.cpp:1368
+#: itipformatter.cpp:1346
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Accept"
@@ -572,7 +572,7 @@ msgctxt "accept invitation"
 msgid "Accept"
 msgstr "수락"
 
-#: itipformatter.cpp:1374
+#: itipformatter.cpp:1352
 #, fuzzy, kde-format
 #| msgctxt "Unsure if it is possible to attend."
 #| msgid "Tentative: %1"
@@ -580,7 +580,7 @@ msgctxt "Accept invitation conditionally"
 msgid "Tentative"
 msgstr "미확정: %1"
 
-#: itipformatter.cpp:1381
+#: itipformatter.cpp:1359
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Decline"
@@ -588,14 +588,14 @@ msgctxt "decline invitation"
 msgid "Decline"
 msgstr "거절"
 
-#: itipformatter.cpp:1385
+#: itipformatter.cpp:1363
 #, fuzzy, kde-format
 #| msgid "Accept counter proposal"
 msgctxt "invitation counter proposal"
 msgid "Counter proposal ..."
 msgstr "상대 제안 수락"
 
-#: itipformatter.cpp:1390
+#: itipformatter.cpp:1368
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Delegate"
@@ -603,94 +603,94 @@ msgctxt "delegate invitation to another"
 msgid "Delegate ..."
 msgstr "위임"
 
-#: itipformatter.cpp:1400
+#: itipformatter.cpp:1378
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Accept"
 msgid "Accept"
 msgstr "수락"
 
-#: itipformatter.cpp:1403
+#: itipformatter.cpp:1381
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Decline"
 msgid "Decline"
 msgstr "거절"
 
-#: itipformatter.cpp:1413
+#: itipformatter.cpp:1391
 #, fuzzy, kde-format
 #| msgid "Record invitation into my calendar"
 msgid "Record invitation in my to-do list"
 msgstr "내 달력에 초대장 기록하기"
 
-#: itipformatter.cpp:1414
+#: itipformatter.cpp:1392
 #, fuzzy, kde-format
 #| msgid "Record invitation into my calendar"
 msgid "Record invitation in my calendar"
 msgstr "내 달력에 초대장 기록하기"
 
-#: itipformatter.cpp:1427
+#: itipformatter.cpp:1405
 #, fuzzy, kde-format
 #| msgid "Record response into my calendar"
 msgid "Record response in my to-do list"
 msgstr "내 달력에 응답 기록하기"
 
-#: itipformatter.cpp:1427
+#: itipformatter.cpp:1405
 #, fuzzy, kde-format
 #| msgid "Record response into my calendar"
 msgid "Record response in my calendar"
 msgstr "내 달력에 응답 기록하기"
 
-#: itipformatter.cpp:1441
+#: itipformatter.cpp:1419
 #, fuzzy, kde-format
 #| msgid "Remove invitation from my calendar"
 msgid "Remove invitation from my to-do list"
 msgstr "내 달력에서 초대장 삭제"
 
-#: itipformatter.cpp:1442 text_calendar.cpp:1420
+#: itipformatter.cpp:1420 text_calendar.cpp:1415
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "내 달력에서 초대장 삭제"
 
-#: itipformatter.cpp:1579 itipformatter.cpp:1583
+#: itipformatter.cpp:1557 itipformatter.cpp:1561
 #, kde-format
 msgid "Your <b>%1</b> response has been recorded."
 msgstr ""
 
-#: itipformatter.cpp:1581 itipformatter.cpp:1585
+#: itipformatter.cpp:1559 itipformatter.cpp:1563
 #, fuzzy, kde-format
 #| msgid "Do you still want to forward this invitation?"
 msgid "Your status for this invitation is <b>%1</b>."
 msgstr "그래도 이 초대장을 전달하시겠습니까?"
 
-#: itipformatter.cpp:1590
+#: itipformatter.cpp:1568
 #, fuzzy, kde-format
 #| msgid "Invitation answer attached."
 msgid "This invitation was canceled."
 msgstr "초대장 응답을 첨부했습니다."
 
-#: itipformatter.cpp:1592
+#: itipformatter.cpp:1570
 #, fuzzy, kde-format
 #| msgid "Invitation answer attached."
 msgid "This invitation was accepted."
 msgstr "초대장 응답을 첨부했습니다."
 
-#: itipformatter.cpp:1600
+#: itipformatter.cpp:1578
 #, kde-format
 msgid "Awaiting delegation response."
 msgstr ""
 
-#: itipformatter.cpp:1667 itipformatter.cpp:1669
+#: itipformatter.cpp:1645 itipformatter.cpp:1647
 #, kde-format
 msgid "The <b>%1</b> response has been recorded"
 msgstr ""
 
-#: itipformatter.cpp:1697
+#: itipformatter.cpp:1675
 #, kde-format
 msgid "Assignees:"
 msgstr ""
 
-#: itipformatter.cpp:1699
+#: itipformatter.cpp:1677
 #, kde-format
 msgid "Participants:"
 msgstr ""
@@ -1036,7 +1036,7 @@ msgstr "거절"
 msgid "Do you still want to record this response in your calendar?"
 msgstr "그래도 달력에 이 응답을 기록하시겠습니까?"
 
-#: text_calendar.cpp:834 text_calendar.cpp:870
+#: text_calendar.cpp:834 text_calendar.cpp:867
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
@@ -1102,33 +1102,17 @@ msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "취소하지 않기"
 
-#: text_calendar.cpp:862
-#, kde-format
-msgid "Do you still want to check your calendar?"
-msgstr "그래도 달력을 확인하시겠습니까?"
-
 #: text_calendar.cpp:863
-#, kde-format
-msgctxt "@action:button"
-msgid "Check"
-msgstr "확인"
-
-#: text_calendar.cpp:866
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
 msgstr "그래도 달력에 이 작업을 기록하시겠습니까?"
 
-#: text_calendar.cpp:868
+#: text_calendar.cpp:865
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
 msgstr "그래도 달력에 이 초대장을 기록하시겠습니까?"
 
-#: text_calendar.cpp:874
-#, kde-format
-msgid "%1?"
-msgstr "%1?"
-
-#: text_calendar.cpp:881
+#: text_calendar.cpp:876
 #, kde-format
 msgid ""
 "%1\n"
@@ -1137,35 +1121,35 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: text_calendar.cpp:915
+#: text_calendar.cpp:910
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "초대장에 대한 응답"
 
-#: text_calendar.cpp:926 text_calendar.cpp:1179
+#: text_calendar.cpp:921 text_calendar.cpp:1174
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
 msgstr "제안을 추가하지 않았습니다. 추가해 주십시오."
 
-#: text_calendar.cpp:959
+#: text_calendar.cpp:954
 #, kde-format
 msgid "Delegation to organizer is not possible."
 msgstr "주관자에게 위임할 수 없습니다."
 
-#: text_calendar.cpp:1088
+#: text_calendar.cpp:1083
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "초대장 첨부 저장"
 
-#: text_calendar.cpp:1168
+#: text_calendar.cpp:1163
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "상대 제안 거절"
 
-#: text_calendar.cpp:1210
+#: text_calendar.cpp:1205
 #, kde-format
 msgid ""
 "You have no writable calendar folders for invitations, so storing or saving "
@@ -1175,7 +1159,7 @@ msgstr ""
 "초대장을 저장할 수 있는 달력 폴더가 없습니다. 응답을 저장할 수 없습니다.\n"
 "쓰기 권한이 있는 행사 달력 폴더를 만든 다음 다시 시도하십시오."
 
-#: text_calendar.cpp:1228 text_calendar.cpp:1236
+#: text_calendar.cpp:1223 text_calendar.cpp:1231
 #, kde-format
 msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
@@ -1184,7 +1168,7 @@ msgstr ""
 "이 이메일 메시지에 저장된 달력 초대장이 잘못되었습니다. 계속 진행할 수 없습니"
 "다."
 
-#: text_calendar.cpp:1289
+#: text_calendar.cpp:1284
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1200,113 +1184,123 @@ msgstr ""
 "주관자에게 초대장에 대한 응답을 보내시겠습니까?\n"
 "[취소]를 누르면 기록 작업을 중단합니다."
 
-#: text_calendar.cpp:1293
+#: text_calendar.cpp:1288
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
 msgstr "주관자에게 이메일 보내기"
 
-#: text_calendar.cpp:1294
+#: text_calendar.cpp:1289
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "보내지 않음"
 
-#: text_calendar.cpp:1295
+#: text_calendar.cpp:1290
 #, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "이메일 보내기"
 
-#: text_calendar.cpp:1303
+#: text_calendar.cpp:1298
 #, kde-format
 msgid "Re: %1"
 msgstr "Re: %1"
 
-#: text_calendar.cpp:1375
+#: text_calendar.cpp:1370
 #, kde-format
 msgid "Open Attachment"
 msgstr "첨부 파일 열기"
 
-#: text_calendar.cpp:1376
+#: text_calendar.cpp:1371
 #, kde-format
 msgid "Save Attachment As…"
 msgstr "다른 이름으로 첨부 파일 저장…"
 
-#: text_calendar.cpp:1392
+#: text_calendar.cpp:1387
 #, kde-format
 msgid "Accept invitation"
 msgstr "초대장 수락"
 
-#: text_calendar.cpp:1394
+#: text_calendar.cpp:1389
 #, kde-format
 msgid "Accept invitation conditionally"
 msgstr "초대장 조건부 수락"
 
-#: text_calendar.cpp:1396
+#: text_calendar.cpp:1391
 #, kde-format
 msgid "Accept counter proposal"
 msgstr "상대 제안 수락"
 
-#: text_calendar.cpp:1398
+#: text_calendar.cpp:1393
 #, kde-format
 msgid "Create a counter proposal…"
 msgstr "상대 제안 만들기…"
 
-#: text_calendar.cpp:1400
+#: text_calendar.cpp:1395
 #, kde-format
 msgid "Throw mail away"
 msgstr "메일 무시하기"
 
-#: text_calendar.cpp:1402
+#: text_calendar.cpp:1397
 #, kde-format
 msgid "Decline invitation"
 msgstr "초대장 거절"
 
-#: text_calendar.cpp:1404
+#: text_calendar.cpp:1399
 #, kde-format
 msgid "Postpone"
 msgstr "연기"
 
-#: text_calendar.cpp:1406
+#: text_calendar.cpp:1401
 #, kde-format
 msgid "Decline counter proposal"
 msgstr "상대 제안 거절"
 
-#: text_calendar.cpp:1408
+#: text_calendar.cpp:1403
 #, kde-format
 msgid "Check my calendar…"
 msgstr "내 달력 확인하기…"
 
-#: text_calendar.cpp:1410
+#: text_calendar.cpp:1405
 #, kde-format
 msgid "Record response into my calendar"
 msgstr "내 달력에 응답 기록하기"
 
-#: text_calendar.cpp:1412
+#: text_calendar.cpp:1407
 #, kde-format
 msgid "Record invitation into my calendar"
 msgstr "내 달력에 초대장 기록하기"
 
-#: text_calendar.cpp:1414
+#: text_calendar.cpp:1409
 #, kde-format
 msgid "Move this invitation to my trash folder"
 msgstr "휴지통 폴더로 초대장 이동"
 
-#: text_calendar.cpp:1416
+#: text_calendar.cpp:1411
 #, kde-format
 msgid "Delegate invitation"
 msgstr "초대장 위임"
 
-#: text_calendar.cpp:1418
+#: text_calendar.cpp:1413
 #, kde-format
 msgid "Forward invitation"
 msgstr "초대장 전달"
 
-#: text_calendar.cpp:1423
+#: text_calendar.cpp:1418
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "첨부 파일 \"%1\" 열기"
+
+#~ msgid "Do you still want to check your calendar?"
+#~ msgstr "그래도 달력을 확인하시겠습니까?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Check"
+#~ msgstr "확인"
+
+#~ msgid "%1?"
+#~ msgstr "%1?"
 
 #~ msgid "Do you really want to cancel this task?"
 #~ msgstr "정말로 이 작업을 취소하시겠습니까?"

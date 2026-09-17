@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-14 00:44+0000\n"
+"POT-Creation-Date: 2026-09-17 00:45+0000\n"
 "PO-Revision-Date: 2026-09-12 17:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -530,122 +530,122 @@ msgstr ""
 msgid "%1 (<i>unrecorded</i>)"
 msgstr "%1 (<i>не записано</i>)"
 
-#: itipformatter.cpp:1361
+#: itipformatter.cpp:1339
 #, kde-format
 msgid "Record"
 msgstr "Записати"
 
-#: itipformatter.cpp:1364
+#: itipformatter.cpp:1342
 #, kde-format
 msgid "Move to Trash"
 msgstr "Пересунути до смітника"
 
-#: itipformatter.cpp:1368
+#: itipformatter.cpp:1346
 #, kde-format
 msgctxt "accept invitation"
 msgid "Accept"
 msgstr "Прийняти"
 
-#: itipformatter.cpp:1374
+#: itipformatter.cpp:1352
 #, kde-format
 msgctxt "Accept invitation conditionally"
 msgid "Tentative"
 msgstr "Умовно прийнято"
 
-#: itipformatter.cpp:1381
+#: itipformatter.cpp:1359
 #, kde-format
 msgctxt "decline invitation"
 msgid "Decline"
 msgstr "Відхилити"
 
-#: itipformatter.cpp:1385
+#: itipformatter.cpp:1363
 #, kde-format
 msgctxt "invitation counter proposal"
 msgid "Counter proposal ..."
 msgstr "Контрпропозиція…"
 
-#: itipformatter.cpp:1390
+#: itipformatter.cpp:1368
 #, kde-format
 msgctxt "delegate invitation to another"
 msgid "Delegate ..."
 msgstr "Уповноважити…"
 
-#: itipformatter.cpp:1400
+#: itipformatter.cpp:1378
 #, kde-format
 msgid "Accept"
 msgstr "Прийняти"
 
-#: itipformatter.cpp:1403
+#: itipformatter.cpp:1381
 #, kde-format
 msgid "Decline"
 msgstr "Відхилити"
 
-#: itipformatter.cpp:1413
+#: itipformatter.cpp:1391
 #, kde-format
 msgid "Record invitation in my to-do list"
 msgstr "Записати запрошення до мого списку завдань"
 
-#: itipformatter.cpp:1414
+#: itipformatter.cpp:1392
 #, kde-format
 msgid "Record invitation in my calendar"
 msgstr "Записати запрошення до мого календаря"
 
-#: itipformatter.cpp:1427
+#: itipformatter.cpp:1405
 #, kde-format
 msgid "Record response in my to-do list"
 msgstr "Записати відповідь до мого списку завдань"
 
-#: itipformatter.cpp:1427
+#: itipformatter.cpp:1405
 #, kde-format
 msgid "Record response in my calendar"
 msgstr "Записати відповідь до мого календаря"
 
-#: itipformatter.cpp:1441
+#: itipformatter.cpp:1419
 #, kde-format
 msgid "Remove invitation from my to-do list"
 msgstr "Вилучити запрошення з мого списку завдань"
 
-#: itipformatter.cpp:1442 text_calendar.cpp:1420
+#: itipformatter.cpp:1420 text_calendar.cpp:1415
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "Вилучити запрошення з мого календаря"
 
-#: itipformatter.cpp:1579 itipformatter.cpp:1583
+#: itipformatter.cpp:1557 itipformatter.cpp:1561
 #, kde-format
 msgid "Your <b>%1</b> response has been recorded."
 msgstr "Вашу відповідь <b>%1</b> записано."
 
-#: itipformatter.cpp:1581 itipformatter.cpp:1585
+#: itipformatter.cpp:1559 itipformatter.cpp:1563
 #, kde-format
 msgid "Your status for this invitation is <b>%1</b>."
 msgstr "Ваш стан щодо цього запрошення: <b>%1</b>."
 
-#: itipformatter.cpp:1590
+#: itipformatter.cpp:1568
 #, kde-format
 msgid "This invitation was canceled."
 msgstr "Це запрошення було скасовано."
 
-#: itipformatter.cpp:1592
+#: itipformatter.cpp:1570
 #, kde-format
 msgid "This invitation was accepted."
 msgstr "Це запрошення було прийнято."
 
-#: itipformatter.cpp:1600
+#: itipformatter.cpp:1578
 #, kde-format
 msgid "Awaiting delegation response."
 msgstr "Очікування відповіді щодо спрямування."
 
-#: itipformatter.cpp:1667 itipformatter.cpp:1669
+#: itipformatter.cpp:1645 itipformatter.cpp:1647
 #, kde-format
 msgid "The <b>%1</b> response has been recorded"
 msgstr "Відповідь <b>%1</b> записано"
 
-#: itipformatter.cpp:1697
+#: itipformatter.cpp:1675
 #, kde-format
 msgid "Assignees:"
 msgstr "Пов’язані особи:"
 
-#: itipformatter.cpp:1699
+#: itipformatter.cpp:1677
 #, kde-format
 msgid "Participants:"
 msgstr "Учасники:"
@@ -981,7 +981,7 @@ msgid "Do you still want to record this response in your calendar?"
 msgstr ""
 "Не змінили свого рішення щодо запису цієї відповіді до вашого календаря?"
 
-#: text_calendar.cpp:834 text_calendar.cpp:870
+#: text_calendar.cpp:834 text_calendar.cpp:867
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
@@ -1047,35 +1047,19 @@ msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Не скасовувати"
 
-#: text_calendar.cpp:862
-#, kde-format
-msgid "Do you still want to check your calendar?"
-msgstr "Не змінили свого рішення щодо перевірки вашого календаря?"
-
 #: text_calendar.cpp:863
-#, kde-format
-msgctxt "@action:button"
-msgid "Check"
-msgstr "Перевірити"
-
-#: text_calendar.cpp:866
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
 msgstr ""
 "Не змінили свого рішення щодо запису цього завдання до вашого календаря?"
 
-#: text_calendar.cpp:868
+#: text_calendar.cpp:865
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
 msgstr ""
 "Не змінили свого рішення щодо запису цього запрошення до вашого календаря?"
 
-#: text_calendar.cpp:874
-#, kde-format
-msgid "%1?"
-msgstr "%1?"
-
-#: text_calendar.cpp:881
+#: text_calendar.cpp:876
 #, kde-format
 msgid ""
 "%1\n"
@@ -1084,35 +1068,35 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: text_calendar.cpp:915
+#: text_calendar.cpp:910
 #, kde-format
 msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "Відповідь на запрошення"
 
-#: text_calendar.cpp:926 text_calendar.cpp:1179
+#: text_calendar.cpp:921 text_calendar.cpp:1174
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
 msgstr "Ви забули додати пропозицію. Додайте її зараз. Дякуємо."
 
-#: text_calendar.cpp:959
+#: text_calendar.cpp:954
 #, kde-format
 msgid "Delegation to organizer is not possible."
 msgstr "Спрямування до організатора неможливе."
 
-#: text_calendar.cpp:1088
+#: text_calendar.cpp:1083
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Збереження долучення до запрошення"
 
-#: text_calendar.cpp:1168
+#: text_calendar.cpp:1163
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "Відхилення контрпропозиції"
 
-#: text_calendar.cpp:1210
+#: text_calendar.cpp:1205
 #, kde-format
 msgid ""
 "You have no writable calendar folders for invitations, so storing or saving "
@@ -1124,7 +1108,7 @@ msgstr ""
 "Будь ласка, створіть принаймні один придатний для запису календар і "
 "повторіть спробу синхронізації."
 
-#: text_calendar.cpp:1228 text_calendar.cpp:1236
+#: text_calendar.cpp:1223 text_calendar.cpp:1231
 #, kde-format
 msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
@@ -1134,7 +1118,7 @@ msgstr ""
 "електронної пошти, пошкоджено у невідомий спосіб. Виконання вказаної дії "
 "неможливе."
 
-#: text_calendar.cpp:1289
+#: text_calendar.cpp:1284
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1150,113 +1134,123 @@ msgstr ""
 "Бажаєте надіслати організаторам повідомлення щодо цього запрошення?\n"
 "Натисніть кнопку «Скасувати», щоб скасувати дію запису повідомлення."
 
-#: text_calendar.cpp:1293
+#: text_calendar.cpp:1288
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
 msgstr "Надсилання повідомлення організатору"
 
-#: text_calendar.cpp:1294
+#: text_calendar.cpp:1289
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Не надсилати"
 
-#: text_calendar.cpp:1295
+#: text_calendar.cpp:1290
 #, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Надіслати листа"
 
-#: text_calendar.cpp:1303
+#: text_calendar.cpp:1298
 #, kde-format
 msgid "Re: %1"
 msgstr "Відповідь: %1"
 
-#: text_calendar.cpp:1375
+#: text_calendar.cpp:1370
 #, kde-format
 msgid "Open Attachment"
 msgstr "Відкрити долучення"
 
-#: text_calendar.cpp:1376
+#: text_calendar.cpp:1371
 #, kde-format
 msgid "Save Attachment As…"
 msgstr "Зберегти долучення як…"
 
-#: text_calendar.cpp:1392
+#: text_calendar.cpp:1387
 #, kde-format
 msgid "Accept invitation"
 msgstr "Прийняти запрошення"
 
-#: text_calendar.cpp:1394
+#: text_calendar.cpp:1389
 #, kde-format
 msgid "Accept invitation conditionally"
 msgstr "Прийняти запрошення з умовою"
 
-#: text_calendar.cpp:1396
+#: text_calendar.cpp:1391
 #, kde-format
 msgid "Accept counter proposal"
 msgstr "Прийняти контрпропозицію"
 
-#: text_calendar.cpp:1398
+#: text_calendar.cpp:1393
 #, kde-format
 msgid "Create a counter proposal…"
 msgstr "Створити контрпропозицію…"
 
-#: text_calendar.cpp:1400
+#: text_calendar.cpp:1395
 #, kde-format
 msgid "Throw mail away"
 msgstr "Викинути пошту"
 
-#: text_calendar.cpp:1402
+#: text_calendar.cpp:1397
 #, kde-format
 msgid "Decline invitation"
 msgstr "Відхилити запрошення"
 
-#: text_calendar.cpp:1404
+#: text_calendar.cpp:1399
 #, kde-format
 msgid "Postpone"
 msgstr "Відкласти"
 
-#: text_calendar.cpp:1406
+#: text_calendar.cpp:1401
 #, kde-format
 msgid "Decline counter proposal"
 msgstr "Відхилити контрпропозицію"
 
-#: text_calendar.cpp:1408
+#: text_calendar.cpp:1403
 #, kde-format
 msgid "Check my calendar…"
 msgstr "Перевірити мій календар…"
 
-#: text_calendar.cpp:1410
+#: text_calendar.cpp:1405
 #, kde-format
 msgid "Record response into my calendar"
 msgstr "Записати відповідь до мого календаря"
 
-#: text_calendar.cpp:1412
+#: text_calendar.cpp:1407
 #, kde-format
 msgid "Record invitation into my calendar"
 msgstr "Записати запрошення до мого календаря"
 
-#: text_calendar.cpp:1414
+#: text_calendar.cpp:1409
 #, kde-format
 msgid "Move this invitation to my trash folder"
 msgstr "Пересунути це запрошення до теки смітника"
 
-#: text_calendar.cpp:1416
+#: text_calendar.cpp:1411
 #, kde-format
 msgid "Delegate invitation"
 msgstr "Спрямувати запрошення"
 
-#: text_calendar.cpp:1418
+#: text_calendar.cpp:1413
 #, kde-format
 msgid "Forward invitation"
 msgstr "Переспрямувати запрошення"
 
-#: text_calendar.cpp:1423
+#: text_calendar.cpp:1418
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "Відкрити долучення «%1»"
+
+#~ msgid "Do you still want to check your calendar?"
+#~ msgstr "Не змінили свого рішення щодо перевірки вашого календаря?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Check"
+#~ msgstr "Перевірити"
+
+#~ msgid "%1?"
+#~ msgstr "%1?"
 
 #~ msgid "Do you really want to cancel this task?"
 #~ msgstr "Ви справді бажаєте скасувати це завдання?"
