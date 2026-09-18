@@ -25,7 +25,6 @@ macro(add_kmail_checkbeforesend_unittest _source _additional)
         KPim6::MessageComposer
         KF6::I18n
         KPim6::PimCommon
-        KF6::I18n
         KF6::Codecs
     )
 endmacro()

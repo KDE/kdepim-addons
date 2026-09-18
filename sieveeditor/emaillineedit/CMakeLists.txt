@@ -27,5 +27,4 @@ target_link_libraries(
     KF6::ColorScheme
     KPim6::KSieveUi
     KPim6::AkonadiContactWidgets
-    KF6::ColorScheme
 )
