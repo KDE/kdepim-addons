@@ -134,30 +134,6 @@ static bool occurredAlready(const Incidence::Ptr &incidence)
     return false;
 }
 
-class KMInvitationFormatterHelper : public InvitationFormatterHelper
-{
-public:
-    KMInvitationFormatterHelper(const MimeTreeParser::MessagePartPtr &bodyPart, const KCalendarCore::MemoryCalendar::Ptr &calendar)
-        : mBodyPart(bodyPart)
-        , mCalendar(calendar)
-    {
-    }
-
-    QString generateLinkURL(const QString &id) override
-    {
-        return mBodyPart->makeLink(id);
-    }
-
-    [[nodiscard]] KCalendarCore::Calendar::Ptr calendar() const override
-    {
-        return mCalendar;
-    }
-
-private:
-    const MimeTreeParser::MessagePartPtr mBodyPart;
-    const KCalendarCore::MemoryCalendar::Ptr mCalendar;
-};
-
 static QString getSender(const MimeTreeParser::MessagePart *msgPart)
 {
     if (auto msg = dynamic_cast<const KMime::Message *>(msgPart->content()->topLevel()); msg != nullptr) {
@@ -222,7 +198,6 @@ public:
 
         if (memento) {
             if (memento->finished()) {
-                KMInvitationFormatterHelper helper(msgPart, memento->calendar());
                 QByteArray source;
                 // If the bodypart does not have a charset specified, we need to fall back to utf8,
                 // not the KMail fallback encoding, so get the contents as binary and decode explicitly.
@@ -238,7 +213,13 @@ public:
                 }
 
                 const auto sender = getSender(msgPart.get());
-                const QString html = ItipFormatter::formatICalInvitation(msg, &helper, sender);
+                const QString html = ItipFormatter::formatICalInvitation(
+                    msg,
+                    [&msgPart](const QString &id) {
+                        return msgPart->makeLink(id);
+                    },
+                    memento->calendar(),
+                    sender);
 
                 if (html.isEmpty()) {
                     return false;

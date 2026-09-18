@@ -14,38 +14,6 @@
 #include <QDate>
 
 /*!
- * \class InvitationFormatterHelper
- *
- * \brief The InvitationFormatterHelper class
- */
-class InvitationFormatterHelper
-{
-public:
-    /*!
-      Constructor of the InvitationFormatterHelper class.
-     */
-    InvitationFormatterHelper();
-    /*!
-      Destructor of the InvitationFormatterHelper class.
-     */
-    virtual ~InvitationFormatterHelper();
-    /*!
-      Generate a URL link for the specified ID.
-      \param id the identifier for which to generate the link
-      \return the generated link URL
-     */
-    [[nodiscard]] virtual QString generateLinkURL(const QString &id);
-    /*!
-      Get the calendar associated with this formatter helper.
-      \return a pointer to the calendar
-     */
-    [[nodiscard]] virtual KCalendarCore::Calendar::Ptr calendar() const;
-
-private:
-    Q_DISABLE_COPY(InvitationFormatterHelper)
-};
-
-/*!
  \class ItipFormatter
 
   \brief
@@ -62,13 +30,17 @@ namespace ItipFormatter
   Deliver an HTML formatted string displaying an invitation.
 
   \param message an iCal schedule message ("invitation")
-  \param helper a pointer to an InvitationFormatterHelper.
+  \param generateLinkURL Function to generate an URL for the body part formatter URL handler
+  \param calendar The calendar in which existing or conflicting incidences should be searched in.
   \param sender a QString containing the email address of the person sending the invitation.
   \return the formatted HTML invitation string
 
   \since 6.9
 */
-QString formatICalInvitation(const KCalendarCore::ScheduleMessage::Ptr &message, InvitationFormatterHelper *helper, const QString &sender);
+QString formatICalInvitation(const KCalendarCore::ScheduleMessage::Ptr &message,
+                             const std::function<QString(QString)> &generateLinkURL,
+                             const KCalendarCore::Calendar::Ptr &calendar,
+                             const QString &sender);
 
 template<typename T>
 class ScheduleMessageVisitor;

@@ -184,7 +184,6 @@ private Q_SLOTS:
         QFETCH(const QString, name);
 
         const KCalendarCore::MemoryCalendar::Ptr calendar(new KCalendarCore::MemoryCalendar(QTimeZone::utc()));
-        InvitationFormatterHelper helper;
 
         QFile eventFile(QStringLiteral(MAIL_DATA_DIR "/../itip/%1.ical").arg(name));
         QVERIFY(eventFile.exists());
@@ -199,7 +198,13 @@ private Q_SLOTS:
 #endif
         QVERIFY(message);
 
-        const QString html = ItipFormatter::formatICalInvitation(message, &helper, QString())
+        const QString html = ItipFormatter::formatICalInvitation(
+                                 message,
+                                 [](const QString &id) {
+                                     return id;
+                                 },
+                                 calendar,
+                                 QString())
                                  .replace(btnBg, QStringLiteral("btnBg"))
                                  .replace(btnFg, QStringLiteral("btnFg"))
                                  .replace(btnBdr, QStringLiteral("btnBdr"));

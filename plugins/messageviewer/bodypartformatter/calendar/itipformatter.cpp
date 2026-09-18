@@ -59,7 +59,7 @@ static QString dateTimeToString(const QDateTime &date, bool allDay, bool shortfm
 */
 static QString formatStartEnd(const QDateTime &start, const QDateTime &end, bool isAllDay);
 
-static QVariantHash inviteButton(const QString &id, const QString &text, const QString &iconName, InvitationFormatterHelper *helper);
+static QVariantHash inviteButton(const QString &id, const QString &text, const QString &iconName, const std::function<QString(QString)> &generateLinkURL);
 
 //@cond PRIVATE
 static QString cleanHtml(const QString &html)
@@ -447,9 +447,9 @@ static QString invitationLocation(const Incidence::Ptr &incidence)
     return (closestStart >= startDt && closestStart <= endDt) && (closestEnd >= startDt && closestEnd <= endDt);
 }
 
-[[nodiscard]] static QVariantList eventsOnSameDays(const InvitationFormatterHelper *helper, const Event::Ptr &event)
+[[nodiscard]] static QVariantList eventsOnSameDays(const KCalendarCore::Calendar::Ptr &calendar, const Event::Ptr &event)
 {
-    if (!event || !helper || !helper->calendar()) {
+    if (!event || !calendar) {
         return QVariantList();
     }
 
@@ -458,7 +458,7 @@ static QString invitationLocation(const Incidence::Ptr &incidence)
     startDay.setTime(QTime(0, 0, 0));
     endDay.setTime(QTime(23, 59, 59));
 
-    Event::List const matchingEvents = helper->calendar()->events(startDay.date(), endDay.date(), QTimeZone::systemTimeZone());
+    Event::List const matchingEvents = calendar->events(startDay.date(), endDay.date(), QTimeZone::systemTimeZone());
     if (matchingEvents.isEmpty()) {
         return QVariantList();
     }
@@ -492,7 +492,8 @@ static QString invitationLocation(const Incidence::Ptr &incidence)
     return events;
 }
 
-[[nodiscard]] static QVariantHash invitationDetailsEvent(InvitationFormatterHelper *helper, const Event::Ptr &event)
+[[nodiscard]] static QVariantHash
+invitationDetailsEvent(const std::function<QString(QString)> &generateLinkURL, const KCalendarCore::Calendar::Ptr &calendar, const Event::Ptr &event)
 {
     // Invitation details are formatted into an HTML table
     if (!event) {
@@ -515,8 +516,8 @@ static QString invitationLocation(const Incidence::Ptr &incidence)
     incidence[QStringLiteral("description")] = invitationDescriptionIncidence(event);
 
     incidence[QStringLiteral("checkCalendarButton")] =
-        inviteButton(QStringLiteral("check_calendar"), i18n("Check my calendar"), QStringLiteral("go-jump-today"), helper);
-    incidence[QStringLiteral("eventsOnSameDays")] = eventsOnSameDays(helper, event);
+        inviteButton(QStringLiteral("check_calendar"), i18n("Check my calendar"), QStringLiteral("go-jump-today"), generateLinkURL);
+    incidence[QStringLiteral("eventsOnSameDays")] = eventsOnSameDays(calendar, event);
 
     return incidence;
 }
@@ -546,11 +547,14 @@ QString formatStartEnd(const QDateTime &start, const QDateTime &end, bool isAllD
     return tmpStr;
 }
 
-[[nodiscard]] static QVariantHash
-invitationDetailsEvent(InvitationFormatterHelper *helper, const Event::Ptr &event, const Event::Ptr &oldevent, const ScheduleMessage::Ptr &message)
+[[nodiscard]] static QVariantHash invitationDetailsEvent(const std::function<QString(QString)> &generateLinkURL,
+                                                         const KCalendarCore::Calendar::Ptr &calendar,
+                                                         const Event::Ptr &event,
+                                                         const Event::Ptr &oldevent,
+                                                         const ScheduleMessage::Ptr &message)
 {
     if (!oldevent) {
-        return invitationDetailsEvent(helper, event);
+        return invitationDetailsEvent(generateLinkURL, calendar, event);
     }
 
     QVariantHash incidence;
@@ -576,8 +580,8 @@ invitationDetailsEvent(InvitationFormatterHelper *helper, const Event::Ptr &even
     incidence[QStringLiteral("description")] = invitationDescriptionIncidence(event);
 
     incidence[QStringLiteral("checkCalendarButton")] =
-        inviteButton(QStringLiteral("check_calendar"), i18n("Check my calendar"), QStringLiteral("go-jump-today"), helper);
-    incidence[QStringLiteral("eventsOnSameDays")] = eventsOnSameDays(helper, event);
+        inviteButton(QStringLiteral("check_calendar"), i18n("Check my calendar"), QStringLiteral("go-jump-today"), generateLinkURL);
+    incidence[QStringLiteral("eventsOnSameDays")] = eventsOnSameDays(calendar, event);
 
     return incidence;
 }
@@ -1161,7 +1165,7 @@ invitationHeaderTodo(const Todo::Ptr &todo, const Incidence::Ptr &existingIncide
     return attendees;
 }
 
-[[nodiscard]] static QVariantList invitationAttachments(const Incidence::Ptr &incidence, InvitationFormatterHelper *helper)
+[[nodiscard]] static QVariantList invitationAttachments(const Incidence::Ptr &incidence, const std::function<QString(QString)> &generateLinkURL)
 {
     if (!incidence) {
         return QVariantList();
@@ -1180,7 +1184,7 @@ invitationHeaderTodo(const Todo::Ptr &todo, const Incidence::Ptr &existingIncide
         auto mimeType = mimeDb.mimeTypeForName(a.mimeType());
         attachment[QStringLiteral("icon")] = (mimeType.isValid() ? mimeType.iconName() : QStringLiteral("application-octet-stream"));
         attachment[QStringLiteral("name")] = a.label();
-        const QString attachementStr = helper->generateLinkURL(QStringLiteral("ATTACH:%1").arg(QString::fromLatin1(a.label().toUtf8().toBase64())));
+        const QString attachementStr = generateLinkURL(QStringLiteral("ATTACH:%1").arg(QString::fromLatin1(a.label().toUtf8().toBase64())));
         attachment[QStringLiteral("uri")] = attachementStr;
         attachments.push_back(attachment);
     }
@@ -1249,9 +1253,10 @@ protected:
 class ItipFormatter::InvitationBodyVisitor : public ItipFormatter::ScheduleMessageVisitor<QVariantHash>
 {
 public:
-    explicit InvitationBodyVisitor(InvitationFormatterHelper *helper)
+    explicit InvitationBodyVisitor(const std::function<QString(QString)> &generateLinkURL, const KCalendarCore::Calendar::Ptr &calendar)
         : ScheduleMessageVisitor()
-        , mHelper(helper)
+        , m_generateLinkUrl(generateLinkURL)
+        , m_calendar(calendar)
     {
     }
 
@@ -1259,7 +1264,7 @@ protected:
     bool visit(const Event::Ptr &event) override
     {
         Event::Ptr const oldevent = mExistingIncidence.dynamicCast<Event>();
-        mResult = invitationDetailsEvent(mHelper, event, oldevent, mMessage);
+        mResult = invitationDetailsEvent(m_generateLinkUrl, m_calendar, event, oldevent, mMessage);
         return !mResult.isEmpty();
     }
 
@@ -1284,17 +1289,10 @@ protected:
     }
 
 private:
-    InvitationFormatterHelper *mHelper;
+    const std::function<QString(QString)> &m_generateLinkUrl;
+    const KCalendarCore::Calendar::Ptr m_calendar;
 };
 //@endcond
-
-InvitationFormatterHelper::InvitationFormatterHelper() = default;
-InvitationFormatterHelper::~InvitationFormatterHelper() = default;
-
-QString InvitationFormatterHelper::generateLinkURL(const QString &id)
-{
-    return id;
-}
 
 // Check if the given incidence is likely one that we own instead one from
 // a shared calendar (Kolab-specific)
@@ -1303,10 +1301,10 @@ static bool incidenceOwnedByMe([[maybe_unused]] const Calendar::Ptr &calendar, [
     return true;
 }
 
-static QVariantHash inviteButton(const QString &id, const QString &text, const QString &iconName, InvitationFormatterHelper *helper)
+static QVariantHash inviteButton(const QString &id, const QString &text, const QString &iconName, const std::function<QString(QString)> &generateLinkURL)
 {
     QVariantHash button;
-    button[QStringLiteral("uri")] = helper->generateLinkURL(id);
+    button[QStringLiteral("uri")] = generateLinkURL(id);
     button[QStringLiteral("icon")] = iconName;
     button[QStringLiteral("label")] = text;
     return button;
@@ -1315,7 +1313,7 @@ static QVariantHash inviteButton(const QString &id, const QString &text, const Q
 static QVariantList responseButtons(const Incidence::Ptr &incidence,
                                     bool rsvpReq,
                                     bool rsvpRec,
-                                    InvitationFormatterHelper *helper,
+                                    const std::function<QString(QString)> &generateLinkURL,
                                     const Incidence::Ptr &existingInc = Incidence::Ptr())
 {
     bool hideAccept = false;
@@ -1336,14 +1334,14 @@ static QVariantList responseButtons(const Incidence::Ptr &incidence,
     QVariantList buttons;
     if (!rsvpReq && (incidence && incidence->revision() == 0)) {
         // Record only
-        buttons << inviteButton(QStringLiteral("record"), i18n("Record"), QStringLiteral("dialog-ok"), helper);
+        buttons << inviteButton(QStringLiteral("record"), i18n("Record"), QStringLiteral("dialog-ok"), generateLinkURL);
 
         // Move to trash
-        buttons << inviteButton(QStringLiteral("delete"), i18n("Move to Trash"), QStringLiteral("user-trash"), helper);
+        buttons << inviteButton(QStringLiteral("delete"), i18n("Move to Trash"), QStringLiteral("user-trash"), generateLinkURL);
     } else {
         // Accept
         if (!hideAccept) {
-            buttons << inviteButton(QStringLiteral("accept"), i18nc("accept invitation", "Accept"), QStringLiteral("dialog-ok-apply"), helper);
+            buttons << inviteButton(QStringLiteral("accept"), i18nc("accept invitation", "Accept"), QStringLiteral("dialog-ok-apply"), generateLinkURL);
         }
 
         // Tentative
@@ -1351,39 +1349,45 @@ static QVariantList responseButtons(const Incidence::Ptr &incidence,
             buttons << inviteButton(QStringLiteral("accept_conditionally"),
                                     i18nc("Accept invitation conditionally", "Tentative"),
                                     QStringLiteral("dialog-ok"),
-                                    helper);
+                                    generateLinkURL);
         }
 
         // Decline
         if (!hideDecline) {
-            buttons << inviteButton(QStringLiteral("decline"), i18nc("decline invitation", "Decline"), QStringLiteral("dialog-cancel"), helper);
+            buttons << inviteButton(QStringLiteral("decline"), i18nc("decline invitation", "Decline"), QStringLiteral("dialog-cancel"), generateLinkURL);
         }
 
         // Counter proposal
-        buttons << inviteButton(QStringLiteral("counter"), i18nc("invitation counter proposal", "Counter proposal ..."), QStringLiteral("edit-undo"), helper);
+        buttons << inviteButton(QStringLiteral("counter"),
+                                i18nc("invitation counter proposal", "Counter proposal ..."),
+                                QStringLiteral("edit-undo"),
+                                generateLinkURL);
     }
 
     if (!rsvpRec || (incidence && incidence->revision() > 0)) {
         // Delegate
-        buttons << inviteButton(QStringLiteral("delegate"), i18nc("delegate invitation to another", "Delegate ..."), QStringLiteral("mail-forward"), helper);
+        buttons << inviteButton(QStringLiteral("delegate"),
+                                i18nc("delegate invitation to another", "Delegate ..."),
+                                QStringLiteral("mail-forward"),
+                                generateLinkURL);
     }
     return buttons;
 }
 
-[[nodiscard]] static QVariantList counterButtons(InvitationFormatterHelper *helper)
+[[nodiscard]] static QVariantList counterButtons(const std::function<QString(QString)> &generateLinkURL)
 {
     QVariantList buttons;
 
     // Accept proposal
-    buttons << inviteButton(QStringLiteral("accept_counter"), i18n("Accept"), QStringLiteral("dialog-ok-apply"), helper);
+    buttons << inviteButton(QStringLiteral("accept_counter"), i18n("Accept"), QStringLiteral("dialog-ok-apply"), generateLinkURL);
 
     // Decline proposal
-    buttons << inviteButton(QStringLiteral("decline_counter"), i18n("Decline"), QStringLiteral("dialog-cancel"), helper);
+    buttons << inviteButton(QStringLiteral("decline_counter"), i18n("Decline"), QStringLiteral("dialog-cancel"), generateLinkURL);
 
     return buttons;
 }
 
-[[nodiscard]] static QVariantList recordButtons(const Incidence::Ptr &incidence, InvitationFormatterHelper *helper)
+[[nodiscard]] static QVariantList recordButtons(const Incidence::Ptr &incidence, const std::function<QString(QString)> &generateLinkURL)
 {
     QVariantList buttons;
     if (incidence) {
@@ -1391,12 +1395,12 @@ static QVariantList responseButtons(const Incidence::Ptr &incidence,
                                 incidence->type() == Incidence::TypeTodo ? i18n("Record invitation in my to-do list")
                                                                          : i18n("Record invitation in my calendar"),
                                 QStringLiteral("dialog-ok"),
-                                helper);
+                                generateLinkURL);
     }
     return buttons;
 }
 
-[[nodiscard]] static QVariantList recordResponseButtons(const Incidence::Ptr &incidence, InvitationFormatterHelper *helper)
+[[nodiscard]] static QVariantList recordResponseButtons(const Incidence::Ptr &incidence, const std::function<QString(QString)> &generateLinkURL)
 {
     QVariantList buttons;
 
@@ -1404,12 +1408,12 @@ static QVariantList responseButtons(const Incidence::Ptr &incidence,
         buttons << inviteButton(QStringLiteral("reply"),
                                 incidence->type() == Incidence::TypeTodo ? i18n("Record response in my to-do list") : i18n("Record response in my calendar"),
                                 QStringLiteral("dialog-ok"),
-                                helper);
+                                generateLinkURL);
     }
     return buttons;
 }
 
-[[nodiscard]] static QVariantList cancelButtons(const Incidence::Ptr &incidence, InvitationFormatterHelper *helper)
+[[nodiscard]] static QVariantList cancelButtons(const Incidence::Ptr &incidence, const std::function<QString(QString)> &generateLinkURL)
 {
     QVariantList buttons;
 
@@ -1419,7 +1423,7 @@ static QVariantList responseButtons(const Incidence::Ptr &incidence,
                                 incidence->type() == Incidence::TypeTodo ? i18n("Remove invitation from my to-do list")
                                                                          : i18n("Remove invitation from my calendar"),
                                 QStringLiteral("dialog-cancel"),
-                                helper);
+                                generateLinkURL);
     }
 
     return buttons;
@@ -1436,30 +1440,27 @@ static QVariantList responseButtons(const Incidence::Ptr &incidence,
     return style;
 }
 
-Calendar::Ptr InvitationFormatterHelper::calendar() const
-{
-    return Calendar::Ptr();
-}
-
-QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage::Ptr &message, InvitationFormatterHelper *helper, const QString &sender)
+QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage::Ptr &message,
+                                            const std::function<QString(QString)> &generateLinkURL,
+                                            const KCalendarCore::Calendar::Ptr &calendar,
+                                            const QString &sender)
 {
     IncidenceBase::Ptr const incBase = message->event();
 
     // Determine if this incidence is in my calendar (and owned by me)
     Incidence::Ptr existingIncidence;
-    if (incBase && helper->calendar()) {
-        existingIncidence = helper->calendar()->incidence(incBase->uid(), incBase->recurrenceId());
+    if (incBase && calendar) {
+        existingIncidence = calendar->incidence(incBase->uid(), incBase->recurrenceId());
 
         /* cppcheck-suppress knownConditionTrueFalse */
-        if (!incidenceOwnedByMe(helper->calendar(), existingIncidence)) {
+        if (!incidenceOwnedByMe(calendar, existingIncidence)) {
             existingIncidence.clear();
         }
         if (!existingIncidence) {
-            const Incidence::List list = helper->calendar()->incidences();
+            const Incidence::List list = calendar->incidences();
             for (Incidence::List::ConstIterator it = list.begin(), end = list.end(); it != end; ++it) {
                 /* cppcheck-suppress knownConditionTrueFalse */
-                if ((*it)->schedulingID() == incBase->uid() && incidenceOwnedByMe(helper->calendar(), *it)
-                    && (*it)->recurrenceId() == incBase->recurrenceId()) {
+                if ((*it)->schedulingID() == incBase->uid() && incidenceOwnedByMe(calendar, *it) && (*it)->recurrenceId() == incBase->recurrenceId()) {
                     existingIncidence = *it;
                     break;
                 }
@@ -1485,7 +1486,7 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
     QVariantHash incidence;
 
     // use the Outlook 2007 Comparison Style
-    ItipFormatter::InvitationBodyVisitor bodyVisitor(helper);
+    ItipFormatter::InvitationBodyVisitor bodyVisitor(generateLinkURL, calendar);
     bool bodyOk;
     if (message->method() == iTIPRequest || message->method() == iTIPReply || message->method() == iTIPDeclineCounter) {
         if (inc && existingIncidence && incRevision < existingIncidence->revision()) {
@@ -1597,21 +1598,21 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
     case iTIPRequest:
     case iTIPRefresh:
     case iTIPAdd:
-        if (inc && incRevision > 0 && (existingIncidence || !helper->calendar())) {
-            buttons += recordButtons(inc, helper);
+        if (inc && incRevision > 0 && (existingIncidence || !calendar)) {
+            buttons += recordButtons(inc, generateLinkURL);
         }
 
         if (!myInc) {
             if (!firstAtt.isNull()) {
-                buttons += responseButtons(inc, rsvpReq, rsvpRec, helper);
+                buttons += responseButtons(inc, rsvpReq, rsvpRec, generateLinkURL);
             } else {
-                buttons += responseButtons(inc, false, false, helper);
+                buttons += responseButtons(inc, false, false, generateLinkURL);
             }
         }
         break;
 
     case iTIPCancel:
-        buttons = cancelButtons(inc, helper);
+        buttons = cancelButtons(inc, generateLinkURL);
         break;
 
     case iTIPReply: {
@@ -1627,7 +1628,7 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
             a = findDelegatedFromMyAttendee(inc);
             if (!a.isNull()) {
                 if (a.status() != Attendee::Accepted || a.status() != Attendee::Tentative) {
-                    buttons = responseButtons(inc, rsvpReq, rsvpRec, helper);
+                    buttons = responseButtons(inc, rsvpReq, rsvpRec, generateLinkURL);
                     break;
                 }
             }
@@ -1636,7 +1637,7 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
             if (!inc->attendees().isEmpty()) {
                 a = inc->attendees().at(0);
             }
-            if (!a.isNull() && helper->calendar()) {
+            if (!a.isNull() && calendar) {
                 ea = findAttendee(existingIncidence, a.email());
             }
         }
@@ -1646,10 +1647,10 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
 #else
             const QString tStr = i18n("The <b>%1</b> response has been recorded", Attendee::statusName(ea.status()));
 #endif
-            buttons << inviteButton(QString(), tStr, QString(), helper);
+            buttons << inviteButton(QString(), tStr, QString(), generateLinkURL);
         } else {
             if (inc) {
-                buttons = recordResponseButtons(inc, helper);
+                buttons = recordResponseButtons(inc, generateLinkURL);
             }
         }
         break;
@@ -1657,11 +1658,11 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
 
     case iTIPCounter:
         // Counter proposal
-        buttons = counterButtons(helper);
+        buttons = counterButtons(generateLinkURL);
         break;
 
     case iTIPDeclineCounter:
-        buttons << responseButtons(inc, rsvpReq, rsvpRec, helper);
+        buttons << responseButtons(inc, rsvpReq, rsvpRec, generateLinkURL);
         break;
 
     case iTIPNoMethod:
@@ -1683,7 +1684,7 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
     }
 
     // Add the attachment list
-    incidence[QStringLiteral("attachments")] = invitationAttachments(inc, helper);
+    incidence[QStringLiteral("attachments")] = invitationAttachments(inc, generateLinkURL);
 
     const QStringList comments = inc->comments();
     if (!comments.isEmpty()) {
