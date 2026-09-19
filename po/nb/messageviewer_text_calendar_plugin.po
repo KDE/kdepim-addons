@@ -1274,9 +1274,3 @@ msgstr "Send invitasjon videre"
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "Åpne vedlegg «%1»"
-
-#~ msgid "Do you still want to check your calendar?"
-#~ msgstr "Vil du fremdeles sjekke kalenderen din?"
-
-#~ msgid "%1?"
-#~ msgstr "%1?"

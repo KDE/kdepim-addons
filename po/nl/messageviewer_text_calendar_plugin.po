@@ -1,14 +1,11 @@
 # translation of kmail_text_calendar_plugin.po to Dutch
-# translation of kmail_text_calendar_plugin.po to
 # Copyright (C) 2004, 2005, 2007, 2008, 2010 Free Software Foundation, Inc.
 #
 # Wilbert Berendsen <wbsoft@xs4all.nl>, 2004.
 # Tom Albers <tomalbers@kde.nl>, 2004.
 # Bram Schoenmakers <bramschoenmakers@kde.nl>, 2004, 2005, 2007.
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2008.
-# SPDX-FileCopyrightText: 2009, 2024, 2026 Freek de Kruijf <f.de.kruijf@hetnet.nl>
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2012.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2011, 2015, 2017, 2019, 2021.
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 20212, 2015, 2017, 2019, 2021, 2024, 2026 Freek de Kruijf <frekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
