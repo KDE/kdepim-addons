@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 00:46+0000\n"
-"PO-Revision-Date: 2025-11-30 15:29+0530\n"
+"PO-Revision-Date: 2026-09-20 13:56+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: attendeeselector.cpp:21
 #, kde-format
@@ -62,26 +62,24 @@ msgid "Organizer Unknown"
 msgstr ""
 
 #: itipformatter.cpp:160 itipformatter.cpp:843
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Send"
+#, kde-format
 msgid "Sender"
-msgstr "அனுப்பு"
+msgstr "அனுப்புநர்"
 
 #: itipformatter.cpp:218
 #, kde-format
 msgid "Summary unspecified"
-msgstr ""
+msgstr "விவரணம் குறிப்பிடப்படவில்லை"
 
 #: itipformatter.cpp:230
 #, kde-format
 msgid "Location unspecified"
-msgstr ""
+msgstr "இடம் குறிப்பிடப்படவில்லை"
 
 #: itipformatter.cpp:354
 #, kde-format
 msgid "Your response is requested."
-msgstr ""
+msgstr "உங்கள் பதில் கோரப்பட்டுள்ளது."
 
 #: itipformatter.cpp:356
 #, kde-format
@@ -91,7 +89,7 @@ msgstr ""
 #: itipformatter.cpp:360
 #, kde-format
 msgid "No response is necessary."
-msgstr ""
+msgstr "பதில் தேவையில்லை."
 
 #: itipformatter.cpp:362
 #, kde-format
@@ -543,12 +541,10 @@ msgstr ""
 #: itipformatter.cpp:1340
 #, kde-format
 msgid "Move to Trash"
-msgstr ""
+msgstr "அகற்றிடத்துக்கு நகர்த்து"
 
 #: itipformatter.cpp:1344
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Accept"
+#, kde-format
 msgctxt "accept invitation"
 msgid "Accept"
 msgstr "ஏற்றுக்கொள்"
@@ -557,43 +553,35 @@ msgstr "ஏற்றுக்கொள்"
 #, kde-format
 msgctxt "Accept invitation conditionally"
 msgid "Tentative"
-msgstr ""
+msgstr "உறுதியில்லாமல் ஏற்"
 
 #: itipformatter.cpp:1357
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Decline"
+#, kde-format
 msgctxt "decline invitation"
 msgid "Decline"
-msgstr "நிராகரி"
+msgstr "மறு"
 
 #: itipformatter.cpp:1362
 #, kde-format
 msgctxt "invitation counter proposal"
 msgid "Counter proposal ..."
-msgstr ""
+msgstr "மாற்றத்தை பரிந்துரை ..."
 
 #: itipformatter.cpp:1370
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Delegate:"
+#, kde-format
 msgctxt "delegate invitation to another"
 msgid "Delegate ..."
-msgstr "பிரதிநிதி:"
+msgstr "பிரதிநிதியை அனுப்பு ..."
 
 #: itipformatter.cpp:1382
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Accept"
+#, kde-format
 msgid "Accept"
 msgstr "ஏற்றுக்கொள்"
 
 #: itipformatter.cpp:1385
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Decline"
+#, kde-format
 msgid "Decline"
-msgstr "நிராகரி"
+msgstr "மறு"
 
 #: itipformatter.cpp:1395
 #, fuzzy, kde-format
@@ -1020,7 +1008,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
-msgstr ""
+msgstr "பிரதிநிதியை அனுப்பு"
 
 #: text_calendar.cpp:825
 #, kde-format
