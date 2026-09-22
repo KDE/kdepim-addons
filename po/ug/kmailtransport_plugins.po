@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:44+0000\n"
-"PO-Revision-Date: 2026-05-30 17:25-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -19,10 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: sendmail/sendmailjob.cpp:41
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Invalid options for the mailer program: %1"
-msgstr "يوللانما يوللاش پىروگراممىسى %1 نى ئىجرا قىلالمىدى"
+msgstr ""
 
 #: sendmail/sendmailjob.cpp:59
 #, kde-format
@@ -30,10 +29,9 @@ msgid "Failed to execute mailer program %1"
 msgstr "يوللانما يوللاش پىروگراممىسى %1 نى ئىجرا قىلالمىدى"
 
 #: sendmail/sendmailjob.cpp:61
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Failed to execute mailer program %1: %2"
-msgstr "يوللانما يوللاش پىروگراممىسى %1 نى ئىجرا قىلالمىدى"
+msgstr ""
 
 #: sendmail/sendmailjob.cpp:75
 #, kde-format
@@ -49,7 +47,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option sendmail transport"
 msgid "Sendmail"
-msgstr "Sendmail"
+msgstr ""
 
 #: sendmail/sendmailtransportplugin.cpp:28
 #, kde-format

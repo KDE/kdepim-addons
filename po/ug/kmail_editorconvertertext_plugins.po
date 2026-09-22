@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-06 00:46+0000\n"
-"PO-Revision-Date: 2026-05-30 17:24-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -86,7 +86,7 @@ msgstr ""
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:74
 #, kde-format
 msgid " px"
-msgstr " px"
+msgstr ""
 
 #: markdown/markdownlib/markdowncreatelinkdialog.cpp:28
 #, kde-format
@@ -119,7 +119,7 @@ msgstr ""
 #: markdown/plugin/markdowninterface.cpp:56
 #, kde-format
 msgid "Markdown"
-msgstr "Markdown"
+msgstr ""
 
 #: markdown/plugin/markdowninterface.cpp:58
 #, kde-format
@@ -130,7 +130,7 @@ msgstr ""
 #: markdown/plugin/markdowninterface.cpp:63
 #, kde-format
 msgid "Add Title"
-msgstr ""
+msgstr "ماۋزۇ قوش"
 
 #: markdown/plugin/markdowninterface.cpp:66
 #, kde-format

@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 00:46+0000\n"
-"PO-Revision-Date: 2026-05-30 17:25-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,21 +66,19 @@ msgid "Organizer Unknown"
 msgstr ""
 
 #: itipformatter.cpp:160 itipformatter.cpp:843
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Send"
+#, kde-format
 msgid "Sender"
-msgstr "يوللا"
+msgstr "يوللىغۇچى"
 
 #: itipformatter.cpp:218
 #, kde-format
 msgid "Summary unspecified"
-msgstr ""
+msgstr "قىسقىچە مەزمۇنى كۆرسىتىلمىگەن"
 
 #: itipformatter.cpp:230
 #, kde-format
 msgid "Location unspecified"
-msgstr ""
+msgstr "ئورنى بەلگىلەنمىگەن"
 
 #: itipformatter.cpp:354
 #, kde-format
@@ -110,7 +108,7 @@ msgstr ""
 #: itipformatter.cpp:519 itipformatter.cpp:583
 #, kde-format
 msgid "Check my calendar"
-msgstr ""
+msgstr "يىلنامەمنى تەكشۈر"
 
 #: itipformatter.cpp:564 itipformatter.cpp:641
 #, kde-format
@@ -118,14 +116,9 @@ msgid "Please respond again to the original proposal."
 msgstr ""
 
 #: itipformatter.cpp:618 itipformatter.cpp:652
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "%2"
+#, kde-format
 msgid "%1%"
 msgstr ""
-"%1\n"
-"%2"
 
 #: itipformatter.cpp:742
 #, kde-format
@@ -533,21 +526,17 @@ msgid "%1 (<i>unrecorded</i>)"
 msgstr ""
 
 #: itipformatter.cpp:1337
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Record"
+#, kde-format
 msgid "Record"
 msgstr "خاتىرە"
 
 #: itipformatter.cpp:1340
 #, kde-format
 msgid "Move to Trash"
-msgstr ""
+msgstr "ھۆججەتنى ئەخلەتخانىغا يۆتكە"
 
 #: itipformatter.cpp:1344
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Accept"
+#, kde-format
 msgctxt "accept invitation"
 msgid "Accept"
 msgstr "قوشۇل"
@@ -556,12 +545,10 @@ msgstr "قوشۇل"
 #, kde-format
 msgctxt "Accept invitation conditionally"
 msgid "Tentative"
-msgstr ""
+msgstr "سىناق"
 
 #: itipformatter.cpp:1357
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Decline"
+#, kde-format
 msgctxt "decline invitation"
 msgid "Decline"
 msgstr "قوشۇلما"
@@ -579,16 +566,12 @@ msgid "Delegate ..."
 msgstr ""
 
 #: itipformatter.cpp:1382
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Accept"
+#, kde-format
 msgid "Accept"
 msgstr "قوشۇل"
 
 #: itipformatter.cpp:1385
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Decline"
+#, kde-format
 msgid "Decline"
 msgstr "قوشۇلما"
 
@@ -598,10 +581,9 @@ msgid "Record invitation in my to-do list"
 msgstr ""
 
 #: itipformatter.cpp:1396
-#, fuzzy, kde-format
-#| msgid "Remove invitation from my calendar"
+#, kde-format
 msgid "Record invitation in my calendar"
-msgstr "يىلنامەمدىن تەكلىپنى چىقىرىۋەت"
+msgstr ""
 
 #: itipformatter.cpp:1409
 #, kde-format
@@ -614,10 +596,9 @@ msgid "Record response in my calendar"
 msgstr ""
 
 #: itipformatter.cpp:1423
-#, fuzzy, kde-format
-#| msgid "Remove invitation from my calendar"
+#, kde-format
 msgid "Remove invitation from my to-do list"
-msgstr "يىلنامەمدىن تەكلىپنى چىقىرىۋەت"
+msgstr "مېنىڭ قىلىدىغان ئىشلىرىمدىن تەكلىپنى چىقىرىۋەت"
 
 #: itipformatter.cpp:1424 text_calendar.cpp:1396
 #, kde-format
@@ -662,7 +643,7 @@ msgstr ""
 #: itipformatter.cpp:1678
 #, kde-format
 msgid "Participants:"
-msgstr ""
+msgstr "قاتناشقۇچىلار:"
 
 #: reactiontoinvitationdialog.cpp:32
 #, kde-format
@@ -693,22 +674,16 @@ msgid "Send email"
 msgstr ""
 
 #: templates/itip.html:80
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Comment:"
 msgid "Comment:"
 msgstr "ئىزاھات:"
 
 #: templates/itip.html:83
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Comment:"
 msgid "Comments:"
 msgstr "ئىزاھات:"
 
 #: templates/itip.html:122
 msgid "Attachments:"
-msgstr ""
+msgstr "قوشۇلما:"
 
 #: templates/itip_event.html:6
 msgid "First event:"
@@ -720,16 +695,16 @@ msgstr ""
 
 #: templates/itip_event.html:15 templates/itip_todo.html:6
 msgid "Where:"
-msgstr ""
+msgstr "ئورنى:"
 
 #: templates/itip_event.html:22 templates/itip_todo.html:46
 msgid "Recurrence:"
-msgstr ""
+msgstr "قايتىلىنىش:"
 
 #: templates/itip_event.html:29 templates/itip_journal.html:11
 #: templates/itip_todo.html:53
 msgid "Description:"
-msgstr ""
+msgstr "چۈشەندۈرۈش:"
 
 #: templates/itip_event.html:42
 msgid "Events on these days:"
@@ -741,15 +716,15 @@ msgstr ""
 
 #: templates/itip_freebusy.html:5
 msgid "Person:"
-msgstr ""
+msgstr "كىشى:"
 
 #: templates/itip_freebusy.html:10
 msgid "Start date:"
-msgstr ""
+msgstr "باشلاش چېسلاسى:"
 
 #: templates/itip_freebusy.html:15
 msgid "End date:"
-msgstr ""
+msgstr "ئاخىرلاشتۇرۇش چېسلاسى:"
 
 #: templates/itip_freebusy.html:23
 msgid "Busy periods given in this free/busy object:"
@@ -759,7 +734,7 @@ msgstr ""
 #, kde-format
 msgctxt "<startDate> for <duration>"
 msgid "%1 for %2"
-msgstr ""
+msgstr "%2 ئۈچۈن %1"
 
 #: templates/itip_freebusy.html:34
 #, kde-format
@@ -771,11 +746,11 @@ msgstr ""
 #, kde-format
 msgctxt "<date>, <startTime> - <endTime>"
 msgid "%1, %2 - %3"
-msgstr ""
+msgstr "%1، %2 - %3"
 
 #: templates/itip_journal.html:5
 msgid "Date:"
-msgstr ""
+msgstr "چېسلا:"
 
 #: templates/itip_todo.html:16
 #, kde-format
@@ -797,11 +772,11 @@ msgstr ""
 
 #: templates/itip_todo.html:32
 msgid "Percent Done:"
-msgstr ""
+msgstr "پىرسەنت تاماملاندى:"
 
 #: templates/itip_todo.html:39
 msgid "Due:"
-msgstr ""
+msgstr "قەرەلى:"
 
 #: text_calendar.cpp:355
 #, kde-format
@@ -1069,8 +1044,6 @@ msgid ""
 "%1\n"
 "%2"
 msgstr ""
-"%1\n"
-"%2"
 
 #: text_calendar.cpp:891
 #, kde-format
