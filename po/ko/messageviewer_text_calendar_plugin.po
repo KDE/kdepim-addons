@@ -729,9 +729,6 @@ msgid "Send email"
 msgstr "이메일 보내기"
 
 #: templates/itip.html:80
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Comment:"
 msgid "Comment:"
 msgstr "설명:"
 
