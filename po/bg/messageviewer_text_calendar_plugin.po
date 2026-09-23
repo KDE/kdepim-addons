@@ -1231,13 +1231,3 @@ msgstr "Препращане на покана"
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "Отваряне на прикачен файл „%1“"
-
-#~ msgid "Do you still want to check your calendar?"
-#~ msgstr "Все още ли искате да проверите календара си?"
-
-#~ msgctxt "@action:button"
-#~ msgid "Check"
-#~ msgstr "Проверка"
-
-#~ msgid "%1?"
-#~ msgstr "%1?"
