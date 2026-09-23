@@ -33,7 +33,14 @@
 #include <KFormat>
 #include <KLocalizedString>
 #include <ktexttemplate_version.h>
-#include <ktexttohtml.h>
+#include <textutils_version.h>
+#if TEXTUTILS_VERSION >= QT_VERSION_CHECK(2, 2, 0)
+#include <TextUtils/TextUtilsTextToHtml>
+namespace TextToHtml = TextUtils::TextUtilsTextToHtml;
+#else
+#include <KTextToHTML>
+namespace TextToHtml = KTextToHTML;
+#endif
 
 #include <QApplication>
 #include <QLocale>
@@ -70,7 +77,7 @@ static QString cleanHtml(const QString &html)
 [[nodiscard]] static QString string2HTML(const QString &str)
 {
     // use convertToHtml so we get clickable links and other goodies
-    return KTextToHTML::convertToHtml(str, KTextToHTML::HighlightText | KTextToHTML::ReplaceSmileys);
+    return TextToHtml::convertToHtml(str, TextToHtml::HighlightText | TextToHtml::ReplaceSmileys);
 }
 
 [[nodiscard]] static bool thatIsMe(const QString &email)

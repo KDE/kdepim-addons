@@ -64,6 +64,7 @@ target_link_libraries(
     KF6::KIOWidgets
     Qt::DBus
     KF6::TextAddonsWidgets
+    KF6::TextUtils
     KF6::Codecs
 )
 
