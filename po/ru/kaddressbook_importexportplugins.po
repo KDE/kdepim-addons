@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:44+0000\n"
-"PO-Revision-Date: 2024-11-15 16:29+0300\n"
+"PO-Revision-Date: 2026-09-23 10:02+0200\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -715,16 +715,14 @@ msgid "Import contacts from a vCard file."
 msgstr "Импорт контактов из файла vCard."
 
 #: vcards/vcardimportexportplugininterface.cpp:53
-#, fuzzy, kde-format
-#| msgid "Export contacts to a vCard 4.0 file."
+#, kde-format
 msgid "Export contacts to a vCard file."
-msgstr "Экспорт контактов в файл формата vCard 4.0."
+msgstr "Экспорт контактов в файл vCard."
 
 #: vcards/vcardimportexportplugininterface.cpp:54
-#, fuzzy, kde-format
-#| msgid "Export vCard 4.0…"
+#, kde-format
 msgid "Export vCard…"
-msgstr "Экспорт в файл vCard 4.0…"
+msgstr "Экспорт в vCard…"
 
 #: vcards/vcardimportexportplugininterface.cpp:86
 #, kde-format

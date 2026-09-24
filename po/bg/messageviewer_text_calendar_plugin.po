@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 00:46+0000\n"
+"POT-Creation-Date: 2026-09-24 00:46+0000\n"
 "PO-Revision-Date: 2026-09-13 18:25+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -60,590 +60,590 @@ msgctxt "@label:textbox"
 msgid "Delegate:"
 msgstr "Делегиране:"
 
-#: itipformatter.cpp:138
+#: itipformatter.cpp:145
 #, kde-format
 msgid "Organizer Unknown"
 msgstr "Организатор неизвестен"
 
-#: itipformatter.cpp:160 itipformatter.cpp:843
+#: itipformatter.cpp:167 itipformatter.cpp:850
 #, kde-format
 msgid "Sender"
 msgstr "Подател"
 
-#: itipformatter.cpp:218
+#: itipformatter.cpp:225
 #, kde-format
 msgid "Summary unspecified"
 msgstr "Резюме неуточнено"
 
-#: itipformatter.cpp:230
+#: itipformatter.cpp:237
 #, kde-format
 msgid "Location unspecified"
 msgstr "Неопределено местоположение"
 
-#: itipformatter.cpp:354
+#: itipformatter.cpp:361
 #, kde-format
 msgid "Your response is requested."
 msgstr "Вашият отговор е поискан."
 
-#: itipformatter.cpp:356
+#: itipformatter.cpp:363
 #, kde-format
 msgid "Your response as <b>%1</b> is requested."
 msgstr "Вашият отговор като <b> %1 </b> е поискан."
 
-#: itipformatter.cpp:360
+#: itipformatter.cpp:367
 #, kde-format
 msgid "No response is necessary."
 msgstr "Не е необходим отговор."
 
-#: itipformatter.cpp:362
+#: itipformatter.cpp:369
 #, kde-format
 msgid "No response as <b>%1</b> is necessary."
 msgstr "Не е необходим отговор като <b> %1 </b>."
 
-#: itipformatter.cpp:373 itipformatter.cpp:375
+#: itipformatter.cpp:380 itipformatter.cpp:382
 #, kde-format
 msgid "(<b>Note</b>: the Organizer preset your response to <b>%1</b>)"
 msgstr ""
 "(<b> Забележка </b>: Организаторът е задал предварително вашия отговор на <b>"
 "%1</b>)"
 
-#: itipformatter.cpp:519 itipformatter.cpp:583
+#: itipformatter.cpp:526 itipformatter.cpp:590
 #, kde-format
 msgid "Check my calendar"
 msgstr "Провери календара ми"
 
-#: itipformatter.cpp:564 itipformatter.cpp:641
+#: itipformatter.cpp:571 itipformatter.cpp:648
 #, kde-format
 msgid "Please respond again to the original proposal."
 msgstr "Моля, отговорете отново на оригиналното предложение."
 
-#: itipformatter.cpp:618 itipformatter.cpp:652
+#: itipformatter.cpp:625 itipformatter.cpp:659
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: itipformatter.cpp:742
+#: itipformatter.cpp:749
 #, kde-format
 msgid "This invitation has been published."
 msgstr "Тази покана е публикувана."
 
-#: itipformatter.cpp:747
+#: itipformatter.cpp:754
 #, kde-format
 msgid "This invitation has been updated by the organizer %1."
 msgstr "Тази покана е актуализирана от организатора %1."
 
-#: itipformatter.cpp:749
+#: itipformatter.cpp:756
 #, kde-format
 msgid "This invitation has been updated by %1 as a representative of %2."
 msgstr "Тази покана е актуализирана от %1 като представител на %2."
 
-#: itipformatter.cpp:753
+#: itipformatter.cpp:760
 #, kde-format
 msgid "I created this invitation."
 msgstr "Създадох тази покана."
 
-#: itipformatter.cpp:757
+#: itipformatter.cpp:764
 #, kde-format
 msgid "You received an invitation from %1."
 msgstr "Получихте покана от %1."
 
-#: itipformatter.cpp:759
+#: itipformatter.cpp:766
 #, kde-format
 msgid "You received an invitation from %1 as a representative of %2."
 msgstr "Получихте покана от %1 като представител на %2."
 
-#: itipformatter.cpp:763
+#: itipformatter.cpp:770
 #, kde-format
 msgid "This invitation was refreshed."
 msgstr "Тази покана беше опреснена."
 
-#: itipformatter.cpp:766
+#: itipformatter.cpp:773
 #, kde-format
 msgid "This invitation has been canceled."
 msgstr "Тази покана е отменена."
 
-#: itipformatter.cpp:768
+#: itipformatter.cpp:775
 #, kde-format
 msgid "The organizer has revoked the invitation."
 msgstr "Организаторът отмени поканата."
 
-#: itipformatter.cpp:771
+#: itipformatter.cpp:778
 #, kde-format
 msgid "Addition to the invitation."
 msgstr "Добавка към поканата."
 
-#: itipformatter.cpp:793
+#: itipformatter.cpp:800
 #, kde-format
 msgid "%1 indicates this invitation still needs some action."
 msgstr "%1 показва, че тази покана все още се нуждае от действие."
 
-#: itipformatter.cpp:797
+#: itipformatter.cpp:804
 #, kde-format
 msgid "This invitation has been updated by attendee %1."
 msgstr "Тази покана е актуализирана от участник %1."
 
-#: itipformatter.cpp:799
+#: itipformatter.cpp:806
 #, kde-format
 msgid "This invitation has been updated by an attendee."
 msgstr "Тази покана е актуализирана от присъстващ."
 
-#: itipformatter.cpp:803
+#: itipformatter.cpp:810
 #, kde-format
 msgid "%1 accepts this invitation."
 msgstr "%1 приема тази покана."
 
-#: itipformatter.cpp:805
+#: itipformatter.cpp:812
 #, kde-format
 msgid "%1 accepts this invitation on behalf of %2."
 msgstr "%1 приема тази покана от името на %2."
 
-#: itipformatter.cpp:810
+#: itipformatter.cpp:817
 #, kde-format
 msgid "%1 tentatively accepts this invitation."
 msgstr "%1 условно приема тази покана."
 
-#: itipformatter.cpp:812
+#: itipformatter.cpp:819
 #, kde-format
 msgid "%1 tentatively accepts this invitation on behalf of %2."
 msgstr "%1 условно приема тази покана от името на %2."
 
-#: itipformatter.cpp:816
+#: itipformatter.cpp:823
 #, kde-format
 msgid "%1 declines this invitation."
 msgstr "%1 отказва тази покана."
 
-#: itipformatter.cpp:818
+#: itipformatter.cpp:825
 #, kde-format
 msgid "%1 declines this invitation on behalf of %2."
 msgstr "%1 отказва тази покана от името на %2."
 
-#: itipformatter.cpp:828
+#: itipformatter.cpp:835
 #, kde-format
 msgid "%1 has delegated this invitation to %2."
 msgstr "%1 делегира тази покана на %2."
 
-#: itipformatter.cpp:830
+#: itipformatter.cpp:837
 #, kde-format
 msgid "%1 has delegated this invitation."
 msgstr "%1 делегира тази покана."
 
-#: itipformatter.cpp:834
+#: itipformatter.cpp:841
 #, kde-format
 msgid "This invitation is now completed."
 msgstr "Тази покана вече е завършена."
 
-#: itipformatter.cpp:836
+#: itipformatter.cpp:843
 #, kde-format
 msgid "%1 is still processing the invitation."
 msgstr "%1 все още обработва поканата."
 
-#: itipformatter.cpp:838
+#: itipformatter.cpp:845
 #, kde-format
 msgid "Unknown response to this invitation."
 msgstr "Неизвестен отговор на тази покана."
 
-#: itipformatter.cpp:843 itipformatter.cpp:980
+#: itipformatter.cpp:850 itipformatter.cpp:987
 #, kde-format
 msgid "%1 makes this counter proposal."
 msgstr "%1 прави това насрещно предложение."
 
-#: itipformatter.cpp:848
+#: itipformatter.cpp:855
 #, kde-format
 msgid "%1 declines your counter proposal."
 msgstr "%1 отказва вашето насрещно предложение."
 
-#: itipformatter.cpp:850
+#: itipformatter.cpp:857
 #, kde-format
 msgid "%1 declines your counter proposal on behalf of %2."
 msgstr "%1 отказва вашето насрещно предложение от името на %2."
 
-#: itipformatter.cpp:855
+#: itipformatter.cpp:862
 #, kde-format
 msgid "Error: Event iTIP message with unknown method."
 msgstr "Грешка: Съобщение iTIP за събитие с неизвестен метод."
 
-#: itipformatter.cpp:870
+#: itipformatter.cpp:877
 #, kde-format
 msgid "This to-do has been published."
 msgstr "Тази задача е публикувана."
 
-#: itipformatter.cpp:875
+#: itipformatter.cpp:882
 #, kde-format
 msgid "This to-do has been updated by the organizer %1."
 msgstr "Тази задача е актуализирана от организатора %1."
 
-#: itipformatter.cpp:877
+#: itipformatter.cpp:884
 #, kde-format
 msgid "This to-do has been updated by %1 as a representative of %2."
 msgstr "Тази задача е актуализирана от %1 като представител на %2."
 
-#: itipformatter.cpp:881
+#: itipformatter.cpp:888
 #, kde-format
 msgid "I created this to-do."
 msgstr "Създадох тази задача."
 
-#: itipformatter.cpp:885
+#: itipformatter.cpp:892
 #, kde-format
 msgid "You have been assigned this to-do by %1."
 msgstr "Това задание Ви е възложено от %1."
 
-#: itipformatter.cpp:887
+#: itipformatter.cpp:894
 #, kde-format
 msgid "You have been assigned this to-do by %1 as a representative of %2."
 msgstr "Това задание Ви бе възложено от %1 като представител на %2."
 
-#: itipformatter.cpp:892
+#: itipformatter.cpp:899
 #, kde-format
 msgid "This to-do was refreshed."
 msgstr "Тази задача беше освежена."
 
-#: itipformatter.cpp:895
+#: itipformatter.cpp:902
 #, kde-format
 msgid "This to-do was canceled."
 msgstr "Това задача бе отменено."
 
-#: itipformatter.cpp:897
+#: itipformatter.cpp:904
 #, kde-format
 msgid "The organizer has revoked this to-do."
 msgstr "Организаторът отмени тази задача."
 
-#: itipformatter.cpp:900
+#: itipformatter.cpp:907
 #, kde-format
 msgid "Addition to the to-do."
 msgstr "Добавяне към задачата."
 
-#: itipformatter.cpp:922
+#: itipformatter.cpp:929
 #, kde-format
 msgid "%1 indicates this to-do assignment still needs some action."
 msgstr "%1 показва, че тази задача все още се нуждае от действие."
 
-#: itipformatter.cpp:927
+#: itipformatter.cpp:934
 #, kde-format
 msgid "This to-do has been completed by assignee %1."
 msgstr "Тази задача е изпълнена от участник %1."
 
-#: itipformatter.cpp:929
+#: itipformatter.cpp:936
 #, kde-format
 msgid "This to-do has been updated by assignee %1."
 msgstr "Тази задача е актуализирана от участник %1."
 
-#: itipformatter.cpp:933
+#: itipformatter.cpp:940
 #, kde-format
 msgid "This to-do has been completed by an assignee."
 msgstr "Тази задача е изпълнена от участник."
 
-#: itipformatter.cpp:935
+#: itipformatter.cpp:942
 #, kde-format
 msgid "This to-do has been updated by an assignee."
 msgstr "Тази задача е актуализирана от участник."
 
-#: itipformatter.cpp:940
+#: itipformatter.cpp:947
 #, kde-format
 msgid "%1 accepts this to-do."
 msgstr "%1 приема тази задача."
 
-#: itipformatter.cpp:942
+#: itipformatter.cpp:949
 #, kde-format
 msgid "%1 accepts this to-do on behalf of %2."
 msgstr "%1 приема тази задача от името на %2."
 
-#: itipformatter.cpp:947
+#: itipformatter.cpp:954
 #, kde-format
 msgid "%1 tentatively accepts this to-do."
 msgstr "%1 предварително приема тази задача."
 
-#: itipformatter.cpp:949
+#: itipformatter.cpp:956
 #, kde-format
 msgid "%1 tentatively accepts this to-do on behalf of %2."
 msgstr "%1 условно приема тази задача от името на %2."
 
-#: itipformatter.cpp:953
+#: itipformatter.cpp:960
 #, kde-format
 msgid "%1 declines this to-do."
 msgstr "%1 отказва тази задача."
 
-#: itipformatter.cpp:955
+#: itipformatter.cpp:962
 #, kde-format
 msgid "%1 declines this to-do on behalf of %2."
 msgstr "%1 отказва тази задача от името на %2."
 
-#: itipformatter.cpp:965
+#: itipformatter.cpp:972
 #, kde-format
 msgid "%1 has delegated this to-do to %2."
 msgstr "%1 делегира тази задача на %2."
 
-#: itipformatter.cpp:967
+#: itipformatter.cpp:974
 #, kde-format
 msgid "%1 has delegated this to-do."
 msgstr "%1 делегира тази задача."
 
-#: itipformatter.cpp:971
+#: itipformatter.cpp:978
 #, kde-format
 msgid "The request for this to-do is now completed."
 msgstr "Искането за тази задача вече е завършено."
 
-#: itipformatter.cpp:973
+#: itipformatter.cpp:980
 #, kde-format
 msgid "%1 is still processing the to-do."
 msgstr "%1 все още обработва задачата."
 
-#: itipformatter.cpp:975
+#: itipformatter.cpp:982
 #, kde-format
 msgid "Unknown response to this to-do."
 msgstr "Неизвестен отговор на тази задача."
 
-#: itipformatter.cpp:985
+#: itipformatter.cpp:992
 #, kde-format
 msgid "%1 declines the counter proposal."
 msgstr "%1 отхвърля насрещното предложение."
 
-#: itipformatter.cpp:987
+#: itipformatter.cpp:994
 #, kde-format
 msgid "%1 declines the counter proposal on behalf of %2."
 msgstr "%1 отхвърля насрещното предложение от името на %2."
 
-#: itipformatter.cpp:992
+#: itipformatter.cpp:999
 #, kde-format
 msgid "Error: To-do iTIP message with unknown method."
 msgstr "Грешка: Изпълнено iTIP съобщение с неизвестен метод."
 
-#: itipformatter.cpp:1006
+#: itipformatter.cpp:1013
 #, kde-format
 msgid "This journal has been published."
 msgstr "Този дневник е публикуван."
 
-#: itipformatter.cpp:1008
+#: itipformatter.cpp:1015
 #, kde-format
 msgid "You have been assigned this journal."
 msgstr "Този дневник ви беше възложен на вас."
 
-#: itipformatter.cpp:1010
+#: itipformatter.cpp:1017
 #, kde-format
 msgid "This journal was refreshed."
 msgstr "Този ​​дневник беше освежен."
 
-#: itipformatter.cpp:1012
+#: itipformatter.cpp:1019
 #, kde-format
 msgid "This journal was canceled."
 msgstr "Този ​​дневник бе отменен."
 
-#: itipformatter.cpp:1014
+#: itipformatter.cpp:1021
 #, kde-format
 msgid "Addition to the journal."
 msgstr "Добавка към дневника."
 
-#: itipformatter.cpp:1028
+#: itipformatter.cpp:1035
 #, kde-format
 msgid "Sender indicates this journal assignment still needs some action."
 msgstr ""
 "Подателят посочва, че тази задача на дневника все още се нуждае от действие."
 
-#: itipformatter.cpp:1030
+#: itipformatter.cpp:1037
 #, kde-format
 msgid "Sender accepts this journal."
 msgstr "Подателят приема този дневник."
 
-#: itipformatter.cpp:1032
+#: itipformatter.cpp:1039
 #, kde-format
 msgid "Sender tentatively accepts this journal."
 msgstr "Подателят предварително приема този дневник."
 
-#: itipformatter.cpp:1034
+#: itipformatter.cpp:1041
 #, kde-format
 msgid "Sender declines this journal."
 msgstr "Подателят отказва този дневник."
 
-#: itipformatter.cpp:1036
+#: itipformatter.cpp:1043
 #, kde-format
 msgid "Sender has delegated this request for the journal."
 msgstr "Подателят делегира тази заявка за дневника."
 
-#: itipformatter.cpp:1038
+#: itipformatter.cpp:1045
 #, kde-format
 msgid "The request for this journal is now completed."
 msgstr "Заявката за този дневник вече е завършена."
 
-#: itipformatter.cpp:1040
+#: itipformatter.cpp:1047
 #, kde-format
 msgid "Sender is still processing the invitation."
 msgstr "Подателят все още обработва поканата."
 
-#: itipformatter.cpp:1042
+#: itipformatter.cpp:1049
 #, kde-format
 msgid "Unknown response to this journal."
 msgstr "Неизвестен отговор на този дневник."
 
-#: itipformatter.cpp:1047 itipformatter.cpp:1077
+#: itipformatter.cpp:1054 itipformatter.cpp:1084
 #, kde-format
 msgid "Sender makes this counter proposal."
 msgstr "Подателят прави това насрещно предложение."
 
-#: itipformatter.cpp:1049 itipformatter.cpp:1079
+#: itipformatter.cpp:1056 itipformatter.cpp:1086
 #, kde-format
 msgid "Sender declines the counter proposal."
 msgstr "Подателят отхвърля насрещното предложение."
 
-#: itipformatter.cpp:1051
+#: itipformatter.cpp:1058
 #, kde-format
 msgid "Error: Journal iTIP message with unknown method."
 msgstr "Грешка: Съобщение iTIP на дневника с неизвестен метод."
 
-#: itipformatter.cpp:1065
+#: itipformatter.cpp:1072
 #, kde-format
 msgid "This free/busy list has been published."
 msgstr "Този ​​списък със заетост е публикуван."
 
-#: itipformatter.cpp:1067
+#: itipformatter.cpp:1074
 #, kde-format
 msgid "The free/busy list has been requested."
 msgstr "Изисква се списък със свободни/заети."
 
-#: itipformatter.cpp:1069
+#: itipformatter.cpp:1076
 #, kde-format
 msgid "This free/busy list was refreshed."
 msgstr "Този ​​списък със заетост беше обновен."
 
-#: itipformatter.cpp:1071
+#: itipformatter.cpp:1078
 #, kde-format
 msgid "This free/busy list was canceled."
 msgstr "Този ​​списък със заетост е анулиран."
 
-#: itipformatter.cpp:1073
+#: itipformatter.cpp:1080
 #, kde-format
 msgid "Addition to the free/busy list."
 msgstr "Добавяне към списъка със заетост."
 
-#: itipformatter.cpp:1075
+#: itipformatter.cpp:1082
 #, kde-format
 msgid "Reply to the free/busy list."
 msgstr "Отговорете на списъка със заетост."
 
-#: itipformatter.cpp:1081
+#: itipformatter.cpp:1088
 #, kde-format
 msgid "Error: Free/Busy iTIP message with unknown method."
 msgstr "Грешка: Безплатно / заето iTIP съобщение с неизвестен метод."
 
-#: itipformatter.cpp:1146 itipformatter.cpp:1148
+#: itipformatter.cpp:1153 itipformatter.cpp:1155
 #, kde-format
 msgid "%1 (<i>unrecorded</i>)"
 msgstr "%1 (<i> незаписан </i>)"
 
-#: itipformatter.cpp:1337
+#: itipformatter.cpp:1344
 #, kde-format
 msgid "Record"
 msgstr "Запис"
 
-#: itipformatter.cpp:1340
+#: itipformatter.cpp:1347
 #, kde-format
 msgid "Move to Trash"
 msgstr "Преместване в кошчето"
 
-#: itipformatter.cpp:1344
+#: itipformatter.cpp:1351
 #, kde-format
 msgctxt "accept invitation"
 msgid "Accept"
 msgstr "Приемане"
 
-#: itipformatter.cpp:1350
+#: itipformatter.cpp:1357
 #, kde-format
 msgctxt "Accept invitation conditionally"
 msgid "Tentative"
 msgstr "Несигурен"
 
-#: itipformatter.cpp:1357
+#: itipformatter.cpp:1364
 #, kde-format
 msgctxt "decline invitation"
 msgid "Decline"
 msgstr "Отхвърляне"
 
-#: itipformatter.cpp:1362
+#: itipformatter.cpp:1369
 #, kde-format
 msgctxt "invitation counter proposal"
 msgid "Counter proposal ..."
 msgstr "Контра предложение ..."
 
-#: itipformatter.cpp:1370
+#: itipformatter.cpp:1377
 #, kde-format
 msgctxt "delegate invitation to another"
 msgid "Delegate ..."
 msgstr "Делегиране ..."
 
-#: itipformatter.cpp:1382
+#: itipformatter.cpp:1389
 #, kde-format
 msgid "Accept"
 msgstr "Приемане"
 
-#: itipformatter.cpp:1385
+#: itipformatter.cpp:1392
 #, kde-format
 msgid "Decline"
 msgstr "Отхвърляне"
 
-#: itipformatter.cpp:1395
+#: itipformatter.cpp:1402
 #, kde-format
 msgid "Record invitation in my to-do list"
 msgstr "Записване на покана в моя списък със задачи"
 
-#: itipformatter.cpp:1396
+#: itipformatter.cpp:1403
 #, kde-format
 msgid "Record invitation in my calendar"
 msgstr "Записване на покана в моя календар"
 
-#: itipformatter.cpp:1409
+#: itipformatter.cpp:1416
 #, kde-format
 msgid "Record response in my to-do list"
 msgstr "Запис на отговора в моя списък със задачи"
 
-#: itipformatter.cpp:1409
+#: itipformatter.cpp:1416
 #, kde-format
 msgid "Record response in my calendar"
 msgstr "Запис на отговора в моя календар"
 
-#: itipformatter.cpp:1423
+#: itipformatter.cpp:1430
 #, kde-format
 msgid "Remove invitation from my to-do list"
 msgstr "Премахване на поканата от моя списък със задачи"
 
-#: itipformatter.cpp:1424 text_calendar.cpp:1396
+#: itipformatter.cpp:1431 text_calendar.cpp:1396
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "Премахване на поканата от моя календар"
 
-#: itipformatter.cpp:1558 itipformatter.cpp:1562
+#: itipformatter.cpp:1565 itipformatter.cpp:1569
 #, kde-format
 msgid "Your <b>%1</b> response has been recorded."
 msgstr "Вашият отговор на% %1 е записан."
 
-#: itipformatter.cpp:1560 itipformatter.cpp:1564
+#: itipformatter.cpp:1567 itipformatter.cpp:1571
 #, kde-format
 msgid "Your status for this invitation is <b>%1</b>."
 msgstr "Вашият статус за тази покана е <b> %1 </b>."
 
-#: itipformatter.cpp:1569
+#: itipformatter.cpp:1576
 #, kde-format
 msgid "This invitation was canceled."
 msgstr "Тази покана беше отменена."
 
-#: itipformatter.cpp:1571
+#: itipformatter.cpp:1578
 #, kde-format
 msgid "This invitation was accepted."
 msgstr "Тази покана беше приета."
 
-#: itipformatter.cpp:1579
+#: itipformatter.cpp:1586
 #, kde-format
 msgid "Awaiting delegation response."
 msgstr "Очаква отговор на делегацията."
 
-#: itipformatter.cpp:1646 itipformatter.cpp:1648
+#: itipformatter.cpp:1653 itipformatter.cpp:1655
 #, kde-format
 msgid "The <b>%1</b> response has been recorded"
 msgstr "Отговорът на <b> %1 </b> е записан"
 
-#: itipformatter.cpp:1676
+#: itipformatter.cpp:1683
 #, kde-format
 msgid "Assignees:"
 msgstr "Възложители:"
 
-#: itipformatter.cpp:1678
+#: itipformatter.cpp:1685
 #, kde-format
 msgid "Participants:"
 msgstr "Участници:"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:44+0000\n"
-"PO-Revision-Date: 2024-11-18 11:22+0300\n"
+"PO-Revision-Date: 2026-09-23 10:02+0200\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -304,16 +304,13 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Информация о формате аргумента…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:43
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%u - url used by command</li></ul></p></qt>"
 msgstr ""
-"<qt><p><strong>Для аргументов возможно использовать эти выражения:</strong></"
-"p><ul><li>%u — URL, используемый командой</li></ul></strong></p></qt>"
+"<qt><p><strong>Для аргументов можно использовать эти выражения:</strong></"
+"p><ul><li>%u — URL, используемый командой</li></ul></p></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:54
 #, kde-format
