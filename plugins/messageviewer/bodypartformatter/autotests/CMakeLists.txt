@@ -67,6 +67,7 @@ ecm_add_test(itipformattertest.cpp ../calendar/templates.qrc ../calendar/itipfor
         KPim6::CalendarUtils # remove after depending on KF 6.30
         KF6::TextTemplate
         KF6::CalendarCore
+	KF6::TextUtils
         KF6::Codecs
 )
 target_compile_definitions(itipformattertest PRIVATE TRANSLATION_DOMAIN="messageviewer_text_calendar_plugin")
