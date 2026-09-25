@@ -34,6 +34,7 @@ void ConfirmBeforeDeletingInterface::createActions(KActionCollection *ac)
     if (ac) {
         auto mainMenu = new QAction(i18nc("@action", "Confirm Before Deleting"), this);
         auto menu = new QMenu;
+        connect(mainMenu, &QObject::destroyed, menu, &QObject::deleteLater);
         auto act = new QAction(QIcon::fromTheme(u"settings-configure"_s), i18n("Configure"), menu);
         connect(act, &QAction::triggered, this, &ConfirmBeforeDeletingInterface::slotConfigure);
         ac->addAction(u"confirm_before_deleting_configure"_s, act);
@@ -67,30 +68,26 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
                 continue;
             }
 
-            QPointer<ConfirmBeforeDeletingMessageBoxDialog> dlg = new ConfirmBeforeDeletingMessageBoxDialog(parentWidget());
+            ConfirmBeforeDeletingMessageBoxDialog dlg(parentWidget());
             if (checkFoundStr.length() > 200) {
                 checkFoundStr = checkFoundStr.left(200) + u"…"_s;
             }
-            dlg->setInfo(i18n("Do you want to delete this email?\n%1", checkFoundStr));
-            const int result = dlg->exec();
+            dlg.setInfo(i18n("Do you want to delete this email?\n%1", checkFoundStr));
+            const int result = dlg.exec();
             const auto button = static_cast<QDialogButtonBox::StandardButton>(result);
             if (button == QDialogButtonBox::StandardButton::Yes) {
                 lst << item;
-                if (dlg->useSameResult()) {
+                if (dlg.useSameResult()) {
                     ruleDelete.append(std::move(r));
                 }
             } else if (button == QDialogButtonBox::StandardButton::No) {
-                if (dlg->useSameResult()) {
+                if (dlg.useSameResult()) {
                     ruleNotDelete.append(std::move(r));
                 }
-            } else if (button == QDialogButtonBox::StandardButton::Cancel) {
-                lst.clear();
-                break;
             } else {
                 lst.clear();
                 break;
             }
-            delete dlg;
         } else {
             lst << item;
         }
