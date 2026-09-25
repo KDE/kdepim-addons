@@ -15,7 +15,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDialogButtonBox>
 #include <QIcon>
 #include <QMenu>
-#include <QPointer>
 
 ConfirmBeforeDeletingInterface::ConfirmBeforeDeletingInterface(QObject *parent)
     : MessageViewer::MessageViewerCheckBeforeDeletingInterface(parent)
