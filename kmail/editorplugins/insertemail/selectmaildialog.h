@@ -25,6 +25,5 @@ Q_SIGNALS:
 private:
     void writeConfig();
     void readConfig();
-    void slotInsertEmails();
     SelectMailWidget *const mSelectMailWidget;
 };

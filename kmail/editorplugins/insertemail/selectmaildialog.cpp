@@ -30,7 +30,7 @@ SelectMailDialog::SelectMailDialog(QWidget *parent)
 
     mSelectMailWidget->setObjectName("selectmailwidget"_L1);
     mainLayout->addWidget(mSelectMailWidget);
-    connect(mSelectMailWidget, &SelectMailWidget::doubleClicked, this, &SelectMailDialog::slotInsertEmails);
+    connect(mSelectMailWidget, &SelectMailWidget::doubleClicked, this, &SelectMailDialog::accept);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName("buttonbox"_L1);
@@ -48,12 +48,6 @@ SelectMailDialog::~SelectMailDialog()
 QStringList SelectMailDialog::selectedEmails() const
 {
     return mSelectMailWidget->selectedEmails();
-}
-
-void SelectMailDialog::slotInsertEmails()
-{
-    Q_EMIT emailSelected(selectedEmails());
-    accept();
 }
 
 void SelectMailDialog::accept()
