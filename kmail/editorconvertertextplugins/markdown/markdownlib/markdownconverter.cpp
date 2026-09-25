@@ -16,6 +16,7 @@
 #include <QGuiApplication>
 #include <QPalette>
 #include <QTextStream>
+#include <cstring>
 #endif
 
 #include <KLocalizedString>
@@ -27,7 +28,7 @@ extern "C" {
 #if DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
 char *external_codefmt(const char *src, int, void *)
 {
-    KSyntaxHighlighting::Repository repo;
+    static KSyntaxHighlighting::Repository repo;
     QString result;
     QTextStream stream(&result);
     MarkdownHighlighter highLighter(&stream);
@@ -36,7 +37,7 @@ char *external_codefmt(const char *src, int, void *)
                                                                                             : repo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
     highLighter.highlight(QString::fromUtf8(src));
     QByteArray ba = result.toUtf8();
-    return qstrdup(ba.data());
+    return strdup(ba.constData());
 }
 
 void callback_free(char *input, int, void *)
@@ -82,7 +83,6 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     // Discount 3.x
     MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.size(), nullptr);
     mkd_flag_t *flags = mkd_flags();
-    mkd_set_flag_bitmap(flags, MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK);
     // These flags aren't bitflags, so they can't be | together
     mkd_set_flag_num(flags, MKD_FENCEDCODE);
     mkd_set_flag_num(flags, MKD_GITHUBTAGS);

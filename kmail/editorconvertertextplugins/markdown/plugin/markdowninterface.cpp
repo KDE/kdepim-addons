@@ -62,7 +62,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mPopupMenuAction->setEnabled(false);
     auto titleMenu = new QMenu(i18n("Add Title"), mardownMenu);
     mardownMenu->addMenu(titleMenu);
-    for (int i = 1; i < 6; ++i) {
+    for (int i = 1; i <= 6; ++i) {
         titleMenu->addAction(i18n("Level %1", QString::number(i)), this, [this, i]() {
             addTitle(i);
         });
@@ -201,7 +201,7 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
                 continue;
             }
             QImage image;
-            if (!image.load(urlImage)) {
+            if (!image.load(url.toLocalFile())) {
                 qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Impossible to load " << urlImage;
                 continue;
             }
@@ -241,7 +241,7 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
         qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "We can't convert html email";
         return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;
     }
-    if (mAction->isChecked()) {
+    if (mAction && mAction->isChecked()) {
         QString textVersion = richTextEditor()->composerControler()->toCleanPlainText();
         if (!textVersion.isEmpty()) {
             MarkdownConverter converter;
