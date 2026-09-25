@@ -15,11 +15,12 @@
 
 QModelIndex QuicktextManager::currentGroupIndex() const
 {
-    if (mSelectionModel->selectedIndexes().isEmpty()) {
+    const auto selectedIndexes = mSelectionModel->selectedIndexes();
+    if (selectedIndexes.isEmpty()) {
         return {};
     }
 
-    const QModelIndex index = mSelectionModel->selectedIndexes().first();
+    const QModelIndex index = selectedIndexes.constFirst();
     if (index.data(MailCommon::SnippetsModel::IsGroupRole).toBool()) {
         return index;
     } else {
@@ -37,7 +38,7 @@ QuicktextManager::QuicktextManager(QObject *parent, QWidget *parentWidget)
     , mParent(parentWidget)
 {
     mModel = MailCommon::SnippetsModel::instance();
-    mSelectionModel = new QItemSelectionModel(mModel);
+    mSelectionModel = new QItemSelectionModel(mModel, this);
 }
 
 QuicktextManager::~QuicktextManager()
@@ -57,20 +58,22 @@ QItemSelectionModel *QuicktextManager::selectionModel() const
 
 bool QuicktextManager::snippetGroupSelected() const
 {
-    if (mSelectionModel->selectedIndexes().isEmpty()) {
+    const auto selectedIndexes = mSelectionModel->selectedIndexes();
+    if (selectedIndexes.isEmpty()) {
         return false;
     }
 
-    return mSelectionModel->selectedIndexes().first().data(MailCommon::SnippetsModel::IsGroupRole).toBool();
+    return selectedIndexes.constFirst().data(MailCommon::SnippetsModel::IsGroupRole).toBool();
 }
 
 QString QuicktextManager::selectedName() const
 {
-    if (mSelectionModel->selectedIndexes().isEmpty()) {
+    const auto selectedIndexes = mSelectionModel->selectedIndexes();
+    if (selectedIndexes.isEmpty()) {
         return {};
     }
 
-    return mSelectionModel->selectedIndexes().first().data(MailCommon::SnippetsModel::NameRole).toString();
+    return selectedIndexes.constFirst().data(MailCommon::SnippetsModel::NameRole).toString();
 }
 
 void QuicktextManager::importQuickText()
