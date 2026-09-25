@@ -5,13 +5,14 @@
 */
 
 #include "aitooltextplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
 #include <TextAutoGenerateText/TextAutoGenerateManager>
 #include <TextAutoGenerateText/TextAutoGenerateQuickAskDialog>
+
+using namespace Qt::Literals::StringLiterals;
 
 AIToolTextPluginEditorInterface::AIToolTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
@@ -39,6 +40,7 @@ void AIToolTextPluginEditorInterface::exec()
     auto manager = new TextAutoGenerateText::TextAutoGenerateManager(this);
     auto d = new TextAutoGenerateText::TextAutoGenerateQuickAskDialog(manager, parentWidget());
     d->setAttribute(Qt::WA_DeleteOnClose);
+    connect(d, &QObject::destroyed, manager, &QObject::deleteLater);
     d->show();
 }
 
