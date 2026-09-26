@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-26 00:46+0000\n"
 "PO-Revision-Date: 2016-06-20 21:04-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:25
+#: aitool/aitooltextplugineditorinterface.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
@@ -198,13 +198,13 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr ""
 
-#: quicktext/quicktextmanager.cpp:78
+#: quicktext/quicktextmanager.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr ""
 
-#: quicktext/quicktextmanager.cpp:86
+#: quicktext/quicktextmanager.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"

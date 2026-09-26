@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-26 00:46+0000\n"
 "PO-Revision-Date: 2022-06-21 17:59+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.2\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:25
+#: aitool/aitooltextplugineditorinterface.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
@@ -219,14 +219,14 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr "İxrac edin..."
 
-#: quicktext/quicktextmanager.cpp:78
+#: quicktext/quicktextmanager.cpp:81
 #, fuzzy, kde-format
 #| msgid "Import QuickText"
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Sürətli mətni idxal edin"
 
-#: quicktext/quicktextmanager.cpp:86
+#: quicktext/quicktextmanager.cpp:89
 #, fuzzy, kde-format
 #| msgid "Export QuickText"
 msgctxt "@title:window"

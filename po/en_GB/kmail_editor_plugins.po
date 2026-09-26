@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-26 00:46+0000\n"
 "PO-Revision-Date: 2024-08-03 12:53+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:25
+#: aitool/aitooltextplugineditorinterface.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
@@ -209,13 +209,13 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr "Export…"
 
-#: quicktext/quicktextmanager.cpp:78
+#: quicktext/quicktextmanager.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Import QuickText"
 
-#: quicktext/quicktextmanager.cpp:86
+#: quicktext/quicktextmanager.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"

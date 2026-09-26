@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-26 00:46+0000\n"
 "PO-Revision-Date: 2026-08-17 06:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.9\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:25
+#: aitool/aitooltextplugineditorinterface.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
@@ -207,13 +207,13 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr "Izvozi…"
 
-#: quicktext/quicktextmanager.cpp:78
+#: quicktext/quicktextmanager.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Uvozi hitro besedilo"
 
-#: quicktext/quicktextmanager.cpp:86
+#: quicktext/quicktextmanager.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"

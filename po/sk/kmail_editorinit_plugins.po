@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorinit_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-09-26 00:46+0000\n"
 "PO-Revision-Date: 2017-05-08 17:08+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -26,6 +26,11 @@ msgstr "Nastaviť plugin \"Externý editor\""
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Použiť externý editor namiesto composera"
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:37
+#, kde-format
+msgid "Specify editor:"
+msgstr ""
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format

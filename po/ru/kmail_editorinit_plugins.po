@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-09-26 00:46+0000\n"
 "PO-Revision-Date: 2024-11-15 17:33+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -31,6 +31,11 @@ msgstr "Модуль настройки внешнего редактора"
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Использовать внешний редактор вместо встроенного"
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:37
+#, kde-format
+msgid "Specify editor:"
+msgstr ""
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format

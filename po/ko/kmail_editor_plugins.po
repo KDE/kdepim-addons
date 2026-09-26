@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-26 00:46+0000\n"
 "PO-Revision-Date: 2025-10-09 00:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#: aitool/aitooltextplugineditorinterface.cpp:25
+#: aitool/aitooltextplugineditorinterface.cpp:26
 #, kde-format
 msgctxt "@action"
 msgid "Open AI Chat"
@@ -205,13 +205,13 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr "내보내기…"
 
-#: quicktext/quicktextmanager.cpp:78
+#: quicktext/quicktextmanager.cpp:81
 #, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "빠른 텍스트 가져오기"
 
-#: quicktext/quicktextmanager.cpp:86
+#: quicktext/quicktextmanager.cpp:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"

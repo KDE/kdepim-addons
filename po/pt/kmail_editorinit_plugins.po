@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorinit_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-09-26 00:46+0000\n"
 "PO-Revision-Date: 2019-12-17 11:52+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -24,6 +24,11 @@ msgstr "Configurar o 'Plugin' do \"Compositor Externo\""
 msgctxt "@option:check"
 msgid "Use external editor instead of composer"
 msgstr "Usar um editor externo em vez do compositor"
+
+#: externalcomposer/externalcomposerconfigurewidget.cpp:37
+#, kde-format
+msgid "Specify editor:"
+msgstr ""
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, fuzzy, kde-format
