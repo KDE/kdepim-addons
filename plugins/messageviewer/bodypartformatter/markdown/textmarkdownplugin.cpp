@@ -39,7 +39,7 @@ public:
         if (!mt.isValid()) {
             return false;
         }
-        if (mt.name() != "text/markdown"_L1 && !mt.allAncestors().contains("text/markdown"_L1)) {
+        if (!mt.inherits(u"text/markdown"_s)) {
             return false;
         }
 

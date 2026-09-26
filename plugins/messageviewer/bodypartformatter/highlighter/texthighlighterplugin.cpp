@@ -43,7 +43,7 @@ public:
         if (!mt.isValid()) {
             return false;
         }
-        if (mt.name() != "text/plain"_L1 && !mt.allAncestors().contains("text/plain"_L1)) {
+        if (!mt.inherits(u"text/plain"_s)) {
             return false;
         }
 
