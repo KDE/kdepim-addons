@@ -21,7 +21,7 @@ MemoryCalendarMemento::MemoryCalendarMemento()
         mCalendar = std::move(etmCalendar);
         QMetaObject::invokeMethod(this, "finalize", Qt::QueuedConnection);
     } else {
-        FetchJobCalendar::Ptr calendar = FetchJobCalendar::Ptr(new FetchJobCalendar(this));
+        FetchJobCalendar::Ptr calendar = FetchJobCalendar::Ptr(new FetchJobCalendar());
         mCalendar = calendar;
         connect(calendar.data(), &FetchJobCalendar::loadFinished, this, &MemoryCalendarMemento::slotCalendarLoaded);
     }
