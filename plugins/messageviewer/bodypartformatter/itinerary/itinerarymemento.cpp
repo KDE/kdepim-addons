@@ -155,7 +155,7 @@ QList<ItineraryMemento::TripData> ItineraryMemento::data()
 
 void ItineraryMemento::toggleExpanded(int index)
 {
-    if (index >= m_data.size()) {
+    if (index < 0 || index >= m_data.size()) {
         return;
     }
     m_data[index].expanded = !m_data.at(index).expanded;
