@@ -59,6 +59,7 @@ using namespace KCalendarCore;
 #include <QMenu>
 #include <QMimeDatabase>
 #include <QPointer>
+#include <QSaveFile>
 #include <QTemporaryFile>
 #include <QUrl>
 using namespace Qt::Literals::StringLiterals;
@@ -878,12 +879,11 @@ public:
 
         const auto memento = dynamic_cast<MemoryCalendarMemento *>(part->memento());
         const Incidence::Ptr incidence = message->event().dynamicCast<Incidence>();
-        qCDebug(TEXT_CALENDAR_LOG) << "Handling invitation: uid is : " << incidence->uid() << "; schedulingId is:" << incidence->schedulingID()
-                                   << "; Attendee::PartStat = " << status;
-
         if (!incidence) {
             return false;
         }
+        qCDebug(TEXT_CALENDAR_LOG) << "Handling invitation: uid is : " << incidence->uid() << "; schedulingId is:" << incidence->schedulingID()
+                                   << "; Attendee::PartStat = " << status;
 
         // get comment for tentative acceptance
         if (askForComment(status)) {
@@ -1011,7 +1011,8 @@ public:
             ICalFormat format;
             format.setTimeZone(QTimeZone::systemTimeZone());
             const auto iCal = format.createScheduleMessage(incidence, iTIPRequest).toUtf8();
-            if (!saveFile(receiver, stringToInvitation(iCal, memento->calendar()), dir, part)) {
+            const auto delegateMessage = stringToInvitation(iCal, memento->calendar());
+            if (!delegateMessage || !saveFile(receiver, delegateMessage, dir, part)) {
                 return false;
             }
 
@@ -1031,70 +1032,59 @@ public:
             QDesktopServices::openUrl(QUrl(attachment.uri()));
         } else {
             // put the attachment in a temporary file and launch it
-            QTemporaryFile *file = nullptr;
             QMimeDatabase db;
-            QStringList patterns = db.mimeTypeForName(attachment.mimeType()).globPatterns();
+            const QStringList patterns = db.mimeTypeForName(attachment.mimeType()).globPatterns();
+            QTemporaryFile file;
             if (!patterns.empty()) {
                 QString pattern = patterns.at(0);
-                file = new QTemporaryFile(QDir::tempPath() + "/messageviewer_XXXXXX"_L1 + pattern.remove(u'*'));
-            } else {
-                file = new QTemporaryFile();
+                file.setFileTemplate(QDir::tempPath() + "/messageviewer_XXXXXX"_L1 + pattern.remove(u'*'));
             }
-            file->setAutoRemove(false);
-            file->open();
-            file->setPermissions(QFile::ReadUser);
-            file->write(QByteArray::fromBase64(attachment.data()));
-            file->close();
+            file.setAutoRemove(false);
+            if (!file.open()) {
+                qCWarning(TEXT_CALENDAR_LOG) << "Failed to create temporary file" << file.errorString();
+                return;
+            }
+            file.setPermissions(QFile::ReadUser);
+            file.write(QByteArray::fromBase64(attachment.data()));
+            file.close();
 
-            auto job = new KIO::OpenUrlJob(QUrl::fromLocalFile(file->fileName()), attachment.mimeType());
+            auto job = new KIO::OpenUrlJob(QUrl::fromLocalFile(file.fileName()), attachment.mimeType());
             job->setDeleteTemporaryFile(true);
             job->start();
-            delete file;
         }
     }
 
-    [[nodiscard]] bool saveAsAttachment(const QString &name, const KCalendarCore::Incidence::Ptr &incidence) const
+    void saveAsAttachment(const QString &name, const KCalendarCore::Incidence::Ptr &incidence) const
     {
         Attachment a(findAttachment(name, incidence));
         if (a.isEmpty()) {
-            return false;
+            return;
         }
 
         // get the saveas file name
         const QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18nc("@title:window", "Save Invitation Attachment"), name, QString());
 
         if (saveAsFile.isEmpty()) {
-            return false;
+            return;
         }
 
-        bool stat = false;
         if (a.isUri()) {
             // save the attachment url
-            auto job = KIO::file_copy(QUrl(a.uri()), QUrl::fromLocalFile(saveAsFile));
-            stat = job->exec();
-        } else {
-            // put the attachment in a temporary file and save it
-            QTemporaryFile *file{nullptr};
-            QMimeDatabase db;
-            QStringList patterns = db.mimeTypeForName(a.mimeType()).globPatterns();
-            if (!patterns.empty()) {
-                QString pattern = patterns.at(0);
-                file = new QTemporaryFile(QDir::tempPath() + "/messageviewer_XXXXXX"_L1 + pattern.remove(u'*'));
-            } else {
-                file = new QTemporaryFile();
+            auto job = KIO::file_copy(QUrl(a.uri()), QUrl::fromLocalFile(saveAsFile), -1, KIO::Overwrite);
+            if (!job->exec()) {
+                KMessageBox::error(nullptr, job->errorString());
             }
-            file->setAutoRemove(false);
-            file->open();
-            file->setPermissions(QFile::ReadUser);
-            file->write(QByteArray::fromBase64(a.data()));
-            file->close();
-            const QString filename = file->fileName();
-            delete file;
-
-            auto job = KIO::file_copy(QUrl::fromLocalFile(filename), QUrl::fromLocalFile(saveAsFile));
-            stat = job->exec();
+        } else {
+            QSaveFile file(saveAsFile);
+            if (!file.open(QIODevice::WriteOnly)) {
+                KMessageBox::error(nullptr, i18n("Could not write the file %1:\n%2", saveAsFile, file.errorString()));
+                return;
+            }
+            file.write(QByteArray::fromBase64(a.data()));
+            if (!file.commit()) {
+                KMessageBox::error(nullptr, i18n("Could not write the file %1:\n%2", saveAsFile, file.errorString()));
+            }
         }
-        return stat;
     }
 
     void showCalendar(QDate date) const
@@ -1292,8 +1282,8 @@ public:
                 if (saveFile(u"Receiver Not Searched"_s, message, u"reply"_s, part)) {
                     if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                         viewerInstance->deleteMessage();
-                        result = true;
                     }
+                    result = true;
                 }
                 showCalendar(incidence->dtStart().date());
                 break;
