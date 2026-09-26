@@ -152,7 +152,7 @@ public:
                     writer->write(u"<div align=\"center\"><a href=\""_s + msgPart->makeLink(op) + u"\">"_s + addToLinkText + u"</a></div><br><br>"_s);
                 } else {
                     const QString addToLinkText = i18n("[This contact is already in addressbook]");
-                    writer->write(u"<div align=\"center\">"_s + addToLinkText + u"</a></div><br><br>"_s);
+                    writer->write(u"<div align=\"center\">"_s + addToLinkText + u"</div><br><br>"_s);
                 }
             }
         }
