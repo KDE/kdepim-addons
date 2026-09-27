@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-24 00:46+0000\n"
+"POT-Creation-Date: 2026-09-27 00:46+0000\n"
 "PO-Revision-Date: 2012-02-18 16:19+0100\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
 "Language-Team: Greek <i18ngr@lists.hellug.gr>\n"
@@ -644,7 +644,7 @@ msgstr "Καταγραφή απάντησης στο ημερολόγιό μου
 msgid "Remove invitation from my to-do list"
 msgstr "Αφαίρεση της πρόσκλησης από το ημερολόγιό μου"
 
-#: itipformatter.cpp:1431 text_calendar.cpp:1396
+#: itipformatter.cpp:1431 text_calendar.cpp:1386
 #, kde-format
 msgid "Remove invitation from my calendar"
 msgstr "Αφαίρεση της πρόσκλησης από το ημερολόγιό μου"
@@ -841,12 +841,12 @@ msgstr ""
 msgid "Due:"
 msgstr ""
 
-#: text_calendar.cpp:355
+#: text_calendar.cpp:356
 #, kde-format
 msgid "No attachment named \"%1\" found in the invitation."
 msgstr "Δε βρέθηκε συνημμένο με όνομα «%1» στην πρόσκληση."
 
-#: text_calendar.cpp:370
+#: text_calendar.cpp:371
 #, kde-format
 msgid ""
 "The invitation attachment \"%1\" is a web link that is inaccessible from "
@@ -858,7 +858,7 @@ msgstr ""
 "γεγονότος να ξαναστείλει την πρόσκληση για το γεγονός με το συνημμένο "
 "αποθηκευμένο στην πρόσκληση αντί για το δεσμό."
 
-#: text_calendar.cpp:422
+#: text_calendar.cpp:423
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt>None of your identities match the receiver of this message,<br/"
@@ -874,7 +874,7 @@ msgstr ""
 "ανήκει, αν υπάρχει κάποια, ή επιλέξτε κάποια από τις ταυτότητές σας για "
 "χρήση της στην απάντηση:</qt>"
 
-#: text_calendar.cpp:428
+#: text_calendar.cpp:429
 #, kde-format
 msgid ""
 "<qt>Several of your identities match the receiver of this message,<br/"
@@ -883,115 +883,115 @@ msgstr ""
 "<qt>Αρκετές από τις ταυτότητές σας ταιριάζουν με τον παραλήπτη του μηνύματος,"
 "<br />παρακαλώ επιλέξτε ποια από τις ακόλουθες διευθύνσεις σας ανήκει:</qt>"
 
-#: text_calendar.cpp:443
+#: text_calendar.cpp:444
 #, kde-format
 msgid "Select Address"
 msgstr "Επιλογή διεύθυνσης"
 
-#: text_calendar.cpp:505
+#: text_calendar.cpp:506
 #, kde-format
 msgid "Answer: "
 msgstr "Απάντηση: "
 
-#: text_calendar.cpp:507
+#: text_calendar.cpp:508
 #, kde-format
 msgctxt "Not able to attend."
 msgid "Declined: %1"
 msgstr "Απορρίφθηκε: %1 "
 
-#: text_calendar.cpp:509
+#: text_calendar.cpp:510
 #, kde-format
 msgctxt "Unsure if it is possible to attend."
 msgid "Tentative: %1"
 msgstr "Διερευνητικό: %1"
 
-#: text_calendar.cpp:511
+#: text_calendar.cpp:512
 #, kde-format
 msgctxt "Accepted the invitation."
 msgid "Accepted: %1"
 msgstr "Αποδοχή: %1"
 
-#: text_calendar.cpp:533 text_calendar.cpp:552
+#: text_calendar.cpp:534 text_calendar.cpp:553
 #, fuzzy, kde-format
 #| msgid "Save Invitation Attachment"
 msgid "Invitation answer attached."
 msgstr "Αποθήκευση συνημμένης πρόσκλησης"
 
-#: text_calendar.cpp:659
+#: text_calendar.cpp:660
 #, kde-format
 msgid "Incidence with no summary"
 msgstr "Περιστατικό χωρίς σύνοψη"
 
-#: text_calendar.cpp:664
+#: text_calendar.cpp:665
 #, kde-format
 msgid "Answer: %1"
 msgstr "Απάντηση: %1"
 
-#: text_calendar.cpp:667
+#: text_calendar.cpp:668
 #, kde-format
 msgid "Delegated: %1"
 msgstr "Εκπροσώπηση: %1"
 
-#: text_calendar.cpp:670
+#: text_calendar.cpp:671
 #, kde-format
 msgid "Forwarded: %1"
 msgstr "Προωθημένο: %1"
 
-#: text_calendar.cpp:673
+#: text_calendar.cpp:674
 #, kde-format
 msgid "Declined Counter Proposal: %1"
 msgstr "Απόρριψη αντιπρότασης: %1"
 
-#: text_calendar.cpp:737 text_calendar.cpp:743
+#: text_calendar.cpp:738 text_calendar.cpp:744
 #, kde-format
 msgid "\"%1\" occurred already."
 msgstr "Το «%1» συνέβη ήδη."
 
-#: text_calendar.cpp:739 text_calendar.cpp:756
+#: text_calendar.cpp:740 text_calendar.cpp:757
 #, kde-format
 msgid "\"%1\" is currently in-progress."
 msgstr "Το «%1» βρίσκεται σε εξέλιξη."
 
-#: text_calendar.cpp:745
+#: text_calendar.cpp:746
 #, kde-format
 msgid "\"%1\", happening all day today, is currently in-progress."
 msgstr ""
 "Το «%1», το οποίο πραγματοποιείται όλη την ημέρα σήμερα, βρίσκεται σε "
 "εξέλιξη."
 
-#: text_calendar.cpp:754 text_calendar.cpp:766
+#: text_calendar.cpp:755 text_calendar.cpp:767
 #, kde-format
 msgid "\"%1\" is past due."
 msgstr "Το «%1» είναι ξεπερασμένο."
 
-#: text_calendar.cpp:760
+#: text_calendar.cpp:761
 #, kde-format
 msgid "\"%1\" has already started."
 msgstr "Το «%1» έχει ξεκινήσει ήδη."
 
-#: text_calendar.cpp:768
+#: text_calendar.cpp:769
 #, kde-format
 msgid "\"%1\", happening all-day today, is currently in-progress."
 msgstr ""
 "Το «%1», το οποίο πραγματοποιείται όλη την ημέρα σήμερα, βρίσκεται σε "
 "εξέλιξη."
 
-#: text_calendar.cpp:772
+#: text_calendar.cpp:773
 #, kde-format
 msgid "\"%1\", happening all day, has already started."
 msgstr "Το «%1», το οποίο πραγματοποιείται όλη την ημέρα, έχει ξεκινήσει."
 
-#: text_calendar.cpp:784
+#: text_calendar.cpp:785
 #, kde-format
 msgid "Do you still want to accept the task?"
 msgstr "Επιθυμείτε πάντα να αποδεχτείτε την εργασία;"
 
-#: text_calendar.cpp:786
+#: text_calendar.cpp:787
 #, kde-format
 msgid "Do you still want to accept the invitation?"
 msgstr "Επιθυμείτε πάντα να αποδεχτείτε την πρόσκληση;"
 
-#: text_calendar.cpp:788 text_calendar.cpp:800
+#: text_calendar.cpp:789 text_calendar.cpp:801
 #, fuzzy, kde-format
 #| msgctxt "Accepted the invitation."
 #| msgid "Accepted: %1"
@@ -999,43 +999,43 @@ msgctxt "@action:button"
 msgid "Accept"
 msgstr "Αποδοχή: %1"
 
-#: text_calendar.cpp:792
+#: text_calendar.cpp:793
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the task?"
 msgstr "Επιθυμείτε πάντα να στείλετε την αποδοχή υπό όρους για την εργασία;"
 
-#: text_calendar.cpp:794
+#: text_calendar.cpp:795
 #, kde-format
 msgid "Do you still want to send conditional acceptance of the invitation?"
 msgstr "Επιθυμείτε πάντα να στείλετε την αποδοχή υπό όρους για την πρόσκληση;"
 
-#: text_calendar.cpp:796 text_calendar.cpp:804 text_calendar.cpp:808
+#: text_calendar.cpp:797 text_calendar.cpp:805 text_calendar.cpp:809
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
 msgstr ""
 
-#: text_calendar.cpp:799
+#: text_calendar.cpp:800
 #, kde-format
 msgid "Do you still want to accept the counter proposal?"
 msgstr "Επιθυμείτε πάντα την αποδοχή της αντεισήγησης;"
 
-#: text_calendar.cpp:803
+#: text_calendar.cpp:804
 #, kde-format
 msgid "Do you still want to send a counter proposal?"
 msgstr "Επιθυμείτε πάντα να στείλετε μια αντιεισήγηση;"
 
-#: text_calendar.cpp:807
+#: text_calendar.cpp:808
 #, kde-format
 msgid "Do you still want to send a decline response?"
 msgstr "Επιθυμείτε πάντα να στείλετε μια απάντηση αποποίησης;"
 
-#: text_calendar.cpp:811
+#: text_calendar.cpp:812
 #, kde-format
 msgid "Do you still want to decline the counter proposal?"
 msgstr "Επιθυμείτε πάντα την αποποίηση της αντιεισήγησης;"
 
-#: text_calendar.cpp:812
+#: text_calendar.cpp:813
 #, fuzzy, kde-format
 #| msgctxt "Not able to attend."
 #| msgid "Declined: %1"
@@ -1043,92 +1043,92 @@ msgctxt "@action:button"
 msgid "Decline"
 msgstr "Απορρίφθηκε: %1 "
 
-#: text_calendar.cpp:814
+#: text_calendar.cpp:815
 #, kde-format
 msgid "Do you still want to record this response in your calendar?"
 msgstr "Επιθυμείτε πάντα την καταγραφή αυτής της απάντησης στο ημερολόγιό σας;"
 
-#: text_calendar.cpp:815 text_calendar.cpp:848
+#: text_calendar.cpp:816 text_calendar.cpp:849
 #, kde-format
 msgctxt "@action:button"
 msgid "Record"
 msgstr ""
 
-#: text_calendar.cpp:818
+#: text_calendar.cpp:819
 #, kde-format
 msgid "Do you still want to delegate this task?"
 msgstr "Επιθυμείτε πάντα την εκπροσώπηση σε αυτήν την εργασία;"
 
-#: text_calendar.cpp:820
+#: text_calendar.cpp:821
 #, kde-format
 msgid "Do you still want to delegate this invitation?"
 msgstr "Επιθυμείτε πάντα την εκπροσώπηση σε αυτήν την πρόσκληση; "
 
-#: text_calendar.cpp:822
+#: text_calendar.cpp:823
 #, kde-format
 msgctxt "@action:button"
 msgid "Delegate"
 msgstr "Εκπρόσωπος"
 
-#: text_calendar.cpp:825
+#: text_calendar.cpp:826
 #, kde-format
 msgid "Do you still want to forward this task?"
 msgstr "Επιθυμείτε πάντα την προώθηση αυτής της εργασίας;"
 
-#: text_calendar.cpp:827
+#: text_calendar.cpp:828
 #, kde-format
 msgid "Do you still want to forward this invitation?"
 msgstr "Επιθυμείτε πάντα την προώθηση αυτής της πρόσκλησης;"
 
-#: text_calendar.cpp:829
+#: text_calendar.cpp:830
 #, fuzzy, kde-format
 #| msgid "Forwarded: %1"
 msgctxt "@action:button"
 msgid "Forward"
 msgstr "Προωθημένο: %1"
 
-#: text_calendar.cpp:833
+#: text_calendar.cpp:834
 #, kde-format
 msgid "Do you still want to cancel this task?"
 msgstr "Επιθυμείτε πάντα την ακύρωση αυτής της εργασίας;"
 
-#: text_calendar.cpp:834
+#: text_calendar.cpp:835
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Task"
 msgstr ""
 
-#: text_calendar.cpp:836
+#: text_calendar.cpp:837
 #, kde-format
 msgid "Do you still want to cancel this invitation?"
 msgstr "Επιθυμείτε πάντα την ακύρωση αυτής της πρόσκλησης;"
 
-#: text_calendar.cpp:837
+#: text_calendar.cpp:838
 #, fuzzy, kde-format
 #| msgid "Accept invitation"
 msgctxt "@action:button"
 msgid "Cancel Invitation"
 msgstr "Αποδοχή της πρόσκλησης"
 
-#: text_calendar.cpp:840
+#: text_calendar.cpp:841
 #, fuzzy, kde-format
 #| msgid "Do Not Send"
 msgctxt "@action:button"
 msgid "Do Not Cancel"
 msgstr "Να μην αποσταλεί"
 
-#: text_calendar.cpp:844
+#: text_calendar.cpp:845
 #, kde-format
 msgid "Do you still want to record this task in your calendar?"
 msgstr "Επιθυμείτε πάντα την καταγραφή αυτής της εργασίας στο ημερολόγιό σας;"
 
-#: text_calendar.cpp:846
+#: text_calendar.cpp:847
 #, kde-format
 msgid "Do you still want to record this invitation in your calendar?"
 msgstr ""
 "Επιθυμείτε πάντα την καταγραφή αυτής της πρόσκλησης στο ημερολόγιό σας;"
 
-#: text_calendar.cpp:857
+#: text_calendar.cpp:858
 #, kde-format
 msgid ""
 "%1\n"
@@ -1143,7 +1143,7 @@ msgctxt "@title:window"
 msgid "Reaction to Invitation"
 msgstr "Αντίδραση σε πρόσκληση"
 
-#: text_calendar.cpp:902 text_calendar.cpp:1155
+#: text_calendar.cpp:902 text_calendar.cpp:1145
 #, kde-format
 msgid "You forgot to add proposal. Please add it. Thanks"
 msgstr "Ξεχάσατε να προσθέσετε την πρόταση. Παρακαλώ προσθέστε την. Ευχαριστώ"
@@ -1153,19 +1153,26 @@ msgstr "Ξεχάσατε να προσθέσετε την πρόταση. Παρ
 msgid "Delegation to organizer is not possible."
 msgstr "Η εκπροσώπιση στο organizer δεν είναι δυνατή."
 
-#: text_calendar.cpp:1064
+#: text_calendar.cpp:1065
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Invitation Attachment"
 msgstr "Αποθήκευση συνημμένης πρόσκλησης"
 
-#: text_calendar.cpp:1144
+#: text_calendar.cpp:1080 text_calendar.cpp:1085
+#, kde-format
+msgid ""
+"Could not write the file %1:\n"
+"%2"
+msgstr ""
+
+#: text_calendar.cpp:1134
 #, kde-format
 msgctxt "@title:window"
 msgid "Decline Counter Proposal"
 msgstr "Απόρριψη αντιπρότασης"
 
-#: text_calendar.cpp:1186
+#: text_calendar.cpp:1176
 #, kde-format
 msgid ""
 "You have no writable calendar folders for invitations, so storing or saving "
@@ -1177,7 +1184,7 @@ msgstr ""
 "Παρακαλώ δημιουργήστε τουλάχιστον 1 εγγράψιμο ημερολόγιο γεγονότων και "
 "επανασυγχρονίστε το ημερολόγιο."
 
-#: text_calendar.cpp:1204 text_calendar.cpp:1212
+#: text_calendar.cpp:1194 text_calendar.cpp:1202
 #, kde-format
 msgid ""
 "The calendar invitation stored in this email message is broken in some way. "
@@ -1186,7 +1193,7 @@ msgstr ""
 "Η πρόσκληση ημερολογίου που είναι αποθηκευμένη σε αυτήν την αλληλογραφία "
 "είναι κατά κάποιον τρόπο σπασμένη. Η συνέχιση είναι αδύνατη. "
 
-#: text_calendar.cpp:1265
+#: text_calendar.cpp:1255
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -1202,110 +1209,110 @@ msgstr ""
 "με την πρόσκληση;\n"
 "Πιέστε το κουμπί [Άκυρο] για να ακυρώσετε τη λειτουργία καταχώρησης."
 
-#: text_calendar.cpp:1269
+#: text_calendar.cpp:1259
 #, kde-format
 msgctxt "@title:window"
 msgid "Send Email to Organizer"
 msgstr "Αποστολή ηλ. αλληλογραφίας στο διοργανωτή"
 
-#: text_calendar.cpp:1270
+#: text_calendar.cpp:1260
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Send"
 msgstr "Να μην αποσταλεί"
 
-#: text_calendar.cpp:1271
+#: text_calendar.cpp:1261
 #, kde-format
 msgctxt "@action:button"
 msgid "Send EMail"
 msgstr "Αποστολή ηλ. αλληλογραφίας"
 
-#: text_calendar.cpp:1279
+#: text_calendar.cpp:1269
 #, kde-format
 msgid "Re: %1"
 msgstr "Απ: %1"
 
-#: text_calendar.cpp:1351
+#: text_calendar.cpp:1341
 #, kde-format
 msgid "Open Attachment"
 msgstr "Άνοιγμα συνημμένου"
 
-#: text_calendar.cpp:1352
+#: text_calendar.cpp:1342
 #, kde-format
 msgid "Save Attachment As…"
 msgstr "Αποθήκευση συνημμένου ως…"
 
-#: text_calendar.cpp:1368
+#: text_calendar.cpp:1358
 #, kde-format
 msgid "Accept invitation"
 msgstr "Αποδοχή της πρόσκλησης"
 
-#: text_calendar.cpp:1370
+#: text_calendar.cpp:1360
 #, kde-format
 msgid "Accept invitation conditionally"
 msgstr "Αποδοχή της πρόσκλησης υπό όρους"
 
-#: text_calendar.cpp:1372
+#: text_calendar.cpp:1362
 #, kde-format
 msgid "Accept counter proposal"
 msgstr "Αποδοχή αντιπρότασης"
 
-#: text_calendar.cpp:1374
+#: text_calendar.cpp:1364
 #, kde-format
 msgid "Create a counter proposal…"
 msgstr "Δημιουργία αντιπρότασης…"
 
-#: text_calendar.cpp:1376
+#: text_calendar.cpp:1366
 #, kde-format
 msgid "Throw mail away"
 msgstr "Απόρριψη αλληλογραφίας"
 
-#: text_calendar.cpp:1378
+#: text_calendar.cpp:1368
 #, kde-format
 msgid "Decline invitation"
 msgstr "Απόρριψη της πρόσκλησης"
 
-#: text_calendar.cpp:1380
+#: text_calendar.cpp:1370
 #, kde-format
 msgid "Postpone"
 msgstr ""
 
-#: text_calendar.cpp:1382
+#: text_calendar.cpp:1372
 #, kde-format
 msgid "Decline counter proposal"
 msgstr "Απόρριψη αντιπρότασης"
 
-#: text_calendar.cpp:1384
+#: text_calendar.cpp:1374
 #, kde-format
 msgid "Check my calendar…"
 msgstr "Έλεγχος του ημερολογίου μου…"
 
-#: text_calendar.cpp:1386
+#: text_calendar.cpp:1376
 #, kde-format
 msgid "Record response into my calendar"
 msgstr "Καταγραφή απάντησης στο ημερολόγιό μου"
 
-#: text_calendar.cpp:1388
+#: text_calendar.cpp:1378
 #, kde-format
 msgid "Record invitation into my calendar"
 msgstr "Καταγραφή πρόσκλησης στο ημερολόγιό μου"
 
-#: text_calendar.cpp:1390
+#: text_calendar.cpp:1380
 #, kde-format
 msgid "Move this invitation to my trash folder"
 msgstr "Μετακίνηση της πρόσκλησης στα απορρίματα"
 
-#: text_calendar.cpp:1392
+#: text_calendar.cpp:1382
 #, kde-format
 msgid "Delegate invitation"
 msgstr "Ανάθεση εκπροσώπου"
 
-#: text_calendar.cpp:1394
+#: text_calendar.cpp:1384
 #, kde-format
 msgid "Forward invitation"
 msgstr "Προώθηση πρόσκλησης"
 
-#: text_calendar.cpp:1399
+#: text_calendar.cpp:1389
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "Άνοιγμα συνημμένου «%1»"
