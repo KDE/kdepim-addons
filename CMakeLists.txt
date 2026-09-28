@@ -97,8 +97,7 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 include(ECMQmlModule)
-set(KTEXTADDONS_MIN_VERSION "2.1.2")
-set(KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION "${KTEXTADDONS_MIN_VERSION}")
+set(KTEXTADDONS_MIN_VERSION "2.2.0")
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 if(EXISTS "${PROJECT_SOURCE_DIR}/.git/")
@@ -250,7 +249,7 @@ find_package(KPim6KSieveUi ${LIBKSIEVE_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
 if(OPTION_ADD_AUTOGENERATETEXT)
-    find_package(KF6TextAutoGenerateText ${KTEXTADDONS_WITH_TEXTAUTOGENERATETEXT_VERSION} CONFIG)
+    find_package(KF6TextAutoGenerateText ${KTEXTADDONS_MIN_VERSION} CONFIG)
     set_package_properties(
         KF6TextAutoGenerateText
         PROPERTIES

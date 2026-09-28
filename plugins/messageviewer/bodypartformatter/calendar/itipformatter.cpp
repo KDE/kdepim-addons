@@ -32,15 +32,9 @@
 #include <KEmailAddress>
 #include <KFormat>
 #include <KLocalizedString>
-#include <ktexttemplate_version.h>
-#include <textutils_version.h>
-#if TEXTUTILS_VERSION >= QT_VERSION_CHECK(2, 2, 0)
 #include <TextUtils/TextUtilsTextToHtml>
+#include <ktexttemplate_version.h>
 namespace TextToHtml = TextUtils::TextUtilsTextToHtml;
-#else
-#include <KTextToHTML>
-namespace TextToHtml = KTextToHTML;
-#endif
 
 #include <QApplication>
 #include <QLocale>
