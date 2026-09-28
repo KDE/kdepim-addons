@@ -1082,11 +1082,13 @@ msgid "Save Invitation Attachment"
 msgstr "Запазване на прикачен файл за покани"
 
 #: text_calendar.cpp:1080 text_calendar.cpp:1085
-#, kde-format
+#, fuzzy, kde-format
 msgid ""
 "Could not write the file %1:\n"
 "%2"
 msgstr ""
+"Грешка при запис на файла %1:\n"
+"%2"
 
 #: text_calendar.cpp:1134
 #, kde-format

@@ -32,9 +32,9 @@ msgid "Use external editor instead of composer"
 msgstr "Използване на външна програма за писане на съобщение"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
 msgid "Specify editor:"
-msgstr ""
+msgstr "Избор на редактор:"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format

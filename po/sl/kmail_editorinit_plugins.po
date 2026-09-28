@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:46+0000\n"
-"PO-Revision-Date: 2024-07-30 09:18+0200\n"
+"PO-Revision-Date: 2026-09-26 07:36+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.9\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:16
 #, kde-format
@@ -34,7 +34,7 @@ msgstr "Uporabi zunanji urejevalnik namesto sestavljalnika"
 #: externalcomposer/externalcomposerconfigurewidget.cpp:37
 #, kde-format
 msgid "Specify editor:"
-msgstr ""
+msgstr "Določi urejevalnik:"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format
