@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:46+0000\n"
+"POT-Creation-Date: 2026-09-29 00:46+0000\n"
 "PO-Revision-Date: 2026-09-23 06:56+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -46,17 +46,17 @@ msgstr ""
 msgid "Get Email..."
 msgstr "ئېلخەتكە ئېرىش…"
 
-#: kaichatcalendarpluginjob.cpp:72 kaichatcalendarpluginjob.cpp:102
+#: kaichatcalendarpluginjob.cpp:68 kaichatcalendarpluginjob.cpp:98
 #, kde-format
 msgid "No Contact found in calendar for %1"
 msgstr ""
 
-#: kaichatcalendarpluginjob.cpp:83
+#: kaichatcalendarpluginjob.cpp:79
 #, kde-format
 msgid "Birthday for %1 is %2"
 msgstr "%1 نىڭ تۇغۇلغان كۈنى %2"
 
-#: kaichatcalendarpluginjob.cpp:114
+#: kaichatcalendarpluginjob.cpp:110
 #, kde-format
 msgid "The preferred email is %1"
 msgstr ""
