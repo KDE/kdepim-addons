@@ -6,7 +6,7 @@
 
 #include "dkimauthenticationverifiedserverwidget.h"
 #include <KLocalizedString>
-#include <MessageViewer/DKIMManagerAuthenticationServer>
+#include <MessageCore/DKIMManagerAuthenticationServer>
 #include <QVBoxLayout>
 using namespace Qt::Literals::StringLiterals;
 
@@ -26,13 +26,13 @@ DKIMAuthenticationVerifiedServerWidget::~DKIMAuthenticationVerifiedServerWidget(
 
 void DKIMAuthenticationVerifiedServerWidget::loadSettings()
 {
-    mSelector->setStringList(MessageViewer::DKIMManagerAuthenticationServer::self()->serverList());
+    mSelector->setStringList(MessageCore::DKIMManagerAuthenticationServer::self()->serverList());
 }
 
 void DKIMAuthenticationVerifiedServerWidget::saveSettings()
 {
     const QStringList lst = mSelector->stringList();
-    MessageViewer::DKIMManagerAuthenticationServer::self()->setServerList(lst);
+    MessageCore::DKIMManagerAuthenticationServer::self()->setServerList(lst);
 }
 
 DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServerSelectorWidget(QWidget *parent)
