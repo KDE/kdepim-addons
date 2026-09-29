@@ -6,7 +6,7 @@
 
 #include "dkimgeneralwidget.h"
 #include <KLocalizedString>
-#include <MessageViewer/DKIMManager>
+#include <MessageCore/DKIMManager>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QLabel>
@@ -55,7 +55,7 @@ DKIMGeneralWidget::~DKIMGeneralWidget() = default;
 void DKIMGeneralWidget::saveSettings()
 {
     if (!mEnableDkimSupport->isChecked()) {
-        MessageViewer::DKIMManager::self()->clearInfoWidget();
+        MessageCore::DKIMManager::self()->clearInfoWidget();
     }
 }
 
