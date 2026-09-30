@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: messageviewer_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:46+0000\n"
-"PO-Revision-Date: 2026-09-13 11:58+0300\n"
+"PO-Revision-Date: 2026-09-27 09:19+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -1083,6 +1083,8 @@ msgid ""
 "Could not write the file %1:\n"
 "%2"
 msgstr ""
+"לא ניתן לכתוב את הקובץ %1:\n"
+"%2"
 
 #: text_calendar.cpp:1134
 #, kde-format
