@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmail_text_calendar_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:46+0000\n"
-"PO-Revision-Date: 2024-08-09 03:48+0900\n"
+"PO-Revision-Date: 2026-10-01 04:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -121,14 +121,9 @@ msgid "Please respond again to the original proposal."
 msgstr ""
 
 #: itipformatter.cpp:619 itipformatter.cpp:653
-#, fuzzy, kde-format
-#| msgid ""
-#| "%1\n"
-#| "%2"
+#, kde-format
 msgid "%1%"
-msgstr ""
-"%1\n"
-"%2"
+msgstr "%1%"
 
 #: itipformatter.cpp:743
 #, kde-format
@@ -696,7 +691,7 @@ msgstr ""
 #: itipformatter.cpp:1679
 #, kde-format
 msgid "Participants:"
-msgstr ""
+msgstr "參加者："
 
 #: reactiontoinvitationdialog.cpp:32
 #, kde-format
@@ -706,28 +701,23 @@ msgstr "註解："
 
 #: templates/attendee_row.html:17
 msgid "organizer"
-msgstr ""
+msgstr "發起人"
 
 #: templates/attendee_row.html:21
 msgid "myself"
-msgstr ""
+msgstr "自己"
 
 #: templates/attendee_row.html:25
-#, fuzzy, kde-format
-#| msgid "Delegated: %1"
+#, kde-format
 msgid "delegated by %1)"
-msgstr "授權：%1"
+msgstr "由 %1 代理）"
 
 #: templates/attendee_row.html:29
-#, fuzzy, kde-format
-#| msgid "Delegated: %1"
+#, kde-format
 msgid "delegated to %1)"
-msgstr "授權：%1"
+msgstr "委託 %1 代理）"
 
 #: templates/attendee_row.html:36
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Send EMail"
 msgid "Send email"
 msgstr "傳送電子郵件"
 
@@ -739,9 +729,6 @@ msgid "Comment:"
 msgstr "註解："
 
 #: templates/itip.html:83
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Comment:"
 msgid "Comments:"
 msgstr "註解："
 
@@ -757,11 +744,11 @@ msgstr ""
 
 #: templates/itip_event.html:8 templates/itip_todo.html:13
 msgid "When:"
-msgstr ""
+msgstr "何時："
 
 #: templates/itip_event.html:15 templates/itip_todo.html:6
 msgid "Where:"
-msgstr ""
+msgstr "Where:"
 
 #: templates/itip_event.html:22 templates/itip_todo.html:46
 msgid "Recurrence:"
@@ -786,11 +773,11 @@ msgstr ""
 
 #: templates/itip_freebusy.html:10
 msgid "Start date:"
-msgstr ""
+msgstr "開始日期："
 
 #: templates/itip_freebusy.html:15
 msgid "End date:"
-msgstr ""
+msgstr "結束日期："
 
 #: templates/itip_freebusy.html:23
 msgid "Busy periods given in this free/busy object:"
@@ -800,44 +787,41 @@ msgstr ""
 #, kde-format
 msgctxt "<startDate> for <duration>"
 msgid "%1 for %2"
-msgstr ""
+msgstr "%1，持續 %2"
 
 #: templates/itip_freebusy.html:34
 #, kde-format
 msgctxt "<startDate> - <endDate>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_freebusy.html:36
 #, kde-format
 msgctxt "<date>, <startTime> - <endTime>"
 msgid "%1, %2 - %3"
-msgstr ""
+msgstr "%1, %2 - %3"
 
 #: templates/itip_journal.html:5
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Delegate:"
 msgid "Date:"
-msgstr "委託："
+msgstr "日期："
 
 #: templates/itip_todo.html:16
 #, kde-format
 msgctxt "<beginDate> - <endDate>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_todo.html:22
 #, kde-format
 msgctxt "<beginDateTime> - <endDateTime>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_todo.html:24
 #, kde-format
 msgctxt "<beginDateTime> - <endTime>"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: templates/itip_todo.html:32
 msgid "Percent Done:"
