@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-29 00:46+0000\n"
-"PO-Revision-Date: 2026-09-12 10:43+0200\n"
+"PO-Revision-Date: 2026-09-28 08:21+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -1102,6 +1102,8 @@ msgid ""
 "Could not write the file %1:\n"
 "%2"
 msgstr ""
+"No s'ha pogut escriure en el fitxer %1:\n"
+"%2"
 
 #: text_calendar.cpp:1134
 #, kde-format
@@ -1253,13 +1255,3 @@ msgstr "Reenvia la invitació"
 #, kde-format
 msgid "Open attachment \"%1\""
 msgstr "Obri l'adjunt «%1»"
-
-#~ msgid "Do you still want to check your calendar?"
-#~ msgstr "Encara voleu comprovar el calendari?"
-
-#~ msgctxt "@action:button"
-#~ msgid "Check"
-#~ msgstr "Comprova"
-
-#~ msgid "%1?"
-#~ msgstr "%1?"
