@@ -21,8 +21,8 @@ ZoomTextPluginEditorInterfaceTest::~ZoomTextPluginEditorInterfaceTest() = defaul
 void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
     ZoomTextPluginEditorInterface interface(nullptr);
-    auto ac = new KActionCollection(this);
-    interface.createAction(ac);
+    auto ac = std::make_unique<KActionCollection>(this);
+    interface.createAction(ac.get());
     MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
     QCOMPARE(type.type(), MessageComposer::PluginActionType::View);

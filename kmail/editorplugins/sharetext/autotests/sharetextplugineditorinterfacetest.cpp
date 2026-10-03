@@ -21,7 +21,8 @@ ShareTextPluginEditorInterfaceTest::~ShareTextPluginEditorInterfaceTest() = defa
 void ShareTextPluginEditorInterfaceTest::shouldHaveDefaultValues()
 {
     ShareTextPluginEditorInterface interface(nullptr);
-    interface.createAction(new KActionCollection(this));
+    auto ac = std::make_unique<KActionCollection>(this);
+    interface.createAction(ac.get());
     MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
     QCOMPARE(type.type(), MessageComposer::PluginActionType::File);

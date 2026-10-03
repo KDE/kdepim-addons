@@ -19,7 +19,8 @@ void DoNotTrackPluginUrlInterceptorTest::shouldHaveDefaultValue()
 {
     DoNotTrackPluginUrlInterceptor w;
 
-    QVERIFY(w.createInterface(new QWebEngineView(), this));
+    auto view = std::make_unique<QWebEngineView>();
+    QVERIFY(w.createInterface(view.get(), this));
 }
 
 QTEST_MAIN(DoNotTrackPluginUrlInterceptorTest)
