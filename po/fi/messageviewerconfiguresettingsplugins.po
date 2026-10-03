@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
-# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-03 00:44+0000\n"
-"PO-Revision-Date: 2024-10-20 17:29+0300\n"
+"PO-Revision-Date: 2026-08-31 18:50+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: dkim-verify/dkimadvancedwidget.cpp:22
 #, kde-format
@@ -300,16 +300,13 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Tietoa parametrin muodosta…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:43
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%u - url used by command</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%u - url used by command</li></ul></p></qt>"
 msgstr ""
 "<qt><p><strong>Parametreissa voi käyttää seuraavia lausekkeita:</strong></"
-"p><ul><li>%u – komennon käyttämä verkko-osoite</li></ul></strong></p></qt>"
+"p><ul><li>%u – komennon käyttämä verkko-osoite</li></ul></p></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:54
 #, kde-format

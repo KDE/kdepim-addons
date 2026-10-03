@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2016.
-# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:46+0000\n"
-"PO-Revision-Date: 2025-09-19 18:20+0300\n"
+"PO-Revision-Date: 2026-08-31 18:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -80,26 +80,24 @@ msgstr "Tekoälyasetukset"
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
 #, kde-format
 msgid "No text selected or no text in the editor."
-msgstr ""
+msgstr "Ei valittua tekstiä tai muokkaimessa ei ole tekstiä."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Correct Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Text"
-msgstr "Korjaa teksti"
+msgstr "Ei tekstiä"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgid "No AI engine configured."
-msgstr ""
+msgstr "Tekoälymoottoreita ei ole asetettu."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgctxt "@title:window"
 msgid "No AI Engine"
-msgstr ""
+msgstr "Ei tekoälymoottori"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:137
 #, kde-format
@@ -127,7 +125,7 @@ msgstr "Lisää sähköpostiviesti..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Email Address"
-msgstr ""
+msgstr "Valitse sähköpostiosoite"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:30
 #, kde-format
