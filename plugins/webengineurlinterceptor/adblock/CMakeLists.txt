@@ -102,6 +102,7 @@ target_link_libraries(
     KPim6::WebEngineViewer
     KF6::TextCustomEditor
     KF6::TextAddonsWidgets
+    KF6::ConfigGui
 )
 if(Corrosion_VERSION VERSION_LESS 0.5.0)
     target_link_libraries(adblockplugin webengineviewer-adblock)
