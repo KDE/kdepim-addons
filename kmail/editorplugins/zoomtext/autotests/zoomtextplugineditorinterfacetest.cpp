@@ -9,6 +9,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "../zoomtextplugineditorinterface.h"
 #include <KActionCollection>
+#include <QStatusBar>
 #include <QTest>
 
 ZoomTextPluginEditorInterfaceTest::ZoomTextPluginEditorInterfaceTest(QObject *parent)
@@ -30,6 +31,9 @@ void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()
     QVERIFY(ac->action(u"zoom_in"_s));
     QVERIFY(ac->action(u"zoom_out"_s));
     QVERIFY(ac->action(u"zoom_reset"_s));
+
+    QStatusBar statusBar;
+    statusBar.addPermanentWidget(interface.statusBarWidget());
 }
 
 QTEST_MAIN(ZoomTextPluginEditorInterfaceTest)
