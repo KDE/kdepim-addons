@@ -20,7 +20,9 @@ ShareTextPluginEditorInterfaceTest::~ShareTextPluginEditorInterfaceTest() = defa
 
 void ShareTextPluginEditorInterfaceTest::shouldHaveDefaultValues()
 {
+    QWidget parentWidget;
     ShareTextPluginEditorInterface interface(nullptr);
+    interface.setParentWidget(&parentWidget);
     auto ac = std::make_unique<KActionCollection>(this);
     interface.createAction(ac.get());
     MessageComposer::PluginActionType type = interface.actionType();
