@@ -20,6 +20,6 @@ private Q_SLOTS:
     void shouldResetValue();
 
 private:
-    AutomaticAddContactsTabWidget *createContactWidget();
-    QStandardItemModel *mComboboxModel = nullptr;
+    std::unique_ptr<AutomaticAddContactsTabWidget> createContactWidget();
+    std::unique_ptr<QStandardItemModel> mComboboxModel;
 };

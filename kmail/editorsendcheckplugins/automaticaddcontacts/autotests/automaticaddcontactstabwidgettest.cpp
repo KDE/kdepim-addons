@@ -22,7 +22,7 @@ AutomaticAddContactsTabWidgetTest::AutomaticAddContactsTabWidgetTest(QObject *pa
     : QObject(parent)
 {
     QStandardPaths::setTestModeEnabled(true);
-    mComboboxModel = new QStandardItemModel;
+    mComboboxModel = std::make_unique<QStandardItemModel>();
     for (int id = 42; id < 51; ++id) {
         Akonadi::Collection collection(id);
         collection.setRights(Akonadi::Collection::AllRights);
@@ -39,15 +39,14 @@ AutomaticAddContactsTabWidgetTest::AutomaticAddContactsTabWidgetTest(QObject *pa
 
 AutomaticAddContactsTabWidgetTest::~AutomaticAddContactsTabWidgetTest() = default;
 
-AutomaticAddContactsTabWidget *AutomaticAddContactsTabWidgetTest::createContactWidget()
+std::unique_ptr<AutomaticAddContactsTabWidget> AutomaticAddContactsTabWidgetTest::createContactWidget()
 {
-    auto w = new AutomaticAddContactsTabWidget(nullptr, mComboboxModel);
-    return w;
+    return std::make_unique<AutomaticAddContactsTabWidget>(nullptr, mComboboxModel.get());
 }
 
 void AutomaticAddContactsTabWidgetTest::shouldHaveDefaultValue()
 {
-    auto w = new AutomaticAddContactsTabWidget(createContactWidget());
+    auto w = createContactWidget();
     const auto vboxlayout = w->findChild<QVBoxLayout *>(u"mainlayout"_s);
     QVERIFY(vboxlayout);
 
@@ -66,12 +65,11 @@ void AutomaticAddContactsTabWidgetTest::shouldHaveDefaultValue()
 
     const auto mCollectionCombobox = w->findChild<Akonadi::CollectionComboBox *>(u"akonadicombobox"_s);
     QVERIFY(mCollectionCombobox);
-    delete w;
 }
 
 void AutomaticAddContactsTabWidgetTest::shouldResetValue()
 {
-    auto w = new AutomaticAddContactsTabWidget(createContactWidget());
+    auto w = createContactWidget();
     const auto mEnabled = w->findChild<QCheckBox *>(u"enabled"_s);
     QVERIFY(!mEnabled->isChecked());
     mEnabled->setChecked(true);
@@ -79,7 +77,6 @@ void AutomaticAddContactsTabWidgetTest::shouldResetValue()
 
     w->resetSettings();
     QVERIFY(!mEnabled->isChecked());
-    delete w;
 }
 
 QTEST_MAIN(AutomaticAddContactsTabWidgetTest)
