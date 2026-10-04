@@ -17,7 +17,8 @@ QuickTextMenuTest::QuickTextMenuTest(QObject *parent)
 
 void QuickTextMenuTest::shouldHaveDefaultValues()
 {
-    QuickTextMenu m(nullptr);
+    QWidget parentWidget;
+    QuickTextMenu m(&parentWidget);
     QVERIFY(m.menu());
 }
 
