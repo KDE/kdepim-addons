@@ -54,6 +54,7 @@ bool PgpKeyMemento::start(const QString &fingerprint)
     auto job = QGpgME::openpgp()->keyListJob(false, false, true);
     connect(job, &QGpgME::KeyListJob::nextKey, this, &PgpKeyMemento::onKeyReceived);
     connect(job, &QGpgME::KeyListJob::result, this, &PgpKeyMemento::onListJobFinished);
+    connect(job, &QGpgME::KeyListJob::done, job, &QObject::deleteLater);
     job->start({fingerprint});
 
     setRunning(true);
@@ -62,7 +63,7 @@ bool PgpKeyMemento::start(const QString &fingerprint)
 
 void PgpKeyMemento::exec(const QString &fingerprint)
 {
-    auto job = QGpgME::openpgp()->keyListJob(false, false, true);
+    std::unique_ptr<QGpgME::KeyListJob> job(QGpgME::openpgp()->keyListJob(false, false, true));
     std::vector<GpgME::Key> outKeys;
     auto result = job->exec({fingerprint}, false, outKeys);
     if (result.error()) {
