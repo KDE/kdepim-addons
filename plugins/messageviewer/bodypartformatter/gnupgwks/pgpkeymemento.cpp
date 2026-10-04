@@ -52,6 +52,7 @@ QString PgpKeyMemento::error() const
 bool PgpKeyMemento::start(const QString &fingerprint)
 {
     auto job = QGpgME::openpgp()->keyListJob(false, false, true);
+    job->setParent(this);
     connect(job, &QGpgME::KeyListJob::nextKey, this, &PgpKeyMemento::onKeyReceived);
     connect(job, &QGpgME::KeyListJob::result, this, &PgpKeyMemento::onListJobFinished);
     connect(job, &QGpgME::KeyListJob::done, job, &QObject::deleteLater);
