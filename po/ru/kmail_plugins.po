@@ -228,7 +228,7 @@ msgstr "Обработка спама"
 #: common/antispamwizard.cpp:569
 #, kde-format
 msgid "Semi spam (unsure) handling"
-msgstr "Определение спама"
+msgstr "Обработка вероятного спама"
 
 #: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
 #: common/antispamwizard.cpp:576
@@ -287,8 +287,8 @@ msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
 "moved into the folder named <i>%1</i>.</p>"
 msgstr ""
-"<p>Письма, отмеченные как спам, помечены как прочитанные.<br />Письма со "
-"спамом перемещены в папку <i>%1</i>.</p>"
+"<p>Письма, отмеченные как спам, помечаются как прочитанные.<br />Письма со "
+"спамом перемещаются в папку <i>%1</i>.</p>"
 
 #: common/antispamwizard.cpp:533
 #, kde-format
@@ -296,8 +296,8 @@ msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
 "not moved into a certain folder.</p>"
 msgstr ""
-"<p>Письма, отмеченные как спам, помечены как прочитанные.<br />Письма со "
-"спамом не перемещены в указанную папку.</p>"
+"<p>Письма, отмеченные как спам, помечаются как прочитанные.<br />Письма со "
+"спамом не перемещаются в отдельную папку.</p>"
 
 #: common/antispamwizard.cpp:539
 #, kde-format
@@ -305,8 +305,8 @@ msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
 "are moved into the folder named <i>%1</i>.</p>"
 msgstr ""
-"<p>Письма, отмеченные как спам, не помечены как прочитанные.<br />Письма со "
-"спамом перемещены в папку <i>%1</i>.</p>"
+"<p>Письма, отмеченные как спам, не помечаются как прочитанные.<br />Письма "
+"со спамом перемещаются в папку <i>%1</i>.</p>"
 
 #: common/antispamwizard.cpp:544
 #, kde-format
@@ -314,8 +314,8 @@ msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
 "are not moved into a certain folder.</p>"
 msgstr ""
-"<p>Письма, отмеченные как спам, не помечены как прочитанные.<br />Письма со "
-"спамом не перемещены в указанную папку.</p>"
+"<p>Письма, отмеченные как спам, не помечаются как прочитанные.<br />Письма "
+"со спамом не перемещаются в отдельную папку.</p>"
 
 #: common/antispamwizard.cpp:571
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "<p>Мастер создаст следующие фильтры:<ul>%1<
 #: common/antispamwizard.cpp:584
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
-msgstr "<p>Мастер обновит следующие фильтры:<ul>%1</ul></p>"
+msgstr "<p>Мастер заменит следующие фильтры:<ul>%1</ul></p>"
 
 #: common/antispamwizard.cpp:981
 #, kde-format
@@ -387,7 +387,7 @@ msgstr "Отмечать письма, классифицированные ка
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
-msgstr "Перемещать 100%-й &спам в:"
+msgstr "Перемещать &явный спам в:"
 
 #: common/antispamwizard.cpp:1063
 #, kde-format
@@ -528,7 +528,7 @@ msgstr "&Удалить"
 #: mailmergeplugin/widgets/mailmergewidget.cpp:64
 #, kde-format
 msgid "Mod&ify..."
-msgstr "Из&менить..."
+msgstr "Из&менить…"
 
 #: mailmergeplugin/widgets/selectattachmentdialog.cpp:33
 #, kde-format

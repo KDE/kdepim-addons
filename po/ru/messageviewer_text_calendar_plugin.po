@@ -58,7 +58,7 @@ msgstr "Удалить"
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep me informed about status changes of this incidence."
-msgstr "Держать меня в курсе изменений статуса этого события"
+msgstr "Сообщать мне об изменениях состояния этого события"
 
 #: delegateselector.cpp:26
 #, kde-format
@@ -1020,7 +1020,7 @@ msgstr "Переслать это приглашение?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Forward"
-msgstr "Перенаправить"
+msgstr "Переслать"
 
 #: text_calendar.cpp:834
 #, kde-format
@@ -1188,7 +1188,7 @@ msgstr "Принять приглашение с условием"
 #: text_calendar.cpp:1362
 #, kde-format
 msgid "Accept counter proposal"
-msgstr "Принять встречное приглашение"
+msgstr "Принять встречное предложение"
 
 #: text_calendar.cpp:1364
 #, kde-format
@@ -1198,7 +1198,7 @@ msgstr "Встречное предложение…"
 #: text_calendar.cpp:1366
 #, kde-format
 msgid "Throw mail away"
-msgstr "Удалить почту"
+msgstr "Удалить письмо"
 
 #: text_calendar.cpp:1368
 #, kde-format
@@ -1224,7 +1224,7 @@ msgstr "Проверить календарь…"
 #: text_calendar.cpp:1376
 #, kde-format
 msgid "Record response into my calendar"
-msgstr "Поместить ответ в календарь"
+msgstr "Записать ответ в календарь"
 
 #: text_calendar.cpp:1378
 #, kde-format

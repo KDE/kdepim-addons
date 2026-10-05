@@ -33,7 +33,7 @@ msgstr "Модуль Grammalecte"
 #: languagetool/languagetoolinterface.cpp:83
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
-msgstr "&Проверка грамматики (LanguageTool)"
+msgstr "&Проверить грамматику (LanguageTool)"
 
 #: languagetool/languagetoolinterface.cpp:96
 #, kde-format

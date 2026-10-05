@@ -115,7 +115,7 @@ msgstr "Настройка модуля «Проверка перед отпра
 #, kde-format
 msgctxt "@option:check"
 msgid "Send as plain text"
-msgstr "Отправить письмо в виде обычного текста"
+msgstr "Отправлять письмо в виде обычного текста"
 
 #: checkbeforesend/configurewidget/checkbeforesendconfigurewidget.cpp:21
 #, kde-format

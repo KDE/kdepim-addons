@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2017, 2020, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2017, 2020, 2024, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:46+0000\n"
-"PO-Revision-Date: 2024-08-19 22:53+0200\n"
+"PO-Revision-Date: 2026-10-04 23:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:16
 #, kde-format
@@ -32,7 +32,7 @@ msgstr "내부 편집기 대신에 외부 편집기 사용"
 #: externalcomposer/externalcomposerconfigurewidget.cpp:37
 #, kde-format
 msgid "Specify editor:"
-msgstr ""
+msgstr "편집기 지정:"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format

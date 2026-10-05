@@ -82,7 +82,7 @@ msgstr "Ссылка на изображение:"
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:42
 #, kde-format
 msgid "Alternate text:"
-msgstr "Текст, заменяющий изображение"
+msgstr "Текст, заменяющий изображение:"
 
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:63
 #: markdown/markdownlib/markdowncreateimagewidget.cpp:74
@@ -110,7 +110,7 @@ msgstr "Предпросмотр результата рендеринга Markd
 #: markdown/markdownlib/markdownpreviewwidget.cpp:77
 #, kde-format
 msgid "Converter Error"
-msgstr "Редактор конвертера"
+msgstr "Ошибка преобразования"
 
 #: markdown/plugin/markdowninterface.cpp:39
 #, kde-format

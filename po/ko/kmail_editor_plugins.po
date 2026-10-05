@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2016, 2018, 2019, 2020, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2016, 2018, 2019, 2020, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:46+0000\n"
-"PO-Revision-Date: 2025-10-09 00:39+0200\n"
+"PO-Revision-Date: 2026-10-04 23:08+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: aitool/aitooltextplugineditorinterface.cpp:26
 #, kde-format
@@ -79,26 +79,24 @@ msgstr "AI 설정"
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
 #, kde-format
 msgid "No text selected or no text in the editor."
-msgstr ""
+msgstr "선택한 텍스트가 없거나 편집기에 텍스트가 없습니다."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Correct Text"
+#, kde-format
 msgctxt "@title:window"
 msgid "No Text"
-msgstr "텍스트 고치기"
+msgstr "텍스트 없음"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgid "No AI engine configured."
-msgstr ""
+msgstr "AI 엔진을 설정하지 않았습니다."
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:102
 #, kde-format
 msgctxt "@title:window"
 msgid "No AI Engine"
-msgstr ""
+msgstr "AI 엔진 없음"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:137
 #, kde-format
@@ -126,7 +124,7 @@ msgstr "이메일 삽입…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Email Address"
-msgstr ""
+msgstr "이메일 주소 선택"
 
 #: insertshorturl/insertshorturlconfigurewidget.cpp:30
 #, kde-format

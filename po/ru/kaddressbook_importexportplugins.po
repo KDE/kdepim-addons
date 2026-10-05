@@ -306,11 +306,11 @@ msgid ""
 "item><item>H: hours with 2 digits</item><item>I: minutes with 2 digits</"
 "item><item>S: seconds with 2 digits</item></list></para>"
 msgstr ""
-"<para><list><item>г: год 2 цифрами</item><item>Г: год 4 цифрами</item> "
-"<item>м: месяц 1 или 2 цифрами</item><item>М: месяц 2 цифрами</item> "
-"<item>д: день 1 или 2 цифрами</item><item>Д: день 2 цифрами</item> <item>ч: "
-"час 2 цифрами</item><item>I: минуты 2 цифрами</item> <item>С: секунды 2 "
-"цифрами</item></list></para>"
+"<para><list><item>y: год 2 цифрами</item><item>Y: год 4 цифрами</"
+"item><item>m: месяц 1 или 2 цифрами</item><item>M: месяц 2 цифрами</"
+"item><item>d: день 1 или 2 цифрами</item><item>D: день 2 цифрами</"
+"item><item>H: часы 2 цифрами</item><item>I: минуты 2 цифрами</item><item>S: "
+"секунды 2 цифрами</item></list></para>"
 
 #: csv/import/csvimportdialog.cpp:402
 #, kde-kuit-format
@@ -327,12 +327,12 @@ msgid ""
 "para>"
 msgstr ""
 "<para>Доступные форматы записи даты и времени в файл CSV:</"
-"para><para><list><item>г: год 2 цифрами</item><item>Г: год 4 цифрами</item> "
-"<item>м: месяц 1 или 2 цифрами</item><item>М: месяц 2 цифрами</item> "
-"<item>д: день 1 или 2 цифрами</item><item>Д: день 2 цифрами</item> <item>ч: "
-"час 2 цифрами</item><item>I: минуты 2 цифрами</item> <item>С: секунды 2 "
-"цифрами</item></list></para><para>Например, «Г-М-Д» соответствует дате в "
-"виде «2012-01-04»</para>"
+"para><para><list><item>y: год 2 цифрами</item><item>Y: год 4 цифрами</"
+"item><item>m: месяц 1 или 2 цифрами</item><item>M: месяц 2 цифрами</"
+"item><item>d: день 1 или 2 цифрами</item><item>D: день 2 цифрами</"
+"item><item>H: часы 2 цифрами</item><item>I: минуты 2 цифрами</item><item>S: "
+"секунды 2 цифрами</item></list></para><para>Например, «Y-M-D» соответствует "
+"дате в виде «2012-01-04»</para>"
 
 #: csv/import/csvimportdialog.cpp:418
 #, kde-format
@@ -640,13 +640,13 @@ msgstr "Экспортировать ключи шифрования конта�
 #, kde-format
 msgctxt "@option:check"
 msgid "Pictures"
-msgstr "Рисунки"
+msgstr "Изображения"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export pictures"
-msgstr "Экспорт рисунков"
+msgstr "Экспорт изображений"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:61
 #, kde-format
@@ -654,13 +654,13 @@ msgctxt "@info:whatsthis"
 msgid ""
 "Check this box if you want to export the contact's picture to the vCard "
 "output file."
-msgstr "Экспортировать рисунок контакта в файл vCard."
+msgstr "Экспортировать изображение контакта в файл vCard."
 
 #: vcards/engine/vcardexportselectionwidget.cpp:65
 #, kde-format
 msgctxt "@title:group"
 msgid "Export options"
-msgstr "Опции экспорта"
+msgstr "Параметры экспорта"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:71
 #, kde-format
@@ -672,7 +672,7 @@ msgstr "Отображаемое имя в виде полного имени"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Export display name as full name"
-msgstr "Экспортировать отображаемое имя в полное имя"
+msgstr "Экспортировать отображаемое имя как полное имя"
 
 #: vcards/engine/vcardexportselectionwidget.cpp:74
 #, kde-format
@@ -683,8 +683,8 @@ msgid ""
 "correctly in GMail or Android."
 msgstr ""
 "Экспортировать отображаемое имя контакта в поле полного имени в визитной "
-"карточке vCard. Эта опция может понадобиться для корректного отображения "
-"имени в GMail или Android."
+"карточке vCard. Это может понадобиться для корректного показа имени в GMail "
+"или Android."
 
 #: vcards/engine/vcardviewerdialog.cpp:29
 #, kde-format
@@ -702,7 +702,7 @@ msgstr "Импортировать этот контакт в адресную �
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
-msgstr "Импорт всех…"
+msgstr "Импортировать все…"
 
 #: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
@@ -733,7 +733,7 @@ msgstr "vCard (*.vcf *.vcard *.vct *.gcrd);;Все файлы (*)"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
-msgstr "Выберите vCard для импорта"
+msgstr "Выбор vCard для импорта"
 
 #: vcards/vcardimportexportplugininterface.cpp:98
 #, kde-format

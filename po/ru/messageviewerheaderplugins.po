@@ -93,7 +93,7 @@ msgstr "Bugzilla: "
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:191
 #, kde-format
 msgid "MDN To: "
-msgstr "Получатель подтверждения:"
+msgstr "Получатель подтверждения: "
 
 #: fancyheaderstyleplugin/fancyheaderstyle.cpp:198
 #, kde-format

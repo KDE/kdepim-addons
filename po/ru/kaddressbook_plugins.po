@@ -34,7 +34,7 @@ msgstr ""
 #: checkgravatar/checkgravatarplugininterface.cpp:37
 #, kde-format
 msgid "Check Gravatar…"
-msgstr "Показать Gravatar…"
+msgstr "Проверить Gravatar…"
 
 #: checkgravatar/checkgravatarplugininterface.cpp:61
 #: sendmail/sendmailplugininterface.cpp:60
@@ -130,7 +130,7 @@ msgstr "Адресная книга для сохранения контакто
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:102
 #, kde-format
 msgid "Select All"
-msgstr "Выбрать всё"
+msgstr "Выбрать все"
 
 #: mergelib/manualmerge/mergecontactwidgetlist.cpp:39
 #: mergelib/searchduplicate/searchduplicateresultwidget.cpp:103
@@ -263,7 +263,7 @@ msgstr "Место работы"
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:94
 #, kde-format
 msgid "Manager"
-msgstr "Менеджер"
+msgstr "Руководитель"
 
 #: mergelib/widgets/mergecontactselectlistwidget.cpp:97
 #, kde-format
@@ -309,7 +309,7 @@ msgstr "Не удалось создать временный файл «%1»."
 #: sendvcards/sendvcardsplugininterface.cpp:35
 #, kde-format
 msgid "Send vCards…"
-msgstr "Отправить в формате электронных визиток…"
+msgstr "Отправить визитки vCard…"
 
 #~ msgid "Merge Contacts..."
 #~ msgstr "Объединить контакты..."

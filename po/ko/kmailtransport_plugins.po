@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2017, 2020.
+# SPDX-FileCopyrightText: 2017, 2020, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:44+0000\n"
-"PO-Revision-Date: 2020-01-29 00:33+0100\n"
+"PO-Revision-Date: 2026-10-04 23:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,13 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: sendmail/sendmailjob.cpp:41
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Invalid options for the mailer program: %1"
-msgstr "메일 전송 프로그램 %1을(를) 실행할 수 없음"
+msgstr "메일 전송 프로그램의 옵션이 잘못됨: %1"
 
 #: sendmail/sendmailjob.cpp:59
 #, kde-format
@@ -29,10 +28,9 @@ msgid "Failed to execute mailer program %1"
 msgstr "메일 전송 프로그램 %1을(를) 실행할 수 없음"
 
 #: sendmail/sendmailjob.cpp:61
-#, fuzzy, kde-format
-#| msgid "Failed to execute mailer program %1"
+#, kde-format
 msgid "Failed to execute mailer program %1: %2"
-msgstr "메일 전송 프로그램 %1을(를) 실행할 수 없음"
+msgstr "메일 전송 프로그램 %1을(를) 실행할 수 없음: %2"
 
 #: sendmail/sendmailjob.cpp:75
 #, kde-format

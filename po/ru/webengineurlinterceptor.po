@@ -96,7 +96,7 @@ msgstr "Поиск…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Adblock List"
-msgstr "Добавление списка  AdBlock"
+msgstr "Добавление списка AdBlock"
 
 #: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
 #, kde-format

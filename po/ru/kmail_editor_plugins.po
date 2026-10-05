@@ -77,7 +77,7 @@ msgstr "Быстрый ответ"
 #, kde-format
 msgctxt "@action"
 msgid "Configure AI"
-msgstr "Настроить AI"
+msgstr "Настроить ИИ"
 
 #: autogenerateanswers/autogenerateanswerseditorinterface.cpp:96
 #, kde-format
