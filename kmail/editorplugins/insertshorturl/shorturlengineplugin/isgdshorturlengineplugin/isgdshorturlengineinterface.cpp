@@ -5,7 +5,6 @@
 */
 
 #include "isgdshorturlengineinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "isgdshorturlengineplugin_debug.h"
 
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QNetworkRequest>
 
 #include "../../shorturlengineplugin/shorturlengineplugin.h"
+
+using namespace Qt::Literals::StringLiterals;
 
 IsgdShortUrlEngineInterface::IsgdShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
     : ShortUrlEngineInterface(plugin, parent)

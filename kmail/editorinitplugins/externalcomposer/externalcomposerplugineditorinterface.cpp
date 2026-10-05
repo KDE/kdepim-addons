@@ -5,11 +5,12 @@
 */
 
 #include "externalcomposerplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigGroup>
 #include <KPIMTextEdit/RichTextComposer>
 #include <KSharedConfig>
+
+using namespace Qt::Literals::StringLiterals;
 
 ExternalComposerPluginEditorInterface::ExternalComposerPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInitInterface(parent)

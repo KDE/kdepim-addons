@@ -5,10 +5,11 @@
 */
 
 #include "confirmbeforedeletingmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigGroup>
 #include <QRegularExpression>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmBeforeDeletingManager::ConfirmBeforeDeletingManager(QObject *parent)
     : QObject(parent)

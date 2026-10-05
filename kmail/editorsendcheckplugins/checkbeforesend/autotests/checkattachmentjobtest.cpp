@@ -5,11 +5,12 @@
 */
 
 #include "checkattachmentjobtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../sendattachments/checkattachmentjob.h"
 
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 CheckAttachmentJobTest::CheckAttachmentJobTest(QObject *parent)
     : QObject(parent)

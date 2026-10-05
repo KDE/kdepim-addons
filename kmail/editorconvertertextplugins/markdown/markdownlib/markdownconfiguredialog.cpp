@@ -5,12 +5,13 @@
 */
 
 #include "markdownconfiguredialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdownconfigurewidget.h"
 #include <KLocalizedString>
 #include <QDesktopServices>
 #include <QUrl>
+
+using namespace Qt::Literals::StringLiterals;
 
 MarkdownConfigureDialog::MarkdownConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)

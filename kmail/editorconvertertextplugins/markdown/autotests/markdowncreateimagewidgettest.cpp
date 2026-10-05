@@ -5,7 +5,6 @@
 */
 
 #include "markdowncreateimagewidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdowncreateimagewidget.h"
 #include <QCheckBox>
@@ -16,6 +15,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSpinBox>
 
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(MarkdownCreateImageWidgetTest)
 
 MarkdownCreateImageWidgetTest::MarkdownCreateImageWidgetTest(QObject *parent)

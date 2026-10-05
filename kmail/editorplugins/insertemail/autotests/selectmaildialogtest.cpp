@@ -5,9 +5,11 @@
 */
 
 #include "selectmaildialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(SelectMailDialogTest)
 
 SelectMailDialogTest::SelectMailDialogTest(QObject *parent)

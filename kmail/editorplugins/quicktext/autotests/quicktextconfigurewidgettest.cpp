@@ -5,13 +5,15 @@
 */
 
 #include "quicktextconfigurewidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "quicktextconfigurewidget.h"
 #include "quicktextwidget.h"
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(QuickTextConfigureWidgetTest)
 
 QuickTextConfigureWidgetTest::QuickTextConfigureWidgetTest(QObject *parent)

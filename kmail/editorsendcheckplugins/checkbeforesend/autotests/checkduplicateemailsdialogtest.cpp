@@ -5,7 +5,6 @@
 */
 
 #include "checkduplicateemailsdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../duplicateemails/checkduplicateemailsdialog.h"
 #include <QDialogButtonBox>
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QListWidget>
 #include <QStandardPaths>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 CheckDuplicateEmailsDialogTest::CheckDuplicateEmailsDialogTest(QObject *parent)
     : QObject(parent)

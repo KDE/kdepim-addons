@@ -5,7 +5,6 @@
 */
 
 #include "shorturlengineinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "shorturlengineplugin.h"
 
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QNetworkAccessManager>
 #include <QUrl>
+
+using namespace Qt::Literals::StringLiterals;
 
 ShortUrlEngineInterface::ShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
     : QObject(parent)

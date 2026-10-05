@@ -5,13 +5,14 @@
 */
 
 #include "markdowndemowidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdownpreviewwidget.h"
 #include <QFile>
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QTextEdit>
+
+using namespace Qt::Literals::StringLiterals;
 
 MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
     : QWidget(parent)

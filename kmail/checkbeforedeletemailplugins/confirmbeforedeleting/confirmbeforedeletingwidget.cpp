@@ -5,7 +5,6 @@
 */
 
 #include "confirmbeforedeletingwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmbeforedeletingcreateruledialog.h"
 #include "confirmbeforedeletingmanager.h"
@@ -18,6 +17,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QTreeWidget>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     : QWidget(parent)

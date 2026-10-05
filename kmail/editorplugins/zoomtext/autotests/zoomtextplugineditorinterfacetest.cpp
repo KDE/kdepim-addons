@@ -5,12 +5,13 @@
 */
 
 #include "zoomtextplugineditorinterfacetest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../zoomtextplugineditorinterface.h"
 #include <KActionCollection>
 #include <QStatusBar>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 ZoomTextPluginEditorInterfaceTest::ZoomTextPluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)

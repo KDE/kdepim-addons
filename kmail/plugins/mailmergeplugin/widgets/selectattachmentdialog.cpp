@@ -5,13 +5,13 @@
 */
 
 #include "selectattachmentdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <KUrlRequester>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 using namespace MailMerge;
 
 SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)

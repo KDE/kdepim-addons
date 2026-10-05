@@ -5,7 +5,6 @@
 */
 
 #include "quicktextplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "quicktextmenu.h"
 #include <KActionCollection>
@@ -19,6 +18,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QMenu>
 #include <QPushButton>
 #include <QTextBlock>
+
+using namespace Qt::Literals::StringLiterals;
 
 QuickTextPluginEditorInterface::QuickTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

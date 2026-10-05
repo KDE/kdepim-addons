@@ -5,12 +5,13 @@
 */
 
 #include "externalcomposerconfiguredialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../externalcomposerconfiguredialog.h"
 #include "../externalcomposerconfigurewidget.h"
 #include <QStandardPaths>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 ExternalComposerConfigureDialogTest::ExternalComposerConfigureDialogTest(QObject *parent)
     : QObject(parent)

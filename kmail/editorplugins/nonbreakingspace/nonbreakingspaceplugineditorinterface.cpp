@@ -5,12 +5,13 @@
 */
 
 #include "nonbreakingspaceplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
 #include <TextCustomEditor/RichTextEditor>
+
+using namespace Qt::Literals::StringLiterals;
 
 NonBreakingSpacePluginEditorInterface::NonBreakingSpacePluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

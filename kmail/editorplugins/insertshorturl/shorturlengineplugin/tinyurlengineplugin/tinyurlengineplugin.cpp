@@ -5,10 +5,11 @@
 */
 
 #include "tinyurlengineplugin.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "tinyurlengineinterface.h"
 #include <KPluginFactory>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(TinyUrlEnginePlugin, "pimcommon_tinyurlengineplugin.json")
 

@@ -5,7 +5,6 @@
 */
 
 #include "markdowncreatelinkdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdowncreatelinkdialog.h"
 #include "markdowncreatelinkwidget.h"
@@ -14,6 +13,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(MarkdownCreateLinkDialogTest)
 
 MarkdownCreateLinkDialogTest::MarkdownCreateLinkDialogTest(QObject *parent)

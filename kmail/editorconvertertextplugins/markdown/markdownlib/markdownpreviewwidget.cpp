@@ -5,7 +5,6 @@
 */
 
 #include "markdownpreviewwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdownconverter.h"
 #include "markdownenginepage.h"
@@ -16,6 +15,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QWebChannel>
 #include <QWebEngineSettings>
 #include <QWebEngineView>
+
+using namespace Qt::Literals::StringLiterals;
 
 MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)

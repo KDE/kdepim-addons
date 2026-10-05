@@ -5,12 +5,13 @@
 */
 
 #include "triopabshorturlengineinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../shorturlengineplugin.h"
 
 #include <QNetworkReply>
 #include <QNetworkRequest>
+
+using namespace Qt::Literals::StringLiterals;
 
 TripAbShortUrlEngineInterface::TripAbShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
     : ShortUrlEngineInterface(plugin, parent)

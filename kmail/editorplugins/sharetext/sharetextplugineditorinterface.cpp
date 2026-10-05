@@ -5,7 +5,6 @@
 */
 
 #include "sharetextplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "sharetexteditorplugin_debug.h"
 #include "sharetextpurposemenuwidget.h"
@@ -17,6 +16,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QAction>
 #include <QMenu>
+
+using namespace Qt::Literals::StringLiterals;
 
 ShareTextPluginEditorInterface::ShareTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

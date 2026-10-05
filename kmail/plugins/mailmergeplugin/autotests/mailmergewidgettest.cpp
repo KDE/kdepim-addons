@@ -5,7 +5,6 @@
 */
 
 #include "mailmergewidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../widgets/mailmergewidget.h"
 #include <PimCommon/SimpleStringListEditor>
@@ -13,6 +12,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QSignalSpy>
 #include <QStackedWidget>
 #include <QTest>
+using namespace Qt::Literals::StringLiterals;
 using namespace MailMerge;
 Q_DECLARE_METATYPE(MailMerge::MailMergeWidget::SourceType)
 MailMergeWidgetTest::MailMergeWidgetTest()

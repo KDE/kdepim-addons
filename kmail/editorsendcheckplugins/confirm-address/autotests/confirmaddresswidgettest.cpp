@@ -5,7 +5,6 @@
 */
 
 #include "confirmaddresswidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../confirmaddresswidget.h"
 #include <QLabel>
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressWidgetTest::ConfirmAddressWidgetTest(QObject *parent)
     : QObject(parent)

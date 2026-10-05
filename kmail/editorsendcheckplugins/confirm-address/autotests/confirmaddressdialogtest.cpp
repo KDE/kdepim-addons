@@ -5,7 +5,6 @@
 */
 
 #include "confirmaddressdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../confirmaddressdialog.h"
 #include "../confirmaddresswidget.h"
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressDialogTest::ConfirmAddressDialogTest(QObject *parent)
     : QObject(parent)

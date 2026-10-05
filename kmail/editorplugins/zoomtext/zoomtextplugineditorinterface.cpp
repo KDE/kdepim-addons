@@ -5,7 +5,6 @@
 */
 
 #include "zoomtextplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "zoomlabel.h"
 #include "zoomtexteditorplugin_debug.h"
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 #include <QAction>
 #include <TextCustomEditor/RichTextEditor>
+
+using namespace Qt::Literals::StringLiterals;
 
 ZoomTextPluginEditorInterface::ZoomTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

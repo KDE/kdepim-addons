@@ -5,12 +5,13 @@
 */
 
 #include "selectmailwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QHBoxLayout>
 #include <QTreeView>
 
 #include <Akonadi/EmailAddressSelectionWidget>
+
+using namespace Qt::Literals::StringLiterals;
 
 SelectMailWidget::SelectMailWidget(QWidget *parent)
     : QWidget(parent)

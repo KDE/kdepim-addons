@@ -5,11 +5,12 @@
 */
 
 #include "checkduplicateemailsjobtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../duplicateemails/checkduplicateemailsjob.h"
 #include <QStringList>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 CheckDuplicateEmailsJobTest::CheckDuplicateEmailsJobTest(QObject *parent)
     : QObject(parent)

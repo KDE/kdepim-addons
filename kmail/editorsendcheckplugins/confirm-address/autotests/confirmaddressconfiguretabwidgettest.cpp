@@ -5,7 +5,6 @@
 */
 
 #include "confirmaddressconfiguretabwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../confirmaddressconfiguretabwidget.h"
 #include <PimCommon/SimpleStringListEditor>
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObject *parent)
     : QObject(parent)

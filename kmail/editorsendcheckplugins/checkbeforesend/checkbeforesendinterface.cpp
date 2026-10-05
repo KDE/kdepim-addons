@@ -5,7 +5,6 @@
 */
 
 #include "checkbeforesendinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "checkbeforesendupdatesmtpdialog.h"
 #include "duplicateemails/checkduplicateemailsdialog.h"
@@ -21,6 +20,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KSharedConfig>
 
 #include <QPointer>
+
+using namespace Qt::Literals::StringLiterals;
 
 CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)

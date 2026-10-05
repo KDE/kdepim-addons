@@ -5,13 +5,14 @@
 */
 
 #include "checkbeforesendconfigurewidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../configurewidget/checkbeforesendconfigurewidget.h"
 #include <QCheckBox>
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 CheckBeforeSendConfigureWidgetTest::CheckBeforeSendConfigureWidgetTest(QObject *parent)
     : QObject(parent)

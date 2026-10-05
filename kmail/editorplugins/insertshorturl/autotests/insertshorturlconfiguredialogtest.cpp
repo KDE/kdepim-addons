@@ -5,7 +5,6 @@
 */
 
 #include "insertshorturlconfiguredialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../insertshorturlconfiguredialog.h"
 #include "../insertshorturlconfigurewidget.h"
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(InsertShorturlConfigureDialogTest)
 

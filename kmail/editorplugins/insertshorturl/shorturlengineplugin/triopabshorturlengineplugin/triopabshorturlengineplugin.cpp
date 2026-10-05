@@ -5,10 +5,11 @@
 */
 
 #include "triopabshorturlengineplugin.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "triopabshorturlengineinterface.h"
 #include <KPluginFactory>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(TriopAbShortUrlEnginePlugin, "pimcommon_triopabshorturlengineplugin.json")
 

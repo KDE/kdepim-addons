@@ -5,10 +5,11 @@
 */
 
 #include "checkbeforesendconfiguredialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "checkbeforesendconfigurewidget.h"
 #include <KLocalizedString>
+
+using namespace Qt::Literals::StringLiterals;
 
 CheckBeforeSendConfigureDialog::CheckBeforeSendConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)

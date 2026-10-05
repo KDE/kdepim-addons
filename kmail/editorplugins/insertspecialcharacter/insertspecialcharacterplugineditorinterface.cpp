@@ -5,11 +5,12 @@
 */
 
 #include "insertspecialcharacterplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
+
+using namespace Qt::Literals::StringLiterals;
 
 InsertSpecialCharacterPluginEditorInterface::InsertSpecialCharacterPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

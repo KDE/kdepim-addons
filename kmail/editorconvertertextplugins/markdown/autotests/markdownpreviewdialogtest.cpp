@@ -5,7 +5,6 @@
 */
 
 #include "markdownpreviewdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdownpreviewdialog.h"
 #include "markdownpreviewwidget.h"
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(MarkdownPreviewDialogTest)
 

@@ -5,13 +5,14 @@
 */
 
 #include "automaticaddcontactsconfiguretabtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../automaticaddcontactsconfiguretab.h"
 #include <QHBoxLayout>
 #include <QStandardPaths>
 #include <QTabWidget>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 AutomaticAddContactsConfigureTabTest::AutomaticAddContactsConfigureTabTest(QObject *parent)
     : QObject(parent)

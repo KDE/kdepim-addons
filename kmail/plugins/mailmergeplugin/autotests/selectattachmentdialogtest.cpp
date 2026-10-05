@@ -5,12 +5,14 @@
 */
 
 #include "selectattachmentdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../widgets/selectattachmentdialog.h"
 #include <KUrlRequester>
 #include <QLabel>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
+
 SelectAttachmentDialogTest::SelectAttachmentDialogTest(QObject *parent)
     : QObject(parent)
 {

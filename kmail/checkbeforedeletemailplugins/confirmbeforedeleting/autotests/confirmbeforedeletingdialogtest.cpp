@@ -5,7 +5,6 @@
 */
 
 #include "confirmbeforedeletingdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmbeforedeletingdialog.h"
 #include "confirmbeforedeletingwidget.h"
@@ -13,6 +12,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(ConfirmBeforeDeletingDialogTest)
 ConfirmBeforeDeletingDialogTest::ConfirmBeforeDeletingDialogTest(QObject *parent)
     : QObject(parent)

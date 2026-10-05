@@ -5,7 +5,6 @@
 */
 
 #include "automaticaddcontactsconfigurewidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../automaticaddcontactsconfiguretab.h"
 #include "../automaticaddcontactsconfigurewidget.h"
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 AutomaticAddContactsConfigureWidgetTest::AutomaticAddContactsConfigureWidgetTest(QObject *parent)
     : QObject(parent)

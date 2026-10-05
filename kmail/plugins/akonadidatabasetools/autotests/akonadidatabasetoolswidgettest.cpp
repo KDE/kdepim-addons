@@ -4,12 +4,14 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "akonadidatabasetoolswidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "akonadidatabasetoolswidget.h"
 #include <QPlainTextEdit>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(AkonadiDatabaseToolsWidgetTest)
 AkonadiDatabaseToolsWidgetTest::AkonadiDatabaseToolsWidgetTest(QObject *parent)
     : QObject{parent}

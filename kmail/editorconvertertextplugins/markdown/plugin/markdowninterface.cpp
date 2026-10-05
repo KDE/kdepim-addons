@@ -5,7 +5,6 @@
 */
 
 #include "markdowninterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdownconverter.h"
 #include "markdowncreateimagedialog.h"
@@ -26,6 +25,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <MessageComposer/TextPart>
 
 #include <MessageComposer/StatusBarLabelToggledState>
+
+using namespace Qt::Literals::StringLiterals;
 
 MarkdownInterface::MarkdownInterface(QObject *parent)
     : MessageComposer::PluginEditorConvertTextInterface(parent)

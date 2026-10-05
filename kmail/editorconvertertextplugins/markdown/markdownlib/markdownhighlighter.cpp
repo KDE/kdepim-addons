@@ -5,13 +5,14 @@
 */
 
 #include "markdownhighlighter.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KSyntaxHighlighting/Format>
 #include <KSyntaxHighlighting/State>
 #include <KSyntaxHighlighting/Theme>
 
 #include <QTextStream>
+
+using namespace Qt::Literals::StringLiterals;
 
 MarkdownHighlighter::MarkdownHighlighter(QTextStream *stream)
     : mStream(stream)

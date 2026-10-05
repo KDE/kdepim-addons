@@ -5,13 +5,15 @@
 */
 
 #include "markdowncreatelinkwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdowncreatelinkwidget.h"
 #include <QFormLayout>
 #include <QLineEdit>
 #include <QSignalSpy>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(MarkdownCreateLinkWidgetTest)
 
 MarkdownCreateLinkWidgetTest::MarkdownCreateLinkWidgetTest(QObject *parent)

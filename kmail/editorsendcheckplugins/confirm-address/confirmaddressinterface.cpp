@@ -5,7 +5,6 @@
 */
 
 #include "confirmaddressinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmaddresscheckjob.h"
 #include "confirmaddressconfigurewidget.h"
@@ -19,6 +18,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <KIdentityManagementCore/IdentityManager>
 #include <MessageComposer/AliasesExpandJob>
 #include <PimCommon/PimUtil>
+
+using namespace Qt::Literals::StringLiterals;
+
 namespace
 {
 const char myConfigGroupName[] = "Confirm Address";

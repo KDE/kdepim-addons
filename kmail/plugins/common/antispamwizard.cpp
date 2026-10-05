@@ -6,7 +6,6 @@
 */
 
 #include "antispamwizard.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KCursorSaver>
 #include <MailCommon/FilterAction>
@@ -42,6 +41,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QTextEdit>
 #include <QTimer>
 #include <QVBoxLayout>
+using namespace Qt::Literals::StringLiterals;
 using namespace KMail;
 using namespace MailCommon;
 

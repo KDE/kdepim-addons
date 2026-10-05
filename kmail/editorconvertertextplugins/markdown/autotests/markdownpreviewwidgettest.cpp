@@ -5,7 +5,6 @@
 */
 
 #include "markdownpreviewwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdownpreviewwidget.h"
 #include <QLabel>
@@ -13,6 +12,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QVBoxLayout>
 #include <QWebChannel>
 #include <QWebEngineView>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(MarkdownPreviewWidgetTest)
 
 MarkdownPreviewWidgetTest::MarkdownPreviewWidgetTest(QObject *parent)

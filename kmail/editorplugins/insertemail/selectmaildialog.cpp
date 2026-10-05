@@ -5,7 +5,6 @@
 */
 
 #include "selectmaildialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "selectmailwidget.h"
 #include <KConfigGroup>
@@ -16,6 +15,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QVBoxLayout>
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
+
+using namespace Qt::Literals::StringLiterals;
 
 namespace
 {

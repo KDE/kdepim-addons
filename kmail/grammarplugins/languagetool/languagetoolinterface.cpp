@@ -5,7 +5,6 @@
 */
 
 #include "languagetoolinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "languagetoolplugin_debug.h"
 #include <KActionCollection>
@@ -19,6 +18,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QHBoxLayout>
 #include <QTextBlock>
+
+using namespace Qt::Literals::StringLiterals;
 
 LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)

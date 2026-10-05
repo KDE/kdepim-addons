@@ -5,7 +5,6 @@
 */
 
 #include "confirmbeforedeletingcreaterulewidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmbeforedeletingcreaterulewidget.h"
 #include <QComboBox>
@@ -14,6 +13,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QLineEdit>
 #include <QStandardPaths>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(ConfirmBeforeDeletingCreateRuleWidgetTest)
 ConfirmBeforeDeletingCreateRuleWidgetTest::ConfirmBeforeDeletingCreateRuleWidgetTest(QObject *parent)
     : QObject(parent)

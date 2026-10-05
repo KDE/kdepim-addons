@@ -4,7 +4,6 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "confirmbeforedeletinginterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmbeforedeletingmanager.h"
 #include "confirmbeforedeletingmessageboxdialog.h"
@@ -15,6 +14,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDialogButtonBox>
 #include <QIcon>
 #include <QMenu>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmBeforeDeletingInterface::ConfirmBeforeDeletingInterface(QObject *parent)
     : MessageViewer::MessageViewerCheckBeforeDeletingInterface(parent)

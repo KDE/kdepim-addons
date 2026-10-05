@@ -5,13 +5,14 @@
 */
 
 #include "shorturlenginepluginmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "shorturlengineplugin.h"
 #include <KPluginFactory>
 #include <KPluginMetaData>
 #include <QFileInfo>
 #include <QList>
+
+using namespace Qt::Literals::StringLiterals;
 
 class ShortUrlEnginePluginInfo
 {

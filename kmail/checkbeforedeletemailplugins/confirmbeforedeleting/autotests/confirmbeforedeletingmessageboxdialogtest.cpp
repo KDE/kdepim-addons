@@ -5,13 +5,15 @@
 */
 
 #include "confirmbeforedeletingmessageboxdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmbeforedeletingmessageboxdialog.h"
 #include "confirmbeforedeletingmessageboxwidget.h"
 #include <QDialogButtonBox>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(ConfirmBeforeDeletingMessageBoxDialogTest)
 ConfirmBeforeDeletingMessageBoxDialogTest::ConfirmBeforeDeletingMessageBoxDialogTest(QObject *parent)
     : QObject(parent)

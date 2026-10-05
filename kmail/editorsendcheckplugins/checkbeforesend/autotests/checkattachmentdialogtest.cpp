@@ -5,7 +5,6 @@
 */
 
 #include "checkattachmentdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../sendattachments/checkattachmentdialog.h"
 #include <QDialogButtonBox>
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QListWidget>
 #include <QStandardPaths>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 CheckAttachmentDialogTest::CheckAttachmentDialogTest(QObject *parent)
     : QObject(parent)

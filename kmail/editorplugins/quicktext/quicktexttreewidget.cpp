@@ -5,7 +5,6 @@
 */
 
 #include "quicktexttreewidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "quicktextmanager.h"
 
@@ -16,6 +15,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QContextMenuEvent>
 #include <QHeaderView>
 #include <QMenu>
+
+using namespace Qt::Literals::StringLiterals;
 
 QuicktextTreeWidget::QuicktextTreeWidget(QuicktextManager *manager, QWidget *parent)
     : QTreeView(parent)

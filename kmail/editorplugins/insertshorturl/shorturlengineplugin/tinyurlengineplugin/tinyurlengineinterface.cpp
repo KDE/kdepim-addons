@@ -5,12 +5,13 @@
 */
 
 #include "tinyurlengineinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../shorturlengineplugin.h"
 #include <KLocalizedString>
 
 #include <QNetworkAccessManager>
+
+using namespace Qt::Literals::StringLiterals;
 
 TinyUrlEngineInterface::TinyUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
     : ShortUrlEngineInterface(plugin, parent)

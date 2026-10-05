@@ -5,10 +5,11 @@
 */
 
 #include "confirmaddresscheckjobtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../confirmaddresscheckjob.h"
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressCheckJobTest::ConfirmAddressCheckJobTest(QObject *parent)
     : QObject(parent)

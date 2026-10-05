@@ -5,7 +5,6 @@
 */
 
 #include "externalcomposerconfigurewidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../externalcomposerconfigurewidget.h"
 #include <KUrlRequester>
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ExternalComposerConfigureWidgetTest::ExternalComposerConfigureWidgetTest(QObject *parent)
     : QObject(parent)

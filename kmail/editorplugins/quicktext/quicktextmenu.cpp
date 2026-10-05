@@ -5,11 +5,12 @@
 */
 
 #include "quicktextmenu.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <MessageComposer/ConvertSnippetVariableMenu>
 #include <MessageComposer/PluginComposerInterface>
 #include <QMenu>
+
+using namespace Qt::Literals::StringLiterals;
 
 QuickTextMenu::QuickTextMenu(QWidget *parentWidget, QObject *parent)
     : QObject(parent)

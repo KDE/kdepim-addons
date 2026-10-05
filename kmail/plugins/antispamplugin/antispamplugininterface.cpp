@@ -5,12 +5,13 @@
 */
 
 #include "antispamplugininterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../common/antispamwizard.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
+
+using namespace Qt::Literals::StringLiterals;
 
 AntiSpamPluginInterface::AntiSpamPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)

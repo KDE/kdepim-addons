@@ -5,7 +5,6 @@
 */
 
 #include "insertshorturlplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "kmail_insertshorturl_debug.h"
 #include "shorturlengineplugin/shorturlengineinterface.h"
@@ -18,6 +17,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <PimCommon/NetworkManager>
 #include <QAction>
 #include <TextCustomEditor/RichTextEditor>
+
+using namespace Qt::Literals::StringLiterals;
 
 InsertShorturlPluginEditorInterface::InsertShorturlPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

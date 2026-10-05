@@ -5,13 +5,14 @@
 */
 
 #include "../widgets/mailmergewidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KAboutData>
 #include <KLocalizedString>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>
+
+using namespace Qt::Literals::StringLiterals;
 
 int main(int argc, char **argv)
 {

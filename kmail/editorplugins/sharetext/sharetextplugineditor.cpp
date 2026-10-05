@@ -5,10 +5,11 @@
 */
 
 #include "sharetextplugineditor.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "sharetextplugineditorinterface.h"
 #include <KPluginFactory>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(ShareTextPluginEditor, "kmail_sharetexteditorplugin.json")
 

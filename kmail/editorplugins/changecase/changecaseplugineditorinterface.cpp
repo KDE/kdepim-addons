@@ -5,7 +5,6 @@
 */
 
 #include "changecaseplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "changecaseeditorplugin_debug.h"
 #include <KActionCollection>
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QAction>
 #include <TextCustomEditor/RichTextEditor>
 #include <TextUtils/ConvertText>
+
+using namespace Qt::Literals::StringLiterals;
 
 ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

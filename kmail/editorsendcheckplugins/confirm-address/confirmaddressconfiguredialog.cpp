@@ -5,10 +5,11 @@
 */
 
 #include "confirmaddressconfiguredialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmaddressconfigurewidget.h"
 #include <KLocalizedString>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressConfigureDialog::ConfirmAddressConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)

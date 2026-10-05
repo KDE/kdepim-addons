@@ -5,13 +5,14 @@
 */
 
 #include "confirmaddressconfiguretabtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../confirmaddressconfiguretab.h"
 #include <QStandardPaths>
 #include <QTabWidget>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressConfigureTabTest::ConfirmAddressConfigureTabTest(QObject *parent)
     : QObject(parent)

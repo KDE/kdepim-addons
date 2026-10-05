@@ -5,7 +5,6 @@
 */
 
 #include "automaticaddcontactstabwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../automaticaddcontactstabwidget.h"
 #include <Akonadi/CollectionComboBox>
@@ -17,6 +16,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 AutomaticAddContactsTabWidgetTest::AutomaticAddContactsTabWidgetTest(QObject *parent)
     : QObject(parent)

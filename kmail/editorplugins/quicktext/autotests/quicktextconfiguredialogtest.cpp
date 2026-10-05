@@ -5,7 +5,6 @@
 */
 
 #include "quicktextconfiguredialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "quicktextconfiguredialog.h"
 #include "quicktextconfigurewidget.h"
@@ -14,6 +13,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(QuickTextConfigureDialogTest)
 
 QuickTextConfigureDialogTest::QuickTextConfigureDialogTest(QObject *parent)

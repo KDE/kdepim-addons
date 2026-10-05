@@ -5,7 +5,6 @@
 */
 
 #include "confirmaddressconfiguretabwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmaddresssimplestringlisteditor.h"
 #include <KConfigGroup>
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QGroupBox>
 #include <QRadioButton>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *parent)
     : QWidget(parent)

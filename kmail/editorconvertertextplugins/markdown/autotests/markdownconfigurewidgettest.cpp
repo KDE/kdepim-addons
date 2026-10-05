@@ -5,13 +5,14 @@
 */
 
 #include "markdownconfigurewidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdownconfigurewidget.h"
 #include <QCheckBox>
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(MarkdownConfigureWidgetTest)
 MarkdownConfigureWidgetTest::MarkdownConfigureWidgetTest(QObject *parent)

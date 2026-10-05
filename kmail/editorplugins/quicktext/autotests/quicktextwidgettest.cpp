@@ -5,7 +5,6 @@
 */
 
 #include "quicktextwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "quicktexttreewidget.h"
 #include "quicktextwidget.h"
@@ -14,6 +13,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStackedWidget>
 #include <QStandardPaths>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(QuickTextWidgetTest)
 QuickTextWidgetTest::QuickTextWidgetTest(QObject *parent)
     : QObject(parent)

@@ -5,11 +5,12 @@
 */
 
 #include "markdowncreatelinkwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <QFormLayout>
 #include <QLineEdit>
+
+using namespace Qt::Literals::StringLiterals;
 
 MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
     : QWidget(parent)

@@ -5,7 +5,6 @@
 */
 
 #include "confirmaddressemailentrydialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../confirmaddressemailentrydialog.h"
 #include <KEmailValidator>
@@ -14,6 +13,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QLineEdit>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 QTEST_MAIN(ConfirmAddressEmailEntryDialogTest)
 

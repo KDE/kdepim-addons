@@ -5,7 +5,6 @@
 */
 
 #include "checkbeforesendupdatesmtpdialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "checkbeforesendupdatesmtpdialog.h"
 #include <QCheckBox>
@@ -13,6 +12,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QLabel>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(CheckBeforeSendUpdateSmtpDialogTest)
 
 CheckBeforeSendUpdateSmtpDialogTest::CheckBeforeSendUpdateSmtpDialogTest(QObject *parent)

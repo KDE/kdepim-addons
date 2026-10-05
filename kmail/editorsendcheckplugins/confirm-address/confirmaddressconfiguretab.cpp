@@ -5,13 +5,14 @@
 */
 
 #include "confirmaddressconfiguretab.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmaddressconfiguretabwidget.h"
 #include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
 #include <QTabWidget>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     : QWidget(parent)

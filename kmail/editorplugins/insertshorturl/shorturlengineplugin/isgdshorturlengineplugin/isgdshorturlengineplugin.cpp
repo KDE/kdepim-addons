@@ -5,10 +5,11 @@
 */
 
 #include "isgdshorturlengineplugin.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "isgdshorturlengineinterface.h"
 #include <KPluginFactory>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(IsgdShortUrlEnginePlugin, "pimcommon_isgdshorturlengineplugin.json")
 

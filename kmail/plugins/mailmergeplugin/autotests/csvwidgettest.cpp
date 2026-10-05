@@ -5,12 +5,14 @@
 */
 
 #include "csvwidgettest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../widgets/csvwidget.h"
 #include <KUrlRequester>
 #include <QLabel>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
+
 CsvWidgetTest::CsvWidgetTest(QObject *parent)
     : QObject(parent)
 {

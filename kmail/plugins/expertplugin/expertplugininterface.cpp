@@ -5,11 +5,12 @@
 */
 
 #include "expertplugininterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "expertplugin_debug.h"
 #include <KActionCollection>
 #include <QAction>
+
+using namespace Qt::Literals::StringLiterals;
 
 ExpertPluginInterface::ExpertPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)

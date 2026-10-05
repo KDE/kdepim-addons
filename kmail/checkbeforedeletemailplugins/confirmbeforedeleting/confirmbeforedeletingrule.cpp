@@ -5,13 +5,14 @@
 */
 
 #include "confirmbeforedeletingrule.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "confirmbeforedeletingplugin_debug.h"
 #include <Akonadi/MessageStatus>
 #include <KLocalizedString>
 
 #include <QDebug>
+
+using namespace Qt::Literals::StringLiterals;
 
 ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule() = default;
 

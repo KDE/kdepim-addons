@@ -5,13 +5,14 @@
 */
 
 #include "autocorrectionplugineditorinterface.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KActionCollection>
 #include <KActionMenu>
 #include <KLocalizedString>
 #include <QAction>
 #include <TextCustomEditor/RichTextEditor>
+
+using namespace Qt::Literals::StringLiterals;
 
 AutoCorrectionPluginEditorInterface::AutoCorrectionPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

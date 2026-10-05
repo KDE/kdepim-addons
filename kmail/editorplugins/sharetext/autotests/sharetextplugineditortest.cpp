@@ -5,11 +5,12 @@
 */
 
 #include "sharetextplugineditortest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "../sharetextplugineditor.h"
 #include <KActionCollection>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 ShareTextPluginEditorTest::ShareTextPluginEditorTest(QObject *parent)
     : QObject(parent)

@@ -5,7 +5,6 @@
 */
 
 #include "markdowncreateimagedialogtest.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "markdowncreateimagedialog.h"
 #include "markdowncreateimagewidget.h"
@@ -15,6 +14,9 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
+
+using namespace Qt::Literals::StringLiterals;
+
 QTEST_MAIN(MarkdownCreateImageDialogTest)
 
 MarkdownCreateImageDialogTest::MarkdownCreateImageDialogTest(QObject *parent)
