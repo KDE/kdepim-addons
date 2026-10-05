@@ -84,7 +84,7 @@ msgstr "Настройка действий перед удалением поч
 #, kde-format
 msgctxt "@action"
 msgid "Confirm Before Deleting"
-msgstr "Подтвердить перед удалением"
+msgstr "Подтверждать перед удалением"
 
 #: confirmbeforedeleting/confirmbeforedeletinginterface.cpp:36
 #, kde-format

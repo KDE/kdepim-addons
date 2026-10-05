@@ -24,7 +24,7 @@ msgstr ""
 #: itineraryurlhandler.cpp:112 templates/itinerary.html:76
 #, kde-format
 msgid "Send to %1"
-msgstr "Отправить %1"
+msgstr "Отправить на %1"
 
 #: itineraryurlhandler.cpp:126
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "Номер брони: %1"
 #: templates/taxireservation.html:4
 #, kde-format
 msgid "Under Name: %1"
-msgstr "Имя для резервирования: %1"
+msgstr "Имя для бронирования: %1"
 
 #: templates/itinerary.html:66
 msgid "Show Calendar"

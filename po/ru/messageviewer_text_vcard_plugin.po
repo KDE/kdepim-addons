@@ -44,7 +44,7 @@ msgstr "[Добавить контакт в адресную книгу]"
 #: text_vcard.cpp:144
 #, kde-format
 msgid "[Update this contact in the address book]"
-msgstr "[Добавить информацию для контакта в адресной книге]"
+msgstr "[Обновить контакт в адресной книге]"
 
 #: text_vcard.cpp:149
 #, kde-format
@@ -69,7 +69,7 @@ msgstr "Добавить контакт в адресную книгу."
 #: text_vcard.cpp:241
 #, kde-format
 msgid "Update this contact to the address book."
-msgstr "Добавить информацию для контакта в адресной книге"
+msgstr "Обновить контакт в адресной книге."
 
 #: text_vcard.cpp:243
 #, kde-format
@@ -79,7 +79,7 @@ msgstr "Добавить «%1» в адресную книгу."
 #: text_vcard.cpp:243
 #, kde-format
 msgid "Update \"%1\" to the address book."
-msgstr "Добавить информацию для «%1» в адресной книге."
+msgstr "Обновить «%1» в адресной книге."
 
 #: text_vcard.cpp:267
 #, kde-format
