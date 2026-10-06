@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2024-08-03 12:53+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -23,18 +23,18 @@ msgctxt "@action"
 msgid "Open AI Chat"
 msgstr ""
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:25
+#: autocorrection/autocorrectionplugineditorinterface.cpp:26
 #, kde-format
 msgid "Autocorrect Text"
 msgstr "Autocorrect Text"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:30
+#: autocorrection/autocorrectionplugineditorinterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Autocorrect Full Text"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:35
+#: autocorrection/autocorrectionplugineditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
@@ -126,7 +126,7 @@ msgctxt "@action"
 msgid "Insert Email…"
 msgstr "Insert Email…"
 
-#: insertemail/selectmaildialog.cpp:28
+#: insertemail/selectmaildialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Email Address"
@@ -138,28 +138,28 @@ msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "Select Short URL server:"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:63
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:64
 #, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Insert Short URL…"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:86
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:87
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
 msgstr "No network connection detected, we cannot shorten URL."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:93
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:94
 #, kde-format
 msgid "String doesn't seem to be a URL"
 msgstr "String does not seem to be a URL"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:99
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:100
 #, kde-format
 msgid "An error occurred: \"%1\""
 msgstr "An error occurred: \"%1\""
 
-#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:33
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:34
 #, kde-format
 msgid ""
 "Error reported by server:\n"
@@ -168,24 +168,24 @@ msgstr ""
 "Error reported by server:\n"
 "'%1'"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:23
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Insert Special Character…"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "Insert Special Character"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:40
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:41
 #, kde-format
 msgid "Insert"
 msgstr "Insert"
 
-#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:24
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
@@ -221,60 +221,60 @@ msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "Export QuickText"
 
-#: quicktext/quicktextplugineditorinterface.cpp:42
+#: quicktext/quicktextplugineditorinterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Variables"
 msgstr "Variables"
 
-#: quicktext/quicktextplugineditorinterface.cpp:48
+#: quicktext/quicktextplugineditorinterface.cpp:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "Variables"
 
-#: quicktext/quicktexttreewidget.cpp:39
+#: quicktext/quicktexttreewidget.cpp:40
 #, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Add Snippet…"
 
-#: quicktext/quicktexttreewidget.cpp:41
+#: quicktext/quicktexttreewidget.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Edit Snippet…"
 
-#: quicktext/quicktexttreewidget.cpp:43
+#: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Remove Snippet"
 
-#: quicktext/quicktexttreewidget.cpp:46
+#: quicktext/quicktexttreewidget.cpp:47
 #, kde-format
 msgctxt "@action"
 msgid "Add Group…"
 msgstr "Add Group…"
 
-#: quicktext/quicktexttreewidget.cpp:48
+#: quicktext/quicktexttreewidget.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Rename Group…"
 
-#: quicktext/quicktexttreewidget.cpp:50
+#: quicktext/quicktexttreewidget.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "Remove Group"
 
-#: quicktext/quicktexttreewidget.cpp:87
+#: quicktext/quicktexttreewidget.cpp:88
 #, kde-format
 msgid "Text Snippets"
 msgstr "Text Snippets"
 
-#: quicktext/quicktexttreewidget.cpp:144
+#: quicktext/quicktexttreewidget.cpp:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -284,7 +284,7 @@ msgstr ""
 "Do you really want to remove snippet \"%1\"?<nl/><warning>There is no way to "
 "undo the removal.</warning>"
 
-#: quicktext/quicktexttreewidget.cpp:169
+#: quicktext/quicktexttreewidget.cpp:170
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -294,7 +294,7 @@ msgstr ""
 "Do you really want to remove group \"%1\" along with all its snippets?<nl/"
 "><warning>There is no way to undo the removal.</warning>"
 
-#: quicktext/quicktexttreewidget.cpp:179
+#: quicktext/quicktexttreewidget.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
@@ -316,7 +316,7 @@ msgstr "Save"
 msgid "General"
 msgstr "General"
 
-#: sharetext/sharetextplugineditorinterface.cpp:35
+#: sharetext/sharetextplugineditorinterface.cpp:36
 #, kde-format
 msgid "Share Mail Text…"
 msgstr "Share Mail Text…"
@@ -326,7 +326,7 @@ msgstr "Share Mail Text…"
 msgid "Zoom: %1%"
 msgstr "Zoom: %1%"
 
-#: zoomtext/zoomtextplugineditorinterface.cpp:27
+#: zoomtext/zoomtextplugineditorinterface.cpp:28
 #, kde-format
 msgid "Zoom…"
 msgstr "Zoom…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2025-09-20 21:43+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -82,13 +82,13 @@ msgstr "Finito."
 msgid "Start…"
 msgstr "Avvia…"
 
-#: antispamplugin/antispamplugininterface.cpp:24
+#: antispamplugin/antispamplugininterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Procedura guidata &anti-spam…"
 
-#: antivirusplugin/antivirusplugininterface.cpp:24
+#: antivirusplugin/antivirusplugininterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"

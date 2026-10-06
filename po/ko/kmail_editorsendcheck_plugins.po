@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2024-08-19 22:57+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -61,17 +61,17 @@ msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "연락처를 저장할 주소록 선택:"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:37
+#: checkbeforesend/checkbeforesendinterface.cpp:38
 #, kde-format
 msgid "Do you want to send the email as HTML?"
 msgstr "HTML로 이메일을 보내시겠습니까?"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:38
+#: checkbeforesend/checkbeforesendinterface.cpp:39
 #, kde-format
 msgid "Send email as plain text"
 msgstr "일반 텍스트로 이메일 보내기"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:39
+#: checkbeforesend/checkbeforesendinterface.cpp:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
@@ -97,7 +97,7 @@ msgid ""
 "the current identity?"
 msgstr "현재 프로필에 지정한 것과 다른 SMTP 서버로 이메일을 보내시겠습니까?"
 
-#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:16
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
@@ -157,63 +157,63 @@ msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "첨부 파일을 보내시겠습니까?"
 
-#: confirm-address/confirmaddressconfiguredialog.cpp:16
+#: confirm-address/confirmaddressconfiguredialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "\"이메일 주소 확인\" 플러그인 설정"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:34
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:35
 #, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "허용된 도메인 이름"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:39
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:40
 #, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "거부된 도메인 이름"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "A&dd…"
 msgstr "추가(&D)…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:49
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:68
 #, kde-format
 msgid "Re&move"
 msgstr "삭제(&M)"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:49
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:68
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Mod&ify…"
 msgstr "수정(&I)…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:51
 #, kde-format
 msgid "Enter new domain name:"
 msgstr "새 도메인 이름 입력:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:52
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:53
 #, kde-format
 msgid "Do you want to remove this domain?"
 msgstr "이 도메인을 삭제하시겠습니까?"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:56
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:57
 #, kde-format
 msgid "Whitelist of Addresses"
 msgstr "주소 허용 목록"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:70
 #, kde-format
 msgid "Enter new email address:"
 msgstr "새 이메일 주소 입력:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:71
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:72
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgstr "이 이메일 주소를 삭제하시겠습니까?"

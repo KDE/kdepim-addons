@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2024-08-04 09:47+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -30,12 +30,12 @@ msgstr "A&ztertu gramatika (Grammalecte)"
 msgid "Grammalecte Plugin"
 msgstr "«Grammalecte» plugina"
 
-#: languagetool/languagetoolinterface.cpp:83
+#: languagetool/languagetoolinterface.cpp:84
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "A&ztertu gramatika (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:97
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -47,7 +47,7 @@ msgstr ""
 "org/).\n"
 "Jarraitu nahi duzu?"
 
-#: languagetool/languagetoolinterface.cpp:98
+#: languagetool/languagetoolinterface.cpp:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"

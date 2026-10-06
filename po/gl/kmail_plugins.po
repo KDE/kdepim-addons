@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2025-01-19 11:12+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -85,13 +85,13 @@ msgstr "Rematado."
 msgid "Start…"
 msgstr "Iniciar…"
 
-#: antispamplugin/antispamplugininterface.cpp:24
+#: antispamplugin/antispamplugininterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "&Asistente contra correo lixo…"
 
-#: antivirusplugin/antivirusplugininterface.cpp:24
+#: antivirusplugin/antivirusplugininterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"

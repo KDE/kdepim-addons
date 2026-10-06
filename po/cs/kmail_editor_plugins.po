@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2026-08-17 11:40+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -25,18 +25,18 @@ msgctxt "@action"
 msgid "Open AI Chat"
 msgstr "Otevřít konverzaci s AI"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:25
+#: autocorrection/autocorrectionplugineditorinterface.cpp:26
 #, kde-format
 msgid "Autocorrect Text"
 msgstr "Automaticky opravit text"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:30
+#: autocorrection/autocorrectionplugineditorinterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "Automaticky opravit celý text"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:35
+#: autocorrection/autocorrectionplugineditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
@@ -122,7 +122,7 @@ msgctxt "@action"
 msgid "Insert Email…"
 msgstr "Vložit e-mail…"
 
-#: insertemail/selectmaildialog.cpp:28
+#: insertemail/selectmaildialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Email Address"
@@ -134,28 +134,28 @@ msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "Vyberte server pro zkracování URL:"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:63
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:64
 #, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "Vložit krátkou URL…"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:86
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:87
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
 msgstr "Není dostupné internetové připojení. URL nelze zkrátit."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:93
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:94
 #, kde-format
 msgid "String doesn't seem to be a URL"
 msgstr "Řetězec nevypadá jako URL"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:99
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:100
 #, kde-format
 msgid "An error occurred: \"%1\""
 msgstr "Vyskytla se chyba: \"%1\""
 
-#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:33
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:34
 #, kde-format
 msgid ""
 "Error reported by server:\n"
@@ -164,24 +164,24 @@ msgstr ""
 "Server ohlásil chybu:\n"
 "'%1'"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:23
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "Vložit speciální znak…"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "Vložit speciální znak"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:40
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:41
 #, kde-format
 msgid "Insert"
 msgstr "Vložit"
 
-#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:24
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
@@ -217,60 +217,60 @@ msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "Exportovat QuickText"
 
-#: quicktext/quicktextplugineditorinterface.cpp:42
+#: quicktext/quicktextplugineditorinterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Variables"
 msgstr "Proměnné"
 
-#: quicktext/quicktextplugineditorinterface.cpp:48
+#: quicktext/quicktextplugineditorinterface.cpp:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "Proměnné"
 
-#: quicktext/quicktexttreewidget.cpp:39
+#: quicktext/quicktexttreewidget.cpp:40
 #, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "Přidat ústřižek…"
 
-#: quicktext/quicktexttreewidget.cpp:41
+#: quicktext/quicktexttreewidget.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "Upravit ústřižek…"
 
-#: quicktext/quicktexttreewidget.cpp:43
+#: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "Odstranit ústřižek"
 
-#: quicktext/quicktexttreewidget.cpp:46
+#: quicktext/quicktexttreewidget.cpp:47
 #, kde-format
 msgctxt "@action"
 msgid "Add Group…"
 msgstr "Přidat skupinu..."
 
-#: quicktext/quicktexttreewidget.cpp:48
+#: quicktext/quicktexttreewidget.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "Přejmenovat skupinu…"
 
-#: quicktext/quicktexttreewidget.cpp:50
+#: quicktext/quicktexttreewidget.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "Odstranit skupinu"
 
-#: quicktext/quicktexttreewidget.cpp:87
+#: quicktext/quicktexttreewidget.cpp:88
 #, kde-format
 msgid "Text Snippets"
 msgstr "Textové úryvky"
 
-#: quicktext/quicktexttreewidget.cpp:144
+#: quicktext/quicktexttreewidget.cpp:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -280,7 +280,7 @@ msgstr ""
 "Opravdu chcete odstranit ústřižek \"%1\"?<nl/><warning>Není žádná možnost "
 "jak vrátit tento krok zpět.</warning>"
 
-#: quicktext/quicktexttreewidget.cpp:169
+#: quicktext/quicktexttreewidget.cpp:170
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -290,7 +290,7 @@ msgstr ""
 "Opravdu chcete odstranit skupinu \"%1\" spolu se všemi jejími ústřižky?<nl/"
 "><warning>Odstranění nelze vrátit zpět.</warning>"
 
-#: quicktext/quicktexttreewidget.cpp:179
+#: quicktext/quicktexttreewidget.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
@@ -312,7 +312,7 @@ msgstr "Uložit"
 msgid "General"
 msgstr "Obecné"
 
-#: sharetext/sharetextplugineditorinterface.cpp:35
+#: sharetext/sharetextplugineditorinterface.cpp:36
 #, kde-format
 msgid "Share Mail Text…"
 msgstr "Sdílet text e-mailu…"
@@ -322,7 +322,7 @@ msgstr "Sdílet text e-mailu…"
 msgid "Zoom: %1%"
 msgstr "Přiblížení: %1%"
 
-#: zoomtext/zoomtextplugineditorinterface.cpp:27
+#: zoomtext/zoomtextplugineditorinterface.cpp:28
 #, kde-format
 msgid "Zoom…"
 msgstr "Přiblížení…"

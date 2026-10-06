@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -86,13 +86,13 @@ msgstr "Concluído."
 msgid "Start…"
 msgstr "Iniciar…"
 
-#: antispamplugin/antispamplugininterface.cpp:24
+#: antispamplugin/antispamplugininterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Assistente &anti-spam…"
 
-#: antivirusplugin/antivirusplugininterface.cpp:24
+#: antivirusplugin/antivirusplugininterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"

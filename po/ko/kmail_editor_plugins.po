@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2026-10-04 23:08+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23,18 +23,18 @@ msgctxt "@action"
 msgid "Open AI Chat"
 msgstr "AI 채팅 열기"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:25
+#: autocorrection/autocorrectionplugineditorinterface.cpp:26
 #, kde-format
 msgid "Autocorrect Text"
 msgstr "텍스트 자동 고침"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:30
+#: autocorrection/autocorrectionplugineditorinterface.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Full Text"
 msgstr "전체 텍스트 자동 고침"
 
-#: autocorrection/autocorrectionplugineditorinterface.cpp:35
+#: autocorrection/autocorrectionplugineditorinterface.cpp:36
 #, kde-format
 msgctxt "@action"
 msgid "Autocorrect Selected Text"
@@ -120,7 +120,7 @@ msgctxt "@action"
 msgid "Insert Email…"
 msgstr "이메일 삽입…"
 
-#: insertemail/selectmaildialog.cpp:28
+#: insertemail/selectmaildialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Email Address"
@@ -132,28 +132,28 @@ msgctxt "@label:textbox"
 msgid "Select Short URL server:"
 msgstr "단축 URL 서버 선택:"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:63
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:64
 #, kde-format
 msgctxt "@action"
 msgid "Insert Short URL…"
 msgstr "단축 URL 삽입…"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:86
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:87
 #, kde-format
 msgid "No network connection detected, we cannot shorten URL."
 msgstr "네트워크에 연결되어 있지 않아서 단축 URL을 추가할 수 없습니다."
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:93
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:94
 #, kde-format
 msgid "String doesn't seem to be a URL"
 msgstr "문자열이 URL이 아닌 것 같습니다"
 
-#: insertshorturl/insertshorturlplugineditorinterface.cpp:99
+#: insertshorturl/insertshorturlplugineditorinterface.cpp:100
 #, kde-format
 msgid "An error occurred: \"%1\""
 msgstr "오류 발생: \"%1\""
 
-#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:33
+#: insertshorturl/shorturlengineplugin/shorturlengineinterface.cpp:34
 #, kde-format
 msgid ""
 "Error reported by server:\n"
@@ -162,24 +162,24 @@ msgstr ""
 "서버에서 오류를 반환함:\n"
 "'%1'"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:23
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:24
 #, kde-format
 msgctxt "@action"
 msgid "Insert Special Character…"
 msgstr "특수 문자 추가…"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:39
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Insert Special Character"
 msgstr "특수 문자 삽입"
 
-#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:40
+#: insertspecialcharacter/insertspecialcharacterplugineditorinterface.cpp:41
 #, kde-format
 msgid "Insert"
 msgstr "삽입"
 
-#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:24
+#: nonbreakingspace/nonbreakingspaceplugineditorinterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Insert Non Breaking Space"
@@ -215,60 +215,60 @@ msgctxt "@title:window"
 msgid "Export QuickText"
 msgstr "빠른 텍스트 내보내기"
 
-#: quicktext/quicktextplugineditorinterface.cpp:42
+#: quicktext/quicktextplugineditorinterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Variables"
 msgstr "변수"
 
-#: quicktext/quicktextplugineditorinterface.cpp:48
+#: quicktext/quicktextplugineditorinterface.cpp:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Variables"
 msgstr "변수"
 
-#: quicktext/quicktexttreewidget.cpp:39
+#: quicktext/quicktexttreewidget.cpp:40
 #, kde-format
 msgctxt "@action"
 msgid "Add Snippet…"
 msgstr "스니펫 추가…"
 
-#: quicktext/quicktexttreewidget.cpp:41
+#: quicktext/quicktexttreewidget.cpp:42
 #, kde-format
 msgctxt "@action"
 msgid "Edit Snippet…"
 msgstr "스니펫 편집…"
 
-#: quicktext/quicktexttreewidget.cpp:43
+#: quicktext/quicktexttreewidget.cpp:44
 #, kde-format
 msgctxt "@action"
 msgid "Remove Snippet"
 msgstr "스니펫 삭제"
 
-#: quicktext/quicktexttreewidget.cpp:46
+#: quicktext/quicktexttreewidget.cpp:47
 #, kde-format
 msgctxt "@action"
 msgid "Add Group…"
 msgstr "그룹 추가…"
 
-#: quicktext/quicktexttreewidget.cpp:48
+#: quicktext/quicktexttreewidget.cpp:49
 #, kde-format
 msgctxt "@action"
 msgid "Rename Group…"
 msgstr "그룹 이름 바꾸기…"
 
-#: quicktext/quicktexttreewidget.cpp:50
+#: quicktext/quicktexttreewidget.cpp:51
 #, kde-format
 msgctxt "@action"
 msgid "Remove Group"
 msgstr "그룹 삭제"
 
-#: quicktext/quicktexttreewidget.cpp:87
+#: quicktext/quicktexttreewidget.cpp:88
 #, kde-format
 msgid "Text Snippets"
 msgstr "텍스트 스니펫"
 
-#: quicktext/quicktexttreewidget.cpp:144
+#: quicktext/quicktexttreewidget.cpp:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -278,7 +278,7 @@ msgstr ""
 "스니펫 \"%1\"을(를) 삭제하시겠습니까?<nl/> <warning>이 작업은 실행 취소할 수 "
 "없습니다.</warning>"
 
-#: quicktext/quicktexttreewidget.cpp:169
+#: quicktext/quicktexttreewidget.cpp:170
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -288,7 +288,7 @@ msgstr ""
 "스니펫 그룹 \"%1\" 및 포함된 모든 스니펫을 삭제하시겠습니까?<nl/> <warning>"
 "이 작업은 실행 취소할 수 없습니다.</warning>"
 
-#: quicktext/quicktexttreewidget.cpp:179
+#: quicktext/quicktexttreewidget.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid "Do you really want to remove group \"%1\"?"
@@ -310,7 +310,7 @@ msgstr "저장"
 msgid "General"
 msgstr "일반"
 
-#: sharetext/sharetextplugineditorinterface.cpp:35
+#: sharetext/sharetextplugineditorinterface.cpp:36
 #, kde-format
 msgid "Share Mail Text…"
 msgstr "메일 텍스트 공유…"
@@ -320,7 +320,7 @@ msgstr "메일 텍스트 공유…"
 msgid "Zoom: %1%"
 msgstr "크기 조정: %1%"
 
-#: zoomtext/zoomtextplugineditorinterface.cpp:27
+#: zoomtext/zoomtextplugineditorinterface.cpp:28
 #, kde-format
 msgid "Zoom…"
 msgstr "크기 조정…"

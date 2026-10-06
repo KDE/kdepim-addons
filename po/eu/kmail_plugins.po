@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2025-09-20 03:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -84,13 +84,13 @@ msgstr "Amaituta."
 msgid "Start…"
 msgstr "Hasi..."
 
-#: antispamplugin/antispamplugininterface.cpp:24
+#: antispamplugin/antispamplugininterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Spam Wizard…"
 msgstr "Spamaren &aurkako morroia..."
 
-#: antivirusplugin/antivirusplugininterface.cpp:24
+#: antivirusplugin/antivirusplugininterface.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "&Anti-Virus Wizard…"

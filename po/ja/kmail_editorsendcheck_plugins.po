@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorsendcheck_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2016-06-20 21:04-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -58,17 +58,17 @@ msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr ""
 
-#: checkbeforesend/checkbeforesendinterface.cpp:37
+#: checkbeforesend/checkbeforesendinterface.cpp:38
 #, kde-format
 msgid "Do you want to send the email as HTML?"
 msgstr ""
 
-#: checkbeforesend/checkbeforesendinterface.cpp:38
+#: checkbeforesend/checkbeforesendinterface.cpp:39
 #, kde-format
 msgid "Send email as plain text"
 msgstr ""
 
-#: checkbeforesend/checkbeforesendinterface.cpp:39
+#: checkbeforesend/checkbeforesendinterface.cpp:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
@@ -94,7 +94,7 @@ msgid ""
 "the current identity?"
 msgstr ""
 
-#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:16
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
@@ -154,63 +154,63 @@ msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguredialog.cpp:16
+#: confirm-address/confirmaddressconfiguredialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:34
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:35
 #, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:39
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:40
 #, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
-#, kde-format
-msgid "A&dd…"
-msgstr ""
-
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:48
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
-msgid "Re&move"
+msgid "A&dd…"
 msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:49
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:68
 #, kde-format
-msgid "Mod&ify…"
+msgid "Re&move"
 msgstr ""
 
 #: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#, kde-format
+msgid "Mod&ify…"
+msgstr ""
+
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:51
 #, kde-format
 msgid "Enter new domain name:"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:52
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:53
 #, kde-format
 msgid "Do you want to remove this domain?"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:56
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:57
 #, kde-format
 msgid "Whitelist of Addresses"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:70
 #, kde-format
 msgid "Enter new email address:"
 msgstr ""
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:71
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:72
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgstr ""

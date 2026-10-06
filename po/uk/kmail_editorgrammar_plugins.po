@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorgrammar_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2024-08-01 20:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -30,12 +30,12 @@ msgstr "&Перевірити граматику (Grammalecte)"
 msgid "Grammalecte Plugin"
 msgstr "Додаток Grammalecte"
 
-#: languagetool/languagetoolinterface.cpp:83
+#: languagetool/languagetoolinterface.cpp:84
 #, kde-format
 msgid "&Check Grammar (LanguageTool)"
 msgstr "&Перевірити граматику (LanguageTool)"
 
-#: languagetool/languagetoolinterface.cpp:96
+#: languagetool/languagetoolinterface.cpp:97
 #, kde-format
 msgid ""
 "You do not use local instance.\n"
@@ -46,7 +46,7 @@ msgstr ""
 "Ваш текст буде надіслано на зовнішній сайт (https://languagetool.org/).\n"
 "Хочете виконати цю дію?"
 
-#: languagetool/languagetoolinterface.cpp:98
+#: languagetool/languagetoolinterface.cpp:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Grammar with LanguageTool"

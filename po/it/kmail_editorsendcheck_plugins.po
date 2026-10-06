@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-10-06 00:47+0000\n"
 "PO-Revision-Date: 2024-07-31 22:28+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -63,17 +63,17 @@ msgctxt "@label:textbox"
 msgid "Select the addressbook in which to store contacts:"
 msgstr "Seleziona la rubrica dove memorizzare i contatti:"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:37
+#: checkbeforesend/checkbeforesendinterface.cpp:38
 #, kde-format
 msgid "Do you want to send the email as HTML?"
 msgstr "Vuoi inviare questo messaggio in formato HTML?"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:38
+#: checkbeforesend/checkbeforesendinterface.cpp:39
 #, kde-format
 msgid "Send email as plain text"
 msgstr "Invia messaggio come testo semplice"
 
-#: checkbeforesend/checkbeforesendinterface.cpp:39
+#: checkbeforesend/checkbeforesendinterface.cpp:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Send As HTML"
@@ -101,7 +101,7 @@ msgstr ""
 "Vuoi inviare il messaggio di posta con un server SMTP diverso da quello "
 "definito nell'identità attuale?"
 
-#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:16
+#: checkbeforesend/configurewidget/checkbeforesendconfiguredialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Check Before Send Mail\" Plugin"
@@ -162,63 +162,63 @@ msgctxt "@label:textbox"
 msgid "Do you want to send some attachment?"
 msgstr "Vuoi inviare un qualche allegato?"
 
-#: confirm-address/confirmaddressconfiguredialog.cpp:16
+#: confirm-address/confirmaddressconfiguredialog.cpp:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "Configura l'estensione «Verifica dell'indirizzo di posta»"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:34
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:35
 #, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "Nomi di dominio accettati"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:39
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:40
 #, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "Nome di dominio rifiutati"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:47
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:66
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
 #, kde-format
 msgid "A&dd…"
 msgstr "A&ggiungi…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:49
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:68
 #, kde-format
 msgid "Re&move"
 msgstr "Ri&muovi"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:49
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:68
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Mod&ify…"
 msgstr "Mod&ifica…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:51
 #, kde-format
 msgid "Enter new domain name:"
 msgstr "Inserisci un nuovo nome di dominio:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:52
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:53
 #, kde-format
 msgid "Do you want to remove this domain?"
 msgstr "Vuoi rimuovere questo dominio?"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:56
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:57
 #, kde-format
 msgid "Whitelist of Addresses"
 msgstr "Lista bianca degli indirizzi"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:70
 #, kde-format
 msgid "Enter new email address:"
 msgstr "Inserisci un nuovo indirizzo di posta:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:71
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:72
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgstr "Vuoi rimuovere questo indirizzo di posta elettronica?"
