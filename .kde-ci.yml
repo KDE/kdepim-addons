@@ -44,11 +44,11 @@ Dependencies:
     'pim/kpkpass': '@same'
     'pim/kitinerary': '@same'
     'pim/kaddressbook': '@same'
-    'libraries/ktextaddons': '@latest-kf6'
+    'libraries/ktextaddons': '1.9'
 
  - 'on': ['Linux', 'FreeBSD']
    'require':
-    'plasma/plasma-activities': '@latest-kf6'
+    'plasma/plasma-activities': 'Plasma/6.6'
     'frameworks/kcmutils': 'Frameworks/6.24'
 
 Options:
