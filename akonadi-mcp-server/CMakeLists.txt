@@ -8,6 +8,8 @@ target_sources(
         main.cpp
         akonadimcpprotocolmanager.h
         akonadimcpprotocolmanager.cpp
+        contactsearchtool.h
+        contactsearchtool.cpp
 )
 target_link_libraries(akonadimcpprotocol KF6::TextAutoGenerateTextMcpProtocolCore)
 

@@ -21,3 +21,4 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
 }
 
 AkonadiMcpProtocolManager::~AkonadiMcpProtocolManager() = default;
+#include "moc_akonadimcpprotocolmanager.cpp"
