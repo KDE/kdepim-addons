@@ -90,6 +90,7 @@ include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 include(ECMQmlModule)
 set(KTEXTADDONS_MIN_VERSION "2.2.0")
+set(KTEXTADDONS_TEXTAUTOGENERATE_MCPPROTOCOL_VERSION "2.2.44")
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 if(EXISTS "${PROJECT_SOURCE_DIR}/.git/")
@@ -254,6 +255,22 @@ if(OPTION_ADD_AUTOGENERATETEXT)
     )
 endif()
 
+option(OPTION_ADD_MPCPROTOCOL "Add support for autogenerate mcp protocol" ON)
+
+if(OPTION_ADD_MPCPROTOCOL)
+    find_package(KF6TextAutoGenerateTextMcpProtocolCore ${KTEXTADDONS_TEXTAUTOGENERATE_MCPPROTOCOL_VERSION} CONFIG)
+    set_package_properties(
+        KF6TextAutoGenerateTextMcpProtocolCore
+        PROPERTIES
+            TYPE
+                OPTIONAL
+            PURPOSE
+                "Required for building AI mcp protocol"
+            DESCRIPTION
+                "Use AI mcp protocol"
+    )
+endif()
+
 find_package(KPim6Tnef ${KTNEF_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6MailTransport ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF6Contacts ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -408,6 +425,10 @@ add_subdirectory(kmailtransport)
 add_subdirectory(kldap)
 if(TARGET KPim6::ImportWizard)
     add_subdirectory(akonadi-import-wizard)
+endif()
+
+if(TARGET KF6::TextAutoGenerateTextMcpProtocolCore)
+    add_subdirectory(akonadi-mcp-server)
 endif()
 
 ecm_qt_install_logging_categories(
