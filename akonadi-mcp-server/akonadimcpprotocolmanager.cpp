@@ -5,6 +5,7 @@
 */
 
 #include "akonadimcpprotocolmanager.h"
+#include "contactsearchtool.h"
 #include <KLocalizedString>
 namespace
 {
@@ -23,6 +24,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     setInstructions(i18n("Manage information from Akonadi"));
     setToolsPageSize(toolsPageSize);
 
+    addTool(std::make_unique<ContactSearchTool>());
     // TODO
 }
 

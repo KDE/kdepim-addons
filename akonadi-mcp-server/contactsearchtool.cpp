@@ -6,13 +6,18 @@
 
 #include "contactsearchtool.h"
 
+using namespace Qt::Literals::StringLiterals;
 ContactSearchTool::ContactSearchTool() = default;
 ContactSearchTool::~ContactSearchTool() = default;
 
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactSearchTool::definition() const
 {
-    // TODO define it
-    return {};
+    return TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
+        u"contact_search"_s,
+        u"Search contacts in the Akonadi address books by name or email address"_s,
+        QMap<QString, QJsonObject>{
+            {u"query"_s, TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"string"_s, u"Name or email address to search for"_s)}},
+        {u"query"_s});
 }
 
 void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
