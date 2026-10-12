@@ -30,11 +30,6 @@ void AdblockFilter::setName(const QString &newName)
     mName = newName;
 }
 
-bool AdblockFilter::operator==(const AdblockFilter &other) const
-{
-    return mName == other.mName && mUrl == other.mUrl;
-}
-
 QDebug operator<<(QDebug d, const AdblockFilter &t)
 {
     d << " url " << t.url();

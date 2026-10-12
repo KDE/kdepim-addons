@@ -45,7 +45,7 @@ public:
     [[nodiscard]] static QString ruleTypeToString(ConfirmBeforeDeletingRule::RuleType r);
     [[nodiscard]] static ConfirmBeforeDeletingRule::RuleType stringToRuleType(const QString &str);
 
-    [[nodiscard]] bool operator==(const ConfirmBeforeDeletingRule &other) const;
+    [[nodiscard]] bool operator==(const ConfirmBeforeDeletingRule &other) const = default;
 
 private:
     KMAILCONFIRMBEFOREDELETING_NO_EXPORT void generateConfirmMessageInfo(const std::shared_ptr<KMime::Message> &msg, QString &checkFoundInfo) const;

@@ -77,11 +77,6 @@ ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(
     return Unknown;
 }
 
-bool ConfirmBeforeDeletingRule::operator==(const ConfirmBeforeDeletingRule &other) const
-{
-    return mPattern == other.mPattern && mRuleType == other.mRuleType;
-}
-
 QString ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::RuleType r)
 {
     QString tmp;

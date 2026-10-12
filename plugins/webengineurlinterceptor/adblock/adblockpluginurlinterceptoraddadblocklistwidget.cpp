@@ -54,11 +54,6 @@ bool AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo::isValid()
     return !name.trimmed().isEmpty() && !url.trimmed().isEmpty();
 }
 
-bool AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo::operator==(const AdBlockListInfo &other) const
-{
-    return name == other.name && url == other.url;
-}
-
 bool AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo::operator!=(const AdBlockListInfo &other) const
 {
     return !AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo::operator==(other);
