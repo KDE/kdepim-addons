@@ -5,7 +5,11 @@
 */
 
 #include "akonadimcpprotocolmanager.h"
-
+#include <KLocalizedString>
+namespace
+{
+constexpr int toolsPageSize = 2;
+}
 using namespace Qt::Literals::StringLiterals;
 AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     : TextAutoGenerateTextMcpProtocolCore::McpProtocolServerProtocolManager{
@@ -16,6 +20,8 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     serverInfo.setName(u"akonadi_mcp_protocol"_s);
     serverInfo.setVersion(u"1.0"_s);
     setServerInfo(serverInfo);
+    setInstructions(i18n("Manage information from Akonadi"));
+    setToolsPageSize(toolsPageSize);
 
     // TODO
 }

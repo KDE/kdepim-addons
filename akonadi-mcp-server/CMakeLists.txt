@@ -1,5 +1,6 @@
 # SPDX-FileCopyrightText: 2026 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
+add_definitions(-DTRANSLATION_DOMAIN=\"akonadimcpprotocol\")
 add_executable(akonadimcpprotocol)
 
 target_sources(

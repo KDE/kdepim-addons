@@ -6,6 +6,8 @@
 
 #include <QCoreApplication>
 
+#include "akonadimcpprotocolmanager.h"
+#include <KLocalizedString>
 #include <QCommandLineParser>
 
 using namespace Qt::Literals::StringLiterals;
@@ -16,9 +18,11 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     parser.addVersionOption();
     parser.addHelpOption();
-    const QCommandLineOption urlOption(u"url"_s, u"Url where server listens."_s, u"url"_s, u"http://127.0.0.1:8765/mcp"_s);
+    const QCommandLineOption urlOption(u"url"_s, i18nc("@info:shell", "Url where server listens."), u"url"_s, u"http://127.0.0.1:8765/mcp"_s);
     parser.addOption(urlOption);
     parser.process(app);
+
+    AkonadiMcpProtocolManager manager;
 
     return app.exec();
 }
