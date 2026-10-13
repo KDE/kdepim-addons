@@ -25,7 +25,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     setToolsPageSize(toolsPageSize);
 
     addTool(std::make_unique<ContactSearchTool>());
-    // TODO
+    // TODO add more
 }
 
 AkonadiMcpProtocolManager::~AkonadiMcpProtocolManager() = default;
