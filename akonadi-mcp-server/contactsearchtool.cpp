@@ -6,6 +6,8 @@
 
 #include "contactsearchtool.h"
 #include <KLocalizedString>
+#include <QJsonArray>
+#include <QJsonValue>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 
 using namespace Qt::Literals::StringLiterals;
@@ -32,6 +34,16 @@ void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
         call->finishWithText(i18n("Argument query must be a non-empty string"), true);
         return;
     }
+    const QJsonValue fields = call->arguments().value(u"fields"_s);
+    if (fields.isUndefined()) {
+        // ALL
+    } else if (fields.isArray()) {
+        // Extract QJsonArray
+    } else {
+        call->finishWithText(i18n("Argument fields must be an array"), true);
+        return;
+    }
+
     // TODO search in akonadi the user (asynchronous job: kill it on call->cancelled(), answer with call->finishWithText())
     call->finishWithText(i18n("Contact search is not implemented yet"), true);
 }
