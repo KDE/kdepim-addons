@@ -18,7 +18,10 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactSearchTool::definiti
         u"contact_search"_s,
         u"Search contacts in the Akonadi address books by name or email address"_s,
         QMap<QString, QJsonObject>{
-            {u"query"_s, TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"string"_s, u"Name or email address to search for"_s)}},
+            {u"query"_s, TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"string"_s, u"Name or email address to search for"_s)},
+            {u"fields"_s,
+             McpProtocolServerTool::schemaArrayProperty(McpProtocolServerTool::schemaEnumProperty({u"email"_s, u"phone"_s, u"location"_s, u"birthday"_s}, {}),
+                                                        u"Contact fields to return"_s)}},
         {u"query"_s});
 }
 
