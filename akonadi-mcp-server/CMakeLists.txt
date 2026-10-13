@@ -16,6 +16,7 @@ target_link_libraries(
     akonadimcpprotocol
     KF6::TextAutoGenerateTextMcpProtocolCore
     KF6::I18n
+    KPim6::AkonadiContactCore
 )
 
 install(
