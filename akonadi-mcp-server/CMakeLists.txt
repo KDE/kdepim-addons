@@ -17,6 +17,14 @@ target_sources(
         contactsearchtool/contactsearchtool.cpp
         contactsearchtool/contactsearchtooljob.h
         contactsearchtool/contactsearchtooljob.cpp
+        contactgroupexpandtool/contactgroupexpandtool.cpp
+        contactgroupexpandtool/contactgroupexpandtool.h
+        contactgroupexpandtool/contactgroupexpandtooljob.cpp
+        contactgroupexpandtool/contactgroupexpandtooljob.h
+        listaddressbooks/listaddressbookstool.h
+        listaddressbooks/listaddressbookstool.cpp
+        listaddressbooks/listaddressbookstooljob.h
+        listaddressbooks/listaddressbookstooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol

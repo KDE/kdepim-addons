@@ -5,7 +5,9 @@
 */
 
 #include "akonadimcpprotocolmanager.h"
+#include "contactgroupexpandtool/contactgroupexpandtool.h"
 #include "contactsearchtool/contactsearchtool.h"
+#include "listaddressbooks/listaddressbookstool.h"
 #include <KLocalizedString>
 #include <QUrl>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolSettings>
@@ -27,6 +29,8 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     setToolsPageSize(toolsPageSize);
 
     addTool(std::make_unique<ContactSearchTool>());
+    addTool(std::make_unique<ContactGroupExpandTool>());
+    addTool(std::make_unique<ListAddressBooksTool>());
     // TODO add more
 }
 
