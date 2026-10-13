@@ -8,6 +8,7 @@
 #include <Akonadi/ContactSearchJob>
 #include <KJob>
 #include <KLocalizedString>
+#include <QDateTime>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 
 using namespace Qt::Literals::StringLiterals;
@@ -22,6 +23,11 @@ ContactSearchToolJob::~ContactSearchToolJob() = default;
 void ContactSearchToolJob::setNameOrEmail(const QString &str)
 {
     mSearchString = str;
+}
+
+void ContactSearchToolJob::setFields(ContactFields fields)
+{
+    mFields = fields;
 }
 
 bool ContactSearchToolJob::canStart() const
@@ -77,11 +83,34 @@ void ContactSearchToolJob::slotResult(KJob *job)
         deleteLater();
         return;
     }
-    QStringList lines;
-    lines.reserve(contacts.count());
+    QStringList entries;
+    entries.reserve(contacts.count());
     for (const KContacts::Addressee &contact : contacts) {
-        lines.append(contact.formattedName() + u" <"_s + contact.emails().join(u", "_s) + u'>');
+        QStringList lines{contact.realName()};
+        if (mFields & ContactField::Email) {
+            if (const QStringList emails = contact.emails(); !emails.isEmpty()) {
+                lines.append(u"Email: "_s + emails.join(u", "_s));
+            }
+        }
+        if (mFields & ContactField::Phone) {
+            const KContacts::PhoneNumber::List phoneNumbers = contact.phoneNumbers();
+            for (const KContacts::PhoneNumber &phoneNumber : phoneNumbers) {
+                lines.append(u"Phone (%1): %2"_s.arg(phoneNumber.typeLabel(), phoneNumber.number()));
+            }
+        }
+        if (mFields & ContactField::Location) {
+            const KContacts::Address::List addresses = contact.addresses();
+            for (const KContacts::Address &address : addresses) {
+                lines.append(u"Location (%1): %2"_s.arg(address.typeLabel(), address.formatted(KContacts::AddressFormatStyle::SingleLineInternational)));
+            }
+        }
+        if (mFields & ContactField::Birthday) {
+            if (const QDateTime birthday = contact.birthday(); birthday.isValid()) {
+                lines.append(u"Birthday: "_s + birthday.date().toString(Qt::ISODate));
+            }
+        }
+        entries.append(lines.join(u"\n  "_s));
     }
-    mToolCall->finishWithText(lines.join(u'\n'));
+    mToolCall->finishWithText(entries.join(u'\n'));
     deleteLater();
 }

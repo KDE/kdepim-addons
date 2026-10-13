@@ -35,12 +35,27 @@ void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
         call->finishWithText(i18n("Argument query must be a non-empty string"), true);
         return;
     }
+    ContactSearchToolJob::ContactFields contactFields = ContactSearchToolJob::ContactField::All;
     const QJsonValue fields = call->arguments().value(u"fields"_s);
-    if (fields.isUndefined()) {
-        // ALL
-    } else if (fields.isArray()) {
-        // Extract QJsonArray
-    } else {
+    if (fields.isArray()) {
+        contactFields = ContactSearchToolJob::ContactField::None;
+        const QJsonArray fieldsArray = fields.toArray();
+        for (const QJsonValue &field : fieldsArray) {
+            const QString fieldName = field.toString();
+            if (fieldName == "email"_L1) {
+                contactFields |= ContactSearchToolJob::ContactField::Email;
+            } else if (fieldName == "phone"_L1) {
+                contactFields |= ContactSearchToolJob::ContactField::Phone;
+            } else if (fieldName == "location"_L1) {
+                contactFields |= ContactSearchToolJob::ContactField::Location;
+            } else if (fieldName == "birthday"_L1) {
+                contactFields |= ContactSearchToolJob::ContactField::Birthday;
+            } else {
+                call->finishWithText(i18n("Unknown contact field: %1", fieldName), true);
+                return;
+            }
+        }
+    } else if (!fields.isUndefined()) {
         call->finishWithText(i18n("Argument fields must be an array"), true);
         return;
     }
@@ -48,5 +63,6 @@ void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
     auto job = new ContactSearchToolJob(call);
     job->setMcpProtocolServerToolCall(call);
     job->setNameOrEmail(query);
+    job->setFields(contactFields);
     job->start();
 }
