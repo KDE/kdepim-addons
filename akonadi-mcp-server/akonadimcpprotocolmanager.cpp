@@ -7,6 +7,8 @@
 #include "akonadimcpprotocolmanager.h"
 #include "contactsearchtool/contactsearchtool.h"
 #include <KLocalizedString>
+#include <QUrl>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolSettings>
 namespace
 {
 constexpr int toolsPageSize = 2;
@@ -29,4 +31,12 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
 }
 
 AkonadiMcpProtocolManager::~AkonadiMcpProtocolManager() = default;
+
+void AkonadiMcpProtocolManager::start(const QString &url)
+{
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings settings;
+    settings.setServerUrl(QUrl(url));
+    setSettings(settings);
+    McpProtocolServerProtocolManager::start();
+}
 #include "moc_akonadimcpprotocolmanager.cpp"

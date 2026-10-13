@@ -22,7 +22,14 @@ int main(int argc, char **argv)
     parser.addOption(urlOption);
     parser.process(app);
 
+    QString url;
     AkonadiMcpProtocolManager manager;
+    if (parser.isSet(urlOption)) {
+        url = parser.value(urlOption);
+    } else {
+        url = u"http://127.0.0.1:8765/mcp"_s;
+    }
+    manager.start(url);
 
     return app.exec();
 }

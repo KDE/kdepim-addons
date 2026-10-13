@@ -14,4 +14,5 @@ class AkonadiMcpProtocolManager : public TextAutoGenerateTextMcpProtocolCore::Mc
 public:
     explicit AkonadiMcpProtocolManager(QObject *parent = nullptr);
     ~AkonadiMcpProtocolManager() override;
+    void start(const QString &url);
 };
