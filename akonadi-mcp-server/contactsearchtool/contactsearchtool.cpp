@@ -5,6 +5,7 @@
 */
 
 #include "contactsearchtool.h"
+#include "contactsearchtooljob.h"
 #include <KLocalizedString>
 #include <QJsonArray>
 #include <QJsonValue>
