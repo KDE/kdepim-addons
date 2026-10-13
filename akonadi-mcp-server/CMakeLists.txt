@@ -4,7 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"akonadimcpprotocol\")
 
 add_executable(akonadimcpprotocol)
 ecm_qt_declare_logging_category(akonadimcpprotocol HEADER akonadimcpprotocol_debug.h IDENTIFIER AKONADI_MCP_PROTOCOL_LOG
-    CATEGORY_NAME org.kde.akonadimcpprotocol DESCRIPTION "akonadi mcp protocol (addressbook)" EXPORT KDEPIMADDONS
+    CATEGORY_NAME org.kde.akonadimcpprotocol DESCRIPTION "akonadi mcp protocol" EXPORT KDEPIMADDONS
 )
 
 target_sources(
@@ -29,12 +29,30 @@ target_sources(
         upcomingbirthdaystool/upcomingbirthdaystool.cpp
         upcomingbirthdaystool/upcomingbirthdaystooljob.h
         upcomingbirthdaystool/upcomingbirthdaystooljob.cpp
+        calendarcommon/calendartoolutils.h
+        calendarcommon/calendartoolutils.cpp
+        calendarcommon/calendartooljobbase.h
+        calendarcommon/calendartooljobbase.cpp
+        calendareventstool/calendareventstool.h
+        calendareventstool/calendareventstool.cpp
+        calendareventstool/calendareventstooljob.h
+        calendareventstool/calendareventstooljob.cpp
+        freebusytool/freebusytool.h
+        freebusytool/freebusytool.cpp
+        freebusytool/freebusytooljob.h
+        freebusytool/freebusytooljob.cpp
+        todolisttool/todolisttool.h
+        todolisttool/todolisttool.cpp
+        todolisttool/todolisttooljob.h
+        todolisttool/todolisttooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
     KF6::TextAutoGenerateTextMcpProtocolCore
     KF6::I18n
     KPim6::AkonadiContactCore
+    KPim6::AkonadiCalendar
+    KF6::CalendarCore
 )
 
 install(

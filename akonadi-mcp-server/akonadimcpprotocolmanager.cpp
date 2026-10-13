@@ -5,9 +5,12 @@
 */
 
 #include "akonadimcpprotocolmanager.h"
+#include "calendareventstool/calendareventstool.h"
 #include "contactgroupexpandtool/contactgroupexpandtool.h"
 #include "contactsearchtool/contactsearchtool.h"
+#include "freebusytool/freebusytool.h"
 #include "listaddressbooks/listaddressbookstool.h"
+#include "todolisttool/todolisttool.h"
 #include "upcomingbirthdaystool/upcomingbirthdaystool.h"
 #include <KLocalizedString>
 #include <QUrl>
@@ -33,6 +36,9 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<ContactGroupExpandTool>());
     addTool(std::make_unique<ListAddressBooksTool>());
     addTool(std::make_unique<UpcomingBirthdaysTool>());
+    addTool(std::make_unique<CalendarEventsTool>());
+    addTool(std::make_unique<FreeBusyTool>());
+    addTool(std::make_unique<TodoListTool>());
     // TODO add more
 }
 
