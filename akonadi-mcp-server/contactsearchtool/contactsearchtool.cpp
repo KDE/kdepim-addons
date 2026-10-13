@@ -45,6 +45,7 @@ void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
         return;
     }
 
-    // TODO search in akonadi the user (asynchronous job: kill it on call->cancelled(), answer with call->finishWithText())
-    call->finishWithText(i18n("Contact search is not implemented yet"), true);
+    auto job = new ContactSearchToolJob(call);
+    job->setMcpProtocolServerToolCall(call);
+    job->setNameOrEmail(query);
 }

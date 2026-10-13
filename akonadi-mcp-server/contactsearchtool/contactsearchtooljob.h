@@ -6,7 +6,11 @@
 #pragma once
 
 #include <QObject>
-
+class KJob;
+namespace TextAutoGenerateTextMcpProtocolCore
+{
+class McpProtocolServerToolCall;
+}
 class ContactSearchToolJob : public QObject
 {
     Q_OBJECT
@@ -20,9 +24,10 @@ public:
 
     void start();
 
-Q_SIGNALS:
-    void error(const QString &str);
+    void setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call);
 
 private:
+    void slotResult(KJob *job);
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *mToolCall = nullptr;
     QString mSearchString;
 };

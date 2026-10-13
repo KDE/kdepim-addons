@@ -5,7 +5,9 @@
 */
 #include "contactsearchtooljob.h"
 #include "akonadimcpprotocol_debug.h"
+#include <Akonadi/ContactSearchJob>
 #include <KLocalizedString>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 
 ContactSearchToolJob::ContactSearchToolJob(QObject *parent)
     : QObject{parent}
@@ -21,18 +23,32 @@ void ContactSearchToolJob::setNameOrEmail(const QString &str)
 
 bool ContactSearchToolJob::canStart() const
 {
-    return !mSearchString.isEmpty();
+    return !mSearchString.isEmpty() && mToolCall;
 }
 
 void ContactSearchToolJob::start()
 {
     if (!canStart()) {
         qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "ContactSearchToolJob can't start";
-        Q_EMIT error(i18n("Search string must be a non-empty string"));
+        if (mToolCall) {
+            mToolCall->finishWithText(i18n("Search string must be a non-empty string"), true);
+        }
         deleteLater();
         return;
     }
-    // TODO
 
+    auto job = new Akonadi::ContactSearchJob(this);
+    job->setQuery(Akonadi::ContactSearchJob::NameOrEmail, mSearchString, Akonadi::ContactSearchJob::ContainsMatch);
+    connect(job, &KJob::result, this, &ContactSearchToolJob::slotResult);
+}
+
+void ContactSearchToolJob::setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+{
+    mToolCall = call;
+}
+
+void ContactSearchToolJob::slotResult(KJob *job)
+{
+    // TODO
     deleteLater();
 }
