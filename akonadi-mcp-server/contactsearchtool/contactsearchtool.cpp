@@ -10,6 +10,7 @@
 #include <QJsonArray>
 #include <QJsonValue>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 ContactSearchTool::ContactSearchTool() = default;
@@ -17,7 +18,7 @@ ContactSearchTool::~ContactSearchTool() = default;
 
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactSearchTool::definition() const
 {
-    return TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"contact_search"_s,
         u"Search contacts in the Akonadi address books by name or email address"_s,
         QMap<QString, QJsonObject>{
@@ -26,6 +27,12 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactSearchTool::definiti
              McpProtocolServerTool::schemaArrayProperty(McpProtocolServerTool::schemaEnumProperty({u"email"_s, u"phone"_s, u"location"_s, u"birthday"_s}, {}),
                                                         u"Contact fields to return"_s)}},
         {u"query"_s});
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
+    annotation.setReadOnlyHint(true);
+    annotation.setOpenWorldHint(false);
+    annotation.setTitle(i18n("Search Contacts"));
+    tool.setAnnotations(annotation);
+    return tool;
 }
 
 void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
