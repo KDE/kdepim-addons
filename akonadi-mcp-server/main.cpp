@@ -15,6 +15,8 @@ using namespace Qt::Literals::StringLiterals;
 int main(int argc, char **argv)
 {
     const QCoreApplication app(argc, argv);
+    // KJob holds a QEventLoopLocker: don't quit when last Akonadi job finishes
+    QCoreApplication::setQuitLockEnabled(false);
     QCommandLineParser parser;
     parser.addVersionOption();
     parser.addHelpOption();
