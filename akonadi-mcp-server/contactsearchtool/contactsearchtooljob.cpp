@@ -86,7 +86,14 @@ void ContactSearchToolJob::slotResult(KJob *job)
     QStringList entries;
     entries.reserve(contacts.count());
     for (const KContacts::Addressee &contact : contacts) {
-        QStringList lines{contact.realName()};
+        QString name = contact.realName();
+        if (name.isEmpty()) {
+            name = contact.organization();
+        }
+        if (name.isEmpty()) {
+            name = contact.preferredEmail();
+        }
+        QStringList lines{name};
         if (mFields & ContactField::Email) {
             if (const QStringList emails = contact.emails(); !emails.isEmpty()) {
                 lines.append(u"Email: "_s + emails.join(u", "_s));
