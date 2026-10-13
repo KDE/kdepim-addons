@@ -5,6 +5,8 @@
 */
 
 #include "contactsearchtool.h"
+#include <KLocalizedString>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 
 using namespace Qt::Literals::StringLiterals;
 ContactSearchTool::ContactSearchTool() = default;
@@ -22,5 +24,11 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactSearchTool::definiti
 
 void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
-    // TODO search in akonadi the user
+    const QString query = call->arguments().value(u"query"_s).toString().trimmed();
+    if (query.isEmpty()) {
+        call->finishWithText(i18n("Argument query must be a non-empty string"), true);
+        return;
+    }
+    // TODO search in akonadi the user (asynchronous job: kill it on call->cancelled(), answer with call->finishWithText())
+    call->finishWithText(i18n("Contact search is not implemented yet"), true);
 }

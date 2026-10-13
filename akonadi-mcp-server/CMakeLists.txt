@@ -12,7 +12,11 @@ target_sources(
         contactsearchtool.h
         contactsearchtool.cpp
 )
-target_link_libraries(akonadimcpprotocol KF6::TextAutoGenerateTextMcpProtocolCore)
+target_link_libraries(
+    akonadimcpprotocol
+    KF6::TextAutoGenerateTextMcpProtocolCore
+    KF6::I18n
+)
 
 install(
     TARGETS
