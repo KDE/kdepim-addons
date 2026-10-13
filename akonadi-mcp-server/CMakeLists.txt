@@ -25,6 +25,10 @@ target_sources(
         listaddressbooks/listaddressbookstool.cpp
         listaddressbooks/listaddressbookstooljob.h
         listaddressbooks/listaddressbookstooljob.cpp
+        upcomingbirthdaystool/upcomingbirthdaystool.h
+        upcomingbirthdaystool/upcomingbirthdaystool.cpp
+        upcomingbirthdaystool/upcomingbirthdaystooljob.h
+        upcomingbirthdaystool/upcomingbirthdaystooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol

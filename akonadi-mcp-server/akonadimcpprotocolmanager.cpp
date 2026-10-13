@@ -8,6 +8,7 @@
 #include "contactgroupexpandtool/contactgroupexpandtool.h"
 #include "contactsearchtool/contactsearchtool.h"
 #include "listaddressbooks/listaddressbookstool.h"
+#include "upcomingbirthdaystool/upcomingbirthdaystool.h"
 #include <KLocalizedString>
 #include <QUrl>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolSettings>
@@ -31,6 +32,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<ContactSearchTool>());
     addTool(std::make_unique<ContactGroupExpandTool>());
     addTool(std::make_unique<ListAddressBooksTool>());
+    addTool(std::make_unique<UpcomingBirthdaysTool>());
     // TODO add more
 }
 
