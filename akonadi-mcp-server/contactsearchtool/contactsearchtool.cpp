@@ -48,4 +48,5 @@ void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
     auto job = new ContactSearchToolJob(call);
     job->setMcpProtocolServerToolCall(call);
     job->setNameOrEmail(query);
+    job->start();
 }

@@ -6,11 +6,18 @@
 #pragma once
 
 #include <QObject>
+#include <QPointer>
+
 class KJob;
+namespace Akonadi
+{
+class ContactSearchJob;
+}
 namespace TextAutoGenerateTextMcpProtocolCore
 {
 class McpProtocolServerToolCall;
 }
+
 class ContactSearchToolJob : public QObject
 {
     Q_OBJECT
@@ -28,6 +35,8 @@ public:
 
 private:
     void slotResult(KJob *job);
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *mToolCall = nullptr;
+    void slotCancelled();
+    QPointer<TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall> mToolCall;
+    QPointer<Akonadi::ContactSearchJob> mSearchJob;
     QString mSearchString;
 };
