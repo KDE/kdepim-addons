@@ -5,7 +5,7 @@
 */
 
 #include "akonadimcpprotocolmanager.h"
-#include "contactsearchtool.h"
+#include "contactsearchtool/contactsearchtool.h"
 #include <KLocalizedString>
 namespace
 {
