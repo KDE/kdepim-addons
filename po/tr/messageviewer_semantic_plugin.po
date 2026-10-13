@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-31 00:44+0000\n"
-"PO-Revision-Date: 2026-10-07 19:19+0300\n"
+"PO-Revision-Date: 2026-10-12 10:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -35,7 +35,7 @@ msgstr "Rezervasyonu takvimiminize ekleyin."
 #: itineraryurlhandler.cpp:132
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
-msgstr "Rezervasyonu KDE Yol Kılavuzu’na içe aktarın."
+msgstr "Rezervasyonu KDE Itinerary’ye içe aktarın."
 
 #: itineraryurlhandler.cpp:135
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "Takvime Ekle"
 
 #: templates/itinerary.html:72
 msgid "Add to KDE Itinerary"
-msgstr "KDE Yol Kılavuzu’na Ekle"
+msgstr "KDE Itinerary’ye Ekle"
 
 #: templates/itinerary.html:78
 msgid "Send to Device…"

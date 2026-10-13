@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2017.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-06 00:47+0000\n"
-"PO-Revision-Date: 2025-12-23 11:49+0300\n"
+"PO-Revision-Date: 2026-10-12 10:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: akonadidatabasetools/akonadidatabasetoolsdialog.cpp:29
 #, kde-format
@@ -146,7 +146,7 @@ msgstr "&Klasörlerin Boyutlarını Göster…"
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginopenfolderjob.cpp:37
 #, kde-format
 msgid "Unable to start KMail application."
-msgstr "K Posta uygulaması başlatılamıyor."
+msgstr "KMail uygulaması başlatılamıyor."
 
 #: checkfoldersizeaccount/checkfoldersizeaccountpluginwidget.cpp:57
 #, kde-format
@@ -175,12 +175,12 @@ msgstr "Antivirüs Sihirbazı"
 #: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Spam Wizard"
-msgstr "K Posta İstenmeyen Posta Sihirbazı’na Hoş Geldiniz"
+msgstr "KMail İstenmeyen Posta Sihirbazı’na Hoş Geldiniz"
 
 #: common/antispamwizard.cpp:91
 #, kde-format
 msgid "Welcome to the KMail Anti-Virus Wizard"
-msgstr "K Posta Antivirüs Sihirbazı’na Hoş Geldiniz"
+msgstr "KMail Antivirüs Sihirbazı’na Hoş Geldiniz"
 
 #: common/antispamwizard.cpp:96
 #, kde-format
@@ -327,7 +327,7 @@ msgid ""
 "and setup KMail to work with them."
 msgstr ""
 "Sihirbaz, istenmeyen posta tespiti için araçları arayacak\n"
-"ve K Posta’nın onlarla çalışabilmesi için yapılandıracak."
+"ve KMail’in onlarla çalışabilmesi için yapılandıracak."
 
 #: common/antispamwizard.cpp:983
 #, kde-format
@@ -348,8 +348,8 @@ msgstr ""
 "bilgisayarınızda bu araçları tespit edebilir ve bu araçları kullanıp virüslü "
 "iletileri sınıflandırmak ve ayırmak için filtre kuralları oluşturabilir. "
 "Sihirbaz mevcut filtre kurallarını önemsemeyecektir: her zaman yeni kural "
-"ekler.</p><p><b>Uyarı:</b> K Posta virüslü iletilerin taranması sırasında "
-"donuyor gibi görünürse, K Posta’nın yanıt vermesi ile ilgili sorunlar "
+"ekler.</p><p><b>Uyarı:</b> KMail virüslü iletilerin taranması sırasında "
+"donuyor gibi görünürse, KMail’in yanıt vermesi ile ilgili sorunlar "
 "yaşayabilirsiniz. Bunun nedeni, antivirüs araçlarının işlemlerinin "
 "genellikle zaman gerektirmesindendir. Önceki davranışına dönmek için "
 "sihirbaz tarafından oluşturulmuş süzgeçleri silebilirsiniz.</p>"

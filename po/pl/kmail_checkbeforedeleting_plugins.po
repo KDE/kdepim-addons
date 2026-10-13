@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-10-13 00:46+0000\n"
 "PO-Revision-Date: 2024-08-03 11:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -61,13 +61,13 @@ msgid "Bcc"
 msgstr "UDW"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:80
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:175
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:170
 #, kde-format
 msgid "Unread"
 msgstr "Nieprzeczytana"
 
 #: confirmbeforedeleting/confirmbeforedeletingcreaterulewidget.cpp:81
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:184
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:179
 #, kde-format
 msgid "Important"
 msgstr "Ważna"
@@ -108,12 +108,12 @@ msgctxt "@option:check"
 msgid "Apply to All"
 msgstr "Zastosuj do wszystkich"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:204
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:199
 #, kde-format
 msgid "The message with subject '%2' contains '%1'"
 msgstr "Wiadomość o temacie '%2' zawiera '%1'"
 
-#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:215
+#: confirmbeforedeleting/confirmbeforedeletingrule.cpp:210
 #, kde-format
 msgid "The message with subject '%1' is %2"
 msgstr "Wiadomość o temacie '%1' jest %2"
