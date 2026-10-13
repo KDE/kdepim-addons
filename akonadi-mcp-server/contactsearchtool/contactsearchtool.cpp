@@ -55,7 +55,7 @@ void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
                 return;
             }
         }
-    } else if (!fields.isUndefined()) {
+    } else if (!fields.isUndefined() && !fields.isNull()) {
         call->finishWithText(i18n("Argument fields must be an array"), true);
         return;
     }
