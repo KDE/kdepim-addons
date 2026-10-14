@@ -27,7 +27,7 @@ MailAppImportData::~MailAppImportData()
 
 bool MailAppImportData::foundMailer() const
 {
-#ifdef Q_OS_MAC
+#ifdef Q_OS_MACOS
     // TODO find a method to search it. Perhaps look at binary.
     QDir directory(mPath);
     if (directory.exists()) {
