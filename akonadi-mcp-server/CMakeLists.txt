@@ -2,11 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"akonadimcpprotocol\")
 
-add_executable(
-    akonadimcpprotocol
-    mailsearch/searchmailtooljob.h
-    mailsearch/searchmailtooljob.cpp
-)
+add_executable(akonadimcpprotocol)
 ecm_qt_declare_logging_category(akonadimcpprotocol HEADER akonadimcpprotocol_debug.h IDENTIFIER AKONADI_MCP_PROTOCOL_LOG
     CATEGORY_NAME org.kde.akonadimcpprotocol DESCRIPTION "akonadi mcp protocol" EXPORT KDEPIMADDONS
 )
@@ -59,6 +55,8 @@ target_sources(
         createcontacttool/createcontacttooljob.cpp
         mailsearch/searchmailtool.h
         mailsearch/searchmailtool.cpp
+        mailsearch/searchmailtooljob.h
+        mailsearch/searchmailtooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
@@ -67,6 +65,8 @@ target_link_libraries(
     KPim6::AkonadiContactCore
     KPim6::AkonadiCalendar
     KF6::CalendarCore
+    KPim6::AkonadiMime
+    KF6::Mime
 )
 
 install(
