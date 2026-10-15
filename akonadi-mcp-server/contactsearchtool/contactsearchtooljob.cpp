@@ -4,17 +4,15 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "contactsearchtooljob.h"
-#include "akonadimcpprotocol_debug.h"
 #include <Akonadi/ContactSearchJob>
 #include <KJob>
 #include <KLocalizedString>
 #include <QDateTime>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 
 using namespace Qt::Literals::StringLiterals;
 
 ContactSearchToolJob::ContactSearchToolJob(QObject *parent)
-    : QObject{parent}
+    : ToolJobBase{parent}
 {
 }
 
@@ -32,55 +30,30 @@ void ContactSearchToolJob::setFields(ContactFields fields)
 
 bool ContactSearchToolJob::canStart() const
 {
-    return !mSearchString.isEmpty() && mToolCall;
+    return ToolJobBase::canStart() && !mSearchString.isEmpty();
 }
 
-void ContactSearchToolJob::start()
+QString ContactSearchToolJob::invalidArgumentsMessage() const
 {
-    if (!canStart()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "ContactSearchToolJob can't start";
-        if (mToolCall) {
-            mToolCall->finishWithText(i18n("Search string must be a non-empty string"), true);
-        }
-        deleteLater();
-        return;
-    }
-
-    mSearchJob = new Akonadi::ContactSearchJob(this);
-    mSearchJob->setQuery(Akonadi::ContactSearchJob::NameOrEmail, mSearchString, Akonadi::ContactSearchJob::ContainsMatch);
-    connect(mSearchJob, &KJob::result, this, &ContactSearchToolJob::slotResult);
-    connect(mToolCall, &TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall::cancelled, this, &ContactSearchToolJob::slotCancelled);
+    return i18n("Search string must be a non-empty string");
 }
 
-void ContactSearchToolJob::slotCancelled()
+void ContactSearchToolJob::startJob()
 {
-    if (mSearchJob) {
-        mSearchJob->kill();
-    }
-    deleteLater();
-}
-
-void ContactSearchToolJob::setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
-{
-    mToolCall = call;
+    auto searchJob = new Akonadi::ContactSearchJob(this);
+    searchJob->setQuery(Akonadi::ContactSearchJob::NameOrEmail, mSearchString, Akonadi::ContactSearchJob::ContainsMatch);
+    connect(searchJob, &KJob::result, this, &ContactSearchToolJob::slotResult);
+    setCurrentJob(searchJob);
 }
 
 void ContactSearchToolJob::slotResult(KJob *job)
 {
-    if (!mToolCall) {
-        deleteLater();
-        return;
-    }
-    if (job->error()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "Contact search failed:" << job->errorString();
-        mToolCall->finishWithText(i18n("Contact search failed: %1", job->errorString()), true);
-        deleteLater();
+    if (!checkJobResult(job, ki18n("Contact search failed: %1"))) {
         return;
     }
     const KContacts::Addressee::List contacts = qobject_cast<Akonadi::ContactSearchJob *>(job)->contacts();
     if (contacts.isEmpty()) {
-        mToolCall->finishWithText(i18n("No contact found for \"%1\"", mSearchString));
-        deleteLater();
+        finish(i18n("No contact found for \"%1\"", mSearchString));
         return;
     }
     QStringList entries;
@@ -118,8 +91,7 @@ void ContactSearchToolJob::slotResult(KJob *job)
         }
         entries.append(lines.join(u"\n  "_s));
     }
-    mToolCall->finishWithText(entries.join(u'\n'));
-    deleteLater();
+    finish(entries.join(u'\n'));
 }
 
 #include "moc_contactsearchtooljob.cpp"

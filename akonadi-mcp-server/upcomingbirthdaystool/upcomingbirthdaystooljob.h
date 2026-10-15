@@ -5,20 +5,9 @@
 */
 #pragma once
 
-#include <QObject>
-#include <QPointer>
+#include "common/tooljobbase.h"
 
-class KJob;
-namespace Akonadi
-{
-class RecursiveItemFetchJob;
-}
-namespace TextAutoGenerateTextMcpProtocolCore
-{
-class McpProtocolServerToolCall;
-}
-
-class UpcomingBirthdaysToolJob : public QObject
+class UpcomingBirthdaysToolJob : public ToolJobBase
 {
     Q_OBJECT
 public:
@@ -27,16 +16,13 @@ public:
 
     void setDays(int days);
 
-    [[nodiscard]] bool canStart() const;
+    [[nodiscard]] bool canStart() const override;
 
-    void start();
-
-    void setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call);
+protected:
+    void startJob() override;
+    [[nodiscard]] QString invalidArgumentsMessage() const override;
 
 private:
     void slotResult(KJob *job);
-    void slotCancelled();
-    QPointer<TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall> mToolCall;
-    QPointer<Akonadi::RecursiveItemFetchJob> mFetchJob;
     int mDays = 30;
 };

@@ -5,35 +5,18 @@
 */
 #pragma once
 
-#include <QObject>
-#include <QPointer>
+#include "common/tooljobbase.h"
 
-class KJob;
-namespace Akonadi
-{
-class CollectionFetchJob;
-}
-namespace TextAutoGenerateTextMcpProtocolCore
-{
-class McpProtocolServerToolCall;
-}
-
-class ListAddressBooksToolJob : public QObject
+class ListAddressBooksToolJob : public ToolJobBase
 {
     Q_OBJECT
 public:
     explicit ListAddressBooksToolJob(QObject *parent = nullptr);
     ~ListAddressBooksToolJob() override;
 
-    [[nodiscard]] bool canStart() const;
-
-    void start();
-
-    void setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call);
+protected:
+    void startJob() override;
 
 private:
     void slotResult(KJob *job);
-    void slotCancelled();
-    QPointer<TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall> mToolCall;
-    QPointer<Akonadi::CollectionFetchJob> mFetchJob;
 };

@@ -4,12 +4,10 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "searchmailtooljob.h"
-#include "akonadimcpprotocol_debug.h"
 #include <KLocalizedString>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 
 SearchMailToolJob::SearchMailToolJob(QObject *parent)
-    : QObject{parent}
+    : ToolJobBase{parent}
 {
 }
 
@@ -21,22 +19,13 @@ bool SearchMailToolJob::canStart() const
     return false;
 }
 
-void SearchMailToolJob::setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+QString SearchMailToolJob::invalidArgumentsMessage() const
 {
-    mToolCall = call;
+    return i18n("Search string must be a non-empty string");
 }
 
-void SearchMailToolJob::start()
+void SearchMailToolJob::startJob()
 {
-    if (!canStart()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "ContactSearchToolJob can't start";
-        if (mToolCall) {
-            mToolCall->finishWithText(i18n("Search string must be a non-empty string"), true);
-        }
-        deleteLater();
-        return;
-    }
-
     // TODO
     deleteLater();
 }

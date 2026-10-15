@@ -5,23 +5,11 @@
 */
 #pragma once
 
+#include "common/tooljobbase.h"
 #include <KContacts/ContactGroup>
-#include <QObject>
-#include <QPointer>
 #include <QStringList>
 
-class KJob;
-namespace Akonadi
-{
-class ContactGroupSearchJob;
-class ContactGroupExpandJob;
-}
-namespace TextAutoGenerateTextMcpProtocolCore
-{
-class McpProtocolServerToolCall;
-}
-
-class ContactGroupExpandToolJob : public QObject
+class ContactGroupExpandToolJob : public ToolJobBase
 {
     Q_OBJECT
 public:
@@ -30,21 +18,16 @@ public:
 
     void setGroupName(const QString &str);
 
-    [[nodiscard]] bool canStart() const;
+    [[nodiscard]] bool canStart() const override;
 
-    void start();
-
-    void setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call);
+protected:
+    void startJob() override;
+    [[nodiscard]] QString invalidArgumentsMessage() const override;
 
 private:
     void slotResult(KJob *job);
     void slotExpandResult(KJob *job);
-    void slotCancelled();
     void expandNextGroup();
-    void finish(const QString &text, bool isError = false);
-    QPointer<TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall> mToolCall;
-    QPointer<Akonadi::ContactGroupSearchJob> mSearchJob;
-    QPointer<Akonadi::ContactGroupExpandJob> mExpandJob;
     KContacts::ContactGroup::List mContactGroups;
     QStringList mEntries;
     QString mSearchString;

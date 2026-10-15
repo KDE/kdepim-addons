@@ -5,20 +5,9 @@
 */
 #pragma once
 
-#include <QObject>
-#include <QPointer>
+#include "common/tooljobbase.h"
 
-class KJob;
-namespace Akonadi
-{
-class ContactSearchJob;
-}
-namespace TextAutoGenerateTextMcpProtocolCore
-{
-class McpProtocolServerToolCall;
-}
-
-class ContactSearchToolJob : public QObject
+class ContactSearchToolJob : public ToolJobBase
 {
     Q_OBJECT
 public:
@@ -40,17 +29,14 @@ public:
 
     void setFields(ContactFields fields);
 
-    [[nodiscard]] bool canStart() const;
+    [[nodiscard]] bool canStart() const override;
 
-    void start();
-
-    void setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call);
+protected:
+    void startJob() override;
+    [[nodiscard]] QString invalidArgumentsMessage() const override;
 
 private:
     void slotResult(KJob *job);
-    void slotCancelled();
-    QPointer<TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall> mToolCall;
-    QPointer<Akonadi::ContactSearchJob> mSearchJob;
     QString mSearchString;
     ContactFields mFields = ContactField::All;
 };

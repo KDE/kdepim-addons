@@ -9,12 +9,11 @@
 #include <Akonadi/ContactGroupSearchJob>
 #include <KJob>
 #include <KLocalizedString>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 
 using namespace Qt::Literals::StringLiterals;
 
 ContactGroupExpandToolJob::ContactGroupExpandToolJob(QObject *parent)
-    : QObject{parent}
+    : ToolJobBase{parent}
 {
 }
 
@@ -27,59 +26,25 @@ void ContactGroupExpandToolJob::setGroupName(const QString &str)
 
 bool ContactGroupExpandToolJob::canStart() const
 {
-    return !mSearchString.isEmpty() && mToolCall;
+    return ToolJobBase::canStart() && !mSearchString.isEmpty();
 }
 
-void ContactGroupExpandToolJob::start()
+QString ContactGroupExpandToolJob::invalidArgumentsMessage() const
 {
-    if (!canStart()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "ContactGroupExpandToolJob can't start";
-        if (mToolCall) {
-            mToolCall->finishWithText(i18n("Search string must be a non-empty string"), true);
-        }
-        deleteLater();
-        return;
-    }
-
-    mSearchJob = new Akonadi::ContactGroupSearchJob(this);
-    mSearchJob->setQuery(Akonadi::ContactGroupSearchJob::Name, mSearchString, Akonadi::ContactGroupSearchJob::ContainsMatch);
-    connect(mSearchJob, &KJob::result, this, &ContactGroupExpandToolJob::slotResult);
-    connect(mToolCall, &TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall::cancelled, this, &ContactGroupExpandToolJob::slotCancelled);
+    return i18n("Search string must be a non-empty string");
 }
 
-void ContactGroupExpandToolJob::slotCancelled()
+void ContactGroupExpandToolJob::startJob()
 {
-    if (mSearchJob) {
-        mSearchJob->kill();
-    }
-    if (mExpandJob) {
-        mExpandJob->kill();
-    }
-    deleteLater();
-}
-
-void ContactGroupExpandToolJob::setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
-{
-    mToolCall = call;
-}
-
-void ContactGroupExpandToolJob::finish(const QString &text, bool isError)
-{
-    if (mToolCall) {
-        mToolCall->finishWithText(text, isError);
-    }
-    deleteLater();
+    auto searchJob = new Akonadi::ContactGroupSearchJob(this);
+    searchJob->setQuery(Akonadi::ContactGroupSearchJob::Name, mSearchString, Akonadi::ContactGroupSearchJob::ContainsMatch);
+    connect(searchJob, &KJob::result, this, &ContactGroupExpandToolJob::slotResult);
+    setCurrentJob(searchJob);
 }
 
 void ContactGroupExpandToolJob::slotResult(KJob *job)
 {
-    if (!mToolCall) {
-        deleteLater();
-        return;
-    }
-    if (job->error()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "Contact group search failed:" << job->errorString();
-        finish(i18n("Contact group search failed: %1", job->errorString()), true);
+    if (!checkJobResult(job, ki18n("Contact group search failed: %1"))) {
         return;
     }
     mContactGroups = qobject_cast<Akonadi::ContactGroupSearchJob *>(job)->contactGroups();
@@ -93,7 +58,7 @@ void ContactGroupExpandToolJob::slotResult(KJob *job)
 
 void ContactGroupExpandToolJob::expandNextGroup()
 {
-    if (!mToolCall) {
+    if (!hasToolCall()) {
         deleteLater();
         return;
     }
@@ -101,9 +66,10 @@ void ContactGroupExpandToolJob::expandNextGroup()
         finish(mEntries.join(u'\n'));
         return;
     }
-    mExpandJob = new Akonadi::ContactGroupExpandJob(mContactGroups.constFirst(), this);
-    connect(mExpandJob, &KJob::result, this, &ContactGroupExpandToolJob::slotExpandResult);
-    mExpandJob->start();
+    auto expandJob = new Akonadi::ContactGroupExpandJob(mContactGroups.constFirst(), this);
+    connect(expandJob, &KJob::result, this, &ContactGroupExpandToolJob::slotExpandResult);
+    setCurrentJob(expandJob);
+    expandJob->start();
 }
 
 void ContactGroupExpandToolJob::slotExpandResult(KJob *job)

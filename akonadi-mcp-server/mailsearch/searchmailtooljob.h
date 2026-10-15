@@ -6,24 +6,18 @@
 
 #pragma once
 
-#include <QObject>
-#include <QPointer>
-namespace TextAutoGenerateTextMcpProtocolCore
-{
-class McpProtocolServerToolCall;
-}
-class SearchMailToolJob : public QObject
+#include "common/tooljobbase.h"
+
+class SearchMailToolJob : public ToolJobBase
 {
     Q_OBJECT
 public:
     explicit SearchMailToolJob(QObject *parent = nullptr);
     ~SearchMailToolJob() override;
-    [[nodiscard]] bool canStart() const;
 
-    void start();
+    [[nodiscard]] bool canStart() const override;
 
-    void setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call);
-
-private:
-    QPointer<TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall> mToolCall;
+protected:
+    void startJob() override;
+    [[nodiscard]] QString invalidArgumentsMessage() const override;
 };

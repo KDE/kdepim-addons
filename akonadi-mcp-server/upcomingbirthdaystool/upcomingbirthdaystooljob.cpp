@@ -4,14 +4,12 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "upcomingbirthdaystooljob.h"
-#include "akonadimcpprotocol_debug.h"
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/RecursiveItemFetchJob>
 #include <KContacts/Addressee>
 #include <KJob>
 #include <KLocalizedString>
 #include <QDate>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 #include <algorithm>
 
 using namespace Qt::Literals::StringLiterals;
@@ -35,7 +33,7 @@ struct UpcomingBirthday {
 }
 
 UpcomingBirthdaysToolJob::UpcomingBirthdaysToolJob(QObject *parent)
-    : QObject{parent}
+    : ToolJobBase{parent}
 {
 }
 
@@ -48,50 +46,26 @@ void UpcomingBirthdaysToolJob::setDays(int days)
 
 bool UpcomingBirthdaysToolJob::canStart() const
 {
-    return mDays > 0 && mToolCall;
+    return ToolJobBase::canStart() && mDays > 0;
 }
 
-void UpcomingBirthdaysToolJob::start()
+QString UpcomingBirthdaysToolJob::invalidArgumentsMessage() const
 {
-    if (!canStart()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "UpcomingBirthdaysToolJob can't start";
-        if (mToolCall) {
-            mToolCall->finishWithText(i18n("Number of days must be a positive integer"), true);
-        }
-        deleteLater();
-        return;
-    }
-
-    mFetchJob = new Akonadi::RecursiveItemFetchJob(Akonadi::Collection::root(), {KContacts::Addressee::mimeType()}, this);
-    mFetchJob->fetchScope().fetchFullPayload();
-    connect(mFetchJob, &KJob::result, this, &UpcomingBirthdaysToolJob::slotResult);
-    connect(mToolCall, &TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall::cancelled, this, &UpcomingBirthdaysToolJob::slotCancelled);
-    mFetchJob->start();
+    return i18n("Number of days must be a positive integer");
 }
 
-void UpcomingBirthdaysToolJob::slotCancelled()
+void UpcomingBirthdaysToolJob::startJob()
 {
-    if (mFetchJob) {
-        mFetchJob->kill();
-    }
-    deleteLater();
-}
-
-void UpcomingBirthdaysToolJob::setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
-{
-    mToolCall = call;
+    auto fetchJob = new Akonadi::RecursiveItemFetchJob(Akonadi::Collection::root(), {KContacts::Addressee::mimeType()}, this);
+    fetchJob->fetchScope().fetchFullPayload();
+    connect(fetchJob, &KJob::result, this, &UpcomingBirthdaysToolJob::slotResult);
+    setCurrentJob(fetchJob);
+    fetchJob->start();
 }
 
 void UpcomingBirthdaysToolJob::slotResult(KJob *job)
 {
-    if (!mToolCall) {
-        deleteLater();
-        return;
-    }
-    if (job->error()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "Contact fetch failed:" << job->errorString();
-        mToolCall->finishWithText(i18n("Contact fetch failed: %1", job->errorString()), true);
-        deleteLater();
+    if (!checkJobResult(job, ki18n("Contact fetch failed: %1"))) {
         return;
     }
     const QDate today = QDate::currentDate();
@@ -122,8 +96,7 @@ void UpcomingBirthdaysToolJob::slotResult(KJob *job)
         birthdays.append({nextBirthday, u"%1: %2 (turns %3)"_s.arg(nextBirthday.toString(Qt::ISODate), name, QString::number(age))});
     }
     if (birthdays.isEmpty()) {
-        mToolCall->finishWithText(i18np("No birthday in the next day", "No birthday in the next %1 days", mDays));
-        deleteLater();
+        finish(i18np("No birthday in the next day", "No birthday in the next %1 days", mDays));
         return;
     }
     std::ranges::sort(birthdays, {}, &UpcomingBirthday::date);
@@ -132,8 +105,7 @@ void UpcomingBirthdaysToolJob::slotResult(KJob *job)
     for (const UpcomingBirthday &birthday : std::as_const(birthdays)) {
         entries.append(birthday.entry);
     }
-    mToolCall->finishWithText(entries.join(u'\n'));
-    deleteLater();
+    finish(entries.join(u'\n'));
 }
 
 #include "moc_upcomingbirthdaystooljob.cpp"

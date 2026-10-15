@@ -5,18 +5,11 @@
 */
 #pragma once
 
+#include "common/tooljobbase.h"
 #include <Akonadi/Collection>
 #include <KContacts/Addressee>
-#include <QObject>
-#include <QPointer>
 
-class KJob;
-namespace TextAutoGenerateTextMcpProtocolCore
-{
-class McpProtocolServerToolCall;
-}
-
-class CreateContactToolJob : public QObject
+class CreateContactToolJob : public ToolJobBase
 {
     Q_OBJECT
 public:
@@ -27,19 +20,16 @@ public:
 
     void setAddressBookId(Akonadi::Collection::Id id);
 
-    [[nodiscard]] bool canStart() const;
+    [[nodiscard]] bool canStart() const override;
 
-    void start();
-
-    void setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call);
+protected:
+    void startJob() override;
+    [[nodiscard]] QString invalidArgumentsMessage() const override;
 
 private:
     void slotCollectionFetchResult(KJob *job);
     void slotItemCreateResult(KJob *job);
-    void slotCancelled();
     void createContact(const Akonadi::Collection &collection);
-    QPointer<TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall> mToolCall;
-    QPointer<KJob> mCurrentJob;
     KContacts::Addressee mContact;
     Akonadi::Collection::Id mAddressBookId = -1;
 };

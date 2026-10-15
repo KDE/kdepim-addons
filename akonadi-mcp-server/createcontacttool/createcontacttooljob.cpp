@@ -4,19 +4,17 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "createcontacttooljob.h"
-#include "akonadimcpprotocol_debug.h"
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
 #include <KJob>
 #include <KLocalizedString>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 
 using namespace Qt::Literals::StringLiterals;
 
 CreateContactToolJob::CreateContactToolJob(QObject *parent)
-    : QObject{parent}
+    : ToolJobBase{parent}
 {
 }
 
@@ -34,56 +32,31 @@ void CreateContactToolJob::setAddressBookId(Akonadi::Collection::Id id)
 
 bool CreateContactToolJob::canStart() const
 {
-    return !mContact.isEmpty() && mToolCall;
+    return ToolJobBase::canStart() && !mContact.isEmpty();
 }
 
-void CreateContactToolJob::start()
+QString CreateContactToolJob::invalidArgumentsMessage() const
 {
-    if (!canStart()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "CreateContactToolJob can't start";
-        if (mToolCall) {
-            mToolCall->finishWithText(i18n("Contact is empty"), true);
-        }
-        deleteLater();
-        return;
-    }
+    return i18n("Contact is empty");
+}
 
-    connect(mToolCall, &TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall::cancelled, this, &CreateContactToolJob::slotCancelled);
+void CreateContactToolJob::startJob()
+{
     if (mAddressBookId >= 0) {
         auto fetchJob = new Akonadi::CollectionFetchJob(Akonadi::Collection(mAddressBookId), Akonadi::CollectionFetchJob::Base, this);
         connect(fetchJob, &KJob::result, this, &CreateContactToolJob::slotCollectionFetchResult);
-        mCurrentJob = fetchJob;
+        setCurrentJob(fetchJob);
     } else {
         auto fetchJob = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive, this);
         fetchJob->fetchScope().setContentMimeTypes({KContacts::Addressee::mimeType()});
         connect(fetchJob, &KJob::result, this, &CreateContactToolJob::slotCollectionFetchResult);
-        mCurrentJob = fetchJob;
+        setCurrentJob(fetchJob);
     }
-}
-
-void CreateContactToolJob::slotCancelled()
-{
-    if (mCurrentJob) {
-        mCurrentJob->kill();
-    }
-    deleteLater();
-}
-
-void CreateContactToolJob::setMcpProtocolServerToolCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
-{
-    mToolCall = call;
 }
 
 void CreateContactToolJob::slotCollectionFetchResult(KJob *job)
 {
-    if (!mToolCall) {
-        deleteLater();
-        return;
-    }
-    if (job->error()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "Address book fetch failed:" << job->errorString();
-        mToolCall->finishWithText(i18n("Address book fetch failed: %1", job->errorString()), true);
-        deleteLater();
+    if (!checkJobResult(job, ki18n("Address book fetch failed: %1"))) {
         return;
     }
     const Akonadi::Collection::List collections = qobject_cast<Akonadi::CollectionFetchJob *>(job)->collections();
@@ -96,11 +69,10 @@ void CreateContactToolJob::slotCollectionFetchResult(KJob *job)
         return;
     }
     if (mAddressBookId >= 0) {
-        mToolCall->finishWithText(i18n("Address book %1 does not exist or does not accept new contacts", mAddressBookId), true);
+        finish(i18n("Address book %1 does not exist or does not accept new contacts", mAddressBookId), true);
     } else {
-        mToolCall->finishWithText(i18n("No writable address book found"), true);
+        finish(i18n("No writable address book found"), true);
     }
-    deleteLater();
 }
 
 void CreateContactToolJob::createContact(const Akonadi::Collection &collection)
@@ -112,27 +84,19 @@ void CreateContactToolJob::createContact(const Akonadi::Collection &collection)
     auto createJob = new Akonadi::ItemCreateJob(item, collection, this);
     createJob->setProperty("addressBookName", collection.displayName());
     connect(createJob, &KJob::result, this, &CreateContactToolJob::slotItemCreateResult);
-    mCurrentJob = createJob;
+    setCurrentJob(createJob);
 }
 
 void CreateContactToolJob::slotItemCreateResult(KJob *job)
 {
-    if (!mToolCall) {
-        deleteLater();
-        return;
-    }
-    if (job->error()) {
-        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "Contact creation failed:" << job->errorString();
-        mToolCall->finishWithText(i18n("Contact creation failed: %1", job->errorString()), true);
-        deleteLater();
+    if (!checkJobResult(job, ki18n("Contact creation failed: %1"))) {
         return;
     }
     const Akonadi::Item item = qobject_cast<Akonadi::ItemCreateJob *>(job)->item();
-    mToolCall->finishWithText(i18n("Contact \"%1\" created in address book \"%2\" (item id: %3)",
-                                   mContact.formattedName(),
-                                   job->property("addressBookName").toString(),
-                                   QString::number(item.id())));
-    deleteLater();
+    finish(i18n("Contact \"%1\" created in address book \"%2\" (item id: %3)",
+                mContact.formattedName(),
+                job->property("addressBookName").toString(),
+                QString::number(item.id())));
 }
 
 #include "moc_createcontacttooljob.cpp"
