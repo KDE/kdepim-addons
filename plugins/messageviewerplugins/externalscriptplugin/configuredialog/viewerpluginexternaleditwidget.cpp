@@ -56,7 +56,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
         "<li>%inreplyto - the reply email address</li>"
         "<li>%akonadiUrl - the akonadi url (as akonadi:?item=187020)</li>"
         "</ul>"
-        "</strong></p></qt>");
+        "</qt>");
     formatHelp->setWhatsThis(mCommandWhatsThis);
 
     mainLayout->addWidget(formatHelp);
