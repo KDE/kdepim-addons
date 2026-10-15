@@ -32,7 +32,6 @@ Dependencies:
     'pim/kimap': '@same'
     'pim/kmailtransport': '@same'
     'pim/kpimtextedit': '@same'
-    'pim/ktnef': '@same'
     'pim/libgravatar': '@same'
     'pim/libkdepim': '@same'
     'pim/libkleo': '@same'

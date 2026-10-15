@@ -3,7 +3,6 @@
 if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
-add_subdirectory(ms-tnef)
 add_subdirectory(vcard)
 add_subdirectory(highlighter)
 add_subdirectory(calendar)
