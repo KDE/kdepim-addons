@@ -20,7 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
-static const char myAdblockViewFilterDialogGroupName[] = "AdblockViewFilterDialog";
+const char myAdblockViewFilterDialogGroupName[] = "AdblockViewFilterDialog";
 }
 AdblockViewFilterDialog::AdblockViewFilterDialog(QWidget *parent)
     : QDialog(parent)

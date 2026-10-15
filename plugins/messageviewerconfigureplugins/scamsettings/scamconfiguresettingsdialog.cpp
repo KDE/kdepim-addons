@@ -17,7 +17,7 @@
 using namespace Qt::Literals::StringLiterals;
 namespace
 {
-static const char myScamConfigureSettingsDialogConfigGroupName[] = "ScamConfigureSettingsDialog";
+const char myScamConfigureSettingsDialogConfigGroupName[] = "ScamConfigureSettingsDialog";
 }
 ScamConfigureSettingsDialog::ScamConfigureSettingsDialog(QWidget *parent)
     : QDialog(parent)

@@ -17,7 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 
 namespace
 {
-static const char myConfigGroupName[] = "AdblockPluginUrlInterceptorConfigureDialog";
+const char myConfigGroupName[] = "AdblockPluginUrlInterceptorConfigureDialog";
 }
 AdblockPluginUrlInterceptorConfigureDialog::AdblockPluginUrlInterceptorConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)

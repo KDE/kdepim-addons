@@ -68,7 +68,7 @@ using namespace MailTransport;
 
 namespace
 {
-static bool hasMyWritableEventsFolders(const QString &family)
+bool hasMyWritableEventsFolders(const QString &family)
 {
     Q_UNUSED(family)
 #if 0 // TODO port to Akonadi
@@ -115,7 +115,7 @@ static bool hasMyWritableEventsFolders(const QString &family)
 #endif
 }
 
-static bool occurredAlready(const Incidence::Ptr &incidence)
+bool occurredAlready(const Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
     const QDateTime now = QDateTime::currentDateTime();
@@ -135,7 +135,7 @@ static bool occurredAlready(const Incidence::Ptr &incidence)
     return false;
 }
 
-static QString getSender(const MimeTreeParser::MessagePart *msgPart)
+QString getSender(const MimeTreeParser::MessagePart *msgPart)
 {
     if (auto msg = dynamic_cast<const KMime::Message *>(msgPart->content()->topLevel()); msg != nullptr) {
         const auto s = msg->sender();
@@ -144,7 +144,7 @@ static QString getSender(const MimeTreeParser::MessagePart *msgPart)
     return {};
 }
 
-static ScheduleMessage::Ptr stringToInvitation(const QByteArray &iCal, const KCalendarCore::Calendar::Ptr &calendar)
+ScheduleMessage::Ptr stringToInvitation(const QByteArray &iCal, const KCalendarCore::Calendar::Ptr &calendar)
 {
     ICalFormat format;
 #if KCALENDARCORE_VERSION >= QT_VERSION_CHECK(6, 30, 0)
@@ -237,7 +237,7 @@ public:
     }
 };
 
-static QString directoryForStatus(Attendee::PartStat status)
+QString directoryForStatus(Attendee::PartStat status)
 {
     QString dir;
     switch (status) {
