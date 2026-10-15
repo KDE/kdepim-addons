@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:48+0000\n"
-"PO-Revision-Date: 2026-10-14 00:24+0200\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"PO-Revision-Date: 2026-10-14 10:42+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: akonadimcpprotocolmanager.cpp:32
 #, kde-format
@@ -28,128 +28,128 @@ msgstr "Gestiona la informació d'Akonadi"
 #: calendarcommon/calendartooljobbase.cpp:34
 #, kde-format
 msgid "Invalid arguments"
-msgstr ""
+msgstr "Arguments no vàlids"
 
 #: calendarcommon/calendartooljobbase.cpp:68
 #, kde-format
 msgid "Calendar fetch failed: %1"
-msgstr ""
+msgstr "Ha fallat la recuperació del calendari: %1"
 
 #: calendareventstool/calendareventstool.cpp:42
 #, kde-format
 msgid "Calendar Events"
-msgstr ""
+msgstr "Esdeveniments de calendari"
 
 #: calendareventstool/calendareventstool.cpp:53
 #: freebusytool/freebusytool.cpp:52
 #, kde-format
 msgid "Argument start must be an ISO 8601 date or date-time"
-msgstr ""
+msgstr "L'argument inici ha de ser una data ISO 8601 o data-hora"
 
 #: calendareventstool/calendareventstool.cpp:62
 #: freebusytool/freebusytool.cpp:57
 #, kde-format
 msgid "Argument end must be an ISO 8601 date or date-time"
-msgstr ""
+msgstr "L'argument final ha de ser una data ISO 8601 o data-hora"
 
 #: calendareventstool/calendareventstool.cpp:68
 #: freebusytool/freebusytool.cpp:61
 #, kde-format
 msgid "Argument end must be after start"
-msgstr ""
+msgstr "L'argument final cal que siga després de l'inici"
 
 #: calendareventstool/calendareventstool.cpp:72
 #: freebusytool/freebusytool.cpp:65
 #, kde-format
 msgid "Period must not exceed %1 days"
-msgstr ""
+msgstr "El període no pot excedir de %1 dies"
 
 #: calendareventstool/calendareventstooljob.cpp:49
 #, kde-format
 msgid "No event between %1 and %2"
-msgstr ""
+msgstr "No hi ha cap esdeveniment entre %1 i %2"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:30
 #, kde-format
 msgid "Search Contact Group"
-msgstr ""
+msgstr "Busca un grup de contactes"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:39
 #: contactsearchtool/contactsearchtool.cpp:42
 #, kde-format
 msgid "Argument query must be a non-empty string"
-msgstr ""
+msgstr "L'argument consulta ha de ser una cadena no buida"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:38
 #: contactsearchtool/contactsearchtooljob.cpp:43
 #, kde-format
 msgid "Search string must be a non-empty string"
-msgstr ""
+msgstr "La cadena de busca ha de ser una cadena no buida"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:82
 #, kde-format
 msgid "Contact group search failed: %1"
-msgstr ""
+msgstr "No s'ha pogut fer la busca del grup de contactes: %1"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:87
 #, kde-format
 msgid "No contact group found for \"%1\""
-msgstr ""
+msgstr "No s'ha trobat cap grup de contactes per a «%1»"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:114
 #, kde-format
 msgid "%1: expand failed: %2"
-msgstr ""
+msgstr "%1: ha fallat l'expansió: %2"
 
 #: contactsearchtool/contactsearchtool.cpp:33
 #, kde-format
 msgid "Search Contacts"
-msgstr ""
+msgstr "Busca contactes"
 
 #: contactsearchtool/contactsearchtool.cpp:61
 #, kde-format
 msgid "Unknown contact field: %1"
-msgstr ""
+msgstr "Camp desconegut de contacte: %1"
 
 #: contactsearchtool/contactsearchtool.cpp:66
 #, kde-format
 msgid "Argument fields must be an array"
-msgstr ""
+msgstr "L'argument camps han de ser una matriu"
 
 #: contactsearchtool/contactsearchtooljob.cpp:76
 #, kde-format
 msgid "Contact search failed: %1"
-msgstr ""
+msgstr "No s'ha pogut fer la busca del contacte: %1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:82
 #, kde-format
 msgid "No contact found for \"%1\""
-msgstr ""
+msgstr "No s'ha trobat cap contacte per a «%1»"
 
 #: freebusytool/freebusytool.cpp:42
 #, kde-format
 msgid "Free/Busy"
-msgstr ""
+msgstr "Lliure/ocupat"
 
 #: freebusytool/freebusytooljob.cpp:72
 #, kde-format
 msgid "Free for the whole period from %1 to %2"
-msgstr ""
+msgstr "Lliure per a tot el període de %1 a %2"
 
 #: listaddressbooks/listaddressbookstool.cpp:25
 #, kde-format
 msgid "List Address Books"
-msgstr ""
+msgstr "Llista de llibretes d'adreces"
 
 #: listaddressbooks/listaddressbookstooljob.cpp:65
 #, kde-format
 msgid "Address book fetch failed: %1"
-msgstr ""
+msgstr "Ha fallat la recuperació de la llibreta d'adreces: %1"
 
 #: listaddressbooks/listaddressbookstooljob.cpp:87
 #, kde-format
 msgid "No address book found"
-msgstr ""
+msgstr "No s'ha trobat cap llibreta d'adreces"
 
 #: main.cpp:23
 #, kde-format
@@ -160,56 +160,56 @@ msgstr "URL on escolta el servidor."
 #: todolisttool/todolisttool.cpp:38
 #, kde-format
 msgid "To-do List"
-msgstr ""
+msgstr "Llista de tasques pendents"
 
 #: todolisttool/todolisttool.cpp:50
 #, kde-format
 msgid "Argument include_completed must be a boolean"
-msgstr ""
+msgstr "L'argument include_completed ha de ser un booleà"
 
 #: todolisttool/todolisttool.cpp:59
 #, kde-format
 msgid "Argument due_within_days must be an integer between 1 and %1"
-msgstr ""
+msgstr "L'argument due_within_days ha de ser un enter entre 1 i %1"
 
 #: todolisttool/todolisttool.cpp:63
 #, kde-format
 msgid "Argument due_within_days must be an integer"
-msgstr ""
+msgstr "L'argument due_within_days ha de ser un enter"
 
 #: todolisttool/todolisttooljob.cpp:93
 #, kde-format
 msgid "No to-do found"
-msgstr ""
+msgstr "No s'ha trobat cap tasca pendent"
 
 #: upcomingbirthdaystool/upcomingbirthdaystool.cpp:36
 #, kde-format
 msgid "Upcoming Birthdays"
-msgstr ""
+msgstr "Aniversaris vinents"
 
 #: upcomingbirthdaystool/upcomingbirthdaystool.cpp:48
 #, kde-format
 msgid "Argument days must be an integer between 1 and %1"
-msgstr ""
+msgstr "L'argument dies ha de ser un enter entre 1 i %1"
 
 #: upcomingbirthdaystool/upcomingbirthdaystool.cpp:52
 #, kde-format
 msgid "Argument days must be an integer"
-msgstr ""
+msgstr "L'argument dies ha de ser un enter"
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:59
 #, kde-format
 msgid "Number of days must be a positive integer"
-msgstr ""
+msgstr "El nombre de dies ha de ser un enter positiu"
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:93
 #, kde-format
 msgid "Contact fetch failed: %1"
-msgstr ""
+msgstr "Ha fallat la recuperació del contacte: %1"
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:125
 #, kde-format
 msgid "No birthday in the next day"
 msgid_plural "No birthday in the next %1 days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Cap aniversari al dia següent"
+msgstr[1] "No hi ha cap aniversari en %1 dies vinents"

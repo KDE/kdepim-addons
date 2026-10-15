@@ -1,0 +1,215 @@
+# SPDX-FileCopyrightText: 2026 Matjaž Jeran <matjaz.jeran@amis.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-14 00:48+0000\n"
+"PO-Revision-Date: 2026-10-14 09:29+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Generator: Lokalize 26.08.1\n"
+
+#: akonadimcpprotocolmanager.cpp:32
+#, kde-format
+msgid "Manage information from Akonadi"
+msgstr "Upravljanje informacij iz Akonadija"
+
+#: calendarcommon/calendartooljobbase.cpp:34
+#, kde-format
+msgid "Invalid arguments"
+msgstr "Neveljavni argumenti"
+
+#: calendarcommon/calendartooljobbase.cpp:68
+#, kde-format
+msgid "Calendar fetch failed: %1"
+msgstr "Pridobivanje koledarja ni uspelo: %1"
+
+#: calendareventstool/calendareventstool.cpp:42
+#, kde-format
+msgid "Calendar Events"
+msgstr "Koledarski dogodki"
+
+#: calendareventstool/calendareventstool.cpp:53
+#: freebusytool/freebusytool.cpp:52
+#, kde-format
+msgid "Argument start must be an ISO 8601 date or date-time"
+msgstr "Argument start mora biti datum ali datum in čas v formatu ISO 8601"
+
+#: calendareventstool/calendareventstool.cpp:62
+#: freebusytool/freebusytool.cpp:57
+#, kde-format
+msgid "Argument end must be an ISO 8601 date or date-time"
+msgstr "Argument end mora biti datum ali datum in čas v formatu ISO 8601"
+
+#: calendareventstool/calendareventstool.cpp:68
+#: freebusytool/freebusytool.cpp:61
+#, kde-format
+msgid "Argument end must be after start"
+msgstr "Argument end mora biti kasneje od argumenta start"
+
+#: calendareventstool/calendareventstool.cpp:72
+#: freebusytool/freebusytool.cpp:65
+#, kde-format
+msgid "Period must not exceed %1 days"
+msgstr "Obdobje ne sme presegati %1 dni"
+
+#: calendareventstool/calendareventstooljob.cpp:49
+#, kde-format
+msgid "No event between %1 and %2"
+msgstr "Ni dogodkov med %1 in %2"
+
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:30
+#, kde-format
+msgid "Search Contact Group"
+msgstr "Iskanje skupine stikov"
+
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:39
+#: contactsearchtool/contactsearchtool.cpp:42
+#, kde-format
+msgid "Argument query must be a non-empty string"
+msgstr "Argument query mora biti neprazen niz"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:38
+#: contactsearchtool/contactsearchtooljob.cpp:43
+#, kde-format
+msgid "Search string must be a non-empty string"
+msgstr "Iskalni niz mora biti neprazen niz"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:82
+#, kde-format
+msgid "Contact group search failed: %1"
+msgstr "Iskanje skupine stikov ni uspelo: %1"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:87
+#, kde-format
+msgid "No contact group found for \"%1\""
+msgstr "Za \"%1\" ni bilo najdene nobene skupine stikov"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:114
+#, kde-format
+msgid "%1: expand failed: %2"
+msgstr "%1: razširitev ni uspela: %2"
+
+#: contactsearchtool/contactsearchtool.cpp:33
+#, kde-format
+msgid "Search Contacts"
+msgstr "Iskanje stikov"
+
+#: contactsearchtool/contactsearchtool.cpp:61
+#, kde-format
+msgid "Unknown contact field: %1"
+msgstr "Neznano polje stika: %1"
+
+#: contactsearchtool/contactsearchtool.cpp:66
+#, kde-format
+msgid "Argument fields must be an array"
+msgstr "Argument fields mora biti polje"
+
+#: contactsearchtool/contactsearchtooljob.cpp:76
+#, kde-format
+msgid "Contact search failed: %1"
+msgstr "Iskanje stika ni uspelo: %1"
+
+#: contactsearchtool/contactsearchtooljob.cpp:82
+#, kde-format
+msgid "No contact found for \"%1\""
+msgstr "Za \"%1\" ni najdenega nobenega stika"
+
+#: freebusytool/freebusytool.cpp:42
+#, kde-format
+msgid "Free/Busy"
+msgstr "Prosto/zasedeno"
+
+#: freebusytool/freebusytooljob.cpp:72
+#, kde-format
+msgid "Free for the whole period from %1 to %2"
+msgstr "Prost v celotnem obdobju od %1 do %2"
+
+#: listaddressbooks/listaddressbookstool.cpp:25
+#, kde-format
+msgid "List Address Books"
+msgstr "Seznam adresarjev"
+
+#: listaddressbooks/listaddressbookstooljob.cpp:65
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr "Pridobivanje adresarja ni uspelo: %1"
+
+#: listaddressbooks/listaddressbookstooljob.cpp:87
+#, kde-format
+msgid "No address book found"
+msgstr "Adresar ni najden"
+
+#: main.cpp:23
+#, kde-format
+msgctxt "@info:shell"
+msgid "Url where server listens."
+msgstr "URL, na katerem posluša strežnik."
+
+#: todolisttool/todolisttool.cpp:38
+#, kde-format
+msgid "To-do List"
+msgstr "Seznam opravil"
+
+#: todolisttool/todolisttool.cpp:50
+#, kde-format
+msgid "Argument include_completed must be a boolean"
+msgstr "Argument include_completed mora biti boolova vrednost"
+
+#: todolisttool/todolisttool.cpp:59
+#, kde-format
+msgid "Argument due_within_days must be an integer between 1 and %1"
+msgstr "Argument due_within_days mora biti celo število med 1 in %1"
+
+#: todolisttool/todolisttool.cpp:63
+#, kde-format
+msgid "Argument due_within_days must be an integer"
+msgstr "Argument due_within_days mora biti celo število"
+
+#: todolisttool/todolisttooljob.cpp:93
+#, kde-format
+msgid "No to-do found"
+msgstr "Opravila ni najdenega"
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:36
+#, kde-format
+msgid "Upcoming Birthdays"
+msgstr "Prihajajoči rojstni dnevi"
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:48
+#, kde-format
+msgid "Argument days must be an integer between 1 and %1"
+msgstr "Argument days mora biti celo število med 1 in %1"
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:52
+#, kde-format
+msgid "Argument days must be an integer"
+msgstr "Argument days mora biti celo število"
+
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:59
+#, kde-format
+msgid "Number of days must be a positive integer"
+msgstr "Število dni mora biti pozitivno celo število"
+
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:93
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr "Pridobivanje stika ni uspelo: %1"
+
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:125
+#, kde-format
+msgid "No birthday in the next day"
+msgid_plural "No birthday in the next %1 days"
+msgstr[0] "Ni rojstnega dne v naslednjem %1 dnevu"
+msgstr[1] "Ni rojstnega dne v naslednjih %1 dneh"
+msgstr[2] "Ni rojstnega dne v naslednjih %1 dneh"
+msgstr[3] "Ni rojstnega dne v naslednjih %1 dneh"
+
+#~ msgid "No birthday in the next %1 days"
+#~ msgstr "V naslednjih %1 dneh ni rojstnega dne"

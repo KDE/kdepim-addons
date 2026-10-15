@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:48+0000\n"
-"PO-Revision-Date: 2026-10-13 19:00+0300\n"
+"PO-Revision-Date: 2026-10-14 19:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -25,188 +25,189 @@ msgstr "Akonadi’den gelen bilgiyi yönetin"
 #: calendarcommon/calendartooljobbase.cpp:34
 #, kde-format
 msgid "Invalid arguments"
-msgstr ""
+msgstr "Geçersiz argümanlar"
 
 #: calendarcommon/calendartooljobbase.cpp:68
 #, kde-format
 msgid "Calendar fetch failed: %1"
-msgstr ""
+msgstr "Takvim getirilemedi: %1"
 
 #: calendareventstool/calendareventstool.cpp:42
 #, kde-format
 msgid "Calendar Events"
-msgstr ""
+msgstr "Takvim Etkinlikleri"
 
 #: calendareventstool/calendareventstool.cpp:53
 #: freebusytool/freebusytool.cpp:52
 #, kde-format
 msgid "Argument start must be an ISO 8601 date or date-time"
 msgstr ""
+"Argüman başlangıcı bir ISO 8601 biçimli tarih veya tarih–zaman olmalıdır"
 
 #: calendareventstool/calendareventstool.cpp:62
 #: freebusytool/freebusytool.cpp:57
 #, kde-format
 msgid "Argument end must be an ISO 8601 date or date-time"
-msgstr ""
+msgstr "Argüman bitişi bir ISO 8601 biçimli tarih veya tarih–zaman olmalıdır"
 
 #: calendareventstool/calendareventstool.cpp:68
 #: freebusytool/freebusytool.cpp:61
 #, kde-format
 msgid "Argument end must be after start"
-msgstr ""
+msgstr "Argüman bitişi, başlangıçtan sonra olmalıdır"
 
 #: calendareventstool/calendareventstool.cpp:72
 #: freebusytool/freebusytool.cpp:65
 #, kde-format
 msgid "Period must not exceed %1 days"
-msgstr ""
+msgstr "Dönem, %1 günü aşmamalıdır"
 
 #: calendareventstool/calendareventstooljob.cpp:49
 #, kde-format
 msgid "No event between %1 and %2"
-msgstr ""
+msgstr "%1 ve %2 arasında bir etkinlik yok"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:30
 #, kde-format
 msgid "Search Contact Group"
-msgstr ""
+msgstr "Kişi Grubu Ara"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:39
 #: contactsearchtool/contactsearchtool.cpp:42
 #, kde-format
 msgid "Argument query must be a non-empty string"
-msgstr ""
+msgstr "Argüman sorgusu, boş olmayan bir dizi olmalıdır"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:38
 #: contactsearchtool/contactsearchtooljob.cpp:43
 #, kde-format
 msgid "Search string must be a non-empty string"
-msgstr ""
+msgstr "Aranacak dizi, boş olmayan bir dizi olmalıdır"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:82
 #, kde-format
 msgid "Contact group search failed: %1"
-msgstr ""
+msgstr "Kişi grubu araması yapılamadı: %1"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:87
 #, kde-format
 msgid "No contact group found for \"%1\""
-msgstr ""
+msgstr "“%1” için bir kişi grubu bulunamadı"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:114
 #, kde-format
 msgid "%1: expand failed: %2"
-msgstr ""
+msgstr "%1: Genişletme başarısız: %2"
 
 #: contactsearchtool/contactsearchtool.cpp:33
 #, kde-format
 msgid "Search Contacts"
-msgstr ""
+msgstr "Kişileri Ara"
 
 #: contactsearchtool/contactsearchtool.cpp:61
 #, kde-format
 msgid "Unknown contact field: %1"
-msgstr ""
+msgstr "Bilinmeyen kişi alanı: %1"
 
 #: contactsearchtool/contactsearchtool.cpp:66
 #, kde-format
 msgid "Argument fields must be an array"
-msgstr ""
+msgstr "Argüman alanları bir diziliş olmalıdır"
 
 #: contactsearchtool/contactsearchtooljob.cpp:76
 #, kde-format
 msgid "Contact search failed: %1"
-msgstr ""
+msgstr "Kişi araması yapılamadı: %1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:82
 #, kde-format
 msgid "No contact found for \"%1\""
-msgstr ""
+msgstr "“%1” için bir kişi bulunamadı"
 
 #: freebusytool/freebusytool.cpp:42
 #, kde-format
 msgid "Free/Busy"
-msgstr ""
+msgstr "Uygun/Meşgûl"
 
 #: freebusytool/freebusytooljob.cpp:72
 #, kde-format
 msgid "Free for the whole period from %1 to %2"
-msgstr ""
+msgstr "%1 ve %2 arasındaki tüm dönem için uygun"
 
 #: listaddressbooks/listaddressbookstool.cpp:25
 #, kde-format
 msgid "List Address Books"
-msgstr ""
+msgstr "Adres Defterlerini Listele"
 
 #: listaddressbooks/listaddressbookstooljob.cpp:65
 #, kde-format
 msgid "Address book fetch failed: %1"
-msgstr ""
+msgstr "Adres defteri getirilemedi: %1"
 
 #: listaddressbooks/listaddressbookstooljob.cpp:87
 #, kde-format
 msgid "No address book found"
-msgstr ""
+msgstr "Bulunan adres defteri yok"
 
 #: main.cpp:23
 #, kde-format
 msgctxt "@info:shell"
 msgid "Url where server listens."
-msgstr "Sunucunun dinlediği URL."
+msgstr "Sunucunun dinlediği URL"
 
 #: todolisttool/todolisttool.cpp:38
 #, kde-format
 msgid "To-do List"
-msgstr ""
+msgstr "Yapılacaklar Listesi"
 
 #: todolisttool/todolisttool.cpp:50
 #, kde-format
 msgid "Argument include_completed must be a boolean"
-msgstr ""
+msgstr "include_completed argümanı bir Boole olmalıdır"
 
 #: todolisttool/todolisttool.cpp:59
 #, kde-format
 msgid "Argument due_within_days must be an integer between 1 and %1"
-msgstr ""
+msgstr "due_within_days argümanı, 1 ve %1 arasında bir tam sayı olmalıdır"
 
 #: todolisttool/todolisttool.cpp:63
 #, kde-format
 msgid "Argument due_within_days must be an integer"
-msgstr ""
+msgstr "due_within_days, bir tam sayı olmalıdır"
 
 #: todolisttool/todolisttooljob.cpp:93
 #, kde-format
 msgid "No to-do found"
-msgstr ""
+msgstr "Bulunan yapılacak iş yok"
 
 #: upcomingbirthdaystool/upcomingbirthdaystool.cpp:36
 #, kde-format
 msgid "Upcoming Birthdays"
-msgstr ""
+msgstr "Gelecekteki Yaş Günleri"
 
 #: upcomingbirthdaystool/upcomingbirthdaystool.cpp:48
 #, kde-format
 msgid "Argument days must be an integer between 1 and %1"
-msgstr ""
+msgstr "days argümanı, 1 ile %1 arasında bir tam sayı olmalıdır"
 
 #: upcomingbirthdaystool/upcomingbirthdaystool.cpp:52
 #, kde-format
 msgid "Argument days must be an integer"
-msgstr ""
+msgstr "days argümanı, bir tam sayı olmalıdır"
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:59
 #, kde-format
 msgid "Number of days must be a positive integer"
-msgstr ""
+msgstr "Gün sayısı, pozitif bir tam sayı olmalıdır"
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:93
 #, kde-format
 msgid "Contact fetch failed: %1"
-msgstr ""
+msgstr "Kişi getirilemedi: %1"
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:125
 #, kde-format
 msgid "No birthday in the next day"
 msgid_plural "No birthday in the next %1 days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Yarın bir yaş günü yok"
+msgstr[1] "Sonraki %1 günde bir yaş günü yok"
