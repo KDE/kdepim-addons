@@ -45,6 +45,12 @@ target_sources(
         todolisttool/todolisttool.cpp
         todolisttool/todolisttooljob.h
         todolisttool/todolisttooljob.cpp
+        akonadiresourcesstatus/akonadiresourcesstatustool.h
+        akonadiresourcesstatus/akonadiresourcesstatustool.cpp
+        createcontacttool/createcontacttool.h
+        createcontacttool/createcontacttool.cpp
+        createcontacttool/createcontacttooljob.h
+        createcontacttool/createcontacttooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
