@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "searchmailtool.h"
+#include "searchmailtooljob.h"
 #include <KLocalizedString>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 
@@ -14,7 +15,7 @@ SearchMailTool::~SearchMailTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool SearchMailTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool =
-        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"list_address_books"_s, u"List the Akonadi address books"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"search_mail"_s, u"List the Akonadi address books"_s);
 
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
@@ -28,5 +29,8 @@ void SearchMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServer
 {
     const auto arguments = call->arguments();
 
+    auto job = new SearchMailToolJob(call);
+    job->setMcpProtocolServerToolCall(call);
+    job->start();
     // TODO
 }
