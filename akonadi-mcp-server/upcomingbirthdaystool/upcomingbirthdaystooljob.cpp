@@ -135,3 +135,5 @@ void UpcomingBirthdaysToolJob::slotResult(KJob *job)
     mToolCall->finishWithText(entries.join(u'\n'));
     deleteLater();
 }
+
+#include "moc_upcomingbirthdaystooljob.cpp"

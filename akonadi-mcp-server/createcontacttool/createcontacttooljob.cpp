@@ -134,3 +134,5 @@ void CreateContactToolJob::slotItemCreateResult(KJob *job)
                                    QString::number(item.id())));
     deleteLater();
 }
+
+#include "moc_createcontacttooljob.cpp"

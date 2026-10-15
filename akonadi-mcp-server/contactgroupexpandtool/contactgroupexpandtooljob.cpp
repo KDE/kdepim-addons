@@ -128,3 +128,5 @@ void ContactGroupExpandToolJob::slotExpandResult(KJob *job)
     mEntries.append(lines.join(u"\n  "_s));
     expandNextGroup();
 }
+
+#include "moc_contactgroupexpandtooljob.cpp"

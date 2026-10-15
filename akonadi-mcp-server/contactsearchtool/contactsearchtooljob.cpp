@@ -121,3 +121,5 @@ void ContactSearchToolJob::slotResult(KJob *job)
     mToolCall->finishWithText(entries.join(u'\n'));
     deleteLater();
 }
+
+#include "moc_contactsearchtooljob.cpp"

@@ -90,3 +90,5 @@ void ListAddressBooksToolJob::slotResult(KJob *job)
     }
     deleteLater();
 }
+
+#include "moc_listaddressbookstooljob.cpp"
