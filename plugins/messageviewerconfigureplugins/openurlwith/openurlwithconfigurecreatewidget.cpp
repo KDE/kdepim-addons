@@ -45,7 +45,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
         "<ul>"
         "<li>%u - url used by command</li>"
         "</ul>"
-        "</p></qt>");
+        "</qt>");
     formatHelp->setWhatsThis(mCommandWhatsThis);
     mainLayout->addWidget(formatHelp);
 
