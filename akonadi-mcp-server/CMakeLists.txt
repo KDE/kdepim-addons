@@ -57,6 +57,10 @@ target_sources(
         mailsearch/searchmailtool.cpp
         mailsearch/searchmailtooljob.h
         mailsearch/searchmailtooljob.cpp
+        createmailtool/createmailtool.h
+        createmailtool/createmailtool.cpp
+        createmailtool/createmailtooljob.h
+        createmailtool/createmailtooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
@@ -67,6 +71,7 @@ target_link_libraries(
     KF6::CalendarCore
     KPim6::AkonadiMime
     KF6::Mime
+    KPim6::IdentityManagementCore
 )
 
 install(
