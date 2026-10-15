@@ -5,36 +5,14 @@
 */
 
 #include "createmailtool.h"
+#include "common/toolutils.h"
 #include "createmailtooljob.h"
 #include <KLocalizedString>
-#include <QJsonArray>
 #include <QJsonValue>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
-namespace
-{
-bool readStringList(const QJsonValue &value, QStringList &list)
-{
-    if (value.isUndefined() || value.isNull()) {
-        return true;
-    }
-    if (!value.isArray()) {
-        return false;
-    }
-    const QJsonArray array = value.toArray();
-    for (const QJsonValue &element : array) {
-        if (!element.isString()) {
-            return false;
-        }
-        if (const QString str = element.toString().trimmed(); !str.isEmpty()) {
-            list.append(str);
-        }
-    }
-    return true;
-}
-}
 
 CreateMailTool::CreateMailTool() = default;
 CreateMailTool::~CreateMailTool() = default;
@@ -71,17 +49,17 @@ void CreateMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServer
     }
 
     QStringList to;
-    if (!readStringList(arguments.value(u"to"_s), to)) {
+    if (!ToolUtils::readStringList(arguments.value(u"to"_s), to)) {
         call->finishWithText(i18n("Argument to must be an array of strings"), true);
         return;
     }
     QStringList cc;
-    if (!readStringList(arguments.value(u"cc"_s), cc)) {
+    if (!ToolUtils::readStringList(arguments.value(u"cc"_s), cc)) {
         call->finishWithText(i18n("Argument cc must be an array of strings"), true);
         return;
     }
     QStringList bcc;
-    if (!readStringList(arguments.value(u"bcc"_s), bcc)) {
+    if (!ToolUtils::readStringList(arguments.value(u"bcc"_s), bcc)) {
         call->finishWithText(i18n("Argument bcc must be an array of strings"), true);
         return;
     }

@@ -15,6 +15,8 @@ target_sources(
         akonadimcpprotocolmanager.cpp
         common/tooljobbase.h
         common/tooljobbase.cpp
+        common/toolutils.h
+        common/toolutils.cpp
         contactsearchtool/contactsearchtool.h
         contactsearchtool/contactsearchtool.cpp
         contactsearchtool/contactsearchtooljob.h

@@ -5,38 +5,16 @@
 */
 
 #include "createcontacttool.h"
+#include "common/toolutils.h"
 #include "createcontacttooljob.h"
 #include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <QDate>
-#include <QJsonArray>
 #include <QJsonValue>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
-namespace
-{
-bool readStringList(const QJsonValue &value, QStringList &list)
-{
-    if (value.isUndefined() || value.isNull()) {
-        return true;
-    }
-    if (!value.isArray()) {
-        return false;
-    }
-    const QJsonArray array = value.toArray();
-    for (const QJsonValue &element : array) {
-        if (!element.isString()) {
-            return false;
-        }
-        if (const QString str = element.toString().trimmed(); !str.isEmpty()) {
-            list.append(str);
-        }
-    }
-    return true;
-}
-}
 
 CreateContactTool::CreateContactTool() = default;
 CreateContactTool::~CreateContactTool() = default;
@@ -84,14 +62,14 @@ void CreateContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
     contact.setFormattedName(name);
 
     QStringList emails;
-    if (!readStringList(arguments.value(u"emails"_s), emails)) {
+    if (!ToolUtils::readStringList(arguments.value(u"emails"_s), emails)) {
         call->finishWithText(i18n("Argument emails must be an array of strings"), true);
         return;
     }
     contact.setEmails(emails);
 
     QStringList phoneNumbers;
-    if (!readStringList(arguments.value(u"phone_numbers"_s), phoneNumbers)) {
+    if (!ToolUtils::readStringList(arguments.value(u"phone_numbers"_s), phoneNumbers)) {
         call->finishWithText(i18n("Argument phone_numbers must be an array of strings"), true);
         return;
     }
