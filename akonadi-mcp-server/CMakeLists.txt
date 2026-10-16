@@ -17,6 +17,8 @@ target_sources(
         common/tooljobbase.cpp
         common/toolutils.h
         common/toolutils.cpp
+        common/kmaildbustooljobbase.h
+        common/kmaildbustooljobbase.cpp
         contactsearchtool/contactsearchtool.h
         contactsearchtool/contactsearchtool.cpp
         contactsearchtool/contactsearchtooljob.h

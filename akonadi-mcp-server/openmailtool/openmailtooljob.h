@@ -5,11 +5,9 @@
 */
 #pragma once
 
-#include "common/tooljobbase.h"
+#include "common/kmaildbustooljobbase.h"
 
-class QDBusPendingCallWatcher;
-
-class OpenMailToolJob : public ToolJobBase
+class OpenMailToolJob : public KMailDBusToolJobBase
 {
     Q_OBJECT
 public:
@@ -21,11 +19,11 @@ public:
     [[nodiscard]] bool canStart() const override;
 
 protected:
-    void startJob() override;
     [[nodiscard]] QString invalidArgumentsMessage() const override;
+    [[nodiscard]] QDBusMessage kmailMethodCall() const override;
+    [[nodiscard]] QString kmailCallErrorMessage(const QString &error) const override;
+    void kmailCallFinished(const QDBusPendingCall &reply) override;
 
 private:
-    void slotKMailStarted(QDBusPendingCallWatcher *watcher);
-    void slotShowMailResult(QDBusPendingCallWatcher *watcher);
     qint64 mItemId = -1;
 };
