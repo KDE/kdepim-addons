@@ -125,7 +125,10 @@ void CreateMailToolJob::slotItemCreateResult(KJob *job)
         return;
     }
     const Akonadi::Item item = qobject_cast<Akonadi::ItemCreateJob *>(job)->item();
-    finish(i18n("Mail \"%1\" created in folder \"%2\" (item id: %3)", mSubject, job->property("folderName").toString(), QString::number(item.id())));
+    finish(i18n("Mail \"%1\" created in folder \"%2\" (item id: %3). It can be opened with open_mail",
+                mSubject,
+                job->property("folderName").toString(),
+                QString::number(item.id())));
 }
 
 #include "moc_createmailtooljob.cpp"
