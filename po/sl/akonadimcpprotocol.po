@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:48+0000\n"
 "PO-Revision-Date: 2026-10-14 09:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -11,21 +11,27 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
-"%100<=4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Generator: Lokalize 26.08.1\n"
 
-#: akonadimcpprotocolmanager.cpp:32
+#: akonadimcpprotocolmanager.cpp:36
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Upravljanje informacij iz Akonadija"
 
-#: calendarcommon/calendartooljobbase.cpp:34
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:43
 #, kde-format
-msgid "Invalid arguments"
-msgstr "Neveljavni argumenti"
+msgid "Akonadi Resources Status"
+msgstr ""
 
-#: calendarcommon/calendartooljobbase.cpp:68
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:66
+#, fuzzy, kde-format
+#| msgid "No address book found"
+msgid "No Akonadi resource found"
+msgstr "Adresar ni najden"
+
+#: calendarcommon/calendartooljobbase.cpp:33
 #, kde-format
 msgid "Calendar fetch failed: %1"
 msgstr "Pridobivanje koledarja ni uspelo: %1"
@@ -64,34 +70,40 @@ msgstr "Obdobje ne sme presegati %1 dni"
 msgid "No event between %1 and %2"
 msgstr "Ni dogodkov med %1 in %2"
 
+#: common/tooljobbase.cpp:37
+#, kde-format
+msgid "Invalid arguments"
+msgstr "Neveljavni argumenti"
+
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:30
 #, kde-format
 msgid "Search Contact Group"
 msgstr "Iskanje skupine stikov"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:39
-#: contactsearchtool/contactsearchtool.cpp:42
+#: contactsearchtool/contactsearchtool.cpp:42 mailsearch/searchmailtool.cpp:50
 #, kde-format
 msgid "Argument query must be a non-empty string"
 msgstr "Argument query mora biti neprazen niz"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:38
-#: contactsearchtool/contactsearchtooljob.cpp:43
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:34
+#: contactsearchtool/contactsearchtooljob.cpp:38
+#: mailsearch/searchmailtooljob.cpp:57
 #, kde-format
 msgid "Search string must be a non-empty string"
 msgstr "Iskalni niz mora biti neprazen niz"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:82
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:47
 #, kde-format
 msgid "Contact group search failed: %1"
 msgstr "Iskanje skupine stikov ni uspelo: %1"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:87
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
 #, kde-format
 msgid "No contact group found for \"%1\""
 msgstr "Za \"%1\" ni bilo najdene nobene skupine stikov"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:114
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
 #, kde-format
 msgid "%1: expand failed: %2"
 msgstr "%1: razširitev ni uspela: %2"
@@ -111,15 +123,153 @@ msgstr "Neznano polje stika: %1"
 msgid "Argument fields must be an array"
 msgstr "Argument fields mora biti polje"
 
-#: contactsearchtool/contactsearchtooljob.cpp:76
+#: contactsearchtool/contactsearchtooljob.cpp:51
 #, kde-format
 msgid "Contact search failed: %1"
 msgstr "Iskanje stika ni uspelo: %1"
 
-#: contactsearchtool/contactsearchtooljob.cpp:82
+#: contactsearchtool/contactsearchtooljob.cpp:56
 #, kde-format
 msgid "No contact found for \"%1\""
 msgstr "Za \"%1\" ni najdenega nobenega stika"
+
+#: createcontacttool/createcontacttool.cpp:46
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Create Contact"
+msgstr "Iskanje stikov"
+
+#: createcontacttool/createcontacttool.cpp:56
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument name must be a non-empty string"
+msgstr "Argument query mora biti neprazen niz"
+
+#: createcontacttool/createcontacttool.cpp:66
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument emails must be an array of strings"
+msgstr "Argument fields mora biti polje"
+
+#: createcontacttool/createcontacttool.cpp:73
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument phone_numbers must be an array of strings"
+msgstr "Argument fields mora biti polje"
+
+#: createcontacttool/createcontacttool.cpp:89
+#, kde-format
+msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:100
+#, fuzzy, kde-format
+#| msgid "Number of days must be a positive integer"
+msgid "Argument address_book_id must be a positive integer"
+msgstr "Število dni mora biti pozitivno celo število"
+
+#: createcontacttool/createcontacttool.cpp:104
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument address_book_id must be an integer"
+msgstr "Argument days mora biti celo število"
+
+#: createcontacttool/createcontacttooljob.cpp:40
+#, kde-format
+msgid "Contact is empty"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:59
+#: listaddressbooks/listaddressbookstooljob.cpp:33
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr "Pridobivanje adresarja ni uspelo: %1"
+
+#: createcontacttool/createcontacttooljob.cpp:72
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contacts"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:74
+#, fuzzy, kde-format
+#| msgid "No address book found"
+msgid "No writable address book found"
+msgstr "Adresar ni najden"
+
+#: createcontacttool/createcontacttooljob.cpp:92
+#, fuzzy, kde-format
+#| msgid "Contact fetch failed: %1"
+msgid "Contact creation failed: %1"
+msgstr "Pridobivanje stika ni uspelo: %1"
+
+#: createcontacttool/createcontacttooljob.cpp:96
+#, kde-format
+msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:37
+#, kde-format
+msgid "Create Mail"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:47
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument subject must be a non-empty string"
+msgstr "Argument query mora biti neprazen niz"
+
+#: createmailtool/createmailtool.cpp:53
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument to must be an array of strings"
+msgstr "Argument fields mora biti polje"
+
+#: createmailtool/createmailtool.cpp:58
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument cc must be an array of strings"
+msgstr "Argument fields mora biti polje"
+
+#: createmailtool/createmailtool.cpp:63
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument bcc must be an array of strings"
+msgstr "Argument fields mora biti polje"
+
+#: createmailtool/createmailtool.cpp:69
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument body must be a string"
+msgstr "Argument days mora biti celo število"
+
+#: createmailtool/createmailtooljob.cpp:60
+#, fuzzy, kde-format
+#| msgid "Search string must be a non-empty string"
+msgid "Subject must be a non-empty string"
+msgstr "Iskalni niz mora biti neprazen niz"
+
+#: createmailtool/createmailtooljob.cpp:73
+#, fuzzy, kde-format
+#| msgid "Calendar fetch failed: %1"
+msgid "Drafts folder fetch failed: %1"
+msgstr "Pridobivanje koledarja ni uspelo: %1"
+
+#: createmailtool/createmailtooljob.cpp:78
+#, fuzzy, kde-format
+#| msgid "No to-do found"
+msgid "No Drafts folder found"
+msgstr "Opravila ni najdenega"
+
+#: createmailtool/createmailtooljob.cpp:124
+#, fuzzy, kde-format
+#| msgid "Calendar fetch failed: %1"
+msgid "Mail creation failed: %1"
+msgstr "Pridobivanje koledarja ni uspelo: %1"
+
+#: createmailtool/createmailtooljob.cpp:128
+#, kde-format
+msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgstr ""
 
 #: freebusytool/freebusytool.cpp:42
 #, kde-format
@@ -136,15 +286,57 @@ msgstr "Prost v celotnem obdobju od %1 do %2"
 msgid "List Address Books"
 msgstr "Seznam adresarjev"
 
-#: listaddressbooks/listaddressbookstooljob.cpp:65
-#, kde-format
-msgid "Address book fetch failed: %1"
-msgstr "Pridobivanje adresarja ni uspelo: %1"
-
-#: listaddressbooks/listaddressbookstooljob.cpp:87
+#: listaddressbooks/listaddressbookstooljob.cpp:54
 #, kde-format
 msgid "No address book found"
 msgstr "Adresar ni najden"
+
+#: mailsearch/searchmailtool.cpp:40
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Search Mail"
+msgstr "Iskanje stikov"
+
+#: mailsearch/searchmailtool.cpp:69
+#, fuzzy, kde-format
+#| msgid "Unknown contact field: %1"
+msgid "Unknown mail field: %1"
+msgstr "Neznano polje stika: %1"
+
+#: mailsearch/searchmailtool.cpp:73
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument field must be a string"
+msgstr "Argument fields mora biti polje"
+
+#: mailsearch/searchmailtool.cpp:82
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer between 1 and %1"
+msgid "Argument limit must be an integer between 1 and %1"
+msgstr "Argument days mora biti celo število med 1 in %1"
+
+#: mailsearch/searchmailtool.cpp:86
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument limit must be an integer"
+msgstr "Argument days mora biti celo število"
+
+#: mailsearch/searchmailtooljob.cpp:97
+#, fuzzy, kde-format
+#| msgid "Contact search failed: %1"
+msgid "Mail search failed: %1"
+msgstr "Iskanje stika ni uspelo: %1"
+
+#: mailsearch/searchmailtooljob.cpp:113
+#, kde-format
+msgid "(No subject)"
+msgstr ""
+
+#: mailsearch/searchmailtooljob.cpp:136
+#, fuzzy, kde-format
+#| msgid "No contact found for \"%1\""
+msgid "No mail found for \"%1\""
+msgstr "Za \"%1\" ni najdenega nobenega stika"
 
 #: main.cpp:23
 #, kde-format
@@ -192,17 +384,17 @@ msgstr "Argument days mora biti celo število med 1 in %1"
 msgid "Argument days must be an integer"
 msgstr "Argument days mora biti celo število"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:59
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
 #, kde-format
 msgid "Number of days must be a positive integer"
 msgstr "Število dni mora biti pozitivno celo število"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:93
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
 #, kde-format
 msgid "Contact fetch failed: %1"
 msgstr "Pridobivanje stika ni uspelo: %1"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:125
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
 msgid_plural "No birthday in the next %1 days"

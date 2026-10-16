@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:48+0000\n"
 "PO-Revision-Date: 2026-10-14 10:42+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -20,17 +20,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: akonadimcpprotocolmanager.cpp:32
+#: akonadimcpprotocolmanager.cpp:36
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Gestiona la informació d'Akonadi"
 
-#: calendarcommon/calendartooljobbase.cpp:34
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:43
 #, kde-format
-msgid "Invalid arguments"
-msgstr "Arguments no vàlids"
+msgid "Akonadi Resources Status"
+msgstr ""
 
-#: calendarcommon/calendartooljobbase.cpp:68
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:66
+#, fuzzy, kde-format
+#| msgid "No address book found"
+msgid "No Akonadi resource found"
+msgstr "No s'ha trobat cap llibreta d'adreces"
+
+#: calendarcommon/calendartooljobbase.cpp:33
 #, kde-format
 msgid "Calendar fetch failed: %1"
 msgstr "Ha fallat la recuperació del calendari: %1"
@@ -69,34 +75,40 @@ msgstr "El període no pot excedir de %1 dies"
 msgid "No event between %1 and %2"
 msgstr "No hi ha cap esdeveniment entre %1 i %2"
 
+#: common/tooljobbase.cpp:37
+#, kde-format
+msgid "Invalid arguments"
+msgstr "Arguments no vàlids"
+
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:30
 #, kde-format
 msgid "Search Contact Group"
 msgstr "Busca un grup de contactes"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:39
-#: contactsearchtool/contactsearchtool.cpp:42
+#: contactsearchtool/contactsearchtool.cpp:42 mailsearch/searchmailtool.cpp:50
 #, kde-format
 msgid "Argument query must be a non-empty string"
 msgstr "L'argument consulta ha de ser una cadena no buida"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:38
-#: contactsearchtool/contactsearchtooljob.cpp:43
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:34
+#: contactsearchtool/contactsearchtooljob.cpp:38
+#: mailsearch/searchmailtooljob.cpp:57
 #, kde-format
 msgid "Search string must be a non-empty string"
 msgstr "La cadena de busca ha de ser una cadena no buida"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:82
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:47
 #, kde-format
 msgid "Contact group search failed: %1"
 msgstr "No s'ha pogut fer la busca del grup de contactes: %1"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:87
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
 #, kde-format
 msgid "No contact group found for \"%1\""
 msgstr "No s'ha trobat cap grup de contactes per a «%1»"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:114
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
 #, kde-format
 msgid "%1: expand failed: %2"
 msgstr "%1: ha fallat l'expansió: %2"
@@ -116,15 +128,153 @@ msgstr "Camp desconegut de contacte: %1"
 msgid "Argument fields must be an array"
 msgstr "L'argument camps han de ser una matriu"
 
-#: contactsearchtool/contactsearchtooljob.cpp:76
+#: contactsearchtool/contactsearchtooljob.cpp:51
 #, kde-format
 msgid "Contact search failed: %1"
 msgstr "No s'ha pogut fer la busca del contacte: %1"
 
-#: contactsearchtool/contactsearchtooljob.cpp:82
+#: contactsearchtool/contactsearchtooljob.cpp:56
 #, kde-format
 msgid "No contact found for \"%1\""
 msgstr "No s'ha trobat cap contacte per a «%1»"
+
+#: createcontacttool/createcontacttool.cpp:46
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Create Contact"
+msgstr "Busca contactes"
+
+#: createcontacttool/createcontacttool.cpp:56
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument name must be a non-empty string"
+msgstr "L'argument consulta ha de ser una cadena no buida"
+
+#: createcontacttool/createcontacttool.cpp:66
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument emails must be an array of strings"
+msgstr "L'argument camps han de ser una matriu"
+
+#: createcontacttool/createcontacttool.cpp:73
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument phone_numbers must be an array of strings"
+msgstr "L'argument camps han de ser una matriu"
+
+#: createcontacttool/createcontacttool.cpp:89
+#, kde-format
+msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:100
+#, fuzzy, kde-format
+#| msgid "Number of days must be a positive integer"
+msgid "Argument address_book_id must be a positive integer"
+msgstr "El nombre de dies ha de ser un enter positiu"
+
+#: createcontacttool/createcontacttool.cpp:104
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument address_book_id must be an integer"
+msgstr "L'argument dies ha de ser un enter"
+
+#: createcontacttool/createcontacttooljob.cpp:40
+#, kde-format
+msgid "Contact is empty"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:59
+#: listaddressbooks/listaddressbookstooljob.cpp:33
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr "Ha fallat la recuperació de la llibreta d'adreces: %1"
+
+#: createcontacttool/createcontacttooljob.cpp:72
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contacts"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:74
+#, fuzzy, kde-format
+#| msgid "No address book found"
+msgid "No writable address book found"
+msgstr "No s'ha trobat cap llibreta d'adreces"
+
+#: createcontacttool/createcontacttooljob.cpp:92
+#, fuzzy, kde-format
+#| msgid "Contact fetch failed: %1"
+msgid "Contact creation failed: %1"
+msgstr "Ha fallat la recuperació del contacte: %1"
+
+#: createcontacttool/createcontacttooljob.cpp:96
+#, kde-format
+msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:37
+#, kde-format
+msgid "Create Mail"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:47
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument subject must be a non-empty string"
+msgstr "L'argument consulta ha de ser una cadena no buida"
+
+#: createmailtool/createmailtool.cpp:53
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument to must be an array of strings"
+msgstr "L'argument camps han de ser una matriu"
+
+#: createmailtool/createmailtool.cpp:58
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument cc must be an array of strings"
+msgstr "L'argument camps han de ser una matriu"
+
+#: createmailtool/createmailtool.cpp:63
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument bcc must be an array of strings"
+msgstr "L'argument camps han de ser una matriu"
+
+#: createmailtool/createmailtool.cpp:69
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument body must be a string"
+msgstr "L'argument dies ha de ser un enter"
+
+#: createmailtool/createmailtooljob.cpp:60
+#, fuzzy, kde-format
+#| msgid "Search string must be a non-empty string"
+msgid "Subject must be a non-empty string"
+msgstr "La cadena de busca ha de ser una cadena no buida"
+
+#: createmailtool/createmailtooljob.cpp:73
+#, fuzzy, kde-format
+#| msgid "Calendar fetch failed: %1"
+msgid "Drafts folder fetch failed: %1"
+msgstr "Ha fallat la recuperació del calendari: %1"
+
+#: createmailtool/createmailtooljob.cpp:78
+#, fuzzy, kde-format
+#| msgid "No to-do found"
+msgid "No Drafts folder found"
+msgstr "No s'ha trobat cap tasca pendent"
+
+#: createmailtool/createmailtooljob.cpp:124
+#, fuzzy, kde-format
+#| msgid "Calendar fetch failed: %1"
+msgid "Mail creation failed: %1"
+msgstr "Ha fallat la recuperació del calendari: %1"
+
+#: createmailtool/createmailtooljob.cpp:128
+#, kde-format
+msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgstr ""
 
 #: freebusytool/freebusytool.cpp:42
 #, kde-format
@@ -141,15 +291,57 @@ msgstr "Lliure per a tot el període de %1 a %2"
 msgid "List Address Books"
 msgstr "Llista de llibretes d'adreces"
 
-#: listaddressbooks/listaddressbookstooljob.cpp:65
-#, kde-format
-msgid "Address book fetch failed: %1"
-msgstr "Ha fallat la recuperació de la llibreta d'adreces: %1"
-
-#: listaddressbooks/listaddressbookstooljob.cpp:87
+#: listaddressbooks/listaddressbookstooljob.cpp:54
 #, kde-format
 msgid "No address book found"
 msgstr "No s'ha trobat cap llibreta d'adreces"
+
+#: mailsearch/searchmailtool.cpp:40
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Search Mail"
+msgstr "Busca contactes"
+
+#: mailsearch/searchmailtool.cpp:69
+#, fuzzy, kde-format
+#| msgid "Unknown contact field: %1"
+msgid "Unknown mail field: %1"
+msgstr "Camp desconegut de contacte: %1"
+
+#: mailsearch/searchmailtool.cpp:73
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument field must be a string"
+msgstr "L'argument camps han de ser una matriu"
+
+#: mailsearch/searchmailtool.cpp:82
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer between 1 and %1"
+msgid "Argument limit must be an integer between 1 and %1"
+msgstr "L'argument dies ha de ser un enter entre 1 i %1"
+
+#: mailsearch/searchmailtool.cpp:86
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument limit must be an integer"
+msgstr "L'argument dies ha de ser un enter"
+
+#: mailsearch/searchmailtooljob.cpp:97
+#, fuzzy, kde-format
+#| msgid "Contact search failed: %1"
+msgid "Mail search failed: %1"
+msgstr "No s'ha pogut fer la busca del contacte: %1"
+
+#: mailsearch/searchmailtooljob.cpp:113
+#, kde-format
+msgid "(No subject)"
+msgstr ""
+
+#: mailsearch/searchmailtooljob.cpp:136
+#, fuzzy, kde-format
+#| msgid "No contact found for \"%1\""
+msgid "No mail found for \"%1\""
+msgstr "No s'ha trobat cap contacte per a «%1»"
 
 #: main.cpp:23
 #, kde-format
@@ -197,17 +389,17 @@ msgstr "L'argument dies ha de ser un enter entre 1 i %1"
 msgid "Argument days must be an integer"
 msgstr "L'argument dies ha de ser un enter"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:59
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
 #, kde-format
 msgid "Number of days must be a positive integer"
 msgstr "El nombre de dies ha de ser un enter positiu"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:93
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
 #, kde-format
 msgid "Contact fetch failed: %1"
 msgstr "Ha fallat la recuperació del contacte: %1"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:125
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
 msgid_plural "No birthday in the next %1 days"

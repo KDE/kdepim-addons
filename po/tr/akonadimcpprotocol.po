@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:48+0000\n"
 "PO-Revision-Date: 2026-10-14 19:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -17,17 +17,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 26.08.0\n"
 
-#: akonadimcpprotocolmanager.cpp:32
+#: akonadimcpprotocolmanager.cpp:36
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Akonadi’den gelen bilgiyi yönetin"
 
-#: calendarcommon/calendartooljobbase.cpp:34
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:43
 #, kde-format
-msgid "Invalid arguments"
-msgstr "Geçersiz argümanlar"
+msgid "Akonadi Resources Status"
+msgstr ""
 
-#: calendarcommon/calendartooljobbase.cpp:68
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:66
+#, fuzzy, kde-format
+#| msgid "No address book found"
+msgid "No Akonadi resource found"
+msgstr "Bulunan adres defteri yok"
+
+#: calendarcommon/calendartooljobbase.cpp:33
 #, kde-format
 msgid "Calendar fetch failed: %1"
 msgstr "Takvim getirilemedi: %1"
@@ -67,34 +73,40 @@ msgstr "Dönem, %1 günü aşmamalıdır"
 msgid "No event between %1 and %2"
 msgstr "%1 ve %2 arasında bir etkinlik yok"
 
+#: common/tooljobbase.cpp:37
+#, kde-format
+msgid "Invalid arguments"
+msgstr "Geçersiz argümanlar"
+
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:30
 #, kde-format
 msgid "Search Contact Group"
 msgstr "Kişi Grubu Ara"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:39
-#: contactsearchtool/contactsearchtool.cpp:42
+#: contactsearchtool/contactsearchtool.cpp:42 mailsearch/searchmailtool.cpp:50
 #, kde-format
 msgid "Argument query must be a non-empty string"
 msgstr "Argüman sorgusu, boş olmayan bir dizi olmalıdır"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:38
-#: contactsearchtool/contactsearchtooljob.cpp:43
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:34
+#: contactsearchtool/contactsearchtooljob.cpp:38
+#: mailsearch/searchmailtooljob.cpp:57
 #, kde-format
 msgid "Search string must be a non-empty string"
 msgstr "Aranacak dizi, boş olmayan bir dizi olmalıdır"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:82
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:47
 #, kde-format
 msgid "Contact group search failed: %1"
 msgstr "Kişi grubu araması yapılamadı: %1"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:87
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
 #, kde-format
 msgid "No contact group found for \"%1\""
 msgstr "“%1” için bir kişi grubu bulunamadı"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:114
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
 #, kde-format
 msgid "%1: expand failed: %2"
 msgstr "%1: Genişletme başarısız: %2"
@@ -114,15 +126,153 @@ msgstr "Bilinmeyen kişi alanı: %1"
 msgid "Argument fields must be an array"
 msgstr "Argüman alanları bir diziliş olmalıdır"
 
-#: contactsearchtool/contactsearchtooljob.cpp:76
+#: contactsearchtool/contactsearchtooljob.cpp:51
 #, kde-format
 msgid "Contact search failed: %1"
 msgstr "Kişi araması yapılamadı: %1"
 
-#: contactsearchtool/contactsearchtooljob.cpp:82
+#: contactsearchtool/contactsearchtooljob.cpp:56
 #, kde-format
 msgid "No contact found for \"%1\""
 msgstr "“%1” için bir kişi bulunamadı"
+
+#: createcontacttool/createcontacttool.cpp:46
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Create Contact"
+msgstr "Kişileri Ara"
+
+#: createcontacttool/createcontacttool.cpp:56
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument name must be a non-empty string"
+msgstr "Argüman sorgusu, boş olmayan bir dizi olmalıdır"
+
+#: createcontacttool/createcontacttool.cpp:66
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument emails must be an array of strings"
+msgstr "Argüman alanları bir diziliş olmalıdır"
+
+#: createcontacttool/createcontacttool.cpp:73
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument phone_numbers must be an array of strings"
+msgstr "Argüman alanları bir diziliş olmalıdır"
+
+#: createcontacttool/createcontacttool.cpp:89
+#, kde-format
+msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:100
+#, fuzzy, kde-format
+#| msgid "Number of days must be a positive integer"
+msgid "Argument address_book_id must be a positive integer"
+msgstr "Gün sayısı, pozitif bir tam sayı olmalıdır"
+
+#: createcontacttool/createcontacttool.cpp:104
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument address_book_id must be an integer"
+msgstr "days argümanı, bir tam sayı olmalıdır"
+
+#: createcontacttool/createcontacttooljob.cpp:40
+#, kde-format
+msgid "Contact is empty"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:59
+#: listaddressbooks/listaddressbookstooljob.cpp:33
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr "Adres defteri getirilemedi: %1"
+
+#: createcontacttool/createcontacttooljob.cpp:72
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contacts"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:74
+#, fuzzy, kde-format
+#| msgid "No address book found"
+msgid "No writable address book found"
+msgstr "Bulunan adres defteri yok"
+
+#: createcontacttool/createcontacttooljob.cpp:92
+#, fuzzy, kde-format
+#| msgid "Contact fetch failed: %1"
+msgid "Contact creation failed: %1"
+msgstr "Kişi getirilemedi: %1"
+
+#: createcontacttool/createcontacttooljob.cpp:96
+#, kde-format
+msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:37
+#, kde-format
+msgid "Create Mail"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:47
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument subject must be a non-empty string"
+msgstr "Argüman sorgusu, boş olmayan bir dizi olmalıdır"
+
+#: createmailtool/createmailtool.cpp:53
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument to must be an array of strings"
+msgstr "Argüman alanları bir diziliş olmalıdır"
+
+#: createmailtool/createmailtool.cpp:58
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument cc must be an array of strings"
+msgstr "Argüman alanları bir diziliş olmalıdır"
+
+#: createmailtool/createmailtool.cpp:63
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument bcc must be an array of strings"
+msgstr "Argüman alanları bir diziliş olmalıdır"
+
+#: createmailtool/createmailtool.cpp:69
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument body must be a string"
+msgstr "days argümanı, bir tam sayı olmalıdır"
+
+#: createmailtool/createmailtooljob.cpp:60
+#, fuzzy, kde-format
+#| msgid "Search string must be a non-empty string"
+msgid "Subject must be a non-empty string"
+msgstr "Aranacak dizi, boş olmayan bir dizi olmalıdır"
+
+#: createmailtool/createmailtooljob.cpp:73
+#, fuzzy, kde-format
+#| msgid "Calendar fetch failed: %1"
+msgid "Drafts folder fetch failed: %1"
+msgstr "Takvim getirilemedi: %1"
+
+#: createmailtool/createmailtooljob.cpp:78
+#, fuzzy, kde-format
+#| msgid "No to-do found"
+msgid "No Drafts folder found"
+msgstr "Bulunan yapılacak iş yok"
+
+#: createmailtool/createmailtooljob.cpp:124
+#, fuzzy, kde-format
+#| msgid "Calendar fetch failed: %1"
+msgid "Mail creation failed: %1"
+msgstr "Takvim getirilemedi: %1"
+
+#: createmailtool/createmailtooljob.cpp:128
+#, kde-format
+msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgstr ""
 
 #: freebusytool/freebusytool.cpp:42
 #, kde-format
@@ -139,15 +289,57 @@ msgstr "%1 ve %2 arasındaki tüm dönem için uygun"
 msgid "List Address Books"
 msgstr "Adres Defterlerini Listele"
 
-#: listaddressbooks/listaddressbookstooljob.cpp:65
-#, kde-format
-msgid "Address book fetch failed: %1"
-msgstr "Adres defteri getirilemedi: %1"
-
-#: listaddressbooks/listaddressbookstooljob.cpp:87
+#: listaddressbooks/listaddressbookstooljob.cpp:54
 #, kde-format
 msgid "No address book found"
 msgstr "Bulunan adres defteri yok"
+
+#: mailsearch/searchmailtool.cpp:40
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Search Mail"
+msgstr "Kişileri Ara"
+
+#: mailsearch/searchmailtool.cpp:69
+#, fuzzy, kde-format
+#| msgid "Unknown contact field: %1"
+msgid "Unknown mail field: %1"
+msgstr "Bilinmeyen kişi alanı: %1"
+
+#: mailsearch/searchmailtool.cpp:73
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument field must be a string"
+msgstr "Argüman alanları bir diziliş olmalıdır"
+
+#: mailsearch/searchmailtool.cpp:82
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer between 1 and %1"
+msgid "Argument limit must be an integer between 1 and %1"
+msgstr "days argümanı, 1 ile %1 arasında bir tam sayı olmalıdır"
+
+#: mailsearch/searchmailtool.cpp:86
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument limit must be an integer"
+msgstr "days argümanı, bir tam sayı olmalıdır"
+
+#: mailsearch/searchmailtooljob.cpp:97
+#, fuzzy, kde-format
+#| msgid "Contact search failed: %1"
+msgid "Mail search failed: %1"
+msgstr "Kişi araması yapılamadı: %1"
+
+#: mailsearch/searchmailtooljob.cpp:113
+#, kde-format
+msgid "(No subject)"
+msgstr ""
+
+#: mailsearch/searchmailtooljob.cpp:136
+#, fuzzy, kde-format
+#| msgid "No contact found for \"%1\""
+msgid "No mail found for \"%1\""
+msgstr "“%1” için bir kişi bulunamadı"
 
 #: main.cpp:23
 #, kde-format
@@ -195,17 +387,17 @@ msgstr "days argümanı, 1 ile %1 arasında bir tam sayı olmalıdır"
 msgid "Argument days must be an integer"
 msgstr "days argümanı, bir tam sayı olmalıdır"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:59
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
 #, kde-format
 msgid "Number of days must be a positive integer"
 msgstr "Gün sayısı, pozitif bir tam sayı olmalıdır"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:93
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
 #, kde-format
 msgid "Contact fetch failed: %1"
 msgstr "Kişi getirilemedi: %1"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:125
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
 msgid_plural "No birthday in the next %1 days"

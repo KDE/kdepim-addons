@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:48+0000\n"
 "PO-Revision-Date: 2026-10-13 07:16+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -16,17 +16,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: akonadimcpprotocolmanager.cpp:32
+#: akonadimcpprotocolmanager.cpp:36
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr ""
 
-#: calendarcommon/calendartooljobbase.cpp:34
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:43
 #, kde-format
-msgid "Invalid arguments"
+msgid "Akonadi Resources Status"
 msgstr ""
 
-#: calendarcommon/calendartooljobbase.cpp:68
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:66
+#, kde-format
+msgid "No Akonadi resource found"
+msgstr ""
+
+#: calendarcommon/calendartooljobbase.cpp:33
 #, kde-format
 msgid "Calendar fetch failed: %1"
 msgstr ""
@@ -65,34 +70,40 @@ msgstr ""
 msgid "No event between %1 and %2"
 msgstr ""
 
+#: common/tooljobbase.cpp:37
+#, kde-format
+msgid "Invalid arguments"
+msgstr ""
+
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:30
 #, kde-format
 msgid "Search Contact Group"
 msgstr ""
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:39
-#: contactsearchtool/contactsearchtool.cpp:42
+#: contactsearchtool/contactsearchtool.cpp:42 mailsearch/searchmailtool.cpp:50
 #, kde-format
 msgid "Argument query must be a non-empty string"
 msgstr ""
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:38
-#: contactsearchtool/contactsearchtooljob.cpp:43
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:34
+#: contactsearchtool/contactsearchtooljob.cpp:38
+#: mailsearch/searchmailtooljob.cpp:57
 #, kde-format
 msgid "Search string must be a non-empty string"
 msgstr ""
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:82
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:47
 #, kde-format
 msgid "Contact group search failed: %1"
 msgstr ""
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:87
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
 #, kde-format
 msgid "No contact group found for \"%1\""
 msgstr ""
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:114
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
 #, kde-format
 msgid "%1: expand failed: %2"
 msgstr ""
@@ -112,14 +123,135 @@ msgstr ""
 msgid "Argument fields must be an array"
 msgstr ""
 
-#: contactsearchtool/contactsearchtooljob.cpp:76
+#: contactsearchtool/contactsearchtooljob.cpp:51
 #, kde-format
 msgid "Contact search failed: %1"
 msgstr ""
 
-#: contactsearchtool/contactsearchtooljob.cpp:82
+#: contactsearchtool/contactsearchtooljob.cpp:56
 #, kde-format
 msgid "No contact found for \"%1\""
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:46
+#, kde-format
+msgid "Create Contact"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:56
+#, kde-format
+msgid "Argument name must be a non-empty string"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:66
+#, kde-format
+msgid "Argument emails must be an array of strings"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:73
+#, kde-format
+msgid "Argument phone_numbers must be an array of strings"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:89
+#, kde-format
+msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:100
+#, kde-format
+msgid "Argument address_book_id must be a positive integer"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:104
+#, kde-format
+msgid "Argument address_book_id must be an integer"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:40
+#, kde-format
+msgid "Contact is empty"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:59
+#: listaddressbooks/listaddressbookstooljob.cpp:33
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:72
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contacts"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:74
+#, kde-format
+msgid "No writable address book found"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:92
+#, kde-format
+msgid "Contact creation failed: %1"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:96
+#, kde-format
+msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:37
+#, kde-format
+msgid "Create Mail"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:47
+#, kde-format
+msgid "Argument subject must be a non-empty string"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:53
+#, kde-format
+msgid "Argument to must be an array of strings"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:58
+#, kde-format
+msgid "Argument cc must be an array of strings"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:63
+#, kde-format
+msgid "Argument bcc must be an array of strings"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:69
+#, kde-format
+msgid "Argument body must be a string"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:60
+#, kde-format
+msgid "Subject must be a non-empty string"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:73
+#, kde-format
+msgid "Drafts folder fetch failed: %1"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:78
+#, kde-format
+msgid "No Drafts folder found"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:124
+#, kde-format
+msgid "Mail creation failed: %1"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:128
+#, kde-format
+msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
 msgstr ""
 
 #: freebusytool/freebusytool.cpp:42
@@ -137,14 +269,49 @@ msgstr ""
 msgid "List Address Books"
 msgstr ""
 
-#: listaddressbooks/listaddressbookstooljob.cpp:65
-#, kde-format
-msgid "Address book fetch failed: %1"
-msgstr ""
-
-#: listaddressbooks/listaddressbookstooljob.cpp:87
+#: listaddressbooks/listaddressbookstooljob.cpp:54
 #, kde-format
 msgid "No address book found"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:40
+#, kde-format
+msgid "Search Mail"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:69
+#, kde-format
+msgid "Unknown mail field: %1"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:73
+#, kde-format
+msgid "Argument field must be a string"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:82
+#, kde-format
+msgid "Argument limit must be an integer between 1 and %1"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:86
+#, kde-format
+msgid "Argument limit must be an integer"
+msgstr ""
+
+#: mailsearch/searchmailtooljob.cpp:97
+#, kde-format
+msgid "Mail search failed: %1"
+msgstr ""
+
+#: mailsearch/searchmailtooljob.cpp:113
+#, kde-format
+msgid "(No subject)"
+msgstr ""
+
+#: mailsearch/searchmailtooljob.cpp:136
+#, kde-format
+msgid "No mail found for \"%1\""
 msgstr ""
 
 #: main.cpp:23
@@ -193,17 +360,17 @@ msgstr ""
 msgid "Argument days must be an integer"
 msgstr ""
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:59
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
 #, kde-format
 msgid "Number of days must be a positive integer"
 msgstr ""
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:93
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
 #, kde-format
 msgid "Contact fetch failed: %1"
 msgstr ""
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:125
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
 msgid_plural "No birthday in the next %1 days"

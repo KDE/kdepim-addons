@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:48+0000\n"
 "PO-Revision-Date: 2026-10-14 17:16+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -18,17 +18,23 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: akonadimcpprotocolmanager.cpp:32
+#: akonadimcpprotocolmanager.cpp:36
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Керування даними від Akonadi"
 
-#: calendarcommon/calendartooljobbase.cpp:34
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:43
 #, kde-format
-msgid "Invalid arguments"
-msgstr "Некоректні параметри"
+msgid "Akonadi Resources Status"
+msgstr ""
 
-#: calendarcommon/calendartooljobbase.cpp:68
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:66
+#, fuzzy, kde-format
+#| msgid "No address book found"
+msgid "No Akonadi resource found"
+msgstr "Не знайдено адресних книг"
+
+#: calendarcommon/calendartooljobbase.cpp:33
 #, kde-format
 msgid "Calendar fetch failed: %1"
 msgstr "Не вдалося отримати календар: %1"
@@ -70,34 +76,40 @@ msgstr "Період не повинен перевищувати %1 днів"
 msgid "No event between %1 and %2"
 msgstr "Немає подій від %1 до %2"
 
+#: common/tooljobbase.cpp:37
+#, kde-format
+msgid "Invalid arguments"
+msgstr "Некоректні параметри"
+
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:30
 #, kde-format
 msgid "Search Contact Group"
 msgstr "Шукати групу контактів"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:39
-#: contactsearchtool/contactsearchtool.cpp:42
+#: contactsearchtool/contactsearchtool.cpp:42 mailsearch/searchmailtool.cpp:50
 #, kde-format
 msgid "Argument query must be a non-empty string"
 msgstr "Аргумент запиту має бути непорожнім рядком"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:38
-#: contactsearchtool/contactsearchtooljob.cpp:43
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:34
+#: contactsearchtool/contactsearchtooljob.cpp:38
+#: mailsearch/searchmailtooljob.cpp:57
 #, kde-format
 msgid "Search string must be a non-empty string"
 msgstr "Рядок пошуку має бути непорожнім рядком"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:82
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:47
 #, kde-format
 msgid "Contact group search failed: %1"
 msgstr "Не вдалося виконати пошук групи контактів: %1"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:87
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
 #, kde-format
 msgid "No contact group found for \"%1\""
 msgstr "Не знайдено групи контактів для запиту «%1»"
 
-#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:114
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
 #, kde-format
 msgid "%1: expand failed: %2"
 msgstr "%1: не вдалося розгорнути: %2"
@@ -117,15 +129,153 @@ msgstr "Невідоме поле запису контакту: %1"
 msgid "Argument fields must be an array"
 msgstr "Аргумент полів має бути масивом"
 
-#: contactsearchtool/contactsearchtooljob.cpp:76
+#: contactsearchtool/contactsearchtooljob.cpp:51
 #, kde-format
 msgid "Contact search failed: %1"
 msgstr "Не вдалося виконати пошук контакту: %1"
 
-#: contactsearchtool/contactsearchtooljob.cpp:82
+#: contactsearchtool/contactsearchtooljob.cpp:56
 #, kde-format
 msgid "No contact found for \"%1\""
 msgstr "Не знайдено контакту для запиту «%1»"
+
+#: createcontacttool/createcontacttool.cpp:46
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Create Contact"
+msgstr "Шукати у контактах"
+
+#: createcontacttool/createcontacttool.cpp:56
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument name must be a non-empty string"
+msgstr "Аргумент запиту має бути непорожнім рядком"
+
+#: createcontacttool/createcontacttool.cpp:66
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument emails must be an array of strings"
+msgstr "Аргумент полів має бути масивом"
+
+#: createcontacttool/createcontacttool.cpp:73
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument phone_numbers must be an array of strings"
+msgstr "Аргумент полів має бути масивом"
+
+#: createcontacttool/createcontacttool.cpp:89
+#, kde-format
+msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:100
+#, fuzzy, kde-format
+#| msgid "Number of days must be a positive integer"
+msgid "Argument address_book_id must be a positive integer"
+msgstr "Кількість днів має бути додатним цілим числом"
+
+#: createcontacttool/createcontacttool.cpp:104
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument address_book_id must be an integer"
+msgstr "Аргумент днів має бути цілим числом"
+
+#: createcontacttool/createcontacttooljob.cpp:40
+#, kde-format
+msgid "Contact is empty"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:59
+#: listaddressbooks/listaddressbookstooljob.cpp:33
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr "Не вдалося отримати адресну книгу: %1"
+
+#: createcontacttool/createcontacttooljob.cpp:72
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contacts"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:74
+#, fuzzy, kde-format
+#| msgid "No address book found"
+msgid "No writable address book found"
+msgstr "Не знайдено адресних книг"
+
+#: createcontacttool/createcontacttooljob.cpp:92
+#, fuzzy, kde-format
+#| msgid "Contact fetch failed: %1"
+msgid "Contact creation failed: %1"
+msgstr "Не вдалося отримати контакти: %1"
+
+#: createcontacttool/createcontacttooljob.cpp:96
+#, kde-format
+msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:37
+#, kde-format
+msgid "Create Mail"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:47
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument subject must be a non-empty string"
+msgstr "Аргумент запиту має бути непорожнім рядком"
+
+#: createmailtool/createmailtool.cpp:53
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument to must be an array of strings"
+msgstr "Аргумент полів має бути масивом"
+
+#: createmailtool/createmailtool.cpp:58
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument cc must be an array of strings"
+msgstr "Аргумент полів має бути масивом"
+
+#: createmailtool/createmailtool.cpp:63
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument bcc must be an array of strings"
+msgstr "Аргумент полів має бути масивом"
+
+#: createmailtool/createmailtool.cpp:69
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument body must be a string"
+msgstr "Аргумент днів має бути цілим числом"
+
+#: createmailtool/createmailtooljob.cpp:60
+#, fuzzy, kde-format
+#| msgid "Search string must be a non-empty string"
+msgid "Subject must be a non-empty string"
+msgstr "Рядок пошуку має бути непорожнім рядком"
+
+#: createmailtool/createmailtooljob.cpp:73
+#, fuzzy, kde-format
+#| msgid "Calendar fetch failed: %1"
+msgid "Drafts folder fetch failed: %1"
+msgstr "Не вдалося отримати календар: %1"
+
+#: createmailtool/createmailtooljob.cpp:78
+#, fuzzy, kde-format
+#| msgid "No to-do found"
+msgid "No Drafts folder found"
+msgstr "Не знайдено завдань"
+
+#: createmailtool/createmailtooljob.cpp:124
+#, fuzzy, kde-format
+#| msgid "Calendar fetch failed: %1"
+msgid "Mail creation failed: %1"
+msgstr "Не вдалося отримати календар: %1"
+
+#: createmailtool/createmailtooljob.cpp:128
+#, kde-format
+msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgstr ""
 
 #: freebusytool/freebusytool.cpp:42
 #, kde-format
@@ -142,15 +292,57 @@ msgstr "Не зайнято увесь період від %1 до %2"
 msgid "List Address Books"
 msgstr "Вивести список адресних книг"
 
-#: listaddressbooks/listaddressbookstooljob.cpp:65
-#, kde-format
-msgid "Address book fetch failed: %1"
-msgstr "Не вдалося отримати адресну книгу: %1"
-
-#: listaddressbooks/listaddressbookstooljob.cpp:87
+#: listaddressbooks/listaddressbookstooljob.cpp:54
 #, kde-format
 msgid "No address book found"
 msgstr "Не знайдено адресних книг"
+
+#: mailsearch/searchmailtool.cpp:40
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Search Mail"
+msgstr "Шукати у контактах"
+
+#: mailsearch/searchmailtool.cpp:69
+#, fuzzy, kde-format
+#| msgid "Unknown contact field: %1"
+msgid "Unknown mail field: %1"
+msgstr "Невідоме поле запису контакту: %1"
+
+#: mailsearch/searchmailtool.cpp:73
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument field must be a string"
+msgstr "Аргумент полів має бути масивом"
+
+#: mailsearch/searchmailtool.cpp:82
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer between 1 and %1"
+msgid "Argument limit must be an integer between 1 and %1"
+msgstr "Аргумент днів має бути цілим числом від 1 до %1"
+
+#: mailsearch/searchmailtool.cpp:86
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument limit must be an integer"
+msgstr "Аргумент днів має бути цілим числом"
+
+#: mailsearch/searchmailtooljob.cpp:97
+#, fuzzy, kde-format
+#| msgid "Contact search failed: %1"
+msgid "Mail search failed: %1"
+msgstr "Не вдалося виконати пошук контакту: %1"
+
+#: mailsearch/searchmailtooljob.cpp:113
+#, kde-format
+msgid "(No subject)"
+msgstr ""
+
+#: mailsearch/searchmailtooljob.cpp:136
+#, fuzzy, kde-format
+#| msgid "No contact found for \"%1\""
+msgid "No mail found for \"%1\""
+msgstr "Не знайдено контакту для запиту «%1»"
 
 #: main.cpp:23
 #, kde-format
@@ -198,17 +390,17 @@ msgstr "Аргумент днів має бути цілим числом від
 msgid "Argument days must be an integer"
 msgstr "Аргумент днів має бути цілим числом"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:59
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
 #, kde-format
 msgid "Number of days must be a positive integer"
 msgstr "Кількість днів має бути додатним цілим числом"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:93
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
 #, kde-format
 msgid "Contact fetch failed: %1"
 msgstr "Не вдалося отримати контакти: %1"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:125
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
 msgid_plural "No birthday in the next %1 days"
