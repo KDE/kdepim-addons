@@ -63,6 +63,10 @@ target_sources(
         createmailtool/createmailtool.cpp
         createmailtool/createmailtooljob.h
         createmailtool/createmailtooljob.cpp
+        openmailtool/openmailtool.h
+        openmailtool/openmailtool.cpp
+        openmailtool/openmailtooljob.h
+        openmailtool/openmailtooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
@@ -74,6 +78,7 @@ target_link_libraries(
     KPim6::AkonadiMime
     KF6::Mime
     KPim6::IdentityManagementCore
+    Qt::DBus
 )
 
 install(

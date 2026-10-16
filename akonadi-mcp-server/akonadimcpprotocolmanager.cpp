@@ -14,6 +14,7 @@
 #include "freebusytool/freebusytool.h"
 #include "listaddressbooks/listaddressbookstool.h"
 #include "mailsearch/searchmailtool.h"
+#include "openmailtool/openmailtool.h"
 #include "todolisttool/todolisttool.h"
 #include "upcomingbirthdaystool/upcomingbirthdaystool.h"
 #include <KLocalizedString>
@@ -47,6 +48,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<CreateContactTool>());
     addTool(std::make_unique<SearchMailTool>());
     addTool(std::make_unique<CreateMailTool>());
+    addTool(std::make_unique<OpenMailTool>());
     // TODO add more
 }
 
