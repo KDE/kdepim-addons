@@ -69,6 +69,10 @@ target_sources(
         openmailtool/openmailtool.cpp
         openmailtool/openmailtooljob.h
         openmailtool/openmailtooljob.cpp
+        replymailtool/replymailtool.h
+        replymailtool/replymailtool.cpp
+        replymailtool/replymailtooljob.h
+        replymailtool/replymailtooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
