@@ -5,6 +5,7 @@
 */
 #include "calendartoolutils.h"
 #include <KCalendarCore/OccurrenceIterator>
+#include <QTimeZone>
 #include <algorithm>
 
 using namespace Qt::Literals::StringLiterals;
@@ -31,6 +32,23 @@ std::optional<QDateTime> CalendarToolUtils::parseDateTime(const QString &str, Da
         return std::nullopt;
     }
     return dateTime;
+}
+
+std::optional<CalendarToolUtils::IncidenceDateTime> CalendarToolUtils::parseIncidenceDateTime(const QString &str)
+{
+    const QString dateTimeStr = str.trimmed();
+    if (dateTimeStr.size() == isoDateLength) {
+        const QDate date = QDate::fromString(dateTimeStr, Qt::ISODate);
+        if (!date.isValid()) {
+            return std::nullopt;
+        }
+        return IncidenceDateTime{date.startOfDay(QTimeZone::systemTimeZone()), true};
+    }
+    const QDateTime dateTime = QDateTime::fromString(dateTimeStr, Qt::ISODate);
+    if (!dateTime.isValid()) {
+        return std::nullopt;
+    }
+    return IncidenceDateTime{dateTime.toTimeZone(QTimeZone::systemTimeZone()), false};
 }
 
 QString CalendarToolUtils::formatDateTime(const QDateTime &dateTime)

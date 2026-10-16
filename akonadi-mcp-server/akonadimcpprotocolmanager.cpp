@@ -10,10 +10,14 @@
 #include "contactgroupexpandtool/contactgroupexpandtool.h"
 #include "contactsearchtool/contactsearchtool.h"
 #include "createcontacttool/createcontacttool.h"
+#include "createeventtool/createeventtool.h"
+#include "createjournaltool/createjournaltool.h"
 #include "createmailtool/createmailtool.h"
+#include "createtodotool/createtodotool.h"
 #include "editmailtool/editmailtool.h"
 #include "freebusytool/freebusytool.h"
 #include "listaddressbooks/listaddressbookstool.h"
+#include "listcalendars/listcalendarstool.h"
 #include "mailsearch/searchmailtool.h"
 #include "openmailtool/openmailtool.h"
 #include "replymailtool/replymailtool.h"
@@ -53,6 +57,10 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<OpenMailTool>());
     addTool(std::make_unique<ReplyMailTool>());
     addTool(std::make_unique<EditMailTool>());
+    addTool(std::make_unique<CreateEventTool>());
+    addTool(std::make_unique<CreateTodoTool>());
+    addTool(std::make_unique<CreateJournalTool>());
+    addTool(std::make_unique<ListCalendarsTool>());
     // TODO add more
 }
 

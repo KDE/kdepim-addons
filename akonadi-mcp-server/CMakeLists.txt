@@ -39,6 +39,8 @@ target_sources(
         calendarcommon/calendartoolutils.cpp
         calendarcommon/calendartooljobbase.h
         calendarcommon/calendartooljobbase.cpp
+        calendarcommon/createincidencetooljob.h
+        calendarcommon/createincidencetooljob.cpp
         calendareventstool/calendareventstool.h
         calendareventstool/calendareventstool.cpp
         calendareventstool/calendareventstooljob.h
@@ -77,6 +79,16 @@ target_sources(
         editmailtool/editmailtool.cpp
         editmailtool/editmailtooljob.h
         editmailtool/editmailtooljob.cpp
+        createeventtool/createeventtool.h
+        createeventtool/createeventtool.cpp
+        createtodotool/createtodotool.h
+        createtodotool/createtodotool.cpp
+        createjournaltool/createjournaltool.h
+        createjournaltool/createjournaltool.cpp
+        listcalendars/listcalendarstool.cpp
+        listcalendars/listcalendarstool.h
+        listcalendars/listcalendarstooljob.cpp
+        listcalendars/listcalendarstooljob.h
 )
 target_link_libraries(
     akonadimcpprotocol
