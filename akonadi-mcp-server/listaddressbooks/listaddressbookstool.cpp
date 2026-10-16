@@ -17,7 +17,7 @@ ListAddressBooksTool::~ListAddressBooksTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListAddressBooksTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool =
-        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"list_address_books"_s, u"List the Akonadi address books"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"contact_list_address_books"_s, u"List the Akonadi address books"_s);
 
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);

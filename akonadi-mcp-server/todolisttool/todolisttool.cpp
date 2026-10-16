@@ -22,7 +22,7 @@ TodoListTool::~TodoListTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool TodoListTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"todo_list"_s,
+        u"calendar_todo_list"_s,
         u"List the to-dos of the Akonadi calendars, sorted by due date and priority"_s,
         QMap<QString, QJsonObject>{
             {u"include_completed"_s,

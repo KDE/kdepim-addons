@@ -23,7 +23,7 @@ UpcomingBirthdaysTool::~UpcomingBirthdaysTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpcomingBirthdaysTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"upcoming_birthdays"_s,
+        u"contact_upcoming_birthdays"_s,
         u"List the contacts of the Akonadi address books whose birthday occurs in the coming days"_s,
         QMap<QString, QJsonObject>{
             {u"days"_s,

@@ -17,7 +17,7 @@ ListCalendarsTool::~ListCalendarsTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListCalendarsTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool =
-        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"list_calendars"_s, u"List the Akonadi calendars"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"calendar_list"_s, u"List the Akonadi calendars"_s);
 
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);

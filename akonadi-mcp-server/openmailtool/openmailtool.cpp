@@ -19,11 +19,11 @@ OpenMailTool::~OpenMailTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool OpenMailTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"open_mail"_s,
+        u"mail_open"_s,
         u"Display a mail in a read-only KMail viewer window, KMail is started if needed. The mail can't be modified there: "
-        u"use edit_mail to modify a draft mail (for example one created with create_mail) and reply_mail to answer a mail"_s,
+        u"use mail_edit to modify a draft mail (for example one created with mail_create) and mail_reply to answer a mail"_s,
         QMap<QString, QJsonObject>{
-            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the mail item (see search_mail or create_mail)"_s)}},
+            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the mail item (see mail_search or mail_create)"_s)}},
         {u"id"_s});
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);

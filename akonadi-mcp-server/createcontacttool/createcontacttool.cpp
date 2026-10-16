@@ -22,7 +22,7 @@ CreateContactTool::~CreateContactTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"create_contact"_s,
+        u"contact_create"_s,
         u"Create a new contact in an Akonadi address book"_s,
         QMap<QString, QJsonObject>{
             {u"name"_s, TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"string"_s, u"Full name of the contact"_s)},
@@ -36,7 +36,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactTool::definiti
             {u"address_book_id"_s,
              McpProtocolServerTool::schemaProperty(
                  u"integer"_s,
-                 u"Identifier of the address book (see list_address_books). If omitted, the first writable address book is used"_s)}},
+                 u"Identifier of the address book (see contact_list_address_books). If omitted, the first writable address book is used"_s)}},
         {u"name"_s});
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(false);

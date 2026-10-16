@@ -23,7 +23,7 @@ FreeBusyTool::~FreeBusyTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool FreeBusyTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"free_busy"_s,
+        u"calendar_free_busy"_s,
         u"Return the busy and free periods of the user in the Akonadi calendars, to know if a time slot is available"_s,
         QMap<QString, QJsonObject>{
             {u"start"_s,

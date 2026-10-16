@@ -83,7 +83,7 @@ void EditMailToolJob::slotDraftsCollectionResult(KJob *job)
     }
     const Akonadi::Collection draftsCollection = qobject_cast<Akonadi::SpecialMailCollectionsRequestJob *>(job)->collection();
     if (!draftsCollection.isValid() || draftsCollection != mParentCollection) {
-        finish(i18n("Mail %1 is not stored in a Drafts folder, it can't be edited. Use open_mail or reply_mail instead", mItemId), true);
+        finish(i18n("Mail %1 is not stored in a Drafts folder, it can't be edited. Use mail_open or mail_reply instead", mItemId), true);
         return;
     }
     KMailDBusToolJobBase::startJob();

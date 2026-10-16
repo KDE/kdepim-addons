@@ -25,7 +25,7 @@ CreateTodoTool::~CreateTodoTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateTodoTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"create_todo"_s,
+        u"calendar_create_todo"_s,
         u"Create a new to-do (task) in an Akonadi calendar"_s,
         QMap<QString, QJsonObject>{
             {u"summary"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Title of the to-do"_s)},
@@ -36,7 +36,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateTodoTool::definition(
             {u"description"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Description of the to-do"_s)},
             {u"calendar_id"_s,
              McpProtocolServerTool::schemaProperty(u"integer"_s,
-                                                   u"Identifier of the calendar (see list_calendars). If omitted, the first writable calendar is used"_s)}},
+                                                   u"Identifier of the calendar (see calendar_list). If omitted, the first writable calendar is used"_s)}},
         {u"summary"_s});
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(false);

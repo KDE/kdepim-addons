@@ -39,10 +39,10 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ReplyMailTool::definition()
         strategies.append(strategyName.name);
     }
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"reply_mail"_s,
+        u"mail_reply"_s,
         u"Open a KMail composer to reply to a mail, KMail is started if needed. The reply is not sent"_s,
         QMap<QString, QJsonObject>{
-            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the mail item (see search_mail)"_s)},
+            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the mail item (see mail_search)"_s)},
             {u"strategy"_s,
              McpProtocolServerTool::schemaEnumProperty(strategies,
                                                        u"Recipients of the reply: smart (guess the best recipient, default), author (only the author), "

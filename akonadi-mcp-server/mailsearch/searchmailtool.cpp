@@ -22,7 +22,7 @@ SearchMailTool::~SearchMailTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool SearchMailTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"search_mail"_s,
+        u"mail_search"_s,
         u"Search mails in the Akonadi mail folders by subject, sender, recipient or body text, most recent first"_s,
         QMap<QString, QJsonObject>{
             {u"query"_s, TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"string"_s, u"Text to search for"_s)},

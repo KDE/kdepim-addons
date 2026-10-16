@@ -22,7 +22,7 @@ CreateJournalTool::~CreateJournalTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateJournalTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"create_journal"_s,
+        u"calendar_create_journal"_s,
         u"Create a new journal entry in an Akonadi calendar"_s,
         QMap<QString, QJsonObject>{
             {u"summary"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Title of the journal entry"_s)},
@@ -33,7 +33,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateJournalTool::definiti
             {u"description"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Text of the journal entry"_s)},
             {u"calendar_id"_s,
              McpProtocolServerTool::schemaProperty(u"integer"_s,
-                                                   u"Identifier of the calendar (see list_calendars). If omitted, the first writable calendar is used"_s)}},
+                                                   u"Identifier of the calendar (see calendar_list). If omitted, the first writable calendar is used"_s)}},
         {u"summary"_s});
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(false);

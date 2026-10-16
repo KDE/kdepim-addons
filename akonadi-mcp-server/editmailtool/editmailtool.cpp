@@ -19,12 +19,12 @@ EditMailTool::~EditMailTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool EditMailTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"edit_mail"_s,
-        u"Open a draft mail in a KMail composer to modify it (subject, recipients, body), KMail is started if needed. Use this tool, not open_mail, to modify "
+        u"mail_edit"_s,
+        u"Open a draft mail in a KMail composer to modify it (subject, recipients, body), KMail is started if needed. Use this tool, not mail_open, to modify "
         u"a mail. Only mails stored in a Drafts folder can be edited "
-        u"(for example the ones created with create_mail), other mails are refused; use open_mail or reply_mail for them"_s,
+        u"(for example the ones created with mail_create), other mails are refused; use mail_open or mail_reply for them"_s,
         QMap<QString, QJsonObject>{
-            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the draft mail item (see create_mail or search_mail)"_s)}},
+            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the draft mail item (see mail_create or mail_search)"_s)}},
         {u"id"_s});
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);

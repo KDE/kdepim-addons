@@ -20,8 +20,8 @@ CreateMailTool::~CreateMailTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateMailTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
-        u"create_mail"_s,
-        u"Create a new mail and store it in the default Drafts folder, the mail is not sent. Use edit_mail to open it in a KMail composer"_s,
+        u"mail_create"_s,
+        u"Create a new mail and store it in the default Drafts folder, the mail is not sent. Use mail_edit to open it in a KMail composer"_s,
         QMap<QString, QJsonObject>{
             {u"subject"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Subject of the mail"_s)},
             {u"to"_s, McpProtocolServerTool::schemaArrayProperty(McpProtocolServerTool::schemaProperty(u"string"_s, {}), u"Recipient addresses"_s)},
