@@ -25,7 +25,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateEventTool::definition
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"create_event"_s,
-        u"Create a new event in the first writable Akonadi calendar"_s,
+        u"Create a new event in an Akonadi calendar"_s,
         QMap<QString, QJsonObject>{
             {u"summary"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Title of the event"_s)},
             {u"start"_s,
@@ -37,7 +37,10 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateEventTool::definition
                  u"string"_s,
                  u"End of the event, same format as start. For an all-day event, the date is the last day of the event. Default: one hour after start, or the same day for an all-day event"_s)},
             {u"location"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Location of the event"_s)},
-            {u"description"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Description of the event"_s)}},
+            {u"description"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Description of the event"_s)},
+            {u"calendar_id"_s,
+             McpProtocolServerTool::schemaProperty(u"integer"_s,
+                                                   u"Identifier of the calendar (see list_calendars). If omitted, the first writable calendar is used"_s)}},
         {u"summary"_s, u"start"_s});
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(false);
@@ -94,8 +97,22 @@ void CreateEventTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServe
         event->setDescription(description);
     }
 
+    Akonadi::Collection::Id calendarId = -1;
+    const QJsonValue calendarValue = arguments.value(u"calendar_id"_s);
+    if (calendarValue.isDouble()) {
+        calendarId = calendarValue.toInteger(-1);
+        if (calendarId < 0) {
+            call->finishWithText(i18n("Argument calendar_id must be a positive integer"), true);
+            return;
+        }
+    } else if (!calendarValue.isUndefined() && !calendarValue.isNull()) {
+        call->finishWithText(i18n("Argument calendar_id must be an integer"), true);
+        return;
+    }
+
     auto job = new CreateIncidenceToolJob(call);
     job->setMcpProtocolServerToolCall(call);
     job->setIncidence(event);
+    job->setCalendarId(calendarId);
     job->start();
 }
