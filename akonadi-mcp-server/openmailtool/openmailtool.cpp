@@ -20,7 +20,8 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool OpenMailTool::definition() 
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"open_mail"_s,
-        u"Open a mail in a KMail window, KMail is started if needed"_s,
+        u"Display a mail in a read-only KMail viewer window, KMail is started if needed. The mail can't be modified there: "
+        u"use edit_mail to modify a draft mail (for example one created with create_mail) and reply_mail to answer a mail"_s,
         QMap<QString, QJsonObject>{
             {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the mail item (see search_mail or create_mail)"_s)}},
         {u"id"_s});

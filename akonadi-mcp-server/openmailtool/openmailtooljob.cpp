@@ -51,7 +51,7 @@ void OpenMailToolJob::kmailCallFinished(const QDBusPendingCall &reply)
         finish(i18n("Mail %1 not found or KMail main window is not available", mItemId), true);
         return;
     }
-    finish(i18n("Mail %1 opened in KMail", mItemId));
+    finish(i18n("Mail %1 displayed in a read-only KMail viewer, it can't be modified there", mItemId));
 }
 
 #include "moc_openmailtooljob.cpp"
