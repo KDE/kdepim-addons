@@ -73,6 +73,10 @@ target_sources(
         replymailtool/replymailtool.cpp
         replymailtool/replymailtooljob.h
         replymailtool/replymailtooljob.cpp
+        editmailtool/editmailtool.h
+        editmailtool/editmailtool.cpp
+        editmailtool/editmailtooljob.h
+        editmailtool/editmailtooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol

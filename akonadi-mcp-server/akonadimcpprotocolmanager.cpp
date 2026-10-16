@@ -11,6 +11,7 @@
 #include "contactsearchtool/contactsearchtool.h"
 #include "createcontacttool/createcontacttool.h"
 #include "createmailtool/createmailtool.h"
+#include "editmailtool/editmailtool.h"
 #include "freebusytool/freebusytool.h"
 #include "listaddressbooks/listaddressbookstool.h"
 #include "mailsearch/searchmailtool.h"
@@ -51,6 +52,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<CreateMailTool>());
     addTool(std::make_unique<OpenMailTool>());
     addTool(std::make_unique<ReplyMailTool>());
+    addTool(std::make_unique<EditMailTool>());
     // TODO add more
 }
 
