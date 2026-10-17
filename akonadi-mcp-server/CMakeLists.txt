@@ -89,6 +89,8 @@ target_sources(
         listcalendars/listcalendarstool.h
         listcalendars/listcalendarstooljob.cpp
         listcalendars/listcalendarstooljob.h
+        listidentities/listidentitiestool.h
+        listidentities/listidentitiestool.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
