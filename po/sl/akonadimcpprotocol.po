@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:48+0000\n"
-"PO-Revision-Date: 2026-10-14 09:29+0200\n"
+"POT-Creation-Date: 2026-10-17 00:50+0000\n"
+"PO-Revision-Date: 2026-10-16 07:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -13,9 +13,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Poedit 3.9\n"
 
-#: akonadimcpprotocolmanager.cpp:36
+#: akonadimcpprotocolmanager.cpp:43
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Upravljanje informacij iz Akonadija"
@@ -23,18 +23,67 @@ msgstr "Upravljanje informacij iz Akonadija"
 #: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:43
 #, kde-format
 msgid "Akonadi Resources Status"
-msgstr ""
+msgstr "Stanje virov Akonadi"
 
 #: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:66
-#, fuzzy, kde-format
-#| msgid "No address book found"
+#, kde-format
 msgid "No Akonadi resource found"
-msgstr "Adresar ni najden"
+msgstr "Ni najdenih virov Akonadi"
 
 #: calendarcommon/calendartooljobbase.cpp:33
+#: calendarcommon/createincidencetooljob.cpp:57
+#: listcalendars/listcalendarstooljob.cpp:60
 #, kde-format
 msgid "Calendar fetch failed: %1"
 msgstr "Pridobivanje koledarja ni uspelo: %1"
+
+#: calendarcommon/createincidencetooljob.cpp:38
+#, fuzzy, kde-format
+#| msgid "Subject must be a non-empty string"
+msgid "Summary must be a non-empty string"
+msgstr "Subject mora biti neprazen niz"
+
+#: calendarcommon/createincidencetooljob.cpp:70
+#, fuzzy, kde-format
+#| msgid "Address book %1 does not exist or does not accept new contacts"
+msgid "Calendar %1 does not exist or does not accept new items"
+msgstr "Adresar %1 ne obstaja ali ne sprejema novih stikov"
+
+#: calendarcommon/createincidencetooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "No writable address book found"
+msgid "No writable calendar found"
+msgstr "Ni najdenega adresarja za pisanje"
+
+#: calendarcommon/createincidencetooljob.cpp:90
+#, fuzzy, kde-format
+#| msgid "Mail creation failed: %1"
+msgid "Creation failed: %1"
+msgstr "Kreiranje pošte ni uspelo: %1"
+
+#: calendarcommon/createincidencetooljob.cpp:98
+#, fuzzy, kde-format
+#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "Pošta \"%1\" je bilo ustvarjena v mapi \"%2\" (ID elementa: %3)"
+
+#: calendarcommon/createincidencetooljob.cpp:101
+#, fuzzy, kde-format
+#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "Pošta \"%1\" je bilo ustvarjena v mapi \"%2\" (ID elementa: %3)"
+
+#: calendarcommon/createincidencetooljob.cpp:104
+#, fuzzy, kde-format
+#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "Pošta \"%1\" je bilo ustvarjena v mapi \"%2\" (ID elementa: %3)"
+
+#: calendarcommon/createincidencetooljob.cpp:107
+#, fuzzy, kde-format
+#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "Pošta \"%1\" je bilo ustvarjena v mapi \"%2\" (ID elementa: %3)"
 
 #: calendareventstool/calendareventstool.cpp:42
 #, kde-format
@@ -42,13 +91,13 @@ msgid "Calendar Events"
 msgstr "Koledarski dogodki"
 
 #: calendareventstool/calendareventstool.cpp:53
-#: freebusytool/freebusytool.cpp:52
+#: createeventtool/createeventtool.cpp:66 freebusytool/freebusytool.cpp:52
 #, kde-format
 msgid "Argument start must be an ISO 8601 date or date-time"
 msgstr "Argument start mora biti datum ali datum in čas v formatu ISO 8601"
 
 #: calendareventstool/calendareventstool.cpp:62
-#: freebusytool/freebusytool.cpp:57
+#: createeventtool/createeventtool.cpp:74 freebusytool/freebusytool.cpp:57
 #, kde-format
 msgid "Argument end must be an ISO 8601 date or date-time"
 msgstr "Argument end mora biti datum ali datum in čas v formatu ISO 8601"
@@ -69,6 +118,12 @@ msgstr "Obdobje ne sme presegati %1 dni"
 #, kde-format
 msgid "No event between %1 and %2"
 msgstr "Ni dogodkov med %1 in %2"
+
+#: common/kmaildbustooljobbase.cpp:51
+#, fuzzy, kde-format
+#| msgid "Contact search failed: %1"
+msgid "Unable to start KMail: %1"
+msgstr "Iskanje stika ni uspelo: %1"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -134,50 +189,44 @@ msgid "No contact found for \"%1\""
 msgstr "Za \"%1\" ni najdenega nobenega stika"
 
 #: createcontacttool/createcontacttool.cpp:46
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Create Contact"
-msgstr "Iskanje stikov"
+msgstr "Ustvari stik"
 
 #: createcontacttool/createcontacttool.cpp:56
-#, fuzzy, kde-format
-#| msgid "Argument query must be a non-empty string"
+#, kde-format
 msgid "Argument name must be a non-empty string"
-msgstr "Argument query mora biti neprazen niz"
+msgstr "Ime argumenta mora biti neprazen niz"
 
 #: createcontacttool/createcontacttool.cpp:66
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument emails must be an array of strings"
-msgstr "Argument fields mora biti polje"
+msgstr "Argument emails mora biti polje nizov"
 
 #: createcontacttool/createcontacttool.cpp:73
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument phone_numbers must be an array of strings"
-msgstr "Argument fields mora biti polje"
+msgstr "Argument phone_numbers mora biti polje nizov"
 
 #: createcontacttool/createcontacttool.cpp:89
 #, kde-format
 msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
-msgstr ""
+msgstr "Neveljaven datum rojstva \"%1\"; pričakovana oblika je LLLL-MM-DD"
 
 #: createcontacttool/createcontacttool.cpp:100
-#, fuzzy, kde-format
-#| msgid "Number of days must be a positive integer"
+#, kde-format
 msgid "Argument address_book_id must be a positive integer"
-msgstr "Število dni mora biti pozitivno celo število"
+msgstr "Argument address_book_id mora biti pozitivno celo število"
 
 #: createcontacttool/createcontacttool.cpp:104
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument address_book_id must be an integer"
-msgstr "Argument days mora biti celo število"
+msgstr "Argument address_book_id mora biti celo število"
 
 #: createcontacttool/createcontacttooljob.cpp:40
 #, kde-format
 msgid "Contact is empty"
-msgstr ""
+msgstr "Stik je prazen"
 
 #: createcontacttool/createcontacttooljob.cpp:59
 #: listaddressbooks/listaddressbookstooljob.cpp:33
@@ -188,87 +237,216 @@ msgstr "Pridobivanje adresarja ni uspelo: %1"
 #: createcontacttool/createcontacttooljob.cpp:72
 #, kde-format
 msgid "Address book %1 does not exist or does not accept new contacts"
-msgstr ""
+msgstr "Adresar %1 ne obstaja ali ne sprejema novih stikov"
 
 #: createcontacttool/createcontacttooljob.cpp:74
-#, fuzzy, kde-format
-#| msgid "No address book found"
+#, kde-format
 msgid "No writable address book found"
-msgstr "Adresar ni najden"
+msgstr "Ni najdenega adresarja za pisanje"
 
 #: createcontacttool/createcontacttooljob.cpp:92
-#, fuzzy, kde-format
-#| msgid "Contact fetch failed: %1"
+#, kde-format
 msgid "Contact creation failed: %1"
-msgstr "Pridobivanje stika ni uspelo: %1"
+msgstr "Ustvarjanje stika ni uspelo: %1"
 
 #: createcontacttool/createcontacttooljob.cpp:96
 #, kde-format
 msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
-msgstr ""
+msgstr "Stik \"%1\" je bil ustvarjen v imeniku \"%2\" (ID elementa: %3)"
+
+#: createeventtool/createeventtool.cpp:50
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Create Event"
+msgstr "Ustvari stik"
+
+#: createeventtool/createeventtool.cpp:60
+#: createjournaltool/createjournaltool.cpp:53
+#: createtodotool/createtodotool.cpp:56
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument summary must be a non-empty string"
+msgstr "Argument query mora biti neprazen niz"
+
+#: createeventtool/createeventtool.cpp:78
+#, fuzzy, kde-format
+#| msgid "Argument start must be an ISO 8601 date or date-time"
+msgid "Arguments start and end must both be dates or both be date-times"
+msgstr "Argument start mora biti datum ali datum in čas v formatu ISO 8601"
+
+#: createeventtool/createeventtool.cpp:84
+#, fuzzy, kde-format
+#| msgid "Argument end must be after start"
+msgid "Argument end must not be before start"
+msgstr "Argument end mora biti kasneje od argumenta start"
+
+#: createeventtool/createeventtool.cpp:105
+#: createjournaltool/createjournaltool.cpp:79
+#: createtodotool/createtodotool.cpp:95
+#, fuzzy, kde-format
+#| msgid "Argument address_book_id must be a positive integer"
+msgid "Argument calendar_id must be a positive integer"
+msgstr "Argument address_book_id mora biti pozitivno celo število"
+
+#: createeventtool/createeventtool.cpp:109
+#: createjournaltool/createjournaltool.cpp:83
+#: createtodotool/createtodotool.cpp:99
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument calendar_id must be an integer"
+msgstr "Argument days mora biti celo število"
+
+#: createjournaltool/createjournaltool.cpp:43
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Create Journal Entry"
+msgstr "Ustvari stik"
+
+#: createjournaltool/createjournaltool.cpp:61
+#, fuzzy, kde-format
+#| msgid "Argument start must be an ISO 8601 date or date-time"
+msgid "Argument date must be an ISO 8601 date or date-time"
+msgstr "Argument start mora biti datum ali datum in čas v formatu ISO 8601"
 
 #: createmailtool/createmailtool.cpp:37
 #, kde-format
 msgid "Create Mail"
-msgstr ""
+msgstr "Ustvari pošto"
 
 #: createmailtool/createmailtool.cpp:47
-#, fuzzy, kde-format
-#| msgid "Argument query must be a non-empty string"
+#, kde-format
 msgid "Argument subject must be a non-empty string"
-msgstr "Argument query mora biti neprazen niz"
+msgstr "Argument subject mora biti neprazen niz"
 
 #: createmailtool/createmailtool.cpp:53
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument to must be an array of strings"
-msgstr "Argument fields mora biti polje"
+msgstr "Argument to mora biti polje nizov"
 
 #: createmailtool/createmailtool.cpp:58
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument cc must be an array of strings"
-msgstr "Argument fields mora biti polje"
+msgstr "Argument cc mora biti polje nizov"
 
 #: createmailtool/createmailtool.cpp:63
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument bcc must be an array of strings"
-msgstr "Argument fields mora biti polje"
+msgstr "Argument bcc mora biti polje nizov"
 
 #: createmailtool/createmailtool.cpp:69
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument body must be a string"
-msgstr "Argument days mora biti celo število"
+msgstr "Argument body mora biti celo niz"
 
 #: createmailtool/createmailtooljob.cpp:60
-#, fuzzy, kde-format
-#| msgid "Search string must be a non-empty string"
+#, kde-format
 msgid "Subject must be a non-empty string"
-msgstr "Iskalni niz mora biti neprazen niz"
+msgstr "Subject mora biti neprazen niz"
 
-#: createmailtool/createmailtooljob.cpp:73
-#, fuzzy, kde-format
-#| msgid "Calendar fetch failed: %1"
+#: createmailtool/createmailtooljob.cpp:73 editmailtool/editmailtooljob.cpp:81
+#, kde-format
 msgid "Drafts folder fetch failed: %1"
-msgstr "Pridobivanje koledarja ni uspelo: %1"
+msgstr "Pridobivanje mape z osnutki ni uspelo: %1"
 
 #: createmailtool/createmailtooljob.cpp:78
-#, fuzzy, kde-format
-#| msgid "No to-do found"
+#, kde-format
 msgid "No Drafts folder found"
-msgstr "Opravila ni najdenega"
+msgstr "Mapa Drafts (Osnutki) ni bila najdena"
 
 #: createmailtool/createmailtooljob.cpp:124
-#, fuzzy, kde-format
-#| msgid "Calendar fetch failed: %1"
+#, kde-format
 msgid "Mail creation failed: %1"
-msgstr "Pridobivanje koledarja ni uspelo: %1"
+msgstr "Kreiranje pošte ni uspelo: %1"
 
 #: createmailtool/createmailtooljob.cpp:128
+#, fuzzy, kde-format
+#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgid ""
+"Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
+"KMail with mail_edit"
+msgstr "Pošta \"%1\" je bilo ustvarjena v mapi \"%2\" (ID elementa: %3)"
+
+#: createtodotool/createtodotool.cpp:46
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Create To-do"
+msgstr "Ustvari stik"
+
+#: createtodotool/createtodotool.cpp:66
+#, fuzzy, kde-format
+#| msgid "Argument end must be an ISO 8601 date or date-time"
+msgid "Argument due must be an ISO 8601 date or date-time"
+msgstr "Argument end mora biti datum ali datum in čas v formatu ISO 8601"
+
+#: createtodotool/createtodotool.cpp:77
+#, fuzzy, kde-format
+#| msgid "Argument limit must be an integer between 1 and %1"
+msgid "Argument priority must be an integer between %1 and %2"
+msgstr "Argument limit mora biti celo število med 1 in %1"
+
+#: createtodotool/createtodotool.cpp:82
+#, fuzzy, kde-format
+#| msgid "Argument limit must be an integer"
+msgid "Argument priority must be an integer"
+msgstr "Argument limit mora biti celo število"
+
+#: editmailtool/editmailtool.cpp:32
+#, fuzzy, kde-format
+#| msgid "Create Mail"
+msgid "Edit Mail"
+msgstr "Ustvari pošto"
+
+#: editmailtool/editmailtool.cpp:41 openmailtool/openmailtool.cpp:40
+#: replymailtool/replymailtool.cpp:64
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument id must be an integer"
+msgstr "Argument days mora biti celo število"
+
+#: editmailtool/editmailtool.cpp:46 openmailtool/openmailtool.cpp:45
+#: replymailtool/replymailtool.cpp:69
+#, fuzzy, kde-format
+#| msgid "Argument address_book_id must be a positive integer"
+msgid "Argument id must be a positive integer"
+msgstr "Argument address_book_id mora biti pozitivno celo število"
+
+#: editmailtool/editmailtooljob.cpp:39 openmailtool/openmailtooljob.cpp:32
+#, fuzzy, kde-format
+#| msgid "Number of days must be a positive integer"
+msgid "Mail id must be a positive integer"
+msgstr "Število dni mora biti pozitivno celo število"
+
+#: editmailtool/editmailtooljob.cpp:53
+#, fuzzy, kde-format
+#| msgid "Mail search failed: %1"
+msgid "Mail fetch failed: %1"
+msgstr "Iskanje pošte ni uspelo: %1"
+
+#: editmailtool/editmailtooljob.cpp:58
 #, kde-format
-msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgid "Mail %1 not found"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:86
+#, kde-format
+msgid ""
+"Mail %1 is not stored in a Drafts folder, it can't be edited. Use mail_open "
+"or mail_reply instead"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:101
+#, kde-format
+msgid "Unable to edit mail %1: %2"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:108
+#, kde-format
+msgid "Unable to edit mail %1: KMail main window is not available"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:111
+#, kde-format
+msgid "Draft mail %1 opened in a KMail composer"
 msgstr ""
 
 #: freebusytool/freebusytool.cpp:42
@@ -291,58 +469,117 @@ msgstr "Seznam adresarjev"
 msgid "No address book found"
 msgstr "Adresar ni najden"
 
-#: mailsearch/searchmailtool.cpp:40
+#: listcalendars/listcalendarstool.cpp:25
 #, fuzzy, kde-format
-#| msgid "Search Contacts"
+#| msgid "Calendar Events"
+msgid "List Calendars"
+msgstr "Koledarski dogodki"
+
+#: listcalendars/listcalendarstooljob.cpp:83
+#, fuzzy, kde-format
+#| msgid "No Drafts folder found"
+msgid "No calendar found"
+msgstr "Mapa Drafts (Osnutki) ni bila najdena"
+
+#: mailsearch/searchmailtool.cpp:40
+#, kde-format
 msgid "Search Mail"
-msgstr "Iskanje stikov"
+msgstr "Iskanje pošte"
 
 #: mailsearch/searchmailtool.cpp:69
-#, fuzzy, kde-format
-#| msgid "Unknown contact field: %1"
+#, kde-format
 msgid "Unknown mail field: %1"
-msgstr "Neznano polje stika: %1"
+msgstr "Neznano polje pošte: %1"
 
 #: mailsearch/searchmailtool.cpp:73
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument field must be a string"
 msgstr "Argument fields mora biti polje"
 
 #: mailsearch/searchmailtool.cpp:82
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer between 1 and %1"
+#, kde-format
 msgid "Argument limit must be an integer between 1 and %1"
-msgstr "Argument days mora biti celo število med 1 in %1"
+msgstr "Argument limit mora biti celo število med 1 in %1"
 
 #: mailsearch/searchmailtool.cpp:86
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument limit must be an integer"
-msgstr "Argument days mora biti celo število"
+msgstr "Argument limit mora biti celo število"
 
 #: mailsearch/searchmailtooljob.cpp:97
-#, fuzzy, kde-format
-#| msgid "Contact search failed: %1"
+#, kde-format
 msgid "Mail search failed: %1"
-msgstr "Iskanje stika ni uspelo: %1"
+msgstr "Iskanje pošte ni uspelo: %1"
 
 #: mailsearch/searchmailtooljob.cpp:113
 #, kde-format
 msgid "(No subject)"
-msgstr ""
+msgstr "(Ni zadeve)"
 
 #: mailsearch/searchmailtooljob.cpp:136
-#, fuzzy, kde-format
-#| msgid "No contact found for \"%1\""
+#, kde-format
 msgid "No mail found for \"%1\""
-msgstr "Za \"%1\" ni najdenega nobenega stika"
+msgstr "Ni najdene pošte za \"%1\""
 
 #: main.cpp:23
 #, kde-format
 msgctxt "@info:shell"
 msgid "Url where server listens."
 msgstr "URL, na katerem posluša strežnik."
+
+#: openmailtool/openmailtool.cpp:31
+#, fuzzy, kde-format
+#| msgid "Create Mail"
+msgid "Open Mail"
+msgstr "Ustvari pošto"
+
+#: openmailtool/openmailtooljob.cpp:44
+#, kde-format
+msgid "Unable to open mail %1: %2"
+msgstr ""
+
+#: openmailtool/openmailtooljob.cpp:51
+#, kde-format
+msgid "Mail %1 not found or KMail main window is not available"
+msgstr ""
+
+#: openmailtool/openmailtooljob.cpp:54
+#, kde-format
+msgid ""
+"Mail %1 displayed in a read-only KMail viewer, it can't be modified there"
+msgstr ""
+
+#: replymailtool/replymailtool.cpp:54
+#, kde-format
+msgid "Reply to Mail"
+msgstr ""
+
+#: replymailtool/replymailtool.cpp:80
+#, kde-format
+msgid "Argument strategy must be one of: smart, author, list, all"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:38
+#, kde-format
+msgid ""
+"Mail id must be a positive integer and reply strategy must be smart, author, "
+"list or all"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:50
+#, kde-format
+msgid "Unable to reply to mail %1: %2"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:57
+#, kde-format
+msgid "Unable to reply to mail %1: KMail main window is not available"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:60
+#, kde-format
+msgid "Reply composer opened in KMail for mail %1"
+msgstr ""
 
 #: todolisttool/todolisttool.cpp:38
 #, kde-format

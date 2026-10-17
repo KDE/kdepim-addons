@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:48+0000\n"
+"POT-Creation-Date: 2026-10-17 00:50+0000\n"
 "PO-Revision-Date: 2026-10-14 02:01+0000\n"
 "Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
 "Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: akonadimcpprotocolmanager.cpp:36
+#: akonadimcpprotocolmanager.cpp:43
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr ""
@@ -29,8 +29,50 @@ msgid "No Akonadi resource found"
 msgstr ""
 
 #: calendarcommon/calendartooljobbase.cpp:33
+#: calendarcommon/createincidencetooljob.cpp:57
+#: listcalendars/listcalendarstooljob.cpp:60
 #, kde-format
 msgid "Calendar fetch failed: %1"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:38
+#, kde-format
+msgid "Summary must be a non-empty string"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:70
+#, kde-format
+msgid "Calendar %1 does not exist or does not accept new items"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:72
+#, kde-format
+msgid "No writable calendar found"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:90
+#, kde-format
+msgid "Creation failed: %1"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:98
+#, kde-format
+msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:101
+#, kde-format
+msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:104
+#, kde-format
+msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:107
+#, kde-format
+msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
 msgstr ""
 
 #: calendareventstool/calendareventstool.cpp:42
@@ -39,13 +81,13 @@ msgid "Calendar Events"
 msgstr ""
 
 #: calendareventstool/calendareventstool.cpp:53
-#: freebusytool/freebusytool.cpp:52
+#: createeventtool/createeventtool.cpp:66 freebusytool/freebusytool.cpp:52
 #, kde-format
 msgid "Argument start must be an ISO 8601 date or date-time"
 msgstr ""
 
 #: calendareventstool/calendareventstool.cpp:62
-#: freebusytool/freebusytool.cpp:57
+#: createeventtool/createeventtool.cpp:74 freebusytool/freebusytool.cpp:57
 #, kde-format
 msgid "Argument end must be an ISO 8601 date or date-time"
 msgstr ""
@@ -65,6 +107,11 @@ msgstr ""
 #: calendareventstool/calendareventstooljob.cpp:49
 #, kde-format
 msgid "No event between %1 and %2"
+msgstr ""
+
+#: common/kmaildbustooljobbase.cpp:51
+#, kde-format
+msgid "Unable to start KMail: %1"
 msgstr ""
 
 #: common/tooljobbase.cpp:37
@@ -196,6 +243,52 @@ msgstr ""
 msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
 msgstr ""
 
+#: createeventtool/createeventtool.cpp:50
+#, kde-format
+msgid "Create Event"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:60
+#: createjournaltool/createjournaltool.cpp:53
+#: createtodotool/createtodotool.cpp:56
+#, kde-format
+msgid "Argument summary must be a non-empty string"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:78
+#, kde-format
+msgid "Arguments start and end must both be dates or both be date-times"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:84
+#, kde-format
+msgid "Argument end must not be before start"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:105
+#: createjournaltool/createjournaltool.cpp:79
+#: createtodotool/createtodotool.cpp:95
+#, kde-format
+msgid "Argument calendar_id must be a positive integer"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:109
+#: createjournaltool/createjournaltool.cpp:83
+#: createtodotool/createtodotool.cpp:99
+#, kde-format
+msgid "Argument calendar_id must be an integer"
+msgstr ""
+
+#: createjournaltool/createjournaltool.cpp:43
+#, kde-format
+msgid "Create Journal Entry"
+msgstr ""
+
+#: createjournaltool/createjournaltool.cpp:61
+#, kde-format
+msgid "Argument date must be an ISO 8601 date or date-time"
+msgstr ""
+
 #: createmailtool/createmailtool.cpp:37
 #, kde-format
 msgid "Create Mail"
@@ -231,7 +324,7 @@ msgstr ""
 msgid "Subject must be a non-empty string"
 msgstr ""
 
-#: createmailtool/createmailtooljob.cpp:73
+#: createmailtool/createmailtooljob.cpp:73 editmailtool/editmailtooljob.cpp:81
 #, kde-format
 msgid "Drafts folder fetch failed: %1"
 msgstr ""
@@ -248,7 +341,83 @@ msgstr ""
 
 #: createmailtool/createmailtooljob.cpp:128
 #, kde-format
-msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+msgid ""
+"Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
+"KMail with mail_edit"
+msgstr ""
+
+#: createtodotool/createtodotool.cpp:46
+#, kde-format
+msgid "Create To-do"
+msgstr ""
+
+#: createtodotool/createtodotool.cpp:66
+#, kde-format
+msgid "Argument due must be an ISO 8601 date or date-time"
+msgstr ""
+
+#: createtodotool/createtodotool.cpp:77
+#, kde-format
+msgid "Argument priority must be an integer between %1 and %2"
+msgstr ""
+
+#: createtodotool/createtodotool.cpp:82
+#, kde-format
+msgid "Argument priority must be an integer"
+msgstr ""
+
+#: editmailtool/editmailtool.cpp:32
+#, kde-format
+msgid "Edit Mail"
+msgstr ""
+
+#: editmailtool/editmailtool.cpp:41 openmailtool/openmailtool.cpp:40
+#: replymailtool/replymailtool.cpp:64
+#, kde-format
+msgid "Argument id must be an integer"
+msgstr ""
+
+#: editmailtool/editmailtool.cpp:46 openmailtool/openmailtool.cpp:45
+#: replymailtool/replymailtool.cpp:69
+#, kde-format
+msgid "Argument id must be a positive integer"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:39 openmailtool/openmailtooljob.cpp:32
+#, kde-format
+msgid "Mail id must be a positive integer"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:53
+#, kde-format
+msgid "Mail fetch failed: %1"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:58
+#, kde-format
+msgid "Mail %1 not found"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:86
+#, kde-format
+msgid ""
+"Mail %1 is not stored in a Drafts folder, it can't be edited. Use mail_open "
+"or mail_reply instead"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:101
+#, kde-format
+msgid "Unable to edit mail %1: %2"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:108
+#, kde-format
+msgid "Unable to edit mail %1: KMail main window is not available"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:111
+#, kde-format
+msgid "Draft mail %1 opened in a KMail composer"
 msgstr ""
 
 #: freebusytool/freebusytool.cpp:42
@@ -269,6 +438,16 @@ msgstr ""
 #: listaddressbooks/listaddressbookstooljob.cpp:54
 #, kde-format
 msgid "No address book found"
+msgstr ""
+
+#: listcalendars/listcalendarstool.cpp:25
+#, kde-format
+msgid "List Calendars"
+msgstr ""
+
+#: listcalendars/listcalendarstooljob.cpp:83
+#, kde-format
+msgid "No calendar found"
 msgstr ""
 
 #: mailsearch/searchmailtool.cpp:40
@@ -315,6 +494,59 @@ msgstr ""
 #, kde-format
 msgctxt "@info:shell"
 msgid "Url where server listens."
+msgstr ""
+
+#: openmailtool/openmailtool.cpp:31
+#, kde-format
+msgid "Open Mail"
+msgstr ""
+
+#: openmailtool/openmailtooljob.cpp:44
+#, kde-format
+msgid "Unable to open mail %1: %2"
+msgstr ""
+
+#: openmailtool/openmailtooljob.cpp:51
+#, kde-format
+msgid "Mail %1 not found or KMail main window is not available"
+msgstr ""
+
+#: openmailtool/openmailtooljob.cpp:54
+#, kde-format
+msgid ""
+"Mail %1 displayed in a read-only KMail viewer, it can't be modified there"
+msgstr ""
+
+#: replymailtool/replymailtool.cpp:54
+#, kde-format
+msgid "Reply to Mail"
+msgstr ""
+
+#: replymailtool/replymailtool.cpp:80
+#, kde-format
+msgid "Argument strategy must be one of: smart, author, list, all"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:38
+#, kde-format
+msgid ""
+"Mail id must be a positive integer and reply strategy must be smart, author, "
+"list or all"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:50
+#, kde-format
+msgid "Unable to reply to mail %1: %2"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:57
+#, kde-format
+msgid "Unable to reply to mail %1: KMail main window is not available"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:60
+#, kde-format
+msgid "Reply composer opened in KMail for mail %1"
 msgstr ""
 
 #: todolisttool/todolisttool.cpp:38

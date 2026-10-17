@@ -1,11 +1,11 @@
 # Translation of messageviewerplugins.po to Catalan
-# Copyright (C) 1998-2025 This_file_is_part_of_KDE
+# Copyright (C) 1998-2026 This_file_is_part_of_KDE
 #
 # SPDX-FileCopyrightText: 1998-2000, 2004-2006 Sebastià Pla i Sanz <sps@sastia.com>
 # SPDX-FileCopyrightText: 2002-2004, 2013-2017, 2019-2021 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2004-2005, 2009 Albert Astals Cid <aacid@kde.org>
 # SPDX-FileCopyrightText: 2005 David Gil <al016950@yahoo.es>
-# SPDX-FileCopyrightText: 2006-2016, 2018, 2020, 2022-2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2006-2016, 2018, 2020, 2022-2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2009 Joan Maspons <joanmaspons@gmail.com>
 # SPDX-FileCopyrightText: 2009-2010 Manuel Tortosa Moreno <manutortosa@chakra-project.org>
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:48+0000\n"
-"PO-Revision-Date: 2025-09-03 10:13+0200\n"
+"PO-Revision-Date: 2026-10-16 09:38+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -288,14 +288,7 @@ msgstr ""
 
 # skip-rule: t-sp_in
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%s - the subject of message</li><li>%from - the from email "
-#| "address</li><li>%cc - the list of cc email address</li><li>%bcc - the "
-#| "list of bcc email address</li><li>%body - the body of message</li><li>"
-#| "%inreplyto - the reply email address</li><li>%akonadiUrl - the akonadi "
-#| "url (as akonadi:?item=187020)</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%s - the subject of message</li><li>%from - the from email "
@@ -310,7 +303,7 @@ msgstr ""
 "electrònic CC</li><li>%bcc - la llista d'adreces de correu electrònic BCC</"
 "li><li>%body - el cos del missatge</li><li>%inreplyto - l'adreça de correu "
 "electrònic de resposta</li><li>%akonadiUrl - l'URL de l'akonadi (com "
-"akonadi:?item=187020)</li></ul></strong></p></qt>"
+"akonadi:?item=187020)</li></ul></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format
