@@ -16,6 +16,23 @@ using namespace Qt::Literals::StringLiterals;
 MarkMailTool::MarkMailTool() = default;
 MarkMailTool::~MarkMailTool() = default;
 
+namespace
+{
+// Returns false when the value is present but isn't a boolean
+[[nodiscard]] bool readOptionalBool(const QMap<QString, QJsonValue> &args, const QString &key, std::optional<bool> &result)
+{
+    const QJsonValue value = args.value(key);
+    if (value.isUndefined() || value.isNull()) {
+        return true;
+    }
+    if (!value.isBool()) {
+        return false;
+    }
+    result = value.toBool();
+    return true;
+}
+}
+
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool MarkMailTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
@@ -49,15 +66,19 @@ void MarkMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTo
         return;
     }
 
-    const QJsonValue readValue = call->arguments().value(u"read"_s);
-    if (!readValue.isUndefined() && !readValue.isBool()) {
+    std::optional<bool> readValue;
+    if (!readOptionalBool(call->arguments(), u"read"_s, readValue)) {
         call->finishWithText(i18n("Argument read must be a boolean"), true);
         return;
     }
 
-    const QJsonValue importantValue = call->arguments().value(u"important"_s);
-    if (!importantValue.isUndefined() && !importantValue.isBool()) {
+    std::optional<bool> important;
+    if (!readOptionalBool(call->arguments(), u"important"_s, important)) {
         call->finishWithText(i18n("Argument important must be a boolean"), true);
+        return;
+    }
+    if (!readValue && !important) {
+        call->finishWithText(i18n("At least one of read or important must be given"), true);
         return;
     }
 
@@ -65,6 +86,5 @@ void MarkMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTo
     job->setMcpProtocolServerToolCall(call);
     job->setItemId(itemId);
     job->start();
-    // TODO implement it
     call->finishWithText(i18n("Not implemented yet"), true);
 }

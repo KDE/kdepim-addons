@@ -20,9 +20,14 @@ public:
     [[nodiscard]] qint64 itemId() const;
     void setItemId(qint64 newItemId);
 
+    void setRead(std::optional<bool> read);
+    void setImportant(std::optional<bool> important);
+
 protected:
     void startJob() override;
 
 private:
     qint64 mItemId = -1;
+    std::optional<bool> mRead;
+    std::optional<bool> mImportant;
 };

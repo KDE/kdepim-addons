@@ -5,6 +5,8 @@
 */
 
 #include "markmailtooljob.h"
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemModifyJob>
 
 MarkMailToolJob::MarkMailToolJob(QObject *parent)
     : ToolJobBase{parent}
@@ -28,8 +30,19 @@ void MarkMailToolJob::setItemId(qint64 newItemId)
     mItemId = newItemId;
 }
 
+void MarkMailToolJob::setRead(std::optional<bool> read)
+{
+    mRead = read;
+}
+
+void MarkMailToolJob::setImportant(std::optional<bool> important)
+{
+    mImportant = important;
+}
+
 void MarkMailToolJob::startJob()
 {
+    // TODO
 }
 
 #include "moc_markmailtooljob.cpp"
