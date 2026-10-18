@@ -20,6 +20,7 @@
 #include "listcalendars/listcalendarstool.h"
 #include "listidentities/listidentitiestool.h"
 #include "mailsearch/searchmailtool.h"
+#include "markmailtool/markmailtool.h"
 #include "openmailtool/openmailtool.h"
 #include "replymailtool/replymailtool.h"
 #include "todolisttool/todolisttool.h"
@@ -63,6 +64,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<CreateJournalTool>());
     addTool(std::make_unique<ListCalendarsTool>());
     addTool(std::make_unique<ListIdentitiesTool>());
+    addTool(std::make_unique<MarkMailTool>());
     // TODO add more
 }
 

@@ -91,6 +91,8 @@ target_sources(
         listcalendars/listcalendarstooljob.h
         listidentities/listidentitiestool.h
         listidentities/listidentitiestool.cpp
+        markmailtool/markmailtool.h
+        markmailtool/markmailtool.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
