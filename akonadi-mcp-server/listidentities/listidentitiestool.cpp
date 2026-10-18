@@ -5,6 +5,7 @@
 */
 
 #include "listidentitiestool.h"
+#include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
@@ -29,8 +30,16 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListIdentitiesTool::definit
 
 void ListIdentitiesTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
-    const auto list = KIdentityManagementCore::IdentityManager::self();
+    const auto identities = KIdentityManagementCore::IdentityManager::self();
     QStringList entries;
+    for (const auto &identity : *identities) {
+        QString entry = u"%1 %2 (uoid %3)"_s.arg(identity.identityName(), identity.primaryEmailAddress(), QString::number(identity.uoid()));
+        if (identity.isDefault()) {
+            entry += u" [default]"_s;
+        }
+        entries.append(entry);
+    }
+
     if (entries.isEmpty()) {
         call->finishWithText(i18n("No Identity found"));
     } else {
