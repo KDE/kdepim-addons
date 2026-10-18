@@ -93,6 +93,8 @@ target_sources(
         listidentities/listidentitiestool.cpp
         markmailtool/markmailtool.h
         markmailtool/markmailtool.cpp
+        markmailtool/markmailtooljob.h
+        markmailtool/markmailtooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
