@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:50+0000\n"
-"PO-Revision-Date: 2026-10-16 12:22+0200\n"
+"POT-Creation-Date: 2026-10-18 00:50+0000\n"
+"PO-Revision-Date: 2026-10-17 13:51+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -40,52 +40,44 @@ msgid "Calendar fetch failed: %1"
 msgstr "Agenda ophalen mislukt: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:38
-#, fuzzy, kde-format
-#| msgid "Subject must be a non-empty string"
+#, kde-format
 msgid "Summary must be a non-empty string"
-msgstr "Onderwerp moet een niet-lege tekenreeks zijn"
+msgstr "Samenvatting moet een niet-lege tekenreeks zijn"
 
 #: calendarcommon/createincidencetooljob.cpp:70
-#, fuzzy, kde-format
-#| msgid "Address book %1 does not exist or does not accept new contacts"
+#, kde-format
 msgid "Calendar %1 does not exist or does not accept new items"
-msgstr "Adresboek %1 bestaat niet of accepteert geen nieuwe contacten"
+msgstr "Agenda %1 bestaat niet of accepteert geen nieuwe items"
 
 #: calendarcommon/createincidencetooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "No writable address book found"
+#, kde-format
 msgid "No writable calendar found"
-msgstr "Geen beschrijfbaar adresboek gevonden"
+msgstr "Geen beschrijfbare agenda gevonden"
 
 #: calendarcommon/createincidencetooljob.cpp:90
-#, fuzzy, kde-format
-#| msgid "Mail creation failed: %1"
+#, kde-format
 msgid "Creation failed: %1"
-msgstr "E-mail aanmaken is mislukt: %1"
+msgstr "Aanmaken is mislukt: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr "E-mail \"%1\" aangemaakt in map \"%2\" (item-id: %3)"
+msgstr "Afspraak \"%1\" aangemaakt in agenda \"%2\" (item-id: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr "E-mail \"%1\" aangemaakt in map \"%2\" (item-id: %3)"
+msgstr "Taak \"%1\" aangemaakt in agenda \"%2\" (item-id: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:104
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr "E-mail \"%1\" aangemaakt in map \"%2\" (item-id: %3)"
+msgstr "Journaal-item \"%1\" aangemaakt in agenda \"%2\" (item-id: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr "E-mail \"%1\" aangemaakt in map \"%2\" (item-id: %3)"
+msgstr "\"%1\" aangemaakt in agenda \"%2\" (item-id: %3)"
 
 #: calendareventstool/calendareventstool.cpp:42
 #, kde-format
@@ -122,10 +114,9 @@ msgid "No event between %1 and %2"
 msgstr "Geen afspraak tussen %1 en %2"
 
 #: common/kmaildbustooljobbase.cpp:51
-#, fuzzy, kde-format
-#| msgid "Contact search failed: %1"
+#, kde-format
 msgid "Unable to start KMail: %1"
-msgstr "Zoeken in contactpersonen is mislukt: %1"
+msgstr "KMail starten is mislukt: %1"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -257,58 +248,50 @@ msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
 msgstr "Contactpersoon \"%1\" aangemaakt in adresboek \"%2\" (item-id: %3)"
 
 #: createeventtool/createeventtool.cpp:50
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create Event"
-msgstr "Contactpersonen aanmaken"
+msgstr "Afspraak aanmaken"
 
 #: createeventtool/createeventtool.cpp:60
 #: createjournaltool/createjournaltool.cpp:53
 #: createtodotool/createtodotool.cpp:56
-#, fuzzy, kde-format
-#| msgid "Argument query must be a non-empty string"
+#, kde-format
 msgid "Argument summary must be a non-empty string"
-msgstr "De zoekopdracht-parameter moet een niet-lege tekenreeks zijn"
+msgstr "Argument samenvatting moet een niet-lege tekenreeks zijn"
 
 #: createeventtool/createeventtool.cpp:78
-#, fuzzy, kde-format
-#| msgid "Argument start must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Arguments start and end must both be dates or both be date-times"
-msgstr "Het argument start moet een ISO 8601-datum of -datum/tijd zijn."
+msgstr "Argumenten begin en einde moeten beide een datum of datum/tijd zijn"
 
 #: createeventtool/createeventtool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument end must be after start"
+#, kde-format
 msgid "Argument end must not be before start"
-msgstr "Argument einde moet na de start zijn"
+msgstr "Argument einde moet niet voor begin zijn"
 
 #: createeventtool/createeventtool.cpp:105
 #: createjournaltool/createjournaltool.cpp:79
 #: createtodotool/createtodotool.cpp:95
-#, fuzzy, kde-format
-#| msgid "Argument address_book_id must be a positive integer"
+#, kde-format
 msgid "Argument calendar_id must be a positive integer"
-msgstr "Argument adresboek-id moet een positief geheel getal zijn"
+msgstr "Argument agenda-id moet een positief geheel getal zijn"
 
 #: createeventtool/createeventtool.cpp:109
 #: createjournaltool/createjournaltool.cpp:83
 #: createtodotool/createtodotool.cpp:99
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument calendar_id must be an integer"
-msgstr "Argument days moet een geheel getal zijn"
+msgstr "Argument agenda-id moet een geheel getal zijn"
 
 #: createjournaltool/createjournaltool.cpp:43
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create Journal Entry"
-msgstr "Contactpersonen aanmaken"
+msgstr "Journaal-item aanmaken"
 
 #: createjournaltool/createjournaltool.cpp:61
-#, fuzzy, kde-format
-#| msgid "Argument start must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument date must be an ISO 8601 date or date-time"
-msgstr "Het argument start moet een ISO 8601-datum of -datum/tijd zijn."
+msgstr "Argument datum moet een ISO 8601-datum of -datum/tijd zijn."
 
 #: createmailtool/createmailtool.cpp:37
 #, kde-format
@@ -361,73 +344,65 @@ msgid "Mail creation failed: %1"
 msgstr "E-mail aanmaken is mislukt: %1"
 
 #: createmailtool/createmailtooljob.cpp:128
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid ""
 "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
 "KMail with mail_edit"
-msgstr "E-mail \"%1\" aangemaakt in map \"%2\" (item-id: %3)"
+msgstr ""
+"E-mail \"%1\" aangemaakt in map \"%2\" (item-id: %3). Het kan bewerkt worden "
+"in KMail met mail_edit"
 
 #: createtodotool/createtodotool.cpp:46
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create To-do"
-msgstr "Contactpersonen aanmaken"
+msgstr "Taak aanmaken"
 
 #: createtodotool/createtodotool.cpp:66
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument due must be an ISO 8601 date or date-time"
-msgstr "Het argument einde moet een ISO 8601-datum of -datum/tijd zijn."
+msgstr "Argument gereed(due) moet een ISO 8601-datum of -datum/tijd zijn"
 
 #: createtodotool/createtodotool.cpp:77
-#, fuzzy, kde-format
-#| msgid "Argument limit must be an integer between 1 and %1"
+#, kde-format
 msgid "Argument priority must be an integer between %1 and %2"
-msgstr "Limiet van argument moet een geheel getal zijn tussen 1 en %1"
+msgstr "Argument prioriteit moet een geheel getal zijn tussen %1 en %2"
 
 #: createtodotool/createtodotool.cpp:82
-#, fuzzy, kde-format
-#| msgid "Argument limit must be an integer"
+#, kde-format
 msgid "Argument priority must be an integer"
-msgstr "Limiet van argument moet een geheel getal"
+msgstr "Argument prioriteit moet een geheel getal zijn"
 
 #: editmailtool/editmailtool.cpp:32
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Edit Mail"
-msgstr "E-mailadres aanmaken"
+msgstr "E-mail bewerken"
 
 #: editmailtool/editmailtool.cpp:41 openmailtool/openmailtool.cpp:40
 #: replymailtool/replymailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument id must be an integer"
-msgstr "Argument days moet een geheel getal zijn"
+msgstr "Argument id moet een geheel getal zijn"
 
 #: editmailtool/editmailtool.cpp:46 openmailtool/openmailtool.cpp:45
 #: replymailtool/replymailtool.cpp:69
-#, fuzzy, kde-format
-#| msgid "Argument address_book_id must be a positive integer"
+#, kde-format
 msgid "Argument id must be a positive integer"
-msgstr "Argument adresboek-id moet een positief geheel getal zijn"
+msgstr "Argument id moet een positief geheel getal zijn"
 
 #: editmailtool/editmailtooljob.cpp:39 openmailtool/openmailtooljob.cpp:32
-#, fuzzy, kde-format
-#| msgid "Number of days must be a positive integer"
+#, kde-format
 msgid "Mail id must be a positive integer"
-msgstr "Aantal dagen moet een positief geheel getal zijn"
+msgstr "Mail-id moet een positief geheel getal zijn"
 
 #: editmailtool/editmailtooljob.cpp:53
-#, fuzzy, kde-format
-#| msgid "Mail search failed: %1"
+#, kde-format
 msgid "Mail fetch failed: %1"
-msgstr "Zoeken in e-mail is mislukt: %1"
+msgstr "Ophalen e-mail is mislukt: %1"
 
 #: editmailtool/editmailtooljob.cpp:58
 #, kde-format
 msgid "Mail %1 not found"
-msgstr ""
+msgstr "E-mail %1 niet gevonden"
 
 #: editmailtool/editmailtooljob.cpp:86
 #, kde-format
@@ -435,21 +410,24 @@ msgid ""
 "Mail %1 is not stored in a Drafts folder, it can't be edited. Use mail_open "
 "or mail_reply instead"
 msgstr ""
+"E-mail %1 is niet opgeslagen in een map Concepten, het kan niet bewerkt "
+"worden. Gebruik in plaats daarvan mail_open of mail_reply"
 
 #: editmailtool/editmailtooljob.cpp:101
 #, kde-format
 msgid "Unable to edit mail %1: %2"
-msgstr ""
+msgstr "Kan e-mail %1 niet bewerken: %2"
 
 #: editmailtool/editmailtooljob.cpp:108
 #, kde-format
 msgid "Unable to edit mail %1: KMail main window is not available"
 msgstr ""
+"Kan e-mail %1 niet bewerken: hoofdvenster van KMail is niet beschikbaar"
 
 #: editmailtool/editmailtooljob.cpp:111
 #, kde-format
 msgid "Draft mail %1 opened in a KMail composer"
-msgstr ""
+msgstr "Concept e-mail %1 geopend in een KMail-opsteller"
 
 #: freebusytool/freebusytool.cpp:42
 #, kde-format
@@ -472,16 +450,25 @@ msgid "No address book found"
 msgstr "Geen adresboek gevonden"
 
 #: listcalendars/listcalendarstool.cpp:25
-#, fuzzy, kde-format
-#| msgid "Calendar Events"
+#, kde-format
 msgid "List Calendars"
-msgstr "Afspraken in agenda"
+msgstr "Agenda's weergegeven"
 
 #: listcalendars/listcalendarstooljob.cpp:83
-#, fuzzy, kde-format
-#| msgid "No Drafts folder found"
+#, kde-format
 msgid "No calendar found"
-msgstr "Geen map Concepten gevonden"
+msgstr "Geen agenda gevonden"
+
+#: listidentities/listidentitiestool.cpp:25
+#, kde-format
+msgid "List Identities"
+msgstr ""
+
+#: listidentities/listidentitiestool.cpp:35
+#, fuzzy, kde-format
+#| msgid "No calendar found"
+msgid "No Identity found"
+msgstr "Geen agenda gevonden"
 
 #: mailsearch/searchmailtool.cpp:40
 #, kde-format
@@ -530,36 +517,37 @@ msgid "Url where server listens."
 msgstr "URL waar de server luistert."
 
 #: openmailtool/openmailtool.cpp:31
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Open Mail"
-msgstr "E-mailadres aanmaken"
+msgstr "E-mail openen"
 
 #: openmailtool/openmailtooljob.cpp:44
 #, kde-format
 msgid "Unable to open mail %1: %2"
-msgstr ""
+msgstr "E-mail %1 openen lukt niet: %2"
 
 #: openmailtool/openmailtooljob.cpp:51
 #, kde-format
 msgid "Mail %1 not found or KMail main window is not available"
-msgstr ""
+msgstr "E-mail %1 niet gevonden of hoofdvenster van KMail is niet beschikbaar"
 
 #: openmailtool/openmailtooljob.cpp:54
 #, kde-format
 msgid ""
 "Mail %1 displayed in a read-only KMail viewer, it can't be modified there"
 msgstr ""
+"E-mail %1 wordt weergegeven in een alleen-lezen KMail-viewer; deze kan daar "
+"niet worden gewijzigd"
 
 #: replymailtool/replymailtool.cpp:54
 #, kde-format
 msgid "Reply to Mail"
-msgstr ""
+msgstr "Beantwoord e-mail"
 
 #: replymailtool/replymailtool.cpp:80
 #, kde-format
 msgid "Argument strategy must be one of: smart, author, list, all"
-msgstr ""
+msgstr "Argument strategie moet er een zijn van: slim, auteur, lijst, alles"
 
 #: replymailtool/replymailtooljob.cpp:38
 #, kde-format
@@ -567,21 +555,24 @@ msgid ""
 "Mail id must be a positive integer and reply strategy must be smart, author, "
 "list or all"
 msgstr ""
+"E-mail-id moet een positief geheel getal zijn en strategie moet slim, "
+"auteur, lijst of alles zijn"
 
 #: replymailtool/replymailtooljob.cpp:50
 #, kde-format
 msgid "Unable to reply to mail %1: %2"
-msgstr ""
+msgstr "Kan e-mail %1 niet beantwoorden: %2"
 
 #: replymailtool/replymailtooljob.cpp:57
 #, kde-format
 msgid "Unable to reply to mail %1: KMail main window is not available"
 msgstr ""
+"Kan e-mail %1 niet beantwoorden: hoofdvenster van KMail is niet beschikbaar"
 
 #: replymailtool/replymailtooljob.cpp:60
 #, kde-format
 msgid "Reply composer opened in KMail for mail %1"
-msgstr ""
+msgstr "Opsteller van antwoord geopend in KMail voor e-mail %1"
 
 #: todolisttool/todolisttool.cpp:38
 #, kde-format

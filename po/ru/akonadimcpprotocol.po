@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadimcpprotocol\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:50+0000\n"
+"POT-Creation-Date: 2026-10-18 00:50+0000\n"
 "PO-Revision-Date: 2026-10-16 08:08+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -484,6 +484,17 @@ msgstr "События календаря"
 #, fuzzy, kde-format
 #| msgid "No Drafts folder found"
 msgid "No calendar found"
+msgstr "Папка черновиков не найдена"
+
+#: listidentities/listidentitiestool.cpp:25
+#, kde-format
+msgid "List Identities"
+msgstr ""
+
+#: listidentities/listidentitiestool.cpp:35
+#, fuzzy, kde-format
+#| msgid "No Drafts folder found"
+msgid "No Identity found"
 msgstr "Папка черновиков не найдена"
 
 #: mailsearch/searchmailtool.cpp:40

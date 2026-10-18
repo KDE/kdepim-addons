@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:50+0000\n"
+"POT-Creation-Date: 2026-10-18 00:50+0000\n"
 "PO-Revision-Date: 2026-10-14 10:42+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -495,6 +495,17 @@ msgstr "Esdeveniments de calendari"
 #, fuzzy, kde-format
 #| msgid "No to-do found"
 msgid "No calendar found"
+msgstr "No s'ha trobat cap tasca pendent"
+
+#: listidentities/listidentitiestool.cpp:25
+#, kde-format
+msgid "List Identities"
+msgstr ""
+
+#: listidentities/listidentitiestool.cpp:35
+#, fuzzy, kde-format
+#| msgid "No to-do found"
+msgid "No Identity found"
 msgstr "No s'ha trobat cap tasca pendent"
 
 #: mailsearch/searchmailtool.cpp:40

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:50+0000\n"
-"PO-Revision-Date: 2026-10-16 06:43+0200\n"
+"POT-Creation-Date: 2026-10-18 00:50+0000\n"
+"PO-Revision-Date: 2026-10-17 05:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -41,52 +41,44 @@ msgid "Calendar fetch failed: %1"
 msgstr "კალენდრის მოთხოვნა ჩავარდა: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:38
-#, fuzzy, kde-format
-#| msgid "Subject must be a non-empty string"
+#, kde-format
 msgid "Summary must be a non-empty string"
-msgstr "თემა არაცარიელი სტრიქონი უნდა იყოს"
+msgstr "შეჯამება არაცარიელი სტრიქონი უნდა იყოს"
 
 #: calendarcommon/createincidencetooljob.cpp:70
-#, fuzzy, kde-format
-#| msgid "Address book %1 does not exist or does not accept new contacts"
+#, kde-format
 msgid "Calendar %1 does not exist or does not accept new items"
-msgstr "მისამართების წიგნი %1 არ არსებობს, ან ახალ კონტაქტებს არ იღებს"
+msgstr "კალენდარი %1 არ არსებობს, ან ახალ ელემენტებს არ იღებს"
 
 #: calendarcommon/createincidencetooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "No writable address book found"
+#, kde-format
 msgid "No writable calendar found"
-msgstr "ჩაწერადი მისამართის წიგნები აღმოჩენილი არაა"
+msgstr "ჩაწერადი კალენდარი აღმოჩენილი არაა"
 
 #: calendarcommon/createincidencetooljob.cpp:90
-#, fuzzy, kde-format
-#| msgid "Mail creation failed: %1"
+#, kde-format
 msgid "Creation failed: %1"
-msgstr "ელფოსტის შექმნა ჩავარდა: %1"
+msgstr "შექმნა ჩავარდა: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr "ელფოსტა \"%1\" შეიქმნა საქაღალდეში \"%2\" (ელემენტის id: %3)"
+msgstr "მოვლენა \"%1\" შეიქმნა კალენდარში \"%2\" (ელემენტის id: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr "ელფოსტა \"%1\" შეიქმნა საქაღალდეში \"%2\" (ელემენტის id: %3)"
+msgstr "გასაკეთებელი \"%1\" შეიქმნა კალენდარში \"%2\" (ელემენტის id: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:104
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr "ელფოსტა \"%1\" შეიქმნა საქაღალდეში \"%2\" (ელემენტის id: %3)"
+msgstr "ჟურნალის ჩანაწერი \"%1\" შეიქმნა კალენდარში \"%2\" (ელემენტის id: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr "ელფოსტა \"%1\" შეიქმნა საქაღალდეში \"%2\" (ელემენტის id: %3)"
+msgstr "\"%1\" შეიქმნა კალენდარში \"%2\" (ელემენტის id: %3)"
 
 #: calendareventstool/calendareventstool.cpp:42
 #, kde-format
@@ -123,10 +115,9 @@ msgid "No event between %1 and %2"
 msgstr "%1-სა და %2-ს შორის მოვლენები არაა"
 
 #: common/kmaildbustooljobbase.cpp:51
-#, fuzzy, kde-format
-#| msgid "Contact search failed: %1"
+#, kde-format
 msgid "Unable to start KMail: %1"
-msgstr "კონტაქტის ძებნა ჩავარდა: %1"
+msgstr "KMail-ის გაშვება შეუძლებელია: %1"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -258,58 +249,50 @@ msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
 msgstr "კონტაქტი \"%1\" შეიქმნა მისამართების წიგნში \"%2\" (ელემენტის id: %3)"
 
 #: createeventtool/createeventtool.cpp:50
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create Event"
-msgstr "კონტაქტის შექმნა"
+msgstr "მოვლენის შექმნა"
 
 #: createeventtool/createeventtool.cpp:60
 #: createjournaltool/createjournaltool.cpp:53
 #: createtodotool/createtodotool.cpp:56
-#, fuzzy, kde-format
-#| msgid "Argument query must be a non-empty string"
+#, kde-format
 msgid "Argument summary must be a non-empty string"
-msgstr "არგუმენტი query არაცარიელი სტრიქონი უნდა იყოს"
+msgstr "არგუმენტი summary არაცარიელი სტრიქონი უნდა იყოს"
 
 #: createeventtool/createeventtool.cpp:78
-#, fuzzy, kde-format
-#| msgid "Argument start must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Arguments start and end must both be dates or both be date-times"
-msgstr "არგუმენტი start უნდა იყოს თარიღი, ან თარიღი-დრო ISO 8601 სტანდარტში"
+msgstr "არგუმენტები start და end, ორივე, ან თარიღი უნდა იყოს, ან თარიღი-დრო"
 
 #: createeventtool/createeventtool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument end must be after start"
+#, kde-format
 msgid "Argument end must not be before start"
-msgstr "არგუმენტი end მისი დაწყების შემდეგ უნდა იყოს"
+msgstr "არგუმენტი end მისი დაწყებამდე არ უნდა იყოს"
 
 #: createeventtool/createeventtool.cpp:105
 #: createjournaltool/createjournaltool.cpp:79
 #: createtodotool/createtodotool.cpp:95
-#, fuzzy, kde-format
-#| msgid "Argument address_book_id must be a positive integer"
+#, kde-format
 msgid "Argument calendar_id must be a positive integer"
-msgstr "არგუმენტი address_book_id დადებითი მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი calendar_id დადებითი მთელი რიცხვი უნდა იყოს"
 
 #: createeventtool/createeventtool.cpp:109
 #: createjournaltool/createjournaltool.cpp:83
 #: createtodotool/createtodotool.cpp:99
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument calendar_id must be an integer"
-msgstr "არგუმენტი days მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი calendar_id მთელი რიცხვი უნდა იყოს"
 
 #: createjournaltool/createjournaltool.cpp:43
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create Journal Entry"
-msgstr "კონტაქტის შექმნა"
+msgstr "ჟურნალის ჩანაწერის შექმნა"
 
 #: createjournaltool/createjournaltool.cpp:61
-#, fuzzy, kde-format
-#| msgid "Argument start must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument date must be an ISO 8601 date or date-time"
-msgstr "არგუმენტი start უნდა იყოს თარიღი, ან თარიღი-დრო ISO 8601 სტანდარტში"
+msgstr "არგუმენტი date უნდა იყოს თარიღი, ან თარიღი-დრო ISO 8601 სტანდარტში"
 
 #: createmailtool/createmailtool.cpp:37
 #, kde-format
@@ -362,73 +345,65 @@ msgid "Mail creation failed: %1"
 msgstr "ელფოსტის შექმნა ჩავარდა: %1"
 
 #: createmailtool/createmailtooljob.cpp:128
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid ""
 "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
 "KMail with mail_edit"
-msgstr "ელფოსტა \"%1\" შეიქმნა საქაღალდეში \"%2\" (ელემენტის id: %3)"
+msgstr ""
+"ელფოსტა \"%1\" შეიქმნა საქაღალდეში \"%2\" (ელემენტის id: %3). მისი ჩასწორება "
+"KMail-ში, mail_edit-ით შეგიძლიათ"
 
 #: createtodotool/createtodotool.cpp:46
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create To-do"
-msgstr "კონტაქტის შექმნა"
+msgstr "გასაკეთებლის შექმნა"
 
 #: createtodotool/createtodotool.cpp:66
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument due must be an ISO 8601 date or date-time"
-msgstr "არგუმენტი end უნდა იყოს თარიღი, ან თარიღი-დრო ISO 8601 სტანდარტში"
+msgstr "არგუმენტი due უნდა იყოს თარიღი, ან თარიღი-დრო ISO 8601 სტანდარტში"
 
 #: createtodotool/createtodotool.cpp:77
-#, fuzzy, kde-format
-#| msgid "Argument limit must be an integer between 1 and %1"
+#, kde-format
 msgid "Argument priority must be an integer between %1 and %2"
-msgstr "არგუმენტი limit უნდა იყოს მთელი რიცხვი შუალედიდან 1 - %1"
+msgstr "არგუმენტი priority უნდა იყოს მთელი რიცხვი შუალედიდან %1 - %2"
 
 #: createtodotool/createtodotool.cpp:82
-#, fuzzy, kde-format
-#| msgid "Argument limit must be an integer"
+#, kde-format
 msgid "Argument priority must be an integer"
-msgstr "არგუმენტი limit მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი priority მთელი რიცხვი უნდა იყოს"
 
 #: editmailtool/editmailtool.cpp:32
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Edit Mail"
-msgstr "ელფოსტის შექმნა"
+msgstr "ელფოსტის ჩასწორება"
 
 #: editmailtool/editmailtool.cpp:41 openmailtool/openmailtool.cpp:40
 #: replymailtool/replymailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument id must be an integer"
-msgstr "არგუმენტი days მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი id მთელი რიცხვი უნდა იყოს"
 
 #: editmailtool/editmailtool.cpp:46 openmailtool/openmailtool.cpp:45
 #: replymailtool/replymailtool.cpp:69
-#, fuzzy, kde-format
-#| msgid "Argument address_book_id must be a positive integer"
+#, kde-format
 msgid "Argument id must be a positive integer"
-msgstr "არგუმენტი address_book_id დადებითი მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი id დადებითი მთელი რიცხვი უნდა იყოს"
 
 #: editmailtool/editmailtooljob.cpp:39 openmailtool/openmailtooljob.cpp:32
-#, fuzzy, kde-format
-#| msgid "Number of days must be a positive integer"
+#, kde-format
 msgid "Mail id must be a positive integer"
-msgstr "დღეების რაოდენობა მთელი დადებითი რიცხვი უნდა იყოს"
+msgstr "ფოსტის id მთელი დადებითი რიცხვი უნდა იყოს"
 
 #: editmailtool/editmailtooljob.cpp:53
-#, fuzzy, kde-format
-#| msgid "Mail search failed: %1"
+#, kde-format
 msgid "Mail fetch failed: %1"
-msgstr "ელფოსტის ძებნა ჩავარდა: %1"
+msgstr "ელფოსტის გამოთხოვა ჩავარდა: %1"
 
 #: editmailtool/editmailtooljob.cpp:58
 #, kde-format
 msgid "Mail %1 not found"
-msgstr ""
+msgstr "ფოსტა %1 აღმოჩენილი არაა"
 
 #: editmailtool/editmailtooljob.cpp:86
 #, kde-format
@@ -436,21 +411,25 @@ msgid ""
 "Mail %1 is not stored in a Drafts folder, it can't be edited. Use mail_open "
 "or mail_reply instead"
 msgstr ""
+"ფოსტა %1 მონახაზების საქაღალდეში არაა დამახსოვრებული. მისი ჩასწორება "
+"შეუძლებელია. გამოიყენეთ ამის ნაცვლად mail_open, ან mail_reply"
 
 #: editmailtool/editmailtooljob.cpp:101
 #, kde-format
 msgid "Unable to edit mail %1: %2"
-msgstr ""
+msgstr "ელფოსტის %1 ჩასწორება შეუძლებელია: %2"
 
 #: editmailtool/editmailtooljob.cpp:108
 #, kde-format
 msgid "Unable to edit mail %1: KMail main window is not available"
 msgstr ""
+"ელფოსტის %1 ჩასწორება შეუძლებელია: KMail-ის მთავარი ფანჯარა ხელმისაწვდომი "
+"არაა"
 
 #: editmailtool/editmailtooljob.cpp:111
 #, kde-format
 msgid "Draft mail %1 opened in a KMail composer"
-msgstr ""
+msgstr "ელფოსტის მონახაზი %1 ღიაა KMail-ის კომპოზიტორში"
 
 #: freebusytool/freebusytool.cpp:42
 #, kde-format
@@ -473,16 +452,25 @@ msgid "No address book found"
 msgstr "მისამართის წიგნები აღმოჩენილი არაა"
 
 #: listcalendars/listcalendarstool.cpp:25
-#, fuzzy, kde-format
-#| msgid "Calendar Events"
+#, kde-format
 msgid "List Calendars"
-msgstr "კალენდრის მოვლენები"
+msgstr "კალენდრების ჩამონათვალი"
 
 #: listcalendars/listcalendarstooljob.cpp:83
-#, fuzzy, kde-format
-#| msgid "No Drafts folder found"
+#, kde-format
 msgid "No calendar found"
-msgstr "მონახაზების საქაღალდე აღმოჩენილი არაა"
+msgstr "კალენდარი აღმოჩენილი არაა"
+
+#: listidentities/listidentitiestool.cpp:25
+#, kde-format
+msgid "List Identities"
+msgstr ""
+
+#: listidentities/listidentitiestool.cpp:35
+#, fuzzy, kde-format
+#| msgid "No calendar found"
+msgid "No Identity found"
+msgstr "კალენდარი აღმოჩენილი არაა"
 
 #: mailsearch/searchmailtool.cpp:40
 #, kde-format
@@ -531,36 +519,38 @@ msgid "Url where server listens."
 msgstr "Url, სადაც სერვერი უსმენს."
 
 #: openmailtool/openmailtool.cpp:31
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Open Mail"
-msgstr "ელფოსტის შექმნა"
+msgstr "ელფოსტის გახსნა"
 
 #: openmailtool/openmailtooljob.cpp:44
 #, kde-format
 msgid "Unable to open mail %1: %2"
-msgstr ""
+msgstr "ელფოსტის %1 გახსნა შეუძლებელია: %2"
 
 #: openmailtool/openmailtooljob.cpp:51
 #, kde-format
 msgid "Mail %1 not found or KMail main window is not available"
 msgstr ""
+"ელფოსტა %1 აღმოჩენილი არაა, ან KMail-ის მთავარი ფანჯარა ხელმიუწვდომელია"
 
 #: openmailtool/openmailtooljob.cpp:54
 #, kde-format
 msgid ""
 "Mail %1 displayed in a read-only KMail viewer, it can't be modified there"
 msgstr ""
+"ელფოსტა %1 ნაჩვენებია მხოლოდ-წაკითხვად რეჟიმში KMail-ის დამთვალიერებელში. "
+"მას იქ ვერ შეცვლით"
 
 #: replymailtool/replymailtool.cpp:54
 #, kde-format
 msgid "Reply to Mail"
-msgstr ""
+msgstr "პასუხი ელფოსტაზე"
 
 #: replymailtool/replymailtool.cpp:80
 #, kde-format
 msgid "Argument strategy must be one of: smart, author, list, all"
-msgstr ""
+msgstr "არგუმენტის სტრატეგია უნდა იყოს ერთერთი: smart, author, list, all"
 
 #: replymailtool/replymailtooljob.cpp:38
 #, kde-format
@@ -568,21 +558,24 @@ msgid ""
 "Mail id must be a positive integer and reply strategy must be smart, author, "
 "list or all"
 msgstr ""
+"ფოსტის id უნდა იყოს დადებითი მთელი რიცხვი და პასუხის სტრატეგია უნდა იყოს "
+"ერთერთი სიიდან: smart, author, list or all"
 
 #: replymailtool/replymailtooljob.cpp:50
 #, kde-format
 msgid "Unable to reply to mail %1: %2"
-msgstr ""
+msgstr "ვერ ვუპასუხე ფოსტას %1: %2"
 
 #: replymailtool/replymailtooljob.cpp:57
 #, kde-format
 msgid "Unable to reply to mail %1: KMail main window is not available"
 msgstr ""
+"ელფოსტაზე %1 პასუხი შეუძლებელია: KMail-ის მთავარი ფანჯარა ხელმისაწვდომი არაა"
 
 #: replymailtool/replymailtooljob.cpp:60
 #, kde-format
 msgid "Reply composer opened in KMail for mail %1"
-msgstr ""
+msgstr "ელფოსტის კომპოზიტორი გაიხსნა KMail-ში ელფოსტისთვის %1"
 
 #: todolisttool/todolisttool.cpp:38
 #, kde-format

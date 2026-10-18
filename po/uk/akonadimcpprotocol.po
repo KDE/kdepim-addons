@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-17 00:50+0000\n"
-"PO-Revision-Date: 2026-10-16 11:26+0300\n"
+"POT-Creation-Date: 2026-10-18 00:50+0000\n"
+"PO-Revision-Date: 2026-10-17 18:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -41,56 +41,46 @@ msgid "Calendar fetch failed: %1"
 msgstr "Не вдалося отримати календар: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:38
-#, fuzzy, kde-format
-#| msgid "Subject must be a non-empty string"
+#, kde-format
 msgid "Summary must be a non-empty string"
-msgstr "Тема має бути непорожнім рядком"
+msgstr "Резюме має бути непорожнім рядком"
 
 #: calendarcommon/createincidencetooljob.cpp:70
-#, fuzzy, kde-format
-#| msgid "Address book %1 does not exist or does not accept new contacts"
+#, kde-format
 msgid "Calendar %1 does not exist or does not accept new items"
-msgstr "Адресної книги %1 не існує або вона не приймає нових контактів"
+msgstr "Календаря %1 не існує або він не приймає нових записів"
 
 #: calendarcommon/createincidencetooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "No writable address book found"
+#, kde-format
 msgid "No writable calendar found"
-msgstr "Не знайдено придатної до запису адресної книги"
+msgstr "Не знайдено придатного до запису календаря"
 
 #: calendarcommon/createincidencetooljob.cpp:90
-#, fuzzy, kde-format
-#| msgid "Mail creation failed: %1"
+#, kde-format
 msgid "Creation failed: %1"
-msgstr "Не вдалося створити поштове повідомлення: %1"
+msgstr "Не вдалося створити: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr ""
-"Поштове повідомлення «%1» створено у теці «%2» (ідентифікатор запису: %3)"
+msgstr "Запис події «%1» створено у календарі «%2» (ідентифікатор запису: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
 msgstr ""
-"Поштове повідомлення «%1» створено у теці «%2» (ідентифікатор запису: %3)"
+"Запис завдання «%1» створено у календарі «%2» (ідентифікатор запису: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:104
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
 msgstr ""
-"Поштове повідомлення «%1» створено у теці «%2» (ідентифікатор запису: %3)"
+"Запис журналу «%1» створено у календарі «%2» (ідентифікатор запису: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr ""
-"Поштове повідомлення «%1» створено у теці «%2» (ідентифікатор запису: %3)"
+msgstr "«%1» створено у календарі «%2» (ідентифікатор запису: %3)"
 
 #: calendareventstool/calendareventstool.cpp:42
 #, kde-format
@@ -130,10 +120,9 @@ msgid "No event between %1 and %2"
 msgstr "Немає подій від %1 до %2"
 
 #: common/kmaildbustooljobbase.cpp:51
-#, fuzzy, kde-format
-#| msgid "Contact search failed: %1"
+#, kde-format
 msgid "Unable to start KMail: %1"
-msgstr "Не вдалося виконати пошук контакту: %1"
+msgstr "Не вдалося запустити KMail: %1"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -265,61 +254,53 @@ msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
 msgstr "Контакт «%1» створено в адресній книзі «%2» (ідентифікатор запису: %3)"
 
 #: createeventtool/createeventtool.cpp:50
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create Event"
-msgstr "Створити запис контакту"
+msgstr "Створити запис події"
 
 #: createeventtool/createeventtool.cpp:60
 #: createjournaltool/createjournaltool.cpp:53
 #: createtodotool/createtodotool.cpp:56
-#, fuzzy, kde-format
-#| msgid "Argument query must be a non-empty string"
+#, kde-format
 msgid "Argument summary must be a non-empty string"
-msgstr "Аргумент запиту має бути непорожнім рядком"
+msgstr "Аргумент резюме має бути непорожнім рядком"
 
 #: createeventtool/createeventtool.cpp:78
-#, fuzzy, kde-format
-#| msgid "Argument start must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Arguments start and end must both be dates or both be date-times"
 msgstr ""
-"Аргумент початку має бути записом дати або дати і часу у форматі ISO 8601"
+"Аргументи початку і завершення мають бути або обидва датами, або обидва "
+"записами дати і часу"
 
 #: createeventtool/createeventtool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument end must be after start"
+#, kde-format
 msgid "Argument end must not be before start"
 msgstr ""
-"Значення аргументу завершення має передувати значенню аргументу початку"
+"Значення аргументу завершення не має передувати значенню аргументу початку"
 
 #: createeventtool/createeventtool.cpp:105
 #: createjournaltool/createjournaltool.cpp:79
 #: createtodotool/createtodotool.cpp:95
-#, fuzzy, kde-format
-#| msgid "Argument address_book_id must be a positive integer"
+#, kde-format
 msgid "Argument calendar_id must be a positive integer"
-msgstr "Аргумент address_book_id має бути додатним цілим числом"
+msgstr "Аргумент calendar_id має бути додатним цілим числом"
 
 #: createeventtool/createeventtool.cpp:109
 #: createjournaltool/createjournaltool.cpp:83
 #: createtodotool/createtodotool.cpp:99
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument calendar_id must be an integer"
-msgstr "Аргумент днів має бути цілим числом"
+msgstr "Аргумент calendar_id має бути цілим числом"
 
 #: createjournaltool/createjournaltool.cpp:43
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create Journal Entry"
-msgstr "Створити запис контакту"
+msgstr "Створити запис журналу"
 
 #: createjournaltool/createjournaltool.cpp:61
-#, fuzzy, kde-format
-#| msgid "Argument start must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument date must be an ISO 8601 date or date-time"
-msgstr ""
-"Аргумент початку має бути записом дати або дати і часу у форматі ISO 8601"
+msgstr "Аргумент дати має бути записом дати або дати і часу у форматі ISO 8601"
 
 #: createmailtool/createmailtool.cpp:37
 #, kde-format
@@ -372,75 +353,67 @@ msgid "Mail creation failed: %1"
 msgstr "Не вдалося створити поштове повідомлення: %1"
 
 #: createmailtool/createmailtooljob.cpp:128
-#, fuzzy, kde-format
-#| msgid "Mail \"%1\" created in folder \"%2\" (item id: %3)"
+#, kde-format
 msgid ""
 "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
 "KMail with mail_edit"
 msgstr ""
-"Поштове повідомлення «%1» створено у теці «%2» (ідентифікатор запису: %3)"
+"Поштове повідомлення «%1» створено у теці «%2» (ідентифікатор запису: %3). "
+"Його можна змінити у KMail за допомогою mail_edit"
 
 #: createtodotool/createtodotool.cpp:46
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create To-do"
-msgstr "Створити запис контакту"
+msgstr "Створити запис завдання"
 
 #: createtodotool/createtodotool.cpp:66
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument due must be an ISO 8601 date or date-time"
 msgstr ""
-"Аргумент завершення має бути записом дати або дати і часу у форматі ISO 8601"
+"Аргумент часу призначення має бути записом дати або дати і часу у форматі "
+"ISO 8601"
 
 #: createtodotool/createtodotool.cpp:77
-#, fuzzy, kde-format
-#| msgid "Argument limit must be an integer between 1 and %1"
+#, kde-format
 msgid "Argument priority must be an integer between %1 and %2"
-msgstr "Аргумент обмеження має бути цілим числом від 1 до %1"
+msgstr "Аргумент пріоритетності має бути цілим числом від %1 до %2"
 
 #: createtodotool/createtodotool.cpp:82
-#, fuzzy, kde-format
-#| msgid "Argument limit must be an integer"
+#, kde-format
 msgid "Argument priority must be an integer"
-msgstr "Аргумент обмеження має бути цілим числом"
+msgstr "Аргумент пріоритетності має бути цілим числом"
 
 #: editmailtool/editmailtool.cpp:32
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Edit Mail"
-msgstr "Створити поштове повідомлення"
+msgstr "Редагувати повідомлення"
 
 #: editmailtool/editmailtool.cpp:41 openmailtool/openmailtool.cpp:40
 #: replymailtool/replymailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument id must be an integer"
-msgstr "Аргумент днів має бути цілим числом"
+msgstr "Аргумент ідентифікатора має бути цілим числом"
 
 #: editmailtool/editmailtool.cpp:46 openmailtool/openmailtool.cpp:45
 #: replymailtool/replymailtool.cpp:69
-#, fuzzy, kde-format
-#| msgid "Argument address_book_id must be a positive integer"
+#, kde-format
 msgid "Argument id must be a positive integer"
-msgstr "Аргумент address_book_id має бути додатним цілим числом"
+msgstr "Аргумент ідентифікатора має бути додатним цілим числом"
 
 #: editmailtool/editmailtooljob.cpp:39 openmailtool/openmailtooljob.cpp:32
-#, fuzzy, kde-format
-#| msgid "Number of days must be a positive integer"
+#, kde-format
 msgid "Mail id must be a positive integer"
-msgstr "Кількість днів має бути додатним цілим числом"
+msgstr "Ідентифікатор повідомлення має бути додатним цілим числом"
 
 #: editmailtool/editmailtooljob.cpp:53
-#, fuzzy, kde-format
-#| msgid "Mail search failed: %1"
+#, kde-format
 msgid "Mail fetch failed: %1"
-msgstr "Не вдалося виконати пошук у пошті: %1"
+msgstr "Не вдалося отримати пошту: %1"
 
 #: editmailtool/editmailtooljob.cpp:58
 #, kde-format
 msgid "Mail %1 not found"
-msgstr ""
+msgstr "Поштового повідомлення %1 не знайдено"
 
 #: editmailtool/editmailtooljob.cpp:86
 #, kde-format
@@ -448,21 +421,25 @@ msgid ""
 "Mail %1 is not stored in a Drafts folder, it can't be edited. Use mail_open "
 "or mail_reply instead"
 msgstr ""
+"Поштове повідомлення %1 не збережено у теці «Чернетки» — його не можна "
+"редагувати. Скористайтеся замість цього mail_open або mail_reply"
 
 #: editmailtool/editmailtooljob.cpp:101
 #, kde-format
 msgid "Unable to edit mail %1: %2"
-msgstr ""
+msgstr "Не вдалося виконати редагування повідомлення %1: %2"
 
 #: editmailtool/editmailtooljob.cpp:108
 #, kde-format
 msgid "Unable to edit mail %1: KMail main window is not available"
 msgstr ""
+"Не вдалося виконати редагування повідомлення %1: немає доступу до головного "
+"вікна KMail"
 
 #: editmailtool/editmailtooljob.cpp:111
 #, kde-format
 msgid "Draft mail %1 opened in a KMail composer"
-msgstr ""
+msgstr "Чернетку повідомлення %1 відкрито у редакторі KMail"
 
 #: freebusytool/freebusytool.cpp:42
 #, kde-format
@@ -485,16 +462,25 @@ msgid "No address book found"
 msgstr "Не знайдено адресних книг"
 
 #: listcalendars/listcalendarstool.cpp:25
-#, fuzzy, kde-format
-#| msgid "Calendar Events"
+#, kde-format
 msgid "List Calendars"
-msgstr "Календарні події"
+msgstr "Вивести список календарів"
 
 #: listcalendars/listcalendarstooljob.cpp:83
-#, fuzzy, kde-format
-#| msgid "No Drafts folder found"
+#, kde-format
 msgid "No calendar found"
-msgstr "Не знайдено теки чернеток"
+msgstr "Не знайдено жодного календаря"
+
+#: listidentities/listidentitiestool.cpp:25
+#, kde-format
+msgid "List Identities"
+msgstr ""
+
+#: listidentities/listidentitiestool.cpp:35
+#, fuzzy, kde-format
+#| msgid "No calendar found"
+msgid "No Identity found"
+msgstr "Не знайдено жодного календаря"
 
 #: mailsearch/searchmailtool.cpp:40
 #, kde-format
@@ -543,36 +529,38 @@ msgid "Url where server listens."
 msgstr "Адреса, на якій очікує на запити сервер."
 
 #: openmailtool/openmailtool.cpp:31
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Open Mail"
-msgstr "Створити поштове повідомлення"
+msgstr "Відкрити поштове повідомлення"
 
 #: openmailtool/openmailtooljob.cpp:44
 #, kde-format
 msgid "Unable to open mail %1: %2"
-msgstr ""
+msgstr "Не вдалося відкрити повідомлення %1: %2"
 
 #: openmailtool/openmailtooljob.cpp:51
 #, kde-format
 msgid "Mail %1 not found or KMail main window is not available"
-msgstr ""
+msgstr "Не знайдено повідомлення %1 або немає доступу до головного вікна KMail"
 
 #: openmailtool/openmailtooljob.cpp:54
 #, kde-format
 msgid ""
 "Mail %1 displayed in a read-only KMail viewer, it can't be modified there"
 msgstr ""
+"Повідомлення %1 показано переглядачі KMail у режимі читання — його не можна "
+"там змінювати"
 
 #: replymailtool/replymailtool.cpp:54
 #, kde-format
 msgid "Reply to Mail"
-msgstr ""
+msgstr "Відповісти на повідомлення"
 
 #: replymailtool/replymailtool.cpp:80
 #, kde-format
 msgid "Argument strategy must be one of: smart, author, list, all"
 msgstr ""
+"Аргумент стратегії має бути одним з таких значень: smart, author, list, all"
 
 #: replymailtool/replymailtooljob.cpp:38
 #, kde-format
@@ -580,21 +568,25 @@ msgid ""
 "Mail id must be a positive integer and reply strategy must be smart, author, "
 "list or all"
 msgstr ""
+"Ідентифікатор повідомлення має бути додатним цілим числом, а стратегія "
+"відповіді має бути одним з таких значень: smart, author, list або all"
 
 #: replymailtool/replymailtooljob.cpp:50
 #, kde-format
 msgid "Unable to reply to mail %1: %2"
-msgstr ""
+msgstr "Не вдалося відповісти на повідомлення %1: %2"
 
 #: replymailtool/replymailtooljob.cpp:57
 #, kde-format
 msgid "Unable to reply to mail %1: KMail main window is not available"
 msgstr ""
+"Не вдалося відповісти на повідомлення %1: немає доступу до головного вікна "
+"KMail"
 
 #: replymailtool/replymailtooljob.cpp:60
 #, kde-format
 msgid "Reply composer opened in KMail for mail %1"
-msgstr ""
+msgstr "Редактор відповіді відкрито у KMail для повідомлення %1"
 
 #: todolisttool/todolisttool.cpp:38
 #, kde-format

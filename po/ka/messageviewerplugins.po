@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:48+0000\n"
-"PO-Revision-Date: 2025-09-03 04:50+0200\n"
+"PO-Revision-Date: 2026-10-17 04:56+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.10\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:42
 #, kde-format
@@ -281,14 +281,7 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">არგუმენტის ფორმატის ინფორმაცია…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%s - the subject of message</li><li>%from - the from email "
-#| "address</li><li>%cc - the list of cc email address</li><li>%bcc - the "
-#| "list of bcc email address</li><li>%body - the body of message</li><li>"
-#| "%inreplyto - the reply email address</li><li>%akonadiUrl - the akonadi "
-#| "url (as akonadi:?item=187020)</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%s - the subject of message</li><li>%from - the from email "
@@ -302,7 +295,7 @@ msgstr ""
 "ელფოსტა-მისამართი</li><li>%cc - CC-ში არსებული ელფოსტების სია</li><li>%bcc - "
 "BCC-ში არსებული ელფოსტის მისამართების სია</li><li>%body - შეტყობინების "
 "სხეული</li><li>%inreplyto - პასუხის ელფოსტის მისამართი</li><li>%akonadiUrl - "
-"akonadi-ის ბმული(მაგ: akonadi:?item=187020)</li></ul></strong></p></qt>"
+"akonadi-ის ბმული(მაგ: akonadi:?item=187020)</li></ul></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format
