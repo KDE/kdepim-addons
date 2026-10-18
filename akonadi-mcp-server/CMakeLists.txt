@@ -99,6 +99,10 @@ target_sources(
         updatecontacttool/updatecontacttool.cpp
         updatecontacttool/updatecontacttooljob.h
         updatecontacttool/updatecontacttooljob.cpp
+        updateincidencetool/updateincidencetool.h
+        updateincidencetool/updateincidencetool.cpp
+        updateincidencetool/updateincidencetooljob.h
+        updateincidencetool/updateincidencetooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol

@@ -15,28 +15,6 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-namespace
-{
-[[nodiscard]] bool isProvided(const QJsonValue &value)
-{
-    return !value.isUndefined() && !value.isNull();
-}
-
-// An empty string is a valid value: it clears the field
-[[nodiscard]] bool readOptionalString(const QMap<QString, QJsonValue> &arguments, const QString &key, std::optional<QString> &result)
-{
-    const QJsonValue value = arguments.value(key);
-    if (!isProvided(value)) {
-        return true;
-    }
-    if (!value.isString()) {
-        return false;
-    }
-    result = value.toString().trimmed();
-    return true;
-}
-}
-
 UpdateContactTool::UpdateContactTool() = default;
 UpdateContactTool::~UpdateContactTool() = default;
 
@@ -85,7 +63,7 @@ void UpdateContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
 
     UpdateContactToolJob::ContactChanges changes;
 
-    if (const QJsonValue nameValue = arguments.value(u"name"_s); isProvided(nameValue)) {
+    if (const QJsonValue nameValue = arguments.value(u"name"_s); ToolUtils::isProvided(nameValue)) {
         const QString name = nameValue.toString().trimmed();
         if (!nameValue.isString() || name.isEmpty()) {
             call->finishWithText(i18n("Argument name must be a non-empty string"), true);
@@ -94,7 +72,7 @@ void UpdateContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
         changes.name = name;
     }
 
-    if (const QJsonValue emailsValue = arguments.value(u"emails"_s); isProvided(emailsValue)) {
+    if (const QJsonValue emailsValue = arguments.value(u"emails"_s); ToolUtils::isProvided(emailsValue)) {
         QStringList emails;
         if (!ToolUtils::readStringList(emailsValue, emails)) {
             call->finishWithText(i18n("Argument emails must be an array of strings"), true);
@@ -103,7 +81,7 @@ void UpdateContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
         changes.emails = emails;
     }
 
-    if (const QJsonValue phoneNumbersValue = arguments.value(u"phone_numbers"_s); isProvided(phoneNumbersValue)) {
+    if (const QJsonValue phoneNumbersValue = arguments.value(u"phone_numbers"_s); ToolUtils::isProvided(phoneNumbersValue)) {
         QStringList phoneNumbers;
         if (!ToolUtils::readStringList(phoneNumbersValue, phoneNumbers)) {
             call->finishWithText(i18n("Argument phone_numbers must be an array of strings"), true);
@@ -112,18 +90,18 @@ void UpdateContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
         changes.phoneNumbers = phoneNumbers;
     }
 
-    if (!readOptionalString(arguments, u"organization"_s, changes.organization)) {
+    if (!ToolUtils::readOptionalString(arguments, u"organization"_s, changes.organization)) {
         call->finishWithText(i18n("Argument organization must be a string"), true);
         return;
     }
 
-    if (!readOptionalString(arguments, u"note"_s, changes.note)) {
+    if (!ToolUtils::readOptionalString(arguments, u"note"_s, changes.note)) {
         call->finishWithText(i18n("Argument note must be a string"), true);
         return;
     }
 
     std::optional<QString> birthdayStr;
-    if (!readOptionalString(arguments, u"birthday"_s, birthdayStr)) {
+    if (!ToolUtils::readOptionalString(arguments, u"birthday"_s, birthdayStr)) {
         call->finishWithText(i18n("Argument birthday must be a string"), true);
         return;
     }

@@ -5,7 +5,6 @@
 */
 #include "toolutils.h"
 #include <QJsonArray>
-#include <QJsonValue>
 
 bool ToolUtils::readStringList(const QJsonValue &value, QStringList &list)
 {
@@ -24,5 +23,23 @@ bool ToolUtils::readStringList(const QJsonValue &value, QStringList &list)
             list.append(str);
         }
     }
+    return true;
+}
+
+bool ToolUtils::isProvided(const QJsonValue &value)
+{
+    return !value.isUndefined() && !value.isNull();
+}
+
+bool ToolUtils::readOptionalString(const QMap<QString, QJsonValue> &arguments, const QString &key, std::optional<QString> &result)
+{
+    const QJsonValue value = arguments.value(key);
+    if (!isProvided(value)) {
+        return true;
+    }
+    if (!value.isString()) {
+        return false;
+    }
+    result = value.toString().trimmed();
     return true;
 }
