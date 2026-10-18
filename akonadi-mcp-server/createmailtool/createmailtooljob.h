@@ -9,6 +9,11 @@
 #include <Akonadi/Collection>
 #include <QStringList>
 
+namespace KMime
+{
+class Message;
+}
+
 class CreateMailToolJob : public ToolJobBase
 {
     Q_OBJECT
@@ -26,6 +31,8 @@ public:
 
     void setBody(const QString &body);
 
+    void setIdentityUoid(uint id);
+
     [[nodiscard]] bool canStart() const override;
 
 protected:
@@ -36,9 +43,11 @@ private:
     void slotDraftsCollectionResult(KJob *job);
     void slotItemCreateResult(KJob *job);
     void createMail(const Akonadi::Collection &collection);
+    void assignIdentity(KMime::Message *message) const;
     QString mSubject;
     QStringList mTo;
     QStringList mCc;
     QStringList mBcc;
     QString mBody;
+    uint mUoid = 0;
 };

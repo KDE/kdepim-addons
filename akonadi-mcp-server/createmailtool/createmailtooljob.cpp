@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "createmailtooljob.h"
+#include "akonadimcpprotocol_debug.h"
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/MessageFlags>
@@ -50,6 +51,11 @@ void CreateMailToolJob::setBody(const QString &body)
     mBody = body;
 }
 
+void CreateMailToolJob::setIdentityUoid(uint id)
+{
+    mUoid = id;
+}
+
 bool CreateMailToolJob::canStart() const
 {
     return ToolJobBase::canStart() && !mSubject.isEmpty();
@@ -81,16 +87,25 @@ void CreateMailToolJob::slotDraftsCollectionResult(KJob *job)
     createMail(collection);
 }
 
-void CreateMailToolJob::createMail(const Akonadi::Collection &collection)
+void CreateMailToolJob::assignIdentity(KMime::Message *message) const
 {
-    auto message = std::make_shared<KMime::Message>();
-    const KIdentityManagementCore::Identity &identity = KIdentityManagementCore::IdentityManager::self()->defaultIdentity();
+    const KIdentityManagementCore::IdentityManager *manager = KIdentityManagementCore::IdentityManager::self();
+    if (mUoid != 0 && manager->identityForUoid(mUoid).isNull()) {
+        qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "Identity" << mUoid << "not found, fallback to default identity";
+    }
+    const KIdentityManagementCore::Identity &identity = manager->identityForUoidOrDefault(mUoid);
     if (!identity.isNull()) {
         message->from()->fromUnicodeString(identity.fullEmailAddr());
         auto identityHeader = std::make_unique<KMime::Headers::Generic>("X-KMail-Identity");
         identityHeader->fromUnicodeString(QString::number(identity.uoid()));
         message->setHeader(std::move(identityHeader));
     }
+}
+
+void CreateMailToolJob::createMail(const Akonadi::Collection &collection)
+{
+    auto message = std::make_shared<KMime::Message>();
+    assignIdentity(message.get());
     message->subject()->fromUnicodeString(mSubject);
     if (!mTo.isEmpty()) {
         message->to()->fromUnicodeString(mTo.join(u", "_s));
