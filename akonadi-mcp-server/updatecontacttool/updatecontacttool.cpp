@@ -23,7 +23,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateContactTool::definiti
         u"contact_update"_s,
         u"Update an existing contact in an Akonadi address book. Only the provided fields are modified"_s,
         QMap<QString, QJsonObject>{
-            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the contact item"_s)},
+            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the contact item (see contact_search)"_s)},
             {u"name"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Full name of the contact"_s)},
             {u"emails"_s,
              McpProtocolServerTool::schemaArrayProperty(McpProtocolServerTool::schemaProperty(u"string"_s, {}),

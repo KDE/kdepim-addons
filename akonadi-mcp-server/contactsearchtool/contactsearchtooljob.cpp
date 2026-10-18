@@ -51,14 +51,18 @@ void ContactSearchToolJob::slotResult(KJob *job)
     if (!checkJobResult(job, ki18n("Contact search failed: %1"))) {
         return;
     }
-    const KContacts::Addressee::List contacts = qobject_cast<Akonadi::ContactSearchJob *>(job)->contacts();
-    if (contacts.isEmpty()) {
+    const Akonadi::Item::List lstItems = qobject_cast<Akonadi::ContactSearchJob *>(job)->items();
+    if (lstItems.isEmpty()) {
         finish(i18n("No contact found for \"%1\"", mSearchString));
         return;
     }
     QStringList entries;
-    entries.reserve(contacts.count());
-    for (const KContacts::Addressee &contact : contacts) {
+    entries.reserve(lstItems.count());
+    for (const Akonadi::Item &item : lstItems) {
+        if (!item.hasPayload<KContacts::Addressee>()) {
+            continue;
+        }
+        const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
         QString name = contact.realName();
         if (name.isEmpty()) {
             name = contact.organization();
@@ -89,8 +93,15 @@ void ContactSearchToolJob::slotResult(KJob *job)
                 lines.append(u"Birthday: "_s + birthday.date().toString(Qt::ISODate));
             }
         }
+        lines.append(u"Id: %1"_s.arg(item.id()));
         entries.append(lines.join(u"\n  "_s));
     }
+
+    if (entries.isEmpty()) {
+        finish(i18n("No contact found for \"%1\"", mSearchString));
+        return;
+    }
+
     finish(entries.join(u'\n'));
 }
 
