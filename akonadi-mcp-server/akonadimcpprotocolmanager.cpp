@@ -25,6 +25,7 @@
 #include "replymailtool/replymailtool.h"
 #include "todolisttool/todolisttool.h"
 #include "upcomingbirthdaystool/upcomingbirthdaystool.h"
+#include "updatecontacttool/updatecontacttool.h"
 #include <KLocalizedString>
 #include <QUrl>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolSettings>
@@ -65,6 +66,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<ListCalendarsTool>());
     addTool(std::make_unique<ListIdentitiesTool>());
     addTool(std::make_unique<MarkMailTool>());
+    addTool(std::make_unique<UpdateContactTool>());
     // TODO add more
 }
 

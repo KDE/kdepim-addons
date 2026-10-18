@@ -95,6 +95,8 @@ target_sources(
         markmailtool/markmailtool.cpp
         markmailtool/markmailtooljob.h
         markmailtool/markmailtooljob.cpp
+        updatecontacttool/updatecontacttool.h
+        updatecontacttool/updatecontacttool.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
