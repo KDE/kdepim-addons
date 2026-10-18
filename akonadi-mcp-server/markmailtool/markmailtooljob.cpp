@@ -7,10 +7,29 @@
 #include "markmailtooljob.h"
 
 MarkMailToolJob::MarkMailToolJob(QObject *parent)
-    : QObject{parent}
+    : ToolJobBase{parent}
 {
 }
 
 MarkMailToolJob::~MarkMailToolJob() = default;
+
+bool MarkMailToolJob::canStart() const
+{
+    return mItemId >= 0;
+}
+
+qint64 MarkMailToolJob::itemId() const
+{
+    return mItemId;
+}
+
+void MarkMailToolJob::setItemId(qint64 newItemId)
+{
+    mItemId = newItemId;
+}
+
+void MarkMailToolJob::startJob()
+{
+}
 
 #include "moc_markmailtooljob.cpp"

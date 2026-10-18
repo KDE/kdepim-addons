@@ -6,12 +6,23 @@
 
 #pragma once
 
-#include <QObject>
+#include "common/tooljobbase.h"
 
-class MarkMailToolJob : public QObject
+class MarkMailToolJob : public ToolJobBase
 {
     Q_OBJECT
 public:
     explicit MarkMailToolJob(QObject *parent = nullptr);
     ~MarkMailToolJob() override;
+
+    [[nodiscard]] bool canStart() const override;
+
+    [[nodiscard]] qint64 itemId() const;
+    void setItemId(qint64 newItemId);
+
+protected:
+    void startJob() override;
+
+private:
+    qint64 mItemId = -1;
 };

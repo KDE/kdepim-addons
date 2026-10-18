@@ -5,6 +5,7 @@
 */
 
 #include "markmailtool.h"
+#include "markmailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
@@ -60,6 +61,10 @@ void MarkMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTo
         return;
     }
 
+    auto job = new MarkMailToolJob(call);
+    job->setMcpProtocolServerToolCall(call);
+    job->setItemId(itemId);
+    job->start();
     // TODO implement it
     call->finishWithText(i18n("Not implemented yet"), true);
 }
