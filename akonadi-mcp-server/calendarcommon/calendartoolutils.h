@@ -5,6 +5,7 @@
 */
 #pragma once
 
+#include <Akonadi/Item>
 #include <KCalendarCore/Calendar>
 #include <KCalendarCore/Incidence>
 #include <QDateTime>
@@ -34,6 +35,10 @@ struct IncidenceDateTime {
 [[nodiscard]] std::optional<QDateTime> parseDateTime(const QString &str, DateBound bound);
 // Parse an ISO 8601 date (all day) or date-time, in the system time zone
 [[nodiscard]] std::optional<IncidenceDateTime> parseIncidenceDateTime(const QString &str);
+// Store the Akonadi item id in the incidence, it is lost when the incidence is added to a memory calendar
+void setItemId(const KCalendarCore::Incidence::Ptr &incidence, Akonadi::Item::Id id);
+// Returns -1 if no item id was stored
+[[nodiscard]] Akonadi::Item::Id itemId(const KCalendarCore::Incidence::Ptr &incidence);
 [[nodiscard]] QString formatDateTime(const QDateTime &dateTime);
 [[nodiscard]] QString formatPeriod(const QDateTime &start, const QDateTime &end);
 [[nodiscard]] QString formatOccurrence(const Occurrence &occurrence);

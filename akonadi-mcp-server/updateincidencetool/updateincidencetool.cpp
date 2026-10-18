@@ -29,7 +29,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateIncidenceTool::defini
         u"calendar_update_incidence"_s,
         u"Update an existing event, to-do or journal entry in an Akonadi calendar. Only the provided fields are modified"_s,
         QMap<QString, QJsonObject>{
-            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the incidence item"_s)},
+            {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the incidence item (see calendar_events and calendar_todo_list)"_s)},
             {u"summary"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Title of the incidence"_s)},
             {u"description"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Description of the incidence, an empty string clears it"_s)},
             {u"location"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Location of the incidence, an empty string clears it"_s)},

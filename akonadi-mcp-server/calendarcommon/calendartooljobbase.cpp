@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "calendartooljobbase.h"
+#include "calendartoolutils.h"
 #include <Akonadi/CalendarUtils>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/RecursiveItemFetchJob>
@@ -37,6 +38,7 @@ void CalendarToolJobBase::slotResult(KJob *job)
     const Akonadi::Item::List items = qobject_cast<Akonadi::RecursiveItemFetchJob *>(job)->items();
     for (const Akonadi::Item &item : items) {
         if (const KCalendarCore::Incidence::Ptr incidence = Akonadi::CalendarUtils::incidence(item)) {
+            CalendarToolUtils::setItemId(incidence, item.id());
             calendar->addIncidence(incidence);
         }
     }

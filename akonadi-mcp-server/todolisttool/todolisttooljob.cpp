@@ -46,6 +46,9 @@ constexpr int maximumEntries = 200;
     if (!todo->isCompleted() && todo->percentComplete() > 0) {
         details.append(u"%1% done"_s.arg(todo->percentComplete()));
     }
+    if (const Akonadi::Item::Id id = CalendarToolUtils::itemId(todo); id >= 0) {
+        details.append(u"id: %1"_s.arg(id));
+    }
     if (!details.isEmpty()) {
         entry += u" ("_s + details.join(u", "_s) + u')';
     }

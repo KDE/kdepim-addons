@@ -15,6 +15,7 @@ namespace
 // OccurrenceIterator only returns occurrences starting in the range: look back to find the ones which are still running
 constexpr int lookbackDays = 7;
 constexpr int isoDateLength = 10;
+constexpr QByteArrayView itemIdProperty = "X-AKONADI-MCP-ITEM-ID";
 }
 
 std::optional<QDateTime> CalendarToolUtils::parseDateTime(const QString &str, DateBound bound)
@@ -49,6 +50,18 @@ std::optional<CalendarToolUtils::IncidenceDateTime> CalendarToolUtils::parseInci
         return std::nullopt;
     }
     return IncidenceDateTime{dateTime.toTimeZone(QTimeZone::systemTimeZone()), false};
+}
+
+void CalendarToolUtils::setItemId(const KCalendarCore::Incidence::Ptr &incidence, Akonadi::Item::Id id)
+{
+    incidence->setNonKDECustomProperty(itemIdProperty.toByteArray(), QString::number(id));
+}
+
+Akonadi::Item::Id CalendarToolUtils::itemId(const KCalendarCore::Incidence::Ptr &incidence)
+{
+    bool ok = false;
+    const Akonadi::Item::Id id = incidence->nonKDECustomProperty(itemIdProperty.toByteArray()).toLongLong(&ok);
+    return ok ? id : -1;
 }
 
 QString CalendarToolUtils::formatDateTime(const QDateTime &dateTime)
@@ -87,6 +100,9 @@ QString CalendarToolUtils::formatOccurrence(const Occurrence &occurrence)
     QString entry = when + u": "_s + occurrence.incidence->summary();
     if (const QString location = occurrence.incidence->location(); !location.isEmpty()) {
         entry += u" (location: %1)"_s.arg(location);
+    }
+    if (const Akonadi::Item::Id id = itemId(occurrence.incidence); id >= 0) {
+        entry += u" (id: %1)"_s.arg(id);
     }
     return entry;
 }
