@@ -85,6 +85,7 @@ void MarkMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTo
     auto job = new MarkMailToolJob(call);
     job->setMcpProtocolServerToolCall(call);
     job->setItemId(itemId);
+    job->setRead(readValue);
+    job->setImportant(important);
     job->start();
-    call->finishWithText(i18n("Not implemented yet"), true);
 }

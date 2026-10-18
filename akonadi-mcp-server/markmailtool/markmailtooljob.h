@@ -7,6 +7,12 @@
 #pragma once
 
 #include "common/tooljobbase.h"
+#include <optional>
+
+namespace Akonadi
+{
+class Item;
+}
 
 class MarkMailToolJob : public ToolJobBase
 {
@@ -17,7 +23,6 @@ public:
 
     [[nodiscard]] bool canStart() const override;
 
-    [[nodiscard]] qint64 itemId() const;
     void setItemId(qint64 newItemId);
 
     void setRead(std::optional<bool> read);
@@ -25,8 +30,12 @@ public:
 
 protected:
     void startJob() override;
+    [[nodiscard]] QString invalidArgumentsMessage() const override;
 
 private:
+    void slotItemFetchResult(KJob *job);
+    void applyFlag(Akonadi::Item &item, const QByteArray &flag, std::optional<bool> value);
+    void slotItemModifyResult(KJob *job);
     qint64 mItemId = -1;
     std::optional<bool> mRead;
     std::optional<bool> mImportant;
