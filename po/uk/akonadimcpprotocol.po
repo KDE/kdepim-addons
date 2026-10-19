@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-18 00:50+0000\n"
-"PO-Revision-Date: 2026-10-17 18:33+0300\n"
+"POT-Creation-Date: 2026-10-19 00:47+0000\n"
+"PO-Revision-Date: 2026-10-18 20:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: akonadimcpprotocolmanager.cpp:43
+#: akonadimcpprotocolmanager.cpp:47
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Керування даними від Akonadi"
@@ -33,7 +33,7 @@ msgstr "Стан ресурсів Akonadi"
 msgid "No Akonadi resource found"
 msgstr "Не знайдено ресурсів Akonadi"
 
-#: calendarcommon/calendartooljobbase.cpp:33
+#: calendarcommon/calendartooljobbase.cpp:34
 #: calendarcommon/createincidencetooljob.cpp:57
 #: listcalendars/listcalendarstooljob.cpp:60
 #, kde-format
@@ -89,6 +89,7 @@ msgstr "Календарні події"
 
 #: calendareventstool/calendareventstool.cpp:53
 #: createeventtool/createeventtool.cpp:66 freebusytool/freebusytool.cpp:52
+#: updateincidencetool/updateincidencetool.cpp:97
 #, kde-format
 msgid "Argument start must be an ISO 8601 date or date-time"
 msgstr ""
@@ -96,6 +97,7 @@ msgstr ""
 
 #: calendareventstool/calendareventstool.cpp:62
 #: createeventtool/createeventtool.cpp:74 freebusytool/freebusytool.cpp:57
+#: updateincidencetool/updateincidencetool.cpp:105
 #, kde-format
 msgid "Argument end must be an ISO 8601 date or date-time"
 msgstr ""
@@ -183,6 +185,7 @@ msgid "Contact search failed: %1"
 msgstr "Не вдалося виконати пошук контакту: %1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:56
+#: contactsearchtool/contactsearchtooljob.cpp:101
 #, kde-format
 msgid "No contact found for \"%1\""
 msgstr "Не знайдено контакту для запиту «%1»"
@@ -193,21 +196,25 @@ msgid "Create Contact"
 msgstr "Створити запис контакту"
 
 #: createcontacttool/createcontacttool.cpp:56
+#: updatecontacttool/updatecontacttool.cpp:69
 #, kde-format
 msgid "Argument name must be a non-empty string"
 msgstr "Аргумент назви має бути непорожнім рядком"
 
 #: createcontacttool/createcontacttool.cpp:66
+#: updatecontacttool/updatecontacttool.cpp:78
 #, kde-format
 msgid "Argument emails must be an array of strings"
 msgstr "Аргумент адрес електронної пошти має бути масивом рядків"
 
 #: createcontacttool/createcontacttool.cpp:73
+#: updatecontacttool/updatecontacttool.cpp:87
 #, kde-format
 msgid "Argument phone_numbers must be an array of strings"
 msgstr "Аргумент phone_numbers має бути масивом рядків"
 
 #: createcontacttool/createcontacttool.cpp:89
+#: updatecontacttool/updatecontacttool.cpp:112
 #, kde-format
 msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
 msgstr "Некоректний день народження «%1», очікуваним форматом є РРРР-ММ-ДД"
@@ -261,11 +268,13 @@ msgstr "Створити запис події"
 #: createeventtool/createeventtool.cpp:60
 #: createjournaltool/createjournaltool.cpp:53
 #: createtodotool/createtodotool.cpp:56
+#: updateincidencetool/updateincidencetool.cpp:78
 #, kde-format
 msgid "Argument summary must be a non-empty string"
 msgstr "Аргумент резюме має бути непорожнім рядком"
 
 #: createeventtool/createeventtool.cpp:78
+#: updateincidencetool/updateincidencetool.cpp:109
 #, kde-format
 msgid "Arguments start and end must both be dates or both be date-times"
 msgstr ""
@@ -273,6 +282,7 @@ msgstr ""
 "записами дати і часу"
 
 #: createeventtool/createeventtool.cpp:84
+#: updateincidencetool/updateincidencetooljob.cpp:173
 #, kde-format
 msgid "Argument end must not be before start"
 msgstr ""
@@ -302,57 +312,69 @@ msgstr "Створити запис журналу"
 msgid "Argument date must be an ISO 8601 date or date-time"
 msgstr "Аргумент дати має бути записом дати або дати і часу у форматі ISO 8601"
 
-#: createmailtool/createmailtool.cpp:37
+#: createmailtool/createmailtool.cpp:40
 #, kde-format
 msgid "Create Mail"
 msgstr "Створити поштове повідомлення"
 
-#: createmailtool/createmailtool.cpp:47
+#: createmailtool/createmailtool.cpp:50
 #, kde-format
 msgid "Argument subject must be a non-empty string"
 msgstr "Аргумент теми має бути непорожнім рядком"
 
-#: createmailtool/createmailtool.cpp:53
+#: createmailtool/createmailtool.cpp:56
 #, kde-format
 msgid "Argument to must be an array of strings"
 msgstr "Аргумент «кому» має бути масивом рядків"
 
-#: createmailtool/createmailtool.cpp:58
+#: createmailtool/createmailtool.cpp:61
 #, kde-format
 msgid "Argument cc must be an array of strings"
 msgstr "Аргумент «копія» має бути масивом рядків"
 
-#: createmailtool/createmailtool.cpp:63
+#: createmailtool/createmailtool.cpp:66
 #, kde-format
 msgid "Argument bcc must be an array of strings"
 msgstr "Аргумент «потайна копій» має бути масивом рядків"
 
-#: createmailtool/createmailtool.cpp:69
+#: createmailtool/createmailtool.cpp:72
 #, kde-format
 msgid "Argument body must be a string"
 msgstr "Аргумент вмісту повідомлення має бути рядком"
 
-#: createmailtool/createmailtooljob.cpp:60
+#: createmailtool/createmailtool.cpp:81
+#, fuzzy, kde-format
+#| msgid "Argument id must be a positive integer"
+msgid "Argument identity must be a positive integer"
+msgstr "Аргумент ідентифікатора має бути додатним цілим числом"
+
+#: createmailtool/createmailtool.cpp:86
+#, fuzzy, kde-format
+#| msgid "Argument id must be an integer"
+msgid "Argument identity must be an integer"
+msgstr "Аргумент ідентифікатора має бути цілим числом"
+
+#: createmailtool/createmailtooljob.cpp:66
 #, kde-format
 msgid "Subject must be a non-empty string"
 msgstr "Тема має бути непорожнім рядком"
 
-#: createmailtool/createmailtooljob.cpp:73 editmailtool/editmailtooljob.cpp:81
+#: createmailtool/createmailtooljob.cpp:79 editmailtool/editmailtooljob.cpp:81
 #, kde-format
 msgid "Drafts folder fetch failed: %1"
 msgstr "Не вдалося отримати вміст теки чернеток: %1"
 
-#: createmailtool/createmailtooljob.cpp:78
+#: createmailtool/createmailtooljob.cpp:84
 #, kde-format
 msgid "No Drafts folder found"
 msgstr "Не знайдено теки чернеток"
 
-#: createmailtool/createmailtooljob.cpp:124
+#: createmailtool/createmailtooljob.cpp:139
 #, kde-format
 msgid "Mail creation failed: %1"
 msgstr "Не вдалося створити поштове повідомлення: %1"
 
-#: createmailtool/createmailtooljob.cpp:128
+#: createmailtool/createmailtooljob.cpp:143
 #, kde-format
 msgid ""
 "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
@@ -367,6 +389,7 @@ msgid "Create To-do"
 msgstr "Створити запис завдання"
 
 #: createtodotool/createtodotool.cpp:66
+#: updateincidencetool/updateincidencetool.cpp:126
 #, kde-format
 msgid "Argument due must be an ISO 8601 date or date-time"
 msgstr ""
@@ -374,6 +397,7 @@ msgstr ""
 "ISO 8601"
 
 #: createtodotool/createtodotool.cpp:77
+#: updateincidencetool/updateincidencetool.cpp:139
 #, kde-format
 msgid "Argument priority must be an integer between %1 and %2"
 msgstr "Аргумент пріоритетності має бути цілим числом від %1 до %2"
@@ -388,29 +412,34 @@ msgstr "Аргумент пріоритетності має бути цілим
 msgid "Edit Mail"
 msgstr "Редагувати повідомлення"
 
-#: editmailtool/editmailtool.cpp:41 openmailtool/openmailtool.cpp:40
-#: replymailtool/replymailtool.cpp:64
+#: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:60
+#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
+#: updatecontacttool/updatecontacttool.cpp:55
+#: updateincidencetool/updateincidencetool.cpp:64
 #, kde-format
 msgid "Argument id must be an integer"
 msgstr "Аргумент ідентифікатора має бути цілим числом"
 
-#: editmailtool/editmailtool.cpp:46 openmailtool/openmailtool.cpp:45
-#: replymailtool/replymailtool.cpp:69
+#: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:65
+#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
+#: updatecontacttool/updatecontacttool.cpp:60
+#: updateincidencetool/updateincidencetool.cpp:69
 #, kde-format
 msgid "Argument id must be a positive integer"
 msgstr "Аргумент ідентифікатора має бути додатним цілим числом"
 
-#: editmailtool/editmailtooljob.cpp:39 openmailtool/openmailtooljob.cpp:32
+#: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
+#: openmailtool/openmailtooljob.cpp:32
 #, kde-format
 msgid "Mail id must be a positive integer"
 msgstr "Ідентифікатор повідомлення має бути додатним цілим числом"
 
-#: editmailtool/editmailtooljob.cpp:53
+#: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
 #, kde-format
 msgid "Mail fetch failed: %1"
 msgstr "Не вдалося отримати пошту: %1"
 
-#: editmailtool/editmailtooljob.cpp:58
+#: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
 #, kde-format
 msgid "Mail %1 not found"
 msgstr "Поштового повідомлення %1 не знайдено"
@@ -471,16 +500,15 @@ msgstr "Вивести список календарів"
 msgid "No calendar found"
 msgstr "Не знайдено жодного календаря"
 
-#: listidentities/listidentitiestool.cpp:25
+#: listidentities/listidentitiestool.cpp:26
 #, kde-format
 msgid "List Identities"
-msgstr ""
+msgstr "Вивести список профілів"
 
-#: listidentities/listidentitiestool.cpp:35
-#, fuzzy, kde-format
-#| msgid "No calendar found"
+#: listidentities/listidentitiestool.cpp:44
+#, kde-format
 msgid "No Identity found"
-msgstr "Не знайдено жодного календаря"
+msgstr "Не знайдено жодного профілю"
 
 #: mailsearch/searchmailtool.cpp:40
 #, kde-format
@@ -527,6 +555,41 @@ msgstr "Не знайдено поштових повідомлень для з�
 msgctxt "@info:shell"
 msgid "Url where server listens."
 msgstr "Адреса, на якій очікує на запити сервер."
+
+#: markmailtool/markmailtool.cpp:51
+#, fuzzy, kde-format
+#| msgid "Search Mail"
+msgid "Mark Mail"
+msgstr "Шукати у пошті"
+
+#: markmailtool/markmailtool.cpp:71
+#, fuzzy, kde-format
+#| msgid "Argument include_completed must be a boolean"
+msgid "Argument read must be a boolean"
+msgstr "Аргумент include_completed має бути булевим значенням"
+
+#: markmailtool/markmailtool.cpp:77
+#, fuzzy, kde-format
+#| msgid "Argument include_completed must be a boolean"
+msgid "Argument important must be a boolean"
+msgstr "Аргумент include_completed має бути булевим значенням"
+
+#: markmailtool/markmailtool.cpp:81
+#, kde-format
+msgid "At least one of read or important must be given"
+msgstr ""
+
+#: markmailtool/markmailtooljob.cpp:75
+#, fuzzy, kde-format
+#| msgid "Mail creation failed: %1"
+msgid "Mail modification failed: %1"
+msgstr "Не вдалося створити поштове повідомлення: %1"
+
+#: markmailtool/markmailtooljob.cpp:78
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Mail %1 modified"
+msgstr "Поштового повідомлення %1 не знайдено"
 
 #: openmailtool/openmailtool.cpp:31
 #, kde-format
@@ -608,7 +671,7 @@ msgstr "Аргумент due_within_days має бути цілим числом
 msgid "Argument due_within_days must be an integer"
 msgstr "Аргумент due_within_days має бути цілим числом"
 
-#: todolisttool/todolisttooljob.cpp:93
+#: todolisttool/todolisttooljob.cpp:96
 #, kde-format
 msgid "No to-do found"
 msgstr "Не знайдено завдань"
@@ -634,6 +697,7 @@ msgid "Number of days must be a positive integer"
 msgstr "Кількість днів має бути додатним цілим числом"
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
 #, kde-format
 msgid "Contact fetch failed: %1"
 msgstr "Не вдалося отримати контакти: %1"
@@ -646,3 +710,197 @@ msgstr[0] "Немає днів народження протягом насту�
 msgstr[1] "Немає днів народження протягом наступних %1 днів"
 msgstr[2] "Немає днів народження протягом наступних %1 днів"
 msgstr[3] "Немає днів народження протягом наступного дня"
+
+#: updatecontacttool/updatecontacttool.cpp:45
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Update Contact"
+msgstr "Створити запис контакту"
+
+#: updatecontacttool/updatecontacttool.cpp:94
+#, fuzzy, kde-format
+#| msgid "Argument body must be a string"
+msgid "Argument organization must be a string"
+msgstr "Аргумент вмісту повідомлення має бути рядком"
+
+#: updatecontacttool/updatecontacttool.cpp:99
+#, fuzzy, kde-format
+#| msgid "Argument body must be a string"
+msgid "Argument note must be a string"
+msgstr "Аргумент вмісту повідомлення має бути рядком"
+
+#: updatecontacttool/updatecontacttool.cpp:105
+#, fuzzy, kde-format
+#| msgid "Argument body must be a string"
+msgid "Argument birthday must be a string"
+msgstr "Аргумент вмісту повідомлення має бути рядком"
+
+#: updatecontacttool/updatecontacttool.cpp:119
+#: updatecontacttool/updatecontacttooljob.cpp:46
+#: updateincidencetool/updateincidencetool.cpp:154
+#: updateincidencetool/updateincidencetooljob.cpp:53
+#, kde-format
+msgid "No field to update"
+msgstr ""
+
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, fuzzy, kde-format
+#| msgid "Mail id must be a positive integer"
+msgid "Contact id must be a positive integer"
+msgstr "Ідентифікатор повідомлення має бути додатним цілим числом"
+
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Contact %1 not found"
+msgstr "Поштового повідомлення %1 не знайдено"
+
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr ""
+
+#: updatecontacttool/updatecontacttooljob.cpp:84
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Contact modification failed: %1"
+msgstr "Не вдалося створити запис контакту: %1"
+
+#: updatecontacttool/updatecontacttooljob.cpp:87
+#, fuzzy, kde-format
+#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgid "Contact \"%1\" updated (item id: %2)"
+msgstr "Контакт «%1» створено в адресній книзі «%2» (ідентифікатор запису: %3)"
+
+#: updateincidencetool/updateincidencetool.cpp:54
+#, kde-format
+msgid "Update Incidence"
+msgstr ""
+
+#: updateincidencetool/updateincidencetool.cpp:85
+#, fuzzy, kde-format
+#| msgid "Argument body must be a string"
+msgid "Argument description must be a string"
+msgstr "Аргумент вмісту повідомлення має бути рядком"
+
+#: updateincidencetool/updateincidencetool.cpp:90
+#, fuzzy, kde-format
+#| msgid "Argument body must be a string"
+msgid "Argument location must be a string"
+msgstr "Аргумент вмісту повідомлення має бути рядком"
+
+#: updateincidencetool/updateincidencetool.cpp:116
+#, fuzzy, kde-format
+#| msgid "Argument body must be a string"
+msgid "Argument due must be a string"
+msgstr "Аргумент вмісту повідомлення має бути рядком"
+
+#: updateincidencetool/updateincidencetool.cpp:130
+#, fuzzy, kde-format
+#| msgid "Arguments start and end must both be dates or both be date-times"
+msgid "Arguments start and due must both be dates or both be date-times"
+msgstr ""
+"Аргументи початку і завершення мають бути або обидва датами, або обидва "
+"записами дати і часу"
+
+#: updateincidencetool/updateincidencetool.cpp:147
+#, fuzzy, kde-format
+#| msgid "Argument include_completed must be a boolean"
+msgid "Argument completed must be a boolean"
+msgstr "Аргумент include_completed має бути булевим значенням"
+
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, fuzzy, kde-format
+#| msgid "Mail id must be a positive integer"
+msgid "Incidence id must be a positive integer"
+msgstr "Ідентифікатор повідомлення має бути додатним цілим числом"
+
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, fuzzy, kde-format
+#| msgid "Mail fetch failed: %1"
+msgid "Incidence fetch failed: %1"
+msgstr "Не вдалося отримати пошту: %1"
+
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Incidence %1 not found"
+msgstr "Поштового повідомлення %1 не знайдено"
+
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:95
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Incidence modification failed: %1"
+msgstr "Не вдалося створити запис контакту: %1"
+
+#: updateincidencetool/updateincidencetooljob.cpp:102
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+msgid "Event \"%1\" updated (item id: %2)"
+msgstr "Запис події «%1» створено у календарі «%2» (ідентифікатор запису: %3)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:105
+#, fuzzy, kde-format
+#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+msgid "To-do \"%1\" updated (item id: %2)"
+msgstr ""
+"Запис завдання «%1» створено у календарі «%2» (ідентифікатор запису: %3)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:108
+#, fuzzy, kde-format
+#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+msgid "Journal entry \"%1\" updated (item id: %2)"
+msgstr ""
+"Запис журналу «%1» створено у календарі «%2» (ідентифікатор запису: %3)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:111
+#, fuzzy, kde-format
+#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+msgid "\"%1\" updated (item id: %2)"
+msgstr "«%1» створено у календарі «%2» (ідентифікатор запису: %3)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:120
+#, fuzzy, kde-format
+#| msgid "Argument end must not be before start"
+msgid "Argument end is only valid for events"
+msgstr ""
+"Значення аргументу завершення не має передувати значенню аргументу початку"
+
+#: updateincidencetool/updateincidencetooljob.cpp:123
+#, kde-format
+msgid "Arguments due, priority and completed are only valid for to-dos"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, fuzzy, kde-format
+#| msgid "Argument end must be an ISO 8601 date or date-time"
+msgid "Argument end must be a date for an all-day event"
+msgstr ""
+"Аргумент завершення має бути записом дати або дати і часу у форматі ISO 8601"
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, fuzzy, kde-format
+#| msgid "Argument end must be an ISO 8601 date or date-time"
+msgid "Argument end must be a date-time for a timed event"
+msgstr ""
+"Аргумент завершення має бути записом дати або дати і часу у форматі ISO 8601"
+
+#: updateincidencetool/updateincidencetooljob.cpp:201
+#, fuzzy, kde-format
+#| msgid "Arguments start and end must both be dates or both be date-times"
+msgid "Start and due dates of a to-do must both be dates or both be date-times"
+msgstr ""
+"Аргументи початку і завершення мають бути або обидва датами, або обидва "
+"записами дати і часу"
+
+#: updateincidencetool/updateincidencetooljob.cpp:204
+#, fuzzy, kde-format
+#| msgid "Argument end must not be before start"
+msgid "Due date must not be before start"
+msgstr ""
+"Значення аргументу завершення не має передувати значенню аргументу початку"

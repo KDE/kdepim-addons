@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-18 00:50+0000\n"
+"POT-Creation-Date: 2026-10-19 00:47+0000\n"
 "PO-Revision-Date: 2026-10-16 15:14+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,7 +18,7 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 26.08.1\n"
 
-#: akonadimcpprotocolmanager.cpp:43
+#: akonadimcpprotocolmanager.cpp:47
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "ניהול פרטים מ־Akonadi"
@@ -34,7 +34,7 @@ msgstr "מצב משאבי Akonadi"
 msgid "No Akonadi resource found"
 msgstr "לא נמצא פנקס כתובות"
 
-#: calendarcommon/calendartooljobbase.cpp:33
+#: calendarcommon/calendartooljobbase.cpp:34
 #: calendarcommon/createincidencetooljob.cpp:57
 #: listcalendars/listcalendarstooljob.cpp:60
 #, kde-format
@@ -92,12 +92,14 @@ msgstr "אירועי לוח שנה"
 
 #: calendareventstool/calendareventstool.cpp:53
 #: createeventtool/createeventtool.cpp:66 freebusytool/freebusytool.cpp:52
+#: updateincidencetool/updateincidencetool.cpp:97
 #, kde-format
 msgid "Argument start must be an ISO 8601 date or date-time"
 msgstr "הארגומנט start (התחלה) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
 
 #: calendareventstool/calendareventstool.cpp:62
 #: createeventtool/createeventtool.cpp:74 freebusytool/freebusytool.cpp:57
+#: updateincidencetool/updateincidencetool.cpp:105
 #, kde-format
 msgid "Argument end must be an ISO 8601 date or date-time"
 msgstr "הארגומנט end (סוף) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
@@ -184,6 +186,7 @@ msgid "Contact search failed: %1"
 msgstr "חיפוש אנשי קשר נכשל: %1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:56
+#: contactsearchtool/contactsearchtooljob.cpp:101
 #, kde-format
 msgid "No contact found for \"%1\""
 msgstr "לא נמצאו אנשי קשר בחיפוש אחר „%1”"
@@ -195,24 +198,28 @@ msgid "Create Contact"
 msgstr "חיפוש באנשי הקשר"
 
 #: createcontacttool/createcontacttool.cpp:56
+#: updatecontacttool/updatecontacttool.cpp:69
 #, fuzzy, kde-format
 #| msgid "Argument query must be a non-empty string"
 msgid "Argument name must be a non-empty string"
 msgstr "הארגומנט query (שאילתה) חייבת להיות מחרוזת לא ריקה"
 
 #: createcontacttool/createcontacttool.cpp:66
+#: updatecontacttool/updatecontacttool.cpp:78
 #, fuzzy, kde-format
 #| msgid "Argument fields must be an array"
 msgid "Argument emails must be an array of strings"
 msgstr "הארגומנט fields (שדות) חייב להיות מערך"
 
 #: createcontacttool/createcontacttool.cpp:73
+#: updatecontacttool/updatecontacttool.cpp:87
 #, fuzzy, kde-format
 #| msgid "Argument fields must be an array"
 msgid "Argument phone_numbers must be an array of strings"
 msgstr "הארגומנט fields (שדות) חייב להיות מערך"
 
 #: createcontacttool/createcontacttool.cpp:89
+#: updatecontacttool/updatecontacttool.cpp:112
 #, kde-format
 msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
 msgstr "יום ההולדת „%1” שגויה, התבנית שאמורה להיות היא YYYY-MM-DD"
@@ -270,18 +277,21 @@ msgstr "חיפוש באנשי הקשר"
 #: createeventtool/createeventtool.cpp:60
 #: createjournaltool/createjournaltool.cpp:53
 #: createtodotool/createtodotool.cpp:56
+#: updateincidencetool/updateincidencetool.cpp:78
 #, fuzzy, kde-format
 #| msgid "Argument query must be a non-empty string"
 msgid "Argument summary must be a non-empty string"
 msgstr "הארגומנט query (שאילתה) חייבת להיות מחרוזת לא ריקה"
 
 #: createeventtool/createeventtool.cpp:78
+#: updateincidencetool/updateincidencetool.cpp:109
 #, fuzzy, kde-format
 #| msgid "Argument start must be an ISO 8601 date or date-time"
 msgid "Arguments start and end must both be dates or both be date-times"
 msgstr "הארגומנט start (התחלה) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
 
 #: createeventtool/createeventtool.cpp:84
+#: updateincidencetool/updateincidencetooljob.cpp:173
 #, fuzzy, kde-format
 #| msgid "Argument end must be after start"
 msgid "Argument end must not be before start"
@@ -315,60 +325,72 @@ msgstr "חיפוש באנשי הקשר"
 msgid "Argument date must be an ISO 8601 date or date-time"
 msgstr "הארגומנט start (התחלה) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
 
-#: createmailtool/createmailtool.cpp:37
+#: createmailtool/createmailtool.cpp:40
 #, kde-format
 msgid "Create Mail"
 msgstr "יצירת דוא״ל"
 
-#: createmailtool/createmailtool.cpp:47
+#: createmailtool/createmailtool.cpp:50
 #, kde-format
 msgid "Argument subject must be a non-empty string"
 msgstr "הארגומנט subject (נושא) חייבת להיות מחרוזת לא ריקה"
 
-#: createmailtool/createmailtool.cpp:53
+#: createmailtool/createmailtool.cpp:56
 #, kde-format
 msgid "Argument to must be an array of strings"
 msgstr "הארגומנט to (אל) חייב להיות מערך של מחרוזות"
 
-#: createmailtool/createmailtool.cpp:58
+#: createmailtool/createmailtool.cpp:61
 #, fuzzy, kde-format
 #| msgid "Argument fields must be an array"
 msgid "Argument cc must be an array of strings"
 msgstr "הארגומנט fields (שדות) חייב להיות מערך"
 
-#: createmailtool/createmailtool.cpp:63
+#: createmailtool/createmailtool.cpp:66
 #, fuzzy, kde-format
 #| msgid "Argument fields must be an array"
 msgid "Argument bcc must be an array of strings"
 msgstr "הארגומנט fields (שדות) חייב להיות מערך"
 
-#: createmailtool/createmailtool.cpp:69
+#: createmailtool/createmailtool.cpp:72
 #, fuzzy, kde-format
 #| msgid "Argument days must be an integer"
 msgid "Argument body must be a string"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
-#: createmailtool/createmailtooljob.cpp:60
+#: createmailtool/createmailtool.cpp:81
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument identity must be a positive integer"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: createmailtool/createmailtool.cpp:86
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument identity must be an integer"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: createmailtool/createmailtooljob.cpp:66
 #, kde-format
 msgid "Subject must be a non-empty string"
 msgstr "הנושא חייב להיות מחרוזת לא ריקה"
 
-#: createmailtool/createmailtooljob.cpp:73 editmailtool/editmailtooljob.cpp:81
+#: createmailtool/createmailtooljob.cpp:79 editmailtool/editmailtooljob.cpp:81
 #, kde-format
 msgid "Drafts folder fetch failed: %1"
 msgstr "משיכת תיקיית טיוטות נכשלה: %1"
 
-#: createmailtool/createmailtooljob.cpp:78
+#: createmailtool/createmailtooljob.cpp:84
 #, kde-format
 msgid "No Drafts folder found"
 msgstr "לא נמצאה תיקיית טיוטות"
 
-#: createmailtool/createmailtooljob.cpp:124
+#: createmailtool/createmailtooljob.cpp:139
 #, kde-format
 msgid "Mail creation failed: %1"
 msgstr "יצירת דוא״ל נכשלה: %1"
 
-#: createmailtool/createmailtooljob.cpp:128
+#: createmailtool/createmailtooljob.cpp:143
 #, kde-format
 msgid ""
 "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
@@ -382,12 +404,14 @@ msgid "Create To-do"
 msgstr "חיפוש באנשי הקשר"
 
 #: createtodotool/createtodotool.cpp:66
+#: updateincidencetool/updateincidencetool.cpp:126
 #, fuzzy, kde-format
 #| msgid "Argument end must be an ISO 8601 date or date-time"
 msgid "Argument due must be an ISO 8601 date or date-time"
 msgstr "הארגומנט end (סוף) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
 
 #: createtodotool/createtodotool.cpp:77
+#: updateincidencetool/updateincidencetool.cpp:139
 #, fuzzy, kde-format
 #| msgid "Argument days must be an integer between 1 and %1"
 msgid "Argument priority must be an integer between %1 and %2"
@@ -405,33 +429,38 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 msgid "Edit Mail"
 msgstr "יצירת דוא״ל"
 
-#: editmailtool/editmailtool.cpp:41 openmailtool/openmailtool.cpp:40
-#: replymailtool/replymailtool.cpp:64
+#: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:60
+#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
+#: updatecontacttool/updatecontacttool.cpp:55
+#: updateincidencetool/updateincidencetool.cpp:64
 #, fuzzy, kde-format
 #| msgid "Argument days must be an integer"
 msgid "Argument id must be an integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
-#: editmailtool/editmailtool.cpp:46 openmailtool/openmailtool.cpp:45
-#: replymailtool/replymailtool.cpp:69
+#: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:65
+#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
+#: updatecontacttool/updatecontacttool.cpp:60
+#: updateincidencetool/updateincidencetool.cpp:69
 #, fuzzy, kde-format
 #| msgid "Argument days must be an integer"
 msgid "Argument id must be a positive integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
-#: editmailtool/editmailtooljob.cpp:39 openmailtool/openmailtooljob.cpp:32
+#: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
+#: openmailtool/openmailtooljob.cpp:32
 #, fuzzy, kde-format
 #| msgid "Argument days must be an integer"
 msgid "Mail id must be a positive integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
-#: editmailtool/editmailtooljob.cpp:53
+#: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
 #, fuzzy, kde-format
 #| msgid "Mail search failed: %1"
 msgid "Mail fetch failed: %1"
 msgstr "חיפוש דוא״ל נכשל: %1"
 
-#: editmailtool/editmailtooljob.cpp:58
+#: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
 #, kde-format
 msgid "Mail %1 not found"
 msgstr ""
@@ -490,12 +519,12 @@ msgstr "אירועי לוח שנה"
 msgid "No calendar found"
 msgstr "לא נמצאה תיקיית טיוטות"
 
-#: listidentities/listidentitiestool.cpp:25
+#: listidentities/listidentitiestool.cpp:26
 #, kde-format
 msgid "List Identities"
 msgstr ""
 
-#: listidentities/listidentitiestool.cpp:35
+#: listidentities/listidentitiestool.cpp:44
 #, fuzzy, kde-format
 #| msgid "No Drafts folder found"
 msgid "No Identity found"
@@ -549,6 +578,40 @@ msgstr "לא נמצא דוא״ל בחיפוש אחר „%1”"
 msgctxt "@info:shell"
 msgid "Url where server listens."
 msgstr "הכתובת שהשרת מאזין לה."
+
+#: markmailtool/markmailtool.cpp:51
+#, fuzzy, kde-format
+#| msgid "Search Mail"
+msgid "Mark Mail"
+msgstr "חיפוש בדוא״ל"
+
+#: markmailtool/markmailtool.cpp:71
+#, fuzzy, kde-format
+#| msgid "Argument include_completed must be a boolean"
+msgid "Argument read must be a boolean"
+msgstr "הארגומנט include_completed חייב להיות בוליאני"
+
+#: markmailtool/markmailtool.cpp:77
+#, fuzzy, kde-format
+#| msgid "Argument include_completed must be a boolean"
+msgid "Argument important must be a boolean"
+msgstr "הארגומנט include_completed חייב להיות בוליאני"
+
+#: markmailtool/markmailtool.cpp:81
+#, kde-format
+msgid "At least one of read or important must be given"
+msgstr ""
+
+#: markmailtool/markmailtooljob.cpp:75
+#, fuzzy, kde-format
+#| msgid "Mail creation failed: %1"
+msgid "Mail modification failed: %1"
+msgstr "יצירת דוא״ל נכשלה: %1"
+
+#: markmailtool/markmailtooljob.cpp:78
+#, kde-format
+msgid "Mail %1 modified"
+msgstr ""
 
 #: openmailtool/openmailtool.cpp:31
 #, fuzzy, kde-format
@@ -624,7 +687,7 @@ msgstr ""
 msgid "Argument due_within_days must be an integer"
 msgstr ""
 
-#: todolisttool/todolisttooljob.cpp:93
+#: todolisttool/todolisttooljob.cpp:96
 #, kde-format
 msgid "No to-do found"
 msgstr "לא נמצאו מטלות"
@@ -650,6 +713,7 @@ msgid "Number of days must be a positive integer"
 msgstr ""
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
 #, kde-format
 msgid "Contact fetch failed: %1"
 msgstr "משיכת אנשי קשר נכשלה: %1"
@@ -662,3 +726,180 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
+
+#: updatecontacttool/updatecontacttool.cpp:45
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Update Contact"
+msgstr "חיפוש באנשי הקשר"
+
+#: updatecontacttool/updatecontacttool.cpp:94
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument organization must be a string"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: updatecontacttool/updatecontacttool.cpp:99
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument note must be a string"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: updatecontacttool/updatecontacttool.cpp:105
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument birthday must be a string"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: updatecontacttool/updatecontacttool.cpp:119
+#: updatecontacttool/updatecontacttooljob.cpp:46
+#: updateincidencetool/updateincidencetool.cpp:154
+#: updateincidencetool/updateincidencetooljob.cpp:53
+#, kde-format
+msgid "No field to update"
+msgstr ""
+
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Contact id must be a positive integer"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr ""
+
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr ""
+
+#: updatecontacttool/updatecontacttooljob.cpp:84
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Contact modification failed: %1"
+msgstr "יצירת איש קשר נכשלה: %1"
+
+#: updatecontacttool/updatecontacttooljob.cpp:87
+#, kde-format
+msgid "Contact \"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetool.cpp:54
+#, kde-format
+msgid "Update Incidence"
+msgstr ""
+
+#: updateincidencetool/updateincidencetool.cpp:85
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument description must be a string"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: updateincidencetool/updateincidencetool.cpp:90
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument location must be a string"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: updateincidencetool/updateincidencetool.cpp:116
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument due must be a string"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: updateincidencetool/updateincidencetool.cpp:130
+#, fuzzy, kde-format
+#| msgid "Argument start must be an ISO 8601 date or date-time"
+msgid "Arguments start and due must both be dates or both be date-times"
+msgstr "הארגומנט start (התחלה) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
+
+#: updateincidencetool/updateincidencetool.cpp:147
+#, fuzzy, kde-format
+#| msgid "Argument include_completed must be a boolean"
+msgid "Argument completed must be a boolean"
+msgstr "הארגומנט include_completed חייב להיות בוליאני"
+
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Incidence id must be a positive integer"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, fuzzy, kde-format
+#| msgid "Mail search failed: %1"
+msgid "Incidence fetch failed: %1"
+msgstr "חיפוש דוא״ל נכשל: %1"
+
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, kde-format
+msgid "Incidence %1 not found"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:95
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Incidence modification failed: %1"
+msgstr "יצירת איש קשר נכשלה: %1"
+
+#: updateincidencetool/updateincidencetooljob.cpp:102
+#, kde-format
+msgid "Event \"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:105
+#, kde-format
+msgid "To-do \"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:108
+#, kde-format
+msgid "Journal entry \"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:111
+#, kde-format
+msgid "\"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:120
+#, fuzzy, kde-format
+#| msgid "Argument end must be after start"
+msgid "Argument end is only valid for events"
+msgstr "הארגומנט end (סוף) חייב להיות לפני ארגומנט start (התחלה)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:123
+#, kde-format
+msgid "Arguments due, priority and completed are only valid for to-dos"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, fuzzy, kde-format
+#| msgid "Argument end must be an ISO 8601 date or date-time"
+msgid "Argument end must be a date for an all-day event"
+msgstr "הארגומנט end (סוף) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, fuzzy, kde-format
+#| msgid "Argument end must be an ISO 8601 date or date-time"
+msgid "Argument end must be a date-time for a timed event"
+msgstr "הארגומנט end (סוף) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
+
+#: updateincidencetool/updateincidencetooljob.cpp:201
+#, fuzzy, kde-format
+#| msgid "Argument start must be an ISO 8601 date or date-time"
+msgid "Start and due dates of a to-do must both be dates or both be date-times"
+msgstr "הארגומנט start (התחלה) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
+
+#: updateincidencetool/updateincidencetooljob.cpp:204
+#, fuzzy, kde-format
+#| msgid "Argument end must be after start"
+msgid "Due date must not be before start"
+msgstr "הארגומנט end (סוף) חייב להיות לפני ארגומנט start (התחלה)"
