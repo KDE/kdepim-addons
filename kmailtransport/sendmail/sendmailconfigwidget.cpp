@@ -16,6 +16,7 @@
 #include "mailtransport/private/transportconfigwidget_p.h"
 #include "ui_sendmailsettings.h"
 
+#include <KConfigDialogManager>
 #include <KLineEdit>
 #include <QStandardPaths>
 using namespace Qt::Literals::StringLiterals;
