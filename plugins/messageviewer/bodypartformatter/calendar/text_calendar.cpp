@@ -147,11 +147,7 @@ QString getSender(const MimeTreeParser::MessagePart *msgPart)
 ScheduleMessage::Ptr stringToInvitation(const QByteArray &iCal, const KCalendarCore::Calendar::Ptr &calendar)
 {
     ICalFormat format;
-#if KCALENDARCORE_VERSION >= QT_VERSION_CHECK(6, 30, 0)
     ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, iCal);
-#else
-    ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, QString::fromUtf8(iCal));
-#endif
 
     // consider single incidence plain iCal attachments as publish itip messages as well
     // this happens frequently as attachments of booking or reservation emails of some sort,

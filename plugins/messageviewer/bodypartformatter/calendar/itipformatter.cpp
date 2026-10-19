@@ -22,11 +22,6 @@
 #include <KCalendarCore/Todo>
 #include <KCalendarCore/Visitor>
 
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-#include <KCalUtils/IncidenceFormatter>
-#include <KCalUtils/Stringify>
-#endif
-
 #include <KIdentityManagementCore/Utils>
 
 #include <KEmailAddress>
@@ -370,11 +365,7 @@ static QString invitationLocation(const Incidence::Ptr &incidence)
     QString ret;
     const Attendee a = findMyAttendee(incidence);
     if (!a.isNull() && a.status() != Attendee::NeedsAction && a.status() != Attendee::Delegated) {
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-        ret = i18n("(<b>Note</b>: the Organizer preset your response to <b>%1</b>)", KCalUtils::Stringify::attendeeStatus(a.status()));
-#else
         ret = i18n("(<b>Note</b>: the Organizer preset your response to <b>%1</b>)", Attendee::statusName(a.status()));
-#endif
     }
     return ret;
 }
@@ -506,11 +497,7 @@ invitationDetailsEvent(const std::function<QString(QString)> &generateLinkURL, c
     incidence[QStringLiteral("summary")] = invitationSummary(event);
     incidence[QStringLiteral("location")] = invitationLocation(event);
     incidence[QStringLiteral("recurs")] = event->recurs();
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-    incidence[QStringLiteral("recurrence")] = KCalUtils::IncidenceFormatter::recurrenceString(event);
-#else
     incidence[QStringLiteral("recurrence")] = event->recurrenceDescription();
-#endif
     incidence[QStringLiteral("isMultiDay")] = event->isMultiDay(QTimeZone::systemTimeZone());
     incidence[QStringLiteral("isAllDay")] = event->allDay();
     incidence[QStringLiteral("dateTime")] = formatStartEnd(event->dtStart(), event->dtEnd(), event->allDay());
@@ -570,12 +557,7 @@ QString formatStartEnd(const QDateTime &start, const QDateTime &end, bool isAllD
     incidence[QStringLiteral("summary")] = htmlCompare(invitationSummary(event), invitationSummary(oldevent));
     incidence[QStringLiteral("location")] = htmlCompare(invitationLocation(event), invitationLocation(oldevent));
     incidence[QStringLiteral("recurs")] = event->recurs() || oldevent->recurs();
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-    incidence[QStringLiteral("recurrence")] =
-        htmlCompare(KCalUtils::IncidenceFormatter::recurrenceString(event), KCalUtils::IncidenceFormatter::recurrenceString(oldevent));
-#else
     incidence[QStringLiteral("recurrence")] = htmlCompare(event->recurrenceDescription(), oldevent->recurrenceDescription());
-#endif
     incidence[QStringLiteral("dateTime")] = htmlCompare(formatStartEnd(event->dtStart(), event->dtEnd(), event->allDay()),
                                                         formatStartEnd(oldevent->dtStart(), oldevent->dtEnd(), oldevent->allDay()));
     incidence[QStringLiteral("description")] = invitationDescriptionIncidence(event);
@@ -619,11 +601,7 @@ QString formatStartEnd(const QDateTime &start, const QDateTime &end, bool isAllD
         incidence[QStringLiteral("percentComplete")] = i18n("%1%", todo->percentComplete());
     }
     incidence[QStringLiteral("recurs")] = todo->recurs();
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-    incidence[QStringLiteral("recurrence")] = KCalUtils::IncidenceFormatter::recurrenceString(todo);
-#else
     incidence[QStringLiteral("recurrence")] = todo->recurrenceDescription();
-#endif
     incidence[QStringLiteral("description")] = invitationDescriptionIncidence(todo);
 
     return incidence;
@@ -653,12 +631,7 @@ QString formatStartEnd(const QDateTime &start, const QDateTime &end, bool isAllD
     incidence[QStringLiteral("percentComplete")] = htmlCompare(i18n("%1%", todo->percentComplete()), i18n("%1%", oldtodo->percentComplete()));
 
     incidence[QStringLiteral("recurs")] = todo->recurs() || oldtodo->recurs();
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-    incidence[QStringLiteral("recurrence")] =
-        htmlCompare(KCalUtils::IncidenceFormatter::recurrenceString(todo), KCalUtils::IncidenceFormatter::recurrenceString(oldtodo));
-#else
     incidence[QStringLiteral("recurrence")] = htmlCompare(todo->recurrenceDescription(), oldtodo->recurrenceDescription());
-#endif
     incidence[QStringLiteral("description")] = invitationDescriptionIncidence(todo);
 
     return incidence;
@@ -1107,11 +1080,7 @@ invitationHeaderTodo(const Todo::Ptr &todo, const Incidence::Ptr &existingIncide
         attendee[QStringLiteral("delegator")] = a.delegator();
         attendee[QStringLiteral("delegate")] = a.delegate();
         attendee[QStringLiteral("isOrganizer")] = attendeeIsOrganizer(incidence, a);
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-        attendee[QStringLiteral("status")] = KCalUtils::Stringify::attendeeStatus(a.status());
-#else
         attendee[QStringLiteral("status")] = Attendee::statusName(a.status());
-#endif
         attendee[QStringLiteral("icon")] = rsvpStatusIconName(a.status());
 
         attendees.push_back(attendee);
@@ -1134,20 +1103,12 @@ invitationHeaderTodo(const Todo::Ptr &todo, const Incidence::Ptr &existingIncide
         }
         Attendee a = a_;
         QVariantHash attendee;
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-        attendee[QStringLiteral("status")] = KCalUtils::Stringify::attendeeStatus(a.status());
-#else
         attendee[QStringLiteral("status")] = Attendee::statusName(a.status());
-#endif
         if (!sender.isNull() && (a.email() == sender.email())) {
             // use the attendee taken from the response incidence,
             // rather than the attendee from the calendar incidence.
             if (a.status() != sender.status()) {
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-                attendee[QStringLiteral("status")] = i18n("%1 (<i>unrecorded</i>)", KCalUtils::Stringify::attendeeStatus(sender.status()));
-#else
                 attendee[QStringLiteral("status")] = i18n("%1 (<i>unrecorded</i>)", Attendee::statusName(sender.status()));
-#endif
             }
             a = sender;
         }
@@ -1538,11 +1499,7 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
     }
     if (!firstAtt.isNull()) {
         isDelegated = (firstAtt.status() == Attendee::Delegated);
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-        role = KCalUtils::Stringify::attendeeRole(firstAtt.role());
-#else
         role = Attendee::roleName(firstAtt.role());
-#endif
     }
 
     // determine if RSVP needed, not-needed, or response already recorded
@@ -1555,15 +1512,9 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
     if (!myInc && !firstAtt.isNull()) {
         if (rsvpRec && inc) {
             if (incRevision == 0) {
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-                eventInfo = i18n("Your <b>%1</b> response has been recorded.", KCalUtils::Stringify::attendeeStatus(eattendee.status()));
-            } else {
-                eventInfo = i18n("Your status for this invitation is <b>%1</b>.", KCalUtils::Stringify::attendeeStatus(eattendee.status()));
-#else
                 eventInfo = i18n("Your <b>%1</b> response has been recorded.", Attendee::statusName(eattendee.status()));
             } else {
                 eventInfo = i18n("Your status for this invitation is <b>%1</b>.", Attendee::statusName(eattendee.status()));
-#endif
             }
             rsvpReq = false;
         } else if (message->method() == iTIPCancel) {
@@ -1643,11 +1594,7 @@ QString ItipFormatter::formatICalInvitation(const KCalendarCore::ScheduleMessage
             }
         }
         if (!ea.isNull() && (ea.status() != Attendee::NeedsAction) && (ea.status() == a.status())) {
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-            const QString tStr = i18n("The <b>%1</b> response has been recorded", KCalUtils::Stringify::attendeeStatus(ea.status()));
-#else
             const QString tStr = i18n("The <b>%1</b> response has been recorded", Attendee::statusName(ea.status()));
-#endif
             buttons << inviteButton(QString(), tStr, QString(), generateLinkURL);
         } else {
             if (inc) {

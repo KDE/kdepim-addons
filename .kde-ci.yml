@@ -27,7 +27,6 @@ Dependencies:
     'pim/calendarsupport': '@same'
     'pim/grantleetheme': '@same'
     'pim/incidenceeditor': '@same'
-    'pim/kcalutils': '@same'
     'pim/kidentitymanagement': '@same'
     'pim/kimap': '@same'
     'pim/kmailtransport': '@same'

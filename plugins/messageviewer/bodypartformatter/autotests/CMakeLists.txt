@@ -64,7 +64,6 @@ ecm_add_test(itipformattertest.cpp ../calendar/templates.qrc ../calendar/itipfor
         Qt6::Test
         KPim6::MessageViewer
         KPim6::GrantleeTheme
-        KPim6::CalendarUtils # remove after depending on KF 6.30
         KF6::TextTemplate
         KF6::CalendarCore
 	KF6::TextUtils

@@ -49,7 +49,6 @@ target_link_libraries(
     KF6::Codecs
     Qt::Core
     KF6::CalendarCore
-    KPim6::CalendarUtils # remove after depending on KF 6.30
     KF6::Mime
     KPim6::IdentityManagementCore
     KPim6::AkonadiMime

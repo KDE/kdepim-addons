@@ -172,9 +172,7 @@ CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalendarCore::I
     CalendarEvents::EventData data;
     data.setTitle(incidence->summary());
     data.setDescription(incidence->description());
-#if KDECLARATIVE_VERSION >= QT_VERSION_CHECK(6, 27, 0)
     data.setLocation(incidence->location());
-#endif
     data.setIsAllDay(incidence->allDay());
     data.setIsMinor(false);
     data.setUid(generateUid(incidence));

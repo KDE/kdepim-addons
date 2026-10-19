@@ -191,11 +191,7 @@ private Q_SLOTS:
         const QByteArray data = eventFile.readAll();
 
         KCalendarCore::ICalFormat format;
-#if KCALENDARCORE_VERSION < QT_VERSION_CHECK(6, 30, 0)
-        const KCalendarCore::ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, QString::fromUtf8(data));
-#else
         const KCalendarCore::ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, data);
-#endif
         QVERIFY(message);
 
         const QString html = ItipFormatter::formatICalInvitation(
