@@ -48,7 +48,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool MarkMailTool::definition() 
     annotation.setDestructiveHint(false);
     annotation.setIdempotentHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Mark Mail"));
+    tool.setTitle(i18n("Mark Mail"));
     tool.setAnnotations(annotation);
     return tool;
 }

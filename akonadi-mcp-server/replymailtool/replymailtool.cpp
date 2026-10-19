@@ -51,7 +51,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ReplyMailTool::definition()
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Reply to Mail"));
+    tool.setTitle(i18n("Reply to Mail"));
     tool.setAnnotations(annotation);
     return tool;
 }

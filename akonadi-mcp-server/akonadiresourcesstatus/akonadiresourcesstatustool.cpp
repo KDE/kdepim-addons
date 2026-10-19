@@ -40,7 +40,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool AkonadiResourcesStatusTool:
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Akonadi Resources Status"));
+    tool.setTitle(i18n("Akonadi Resources Status"));
     tool.setAnnotations(annotation);
     return tool;
 }

@@ -30,7 +30,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactSearchTool::definiti
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Search Contacts"));
+    tool.setTitle(i18n("Search Contacts"));
     tool.setAnnotations(annotation);
     return tool;
 }

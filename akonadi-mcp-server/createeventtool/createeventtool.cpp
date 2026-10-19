@@ -47,7 +47,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateEventTool::definition
     annotation.setDestructiveHint(false);
     annotation.setIdempotentHint(false);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Create Event"));
+    tool.setTitle(i18n("Create Event"));
     tool.setAnnotations(annotation);
     return tool;
 }

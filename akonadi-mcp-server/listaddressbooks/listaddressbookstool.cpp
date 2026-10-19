@@ -22,7 +22,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListAddressBooksTool::defin
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("List Address Books"));
+    tool.setTitle(i18n("List Address Books"));
     tool.setAnnotations(annotation);
     return tool;
 }

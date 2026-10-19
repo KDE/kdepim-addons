@@ -28,7 +28,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool DeleteContactTool::definiti
     annotation.setDestructiveHint(true);
     annotation.setIdempotentHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Delete Contact"));
+    tool.setTitle(i18n("Delete Contact"));
     tool.setAnnotations(annotation);
     return tool;
 }

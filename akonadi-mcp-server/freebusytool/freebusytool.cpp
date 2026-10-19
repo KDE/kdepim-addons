@@ -39,7 +39,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool FreeBusyTool::definition() 
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Free/Busy"));
+    tool.setTitle(i18n("Free/Busy"));
     tool.setAnnotations(annotation);
     return tool;
 }

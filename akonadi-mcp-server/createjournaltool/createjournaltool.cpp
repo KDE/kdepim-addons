@@ -40,7 +40,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateJournalTool::definiti
     annotation.setDestructiveHint(false);
     annotation.setIdempotentHint(false);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Create Journal Entry"));
+    tool.setTitle(i18n("Create Journal Entry"));
     tool.setAnnotations(annotation);
     return tool;
 }

@@ -51,7 +51,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateIncidenceTool::defini
     annotation.setDestructiveHint(true);
     annotation.setIdempotentHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Update Incidence"));
+    tool.setTitle(i18n("Update Incidence"));
     tool.setAnnotations(annotation);
     return tool;
 }

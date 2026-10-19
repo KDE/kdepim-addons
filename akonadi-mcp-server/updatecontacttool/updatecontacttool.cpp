@@ -42,7 +42,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateContactTool::definiti
     annotation.setDestructiveHint(true);
     annotation.setIdempotentHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Update Contact"));
+    tool.setTitle(i18n("Update Contact"));
     tool.setAnnotations(annotation);
     return tool;
 }

@@ -27,7 +27,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactGroupExpandTool::def
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Search Contact Group"));
+    tool.setTitle(i18n("Search Contact Group"));
     tool.setAnnotations(annotation);
     return tool;
 }

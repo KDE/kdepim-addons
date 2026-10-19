@@ -29,7 +29,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool DeleteIncidenceTool::defini
     annotation.setDestructiveHint(true);
     annotation.setIdempotentHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Delete Incidence"));
+    tool.setTitle(i18n("Delete Incidence"));
     tool.setAnnotations(annotation);
     return tool;
 }

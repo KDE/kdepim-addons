@@ -22,7 +22,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListCalendarsTool::definiti
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("List Calendars"));
+    tool.setTitle(i18n("List Calendars"));
     tool.setAnnotations(annotation);
     return tool;
 }

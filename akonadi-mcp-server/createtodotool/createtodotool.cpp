@@ -43,7 +43,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateTodoTool::definition(
     annotation.setDestructiveHint(false);
     annotation.setIdempotentHint(false);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Create To-do"));
+    tool.setTitle(i18n("Create To-do"));
     tool.setAnnotations(annotation);
     return tool;
 }

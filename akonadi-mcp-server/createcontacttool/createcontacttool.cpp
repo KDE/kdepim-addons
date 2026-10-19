@@ -43,7 +43,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactTool::definiti
     annotation.setDestructiveHint(false);
     annotation.setIdempotentHint(false);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Create Contact"));
+    tool.setTitle(i18n("Create Contact"));
     tool.setAnnotations(annotation);
     return tool;
 }

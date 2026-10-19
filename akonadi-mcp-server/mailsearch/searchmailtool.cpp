@@ -37,7 +37,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool SearchMailTool::definition(
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Search Mail"));
+    tool.setTitle(i18n("Search Mail"));
     tool.setAnnotations(annotation);
     return tool;
 }

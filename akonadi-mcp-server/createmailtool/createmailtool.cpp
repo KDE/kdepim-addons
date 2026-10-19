@@ -37,7 +37,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateMailTool::definition(
     annotation.setDestructiveHint(false);
     annotation.setIdempotentHint(false);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Create Mail"));
+    tool.setTitle(i18n("Create Mail"));
     tool.setAnnotations(annotation);
     return tool;
 }

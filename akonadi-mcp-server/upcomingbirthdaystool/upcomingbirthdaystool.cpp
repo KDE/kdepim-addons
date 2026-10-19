@@ -33,7 +33,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpcomingBirthdaysTool::defi
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Upcoming Birthdays"));
+    tool.setTitle(i18n("Upcoming Birthdays"));
     tool.setAnnotations(annotation);
     return tool;
 }

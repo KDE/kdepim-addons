@@ -29,7 +29,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool EditMailTool::definition() 
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Edit Mail"));
+    tool.setTitle(i18n("Edit Mail"));
     tool.setAnnotations(annotation);
     return tool;
 }

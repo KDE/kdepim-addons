@@ -35,7 +35,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool TodoListTool::definition() 
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("To-do List"));
+    tool.setTitle(i18n("To-do List"));
     tool.setAnnotations(annotation);
     return tool;
 }

@@ -39,7 +39,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CalendarEventsTool::definit
     TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
     annotation.setReadOnlyHint(true);
     annotation.setOpenWorldHint(false);
-    annotation.setTitle(i18n("Calendar Events"));
+    tool.setTitle(i18n("Calendar Events"));
     tool.setAnnotations(annotation);
     return tool;
 }
