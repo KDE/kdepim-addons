@@ -14,6 +14,8 @@
 #include "createjournaltool/createjournaltool.h"
 #include "createmailtool/createmailtool.h"
 #include "createtodotool/createtodotool.h"
+#include "deletecontacttool/deletecontacttool.h"
+#include "deleteincidencetool/deleteincidencetool.h"
 #include "editmailtool/editmailtool.h"
 #include "freebusytool/freebusytool.h"
 #include "listaddressbooks/listaddressbookstool.h"
@@ -69,6 +71,8 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<MarkMailTool>());
     addTool(std::make_unique<UpdateContactTool>());
     addTool(std::make_unique<UpdateIncidenceTool>());
+    addTool(std::make_unique<DeleteContactTool>());
+    addTool(std::make_unique<DeleteIncidenceTool>());
     // TODO add more
 }
 

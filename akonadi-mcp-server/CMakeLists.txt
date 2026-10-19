@@ -103,6 +103,14 @@ target_sources(
         updateincidencetool/updateincidencetool.cpp
         updateincidencetool/updateincidencetooljob.h
         updateincidencetool/updateincidencetooljob.cpp
+        deletecontacttool/deletecontacttool.h
+        deletecontacttool/deletecontacttool.cpp
+        deletecontacttool/deletecontacttooljob.h
+        deletecontacttool/deletecontacttooljob.cpp
+        deleteincidencetool/deleteincidencetool.h
+        deleteincidencetool/deleteincidencetool.cpp
+        deleteincidencetool/deleteincidencetooljob.h
+        deleteincidencetool/deleteincidencetooljob.cpp
 )
 target_link_libraries(
     akonadimcpprotocol
