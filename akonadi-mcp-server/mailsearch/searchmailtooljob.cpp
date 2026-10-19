@@ -126,7 +126,7 @@ void SearchMailToolJob::slotResult(KJob *job)
             lines.append(u"Date: "_s + entry.date.toLocalTime().toString(Qt::ISODate));
         }
         if (const Akonadi::Collection collection = item.parentCollection(); !collection.displayName().isEmpty()) {
-            lines.append(u"Folder: "_s + collection.displayName());
+            lines.append(u"Folder: %1 (folder_id: %2)"_s.arg(collection.displayName(), QString::number(collection.id())));
         }
         lines.append(u"Id: %1"_s.arg(item.id()));
         entry.text = lines.join(u"\n  "_s);

@@ -23,6 +23,7 @@
 #include "listidentities/listidentitiestool.h"
 #include "mailsearch/searchmailtool.h"
 #include "markmailtool/markmailtool.h"
+#include "movemailtool/movemailtool.h"
 #include "openmailtool/openmailtool.h"
 #include "replymailtool/replymailtool.h"
 #include "todolisttool/todolisttool.h"
@@ -73,6 +74,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<UpdateIncidenceTool>());
     addTool(std::make_unique<DeleteContactTool>());
     addTool(std::make_unique<DeleteIncidenceTool>());
+    addTool(std::make_unique<MoveMailTool>());
     // TODO add more
 }
 

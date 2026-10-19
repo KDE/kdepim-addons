@@ -95,6 +95,10 @@ target_sources(
         markmailtool/markmailtool.cpp
         markmailtool/markmailtooljob.h
         markmailtool/markmailtooljob.cpp
+        movemailtool/movemailtool.h
+        movemailtool/movemailtool.cpp
+        movemailtool/movemailtooljob.h
+        movemailtool/movemailtooljob.cpp
         updatecontacttool/updatecontacttool.h
         updatecontacttool/updatecontacttool.cpp
         updatecontacttool/updatecontacttooljob.h
