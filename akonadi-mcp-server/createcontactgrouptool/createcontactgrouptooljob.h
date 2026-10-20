@@ -8,6 +8,7 @@
 #include "common/tooljobbase.h"
 #include <Akonadi/Collection>
 #include <Akonadi/Item>
+#include <KContacts/ContactGroup>
 #include <QStringList>
 
 class CreateContactGroupToolJob : public ToolJobBase
@@ -31,6 +32,12 @@ protected:
     [[nodiscard]] QString invalidArgumentsMessage() const override;
 
 private:
+    void slotContactFetchResult(KJob *job);
+    void fetchAddressBook();
+    void slotCollectionFetchResult(KJob *job);
+    void createContactGroup(const Akonadi::Collection &collection);
+    void slotItemCreateResult(KJob *job);
+    KContacts::ContactGroup mContactGroup;
     QString mName;
     QList<Akonadi::Item::Id> mContactIds;
     QStringList mEmails;
