@@ -9,7 +9,10 @@
 #include <QMap>
 #include <QStringList>
 #include <optional>
-
+namespace TextAutoGenerateTextMcpProtocolCore
+{
+class McpProtocolMeta;
+}
 namespace ToolUtils
 {
 // Append the non-empty trimmed strings of a JSON array to list.
@@ -20,4 +23,13 @@ namespace ToolUtils
 // Set result to the trimmed string when the argument is provided, an empty string is a valid value.
 // Returns false if the argument is provided but is not a string.
 [[nodiscard]] bool readOptionalString(const QMap<QString, QJsonValue> &arguments, const QString &key, std::optional<QString> &result);
+
+enum TitleType : uint8_t {
+    Mail,
+    Contact,
+    Calendar,
+    Misc,
+};
+
+void addToolMeta(TextAutoGenerateTextMcpProtocolCore::McpProtocolMeta &meta, TitleType type);
 }

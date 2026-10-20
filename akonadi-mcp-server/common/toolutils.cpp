@@ -4,8 +4,11 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "toolutils.h"
+#include <KLocalizedString>
 #include <QJsonArray>
-
+#include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolTool>
+using namespace Qt::Literals::StringLiterals;
 bool ToolUtils::readStringList(const QJsonValue &value, QStringList &list)
 {
     if (value.isUndefined() || value.isNull()) {
@@ -42,4 +45,22 @@ bool ToolUtils::readOptionalString(const QMap<QString, QJsonValue> &arguments, c
     }
     result = value.toString().trimmed();
     return true;
+}
+
+void ToolUtils::addToolMeta(TextAutoGenerateTextMcpProtocolCore::McpProtocolMeta &meta, TitleType type)
+{
+    switch (type) {
+    case Mail: {
+        QMap<QString, QJsonValue> newMeta;
+        QJsonObject obj;
+        obj.insert(u"org.kde/group"_s, u"mail"_s);
+        obj.insert(u"org.kde/groupTitle"_s, i18n("Mail"));
+        newMeta.insert("_meta"_L1, obj);
+        return meta.setMeta(newMeta);
+    }
+    case Contact:
+    case Calendar:
+    case Misc:
+        break;
+    }
 }
