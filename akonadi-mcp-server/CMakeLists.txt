@@ -59,6 +59,10 @@ target_sources(
         createcontacttool/createcontacttool.cpp
         createcontacttool/createcontacttooljob.h
         createcontacttool/createcontacttooljob.cpp
+        createcontactgrouptool/createcontactgrouptool.h
+        createcontactgrouptool/createcontactgrouptool.cpp
+        createcontactgrouptool/createcontactgrouptooljob.h
+        createcontactgrouptool/createcontactgrouptooljob.cpp
         mailsearch/searchmailtool.h
         mailsearch/searchmailtool.cpp
         mailsearch/searchmailtooljob.h

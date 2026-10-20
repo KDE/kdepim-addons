@@ -9,6 +9,7 @@
 #include "calendareventstool/calendareventstool.h"
 #include "contactgroupexpandtool/contactgroupexpandtool.h"
 #include "contactsearchtool/contactsearchtool.h"
+#include "createcontactgrouptool/createcontactgrouptool.h"
 #include "createcontacttool/createcontacttool.h"
 #include "createeventtool/createeventtool.h"
 #include "createjournaltool/createjournaltool.h"
@@ -75,6 +76,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<DeleteContactTool>());
     addTool(std::make_unique<DeleteIncidenceTool>());
     addTool(std::make_unique<MoveMailTool>());
+    addTool(std::make_unique<CreateContactGroupTool>());
     // TODO add more
 }
 
