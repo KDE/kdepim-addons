@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-19 00:47+0000\n"
-"PO-Revision-Date: 2026-10-18 03:56+0200\n"
+"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"PO-Revision-Date: 2026-10-19 05:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.10\n"
 
-#: akonadimcpprotocolmanager.cpp:47
+#: akonadimcpprotocolmanager.cpp:50
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Akonadi-დან მიღებული ინფორმაციის მართვა"
@@ -335,16 +335,14 @@ msgid "Argument body must be a string"
 msgstr "არგუმენტი body მთელი რიცხვი უნდა იყოს"
 
 #: createmailtool/createmailtool.cpp:81
-#, fuzzy, kde-format
-#| msgid "Argument id must be a positive integer"
+#, kde-format
 msgid "Argument identity must be a positive integer"
-msgstr "არგუმენტი id დადებითი მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი identity დადებითი მთელი რიცხვი უნდა იყოს"
 
 #: createmailtool/createmailtool.cpp:86
-#, fuzzy, kde-format
-#| msgid "Argument id must be an integer"
+#, kde-format
 msgid "Argument identity must be an integer"
-msgstr "არგუმენტი id მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი identity მთელი რიცხვი უნდა იყოს"
 
 #: createmailtool/createmailtooljob.cpp:66
 #, kde-format
@@ -397,42 +395,154 @@ msgstr "არგუმენტი priority უნდა იყოს მთე
 msgid "Argument priority must be an integer"
 msgstr "არგუმენტი priority მთელი რიცხვი უნდა იყოს"
 
-#: editmailtool/editmailtool.cpp:32
-#, kde-format
-msgid "Edit Mail"
-msgstr "ელფოსტის ჩასწორება"
+#: deletecontacttool/deletecontacttool.cpp:31
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Delete Contact"
+msgstr "კონტაქტის შექმნა"
 
+#: deletecontacttool/deletecontacttool.cpp:40
+#: deleteincidencetool/deleteincidencetool.cpp:41
 #: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:60
-#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
+#: movemailtool/movemailtool.cpp:48 openmailtool/openmailtool.cpp:40
+#: replymailtool/replymailtool.cpp:64
 #: updatecontacttool/updatecontacttool.cpp:55
 #: updateincidencetool/updateincidencetool.cpp:64
 #, kde-format
 msgid "Argument id must be an integer"
 msgstr "არგუმენტი id მთელი რიცხვი უნდა იყოს"
 
+#: deletecontacttool/deletecontacttool.cpp:45
+#: deleteincidencetool/deleteincidencetool.cpp:46
 #: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:65
-#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
+#: movemailtool/movemailtool.cpp:53 openmailtool/openmailtool.cpp:45
+#: replymailtool/replymailtool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:60
 #: updateincidencetool/updateincidencetool.cpp:69
 #, kde-format
 msgid "Argument id must be a positive integer"
 msgstr "არგუმენტი id დადებითი მთელი რიცხვი უნდა იყოს"
 
+#: deletecontacttool/deletecontacttooljob.cpp:33
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, kde-format
+msgid "Contact id must be a positive integer"
+msgstr "კონტაქტის id მთელი დადებითი რიცხვი უნდა იყოს"
+
+#: deletecontacttool/deletecontacttooljob.cpp:47
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr "კონტაქტის გამოთხოვა ჩავარდა: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:52
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr "კონტაქტი %1 აღმოჩენილი არაა"
+
+#: deletecontacttool/deletecontacttooljob.cpp:57
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr "ელემენტი %1 კონტაქტი არაა"
+
+#: deletecontacttool/deletecontacttooljob.cpp:69
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Contact deletion failed: %1"
+msgstr "კონტაქტის შექმნა ჩავარდა: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "Contact \"%1\" updated (item id: %2)"
+msgid "Contact \"%1\" deleted (item id: %2)"
+msgstr "კონტაქტი \"%1\" განახლდა (ელემენტის id: %2)"
+
+#: deleteincidencetool/deleteincidencetool.cpp:32
+#, fuzzy, kde-format
+#| msgid "Update Incidence"
+msgid "Delete Incidence"
+msgstr "შემთხვევის განახლება"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:34
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, kde-format
+msgid "Incidence id must be a positive integer"
+msgstr "შემთხვევის id მთელი დადებითი რიცხვი უნდა იყოს"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:48
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, kde-format
+msgid "Incidence fetch failed: %1"
+msgstr "შემთხვევის გამოთხოვა ჩავარდა: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:53
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, kde-format
+msgid "Incidence %1 not found"
+msgstr "შემთხვევა %1 აღმოჩენილი არაა"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:59
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr ""
+"ელემენტი %1 არ წარმოადგენს მოვლენას, გასაკეთებელს, ან ჟურნალის ჩანაწერს"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "Incidence modification failed: %1"
+msgid "Incidence deletion failed: %1"
+msgstr "შემთხვევის შეცვლა ჩავარდა: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:79
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" updated (item id: %2)"
+msgid "Event \"%1\" deleted (item id: %2)"
+msgstr "მოვლენა \"%1\" განახლდა (ელემენტის id: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:82
+#, fuzzy, kde-format
+#| msgid "To-do \"%1\" updated (item id: %2)"
+msgid "To-do \"%1\" deleted (item id: %2)"
+msgstr "გასაკეთებელი \"%1\" განახლდა (ელემენტის id: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:85
+#, fuzzy, kde-format
+#| msgid "Journal entry \"%1\" updated (item id: %2)"
+msgid "Journal entry \"%1\" deleted (item id: %2)"
+msgstr "ჟურნალის ჩანაწერი \"%1\" განახლდა (ელემენტის id: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:88
+#, fuzzy, kde-format
+#| msgid "\"%1\" updated (item id: %2)"
+msgid "\"%1\" deleted (item id: %2)"
+msgstr "\"%1\" განახლდა (ელემენტის id: %2)"
+
+#: editmailtool/editmailtool.cpp:32
+#, kde-format
+msgid "Edit Mail"
+msgstr "ელფოსტის ჩასწორება"
+
 #: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
-#: openmailtool/openmailtooljob.cpp:32
+#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
 #, kde-format
 msgid "Mail id must be a positive integer"
 msgstr "ფოსტის id მთელი დადებითი რიცხვი უნდა იყოს"
 
 #: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
+#: movemailtool/movemailtooljob.cpp:84
 #, kde-format
 msgid "Mail fetch failed: %1"
 msgstr "ელფოსტის გამოთხოვა ჩავარდა: %1"
 
 #: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
+#: movemailtool/movemailtooljob.cpp:89
 #, kde-format
 msgid "Mail %1 not found"
-msgstr "ფოსტა %1 აღმოჩენილი არაა"
+msgstr "ელფოსტა %1 აღმოჩენილი არაა"
 
 #: editmailtool/editmailtooljob.cpp:86
 #, kde-format
@@ -547,39 +657,117 @@ msgid "Url where server listens."
 msgstr "Url, სადაც სერვერი უსმენს."
 
 #: markmailtool/markmailtool.cpp:51
-#, fuzzy, kde-format
-#| msgid "Search Mail"
+#, kde-format
 msgid "Mark Mail"
-msgstr "ელფოსტაში ძებნა"
+msgstr "ელფოსტის მარკირება"
 
 #: markmailtool/markmailtool.cpp:71
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument read must be a boolean"
-msgstr "არგუმენტი include_completed ლოგიკური მნიშვნელობა უნდა იყოს"
+msgstr "არგუმენტი read ლოგიკური მნიშვნელობა უნდა იყოს"
 
 #: markmailtool/markmailtool.cpp:77
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument important must be a boolean"
-msgstr "არგუმენტი include_completed ლოგიკური მნიშვნელობა უნდა იყოს"
+msgstr "არგუმენტი important ლოგიკური მნიშვნელობა უნდა იყოს"
 
 #: markmailtool/markmailtool.cpp:81
 #, kde-format
 msgid "At least one of read or important must be given"
-msgstr ""
+msgstr "საჭიროა, სულ ცოტა, ერთი წაკითხულის, ან მნიშვნელოვნის გადაცემა"
 
 #: markmailtool/markmailtooljob.cpp:75
-#, fuzzy, kde-format
-#| msgid "Mail creation failed: %1"
+#, kde-format
 msgid "Mail modification failed: %1"
-msgstr "ელფოსტის შექმნა ჩავარდა: %1"
+msgstr "ელფოსტის შეცვლა ჩავარდა: %1"
 
 #: markmailtool/markmailtooljob.cpp:78
+#, kde-format
+msgid "Mail %1 modified"
+msgstr "ელფოსტა %1 შეიცვალა"
+
+#: movemailtool/movemailtool.cpp:38
+#, fuzzy, kde-format
+#| msgid "Mark Mail"
+msgid "Move Mail"
+msgstr "ელფოსტის მარკირება"
+
+#: movemailtool/movemailtool.cpp:59
+#, fuzzy, kde-format
+#| msgid "Argument field must be a string"
+msgid "Argument folder must be a string"
+msgstr "არგუმენტი field სტრიქონი უნდა იყოს"
+
+#: movemailtool/movemailtool.cpp:63
+#, fuzzy, kde-format
+#| msgid "Argument end must not be before start"
+msgid "Argument folder must not be empty"
+msgstr "არგუმენტი end მისი დაწყებამდე არ უნდა იყოს"
+
+#: movemailtool/movemailtool.cpp:70
+#, fuzzy, kde-format
+#| msgid "Argument id must be a positive integer"
+msgid "Argument folder_id must be a positive integer"
+msgstr "არგუმენტი id დადებითი მთელი რიცხვი უნდა იყოს"
+
+#: movemailtool/movemailtool.cpp:77 movemailtool/movemailtooljob.cpp:71
+#, fuzzy, kde-format
+#| msgid "At least one of read or important must be given"
+msgid "Exactly one of folder or folder_id must be given"
+msgstr "საჭიროა, სულ ცოტა, ერთი წაკითხულის, ან მნიშვნელოვნის გადაცემა"
+
+#: movemailtool/movemailtooljob.cpp:94
+#, fuzzy, kde-format
+#| msgid "Item %1 is not a contact"
+msgid "Item %1 is not a mail"
+msgstr "ელემენტი %1 კონტაქტი არაა"
+
+#: movemailtool/movemailtooljob.cpp:107
+#, fuzzy, kde-format
+#| msgid "Drafts folder fetch failed: %1"
+msgid "Mail folder fetch failed: %1"
+msgstr "მონახაზების საქაღალდის გამოთხოვა ჩავარდა: %1"
+
+#: movemailtool/movemailtooljob.cpp:124
 #, fuzzy, kde-format
 #| msgid "Mail %1 not found"
-msgid "Mail %1 modified"
-msgstr "ფოსტა %1 აღმოჩენილი არაა"
+msgid "Mail folder %1 not found"
+msgstr "ელფოსტა %1 აღმოჩენილი არაა"
+
+#: movemailtool/movemailtooljob.cpp:147
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Mail folder \"%1\" not found"
+msgstr "ელფოსტა %1 აღმოჩენილი არაა"
+
+#: movemailtool/movemailtooljob.cpp:156
+#, kde-format
+msgid ""
+"Several mail folders match \"%1\", use the full path or folder_id:\n"
+"%2"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:165
+#, kde-format
+msgid "Mail %1 is already in folder \"%2\""
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:169
+#, kde-format
+msgid "Mail folder \"%1\" is read-only"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:180
+#, fuzzy, kde-format
+#| msgid "Mail fetch failed: %1"
+msgid "Mail move failed: %1"
+msgstr "ელფოსტის გამოთხოვა ჩავარდა: %1"
+
+#: movemailtool/movemailtooljob.cpp:183
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Mail %1 moved to folder \"%2\""
+msgstr "ელფოსტა %1 აღმოჩენილი არაა"
 
 #: openmailtool/openmailtool.cpp:31
 #, kde-format
@@ -685,12 +873,6 @@ msgstr "არგუმენტი days მთელი რიცხვი უ�
 msgid "Number of days must be a positive integer"
 msgstr "დღეების რაოდენობა მთელი დადებითი რიცხვი უნდა იყოს"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
-#: updatecontacttool/updatecontacttooljob.cpp:59
-#, kde-format
-msgid "Contact fetch failed: %1"
-msgstr "კონტაქტის გამოთხოვა ჩავარდა: %1"
-
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
@@ -699,28 +881,24 @@ msgstr[0] "ხვალ დაბადების დღეები არა
 msgstr[1] "შემდეგ %1 დღეში დაბადების დღეები არაა"
 
 #: updatecontacttool/updatecontacttool.cpp:45
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Update Contact"
-msgstr "კონტაქტის შექმნა"
+msgstr "კონტაქტის განახლება"
 
 #: updatecontacttool/updatecontacttool.cpp:94
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument organization must be a string"
-msgstr "არგუმენტი body მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი organization სტრიქონი უნდა იყოს"
 
 #: updatecontacttool/updatecontacttool.cpp:99
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument note must be a string"
-msgstr "არგუმენტი body მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი note სტრიქონი უნდა იყოს"
 
 #: updatecontacttool/updatecontacttool.cpp:105
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument birthday must be a string"
-msgstr "არგუმენტი body მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი birthday სტრიქონი უნდა იყოს"
 
 #: updatecontacttool/updatecontacttool.cpp:119
 #: updatecontacttool/updatecontacttooljob.cpp:46
@@ -728,156 +906,101 @@ msgstr "არგუმენტი body მთელი რიცხვი უ�
 #: updateincidencetool/updateincidencetooljob.cpp:53
 #, kde-format
 msgid "No field to update"
-msgstr ""
-
-#: updatecontacttool/updatecontacttooljob.cpp:44
-#, fuzzy, kde-format
-#| msgid "Mail id must be a positive integer"
-msgid "Contact id must be a positive integer"
-msgstr "ფოსტის id მთელი დადებითი რიცხვი უნდა იყოს"
-
-#: updatecontacttool/updatecontacttooljob.cpp:64
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
-msgid "Contact %1 not found"
-msgstr "ფოსტა %1 აღმოჩენილი არაა"
-
-#: updatecontacttool/updatecontacttooljob.cpp:69
-#, kde-format
-msgid "Item %1 is not a contact"
-msgstr ""
+msgstr "გასაახლებელი ველის გარეშე"
 
 #: updatecontacttool/updatecontacttooljob.cpp:84
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact modification failed: %1"
-msgstr "კონტაქტის შექმნა ჩავარდა: %1"
+msgstr "კონტაქტის შეცვლა ჩავარდა: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact \"%1\" updated (item id: %2)"
-msgstr "კონტაქტი \"%1\" შეიქმნა მისამართების წიგნში \"%2\" (ელემენტის id: %3)"
+msgstr "კონტაქტი \"%1\" განახლდა (ელემენტის id: %2)"
 
 #: updateincidencetool/updateincidencetool.cpp:54
 #, kde-format
 msgid "Update Incidence"
-msgstr ""
+msgstr "შემთხვევის განახლება"
 
 #: updateincidencetool/updateincidencetool.cpp:85
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument description must be a string"
-msgstr "არგუმენტი body მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი description სტრიქონი უნდა იყოს"
 
 #: updateincidencetool/updateincidencetool.cpp:90
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument location must be a string"
-msgstr "არგუმენტი body მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი location სტრიქონი უნდა იყოს"
 
 #: updateincidencetool/updateincidencetool.cpp:116
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument due must be a string"
-msgstr "არგუმენტი body მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი due სტრიქონი უნდა იყოს"
 
 #: updateincidencetool/updateincidencetool.cpp:130
-#, fuzzy, kde-format
-#| msgid "Arguments start and end must both be dates or both be date-times"
+#, kde-format
 msgid "Arguments start and due must both be dates or both be date-times"
-msgstr "არგუმენტები start და end, ორივე, ან თარიღი უნდა იყოს, ან თარიღი-დრო"
+msgstr "არგუმენტები start და due, ორივე, ან თარიღი უნდა იყოს, ან თარიღი-დრო"
 
 #: updateincidencetool/updateincidencetool.cpp:147
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
-msgid "Argument completed must be a boolean"
-msgstr "არგუმენტი include_completed ლოგიკური მნიშვნელობა უნდა იყოს"
-
-#: updateincidencetool/updateincidencetooljob.cpp:51
-#, fuzzy, kde-format
-#| msgid "Mail id must be a positive integer"
-msgid "Incidence id must be a positive integer"
-msgstr "ფოსტის id მთელი დადებითი რიცხვი უნდა იყოს"
-
-#: updateincidencetool/updateincidencetooljob.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mail fetch failed: %1"
-msgid "Incidence fetch failed: %1"
-msgstr "ელფოსტის გამოთხოვა ჩავარდა: %1"
-
-#: updateincidencetool/updateincidencetooljob.cpp:71
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
-msgid "Incidence %1 not found"
-msgstr "ფოსტა %1 აღმოჩენილი არაა"
-
-#: updateincidencetool/updateincidencetooljob.cpp:77
 #, kde-format
-msgid "Item %1 is not an event, a to-do or a journal entry"
-msgstr ""
+msgid "Argument completed must be a boolean"
+msgstr "არგუმენტი completed ლოგიკური მნიშვნელობა უნდა იყოს"
 
 #: updateincidencetool/updateincidencetooljob.cpp:95
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Incidence modification failed: %1"
-msgstr "კონტაქტის შექმნა ჩავარდა: %1"
+msgstr "შემთხვევის შეცვლა ჩავარდა: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event \"%1\" updated (item id: %2)"
-msgstr "მოვლენა \"%1\" შეიქმნა კალენდარში \"%2\" (ელემენტის id: %3)"
+msgstr "მოვლენა \"%1\" განახლდა (ელემენტის id: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do \"%1\" updated (item id: %2)"
-msgstr "გასაკეთებელი \"%1\" შეიქმნა კალენდარში \"%2\" (ელემენტის id: %3)"
+msgstr "გასაკეთებელი \"%1\" განახლდა (ელემენტის id: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry \"%1\" updated (item id: %2)"
-msgstr "ჟურნალის ჩანაწერი \"%1\" შეიქმნა კალენდარში \"%2\" (ელემენტის id: %3)"
+msgstr "ჟურნალის ჩანაწერი \"%1\" განახლდა (ელემენტის id: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "\"%1\" updated (item id: %2)"
-msgstr "\"%1\" შეიქმნა კალენდარში \"%2\" (ელემენტის id: %3)"
+msgstr "\"%1\" განახლდა (ელემენტის id: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:120
-#, fuzzy, kde-format
-#| msgid "Argument end must not be before start"
+#, kde-format
 msgid "Argument end is only valid for events"
-msgstr "არგუმენტი end მისი დაწყებამდე არ უნდა იყოს"
+msgstr "არგუმენტი end, მხოლოდ, მოვლენებისთვისაა სწორი"
 
 #: updateincidencetool/updateincidencetooljob.cpp:123
 #, kde-format
 msgid "Arguments due, priority and completed are only valid for to-dos"
 msgstr ""
+"არგუმენტების დრო, პრიორიტეტი და დასრულებულობა, მხოლოდ, გასაკეთებლებისთვისაა"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date for an all-day event"
-msgstr "არგუმენტი end უნდა იყოს თარიღი, ან თარიღი-დრო ISO 8601 სტანდარტში"
+msgstr "არგუმენტი end მთელდღიანი მოვლენისთვის თარიღი უნდა იყოს"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date-time for a timed event"
-msgstr "არგუმენტი end უნდა იყოს თარიღი, ან თარიღი-დრო ISO 8601 სტანდარტში"
+msgstr "არგუმენტი end ზუსტი დროის თარიღისთვის თარიღი-დრო ფორმატში უნდა იყოს"
 
 #: updateincidencetool/updateincidencetooljob.cpp:201
-#, fuzzy, kde-format
-#| msgid "Arguments start and end must both be dates or both be date-times"
+#, kde-format
 msgid "Start and due dates of a to-do must both be dates or both be date-times"
-msgstr "არგუმენტები start და end, ორივე, ან თარიღი უნდა იყოს, ან თარიღი-დრო"
+msgstr ""
+"გასაკეთებლის start და due თარიღები, ორივე, ან თარიღი უნდა იყოს, ან თარიღი-დრო"
 
 #: updateincidencetool/updateincidencetooljob.cpp:204
-#, fuzzy, kde-format
-#| msgid "Argument end must not be before start"
+#, kde-format
 msgid "Due date must not be before start"
-msgstr "არგუმენტი end მისი დაწყებამდე არ უნდა იყოს"
+msgstr "მოხდენის თარიღი დასაწყისამდე არ უნდა იყოს"

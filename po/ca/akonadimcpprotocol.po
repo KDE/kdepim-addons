@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-19 00:47+0000\n"
-"PO-Revision-Date: 2026-10-18 14:58+0200\n"
+"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"PO-Revision-Date: 2026-10-19 11:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: akonadimcpprotocolmanager.cpp:47
+#: akonadimcpprotocolmanager.cpp:50
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Gestiona la informació de l'Akonadi"
@@ -341,16 +341,14 @@ msgid "Argument body must be a string"
 msgstr "L'argument «cos» ha de ser una cadena"
 
 #: createmailtool/createmailtool.cpp:81
-#, fuzzy, kde-format
-#| msgid "Argument id must be a positive integer"
+#, kde-format
 msgid "Argument identity must be a positive integer"
-msgstr "L'argument «id» ha de ser un enter positiu"
+msgstr "L'argument identitat ha de ser un enter positiu"
 
 #: createmailtool/createmailtool.cpp:86
-#, fuzzy, kde-format
-#| msgid "Argument id must be an integer"
+#, kde-format
 msgid "Argument identity must be an integer"
-msgstr "L'argument «id» ha de ser un enter"
+msgstr "L'argument identitat ha de ser un enter"
 
 #: createmailtool/createmailtooljob.cpp:66
 #, kde-format
@@ -403,39 +401,150 @@ msgstr "L'argument «prioritat» ha de ser un enter entre %1 i %2"
 msgid "Argument priority must be an integer"
 msgstr "L'argument «prioritat» ha de ser un enter"
 
-#: editmailtool/editmailtool.cpp:32
-#, kde-format
-msgid "Edit Mail"
-msgstr "Edita un correu"
+#: deletecontacttool/deletecontacttool.cpp:31
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Delete Contact"
+msgstr "Crea un contacte"
 
+#: deletecontacttool/deletecontacttool.cpp:40
+#: deleteincidencetool/deleteincidencetool.cpp:41
 #: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:60
-#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
+#: movemailtool/movemailtool.cpp:48 openmailtool/openmailtool.cpp:40
+#: replymailtool/replymailtool.cpp:64
 #: updatecontacttool/updatecontacttool.cpp:55
 #: updateincidencetool/updateincidencetool.cpp:64
 #, kde-format
 msgid "Argument id must be an integer"
 msgstr "L'argument «id» ha de ser un enter"
 
+#: deletecontacttool/deletecontacttool.cpp:45
+#: deleteincidencetool/deleteincidencetool.cpp:46
 #: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:65
-#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
+#: movemailtool/movemailtool.cpp:53 openmailtool/openmailtool.cpp:45
+#: replymailtool/replymailtool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:60
 #: updateincidencetool/updateincidencetool.cpp:69
 #, kde-format
 msgid "Argument id must be a positive integer"
 msgstr "L'argument «id» ha de ser un enter positiu"
 
+#: deletecontacttool/deletecontacttooljob.cpp:33
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, kde-format
+msgid "Contact id must be a positive integer"
+msgstr "L'«id del contacte» ha de ser un enter positiu"
+
+#: deletecontacttool/deletecontacttooljob.cpp:47
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr "Ha fallat la recuperació del contacte: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:52
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr "No s'ha trobat el contacte %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:57
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr "L'element %1 no és cap contacte"
+
+#: deletecontacttool/deletecontacttooljob.cpp:69
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Contact deletion failed: %1"
+msgstr "Ha fallat la creació del contacte: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "Contact \"%1\" updated (item id: %2)"
+msgid "Contact \"%1\" deleted (item id: %2)"
+msgstr "S'ha actualitzat el contacte «%1» (ID d'element: %2)"
+
+#: deleteincidencetool/deleteincidencetool.cpp:32
+#, fuzzy, kde-format
+#| msgid "Update Incidence"
+msgid "Delete Incidence"
+msgstr "Actualitza la incidència"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:34
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, kde-format
+msgid "Incidence id must be a positive integer"
+msgstr "L'«id de la incidència» ha de ser un enter positiu"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:48
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, kde-format
+msgid "Incidence fetch failed: %1"
+msgstr "Ha fallat la recuperació de la incidència: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:53
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, kde-format
+msgid "Incidence %1 not found"
+msgstr "No s'ha trobat la incidència %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:59
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr "L'element %1 no és cap esdeveniment, tasca pendent o entrada de diari"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "Incidence modification failed: %1"
+msgid "Incidence deletion failed: %1"
+msgstr "Ha fallat la modificació de la incidència: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:79
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" updated (item id: %2)"
+msgid "Event \"%1\" deleted (item id: %2)"
+msgstr "S'ha actualitzat l'esdeveniment «%1» (ID d'element: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:82
+#, fuzzy, kde-format
+#| msgid "To-do \"%1\" updated (item id: %2)"
+msgid "To-do \"%1\" deleted (item id: %2)"
+msgstr "S'ha actualitzat la tasca pendent «%1» (ID d'element: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:85
+#, fuzzy, kde-format
+#| msgid "Journal entry \"%1\" updated (item id: %2)"
+msgid "Journal entry \"%1\" deleted (item id: %2)"
+msgstr "S'ha actualitzat l'entrada de diari «%1» (ID d'element: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:88
+#, fuzzy, kde-format
+#| msgid "\"%1\" updated (item id: %2)"
+msgid "\"%1\" deleted (item id: %2)"
+msgstr "S'ha actualitzat «%1» (ID d'element: %2)"
+
+#: editmailtool/editmailtool.cpp:32
+#, kde-format
+msgid "Edit Mail"
+msgstr "Edita un correu"
+
 #: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
-#: openmailtool/openmailtooljob.cpp:32
+#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
 #, kde-format
 msgid "Mail id must be a positive integer"
 msgstr "L'«id del correu» ha de ser un enter positiu"
 
 #: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
+#: movemailtool/movemailtooljob.cpp:84
 #, kde-format
 msgid "Mail fetch failed: %1"
 msgstr "Ha fallat la recuperació del correu: %1"
 
 #: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
+#: movemailtool/movemailtooljob.cpp:89
 #, kde-format
 msgid "Mail %1 not found"
 msgstr "No s'ha trobat el correu %1"
@@ -553,38 +662,116 @@ msgid "Url where server listens."
 msgstr "URL on escolta el servidor."
 
 #: markmailtool/markmailtool.cpp:51
-#, fuzzy, kde-format
-#| msgid "Search Mail"
+#, kde-format
 msgid "Mark Mail"
-msgstr "Cerca correu"
+msgstr "Marca el correu"
 
 #: markmailtool/markmailtool.cpp:71
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument read must be a boolean"
-msgstr "L'argument «include_completed» ha de ser un booleà"
+msgstr "L'argument «read» ha de ser un booleà"
 
 #: markmailtool/markmailtool.cpp:77
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument important must be a boolean"
-msgstr "L'argument «include_completed» ha de ser un booleà"
+msgstr "L'argument «important» ha de ser un booleà"
 
 #: markmailtool/markmailtool.cpp:81
 #, kde-format
 msgid "At least one of read or important must be given"
-msgstr ""
+msgstr "Com a mínim s'ha d'indicar «read» o «important»"
 
 #: markmailtool/markmailtooljob.cpp:75
-#, fuzzy, kde-format
-#| msgid "Mail creation failed: %1"
+#, kde-format
 msgid "Mail modification failed: %1"
-msgstr "Ha fallat la creació del correu: %1"
+msgstr "Ha fallat la modificació del correu: %1"
 
 #: markmailtool/markmailtooljob.cpp:78
+#, kde-format
+msgid "Mail %1 modified"
+msgstr "S'ha modificat el correu %1"
+
+#: movemailtool/movemailtool.cpp:38
+#, fuzzy, kde-format
+#| msgid "Mark Mail"
+msgid "Move Mail"
+msgstr "Marca el correu"
+
+#: movemailtool/movemailtool.cpp:59
+#, fuzzy, kde-format
+#| msgid "Argument field must be a string"
+msgid "Argument folder must be a string"
+msgstr "L'argument «camp» ha de ser una cadena"
+
+#: movemailtool/movemailtool.cpp:63
+#, fuzzy, kde-format
+#| msgid "Argument end must not be before start"
+msgid "Argument folder must not be empty"
+msgstr "L'argument «final» no pot ser abans de l'inici"
+
+#: movemailtool/movemailtool.cpp:70
+#, fuzzy, kde-format
+#| msgid "Argument id must be a positive integer"
+msgid "Argument folder_id must be a positive integer"
+msgstr "L'argument «id» ha de ser un enter positiu"
+
+#: movemailtool/movemailtool.cpp:77 movemailtool/movemailtooljob.cpp:71
+#, fuzzy, kde-format
+#| msgid "At least one of read or important must be given"
+msgid "Exactly one of folder or folder_id must be given"
+msgstr "Com a mínim s'ha d'indicar «read» o «important»"
+
+#: movemailtool/movemailtooljob.cpp:94
+#, fuzzy, kde-format
+#| msgid "Item %1 is not a contact"
+msgid "Item %1 is not a mail"
+msgstr "L'element %1 no és cap contacte"
+
+#: movemailtool/movemailtooljob.cpp:107
+#, fuzzy, kde-format
+#| msgid "Drafts folder fetch failed: %1"
+msgid "Mail folder fetch failed: %1"
+msgstr "Ha fallat la recuperació de la carpeta d'esborranys: %1"
+
+#: movemailtool/movemailtooljob.cpp:124
 #, fuzzy, kde-format
 #| msgid "Mail %1 not found"
-msgid "Mail %1 modified"
+msgid "Mail folder %1 not found"
+msgstr "No s'ha trobat el correu %1"
+
+#: movemailtool/movemailtooljob.cpp:147
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Mail folder \"%1\" not found"
+msgstr "No s'ha trobat el correu %1"
+
+#: movemailtool/movemailtooljob.cpp:156
+#, kde-format
+msgid ""
+"Several mail folders match \"%1\", use the full path or folder_id:\n"
+"%2"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:165
+#, kde-format
+msgid "Mail %1 is already in folder \"%2\""
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:169
+#, kde-format
+msgid "Mail folder \"%1\" is read-only"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:180
+#, fuzzy, kde-format
+#| msgid "Mail fetch failed: %1"
+msgid "Mail move failed: %1"
+msgstr "Ha fallat la recuperació del correu: %1"
+
+#: movemailtool/movemailtooljob.cpp:183
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Mail %1 moved to folder \"%2\""
 msgstr "No s'ha trobat el correu %1"
 
 #: openmailtool/openmailtool.cpp:31
@@ -695,12 +882,6 @@ msgstr "L'argument «dies» ha de ser un enter"
 msgid "Number of days must be a positive integer"
 msgstr "El nombre de dies ha de ser un enter positiu"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
-#: updatecontacttool/updatecontacttooljob.cpp:59
-#, kde-format
-msgid "Contact fetch failed: %1"
-msgstr "Ha fallat la recuperació del contacte: %1"
-
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
@@ -709,28 +890,24 @@ msgstr[0] "Cap aniversari al dia següent"
 msgstr[1] "No hi ha cap aniversari en els %1 dies vinents"
 
 #: updatecontacttool/updatecontacttool.cpp:45
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Update Contact"
-msgstr "Crea un contacte"
+msgstr "Actualitza el contacte"
 
 #: updatecontacttool/updatecontacttool.cpp:94
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument organization must be a string"
-msgstr "L'argument «cos» ha de ser una cadena"
+msgstr "L'argument «organització» ha de ser una cadena"
 
 #: updatecontacttool/updatecontacttool.cpp:99
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument note must be a string"
-msgstr "L'argument «cos» ha de ser una cadena"
+msgstr "L'argument «nota» ha de ser una cadena"
 
 #: updatecontacttool/updatecontacttool.cpp:105
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument birthday must be a string"
-msgstr "L'argument «cos» ha de ser una cadena"
+msgstr "L'argument «aniversari» ha de ser una cadena"
 
 #: updatecontacttool/updatecontacttool.cpp:119
 #: updatecontacttool/updatecontacttooljob.cpp:46
@@ -738,161 +915,106 @@ msgstr "L'argument «cos» ha de ser una cadena"
 #: updateincidencetool/updateincidencetooljob.cpp:53
 #, kde-format
 msgid "No field to update"
-msgstr ""
-
-#: updatecontacttool/updatecontacttooljob.cpp:44
-#, fuzzy, kde-format
-#| msgid "Mail id must be a positive integer"
-msgid "Contact id must be a positive integer"
-msgstr "L'«id del correu» ha de ser un enter positiu"
-
-#: updatecontacttool/updatecontacttooljob.cpp:64
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
-msgid "Contact %1 not found"
-msgstr "No s'ha trobat el correu %1"
-
-#: updatecontacttool/updatecontacttooljob.cpp:69
-#, kde-format
-msgid "Item %1 is not a contact"
-msgstr ""
+msgstr "No hi ha cap camp a actualitzar"
 
 #: updatecontacttool/updatecontacttooljob.cpp:84
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact modification failed: %1"
-msgstr "Ha fallat la creació del contacte: %1"
+msgstr "Ha fallat la modificació del contacte: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact \"%1\" updated (item id: %2)"
-msgstr ""
-"El contacte «%1» s'ha creat a la llibreta d'adreces «%2» (ID d'element: %3)"
+msgstr "S'ha actualitzat el contacte «%1» (ID d'element: %2)"
 
 #: updateincidencetool/updateincidencetool.cpp:54
 #, kde-format
 msgid "Update Incidence"
-msgstr ""
+msgstr "Actualitza la incidència"
 
 #: updateincidencetool/updateincidencetool.cpp:85
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument description must be a string"
-msgstr "L'argument «cos» ha de ser una cadena"
+msgstr "L'argument «descripció» ha de ser una cadena"
 
 #: updateincidencetool/updateincidencetool.cpp:90
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument location must be a string"
-msgstr "L'argument «cos» ha de ser una cadena"
+msgstr "L'argument «ubicació» ha de ser una cadena"
 
 #: updateincidencetool/updateincidencetool.cpp:116
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument due must be a string"
-msgstr "L'argument «cos» ha de ser una cadena"
+msgstr "L'argument «venciment» ha de ser una cadena"
 
 #: updateincidencetool/updateincidencetool.cpp:130
-#, fuzzy, kde-format
-#| msgid "Arguments start and end must both be dates or both be date-times"
+#, kde-format
 msgid "Arguments start and due must both be dates or both be date-times"
 msgstr ""
-"Els arguments «inici» i «final» han de ser dues dates o dues dates-hores"
+"Els arguments «inici» i «venciment» han de ser dues dates o dues dates-hores"
 
 #: updateincidencetool/updateincidencetool.cpp:147
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
-msgid "Argument completed must be a boolean"
-msgstr "L'argument «include_completed» ha de ser un booleà"
-
-#: updateincidencetool/updateincidencetooljob.cpp:51
-#, fuzzy, kde-format
-#| msgid "Mail id must be a positive integer"
-msgid "Incidence id must be a positive integer"
-msgstr "L'«id del correu» ha de ser un enter positiu"
-
-#: updateincidencetool/updateincidencetooljob.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mail fetch failed: %1"
-msgid "Incidence fetch failed: %1"
-msgstr "Ha fallat la recuperació del correu: %1"
-
-#: updateincidencetool/updateincidencetooljob.cpp:71
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
-msgid "Incidence %1 not found"
-msgstr "No s'ha trobat el correu %1"
-
-#: updateincidencetool/updateincidencetooljob.cpp:77
 #, kde-format
-msgid "Item %1 is not an event, a to-do or a journal entry"
-msgstr ""
+msgid "Argument completed must be a boolean"
+msgstr "L'argument «completada» ha de ser un booleà"
 
 #: updateincidencetool/updateincidencetooljob.cpp:95
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Incidence modification failed: %1"
-msgstr "Ha fallat la creació del contacte: %1"
+msgstr "Ha fallat la modificació de la incidència: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event \"%1\" updated (item id: %2)"
-msgstr "S'ha creat l'esdeveniment «%1» en el calendari «%2» (ID d'element: %3)"
+msgstr "S'ha actualitzat l'esdeveniment «%1» (ID d'element: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do \"%1\" updated (item id: %2)"
-msgstr ""
-"S'ha creat la tasca pendent «%1» en el calendari «%2» (ID d'element: %3)"
+msgstr "S'ha actualitzat la tasca pendent «%1» (ID d'element: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry \"%1\" updated (item id: %2)"
-msgstr ""
-"S'ha creat l'entrada de diari «%1» en el calendari «%2» (ID d'element: %3)"
+msgstr "S'ha actualitzat l'entrada de diari «%1» (ID d'element: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "\"%1\" updated (item id: %2)"
-msgstr "S'ha creat «%1» en el calendari «%2» (ID d'element: %3)"
+msgstr "S'ha actualitzat «%1» (ID d'element: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:120
-#, fuzzy, kde-format
-#| msgid "Argument end must not be before start"
+#, kde-format
 msgid "Argument end is only valid for events"
-msgstr "L'argument «final» no pot ser abans de l'inici"
+msgstr "L'argument «final» només és vàlid als esdeveniments"
 
 #: updateincidencetool/updateincidencetooljob.cpp:123
 #, kde-format
 msgid "Arguments due, priority and completed are only valid for to-dos"
 msgstr ""
+"Els arguments «venciment», «prioritat» i «completada» només són vàlids a les "
+"tasques pendents"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date for an all-day event"
-msgstr "L'argument «final» ha de ser una data ISO 8601 o data-hora"
+msgstr ""
+"L'argument «final» ha de ser una data per a un esdeveniment de tot el dia"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date-time for a timed event"
-msgstr "L'argument «final» ha de ser una data ISO 8601 o data-hora"
+msgstr ""
+"L'argument «final» ha de ser una data-hora per a un esdeveniment amb hora"
 
 #: updateincidencetool/updateincidencetooljob.cpp:201
-#, fuzzy, kde-format
-#| msgid "Arguments start and end must both be dates or both be date-times"
+#, kde-format
 msgid "Start and due dates of a to-do must both be dates or both be date-times"
 msgstr ""
-"Els arguments «inici» i «final» han de ser dues dates o dues dates-hores"
+"Les dates d'inici i venciment d'una tasca pendent han de ser dues dates o "
+"dues dates-hores"
 
 #: updateincidencetool/updateincidencetooljob.cpp:204
-#, fuzzy, kde-format
-#| msgid "Argument end must not be before start"
+#, kde-format
 msgid "Due date must not be before start"
-msgstr "L'argument «final» no pot ser abans de l'inici"
+msgstr "La data de venciment no pot ser abans de l'inici"

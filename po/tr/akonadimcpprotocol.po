@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-19 00:47+0000\n"
-"PO-Revision-Date: 2026-10-18 18:43+0300\n"
+"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"PO-Revision-Date: 2026-10-19 12:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 26.08.0\n"
 
-#: akonadimcpprotocolmanager.cpp:47
+#: akonadimcpprotocolmanager.cpp:50
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Akonadi’den gelen bilgiyi yönetin"
@@ -335,16 +335,14 @@ msgid "Argument body must be a string"
 msgstr "body argümanı, bir dizi olmalıdır"
 
 #: createmailtool/createmailtool.cpp:81
-#, fuzzy, kde-format
-#| msgid "Argument id must be a positive integer"
+#, kde-format
 msgid "Argument identity must be a positive integer"
-msgstr "id argümanı, pozitif bir tam sayı olmalıdır"
+msgstr "identity argümanı, pozitif bir tam sayı olmalıdır"
 
 #: createmailtool/createmailtool.cpp:86
-#, fuzzy, kde-format
-#| msgid "Argument id must be an integer"
+#, kde-format
 msgid "Argument identity must be an integer"
-msgstr "id argümanı, bir tam sayı olmalıdır"
+msgstr "identity argümanı, bir tam sayı olmalıdır"
 
 #: createmailtool/createmailtooljob.cpp:66
 #, kde-format
@@ -397,39 +395,150 @@ msgstr "priority argümanı, %1 ile %2 arasında bir tam sayı olmalıdır"
 msgid "Argument priority must be an integer"
 msgstr "priority argümanı, bir tam sayı olmalıdır"
 
-#: editmailtool/editmailtool.cpp:32
-#, kde-format
-msgid "Edit Mail"
-msgstr "Postayı Düzenle"
+#: deletecontacttool/deletecontacttool.cpp:31
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Delete Contact"
+msgstr "Kişi Oluştur"
 
+#: deletecontacttool/deletecontacttool.cpp:40
+#: deleteincidencetool/deleteincidencetool.cpp:41
 #: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:60
-#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
+#: movemailtool/movemailtool.cpp:48 openmailtool/openmailtool.cpp:40
+#: replymailtool/replymailtool.cpp:64
 #: updatecontacttool/updatecontacttool.cpp:55
 #: updateincidencetool/updateincidencetool.cpp:64
 #, kde-format
 msgid "Argument id must be an integer"
 msgstr "id argümanı, bir tam sayı olmalıdır"
 
+#: deletecontacttool/deletecontacttool.cpp:45
+#: deleteincidencetool/deleteincidencetool.cpp:46
 #: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:65
-#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
+#: movemailtool/movemailtool.cpp:53 openmailtool/openmailtool.cpp:45
+#: replymailtool/replymailtool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:60
 #: updateincidencetool/updateincidencetool.cpp:69
 #, kde-format
 msgid "Argument id must be a positive integer"
 msgstr "id argümanı, pozitif bir tam sayı olmalıdır"
 
+#: deletecontacttool/deletecontacttooljob.cpp:33
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, kde-format
+msgid "Contact id must be a positive integer"
+msgstr "Kişi kimliği, pozitif bir tam sayı olmalıdır"
+
+#: deletecontacttool/deletecontacttooljob.cpp:47
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr "Kişi getirilemedi: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:52
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr "%1 kişisi bulunamadı"
+
+#: deletecontacttool/deletecontacttooljob.cpp:57
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr "%1 ögesi bir kişi değil"
+
+#: deletecontacttool/deletecontacttooljob.cpp:69
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Contact deletion failed: %1"
+msgstr "Kişi oluşturulamadı: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "Contact \"%1\" updated (item id: %2)"
+msgid "Contact \"%1\" deleted (item id: %2)"
+msgstr "“%1” kişisi güncellendi (öge kimliği: %2)"
+
+#: deleteincidencetool/deleteincidencetool.cpp:32
+#, fuzzy, kde-format
+#| msgid "Update Incidence"
+msgid "Delete Incidence"
+msgstr "Olayı Güncelle"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:34
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, kde-format
+msgid "Incidence id must be a positive integer"
+msgstr "Olay kimliği, pozitif bir tam sayı olmalıdır"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:48
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, kde-format
+msgid "Incidence fetch failed: %1"
+msgstr "Olay getirilemedi: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:53
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, kde-format
+msgid "Incidence %1 not found"
+msgstr "%1 olayı bulunamadı"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:59
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr "%1 ögesi bir etkinlik, yapılacak veya günce girdisi değil"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "Incidence modification failed: %1"
+msgid "Incidence deletion failed: %1"
+msgstr "Olayda değişiklik yapılamadı: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:79
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" updated (item id: %2)"
+msgid "Event \"%1\" deleted (item id: %2)"
+msgstr "“%1” etkinliği güncellendi (öge kimliği: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:82
+#, fuzzy, kde-format
+#| msgid "To-do \"%1\" updated (item id: %2)"
+msgid "To-do \"%1\" deleted (item id: %2)"
+msgstr "“%1” yapılacak işi güncellendi (öge kimliği: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:85
+#, fuzzy, kde-format
+#| msgid "Journal entry \"%1\" updated (item id: %2)"
+msgid "Journal entry \"%1\" deleted (item id: %2)"
+msgstr "“%1” günce girdisi güncellendi (öge kimliği: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:88
+#, fuzzy, kde-format
+#| msgid "\"%1\" updated (item id: %2)"
+msgid "\"%1\" deleted (item id: %2)"
+msgstr "“%1” güncellendi (öge kimliği: %2)"
+
+#: editmailtool/editmailtool.cpp:32
+#, kde-format
+msgid "Edit Mail"
+msgstr "Postayı Düzenle"
+
 #: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
-#: openmailtool/openmailtooljob.cpp:32
+#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
 #, kde-format
 msgid "Mail id must be a positive integer"
 msgstr "Posta kimliği, pozitif bir tam sayı olmalıdır"
 
 #: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
+#: movemailtool/movemailtooljob.cpp:84
 #, kde-format
 msgid "Mail fetch failed: %1"
 msgstr "Posta getirilemedi: %1"
 
 #: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
+#: movemailtool/movemailtooljob.cpp:89
 #, kde-format
 msgid "Mail %1 not found"
 msgstr "%1 postası bulunamadı"
@@ -545,38 +654,116 @@ msgid "Url where server listens."
 msgstr "Sunucunun dinlediği URL."
 
 #: markmailtool/markmailtool.cpp:51
-#, fuzzy, kde-format
-#| msgid "Search Mail"
+#, kde-format
 msgid "Mark Mail"
-msgstr "Postayı Ara"
+msgstr "Postayı İmle"
 
 #: markmailtool/markmailtool.cpp:71
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument read must be a boolean"
-msgstr "include_completed argümanı bir Boole olmalıdır"
+msgstr "read argümanı bir Boole olmalıdır"
 
 #: markmailtool/markmailtool.cpp:77
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument important must be a boolean"
-msgstr "include_completed argümanı bir Boole olmalıdır"
+msgstr "important argümanı bir Boole olmalıdır"
 
 #: markmailtool/markmailtool.cpp:81
 #, kde-format
 msgid "At least one of read or important must be given"
-msgstr ""
+msgstr "Ya read ya da important arasından biri kullanılmalıdır"
 
 #: markmailtool/markmailtooljob.cpp:75
-#, fuzzy, kde-format
-#| msgid "Mail creation failed: %1"
+#, kde-format
 msgid "Mail modification failed: %1"
-msgstr "Posta oluşturulamadı: %1"
+msgstr "Postada değişiklik yapılamadı: %1"
 
 #: markmailtool/markmailtooljob.cpp:78
+#, kde-format
+msgid "Mail %1 modified"
+msgstr "%1 postasında değişiklik yapıldı"
+
+#: movemailtool/movemailtool.cpp:38
+#, fuzzy, kde-format
+#| msgid "Mark Mail"
+msgid "Move Mail"
+msgstr "Postayı İmle"
+
+#: movemailtool/movemailtool.cpp:59
+#, fuzzy, kde-format
+#| msgid "Argument field must be a string"
+msgid "Argument folder must be a string"
+msgstr "field argümanı bir dizi olmalıdır"
+
+#: movemailtool/movemailtool.cpp:63
+#, fuzzy, kde-format
+#| msgid "Argument end must not be before start"
+msgid "Argument folder must not be empty"
+msgstr "end argümanı, start argümanından önce olmamalıdır"
+
+#: movemailtool/movemailtool.cpp:70
+#, fuzzy, kde-format
+#| msgid "Argument id must be a positive integer"
+msgid "Argument folder_id must be a positive integer"
+msgstr "id argümanı, pozitif bir tam sayı olmalıdır"
+
+#: movemailtool/movemailtool.cpp:77 movemailtool/movemailtooljob.cpp:71
+#, fuzzy, kde-format
+#| msgid "At least one of read or important must be given"
+msgid "Exactly one of folder or folder_id must be given"
+msgstr "Ya read ya da important arasından biri kullanılmalıdır"
+
+#: movemailtool/movemailtooljob.cpp:94
+#, fuzzy, kde-format
+#| msgid "Item %1 is not a contact"
+msgid "Item %1 is not a mail"
+msgstr "%1 ögesi bir kişi değil"
+
+#: movemailtool/movemailtooljob.cpp:107
+#, fuzzy, kde-format
+#| msgid "Drafts folder fetch failed: %1"
+msgid "Mail folder fetch failed: %1"
+msgstr "Taslaklar klasörü getirilemedi: %1"
+
+#: movemailtool/movemailtooljob.cpp:124
 #, fuzzy, kde-format
 #| msgid "Mail %1 not found"
-msgid "Mail %1 modified"
+msgid "Mail folder %1 not found"
+msgstr "%1 postası bulunamadı"
+
+#: movemailtool/movemailtooljob.cpp:147
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Mail folder \"%1\" not found"
+msgstr "%1 postası bulunamadı"
+
+#: movemailtool/movemailtooljob.cpp:156
+#, kde-format
+msgid ""
+"Several mail folders match \"%1\", use the full path or folder_id:\n"
+"%2"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:165
+#, kde-format
+msgid "Mail %1 is already in folder \"%2\""
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:169
+#, kde-format
+msgid "Mail folder \"%1\" is read-only"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:180
+#, fuzzy, kde-format
+#| msgid "Mail fetch failed: %1"
+msgid "Mail move failed: %1"
+msgstr "Posta getirilemedi: %1"
+
+#: movemailtool/movemailtooljob.cpp:183
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Mail %1 moved to folder \"%2\""
 msgstr "%1 postası bulunamadı"
 
 #: openmailtool/openmailtool.cpp:31
@@ -681,12 +868,6 @@ msgstr "days argümanı, bir tam sayı olmalıdır"
 msgid "Number of days must be a positive integer"
 msgstr "Gün sayısı, pozitif bir tam sayı olmalıdır"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
-#: updatecontacttool/updatecontacttooljob.cpp:59
-#, kde-format
-msgid "Contact fetch failed: %1"
-msgstr "Kişi getirilemedi: %1"
-
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
@@ -695,28 +876,24 @@ msgstr[0] "Yarın bir yaş günü yok"
 msgstr[1] "Sonraki %1 günde bir yaş günü yok"
 
 #: updatecontacttool/updatecontacttool.cpp:45
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Update Contact"
-msgstr "Kişi Oluştur"
+msgstr "Kişiyi Güncelle"
 
 #: updatecontacttool/updatecontacttool.cpp:94
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument organization must be a string"
-msgstr "body argümanı, bir dizi olmalıdır"
+msgstr "organization argümanı, bir dizi olmalıdır"
 
 #: updatecontacttool/updatecontacttool.cpp:99
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument note must be a string"
-msgstr "body argümanı, bir dizi olmalıdır"
+msgstr "note argümanı, bir dizi olmalıdır"
 
 #: updatecontacttool/updatecontacttool.cpp:105
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument birthday must be a string"
-msgstr "body argümanı, bir dizi olmalıdır"
+msgstr "birthday argümanı, bir dizi olmalıdır"
 
 #: updatecontacttool/updatecontacttool.cpp:119
 #: updatecontacttool/updatecontacttooljob.cpp:46
@@ -724,158 +901,104 @@ msgstr "body argümanı, bir dizi olmalıdır"
 #: updateincidencetool/updateincidencetooljob.cpp:53
 #, kde-format
 msgid "No field to update"
-msgstr ""
-
-#: updatecontacttool/updatecontacttooljob.cpp:44
-#, fuzzy, kde-format
-#| msgid "Mail id must be a positive integer"
-msgid "Contact id must be a positive integer"
-msgstr "Posta kimliği, pozitif bir tam sayı olmalıdır"
-
-#: updatecontacttool/updatecontacttooljob.cpp:64
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
-msgid "Contact %1 not found"
-msgstr "%1 postası bulunamadı"
-
-#: updatecontacttool/updatecontacttooljob.cpp:69
-#, kde-format
-msgid "Item %1 is not a contact"
-msgstr ""
+msgstr "Güncellenecek alan yok"
 
 #: updatecontacttool/updatecontacttooljob.cpp:84
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact modification failed: %1"
-msgstr "Kişi oluşturulamadı: %1"
+msgstr "Kişide değişiklik yapılamadı: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact \"%1\" updated (item id: %2)"
-msgstr "“%2” adres defterinde “%1” kişisi oluşturuldu (öge kimliği: %3)"
+msgstr "“%1” kişisi güncellendi (öge kimliği: %2)"
 
 #: updateincidencetool/updateincidencetool.cpp:54
 #, kde-format
 msgid "Update Incidence"
-msgstr ""
+msgstr "Olayı Güncelle"
 
 #: updateincidencetool/updateincidencetool.cpp:85
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument description must be a string"
-msgstr "body argümanı, bir dizi olmalıdır"
+msgstr "description argümanı, bir dizi olmalıdır"
 
 #: updateincidencetool/updateincidencetool.cpp:90
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument location must be a string"
-msgstr "body argümanı, bir dizi olmalıdır"
+msgstr "location argümanı, bir dizi olmalıdır"
 
 #: updateincidencetool/updateincidencetool.cpp:116
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument due must be a string"
-msgstr "body argümanı, bir dizi olmalıdır"
+msgstr "due argümanı, bir dizi olmalıdır"
 
 #: updateincidencetool/updateincidencetool.cpp:130
-#, fuzzy, kde-format
-#| msgid "Arguments start and end must both be dates or both be date-times"
+#, kde-format
 msgid "Arguments start and due must both be dates or both be date-times"
 msgstr ""
-"start ve end argümanlarının her ikisi de tarih veya tarih–zaman olmalıdır"
+"start ve due argümanlarının her ikisi de tarih veya tarih–zaman olmalıdır"
 
 #: updateincidencetool/updateincidencetool.cpp:147
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
-msgid "Argument completed must be a boolean"
-msgstr "include_completed argümanı bir Boole olmalıdır"
-
-#: updateincidencetool/updateincidencetooljob.cpp:51
-#, fuzzy, kde-format
-#| msgid "Mail id must be a positive integer"
-msgid "Incidence id must be a positive integer"
-msgstr "Posta kimliği, pozitif bir tam sayı olmalıdır"
-
-#: updateincidencetool/updateincidencetooljob.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mail fetch failed: %1"
-msgid "Incidence fetch failed: %1"
-msgstr "Posta getirilemedi: %1"
-
-#: updateincidencetool/updateincidencetooljob.cpp:71
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
-msgid "Incidence %1 not found"
-msgstr "%1 postası bulunamadı"
-
-#: updateincidencetool/updateincidencetooljob.cpp:77
 #, kde-format
-msgid "Item %1 is not an event, a to-do or a journal entry"
-msgstr ""
+msgid "Argument completed must be a boolean"
+msgstr "completed argümanı bir Boole olmalıdır"
 
 #: updateincidencetool/updateincidencetooljob.cpp:95
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Incidence modification failed: %1"
-msgstr "Kişi oluşturulamadı: %1"
+msgstr "Olayda değişiklik yapılamadı: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event \"%1\" updated (item id: %2)"
-msgstr "“%2” takviminde “%1” etkinliği oluşturuldu (öge kimliği: %3)"
+msgstr "“%1” etkinliği güncellendi (öge kimliği: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do \"%1\" updated (item id: %2)"
-msgstr "“%2” takviminde “%1” yapılacak işi oluşturuldu (öge kimliği: %3)"
+msgstr "“%1” yapılacak işi güncellendi (öge kimliği: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry \"%1\" updated (item id: %2)"
-msgstr "“%2” takviminde “%1” günce girdisi oluşturuldu (öge kimliği: %3)"
+msgstr "“%1” günce girdisi güncellendi (öge kimliği: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "\"%1\" updated (item id: %2)"
-msgstr "“%2” takviminde “%1” oluşturuldu (öge kimliği: %3)"
+msgstr "“%1” güncellendi (öge kimliği: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:120
-#, fuzzy, kde-format
-#| msgid "Argument end must not be before start"
+#, kde-format
 msgid "Argument end is only valid for events"
-msgstr "end argümanı, start argümanından önce olmamalıdır"
+msgstr "end argümanı, yalnızca etkinlikler için geçerlidir"
 
 #: updateincidencetool/updateincidencetooljob.cpp:123
 #, kde-format
 msgid "Arguments due, priority and completed are only valid for to-dos"
 msgstr ""
+"due, priority ve completed argümanları, yalnızca yapılacak işler için "
+"geçerlidir"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date for an all-day event"
-msgstr "end argümanı, bir ISO 8601 biçimli tarih veya tarih–zaman olmalıdır"
+msgstr "end argümanı, tam günlük bir etkinlik için bir tarih olmalıdır"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date-time for a timed event"
-msgstr "end argümanı, bir ISO 8601 biçimli tarih veya tarih–zaman olmalıdır"
+msgstr "end argümanı, zamanlı bir etkinlik için bir tarih–zaman olmalıdır"
 
 #: updateincidencetool/updateincidencetooljob.cpp:201
-#, fuzzy, kde-format
-#| msgid "Arguments start and end must both be dates or both be date-times"
+#, kde-format
 msgid "Start and due dates of a to-do must both be dates or both be date-times"
 msgstr ""
-"start ve end argümanlarının her ikisi de tarih veya tarih–zaman olmalıdır"
+"Bir yapılacak işin başlangıç ve bitiş tarihlerinin ya ikisi de tarih veya "
+"ikisi de tarih–zaman olmalıdır"
 
 #: updateincidencetool/updateincidencetooljob.cpp:204
-#, fuzzy, kde-format
-#| msgid "Argument end must not be before start"
+#, kde-format
 msgid "Due date must not be before start"
-msgstr "end argümanı, start argümanından önce olmamalıdır"
+msgstr "Bitiş tarihi, başlangıçtan önce olamaz"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadimcpprotocol\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-19 00:47+0000\n"
-"PO-Revision-Date: 2026-10-18 19:08+0200\n"
+"POT-Creation-Date: 2026-10-20 00:53+0000\n"
+"PO-Revision-Date: 2026-10-19 09:57+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: akonadimcpprotocolmanager.cpp:47
+#: akonadimcpprotocolmanager.cpp:50
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Управление данными из Akonadi"
@@ -337,16 +337,14 @@ msgid "Argument body must be a string"
 msgstr "Аргумент body должен быть строкой"
 
 #: createmailtool/createmailtool.cpp:81
-#, fuzzy, kde-format
-#| msgid "Argument id must be a positive integer"
+#, kde-format
 msgid "Argument identity must be a positive integer"
-msgstr "Аргумент id должен быть положительным целым числом"
+msgstr "Аргумент identity должен быть положительным целым числом"
 
 #: createmailtool/createmailtool.cpp:86
-#, fuzzy, kde-format
-#| msgid "Argument id must be an integer"
+#, kde-format
 msgid "Argument identity must be an integer"
-msgstr "Аргумент id должен быть целым числом"
+msgstr "Аргумент identity должен быть целым числом"
 
 #: createmailtool/createmailtooljob.cpp:66
 #, kde-format
@@ -399,39 +397,151 @@ msgstr "Аргумент priority должен быть целым числом 
 msgid "Argument priority must be an integer"
 msgstr "Аргумент priority должен быть целым числом"
 
-#: editmailtool/editmailtool.cpp:32
-#, kde-format
-msgid "Edit Mail"
-msgstr "Изменить письмо"
+#: deletecontacttool/deletecontacttool.cpp:31
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Delete Contact"
+msgstr "Создать контакт"
 
+#: deletecontacttool/deletecontacttool.cpp:40
+#: deleteincidencetool/deleteincidencetool.cpp:41
 #: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:60
-#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
+#: movemailtool/movemailtool.cpp:48 openmailtool/openmailtool.cpp:40
+#: replymailtool/replymailtool.cpp:64
 #: updatecontacttool/updatecontacttool.cpp:55
 #: updateincidencetool/updateincidencetool.cpp:64
 #, kde-format
 msgid "Argument id must be an integer"
 msgstr "Аргумент id должен быть целым числом"
 
+#: deletecontacttool/deletecontacttool.cpp:45
+#: deleteincidencetool/deleteincidencetool.cpp:46
 #: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:65
-#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
+#: movemailtool/movemailtool.cpp:53 openmailtool/openmailtool.cpp:45
+#: replymailtool/replymailtool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:60
 #: updateincidencetool/updateincidencetool.cpp:69
 #, kde-format
 msgid "Argument id must be a positive integer"
 msgstr "Аргумент id должен быть положительным целым числом"
 
+#: deletecontacttool/deletecontacttooljob.cpp:33
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, kde-format
+msgid "Contact id must be a positive integer"
+msgstr "Идентификатор контакта должен быть положительным целым числом"
+
+#: deletecontacttool/deletecontacttooljob.cpp:47
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr "Не удалось получить контакты: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:52
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr "Контакт %1 не найден"
+
+#: deletecontacttool/deletecontacttooljob.cpp:57
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr "Элемент %1 не является контактом"
+
+#: deletecontacttool/deletecontacttooljob.cpp:69
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Contact deletion failed: %1"
+msgstr "Не удалось создать контакт: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "Contact \"%1\" updated (item id: %2)"
+msgid "Contact \"%1\" deleted (item id: %2)"
+msgstr "Контакт «%1» изменён (идентификатор элемента: %2)"
+
+#: deleteincidencetool/deleteincidencetool.cpp:32
+#, fuzzy, kde-format
+#| msgid "Update Incidence"
+msgid "Delete Incidence"
+msgstr "Изменить элемент календаря"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:34
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, kde-format
+msgid "Incidence id must be a positive integer"
+msgstr ""
+"Идентификатор элемента календаря должен быть положительным целым числом"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:48
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, kde-format
+msgid "Incidence fetch failed: %1"
+msgstr "Не удалось получить элемент календаря: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:53
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, kde-format
+msgid "Incidence %1 not found"
+msgstr "Элемент календаря %1 не найден"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:59
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr "Элемент %1 не является событием, задачей или записью дневника"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "Incidence modification failed: %1"
+msgid "Incidence deletion failed: %1"
+msgstr "Не удалось изменить элемент календаря: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:79
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" updated (item id: %2)"
+msgid "Event \"%1\" deleted (item id: %2)"
+msgstr "Событие «%1» изменено (идентификатор элемента: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:82
+#, fuzzy, kde-format
+#| msgid "To-do \"%1\" updated (item id: %2)"
+msgid "To-do \"%1\" deleted (item id: %2)"
+msgstr "Задача «%1» изменена (идентификатор элемента: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:85
+#, fuzzy, kde-format
+#| msgid "Journal entry \"%1\" updated (item id: %2)"
+msgid "Journal entry \"%1\" deleted (item id: %2)"
+msgstr "Запись дневника «%1» изменена (идентификатор элемента: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:88
+#, fuzzy, kde-format
+#| msgid "\"%1\" updated (item id: %2)"
+msgid "\"%1\" deleted (item id: %2)"
+msgstr "«%1» изменено (идентификатор элемента: %2)"
+
+#: editmailtool/editmailtool.cpp:32
+#, kde-format
+msgid "Edit Mail"
+msgstr "Изменить письмо"
+
 #: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
-#: openmailtool/openmailtooljob.cpp:32
+#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
 #, kde-format
 msgid "Mail id must be a positive integer"
 msgstr "Идентификатор письма должен быть положительным целым числом"
 
 #: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
+#: movemailtool/movemailtooljob.cpp:84
 #, kde-format
 msgid "Mail fetch failed: %1"
 msgstr "Не удалось получить письмо: %1"
 
 #: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
+#: movemailtool/movemailtooljob.cpp:89
 #, kde-format
 msgid "Mail %1 not found"
 msgstr "Письмо %1 не найдено"
@@ -547,38 +657,116 @@ msgid "Url where server listens."
 msgstr "URL, на котором ожидает подключений сервер."
 
 #: markmailtool/markmailtool.cpp:51
-#, fuzzy, kde-format
-#| msgid "Search Mail"
+#, kde-format
 msgid "Mark Mail"
-msgstr "Поиск писем"
+msgstr "Пометить письмо"
 
 #: markmailtool/markmailtool.cpp:71
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument read must be a boolean"
-msgstr "Аргумент include_completed должен быть логическим значением"
+msgstr "Аргумент read должен быть логическим значением"
 
 #: markmailtool/markmailtool.cpp:77
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument important must be a boolean"
-msgstr "Аргумент include_completed должен быть логическим значением"
+msgstr "Аргумент important должен быть логическим значением"
 
 #: markmailtool/markmailtool.cpp:81
 #, kde-format
 msgid "At least one of read or important must be given"
-msgstr ""
+msgstr "Должен быть указан хотя бы один из аргументов read или important"
 
 #: markmailtool/markmailtooljob.cpp:75
-#, fuzzy, kde-format
-#| msgid "Mail creation failed: %1"
+#, kde-format
 msgid "Mail modification failed: %1"
-msgstr "Не удалось создать письмо: %1"
+msgstr "Не удалось изменить письмо: %1"
 
 #: markmailtool/markmailtooljob.cpp:78
+#, kde-format
+msgid "Mail %1 modified"
+msgstr "Письмо %1 изменено"
+
+#: movemailtool/movemailtool.cpp:38
+#, fuzzy, kde-format
+#| msgid "Mark Mail"
+msgid "Move Mail"
+msgstr "Пометить письмо"
+
+#: movemailtool/movemailtool.cpp:59
+#, fuzzy, kde-format
+#| msgid "Argument field must be a string"
+msgid "Argument folder must be a string"
+msgstr "Аргумент field должен быть строкой"
+
+#: movemailtool/movemailtool.cpp:63
+#, fuzzy, kde-format
+#| msgid "Argument end must not be before start"
+msgid "Argument folder must not be empty"
+msgstr "Аргумент end не должен быть раньше start"
+
+#: movemailtool/movemailtool.cpp:70
+#, fuzzy, kde-format
+#| msgid "Argument id must be a positive integer"
+msgid "Argument folder_id must be a positive integer"
+msgstr "Аргумент id должен быть положительным целым числом"
+
+#: movemailtool/movemailtool.cpp:77 movemailtool/movemailtooljob.cpp:71
+#, fuzzy, kde-format
+#| msgid "At least one of read or important must be given"
+msgid "Exactly one of folder or folder_id must be given"
+msgstr "Должен быть указан хотя бы один из аргументов read или important"
+
+#: movemailtool/movemailtooljob.cpp:94
+#, fuzzy, kde-format
+#| msgid "Item %1 is not a contact"
+msgid "Item %1 is not a mail"
+msgstr "Элемент %1 не является контактом"
+
+#: movemailtool/movemailtooljob.cpp:107
+#, fuzzy, kde-format
+#| msgid "Drafts folder fetch failed: %1"
+msgid "Mail folder fetch failed: %1"
+msgstr "Не удалось получить папку черновиков: %1"
+
+#: movemailtool/movemailtooljob.cpp:124
 #, fuzzy, kde-format
 #| msgid "Mail %1 not found"
-msgid "Mail %1 modified"
+msgid "Mail folder %1 not found"
+msgstr "Письмо %1 не найдено"
+
+#: movemailtool/movemailtooljob.cpp:147
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Mail folder \"%1\" not found"
+msgstr "Письмо %1 не найдено"
+
+#: movemailtool/movemailtooljob.cpp:156
+#, kde-format
+msgid ""
+"Several mail folders match \"%1\", use the full path or folder_id:\n"
+"%2"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:165
+#, kde-format
+msgid "Mail %1 is already in folder \"%2\""
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:169
+#, kde-format
+msgid "Mail folder \"%1\" is read-only"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:180
+#, fuzzy, kde-format
+#| msgid "Mail fetch failed: %1"
+msgid "Mail move failed: %1"
+msgstr "Не удалось получить письмо: %1"
+
+#: movemailtool/movemailtooljob.cpp:183
+#, fuzzy, kde-format
+#| msgid "Mail %1 not found"
+msgid "Mail %1 moved to folder \"%2\""
 msgstr "Письмо %1 не найдено"
 
 #: openmailtool/openmailtool.cpp:31
@@ -684,12 +872,6 @@ msgstr "Аргумент days должен быть целым числом"
 msgid "Number of days must be a positive integer"
 msgstr "Число дней должно быть положительным целым числом"
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
-#: updatecontacttool/updatecontacttooljob.cpp:59
-#, kde-format
-msgid "Contact fetch failed: %1"
-msgstr "Не удалось получить контакты: %1"
-
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
@@ -700,28 +882,24 @@ msgstr[2] "Нет дней рождения в ближайшие %1 дней"
 msgstr[3] "Нет дней рождения в ближайшие сутки"
 
 #: updatecontacttool/updatecontacttool.cpp:45
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Update Contact"
-msgstr "Создать контакт"
+msgstr "Изменить контакт"
 
 #: updatecontacttool/updatecontacttool.cpp:94
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument organization must be a string"
-msgstr "Аргумент body должен быть строкой"
+msgstr "Аргумент organization должен быть строкой"
 
 #: updatecontacttool/updatecontacttool.cpp:99
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument note must be a string"
-msgstr "Аргумент body должен быть строкой"
+msgstr "Аргумент note должен быть строкой"
 
 #: updatecontacttool/updatecontacttool.cpp:105
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument birthday must be a string"
-msgstr "Аргумент body должен быть строкой"
+msgstr "Аргумент birthday должен быть строкой"
 
 #: updatecontacttool/updatecontacttool.cpp:119
 #: updatecontacttool/updatecontacttooljob.cpp:46
@@ -729,157 +907,102 @@ msgstr "Аргумент body должен быть строкой"
 #: updateincidencetool/updateincidencetooljob.cpp:53
 #, kde-format
 msgid "No field to update"
-msgstr ""
-
-#: updatecontacttool/updatecontacttooljob.cpp:44
-#, fuzzy, kde-format
-#| msgid "Mail id must be a positive integer"
-msgid "Contact id must be a positive integer"
-msgstr "Идентификатор письма должен быть положительным целым числом"
-
-#: updatecontacttool/updatecontacttooljob.cpp:64
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
-msgid "Contact %1 not found"
-msgstr "Письмо %1 не найдено"
-
-#: updatecontacttool/updatecontacttooljob.cpp:69
-#, kde-format
-msgid "Item %1 is not a contact"
-msgstr ""
+msgstr "Нет полей для изменения"
 
 #: updatecontacttool/updatecontacttooljob.cpp:84
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact modification failed: %1"
-msgstr "Не удалось создать контакт: %1"
+msgstr "Не удалось изменить контакт: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact \"%1\" updated (item id: %2)"
-msgstr "Контакт «%1» создан в адресной книге «%2» (идентификатор элемента: %3)"
+msgstr "Контакт «%1» изменён (идентификатор элемента: %2)"
 
 #: updateincidencetool/updateincidencetool.cpp:54
 #, kde-format
 msgid "Update Incidence"
-msgstr ""
+msgstr "Изменить элемент календаря"
 
 #: updateincidencetool/updateincidencetool.cpp:85
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument description must be a string"
-msgstr "Аргумент body должен быть строкой"
+msgstr "Аргумент description должен быть строкой"
 
 #: updateincidencetool/updateincidencetool.cpp:90
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument location must be a string"
-msgstr "Аргумент body должен быть строкой"
+msgstr "Аргумент location должен быть строкой"
 
 #: updateincidencetool/updateincidencetool.cpp:116
-#, fuzzy, kde-format
-#| msgid "Argument body must be a string"
+#, kde-format
 msgid "Argument due must be a string"
-msgstr "Аргумент body должен быть строкой"
+msgstr "Аргумент due должен быть строкой"
 
 #: updateincidencetool/updateincidencetool.cpp:130
-#, fuzzy, kde-format
-#| msgid "Arguments start and end must both be dates or both be date-times"
+#, kde-format
 msgid "Arguments start and due must both be dates or both be date-times"
-msgstr "Аргументы start и end должны быть оба датами или оба датами и временем"
+msgstr "Аргументы start и due должны быть оба датами или оба датами и временем"
 
 #: updateincidencetool/updateincidencetool.cpp:147
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
-msgid "Argument completed must be a boolean"
-msgstr "Аргумент include_completed должен быть логическим значением"
-
-#: updateincidencetool/updateincidencetooljob.cpp:51
-#, fuzzy, kde-format
-#| msgid "Mail id must be a positive integer"
-msgid "Incidence id must be a positive integer"
-msgstr "Идентификатор письма должен быть положительным целым числом"
-
-#: updateincidencetool/updateincidencetooljob.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mail fetch failed: %1"
-msgid "Incidence fetch failed: %1"
-msgstr "Не удалось получить письмо: %1"
-
-#: updateincidencetool/updateincidencetooljob.cpp:71
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
-msgid "Incidence %1 not found"
-msgstr "Письмо %1 не найдено"
-
-#: updateincidencetool/updateincidencetooljob.cpp:77
 #, kde-format
-msgid "Item %1 is not an event, a to-do or a journal entry"
-msgstr ""
+msgid "Argument completed must be a boolean"
+msgstr "Аргумент completed должен быть логическим значением"
 
 #: updateincidencetool/updateincidencetooljob.cpp:95
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Incidence modification failed: %1"
-msgstr "Не удалось создать контакт: %1"
+msgstr "Не удалось изменить элемент календаря: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event \"%1\" updated (item id: %2)"
-msgstr "Событие «%1» создано в календаре «%2» (идентификатор элемента: %3)"
+msgstr "Событие «%1» изменено (идентификатор элемента: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do \"%1\" updated (item id: %2)"
-msgstr "Задача «%1» создана в календаре «%2» (идентификатор элемента: %3)"
+msgstr "Задача «%1» изменена (идентификатор элемента: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry \"%1\" updated (item id: %2)"
-msgstr ""
-"Запись дневника «%1» создана в календаре «%2» (идентификатор элемента: %3)"
+msgstr "Запись дневника «%1» изменена (идентификатор элемента: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "\"%1\" updated (item id: %2)"
-msgstr "«%1» создано в календаре «%2» (идентификатор элемента: %3)"
+msgstr "«%1» изменено (идентификатор элемента: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:120
-#, fuzzy, kde-format
-#| msgid "Argument end must not be before start"
+#, kde-format
 msgid "Argument end is only valid for events"
-msgstr "Аргумент end не должен быть раньше start"
+msgstr "Аргумент end допустим только для событий"
 
 #: updateincidencetool/updateincidencetooljob.cpp:123
 #, kde-format
 msgid "Arguments due, priority and completed are only valid for to-dos"
-msgstr ""
+msgstr "Аргументы due, priority и completed допустимы только для задач"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date for an all-day event"
-msgstr "Аргумент end должен быть датой или датой и временем в формате ISO 8601"
+msgstr "Для события на весь день аргумент end должен быть датой"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date-time for a timed event"
-msgstr "Аргумент end должен быть датой или датой и временем в формате ISO 8601"
+msgstr ""
+"Для события с указанным временем аргумент end должен быть датой и временем"
 
 #: updateincidencetool/updateincidencetooljob.cpp:201
-#, fuzzy, kde-format
-#| msgid "Arguments start and end must both be dates or both be date-times"
+#, kde-format
 msgid "Start and due dates of a to-do must both be dates or both be date-times"
-msgstr "Аргументы start и end должны быть оба датами или оба датами и временем"
+msgstr ""
+"Дата начала и срок выполнения задачи должны быть оба датами или оба датами и "
+"временем"
 
 #: updateincidencetool/updateincidencetooljob.cpp:204
-#, fuzzy, kde-format
-#| msgid "Argument end must not be before start"
+#, kde-format
 msgid "Due date must not be before start"
-msgstr "Аргумент end не должен быть раньше start"
+msgstr "Срок выполнения не должен быть раньше начала"

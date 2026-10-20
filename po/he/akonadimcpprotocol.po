@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-19 00:47+0000\n"
+"POT-Creation-Date: 2026-10-20 00:53+0000\n"
 "PO-Revision-Date: 2026-10-16 15:14+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,7 +18,7 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 26.08.1\n"
 
-#: akonadimcpprotocolmanager.cpp:47
+#: akonadimcpprotocolmanager.cpp:50
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "ניהול פרטים מ־Akonadi"
@@ -423,14 +423,17 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם ב�
 msgid "Argument priority must be an integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
-#: editmailtool/editmailtool.cpp:32
+#: deletecontacttool/deletecontacttool.cpp:31
 #, fuzzy, kde-format
-#| msgid "Create Mail"
-msgid "Edit Mail"
-msgstr "יצירת דוא״ל"
+#| msgid "Search Contacts"
+msgid "Delete Contact"
+msgstr "חיפוש באנשי הקשר"
 
+#: deletecontacttool/deletecontacttool.cpp:40
+#: deleteincidencetool/deleteincidencetool.cpp:41
 #: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:60
-#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
+#: movemailtool/movemailtool.cpp:48 openmailtool/openmailtool.cpp:40
+#: replymailtool/replymailtool.cpp:64
 #: updatecontacttool/updatecontacttool.cpp:55
 #: updateincidencetool/updateincidencetool.cpp:64
 #, fuzzy, kde-format
@@ -438,8 +441,11 @@ msgstr "יצירת דוא״ל"
 msgid "Argument id must be an integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
+#: deletecontacttool/deletecontacttool.cpp:45
+#: deleteincidencetool/deleteincidencetool.cpp:46
 #: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:65
-#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
+#: movemailtool/movemailtool.cpp:53 openmailtool/openmailtool.cpp:45
+#: replymailtool/replymailtool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:60
 #: updateincidencetool/updateincidencetool.cpp:69
 #, fuzzy, kde-format
@@ -447,20 +453,122 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 msgid "Argument id must be a positive integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
+#: deletecontacttool/deletecontacttooljob.cpp:33
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Contact id must be a positive integer"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: deletecontacttool/deletecontacttooljob.cpp:47
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr "משיכת אנשי קשר נכשלה: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:52
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr ""
+
+#: deletecontacttool/deletecontacttooljob.cpp:57
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr ""
+
+#: deletecontacttool/deletecontacttooljob.cpp:69
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Contact deletion failed: %1"
+msgstr "יצירת איש קשר נכשלה: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:72
+#, kde-format
+msgid "Contact \"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetool.cpp:32
+#, kde-format
+msgid "Delete Incidence"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:34
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Incidence id must be a positive integer"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:48
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, fuzzy, kde-format
+#| msgid "Mail search failed: %1"
+msgid "Incidence fetch failed: %1"
+msgstr "חיפוש דוא״ל נכשל: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:53
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, kde-format
+msgid "Incidence %1 not found"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:59
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:72
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Incidence deletion failed: %1"
+msgstr "יצירת איש קשר נכשלה: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:79
+#, kde-format
+msgid "Event \"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:82
+#, kde-format
+msgid "To-do \"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:85
+#, kde-format
+msgid "Journal entry \"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:88
+#, kde-format
+msgid "\"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: editmailtool/editmailtool.cpp:32
+#, fuzzy, kde-format
+#| msgid "Create Mail"
+msgid "Edit Mail"
+msgstr "יצירת דוא״ל"
+
 #: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
-#: openmailtool/openmailtooljob.cpp:32
+#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
 #, fuzzy, kde-format
 #| msgid "Argument days must be an integer"
 msgid "Mail id must be a positive integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
 #: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
+#: movemailtool/movemailtooljob.cpp:84
 #, fuzzy, kde-format
 #| msgid "Mail search failed: %1"
 msgid "Mail fetch failed: %1"
 msgstr "חיפוש דוא״ל נכשל: %1"
 
 #: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
+#: movemailtool/movemailtooljob.cpp:89
 #, kde-format
 msgid "Mail %1 not found"
 msgstr ""
@@ -613,6 +721,85 @@ msgstr "יצירת דוא״ל נכשלה: %1"
 msgid "Mail %1 modified"
 msgstr ""
 
+#: movemailtool/movemailtool.cpp:38
+#, fuzzy, kde-format
+#| msgid "Search Mail"
+msgid "Move Mail"
+msgstr "חיפוש בדוא״ל"
+
+#: movemailtool/movemailtool.cpp:59
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument folder must be a string"
+msgstr "הארגומנט fields (שדות) חייב להיות מערך"
+
+#: movemailtool/movemailtool.cpp:63
+#, fuzzy, kde-format
+#| msgid "Argument end must be after start"
+msgid "Argument folder must not be empty"
+msgstr "הארגומנט end (סוף) חייב להיות לפני ארגומנט start (התחלה)"
+
+#: movemailtool/movemailtool.cpp:70
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument folder_id must be a positive integer"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: movemailtool/movemailtool.cpp:77 movemailtool/movemailtooljob.cpp:71
+#, kde-format
+msgid "Exactly one of folder or folder_id must be given"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:94
+#, kde-format
+msgid "Item %1 is not a mail"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:107
+#, fuzzy, kde-format
+#| msgid "Drafts folder fetch failed: %1"
+msgid "Mail folder fetch failed: %1"
+msgstr "משיכת תיקיית טיוטות נכשלה: %1"
+
+#: movemailtool/movemailtooljob.cpp:124
+#, fuzzy, kde-format
+#| msgid "No Drafts folder found"
+msgid "Mail folder %1 not found"
+msgstr "לא נמצאה תיקיית טיוטות"
+
+#: movemailtool/movemailtooljob.cpp:147
+#, kde-format
+msgid "Mail folder \"%1\" not found"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:156
+#, kde-format
+msgid ""
+"Several mail folders match \"%1\", use the full path or folder_id:\n"
+"%2"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:165
+#, kde-format
+msgid "Mail %1 is already in folder \"%2\""
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:169
+#, kde-format
+msgid "Mail folder \"%1\" is read-only"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:180
+#, fuzzy, kde-format
+#| msgid "Mail search failed: %1"
+msgid "Mail move failed: %1"
+msgstr "חיפוש דוא״ל נכשל: %1"
+
+#: movemailtool/movemailtooljob.cpp:183
+#, kde-format
+msgid "Mail %1 moved to folder \"%2\""
+msgstr ""
+
 #: openmailtool/openmailtool.cpp:31
 #, fuzzy, kde-format
 #| msgid "Create Mail"
@@ -712,12 +899,6 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 msgid "Number of days must be a positive integer"
 msgstr ""
 
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
-#: updatecontacttool/updatecontacttooljob.cpp:59
-#, kde-format
-msgid "Contact fetch failed: %1"
-msgstr "משיכת אנשי קשר נכשלה: %1"
-
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
 msgid "No birthday in the next day"
@@ -757,22 +938,6 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 #: updateincidencetool/updateincidencetooljob.cpp:53
 #, kde-format
 msgid "No field to update"
-msgstr ""
-
-#: updatecontacttool/updatecontacttooljob.cpp:44
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
-msgid "Contact id must be a positive integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
-
-#: updatecontacttool/updatecontacttooljob.cpp:64
-#, kde-format
-msgid "Contact %1 not found"
-msgstr ""
-
-#: updatecontacttool/updatecontacttooljob.cpp:69
-#, kde-format
-msgid "Item %1 is not a contact"
 msgstr ""
 
 #: updatecontacttool/updatecontacttooljob.cpp:84
@@ -820,28 +985,6 @@ msgstr "הארגומנט start (התחלה) חייב להיות תאריך או 
 #| msgid "Argument include_completed must be a boolean"
 msgid "Argument completed must be a boolean"
 msgstr "הארגומנט include_completed חייב להיות בוליאני"
-
-#: updateincidencetool/updateincidencetooljob.cpp:51
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
-msgid "Incidence id must be a positive integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
-
-#: updateincidencetool/updateincidencetooljob.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mail search failed: %1"
-msgid "Incidence fetch failed: %1"
-msgstr "חיפוש דוא״ל נכשל: %1"
-
-#: updateincidencetool/updateincidencetooljob.cpp:71
-#, kde-format
-msgid "Incidence %1 not found"
-msgstr ""
-
-#: updateincidencetool/updateincidencetooljob.cpp:77
-#, kde-format
-msgid "Item %1 is not an event, a to-do or a journal entry"
-msgstr ""
 
 #: updateincidencetool/updateincidencetooljob.cpp:95
 #, fuzzy, kde-format
