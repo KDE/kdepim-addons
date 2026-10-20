@@ -224,9 +224,9 @@ public:
                 writer->write(html);
             }
         } else {
-            auto memento = new MemoryCalendarMemento();
-            msgPart->setMemento(memento);
-            QObject::connect(memento, &MemoryCalendarMemento::update, nodeHelper, &MimeTreeParser::NodeHelper::update);
+            auto newMemento = new MemoryCalendarMemento();
+            msgPart->setMemento(newMemento);
+            QObject::connect(newMemento, &MemoryCalendarMemento::update, nodeHelper, &MimeTreeParser::NodeHelper::update);
         }
 
         return true;

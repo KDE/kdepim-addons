@@ -93,16 +93,16 @@ void EmailLineEdit::slotSelectEmail()
         const Akonadi::EmailAddressSelection::List lstAddress = dlg->selectedAddresses();
         if (!lstAddress.isEmpty()) {
             bool firstElement = true;
-            QString result;
+            QString resultText;
             for (const Akonadi::EmailAddressSelection &value : lstAddress) {
                 if (!firstElement) {
-                    result.append(u';');
+                    resultText.append(u';');
                 } else {
                     firstElement = false;
                 }
-                result.append(value.email());
+                resultText.append(value.email());
             }
-            mLineEdit->setText(result);
+            mLineEdit->setText(resultText);
         }
     }
 }

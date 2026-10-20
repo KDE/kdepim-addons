@@ -287,8 +287,8 @@ void AntiSpamWizard::accept()
                 unsureFilterPattern->setName(uniqueNameFor(i18n("Semi spam (unsure) handling")));
             }
             unsureFilterPattern->setOp(SearchPattern::OpOr);
-            QList<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
-            for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin(); it != end; ++it) {
+            QList<SpamToolConfig>::ConstIterator endToolList2(mToolList.constEnd());
+            for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin(); it != endToolList2; ++it) {
                 if (mInfoPage->isProgramSelected((*it).getVisibleName())) {
                     if ((*it).isSpamTool() && (*it).hasTristateDetection()) {
                         atLeastOneUnsurePattern = true;

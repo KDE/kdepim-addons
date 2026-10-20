@@ -134,9 +134,9 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
         // this is needed for finding barcodes in those images
         if (const KMime::Content *rootNode = findMultipartRelatedParent(content)) {
             const auto children = rootNode->contents();
-            for (const auto node : children) {
-                const auto ct = node->contentType();
-                if (!ct || !node->contentID()) {
+            for (const auto child : children) {
+                const auto childContentType = child->contentType();
+                if (!childContentType || !child->contentID()) {
                     continue;
                 }
                 if (ct->mimeType() == QByteArrayLiteral("image/png") || ct->mimeType() == QByteArrayLiteral("image/gif")) {
@@ -145,12 +145,13 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
                 }
             }
         }
-    } else if (const auto ct = content->contentType(); ct && (ct->mimeType() == "application/pdf" || ct->name().endsWith(".pdf"_L1, Qt::CaseInsensitive))) {
+    } else if (const auto pdfCt = content->contentType();
+               pdfCt && (pdfCt->mimeType() == "application/pdf" || pdfCt->name().endsWith(".pdf"_L1, Qt::CaseInsensitive))) {
         isPdf = true;
         engine.setData(content->decodedBody());
     } else if (isCalendarContent(content)) {
         engine.setData(content->decodedBody());
-    } else if (const auto ct = content->contentType(); ct && ct->isPlainText()) {
+    } else if (const auto plainCt = content->contentType(); plainCt && plainCt->isPlainText()) {
         engine.setContent(content->decodedText(), u"text/plain");
     } else {
         return {};

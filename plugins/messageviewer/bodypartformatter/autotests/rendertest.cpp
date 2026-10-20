@@ -150,15 +150,15 @@ void RenderTest::testRenderKeyDetails()
     compareFile(outFileName, referenceFileName + u".running"_s);
 
     {
-        MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
-        otp.parseObjectTree(msg.get());
+        MimeTreeParser::ObjectTreeParser otpNew(&testSource, &nodeHelper);
+        otpNew.parseObjectTree(msg.get());
 
         fileWriter.begin();
         fileWriter.write(
             u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
             "<html>\n"
             "<body>\n"_s);
-        testSource.render(otp.parsedPart(), false);
+        testSource.render(otpNew.parsedPart(), false);
         fileWriter.write(u"</body></html>"_s);
         fileWriter.end();
 
