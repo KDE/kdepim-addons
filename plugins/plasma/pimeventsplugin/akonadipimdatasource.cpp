@@ -14,11 +14,12 @@
 #include <Akonadi/CollectionColorAttribute>
 #include <Akonadi/CollectionModifyJob>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
+
+#include <QRandomGenerator>
 #include <QSet>
 
-#include <KCoreConfigSkeleton>
-#include <KSharedConfig>
-#include <QRandomGenerator>
 using namespace Qt::Literals::StringLiterals;
 
 using namespace std::placeholders;
@@ -33,7 +34,6 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
 
     // Would be nice to have a proper API to read KOrganizer calendar colors...
     const auto korganizerrc = KSharedConfig::openConfig(u"korganizerrc"_s);
-    const auto skel = new KCoreConfigSkeleton(korganizerrc);
 }
 
 AkonadiPimDataSource::~AkonadiPimDataSource() = default;
