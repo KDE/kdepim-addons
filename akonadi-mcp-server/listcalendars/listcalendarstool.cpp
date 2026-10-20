@@ -5,6 +5,7 @@
 */
 
 #include "listcalendarstool.h"
+#include "common/toolutils.h"
 #include "listcalendarstooljob.h"
 #include <KLocalizedString>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
@@ -24,6 +25,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListCalendarsTool::definiti
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("List Calendars"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
 

@@ -5,6 +5,7 @@
 */
 
 #include "upcomingbirthdaystool.h"
+#include "common/toolutils.h"
 #include "upcomingbirthdaystooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -35,6 +36,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpcomingBirthdaysTool::defi
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Upcoming Birthdays"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
 

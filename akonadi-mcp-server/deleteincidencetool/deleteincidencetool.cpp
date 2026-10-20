@@ -5,6 +5,7 @@
 */
 
 #include "deleteincidencetool.h"
+#include "common/toolutils.h"
 #include "deleteincidencetooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -31,6 +32,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool DeleteIncidenceTool::defini
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Delete Incidence"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
 

@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "akonadiresourcesstatustool.h"
+#include "common/toolutils.h"
 #include <Akonadi/AgentInstance>
 #include <Akonadi/AgentManager>
 #include <KLocalizedString>
@@ -42,6 +43,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool AkonadiResourcesStatusTool:
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Akonadi Resources Status"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Akonadi);
     return tool;
 }
 

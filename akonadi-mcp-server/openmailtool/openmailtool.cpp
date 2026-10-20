@@ -5,6 +5,7 @@
 */
 
 #include "openmailtool.h"
+#include "common/toolutils.h"
 #include "openmailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -30,6 +31,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool OpenMailTool::definition() 
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Open Mail"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
 }
 

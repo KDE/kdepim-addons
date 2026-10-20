@@ -53,6 +53,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateIncidenceTool::defini
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Update Incidence"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
 

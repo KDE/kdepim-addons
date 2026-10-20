@@ -5,6 +5,7 @@
 */
 
 #include "listidentitiestool.h"
+#include "common/toolutils.h"
 #include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
@@ -25,6 +26,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListIdentitiesTool::definit
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("List Identities"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
 }
 

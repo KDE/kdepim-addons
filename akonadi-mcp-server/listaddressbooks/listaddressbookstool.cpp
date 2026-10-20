@@ -5,6 +5,7 @@
 */
 
 #include "listaddressbookstool.h"
+#include "common/toolutils.h"
 #include "listaddressbookstooljob.h"
 #include <KLocalizedString>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
@@ -24,6 +25,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListAddressBooksTool::defin
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("List Address Books"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
 

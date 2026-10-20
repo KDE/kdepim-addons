@@ -5,6 +5,7 @@
 */
 
 #include "deletecontacttool.h"
+#include "common/toolutils.h"
 #include "deletecontacttooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -30,6 +31,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool DeleteContactTool::definiti
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Delete Contact"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
 

@@ -12,6 +12,7 @@
 namespace TextAutoGenerateTextMcpProtocolCore
 {
 class McpProtocolMeta;
+class McpProtocolTool;
 }
 namespace ToolUtils
 {
@@ -28,8 +29,12 @@ enum TitleType : uint8_t {
     Mail,
     Contact,
     Calendar,
-    Misc,
+    Akonadi,
 };
 
 void addToolMeta(TextAutoGenerateTextMcpProtocolCore::McpProtocolMeta &meta, TitleType type);
+// Add group meta to the tool, existing meta values are kept.
+void addToolMeta(TextAutoGenerateTextMcpProtocolCore::McpProtocolTool &tool, TitleType type);
+[[nodiscard]] QString groupFromType(TitleType type);
+[[nodiscard]] QString groupTitleFromType(TitleType type);
 }

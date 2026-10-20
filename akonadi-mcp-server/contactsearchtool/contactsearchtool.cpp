@@ -5,6 +5,7 @@
 */
 
 #include "contactsearchtool.h"
+#include "common/toolutils.h"
 #include "contactsearchtooljob.h"
 #include <KLocalizedString>
 #include <QJsonArray>
@@ -32,6 +33,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactSearchTool::definiti
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Search Contacts"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
 

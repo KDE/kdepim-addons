@@ -5,6 +5,7 @@
 */
 
 #include "editmailtool.h"
+#include "common/toolutils.h"
 #include "editmailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -31,6 +32,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool EditMailTool::definition() 
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Edit Mail"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
 }
 

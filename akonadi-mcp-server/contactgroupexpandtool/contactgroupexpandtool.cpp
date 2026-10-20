@@ -5,6 +5,7 @@
 */
 
 #include "contactgroupexpandtool.h"
+#include "common/toolutils.h"
 #include "contactgroupexpandtooljob.h"
 #include <KLocalizedString>
 #include <QJsonArray>
@@ -29,6 +30,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactGroupExpandTool::def
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Search Contact Group"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
 

@@ -7,6 +7,7 @@
 #include "createjournaltool.h"
 #include "calendarcommon/calendartoolutils.h"
 #include "calendarcommon/createincidencetooljob.h"
+#include "common/toolutils.h"
 #include <KCalendarCore/Journal>
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -42,6 +43,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateJournalTool::definiti
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Create Journal Entry"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
 

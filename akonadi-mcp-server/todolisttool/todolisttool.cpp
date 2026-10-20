@@ -5,6 +5,7 @@
 */
 
 #include "todolisttool.h"
+#include "common/toolutils.h"
 #include "todolisttooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -37,6 +38,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool TodoListTool::definition() 
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("To-do List"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
 

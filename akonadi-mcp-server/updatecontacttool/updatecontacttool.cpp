@@ -44,6 +44,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateContactTool::definiti
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Update Contact"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
 

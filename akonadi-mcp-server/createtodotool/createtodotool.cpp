@@ -7,6 +7,7 @@
 #include "createtodotool.h"
 #include "calendarcommon/calendartoolutils.h"
 #include "calendarcommon/createincidencetooljob.h"
+#include "common/toolutils.h"
 #include <KCalendarCore/Todo>
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -45,6 +46,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateTodoTool::definition(
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Create To-do"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
 

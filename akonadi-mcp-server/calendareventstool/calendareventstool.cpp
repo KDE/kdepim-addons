@@ -7,6 +7,7 @@
 #include "calendareventstool.h"
 #include "calendarcommon/calendartoolutils.h"
 #include "calendareventstooljob.h"
+#include "common/toolutils.h"
 #include <KLocalizedString>
 #include <QJsonValue>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
@@ -41,6 +42,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CalendarEventsTool::definit
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Calendar Events"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
 

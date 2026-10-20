@@ -5,6 +5,7 @@
 */
 
 #include "replymailtool.h"
+#include "common/toolutils.h"
 #include "replymailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -53,6 +54,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ReplyMailTool::definition()
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Reply to Mail"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
 }
 

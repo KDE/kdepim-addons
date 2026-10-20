@@ -7,6 +7,7 @@
 #include "createeventtool.h"
 #include "calendarcommon/calendartoolutils.h"
 #include "calendarcommon/createincidencetooljob.h"
+#include "common/toolutils.h"
 #include <KCalendarCore/Event>
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -49,6 +50,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateEventTool::definition
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Create Event"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
 

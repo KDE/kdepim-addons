@@ -6,6 +6,7 @@
 
 #include "freebusytool.h"
 #include "calendarcommon/calendartoolutils.h"
+#include "common/toolutils.h"
 #include "freebusytooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -41,6 +42,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool FreeBusyTool::definition() 
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Free/Busy"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
 

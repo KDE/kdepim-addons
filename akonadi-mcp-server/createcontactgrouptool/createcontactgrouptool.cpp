@@ -65,6 +65,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactGroupTool::def
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Create Contact Group"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
 

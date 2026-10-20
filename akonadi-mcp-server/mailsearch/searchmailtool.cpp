@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "searchmailtool.h"
+#include "common/toolutils.h"
 #include "searchmailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
@@ -39,6 +40,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool SearchMailTool::definition(
     annotation.setOpenWorldHint(false);
     tool.setTitle(i18n("Search Mail"));
     tool.setAnnotations(annotation);
+    ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
 }
 
