@@ -6,7 +6,7 @@
 
 #include "gearyaddressbook.h"
 
-GearyAddressBook::GearyAddressBook(const QString &filename)
+GearyAddressBook::GearyAddressBook([[maybe_unused]] const QString &filename)
 {
 }
 

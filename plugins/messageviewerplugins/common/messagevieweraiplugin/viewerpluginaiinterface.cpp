@@ -23,7 +23,7 @@ ViewerPluginAIInterface::ViewerPluginAIInterface(KActionCollection *ac, QWidget 
 
 ViewerPluginAIInterface::~ViewerPluginAIInterface() = default;
 
-void ViewerPluginAIInterface::setText(const QString &text)
+void ViewerPluginAIInterface::setText([[maybe_unused]] const QString &text)
 {
     // widget()->setTextToTranslate(text);
 }
