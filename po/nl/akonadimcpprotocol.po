@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:53+0000\n"
-"PO-Revision-Date: 2026-10-19 15:01+0200\n"
+"POT-Creation-Date: 2026-10-21 00:52+0000\n"
+"PO-Revision-Date: 2026-10-20 13:37+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 26.08.2\n"
 
-#: akonadimcpprotocolmanager.cpp:50
+#: akonadimcpprotocolmanager.cpp:51
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Beheer informatie uit Akonadi"
 
-#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:43
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:44
 #, kde-format
 msgid "Akonadi Resources Status"
 msgstr "Status van Akonadi-hulpbronnen"
 
-#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:66
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:68
 #, kde-format
 msgid "No Akonadi resource found"
 msgstr "Geen Akonadi-hulpbron gevonden"
@@ -79,33 +79,33 @@ msgstr "Journaal-item \"%1\" aangemaakt in agenda \"%2\" (item-id: %3)"
 msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
 msgstr "\"%1\" aangemaakt in agenda \"%2\" (item-id: %3)"
 
-#: calendareventstool/calendareventstool.cpp:42
+#: calendareventstool/calendareventstool.cpp:43
 #, kde-format
 msgid "Calendar Events"
 msgstr "Afspraken in agenda"
 
-#: calendareventstool/calendareventstool.cpp:53
-#: createeventtool/createeventtool.cpp:66 freebusytool/freebusytool.cpp:52
-#: updateincidencetool/updateincidencetool.cpp:97
+#: calendareventstool/calendareventstool.cpp:55
+#: createeventtool/createeventtool.cpp:68 freebusytool/freebusytool.cpp:54
+#: updateincidencetool/updateincidencetool.cpp:98
 #, kde-format
 msgid "Argument start must be an ISO 8601 date or date-time"
 msgstr "Het argument start moet een ISO 8601-datum of -datum/tijd zijn."
 
-#: calendareventstool/calendareventstool.cpp:62
-#: createeventtool/createeventtool.cpp:74 freebusytool/freebusytool.cpp:57
-#: updateincidencetool/updateincidencetool.cpp:105
+#: calendareventstool/calendareventstool.cpp:64
+#: createeventtool/createeventtool.cpp:76 freebusytool/freebusytool.cpp:59
+#: updateincidencetool/updateincidencetool.cpp:106
 #, kde-format
 msgid "Argument end must be an ISO 8601 date or date-time"
 msgstr "Het argument einde moet een ISO 8601-datum of -datum/tijd zijn."
 
-#: calendareventstool/calendareventstool.cpp:68
-#: freebusytool/freebusytool.cpp:61
+#: calendareventstool/calendareventstool.cpp:70
+#: freebusytool/freebusytool.cpp:63
 #, kde-format
 msgid "Argument end must be after start"
 msgstr "Argument einde moet na de start zijn"
 
-#: calendareventstool/calendareventstool.cpp:72
-#: freebusytool/freebusytool.cpp:65
+#: calendareventstool/calendareventstool.cpp:74
+#: freebusytool/freebusytool.cpp:67
 #, kde-format
 msgid "Period must not exceed %1 days"
 msgstr "Periode moet niet meer zijn dan %1 dagen"
@@ -125,13 +125,36 @@ msgstr "KMail starten is mislukt: %1"
 msgid "Invalid arguments"
 msgstr "Ongeldige argumenten"
 
-#: contactgroupexpandtool/contactgroupexpandtool.cpp:30
+#: common/toolutils.cpp:55
+#, fuzzy, kde-format
+#| msgid "Edit Mail"
+msgid "Mail"
+msgstr "E-mail bewerken"
+
+#: common/toolutils.cpp:57
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Contact"
+msgstr "Contactpersonen aanmaken"
+
+#: common/toolutils.cpp:59
+#, fuzzy, kde-format
+#| msgid "List Calendars"
+msgid "Calendar"
+msgstr "Agenda's weergegeven"
+
+#: common/toolutils.cpp:61
+#, kde-format
+msgid "Akonadi"
+msgstr ""
+
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:31
 #, kde-format
 msgid "Search Contact Group"
 msgstr "Contactgroep doorzoeken"
 
-#: contactgroupexpandtool/contactgroupexpandtool.cpp:39
-#: contactsearchtool/contactsearchtool.cpp:42 mailsearch/searchmailtool.cpp:50
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:41
+#: contactsearchtool/contactsearchtool.cpp:44 mailsearch/searchmailtool.cpp:52
 #, kde-format
 msgid "Argument query must be a non-empty string"
 msgstr "De zoekopdracht-parameter moet een niet-lege tekenreeks zijn"
@@ -158,17 +181,17 @@ msgstr "Geen contactgroep gevonden voor \"%1\""
 msgid "%1: expand failed: %2"
 msgstr "%1: uitpakken is mislukt: %2"
 
-#: contactsearchtool/contactsearchtool.cpp:33
+#: contactsearchtool/contactsearchtool.cpp:34
 #, kde-format
 msgid "Search Contacts"
 msgstr "Contactpersonen doorzoeken"
 
-#: contactsearchtool/contactsearchtool.cpp:61
+#: contactsearchtool/contactsearchtool.cpp:63
 #, kde-format
 msgid "Unknown contact field: %1"
 msgstr "Onbekend contactpersoonveld: %1"
 
-#: contactsearchtool/contactsearchtool.cpp:66
+#: contactsearchtool/contactsearchtool.cpp:68
 #, kde-format
 msgid "Argument fields must be an array"
 msgstr "Argumentvelden moeten een array zijn"
@@ -184,41 +207,126 @@ msgstr "Zoeken in contactpersonen is mislukt: %1"
 msgid "No contact found for \"%1\""
 msgstr "Geen contactpersoon gevonden voor \"%1\""
 
+#: createcontactgrouptool/createcontactgrouptool.cpp:66
+#, fuzzy, kde-format
+#| msgid "Create Contact"
+msgid "Create Contact Group"
+msgstr "Contactpersonen aanmaken"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:77
+#: createcontacttool/createcontacttool.cpp:57
+#: updatecontacttool/updatecontacttool.cpp:70
+#, kde-format
+msgid "Argument name must be a non-empty string"
+msgstr "Argument moet een niet-lege tekenreeks zijn"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:83
+#, fuzzy, kde-format
+#| msgid "Argument calendar_id must be a positive integer"
+msgid "Argument contact_ids must be an array of positive integers"
+msgstr "Argument agenda-id moet een positief geheel getal zijn"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:89
+#: createcontacttool/createcontacttool.cpp:67
+#: updatecontacttool/updatecontacttool.cpp:79
+#, kde-format
+msgid "Argument emails must be an array of strings"
+msgstr "Argument e-mailadressen moeten een array van tekenreeksen zijn"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:96
+#: createcontacttool/createcontacttool.cpp:101
+#, kde-format
+msgid "Argument address_book_id must be a positive integer"
+msgstr "Argument adresboek-id moet een positief geheel getal zijn"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:49
+#, fuzzy, kde-format
+#| msgid "Contact is empty"
+msgid "Contact group name is empty"
+msgstr "Contactpersoon is leeg"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#, kde-format
+msgid "Invalid email address \"%1\""
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:84
+#: deletecontacttool/deletecontacttooljob.cpp:47
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr "Contactpersonen ophalen is mislukt: %1"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:93
+#: deletecontacttool/deletecontacttooljob.cpp:52
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr "Contactpersoon %1 niet gevonden"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:97
+#: deletecontacttool/deletecontacttooljob.cpp:57
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr "Item %1 is geen contactpersoon"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:122
+#: createcontacttool/createcontacttooljob.cpp:59
+#: listaddressbooks/listaddressbookstooljob.cpp:33
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr "Adresboek ophalen is mislukt: %1"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:135
+#, fuzzy, kde-format
+#| msgid "Address book %1 does not exist or does not accept new contacts"
+msgid "Address book %1 does not exist or does not accept new contact groups"
+msgstr "Adresboek %1 bestaat niet of accepteert geen nieuwe contacten"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:137
+#: createcontacttool/createcontacttooljob.cpp:74
+#, kde-format
+msgid "No writable address book found"
+msgstr "Geen beschrijfbaar adresboek gevonden"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:155
+#, fuzzy, kde-format
+#| msgid "Contact creation failed: %1"
+msgid "Contact group creation failed: %1"
+msgstr "Contactpersonen aanmaken is mislukt: %1"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:159
+#, fuzzy, kde-format
+#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgid ""
+"Contact group \"%2\" with %1 member created in address book \"%3\" (item id: "
+"%4)"
+msgid_plural ""
+"Contact group \"%2\" with %1 members created in address book \"%3\" (item "
+"id: %4)"
+msgstr[0] "Contactpersoon \"%1\" aangemaakt in adresboek \"%2\" (item-id: %3)"
+msgstr[1] "Contactpersoon \"%1\" aangemaakt in adresboek \"%2\" (item-id: %3)"
+
 #: createcontacttool/createcontacttool.cpp:46
 #, kde-format
 msgid "Create Contact"
 msgstr "Contactpersonen aanmaken"
 
-#: createcontacttool/createcontacttool.cpp:56
-#: updatecontacttool/updatecontacttool.cpp:69
-#, kde-format
-msgid "Argument name must be a non-empty string"
-msgstr "Argument moet een niet-lege tekenreeks zijn"
-
-#: createcontacttool/createcontacttool.cpp:66
-#: updatecontacttool/updatecontacttool.cpp:78
-#, kde-format
-msgid "Argument emails must be an array of strings"
-msgstr "Argument e-mailadressen moeten een array van tekenreeksen zijn"
-
-#: createcontacttool/createcontacttool.cpp:73
-#: updatecontacttool/updatecontacttool.cpp:87
+#: createcontacttool/createcontacttool.cpp:74
+#: updatecontacttool/updatecontacttool.cpp:88
 #, kde-format
 msgid "Argument phone_numbers must be an array of strings"
 msgstr "Argument telefoonnummers moeten een array van tekenreeksen zijn"
 
-#: createcontacttool/createcontacttool.cpp:89
-#: updatecontacttool/updatecontacttool.cpp:112
+#: createcontacttool/createcontacttool.cpp:90
+#: updatecontacttool/updatecontacttool.cpp:113
 #, kde-format
 msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
 msgstr "Ongeldige geboortedatum \"%1\", verwacht formaat is YYYY-MM-DD"
 
-#: createcontacttool/createcontacttool.cpp:100
-#, kde-format
-msgid "Argument address_book_id must be a positive integer"
-msgstr "Argument adresboek-id moet een positief geheel getal zijn"
-
-#: createcontacttool/createcontacttool.cpp:104
+#: createcontacttool/createcontacttool.cpp:105
 #, kde-format
 msgid "Argument address_book_id must be an integer"
 msgstr "Argument adresboek-id moet een geheel getal zijn"
@@ -228,21 +336,10 @@ msgstr "Argument adresboek-id moet een geheel getal zijn"
 msgid "Contact is empty"
 msgstr "Contactpersoon is leeg"
 
-#: createcontacttool/createcontacttooljob.cpp:59
-#: listaddressbooks/listaddressbookstooljob.cpp:33
-#, kde-format
-msgid "Address book fetch failed: %1"
-msgstr "Adresboek ophalen is mislukt: %1"
-
 #: createcontacttool/createcontacttooljob.cpp:72
 #, kde-format
 msgid "Address book %1 does not exist or does not accept new contacts"
 msgstr "Adresboek %1 bestaat niet of accepteert geen nieuwe contacten"
-
-#: createcontacttool/createcontacttooljob.cpp:74
-#, kde-format
-msgid "No writable address book found"
-msgstr "Geen beschrijfbaar adresboek gevonden"
 
 #: createcontacttool/createcontacttooljob.cpp:92
 #, kde-format
@@ -254,51 +351,51 @@ msgstr "Contactpersonen aanmaken is mislukt: %1"
 msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
 msgstr "Contactpersoon \"%1\" aangemaakt in adresboek \"%2\" (item-id: %3)"
 
-#: createeventtool/createeventtool.cpp:50
+#: createeventtool/createeventtool.cpp:51
 #, kde-format
 msgid "Create Event"
 msgstr "Afspraak aanmaken"
 
-#: createeventtool/createeventtool.cpp:60
-#: createjournaltool/createjournaltool.cpp:53
-#: createtodotool/createtodotool.cpp:56
-#: updateincidencetool/updateincidencetool.cpp:78
+#: createeventtool/createeventtool.cpp:62
+#: createjournaltool/createjournaltool.cpp:55
+#: createtodotool/createtodotool.cpp:58
+#: updateincidencetool/updateincidencetool.cpp:79
 #, kde-format
 msgid "Argument summary must be a non-empty string"
 msgstr "Argument samenvatting moet een niet-lege tekenreeks zijn"
 
-#: createeventtool/createeventtool.cpp:78
-#: updateincidencetool/updateincidencetool.cpp:109
+#: createeventtool/createeventtool.cpp:80
+#: updateincidencetool/updateincidencetool.cpp:110
 #, kde-format
 msgid "Arguments start and end must both be dates or both be date-times"
 msgstr "Argumenten begin en einde moeten beide een datum of datum/tijd zijn"
 
-#: createeventtool/createeventtool.cpp:84
+#: createeventtool/createeventtool.cpp:86
 #: updateincidencetool/updateincidencetooljob.cpp:173
 #, kde-format
 msgid "Argument end must not be before start"
 msgstr "Argument einde moet niet voor begin zijn"
 
-#: createeventtool/createeventtool.cpp:105
-#: createjournaltool/createjournaltool.cpp:79
-#: createtodotool/createtodotool.cpp:95
+#: createeventtool/createeventtool.cpp:107
+#: createjournaltool/createjournaltool.cpp:81
+#: createtodotool/createtodotool.cpp:97
 #, kde-format
 msgid "Argument calendar_id must be a positive integer"
 msgstr "Argument agenda-id moet een positief geheel getal zijn"
 
-#: createeventtool/createeventtool.cpp:109
-#: createjournaltool/createjournaltool.cpp:83
-#: createtodotool/createtodotool.cpp:99
+#: createeventtool/createeventtool.cpp:111
+#: createjournaltool/createjournaltool.cpp:85
+#: createtodotool/createtodotool.cpp:101
 #, kde-format
 msgid "Argument calendar_id must be an integer"
 msgstr "Argument agenda-id moet een geheel getal zijn"
 
-#: createjournaltool/createjournaltool.cpp:43
+#: createjournaltool/createjournaltool.cpp:44
 #, kde-format
 msgid "Create Journal Entry"
 msgstr "Journaal-item aanmaken"
 
-#: createjournaltool/createjournaltool.cpp:61
+#: createjournaltool/createjournaltool.cpp:63
 #, kde-format
 msgid "Argument date must be an ISO 8601 date or date-time"
 msgstr "Argument datum moet een ISO 8601-datum of -datum/tijd zijn."
@@ -308,37 +405,37 @@ msgstr "Argument datum moet een ISO 8601-datum of -datum/tijd zijn."
 msgid "Create Mail"
 msgstr "E-mailadres aanmaken"
 
-#: createmailtool/createmailtool.cpp:50
+#: createmailtool/createmailtool.cpp:51
 #, kde-format
 msgid "Argument subject must be a non-empty string"
 msgstr "Argument onderwerp moet een niet-lege tekenreeks zijn"
 
-#: createmailtool/createmailtool.cpp:56
+#: createmailtool/createmailtool.cpp:57
 #, kde-format
 msgid "Argument to must be an array of strings"
 msgstr "Argument moet een array van tekenreeksen zijn"
 
-#: createmailtool/createmailtool.cpp:61
+#: createmailtool/createmailtool.cpp:62
 #, kde-format
 msgid "Argument cc must be an array of strings"
 msgstr "Argument cc moet een array van tekenreeksen zijn"
 
-#: createmailtool/createmailtool.cpp:66
+#: createmailtool/createmailtool.cpp:67
 #, kde-format
 msgid "Argument bcc must be an array of strings"
 msgstr "Argument bcc moet een array van tekenreeksen zijn"
 
-#: createmailtool/createmailtool.cpp:72
+#: createmailtool/createmailtool.cpp:73
 #, kde-format
 msgid "Argument body must be a string"
 msgstr "Argument inhoud(body) moet een tekenreeks zijn"
 
-#: createmailtool/createmailtool.cpp:81
+#: createmailtool/createmailtool.cpp:82
 #, kde-format
 msgid "Argument identity must be a positive integer"
 msgstr "Argument identiteit moet een positief geheel getal zijn"
 
-#: createmailtool/createmailtool.cpp:86
+#: createmailtool/createmailtool.cpp:87
 #, kde-format
 msgid "Argument identity must be an integer"
 msgstr "Argument identiteit moet een geheel getal zijn"
@@ -372,52 +469,51 @@ msgstr ""
 "E-mail \"%1\" aangemaakt in map \"%2\" (item-id: %3). Het kan bewerkt worden "
 "in KMail met mail_edit"
 
-#: createtodotool/createtodotool.cpp:46
+#: createtodotool/createtodotool.cpp:47
 #, kde-format
 msgid "Create To-do"
 msgstr "Taak aanmaken"
 
-#: createtodotool/createtodotool.cpp:66
-#: updateincidencetool/updateincidencetool.cpp:126
+#: createtodotool/createtodotool.cpp:68
+#: updateincidencetool/updateincidencetool.cpp:127
 #, kde-format
 msgid "Argument due must be an ISO 8601 date or date-time"
 msgstr "Argument gereed(due) moet een ISO 8601-datum of -datum/tijd zijn"
 
-#: createtodotool/createtodotool.cpp:77
-#: updateincidencetool/updateincidencetool.cpp:139
+#: createtodotool/createtodotool.cpp:79
+#: updateincidencetool/updateincidencetool.cpp:140
 #, kde-format
 msgid "Argument priority must be an integer between %1 and %2"
 msgstr "Argument prioriteit moet een geheel getal zijn tussen %1 en %2"
 
-#: createtodotool/createtodotool.cpp:82
+#: createtodotool/createtodotool.cpp:84
 #, kde-format
 msgid "Argument priority must be an integer"
 msgstr "Argument prioriteit moet een geheel getal zijn"
 
-#: deletecontacttool/deletecontacttool.cpp:31
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#: deletecontacttool/deletecontacttool.cpp:32
+#, kde-format
 msgid "Delete Contact"
-msgstr "Contactpersonen aanmaken"
+msgstr "Contactpersoon verwijderen"
 
-#: deletecontacttool/deletecontacttool.cpp:40
-#: deleteincidencetool/deleteincidencetool.cpp:41
-#: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:60
-#: movemailtool/movemailtool.cpp:48 openmailtool/openmailtool.cpp:40
-#: replymailtool/replymailtool.cpp:64
-#: updatecontacttool/updatecontacttool.cpp:55
-#: updateincidencetool/updateincidencetool.cpp:64
+#: deletecontacttool/deletecontacttool.cpp:42
+#: deleteincidencetool/deleteincidencetool.cpp:43
+#: editmailtool/editmailtool.cpp:43 markmailtool/markmailtool.cpp:62
+#: movemailtool/movemailtool.cpp:49 openmailtool/openmailtool.cpp:42
+#: replymailtool/replymailtool.cpp:66
+#: updatecontacttool/updatecontacttool.cpp:56
+#: updateincidencetool/updateincidencetool.cpp:65
 #, kde-format
 msgid "Argument id must be an integer"
 msgstr "Argument id moet een geheel getal zijn"
 
-#: deletecontacttool/deletecontacttool.cpp:45
-#: deleteincidencetool/deleteincidencetool.cpp:46
-#: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:65
-#: movemailtool/movemailtool.cpp:53 openmailtool/openmailtool.cpp:45
-#: replymailtool/replymailtool.cpp:69
-#: updatecontacttool/updatecontacttool.cpp:60
-#: updateincidencetool/updateincidencetool.cpp:69
+#: deletecontacttool/deletecontacttool.cpp:47
+#: deleteincidencetool/deleteincidencetool.cpp:48
+#: editmailtool/editmailtool.cpp:48 markmailtool/markmailtool.cpp:67
+#: movemailtool/movemailtool.cpp:54 openmailtool/openmailtool.cpp:47
+#: replymailtool/replymailtool.cpp:71
+#: updatecontacttool/updatecontacttool.cpp:61
+#: updateincidencetool/updateincidencetool.cpp:70
 #, kde-format
 msgid "Argument id must be a positive integer"
 msgstr "Argument id moet een positief geheel getal zijn"
@@ -428,42 +524,20 @@ msgstr "Argument id moet een positief geheel getal zijn"
 msgid "Contact id must be a positive integer"
 msgstr "Contactpersoon-id moet een positief geheel getal zijn"
 
-#: deletecontacttool/deletecontacttooljob.cpp:47
-#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
-#: updatecontacttool/updatecontacttooljob.cpp:59
-#, kde-format
-msgid "Contact fetch failed: %1"
-msgstr "Contactpersonen ophalen is mislukt: %1"
-
-#: deletecontacttool/deletecontacttooljob.cpp:52
-#: updatecontacttool/updatecontacttooljob.cpp:64
-#, kde-format
-msgid "Contact %1 not found"
-msgstr "Contactpersoon %1 niet gevonden"
-
-#: deletecontacttool/deletecontacttooljob.cpp:57
-#: updatecontacttool/updatecontacttooljob.cpp:69
-#, kde-format
-msgid "Item %1 is not a contact"
-msgstr "Item %1 is geen contactpersoon"
-
 #: deletecontacttool/deletecontacttooljob.cpp:69
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact deletion failed: %1"
-msgstr "Contactpersonen aanmaken is mislukt: %1"
+msgstr "Contactpersonen verwijderen is mislukt: %1"
 
 #: deletecontacttool/deletecontacttooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Contact \"%1\" deleted (item id: %2)"
-msgstr "Contactpersoon \"%1\" bijgewerkt (item-id: %2)"
+msgstr "Contactpersoon \"%1\" verwijderd (item-id: %2)"
 
-#: deleteincidencetool/deleteincidencetool.cpp:32
-#, fuzzy, kde-format
-#| msgid "Update Incidence"
+#: deleteincidencetool/deleteincidencetool.cpp:33
+#, kde-format
 msgid "Delete Incidence"
-msgstr "Incident bijwerken"
+msgstr "Incident verwijderen"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:34
 #: updateincidencetool/updateincidencetooljob.cpp:51
@@ -490,36 +564,31 @@ msgid "Item %1 is not an event, a to-do or a journal entry"
 msgstr "Item %1 is geen afspraak-, een taak- of een journaalitem"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "Incidence modification failed: %1"
+#, kde-format
 msgid "Incidence deletion failed: %1"
-msgstr "Wijzigen van incident is mislukt: %1"
+msgstr "Verwijderen van incident is mislukt: %1"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:79
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Event \"%1\" deleted (item id: %2)"
-msgstr "Afspraak \"%1\" bijgewerkt (item-id: %2)"
+msgstr "Afspraak \"%1\" verwijderd (item-id: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:82
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "To-do \"%1\" deleted (item id: %2)"
-msgstr "Taak \"%1\" bijgewerkt (item-id: %2)"
+msgstr "Taak \"%1\" verwijderd (item-id: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:85
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Journal entry \"%1\" deleted (item id: %2)"
-msgstr "Journaal-item \"%1\" bijgewerkt (item-id: %2)"
+msgstr "Journaal-item \"%1\" verwijderd (item-id: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:88
-#, fuzzy, kde-format
-#| msgid "\"%1\" updated (item id: %2)"
+#, kde-format
 msgid "\"%1\" deleted (item id: %2)"
-msgstr "\"%1\" bijgewerkt (item-id: %2)"
+msgstr "\"%1\" verwijderd (item-id: %2)"
 
-#: editmailtool/editmailtool.cpp:32
+#: editmailtool/editmailtool.cpp:33
 #, kde-format
 msgid "Edit Mail"
 msgstr "E-mail bewerken"
@@ -567,7 +636,7 @@ msgstr ""
 msgid "Draft mail %1 opened in a KMail composer"
 msgstr "Concept e-mail %1 geopend in een KMail-opsteller"
 
-#: freebusytool/freebusytool.cpp:42
+#: freebusytool/freebusytool.cpp:43
 #, kde-format
 msgid "Free/Busy"
 msgstr "Vrij/bezet"
@@ -577,7 +646,7 @@ msgstr "Vrij/bezet"
 msgid "Free for the whole period from %1 to %2"
 msgstr "Vrije gedurende de gehele periode van %1 tot %2"
 
-#: listaddressbooks/listaddressbookstool.cpp:25
+#: listaddressbooks/listaddressbookstool.cpp:26
 #, kde-format
 msgid "List Address Books"
 msgstr "Adresboeken tonen"
@@ -587,7 +656,7 @@ msgstr "Adresboeken tonen"
 msgid "No address book found"
 msgstr "Geen adresboek gevonden"
 
-#: listcalendars/listcalendarstool.cpp:25
+#: listcalendars/listcalendarstool.cpp:26
 #, kde-format
 msgid "List Calendars"
 msgstr "Agenda's weergegeven"
@@ -597,37 +666,37 @@ msgstr "Agenda's weergegeven"
 msgid "No calendar found"
 msgstr "Geen agenda gevonden"
 
-#: listidentities/listidentitiestool.cpp:26
+#: listidentities/listidentitiestool.cpp:27
 #, kde-format
 msgid "List Identities"
 msgstr "Identiteiten weergeven"
 
-#: listidentities/listidentitiestool.cpp:44
+#: listidentities/listidentitiestool.cpp:46
 #, kde-format
 msgid "No Identity found"
 msgstr "Geen identiteit gevonden"
 
-#: mailsearch/searchmailtool.cpp:40
+#: mailsearch/searchmailtool.cpp:41
 #, kde-format
 msgid "Search Mail"
 msgstr "E-mail doorzoeken"
 
-#: mailsearch/searchmailtool.cpp:69
+#: mailsearch/searchmailtool.cpp:71
 #, kde-format
 msgid "Unknown mail field: %1"
 msgstr "Onbekend e-mailveld: %1"
 
-#: mailsearch/searchmailtool.cpp:73
+#: mailsearch/searchmailtool.cpp:75
 #, kde-format
 msgid "Argument field must be a string"
 msgstr "Argumentveld moeten een tekenreeks zijn"
 
-#: mailsearch/searchmailtool.cpp:82
+#: mailsearch/searchmailtool.cpp:84
 #, kde-format
 msgid "Argument limit must be an integer between 1 and %1"
 msgstr "Limiet van argument moet een geheel getal zijn tussen 1 en %1"
 
-#: mailsearch/searchmailtool.cpp:86
+#: mailsearch/searchmailtool.cpp:88
 #, kde-format
 msgid "Argument limit must be an integer"
 msgstr "Limiet van argument moet een geheel getal"
@@ -653,22 +722,22 @@ msgctxt "@info:shell"
 msgid "Url where server listens."
 msgstr "URL waar de server luistert."
 
-#: markmailtool/markmailtool.cpp:51
+#: markmailtool/markmailtool.cpp:52
 #, kde-format
 msgid "Mark Mail"
 msgstr "E-mail markeren"
 
-#: markmailtool/markmailtool.cpp:71
+#: markmailtool/markmailtool.cpp:73
 #, kde-format
 msgid "Argument read must be a boolean"
 msgstr "Argument read(gelezen) moet een boolean zijn"
 
-#: markmailtool/markmailtool.cpp:77
+#: markmailtool/markmailtool.cpp:79
 #, kde-format
 msgid "Argument important must be a boolean"
 msgstr "Argument important(belangrijk) moet een boolean zijn"
 
-#: markmailtool/markmailtool.cpp:81
+#: markmailtool/markmailtool.cpp:83
 #, kde-format
 msgid "At least one of read or important must be given"
 msgstr ""
@@ -685,59 +754,49 @@ msgid "Mail %1 modified"
 msgstr "E-mail %1 gewijzigd"
 
 #: movemailtool/movemailtool.cpp:38
-#, fuzzy, kde-format
-#| msgid "Mark Mail"
+#, kde-format
 msgid "Move Mail"
-msgstr "E-mail markeren"
+msgstr "E-mail verplaatsen"
 
-#: movemailtool/movemailtool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Argument field must be a string"
+#: movemailtool/movemailtool.cpp:60
+#, kde-format
 msgid "Argument folder must be a string"
-msgstr "Argumentveld moeten een tekenreeks zijn"
+msgstr "Argument map moeten een tekenreeks zijn"
 
-#: movemailtool/movemailtool.cpp:63
-#, fuzzy, kde-format
-#| msgid "Argument end must not be before start"
+#: movemailtool/movemailtool.cpp:64
+#, kde-format
 msgid "Argument folder must not be empty"
-msgstr "Argument einde moet niet voor begin zijn"
+msgstr "Argument map moet niet leeg zijn"
 
-#: movemailtool/movemailtool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Argument id must be a positive integer"
+#: movemailtool/movemailtool.cpp:71
+#, kde-format
 msgid "Argument folder_id must be a positive integer"
-msgstr "Argument id moet een positief geheel getal zijn"
+msgstr "Argument map-id moet een positief geheel getal zijn"
 
-#: movemailtool/movemailtool.cpp:77 movemailtool/movemailtooljob.cpp:71
-#, fuzzy, kde-format
-#| msgid "At least one of read or important must be given"
+#: movemailtool/movemailtool.cpp:78 movemailtool/movemailtooljob.cpp:71
+#, kde-format
 msgid "Exactly one of folder or folder_id must be given"
-msgstr ""
-"Tenminste één van read(gelezen) of important(belangrijk) moet gegeven worden"
+msgstr "Exact één van map of map-id moet gegeven worden"
 
 #: movemailtool/movemailtooljob.cpp:94
-#, fuzzy, kde-format
-#| msgid "Item %1 is not a contact"
+#, kde-format
 msgid "Item %1 is not a mail"
-msgstr "Item %1 is geen contactpersoon"
+msgstr "Item %1 is geen e-mail"
 
 #: movemailtool/movemailtooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "Drafts folder fetch failed: %1"
+#, kde-format
 msgid "Mail folder fetch failed: %1"
-msgstr "Ophalen uit map Concepten is mislukt: %1"
+msgstr "Ophalen van e-mailmap is mislukt: %1"
 
 #: movemailtool/movemailtooljob.cpp:124
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
+#, kde-format
 msgid "Mail folder %1 not found"
-msgstr "E-mail %1 niet gevonden"
+msgstr "E-mailmap %1 niet gevonden"
 
 #: movemailtool/movemailtooljob.cpp:147
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
+#, kde-format
 msgid "Mail folder \"%1\" not found"
-msgstr "E-mail %1 niet gevonden"
+msgstr "E-mailmap %1 niet gevonden"
 
 #: movemailtool/movemailtooljob.cpp:156
 #, kde-format
@@ -745,30 +804,31 @@ msgid ""
 "Several mail folders match \"%1\", use the full path or folder_id:\n"
 "%2"
 msgstr ""
+"Verschillende e-mailmappen komen overeen met \"%1\", gebruik het volledige "
+"pad of map-id:\n"
+"%2"
 
 #: movemailtool/movemailtooljob.cpp:165
 #, kde-format
 msgid "Mail %1 is already in folder \"%2\""
-msgstr ""
+msgstr "E-mail %1 is al in map \"%2\""
 
 #: movemailtool/movemailtooljob.cpp:169
 #, kde-format
 msgid "Mail folder \"%1\" is read-only"
-msgstr ""
+msgstr "E-mailmap \"%1\" is alleen-lezen"
 
 #: movemailtool/movemailtooljob.cpp:180
-#, fuzzy, kde-format
-#| msgid "Mail fetch failed: %1"
+#, kde-format
 msgid "Mail move failed: %1"
-msgstr "Ophalen e-mail is mislukt: %1"
+msgstr "E-mail verplaatsen is mislukt: %1"
 
 #: movemailtool/movemailtooljob.cpp:183
-#, fuzzy, kde-format
-#| msgid "Mail %1 not found"
+#, kde-format
 msgid "Mail %1 moved to folder \"%2\""
-msgstr "E-mail %1 niet gevonden"
+msgstr "E-mail %1 verplaatst naar map \"%2\""
 
-#: openmailtool/openmailtool.cpp:31
+#: openmailtool/openmailtool.cpp:32
 #, kde-format
 msgid "Open Mail"
 msgstr "E-mail openen"
@@ -791,12 +851,12 @@ msgstr ""
 "E-mail %1 wordt weergegeven in een alleen-lezen KMail-viewer; deze kan daar "
 "niet worden gewijzigd"
 
-#: replymailtool/replymailtool.cpp:54
+#: replymailtool/replymailtool.cpp:55
 #, kde-format
 msgid "Reply to Mail"
 msgstr "Beantwoord e-mail"
 
-#: replymailtool/replymailtool.cpp:80
+#: replymailtool/replymailtool.cpp:82
 #, kde-format
 msgid "Argument strategy must be one of: smart, author, list, all"
 msgstr "Argument strategie moet er een zijn van: slim, auteur, lijst, alles"
@@ -826,22 +886,22 @@ msgstr ""
 msgid "Reply composer opened in KMail for mail %1"
 msgstr "Opsteller van antwoord geopend in KMail voor e-mail %1"
 
-#: todolisttool/todolisttool.cpp:38
+#: todolisttool/todolisttool.cpp:39
 #, kde-format
 msgid "To-do List"
 msgstr "Takenlijst"
 
-#: todolisttool/todolisttool.cpp:50
+#: todolisttool/todolisttool.cpp:52
 #, kde-format
 msgid "Argument include_completed must be a boolean"
 msgstr "Argument include_completed moet een boolean zijn"
 
-#: todolisttool/todolisttool.cpp:59
+#: todolisttool/todolisttool.cpp:61
 #, kde-format
 msgid "Argument due_within_days must be an integer between 1 and %1"
 msgstr "Argument due_within_days moet een geheel getal zijn tussen 1 en %1"
 
-#: todolisttool/todolisttool.cpp:63
+#: todolisttool/todolisttool.cpp:65
 #, kde-format
 msgid "Argument due_within_days must be an integer"
 msgstr "Argument due_within_days moet een geheel getal zijn"
@@ -851,17 +911,17 @@ msgstr "Argument due_within_days moet een geheel getal zijn"
 msgid "No to-do found"
 msgstr "Geen Te-doens gevonden"
 
-#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:36
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:37
 #, kde-format
 msgid "Upcoming Birthdays"
 msgstr "Aankomende verjaardagen"
 
-#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:48
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:50
 #, kde-format
 msgid "Argument days must be an integer between 1 and %1"
 msgstr "Argument days moet een geheel getal zijn tussen 1 en %1"
 
-#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:52
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:54
 #, kde-format
 msgid "Argument days must be an integer"
 msgstr "Argument days moet een geheel getal zijn"
@@ -883,24 +943,24 @@ msgstr[1] "Geen verjaardagen in de volgorde %1 dagen"
 msgid "Update Contact"
 msgstr "Contactpersonen bijwerken"
 
-#: updatecontacttool/updatecontacttool.cpp:94
+#: updatecontacttool/updatecontacttool.cpp:95
 #, kde-format
 msgid "Argument organization must be a string"
 msgstr "Argument organization(organisatie) moet een tekenreeks zijn"
 
-#: updatecontacttool/updatecontacttool.cpp:99
+#: updatecontacttool/updatecontacttool.cpp:100
 #, kde-format
 msgid "Argument note must be a string"
 msgstr "Argument notitie(note) moet een tekenreeks zijn"
 
-#: updatecontacttool/updatecontacttool.cpp:105
+#: updatecontacttool/updatecontacttool.cpp:106
 #, kde-format
 msgid "Argument birthday must be a string"
 msgstr "Argument verjaardag(birthday) moet een tekenreeks zijn"
 
-#: updatecontacttool/updatecontacttool.cpp:119
+#: updatecontacttool/updatecontacttool.cpp:120
 #: updatecontacttool/updatecontacttooljob.cpp:46
-#: updateincidencetool/updateincidencetool.cpp:154
+#: updateincidencetool/updateincidencetool.cpp:155
 #: updateincidencetool/updateincidencetooljob.cpp:53
 #, kde-format
 msgid "No field to update"
@@ -921,29 +981,29 @@ msgstr "Contactpersoon \"%1\" bijgewerkt (item-id: %2)"
 msgid "Update Incidence"
 msgstr "Incident bijwerken"
 
-#: updateincidencetool/updateincidencetool.cpp:85
+#: updateincidencetool/updateincidencetool.cpp:86
 #, kde-format
 msgid "Argument description must be a string"
 msgstr "Argument beschrijving(description) moet een tekenreeks zijn"
 
-#: updateincidencetool/updateincidencetool.cpp:90
+#: updateincidencetool/updateincidencetool.cpp:91
 #, kde-format
 msgid "Argument location must be a string"
 msgstr "Argument locatie(location) moet een tekenreeks zijn"
 
-#: updateincidencetool/updateincidencetool.cpp:116
+#: updateincidencetool/updateincidencetool.cpp:117
 #, kde-format
 msgid "Argument due must be a string"
 msgstr "Argument gereed(due) moet een tekenreeks zijn"
 
-#: updateincidencetool/updateincidencetool.cpp:130
+#: updateincidencetool/updateincidencetool.cpp:131
 #, kde-format
 msgid "Arguments start and due must both be dates or both be date-times"
 msgstr ""
 "Argumenten begin(start) en gereed(due) moeten beide een datum of datum/tijd "
 "zijn"
 
-#: updateincidencetool/updateincidencetool.cpp:147
+#: updateincidencetool/updateincidencetool.cpp:148
 #, kde-format
 msgid "Argument completed must be a boolean"
 msgstr "Argument voltooid(completed) moet een boolean zijn"
