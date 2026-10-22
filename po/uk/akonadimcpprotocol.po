@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-21 00:52+0000\n"
-"PO-Revision-Date: 2026-10-20 09:08+0300\n"
+"PO-Revision-Date: 2026-10-21 15:14+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -132,27 +132,24 @@ msgid "Invalid arguments"
 msgstr "Некоректні параметри"
 
 #: common/toolutils.cpp:55
-#, fuzzy, kde-format
-#| msgid "Edit Mail"
+#, kde-format
 msgid "Mail"
-msgstr "Редагувати повідомлення"
+msgstr "Пошта"
 
 #: common/toolutils.cpp:57
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Contact"
-msgstr "Створити запис контакту"
+msgstr "Контакт"
 
 #: common/toolutils.cpp:59
-#, fuzzy, kde-format
-#| msgid "List Calendars"
+#, kde-format
 msgid "Calendar"
-msgstr "Вивести список календарів"
+msgstr "Календар"
 
 #: common/toolutils.cpp:61
 #, kde-format
 msgid "Akonadi"
-msgstr ""
+msgstr "Akonadi"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:31
 #, kde-format
@@ -214,10 +211,9 @@ msgid "No contact found for \"%1\""
 msgstr "Не знайдено контакту для запиту «%1»"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:66
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create Contact Group"
-msgstr "Створити запис контакту"
+msgstr "Створити групу контактів"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:77
 #: createcontacttool/createcontacttool.cpp:57
@@ -227,10 +223,9 @@ msgid "Argument name must be a non-empty string"
 msgstr "Аргумент назви має бути непорожнім рядком"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:83
-#, fuzzy, kde-format
-#| msgid "Argument calendar_id must be a positive integer"
+#, kde-format
 msgid "Argument contact_ids must be an array of positive integers"
-msgstr "Аргумент calendar_id має бути додатним цілим числом"
+msgstr "Аргумент calendar_ids має бути масивом додатних цілих чисел"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:89
 #: createcontacttool/createcontacttool.cpp:67
@@ -246,15 +241,14 @@ msgid "Argument address_book_id must be a positive integer"
 msgstr "Аргумент address_book_id має бути додатним цілим числом"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:49
-#, fuzzy, kde-format
-#| msgid "Contact is empty"
+#, kde-format
 msgid "Contact group name is empty"
-msgstr "Запис контакту порожній"
+msgstr "Назва групи контактів порожня"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #, kde-format
 msgid "Invalid email address \"%1\""
-msgstr ""
+msgstr "Некоректна адреса електронної пошти «%1»"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:84
 #: deletecontacttool/deletecontacttooljob.cpp:47
@@ -286,10 +280,9 @@ msgid "Address book fetch failed: %1"
 msgstr "Не вдалося отримати адресну книгу: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:135
-#, fuzzy, kde-format
-#| msgid "Address book %1 does not exist or does not accept new contacts"
+#, kde-format
 msgid "Address book %1 does not exist or does not accept new contact groups"
-msgstr "Адресної книги %1 не існує або вона не приймає нових контактів"
+msgstr "Адресної книги %1 не існує або вона не приймає нових груп контактів"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:137
 #: createcontacttool/createcontacttooljob.cpp:74
@@ -298,14 +291,12 @@ msgid "No writable address book found"
 msgstr "Не знайдено придатної до запису адресної книги"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:155
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact group creation failed: %1"
-msgstr "Не вдалося створити запис контакту: %1"
+msgstr "Не вдалося створити запис групи контактів: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid ""
 "Contact group \"%2\" with %1 member created in address book \"%3\" (item id: "
 "%4)"
@@ -313,13 +304,17 @@ msgid_plural ""
 "Contact group \"%2\" with %1 members created in address book \"%3\" (item "
 "id: %4)"
 msgstr[0] ""
-"Контакт «%1» створено в адресній книзі «%2» (ідентифікатор запису: %3)"
+"Групу контактів «%2» з %1 учасником створено в адресній книзі "
+"«%3» (ідентифікатор запису: %4)"
 msgstr[1] ""
-"Контакт «%1» створено в адресній книзі «%2» (ідентифікатор запису: %3)"
+"Групу контактів «%2» з %1 учасниками створено в адресній книзі "
+"«%3» (ідентифікатор запису: %4)"
 msgstr[2] ""
-"Контакт «%1» створено в адресній книзі «%2» (ідентифікатор запису: %3)"
+"Групу контактів «%2» з %1 учасниками створено в адресній книзі "
+"«%3» (ідентифікатор запису: %4)"
 msgstr[3] ""
-"Контакт «%1» створено в адресній книзі «%2» (ідентифікатор запису: %3)"
+"Групу контактів «%2» з %1 учасником створено в адресній книзі "
+"«%3» (ідентифікатор запису: %4)"
 
 #: createcontacttool/createcontacttool.cpp:46
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-21 00:52+0000\n"
-"PO-Revision-Date: 2026-10-20 07:20-0300\n"
+"PO-Revision-Date: 2026-10-21 09:20-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -126,27 +126,24 @@ msgid "Invalid arguments"
 msgstr "Argumentos inválidos"
 
 #: common/toolutils.cpp:55
-#, fuzzy, kde-format
-#| msgid "Edit Mail"
+#, kde-format
 msgid "Mail"
-msgstr "Editar e-mail"
+msgstr "E-mail"
 
 #: common/toolutils.cpp:57
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Contact"
-msgstr "Criar contato"
+msgstr "Contato"
 
 #: common/toolutils.cpp:59
-#, fuzzy, kde-format
-#| msgid "List Calendars"
+#, kde-format
 msgid "Calendar"
-msgstr "Listar calendários"
+msgstr "Calendário"
 
 #: common/toolutils.cpp:61
 #, kde-format
 msgid "Akonadi"
-msgstr ""
+msgstr "Akonadi"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:31
 #, kde-format
@@ -208,10 +205,9 @@ msgid "No contact found for \"%1\""
 msgstr "Nenhum contato encontrado para \"%1\""
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:66
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create Contact Group"
-msgstr "Criar contato"
+msgstr "Criar grupo de contatos"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:77
 #: createcontacttool/createcontacttool.cpp:57
@@ -221,10 +217,9 @@ msgid "Argument name must be a non-empty string"
 msgstr "O argumento \"name\" deve ser uma string não vazia"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:83
-#, fuzzy, kde-format
-#| msgid "Argument calendar_id must be a positive integer"
+#, kde-format
 msgid "Argument contact_ids must be an array of positive integers"
-msgstr "O argumento \"calendar_id\" deve ser um número inteiro positivo"
+msgstr "O argumento \"contact_ids\" deve ser uma matriz de números inteiros"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:89
 #: createcontacttool/createcontacttool.cpp:67
@@ -240,15 +235,14 @@ msgid "Argument address_book_id must be a positive integer"
 msgstr "O argumento \"address_book_id\" deve ser um número inteiro positivo"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:49
-#, fuzzy, kde-format
-#| msgid "Contact is empty"
+#, kde-format
 msgid "Contact group name is empty"
-msgstr "Contato está vazio"
+msgstr "Nome do grupo de contatos está vazio"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #, kde-format
 msgid "Invalid email address \"%1\""
-msgstr ""
+msgstr "Endereço de e-mail \"%1\" inválido"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:84
 #: deletecontacttool/deletecontacttooljob.cpp:47
@@ -280,10 +274,10 @@ msgid "Address book fetch failed: %1"
 msgstr "Falha ao buscar livros de endereços: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:135
-#, fuzzy, kde-format
-#| msgid "Address book %1 does not exist or does not accept new contacts"
+#, kde-format
 msgid "Address book %1 does not exist or does not accept new contact groups"
-msgstr "A livro de endereços %1 não existe ou não aceita novos contatos"
+msgstr ""
+"O livro de endereços %1 não existe ou não aceita novos grupos de contatos"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:137
 #: createcontacttool/createcontacttooljob.cpp:74
@@ -292,22 +286,24 @@ msgid "No writable address book found"
 msgstr "Nenhum livro de endereços gravável encontrado"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:155
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact group creation failed: %1"
-msgstr "Falha ao criar contato: %1"
+msgstr "Falha ao criar grupo de contatos: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid ""
 "Contact group \"%2\" with %1 member created in address book \"%3\" (item id: "
 "%4)"
 msgid_plural ""
 "Contact group \"%2\" with %1 members created in address book \"%3\" (item "
 "id: %4)"
-msgstr[0] "Contato \"%1\" criado no livro de endereços \"%2\" (ID do item: %3)"
-msgstr[1] "Contato \"%1\" criado no livro de endereços \"%2\" (ID do item: %3)"
+msgstr[0] ""
+"Grupo de contato \"%2\" com %1 membro criado no livro de endereços "
+"\"%3\" (ID do item: %4)"
+msgstr[1] ""
+"Grupo de contato \"%2\" com %1 membros criado no livro de endereços "
+"\"%3\" (ID do item: %4)"
 
 #: createcontacttool/createcontacttool.cpp:46
 #, kde-format
@@ -339,7 +335,7 @@ msgstr "Contato está vazio"
 #: createcontacttool/createcontacttooljob.cpp:72
 #, kde-format
 msgid "Address book %1 does not exist or does not accept new contacts"
-msgstr "A livro de endereços %1 não existe ou não aceita novos contatos"
+msgstr "O livro de endereços %1 não existe ou não aceita novos contatos"
 
 #: createcontacttool/createcontacttooljob.cpp:92
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-21 00:52+0000\n"
-"PO-Revision-Date: 2026-10-20 13:37+0200\n"
+"PO-Revision-Date: 2026-10-21 17:33+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -126,27 +126,24 @@ msgid "Invalid arguments"
 msgstr "Ongeldige argumenten"
 
 #: common/toolutils.cpp:55
-#, fuzzy, kde-format
-#| msgid "Edit Mail"
+#, kde-format
 msgid "Mail"
-msgstr "E-mail bewerken"
+msgstr "E-mail"
 
 #: common/toolutils.cpp:57
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Contact"
-msgstr "Contactpersonen aanmaken"
+msgstr "Contactpersonen"
 
 #: common/toolutils.cpp:59
-#, fuzzy, kde-format
-#| msgid "List Calendars"
+#, kde-format
 msgid "Calendar"
-msgstr "Agenda's weergegeven"
+msgstr "Agenda"
 
 #: common/toolutils.cpp:61
 #, kde-format
 msgid "Akonadi"
-msgstr ""
+msgstr "Akonadi"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:31
 #, kde-format
@@ -208,10 +205,9 @@ msgid "No contact found for \"%1\""
 msgstr "Geen contactpersoon gevonden voor \"%1\""
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:66
-#, fuzzy, kde-format
-#| msgid "Create Contact"
+#, kde-format
 msgid "Create Contact Group"
-msgstr "Contactpersonen aanmaken"
+msgstr "Contactgroep aanmaken"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:77
 #: createcontacttool/createcontacttool.cpp:57
@@ -221,10 +217,9 @@ msgid "Argument name must be a non-empty string"
 msgstr "Argument moet een niet-lege tekenreeks zijn"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:83
-#, fuzzy, kde-format
-#| msgid "Argument calendar_id must be a positive integer"
+#, kde-format
 msgid "Argument contact_ids must be an array of positive integers"
-msgstr "Argument agenda-id moet een positief geheel getal zijn"
+msgstr "Argument contact-ids moet een array van positieve gehele getallen zijn"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:89
 #: createcontacttool/createcontacttool.cpp:67
@@ -240,15 +235,14 @@ msgid "Argument address_book_id must be a positive integer"
 msgstr "Argument adresboek-id moet een positief geheel getal zijn"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:49
-#, fuzzy, kde-format
-#| msgid "Contact is empty"
+#, kde-format
 msgid "Contact group name is empty"
-msgstr "Contactpersoon is leeg"
+msgstr "Naam van contactgroep is leeg"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #, kde-format
 msgid "Invalid email address \"%1\""
-msgstr ""
+msgstr "Ongeldig e-mailadres \"%1\""
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:84
 #: deletecontacttool/deletecontacttooljob.cpp:47
@@ -280,10 +274,9 @@ msgid "Address book fetch failed: %1"
 msgstr "Adresboek ophalen is mislukt: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:135
-#, fuzzy, kde-format
-#| msgid "Address book %1 does not exist or does not accept new contacts"
+#, kde-format
 msgid "Address book %1 does not exist or does not accept new contact groups"
-msgstr "Adresboek %1 bestaat niet of accepteert geen nieuwe contacten"
+msgstr "Adresboek %1 bestaat niet of accepteert geen nieuwe contactgroepen"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:137
 #: createcontacttool/createcontacttooljob.cpp:74
@@ -292,22 +285,22 @@ msgid "No writable address book found"
 msgstr "Geen beschrijfbaar adresboek gevonden"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:155
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact group creation failed: %1"
-msgstr "Contactpersonen aanmaken is mislukt: %1"
+msgstr "Contactgroep aanmaken is mislukt: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid ""
 "Contact group \"%2\" with %1 member created in address book \"%3\" (item id: "
 "%4)"
 msgid_plural ""
 "Contact group \"%2\" with %1 members created in address book \"%3\" (item "
 "id: %4)"
-msgstr[0] "Contactpersoon \"%1\" aangemaakt in adresboek \"%2\" (item-id: %3)"
-msgstr[1] "Contactpersoon \"%1\" aangemaakt in adresboek \"%2\" (item-id: %3)"
+msgstr[0] ""
+"Contactgroep \"%2\" met %1 lid aangemaakt in adresboek \"%3\" (item-id: %4)"
+msgstr[1] ""
+"Contactgroep \"%2\" met %1 leden aangemaakt in adresboek \"%3\" (item-id: %4)"
 
 #: createcontacttool/createcontacttool.cpp:46
 #, kde-format
