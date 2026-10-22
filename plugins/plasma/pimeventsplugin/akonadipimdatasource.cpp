@@ -31,9 +31,6 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     connect(SettingsChangeNotifier::self(), &SettingsChangeNotifier::settingsChanged, this, &AkonadiPimDataSource::onSettingsChanged);
 
     onSettingsChanged();
-
-    // Would be nice to have a proper API to read KOrganizer calendar colors...
-    const auto korganizerrc = KSharedConfig::openConfig(u"korganizerrc"_s);
 }
 
 AkonadiPimDataSource::~AkonadiPimDataSource() = default;
