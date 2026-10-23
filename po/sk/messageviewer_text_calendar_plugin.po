@@ -1082,6 +1082,8 @@ msgid ""
 "Could not write the file %1:\n"
 "%2"
 msgstr ""
+"Nepodarilo sa zapísať súbor %1:\n"
+"%2"
 
 #: text_calendar.cpp:1130
 #, kde-format

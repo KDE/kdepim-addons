@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025 Luigi Toscano <luigi.toscano@tiscali.it>
+# SPDX-FileCopyrightText: 2015-2019, 2021-2026 Luigi Toscano <luigi.toscano@tiscali.it>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:48+0000\n"
-"PO-Revision-Date: 2025-09-03 17:19+0200\n"
+"PO-Revision-Date: 2026-10-17 16:38+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:42
 #, kde-format
@@ -283,14 +283,7 @@ msgstr ""
 "<qt><a href=\"whatsthis1\">Informazioni sul formato degli argomenti…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%s - the subject of message</li><li>%from - the from email "
-#| "address</li><li>%cc - the list of cc email address</li><li>%bcc - the "
-#| "list of bcc email address</li><li>%body - the body of message</li><li>"
-#| "%inreplyto - the reply email address</li><li>%akonadiUrl - the akonadi "
-#| "url (as akonadi:?item=187020)</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%s - the subject of message</li><li>%from - the from email "
@@ -305,7 +298,7 @@ msgstr ""
 "li><li>%bcc - l'elenco degli indirizzi di posta in ccn</li><li>%body - il "
 "corpo del messaggio</li><li>%inreplyto - l'indirizzo di posta a cui "
 "rispondere</li><li>%akonadiUrl - l'URL akonadi (come akonadi:?item=187020)</"
-"li></ul></strong></p></qt>"
+"li></ul></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:48+0000\n"
-"PO-Revision-Date: 2026-08-16 22:49+0200\n"
+"PO-Revision-Date: 2026-10-17 16:37+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -308,16 +308,13 @@ msgstr ""
 "<qt><a href=\"whatsthis1\">Informazioni sul formato degli argomenti…</a></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:43
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%u - url used by command</li></ul></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%u - url used by command</li></ul></qt>"
 msgstr ""
 "<qt><p><strong>Queste espressioni possono essere usate per gli argomenti:</"
-"strong></p><ul><li>%u - URL usata dal comando</li></ul></p></qt>"
+"strong></p><ul><li>%u - URL usata dal comando</li></ul></qt>"
 
 #: openurlwith/openurlwithconfigurecreatewidget.cpp:54
 #, kde-format

@@ -275,14 +275,7 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Informácie o formáte argumentov…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%s - the subject of message</li><li>%from - the from email "
-#| "address</li><li>%cc - the list of cc email address</li><li>%bcc - the "
-#| "list of bcc email address</li><li>%body - the body of message</li><li>"
-#| "%inreplyto - the reply email address</li><li>%akonadiUrl - the akonadi "
-#| "url (as akonadi:?item=187020)</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%s - the subject of message</li><li>%from - the from email "
@@ -296,7 +289,7 @@ msgstr ""
 "%cc - zoznam e-mailových adries kópie</li><li>%bcc - zoznam e-mailových "
 "adries skrytej kópie</li><li>%body - telo správy</li><li>%inreplyto - e-"
 "mailová adresa odpovede</li><li>%akonadiUrl - adresa URL akonadi (ako "
-"akonadi:?item=187020)</li></ul></strong></p></qt>"
+"akonadi:?item=187020)</li></ul></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format

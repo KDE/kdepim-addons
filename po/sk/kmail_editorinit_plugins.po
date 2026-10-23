@@ -30,7 +30,7 @@ msgstr "Použiť externý editor namiesto composera"
 #: externalcomposer/externalcomposerconfigurewidget.cpp:37
 #, kde-format
 msgid "Specify editor:"
-msgstr ""
+msgstr "Zadať editor:"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format
