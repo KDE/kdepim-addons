@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:48+0000\n"
-"PO-Revision-Date: 2026-10-16 07:09+0200\n"
+"PO-Revision-Date: 2026-10-26 09:25+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:42
 #, kde-format
@@ -297,7 +297,7 @@ msgstr ""
 "li><li>%cc - seznam e-poštnega naslova kp</li><li>%bcc - seznam e-poštnega "
 "naslova skp</li><li>%body - telo sporočila</li><li>%inreplyto - e-poštni "
 "naslov za odgovor</li><li>%akonadiUrl - URL akonadi (as akonadi:?"
-"item=187020)</li></ul></strong></p></qt>"
+"item=187020)</li></ul></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format
