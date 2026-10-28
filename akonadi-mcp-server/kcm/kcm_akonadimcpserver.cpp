@@ -5,12 +5,13 @@
 */
 
 #include "kcm_akonadimcpserver.h"
-#include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KSharedConfig>
 #include <QCheckBox>
 #include <QVBoxLayout>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerUtils>
 #include <TextAutoGenerateTextMcpProtocolWidgets/McpProtocolServerConfigureWidget>
 
 K_PLUGIN_CLASS_WITH_JSON(AkonadiMCPServerConfigurationModule, "kcm_akonadimcpserver.json")
@@ -42,28 +43,27 @@ void AkonadiMCPServerConfigurationModule::slotConfigChanged()
 
 void AkonadiMCPServerConfigurationModule::save()
 {
-    KConfig config(u"akonadimcpprotocolrc"_s);
-    KConfigGroup group = config.group(u"General"_s);
+    KSharedConfigPtr config = KSharedConfig::openConfig(u"akonadimcpprotocolrc"_s);
+    KConfigGroup group = config->group(u"General"_s);
     group.writeEntry("Enabled", mEnabled->isChecked());
 
-    const auto settings = mMcpProtocolServerConfigureWidget->settings();
-    group = config.group(u"Server"_s);
-    settings.save(group);
-    config.sync();
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::saveSettings(config, mMcpProtocolServerConfigureWidget->settings());
     KCModule::save();
 }
 
 void AkonadiMCPServerConfigurationModule::load()
 {
-    const KConfig config(u"akonadimcpprotocolrc"_s);
-    KConfigGroup group = config.group(u"General"_s);
+    KSharedConfigPtr config = KSharedConfig::openConfig(u"akonadimcpprotocolrc"_s);
+    KConfigGroup group = config->group(u"General"_s);
 
     mEnabled->setChecked(group.readEntry("Enabled", false));
 
-    group = config.group(u"Server"_s);
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings settings;
-    settings.load(group);
-    mMcpProtocolServerConfigureWidget->setSettings(settings);
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::loadSettings(config,
+                                                                              this,
+                                                                              [this](const TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings &settings) {
+                                                                                  mMcpProtocolServerConfigureWidget->setSettings(settings);
+                                                                                  setNeedsSave(false);
+                                                                              });
     KCModule::load();
 }
 
