@@ -1,0 +1,1043 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-21 00:52+0000\n"
+"PO-Revision-Date: 2026-10-27 09:25\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/akonadimcpprotocol.pot\n"
+"X-Crowdin-File-ID: 60545\n"
+
+#: akonadimcpprotocolmanager.cpp:51
+#, kde-format
+msgid "Manage information from Akonadi"
+msgstr "管理来自 Akonadi 的信息"
+
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:44
+#, kde-format
+msgid "Akonadi Resources Status"
+msgstr "Akonadi 资源状态"
+
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:68
+#, kde-format
+msgid "No Akonadi resource found"
+msgstr "没有找到 Akonadi 资源"
+
+#: calendarcommon/calendartooljobbase.cpp:34
+#: calendarcommon/createincidencetooljob.cpp:57
+#: listcalendars/listcalendarstooljob.cpp:60
+#, kde-format
+msgid "Calendar fetch failed: %1"
+msgstr "日历获取失败：%1"
+
+#: calendarcommon/createincidencetooljob.cpp:38
+#, kde-format
+msgid "Summary must be a non-empty string"
+msgstr "摘要必须是非空字符串"
+
+#: calendarcommon/createincidencetooljob.cpp:70
+#, kde-format
+msgid "Calendar %1 does not exist or does not accept new items"
+msgstr "日历 %1 不存在或不接受新项目"
+
+#: calendarcommon/createincidencetooljob.cpp:72
+#, kde-format
+msgid "No writable calendar found"
+msgstr "没有找到可写入的日历"
+
+#: calendarcommon/createincidencetooljob.cpp:90
+#, kde-format
+msgid "Creation failed: %1"
+msgstr "创建失败：%1"
+
+#: calendarcommon/createincidencetooljob.cpp:98
+#, kde-format
+msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "事件“%1”已创建到日历“%2”(项目 ID：%3)"
+
+#: calendarcommon/createincidencetooljob.cpp:101
+#, kde-format
+msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "待办事项“%1”已创建到日历“%2”(项目 ID：%3)"
+
+#: calendarcommon/createincidencetooljob.cpp:104
+#, kde-format
+msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "日志项目“%1”已创建到日历“%2”(项目 ID：%3)"
+
+#: calendarcommon/createincidencetooljob.cpp:107
+#, kde-format
+msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "“%1”已创建到日历“%2”(项目 ID：%3)"
+
+#: calendareventstool/calendareventstool.cpp:43
+#, kde-format
+msgid "Calendar Events"
+msgstr "日历事件"
+
+#: calendareventstool/calendareventstool.cpp:55
+#: createeventtool/createeventtool.cpp:68 freebusytool/freebusytool.cpp:54
+#: updateincidencetool/updateincidencetool.cpp:98
+#, kde-format
+msgid "Argument start must be an ISO 8601 date or date-time"
+msgstr "参数 start 必须是 ISO 8601 格式的日期或日期时间"
+
+#: calendareventstool/calendareventstool.cpp:64
+#: createeventtool/createeventtool.cpp:76 freebusytool/freebusytool.cpp:59
+#: updateincidencetool/updateincidencetool.cpp:106
+#, kde-format
+msgid "Argument end must be an ISO 8601 date or date-time"
+msgstr "参数 end 必须是 ISO 8601 格式的日期或日期时间"
+
+#: calendareventstool/calendareventstool.cpp:70
+#: freebusytool/freebusytool.cpp:63
+#, kde-format
+msgid "Argument end must be after start"
+msgstr "参数 end 必须位于开始位置之后"
+
+#: calendareventstool/calendareventstool.cpp:74
+#: freebusytool/freebusytool.cpp:67
+#, kde-format
+msgid "Period must not exceed %1 days"
+msgstr "周期不得超过 %1 天"
+
+#: calendareventstool/calendareventstooljob.cpp:49
+#, kde-format
+msgid "No event between %1 and %2"
+msgstr "%1 和 %2 之间没有事件"
+
+#: common/kmaildbustooljobbase.cpp:51
+#, kde-format
+msgid "Unable to start KMail: %1"
+msgstr "无法启动 KMail：%1"
+
+#: common/tooljobbase.cpp:37
+#, kde-format
+msgid "Invalid arguments"
+msgstr "无效参数"
+
+#: common/toolutils.cpp:55
+#, kde-format
+msgid "Mail"
+msgstr "邮件"
+
+#: common/toolutils.cpp:57
+#, kde-format
+msgid "Contact"
+msgstr "联系人"
+
+#: common/toolutils.cpp:59
+#, kde-format
+msgid "Calendar"
+msgstr "日历"
+
+#: common/toolutils.cpp:61
+#, kde-format
+msgid "Akonadi"
+msgstr "Akonadi"
+
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:31
+#, kde-format
+msgid "Search Contact Group"
+msgstr "查找联系人组"
+
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:41
+#: contactsearchtool/contactsearchtool.cpp:44 mailsearch/searchmailtool.cpp:52
+#, kde-format
+msgid "Argument query must be a non-empty string"
+msgstr "参数 query 必须是非空字符串"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:34
+#: contactsearchtool/contactsearchtooljob.cpp:38
+#: mailsearch/searchmailtooljob.cpp:57
+#, kde-format
+msgid "Search string must be a non-empty string"
+msgstr "搜索字符串必须是非空字符串"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:47
+#, kde-format
+msgid "Contact group search failed: %1"
+msgstr "联系人组查找失败：%1"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
+#, kde-format
+msgid "No contact group found for \"%1\""
+msgstr "没有找到符合“%1”的联系人组"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
+#, kde-format
+msgid "%1: expand failed: %2"
+msgstr "%1：展开失败：%2"
+
+#: contactsearchtool/contactsearchtool.cpp:34
+#, kde-format
+msgid "Search Contacts"
+msgstr "查找联系人"
+
+#: contactsearchtool/contactsearchtool.cpp:63
+#, kde-format
+msgid "Unknown contact field: %1"
+msgstr "未知联系人字段：%1"
+
+#: contactsearchtool/contactsearchtool.cpp:68
+#, kde-format
+msgid "Argument fields must be an array"
+msgstr "参数 fields 必须是数组"
+
+#: contactsearchtool/contactsearchtooljob.cpp:51
+#, kde-format
+msgid "Contact search failed: %1"
+msgstr "联系人查找失败：%1"
+
+#: contactsearchtool/contactsearchtooljob.cpp:56
+#: contactsearchtool/contactsearchtooljob.cpp:101
+#, kde-format
+msgid "No contact found for \"%1\""
+msgstr "没有找到符合“%1”的联系人"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:66
+#, kde-format
+msgid "Create Contact Group"
+msgstr "创建联系人组"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:77
+#: createcontacttool/createcontacttool.cpp:57
+#: updatecontacttool/updatecontacttool.cpp:70
+#, kde-format
+msgid "Argument name must be a non-empty string"
+msgstr "参数 name 必须是非空字符串"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:83
+#, kde-format
+msgid "Argument contact_ids must be an array of positive integers"
+msgstr "参数 contact_ids 必须是正整数的数组"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:89
+#: createcontacttool/createcontacttool.cpp:67
+#: updatecontacttool/updatecontacttool.cpp:79
+#, kde-format
+msgid "Argument emails must be an array of strings"
+msgstr "参数 emails 必须是字符串数组"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:96
+#: createcontacttool/createcontacttool.cpp:101
+#, kde-format
+msgid "Argument address_book_id must be a positive integer"
+msgstr "参数 address_book_id 必须是正整数"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:49
+#, kde-format
+msgid "Contact group name is empty"
+msgstr "联系人组名为空"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#, kde-format
+msgid "Invalid email address \"%1\""
+msgstr "无效的电子邮件地址“%1”"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:84
+#: deletecontacttool/deletecontacttooljob.cpp:47
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr "联系人获取失败：%1"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:93
+#: deletecontacttool/deletecontacttooljob.cpp:52
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr "联系人 %1 无法找到"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:97
+#: deletecontacttool/deletecontacttooljob.cpp:57
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr "项目 %1 不是联系人"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:122
+#: createcontacttool/createcontacttooljob.cpp:59
+#: listaddressbooks/listaddressbookstooljob.cpp:33
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr "地址簿获取失败：%1"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:135
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contact groups"
+msgstr "地址簿 %1 不存在或不接受新联系人"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:137
+#: createcontacttool/createcontacttooljob.cpp:74
+#, kde-format
+msgid "No writable address book found"
+msgstr "没有找到可写入的地址簿"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:155
+#, kde-format
+msgid "Contact group creation failed: %1"
+msgstr "联系人组创建失败：%1"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:159
+#, kde-format
+msgid ""
+"Contact group \"%2\" with %1 member created in address book \"%3\" (item id: "
+"%4)"
+msgid_plural ""
+"Contact group \"%2\" with %1 members created in address book \"%3\" (item "
+"id: %4)"
+msgstr[0] "联系人组“%2”(含 %1 名成员) 已创建到地址簿“%3”中 (项目 ID：%4)"
+
+#: createcontacttool/createcontacttool.cpp:46
+#, kde-format
+msgid "Create Contact"
+msgstr "创建联系人"
+
+#: createcontacttool/createcontacttool.cpp:74
+#: updatecontacttool/updatecontacttool.cpp:88
+#, kde-format
+msgid "Argument phone_numbers must be an array of strings"
+msgstr "参数 phone_numbers 必须是字符串数组"
+
+#: createcontacttool/createcontacttool.cpp:90
+#: updatecontacttool/updatecontacttool.cpp:113
+#, kde-format
+msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+msgstr "无效生日“%1”，预期格式是 YYYYY-MM-DD"
+
+#: createcontacttool/createcontacttool.cpp:105
+#, kde-format
+msgid "Argument address_book_id must be an integer"
+msgstr "参数 address_book_id 必须是整数"
+
+#: createcontacttool/createcontacttooljob.cpp:40
+#, kde-format
+msgid "Contact is empty"
+msgstr "联系人为空"
+
+#: createcontacttool/createcontacttooljob.cpp:72
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contacts"
+msgstr "地址簿 %1 不存在或不接受新联系人"
+
+#: createcontacttool/createcontacttooljob.cpp:92
+#, kde-format
+msgid "Contact creation failed: %1"
+msgstr "联系人创建失败：%1"
+
+#: createcontacttool/createcontacttooljob.cpp:96
+#, kde-format
+msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgstr "联系人“%1”已创建到地址簿“%2”(项目 ID：%3)"
+
+#: createeventtool/createeventtool.cpp:51
+#, kde-format
+msgid "Create Event"
+msgstr "创建事件"
+
+#: createeventtool/createeventtool.cpp:62
+#: createjournaltool/createjournaltool.cpp:55
+#: createtodotool/createtodotool.cpp:58
+#: updateincidencetool/updateincidencetool.cpp:79
+#, kde-format
+msgid "Argument summary must be a non-empty string"
+msgstr "参数 summary 必须是非空字符串"
+
+#: createeventtool/createeventtool.cpp:80
+#: updateincidencetool/updateincidencetool.cpp:110
+#, kde-format
+msgid "Arguments start and end must both be dates or both be date-times"
+msgstr "参数 start 和 and 必须都是日期或都是日期时间"
+
+#: createeventtool/createeventtool.cpp:86
+#: updateincidencetool/updateincidencetooljob.cpp:173
+#, kde-format
+msgid "Argument end must not be before start"
+msgstr "参数 end 不得早于 start"
+
+#: createeventtool/createeventtool.cpp:107
+#: createjournaltool/createjournaltool.cpp:81
+#: createtodotool/createtodotool.cpp:97
+#, kde-format
+msgid "Argument calendar_id must be a positive integer"
+msgstr "参数 calendar_id 必须是正整数"
+
+#: createeventtool/createeventtool.cpp:111
+#: createjournaltool/createjournaltool.cpp:85
+#: createtodotool/createtodotool.cpp:101
+#, kde-format
+msgid "Argument calendar_id must be an integer"
+msgstr "参数 calendar_id 必须是整数"
+
+#: createjournaltool/createjournaltool.cpp:44
+#, kde-format
+msgid "Create Journal Entry"
+msgstr "创建日志条目"
+
+#: createjournaltool/createjournaltool.cpp:63
+#, kde-format
+msgid "Argument date must be an ISO 8601 date or date-time"
+msgstr "参数 date 必须是 ISO 8601 格式的日期或日期时间"
+
+#: createmailtool/createmailtool.cpp:40
+#, kde-format
+msgid "Create Mail"
+msgstr "创建邮件"
+
+#: createmailtool/createmailtool.cpp:51
+#, kde-format
+msgid "Argument subject must be a non-empty string"
+msgstr "参数 subject 必须是非空字符串"
+
+#: createmailtool/createmailtool.cpp:57
+#, kde-format
+msgid "Argument to must be an array of strings"
+msgstr "参数 to 必须是字符串数组"
+
+#: createmailtool/createmailtool.cpp:62
+#, kde-format
+msgid "Argument cc must be an array of strings"
+msgstr "参数 cc 必须是字符串数组"
+
+#: createmailtool/createmailtool.cpp:67
+#, kde-format
+msgid "Argument bcc must be an array of strings"
+msgstr "参数 bcc 必须是字符串数组"
+
+#: createmailtool/createmailtool.cpp:73
+#, kde-format
+msgid "Argument body must be a string"
+msgstr "参数 body 必须是字符串"
+
+#: createmailtool/createmailtool.cpp:82
+#, kde-format
+msgid "Argument identity must be a positive integer"
+msgstr "参数 identity 必须是正整数"
+
+#: createmailtool/createmailtool.cpp:87
+#, kde-format
+msgid "Argument identity must be an integer"
+msgstr "参数 identity 必须是整数"
+
+#: createmailtool/createmailtooljob.cpp:66
+#, kde-format
+msgid "Subject must be a non-empty string"
+msgstr "主题必须是非空字符串"
+
+#: createmailtool/createmailtooljob.cpp:79 editmailtool/editmailtooljob.cpp:81
+#, kde-format
+msgid "Drafts folder fetch failed: %1"
+msgstr "草稿文件夹获取失败：%1"
+
+#: createmailtool/createmailtooljob.cpp:84
+#, kde-format
+msgid "No Drafts folder found"
+msgstr "没有找到草稿文件夹"
+
+#: createmailtool/createmailtooljob.cpp:139
+#, kde-format
+msgid "Mail creation failed: %1"
+msgstr "邮件创建失败：%1"
+
+#: createmailtool/createmailtooljob.cpp:143
+#, kde-format
+msgid ""
+"Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
+"KMail with mail_edit"
+msgstr ""
+"邮件“%1”已创建到文件夹“%2”(项目 ID：%3)。它可以通过 mail_edit 命令在 KMail 中"
+"编辑"
+
+#: createtodotool/createtodotool.cpp:47
+#, kde-format
+msgid "Create To-do"
+msgstr "创建待办事项"
+
+#: createtodotool/createtodotool.cpp:68
+#: updateincidencetool/updateincidencetool.cpp:127
+#, kde-format
+msgid "Argument due must be an ISO 8601 date or date-time"
+msgstr "参数 due 必须是 ISO 8601 格式的日期或日期时间"
+
+#: createtodotool/createtodotool.cpp:79
+#: updateincidencetool/updateincidencetool.cpp:140
+#, kde-format
+msgid "Argument priority must be an integer between %1 and %2"
+msgstr "参数 priority 必须是介于 %1 和 %2 之间的整数"
+
+#: createtodotool/createtodotool.cpp:84
+#, kde-format
+msgid "Argument priority must be an integer"
+msgstr "参数 priority 必须是整数"
+
+#: deletecontacttool/deletecontacttool.cpp:32
+#, kde-format
+msgid "Delete Contact"
+msgstr "删除联系人"
+
+#: deletecontacttool/deletecontacttool.cpp:42
+#: deleteincidencetool/deleteincidencetool.cpp:43
+#: editmailtool/editmailtool.cpp:43 markmailtool/markmailtool.cpp:62
+#: movemailtool/movemailtool.cpp:49 openmailtool/openmailtool.cpp:42
+#: replymailtool/replymailtool.cpp:66
+#: updatecontacttool/updatecontacttool.cpp:56
+#: updateincidencetool/updateincidencetool.cpp:65
+#, kde-format
+msgid "Argument id must be an integer"
+msgstr "参数 id 必须是整数"
+
+#: deletecontacttool/deletecontacttool.cpp:47
+#: deleteincidencetool/deleteincidencetool.cpp:48
+#: editmailtool/editmailtool.cpp:48 markmailtool/markmailtool.cpp:67
+#: movemailtool/movemailtool.cpp:54 openmailtool/openmailtool.cpp:47
+#: replymailtool/replymailtool.cpp:71
+#: updatecontacttool/updatecontacttool.cpp:61
+#: updateincidencetool/updateincidencetool.cpp:70
+#, kde-format
+msgid "Argument id must be a positive integer"
+msgstr "参数 id 必须是正整数"
+
+#: deletecontacttool/deletecontacttooljob.cpp:33
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, kde-format
+msgid "Contact id must be a positive integer"
+msgstr "联系人 ID 必须是正整数"
+
+#: deletecontacttool/deletecontacttooljob.cpp:69
+#, kde-format
+msgid "Contact deletion failed: %1"
+msgstr "联系人删除失败：%1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:72
+#, kde-format
+msgid "Contact \"%1\" deleted (item id: %2)"
+msgstr "联系人“%1”已删除 (项目 ID：%2)"
+
+#: deleteincidencetool/deleteincidencetool.cpp:33
+#, kde-format
+msgid "Delete Incidence"
+msgstr "删除事件"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:34
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, kde-format
+msgid "Incidence id must be a positive integer"
+msgstr "事件 ID 必须是正整数"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:48
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, kde-format
+msgid "Incidence fetch failed: %1"
+msgstr "事件获取失败：%1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:53
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, kde-format
+msgid "Incidence %1 not found"
+msgstr "事件 %1 无法找到"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:59
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr "项目 %1 不是事件、待办事项或日志条目"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:72
+#, kde-format
+msgid "Incidence deletion failed: %1"
+msgstr "事件删除失败：%1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:79
+#, kde-format
+msgid "Event \"%1\" deleted (item id: %2)"
+msgstr "事件“%1”已删除 (项目 ID：%2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:82
+#, kde-format
+msgid "To-do \"%1\" deleted (item id: %2)"
+msgstr "待办事项“%1”已删除 (项目 ID：%2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:85
+#, kde-format
+msgid "Journal entry \"%1\" deleted (item id: %2)"
+msgstr "日志条目“%1”已删除 (项目 ID：%2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:88
+#, kde-format
+msgid "\"%1\" deleted (item id: %2)"
+msgstr "“%1”已删除 (项目 ID：%2)"
+
+#: editmailtool/editmailtool.cpp:33
+#, kde-format
+msgid "Edit Mail"
+msgstr "编辑邮件"
+
+#: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
+#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
+#, kde-format
+msgid "Mail id must be a positive integer"
+msgstr "邮件 ID 必须是正整数"
+
+#: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
+#: movemailtool/movemailtooljob.cpp:84
+#, kde-format
+msgid "Mail fetch failed: %1"
+msgstr "邮件获取失败：%1"
+
+#: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
+#: movemailtool/movemailtooljob.cpp:89
+#, kde-format
+msgid "Mail %1 not found"
+msgstr "邮件 %1 无法找到"
+
+#: editmailtool/editmailtooljob.cpp:86
+#, kde-format
+msgid ""
+"Mail %1 is not stored in a Drafts folder, it can't be edited. Use mail_open "
+"or mail_reply instead"
+msgstr ""
+"邮件 %1 并非存储在草稿文件夹中，无法编辑。请改用 mail_open 或 mail_reply 命"
+"令。"
+
+#: editmailtool/editmailtooljob.cpp:101
+#, kde-format
+msgid "Unable to edit mail %1: %2"
+msgstr "无法编辑邮件“%1”：%2"
+
+#: editmailtool/editmailtooljob.cpp:108
+#, kde-format
+msgid "Unable to edit mail %1: KMail main window is not available"
+msgstr "无法编辑邮件 %1：KMail 主窗口不可用"
+
+#: editmailtool/editmailtooljob.cpp:111
+#, kde-format
+msgid "Draft mail %1 opened in a KMail composer"
+msgstr "草稿邮件 %1 已在 KMail 撰写器中打开"
+
+#: freebusytool/freebusytool.cpp:43
+#, kde-format
+msgid "Free/Busy"
+msgstr "空闲/忙碌"
+
+#: freebusytool/freebusytooljob.cpp:72
+#, kde-format
+msgid "Free for the whole period from %1 to %2"
+msgstr "从 %1 到 %2 期间空闲"
+
+#: listaddressbooks/listaddressbookstool.cpp:26
+#, kde-format
+msgid "List Address Books"
+msgstr "列出地址簿"
+
+#: listaddressbooks/listaddressbookstooljob.cpp:54
+#, kde-format
+msgid "No address book found"
+msgstr "没有找到地址簿"
+
+#: listcalendars/listcalendarstool.cpp:26
+#, kde-format
+msgid "List Calendars"
+msgstr "列出日历"
+
+#: listcalendars/listcalendarstooljob.cpp:83
+#, kde-format
+msgid "No calendar found"
+msgstr "没有找到日历"
+
+#: listidentities/listidentitiestool.cpp:27
+#, kde-format
+msgid "List Identities"
+msgstr "列出身份"
+
+#: listidentities/listidentitiestool.cpp:46
+#, kde-format
+msgid "No Identity found"
+msgstr "没有找到身份信息"
+
+#: mailsearch/searchmailtool.cpp:41
+#, kde-format
+msgid "Search Mail"
+msgstr "搜索邮件"
+
+#: mailsearch/searchmailtool.cpp:71
+#, kde-format
+msgid "Unknown mail field: %1"
+msgstr "未知邮件字段：%1"
+
+#: mailsearch/searchmailtool.cpp:75
+#, kde-format
+msgid "Argument field must be a string"
+msgstr "参数 field 必须是字符串"
+
+#: mailsearch/searchmailtool.cpp:84
+#, kde-format
+msgid "Argument limit must be an integer between 1 and %1"
+msgstr "参数 limit 必须是介于 1 和 %1 之间的整数"
+
+#: mailsearch/searchmailtool.cpp:88
+#, kde-format
+msgid "Argument limit must be an integer"
+msgstr "参数 limit 必须是整数"
+
+#: mailsearch/searchmailtooljob.cpp:97
+#, kde-format
+msgid "Mail search failed: %1"
+msgstr "邮件查找失败：%1"
+
+#: mailsearch/searchmailtooljob.cpp:113
+#, kde-format
+msgid "(No subject)"
+msgstr "(无主题)"
+
+#: mailsearch/searchmailtooljob.cpp:136
+#, kde-format
+msgid "No mail found for \"%1\""
+msgstr "没有找到符合“%1”的邮件"
+
+#: main.cpp:23
+#, kde-format
+msgctxt "@info:shell"
+msgid "Url where server listens."
+msgstr "服务器监听的 URL。"
+
+#: markmailtool/markmailtool.cpp:52
+#, kde-format
+msgid "Mark Mail"
+msgstr "标记邮件"
+
+#: markmailtool/markmailtool.cpp:73
+#, kde-format
+msgid "Argument read must be a boolean"
+msgstr "参数 read 必须是布尔值"
+
+#: markmailtool/markmailtool.cpp:79
+#, kde-format
+msgid "Argument important must be a boolean"
+msgstr "参数 important 必须是布尔值"
+
+#: markmailtool/markmailtool.cpp:83
+#, kde-format
+msgid "At least one of read or important must be given"
+msgstr "必须至少提供 read 或 important 中的其中之一"
+
+#: markmailtool/markmailtooljob.cpp:75
+#, kde-format
+msgid "Mail modification failed: %1"
+msgstr "邮件修改失败：%1"
+
+#: markmailtool/markmailtooljob.cpp:78
+#, kde-format
+msgid "Mail %1 modified"
+msgstr "邮件 %1 已修改"
+
+#: movemailtool/movemailtool.cpp:38
+#, kde-format
+msgid "Move Mail"
+msgstr "移动邮件"
+
+#: movemailtool/movemailtool.cpp:60
+#, kde-format
+msgid "Argument folder must be a string"
+msgstr "参数 folder 必须是字符串"
+
+#: movemailtool/movemailtool.cpp:64
+#, kde-format
+msgid "Argument folder must not be empty"
+msgstr "参数 folder 不能为空"
+
+#: movemailtool/movemailtool.cpp:71
+#, kde-format
+msgid "Argument folder_id must be a positive integer"
+msgstr "参数 folder_id 必须是正整数"
+
+#: movemailtool/movemailtool.cpp:78 movemailtool/movemailtooljob.cpp:71
+#, kde-format
+msgid "Exactly one of folder or folder_id must be given"
+msgstr "必须给出 folder 或 folder_id 的其中一个"
+
+#: movemailtool/movemailtooljob.cpp:94
+#, kde-format
+msgid "Item %1 is not a mail"
+msgstr "项目 %1 不是邮件"
+
+#: movemailtool/movemailtooljob.cpp:107
+#, kde-format
+msgid "Mail folder fetch failed: %1"
+msgstr "邮件文件夹获取失败：%1"
+
+#: movemailtool/movemailtooljob.cpp:124
+#, kde-format
+msgid "Mail folder %1 not found"
+msgstr "邮件文件夹 %1 无法找到"
+
+#: movemailtool/movemailtooljob.cpp:147
+#, kde-format
+msgid "Mail folder \"%1\" not found"
+msgstr "邮件文件夹“%1”无法找到"
+
+#: movemailtool/movemailtooljob.cpp:156
+#, kde-format
+msgid ""
+"Several mail folders match \"%1\", use the full path or folder_id:\n"
+"%2"
+msgstr ""
+"多个邮件文件夹匹配“%1”，请使用完整路径或 folder_id：\n"
+"%2"
+
+#: movemailtool/movemailtooljob.cpp:165
+#, kde-format
+msgid "Mail %1 is already in folder \"%2\""
+msgstr "邮件 %1 已经在文件夹“%2”中"
+
+#: movemailtool/movemailtooljob.cpp:169
+#, kde-format
+msgid "Mail folder \"%1\" is read-only"
+msgstr "邮件文件夹“%1”为只读"
+
+#: movemailtool/movemailtooljob.cpp:180
+#, kde-format
+msgid "Mail move failed: %1"
+msgstr "邮件移动失败：%1"
+
+#: movemailtool/movemailtooljob.cpp:183
+#, kde-format
+msgid "Mail %1 moved to folder \"%2\""
+msgstr "邮件 %1 已移动到文件夹“%2”"
+
+#: openmailtool/openmailtool.cpp:32
+#, kde-format
+msgid "Open Mail"
+msgstr "打开邮件"
+
+#: openmailtool/openmailtooljob.cpp:44
+#, kde-format
+msgid "Unable to open mail %1: %2"
+msgstr "无法打开邮件 %1：%2"
+
+#: openmailtool/openmailtooljob.cpp:51
+#, kde-format
+msgid "Mail %1 not found or KMail main window is not available"
+msgstr "邮件 %1 无法找到或 KMail 主窗口不可用"
+
+#: openmailtool/openmailtooljob.cpp:54
+#, kde-format
+msgid ""
+"Mail %1 displayed in a read-only KMail viewer, it can't be modified there"
+msgstr "邮件 %1 显示在 KMail 查看器中，查看器为只读工具，无法修改邮件"
+
+#: replymailtool/replymailtool.cpp:55
+#, kde-format
+msgid "Reply to Mail"
+msgstr "回复邮件"
+
+#: replymailtool/replymailtool.cpp:82
+#, kde-format
+msgid "Argument strategy must be one of: smart, author, list, all"
+msgstr "参数 strategy 必须是以下之一：smart、author、list、all"
+
+#: replymailtool/replymailtooljob.cpp:38
+#, kde-format
+msgid ""
+"Mail id must be a positive integer and reply strategy must be smart, author, "
+"list or all"
+msgstr "邮件 ID 必须是正整数，回复策略必须是 smart、author、list、all 其中之一"
+
+#: replymailtool/replymailtooljob.cpp:50
+#, kde-format
+msgid "Unable to reply to mail %1: %2"
+msgstr "无法回复邮件 %1：%2"
+
+#: replymailtool/replymailtooljob.cpp:57
+#, kde-format
+msgid "Unable to reply to mail %1: KMail main window is not available"
+msgstr "无法回复邮件 %1：KMail 主窗口不可用"
+
+#: replymailtool/replymailtooljob.cpp:60
+#, kde-format
+msgid "Reply composer opened in KMail for mail %1"
+msgstr "邮件 %1 的回复撰写器已在 KMail 中打开"
+
+#: todolisttool/todolisttool.cpp:39
+#, kde-format
+msgid "To-do List"
+msgstr "待办事项列表"
+
+#: todolisttool/todolisttool.cpp:52
+#, kde-format
+msgid "Argument include_completed must be a boolean"
+msgstr "参数 include_completed 必须是布尔值"
+
+#: todolisttool/todolisttool.cpp:61
+#, kde-format
+msgid "Argument due_within_days must be an integer between 1 and %1"
+msgstr "参数 due_within_days 必须是介于 1 和 %1 之间的整数"
+
+#: todolisttool/todolisttool.cpp:65
+#, kde-format
+msgid "Argument due_within_days must be an integer"
+msgstr "参数 due_within_days 必须是整数"
+
+#: todolisttool/todolisttooljob.cpp:96
+#, kde-format
+msgid "No to-do found"
+msgstr "没有找到待办事项"
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:37
+#, kde-format
+msgid "Upcoming Birthdays"
+msgstr "近期生日"
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:50
+#, kde-format
+msgid "Argument days must be an integer between 1 and %1"
+msgstr "参数 days 必须是介于 1 和 %1 之间的整数"
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:54
+#, kde-format
+msgid "Argument days must be an integer"
+msgstr "参数 days 必须是整数"
+
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
+#, kde-format
+msgid "Number of days must be a positive integer"
+msgstr "天数必须是正整数"
+
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
+#, kde-format
+msgid "No birthday in the next day"
+msgid_plural "No birthday in the next %1 days"
+msgstr[0] "接下来的 %1 天内没有生日"
+
+#: updatecontacttool/updatecontacttool.cpp:45
+#, kde-format
+msgid "Update Contact"
+msgstr "更新联系人"
+
+#: updatecontacttool/updatecontacttool.cpp:95
+#, kde-format
+msgid "Argument organization must be a string"
+msgstr "参数 organization 必须是字符串"
+
+#: updatecontacttool/updatecontacttool.cpp:100
+#, kde-format
+msgid "Argument note must be a string"
+msgstr "参数 note 必须是字符串"
+
+#: updatecontacttool/updatecontacttool.cpp:106
+#, kde-format
+msgid "Argument birthday must be a string"
+msgstr "参数 birthday 必须是字符串"
+
+#: updatecontacttool/updatecontacttool.cpp:120
+#: updatecontacttool/updatecontacttooljob.cpp:46
+#: updateincidencetool/updateincidencetool.cpp:155
+#: updateincidencetool/updateincidencetooljob.cpp:53
+#, kde-format
+msgid "No field to update"
+msgstr "没有要更新的字段"
+
+#: updatecontacttool/updatecontacttooljob.cpp:84
+#, kde-format
+msgid "Contact modification failed: %1"
+msgstr "联系人修改失败：%1"
+
+#: updatecontacttool/updatecontacttooljob.cpp:87
+#, kde-format
+msgid "Contact \"%1\" updated (item id: %2)"
+msgstr "联系人“%1”已更新 (项目 ID：%2)"
+
+#: updateincidencetool/updateincidencetool.cpp:54
+#, kde-format
+msgid "Update Incidence"
+msgstr "更新事件"
+
+#: updateincidencetool/updateincidencetool.cpp:86
+#, kde-format
+msgid "Argument description must be a string"
+msgstr "参数 description 必须是字符串"
+
+#: updateincidencetool/updateincidencetool.cpp:91
+#, kde-format
+msgid "Argument location must be a string"
+msgstr "参数 location 必须是字符串"
+
+#: updateincidencetool/updateincidencetool.cpp:117
+#, kde-format
+msgid "Argument due must be a string"
+msgstr "参数 due 必须是字符串"
+
+#: updateincidencetool/updateincidencetool.cpp:131
+#, kde-format
+msgid "Arguments start and due must both be dates or both be date-times"
+msgstr "参数 start 和 due 必须都是日期或都是日期时间"
+
+#: updateincidencetool/updateincidencetool.cpp:148
+#, kde-format
+msgid "Argument completed must be a boolean"
+msgstr "参数 completed 必须是布尔值"
+
+#: updateincidencetool/updateincidencetooljob.cpp:95
+#, kde-format
+msgid "Incidence modification failed: %1"
+msgstr "事件修改失败：%1"
+
+#: updateincidencetool/updateincidencetooljob.cpp:102
+#, kde-format
+msgid "Event \"%1\" updated (item id: %2)"
+msgstr "事件“%1”已更新 (项目 ID：%2)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:105
+#, kde-format
+msgid "To-do \"%1\" updated (item id: %2)"
+msgstr "待办事项“%1”已更新 (项目 ID：%2)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:108
+#, kde-format
+msgid "Journal entry \"%1\" updated (item id: %2)"
+msgstr "日志条目“%1”已更新 (项目 ID：%2)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:111
+#, kde-format
+msgid "\"%1\" updated (item id: %2)"
+msgstr "“%1”已更新 (项目 ID：%2)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:120
+#, kde-format
+msgid "Argument end is only valid for events"
+msgstr "参数 end 仅对事件有效"
+
+#: updateincidencetool/updateincidencetooljob.cpp:123
+#, kde-format
+msgid "Arguments due, priority and completed are only valid for to-dos"
+msgstr "参数 due、priority 和 completed 仅对待办事件有效"
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, kde-format
+msgid "Argument end must be a date for an all-day event"
+msgstr "参数 end 必须是全天事件的日期"
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, kde-format
+msgid "Argument end must be a date-time for a timed event"
+msgstr "参数 end 必须是定时事件的日期时间"
+
+#: updateincidencetool/updateincidencetooljob.cpp:201
+#, kde-format
+msgid "Start and due dates of a to-do must both be dates or both be date-times"
+msgstr "待办事项的开始日期和截止日期必须同时为日期，或同时为日期时间。"
+
+#: updateincidencetool/updateincidencetooljob.cpp:204
+#, kde-format
+msgid "Due date must not be before start"
+msgstr "截止日期不得早于开始日期"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:48+0000\n"
-"PO-Revision-Date: 2026-01-21 18:55+0100\n"
+"PO-Revision-Date: 2026-10-27 16:11+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:42
 #, kde-format
@@ -281,14 +281,7 @@ msgstr ""
 "<qt><a href=\"whatsthis1\">Infomation de formato de argumento...</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%s - the subject of message</li><li>%from - the from email "
-#| "address</li><li>%cc - the list of cc email address</li><li>%bcc - the "
-#| "list of bcc email address</li><li>%body - the body of message</li><li>"
-#| "%inreplyto - the reply email address</li><li>%akonadiUrl - the akonadi "
-#| "url (as akonadi:?item=187020)</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%s - the subject of message</li><li>%from - the from email "
@@ -302,7 +295,7 @@ msgstr ""
 "e-posta de ex </li><li>%cc - le adresse de e-posta de cc</li><li>%bcc - le "
 "lista de adresse de e-posta de bcc </li><li>%body - le corpore de message</"
 "li><li>%inreplyto - le adresse de e-posta de responsa</li><li>%akonadiUrl - "
-"le urlo de akonadi (como akonadi:?item=187020)</li></ul></strong></p></qt>"
+"le urlo de akonadi (como akonadi:?item=187020)</li></ul></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format
