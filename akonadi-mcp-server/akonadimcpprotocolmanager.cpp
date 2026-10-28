@@ -34,6 +34,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <QCoreApplication>
 #include <QUrl>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerUtils>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolSettings>
@@ -86,22 +87,47 @@ AkonadiMcpProtocolManager::~AkonadiMcpProtocolManager() = default;
 
 bool AkonadiMcpProtocolManager::start(const QString &url)
 {
-    auto startServer = [this](const TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings &settings) {
-        setSettings(settings);
-        McpProtocolServerProtocolManager::start();
-    };
     if (url.isEmpty()) {
-        const KSharedConfigPtr config = KSharedConfig::openConfig(u"akonadimcpprotocolrc"_s);
-        const KConfigGroup group(config, u"General"_s);
+        const KConfigGroup group(KSharedConfig::openConfig(u"akonadimcpprotocolrc"_s), u"General"_s);
         if (!group.readEntry("Enabled", false)) {
             return false;
         }
-        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::loadSettings(config, this, startServer);
+        loadSettingsAndStart();
     } else {
+        mUrlFromCommandLine = true;
         TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings settings;
         settings.setServerUrl(QUrl(url));
-        startServer(settings);
+        setSettings(settings);
+        McpProtocolServerProtocolManager::start();
     }
     return true;
+}
+
+void AkonadiMcpProtocolManager::loadSettingsAndStart()
+{
+    const KSharedConfigPtr config = KSharedConfig::openConfig(u"akonadimcpprotocolrc"_s);
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::loadSettings(config,
+                                                                              this,
+                                                                              [this](const TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings &settings) {
+                                                                                  setSettings(settings);
+                                                                                  McpProtocolServerProtocolManager::start();
+                                                                              });
+}
+
+void AkonadiMcpProtocolManager::reload()
+{
+    // --url given on command line: config file is not used
+    if (mUrlFromCommandLine) {
+        return;
+    }
+    const KSharedConfigPtr config = KSharedConfig::openConfig(u"akonadimcpprotocolrc"_s);
+    config->reparseConfiguration();
+    const KConfigGroup group(config, u"General"_s);
+    stop();
+    if (!group.readEntry("Enabled", false)) {
+        QCoreApplication::quit();
+        return;
+    }
+    loadSettingsAndStart();
 }
 #include "moc_akonadimcpprotocolmanager.cpp"
