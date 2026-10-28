@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: CC0-1.0
+
+[Desktop Entry]
+Name=Akonadi MCP Server
+Exec=akonadimcpprotocol
+Icon=akonadi
+Type=Application
+NoDisplay=true
+X-KDE-autostart-phase=2
+X-KDE-autostart-condition=akonadimcpprotocolrc:General:Enabled:false
