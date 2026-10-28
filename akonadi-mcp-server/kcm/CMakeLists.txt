@@ -13,6 +13,7 @@ target_link_libraries(
     KF6::KCMUtils
     KF6::I18n
     KF6::TextAutoGenerateTextMcpProtocolWidgets
+    Qt::DBus
 )
 
 install(TARGETS kcm_akonadi_mcp_protocol DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim6/kcms/akonadimcpserver/)

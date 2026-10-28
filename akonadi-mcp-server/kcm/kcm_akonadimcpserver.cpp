@@ -10,6 +10,10 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 #include <QCheckBox>
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusMessage>
+#include <QProcess>
 #include <QVBoxLayout>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerUtils>
 #include <TextAutoGenerateTextMcpProtocolWidgets/McpProtocolServerConfigureWidget>
@@ -54,7 +58,21 @@ void AkonadiMCPServerConfigurationModule::save()
     group.writeEntry("Enabled", mEnabled->isChecked());
 
     TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::saveSettings(config, mMcpProtocolServerConfigureWidget->settings());
+    config->sync();
+    reloadServer();
     KCModule::save();
+}
+
+void AkonadiMCPServerConfigurationModule::reloadServer()
+{
+    const QString serviceName = u"org.kde.akonadimcpprotocol"_s;
+    QDBusConnection bus = QDBusConnection::sessionBus();
+    if (bus.interface()->isServiceRegistered(serviceName)) {
+        const QDBusMessage msg = QDBusMessage::createMethodCall(serviceName, u"/"_s, serviceName, u"reload"_s);
+        bus.asyncCall(msg);
+    } else if (mEnabled->isChecked()) {
+        QProcess::startDetached(u"akonadimcpprotocol"_s, {});
+    }
 }
 
 void AkonadiMCPServerConfigurationModule::load()

@@ -22,6 +22,7 @@ public:
 
 private:
     void slotConfigChanged();
+    void reloadServer();
     TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget *const mMcpProtocolServerConfigureWidget;
     QCheckBox *const mEnabled;
 };
