@@ -13,7 +13,7 @@
 using namespace Qt::Literals::StringLiterals;
 namespace
 {
-QString statusToString(Akonadi::AgentInstance::Status status)
+[[nodiscard]] QString statusToString(Akonadi::AgentInstance::Status status)
 {
     switch (status) {
     case Akonadi::AgentInstance::Idle:
