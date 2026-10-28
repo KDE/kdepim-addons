@@ -4,5 +4,6 @@
         "Icon": "akonadi",
         "Name": "Akonadi MCP Server"
     },
-    "NoDisplay": "false"
+    "NoDisplay": "false",
+    "X-KDE-Weight": 700
 }
