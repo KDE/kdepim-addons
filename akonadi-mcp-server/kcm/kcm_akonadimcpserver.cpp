@@ -5,6 +5,7 @@
 */
 
 #include "kcm_akonadimcpserver.h"
+#include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -13,7 +14,7 @@
 #include <TextAutoGenerateTextMcpProtocolWidgets/McpProtocolServerConfigureWidget>
 
 K_PLUGIN_CLASS_WITH_JSON(AkonadiMCPServerConfigurationModule, "kcm_akonadimcpserver.json")
-
+using namespace Qt::Literals::StringLiterals;
 AkonadiMCPServerConfigurationModule::AkonadiMCPServerConfigurationModule(QObject *parent, const KPluginMetaData &data)
     : KCModule(parent, data)
     , mMcpProtocolServerConfigureWidget(new TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget(widget()))
@@ -41,17 +42,35 @@ void AkonadiMCPServerConfigurationModule::slotConfigChanged()
 
 void AkonadiMCPServerConfigurationModule::save()
 {
-    // mGnuPGSystemConfigurePage->save();
+    KConfig config(u"akonadimcpprotocolrc"_s);
+    KConfigGroup group = config.group(u"General"_s);
+    group.writeEntry("Enabled", mEnabled->isChecked());
+
+    const auto settings = mMcpProtocolServerConfigureWidget->settings();
+    group = config.group(u"Server"_s);
+    settings.save(group);
+    config.sync();
+    KCModule::save();
 }
 
 void AkonadiMCPServerConfigurationModule::load()
 {
-    // mGnuPGSystemConfigurePage->reset();
+    const KConfig config(u"akonadimcpprotocolrc"_s);
+    KConfigGroup group = config.group(u"General"_s);
+
+    mEnabled->setChecked(group.readEntry("Enabled", false));
+
+    group = config.group(u"Server"_s);
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings settings;
+    settings.load(group);
+    mMcpProtocolServerConfigureWidget->setSettings(settings);
+    KCModule::load();
 }
 
 void AkonadiMCPServerConfigurationModule::defaults()
 {
-    // mGnuPGSystemConfigurePage->defaults();
+    mEnabled->setChecked(false);
+    mMcpProtocolServerConfigureWidget->setSettings({});
 }
 
 #include "kcm_akonadimcpserver.moc"
