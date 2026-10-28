@@ -31,8 +31,11 @@
 #include "upcomingbirthdaystool/upcomingbirthdaystool.h"
 #include "updatecontacttool/updatecontacttool.h"
 #include "updateincidencetool/updateincidencetool.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QUrl>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerUtils>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolSettings>
 namespace
 {
@@ -77,16 +80,28 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<DeleteIncidenceTool>());
     addTool(std::make_unique<MoveMailTool>());
     addTool(std::make_unique<CreateContactGroupTool>());
-    // TODO add more
 }
 
 AkonadiMcpProtocolManager::~AkonadiMcpProtocolManager() = default;
 
-void AkonadiMcpProtocolManager::start(const QString &url)
+bool AkonadiMcpProtocolManager::start(const QString &url)
 {
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings settings;
-    settings.setServerUrl(QUrl(url));
-    setSettings(settings);
-    McpProtocolServerProtocolManager::start();
+    auto startServer = [this](const TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings &settings) {
+        setSettings(settings);
+        McpProtocolServerProtocolManager::start();
+    };
+    if (url.isEmpty()) {
+        const KSharedConfigPtr config = KSharedConfig::openConfig(u"akonadimcpprotocolrc"_s);
+        const KConfigGroup group(config, u"General"_s);
+        if (!group.readEntry("Enabled", false)) {
+            return false;
+        }
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::loadSettings(config, this, startServer);
+    } else {
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolSettings settings;
+        settings.setServerUrl(QUrl(url));
+        startServer(settings);
+    }
+    return true;
 }
 #include "moc_akonadimcpprotocolmanager.cpp"

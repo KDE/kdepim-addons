@@ -20,18 +20,14 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     parser.addVersionOption();
     parser.addHelpOption();
-    const QCommandLineOption urlOption(u"url"_s, i18nc("@info:shell", "Url where server listens."), u"url"_s, u"http://127.0.0.1:8765/mcp"_s);
+    const QCommandLineOption urlOption(u"url"_s, i18nc("@info:shell", "Url where server listens."), u"url"_s);
     parser.addOption(urlOption);
     parser.process(app);
 
-    QString url;
     AkonadiMcpProtocolManager manager;
-    if (parser.isSet(urlOption)) {
-        url = parser.value(urlOption);
-    } else {
-        url = u"http://127.0.0.1:8765/mcp"_s;
+    if (!manager.start(parser.value(urlOption))) {
+        return 0;
     }
-    manager.start(url);
 
     return app.exec();
 }
