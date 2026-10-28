@@ -5,7 +5,11 @@
 */
 #pragma once
 #include <KCModule>
-
+class QCheckBox;
+namespace TextAutoGenerateTextMcpProtocolWidgets
+{
+class McpProtocolServerConfigureWidget;
+}
 class AkonadiMCPServerConfigurationModule : public KCModule
 {
     Q_OBJECT
@@ -18,4 +22,6 @@ public:
 
 private:
     void slotConfigChanged();
+    TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget *const mMcpProtocolServerConfigureWidget;
+    QCheckBox *const mEnabled;
 };

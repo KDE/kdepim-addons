@@ -5,25 +5,34 @@
 */
 
 #include "kcm_akonadimcpserver.h"
+#include <KConfigGroup>
+#include <KLocalizedString>
 #include <KPluginFactory>
+#include <QCheckBox>
 #include <QVBoxLayout>
+#include <TextAutoGenerateTextMcpProtocolWidgets/McpProtocolServerConfigureWidget>
 
 K_PLUGIN_CLASS_WITH_JSON(AkonadiMCPServerConfigurationModule, "kcm_akonadimcpserver.json")
 
 AkonadiMCPServerConfigurationModule::AkonadiMCPServerConfigurationModule(QObject *parent, const KPluginMetaData &data)
     : KCModule(parent, data)
+    , mMcpProtocolServerConfigureWidget(new TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget(widget()))
+    , mEnabled(new QCheckBox(i18n("Enabled"), widget()))
 {
     auto lay = new QVBoxLayout(widget());
     lay->setContentsMargins({});
-    // lay->addWidget(mGnuPGSystemConfigurePage);
+    lay->addWidget(mEnabled);
+    lay->addWidget(mMcpProtocolServerConfigureWidget);
     lay->addStretch(1);
 
-    // connect(mGnuPGSystemConfigurePage, &Kleo::CryptoConfigModule::changed, this, &AkonadiMCPServerConfigurationModule::slotConfigChanged);
+    connect(mMcpProtocolServerConfigureWidget,
+            &TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget::settingsChanged,
+            this,
+            &AkonadiMCPServerConfigurationModule::slotConfigChanged);
+    connect(mEnabled, &QCheckBox::clicked, this, &AkonadiMCPServerConfigurationModule::slotConfigChanged);
 }
 
-AkonadiMCPServerConfigurationModule::~AkonadiMCPServerConfigurationModule()
-{
-}
+AkonadiMCPServerConfigurationModule::~AkonadiMCPServerConfigurationModule() = default;
 
 void AkonadiMCPServerConfigurationModule::slotConfigChanged()
 {
