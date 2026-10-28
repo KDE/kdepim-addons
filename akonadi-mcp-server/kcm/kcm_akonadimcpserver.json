@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "Configuration of Akonadi MCP Server",
+        "Icon": "akonadi",
+        "Name": "Akonadi MCP Server"
+    },
+    "NoDisplay": "false"
+}

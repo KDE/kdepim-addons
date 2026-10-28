@@ -138,3 +138,5 @@ install(
         akonadimcpprotocol
         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
+
+add_subdirectory(kcm)
