@@ -32,6 +32,12 @@ AkonadiMCPServerConfigurationModule::AkonadiMCPServerConfigurationModule(QObject
             this,
             &AkonadiMCPServerConfigurationModule::slotConfigChanged);
     connect(mEnabled, &QCheckBox::clicked, this, &AkonadiMCPServerConfigurationModule::slotConfigChanged);
+
+    connect(mEnabled,
+            &QCheckBox::toggled,
+            mMcpProtocolServerConfigureWidget,
+            &TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget::setEnabled);
+    mMcpProtocolServerConfigureWidget->setEnabled(false);
 }
 
 AkonadiMCPServerConfigurationModule::~AkonadiMCPServerConfigurationModule() = default;
