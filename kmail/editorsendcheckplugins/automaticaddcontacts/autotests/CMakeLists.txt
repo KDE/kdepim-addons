@@ -43,7 +43,6 @@ if(KDEPIM_RUN_AKONADI_TEST)
             ../automaticaddcontactsjob.cpp
             ../automaticaddcontactsplugin.cpp
             ../automaticaddcontactsinterface.cpp
-            ../automaticaddcontactsconfigurewidget.cpp
         LINK_LIBRARIES
             KPim6::MessageComposer
             KF6::I18n
