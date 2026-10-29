@@ -35,11 +35,11 @@ int main(int argc, char **argv)
     KCrash::initialize();
 
     QCommandLineParser parser;
-    parser.addVersionOption();
-    parser.addHelpOption();
     const QCommandLineOption urlOption(u"url"_s, i18nc("@info:shell", "Url where server listens."), u"url"_s);
     parser.addOption(urlOption);
+    aboutData.setupCommandLine(&parser);
     parser.process(app);
+    aboutData.processCommandLine(&parser);
 
     const KDBusService service(KDBusService::Unique);
 
