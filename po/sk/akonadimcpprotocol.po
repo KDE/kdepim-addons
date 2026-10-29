@@ -1,0 +1,1096 @@
+# Slovak translations for kdepim-addons package
+# Slovenské preklady pre balík kdepim-addons.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+# Roman Paholík <wizzardsk@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-29 00:54+0000\n"
+"PO-Revision-Date: 2026-10-28 10:57+0100\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: akonadimcpprotocolmanager.cpp:55
+#, kde-format
+msgid "Manage information from Akonadi"
+msgstr "Správa informácií z Akonadi"
+
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:44
+#, kde-format
+msgid "Akonadi Resources Status"
+msgstr "Stav prostriedkov Akonadi"
+
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:68
+#, kde-format
+msgid "No Akonadi resource found"
+msgstr "Nenašiel sa žiadny prostriedok Akonadi"
+
+#: calendarcommon/calendartooljobbase.cpp:34
+#: calendarcommon/createincidencetooljob.cpp:57
+#: listcalendars/listcalendarstooljob.cpp:60
+#, kde-format
+msgid "Calendar fetch failed: %1"
+msgstr "Získanie kalendára zlyhalo: %1"
+
+#: calendarcommon/createincidencetooljob.cpp:38
+#, kde-format
+msgid "Summary must be a non-empty string"
+msgstr "Zhrnutie musí byť neprázdny reťazec"
+
+#: calendarcommon/createincidencetooljob.cpp:70
+#, kde-format
+msgid "Calendar %1 does not exist or does not accept new items"
+msgstr "Kalendár %1 neexistuje alebo neprijíma nové položky"
+
+#: calendarcommon/createincidencetooljob.cpp:72
+#, kde-format
+msgid "No writable calendar found"
+msgstr "Nenašiel sa žiadny zapisovateľný kalendár"
+
+#: calendarcommon/createincidencetooljob.cpp:90
+#, kde-format
+msgid "Creation failed: %1"
+msgstr "Vytvorenie zlyhalo: %1"
+
+#: calendarcommon/createincidencetooljob.cpp:98
+#, kde-format
+msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "Udalosť „%1“ bola vytvorená v kalendári „%2“ (ID položky: %3)"
+
+#: calendarcommon/createincidencetooljob.cpp:101
+#, kde-format
+msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "Úloha „%1“ bola vytvorená v kalendári „%2“ (ID položky: %3)"
+
+#: calendarcommon/createincidencetooljob.cpp:104
+#, kde-format
+msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "Záznam denníka „%1“ bol vytvorený v kalendári „%2“ (ID položky: %3)"
+
+#: calendarcommon/createincidencetooljob.cpp:107
+#, kde-format
+msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr "„%1“ bolo vytvorené v kalendári „%2“ (ID položky: %3)"
+
+#: calendareventstool/calendareventstool.cpp:43
+#, kde-format
+msgid "Calendar Events"
+msgstr "Udalosti kalendára"
+
+#: calendareventstool/calendareventstool.cpp:55
+#: createeventtool/createeventtool.cpp:68 freebusytool/freebusytool.cpp:54
+#: updateincidencetool/updateincidencetool.cpp:98
+#, kde-format
+msgid "Argument start must be an ISO 8601 date or date-time"
+msgstr "Argument start musí byť dátum alebo dátum a čas podľa ISO 8601"
+
+#: calendareventstool/calendareventstool.cpp:64
+#: createeventtool/createeventtool.cpp:76 freebusytool/freebusytool.cpp:59
+#: updateincidencetool/updateincidencetool.cpp:106
+#, kde-format
+msgid "Argument end must be an ISO 8601 date or date-time"
+msgstr "Argument end musí byť dátum alebo dátum a čas podľa ISO 8601"
+
+#: calendareventstool/calendareventstool.cpp:70
+#: freebusytool/freebusytool.cpp:63
+#, kde-format
+msgid "Argument end must be after start"
+msgstr "Argument end musí byť po start"
+
+#: calendareventstool/calendareventstool.cpp:74
+#: freebusytool/freebusytool.cpp:67
+#, kde-format
+msgid "Period must not exceed %1 days"
+msgstr "Obdobie nesmie presiahnuť %1 dní"
+
+#: calendareventstool/calendareventstooljob.cpp:49
+#, kde-format
+msgid "No event between %1 and %2"
+msgstr "Žiadna udalosť medzi %1 a %2"
+
+#: common/kmaildbustooljobbase.cpp:51
+#, kde-format
+msgid "Unable to start KMail: %1"
+msgstr "Nie je možné spustiť KMail: %1"
+
+#: common/tooljobbase.cpp:37
+#, kde-format
+msgid "Invalid arguments"
+msgstr "Neplatné argumenty"
+
+#: common/toolutils.cpp:55
+#, kde-format
+msgid "Mail"
+msgstr "Pošta"
+
+#: common/toolutils.cpp:57
+#, kde-format
+msgid "Contact"
+msgstr "Kontakt"
+
+#: common/toolutils.cpp:59
+#, kde-format
+msgid "Calendar"
+msgstr "Kalendár"
+
+#: common/toolutils.cpp:61
+#, kde-format
+msgid "Akonadi"
+msgstr "Akonadi"
+
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:31
+#, kde-format
+msgid "Search Contact Group"
+msgstr "Hľadať skupinu kontaktov"
+
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:41
+#: contactsearchtool/contactsearchtool.cpp:44 mailsearch/searchmailtool.cpp:52
+#, kde-format
+msgid "Argument query must be a non-empty string"
+msgstr "Argument query musí byť neprázdny reťazec"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:34
+#: contactsearchtool/contactsearchtooljob.cpp:38
+#: mailsearch/searchmailtooljob.cpp:57
+#, kde-format
+msgid "Search string must be a non-empty string"
+msgstr "Hľadaný reťazec musí byť neprázdny"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:47
+#, kde-format
+msgid "Contact group search failed: %1"
+msgstr "Hľadanie skupiny kontaktov zlyhalo: %1"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
+#, kde-format
+msgid "No contact group found for \"%1\""
+msgstr "Pre „%1“ sa nenašla žiadna skupina kontaktov"
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
+#, kde-format
+msgid "%1: expand failed: %2"
+msgstr "%1: rozbalenie zlyhalo: %2"
+
+#: contactsearchtool/contactsearchtool.cpp:34
+#, kde-format
+msgid "Search Contacts"
+msgstr "Hľadať kontakty"
+
+#: contactsearchtool/contactsearchtool.cpp:63
+#, kde-format
+msgid "Unknown contact field: %1"
+msgstr "Neznáme pole kontaktu: %1"
+
+#: contactsearchtool/contactsearchtool.cpp:68
+#, kde-format
+msgid "Argument fields must be an array"
+msgstr "Argument fields musí byť pole"
+
+#: contactsearchtool/contactsearchtooljob.cpp:51
+#, kde-format
+msgid "Contact search failed: %1"
+msgstr "Hľadanie kontaktov zlyhalo: %1"
+
+#: contactsearchtool/contactsearchtooljob.cpp:56
+#: contactsearchtool/contactsearchtooljob.cpp:101
+#, kde-format
+msgid "No contact found for \"%1\""
+msgstr "Pre „%1“ sa nenašiel žiadny kontakt"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:66
+#, kde-format
+msgid "Create Contact Group"
+msgstr "Vytvoriť skupinu kontaktov"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:77
+#: createcontacttool/createcontacttool.cpp:57
+#: updatecontacttool/updatecontacttool.cpp:70
+#, kde-format
+msgid "Argument name must be a non-empty string"
+msgstr "Argument name musí byť neprázdny reťazec"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:83
+#, kde-format
+msgid "Argument contact_ids must be an array of positive integers"
+msgstr "Argument contact_ids musí byť pole kladných celých čísel"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:89
+#: createcontacttool/createcontacttool.cpp:67
+#: updatecontacttool/updatecontacttool.cpp:79
+#, kde-format
+msgid "Argument emails must be an array of strings"
+msgstr "Argument emails musí byť pole reťazcov"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:96
+#: createcontacttool/createcontacttool.cpp:101
+#, kde-format
+msgid "Argument address_book_id must be a positive integer"
+msgstr "Argument address_book_id musí byť kladné celé číslo"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:49
+#, kde-format
+msgid "Contact group name is empty"
+msgstr "Názov skupiny kontaktov je prázdny"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#, kde-format
+msgid "Invalid email address \"%1\""
+msgstr "Neplatná e-mailová adresa „%1“"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:84
+#: deletecontacttool/deletecontacttooljob.cpp:47
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr "Získanie kontaktu zlyhalo: %1"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:93
+#: deletecontacttool/deletecontacttooljob.cpp:52
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr "Kontakt %1 sa nenašiel"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:97
+#: deletecontacttool/deletecontacttooljob.cpp:57
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr "Položka %1 nie je kontakt"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:122
+#: createcontacttool/createcontacttooljob.cpp:59
+#: listaddressbooks/listaddressbookstooljob.cpp:33
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr "Získanie adresára zlyhalo: %1"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:135
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contact groups"
+msgstr "Adresár %1 neexistuje alebo neprijíma nové skupiny kontaktov"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:137
+#: createcontacttool/createcontacttooljob.cpp:74
+#, kde-format
+msgid "No writable address book found"
+msgstr "Nenašiel sa žiadny zapisovateľný adresár"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:155
+#, kde-format
+msgid "Contact group creation failed: %1"
+msgstr "Vytvorenie skupiny kontaktov zlyhalo: %1"
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:159
+#, kde-format
+msgid ""
+"Contact group \"%2\" with %1 member created in address book \"%3\" (item id: "
+"%4)"
+msgid_plural ""
+"Contact group \"%2\" with %1 members created in address book \"%3\" (item "
+"id: %4)"
+msgstr[0] ""
+"Skupina kontaktov „%2“ s %1 členom bola vytvorená v adresári „%3“ (ID "
+"položky: %4)"
+msgstr[1] ""
+"Skupina kontaktov „%2“ s %1 členmi bola vytvorená v adresári „%3“ (ID "
+"položky: %4)"
+msgstr[2] ""
+"Skupina kontaktov „%2“ s %1 členmi bola vytvorená v adresári „%3“ (ID "
+"položky: %4)"
+
+#: createcontacttool/createcontacttool.cpp:46
+#, kde-format
+msgid "Create Contact"
+msgstr "Vytvoriť kontakt"
+
+#: createcontacttool/createcontacttool.cpp:74
+#: updatecontacttool/updatecontacttool.cpp:88
+#, kde-format
+msgid "Argument phone_numbers must be an array of strings"
+msgstr "Argument phone_numbers musí byť pole reťazcov"
+
+#: createcontacttool/createcontacttool.cpp:90
+#: updatecontacttool/updatecontacttool.cpp:113
+#, kde-format
+msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+msgstr "Neplatný dátum narodenia „%1“, očakávaný formát je RRRR-MM-DD"
+
+#: createcontacttool/createcontacttool.cpp:105
+#, kde-format
+msgid "Argument address_book_id must be an integer"
+msgstr "Argument address_book_id musí byť celé číslo"
+
+#: createcontacttool/createcontacttooljob.cpp:40
+#, kde-format
+msgid "Contact is empty"
+msgstr "Kontakt je prázdny"
+
+#: createcontacttool/createcontacttooljob.cpp:72
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contacts"
+msgstr "Adresár %1 neexistuje alebo neprijíma nové kontakty"
+
+#: createcontacttool/createcontacttooljob.cpp:92
+#, kde-format
+msgid "Contact creation failed: %1"
+msgstr "Vytvorenie kontaktu zlyhalo: %1"
+
+#: createcontacttool/createcontacttooljob.cpp:96
+#, kde-format
+msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgstr "Kontakt „%1“ bol vytvorený v adresári „%2“ (ID položky: %3)"
+
+#: createeventtool/createeventtool.cpp:51
+#, kde-format
+msgid "Create Event"
+msgstr "Vytvoriť udalosť"
+
+#: createeventtool/createeventtool.cpp:62
+#: createjournaltool/createjournaltool.cpp:55
+#: createtodotool/createtodotool.cpp:58
+#: updateincidencetool/updateincidencetool.cpp:79
+#, kde-format
+msgid "Argument summary must be a non-empty string"
+msgstr "Argument summary musí byť neprázdny reťazec"
+
+#: createeventtool/createeventtool.cpp:80
+#: updateincidencetool/updateincidencetool.cpp:110
+#, kde-format
+msgid "Arguments start and end must both be dates or both be date-times"
+msgstr "Argumenty start a end musia byť oba dátumy alebo oba dátumy s časom"
+
+#: createeventtool/createeventtool.cpp:86
+#: updateincidencetool/updateincidencetooljob.cpp:173
+#, kde-format
+msgid "Argument end must not be before start"
+msgstr "Argument end nesmie byť pred start"
+
+#: createeventtool/createeventtool.cpp:107
+#: createjournaltool/createjournaltool.cpp:81
+#: createtodotool/createtodotool.cpp:97
+#, kde-format
+msgid "Argument calendar_id must be a positive integer"
+msgstr "Argument calendar_id musí byť kladné celé číslo"
+
+#: createeventtool/createeventtool.cpp:111
+#: createjournaltool/createjournaltool.cpp:85
+#: createtodotool/createtodotool.cpp:101
+#, kde-format
+msgid "Argument calendar_id must be an integer"
+msgstr "Argument calendar_id musí byť celé číslo"
+
+#: createjournaltool/createjournaltool.cpp:44
+#, kde-format
+msgid "Create Journal Entry"
+msgstr "Vytvoriť záznam denníka"
+
+#: createjournaltool/createjournaltool.cpp:63
+#, kde-format
+msgid "Argument date must be an ISO 8601 date or date-time"
+msgstr "Argument date musí byť dátum alebo dátum a čas podľa ISO 8601"
+
+#: createmailtool/createmailtool.cpp:40
+#, kde-format
+msgid "Create Mail"
+msgstr "Vytvoriť správu"
+
+#: createmailtool/createmailtool.cpp:51
+#, kde-format
+msgid "Argument subject must be a non-empty string"
+msgstr "Argument subject musí byť neprázdny reťazec"
+
+#: createmailtool/createmailtool.cpp:57
+#, kde-format
+msgid "Argument to must be an array of strings"
+msgstr "Argument to musí byť pole reťazcov"
+
+#: createmailtool/createmailtool.cpp:62
+#, kde-format
+msgid "Argument cc must be an array of strings"
+msgstr "Argument cc musí byť pole reťazcov"
+
+#: createmailtool/createmailtool.cpp:67
+#, kde-format
+msgid "Argument bcc must be an array of strings"
+msgstr "Argument bcc musí byť pole reťazcov"
+
+#: createmailtool/createmailtool.cpp:73
+#, kde-format
+msgid "Argument body must be a string"
+msgstr "Argument body musí byť reťazec"
+
+#: createmailtool/createmailtool.cpp:82
+#, kde-format
+msgid "Argument identity must be a positive integer"
+msgstr "Argument identity musí byť kladné celé číslo"
+
+#: createmailtool/createmailtool.cpp:87
+#, kde-format
+msgid "Argument identity must be an integer"
+msgstr "Argument identity musí byť celé číslo"
+
+#: createmailtool/createmailtooljob.cpp:66
+#, kde-format
+msgid "Subject must be a non-empty string"
+msgstr "Predmet musí byť neprázdny reťazec"
+
+#: createmailtool/createmailtooljob.cpp:79 editmailtool/editmailtooljob.cpp:81
+#, kde-format
+msgid "Drafts folder fetch failed: %1"
+msgstr "Získanie priečinka Koncepty zlyhalo: %1"
+
+#: createmailtool/createmailtooljob.cpp:84
+#, kde-format
+msgid "No Drafts folder found"
+msgstr "Nenašiel sa žiadny priečinok Koncepty"
+
+#: createmailtool/createmailtooljob.cpp:139
+#, kde-format
+msgid "Mail creation failed: %1"
+msgstr "Vytvorenie správy zlyhalo: %1"
+
+#: createmailtool/createmailtooljob.cpp:143
+#, kde-format
+msgid ""
+"Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
+"KMail with mail_edit"
+msgstr ""
+"Správa „%1“ bola vytvorená v priečinku „%2“ (ID položky: %3). Dá sa upraviť "
+"v KMail pomocou mail_edit"
+
+#: createtodotool/createtodotool.cpp:47
+#, kde-format
+msgid "Create To-do"
+msgstr "Vytvoriť úlohu"
+
+#: createtodotool/createtodotool.cpp:68
+#: updateincidencetool/updateincidencetool.cpp:127
+#, kde-format
+msgid "Argument due must be an ISO 8601 date or date-time"
+msgstr "Argument due musí byť dátum alebo dátum a čas podľa ISO 8601"
+
+#: createtodotool/createtodotool.cpp:79
+#: updateincidencetool/updateincidencetool.cpp:140
+#, kde-format
+msgid "Argument priority must be an integer between %1 and %2"
+msgstr "Argument priority musí byť celé číslo medzi %1 a %2"
+
+#: createtodotool/createtodotool.cpp:84
+#, kde-format
+msgid "Argument priority must be an integer"
+msgstr "Argument priority musí byť celé číslo"
+
+#: deletecontacttool/deletecontacttool.cpp:32
+#, kde-format
+msgid "Delete Contact"
+msgstr "Odstrániť kontakt"
+
+#: deletecontacttool/deletecontacttool.cpp:42
+#: deleteincidencetool/deleteincidencetool.cpp:43
+#: editmailtool/editmailtool.cpp:43 markmailtool/markmailtool.cpp:62
+#: movemailtool/movemailtool.cpp:49 openmailtool/openmailtool.cpp:42
+#: replymailtool/replymailtool.cpp:66
+#: updatecontacttool/updatecontacttool.cpp:56
+#: updateincidencetool/updateincidencetool.cpp:65
+#, kde-format
+msgid "Argument id must be an integer"
+msgstr "Argument id musí byť celé číslo"
+
+#: deletecontacttool/deletecontacttool.cpp:47
+#: deleteincidencetool/deleteincidencetool.cpp:48
+#: editmailtool/editmailtool.cpp:48 markmailtool/markmailtool.cpp:67
+#: movemailtool/movemailtool.cpp:54 openmailtool/openmailtool.cpp:47
+#: replymailtool/replymailtool.cpp:71
+#: updatecontacttool/updatecontacttool.cpp:61
+#: updateincidencetool/updateincidencetool.cpp:70
+#, kde-format
+msgid "Argument id must be a positive integer"
+msgstr "Argument id musí byť kladné celé číslo"
+
+#: deletecontacttool/deletecontacttooljob.cpp:33
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, kde-format
+msgid "Contact id must be a positive integer"
+msgstr "ID kontaktu musí byť kladné celé číslo"
+
+#: deletecontacttool/deletecontacttooljob.cpp:69
+#, kde-format
+msgid "Contact deletion failed: %1"
+msgstr "Odstránenie kontaktu zlyhalo: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:72
+#, kde-format
+msgid "Contact \"%1\" deleted (item id: %2)"
+msgstr "Kontakt „%1“ bol odstránený (ID položky: %2)"
+
+#: deleteincidencetool/deleteincidencetool.cpp:33
+#, kde-format
+msgid "Delete Incidence"
+msgstr "Odstrániť záznam kalendára"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:34
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, kde-format
+msgid "Incidence id must be a positive integer"
+msgstr "ID záznamu kalendára musí byť kladné celé číslo"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:48
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, kde-format
+msgid "Incidence fetch failed: %1"
+msgstr "Získanie záznamu kalendára zlyhalo: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:53
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, kde-format
+msgid "Incidence %1 not found"
+msgstr "Záznam kalendára %1 sa nenašiel"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:59
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr "Položka %1 nie je udalosť, úloha ani záznam denníka"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:72
+#, kde-format
+msgid "Incidence deletion failed: %1"
+msgstr "Odstránenie záznamu kalendára zlyhalo: %1"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:79
+#, kde-format
+msgid "Event \"%1\" deleted (item id: %2)"
+msgstr "Udalosť „%1“ bola odstránená (ID položky: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:82
+#, kde-format
+msgid "To-do \"%1\" deleted (item id: %2)"
+msgstr "Úloha „%1“ bola odstránená (ID položky: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:85
+#, kde-format
+msgid "Journal entry \"%1\" deleted (item id: %2)"
+msgstr "Záznam denníka „%1“ bol odstránený (ID položky: %2)"
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:88
+#, kde-format
+msgid "\"%1\" deleted (item id: %2)"
+msgstr "„%1“ bolo odstránené (ID položky: %2)"
+
+#: editmailtool/editmailtool.cpp:33
+#, kde-format
+msgid "Edit Mail"
+msgstr "Upraviť správu"
+
+#: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
+#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
+#, kde-format
+msgid "Mail id must be a positive integer"
+msgstr "ID správy musí byť kladné celé číslo"
+
+#: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
+#: movemailtool/movemailtooljob.cpp:84
+#, kde-format
+msgid "Mail fetch failed: %1"
+msgstr "Získanie správy zlyhalo: %1"
+
+#: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
+#: movemailtool/movemailtooljob.cpp:89
+#, kde-format
+msgid "Mail %1 not found"
+msgstr "Správa %1 sa nenašla"
+
+#: editmailtool/editmailtooljob.cpp:86
+#, kde-format
+msgid ""
+"Mail %1 is not stored in a Drafts folder, it can't be edited. Use mail_open "
+"or mail_reply instead"
+msgstr ""
+"Správa %1 nie je uložená v priečinku Koncepty, nedá sa upraviť. Použite "
+"namiesto toho mail_open alebo mail_reply"
+
+#: editmailtool/editmailtooljob.cpp:101
+#, kde-format
+msgid "Unable to edit mail %1: %2"
+msgstr "Správu %1 nie je možné upraviť: %2"
+
+#: editmailtool/editmailtooljob.cpp:108
+#, kde-format
+msgid "Unable to edit mail %1: KMail main window is not available"
+msgstr "Správu %1 nie je možné upraviť: hlavné okno KMail nie je dostupné"
+
+#: editmailtool/editmailtooljob.cpp:111
+#, kde-format
+msgid "Draft mail %1 opened in a KMail composer"
+msgstr "Koncept správy %1 bol otvorený v editore KMail"
+
+#: freebusytool/freebusytool.cpp:43
+#, kde-format
+msgid "Free/Busy"
+msgstr "Voľný/Obsadený"
+
+#: freebusytool/freebusytooljob.cpp:72
+#, kde-format
+msgid "Free for the whole period from %1 to %2"
+msgstr "Voľné počas celého obdobia od %1 do %2"
+
+#: kcm/kcm_akonadimcpserver.cpp:26
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
+#: listaddressbooks/listaddressbookstool.cpp:26
+#, kde-format
+msgid "List Address Books"
+msgstr "Zoznam adresárov"
+
+#: listaddressbooks/listaddressbookstooljob.cpp:54
+#, kde-format
+msgid "No address book found"
+msgstr "Nenašiel sa žiadny adresár"
+
+#: listcalendars/listcalendarstool.cpp:26
+#, kde-format
+msgid "List Calendars"
+msgstr "Zoznam kalendárov"
+
+#: listcalendars/listcalendarstooljob.cpp:83
+#, kde-format
+msgid "No calendar found"
+msgstr "Nenašiel sa žiadny kalendár"
+
+#: listidentities/listidentitiestool.cpp:27
+#, kde-format
+msgid "List Identities"
+msgstr "Zoznam identít"
+
+#: listidentities/listidentitiestool.cpp:46
+#, kde-format
+msgid "No Identity found"
+msgstr "Nenašla sa žiadna identita"
+
+#: mailsearch/searchmailtool.cpp:41
+#, kde-format
+msgid "Search Mail"
+msgstr "Hľadať poštu"
+
+#: mailsearch/searchmailtool.cpp:71
+#, kde-format
+msgid "Unknown mail field: %1"
+msgstr "Neznáme pole správy: %1"
+
+#: mailsearch/searchmailtool.cpp:75
+#, kde-format
+msgid "Argument field must be a string"
+msgstr "Argument field musí byť reťazec"
+
+#: mailsearch/searchmailtool.cpp:84
+#, kde-format
+msgid "Argument limit must be an integer between 1 and %1"
+msgstr "Argument limit musí byť celé číslo medzi 1 a %1"
+
+#: mailsearch/searchmailtool.cpp:88
+#, kde-format
+msgid "Argument limit must be an integer"
+msgstr "Argument limit musí byť celé číslo"
+
+#: mailsearch/searchmailtooljob.cpp:97
+#, kde-format
+msgid "Mail search failed: %1"
+msgstr "Hľadanie pošty zlyhalo: %1"
+
+#: mailsearch/searchmailtooljob.cpp:113
+#, kde-format
+msgid "(No subject)"
+msgstr "(Bez predmetu)"
+
+#: mailsearch/searchmailtooljob.cpp:136
+#, kde-format
+msgid "No mail found for \"%1\""
+msgstr "Pre „%1“ sa nenašla žiadna správa"
+
+#: main.cpp:26 main.cpp:28
+#, kde-format
+msgid "Akonadi MCP Server"
+msgstr ""
+
+#: main.cpp:30
+#, kde-format
+msgid "Copyright © 2026 Laurent Montel"
+msgstr ""
+
+#: main.cpp:31
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr ""
+
+#: main.cpp:31
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: main.cpp:40
+#, kde-format
+msgctxt "@info:shell"
+msgid "Url where server listens."
+msgstr "URL, na ktorej server počúva."
+
+#: markmailtool/markmailtool.cpp:52
+#, kde-format
+msgid "Mark Mail"
+msgstr "Označiť správu"
+
+#: markmailtool/markmailtool.cpp:73
+#, kde-format
+msgid "Argument read must be a boolean"
+msgstr "Argument read musí byť logická hodnota"
+
+#: markmailtool/markmailtool.cpp:79
+#, kde-format
+msgid "Argument important must be a boolean"
+msgstr "Argument important musí byť logická hodnota"
+
+#: markmailtool/markmailtool.cpp:83
+#, kde-format
+msgid "At least one of read or important must be given"
+msgstr "Musí byť zadaný aspoň jeden z argumentov read alebo important"
+
+#: markmailtool/markmailtooljob.cpp:75
+#, kde-format
+msgid "Mail modification failed: %1"
+msgstr "Úprava správy zlyhala: %1"
+
+#: markmailtool/markmailtooljob.cpp:78
+#, kde-format
+msgid "Mail %1 modified"
+msgstr "Správa %1 bola upravená"
+
+#: movemailtool/movemailtool.cpp:38
+#, kde-format
+msgid "Move Mail"
+msgstr "Presunúť správu"
+
+#: movemailtool/movemailtool.cpp:60
+#, kde-format
+msgid "Argument folder must be a string"
+msgstr "Argument folder musí byť reťazec"
+
+#: movemailtool/movemailtool.cpp:64
+#, kde-format
+msgid "Argument folder must not be empty"
+msgstr "Argument folder nesmie byť prázdny"
+
+#: movemailtool/movemailtool.cpp:71
+#, kde-format
+msgid "Argument folder_id must be a positive integer"
+msgstr "Argument folder_id musí byť kladné celé číslo"
+
+#: movemailtool/movemailtool.cpp:78 movemailtool/movemailtooljob.cpp:71
+#, kde-format
+msgid "Exactly one of folder or folder_id must be given"
+msgstr "Musí byť zadaný práve jeden z argumentov folder alebo folder_id"
+
+#: movemailtool/movemailtooljob.cpp:94
+#, kde-format
+msgid "Item %1 is not a mail"
+msgstr "Položka %1 nie je správa"
+
+#: movemailtool/movemailtooljob.cpp:107
+#, kde-format
+msgid "Mail folder fetch failed: %1"
+msgstr "Získanie poštového priečinka zlyhalo: %1"
+
+#: movemailtool/movemailtooljob.cpp:124
+#, kde-format
+msgid "Mail folder %1 not found"
+msgstr "Poštový priečinok %1 sa nenašiel"
+
+#: movemailtool/movemailtooljob.cpp:147
+#, kde-format
+msgid "Mail folder \"%1\" not found"
+msgstr "Poštový priečinok „%1“ sa nenašiel"
+
+#: movemailtool/movemailtooljob.cpp:156
+#, kde-format
+msgid ""
+"Several mail folders match \"%1\", use the full path or folder_id:\n"
+"%2"
+msgstr ""
+"„%1“ zodpovedá viac poštových priečinkov, použite celú cestu alebo "
+"folder_id:\n"
+"%2"
+
+#: movemailtool/movemailtooljob.cpp:165
+#, kde-format
+msgid "Mail %1 is already in folder \"%2\""
+msgstr "Správa %1 už je v priečinku „%2“"
+
+#: movemailtool/movemailtooljob.cpp:169
+#, kde-format
+msgid "Mail folder \"%1\" is read-only"
+msgstr "Poštový priečinok „%1“ je iba na čítanie"
+
+#: movemailtool/movemailtooljob.cpp:180
+#, kde-format
+msgid "Mail move failed: %1"
+msgstr "Presun správy zlyhal: %1"
+
+#: movemailtool/movemailtooljob.cpp:183
+#, kde-format
+msgid "Mail %1 moved to folder \"%2\""
+msgstr "Správa %1 bola presunutá do priečinka „%2“"
+
+#: openmailtool/openmailtool.cpp:32
+#, kde-format
+msgid "Open Mail"
+msgstr "Otvoriť správu"
+
+#: openmailtool/openmailtooljob.cpp:44
+#, kde-format
+msgid "Unable to open mail %1: %2"
+msgstr "Správu %1 nie je možné otvoriť: %2"
+
+#: openmailtool/openmailtooljob.cpp:51
+#, kde-format
+msgid "Mail %1 not found or KMail main window is not available"
+msgstr "Správa %1 sa nenašla alebo hlavné okno KMail nie je dostupné"
+
+#: openmailtool/openmailtooljob.cpp:54
+#, kde-format
+msgid ""
+"Mail %1 displayed in a read-only KMail viewer, it can't be modified there"
+msgstr ""
+"Správa %1 je zobrazená v prehliadači KMail iba na čítanie, nedá sa v ňom "
+"upraviť"
+
+#: replymailtool/replymailtool.cpp:55
+#, kde-format
+msgid "Reply to Mail"
+msgstr "Odpovedať na správu"
+
+#: replymailtool/replymailtool.cpp:82
+#, kde-format
+msgid "Argument strategy must be one of: smart, author, list, all"
+msgstr "Argument strategy musí byť jedna z hodnôt: smart, author, list, all"
+
+#: replymailtool/replymailtooljob.cpp:38
+#, kde-format
+msgid ""
+"Mail id must be a positive integer and reply strategy must be smart, author, "
+"list or all"
+msgstr ""
+"ID správy musí byť kladné celé číslo a stratégia odpovede musí byť smart, "
+"author, list alebo all"
+
+#: replymailtool/replymailtooljob.cpp:50
+#, kde-format
+msgid "Unable to reply to mail %1: %2"
+msgstr "Na správu %1 nie je možné odpovedať: %2"
+
+#: replymailtool/replymailtooljob.cpp:57
+#, kde-format
+msgid "Unable to reply to mail %1: KMail main window is not available"
+msgstr "Na správu %1 nie je možné odpovedať: hlavné okno KMail nie je dostupné"
+
+#: replymailtool/replymailtooljob.cpp:60
+#, kde-format
+msgid "Reply composer opened in KMail for mail %1"
+msgstr "V KMail bol otvorený editor odpovede na správu %1"
+
+#: todolisttool/todolisttool.cpp:39
+#, kde-format
+msgid "To-do List"
+msgstr "Zoznam úloh"
+
+#: todolisttool/todolisttool.cpp:52
+#, kde-format
+msgid "Argument include_completed must be a boolean"
+msgstr "Argument include_completed musí byť logická hodnota"
+
+#: todolisttool/todolisttool.cpp:61
+#, kde-format
+msgid "Argument due_within_days must be an integer between 1 and %1"
+msgstr "Argument due_within_days musí byť celé číslo medzi 1 a %1"
+
+#: todolisttool/todolisttool.cpp:65
+#, kde-format
+msgid "Argument due_within_days must be an integer"
+msgstr "Argument due_within_days musí byť celé číslo"
+
+#: todolisttool/todolisttooljob.cpp:96
+#, kde-format
+msgid "No to-do found"
+msgstr "Nenašla sa žiadna úloha"
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:37
+#, kde-format
+msgid "Upcoming Birthdays"
+msgstr "Nadchádzajúce narodeniny"
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:50
+#, kde-format
+msgid "Argument days must be an integer between 1 and %1"
+msgstr "Argument days musí byť celé číslo medzi 1 a %1"
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:54
+#, kde-format
+msgid "Argument days must be an integer"
+msgstr "Argument days musí byť celé číslo"
+
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
+#, kde-format
+msgid "Number of days must be a positive integer"
+msgstr "Počet dní musí byť kladné celé číslo"
+
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
+#, kde-format
+msgid "No birthday in the next day"
+msgid_plural "No birthday in the next %1 days"
+msgstr[0] "Žiadne narodeniny počas nasledujúceho dňa"
+msgstr[1] "Žiadne narodeniny počas nasledujúcich %1 dní"
+msgstr[2] "Žiadne narodeniny počas nasledujúcich %1 dní"
+
+#: updatecontacttool/updatecontacttool.cpp:45
+#, kde-format
+msgid "Update Contact"
+msgstr "Aktualizovať kontakt"
+
+#: updatecontacttool/updatecontacttool.cpp:95
+#, kde-format
+msgid "Argument organization must be a string"
+msgstr "Argument organization musí byť reťazec"
+
+#: updatecontacttool/updatecontacttool.cpp:100
+#, kde-format
+msgid "Argument note must be a string"
+msgstr "Argument note musí byť reťazec"
+
+#: updatecontacttool/updatecontacttool.cpp:106
+#, kde-format
+msgid "Argument birthday must be a string"
+msgstr "Argument birthday musí byť reťazec"
+
+#: updatecontacttool/updatecontacttool.cpp:120
+#: updatecontacttool/updatecontacttooljob.cpp:46
+#: updateincidencetool/updateincidencetool.cpp:155
+#: updateincidencetool/updateincidencetooljob.cpp:53
+#, kde-format
+msgid "No field to update"
+msgstr "Žiadne pole na aktualizáciu"
+
+#: updatecontacttool/updatecontacttooljob.cpp:84
+#, kde-format
+msgid "Contact modification failed: %1"
+msgstr "Úprava kontaktu zlyhala: %1"
+
+#: updatecontacttool/updatecontacttooljob.cpp:87
+#, kde-format
+msgid "Contact \"%1\" updated (item id: %2)"
+msgstr "Kontakt „%1“ bol aktualizovaný (ID položky: %2)"
+
+#: updateincidencetool/updateincidencetool.cpp:54
+#, kde-format
+msgid "Update Incidence"
+msgstr "Aktualizovať záznam kalendára"
+
+#: updateincidencetool/updateincidencetool.cpp:86
+#, kde-format
+msgid "Argument description must be a string"
+msgstr "Argument description musí byť reťazec"
+
+#: updateincidencetool/updateincidencetool.cpp:91
+#, kde-format
+msgid "Argument location must be a string"
+msgstr "Argument location musí byť reťazec"
+
+#: updateincidencetool/updateincidencetool.cpp:117
+#, kde-format
+msgid "Argument due must be a string"
+msgstr "Argument due musí byť reťazec"
+
+#: updateincidencetool/updateincidencetool.cpp:131
+#, kde-format
+msgid "Arguments start and due must both be dates or both be date-times"
+msgstr "Argumenty start a due musia byť oba dátumy alebo oba dátumy s časom"
+
+#: updateincidencetool/updateincidencetool.cpp:148
+#, kde-format
+msgid "Argument completed must be a boolean"
+msgstr "Argument completed musí byť logická hodnota"
+
+#: updateincidencetool/updateincidencetooljob.cpp:95
+#, kde-format
+msgid "Incidence modification failed: %1"
+msgstr "Úprava záznamu kalendára zlyhala: %1"
+
+#: updateincidencetool/updateincidencetooljob.cpp:102
+#, kde-format
+msgid "Event \"%1\" updated (item id: %2)"
+msgstr "Udalosť „%1“ bola aktualizovaná (ID položky: %2)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:105
+#, kde-format
+msgid "To-do \"%1\" updated (item id: %2)"
+msgstr "Úloha „%1“ bola aktualizovaná (ID položky: %2)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:108
+#, kde-format
+msgid "Journal entry \"%1\" updated (item id: %2)"
+msgstr "Záznam denníka „%1“ bol aktualizovaný (ID položky: %2)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:111
+#, kde-format
+msgid "\"%1\" updated (item id: %2)"
+msgstr "„%1“ bolo aktualizované (ID položky: %2)"
+
+#: updateincidencetool/updateincidencetooljob.cpp:120
+#, kde-format
+msgid "Argument end is only valid for events"
+msgstr "Argument end platí iba pre udalosti"
+
+#: updateincidencetool/updateincidencetooljob.cpp:123
+#, kde-format
+msgid "Arguments due, priority and completed are only valid for to-dos"
+msgstr "Argumenty due, priority a completed platia iba pre úlohy"
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, kde-format
+msgid "Argument end must be a date for an all-day event"
+msgstr "Argument end musí byť pri celodennej udalosti dátum"
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, kde-format
+msgid "Argument end must be a date-time for a timed event"
+msgstr "Argument end musí byť pri udalosti s časom dátum s časom"
+
+#: updateincidencetool/updateincidencetooljob.cpp:201
+#, kde-format
+msgid "Start and due dates of a to-do must both be dates or both be date-times"
+msgstr ""
+"Dátum začiatku a termín úlohy musia byť oba dátumy alebo oba dátumy s časom"
+
+#: updateincidencetool/updateincidencetooljob.cpp:204
+#, kde-format
+msgid "Due date must not be before start"
+msgstr "Termín nesmie byť pred začiatkom"

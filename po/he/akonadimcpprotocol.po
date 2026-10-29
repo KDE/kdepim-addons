@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-21 00:52+0000\n"
+"POT-Creation-Date: 2026-10-29 00:54+0000\n"
 "PO-Revision-Date: 2026-10-16 15:14+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,7 +18,17 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 26.08.1\n"
 
-#: akonadimcpprotocolmanager.cpp:51
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: akonadimcpprotocolmanager.cpp:55
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "ניהול פרטים מ־Akonadi"
@@ -684,6 +694,11 @@ msgstr "פנוי/עסוק"
 msgid "Free for the whole period from %1 to %2"
 msgstr "פנוי/ה למשך כל התקופה שבין %1 לבין %2"
 
+#: kcm/kcm_akonadimcpserver.cpp:26
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
 #: listaddressbooks/listaddressbookstool.cpp:26
 #, kde-format
 msgid "List Address Books"
@@ -760,7 +775,28 @@ msgstr "(אין נושא)"
 msgid "No mail found for \"%1\""
 msgstr "לא נמצא דוא״ל בחיפוש אחר „%1”"
 
-#: main.cpp:23
+#: main.cpp:26 main.cpp:28
+#, kde-format
+msgid "Akonadi MCP Server"
+msgstr ""
+
+#: main.cpp:30
+#, kde-format
+msgid "Copyright © 2026 Laurent Montel"
+msgstr ""
+
+#: main.cpp:31
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr ""
+
+#: main.cpp:31
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: main.cpp:40
 #, kde-format
 msgctxt "@info:shell"
 msgid "Url where server listens."
