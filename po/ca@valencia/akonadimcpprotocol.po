@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:54+0000\n"
-"PO-Revision-Date: 2026-10-21 09:36+0200\n"
+"POT-Creation-Date: 2026-10-30 00:54+0000\n"
+"PO-Revision-Date: 2026-10-29 11:34+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -23,12 +23,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Josep M. Ferrer"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "txemaq@gmail.com"
 
 #: akonadimcpprotocolmanager.cpp:55
 #, kde-format
@@ -663,7 +663,7 @@ msgstr "Lliure per a tot el període de %1 a %2"
 #: kcm/kcm_akonadimcpserver.cpp:26
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Activat"
 
 #: listaddressbooks/listaddressbookstool.cpp:26
 #, kde-format
@@ -738,25 +738,25 @@ msgstr "No s'ha trobat cap correu per a «%1»"
 #: main.cpp:26 main.cpp:28
 #, kde-format
 msgid "Akonadi MCP Server"
-msgstr ""
+msgstr " Servidor MCP d'Akonadi"
 
 #: main.cpp:30
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
-msgstr ""
+msgstr "Drets d'autoria © 2026 Laurent Montel"
 
 #: main.cpp:31
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr ""
+msgstr "Laurent Montel"
 
 #: main.cpp:31
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Mantenidor"
 
-#: main.cpp:40
+#: main.cpp:38
 #, kde-format
 msgctxt "@info:shell"
 msgid "Url where server listens."

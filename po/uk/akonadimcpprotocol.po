@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:54+0000\n"
-"PO-Revision-Date: 2026-10-21 15:14+0300\n"
+"POT-Creation-Date: 2026-10-30 00:54+0000\n"
+"PO-Revision-Date: 2026-10-29 16:09+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -21,12 +21,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Юрій Чорноіван"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "yurchor@ukr.net"
 
 #: akonadimcpprotocolmanager.cpp:55
 #, kde-format
@@ -672,7 +672,7 @@ msgstr "Не зайнято увесь період від %1 до %2"
 #: kcm/kcm_akonadimcpserver.cpp:26
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Увімкнено"
 
 #: listaddressbooks/listaddressbookstool.cpp:26
 #, kde-format
@@ -747,25 +747,25 @@ msgstr "Не знайдено поштових повідомлень для з�
 #: main.cpp:26 main.cpp:28
 #, kde-format
 msgid "Akonadi MCP Server"
-msgstr ""
+msgstr "Сервер MCP Akonadi"
 
 #: main.cpp:30
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
-msgstr ""
+msgstr "© Laurent Montel <montel@kde.org>, 2026"
 
 #: main.cpp:31
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr ""
+msgstr "Laurent Montel"
 
 #: main.cpp:31
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Супровідник"
 
-#: main.cpp:40
+#: main.cpp:38
 #, kde-format
 msgctxt "@info:shell"
 msgid "Url where server listens."

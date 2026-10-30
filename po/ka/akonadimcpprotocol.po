@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:54+0000\n"
-"PO-Revision-Date: 2026-10-21 08:17+0200\n"
+"POT-Creation-Date: 2026-10-30 00:54+0000\n"
+"PO-Revision-Date: 2026-10-29 03:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -21,12 +21,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Temuri Doghonadze"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "temuri.doghonadze@gmail.com"
 
 #: akonadimcpprotocolmanager.cpp:55
 #, kde-format
@@ -657,7 +657,7 @@ msgstr "თავისუფალი მთელი პერიოდის�
 #: kcm/kcm_akonadimcpserver.cpp:26
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "ჩართულია"
 
 #: listaddressbooks/listaddressbookstool.cpp:26
 #, kde-format
@@ -732,25 +732,25 @@ msgstr "\"%1\"-ისთვის ელფოსტა აღმოჩენი
 #: main.cpp:26 main.cpp:28
 #, kde-format
 msgid "Akonadi MCP Server"
-msgstr ""
+msgstr "Akonadi-ის MCP სერვერი"
 
 #: main.cpp:30
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
-msgstr ""
+msgstr "© 2026 Laurent Montel, ყველა უფლება დაცულია"
 
 #: main.cpp:31
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr ""
+msgstr "ლორან მონტელი"
 
 #: main.cpp:31
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "წამყვანი პროგრამისტი"
 
-#: main.cpp:40
+#: main.cpp:38
 #, kde-format
 msgctxt "@info:shell"
 msgid "Url where server listens."

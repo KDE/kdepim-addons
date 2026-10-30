@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:54+0000\n"
+"POT-Creation-Date: 2026-10-30 00:54+0000\n"
 "PO-Revision-Date: 2026-10-16 15:14+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -796,7 +796,7 @@ msgstr ""
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:40
+#: main.cpp:38
 #, kde-format
 msgctxt "@info:shell"
 msgid "Url where server listens."
