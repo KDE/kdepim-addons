@@ -37,7 +37,7 @@ void ListIdentitiesTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSe
     for (const auto &identity : *identities) {
         QString entry = u"%1 %2 (uoid %3)"_s.arg(identity.identityName(), identity.primaryEmailAddress(), QString::number(identity.uoid()));
         if (identity.isDefault()) {
-            entry += u" [default]"_s;
+            entry += u" [default]";
         }
         entries.append(entry);
     }

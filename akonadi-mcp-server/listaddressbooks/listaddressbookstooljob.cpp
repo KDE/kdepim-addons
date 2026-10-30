@@ -46,7 +46,7 @@ void ListAddressBooksToolJob::slotResult(KJob *job)
         }
         QString entry = u"%1 (id: %2)"_s.arg(collection.displayName(), QString::number(collection.id()));
         if (!(collection.rights() & Akonadi::Collection::CanCreateItem)) {
-            entry += u" [read-only]"_s;
+            entry += u" [read-only]";
         }
         entries.append(entry);
     }

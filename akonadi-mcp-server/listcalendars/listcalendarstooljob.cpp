@@ -75,7 +75,7 @@ void ListCalendarsToolJob::slotResult(KJob *job)
         }
         QString entry = u"%1 (id: %2) %3"_s.arg(collection.displayName(), QString::number(collection.id()), listCalendarType(mimeTypes));
         if (!(collection.rights() & Akonadi::Collection::CanCreateItem)) {
-            entry += u" [read-only]"_s;
+            entry += u" [read-only]";
         }
         entries.append(entry);
     }

@@ -390,7 +390,7 @@ void VCardImportExportPluginInterface::exportVCard()
                 filename = u"contact"_s;
             }
         }
-        filename += u".vcf"_s;
+        filename += u".vcf";
         url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(filename), QString(), nullptr, options);
         if (url.isEmpty()) { // user canceled export
             return;

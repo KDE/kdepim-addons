@@ -93,7 +93,7 @@ QString CalendarToolUtils::formatOccurrence(const Occurrence &occurrence)
         if (lastDate > startDate) {
             when += u" - "_s + lastDate.toString(Qt::ISODate);
         }
-        when += u" (all day)"_s;
+        when += u" (all day)";
     } else {
         when = formatPeriod(occurrence.start, occurrence.end);
     }
