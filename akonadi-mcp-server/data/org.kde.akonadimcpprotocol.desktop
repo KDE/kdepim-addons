@@ -3,6 +3,16 @@
 
 [Desktop Entry]
 Name=Akonadi MCP Server
+Name[ca]=Servidor MCP d'Akonadi
+Name[ca@valencia]=Servidor MCP d'Akonadi
+Name[cs]=Akonadi MCP server
+Name[es]=Servidor MCP de Akonadi
+Name[ka]=Akonadi-ის MCP სერვერი
+Name[nl]=Akonadi MCP-server
+Name[pt_BR]=Servidor MCP do Akonadi
+Name[ru]=Сервер MCP Akonadi
+Name[sl]=Akonadi MCP Server
+Name[uk]=Сервер MCP Akonadi
 Exec=akonadimcpprotocol
 Icon=akonadi
 Type=Application
