@@ -1,8 +1,28 @@
 {
     "KPlugin": {
         "Description": "Configuration of Akonadi MCP Server",
+        "Description[ca@valencia]": "Configureu el servidor MCP d'Akonadi",
+        "Description[ca]": "Configuració del servidor MCP d'Akonadi",
+        "Description[cs]": "Nastavení pro Akonadi MCP server",
+        "Description[es]": "Configuración del servidor MCP de Akonadi",
+        "Description[ka]": "Akonadi-ის MCP სერვერის მორგება",
+        "Description[nl]": "Configuratie van Akonadi MCP-server",
+        "Description[pt_BR]": "Configuração do servidor MCP do Akonadi",
+        "Description[ru]": "Настройка сервера MCP Akonadi",
+        "Description[sl]": "Konfiguracija strežnika Akonadi MCP",
+        "Description[uk]": "Налаштування сервера MCP Akonadi",
         "Icon": "akonadi",
-        "Name": "Akonadi MCP Server"
+        "Name": "Akonadi MCP Server",
+        "Name[ca@valencia]": "Servidor MCP d'Akonadi",
+        "Name[ca]": "Servidor MCP d'Akonadi",
+        "Name[cs]": "Akonadi MCP server",
+        "Name[es]": "Servidor MCP de Akonadi",
+        "Name[ka]": "Akonadi-ის MCP სერვერი",
+        "Name[nl]": "Akonadi MCP-server",
+        "Name[pt_BR]": "Servidor MCP do Akonadi",
+        "Name[ru]": "Сервер MCP Akonadi",
+        "Name[sl]": "Akonadi MCP Server",
+        "Name[uk]": "Сервер MCP Akonadi"
     },
     "NoDisplay": "false",
     "X-KDE-Weight": 700
