@@ -808,6 +808,3 @@ msgstr "Importa els contactes des d'un fitxer de contactes de Windows."
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr "Fitxer de contactes de Windows (*.contact)"
-
-#~ msgid "Import vCard..."
-#~ msgstr "Importa una vCard..."

@@ -336,34 +336,3 @@ msgstr "Script extern"
 #, kde-format
 msgid "Configure"
 msgstr "Configura"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Note:"
-#~ msgstr "Nota:"
-
-#~ msgid "Create new note and close this widget."
-#~ msgstr "Crea una nota nova i tanca aquest giny."
-
-#~ msgid "Close the widget for creating new notes."
-#~ msgstr "Tanca el giny per a crear notes noves."
-
-#~ msgctxt "edit a note on this message"
-#~ msgid "Edit Note"
-#~ msgstr "Edita la nota"
-
-#~ msgctxt "create a new note out of this message"
-#~ msgid "Create Note"
-#~ msgstr "Crea una nota"
-
-#~ msgid "Allows you to create a note from this message"
-#~ msgstr "Permet crear una nota a partir d'aquest missatge"
-
-#~ msgid ""
-#~ "This option starts an editor to create a note. Then you can edit the note "
-#~ "to your liking before saving it."
-#~ msgstr ""
-#~ "Aquesta opció inicia un editor per a crear una nota. Després podreu "
-#~ "editar-la al vostre gust abans de desar-la."
-
-#~ msgid "Create Event..."
-#~ msgstr "Crea un esdeveniment..."
