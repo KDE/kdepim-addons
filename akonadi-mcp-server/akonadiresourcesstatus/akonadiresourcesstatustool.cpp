@@ -35,14 +35,10 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool AkonadiResourcesStatusTool:
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool =
         TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"akonadi_resources_status"_s,
+                                                                               i18n("Akonadi Resources Status"),
                                                                                u"List Akonadi resources and their status"_s,
+                                                                               TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::ReadOnly,
                                                                                QMap<QString, QJsonObject>{});
-
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Akonadi Resources Status"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Akonadi);
     return tool;
 }

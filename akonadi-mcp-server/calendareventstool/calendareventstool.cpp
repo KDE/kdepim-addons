@@ -10,8 +10,8 @@
 #include "common/toolutils.h"
 #include <KLocalizedString>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 namespace
@@ -26,7 +26,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CalendarEventsTool::definit
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"calendar_events"_s,
+        i18n("Calendar Events"),
         u"List the events of the Akonadi calendars in a period, including the occurrences of recurring events"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::ReadOnly,
         QMap<QString, QJsonObject>{
             {u"start"_s,
              TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(
@@ -36,12 +38,6 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CalendarEventsTool::definit
              TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(
                  u"string"_s,
                  u"End of the period, as ISO 8601 date or local date-time. A date includes the whole day. Default: 7 days after start, maximum 366 days"_s)}});
-
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Calendar Events"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
@@ -49,7 +45,8 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CalendarEventsTool::definit
 void CalendarEventsTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     QDateTime start = QDate::currentDate().startOfDay();
-    if (const QJsonValue startValue = call->arguments().value(u"start"_s); !startValue.isUndefined() && !startValue.isNull()) {
+    if (const QJsonValue startValue = call->arguments().value(u"start"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(startValue)) {
         const std::optional<QDateTime> dateTime = CalendarToolUtils::parseDateTime(startValue.toString(), CalendarToolUtils::DateBound::Start);
         if (!dateTime) {
             call->finishWithText(i18n("Argument start must be an ISO 8601 date or date-time"), true);
@@ -58,7 +55,8 @@ void CalendarEventsTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSe
         start = *dateTime;
     }
     QDateTime end = start.addDays(defaultDays);
-    if (const QJsonValue endValue = call->arguments().value(u"end"_s); !endValue.isUndefined() && !endValue.isNull()) {
+    if (const QJsonValue endValue = call->arguments().value(u"end"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(endValue)) {
         const std::optional<QDateTime> dateTime = CalendarToolUtils::parseDateTime(endValue.toString(), CalendarToolUtils::DateBound::End);
         if (!dateTime) {
             call->finishWithText(i18n("Argument end must be an ISO 8601 date or date-time"), true);

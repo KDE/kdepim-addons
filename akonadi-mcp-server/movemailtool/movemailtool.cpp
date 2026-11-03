@@ -9,6 +9,7 @@
 #include "movemailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
@@ -21,7 +22,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool MoveMailTool::definition() 
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"mail_move"_s,
+        i18n("Move Mail"),
         u"Move a mail to another Akonadi mail folder. The destination is given either by folder or by folder_id"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::Modify,
         QMap<QString, QJsonObject>{
             {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the mail item (see mail_search)"_s)},
             {u"folder"_s,
@@ -30,12 +33,8 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool MoveMailTool::definition() 
                  u"Name of the destination folder (Archives) or its path from the account, separated by '/' (Local Folders/Archives). Case insensitive"_s)},
             {u"folder_id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the destination folder (see mail_search)"_s)}},
         {u"id"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(false);
-    annotation.setDestructiveHint(false);
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation = tool.annotations().value();
     annotation.setIdempotentHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Move Mail"));
     tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
@@ -45,18 +44,19 @@ void MoveMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTo
 {
     const auto arguments = call->arguments();
     const QJsonValue idValue = arguments.value(u"id"_s);
-    if (!idValue.isDouble()) {
+    const std::optional<qint64> itemIdArgument = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(idValue);
+    if (!itemIdArgument) {
         call->finishWithText(i18n("Argument id must be an integer"), true);
         return;
     }
-    const qint64 itemId = idValue.toInteger(-1);
+    const qint64 itemId = *itemIdArgument;
     if (itemId < 0) {
         call->finishWithText(i18n("Argument id must be a positive integer"), true);
         return;
     }
 
     std::optional<QString> folder;
-    if (!ToolUtils::readOptionalString(arguments, u"folder"_s, folder)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readOptionalString(arguments, u"folder"_s, folder)) {
         call->finishWithText(i18n("Argument folder must be a string"), true);
         return;
     }
@@ -66,12 +66,14 @@ void MoveMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTo
     }
 
     qint64 folderId = -1;
-    if (const QJsonValue folderIdValue = arguments.value(u"folder_id"_s); ToolUtils::isProvided(folderIdValue)) {
-        if (!folderIdValue.isDouble() || folderIdValue.toInteger(-1) < 0) {
+    if (const QJsonValue folderIdValue = arguments.value(u"folder_id"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(folderIdValue)) {
+        const std::optional<qint64> id = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(folderIdValue);
+        if (!id || *id < 0) {
             call->finishWithText(i18n("Argument folder_id must be a positive integer"), true);
             return;
         }
-        folderId = folderIdValue.toInteger();
+        folderId = *id;
     }
 
     if (folder.has_value() == (folderId >= 0)) {

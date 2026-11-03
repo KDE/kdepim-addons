@@ -9,8 +9,8 @@
 #include "replymailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 #include <algorithm>
 
 using namespace Qt::Literals::StringLiterals;
@@ -41,7 +41,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ReplyMailTool::definition()
     }
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"mail_reply"_s,
+        i18n("Reply to Mail"),
         u"Open a KMail composer to reply to a mail, KMail is started if needed. The reply is not sent"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::ReadOnly,
         QMap<QString, QJsonObject>{
             {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the mail item (see mail_search)"_s)},
             {u"strategy"_s,
@@ -49,11 +51,6 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ReplyMailTool::definition()
                                                        u"Recipients of the reply: smart (guess the best recipient, default), author (only the author), "
                                                        u"list (only the mailing list), all (author and all recipients)"_s)}},
         {u"id"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Reply to Mail"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
 }
@@ -62,18 +59,20 @@ void ReplyMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerT
 {
     const auto arguments = call->arguments();
     const QJsonValue idValue = arguments.value(u"id"_s);
-    if (!idValue.isDouble()) {
+    const std::optional<qint64> itemIdArgument = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(idValue);
+    if (!itemIdArgument) {
         call->finishWithText(i18n("Argument id must be an integer"), true);
         return;
     }
-    const qint64 itemId = idValue.toInteger(-1);
+    const qint64 itemId = *itemIdArgument;
     if (itemId < 0) {
         call->finishWithText(i18n("Argument id must be a positive integer"), true);
         return;
     }
 
     auto strategy = ReplyMailToolJob::ReplyStrategy::ReplySmart;
-    if (const QJsonValue strategyValue = arguments.value(u"strategy"_s); !strategyValue.isNull() && !strategyValue.isUndefined()) {
+    if (const QJsonValue strategyValue = arguments.value(u"strategy"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(strategyValue)) {
         const QString strategyText = strategyValue.toString();
         const auto it = std::find_if(std::begin(strategyNames), std::end(strategyNames), [&strategyText](const StrategyName &strategyName) {
             return strategyName.name == strategyText;

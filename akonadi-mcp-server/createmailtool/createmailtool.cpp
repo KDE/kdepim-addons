@@ -9,8 +9,8 @@
 #include "createmailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -21,7 +21,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateMailTool::definition(
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"mail_create"_s,
+        i18n("Create Mail"),
         u"Create a new mail and store it in the default Drafts folder, the mail is not sent. Use mail_edit to open it in a KMail composer. Use mail_list_identities to get the identity identifier."_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::Modify,
         QMap<QString, QJsonObject>{
             {u"subject"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Subject of the mail"_s)},
             {u"to"_s, McpProtocolServerTool::schemaArrayProperty(McpProtocolServerTool::schemaProperty(u"string"_s, {}), u"Recipient addresses"_s)},
@@ -32,13 +34,6 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateMailTool::definition(
              McpProtocolServerTool::schemaProperty(u"integer"_s,
                                                    u"Identity uoid used by the mail (see mail_list_identities). If omitted, the default identity is used"_s)}},
         {u"subject"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(false);
-    annotation.setDestructiveHint(false);
-    annotation.setIdempotentHint(false);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Create Mail"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
 }
@@ -53,37 +48,37 @@ void CreateMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServer
     }
 
     QStringList to;
-    if (!ToolUtils::readStringList(arguments.value(u"to"_s), to)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readStringList(arguments.value(u"to"_s), to)) {
         call->finishWithText(i18n("Argument to must be an array of strings"), true);
         return;
     }
     QStringList cc;
-    if (!ToolUtils::readStringList(arguments.value(u"cc"_s), cc)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readStringList(arguments.value(u"cc"_s), cc)) {
         call->finishWithText(i18n("Argument cc must be an array of strings"), true);
         return;
     }
     QStringList bcc;
-    if (!ToolUtils::readStringList(arguments.value(u"bcc"_s), bcc)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readStringList(arguments.value(u"bcc"_s), bcc)) {
         call->finishWithText(i18n("Argument bcc must be an array of strings"), true);
         return;
     }
 
     const QJsonValue bodyValue = arguments.value(u"body"_s);
-    if (!bodyValue.isString() && !bodyValue.isUndefined() && !bodyValue.isNull()) {
+    if (!bodyValue.isString() && TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(bodyValue)) {
         call->finishWithText(i18n("Argument body must be a string"), true);
         return;
     }
 
     uint identityUoid = 0;
     const QJsonValue identityValue = arguments.value(u"identity"_s);
-    if (identityValue.isDouble()) {
-        const qint64 value = identityValue.toInteger(-1);
+    if (const std::optional<qint64> identityValueInteger = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(identityValue)) {
+        const qint64 value = *identityValueInteger;
         if (value < 0) {
             call->finishWithText(i18n("Argument identity must be a positive integer"), true);
             return;
         }
         identityUoid = static_cast<uint>(value);
-    } else if (!identityValue.isUndefined() && !identityValue.isNull()) {
+    } else if (TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(identityValue)) {
         call->finishWithText(i18n("Argument identity must be an integer"), true);
         return;
     }

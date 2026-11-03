@@ -9,6 +9,7 @@
 #include "deleteincidencetooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
@@ -21,16 +22,14 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool DeleteIncidenceTool::defini
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"calendar_delete_incidence"_s,
+        i18n("Delete Incidence"),
         u"Delete an event, to-do or journal entry from an Akonadi calendar. For a recurring incidence, all occurrences are deleted. This cannot be undone"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::Destructive,
         QMap<QString, QJsonObject>{
             {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the incidence item (see calendar_events and calendar_todo_list)"_s)}},
         {u"id"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(false);
-    annotation.setDestructiveHint(true);
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation = tool.annotations().value();
     annotation.setIdempotentHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Delete Incidence"));
     tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
@@ -39,11 +38,12 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool DeleteIncidenceTool::defini
 void DeleteIncidenceTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const QJsonValue idValue = call->arguments().value(u"id"_s);
-    if (!idValue.isDouble()) {
+    const std::optional<qint64> itemIdArgument = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(idValue);
+    if (!itemIdArgument) {
         call->finishWithText(i18n("Argument id must be an integer"), true);
         return;
     }
-    const qint64 itemId = idValue.toInteger(-1);
+    const qint64 itemId = *itemIdArgument;
     if (itemId < 0) {
         call->finishWithText(i18n("Argument id must be a positive integer"), true);
         return;

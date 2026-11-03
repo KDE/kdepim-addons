@@ -11,7 +11,6 @@
 #include <KLocalizedString>
 #include <QJsonValue>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 namespace
@@ -25,7 +24,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool FreeBusyTool::definition() 
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"calendar_free_busy"_s,
+        i18n("Free/Busy"),
         u"Return the busy and free periods of the user in the Akonadi calendars, to know if a time slot is available"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::ReadOnly,
         QMap<QString, QJsonObject>{
             {u"start"_s,
              TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(
@@ -36,12 +37,6 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool FreeBusyTool::definition() 
                  u"string"_s,
                  u"End of the period, as ISO 8601 date or local date-time. A date includes the whole day. Maximum 31 days after start"_s)}},
         {u"start"_s, u"end"_s});
-
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Free/Busy"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }

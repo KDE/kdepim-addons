@@ -11,8 +11,8 @@
 #include <KLocalizedString>
 #include <QDate>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -23,7 +23,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactTool::definiti
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"contact_create"_s,
+        i18n("Create Contact"),
         u"Create a new contact in an Akonadi address book"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::Modify,
         QMap<QString, QJsonObject>{
             {u"name"_s, TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"string"_s, u"Full name of the contact"_s)},
             {u"emails"_s,
@@ -38,13 +40,6 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactTool::definiti
                  u"integer"_s,
                  u"Identifier of the address book (see contact_list_address_books). If omitted, the first writable address book is used"_s)}},
         {u"name"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(false);
-    annotation.setDestructiveHint(false);
-    annotation.setIdempotentHint(false);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Create Contact"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
@@ -63,14 +58,14 @@ void CreateContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
     contact.setFormattedName(name);
 
     QStringList emails;
-    if (!ToolUtils::readStringList(arguments.value(u"emails"_s), emails)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readStringList(arguments.value(u"emails"_s), emails)) {
         call->finishWithText(i18n("Argument emails must be an array of strings"), true);
         return;
     }
     contact.setEmails(emails);
 
     QStringList phoneNumbers;
-    if (!ToolUtils::readStringList(arguments.value(u"phone_numbers"_s), phoneNumbers)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readStringList(arguments.value(u"phone_numbers"_s), phoneNumbers)) {
         call->finishWithText(i18n("Argument phone_numbers must be an array of strings"), true);
         return;
     }
@@ -95,13 +90,13 @@ void CreateContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
 
     Akonadi::Collection::Id addressBookId = -1;
     const QJsonValue addressBookValue = arguments.value(u"address_book_id"_s);
-    if (addressBookValue.isDouble()) {
-        addressBookId = addressBookValue.toInteger(-1);
+    if (const std::optional<qint64> addressBookValueInteger = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(addressBookValue)) {
+        addressBookId = *addressBookValueInteger;
         if (addressBookId < 0) {
             call->finishWithText(i18n("Argument address_book_id must be a positive integer"), true);
             return;
         }
-    } else if (!addressBookValue.isUndefined() && !addressBookValue.isNull()) {
+    } else if (TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(addressBookValue)) {
         call->finishWithText(i18n("Argument address_book_id must be an integer"), true);
         return;
     }

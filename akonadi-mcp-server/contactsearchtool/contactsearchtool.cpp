@@ -10,8 +10,8 @@
 #include <KLocalizedString>
 #include <QJsonArray>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 ContactSearchTool::ContactSearchTool() = default;
@@ -21,18 +21,15 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactSearchTool::definiti
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"contact_search"_s,
+        i18n("Search Contacts"),
         u"Search contacts in the Akonadi address books by name or email address"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::ReadOnly,
         QMap<QString, QJsonObject>{
             {u"query"_s, TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"string"_s, u"Name or email address to search for"_s)},
             {u"fields"_s,
              McpProtocolServerTool::schemaArrayProperty(McpProtocolServerTool::schemaEnumProperty({u"email"_s, u"phone"_s, u"location"_s, u"birthday"_s}, {}),
                                                         u"Contact fields to return"_s)}},
         {u"query"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Search Contacts"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
@@ -64,7 +61,7 @@ void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
                 return;
             }
         }
-    } else if (!fields.isUndefined() && !fields.isNull()) {
+    } else if (TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(fields)) {
         call->finishWithText(i18n("Argument fields must be an array"), true);
         return;
     }

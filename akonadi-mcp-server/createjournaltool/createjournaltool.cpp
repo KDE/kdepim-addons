@@ -12,8 +12,8 @@
 #include <KLocalizedString>
 #include <QJsonValue>
 #include <QTimeZone>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -24,7 +24,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateJournalTool::definiti
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"calendar_create_journal"_s,
+        i18n("Create Journal Entry"),
         u"Create a new journal entry in an Akonadi calendar"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::Modify,
         QMap<QString, QJsonObject>{
             {u"summary"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Title of the journal entry"_s)},
             {u"date"_s,
@@ -36,13 +38,6 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateJournalTool::definiti
              McpProtocolServerTool::schemaProperty(u"integer"_s,
                                                    u"Identifier of the calendar (see calendar_list). If omitted, the first writable calendar is used"_s)}},
         {u"summary"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(false);
-    annotation.setDestructiveHint(false);
-    annotation.setIdempotentHint(false);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Create Journal Entry"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }
@@ -57,7 +52,7 @@ void CreateJournalTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
     }
 
     CalendarToolUtils::IncidenceDateTime date{QDate::currentDate().startOfDay(QTimeZone::systemTimeZone()), true};
-    if (const QJsonValue dateValue = arguments.value(u"date"_s); !dateValue.isUndefined() && !dateValue.isNull()) {
+    if (const QJsonValue dateValue = arguments.value(u"date"_s); TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(dateValue)) {
         const std::optional<CalendarToolUtils::IncidenceDateTime> dateTime = CalendarToolUtils::parseIncidenceDateTime(dateValue.toString());
         if (!dateTime) {
             call->finishWithText(i18n("Argument date must be an ISO 8601 date or date-time"), true);
@@ -75,13 +70,13 @@ void CreateJournalTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolSer
     }
     Akonadi::Collection::Id calendarId = -1;
     const QJsonValue calendarValue = arguments.value(u"calendar_id"_s);
-    if (calendarValue.isDouble()) {
-        calendarId = calendarValue.toInteger(-1);
+    if (const std::optional<qint64> calendarValueInteger = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(calendarValue)) {
+        calendarId = *calendarValueInteger;
         if (calendarId < 0) {
             call->finishWithText(i18n("Argument calendar_id must be a positive integer"), true);
             return;
         }
-    } else if (!calendarValue.isUndefined() && !calendarValue.isNull()) {
+    } else if (TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(calendarValue)) {
         call->finishWithText(i18n("Argument calendar_id must be an integer"), true);
         return;
     }

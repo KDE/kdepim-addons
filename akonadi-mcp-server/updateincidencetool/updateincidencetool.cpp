@@ -9,6 +9,7 @@
 #include "updateincidencetooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
@@ -27,7 +28,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateIncidenceTool::defini
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"calendar_update_incidence"_s,
+        i18n("Update Incidence"),
         u"Update an existing event, to-do or journal entry in an Akonadi calendar. Only the provided fields are modified"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::Destructive,
         QMap<QString, QJsonObject>{
             {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the incidence item (see calendar_events and calendar_todo_list)"_s)},
             {u"summary"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Title of the incidence"_s)},
@@ -46,12 +49,8 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateIncidenceTool::defini
             {u"priority"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"To-dos only: priority from 1 (highest) to 9 (lowest), 0 for undefined"_s)},
             {u"completed"_s, McpProtocolServerTool::schemaProperty(u"boolean"_s, u"To-dos only: mark the to-do as completed or not completed"_s)}},
         {u"id"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(false);
-    annotation.setDestructiveHint(true);
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation = tool.annotations().value();
     annotation.setIdempotentHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Update Incidence"));
     tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
@@ -61,11 +60,12 @@ void UpdateIncidenceTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolS
 {
     const auto arguments = call->arguments();
     const QJsonValue idValue = arguments.value(u"id"_s);
-    if (!idValue.isDouble()) {
+    const std::optional<qint64> itemIdArgument = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(idValue);
+    if (!itemIdArgument) {
         call->finishWithText(i18n("Argument id must be an integer"), true);
         return;
     }
-    const qint64 itemId = idValue.toInteger(-1);
+    const qint64 itemId = *itemIdArgument;
     if (itemId < 0) {
         call->finishWithText(i18n("Argument id must be a positive integer"), true);
         return;
@@ -73,7 +73,8 @@ void UpdateIncidenceTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolS
 
     UpdateIncidenceToolJob::IncidenceChanges changes;
 
-    if (const QJsonValue summaryValue = arguments.value(u"summary"_s); ToolUtils::isProvided(summaryValue)) {
+    if (const QJsonValue summaryValue = arguments.value(u"summary"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(summaryValue)) {
         const QString summary = summaryValue.toString().trimmed();
         if (!summaryValue.isString() || summary.isEmpty()) {
             call->finishWithText(i18n("Argument summary must be a non-empty string"), true);
@@ -82,17 +83,18 @@ void UpdateIncidenceTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolS
         changes.summary = summary;
     }
 
-    if (!ToolUtils::readOptionalString(arguments, u"description"_s, changes.description)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readOptionalString(arguments, u"description"_s, changes.description)) {
         call->finishWithText(i18n("Argument description must be a string"), true);
         return;
     }
 
-    if (!ToolUtils::readOptionalString(arguments, u"location"_s, changes.location)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readOptionalString(arguments, u"location"_s, changes.location)) {
         call->finishWithText(i18n("Argument location must be a string"), true);
         return;
     }
 
-    if (const QJsonValue startValue = arguments.value(u"start"_s); ToolUtils::isProvided(startValue)) {
+    if (const QJsonValue startValue = arguments.value(u"start"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(startValue)) {
         changes.start = CalendarToolUtils::parseIncidenceDateTime(startValue.toString());
         if (!startValue.isString() || !changes.start) {
             call->finishWithText(i18n("Argument start must be an ISO 8601 date or date-time"), true);
@@ -100,7 +102,7 @@ void UpdateIncidenceTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolS
         }
     }
 
-    if (const QJsonValue endValue = arguments.value(u"end"_s); ToolUtils::isProvided(endValue)) {
+    if (const QJsonValue endValue = arguments.value(u"end"_s); TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(endValue)) {
         changes.end = CalendarToolUtils::parseIncidenceDateTime(endValue.toString());
         if (!endValue.isString() || !changes.end) {
             call->finishWithText(i18n("Argument end must be an ISO 8601 date or date-time"), true);
@@ -113,7 +115,7 @@ void UpdateIncidenceTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolS
     }
 
     std::optional<QString> dueStr;
-    if (!ToolUtils::readOptionalString(arguments, u"due"_s, dueStr)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readOptionalString(arguments, u"due"_s, dueStr)) {
         call->finishWithText(i18n("Argument due must be a string"), true);
         return;
     }
@@ -134,21 +136,24 @@ void UpdateIncidenceTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolS
         }
     }
 
-    if (const QJsonValue priorityValue = arguments.value(u"priority"_s); ToolUtils::isProvided(priorityValue)) {
-        const int priority = priorityValue.toInt(-1);
-        if (!priorityValue.isDouble() || priority < undefinedPriority || priority > lowestPriority) {
+    if (const QJsonValue priorityValue = arguments.value(u"priority"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(priorityValue)) {
+        const std::optional<qint64> priority = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(priorityValue);
+        if (!priority || *priority < undefinedPriority || *priority > lowestPriority) {
             call->finishWithText(i18n("Argument priority must be an integer between %1 and %2", undefinedPriority, lowestPriority), true);
             return;
         }
-        changes.priority = priority;
+        changes.priority = static_cast<int>(*priority);
     }
 
-    if (const QJsonValue completedValue = arguments.value(u"completed"_s); ToolUtils::isProvided(completedValue)) {
-        if (!completedValue.isBool()) {
+    if (const QJsonValue completedValue = arguments.value(u"completed"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(completedValue)) {
+        const std::optional<bool> completed = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::boolean(completedValue);
+        if (!completed) {
             call->finishWithText(i18n("Argument completed must be a boolean"), true);
             return;
         }
-        changes.completed = completedValue.toBool();
+        changes.completed = *completed;
     }
 
     if (changes.isEmpty()) {

@@ -10,8 +10,8 @@
 #include <KLocalizedString>
 #include <QJsonArray>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -20,7 +20,7 @@ namespace
 // An undefined or null value is accepted, returns false if value is not an array of positive integers
 [[nodiscard]] bool readIdList(const QJsonValue &value, QList<Akonadi::Item::Id> &ids)
 {
-    if (!ToolUtils::isProvided(value)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(value)) {
         return true;
     }
     if (!value.isArray()) {
@@ -28,10 +28,11 @@ namespace
     }
     const QJsonArray array = value.toArray();
     for (const QJsonValue &element : array) {
-        if (!element.isDouble() || element.toInteger(-1) < 0) {
+        const std::optional<qint64> id = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(element);
+        if (!id || *id < 0) {
             return false;
         }
-        ids.append(element.toInteger());
+        ids.append(*id);
     }
     return true;
 }
@@ -44,7 +45,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactGroupTool::def
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"contact_group_create"_s,
+        i18n("Create Contact Group"),
         u"Create a new contact group (distribution list) in an Akonadi address book"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::Modify,
         QMap<QString, QJsonObject>{
             {u"name"_s, McpProtocolServerTool::schemaProperty(u"string"_s, u"Name of the contact group"_s)},
             {u"contact_ids"_s,
@@ -58,13 +61,6 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactGroupTool::def
                  u"integer"_s,
                  u"Identifier of the address book (see contact_list_address_books). If omitted, the first writable address book is used"_s)}},
         {u"name"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(false);
-    annotation.setDestructiveHint(false);
-    annotation.setIdempotentHint(false);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Create Contact Group"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
@@ -85,18 +81,20 @@ void CreateContactGroupTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtoc
     }
 
     QStringList emails;
-    if (!ToolUtils::readStringList(arguments.value(u"emails"_s), emails)) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::readStringList(arguments.value(u"emails"_s), emails)) {
         call->finishWithText(i18n("Argument emails must be an array of strings"), true);
         return;
     }
 
     Akonadi::Collection::Id addressBookId = -1;
-    if (const QJsonValue addressBookValue = arguments.value(u"address_book_id"_s); ToolUtils::isProvided(addressBookValue)) {
-        if (!addressBookValue.isDouble() || addressBookValue.toInteger(-1) < 0) {
+    if (const QJsonValue addressBookValue = arguments.value(u"address_book_id"_s);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(addressBookValue)) {
+        const std::optional<qint64> id = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(addressBookValue);
+        if (!id || *id < 0) {
             call->finishWithText(i18n("Argument address_book_id must be a positive integer"), true);
             return;
         }
-        addressBookId = addressBookValue.toInteger();
+        addressBookId = *id;
     }
 
     auto job = new CreateContactGroupToolJob(call);

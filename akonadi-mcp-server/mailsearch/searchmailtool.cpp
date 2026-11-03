@@ -8,8 +8,8 @@
 #include "searchmailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 namespace
@@ -24,7 +24,9 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool SearchMailTool::definition(
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"mail_search"_s,
+        i18n("Search Mail"),
         u"Search mails in the Akonadi mail folders by subject, sender, recipient or body text, most recent first"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::ReadOnly,
         QMap<QString, QJsonObject>{
             {u"query"_s, TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"string"_s, u"Text to search for"_s)},
             {u"field"_s,
@@ -34,12 +36,6 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool SearchMailTool::definition(
              TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"integer"_s,
                                                                                         u"Maximum number of mails to return, from 1 to 100 (default 20)"_s)}},
         {u"query"_s});
-
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Search Mail"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
 }
@@ -71,20 +67,20 @@ void SearchMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServer
             call->finishWithText(i18n("Unknown mail field: %1", fieldName), true);
             return;
         }
-    } else if (!fieldValue.isUndefined() && !fieldValue.isNull()) {
+    } else if (TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(fieldValue)) {
         call->finishWithText(i18n("Argument field must be a string"), true);
         return;
     }
 
     int limit = defaultLimit;
     const QJsonValue limitValue = arguments.value(u"limit"_s);
-    if (limitValue.isDouble()) {
-        limit = limitValue.toInt(-1);
-        if (limit < 1 || limit > maximumLimit) {
+    if (const std::optional<qint64> limitInteger = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(limitValue)) {
+        if (*limitInteger < 1 || *limitInteger > maximumLimit) {
             call->finishWithText(i18n("Argument limit must be an integer between 1 and %1", maximumLimit), true);
             return;
         }
-    } else if (!limitValue.isUndefined() && !limitValue.isNull()) {
+        limit = static_cast<int>(*limitInteger);
+    } else if (TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(limitValue)) {
         call->finishWithText(i18n("Argument limit must be an integer"), true);
         return;
     }

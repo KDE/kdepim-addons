@@ -9,6 +9,7 @@
 #include "markmailtooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
@@ -23,14 +24,11 @@ namespace
 [[nodiscard]] bool readOptionalBool(const QMap<QString, QJsonValue> &args, const QString &key, std::optional<bool> &result)
 {
     const QJsonValue value = args.value(key);
-    if (value.isUndefined() || value.isNull()) {
+    if (!TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(value)) {
         return true;
     }
-    if (!value.isBool()) {
-        return false;
-    }
-    result = value.toBool();
-    return true;
+    result = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::boolean(value);
+    return result.has_value();
 }
 }
 
@@ -38,18 +36,16 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool MarkMailTool::definition() 
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"mail_mark"_s,
+        i18n("Mark Mail"),
         u"Mark a mail as read or unread, important or not important"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::Modify,
         QMap<QString, QJsonObject>{
             {u"id"_s, McpProtocolServerTool::schemaProperty(u"integer"_s, u"Identifier of the mail item (see mail_search)"_s)},
             {u"read"_s, McpProtocolServerTool::schemaProperty(u"boolean"_s, u"Mark the mail as read (true) or unread (false)"_s)},
             {u"important"_s, McpProtocolServerTool::schemaProperty(u"boolean"_s, u"Mark the mail as important (true) or not important (false)"_s)}},
         {u"id"_s});
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(false);
-    annotation.setDestructiveHint(false);
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation = tool.annotations().value();
     annotation.setIdempotentHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Mark Mail"));
     tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
@@ -58,11 +54,12 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool MarkMailTool::definition() 
 void MarkMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const QJsonValue idValue = call->arguments().value(u"id"_s);
-    if (!idValue.isDouble()) {
+    const std::optional<qint64> itemIdArgument = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(idValue);
+    if (!itemIdArgument) {
         call->finishWithText(i18n("Argument id must be an integer"), true);
         return;
     }
-    const qint64 itemId = idValue.toInteger(-1);
+    const qint64 itemId = *itemIdArgument;
     if (itemId < 0) {
         call->finishWithText(i18n("Argument id must be a positive integer"), true);
         return;

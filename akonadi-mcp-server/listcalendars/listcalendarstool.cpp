@@ -9,7 +9,6 @@
 #include "listcalendarstooljob.h"
 #include <KLocalizedString>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 ListCalendarsTool::ListCalendarsTool() = default;
@@ -18,13 +17,10 @@ ListCalendarsTool::~ListCalendarsTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListCalendarsTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool =
-        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"calendar_list"_s, u"List the Akonadi calendars"_s);
-
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("List Calendars"));
-    tool.setAnnotations(annotation);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"calendar_list"_s,
+                                                                               i18n("List Calendars"),
+                                                                               u"List the Akonadi calendars"_s,
+                                                                               TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::ReadOnly);
     ToolUtils::addToolMeta(tool, ToolUtils::Calendar);
     return tool;
 }

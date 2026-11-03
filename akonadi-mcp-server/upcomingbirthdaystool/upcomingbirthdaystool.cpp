@@ -9,8 +9,8 @@
 #include "upcomingbirthdaystooljob.h"
 #include <KLocalizedString>
 #include <QJsonValue>
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolArguments>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 namespace
@@ -25,17 +25,13 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpcomingBirthdaysTool::defi
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(
         u"contact_upcoming_birthdays"_s,
+        i18n("Upcoming Birthdays"),
         u"List the contacts of the Akonadi address books whose birthday occurs in the coming days"_s,
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::ReadOnly,
         QMap<QString, QJsonObject>{
             {u"days"_s,
              TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::schemaProperty(u"integer"_s,
                                                                                         u"Number of days to look ahead, from 1 to 366 (default 30)"_s)}});
-
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("Upcoming Birthdays"));
-    tool.setAnnotations(annotation);
     ToolUtils::addToolMeta(tool, ToolUtils::Contact);
     return tool;
 }
@@ -44,13 +40,13 @@ void UpcomingBirthdaysTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtoco
 {
     int days = defaultDays;
     const QJsonValue daysValue = call->arguments().value(u"days"_s);
-    if (daysValue.isDouble()) {
-        days = daysValue.toInt(-1);
-        if (days < 1 || days > maximumDays) {
+    if (const std::optional<qint64> daysInteger = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(daysValue)) {
+        if (*daysInteger < 1 || *daysInteger > maximumDays) {
             call->finishWithText(i18n("Argument days must be an integer between 1 and %1", maximumDays), true);
             return;
         }
-    } else if (!daysValue.isUndefined() && !daysValue.isNull()) {
+        days = static_cast<int>(*daysInteger);
+    } else if (TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::isProvided(daysValue)) {
         call->finishWithText(i18n("Argument days must be an integer"), true);
         return;
     }

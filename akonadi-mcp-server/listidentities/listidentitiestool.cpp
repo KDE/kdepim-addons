@@ -10,7 +10,6 @@
 #include <KIdentityManagementCore/IdentityManager>
 #include <KLocalizedString>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolToolAnnotations>
 
 using namespace Qt::Literals::StringLiterals;
 ListIdentitiesTool::ListIdentitiesTool() = default;
@@ -19,13 +18,10 @@ ListIdentitiesTool::~ListIdentitiesTool() = default;
 TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListIdentitiesTool::definition() const
 {
     TextAutoGenerateTextMcpProtocolCore::McpProtocolTool tool =
-        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"mail_list_identities"_s, u"List the identities"_s);
-
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolToolAnnotations annotation;
-    annotation.setReadOnlyHint(true);
-    annotation.setOpenWorldHint(false);
-    tool.setTitle(i18n("List Identities"));
-    tool.setAnnotations(annotation);
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::createTool(u"mail_list_identities"_s,
+                                                                               i18n("List Identities"),
+                                                                               u"List the identities"_s,
+                                                                               TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool::ToolKind::ReadOnly);
     ToolUtils::addToolMeta(tool, ToolUtils::Mail);
     return tool;
 }
