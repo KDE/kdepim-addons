@@ -26,7 +26,6 @@ AkonadiMCPServerConfigurationModule::AkonadiMCPServerConfigurationModule(QObject
     , mEnabled(new QCheckBox(i18n("Enabled"), widget()))
 {
     auto lay = new QVBoxLayout(widget());
-    lay->setContentsMargins({});
     lay->addWidget(mEnabled);
     lay->addWidget(mMcpProtocolServerConfigureWidget);
     lay->addStretch(1);
