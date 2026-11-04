@@ -11,6 +11,7 @@
         "Description[pt_BR]": "Configuração do servidor MCP do Akonadi",
         "Description[ru]": "Настройка сервера MCP Akonadi",
         "Description[sl]": "Konfiguracija strežnika Akonadi MCP",
+        "Description[tr]": "Akonadi MCP Sunucusu yapılandırması",
         "Description[uk]": "Налаштування сервера MCP Akonadi",
         "Icon": "akonadi",
         "Name": "Akonadi MCP Server",
@@ -24,6 +25,7 @@
         "Name[pt_BR]": "Servidor MCP do Akonadi",
         "Name[ru]": "Сервер MCP Akonadi",
         "Name[sl]": "Akonadi MCP Server",
+        "Name[tr]": "Akonadi MCP Sunucusu",
         "Name[uk]": "Сервер MCP Akonadi"
     },
     "NoDisplay": "false",
