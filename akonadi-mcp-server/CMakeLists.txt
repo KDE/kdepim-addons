@@ -79,6 +79,10 @@ target_sources(
         replymailtool/replymailtool.cpp
         replymailtool/replymailtooljob.h
         replymailtool/replymailtooljob.cpp
+        forwardmailtool/forwardmailtool.h
+        forwardmailtool/forwardmailtool.cpp
+        forwardmailtool/forwardmailtooljob.h
+        forwardmailtool/forwardmailtooljob.cpp
         editmailtool/editmailtool.h
         editmailtool/editmailtool.cpp
         editmailtool/editmailtooljob.h
