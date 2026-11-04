@@ -99,6 +99,8 @@ target_sources(
         listcalendars/listcalendarstooljob.h
         listidentities/listidentitiestool.h
         listidentities/listidentitiestool.cpp
+        createtransporttool/createtransporttool.h
+        createtransporttool/createtransporttool.cpp
         markmailtool/markmailtool.h
         markmailtool/markmailtool.cpp
         markmailtool/markmailtooljob.h
@@ -134,6 +136,7 @@ target_link_libraries(
     KPim6::AkonadiMime
     KF6::Mime
     KPim6::IdentityManagementCore
+    KPim6::MailTransport
     Qt::DBus
     KF6::DBusAddons
     KF6::Crash
