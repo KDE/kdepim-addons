@@ -12,6 +12,7 @@
 #include "createcontactgrouptool/createcontactgrouptool.h"
 #include "createcontacttool/createcontacttool.h"
 #include "createeventtool/createeventtool.h"
+#include "createidentitytool/createidentitytool.h"
 #include "createjournaltool/createjournaltool.h"
 #include "createmailtool/createmailtool.h"
 #include "createtodotool/createtodotool.h"
@@ -85,6 +86,7 @@ AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
     addTool(std::make_unique<MoveMailTool>());
     addTool(std::make_unique<CreateContactGroupTool>());
     addTool(std::make_unique<CreateTransportTool>());
+    addTool(std::make_unique<CreateIdentityTool>());
 }
 
 AkonadiMcpProtocolManager::~AkonadiMcpProtocolManager() = default;
