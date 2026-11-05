@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:03+0000\n"
+"POT-Creation-Date: 2026-11-05 00:56+0000\n"
 "PO-Revision-Date: 2026-10-14 02:01+0000\n"
 "Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
 "Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
@@ -23,7 +23,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: akonadimcpprotocolmanager.cpp:55
+#: akonadimcpprotocolmanager.cpp:57
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr ""
@@ -486,6 +486,46 @@ msgstr ""
 msgid "Argument priority must be an integer"
 msgstr ""
 
+#: createtransporttool/createtransporttool.cpp:59
+#, kde-format
+msgid "Create Mail Transport"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:84
+#, kde-format
+msgid "Argument host must be a non-empty string"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:95
+#, kde-format
+msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:108
+#, kde-format
+msgid "Argument port must be between 1 and 65535"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:113
+#, kde-format
+msgid "Argument port must be an integer"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:124
+#, kde-format
+msgid "Invalid authentication_type \"%1\", expected one of: %2"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:136
+#, kde-format
+msgid "Argument set_as_default must be a boolean"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:170
+#, kde-format
+msgid "Transport \"%1\" created (id %2)"
+msgstr ""
+
 #: deletecontacttool/deletecontacttool.cpp:25
 #, kde-format
 msgid "Delete Contact"
@@ -493,9 +533,9 @@ msgstr ""
 
 #: deletecontacttool/deletecontacttool.cpp:42
 #: deleteincidencetool/deleteincidencetool.cpp:43
-#: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:59
-#: movemailtool/movemailtool.cpp:49 openmailtool/openmailtool.cpp:40
-#: replymailtool/replymailtool.cpp:64
+#: editmailtool/editmailtool.cpp:41 forwardmailtool/forwardmailtool.cpp:49
+#: markmailtool/markmailtool.cpp:59 movemailtool/movemailtool.cpp:49
+#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
 #: updatecontacttool/updatecontacttool.cpp:56
 #: updateincidencetool/updateincidencetool.cpp:65
 #, kde-format
@@ -504,9 +544,9 @@ msgstr ""
 
 #: deletecontacttool/deletecontacttool.cpp:47
 #: deleteincidencetool/deleteincidencetool.cpp:48
-#: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:64
-#: movemailtool/movemailtool.cpp:54 openmailtool/openmailtool.cpp:45
-#: replymailtool/replymailtool.cpp:69
+#: editmailtool/editmailtool.cpp:46 forwardmailtool/forwardmailtool.cpp:54
+#: markmailtool/markmailtool.cpp:64 movemailtool/movemailtool.cpp:54
+#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:61
 #: updateincidencetool/updateincidencetool.cpp:70
 #, kde-format
@@ -588,8 +628,10 @@ msgstr ""
 msgid "Edit Mail"
 msgstr ""
 
-#: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
-#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
+#: editmailtool/editmailtooljob.cpp:39
+#: forwardmailtool/forwardmailtooljob.cpp:37
+#: markmailtool/markmailtooljob.cpp:43 movemailtool/movemailtooljob.cpp:69
+#: openmailtool/openmailtooljob.cpp:32
 #, kde-format
 msgid "Mail id must be a positive integer"
 msgstr ""
@@ -626,6 +668,31 @@ msgstr ""
 #: editmailtool/editmailtooljob.cpp:111
 #, kde-format
 msgid "Draft mail %1 opened in a KMail composer"
+msgstr ""
+
+#: forwardmailtool/forwardmailtool.cpp:30
+#, kde-format
+msgid "Forward Mail"
+msgstr ""
+
+#: forwardmailtool/forwardmailtool.cpp:64
+#, kde-format
+msgid "Argument mode must be one of: inline, attachment"
+msgstr ""
+
+#: forwardmailtool/forwardmailtooljob.cpp:49
+#, kde-format
+msgid "Unable to forward mail %1: %2"
+msgstr ""
+
+#: forwardmailtool/forwardmailtooljob.cpp:56
+#, kde-format
+msgid "Unable to forward mail %1: KMail main window is not available"
+msgstr ""
+
+#: forwardmailtool/forwardmailtooljob.cpp:59
+#, kde-format
+msgid "Forward composer opened in KMail for mail %1"
 msgstr ""
 
 #: freebusytool/freebusytool.cpp:27

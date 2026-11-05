@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:03+0000\n"
+"POT-Creation-Date: 2026-11-05 00:56+0000\n"
 "PO-Revision-Date: 2026-10-27 09:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: akonadimcpprotocolmanager.cpp:55
+#: akonadimcpprotocolmanager.cpp:57
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "管理来自 Akonadi 的信息"
@@ -491,6 +491,52 @@ msgstr "参数 priority 必须是介于 %1 和 %2 之间的整数"
 msgid "Argument priority must be an integer"
 msgstr "参数 priority 必须是整数"
 
+#: createtransporttool/createtransporttool.cpp:59
+#, fuzzy, kde-format
+#| msgid "Create Mail"
+msgid "Create Mail Transport"
+msgstr "创建邮件"
+
+#: createtransporttool/createtransporttool.cpp:84
+#, fuzzy, kde-format
+#| msgid "Argument subject must be a non-empty string"
+msgid "Argument host must be a non-empty string"
+msgstr "参数 subject 必须是非空字符串"
+
+#: createtransporttool/createtransporttool.cpp:95
+#, kde-format
+msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:108
+#, fuzzy, kde-format
+#| msgid "Argument priority must be an integer between %1 and %2"
+msgid "Argument port must be between 1 and 65535"
+msgstr "参数 priority 必须是介于 %1 和 %2 之间的整数"
+
+#: createtransporttool/createtransporttool.cpp:113
+#, fuzzy, kde-format
+#| msgid "Argument priority must be an integer"
+msgid "Argument port must be an integer"
+msgstr "参数 priority 必须是整数"
+
+#: createtransporttool/createtransporttool.cpp:124
+#, kde-format
+msgid "Invalid authentication_type \"%1\", expected one of: %2"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:136
+#, fuzzy, kde-format
+#| msgid "Argument read must be a boolean"
+msgid "Argument set_as_default must be a boolean"
+msgstr "参数 read 必须是布尔值"
+
+#: createtransporttool/createtransporttool.cpp:170
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" updated (item id: %2)"
+msgid "Transport \"%1\" created (id %2)"
+msgstr "事件“%1”已更新 (项目 ID：%2)"
+
 #: deletecontacttool/deletecontacttool.cpp:25
 #, kde-format
 msgid "Delete Contact"
@@ -498,9 +544,9 @@ msgstr "删除联系人"
 
 #: deletecontacttool/deletecontacttool.cpp:42
 #: deleteincidencetool/deleteincidencetool.cpp:43
-#: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:59
-#: movemailtool/movemailtool.cpp:49 openmailtool/openmailtool.cpp:40
-#: replymailtool/replymailtool.cpp:64
+#: editmailtool/editmailtool.cpp:41 forwardmailtool/forwardmailtool.cpp:49
+#: markmailtool/markmailtool.cpp:59 movemailtool/movemailtool.cpp:49
+#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
 #: updatecontacttool/updatecontacttool.cpp:56
 #: updateincidencetool/updateincidencetool.cpp:65
 #, kde-format
@@ -509,9 +555,9 @@ msgstr "参数 id 必须是整数"
 
 #: deletecontacttool/deletecontacttool.cpp:47
 #: deleteincidencetool/deleteincidencetool.cpp:48
-#: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:64
-#: movemailtool/movemailtool.cpp:54 openmailtool/openmailtool.cpp:45
-#: replymailtool/replymailtool.cpp:69
+#: editmailtool/editmailtool.cpp:46 forwardmailtool/forwardmailtool.cpp:54
+#: markmailtool/markmailtool.cpp:64 movemailtool/movemailtool.cpp:54
+#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:61
 #: updateincidencetool/updateincidencetool.cpp:70
 #, kde-format
@@ -593,8 +639,10 @@ msgstr "“%1”已删除 (项目 ID：%2)"
 msgid "Edit Mail"
 msgstr "编辑邮件"
 
-#: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
-#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
+#: editmailtool/editmailtooljob.cpp:39
+#: forwardmailtool/forwardmailtooljob.cpp:37
+#: markmailtool/markmailtooljob.cpp:43 movemailtool/movemailtooljob.cpp:69
+#: openmailtool/openmailtooljob.cpp:32
 #, kde-format
 msgid "Mail id must be a positive integer"
 msgstr "邮件 ID 必须是正整数"
@@ -634,6 +682,36 @@ msgstr "无法编辑邮件 %1：KMail 主窗口不可用"
 #, kde-format
 msgid "Draft mail %1 opened in a KMail composer"
 msgstr "草稿邮件 %1 已在 KMail 撰写器中打开"
+
+#: forwardmailtool/forwardmailtool.cpp:30
+#, fuzzy, kde-format
+#| msgid "Mark Mail"
+msgid "Forward Mail"
+msgstr "标记邮件"
+
+#: forwardmailtool/forwardmailtool.cpp:64
+#, fuzzy, kde-format
+#| msgid "Argument id must be an integer"
+msgid "Argument mode must be one of: inline, attachment"
+msgstr "参数 id 必须是整数"
+
+#: forwardmailtool/forwardmailtooljob.cpp:49
+#, fuzzy, kde-format
+#| msgid "Unable to edit mail %1: %2"
+msgid "Unable to forward mail %1: %2"
+msgstr "无法编辑邮件“%1”：%2"
+
+#: forwardmailtool/forwardmailtooljob.cpp:56
+#, fuzzy, kde-format
+#| msgid "Unable to edit mail %1: KMail main window is not available"
+msgid "Unable to forward mail %1: KMail main window is not available"
+msgstr "无法编辑邮件 %1：KMail 主窗口不可用"
+
+#: forwardmailtool/forwardmailtooljob.cpp:59
+#, fuzzy, kde-format
+#| msgid "Reply composer opened in KMail for mail %1"
+msgid "Forward composer opened in KMail for mail %1"
+msgstr "邮件 %1 的回复撰写器已在 KMail 中打开"
 
 #: freebusytool/freebusytool.cpp:27
 #, kde-format

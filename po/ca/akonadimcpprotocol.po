@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:03+0000\n"
+"POT-Creation-Date: 2026-11-05 00:56+0000\n"
 "PO-Revision-Date: 2026-10-29 11:34+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "txemaq@gmail.com"
 
-#: akonadimcpprotocolmanager.cpp:55
+#: akonadimcpprotocolmanager.cpp:57
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Gestiona la informació de l'Akonadi"
@@ -504,6 +504,52 @@ msgstr "L'argument «prioritat» ha de ser un enter entre %1 i %2"
 msgid "Argument priority must be an integer"
 msgstr "L'argument «prioritat» ha de ser un enter"
 
+#: createtransporttool/createtransporttool.cpp:59
+#, fuzzy, kde-format
+#| msgid "Create Mail"
+msgid "Create Mail Transport"
+msgstr "Crea un correu"
+
+#: createtransporttool/createtransporttool.cpp:84
+#, fuzzy, kde-format
+#| msgid "Argument subject must be a non-empty string"
+msgid "Argument host must be a non-empty string"
+msgstr "L'argument «assumpte» ha de ser una cadena no buida"
+
+#: createtransporttool/createtransporttool.cpp:95
+#, kde-format
+msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:108
+#, fuzzy, kde-format
+#| msgid "Argument priority must be an integer between %1 and %2"
+msgid "Argument port must be between 1 and 65535"
+msgstr "L'argument «prioritat» ha de ser un enter entre %1 i %2"
+
+#: createtransporttool/createtransporttool.cpp:113
+#, fuzzy, kde-format
+#| msgid "Argument priority must be an integer"
+msgid "Argument port must be an integer"
+msgstr "L'argument «prioritat» ha de ser un enter"
+
+#: createtransporttool/createtransporttool.cpp:124
+#, kde-format
+msgid "Invalid authentication_type \"%1\", expected one of: %2"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:136
+#, fuzzy, kde-format
+#| msgid "Argument read must be a boolean"
+msgid "Argument set_as_default must be a boolean"
+msgstr "L'argument «read» ha de ser un booleà"
+
+#: createtransporttool/createtransporttool.cpp:170
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" updated (item id: %2)"
+msgid "Transport \"%1\" created (id %2)"
+msgstr "S'ha actualitzat l'esdeveniment «%1» (ID d'element: %2)"
+
 #: deletecontacttool/deletecontacttool.cpp:25
 #, kde-format
 msgid "Delete Contact"
@@ -511,9 +557,9 @@ msgstr "Suprimeix el contacte"
 
 #: deletecontacttool/deletecontacttool.cpp:42
 #: deleteincidencetool/deleteincidencetool.cpp:43
-#: editmailtool/editmailtool.cpp:41 markmailtool/markmailtool.cpp:59
-#: movemailtool/movemailtool.cpp:49 openmailtool/openmailtool.cpp:40
-#: replymailtool/replymailtool.cpp:64
+#: editmailtool/editmailtool.cpp:41 forwardmailtool/forwardmailtool.cpp:49
+#: markmailtool/markmailtool.cpp:59 movemailtool/movemailtool.cpp:49
+#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
 #: updatecontacttool/updatecontacttool.cpp:56
 #: updateincidencetool/updateincidencetool.cpp:65
 #, kde-format
@@ -522,9 +568,9 @@ msgstr "L'argument «id» ha de ser un enter"
 
 #: deletecontacttool/deletecontacttool.cpp:47
 #: deleteincidencetool/deleteincidencetool.cpp:48
-#: editmailtool/editmailtool.cpp:46 markmailtool/markmailtool.cpp:64
-#: movemailtool/movemailtool.cpp:54 openmailtool/openmailtool.cpp:45
-#: replymailtool/replymailtool.cpp:69
+#: editmailtool/editmailtool.cpp:46 forwardmailtool/forwardmailtool.cpp:54
+#: markmailtool/markmailtool.cpp:64 movemailtool/movemailtool.cpp:54
+#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:61
 #: updateincidencetool/updateincidencetool.cpp:70
 #, kde-format
@@ -606,8 +652,10 @@ msgstr "S'ha suprimit «%1» (ID d'element: %2)"
 msgid "Edit Mail"
 msgstr "Edita un correu"
 
-#: editmailtool/editmailtooljob.cpp:39 markmailtool/markmailtooljob.cpp:43
-#: movemailtool/movemailtooljob.cpp:69 openmailtool/openmailtooljob.cpp:32
+#: editmailtool/editmailtooljob.cpp:39
+#: forwardmailtool/forwardmailtooljob.cpp:37
+#: markmailtool/markmailtooljob.cpp:43 movemailtool/movemailtooljob.cpp:69
+#: openmailtool/openmailtooljob.cpp:32
 #, kde-format
 msgid "Mail id must be a positive integer"
 msgstr "L'«id del correu» ha de ser un enter positiu"
@@ -649,6 +697,38 @@ msgstr ""
 #, kde-format
 msgid "Draft mail %1 opened in a KMail composer"
 msgstr "L'esborrany de correu %1 s'ha obert en l'editor del KMail"
+
+#: forwardmailtool/forwardmailtool.cpp:30
+#, fuzzy, kde-format
+#| msgid "Mark Mail"
+msgid "Forward Mail"
+msgstr "Marca el correu"
+
+#: forwardmailtool/forwardmailtool.cpp:64
+#, fuzzy, kde-format
+#| msgid "Argument id must be an integer"
+msgid "Argument mode must be one of: inline, attachment"
+msgstr "L'argument «id» ha de ser un enter"
+
+#: forwardmailtool/forwardmailtooljob.cpp:49
+#, fuzzy, kde-format
+#| msgid "Unable to edit mail %1: %2"
+msgid "Unable to forward mail %1: %2"
+msgstr "No s'ha pogut editar el correu %1: %2"
+
+#: forwardmailtool/forwardmailtooljob.cpp:56
+#, fuzzy, kde-format
+#| msgid "Unable to edit mail %1: KMail main window is not available"
+msgid "Unable to forward mail %1: KMail main window is not available"
+msgstr ""
+"No s'ha pogut editar el correu %1: la finestra principal del KMail no és "
+"disponible"
+
+#: forwardmailtool/forwardmailtooljob.cpp:59
+#, fuzzy, kde-format
+#| msgid "Reply composer opened in KMail for mail %1"
+msgid "Forward composer opened in KMail for mail %1"
+msgstr "L'editor de respostes s'ha obert al KMail per al correu %1"
 
 #: freebusytool/freebusytool.cpp:27
 #, kde-format
