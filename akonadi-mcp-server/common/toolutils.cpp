@@ -48,7 +48,5 @@ void ToolUtils::addToolMeta(TextAutoGenerateTextMcpProtocolCore::McpProtocolMeta
 
 void ToolUtils::addToolMeta(TextAutoGenerateTextMcpProtocolCore::McpProtocolTool &tool, TitleType type)
 {
-    TextAutoGenerateTextMcpProtocolCore::McpProtocolMeta meta = tool.meta().value_or(TextAutoGenerateTextMcpProtocolCore::McpProtocolMeta{});
-    addToolMeta(meta, type);
-    tool.setMeta(meta);
+    TextAutoGenerateTextMcpProtocolCore::McpProtocolCommonUtils::addToolMeta(tool, groupFromType(type), groupTitleFromType(type));
 }
