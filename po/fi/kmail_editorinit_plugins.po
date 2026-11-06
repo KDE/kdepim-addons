@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2017, 2018, 2020, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2017, 2018, 2020, 2024, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 00:46+0000\n"
-"PO-Revision-Date: 2024-10-20 17:22+0300\n"
+"PO-Revision-Date: 2026-10-06 10:17+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: externalcomposer/externalcomposerconfiguredialog.cpp:16
 #, kde-format
@@ -32,7 +32,7 @@ msgstr "Käytä oman muokkaimen sijaan ulkoista ohjelmaa"
 #: externalcomposer/externalcomposerconfigurewidget.cpp:37
 #, kde-format
 msgid "Specify editor:"
-msgstr ""
+msgstr "Aseta muokkain:"
 
 #: externalcomposer/externalcomposerconfigurewidget.cpp:53
 #, kde-format

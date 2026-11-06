@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the kdepim-addons package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:48+0000\n"
-"PO-Revision-Date: 2025-09-03 11:16+0300\n"
+"PO-Revision-Date: 2026-11-05 13:24+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: common/expandurlplugin/viewerpluginexpandurlinterface.cpp:42
 #, kde-format
@@ -278,14 +278,7 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">פרטי תבנית ארגומנטים…</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%s - the subject of message</li><li>%from - the from email "
-#| "address</li><li>%cc - the list of cc email address</li><li>%bcc - the "
-#| "list of bcc email address</li><li>%body - the body of message</li><li>"
-#| "%inreplyto - the reply email address</li><li>%akonadiUrl - the akonadi "
-#| "url (as akonadi:?item=187020)</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%s - the subject of message</li><li>%from - the from email "
@@ -298,7 +291,7 @@ msgstr ""
 "- נושא ההודעה</li><li>%from - הכתובת „מאת” של ההודעה</li><li>%cc - רשימת "
 "כתובות העותקים</li><li>%bcc - רשימת כתובות העותקים הסמויים</li><li>%body - "
 "תוכן ההודעה</li><li>%inreplyto - כתובת הדוא״ל לתגובה</li><li>%akonadiUrl - "
-"כתובת akonadi (למשל: akonadi:?item=187020)</li></ul></strong></p></qt>"
+"כתובת akonadi (למשל: akonadi:?item=187020)</li></ul></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
 #, kde-format

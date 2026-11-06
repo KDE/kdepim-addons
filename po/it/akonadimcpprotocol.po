@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:56+0000\n"
+"POT-Creation-Date: 2026-11-06 00:52+0000\n"
 "PO-Revision-Date: 2026-10-21 16:00+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: akonadimcpprotocolmanager.cpp:57
+#: akonadimcpprotocolmanager.cpp:58
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Gestisci le informazioni da Akonadi"
@@ -252,6 +252,7 @@ msgid "Contact group name is empty"
 msgstr "Il nome del gruppo di contatti è vuoto"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#: createidentitytool/createidentitytool.cpp:59
 #, kde-format
 msgid "Invalid email address \"%1\""
 msgstr "Indirizzo di posta non valido «%1»"
@@ -397,6 +398,55 @@ msgstr "L'argomento calendar_id deve essere un numero intero positivo"
 msgid "Argument calendar_id must be an integer"
 msgstr "L'argomento calendar_id deve essere un numero intero"
 
+#: createidentitytool/createidentitytool.cpp:28
+#, fuzzy, kde-format
+#| msgid "Create Event"
+msgid "Create Identity"
+msgstr "Crea evento"
+
+#: createidentitytool/createidentitytool.cpp:55
+#, fuzzy, kde-format
+#| msgid "Argument name must be a non-empty string"
+msgid "Argument email must be a non-empty string"
+msgstr "L'argomento «nome» deve essere una stringa non vuota"
+
+#: createidentitytool/createidentitytool.cpp:65
+#, fuzzy, kde-format
+#| msgid "Argument emails must be an array of strings"
+msgid "Argument email_aliases must be an array of strings"
+msgstr "L'argomento «messaggi» deve essere un array di stringhe"
+
+#: createidentitytool/createidentitytool.cpp:70
+#, fuzzy, kde-format
+#| msgid "Invalid email address \"%1\""
+msgid "Invalid email alias \"%1\""
+msgstr "Indirizzo di posta non valido «%1»"
+
+#: createidentitytool/createidentitytool.cpp:79
+#, fuzzy, kde-format
+#| msgid "No mail found for \"%1\""
+msgid "No mail transport found with id %1"
+msgstr "Nessun messaggio trovato per «%1»"
+
+#: createidentitytool/createidentitytool.cpp:84
+#, fuzzy, kde-format
+#| msgid "Argument priority must be an integer"
+msgid "Argument transport_id must be an integer"
+msgstr "L'argomento «priorità» deve essere un intero"
+
+#: createidentitytool/createidentitytool.cpp:93
+#: createtransporttool/createtransporttool.cpp:136
+#, fuzzy, kde-format
+#| msgid "Argument read must be a boolean"
+msgid "Argument set_as_default must be a boolean"
+msgstr "L'argomento «letto» deve essere un valore booleano"
+
+#: createidentitytool/createidentitytool.cpp:136
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" updated (item id: %2)"
+msgid "Identity \"%1\" created (uoid %2)"
+msgstr "Evento «%1» aggiornato (ID elemento: %2)"
+
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
 msgid "Create Journal Entry"
@@ -536,12 +586,6 @@ msgstr "L'argomento «priorità» deve essere un intero"
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
 msgstr ""
-
-#: createtransporttool/createtransporttool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Argument read must be a boolean"
-msgid "Argument set_as_default must be a boolean"
-msgstr "L'argomento «letto» deve essere un valore booleano"
 
 #: createtransporttool/createtransporttool.cpp:170
 #, fuzzy, kde-format

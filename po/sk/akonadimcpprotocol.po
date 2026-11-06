@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:56+0000\n"
+"POT-Creation-Date: 2026-11-06 00:52+0000\n"
 "PO-Revision-Date: 2026-10-28 10:57+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: akonadimcpprotocolmanager.cpp:57
+#: akonadimcpprotocolmanager.cpp:58
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Správa informácií z Akonadi"
@@ -251,6 +251,7 @@ msgid "Contact group name is empty"
 msgstr "Názov skupiny kontaktov je prázdny"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#: createidentitytool/createidentitytool.cpp:59
 #, kde-format
 msgid "Invalid email address \"%1\""
 msgstr "Neplatná e-mailová adresa „%1“"
@@ -399,6 +400,55 @@ msgstr "Argument calendar_id musí byť kladné celé číslo"
 msgid "Argument calendar_id must be an integer"
 msgstr "Argument calendar_id musí byť celé číslo"
 
+#: createidentitytool/createidentitytool.cpp:28
+#, fuzzy, kde-format
+#| msgid "Create Event"
+msgid "Create Identity"
+msgstr "Vytvoriť udalosť"
+
+#: createidentitytool/createidentitytool.cpp:55
+#, fuzzy, kde-format
+#| msgid "Argument name must be a non-empty string"
+msgid "Argument email must be a non-empty string"
+msgstr "Argument name musí byť neprázdny reťazec"
+
+#: createidentitytool/createidentitytool.cpp:65
+#, fuzzy, kde-format
+#| msgid "Argument emails must be an array of strings"
+msgid "Argument email_aliases must be an array of strings"
+msgstr "Argument emails musí byť pole reťazcov"
+
+#: createidentitytool/createidentitytool.cpp:70
+#, fuzzy, kde-format
+#| msgid "Invalid email address \"%1\""
+msgid "Invalid email alias \"%1\""
+msgstr "Neplatná e-mailová adresa „%1“"
+
+#: createidentitytool/createidentitytool.cpp:79
+#, fuzzy, kde-format
+#| msgid "No mail found for \"%1\""
+msgid "No mail transport found with id %1"
+msgstr "Pre „%1“ sa nenašla žiadna správa"
+
+#: createidentitytool/createidentitytool.cpp:84
+#, fuzzy, kde-format
+#| msgid "Argument priority must be an integer"
+msgid "Argument transport_id must be an integer"
+msgstr "Argument priority musí byť celé číslo"
+
+#: createidentitytool/createidentitytool.cpp:93
+#: createtransporttool/createtransporttool.cpp:136
+#, fuzzy, kde-format
+#| msgid "Argument read must be a boolean"
+msgid "Argument set_as_default must be a boolean"
+msgstr "Argument read musí byť logická hodnota"
+
+#: createidentitytool/createidentitytool.cpp:136
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" updated (item id: %2)"
+msgid "Identity \"%1\" created (uoid %2)"
+msgstr "Udalosť „%1“ bola aktualizovaná (ID položky: %2)"
+
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
 msgid "Create Journal Entry"
@@ -533,12 +583,6 @@ msgstr "Argument priority musí byť celé číslo"
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
 msgstr ""
-
-#: createtransporttool/createtransporttool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Argument read must be a boolean"
-msgid "Argument set_as_default must be a boolean"
-msgstr "Argument read musí byť logická hodnota"
 
 #: createtransporttool/createtransporttool.cpp:170
 #, fuzzy, kde-format

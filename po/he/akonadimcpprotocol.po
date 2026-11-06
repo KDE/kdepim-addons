@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:56+0000\n"
-"PO-Revision-Date: 2026-10-16 15:14+0300\n"
+"POT-Creation-Date: 2026-11-06 00:52+0000\n"
+"PO-Revision-Date: 2026-11-05 13:24+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -21,14 +21,14 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "kde-l10n-he@kde.org"
 
-#: akonadimcpprotocolmanager.cpp:57
+#: akonadimcpprotocolmanager.cpp:58
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "ניהול פרטים מ־Akonadi"
@@ -163,7 +163,7 @@ msgstr "אירועי לוח שנה"
 #: common/toolutils.cpp:22
 #, kde-format
 msgid "Akonadi"
-msgstr ""
+msgstr "Akonadi"
 
 #: contactgroupexpandtool/contactgroupexpandtool.cpp:23
 #, kde-format
@@ -266,6 +266,7 @@ msgid "Contact group name is empty"
 msgstr "פרטי הקשר ריקים"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#: createidentitytool/createidentitytool.cpp:59
 #, kde-format
 msgid "Invalid email address \"%1\""
 msgstr ""
@@ -421,6 +422,53 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 msgid "Argument calendar_id must be an integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
+#: createidentitytool/createidentitytool.cpp:28
+#, fuzzy, kde-format
+#| msgid "Search Contacts"
+msgid "Create Identity"
+msgstr "חיפוש באנשי הקשר"
+
+#: createidentitytool/createidentitytool.cpp:55
+#, fuzzy, kde-format
+#| msgid "Argument query must be a non-empty string"
+msgid "Argument email must be a non-empty string"
+msgstr "הארגומנט query (שאילתה) חייבת להיות מחרוזת לא ריקה"
+
+#: createidentitytool/createidentitytool.cpp:65
+#, fuzzy, kde-format
+#| msgid "Argument fields must be an array"
+msgid "Argument email_aliases must be an array of strings"
+msgstr "הארגומנט fields (שדות) חייב להיות מערך"
+
+#: createidentitytool/createidentitytool.cpp:70
+#, kde-format
+msgid "Invalid email alias \"%1\""
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:79
+#, fuzzy, kde-format
+#| msgid "No mail found for \"%1\""
+msgid "No mail transport found with id %1"
+msgstr "לא נמצא דוא״ל בחיפוש אחר „%1”"
+
+#: createidentitytool/createidentitytool.cpp:84
+#, fuzzy, kde-format
+#| msgid "Argument days must be an integer"
+msgid "Argument transport_id must be an integer"
+msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+
+#: createidentitytool/createidentitytool.cpp:93
+#: createtransporttool/createtransporttool.cpp:136
+#, fuzzy, kde-format
+#| msgid "Argument include_completed must be a boolean"
+msgid "Argument set_as_default must be a boolean"
+msgstr "הארגומנט include_completed חייב להיות בוליאני"
+
+#: createidentitytool/createidentitytool.cpp:136
+#, kde-format
+msgid "Identity \"%1\" created (uoid %2)"
+msgstr ""
+
 #: createjournaltool/createjournaltool.cpp:27
 #, fuzzy, kde-format
 #| msgid "Search Contacts"
@@ -564,12 +612,6 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
 msgstr ""
-
-#: createtransporttool/createtransporttool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
-msgid "Argument set_as_default must be a boolean"
-msgstr "הארגומנט include_completed חייב להיות בוליאני"
 
 #: createtransporttool/createtransporttool.cpp:170
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:56+0000\n"
+"POT-Creation-Date: 2026-11-06 00:52+0000\n"
 "PO-Revision-Date: 2026-10-13 07:16+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -26,7 +26,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-i18n-de@kde.org"
 
-#: akonadimcpprotocolmanager.cpp:57
+#: akonadimcpprotocolmanager.cpp:58
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr ""
@@ -249,6 +249,7 @@ msgid "Contact group name is empty"
 msgstr ""
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#: createidentitytool/createidentitytool.cpp:59
 #, kde-format
 msgid "Invalid email address \"%1\""
 msgstr ""
@@ -390,6 +391,47 @@ msgstr ""
 msgid "Argument calendar_id must be an integer"
 msgstr ""
 
+#: createidentitytool/createidentitytool.cpp:28
+#, kde-format
+msgid "Create Identity"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:55
+#, kde-format
+msgid "Argument email must be a non-empty string"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:65
+#, kde-format
+msgid "Argument email_aliases must be an array of strings"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:70
+#, kde-format
+msgid "Invalid email alias \"%1\""
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:79
+#, kde-format
+msgid "No mail transport found with id %1"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:84
+#, kde-format
+msgid "Argument transport_id must be an integer"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:93
+#: createtransporttool/createtransporttool.cpp:136
+#, kde-format
+msgid "Argument set_as_default must be a boolean"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:136
+#, kde-format
+msgid "Identity \"%1\" created (uoid %2)"
+msgstr ""
+
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
 msgid "Create Journal Entry"
@@ -517,11 +559,6 @@ msgstr ""
 #: createtransporttool/createtransporttool.cpp:124
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
-msgstr ""
-
-#: createtransporttool/createtransporttool.cpp:136
-#, kde-format
-msgid "Argument set_as_default must be a boolean"
 msgstr ""
 
 #: createtransporttool/createtransporttool.cpp:170

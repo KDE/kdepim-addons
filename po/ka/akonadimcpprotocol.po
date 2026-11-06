@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:56+0000\n"
-"PO-Revision-Date: 2026-10-29 03:28+0100\n"
+"POT-Creation-Date: 2026-11-06 00:52+0000\n"
+"PO-Revision-Date: 2026-11-05 05:31+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "temuri.doghonadze@gmail.com"
 
-#: akonadimcpprotocolmanager.cpp:57
+#: akonadimcpprotocolmanager.cpp:58
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Akonadi-დან მიღებული ინფორმაციის მართვა"
@@ -251,6 +251,7 @@ msgid "Contact group name is empty"
 msgstr "საკონტაქტო ჯგუფის სახელი ცარიელია"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#: createidentitytool/createidentitytool.cpp:59
 #, kde-format
 msgid "Invalid email address \"%1\""
 msgstr "არასწორი ელფოსტის მისამართი \"%1\"."
@@ -396,6 +397,54 @@ msgstr "არგუმენტი calendar_id დადებითი მთ�
 msgid "Argument calendar_id must be an integer"
 msgstr "არგუმენტი calendar_id მთელი რიცხვი უნდა იყოს"
 
+#: createidentitytool/createidentitytool.cpp:28
+#, fuzzy, kde-format
+#| msgid "Create Event"
+msgid "Create Identity"
+msgstr "მოვლენის შექმნა"
+
+#: createidentitytool/createidentitytool.cpp:55
+#, fuzzy, kde-format
+#| msgid "Argument name must be a non-empty string"
+msgid "Argument email must be a non-empty string"
+msgstr "არგუმენტი name არაცარიელი სტრიქონი უნდა იყოს"
+
+#: createidentitytool/createidentitytool.cpp:65
+#, fuzzy, kde-format
+#| msgid "Argument emails must be an array of strings"
+msgid "Argument email_aliases must be an array of strings"
+msgstr "არგუმენტი emails სტრიქონების მასივი უნდა იყოს"
+
+#: createidentitytool/createidentitytool.cpp:70
+#, fuzzy, kde-format
+#| msgid "Invalid email address \"%1\""
+msgid "Invalid email alias \"%1\""
+msgstr "არასწორი ელფოსტის მისამართი \"%1\"."
+
+#: createidentitytool/createidentitytool.cpp:79
+#, fuzzy, kde-format
+#| msgid "No mail found for \"%1\""
+msgid "No mail transport found with id %1"
+msgstr "\"%1\"-ისთვის ელფოსტა აღმოჩენილი არაა"
+
+#: createidentitytool/createidentitytool.cpp:84
+#, fuzzy, kde-format
+#| msgid "Argument port must be an integer"
+msgid "Argument transport_id must be an integer"
+msgstr "არგუმენტი port მთელი რიცხვი უნდა იყოს"
+
+#: createidentitytool/createidentitytool.cpp:93
+#: createtransporttool/createtransporttool.cpp:136
+#, kde-format
+msgid "Argument set_as_default must be a boolean"
+msgstr "არგუმენტი set_as_default ლოგიკური მნიშვნელობა უნდა იყოს"
+
+#: createidentitytool/createidentitytool.cpp:136
+#, fuzzy, kde-format
+#| msgid "Transport \"%1\" created (id %2)"
+msgid "Identity \"%1\" created (uoid %2)"
+msgstr "ტრანსპორტი \"%1\" შეიქმნა (id %2)"
+
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
 msgid "Create Journal Entry"
@@ -498,50 +547,40 @@ msgid "Argument priority must be an integer"
 msgstr "არგუმენტი priority მთელი რიცხვი უნდა იყოს"
 
 #: createtransporttool/createtransporttool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Create Mail Transport"
-msgstr "ელფოსტის შექმნა"
+msgstr "ელფოსტის ტრანსპორტის შექმნა"
 
 #: createtransporttool/createtransporttool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument subject must be a non-empty string"
+#, kde-format
 msgid "Argument host must be a non-empty string"
-msgstr "არგუმენტი subject არაცარიელი სტრიქონი უნდა იყოს"
+msgstr "არგუმენტი host არაცარიელი სტრიქონი უნდა იყოს"
 
 #: createtransporttool/createtransporttool.cpp:95
 #, kde-format
 msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
 msgstr ""
+"არასწორი დაშიფვრა \"%1\". მოველოდი ერთერთს: 'none', 'ssl', ან 'starttls'"
 
 #: createtransporttool/createtransporttool.cpp:108
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer between %1 and %2"
+#, kde-format
 msgid "Argument port must be between 1 and 65535"
-msgstr "არგუმენტი priority უნდა იყოს მთელი რიცხვი შუალედიდან %1 - %2"
+msgstr "არგუმენტი port უნდა იყოს შუალედიდან 1-65535"
 
 #: createtransporttool/createtransporttool.cpp:113
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer"
+#, kde-format
 msgid "Argument port must be an integer"
-msgstr "არგუმენტი priority მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი port მთელი რიცხვი უნდა იყოს"
 
 #: createtransporttool/createtransporttool.cpp:124
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
-msgstr ""
-
-#: createtransporttool/createtransporttool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Argument read must be a boolean"
-msgid "Argument set_as_default must be a boolean"
-msgstr "არგუმენტი read ლოგიკური მნიშვნელობა უნდა იყოს"
+msgstr "არასწორი authentication_type '%1'. მოველოდი ერთერთს; %2"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Transport \"%1\" created (id %2)"
-msgstr "მოვლენა \"%1\" განახლდა (ელემენტის id: %2)"
+msgstr "ტრანსპორტი \"%1\" შეიქმნა (id %2)"
 
 #: deletecontacttool/deletecontacttool.cpp:25
 #, kde-format
@@ -693,36 +732,31 @@ msgid "Draft mail %1 opened in a KMail composer"
 msgstr "ელფოსტის მონახაზი %1 ღიაა KMail-ის კომპოზიტორში"
 
 #: forwardmailtool/forwardmailtool.cpp:30
-#, fuzzy, kde-format
-#| msgid "Mark Mail"
+#, kde-format
 msgid "Forward Mail"
-msgstr "ელფოსტის მარკირება"
+msgstr "ელფოსტის გადაგზავნა"
 
 #: forwardmailtool/forwardmailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument id must be an integer"
+#, kde-format
 msgid "Argument mode must be one of: inline, attachment"
-msgstr "არგუმენტი id მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი mode უნდა იყოს ერთერთი სიიდან: 'inline', 'attachment'"
 
 #: forwardmailtool/forwardmailtooljob.cpp:49
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: %2"
+#, kde-format
 msgid "Unable to forward mail %1: %2"
-msgstr "ელფოსტის %1 ჩასწორება შეუძლებელია: %2"
+msgstr "ელფოსტის %1 გადაგზავნა შეუძლებელია: %2"
 
 #: forwardmailtool/forwardmailtooljob.cpp:56
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: KMail main window is not available"
+#, kde-format
 msgid "Unable to forward mail %1: KMail main window is not available"
 msgstr ""
-"ელფოსტის %1 ჩასწორება შეუძლებელია: KMail-ის მთავარი ფანჯარა ხელმისაწვდომი "
+"ელფოსტის %1 გადაგზავნა შეუძლებელია: KMail-ის მთავარი ფანჯარა ხელმისაწვდომი "
 "არაა"
 
 #: forwardmailtool/forwardmailtooljob.cpp:59
-#, fuzzy, kde-format
-#| msgid "Reply composer opened in KMail for mail %1"
+#, kde-format
 msgid "Forward composer opened in KMail for mail %1"
-msgstr "ელფოსტის კომპოზიტორი გაიხსნა KMail-ში ელფოსტისთვის %1"
+msgstr "გადაგზავნის კომპოზიტორი გაიხსნა KMail-ში ელფოსტისთვის %1"
 
 #: freebusytool/freebusytool.cpp:27
 #, kde-format

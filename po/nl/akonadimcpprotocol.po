@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:56+0000\n"
-"PO-Revision-Date: 2026-10-29 14:17+0100\n"
+"POT-Creation-Date: 2026-11-06 00:52+0000\n"
+"PO-Revision-Date: 2026-11-05 15:48+0100\n"
 "Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: akonadimcpprotocolmanager.cpp:57
+#: akonadimcpprotocolmanager.cpp:58
 #, kde-format
 msgid "Manage information from Akonadi"
 msgstr "Beheer informatie uit Akonadi"
@@ -250,6 +250,7 @@ msgid "Contact group name is empty"
 msgstr "Naam van contactgroep is leeg"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#: createidentitytool/createidentitytool.cpp:59
 #, kde-format
 msgid "Invalid email address \"%1\""
 msgstr "Ongeldig e-mailadres \"%1\""
@@ -393,6 +394,54 @@ msgstr "Argument agenda-id moet een positief geheel getal zijn"
 msgid "Argument calendar_id must be an integer"
 msgstr "Argument agenda-id moet een geheel getal zijn"
 
+#: createidentitytool/createidentitytool.cpp:28
+#, fuzzy, kde-format
+#| msgid "Create Event"
+msgid "Create Identity"
+msgstr "Afspraak aanmaken"
+
+#: createidentitytool/createidentitytool.cpp:55
+#, fuzzy, kde-format
+#| msgid "Argument name must be a non-empty string"
+msgid "Argument email must be a non-empty string"
+msgstr "Argument moet een niet-lege tekenreeks zijn"
+
+#: createidentitytool/createidentitytool.cpp:65
+#, fuzzy, kde-format
+#| msgid "Argument emails must be an array of strings"
+msgid "Argument email_aliases must be an array of strings"
+msgstr "Argument e-mailadressen moeten een array van tekenreeksen zijn"
+
+#: createidentitytool/createidentitytool.cpp:70
+#, fuzzy, kde-format
+#| msgid "Invalid email address \"%1\""
+msgid "Invalid email alias \"%1\""
+msgstr "Ongeldig e-mailadres \"%1\""
+
+#: createidentitytool/createidentitytool.cpp:79
+#, fuzzy, kde-format
+#| msgid "No mail found for \"%1\""
+msgid "No mail transport found with id %1"
+msgstr "Geen e-mail gevonden voor \"%1\""
+
+#: createidentitytool/createidentitytool.cpp:84
+#, fuzzy, kde-format
+#| msgid "Argument port must be an integer"
+msgid "Argument transport_id must be an integer"
+msgstr "Argument port moet een geheel getal zijn"
+
+#: createidentitytool/createidentitytool.cpp:93
+#: createtransporttool/createtransporttool.cpp:136
+#, kde-format
+msgid "Argument set_as_default must be a boolean"
+msgstr "Argument set_as_default moet een boolean zijn"
+
+#: createidentitytool/createidentitytool.cpp:136
+#, fuzzy, kde-format
+#| msgid "Transport \"%1\" created (id %2)"
+msgid "Identity \"%1\" created (uoid %2)"
+msgstr "Transport \"%1\" aangemaakt (id %2)"
+
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
 msgid "Create Journal Entry"
@@ -495,50 +544,39 @@ msgid "Argument priority must be an integer"
 msgstr "Argument prioriteit moet een geheel getal zijn"
 
 #: createtransporttool/createtransporttool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Create Mail Transport"
-msgstr "E-mailadres aanmaken"
+msgstr "E-mailadrestransport aanmaken"
 
 #: createtransporttool/createtransporttool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument subject must be a non-empty string"
+#, kde-format
 msgid "Argument host must be a non-empty string"
-msgstr "Argument onderwerp moet een niet-lege tekenreeks zijn"
+msgstr "Argument host moet een niet-lege tekenreeks zijn"
 
 #: createtransporttool/createtransporttool.cpp:95
 #, kde-format
 msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
-msgstr ""
+msgstr "Ongeldige versleuteling \"%1\", verwacht geen, ssl of starttls"
 
 #: createtransporttool/createtransporttool.cpp:108
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer between %1 and %2"
+#, kde-format
 msgid "Argument port must be between 1 and 65535"
-msgstr "Argument prioriteit moet een geheel getal zijn tussen %1 en %2"
+msgstr "Argument port moet een geheel getal zijn tussen 1 en 65535"
 
 #: createtransporttool/createtransporttool.cpp:113
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer"
+#, kde-format
 msgid "Argument port must be an integer"
-msgstr "Argument prioriteit moet een geheel getal zijn"
+msgstr "Argument port moet een geheel getal zijn"
 
 #: createtransporttool/createtransporttool.cpp:124
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
-msgstr ""
-
-#: createtransporttool/createtransporttool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Argument read must be a boolean"
-msgid "Argument set_as_default must be a boolean"
-msgstr "Argument read(gelezen) moet een boolean zijn"
+msgstr "Ongeldig authentication_type \"%1\", verwacht één van: %2"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Transport \"%1\" created (id %2)"
-msgstr "Afspraak \"%1\" bijgewerkt (item-id: %2)"
+msgstr "Transport \"%1\" aangemaakt (id %2)"
 
 #: deletecontacttool/deletecontacttool.cpp:25
 #, kde-format
@@ -688,35 +726,30 @@ msgid "Draft mail %1 opened in a KMail composer"
 msgstr "Concept e-mail %1 geopend in een KMail-opsteller"
 
 #: forwardmailtool/forwardmailtool.cpp:30
-#, fuzzy, kde-format
-#| msgid "Mark Mail"
+#, kde-format
 msgid "Forward Mail"
-msgstr "E-mail markeren"
+msgstr "E-mail doorsturen"
 
 #: forwardmailtool/forwardmailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument id must be an integer"
+#, kde-format
 msgid "Argument mode must be one of: inline, attachment"
-msgstr "Argument id moet een geheel getal zijn"
+msgstr "Argument mode moet er een zijn van: inline, bijlage"
 
 #: forwardmailtool/forwardmailtooljob.cpp:49
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: %2"
+#, kde-format
 msgid "Unable to forward mail %1: %2"
-msgstr "Kan e-mail %1 niet bewerken: %2"
+msgstr "E-mail %1 doorsturen lukt niet: %2"
 
 #: forwardmailtool/forwardmailtooljob.cpp:56
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: KMail main window is not available"
+#, kde-format
 msgid "Unable to forward mail %1: KMail main window is not available"
 msgstr ""
-"Kan e-mail %1 niet bewerken: hoofdvenster van KMail is niet beschikbaar"
+"Kan e-mail %1 niet doorsturen: hoofdvenster van KMail is niet beschikbaar"
 
 #: forwardmailtool/forwardmailtooljob.cpp:59
-#, fuzzy, kde-format
-#| msgid "Reply composer opened in KMail for mail %1"
+#, kde-format
 msgid "Forward composer opened in KMail for mail %1"
-msgstr "Opsteller van antwoord geopend in KMail voor e-mail %1"
+msgstr "Opsteller voor doorsturen geopend in KMail voor e-mail %1"
 
 #: freebusytool/freebusytool.cpp:27
 #, kde-format
