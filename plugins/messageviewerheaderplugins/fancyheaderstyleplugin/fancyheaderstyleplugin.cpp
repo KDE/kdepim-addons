@@ -11,6 +11,7 @@
 #include <KPluginFactory>
 #include <MessageViewer/RichHeaderStrategy>
 #include <QApplication>
+#include <QPalette>
 using namespace Qt::Literals::StringLiterals;
 
 using namespace MessageViewer;
