@@ -40,7 +40,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ForwardMailTool::definition
     return tool;
 }
 
-void ForwardMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void ForwardMailTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QJsonValue idValue = arguments.value(u"id"_s);

@@ -5,14 +5,16 @@
 */
 #pragma once
 
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerTool>
+#include "common/toolbase.h"
 
-class UpcomingBirthdaysTool : public TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool
+class UpcomingBirthdaysTool : public ToolBase
 {
 public:
     UpcomingBirthdaysTool();
     ~UpcomingBirthdaysTool() override;
 
     [[nodiscard]] TextAutoGenerateTextMcpProtocolCore::McpProtocolTool definition() const override;
-    void call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
+
+private:
+    void doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
 };

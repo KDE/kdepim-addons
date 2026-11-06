@@ -34,7 +34,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactSearchTool::definiti
     return tool;
 }
 
-void ContactSearchTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void ContactSearchTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const QString query = call->arguments().value(u"query"_s).toString().trimmed();
     if (query.isEmpty()) {

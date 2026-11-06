@@ -25,7 +25,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListAddressBooksTool::defin
     return tool;
 }
 
-void ListAddressBooksTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void ListAddressBooksTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     auto job = new ListAddressBooksToolJob(call);
     job->setMcpProtocolServerToolCall(call);

@@ -25,7 +25,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListCalendarsTool::definiti
     return tool;
 }
 
-void ListCalendarsTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void ListCalendarsTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     auto job = new ListCalendarsToolJob(call);
     job->setMcpProtocolServerToolCall(call);

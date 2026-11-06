@@ -47,7 +47,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateIdentityTool::definit
     return tool;
 }
 
-void CreateIdentityTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void CreateIdentityTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QString email = arguments.value(u"email"_s).toString().trimmed();

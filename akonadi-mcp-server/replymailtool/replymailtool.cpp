@@ -55,7 +55,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ReplyMailTool::definition()
     return tool;
 }
 
-void ReplyMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void ReplyMailTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QJsonValue idValue = arguments.value(u"id"_s);

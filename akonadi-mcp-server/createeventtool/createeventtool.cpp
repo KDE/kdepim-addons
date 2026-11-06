@@ -49,7 +49,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateEventTool::definition
     return tool;
 }
 
-void CreateEventTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void CreateEventTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QString summary = arguments.value(u"summary"_s).toString().trimmed();

@@ -38,7 +38,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool TodoListTool::definition() 
     return tool;
 }
 
-void TodoListTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void TodoListTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     bool includeCompleted = false;
     const QJsonValue includeCompletedValue = call->arguments().value(u"include_completed"_s);

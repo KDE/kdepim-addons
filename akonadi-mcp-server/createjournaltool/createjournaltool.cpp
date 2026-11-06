@@ -42,7 +42,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateJournalTool::definiti
     return tool;
 }
 
-void CreateJournalTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void CreateJournalTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QString summary = arguments.value(u"summary"_s).toString().trimmed();

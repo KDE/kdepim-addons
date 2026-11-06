@@ -51,7 +51,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool MarkMailTool::definition() 
     return tool;
 }
 
-void MarkMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void MarkMailTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const QJsonValue idValue = call->arguments().value(u"id"_s);
     const std::optional<qint64> itemIdArgument = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(idValue);

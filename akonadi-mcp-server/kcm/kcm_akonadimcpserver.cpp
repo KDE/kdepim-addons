@@ -24,9 +24,14 @@ AkonadiMCPServerConfigurationModule::AkonadiMCPServerConfigurationModule(QObject
     : KCModule(parent, data)
     , mMcpProtocolServerConfigureWidget(new TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget(widget()))
     , mEnabled(new QCheckBox(i18n("Enabled"), widget()))
+    , mConfirmModify(new QCheckBox(i18nc("@option:check", "Ask confirmation before running tools which modify data")))
 {
     auto lay = new QVBoxLayout(widget());
     lay->addWidget(mEnabled);
+
+    mConfirmModify->setObjectName(u"mConfirmModify"_s);
+    lay->addWidget(mConfirmModify);
+
     lay->addWidget(mMcpProtocolServerConfigureWidget);
     lay->addStretch(1);
 
@@ -40,6 +45,9 @@ AkonadiMCPServerConfigurationModule::AkonadiMCPServerConfigurationModule(QObject
             &QCheckBox::toggled,
             mMcpProtocolServerConfigureWidget,
             &TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget::setEnabled);
+    connect(mEnabled, &QCheckBox::toggled, mConfirmModify, &QCheckBox::setEnabled);
+    mConfirmModify->setEnabled(false);
+
     mMcpProtocolServerConfigureWidget->setEnabled(false);
 }
 
@@ -55,6 +63,7 @@ void AkonadiMCPServerConfigurationModule::save()
     KSharedConfigPtr config = KSharedConfig::openConfig(u"akonadimcpprotocolrc"_s);
     KConfigGroup group = config->group(u"General"_s);
     group.writeEntry("Enabled", mEnabled->isChecked());
+    group.writeEntry("AskModify", mConfirmModify->isChecked());
 
     TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::saveSettings(config, mMcpProtocolServerConfigureWidget->settings());
     config->sync();
@@ -80,6 +89,7 @@ void AkonadiMCPServerConfigurationModule::load()
     KConfigGroup group = config->group(u"General"_s);
 
     mEnabled->setChecked(group.readEntry("Enabled", false));
+    mConfirmModify->setChecked(group.readEntry("AskModify", true));
 
     TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::loadSettings(config,
                                                                               this,

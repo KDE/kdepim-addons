@@ -36,7 +36,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpcomingBirthdaysTool::defi
     return tool;
 }
 
-void UpcomingBirthdaysTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void UpcomingBirthdaysTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     int days = defaultDays;
     const QJsonValue daysValue = call->arguments().value(u"days"_s);

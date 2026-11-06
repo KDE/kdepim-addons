@@ -44,7 +44,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactTool::definiti
     return tool;
 }
 
-void CreateContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void CreateContactTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QString name = arguments.value(u"name"_s).toString().trimmed();

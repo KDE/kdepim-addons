@@ -4,14 +4,16 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerTool>
+#include "common/toolbase.h"
 
-class AkonadiResourcesStatusTool : public TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool
+class AkonadiResourcesStatusTool : public ToolBase
 {
 public:
     AkonadiResourcesStatusTool();
     ~AkonadiResourcesStatusTool() override;
 
     [[nodiscard]] TextAutoGenerateTextMcpProtocolCore::McpProtocolTool definition() const override;
-    void call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
+
+private:
+    void doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
 };
