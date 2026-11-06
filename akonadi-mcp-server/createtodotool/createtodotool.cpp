@@ -45,7 +45,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateTodoTool::definition(
     return tool;
 }
 
-void CreateTodoTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void CreateTodoTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QString summary = arguments.value(u"summary"_s).toString().trimmed();

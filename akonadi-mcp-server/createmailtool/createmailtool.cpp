@@ -38,7 +38,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateMailTool::definition(
     return tool;
 }
 
-void CreateMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void CreateMailTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QString subject = arguments.value(u"subject"_s).toString().trimmed();

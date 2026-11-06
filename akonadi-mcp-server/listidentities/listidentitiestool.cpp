@@ -26,7 +26,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ListIdentitiesTool::definit
     return tool;
 }
 
-void ListIdentitiesTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void ListIdentitiesTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto identities = KIdentityManagementCore::IdentityManager::self();
     QStringList entries;

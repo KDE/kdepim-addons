@@ -5,14 +5,16 @@
 */
 #pragma once
 
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerTool>
+#include "common/toolbase.h"
 
-class ListAddressBooksTool : public TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool
+class ListAddressBooksTool : public ToolBase
 {
 public:
     ListAddressBooksTool();
     ~ListAddressBooksTool() override;
 
     [[nodiscard]] TextAutoGenerateTextMcpProtocolCore::McpProtocolTool definition() const override;
-    void call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
+
+private:
+    void doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
 };

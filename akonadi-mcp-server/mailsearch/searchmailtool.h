@@ -6,14 +6,16 @@
 
 #pragma once
 
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerTool>
+#include "common/toolbase.h"
 
-class SearchMailTool : public TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool
+class SearchMailTool : public ToolBase
 {
 public:
     SearchMailTool();
     ~SearchMailTool() override;
 
     [[nodiscard]] TextAutoGenerateTextMcpProtocolCore::McpProtocolTool definition() const override;
-    void call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
+
+private:
+    void doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
 };

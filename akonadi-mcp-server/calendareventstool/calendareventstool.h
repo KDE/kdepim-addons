@@ -5,14 +5,16 @@
 */
 #pragma once
 
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerTool>
+#include "common/toolbase.h"
 
-class CalendarEventsTool : public TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool
+class CalendarEventsTool : public ToolBase
 {
 public:
     CalendarEventsTool();
     ~CalendarEventsTool() override;
 
     [[nodiscard]] TextAutoGenerateTextMcpProtocolCore::McpProtocolTool definition() const override;
-    void call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
+
+private:
+    void doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
 };

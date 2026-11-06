@@ -1,0 +1,10 @@
+[Global]
+IconName=ruqola
+Name=AkonadiMcpProtocol
+DesktopEntry=org.kde.akonadimcpprotocol
+Comment=Notification
+
+[Event/Mcp-Tool-Confirmation]
+Name=MCP Tool Asks Confirmation
+Action=Popup
+Urgency=Normal

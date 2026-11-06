@@ -56,7 +56,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateIncidenceTool::defini
     return tool;
 }
 
-void UpdateIncidenceTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void UpdateIncidenceTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QJsonValue idValue = arguments.value(u"id"_s);

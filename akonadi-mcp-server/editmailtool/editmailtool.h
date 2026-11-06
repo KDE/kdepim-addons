@@ -5,14 +5,16 @@
 */
 #pragma once
 
-#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerTool>
+#include "common/toolbase.h"
 
-class EditMailTool : public TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool
+class EditMailTool : public ToolBase
 {
 public:
     EditMailTool();
     ~EditMailTool() override;
 
     [[nodiscard]] TextAutoGenerateTextMcpProtocolCore::McpProtocolTool definition() const override;
-    void call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
+
+private:
+    void doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) override;
 };

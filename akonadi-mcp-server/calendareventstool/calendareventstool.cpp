@@ -42,7 +42,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CalendarEventsTool::definit
     return tool;
 }
 
-void CalendarEventsTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void CalendarEventsTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     QDateTime start = QDate::currentDate().startOfDay();
     if (const QJsonValue startValue = call->arguments().value(u"start"_s);

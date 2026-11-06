@@ -25,4 +25,5 @@ private:
     void reloadServer();
     TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget *const mMcpProtocolServerConfigureWidget;
     QCheckBox *const mEnabled;
+    QCheckBox *const mConfirmModify;
 };

@@ -34,7 +34,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool DeleteContactTool::definiti
     return tool;
 }
 
-void DeleteContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void DeleteContactTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const QJsonValue idValue = call->arguments().value(u"id"_s);
     const std::optional<qint64> itemIdArgument = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(idValue);

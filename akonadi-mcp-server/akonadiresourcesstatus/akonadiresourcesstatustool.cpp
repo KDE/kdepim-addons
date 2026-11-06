@@ -43,7 +43,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool AkonadiResourcesStatusTool:
     return tool;
 }
 
-void AkonadiResourcesStatusTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void AkonadiResourcesStatusTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto list = Akonadi::AgentManager::self()->instances();
     QStringList entries;

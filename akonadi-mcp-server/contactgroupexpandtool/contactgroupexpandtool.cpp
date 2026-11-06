@@ -30,7 +30,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool ContactGroupExpandTool::def
     return tool;
 }
 
-void ContactGroupExpandTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void ContactGroupExpandTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const QString query = call->arguments().value(u"query"_s).toString().trimmed();
     if (query.isEmpty()) {

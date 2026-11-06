@@ -41,7 +41,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool FreeBusyTool::definition() 
     return tool;
 }
 
-void FreeBusyTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void FreeBusyTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const std::optional<QDateTime> start =
         CalendarToolUtils::parseDateTime(call->arguments().value(u"start"_s).toString(), CalendarToolUtils::DateBound::Start);

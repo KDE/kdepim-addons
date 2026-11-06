@@ -76,7 +76,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateTransportTool::defini
     return tool;
 }
 
-void CreateTransportTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void CreateTransportTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QString host = arguments.value(u"host"_s).toString().trimmed();

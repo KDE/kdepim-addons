@@ -35,7 +35,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool DeleteIncidenceTool::defini
     return tool;
 }
 
-void DeleteIncidenceTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void DeleteIncidenceTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const QJsonValue idValue = call->arguments().value(u"id"_s);
     const std::optional<qint64> itemIdArgument = TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolArguments::integer(idValue);

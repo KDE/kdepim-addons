@@ -47,7 +47,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool UpdateContactTool::definiti
     return tool;
 }
 
-void UpdateContactTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void UpdateContactTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QJsonValue idValue = arguments.value(u"id"_s);

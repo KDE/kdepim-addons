@@ -40,7 +40,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool SearchMailTool::definition(
     return tool;
 }
 
-void SearchMailTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void SearchMailTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QString query = arguments.value(u"query"_s).toString().trimmed();

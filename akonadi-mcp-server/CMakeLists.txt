@@ -17,6 +17,8 @@ target_sources(
         common/tooljobbase.cpp
         common/toolutils.h
         common/toolutils.cpp
+        common/toolbase.cpp
+        common/toolbase.h
         common/kmaildbustooljobbase.h
         common/kmaildbustooljobbase.cpp
         contactsearchtool/contactsearchtool.h
@@ -143,6 +145,7 @@ target_link_libraries(
     Qt::DBus
     KF6::DBusAddons
     KF6::Crash
+    KF6::Notifications
 )
 
 install(

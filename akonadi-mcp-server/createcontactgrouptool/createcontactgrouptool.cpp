@@ -65,7 +65,7 @@ TextAutoGenerateTextMcpProtocolCore::McpProtocolTool CreateContactGroupTool::def
     return tool;
 }
 
-void CreateContactGroupTool::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
+void CreateContactGroupTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call)
 {
     const auto arguments = call->arguments();
     const QString name = arguments.value(u"name"_s).toString().trimmed();
