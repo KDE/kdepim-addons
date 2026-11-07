@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:52+0000\n"
-"PO-Revision-Date: 2026-11-05 07:31-0300\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
+"PO-Revision-Date: 2026-11-06 08:34-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -129,6 +129,38 @@ msgstr "Nenhum evento entre %1 e %2"
 #, kde-format
 msgid "Unable to start KMail: %1"
 msgstr "Não foi possível iniciar o KMail: %1"
+
+#: common/toolbase.cpp:82
+#, kde-format
+msgid "Another confirmation is pending"
+msgstr ""
+
+#: common/toolbase.cpp:88
+#, kde-format
+msgid "MCP tool asks confirmation"
+msgstr ""
+
+#: common/toolbase.cpp:89
+#, kde-format
+msgid ""
+"Run \"%1\"?\n"
+"%2"
+msgstr ""
+
+#: common/toolbase.cpp:103
+#, kde-format
+msgid "Action refused by user"
+msgstr ""
+
+#: common/toolbase.cpp:106
+#, kde-format
+msgid "Accept"
+msgstr ""
+
+#: common/toolbase.cpp:114
+#, kde-format
+msgid "Reject"
+msgstr ""
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -400,40 +432,34 @@ msgid "Argument calendar_id must be an integer"
 msgstr "O argumento \"calendar_id\" deve ser um número inteiro"
 
 #: createidentitytool/createidentitytool.cpp:28
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Identity"
-msgstr "Criar evento"
+msgstr "Criar identidade"
 
 #: createidentitytool/createidentitytool.cpp:55
-#, fuzzy, kde-format
-#| msgid "Argument name must be a non-empty string"
+#, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "O argumento \"name\" deve ser uma string não vazia"
+msgstr "O argumento \"email\" deve ser uma string não vazia"
 
 #: createidentitytool/createidentitytool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument emails must be an array of strings"
+#, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "O argumento \"emails\" deve ser um array de strings"
+msgstr "O argumento \"email_aliases\" deve ser um array de strings"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email alias \"%1\""
-msgstr "Endereço de e-mail \"%1\" inválido"
+msgstr "Apelido de e-mail \"%1\" inválido"
 
 #: createidentitytool/createidentitytool.cpp:79
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail transport found with id %1"
-msgstr "Nenhum e-mail encontrado para \"%1\""
+msgstr "Nenhum transporte de e-mail encontrado com id %1"
 
 #: createidentitytool/createidentitytool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument port must be an integer"
+#, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "O argumento \"port\" deve ser um número inteiro"
+msgstr "O argumento \"transport_id\" deve ser um número inteiro"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
@@ -442,10 +468,9 @@ msgid "Argument set_as_default must be a boolean"
 msgstr "O argumento \"set_as_default\" deve ser um booleano"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Transport \"%1\" created (id %2)"
+#, kde-format
 msgid "Identity \"%1\" created (uoid %2)"
-msgstr "Transporte \"%1\" criado (ID %2)"
+msgstr "Identidade \"%1\" criada (uoid %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
@@ -774,6 +799,12 @@ msgstr "Livre durante todo o período de %1 a %2"
 #, kde-format
 msgid "Enabled"
 msgstr "Habilitado"
+
+#: kcm/kcm_akonadimcpserver.cpp:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Ask confirmation before running tools which modify data"
+msgstr ""
 
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:52+0000\n"
-"PO-Revision-Date: 2026-11-05 18:04+0200\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
+"PO-Revision-Date: 2026-11-06 16:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -135,6 +135,38 @@ msgstr "Немає подій від %1 до %2"
 #, kde-format
 msgid "Unable to start KMail: %1"
 msgstr "Не вдалося запустити KMail: %1"
+
+#: common/toolbase.cpp:82
+#, kde-format
+msgid "Another confirmation is pending"
+msgstr ""
+
+#: common/toolbase.cpp:88
+#, kde-format
+msgid "MCP tool asks confirmation"
+msgstr ""
+
+#: common/toolbase.cpp:89
+#, kde-format
+msgid ""
+"Run \"%1\"?\n"
+"%2"
+msgstr ""
+
+#: common/toolbase.cpp:103
+#, kde-format
+msgid "Action refused by user"
+msgstr ""
+
+#: common/toolbase.cpp:106
+#, kde-format
+msgid "Accept"
+msgstr ""
+
+#: common/toolbase.cpp:114
+#, kde-format
+msgid "Reject"
+msgstr ""
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -412,40 +444,34 @@ msgid "Argument calendar_id must be an integer"
 msgstr "Аргумент calendar_id має бути цілим числом"
 
 #: createidentitytool/createidentitytool.cpp:28
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Identity"
-msgstr "Створити запис події"
+msgstr "Створити профіль"
 
 #: createidentitytool/createidentitytool.cpp:55
-#, fuzzy, kde-format
-#| msgid "Argument name must be a non-empty string"
+#, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "Аргумент назви має бути непорожнім рядком"
+msgstr "Аргумент адреси електронної пошти має бути непорожнім рядком"
 
 #: createidentitytool/createidentitytool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument emails must be an array of strings"
+#, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "Аргумент адрес електронної пошти має бути масивом рядків"
+msgstr "Аргумент email_aliases має бути масивом рядків"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email alias \"%1\""
-msgstr "Некоректна адреса електронної пошти «%1»"
+msgstr "Помилкова альтернативна адреса ел. пошти «%1»"
 
 #: createidentitytool/createidentitytool.cpp:79
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail transport found with id %1"
-msgstr "Не знайдено поштових повідомлень для запиту «%1»"
+msgstr "Не знайдено шляху надсилання пошти з ідентифікатором «%1»"
 
 #: createidentitytool/createidentitytool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument port must be an integer"
+#, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "Аргумент порту має бути цілим числом"
+msgstr "Аргумент transport_id має бути цілим числом"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
@@ -454,10 +480,9 @@ msgid "Argument set_as_default must be a boolean"
 msgstr "Аргумент set_as_default має бути булевим значенням"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Transport \"%1\" created (id %2)"
+#, kde-format
 msgid "Identity \"%1\" created (uoid %2)"
-msgstr "Створено шлях передавання «%1» (ідентифікатор %2)"
+msgstr "Створено профіль «%1» (uoid %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
@@ -788,6 +813,12 @@ msgstr "Не зайнято увесь період від %1 до %2"
 #, kde-format
 msgid "Enabled"
 msgstr "Увімкнено"
+
+#: kcm/kcm_akonadimcpserver.cpp:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Ask confirmation before running tools which modify data"
+msgstr ""
 
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:52+0000\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
 "PO-Revision-Date: 2026-10-28 10:57+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -130,6 +130,38 @@ msgstr "Žiadna udalosť medzi %1 a %2"
 #, kde-format
 msgid "Unable to start KMail: %1"
 msgstr "Nie je možné spustiť KMail: %1"
+
+#: common/toolbase.cpp:82
+#, kde-format
+msgid "Another confirmation is pending"
+msgstr ""
+
+#: common/toolbase.cpp:88
+#, kde-format
+msgid "MCP tool asks confirmation"
+msgstr ""
+
+#: common/toolbase.cpp:89
+#, kde-format
+msgid ""
+"Run \"%1\"?\n"
+"%2"
+msgstr ""
+
+#: common/toolbase.cpp:103
+#, kde-format
+msgid "Action refused by user"
+msgstr ""
+
+#: common/toolbase.cpp:106
+#, kde-format
+msgid "Accept"
+msgstr ""
+
+#: common/toolbase.cpp:114
+#, kde-format
+msgid "Reject"
+msgstr ""
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -779,6 +811,12 @@ msgstr "Voľné počas celého obdobia od %1 do %2"
 #: kcm/kcm_akonadimcpserver.cpp:26
 #, kde-format
 msgid "Enabled"
+msgstr ""
+
+#: kcm/kcm_akonadimcpserver.cpp:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Ask confirmation before running tools which modify data"
 msgstr ""
 
 #: listaddressbooks/listaddressbookstool.cpp:21

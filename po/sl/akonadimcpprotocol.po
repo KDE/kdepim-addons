@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:52+0000\n"
-"PO-Revision-Date: 2026-11-05 07:44+0100\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
+"PO-Revision-Date: 2026-11-06 06:38+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -129,6 +129,38 @@ msgstr "Ni dogodkov med %1 in %2"
 #, kde-format
 msgid "Unable to start KMail: %1"
 msgstr "KMail-a ni mogoče zagnati: %1"
+
+#: common/toolbase.cpp:82
+#, kde-format
+msgid "Another confirmation is pending"
+msgstr ""
+
+#: common/toolbase.cpp:88
+#, kde-format
+msgid "MCP tool asks confirmation"
+msgstr ""
+
+#: common/toolbase.cpp:89
+#, kde-format
+msgid ""
+"Run \"%1\"?\n"
+"%2"
+msgstr ""
+
+#: common/toolbase.cpp:103
+#, kde-format
+msgid "Action refused by user"
+msgstr ""
+
+#: common/toolbase.cpp:106
+#, kde-format
+msgid "Accept"
+msgstr ""
+
+#: common/toolbase.cpp:114
+#, kde-format
+msgid "Reject"
+msgstr ""
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -404,40 +436,34 @@ msgid "Argument calendar_id must be an integer"
 msgstr "Argument calendar_id mora biti celo število"
 
 #: createidentitytool/createidentitytool.cpp:28
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Identity"
-msgstr "Ustvari dogodek"
+msgstr "Ustvari identiteto"
 
 #: createidentitytool/createidentitytool.cpp:55
-#, fuzzy, kde-format
-#| msgid "Argument name must be a non-empty string"
+#, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "Ime argumenta mora biti neprazen niz"
+msgstr "Argument email mora biti neprazen niz"
 
 #: createidentitytool/createidentitytool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument emails must be an array of strings"
+#, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "Argument emails mora biti polje nizov"
+msgstr "Argument email_aliases mora biti polje nizov"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email alias \"%1\""
-msgstr "Neveljaven e-poštni naslov \"%1\""
+msgstr "Neveljaven vzdevek e-pošte \"%1\""
 
 #: createidentitytool/createidentitytool.cpp:79
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail transport found with id %1"
-msgstr "Ni najdene pošte za \"%1\""
+msgstr "Ni mogoče najti poštnega transporta z id %1"
 
 #: createidentitytool/createidentitytool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument port must be an integer"
+#, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "Argument port mora biti celo število"
+msgstr "Argument transport_id mora biti celo število"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
@@ -446,10 +472,9 @@ msgid "Argument set_as_default must be a boolean"
 msgstr "Argument set_as_default mora biti boolova vrednost"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Transport \"%1\" created (id %2)"
+#, kde-format
 msgid "Identity \"%1\" created (uoid %2)"
-msgstr "Transport \"%1\" je ustvaril (id: %2)"
+msgstr "Identiteta \"%1\" je ustvarila (uoid: %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
@@ -775,6 +800,12 @@ msgstr "Prost v celotnem obdobju od %1 do %2"
 #, kde-format
 msgid "Enabled"
 msgstr "Omogočeno"
+
+#: kcm/kcm_akonadimcpserver.cpp:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Ask confirmation before running tools which modify data"
+msgstr ""
 
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format

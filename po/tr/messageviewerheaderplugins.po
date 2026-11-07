@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerheaderplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
 "PO-Revision-Date: 2023-09-07 14:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -98,7 +98,7 @@ msgstr "&Ayrıntılı Başlıklar"
 msgid "Show the list of headers in a fancy format"
 msgstr "Liste başlıklarını ayrıntılı göster"
 
-#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:188
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:189
 #, kde-format
 msgid "Attachments:"
 msgstr "Ekler:"

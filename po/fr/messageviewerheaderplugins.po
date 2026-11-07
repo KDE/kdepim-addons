@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
 "PO-Revision-Date: 2021-01-11 16:32+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -103,7 +103,7 @@ msgstr "&En-têtes fantaisie"
 msgid "Show the list of headers in a fancy format"
 msgstr "Afficher une liste des en-têtes dans un format fantaisie"
 
-#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:188
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:189
 #, kde-format
 msgid "Attachments:"
 msgstr "Pièces jointes :"

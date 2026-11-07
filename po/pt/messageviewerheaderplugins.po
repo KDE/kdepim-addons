@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerheaderplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
 "PO-Revision-Date: 2015-12-08 12:14+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -99,7 +99,7 @@ msgstr "Cabeçalhos &Bonitos"
 msgid "Show the list of headers in a fancy format"
 msgstr "Mostra a lista de cabeçalhos num formato mais agradável"
 
-#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:188
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:189
 #, kde-format
 msgid "Attachments:"
 msgstr "Anexos:"

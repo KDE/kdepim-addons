@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewerheaderplugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
 "PO-Revision-Date: 2019-12-21 09:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -101,7 +101,7 @@ msgstr "Ви&шукані заголовки"
 msgid "Show the list of headers in a fancy format"
 msgstr "Показувати заголовки у вишуканому форматі"
 
-#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:188
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:189
 #, kde-format
 msgid "Attachments:"
 msgstr "Долучення:"
