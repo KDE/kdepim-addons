@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.8.40")
+set(PIM_VERSION "6.9.40")
 
 project(kdepim-addons VERSION ${PIM_VERSION})
 
