@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Configuration of Akonadi MCP Server",
         "Description[ar]": "ضبط خادم أكونادي MCP",
+        "Description[bg]": "Конфигурация на сървър Akonadi MCP",
         "Description[ca@valencia]": "Configureu el servidor MCP d'Akonadi",
         "Description[ca]": "Configuració del servidor MCP d'Akonadi",
         "Description[cs]": "Nastavení pro Akonadi MCP server",
@@ -17,6 +18,7 @@
         "Icon": "akonadi",
         "Name": "Akonadi MCP Server",
         "Name[ar]": "خادم أكونادي MCP",
+        "Name[bg]": "Сървър на Akonadi MCP",
         "Name[ca@valencia]": "Servidor MCP d'Akonadi",
         "Name[ca]": "Servidor MCP d'Akonadi",
         "Name[cs]": "Akonadi MCP server",
