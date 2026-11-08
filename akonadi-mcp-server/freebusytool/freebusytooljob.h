@@ -10,6 +10,7 @@
 
 class FreeBusyToolJob : public CalendarToolJobBase
 {
+    Q_OBJECT
 public:
     explicit FreeBusyToolJob(QObject *parent = nullptr);
     ~FreeBusyToolJob() override;
