@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:58+0000\n"
-"PO-Revision-Date: 2026-11-05 13:24+0200\n"
+"PO-Revision-Date: 2026-11-07 21:46+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -756,10 +756,9 @@ msgid "\"%1\" deleted (item id: %2)"
 msgstr ""
 
 #: editmailtool/editmailtool.cpp:24
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Edit Mail"
-msgstr "יצירת דוא״ל"
+msgstr "עריכת דוא״ל"
 
 #: editmailtool/editmailtooljob.cpp:39
 #: forwardmailtool/forwardmailtooljob.cpp:37
@@ -772,10 +771,9 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
 #: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
 #: movemailtool/movemailtooljob.cpp:84
-#, fuzzy, kde-format
-#| msgid "Mail search failed: %1"
+#, kde-format
 msgid "Mail fetch failed: %1"
-msgstr "חיפוש דוא״ל נכשל: %1"
+msgstr "משיכת דוא״ל נכשלה: %1"
 
 #: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
 #: movemailtool/movemailtooljob.cpp:89
@@ -806,10 +804,9 @@ msgid "Draft mail %1 opened in a KMail composer"
 msgstr ""
 
 #: forwardmailtool/forwardmailtool.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search Mail"
+#, kde-format
 msgid "Forward Mail"
-msgstr "חיפוש בדוא״ל"
+msgstr "העברת דוא״ל"
 
 #: forwardmailtool/forwardmailtool.cpp:64
 #, fuzzy, kde-format
@@ -818,10 +815,9 @@ msgid "Argument mode must be one of: inline, attachment"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
 #: forwardmailtool/forwardmailtooljob.cpp:49
-#, fuzzy, kde-format
-#| msgid "Contact search failed: %1"
+#, kde-format
 msgid "Unable to forward mail %1: %2"
-msgstr "חיפוש אנשי קשר נכשל: %1"
+msgstr "לא ניתן להעביר את הדוא״ל %1: %2"
 
 #: forwardmailtool/forwardmailtooljob.cpp:56
 #, kde-format
@@ -865,16 +861,14 @@ msgid "No address book found"
 msgstr "לא נמצא פנקס כתובות"
 
 #: listcalendars/listcalendarstool.cpp:21
-#, fuzzy, kde-format
-#| msgid "Calendar Events"
+#, kde-format
 msgid "List Calendars"
-msgstr "אירועי לוח שנה"
+msgstr "הצגת לוחות שנה"
 
 #: listcalendars/listcalendarstooljob.cpp:83
-#, fuzzy, kde-format
-#| msgid "No Drafts folder found"
+#, kde-format
 msgid "No calendar found"
-msgstr "לא נמצאה תיקיית טיוטות"
+msgstr "לא נמצא לוח שנה"
 
 #: listidentities/listidentitiestool.cpp:22
 #, kde-format
@@ -882,10 +876,9 @@ msgid "List Identities"
 msgstr ""
 
 #: listidentities/listidentitiestool.cpp:42
-#, fuzzy, kde-format
-#| msgid "No Drafts folder found"
+#, kde-format
 msgid "No Identity found"
-msgstr "לא נמצאה תיקיית טיוטות"
+msgstr "לא נמצאה זהות"
 
 #: mailsearch/searchmailtool.cpp:27
 #, kde-format
@@ -898,22 +891,19 @@ msgid "Unknown mail field: %1"
 msgstr "שדה דוא״ל לא ידוע: %1"
 
 #: mailsearch/searchmailtool.cpp:71
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument field must be a string"
-msgstr "הארגומנט fields (שדות) חייב להיות מערך"
+msgstr "הארגומנט field (שדה) חייב להיות מערך"
 
 #: mailsearch/searchmailtool.cpp:79
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer between 1 and %1"
+#, kde-format
 msgid "Argument limit must be an integer between 1 and %1"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם בין 1 ל־%1"
+msgstr "הארגומנט limit (סף) חייב להיות מספר שלם בין 1 ל־%1"
 
 #: mailsearch/searchmailtool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument limit must be an integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט limit (סף) חייב להיות מספר שלם"
 
 #: mailsearch/searchmailtooljob.cpp:97
 #, kde-format
@@ -958,22 +948,19 @@ msgid "Url where server listens."
 msgstr "הכתובת שהשרת מאזין לה."
 
 #: markmailtool/markmailtool.cpp:39
-#, fuzzy, kde-format
-#| msgid "Search Mail"
+#, kde-format
 msgid "Mark Mail"
-msgstr "חיפוש בדוא״ל"
+msgstr "סימון דוא״ל"
 
 #: markmailtool/markmailtool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument read must be a boolean"
-msgstr "הארגומנט include_completed חייב להיות בוליאני"
+msgstr "הארגומנט read (קריאה) חייב להיות בוליאני"
 
 #: markmailtool/markmailtool.cpp:76
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument important must be a boolean"
-msgstr "הארגומנט include_completed חייב להיות בוליאני"
+msgstr "הארגומנט important (חשוב) חייב להיות בוליאני"
 
 #: markmailtool/markmailtool.cpp:80
 #, kde-format
@@ -981,10 +968,9 @@ msgid "At least one of read or important must be given"
 msgstr ""
 
 #: markmailtool/markmailtooljob.cpp:75
-#, fuzzy, kde-format
-#| msgid "Mail creation failed: %1"
+#, kde-format
 msgid "Mail modification failed: %1"
-msgstr "יצירת דוא״ל נכשלה: %1"
+msgstr "שינוי דוא״ל נכשל: %1"
 
 #: markmailtool/markmailtooljob.cpp:78
 #, kde-format
@@ -992,16 +978,14 @@ msgid "Mail %1 modified"
 msgstr ""
 
 #: movemailtool/movemailtool.cpp:25
-#, fuzzy, kde-format
-#| msgid "Search Mail"
+#, kde-format
 msgid "Move Mail"
-msgstr "חיפוש בדוא״ל"
+msgstr "העברת דוא״ל"
 
 #: movemailtool/movemailtool.cpp:60
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument folder must be a string"
-msgstr "הארגומנט fields (שדות) חייב להיות מערך"
+msgstr "הארגומנט folder (תיקייה) חייב להיות מחרוזת"
 
 #: movemailtool/movemailtool.cpp:64
 #, fuzzy, kde-format
@@ -1071,10 +1055,9 @@ msgid "Mail %1 moved to folder \"%2\""
 msgstr ""
 
 #: openmailtool/openmailtool.cpp:24
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Open Mail"
-msgstr "יצירת דוא״ל"
+msgstr "פתיחת דוא״ל"
 
 #: openmailtool/openmailtooljob.cpp:44
 #, kde-format

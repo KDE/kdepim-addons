@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-07 00:58+0000\n"
-"PO-Revision-Date: 2026-11-06 11:39+0100\n"
+"PO-Revision-Date: 2026-11-07 16:11+0100\n"
 "Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -133,12 +133,12 @@ msgstr "KMail starten is mislukt: %1"
 #: common/toolbase.cpp:82
 #, kde-format
 msgid "Another confirmation is pending"
-msgstr ""
+msgstr "Een verdere bevestiging is in afwachting"
 
 #: common/toolbase.cpp:88
 #, kde-format
 msgid "MCP tool asks confirmation"
-msgstr ""
+msgstr "MCP-hulpmiddel vraagt ​​om bevestiging"
 
 #: common/toolbase.cpp:89
 #, kde-format
@@ -146,21 +146,23 @@ msgid ""
 "Run \"%1\"?\n"
 "%2"
 msgstr ""
+"\"%1\" uitvoeren?\n"
+"%2"
 
 #: common/toolbase.cpp:103
 #, kde-format
 msgid "Action refused by user"
-msgstr ""
+msgstr "Actie geweigerd door gebruiker"
 
 #: common/toolbase.cpp:106
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "Accepteren"
 
 #: common/toolbase.cpp:114
 #, kde-format
 msgid "Reject"
-msgstr ""
+msgstr "Afwijzen"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -796,6 +798,8 @@ msgstr "Ingeschakeld"
 msgctxt "@option:check"
 msgid "Ask confirmation before running tools which modify data"
 msgstr ""
+"Vraag om bevestiging voordat hulpmiddelen worden uitgevoerd die gegevens "
+"wijzigen"
 
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
