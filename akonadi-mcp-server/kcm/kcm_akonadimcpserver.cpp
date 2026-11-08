@@ -35,6 +35,7 @@ AkonadiMCPServerConfigurationModule::AkonadiMCPServerConfigurationModule(QObject
             this,
             &AkonadiMCPServerConfigurationModule::slotConfigChanged);
     connect(mEnabled, &QCheckBox::clicked, this, &AkonadiMCPServerConfigurationModule::slotConfigChanged);
+    connect(mConfirmModify, &QCheckBox::clicked, this, &AkonadiMCPServerConfigurationModule::slotConfigChanged);
 
     connect(mEnabled,
             &QCheckBox::toggled,
@@ -93,6 +94,7 @@ void AkonadiMCPServerConfigurationModule::load()
 void AkonadiMCPServerConfigurationModule::defaults()
 {
     mEnabled->setChecked(false);
+    mConfirmModify->setChecked(true);
     mMcpProtocolServerConfigureWidget->setSettings({});
 }
 
