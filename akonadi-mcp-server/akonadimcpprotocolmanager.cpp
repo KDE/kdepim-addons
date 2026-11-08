@@ -43,7 +43,7 @@
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolSettings>
 namespace
 {
-constexpr int toolsPageSize = 2;
+constexpr int toolsPageSize = 50;
 }
 using namespace Qt::Literals::StringLiterals;
 AkonadiMcpProtocolManager::AkonadiMcpProtocolManager(QObject *parent)
