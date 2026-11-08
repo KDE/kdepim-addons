@@ -9,6 +9,7 @@
 
 class TodoListToolJob : public CalendarToolJobBase
 {
+    Q_OBJECT
 public:
     explicit TodoListToolJob(QObject *parent = nullptr);
     ~TodoListToolJob() override;

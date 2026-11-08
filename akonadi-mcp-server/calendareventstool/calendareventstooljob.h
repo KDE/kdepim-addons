@@ -10,6 +10,7 @@
 
 class CalendarEventsToolJob : public CalendarToolJobBase
 {
+    Q_OBJECT
 public:
     explicit CalendarEventsToolJob(QObject *parent = nullptr);
     ~CalendarEventsToolJob() override;
