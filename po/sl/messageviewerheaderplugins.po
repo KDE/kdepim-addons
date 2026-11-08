@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-07 00:58+0000\n"
 "PO-Revision-Date: 2020-08-20 12:58+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -100,7 +100,7 @@ msgstr "Razkošne glave"
 msgid "Show the list of headers in a fancy format"
 msgstr "Pokaži seznam glav v razkošni obliki"
 
-#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:188
+#: fancyheaderstyleplugin/fancyheaderstyleplugin.cpp:189
 #, kde-format
 msgid "Attachments:"
 msgstr "Priloge:"

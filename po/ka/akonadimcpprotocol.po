@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:52+0000\n"
-"PO-Revision-Date: 2026-11-05 05:31+0100\n"
+"POT-Creation-Date: 2026-11-08 00:14+0000\n"
+"PO-Revision-Date: 2026-11-07 05:24+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -398,40 +398,34 @@ msgid "Argument calendar_id must be an integer"
 msgstr "არგუმენტი calendar_id მთელი რიცხვი უნდა იყოს"
 
 #: createidentitytool/createidentitytool.cpp:28
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Identity"
-msgstr "მოვლენის შექმნა"
+msgstr "იდენტიფიკატორის შექმნა"
 
 #: createidentitytool/createidentitytool.cpp:55
-#, fuzzy, kde-format
-#| msgid "Argument name must be a non-empty string"
+#, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "არგუმენტი name არაცარიელი სტრიქონი უნდა იყოს"
+msgstr "არგუმენტი email არაცარიელი სტრიქონი უნდა იყოს"
 
 #: createidentitytool/createidentitytool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument emails must be an array of strings"
+#, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "არგუმენტი emails სტრიქონების მასივი უნდა იყოს"
+msgstr "არგუმენტი email_aliases სტრიქონების მასივი უნდა იყოს"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email alias \"%1\""
-msgstr "არასწორი ელფოსტის მისამართი \"%1\"."
+msgstr "არასწორი ელფოსტის ფსევდონიმი \"%1\"."
 
 #: createidentitytool/createidentitytool.cpp:79
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail transport found with id %1"
-msgstr "\"%1\"-ისთვის ელფოსტა აღმოჩენილი არაა"
+msgstr "id-ით %1 ელფოსტის ტრანსპორტი აღმოჩენილი არაა"
 
 #: createidentitytool/createidentitytool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument port must be an integer"
+#, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "არგუმენტი port მთელი რიცხვი უნდა იყოს"
+msgstr "არგუმენტი transport_id მთელი რიცხვი უნდა იყოს"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
@@ -440,10 +434,9 @@ msgid "Argument set_as_default must be a boolean"
 msgstr "არგუმენტი set_as_default ლოგიკური მნიშვნელობა უნდა იყოს"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Transport \"%1\" created (id %2)"
+#, kde-format
 msgid "Identity \"%1\" created (uoid %2)"
-msgstr "ტრანსპორტი \"%1\" შეიქმნა (id %2)"
+msgstr "იდენტიფიკატორი \"%1\" შეიქმნა (uoid %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
@@ -1210,3 +1203,31 @@ msgstr ""
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "მოხდენის თარიღი დასაწყისამდე არ უნდა იყოს"
+
+#~ msgid "Another confirmation is pending"
+#~ msgstr "რიგშია კიდევ ერთი დადასტურების მოთხოვნა"
+
+#~ msgid "MCP tool asks confirmation"
+#~ msgstr "MCP-ის ხელსაწყო დადასტურებას მოითხოვს"
+
+#~ msgid ""
+#~ "Run \"%1\"?\n"
+#~ "%2"
+#~ msgstr ""
+#~ "გაეშვას \"%1\"?\n"
+#~ "%2"
+
+#~ msgid "Action refused by user"
+#~ msgstr "ქმედება უარყოფილია მომხმარებლის მიერ"
+
+#~ msgid "Accept"
+#~ msgstr "მიღება"
+
+#~ msgid "Reject"
+#~ msgstr "უარყოფა"
+
+#~ msgctxt "@option:check"
+#~ msgid "Ask confirmation before running tools which modify data"
+#~ msgstr ""
+#~ "დადასტურების მოთხოვნა იმ ხელსაწყოების გაშვებამდე, რომლებიც მონაცემებს "
+#~ "ცვლიან"

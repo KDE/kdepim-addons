@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:52+0000\n"
-"PO-Revision-Date: 2026-11-03 21:50+0300\n"
+"POT-Creation-Date: 2026-11-08 00:14+0000\n"
+"PO-Revision-Date: 2026-11-07 19:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -396,53 +396,45 @@ msgid "Argument calendar_id must be an integer"
 msgstr "calendar_id argümanı, bir tam sayı olmalıdır"
 
 #: createidentitytool/createidentitytool.cpp:28
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Identity"
-msgstr "Etkinlik Oluştur"
+msgstr "Kimlik Oluştur"
 
 #: createidentitytool/createidentitytool.cpp:55
-#, fuzzy, kde-format
-#| msgid "Argument name must be a non-empty string"
+#, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "name argümanı, boş olmayan bir dizi olmalıdır"
+msgstr "email argümanı, boş olmayan bir dizi olmalıdır"
 
 #: createidentitytool/createidentitytool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument emails must be an array of strings"
+#, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "emails argümanı, bir diziler dizilişi olmalıdır"
+msgstr "email_aliases argümanı, bir diziler dizilişi olmalıdır"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email alias \"%1\""
-msgstr "Geçersiz e-posta adresi “%1”"
+msgstr "Geçersiz e-posta arması “%1”"
 
 #: createidentitytool/createidentitytool.cpp:79
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail transport found with id %1"
-msgstr "“%1” için bulunan posta yok"
+msgstr "“%1” kimliğiyle bir posta taşıması bulunamadı"
 
 #: createidentitytool/createidentitytool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer"
+#, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "priority argümanı, bir tam sayı olmalıdır"
+msgstr "transport_id argümanı, bir tam sayı olmalıdır"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Argument read must be a boolean"
+#, kde-format
 msgid "Argument set_as_default must be a boolean"
-msgstr "read argümanı bir Boole olmalıdır"
+msgstr "set_as_default argümanı bir Boole olmalıdır"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Identity \"%1\" created (uoid %2)"
-msgstr "“%1” etkinliği güncellendi (öge kimliği: %2)"
+msgstr "“%1” kimliği oluşturuldu (uoid: %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
@@ -546,44 +538,40 @@ msgid "Argument priority must be an integer"
 msgstr "priority argümanı, bir tam sayı olmalıdır"
 
 #: createtransporttool/createtransporttool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Create Mail Transport"
-msgstr "Posta Oluştur"
+msgstr "Posta Taşıması Oluştur"
 
 #: createtransporttool/createtransporttool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument subject must be a non-empty string"
+#, kde-format
 msgid "Argument host must be a non-empty string"
-msgstr "subject argümanı, boş olmayan bir dizi olmalıdır"
+msgstr "host argümanı, boş olmayan bir dizi olmalıdır"
 
 #: createtransporttool/createtransporttool.cpp:95
 #, kde-format
 msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
-msgstr ""
+msgstr "“%1” şifrelemesi geçersiz; bir none, ssl veya startls bekleniyordu"
 
 #: createtransporttool/createtransporttool.cpp:108
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer between %1 and %2"
+#, kde-format
 msgid "Argument port must be between 1 and 65535"
-msgstr "priority argümanı, %1 ile %2 arasında bir tam sayı olmalıdır"
+msgstr "port argümanı, 1 ile 65535 arasında bir tam sayı olmalıdır"
 
 #: createtransporttool/createtransporttool.cpp:113
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer"
+#, kde-format
 msgid "Argument port must be an integer"
-msgstr "priority argümanı, bir tam sayı olmalıdır"
+msgstr "port argümanı, bir tam sayı olmalıdır"
 
 #: createtransporttool/createtransporttool.cpp:124
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
 msgstr ""
+"Geçersiz kimlik doğrulama yönetim “%1”, şunlardan biri bekleniyordu (%2)"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Transport \"%1\" created (id %2)"
-msgstr "“%1” etkinliği güncellendi (öge kimliği: %2)"
+msgstr "“%1” taşıması oluşturuldu (kimlik: %2)"
 
 #: deletecontacttool/deletecontacttool.cpp:25
 #, kde-format
@@ -732,34 +720,29 @@ msgid "Draft mail %1 opened in a KMail composer"
 msgstr "Taslak posta %1, bir KMail oluşturucusunda açıldı"
 
 #: forwardmailtool/forwardmailtool.cpp:30
-#, fuzzy, kde-format
-#| msgid "Mark Mail"
+#, kde-format
 msgid "Forward Mail"
-msgstr "Postayı İmle"
+msgstr "Postayı İlet"
 
 #: forwardmailtool/forwardmailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument id must be an integer"
+#, kde-format
 msgid "Argument mode must be one of: inline, attachment"
-msgstr "id argümanı, bir tam sayı olmalıdır"
+msgstr "mode argümanı; şunlardan biri olmalıdır: inline, attachment"
 
 #: forwardmailtool/forwardmailtooljob.cpp:49
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: %2"
+#, kde-format
 msgid "Unable to forward mail %1: %2"
-msgstr "%1 postası düzenlenemiyor: %2"
+msgstr "%1 postası iletilemiyor: %2"
 
 #: forwardmailtool/forwardmailtooljob.cpp:56
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: KMail main window is not available"
+#, kde-format
 msgid "Unable to forward mail %1: KMail main window is not available"
-msgstr "%1 postası düzenlenemiyor. KMail ana penceresi kullanılabilir değil"
+msgstr "%1 postası iletilemiyor. KMail ana penceresi kullanılabilir değil"
 
 #: forwardmailtool/forwardmailtooljob.cpp:59
-#, fuzzy, kde-format
-#| msgid "Reply composer opened in KMail for mail %1"
+#, kde-format
 msgid "Forward composer opened in KMail for mail %1"
-msgstr "%1 postası için KMail içinde yanıt oluşturucusu açıldı"
+msgstr "%1 postası için KMail içinde iletme oluşturucusu açıldı"
 
 #: freebusytool/freebusytool.cpp:27
 #, kde-format
@@ -1214,3 +1197,30 @@ msgstr ""
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "Bitiş tarihi, başlangıçtan önce olamaz"
+
+#~ msgid "Another confirmation is pending"
+#~ msgstr "Başka bir onay beklemede"
+
+#~ msgid "MCP tool asks confirmation"
+#~ msgstr "MCP aracı, onayınızı istiyor"
+
+#~ msgid ""
+#~ "Run \"%1\"?\n"
+#~ "%2"
+#~ msgstr ""
+#~ "“%1” çalıştırılsın mı?\n"
+#~ "%2"
+
+#~ msgid "Action refused by user"
+#~ msgstr "Eylem, kullanıcı tarafından reddedildi"
+
+#~ msgid "Accept"
+#~ msgstr "Kabul Et"
+
+#~ msgid "Reject"
+#~ msgstr "Reddet"
+
+#~ msgctxt "@option:check"
+#~ msgid "Ask confirmation before running tools which modify data"
+#~ msgstr ""
+#~ "Veride değişiklik yapan araçlar çalıştırmadan önce kullanıcı onayı iste"

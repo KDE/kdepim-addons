@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-06 00:52+0000\n"
-"PO-Revision-Date: 2026-11-05 07:44+0100\n"
+"POT-Creation-Date: 2026-11-08 00:14+0000\n"
+"PO-Revision-Date: 2026-11-07 19:42+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -404,40 +404,34 @@ msgid "Argument calendar_id must be an integer"
 msgstr "Argument calendar_id mora biti celo število"
 
 #: createidentitytool/createidentitytool.cpp:28
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Identity"
-msgstr "Ustvari dogodek"
+msgstr "Ustvari identiteto"
 
 #: createidentitytool/createidentitytool.cpp:55
-#, fuzzy, kde-format
-#| msgid "Argument name must be a non-empty string"
+#, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "Ime argumenta mora biti neprazen niz"
+msgstr "Argument email mora biti neprazen niz"
 
 #: createidentitytool/createidentitytool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument emails must be an array of strings"
+#, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "Argument emails mora biti polje nizov"
+msgstr "Argument email_aliases mora biti polje nizov"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email alias \"%1\""
-msgstr "Neveljaven e-poštni naslov \"%1\""
+msgstr "Neveljaven vzdevek e-pošte \"%1\""
 
 #: createidentitytool/createidentitytool.cpp:79
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail transport found with id %1"
-msgstr "Ni najdene pošte za \"%1\""
+msgstr "Ni mogoče najti poštnega transporta z id %1"
 
 #: createidentitytool/createidentitytool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument port must be an integer"
+#, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "Argument port mora biti celo število"
+msgstr "Argument transport_id mora biti celo število"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
@@ -446,10 +440,9 @@ msgid "Argument set_as_default must be a boolean"
 msgstr "Argument set_as_default mora biti boolova vrednost"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Transport \"%1\" created (id %2)"
+#, kde-format
 msgid "Identity \"%1\" created (uoid %2)"
-msgstr "Transport \"%1\" je ustvaril (id: %2)"
+msgstr "Identiteta \"%1\" je ustvarila (uoid: %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
@@ -1214,6 +1207,32 @@ msgstr ""
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "Argument due ne sme biti prej od argumenta start"
+
+#~ msgid "Another confirmation is pending"
+#~ msgstr "Čakanje na še eno potrditev"
+
+#~ msgid "MCP tool asks confirmation"
+#~ msgstr "Orodje MCP prosi za potrdilo"
+
+#~ msgid ""
+#~ "Run \"%1\"?\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Zaženi \"%1\"?\n"
+#~ "%2"
+
+#~ msgid "Action refused by user"
+#~ msgstr "Uporabnik je zavrnil dejanje"
+
+#~ msgid "Accept"
+#~ msgstr "Sprejmi"
+
+#~ msgid "Reject"
+#~ msgstr "Zavrni"
+
+#~ msgctxt "@option:check"
+#~ msgid "Ask confirmation before running tools which modify data"
+#~ msgstr "Prosi za potrditev pred zagonom orodij, ki spreminjajo podatke"
 
 #~ msgid "No birthday in the next %1 days"
 #~ msgstr "V naslednjih %1 dneh ni rojstnega dne"
