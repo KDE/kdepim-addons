@@ -1,10 +1,46 @@
 [Global]
 IconName=ruqola
 Name=AkonadiMcpProtocol
+Name[bg]=AkonadiMcpProtocol
+Name[ca]=AkonadiMcpProtocol
+Name[cs]=AkonadiMcpProtocol
+Name[es]=AkonadiMcpProtocol
+Name[he]=פרוטוקולMCPל־Akonadi
+Name[ka]=AkonadiMcpProtocol
+Name[nl]=AkonadiMcpProtocol
+Name[pt_BR]=AkonadiMcpProtocol
+Name[ru]=AkonadiMcpProtocol
+Name[sl]=AkonadiMcpProtocol
+Name[tr]=Akonadi MCP Protokolü
+Name[uk]=AkonadiMcpProtocol
 DesktopEntry=org.kde.akonadimcpprotocol
 Comment=Notification
+Comment[bg]=Известие
+Comment[ca]=Notificació
+Comment[cs]=Upozornění
+Comment[es]=Notificación
+Comment[he]=הודעות
+Comment[ka]=შეტყობინება
+Comment[nl]=Melding
+Comment[pt_BR]=Notificação
+Comment[ru]=Уведомление
+Comment[sl]=Obvestilo
+Comment[tr]=Bildirim
+Comment[uk]=Сповіщення
 
 [Event/Mcp-Tool-Confirmation]
 Name=MCP Tool Asks Confirmation
+Name[bg]=MCP инструмент иска потвърждение
+Name[ca]=L'eina MCP demana confirmació
+Name[cs]=Nástroj MCP žádá o potvrzení
+Name[es]=La herramienta MCP solicita confirmación
+Name[he]=כלי MCP מבקש אישור
+Name[ka]=MCP-ის ხელსაწყო დადასტურებას მოითხოვს
+Name[nl]=MCP-hulpmiddel vraagt ​​om bevestiging
+Name[pt_BR]=Ferramenta MCP solicita confirmação
+Name[ru]=Инструмент MCP запрашивает подтверждение
+Name[sl]=Orodje MCP prosi za potrditev
+Name[tr]=MCP Aracı Onay İstiyor
+Name[uk]=Інструмент MCP просить підтвердження
 Action=Popup
 Urgency=Normal
