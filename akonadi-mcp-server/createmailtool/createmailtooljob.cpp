@@ -87,10 +87,11 @@ void CreateMailToolJob::slotDraftsCollectionResult(KJob *job)
     createMail(collection);
 }
 
-void CreateMailToolJob::assignIdentity(KMime::Message *message) const
+bool CreateMailToolJob::assignIdentity(KMime::Message *message) const
 {
     const KIdentityManagementCore::IdentityManager *manager = KIdentityManagementCore::IdentityManager::self();
-    if (mUoid != 0 && manager->identityForUoid(mUoid).isNull()) {
+    const bool fallbackToDefault = mUoid != 0 && manager->identityForUoid(mUoid).isNull();
+    if (fallbackToDefault) {
         qCWarning(AKONADI_MCP_PROTOCOL_LOG) << "Identity" << mUoid << "not found, fallback to default identity";
     }
     const KIdentityManagementCore::Identity &identity = manager->identityForUoidOrDefault(mUoid);
@@ -100,12 +101,13 @@ void CreateMailToolJob::assignIdentity(KMime::Message *message) const
         identityHeader->fromUnicodeString(QString::number(identity.uoid()));
         message->setHeader(std::move(identityHeader));
     }
+    return fallbackToDefault;
 }
 
 void CreateMailToolJob::createMail(const Akonadi::Collection &collection)
 {
     auto message = std::make_shared<KMime::Message>();
-    assignIdentity(message.get());
+    const bool fallbackToDefault = assignIdentity(message.get());
     message->subject()->fromUnicodeString(mSubject);
     if (!mTo.isEmpty()) {
         message->to()->fromUnicodeString(mTo.join(u", "_s));
@@ -130,6 +132,7 @@ void CreateMailToolJob::createMail(const Akonadi::Collection &collection)
 
     auto createJob = new Akonadi::ItemCreateJob(item, collection, this);
     createJob->setProperty("folderName", collection.displayName());
+    createJob->setProperty("fallbackToDefault", fallbackToDefault);
     connect(createJob, &KJob::result, this, &CreateMailToolJob::slotItemCreateResult);
     setCurrentJob(createJob);
 }
@@ -140,10 +143,20 @@ void CreateMailToolJob::slotItemCreateResult(KJob *job)
         return;
     }
     const Akonadi::Item item = qobject_cast<Akonadi::ItemCreateJob *>(job)->item();
-    finish(i18n("Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in KMail with mail_edit",
-                mSubject,
-                job->property("folderName").toString(),
-                QString::number(item.id())));
+    if (job->property("fallbackToDefault").toBool()) {
+        finish(
+            i18n("Identity %1 not found, the default identity was used. Mail \"%2\" created in folder \"%3\" (item id: %4). It can be edited in KMail with "
+                 "mail_edit",
+                 QString::number(mUoid),
+                 mSubject,
+                 job->property("folderName").toString(),
+                 QString::number(item.id())));
+    } else {
+        finish(i18n("Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in KMail with mail_edit",
+                    mSubject,
+                    job->property("folderName").toString(),
+                    QString::number(item.id())));
+    }
 }
 
 #include "moc_createmailtooljob.cpp"

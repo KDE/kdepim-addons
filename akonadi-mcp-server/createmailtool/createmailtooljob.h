@@ -43,7 +43,7 @@ private:
     void slotDraftsCollectionResult(KJob *job);
     void slotItemCreateResult(KJob *job);
     void createMail(const Akonadi::Collection &collection);
-    void assignIdentity(KMime::Message *message) const;
+    [[nodiscard]] bool assignIdentity(KMime::Message *message) const;
     QString mSubject;
     QStringList mTo;
     QStringList mCc;
