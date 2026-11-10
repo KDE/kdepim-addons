@@ -6,7 +6,6 @@
 
 #include "viewerpluginai.h"
 #include "viewerpluginaiinterface.h"
-#include <KActionCollection>
 #include <KPluginFactory>
 using namespace Qt::Literals::StringLiterals;
 

@@ -8,7 +8,6 @@
 #include "common/toolutils.h"
 #include "contactgroupexpandtooljob.h"
 #include <KLocalizedString>
-#include <QJsonArray>
 #include <QJsonValue>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 

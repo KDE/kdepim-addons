@@ -9,7 +9,6 @@
 #include <QGpgME/KeyListJob>
 #include <QGpgME/Protocol>
 #include <gpgme++/keylistresult.h>
-#include <gpgme.h>
 
 PgpKeyMemento::PgpKeyMemento()
     : QObject(nullptr)

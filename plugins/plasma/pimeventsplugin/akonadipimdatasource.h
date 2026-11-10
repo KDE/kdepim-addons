@@ -9,6 +9,8 @@
 
 #include "pimdatasource.h"
 #include <Akonadi/Collection>
+#include <QColor>
+#include <QHash>
 #include <QObject>
 
 class EventModel;

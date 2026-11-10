@@ -19,7 +19,6 @@
 #include <QGpgME/Protocol>
 #include <gpgme++/error.h>
 #include <gpgme++/importresult.h>
-#include <gpgme.h>
 
 #include <KMessageBox>
 using namespace Qt::Literals::StringLiterals;

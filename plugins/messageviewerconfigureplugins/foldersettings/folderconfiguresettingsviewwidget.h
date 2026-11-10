@@ -7,9 +7,10 @@
 #pragma once
 
 #include "folderconfiguresettingspagebase.h"
-
-#include <Akonadi/Collection>
-class QWidget;
+namespace Akonadi
+{
+class Collection;
+}
 namespace MailCommon
 {
 class CollectionViewWidget;

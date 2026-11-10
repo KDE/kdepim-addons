@@ -17,10 +17,13 @@
 #include <KLocalizedString>
 #include <KPIMTextEdit/RichTextComposer>
 #include <KPIMTextEdit/RichTextComposerControler>
+#include <KPIMTextEdit/RichTextComposerImages>
 #include <KSharedConfig>
 #include <QAction>
 #include <QFileInfo>
+#include <QImage>
 #include <QMenu>
+#include <QUrl>
 
 #include <MessageComposer/TextPart>
 

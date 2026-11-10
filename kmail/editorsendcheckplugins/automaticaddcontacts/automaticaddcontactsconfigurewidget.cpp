@@ -6,10 +6,6 @@
 
 #include "automaticaddcontactsconfigurewidget.h"
 #include "automaticaddcontactsconfiguretab.h"
-#include <Akonadi/Collection>
-#include <Akonadi/CollectionComboBox>
-#include <KSharedConfig>
-#include <QCheckBox>
 #include <QVBoxLayout>
 using namespace Qt::Literals::StringLiterals;
 

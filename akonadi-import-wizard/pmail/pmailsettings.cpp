@@ -5,16 +5,11 @@
 */
 
 #include "pmailsettings.h"
-#include <ImportWizard/ImportWizardUtil>
-
-#include <MailCommon/MailUtil>
-#include <MailTransport/TransportManager>
 
 #include <KIdentityManagementCore/Identity>
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <QFile>
 #include <QFileInfo>
 #include <QRegularExpression>
 using namespace Qt::Literals::StringLiterals;

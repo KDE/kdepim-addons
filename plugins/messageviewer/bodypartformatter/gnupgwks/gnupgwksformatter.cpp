@@ -16,7 +16,6 @@
 
 #include <MessageCore/ColorUtil>
 #include <MessageViewer/HtmlWriter>
-#include <MessageViewer/Viewer>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/MessagePart>
 #include <MimeTreeParser/NodeHelper>
@@ -28,7 +27,6 @@
 
 #include <QGpgME/DecryptJob>
 #include <QGpgME/Protocol>
-#include <gpgme.h>
 using namespace Qt::Literals::StringLiterals;
 
 using namespace MimeTreeParser;

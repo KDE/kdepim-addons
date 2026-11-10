@@ -34,13 +34,11 @@
 #include <QCheckBox>
 #include <QEventLoop>
 #include <QGridLayout>
-#include <QHBoxLayout>
 #include <QLabel>
 #include <QListWidget>
 #include <QPushButton>
 #include <QTextEdit>
 #include <QTimer>
-#include <QVBoxLayout>
 using namespace Qt::Literals::StringLiterals;
 using namespace KMail;
 using namespace MailCommon;

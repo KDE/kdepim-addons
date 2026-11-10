@@ -19,7 +19,6 @@
 
 #include <KTextTemplate/Template>
 #include <QMimeDatabase>
-#include <QTextDocument>
 using namespace Qt::Literals::StringLiterals;
 
 namespace

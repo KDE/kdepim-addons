@@ -7,25 +7,24 @@
 #include "vcardimportexportplugininterface.h"
 #include <KActionCollection>
 #include <KAddressBookImportExport/ContactSelectionDialog>
+#include <KAddressBookImportExport/ImportExportEngine>
 #include <KContacts/VCardConverter>
+#include <KIO/FileCopyJob>
+#include <KIO/StoredTransferJob>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <PimCommon/RenameFileDialog>
 #include <QAction>
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QPointer>
+#include <QTemporaryFile>
 #include <QUrl>
-#include <kio/filecopyjob.h>
-#include <kio/storedtransferjob.h>
 
 #ifdef QGPGME_FOUND
-#include <KAddressBookImportExport/ImportExportEngine>
-#include <QTemporaryFile>
 #include <gpgme++/context.h>
 #include <gpgme++/data.h>
-#include <gpgme++/key.h>
-#include <gpgme.h>
 #include <qgpgme/dataprovider.h>
 #endif // QGPGME_FOUND
 

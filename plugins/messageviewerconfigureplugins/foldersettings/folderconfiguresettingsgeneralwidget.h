@@ -8,8 +8,10 @@
 
 #include "folderconfiguresettings_private_export.h"
 #include "folderconfiguresettingspagebase.h"
-#include <Akonadi/Collection>
-class QWidget;
+namespace Akonadi
+{
+class Collection;
+}
 namespace MailCommon
 {
 class CollectionGeneralWidget;

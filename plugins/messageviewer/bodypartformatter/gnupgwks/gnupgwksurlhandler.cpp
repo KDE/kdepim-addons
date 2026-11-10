@@ -27,6 +27,7 @@
 #include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/IdentityManager>
 
+#include <KMime/Message>
 #include <KMime/Util>
 
 #include <Akonadi/ItemDeleteJob>

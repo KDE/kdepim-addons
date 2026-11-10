@@ -5,6 +5,7 @@
 */
 #include "kaichatcalendarplugindialog.h"
 #include "kaichatcalendarpluginwidget.h"
+#include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <TextAutoGenerateText/TextAutoGenerateTextToolPlugin>

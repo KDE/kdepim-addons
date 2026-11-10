@@ -7,6 +7,7 @@
 
 #include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 class KActionCollection;
+class KToggleAction;
 namespace TextGrammarCheck
 {
 class LanguageToolResultWidget;

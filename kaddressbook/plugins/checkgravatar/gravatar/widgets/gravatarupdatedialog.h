@@ -7,6 +7,9 @@
 #pragma once
 
 #include <QDialog>
+class QPixmap;
+class QPushButton;
+class QUrl;
 namespace KABGravatar
 {
 class GravatarUpdateWidget;

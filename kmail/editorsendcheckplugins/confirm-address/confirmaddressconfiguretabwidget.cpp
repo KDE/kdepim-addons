@@ -10,6 +10,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <QGroupBox>
+#include <QHBoxLayout>
 #include <QRadioButton>
 #include <QVBoxLayout>
 

@@ -9,6 +9,7 @@
 #include <KContacts/VCardConverter>
 #include <QObject>
 
+class KJob;
 class QTemporaryDir;
 namespace MimeTreeParser
 {

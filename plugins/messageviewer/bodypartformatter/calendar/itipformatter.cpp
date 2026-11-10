@@ -15,9 +15,7 @@
 #include <GrantleeTheme/GrantleeThemeEngine>
 
 #include <KCalendarCore/Event>
-#include <KCalendarCore/Exceptions>
 #include <KCalendarCore/FreeBusy>
-#include <KCalendarCore/ICalFormat>
 #include <KCalendarCore/Journal>
 #include <KCalendarCore/Todo>
 #include <KCalendarCore/Visitor>
@@ -28,7 +26,6 @@
 #include <KFormat>
 #include <KLocalizedString>
 #include <TextUtils/TextUtilsTextToHtml>
-#include <ktexttemplate_version.h>
 namespace TextToHtml = TextUtils::TextUtilsTextToHtml;
 
 #include <QApplication>

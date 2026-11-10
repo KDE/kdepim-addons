@@ -9,6 +9,7 @@
 #include "operaplugin_debug.h"
 #include <KContacts/Addressee>
 #include <QFile>
+#include <QTextStream>
 #include <QUrl>
 using namespace Qt::Literals::StringLiterals;
 

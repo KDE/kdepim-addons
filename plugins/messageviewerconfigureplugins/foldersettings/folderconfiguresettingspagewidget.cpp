@@ -12,7 +12,6 @@
 #include "folderconfiguresettingsviewwidget.h"
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <MailCommon/CollectionExpiryWidget>
 #include <QTabWidget>
 #include <QVBoxLayout>
 using namespace Qt::Literals::StringLiterals;

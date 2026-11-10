@@ -7,7 +7,6 @@
 #include "checkbeforesendplugin.h"
 #include "checkbeforesendinterface.h"
 #include "configurewidget/checkbeforesendconfiguredialog.h"
-#include "configurewidget/checkbeforesendconfigurewidget.h"
 
 #include <KPluginFactory>
 

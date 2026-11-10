@@ -9,7 +9,6 @@
 #include "adblockmanager.h"
 #include <QAction>
 #include <QDebug>
-#include <QWebEngineView>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent)

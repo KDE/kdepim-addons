@@ -10,7 +10,6 @@
 #include <KCalendarCore/Event>
 #include <KJob>
 
-class QObject;
 namespace MessageViewer
 {
 class CreateEventJob : public KJob

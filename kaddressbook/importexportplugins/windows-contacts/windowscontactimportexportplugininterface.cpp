@@ -9,9 +9,8 @@
 #include "importwindowcontact.h"
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <PimCommon/RenameFileDialog>
 #include <QAction>
-#include <QFile>
+#include <QDir>
 #include <QFileDialog>
 
 #include <KAddressBookImportExport/ImportExportEngine>

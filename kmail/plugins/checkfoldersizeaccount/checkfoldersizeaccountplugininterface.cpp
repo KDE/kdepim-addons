@@ -5,6 +5,7 @@
 */
 
 #include "checkfoldersizeaccountplugininterface.h"
+#include "checkfoldersizeaccountplugindialog.h"
 
 #include <KActionCollection>
 #include <KLocalizedString>

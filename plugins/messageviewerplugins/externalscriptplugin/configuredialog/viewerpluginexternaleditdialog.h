@@ -8,9 +8,8 @@
 
 #include <QDialog>
 
-#include "../viewerpluginexternalscriptinfo.h"
-
 class ViewerPluginExternalEditWidget;
+class ViewerPluginExternalScriptInfo;
 class QPushButton;
 class ViewerPluginExternalEditDialog : public QDialog
 {

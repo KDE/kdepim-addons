@@ -8,6 +8,7 @@
 
 #include <QDialog>
 class KUrlRequester;
+class QUrl;
 
 namespace MailMerge
 {

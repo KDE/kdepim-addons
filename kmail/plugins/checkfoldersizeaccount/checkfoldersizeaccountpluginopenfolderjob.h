@@ -7,7 +7,6 @@
 #pragma once
 
 #include <KJob>
-#include <QObject>
 
 class CheckFolderSizeAccountPluginOpenFolderJob : public KJob
 {

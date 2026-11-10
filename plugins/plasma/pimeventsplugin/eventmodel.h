@@ -9,7 +9,9 @@
 
 #include <Akonadi/CalendarBase>
 #include <QList>
+#include <QMap>
 
+class KJob;
 namespace Akonadi
 {
 class Monitor;

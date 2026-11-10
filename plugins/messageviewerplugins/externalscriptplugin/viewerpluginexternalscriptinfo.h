@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <QObject>
+#include <QMetaType>
 #include <QString>
 class ViewerPluginExternalScriptInfo
 {

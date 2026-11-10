@@ -11,8 +11,8 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QLabel>
+#include <QUrl>
 #include <QVBoxLayout>
-#include <QWebChannel>
 #include <QWebEngineSettings>
 #include <QWebEngineView>
 

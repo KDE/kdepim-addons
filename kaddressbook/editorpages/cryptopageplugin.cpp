@@ -12,8 +12,6 @@
 #include <QGroupBox>
 #include <QLabel>
 #include <QLayout>
-#include <QPushButton>
-#include <qplugin.h>
 
 #include <KContacts/Addressee>
 #include <KIconLoader>

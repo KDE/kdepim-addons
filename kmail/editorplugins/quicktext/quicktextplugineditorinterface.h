@@ -8,7 +8,7 @@
 
 #include <MailCommon/SnippetsModel>
 #include <MessageComposer/PluginEditorInterface>
-#include <QTextCursor>
+class QTextCursor;
 class QuickTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT

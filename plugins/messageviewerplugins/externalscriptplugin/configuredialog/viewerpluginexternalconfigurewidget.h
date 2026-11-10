@@ -6,9 +6,10 @@
 
 #pragma once
 
-#include "../viewerpluginexternalscriptsloadjob.h"
+#include <QStringList>
 #include <QWidget>
 class QListWidget;
+class ViewerPluginExternalScriptInfo;
 class QPushButton;
 class QListWidgetItem;
 class ViewerPluginExternalConfigureWidget : public QWidget

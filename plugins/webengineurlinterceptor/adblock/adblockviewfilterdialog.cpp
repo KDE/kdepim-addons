@@ -6,12 +6,12 @@
 
 #include "adblockviewfilterdialog.h"
 #include "adblockviewfilterwidget.h"
-#include "kwindowconfig.h"
 
 #include <KLocalizedString>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>

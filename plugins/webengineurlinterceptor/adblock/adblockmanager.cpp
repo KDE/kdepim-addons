@@ -11,6 +11,7 @@
 #include "libadblockplugin_debug.h"
 #include "libadblockplugin_intercept_url_debug.h"
 
+#include <QCryptographicHash>
 #include <QDir>
 #include <QFile>
 #include <QNetworkReply>

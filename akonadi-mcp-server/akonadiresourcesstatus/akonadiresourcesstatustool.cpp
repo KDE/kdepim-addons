@@ -7,6 +7,7 @@
 #include "common/toolutils.h"
 #include <Akonadi/AgentInstance>
 #include <Akonadi/AgentManager>
+#include <Akonadi/AgentType>
 #include <KLocalizedString>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerToolCall>
 

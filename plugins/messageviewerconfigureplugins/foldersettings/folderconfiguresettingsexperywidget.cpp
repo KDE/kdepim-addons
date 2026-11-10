@@ -6,6 +6,7 @@
 
 #include "folderconfiguresettingsexperywidget.h"
 
+#include <Akonadi/Collection>
 #include <MailCommon/CollectionExpiryWidget>
 using namespace Qt::Literals::StringLiterals;
 

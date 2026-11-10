@@ -5,6 +5,7 @@
 */
 
 #include "viewerpluginexternalconfigurewidget.h"
+#include "../viewerpluginexternalscriptsloadjob.h"
 #include "externalscriptplugin_debug.h"
 #include "viewerpluginexternaleditdialog.h"
 #include <KConfigGroup>

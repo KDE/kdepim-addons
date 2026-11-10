@@ -5,6 +5,7 @@
 */
 
 #include "folderconfiguresettingstemplatewidget.h"
+#include <Akonadi/Collection>
 #include <MailCommon/CollectionTemplatesWidget>
 using namespace Qt::Literals::StringLiterals;
 

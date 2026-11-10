@@ -9,7 +9,6 @@
 #include "confirmaddressconfiguretab.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <QCheckBox>
 #include <QRegularExpression>
 #include <QVBoxLayout>
 

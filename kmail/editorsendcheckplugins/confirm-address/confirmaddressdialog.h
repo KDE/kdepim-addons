@@ -8,6 +8,7 @@
 
 #include <QDialog>
 class ConfirmAddressWidget;
+class QPushButton;
 class ConfirmAddressDialog : public QDialog
 {
     Q_OBJECT

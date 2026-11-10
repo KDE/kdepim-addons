@@ -6,8 +6,6 @@
 
 #include "scamconfiguresettingswidget.h"
 #include "scamconfiguresettingstreeview.h"
-#include <KLocalizedString>
-#include <KSharedConfig>
 #include <MessageViewer/ScamDetectionWhiteListSettingsManager>
 #include <QHeaderView>
 #include <QVBoxLayout>

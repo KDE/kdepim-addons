@@ -5,6 +5,7 @@
 */
 
 #include "viewerpluginexternalscriptparseargument.h"
+#include <KMime/Message>
 #include <QTextDocument>
 using namespace Qt::Literals::StringLiterals;
 

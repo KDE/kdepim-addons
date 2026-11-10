@@ -5,6 +5,7 @@
 */
 #pragma once
 #include <QString>
+#include <cstdint>
 namespace KAIChatAddressBookPluginUtils
 {
 enum AddressBookInformationTypeEnum : int8_t {

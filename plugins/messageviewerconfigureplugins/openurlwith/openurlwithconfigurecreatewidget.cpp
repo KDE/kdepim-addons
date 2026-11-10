@@ -10,6 +10,7 @@
 #include <KLocalizedString>
 #include <KUrlRequester>
 #include <QCheckBox>
+#include <QCursor>
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>

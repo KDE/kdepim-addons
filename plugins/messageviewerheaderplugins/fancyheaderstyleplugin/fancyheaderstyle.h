@@ -11,7 +11,6 @@
 #include <MessageViewer/HeaderStyle_Util>
 namespace MessageViewer
 {
-class HeaderStyleUtil;
 class FancyHeaderStyle : public HeaderStyle
 {
 public:

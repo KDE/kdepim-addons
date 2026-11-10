@@ -6,7 +6,6 @@
 
 #include "viewerpluginexpandurl.h"
 #include "viewerpluginexpandurlinterface.h"
-#include <KActionCollection>
 #include <KPluginFactory>
 using namespace Qt::Literals::StringLiterals;
 

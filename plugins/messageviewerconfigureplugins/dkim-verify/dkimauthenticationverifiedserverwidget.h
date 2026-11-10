@@ -8,7 +8,6 @@
 
 #include "dkimconfigure_private_export.h"
 #include <PimCommon/SimpleStringListEditor>
-#include <QWidget>
 
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerSelectorWidget : public PimCommon::SimpleStringListEditor
 {

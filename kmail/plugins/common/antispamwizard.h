@@ -17,6 +17,7 @@ class QLabel;
 class QCheckBox;
 class QBoxLayout;
 class QListWidget;
+class KPageWidgetItem;
 
 namespace MailCommon
 {

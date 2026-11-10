@@ -5,6 +5,7 @@
 */
 
 #include "folderconfiguresettingsviewwidget.h"
+#include <Akonadi/Collection>
 #include <MailCommon/CollectionViewWidget>
 #include <QHBoxLayout>
 using namespace Qt::Literals::StringLiterals;

@@ -6,6 +6,7 @@
 #pragma once
 
 #include <QString>
+#include <cstdint>
 namespace TextAutoGenerateTextMcpProtocolCore
 {
 class McpProtocolMeta;

@@ -10,7 +10,6 @@
 #include "pimeventsplugin_debug.h"
 #include "settingschangenotifier.h"
 
-#include <Akonadi/AttributeFactory>
 #include <Akonadi/CollectionColorAttribute>
 #include <Akonadi/CollectionModifyJob>
 

@@ -8,6 +8,7 @@
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QFormLayout>
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
 #include <QSpinBox>

@@ -14,7 +14,6 @@
 class QStackedWidget;
 namespace KABMergeContacts
 {
-class SearchDuplicateResultWidget;
 class MergeContactShowResultTabWidget;
 class MergeContactSelectInformationTabWidget;
 class MergeContactErrorLabel;

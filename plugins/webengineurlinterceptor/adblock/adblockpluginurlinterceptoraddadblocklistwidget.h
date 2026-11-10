@@ -9,6 +9,7 @@
 #include "adblockplugin_private_export.h"
 #include <QWidget>
 class QLineEdit;
+class QDebug;
 class LIBADBLOCKPLUGIN_TESTS_EXPORT AdblockPluginUrlInterceptorAddAdblockListWidget : public QWidget
 {
     Q_OBJECT

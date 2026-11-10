@@ -7,17 +7,20 @@
 #include "ldifimportexportplugininterface.h"
 #include <KActionCollection>
 #include <KContacts/LDIFConverter>
+#include <KIO/FileCopyJob>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <PimCommon/RenameFileDialog>
 #include <QAction>
+#include <QDateTime>
+#include <QDir>
 #include <QFile>
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QPointer>
 #include <QTemporaryFile>
 #include <QTextStream>
-#include <kio/filecopyjob.h>
 
 #include <KAddressBookImportExport/ContactList>
 #include <KAddressBookImportExport/ContactSelectionDialog>

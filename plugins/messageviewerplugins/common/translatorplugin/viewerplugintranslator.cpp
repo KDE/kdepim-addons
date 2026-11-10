@@ -6,7 +6,6 @@
 
 #include "viewerplugintranslator.h"
 #include "viewerplugintranslatorinterface.h"
-#include <KActionCollection>
 #include <KPluginFactory>
 #include <TextTranslator/TranslatorConfigureDialog>
 using namespace Qt::Literals::StringLiterals;

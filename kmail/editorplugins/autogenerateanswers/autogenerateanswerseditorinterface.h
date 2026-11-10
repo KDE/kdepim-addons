@@ -8,7 +8,10 @@
 
 #include <MessageComposer/PluginEditorInterface>
 #include <QPointer>
-#include <TextAutoGenerateText/TextAutoGenerateManager>
+namespace TextAutoGenerateText
+{
+class TextAutoGenerateManager;
+}
 class AutoGenerateAnswersEditorDialog;
 class AutoGenerateAnswersEditorInterface : public MessageComposer::PluginEditorInterface
 {

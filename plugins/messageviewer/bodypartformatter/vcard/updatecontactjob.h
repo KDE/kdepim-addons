@@ -9,6 +9,7 @@
 #include <KJob>
 
 #include <KContacts/Addressee>
+class QWidget;
 
 class UpdateContactJob : public KJob
 {

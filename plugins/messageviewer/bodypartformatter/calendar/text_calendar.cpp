@@ -44,15 +44,16 @@ using namespace KCalendarCore;
 
 #include "text_calendar_debug.h"
 
+#include <KIO/ApplicationLauncherJob>
 #include <KIO/FileCopyJob>
-#include <KIO/JobUiDelegate>
 #include <KIO/OpenUrlJob>
 #include <KIO/StatJob>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KService>
 
-#include <QDBusServiceWatcher>
 #include <QDesktopServices>
+#include <QDir>
 #include <QFileDialog>
 #include <QIcon>
 #include <QInputDialog>
@@ -62,6 +63,7 @@ using namespace KCalendarCore;
 #include <QSaveFile>
 #include <QTemporaryFile>
 #include <QUrl>
+#include <QUrlQuery>
 using namespace Qt::Literals::StringLiterals;
 
 using namespace MailTransport;

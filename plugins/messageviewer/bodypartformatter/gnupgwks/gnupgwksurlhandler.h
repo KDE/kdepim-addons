@@ -8,8 +8,14 @@
 
 #include <MessageViewer/BodyPartURLHandler>
 
-#include <KMime/Message>
+#include <QByteArray>
 
+#include <memory>
+
+namespace KMime
+{
+class Message;
+}
 class GnuPGWKSMessagePart;
 
 class ApplicationGnuPGWKSUrlHandler : public MessageViewer::Interface::BodyPartURLHandler

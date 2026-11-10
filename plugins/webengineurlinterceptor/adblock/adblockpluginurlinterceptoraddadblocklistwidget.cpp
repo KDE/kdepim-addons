@@ -7,6 +7,7 @@
 #include "adblockpluginurlinterceptoraddadblocklistwidget.h"
 #include <KLineEditEventHandler>
 #include <KLocalizedString>
+#include <QDebug>
 #include <QFormLayout>
 #include <QLineEdit>
 using namespace Qt::Literals::StringLiterals;

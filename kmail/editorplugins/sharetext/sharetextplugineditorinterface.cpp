@@ -6,12 +6,10 @@
 
 #include "sharetextplugineditorinterface.h"
 
-#include "sharetexteditorplugin_debug.h"
 #include "sharetextpurposemenuwidget.h"
 #include <KActionCollection>
 #include <KActionMenu>
 #include <KLocalizedString>
-#include <PimCommon/KActionMenuChangeCase>
 #include <TextCustomEditor/RichTextEditor>
 
 #include <QAction>

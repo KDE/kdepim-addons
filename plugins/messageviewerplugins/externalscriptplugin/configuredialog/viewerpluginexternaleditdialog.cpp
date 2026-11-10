@@ -5,6 +5,7 @@
 */
 
 #include "viewerpluginexternaleditdialog.h"
+#include "../viewerpluginexternalscriptinfo.h"
 #include "viewerpluginexternaleditwidget.h"
 #include <KConfigGroup>
 #include <KLocalizedString>

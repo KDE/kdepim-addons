@@ -6,7 +6,6 @@
 
 #include "viewerplugincreateevent.h"
 #include "viewerplugincreateeventinterface.h"
-#include <KActionCollection>
 #include <KPluginFactory>
 using namespace Qt::Literals::StringLiterals;
 

@@ -10,7 +10,6 @@
 
 #include <Akonadi/IncidenceChanger>
 
-#include <Akonadi/AttributeFactory>
 #include <Akonadi/CollectionColorAttribute>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>

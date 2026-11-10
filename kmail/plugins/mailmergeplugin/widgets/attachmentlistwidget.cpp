@@ -8,7 +8,6 @@
 #include "selectattachmentdialog.h"
 
 #include <QPointer>
-#include <QPushButton>
 #include <QUrl>
 
 using namespace MailMerge;

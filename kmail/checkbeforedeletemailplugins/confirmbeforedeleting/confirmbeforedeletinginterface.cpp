@@ -7,7 +7,6 @@
 
 #include "confirmbeforedeletingmanager.h"
 #include "confirmbeforedeletingmessageboxdialog.h"
-#include "confirmbeforedeletingplugin_debug.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>

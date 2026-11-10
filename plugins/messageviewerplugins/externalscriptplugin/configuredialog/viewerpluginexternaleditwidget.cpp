@@ -9,6 +9,7 @@
 #include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <KUrlRequester>
+#include <QCursor>
 #include <QFormLayout>
 #include <QLabel>
 #include <QWhatsThis>

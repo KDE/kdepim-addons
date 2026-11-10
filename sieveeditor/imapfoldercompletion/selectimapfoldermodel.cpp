@@ -8,6 +8,7 @@
 #include "imapfoldercompletionplugin_debug.h"
 #include "selectimapcreatefolderjob.h"
 #include "selectimaploadfoldersjob.h"
+#include <KSieveCore/SieveImapAccountSettings>
 #include <QStandardItemModel>
 
 SelectImapFolderModel::SelectImapFolderModel(QObject *parent)

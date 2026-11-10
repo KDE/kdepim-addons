@@ -13,8 +13,10 @@
 #include <KEMailClientLauncherJob>
 #include <KLocalizedString>
 #include <MimeTreeParser/AttachmentTemporaryFilesDirs>
+#include <QDir>
 #include <QFile>
 #include <QTemporaryDir>
+#include <QTextStream>
 
 using namespace KABSendVCards;
 using namespace Qt::Literals::StringLiterals;

@@ -7,7 +7,6 @@
 #include "viewerpluginexternalscript.h"
 #include "configuredialog/viewerpluginexternalconfiguredialog.h"
 #include "viewerpluginexternalscriptinterface.h"
-#include <KActionCollection>
 #include <KPluginFactory>
 #include <QPointer>
 using namespace Qt::Literals::StringLiterals;

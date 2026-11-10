@@ -5,6 +5,7 @@
 */
 #pragma once
 #include <QString>
+#include <cstdint>
 namespace KAIChatCalendarPluginUtils
 {
 enum CalendarEnum : int8_t {

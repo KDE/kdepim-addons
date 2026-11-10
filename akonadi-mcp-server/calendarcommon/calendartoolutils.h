@@ -10,6 +10,7 @@
 #include <KCalendarCore/Incidence>
 #include <QDateTime>
 #include <QList>
+#include <cstdint>
 #include <optional>
 
 namespace CalendarToolUtils

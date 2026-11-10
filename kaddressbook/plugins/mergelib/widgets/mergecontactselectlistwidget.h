@@ -8,15 +8,10 @@
 
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
-#include <Akonadi/Item>
 #include <QIcon>
 #include <QWidget>
 class QLabel;
 class QListWidget;
-namespace KContacts
-{
-class Addressee;
-}
 namespace KABMergeContacts
 {
 class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectListWidget : public QWidget

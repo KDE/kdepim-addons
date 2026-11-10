@@ -12,6 +12,7 @@ namespace KSieveCore
 class SieveImapAccountSettings;
 }
 class SelectImapFolderWidget;
+class QPushButton;
 class SelectImapFolderDialog : public QDialog
 {
     Q_OBJECT

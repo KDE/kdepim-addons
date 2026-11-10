@@ -5,6 +5,7 @@
 */
 #include "kaichataddressbookplugindialog.h"
 #include "kaichataddressbookpluginwidget.h"
+#include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <TextAutoGenerateText/TextAutoGenerateTextToolPlugin>

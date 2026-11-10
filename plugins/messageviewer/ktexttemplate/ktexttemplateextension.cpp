@@ -9,10 +9,8 @@
 #include <KContacts/Address>
 #include <KItinerary/Place>
 
-#include <KTextTemplate/Exception>
-#include <KTextTemplate/Parser>
-
 #include <QDateTime>
+#include <QLocale>
 #include <QTimeZone>
 using namespace Qt::Literals::StringLiterals;
 

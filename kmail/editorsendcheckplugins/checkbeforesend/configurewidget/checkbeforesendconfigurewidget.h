@@ -7,8 +7,6 @@
 #pragma once
 
 #include <MessageComposer/PluginEditorConfigureBaseWidget>
-class QWidget;
-
 class QCheckBox;
 class CheckBeforeSendConfigureWidget : public MessageComposer::PluginEditorConfigureBaseWidget
 {

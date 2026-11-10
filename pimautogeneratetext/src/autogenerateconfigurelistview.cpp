@@ -12,7 +12,6 @@
 #include <KMessageBox>
 #include <QContextMenuEvent>
 #include <QMenu>
-#include <QSortFilterProxyModel>
 using namespace Qt::Literals::StringLiterals;
 AutogenerateConfigureListView::AutogenerateConfigureListView(QWidget *parent)
     : QListView(parent)

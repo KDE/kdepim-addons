@@ -7,7 +7,6 @@
 #pragma once
 
 #include <MessageComposer/PluginEditorConfigureBaseWidget>
-class QWidget;
 class AutomaticAddContactsConfigureTab;
 class AutomaticAddContactsConfigureWidget : public MessageComposer::PluginEditorConfigureBaseWidget
 {

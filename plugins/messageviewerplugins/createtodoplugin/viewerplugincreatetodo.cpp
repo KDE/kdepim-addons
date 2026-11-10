@@ -6,7 +6,6 @@
 
 #include "viewerplugincreatetodo.h"
 #include "viewerplugincreatetodointerface.h"
-#include <KActionCollection>
 #include <KPluginFactory>
 using namespace Qt::Literals::StringLiterals;
 

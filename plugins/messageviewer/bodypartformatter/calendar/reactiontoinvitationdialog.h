@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QDialog>
+class QPushButton;
 namespace TextCustomEditor
 {
 class PlainTextEditorWidget;

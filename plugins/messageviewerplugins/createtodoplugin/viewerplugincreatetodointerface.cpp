@@ -12,6 +12,7 @@
 
 #include <KActionCollection>
 #include <QAction>
+#include <QIcon>
 #include <QLayout>
 using namespace Qt::Literals::StringLiterals;
 

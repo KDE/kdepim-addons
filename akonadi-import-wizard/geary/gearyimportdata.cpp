@@ -5,14 +5,13 @@
 */
 
 #include "gearyimportdata.h"
-#include "gearyaddressbook.h"
 #include "gearysettings.h"
-#include <MailImporter/FilterInfo>
 #include <MailImporter/OtherMailerUtil>
 
 #include "gearyplugin_debug.h"
 #include <KPluginFactory>
 #include <QDir>
+#include <QFileInfo>
 using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(GearyImportData, "gearyimporter.json")

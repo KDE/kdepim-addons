@@ -10,7 +10,6 @@
 #include "kaichataddressbookpluginutils.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <QPointer>
 K_PLUGIN_CLASS_WITH_JSON(KAIChatAddressBookPlugin, "kaichat_addressbook.json")
 
 using namespace Qt::Literals::StringLiterals;

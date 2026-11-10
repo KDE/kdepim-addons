@@ -9,6 +9,7 @@
 #include <KNotification>
 #include <KSharedConfig>
 #include <QJsonArray>
+#include <QJsonDocument>
 #include <QJsonObject>
 #include <QPointer>
 #include <QTimer>

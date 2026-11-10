@@ -7,20 +7,24 @@
 #include "gmximportexportplugininterface.h"
 #include "kaddressbook_importexport_gmx_debug.h"
 #include <KActionCollection>
+#include <KIO/FileCopyJob>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <PimCommon/RenameFileDialog>
 #include <QAction>
+#include <QDateTime>
+#include <QDir>
+#include <QFile>
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QPointer>
 #include <QTemporaryFile>
 #include <QTextStream>
 #include <QUrl>
-#include <importexportengine.h>
-#include <kio/filecopyjob.h>
 
 #include <KAddressBookImportExport/ContactSelectionDialog>
+#include <KAddressBookImportExport/ImportExportEngine>
 using namespace Qt::Literals::StringLiterals;
 
 #define GMX_FILESELECTION_STRING i18n("GMX address book file (*.gmxa)")

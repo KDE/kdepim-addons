@@ -9,7 +9,6 @@
 #include "quicktextmenu.h"
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <MessageComposer/ConvertSnippetVariablesJob>
 #include <MessageComposer/PluginComposerInterface>
 #include <TextCustomEditor/RichTextEditor>
 
@@ -18,6 +17,7 @@
 #include <QMenu>
 #include <QPushButton>
 #include <QTextBlock>
+#include <QTextCursor>
 
 using namespace Qt::Literals::StringLiterals;
 

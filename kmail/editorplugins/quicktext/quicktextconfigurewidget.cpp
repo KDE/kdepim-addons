@@ -6,7 +6,6 @@
 
 #include "quicktextconfigurewidget.h"
 #include "quicktextwidget.h"
-#include <MailCommon/SnippetWidget>
 #include <QVBoxLayout>
 using namespace Qt::Literals::StringLiterals;
 

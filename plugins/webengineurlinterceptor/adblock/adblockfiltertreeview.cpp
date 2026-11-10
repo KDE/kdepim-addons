@@ -13,6 +13,7 @@
 #include "libadblockplugin_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QAction>
 #include <QContextMenuEvent>
 #include <QHeaderView>
 #include <QMenu>

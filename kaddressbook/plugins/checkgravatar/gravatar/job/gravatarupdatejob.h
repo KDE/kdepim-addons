@@ -9,6 +9,8 @@
 #include <Akonadi/Item>
 #include <QObject>
 #include <QUrl>
+class KJob;
+class QPixmap;
 namespace Gravatar
 {
 class GravatarResolvUrlJob;

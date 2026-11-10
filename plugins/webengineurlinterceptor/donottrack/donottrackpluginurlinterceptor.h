@@ -8,6 +8,7 @@
 
 #include <QVariant>
 #include <WebEngineViewer/NetworkPluginUrlInterceptor>
+class QWebEngineView;
 namespace WebEngineViewer
 {
 class NetworkPluginUrlInterceptorInterface;

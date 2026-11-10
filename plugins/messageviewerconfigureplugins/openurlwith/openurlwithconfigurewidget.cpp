@@ -10,6 +10,8 @@
 #include <KMessageBox>
 #include <MessageViewer/OpenUrlWithManager>
 #include <MessageViewer/OpenWithUrlInfo>
+#include <QCursor>
+#include <QIcon>
 #include <QListWidget>
 #include <QMenu>
 #include <QPointer>

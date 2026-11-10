@@ -8,8 +8,7 @@
 #include "operaplugin_debug.h"
 #include <MailImporter/FilterOpera>
 
-#include <MailCommon/MailUtil>
-#include <MailTransport/TransportManager>
+#include <MailTransport/Transport>
 
 #include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/Signature>
@@ -17,6 +16,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <QFile>
+#include <QFileInfo>
 #include <QRegularExpression>
 using namespace Qt::Literals::StringLiterals;
 

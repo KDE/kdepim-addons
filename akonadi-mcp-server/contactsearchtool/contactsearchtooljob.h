@@ -6,6 +6,7 @@
 #pragma once
 
 #include "common/tooljobbase.h"
+#include <cstdint>
 
 class ContactSearchToolJob : public ToolJobBase
 {

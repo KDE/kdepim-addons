@@ -9,7 +9,6 @@
 #include "adblockmanager.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 
-#include <KSharedConfig>
 #include <QHBoxLayout>
 using namespace Qt::Literals::StringLiterals;
 

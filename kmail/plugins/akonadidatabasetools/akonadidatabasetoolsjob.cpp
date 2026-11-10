@@ -7,7 +7,6 @@
 
 #include "akonadidatasetools_debug.h"
 #include <QProcess>
-#include <QStandardPaths>
 #include <TextAddonsWidgets/ExecutableUtils>
 
 using namespace Qt::Literals::StringLiterals;

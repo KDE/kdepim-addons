@@ -8,8 +8,6 @@
 
 #include <KTextToHTML>
 #include <MessageViewer/HeaderStrategy>
-#include <MessageViewer/MessageViewerSettings>
-#include <MimeTreeParser/NodeHelper>
 
 #include <MessageCore/StringUtil>
 

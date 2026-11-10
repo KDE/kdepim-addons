@@ -8,10 +8,9 @@
 #pragma once
 
 #include <KCalendarCore/Calendar>
-#include <KCalendarCore/Incidence>
 #include <KCalendarCore/ScheduleMessage>
 
-#include <QDate>
+#include <functional>
 
 /*!
  \class ItipFormatter

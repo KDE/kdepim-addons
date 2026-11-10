@@ -7,7 +7,7 @@
 #pragma once
 
 #include <MessageComposer/PluginEditorConvertTextInterface>
-class QObject;
+class QAction;
 #include <QPointer>
 
 namespace MessageComposer

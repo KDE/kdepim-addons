@@ -12,6 +12,7 @@
 #include <KStandardGuiItem>
 #include <KWindowConfig>
 #include <QDialogButtonBox>
+#include <QFrame>
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>

@@ -10,6 +10,7 @@
 #include <KUrlRequester>
 #include <QDialogButtonBox>
 #include <QLabel>
+#include <QPushButton>
 #include <QVBoxLayout>
 using namespace Qt::Literals::StringLiterals;
 using namespace MailMerge;

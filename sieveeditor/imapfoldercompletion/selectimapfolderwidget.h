@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include <QTreeView>
 #include <QWidget>
 
 #include <KSieveCore/SieveImapAccountSettings>
 
+class QModelIndex;
 class QStandardItemModel;
 class QLineEdit;
 class SelectImapFolderTreeView;

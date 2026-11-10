@@ -6,6 +6,7 @@
 
 #include "autogenerateanswerseditortextedit.h"
 #include <KLocalizedString>
+#include <QAction>
 #include <QContextMenuEvent>
 #include <QMenu>
 

@@ -24,6 +24,7 @@
 #include <KLocalizedString>
 #include <KService>
 
+#include <QCursor>
 #include <QDBusInterface>
 #include <QDate>
 #include <QIcon>

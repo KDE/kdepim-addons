@@ -6,7 +6,13 @@
 
 #pragma once
 
-#include <KMime/Message>
+#include <QString>
+#include <QStringList>
+#include <memory>
+namespace KMime
+{
+class Message;
+}
 
 class ViewerPluginExternalScriptParseArgument
 {

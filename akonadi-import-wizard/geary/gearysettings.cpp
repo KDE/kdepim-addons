@@ -5,9 +5,8 @@
 */
 
 #include "gearysettings.h"
-#include <ImportWizard/ImportWizardUtil>
 
-#include <MailTransport/TransportManager>
+#include <MailTransport/Transport>
 
 #include <KIdentityManagementCore/Identity>
 #include <KIdentityManagementCore/Signature>

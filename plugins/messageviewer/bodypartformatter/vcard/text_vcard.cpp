@@ -23,7 +23,6 @@
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/MessagePart>
 #include <MimeTreeParser/NodeHelper>
-#include <qnamespace.h>
 using MimeTreeParser::Interface::BodyPart;
 
 #include <Akonadi/AddContactJob>
@@ -33,7 +32,6 @@ using MimeTreeParser::Interface::BodyPart;
 #include <MessageViewer/IconNameCache>
 
 #include <KIO/FileCopyJob>
-#include <KIO/StatJob>
 #include <KIconLoader>
 #include <KLocalizedString>
 

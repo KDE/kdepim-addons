@@ -5,7 +5,6 @@
 */
 
 #include "quicktextmanager.h"
-#include <KSharedConfig>
 #include <MailCommon/SnippetsModel>
 
 #include <KLocalizedString>

@@ -6,7 +6,7 @@
 
 #include "donottrackinterceptorinterface.h"
 #include "donottracksettings.h"
-#include <QtWebEngineCore/qwebengineurlrequestinfo.h>
+#include <QWebEngineUrlRequestInfo>
 
 DoNotTrackInterceptorInterface::DoNotTrackInterceptorInterface(QObject *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent)
