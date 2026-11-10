@@ -25,7 +25,7 @@ ViewerPluginInterface *ViewerPluginCreateevent::createView(QWidget *parent, KAct
 
 QString ViewerPluginCreateevent::viewerPluginName() const
 {
-    return u"create-task"_s;
+    return u"create-event"_s;
 }
 
 #include "viewerplugincreateevent.moc"
