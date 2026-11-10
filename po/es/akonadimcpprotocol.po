@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadimcpprotocol\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:58+0000\n"
+"POT-Creation-Date: 2026-11-10 00:58+0000\n"
 "PO-Revision-Date: 2026-11-07 12:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -546,12 +546,24 @@ msgstr "La obtención de la carpeta «Borradores» ha fallado: %1"
 msgid "No Drafts folder found"
 msgstr "No se ha encontrado la carpeta «Borradores»"
 
-#: createmailtool/createmailtooljob.cpp:139
+#: createmailtool/createmailtooljob.cpp:142
 #, kde-format
 msgid "Mail creation failed: %1"
 msgstr "La creación del correo ha fallado: %1"
 
-#: createmailtool/createmailtooljob.cpp:143
+#: createmailtool/createmailtooljob.cpp:148
+#, fuzzy, kde-format
+#| msgid ""
+#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
+#| "KMail with mail_edit"
+msgid ""
+"Identity %1 not found, the default identity was used. Mail \"%2\" created in "
+"folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
+msgstr ""
+"Correo «%1» creado en la carpeta «%2» (ID del elemento: %3). Se puede editar "
+"en KMail con «mail_edit»."
+
+#: createmailtool/createmailtooljob.cpp:155
 #, kde-format
 msgid ""
 "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "

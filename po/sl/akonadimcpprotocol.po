@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:58+0000\n"
+"POT-Creation-Date: 2026-11-10 00:58+0000\n"
 "PO-Revision-Date: 2026-11-07 19:42+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -543,12 +543,24 @@ msgstr "Pridobivanje mape z osnutki ni uspelo: %1"
 msgid "No Drafts folder found"
 msgstr "Mapa Drafts (Osnutki) ni bila najdena"
 
-#: createmailtool/createmailtooljob.cpp:139
+#: createmailtool/createmailtooljob.cpp:142
 #, kde-format
 msgid "Mail creation failed: %1"
 msgstr "Kreiranje pošte ni uspelo: %1"
 
-#: createmailtool/createmailtooljob.cpp:143
+#: createmailtool/createmailtooljob.cpp:148
+#, fuzzy, kde-format
+#| msgid ""
+#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
+#| "KMail with mail_edit"
+msgid ""
+"Identity %1 not found, the default identity was used. Mail \"%2\" created in "
+"folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
+msgstr ""
+"Pošta \"%1\" je bilo ustvarjena v mapi \"%2\" (ID elementa: %3)). V KMail-u "
+"ga je mogoče urejati z mail_edit"
+
+#: createmailtool/createmailtooljob.cpp:155
 #, kde-format
 msgid ""
 "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "

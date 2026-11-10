@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:58+0000\n"
-"PO-Revision-Date: 2026-10-21 16:00+0200\n"
+"POT-Creation-Date: 2026-11-10 00:58+0000\n"
+"PO-Revision-Date: 2026-11-08 07:11+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.10\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Vincenzo Reale"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "smart2128vr@gmail.com"
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format
@@ -135,12 +135,12 @@ msgstr "Impossibile avviare KMail: %1"
 #: common/toolbase.cpp:82
 #, kde-format
 msgid "Another confirmation is pending"
-msgstr ""
+msgstr "È in attesa un'ulteriore conferma"
 
 #: common/toolbase.cpp:88
 #, kde-format
 msgid "MCP tool asks confirmation"
-msgstr ""
+msgstr "Lo strumento MCP richiede una conferma"
 
 #: common/toolbase.cpp:89
 #, kde-format
@@ -148,21 +148,23 @@ msgid ""
 "Run \"%1\"?\n"
 "%2"
 msgstr ""
+"Vuoi eseguire «%1»?\n"
+"%2"
 
 #: common/toolbase.cpp:103
 #, kde-format
 msgid "Action refused by user"
-msgstr ""
+msgstr "Azione rifiutata dall'utente"
 
 #: common/toolbase.cpp:106
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "Accetta"
 
 #: common/toolbase.cpp:114
 #, kde-format
 msgid "Reject"
-msgstr ""
+msgstr "Rifiuta"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -431,53 +433,45 @@ msgid "Argument calendar_id must be an integer"
 msgstr "L'argomento calendar_id deve essere un numero intero"
 
 #: createidentitytool/createidentitytool.cpp:28
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Identity"
-msgstr "Crea evento"
+msgstr "Crea identità"
 
 #: createidentitytool/createidentitytool.cpp:55
-#, fuzzy, kde-format
-#| msgid "Argument name must be a non-empty string"
+#, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "L'argomento «nome» deve essere una stringa non vuota"
+msgstr "L'argomento «email» deve essere una stringa non vuota"
 
 #: createidentitytool/createidentitytool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument emails must be an array of strings"
+#, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "L'argomento «messaggi» deve essere un array di stringhe"
+msgstr "L'argomento «email_aliases» deve essere un array di stringhe"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email alias \"%1\""
-msgstr "Indirizzo di posta non valido «%1»"
+msgstr "Alias ​​di posta non valido «%1»"
 
 #: createidentitytool/createidentitytool.cpp:79
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail transport found with id %1"
-msgstr "Nessun messaggio trovato per «%1»"
+msgstr "Nessun trasporto di posta trovato con ID %1"
 
 #: createidentitytool/createidentitytool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer"
+#, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "L'argomento «priorità» deve essere un intero"
+msgstr "L'argomento «transport_id» deve essere un intero"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Argument read must be a boolean"
+#, kde-format
 msgid "Argument set_as_default must be a boolean"
-msgstr "L'argomento «letto» deve essere un valore booleano"
+msgstr "L'argomento «set_as_default» deve essere un valore booleano"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Identity \"%1\" created (uoid %2)"
-msgstr "Evento «%1» aggiornato (ID elemento: %2)"
+msgstr "Identità «%1» creata (uoid %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
@@ -545,12 +539,24 @@ msgstr "Recupero della cartella Bozze non riuscito: %1"
 msgid "No Drafts folder found"
 msgstr "Cartella Bozze non trovata"
 
-#: createmailtool/createmailtooljob.cpp:139
+#: createmailtool/createmailtooljob.cpp:142
 #, kde-format
 msgid "Mail creation failed: %1"
 msgstr "Creazione del messaggio non riuscita: %1"
 
-#: createmailtool/createmailtooljob.cpp:143
+#: createmailtool/createmailtooljob.cpp:148
+#, fuzzy, kde-format
+#| msgid ""
+#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
+#| "KMail with mail_edit"
+msgid ""
+"Identity %1 not found, the default identity was used. Mail \"%2\" created in "
+"folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
+msgstr ""
+"Messaggio «%1» creato nella cartella «%2» (ID elemento: %3). Può essere "
+"modificato in KMail tramite mail_edit"
+
+#: createmailtool/createmailtooljob.cpp:155
 #, kde-format
 msgid ""
 "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
@@ -585,45 +591,40 @@ msgid "Argument priority must be an integer"
 msgstr "L'argomento «priorità» deve essere un intero"
 
 #: createtransporttool/createtransporttool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Create Mail Transport"
-msgstr "Crea messaggio di posta"
+msgstr "Crea trasporto di posta"
 
 #: createtransporttool/createtransporttool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument subject must be a non-empty string"
+#, kde-format
 msgid "Argument host must be a non-empty string"
-msgstr "L'argomento «oggetto» deve essere una stringa non vuota"
+msgstr "L'argomento «host» deve essere una stringa non vuota"
 
 #: createtransporttool/createtransporttool.cpp:95
 #, kde-format
 msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
 msgstr ""
+"Cifratura non valida «%1»; i valori previsti sono «none», «ssl» o «starttls»"
 
 #: createtransporttool/createtransporttool.cpp:108
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer between %1 and %2"
+#, kde-format
 msgid "Argument port must be between 1 and 65535"
-msgstr ""
-"La priorità dell'argomento deve essere un numero intero compreso tra %1 e %2"
+msgstr "L'argomento «porta» deve essere compreso tra 1 e 65535"
 
 #: createtransporttool/createtransporttool.cpp:113
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer"
+#, kde-format
 msgid "Argument port must be an integer"
-msgstr "L'argomento «priorità» deve essere un intero"
+msgstr "L'argomento «porta» deve essere un intero"
 
 #: createtransporttool/createtransporttool.cpp:124
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
-msgstr ""
+msgstr "authentication_type «%1» non valido; è richiesto uno dei seguenti: %2"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Transport \"%1\" created (id %2)"
-msgstr "Evento «%1» aggiornato (ID elemento: %2)"
+msgstr "Trasporto «%1» creato (id %2)"
 
 #: deletecontacttool/deletecontacttool.cpp:25
 #, kde-format
@@ -774,36 +775,32 @@ msgid "Draft mail %1 opened in a KMail composer"
 msgstr "Bozza di messaggio %1 aperta nell'editor di KMail"
 
 #: forwardmailtool/forwardmailtool.cpp:30
-#, fuzzy, kde-format
-#| msgid "Mark Mail"
+#, kde-format
 msgid "Forward Mail"
-msgstr "Contrassegna messaggio"
+msgstr "Inoltra messaggio"
 
 #: forwardmailtool/forwardmailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument id must be an integer"
+#, kde-format
 msgid "Argument mode must be one of: inline, attachment"
-msgstr "L'argomento «id» deve essere un intero"
+msgstr ""
+"La modalità dell'argomento deve essere una delle seguenti: inline, attachment"
 
 #: forwardmailtool/forwardmailtooljob.cpp:49
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: %2"
+#, kde-format
 msgid "Unable to forward mail %1: %2"
-msgstr "Impossibile modificare il messaggio %1: %2"
+msgstr "Impossibile inoltrare il messaggio %1: %2"
 
 #: forwardmailtool/forwardmailtooljob.cpp:56
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: KMail main window is not available"
+#, kde-format
 msgid "Unable to forward mail %1: KMail main window is not available"
 msgstr ""
-"Impossibile modificare il messaggio %1: la finestra principale di KMail non "
-"è disponibile"
+"Impossibile inoltrare il messaggio %1: la finestra principale di KMail non è "
+"disponibile"
 
 #: forwardmailtool/forwardmailtooljob.cpp:59
-#, fuzzy, kde-format
-#| msgid "Reply composer opened in KMail for mail %1"
+#, kde-format
 msgid "Forward composer opened in KMail for mail %1"
-msgstr "Compositore della risposta aperto in KMail per il messaggio %1"
+msgstr "Compositore dell'inoltro aperto in KMail per il messaggio %1"
 
 #: freebusytool/freebusytool.cpp:27
 #, kde-format
@@ -818,13 +815,13 @@ msgstr "Libero per l'intero periodo dal %1 al %2"
 #: kcm/kcm_akonadimcpserver.cpp:26
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Abilitato"
 
 #: kcm/kcm_akonadimcpserver.cpp:27
 #, kde-format
 msgctxt "@option:check"
 msgid "Ask confirmation before running tools which modify data"
-msgstr ""
+msgstr "Chiedi conferma prima di eseguire strumenti che modificano i dati"
 
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
@@ -900,23 +897,23 @@ msgstr "Nessun messaggio trovato per «%1»"
 #: main.cpp:26 main.cpp:28
 #, kde-format
 msgid "Akonadi MCP Server"
-msgstr ""
+msgstr "Server MCP di Akonadi"
 
 #: main.cpp:30
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
-msgstr ""
+msgstr "Copyright © 2026 Laurent Montel"
 
 #: main.cpp:31
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr ""
+msgstr "Laurent Montel"
 
 #: main.cpp:31
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Responsabile"
 
 #: main.cpp:38
 #, kde-format
