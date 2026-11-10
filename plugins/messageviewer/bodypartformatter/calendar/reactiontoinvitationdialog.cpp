@@ -41,6 +41,7 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     buttonBox->setObjectName("buttonbox"_L1);
     layout->addWidget(buttonBox);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+    mOkButton->setEnabled(false);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ReactionToInvitationDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ReactionToInvitationDialog::reject);
     readConfig();
