@@ -183,12 +183,13 @@ void ViewerPluginExternalConfigureWidget::save()
             }
         }
         KDesktopFile desktopFile(filenamepath);
-        desktopFile.desktopGroup().writeEntry(u"Name"_s, scriptInfo.name());
-        desktopFile.desktopGroup().writeEntry(u"Description"_s, scriptInfo.description());
-        desktopFile.desktopGroup().writeEntry(u"Executable"_s, scriptInfo.executable());
-        desktopFile.desktopGroup().writeEntry(u"CommandLine"_s, scriptInfo.commandLine());
-        desktopFile.desktopGroup().writeEntry(u"Icon"_s, scriptInfo.icon());
-        desktopFile.desktopGroup().sync();
+        KConfigGroup grp = desktopFile.desktopGroup();
+        grp.writeEntry(u"Name"_s, scriptInfo.name());
+        grp.writeEntry(u"Description"_s, scriptInfo.description());
+        grp.writeEntry(u"Executable"_s, scriptInfo.executable());
+        grp.writeEntry(u"CommandLine"_s, scriptInfo.commandLine());
+        grp.writeEntry(u"Icon"_s, scriptInfo.icon());
+        grp.sync();
     }
 }
 
