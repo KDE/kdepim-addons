@@ -55,11 +55,6 @@ bool AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo::isValid()
     return !name.trimmed().isEmpty() && !url.trimmed().isEmpty();
 }
 
-bool AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo::operator!=(const AdBlockListInfo &other) const
-{
-    return !AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo::operator==(other);
-}
-
 QDebug operator<<(QDebug d, const AdblockPluginUrlInterceptorAddAdblockListWidget::AdBlockListInfo &t)
 {
     d << " Name " << t.name;

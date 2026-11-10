@@ -166,9 +166,9 @@ protected:
         QString mId;
         // The version of the config data, used for merging and
         // detecting newer configs
-        int mVersion;
+        int mVersion = 0;
         // the priority of the tool in the list presented to the user
-        int mPrio;
+        int mPrio = 0;
         // the name as shown by the checkbox in the dialog page
         QString mVisibleName;
         // the command to check the existence of the tool
@@ -194,15 +194,15 @@ protected:
         // what header pattern is used in the account to check for a certain server
         QString mServerPattern;
         // filter cannot search actively but relies on pattern by regExp or contain rule
-        bool mDetectionOnly;
+        bool mDetectionOnly = false;
         // filter searches for the pattern by regExp or contain rule
-        bool mUseRegExp;
+        bool mUseRegExp = false;
         // can the tool learn spam and ham, has it a bayesian algorithm
-        bool mSupportsBayesFilter;
+        bool mSupportsBayesFilter = false;
         // differentiate between ham, spam and a third "unsure" state
-        bool mSupportsUnsure;
+        bool mSupportsUnsure = false;
         // Is the tool AntiSpam or AntiVirus
-        WizardMode mType;
+        WizardMode mType = AntiSpam;
     };
 
     /**

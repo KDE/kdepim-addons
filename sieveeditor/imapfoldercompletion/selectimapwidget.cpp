@@ -35,10 +35,7 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     connect(mToolButton, &QToolButton::clicked, this, &SelectImapWidget::slotOpenSelectImapFolder);
 }
 
-SelectImapWidget::~SelectImapWidget()
-{
-    delete mSelectImapFolderDialog;
-}
+SelectImapWidget::~SelectImapWidget() = default;
 
 void SelectImapWidget::setText(const QString &str)
 {
