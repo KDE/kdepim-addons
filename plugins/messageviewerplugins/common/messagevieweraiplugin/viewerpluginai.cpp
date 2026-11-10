@@ -25,7 +25,7 @@ ViewerPluginInterface *ViewerPluginAI::createView(QWidget *parent, KActionCollec
 
 QString ViewerPluginAI::viewerPluginName() const
 {
-    return u"translator"_s;
+    return u"iaplugin"_s;
 }
 
 bool MessageViewer::ViewerPluginAI::hasConfigureDialog() const
