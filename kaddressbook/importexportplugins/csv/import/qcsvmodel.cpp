@@ -8,7 +8,7 @@
 #include "qcsvmodel_p.h"
 #include "qcsvreader.h"
 #include <QIODevice>
-#include <QPair>
+#include <utility>
 using namespace Qt::Literals::StringLiterals;
 
 CsvParser::CsvParser(QObject *parent)
@@ -97,7 +97,7 @@ void QCsvModel::rowCountChanged(int rows)
 
 void QCsvModel::fieldChanged(const QString &data, int row, int column)
 {
-    mFields.insert(QPair<int, int>(row, column), data);
+    mFields.insert(std::pair<int, int>(row, column), data);
 }
 
 QCsvModel::QCsvModel(QObject *parent)
@@ -246,7 +246,7 @@ QVariant QCsvModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    const QPair<int, int> pair(index.row() - 1, index.column());
+    const std::pair<int, int> pair(index.row() - 1, index.column());
     if (!mFields.contains(pair)) {
         return {};
     }

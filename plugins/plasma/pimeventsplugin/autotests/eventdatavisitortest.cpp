@@ -51,7 +51,7 @@ public:
 using TestableEventDataVisitor = TestableVisitor<EventDataVisitor>;
 using TestableEventDataIdVisitor = TestableVisitor<EventDataIdVisitor>;
 
-using DateTimeRange = QPair<QDateTime, QDateTime>;
+using DateTimeRange = std::pair<QDateTime, QDateTime>;
 
 void EventDataVisitorTest::initTestCase()
 {
