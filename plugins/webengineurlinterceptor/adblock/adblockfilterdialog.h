@@ -20,5 +20,6 @@ public:
 private:
     LIBADBLOCKPLUGIN_NO_EXPORT void readConfig();
     LIBADBLOCKPLUGIN_NO_EXPORT void writeConfig();
+    LIBADBLOCKPLUGIN_NO_EXPORT void slotAccepted();
     AdblockFilterWidget *const mAdblockFilterWidget;
 };

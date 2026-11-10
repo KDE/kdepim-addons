@@ -35,7 +35,7 @@ AdblockFilterDialog::AdblockFilterDialog(QWidget *parent)
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName("buttonBox"_L1);
     mainLayout->addWidget(buttonBox);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &AdblockFilterDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &AdblockFilterDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdblockFilterDialog::reject);
     readConfig();
 }
@@ -43,6 +43,12 @@ AdblockFilterDialog::AdblockFilterDialog(QWidget *parent)
 AdblockFilterDialog::~AdblockFilterDialog()
 {
     writeConfig();
+}
+
+void AdblockFilterDialog::slotAccepted()
+{
+    mAdblockFilterWidget->saveSettings();
+    accept();
 }
 
 void AdblockFilterDialog::loadSettings()
