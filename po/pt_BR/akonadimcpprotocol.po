@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 00:14+0000\n"
+"POT-Creation-Date: 2026-11-11 03:12+0000\n"
 "PO-Revision-Date: 2026-11-07 05:53-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -129,6 +129,40 @@ msgstr "Nenhum evento entre %1 e %2"
 #, kde-format
 msgid "Unable to start KMail: %1"
 msgstr "Não foi possível iniciar o KMail: %1"
+
+#: common/toolbase.cpp:82
+#, kde-format
+msgid "Another confirmation is pending"
+msgstr "Outra confirmação está pendente"
+
+#: common/toolbase.cpp:88
+#, kde-format
+msgid "MCP tool asks confirmation"
+msgstr "A ferramenta MCP solicita confirmação"
+
+#: common/toolbase.cpp:89
+#, kde-format
+msgid ""
+"Run \"%1\"?\n"
+"%2"
+msgstr ""
+"Executar \"%1\"?\n"
+"%2"
+
+#: common/toolbase.cpp:103
+#, kde-format
+msgid "Action refused by user"
+msgstr "Ação recusada pelo usuário"
+
+#: common/toolbase.cpp:106
+#, kde-format
+msgid "Accept"
+msgstr "Aceitar"
+
+#: common/toolbase.cpp:114
+#, kde-format
+msgid "Reject"
+msgstr "Rejeitar"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -768,6 +802,13 @@ msgstr "Livre durante todo o período de %1 a %2"
 msgid "Enabled"
 msgstr "Habilitado"
 
+#: kcm/kcm_akonadimcpserver.cpp:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Ask confirmation before running tools which modify data"
+msgstr ""
+"Solicitar confirmação antes de executar ferramentas que modifiquem dados"
+
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
 msgid "List Address Books"
@@ -1212,30 +1253,3 @@ msgstr ""
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "O argumento \"due\" não deve estar antes do \"start\""
-
-#~ msgid "Another confirmation is pending"
-#~ msgstr "Outra confirmação está pendente"
-
-#~ msgid "MCP tool asks confirmation"
-#~ msgstr "A ferramenta MCP solicita confirmação"
-
-#~ msgid ""
-#~ "Run \"%1\"?\n"
-#~ "%2"
-#~ msgstr ""
-#~ "Executar \"%1\"?\n"
-#~ "%2"
-
-#~ msgid "Action refused by user"
-#~ msgstr "Ação recusada pelo usuário"
-
-#~ msgid "Accept"
-#~ msgstr "Aceitar"
-
-#~ msgid "Reject"
-#~ msgstr "Rejeitar"
-
-#~ msgctxt "@option:check"
-#~ msgid "Ask confirmation before running tools which modify data"
-#~ msgstr ""
-#~ "Solicitar confirmação antes de executar ferramentas que modifiquem dados"

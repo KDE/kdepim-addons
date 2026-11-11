@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 00:14+0000\n"
+"POT-Creation-Date: 2026-11-11 03:12+0000\n"
 "PO-Revision-Date: 2026-11-07 19:42+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -129,6 +129,40 @@ msgstr "Ni dogodkov med %1 in %2"
 #, kde-format
 msgid "Unable to start KMail: %1"
 msgstr "KMail-a ni mogoče zagnati: %1"
+
+#: common/toolbase.cpp:82
+#, kde-format
+msgid "Another confirmation is pending"
+msgstr "Čakanje na še eno potrditev"
+
+#: common/toolbase.cpp:88
+#, kde-format
+msgid "MCP tool asks confirmation"
+msgstr "Orodje MCP prosi za potrdilo"
+
+#: common/toolbase.cpp:89
+#, kde-format
+msgid ""
+"Run \"%1\"?\n"
+"%2"
+msgstr ""
+"Zaženi \"%1\"?\n"
+"%2"
+
+#: common/toolbase.cpp:103
+#, kde-format
+msgid "Action refused by user"
+msgstr "Uporabnik je zavrnil dejanje"
+
+#: common/toolbase.cpp:106
+#, kde-format
+msgid "Accept"
+msgstr "Sprejmi"
+
+#: common/toolbase.cpp:114
+#, kde-format
+msgid "Reject"
+msgstr "Zavrni"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -769,6 +803,12 @@ msgstr "Prost v celotnem obdobju od %1 do %2"
 msgid "Enabled"
 msgstr "Omogočeno"
 
+#: kcm/kcm_akonadimcpserver.cpp:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Ask confirmation before running tools which modify data"
+msgstr "Prosi za potrditev pred zagonom orodij, ki spreminjajo podatke"
+
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
 msgid "List Address Books"
@@ -1207,32 +1247,6 @@ msgstr ""
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "Argument due ne sme biti prej od argumenta start"
-
-#~ msgid "Another confirmation is pending"
-#~ msgstr "Čakanje na še eno potrditev"
-
-#~ msgid "MCP tool asks confirmation"
-#~ msgstr "Orodje MCP prosi za potrdilo"
-
-#~ msgid ""
-#~ "Run \"%1\"?\n"
-#~ "%2"
-#~ msgstr ""
-#~ "Zaženi \"%1\"?\n"
-#~ "%2"
-
-#~ msgid "Action refused by user"
-#~ msgstr "Uporabnik je zavrnil dejanje"
-
-#~ msgid "Accept"
-#~ msgstr "Sprejmi"
-
-#~ msgid "Reject"
-#~ msgstr "Zavrni"
-
-#~ msgctxt "@option:check"
-#~ msgid "Ask confirmation before running tools which modify data"
-#~ msgstr "Prosi za potrditev pred zagonom orodij, ki spreminjajo podatke"
 
 #~ msgid "No birthday in the next %1 days"
 #~ msgstr "V naslednjih %1 dneh ni rojstnega dne"

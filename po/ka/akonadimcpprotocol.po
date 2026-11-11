@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 00:14+0000\n"
+"POT-Creation-Date: 2026-11-11 03:12+0000\n"
 "PO-Revision-Date: 2026-11-07 05:24+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -130,6 +130,40 @@ msgstr "%1-სა და %2-ს შორის მოვლენები ა�
 #, kde-format
 msgid "Unable to start KMail: %1"
 msgstr "KMail-ის გაშვება შეუძლებელია: %1"
+
+#: common/toolbase.cpp:82
+#, kde-format
+msgid "Another confirmation is pending"
+msgstr "რიგშია კიდევ ერთი დადასტურების მოთხოვნა"
+
+#: common/toolbase.cpp:88
+#, kde-format
+msgid "MCP tool asks confirmation"
+msgstr "MCP-ის ხელსაწყო დადასტურებას მოითხოვს"
+
+#: common/toolbase.cpp:89
+#, kde-format
+msgid ""
+"Run \"%1\"?\n"
+"%2"
+msgstr ""
+"გაეშვას \"%1\"?\n"
+"%2"
+
+#: common/toolbase.cpp:103
+#, kde-format
+msgid "Action refused by user"
+msgstr "ქმედება უარყოფილია მომხმარებლის მიერ"
+
+#: common/toolbase.cpp:106
+#, kde-format
+msgid "Accept"
+msgstr "მიღება"
+
+#: common/toolbase.cpp:114
+#, kde-format
+msgid "Reject"
+msgstr "უარყოფა"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -766,6 +800,13 @@ msgstr "თავისუფალი მთელი პერიოდის�
 msgid "Enabled"
 msgstr "ჩართულია"
 
+#: kcm/kcm_akonadimcpserver.cpp:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Ask confirmation before running tools which modify data"
+msgstr ""
+"დადასტურების მოთხოვნა იმ ხელსაწყოების გაშვებამდე, რომლებიც მონაცემებს ცვლიან"
+
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
 msgid "List Address Books"
@@ -1203,31 +1244,3 @@ msgstr ""
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "მოხდენის თარიღი დასაწყისამდე არ უნდა იყოს"
-
-#~ msgid "Another confirmation is pending"
-#~ msgstr "რიგშია კიდევ ერთი დადასტურების მოთხოვნა"
-
-#~ msgid "MCP tool asks confirmation"
-#~ msgstr "MCP-ის ხელსაწყო დადასტურებას მოითხოვს"
-
-#~ msgid ""
-#~ "Run \"%1\"?\n"
-#~ "%2"
-#~ msgstr ""
-#~ "გაეშვას \"%1\"?\n"
-#~ "%2"
-
-#~ msgid "Action refused by user"
-#~ msgstr "ქმედება უარყოფილია მომხმარებლის მიერ"
-
-#~ msgid "Accept"
-#~ msgstr "მიღება"
-
-#~ msgid "Reject"
-#~ msgstr "უარყოფა"
-
-#~ msgctxt "@option:check"
-#~ msgid "Ask confirmation before running tools which modify data"
-#~ msgstr ""
-#~ "დადასტურების მოთხოვნა იმ ხელსაწყოების გაშვებამდე, რომლებიც მონაცემებს "
-#~ "ცვლიან"

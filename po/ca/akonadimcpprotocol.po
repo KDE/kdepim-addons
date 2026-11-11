@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 00:14+0000\n"
+"POT-Creation-Date: 2026-11-11 03:12+0000\n"
 "PO-Revision-Date: 2026-11-07 09:49+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -134,6 +134,40 @@ msgstr "No hi ha cap esdeveniment entre %1 i %2"
 #, kde-format
 msgid "Unable to start KMail: %1"
 msgstr "No s'ha pogut iniciar el KMail: %1"
+
+#: common/toolbase.cpp:82
+#, kde-format
+msgid "Another confirmation is pending"
+msgstr "Hi ha pendent una altra confirmació"
+
+#: common/toolbase.cpp:88
+#, kde-format
+msgid "MCP tool asks confirmation"
+msgstr "L'eina MCP demana confirmació"
+
+#: common/toolbase.cpp:89
+#, kde-format
+msgid ""
+"Run \"%1\"?\n"
+"%2"
+msgstr ""
+"Executo «%1»?\n"
+"%2"
+
+#: common/toolbase.cpp:103
+#, kde-format
+msgid "Action refused by user"
+msgstr "Acció rebutjada per l'usuari"
+
+#: common/toolbase.cpp:106
+#, kde-format
+msgid "Accept"
+msgstr "Accepta"
+
+#: common/toolbase.cpp:114
+#, kde-format
+msgid "Reject"
+msgstr "Rebutja"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -771,6 +805,12 @@ msgstr "Lliure per a tot el període de %1 a %2"
 msgid "Enabled"
 msgstr "Activat"
 
+#: kcm/kcm_akonadimcpserver.cpp:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Ask confirmation before running tools which modify data"
+msgstr "Demana confirmació abans d'executar eines que modifiquin dades"
+
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
 msgid "List Address Books"
@@ -1217,29 +1257,3 @@ msgstr ""
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "La data de venciment no pot ser abans de l'inici"
-
-#~ msgid "Another confirmation is pending"
-#~ msgstr "Hi ha pendent una altra confirmació"
-
-#~ msgid "MCP tool asks confirmation"
-#~ msgstr "L'eina MCP demana confirmació"
-
-#~ msgid ""
-#~ "Run \"%1\"?\n"
-#~ "%2"
-#~ msgstr ""
-#~ "Executo «%1»?\n"
-#~ "%2"
-
-#~ msgid "Action refused by user"
-#~ msgstr "Acció rebutjada per l'usuari"
-
-#~ msgid "Accept"
-#~ msgstr "Accepta"
-
-#~ msgid "Reject"
-#~ msgstr "Rebutja"
-
-#~ msgctxt "@option:check"
-#~ msgid "Ask confirmation before running tools which modify data"
-#~ msgstr "Demana confirmació abans d'executar eines que modifiquin dades"
