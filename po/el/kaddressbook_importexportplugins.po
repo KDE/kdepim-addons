@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontactmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 18:30+0000\n"
 "PO-Revision-Date: 2014-04-19 15:08+0200\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@free.fr>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -42,31 +42,31 @@ msgid "Import contacts from a file in comma separated value format."
 msgstr "Εισαγωγή από ένα αρχείο τιμών διαχωρισμένων με κόμματα."
 
 #: csv/csvimportexportplugininterface.cpp:148
-#: gmx/gmximportexportplugininterface.cpp:81
-#: ldif/ldifimportexportplugininterface.cpp:124
-#: vcards/vcardimportexportplugininterface.cpp:347
+#: gmx/gmximportexportplugininterface.cpp:85
+#: ldif/ldifimportexportplugininterface.cpp:127
+#: vcards/vcardimportexportplugininterface.cpp:346
 #, kde-format
 msgid "Which contact do you want to export?"
 msgstr "Ποια επαφή θέλετε να εξάγετε;"
 
 #: csv/csvimportexportplugininterface.cpp:158
-#: gmx/gmximportexportplugininterface.cpp:91
-#: ldif/ldifimportexportplugininterface.cpp:134
-#: vcards/vcardimportexportplugininterface.cpp:359
+#: gmx/gmximportexportplugininterface.cpp:95
+#: ldif/ldifimportexportplugininterface.cpp:137
+#: vcards/vcardimportexportplugininterface.cpp:358
 #, kde-format
 msgid "You have not selected any contacts to export."
 msgstr "Επιλέξτε τουλάχιστον μία επαφή προς εξαγωγή."
 
 #: csv/csvimportexportplugininterface.cpp:187
-#: gmx/gmximportexportplugininterface.cpp:125
-#: ldif/ldifimportexportplugininterface.cpp:155
+#: gmx/gmximportexportplugininterface.cpp:129
+#: ldif/ldifimportexportplugininterface.cpp:158
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b></qt>"
 msgstr "<qt>Δεν ήταν δυνατό το άνοιγμα του αρχείου <b>%1</b></qt>"
 
 #: csv/csvimportexportplugininterface.cpp:199
-#: gmx/gmximportexportplugininterface.cpp:140
-#: ldif/ldifimportexportplugininterface.cpp:185
+#: gmx/gmximportexportplugininterface.cpp:144
+#: ldif/ldifimportexportplugininterface.cpp:188
 #, kde-format
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>Δεν ήταν δυνατό το άνοιγμα του αρχείου <b>%1</b>.</qt>"
@@ -465,39 +465,39 @@ msgctxt "@info"
 msgid "Please select a template, that matches the CSV file:"
 msgstr "Παρακαλώ επιλέξτε ένα πρότυπο που να ταιριάζει στο αρχείο CSV:"
 
-#: gmx/gmximportexportplugininterface.cpp:26
+#: gmx/gmximportexportplugininterface.cpp:30
 #, kde-format
 msgid "GMX address book file (*.gmxa)"
 msgstr "Αρχείο βιβλίου διευθύνσεων GMX (*.gmxa)"
 
-#: gmx/gmximportexportplugininterface.cpp:41
+#: gmx/gmximportexportplugininterface.cpp:45
 #, kde-format
 msgid "Import GMX file…"
 msgstr "Εισαγωγή αρχείου GMX…"
 
-#: gmx/gmximportexportplugininterface.cpp:42
+#: gmx/gmximportexportplugininterface.cpp:46
 #, kde-format
 msgid "Import contacts from a GMX address book file."
 msgstr "Εισαγωγή επαφών από ένα GMX αρχείο βιβλίου διευθύνσεων."
 
-#: gmx/gmximportexportplugininterface.cpp:47
+#: gmx/gmximportexportplugininterface.cpp:51
 #, kde-format
 msgid "Export GMX file…"
 msgstr "Εξαγωγή αρχείου GMX…"
 
-#: gmx/gmximportexportplugininterface.cpp:48
+#: gmx/gmximportexportplugininterface.cpp:52
 #, kde-format
 msgid "Export contacts to a GMX address book file."
 msgstr "Εξαγωγή επαφών σε αρχείο βιβλίου διευθύνσεων GMX."
 
-#: gmx/gmximportexportplugininterface.cpp:434
-#: ldif/ldifimportexportplugininterface.cpp:81
+#: gmx/gmximportexportplugininterface.cpp:438
+#: ldif/ldifimportexportplugininterface.cpp:84
 #: windows-contacts/importwindowcontact.cpp:27
 #, kde-format
 msgid "<qt>Unable to open <b>%1</b> for reading.</qt>"
 msgstr "<qt>Αδύνατο το άνοιγμα του <b>%1</b> για ανάγνωση.</qt>"
 
-#: gmx/gmximportexportplugininterface.cpp:447
+#: gmx/gmximportexportplugininterface.cpp:451
 #, kde-format
 msgid "%1 is not a GMX address book file."
 msgstr "To %1 δεν είναι αρχείο GMX."
@@ -512,32 +512,32 @@ msgstr "Εισαγωγή από εξυπηρετητή LDAP…"
 msgid "Import contacts from an LDAP server."
 msgstr "Εισαγωγή επαφών από έναν εξυπηρετητή LDAP."
 
-#: ldif/ldifimportexportplugininterface.cpp:37
+#: ldif/ldifimportexportplugininterface.cpp:40
 #, kde-format
 msgid "Import LDIF file…"
 msgstr "Εισαγωγή αρχείου LDIF…"
 
-#: ldif/ldifimportexportplugininterface.cpp:38
+#: ldif/ldifimportexportplugininterface.cpp:41
 #, kde-format
 msgid "Import contacts from an LDIF file."
 msgstr "Εισαγωγή επαφών από αρχείο LDIF."
 
-#: ldif/ldifimportexportplugininterface.cpp:43
+#: ldif/ldifimportexportplugininterface.cpp:46
 #, kde-format
 msgid "Export LDIF file…"
 msgstr "Εξαγωγή αρχείου LDIF…"
 
-#: ldif/ldifimportexportplugininterface.cpp:44
+#: ldif/ldifimportexportplugininterface.cpp:47
 #, kde-format
 msgid "Export contacts to an LDIF file."
 msgstr "Εξαγωγή επαφών σε ένα αρχείο LDIF."
 
-#: ldif/ldifimportexportplugininterface.cpp:107
+#: ldif/ldifimportexportplugininterface.cpp:110
 #, kde-format
 msgid "LDif Files"
 msgstr ""
 
-#: ldif/ldifimportexportplugininterface.cpp:145
+#: ldif/ldifimportexportplugininterface.cpp:148
 #, kde-format
 msgid "LDif Files (*.ldif)"
 msgstr ""
@@ -688,47 +688,47 @@ msgstr ""
 "πεδίο πλήρους ονόματος της vCard. Αυτό ίσως απαιτήσει τη σωστή παρουσίαση "
 "του ονόματος στο GMail ή στο Android."
 
-#: vcards/engine/vcardviewerdialog.cpp:29
+#: vcards/engine/vcardviewerdialog.cpp:30
 #, kde-format
 msgctxt "@title:window"
 msgid "Import vCard"
 msgstr "Εισαγωγή vCard"
 
-#: vcards/engine/vcardviewerdialog.cpp:52
+#: vcards/engine/vcardviewerdialog.cpp:53
 #, kde-format
 msgctxt "@info"
 msgid "Do you want to import this contact into your address book?"
 msgstr "Επιθυμείτε την εισαγωγή της επαφής αυτής στο βιβλίο διευθύνσεών σας;"
 
-#: vcards/engine/vcardviewerdialog.cpp:62
+#: vcards/engine/vcardviewerdialog.cpp:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Import All…"
 msgstr "Εισαγωγή όλων…"
 
-#: vcards/vcardimportexportplugininterface.cpp:45
+#: vcards/vcardimportexportplugininterface.cpp:44
 #, kde-format
 msgid "Import vCard…"
 msgstr "Εισαγωγή vCard…"
 
-#: vcards/vcardimportexportplugininterface.cpp:46
+#: vcards/vcardimportexportplugininterface.cpp:45
 #, kde-format
 msgid "Import contacts from a vCard file."
 msgstr "Εισαγωγή επαφών από αρχείο vCard."
 
-#: vcards/vcardimportexportplugininterface.cpp:53
+#: vcards/vcardimportexportplugininterface.cpp:52
 #, fuzzy, kde-format
 #| msgid "Export contacts to a vCard 3.0 file."
 msgid "Export contacts to a vCard file."
 msgstr "Εξαγωγή επαφών σε ένα αρχείο vCard 3.0."
 
-#: vcards/vcardimportexportplugininterface.cpp:54
+#: vcards/vcardimportexportplugininterface.cpp:53
 #, fuzzy, kde-format
 #| msgid "Export vCard 3.0..."
 msgid "Export vCard…"
 msgstr "Εξαγωγή vCard 3.0..."
 
-#: vcards/vcardimportexportplugininterface.cpp:86
+#: vcards/vcardimportexportplugininterface.cpp:85
 #, fuzzy, kde-format
 #| msgid ""
 #| "*.vcf|Vcard (*.vcf)\n"
@@ -738,25 +738,25 @@ msgstr ""
 "*.vcf|Vcard (*.vcf)\n"
 "*|όλα τα αρχεία (*)"
 
-#: vcards/vcardimportexportplugininterface.cpp:87
+#: vcards/vcardimportexportplugininterface.cpp:86
 #, kde-format
 msgctxt "@title:window"
 msgid "Select vCard to Import"
 msgstr "Επιλογή vCard για εισαγωγή"
 
-#: vcards/vcardimportexportplugininterface.cpp:98
+#: vcards/vcardimportexportplugininterface.cpp:97
 #, kde-format
 msgctxt "@title:window"
 msgid "vCard Import Failed"
 msgstr "Η εισαγωγή vCard απέτυχε"
 
-#: vcards/vcardimportexportplugininterface.cpp:112
+#: vcards/vcardimportexportplugininterface.cpp:111
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<para>Unable to access vCard:</para><para>%1</para>"
 msgstr "<para>Αδύνατη η πρόσβαση στη vCard:</para><para>%1</para>"
 
-#: vcards/vcardimportexportplugininterface.cpp:402
+#: vcards/vcardimportexportplugininterface.cpp:401
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -764,31 +764,31 @@ msgid ""
 "files?"
 msgstr "Έχετε επιλέξει μια λίστα επαφών, να εξαχθούν σε πολλά αρχεία;"
 
-#: vcards/vcardimportexportplugininterface.cpp:405
+#: vcards/vcardimportexportplugininterface.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to One File"
 msgstr "Εξαγωγή σε ένα αρχείο"
 
-#: vcards/vcardimportexportplugininterface.cpp:406
+#: vcards/vcardimportexportplugininterface.cpp:405
 #, kde-format
 msgctxt "@action:button"
 msgid "Export to Several Files"
 msgstr "Εξαγωγή σε πολλά αρχεία"
 
-#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:29
 #, fuzzy, kde-format
 #| msgid "Import CSV file..."
 msgid "Import Windows Contact file…"
 msgstr "Εισαγωγή αρχείου CSV..."
 
-#: windows-contacts/windowscontactimportexportplugininterface.cpp:31
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:30
 #, fuzzy, kde-format
 #| msgid "Import contacts from an LDIF file."
 msgid "Import contacts from windows contact file."
 msgstr "Εισαγωγή επαφών από αρχείο LDIF."
 
-#: windows-contacts/windowscontactimportexportplugininterface.cpp:69
+#: windows-contacts/windowscontactimportexportplugininterface.cpp:68
 #, kde-format
 msgid "Windows Contact file (*.contact)"
 msgstr ""

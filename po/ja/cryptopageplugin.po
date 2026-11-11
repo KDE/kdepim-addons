@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cryptopageplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2010-01-24 01:02+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -16,45 +16,45 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: cryptopageplugin.cpp:38
+#: cryptopageplugin.cpp:36
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "許可するプロトコル"
 
-#: cryptopageplugin.cpp:53
+#: cryptopageplugin.cpp:51
 #, fuzzy, kde-format
 #| msgid "Preferred OpenPGP encryption key:"
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "優先する OpenPGP 暗号化鍵:"
 
-#: cryptopageplugin.cpp:58
+#: cryptopageplugin.cpp:56
 #, fuzzy, kde-format
 #| msgid "Preferred S/MIME encryption certificate:"
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "優先する S/MIME 暗号化用証明書:"
 
-#: cryptopageplugin.cpp:63
+#: cryptopageplugin.cpp:61
 #, kde-format
 msgid "Message Preference"
 msgstr "メッセージの設定"
 
-#: cryptopageplugin.cpp:72
+#: cryptopageplugin.cpp:70
 #, fuzzy, kde-format
 #| msgid "Sign:"
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "署名:"
 
-#: cryptopageplugin.cpp:89
+#: cryptopageplugin.cpp:87
 #, fuzzy, kde-format
 #| msgid "Encrypt:"
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "暗号化:"
 
-#: cryptopageplugin.cpp:107
+#: cryptopageplugin.cpp:105
 #, kde-format
 msgid "Crypto Settings"
 msgstr "暗号化の設定"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-09-07 21:09+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -47,42 +47,42 @@ msgctxt "@title:window"
 msgid "Add Image"
 msgstr "படத்தை சேர்"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "உண்மையான அளவை வைத்திரு"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:21
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "அகலம்:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:23
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:24
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Height:"
 msgstr "உயரம்:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
 #: markdown/markdownlib/markdowncreatelinkwidget.cpp:32
 #, kde-format
 msgid "Title:"
 msgstr "தலைப்பு:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:42
 #, kde-format
 msgid "Image Link:"
 msgstr "படத்திற்கான இணைப்பு:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:42
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:43
 #, kde-format
 msgid "Alternate text:"
 msgstr "மாற்று உரை:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:63
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:74
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:64
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:75
 #, kde-format
 msgid " px"
 msgstr ""
@@ -109,64 +109,64 @@ msgstr "Markdown-இன் முன்னோட்டம்"
 msgid "Converter Error"
 msgstr "மாற்றியில் சிக்கல்"
 
-#: markdown/plugin/markdowninterface.cpp:40
+#: markdown/plugin/markdowninterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Markdown-இலிருந்து HTML-ஐ உருவாக்கு."
 
-#: markdown/plugin/markdowninterface.cpp:57
+#: markdown/plugin/markdowninterface.cpp:60
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:59
+#: markdown/plugin/markdowninterface.cpp:62
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Markdown செயல்"
 
-#: markdown/plugin/markdowninterface.cpp:64
+#: markdown/plugin/markdowninterface.cpp:67
 #, kde-format
 msgid "Add Title"
 msgstr "தலைப்பை சேர்"
 
-#: markdown/plugin/markdowninterface.cpp:67
+#: markdown/plugin/markdowninterface.cpp:70
 #, kde-format
 msgid "Level %1"
 msgstr "%1-ஆம் நிலை"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:74
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "கிடைமட்ட கோடு"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:76
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "தேர்ந்தெடுத்துள்ள உரையை தடித்ததாக்கு"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "தேர்ந்தெடுத்துள்ள உரையை சாய்வாக்கு"
 
-#: markdown/plugin/markdowninterface.cpp:77
+#: markdown/plugin/markdowninterface.cpp:80
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "தேர்ந்தெடுத்துள்ள உரையை நிரல்தொடராக வடிவமை"
 
-#: markdown/plugin/markdowninterface.cpp:79
+#: markdown/plugin/markdowninterface.cpp:82
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "தேர்ந்தெடுத்துள்ள உரையை மேற்கோளாக அமை"
 
-#: markdown/plugin/markdowninterface.cpp:82
+#: markdown/plugin/markdowninterface.cpp:85
 #, kde-format
 msgid "Add Link"
 msgstr "இணைப்பை சேர்"
 
-#: markdown/plugin/markdowninterface.cpp:83
+#: markdown/plugin/markdowninterface.cpp:86
 #, kde-format
 msgid "Add Image"
 msgstr "படத்தை சேர்"

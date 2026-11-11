@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editor_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2019-12-17 11:53+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -111,7 +111,7 @@ msgstr "Ocorreu um erro: \"%1\""
 msgid "Error"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
+#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:25
 #, fuzzy, kde-format
 #| msgid "Insert"
 msgctxt "@action"
@@ -217,14 +217,14 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr "Exportar..."
 
-#: quicktext/quicktextmanager.cpp:81
+#: quicktext/quicktextmanager.cpp:80
 #, fuzzy, kde-format
 #| msgid "Import QuickText"
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Importar um Texto Rápido"
 
-#: quicktext/quicktextmanager.cpp:89
+#: quicktext/quicktextmanager.cpp:88
 #, fuzzy, kde-format
 #| msgid "Export QuickText"
 msgctxt "@title:window"
@@ -335,7 +335,7 @@ msgstr "Gravar"
 msgid "General"
 msgstr "Geral"
 
-#: sharetext/sharetextplugineditorinterface.cpp:36
+#: sharetext/sharetextplugineditorinterface.cpp:34
 #, fuzzy, kde-format
 #| msgid "Share Mail Text..."
 msgid "Share Mail Text…"

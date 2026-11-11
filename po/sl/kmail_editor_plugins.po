@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2026-08-17 06:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -111,7 +111,7 @@ msgstr "Prišlo je do napake: %1"
 msgid "Error"
 msgstr "Napaka"
 
-#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
+#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Insert Text"
@@ -207,13 +207,13 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr "Izvozi…"
 
-#: quicktext/quicktextmanager.cpp:81
+#: quicktext/quicktextmanager.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Uvozi hitro besedilo"
 
-#: quicktext/quicktextmanager.cpp:89
+#: quicktext/quicktextmanager.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
@@ -314,7 +314,7 @@ msgstr "Shrani"
 msgid "General"
 msgstr "Splošno"
 
-#: sharetext/sharetextplugineditorinterface.cpp:36
+#: sharetext/sharetextplugineditorinterface.cpp:34
 #, kde-format
 msgid "Share Mail Text…"
 msgstr "Deli besedilo pošte…"

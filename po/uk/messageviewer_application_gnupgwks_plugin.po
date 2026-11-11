@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_application_gnupgwks_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2024-05-12 09:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -20,12 +20,12 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: gnupgwksurlhandler.cpp:86
+#: gnupgwksurlhandler.cpp:87
 #, kde-format
 msgid "Display key details"
 msgstr "Показати параметри ключа"
 
-#: gnupgwksurlhandler.cpp:88
+#: gnupgwksurlhandler.cpp:89
 #, kde-format
 msgid "Publish the key"
 msgstr "Оприлюднити ключ"
@@ -35,33 +35,33 @@ msgstr "Оприлюднити ключ"
 msgid "No valid key data in file."
 msgstr "У файлі немає коректних даних ключа."
 
-#: pgpkeyurlhandler.cpp:48
+#: pgpkeyurlhandler.cpp:47
 #, kde-format
 msgid "Import the key"
 msgstr "Імпортувати ключ"
 
-#: pgpkeyurlhandler.cpp:67
+#: pgpkeyurlhandler.cpp:66
 #, kde-format
 msgid "An error occurred while importing the key."
 msgstr "Під час спроби імпортувати ключ сталася помилка."
 
-#: pgpkeyurlhandler.cpp:69 pgpkeyurlhandler.cpp:71
+#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Помилка імпортування"
 
-#: pgpkeyurlhandler.cpp:71
+#: pgpkeyurlhandler.cpp:70
 #, kde-format
 msgid "No keys to import where found."
 msgstr "Не знайдено ключів для імпортування."
 
-#: pgpkeyurlhandler.cpp:73
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "Ключ успішно імпортовано."
 
-#: pgpkeyurlhandler.cpp:73
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"

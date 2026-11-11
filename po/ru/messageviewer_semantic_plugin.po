@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2024-11-18 09:52+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -21,37 +21,37 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: itineraryurlhandler.cpp:112 templates/itinerary.html:76
+#: itineraryurlhandler.cpp:113 templates/itinerary.html:76
 #, kde-format
 msgid "Send to %1"
 msgstr "Отправить на %1"
 
-#: itineraryurlhandler.cpp:126
+#: itineraryurlhandler.cpp:127
 #, kde-format
 msgid "Show calendar at the time of this reservation."
 msgstr "Показать время этой брони в календаре."
 
-#: itineraryurlhandler.cpp:129
+#: itineraryurlhandler.cpp:130
 #, kde-format
 msgid "Add reservation to your calendar."
 msgstr "Добавить бронь в календарь."
 
-#: itineraryurlhandler.cpp:132
+#: itineraryurlhandler.cpp:133
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
 msgstr "Импортировать бронь в KDE Itinerary."
 
-#: itineraryurlhandler.cpp:135
+#: itineraryurlhandler.cpp:136
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
 msgstr "Отправить эту бронь на устройство с помощью KDE Connect."
 
-#: itineraryurlhandler.cpp:203
+#: itineraryurlhandler.cpp:204
 #, kde-format
 msgid "Boarding Pass"
 msgstr "Посадочный талон"
 
-#: itineraryurlhandler.cpp:204
+#: itineraryurlhandler.cpp:205
 #, kde-format
 msgid "Ticket"
 msgstr "Билет"

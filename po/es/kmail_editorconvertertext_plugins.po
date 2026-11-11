@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-07-30 16:32+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -48,42 +48,42 @@ msgctxt "@title:window"
 msgid "Add Image"
 msgstr "Añadir imagen"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Mantener el tamaño original"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:21
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "Anchura:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:23
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:24
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Height:"
 msgstr "Altura:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
 #: markdown/markdownlib/markdowncreatelinkwidget.cpp:32
 #, kde-format
 msgid "Title:"
 msgstr "Título:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:42
 #, kde-format
 msgid "Image Link:"
 msgstr "Enlace a la imagen:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:42
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:43
 #, kde-format
 msgid "Alternate text:"
 msgstr "Texto alternativo:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:63
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:74
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:64
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:75
 #, kde-format
 msgid " px"
 msgstr " px"
@@ -110,64 +110,64 @@ msgstr "Vista previa de la representación de Markdown"
 msgid "Converter Error"
 msgstr "Error del conversor"
 
-#: markdown/plugin/markdowninterface.cpp:40
+#: markdown/plugin/markdowninterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Generar HTML a partir de lenguaje Markdown."
 
-#: markdown/plugin/markdowninterface.cpp:57
+#: markdown/plugin/markdowninterface.cpp:60
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:59
+#: markdown/plugin/markdowninterface.cpp:62
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Acción de Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:64
+#: markdown/plugin/markdowninterface.cpp:67
 #, kde-format
 msgid "Add Title"
 msgstr "Añadir título"
 
-#: markdown/plugin/markdowninterface.cpp:67
+#: markdown/plugin/markdowninterface.cpp:70
 #, kde-format
 msgid "Level %1"
 msgstr "Nivel %1"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:74
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "Línea horizontal"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:76
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "Cambiar el texto seleccionado a negrita"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "Cambiar el texto seleccionado a cursiva"
 
-#: markdown/plugin/markdowninterface.cpp:77
+#: markdown/plugin/markdowninterface.cpp:80
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "Cambiar el texto seleccionado a código"
 
-#: markdown/plugin/markdowninterface.cpp:79
+#: markdown/plugin/markdowninterface.cpp:82
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "Cambiar el texto seleccionado a cita en bloque"
 
-#: markdown/plugin/markdowninterface.cpp:82
+#: markdown/plugin/markdowninterface.cpp:85
 #, kde-format
 msgid "Add Link"
 msgstr "Añadir enlace"
 
-#: markdown/plugin/markdowninterface.cpp:83
+#: markdown/plugin/markdowninterface.cpp:86
 #, kde-format
 msgid "Add Image"
 msgstr "Añadir imagen"

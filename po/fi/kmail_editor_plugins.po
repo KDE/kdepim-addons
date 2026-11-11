@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2026-08-31 18:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -109,7 +109,7 @@ msgstr "Tapahtui virhe: %1"
 msgid "Error"
 msgstr "Virhe"
 
-#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
+#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Insert Text"
@@ -204,13 +204,13 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr "Vie…"
 
-#: quicktext/quicktextmanager.cpp:81
+#: quicktext/quicktextmanager.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Tuo pikateksti"
 
-#: quicktext/quicktextmanager.cpp:89
+#: quicktext/quicktextmanager.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
@@ -311,7 +311,7 @@ msgstr "Tallenna"
 msgid "General"
 msgstr "Perusasetukset"
 
-#: sharetext/sharetextplugineditorinterface.cpp:36
+#: sharetext/sharetextplugineditorinterface.cpp:34
 #, kde-format
 msgid "Share Mail Text…"
 msgstr "Jaa viestin teksti…"

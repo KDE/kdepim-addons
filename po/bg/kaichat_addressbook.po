@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:46+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2025-11-07 18:43+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.08.2\n"
 
-#: kaichataddressbookplugin.cpp:23
+#: kaichataddressbookplugin.cpp:22
 msgid "AddressBook info"
 msgstr "Информация за адресна книга"
 
-#: kaichataddressbookplugin.cpp:33
+#: kaichataddressbookplugin.cpp:32
 msgid "Name of user"
 msgstr "Име на потребителя"
 
-#: kaichataddressbookplugin.cpp:47
+#: kaichataddressbookplugin.cpp:46
 #, kde-format
 msgid "Get Info From AddressBook"
 msgstr " Получаване на информация от адресната книга"
 
-#: kaichataddressbookplugin.cpp:52
+#: kaichataddressbookplugin.cpp:51
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
 " Използване на този инструмент за получаване на потребителска информация от "
 "базата данни на akonadi"
 
-#: kaichataddressbookplugindialog.cpp:16
+#: kaichataddressbookplugindialog.cpp:17
 #, kde-format
 msgid "Configure Addressbook Tool Plugin"
 msgstr " Конфигуриране на плъгина за инструмента за адресна книга"

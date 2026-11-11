@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:46+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2025-10-28 05:31+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: kaichatcalendarplugin.cpp:24
+#: kaichatcalendarplugin.cpp:23
 msgid "calendar info"
 msgstr "კალენდრის ინფორმაცია"
 
-#: kaichatcalendarplugin.cpp:31
+#: kaichatcalendarplugin.cpp:30
 msgid "Name of user"
 msgstr "მომხმარებლის სახელი"
 
-#: kaichatcalendarplugin.cpp:42
+#: kaichatcalendarplugin.cpp:41
 #, kde-format
 msgid "Get Info From calendar"
 msgstr "ინფორმაციის მიღება კალენდრიდან"
 
-#: kaichatcalendarplugin.cpp:47
+#: kaichatcalendarplugin.cpp:46
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
 "გამოიყენეთ ეს ხელსაწყო მომხმარებლის შესახებ ინფორმაციის მისაღებად akonadi-ის "
 "მონაცემთა ბაზიდან"
 
-#: kaichatcalendarplugindialog.cpp:16
+#: kaichatcalendarplugindialog.cpp:17
 #, kde-format
 msgid "Configure Calendar Tool Plugin"
 msgstr "კალენდრის ხელსაწყოს დამატების მორგება"

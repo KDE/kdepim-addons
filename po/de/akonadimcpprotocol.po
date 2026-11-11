@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 00:58+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2026-10-13 07:16+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -31,12 +31,12 @@ msgstr "kde-i18n-de@kde.org"
 msgid "Manage information from Akonadi"
 msgstr ""
 
-#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:38
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:39
 #, kde-format
 msgid "Akonadi Resources Status"
 msgstr ""
 
-#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:64
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:65
 #, kde-format
 msgid "No Akonadi resource found"
 msgstr ""
@@ -129,34 +129,34 @@ msgstr ""
 msgid "Unable to start KMail: %1"
 msgstr ""
 
-#: common/toolbase.cpp:82
+#: common/toolbase.cpp:83
 #, kde-format
 msgid "Another confirmation is pending"
 msgstr ""
 
-#: common/toolbase.cpp:88
+#: common/toolbase.cpp:89
 #, kde-format
 msgid "MCP tool asks confirmation"
 msgstr ""
 
-#: common/toolbase.cpp:89
+#: common/toolbase.cpp:90
 #, kde-format
 msgid ""
 "Run \"%1\"?\n"
 "%2"
 msgstr ""
 
-#: common/toolbase.cpp:103
+#: common/toolbase.cpp:104
 #, kde-format
 msgid "Action refused by user"
 msgstr ""
 
-#: common/toolbase.cpp:106
+#: common/toolbase.cpp:107
 #, kde-format
 msgid "Accept"
 msgstr ""
 
-#: common/toolbase.cpp:114
+#: common/toolbase.cpp:115
 #, kde-format
 msgid "Reject"
 msgstr ""
@@ -186,12 +186,12 @@ msgstr ""
 msgid "Akonadi"
 msgstr ""
 
-#: contactgroupexpandtool/contactgroupexpandtool.cpp:23
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:22
 #, kde-format
 msgid "Search Contact Group"
 msgstr ""
 
-#: contactgroupexpandtool/contactgroupexpandtool.cpp:37
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:36
 #: contactsearchtool/contactsearchtool.cpp:41 mailsearch/searchmailtool.cpp:48
 #, kde-format
 msgid "Argument query must be a non-empty string"

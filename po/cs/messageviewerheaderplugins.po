@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 00:58+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2026-02-04 10:56+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: \n"
@@ -19,20 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:68
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:97
+#: briefheaderstyleplugin/briefheaderstyle.cpp:67
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
 #, kde-format
 msgid "[vCard]"
 msgstr "[Vizitka]"
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:76
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:142
+#: briefheaderstyleplugin/briefheaderstyle.cpp:75
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:140
 #, kde-format
 msgid "CC: "
 msgstr "Kopie: "
 
-#: briefheaderstyleplugin/briefheaderstyle.cpp:83
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:152
+#: briefheaderstyleplugin/briefheaderstyle.cpp:82
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:150
 #, kde-format
 msgid "BCC: "
 msgstr "Skrytá kopie: "
@@ -48,43 +48,43 @@ msgstr "&Stručné hlavičky"
 msgid "Show brief list of message headers"
 msgstr "Zobrazit seznam hlaviček zpráv ve stručném formátu"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:92
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:90
 #, kde-format
 msgid "From: "
 msgstr "Od: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:95
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:93
 #, kde-format
 msgid "(resent from %1)"
 msgstr "(přeposláno od %1)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:110
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:108
 #, kde-format
 msgid "(receiver was %1)"
 msgstr "(příjemce byl %1)"
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:128
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:126
 #, kde-format
 msgctxt "To-field of the mail header."
 msgid "To: "
 msgstr "Komu: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:160
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:158
 #, kde-format
 msgid "Date: "
 msgstr "Datum: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:182
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:180
 #, kde-format
 msgid "Bugzilla: "
 msgstr "Bugzilla: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:191
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:189
 #, kde-format
 msgid "MDN To: "
 msgstr "MDN komu: "
 
-#: fancyheaderstyleplugin/fancyheaderstyle.cpp:198
+#: fancyheaderstyleplugin/fancyheaderstyle.cpp:196
 #, kde-format
 msgid "Spam Status:"
 msgstr "Stav spamu:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webengineurlinterceptor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2024-07-05 15:41+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -35,37 +35,37 @@ msgctxt "@title:column"
 msgid "Url"
 msgstr "網址"
 
-#: adblock/adblockfiltertreeview.cpp:65
+#: adblock/adblockfiltertreeview.cpp:66
 #, kde-format
 msgid "Add…"
 msgstr "新增…"
 
-#: adblock/adblockfiltertreeview.cpp:72
+#: adblock/adblockfiltertreeview.cpp:73
 #, kde-format
 msgid "Modify…"
 msgstr "修改…"
 
-#: adblock/adblockfiltertreeview.cpp:78
+#: adblock/adblockfiltertreeview.cpp:79
 #, kde-format
 msgid "Delete"
 msgstr "刪除"
 
-#: adblock/adblockfiltertreeview.cpp:86
+#: adblock/adblockfiltertreeview.cpp:87
 #, kde-format
 msgid "Show"
 msgstr "顯示"
 
-#: adblock/adblockfiltertreeview.cpp:101
+#: adblock/adblockfiltertreeview.cpp:102
 #, kde-format
 msgid "Update Lists"
 msgstr "更新清單"
 
-#: adblock/adblockfiltertreeview.cpp:164
+#: adblock/adblockfiltertreeview.cpp:165
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "您確定要移除 '%1' 嗎？"
 
-#: adblock/adblockfiltertreeview.cpp:165
+#: adblock/adblockfiltertreeview.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
@@ -83,12 +83,12 @@ msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr "新增廣告阻擋清單"
 
-#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:32
 #, kde-format
 msgid "Name:"
 msgstr "名稱："
 
-#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:32
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:33
 #, kde-format
 msgid "Url:"
 msgstr "網址："

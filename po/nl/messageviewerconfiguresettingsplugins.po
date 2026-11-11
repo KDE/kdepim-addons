@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:48+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2026-10-16 12:23+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -106,7 +106,7 @@ msgid "Configure DKIM"
 msgstr "DKIM configureren"
 
 #: dkim-verify/dkimconfiguretab.cpp:30
-#: foldersettings/folderconfiguresettingspagewidget.cpp:37
+#: foldersettings/folderconfiguresettingspagewidget.cpp:36
 #, kde-format
 msgid "General"
 msgstr "Algemeen"
@@ -222,22 +222,22 @@ msgstr "Mapinstellingen configureren"
 msgid "Modify"
 msgstr "Wijzigen"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:41
+#: foldersettings/folderconfiguresettingspagewidget.cpp:40
 #, kde-format
 msgid "View"
 msgstr "Beeld"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:45
+#: foldersettings/folderconfiguresettingspagewidget.cpp:44
 #, kde-format
 msgid "Expiry"
 msgstr "Laten verlopen"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:49
+#: foldersettings/folderconfiguresettingspagewidget.cpp:48
 #, kde-format
 msgid "Template"
 msgstr "Sjabloon"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:58
+#: foldersettings/folderconfiguresettingspagewidget.cpp:57
 #, kde-format
 msgid ""
 "It will override all settings for each selected folder. Do you want to "
@@ -246,7 +246,7 @@ msgstr ""
 "Het zal alle instellingen voor elke geselecteerde map overschrijven. Wilt u "
 "doorgaan?"
 
-#: foldersettings/folderconfiguresettingspagewidget.cpp:59
+#: foldersettings/folderconfiguresettingspagewidget.cpp:58
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Folder Settings"
@@ -288,24 +288,24 @@ msgctxt "@title:window"
 msgid "Edit"
 msgstr "Bewerken"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:20
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Enabled"
 msgstr "Ingeschakeld"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:33
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:34
 #, kde-format
 msgid "Server Name:"
 msgstr "Servernaam:"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:37
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Argument voor formaatinformatie…</a></qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:43
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:44
 #, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
@@ -314,12 +314,12 @@ msgstr ""
 "<qt><p><strong>Deze expressies kunnen gebruikt worden voor de argumenten:</"
 "strong></p><ul><li>%u - url gebruikt door commando</li></ul></qt>"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:54
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:55
 #, kde-format
 msgid "Command line:"
 msgstr "Opdrachtregel:"
 
-#: openurlwith/openurlwithconfigurecreatewidget.cpp:63
+#: openurlwith/openurlwithconfigurecreatewidget.cpp:64
 #, kde-format
 msgid "Executable:"
 msgstr "Uitvoerbaar bestand:"
@@ -330,70 +330,70 @@ msgctxt "@title:window"
 msgid "Configure Open Url With Plugin"
 msgstr "Open Url met plug-in configureren"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:60
+#: openurlwith/openurlwithconfigurewidget.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Rule…"
 msgstr "Regel toevoegen…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:61
+#: openurlwith/openurlwithconfigurewidget.cpp:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Rule"
 msgstr "Regel verwijderen"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:62
+#: openurlwith/openurlwithconfigurewidget.cpp:64
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Rule…"
 msgstr "Regel wijzigen…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:154
+#: openurlwith/openurlwithconfigurewidget.cpp:156
 #, kde-format
 msgid "A rule for host was already added."
 msgstr "Een regel voor host is al toegevoegd."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:154
+#: openurlwith/openurlwithconfigurewidget.cpp:156
 #, kde-format
 msgctxt "@title:window"
 msgid "Host already checked"
 msgstr "Host is al gecontroleerd"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:167
+#: openurlwith/openurlwithconfigurewidget.cpp:169
 #, kde-format
 msgid "Rule already exists."
 msgstr "Regel bestaat al."
 
-#: openurlwith/openurlwithconfigurewidget.cpp:167
+#: openurlwith/openurlwithconfigurewidget.cpp:169
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicate Rule"
 msgstr "Regel dupliceren"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:211
+#: openurlwith/openurlwithconfigurewidget.cpp:213
 #, kde-format
 msgid "Do you want to remove this rule?"
 msgid_plural "Do you want to remove these rules?"
 msgstr[0] "Wilt u deze regel verwijderen?"
 msgstr[1] "Wilt u deze regels verwijderen?"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:212
+#: openurlwith/openurlwithconfigurewidget.cpp:214
 #, kde-format
 msgctxt "@title"
 msgid "Remove Rule"
 msgstr "Regel verwijderen"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:229
+#: openurlwith/openurlwithconfigurewidget.cpp:231
 #, kde-format
 msgid "Add Rule…"
 msgstr "Regel toevoegen…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:231
+#: openurlwith/openurlwithconfigurewidget.cpp:233
 #, kde-format
 msgid "Edit Rule…"
 msgstr "Regel bewerken…"
 
-#: openurlwith/openurlwithconfigurewidget.cpp:236
+#: openurlwith/openurlwithconfigurewidget.cpp:238
 #, kde-format
 msgid "Remove Rule"
 msgid_plural "Remove Rules"

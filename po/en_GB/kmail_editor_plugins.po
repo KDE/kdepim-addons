@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-08-03 12:53+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -113,7 +113,7 @@ msgstr "An error occurred: \"%1\""
 msgid "Error"
 msgstr ""
 
-#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
+#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:25
 #, fuzzy, kde-format
 #| msgid "Insert"
 msgctxt "@action"
@@ -209,13 +209,13 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr "Export…"
 
-#: quicktext/quicktextmanager.cpp:81
+#: quicktext/quicktextmanager.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "Import QuickText"
 
-#: quicktext/quicktextmanager.cpp:89
+#: quicktext/quicktextmanager.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
@@ -316,7 +316,7 @@ msgstr "Save"
 msgid "General"
 msgstr "General"
 
-#: sharetext/sharetextplugineditorinterface.cpp:36
+#: sharetext/sharetextplugineditorinterface.cpp:34
 #, kde-format
 msgid "Share Mail Text…"
 msgstr "Share Mail Text…"

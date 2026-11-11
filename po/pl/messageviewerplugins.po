@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:48+0000\n"
+"POT-Creation-Date: 2026-11-10 12:17+0000\n"
 "PO-Revision-Date: 2025-09-06 05:55+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -181,20 +181,20 @@ msgctxt ""
 msgid "New todo '%1' was added to task list '%2'"
 msgstr "Dodano nowe zadanie '%1' do wykazu zadań '%2'"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:69
 #: createtodoplugin/viewerplugincreatetodointerface.cpp:70
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:71
 #, kde-format
 msgid "Create To-do"
 msgstr "Utwórz zadanie"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:71
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:72
 #, kde-format
 msgid "Allows you to create a calendar to-do or reminder from this message"
 msgstr ""
 "Umożliwia tworzenie zadań w kalendarzu bądź przypomnień na podstawie tej "
 "wiadomości"
 
-#: createtodoplugin/viewerplugincreatetodointerface.cpp:73
+#: createtodoplugin/viewerplugincreatetodointerface.cpp:74
 #, kde-format
 msgid ""
 "This option starts the KOrganizer to-do editor with initial values taken "
@@ -211,75 +211,75 @@ msgctxt "@title:window"
 msgid "Configure \"External Script\" Plugin"
 msgstr "Ustawienia wtyczki \"Zewnętrzne skrypty\""
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:60
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Script…"
 msgstr "Dodaj skrypt…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:61
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove Script"
 msgstr "Usuń skrypt"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:62
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Modify Script…"
 msgstr "Zmień skrypt…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:68
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:69
 #, kde-format
 msgctxt "@label:textbox"
 msgid "External Script:"
 msgstr "Zewnętrzny skrypt:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:107
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:108
 #, kde-format
 msgid "Do you want to remove this script \"%1\"?"
 msgstr "Czy chcesz usunąć skrypt %1?"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:108
+#: externalscriptplugin/configuredialog/viewerpluginexternalconfigurewidget.cpp:109
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove External Script"
 msgstr "Usuń zewnętrzny skrypt"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:27
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Add or Modify External Script"
 msgstr "Dodaj lub zmień zewnętrzny skrypt"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:29
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:30
 #, kde-format
 msgid "Name:"
 msgstr "Nazwa:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:33
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:34
 #, kde-format
 msgid "Description:"
 msgstr "Opis:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:38
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:39
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add command arguments…"
 msgstr "Dodaj argumenty polecenia…"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:39
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:40
 #, kde-format
 msgid "Command Line:"
 msgstr "Wiersz poleceń:"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:42
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:43
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">Szczegóły formatu argumentu…</a></qt>"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:48
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:49
 #, fuzzy, kde-format
 #| msgid ""
 #| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
@@ -303,7 +303,7 @@ msgstr ""
 "- adres pocztowy do odpowiedzi</li><li>%akonadiUrl - adres url akonadi (jako "
 "akonadi:?item=187020)</li></ul></strong></p></qt>"
 
-#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:70
+#: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:71
 #, kde-format
 msgid "Executable:"
 msgstr "Plik wykonywalny:"

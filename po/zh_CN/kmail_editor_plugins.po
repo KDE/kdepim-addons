@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -108,7 +108,7 @@ msgstr "发生错误：%1"
 msgid "Error"
 msgstr "错误"
 
-#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:24
+#: autogenerateanswers/autogenerateanswerseditortextedit.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Insert Text"
@@ -203,13 +203,13 @@ msgctxt "@action:button"
 msgid "Export…"
 msgstr "导出..."
 
-#: quicktext/quicktextmanager.cpp:81
+#: quicktext/quicktextmanager.cpp:80
 #, kde-format
 msgctxt "@title:window"
 msgid "Import QuickText"
 msgstr "导入邮件模板"
 
-#: quicktext/quicktextmanager.cpp:89
+#: quicktext/quicktextmanager.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Export QuickText"
@@ -308,7 +308,7 @@ msgstr "保存"
 msgid "General"
 msgstr "通用"
 
-#: sharetext/sharetextplugineditorinterface.cpp:36
+#: sharetext/sharetextplugineditorinterface.cpp:34
 #, kde-format
 msgid "Share Mail Text…"
 msgstr "分享邮件文本..."

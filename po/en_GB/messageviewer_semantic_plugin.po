@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2024-05-24 17:14+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -17,37 +17,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: itineraryurlhandler.cpp:112 templates/itinerary.html:76
+#: itineraryurlhandler.cpp:113 templates/itinerary.html:76
 #, kde-format
 msgid "Send to %1"
 msgstr "Send to %1"
 
-#: itineraryurlhandler.cpp:126
+#: itineraryurlhandler.cpp:127
 #, kde-format
 msgid "Show calendar at the time of this reservation."
 msgstr "Show calendar at the time of this reservation."
 
-#: itineraryurlhandler.cpp:129
+#: itineraryurlhandler.cpp:130
 #, kde-format
 msgid "Add reservation to your calendar."
 msgstr "Add reservation to your calendar."
 
-#: itineraryurlhandler.cpp:132
+#: itineraryurlhandler.cpp:133
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
 msgstr "Import reservation into KDE Itinerary."
 
-#: itineraryurlhandler.cpp:135
+#: itineraryurlhandler.cpp:136
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
 msgstr "Send this reservation to a device using KDE Connect."
 
-#: itineraryurlhandler.cpp:203
+#: itineraryurlhandler.cpp:204
 #, kde-format
 msgid "Boarding Pass"
 msgstr "Boarding Pass"
 
-#: itineraryurlhandler.cpp:204
+#: itineraryurlhandler.cpp:205
 #, kde-format
 msgid "Ticket"
 msgstr "Ticket"

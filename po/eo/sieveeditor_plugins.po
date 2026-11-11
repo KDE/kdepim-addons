@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 12:17+0000\n"
 "PO-Revision-Date: 2024-07-04 21:35+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -125,7 +125,7 @@ msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Elekti IMAP-dosierujon"
 
-#: imapfoldercompletion/selectimapwidget.cpp:59
+#: imapfoldercompletion/selectimapwidget.cpp:56
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"

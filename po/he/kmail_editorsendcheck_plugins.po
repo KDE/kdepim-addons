@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-07-30 10:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -164,57 +164,57 @@ msgctxt "@title:window"
 msgid "Configure \"Confirm Email Address\" Plugin"
 msgstr "הגדרת תוסף „אימות כתובת דוא״ל”"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:35
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:36
 #, kde-format
 msgctxt "@option:radio"
 msgid "Accepted Domain Name"
 msgstr "שם תחום מותר"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:40
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:41
 #, kde-format
 msgctxt "@option:radio"
 msgid "Rejected Domain Name"
 msgstr "שם תחום אסור"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:48
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:67
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:49
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:68
 #, kde-format
 msgid "A&dd…"
 msgstr "הו&ספה…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:49
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:68
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
 #, kde-format
 msgid "Re&move"
 msgstr "הס&רה"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:50
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:69
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:51
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:70
 #, kde-format
 msgid "Mod&ify…"
 msgstr "&שינוי…"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:51
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:52
 #, kde-format
 msgid "Enter new domain name:"
 msgstr "נא למלא כאן שם תחום חדש:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:53
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:54
 #, kde-format
 msgid "Do you want to remove this domain?"
 msgstr "להסיר את שם התחום הזה?"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:57
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:58
 #, kde-format
 msgid "Whitelist of Addresses"
 msgstr "רשימת היתר של כתובות"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:70
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:71
 #, kde-format
 msgid "Enter new email address:"
 msgstr "נא למלא כתובת דוא״ל חדשה:"
 
-#: confirm-address/confirmaddressconfiguretabwidget.cpp:72
+#: confirm-address/confirmaddressconfiguretabwidget.cpp:73
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgstr "להסיר את כתובת הדוא״ל הזאת?"

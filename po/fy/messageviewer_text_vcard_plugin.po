@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2007-03-16 21:04+0100\n"
 "Last-Translator: Douwe VDM <dvandermeulen@hetnet.nl>\n"
 "Language-Team:  <nl@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: text_vcard.cpp:96
+#: text_vcard.cpp:94
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "Attached business card"
@@ -26,60 +26,60 @@ msgid_plural "Attached business cards"
 msgstr[0] "Taheakke besitekaartsjes"
 msgstr[1] "Taheakke besitekaartsjes"
 
-#: text_vcard.cpp:145
+#: text_vcard.cpp:143
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "[Add this contact to the address book]"
 msgstr "[Dizze kontaktpersoan yn it adresboek sette]"
 
-#: text_vcard.cpp:150
+#: text_vcard.cpp:148
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "[Update this contact in the address book]"
 msgstr "[Dizze kontaktpersoan yn it adresboek sette]"
 
-#: text_vcard.cpp:154
+#: text_vcard.cpp:152
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "[This contact is already in addressbook]"
 msgstr "[Dizze kontaktpersoan yn it adresboek sette]"
 
-#: text_vcard.cpp:231
+#: text_vcard.cpp:229
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "View Business Card"
 msgstr "Taheakke besitekaartsjes"
 
-#: text_vcard.cpp:232
+#: text_vcard.cpp:230
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "Save Business Card As…"
 msgstr "Taheakke besitekaartsjes"
 
-#: text_vcard.cpp:249
+#: text_vcard.cpp:247
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Dizze kontaktpersoan yn it adresboek sette."
 
-#: text_vcard.cpp:249
+#: text_vcard.cpp:247
 #, fuzzy, kde-format
 #| msgid "[Add this contact to the addressbook]"
 msgid "Update this contact to the address book."
 msgstr "[Dizze kontaktpersoan yn it adresboek sette]"
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Add \"%1\" to the address book."
 msgstr "Dizze kontaktpersoan yn it adresboek sette."
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Update \"%1\" to the address book."
 msgstr "Dizze kontaktpersoan yn it adresboek sette."
 
-#: text_vcard.cpp:276
+#: text_vcard.cpp:274
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgctxt "@title:window"

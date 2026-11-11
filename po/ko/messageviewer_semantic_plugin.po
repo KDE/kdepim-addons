@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2024-08-19 22:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,37 +17,37 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: itineraryurlhandler.cpp:112 templates/itinerary.html:76
+#: itineraryurlhandler.cpp:113 templates/itinerary.html:76
 #, kde-format
 msgid "Send to %1"
 msgstr "%1(으)로 보내기|/|%1$[으 %1]로 보내기"
 
-#: itineraryurlhandler.cpp:126
+#: itineraryurlhandler.cpp:127
 #, kde-format
 msgid "Show calendar at the time of this reservation."
 msgstr "이 예약 시점에서의 달력을 표시합니다."
 
-#: itineraryurlhandler.cpp:129
+#: itineraryurlhandler.cpp:130
 #, kde-format
 msgid "Add reservation to your calendar."
 msgstr "내 달력에 예약을 추가합니다."
 
-#: itineraryurlhandler.cpp:132
+#: itineraryurlhandler.cpp:133
 #, kde-format
 msgid "Import reservation into KDE Itinerary."
 msgstr "예약 정보를 KDE 여행 정보로 가져옵니다."
 
-#: itineraryurlhandler.cpp:135
+#: itineraryurlhandler.cpp:136
 #, kde-format
 msgid "Send this reservation to a device using KDE Connect."
 msgstr "이 예약 정보를 KDE Connect로 다른 장치에 보냅니다."
 
-#: itineraryurlhandler.cpp:203
+#: itineraryurlhandler.cpp:204
 #, kde-format
 msgid "Boarding Pass"
 msgstr "탑승권"
 
-#: itineraryurlhandler.cpp:204
+#: itineraryurlhandler.cpp:205
 #, kde-format
 msgid "Ticket"
 msgstr "티켓"

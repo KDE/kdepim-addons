@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-05-30 11:01+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,41 +17,41 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: cryptopageplugin.cpp:38
+#: cryptopageplugin.cpp:36
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Dozwolone protokoły"
 
-#: cryptopageplugin.cpp:53
+#: cryptopageplugin.cpp:51
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Domyślny klucz do szyfrowania OpenPGP:"
 
-#: cryptopageplugin.cpp:58
+#: cryptopageplugin.cpp:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Domyślny klucz do szyfrowania S/MIME:"
 
-#: cryptopageplugin.cpp:63
+#: cryptopageplugin.cpp:61
 #, kde-format
 msgid "Message Preference"
 msgstr "Ustawienia dla wiadomości"
 
-#: cryptopageplugin.cpp:72
+#: cryptopageplugin.cpp:70
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Podpisywanie:"
 
-#: cryptopageplugin.cpp:89
+#: cryptopageplugin.cpp:87
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Szyfrowanie:"
 
-#: cryptopageplugin.cpp:107
+#: cryptopageplugin.cpp:105
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Ustawienia kryptografii"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-05-29 12:42+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -21,41 +21,41 @@ msgstr ""
 "X-Generator: Lokalize 24.07.70\n"
 "(http: //www.transifex.com/projects/p/kdepim-k-tr/language/tr/)\n"
 
-#: cryptopageplugin.cpp:38
+#: cryptopageplugin.cpp:36
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "İzin Verilen Protokoller"
 
-#: cryptopageplugin.cpp:53
+#: cryptopageplugin.cpp:51
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Tercih edilen OpenPGP şifreleme anahtarı:"
 
-#: cryptopageplugin.cpp:58
+#: cryptopageplugin.cpp:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Tercih edilen S/MIME şifreleme sertifikası:"
 
-#: cryptopageplugin.cpp:63
+#: cryptopageplugin.cpp:61
 #, kde-format
 msgid "Message Preference"
 msgstr "İleti Tercihi"
 
-#: cryptopageplugin.cpp:72
+#: cryptopageplugin.cpp:70
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "İmzala:"
 
-#: cryptopageplugin.cpp:89
+#: cryptopageplugin.cpp:87
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Şifrele:"
 
-#: cryptopageplugin.cpp:107
+#: cryptopageplugin.cpp:105
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Kripto Ayarları"

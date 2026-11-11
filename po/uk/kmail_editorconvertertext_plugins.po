@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorconvertertext_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-07-30 09:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -50,42 +50,42 @@ msgctxt "@title:window"
 msgid "Add Image"
 msgstr "Додавання зображення"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Зберегти початковий розмір"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:21
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "Ширина:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:23
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:24
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Height:"
 msgstr "Висота:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
 #: markdown/markdownlib/markdowncreatelinkwidget.cpp:32
 #, kde-format
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:42
 #, kde-format
 msgid "Image Link:"
 msgstr "Посилання на зображення:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:42
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:43
 #, kde-format
 msgid "Alternate text:"
 msgstr "Альтернативний текст:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:63
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:74
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:64
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:75
 #, kde-format
 msgid " px"
 msgstr " пк"
@@ -112,64 +112,64 @@ msgstr "Попередній перегляд обробленого Markdown"
 msgid "Converter Error"
 msgstr "Помилка перетворення"
 
-#: markdown/plugin/markdowninterface.cpp:40
+#: markdown/plugin/markdowninterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Створити HTML на основі коду мовою markdown."
 
-#: markdown/plugin/markdowninterface.cpp:57
+#: markdown/plugin/markdowninterface.cpp:60
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:59
+#: markdown/plugin/markdowninterface.cpp:62
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Дія з розмітки"
 
-#: markdown/plugin/markdowninterface.cpp:64
+#: markdown/plugin/markdowninterface.cpp:67
 #, kde-format
 msgid "Add Title"
 msgstr "Додати заголовок"
 
-#: markdown/plugin/markdowninterface.cpp:67
+#: markdown/plugin/markdowninterface.cpp:70
 #, kde-format
 msgid "Level %1"
 msgstr "Рівень %1"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:74
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "Горизонтальна лінія"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:76
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "Зробити позначений текст напівжирним"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "Зробити позначений текст курсивним"
 
-#: markdown/plugin/markdowninterface.cpp:77
+#: markdown/plugin/markdowninterface.cpp:80
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "Форматувати позначений текст як код"
 
-#: markdown/plugin/markdowninterface.cpp:79
+#: markdown/plugin/markdowninterface.cpp:82
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "Зробити позначений текст цитатою"
 
-#: markdown/plugin/markdowninterface.cpp:82
+#: markdown/plugin/markdowninterface.cpp:85
 #, kde-format
 msgid "Add Link"
 msgstr "Додати посилання"
 
-#: markdown/plugin/markdowninterface.cpp:83
+#: markdown/plugin/markdowninterface.cpp:86
 #, kde-format
 msgid "Add Image"
 msgstr "Додати зображення"

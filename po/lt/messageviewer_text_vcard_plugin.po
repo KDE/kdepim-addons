@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2005-09-02 17:30+0300\n"
 "Last-Translator: Donatas Glodenis <dgvirtual@akl.lt>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 
-#: text_vcard.cpp:96
+#: text_vcard.cpp:94
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "Attached business card"
@@ -26,56 +26,56 @@ msgstr[1] "Pridėtos verslo kortelės"
 msgstr[2] "Pridėtos verslo kortelės"
 msgstr[3] "Pridėtos verslo kortelės"
 
-#: text_vcard.cpp:145
+#: text_vcard.cpp:143
 #, fuzzy, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[Įdėti šį kontaktą į adresų knygelę]"
 
-#: text_vcard.cpp:150
+#: text_vcard.cpp:148
 #, fuzzy, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[Įdėti šį kontaktą į adresų knygelę]"
 
-#: text_vcard.cpp:154
+#: text_vcard.cpp:152
 #, fuzzy, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[Įdėti šį kontaktą į adresų knygelę]"
 
-#: text_vcard.cpp:231
+#: text_vcard.cpp:229
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "View Business Card"
 msgstr "Pridėtos verslo kortelės"
 
-#: text_vcard.cpp:232
+#: text_vcard.cpp:230
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgid "Save Business Card As…"
 msgstr "Pridėtos verslo kortelės"
 
-#: text_vcard.cpp:249
+#: text_vcard.cpp:247
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "Įdėti šį kontaktą į adresų knygelę."
 
-#: text_vcard.cpp:249
+#: text_vcard.cpp:247
 #, fuzzy, kde-format
 msgid "Update this contact to the address book."
 msgstr "[Įdėti šį kontaktą į adresų knygelę]"
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Add \"%1\" to the address book."
 msgstr "Įdėti šį kontaktą į adresų knygelę."
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, fuzzy, kde-format
 #| msgid "Add this contact to the address book."
 msgid "Update \"%1\" to the address book."
 msgstr "Įdėti šį kontaktą į adresų knygelę."
 
-#: text_vcard.cpp:276
+#: text_vcard.cpp:274
 #, fuzzy, kde-format
 #| msgid "Attached business cards"
 msgctxt "@title:window"

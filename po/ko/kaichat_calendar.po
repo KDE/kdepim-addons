@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:46+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2026-06-09 01:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,25 +17,25 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: kaichatcalendarplugin.cpp:24
+#: kaichatcalendarplugin.cpp:23
 msgid "calendar info"
 msgstr "캘린더 정보"
 
-#: kaichatcalendarplugin.cpp:31
+#: kaichatcalendarplugin.cpp:30
 msgid "Name of user"
 msgstr "사용자의 이름"
 
-#: kaichatcalendarplugin.cpp:42
+#: kaichatcalendarplugin.cpp:41
 #, kde-format
 msgid "Get Info From calendar"
 msgstr "캘린더에서 정보 가져오기"
 
-#: kaichatcalendarplugin.cpp:47
+#: kaichatcalendarplugin.cpp:46
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr "Akonadi 데이터베이스에서 사용자 정보를 가져올 수 있습니다"
 
-#: kaichatcalendarplugindialog.cpp:16
+#: kaichatcalendarplugindialog.cpp:17
 #, kde-format
 msgid "Configure Calendar Tool Plugin"
 msgstr "캘린더 도구 플러그인 설정"

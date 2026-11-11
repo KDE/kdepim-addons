@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 12:17+0000\n"
 "PO-Revision-Date: 2025-09-17 16:58+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -136,7 +136,7 @@ msgctxt "@label:textbox"
 msgid "Size:"
 msgstr "Storlek:"
 
-#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:34
+#: checkfoldersizeaccount/checkfoldersizeaccountplugininterface.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "&Show Folders Size…"
@@ -159,98 +159,98 @@ msgctxt "@action"
 msgid "Open Folder"
 msgstr "Öppna katalog"
 
-#: common/antispamwizard.cpp:89
+#: common/antispamwizard.cpp:87
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Spam Wizard"
 msgstr "Guide för eliminering av skräppost"
 
-#: common/antispamwizard.cpp:89
+#: common/antispamwizard.cpp:87
 #, kde-format
 msgctxt "@title:window"
 msgid "Anti-Virus Wizard"
 msgstr "Guide för eliminering av virus"
 
-#: common/antispamwizard.cpp:91
+#: common/antispamwizard.cpp:89
 #, kde-format
 msgid "Welcome to the KMail Anti-Spam Wizard"
 msgstr "Välkommen till Kmails guide för eliminering av skräppost"
 
-#: common/antispamwizard.cpp:91
+#: common/antispamwizard.cpp:89
 #, kde-format
 msgid "Welcome to the KMail Anti-Virus Wizard"
 msgstr "Välkommen till Kmails guide för eliminering av virus"
 
-#: common/antispamwizard.cpp:96
+#: common/antispamwizard.cpp:94
 #, kde-format
 msgid "Options to fine-tune the handling of spam messages"
 msgstr "Alternativ för att finjustera hantering av skräppost"
 
-#: common/antispamwizard.cpp:100
+#: common/antispamwizard.cpp:98
 #, kde-format
 msgid "Summary of changes to be made by this wizard"
 msgstr "Sammanfattning av ändringar som ska göras av guiden"
 
-#: common/antispamwizard.cpp:103
+#: common/antispamwizard.cpp:101
 #, kde-format
 msgid "Options to fine-tune the handling of virus messages"
 msgstr "Alternativ för att finjustera hantering av post med virus"
 
-#: common/antispamwizard.cpp:170
+#: common/antispamwizard.cpp:168
 #, kde-format
 msgid "Virus handling"
 msgstr "Hantering av virus"
 
-#: common/antispamwizard.cpp:249 common/antispamwizard.cpp:251
-#: common/antispamwizard.cpp:554
+#: common/antispamwizard.cpp:247 common/antispamwizard.cpp:249
+#: common/antispamwizard.cpp:552
 #, kde-format
 msgid "Spam Handling"
 msgstr "Hantering av skräppost"
 
-#: common/antispamwizard.cpp:285 common/antispamwizard.cpp:287
-#: common/antispamwizard.cpp:569
+#: common/antispamwizard.cpp:283 common/antispamwizard.cpp:285
+#: common/antispamwizard.cpp:567
 #, kde-format
 msgid "Semi spam (unsure) handling"
 msgstr "Hantering av misstänkt (möjlig) skräppost"
 
-#: common/antispamwizard.cpp:341 common/antispamwizard.cpp:343
-#: common/antispamwizard.cpp:576
+#: common/antispamwizard.cpp:339 common/antispamwizard.cpp:341
+#: common/antispamwizard.cpp:574
 #, kde-format
 msgid "Classify as Spam"
 msgstr "Klassificera som skräppost"
 
-#: common/antispamwizard.cpp:352
+#: common/antispamwizard.cpp:350
 #, kde-format
 msgid "Spam"
 msgstr "Skräp"
 
-#: common/antispamwizard.cpp:380 common/antispamwizard.cpp:382
-#: common/antispamwizard.cpp:577
+#: common/antispamwizard.cpp:378 common/antispamwizard.cpp:380
+#: common/antispamwizard.cpp:575
 #, kde-format
 msgid "Classify as NOT Spam"
 msgstr "Klassificera INTE som skräppost"
 
-#: common/antispamwizard.cpp:391
+#: common/antispamwizard.cpp:389
 #, kde-format
 msgid "Ham"
 msgstr "Önskat"
 
-#: common/antispamwizard.cpp:457
+#: common/antispamwizard.cpp:455
 #, kde-format
 msgid "Scanning for %1…"
 msgstr "Söker efter %1…"
 
-#: common/antispamwizard.cpp:501
+#: common/antispamwizard.cpp:499
 #, kde-format
 msgid "Scanning for anti-spam tools finished."
 msgstr "Sökning efter verktyg för att eliminera skräppost klar."
 
-#: common/antispamwizard.cpp:501
+#: common/antispamwizard.cpp:499
 #, kde-format
 msgid "Scanning for anti-virus tools finished."
 msgstr "Sökning efter verktyg för att eliminera virus klar."
 
-#: common/antispamwizard.cpp:503
+#: common/antispamwizard.cpp:501
 #, kde-format
 msgid ""
 "<p>Sorry, no spam detection tools have been found. Install your spam "
@@ -259,12 +259,12 @@ msgstr ""
 "<p>Tyvärr hittades inga verktyg för detektering av skräppost. Installera "
 "programvara för detektering av skräppost och kör guiden igen.</p>"
 
-#: common/antispamwizard.cpp:506
+#: common/antispamwizard.cpp:504
 #, kde-format
 msgid "Scanning complete. No anti-virus tools found."
 msgstr "Sökning klar. Inga verktyg för att eliminera virus hittades."
 
-#: common/antispamwizard.cpp:528
+#: common/antispamwizard.cpp:526
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -273,7 +273,7 @@ msgstr ""
 "<p>Brev klassificerade som skräppost markeras som lästa.<br />Skräppost "
 "flyttas till korgen som heter <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:533
+#: common/antispamwizard.cpp:531
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are marked as read.<br />Spam messages are "
@@ -282,7 +282,7 @@ msgstr ""
 "<p>Brev klassificerade som skräppost markeras som lästa.<br />Skräppost "
 "flyttas inte till en viss korg.</p>"
 
-#: common/antispamwizard.cpp:539
+#: common/antispamwizard.cpp:537
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -291,7 +291,7 @@ msgstr ""
 "<p>Brev klassificerade som skräppost markeras inte som lästa.<br />Skräppost "
 "flyttas till korgen som heter <i>%1</i>.</p>"
 
-#: common/antispamwizard.cpp:544
+#: common/antispamwizard.cpp:542
 #, kde-format
 msgid ""
 "<p>Messages classified as spam are not marked as read.<br />Spam messages "
@@ -300,7 +300,7 @@ msgstr ""
 "<p>Brev klassificerade som skräppost markeras som lästa.<br />Skräppost "
 "flyttas inte till en viss korg.</p>"
 
-#: common/antispamwizard.cpp:571
+#: common/antispamwizard.cpp:569
 #, kde-format
 msgid ""
 "<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>."
@@ -309,17 +309,17 @@ msgstr ""
 "<p>Korgen för brev klassificerade som osäkra (troligen skräppost) är <i>%1</"
 "i>.</p>"
 
-#: common/antispamwizard.cpp:581
+#: common/antispamwizard.cpp:579
 #, kde-format
 msgid "<p>The wizard will create the following filters:<ul>%1</ul></p>"
 msgstr "<p>Guiden skapar följande filter:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:584
+#: common/antispamwizard.cpp:582
 #, kde-format
 msgid "<p>The wizard will replace the following filters:<ul>%1</ul></p>"
 msgstr "<p>Guiden ersätter följande filter:<ul>%1</ul></p>"
 
-#: common/antispamwizard.cpp:981
+#: common/antispamwizard.cpp:979
 #, kde-format
 msgid ""
 "The wizard will search for any tools to do spam detection\n"
@@ -328,7 +328,7 @@ msgstr ""
 "Guiden söker efter eventuella verktyg för att detektera\n"
 "skräppost och ställer in Kmail att använda sig av dem."
 
-#: common/antispamwizard.cpp:983
+#: common/antispamwizard.cpp:981
 #, kde-format
 msgid ""
 "<p>Here you can get some assistance in setting up KMail's filter rules to "
@@ -353,7 +353,7 @@ msgstr ""
 "ofta tar lång tid. Överväg då att ta bort filterreglerna som guiden skapat "
 "för att återfå tidigare beteende.</p>"
 
-#: common/antispamwizard.cpp:1033
+#: common/antispamwizard.cpp:1031
 #, kde-format
 msgid ""
 "<p>Please select the tools to be used for the detection and go to the next "
@@ -362,24 +362,24 @@ msgstr ""
 "<p>Välj verktygen som ska användas för detektering och gå till nästa sida.</"
 "p>"
 
-#: common/antispamwizard.cpp:1057
+#: common/antispamwizard.cpp:1055
 #, kde-format
 msgctxt "@option:check"
 msgid "&Mark detected spam messages as read"
 msgstr "&Markera detekterad skräppost som läst"
 
-#: common/antispamwizard.cpp:1058
+#: common/antispamwizard.cpp:1056
 #, kde-format
 msgid "Mark messages which have been classified as spam as read."
 msgstr "Markera brev klassificerade som skräppost som lästa."
 
-#: common/antispamwizard.cpp:1061
+#: common/antispamwizard.cpp:1059
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &known spam to:"
 msgstr "Flytta &känd skräppost till:"
 
-#: common/antispamwizard.cpp:1063
+#: common/antispamwizard.cpp:1061
 #, kde-format
 msgid ""
 "The default folder for spam messages is the trash folder, but you may change "
@@ -388,13 +388,13 @@ msgstr ""
 "Förvald korg för skräppost är papperskorgen, men du kan ändra det i korgvyn "
 "nedan."
 
-#: common/antispamwizard.cpp:1076
+#: common/antispamwizard.cpp:1074
 #, kde-format
 msgctxt "@option:check"
 msgid "Move &probable spam to:"
 msgstr "Flytta trolig skräp&post till:"
 
-#: common/antispamwizard.cpp:1078
+#: common/antispamwizard.cpp:1076
 #, kde-format
 msgid ""
 "The default folder is the inbox folder, but you may change that in the "
@@ -405,13 +405,13 @@ msgstr ""
 "verktyg stöder inte klassificering som osäker. Om du inte har valt ett "
 "verktyg med möjligheten, kan du inte heller välja en korg.</p>"
 
-#: common/antispamwizard.cpp:1188
+#: common/antispamwizard.cpp:1186
 #, kde-format
 msgctxt "@option:check"
 msgid "Check messages using the anti-virus tools"
 msgstr "Kontrollera brev med verktyg för borttagning av virus"
 
-#: common/antispamwizard.cpp:1190
+#: common/antispamwizard.cpp:1188
 #, kde-format
 msgid ""
 "Let the anti-virus tools check your messages. The wizard will create "
@@ -424,13 +424,13 @@ msgstr ""
 "filter kan reagera på detta, och t.ex. flytta brev med virus till en "
 "särskild korg."
 
-#: common/antispamwizard.cpp:1196
+#: common/antispamwizard.cpp:1194
 #, kde-format
 msgctxt "@option:check"
 msgid "Move detected viral messages to the selected folder"
 msgstr "Flytta upptäckta brev med virus till vald korg"
 
-#: common/antispamwizard.cpp:1198
+#: common/antispamwizard.cpp:1196
 #, kde-format
 msgid ""
 "A filter to detect messages classified as virus-infected and to move those "
@@ -441,13 +441,13 @@ msgstr ""
 "och flytta breven till en fördefinierad korg skapas. Standardkorgen är "
 "papperskorgen, men du kan ändra det i korgvyn."
 
-#: common/antispamwizard.cpp:1204
+#: common/antispamwizard.cpp:1202
 #, kde-format
 msgctxt "@option:check"
 msgid "Additionally, mark detected viral messages as read"
 msgstr "Markera dessutom upptäckta brev med virus som lästa"
 
-#: common/antispamwizard.cpp:1207
+#: common/antispamwizard.cpp:1205
 #, kde-format
 msgid ""
 "Mark messages which have been classified as virus-infected as read, as well "
@@ -475,7 +475,7 @@ msgid "Path:"
 msgstr "Sökväg:"
 
 #: mailmergeplugin/widgets/mailmergepreviewdialog.cpp:17
-#: mailmergeplugin/widgets/selectattachmentdialog.cpp:21
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:22
 #, kde-format
 msgctxt "@title:window"
 msgid "Attachment"
@@ -518,7 +518,7 @@ msgstr "Ta &bort"
 msgid "Mod&ify..."
 msgstr "Än&dra..."
 
-#: mailmergeplugin/widgets/selectattachmentdialog.cpp:33
+#: mailmergeplugin/widgets/selectattachmentdialog.cpp:34
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Select attachment:"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2010-02-02 16:56+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -19,41 +19,41 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: cryptopageplugin.cpp:38
+#: cryptopageplugin.cpp:36
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Tillatne protokollar"
 
-#: cryptopageplugin.cpp:53
+#: cryptopageplugin.cpp:51
 #, fuzzy, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Føretrekt OpenPGP-krypteringsnøkkel:"
 
-#: cryptopageplugin.cpp:58
+#: cryptopageplugin.cpp:56
 #, fuzzy, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Føretrekt S/MIME-krypteringssertifikat:"
 
-#: cryptopageplugin.cpp:63
+#: cryptopageplugin.cpp:61
 #, kde-format
 msgid "Message Preference"
 msgstr "Meldingsinnstillingar"
 
-#: cryptopageplugin.cpp:72
+#: cryptopageplugin.cpp:70
 #, fuzzy, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Signer:"
 
-#: cryptopageplugin.cpp:89
+#: cryptopageplugin.cpp:87
 #, fuzzy, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Krypter:"
 
-#: cryptopageplugin.cpp:107
+#: cryptopageplugin.cpp:105
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Krypteringsinnstillingar"

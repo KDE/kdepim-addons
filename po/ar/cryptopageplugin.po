@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-05-30 07:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,41 +18,41 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 
-#: cryptopageplugin.cpp:38
+#: cryptopageplugin.cpp:36
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "الموافيق المسموحة"
 
-#: cryptopageplugin.cpp:53
+#: cryptopageplugin.cpp:51
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "مفتاح تعمية OpenPGP المحبّذ:"
 
-#: cryptopageplugin.cpp:58
+#: cryptopageplugin.cpp:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "شهادة تعمية S/MIME المحبّذة:"
 
-#: cryptopageplugin.cpp:63
+#: cryptopageplugin.cpp:61
 #, kde-format
 msgid "Message Preference"
 msgstr "تفضيلات الرّسالة"
 
-#: cryptopageplugin.cpp:72
+#: cryptopageplugin.cpp:70
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "وقّع:"
 
-#: cryptopageplugin.cpp:89
+#: cryptopageplugin.cpp:87
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "عمِّ:"
 
-#: cryptopageplugin.cpp:107
+#: cryptopageplugin.cpp:105
 #, kde-format
 msgid "Crypto Settings"
 msgstr "إعدادات التّعمية"

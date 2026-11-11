@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail_editorconvertertext_plugins\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:47+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2019-08-05 11:53+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -46,42 +46,42 @@ msgctxt "@title:window"
 msgid "Add Image"
 msgstr "Pridať obrázok"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:20
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:21
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep original size"
 msgstr "Ponechať pôvodnú veľkosť"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:21
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:22
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Width:"
 msgstr "Šírka:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:23
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:24
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Height:"
 msgstr "Výška:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:40
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
 #: markdown/markdownlib/markdowncreatelinkwidget.cpp:32
 #, kde-format
 msgid "Title:"
 msgstr "Titulok:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:41
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:42
 #, kde-format
 msgid "Image Link:"
 msgstr "Odkaz obrázku:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:42
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:43
 #, kde-format
 msgid "Alternate text:"
 msgstr "Alternatívny text:"
 
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:63
-#: markdown/markdownlib/markdowncreateimagewidget.cpp:74
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:64
+#: markdown/markdownlib/markdowncreateimagewidget.cpp:75
 #, kde-format
 msgid " px"
 msgstr " px"
@@ -108,64 +108,64 @@ msgstr "Ukážka vykreslenia markdown"
 msgid "Converter Error"
 msgstr "Chyba prevodníka"
 
-#: markdown/plugin/markdowninterface.cpp:40
+#: markdown/plugin/markdowninterface.cpp:43
 #, kde-format
 msgctxt "@action"
 msgid "Generate HTML from markdown language."
 msgstr "Vygenerovať HTML zo značkovacieho jazyka."
 
-#: markdown/plugin/markdowninterface.cpp:57
+#: markdown/plugin/markdowninterface.cpp:60
 #, kde-format
 msgid "Markdown"
 msgstr "Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:59
+#: markdown/plugin/markdowninterface.cpp:62
 #, kde-format
 msgctxt "@action"
 msgid "Markdown Action"
 msgstr "Akcia Markdown"
 
-#: markdown/plugin/markdowninterface.cpp:64
+#: markdown/plugin/markdowninterface.cpp:67
 #, kde-format
 msgid "Add Title"
 msgstr "Pridať titulok"
 
-#: markdown/plugin/markdowninterface.cpp:67
+#: markdown/plugin/markdowninterface.cpp:70
 #, kde-format
 msgid "Level %1"
 msgstr "Úroveň %1"
 
-#: markdown/plugin/markdowninterface.cpp:71
+#: markdown/plugin/markdowninterface.cpp:74
 #, kde-format
 msgid "Horizontal Rule"
 msgstr "Horizontálne pravidlo"
 
-#: markdown/plugin/markdowninterface.cpp:73
+#: markdown/plugin/markdowninterface.cpp:76
 #, kde-format
 msgid "Change Selected Text as Bold"
 msgstr "Zmeniť vybratý text na tučné"
 
-#: markdown/plugin/markdowninterface.cpp:75
+#: markdown/plugin/markdowninterface.cpp:78
 #, kde-format
 msgid "Change Selected Text as Italic"
 msgstr "Zmeniť vybratý text na kurzívu"
 
-#: markdown/plugin/markdowninterface.cpp:77
+#: markdown/plugin/markdowninterface.cpp:80
 #, kde-format
 msgid "Change Selected Text as Code"
 msgstr "Zmeniť vybratý text na kód"
 
-#: markdown/plugin/markdowninterface.cpp:79
+#: markdown/plugin/markdowninterface.cpp:82
 #, kde-format
 msgid "Change Selected Text as Block Quote"
 msgstr "Zmeniť vybratý text na tučné"
 
-#: markdown/plugin/markdowninterface.cpp:82
+#: markdown/plugin/markdowninterface.cpp:85
 #, kde-format
 msgid "Add Link"
 msgstr "Pridať odkaz"
 
-#: markdown/plugin/markdowninterface.cpp:83
+#: markdown/plugin/markdowninterface.cpp:86
 #, kde-format
 msgid "Add Image"
 msgstr "Pridať obrázok"

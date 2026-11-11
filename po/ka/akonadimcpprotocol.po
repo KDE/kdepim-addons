@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 00:58+0000\n"
-"PO-Revision-Date: 2026-11-07 05:24+0100\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
+"PO-Revision-Date: 2026-11-10 06:42+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -33,12 +33,12 @@ msgstr "temuri.doghonadze@gmail.com"
 msgid "Manage information from Akonadi"
 msgstr "Akonadi-დან მიღებული ინფორმაციის მართვა"
 
-#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:38
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:39
 #, kde-format
 msgid "Akonadi Resources Status"
 msgstr "Akonadi-ის რესურსების სტატუსი"
 
-#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:64
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:65
 #, kde-format
 msgid "No Akonadi resource found"
 msgstr "Akonadi-ის რესურსი აღმოჩენილი არაა"
@@ -131,17 +131,17 @@ msgstr "%1-სა და %2-ს შორის მოვლენები ა�
 msgid "Unable to start KMail: %1"
 msgstr "KMail-ის გაშვება შეუძლებელია: %1"
 
-#: common/toolbase.cpp:82
+#: common/toolbase.cpp:83
 #, kde-format
 msgid "Another confirmation is pending"
 msgstr "რიგშია კიდევ ერთი დადასტურების მოთხოვნა"
 
-#: common/toolbase.cpp:88
+#: common/toolbase.cpp:89
 #, kde-format
 msgid "MCP tool asks confirmation"
 msgstr "MCP-ის ხელსაწყო დადასტურებას მოითხოვს"
 
-#: common/toolbase.cpp:89
+#: common/toolbase.cpp:90
 #, kde-format
 msgid ""
 "Run \"%1\"?\n"
@@ -150,17 +150,17 @@ msgstr ""
 "გაეშვას \"%1\"?\n"
 "%2"
 
-#: common/toolbase.cpp:103
+#: common/toolbase.cpp:104
 #, kde-format
 msgid "Action refused by user"
 msgstr "ქმედება უარყოფილია მომხმარებლის მიერ"
 
-#: common/toolbase.cpp:106
+#: common/toolbase.cpp:107
 #, kde-format
 msgid "Accept"
 msgstr "მიღება"
 
-#: common/toolbase.cpp:114
+#: common/toolbase.cpp:115
 #, kde-format
 msgid "Reject"
 msgstr "უარყოფა"
@@ -190,12 +190,12 @@ msgstr "კალენდარი"
 msgid "Akonadi"
 msgstr "Akonadi"
 
-#: contactgroupexpandtool/contactgroupexpandtool.cpp:23
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:22
 #, kde-format
 msgid "Search Contact Group"
 msgstr "კონტაქტების ჯგუფის ძებნა"
 
-#: contactgroupexpandtool/contactgroupexpandtool.cpp:37
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:36
 #: contactsearchtool/contactsearchtool.cpp:41 mailsearch/searchmailtool.cpp:48
 #, kde-format
 msgid "Argument query must be a non-empty string"
@@ -543,16 +543,14 @@ msgid "Mail creation failed: %1"
 msgstr "ელფოსტის შექმნა ჩავარდა: %1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Identity %1 not found, the default identity was used. Mail \"%2\" created in "
 "folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
 msgstr ""
-"ელფოსტა \"%1\" შეიქმნა საქაღალდეში \"%2\" (ელემენტის id: %3). მისი ჩასწორება "
-"KMail-ში, mail_edit-ით შეგიძლიათ"
+"იდენტიფიკატორი %1 აღმოჩენილი არაა. გამოყენებული იყო ნაგულისხმევი "
+"იდენტიფიკატორი. ფოსტა \"%2\" შეიქმნა საქაღალდეში \"%3\" (ელემენტის id: %4). "
+"მისი ჩასწორება KMail-სი, mail_edit-ით შეგიძლიათ"
 
 #: createmailtool/createmailtooljob.cpp:155
 #, kde-format

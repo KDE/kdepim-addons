@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaichat_calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:46+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2026-10-09 19:38+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -17,25 +17,25 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: kaichatcalendarplugin.cpp:24
+#: kaichatcalendarplugin.cpp:23
 msgid "calendar info"
 msgstr "Сведения из календаря"
 
-#: kaichatcalendarplugin.cpp:31
+#: kaichatcalendarplugin.cpp:30
 msgid "Name of user"
 msgstr "Имя пользователя"
 
-#: kaichatcalendarplugin.cpp:42
+#: kaichatcalendarplugin.cpp:41
 #, kde-format
 msgid "Get Info From calendar"
 msgstr "Получить сведения из календаря"
 
-#: kaichatcalendarplugin.cpp:47
+#: kaichatcalendarplugin.cpp:46
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr "Позволяет получить сведения о пользователе из базы данных Akonadi"
 
-#: kaichatcalendarplugindialog.cpp:16
+#: kaichatcalendarplugindialog.cpp:17
 #, kde-format
 msgid "Configure Calendar Tool Plugin"
 msgstr "Настройка модуля инструмента календаря"

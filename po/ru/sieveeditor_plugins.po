@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 12:17+0000\n"
 "PO-Revision-Date: 2024-11-18 12:00+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -128,7 +128,7 @@ msgctxt "@info:tooltip"
 msgid "Select IMAP folder"
 msgstr "Выбрать папку IMAP"
 
-#: imapfoldercompletion/selectimapwidget.cpp:59
+#: imapfoldercompletion/selectimapwidget.cpp:56
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Click on button for selecting folder…"

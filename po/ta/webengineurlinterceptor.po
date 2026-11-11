@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2024-07-06 21:34+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -35,37 +35,37 @@ msgctxt "@title:column"
 msgid "Url"
 msgstr "முகவரி"
 
-#: adblock/adblockfiltertreeview.cpp:65
+#: adblock/adblockfiltertreeview.cpp:66
 #, kde-format
 msgid "Add…"
 msgstr "சேர்…"
 
-#: adblock/adblockfiltertreeview.cpp:72
+#: adblock/adblockfiltertreeview.cpp:73
 #, kde-format
 msgid "Modify…"
 msgstr "மாற்று…"
 
-#: adblock/adblockfiltertreeview.cpp:78
+#: adblock/adblockfiltertreeview.cpp:79
 #, kde-format
 msgid "Delete"
 msgstr "நீக்கு"
 
-#: adblock/adblockfiltertreeview.cpp:86
+#: adblock/adblockfiltertreeview.cpp:87
 #, kde-format
 msgid "Show"
 msgstr "காட்டு"
 
-#: adblock/adblockfiltertreeview.cpp:101
+#: adblock/adblockfiltertreeview.cpp:102
 #, kde-format
 msgid "Update Lists"
 msgstr "பட்டியல்களை புதுப்பி"
 
-#: adblock/adblockfiltertreeview.cpp:164
+#: adblock/adblockfiltertreeview.cpp:165
 #, kde-format
 msgid "Do you want to remove '%1' ?"
 msgstr "'%1' என்பதை உறுதியாக நீக்க வேண்டுமா?"
 
-#: adblock/adblockfiltertreeview.cpp:165
+#: adblock/adblockfiltertreeview.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove List"
@@ -83,12 +83,12 @@ msgctxt "@title:window"
 msgid "Add Adblock List"
 msgstr ""
 
-#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:31
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:32
 #, kde-format
 msgid "Name:"
 msgstr "பெயர்:"
 
-#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:32
+#: adblock/adblockpluginurlinterceptoraddadblocklistwidget.cpp:33
 #, kde-format
 msgid "Url:"
 msgstr "முகவரி:"

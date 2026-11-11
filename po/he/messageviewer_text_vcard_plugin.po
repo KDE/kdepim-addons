@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messageviewer_text_vcard_plugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-08-01 08:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
-#: text_vcard.cpp:96
+#: text_vcard.cpp:94
 #, kde-format
 msgid "Attached business card"
 msgid_plural "Attached business cards"
@@ -27,52 +27,52 @@ msgstr[1] "כרטיסי ביקור מצורפים"
 msgstr[2] "כרטיסי ביקור מצורפים"
 msgstr[3] "כרטיסי ביקור מצורפים"
 
-#: text_vcard.cpp:145
+#: text_vcard.cpp:143
 #, kde-format
 msgid "[Add this contact to the address book]"
 msgstr "[הוספת איש קשר זה לפנקס הכתובות]"
 
-#: text_vcard.cpp:150
+#: text_vcard.cpp:148
 #, kde-format
 msgid "[Update this contact in the address book]"
 msgstr "[עדכון איש קשר זה בפנקס הכתובות]"
 
-#: text_vcard.cpp:154
+#: text_vcard.cpp:152
 #, kde-format
 msgid "[This contact is already in addressbook]"
 msgstr "[איש קשר זה כבר נמצא בפנקס הכתובות]"
 
-#: text_vcard.cpp:231
+#: text_vcard.cpp:229
 #, kde-format
 msgid "View Business Card"
 msgstr "הצגת כרטיס הביקור"
 
-#: text_vcard.cpp:232
+#: text_vcard.cpp:230
 #, kde-format
 msgid "Save Business Card As…"
 msgstr "שמירת כרטיס הביקור בתור…"
 
-#: text_vcard.cpp:249
+#: text_vcard.cpp:247
 #, kde-format
 msgid "Add this contact to the address book."
 msgstr "הוספת איש קשר זה לפנקס הכתובות."
 
-#: text_vcard.cpp:249
+#: text_vcard.cpp:247
 #, kde-format
 msgid "Update this contact to the address book."
 msgstr "לעדכן את איש הקשר הזה בפנקס הכתובות."
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Add \"%1\" to the address book."
 msgstr "הוספת „%1” לפנקס הכתובות."
 
-#: text_vcard.cpp:251
+#: text_vcard.cpp:249
 #, kde-format
 msgid "Update \"%1\" to the address book."
 msgstr "לעדכן את „%1” בפנקס הכתובות."
 
-#: text_vcard.cpp:276
+#: text_vcard.cpp:274
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Business Card"

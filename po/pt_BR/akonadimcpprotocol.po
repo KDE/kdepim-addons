@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 00:58+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2026-11-07 05:53-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -32,12 +32,12 @@ msgstr "marcus.gama@kde.org"
 msgid "Manage information from Akonadi"
 msgstr "Gerenciar informações do Akonadi"
 
-#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:38
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:39
 #, kde-format
 msgid "Akonadi Resources Status"
 msgstr "Status dos recursos do Akonadi"
 
-#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:64
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:65
 #, kde-format
 msgid "No Akonadi resource found"
 msgstr "Nenhum recurso do Akonadi encontrado"
@@ -130,17 +130,17 @@ msgstr "Nenhum evento entre %1 e %2"
 msgid "Unable to start KMail: %1"
 msgstr "Não foi possível iniciar o KMail: %1"
 
-#: common/toolbase.cpp:82
+#: common/toolbase.cpp:83
 #, kde-format
 msgid "Another confirmation is pending"
 msgstr "Outra confirmação está pendente"
 
-#: common/toolbase.cpp:88
+#: common/toolbase.cpp:89
 #, kde-format
 msgid "MCP tool asks confirmation"
 msgstr "A ferramenta MCP solicita confirmação"
 
-#: common/toolbase.cpp:89
+#: common/toolbase.cpp:90
 #, kde-format
 msgid ""
 "Run \"%1\"?\n"
@@ -149,17 +149,17 @@ msgstr ""
 "Executar \"%1\"?\n"
 "%2"
 
-#: common/toolbase.cpp:103
+#: common/toolbase.cpp:104
 #, kde-format
 msgid "Action refused by user"
 msgstr "Ação recusada pelo usuário"
 
-#: common/toolbase.cpp:106
+#: common/toolbase.cpp:107
 #, kde-format
 msgid "Accept"
 msgstr "Aceitar"
 
-#: common/toolbase.cpp:114
+#: common/toolbase.cpp:115
 #, kde-format
 msgid "Reject"
 msgstr "Rejeitar"
@@ -189,12 +189,12 @@ msgstr "Calendário"
 msgid "Akonadi"
 msgstr "Akonadi"
 
-#: contactgroupexpandtool/contactgroupexpandtool.cpp:23
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:22
 #, kde-format
 msgid "Search Contact Group"
 msgstr "Pesquisar grupo de contatos"
 
-#: contactgroupexpandtool/contactgroupexpandtool.cpp:37
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:36
 #: contactsearchtool/contactsearchtool.cpp:41 mailsearch/searchmailtool.cpp:48
 #, kde-format
 msgid "Argument query must be a non-empty string"

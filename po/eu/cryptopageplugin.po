@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2024-07-16 11:00+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,41 +20,41 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: cryptopageplugin.cpp:38
+#: cryptopageplugin.cpp:36
 #, kde-format
 msgid "Allowed Protocols"
 msgstr "Baimendutako protokoloak"
 
-#: cryptopageplugin.cpp:53
+#: cryptopageplugin.cpp:51
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred OpenPGP encryption key:"
 msgstr "Zifratzeko OpenPGP gako hobetsia:"
 
-#: cryptopageplugin.cpp:58
+#: cryptopageplugin.cpp:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Preferred S/MIME encryption certificate:"
 msgstr "Zifratzeko S/MIME ziurtagiri hobetsia:"
 
-#: cryptopageplugin.cpp:63
+#: cryptopageplugin.cpp:61
 #, kde-format
 msgid "Message Preference"
 msgstr "Mezuaren hobespena"
 
-#: cryptopageplugin.cpp:72
+#: cryptopageplugin.cpp:70
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sign:"
 msgstr "Sinatu:"
 
-#: cryptopageplugin.cpp:89
+#: cryptopageplugin.cpp:87
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Encrypt:"
 msgstr "Zifratu:"
 
-#: cryptopageplugin.cpp:107
+#: cryptopageplugin.cpp:105
 #, kde-format
 msgid "Crypto Settings"
 msgstr "Zifratzeko ezarpenak"

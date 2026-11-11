@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:46+0000\n"
+"POT-Creation-Date: 2026-11-10 07:29+0000\n"
 "PO-Revision-Date: 2026-09-12 23:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -28,26 +28,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 26.08.0\n"
 
-#: kaichatcalendarplugin.cpp:24
+#: kaichatcalendarplugin.cpp:23
 msgid "calendar info"
 msgstr "Egutegi-informazioa"
 
-#: kaichatcalendarplugin.cpp:31
+#: kaichatcalendarplugin.cpp:30
 msgid "Name of user"
 msgstr "Erabiltzailearen izena"
 
-#: kaichatcalendarplugin.cpp:42
+#: kaichatcalendarplugin.cpp:41
 #, kde-format
 msgid "Get Info From calendar"
 msgstr "Egutegiko informazioa lortu"
 
-#: kaichatcalendarplugin.cpp:47
+#: kaichatcalendarplugin.cpp:46
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
 msgstr ""
 "Tresna hau Akonadi datu-basetik erabiltzailearen informazioa lortzeko erabili"
 
-#: kaichatcalendarplugindialog.cpp:16
+#: kaichatcalendarplugindialog.cpp:17
 #, kde-format
 msgid "Configure Calendar Tool Plugin"
 msgstr "Egutegirako tresna-plugina konfiguratu"

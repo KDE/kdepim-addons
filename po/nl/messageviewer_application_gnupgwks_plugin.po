@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-31 00:44+0000\n"
+"POT-Creation-Date: 2026-11-11 01:02+0000\n"
 "PO-Revision-Date: 2024-05-12 14:15+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: gnupgwksurlhandler.cpp:86
+#: gnupgwksurlhandler.cpp:87
 #, kde-format
 msgid "Display key details"
 msgstr "Details van sleutel tonen"
 
-#: gnupgwksurlhandler.cpp:88
+#: gnupgwksurlhandler.cpp:89
 #, kde-format
 msgid "Publish the key"
 msgstr "Sleutel publiceren"
@@ -32,33 +32,33 @@ msgstr "Sleutel publiceren"
 msgid "No valid key data in file."
 msgstr "Geen geldige sleutelgegevens in bestand."
 
-#: pgpkeyurlhandler.cpp:48
+#: pgpkeyurlhandler.cpp:47
 #, kde-format
 msgid "Import the key"
 msgstr "De sleutel importeren"
 
-#: pgpkeyurlhandler.cpp:67
+#: pgpkeyurlhandler.cpp:66
 #, kde-format
 msgid "An error occurred while importing the key."
 msgstr "Er is een fout opgetreden bij het importeren van de sleutel."
 
-#: pgpkeyurlhandler.cpp:69 pgpkeyurlhandler.cpp:71
+#: pgpkeyurlhandler.cpp:68 pgpkeyurlhandler.cpp:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Import error"
 msgstr "Importfout"
 
-#: pgpkeyurlhandler.cpp:71
+#: pgpkeyurlhandler.cpp:70
 #, kde-format
 msgid "No keys to import where found."
 msgstr "Geen te importeren sleutels gevonden."
 
-#: pgpkeyurlhandler.cpp:73
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgid "The key has been successfully imported."
 msgstr "De sleutel is met succes geïmporteerd."
 
-#: pgpkeyurlhandler.cpp:73
+#: pgpkeyurlhandler.cpp:72
 #, kde-format
 msgctxt "@title:window"
 msgid "Import finished"
