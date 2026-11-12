@@ -420,7 +420,7 @@ if(TARGET KPim6::ImportWizard)
     add_subdirectory(akonadi-import-wizard)
 endif()
 
-if(OPTION_ADD_MPCPROTOCOL)
+if(OPTION_ADD_MPCPROTOCOL AND TARGET KF6::TextAutoGenerateTextMcpProtocolWidgets)
     add_subdirectory(akonadi-mcp-server)
 endif()
 
