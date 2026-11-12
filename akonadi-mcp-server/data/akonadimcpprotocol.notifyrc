@@ -1,6 +1,7 @@
 [Global]
 IconName=ruqola
 Name=AkonadiMcpProtocol
+Name[ar]=AkonadiMcpProtocol
 Name[bg]=AkonadiMcpProtocol
 Name[ca]=AkonadiMcpProtocol
 Name[ca@valencia]=AkonadiMcpProtocol
@@ -17,6 +18,7 @@ Name[tr]=Akonadi MCP Protokolü
 Name[uk]=AkonadiMcpProtocol
 DesktopEntry=org.kde.akonadimcpprotocol
 Comment=Notification
+Comment[ar]=إشعار
 Comment[bg]=Известие
 Comment[ca]=Notificació
 Comment[ca@valencia]=Notificació
@@ -34,6 +36,7 @@ Comment[uk]=Сповіщення
 
 [Event/Mcp-Tool-Confirmation]
 Name=MCP Tool Asks Confirmation
+Name[ar]=أداة MCP تطلب التأكيد
 Name[bg]=MCP инструмент иска потвърждение
 Name[ca]=L'eina MCP demana confirmació
 Name[ca@valencia]=L'eina MCP demana confirmació
