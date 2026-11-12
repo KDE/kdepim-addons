@@ -541,16 +541,14 @@ msgid "Mail creation failed: %1"
 msgstr "Posta oluşturulamadı: %1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Identity %1 not found, the default identity was used. Mail \"%2\" created in "
 "folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
 msgstr ""
-"“%2” klasöründe “%1” postası oluşturuldu (öge kimliği: %3). KMail içinde, "
-"mail_edit ile düzenlenebilir."
+"%1 kimliği bulunamadı; yerine öntanımlı kimlik kullanıldı. “%3” klasöründe "
+"“%2” postası oluşturuldu (öge kimliği: %4). KMail içinde, mail_edit ile "
+"düzenlenebilir."
 
 #: createmailtool/createmailtooljob.cpp:155
 #, kde-format

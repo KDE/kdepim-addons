@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-11 01:02+0000\n"
-"PO-Revision-Date: 2026-11-07 12:59+0200\n"
+"PO-Revision-Date: 2026-11-11 18:06+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -557,16 +557,14 @@ msgid "Mail creation failed: %1"
 msgstr "Не вдалося створити поштове повідомлення: %1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Identity %1 not found, the default identity was used. Mail \"%2\" created in "
 "folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
 msgstr ""
-"Поштове повідомлення «%1» створено у теці «%2» (ідентифікатор запису: %3). "
-"Його можна змінити у KMail за допомогою mail_edit"
+"Не знайдено профілю %1, використано типовий профіль. Поштове повідомлення "
+"«%2» створено у теці «%3» (ідентифікатор запису: %4). Його можна змінити у "
+"KMail за допомогою mail_edit"
 
 #: createmailtool/createmailtooljob.cpp:155
 #, kde-format

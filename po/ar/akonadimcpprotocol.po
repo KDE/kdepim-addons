@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-11 01:02+0000\n"
-"PO-Revision-Date: 2026-11-06 16:13+0400\n"
+"PO-Revision-Date: 2026-11-11 21:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -156,12 +156,12 @@ msgstr ""
 #: common/toolbase.cpp:107
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "اقبل"
 
 #: common/toolbase.cpp:115
 #, kde-format
 msgid "Reject"
-msgstr ""
+msgstr "ارفض"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
