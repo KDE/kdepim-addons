@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-06 00:47+0000\n"
-"PO-Revision-Date: 2026-09-23 10:02+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-11-11 22:57+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -321,7 +321,7 @@ msgstr "Опубликовать текст письма…"
 #: zoomtext/zoomlabel.cpp:20
 #, kde-format
 msgid "Zoom: %1%"
-msgstr "Масштаб: %1%"
+msgstr "Масштаб: %1 %"
 
 #: zoomtext/zoomtextplugineditorinterface.cpp:28
 #, kde-format
