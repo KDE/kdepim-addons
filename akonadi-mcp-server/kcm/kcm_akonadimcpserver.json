@@ -16,6 +16,7 @@
         "Description[sl]": "Konfiguracija strežnika Akonadi MCP",
         "Description[tr]": "Akonadi MCP Sunucusu yapılandırması",
         "Description[uk]": "Налаштування сервера MCP Akonadi",
+        "Description[zh_TW]": "Akonadi MCP 伺服器的設定",
         "Icon": "akonadi",
         "Name": "Akonadi MCP Server",
         "Name[ar]": "خادم أكونادي MCP",
@@ -32,7 +33,8 @@
         "Name[ru]": "Сервер MCP Akonadi",
         "Name[sl]": "Akonadi MCP Server",
         "Name[tr]": "Akonadi MCP Sunucusu",
-        "Name[uk]": "Сервер MCP Akonadi"
+        "Name[uk]": "Сервер MCP Akonadi",
+        "Name[zh_TW]": "Akonadi MCP 伺服器"
     },
     "NoDisplay": "false",
     "X-KDE-Weight": 700
