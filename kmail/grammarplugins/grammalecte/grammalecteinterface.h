@@ -23,7 +23,6 @@ public:
     [[nodiscard]] KToggleAction *action() const override;
 
 private:
-    Q_DISABLE_COPY(GrammalecteInterface)
     void slotReplaceText(const TextGrammarCheck::GrammarAction &act);
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);

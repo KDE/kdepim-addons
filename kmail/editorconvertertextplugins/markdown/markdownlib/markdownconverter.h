@@ -26,7 +26,6 @@ Q_SIGNALS:
     void failed(const QString &str);
 
 private:
-    Q_DISABLE_COPY(MarkdownConverter)
     bool mEnableEmbeddedLabel = false;
     bool mEnableExtraDefinitionLists = false;
 };

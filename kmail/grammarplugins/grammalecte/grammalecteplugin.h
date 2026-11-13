@@ -19,7 +19,4 @@ public:
     [[nodiscard]] QString customToolName() const override;
     [[nodiscard]] bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
-
-private:
-    Q_DISABLE_COPY(GrammalectePlugin)
 };
