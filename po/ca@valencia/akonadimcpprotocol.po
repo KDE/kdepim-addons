@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-11 03:12+0000\n"
-"PO-Revision-Date: 2026-11-06 10:35+0100\n"
+"PO-Revision-Date: 2026-11-12 13:22+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -138,12 +138,12 @@ msgstr "No s'ha pogut iniciar KMail: %1"
 #: common/toolbase.cpp:82
 #, kde-format
 msgid "Another confirmation is pending"
-msgstr ""
+msgstr "Hi ha pendent una altra confirmació"
 
 #: common/toolbase.cpp:88
 #, kde-format
 msgid "MCP tool asks confirmation"
-msgstr ""
+msgstr "L'eina MCP demana confirmació"
 
 #: common/toolbase.cpp:89
 #, kde-format
@@ -151,21 +151,23 @@ msgid ""
 "Run \"%1\"?\n"
 "%2"
 msgstr ""
+"Voleu executar «%1»?\n"
+"%2"
 
 #: common/toolbase.cpp:103
 #, kde-format
 msgid "Action refused by user"
-msgstr ""
+msgstr "Acció rebutjada per l'usuari"
 
 #: common/toolbase.cpp:106
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "Accepta"
 
 #: common/toolbase.cpp:114
 #, kde-format
 msgid "Reject"
-msgstr ""
+msgstr "Rebutja"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -284,7 +286,7 @@ msgstr "L'argument «address_book_id» ha de ser un enter positiu"
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:49
 #, kde-format
 msgid "Contact group name is empty"
-msgstr "El nom del grups de contactes està buit"
+msgstr "El nom del grup de contactes està buit"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #: createidentitytool/createidentitytool.cpp:59
@@ -606,7 +608,7 @@ msgstr "L'argument «port» ha de ser un enter"
 #: createtransporttool/createtransporttool.cpp:124
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
-msgstr "Invalid «authentication_type» «%1» no vàlid, s'esperava un d'entre: %2"
+msgstr "«authentication_type» «%1» no vàlid, s'esperava un d'entre: %2"
 
 #: createtransporttool/createtransporttool.cpp:170
 #, kde-format
@@ -807,7 +809,7 @@ msgstr "Activat"
 #, kde-format
 msgctxt "@option:check"
 msgid "Ask confirmation before running tools which modify data"
-msgstr ""
+msgstr "Demana confirmació abans d'executar eines que modifiquen dades"
 
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
@@ -1123,7 +1125,7 @@ msgstr "El nombre de dies ha de ser un enter positiu"
 #, kde-format
 msgid "No birthday in the next day"
 msgid_plural "No birthday in the next %1 days"
-msgstr[0] "Cap aniversari al dia següent"
+msgstr[0] "Cap aniversari demà"
 msgstr[1] "No hi ha cap aniversari en %1 dies vinents"
 
 #: updatecontacttool/updatecontacttool.cpp:26

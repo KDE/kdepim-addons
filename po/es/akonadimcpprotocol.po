@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadimcpprotocol\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-11 03:12+0000\n"
-"PO-Revision-Date: 2026-11-06 18:28+0100\n"
+"PO-Revision-Date: 2026-11-12 12:36+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -139,12 +139,12 @@ msgstr "No se ha podido iniciar KMail: %1"
 #: common/toolbase.cpp:82
 #, kde-format
 msgid "Another confirmation is pending"
-msgstr ""
+msgstr "Otra confirmación está pendiente"
 
 #: common/toolbase.cpp:88
 #, kde-format
 msgid "MCP tool asks confirmation"
-msgstr ""
+msgstr "La herramienta MCP solicita confirmación"
 
 #: common/toolbase.cpp:89
 #, kde-format
@@ -152,21 +152,23 @@ msgid ""
 "Run \"%1\"?\n"
 "%2"
 msgstr ""
+"¿Ejecutar «%1»?\n"
+"%2"
 
 #: common/toolbase.cpp:103
 #, kde-format
 msgid "Action refused by user"
-msgstr ""
+msgstr "Acción rechazada por el usuario"
 
 #: common/toolbase.cpp:106
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "Aceptar"
 
 #: common/toolbase.cpp:114
 #, kde-format
 msgid "Reject"
-msgstr ""
+msgstr "Rechazar"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -812,6 +814,7 @@ msgstr "Activado"
 msgctxt "@option:check"
 msgid "Ask confirmation before running tools which modify data"
 msgstr ""
+"Solicitar confirmación antes de ejecutar herramientas que modifican datos"
 
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
