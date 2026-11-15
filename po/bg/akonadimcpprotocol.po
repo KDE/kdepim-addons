@@ -1,0 +1,1217 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the kdepim-addons package.
+#
+# SPDX-FileCopyrightText: 2026 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: kdepim-addons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-11 03:12+0000\n"
+"PO-Revision-Date: 2026-11-14 22:25+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 26.08.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Минчо Кондарев"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mkondarev@yahoo.de"
+
+#: akonadimcpprotocolmanager.cpp:58
+#, kde-format
+msgid "Manage information from Akonadi"
+msgstr ""
+
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:38
+#, kde-format
+msgid "Akonadi Resources Status"
+msgstr ""
+
+#: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:64
+#, kde-format
+msgid "No Akonadi resource found"
+msgstr ""
+
+#: calendarcommon/calendartooljobbase.cpp:34
+#: calendarcommon/createincidencetooljob.cpp:57
+#: listcalendars/listcalendarstooljob.cpp:60
+#, kde-format
+msgid "Calendar fetch failed: %1"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:38
+#, kde-format
+msgid "Summary must be a non-empty string"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:70
+#, kde-format
+msgid "Calendar %1 does not exist or does not accept new items"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:72
+#, kde-format
+msgid "No writable calendar found"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:90
+#, kde-format
+msgid "Creation failed: %1"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:98
+#, kde-format
+msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:101
+#, kde-format
+msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:104
+#, kde-format
+msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr ""
+
+#: calendarcommon/createincidencetooljob.cpp:107
+#, kde-format
+msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+msgstr ""
+
+#: calendareventstool/calendareventstool.cpp:29
+#, kde-format
+msgid "Calendar Events"
+msgstr "Календарни събития"
+
+#: calendareventstool/calendareventstool.cpp:52
+#: createeventtool/createeventtool.cpp:63 freebusytool/freebusytool.cpp:49
+#: updateincidencetool/updateincidencetool.cpp:100
+#, kde-format
+msgid "Argument start must be an ISO 8601 date or date-time"
+msgstr ""
+
+#: calendareventstool/calendareventstool.cpp:62
+#: createeventtool/createeventtool.cpp:71 freebusytool/freebusytool.cpp:54
+#: updateincidencetool/updateincidencetool.cpp:108
+#, kde-format
+msgid "Argument end must be an ISO 8601 date or date-time"
+msgstr ""
+
+#: calendareventstool/calendareventstool.cpp:68
+#: freebusytool/freebusytool.cpp:58
+#, kde-format
+msgid "Argument end must be after start"
+msgstr ""
+
+#: calendareventstool/calendareventstool.cpp:72
+#: freebusytool/freebusytool.cpp:62
+#, kde-format
+msgid "Period must not exceed %1 days"
+msgstr ""
+
+#: calendareventstool/calendareventstooljob.cpp:49
+#, kde-format
+msgid "No event between %1 and %2"
+msgstr ""
+
+#: common/kmaildbustooljobbase.cpp:51
+#, kde-format
+msgid "Unable to start KMail: %1"
+msgstr ""
+
+#: common/toolbase.cpp:82
+#, kde-format
+msgid "Another confirmation is pending"
+msgstr ""
+
+#: common/toolbase.cpp:88
+#, kde-format
+msgid "MCP tool asks confirmation"
+msgstr "MCP инструмент иска потвърждение"
+
+#: common/toolbase.cpp:89
+#, kde-format
+msgid ""
+"Run \"%1\"?\n"
+"%2"
+msgstr ""
+
+#: common/toolbase.cpp:103
+#, kde-format
+msgid "Action refused by user"
+msgstr ""
+
+#: common/toolbase.cpp:106
+#, kde-format
+msgid "Accept"
+msgstr "Приемане"
+
+#: common/toolbase.cpp:114
+#, kde-format
+msgid "Reject"
+msgstr "Отхвърляне"
+
+#: common/tooljobbase.cpp:37
+#, kde-format
+msgid "Invalid arguments"
+msgstr "Невалидни аргументи"
+
+#: common/toolutils.cpp:16
+#, kde-format
+msgid "Mail"
+msgstr "Поща"
+
+#: common/toolutils.cpp:18
+#, kde-format
+msgid "Contact"
+msgstr "Контакт"
+
+#: common/toolutils.cpp:20
+#, kde-format
+msgid "Calendar"
+msgstr "Календар"
+
+#: common/toolutils.cpp:22
+#, kde-format
+msgid "Akonadi"
+msgstr "Akonadi"
+
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:23
+#, kde-format
+msgid "Search Contact Group"
+msgstr ""
+
+#: contactgroupexpandtool/contactgroupexpandtool.cpp:37
+#: contactsearchtool/contactsearchtool.cpp:41 mailsearch/searchmailtool.cpp:48
+#, kde-format
+msgid "Argument query must be a non-empty string"
+msgstr ""
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:34
+#: contactsearchtool/contactsearchtooljob.cpp:38
+#: mailsearch/searchmailtooljob.cpp:57
+#, kde-format
+msgid "Search string must be a non-empty string"
+msgstr ""
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:47
+#, kde-format
+msgid "Contact group search failed: %1"
+msgstr ""
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
+#, kde-format
+msgid "No contact group found for \"%1\""
+msgstr ""
+
+#: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
+#, kde-format
+msgid "%1: expand failed: %2"
+msgstr ""
+
+#: contactsearchtool/contactsearchtool.cpp:24
+#, kde-format
+msgid "Search Contacts"
+msgstr ""
+
+#: contactsearchtool/contactsearchtool.cpp:60
+#, kde-format
+msgid "Unknown contact field: %1"
+msgstr ""
+
+#: contactsearchtool/contactsearchtool.cpp:65
+#, kde-format
+msgid "Argument fields must be an array"
+msgstr ""
+
+#: contactsearchtool/contactsearchtooljob.cpp:51
+#, kde-format
+msgid "Contact search failed: %1"
+msgstr ""
+
+#: contactsearchtool/contactsearchtooljob.cpp:56
+#: contactsearchtool/contactsearchtooljob.cpp:101
+#, kde-format
+msgid "No contact found for \"%1\""
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:48
+#, kde-format
+msgid "Create Contact Group"
+msgstr "Създаване на група за контакти"
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:73
+#: createcontacttool/createcontacttool.cpp:52
+#: updatecontacttool/updatecontacttool.cpp:70
+#, kde-format
+msgid "Argument name must be a non-empty string"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:79
+#, kde-format
+msgid "Argument contact_ids must be an array of positive integers"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:85
+#: createcontacttool/createcontacttool.cpp:62
+#: updatecontacttool/updatecontacttool.cpp:80
+#, kde-format
+msgid "Argument emails must be an array of strings"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptool.cpp:94
+#: createcontacttool/createcontacttool.cpp:96
+#, kde-format
+msgid "Argument address_book_id must be a positive integer"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:49
+#, kde-format
+msgid "Contact group name is empty"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:60
+#: createidentitytool/createidentitytool.cpp:59
+#, kde-format
+msgid "Invalid email address \"%1\""
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:84
+#: deletecontacttool/deletecontacttooljob.cpp:47
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:68
+#: updatecontacttool/updatecontacttooljob.cpp:59
+#, kde-format
+msgid "Contact fetch failed: %1"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:93
+#: deletecontacttool/deletecontacttooljob.cpp:52
+#: updatecontacttool/updatecontacttooljob.cpp:64
+#, kde-format
+msgid "Contact %1 not found"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:97
+#: deletecontacttool/deletecontacttooljob.cpp:57
+#: updatecontacttool/updatecontacttooljob.cpp:69
+#, kde-format
+msgid "Item %1 is not a contact"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:122
+#: createcontacttool/createcontacttooljob.cpp:59
+#: listaddressbooks/listaddressbookstooljob.cpp:33
+#, kde-format
+msgid "Address book fetch failed: %1"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:135
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contact groups"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:137
+#: createcontacttool/createcontacttooljob.cpp:74
+#, kde-format
+msgid "No writable address book found"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:155
+#, kde-format
+msgid "Contact group creation failed: %1"
+msgstr ""
+
+#: createcontactgrouptool/createcontactgrouptooljob.cpp:159
+#, kde-format
+msgid ""
+"Contact group \"%2\" with %1 member created in address book \"%3\" (item id: "
+"%4)"
+msgid_plural ""
+"Contact group \"%2\" with %1 members created in address book \"%3\" (item "
+"id: %4)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: createcontacttool/createcontacttool.cpp:26
+#, kde-format
+msgid "Create Contact"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:69
+#: updatecontacttool/updatecontacttool.cpp:90
+#, kde-format
+msgid "Argument phone_numbers must be an array of strings"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:85
+#: updatecontacttool/updatecontacttool.cpp:115
+#, kde-format
+msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+msgstr ""
+
+#: createcontacttool/createcontacttool.cpp:100
+#, kde-format
+msgid "Argument address_book_id must be an integer"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:40
+#, kde-format
+msgid "Contact is empty"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:72
+#, kde-format
+msgid "Address book %1 does not exist or does not accept new contacts"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:92
+#, kde-format
+msgid "Contact creation failed: %1"
+msgstr ""
+
+#: createcontacttool/createcontacttooljob.cpp:96
+#, kde-format
+msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:29
+#, kde-format
+msgid "Create Event"
+msgstr "Създаване на събитие"
+
+#: createeventtool/createeventtool.cpp:57
+#: createjournaltool/createjournaltool.cpp:50
+#: createtodotool/createtodotool.cpp:53
+#: updateincidencetool/updateincidencetool.cpp:80
+#, kde-format
+msgid "Argument summary must be a non-empty string"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:75
+#: updateincidencetool/updateincidencetool.cpp:112
+#, kde-format
+msgid "Arguments start and end must both be dates or both be date-times"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:81
+#: updateincidencetool/updateincidencetooljob.cpp:173
+#, kde-format
+msgid "Argument end must not be before start"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:102
+#: createjournaltool/createjournaltool.cpp:76
+#: createtodotool/createtodotool.cpp:91
+#, kde-format
+msgid "Argument calendar_id must be a positive integer"
+msgstr ""
+
+#: createeventtool/createeventtool.cpp:106
+#: createjournaltool/createjournaltool.cpp:80
+#: createtodotool/createtodotool.cpp:95
+#, kde-format
+msgid "Argument calendar_id must be an integer"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:28
+#, kde-format
+msgid "Create Identity"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:55
+#, kde-format
+msgid "Argument email must be a non-empty string"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:65
+#, kde-format
+msgid "Argument email_aliases must be an array of strings"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:70
+#, kde-format
+msgid "Invalid email alias \"%1\""
+msgstr "Невалиден псевдоним на имейл „%1“"
+
+#: createidentitytool/createidentitytool.cpp:79
+#, kde-format
+msgid "No mail transport found with id %1"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:84
+#, kde-format
+msgid "Argument transport_id must be an integer"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:93
+#: createtransporttool/createtransporttool.cpp:136
+#, kde-format
+msgid "Argument set_as_default must be a boolean"
+msgstr ""
+
+#: createidentitytool/createidentitytool.cpp:136
+#, kde-format
+msgid "Identity \"%1\" created (uoid %2)"
+msgstr ""
+
+#: createjournaltool/createjournaltool.cpp:27
+#, kde-format
+msgid "Create Journal Entry"
+msgstr ""
+
+#: createjournaltool/createjournaltool.cpp:58
+#, kde-format
+msgid "Argument date must be an ISO 8601 date or date-time"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:24
+#, kde-format
+msgid "Create Mail"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:46
+#, kde-format
+msgid "Argument subject must be a non-empty string"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:52
+#, kde-format
+msgid "Argument to must be an array of strings"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:57
+#, kde-format
+msgid "Argument cc must be an array of strings"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:62
+#, kde-format
+msgid "Argument bcc must be an array of strings"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:68
+#, kde-format
+msgid "Argument body must be a string"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:77
+#, kde-format
+msgid "Argument identity must be a positive integer"
+msgstr ""
+
+#: createmailtool/createmailtool.cpp:82
+#, kde-format
+msgid "Argument identity must be an integer"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:66
+#, kde-format
+msgid "Subject must be a non-empty string"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:79 editmailtool/editmailtooljob.cpp:81
+#, kde-format
+msgid "Drafts folder fetch failed: %1"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:84
+#, kde-format
+msgid "No Drafts folder found"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:139
+#, kde-format
+msgid "Mail creation failed: %1"
+msgstr ""
+
+#: createmailtool/createmailtooljob.cpp:143
+#, kde-format
+msgid ""
+"Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
+"KMail with mail_edit"
+msgstr ""
+
+#: createtodotool/createtodotool.cpp:30
+#, kde-format
+msgid "Create To-do"
+msgstr "Създаване на задача"
+
+#: createtodotool/createtodotool.cpp:63
+#: updateincidencetool/updateincidencetool.cpp:129
+#, kde-format
+msgid "Argument due must be an ISO 8601 date or date-time"
+msgstr ""
+
+#: createtodotool/createtodotool.cpp:73
+#: updateincidencetool/updateincidencetool.cpp:143
+#, kde-format
+msgid "Argument priority must be an integer between %1 and %2"
+msgstr ""
+
+#: createtodotool/createtodotool.cpp:78
+#, kde-format
+msgid "Argument priority must be an integer"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:59
+#, kde-format
+msgid "Create Mail Transport"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:84
+#, kde-format
+msgid "Argument host must be a non-empty string"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:95
+#, kde-format
+msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:108
+#, kde-format
+msgid "Argument port must be between 1 and 65535"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:113
+#, kde-format
+msgid "Argument port must be an integer"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:124
+#, kde-format
+msgid "Invalid authentication_type \"%1\", expected one of: %2"
+msgstr ""
+
+#: createtransporttool/createtransporttool.cpp:170
+#, kde-format
+msgid "Transport \"%1\" created (id %2)"
+msgstr ""
+
+#: deletecontacttool/deletecontacttool.cpp:25
+#, kde-format
+msgid "Delete Contact"
+msgstr "Изтриване на контакт"
+
+#: deletecontacttool/deletecontacttool.cpp:42
+#: deleteincidencetool/deleteincidencetool.cpp:43
+#: editmailtool/editmailtool.cpp:41 forwardmailtool/forwardmailtool.cpp:49
+#: markmailtool/markmailtool.cpp:59 movemailtool/movemailtool.cpp:49
+#: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
+#: updatecontacttool/updatecontacttool.cpp:56
+#: updateincidencetool/updateincidencetool.cpp:65
+#, kde-format
+msgid "Argument id must be an integer"
+msgstr ""
+
+#: deletecontacttool/deletecontacttool.cpp:47
+#: deleteincidencetool/deleteincidencetool.cpp:48
+#: editmailtool/editmailtool.cpp:46 forwardmailtool/forwardmailtool.cpp:54
+#: markmailtool/markmailtool.cpp:64 movemailtool/movemailtool.cpp:54
+#: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
+#: updatecontacttool/updatecontacttool.cpp:61
+#: updateincidencetool/updateincidencetool.cpp:70
+#, kde-format
+msgid "Argument id must be a positive integer"
+msgstr ""
+
+#: deletecontacttool/deletecontacttooljob.cpp:33
+#: updatecontacttool/updatecontacttooljob.cpp:44
+#, kde-format
+msgid "Contact id must be a positive integer"
+msgstr ""
+
+#: deletecontacttool/deletecontacttooljob.cpp:69
+#, kde-format
+msgid "Contact deletion failed: %1"
+msgstr "Изтриването на контакта е неуспешно: %1"
+
+#: deletecontacttool/deletecontacttooljob.cpp:72
+#, kde-format
+msgid "Contact \"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetool.cpp:25
+#, kde-format
+msgid "Delete Incidence"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:34
+#: updateincidencetool/updateincidencetooljob.cpp:51
+#, kde-format
+msgid "Incidence id must be a positive integer"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:48
+#: updateincidencetool/updateincidencetooljob.cpp:66
+#, kde-format
+msgid "Incidence fetch failed: %1"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:53
+#: updateincidencetool/updateincidencetooljob.cpp:71
+#, kde-format
+msgid "Incidence %1 not found"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:59
+#: updateincidencetool/updateincidencetooljob.cpp:77
+#, kde-format
+msgid "Item %1 is not an event, a to-do or a journal entry"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:72
+#, kde-format
+msgid "Incidence deletion failed: %1"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:79
+#, kde-format
+msgid "Event \"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:82
+#, kde-format
+msgid "To-do \"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:85
+#, kde-format
+msgid "Journal entry \"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: deleteincidencetool/deleteincidencetooljob.cpp:88
+#, kde-format
+msgid "\"%1\" deleted (item id: %2)"
+msgstr ""
+
+#: editmailtool/editmailtool.cpp:24
+#, kde-format
+msgid "Edit Mail"
+msgstr "Редактиране на имейл"
+
+#: editmailtool/editmailtooljob.cpp:39
+#: forwardmailtool/forwardmailtooljob.cpp:37
+#: markmailtool/markmailtooljob.cpp:43 movemailtool/movemailtooljob.cpp:69
+#: openmailtool/openmailtooljob.cpp:32
+#, kde-format
+msgid "Mail id must be a positive integer"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
+#: movemailtool/movemailtooljob.cpp:84
+#, kde-format
+msgid "Mail fetch failed: %1"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:58 markmailtool/markmailtooljob.cpp:61
+#: movemailtool/movemailtooljob.cpp:89
+#, kde-format
+msgid "Mail %1 not found"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:86
+#, kde-format
+msgid ""
+"Mail %1 is not stored in a Drafts folder, it can't be edited. Use mail_open "
+"or mail_reply instead"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:101
+#, kde-format
+msgid "Unable to edit mail %1: %2"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:108
+#, kde-format
+msgid "Unable to edit mail %1: KMail main window is not available"
+msgstr ""
+
+#: editmailtool/editmailtooljob.cpp:111
+#, kde-format
+msgid "Draft mail %1 opened in a KMail composer"
+msgstr ""
+
+#: forwardmailtool/forwardmailtool.cpp:30
+#, kde-format
+msgid "Forward Mail"
+msgstr ""
+
+#: forwardmailtool/forwardmailtool.cpp:64
+#, kde-format
+msgid "Argument mode must be one of: inline, attachment"
+msgstr ""
+
+#: forwardmailtool/forwardmailtooljob.cpp:49
+#, kde-format
+msgid "Unable to forward mail %1: %2"
+msgstr ""
+
+#: forwardmailtool/forwardmailtooljob.cpp:56
+#, kde-format
+msgid "Unable to forward mail %1: KMail main window is not available"
+msgstr ""
+
+#: forwardmailtool/forwardmailtooljob.cpp:59
+#, kde-format
+msgid "Forward composer opened in KMail for mail %1"
+msgstr ""
+
+#: freebusytool/freebusytool.cpp:27
+#, kde-format
+msgid "Free/Busy"
+msgstr "Свободно/заето"
+
+#: freebusytool/freebusytooljob.cpp:72
+#, kde-format
+msgid "Free for the whole period from %1 to %2"
+msgstr ""
+
+#: kcm/kcm_akonadimcpserver.cpp:26
+#, kde-format
+msgid "Enabled"
+msgstr "Активирано"
+
+#: kcm/kcm_akonadimcpserver.cpp:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Ask confirmation before running tools which modify data"
+msgstr ""
+
+#: listaddressbooks/listaddressbookstool.cpp:21
+#, kde-format
+msgid "List Address Books"
+msgstr ""
+
+#: listaddressbooks/listaddressbookstooljob.cpp:54
+#, kde-format
+msgid "No address book found"
+msgstr ""
+
+#: listcalendars/listcalendarstool.cpp:21
+#, kde-format
+msgid "List Calendars"
+msgstr ""
+
+#: listcalendars/listcalendarstooljob.cpp:83
+#, kde-format
+msgid "No calendar found"
+msgstr ""
+
+#: listidentities/listidentitiestool.cpp:22
+#, kde-format
+msgid "List Identities"
+msgstr ""
+
+#: listidentities/listidentitiestool.cpp:42
+#, kde-format
+msgid "No Identity found"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:27
+#, kde-format
+msgid "Search Mail"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:67
+#, kde-format
+msgid "Unknown mail field: %1"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:71
+#, kde-format
+msgid "Argument field must be a string"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:79
+#, kde-format
+msgid "Argument limit must be an integer between 1 and %1"
+msgstr ""
+
+#: mailsearch/searchmailtool.cpp:84
+#, kde-format
+msgid "Argument limit must be an integer"
+msgstr ""
+
+#: mailsearch/searchmailtooljob.cpp:97
+#, kde-format
+msgid "Mail search failed: %1"
+msgstr ""
+
+#: mailsearch/searchmailtooljob.cpp:113
+#, kde-format
+msgid "(No subject)"
+msgstr "(Няма тема)"
+
+#: mailsearch/searchmailtooljob.cpp:136
+#, kde-format
+msgid "No mail found for \"%1\""
+msgstr ""
+
+#: main.cpp:26 main.cpp:28
+#, kde-format
+msgid "Akonadi MCP Server"
+msgstr "MCP сървър на Akonadi"
+
+#: main.cpp:30
+#, kde-format
+msgid "Copyright © 2026 Laurent Montel"
+msgstr ""
+
+#: main.cpp:31
+#, kde-format
+msgctxt "@info:credit"
+msgid "Laurent Montel"
+msgstr "Laurent Montel"
+
+#: main.cpp:31
+#, kde-format
+msgid "Maintainer"
+msgstr "Поддръжка"
+
+#: main.cpp:38
+#, kde-format
+msgctxt "@info:shell"
+msgid "Url where server listens."
+msgstr ""
+
+#: markmailtool/markmailtool.cpp:39
+#, kde-format
+msgid "Mark Mail"
+msgstr ""
+
+#: markmailtool/markmailtool.cpp:70
+#, kde-format
+msgid "Argument read must be a boolean"
+msgstr ""
+
+#: markmailtool/markmailtool.cpp:76
+#, kde-format
+msgid "Argument important must be a boolean"
+msgstr ""
+
+#: markmailtool/markmailtool.cpp:80
+#, kde-format
+msgid "At least one of read or important must be given"
+msgstr ""
+
+#: markmailtool/markmailtooljob.cpp:75
+#, kde-format
+msgid "Mail modification failed: %1"
+msgstr ""
+
+#: markmailtool/markmailtooljob.cpp:78
+#, kde-format
+msgid "Mail %1 modified"
+msgstr ""
+
+#: movemailtool/movemailtool.cpp:25
+#, kde-format
+msgid "Move Mail"
+msgstr ""
+
+#: movemailtool/movemailtool.cpp:60
+#, kde-format
+msgid "Argument folder must be a string"
+msgstr ""
+
+#: movemailtool/movemailtool.cpp:64
+#, kde-format
+msgid "Argument folder must not be empty"
+msgstr ""
+
+#: movemailtool/movemailtool.cpp:73
+#, kde-format
+msgid "Argument folder_id must be a positive integer"
+msgstr ""
+
+#: movemailtool/movemailtool.cpp:80 movemailtool/movemailtooljob.cpp:71
+#, kde-format
+msgid "Exactly one of folder or folder_id must be given"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:94
+#, kde-format
+msgid "Item %1 is not a mail"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:107
+#, kde-format
+msgid "Mail folder fetch failed: %1"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:124
+#, kde-format
+msgid "Mail folder %1 not found"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:147
+#, kde-format
+msgid "Mail folder \"%1\" not found"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:156
+#, kde-format
+msgid ""
+"Several mail folders match \"%1\", use the full path or folder_id:\n"
+"%2"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:165
+#, kde-format
+msgid "Mail %1 is already in folder \"%2\""
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:169
+#, kde-format
+msgid "Mail folder \"%1\" is read-only"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:180
+#, kde-format
+msgid "Mail move failed: %1"
+msgstr ""
+
+#: movemailtool/movemailtooljob.cpp:183
+#, kde-format
+msgid "Mail %1 moved to folder \"%2\""
+msgstr ""
+
+#: openmailtool/openmailtool.cpp:24
+#, kde-format
+msgid "Open Mail"
+msgstr ""
+
+#: openmailtool/openmailtooljob.cpp:44
+#, kde-format
+msgid "Unable to open mail %1: %2"
+msgstr ""
+
+#: openmailtool/openmailtooljob.cpp:51
+#, kde-format
+msgid "Mail %1 not found or KMail main window is not available"
+msgstr ""
+
+#: openmailtool/openmailtooljob.cpp:54
+#, kde-format
+msgid ""
+"Mail %1 displayed in a read-only KMail viewer, it can't be modified there"
+msgstr ""
+
+#: replymailtool/replymailtool.cpp:44
+#, kde-format
+msgid "Reply to Mail"
+msgstr ""
+
+#: replymailtool/replymailtool.cpp:81
+#, kde-format
+msgid "Argument strategy must be one of: smart, author, list, all"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:38
+#, kde-format
+msgid ""
+"Mail id must be a positive integer and reply strategy must be smart, author, "
+"list or all"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:50
+#, kde-format
+msgid "Unable to reply to mail %1: %2"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:57
+#, kde-format
+msgid "Unable to reply to mail %1: KMail main window is not available"
+msgstr ""
+
+#: replymailtool/replymailtooljob.cpp:60
+#, kde-format
+msgid "Reply composer opened in KMail for mail %1"
+msgstr ""
+
+#: todolisttool/todolisttool.cpp:27
+#, kde-format
+msgid "To-do List"
+msgstr "Списък със задачи"
+
+#: todolisttool/todolisttool.cpp:48
+#, kde-format
+msgid "Argument include_completed must be a boolean"
+msgstr ""
+
+#: todolisttool/todolisttool.cpp:56
+#, kde-format
+msgid "Argument due_within_days must be an integer between 1 and %1"
+msgstr ""
+
+#: todolisttool/todolisttool.cpp:61
+#, kde-format
+msgid "Argument due_within_days must be an integer"
+msgstr ""
+
+#: todolisttool/todolisttooljob.cpp:96
+#, kde-format
+msgid "No to-do found"
+msgstr ""
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:28
+#, kde-format
+msgid "Upcoming Birthdays"
+msgstr ""
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:45
+#, kde-format
+msgid "Argument days must be an integer between 1 and %1"
+msgstr ""
+
+#: upcomingbirthdaystool/upcomingbirthdaystool.cpp:50
+#, kde-format
+msgid "Argument days must be an integer"
+msgstr ""
+
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
+#, kde-format
+msgid "Number of days must be a positive integer"
+msgstr ""
+
+#: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
+#, kde-format
+msgid "No birthday in the next day"
+msgid_plural "No birthday in the next %1 days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: updatecontacttool/updatecontacttool.cpp:26
+#, kde-format
+msgid "Update Contact"
+msgstr ""
+
+#: updatecontacttool/updatecontacttool.cpp:97
+#, kde-format
+msgid "Argument organization must be a string"
+msgstr ""
+
+#: updatecontacttool/updatecontacttool.cpp:102
+#, kde-format
+msgid "Argument note must be a string"
+msgstr ""
+
+#: updatecontacttool/updatecontacttool.cpp:108
+#, kde-format
+msgid "Argument birthday must be a string"
+msgstr ""
+
+#: updatecontacttool/updatecontacttool.cpp:122
+#: updatecontacttool/updatecontacttooljob.cpp:46
+#: updateincidencetool/updateincidencetool.cpp:160
+#: updateincidencetool/updateincidencetooljob.cpp:53
+#, kde-format
+msgid "No field to update"
+msgstr ""
+
+#: updatecontacttool/updatecontacttooljob.cpp:84
+#, kde-format
+msgid "Contact modification failed: %1"
+msgstr ""
+
+#: updatecontacttool/updatecontacttooljob.cpp:87
+#, kde-format
+msgid "Contact \"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetool.cpp:31
+#, kde-format
+msgid "Update Incidence"
+msgstr ""
+
+#: updateincidencetool/updateincidencetool.cpp:87
+#, kde-format
+msgid "Argument description must be a string"
+msgstr ""
+
+#: updateincidencetool/updateincidencetool.cpp:92
+#, kde-format
+msgid "Argument location must be a string"
+msgstr ""
+
+#: updateincidencetool/updateincidencetool.cpp:119
+#, kde-format
+msgid "Argument due must be a string"
+msgstr ""
+
+#: updateincidencetool/updateincidencetool.cpp:133
+#, kde-format
+msgid "Arguments start and due must both be dates or both be date-times"
+msgstr ""
+
+#: updateincidencetool/updateincidencetool.cpp:153
+#, kde-format
+msgid "Argument completed must be a boolean"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:95
+#, kde-format
+msgid "Incidence modification failed: %1"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:102
+#, kde-format
+msgid "Event \"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:105
+#, kde-format
+msgid "To-do \"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:108
+#, kde-format
+msgid "Journal entry \"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:111
+#, kde-format
+msgid "\"%1\" updated (item id: %2)"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:120
+#, kde-format
+msgid "Argument end is only valid for events"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:123
+#, kde-format
+msgid "Arguments due, priority and completed are only valid for to-dos"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, kde-format
+msgid "Argument end must be a date for an all-day event"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:159
+#, kde-format
+msgid "Argument end must be a date-time for a timed event"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:201
+#, kde-format
+msgid "Start and due dates of a to-do must both be dates or both be date-times"
+msgstr ""
+
+#: updateincidencetool/updateincidencetooljob.cpp:204
+#, kde-format
+msgid "Due date must not be before start"
+msgstr ""
