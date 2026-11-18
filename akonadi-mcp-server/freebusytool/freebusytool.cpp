@@ -59,7 +59,7 @@ void FreeBusyTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServer
         return;
     }
     if (start->daysTo(*end) > maximumDays) {
-        call->finishWithText(i18n("Period must not exceed %1 days", maximumDays), true);
+        call->finishWithText(i18np("Period must not exceed %1 day", "Period must not exceed %1 days", maximumDays), true);
         return;
     }
 
