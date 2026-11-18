@@ -53,7 +53,7 @@ void ContactSearchToolJob::slotResult(KJob *job)
     }
     const Akonadi::Item::List lstItems = qobject_cast<Akonadi::ContactSearchJob *>(job)->items();
     if (lstItems.isEmpty()) {
-        finish(i18n("No contact found for \"%1\"", mSearchString));
+        finish(i18n("No contact found for “%1”", mSearchString));
         return;
     }
     QStringList entries;
@@ -98,7 +98,7 @@ void ContactSearchToolJob::slotResult(KJob *job)
     }
 
     if (entries.isEmpty()) {
-        finish(i18n("No contact found for \"%1\"", mSearchString));
+        finish(i18n("No contact found for “%1”", mSearchString));
         return;
     }
 

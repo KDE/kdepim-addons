@@ -133,7 +133,7 @@ void SearchMailToolJob::slotResult(KJob *job)
         entries.append(std::move(entry));
     }
     if (entries.isEmpty()) {
-        finish(i18n("No mail found for \"%1\"", mSearchString));
+        finish(i18n("No mail found for “%1”", mSearchString));
         return;
     }
     std::sort(entries.begin(), entries.end(), [](const MailEntry &left, const MailEntry &right) {

@@ -93,7 +93,7 @@ void CreateContactToolJob::slotItemCreateResult(KJob *job)
         return;
     }
     const Akonadi::Item item = qobject_cast<Akonadi::ItemCreateJob *>(job)->item();
-    finish(i18n("Contact \"%1\" created in address book \"%2\" (item id: %3)",
+    finish(i18n("Contact “%1” created in address book “%2” (item id: %3)",
                 mContact.formattedName(),
                 job->property("addressBookName").toString(),
                 QString::number(item.id())));

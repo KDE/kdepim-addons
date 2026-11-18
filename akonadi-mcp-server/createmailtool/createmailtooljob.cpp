@@ -145,14 +145,14 @@ void CreateMailToolJob::slotItemCreateResult(KJob *job)
     const Akonadi::Item item = qobject_cast<Akonadi::ItemCreateJob *>(job)->item();
     if (job->property("fallbackToDefault").toBool()) {
         finish(
-            i18n("Identity %1 not found, the default identity was used. Mail \"%2\" created in folder \"%3\" (item id: %4). It can be edited in KMail with "
+            i18n("Identity %1 not found, the default identity was used. Mail “%2” created in folder “%3” (item id: %4). It can be edited in KMail with "
                  "mail_edit",
                  QString::number(mUoid),
                  mSubject,
                  job->property("folderName").toString(),
                  QString::number(item.id())));
     } else {
-        finish(i18n("Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in KMail with mail_edit",
+        finish(i18n("Mail “%1” created in folder “%2” (item id: %3). It can be edited in KMail with mail_edit",
                     mSubject,
                     job->property("folderName").toString(),
                     QString::number(item.id())));

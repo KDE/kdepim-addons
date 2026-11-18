@@ -99,16 +99,16 @@ void UpdateIncidenceToolJob::slotItemModifyResult(KJob *job)
     const QString itemId = QString::number(mItemId);
     switch (job->property("incidenceType").toInt()) {
     case KCalendarCore::IncidenceBase::TypeEvent:
-        finish(i18n("Event \"%1\" updated (item id: %2)", summary, itemId));
+        finish(i18n("Event “%1” updated (item id: %2)", summary, itemId));
         break;
     case KCalendarCore::IncidenceBase::TypeTodo:
-        finish(i18n("To-do \"%1\" updated (item id: %2)", summary, itemId));
+        finish(i18n("To-do “%1” updated (item id: %2)", summary, itemId));
         break;
     case KCalendarCore::IncidenceBase::TypeJournal:
-        finish(i18n("Journal entry \"%1\" updated (item id: %2)", summary, itemId));
+        finish(i18n("Journal entry “%1” updated (item id: %2)", summary, itemId));
         break;
     default:
-        finish(i18n("\"%1\" updated (item id: %2)", summary, itemId));
+        finish(i18n("“%1” updated (item id: %2)", summary, itemId));
         break;
     }
 }

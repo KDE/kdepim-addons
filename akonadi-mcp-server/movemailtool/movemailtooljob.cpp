@@ -144,7 +144,7 @@ void MoveMailToolJob::slotCollectionFetchResult(KJob *job)
     }
     const auto &matches = pathMatches.isEmpty() ? nameMatches : pathMatches;
     if (matches.isEmpty()) {
-        finish(i18n("Mail folder \"%1\" not found", mFolder), true);
+        finish(i18n("Mail folder “%1” not found", mFolder), true);
         return;
     }
     if (matches.count() > 1) {
@@ -153,7 +153,7 @@ void MoveMailToolJob::slotCollectionFetchResult(KJob *job)
         for (const auto &[collection, path] : matches) {
             candidates.append(u"%1 (folder_id: %2)"_s.arg(path, QString::number(collection.id())));
         }
-        finish(i18n("Several mail folders match \"%1\", use the full path or folder_id:\n%2", mFolder, candidates.join(u'\n')), true);
+        finish(i18n("Several mail folders match “%1”, use the full path or folder_id:\n%2", mFolder, candidates.join(u'\n')), true);
         return;
     }
     moveItem(matches.constFirst().first, matches.constFirst().second);
@@ -162,11 +162,11 @@ void MoveMailToolJob::slotCollectionFetchResult(KJob *job)
 void MoveMailToolJob::moveItem(const Akonadi::Collection &destination, const QString &destinationName)
 {
     if (mItem.parentCollection().id() == destination.id()) {
-        finish(i18n("Mail %1 is already in folder \"%2\"", mItemId, destinationName));
+        finish(i18n("Mail %1 is already in folder “%2”", mItemId, destinationName));
         return;
     }
     if (!(destination.rights() & Akonadi::Collection::CanCreateItem)) {
-        finish(i18n("Mail folder \"%1\" is read-only", destinationName), true);
+        finish(i18n("Mail folder “%1” is read-only", destinationName), true);
         return;
     }
     auto moveJob = new Akonadi::ItemMoveJob(mItem, destination, this);
@@ -180,7 +180,7 @@ void MoveMailToolJob::slotItemMoveResult(KJob *job)
     if (!checkJobResult(job, ki18n("Mail move failed: %1"))) {
         return;
     }
-    finish(i18n("Mail %1 moved to folder \"%2\"", mItemId, job->property("destinationName").toString()));
+    finish(i18n("Mail %1 moved to folder “%2”", mItemId, job->property("destinationName").toString()));
 }
 
 #include "moc_movemailtooljob.cpp"

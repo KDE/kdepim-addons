@@ -57,7 +57,7 @@ void CreateContactGroupToolJob::startJob()
         QString email;
         KContacts::Addressee::parseEmailAddress(rawEmail, fullName, email);
         if (email.isEmpty()) {
-            finish(i18n("Invalid email address \"%1\"", rawEmail), true);
+            finish(i18n("Invalid email address “%1”", rawEmail), true);
             return;
         }
         mContactGroup.append(KContacts::ContactGroup::Data(fullName, email));
@@ -156,8 +156,8 @@ void CreateContactGroupToolJob::slotItemCreateResult(KJob *job)
         return;
     }
     const Akonadi::Item item = qobject_cast<Akonadi::ItemCreateJob *>(job)->item();
-    finish(i18np("Contact group \"%2\" with %1 member created in address book \"%3\" (item id: %4)",
-                 "Contact group \"%2\" with %1 members created in address book \"%3\" (item id: %4)",
+    finish(i18np("Contact group “%2” with %1 member created in address book “%3” (item id: %4)",
+                 "Contact group “%2” with %1 members created in address book “%3” (item id: %4)",
                  mContactGroup.count(),
                  mName,
                  job->property("addressBookName").toString(),

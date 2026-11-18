@@ -100,7 +100,7 @@ void ToolBase::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCa
 
     auto notification = new KNotification(u"Mcp-Tool-Confirmation"_s, KNotification::Persistent);
     notification->setTitle(i18n("MCP tool asks confirmation"));
-    notification->setText(i18n("Run \"%1\"?\n%2", tool.title().value_or(call->name()), argumentsSummary(call)));
+    notification->setText(i18n("Run “%1”?\n%2", tool.title().value_or(call->name()), argumentsSummary(call)));
 
     // Accept, reject, dismiss, timeout and client cancellation can all fire: only first answer counts
     // (KNotification deletes itself when closed, so it's only accessed through QPointer)
