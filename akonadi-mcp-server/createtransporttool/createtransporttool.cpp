@@ -92,7 +92,7 @@ void CreateTransportTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtoco
     } else if (encryptionStr == encryptionTls) {
         encryption = MailTransport::Transport::EnumEncryption::TLS;
     } else if (!encryptionStr.isEmpty() && encryptionStr != encryptionSsl) {
-        call->finishWithText(i18n("Invalid encryption \"%1\", expected none, ssl or starttls", encryptionStr), true);
+        call->finishWithText(i18n("Invalid encryption “%1”, expected none, ssl or starttls", encryptionStr), true);
         return;
     }
 
@@ -121,7 +121,7 @@ void CreateTransportTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtoco
             return info.name == authenticationStr;
         });
         if (it == types.cend()) {
-            call->finishWithText(i18n("Invalid authentication_type \"%1\", expected one of: %2", authenticationStr, authenticationTypeNames().join(u", "_s)),
+            call->finishWithText(i18n("Invalid authentication_type “%1”, expected one of: %2", authenticationStr, authenticationTypeNames().join(u", "_s)),
                                  true);
             return;
         }
@@ -167,5 +167,5 @@ void CreateTransportTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtoco
         manager->setDefaultTransport(transport->id());
     }
 
-    call->finishWithText(i18n("Transport \"%1\" created (id %2)", transport->name(), transport->id()));
+    call->finishWithText(i18n("Transport “%1” created (id %2)", transport->name(), transport->id()));
 }

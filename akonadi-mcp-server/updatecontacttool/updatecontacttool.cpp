@@ -112,7 +112,7 @@ void UpdateContactTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolS
         // An empty string clears the birthday
         const QDate birthday = QDate::fromString(*birthdayStr, Qt::ISODate);
         if (!birthdayStr->isEmpty() && !birthday.isValid()) {
-            call->finishWithText(i18n("Invalid birthday \"%1\", expected format is YYYY-MM-DD", *birthdayStr), true);
+            call->finishWithText(i18n("Invalid birthday “%1”, expected format is YYYY-MM-DD", *birthdayStr), true);
             return;
         }
         changes.birthday = birthday;

@@ -49,7 +49,7 @@ void ContactGroupExpandToolJob::slotResult(KJob *job)
     }
     mContactGroups = qobject_cast<Akonadi::ContactGroupSearchJob *>(job)->contactGroups();
     if (mContactGroups.isEmpty()) {
-        finish(i18n("No contact group found for \"%1\"", mSearchString));
+        finish(i18n("No contact group found for “%1”", mSearchString));
         return;
     }
     mEntries.reserve(mContactGroups.count());

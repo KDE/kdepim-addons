@@ -69,7 +69,7 @@ void DeleteContactToolJob::slotItemDeleteResult(KJob *job)
     if (!checkJobResult(job, ki18n("Contact deletion failed: %1"))) {
         return;
     }
-    finish(i18n("Contact \"%1\" deleted (item id: %2)", job->property("contactName").toString(), QString::number(mItemId)));
+    finish(i18n("Contact “%1” deleted (item id: %2)", job->property("contactName").toString(), QString::number(mItemId)));
 }
 
 #include "moc_deletecontacttooljob.cpp"

@@ -56,7 +56,7 @@ void CreateIdentityTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocol
         return;
     }
     if (!KEmailAddress::isValidSimpleAddress(email)) {
-        call->finishWithText(i18n("Invalid email address \"%1\"", email), true);
+        call->finishWithText(i18n("Invalid email address “%1”", email), true);
         return;
     }
 
@@ -67,7 +67,7 @@ void CreateIdentityTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocol
     }
     for (const QString &alias : std::as_const(aliases)) {
         if (!KEmailAddress::isValidSimpleAddress(alias)) {
-            call->finishWithText(i18n("Invalid email alias \"%1\"", alias), true);
+            call->finishWithText(i18n("Invalid email alias “%1”", alias), true);
             return;
         }
     }
@@ -133,5 +133,5 @@ void CreateIdentityTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocol
     }
     manager->commit();
 
-    call->finishWithText(i18n("Identity \"%1\" created (uoid %2)", finalName, uoid));
+    call->finishWithText(i18n("Identity “%1” created (uoid %2)", finalName, uoid));
 }

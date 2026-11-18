@@ -95,16 +95,16 @@ void CreateIncidenceToolJob::slotItemCreateResult(KJob *job)
     const QString itemId = QString::number(item.id());
     switch (mIncidence->type()) {
     case KCalendarCore::IncidenceBase::TypeEvent:
-        finish(i18n("Event \"%1\" created in calendar \"%2\" (item id: %3)", mIncidence->summary(), calendarName, itemId));
+        finish(i18n("Event “%1” created in calendar “%2” (item id: %3)", mIncidence->summary(), calendarName, itemId));
         break;
     case KCalendarCore::IncidenceBase::TypeTodo:
-        finish(i18n("To-do \"%1\" created in calendar \"%2\" (item id: %3)", mIncidence->summary(), calendarName, itemId));
+        finish(i18n("To-do “%1” created in calendar “%2” (item id: %3)", mIncidence->summary(), calendarName, itemId));
         break;
     case KCalendarCore::IncidenceBase::TypeJournal:
-        finish(i18n("Journal entry \"%1\" created in calendar \"%2\" (item id: %3)", mIncidence->summary(), calendarName, itemId));
+        finish(i18n("Journal entry “%1” created in calendar “%2” (item id: %3)", mIncidence->summary(), calendarName, itemId));
         break;
     default:
-        finish(i18n("\"%1\" created in calendar \"%2\" (item id: %3)", mIncidence->summary(), calendarName, itemId));
+        finish(i18n("“%1” created in calendar “%2” (item id: %3)", mIncidence->summary(), calendarName, itemId));
         break;
     }
 }

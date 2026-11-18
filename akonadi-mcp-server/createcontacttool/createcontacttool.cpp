@@ -82,7 +82,7 @@ void CreateContactTool::doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolS
     if (const QString birthdayStr = arguments.value(u"birthday"_s).toString().trimmed(); !birthdayStr.isEmpty()) {
         const QDate birthday = QDate::fromString(birthdayStr, Qt::ISODate);
         if (!birthday.isValid()) {
-            call->finishWithText(i18n("Invalid birthday \"%1\", expected format is YYYY-MM-DD", birthdayStr), true);
+            call->finishWithText(i18n("Invalid birthday “%1”, expected format is YYYY-MM-DD", birthdayStr), true);
             return;
         }
         contact.setBirthday(birthday);

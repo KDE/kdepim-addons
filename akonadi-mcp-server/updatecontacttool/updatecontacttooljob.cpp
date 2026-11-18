@@ -84,7 +84,7 @@ void UpdateContactToolJob::slotItemModifyResult(KJob *job)
     if (!checkJobResult(job, ki18n("Contact modification failed: %1"))) {
         return;
     }
-    finish(i18n("Contact \"%1\" updated (item id: %2)", job->property("contactName").toString(), QString::number(mItemId)));
+    finish(i18n("Contact “%1” updated (item id: %2)", job->property("contactName").toString(), QString::number(mItemId)));
 }
 
 void UpdateContactToolJob::applyChanges(KContacts::Addressee &contact) const
