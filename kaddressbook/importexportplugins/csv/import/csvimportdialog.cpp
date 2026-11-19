@@ -63,10 +63,7 @@ public:
         addItem(KAddressBookImportExport::ContactFields::label(KAddressBookImportExport::ContactFields::Undefined),
                 KAddressBookImportExport::ContactFields::Undefined);
 
-        QMapIterator<QString, KAddressBookImportExport::ContactFields::Field> it(mFieldMap);
-        while (it.hasNext()) {
-            it.next();
-
+        for (auto it = mFieldMap.cbegin(), end = mFieldMap.cend(); it != end; ++it) {
             addItem(it.key(), QVariant(it.value()));
         }
 

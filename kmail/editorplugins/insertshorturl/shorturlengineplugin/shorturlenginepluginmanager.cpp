@@ -42,11 +42,9 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 {
     const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(u"pim6/pimcommon/shorturlengine"_s);
 
-    QListIterator<KPluginMetaData> i(plugins);
-    i.toBack();
-    while (i.hasPrevious()) {
+    for (auto it = plugins.crbegin(), end = plugins.crend(); it != end; ++it) {
         ShortUrlEnginePluginInfo info;
-        const KPluginMetaData data = i.previous();
+        const KPluginMetaData data = *it;
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.pluginName = data.name();
         info.data = data;
