@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-11 01:02+0000\n"
-"PO-Revision-Date: 2026-11-08 07:11+0100\n"
+"PO-Revision-Date: 2026-11-10 18:18+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -545,16 +545,14 @@ msgid "Mail creation failed: %1"
 msgstr "Creazione del messaggio non riuscita: %1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Identity %1 not found, the default identity was used. Mail \"%2\" created in "
 "folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
 msgstr ""
-"Messaggio «%1» creato nella cartella «%2» (ID elemento: %3). Può essere "
-"modificato in KMail tramite mail_edit"
+"Identità %1 non trovata; è stata utilizzata l'identità predefinita. "
+"Messaggio «%2» creato nella cartella «%3» (ID elemento: %4). È possibile "
+"modificarlo in KMail tramite mail_edit."
 
 #: createmailtool/createmailtooljob.cpp:155
 #, kde-format
