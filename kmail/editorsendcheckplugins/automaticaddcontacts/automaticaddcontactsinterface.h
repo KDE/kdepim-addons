@@ -8,6 +8,7 @@
 
 #include <Akonadi/Collection>
 #include <MessageComposer/PluginEditorCheckBeforeSendInterface>
+#include <QHash>
 
 class AutomaticAddContactsInterface : public MessageComposer::PluginEditorCheckBeforeSendInterface
 {
