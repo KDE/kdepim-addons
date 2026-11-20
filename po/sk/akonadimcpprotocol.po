@@ -21,12 +21,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Michal Gašpar,Jozef Říha"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "miguel@portugal.sk,jose1711@gmail.com"
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format
@@ -134,12 +134,12 @@ msgstr "Nie je možné spustiť KMail: %1"
 #: common/toolbase.cpp:82
 #, kde-format
 msgid "Another confirmation is pending"
-msgstr ""
+msgstr "Čaká sa na ďalšie potvrdenie"
 
 #: common/toolbase.cpp:88
 #, kde-format
 msgid "MCP tool asks confirmation"
-msgstr ""
+msgstr "Nástroj MCP žiada potvrdenie"
 
 #: common/toolbase.cpp:89
 #, kde-format
@@ -147,21 +147,23 @@ msgid ""
 "Run \"%1\"?\n"
 "%2"
 msgstr ""
+"Spustiť „%1“?\n"
+"%2"
 
 #: common/toolbase.cpp:103
 #, kde-format
 msgid "Action refused by user"
-msgstr ""
+msgstr "Akciu odmietol používateľ"
 
 #: common/toolbase.cpp:106
 #, kde-format
 msgid "Accept"
-msgstr ""
+msgstr "Prijať"
 
 #: common/toolbase.cpp:114
 #, kde-format
 msgid "Reject"
-msgstr ""
+msgstr "Odmietnuť"
 
 #: common/tooljobbase.cpp:37
 #, kde-format
@@ -433,53 +435,45 @@ msgid "Argument calendar_id must be an integer"
 msgstr "Argument calendar_id musí byť celé číslo"
 
 #: createidentitytool/createidentitytool.cpp:28
-#, fuzzy, kde-format
-#| msgid "Create Event"
+#, kde-format
 msgid "Create Identity"
-msgstr "Vytvoriť udalosť"
+msgstr "Vytvoriť identitu"
 
 #: createidentitytool/createidentitytool.cpp:55
-#, fuzzy, kde-format
-#| msgid "Argument name must be a non-empty string"
+#, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "Argument name musí byť neprázdny reťazec"
+msgstr "Argument email musí byť neprázdny reťazec"
 
 #: createidentitytool/createidentitytool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument emails must be an array of strings"
+#, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "Argument emails musí byť pole reťazcov"
+msgstr "Argument email_aliases musí byť pole reťazcov"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email alias \"%1\""
-msgstr "Neplatná e-mailová adresa „%1“"
+msgstr "Neplatný e-mailový alias „%1“"
 
 #: createidentitytool/createidentitytool.cpp:79
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail transport found with id %1"
-msgstr "Pre „%1“ sa nenašla žiadna správa"
+msgstr "Nenašiel sa žiadny poštový transport s ID %1"
 
 #: createidentitytool/createidentitytool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer"
+#, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "Argument priority musí byť celé číslo"
+msgstr "Argument transport_id musí byť celé číslo"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Argument read must be a boolean"
+#, kde-format
 msgid "Argument set_as_default must be a boolean"
-msgstr "Argument read musí byť logická hodnota"
+msgstr "Argument set_as_default musí byť logická hodnota"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Identity \"%1\" created (uoid %2)"
-msgstr "Udalosť „%1“ bola aktualizovaná (ID položky: %2)"
+msgstr "Identita „%1“ bola vytvorená (uoid %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
@@ -583,44 +577,39 @@ msgid "Argument priority must be an integer"
 msgstr "Argument priority musí byť celé číslo"
 
 #: createtransporttool/createtransporttool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Create Mail Transport"
-msgstr "Vytvoriť správu"
+msgstr "Vytvoriť poštový transport"
 
 #: createtransporttool/createtransporttool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument subject must be a non-empty string"
+#, kde-format
 msgid "Argument host must be a non-empty string"
-msgstr "Argument subject musí byť neprázdny reťazec"
+msgstr "Argument host musí byť neprázdny reťazec"
 
 #: createtransporttool/createtransporttool.cpp:95
 #, kde-format
 msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
-msgstr ""
+msgstr "Neplatné šifrovanie „%1“, očakáva sa none, ssl alebo starttls"
 
 #: createtransporttool/createtransporttool.cpp:108
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer between %1 and %2"
+#, kde-format
 msgid "Argument port must be between 1 and 65535"
-msgstr "Argument priority musí byť celé číslo medzi %1 a %2"
+msgstr "Argument port musí byť medzi 1 a 65535"
 
 #: createtransporttool/createtransporttool.cpp:113
-#, fuzzy, kde-format
-#| msgid "Argument priority must be an integer"
+#, kde-format
 msgid "Argument port must be an integer"
-msgstr "Argument priority musí byť celé číslo"
+msgstr "Argument port musí byť celé číslo"
 
 #: createtransporttool/createtransporttool.cpp:124
 #, kde-format
 msgid "Invalid authentication_type \"%1\", expected one of: %2"
-msgstr ""
+msgstr "Neplatný authentication_type „%1“, očakáva sa jedna z hodnôt: %2"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Transport \"%1\" created (id %2)"
-msgstr "Udalosť „%1“ bola aktualizovaná (ID položky: %2)"
+msgstr "Transport „%1“ bol vytvorený (ID %2)"
 
 #: deletecontacttool/deletecontacttool.cpp:25
 #, kde-format
@@ -769,34 +758,29 @@ msgid "Draft mail %1 opened in a KMail composer"
 msgstr "Koncept správy %1 bol otvorený v editore KMail"
 
 #: forwardmailtool/forwardmailtool.cpp:30
-#, fuzzy, kde-format
-#| msgid "Mark Mail"
+#, kde-format
 msgid "Forward Mail"
-msgstr "Označiť správu"
+msgstr "Preposlať správu"
 
 #: forwardmailtool/forwardmailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument id must be an integer"
+#, kde-format
 msgid "Argument mode must be one of: inline, attachment"
-msgstr "Argument id musí byť celé číslo"
+msgstr "Argument mode musí byť jedna z hodnôt: inline, attachment"
 
 #: forwardmailtool/forwardmailtooljob.cpp:49
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: %2"
+#, kde-format
 msgid "Unable to forward mail %1: %2"
-msgstr "Správu %1 nie je možné upraviť: %2"
+msgstr "Správu %1 nie je možné preposlať: %2"
 
 #: forwardmailtool/forwardmailtooljob.cpp:56
-#, fuzzy, kde-format
-#| msgid "Unable to edit mail %1: KMail main window is not available"
+#, kde-format
 msgid "Unable to forward mail %1: KMail main window is not available"
-msgstr "Správu %1 nie je možné upraviť: hlavné okno KMail nie je dostupné"
+msgstr "Správu %1 nie je možné preposlať: hlavné okno KMail nie je dostupné"
 
 #: forwardmailtool/forwardmailtooljob.cpp:59
-#, fuzzy, kde-format
-#| msgid "Reply composer opened in KMail for mail %1"
+#, kde-format
 msgid "Forward composer opened in KMail for mail %1"
-msgstr "V KMail bol otvorený editor odpovede na správu %1"
+msgstr "V KMail bol otvorený editor preposlania správy %1"
 
 #: freebusytool/freebusytool.cpp:27
 #, kde-format
@@ -811,13 +795,13 @@ msgstr "Voľné počas celého obdobia od %1 do %2"
 #: kcm/kcm_akonadimcpserver.cpp:26
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Zapnuté"
 
 #: kcm/kcm_akonadimcpserver.cpp:27
 #, kde-format
 msgctxt "@option:check"
 msgid "Ask confirmation before running tools which modify data"
-msgstr ""
+msgstr "Pýtať sa na potvrdenie pred spustením nástrojov, ktoré menia údaje"
 
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
@@ -892,23 +876,23 @@ msgstr "Pre „%1“ sa nenašla žiadna správa"
 #: main.cpp:26 main.cpp:28
 #, kde-format
 msgid "Akonadi MCP Server"
-msgstr ""
+msgstr "Server Akonadi MCP"
 
 #: main.cpp:30
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
-msgstr ""
+msgstr "Copyright © 2026 Laurent Montel"
 
 #: main.cpp:31
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr ""
+msgstr "Laurent Montel"
 
 #: main.cpp:31
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Správca"
 
 #: main.cpp:38
 #, kde-format
