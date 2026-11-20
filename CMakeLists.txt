@@ -328,6 +328,7 @@ set_package_properties(
 )
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
+add_definitions(-DQT_LEAN_HEADERS=2)
 # Extra package
 find_package(Gpgmepp 2.0.0 CONFIG)
 set_package_properties(
