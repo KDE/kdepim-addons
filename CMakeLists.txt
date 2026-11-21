@@ -89,8 +89,7 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 include(ECMQmlModule)
-set(KTEXTADDONS_MIN_VERSION "2.2.0")
-set(KTEXTADDONS_TEXTAUTOGENERATE_MCPPROTOCOL_VERSION "2.2.81")
+set(KTEXTADDONS_MIN_VERSION "2.3.0")
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 if(EXISTS "${PROJECT_SOURCE_DIR}/.git/")
@@ -254,7 +253,7 @@ endif()
 option(OPTION_ADD_MPCPROTOCOL "Add support for autogenerate mcp protocol" ON)
 
 if(OPTION_ADD_MPCPROTOCOL)
-    find_package(KF6TextAutoGenerateTextMcpProtocolWidgets ${KTEXTADDONS_TEXTAUTOGENERATE_MCPPROTOCOL_VERSION} CONFIG)
+    find_package(KF6TextAutoGenerateTextMcpProtocolWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG)
     set_package_properties(
         KF6TextAutoGenerateTextMcpProtocolWidgets
         PROPERTIES
