@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 07:29+0000\n"
+"POT-Creation-Date: 2026-11-20 07:06+0000\n"
 "PO-Revision-Date: 2024-09-07 21:08+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -130,19 +130,19 @@ msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "உடனிணைப்பை இணைத்ததை சரிபார்"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "பலமுறையுள்ள முகவரிகள்"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:30
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:31
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "இந்த முகவரிகள் பலமுறை உள்ளன. உறுதியாக அஞ்சலனுப்ப வேண்டுமா?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:54
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:55
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"

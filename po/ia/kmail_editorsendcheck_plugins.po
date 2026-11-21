@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 07:29+0000\n"
+"POT-Creation-Date: 2026-11-20 07:06+0000\n"
 "PO-Revision-Date: 2024-07-31 10:14+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -132,19 +132,19 @@ msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Verifica invia attachamento "
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "Messages de e-posta duplicate"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:30
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:31
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Iste messages de eposta es duplicate. Tu vole inviar e-posta?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:54
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:55
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"

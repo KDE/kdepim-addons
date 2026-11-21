@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 07:29+0000\n"
+"POT-Creation-Date: 2026-11-20 07:06+0000\n"
 "PO-Revision-Date: 2019-12-18 19:29+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -142,20 +142,20 @@ msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Manuse saatmise kontroll"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "Topeltkirjad"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:30
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:31
 #, fuzzy, kde-format
 #| msgid "These emails are duplicated. Do you want to send email?"
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Need kirjad on topelt. Kas saata kiri?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:54
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:55
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"

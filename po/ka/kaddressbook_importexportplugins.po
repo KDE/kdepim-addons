@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 18:30+0000\n"
+"POT-Creation-Date: 2026-11-20 12:24+0000\n"
 "PO-Revision-Date: 2026-08-26 06:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -70,31 +70,31 @@ msgstr "<qt>ფაილის გახსნის შეცდომა <b>%1
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>ფაილის გახსნის შეცდომა <b>%1</b>.</qt>"
 
-#: csv/import/csvimportdialog.cpp:169
+#: csv/import/csvimportdialog.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "CSV Import Dialog"
 msgstr "CSV-დან შემოტანის ფანჯარა"
 
-#: csv/import/csvimportdialog.cpp:224
+#: csv/import/csvimportdialog.cpp:221
 #, kde-format
 msgctxt "@label"
 msgid "Importing contacts"
 msgstr "კონტაქტების შემოტანა"
 
-#: csv/import/csvimportdialog.cpp:295
+#: csv/import/csvimportdialog.cpp:292
 #, kde-format
 msgctxt "@label"
 msgid "File to import:"
 msgstr "შემოსატანი ფაილი:"
 
-#: csv/import/csvimportdialog.cpp:303
+#: csv/import/csvimportdialog.cpp:300
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select a csv file to import"
 msgstr "აირჩეთ შემოსატანი CSV ფაილი"
 
-#: csv/import/csvimportdialog.cpp:305
+#: csv/import/csvimportdialog.cpp:302
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -104,25 +104,25 @@ msgstr ""
 "დააწკაპუნეთ ამ ღილაკზე ფაილის ამრჩევის გასაშვებად, რომელიც შემოსატანი CSV "
 "ფაილის მოძებნს საშუალებას მოგცემთ."
 
-#: csv/import/csvimportdialog.cpp:312
+#: csv/import/csvimportdialog.cpp:309
 #, kde-format
 msgctxt "@title:group"
 msgid "Delimiter"
 msgstr "გამყოფი"
 
-#: csv/import/csvimportdialog.cpp:322
+#: csv/import/csvimportdialog.cpp:319
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Comma"
 msgstr "მძიმე"
 
-#: csv/import/csvimportdialog.cpp:323
+#: csv/import/csvimportdialog.cpp:320
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a comma"
 msgstr "ველის გამყოფი მძიმეზე დააყენეთ"
 
-#: csv/import/csvimportdialog.cpp:324
+#: csv/import/csvimportdialog.cpp:321
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -130,19 +130,19 @@ msgid ""
 msgstr ""
 "აირჩეთ ეს პარამეტრი, თუ თქვენი CSV ფაილი ველების გამყოფად მძიმეს იყენებს."
 
-#: csv/import/csvimportdialog.cpp:329
+#: csv/import/csvimportdialog.cpp:326
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Semicolon"
 msgstr "წერტილმძიმე"
 
-#: csv/import/csvimportdialog.cpp:330
+#: csv/import/csvimportdialog.cpp:327
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a semicolon"
 msgstr "ველის გამყოფი წერტილმძიმეზე დააყენეთ"
 
-#: csv/import/csvimportdialog.cpp:331
+#: csv/import/csvimportdialog.cpp:328
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -151,19 +151,19 @@ msgstr ""
 "აირჩეთ ეს პარამეტრი, თუ თქვენი CSV ფაილი ველების გამყოფად წერილმძიმეს "
 "იყენებს."
 
-#: csv/import/csvimportdialog.cpp:335
+#: csv/import/csvimportdialog.cpp:332
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Tabulator"
 msgstr "ტაბულატორი"
 
-#: csv/import/csvimportdialog.cpp:336
+#: csv/import/csvimportdialog.cpp:333
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a tab character"
 msgstr "ველის გამყოფი ტაბულაციაზე დააყენთ"
 
-#: csv/import/csvimportdialog.cpp:337
+#: csv/import/csvimportdialog.cpp:334
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -173,19 +173,19 @@ msgstr ""
 "აირჩეთ ეს პარამეტრი, თუ თქვენი CSV ფაილი ველების გამყოფად ტაბულაციის "
 "სიმბოლოს იყენებს."
 
-#: csv/import/csvimportdialog.cpp:341
+#: csv/import/csvimportdialog.cpp:338
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Space"
 msgstr "გამოტოვება"
 
-#: csv/import/csvimportdialog.cpp:342
+#: csv/import/csvimportdialog.cpp:339
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a space character"
 msgstr "ველის გამყოფი გამოტოვების სიმბოლოზე დააყენეთ"
 
-#: csv/import/csvimportdialog.cpp:343
+#: csv/import/csvimportdialog.cpp:340
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -195,19 +195,19 @@ msgstr ""
 "აირჩეთ ეს პარამეტრი, თუ თქვენი CSV ფაილი ველების გამყოფად გამოტოვებას "
 "იყენებს."
 
-#: csv/import/csvimportdialog.cpp:347
+#: csv/import/csvimportdialog.cpp:344
 #, kde-format
 msgctxt "@option:radio Custom field separator"
 msgid "Other"
 msgstr "სხვა"
 
-#: csv/import/csvimportdialog.cpp:348
+#: csv/import/csvimportdialog.cpp:345
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a custom character"
 msgstr "ველის გამყოფის მითითებულ სიმბოლოზე დაყენება"
 
-#: csv/import/csvimportdialog.cpp:350
+#: csv/import/csvimportdialog.cpp:347
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -217,13 +217,13 @@ msgstr ""
 "აირჩეთ ეს პარამეტრი, თუ თქვენი CSV ფაილი ველების გამყოფად რამე სხვა სიმბოლოს "
 "იყენებს."
 
-#: csv/import/csvimportdialog.cpp:356
+#: csv/import/csvimportdialog.cpp:353
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the custom delimiter character"
 msgstr "გამყოფის მითითებულ სიმბოლოზე დაყენება"
 
-#: csv/import/csvimportdialog.cpp:358
+#: csv/import/csvimportdialog.cpp:355
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -234,19 +234,19 @@ msgstr ""
 "შეიყვანეთ გამყოფად გამოყენებული სიმბოლო. თუ შეიყვანთ ერთ სიმბოლოზე მეტს, "
 "გამოყენებული იქნება მხოლოდ პირველი და დანარჩენს ყურადღება არ მიექცევა."
 
-#: csv/import/csvimportdialog.cpp:364
+#: csv/import/csvimportdialog.cpp:361
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text quote:"
 msgstr "ტექსტის ციტატა:"
 
-#: csv/import/csvimportdialog.cpp:370
+#: csv/import/csvimportdialog.cpp:367
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the quote character"
 msgstr "აირჩიეთ ციტირების სიმბოლო"
 
-#: csv/import/csvimportdialog.cpp:372
+#: csv/import/csvimportdialog.cpp:369
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -259,31 +259,31 @@ msgstr ""
 "სიმბოლოს იყენებთ.  მაგალთად, თუ მძიმე ველის გამყოფია, ნებისმიერი მძიმე, "
 "რომელიც ამ მონაცემებში გამოჩნდება, \"დაციტირდება\" ამ სიმბოლოს მიერ."
 
-#: csv/import/csvimportdialog.cpp:377
+#: csv/import/csvimportdialog.cpp:374
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr "\""
 
-#: csv/import/csvimportdialog.cpp:378
+#: csv/import/csvimportdialog.cpp:375
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "'"
 msgstr "'"
 
-#: csv/import/csvimportdialog.cpp:379
+#: csv/import/csvimportdialog.cpp:376
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "None"
 msgstr "არაფერი"
 
-#: csv/import/csvimportdialog.cpp:383
+#: csv/import/csvimportdialog.cpp:380
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "თარიღის ფორმატი:"
 
-#: csv/import/csvimportdialog.cpp:391
+#: csv/import/csvimportdialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -298,7 +298,7 @@ msgstr ""
 "დღე 1 ან 2 ციფრით</item><item>D: დღე 2 ციფრით</item><item>H: საათი 2 ციფრით</"
 "item><item>I: წუთი 2 ციფრით</item><item>S: წამი 2 ციფრით</item></list></para>"
 
-#: csv/import/csvimportdialog.cpp:402
+#: csv/import/csvimportdialog.cpp:399
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -321,37 +321,37 @@ msgstr ""
 "ციფრით</item></list></para><para>მაგ: \"Y-M-D\" შეესაბამება თარიღს"
 "\"2012-01-04\"</para>"
 
-#: csv/import/csvimportdialog.cpp:418
+#: csv/import/csvimportdialog.cpp:415
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text codec:"
 msgstr "ტექსტის კოდეკი:"
 
-#: csv/import/csvimportdialog.cpp:424
+#: csv/import/csvimportdialog.cpp:421
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
 msgstr "აირჩიეთ ტექსტის კოდეკი"
 
-#: csv/import/csvimportdialog.cpp:425
+#: csv/import/csvimportdialog.cpp:422
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose the character encoding of the data in your csv file."
 msgstr "აირჩიეთ მონაცემების სიმბოლოების კოდირება თქვენს csv ფაილში."
 
-#: csv/import/csvimportdialog.cpp:429
+#: csv/import/csvimportdialog.cpp:426
 #, kde-format
 msgctxt "@option:check"
 msgid "Skip first row of file"
 msgstr "ფაილის პირველი მწკრივის გამოტოვება"
 
-#: csv/import/csvimportdialog.cpp:431
+#: csv/import/csvimportdialog.cpp:428
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip first row of csv file when importing"
 msgstr "CSV ფაილის შემოტანისას პირველი მწკრივის გამოტოვება"
 
-#: csv/import/csvimportdialog.cpp:433
+#: csv/import/csvimportdialog.cpp:430
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -363,73 +363,73 @@ msgstr ""
 "გამოტოვოს. ბევრ შემთხვევაში CSV ფაილის პირველი მწკრივი კომენტარის ხაზია, "
 "რომელიც ფაილში არსებული მონაცემის ველების მიმდევრობას აღწერს."
 
-#: csv/import/csvimportdialog.cpp:449
+#: csv/import/csvimportdialog.cpp:446
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
 msgstr "ნიმუშის გადატარება…"
 
-#: csv/import/csvimportdialog.cpp:450
+#: csv/import/csvimportdialog.cpp:447
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "ნიმუშის შენახვა…"
 
-#: csv/import/csvimportdialog.cpp:471
+#: csv/import/csvimportdialog.cpp:468
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Local (%1)"
 msgstr "ადგილობრივი (%1)"
 
-#: csv/import/csvimportdialog.cpp:472
+#: csv/import/csvimportdialog.cpp:469
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Latin1"
 msgstr "Latin1"
 
-#: csv/import/csvimportdialog.cpp:473
+#: csv/import/csvimportdialog.cpp:470
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Unicode"
 msgstr "უნიკოდი"
 
-#: csv/import/csvimportdialog.cpp:474
+#: csv/import/csvimportdialog.cpp:471
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Microsoft Unicode"
 msgstr "Microsoft Unicode"
 
-#: csv/import/csvimportdialog.cpp:575
+#: csv/import/csvimportdialog.cpp:572
 #, kde-format
 msgctxt "@info:status"
 msgid "You must assign at least one column."
 msgstr "საჭიროა, ერთი სვეტი მაინც მიანიჭოთ."
 
-#: csv/import/csvimportdialog.cpp:585
+#: csv/import/csvimportdialog.cpp:582
 #, kde-format
 msgctxt "@label"
 msgid "There are no templates available yet."
 msgstr "შაბლონები ჯერ მიუწვდომელია."
 
-#: csv/import/csvimportdialog.cpp:585
+#: csv/import/csvimportdialog.cpp:582
 #, kde-format
 msgctxt "@title:window"
 msgid "No templates available"
 msgstr "შაბლონების გარეშე"
 
-#: csv/import/csvimportdialog.cpp:650
+#: csv/import/csvimportdialog.cpp:647
 #, kde-format
 msgctxt "@title:window"
 msgid "Template Name"
 msgstr "შაბლონის სახელი"
 
-#: csv/import/csvimportdialog.cpp:650
+#: csv/import/csvimportdialog.cpp:647
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a name for the template:"
 msgstr "შეიყვანეთ შაბლონის სახელი:"
 
-#: csv/import/csvimportdialog.cpp:700
+#: csv/import/csvimportdialog.cpp:697
 #, kde-format
 msgctxt "@info:status"
 msgid "Cannot open input file."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 07:29+0000\n"
+"POT-Creation-Date: 2026-11-20 07:06+0000\n"
 "PO-Revision-Date: 2024-10-20 17:24+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -131,19 +131,19 @@ msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr "Tarkista liitteen lähettäminen"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr "Toistuvat viestit"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:30
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:31
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr "Nämä viestit toistuvat. Haluatko lähettää viestin?"
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:54
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:55
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"

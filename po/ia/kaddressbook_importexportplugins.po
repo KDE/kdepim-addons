@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 18:30+0000\n"
+"POT-Creation-Date: 2026-11-20 12:24+0000\n"
 "PO-Revision-Date: 2026-08-31 16:59+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -70,31 +70,31 @@ msgstr "<qt>Il non pote aperir file <b>%1</b></qt>"
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>Il non pote aperir file <b>%1</b>,</qt>"
 
-#: csv/import/csvimportdialog.cpp:169
+#: csv/import/csvimportdialog.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "CSV Import Dialog"
 msgstr "Dialogo de Importar CSV"
 
-#: csv/import/csvimportdialog.cpp:224
+#: csv/import/csvimportdialog.cpp:221
 #, kde-format
 msgctxt "@label"
 msgid "Importing contacts"
 msgstr "Importar contactos"
 
-#: csv/import/csvimportdialog.cpp:295
+#: csv/import/csvimportdialog.cpp:292
 #, kde-format
 msgctxt "@label"
 msgid "File to import:"
 msgstr "File de importar:"
 
-#: csv/import/csvimportdialog.cpp:303
+#: csv/import/csvimportdialog.cpp:300
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select a csv file to import"
 msgstr "Selige un file csv de importar"
 
-#: csv/import/csvimportdialog.cpp:305
+#: csv/import/csvimportdialog.cpp:302
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -104,44 +104,44 @@ msgstr ""
 "Pulsa iste button pro initiar un selector de file que permittera te de "
 "seliger un file csv de importar."
 
-#: csv/import/csvimportdialog.cpp:312
+#: csv/import/csvimportdialog.cpp:309
 #, kde-format
 msgctxt "@title:group"
 msgid "Delimiter"
 msgstr "Delimitator"
 
-#: csv/import/csvimportdialog.cpp:322
+#: csv/import/csvimportdialog.cpp:319
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Comma"
 msgstr "Virgula"
 
-#: csv/import/csvimportdialog.cpp:323
+#: csv/import/csvimportdialog.cpp:320
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a comma"
 msgstr "Fixa le campo separator a un virgula"
 
-#: csv/import/csvimportdialog.cpp:324
+#: csv/import/csvimportdialog.cpp:321
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the comma as a field separator."
 msgstr "Selige iste option si tu file csv usa le virgula como campo separator."
 
-#: csv/import/csvimportdialog.cpp:329
+#: csv/import/csvimportdialog.cpp:326
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Semicolon"
 msgstr "Puncto e virgula"
 
-#: csv/import/csvimportdialog.cpp:330
+#: csv/import/csvimportdialog.cpp:327
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a semicolon"
 msgstr "Fixa le campo separator a un puncto e virgula"
 
-#: csv/import/csvimportdialog.cpp:331
+#: csv/import/csvimportdialog.cpp:328
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -150,19 +150,19 @@ msgstr ""
 "Selige iste option si tu file csv usa le puncto e virgula como campo "
 "separator."
 
-#: csv/import/csvimportdialog.cpp:335
+#: csv/import/csvimportdialog.cpp:332
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Tabulator"
 msgstr "Tabulator"
 
-#: csv/import/csvimportdialog.cpp:336
+#: csv/import/csvimportdialog.cpp:333
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a tab character"
 msgstr "Fixa le campo separator a un tab"
 
-#: csv/import/csvimportdialog.cpp:337
+#: csv/import/csvimportdialog.cpp:334
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -172,19 +172,19 @@ msgstr ""
 "Selige iste option si tu file csv usa le character de tab como campo "
 "separator."
 
-#: csv/import/csvimportdialog.cpp:341
+#: csv/import/csvimportdialog.cpp:338
 #, kde-format
 msgctxt "@option:radio Field separator"
 msgid "Space"
 msgstr "Spatio"
 
-#: csv/import/csvimportdialog.cpp:342
+#: csv/import/csvimportdialog.cpp:339
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a space character"
 msgstr "Fixa le campo separator a un spatio"
 
-#: csv/import/csvimportdialog.cpp:343
+#: csv/import/csvimportdialog.cpp:340
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -194,19 +194,19 @@ msgstr ""
 "Selige iste option si tu file csv usa le character de spatio como campo "
 "separator."
 
-#: csv/import/csvimportdialog.cpp:347
+#: csv/import/csvimportdialog.cpp:344
 #, kde-format
 msgctxt "@option:radio Custom field separator"
 msgid "Other"
 msgstr "Altere"
 
-#: csv/import/csvimportdialog.cpp:348
+#: csv/import/csvimportdialog.cpp:345
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a custom character"
 msgstr "Fixa le campo separator a un character personalisate"
 
-#: csv/import/csvimportdialog.cpp:350
+#: csv/import/csvimportdialog.cpp:347
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -216,13 +216,13 @@ msgstr ""
 "Selige iste option si tu file csv usa altere character como campo "
 "delimitante de datos in tu file csv."
 
-#: csv/import/csvimportdialog.cpp:356
+#: csv/import/csvimportdialog.cpp:353
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Set the custom delimiter character"
 msgstr "Fixa le character delimitante personalisate"
 
-#: csv/import/csvimportdialog.cpp:358
+#: csv/import/csvimportdialog.cpp:355
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -234,19 +234,19 @@ msgstr ""
 "tu inserta plus que 1 character, solmente le prime essera usate e le altere "
 "characteres essera ignorate."
 
-#: csv/import/csvimportdialog.cpp:364
+#: csv/import/csvimportdialog.cpp:361
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text quote:"
 msgstr "Citation de texto:"
 
-#: csv/import/csvimportdialog.cpp:370
+#: csv/import/csvimportdialog.cpp:367
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the quote character"
 msgstr "Selige le character de quotation"
 
-#: csv/import/csvimportdialog.cpp:372
+#: csv/import/csvimportdialog.cpp:369
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -260,31 +260,31 @@ msgstr ""
 "delimitator de campo, alora cata virgula occurrente in le datos essera "
 "\"citate\" per le character specificate hic."
 
-#: csv/import/csvimportdialog.cpp:377
+#: csv/import/csvimportdialog.cpp:374
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr "\""
 
-#: csv/import/csvimportdialog.cpp:378
+#: csv/import/csvimportdialog.cpp:375
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "'"
 msgstr ","
 
-#: csv/import/csvimportdialog.cpp:379
+#: csv/import/csvimportdialog.cpp:376
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "None"
 msgstr "Nulle"
 
-#: csv/import/csvimportdialog.cpp:383
+#: csv/import/csvimportdialog.cpp:380
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Formato de data:"
 
-#: csv/import/csvimportdialog.cpp:391
+#: csv/import/csvimportdialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -300,7 +300,7 @@ msgstr ""
 "item><item>H: horas con 2 cifras</item><item>I: minutas con 2 cifras</"
 "item><item>S: secundas con 2 cifras</item></list></para> "
 
-#: csv/import/csvimportdialog.cpp:402
+#: csv/import/csvimportdialog.cpp:399
 #, kde-kuit-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -323,37 +323,37 @@ msgstr ""
 "item><item>S: secundas con 2 cifras</item></list></para> <para>Exemplo: \"A-"
 "M-D\" corresponde a un data como \"2012-01-04\"</para>"
 
-#: csv/import/csvimportdialog.cpp:418
+#: csv/import/csvimportdialog.cpp:415
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text codec:"
 msgstr "Codec de texto:"
 
-#: csv/import/csvimportdialog.cpp:424
+#: csv/import/csvimportdialog.cpp:421
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
 msgstr "Selige le codec de texto"
 
-#: csv/import/csvimportdialog.cpp:425
+#: csv/import/csvimportdialog.cpp:422
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose the character encoding of the data in your csv file."
 msgstr "Selige le character codificante del datos in tu file csv."
 
-#: csv/import/csvimportdialog.cpp:429
+#: csv/import/csvimportdialog.cpp:426
 #, kde-format
 msgctxt "@option:check"
 msgid "Skip first row of file"
 msgstr "Salta prime rango o linea de file"
 
-#: csv/import/csvimportdialog.cpp:431
+#: csv/import/csvimportdialog.cpp:428
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip first row of csv file when importing"
 msgstr "Salta prime rango o linea de file csv quando on importa"
 
-#: csv/import/csvimportdialog.cpp:433
+#: csv/import/csvimportdialog.cpp:430
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -365,73 +365,73 @@ msgstr ""
 "datos de csv. In multe casos, le prime rango de un file csv essera un linea "
 "de commento describente le ordine del campos de datos includite in le file."
 
-#: csv/import/csvimportdialog.cpp:449
+#: csv/import/csvimportdialog.cpp:446
 #, kde-format
 msgctxt "@action:button"
 msgid "Apply Template…"
 msgstr "Applica patrono..."
 
-#: csv/import/csvimportdialog.cpp:450
+#: csv/import/csvimportdialog.cpp:447
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "Salveguarda patrono..."
 
-#: csv/import/csvimportdialog.cpp:471
+#: csv/import/csvimportdialog.cpp:468
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Local (%1)"
 msgstr "Local (%1)"
 
-#: csv/import/csvimportdialog.cpp:472
+#: csv/import/csvimportdialog.cpp:469
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Latin1"
 msgstr "Latin1"
 
-#: csv/import/csvimportdialog.cpp:473
+#: csv/import/csvimportdialog.cpp:470
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Unicode"
 msgstr "Unicode"
 
-#: csv/import/csvimportdialog.cpp:474
+#: csv/import/csvimportdialog.cpp:471
 #, kde-format
 msgctxt "@item:inlistbox Codec setting"
 msgid "Microsoft Unicode"
 msgstr "Unicode de Microsoft"
 
-#: csv/import/csvimportdialog.cpp:575
+#: csv/import/csvimportdialog.cpp:572
 #, kde-format
 msgctxt "@info:status"
 msgid "You must assign at least one column."
 msgstr "Tu debe assignar al minus un columna."
 
-#: csv/import/csvimportdialog.cpp:585
+#: csv/import/csvimportdialog.cpp:582
 #, kde-format
 msgctxt "@label"
 msgid "There are no templates available yet."
 msgstr "On non ha ancora alcun patronos disponibile."
 
-#: csv/import/csvimportdialog.cpp:585
+#: csv/import/csvimportdialog.cpp:582
 #, kde-format
 msgctxt "@title:window"
 msgid "No templates available"
 msgstr "Nulle patronos disponibile"
 
-#: csv/import/csvimportdialog.cpp:650
+#: csv/import/csvimportdialog.cpp:647
 #, kde-format
 msgctxt "@title:window"
 msgid "Template Name"
 msgstr "Nomine de patrono"
 
-#: csv/import/csvimportdialog.cpp:650
+#: csv/import/csvimportdialog.cpp:647
 #, kde-format
 msgctxt "@info"
 msgid "Please enter a name for the template:"
 msgstr "Per favor tu inserta un nomine pro le patrono:"
 
-#: csv/import/csvimportdialog.cpp:700
+#: csv/import/csvimportdialog.cpp:697
 #, kde-format
 msgctxt "@info:status"
 msgid "Cannot open input file."

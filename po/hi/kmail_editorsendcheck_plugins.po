@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 07:29+0000\n"
+"POT-Creation-Date: 2026-11-20 07:06+0000\n"
 "PO-Revision-Date: 2024-12-15 15:58+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -127,19 +127,19 @@ msgctxt "@option:check"
 msgid "Check send attachment"
 msgstr ""
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:28
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:29
 #, kde-format
 msgctxt "@title:window"
 msgid "Duplicated emails"
 msgstr ""
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:30
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:31
 #, kde-format
 msgctxt "@label:textbox"
 msgid "These emails are duplicated. Do you want to send email?"
 msgstr ""
 
-#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:54
+#: checkbeforesend/duplicateemails/checkduplicateemailsdialog.cpp:55
 #, kde-format
 msgctxt "emails (number of emails)"
 msgid "%1 (%2)"

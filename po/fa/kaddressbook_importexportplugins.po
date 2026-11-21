@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kaddressbook\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 18:30+0000\n"
+"POT-Creation-Date: 2026-11-20 12:24+0000\n"
 "PO-Revision-Date: 2007-09-03 13:23+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -74,35 +74,35 @@ msgstr "<qt>قادر به باز کردن پرونده <b>%1</b> نیست.</qt>"
 msgid "<qt>Unable to open file <b>%1</b>.</qt>"
 msgstr "<qt>قادر به باز کردن پرونده <b>%1</b> نیست.</qt>"
 
-#: csv/import/csvimportdialog.cpp:169
+#: csv/import/csvimportdialog.cpp:166
 #, fuzzy, kde-format
 #| msgid "CSV Import Dialog"
 msgctxt "@title:window"
 msgid "CSV Import Dialog"
 msgstr "محاوره واردات CSV"
 
-#: csv/import/csvimportdialog.cpp:224
+#: csv/import/csvimportdialog.cpp:221
 #, fuzzy, kde-format
 #| msgid "Importing contacts"
 msgctxt "@label"
 msgid "Importing contacts"
 msgstr "واردات تماسها"
 
-#: csv/import/csvimportdialog.cpp:295
+#: csv/import/csvimportdialog.cpp:292
 #, fuzzy, kde-format
 #| msgid "File to import:"
 msgctxt "@label"
 msgid "File to import:"
 msgstr "پرونده برای واردات:"
 
-#: csv/import/csvimportdialog.cpp:303
+#: csv/import/csvimportdialog.cpp:300
 #, fuzzy, kde-format
 #| msgid "Select vCard to Import"
 msgctxt "@info:tooltip"
 msgid "Select a csv file to import"
 msgstr "برگزیدن vCard جهت واردات"
 
-#: csv/import/csvimportdialog.cpp:305
+#: csv/import/csvimportdialog.cpp:302
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -110,70 +110,70 @@ msgid ""
 "csv file to import."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:312
+#: csv/import/csvimportdialog.cpp:309
 #, fuzzy, kde-format
 #| msgid "Delimiter"
 msgctxt "@title:group"
 msgid "Delimiter"
 msgstr "جداساز"
 
-#: csv/import/csvimportdialog.cpp:322
+#: csv/import/csvimportdialog.cpp:319
 #, fuzzy, kde-format
 #| msgid "Comma"
 msgctxt "@option:radio Field separator"
 msgid "Comma"
 msgstr "کاما"
 
-#: csv/import/csvimportdialog.cpp:323
+#: csv/import/csvimportdialog.cpp:320
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a comma"
 msgstr "حوزه‌ای که می‌خواهید حذف کنید را برگزینید:"
 
-#: csv/import/csvimportdialog.cpp:324
+#: csv/import/csvimportdialog.cpp:321
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the comma as a field separator."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:329
+#: csv/import/csvimportdialog.cpp:326
 #, fuzzy, kde-format
 #| msgid "Semicolon"
 msgctxt "@option:radio Field separator"
 msgid "Semicolon"
 msgstr "نقطه ویرگول"
 
-#: csv/import/csvimportdialog.cpp:330
+#: csv/import/csvimportdialog.cpp:327
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a semicolon"
 msgstr "حوزه‌ای که می‌خواهید حذف کنید را برگزینید:"
 
-#: csv/import/csvimportdialog.cpp:331
+#: csv/import/csvimportdialog.cpp:328
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
 "Select this option if your csv file uses the semicolon as a field separator."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:335
+#: csv/import/csvimportdialog.cpp:332
 #, fuzzy, kde-format
 #| msgid "Tabulator"
 msgctxt "@option:radio Field separator"
 msgid "Tabulator"
 msgstr "جدول‌بند"
 
-#: csv/import/csvimportdialog.cpp:336
+#: csv/import/csvimportdialog.cpp:333
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a tab character"
 msgstr "حوزه‌ای که می‌خواهید حذف کنید را برگزینید:"
 
-#: csv/import/csvimportdialog.cpp:337
+#: csv/import/csvimportdialog.cpp:334
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -181,21 +181,21 @@ msgid ""
 "separator."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:341
+#: csv/import/csvimportdialog.cpp:338
 #, fuzzy, kde-format
 #| msgid "Space"
 msgctxt "@option:radio Field separator"
 msgid "Space"
 msgstr "فاصله"
 
-#: csv/import/csvimportdialog.cpp:342
+#: csv/import/csvimportdialog.cpp:339
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a space character"
 msgstr "حوزه‌ای که می‌خواهید حذف کنید را برگزینید:"
 
-#: csv/import/csvimportdialog.cpp:343
+#: csv/import/csvimportdialog.cpp:340
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -203,21 +203,21 @@ msgid ""
 "separator."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:347
+#: csv/import/csvimportdialog.cpp:344
 #, fuzzy, kde-format
 #| msgid "Other"
 msgctxt "@option:radio Custom field separator"
 msgid "Other"
 msgstr "غیره"
 
-#: csv/import/csvimportdialog.cpp:348
+#: csv/import/csvimportdialog.cpp:345
 #, fuzzy, kde-format
 #| msgid "Select the field you want to remove:"
 msgctxt "@info:tooltip"
 msgid "Set the field separator to a custom character"
 msgstr "حوزه‌ای که می‌خواهید حذف کنید را برگزینید:"
 
-#: csv/import/csvimportdialog.cpp:350
+#: csv/import/csvimportdialog.cpp:347
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -225,14 +225,14 @@ msgid ""
 "the data in your csv file."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:356
+#: csv/import/csvimportdialog.cpp:353
 #, fuzzy, kde-format
 #| msgid "Select the key type:"
 msgctxt "@info:tooltip"
 msgid "Set the custom delimiter character"
 msgstr "برگزیدن نوع کلید:"
 
-#: csv/import/csvimportdialog.cpp:358
+#: csv/import/csvimportdialog.cpp:355
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -241,21 +241,21 @@ msgid ""
 "characters will be ignored."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:364
+#: csv/import/csvimportdialog.cpp:361
 #, fuzzy, kde-format
 #| msgid "&Text font:"
 msgctxt "@label:listbox"
 msgid "Text quote:"
 msgstr "قلم &متن:‌"
 
-#: csv/import/csvimportdialog.cpp:370
+#: csv/import/csvimportdialog.cpp:367
 #, fuzzy, kde-format
 #| msgid "Select the key type:"
 msgctxt "@info:tooltip"
 msgid "Select the quote character"
 msgstr "برگزیدن نوع کلید:"
 
-#: csv/import/csvimportdialog.cpp:372
+#: csv/import/csvimportdialog.cpp:369
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -265,33 +265,33 @@ msgid ""
 "will be \"quoted\" by the character specified here."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:377
+#: csv/import/csvimportdialog.cpp:374
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "\""
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:378
+#: csv/import/csvimportdialog.cpp:375
 #, kde-format
 msgctxt "@item:inlistbox Quote character option"
 msgid "'"
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:379
+#: csv/import/csvimportdialog.cpp:376
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "@item:inlistbox Quote character option"
 msgid "None"
 msgstr "هیچ‌کدام"
 
-#: csv/import/csvimportdialog.cpp:383
+#: csv/import/csvimportdialog.cpp:380
 #, fuzzy, kde-format
 #| msgid "Date format:"
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "قالب تاریخ:"
 
-#: csv/import/csvimportdialog.cpp:391
+#: csv/import/csvimportdialog.cpp:388
 #, fuzzy, kde-kuit-format
 #| msgid ""
 #| "<ul><li>y: year with 2 digits</li><li>Y: year with 4 digits</li><li>m: "
@@ -309,7 +309,7 @@ msgstr ""
 "رقم</li><li>M: ماه با ۲ رقم</li><li>d: روز با ۱ یا ۲ رقم</li><li>D: روز با ۲ "
 "رقم</li></ul>"
 
-#: csv/import/csvimportdialog.cpp:402
+#: csv/import/csvimportdialog.cpp:399
 #, fuzzy, kde-kuit-format
 #| msgid ""
 #| "<ul><li>y: year with 2 digits</li><li>Y: year with 4 digits</li><li>m: "
@@ -331,39 +331,39 @@ msgstr ""
 "رقم</li><li>M: ماه با ۲ رقم</li><li>d: روز با ۱ یا ۲ رقم</li><li>D: روز با ۲ "
 "رقم</li></ul>"
 
-#: csv/import/csvimportdialog.cpp:418
+#: csv/import/csvimportdialog.cpp:415
 #, fuzzy, kde-format
 #| msgid "&Text font:"
 msgctxt "@label:listbox"
 msgid "Text codec:"
 msgstr "قلم &متن:‌"
 
-#: csv/import/csvimportdialog.cpp:424
+#: csv/import/csvimportdialog.cpp:421
 #, fuzzy, kde-format
 #| msgid "Select the key type:"
 msgctxt "@info:tooltip"
 msgid "Select the text codec"
 msgstr "برگزیدن نوع کلید:"
 
-#: csv/import/csvimportdialog.cpp:425
+#: csv/import/csvimportdialog.cpp:422
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose the character encoding of the data in your csv file."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:429
+#: csv/import/csvimportdialog.cpp:426
 #, kde-format
 msgctxt "@option:check"
 msgid "Skip first row of file"
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:431
+#: csv/import/csvimportdialog.cpp:428
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Skip first row of csv file when importing"
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:433
+#: csv/import/csvimportdialog.cpp:430
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -372,84 +372,84 @@ msgid ""
 "describing the order of the data fields included in the file."
 msgstr ""
 
-#: csv/import/csvimportdialog.cpp:449
+#: csv/import/csvimportdialog.cpp:446
 #, fuzzy, kde-format
 #| msgid "Apply Template..."
 msgctxt "@action:button"
 msgid "Apply Template…"
 msgstr "اعمال قالب..."
 
-#: csv/import/csvimportdialog.cpp:450
+#: csv/import/csvimportdialog.cpp:447
 #, fuzzy, kde-format
 #| msgid "Save Template..."
 msgctxt "@action:button"
 msgid "Save Template…"
 msgstr "ذخیره قالب..."
 
-#: csv/import/csvimportdialog.cpp:471
+#: csv/import/csvimportdialog.cpp:468
 #, fuzzy, kde-format
 #| msgid "Local (%1)"
 msgctxt "@item:inlistbox Codec setting"
 msgid "Local (%1)"
 msgstr "محلی )%1("
 
-#: csv/import/csvimportdialog.cpp:472
+#: csv/import/csvimportdialog.cpp:469
 #, fuzzy, kde-format
 #| msgid "Latin1"
 msgctxt "@item:inlistbox Codec setting"
 msgid "Latin1"
 msgstr "لاتین۱"
 
-#: csv/import/csvimportdialog.cpp:473
+#: csv/import/csvimportdialog.cpp:470
 #, fuzzy, kde-format
 #| msgid "Unicode"
 msgctxt "@item:inlistbox Codec setting"
 msgid "Unicode"
 msgstr "یونی‌کد"
 
-#: csv/import/csvimportdialog.cpp:474
+#: csv/import/csvimportdialog.cpp:471
 #, fuzzy, kde-format
 #| msgid "Microsoft Unicode"
 msgctxt "@item:inlistbox Codec setting"
 msgid "Microsoft Unicode"
 msgstr "یونی‌کد میکروسافت"
 
-#: csv/import/csvimportdialog.cpp:575
+#: csv/import/csvimportdialog.cpp:572
 #, fuzzy, kde-format
 #| msgid "You have to assign at least one column."
 msgctxt "@info:status"
 msgid "You must assign at least one column."
 msgstr "حداقل باید یک ستون انتخاب کنید."
 
-#: csv/import/csvimportdialog.cpp:585
+#: csv/import/csvimportdialog.cpp:582
 #, fuzzy, kde-format
 #| msgid "(No preview available.)"
 msgctxt "@label"
 msgid "There are no templates available yet."
 msgstr ")پیش‌نمایشی وجود ندارد.("
 
-#: csv/import/csvimportdialog.cpp:585
+#: csv/import/csvimportdialog.cpp:582
 #, fuzzy, kde-format
 #| msgid "(No preview available.)"
 msgctxt "@title:window"
 msgid "No templates available"
 msgstr ")پیش‌نمایشی وجود ندارد.("
 
-#: csv/import/csvimportdialog.cpp:650
+#: csv/import/csvimportdialog.cpp:647
 #, fuzzy, kde-format
 #| msgid "Template Name"
 msgctxt "@title:window"
 msgid "Template Name"
 msgstr "نام قالب"
 
-#: csv/import/csvimportdialog.cpp:650
+#: csv/import/csvimportdialog.cpp:647
 #, fuzzy, kde-format
 #| msgid "Please enter a name for the template:"
 msgctxt "@info"
 msgid "Please enter a name for the template:"
 msgstr "لطفاً، برای قالب نامی را وارد کنید:"
 
-#: csv/import/csvimportdialog.cpp:700
+#: csv/import/csvimportdialog.cpp:697
 #, fuzzy, kde-format
 #| msgid "Cannot open input file."
 msgctxt "@info:status"
