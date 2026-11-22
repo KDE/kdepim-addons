@@ -5,21 +5,68 @@
 */
 
 #include "kcm_akonadimcpserver.h"
+#include <KPluginFactory>
+#include <QVBoxLayout>
+#if TEXTADDONSWIDGETS_VERSION >= QT_VERSION_CHECK(2, 3, 45)
+#include <TextAutoGenerateTextMcpProtocolWidgets/MCPServerConfigurationModuleWidget>
+#else
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KPluginFactory>
 #include <KSharedConfig>
 #include <QCheckBox>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusMessage>
 #include <QProcess>
-#include <QVBoxLayout>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerUtils>
 #include <TextAutoGenerateTextMcpProtocolWidgets/McpProtocolServerConfigureWidget>
+#endif
 
 K_PLUGIN_CLASS_WITH_JSON(AkonadiMCPServerConfigurationModule, "kcm_akonadimcpserver.json")
 using namespace Qt::Literals::StringLiterals;
+#if TEXTADDONSWIDGETS_VERSION >= QT_VERSION_CHECK(2, 3, 45)
+AkonadiMCPServerConfigurationModule::AkonadiMCPServerConfigurationModule(QObject *parent, const KPluginMetaData &data)
+    : KCModule(parent, data)
+    , mConfigurationWidget(new TextAutoGenerateTextMcpProtocolWidgets::MCPServerConfigurationModuleWidget(widget()))
+{
+    auto lay = new QVBoxLayout(widget());
+    lay->setContentsMargins({});
+    lay->addWidget(mConfigurationWidget);
+
+    mConfigurationWidget->setConfigName(u"akonadimcpprotocolrc"_s);
+    mConfigurationWidget->setDbusName(u"org.kde.akonadimcpprotocol"_s);
+    mConfigurationWidget->setExecName(u"akonadimcpprotocol"_s);
+
+    connect(mConfigurationWidget,
+            &TextAutoGenerateTextMcpProtocolWidgets::MCPServerConfigurationModuleWidget::configureChanged,
+            this,
+            &AkonadiMCPServerConfigurationModule::markAsChanged);
+    connect(mConfigurationWidget,
+            &TextAutoGenerateTextMcpProtocolWidgets::MCPServerConfigurationModuleWidget::needSave,
+            this,
+            &AkonadiMCPServerConfigurationModule::setNeedsSave);
+}
+
+AkonadiMCPServerConfigurationModule::~AkonadiMCPServerConfigurationModule() = default;
+
+void AkonadiMCPServerConfigurationModule::save()
+{
+    mConfigurationWidget->save();
+    KCModule::save();
+}
+
+void AkonadiMCPServerConfigurationModule::load()
+{
+    mConfigurationWidget->load();
+    KCModule::load();
+}
+
+void AkonadiMCPServerConfigurationModule::defaults()
+{
+    mConfigurationWidget->defaults();
+    KCModule::defaults();
+}
+#else
 AkonadiMCPServerConfigurationModule::AkonadiMCPServerConfigurationModule(QObject *parent, const KPluginMetaData &data)
     : KCModule(parent, data)
     , mMcpProtocolServerConfigureWidget(new TextAutoGenerateTextMcpProtocolWidgets::McpProtocolServerConfigureWidget(widget()))
@@ -107,6 +154,7 @@ void AkonadiMCPServerConfigurationModule::defaults()
     mConfirmModify->setChecked(true);
     mMcpProtocolServerConfigureWidget->setSettings({});
 }
+#endif
 
 #include "kcm_akonadimcpserver.moc"
 
