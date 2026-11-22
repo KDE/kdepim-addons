@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-11 01:02+0000\n"
-"PO-Revision-Date: 2026-11-19 12:37+0200\n"
+"PO-Revision-Date: 2026-11-21 08:22+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
@@ -64,31 +64,29 @@ msgid "Calendar %1 does not exist or does not accept new items"
 msgstr "פנקס הכתובות %1 לא קיים או שאינו מקבל אנשי קשר חדשים"
 
 #: calendarcommon/createincidencetooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "No address book found"
+#, kde-format
 msgid "No writable calendar found"
-msgstr "לא נמצא פנקס כתובות"
+msgstr "לא נמצאו לוחות שנה שניתן לכתוב אליהם"
 
 #: calendarcommon/createincidencetooljob.cpp:90
-#, fuzzy, kde-format
-#| msgid "Mail creation failed: %1"
+#, kde-format
 msgid "Creation failed: %1"
-msgstr "יצירת דוא״ל נכשלה: %1"
+msgstr "היצירה נכשלה: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
 #, kde-format
 msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr ""
+msgstr "האירוע „%1” נוצר בלוח השנה „%2” (מזהה פריט: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
 #, kde-format
 msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr ""
+msgstr "המטלה „%1” נוצרה בלוח השנה „%2” (מזהה פריט: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:104
 #, kde-format
 msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
-msgstr ""
+msgstr "רשומת היומן „%1” נוצרה בלוח השנה „%2” (מזהה פריט: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:107
 #, kde-format
@@ -132,10 +130,9 @@ msgid "No event between %1 and %2"
 msgstr "אין אירועים בין %1 לבין %2"
 
 #: common/kmaildbustooljobbase.cpp:51
-#, fuzzy, kde-format
-#| msgid "Contact search failed: %1"
+#, kde-format
 msgid "Unable to start KMail: %1"
-msgstr "חיפוש אנשי קשר נכשל: %1"
+msgstr "לא ניתן להפעיל את KMail‏: %1"
 
 #: common/toolbase.cpp:83
 #, kde-format
@@ -177,22 +174,19 @@ msgid "Invalid arguments"
 msgstr "ארגומנטים שגויים"
 
 #: common/toolutils.cpp:16
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Mail"
-msgstr "יצירת דוא״ל"
+msgstr "דוא״ל"
 
 #: common/toolutils.cpp:18
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Contact"
-msgstr "חיפוש באנשי הקשר"
+msgstr "איש קשר"
 
 #: common/toolutils.cpp:20
-#, fuzzy, kde-format
-#| msgid "Calendar Events"
+#, kde-format
 msgid "Calendar"
-msgstr "אירועי לוח שנה"
+msgstr "לוח שנה"
 
 #: common/toolutils.cpp:22
 #, kde-format
@@ -259,10 +253,9 @@ msgid "No contact found for \"%1\""
 msgstr "לא נמצאו אנשי קשר בחיפוש אחר „%1”"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:48
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Create Contact Group"
-msgstr "חיפוש באנשי הקשר"
+msgstr "יצירת קבוצת קשר"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:73
 #: createcontacttool/createcontacttool.cpp:52
@@ -595,10 +588,9 @@ msgid ""
 msgstr ""
 
 #: createtodotool/createtodotool.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Create To-do"
-msgstr "חיפוש באנשי הקשר"
+msgstr "יצירת מטלה"
 
 #: createtodotool/createtodotool.cpp:63
 #: updateincidencetool/updateincidencetool.cpp:129
@@ -710,7 +702,7 @@ msgstr ""
 #: deleteincidencetool/deleteincidencetool.cpp:25
 #, kde-format
 msgid "Delete Incidence"
-msgstr ""
+msgstr "מחיקת מופע"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:34
 #: updateincidencetool/updateincidencetooljob.cpp:51
@@ -730,7 +722,7 @@ msgstr "חיפוש דוא״ל נכשל: %1"
 #: updateincidencetool/updateincidencetooljob.cpp:71
 #, kde-format
 msgid "Incidence %1 not found"
-msgstr ""
+msgstr "המופע %1 לא נמצא"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:59
 #: updateincidencetool/updateincidencetooljob.cpp:77
@@ -788,7 +780,7 @@ msgstr "משיכת דוא״ל נכשלה: %1"
 #: movemailtool/movemailtooljob.cpp:89
 #, kde-format
 msgid "Mail %1 not found"
-msgstr ""
+msgstr "הודעת הדוא״ל %1 לא נמצאה"
 
 #: editmailtool/editmailtooljob.cpp:86
 #, kde-format
@@ -882,7 +874,7 @@ msgstr "לא נמצא לוח שנה"
 #: listidentities/listidentitiestool.cpp:22
 #, kde-format
 msgid "List Identities"
-msgstr ""
+msgstr "הצגת זהויות"
 
 #: listidentities/listidentitiestool.cpp:42
 #, kde-format
@@ -932,23 +924,23 @@ msgstr "לא נמצא דוא״ל בחיפוש אחר „%1”"
 #: main.cpp:26 main.cpp:28
 #, kde-format
 msgid "Akonadi MCP Server"
-msgstr ""
+msgstr "שרת ה־MCP של Akonadi"
 
 #: main.cpp:30
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
-msgstr ""
+msgstr "כל הזכויות שמורות © 2026 ללורנט מונטל"
 
 #: main.cpp:31
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
-msgstr ""
+msgstr "לורנט מונטל"
 
 #: main.cpp:31
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "מתחזק"
 
 #: main.cpp:38
 #, kde-format
@@ -1257,22 +1249,22 @@ msgstr "יצירת איש קשר נכשלה: %1"
 #: updateincidencetool/updateincidencetooljob.cpp:102
 #, kde-format
 msgid "Event \"%1\" updated (item id: %2)"
-msgstr ""
+msgstr "האירוע „%1” עודכן (מזהה פריט: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
 #, kde-format
 msgid "To-do \"%1\" updated (item id: %2)"
-msgstr ""
+msgstr "המטלה „%1” עודכנה (מזהה פריט: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
 #, kde-format
 msgid "Journal entry \"%1\" updated (item id: %2)"
-msgstr ""
+msgstr "רשומת היומן „%1” עודכנה (מזהה פריט: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
 #, kde-format
 msgid "\"%1\" updated (item id: %2)"
-msgstr ""
+msgstr "„%1” עודכנה (מזהה פריט: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:120
 #, fuzzy, kde-format
