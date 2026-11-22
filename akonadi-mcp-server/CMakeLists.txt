@@ -145,8 +145,16 @@ target_link_libraries(
     Qt::DBus
     KF6::DBusAddons
     KF6::Crash
-    KF6::Notifications
 )
+
+# KTextAddons >= 2.3.46 provides confirmation tool and its notification event
+if(KF6TextAutoGenerateTextMcpProtocolCore_VERSION VERSION_GREATER_EQUAL "2.3.46")
+    target_compile_definitions(akonadimcpprotocol PRIVATE HAVE_MCP_CONFIRMATION_TOOL)
+    set(AKONADI_MCP_INSTALL_NOTIFYRC FALSE)
+else()
+    target_link_libraries(akonadimcpprotocol KF6::Notifications)
+    set(AKONADI_MCP_INSTALL_NOTIFYRC TRUE)
+endif()
 
 install(
     TARGETS

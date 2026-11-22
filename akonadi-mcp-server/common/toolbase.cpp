@@ -5,9 +5,22 @@
 */
 #include "toolbase.h"
 #include <KConfigGroup>
+#include <KSharedConfig>
+#ifdef HAVE_MCP_CONFIRMATION_TOOL
+using namespace Qt::Literals::StringLiterals;
+
+ToolBase::ToolBase() = default;
+
+ToolBase::~ToolBase() = default;
+
+bool ToolBase::askModify() const
+{
+    const KConfigGroup group(KSharedConfig::openConfig(u"akonadimcpprotocolrc"_s), u"General"_s);
+    return group.readEntry("AskModify", true);
+}
+#else
 #include <KLocalizedString>
 #include <KNotification>
-#include <KSharedConfig>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -126,3 +139,4 @@ void ToolBase::call(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCa
     });
     notification->sendEvent();
 }
+#endif

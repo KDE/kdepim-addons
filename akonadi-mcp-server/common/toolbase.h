@@ -5,6 +5,19 @@
 */
 #pragma once
 
+#ifdef HAVE_MCP_CONFIRMATION_TOOL
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerConfirmationTool>
+
+class ToolBase : public TextAutoGenerateTextMcpProtocolCore::McpProtocolServerConfirmationTool
+{
+public:
+    ToolBase();
+    ~ToolBase() override;
+
+protected:
+    [[nodiscard]] bool askModify() const override;
+};
+#else
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerTool>
 
 class ToolBase : public TextAutoGenerateTextMcpProtocolCore::McpProtocolServerTool
@@ -18,3 +31,4 @@ public:
 private:
     virtual void doCall(TextAutoGenerateTextMcpProtocolCore::McpProtocolServerToolCall *call) = 0;
 };
+#endif
