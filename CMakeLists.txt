@@ -328,7 +328,9 @@ set_package_properties(
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 add_definitions(-DQT_NO_JAVA_STYLE_ITERATORS)
-add_definitions(-DQT_LEAN_HEADERS=2)
+if(ECM_VERSION VERSION_GREATER_EQUAL "6.33.0")
+    add_definitions(-DQT_LEAN_HEADERS=2)
+endif()
 # Extra package
 find_package(Gpgmepp 2.0.0 CONFIG)
 set_package_properties(
