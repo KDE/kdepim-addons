@@ -17,6 +17,7 @@ Name[sk]=AkonadiMcpProtocol
 Name[sl]=AkonadiMcpProtocol
 Name[tr]=Akonadi MCP Protokolü
 Name[uk]=AkonadiMcpProtocol
+Name[zh_CN]=AkonadiMcpProtocol
 Name[zh_TW]=AkonadiMcpProtocol
 DesktopEntry=org.kde.akonadimcpprotocol
 Comment=Notification
@@ -36,6 +37,7 @@ Comment[sk]=Upozornenie
 Comment[sl]=Obvestilo
 Comment[tr]=Bildirim
 Comment[uk]=Сповіщення
+Comment[zh_CN]=通知
 Comment[zh_TW]=通知
 
 [Event/Mcp-Tool-Confirmation]
@@ -56,6 +58,7 @@ Name[sk]=Nástroj MCP žiada potvrdenie
 Name[sl]=Orodje MCP prosi za potrditev
 Name[tr]=MCP Aracı Onay İstiyor
 Name[uk]=Інструмент MCP просить підтвердження
+Name[zh_CN]=MCP 工具询问确认
 Name[zh_TW]=MCP 工具詢問確認
 Action=Popup
 Urgency=Normal
