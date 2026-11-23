@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:02+0000\n"
+"POT-Creation-Date: 2026-11-23 01:04+0000\n"
 "PO-Revision-Date: 2026-11-10 07:16+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -130,17 +130,17 @@ msgstr "Ni dogodkov med %1 in %2"
 msgid "Unable to start KMail: %1"
 msgstr "KMail-a ni mogoče zagnati: %1"
 
-#: common/toolbase.cpp:83
+#: common/toolbase.cpp:96
 #, kde-format
 msgid "Another confirmation is pending"
 msgstr "Čakanje na še eno potrditev"
 
-#: common/toolbase.cpp:89
+#: common/toolbase.cpp:102
 #, kde-format
 msgid "MCP tool asks confirmation"
 msgstr "Orodje MCP prosi za potrdilo"
 
-#: common/toolbase.cpp:90
+#: common/toolbase.cpp:103
 #, kde-format
 msgid ""
 "Run \"%1\"?\n"
@@ -149,17 +149,17 @@ msgstr ""
 "Zaženi \"%1\"?\n"
 "%2"
 
-#: common/toolbase.cpp:104
+#: common/toolbase.cpp:117
 #, kde-format
 msgid "Action refused by user"
 msgstr "Uporabnik je zavrnil dejanje"
 
-#: common/toolbase.cpp:107
+#: common/toolbase.cpp:120
 #, kde-format
 msgid "Accept"
 msgstr "Sprejmi"
 
-#: common/toolbase.cpp:115
+#: common/toolbase.cpp:128
 #, kde-format
 msgid "Reject"
 msgstr "Zavrni"
@@ -808,12 +808,12 @@ msgstr "Prosto/zasedeno"
 msgid "Free for the whole period from %1 to %2"
 msgstr "Prost v celotnem obdobju od %1 do %2"
 
-#: kcm/kcm_akonadimcpserver.cpp:26
+#: kcm/kcm_akonadimcpserver.cpp:73
 #, kde-format
 msgid "Enabled"
 msgstr "Omogočeno"
 
-#: kcm/kcm_akonadimcpserver.cpp:27
+#: kcm/kcm_akonadimcpserver.cpp:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Ask confirmation before running tools which modify data"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:02+0000\n"
+"POT-Creation-Date: 2026-11-23 01:04+0000\n"
 "PO-Revision-Date: 2026-11-11 18:06+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -136,17 +136,17 @@ msgstr "Немає подій від %1 до %2"
 msgid "Unable to start KMail: %1"
 msgstr "Не вдалося запустити KMail: %1"
 
-#: common/toolbase.cpp:83
+#: common/toolbase.cpp:96
 #, kde-format
 msgid "Another confirmation is pending"
 msgstr "У черзі перебуває інше підтвердження"
 
-#: common/toolbase.cpp:89
+#: common/toolbase.cpp:102
 #, kde-format
 msgid "MCP tool asks confirmation"
 msgstr "Інструмент MCP просить підтвердження"
 
-#: common/toolbase.cpp:90
+#: common/toolbase.cpp:103
 #, kde-format
 msgid ""
 "Run \"%1\"?\n"
@@ -155,17 +155,17 @@ msgstr ""
 "Виконати «%1»?\n"
 "%2"
 
-#: common/toolbase.cpp:104
+#: common/toolbase.cpp:117
 #, kde-format
 msgid "Action refused by user"
 msgstr "У дії відмовлено користувачем"
 
-#: common/toolbase.cpp:107
+#: common/toolbase.cpp:120
 #, kde-format
 msgid "Accept"
 msgstr "Прийняти"
 
-#: common/toolbase.cpp:115
+#: common/toolbase.cpp:128
 #, kde-format
 msgid "Reject"
 msgstr "Відмовити"
@@ -821,12 +821,12 @@ msgstr "Зайнятий/Вільний"
 msgid "Free for the whole period from %1 to %2"
 msgstr "Не зайнято увесь період від %1 до %2"
 
-#: kcm/kcm_akonadimcpserver.cpp:26
+#: kcm/kcm_akonadimcpserver.cpp:73
 #, kde-format
 msgid "Enabled"
 msgstr "Увімкнено"
 
-#: kcm/kcm_akonadimcpserver.cpp:27
+#: kcm/kcm_akonadimcpserver.cpp:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Ask confirmation before running tools which modify data"

@@ -276,14 +276,7 @@ msgid "<qt><a href=\"whatsthis1\">Argument format information…</a></qt>"
 msgstr "<qt><a href=\"whatsthis1\">参数格式信息...</a></qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid ""
-#| "<qt><p><strong>These expressions may be used for the arguments:</strong></"
-#| "p><ul><li>%s - the subject of message</li><li>%from - the from email "
-#| "address</li><li>%cc - the list of cc email address</li><li>%bcc - the "
-#| "list of bcc email address</li><li>%body - the body of message</li><li>"
-#| "%inreplyto - the reply email address</li><li>%akonadiUrl - the akonadi "
-#| "url (as akonadi:?item=187020)</li></ul></strong></p></qt>"
+#, kde-format
 msgid ""
 "<qt><p><strong>These expressions may be used for the arguments:</strong></"
 "p><ul><li>%s - the subject of message</li><li>%from - the from email "
@@ -296,7 +289,7 @@ msgstr ""
 "</li><li>%from——发件人的邮箱地址</li><li>%cc——抄送的邮件地址列表</li><li>%bcc"
 "——密送的邮件列表</li><li>%body——邮件的内容</li><li>%inreplyto——要回复的邮件地"
 "址</li><li>%akonadiUrl——akondi 的 URL (形如 akonadi:?item=187020)</li></ul></"
-"strong></p></qt>"
+"qt>"
 
 #: externalscriptplugin/configuredialog/viewerpluginexternaleditwidget.cpp:71
 #, kde-format
