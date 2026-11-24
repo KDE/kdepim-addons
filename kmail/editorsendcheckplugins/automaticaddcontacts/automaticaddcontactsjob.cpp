@@ -163,6 +163,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
         deleteLaterAndEmitSignal();
         return;
     }
+    mCollection = addressBook;
     addNextContact();
 }
 
@@ -181,8 +182,8 @@ void AutomaticAddContactsJob::slotResourceCreationDone(KJob *job)
     configureDialog->setAttribute(Qt::WA_DeleteOnClose);
 
     connect(configureDialog, &QDialog::accepted, this, [this]() {
+        // TODO update mCollection ? use select ? or fetch ?
         addNextContact();
-        deleteLaterAndEmitSignal();
     });
 
     connect(configureDialog, &QDialog::rejected, this, [this, instance = createJob->instance()]() {
