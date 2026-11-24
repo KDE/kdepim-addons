@@ -55,7 +55,11 @@ void SendmailConfigWidget::init()
         // Locate sendmail.
         // This is imperfect, because it shows the standard path if an empty path
         // is saved in the config.
-        d->ui.kcfg_host->setText(QStandardPaths::findExecutable(u"sendmail"_s));
+        QString sendmail = QStandardPaths::findExecutable(u"sendmail"_s);
+        if (sendmail.isEmpty()) {
+            sendmail = QStandardPaths::findExecutable(u"sendmail"_s, {u"/usr/sbin"_s, u"/usr/lib"_s, u"/usr/local/sbin"_s});
+        }
+        d->ui.kcfg_host->setText(sendmail);
     }
     connect(d->ui.kcfg_host->lineEdit(), &QLineEdit::textChanged, this, &SendmailConfigWidget::slotTextChanged);
     slotTextChanged(d->ui.kcfg_host->text());
@@ -76,6 +80,7 @@ void SendmailConfigWidget::apply()
 {
     Q_D(const SendmailConfigWidget);
     d->ui.kcfg_options->setText(d->ui.kcfg_options->text().trimmed());
+    d->ui.kcfg_host->setText(d->ui.kcfg_host->text().trimmed());
     TransportConfigWidget::apply();
 }
 
