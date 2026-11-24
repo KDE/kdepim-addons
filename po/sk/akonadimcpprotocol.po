@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-23 01:04+0000\n"
+"POT-Creation-Date: 2026-11-24 01:06+0000\n"
 "PO-Revision-Date: 2026-10-28 10:57+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -71,23 +71,27 @@ msgid "Creation failed: %1"
 msgstr "Vytvorenie zlyhalo: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, kde-format
-msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+msgid "Event “%1” created in calendar “%2” (item id: %3)"
 msgstr "Udalosť „%1“ bola vytvorená v kalendári „%2“ (ID položky: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, kde-format
-msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, fuzzy, kde-format
+#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+msgid "To-do “%1” created in calendar “%2” (item id: %3)"
 msgstr "Úloha „%1“ bola vytvorená v kalendári „%2“ (ID položky: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:104
-#, kde-format
-msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, fuzzy, kde-format
+#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+msgid "Journal entry “%1” created in calendar “%2” (item id: %3)"
 msgstr "Záznam denníka „%1“ bol vytvorený v kalendári „%2“ (ID položky: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:107
-#, kde-format
-msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, fuzzy, kde-format
+#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+msgid "“%1” created in calendar “%2” (item id: %3)"
 msgstr "„%1“ bolo vytvorené v kalendári „%2“ (ID položky: %3)"
 
 #: calendareventstool/calendareventstool.cpp:29
@@ -117,9 +121,13 @@ msgstr "Argument end musí byť po start"
 
 #: calendareventstool/calendareventstool.cpp:72
 #: freebusytool/freebusytool.cpp:62
-#, kde-format
-msgid "Period must not exceed %1 days"
-msgstr "Obdobie nesmie presiahnuť %1 dní"
+#, fuzzy, kde-format
+#| msgid "Period must not exceed %1 days"
+msgid "Period must not exceed %1 day"
+msgid_plural "Period must not exceed %1 days"
+msgstr[0] "Obdobie nesmie presiahnuť %1 dní"
+msgstr[1] "Obdobie nesmie presiahnuť %1 dní"
+msgstr[2] "Obdobie nesmie presiahnuť %1 dní"
 
 #: calendareventstool/calendareventstooljob.cpp:49
 #, kde-format
@@ -142,9 +150,12 @@ msgid "MCP tool asks confirmation"
 msgstr "Nástroj MCP žiada potvrdenie"
 
 #: common/toolbase.cpp:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Run \"%1\"?\n"
+#| "%2"
 msgid ""
-"Run \"%1\"?\n"
+"Run “%1”?\n"
 "%2"
 msgstr ""
 "Spustiť „%1“?\n"
@@ -214,8 +225,9 @@ msgid "Contact group search failed: %1"
 msgstr "Hľadanie skupiny kontaktov zlyhalo: %1"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
-#, kde-format
-msgid "No contact group found for \"%1\""
+#, fuzzy, kde-format
+#| msgid "No contact group found for \"%1\""
+msgid "No contact group found for “%1”"
 msgstr "Pre „%1“ sa nenašla žiadna skupina kontaktov"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
@@ -245,8 +257,9 @@ msgstr "Hľadanie kontaktov zlyhalo: %1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:56
 #: contactsearchtool/contactsearchtooljob.cpp:101
-#, kde-format
-msgid "No contact found for \"%1\""
+#, fuzzy, kde-format
+#| msgid "No contact found for \"%1\""
+msgid "No contact found for “%1”"
 msgstr "Pre „%1“ sa nenašiel žiadny kontakt"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:48
@@ -286,8 +299,9 @@ msgstr "Názov skupiny kontaktov je prázdny"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #: createidentitytool/createidentitytool.cpp:59
-#, kde-format
-msgid "Invalid email address \"%1\""
+#, fuzzy, kde-format
+#| msgid "Invalid email address \"%1\""
+msgid "Invalid email address “%1”"
 msgstr "Neplatná e-mailová adresa „%1“"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:84
@@ -336,13 +350,17 @@ msgid "Contact group creation failed: %1"
 msgstr "Vytvorenie skupiny kontaktov zlyhalo: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Contact group \"%2\" with %1 member created in address book \"%3\" (item "
+#| "id: %4)"
+#| msgid_plural ""
+#| "Contact group \"%2\" with %1 members created in address book \"%3\" (item "
+#| "id: %4)"
 msgid ""
-"Contact group \"%2\" with %1 member created in address book \"%3\" (item id: "
-"%4)"
+"Contact group “%2” with %1 member created in address book “%3” (item id: %4)"
 msgid_plural ""
-"Contact group \"%2\" with %1 members created in address book \"%3\" (item "
-"id: %4)"
+"Contact group “%2” with %1 members created in address book “%3” (item id: %4)"
 msgstr[0] ""
 "Skupina kontaktov „%2“ s %1 členom bola vytvorená v adresári „%3“ (ID "
 "položky: %4)"
@@ -366,8 +384,9 @@ msgstr "Argument phone_numbers musí byť pole reťazcov"
 
 #: createcontacttool/createcontacttool.cpp:85
 #: updatecontacttool/updatecontacttool.cpp:115
-#, kde-format
-msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+#, fuzzy, kde-format
+#| msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+msgid "Invalid birthday “%1”, expected format is YYYY-MM-DD"
 msgstr "Neplatný dátum narodenia „%1“, očakávaný formát je RRRR-MM-DD"
 
 #: createcontacttool/createcontacttool.cpp:100
@@ -391,8 +410,9 @@ msgid "Contact creation failed: %1"
 msgstr "Vytvorenie kontaktu zlyhalo: %1"
 
 #: createcontacttool/createcontacttooljob.cpp:96
-#, kde-format
-msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, fuzzy, kde-format
+#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+msgid "Contact “%1” created in address book “%2” (item id: %3)"
 msgstr "Kontakt „%1“ bol vytvorený v adresári „%2“ (ID položky: %3)"
 
 #: createeventtool/createeventtool.cpp:29
@@ -450,8 +470,9 @@ msgid "Argument email_aliases must be an array of strings"
 msgstr "Argument email_aliases musí byť pole reťazcov"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, kde-format
-msgid "Invalid email alias \"%1\""
+#, fuzzy, kde-format
+#| msgid "Invalid email alias \"%1\""
+msgid "Invalid email alias “%1”"
 msgstr "Neplatný e-mailový alias „%1“"
 
 #: createidentitytool/createidentitytool.cpp:79
@@ -471,8 +492,9 @@ msgid "Argument set_as_default must be a boolean"
 msgstr "Argument set_as_default musí byť logická hodnota"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, kde-format
-msgid "Identity \"%1\" created (uoid %2)"
+#, fuzzy, kde-format
+#| msgid "Identity \"%1\" created (uoid %2)"
+msgid "Identity “%1” created (uoid %2)"
 msgstr "Identita „%1“ bola vytvorená (uoid %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
@@ -546,20 +568,26 @@ msgid "Mail creation failed: %1"
 msgstr "Vytvorenie správy zlyhalo: %1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Identity %1 not found, the default identity was used. Mail \"%2\" created "
+#| "in folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
 msgid ""
-"Identity %1 not found, the default identity was used. Mail \"%2\" created in "
-"folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
+"Identity %1 not found, the default identity was used. Mail “%2” created in "
+"folder “%3” (item id: %4). It can be edited in KMail with mail_edit"
 msgstr ""
 "Identita %1 sa nenašla, použila sa predvolená identita. Správa „%2“ bola "
 "vytvorená v priečinku „%3“ (ID položky: %4). Dá sa upraviť v KMail pomocou "
 "mail_edit"
 
 #: createmailtool/createmailtooljob.cpp:155
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
+#| "KMail with mail_edit"
 msgid ""
-"Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-"KMail with mail_edit"
+"Mail “%1” created in folder “%2” (item id: %3). It can be edited in KMail "
+"with mail_edit"
 msgstr ""
 "Správa „%1“ bola vytvorená v priečinku „%2“ (ID položky: %3). Dá sa upraviť "
 "v KMail pomocou mail_edit"
@@ -597,8 +625,9 @@ msgid "Argument host must be a non-empty string"
 msgstr "Argument host musí byť neprázdny reťazec"
 
 #: createtransporttool/createtransporttool.cpp:95
-#, kde-format
-msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+#, fuzzy, kde-format
+#| msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+msgid "Invalid encryption “%1”, expected none, ssl or starttls"
 msgstr "Neplatné šifrovanie „%1“, očakáva sa none, ssl alebo starttls"
 
 #: createtransporttool/createtransporttool.cpp:108
@@ -612,13 +641,15 @@ msgid "Argument port must be an integer"
 msgstr "Argument port musí byť celé číslo"
 
 #: createtransporttool/createtransporttool.cpp:124
-#, kde-format
-msgid "Invalid authentication_type \"%1\", expected one of: %2"
+#, fuzzy, kde-format
+#| msgid "Invalid authentication_type \"%1\", expected one of: %2"
+msgid "Invalid authentication_type “%1”, expected one of: %2"
 msgstr "Neplatný authentication_type „%1“, očakáva sa jedna z hodnôt: %2"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, kde-format
-msgid "Transport \"%1\" created (id %2)"
+#, fuzzy, kde-format
+#| msgid "Transport \"%1\" created (id %2)"
+msgid "Transport “%1” created (id %2)"
 msgstr "Transport „%1“ bol vytvorený (ID %2)"
 
 #: deletecontacttool/deletecontacttool.cpp:25
@@ -660,8 +691,9 @@ msgid "Contact deletion failed: %1"
 msgstr "Odstránenie kontaktu zlyhalo: %1"
 
 #: deletecontacttool/deletecontacttooljob.cpp:72
-#, kde-format
-msgid "Contact \"%1\" deleted (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "Contact \"%1\" deleted (item id: %2)"
+msgid "Contact “%1” deleted (item id: %2)"
 msgstr "Kontakt „%1“ bol odstránený (ID položky: %2)"
 
 #: deleteincidencetool/deleteincidencetool.cpp:25
@@ -699,23 +731,27 @@ msgid "Incidence deletion failed: %1"
 msgstr "Odstránenie záznamu kalendára zlyhalo: %1"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:79
-#, kde-format
-msgid "Event \"%1\" deleted (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" deleted (item id: %2)"
+msgid "Event “%1” deleted (item id: %2)"
 msgstr "Udalosť „%1“ bola odstránená (ID položky: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:82
-#, kde-format
-msgid "To-do \"%1\" deleted (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "To-do \"%1\" deleted (item id: %2)"
+msgid "To-do “%1” deleted (item id: %2)"
 msgstr "Úloha „%1“ bola odstránená (ID položky: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:85
-#, kde-format
-msgid "Journal entry \"%1\" deleted (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "Journal entry \"%1\" deleted (item id: %2)"
+msgid "Journal entry “%1” deleted (item id: %2)"
 msgstr "Záznam denníka „%1“ bol odstránený (ID položky: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:88
-#, kde-format
-msgid "\"%1\" deleted (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "\"%1\" deleted (item id: %2)"
+msgid "“%1” deleted (item id: %2)"
 msgstr "„%1“ bolo odstránené (ID položky: %2)"
 
 #: editmailtool/editmailtool.cpp:24
@@ -879,8 +915,9 @@ msgid "(No subject)"
 msgstr "(Bez predmetu)"
 
 #: mailsearch/searchmailtooljob.cpp:136
-#, kde-format
-msgid "No mail found for \"%1\""
+#, fuzzy, kde-format
+#| msgid "No mail found for \"%1\""
+msgid "No mail found for “%1”"
 msgstr "Pre „%1“ sa nenašla žiadna správa"
 
 #: main.cpp:26 main.cpp:28
@@ -981,14 +1018,18 @@ msgid "Mail folder %1 not found"
 msgstr "Poštový priečinok %1 sa nenašiel"
 
 #: movemailtool/movemailtooljob.cpp:147
-#, kde-format
-msgid "Mail folder \"%1\" not found"
-msgstr "Poštový priečinok „%1“ sa nenašiel"
+#, fuzzy, kde-format
+#| msgid "Mail folder %1 not found"
+msgid "Mail folder “%1” not found"
+msgstr "Poštový priečinok %1 sa nenašiel"
 
 #: movemailtool/movemailtooljob.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Several mail folders match \"%1\", use the full path or folder_id:\n"
+#| "%2"
 msgid ""
-"Several mail folders match \"%1\", use the full path or folder_id:\n"
+"Several mail folders match “%1”, use the full path or folder_id:\n"
 "%2"
 msgstr ""
 "„%1“ zodpovedá viac poštových priečinkov, použite celú cestu alebo "
@@ -996,13 +1037,15 @@ msgstr ""
 "%2"
 
 #: movemailtool/movemailtooljob.cpp:165
-#, kde-format
-msgid "Mail %1 is already in folder \"%2\""
+#, fuzzy, kde-format
+#| msgid "Mail %1 is already in folder \"%2\""
+msgid "Mail %1 is already in folder “%2”"
 msgstr "Správa %1 už je v priečinku „%2“"
 
 #: movemailtool/movemailtooljob.cpp:169
-#, kde-format
-msgid "Mail folder \"%1\" is read-only"
+#, fuzzy, kde-format
+#| msgid "Mail folder \"%1\" is read-only"
+msgid "Mail folder “%1” is read-only"
 msgstr "Poštový priečinok „%1“ je iba na čítanie"
 
 #: movemailtool/movemailtooljob.cpp:180
@@ -1011,8 +1054,9 @@ msgid "Mail move failed: %1"
 msgstr "Presun správy zlyhal: %1"
 
 #: movemailtool/movemailtooljob.cpp:183
-#, kde-format
-msgid "Mail %1 moved to folder \"%2\""
+#, fuzzy, kde-format
+#| msgid "Mail %1 moved to folder \"%2\""
+msgid "Mail %1 moved to folder “%2”"
 msgstr "Správa %1 bola presunutá do priečinka „%2“"
 
 #: openmailtool/openmailtool.cpp:24
@@ -1159,8 +1203,9 @@ msgid "Contact modification failed: %1"
 msgstr "Úprava kontaktu zlyhala: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, kde-format
-msgid "Contact \"%1\" updated (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "Contact \"%1\" updated (item id: %2)"
+msgid "Contact “%1” updated (item id: %2)"
 msgstr "Kontakt „%1“ bol aktualizovaný (ID položky: %2)"
 
 #: updateincidencetool/updateincidencetool.cpp:31
@@ -1199,23 +1244,27 @@ msgid "Incidence modification failed: %1"
 msgstr "Úprava záznamu kalendára zlyhala: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, kde-format
-msgid "Event \"%1\" updated (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "Event \"%1\" updated (item id: %2)"
+msgid "Event “%1” updated (item id: %2)"
 msgstr "Udalosť „%1“ bola aktualizovaná (ID položky: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, kde-format
-msgid "To-do \"%1\" updated (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "To-do \"%1\" updated (item id: %2)"
+msgid "To-do “%1” updated (item id: %2)"
 msgstr "Úloha „%1“ bola aktualizovaná (ID položky: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, kde-format
-msgid "Journal entry \"%1\" updated (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "Journal entry \"%1\" updated (item id: %2)"
+msgid "Journal entry “%1” updated (item id: %2)"
 msgstr "Záznam denníka „%1“ bol aktualizovaný (ID položky: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, kde-format
-msgid "\"%1\" updated (item id: %2)"
+#, fuzzy, kde-format
+#| msgid "\"%1\" updated (item id: %2)"
+msgid "“%1” updated (item id: %2)"
 msgstr "„%1“ bolo aktualizované (ID položky: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:120
@@ -1248,3 +1297,6 @@ msgstr ""
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "Termín nesmie byť pred začiatkom"
+
+#~ msgid "Mail folder \"%1\" not found"
+#~ msgstr "Poštový priečinok „%1“ sa nenašiel"
