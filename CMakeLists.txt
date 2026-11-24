@@ -283,7 +283,7 @@ set_package_properties(
 )
 
 find_package(KPim6LdapWidgets ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF6TextTemplate CONFIG REQUIRED)
+find_package(KF6TextTemplate ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 if(TARGET KPim6::PimCommonActivities)
     option(OPTION_USE_PLASMA_ACTIVITIES "Activate plasma activities" ON)
