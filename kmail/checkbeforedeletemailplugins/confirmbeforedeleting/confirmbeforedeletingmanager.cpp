@@ -45,10 +45,12 @@ void ConfirmBeforeDeletingManager::loadRules()
         }
     }
 }
-
-QString defaultGroupName()
+namespace
+{
+[[nodiscard]] QString defaultGroupName()
 {
     return u"Confirm Deleting Rule"_s;
+}
 }
 
 QStringList ConfirmBeforeDeletingManager::ruleGroups(const KSharedConfig::Ptr &config) const
