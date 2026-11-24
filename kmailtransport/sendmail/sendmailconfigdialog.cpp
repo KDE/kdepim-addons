@@ -32,7 +32,6 @@ SendMailConfigDialog::SendMailConfigDialog(MailTransport::Transport *transport, 
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     mainLayout->addWidget(buttonBox);
 
-    connect(mOkButton, &QAbstractButton::clicked, this, &SendMailConfigDialog::okClicked);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SendMailConfigDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SendMailConfigDialog::reject);
     connect(mConfigWidget, &MailTransport::SendmailConfigWidget::enableButtonOk, this, &SendMailConfigDialog::slotEnabledOkButton);
