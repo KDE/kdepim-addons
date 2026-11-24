@@ -41,6 +41,8 @@ ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWi
 
     mLabelInfo->setObjectName("mLabelInfo"_L1);
     mLabelInfo->setWordWrap(true);
+    mLabelInfo->setTextFormat(Qt::PlainText);
+
     textLayout->addWidget(mLabelInfo, 0, Qt::AlignTop);
 
     mUseSameResultForOtherCheck->setObjectName("mUseSameResultForOtherCheck"_L1);
