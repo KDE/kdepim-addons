@@ -86,8 +86,8 @@ impl Adblock {
         if let Some(engine) = &self.blocker {
             if let Ok(request) = Request::new(url, source_url, request_type) {
                 let blocker_result = engine.check_network_request(&request);
-                adblock_debug!("Blocker input: {}, {}, {}", url, source_url, request_type);
-                adblock_debug!("Blocker result: {:?}", blocker_result);
+                // adblock_debug!("Blocker input: {}, {}, {}", url, source_url, request_type);
+                // adblock_debug!("Blocker result: {:?}", blocker_result);
 
                 return ffi::AdblockResult {
                     matched: blocker_result.matched,
