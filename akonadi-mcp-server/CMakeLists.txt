@@ -11,6 +11,8 @@ target_sources(
     akonadimcpprotocol
     PRIVATE
         main.cpp
+        akonadimcpcommandlineparser.h
+        akonadimcpcommandlineparser.cpp
         akonadimcpprotocolmanager.h
         akonadimcpprotocolmanager.cpp
         common/tooljobbase.h

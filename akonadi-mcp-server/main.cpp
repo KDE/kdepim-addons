@@ -6,6 +6,7 @@
 
 #include <QCoreApplication>
 
+#include "akonadimcpcommandlineparser.h"
 #include "akonadimcpprotocolmanager.h"
 #include <KAboutData>
 #include <KCrash>
@@ -35,16 +36,20 @@ int main(int argc, char **argv)
     KCrash::initialize();
 
     QCommandLineParser parser;
-    const QCommandLineOption urlOption(u"url"_s, i18nc("@info:shell", "Url where server listens."), u"url"_s);
-    parser.addOption(urlOption);
+    const AkonadiMcpCommandLineParser commandLineParser(&parser);
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
+    if (parser.isSet(AkonadiMcpCommandLineParser::optionParserFromEnum(AkonadiMcpCommandLineParser::OptionParser::ListTools))) {
+        const AkonadiMcpProtocolManager manager;
+        AkonadiMcpCommandLineParser::printTools(manager.tools());
+        return 0;
+    }
 
     const KDBusService service(KDBusService::Unique);
 
     AkonadiMcpProtocolManager manager;
-    if (!manager.start(parser.value(urlOption))) {
+    if (!manager.start(parser.value(AkonadiMcpCommandLineParser::optionParserFromEnum(AkonadiMcpCommandLineParser::OptionParser::Url)))) {
         return 0;
     }
     QDBusConnection::sessionBus().registerObject(u"/"_s, &manager, QDBusConnection::ExportScriptableSlots);
