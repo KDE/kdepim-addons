@@ -4,6 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
+#include "textautogeneratetextmcpprotocolcore_version.h"
 #include <QList>
 #include <QString>
 #include <cstdint>
@@ -24,7 +25,9 @@ public:
     ~AkonadiMcpCommandLineParser();
 
     [[nodiscard]] static QString optionParserFromEnum(OptionParser e);
+#if TEXTAUTOGENERATETEXTMCPPROTOCOLCORE_VERSION < QT_VERSION_CHECK(2, 3, 47)
     static void printTools(const QList<TextAutoGenerateTextMcpProtocolCore::McpProtocolTool> &lst);
+#endif
 
 private:
     void initializeCommandLine(QCommandLineParser *parser);

@@ -14,6 +14,9 @@
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QDBusConnection>
+#if TEXTAUTOGENERATETEXTMCPPROTOCOLCORE_VERSION >= QT_VERSION_CHECK(2, 3, 47)
+#include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerUtils>
+#endif
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -42,7 +45,11 @@ int main(int argc, char **argv)
     aboutData.processCommandLine(&parser);
     if (parser.isSet(AkonadiMcpCommandLineParser::optionParserFromEnum(AkonadiMcpCommandLineParser::OptionParser::ListTools))) {
         const AkonadiMcpProtocolManager manager;
+#if TEXTAUTOGENERATETEXTMCPPROTOCOLCORE_VERSION >= QT_VERSION_CHECK(2, 3, 47)
+        TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::printTools(manager.tools());
+#else
         AkonadiMcpCommandLineParser::printTools(manager.tools());
+#endif
         return 0;
     }
 
