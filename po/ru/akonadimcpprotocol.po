@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: akonadimcpprotocol\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-24 01:06+0000\n"
-"PO-Revision-Date: 2026-11-10 07:46+0200\n"
+"PO-Revision-Date: 2026-11-24 08:11+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -70,27 +70,23 @@ msgid "Creation failed: %1"
 msgstr "Не удалось создать: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event “%1” created in calendar “%2” (item id: %3)"
 msgstr "Событие «%1» создано в календаре «%2» (идентификатор элемента: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do “%1” created in calendar “%2” (item id: %3)"
 msgstr "Задача «%1» создана в календаре «%2» (идентификатор элемента: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:104
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry “%1” created in calendar “%2” (item id: %3)"
 msgstr ""
 "Запись дневника «%1» создана в календаре «%2» (идентификатор элемента: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "“%1” created in calendar “%2” (item id: %3)"
 msgstr "«%1» создано в календаре «%2» (идентификатор элемента: %3)"
 
@@ -122,14 +118,13 @@ msgstr "Аргумент end должен быть позже start"
 
 #: calendareventstool/calendareventstool.cpp:72
 #: freebusytool/freebusytool.cpp:62
-#, fuzzy, kde-format
-#| msgid "Period must not exceed %1 days"
+#, kde-format
 msgid "Period must not exceed %1 day"
 msgid_plural "Period must not exceed %1 days"
-msgstr[0] "Период не должен превышать %1 дн."
-msgstr[1] "Период не должен превышать %1 дн."
-msgstr[2] "Период не должен превышать %1 дн."
-msgstr[3] "Период не должен превышать %1 дн."
+msgstr[0] "Период не должен превышать %1 день"
+msgstr[1] "Период не должен превышать %1 дня"
+msgstr[2] "Период не должен превышать %1 дней"
+msgstr[3] "Период не должен превышать %1 день"
 
 #: calendareventstool/calendareventstooljob.cpp:49
 #, kde-format
@@ -152,10 +147,7 @@ msgid "MCP tool asks confirmation"
 msgstr "Инструмент MCP запрашивает подтверждение"
 
 #: common/toolbase.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Run \"%1\"?\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Run “%1”?\n"
 "%2"
@@ -227,8 +219,7 @@ msgid "Contact group search failed: %1"
 msgstr "Не удалось выполнить поиск группы контактов: %1"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
-#, fuzzy, kde-format
-#| msgid "No contact group found for \"%1\""
+#, kde-format
 msgid "No contact group found for “%1”"
 msgstr "Не найдено групп контактов по запросу «%1»"
 
@@ -259,8 +250,7 @@ msgstr "Не удалось выполнить поиск контактов: %1
 
 #: contactsearchtool/contactsearchtooljob.cpp:56
 #: contactsearchtool/contactsearchtooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "No contact found for \"%1\""
+#, kde-format
 msgid "No contact found for “%1”"
 msgstr "Не найдено контактов по запросу «%1»"
 
@@ -301,8 +291,7 @@ msgstr "Не указано название группы контактов"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #: createidentitytool/createidentitytool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email address “%1”"
 msgstr "Недопустимый адрес электронной почты «%1»"
 
@@ -353,13 +342,7 @@ msgid "Contact group creation failed: %1"
 msgstr "Не удалось создать группу контактов: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid ""
-#| "Contact group \"%2\" with %1 member created in address book \"%3\" (item "
-#| "id: %4)"
-#| msgid_plural ""
-#| "Contact group \"%2\" with %1 members created in address book \"%3\" (item "
-#| "id: %4)"
+#, kde-format
 msgid ""
 "Contact group “%2” with %1 member created in address book “%3” (item id: %4)"
 msgid_plural ""
@@ -390,8 +373,7 @@ msgstr "Аргумент phone_numbers должен быть массивом с
 
 #: createcontacttool/createcontacttool.cpp:85
 #: updatecontacttool/updatecontacttool.cpp:115
-#, fuzzy, kde-format
-#| msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+#, kde-format
 msgid "Invalid birthday “%1”, expected format is YYYY-MM-DD"
 msgstr "Недопустимая дата рождения «%1», ожидается формат ГГГГ-ММ-ДД"
 
@@ -416,8 +398,7 @@ msgid "Contact creation failed: %1"
 msgstr "Не удалось создать контакт: %1"
 
 #: createcontacttool/createcontacttooljob.cpp:96
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact “%1” created in address book “%2” (item id: %3)"
 msgstr "Контакт «%1» создан в адресной книге «%2» (идентификатор элемента: %3)"
 
@@ -476,8 +457,7 @@ msgid "Argument email_aliases must be an array of strings"
 msgstr "Аргумент email_aliases должен быть массивом строк"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email alias \"%1\""
+#, kde-format
 msgid "Invalid email alias “%1”"
 msgstr "Недопустимый псевдоним адреса электронной почты «%1»"
 
@@ -498,8 +478,7 @@ msgid "Argument set_as_default must be a boolean"
 msgstr "Аргумент set_as_default должен быть логическим значением"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Identity \"%1\" created (uoid %2)"
+#, kde-format
 msgid "Identity “%1” created (uoid %2)"
 msgstr "Профиль «%1» создан (uoid %2)"
 
@@ -575,10 +554,7 @@ msgid "Mail creation failed: %1"
 msgstr "Не удалось создать письмо: %1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, fuzzy, kde-format
-#| msgid ""
-#| "Identity %1 not found, the default identity was used. Mail \"%2\" created "
-#| "in folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
+#, kde-format
 msgid ""
 "Identity %1 not found, the default identity was used. Mail “%2” created in "
 "folder “%3” (item id: %4). It can be edited in KMail with mail_edit"
@@ -588,10 +564,7 @@ msgstr ""
 "помощью mail_edit"
 
 #: createmailtool/createmailtooljob.cpp:155
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Mail “%1” created in folder “%2” (item id: %3). It can be edited in KMail "
 "with mail_edit"
@@ -632,8 +605,7 @@ msgid "Argument host must be a non-empty string"
 msgstr "Аргумент host должен быть непустой строкой"
 
 #: createtransporttool/createtransporttool.cpp:95
-#, fuzzy, kde-format
-#| msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+#, kde-format
 msgid "Invalid encryption “%1”, expected none, ssl or starttls"
 msgstr ""
 "Некорректное значение encryption «%1», ожидается none, ssl или starttls"
@@ -649,14 +621,12 @@ msgid "Argument port must be an integer"
 msgstr "Аргумент port должен быть целым числом"
 
 #: createtransporttool/createtransporttool.cpp:124
-#, fuzzy, kde-format
-#| msgid "Invalid authentication_type \"%1\", expected one of: %2"
+#, kde-format
 msgid "Invalid authentication_type “%1”, expected one of: %2"
 msgstr "Некорректное значение authentication_type «%1», ожидается одно из: %2"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, fuzzy, kde-format
-#| msgid "Transport \"%1\" created (id %2)"
+#, kde-format
 msgid "Transport “%1” created (id %2)"
 msgstr "Метод отправки «%1» создан (идентификатор %2)"
 
@@ -699,8 +669,7 @@ msgid "Contact deletion failed: %1"
 msgstr "Не удалось удалить контакт: %1"
 
 #: deletecontacttool/deletecontacttooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Contact “%1” deleted (item id: %2)"
 msgstr "Контакт «%1» удалён (идентификатор элемента: %2)"
 
@@ -740,26 +709,22 @@ msgid "Incidence deletion failed: %1"
 msgstr "Не удалось удалить элемент календаря: %1"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:79
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Event “%1” deleted (item id: %2)"
 msgstr "Событие «%1» удалено (идентификатор элемента: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:82
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "To-do “%1” deleted (item id: %2)"
 msgstr "Задача «%1» удалена (идентификатор элемента: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:85
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” deleted (item id: %2)"
 msgstr "Запись дневника «%1» удалена (идентификатор элемента: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:88
-#, fuzzy, kde-format
-#| msgid "\"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "“%1” deleted (item id: %2)"
 msgstr "«%1» удалено (идентификатор элемента: %2)"
 
@@ -925,8 +890,7 @@ msgid "(No subject)"
 msgstr "(Без темы)"
 
 #: mailsearch/searchmailtooljob.cpp:136
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail found for “%1”"
 msgstr "Не найдено писем по запросу «%1»"
 
@@ -1028,16 +992,12 @@ msgid "Mail folder %1 not found"
 msgstr "Почтовая папка %1 не найдена"
 
 #: movemailtool/movemailtooljob.cpp:147
-#, fuzzy, kde-format
-#| msgid "Mail folder %1 not found"
+#, kde-format
 msgid "Mail folder “%1” not found"
-msgstr "Почтовая папка %1 не найдена"
+msgstr "Почтовая папка «%1» не найдена"
 
 #: movemailtool/movemailtooljob.cpp:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "Several mail folders match \"%1\", use the full path or folder_id:\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Several mail folders match “%1”, use the full path or folder_id:\n"
 "%2"
@@ -1047,14 +1007,12 @@ msgstr ""
 "%2"
 
 #: movemailtool/movemailtooljob.cpp:165
-#, fuzzy, kde-format
-#| msgid "Mail %1 is already in folder \"%2\""
+#, kde-format
 msgid "Mail %1 is already in folder “%2”"
 msgstr "Письмо %1 уже находится в папке «%2»"
 
 #: movemailtool/movemailtooljob.cpp:169
-#, fuzzy, kde-format
-#| msgid "Mail folder \"%1\" is read-only"
+#, kde-format
 msgid "Mail folder “%1” is read-only"
 msgstr "Почтовая папка «%1» доступна только для чтения"
 
@@ -1064,8 +1022,7 @@ msgid "Mail move failed: %1"
 msgstr "Не удалось переместить письмо: %1"
 
 #: movemailtool/movemailtooljob.cpp:183
-#, fuzzy, kde-format
-#| msgid "Mail %1 moved to folder \"%2\""
+#, kde-format
 msgid "Mail %1 moved to folder “%2”"
 msgstr "Письмо %1 перемещено в папку «%2»"
 
@@ -1215,8 +1172,7 @@ msgid "Contact modification failed: %1"
 msgstr "Не удалось изменить контакт: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Contact “%1” updated (item id: %2)"
 msgstr "Контакт «%1» изменён (идентификатор элемента: %2)"
 
@@ -1256,26 +1212,22 @@ msgid "Incidence modification failed: %1"
 msgstr "Не удалось изменить элемент календаря: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Event “%1” updated (item id: %2)"
 msgstr "Событие «%1» изменено (идентификатор элемента: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "To-do “%1” updated (item id: %2)"
 msgstr "Задача «%1» изменена (идентификатор элемента: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” updated (item id: %2)"
 msgstr "Запись дневника «%1» изменена (идентификатор элемента: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" updated (item id: %2)"
+#, kde-format
 msgid "“%1” updated (item id: %2)"
 msgstr "«%1» изменено (идентификатор элемента: %2)"
 

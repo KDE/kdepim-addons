@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-24 01:06+0000\n"
-"PO-Revision-Date: 2026-11-11 09:39-0300\n"
+"PO-Revision-Date: 2026-11-24 05:24-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.3\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -70,28 +70,24 @@ msgid "Creation failed: %1"
 msgstr "Falha ao criar: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event “%1” created in calendar “%2” (item id: %3)"
-msgstr "Evento \"%1\" criado no calendário \"%2\" (ID do item: %3)"
+msgstr "Evento “%1“ criado no calendário “%2“ (ID do item: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do “%1” created in calendar “%2” (item id: %3)"
-msgstr "Tarefa \"%1\" criada no calendário \"%2\" (ID do item: %3)"
+msgstr "Tarefa “%1“ criada no calendário “%2“ (ID do item: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:104
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry “%1” created in calendar “%2” (item id: %3)"
-msgstr "Diário \"%1\" criado no calendário \"%2\" (ID do item: %3)"
+msgstr "Diário “%1“ criado no calendário “%2“ (ID do item: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "“%1” created in calendar “%2” (item id: %3)"
-msgstr "\"%1\" criado no calendário \"%2\" (ID do item: %3)"
+msgstr "“%1“ criado no calendário “%2“ (ID do item: %3)"
 
 #: calendareventstool/calendareventstool.cpp:29
 #, kde-format
@@ -120,11 +116,10 @@ msgstr "O argumento 'end' deve ser posterior ao 'start'"
 
 #: calendareventstool/calendareventstool.cpp:72
 #: freebusytool/freebusytool.cpp:62
-#, fuzzy, kde-format
-#| msgid "Period must not exceed %1 days"
+#, kde-format
 msgid "Period must not exceed %1 day"
 msgid_plural "Period must not exceed %1 days"
-msgstr[0] "O período não deve exceder %1 dias"
+msgstr[0] "O período não deve exceder %1 dia"
 msgstr[1] "O período não deve exceder %1 dias"
 
 #: calendareventstool/calendareventstooljob.cpp:49
@@ -148,15 +143,12 @@ msgid "MCP tool asks confirmation"
 msgstr "A ferramenta MCP solicita confirmação"
 
 #: common/toolbase.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Run \"%1\"?\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Run “%1”?\n"
 "%2"
 msgstr ""
-"Executar \"%1\"?\n"
+"Executar “%1“?\n"
 "%2"
 
 #: common/toolbase.cpp:117
@@ -223,10 +215,9 @@ msgid "Contact group search failed: %1"
 msgstr "Falha ao pesquisar grupo de contatos: %1"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
-#, fuzzy, kde-format
-#| msgid "No contact group found for \"%1\""
+#, kde-format
 msgid "No contact group found for “%1”"
-msgstr "Nenhum grupo de contatos encontrado para \"%1\""
+msgstr "Nenhum grupo de contatos encontrado para “%1“"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
 #, kde-format
@@ -255,10 +246,9 @@ msgstr "Falha ao pesquisar contato: %1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:56
 #: contactsearchtool/contactsearchtooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "No contact found for \"%1\""
+#, kde-format
 msgid "No contact found for “%1”"
-msgstr "Nenhum contato encontrado para \"%1\""
+msgstr "Nenhum contato encontrado para “%1“"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:48
 #, kde-format
@@ -270,25 +260,25 @@ msgstr "Criar grupo de contatos"
 #: updatecontacttool/updatecontacttool.cpp:70
 #, kde-format
 msgid "Argument name must be a non-empty string"
-msgstr "O argumento \"name\" deve ser uma string não vazia"
+msgstr "O argumento “name“ deve ser uma string não vazia"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:79
 #, kde-format
 msgid "Argument contact_ids must be an array of positive integers"
-msgstr "O argumento \"contact_ids\" deve ser uma matriz de números inteiros"
+msgstr "O argumento “contact_ids“ deve ser uma matriz de números inteiros"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:85
 #: createcontacttool/createcontacttool.cpp:62
 #: updatecontacttool/updatecontacttool.cpp:80
 #, kde-format
 msgid "Argument emails must be an array of strings"
-msgstr "O argumento \"emails\" deve ser um array de strings"
+msgstr "O argumento “emails“ deve ser um array de strings"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:94
 #: createcontacttool/createcontacttool.cpp:96
 #, kde-format
 msgid "Argument address_book_id must be a positive integer"
-msgstr "O argumento \"address_book_id\" deve ser um número inteiro positivo"
+msgstr "O argumento “address_book_id“ deve ser um número inteiro positivo"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:49
 #, kde-format
@@ -297,10 +287,9 @@ msgstr "Nome do grupo de contatos está vazio"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #: createidentitytool/createidentitytool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email address “%1”"
-msgstr "Endereço de e-mail \"%1\" inválido"
+msgstr "Endereço de e-mail “%1“ inválido"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:84
 #: deletecontacttool/deletecontacttooljob.cpp:47
@@ -349,23 +338,17 @@ msgid "Contact group creation failed: %1"
 msgstr "Falha ao criar grupo de contatos: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid ""
-#| "Contact group \"%2\" with %1 member created in address book \"%3\" (item "
-#| "id: %4)"
-#| msgid_plural ""
-#| "Contact group \"%2\" with %1 members created in address book \"%3\" (item "
-#| "id: %4)"
+#, kde-format
 msgid ""
 "Contact group “%2” with %1 member created in address book “%3” (item id: %4)"
 msgid_plural ""
 "Contact group “%2” with %1 members created in address book “%3” (item id: %4)"
 msgstr[0] ""
-"Grupo de contato \"%2\" com %1 membro criado no livro de endereços "
-"\"%3\" (ID do item: %4)"
+"Grupo de contato “%2“ com %1 membro criado no livro de endereços “%3“ (ID do "
+"item: %4)"
 msgstr[1] ""
-"Grupo de contato \"%2\" com %1 membros criado no livro de endereços "
-"\"%3\" (ID do item: %4)"
+"Grupo de contato “%2“ com %1 membros criado no livro de endereços “%3“ (ID "
+"do item: %4)"
 
 #: createcontacttool/createcontacttool.cpp:26
 #, kde-format
@@ -376,19 +359,18 @@ msgstr "Criar contato"
 #: updatecontacttool/updatecontacttool.cpp:90
 #, kde-format
 msgid "Argument phone_numbers must be an array of strings"
-msgstr "O argumento \"phone_numbers\" deve ser um array de strings"
+msgstr "O argumento “phone_numbers“ deve ser um array de strings"
 
 #: createcontacttool/createcontacttool.cpp:85
 #: updatecontacttool/updatecontacttool.cpp:115
-#, fuzzy, kde-format
-#| msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+#, kde-format
 msgid "Invalid birthday “%1”, expected format is YYYY-MM-DD"
-msgstr "Data de nascimento inválida \"%1\"; o formato esperado é AAAA-MM-DD"
+msgstr "Data de nascimento inválida “%1“; o formato esperado é AAAA-MM-DD"
 
 #: createcontacttool/createcontacttool.cpp:100
 #, kde-format
 msgid "Argument address_book_id must be an integer"
-msgstr "O argumento \"address_book_id\" deve ser um número inteiro"
+msgstr "O argumento “address_book_id“ deve ser um número inteiro"
 
 #: createcontacttool/createcontacttooljob.cpp:40
 #, kde-format
@@ -406,10 +388,9 @@ msgid "Contact creation failed: %1"
 msgstr "Falha ao criar contato: %1"
 
 #: createcontacttool/createcontacttooljob.cpp:96
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact “%1” created in address book “%2” (item id: %3)"
-msgstr "Contato \"%1\" criado no livro de endereços \"%2\" (ID do item: %3)"
+msgstr "Contato “%1“ criado no livro de endereços “%2“ (ID do item: %3)"
 
 #: createeventtool/createeventtool.cpp:29
 #, kde-format
@@ -429,28 +410,27 @@ msgstr "O argumento do resumo deve ser uma string não vazia"
 #, kde-format
 msgid "Arguments start and end must both be dates or both be date-times"
 msgstr ""
-"Os argumentos \"start\" e \"end\" devem ambos ser datas ou ambos ser data-"
-"horas"
+"Os argumentos “start“ e “end“ devem ambos ser datas ou ambos ser data-horas"
 
 #: createeventtool/createeventtool.cpp:81
 #: updateincidencetool/updateincidencetooljob.cpp:173
 #, kde-format
 msgid "Argument end must not be before start"
-msgstr "O argumento \"end\" não deve estar antes do \"start\""
+msgstr "O argumento “end“ não deve estar antes do “start“"
 
 #: createeventtool/createeventtool.cpp:102
 #: createjournaltool/createjournaltool.cpp:76
 #: createtodotool/createtodotool.cpp:91
 #, kde-format
 msgid "Argument calendar_id must be a positive integer"
-msgstr "O argumento \"calendar_id\" deve ser um número inteiro positivo"
+msgstr "O argumento “calendar_id“ deve ser um número inteiro positivo"
 
 #: createeventtool/createeventtool.cpp:106
 #: createjournaltool/createjournaltool.cpp:80
 #: createtodotool/createtodotool.cpp:95
 #, kde-format
 msgid "Argument calendar_id must be an integer"
-msgstr "O argumento \"calendar_id\" deve ser um número inteiro"
+msgstr "O argumento “calendar_id“ deve ser um número inteiro"
 
 #: createidentitytool/createidentitytool.cpp:28
 #, kde-format
@@ -460,18 +440,17 @@ msgstr "Criar identidade"
 #: createidentitytool/createidentitytool.cpp:55
 #, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "O argumento \"email\" deve ser uma string não vazia"
+msgstr "O argumento “email“ deve ser uma string não vazia"
 
 #: createidentitytool/createidentitytool.cpp:65
 #, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "O argumento \"email_aliases\" deve ser um array de strings"
+msgstr "O argumento “email_aliases“ deve ser um array de strings"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email alias \"%1\""
+#, kde-format
 msgid "Invalid email alias “%1”"
-msgstr "Apelido de e-mail \"%1\" inválido"
+msgstr "Apelido de e-mail “%1“ inválido"
 
 #: createidentitytool/createidentitytool.cpp:79
 #, kde-format
@@ -481,19 +460,18 @@ msgstr "Nenhum transporte de e-mail encontrado com id %1"
 #: createidentitytool/createidentitytool.cpp:84
 #, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "O argumento \"transport_id\" deve ser um número inteiro"
+msgstr "O argumento “transport_id“ deve ser um número inteiro"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
 #, kde-format
 msgid "Argument set_as_default must be a boolean"
-msgstr "O argumento \"set_as_default\" deve ser um booleano"
+msgstr "O argumento “set_as_default“ deve ser um booleano"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Identity \"%1\" created (uoid %2)"
+#, kde-format
 msgid "Identity “%1” created (uoid %2)"
-msgstr "Identidade \"%1\" criada (uoid %2)"
+msgstr "Identidade “%1“ criada (uoid %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
 #, kde-format
@@ -503,8 +481,7 @@ msgstr "Criar entrada de diário"
 #: createjournaltool/createjournaltool.cpp:58
 #, kde-format
 msgid "Argument date must be an ISO 8601 date or date-time"
-msgstr ""
-"O argumento \"date\" deve ser uma data ou data-hora no formato ISO 8601"
+msgstr "O argumento “date“ deve ser uma data ou data-hora no formato ISO 8601"
 
 #: createmailtool/createmailtool.cpp:24
 #, kde-format
@@ -514,37 +491,37 @@ msgstr "Criar e-mail"
 #: createmailtool/createmailtool.cpp:46
 #, kde-format
 msgid "Argument subject must be a non-empty string"
-msgstr "O argumento \"subject\" deve ser uma string não vazia"
+msgstr "O argumento “subject“ deve ser uma string não vazia"
 
 #: createmailtool/createmailtool.cpp:52
 #, kde-format
 msgid "Argument to must be an array of strings"
-msgstr "O argumento \"to\" deve ser um array de strings"
+msgstr "O argumento “to“ deve ser um array de strings"
 
 #: createmailtool/createmailtool.cpp:57
 #, kde-format
 msgid "Argument cc must be an array of strings"
-msgstr "O argumento \"cc\" deve ser um array de strings"
+msgstr "O argumento “cc“ deve ser um array de strings"
 
 #: createmailtool/createmailtool.cpp:62
 #, kde-format
 msgid "Argument bcc must be an array of strings"
-msgstr "O argumento \"bcc\" deve ser um array de strings"
+msgstr "O argumento “bcc“ deve ser um array de strings"
 
 #: createmailtool/createmailtool.cpp:68
 #, kde-format
 msgid "Argument body must be a string"
-msgstr "O argumento \"body\" deve ser uma string"
+msgstr "O argumento “body“ deve ser uma string"
 
 #: createmailtool/createmailtool.cpp:77
 #, kde-format
 msgid "Argument identity must be a positive integer"
-msgstr "O argumento \"identity\" deve ser um número inteiro positivo"
+msgstr "O argumento “identity“ deve ser um número inteiro positivo"
 
 #: createmailtool/createmailtool.cpp:82
 #, kde-format
 msgid "Argument identity must be an integer"
-msgstr "O argumento \"identity\" deve ser um número inteiro"
+msgstr "O argumento “identity“ deve ser um número inteiro"
 
 #: createmailtool/createmailtooljob.cpp:66
 #, kde-format
@@ -567,29 +544,23 @@ msgid "Mail creation failed: %1"
 msgstr "Falha ao criar e-mail: %1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, fuzzy, kde-format
-#| msgid ""
-#| "Identity %1 not found, the default identity was used. Mail \"%2\" created "
-#| "in folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
+#, kde-format
 msgid ""
 "Identity %1 not found, the default identity was used. Mail “%2” created in "
 "folder “%3” (item id: %4). It can be edited in KMail with mail_edit"
 msgstr ""
 "Identidade %1 não encontrada; a identidade padrão foi utilizada. Mensagem "
-"\"%2\" criada na pasta \"%3\" (ID do item: %4). Ela pode ser editada no "
-"KMail usando o mail_edit."
+"“%2“ criada na pasta “%3“ (ID do item: %4). Ela pode ser editada no KMail "
+"usando o mail_edit."
 
 #: createmailtool/createmailtooljob.cpp:155
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Mail “%1” created in folder “%2” (item id: %3). It can be edited in KMail "
 "with mail_edit"
 msgstr ""
-"E-mail \"%1\" criado na pasta \"%2\" (ID do item: %3). Pode ser editado no "
-"KMail com o \"mail_edit\""
+"E-mail “%1“ criado na pasta “%2“ (ID do item: %3). Pode ser editado no KMail "
+"com o “mail_edit“"
 
 #: createtodotool/createtodotool.cpp:30
 #, kde-format
@@ -600,18 +571,18 @@ msgstr "Criar tarefa"
 #: updateincidencetool/updateincidencetool.cpp:129
 #, kde-format
 msgid "Argument due must be an ISO 8601 date or date-time"
-msgstr "O argumento \"due\" deve ser uma data ou data-hora no formato ISO 8601"
+msgstr "O argumento “due“ deve ser uma data ou data-hora no formato ISO 8601"
 
 #: createtodotool/createtodotool.cpp:73
 #: updateincidencetool/updateincidencetool.cpp:143
 #, kde-format
 msgid "Argument priority must be an integer between %1 and %2"
-msgstr "O argumento \"priority\" deve ser um número inteiro entre %1 e %2"
+msgstr "O argumento “priority“ deve ser um número inteiro entre %1 e %2"
 
 #: createtodotool/createtodotool.cpp:78
 #, kde-format
 msgid "Argument priority must be an integer"
-msgstr "O argumento \"priority\" deve ser um número inteiro"
+msgstr "O argumento “priority“ deve ser um número inteiro"
 
 #: createtransporttool/createtransporttool.cpp:59
 #, kde-format
@@ -621,36 +592,32 @@ msgstr "Criar transporte de e-mail"
 #: createtransporttool/createtransporttool.cpp:84
 #, kde-format
 msgid "Argument host must be a non-empty string"
-msgstr "O argumento \"host\" deve ser uma string não vazia"
+msgstr "O argumento “host“ deve ser uma string não vazia"
 
 #: createtransporttool/createtransporttool.cpp:95
-#, fuzzy, kde-format
-#| msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+#, kde-format
 msgid "Invalid encryption “%1”, expected none, ssl or starttls"
-msgstr ""
-"Criptografia inválida \"%1\"; esperava-se \"none\", \"ssl\" ou \"starttls\""
+msgstr "Criptografia inválida “%1“; esperava-se “none“, “ssl“ ou “starttls“"
 
 #: createtransporttool/createtransporttool.cpp:108
 #, kde-format
 msgid "Argument port must be between 1 and 65535"
-msgstr "O argumento \"port\" deve estar entre 1 e 65535"
+msgstr "O argumento “port“ deve estar entre 1 e 65535"
 
 #: createtransporttool/createtransporttool.cpp:113
 #, kde-format
 msgid "Argument port must be an integer"
-msgstr "O argumento \"port\" deve ser um número inteiro"
+msgstr "O argumento “port“ deve ser um número inteiro"
 
 #: createtransporttool/createtransporttool.cpp:124
-#, fuzzy, kde-format
-#| msgid "Invalid authentication_type \"%1\", expected one of: %2"
+#, kde-format
 msgid "Invalid authentication_type “%1”, expected one of: %2"
-msgstr "authentication_type \"%1\" inválido; esperava-se um dos seguintes: %2"
+msgstr "authentication_type “%1“ inválido; esperava-se um dos seguintes: %2"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, fuzzy, kde-format
-#| msgid "Transport \"%1\" created (id %2)"
+#, kde-format
 msgid "Transport “%1” created (id %2)"
-msgstr "Transporte \"%1\" criado (ID %2)"
+msgstr "Transporte “%1“ criado (ID %2)"
 
 #: deletecontacttool/deletecontacttool.cpp:25
 #, kde-format
@@ -666,7 +633,7 @@ msgstr "Excluir contato"
 #: updateincidencetool/updateincidencetool.cpp:65
 #, kde-format
 msgid "Argument id must be an integer"
-msgstr "O argumento \"id\" deve ser um número inteiro"
+msgstr "O argumento “id“ deve ser um número inteiro"
 
 #: deletecontacttool/deletecontacttool.cpp:47
 #: deleteincidencetool/deleteincidencetool.cpp:48
@@ -677,13 +644,13 @@ msgstr "O argumento \"id\" deve ser um número inteiro"
 #: updateincidencetool/updateincidencetool.cpp:70
 #, kde-format
 msgid "Argument id must be a positive integer"
-msgstr "O argumento \"id\" deve ser um número inteiro positivo"
+msgstr "O argumento “id“ deve ser um número inteiro positivo"
 
 #: deletecontacttool/deletecontacttooljob.cpp:33
 #: updatecontacttool/updatecontacttooljob.cpp:44
 #, kde-format
 msgid "Contact id must be a positive integer"
-msgstr "O \"id\" do contato deve ser um número inteiro positivo"
+msgstr "O “id“ do contato deve ser um número inteiro positivo"
 
 #: deletecontacttool/deletecontacttooljob.cpp:69
 #, kde-format
@@ -691,10 +658,9 @@ msgid "Contact deletion failed: %1"
 msgstr "Falha ao excluir contato: %1"
 
 #: deletecontacttool/deletecontacttooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Contact “%1” deleted (item id: %2)"
-msgstr "Contato \"%1\" excluído (ID do item: %2)"
+msgstr "Contato “%1“ excluído (ID do item: %2)"
 
 #: deleteincidencetool/deleteincidencetool.cpp:25
 #, kde-format
@@ -705,7 +671,7 @@ msgstr "Excluir ocorrência"
 #: updateincidencetool/updateincidencetooljob.cpp:51
 #, kde-format
 msgid "Incidence id must be a positive integer"
-msgstr "O \"id\" da ocorrência deve ser um número inteiro positivo"
+msgstr "O “id“ da ocorrência deve ser um número inteiro positivo"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:48
 #: updateincidencetool/updateincidencetooljob.cpp:66
@@ -731,28 +697,24 @@ msgid "Incidence deletion failed: %1"
 msgstr "Falha ao excluir ocorrência: %1"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:79
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Event “%1” deleted (item id: %2)"
-msgstr "Evento \"%1\" excluído (ID do item: %2)"
+msgstr "Evento “%1“ excluído (ID do item: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:82
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "To-do “%1” deleted (item id: %2)"
-msgstr "Tarefa \"%1\" excluído (ID do item: %2)"
+msgstr "Tarefa “%1“ excluído (ID do item: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:85
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” deleted (item id: %2)"
-msgstr "Entrada de diário \"%1\" excluída (ID do item: %2)"
+msgstr "Entrada de diário “%1“ excluída (ID do item: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:88
-#, fuzzy, kde-format
-#| msgid "\"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "“%1” deleted (item id: %2)"
-msgstr "\"%1\" excluído (ID do item: %2)"
+msgstr "“%1“ excluído (ID do item: %2)"
 
 #: editmailtool/editmailtool.cpp:24
 #, kde-format
@@ -765,7 +727,7 @@ msgstr "Editar e-mail"
 #: openmailtool/openmailtooljob.cpp:32
 #, kde-format
 msgid "Mail id must be a positive integer"
-msgstr "O \"id\" do e-mail deve ser um número inteiro positivo"
+msgstr "O “id“ do e-mail deve ser um número inteiro positivo"
 
 #: editmailtool/editmailtooljob.cpp:53 markmailtool/markmailtooljob.cpp:56
 #: movemailtool/movemailtooljob.cpp:84
@@ -786,7 +748,7 @@ msgid ""
 "or mail_reply instead"
 msgstr ""
 "O e-mail %1 não está armazenado em uma pasta de rascunhos e não pode ser "
-"editado. Use \"mail_open\" ou \"mail_reply\""
+"editado. Use “mail_open“ ou “mail_reply“"
 
 #: editmailtool/editmailtooljob.cpp:101
 #, kde-format
@@ -813,7 +775,7 @@ msgstr "Encaminhar mensagem"
 #: forwardmailtool/forwardmailtool.cpp:64
 #, kde-format
 msgid "Argument mode must be one of: inline, attachment"
-msgstr "O argumento \"mode\" deve ser um dos seguintes: inline, attachment"
+msgstr "O argumento “mode“ deve ser um dos seguintes: inline, attachment"
 
 #: forwardmailtool/forwardmailtooljob.cpp:49
 #, kde-format
@@ -897,17 +859,17 @@ msgstr "Campo de e-mail desconhecido: %1"
 #: mailsearch/searchmailtool.cpp:71
 #, kde-format
 msgid "Argument field must be a string"
-msgstr "O argumento \"field\" deve ser uma string"
+msgstr "O argumento “field“ deve ser uma string"
 
 #: mailsearch/searchmailtool.cpp:79
 #, kde-format
 msgid "Argument limit must be an integer between 1 and %1"
-msgstr "O argumento \"limit\" deve ser um número inteiro entre 1 e %1"
+msgstr "O argumento “limit“ deve ser um número inteiro entre 1 e %1"
 
 #: mailsearch/searchmailtool.cpp:84
 #, kde-format
 msgid "Argument limit must be an integer"
-msgstr "O argumento \"limit\" deve ser um número inteiro"
+msgstr "O argumento “limit“ deve ser um número inteiro"
 
 #: mailsearch/searchmailtooljob.cpp:97
 #, kde-format
@@ -920,10 +882,9 @@ msgid "(No subject)"
 msgstr "(Sem assunto)"
 
 #: mailsearch/searchmailtooljob.cpp:136
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail found for “%1”"
-msgstr "Nenhum e-mail encontrado para \"%1\""
+msgstr "Nenhum e-mail encontrado para “%1“"
 
 #: main.cpp:26 main.cpp:28
 #, kde-format
@@ -960,17 +921,17 @@ msgstr "Marcar e-mail"
 #: markmailtool/markmailtool.cpp:70
 #, kde-format
 msgid "Argument read must be a boolean"
-msgstr "O argumento \"read\" deve ser um booleano"
+msgstr "O argumento “read“ deve ser um booleano"
 
 #: markmailtool/markmailtool.cpp:76
 #, kde-format
 msgid "Argument important must be a boolean"
-msgstr "O argumento \"important\" deve ser um booleano"
+msgstr "O argumento “important“ deve ser um booleano"
 
 #: markmailtool/markmailtool.cpp:80
 #, kde-format
 msgid "At least one of read or important must be given"
-msgstr "É necessário fornecer pelo menos um \"read\" ou \"important\""
+msgstr "É necessário fornecer pelo menos um “read“ ou “important“"
 
 #: markmailtool/markmailtooljob.cpp:75
 #, kde-format
@@ -990,22 +951,22 @@ msgstr "Mover e-mail"
 #: movemailtool/movemailtool.cpp:60
 #, kde-format
 msgid "Argument folder must be a string"
-msgstr "O argumento \"folder\" deve ser uma string"
+msgstr "O argumento “folder“ deve ser uma string"
 
 #: movemailtool/movemailtool.cpp:64
 #, kde-format
 msgid "Argument folder must not be empty"
-msgstr "O argumento \"folder\" não pode estar vazio"
+msgstr "O argumento “folder“ não pode estar vazio"
 
 #: movemailtool/movemailtool.cpp:73
 #, kde-format
 msgid "Argument folder_id must be a positive integer"
-msgstr "O argumento \"folder_id\" deve ser um número inteiro positivo"
+msgstr "O argumento “folder_id“ deve ser um número inteiro positivo"
 
 #: movemailtool/movemailtool.cpp:80 movemailtool/movemailtooljob.cpp:71
 #, kde-format
 msgid "Exactly one of folder or folder_id must be given"
-msgstr "O argumento \"folder\" ou \"folder_id\" deve ser fornecido"
+msgstr "O argumento “folder“ ou “folder_id“ deve ser fornecido"
 
 #: movemailtool/movemailtooljob.cpp:94
 #, kde-format
@@ -1023,35 +984,29 @@ msgid "Mail folder %1 not found"
 msgstr "Pasta de e-mail %1 não encontrada"
 
 #: movemailtool/movemailtooljob.cpp:147
-#, fuzzy, kde-format
-#| msgid "Mail folder %1 not found"
+#, kde-format
 msgid "Mail folder “%1” not found"
 msgstr "Pasta de e-mail %1 não encontrada"
 
 #: movemailtool/movemailtooljob.cpp:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "Several mail folders match \"%1\", use the full path or folder_id:\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Several mail folders match “%1”, use the full path or folder_id:\n"
 "%2"
 msgstr ""
-"Várias pastas de e-mail correspondem a \"%1\"; utilize o caminho completo ou "
-"o \"folder_id\":\n"
+"Várias pastas de e-mail correspondem a “%1“; utilize o caminho completo ou o "
+"“folder_id“:\n"
 "%2"
 
 #: movemailtool/movemailtooljob.cpp:165
-#, fuzzy, kde-format
-#| msgid "Mail %1 is already in folder \"%2\""
+#, kde-format
 msgid "Mail %1 is already in folder “%2”"
-msgstr "O e-mail %1 já está na pasta \"%2\""
+msgstr "O e-mail %1 já está na pasta “%2“"
 
 #: movemailtool/movemailtooljob.cpp:169
-#, fuzzy, kde-format
-#| msgid "Mail folder \"%1\" is read-only"
+#, kde-format
 msgid "Mail folder “%1” is read-only"
-msgstr "A pasta de e-mail \"%1\" é somente leitura"
+msgstr "A pasta de e-mail “%1“ é somente leitura"
 
 #: movemailtool/movemailtooljob.cpp:180
 #, kde-format
@@ -1059,10 +1014,9 @@ msgid "Mail move failed: %1"
 msgstr "Falha ao mover e-mail: %1"
 
 #: movemailtool/movemailtooljob.cpp:183
-#, fuzzy, kde-format
-#| msgid "Mail %1 moved to folder \"%2\""
+#, kde-format
 msgid "Mail %1 moved to folder “%2”"
-msgstr "E-mail %1 movido para a pasta \"%2\""
+msgstr "E-mail %1 movido para a pasta “%2“"
 
 #: openmailtool/openmailtool.cpp:24
 #, kde-format
@@ -1097,8 +1051,8 @@ msgstr "Responder e-mail"
 #, kde-format
 msgid "Argument strategy must be one of: smart, author, list, all"
 msgstr ""
-"A estratégia de argumentação deve ser uma das seguintes: \"smart\", \"author"
-"\", \"list\", \"all\""
+"A estratégia de argumentação deve ser uma das seguintes: “smart“, “author“, "
+"“list“, “all“"
 
 #: replymailtool/replymailtooljob.cpp:38
 #, kde-format
@@ -1106,8 +1060,8 @@ msgid ""
 "Mail id must be a positive integer and reply strategy must be smart, author, "
 "list or all"
 msgstr ""
-"O \"id\" do e-mail deve ser um número inteiro positivo, e a estratégia de "
-"resposta deve ser \"smart\", \"author\", \"list\" ou \"all\"."
+"O “id“ do e-mail deve ser um número inteiro positivo, e a estratégia de "
+"resposta deve ser “smart“, “author“, “list“ ou “all“."
 
 #: replymailtool/replymailtooljob.cpp:50
 #, kde-format
@@ -1159,12 +1113,12 @@ msgstr "Próximos aniversários"
 #: upcomingbirthdaystool/upcomingbirthdaystool.cpp:45
 #, kde-format
 msgid "Argument days must be an integer between 1 and %1"
-msgstr "O argumento \"days\" deve ser um número inteiro entre 1 e %1"
+msgstr "O argumento “days“ deve ser um número inteiro entre 1 e %1"
 
 #: upcomingbirthdaystool/upcomingbirthdaystool.cpp:50
 #, kde-format
 msgid "Argument days must be an integer"
-msgstr "O argumento \"days\" deve ser um número inteiro"
+msgstr "O argumento “days“ deve ser um número inteiro"
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
 #, kde-format
@@ -1186,17 +1140,17 @@ msgstr "Atualizar contato"
 #: updatecontacttool/updatecontacttool.cpp:97
 #, kde-format
 msgid "Argument organization must be a string"
-msgstr "O argumento \"organization\" deve ser uma string"
+msgstr "O argumento “organization“ deve ser uma string"
 
 #: updatecontacttool/updatecontacttool.cpp:102
 #, kde-format
 msgid "Argument note must be a string"
-msgstr "O argumento \"note\" deve ser uma string"
+msgstr "O argumento “note“ deve ser uma string"
 
 #: updatecontacttool/updatecontacttool.cpp:108
 #, kde-format
 msgid "Argument birthday must be a string"
-msgstr "O argumento \"birthday\" deve ser uma string"
+msgstr "O argumento “birthday“ deve ser uma string"
 
 #: updatecontacttool/updatecontacttool.cpp:122
 #: updatecontacttool/updatecontacttooljob.cpp:46
@@ -1212,10 +1166,9 @@ msgid "Contact modification failed: %1"
 msgstr "Falha ao modificar contato: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Contact “%1” updated (item id: %2)"
-msgstr "Contato \"%1\" atualizado (ID do item: %2)"
+msgstr "Contato “%1“ atualizado (ID do item: %2)"
 
 #: updateincidencetool/updateincidencetool.cpp:31
 #, kde-format
@@ -1225,29 +1178,28 @@ msgstr "Atualizar ocorrência"
 #: updateincidencetool/updateincidencetool.cpp:87
 #, kde-format
 msgid "Argument description must be a string"
-msgstr "O argumento \"description\" deve ser uma string"
+msgstr "O argumento “description“ deve ser uma string"
 
 #: updateincidencetool/updateincidencetool.cpp:92
 #, kde-format
 msgid "Argument location must be a string"
-msgstr "O argumento \"location\" deve ser uma string"
+msgstr "O argumento “location“ deve ser uma string"
 
 #: updateincidencetool/updateincidencetool.cpp:119
 #, kde-format
 msgid "Argument due must be a string"
-msgstr "O argumento \"due\" deve ser uma string"
+msgstr "O argumento “due“ deve ser uma string"
 
 #: updateincidencetool/updateincidencetool.cpp:133
 #, kde-format
 msgid "Arguments start and due must both be dates or both be date-times"
 msgstr ""
-"Os argumentos \"start\" e \"due\" devem ambos ser datas ou ambos ser data-"
-"horas"
+"Os argumentos “start“ e “due“ devem ambos ser datas ou ambos ser data-horas"
 
 #: updateincidencetool/updateincidencetool.cpp:153
 #, kde-format
 msgid "Argument completed must be a boolean"
-msgstr "O argumento \"completed\" deve ser um booleano"
+msgstr "O argumento “completed“ deve ser um booleano"
 
 #: updateincidencetool/updateincidencetooljob.cpp:95
 #, kde-format
@@ -1255,62 +1207,58 @@ msgid "Incidence modification failed: %1"
 msgstr "Falha ao modificar ocorrência: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Event “%1” updated (item id: %2)"
-msgstr "Evento \"%1\" atualizado (ID do item: %2)"
+msgstr "Evento “%1“ atualizado (ID do item: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "To-do “%1” updated (item id: %2)"
-msgstr "Tarefa \"%1\" atualizada (ID do item: %2)"
+msgstr "Tarefa “%1“ atualizada (ID do item: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” updated (item id: %2)"
-msgstr "Diário \"%1\" atualizado (ID do item: %2)"
+msgstr "Diário “%1“ atualizado (ID do item: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" updated (item id: %2)"
+#, kde-format
 msgid "“%1” updated (item id: %2)"
-msgstr "\"%1\" atualizado (ID do item: %2)"
+msgstr "“%1“ atualizado (ID do item: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:120
 #, kde-format
 msgid "Argument end is only valid for events"
-msgstr "O argumento \"end\" somente é válido para eventos"
+msgstr "O argumento “end“ somente é válido para eventos"
 
 #: updateincidencetool/updateincidencetooljob.cpp:123
 #, kde-format
 msgid "Arguments due, priority and completed are only valid for to-dos"
 msgstr ""
-"Os argumentos \"due\", \"priority\" e \"completed\" somente são válidos para "
+"Os argumentos “due“, “priority“ e “completed“ somente são válidos para "
 "tarefas"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
 #, kde-format
 msgid "Argument end must be a date for an all-day event"
-msgstr "O argumento \"end\" deve ser uma data para um evento de dia inteiro"
+msgstr "O argumento “end“ deve ser uma data para um evento de dia inteiro"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
 #, kde-format
 msgid "Argument end must be a date-time for a timed event"
-msgstr "O argumento \"end\" deve ser uma data-hora para um evento com hora"
+msgstr "O argumento “end“ deve ser uma data-hora para um evento com hora"
 
 #: updateincidencetool/updateincidencetooljob.cpp:201
 #, kde-format
 msgid "Start and due dates of a to-do must both be dates or both be date-times"
 msgstr ""
-"As datas dos argumentos \"start\" e \"due\" devem ambas ser datas ou ambas "
-"data-horas"
+"As datas dos argumentos “start“ e “due“ devem ambas ser datas ou ambas data-"
+"horas"
 
 #: updateincidencetool/updateincidencetooljob.cpp:204
 #, kde-format
 msgid "Due date must not be before start"
-msgstr "O argumento \"due\" não deve estar antes do \"start\""
+msgstr "O argumento “due“ não deve estar antes do “start“"
 
 #~ msgid "Mail folder \"%1\" not found"
 #~ msgstr "Pasta de e-mail \"%1\" não encontrada"

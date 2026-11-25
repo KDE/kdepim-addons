@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-24 01:06+0000\n"
-"PO-Revision-Date: 2026-11-21 08:22+0200\n"
+"PO-Revision-Date: 2026-11-24 12:41+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
@@ -630,10 +630,9 @@ msgid "Argument priority must be an integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
 #: createtransporttool/createtransporttool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Create Mail"
+#, kde-format
 msgid "Create Mail Transport"
-msgstr "יצירת דוא״ל"
+msgstr "יצירת תעבורת דוא״ל"
 
 #: createtransporttool/createtransporttool.cpp:84
 #, fuzzy, kde-format
@@ -940,8 +939,7 @@ msgid "(No subject)"
 msgstr "(אין נושא)"
 
 #: mailsearch/searchmailtooljob.cpp:136
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail found for “%1”"
 msgstr "לא נמצא דוא״ל בחיפוש אחר „%1”"
 
@@ -1013,16 +1011,14 @@ msgid "Argument folder must be a string"
 msgstr "הארגומנט folder (תיקייה) חייב להיות מחרוזת"
 
 #: movemailtool/movemailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument end must be after start"
+#, kde-format
 msgid "Argument folder must not be empty"
-msgstr "הארגומנט end (סוף) חייב להיות לפני ארגומנט start (התחלה)"
+msgstr "הארגומנט folder (תיקייה) לא יכול להישאר ריק"
 
 #: movemailtool/movemailtool.cpp:73
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument folder_id must be a positive integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט folder_id (מזהה תיקייה) חייב להיות מספר שלם"
 
 #: movemailtool/movemailtool.cpp:80 movemailtool/movemailtooljob.cpp:71
 #, kde-format
@@ -1035,22 +1031,19 @@ msgid "Item %1 is not a mail"
 msgstr ""
 
 #: movemailtool/movemailtooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "Drafts folder fetch failed: %1"
+#, kde-format
 msgid "Mail folder fetch failed: %1"
-msgstr "משיכת תיקיית טיוטות נכשלה: %1"
+msgstr "משיכת תיקיית הדוא״ל נכשלה: %1"
 
 #: movemailtool/movemailtooljob.cpp:124
-#, fuzzy, kde-format
-#| msgid "No Drafts folder found"
+#, kde-format
 msgid "Mail folder %1 not found"
-msgstr "לא נמצאה תיקיית טיוטות"
+msgstr "תיקיית הדוא״ל %1 לא נמצאה"
 
 #: movemailtool/movemailtooljob.cpp:147
-#, fuzzy, kde-format
-#| msgid "No Drafts folder found"
+#, kde-format
 msgid "Mail folder “%1” not found"
-msgstr "לא נמצאה תיקיית טיוטות"
+msgstr "תיקיית הדוא״ל „%1” לא נמצאה"
 
 #: movemailtool/movemailtooljob.cpp:156
 #, kde-format
@@ -1065,16 +1058,14 @@ msgid "Mail %1 is already in folder “%2”"
 msgstr ""
 
 #: movemailtool/movemailtooljob.cpp:169
-#, fuzzy, kde-format
-#| msgid "No Drafts folder found"
+#, kde-format
 msgid "Mail folder “%1” is read-only"
-msgstr "לא נמצאה תיקיית טיוטות"
+msgstr "תיקיית הדוא״ל „%1” היא לקריאה בלבד"
 
 #: movemailtool/movemailtooljob.cpp:180
-#, fuzzy, kde-format
-#| msgid "Mail search failed: %1"
+#, kde-format
 msgid "Mail move failed: %1"
-msgstr "חיפוש דוא״ל נכשל: %1"
+msgstr "העברת דוא״ל נכשלה: %1"
 
 #: movemailtool/movemailtooljob.cpp:183
 #, kde-format
@@ -1189,28 +1180,24 @@ msgstr[2] ""
 msgstr[3] ""
 
 #: updatecontacttool/updatecontacttool.cpp:26
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Update Contact"
-msgstr "חיפוש באנשי הקשר"
+msgstr "עדכון איש קשר"
 
 #: updatecontacttool/updatecontacttool.cpp:97
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument organization must be a string"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט organization (ארגון) חייב להיות מספר שלם"
 
 #: updatecontacttool/updatecontacttool.cpp:102
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument note must be a string"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט note (הערה) חייב להיות מספר שלם"
 
 #: updatecontacttool/updatecontacttool.cpp:108
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument birthday must be a string"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט birthday (יום הולדת) חייב להיות מספר שלם"
 
 #: updatecontacttool/updatecontacttool.cpp:122
 #: updatecontacttool/updatecontacttooljob.cpp:46
@@ -1221,16 +1208,14 @@ msgid "No field to update"
 msgstr ""
 
 #: updatecontacttool/updatecontacttooljob.cpp:84
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact modification failed: %1"
-msgstr "יצירת איש קשר נכשלה: %1"
+msgstr "שינוי איש קשר נכשל: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Contact “%1” updated (item id: %2)"
-msgstr "האירוע „%1” עודכן (מזהה פריט: %2)"
+msgstr "איש הקשר „%1” עודכן (מזהה פריט: %2)"
 
 #: updateincidencetool/updateincidencetool.cpp:31
 #, kde-format
@@ -1238,22 +1223,19 @@ msgid "Update Incidence"
 msgstr ""
 
 #: updateincidencetool/updateincidencetool.cpp:87
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument description must be a string"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט description (תיאור) חייב להיות מספר שלם"
 
 #: updateincidencetool/updateincidencetool.cpp:92
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument location must be a string"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט location (מקום) חייב להיות מספר שלם"
 
 #: updateincidencetool/updateincidencetool.cpp:119
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument due must be a string"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט due (מועד הסיום) חייב להיות מספר שלם"
 
 #: updateincidencetool/updateincidencetool.cpp:133
 #, fuzzy, kde-format
@@ -1268,40 +1250,34 @@ msgid "Argument completed must be a boolean"
 msgstr "הארגומנט include_completed חייב להיות בוליאני"
 
 #: updateincidencetool/updateincidencetooljob.cpp:95
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Incidence modification failed: %1"
-msgstr "יצירת איש קשר נכשלה: %1"
+msgstr "שינוי מופע נכשל: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Event “%1” updated (item id: %2)"
 msgstr "האירוע „%1” עודכן (מזהה פריט: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "To-do “%1” updated (item id: %2)"
 msgstr "המטלה „%1” עודכנה (מזהה פריט: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” updated (item id: %2)"
 msgstr "רשומת היומן „%1” עודכנה (מזהה פריט: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" updated (item id: %2)"
+#, kde-format
 msgid "“%1” updated (item id: %2)"
-msgstr "„%1” עודכנה (מזהה פריט: %2)"
+msgstr "„%1” עודכן (מזהה פריט: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:120
-#, fuzzy, kde-format
-#| msgid "Argument end must be after start"
+#, kde-format
 msgid "Argument end is only valid for events"
-msgstr "הארגומנט end (סוף) חייב להיות לפני ארגומנט start (התחלה)"
+msgstr "הארגומנט end (סוף) תקף רק על אירועים"
 
 #: updateincidencetool/updateincidencetooljob.cpp:123
 #, kde-format
@@ -1309,16 +1285,14 @@ msgid "Arguments due, priority and completed are only valid for to-dos"
 msgstr ""
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date for an all-day event"
-msgstr "הארגומנט end (סוף) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
+msgstr "הארגומנט end (סוף) חייב להיות תאריך באירוע של יום שלם"
 
 #: updateincidencetool/updateincidencetooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid "Argument end must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument end must be a date-time for a timed event"
-msgstr "הארגומנט end (סוף) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
+msgstr "הארגומנט end (סוף) חייב להיות תאריך-שעה לאירוע קצוב בזמן"
 
 #: updateincidencetool/updateincidencetooljob.cpp:201
 #, fuzzy, kde-format
@@ -1327,7 +1301,6 @@ msgid "Start and due dates of a to-do must both be dates or both be date-times"
 msgstr "הארגומנט start (התחלה) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
 
 #: updateincidencetool/updateincidencetooljob.cpp:204
-#, fuzzy, kde-format
-#| msgid "Argument end must be after start"
+#, kde-format
 msgid "Due date must not be before start"
-msgstr "הארגומנט end (סוף) חייב להיות לפני ארגומנט start (התחלה)"
+msgstr "תאריך הסוף לא יכול להיות לפני ההתחלה"

@@ -70,28 +70,24 @@ msgid "Creation failed: %1"
 msgstr "创建失败：%1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event “%1” created in calendar “%2” (item id: %3)"
-msgstr "事件“%1”已创建到日历“%2”(项目 ID：%3)"
+msgstr ""
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do “%1” created in calendar “%2” (item id: %3)"
-msgstr "待办事项“%1”已创建到日历“%2”(项目 ID：%3)"
+msgstr ""
 
 #: calendarcommon/createincidencetooljob.cpp:104
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry “%1” created in calendar “%2” (item id: %3)"
-msgstr "日志项目“%1”已创建到日历“%2”(项目 ID：%3)"
+msgstr ""
 
 #: calendarcommon/createincidencetooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "“%1” created in calendar “%2” (item id: %3)"
-msgstr "“%1”已创建到日历“%2”(项目 ID：%3)"
+msgstr ""
 
 #: calendareventstool/calendareventstool.cpp:29
 #, kde-format
@@ -120,11 +116,10 @@ msgstr "参数 end 必须位于开始位置之后"
 
 #: calendareventstool/calendareventstool.cpp:72
 #: freebusytool/freebusytool.cpp:62
-#, fuzzy, kde-format
-#| msgid "Period must not exceed %1 days"
+#, kde-format
 msgid "Period must not exceed %1 day"
 msgid_plural "Period must not exceed %1 days"
-msgstr[0] "周期不得超过 %1 天"
+msgstr[0] ""
 
 #: calendareventstool/calendareventstooljob.cpp:49
 #, kde-format
@@ -217,10 +212,9 @@ msgid "Contact group search failed: %1"
 msgstr "联系人组查找失败：%1"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
-#, fuzzy, kde-format
-#| msgid "No contact group found for \"%1\""
+#, kde-format
 msgid "No contact group found for “%1”"
-msgstr "没有找到符合“%1”的联系人组"
+msgstr ""
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:80
 #, kde-format
@@ -249,10 +243,9 @@ msgstr "联系人查找失败：%1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:56
 #: contactsearchtool/contactsearchtooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "No contact found for \"%1\""
+#, kde-format
 msgid "No contact found for “%1”"
-msgstr "没有找到符合“%1”的联系人"
+msgstr ""
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:48
 #, kde-format
@@ -291,10 +284,9 @@ msgstr "联系人组名为空"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #: createidentitytool/createidentitytool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email address “%1”"
-msgstr "无效的电子邮件地址“%1”"
+msgstr ""
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:84
 #: deletecontacttool/deletecontacttooljob.cpp:47
@@ -342,18 +334,12 @@ msgid "Contact group creation failed: %1"
 msgstr "联系人组创建失败：%1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid ""
-#| "Contact group \"%2\" with %1 member created in address book \"%3\" (item "
-#| "id: %4)"
-#| msgid_plural ""
-#| "Contact group \"%2\" with %1 members created in address book \"%3\" (item "
-#| "id: %4)"
+#, kde-format
 msgid ""
 "Contact group “%2” with %1 member created in address book “%3” (item id: %4)"
 msgid_plural ""
 "Contact group “%2” with %1 members created in address book “%3” (item id: %4)"
-msgstr[0] "联系人组“%2”(含 %1 名成员) 已创建到地址簿“%3”中 (项目 ID：%4)"
+msgstr[0] ""
 
 #: createcontacttool/createcontacttool.cpp:26
 #, kde-format
@@ -368,10 +354,9 @@ msgstr "参数 phone_numbers 必须是字符串数组"
 
 #: createcontacttool/createcontacttool.cpp:85
 #: updatecontacttool/updatecontacttool.cpp:115
-#, fuzzy, kde-format
-#| msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+#, kde-format
 msgid "Invalid birthday “%1”, expected format is YYYY-MM-DD"
-msgstr "无效生日“%1”，预期格式是 YYYYY-MM-DD"
+msgstr ""
 
 #: createcontacttool/createcontacttool.cpp:100
 #, kde-format
@@ -394,10 +379,9 @@ msgid "Contact creation failed: %1"
 msgstr "联系人创建失败：%1"
 
 #: createcontacttool/createcontacttooljob.cpp:96
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact “%1” created in address book “%2” (item id: %3)"
-msgstr "联系人“%1”已创建到地址簿“%2”(项目 ID：%3)"
+msgstr ""
 
 #: createeventtool/createeventtool.cpp:29
 #, kde-format
@@ -454,10 +438,9 @@ msgid "Argument email_aliases must be an array of strings"
 msgstr ""
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email alias “%1”"
-msgstr "无效的电子邮件地址“%1”"
+msgstr ""
 
 #: createidentitytool/createidentitytool.cpp:79
 #, kde-format
@@ -551,28 +534,18 @@ msgid "Mail creation failed: %1"
 msgstr "邮件创建失败：%1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Identity %1 not found, the default identity was used. Mail “%2” created in "
 "folder “%3” (item id: %4). It can be edited in KMail with mail_edit"
 msgstr ""
-"邮件“%1”已创建到文件夹“%2”(项目 ID：%3)。它可以通过 mail_edit 命令在 KMail 中"
-"编辑"
 
 #: createmailtool/createmailtooljob.cpp:155
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Mail “%1” created in folder “%2” (item id: %3). It can be edited in KMail "
 "with mail_edit"
 msgstr ""
-"邮件“%1”已创建到文件夹“%2”(项目 ID：%3)。它可以通过 mail_edit 命令在 KMail 中"
-"编辑"
 
 #: createtodotool/createtodotool.cpp:30
 #, kde-format
@@ -670,10 +643,9 @@ msgid "Contact deletion failed: %1"
 msgstr "联系人删除失败：%1"
 
 #: deletecontacttool/deletecontacttooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Contact “%1” deleted (item id: %2)"
-msgstr "联系人“%1”已删除 (项目 ID：%2)"
+msgstr ""
 
 #: deleteincidencetool/deleteincidencetool.cpp:25
 #, kde-format
@@ -710,28 +682,24 @@ msgid "Incidence deletion failed: %1"
 msgstr "事件删除失败：%1"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:79
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Event “%1” deleted (item id: %2)"
-msgstr "事件“%1”已删除 (项目 ID：%2)"
+msgstr ""
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:82
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "To-do “%1” deleted (item id: %2)"
-msgstr "待办事项“%1”已删除 (项目 ID：%2)"
+msgstr ""
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:85
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” deleted (item id: %2)"
-msgstr "日志条目“%1”已删除 (项目 ID：%2)"
+msgstr ""
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:88
-#, fuzzy, kde-format
-#| msgid "\"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "“%1” deleted (item id: %2)"
-msgstr "“%1”已删除 (项目 ID：%2)"
+msgstr ""
 
 #: editmailtool/editmailtool.cpp:24
 #, kde-format
@@ -894,10 +862,9 @@ msgid "(No subject)"
 msgstr "(无主题)"
 
 #: mailsearch/searchmailtooljob.cpp:136
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail found for “%1”"
-msgstr "没有找到符合“%1”的邮件"
+msgstr ""
 
 #: main.cpp:26 main.cpp:28
 #, kde-format
@@ -997,34 +964,26 @@ msgid "Mail folder %1 not found"
 msgstr "邮件文件夹 %1 无法找到"
 
 #: movemailtool/movemailtooljob.cpp:147
-#, fuzzy, kde-format
-#| msgid "Mail folder %1 not found"
+#, kde-format
 msgid "Mail folder “%1” not found"
-msgstr "邮件文件夹 %1 无法找到"
+msgstr ""
 
 #: movemailtool/movemailtooljob.cpp:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "Several mail folders match \"%1\", use the full path or folder_id:\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Several mail folders match “%1”, use the full path or folder_id:\n"
 "%2"
 msgstr ""
-"多个邮件文件夹匹配“%1”，请使用完整路径或 folder_id：\n"
-"%2"
 
 #: movemailtool/movemailtooljob.cpp:165
-#, fuzzy, kde-format
-#| msgid "Mail %1 is already in folder \"%2\""
+#, kde-format
 msgid "Mail %1 is already in folder “%2”"
-msgstr "邮件 %1 已经在文件夹“%2”中"
+msgstr ""
 
 #: movemailtool/movemailtooljob.cpp:169
-#, fuzzy, kde-format
-#| msgid "Mail folder \"%1\" is read-only"
+#, kde-format
 msgid "Mail folder “%1” is read-only"
-msgstr "邮件文件夹“%1”为只读"
+msgstr ""
 
 #: movemailtool/movemailtooljob.cpp:180
 #, kde-format
@@ -1032,10 +991,9 @@ msgid "Mail move failed: %1"
 msgstr "邮件移动失败：%1"
 
 #: movemailtool/movemailtooljob.cpp:183
-#, fuzzy, kde-format
-#| msgid "Mail %1 moved to folder \"%2\""
+#, kde-format
 msgid "Mail %1 moved to folder “%2”"
-msgstr "邮件 %1 已移动到文件夹“%2”"
+msgstr ""
 
 #: openmailtool/openmailtool.cpp:24
 #, kde-format
@@ -1175,10 +1133,9 @@ msgid "Contact modification failed: %1"
 msgstr "联系人修改失败：%1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Contact “%1” updated (item id: %2)"
-msgstr "联系人“%1”已更新 (项目 ID：%2)"
+msgstr ""
 
 #: updateincidencetool/updateincidencetool.cpp:31
 #, kde-format
@@ -1216,28 +1173,24 @@ msgid "Incidence modification failed: %1"
 msgstr "事件修改失败：%1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Event “%1” updated (item id: %2)"
-msgstr "事件“%1”已更新 (项目 ID：%2)"
+msgstr ""
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "To-do “%1” updated (item id: %2)"
-msgstr "待办事项“%1”已更新 (项目 ID：%2)"
+msgstr ""
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” updated (item id: %2)"
-msgstr "日志条目“%1”已更新 (项目 ID：%2)"
+msgstr ""
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" updated (item id: %2)"
+#, kde-format
 msgid "“%1” updated (item id: %2)"
-msgstr "“%1”已更新 (项目 ID：%2)"
+msgstr ""
 
 #: updateincidencetool/updateincidencetooljob.cpp:120
 #, kde-format
@@ -1268,6 +1221,3 @@ msgstr "待办事项的开始日期和截止日期必须同时为日期，或同
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "截止日期不得早于开始日期"
-
-#~ msgid "Mail folder \"%1\" not found"
-#~ msgstr "邮件文件夹“%1”无法找到"

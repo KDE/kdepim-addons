@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-24 01:06+0000\n"
-"PO-Revision-Date: 2026-11-12 13:22+0100\n"
+"PO-Revision-Date: 2026-11-24 09:23+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -73,28 +73,24 @@ msgid "Creation failed: %1"
 msgstr "Ha fallat la creació: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event “%1” created in calendar “%2” (item id: %3)"
 msgstr "S'ha creat l'esdeveniment «%1» en el calendari «%2» (ID d'element: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do “%1” created in calendar “%2” (item id: %3)"
 msgstr ""
 "S'ha creat la tasca pendent «%1» en el calendari «%2» (ID d'element: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:104
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry “%1” created in calendar “%2” (item id: %3)"
 msgstr ""
 "S'ha creat l'entrada de diari «%1» en el calendari «%2» (ID d'element: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "“%1” created in calendar “%2” (item id: %3)"
 msgstr "S'ha creat «%1» en el calendari «%2» (ID d'element: %3)"
 
@@ -125,11 +121,10 @@ msgstr "L'argument «final» cal que sigui després de l'inici"
 
 #: calendareventstool/calendareventstool.cpp:72
 #: freebusytool/freebusytool.cpp:62
-#, fuzzy, kde-format
-#| msgid "Period must not exceed %1 days"
+#, kde-format
 msgid "Period must not exceed %1 day"
 msgid_plural "Period must not exceed %1 days"
-msgstr[0] "El període no pot excedir de %1 dies"
+msgstr[0] "El període no pot excedir d'%1 dia"
 msgstr[1] "El període no pot excedir de %1 dies"
 
 #: calendareventstool/calendareventstooljob.cpp:49
@@ -153,10 +148,7 @@ msgid "MCP tool asks confirmation"
 msgstr "L'eina MCP demana confirmació"
 
 #: common/toolbase.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Run \"%1\"?\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Run “%1”?\n"
 "%2"
@@ -228,8 +220,7 @@ msgid "Contact group search failed: %1"
 msgstr "Ha fallat la cerca del grup de contactes: %1"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
-#, fuzzy, kde-format
-#| msgid "No contact group found for \"%1\""
+#, kde-format
 msgid "No contact group found for “%1”"
 msgstr "No s'ha trobat cap grup de contactes per a «%1»"
 
@@ -260,8 +251,7 @@ msgstr "Ha fallat la cerca del contacte: %1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:56
 #: contactsearchtool/contactsearchtooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "No contact found for \"%1\""
+#, kde-format
 msgid "No contact found for “%1”"
 msgstr "No s'ha trobat cap contacte per a «%1»"
 
@@ -302,8 +292,7 @@ msgstr "El nom del grup de contactes està buit"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #: createidentitytool/createidentitytool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email address “%1”"
 msgstr "Adreça de correu no vàlida «%1»"
 
@@ -354,13 +343,7 @@ msgid "Contact group creation failed: %1"
 msgstr "Ha fallat la creació del grup de contactes: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid ""
-#| "Contact group \"%2\" with %1 member created in address book \"%3\" (item "
-#| "id: %4)"
-#| msgid_plural ""
-#| "Contact group \"%2\" with %1 members created in address book \"%3\" (item "
-#| "id: %4)"
+#, kde-format
 msgid ""
 "Contact group “%2” with %1 member created in address book “%3” (item id: %4)"
 msgid_plural ""
@@ -385,8 +368,7 @@ msgstr "L'argument «phone_numbers» ha de ser una matriu de cadenes"
 
 #: createcontacttool/createcontacttool.cpp:85
 #: updatecontacttool/updatecontacttool.cpp:115
-#, fuzzy, kde-format
-#| msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+#, kde-format
 msgid "Invalid birthday “%1”, expected format is YYYY-MM-DD"
 msgstr "L'aniversari «%1» no és vàlid, s'esperava un format AAAA-MM-DD"
 
@@ -411,8 +393,7 @@ msgid "Contact creation failed: %1"
 msgstr "Ha fallat la creació del contacte: %1"
 
 #: createcontacttool/createcontacttooljob.cpp:96
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact “%1” created in address book “%2” (item id: %3)"
 msgstr ""
 "El contacte «%1» s'ha creat a la llibreta d'adreces «%2» (ID d'element: %3)"
@@ -473,8 +454,7 @@ msgid "Argument email_aliases must be an array of strings"
 msgstr "L'argument «email_aliases» ha de ser una matriu de cadenes"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email alias \"%1\""
+#, kde-format
 msgid "Invalid email alias “%1”"
 msgstr "Àlies de correu no vàlid «%1»"
 
@@ -495,8 +475,7 @@ msgid "Argument set_as_default must be a boolean"
 msgstr "L'argument «set_as_default» ha de ser un booleà"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Identity \"%1\" created (uoid %2)"
+#, kde-format
 msgid "Identity “%1” created (uoid %2)"
 msgstr "S'ha creat la identitat «%1» (UOID %2)"
 
@@ -571,10 +550,7 @@ msgid "Mail creation failed: %1"
 msgstr "Ha fallat la creació del correu: %1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, fuzzy, kde-format
-#| msgid ""
-#| "Identity %1 not found, the default identity was used. Mail \"%2\" created "
-#| "in folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
+#, kde-format
 msgid ""
 "Identity %1 not found, the default identity was used. Mail “%2” created in "
 "folder “%3” (item id: %4). It can be edited in KMail with mail_edit"
@@ -584,10 +560,7 @@ msgstr ""
 "editar en el KMail amb «mail_edit»"
 
 #: createmailtool/createmailtooljob.cpp:155
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Mail “%1” created in folder “%2” (item id: %3). It can be edited in KMail "
 "with mail_edit"
@@ -628,8 +601,7 @@ msgid "Argument host must be a non-empty string"
 msgstr "L'argument «host» ha de ser una cadena no buida"
 
 #: createtransporttool/createtransporttool.cpp:95
-#, fuzzy, kde-format
-#| msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+#, kde-format
 msgid "Invalid encryption “%1”, expected none, ssl or starttls"
 msgstr "Encriptatge «%1» no vàlid, s'esperava «none», «ssl» o «starttls»"
 
@@ -644,14 +616,12 @@ msgid "Argument port must be an integer"
 msgstr "L'argument «port» ha de ser un enter"
 
 #: createtransporttool/createtransporttool.cpp:124
-#, fuzzy, kde-format
-#| msgid "Invalid authentication_type \"%1\", expected one of: %2"
+#, kde-format
 msgid "Invalid authentication_type “%1”, expected one of: %2"
 msgstr "«authentication_type» «%1» no vàlid, s'esperava un d'entre: %2"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, fuzzy, kde-format
-#| msgid "Transport \"%1\" created (id %2)"
+#, kde-format
 msgid "Transport “%1” created (id %2)"
 msgstr "S'ha creat el transport «%1» (ID %2)"
 
@@ -694,8 +664,7 @@ msgid "Contact deletion failed: %1"
 msgstr "Ha fallat la supressió del contacte: %1"
 
 #: deletecontacttool/deletecontacttooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Contact “%1” deleted (item id: %2)"
 msgstr "S'ha suprimit el contacte «%1» (ID d'element: %2)"
 
@@ -734,26 +703,22 @@ msgid "Incidence deletion failed: %1"
 msgstr "Ha fallat la supressió de la incidència: %1"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:79
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Event “%1” deleted (item id: %2)"
 msgstr "S'ha suprimit l'esdeveniment «%1» (ID d'element: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:82
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "To-do “%1” deleted (item id: %2)"
 msgstr "S'ha suprimit la tasca pendent «%1» (ID d'element: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:85
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” deleted (item id: %2)"
 msgstr "S'ha suprimit l'entrada de diari «%1» (ID d'element: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:88
-#, fuzzy, kde-format
-#| msgid "\"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "“%1” deleted (item id: %2)"
 msgstr "S'ha suprimit «%1» (ID d'element: %2)"
 
@@ -922,8 +887,7 @@ msgid "(No subject)"
 msgstr "(Sense assumpte)"
 
 #: mailsearch/searchmailtooljob.cpp:136
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail found for “%1”"
 msgstr "No s'ha trobat cap correu per a «%1»"
 
@@ -1025,16 +989,12 @@ msgid "Mail folder %1 not found"
 msgstr "No s'ha trobat la carpeta de correus %1"
 
 #: movemailtool/movemailtooljob.cpp:147
-#, fuzzy, kde-format
-#| msgid "Mail folder %1 not found"
+#, kde-format
 msgid "Mail folder “%1” not found"
-msgstr "No s'ha trobat la carpeta de correus %1"
+msgstr "No s'ha trobat la carpeta de correus «%1»"
 
 #: movemailtool/movemailtooljob.cpp:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "Several mail folders match \"%1\", use the full path or folder_id:\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Several mail folders match “%1”, use the full path or folder_id:\n"
 "%2"
@@ -1044,14 +1004,12 @@ msgstr ""
 "%2"
 
 #: movemailtool/movemailtooljob.cpp:165
-#, fuzzy, kde-format
-#| msgid "Mail %1 is already in folder \"%2\""
+#, kde-format
 msgid "Mail %1 is already in folder “%2”"
 msgstr "El correu %1 ja està a la carpeta «%2»"
 
 #: movemailtool/movemailtooljob.cpp:169
-#, fuzzy, kde-format
-#| msgid "Mail folder \"%1\" is read-only"
+#, kde-format
 msgid "Mail folder “%1” is read-only"
 msgstr "La carpeta de correu «%1» només és de lectura"
 
@@ -1061,8 +1019,7 @@ msgid "Mail move failed: %1"
 msgstr "Ha fallat el moviment del correu: %1"
 
 #: movemailtool/movemailtooljob.cpp:183
-#, fuzzy, kde-format
-#| msgid "Mail %1 moved to folder \"%2\""
+#, kde-format
 msgid "Mail %1 moved to folder “%2”"
 msgstr "El correu %1 s'ha mogut a la carpeta «%2»"
 
@@ -1215,8 +1172,7 @@ msgid "Contact modification failed: %1"
 msgstr "Ha fallat la modificació del contacte: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Contact “%1” updated (item id: %2)"
 msgstr "S'ha actualitzat el contacte «%1» (ID d'element: %2)"
 
@@ -1257,26 +1213,22 @@ msgid "Incidence modification failed: %1"
 msgstr "Ha fallat la modificació de la incidència: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Event “%1” updated (item id: %2)"
 msgstr "S'ha actualitzat l'esdeveniment «%1» (ID d'element: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "To-do “%1” updated (item id: %2)"
 msgstr "S'ha actualitzat la tasca pendent «%1» (ID d'element: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” updated (item id: %2)"
 msgstr "S'ha actualitzat l'entrada de diari «%1» (ID d'element: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" updated (item id: %2)"
+#, kde-format
 msgid "“%1” updated (item id: %2)"
 msgstr "S'ha actualitzat «%1» (ID d'element: %2)"
 
