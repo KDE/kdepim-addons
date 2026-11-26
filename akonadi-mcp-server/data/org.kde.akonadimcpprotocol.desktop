@@ -19,6 +19,7 @@ Name[sk]=Server Akonadi MCP
 Name[sl]=Akonadi MCP Server
 Name[tr]=Akonadi MCP Sunucusu
 Name[uk]=Сервер MCP Akonadi
+Name[zh_CN]=Akonadi MCP 服务器
 Name[zh_TW]=Akonadi MCP 伺服器
 Exec=akonadimcpprotocol
 Icon=akonadi
