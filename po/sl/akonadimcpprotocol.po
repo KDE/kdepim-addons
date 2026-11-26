@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-24 01:06+0000\n"
+"POT-Creation-Date: 2026-11-26 01:05+0000\n"
 "PO-Revision-Date: 2026-11-10 07:16+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -24,6 +24,23 @@ msgstr "Matjaž Jeran"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
+
+#: akonadimcpcommandlineparser.cpp:27
+#, kde-format
+msgctxt "@info:shell"
+msgid "Url where server listens."
+msgstr "URL, na katerem posluša strežnik."
+
+#: akonadimcpcommandlineparser.cpp:29
+#, kde-format
+msgctxt "@info:shell"
+msgid "List supported MCP tools and exit."
+msgstr ""
+
+#: akonadimcpcommandlineparser.cpp:51
+#, kde-format
+msgid "List of Tools:"
+msgstr ""
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format
@@ -927,32 +944,26 @@ msgstr "(Ni zadeve)"
 msgid "No mail found for “%1”"
 msgstr "Ni najdene pošte za \"%1\""
 
-#: main.cpp:26 main.cpp:28
+#: main.cpp:30 main.cpp:32
 #, kde-format
 msgid "Akonadi MCP Server"
 msgstr "Akonadi MCP Server"
 
-#: main.cpp:30
+#: main.cpp:34
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
 msgstr "Copyright © 2026 Laurent Montel"
 
-#: main.cpp:31
+#: main.cpp:35
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:31
+#: main.cpp:35
 #, kde-format
 msgid "Maintainer"
 msgstr "Vzdrževalec"
-
-#: main.cpp:38
-#, kde-format
-msgctxt "@info:shell"
-msgid "Url where server listens."
-msgstr "URL, na katerem posluša strežnik."
 
 #: markmailtool/markmailtool.cpp:39
 #, kde-format

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadimcpprotocol\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-24 01:06+0000\n"
-"PO-Revision-Date: 2026-11-10 15:52+0100\n"
+"POT-Creation-Date: 2026-11-26 01:05+0000\n"
+"PO-Revision-Date: 2026-11-25 00:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,6 +28,23 @@ msgstr "Eloy Cuadra"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
+
+#: akonadimcpcommandlineparser.cpp:27
+#, kde-format
+msgctxt "@info:shell"
+msgid "Url where server listens."
+msgstr "URL en la que escucha el servidor."
+
+#: akonadimcpcommandlineparser.cpp:29
+#, kde-format
+msgctxt "@info:shell"
+msgid "List supported MCP tools and exit."
+msgstr ""
+
+#: akonadimcpcommandlineparser.cpp:51
+#, kde-format
+msgid "List of Tools:"
+msgstr ""
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format
@@ -72,28 +89,24 @@ msgid "Creation failed: %1"
 msgstr "La creación ha fallado: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event “%1” created in calendar “%2” (item id: %3)"
 msgstr "Evento «%1» creado en el calendario «%2» (ID del elemento: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do “%1” created in calendar “%2” (item id: %3)"
 msgstr ""
 "Tarea pendiente «%1» creada en el calendario «%2» (ID del elemento: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:104
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Journal entry “%1” created in calendar “%2” (item id: %3)"
 msgstr ""
 "Entrada de diario «%1» creada en el calendario «%2» (ID del elemento: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:107
-#, fuzzy, kde-format
-#| msgid "\"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "“%1” created in calendar “%2” (item id: %3)"
 msgstr "«%1» creado en el calendario «%2» (ID del elemento: %3)"
 
@@ -126,11 +139,10 @@ msgstr "El final del argumento debe ir tras el inicio"
 
 #: calendareventstool/calendareventstool.cpp:72
 #: freebusytool/freebusytool.cpp:62
-#, fuzzy, kde-format
-#| msgid "Period must not exceed %1 days"
+#, kde-format
 msgid "Period must not exceed %1 day"
 msgid_plural "Period must not exceed %1 days"
-msgstr[0] "El período no debe ser superior a %1 días"
+msgstr[0] "El período no debe ser superior a %1 día"
 msgstr[1] "El período no debe ser superior a %1 días"
 
 #: calendareventstool/calendareventstooljob.cpp:49
@@ -154,10 +166,7 @@ msgid "MCP tool asks confirmation"
 msgstr "La herramienta MCP solicita confirmación"
 
 #: common/toolbase.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Run \"%1\"?\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Run “%1”?\n"
 "%2"
@@ -229,8 +238,7 @@ msgid "Contact group search failed: %1"
 msgstr "La búsqueda de grupo de contactos ha fallado: %1"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
-#, fuzzy, kde-format
-#| msgid "No contact group found for \"%1\""
+#, kde-format
 msgid "No contact group found for “%1”"
 msgstr "No se ha encontrado ningún grupo de contactos para «%1»"
 
@@ -261,8 +269,7 @@ msgstr "La búsqueda del contacto ha fallado: %1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:56
 #: contactsearchtool/contactsearchtooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "No contact found for \"%1\""
+#, kde-format
 msgid "No contact found for “%1”"
 msgstr "No se ha encontrado ningún contacto para «%1»"
 
@@ -305,8 +312,7 @@ msgstr "El nombre del grupo de contactos está vacío"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:60
 #: createidentitytool/createidentitytool.cpp:59
-#, fuzzy, kde-format
-#| msgid "Invalid email address \"%1\""
+#, kde-format
 msgid "Invalid email address “%1”"
 msgstr "Dirección de correo «%1» no válida"
 
@@ -357,13 +363,7 @@ msgid "Contact group creation failed: %1"
 msgstr "La creación del grupo de contactos ha fallado: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
-#, fuzzy, kde-format
-#| msgid ""
-#| "Contact group \"%2\" with %1 member created in address book \"%3\" (item "
-#| "id: %4)"
-#| msgid_plural ""
-#| "Contact group \"%2\" with %1 members created in address book \"%3\" (item "
-#| "id: %4)"
+#, kde-format
 msgid ""
 "Contact group “%2” with %1 member created in address book “%3” (item id: %4)"
 msgid_plural ""
@@ -388,8 +388,7 @@ msgstr "El argumento «phone_numbers» debe ser un array de cadenas"
 
 #: createcontacttool/createcontacttool.cpp:85
 #: updatecontacttool/updatecontacttool.cpp:115
-#, fuzzy, kde-format
-#| msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+#, kde-format
 msgid "Invalid birthday “%1”, expected format is YYYY-MM-DD"
 msgstr "Cumpleaños «%1» no válido: se esperaba el formato AAAA-MM-DD"
 
@@ -414,8 +413,7 @@ msgid "Contact creation failed: %1"
 msgstr "La creación del contacto ha fallado: %1"
 
 #: createcontacttool/createcontacttooljob.cpp:96
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" created in address book \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact “%1” created in address book “%2” (item id: %3)"
 msgstr ""
 "Contacto «%1» creado en la libreta de direcciones «%2» (ID del elemento: %3)"
@@ -475,8 +473,7 @@ msgid "Argument email_aliases must be an array of strings"
 msgstr "El argumento «email_aliases» debe ser un array de cadenas"
 
 #: createidentitytool/createidentitytool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Invalid email alias \"%1\""
+#, kde-format
 msgid "Invalid email alias “%1”"
 msgstr "Alias de correo «%1» no válido"
 
@@ -497,8 +494,7 @@ msgid "Argument set_as_default must be a boolean"
 msgstr "El argumento «set_as_default» debe ser un valor lógico"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Identity \"%1\" created (uoid %2)"
+#, kde-format
 msgid "Identity “%1” created (uoid %2)"
 msgstr "Identidad «%1» creada (uoid %2)"
 
@@ -573,10 +569,7 @@ msgid "Mail creation failed: %1"
 msgstr "La creación del correo ha fallado: %1"
 
 #: createmailtool/createmailtooljob.cpp:148
-#, fuzzy, kde-format
-#| msgid ""
-#| "Identity %1 not found, the default identity was used. Mail \"%2\" created "
-#| "in folder \"%3\" (item id: %4). It can be edited in KMail with mail_edit"
+#, kde-format
 msgid ""
 "Identity %1 not found, the default identity was used. Mail “%2” created in "
 "folder “%3” (item id: %4). It can be edited in KMail with mail_edit"
@@ -586,10 +579,7 @@ msgstr ""
 "en KMail con «mail_edit»."
 
 #: createmailtool/createmailtooljob.cpp:155
-#, fuzzy, kde-format
-#| msgid ""
-#| "Mail \"%1\" created in folder \"%2\" (item id: %3). It can be edited in "
-#| "KMail with mail_edit"
+#, kde-format
 msgid ""
 "Mail “%1” created in folder “%2” (item id: %3). It can be edited in KMail "
 "with mail_edit"
@@ -630,8 +620,7 @@ msgid "Argument host must be a non-empty string"
 msgstr "El argumento «host» debe ser una cadena no vacía"
 
 #: createtransporttool/createtransporttool.cpp:95
-#, fuzzy, kde-format
-#| msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
+#, kde-format
 msgid "Invalid encryption “%1”, expected none, ssl or starttls"
 msgstr "Cifrado «%1» no válido. Se esperaba «none», «ssl» o «starttls»."
 
@@ -646,15 +635,13 @@ msgid "Argument port must be an integer"
 msgstr "El argumento «port» debe ser un entero"
 
 #: createtransporttool/createtransporttool.cpp:124
-#, fuzzy, kde-format
-#| msgid "Invalid authentication_type \"%1\", expected one of: %2"
+#, kde-format
 msgid "Invalid authentication_type “%1”, expected one of: %2"
 msgstr ""
 "El argumento «authentication_type» «%1» no es válido. Se esperaba uno de: %2"
 
 #: createtransporttool/createtransporttool.cpp:170
-#, fuzzy, kde-format
-#| msgid "Transport \"%1\" created (id %2)"
+#, kde-format
 msgid "Transport “%1” created (id %2)"
 msgstr "Transporte «%1» creado (ID %2)"
 
@@ -697,8 +684,7 @@ msgid "Contact deletion failed: %1"
 msgstr "El borrado del contacto ha fallado: %1"
 
 #: deletecontacttool/deletecontacttooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Contact “%1” deleted (item id: %2)"
 msgstr "Contacto «%1» borrado (ID del elemento: %2)"
 
@@ -738,26 +724,22 @@ msgid "Incidence deletion failed: %1"
 msgstr "El borrado de la incidencia ha fallado: %1"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:79
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Event “%1” deleted (item id: %2)"
 msgstr "Evento «%1» borrado (ID del elemento: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:82
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "To-do “%1” deleted (item id: %2)"
 msgstr "Tarea pendiente «%1» borrada (ID del elemento: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:85
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” deleted (item id: %2)"
 msgstr "Entrada de diario «%1» borrada (ID del elemento: %2)"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:88
-#, fuzzy, kde-format
-#| msgid "\"%1\" deleted (item id: %2)"
+#, kde-format
 msgid "“%1” deleted (item id: %2)"
 msgstr "«%1» borrado (ID del elemento: %2)"
 
@@ -927,37 +909,30 @@ msgid "(No subject)"
 msgstr "(Sin asunto)"
 
 #: mailsearch/searchmailtooljob.cpp:136
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail found for “%1”"
 msgstr "No se ha encontrado correo para «%1»"
 
-#: main.cpp:26 main.cpp:28
+#: main.cpp:30 main.cpp:32
 #, kde-format
 msgid "Akonadi MCP Server"
 msgstr "Servidor MCP de Akonadi"
 
-#: main.cpp:30
+#: main.cpp:34
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
 msgstr "Copyright © 2026 Laurent Montel"
 
-#: main.cpp:31
+#: main.cpp:35
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:31
+#: main.cpp:35
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsable"
-
-#: main.cpp:38
-#, kde-format
-msgctxt "@info:shell"
-msgid "Url where server listens."
-msgstr "URL en la que escucha el servidor."
 
 #: markmailtool/markmailtool.cpp:39
 #, kde-format
@@ -1033,16 +1008,12 @@ msgid "Mail folder %1 not found"
 msgstr "Carpeta de correo %1 no encontrada"
 
 #: movemailtool/movemailtooljob.cpp:147
-#, fuzzy, kde-format
-#| msgid "Mail folder %1 not found"
+#, kde-format
 msgid "Mail folder “%1” not found"
-msgstr "Carpeta de correo %1 no encontrada"
+msgstr "Carpeta de correo «%1» no encontrada"
 
 #: movemailtool/movemailtooljob.cpp:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "Several mail folders match \"%1\", use the full path or folder_id:\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Several mail folders match “%1”, use the full path or folder_id:\n"
 "%2"
@@ -1052,14 +1023,12 @@ msgstr ""
 "%2"
 
 #: movemailtool/movemailtooljob.cpp:165
-#, fuzzy, kde-format
-#| msgid "Mail %1 is already in folder \"%2\""
+#, kde-format
 msgid "Mail %1 is already in folder “%2”"
 msgstr "El correo %1 ya está en la carpeta «%2»"
 
 #: movemailtool/movemailtooljob.cpp:169
-#, fuzzy, kde-format
-#| msgid "Mail folder \"%1\" is read-only"
+#, kde-format
 msgid "Mail folder “%1” is read-only"
 msgstr "La carpeta de correo «%1» es de solo lectura"
 
@@ -1069,8 +1038,7 @@ msgid "Mail move failed: %1"
 msgstr "El movimiento de correo ha fallado: %1"
 
 #: movemailtool/movemailtooljob.cpp:183
-#, fuzzy, kde-format
-#| msgid "Mail %1 moved to folder \"%2\""
+#, kde-format
 msgid "Mail %1 moved to folder “%2”"
 msgstr "Correo %1 movido a la carpeta «%2»"
 
@@ -1224,8 +1192,7 @@ msgid "Contact modification failed: %1"
 msgstr "La modificación del contacto ha fallado: %1"
 
 #: updatecontacttool/updatecontacttooljob.cpp:87
-#, fuzzy, kde-format
-#| msgid "Contact \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Contact “%1” updated (item id: %2)"
 msgstr "Contacto «%1» actualizado (ID del elemento: %2)"
 
@@ -1265,26 +1232,22 @@ msgid "Incidence modification failed: %1"
 msgstr "La modificación de la incidencia ha fallado: %1"
 
 #: updateincidencetool/updateincidencetooljob.cpp:102
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Event “%1” updated (item id: %2)"
 msgstr "Evento «%1» actualizado (ID del elemento: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:105
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "To-do “%1” updated (item id: %2)"
 msgstr "Tarea pendiente «%1» actualizada (ID del elemento: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:108
-#, fuzzy, kde-format
-#| msgid "Journal entry \"%1\" updated (item id: %2)"
+#, kde-format
 msgid "Journal entry “%1” updated (item id: %2)"
 msgstr "Entrada de diario «%1» actualizada (ID del elemento: %2)"
 
 #: updateincidencetool/updateincidencetooljob.cpp:111
-#, fuzzy, kde-format
-#| msgid "\"%1\" updated (item id: %2)"
+#, kde-format
 msgid "“%1” updated (item id: %2)"
 msgstr "«%1» actualizado (ID del elemento: %2)"
 
@@ -1324,6 +1287,3 @@ msgstr ""
 #, kde-format
 msgid "Due date must not be before start"
 msgstr "La fecha de vencimiento no debe ir delante de la de inicio"
-
-#~ msgid "Mail folder \"%1\" not found"
-#~ msgstr "Carpeta de correo «%1» no encontrada"

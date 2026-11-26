@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-24 01:06+0000\n"
+"POT-Creation-Date: 2026-11-26 01:05+0000\n"
 "PO-Revision-Date: 2026-10-28 10:57+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -27,6 +27,23 @@ msgstr "Roman Paholík"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
+
+#: akonadimcpcommandlineparser.cpp:27
+#, kde-format
+msgctxt "@info:shell"
+msgid "Url where server listens."
+msgstr "URL, na ktorej server počúva."
+
+#: akonadimcpcommandlineparser.cpp:29
+#, kde-format
+msgctxt "@info:shell"
+msgid "List supported MCP tools and exit."
+msgstr ""
+
+#: akonadimcpcommandlineparser.cpp:51
+#, kde-format
+msgid "List of Tools:"
+msgstr ""
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format
@@ -920,32 +937,26 @@ msgstr "(Bez predmetu)"
 msgid "No mail found for “%1”"
 msgstr "Pre „%1“ sa nenašla žiadna správa"
 
-#: main.cpp:26 main.cpp:28
+#: main.cpp:30 main.cpp:32
 #, kde-format
 msgid "Akonadi MCP Server"
 msgstr "Server Akonadi MCP"
 
-#: main.cpp:30
+#: main.cpp:34
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
 msgstr "Copyright © 2026 Laurent Montel"
 
-#: main.cpp:31
+#: main.cpp:35
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:31
+#: main.cpp:35
 #, kde-format
 msgid "Maintainer"
 msgstr "Správca"
-
-#: main.cpp:38
-#, kde-format
-msgctxt "@info:shell"
-msgid "Url where server listens."
-msgstr "URL, na ktorej server počúva."
 
 #: markmailtool/markmailtool.cpp:39
 #, kde-format
