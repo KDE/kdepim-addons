@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/kdepim-addons/kaichat_addressbook.pot\n"
-"X-Crowdin-File-ID: 58550\n"
+"X-Crowdin-File: /kf6-stable/messages/kdepim-addons/kaichat_addressbook.pot\n"
+"X-Crowdin-File-ID: 58676\n"
 
 #: kaichataddressbookplugin.cpp:23
 msgid "AddressBook info"
@@ -28,12 +28,12 @@ msgstr "用户名称"
 #: kaichataddressbookplugin.cpp:47
 #, kde-format
 msgid "Get Info From AddressBook"
-msgstr "从地址簿获取信息"
+msgstr "获取地址簿信息"
 
 #: kaichataddressbookplugin.cpp:52
 #, kde-format
 msgid "Use this tool to get user info from akonadi database"
-msgstr "使用此工具获取来自 akonadi 数据库的用户信息"
+msgstr "使用此工具获取来自 Akonadi 数据库的用户信息"
 
 #: kaichataddressbookplugindialog.cpp:16
 #, kde-format
@@ -48,7 +48,7 @@ msgstr "获取电子邮件..."
 #: kaichataddressbookpluginjob.cpp:65
 #, kde-format
 msgid "No Contact found in addressbook for %1"
-msgstr "在地址簿中未找到 %1 的联系人"
+msgstr "没有在地址簿中找到 %1 的联系人"
 
 #: kaichataddressbookpluginjob.cpp:73
 #, kde-format
@@ -63,7 +63,7 @@ msgstr "%1 首选的电子邮件是 %2"
 #: kaichataddressbookpluginjob.cpp:82
 #, kde-format
 msgid "No Birthday found for %1"
-msgstr "未找到 %1 的生日"
+msgstr "没有找到 %1 的生日"
 
 #: kaichataddressbookpluginjob.cpp:84
 #, kde-format
@@ -73,9 +73,9 @@ msgstr "%1 的生日是 %2"
 #: kaichataddressbookpluginjob.cpp:95
 #, kde-format
 msgid "No Address found for %1"
-msgstr "未找到 %1 的地址信息"
+msgstr "没有找到 %1 的地址"
 
 #: kaichataddressbookpluginjob.cpp:97
 #, kde-format
 msgid "Address found for %1 is %2"
-msgstr "找到 %1 的地址： %2"
+msgstr "找到 %1 的地址：%2"
