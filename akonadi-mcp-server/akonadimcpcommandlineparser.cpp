@@ -7,7 +7,7 @@
 #include <KLocalizedString>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
-#if HAVE_MCP_TOOL_LIST
+#if !HAVE_MCP_TOOL_LIST
 #include <QTextStream>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolTool>
 #include <algorithm>
