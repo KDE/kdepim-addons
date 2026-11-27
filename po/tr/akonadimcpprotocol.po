@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-26 01:05+0000\n"
-"PO-Revision-Date: 2026-11-24 17:32+0300\n"
+"PO-Revision-Date: 2026-11-26 19:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -37,12 +37,12 @@ msgstr "Sunucunun dinlediği URL."
 #, kde-format
 msgctxt "@info:shell"
 msgid "List supported MCP tools and exit."
-msgstr ""
+msgstr "Desteklenen MCP araçlarını listele ve çık."
 
 #: akonadimcpcommandlineparser.cpp:51
 #, kde-format
 msgid "List of Tools:"
-msgstr ""
+msgstr "Araçlar listesi:"
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format
@@ -69,7 +69,7 @@ msgstr "Takvim getirilemedi: %1"
 #: calendarcommon/createincidencetooljob.cpp:38
 #, kde-format
 msgid "Summary must be a non-empty string"
-msgstr "Özet, boş olmayın bir dizi olmalıdır"
+msgstr "Özet, boş olmayan bir dizge olmalıdır"
 
 #: calendarcommon/createincidencetooljob.cpp:70
 #, kde-format
@@ -217,14 +217,14 @@ msgstr "Kişi Grubu Ara"
 #: contactsearchtool/contactsearchtool.cpp:41 mailsearch/searchmailtool.cpp:48
 #, kde-format
 msgid "Argument query must be a non-empty string"
-msgstr "query argümanı, boş olmayan bir dizi olmalıdır"
+msgstr "query argümanı, boş olmayan bir dizge olmalıdır"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:34
 #: contactsearchtool/contactsearchtooljob.cpp:38
 #: mailsearch/searchmailtooljob.cpp:57
 #, kde-format
 msgid "Search string must be a non-empty string"
-msgstr "Aranacak dizi, boş olmayan bir dizi olmalıdır"
+msgstr "Aranacak dizi, boş olmayan bir dizge olmalıdır"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:47
 #, kde-format
@@ -277,7 +277,7 @@ msgstr "Kişi Grubu Oluştur"
 #: updatecontacttool/updatecontacttool.cpp:70
 #, kde-format
 msgid "Argument name must be a non-empty string"
-msgstr "name argümanı, boş olmayan bir dizi olmalıdır"
+msgstr "name argümanı, boş olmayan bir dizge olmalıdır"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:79
 #, kde-format
@@ -289,7 +289,7 @@ msgstr "contact_ids argümanı, bir pozitif tam sayılar dizilişi olmalıdır"
 #: updatecontacttool/updatecontacttool.cpp:80
 #, kde-format
 msgid "Argument emails must be an array of strings"
-msgstr "emails argümanı, bir diziler dizilişi olmalıdır"
+msgstr "emails argümanı, bir dizgeler dizisi olmalıdır"
 
 #: createcontactgrouptool/createcontactgrouptool.cpp:94
 #: createcontacttool/createcontacttool.cpp:96
@@ -373,7 +373,7 @@ msgstr "Kişi Oluştur"
 #: updatecontacttool/updatecontacttool.cpp:90
 #, kde-format
 msgid "Argument phone_numbers must be an array of strings"
-msgstr "phone_numbers argümanı, bir diziler dizilişi olmalıdır"
+msgstr "phone_numbers argümanı, bir dizgeler dizisi olmalıdır"
 
 #: createcontacttool/createcontacttool.cpp:85
 #: updatecontacttool/updatecontacttool.cpp:115
@@ -417,7 +417,7 @@ msgstr "Etkinlik Oluştur"
 #: updateincidencetool/updateincidencetool.cpp:80
 #, kde-format
 msgid "Argument summary must be a non-empty string"
-msgstr "summary argümanı, boş olmayan bir dizi olmalıdır"
+msgstr "summary argümanı, boş olmayan bir dizge olmalıdır"
 
 #: createeventtool/createeventtool.cpp:75
 #: updateincidencetool/updateincidencetool.cpp:112
@@ -454,12 +454,12 @@ msgstr "Kimlik Oluştur"
 #: createidentitytool/createidentitytool.cpp:55
 #, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "email argümanı, boş olmayan bir dizi olmalıdır"
+msgstr "email argümanı, boş olmayan bir dizge olmalıdır"
 
 #: createidentitytool/createidentitytool.cpp:65
 #, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "email_aliases argümanı, bir diziler dizilişi olmalıdır"
+msgstr "email_aliases argümanı, bir dizgeler dizisi olmalıdır"
 
 #: createidentitytool/createidentitytool.cpp:70
 #, kde-format
@@ -505,27 +505,27 @@ msgstr "Posta Oluştur"
 #: createmailtool/createmailtool.cpp:46
 #, kde-format
 msgid "Argument subject must be a non-empty string"
-msgstr "subject argümanı, boş olmayan bir dizi olmalıdır"
+msgstr "subject argümanı, boş olmayan bir dizge olmalıdır"
 
 #: createmailtool/createmailtool.cpp:52
 #, kde-format
 msgid "Argument to must be an array of strings"
-msgstr "to argümanı, bir diziler dizilişi olmalıdır"
+msgstr "to argümanı, bir dizgeler dizisi olmalıdır"
 
 #: createmailtool/createmailtool.cpp:57
 #, kde-format
 msgid "Argument cc must be an array of strings"
-msgstr "cc argümanı, bir diziler dizilişi olmalıdır"
+msgstr "cc argümanı, bir dizgeler dizisi olmalıdır"
 
 #: createmailtool/createmailtool.cpp:62
 #, kde-format
 msgid "Argument bcc must be an array of strings"
-msgstr "bcc argümanı, bir diziler dizilişi olmalıdır"
+msgstr "bcc argümanı, bir dizgeler dizisi olmalıdır"
 
 #: createmailtool/createmailtool.cpp:68
 #, kde-format
 msgid "Argument body must be a string"
-msgstr "body argümanı, bir dizi olmalıdır"
+msgstr "body argümanı, bir dizge olmalıdır"
 
 #: createmailtool/createmailtool.cpp:77
 #, kde-format
@@ -540,7 +540,7 @@ msgstr "identity argümanı, bir tam sayı olmalıdır"
 #: createmailtool/createmailtooljob.cpp:66
 #, kde-format
 msgid "Subject must be a non-empty string"
-msgstr "Konu, boş olmayın bir dizi olmalıdır"
+msgstr "Konu, boş olmayın bir dizge olmalıdır"
 
 #: createmailtool/createmailtooljob.cpp:79 editmailtool/editmailtooljob.cpp:81
 #, kde-format
@@ -606,7 +606,7 @@ msgstr "Posta Taşıması Oluştur"
 #: createtransporttool/createtransporttool.cpp:84
 #, kde-format
 msgid "Argument host must be a non-empty string"
-msgstr "host argümanı, boş olmayan bir dizi olmalıdır"
+msgstr "host argümanı, boş olmayan bir dizge olmalıdır"
 
 #: createtransporttool/createtransporttool.cpp:95
 #, kde-format
@@ -870,7 +870,7 @@ msgstr "Bilinmeyen posta alanı: %1"
 #: mailsearch/searchmailtool.cpp:71
 #, kde-format
 msgid "Argument field must be a string"
-msgstr "field argümanı bir dizi olmalıdır"
+msgstr "field argümanı bir dizge olmalıdır"
 
 #: mailsearch/searchmailtool.cpp:79
 #, kde-format
@@ -956,7 +956,7 @@ msgstr "Postayı Taşı"
 #: movemailtool/movemailtool.cpp:60
 #, kde-format
 msgid "Argument folder must be a string"
-msgstr "folder argümanı bir dizi olmalıdır"
+msgstr "folder argümanı bir dizge olmalıdır"
 
 #: movemailtool/movemailtool.cpp:64
 #, kde-format
@@ -1140,17 +1140,17 @@ msgstr "Kişiyi Güncelle"
 #: updatecontacttool/updatecontacttool.cpp:97
 #, kde-format
 msgid "Argument organization must be a string"
-msgstr "organization argümanı, bir dizi olmalıdır"
+msgstr "organization argümanı, bir dizge olmalıdır"
 
 #: updatecontacttool/updatecontacttool.cpp:102
 #, kde-format
 msgid "Argument note must be a string"
-msgstr "note argümanı, bir dizi olmalıdır"
+msgstr "note argümanı, bir dizge olmalıdır"
 
 #: updatecontacttool/updatecontacttool.cpp:108
 #, kde-format
 msgid "Argument birthday must be a string"
-msgstr "birthday argümanı, bir dizi olmalıdır"
+msgstr "birthday argümanı, bir dizge olmalıdır"
 
 #: updatecontacttool/updatecontacttool.cpp:122
 #: updatecontacttool/updatecontacttooljob.cpp:46
@@ -1178,17 +1178,17 @@ msgstr "Olayı Güncelle"
 #: updateincidencetool/updateincidencetool.cpp:87
 #, kde-format
 msgid "Argument description must be a string"
-msgstr "description argümanı, bir dizi olmalıdır"
+msgstr "description argümanı, bir dizge olmalıdır"
 
 #: updateincidencetool/updateincidencetool.cpp:92
 #, kde-format
 msgid "Argument location must be a string"
-msgstr "location argümanı, bir dizi olmalıdır"
+msgstr "location argümanı, bir dizge olmalıdır"
 
 #: updateincidencetool/updateincidencetool.cpp:119
 #, kde-format
 msgid "Argument due must be a string"
-msgstr "due argümanı, bir dizi olmalıdır"
+msgstr "due argümanı, bir dizge olmalıdır"
 
 #: updateincidencetool/updateincidencetool.cpp:133
 #, kde-format

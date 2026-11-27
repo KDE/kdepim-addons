@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: akonadimcpprotocol\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-26 01:05+0000\n"
-"PO-Revision-Date: 2026-11-25 00:50+0100\n"
+"PO-Revision-Date: 2026-11-26 23:58+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -39,12 +39,12 @@ msgstr "URL en la que escucha el servidor."
 #, kde-format
 msgctxt "@info:shell"
 msgid "List supported MCP tools and exit."
-msgstr ""
+msgstr "Listar las herramientas MCP compatibles y salir."
 
 #: akonadimcpcommandlineparser.cpp:51
 #, kde-format
 msgid "List of Tools:"
-msgstr ""
+msgstr "Lista de herramientas:"
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format

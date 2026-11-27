@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-26 01:05+0000\n"
-"PO-Revision-Date: 2026-11-24 23:36+0100\n"
+"PO-Revision-Date: 2026-11-26 14:28+0100\n"
 "Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -37,12 +37,12 @@ msgstr "URL waar de server luistert."
 #, kde-format
 msgctxt "@info:shell"
 msgid "List supported MCP tools and exit."
-msgstr ""
+msgstr "Maak een lijst met ondersteunde MCP-hulpmiddelen en exit-types."
 
 #: akonadimcpcommandlineparser.cpp:51
 #, kde-format
 msgid "List of Tools:"
-msgstr ""
+msgstr "Lijst met hulpmiddelen:"
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format

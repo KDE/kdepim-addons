@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-26 01:05+0000\n"
-"PO-Revision-Date: 2026-11-24 08:31+0200\n"
+"PO-Revision-Date: 2026-11-26 08:58+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -38,12 +38,12 @@ msgstr "Адреса, на якій очікує на запити сервер.
 #, kde-format
 msgctxt "@info:shell"
 msgid "List supported MCP tools and exit."
-msgstr ""
+msgstr "Вивести список підтримуваних інструментів MCP і завершити роботу."
 
 #: akonadimcpcommandlineparser.cpp:51
 #, kde-format
 msgid "List of Tools:"
-msgstr ""
+msgstr "Список інструментів:"
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format

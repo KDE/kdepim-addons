@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-26 01:05+0000\n"
-"PO-Revision-Date: 2026-11-25 15:21+0100\n"
+"PO-Revision-Date: 2026-11-26 06:48+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -38,12 +38,12 @@ msgstr "Url, სადაც სერვერი უსმენს."
 #, kde-format
 msgctxt "@info:shell"
 msgid "List supported MCP tools and exit."
-msgstr ""
+msgstr "მხარდაჭერილი MCP-ის ხელსაწყოების ჩამოთვალ და გასვლა."
 
 #: akonadimcpcommandlineparser.cpp:51
 #, kde-format
 msgid "List of Tools:"
-msgstr ""
+msgstr "ხელსაწყოების ჩამონათვალი:"
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format
