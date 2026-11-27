@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-11 03:12+0000\n"
-"PO-Revision-Date: 2026-11-24 12:41+0200\n"
+"PO-Revision-Date: 2026-11-26 15:33+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
@@ -335,10 +335,9 @@ msgstr "פנקס הכתובות %1 לא קיים או שאינו מקבל אנש
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:137
 #: createcontacttool/createcontacttooljob.cpp:74
-#, fuzzy, kde-format
-#| msgid "No address book found"
+#, kde-format
 msgid "No writable address book found"
-msgstr "לא נמצא פנקס כתובות"
+msgstr "לא נמצא פנקס כתובות שאפשר לכתוב אליו"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:155
 #, fuzzy, kde-format
@@ -360,10 +359,9 @@ msgstr[2] ""
 msgstr[3] ""
 
 #: createcontacttool/createcontacttool.cpp:26
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Create Contact"
-msgstr "חיפוש באנשי הקשר"
+msgstr "יצירת איש קשר"
 
 #: createcontacttool/createcontacttool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:90
@@ -436,10 +434,9 @@ msgstr "הארגומנט end (סוף) חייב להיות לפני ארגומנ�
 #: createeventtool/createeventtool.cpp:102
 #: createjournaltool/createjournaltool.cpp:76
 #: createtodotool/createtodotool.cpp:91
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument calendar_id must be a positive integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט calendar_id (מזהה לוח שנה) חייב להיות מספר שלם וחיובי"
 
 #: createeventtool/createeventtool.cpp:106
 #: createjournaltool/createjournaltool.cpp:80
@@ -447,13 +444,12 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 #, fuzzy, kde-format
 #| msgid "Argument days must be an integer"
 msgid "Argument calendar_id must be an integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט calendar_id (מזהה לוח שנה) חייב להיות מספר שלם"
 
 #: createidentitytool/createidentitytool.cpp:28
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Create Identity"
-msgstr "חיפוש באנשי הקשר"
+msgstr "יצירת זהות"
 
 #: createidentitytool/createidentitytool.cpp:55
 #, fuzzy, kde-format
@@ -536,22 +532,19 @@ msgid "Argument bcc must be an array of strings"
 msgstr "הארגומנט fields (שדות) חייב להיות מערך"
 
 #: createmailtool/createmailtool.cpp:68
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument body must be a string"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט body (תוכן) חייבת להיות מחרוזת"
 
 #: createmailtool/createmailtool.cpp:77
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument identity must be a positive integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט identity (זהות) חייב להיות מספר שלם וחיובי"
 
 #: createmailtool/createmailtool.cpp:82
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument identity must be an integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט identity (זהות) חייב להיות מספר שלם"
 
 #: createmailtool/createmailtooljob.cpp:66
 #, kde-format
@@ -594,16 +587,14 @@ msgstr "הארגומנט end (סוף) חייב להיות תאריך או תאר
 
 #: createtodotool/createtodotool.cpp:73
 #: updateincidencetool/updateincidencetool.cpp:143
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer between 1 and %1"
+#, kde-format
 msgid "Argument priority must be an integer between %1 and %2"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם בין 1 ל־%1"
+msgstr "הארגומנט priority (עדיפות) חייב להיות מספר שלם בין %1 ל־%2"
 
 #: createtodotool/createtodotool.cpp:78
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument priority must be an integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט priority (עדיפות) חייב להיות מספר שלם"
 
 #: createtransporttool/createtransporttool.cpp:59
 #, kde-format
@@ -611,10 +602,9 @@ msgid "Create Mail Transport"
 msgstr "יצירת תעבורת דוא״ל"
 
 #: createtransporttool/createtransporttool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument subject must be a non-empty string"
+#, kde-format
 msgid "Argument host must be a non-empty string"
-msgstr "הארגומנט subject (נושא) חייבת להיות מחרוזת לא ריקה"
+msgstr "הארגומנט host (מארח) חייבת להיות מחרוזת לא ריקה"
 
 #: createtransporttool/createtransporttool.cpp:95
 #, kde-format
@@ -622,16 +612,14 @@ msgid "Invalid encryption \"%1\", expected none, ssl or starttls"
 msgstr ""
 
 #: createtransporttool/createtransporttool.cpp:108
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer between 1 and %1"
+#, kde-format
 msgid "Argument port must be between 1 and 65535"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם בין 1 ל־%1"
+msgstr "הארגומנט port (פתחה) חייב להיות בין 1 ל־65535"
 
 #: createtransporttool/createtransporttool.cpp:113
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument port must be an integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט port (פתחה) חייב להיות מספר שלם"
 
 #: createtransporttool/createtransporttool.cpp:124
 #, kde-format
@@ -644,10 +632,9 @@ msgid "Transport \"%1\" created (id %2)"
 msgstr ""
 
 #: deletecontacttool/deletecontacttool.cpp:25
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Delete Contact"
-msgstr "חיפוש באנשי הקשר"
+msgstr "מחיקת איש קשר"
 
 #: deletecontacttool/deletecontacttool.cpp:42
 #: deleteincidencetool/deleteincidencetool.cpp:43
@@ -656,10 +643,9 @@ msgstr "חיפוש באנשי הקשר"
 #: openmailtool/openmailtool.cpp:40 replymailtool/replymailtool.cpp:64
 #: updatecontacttool/updatecontacttool.cpp:56
 #: updateincidencetool/updateincidencetool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument id must be an integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט id (מזהה) חייב להיות מספר שלם"
 
 #: deletecontacttool/deletecontacttool.cpp:47
 #: deleteincidencetool/deleteincidencetool.cpp:48
@@ -668,10 +654,9 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 #: openmailtool/openmailtool.cpp:45 replymailtool/replymailtool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:61
 #: updateincidencetool/updateincidencetool.cpp:70
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument id must be a positive integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט id (מזהה) חייב להיות מספר שלם וחיובי"
 
 #: deletecontacttool/deletecontacttooljob.cpp:33
 #: updatecontacttool/updatecontacttooljob.cpp:44
@@ -681,10 +666,9 @@ msgid "Contact id must be a positive integer"
 msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
 #: deletecontacttool/deletecontacttooljob.cpp:69
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact deletion failed: %1"
-msgstr "יצירת איש קשר נכשלה: %1"
+msgstr "מחיקת איש קשר נכשלה: %1"
 
 #: deletecontacttool/deletecontacttooljob.cpp:72
 #, kde-format
@@ -705,10 +689,9 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:48
 #: updateincidencetool/updateincidencetooljob.cpp:66
-#, fuzzy, kde-format
-#| msgid "Mail search failed: %1"
+#, kde-format
 msgid "Incidence fetch failed: %1"
-msgstr "חיפוש דוא״ל נכשל: %1"
+msgstr "משיכת מופעים נכשלה: %1"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:53
 #: updateincidencetool/updateincidencetooljob.cpp:71
@@ -723,10 +706,9 @@ msgid "Item %1 is not an event, a to-do or a journal entry"
 msgstr ""
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:72
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Incidence deletion failed: %1"
-msgstr "יצירת איש קשר נכשלה: %1"
+msgstr "מחיקת מופעים נכשלה: %1"
 
 #: deleteincidencetool/deleteincidencetooljob.cpp:79
 #, kde-format
@@ -802,10 +784,11 @@ msgid "Forward Mail"
 msgstr "העברת דוא״ל"
 
 #: forwardmailtool/forwardmailtool.cpp:64
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument mode must be one of: inline, attachment"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr ""
+"הארגומנט mode (מצב) חייב להיות אחד מאלה: inline,‏ attachment (משובץ, מצורף "
+"בהתאמה)"
 
 #: forwardmailtool/forwardmailtooljob.cpp:49
 #, kde-format
@@ -1214,10 +1197,9 @@ msgid "Arguments start and due must both be dates or both be date-times"
 msgstr "הארגומנטים start (התחלה) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
 
 #: updateincidencetool/updateincidencetool.cpp:153
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument completed must be a boolean"
-msgstr "הארגומנט include_completed חייב להיות בוליאני"
+msgstr "הארגומנט completed (הושלם) חייב להיות בוליאני"
 
 #: updateincidencetool/updateincidencetooljob.cpp:95
 #, kde-format
