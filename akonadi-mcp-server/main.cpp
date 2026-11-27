@@ -8,13 +8,15 @@
 
 #include "akonadimcpcommandlineparser.h"
 #include "akonadimcpprotocolmanager.h"
+#include "config-kdepim-addons.h"
 #include <KAboutData>
 #include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QDBusConnection>
-#if TEXTAUTOGENERATETEXTMCPPROTOCOLCORE_VERSION >= QT_VERSION_CHECK(2, 3, 47)
+
+#if HAVE_MCP_TOOL_LIST
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolServerUtils>
 #endif
 
@@ -45,7 +47,7 @@ int main(int argc, char **argv)
     aboutData.processCommandLine(&parser);
     if (parser.isSet(AkonadiMcpCommandLineParser::optionParserFromEnum(AkonadiMcpCommandLineParser::OptionParser::ListTools))) {
         const AkonadiMcpProtocolManager manager;
-#if TEXTAUTOGENERATETEXTMCPPROTOCOLCORE_VERSION >= QT_VERSION_CHECK(2, 3, 47)
+#if HAVE_MCP_TOOL_LIST
         TextAutoGenerateTextMcpProtocolCore::McpProtocolServerUtils::printTools(manager.tools());
 #else
         AkonadiMcpCommandLineParser::printTools(manager.tools());

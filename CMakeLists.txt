@@ -410,6 +410,13 @@ if(TARGET KF6::TextAutoGenerateText)
     add_subdirectory(kaichat-plugins)
 endif()
 
+if(OPTION_ADD_MPCPROTOCOL AND TARGET KF6::TextAutoGenerateTextMcpProtocolWidgets)
+    if(KF6TextAutoGenerateTextMcpProtocolCore_VERSION VERSION_GREATER_EQUAL "2.3.47")
+        set(HAVE_MCP_TOOL_LIST TRUE)
+    endif()
+    add_subdirectory(akonadi-mcp-server)
+endif()
+
 configure_file(config-kdepim-addons.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-kdepim-addons.h)
 
 add_subdirectory(plugins)
@@ -421,10 +428,6 @@ add_subdirectory(kmailtransport)
 add_subdirectory(kldap)
 if(TARGET KPim6::ImportWizard)
     add_subdirectory(akonadi-import-wizard)
-endif()
-
-if(OPTION_ADD_MPCPROTOCOL AND TARGET KF6::TextAutoGenerateTextMcpProtocolWidgets)
-    add_subdirectory(akonadi-mcp-server)
 endif()
 
 ecm_qt_install_logging_categories(

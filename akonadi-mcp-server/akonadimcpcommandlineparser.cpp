@@ -7,7 +7,7 @@
 #include <KLocalizedString>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
-#if TEXTAUTOGENERATETEXTMCPPROTOCOLCORE_VERSION < QT_VERSION_CHECK(2, 3, 47)
+#if HAVE_MCP_TOOL_LIST
 #include <QTextStream>
 #include <TextAutoGenerateTextMcpProtocolCore/McpProtocolTool>
 #include <algorithm>
@@ -40,7 +40,7 @@ QString AkonadiMcpCommandLineParser::optionParserFromEnum(OptionParser e)
     return {};
 }
 
-#if TEXTAUTOGENERATETEXTMCPPROTOCOLCORE_VERSION < QT_VERSION_CHECK(2, 3, 47)
+#if !HAVE_MCP_TOOL_LIST
 void AkonadiMcpCommandLineParser::printTools(const QList<TextAutoGenerateTextMcpProtocolCore::McpProtocolTool> &lst)
 {
     qsizetype nameWidth = 0;
