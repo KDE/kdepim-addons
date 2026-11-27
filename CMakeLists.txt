@@ -326,11 +326,12 @@ set_package_properties(
             https://github.com/corrosion-rs/corrosion
 )
 
+# TODO: use QT_ENABLE_STRICT_MODE_UP_TO=0x060C00 once a ktextaddons release without QPair in textautogeneratemessage.h is available
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 add_definitions(-DQT_NO_JAVA_STYLE_ITERATORS)
 if(ECM_VERSION VERSION_GREATER_EQUAL "6.33.0")
     add_definitions(-DQT_LEAN_HEADERS=2)
-    add_definitions(-DQT_NO_QPAIR)
+    # add_definitions(-DQT_NO_QPAIR)
 endif()
 # Extra package
 find_package(Gpgmepp 2.0.0 CONFIG)
