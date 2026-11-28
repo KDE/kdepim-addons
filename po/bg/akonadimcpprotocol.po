@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-26 01:05+0000\n"
+"POT-Creation-Date: 2026-11-28 01:10+0000\n"
 "PO-Revision-Date: 2026-11-24 22:12+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -905,23 +905,23 @@ msgstr "(Няма тема)"
 msgid "No mail found for “%1”"
 msgstr "Няма намерени имейли за „%1“"
 
-#: main.cpp:30 main.cpp:32
+#: main.cpp:32 main.cpp:34
 #, kde-format
 msgid "Akonadi MCP Server"
 msgstr "MCP сървър на Akonadi"
 
-#: main.cpp:34
+#: main.cpp:36
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
 msgstr "Авторско право © 2026 Laurent Montel"
 
-#: main.cpp:35
+#: main.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:35
+#: main.cpp:37
 #, kde-format
 msgid "Maintainer"
 msgstr "Поддръжка"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-26 01:05+0000\n"
-"PO-Revision-Date: 2026-11-26 15:33+0200\n"
+"POT-Creation-Date: 2026-11-28 01:10+0000\n"
+"PO-Revision-Date: 2026-11-27 13:16+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
@@ -56,10 +56,9 @@ msgid "Akonadi Resources Status"
 msgstr "מצב משאבי Akonadi"
 
 #: akonadiresourcesstatus/akonadiresourcesstatustool.cpp:65
-#, fuzzy, kde-format
-#| msgid "No address book found"
+#, kde-format
 msgid "No Akonadi resource found"
-msgstr "לא נמצא פנקס כתובות"
+msgstr "לא נמצא משאב Akonadi"
 
 #: calendarcommon/calendartooljobbase.cpp:34
 #: calendarcommon/createincidencetooljob.cpp:57
@@ -69,10 +68,9 @@ msgid "Calendar fetch failed: %1"
 msgstr "משיכת לוח שנה נכשלה: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:38
-#, fuzzy, kde-format
-#| msgid "Subject must be a non-empty string"
+#, kde-format
 msgid "Summary must be a non-empty string"
-msgstr "הנושא חייב להיות מחרוזת לא ריקה"
+msgstr "התקציר חייב להיות מחרוזת לא ריקה"
 
 #: calendarcommon/createincidencetooljob.cpp:70
 #, fuzzy, kde-format
@@ -91,14 +89,12 @@ msgid "Creation failed: %1"
 msgstr "היצירה נכשלה: %1"
 
 #: calendarcommon/createincidencetooljob.cpp:98
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Event “%1” created in calendar “%2” (item id: %3)"
 msgstr "האירוע „%1” נוצר בלוח השנה „%2” (מזהה פריט: %3)"
 
 #: calendarcommon/createincidencetooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "To-do \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "To-do “%1” created in calendar “%2” (item id: %3)"
 msgstr "המטלה „%1” נוצרה בלוח השנה „%2” (מזהה פריט: %3)"
 
@@ -171,10 +167,7 @@ msgid "MCP tool asks confirmation"
 msgstr "כלי MCP מבקש אישור"
 
 #: common/toolbase.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Run \"%1\"?\n"
-#| "%2"
+#, kde-format
 msgid ""
 "Run “%1”?\n"
 "%2"
@@ -246,8 +239,7 @@ msgid "Contact group search failed: %1"
 msgstr "החיפוש בקבוצת אנשי הקשר נכשל: %1"
 
 #: contactgroupexpandtool/contactgroupexpandtooljob.cpp:52
-#, fuzzy, kde-format
-#| msgid "No contact group found for \"%1\""
+#, kde-format
 msgid "No contact group found for “%1”"
 msgstr "לא נמצאה קבוצת אנשי קשר עבור „%1”"
 
@@ -278,8 +270,7 @@ msgstr "חיפוש אנשי קשר נכשל: %1"
 
 #: contactsearchtool/contactsearchtooljob.cpp:56
 #: contactsearchtool/contactsearchtooljob.cpp:101
-#, fuzzy, kde-format
-#| msgid "No contact found for \"%1\""
+#, kde-format
 msgid "No contact found for “%1”"
 msgstr "לא נמצאו אנשי קשר בחיפוש אחר „%1”"
 
@@ -371,10 +362,9 @@ msgid "No writable address book found"
 msgstr "לא נמצא פנקס כתובות שאפשר לכתוב אליו"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:155
-#, fuzzy, kde-format
-#| msgid "Contact creation failed: %1"
+#, kde-format
 msgid "Contact group creation failed: %1"
-msgstr "יצירת איש קשר נכשלה: %1"
+msgstr "יצירת קבוצת קשר נכשלה: %1"
 
 #: createcontactgrouptool/createcontactgrouptooljob.cpp:159
 #, kde-format
@@ -394,17 +384,15 @@ msgstr "יצירת איש קשר"
 
 #: createcontacttool/createcontacttool.cpp:69
 #: updatecontacttool/updatecontacttool.cpp:90
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument phone_numbers must be an array of strings"
-msgstr "הארגומנט fields (שדות) חייב להיות מערך"
+msgstr "הארגומנט phone_numbers (מספרי טלפון) חייב להיות מערך של מחרוזות"
 
 #: createcontacttool/createcontacttool.cpp:85
 #: updatecontacttool/updatecontacttool.cpp:115
-#, fuzzy, kde-format
-#| msgid "Invalid birthday \"%1\", expected format is YYYY-MM-DD"
+#, kde-format
 msgid "Invalid birthday “%1”, expected format is YYYY-MM-DD"
-msgstr "יום ההולדת „%1” שגויה, התבנית שאמורה להיות היא YYYY-MM-DD"
+msgstr "יום ההולדת „%1” שגוי, התבנית שאמורה להיות היא YYYY-MM-DD"
 
 #: createcontacttool/createcontacttool.cpp:100
 #, fuzzy, kde-format
@@ -428,16 +416,14 @@ msgid "Contact creation failed: %1"
 msgstr "יצירת איש קשר נכשלה: %1"
 
 #: createcontacttool/createcontacttooljob.cpp:96
-#, fuzzy, kde-format
-#| msgid "Event \"%1\" created in calendar \"%2\" (item id: %3)"
+#, kde-format
 msgid "Contact “%1” created in address book “%2” (item id: %3)"
-msgstr "האירוע „%1” נוצר בלוח השנה „%2” (מזהה פריט: %3)"
+msgstr "איש הקשר „%1” נוצר בפנקס הכתובות „%2” (מזהה פריט: %3)"
 
 #: createeventtool/createeventtool.cpp:29
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Create Event"
-msgstr "חיפוש באנשי הקשר"
+msgstr "יצירת אירוע"
 
 #: createeventtool/createeventtool.cpp:57
 #: createjournaltool/createjournaltool.cpp:50
@@ -457,10 +443,9 @@ msgstr "הארגומנט start (התחלה) חייב להיות תאריך או 
 
 #: createeventtool/createeventtool.cpp:81
 #: updateincidencetool/updateincidencetooljob.cpp:173
-#, fuzzy, kde-format
-#| msgid "Argument end must be after start"
+#, kde-format
 msgid "Argument end must not be before start"
-msgstr "הארגומנט end (סוף) חייב להיות לפני ארגומנט start (התחלה)"
+msgstr "הארגומנט end (סוף) לא יכול להיות להיות לפני ארגומנט start (התחלה)"
 
 #: createeventtool/createeventtool.cpp:102
 #: createjournaltool/createjournaltool.cpp:76
@@ -472,8 +457,7 @@ msgstr "הארגומנט calendar_id (מזהה לוח שנה) חייב להיו�
 #: createeventtool/createeventtool.cpp:106
 #: createjournaltool/createjournaltool.cpp:80
 #: createtodotool/createtodotool.cpp:95
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument calendar_id must be an integer"
 msgstr "הארגומנט calendar_id (מזהה לוח שנה) חייב להיות מספר שלם"
 
@@ -483,16 +467,15 @@ msgid "Create Identity"
 msgstr "יצירת זהות"
 
 #: createidentitytool/createidentitytool.cpp:55
-#, fuzzy, kde-format
-#| msgid "Argument query must be a non-empty string"
+#, kde-format
 msgid "Argument email must be a non-empty string"
-msgstr "הארגומנט query (שאילתה) חייבת להיות מחרוזת לא ריקה"
+msgstr "הארגומנט email (דוא״ל) חייבת להיות מחרוזת לא ריקה"
 
 #: createidentitytool/createidentitytool.cpp:65
-#, fuzzy, kde-format
-#| msgid "Argument fields must be an array"
+#, kde-format
 msgid "Argument email_aliases must be an array of strings"
-msgstr "הארגומנט fields (שדות) חייב להיות מערך"
+msgstr ""
+"הארגומנט email_aliases (כתובות דוא״ל חלופיות) חייב להיות מערך של מחרוזות"
 
 #: createidentitytool/createidentitytool.cpp:70
 #, kde-format
@@ -500,41 +483,35 @@ msgid "Invalid email alias “%1”"
 msgstr "כינוי הדוא״ל „%1” שגוי"
 
 #: createidentitytool/createidentitytool.cpp:79
-#, fuzzy, kde-format
-#| msgid "No mail found for \"%1\""
+#, kde-format
 msgid "No mail transport found with id %1"
-msgstr "לא נמצא דוא״ל בחיפוש אחר „%1”"
+msgstr "לא נמצאה תעבורת דוא״ל עם המזהה %1"
 
 #: createidentitytool/createidentitytool.cpp:84
-#, fuzzy, kde-format
-#| msgid "Argument days must be an integer"
+#, kde-format
 msgid "Argument transport_id must be an integer"
-msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
+msgstr "הארגומנט transport_id (מזהה תעבורה) חייב להיות מספר שלם"
 
 #: createidentitytool/createidentitytool.cpp:93
 #: createtransporttool/createtransporttool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Argument include_completed must be a boolean"
+#, kde-format
 msgid "Argument set_as_default must be a boolean"
-msgstr "הארגומנט include_completed חייב להיות בוליאני"
+msgstr "הארגומנט set_as_default (הגדרה כברירת מחדל) חייב להיות בוליאני"
 
 #: createidentitytool/createidentitytool.cpp:136
-#, fuzzy, kde-format
-#| msgid "Identity \"%1\" created (uoid %2)"
+#, kde-format
 msgid "Identity “%1” created (uoid %2)"
-msgstr "הזהות „%1” נוצר (uoid %2)"
+msgstr "הזהות „%1” נוצרה (uoid %2)"
 
 #: createjournaltool/createjournaltool.cpp:27
-#, fuzzy, kde-format
-#| msgid "Search Contacts"
+#, kde-format
 msgid "Create Journal Entry"
-msgstr "חיפוש באנשי הקשר"
+msgstr "יצירת רשומן יומן"
 
 #: createjournaltool/createjournaltool.cpp:58
-#, fuzzy, kde-format
-#| msgid "Argument start must be an ISO 8601 date or date-time"
+#, kde-format
 msgid "Argument date must be an ISO 8601 date or date-time"
-msgstr "הארגומנט start (התחלה) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
+msgstr "הארגומנט date (תאריך) חייב להיות תאריך או תאריך-שעה בתסדיר ISO 8601"
 
 #: createmailtool/createmailtool.cpp:24
 #, kde-format
@@ -805,7 +782,7 @@ msgstr ""
 #: editmailtool/editmailtooljob.cpp:101
 #, kde-format
 msgid "Unable to edit mail %1: %2"
-msgstr ""
+msgstr "לא ניתן לערוך את הודעת הדוא״ל %1:‏ %2"
 
 #: editmailtool/editmailtooljob.cpp:108
 #, kde-format
@@ -857,13 +834,13 @@ msgstr "פנוי/ה למשך כל התקופה שבין %1 לבין %2"
 #: kcm/kcm_akonadimcpserver.cpp:73
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "פעיל"
 
 #: kcm/kcm_akonadimcpserver.cpp:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Ask confirmation before running tools which modify data"
-msgstr ""
+msgstr "לבקש אישור לפני הרצת כלים שמשנים נתונים"
 
 #: listaddressbooks/listaddressbookstool.cpp:21
 #, kde-format
@@ -935,23 +912,23 @@ msgstr "(אין נושא)"
 msgid "No mail found for “%1”"
 msgstr "לא נמצא דוא״ל בחיפוש אחר „%1”"
 
-#: main.cpp:30 main.cpp:32
+#: main.cpp:32 main.cpp:34
 #, kde-format
 msgid "Akonadi MCP Server"
 msgstr "שרת ה־MCP של Akonadi"
 
-#: main.cpp:34
+#: main.cpp:36
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
 msgstr "כל הזכויות שמורות © 2026 ללורנט מונטל"
 
-#: main.cpp:35
+#: main.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "לורנט מונטל"
 
-#: main.cpp:35
+#: main.cpp:37
 #, kde-format
 msgid "Maintainer"
 msgstr "מתחזק"
@@ -984,7 +961,7 @@ msgstr "שינוי דוא״ל נכשל: %1"
 #: markmailtool/markmailtooljob.cpp:78
 #, kde-format
 msgid "Mail %1 modified"
-msgstr ""
+msgstr "הדוא״ל %1 נערך"
 
 #: movemailtool/movemailtool.cpp:25
 #, kde-format
@@ -1056,7 +1033,7 @@ msgstr "העברת דוא״ל נכשלה: %1"
 #: movemailtool/movemailtooljob.cpp:183
 #, kde-format
 msgid "Mail %1 moved to folder “%2”"
-msgstr ""
+msgstr "ההודעה %1 הועברה לתיקייה „%2”"
 
 #: openmailtool/openmailtool.cpp:24
 #, kde-format
@@ -1154,7 +1131,7 @@ msgstr "הארגומנט days (ימים) חייב להיות מספר שלם"
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:54
 #, kde-format
 msgid "Number of days must be a positive integer"
-msgstr ""
+msgstr "מספר הימים חייב להיות מספר שלם וחיובי"
 
 #: upcomingbirthdaystool/upcomingbirthdaystooljob.cpp:99
 #, kde-format
@@ -1191,7 +1168,7 @@ msgstr "הארגומנט birthday (יום הולדת) חייב להיות מספ
 #: updateincidencetool/updateincidencetooljob.cpp:53
 #, kde-format
 msgid "No field to update"
-msgstr ""
+msgstr "אין שדה לעדכון"
 
 #: updatecontacttool/updatecontacttooljob.cpp:84
 #, kde-format

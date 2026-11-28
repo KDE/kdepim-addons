@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: akonadimcpprotocol\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-26 01:05+0000\n"
-"PO-Revision-Date: 2026-11-24 08:11+0200\n"
+"POT-Creation-Date: 2026-11-28 01:10+0000\n"
+"PO-Revision-Date: 2026-11-27 07:57+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -37,12 +37,12 @@ msgstr "URL, на котором ожидает подключений серв�
 #, kde-format
 msgctxt "@info:shell"
 msgid "List supported MCP tools and exit."
-msgstr ""
+msgstr "Показать список поддерживаемых инструментов MCP и выйти."
 
 #: akonadimcpcommandlineparser.cpp:51
 #, kde-format
 msgid "List of Tools:"
-msgstr ""
+msgstr "Список инструментов:"
 
 #: akonadimcpprotocolmanager.cpp:58
 #, kde-format
@@ -911,23 +911,23 @@ msgstr "(Без темы)"
 msgid "No mail found for “%1”"
 msgstr "Не найдено писем по запросу «%1»"
 
-#: main.cpp:30 main.cpp:32
+#: main.cpp:32 main.cpp:34
 #, kde-format
 msgid "Akonadi MCP Server"
 msgstr "Сервер MCP Akonadi"
 
-#: main.cpp:34
+#: main.cpp:36
 #, kde-format
 msgid "Copyright © 2026 Laurent Montel"
 msgstr "© Laurent Montel, 2026"
 
-#: main.cpp:35
+#: main.cpp:37
 #, kde-format
 msgctxt "@info:credit"
 msgid "Laurent Montel"
 msgstr "Laurent Montel"
 
-#: main.cpp:35
+#: main.cpp:37
 #, kde-format
 msgid "Maintainer"
 msgstr "Сопровождающий"
